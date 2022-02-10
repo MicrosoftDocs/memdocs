@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/09/2022
+ms.date: 02/10/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -32,27 +32,27 @@ ms.collection: M365-identity-device-management
 
 The following errors can occur when connecting to a Cloud PC.
 
-## Errors when connecting to an Azure AD joined Cloud PC
+## Errors when connecting to an Azure Active Directory (Azure AD) joined Cloud PC
 
 ### The logon attempt failed
-**Potential cause #1**: The Cloud PC VM is denying PKU2U protocol requests. The PKU2U protocol is only triggered in the following cases:
+**Potential cause #1**: The Cloud PC denied PKU2U protocol requests. The PKU2U protocol is only triggered in the following cases:
 
 - The Cloud PC is Azure AD joined.
 - The user is connecting from the Windows desktop client.
-- The user's physical device is either Azure AD registered, Azure AD joined, or Hybrid Azure AD joined to the same organization as the Cloud PC.
+- The user's physical device is Azure AD registered, Azure AD joined, or hybrid Azure AD joined to the same organization as the Cloud PC.
 
-**Possible solution**: Enable PKU2U protocol requests on your Cloud PC. To do this:
+**Possible solution**: Turn on PKU2U protocol requests on your Cloud PC:
 
-1. [Create a filter for all Cloud PCs](create-filter.md).
+1. [Create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs).
 2. Create a device configuration policy [using the settings catalog](/mem/intune/configuration/settings-catalog.md).
-3. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests**, then select **Allow**.
+3. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests** > **Allow**.
 ![Screenshot with the **Network Security Allow PKU2U Authentication Requests** set to **Allow**.](./media/connection-errors/allow-pku2u.png)
 5. On the **Assignments** page, select **Add all devices** > **Edit filter** > **Include filtered devices in assignment** > select the filter you created for all Cloud PCs.
 6. Complete the creation of the device configuration policy.
 
-**Potential cause #2**: [Per-user multi-factor authentication](/azure/active-directory/authentication/howto-mfa-userstates.md) is enabled for the user account. Per-user multi-factor authentication is not supported for users connecting to Azure AD joined Cloud PCs since it blocks login.
+**Potential cause #2**: [Per-user multi-factor authentication](/azure/active-directory/authentication/howto-mfa-userstates.md) is turned on for the user account. Because it blocks sign-in, per-user multi-factor authentication isn't supported for users connecting to Azure AD joined Cloud PCs.
 
-**Possible solution**: [Disable per-user multi-factor authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required.md) for all users connecting to Cloud PCs. Then, [set an Azure AD conditional access policy](set-conditional-access-policies.md) and assign it to the appropriate users.
+**Possible solution**: [Remove per-user multi-factor authentication](/azure/active-directory/devices/howto-vm-sign-in-azure-ad-windows#mfa-sign-in-method-required.md) for all users connecting to Cloud PCs. Then, [set an Azure AD conditional access policy](set-conditional-access-policies.md) and assign it to the appropriate users.
 
 ## Specific connection errors
 
