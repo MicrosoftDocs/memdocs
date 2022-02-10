@@ -160,7 +160,13 @@ Windows 365 uses the Azure network infrastructure. An Azure subscription is requ
 - Office data (like email and OneDrive for Business file sync) incurs egress charges if the Cloud PC and a user’s data reside in different regions.
 - RDP networking traffic always incurs egress charges.
 
-For more information about costs associated with data transfers, see [Bandwidth pricing]( https://azure.microsoft.com/pricing/details/bandwidth/).
+For more information about costs associated with data transfers, see [Bandwidth pricing]( https://azure.microsoft.com/pricing/details/bandwidth/). If you choose to use a Microsoft-hosted network outbound data/month is based on the RAM of the Cloud PC:
+- 2-GB RAM = 12-GB outbound data
+- 4 or 8-GB RAM = 20-GB outbound data
+- 16-GB RAM = 40-GB outbound data
+- 32-GB RAM = 70-GB outbound data
+
+Data bandwidth may be restricted when these levels are exceeded.
 
 <!-- ########################## -->
 ## Next steps
