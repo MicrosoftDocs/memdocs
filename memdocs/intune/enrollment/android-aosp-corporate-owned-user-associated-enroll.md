@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 02/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -68,7 +68,7 @@ Create an enrollment profile to enable enrollment on devices.
     - **SSID**: Identifies the network that the device will connect to. 
     
         > [!NOTE]
-        > Wi-Fi details are required because the RealWear device does not have a button or option that lets it automatically connect to other devices.  
+        > Wi-Fi details are required because the RealWear device doesn't have a button or option that lets it automatically connect to other devices.  
 
     - **Hidden network**: Choose whether this is a hidden network. By default, this setting is disabled, which means the network can broadcast its SSID. 
     - **Wi-Fi type**: Select the type of authentication needed for this network.  
@@ -99,7 +99,7 @@ The token appears as a QR code. During device setup, when prompted to, scan the 
 >- Since you're managing the device via Intune, you should skip the RealWear first time setup. The Intune QR codes is the only thing you need to set up the device.  
 
 ### Replace a token  
-You can generate a new token to replace one that's nearing its expiration date. Replacing a token does not affect devices that are already enrolled.  
+You can generate a new token to replace one that's nearing its expiration date. The replacement token doesn't affect devices that are already enrolled.  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, user-associated devices**.  
@@ -114,7 +114,7 @@ Revoke a token to immediately expire it and make it unusable. For example, it's 
 * You accidentally share the token/QR code with an unauthorized party.
 * You complete all enrollments and no longer need the token.  
 
- Revoking a token does not affect devices that are already enrolled.
+ Revoking a token has no effect on devices that are already enrolled.
 
 1.	Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, user-associated devices**.
@@ -213,6 +213,8 @@ The following are known limitations when working with AOSP devices in Intune:
 * [Create an Android (AOSP) device configuration policy](../configuration/device-restrictions-android-aosp.md) to restrict settings on devices. 
 
 * [Create an Android (AOSP) device compliance policy](../protect/compliance-policy-create-android-aosp.md).   
+
+* Create a policy that requires users to accept your [terms and conditions](terms-and-conditions-create.md) before enrollment. 
 
 * For more information about how to get started with AOSP, see [Android source requirements](https://source.android.com/setup/build/requirements)(opens Android source documentation). 
 
