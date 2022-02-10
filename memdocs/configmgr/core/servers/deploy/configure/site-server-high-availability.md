@@ -262,6 +262,8 @@ The following steps may be required if necessary in your environment:
 
 - Recreate OSD bootable media and prestaged media in non-PKI environments.  
 
+- Update boot images and boot media post failover.
+
 - In non-PKI environments, you may need to update the self-signed certificate on PXE-enabled distribution points. Do this action in the properties of the distribution point on the Communication tab. Make changes to the self-signed certificate date or time.
 
 ## Daily monitoring
