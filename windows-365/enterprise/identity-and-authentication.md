@@ -102,3 +102,8 @@ The following credential types are supported for Cloud PC authentication:
 
 >[!IMPORTANT]
 >In order for authentication to work properly, the user's local machine must also be able to access the URLs in the [Remote Desktop clients](safe-url-list.md#remote-desktop-clients) section of the [Azure Virtual Desktop required URL list](safe-url-list.md).
+
+<!-- ########################## -->
+## Next steps
+
+[Learn about the Cloud PC lifecycle](lifecycle.md).

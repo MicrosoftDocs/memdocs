@@ -143,4 +143,4 @@ Windows 365 Cloud PCs don't support third-party connection brokers.
 <!-- ########################## -->
 ## Next steps
 
-[Learn about the Cloud PC lifecycle](lifecycle.md).
+[Learn about Windows 365 identity and authentication](identity-and-authentication.md).
