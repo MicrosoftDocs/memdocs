@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 02/11/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -155,6 +155,10 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
+- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5, do not.
+
+  For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).  
+
 
 
 ### October 25, 2021
@@ -169,7 +173,7 @@ Changes in this release:
 
 - Added ability to get a client network trace
 - Added ability to enabled resource access tracking
-- Added support for Podman when using Red Hat Enterprise Linux 8.4
+- Added support for Podman when using [some versions](../protect/microsoft-tunnel-prerequisites.md#linux-server) of Red Hat Enterprise Linux
 - Minor bug fixes
 
 ### September 7, 2021
