@@ -88,6 +88,8 @@ When configuring Cloud PCs to use Azure AD Join, Azure AD provides:
 - The domain join mechanism for the Cloud PCs.
 - User authentication for RDP connections.
 
+For more information on how the identity services impact the deployment, management, and usage of Cloud PCs, see [identity and authentication](identity-and-authentication.md).
+
 ### Azure AD
 
 Azure AD provides user authentication and authorization for both the Windows 365 web portal and for the Remote Desktop client apps. Both support modern authentication, which means Azure AD Conditional Access can be integrated to provide:
