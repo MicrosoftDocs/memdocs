@@ -69,7 +69,7 @@ To complete the end to end connection of accessing a Cloud PC, users must first 
 The Windows 365 service authentication surfaces in one of two ways:
 
 - When users access [windows365.microsoft.com](https://windows365.microsoft.com) or launch the web browser URL that maps directirecly to their Cloud PC.
-- When users access through one of the [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) and list their Cloud PCs.
+- When users access through one of the [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients.md) and list their Cloud PCs.
 
 This authentication triggers an Azure Active Directory prompt, allowing any credential type that is supported by both Azure Active Directory and your OS.
 
@@ -78,7 +78,7 @@ This authentication triggers an Azure Active Directory prompt, allowing any cred
 The Cloud PC authentication surfaces in one of the two ways:
 
 - When users launch the web browser URL that maps directly to their Cloud PC.
-- When users access through one of the [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) and select the specific Cloud PC.
+- When users access through one of the [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients.md) and select the specific Cloud PC.
 
 >[!NOTE]
 >If a user launches the web browser URL that maps directly to their Cloud PC, they will encounter the Windows 365 service authentication first, then encounter the Cloud PC authentication.
@@ -87,8 +87,8 @@ The following credential types are supported for Cloud PC authentication:
 - Windows desktop client
     - Username and password
     - Smartcard
-    - [Windows Hello for Business certificate trust](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust)
-    - [Windows Hello for Business key trust with certificates](/windows/security/identity-protection/hello-for-business/hello-deployment-rdp-certs)
+    - [Windows Hello for Business certificate trust](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust.md)
+    - [Windows Hello for Business key trust with certificates](/windows/security/identity-protection/hello-for-business/hello-deployment-rdp-certs.md)
 - Windows store client
     - Username and password
 - Web client
@@ -101,7 +101,7 @@ The following credential types are supported for Cloud PC authentication:
     - Username and password
 
 >[!IMPORTANT]
->In order for authentication to work properly, the user's local machine must also be able to access the URLs in the [Remote Desktop clients](safe-url-list.md#remote-desktop-clients) section of the [Azure Virtual Desktop required URL list](safe-url-list.md).
+>In order for authentication to work properly, the user's local machine must also be able to access the URLs in the [Remote Desktop clients](/azure/virtual-desktop/safe-url-list.md#remote-desktop-clients) section of the [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list.md).
 
 <!-- ########################## -->
 ## Next steps
