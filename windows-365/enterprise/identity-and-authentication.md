@@ -36,7 +36,7 @@ Identity is a key component of your Windows 365 environment as it will determine
 
 Understanding the types of identity in your organization is an important factor in how you create your Cloud PCs:
 
-- **Hybrid identity**: User or devices that exist in both on-premises Windows Server Active Directory and Azure Active Directory.
+- **[Hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity.md)**: User or devices that exist in both on-premises Windows Server Active Directory and Azure Active Directory.
 - **Cloud-only identity**: Users or devices that exist only in Azure Active Directory.
 
 
@@ -44,8 +44,8 @@ Understanding the types of identity in your organization is an important factor 
 
 The device join type for your Cloud PCs directly correlates to both the type of identity you want the Cloud PCs to have:
 
-- **Hybrid Azure AD Join**: If you choose this join type, Windows 365 will join your Cloud PC to the Windows Server Active Directory domain, then rely on the Azure Active Directory Connect tool or your own Windows Server Active Directory Federation Services (AD FS) to synchronize these identites to Azure Active directory.
-- **Azure AD Join**: If you choose this join type, Windows 365 will join your Cloud PC directly to Azure Active Directory.
+- **[Hybrid Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid.md)**: If you choose this join type, Windows 365 will join your Cloud PC to the Windows Server Active Directory domain, then rely on the Azure Active Directory Connect tool or your own Windows Server Active Directory Federation Services (AD FS) to synchronize these identites to Azure Active directory.
+- **[Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join.md)**: If you choose this join type, Windows 365 will join your Cloud PC directly to Azure Active Directory.
 
 
 Below is a table showing key capabilities or requirements based on the selected join type:
