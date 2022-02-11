@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/07/2022
+ms.date: 02/11/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -74,11 +74,18 @@ The following behaviors apply to the management of offer groups:
 
 ## Intelligent rollouts
 
-To enhance your use of gradual rollouts, you can configure **Intelligent rollouts**.
+To enhance your use of gradual rollouts, you can configure *Intelligent rollouts*.
 
-With intelligent rollouts, the Windows Update for Business Deployment Service uses data that it collects from devices to optimize the inclusion of devices to the various offer groups. With this optimization, the first group that receives the update offer will include the fewest number of devices while including the largest pool of variations. By optimizing the membership of that first group, you have an increased opportunity to identify issues while affecting the smallest possible set of devices.
+With intelligent rollouts, the Windows Update for Business Deployment Service uses data that it collects from devices to optimize the device members in the offer groups of your gradual rollout deployments. The first offer group will include the fewest number of devices that have the largest pool of variations in your environment. You can think of this as a *pilot ring* for the deployment.
 
-To enable intelligent rollout, you use a settings catalog profile from Device configuration to enable WUfB Cloud Processing. Then, assign the profile to the same groups that are assigned to your Feature update profiles.
+To enable intelligent rollout, you deploy a [settings catalog](../configuration/settings-catalog.md) profile for device configuration to *Allow WUfB Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles.
+
+> [!NOTE]
+> The Windows Update for Business setting that you enable, *Allow WUfB Cloud Processing*, is the same setting that enables the Deployment Service to create *likely issue* [safeguard holds](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) for a device. If you previously configured devices to [opt-out of safeguard holds](/windows/deployment/update/update-compliance-feature-update-status#opt-out-of-safeguard-holds), this policy will override that configuration and reenable the use of safeguard holds for devices.
+
+As your rollout progresses, the deployment service monitors for unexpected issues. The service leverages insights from the Windows ecosystem and will create *likely issue* safeguard holds and proactively pause deployments to devices that are likely to encounter an issue. This behavior provides an increased opportunity to identify the largest pool of potential issues while affecting the fewest number of devices. To learn more, see [Manage safeguards using the Windows Update for Business deployment service - Microsoft Graph | Microsoft Docs](/graph/windowsupdates-manage-safeguards).
+
+### Create an intelligent rollout policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
