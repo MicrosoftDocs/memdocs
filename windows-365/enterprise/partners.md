@@ -46,13 +46,17 @@ For more information, visit the [IGEL website](https://www.igel.com/windows365/)
 
 ## Nerdio
 
-Windows 365 and Nerdio Manager help users to be productive from anywhere, on any device with a cloud-powered, secure, and always up-to-date Windows experience. Nerdio seamlessly lets MSPs and IT professionals instantly provision Cloud PCs and manage physical and virtual devices through a unified portal and a fixed and predictable price.
+Windows 365 and Nerdio Manager help users to be productive from anywhere, on any device with a cloud-powered, secure, and always up-to-date Windows experience. Nerdio seamlessly lets MSPs and IT professionals:
+
+- Instantly provision Cloud PCs.
+- Manage physical and virtual devices through a unified portal.
+- Realize a fixed and predictable price.
 
 For more information, visit the [Nerdio website](https://getnerdio.com/windows-365/)
 
 ## NetApp
 
-Spot by NetApp delivers fully-managed, continuously-optimized cloud desktops as a service.
+Spot by NetApp delivers fully managed, continuously optimized cloud desktops as a service.
 
 For more information, read about Spot on the [NetApp website](https://spot.io/products/spotpc/)
 
