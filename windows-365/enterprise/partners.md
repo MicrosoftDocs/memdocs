@@ -42,25 +42,25 @@ Secure access to Windows 365 is further enhanced with IGEL OS:
 - Secure read-only OS removes security concerns at the edge.
 - IGEL OS can be installed on any x86-64 device allowing even older devices to securely connect.
 
-[Partner solution](https://www.igel.com/windows365/)
+For more information, visit the [IGEL website](https://www.igel.com/windows365/)
 
 ## Nerdio
 
 Windows 365 and Nerdio Manager help users to be productive from anywhere, on any device with a cloud-powered, secure, and always up-to-date Windows experience. Nerdio seamlessly lets MSPs and IT professionals instantly provision Cloud PCs and manage physical and virtual devices through a unified portal and a fixed and predictable price.
 
-[Partner solution](https://getnerdio.com/windows-365/)
+For more information, visit the [Nerdio website](https://getnerdio.com/windows-365/)
 
 ## NetApp
 
-Spot by NetApp delivers fully-managed, continuously-optimized cloud desktops as a service. 
+Spot by NetApp delivers fully-managed, continuously-optimized cloud desktops as a service.
 
-[Partner solution](https://spot.io/products/spotpc/)
+For more information, read about Spot on the [NetApp solution](https://spot.io/products/spotpc/)
 
 ## ServiceNow
 
 ServiceNow and Microsoft are continuing to find new ways for employees to seamlessly collaborate while delivering great experiences to our joint customers.
 
-[Partner solution](https://blogs.servicenow.com/2021/microsoft-integration-optimizes-hybrid-work.html)
+For more information, read the blog on the [ServiceNOw website](https://blogs.servicenow.com/2021/microsoft-integration-optimizes-hybrid-work.html)
 
 ## UKG
 
@@ -69,4 +69,4 @@ Ultimate Kronos Group is an American multinational technology company that provi
 <!-- ########################## -->
 ## Next steps
 
-[Assign apps to a Cloud PC](assign-apps.md)
+[Learn more about Windows 365](overview.md)
