@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 02/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,6 +39,7 @@ This feature applies to:
 
 - **macOS**
 
+  - **Configure device settings**. Device settings that are directly generated from Apple Profile-Specific Payload Keys are continually being added. To learn more about these keys, see, [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
   - **Configure Microsoft Edge version 77 and newer**. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
   - **Configure Microsoft Defender for Endpoint**. Previously, you had to [use a property list (plist) file](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website). For a list of the settings you can configure, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
@@ -185,7 +186,7 @@ When you create the policy, you have two policy types: **Settings catalog** and 
 
 The **Templates** include a logical group of settings, such as device restrictions, kiosk, and more. Use this option if you want to use these groupings to configure your settings.
 
-For Windows, the **Settings catalog** lists all the available settings. If you want to see all the available Firewall settings, or all the available BitLocker settings, then use this option. Also, use this option if you're looking for specific settings.
+For Windows and macOS, the **Settings catalog** lists all the available settings. If you want to see all the available Firewall settings, or all the available BitLocker settings, then use this option. Also, use this option if you're looking for specific settings.
 
 ## Next steps
 
