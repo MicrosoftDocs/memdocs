@@ -9,8 +9,6 @@ items:
     href: whats-new.md
   - name: Features in development
     href: in-development.md
-  - name: Partners
-    href: ../partners.md
 - name: Concepts
   items:
   - name: Architecture
