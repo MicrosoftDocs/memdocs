@@ -14,7 +14,7 @@ items:
   - name: Architecture
     href: architecture.md
   - name: Identity and authentication
-    href: identity-and-authentication.md
+    href: identity-authentication.md
   - name: Lifecycle
     href: lifecycle.md
   - name: Provisioning
