@@ -186,7 +186,7 @@ When you create the policy, you have two policy types: **Settings catalog** and 
 
 The **Templates** include a logical group of settings, such as device restrictions, kiosk, and more. Use this option if you want to use these groupings to configure your settings.
 
-For Windows and macOS, the **Settings catalog** lists all the available settings. If you want to see all the available Firewall settings, or all the available BitLocker settings, then use this option. Also, use this option if you're looking for specific settings.
+The **Settings catalog** lists all the available settings. If you want to see all the available Firewall settings, or all the available BitLocker settings, then use this option. Also, use this option if you're looking for specific settings.
 
 ## Next steps
 
