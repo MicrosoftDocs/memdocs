@@ -88,7 +88,7 @@ When configuring Cloud PCs to use Azure AD Join, Azure AD provides:
 - The domain join mechanism for the Cloud PCs.
 - User authentication for RDP connections.
 
-For more information on how the identity services impact the deployment, management, and usage of Cloud PCs, see [identity and authentication](identity-and-authentication.md).
+For more information on how the identity services impact the deployment, management, and usage of Cloud PCs, see [identity and authentication](identity-authentication.md).
 
 ### Azure AD
 
@@ -145,4 +145,4 @@ Windows 365 Cloud PCs don't support third-party connection brokers.
 <!-- ########################## -->
 ## Next steps
 
-[Learn about Windows 365 identity and authentication](identity-and-authentication.md).
+[Learn about Windows 365 identity and authentication](identity-authentication.md).
