@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 02/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
