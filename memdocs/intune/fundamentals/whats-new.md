@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/07/2022
+ms.date: 02/11/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,6 +61,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 -->
 
 ## Week of February 7, 2022
+
+### Device security
+
+#### Microsoft Tunnel support for Red Hat Enterprise Linux 8.5<!-- 13182253  -->
+
+You can now use Red Hat Enterprise Linux (RHEL) 8.5 with [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md).
+
+To support RHEL 8.5, we’ve also updated the [readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) (mst-readiness) with a new check for the presence of the ip_tables module in the Linux kernel. By default, RHEL 8.5 doesn’t load the ip_tables module.
+
+For Linux servers that don't load the module, we've provided [instructions](../protect/microsoft-tunnel-prerequisites.md#manually-load-ip_tables) to load them immediately, and to configure the Linux server to automatically load them at boot.
 
 ### App management
 
