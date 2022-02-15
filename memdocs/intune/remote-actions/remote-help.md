@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 02/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -180,10 +180,10 @@ To configure your tenant to support remote help, review and complete the followi
 
 ### Task 1 – Enable remote help
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Remote help (preview)**.
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help (preview)**.
 
 2. On the **Settings** tab:
-   1. Set **Enable remote help** to **Enabled** to allow use of remote help.  By default, this setting is *Enabled*.
+   1. Set **Enable remote help** to **Enabled** to allow use of remote help. By default, this setting is *Enabled*.
    2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting *Disabled*.
 
 3. Select **Save**.
@@ -280,7 +280,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 You can monitor the use of remote help from within Microsoft Endpoint Manager.
 
-1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Connectors and tokens** > **Remote help (preview)**.
+1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Remote help (preview)**.
 
 2. On the Monitor tab, you’ll see a count of active sessions and historical data about past sessions.
 
