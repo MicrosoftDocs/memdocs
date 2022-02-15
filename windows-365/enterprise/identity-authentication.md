@@ -45,15 +45,15 @@ A device can also have an identity which is determined by its join type to Azure
 
 There are two identity types:
 
-- **[Hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity.md)**: Users or devices that are created in on-premises Windows Server Active Directory, then synchronized to Azure AD.
+- **[Hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity)**: Users or devices that are created in on-premises Windows Server Active Directory, then synchronized to Azure AD.
 - **Cloud-only identity**: Users or devices that are created and only exist in Azure AD.
 
 ## Device join types
 
 There are two join types that you can select from when [provisioning a Cloud PC](provisioning.md):
 
-- **[Hybrid Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid.md)**: If you choose this join type, Windows 365 will join your Cloud PC to the Windows Server Active Directory domain you provide. Then, if your organization is properly [configured for Hybrid Azure AD Join](/azure/active-directory/devices/howto-hybrid-azure-ad-join.md), the device will be synchronized to Azure AD.
-- **[Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join.md)**: If you choose this join type, Windows 365 will join your Cloud PC directly to Azure AD.
+- **[Hybrid Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid)**: If you choose this join type, Windows 365 will join your Cloud PC to the Windows Server Active Directory domain you provide. Then, if your organization is properly [configured for Hybrid Azure AD Join](/azure/active-directory/devices/howto-hybrid-azure-ad-join), the device will be synchronized to Azure AD.
+- **[Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join)**: If you choose this join type, Windows 365 will join your Cloud PC directly to Azure AD.
 
 
 Below is a table showing key capabilities or requirements based on the selected join type:
@@ -77,7 +77,7 @@ To successfully access a Cloud PC, a user must authenticate, in turn, with both:
 >Single sign-on (defined as a single authentication prompt that can satisfy both the Windows 365 service authentication and Cloud PC authentication) is not supported at this time.
 
 >[!IMPORTANT]
->In order for authentication to work properly, the user's local machine must also be able to access the URLs in the [Remote Desktop clients](/azure/virtual-desktop/safe-url-list.md#remote-desktop-clients) section of the [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list.md).
+>In order for authentication to work properly, the user's local machine must also be able to access the URLs in the [Remote Desktop clients](/azure/virtual-desktop/safe-url-list#remote-desktop-clients) section of the [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
 
 ### Windows 365 service authentication
 
@@ -85,7 +85,7 @@ Users must authenticate with the Windows 365 service when:
 
 - They access [windows365.microsoft.com](https://windows365.microsoft.com).
 - They navigate to the URL that maps directly to their Cloud PC.
-- They use a [Remote Desktop client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients.md) to list their Cloud PCs.
+- They use a [Remote Desktop client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients to list their Cloud PCs.
 
 This authentication triggers an Azure Active Directory prompt, allowing any credential type that is supported by both Azure Active Directory and your OS.
 
@@ -94,7 +94,7 @@ This authentication triggers an Azure Active Directory prompt, allowing any cred
 Users must authenticate with the Windows 365 service when:
 
 - They navigate to the URL that maps directly to their Cloud PC.
-- They use a [Remote Desktop client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients.md) to connect to their Cloud PC.
+- They use a [Remote Desktop client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) to connect to their Cloud PC.
 
 >[!NOTE]
 >If a user launches the web browser URL that maps directly to their Cloud PC, they will encounter the Windows 365 service authentication first, then encounter the Cloud PC authentication.
@@ -103,8 +103,8 @@ The following credential types are supported for Cloud PC authentication:
 - Windows desktop client
     - Username and password
     - Smartcard
-    - [Windows Hello for Business certificate trust](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust.md)
-    - [Windows Hello for Business key trust with certificates](/windows/security/identity-protection/hello-for-business/hello-deployment-rdp-certs.md)
+    - [Windows Hello for Business certificate trust](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust)
+    - [Windows Hello for Business key trust with certificates](/windows/security/identity-protection/hello-for-business/hello-deployment-rdp-certs)
 - Windows store client
     - Username and password
 - Web client
