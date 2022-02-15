@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 01/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,7 +37,7 @@ To use Windows Holographic devices with Intune, create an Edition Upgrade profil
 
 Azure Active Directory (AD) is a great resource to help manage and control your devices running Windows Holographic for Business. Using Intune and Azure AD, you can: 
 
-- **[Join devices to Azure Active Directory](/azure/active-directory/devices/azureadjoin-plan)**: In Azure Active Directory (AD), you can add your work-owned Windows 10 devices, including devices running Windows Holographic for Business. This feature allows Azure AD to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
+- **[Join devices to Azure Active Directory](/azure/active-directory/devices/azureadjoin-plan)**: In Azure Active Directory (AD), you can add your work-owned Windows 10/11 devices, including devices running Windows Holographic for Business. This feature allows Azure AD to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
 
   [Device management in Azure AD](/azure/active-directory/devices/overview) provides more details.
 
@@ -147,7 +147,7 @@ Devices that run Windows Holographic for Business, such as the Microsoft HoloLen
 
 **[Manage software updates](../protect/windows-update-for-business-configure.md)**
 
-Intune includes a feature called update rings for Windows 10 devices. These update rings include a group of settings that determine how updates are installed. For example, you can create a maintenance window to install updates, or choose to restart after updates are installed. An update ring can be applied to multiple devices running Windows Holographic for Business.
+Intune includes a feature called update rings for Windows client devices. These update rings include a group of settings that determine how updates are installed. For example, you can create a maintenance window to install updates, or choose to restart after updates are installed. An update ring can be applied to multiple devices running Windows Holographic for Business.
 
 ## Terms and conditions
 

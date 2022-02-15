@@ -129,6 +129,9 @@ There are thousands of settings available in the settings catalog. To make it ea
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="In Settings Catalog, filter the settings list by Windows edition in Microsoft Intune and Endpoint Manager admin center.":::
 
+  > [!NOTE]
+  > For the Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, then the Edge, Office, and OneDrive settings aren't shown.
+
 ## Duplicate a profile  
 
  Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit it to adjust the settings and add assignments.      
