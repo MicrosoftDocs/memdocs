@@ -76,7 +76,7 @@ For more information, read the blog on the [ServiceNOw website](https://blogs.se
 
 ## UKG
 
-![UKG](./media/partners/ukg.png)
+![UKG image](./media/partners/ukg.png)
 
 Ultimate Kronos Group is an American multinational technology company that provides workforce management and human resource management services.
 
