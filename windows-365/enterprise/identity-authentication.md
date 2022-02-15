@@ -30,12 +30,12 @@ ms.collection: M365-identity-device-management
 
 # Windows 365 identity and authentication
 
-A Cloud PC user's identity defines which access management services manage that user and. This identity defines:
+A Cloud PC user's identity defines which access management services manage that user and Cloud PC. This identity defines:
 
 - What types of Cloud PCs the user has access to.
-- What types of non Cloud PC resources the user has access to.
+- What types of non-Cloud PC resources the user has access to.
 
-A device can also have an identity and is determined by its join type to Azure Active Directory. For a device, the join type defines:
+A device can also have an identity which is determined by its join type to Azure Active Directory (Azure AD). For a device, the join type defines:
 
 - If the device requires line of sight to a domain controller.
 - How the device is managed.
@@ -45,15 +45,15 @@ A device can also have an identity and is determined by its join type to Azure A
 
 There are two identity types:
 
-- **[Hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity.md)**: Users or devices that are created in on-premises Windows Server Active Directory, then synchronized to Azure Active Directory.
-- **Cloud-only identity**: Users or devices that are created and only exist in Azure Active Directory.
+- **[Hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity.md)**: Users or devices that are created in on-premises Windows Server Active Directory, then synchronized to Azure AD.
+- **Cloud-only identity**: Users or devices that are created and only exist in Azure AD.
 
 ## Device join types
 
-There are join types you can select from when [provisioning a Cloud PC](provisioning.md):
+There are two join types that you can select from when [provisioning a Cloud PC](provisioning.md):
 
-- **[Hybrid Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid.md)**: If you choose this join type, Windows 365 will join your Cloud PC to the Windows Server Active Directory domain you provide. Then, if your organization is properly [configured for Hybrid Azure AD Join](/azure/active-directory/devices/howto-hybrid-azure-ad-join.md), the device will be synchronized to Azure Active Directory.
-- **[Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join.md)**: If you choose this join type, Windows 365 will join your Cloud PC directly to Azure Active Directory.
+- **[Hybrid Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid.md)**: If you choose this join type, Windows 365 will join your Cloud PC to the Windows Server Active Directory domain you provide. Then, if your organization is properly [configured for Hybrid Azure AD Join](/azure/active-directory/devices/howto-hybrid-azure-ad-join.md), the device will be synchronized to Azure AD.
+- **[Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join.md)**: If you choose this join type, Windows 365 will join your Cloud PC directly to Azure AD.
 
 
 Below is a table showing key capabilities or requirements based on the selected join type:
