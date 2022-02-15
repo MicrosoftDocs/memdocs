@@ -28,6 +28,10 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### ODJConnectorSvc.exe leaks memory
+
+When using a proxy server with the ODJConnector service, the memory file can get too large when processing requests resulting in impacts to performance. The current workaround for this issue it to restart the ODJConnectSvc.exe service. 
+
 ### Reset button causes pre-provisioning to fail on retry
 
 When ESP fails during the pre-provisioning flow and the user selects the reset button, TPM attestation may fail during the retry. 
