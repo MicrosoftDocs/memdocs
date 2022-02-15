@@ -44,7 +44,7 @@ Secure access to Windows 365 is further enhanced with IGEL OS:
 - Secure read-only OS removes security concerns at the edge.
 - IGEL OS can be installed on any x86-64 device allowing even older devices to securely connect.
 
-For more information, visit the [IGEL website](https://www.igel.com/windows365/)
+For more information, visit the [IGEL website](https://www.igel.com/windows365/).
 
 ## Nerdio
 
@@ -56,7 +56,7 @@ Windows 365 and Nerdio Manager help users to be productive from anywhere, on any
 - Manage physical and virtual devices through a unified portal.
 - Realize a fixed and predictable price.
 
-For more information, visit the [Nerdio website](https://getnerdio.com/windows-365/)
+For more information, visit the [Nerdio website](https://getnerdio.com/windows-365/).
 
 ## NetApp
 
@@ -64,7 +64,7 @@ For more information, visit the [Nerdio website](https://getnerdio.com/windows-3
 
 Spot by NetApp delivers fully managed, continuously optimized cloud desktops as a service.
 
-For more information, read about Spot on the [NetApp website](https://spot.io/products/spotpc/)
+For more information, read about Spot on the [NetApp website](https://spot.io/products/spotpc/).
 
 ## ServiceNow
 
@@ -72,7 +72,7 @@ For more information, read about Spot on the [NetApp website](https://spot.io/pr
 
 ServiceNow and Microsoft are continuing to find new ways for employees to seamlessly collaborate while delivering great experiences to our joint customers.
 
-For more information, read the blog on the [ServiceNOw website](https://blogs.servicenow.com/2021/microsoft-integration-optimizes-hybrid-work.html)
+For more information, read the blog on the [ServiceNOw website](https://blogs.servicenow.com/2021/microsoft-integration-optimizes-hybrid-work.html).
 
 ## UKG
 
