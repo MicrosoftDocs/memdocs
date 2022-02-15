@@ -35,6 +35,7 @@ You can automatically register an existing device if it's:
 - Enrolled in an MDM service such as Intune
 - A corporate device that's not already registered with Autopilot
 
+Please review this NOTE below as it is confusing and has generated customer calls. I've discussed this with Juanita Baptiste already who is the feature PM and she has agreed to remove it. 
 > [!NOTE]
 > Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD device into a Azure AD Autopilot device.<!-- MEMDocs#2175 -->
 
