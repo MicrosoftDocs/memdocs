@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: MAM-WE device enrollment guide for  Microsoft Intune
+title: MAM-WE<!-- --> device enrollment guide for  Microsoft Intune
 description: Use mobile application management without enrollment to deploy apps, and protect organization data within the apps. Get an overview of the administrator and end user tasks for this enrollment option.
 keywords:
 author: MandiOhlinger
@@ -30,17 +30,17 @@ ms.collection:
 
 # Deployment guide: Enroll devices using Application management without enrollment (MAMWE) in Microsoft Intune
 
-MAM-WE isn't a traditional "enrollment" method, as it uses app configuration profile to deploy or configure apps on devices. Devices aren't enrolled. When combined with app protection policies, you can protect data within an app.
+MAM-WE<!-- --> isn't a traditional "enrollment" method, as it uses app configuration profile to deploy or configure apps on devices. Devices aren't enrolled. When combined with app protection policies, you can protect data within an app.
 
-MAM-WE is commonly used for personal or bring your own devices (BYOD). Or, used for managed devices that need extra security. MAM-WE is also an option for users who don't enroll their personal devices, but still need access to organization email, Teams meetings, and more.
+MAM-WE<!-- --> is commonly used for personal or bring your own devices (BYOD). Or, used for managed devices that need extra security. MAM-WE<!-- --> is also an option for users who don't enroll their personal devices, but still need access to organization email, Teams meetings, and more.
 
-MAM-WE is available on the following platforms:
+MAM-WE<!-- --> is available on the following platforms:
 
 - Android
 - iOS/iPadOS
 - Windows
 
-This article provides recommendations on when to use MAM-WE. It also includes an overview of the administrator and user tasks. For more specific information on MAM-WE, see [Microsoft Intune app management](../apps/app-management.md).
+This article provides recommendations on when to use MAM-WE<!-- -->. It also includes an overview of the administrator and user tasks. For more specific information on MAM-WE<!-- -->, see [Microsoft Intune app management](../apps/app-management.md).
 
 > [!TIP]
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
@@ -49,7 +49,7 @@ This article provides recommendations on when to use MAM-WE. It also includes an
 
 For an overview, including any Intune-specific prerequisites, see [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md).
 
-## MAM-WE enrollment
+## MAM-WE<!-- --> enrollment
 
 Use for personal or bring your own devices (BYOD). Or, use on organization-owned devices that need specific app configuration, or extra app security.
 
@@ -63,12 +63,12 @@ Use for personal or bring your own devices (BYOD). Or, use on organization-owned
 | Devices are associated with a single user. | ✔️ |
 | Devices are managed by another MDM provider. | ✔️ |
 | You use the device enrollment manager (DEM) account. | ✔️ |
-| Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended as the *only* enrollment method for organization-owned devices. Organization-owned devices should be enrolled and managed by Intune. If you want extra security for specific apps, then use enrollment and MAM-WE together. |
+| Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended as the *only* enrollment method for organization-owned devices. Organization-owned devices should be enrolled and managed by Intune. If you want extra security for specific apps, then use enrollment and MAM-WE<!-- --> together. |
 | Devices are user-less, such as kiosk, or dedicated device. | ❌ <br/><br/>Typically, user-less or shared devices are organization-owned. These devices should be enrolled and managed by Intune. |
 
 ---
 
-### MAM-WE administrator tasks
+### MAM-WE<!-- --> administrator tasks
 
 This task list provides an overview. For more specific information, see [Microsoft Intune app management](../apps/app-management.md).
 
@@ -79,7 +79,7 @@ This task list provides an overview. For more specific information, see [Microso
   - Direct users to the Company Portal web site at `portal.manage.microsoft.com`. When they sign in with their organization credentials, they see a list of apps, including required apps. They can get the apps from this site.
   - Have users download and install the Company Portal app from the app store. Once authenticated, users can install apps, including required apps.
 
-### MAM-WE end user tasks
+### MAM-WE<!-- --> end user tasks
 
 The specific tasks depend on how you tell users to install the apps.
 

@@ -270,7 +270,7 @@ FinishLaunchingAtStartup | Boolean | If the app is using `[BGTaskScheduler regis
 
 ### Overview
 
-To receive Intune app protection policy, apps must initiate an enrollment request with the Intune MAM service. Apps can be configured in the Intune console to receive app protection policy with or without device enrollment. [App protection policies without enrollment](../apps/android-deployment-scenarios-app-protection-work-profiles.md#app-we), also known as **APP-WE** or MAM-WE, allows apps to be managed by Intune without the need for the device to be enrolled in Intune mobile device management (MDM). In both cases, enrolling with the Intune MAM service is required to receive policy.
+To receive Intune app protection policy, apps must initiate an enrollment request with the Intune MAM service. Apps can be configured in the Intune console to receive app protection policy with or without device enrollment. [App protection policies without enrollment](../apps/android-deployment-scenarios-app-protection-work-profiles.md#app-we), also known as **APP-WE<!-- -->** or MAM-WE<!-- -->, allows apps to be managed by Intune without the need for the device to be enrolled in Intune mobile device management (MDM). In both cases, enrolling with the Intune MAM service is required to receive policy.
 
 > [!Important]
 > The Intune App SDK for iOS uses 256-bit encryption keys when encryption is enabled by App Protection Policies. All apps will need to have a current SDK version to allow protected data sharing.
@@ -1006,7 +1006,7 @@ Here are recommended best practices for developing for iOS:
 
 The Intune App SDK APIs are in Objective-C only and do not support **native** Swift. Swift interoperability with Objective-C is required.
 
-### Do all users of my application need to be registered with the APP-WE service?
+### Do all users of my application need to be registered with the APP-WE<!-- --> service?
 
 No. In fact, only work or school accounts should be registered with the Intune App SDK. Apps are responsible for determining if an account is used in a work or school context.
 
