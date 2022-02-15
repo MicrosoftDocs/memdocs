@@ -78,8 +78,6 @@ This feature applies to:
 > [!TIP]
 > For more information, see [What are app protection policies?](app-protection-policy.md).
 
-MAM provides end user privacy benefits by limiting management to org data in managed applications. As an administrator, you still need to protect your data. These devices aren't managed. So common MDM tasks and features, such as WiFi, device VPN, and certificate management, aren't part of this deployment scenario.
-
 ### Android Enterprise personally-owned work profiles
 
 Android Enterprise personally-owned work profiles are the core Android Enterprise deployment scenario and the only scenario targeted at BYOD use cases. The Android Enterprise personally-owned work profile is a separate partition created at the Android OS level that can be managed by Intune.
@@ -104,7 +102,7 @@ Android Enterprise personally-owned Work profiles and APP complement each other'
 
 You may need to support individual users who have multiple devices - unenrolled devices with MAM managed applications and managed devices with Android Enterprise personally-owned work profiles.
 
-For example, you require end users to enter a PIN when opening a work app. Depending on the device, the PIN features are handled by APP or by the work profile. For MAM managed applications, access controls including the PIN-to-launch behavior is enforced by APP. For enrolled devices, the APP PIN may be disabled to avoid requiring both a device PIN and an APP PIN. (APP PIN setting for [Android](../apps/app-protection-policy-settings-android.md#access-requirements) and [iOS](../apps/app-protection-policy-settings-ios.md#access-requirements). For work profile devices, you can use a device or work profile PIN enforced by the OS. To accomplish this scenario, configure APP settings so that they don't apply *when* an app is deployed into a work profile. If you don't configure it this way, the end user gets prompted for a PIN by the device, and again at the APP layer.
+For example, you require end users to enter a PIN when opening a work app. Depending on the device, the PIN features are handled by APP or by the work profile. For MAM managed applications, access controls including the PIN-to-launch behavior is enforced by APP. For enrolled devices, the APP PIN may be disabled to avoid requiring both a device PIN and an APP PIN. (APP PIN setting for [Android](../apps/app-protection-policy-settings-android.md#access-requirements). For work profile devices, you can use a device or work profile PIN enforced by the OS. To accomplish this scenario, configure APP settings so that they don't apply *when* an app is deployed into a work profile. If you don't configure it this way, the end user gets prompted for a PIN by the device, and again at the APP layer.
 
 ### Control multi-identity behavior in Android Enterprise personally-owned work profiles
 
@@ -131,7 +129,7 @@ For example, customers in or have users in China can't use Android device manage
 
 ## Summary
 
-Using Intune, both MAM and Android Enterprise personally-owned work profiles are available for your Android BYOD program. To choose MAM or work profiles depends upon your business and usage requirements. In summary, use Android Enterprise personally-owned work profiles if you need MDM activities on managed devices, such as certificate deployment, app push, and so on. Use MAM if you want to protect org data within applications.
+Using Intune, both MAM and Android Enterprise personally-owned work profiles are available for your Android BYOD program. You can choose to use MAM and/or work profiles depending upon your business and usage requirements. In summary, use Android Enterprise personally-owned work profiles if you need MDM activities on managed devices, such as certificate deployment, app push, and so on. Use MAM if you want to protect org data within applications.
 
 ## Next steps
 [Start using app protection policies](app-protection-policy.md), or [enroll your devices](../enrollment/android-enroll.md).
