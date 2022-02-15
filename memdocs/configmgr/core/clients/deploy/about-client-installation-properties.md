@@ -763,6 +763,20 @@ Examples:
 
 - `CCMSetup.exe SMSMP=https://smsmp01.contoso.com`  
 
+### SMSMPLIST
+
+Specifies MP list for the Configuration Manager client to use. Use semi-colon as delimiter when specifying multiple MP.
+
+> [!IMPORTANT]  
+> If the management point only accepts client connections over HTTPS, prefix the management point name with `https://`.
+
+Examples:
+
+- `CCMSetup.exe SMSMPLIST=https://smsmp01.contoso.com;https://smsmp02.contoso.com;smsmp03.contoso.com`
+
+- `CCMSetup.exe SMSMPLIST=https://smsmp01.contoso.com;smsmp02.contoso.com;smsmp03.contoso.com` 
+
+
 ### SMSPUBLICROOTKEY
 
 If the client can't get the Configuration Manager trusted root key from Active Directory Domain Services, use this property to specify the key. This property applies to clients that use HTTP and HTTPS communication. For more information, see [Planning for the trusted root key](../../plan-design/security/plan-for-security.md#the-trusted-root-key).
