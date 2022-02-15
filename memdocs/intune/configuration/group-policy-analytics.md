@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 02/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -137,7 +137,10 @@ Currently, the Group Policy analytics (preview) tool only supports non-ADMX sett
 
     - **Ready for migration**: The policy has a matching setting in Intune, and is ready to be migrated to Intune.
     - **Not supported**: The policy doesn't have a matching setting. Typically, policy settings that show this status aren't exposed to MDM providers, including Intune.
-    - **Deprecated**: The policy may apply to older Windows versions, and no longer used in Windows 10/11.
+    - **Deprecated**: The policy may apply to older Windows versions, older Microsoft Edge versions, and more policies that aren't used anymore.
+
+      > [!NOTE]
+      > When the Microsoft Intune product team updates the mapping logic, your imported GPOs are automatically updated. You don't need to reimport your GPOs.
 
 3. Select the **Reports** tab > **Group policy migration readiness**. In this report, you can:
 
