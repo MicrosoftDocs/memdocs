@@ -2,7 +2,7 @@
 title: Setup downloader tool
 titleSuffix: Configuration Manager
 description: Use the standalone tool to download current versions of key installation files for setup.
-ms.date: 05/14/2020
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -55,15 +55,15 @@ If your organization restricts network communication with the internet using a f
 
 You can use the following command-line options with **Setupdl.exe**:
 
-- **/VERIFY**: Verify the files in the download folder, which include language files. For the list of outdated files, review **C:\ConfigMgrSetup.log**. When you use this option, it doesn't download any files.
+- `/VERIFY`: Verify the files in the download folder, which include language files. For the list of outdated files, review **C:\ConfigMgrSetup.log**. When you use this option, it doesn't download any files.
 
-- **/VERIFYLANG**: Only verify the language files in the download folder. For the list of outdated language files, review **C:\ConfigMgrSetup.log**.
+- `/VERIFYLANG`: Only verify the language files in the download folder. For the list of outdated language files, review **C:\ConfigMgrSetup.log**.
 
-- **/LANG**: Download only the language files to the download folder.
+- `/LANG`: Download only the language files to the download folder.
 
-- **/NOUI**: Start setup downloader without the user interface. When you use this option, the **download path** is required.
+- `/NOUI`: Start setup downloader without the user interface. When you use this option, the **download path** is required.
 
-- **Download path**: To automatically start the verification or download process, specify the path to the download folder. When you use the **/NOUI** option, the download path is required. If you don't specify a download path, setup downloader prompts you to specify the path. If the folder doesn't exist, setup downloader creates it.
+- **Download path**: To automatically start the verification or download process, specify the path to the download folder. When you use the `/NOUI` option, the download path is required. If you don't specify a download path, setup downloader prompts you to specify the path. If the folder doesn't exist, setup downloader creates it.
 
 ### Example commands
 
