@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 1/13/2022
+ms.date: 02/16/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -63,6 +63,10 @@ Currently, Windows 365 and Azure Virtual Desktop share a common framework for id
 
 <!-- ***********************************************-->
 ## Device management
+
+### Nested virtualizations<!--37800910-->
+
+In a future release, Windows 365 8vCPU/32GB licenses will support nested virtualizations for all regions (except Southeast Asia and West US 2).
 
 ### Operating system end of support status for Cloud PCs<!--36852572 -->
 

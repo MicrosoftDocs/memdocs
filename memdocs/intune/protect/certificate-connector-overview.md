@@ -223,14 +223,14 @@ New updates for the connector can take a week or more to become available for ea
 
 > [!IMPORTANT]
 > On February 1, 2022, Intune certificate connectors earlier than version **6.1806.5.0** will no longer allow you to issue certificates to users and devices.
-
+<!-- Hold it >
 ### February 16, 2022
 
 Version **6.2201.7.0**. This update includes:
 
 - Support changes for account moves
 - Explicit disabling for older versions of TLS
-
+-->
 ### January 6, 2022
 
 Version **6.2112.1.0**. This update includes:
