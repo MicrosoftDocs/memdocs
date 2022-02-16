@@ -91,8 +91,8 @@ You can deploy volume-purchased (VPP) apps or custom apps or line-of-business ap
 
 1. To deploy a VPP or custom app to Endpoint Manager, add the apps in Apple Business Manager or Apple School Manager and synchronize the VPP token. Assign a VPP or custom app as device-licensed to Azure AD device groups in Intune. For more information, see [Synchronize a VPP token](../apps/vpp-apps-ios.md#synchronize-a-vpp-token).
 2. To add a line-of-business app in Endpoint Manager and assign it to Azure AD device group. For more information, see [Add an iOS/iPadOS line-of-business app to Microsoft Intune](../apps/lob-apps-ios.md).
-3. To add a web app in Endpoint Manager and assign it to Azure AD groups. For more information, see [Add a web app to Intune](../apps/web-app.md#add-a-web-app-to-intune). 
-4. For assigning apps to Shared iPads, you should use Azure AD device groups. You can use home screen layout settings in device configuration profile assigned to Azure AD user groups to show or hide different sets of apps to different users on a Shared iPad.  
+3. To add a web app in Endpoint Manager and assign it to Azure AD User group. For more information, see [Add a web app to Intune](../apps/web-app.md#add-a-web-app-to-intune). 
+4. For assigning apps to Shared iPads, you should use Azure AD device groups (**Except for Web Apps as only User groups are supported on Shared iPads** [Apple's website](https://developer.apple.com/documentation/devicemanagement/webclip). You can use home screen layout settings in device configuration profile assigned to Azure AD user groups to show or hide different sets of apps to different users on a Shared iPad.  
 
 App installations on Shared iPads follow the applicability rules in the table below.<p>
 
@@ -101,7 +101,7 @@ App installations on Shared iPads follow the applicability rules in the table be
 |     Line-of-business app    |     Device    |     Not applicable    |
 |     Device-licensed volume-purchased or custom app (VPP)    |     Device    |     Not applicable    |
 |     User-licensed volume-purchased or custom app (VPP)    |     Not applicable    |     Not applicable    |
-|     Web app    |     Device    |     User    |
+|     Web app    |     Not Supported    |     User    |
 |     App Store app    |     Not applicable    |     Not applicable    |
 
 ## Recommended policy and app assignment for Shared iPads
