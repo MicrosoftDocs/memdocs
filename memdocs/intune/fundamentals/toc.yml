@@ -93,7 +93,7 @@ items:
         items:
         - name: Overview
           href: deployment-guide-enrollment.md
-        - name: MAM-WE 
+        - name: MAM
           href: deployment-guide-enrollment-mamwe.md
         - name: Android, Android Enterprise
           href: deployment-guide-enrollment-android.md

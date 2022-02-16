@@ -871,7 +871,7 @@ The following **notifications MAMNotificationType** are sent to the app and some
   notification will never be sent on the UI thread.
 
 * **MAM_ENROLLMENT_RESULT**: This notification is sent in a
-  **MAMEnrollmentNotification** to inform the app that an APP-WE<!-- -->
+  **MAMEnrollmentNotification** to inform the app that an APP-WE
   enrollment attempt has completed and to provide the status of that
   attempt. No guarantees are made as to what thread this notification
   will be sent on.
@@ -1000,19 +1000,19 @@ Also see the requirements for [Conditional Access](#conditional-access) below.
 
 Authority and NonBrokerRedirectURI may be specified if necessary.
 
-## App protection policy without device enrollment
+## MAM managed applications
 
 ### Overview
-Intune app protection policy without device enrollment, also known as APP-WE<!-- --> or MAM-WE<!-- -->, allows apps to be managed by Intune without the need for the device to be enrolled Intune MDM. APP-WE<!-- --> works with or without device enrollment. The Company Portal is still required to be installed on the device, but the user does not need to sign into the Company Portal and enroll the device.
+MAM allows apps to be managed by Intune without the need for the device to be enrolled in Intune MDM. MAM works for both enrolled and unenrolled devices. The Company Portal is still required to be installed on the device, but the user does not need to sign into the Company Portal and enroll the device.
 
 > [!NOTE]
-> All apps are required to support app protection policy without device enrollment.
+> All apps are required to be MAM managed.
 
 ### Workflow
 
-When an app creates a new user account, it should register the account for management with the Intune App SDK. The SDK will handle the details of enrolling the app in the APP-WE<!-- --> service; if necessary, it will retry any enrollments at appropriate time intervals if failures occur.
+When an app creates a new user account, it should register the account for management with the Intune App SDK. The SDK will handle the details of enrolling the app in the APP-WE service; if necessary, it will retry any enrollments at appropriate time intervals if failures occur.
 
-The app can also query the Intune App SDK for the status of a registered user to determine if the user should be blocked from accessing corporate content. Multiple accounts may be registered for management, but currently only one account can be actively enrolled with the APP-WE<!-- --> service at a time. This means only one account on the app can receive app protection policy at a time.
+The app can also query the Intune App SDK for the status of a registered user to determine if the user should be blocked from accessing corporate content. Multiple accounts may be registered for management, but currently only one account can be actively enrolled with the APP-WE service at a time. This means only one account on the app can receive app protection policy at a time.
 
 The app is required to provide a callback to acquire the appropriate access token from the Microsoft Authentication Library (MSAL) or the Azure Active Directory Authentication Library (ADAL) on behalf of the SDK. It is assumed that the app already uses MSAL or ADAL for user authentication and to acquire its own access tokens.
 
@@ -1021,7 +1021,7 @@ When the app removes an account completely, it should unregister that account to
 
 ### Overview of app requirements
 
-To implement APP-WE<!-- --> integration, your app must register the user account with the MAM SDK:
+To implement APP-WE integration, your app must register the user account with the MAM SDK:
 
 1. The app _must_ implement and register an instance of the [MAMServiceAuthenticationCallback] interface. The callback instance must be registered in the `onCreate()` (or `onMAMCreate()`) method of the Application subclass.
 
@@ -2007,7 +2007,7 @@ app manually to prevent the user from accessing in-memory data after a wipe occu
 
 ## Enabling MAM targeted configuration for your Android applications (optional)
 Application-specific key-value pairs may be configured in the Intune
-console for [MAM-WE<!-- -->](../apps/app-configuration-policies-managed-app.md)
+console for [MAM](../apps/app-configuration-policies-managed-app.md)
 and [Android Enterprise](../apps/app-configuration-policies-use-android.md).
 These key-value pairs are not interpreted by Intune at all,
 but are passed on to the app. Applications that want to
@@ -2017,7 +2017,7 @@ the same app, there may be multiple conflicting values available for
 the same key.
 
 > [!NOTE] 
-> Configurations setup for delivery via MAM-WE<!-- --> can not be delivered in `offline` (when the Company Portal is not installed).  Only Android Enterprise AppRestrictions will be delivered via a `MAMUserNotification` on an empty identity in this case.
+> Configurations setup for delivery via MAM can not be delivered in `offline` (when the Company Portal is not installed).  Only Android Enterprise AppRestrictions will be delivered via a `MAMUserNotification` on an empty identity in this case.
 
 ### Get the App Config For a User
 App config may be retrieved as follows:
@@ -2141,10 +2141,10 @@ Below is the complete list of allowed style attributes, the UI elements they con
 
 ## Default enrollment (optional)
 
-The following is guidance for requiring user prompt on app launch for an automatic APP-WE<!-- --> service enrollment (we call this **default enrollment** in this section), requiring Intune app protection policies to allow only Intune protected users to use your SDK-integrated Android LOB app. It also covers how to enable SSO for your SDK-integrated Android LOB app. This is **not** supported for store apps that can be used by non-Intune users.
+The following is guidance for requiring user prompt on app launch for an automatic APP-WE service enrollment (we call this **default enrollment** in this section), requiring Intune app protection policies to allow only Intune protected users to use your SDK-integrated Android LOB app. It also covers how to enable SSO for your SDK-integrated Android LOB app. This is **not** supported for store apps that can be used by non-Intune users.
 
 > [!NOTE] 
-> The benefits of **default enrollment** include a simplified method of obtaining policy from APP-WE<!-- --> service for an app on the device.
+> The benefits of **default enrollment** include a simplified method of obtaining policy from APP-WE service for an app on the device.
 
 > [!NOTE] 
 > **Default enrollment** is sovereign cloud aware.
@@ -2162,7 +2162,7 @@ Enable default enrollment with the following steps:
    ```
 
    > [!NOTE] 
-   > This must be the only MAM-WE<!-- --> integration in the app. If there are any other attempts to call MAMEnrollmentManager APIs, conflicts will arise.
+   > This must be the only MAM integration in the app. If there are any other attempts to call MAMEnrollmentManager APIs, conflicts will arise.
 
 3. Enable MAM policy required by adding the following value in the manifest under the `<application>` tag:
 
