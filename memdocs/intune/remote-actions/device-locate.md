@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 10/01/2021
+ms.date: 16/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -34,7 +34,7 @@ For supported device platforms, you can use a remote device action from within t
 
 In addition to identifying the location a lost or stolen device on a map, some platforms support additional capabilities to help you find them, including:
 
-- Use a *lost mode sound alert* on a phone to help a user locate the device should it be behind a chair or otherwise out-of-sight.
+- Use a *lost device sound alert* on a phone to help a user locate the device should it be behind a chair or otherwise out-of-sight.
 - Report on the time and location of a devices *last known location*, which can help when the device is off-line, or can’t be reached to verify where it is at. *(Android Enterprise dedicated devices only)*
 
 ## Supported platforms
@@ -50,9 +50,10 @@ In addition to identifying the location a lost or stolen device on a map, some p
   - Version 1809 (10.0.17763.1728) or later
 - **Windows 11**
 
-**Lost mode sound alert** – The following platforms support this capability:
+**Lost device sound alert** – The following platforms support this capability:
 
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md).
+- **Android Enterprise dedicated devices** - Requires the Intune app running 2202.01 or later 
 
 **Unsupported** - Device location capabilities aren't supported for the following platforms:
 
@@ -99,19 +100,21 @@ The date and time of this default status varies:
 Later, this default status updates to reflect the actual date and time that an admin runs the Locate device action for that device.
 
 
-## Activate lost mode sound alert
+## Activate lost device sound alert
 
 For supported device platforms, you can remotely trigger the device to play an alert sound so the user can find it. The sound plays until the user disables the sound on the device or the device is removed from lost mode.
 
-To start a lost mode sound alert:
+To start a lost device sound alert:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices**, and then select **All devices**.
 3. Select the device you want to activate.
 4. On the devices *Overview* pane:
-   - For iOS/iPadOS: select **Play Lost mode sound (supervise only)**.
+   - **For iOS/iPadOS**: select **Play Lost mode sound (supervise only)**. The sound plays on an iOS/iPadOS device until the device is removed from lost mode.
 
-The sound plays on an iOS/iPadOS device until the device is removed from lost mode.
+   - **For Android Enterprise dedicated devices**: select **Play Lost device sound**. The sound plays on an Android Enterprise dedicated device for the set duration or if notifications are enabled, until a user on the device turns it off. 
+     - For devices running on operating systems below version 10, a full screen activity with a **Stop Sound** button pops up. 
+     - For devices running on operating systems version 10 or higher, if notifications are enabled, a notification with a **Stop Sound** button shows up.
 
 ## Security and privacy information for lost mode and locate device actions
 
