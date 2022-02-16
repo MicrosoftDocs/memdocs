@@ -88,6 +88,8 @@ When configuring Cloud PCs to use Azure AD Join, Azure AD provides:
 - The domain join mechanism for the Cloud PCs.
 - User authentication for RDP connections.
 
+For more information on how the identity services impact the deployment, management, and usage of Cloud PCs, see [identity and authentication](identity-authentication.md).
+
 ### Azure AD
 
 Azure AD provides user authentication and authorization for both the Windows 365 web portal and for the Remote Desktop client apps. Both support modern authentication, which means Azure AD Conditional Access can be integrated to provide:
@@ -104,13 +106,13 @@ For more information on how to use Azure AD Conditional Access with Windows 365,
 
 ### Active Directory Domain Services
 
-Windows 365 Cloud PCs can be either Hybrid azure AD joined or Azure AD Joined. When using Hybrid Azure AD Join, Cloud PCs must domain join to an AD DS domain. This domain must be synchronized with Azure AD. The domain’s domain controllers may be hosted in Azure or on-premises. If hosted on-premises, connectivity must be established from Azure to the on-premises environment. The connectivity can be in the form of [Azure Express Route](/azure/architecture/reference-architectures/hybrid-networking/expressroute) or a [site-to-site VPN](/azure/architecture/reference-architectures/hybrid-networking/vpn). For more information on establish hybrid network connectivity, see [implement a secure hybrid network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). The connectivity must allow communication from the Cloud PCs to the domain controllers required by Active Directory. For more information, see [Configure firewall for AD domain and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
+Windows 365 Cloud PCs can be either Hybrid Azure AD joined or Azure AD Joined. When using Hybrid Azure AD Join, Cloud PCs must domain join to an AD DS domain. This domain must be synchronized with Azure AD. The domain’s domain controllers may be hosted in Azure or on-premises. If hosted on-premises, connectivity must be established from Azure to the on-premises environment. The connectivity can be in the form of [Azure Express Route](/azure/architecture/reference-architectures/hybrid-networking/expressroute) or a [site-to-site VPN](/azure/architecture/reference-architectures/hybrid-networking/vpn). For more information on establish hybrid network connectivity, see [implement a secure hybrid network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). The connectivity must allow communication from the Cloud PCs to the domain controllers required by Active Directory. For more information, see [Configure firewall for AD domain and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
 
 ## "Hosted on behalf of" architecture
 
 The "hosted on behalf of" architecture lets Microsoft services, after they’re delegated appropriate and scoped permissions to a virtual network by a subscription owner, attach hosted Azure services to a customer subscription. This connectivity model lets a Microsoft service provide software-as-a-service and user licensed services as opposed to standard consumption-based services.
 
-All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exists in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
+All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exist in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
 
 Windows 365 manages the capacity and in-region availability in the Windows 365 subscriptions. Windows 365 determines the size and type of VM based on the [license](cloud-pc-size-recommendations.md) you [assign to the user](assign-licenses.md). Windows 365 determines the Azure region to host your Cloud PCs in based on the virtual network you select when [creating an on-prem network connection](create-on-premises-network-connection.md).
 
@@ -143,4 +145,4 @@ Windows 365 Cloud PCs don't support third-party connection brokers.
 <!-- ########################## -->
 ## Next steps
 
-[Learn about the Cloud PC lifecycle](lifecycle.md).
+[Learn about Windows 365 identity and authentication](identity-authentication.md).
