@@ -1,18 +1,16 @@
 ---
 title: OS deployment CreateMedia.exe
 titleSuffix: Configuration Manager
+description: Create OS deployment media from the command-line or through a script.
 ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
-ms.assetid: 41417409-6c56-4099-bafc-3700c6761de3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
-
 ---
 
 # OS deployment CreateMedia.exe

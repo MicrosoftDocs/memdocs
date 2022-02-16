@@ -65,7 +65,7 @@ If you extend the Active Directory schema for Configuration Manager, the site pu
 
 ## CCMSetup.exe command-line parameters
 
-### <a name="bkmk_help"></a> /?
+### <a name="bkmk_help"></a> `/?`
 
 Shows available command-line parameters for ccmsetup.exe.
 
