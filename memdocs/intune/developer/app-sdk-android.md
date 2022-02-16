@@ -139,8 +139,8 @@ The tools perform [direct
 replacements](#class-and-method-replacements)
 only. They do not perform any more complex SDK integrations such as
 [Save-As Policy](#enable-features-that-require-app-participation),
-[Multi-Identity](#multi-identity-optional), [App-WE
-registration](#app-protection-policy-without-device-enrollment),
+[Multi-Identity](#multi-identity-optional), [MAM
+registration](#mam-managed-applications),
 [AndroidManifest modifications](#manifest-replacements) or [MSAL
 configuration](#configure-microsoft-authentication-library-msal)
 so these must be completed before your app is fully Intune
