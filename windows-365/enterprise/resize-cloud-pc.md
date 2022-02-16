@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Resize a Cloud PC
+title: Resize a Cloud PC (preview)
 titleSuffix:
 description: Learn how to resize a Cloud PC by using Microsoft Endpoint Manager.
 keywords:
@@ -47,6 +47,8 @@ Alternatively, you can assign a custom role that includes the permissions of the
 To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node
 
 The **Resize** remote action is supported for paid, preview, and trial licenses.
+
+The **Resize** remote action is currently on preview.
 
 Resizing isn’t supported for:
 
