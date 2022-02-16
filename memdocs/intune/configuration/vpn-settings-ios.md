@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/23/20212
+ms.date: 02/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -242,21 +242,21 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Automatic VPN
 
-- **Type of automatic VPN**: Your options:
+- **Type of automatic VPN**: Select the VPN type you want to use: No VPN, on-demand VPN, or per-app VPN:
 
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching domain name. If there's a match, then the action you choose runs.
 
     For example, you can create a condition where the VPN connection is only used when a device isn't connected to a company Wi-Fi network. Or, if a device can't access a DNS search domain you enter, then the VPN connection isn't started.
 
-    - **On-demand rules** > **Add**: Select this option to add a rule.
+    - **On-demand rules** > **Add**: Select **Add** to add a rule. If there's a match to your rule, then the action you select is run on the device.
 
-      - **I want to do the following**: If there's a match between the device value and your on-demand rule, then select the action. Your options:
+      - **I want to do the following**: If there's a match between the device value and your on-demand rule, then select the action you want the device to do. Your options:
 
-        - Establish VPN
-        - Disconnect VPN
-        - Evaluate each connection attempt: If there's a match between the device value and your on-demand rule, then use the **Choose whether to connect** setting to decide what happens for each VPN connection attempt:
-          - **Connect if needed**: For each VPN connection attempt, decide if users should use a DNS domain name or a DNS server IP address:
+        - **Establish VPN**: If there's a match between the device value and your on-demand rule, then a VPN connection is created.
+        - **Disconnect VPN**: If there's a match between the device value and your on-demand rule, then a VPN connection is disconnected.
+        - **Evaluate each connection attempt**: If there's a match between the device value and your on-demand rule, then use the **Choose whether to connect** setting to decide what happens for *each* VPN connection attempt:
+          - **Connect if needed**: For each VPN connection attempt, decide if users should connect using a DNS domain name or connect using a DNS server IP address:
             - **When users try to access these domains**: Enter one or more DNS domains or IP addresses, like `contoso.com` or `10.0.0.22`. If users try to connect to a domain in this list, then the device uses DNS to resolve the domains you enter. If the domain doesn't resolve, then a VPN connection is created. If the domain does resolve, then a VPN connection isn't created.
 
               Remember, domains are internal resources that aren't resolved by public DNS. A device can't access the domain from an external network. When a VPN connection is established, the internal domain can be accessed.
@@ -271,9 +271,9 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
             - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then a VPN connection isn't created. If they try to connect to a domain not in this list, then a VPN connection is created.
 
-        - Ignore
+        - **Ignore**: If there's a match between the device value and your on-demand rule, then a VPN connection is ignored.
 
-      - **I want to restrict to**: Select the condition that the rule must meet. Your options:
+      - **I want to restrict to**: In the **I want to do the following** setting, if you select **Establish VPN**, **Disconnect VPN**, or **Ignore**, then select the condition that the rule must meet. Your options:
 
         - **Specific SSIDs**: Enter one or more wireless network names that the rule will apply. This network name is the Service Set Identifier (SSID). For example, enter `Contoso VPN`.
         - **Specific search domains**: Enter one or more DNS domains that the rule will apply. For example, enter `contoso.com`.
@@ -294,13 +294,18 @@ These settings apply when you choose **Connection type** > **IKEv2**.
       - iOS 14 and newer
       - iPadOS 14 and newer
 
-  - **Per-app VPN**: Enables per-app VPN by associating this VPN connection with an iOS/iPadOS app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the software. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
+  - **Per-app VPN**: Enables per-app VPN by associating this VPN connection with a specific app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the app software or program. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
 
-    Per-app VPN isn't supported on IKEv2. For more information, see [set up per-app VPN for iOS/iPadOS devices](vpn-setting-configure-per-app.md).
+    Per-app VPN isn't supported on an IKEv2 connection. For more information, see [set up per-app VPN for iOS/iPadOS devices](vpn-setting-configure-per-app.md).
 
     - **Provider Type**: Only available for Pulse Secure and Custom VPN.
 
-      When using iOS/iPadOS **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel). For app-layer tunneling, set the **ProviderType** value to **app-proxy**. For packet-layer tunneling, set the **ProviderType** value to **packet-tunnel**. If you're not sure which value to use, check your VPN provider's documentation.
+      When using **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel):
+
+      - **app-proxy**: Select this option for app-layer tunneling.
+      - **packet-tunnel**: Select this option for packet-layer tunneling.
+
+      If you're not sure which option to use, then check your VPN provider's documentation.
 
     - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established. For example, enter `contoso.com`.
 
@@ -352,6 +357,6 @@ If you use a proxy, then configure the following settings.
 
 ## Next steps
 
-The profile is created, but may not doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+The profile is created, but may not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 Configure VPN settings on [Android](vpn-settings-android.md), [Android Enterprise](vpn-settings-android-enterprise.md), [macOS](vpn-settings-macos.md), and [Windows 10](vpn-settings-windows-10.md) devices.
