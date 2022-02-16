@@ -60,7 +60,7 @@ The following diagram is a conceptual representation of the Microsoft Defender f
 
 Microsoft Endpoint Manager includes several methods and policy types to manage the configuration of Defender for Endpoint on devices.
 
-When your device protection needs extend beyond managing Defender for Endpoint, see [Device protection overview](../device-protect.md) to learn about additional capabilities provided by Microsoft Endpoint Manager to help protect devices, including *device compliance*, *managed apps*, *app protection policies*, and integration with third-party compliance and *mobile threat defense* partners.
+When your device protection needs extend beyond managing Defender for Endpoint, see [Device protection overview](/mem/intune/protect/device-protect) to learn about additional capabilities provided by Microsoft Endpoint Manager to help protect devices, including *device compliance*, *managed apps*, *app protection policies*, and integration with third-party compliance and *mobile threat defense* partners.
 
 The following table can help you understand which policies that can configure MDE settings are supported by devices that are managed by the different scenarios. When you deploy a policy that’s supported for both *MDE security configuration* and *Microsoft Endpoint Manager*, a single instance of that policy can be processed by devices that run MDE only and devices that are managed by either Intune or Configuration Manager.
 
@@ -78,12 +78,12 @@ The following table can help you understand which policies that can configure MD
 
 **Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization.
 
-- **Antivirus** policies manage the security configurations found in Microsoft Defender for Endpoint. See  [antivirus](../endpoint-security-antivirus-policy.md) policy for endpoint security.
-- **Attack surface reduction** policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. For more information, see [Overview of attack surface reduction](/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation, and [attack surface reduction](../endpoint-security-asr-policy.md) policy for endpoint security.
-- **Endpoint detection and response** (EDR) policies manage the Defender for Endpoint capabilities that provide advanced attack detections that are near real-time and actionable. Based on EDR configurations, security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats. See [endpoint detection and response](../endpoint-security-edr-policy.md) policy for endpoint security.
-- **Firewall** policies focus on the Defender firewall on your devices. See [firewall](../endpoint-security-firewall-policy.md) policy for endpoint security.
-- **Firewall Rules** configure granular rules for Firewalls, including specific ports, protocols, applications, and networks. See [firewall](../endpoint-security-firewall-policy.md) policy for endpoint security.
-- **Security baselines** include preconfigured security settings that define the Microsoft recommended security posture for different products like Defender, Edge, or Windows. The default recommendations are from the relevant product teams and enable you to quickly deploy that recommended secure configuration to devices. While settings are preconfigured in each baseline, you can create customized instances of them to establish your organization’s security expectations. See [security baselines](../security-baselines.md) for Intune.
+- **Antivirus** policies manage the security configurations found in Microsoft Defender for Endpoint. See  [antivirus](/mem/intune/protect/endpoint-security-antivirus-policy) policy for endpoint security.
+- **Attack surface reduction** policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. For more information, see [Overview of attack surface reduction](/windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation, and [attack surface reduction](/mem/intune/protect/endpoint-security-asr-policy) policy for endpoint security.
+- **Endpoint detection and response** (EDR) policies manage the Defender for Endpoint capabilities that provide advanced attack detections that are near real-time and actionable. Based on EDR configurations, security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats. See [endpoint detection and response](/mem/intune/protect/endpoint-security-edr-policy) policy for endpoint security.
+- **Firewall** policies focus on the Defender firewall on your devices. See [firewall](/mem/intune/protect/endpoint-security-firewall-policy) policy for endpoint security.
+- **Firewall Rules** configure granular rules for Firewalls, including specific ports, protocols, applications, and networks. See [firewall](/mem/intune/protect/endpoint-security-firewall-policy) policy for endpoint security.
+- **Security baselines** include preconfigured security settings that define the Microsoft recommended security posture for different products like Defender, Edge, or Windows. The default recommendations are from the relevant product teams and enable you to quickly deploy that recommended secure configuration to devices. While settings are preconfigured in each baseline, you can create customized instances of them to establish your organization’s security expectations. See [security baselines](/mem/intune/protect/security-baselines) for Intune.
 
 ## Configure your tenant to support Microsoft Defender for Endpoint Security Configuration Management
 
@@ -108,7 +108,7 @@ Devices that you manage with Intune are not supported for this scenario.
 
 ## Co-existence with Microsoft Endpoint Configuration Manager
 
-When using Configuration Manager, the best path for management of security policy is using the [Configuration Manager tenant attach](../../../configmgr/tenant-attach/endpoint-security-get-started.md). In some environments it may be desired to use Security Management for Microsoft Defender. When using Security Management for Microsoft Defender with Configuration Manager, endpoint security policy should be isolated to a single control plane. Controlling policy through both channels will create the opportunity for conflicts and undesired results.
+When using Configuration Manager, the best path for management of security policy is using the [Configuration Manager tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started). In some environments it may be desired to use Security Management for Microsoft Defender. When using Security Management for Microsoft Defender with Configuration Manager, endpoint security policy should be isolated to a single control plane. Controlling policy through both channels will create the opportunity for conflicts and undesired results.
 
 ## Create Azure AD Groups
 
@@ -121,7 +121,7 @@ To identify devices that have enrolled with Microsoft Defender for Endpoint but 
    - **MDEJoined** - Added to devices that are joined to the directory as part of this scenario.
    - **MDEManaged** - Added to devices that are actively using the security management scenario. This tag is removed from the device if Defender for Endpoint stops managing the security configuration.
 
-You can create groups for these devices [in Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Endpoint Manager admin center](../../fundamentals/groups-add.md).
+You can create groups for these devices [in Azure AD](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Endpoint Manager admin center](/mem/intune/fundamentals/groups-add).
 
 ## Deploy policy
 
@@ -159,7 +159,7 @@ After creating one or more Azure AD groups that contain devices managed by Micro
 
    When your done configuring settings, select **Next**.
 
-7. On the **Assignments** page, select the Azure AD groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../../configuration/device-profile-assign.md).
+7. On the **Assignments** page, select the Azure AD groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](/mem/intune/configuration/device-profile-assign).
 
    Select **Next** to continue.
 
