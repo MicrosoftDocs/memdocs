@@ -2,7 +2,7 @@
 title: Technical preview 2202
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2202.
-ms.date: 02/16/2022
+ms.date: 02/17/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,27 +24,18 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2202/1234567.md)] -->
 
-[!INCLUDE [3601129](includes/2202/3601129.md)]
-[!INCLUDE [4497776](includes/2202/4497776.md)]
-[!INCLUDE [5909320](includes/2202/5909320.md)]
-[!INCLUDE [6297789](includes/2202/6297789.md)]
-[!INCLUDE [9070525](includes/2202/9070525.md)]
-[!INCLUDE [9265511](includes/2202/9265511.md)]
-[!INCLUDE [9708999](includes/2202/9708999.md)]
-[!INCLUDE [10024154](includes/2202/10024154.md)]
-[!INCLUDE [10340595](includes/2202/10340595.md)]
-[!INCLUDE [10454717](includes/2202/10454717.md)]
-[!INCLUDE [10863785](includes/2202/10863785.md)]
-[!INCLUDE [10875436](includes/2202/10875436.md)]
-[!INCLUDE [10954111](includes/2202/10954111.md)]
-[!INCLUDE [11754191](includes/2202/11754191.md)]
-[!INCLUDE [12451634](includes/2202/12451634.md)]
-[!INCLUDE [12488148](includes/2202/12488148.md)]
-[!INCLUDE [12558856](includes/2202/12558856.md)]
-[!INCLUDE [12668908](includes/2202/12668908.md)]
-[!INCLUDE [12707738](includes/2202/12707738.md)]
-[!INCLUDE [12769623](includes/2202/12769623.md)]
-[!INCLUDE [12890088](includes/2202/12890088.md)]
+[!INCLUDE [Escrow BitLocker recovery password to the site during a task sequence](includes/2202/10454717.md)]
+[!INCLUDE [Delete collection references](includes/2202/9708999.md)]
+[!INCLUDE [Pre-download content for available software updates](includes/2202/4497776.md)]
+[!INCLUDE [Added folder support for nodes in the Software Library](includes/2202/3601129.md)]
+[!INCLUDE [New client health checks](includes/2202/10954111.md)]
+[!INCLUDE [Improvements to implicit uninstall](includes/2202/12488148.md)]
+[!INCLUDE [Improvements for sending feedback](includes/2202/11754191.md)]
+[!INCLUDE [Improvements to Management Insights](includes/2202/10875436.md)]
+[!INCLUDE [Improvements to dashboards](includes/2202/10024154.md)]
+[!INCLUDE [ADR scheduling improvements for deployments](includes/2202/12707738.md)]
+[!INCLUDE [Console improvements](includes/2202/9575773.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2202/13040432.md)]
 
 
 <!-- ## General known issues  -->
