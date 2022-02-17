@@ -2,7 +2,7 @@
 title: Deploy content
 titleSuffix: Configuration Manager
 description: After you install distribution points for Configuration Manager, here's how you can begin to deploy content to them.
-ms.date: 10/09/2020
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -211,7 +211,7 @@ Next, you use the Extract Content command-line tool to export the content files 
 
     `extractcontent /P:D:\PrestagedFiles\MyPrestagedFile.pkgx /S`
 
-    The **/S** parameter extracts only content files that are newer than what's currently in the content library.
+    The `/S` parameter extracts only content files that are newer than what's currently in the content library.
 
     When you extract the prestaged content file on a site server, the content files are added to its content library. The site then registers the content in the site server database. When you export the prestaged content file on a distribution point, it adds the content files to the content library on the distribution point. The distribution point sends a status message to the parent primary site server, which then registers the content in the site database.
 

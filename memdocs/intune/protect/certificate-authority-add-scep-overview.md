@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/03/2021
+ms.date: 02/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -149,6 +149,7 @@ The following third-party certification authorities support Intune:
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
 - [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 - [IDnomic](https://www.idnomic.com/)
+- [KeyTalk](https://keytalk.com/our-services)
 - [Nexus Certificate Manager](https://doc.nexusgroup.com/display/PUB/Example%3A+SCEP+Intune+configuration+in+Protocol+Gateway)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/glueckkanja-gabag.scepman)
 - [Sectigo](https://sectigo.com/products)
