@@ -53,7 +53,7 @@ You can create multiple Enrollment Status Page profiles with different configura
 - Allowed troubleshooting operations
 
 
-## Set up default profile for all users
+## Set up default profile 
 
 Intune applies the default profile to all users and all devices when there is no other ESP profile to apply. You can configure the default profile to show or hide the ESP.     
  
@@ -71,7 +71,7 @@ Intune applies the default profile to all users and all devices when there is no
 7. Review the summary of changes and then select **Save**.   
 
 
-## Create new ESP profile 
+## Create new profile 
 
 1. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 2. Select **Create**.
@@ -101,8 +101,8 @@ Intune applies the default profile to all users and all devices when there is no
 
 
 
-   > [!NOTE]
-   > If you only want the ESP to appear on Autopilot devices during initial device setup, select the **No** option. Then create a new ESP profile, choose the **Yes** option, and target the profile to an Autopilot device group.  
+       > [!NOTE]
+       > If you only want the ESP to appear on Autopilot devices during initial device setup, select the **No** option. Then create a new ESP profile, choose the **Yes** option, and target the profile to an Autopilot device group.  
 
 
      - **Block device use until all apps and profiles are installed**: Your options:
@@ -168,7 +168,7 @@ The apps that are included in this list are used by Intune to filter the list th
 
 A maximum of 100 apps can be specified.
 
-## Enrollment Status Page tracking information
+## Enrollment Status Page tracking information  
 
 There are three phases where the Enrollment Status Page tracks information for; device preparation, device setup, and account setup.
 
