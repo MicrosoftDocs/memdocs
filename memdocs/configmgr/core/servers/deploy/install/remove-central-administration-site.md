@@ -61,7 +61,7 @@ If the hierarchy consists of the central administration site (CAS) and a single 
 
 ## Prerequisites
 
-- The [latest released version of Configuration Manager current branch](../../manage/updates.md#version-details).
+- Configuration Manager version 2103 or later.
 
 - The administrative user that runs Configuration Manager setup needs the following security rights:
 

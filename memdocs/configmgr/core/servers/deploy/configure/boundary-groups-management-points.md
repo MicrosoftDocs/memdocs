@@ -2,7 +2,7 @@
 title: Boundary groups and management points
 titleSuffix: Configuration Manager
 description: Understand how clients and management points behave with boundary groups.
-ms.date: 08/02/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -29,11 +29,11 @@ If a client is in a boundary group that with no assigned management point, the s
 > [!TIP]
 > If you enable the option to **Prefer cloud-based sources over on-premises sources** then clients will prefer a cloud management gateway (CMG) for both policy and content.
 
-Management point boundary group fallback doesn't change the behavior during client installation (ccmsetup.exe). If the command line doesn't specify the initial management point using the **/MP** parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior.
+Management point boundary group fallback doesn't change the behavior during client installation (ccmsetup.exe). If the command line doesn't specify the initial management point using the `/MP` parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior.
 
 For more information on the client's behavior to acquire content during installation, see [Client installation](boundary-groups-distribution-points.md#client-installation).
 
-During client upgrade, if you don't specify the **/MP** command-line parameter, the client queries sources such as Active Directory and WMI for any available management point. Client upgrade doesn't honor the boundary group configuration. <!--VSO 2841292-->
+During client upgrade, if you don't specify the `/MP` command-line parameter, the client queries sources such as Active Directory and WMI for any available management point. Client upgrade doesn't honor the boundary group configuration. <!--VSO 2841292-->
 
 For clients to use this capability, enable the following setting: **Clients prefer to use management points specified in boundary groups** in **Hierarchy Settings**.
 
