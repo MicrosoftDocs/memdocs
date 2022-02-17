@@ -64,10 +64,10 @@ Select the VPN connection type from the following list of vendors:
   Applies to F5 Access app version 3.0 and later.
 - **Palo Alto Networks GlobalProtect (Legacy)**
 
-  Applies to to Palo Alto Networks GlobalProtect app version 4.1 and earlier.
+  Applies to Palo Alto Networks GlobalProtect app version 4.1 and earlier.
 - **Palo Alto Networks GlobalProtect**
 
-  Applies to to Palo Alto Networks GlobalProtect app version 5.0 and later.
+  Applies to Palo Alto Networks GlobalProtect app version 5.0 and later.
 - **Pulse Secure**
 - **Cisco (IPSec)**
 - **Citrix VPN**
@@ -264,7 +264,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 ## Automatic VPN
 
-- **Type of automatic VPN**: Select the VPN type you want to use: No VPN, on-demand VPN, or per-app VPN:
+- **Type of automatic VPN**: Select the VPN type you want to configure: On-demand VPN or per-app VPN:
 
   - **Not configured** (default): Intune doesn't change or update this setting.
   - **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching domain name. If there's a match, then the action you choose runs.
@@ -285,7 +285,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
             - **Use the following DNS servers to resolve these domains (optional)**: Enter one or more DNS server IP addresses, like `10.0.0.22`. The DNS servers you enter are used to resolve the domains in the **When users try to access these domains** setting.
 
-            - **When this URL is unreachable, force-connect the VPN**: Optional. Enter a HTTP or HTTPS probing URL that the rule uses as a test. This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. The user doesn't see the URL string probe site.
+            - **When this URL is unreachable, force-connect the VPN**: Optional. Enter an HTTP or HTTPS probing URL that the rule uses as a test. This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. The user doesn't see the URL string probe site.
 
               For example, a URL string probe is an auditing web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPNs ability to connect to a site before the device connects to the target URL through the VPN.
 
