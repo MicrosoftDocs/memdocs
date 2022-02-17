@@ -33,6 +33,7 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 The **Remote lock** device action locks the device. To unlock the device, the device owner enters their passcode. You can remotely lock devices that have a PIN or password set. Devices that don't have a PIN or password can't be remotely locked.
+
 When **Remote lock** is applied to a device that doesn’t have a PIN or password, the device’s screen will turn off but the device will not be locked and the user will be able to wake the device and start using it again without entering a PIN or password. Ensure devices have a PIN or password policy enforced before using the **Remote lock** action to lock the device.
 
 ## Supported platforms
