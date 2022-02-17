@@ -105,6 +105,7 @@ Include the following keys in the `SQLConfigOptions` section to install a site:
 | `SQLSSBPort` | No | Port number | The SQL Server Service Broker (SSB) port. By default, SSB uses TCP port 4022. |
 | `SQLDataFilePath` | No | Local directory path | An alternate location to create the database .mdb file. |
 | `SQLLogFilePath` | No | Local directory path | An alternate location to create the database .ldf log file. |
+| `AGBackupShare` | No | Network share path | The network location for sharing database backups when creating the site database in an Availability Group. |
 
 ### `CloudConnectorOptions` section for site install
 
