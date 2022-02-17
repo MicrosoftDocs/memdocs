@@ -2,7 +2,7 @@
 title: Manage clients
 titleSuffix: Configuration Manager
 description: Learn how to manage clients in Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -241,7 +241,7 @@ For more information, see [Configure the client content cache](configure-client-
 
 ## Uninstall the client
 
-You can uninstall the Configuration Manager client software from a computer by using **CCMSetup.exe** with the **/Uninstall** property. Run CCMSetup.exe on an individual computer from the command prompt, or deploy a package to uninstall the client for a collection of computers.
+You can uninstall the Configuration Manager client software from a computer by using **CCMSetup.exe** with the `/Uninstall` property. Run CCMSetup.exe on an individual computer from the command prompt, or deploy a package to uninstall the client for a collection of computers.
 
 > [!NOTE]
 > You can't uninstall the Configuration Manager client from a mobile device. If you must remove the Configuration Manager client from a mobile device, you must wipe the device, which deletes all data on the mobile device.
