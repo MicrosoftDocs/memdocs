@@ -2,7 +2,7 @@
 title: Azure AD authentication workflow
 titleSuffix: Configuration Manager
 description: Details of the Configuration Manager client installation process on a Windows device with Azure Active Directory (Azure AD) authentication.
-ms.date: 07/15/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -32,7 +32,7 @@ In this workflow sample, you installed the Configuration Manager client on a Win
 
 ### 1. Azure AD info request from ccmsetup
 
-Clients installed from internet need specific command-line properties to use Azure AD authentication. You can include these properties in the command line for [internet ccmsetup](../../../comanage/how-to-prepare-win10.md#install-the-configuration-manager-client), but they aren't required. When you don't use Azure AD properties, ccmsetup requests the **AADCLIENTAPPID** and **AADRESOURCEURI** properties from the cloud management gateway (CMG). It uses the device's Azure AD TenantID as a reference. If you haven't onboarded the client's TenantID in Configuration Manager, the CMG doesn't give the required properties to ccmsetup to continue client installation.
+Clients installed from internet need specific command-line properties to use Azure AD authentication. You can include these properties in the command line for [internet ccmsetup](../../../comanage/how-to-prepare-win10.md#install-the-configuration-manager-client), but they aren't required. When you don't use Azure AD properties, ccmsetup requests the `AADCLIENTAPPID` and `AADRESOURCEURI` properties from the cloud management gateway (CMG). It uses the device's Azure AD TenantID as a reference. If you haven't onboarded the client's TenantID in Configuration Manager, the CMG doesn't give the required properties to ccmsetup to continue client installation.
 
 The following entries are logged in **ccmsetup.log** of the client:
 
@@ -46,7 +46,7 @@ Enabled SSL revocation check.
 > [!IMPORTANT]
 > During ccmsetup, the device has to validate the CMG server authentication certificate. The root certificate authority (CA) certificate for the CMG server authentication certificate needs to be available on the client for the chain validation. If you use PKI, when the root CA isn't published on the internet, add the root CA certificate to the device's root CAs store.
 >
-> If the root CA certificate revocation list (CRL) isn't published on internet, add the **/nocrlcheck** parameter in the ccmsetup command line.
+> If the root CA certificate revocation list (CRL) isn't published on internet, add the `/nocrlcheck` parameter in the ccmsetup command line.
 
 ### 2. Azure AD token request
 
@@ -262,7 +262,7 @@ Message '{BD03DEED-D09A-4E63-ADAD-596376FFB0DA}' got reply message '{36EE3A78-8F
 
 - Root CA not present: Clients need the root CA certificate to validate the CMG server authentication certificate.
 
-- CRL check is enabled: Publish the CRL on the internet. As an alternative, use the **/NoCRLCheck** parameter for ccmsetup. You can also disable the following option: **Clients check the certificate revocation list (CRL) for site systems**. Find this setting on the **Communication Security** tab of the site properties.
+- CRL check is enabled: Publish the CRL on the internet. As an alternative, use the `/NoCRLCheck` parameter for ccmsetup. You can also disable the following option: **Clients check the certificate revocation list (CRL) for site systems**. Find this setting on the **Communication Security** tab of the site properties.
 
 - The WPJ certificate isn't found: Make sure the device is Azure AD-joined. Use [dsregcmd.exe](/azure/active-directory/devices/troubleshoot-device-dsregcmd). For example, `dsregcmd /status` and look at the **Device State** section.
 

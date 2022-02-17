@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 01/11/2022
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -458,7 +458,7 @@ Choose one of the following options for this setting:
 > [!IMPORTANT]
 > The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
-Client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
+Client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter `/AllowMetered`. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## Power management  
 

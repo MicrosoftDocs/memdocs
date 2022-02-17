@@ -2,7 +2,7 @@
 title: Install the client with Azure AD
 titleSuffix: Configuration Manager
 description: Install and assign the Configuration Manager client on Windows devices using Azure Active Directory for authentication
-ms.date: 10/01/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -88,18 +88,18 @@ The following example shows the general structure of the command line:
 
 For more information, see [Client installation properties](about-client-installation-properties.md).
 
-The **/mp** parameter and **CCMHOSTNAME** property specify one of the following, depending upon the scenario:
+The `/mp` parameter and `CCMHOSTNAME` property specify one of the following, depending upon the scenario:
 
-- On-premises management point. Only specify the **/mp** parameter. The **CCMHOSTNAME** property isn't required.
+- On-premises management point. Only specify the `/mp` parameter. The `CCMHOSTNAME` property isn't required.
 - Cloud management gateway
 - Internet-based management point
 
-The **SMSMP** property specifies the on-premises management point. It's not required. It's recommended for Azure AD-joined devices that roam onto the intranet, so they can find an on-premises management point.
+The `SMSMP` property specifies the on-premises management point. It's not required. It's recommended for Azure AD-joined devices that roam onto the intranet, so they can find an on-premises management point.
 
 This example uses a cloud management gateway. It replaces sample values:
 `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
 
-The site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies installing the client in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSITECODE**.<!--3607731-->
+The site publishes additional Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies installing the client in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are `CCMHOSTNAME` and `SMSSITECODE`.<!--3607731-->
 
 To automate the client install using Azure AD identity via Microsoft Intune, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).
 
