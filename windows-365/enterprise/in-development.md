@@ -64,7 +64,7 @@ Currently, Windows 365 and Azure Virtual Desktop share a common framework for id
 <!-- ***********************************************-->
 ## Device management
 
-### Nested virtualizations<!--37800910-->
+### Nested virtualization<!--37800910-->
 
 In a future release, Windows 365 8vCPU/32GB licenses will support nested virtualizations for most currently supported regions. Southeast Asia and West US 2 will follow at a later date.
 
