@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/11/2022
+ms.date: 02/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -80,10 +80,11 @@ With intelligent rollouts, the Windows Update for Business Deployment Service us
 
 To enable intelligent rollout, you deploy a [settings catalog](../configuration/settings-catalog.md) profile for device configuration to *Allow WUfB Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles.
 
-> [!NOTE]
-> The Windows Update for Business setting that you enable, *Allow WUfB Cloud Processing*, is the same setting that enables the Deployment Service to create *likely issue* for a device. To learn more, see [Safeguard holds](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) in the documentation for Update Compliance monitoring.
+### Likely issue safeguard holds
 
-As your rollout progresses, the deployment service monitors for unexpected issues. The service leverages insights from the Windows ecosystem and will create *likely issue* safeguard holds and proactively pause deployments to devices that are likely to encounter an issue. By applying safeguard holds to devices that are likley to have issues with the udpate, devcies and end users are protected from potential productivity affecting issues.
+The Windows Update for Business setting that you enable, *Allow WUfB Cloud Processing*, is the same setting that enables the Deployment Service to create a *likely issue* safeguard hold for a device. To learn more, see [Safeguard holds](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) in the documentation for Update Compliance monitoring.
+
+As your rollout progresses, the deployment service monitors for unexpected issues. The service leverages insights from the Windows ecosystem and will create *likely issue* safeguard holds and proactively pause deployments to devices that are likely to encounter an issue. By applying safeguard holds to devices that are likely to have issues with the update, devices and end users are protected from potential productivity affecting issues.
 
 To learn more, see [Manage safeguards using the Windows Update for Business deployment service](/graph/windowsupdates-manage-safeguards) in the Graph API documentation for device updates.
 
