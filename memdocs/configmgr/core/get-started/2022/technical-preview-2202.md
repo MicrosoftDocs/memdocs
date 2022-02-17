@@ -24,7 +24,6 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2202/1234567.md)] -->
 
-[!INCLUDE [Escrow BitLocker recovery password to the site during a task sequence](includes/2202/10454717.md)]
 [!INCLUDE [Delete collection references](includes/2202/9708999.md)]
 [!INCLUDE [Pre-download content for available software updates](includes/2202/4497776.md)]
 [!INCLUDE [Added folder support for nodes in the Software Library](includes/2202/3601129.md)]

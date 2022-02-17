@@ -123,7 +123,6 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2202
 
-- [Escrow BitLocker recovery password to the site during a task sequence](2022/technical-preview-2202.md#bkmk_blmts) <!--10454717-->
 - [Delete collection references](2022/technical-preview-2202.md#bkmk_delcollref) <!--9708999-->
 - [Pre-download content for available software updates](2022/technical-preview-2202.md#bkmk_pre-download) <!--4497776-->
 - [Added folder support for nodes in the Software Library](2022/technical-preview-2202.md#bkmk_folder) <!--3601129-->
