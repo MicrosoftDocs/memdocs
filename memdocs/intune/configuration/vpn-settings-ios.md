@@ -300,7 +300,9 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
             - **When this URL is unreachable, force-connect the VPN**: Optional. Enter an HTTP or HTTPS probing URL that the rule uses as a test. This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. The user doesn't see the URL string probe site.
 
-              If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then a VPN connection is created. The idea is that the URL is only accessible on the internal network. If the URL can be accessed, then a VPN connection isn't needed. If the URL can't be accessed, then the device is on an external network, and a VPN connection is created on-dmand. Once the VPN connection is established, internal resources are available.
+              If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then a VPN connection is created. 
+
+              The idea is that the URL is only accessible on the internal network. If the URL can be accessed, then a VPN connection isn't needed. If the URL can't be accessed, then the device is on an external network, and a VPN connection is created on-dmand. Once the VPN connection is established, internal resources are available.
 
           - **Never connect**: For each VPN connection attempt, when users try to access the domains you enter, then a VPN connection is never created.
 
