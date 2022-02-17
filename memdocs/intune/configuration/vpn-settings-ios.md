@@ -285,9 +285,11 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
             - **Use the following DNS servers to resolve these domains (optional)**: Enter one or more DNS server IP addresses, like `10.0.0.22`. The DNS servers you enter are used to resolve the domains in the **When users try to access these domains** setting.
 
-            - **When this URL is unreachable, force-connect the VPN**: Enter an HTTP or HTTPS probing URL, like `http://probe.corp.contoso.com/`. This URL is only used to determine if the device is on an external network. When trying to access a domain in the **When users try to access these domains** setting, if this URL isn't available, then the device connects to the VPN.
+            - **When this URL is unreachable, force-connect the VPN**: Optional. Enter a HTTP or HTTPS probing URL that the rule uses as a test. This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. The user doesn't see the URL string probe site.
 
-              This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then a VPN connection is created.
+              For example, a URL string probe is an auditing web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPNs ability to connect to a site before the device connects to the target URL through the VPN.
+
+              If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then a VPN connection is created.
 
               Remember, an internal URL can't be accessed because the device is connected to an external network. A VPN connection is created on demand. Once the VPN connection is established, internal resources are available.
 
