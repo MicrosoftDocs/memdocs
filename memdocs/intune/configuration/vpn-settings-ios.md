@@ -47,22 +47,44 @@ Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.m
 Select the VPN connection type from the following list of vendors:
 
 - **Check Point Capsule VPN**
-- **Cisco Legacy AnyConnect**: Applicable to Cisco Legacy AnyConnect app version 4.0.5x and earlier.
-- **Cisco AnyConnect**: Applicable to [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) app version 4.0.7x and later.
+- **Cisco Legacy AnyConnect**
+
+  Applies to Cisco Legacy AnyConnect app version 4.0.5x and earlier.
+
+- **Cisco AnyConnect**
+
+  Applies to [Cisco AnyConnect](https://itunes.apple.com/app/cisco-anyconnect/id1135064690) app version 4.0.7x and later.
+
 - **SonicWall Mobile Connect**
-- **F5 Access Legacy**: Applicable to F5 Access app version 2.1 and earlier.
-- **F5 Access**: Applicable to F5 Access app version 3.0 and later.
-- **Palo Alto Networks GlobalProtect (Legacy)**: Applicable to Palo Alto Networks GlobalProtect app version 4.1 and earlier.
-- **Palo Alto Networks GlobalProtect**: Applicable to Palo Alto Networks GlobalProtect app version 5.0 and later.
+- **F5 Access Legacy**
+
+  Applies to F5 Access app version 2.1 and earlier.
+- **F5 Access**
+
+  Applies to F5 Access app version 3.0 and later.
+- **Palo Alto Networks GlobalProtect (Legacy)**
+
+  Applies to to Palo Alto Networks GlobalProtect app version 4.1 and earlier.
+- **Palo Alto Networks GlobalProtect**
+
+  Applies to to Palo Alto Networks GlobalProtect app version 5.0 and later.
 - **Pulse Secure**
 - **Cisco (IPSec)**
 - **Citrix VPN**
 - **Citrix SSO**
-- **Zscaler**: To use Conditional Access, or allow users to bypass the Zscaler sign in screen, you must integrate Zscaler Private Access (ZPA) with your Azure AD account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
+- **Zscaler**
+
+  To use Conditional Access, or allow users to bypass the Zscaler sign in screen, you must integrate Zscaler Private Access (ZPA) with your Azure AD account. For detailed steps, see the [Zscaler documentation](https://help.zscaler.com/zpa/configuration-guide-microsoft-azure-ad).
 - **NetMotion Mobility**
-- **IKEv2**: [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
-- **Microsoft Tunnel (standalone client)(preview)**: Applicable to the Microsoft Tunnel client app.
-- **Microsoft Tunnel (preview)** - Applicable to the preview version of the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
+- **IKEv2**
+
+  [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
+- **Microsoft Tunnel (standalone client)(preview)**
+
+  Applies to the Microsoft Tunnel client app.
+- **Microsoft Tunnel (preview)**
+
+  Applies to the preview version of the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
 - **Custom VPN**
 
 > [!NOTE]
@@ -249,21 +271,23 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
     For example, you can create a condition where the VPN connection is only used when a device isn't connected to a company Wi-Fi network. Or, if a device can't access a DNS search domain you enter, then the VPN connection isn't started.
 
-    - **On-demand rules** > **Add**: Select **Add** to add a rule. If there's a match to your rule, then the action you select is run on the device.
+    - **On-demand rules** > **Add**: Select **Add** to add a rule. If there isn't an existing VPN connection, then use these settings to create an on-demand rule. If there's a match to your rule, then the device does the action you select.
 
       - **I want to do the following**: If there's a match between the device value and your on-demand rule, then select the action you want the device to do. Your options:
 
         - **Establish VPN**: If there's a match between the device value and your on-demand rule, then a VPN connection is created.
-        - **Disconnect VPN**: If there's a match between the device value and your on-demand rule, then a VPN connection is disconnected.
+        - **Disconnect VPN**: If there's a match between the device value and your on-demand rule, then the VPN connection is disconnected.
         - **Evaluate each connection attempt**: If there's a match between the device value and your on-demand rule, then use the **Choose whether to connect** setting to decide what happens for *each* VPN connection attempt:
-          - **Connect if needed**: For each VPN connection attempt, decide if users should connect using a DNS domain name or connect using a DNS server IP address:
-            - **When users try to access these domains**: Enter one or more DNS domains or IP addresses, like `contoso.com` or `10.0.0.22`. If users try to connect to a domain in this list, then the device uses DNS to resolve the domains you enter. If the domain doesn't resolve, then a VPN connection is created. If the domain does resolve, then a VPN connection isn't created.
+          - **Connect if needed**: If there isn't an existing VPN connection, then for each VPN connection attempt, decide if users should connect using a DNS domain name:
+            - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then the device uses DNS to resolve the domains you enter. If the domain doesn't resolve, then a VPN connection is created. If the domain does resolve, then a VPN connection isn't created.
 
               Remember, domains are internal resources that aren't resolved by public DNS. A device can't access the domain from an external network. When a VPN connection is established, the internal domain can be accessed.
 
-            - **When this URL is unreachable, force-connect the VPN**: Enter an HTTP or HTTPS URL, like `https://vpn.contoso.com`. When the URL isn't available, then the device forces a connection to the VPN. If the URL is available, then the device uses the URL to connect to the VPN.
+            - **Use the following DNS servers to resolve these domains (optional)**: Enter one or more DNS server IP addresses, like `10.0.0.22`. The DNS servers you enter are used to resolve the domains in the **When users try to access these domains** setting.
 
-              This URL is probed every time a user tries to access a domain in this domains URL list. If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then a VPN connection is created.
+            - **When this URL is unreachable, force-connect the VPN**: Enter an HTTP or HTTPS probing URL, like `http://probe.corp.contoso.com/`. This URL is only used to determine if the device is on an external network. When trying to access a domain in the **When users try to access these domains** setting, if this URL isn't available, then the device connects to the VPN.
+
+              This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then a VPN connection is created.
 
               Remember, an internal URL can't be accessed because the device is connected to an external network. A VPN connection is created on demand. Once the VPN connection is established, internal resources are available.
 
