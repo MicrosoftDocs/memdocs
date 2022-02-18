@@ -143,7 +143,7 @@ Updates for the Microsoft Tunnel release periodically. When a new version is ava
 After an update releases, it rolls out to tenants over the following days. This rollout time means new updates might not be available for your tunnel servers for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
-<!-- Release delayed - release delayed >
+
 ### February 16, 2022
 
 Image hash values:
@@ -154,7 +154,7 @@ Image hash values:
 
 Changes in this release:
 - Minor bug fixes
--->
+
 ### January 31, 2022
 
 Image hash values:
