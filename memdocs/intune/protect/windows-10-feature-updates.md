@@ -7,12 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 01/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -24,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Feature updates for Windows 10 and later policy in Intune
@@ -45,9 +46,11 @@ When a device receives a policy for Feature updates:
   > A device won't install an update when it has a *safeguard hold* for that Windows version. When a device evaluates applicability of an update version, Windows creates the temporary safeguard hold if an unresolved known issue exists. Once the issue is resolved, the hold is removed and the device can then update.
   >
   > - Learn more about [safeguard holds](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) in the Windows documentation for *Feature Update Status*.
-  > - To learn about known issues that can result in a safeguard hold, see [Windows release information](/windows/release-information/) and then reference the relevant Windows version from the table of contents for that page.
+  > - To learn about known issues that can result in a safeguard hold, see the applicable Windows release information and then reference the relevant Windows version from the table of contents for that page:
+  >   - [Windows 11 release information](/windows/release-health/windows11-release-information)
+  >   - [Windows 10 release information](/windows/release-health/release-information)
   >
-  >   For example, for Windows version 2004, open [Windows release information](/windows/release-information/), and then from the left-hand pane, select *Version 2004* and then *Known issues and notifications*. The [resultant page](/windows/release-information/status-windows-10-2004) details known issues for that Windows version that might result in safeguard hold.
+  >   For example, for Windows 11 version 21H2, go to the Windows 11 release information and then from the left-hand pane, select *Version 21H2* and then *Known issues and notifications*. The [resultant page](/windows/release-health/status-windows-11-21h2) includes details for known issues for that Windows version that might result in safeguard hold.
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
@@ -101,7 +104,17 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 - If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 
-  To prevent this initial delay from impacting your co-managed devices, configure a [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md) policy and target the policy to your devices before you configure them for co-management or you shift the Windows Update workload to Intune. You can validate whether a device is enrolled for the feature update profile by checking the [Windows feature update report](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report) under the Reporting node in the Microsoft Endpoint Management admin console.
+  To prevent this initial delay from impacting your co-managed devices:
+  
+  1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+  2. Go to **Devices** > **Windows** > **Feature updates for Windows 10 and later** > **Create profile**.
+  3. For **Deployment settings**, enter a meaningful name and a description for the policy.  Then, Specify the feature update you want devices to be running.  
+  4. Complete the policy configuration, including assigning the policy to devices. The policy deploys to devices, though any device that already has the version you’ve selected, or a newer version, won’t be offered the update.
+
+     Monitor the report for the policy. To do so, go to **Reports** > **Windows Updates** > **Reports** Tab > **Feature Updates report**. Select the policy you created and then generate the report.
+
+  5. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See, [Use the Windows 10 and later feature updates (Organizational) report](../protect/windows-update-compliance-reports.md#use-the-windows-10-and-later-feature-updates-organizational-report).
+  6. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 
@@ -146,7 +159,7 @@ When there are multiple versions of Windows 11 available, you can choose to depl
 
 The first step in preparing for a Windows 11 upgrade is to ensure your devices meet the [minimum system requirements for Windows 11](/windows/whats-new/windows-11-requirements#hardware-requirements).
 
-You can use [Endpoint analytics in Microsoft Endpoint Manager](../../analytics/overview.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune-managed, co-managed, or have the Configuration Manager client version 2107 or newer with tenant attach enabled.
+You can use [Endpoint analytics in Microsoft Endpoint Manager](../../analytics/overview.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune, co-managed, or have the Configuration Manager client version 2107 or newer with tenant attach enabled.
 
 If you’re already using Endpoint analytics, navigate to the [Work from anywhere report](../../analytics/work-from-anywhere.md), and select the Windows score category in the middle to open a flyout with aggregate Windows 11 readiness information. For more granular details, go to the Windows tab at the top of the report. On the Windows tab, you’ll see device-by-device readiness information.
 

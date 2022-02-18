@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/14/2021
+ms.date: 02/01/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,8 +26,10 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Android;intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Android
+ms.custom: intune-azure
 ---
 
 # Add app configuration policies for managed Android Enterprise devices
@@ -36,8 +38,9 @@ ms.collection: M365-identity-device-management
 
 App configuration policies in Microsoft Intune supply settings to Managed Google Play apps on managed Android Enterprise devices. The app developer exposes Android-managed app configuration settings. Intune uses these exposed setting to let the admin configure features for the app. The app configuration policy is assigned to your user groups. The policy settings are used when the app checks for them, typically the first time the app runs.
 
-> [!NOTE]  
-> Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
+Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
+
+[!INCLUDE [android-supported-os](../includes/android-supported-os.md)]
 
 ## Email apps
 

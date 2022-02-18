@@ -4,8 +4,8 @@
 title: Update cellular data plan for iOS/iPadOS devices with Microsoft Intune
 description: Learn how to update the cellular data plan for iOS/iPadOS devices that support eSIM.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 06/29/2021
 ms.topic: how-to

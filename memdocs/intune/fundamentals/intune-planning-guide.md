@@ -7,13 +7,11 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 01/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Microsoft Intune planning guide
@@ -69,7 +69,7 @@ When data is stored on mobile devices, it should be protected from malicious act
 
 **Task**: Determine how you want to secure your devices, and minimize the impact of malicious activity. Some considerations:
 
-- Anti-virus (AV) and malware protection are a must. Intune integrates with [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect enrolled devices, personal devices, and apps. On Windows 10 devices, you can use [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) and Intune together.
+- Anti-virus (AV) and malware protection are a must. Intune integrates with [different Mobile Threat Defense (MTD) partners](../protect/mobile-threat-defense.md) to help protect enrolled devices, personal devices, and apps. On Windows 10/11 devices, you can use [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) and Intune together.
 
   [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) includes security features and a [portal](/windows/security/threat-protection/microsoft-defender-atp/portal-overview) to help monitor, and react to threats.
 
@@ -181,11 +181,11 @@ As a best practice, always assume data will leave the device. Be sure your track
 
 ### Manage desktop computers
 
-Intune can manage desktop computers running Windows 10 and newer. The Windows 10 OS includes built-in modern device management features, and removes dependencies on local Active Directory (AD) group policy. You get the benefits of the cloud when creating rules and settings in Intune, and deploying these policies to all your Windows 10 devices, including desktop computers and PCs.
+Intune can manage desktop computers running Windows 10 and newer. The Windows client OS includes built-in modern device management features, and removes dependencies on local Active Directory (AD) group policy. You get the benefits of the cloud when creating rules and settings in Intune, and deploying these policies to all your Windows client devices, including desktop computers and PCs.
 
 For more information, see [Guided scenario - Cloud-managed Modern Desktop](guided-scenarios-cloud-managed-pc.md).
 
-If your Windows 10 devices are currently managed using Configuration Manager, you can still enroll these devices in Intune. This approach is called "co-management". Co-management offers many benefits, including running remote actions on the device (restart, remote control, factory reset), conditional access with device compliance, and more. You can also cloud-attach your devices to Intune.
+If your Windows devices are currently managed using Configuration Manager, you can still enroll these devices in Intune. This approach is called "co-management". Co-management offers many benefits, including running remote actions on the device (restart, remote control, factory reset), conditional access with device compliance, and more. You can also cloud-attach your devices to Intune.
 
 For more information, see [What is co-management](../../configmgr/comanage/overview.md), [Paths to co-management](../../configmgr/comanage/quickstart-paths.md), and [Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md).
 
@@ -207,14 +207,14 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Azure Active Directory (AD) Premium** includes several features that are key to managing devices, including:
 
-  - [Windows Autopilot](../../autopilot/enrollment-autopilot.md): Windows 10 devices can automatically enroll in Intune, and automatically receive your policies.
+  - [Windows Autopilot](../../autopilot/enrollment-autopilot.md): Windows client devices can automatically enroll in Intune, and automatically receive your policies.
   - [Multi-factor authentication](../enrollment/multi-factor-authentication.md) (MFA): Users must enter two or more verification methods, such as a PIN, an authenticator app, a fingerprint, and more. MFA is a great option when using app protection policies for personal devices, or organization-owned devices that require extra security.
   - [Conditional access](../protect/conditional-access.md): If users and devices follow your rules, such as a 6-digit passcode, then they get access to organization resources. If users or devices don't meet your rules, then they don't get access.
   - [Dynamic user groups and dynamic device groups](../fundamentals/groups-add.md): Add users or devices automatically to groups when they meet criteria, such as a city, job title, OS type, OS version, and more.
 
 - **Office 365** includes the apps that users rely on, including Outlook, Word, SharePoint, Teams, OneDrive, and more. You can deploy these apps to devices using Intune.
 
-- **Microsoft Defender for Endpoint** helps monitor and scan your Windows 10 devices for malicious activity. You can also set an acceptable threat level. When combined with conditional access, you can block access to organization resources if the threat level is exceeded.
+- **Microsoft Defender for Endpoint** helps monitor and scan your Windows client devices for malicious activity. You can also set an acceptable threat level. When combined with conditional access, you can block access to organization resources if the threat level is exceeded.
 
 - **Azure Information Protection** classifies and protects documents and emails by applying labels. On Office apps, you can use this service to [prevent unauthorized access to organization data](../protect/data-outside-protect.md), including apps on personal devices.
 
@@ -256,8 +256,8 @@ With these goals in mind, create a baseline of your policies. If you have multip
 
 - Be prepared to create new policies and profiles in Intune. Intune includes several features that cover scenarios that may interest you. Some examples:
 
-  - **Security baselines**: On Windows 10 devices, [Security baselines](../protect/security-baselines.md) are security settings that are pre-configured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at Security Baselines.
-  - **Administrative templates**: On Windows 10 devices, use [ADMX templates](../configuration/administrative-templates-windows.md) to configure group policy settings for Windows, Internet Explorer, Office, and Microsoft Edge version 77 and later. These ADMX templates are the same ADMX templates used in AD group policy, but are 100% cloud-based in Intune.
+  - **Security baselines**: On Windows 10/11 devices, [Security baselines](../protect/security-baselines.md) are security settings that are pre-configured to recommended values. If you're new to securing devices, or want a comprehensive baseline, then look at Security Baselines.
+  - **Administrative templates**: On Windows 10/11 devices, use [ADMX templates](../configuration/administrative-templates-windows.md) to configure group policy settings for Windows, Internet Explorer, Office, and Microsoft Edge version 77 and later. These ADMX templates are the same ADMX templates used in AD group policy, but are 100% cloud-based in Intune.
   - **Group policy**: Use [group policy analytics](../configuration/group-policy-analytics.md) to import and analyze your GPOs. This feature helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
   - **Guided scenarios**: [Guided scenarios](guided-scenarios-overview.md) are a customized series of steps focused on end-to-end use cases. These scenarios automatically include policies, apps, assignments, and other management configurations.
 

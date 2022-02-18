@@ -32,9 +32,9 @@ The Configuration Manager scripts feature lets you visually review and approve s
 
 This collection of links was chosen to give Configuration Manager administrators a starting point for learning about PowerShell script security recommendations.
 
-[PowerShell Security Best Practices](https://devblogs.microsoft.com/powershell/powershell-security-best-practices/)
+<!-- [PowerShell Security Best Practices](https://devblogs.microsoft.com/powershell/powershell-security-best-practices/)
 
-> [!VIDEO https://channel9.msdn.com/Events/Blue-Hat-Security-Briefings/BlueHat-Security-Briefings-Fall-2013-Sessions/PowerShell-Best-Practices/player]
+> [!VIDEO https://channel9.msdn.com/Events/Blue-Hat-Security-Briefings/BlueHat-Security-Briefings-Fall-2013-Sessions/PowerShell-Best-Practices/player] -->
 
 [Defending Against PowerShell Attacks](https://devblogs.microsoft.com/powershell/defending-against-powershell-attacks/)
 

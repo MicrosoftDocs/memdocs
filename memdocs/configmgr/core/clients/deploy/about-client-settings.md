@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 08/02/2021
+ms.date: 01/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -458,7 +458,7 @@ Choose one of the following options for this setting:
 > [!IMPORTANT]
 > The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
-Starting in version 2006, client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
+Client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## Power management  
 
@@ -601,7 +601,7 @@ Set this option to **Yes** to use network-level authentication (NLA) to establis
 ### Select the user portal
 
 <!--CMADO-3601237,INADO-4297660-->
-Starting in version 2006, if you deploy the Company Portal to co-managed devices, configure this setting to **Company Portal**. This setting makes sure that notifications from Configuration Manager and Intune both launch the Company Portal. If a Configuration Manager notification is for a scenario that the Company Portal doesn't support, selecting the notification launches Software Center.
+If you deploy the Company Portal to co-managed devices, configure this setting to **Company Portal**. This setting makes sure that notifications from Configuration Manager and Intune both launch the Company Portal. If a Configuration Manager notification is for a scenario that the Company Portal doesn't support, selecting the notification launches Software Center.
 
 If you install the Company Portal on a co-managed device, but configure this setting to **Software Center**, then notifications from Configuration Manager launch Software Center. Notifications from Intune launch the Company Portal. This behavior may be confusing to users to interact with different portals.
 
@@ -621,7 +621,19 @@ Set this option to **Yes**, and then select **Customize** to configure Software 
 
 - **Foreground color for Software Center**: Starting in version 2103, configure a custom color for the foreground font. By default, this color is white (Red: 255, Green: 255, Blue: 255). For some customers, their brand color doesn't work well with the default white font color for a selected item. This setting better supports these customers and improves accessibility.<!--8655575-->
 
-- **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo must be a JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB. The logo file name shouldn't contain spaces.
+- **Select a logo for Software Center**: Enable this setting, and then **Browse** to select an image to appear in Software Center. The logo for Software Center has the following requirements:
+
+  - A JPG, PNG, or BMP file.
+  - Dimensions of 400 x 100 pixels.
+  - A maximum file size of 750 KB.
+  - No spaces in the file name.
+
+- **Select a logo for notifications**: Starting in version 2111, enable this setting to display a logo with notifications on devices running Windows 10 or later.<!--4993167--> Because of how the image is used, it's separate from the Software Center logo. The logo for notifications has the following requirements:
+
+  - A JPG, PNG, or BMP file.
+  - Square aspect ratio. For example, 100 x 100 pixels.
+  - A maximum file size of 2 MB.
+  - No spaces in the file name.
 
 - **Hide unapproved applications in Software Center**: When you enable this option, user-available applications that require approval are hidden in Software Center.<!--1355146-->
 
@@ -664,10 +676,11 @@ _Applies to version 2103 and later_
 
 Enable this option for Software Center to use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
 
-If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device.
+If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device. Clients download the WebView2 redistributable installation file from the management point. The installer is over 100 MB in size. If you need to enable this setting on a large number of clients, and are concerned about the effect of network usage, predeploy the WebView2 runtime as an application. Use the software distribution features of Configuration Manager to better control the content distribution and timing of software installation.<!-- 12769440 -->
 
 > [!NOTE]
-> If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control. Starting in version 2107, the client requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Prerequisites for deploying clients to Windows computers](prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).
+> - If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control. Starting in version 2107, the client requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Prerequisites for deploying clients to Windows computers](prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).
+> - When using custom tabs in certain circumstances, you may encounter the following exception:  `Could not load type 'System.Runtime.InteropServices.Architecture' from assembly 'mscorlib Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'`. To work around the issue, update .NET Framework to version 4.7.1 or later for the client. <!--12109686-->
 
 If you don't enable this option, Software Center uses the Windows built-in Internet Explorer browser control.
 
@@ -881,6 +894,22 @@ If delta content is unavailable from distribution points in the current boundary
 ### Enable management of the Office 365 Client Agent
 
 When you set this option to **Yes**, it enables the configuration of Microsoft 365 Apps installation settings. It also enables downloading files from Office Content Delivery Networks (CDNs), and deploying the files as an application in Configuration Manager. For more information, see [Manage Microsoft 365 Apps](../../../sum/deploy-use/manage-office-365-proplus-updates.md).
+
+### Enable update notifications from Microsoft 365 Apps
+<!--10628998-->
+*(Introduced in version 2111)*
+
+You can configure the end-user experience for Microsoft 365 Apps updates. This client setting allows you to enable or disable notifications from Microsoft 365 Apps for these updates. The following options are available for the setting:
+
+- **No**: Doesn't display Microsoft 365 Apps updates notifications from Microsoft 365 Apps (default)
+- **Yes**: Displays Microsoft 365 Apps updates notifications from Microsoft 365 Apps
+
+Which notifications are displayed to the user about updates for Microsoft 365 Apps is also determined by the settings for per deployment notifications from Software Center. If the deployment's user notifications from Software Center are disabled (found on the [**User Experience** page for the deployment](../../../sum/deploy-use/manually-deploy-software-updates.md#BKMK_4DeployUpdateGroup)), then the end user won't receive any notifications from either Software Center or Microsoft 365 Apps, regardless of how notifications from Microsoft 365 Apps are set. If notifications from both Software Center and Microsoft 365 Apps are enabled, then the end user will receive notifications from Software Center and Microsoft 365 Apps. Below is a chart of which notifications for Microsoft 365 Apps updates are displayed to the end user for these settings:</br></br>  
+
+| &nbsp; | **Display** per deployment Software Center notifications| **Hide** per deployment Software Center notifications|
+|---|---|--|
+| Enable update notifications from Microsoft 365 Apps: **Yes** | User receives notifications from Software Center </br></br> User receives notifications from Microsoft 365 Apps| No notifications from Software Center </br></br> No notifications from Microsoft 365 Apps |
+| Enable update notifications from Microsoft 365 Apps: **No** | User receives notifications from Software Center </br></br> No notifications from Microsoft 365 Apps | No notifications from Software Center </br></br> No notifications from Microsoft 365 Apps |
 
 ### <a name="bkmk_SUMMaint"></a> Enable installation of software updates in "All deployments" maintenance window when "Software Update" maintenance window is available
 

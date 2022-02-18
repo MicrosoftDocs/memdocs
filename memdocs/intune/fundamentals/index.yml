@@ -9,11 +9,13 @@ metadata:
   ms.service: microsoft-intune
   ms.subservice: fundamentals
   ms.topic: landing-page 
-  ms.collection: collection
+  ms.collection: 
+    - collection
+    - highpri
   author: dougeby
   ms.author: erikre
   manager: dougeby
-  ms.date: 04/14/2021  
+  ms.date: 04/14/2021
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 

@@ -66,6 +66,8 @@ For each application in the report, the following data is provided:
 
 > [!NOTE]
 > A maximum of 10 application crash events per application, per device, per day is used. This prevents excessive data collections from devices with severe application issues and helps prevent outlier devices from having undue influence over the reliability scores for individual applications.
+> 
+> Applications with an insignificant amount of foreground usage (about 10 minutes or fewer) on a particular device may not be captured. 
 
 ### App performance details
 

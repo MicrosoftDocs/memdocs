@@ -13,7 +13,9 @@ ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 11/12/2021
-ms.collection: M365-modern-desktop
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: conceptual
 ms.custom: 
 - CI 116757
@@ -48,7 +50,7 @@ The following editions are supported: Pro, Pro Education, Pro for Workstations, 
 
 ### Windows 10
 
-- A [supported version](/windows/release-health/) of Windows 10 Semi-Annual Channel is required. 
+- A [supported version](/windows/release-health/) of Windows 10 Semi-Annual Channel or Windows 10 General Availability Channel is required. 
 - The following editions are supported:
   - Windows 10 Pro
   - Windows 10 Pro Education

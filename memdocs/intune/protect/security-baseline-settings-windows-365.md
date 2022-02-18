@@ -125,7 +125,7 @@ For general information, see [Learn about attack surface reduction rules](/micro
 
 - **Enable network protection**:  
   Baseline default: *Enable*  
-  CSP: [Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender&preserve-view=true#defender-enablenetworkprotection)
+  CSP: [Defender/EnableNetworkProtection](/windows/client-management/mdm/policy-csp-defender#defender-enablenetworkprotection)
 
 - **Block untrusted and unsigned processes that run from USB**:  
   Baseline default: *Block*  
@@ -1166,7 +1166,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Block drive redirection**  
   Baseline default: *Enabled*  
-  <!-- Not devined in UI. Possibly CSP [RemoteDesktopServices/DoNotAllowDriveRedirection](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-donotallowdriveredirection) -->
+  <!-- Not devined in UI. Possibly CSP [RemoteDesktopServices/DoNotAllowDriveRedirection](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-donotallowdriveredirection) -->
 
 - **Block password saving**  
   Baseline default: *Enabled*  

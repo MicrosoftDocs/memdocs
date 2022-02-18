@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2021
+ms.date: 01/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -25,8 +25,11 @@ ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Windows;intune-azure, seoapril2019
-ms.collection: M365-identity-device-management
+ms.custom: intune-azure, seoapril2019
+ms.collection:
+- M365-identity-device-management
+- Windows
+- highpri
 ---
 
 # Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune
@@ -44,6 +47,8 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 
 > [!IMPORTANT]
 > If there are .msi Office apps on the end-user device, you must use the **Remove MSI** feature to safely uninstall these apps. Otherwise, the Intune delivered Microsoft 365 apps will fail to install.
+> 
+> Multiple required or available app assignments are not additive. A later app assignment will overwrite pre-existing installed app assignments.
 
 - Devices to which you deploy these apps must be running the Windows 10 Creators Update or later.
 - Intune supports adding Office apps from the Microsoft 365 Apps suite only.

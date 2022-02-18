@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/03/2021
+ms.date: 01/10/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,108 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of February 7, 2022 (Service release 2201)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for Azure AD joined Cloud PCs<!-- 35060203 36751258-->
+
+Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These devices can run in either:
+
+- A Microsoft-hosted network:
+  - You don’t need to bring any Azure infrastructure
+  - You don't need to create an on-premises network connection.
+- Your own network (using an on-premises network connection)
+
+#### Configure installed language and region for provisioning Cloud PCs<!--37095808 -->
+
+When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States). For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--37678745 -->
+
+Intune’s remote action to Collect diagnostics now collects additional details from Windows 365 Cloud PCs.
+
+The new details for Windows 365 Cloud PCs include the following registry data:
+
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
+
+To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New supported Azure regions: US Central and German West Central<!--37678838 -->
+
+Two new Azure regions are now for Windows 365 Cloud PC provisioning: US Central and German West Central.
+
+For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
+## Week of January 17, 2022
+
+#### New documentation article: Optimize Cisco Webex on a Windows 365 Cloud PC<!--37106382-->
+
+We’ve published a new help documentation article. For more information, see [Optimize Cisco Webex on a Windows 365 Cloud PC](cisco-webex-support.md).
+
+<!-- ########################## -->
+## Week of January 10, 2022
+
+#### New documentation: Data encryption in Windows 365<!--36626607-->
+
+We've added information to the help documentation about encryption for Windows 365 Cloud PCs. For more information, see [Data encryption in Windows 365](encryption.md).
+
+<!-- ########################## -->
+## Week of January 3, 2022
+
+#### New documentation: Gallery image update cycle<!--36626607-->
+
+We've added information to the help documentation about the update cycle for Windows 365 Cloud PC gallery images. For more information, see [Gallery image update cycle](device-images.md#gallery-image-update-cycle).
+
+<!-- ########################## -->
+## Week of December 13, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Cloud PCs in grace period count towards active Cloud PC license usage<!-- 37017463-->
+
+Cloud PCs that are in grace period now count towards your active Cloud PC license usage. This makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
+
+For more information about grace period, see [Device management overview](device-management-overview.md) and [End grace period](end-grace-period.md).
+
+<!-- ########################## -->
+## Week of November 29, 2021 (Service release 2111)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Operating system end of support status for Cloud PCs<!--36852572 -->
+
+The **Provisioning policies** page has a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates. For more information, see [Lifecycle policies and end of support for Cloud PC OS](end-of-support.md).
+
+#### New documentation article: Optimize Zoom on a Windows 365 Cloud PC<!--37106382-->
+
+We’ve published a new help documentation article. For more information, see [Optimize Zoom on a Windows 365 Cloud PC](zoom-support.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device security
+
+#### Two new security baseline settings for Windows 11 Cloud PCs<!--36989243 -->
+
+Windows 365 Enterprise now supports the following Windows 11 security baseline settings:
+
+- **Tamper Protection**: Helps protect Cloud PCs from bad actors bypassing security features like anti-virus protection.
+
+- **Script Scanning**: Helps identify possible threats by intercepting scripts and scanning them before they’re run.
+
+For more information about the security baseline updates for Windows 11, see [Windows 11 Security baseline](https://techcommunity.microsoft.com/t5/microsoft-security-baselines/windows-11-security-baseline/ba-p/2810772). For more information about setting security baselines for Cloud PCs, see [Deploy security baselines](deploy-security-baselines.md).
 
 <!-- ########################## -->
 ## Week of November 1, 2021 (Service release 2110)

@@ -20,7 +20,7 @@ For more information on device-based conditional access, see [How To: Require ma
 
 In the following video, senior program manager Sandeep Deo and product marketing manager Adam Harbour discuss and demo Azure AD for co-management:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Embedding-Co-management-With-Azure-Active-Directory/player]
+> [!VIDEO https://aka.ms/docs/player?id=f0631aa5-2d11-4552-af00-b9dbb1318ed1]
 
 Azure AD provides two options for company-owned devices to suit your organization's needs:
 

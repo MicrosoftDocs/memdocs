@@ -12,7 +12,7 @@ author: greg-lindsay
 ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 12/08/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -27,6 +27,22 @@ ms.topic: troubleshooting
 This article describes known issues that can often be resolved by configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
 ## Known issues
+
+### Reset button causes pre-provisioning to fail on retry
+
+When ESP fails during the pre-provisioning flow and the user selects the reset button, TPM attestation may fail during the retry. 
+
+### TPM attestation failure on Windows 11 error code 0x81039023
+
+Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039023. There is no workaround currently for this error code, we are working to resolve this issue. 
+
+### Duplicate device objects with hybrid Azure AD deployments 
+
+A device object is pre-created in Azure AD once a device is registered in Autopilot. If a device goes through a hybrid Azure AD deployment, by design, another device object is created resulting in duplicate entries. 
+
+### TPM attestation failure on Windows 11 error code 0x81039024
+
+Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039024. This error code indicates that there are known vulnerabilities detected with the TPM and as a result will fail attestation. If you receive this error, please visit your PC manufacturer’s website to update the TPM firmware.
 
 ### Delete device record in Intune before reusing devices in self-deployment mode or Pre-Provisioning mode
 
@@ -48,7 +64,7 @@ When [customizations are applied to the company branding settings](/azure/active
 
 ### TPM attestation is not working on Intel Tiger Lake platforms
 
-TPM attestation support for Intel firmware TPM Tiger Lake platforms are only supported on devices with Windows 10 version 21H2 or higher.
+TPM attestation support for Intel firmware TPM Tiger Lake platforms are only supported on devices with Windows 10 version 21H2 or higher. This issue should be resolved by applying the November 2021 LCU. 
 
 ### Blocking apps specified in a user-targeted Enrollment Status Profile are ignored during device ESP
 

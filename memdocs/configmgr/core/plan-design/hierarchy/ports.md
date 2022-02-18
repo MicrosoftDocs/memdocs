@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 08/02/2021
+ms.date: 12/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -239,8 +239,8 @@ The Configuration Manager console uses internet access for the following actions
 
 - Downloading software updates from Microsoft Update for deployment packages.
 - The Feedback item in the ribbon.
-- Links to documentation within the console.
-<!--506823-->
+- Links to documentation within the console.  <!--506823-->
+- Downloading items from Community hub
 
 ### <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager console `-->` Reporting services point
 
@@ -384,6 +384,14 @@ A distribution point communicates to the management point in the following scena
 
 For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
+### <a name="bkmk_scp-notify"></a> Service connection point `-->` Azure Logic App
+
+| Description                     | UDP | TCP |
+|---------------------------------|-----|-----|
+| HTTPS for external notification | --  | 443 |
+
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
+
 ### <a name="BKMK_PortsSite-AISP"></a> Site server `<-->` Asset Intelligence synchronization point
 
 |Description|UDP|TCP|
@@ -481,6 +489,7 @@ For more information, see [Ports and data flow](use-a-cloud-based-distribution-p
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |HTTP|--|80 <sup>[Note 1](#bkmk_note1)</sup>|
+|HTTPS|--|443|
 
 ### <a name="BKMK_PortsIssuingCA_SiteServer"></a> Site server `<-->` Issuing certification authority (CA)
 
@@ -764,6 +773,8 @@ On-premises Configuration Manager clients or site systems can make the following
 - [Software update point `-->` Upstream WSUS Server](#BKMK_PortsSUP-WSUS)
 
 - [Service connection point `-->` Azure](#bkmk_scp-cmg)
+
+- [Service connection point `-->` Azure Logic App](#bkmk_scp-notify)
 
 - [CMG connection point `-->` CMG cloud service](#bkmk_cmgcp-cmg)
 

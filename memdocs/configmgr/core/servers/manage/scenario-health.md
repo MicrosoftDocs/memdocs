@@ -68,7 +68,7 @@ Configuration Manager includes the following tests for this scenario:
 > [!NOTE]
 > Not all sites run all tests.
 
-With this health information, you can see how long it takes for SQL Server to exchange messages via the service broker. A longer delay or timeout shows a backlog in the processing queue. A failure indicates a larger problem with the service broker, such as the queue is disabled. Since SQL Server service broker is a core component, issues with it can impact many other scenarios. For example, [client notifications](../../clients/manage/client-notification.md), [client status](../../clients/manage/monitor-clients.md#bkmk_about), and some tenant attach features.
+With this health information, you can see how long it takes for SQL Server to exchange messages via the service broker. A longer delay or timeout shows a backlog in the processing queue. A failure indicates a larger problem with the service broker, such as the queue is disabled. Since SQL Server service broker is a core component, issues with it can impact many other scenarios. For example, [client notifications](../../clients/manage/client-notification.md), [client status](../../clients/manage/monitor-clients.md#about-client-status), and some tenant attach features.
 
 ## Client action health
 

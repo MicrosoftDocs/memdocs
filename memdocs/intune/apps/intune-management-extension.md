@@ -23,8 +23,11 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: OS=Windows;intune-azure
-ms.collection: M365-identity-device-management
+ms.custom: intune-azure
+ms.collection:
+- M365-identity-device-management
+- Windows
+- highpri
 ---
 
 # Use PowerShell scripts on Windows 10/11 devices in Intune

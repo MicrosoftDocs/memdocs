@@ -7,13 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/13/2021
+ms.date: 11/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-ms.assetid:
 
 # optional metadata
 
@@ -25,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Install the Certificate Connector for Microsoft Intune
@@ -101,11 +101,11 @@ Use the following procedure to both configure a new connector and modify a previ
    - **SYSTEM**
    - **Domain user account** – Use any domain user account that is an administrator on the Windows Server.
 
-4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access.
+4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access. For example, `http://proxy.contoso.com`.
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
-6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access. This user account must have an Intune license assigned and the user must be a synchronized account from your local Active Directory.
+6. On the *Azure AD Sign In* page, select the environment that hosts your Azure Active Directory, and then select **Sign In**. You’ll then be asked to authenticate your access. This user account must be a Global Admin or an Intune Admin with an Intune license assigned and the user must be a synchronized account from your local Active Directory.
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 

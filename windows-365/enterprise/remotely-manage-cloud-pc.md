@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 02/07/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice: 
@@ -42,6 +42,7 @@ Cloud PCs support the following remote management actions:
 - Update Windows Defender
 - [Reprovisioning](provisioning.md#reprovisioning) (this is a remote action specific to Cloud PC devices)
 - [Resize](resize-cloud-pc.md#resize-a-cloud-pc) (this is a remote action specific to Cloud PC devices)
+- [Collect diagnostics](/mem/intune/remote-actions/collect-diagnostics)
 
 <!-- ########################## -->
 ## Next steps

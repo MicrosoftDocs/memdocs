@@ -5,8 +5,8 @@ title: Using Windows 10 virtual machines with Microsoft Intune
 titleSuffix: 
 description: Guidelines for using Windows 10 virtual machines with Microsoft Intune
 keywords:
-author: ErikjeMS  
-ms.author: erikje
+author: Smritib17  
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 11/20/2019
 ms.topic: conceptual

@@ -13,7 +13,9 @@ ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 12/16/2020
-ms.collection: M365-modern-desktop
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: conceptual
 ms.custom: 
 - CI 116757

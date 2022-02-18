@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/11/2021
+ms.date: 12/06/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -106,7 +106,7 @@ View the Antivirus policy settings you can configure for the **Windows Security 
 
   Use this setting to block Windows Security notifications to your users for all of the preceding feature settings. Alternatively, you can manage the Windows Security app notifications per feature by using the proceeding settings.
 
-  - **Not configured** (*default*) - All Windows Security app notifications that are not controlled by another setting are allowed.
+  - **Not configured** (*default*) - This setting doesn't enforce a block of any settings and all Windows Security app notifications that are not controlled by another setting are allowed.
   - **Block non-critical notification** - Notifications such as scan completions are blocked.
   - **Block all notifications** - Critical and non-critical notifications are blocked for all Windows Security features.
 

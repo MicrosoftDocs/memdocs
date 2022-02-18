@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune and Endpoint Manager to configure thousands of settings for Windows 10 devices, and configure Microsoft Edge on macOS devices. Add these settings in a device configuration profile to secure devices, and control different programs and features.
+description: Use settings catalog in Microsoft Intune and Endpoint Manager to configure thousands of settings for Windows 10/11 client devices, and configure Microsoft Edge on macOS devices. Add these settings in a device configuration profile to secure devices, and control different programs and features.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 02/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -42,11 +42,9 @@ This feature applies to:
   - **Configure Microsoft Edge version 77 and newer**. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
   - **Configure Microsoft Defender for Endpoint**. Previously, you had to [use a property list (plist) file](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website). For a list of the settings you can configure, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
-- **Windows 10 and newer**
+- **Windows 10/11**
 
   There are thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
-
-  Settings Catalog policies are not supported on U.S. Government GCC High and DoD.
 
 > [!TIP]
 > To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
@@ -88,7 +86,7 @@ This article lists the steps to create a policy, and shows how to search and fil
 
 8. Select any setting you want to configure. Or, choose **Select all these settings**:
 
-    :::image type="content" source="./media/settings-catalog/settings-picker-select-all-settings.png" alt-text="In Settings Catalog, choose select all these settings in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog/settings-picker-select-all-settings.png" alt-text="In Settings Catalog, select all these settings in Microsoft Intune and Endpoint Manager admin center.":::
 
     After you add your settings, close the settings picker. All the settings are shown, and configured with a default value, such as **Block** or **Allow**. These defaults values are the same default values in the OS. If you don't want to configure a setting, then select the minus:
 
@@ -129,6 +127,9 @@ There are thousands of settings available in the settings catalog. To make it ea
 - In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value. In **value**, you can filter to only show the settings that apply to Holographic for Business, Windows Enterprise, and other editions:
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="In Settings Catalog, filter the settings list by Windows edition in Microsoft Intune and Endpoint Manager admin center.":::
+
+  > [!NOTE]
+  > For the Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, then the Edge, Office, and OneDrive settings aren't shown.
 
 ## Duplicate a profile  
 

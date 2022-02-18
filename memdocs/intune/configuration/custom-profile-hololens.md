@@ -6,7 +6,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/24/2021
+ms.date: 01/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,6 +18,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -185,7 +186,7 @@ This example uses Windows PowerShell to create a Windows Defender Application Co
 
 11. Create the custom device configuration profile in Intune:
 
-    1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows 10 custom device configuration profile.
+    1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create a Windows 10/11 custom device configuration profile.
 
         For the specific steps, see [Create a custom profile using OMA-URI in Intune](custom-settings-configure.md).
 

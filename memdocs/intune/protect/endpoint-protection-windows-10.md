@@ -6,11 +6,9 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 02/03/2022
 ms.topic: conceptual
-ms.technology:
 ms.service: microsoft-intune
-ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 
 # optional metadata
 
@@ -22,7 +20,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Windows settings you can deploy with Intune policy to protect Windows devices
@@ -44,7 +44,7 @@ For more information about configuration service providers (CSPs), see [Configur
 
 While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration. For more information, see [Create a network boundary on Windows devices](../configuration/network-boundary-windows.md).
 
-Application Guard is only available for b4-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.  
+Application Guard is only available for 64-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.  
 
 - **Application Guard**  
   **Default**: Not configured  

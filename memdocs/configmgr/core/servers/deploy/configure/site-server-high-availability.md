@@ -2,7 +2,7 @@
 title: Site server high availability
 titleSuffix: Configuration Manager
 description: How to configure high availability for the Configuration Manager site server by adding a passive mode site server.
-ms.date: 11/08/2021
+ms.date: 02/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -261,6 +261,8 @@ The following steps may be required if necessary in your environment:
 - If you integrate Configuration Manager with the Microsoft Store for Business, reconfigure that connection. For more information, see [Manage apps from the Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).  
 
 - Recreate OSD bootable media and prestaged media in non-PKI environments.  
+
+- In non-PKI environments, you may need to update the self-signed certificate on PXE-enabled distribution points. Do this action in the properties of the distribution point on the Communication tab. Make changes to the self-signed certificate date or time.
 
 ## Daily monitoring
 

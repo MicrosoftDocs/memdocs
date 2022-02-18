@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # What's new in version 2107 of Configuration Manager current branch
@@ -369,7 +370,7 @@ For more information, see [Product feedback](../../understand/product-feedback.m
 <!--9761129-->
 Starting in this release, you can choose to allow unsigned [hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md). You may need to allow unsigned console extensions because of an unsigned internally developed extension, or for testing your own custom extension in a lab.
 
-For more information, see [Import unsigned hierarchy approved console extensions](../../servers/manage/admin-console-extensions.md#bkmk_unsigned).
+For more information, see [Allow unsigned console extensions in the hierarchy](../../servers/manage/admin-console-extensions.md#bkmk_allow-unsigned).
 
 ### Console improvements
 <!--9575773-->
@@ -432,19 +433,17 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 
 Aside from new features, this release also includes other changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2107](../../../hotfix/2107/10096997.md).
 
-<!--
-The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
--->
 
-<!--
+The following update rollup (11121541) is available in the console starting on October 27, 2021: [Update rollup for Configuration Manager current branch, version 2107](../../../hotfix/2107/11121541.md).
+
+
 ### Hotfixes
 
 The following additional hotfixes are available to address specific issues:
 
 | ID | Title | Date | In-console |
 |---------|---------|---------|---------|
-| [9833643](../../../hotfix/2107/9833643.md) | Console update for Microsoft Endpoint Configuration Manager version 2107 | May 11, 2021 | No |
--->
+| [12636660](../../../hotfix/2107/12636660.md) | Client update for Microsoft Endpoint Configuration Manager version 2107 | December 2, 2021 | No |
 
 ## Next steps
 

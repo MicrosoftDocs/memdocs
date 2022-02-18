@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 11/05/2021
+ms.date: 01/13/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -53,19 +53,19 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 -->
 
 <!-- ***********************************************-->
-## Device management
+## Upcoming features
 
-### Windows 11 support for newly created Cloud PCs<!--35091970 -->
+### Windows 365 link on Microsoft 365 admin center<!--37188422 -->
 
-In a future update, Windows 365 Business Cloud PCs will be created with Windows 11 installed by default. Admins will be able to choose between Windows 10 and 11 for their organization's Cloud PCs. On windows365.microsoft.com, users will be able to easily see the difference between their Windows 10 and 11 Cloud PCs.
+For admins with a Windows 365 license, a link to [windows365.microsoft.com](https://windows365.microsoft.com) will be added to the Microsoft 365 admin center home page.
 
-#### Manage Cloud PCs in the Microsoft 365 admin center and windows365.microsoft.com<!--36859306-->
+### End user manual connectivity check<!--37679345 -->
 
-You’ll be able to control organization-wide Cloud PC settings and device-level actions in the Microsoft 365 admin center and on windows365.microsoft.com.
+End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
-- **Organizational defaults**: You’ll be able to choose defaults for operating system (Windows 10 or 11) and account type (Standard or Local Administrator).
-- **Device level actions**: You’ll be able to use the following actions on any Cloud PC in your organization: Change account type, Restart, Reset, Rename, and Troubleshoot.
-- **Other management actions**: You’ll be able to create and delete users, reset passwords, and manage licenses for Windows 365 Cloud PCs and Microsoft 365 products.
+### Point-in-time restore<!--37063579 -->
+
+Users will be able to restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points will be available.
 
 ## Next steps
 

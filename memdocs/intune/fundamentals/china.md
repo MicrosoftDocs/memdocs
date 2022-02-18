@@ -5,8 +5,8 @@ title: Intune operated by 21Vianet in China
 titleSuffix: 
 description: Intune operated by 21Vianet in China.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 04/16/2021
 ms.topic: conceptual
@@ -55,6 +55,7 @@ Because the China services are operated by a partner from inside China, there ar
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
 - Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
+- Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices.  
 
 ## You control customer data
 

@@ -11,6 +11,7 @@ ms.author: mstewart
 manager: dougeby
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Configuration Manager devices into Endpoint analytics so that I can gain insights into the user experience.
 ms.localizationpriority: high
+ms.collection: highpri
 ---
 
 # Quickstart: Enroll Configuration Manager devices into Endpoint analytics
@@ -32,10 +33,7 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 ### Licensing Prerequisites
 
-Endpoint analytics is included in the following plans:
-
-- [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
-- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher.
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Endpoint Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 ## Endpoint analytics permissions
 
@@ -60,7 +58,8 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 
 ## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager
 <!--6051638, 5924760-->
-Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md).
+Before you enroll Configuration Manager devices, verify the [prerequisites](#bkmk_prereq) including enabling [Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md). Starting in Configuration Manager 2111, cloud attaching your environment was simplified. You can use the recommended defaults to enable both Endpoint analytics and tenant attach at the same time. For more information, see [Enable cloud attach](..\configmgr\cloud-attach\enable.md).<!--10964629-->
+
 
 ### <a name="bkmk_cm_upload"></a> Enable data upload in Configuration Manager
 
@@ -83,7 +82,7 @@ Onboarding from  the Endpoint analytics portal is required for both  Configurati
 
 The **Enable Endpoint analytics data collection** client setting allows your managed endpoints to send data necessary for Endpoint analytics to your site server. This setting does not control whether data gets uploaded to the Microsoft Endpoint Manager admin center.
 
-Starting in Configuration Manager version 2006, the **Enable Endpoint analytics data collection** setting is enabled by default for devices targeted by only the default [client settings](../configmgr/core/clients/deploy/about-client-settings.md). If you're upgrading to version 2006 from Configuration Manager version 1910 or prior, the Endpoint analytics data collection policy will be enabled in your custom client settings upon upgrade. You can enable or disable data collection by following the instructions below: <!--7065447, 7741111-->
+The **Enable Endpoint analytics data collection** setting is enabled by default for devices targeted by only the default [client settings](../configmgr/core/clients/deploy/about-client-settings.md). If you're upgrading to version 2006 from Configuration Manager version 1910 or prior, the Endpoint analytics data collection policy will be enabled in your custom client settings upon upgrade. You can enable or disable data collection by following the instructions below: <!--7065447, 7741111-->
 
 1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
 1. Right-click and select **Properties** then select the **Computer Agent** settings.

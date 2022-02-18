@@ -4,8 +4,8 @@
 title: Create a custom role in Intune
 description: Learn how to create a custom role in Microsoft Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 03/26/2019
 ms.topic: how-to
@@ -72,6 +72,7 @@ The following permissions are available when creating custom roles.
  | Mobile apps/Update | Manage mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also manage books purchased through the Apple Volume Purchase Program or add eBook categories. You can manage iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
  | Mobile apps/Delete | Delete mobile applications such as store apps, line-of-business apps, web-links or built-in apps. You can also delete books purchased through the Apple Volume Purchase Program or delete eBook categories. You can delete iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. | 
  | Mobile apps/Assign | Assign mobile applications or eBooks to Azure AD security groups. | 
+ | Mobile apps/Relate | Create relationships with other managed apps using Dependencies and Supersedence features. Without this permission, IT admins are not able to add App dependency or supercedence relationships when creating or editing Win32 apps. |
  | Terms and conditions/Create | Create new terms and conditions. | 
  | Terms and conditions/Read | View terms and conditions. | 
  | Terms and conditions/Update | Manage existing terms and conditions but not assignments. | 
@@ -112,7 +113,6 @@ The following permissions are available when creating custom roles.
  | Remote tasks/Send custom notifications | Allows admin to send customized notifications to devices. Devices receive notifications in Company Portal. | 
  | Remote tasks/Initiate Configuration Manager action | Initiate a remote action on a device managed by Configuration Manager. | 
  | Remote tasks/Update cellular data plan | Activate the data plan for cellular iOS/iPadOS devices that support eSIM.  | 
- | Remote tasks/Change organizational unit | Move a Chrome Enterprise device to an existing organizational unit in your Google Workspace domain. | 
  | Device configurations/Create | Create new device configuration profiles, or create new device enrollment restrictions. | 
  | Device configurations/Read | View device configuration profiles, or view device enrollment restrictions. | 
  | Device configurations/Update | Change device configuration profiles, or change device enrollment restrictions. | 
@@ -141,10 +141,10 @@ The following permissions are available when creating custom roles.
  | Enrollment programs/Update profile | Manage profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
  | Enrollment programs/Delete profile | Delete profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
  | Enrollment programs/Assign profile | Manage Windows Autopilot deployment profile assignment settings. | 
- | Enrollment programs/Create device | Import Apple devices for Apple Configurator. | 
+ | Enrollment programs/Create device | Import Apple devices for the Device Enrollment Program, Apple School or Business Manager, Apple Configurator or Windows Autopilot devices. | 
  | Enrollment programs/Read device | View Apple devices for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot devices. | 
  | Enrollment programs/Sync device | Initiate the Sync command for Windows Autopilot devices. | 
- | Enrollment programs/Delete device | Delete Apple devices for the Device Enrollment Program, Apple School Manager, or Apple Configurator | 
+ | Enrollment programs/Delete device | Delete Apple devices for the Device Enrollment Program, Apple School or Business Manager, Apple Configurator or Windows Autopilot devices. | 
  | Device enrollment managers/Read | View the list of device enrollment manager accounts. | 
  | Device enrollment managers/Update | Create new device enrollment manager accounts, or delete device enrollment manager accounts. | 
  | Corporate device identifiers/Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. | 
@@ -194,9 +194,6 @@ The following permissions are available when creating custom roles.
  | Filters/Read | View filters.  | 
  | Filters/Update | Edit filters. | 
  | Filters/Delete | Delete filters. | 
- | Chrome Enterprise/Read | View the organization's Chrome Enterprise connection settings and device details for Chrome OS devices. | 
- | Chrome Enterprise/Update connection settings | Manage or change the organization's Chrome Enterprise connection settings. | 
- | Chrome Enterprise/Delete connection settings | Delete the organization's Chrome Enterprise connection settings. | 
  | Microsoft Store For Business/Read | View the settings for synchronizing Microsoft Store for Business apps with Microsoft Intune. | 
  | Microsoft Store For Business/Modify | Modify the settings for synchronizing Microsoft Store for Business apps with Microsoft Intune. | 
  | Windows Enterprise Certificate/Read | View the code-signing certificate used to distribute line-of-business apps to your managed Windows devices. | 

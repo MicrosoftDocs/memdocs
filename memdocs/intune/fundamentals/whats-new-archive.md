@@ -6045,7 +6045,7 @@ The following new items are now available to the [inventory taken by enrolled de
 An administrator is able to define the minimum Android security patch that must be installed on the device in order to gain access to a managed application under a managed account.
 
 > [!Note]  
-> This feature only restricts security patches released by Google on Android 6.0+ devices.
+> This feature only restricts security patches released by Google on Android 8.0+ devices.
 
 #### App-conditional launch support<!-- 1193313 -->
 IT admins can now set a requirement through the Azure admin portal to enforce a passcode instead a numeric PIN through the mobile app management (MAM) when the application launch. If configured, the user is required to set and use a passcode when prompted before getting access to MAM-enlightened applications. A passcode is defined as a numeric PIN with at least one special character or upper/lowercase alphabet. This release of Intune will enable this feature **on iOS only**. Intune supports passcode in a similar way to numeric PIN, it sets a minimum length, allowing repeat characters and sequences. This feature requires the participation of applications (that is, WXP, Outlook, Managed Browser, Yammer) to integrate the Intune App SDK with the code for this feature in place for the passcode settings to be enforced in the targeted applications.

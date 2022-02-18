@@ -2,7 +2,7 @@
 title: Create configuration baselines
 titleSuffix: Configuration Manager
 description: Create configuration baselines in Configuration Manager that you can deploy to a collection.
-ms.date: 11/29/2019
+ms.date: 01/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -76,9 +76,8 @@ To create a configuration baseline by using the **Create Configuration Baseline*
 
 ## <a name="bkmk_CAbaselines"></a> Include custom configuration baselines as part of compliance policy assessment
 <!--3608345-->
-*(Introduced in version 1910)*
 
-Starting in version 1910, you can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**. For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure AD. You can then use it for conditional access to your Microsoft 365 Apps resources. For more information, see [Conditional access with co-management](../../comanage/quickstart-conditional-access.md).
+You can add evaluation of custom configuration baselines as a compliance policy assessment rule. When you create or edit a configuration baseline, you have an option to **Evaluate this baseline as part of compliance policy assessment**. When adding or editing a compliance policy rule, you have a condition called **Include configured baselines in compliance policy assessment**. For co-managed devices, and when you configure Intune to take Configuration Manager compliance assessment results as part of the overall compliance status, this information is sent to Azure AD. You can then use it for conditional access to your Microsoft 365 Apps resources. For more information, see [Conditional access with co-management](../../comanage/quickstart-conditional-access.md).
 
 To include custom configuration baselines as part of compliance policy assessment, do the following:
 
@@ -86,7 +85,8 @@ To include custom configuration baselines as part of compliance policy assessmen
 - Select [**Evaluate this baseline as part of compliance policy assessment**](#bkmk_eval-baseline) in a configuration baseline deployed to a device collection.
 
 > [!IMPORTANT]
-> When targeting devices that are co-managed, ensure you meet the [co-management prerequisites](../../comanage/overview.md#prerequisites).
+> - When targeting devices that are co-managed, ensure you meet the [co-management prerequisites](../../comanage/overview.md#prerequisites). Co-managed clients ignore service windows for remediation when their compliance policies workload is managed by Intune. <!--12439085, 12412748-->
+> - For devices managed by Configuration Manager, the client honors the service window for compliance policy remediation. To ignore the service window and remediate immediately, select **Check compliance** in the **Software Center**. <!--12439085, 12412748-->
 
 ### Example evaluation scenario
 

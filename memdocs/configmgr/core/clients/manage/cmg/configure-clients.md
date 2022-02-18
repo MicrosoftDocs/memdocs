@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Configure clients for cloud management gateway
@@ -47,7 +48,7 @@ Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate 
 This command displays any internet-based management points the client knows about. While the CMG isn't technically an internet-based management point, clients view it as one.
 
 > [!NOTE]
-> To troubleshoot CMG client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
+> To troubleshoot CMG client traffic, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 ## Install off-premises clients using a CMG
 

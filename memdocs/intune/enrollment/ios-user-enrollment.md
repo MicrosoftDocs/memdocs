@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Set up iOS/iPadOS and iPadOS User Enrollment (preview)
@@ -43,6 +45,11 @@ For more information about the options available with User Enrollment, see [User
 - [Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 - [Managed Apple ID](https://support.apple.com/en-us/HT210737)
 - [iOS 13 or later](https://support.apple.com/en-au/guide/security/sec38eb8731b/web)
+
+> [!NOTE]
+> Apple released iPadOS in September 2019, which introduced a change that can affect Microsoft Azure Active Directory (Azure AD) and Intune customers who use Conditional Access policies in their organization. For more information about how this affects your policies and what actions to take, see [Evaluate and update Conditional Access policies after new iPadOS release](https://support.microsoft.com/topic/action-required-evaluate-and-update-conditional-access-policies-after-new-ipados-release-23795067-9048-62ad-a5bd-ad63995fc488).  
+
+
 
 ## Create a User Enrollment profile in Intune
 

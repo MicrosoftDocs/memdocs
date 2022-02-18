@@ -18,7 +18,7 @@ As you work towards onboarding your organization to co-management, getting curre
 
 In the following video, senior program manager Rob York and product marketing manager Locky Ainley discuss and demo upgrading to Windows 10 for co-management:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Upgrading-to-Windows-10-to-Enable-Co-Management/player]
+> [!VIDEO https://aka.ms/docs/player?id=3099c141-475c-42f9-a997-cb0dffb74788]
 
 ## Why upgrade?
 

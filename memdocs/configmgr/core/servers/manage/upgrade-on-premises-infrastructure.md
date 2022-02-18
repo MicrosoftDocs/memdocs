@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 09/09/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -68,6 +68,8 @@ Use the steps in this section for any of the following upgrade scenarios:
 
 - (_Windows Server 2012 or Windows Server 2012 R2 only_): Remove the System Center Endpoint Protection (SCEP) client. Windows Server now has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server.
 
+- (_Windows Server 2012 or Windows Server 2012 R2 only_): Install the latest Cumulative Update and uninstall Windows Management Framework 5.1 before attempting the upgrade.
+
 - Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.
 
 - If you're upgrading the OS of the site server, make sure [file-based replication](../../plan-design/hierarchy/file-based-replication.md) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
@@ -105,7 +107,7 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 
 1. In the MMC, open the **Properties** of **WMI Control (Local)** and select the **Security** tab.
 
-1. Expand the tree below Root, select the **CCM** node, and then choose **Security**.  Make sure the **SMS Admins** group has the following permissions:
+1. Expand the tree below Root, select the **SMS** node, and then choose **Security**.  Make sure the **SMS Admins** group has the following permissions:
 
     - Enable Account
 
@@ -191,6 +193,9 @@ For information about the versions of SQL Server that Configuration Manager supp
 If Configuration Manager still supports the resulting SQL Server service pack level, it supports the in-place upgrade of SQL Server to a later service pack.
 
 When you have more than one Configuration Manager site in a hierarchy, each site can run a different service pack version of SQL Server. There's no limitation to the order in which sites upgrade the service pack version of SQL Server.
+
+> [!IMPORTANT]
+> If you use [BitLocker management](../../../protect/plan-design/bitlocker-management.md) in Configuration Manager, and you encrypt recovery data in the database, before you upgrade SQL Server, make sure the certificate is for a supported version. For example, certificates created with SQL Server 2014 or earlier aren't compatible with SQL Server 2016 or later. For more information, see [Manage the encryption certificate on SQL Server upgrade](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md#manage-the-encryption-certificate-on-sql-server-upgrade).<!-- 12405266 -->
 
 ### Upgrade to a new version of SQL Server
 

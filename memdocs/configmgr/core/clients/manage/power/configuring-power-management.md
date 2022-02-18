@@ -34,7 +34,7 @@ If you want to apply these settings to only some computers, create a *custom dev
 
 1. Configure the additional client settings that you require. For more information, see [About client settings - Power Management](../../deploy/about-client-settings.md#power-management).  
 
-Clients configure these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../manage-clients.md#BKMK_PolicyRetrieval).  
+Clients configure these settings when they next download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../manage-clients.md#start-policy-retrieval).  
 
 ## Exclude computers
 

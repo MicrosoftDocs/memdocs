@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/13/2021
+ms.date: 01/12/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, get-started, seoapril2019
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # App protection policies overview
@@ -217,6 +219,9 @@ While the **Global** policy applies to all users in your tenant, any standard In
 
 Multi-identity support allows an app to support multiple audiences. These audiences are both "corporate" users and "personal" users. Work and school accounts are used by "corporate" audiences, whereas personal accounts would be used for consumer audiences, such as Microsoft Office users. An app that supports multi-identity can be released publicly, where app protection policies apply only when the app is used in the work and school ("corporate") context. Multi-identity support uses the [Intune SDK](../developer/app-sdk.md) to only apply app protection policies to the work or school account signed into the app. If a personal account is signed into the app, the data is untouched. App protection policies can be used to prevent the transfer of work or school account data to personal accounts within the multi-identity app, personal accounts within other apps, or personal apps.
 
+> [!IMPORTANT]
+> Regardless of whether an app supports multi-identity, only a single "corporate" identity can have an Intune App Protection Policy applied.
+
 For an example of "personal" context, consider a user who starts a new document in Word, this is considered personal context so Intune App Protection policies are not applied. Once the document is saved on the "corporate" OneDrive account, then it is considered "corporate" context and Intune App Protection policies are applied.
 
 Consider the following examples for the work or "corporate" context:
@@ -359,6 +364,10 @@ When dealing with different types of settings, an Intune SDK version requirement
  > to be installed on the device. For example, you don't need to allow-list it on top of Managed Home Screen.
  > 
  > Note that users targeted with APP policies on non-dedicated devices will not be impacted.
+
+### Microsoft Teams Android devices
+The Teams app on [Microsoft Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) does not support APP (does not receive policy though the Company Portal app). This means that app protection policy settings will not be applied to Teams on Microsoft Teams Android devices.
+
 ### Device biometric authentication
 For Android devices that support biometric authentication, you can allow end users to use fingerprint or Face Unlock, depending on what their Android device supports. You can configure whether all biometric types beyond fingerprint can be used to authenticate. Note that fingerprint and Face Unlock are only available for devices manufactured to support these biometric types and are running the correct version of Android. Android 6 and higher is required for fingerprint, and Android 10 and higher is required for Face Unlock.
 

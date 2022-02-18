@@ -9,7 +9,7 @@ author: greg-lindsay
 ms.author: greglin
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 03/16/2021
+ms.date: 02/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -30,6 +30,7 @@ ms.collection:
 - M365-modern-desktop
 - m365initiative-coredeploy
 - M365-identity-device-management
+- highpri
 ---
 
 # Create device groups
@@ -79,8 +80,7 @@ For information about formatting and using a CSV file to manually add Windows Au
 ## Assign a user to a specific Autopilot device
 
 > [!NOTE]
-> This functionality has been removed as of September 30, 2021.
-> While the option to assign user to a device in Autopilot is still available in the GUI portal and PowerShell, it will be ignored by the device during provisioning.
+> Assigning a licensed user to a registered Autopilot device using Microsoft Endpoint Manager no longer pre-fills any user information as described below. Please see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452) for details on this change. This change does not impact user assigned policies and apps which are still deployed to the device when a licensed user is assigned. See [Windows Autopilot for pre-provisioned deployment](/mem/autopilot/pre-provision#preparation) for details on this.
 
 You can assign a licensed Intune user to a specific Autopilot device. This assignment:
 - Pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup.
