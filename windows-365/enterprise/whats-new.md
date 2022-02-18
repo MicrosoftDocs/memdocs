@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2022
+ms.date: 02/18/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -65,6 +65,13 @@ Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These de
 #### Configure installed language and region for provisioning Cloud PCs<!--37095808 -->
 
 When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States). For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 identity and authentication
+
+We’ve published a new help documentation article. For more information, see [Windows 365 identity and authentication](identity-authentication.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
