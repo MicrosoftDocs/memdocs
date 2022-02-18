@@ -2,7 +2,7 @@
 # required metadata
 
 title: Public preview overview in Windows 365
-description: Learn about public preview features in Windows 365, and see an example. See a list of limitations, restrictions, and more.
+description: Learn about public preview features in Windows 365. See a list of limitations, restrictions, and more.
 keywords:
 author: erikjeMS
 ms.author: erikje
