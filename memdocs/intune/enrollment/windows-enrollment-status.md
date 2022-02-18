@@ -122,7 +122,7 @@ Intune applies the default profile to all users and all devices when there is no
          - **Selected**: Select-apps must be installed before users can use their devices. Choose this option to select from your managed apps.  
  
 6. Select **Next**.   
-7. In **Assignments**, select the groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md). Optionally, select **Edit filter** to restrict the assignment further.   
+7. In **Assignments**, select the groups that will receive your profile. Optionally, select **Edit filter** to restrict the assignment further.   
 
     > [!NOTE]
     > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` properties. Filters that contain other properties are not available.  
