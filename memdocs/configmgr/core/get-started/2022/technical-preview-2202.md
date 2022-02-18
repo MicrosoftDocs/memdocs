@@ -2,7 +2,7 @@
 title: Technical preview 2202
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2202.
-ms.date: 02/17/2022
+ms.date: 02/18/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
