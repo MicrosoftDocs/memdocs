@@ -155,7 +155,7 @@ Three settings determine whether an OS drive will be encrypted using used space 
 - Configuration of the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp) 
   - (Enforce drive encryption type on operating system drives)
 
-Assuming that SystemDrivesEncryptionType has not been configured, the following is the expected behaviour. When silent enablement is configured on a modern standby device, the OS drive will be encrypted using used space only encryption. When silent enablement is configured on a device which is not capable of modern standby, the OS drive will be encrypted using full disk encryption. The result is the same whether you are using an [Endpoint Security disk encryption policy for BitLocker](/mem/intune/protect/encrypt-devices#create-an-endpoint-security-policy-for-bitlocker) or a [Device Configuration profile for endpoint protection for BitLocker](/mem/intune/protect/encrypt-devices#create-an-endpoint-security-policy-for-bitlocker). If a different end state is required, the encryption type can be controlled by configuring the SystemDrivesEncryptionType using settings catalog as shown below.
+Assuming that SystemDrivesEncryptionType has not been configured, the following is the expected behaviour. When silent enablement is configured on a modern standby device, the OS drive will be encrypted using used space only encryption. When silent enablement is configured on a device which is not capable of modern standby, the OS drive will be encrypted using full disk encryption. The result is the same whether you are using an [Endpoint Security disk encryption policy for BitLocker](#create-an-endpoint-security-policy-for-bitlocker) or a [Device Configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-bitlocker). If a different end state is required, the encryption type can be controlled by configuring the SystemDrivesEncryptionType using settings catalog as shown below.
 
 To verify whether the hardware is modern standby capable, run the following command from a command prompt:
 
@@ -249,7 +249,7 @@ All BitLocker recovery key accesses are audited. For more information on Audit L
 
 When you’ve configured the tenant attach scenario, Microsoft Endpoint Manager can display recovery key data for tenant attached devices.
 
-- To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Azure AD joined devices: See [KB11121541](/mem/configmgr/hotfix/2107/11121541).
+- To support the display of recovery keys for tenant attached devices, your Configuration Manager sites must run version 2107 or later. For sites that run 2107, you must install an update rollup to support Azure AD joined devices: See [KB11121541](../../configmgr/hotfix/2107/11121541.md).
 
 - To view the recovery keys, your Intune account must have the Intune RBAC permissions to view BitLocker keys, and must be associated with an on-premises user that has the related permissions for Configuration Manager of Collection Role, with Read Permission > Read BitLocker Recovery Key Permission. For more information, see [Configure role-based administration for Configuration Manager](/configmgr/core/servers/deploy/configure/configure-role-based-administration).
 
