@@ -48,7 +48,14 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of February 7, 2022 (Service release 2201)
+## Week of February 14, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 identity and authentication
+
+We’ve published a new help documentation article. For more information, see [Windows 365 identity and authentication](identity-authentication.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -65,13 +72,6 @@ Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These de
 #### Configure installed language and region for provisioning Cloud PCs<!--37095808 -->
 
 When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States). For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Documentation
-
-#### New documentation article: Windows 365 identity and authentication
-
-We’ve published a new help documentation article. For more information, see [Windows 365 identity and authentication](identity-authentication.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
