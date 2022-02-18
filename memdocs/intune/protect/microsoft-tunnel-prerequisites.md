@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/11/2022
+ms.date: 02/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -274,6 +274,7 @@ Devices must be enrolled to Intune to be supported with Microsoft Tunnel. Only t
 The following functionality is supported by all platforms:
 
 - Azure Active Directory (Azure AD) authentication to the Tunnel using username and password.
+- Active Directory Federation Services (AD FS) authentication to the Tunnel using username and password.
 - Per-app support.
 - Manual full-device tunnel through a Tunnel app, where the user launches VPN and selects *Connect*.
 - Split tunneling. However, on iOS split tunneling rules are ignored when your VPN profile uses *per app VPN*.
