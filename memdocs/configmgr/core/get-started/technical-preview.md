@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 02/18/2022
+ms.date: 03/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -121,19 +121,15 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2202
+### Technical preview version 2203
 
-- [Delete collection references](2022/technical-preview-2202.md#bkmk_delcollref) <!--9708999-->
-- [Pre-download content for available software updates](2022/technical-preview-2202.md#bkmk_pre-download) <!--4497776-->
-- [Added folder support for nodes in the Software Library](2022/technical-preview-2202.md#bkmk_folder) <!--3601129-->
-- [New client health checks](2022/technical-preview-2202.md#bkmk_health) <!--10954111-->
-- [Improvements to implicit uninstall](2022/technical-preview-2202.md#bkmk_implicit) <!--12488148-->
-- [Improvements for sending feedback](2022/technical-preview-2202.md#bkmk_feedback) <!--11754191-->
-- [Improvements to Management Insights](2022/technical-preview-2202.md#bkmk_insights) <!--10875436-->
-- [Improvements to dashboards](2022/technical-preview-2202.md#bkmk_webview2) <!--10024154-->
-- [ADR scheduling improvements for deployments](2022/technical-preview-2202.md#bkmk_adr) <!--12707738-->
-- [Console improvements](2022/technical-preview-2202.md#bkmk_console) <!--9575773-->
-- [PowerShell release notes preview](2022/technical-preview-2202.md#bkmk_powershell) <!--13040432-->
+- [5858991](2022/technical-preview-2203.md) <!--5858991-->
+- [9070525](2022/technical-preview-2203.md) <!--9070525-->
+- [10454717](2022/technical-preview-2203.md) <!--10454717-->
+- [12451634](2022/technical-preview-2203.md) <!--12451634-->
+- [12486569](2022/technical-preview-2203.md) <!--12486569-->
+- [12558856](2022/technical-preview-2203.md) <!--12558856-->
+- [12594695](2022/technical-preview-2203.md) <!--12594695-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -152,6 +148,20 @@ The following features were released with previous versions of the Configuration
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 <!-- ### Technical preview version 2111 -->
+
+### Technical preview version 2202
+
+- [Delete collection references](2022/technical-preview-2202.md#bkmk_delcollref) <!--9708999-->
+- [Pre-download content for available software updates](2022/technical-preview-2202.md#bkmk_pre-download) <!--4497776-->
+- [Added folder support for nodes in the Software Library](2022/technical-preview-2202.md#bkmk_folder) <!--3601129-->
+- [New client health checks](2022/technical-preview-2202.md#bkmk_health) <!--10954111-->
+- [Improvements to implicit uninstall](2022/technical-preview-2202.md#bkmk_implicit) <!--12488148-->
+- [Improvements for sending feedback](2022/technical-preview-2202.md#bkmk_feedback) <!--11754191-->
+- [Improvements to Management Insights](2022/technical-preview-2202.md#bkmk_insights) <!--10875436-->
+- [Improvements to dashboards](2022/technical-preview-2202.md#bkmk_webview2) <!--10024154-->
+- [ADR scheduling improvements for deployments](2022/technical-preview-2202.md#bkmk_adr) <!--12707738-->
+- [Console improvements](2022/technical-preview-2202.md#bkmk_console) <!--9575773-->
+- [PowerShell release notes preview](2022/technical-preview-2202.md#bkmk_powershell) <!--13040432-->
 
 ### Technical preview version 2201
 
