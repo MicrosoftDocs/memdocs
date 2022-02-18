@@ -115,6 +115,7 @@ To start a lost device sound alert:
    - **For Android Enterprise dedicated devices**: select **Play Lost device sound**. The sound plays on an Android Enterprise dedicated device for the set duration or if notifications are enabled, until a user on the device turns it off. 
      - For devices running on operating systems below version 10, a full screen activity with a **Stop Sound** button pops up. 
      - For devices running on operating systems version 10 or higher, if notifications are enabled, a notification with a **Stop Sound** button shows up.
+     - To configure system notifications for devices in kiosk mode, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 ## Security and privacy information for lost mode and locate device actions
 
