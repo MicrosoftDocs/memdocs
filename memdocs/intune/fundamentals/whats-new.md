@@ -67,7 +67,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 #### Mobile Threat Defense partner Zimperium is now available in GCC High tenants<!-- 10013537 -->
 Zimperium is now available as a Mobile Threat Defense (MTD) partner in US GCC High environments.
  
-With this support, you’ll find the Intune [connector for Zimperium](../protect/zimperium-mobile-threat-defense-connector.md) as available in the list of [MTD connectors that you can enable](./protect/mtd-connector-enable.md#to-enable-the-mobile-threat-defense-connector) in your GCC High tenant.
+With this support, you’ll find the Intune [connector for Zimperium](../protect/zimperium-mobile-threat-defense-connector.md) as available in the list of [MTD connectors that you can enable](../protect/mtd-connector-enable.md#to-enable-the-mobile-threat-defense-connector) in your GCC High tenant.
  
 The GCC High environment is a more regulated environment, and only connectors for those MTD partners that are supported for the GCC High environment are available in it. For more information about support in GCC High tenants, [Microsoft Intune for US Government GCC High and DoD service description](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 
@@ -114,7 +114,7 @@ Using Group Policy Analytics, you can import your Group Policy Objects (GPOs) to
 
 The Intune product team updates the mapping logic. When the updates happen, the deprecated settings are automatically reevaluated. Previously, you had to reimport your GPOs.
 
-For more information on Group Policy Analytics and the reporting, see [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager](..configuration/group-policy-analytics.md).
+For more information on Group Policy Analytics and the reporting, see [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager](../configuration/group-policy-analytics.md).
 
 Applies to:
 - Windows 11
