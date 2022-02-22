@@ -148,7 +148,7 @@ Complete the following steps to create a dynamic Azure AD device group for devic
 5. Choose **Add query** > **Create**.  
 
 
-### Enroll devices    
+## Enroll devices    
 After you set up and assign the Android (AOSP) enrollment profiles, you can enroll devices via QR code. 
 
 1. Turn on your new or factory-reset device.  
