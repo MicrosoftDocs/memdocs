@@ -160,9 +160,9 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 
 3. Follow the on-screen prompts to finish enrolling and registering the device. During setup, Intune automatically installs and opens the apps that are needed for enrollment. Those apps include:  
 
-        *  Microsoft Authenticator app  
-        *  Microsoft Intune app  
-        *  Intune Company Portal app  
+    *  Microsoft Authenticator app  
+    *  Microsoft Intune app  
+    *  Intune Company Portal app  
 
 ## After enrollment 
 
@@ -211,7 +211,7 @@ The following are known limitations when working with AOSP devices in Intune:
     * Alphanumeric  
     * Alphanumeric with symbols    
     * Weak biometric   
-*  Device compliance reporting is not available for for Android (AOSP).   
+*  Device compliance reporting is not available for Android (AOSP).   
 
 * Android (AOSP) management is not supported in these environments:  
     * Intune for Government Community Cloud (GCC) High and Department of Defense (D0D)  
