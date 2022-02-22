@@ -2,7 +2,7 @@
 title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 02/17/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -107,6 +107,11 @@ Refresh the view.
 Deletes the selected collection. You can also delete all of the resources in the collection from the site database.
 
 You can't delete the collections that are built into Configuration Manager. For a list of the built-in collections, see [Introduction to collections](introduction-to-collections.md#built-in-collections).
+
+Collections might also not delete due to dependent collections. When reviewing a dependant collection you want to delete, also ensure that the dependant collection isn't: <!--9708999-->
+- **Used by cloud attach**: For more information, see [Enable cloud attach for Configuration Manager](../../../../cloud-attach/enable.md).
+- **Used for upload to Microsoft Endpoint Manager**: For more information, see [Make Configuration Manager collections available to assign Endpoint security policies](../../../../tenant-attach/endpoint-security-get-started.md#bkmk_collections).
+- **Assigned to user**: For more information, see [Modify the administrative scope of an administrative user](../../../servers/deploy/configure/configure-role-based-administration.md#modify-the-administrative-scope-of-an-administrative-user).
 
 #### Simulate deployment
 

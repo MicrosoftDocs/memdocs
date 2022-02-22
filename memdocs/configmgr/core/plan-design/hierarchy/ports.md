@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 12/21/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -679,7 +679,7 @@ The following sections provide more information about ports that Configuration M
 
 Clients use Server Message Block (SMB) whenever they connect to UNC shares. For example:
 
-- Manual client installation that specifies the CCMSetup.exe **/source:** command-line property
+- Manual client installation that specifies the CCMSetup.exe `/source:` command-line property
 
 - Endpoint Protection clients that download definition files from a UNC path
 
