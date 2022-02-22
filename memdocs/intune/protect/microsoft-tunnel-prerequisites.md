@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/28/2022
+ms.date: 02/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,7 +34,7 @@ At a high level, you’ll need the following to use the Microsoft Tunnel:
 - An Azure subscription.
 - An Intune subscription.
 - A Linux server that runs containers. This server can be on-premises or in the cloud:
-  - Podman for Red Hat Enterprise Linux (RHEL) 8.4
+  - Podman for Red Hat Enterprise Linux (RHEL) 8.4 and 8.5  (See the [Linux server](#linux-server) requirements.)
   - Docker for all other Linux distributions
 - A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server.
 - Devices that run Android or iOS/iPadOS.
@@ -49,13 +49,17 @@ The following sections detail the prerequisites for the Microsoft Tunnel, and pr
 
 Set up a Linux based virtual machine or a physical server on which Microsoft Tunnel Gateway will install.
 
-- **Linux distribution** - The following are supported:
+- **Supported Linux distributions** - The following table details which versions of Linux are supported for the Tunnel server, and the container they require: 
+  
+  |Distributon version    | Container requirements   | Considerations     |
+  |-----------------------|--------------------------|--------------------|
+  | CentOS 7.4+           | Docker CE                | CentOS 8+ isn’t supported |
+  | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
+  | Red Hat (RHEL) 8.4    | Podman 3.0               |                    |
+  | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
+  | Ubuntu 18.04           | Docker CE               |                    |
+  | Ubuntu 20.04           | Docker CE               |                    |
 
-  - CentOS 7.4+(CentOS 8+ isn’t supported)
-  - Red Hat (RHEL) 7.4+
-  - Red Hat (RHEL) 8.4
-  - Ubuntu 18.04
-  - Ubuntu 20.04
 
 - **Size the Linux server**: Use the following guidance to meet your expected use:
 
@@ -72,17 +76,21 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 - **CPU**: 64-bit AMD/Intel processor.
 
-- **Install Docker CE or Podman**: Install Podman version 3.0 on RHEL 8.4. For all other versions of RHEL or other Linux distributions, install Docker version 19.03 CE or later.
-  Microsoft Tunnel requires Docker (or Podman on RHEL 8.4) on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
+- **Install Docker CE or Podman**: Depending on the version of Linux you use for your Tunnel server, you'll need to install one of the following on the Linux server:
+  - Docker version 19.03 CE or later
+  - Podman version 3.0
+  
+
+  Microsoft Tunnel requires Docker or Podman on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
 
   For information about installing and configuring Docker or Podman, see:
 
   - [Install Docker Engine on CentOS or Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
     > [!NOTE]
-    > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7. The version installed on RHEL 7 by default is too old to support Microsoft Tunnel Gateway. Red Hat Enterprise Linux 8 does not support Docker. For RHEL 8.4, install and use Podman instead.
+    > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7.4. The version installed on RHEL 7.4 by default is too old to support Microsoft Tunnel Gateway.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-  - [Install Podman on Red Hat Enterprise Linux 8.4 (scroll down to RHEL8)](https://podman.io/getting-started/installation).  
-    Podman is the container solution used on RHEL 8.4, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and are usually installed together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
+  - [Install Podman on Red Hat Enterprise Linux 8.4 and 8.5 (scroll down to RHEL8)](https://podman.io/getting-started/installation)  
+    These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and are usually installed together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
 with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
@@ -184,7 +192,7 @@ You can use a proxy server with Microsoft Tunnel. The following considerations c
 
 ### Configure an outbound proxy for Podman
 
-The following details can help you configure an internal proxy when using RHEL 8.4, and Podman:
+The following details can help you configure an internal proxy when using Podmam:
 
 - Authenticated proxies aren't supported.
 
@@ -266,6 +274,7 @@ Devices must be enrolled to Intune to be supported with Microsoft Tunnel. Only t
 The following functionality is supported by all platforms:
 
 - Azure Active Directory (Azure AD) authentication to the Tunnel using username and password.
+- Active Directory Federation Services (AD FS) authentication to the Tunnel using username and password.
 - Per-app support.
 - Manual full-device tunnel through a Tunnel app, where the user launches VPN and selects *Connect*.
 - Split tunneling. However, on iOS split tunneling rules are ignored when your VPN profile uses *per app VPN*.
@@ -296,10 +305,13 @@ The Microsoft Tunnel Gateway permissions group grants the following permissions:
 
 ## Run the readiness tool
 
-Before you start a server install, we recommend you download and run the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
+Before you start a server install, we recommend you download and run the most recent version of the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
 
-- Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.  
 - Validates that the Azure Active Directory (Azure AD) account you use to install Microsoft Tunnel has the required roles to complete enrollment.
+
+- Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.
+
+- Checks for the presence of the ip_tables module on the Linux server. This check was added to the script on February 11 2022, when support for RHEL 8.5 was added. RHEL 8.5 doesn’t load the ip_tables module by default. If they are missing after the Linux server installs, you must [manually load the ip_tables module](#manually-load-ip_tables).
 
 > [!IMPORTANT]
 > The readiness tool doesn't validate inbound ports, which is a common misconfiguration. After the readiness tool runs, review the [firewall prerequisites](#firewall) and manually validate your firewalls pass inbound traffic.
@@ -308,7 +320,7 @@ The mst-readiness tool has a dependency on **jq**, a command-line JSON processor
 
 To use the readiness tool:
 
-1. Get the readiness tool by using one of the following methods:
+1. Get the most recent version of the readiness tool by using one of the following methods:
    - Download the tool directly by using a web browser.  Go to https://aka.ms/microsofttunnelready to download a file named **mst-readiness**.
    - Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab, select **Create** to open the *Create a server* pane, and then select **Download readiness tool**.  
    - Use a Linux command to get the readiness tool directly. For example, you can use **wget** or **curl** to open the link https://aka.ms/microsofttunnelready.
@@ -332,6 +344,28 @@ To use the readiness tool:
    The script prompts you to use a different machine with a web browser, which you use to authenticate to Azure AD and to Intune. The tool will report success or an error.
 
 For more information about this tool, see [Reference for mst-cli](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) in the reference article for Microsoft Tunnel article.
+
+### Manually load ip_tables
+
+While most Linux distributions automatically load the ip_tables module, some distributions might not. For example, REHL 8.5 doesn't load the ip_tables by default.
+
+To check for the presence of this module, run the most recent version of mst-readiness tool on the Linux server. The check for ip_tables was added to the readiness tools script on February 11 2022.
+
+If the module isn’t present, the tool stops on the ip_tables module check. In this scenario, you can run the following commands to manually load the module.
+
+**Manually load the ip_tables module**:
+
+In the context of sudo, run the following commands on your Linux server:
+
+1. Validate the presence of ip_tables on the server: `lsmod |grep ip_tables`
+
+2. If ip_tables isn't present, run the following to load the module into the kernel immediately, without a restart: `/sbin/modprobe ip_tables`
+
+3. Rerun the validation to confirm the tables are now loaded: `lsmod |grep ip_tables`
+
+**Configure Linux to load ip_tables at boot**:
+
+In the context of sudo, run the following command on your Linux server to create a config file that will load the ip_tables into kernel during boot time: `echo ip_tables > /etc/modules-load.d/mstunnel_iptables.conf`
 
 ## Next steps
 

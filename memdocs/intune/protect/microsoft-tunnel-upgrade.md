@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 02/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -144,6 +144,17 @@ After an update releases, it rolls out to tenants over the following days. This 
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
+### February 16, 2022
+
+Image hash values:
+
+- **agentImageDigest**: sha256:3298794bfda519886591cd8676a3074adb05911fa63278cc1436dd7a0b223166
+
+- **serverImageDigest**: sha256:4021370532c3659e304bbc594fde7d788bd660a53542e427048931a0d660bfaa
+
+Changes in this release:
+- Minor bug fixes
+
 ### January 31, 2022
 
 Image hash values:
@@ -155,6 +166,10 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
+- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5, do not.
+
+  For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).  
+
 
 
 ### October 25, 2021
@@ -169,7 +184,7 @@ Changes in this release:
 
 - Added ability to get a client network trace
 - Added ability to enabled resource access tracking
-- Added support for Podman when using Red Hat Enterprise Linux 8.4
+- Added support for Podman when using [some versions](../protect/microsoft-tunnel-prerequisites.md#linux-server) of Red Hat Enterprise Linux
 - Minor bug fixes
 
 ### September 7, 2021

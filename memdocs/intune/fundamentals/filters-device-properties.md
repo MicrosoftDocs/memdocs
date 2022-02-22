@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/25/2022
+ms.date: 02/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -223,6 +223,7 @@ When you create a filter, you can manually create simple or complex rules in the
 
 - The properties, operations, and values are case insensitive.
 - Parentheses and nested parentheses are supported.
+- Entering `Null` or `$Null` as a value isn't supported.
 - Some advanced syntax options, such as nested parentheses, are only available in the rule syntax editor. If you use advanced expressions in the rule syntax editor, then the rule builder is disabled.
 
   For more information on the rule syntax editor and the rule builder, see [Use filters when assigning your apps, policies, and profiles](filters.md)

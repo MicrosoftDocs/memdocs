@@ -13,6 +13,8 @@ items:
   items:
   - name: Architecture
     href: architecture.md
+  - name: Identity and authentication
+    href: identity-authentication.md
   - name: Lifecycle
     href: lifecycle.md
   - name: Provisioning
@@ -83,10 +85,8 @@ items:
       items:
       - name: Create a dynamic device group
         href: create-dynamic-device-group-all-cloudpcs.md
-      - name: Create a dynamic device group for a specific configuration
-        href: create-dynamic-device-group-for-specific-configuration.md
-      - name: Create a dynamic device group from a specific policy
-        href: create-dynamic-device-group-from-specific-policy.md
+      - name: Create a filter
+        href: create-filter.md
       - name: Create device configuration profile
         href: create-device-configuration-profile.md
     - name: User settings
@@ -145,9 +145,9 @@ items:
         href: /mem/intune/protect/windows-10-update-rings?context=/windows-365/context/pr-context
       - name: Windows 10 feature updates
         href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
-    - name: End user experience
+    - name: End-user experience
       items:
-      - name: End user hardware requirements
+      - name: End-user hardware requirements
         href: end-user-hardware-requirements.md
       - name: Access a Cloud PC
         href: end-user-access-cloud-pc.md
@@ -155,12 +155,16 @@ items:
   items:
     - name: Troubleshooting
       href: troubleshooting.md
+    - name: Known issues 
+      href: known-issues-enterprise.md
     - name: On-premises network connections
       href: troubleshoot-on-premises-network-connection.md
     - name: On-premises network connection health checklist
       href: health-checks.md
     - name: Remote Desktop client
       href: /azure/virtual-desktop/troubleshoot-client?context=/windows-365/context/pr-context
+    - name: Connection errors
+      href: connection-errors.md
     - name: Provisioning errors
       href: provisioning-errors.md
 - name: Reference

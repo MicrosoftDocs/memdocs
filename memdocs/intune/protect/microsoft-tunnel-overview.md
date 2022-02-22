@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/28/2022
+ms.date: 02/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,6 +51,7 @@ Through the Microsoft Endpoint Manager admin center, you’ll:
 Through a Microsoft Tunnel client app, iOS/iPadOS and Android Enterprise devices:
 
 - Use Azure Active Directory (Azure AD) to authenticate to the tunnel.
+- Use Active Directory Federation Services (AD FS) to authenticate to the tunnel.
 - Are evaluated against your Conditional Access policies. If the device isn’t compliant, then it won’t have access to your VPN server or your on-premises network.
 
 To connect to the tunnel, devices use one of the following Microsoft Tunnel client apps, depending on device platform. The apps are available from each platforms app store:
@@ -102,7 +103,7 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 **Components**:  
 - **A** – Microsoft Intune.
 - **B**- Azure Active Directory (AD).
-- **C** – Linux server with Podman (Red Hat Enterprise Linux 8.4) or Docker CE (all other Linux distributions).
+- **C** – Linux server with Podman or Docker CE (See the [Linux server](../protect/microsoft-tunnel-prerequisites.md#linux-server) requirements for details about which versions require Podman or Docker) 
   - **C.1** - Microsoft Tunnel Gateway.
   - **C.2** – Management Agent.
   - **C.3** – Authentication plugin – Authorization plugin, which authenticates with Azure AD.
