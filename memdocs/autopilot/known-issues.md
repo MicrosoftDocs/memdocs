@@ -28,6 +28,18 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### White screen during HAADJ deployment
+
+There is a UI bug on Autopilot HAADJ deployments where the Enrollment Status page is displayed as a white screen. This issue is limited to the UI and should not impact the deployment process. 
+
+### Virtual machine failing at “Preparing your device for mobile management”
+
+This error can be resolved by configuring your virtual machine with a minimum of 2 processers and 4GB of memory. 
+
+### ODJConnectorSvc.exe leaks memory
+
+When using a proxy server with the ODJConnector service, the memory file can get too large when processing requests resulting in impacts to performance. The current workaround for this issue is to restart the ODJConnectSvc.exe service.
+
 ### Reset button causes pre-provisioning to fail on retry
 
 When ESP fails during the pre-provisioning flow and the user selects the reset button, TPM attestation may fail during the retry. 
