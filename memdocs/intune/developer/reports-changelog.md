@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 02/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -32,6 +32,11 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Keep current on updates to the Intune Data Warehouse.
+
+## 2202
+_Released Feburary 2022_
+
+The  `applicationInventory` entity has been removed from the Intune Data Warehouse. A new dataset is now available in the UI and via Intune's export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 ## 2105
 _Released May 2021_

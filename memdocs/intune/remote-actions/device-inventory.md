@@ -4,8 +4,8 @@
 title: View device details with Microsoft Intune
 description: View your device details, including operating systems, storage space, manufacturer, and model. Get a list of installed apps, check compliance policies, and set up TeamViewer with Microsoft Intune in Azure. Similar to viewing inventory of the devices you manage.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 11/19/2021
 ms.topic: how-to
@@ -118,7 +118,7 @@ Depending on the carrier used by the devices, not all details might be collected
 
 > [!Note]  
 > For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.
-> For Android Enterprise corporate-owned work profile and fully managed devices, reporting for Phone number is not supported.
+> For Android Enterprise corporate-owned work profile devices, reporting for phone number is not supported. For Android Enterprise fully managed and dedicated devices, reporting for phone number is supported; however, certain SIM cards will not write the data and therefore the phone number won't get reported in those cases.
 
 ## Next steps
 

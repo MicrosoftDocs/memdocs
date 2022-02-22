@@ -20,7 +20,7 @@ This article details the Windows versions that you can use to host a Configurati
 
 ## Windows Server 2022
 
-_Applies to Standard and Datacenter editions_
+_Applies to Datacenter: Azure Edition, Standard and Datacenter editions_
 
 Starting in version 2107<!-- 10200029 -->, this OS version is supported for the following servers.
 

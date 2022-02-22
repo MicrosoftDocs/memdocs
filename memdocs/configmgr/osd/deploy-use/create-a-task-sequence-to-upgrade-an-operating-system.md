@@ -47,7 +47,7 @@ Before you create the task sequence, make sure the following requirements are in
 - For a deployment package that contains the feature update, distribute it to a distribution point that the client can access. For more information, see [Download software updates](../../sum/deploy-use/download-software-updates.md).
 
     > [!NOTE]
-    > If the feature update isn't already downloaded, you can manage the deployment package when you deploy the task sequence.
+    > If the feature update isn't already downloaded, you can manage the deployment package when you deploy the task sequence. 
     >
     > When you deploy the task sequence, you can also select the option of **No deployment package** for the feature update. When clients run the task sequence, they download the feature update from peers or the Microsoft cloud.
     >
@@ -62,6 +62,8 @@ Before you create the task sequence, make sure the following requirements are in
   - **Allow clients to download delta content when available**: If you use Windows Delivery Optimization, the content that the client downloads may be much smaller.
 
 #### Known issues with feature updates in a task sequence
+Windows 11 Feature Upgrades are not visible to be selected from the Wizard. This happens if the License Terms of the desired Feature Upgrade have not been accepted yet. To do so navigate to the Feature Upgrade and select "Review Licence" from the context menu. Review and Accept the licensing terms to make this Upgrade "deployable".
+<!-- Bug 13189927 -->
 
 ##### Create a new task sequence
 

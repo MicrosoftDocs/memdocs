@@ -65,7 +65,7 @@ items:
       - name: PowerShell script for custom settings
         href: compliance-custom-script.md    
     - name: Location-based compliance
-      href: use-network-locations.md
+      href: ./create-compliance-policy.md
     - name: Actions for noncompliance
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
@@ -113,7 +113,7 @@ items:
         href: advanced-threat-protection-manage-android.md
       - name: Monitor Defender for Endpoint
         href: advanced-threat-protection-monitor.md
-      - name: MDE Security Configuration Management
+      - name: MDE Security Configuration Management (Preview)
         href: mde-security-integration.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  

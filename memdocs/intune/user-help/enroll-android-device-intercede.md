@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/17/2020
+ms.date: 01/19/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 # Set up Android device with Company Portal and Intercede
 
-Enroll your device with the Intune Company Portal app to gain secure, mobile access to your organization's email, files, and apps. After your device is enrolled, it becomes *managed*. Your organization can assign policies and apps to the device through a mobile device management (MDM) provider, such as Intune.
+Enroll your device with the Intune Company Portal app to gain secure, mobile access to your work email, files, and apps. After your device is enrolled, it becomes *managed*, which means your organization can assign policies and apps to the device through a mobile device management (MDM) provider, such as Microsoft Intune.  
 
 During enrollment, you'll also install a derived credential on your device. Your organization might require you to use the derived credential as an authentication method when accessing resources, or for signing and encrypting emails.
 
@@ -63,7 +63,7 @@ Derived credentials are an implementation of the National Institute of Standards
 
 * Your school or work-provided smart card
 * Access to a computer or kiosk where you can sign in with your smart card
-* A new or factory-reset device running Android 7.0 or later
+* A new or factory-reset device running Android 8.0 or later
 * The Microsoft Intune app installed on your device
 
 ## Enroll device  

@@ -46,7 +46,7 @@ You must have an Intune standalone tenant to manage Android Enterprise fully man
 
 Devices must meet these requirements to be managed as an Android Enterprise fully managed device:
 
-- Android OS version 6.0 and above.
+- Android OS version 8.0 and above.
 - Devices must run a build of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
 
 There is no restriction on device manufacturer/OEM if the above requirements are met.

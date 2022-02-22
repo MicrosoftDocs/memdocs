@@ -6,12 +6,11 @@ metadata:
   ms.date: 04/16/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-sdk
-  ms.topic: conceptual
+  ms.topic: faq
   ms.assetid: 4902b9ea-eaff-4f59-a9cf-c600d008eade
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
-    
 title: Administration service frequently asked questions (FAQ)
 summary: |
   *Applies to: Configuration Manager (current branch, technical preview branch, long-term servicing branch)*
@@ -35,7 +34,7 @@ sections:
       - question: |
           Are Swagger definitions available?
         answer: |
-          No, the administration service currently doesn't publish an [OpenAPI (Swagger) document](https://apidocs.microsoft.com/).
+          No, the administration service currently doesn't publish an [OpenAPI (Swagger) document](https://swagger.io/docs/).
           
   - name: Remote access
     questions:

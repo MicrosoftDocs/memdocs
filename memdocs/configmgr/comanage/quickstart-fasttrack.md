@@ -18,7 +18,7 @@ The FastTrack organization is a large group of Microsoft engineers who specializ
 
 In the following video, senior program manager Patrick McSweeney and product marketing manager Locky Ainley discuss and demo FastTrack for Microsoft 365:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/How-to-Request-Assistance-from-FastTrack/player]
+> [!VIDEO https://aka.ms/docs/player?id=937c04ef-6325-4a86-ba49-6ff7b7838aeb]
 
 To make a request for assistance from FastTrack:
 

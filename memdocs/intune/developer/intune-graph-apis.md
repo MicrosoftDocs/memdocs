@@ -8,7 +8,7 @@ keywords: intune graphapi c# powershell permission roles
 author: dougeby
 manager: dougeby
 ms.author: dougeby
-ms.date: 05/21/2020
+ms.date: 01/10/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -58,7 +58,7 @@ This article:
 To learn more, see:
 
 - [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](/azure/active-directory/develop/active-directory-protocols-oauth-code)
-- [Getting start with Azure AD authentication](https://www.visualstudio.com/docs/integrate/get-started/auth/oauth)
+- [Getting start with Azure AD authentication](/azure/devops/integrate/get-started/authentication/oauth)
 - [Integrating applications with Azure Active Directory](/azure/active-directory/develop/active-directory-integrating-applications)
 - [Understand OAuth 2.0](https://oauth.net/2/)
 
@@ -124,7 +124,7 @@ The following Intune API permissions are available when adding an application th
 
 If you are a partner interested in integrating with Intune using these API permissions, contact the [Microsoft Intelligent Security Association](https://www.microsoft.com/security/business/intelligent-security-association)] team for information.
 
-When finished, choose **Add permissions** to save you changes.
+When finished, choose **Add permissions** to save your changes.
 
 At this point, you may also:
 
@@ -353,7 +353,7 @@ If this happens, verify that:
 This example shows how to use C# to retrieve a list of devices associated with your Intune account.
 
  > [!NOTE]
-  > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+ > Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 1. Start Visual Studio and then create a new Visual C# Console app (.NET Framework) project.
 
