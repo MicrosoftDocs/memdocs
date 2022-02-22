@@ -167,9 +167,7 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 ## After enrollment 
 
 ### App updates    
-The Microsoft Intune app automatically installs available app updates for itself and Authenticator. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
-
-The Intune Company Portal automatically updates itself when an update becomes available.  
+The Microsoft Intune app automatically installs available app updates for itself, Authenticator, and Company Portal. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
 
 ### Manage devices remotely    
 
