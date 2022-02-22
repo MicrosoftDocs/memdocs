@@ -50,25 +50,7 @@ You can create multiple Enrollment Status Page profiles with different configura
 - Showing installation progress
 - Blocking access until the provisioning process is completed
 - Time limits
-- Allowed troubleshooting operations
-
-
-## Set up default profile 
-
-Intune applies the default profile to all users and all devices when there is no other ESP profile to apply. You can configure the default profile to show or hide the ESP.     
- 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
-2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.  
-2. Select the **Default** profile in the table.  
-3. Select **Properties**. 
-4. Go to the **Settings** section and select **Edit**.  
-5. Configure **Show app and profile installation progress** to set the behavior of the default profile. Your options:
-   * **No**: The ESP is not visible to users during initial device setup and sign-in. 
-   * **Yes**: The ESP is visible to users during initial device setup and sign-in.
-
-   If you select **Yes**, more settings become available for you to configure.       
-6. Select **Review + save**. 
-7. Review the summary of changes and then select **Save**.   
+- Allowed troubleshooting operations  
 
 
 ## Create new profile 
@@ -85,27 +67,27 @@ Intune applies the default profile to all users and all devices when there is no
       - **No**: The enrollment status page does not appear during device setup. Select this option if you do not want to show the ESP to users.  
       - **Yes**: The enrollment status page appears during device setup.    
  
-     - **Show an error when installation takes longer than specified number of minutes**: Enter the number of minutes to wait for installation to complete. The default time-out is 60 minutes.     
+     - **Show an error when installation takes longer than specified number of minutes**: The default time-out is 60 minutes. Consider everything you're deploying to devices during device setup, and enter a higher value if you think more time is needed to provision devices.    
 
-     - **Show custom message when time limit or error occur**: Your options:
-       - **No**: Shows the default message when an installation error occurs, which is: "Setup could not be completed. Please try again or contact your support person for help."
-       - **Yes**: Shows your custom message to users when an error occurrs. Enter your message in the provided text box.  
+     - **Show custom message when time limit or error occur**: Include a message that tells people what happened and who to contact for help. Your options:  
+       - **No**: The default message is shown to users when an error occurs. That message is: "Setup could not be completed. Please try again or contact your support person for help."  
+       - **Yes**: Your custom message is shown to users when an error occurs. Enter your message in the provided text box.  
  
-     - **Turn on log collection and diagnostics page for end users**: Your options:
+     - **Turn on log collection and diagnostics page for end users**: The user's logs and diagnostics could aid in troubleshooting, so we recommend turning this on. Your options:  
        - **No**: The collect logs button is not shown to users when an installation error occurs. Additionally, the Windows Autopilot diagnostics page is not shown on devices running Windows 11.  
        - **Yes**: The collect logs button is shown to users when an installation error occurs. Additionally, the Windows Autopilot diagnostics page is shown on devices running Windows 11.  
  
      - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Your options:
-       - **No**: The enrollment status page is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. Subsequent users who sign in do not see the ESP. 
+       - **No**: The enrollment status page is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. So Subsequent users who sign in do not see the ESP. 
        - **Yes**: The enrollment status page is only shown on devices that go through the out-of-box experience (OOBE).   
 
 
 
-       > [!NOTE]
+       > [!TIP]
        > If you only want the ESP to appear on Autopilot devices during initial device setup, select the **No** option. Then create a new ESP profile, choose the **Yes** option, and target the profile to an Autopilot device group.  
 
 
-     - **Block device use until all apps and profiles are installed**: Your options:
+     - **Block device use until all apps and profiles are installed**: This setting applies to all *required* apps assigned to the user or device. Your options:
        - **No**: Users can leave the ESP before Intune is finished setting up the device. 
        - **Yes**: Users cannot leave the ESP until Intune is done setting up the device. This option unlocks additional settings for this scenario.  
  
@@ -135,12 +117,35 @@ Intune applies the default profile to all users and all devices when there is no
 
 The next time each device checks in, the profile is applied.  
 
+## Edit default profile 
 
-## Profile priority   
-When a user or device is assigned more than one ESP profile, the profile with the highest priority takes precedence over the other profiles. Intune enforces profiles in the following order:  
+Intune applies the default profile to all users and all devices when there is no other ESP profile to apply. You can configure the default profile to show or hide the ESP.     
+ 
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
+2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.  
+2. Select the **Default** profile in the table.  
+3. Select **Properties**. 
+4. Go to the **Settings** section and select **Edit**.  
+5. Configure **Show app and profile installation progress** to set the behavior of the default profile. Your options:
+   * **No**: The ESP is not visible to users during initial device setup and sign-in. 
+   * **Yes**: The ESP is visible to users during initial device setup and sign-in.
 
-1. Highest-priority profile assigned to device. 
-2. Highest-priority profile assigned to user. This only works for user-targeted deployments. For example, Intune can't enforce a user-targeted profile in white-glove deployments and self-deployment scenarios, because these types of deployments are device-targeted.   
+   If you select **Yes**, more settings become available for you to configure.       
+6. Select **Review + save**. 
+7. Review the summary of changes and then select **Save**.   
+
+
+## Prioritize profiles       
+When a user or device is assigned more than one ESP profile, the profile with the highest priority takes precedence over the other profiles. You choose the priority for each profile.
+
+ Intune applies profiles in the following order:  
+
+1. Highest-priority profile assigned to device 
+2. Highest-priority profile assigned to user 
+
+       > [!NOTE]
+      >This only works for deployments that support users. For example, Intune can't enforce a user-targeted profile in white-glove deployments and self-deployment scenarios, because these types of deployments are device-targeted.   
+    
 3. Default ESP profile.  
 
 ### Set priority  
