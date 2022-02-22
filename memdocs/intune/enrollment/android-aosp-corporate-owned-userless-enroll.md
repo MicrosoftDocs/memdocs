@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 02/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -158,13 +158,15 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 > [!TIP]
 > To access the token in Intune, select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**. Select your enrollment profile, and then select **Tokens**. 
 
-3. Follow the on-screen prompts to finish enrolling and registering the device. 
+3. Follow the on-screen prompts to finish enrolling and registering the device. During setup, Intune automatically installs and opens the apps that are needed for enrollment. Those apps include:  
 
-The Microsoft Intune and Microsoft Authenticator apps automatically install and open on the device, which allows the device to be enrolled. You'll be locked in the enrollment process until it's complete.  
+*  Microsoft Authenticator app  
+*  Microsoft Intune app  
+*  Intune Company Portal app  
 
 ## After enrollment 
 
-### Update Microsoft Intune and Microsoft Authenticator  
+### App updates    
 The Intune app automatically installs available app updates for itself and Authenticator. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
 
 ### Manage devices remotely    
