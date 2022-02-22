@@ -160,9 +160,9 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 
 3. Follow the on-screen prompts to finish enrolling and registering the device. During setup, Intune automatically installs and opens the apps that are needed for enrollment. Those apps include:  
 
-*  Microsoft Authenticator app  
-*  Microsoft Intune app  
-*  Intune Company Portal app  
+        *  Microsoft Authenticator app  
+        *  Microsoft Intune app  
+        *  Intune Company Portal app  
 
 ## After enrollment 
 
