@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 01/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 This article shows you the email profile settings you can configure for your devices running Windows Phone 8.1.
 
 >[!IMPORTANT]
->Windows Phone 8.1 email profiles are also applied to Windows 10 devices.
+>Windows Phone 8.1 email profiles are also applied to Windows 10/11 devices.
 
 ## Before you begin
 
@@ -74,6 +74,6 @@ This article shows you the email profile settings you can configure for your dev
 
 ## Next steps
 
-You can also configure the email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md), and [Windows 10](email-settings-windows-10.md).
+You can also configure the email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), [iOS/iPadOS](email-settings-ios.md), and [Windows 10/11](email-settings-windows-10.md).
 
 [Configure email settings in Intune](email-settings-configure.md).

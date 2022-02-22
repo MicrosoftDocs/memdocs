@@ -1,18 +1,16 @@
 ---
 title: OS deployment CreateMedia.exe
 titleSuffix: Configuration Manager
-ms.date: 08/02/2019
+description: Create OS deployment media from the command-line or through a script.
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
-ms.assetid: 41417409-6c56-4099-bafc-3700c6761de3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
-
 ---
 
 # OS deployment CreateMedia.exe
@@ -67,88 +65,88 @@ Use `CreateMedia.exe` binary to create media from the command-line or through a 
 
 |**Parameter**|**Value**|**Comment**|  
 |-------------------|---------------|-----------------|  
-|**/K:**|`mylabel`|Label used to specify the boot media type|  
-|**/P:**|`server.contoso.net`|FQDN of SMS Provider|  
-|**/S:**|`MCM`|Configuration Manager site code|  
-|**/C:**|`"Username=Administrator,Domain=MyDomain,Password=password"`|Optional credentials|  
-|**/D:**|`server1.contoso.net; server2.contoso.net`|One or more distribution point FQDN names, separated by a semicolon|  
-|**/L:**|`Configuration Manager`|Media text label|  
-|**/E:**|`MCM00009`|Optional pre-execution package ID|  
-|**/G:**|`cmd.exe`|Optional pre-execution command-line|  
-|**/Y:**|`4BootIt^`|Optional media password|  
-|**/R:**|`c:\cert\certificate.file`|Optional certificate file path|  
-|**/W:**|`qY249^i5we5X`|Certificate file password|  
-|**/U:**|`true` or `false`|Unknown machine support|  
-|**/J:**|`true` or `false`|Internet client|  
-|**/Z:**|`true` or `false`|User interaction|  
-|**/1:**|Long integer; long integer|SS certificate start time (HIGH;LOW)|  
-|**/2:**|Long integer; long integer|SS certificate expire time (HIGH;LOW)|  
-|**/5:**|`0`|UDA setting, integer as a string|  
-|**/X:**|`SMSTSMP=server.contoso.net`|Task sequence variable, in the form name=value|  
-|**/B:**|`MCM00002`|Boot image ID|  
-|**/T:**|`CD`, `UDF`, or `UDF+FORMAT`|Media type|  
-|**/F:**|`c:\file.iso`|Path for capture media file|  
+|`/K:`|`mylabel`|Label used to specify the boot media type|  
+|`/P:`|`server.contoso.net`|FQDN of SMS Provider|  
+|`/S:`|`MCM`|Configuration Manager site code|  
+|`/C:`|`"Username=Administrator,Domain=MyDomain,Password=password"`|Optional credentials|  
+|`/D:`|`server1.contoso.net; server2.contoso.net`|One or more distribution point FQDN names, separated by a semicolon|  
+|`/L:`|`Configuration Manager`|Media text label|  
+|`/E:`|`MCM00009`|Optional pre-execution package ID|  
+|`/G:`|`cmd.exe`|Optional pre-execution command-line|  
+|`/Y:`|`4BootIt^`|Optional media password|  
+|`/R:`|`c:\cert\certificate.file`|Optional certificate file path|  
+|`/W:`|`qY249^i5we5X`|Certificate file password|  
+|`/U:`|`true` or `false`|Unknown machine support|  
+|`/J:`|`true` or `false`|Internet client|  
+|`/Z:`|`true` or `false`|User interaction|  
+|`/1:`|Long integer; long integer|SS certificate start time (HIGH;LOW)|  
+|`/2:`|Long integer; long integer|SS certificate expire time (HIGH;LOW)|  
+|`/5:`|`0`|UDA setting, integer as a string|  
+|`/X:`|`SMSTSMP=server.contoso.net`|Task sequence variable, in the form name=value|  
+|`/B:`|`MCM00002`|Boot image ID|  
+|`/T:`|`CD`, `UDF`, or `UDF+FORMAT`|Media type|  
+|`/F:`|`c:\file.iso`|Path for capture media file|  
 
 ## Parameters for capture media  
 
 |Parameter|Example value|Comment|  
 |-------------------|---------------|-----------------|  
-|**/K:**|`mylabel`|Label used to specify the capture media type|  
-|**/P:**|`server.contoso.net`|FQDN of SMS Provider|  
-|**/S:**|`MCM`|Configuration Manager site code|  
-|**/C:**|`"Username=Administrator,Domain=MyDomain,Password=password"`|Optional credentials|  
-|**/D:**|`server1.contoso.net; server2.contoso.net`|One or more distribution point FQDN names, separated by a semicolon|  
-|**/L:**|`Configuration Manager`|Media text label|  
-|**/B:**|`MCM00002`|Boot image ID|  
-|**/T:**|`CD`, `UDF`, or `UDF+FORMAT`|Media type|  
-|**/F:**|`c:\file.iso`|Path for capture media file|  
+|`/K:`|`mylabel`|Label used to specify the capture media type|  
+|`/P:`|`server.contoso.net`|FQDN of SMS Provider|  
+|`/S:`|`MCM`|Configuration Manager site code|  
+|`/C:`|`"Username=Administrator,Domain=MyDomain,Password=password"`|Optional credentials|  
+|`/D:`|`server1.contoso.net; server2.contoso.net`|One or more distribution point FQDN names, separated by a semicolon|  
+|`/L:`|`Configuration Manager`|Media text label|  
+|`/B:`|`MCM00002`|Boot image ID|  
+|`/T:`|`CD`, `UDF`, or `UDF+FORMAT`|Media type|  
+|`/F:`|`c:\file.iso`|Path for capture media file|  
 
 ## Parameters for stand-alone media  
 
 |Parameter|Example value|Comment|  
 |-------------------|---------------|-----------------|  
-|**/K:**|`mylabel`|Label used to specify the standalone media type|  
-|**/P:**|`server.contoso.net`|FQDN of SMS Provider|  
-|**/S:**|`MCM`|Configuration Manager site code|  
-|**/C:**|`"Username=Administrator,Domain=MyDomain,Password=password"`|Optional credentials|  
-|**/D:**|`server1.contoso.net; server2.contoso.net`|One or more distribution point FQDN names, separated by a semicolon|  
-|**/L:**|`Configuration Manager`|Media text label|  
-|**/E:**|`MCM00009`|Optional pre-execution package ID|  
-|**/G:**|`cmd.exe`|Optional pre-execution command-line|  
-|**/Y:**|`4BootIt^`|Optional media password|  
-|**/A:**|`MCM00007`|Task sequence ID|  
-|**/T:**|`CD`, `UDF`, or `UDF+FORMAT`|Media type|  
-|**/Z:**|`true` or `false`|User interaction|  
-|**/X:**|`SMSTSMP=server.contoso.net`|Task sequence variable, in the form name=value|  
-|**/M:**|`4GB`|Size of selected media, units|  
-|**/F:**|`c:\file.iso`|Path for standalone media file|  
+|`/K:`|`mylabel`|Label used to specify the standalone media type|  
+|`/P:`|`server.contoso.net`|FQDN of SMS Provider|  
+|`/S:`|`MCM`|Configuration Manager site code|  
+|`/C:`|`"Username=Administrator,Domain=MyDomain,Password=password"`|Optional credentials|  
+|`/D:`|`server1.contoso.net; server2.contoso.net`|One or more distribution point FQDN names, separated by a semicolon|  
+|`/L:`|`Configuration Manager`|Media text label|  
+|`/E:`|`MCM00009`|Optional pre-execution package ID|  
+|`/G:`|`cmd.exe`|Optional pre-execution command-line|  
+|`/Y:`|`4BootIt^`|Optional media password|  
+|`/A:`|`MCM00007`|Task sequence ID|  
+|`/T:`|`CD`, `UDF`, or `UDF+FORMAT`|Media type|  
+|`/Z:`|`true` or `false`|User interaction|  
+|`/X:`|`SMSTSMP=server.contoso.net`|Task sequence variable, in the form name=value|  
+|`/M:`|`4GB`|Size of selected media, units|  
+|`/F:`|`c:\file.iso`|Path for standalone media file|  
 
 ## Parameters for pre-staged media  
 
 |Parameter|Example value|Comment|  
 |-------------------|---------------|-----------------|  
-|**/K:**|`mylabel`|Label used to specify the prestaged media type|  
-|**/P:**|`server.contoso.net`|FQDN of SMS Provider|  
-|**/S:**|`MCM`|Configuration Manager site code|  
-|**/C:**|`"Username=Administrator,Domain=MyDomain,Password=password"`|Optional credentials|  
-|**/D:**|`server1.contoso.net; server2.contoso.net`|One or more distribution point FQDN names, separated by a semicolon|  
-|**/L:**|`Configuration Manager`|Media text label|  
-|**/3:**|`1.10.1.10`|Optional version text|  
-|**/4:**|`OEM scenario image`|Optional description text|  
-|**/E:**|`MCM00009`|Optional pre-execution package ID|  
-|**/G:**|`cmd.exe`|Optional pre-execution command-line|  
-|**/Y:**|`4BootIt^`|Optional media password|  
-|**/R:**|`c:\cert\certificate.file`|Optional certificate file path|  
-|**/W:**|`qY249^i5we5X`|Certificate file password|  
-|**/U:**|`true` or `false`|Unknown machine support|  
-|**/J:**|`true` or `false`|Internet client|  
-|**/Z:**|`true` or `false`|User interaction|  
-|**/1:**|Long integer; long integer|SS certificate start time (HIGH;LOW)|  
-|**/2:**|Long integer; long integer|SS certificate expire time (HIGH;LOW)|  
-|**/5:**|`0`|UDA setting, integer as a string|  
-|**/X:**|`SMSTSMP=server.contoso.net`|Task sequence variable, in the form name=value|  
-|**/B:**|`MCM00002`|Boot image ID|  
-|**/O:**|`MCM00006`|OS image ID|  
-|**/I:**|`1`|OS image index number|  
-|**/T:**|`HD`|Media type|  
-|**/F:**|`c:\file.iso`|Path for prestaged media file|  
+|`/K:`|`mylabel`|Label used to specify the prestaged media type|  
+|`/P:`|`server.contoso.net`|FQDN of SMS Provider|  
+|`/S:`|`MCM`|Configuration Manager site code|  
+|`/C:`|`"Username=Administrator,Domain=MyDomain,Password=password"`|Optional credentials|  
+|`/D:`|`server1.contoso.net; server2.contoso.net`|One or more distribution point FQDN names, separated by a semicolon|  
+|`/L:`|`Configuration Manager`|Media text label|  
+|`/3:`|`1.10.1.10`|Optional version text|  
+|`/4:`|`OEM scenario image`|Optional description text|  
+|`/E:`|`MCM00009`|Optional pre-execution package ID|  
+|`/G:`|`cmd.exe`|Optional pre-execution command-line|  
+|`/Y:`|`4BootIt^`|Optional media password|  
+|`/R:`|`c:\cert\certificate.file`|Optional certificate file path|  
+|`/W:`|`qY249^i5we5X`|Certificate file password|  
+|`/U:`|`true` or `false`|Unknown machine support|  
+|`/J:`|`true` or `false`|Internet client|  
+|`/Z:`|`true` or `false`|User interaction|  
+|`/1:`|Long integer; long integer|SS certificate start time (HIGH;LOW)|  
+|`/2:`|Long integer; long integer|SS certificate expire time (HIGH;LOW)|  
+|`/5:`|`0`|UDA setting, integer as a string|  
+|`/X:`|`SMSTSMP=server.contoso.net`|Task sequence variable, in the form name=value|  
+|`/B:`|`MCM00002`|Boot image ID|  
+|`/O:`|`MCM00006`|OS image ID|  
+|`/I:`|`1`|OS image index number|  
+|`/T:`|`HD`|Media type|  
+|`/F:`|`c:\file.iso`|Path for prestaged media file|  

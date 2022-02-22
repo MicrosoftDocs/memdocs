@@ -18,7 +18,7 @@ The health of your network is directly connected to the health of the devices mo
 
 In the following video, senior program manager Rob York and product marketing manager Locky Ainley discuss and demo client health with co-management:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Client-Health-Monitoring-with-Co-Management/player]
+> [!VIDEO https://aka.ms/docs/player?id=ed0d8d8a-1125-42bb-9561-a07618a13cea]
 
 ## Benefits
 

@@ -2,7 +2,7 @@
 title: Get started with compliance settings
 titleSuffix: Configuration Manager
 description: Learn about core concepts and how compliance settings work
-ms.date: 04/05/2021
+ms.date: 01/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
@@ -11,6 +11,7 @@ ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
 ---
+
 # Get started with compliance settings in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -35,6 +36,9 @@ Configuration items fall into two main categories:
 | Windows PCs (enrolled with on-premises MDM) | Select settings from a predefined list. |  
 | Windows Phone devices (enrolled with on-premises MDM) | Select settings from a predefined list. |  
 | Mac computers (with the Configuration Manager client) | Create custom configuration items to assess objects such as macOS preferences, and results returned by a script. |  
+
+> [!NOTE]
+> On-premises MDM and the Configuration Manager client for macOS are both deprecated. For more information, see [Removed and deprecated features for Configuration Manager](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901,12927803 -->
 
 ## What is a configuration item?
 

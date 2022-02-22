@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 12/13/2021
+ms.date: 02/09/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,156 +65,141 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
-### Device compliance status on the Company Portal website<!-- 8782968 -->
-End users will be able to more easily see the compliance status of their devices from the [Company Portal](https://portal.manage.microsoft.com/devices) website. End users can go to the Company Portal website and select the **Devices** page to see device status. Devices will be listed with a status of **Can access company resources**, **Checking access**, or **Can't access company resources**. 
-
-For related information, see [Manage apps from the Company Portal website](../user-help/manage-apps-cpweb.md) and [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+### iOS Company Portal minimum required version<!-- 13016075 -->
+With the March 2203 release of the MS Authenticator app, users will be required to update to v5.2203 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
 ### Password complexity for Android devices<!-- 9321870 -->
 The **Require device lock** setting in Intune will be extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn't meet the minimum password requirement, you'll be able to **warn**, **wipe data**, or **block** the end user from accessing a managed account in a managed app. 
 
 This feature targets devices that operate on Android 11+. For devices that operate on Android 10 and earlier, setting a complexity value of **Low**, **Medium**, or **High** will default to the expected behavior for **Low Complexity**. For related information, see [Android app protection policy settings in Microsoft Intune](..\apps\app-protection-policy-settings-android.md).
 
-<!-- ***********************************************-->
+### Improvements to Win32 App Log collection<!-- 9978316 -->
+Win32 App Log collection via Intune Management Extension has moved to the Windows 10 device diagnostic platform, reducing time to collect logs from 1-2 hours to 20 minutes.  We've also increased the size from 60mb to 250mb.  Along with performance improvements, the app logs will also be available under the **Device diagnostics monitor** action for each device, as well as the managed app monitor. For information about how to collect diagnostics, see [Collect diagnostics from a Windows device](..\remote-actions\collect-diagnostics.md) and [Troubleshooting Win32 app installations with Intune](/troubleshoot/mem/intune/troubleshoot-win32-app-install).
 
-## Device security
-
-### BlackBerry Cylance - New Mobile Threat Defense partner<!-- 7822722  IDready -->
-You'll soon be able to use [BlackBerry's Cylance AI](https://www.blackberry.com/us/en/products/unified-endpoint-security/cylance-ai) offering as an integrated Mobile Threat Defense (MTD) partner. Intune will help you control mobile device access to corporate resources by offering Conditional Access based on risk assessment.
-
-For more information about MTD partners for Intune, see [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
+### Advanced logging setting in Company Portal app<!-- 12859998 -->
+A new **Enable Advanced Logging** setting will be available in the Intune Company Portal app for iOS and macOS. Device users will be able to enable or disable advanced logging on a device. By turning on advanced logging, detailed log reports will be sent to Microsoft to troubleshoot issues. By default, the **Enable Advanced Logging** setting will be off. Device users should keep this setting off unless otherwise instructed by their organization's IT admin.
 
 <!-- ***********************************************-->
 
 ## Device configuration
 
-### New option to see the number of profiles with an error or conflict in device configuration profiles<!-- 9142810 -->
-In the Endpoint Manager admin center, there's a new option that states something like "X policies with error or conflict". When you select this option, you automatically go to the **Devices** > **Monitor** > **Assignment Failures** report. This report helps you troubleshoot errors and conflicts.
+### On Android Enterprise, use the Connect Automatically setting on enterprise Wi-Fi profiles<!-- 10697036 -->
 
-This new option is available in the following locations in the Endpoint Manager admin center:
-- Home page
-- Dashboard
+On Android Enterprise devices, you can create Wi-Fi profiles that include common enterprise Wi-Fi settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned work profile** > **Wi-Fi** for profile type > **Enterprise** for Wi-Fi type).
 
-For more information, see [Monitor device profiles in Microsoft Intune](../configuration/device-profile-monitor.md) and [Assignment failures report](reports.md#assignment-failures-report-operational).
+You can configure the **Connect automatically** setting that automatically connects to your Wi-Fi network when devices are in range.
 
-Applies to:
-- Windows 10 and newer
-
-### New Timeout and Block iCloud Private Relay settings for iOS/iPadOS and macOS devices<!-- 10370284 -->
-On iOS/iPadOS and macOS devices, you can create a device restrictions policy that manages features on the device (**Devices** > **Configuration Profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Device restrictions**).
-
-There are new settings:
-- iOS/iPadOS:
-  - **Block iCloud Private Relay**: On supervised devices, this setting prevents users from using the [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's website).
-- macOS:
-  - **Block iCloud Private Relay**: On supervised devices, this setting prevents users from using the [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's website).
-  - **Timeout**: Users can unlock their devices by using a Touch ID, such as a fingerprint. Use this setting to require users to enter their password after a period of inactivity. The default inactivity period is 48 hours. After 48 hours of inactivity, the device prompts for the password instead of a Touch ID.
+To see the settings you can currently configure, go to [Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices](../configuration/wi-fi-settings-android-enterprise.md).
 
 Applies to:
-- iOS/iPadOS 15 and newer
-- macOS 12 and newer
 
-### New device restriction settings for Android Enterprise corporate-owned devices with a work profile<!-- 10982232 -->
-On Android Enterprise devices, you can configure settings that control features on devices (**Devices** > **Configuration Profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile type).
-
-For Android Enterprise corporate-owned devices with a work profile, there are new settings:
-- Restrict searching work contacts and displaying work contact caller-ID in personal profile
-- Restrict copy and paste between work and personal profiles
-- Restrict data sharing between work and personal profiles
-
-For more information on the settings that you can currently configure, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
-
-Applies to:
-- Android Enterprise corporate-owned work profile (COPE)
-
-### Settings Catalog will soon be supported on U.S. Government GCC High and DoD<!-- 12389409 -->
-The settings Catalog will soon be available and supported on U.S. Government GCC High and DoD.
-
-For more information on the settings catalog, see [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
-
-Applies to:
-- macOS
-- Windows 10 and newer
-
-### Entry of the certificate common name in Wi-Fi profiles for Android Enterprise fully managed, dedicated, and corporate-owned work profile devices<!-- 12439458  -->
-On Android Enterprise devices, you can create a Wi-Fi profile that configures enterprise Wi-Fi settings (**Devices** > **Configuration Profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Wi-Fi** for profile type).
-
-When you select **Enterprise**, there's a new **Server names** setting. This setting is the DNS name used in the certificate that the RADIUS server presents during client authentication to the Wi-Fi access point. For example, enter `Contoso.com`, `uk.contoso.com`, or `jp.contoso.com`.
-
-If you have multiple RADIUS servers with the same DNS suffix in their fully qualified domain name, then you can enter only the suffix. For example, you can enter `contoso.com`.
-
-When you enter this value, user devices can bypass the dynamic trust dialog that sometimes appears when a device is connecting to the Wi-Fi network. 
-
-New Wi-Fi profiles that target Android 11 or later might require this setting to be configured. Otherwise, the devices might not connect to your Wi-Fi network.
-
-For more information on the settings that you can currently configure, see [Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile settings](../configuration/wi-fi-settings-android-enterprise.md#fully-managed-dedicated-and-corporate-owned-work-profile).
-
-Applies to:
-- Android Enterprise corporate-owned work profile (COPE)
 - Android Enterprise corporate owned fully managed (COBO)
-- Android Enterprise dedicated devices (COSU)
+- Android Enterprise corporate owned dedicated devices (COSU)
 
-### New Administrative Templates settings for Microsoft Edge 96 and Microsoft Edge updater on Windows devices<!-- 12442597 -->
-In Intune, you can use **Administrative Templates** to configure Microsoft Edge settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Administrative Templates** for profile type).
+### New macOS settings in the Settings Catalog<!-- 12987685 -->
 
-There are new **Administrative Templates** settings for Microsoft Edge 96 and the Microsoft Edge updater, including **Target Channel override** support. Use **Target Channel override** so users get the **Extended Stable** release cycle option. You can set this option by using Group Policy or Intune.
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. When you create a Settings Catalog policy, there are new settings available for macOS devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog (preview)** for profile type).
 
-For related information, see:
-- [Configure Microsoft Edge policy settings in Microsoft Intune](../configuration/administrative-templates-configure-edge.md)
-- [Overview of the Microsoft Edge channels](/deployedge/microsoft-edge-channels)
-- [Microsoft Edge browser policy documentation](/deployedge/microsoft-edge-policies)
+New settings include:
 
-Applies to:
-- Windows 10 and newer
-- Microsoft Edge
+- Accounts > Caldav:
+  - Cal DAV Account Description
+  - Cal DAV Host Name
+  - Cal DAV Password
+  - Cal DAV Port
+  - Cal DAV Principal URL
+  - Cal DAV Username
+  - Cal DAV Use SSL
 
-### Use filters to assign proactive remediation scripts for endpoint analytics and to assign Endpoint Security policies in the Endpoint Manager admin center (public preview)<!-- 7566953 7591178  -->
+- Accounts > Carddav:
+  - Card DAV Account Description
+  - Card DAV Host Name
+  - Card DAV Password
+  - Card DAV Port
+  - Card DAV Principal URL
+  - Card DAV Username
+  - Card DAV Use SSL
 
-In the Endpoint Manager admin center, you can create filters and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policies:
+- Networking > Domains > Email Domains
 
-- [Windows PowerShell scripts for proactive remediations in endpoint analytics](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)
-- [Endpoint security policies](../protect/endpoint-security-policy.md), such as account protection, antivirus, and attack surface reduction
+- Printing > Printing:
+  - Allow Local Printers
+  - Default Printer
+    - Device URI
+    - Display Name
+  - Footer Font Name
+  - Footer Font Size
+  - Print Footer
+  - Print MAC Address
+  - Require Admin To Add Printers
+  - Show Only Managed Printers
+  - User Printer List
+    - Device URI
+    - Display Name
+    - Location
+    - Model
+    - PPD URL
+    - Printer Locked
 
-For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
+- Profile Removal Password > Removal Password
 
-Applies to:
+- Proxies > Global HTTP Proxy:
+  - Proxy Captive Login Allowed
+  - Proxy PAC Fallback Allowed
+  - Proxy PAC URL
+  - Proxy Password
+  - Proxy Server
+  - Proxy Server Port
+  - Proxy Type
+  - Proxy Username
 
-- macOS
-- Windows 10 and newer
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 <!-- ***********************************************-->
+
 ## Device enrollment
 
-### Use filters on Windows Enrollment Status Page profile assignments<!-- 7423484  -->
-
-Filters allow you to include or exclude devices in policy or app assignments based on device properties. When you create an Enrollment Status Page (ESP) profile, you'll be able to use filters when assigning the profile. The **All users** and **All devices** assignment options will also be available. 
-
-You'll be able to find this setting in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Enroll devices** > **Enrollment Status Page** > **Create**. For more information about filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md). For more information about ESP profiles, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md).   
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-## Monitor and troubleshoot  
-
-### Changes to the account protection policy in endpoint security<!--  7492116   -->
-
-We're reworking the account protection policy in endpoint security to use the new API for Windows Hello for Business. The new API will result in a more consistent experience. 
-
-The new API is *./Device/Vendor/MSFT/PassportForWork*, which includes more options that can help reduce conflicts. This API replaces *./User/Vendor/MSFT/PassportForWork* (**Endpoint security** > **Account protection**).
-
-After the change, only new policies then you create will use the new API. Your existing policies won't be affected by this change and will continue to use the older API.
-
-<!-- ***********************************************
-## Role-based access control
--->
+### Enforce Azure AD terms of use with Microsoft Intune or Microsoft Intune Enrollment cloud apps<!-- 12522105 -->
+Use the Microsoft Intune cloud app or Microsoft Intune Enrollment cloud app to enforce a conditional access, Azure AD Terms of Use policy on iOS and iPadOS devices during automated device enrollment.  Both apps will ensure that users accept the terms of use before enrolling if required by your conditional access policy. This functionality will be available when you select Setup Assistant with modern authentication as the authentication method.  
 
 <!-- ***********************************************-->
-## Scripting
 
-### Intune Data Warehouse updates<!-- 9370034 -->
+## Device management
 
-The `applicationInventory` entity will be removed from the Intune Data Warehouse in an upcoming Intune service release. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+### Create terms of use for Android (AOSP) user-associated devices<!-- 8506575 -->
+Require Android (AOSP) users to accept your organization's terms and conditions before using the Intune Company Portal app. This feature will be available for corporate-owned, user-associated devices only. For more information about creating terms of use in Intune, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).
+
+### Support for Audio Alert on Android Dedicated (COSU) devices<!-- 10567852 -->
+You'll be able to use the **Play lost device sound** device action to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise dedicated device.
+
+For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
 
 <!-- ***********************************************-->
-<!--## Security-->
+
+## Device security
+
+### Manage the app inventory data for iOS/iPadOS devices that Intune sends to third-party MTD partners<!-- 10722315 -->
+
+You’ll soon have more control over the application inventory data for personally-owned iOS/iPadOS devices that Intune sends to your chosen third-party Mobile Threat Defense (MTD) partner. You’ll configure what data is sent with a new setting that’s available when you configure the [Mobile Threat Defense connector](../protect/mtd-connector-enable.md#to-enable-the-mobile-threat-defense-connector). The new setting is **Send full application inventory data on personally-owned iOS/iPadOS Devices**.
+
+For personally-owned iOS/iPadOS devices:
+
+- When set to **On**: If your MTD partner syncs app data and requests a list of the iOS/iPadOS applications from Intune, that list includes unmanage apps (those not deployed through Intune) in addition to those deployed through Intune.  This is the current behavior.
+- When set to **Off**: Data on unmanaged apps won’t be provided, and the MTD partner only receives details about apps that were deployed through Intune.
+
+For corporate devices, data about managed and unmanaged apps continues to be included with requests for app data by your MTD vendor.  
+
+<!-- ***********************************************-->
+
+## Monitor and troubleshoot
+
+### Remote help is moving in the Microsoft Endpoint Manager admin center<!-- 12868177 -->
+
+The remote help page in the Microsoft Endpoint Manager admin center is moving and will be directly under **Tenant administration** instead of **Connectors and tokens**. 
+
+For more information about remote help, see [Use remote help](../remote-actions/remote-help.md).
+
+<!-- ***********************************************-->
 
 ## Notices
 

@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/18/2021
+ms.date: 01/25/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -89,7 +89,7 @@ Default restrictions are automatically provided for both device type and device 
    > [!Note]
    > Windows 10 and Windows 11 do not provide the rev number during enrollment, so for example, if you enter in 10.0.17134.100, and the device is 10.0.17134.174, it will be blocked during enrollment.  
 
-6. Under **Personally owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
+6. Under **Personally-owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
 7. Under **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
 8. Choose **Next** to go to the **Scope tags** page.
 9. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
@@ -104,7 +104,7 @@ Default restrictions are automatically provided for both device type and device 
 ## Create a device platform restriction (preview)  
 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then [enable the filters public preview](../fundamentals/filters.md#enable-filters-public-preview) in your tenant.  
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. In the side menu, go to **Devices** and scroll down to **Policy**. Select **Enrollment device platform restrictions**. You can also access this policy by going to **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.  
 
 3. At the top of the page, select the tab that corresponds with the platform you're configuring. Your options:  
@@ -126,7 +126,7 @@ Default restrictions are automatically provided for both device type and device 
       - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
       - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
       - Windows supports major.minor.build.rev for Windows 10 and Windows 11 only.
-    - **Personally owned**: Select **Allow** to permit devices to enroll and operate as personally owned devices.  
+    - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.  
     - **Device manufacturer**: Enter a comma-separated list of the manufacturers that you want to block.  
 
 6. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies. When you're done, select **Next**. 
@@ -200,7 +200,6 @@ The following filter properties are always available to use with enrollment poli
 
 * OS version 
 * Operating System SKU 
-* Ownership
 * Enrollment profile name
 
 **iOS/iPadOS and macOS**  
@@ -210,10 +209,7 @@ The following filter properties are always available to use with enrollment poli
 * Ownership 
 * Enrollment profile name 
 
-For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters cannot be used with Android enrollment restrictions.   
-
->[!NOTE]
->To use filters on enrollment restriction and enrollment status assignments, you must [enable the filters public preview in your tenant](../fundamentals/filters.md#enable-filters-public-preview).  
+For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters cannot be used with Android enrollment restrictions.
 
 ## Blocking personal Android devices
 - If you block personally owned Android device administrator devices from enrollment, personally-owned Android Enterprise work profile devices can still enroll.
@@ -268,3 +264,50 @@ You can change the priority of any non-default restriction.
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment restrictions**.
 2. Select **Device type restrictions** or **Device limit restrictions** to view the priority list.               
 3. In the list, hover over any restriction in the **Priority** column. When you see three vertical dots appear, select and drag the priority to the desired position in the list.    
+## Enrollment reports
+You can use the following reports to troubleshoot issues with enrollment restrictions and enrollment status page assignments:  
+- Enrollment failures report  
+- Troubleshooting + support page  
+- Device enrollment page  
+
+### Enrollment failures report  
+Use the enrollment failures report to view enrollment failures for all users or for select users. This report shows each failed enrollment attempt along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method.  
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Monitor** > **Enrollment failures**.
+2. Select **All users** or **Select user**, depending on the scenario you are troubleshooting.
+3. Select a row in the table for more details about the failure and recommended remediation steps.  
+
+    > [!div class="mx-imgBorder"]
+    > ![Example image of the enrollment failures report, showing the enrollment failure details for a selected row.](./media/enrollment-restrictions-set/enrollment-failure-report-details-2112.png)  
+
+### Troubleshooting + support page  
+Use the enrollment failures report on the Troubleshooting + support page to view enrollment failures for a select user. This report shows every failed enrollment attempt the user encountered along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method. You can also view other data about the user on this page, including all assignments, devices, and app protection statuses they're associated with.    
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Troubleshooting + support** > **Select user**.
+2. Choose a user > **Select**. 
+3. Under **Enrollment failures**, select a row to view more details about the failure and recommended remediation steps.  
+
+### Device enrollment page
+The device enrollment page shows the enrollment policies (both enrollment restriction and enrollment status page policies) applied to a device when it was first enrolled in Microsoft Intune. Use this report to help pinpoint the source of the failure, such as an unexpected policy, target, or filter. Data is available for iOS/iPadOS, macOS, and Windows devices, and includes: 
+
+  * Profile name
+  * User principal name
+  * Profile type (either enrollment status page or device type enrollment restriction)
+  * Priority
+  * Target (either user or device) 
+  * Filters, with a link to the filter evaluation results (only available if the enrollment policy was assigned using an assignment filter)  
+
+To access the device enrollment page:  
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
+2. Select an enrolled iOS/iPadOS, macOS, or Windows device.  
+3. Under **Monitor**, select **Enrollment**.  
+4. Review the report data. 
+
+    > [!div class="mx-imgBorder"]
+    > ![Example image of the Device enrollment page, showing a table of enrollment profiles.](./media/enrollment-restrictions-set/enrollment-page-report-2112.png)  
+
+>[!NOTE]
+>Report data is only available for devices enrolled after the Microsoft Intune 2112 service release. No results are available for devices enrolled prior to that release.
+>This page is not available for Android devices. 
+

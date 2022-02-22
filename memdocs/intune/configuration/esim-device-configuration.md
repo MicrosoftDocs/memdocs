@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/01/2021
+ms.date: 01/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,8 @@ For example, you have a cellular data plan for work, and another data plan with 
 
 This feature applies to:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 In Intune, you can import one time use activation codes provided by your mobile operator. To configure cellular data plans on the eSIM module, deploy those activation codes to your eSIM-capable devices. When Intune installs the activation code, the eSIM hardware module uses the data in the activation code to contact the mobile operator. Once complete, the eSIM profile is downloaded on the device, and configured for cellular activation.
 
@@ -61,7 +62,7 @@ This article guides you through these steps.
 
 ## eSIM capable devices
 
-If you’re unsure if your devices support eSIM, then contact your device manufacturer. On Windows devices, you can confirm eSIM supportability. For more information, see [Use an eSIM to get a cellular data connection on your Windows 10 PC](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
+If you’re unsure if your devices support eSIM, then contact your device manufacturer. On Windows devices, you can confirm eSIM supportability. For more information, see [Use an eSIM to get a cellular data connection on your Windows client device](https://support.microsoft.com/help/4020763/windows-10-use-esim-for-cellular-data).
 
 ## Step 1: Add cellular activation codes
 

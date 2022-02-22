@@ -2,7 +2,7 @@
 title: Site server high availability
 titleSuffix: Configuration Manager
 description: How to configure high availability for the Configuration Manager site server by adding a passive mode site server.
-ms.date: 12/09/2021
+ms.date: 02/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

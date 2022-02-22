@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Assign licenses
 
-Before a user can use a Cloud PC, you must assign a [Windows 365 license](https://www.microsoft.com/windows-365/enterprise/compare-plans-pricing) to that user. You can assign the licenses using either of these methods:
+Before a user can use a Cloud PC, you must assign a [Windows 365 license](https://www.microsoft.com/windows-365/all-pricing) to that user. You can assign the licenses using either of these methods:
 
 - Microsoft 365 admin center for individual users. For steps on how to do this, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
 - [Azure AD admin center](https://aad.portal.azure.com/) for group license assignments. For more information about group license assignments, see [Assign licenses to users by group membership in Azure Active Directory](/azure/active-directory/enterprise-users/licensing-groups-assign).

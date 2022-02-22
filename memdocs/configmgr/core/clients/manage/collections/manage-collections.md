@@ -2,7 +2,7 @@
 title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 02/17/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -107,6 +107,11 @@ Refresh the view.
 Deletes the selected collection. You can also delete all of the resources in the collection from the site database.
 
 You can't delete the collections that are built into Configuration Manager. For a list of the built-in collections, see [Introduction to collections](introduction-to-collections.md#built-in-collections).
+
+Collections might also not delete due to dependent collections. When reviewing a dependant collection you want to delete, also ensure that the dependant collection isn't: <!--9708999-->
+- **Used by cloud attach**: For more information, see [Enable cloud attach for Configuration Manager](../../../../cloud-attach/enable.md).
+- **Used for upload to Microsoft Endpoint Manager**: For more information, see [Make Configuration Manager collections available to assign Endpoint security policies](../../../../tenant-attach/endpoint-security-get-started.md#bkmk_collections).
+- **Assigned to user**: For more information, see [Modify the administrative scope of an administrative user](../../../servers/deploy/configure/configure-role-based-administration.md#modify-the-administrative-scope-of-an-administrative-user).
 
 #### Simulate deployment
 
@@ -272,35 +277,102 @@ Other improvements:
 
 For more information on how to navigate the collection dependency graph with a keyboard, see [Accessibility features](../../../understand/accessibility-features.md#collection-relationship-diagram-shortcuts).
 
-## PowerShell
+## Automate with Windows PowerShell
 
-You can also use PowerShell to manage collections. For more information, see the following articles:
+You can use the following PowerShell cmdlets to manage collections:
+
+### Generic cmdlets for all collection types
+
+#### Basic cmdlets
 
 - [Get-CMCollection](/powershell/module/configurationmanager/get-cmcollection)
-- [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection)
 - [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
-- [Copy-CMCollection](/powershell/module/configurationmanager/copy-cmcollection)
 - [Remove-CMCollection](/powershell/module/configurationmanager/remove-cmcollection)
-- [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
+- [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection)
+
+#### Other actions
+
+- [Copy-CMCollection](/powershell/module/configurationmanager/copy-cmcollection)
 - [Export-CMCollection](/powershell/module/configurationmanager/export-cmcollection)
 - [Get-CMCollectionMember](/powershell/module/configurationmanager/get-cmcollectionmember)
 - [Get-CMCollectionSetting](/powershell/module/configurationmanager/get-cmcollectionsetting)
+- [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
 - [Invoke-CMCollectionUpdate](/powershell/module/configurationmanager/invoke-cmcollectionupdate)
-- [Add-CMCollectionMembershipRule](/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
-- [Set-CMCollectionPowerManagement](/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
-- [Get-CMCollectionMembershipRule](/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
-- [Remove-CMCollectionMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
+
+#### Get membership rules
+
 - [Get-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
-- [Get-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
-- [Get-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
-- [Add-CMCollectionToAdministrativeUser](/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
-- [Remove-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
-- [Remove-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
 - [Get-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
-- [Add-CMCollectionToDistributionPointGroup](/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
-- [Remove-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+- [Get-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
+- [Get-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
+
+#### Remove membership rules
+
+- [Remove-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
 - [Remove-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
-- [Remove-CMCollectionFromAdministrativeUser](/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)
+- [Remove-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+- [Remove-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
+
+### Device collection-specific cmdlets
+
+#### Basic actions for device collections
+
+- [Get-CMDeviceCollection](/powershell/module/configurationmanager/get-cmdevicecollection)
+- [New-CMDeviceCollection](/powershell/module/configurationmanager/new-cmdevicecollection)
+
+#### Device collection variables
+
+- [Get-CMDeviceCollectionVariable](/powershell/module/configurationmanager/get-cmdevicecollectionvariable)
+- [New-CMDeviceCollectionVariable](/powershell/module/configurationmanager/new-cmdevicecollectionvariable)
+- [Remove-CMDeviceCollectionVariable](/powershell/module/configurationmanager/remove-cmdevicecollectionvariable)
+- [Set-CMDeviceCollectionVariable](/powershell/module/configurationmanager/set-cmdevicecollectionvariable)
+
+#### Add device collection membership rules
+
+- [Add-CMDeviceCollectionDirectMembershipRule](/powershell/module/configurationmanager/add-cmdevicecollectiondirectmembershiprule)
+- [Add-CMDeviceCollectionExcludeMembershipRule](/powershell/module/configurationmanager/add-cmdevicecollectionexcludemembershiprule)
+- [Add-CMDeviceCollectionIncludeMembershipRule](/powershell/module/configurationmanager/add-cmdevicecollectionincludemembershiprule)
+- [Add-CMDeviceCollectionQueryMembershipRule](/powershell/module/configurationmanager/add-cmdevicecollectionquerymembershiprule)
+
+#### Get device collection membership rules
+
+- [Get-CMDeviceCollectionDirectMembershipRule](/powershell/module/configurationmanager/get-cmdevicecollectiondirectmembershiprule)
+- [Get-CMDeviceCollectionExcludeMembershipRule](/powershell/module/configurationmanager/get-cmdevicecollectionexcludemembershiprule)
+- [Get-CMDeviceCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmdevicecollectionincludemembershiprule)
+- [Get-CMDeviceCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmdevicecollectionquerymembershiprule)
+
+#### Remove device collection membership rules
+
+- [Remove-CMDeviceCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmdevicecollectiondirectmembershiprule)
+- [Remove-CMDeviceCollectionExcludeMembershipRule](/powershell/module/configurationmanager/remove-cmdevicecollectionexcludemembershiprule)
+- [Remove-CMDeviceCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmdevicecollectionincludemembershiprule)
+- [Remove-CMDeviceCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmdevicecollectionquerymembershiprule)
+
+### User collection-specific cmdlets
+
+- [Get-CMUserCollection](/powershell/module/configurationmanager/get-cmusercollection)
+- [New-CMUserCollection](/powershell/module/configurationmanager/new-cmusercollection)
+
+#### Add user collection membership rules
+
+- [Add-CMUserCollectionDirectMembershipRule](/powershell/module/configurationmanager/add-cmusercollectiondirectmembershiprule)
+- [Add-CMUserCollectionExcludeMembershipRule](/powershell/module/configurationmanager/add-cmusercollectionexcludemembershiprule)
+- [Add-CMUserCollectionIncludeMembershipRule](/powershell/module/configurationmanager/add-cmusercollectionincludemembershiprule)
+- [Add-CMUserCollectionQueryMembershipRule](/powershell/module/configurationmanager/add-cmusercollectionquerymembershiprule)
+
+#### Get user collection membership rules
+
+- [Get-CMUserCollectionDirectMembershipRule](/powershell/module/configurationmanager/get-cmusercollectiondirectmembershiprule)
+- [Get-CMUserCollectionExcludeMembershipRule](/powershell/module/configurationmanager/get-cmusercollectionexcludemembershiprule)
+- [Get-CMUserCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmusercollectionincludemembershiprule)
+- [Get-CMUserCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmusercollectionquerymembershiprule)
+
+#### Remove user collection membership rules
+
+- [Remove-CMUserCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmusercollectiondirectmembershiprule)
+- [Remove-CMUserCollectionExcludeMembershipRule](/powershell/module/configurationmanager/remove-cmusercollectionexcludemembershiprule)
+- [Remove-CMUserCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmusercollectionincludemembershiprule)
+- [Remove-CMUserCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmusercollectionquerymembershiprule)
 
 ## Next steps
 
