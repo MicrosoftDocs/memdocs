@@ -32,11 +32,10 @@ If you deploy an application or app group to a user collection that's based on a
 
 <!-- For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall). -->
 
-
 ## Cloud-attached management
 
 ### Prefer cloud-based software update points on switching
-
+<!--7759984-->
 Clients now prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP when the boundary group uses the **Prefer cloud based source over on-premises source** option.
 
 <!-- For more information, see [Link text](link). -->
@@ -44,9 +43,7 @@ Clients now prefer to scan against a cloud management gateway (CMG) software upd
 ## Site infrastructure
 
 ### Visualize content distribution status
-
 <!--9495651-->
-
 You can now monitor content distribution path and status in a graphical format. The graph shows distribution point type, distribution state, and associated status messages. This visualization allows you to more easily understand the status of your content package distribution. It helps you answer questions like:
 
 - Has the site successfully distributed the content?
@@ -55,10 +52,8 @@ You can now monitor content distribution path and status in a graphical format. 
 
 <!-- For more information, see [Link text](link). -->
 
-
 ### Improvements to Power BI Report Server Integration
 <!--12487076-->
-
 We've made the following improvements for Power BI Report Server integration:
 
 - You can now use Microsoft Power BI Desktop (Optimized for Power BI Report Server) versions that were released after January 2021
@@ -67,17 +62,13 @@ We've made the following improvements for Power BI Report Server integration:
 <!-- For more information, see [Link text](link). -->
 
 ### Exclude data warehouse reporting tables from synchronization
-
 <!--12441118-->
-
 When you install the [data warehouse](../../servers/manage/data-warehouse.md), it synchronizes a set of default tables from the site database. These tables are required for data warehouse reports. While troubleshooting issues, you may want to stop synchronizing these default tables. Starting in this release, you can exclude one or more of these required tables from synchronization.
 
 <!--For more information, see [Exclude data warehouse reporting tables from synchronization](../../servers/manage/data-warehouse.md#bkmk_exclude).-->
 
-
 ### Improvements to Management Insights
 <!--10875436, 12451634 -->
-
 A new management insights group was added to **Management Insights**. The **Deprecated and unsupported features** group contains rules that will help you manage and remove deprecated features.
 
 <!-- For more information, see [Management Insights](../../servers/manage/management-insights.md). -->
@@ -89,7 +80,6 @@ A new management insights group was added to **Management Insights**. The **Depr
 You can now perform client notification actions, including **Run Scripts**, from the **Deployment Status** view.
 
 <!-- For more information, see [Link text](link). -->
-
 
 ### New client health checks
 <!--10954111-->
@@ -109,8 +99,7 @@ Previously, when you would delete a collection with dependent collections, you f
 
 <!-- For more information, see [Link text](link). -->
 
-
-## Software Center
+<!-- ## Software Center -->
 
 ## Software updates
 
@@ -121,9 +110,7 @@ When installing software updates from Configuration Manager, you can now choose 
 <!--For more information, see [Computer restart client settings](../../clients/deploy/device-restart-notifications.md#bkmk_wu)-->.
 
 ### LEDBAT support for software update points
-
 <!--4639895-->
-
 You can now enable Windows Low Extra Delay Background Transport (LEDBAT) for your software update points. LEDBAT adjusts download speeds during client scans against WSUS to help control network congestion.
 
 <!-- For more information, see [Link text](link). -->
@@ -145,13 +132,11 @@ Starting in this version, you can customize the maximum run time for all other s
 
 <!-- For more information, see  [maximum run time](../../../sum/plan-design/plan-for-software-updates.md#bkmk_maxruntime). -->
 
-
 ### ADR scheduling improvements for deployments
 <!--12707738, 7033417-->
 The **Software available time** and **Installation deadline** for deployments created by an automatic deployment rule (ADR) are now calculated based on the time the ADR evaluation is scheduled and starts. Previously, these times were calculated based on when the ADR evaluation completed. This change makes the  **Software available time** and **Installation deadline** consistent and predictable for deployments.
 
 <!-- For more information, see [automatic deployment rule (ADR)](../../../sum/deploy-use/automatically-deploy-software-updates.md). -->
-
 
 ### Added folder support for nodes in the Software Library
 <!--3601129-->
@@ -170,14 +155,11 @@ Previously, task sequences and legacy packages would always display a default ic
 
 <!-- For more information, see [Link text](link). -->
 
-## Protection
-
-
+<!--## Protection-->
 ## Configuration Manager console
 
 ### Improvements for sending feedback
 <!--11754191, 12890088-->
-
 - You now have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account. User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data.
 - The feedback button is now displayed in additional console locations
 
@@ -201,21 +183,33 @@ Based on your feedback, we’ve made a few improvements to the console and user 
 
 <!-- For more information, see [Link text](link). -->
 
+<!--## Tools-->
 
-## Tools
-
-<!--## Deprecated features
+## Deprecated features
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
-The following features are deprecated. You can still use them now, but Microsoft plans to end support in the future. -->
+The following features are deprecated. You can still use them now, but Microsoft plans to end support in the future.
 
+- The Configuration Manager client for **macOS** and Mac client management. For more information, see [Supported clients: Mac computers](../configs/supported-operating-systems-for-clients-and-devices.md#mac-computers)
+- The site system roles for on-premises MDM and macOS clients: **enrollment proxy point and enrollment point**
 
+As previously announced, version 2203 drops support for the following features:
 
+- The ability to deploy a cloud management gateway (CMG) as a **cloud service (classic)**. All CMG deployments should use a [virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586-->
+- The following compliance settings for **Company resource access**: <!-- 9315387 -->
+   - [Certificate profiles](../../../protect/deploy-use/introduction-to-certificate-profiles.md)
+   - [VPN profiles](../../../protect/deploy-use/vpn-profiles.md)
+   - [Wi-Fi profiles](../../../protect/deploy-use/create-wifi-profiles.md)
+   - [Windows Hello for Business settings](../../../protect/deploy-use/windows-hello-for-business-settings.md), and email profiles
+   - This deprecation includes the [co-management resource access workload](../../../comanage/workloads.md#resource-access-policies). Use Microsoft Intune to [deploy resource access profiles](../../../../intune/configuration/device-profiles.md).
+
+<!--
 ## Other updates
 
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 
+-->
 <!--
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2203 release notes](/powershell/sccm/2203-release-notes).
 
@@ -238,7 +232,7 @@ The following additional hotfixes are available to address specific issues:
 
 ## Next steps
 
-At this time, version 2203 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2203.md#early-update-ring). 
+At this time, version 2203 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2203.md#early-update-ring).
 
 <!--As of December 15, 2021, version 2111 is globally available for all customers to install.
 
