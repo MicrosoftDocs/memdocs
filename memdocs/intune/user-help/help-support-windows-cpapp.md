@@ -55,7 +55,7 @@ For the step-by-step procedure, see [Send logs to your company support from the 
 Use your organization's helpdesk details, such as phone number, emails, and website to quickly troubleshoot work or school access.  
 
 ## Find answers to frequently asked questions  
-We've put together a list of FAQs here: [Troubleshooting device enrollment in Intune](troubleshoot-device-enrollment-in-intune.md) to help answer or troubleshoot your enrollment and access concerns. You can also view our [Microsoft technical documentation](https://docs.microsoft.com) to view related help articles.  
+We've put together a list of FAQs here: [Troubleshooting device enrollment in Intune](/mem/intune/troubleshoot-device-enrollment-in-intune) to help answer or troubleshoot your enrollment and access concerns. You can also view our [Microsoft technical documentation](https://docs.microsoft.com) to view related help articles.  
 
 ## Report app problems to Microsoft  
 When you select **Report problem to Microsoft**, you'll go to the **Send feedback** page. From there, you can:
