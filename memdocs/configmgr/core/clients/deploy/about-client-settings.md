@@ -147,7 +147,7 @@ If you require user policy in this scenario, and accept any potential performanc
 
 Set this option to **Yes** for clients to obtain content from a content-enabled CMG. This setting doesn't require the device to be internet-based.
 
-### Automatically register new Windows 10 or later domain joined devices with Azure Active Directory
+### Automatically join new Windows 10 or later domain joined devices with Azure Active Directory
 
 When you configure Azure Active Directory (Azure AD) to support hybrid join, Configuration Manager configures Windows 10 or later devices for this functionality. For more information, see [How to configure hybrid Azure AD joined devices](/azure/active-directory/device-management-hybrid-azuread-joined-devices-setup).
 
