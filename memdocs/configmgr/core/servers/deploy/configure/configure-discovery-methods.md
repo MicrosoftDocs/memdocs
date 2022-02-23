@@ -280,7 +280,7 @@ To enable discovery on an existing **Cloud Management** Azure service:
 1. In the **Discovery** tab, check the box to **Enable Azure Active Directory Group Discovery**, then select **Settings**.
 1. Select **Add** under the **Discovery Scopes** tab.
     - You can modify the **Polling Schedule** in the other tab.
-1. Select one or more user groups. You can **Search** by name and choose if you want to see **Security groups only**.
+1. Select one or more user groups. You can **Search** by name.
     - You'll be prompted to sign in to Azure when you select **Search** the first time.
 1. Select **OK** when you finish selecting groups.
 1. Once discovery finishes running, you can browse your Azure AD user groups in the **Users** node.
