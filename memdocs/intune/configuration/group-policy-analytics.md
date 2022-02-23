@@ -147,7 +147,7 @@ Currently, the Group Policy analytics (preview) tool only supports non-ADMX sett
 
 3. Select the **Reports** tab > **Group policy migration readiness**. In this report, you can:
 
-    - See the number of settings in your GPO that can be configure in a device configuration profile. It also shows if the settings can be in a custom profile, aren't supported, or are deprecated.
+    - See the number of settings in your GPO that can be configured in a device configuration profile. It also shows if the settings can be in a custom profile, aren't supported, or are deprecated.
     - Filter the report output using the **Migration Readiness**, **Profile type**, and **CSP Name** filters.
     - Select **Generate report** or **Generate again** to get current data.
     - See the list of settings in your GPO.
