@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/11/2021
+ms.date: 02/08/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -210,10 +210,6 @@ Now that you've installed your token, you can create an enrollment profile for A
         > MFA won't work for Setup Assistant with modern authentication if you're using a 3rd party MFA provider to present the MFA screen during enrollment. Only the Azure AD MFA screen works during enrollment. For the latest support updates about custom controls for MFA, see [Upcoming changes to Custom Controls](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/upcoming-changes-to-custom-controls/ba-p/1144696).  
 
         This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs.  
-
-         > [!IMPORTANT]
-         > If you select Setup Assistant with modern authentication as the authentication method, and you also apply a *conditional access - terms of use* policy that requires end users to accept the Azure AD Terms of Use, you must apply a *conditional access* policy that uses the Microsoft Intune cloud app, not the Microsoft Intune Enrollment cloud app. Otherwise, enrollment will fail and devices will need to be wiped to reset enrollment.  
-
 
         The Company Portal will be installed without user interaction (the user won't see the **Install Company Portal** option) in both of the following situations:
 
