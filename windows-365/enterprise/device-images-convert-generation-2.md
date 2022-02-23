@@ -88,13 +88,18 @@ There are four main steps to this process:
 3. On the **Before You Begin** page, select **Next**.
 4. On the **Locate Disk** page, **Browse** to the location of the converted disk > **Next**.
 5. On the **Choose Action** page, select **Compact** > **Finish**.
+    ![Screenshot of choose compact action](./media/device-images-convert-generation-2/choose-action-compact.png)
 6. After the process completes, select the new virtual machine again > **Edit disk**.
 7. On the **Before You Begin** page, select **Next**.
 8. On the **Locate Disk** page, **Browse** to the location of the converted disk > **Next**.
-9. On the **Choose Action** page, select **Convert**.
+9. On the **Choose Action** page, select **Convert** > **Next**.
+    ![Screenshot of choose convert action](./media/device-images-convert-generation-2/choose-action-convert.png)
 10. On the **Choose Disk Format** page, select **VHD** > **Next**.
+    ![Screenshot of choose VHD disk format](./media/device-images-convert-generation-2/choose-disk-format-vhd.png)
 11. On the **Choose Disk Type** page, select **Fixed size** > **Next**.
+    ![Screenshot of choose fixed disk type](./media/device-images-convert-generation-2/choose-disk-type-fixed.png)
 12. On the **Configure Disk** page, **Browse** to a new location for the disk to be created > **Next**.
+    ![Screenshot of saving the disk](./media/device-images-convert-generation-2/save-disk.png)
 13. On the **Summary** page, confirm all of the details are correct and select **Finish**.
 14. After the process completes, dismount the WinPE ISO by following these steps:
     1. In Hyper-V Manager, under **Virtual Machines**, select the new VM, and then under **Actions** select **Settings**.
