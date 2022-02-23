@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/15/2022
+ms.date: 02/24/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -79,6 +79,8 @@ For more information, read the blog on the [ServiceNOw website](https://blogs.se
 ![UKG image](./media/partners/ukg.png)
 
 Ultimate Kronos Group is an American multinational technology company that provides workforce management and human resource management services.
+
+For more information, see [UKG's Newsroom](https://www.ukg.com/about-us/newsroom/ukg-expands-strategic-collaboration-microsoft).
 
 <!-- ########################## -->
 ## Next steps

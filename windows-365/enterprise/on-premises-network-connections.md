@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/08/2022
+ms.date: 02/16/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -91,11 +91,15 @@ To manually trigger a full health check, sign in to the [Microsoft Endpoint Mana
 The OPNC wizard requires access to Azure and, optionally, on-premises domain resources. The following permissions are required for the OPNC:
 
 - Azure
-  - Sufficient permissions to grant Windows 365 reader permissions on the selected subscription.
-  - Sufficient permissions to grant Windows 365 network contributor permissions on the selected resource group.
-  - Sufficient permissions to grant Windows 365 network contributor permissions on the selected virtual net.
+  - Subscription Owner or Subscription User Access Administrator.
 - Active directory (Hybrid Azure AD Join OPNCs only)
   - An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit.
+
+To create, edit , or delete an OPNC, you'll also need to have one of the following permissions:
+
+- Intune Administrator in Azure AD
+- Cloud PC administrator
+- Global Administrator
 
 For a full list of requirements, see [Windows 365 requirements](requirements.md).
 

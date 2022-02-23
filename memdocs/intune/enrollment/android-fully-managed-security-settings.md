@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/01/2021
+ms.date: 02/18/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -74,9 +74,9 @@ To simplify the table below, only configured settings are listed. Undocumented d
 | ----- | ----- | ----- | ----- |
 | General | Default permission policy | Device Default ||
 | General | Factory reset | Block ||
-| General | Safe boot | Block ||
 | General | USB file transfer | Block ||
 | General | External media | Block ||
+| General | Data sharing between work and personal profiles | Device Default ||
 | System security | Threat scan on apps |Require ||
 | Device experience | Enrollment profile type | Fully managed ||
 | Device experience | Make Microsoft Launcher the default launcher | Not configured | Organizations may choose to implement Microsoft Launcher to ensure a consistent home screen experience on Fully managed devices. For more information, see [How to Setup Microsoft Launcher on Android Enterprise Fully Managed Devices with Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-launcher-on-android-enterprise-fully/ba-p/1482134) |
@@ -150,6 +150,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | General | Date and Time changes | Block ||
 | General | Tethering and access to hotspots | Block ||
 | General | Beam data using NFC | Block ||
+| General | Search work contacts and display work contact caller-id in personal profile | Block ||
 | Device password | Disabled lock screen features | Trust Agents, Unredacted Notifications ||
 | Applications | App auto-updates | Always | Organizations should adjust this setting as necessary as data plan charges may occur if app updates occur over the cellular network. |
 | Work profile password | Number of sign-in failures before wiping device | 5 | Organizations may need to update this setting to match their password policy. |

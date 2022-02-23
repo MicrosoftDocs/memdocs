@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/10/2022
+ms.date: 02/18/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -48,7 +48,14 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of February 7, 2022 (Service release 2201)
+## Week of February 14, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 identity and authentication
+
+We’ve published a new help documentation article. For more information, see [Windows 365 identity and authentication](identity-authentication.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
