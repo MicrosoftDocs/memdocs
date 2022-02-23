@@ -57,7 +57,7 @@ Through a Microsoft Tunnel client app, iOS/iPadOS and Android Enterprise devices
 To connect to the tunnel, devices use one of the following Microsoft Tunnel client apps, depending on device platform. The apps are available from each platforms app store:
 
 - **Android**: Microsoft Defender for Endpoint, which includes support for Microsoft Tunnel.
-- **iOS/iPadOS**: Microsoft Tunnel standalone app.
+- **iOS/iPadOS**: Microsoft Tunnel standalone app and Microsoft Defender for Endpoint, which includes support for Microsoft Tunnel.
 
 You can install multiple Linux servers to support Microsoft Tunnel, and combine servers into logical groups called *Sites*. Each server can join a single Site. When you configure a Site, you’re defining a connection point for devices to use when they access the tunnel. Sites require a *Server configuration* that you’ll define and assign to the Site. The Server configuration is applied to each server you add to that Site, simplifying the configuration of more servers.
 
