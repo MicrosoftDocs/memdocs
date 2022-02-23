@@ -66,7 +66,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 5. Enable the toggle options according to your organization's requirements. Toggle options visible will vary depending on the MTD partner.  For example, the following image shows the options that are available for Symantec Endpoint Protection:
 
-   :::image type="content" source="./media/mtd-connector-enable/enable-mtd-connector-1.png" alt-text="Screen shot example that shows the MDM Complince Policy Settings for the MDT connector.":::
+   :::image type="content" source="./media/mtd-connector-enable/enable-mtd-connector-1.png" alt-text="Screen shot example that shows the MDM Compliance Policy Settings for the MDT connector.":::
 
 ## Mobile Threat Defense toggle options
 
