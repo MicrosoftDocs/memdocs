@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/15/2022
+ms.date: 02/24/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -64,21 +64,21 @@ You can create multiple Enrollment Status Page profiles with different configura
 5. In **Settings**, configure the following settings:  
  
     - **Show app and profile configuration progress**: Your options:
-      - **No**: The enrollment status page does not appear during device setup. Select this option if you do not want to show the ESP to users.  
+      - **No**: The enrollment status page doesn't appear during device setup. Select this option if you don't want to show the ESP to users.  
       - **Yes**: The enrollment status page appears during device setup.    
  
-     - **Show an error when installation takes longer than specified number of minutes**: The default time-out is 60 minutes. Consider everything you're deploying to devices during device setup, and enter a higher value if you think more time is needed to provision devices.    
+     - **Show an error when installation takes longer than specified number of minutes**: The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on your devices.      
 
      - **Show custom message when time limit or error occur**: Include a message that tells people what happened and who to contact for help. Your options:  
        - **No**: The default message is shown to users when an error occurs. That message is: "Setup could not be completed. Please try again or contact your support person for help."  
        - **Yes**: Your custom message is shown to users when an error occurs. Enter your message in the provided text box.  
  
-     - **Turn on log collection and diagnostics page for end users**: The user's logs and diagnostics could aid in troubleshooting, so we recommend turning this on. Your options:  
-       - **No**: The collect logs button is not shown to users when an installation error occurs. Additionally, the Windows Autopilot diagnostics page is not shown on devices running Windows 11.  
-       - **Yes**: The collect logs button is shown to users when an installation error occurs. Additionally, the Windows Autopilot diagnostics page is shown on devices running Windows 11.  
+     - **Turn on log collection and diagnostics page for end users**: The user's logs and diagnostics could aid with troubleshooting, so we recommend turning this on. Your options:  
+       - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
+       - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11.  
  
      - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Your options:
-       - **No**: The enrollment status page is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. So Subsequent users who sign in do not see the ESP. 
+       - **No**: The enrollment status page is shown on all Intune-managed and co-managed devices that go through the out-of-box experience (OOBE), and to the first user that signs in to each device. So subsequent users who sign in don't see the ESP. 
        - **Yes**: The enrollment status page is only shown on devices that go through the out-of-box experience (OOBE).   
 
 
@@ -89,14 +89,14 @@ You can create multiple Enrollment Status Page profiles with different configura
 
      - **Block device use until all apps and profiles are installed**: This setting applies to all *required* apps assigned to the user or device. Your options:
        - **No**: Users can leave the ESP before Intune is finished setting up the device. 
-       - **Yes**: Users cannot leave the ESP until Intune is done setting up the device. This option unlocks additional settings for this scenario.  
+       - **Yes**: Users can't leave the ESP until Intune is done setting up the device. This option unlocks additional settings for this scenario.  
  
       - **Allow users to reset device if installation error occurs**: Your options:  
-        - **No**: The ESP does not give users the option to reset theirs devices when an installation fails.  
-        - **Yes**: The ESP give users the option to reset their devices when an installation fails.  
+        - **No**: The ESP doesn't give users the option to reset theirs devices when an installation fails.  
+        - **Yes**: The ESP gives users the option to reset their devices when an installation fails.  
  
       - **Allow users to use device if installation error occurs**: Your options:  
-         - **No**: The ESP does not give users the option to bypass the ESP when an installation fails.  
+         - **No**: The ESP doesn't give users the option to bypass the ESP when an installation fails.  
          - **Yes**: The ESP gives users the option to bypass the ESP and use their devices when an installation fails.    
  
       - **Block device use until these required apps are installed if they are assigned to the user/device**: Your options:  
@@ -107,11 +107,11 @@ You can create multiple Enrollment Status Page profiles with different configura
 7. In **Assignments**, select the groups that will receive your profile. Optionally, select **Edit filter** to restrict the assignment further.   
 
     > [!NOTE]
-    > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` properties. Filters that contain other properties are not available.  
+    > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` properties. Filters that contain other properties aren't available.  
 
 8. Select **Next**.  
  
-9. Optionally, in **Scope tags**, assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. Then select **Next**.   
+9. Optionally, in **Scope tags**, assign a tag to limit profile management to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. Then select **Next**.   
  
 10. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. You can access the profile from your profiles list.  
 
@@ -119,7 +119,7 @@ The next time each device checks in, the profile is applied.
 
 ## Edit default profile 
 
-Intune applies the default profile to all users and all devices when there is no other ESP profile to apply. You can configure the default profile to show or hide the ESP.     
+Intune applies the default profile to all users and all devices when no other ESP profiles are available to assign. You can configure the default profile to show or hide the ESP.      
  
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
 2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.  
@@ -127,7 +127,7 @@ Intune applies the default profile to all users and all devices when there is no
 3. Select **Properties**. 
 4. Go to the **Settings** section and select **Edit**.  
 5. Configure **Show app and profile installation progress** to set the behavior of the default profile. Your options:
-   * **No**: The ESP is not visible to users during initial device setup and sign-in. 
+   * **No**: The ESP isn't visible to users during initial device setup and sign-in. 
    * **Yes**: The ESP is visible to users during initial device setup and sign-in.
 
    If you select **Yes**, more settings become available for you to configure.       
@@ -136,7 +136,7 @@ Intune applies the default profile to all users and all devices when there is no
 
 
 ## Prioritize profiles       
-When a user or device is assigned more than one ESP profile, the profile with the highest priority takes precedence over the other profiles. You choose the priority for each profile.
+If you assign a user or device more than one ESP profile, the profile with the highest priority takes precedence over the other profiles.
 
  Intune applies profiles in the following order:  
 
@@ -149,14 +149,14 @@ When a user or device is assigned more than one ESP profile, the profile with th
 3. Default ESP profile.  
 
 ### Set priority  
-To set profile priority:  
+To prioritze your profiles:  
 
 1. Hover over the profile in the list with your cursor until you see three vertical dots.  
 2. Drag the profile to the desired position in the list.  
  
 ### Scope tags  
   
-When using scope tags with Enrollment Status Page profiles, users can only reorder profiles for which they have scope. Also, they can only reorder for the profile positions for which they have scope. Users see the true profile priority number on each policy. A scoped user can tell the relative priority of their profile even if they can't see all the other profiles.
+Scope tags limit who can see and reprioritize an ESP profile. A scoped user can tell the relative priority of their profile even if they can't see all the other profiles in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).  
 
 ## Block access to a device until a specific application is installed
 
@@ -169,7 +169,7 @@ You can specify which apps must be installed before the Enrollment Status Page (
 5. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
 6. Choose **Select apps** > choose the apps > **Select** > **Save**.
 
-The apps that are included in this list are used by Intune to filter the list that should be considered blocking.  It does not specify what apps should be installed.  For example, if you configure this list to include "App 1," "App 2," and "App 3" and "App 3" and "App 4" are targeted to the device or user, the Enrollment Status Page will track only "App 3."  "App 4" will still be installed, but the Enrollment Status Page will not wait for it to complete.
+The apps that are included in this list are used by Intune to filter the list that should be considered blocking.  It doesn't specify what apps should be installed.  For example, if you configure this list to include "App 1," "App 2," and "App 3" and "App 3" and "App 4" are targeted to the device or user, the Enrollment Status Page will track only "App 3."  "App 4" will still be installed, but the Enrollment Status Page will not wait for it to complete.
 
 A maximum of 100 apps can be specified.
 
@@ -192,7 +192,7 @@ The Enrollment Status Page tracks the following device setup items:
 
 - Security policies
   - Microsoft Edge, Assigned Access, and Kiosk Browser policies are presently tracked.
-  - Other policies are not tracked.
+  - Other policies aren't tracked.
 - Applications
   - Per machine Line-of-business (LoB) MSI apps.
   - LoB store apps with installation context = Device.
@@ -213,7 +213,7 @@ For account setup, the Enrollment Status Page tracks the following items if they
 
 - Security policies
   - Microsoft Edge, Assigned Access, and Kiosk Browser policies are presently tracked.
-  - Other policies are not tracked.
+  - Other policies aren't tracked.
 - Applications
   - Per user LoB MSI apps that are assigned to All Devices, All Users, or a user group in which the user enrolling the device is a member.
   - Per machine LoB MSI apps that are assigned to All Users or a user group in which the user enrolling device is a member.
