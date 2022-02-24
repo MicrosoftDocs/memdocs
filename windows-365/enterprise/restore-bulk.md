@@ -28,7 +28,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Bulk restore multiple Cloud PCs
+# Restore multiple Cloud PCs in bulk
 
 You can use the Microsoft Endpoint Manager admin center to bulk restore multiple Cloud PCs.
 
@@ -36,7 +36,7 @@ You can use the Microsoft Endpoint Manager admin center to bulk restore multiple
 2. On the **Basics** page, select the following options:
     1. **OS**: Windows
     2. **Device action**: Restore (preview)
-    3. **Specify date and time**: Choose a date and time. This defines the time that you’d like to restore the Cloud PCs to. The following options will help determine exactly which restore point that will be used.
+    3. **Specify date and time**: Choose a date and time. This setting defines the time that you’d like to restore the Cloud PCs to. The following options will help determine exactly which restore point that will be used.
     4. **Select restore point time range**: Choose one of the following options:
         - **Before specified date and time**: If you choose this option, the Cloud PCs will be restored to the closest restore point before the date and time you specified.
         - **After specified date and time**: If you choose this option, the Cloud PCs will be restored to the closest restore point after the date and time you specified.
