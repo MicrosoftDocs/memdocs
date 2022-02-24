@@ -40,7 +40,7 @@ As time passes and a new restore point is added, the oldest restore point is rem
 
 ## Interim data is lost
 
-All changes made to the Cloud PC between the saved restore point and when the restore is started will be lost. This includes all data, applications, configurations, and other changes. External data stored in cloud services, like OneDrive, will behave as if a physical device were restored to restore point.
+All changes made to the Cloud PC between the saved restore point and when the restore is started will be lost. This lost information includes all data, applications, configurations, and other changes. External data stored in cloud services, like OneDrive, will behave as if a physical device were restored to restore point.
 
 <!-- ########################## -->
 ## Next steps

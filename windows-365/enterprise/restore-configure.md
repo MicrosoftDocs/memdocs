@@ -38,7 +38,7 @@ Before you can use the point-in-time restore feature, you must configure the app
     1. Type a **Name**.
     2. If you want the users for this setting to have local admin rights, select **Enable Local admin**.
     3. If you want end users to have permissions to restore their own Cloud PCs, select **Allow user to initiate restore service**.
-    4. For **Frequency of restore-point service**, choose an interval for how often restore points will be created. There is a limit of 10 restore points. So a shorter frequency results in a shorter overall history of restore points.
+    4. For **Frequency of restore-point service**, choose an interval for how often restore points will be created. There's a limit of 10 restore points. So a shorter frequency results in a shorter overall history of restore points.
     5. Select **Next**.
 ![Screenshot of the add user setting page](./media/restore-configure/add-user-setting-page.png)
 3. On the **Assignments** page, select the groups that you want to have this setting > **Next**.
