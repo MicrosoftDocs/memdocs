@@ -70,6 +70,8 @@ Use the following checklist to make sure you have the necessary information and 
 
 - At least one existing site system server on which you plan to add the **CMG connection point** role.
 
+- Check the internet access requirements to make sure each required service can be reached. https://docs.microsoft.com/en-us/mem/configmgr/core/plan-design/network/internet-endpoints
+
 You'll set up other prerequisite components during the next steps in the process.
 
 ## Automate with PowerShell
