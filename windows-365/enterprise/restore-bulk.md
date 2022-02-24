@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Bulk restore multiple Cloud PCs
+title: Restore multiple Cloud PCs in bulk
 titleSuffix:
 description: Learn how to restore multiple Cloud PCs using the Microsoft Endpoint Manager admin center.
 keywords:
