@@ -45,10 +45,10 @@ The Enrollment Status Page (ESP) displays provisioning progress after a new devi
 
 The ESP can be used as part of any [Windows Autopilot](../../autopilot/index.yml) provisioning scenario, and can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure AD Join, as well as for any new users signing into the device for the first time.
 
-You can create multiple Enrollment Status Page profiles with different configurations that specify:
+Within the profile you can configure:   
 
-- Showing installation progress
-- Blocking access until the provisioning process is completed
+- Visibility of installation progress
+- Blocking device access until the provisioning process is completed
 - Time limits
 - Allowed troubleshooting operations  
 
