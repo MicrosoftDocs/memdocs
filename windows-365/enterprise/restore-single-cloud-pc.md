@@ -33,13 +33,16 @@ ms.collection: M365-identity-device-management
 You can use the Microsoft Endpoint Manager admin center to restore a Cloud PC to a previous state.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** > **All Cloud PCs** > choose the Cloud PC to restore.
-2. On the Cloud PC details page, select **Restore (preview)**.
-3. Under **Select restore point**, select the point that you wan to restore the Cloud PC to > **Select**.
-4. In the confirmation dialog box, select **Restore**.
+![Screenshot of choose a Cloud PC](./media/restore-single-cloud-pc/choose-cloud-pc.png)
+2. Select **Restore (preview)** > under **Select restore point**, select the point that you want to restore the Cloud PC to > **Select**.
+![Screenshot of selecting a restore point](./media/restore-single-cloud-pc/select-restore-point.png)
+3. In the confirmation dialog box, select **Restore**.
 
 On the **All Cloud PCs** page, the status of the device will change to **Restoring** until it’s complete.
+![Screenshot of Cloud PC restore status](./media/restore-single-cloud-pc/restore-status.png)
 
 On the user’s windows365.microsoft.com page, the Cloud PC will show as restoring until it’s complete.
+![Screenshot of end user restore status](./media/restore-single-cloud-pc/end-user-restore-status.png)
 
 <!-- ########################## -->
 ## Next steps
