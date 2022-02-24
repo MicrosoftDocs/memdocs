@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/23/2022
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -275,24 +275,24 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
       - **I want to do the following**: If there's a match between the device value and your on-demand rule, then select the action you want the device to do. Your options:
 
-        - **Establish VPN**: If there's a match between the device value and your on-demand rule, then a VPN connection is created.
+        - **Establish VPN**: If there's a match between the device value and your on-demand rule, then the device connects to the VPN.
         - **Disconnect VPN**: If there's a match between the device value and your on-demand rule, then the VPN connection is disconnected.
         - **Evaluate each connection attempt**: If there's a match between the device value and your on-demand rule, then use the **Choose whether to connect** setting to decide what happens for *each* VPN connection attempt:
           - **Connect if needed**: If the device is on an internal network, or if there's already an established VPN connection to the internal network, then the on-demand VPN won't connect. These settings aren't used.
 
             If there isn't an existing VPN connection, then for *each* VPN connection attempt, decide if users should connect using a DNS domain name. This rule only applies to domains in the **When users try to access these domains** list. All other domains are ignored.
 
-            - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then the device uses DNS to resolve the domains you enter. If the domain doesn't resolve, meaning it doesn't have access to internal resources, then a VPN connection is created on-demand. If the domain does resolve, meaning it already has access to internal resources, then a VPN connection isn't created.
+            - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then the device uses DNS to resolve the domains you enter. If the domain doesn't resolve, meaning it doesn't have access to internal resources, then it connects to the VPN connection on-demand. If the domain does resolve, meaning it already has access to internal resources, then it doesn't connect to the VPN.
 
               - If the **When users try to access these domains** setting is empty, then the device uses the DNS servers configured on the network connection service (Wi-Fi/ethernet) to resolve the domain.
 
-                The idea is that these DNS servers are public servers and the domains in the **When users try to access these domains** list are internal resources. Internal resources aren’t on public DNS servers and can't be resolved. So, the device creates a VPN connection. Now, the domain is resolved using the VPN connection’s DNS servers and the internal resource is available. 
+                The idea is that these DNS servers are public servers and the domains in the **When users try to access these domains** list are internal resources. Internal resources aren’t on public DNS servers and can't be resolved. So, the device connects to the VPN. Now, the domain is resolved using the VPN connection’s DNS servers and the internal resource is available. 
 
                 If the device is on the internal network, the domain resolves, and a VPN connection isn't created because the internal domain is already available. You don't want to waste VPN resources on devices already on the internal network.
 
               - If the **When users try to access these domains** setting is populated, then the DNS servers on this list are used to resolve the domains in the list.
 
-                The idea is the opposite of the first bullet (**When users try to access these domains** setting is empty). For instance, the **When users try to access these domains** list has internal DNS servers. A device on an external network can't route to the internal DNS servers. The name resolution times out, and a VPN connection is created on-demand. Now the internal resources are available.
+                The idea is the opposite of the first bullet (**When users try to access these domains** setting is empty). For instance, the **When users try to access these domains** list has internal DNS servers. A device on an external network can't route to the internal DNS servers. The name resolution times out, and the device connects to the VPN on-demand. Now the internal resources are available.
 
                 Remember this only applies to domains in the **When users try to access these domains** list. All other domains are resolved with public DNS servers. When the device is connected to the internal network, the DNS servers in the list are accessible, and there's no need to create a VPN connection.
 
@@ -300,13 +300,13 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
             - **When this URL is unreachable, force-connect the VPN**: Optional. Enter an HTTP or HTTPS probing URL that the rule uses as a test. This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. The user doesn't see the URL string probe site.
 
-              If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then a VPN connection is created. 
+              If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then the device connects to the VPN. 
 
-              The idea is that the URL is only accessible on the internal network. If the URL can be accessed, then a VPN connection isn't needed. If the URL can't be accessed, then the device is on an external network, and a VPN connection is created on-dmand. Once the VPN connection is established, internal resources are available.
+              The idea is that the URL is only accessible on the internal network. If the URL can be accessed, then a VPN connection isn't needed. If the URL can't be accessed, then the device is on an external network, and it connects to the VPN on-dmand. Once the VPN connection is established, internal resources are available.
 
-          - **Never connect**: For each VPN connection attempt, when users try to access the domains you enter, then a VPN connection is never created.
+          - **Never connect**: For each VPN connection attempt, when users try to access the domains you enter, then the device never connects to the VPN.
 
-            - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then a VPN connection isn't created. If they try to connect to a domain not in this list, then a VPN connection is created.
+            - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then a VPN connection isn't created. If they try to connect to a domain not in this list, then the device connects to the VPN.
 
         - **Ignore**: If there's a match between the device value and your on-demand rule, then a VPN connection is ignored.
 
@@ -316,9 +316,9 @@ These settings apply when you choose **Connection type** > **IKEv2**.
         - **Specific search domains**: Enter one or more DNS domains that the rule will apply. For example, enter `contoso.com`.
         - **All domains**: Select this option to apply your rule to all domains in your organization.
 
-      - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
+      - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. For example, enter `https://probe.Contoso.com `. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
 
-        For example, a URL string probe is an auditing Web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPN's ability to connect to a site before the device connects to the target URL through the VPN.
+        For example, the URL tests the VPN's ability to connect to a site before the device connects to the target URL through the VPN.
 
     - **Block users from disabling automatic VPN**: Your options:
 
