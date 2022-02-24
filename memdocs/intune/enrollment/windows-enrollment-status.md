@@ -113,9 +113,9 @@ You can create multiple Enrollment Status Page profiles with different configura
  
 9. Optionally, in **Scope tags**, assign a tag to limit profile management to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. Then select **Next**.   
  
-10. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. You can access the profile from your profiles list.  
+10. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. You can access the profile from your profiles list. 
 
-The next time each device checks in, the profile is applied.  
+  The next time each device checks in, the profile is applied.  
 
 ## Edit default profile 
 
@@ -140,13 +140,9 @@ If you assign a user or device more than one ESP profile, the profile with the h
 
  Intune applies profiles in the following order:  
 
-1. Highest-priority profile assigned to device 
-2. Highest-priority profile assigned to user 
-
-       > [!NOTE]
-      >This only works for deployments that support users. For example, Intune can't enforce a user-targeted profile in white-glove deployments and self-deployment scenarios, because these types of deployments are device-targeted.   
-    
-3. Default ESP profile.  
+1. Intune applies the highest-priority profile assigned to the device. 
+2. If no profiles are targeted at the device, Intune applies the highest-priority profile assigned to the user. This only works in scenarios where there is a user. In white glove and self-deploying scenarios, only profiles targeted at devices can be applied.   
+3. If no profiles are assigned to the device or user, Intune applies the default ESP profile.    
 
 ### Set priority  
 To prioritze your profiles:  
