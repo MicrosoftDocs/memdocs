@@ -33,13 +33,15 @@ ms.collection: M365-identity-device-management
 Before you can use the point-in-time restore feature, you must configure the appropriate settings in a new or existing user setting. All users in groups assigned to the user setting will then have permission to use the point-in-time restore feature.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows 365** > **User Settings** > **Add**. (Alternately, you can edit an existing user setting.)
+![Screenshot of add user setting](./media/restore-configure/add-user-setting.png)
 2. On the **Add user setting** page:
     1. Type a **Name**.
     2. If you want the users for this setting to have local admin rights, select **Enable Local admin**.
     3. If you want end users to have permissions to restore their own Cloud PCs, select **Allow user to initiate restore service**.
-    4. For **Frequency of restore-point service**, choose a cadence for how often restore points will be created. There is a limit of 10 restore points. So a shorter frequency results in a shorter overall history of restore points.
+    4. For **Frequency of restore-point service**, choose an interval for how often restore points will be created. There is a limit of 10 restore points. So a shorter frequency results in a shorter overall history of restore points.
     5. Select **Next**.
-3. On the **Assignments** page, add the groups that you want to have this setting > **Next**.
+![Screenshot of the add user setting page](./media/restore-configure/add-user-setting-page.png)
+3. On the **Assignments** page, select the groups that you want to have this setting > **Next**.
 4. On the **Review + Create** page, confirm your choices > **Finish**.
 
 Users in the groups assigned to this user setting will now be able to use the point-in-time restore feature as described below.
