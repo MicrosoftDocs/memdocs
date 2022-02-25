@@ -224,7 +224,7 @@ This task list provides an overview. For more specific information, see [macOS D
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Endpoint Manager, and is active. This certificate is required to enroll macOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
-- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile. Select **Enroll without user affinity** (user-less devices or shared devices):
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile. Select **Enroll without user affinity** (user-less devices or shared devices). With user-less devices:
 
   - Users can't use apps that require a user, including the Company Portal app. The Company Portal app isn't used, needed, or supported on enrollments without user affinity. Be sure users don't install the Company Portal app from the Apple app store.
   - **Enroll with user affinity** is available in the UI, but it won't work. Don't select this option. If you need user affinity, then use [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article).
@@ -238,8 +238,6 @@ For more information on this enrollment option, and its prerequisites, see [macO
 - **Enroll without user affinity**: No actions. Be sure they don't install the Company Portal app from the Apple app store.
 
   :::image type="content" source="./media/deployment-guide-enrollment-ios-ipados/configurator-enroll-without-user-affinity.png" alt-text="In the Endpoint Manager admin center and Microsoft Intune, enroll macOS devices using Direct enrollment. Select enroll without user affinity.":::
-
-[!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
 ## Next steps
 
