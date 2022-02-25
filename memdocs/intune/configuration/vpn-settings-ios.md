@@ -284,17 +284,19 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
             - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then the device uses DNS to resolve the domains you enter. If the domain doesn't resolve, meaning it doesn't have access to internal resources, then it connects to the VPN on-demand. If the domain does resolve, meaning it already has access to internal resources, then it doesn't connect to the VPN.
 
-              - If the **When users try to access these domains** setting is empty, then the device uses the DNS servers configured on the network connection service (Wi-Fi/ethernet) to resolve the domain. The idea is that these DNS servers are public servers.
-
-                The domains in the **When users try to access these domains** list are internal resources. Internal resources aren’t on public DNS servers and can't be resolved. So, the device connects to the VPN. Now, the domain is resolved using the VPN connection’s DNS servers and the internal resource is available. 
-
-                If the device is on the internal network, then the domain resolves, and a VPN connection isn't created because the internal domain is already available. You don't want to waste VPN resources on devices already on the internal network.
-
-              - If the **When users try to access these domains** setting is populated, then the DNS servers on this list are used to resolve the domains in the list.
-
-                The idea is the opposite of the first bullet (**When users try to access these domains** setting is empty). For instance, the **When users try to access these domains** list has internal DNS servers. A device on an external network can't route to the internal DNS servers. The name resolution times out, and the device connects to the VPN on-demand. Now the internal resources are available.
-
-                Remember this only applies to domains in the **When users try to access these domains** list. All other domains are resolved with public DNS servers. When the device is connected to the internal network, the DNS servers in the list are accessible, and there's no need to create a VPN connection.
+              > [!NOTE]
+              > 
+              > - If the **When users try to access these domains** setting is empty, then the device uses the DNS servers configured on the network connection service (Wi-Fi/ethernet) to resolve the domain. The idea is that these DNS servers are public servers.
+              > 
+              >   The domains in the **When users try to access these domains** list are internal resources. Internal resources aren’t on public DNS servers and can't be resolved. So, the device connects to the VPN. Now, the domain is resolved using the VPN connection’s DNS servers and the internal resource is available. 
+              > 
+              >   If the device is on the internal network, then the domain resolves, and a VPN connection isn't created because the internal domain is already available. You don't want to waste VPN resources on devices already on the internal network.
+              > 
+              > - If the **When users try to access these domains** setting is populated, then the DNS servers on this list are used to resolve the domains in the list.
+              > 
+              >   The idea is the opposite of the first bullet (**When users try to access these domains** setting is empty). For instance, the **When users try to access these domains** list has internal DNS servers. A device on an external network can't route to the internal DNS servers. The name resolution times out, and the device connects to the VPN on-demand. Now the internal resources are available.
+              > 
+              >   Remember this information only applies to domains in the **When users try to access these domains** list. All other domains are resolved with public DNS servers. When the device is connected to the internal network, the DNS servers in the list are accessible, and there's no need to connect to the VPN.
 
             - **Use the following DNS servers to resolve these domains (optional)**: Enter one or more DNS server IP addresses, like `10.0.0.22`. The DNS servers you enter are used to resolve the domains in the **When users try to access these domains** setting.
 
