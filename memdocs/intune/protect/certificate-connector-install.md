@@ -134,7 +134,7 @@ After you configure a Certificate Connector for Microsoft Intune on a server, yo
 
 ## Remove the connector
 
-To uninstall the Certificate Connector for Microsoft Intune form a Windows Server, on the server run **IntuneCertificateConnector.exe**, which is the same [software you use to install the connector](#download-and-install-the-connector-software). When run on a server that has the connector installed, the only available option is to remove the current connector installation.
+To uninstall the Certificate Connector for Microsoft Intune from a Windows Server, on the server run **IntuneCertificateConnector.exe**, which is the same [software you use to install the connector](#download-and-install-the-connector-software). When run on a server that has the connector installed, the only available option is to remove the current connector installation.
 ## Next steps
 
 Deploy:
