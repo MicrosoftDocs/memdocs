@@ -43,7 +43,7 @@ An Apple MDM Push certificate is required for Intune to manage iOS/iPadOS and ma
 
 For more information about enrollment options, see [Choose how to enroll iOS/iPadOS devices](ios-enroll.md).
 
-When a push certificate expires, you must renew it. When renewing, make sure to use the same Apple ID that you used when you first created the push certificate.
+When a push certificate expires, you must renew it within the grace period(30 days as of this writing). When renewing, make sure to use the same Apple ID that you used when you first created the push certificate.
 
 
 ## Steps to get your certificate
