@@ -66,7 +66,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
      > Additionally, the app needs to be either installed from the Intune Company Portal (if set as available) or pushed as required to the device. 
 
      > [!NOTE]
-     > Deploy IntuneMAMUPN app configuration settings to the target managed app which sends data, adding the app configuration key to the receiving app is optional. 
+     > Deploy IntuneMAMUPN app configuration settings to the target managed app which sends data. Adding the app configuration key to the receiving app is optional. 
      
      > [!NOTE]
      > Currently, there is no support for enrolling with a different user on an app if there is a MDM enrolled account on the same device. 
