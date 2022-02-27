@@ -43,7 +43,7 @@ If the device is **not enrolled in Intune**, the user is asked to restart the ap
 For devices that are **enrolled for management in Intune**, the user sees a message that their app is now managed.
 
 
-### Require approved client app
+### Approved client app requirement
 
 Organizations can require that an access attempt to the selected cloud apps needs to be made from an approved client app. These approved client apps support [Intune app protection policies](/intune/app-protection-policy) independent of any mobile-device management (MDM) solution.
 
