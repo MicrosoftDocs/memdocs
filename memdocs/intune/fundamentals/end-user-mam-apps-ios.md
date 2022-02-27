@@ -47,7 +47,7 @@ For devices that are **enrolled for management in Intune**, the user sees a mess
 
 Organizations might require that an access attempt to the selected cloud apps needs to be made from an approved client app. These approved client apps support [Intune app protection policies](/intune/app-protection-policy) independent of any mobile device management (MDM) solution.
 
-In order to apply this grant control, Conditional Access requires that the device is registered in Azure Active Directory, which requires the use of a broker app. The broker app can be the Microsoft Authenticator for iOS. If a broker app isn’t installed on the device when the user attempts to authenticate, the user gets redirected to the appropriate app store to install the required broker app.
+In order to apply this grant control, Conditional Access requires that the device is registered in Azure Active Directory, which requires the use of a broker app. The broker app could be the Microsoft Authenticator for iOS. If a broker app isn’t installed on the device when the user attempts to authenticate, the user gets redirected to the appropriate app store to install the required broker app.
 
 
 ## Use apps with multi-identity support
