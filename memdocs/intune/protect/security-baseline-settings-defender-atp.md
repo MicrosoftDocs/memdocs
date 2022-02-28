@@ -200,7 +200,7 @@ To learn more, see [Attack surface reduction rules](/windows/security/threat-pro
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**  
   ASR rule: [5BEB7EFE-FD9A-4556-801D-275E5FFC04CC](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
-  - **Block** *(default)* - Defender for Cloud blocks execution of obfuscated scripts.
+  - **Block** *(default)* - Defender blocks execution of obfuscated scripts.
   - **Not configured** - Return the setting to Windows default, which is off.
   - **Audit mode** - Windows events are raised instead of blocking.
 
@@ -853,7 +853,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 ::: zone-end
 ::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
 
-## Microsoft Defender for Cloud
+## Microsoft Defender
 
 ::: zone-end
 ::: zone pivot="atp-sept-2020,atp-december-2020"
@@ -886,23 +886,23 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 ::: zone-end
 ::: zone pivot="atp-december-2020"
 
-- **Defender for Cloud schedule scan day**:  
-  Defender for Cloud schedule scan day.
+- **Defender schedule scan day**:  
+  Defender schedule scan day.
 
   **Default**: Everyday
 
-- **Defender for Cloud scan start time**:  
-  Defender for Cloud schedule scan time.
+- **Defender scan start time**:  
+  Defender schedule scan time.
 
   **Default**: Not configured
 
 ::: zone-end
 ::: zone pivot="atp-sept-2020,atp-december-2020"
 
-- **Defender for Cloud sample submission consent**  
+- **Defender sample submission consent**  
   CSP: [Defender/SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
-  Checks for the user consent level in Microsoft Defender for Cloud to send data. If the required consent has already been granted, Microsoft Defender for Cloud submits them. If not (and if the user has specified never to ask), the UI launches to ask for user consent (when *Cloud-delivered protection* is set to *Yes*) before sending data.
+  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not (and if the user has specified never to ask), the UI launches to ask for user consent (when *Cloud-delivered protection* is set to *Yes*) before sending data.
 
   - **Send safe samples automatically** (*default*)
   - **Always prompt**
@@ -913,7 +913,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
   CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Configure how aggressive Defender Antivirus is in blocking and scanning suspicious files.
-  - **Not configured** - Default Defender for Cloud blocking level.
+  - **Not configured** - Default Defender blocking level.
   - **High** *(default)* - Aggressively block unknowns while optimizing client performance, which includes a greater chance of false positives.
   - **High plus** - Aggressively block unknowns and apply additional protection measures that might impact client performance.
   - **Zero tolerance** - Block all unknown executable files.
@@ -924,18 +924,18 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
   - **Yes** (*default*) - During a full scan, removable drives (like USB flash drives) are scanned.
   - **Not configured** - The setting returns to client default, which scans removable drives, however the user can disable this scan.
 
-- **Defender for Cloud potentially unwanted app action**  
+- **Defender potentially unwanted app action**  
   CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
-  Specify the level of detection for potentially unwanted applications (PUAs). Security alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
+  Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
   - **Device default**
   - **Block** (*default*) - Detected items are blocked, and show in history along with other threats.
-  - **Audit** - Defender for Cloud detects potentially unwanted applications, but takes no action. You can review information about the applications Defender for Cloud would have taken action against by searching for events that are created by Defender for Cloud in the Event Viewer.
+  - **Audit** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
 
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  By default, Defender for Cloud on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Yes** (*default*) - Cloud-delivered protection is turned on.  Device users can't change this setting.
   - **Not configured**  - The setting is restored to the system default.
@@ -992,10 +992,10 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
   Configure the number of days items should be kept in the quarantine folder before being removed. The default is zero (**0**), which results in quarantined files never being removed.
 
-- **Defender for Cloud system scan schedule**  
+- **Defender system scan schedule**  
   CSP: [Defender/ScheduleScanDay](/windows/client-management/mdm/policy-csp-defender#defender-schedulescanday)
 
-  Schedule on which day Defender for Cloud scans devices. By default the scan is **User defined** but can be set to *Everyday*, any day of the week, or to have *No scheduled scan*.
+  Schedule on which day Defender scans devices. By default the scan is **User defined** but can be set to *Everyday*, any day of the week, or to have *No scheduled scan*.
 
 - **Additional amount of time (0-50 seconds) to extend cloud protection timeout**  
   CSP: [Defender/CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
@@ -1044,13 +1044,13 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 - **Scan browser scripts**  
   CSP: [Defender/AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender)
 
-  - **Yes** (*default*) - The Microsoft Defender for Cloud Script Scanning functionality is enforced and the user can't turn them off.
+  - **Yes** (*default*) - The Microsoft Defender Script Scanning functionality is enforced and the user can't turn them off.
   - **Not configured** -  The setting is returned to client default, which is to enable script scanning, however the user can turn it off.
 
 - **Block user access to Microsoft Defender app**  
   CSP: [Defender/AllowUserUIAccess](/windows/client-management/mdm/policy-csp-defender#defender-allowuseruiaccess)
 
-  - **Yes** (*default*) - The Microsoft Defender for Cloud User Interface (UI) is inaccessible and notifications are surprised
+  - **Yes** (*default*) - The Microsoft Defender User Interface (UI) is inaccessible and notifications are surprised
   - **Not configured**
  When set to Yes, the Windows Defender User Interface (UI) will be inaccessible and notifications will be surprised. When set to Not configured, the setting will return to client default in which UI and notifications will be allowed
 
@@ -1074,10 +1074,10 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
   If no value is defined, devices use the client default of **8** hours.
 
-- **Defender for Cloud sample submission consent**  
+- **Defender sample submission consent**  
   CSP: [Defender/SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
-  Checks for the user consent level in Microsoft Defender for Cloud to send data. If the required consent has already been granted, Microsoft Defender for Cloud submits them. If not (and if the user has specified never to ask), the UI launches to ask for user consent (when *Cloud-delivered protection* is set to *Yes*) before sending data.
+  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not (and if the user has specified never to ask), the UI launches to ask for user consent (when *Cloud-delivered protection* is set to *Yes*) before sending data.
 
   - **Send safe samples automatically** (*default*)
   - **Always prompt**
@@ -1088,7 +1088,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
   CSP: [CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Configure how aggressive Defender Antivirus is in blocking and scanning suspicious files.
-  - **Not configured** (*default*) - Default Defender for Cloud blocking level.
+  - **Not configured** (*default*) - Default Defender blocking level.
   - **High** - Aggressively block unknowns while optimizing client performance, which includes a greater chance of false positives.
   - **High plus** - Aggressively block unknowns and apply additional protection measures that might impact client performance.
   - **Zero tolerance** - Block all unknown executable files.
@@ -1114,21 +1114,21 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 - **Scan network files**  
   CSP: [Defender/AllowScanningNetworkFiles](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
-  - **Yes** (*default*) - Microsoft Defender for Cloud scans network files.
+  - **Yes** (*default*) - Microsoft Defender scans network files.
   - **Not configured** - The client returns to its default, which disables scanning of network files.
 
-- **Defender for Cloud potentially unwanted app action**  
+- **Defender potentially unwanted app action**  
   CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
-  Specify the level of detection for potentially unwanted applications (PUAs). Security alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
+  Specify the level of detection for potentially unwanted applications (PUAs). Defender alerts users when potentially unwanted software is being downloaded or attempts to install on a device.
   - **Device default**
   - **Block** (*default*) - Detected items are blocked, and show in history along with other threats.
-  - **Audit** - Defender for Cloud detects potentially unwanted applications, but takes no action. You can review information about the applications Defender for Cloud would have taken action against by searching for events that are created by Defender for Cloud in the Event Viewer.
+  - **Audit** - Defender detects potentially unwanted applications, but takes no action. You can review information about the applications Defender would have taken action against by searching for events that are created by Defender in the Event Viewer.
 
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  By default, Defender for Cloud on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Yes** (*default*) - Cloud-delivered protection is turned on.  Device users can't change this setting.
   - **Not configured**  - The setting is restored to the system default.
@@ -1154,7 +1154,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
    This ASR rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
   - **Not configured** - The setting returns to the Windows default, which is off.
-  - **Block** (*default*) - Defender for Cloud blocks JavaScript or VBScript files that have been downloaded from the Internet from being executed.
+  - **Block** (*default*) - Defender blocks JavaScript or VBScript files that have been downloaded from the Internet from being executed.
   - **Audit mode** - Windows events are raised instead of blocking.
   
 - **Enable network protection**  
@@ -1202,7 +1202,7 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
 
   This ASR rule is controlled via the following GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
   - **Not configured** - The setting returns to the Windows default, which is off.
-  - **Block** (*default*) - Defender for Cloud will block execution of obfuscated scripts.
+  - **Block** (*default*) - Defender will block execution of obfuscated scripts.
   - **Audit mode** - Windows events are raised instead of blocking.
 
 - **Block Win32 API calls from Office macro**  

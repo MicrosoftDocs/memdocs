@@ -1531,7 +1531,7 @@ For more information, see [Policy CSP - LocalPoliciesSecurityOptions](/windows/c
 - **Require admin approval mode for administrators**:  
   This policy setting controls the behavior of all User Account Control (UAC) policy settings for the computer. If you change this policy setting, you must restart your computer. The options are:
 
-  - *Not configured* - Admin Approval Mode and all related UAC policy settings are disabled. Note: If this policy setting is disabled, the Defender for Cloud notifies you that the overall security of the operating system has been reduced.
+  - *Not configured* - Admin Approval Mode and all related UAC policy settings are disabled. Note: If this policy setting is disabled, the Security Center notifies you that the overall security of the operating system has been reduced.
 
   - *Yes* - Admin Approval Mode is enabled. This policy must be enabled and the related UAC policy settings must be set appropriately to allow the built-in Administrator account and all other users who are members of the Administrators group to run in Admin Approval Mode.
 
@@ -1601,7 +1601,7 @@ For more information, see [Policy CSP - LocalPoliciesSecurityOptions](/windows/c
 
   **Default**: Yes
 
-## Microsoft Defender for Cloud
+## Microsoft Defender
 
 For more information, see [Policy CSP - Defender](/windows/client-management/mdm/policy-csp-defender) in the Windows documentation.
 
@@ -1630,16 +1630,16 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
   **Default** Quick scan
 
-- **Defender for Cloud schedule scan day**:  
-  Defender for Cloud schedule scan day.
+- **Defender schedule scan day**:  
+  Defender schedule scan day.
 
   **Default**: Everyday
 
 ::: zone-end
 ::: zone pivot="mdm-december-2020,november-2021"
 
-- **Defender for Cloud scan start time**:  
-  Defender for Cloud schedule scan time.
+- **Defender scan start time**:  
+  Defender schedule scan time.
 
   **Default**: Not configured
 
@@ -1724,7 +1724,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 - **Block execution of potentially obfuscated scripts (js/vbs/ps)**:  
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
-  When set to yes, Defender for Cloud will block execution of obfuscated scripts. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  When set to yes, Defender will block execution of obfuscated scripts. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
   
   **Default**: Block
 
@@ -1742,7 +1742,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
   **Default**: Enable
 
-- **Defender for Cloud potentially unwanted app action**:  
+- **Defender potentially unwanted app action**:  
   CSP: [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)+
 
   The potentially unwanted application (PUA) protection feature in Microsoft Defender Antivirus can identify and block PUAs from downloading and installing on endpoints in your network. These applications aren't considered viruses, malware, or other types of threats, but might do actions on endpoints that adversely affect their performance or use. PUA can also refer to applications that are considered to have a poor reputation. Typical PUA behavior includes: Various types of software bundling Ad injection into web browsers Driver and registry optimizers that detect issues, request payment to fix the errors, but remain on the endpoint and make no changes or optimizations (also known as "rogue antivirus" programs). These applications can increase the risk of your network being infected with malware, cause malware infections to be harder to identify, and can waste IT resources in cleaning up the applications.
@@ -1763,10 +1763,10 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
   **Default**: Enable
 
-- **Defender for Cloud sample submission consent type**:  
+- **Defender sample submission consent type**:  
   [Defender/SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
-  Checks for the user consent level in Microsoft Defender for Cloud to send data. If the required consent has already been granted, Microsoft Defender for Cloud submits them. If not, (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
+  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not, (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
 
   **Default**: Send safe samples automatically
 
