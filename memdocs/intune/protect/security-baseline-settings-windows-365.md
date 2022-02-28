@@ -988,7 +988,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Yes*  
   CSP [LocalPoliciesSecurityOptions/UserAccountControl_VirtualizeFileAndRegistryWriteFailuresToPerUserLocations](https://go.microsoft.com/fwlink/?linkid=2067321)
 
-## Microsoft Defender for Cloud
+## Microsoft Defender
 
 - **Turn on real-time protection**  
   Baseline default: *Yes*  
@@ -1010,13 +1010,13 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Quick scan*  
   CSP [Defender/ScanParameter](https://go.microsoft.com/fwlink/?linkid=2114045)
 
-- **Defender for Cloud schedule scan day**  
+- **Defender schedule scan day**  
   Baseline default: *Everyday*  
 
 - **Scheduled scan start time**  
   Baseline default: *Not configured*  
 
-- **Defender for Cloud sample submission consent**  
+- **Defender sample submission consent**  
   Baseline default: *Send safe samples automatically*  
   CSP [Defender/SubmitSamplesConsent](https://go.microsoft.com/fwlink/?linkid=2067131)
 
@@ -1028,7 +1028,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Yes*  
   CSP [Defender/AllowFullScanRemovableDriveScanning](https://go.microsoft.com/fwlink/?linkid=2113946)
 
-- **Defender for Cloud potentially unwanted app action**  
+- **Defender potentially unwanted app action**  
   Baseline default: *Block*  
   CSP [Defender/PUAProtection](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
@@ -1055,7 +1055,7 @@ Audit settings configure the events that are generated for the conditions of the
   - *\\\storageaccount.file.core.windows.net\share***.*VHD*
   - *\\\storageaccount.file.core.windows.net\share***.*VHDX*
 
-- **Defender for Cloud Files And Folders To Exclude**  
+- **Defender Files And Folders To Exclude**  
   Baseline default:  
   *This setting has no default entries.*
 
@@ -1257,7 +1257,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 ## Windows Security
 
-- **Enable tamper protection to prevent Microsoft Defender for Cloud being disabled**  
+- **Enable tamper protection to prevent Microsoft Defender being disabled**  
   Baseline default: *Enable*  
   [Reference for Tamper Protection](https://support.microsoft.com/windows/prevent-changes-to-security-settings-with-tamper-protection-31d51aaa-645d-408e-6ce7-8d7f8e593f87)
 
