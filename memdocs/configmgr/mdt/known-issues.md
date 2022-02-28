@@ -16,6 +16,23 @@ ms.collection: openauth
 
 This article provides details of any current known issues and limitations with the Microsoft Deployment Toolkit (MDT). It assumes familiarity with MDT version concepts, features, and capabilities.
 
+## Windows Deployment Services (WDS) multicast stops working after upgrading to ADK for Windows 11
+
+<!-- 12891430 --> 
+
+After you updated your MDT boot image to [ADK for Windows 11](https://docs.microsoft.com/en-us/windows-hardware/get-started/adk-install) you might see popups in Windows PE (WinPE) multicast enabled environments prompting wdscommonlib.dll and imagelib.dll are missing in WinPE.
+The right way to add WDS multicast to WinPE is to install WinPE-WDS-Tools OC ([WinPE optional components](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference?view=windows-11#winpe-optional-components--)) into WinPE.
+
+Follow this example to install WinPE-WDS-Tools OC in WinPE (assuming the mount folder E:\mnt exists).
+ ```cmd
+Dism /mount-wim /WimFile:"E:\DeploymentShare\Boot\LiteTouchPE_multicast_x64.wim" /Index:1 /MountDir:E:\mnt
+Dism /Image:"E:\mnt" /Add-Package /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-WDS-Tools.cab"
+Dism /Image:"E:\mnt" /Add-Package /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"
+Dism /Unmount-Wim /MountDir:E:\mnt /Commit
+ ```
+Add or replace the multicast enabled boot image in WDS snap-in for Microsoft Management Console (MMC).
+
+
 ## ZTI extensions with version 2013 or 2107
 
 <!-- 10695200 -->
