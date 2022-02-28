@@ -20,6 +20,18 @@ Use the information below to find out about changes to the Configuration Manager
 
 ## General tips
 
+### <a name="bkmk_2203"></a> Console improvements in version 2203
+<!--12726153-->
+*(Introduced in version 2203)*
+
+The following improvements were made to the console and user experience:
+
+- When using temporary device nodes, device actions like **Run Scripts** are now available to make the experience in the console consistent.
+- Additional Management Insights rules now have click-through actions
+- Copy/paste is available for more objects from details panes.
+   - Added the **Name** property in the details pane for configuration items, configuration item related policies, and applications
+- Company portal no longer displays an available package as a featured application
+
 ### <a name="bkmk_csv"></a> Export to CSV
 <!--9663857-->
 *(Introduced in version 2111)*
