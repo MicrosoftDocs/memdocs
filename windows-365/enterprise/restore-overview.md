@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/02/2022
+ms.date: 03/03/2022
 ms.topic: conceptual
 ms.service: cloudpc
 ms.subservice:
@@ -34,13 +34,21 @@ Point-in-time restore lets an administrator restore a Cloud PC to an earlier poi
 
 ## Restore point options
 
-You can choose to save restore points every 4, 6, 12, 16, or 24 hours. Each Cloud PC will have 10 restore points saved at the intervals that you define in the user setting. For example, if you chose  four hour intervals, a Cloud PC will have 10 restore points spread out every four hours over the last 40 hours.
+You can choose to save restore points every 4, 6, 12, 16, or 24 hours. Each Cloud PC will have 10 restore points saved at the intervals that you define in the user setting. For example, if you chose four hour intervals, a Cloud PC will have 10 restore points spread out every four hours over the last 40 hours.
 
 As time passes and a new restore point is added, the oldest restore point is removed.
 
-## Interim data is lost
+## Risks and results of restoring a Cloud PC
 
-All changes made to the Cloud PC between the saved restore point and when the restore is started will be lost. This lost information includes all data, applications, configurations, and other changes. External data stored in cloud services, like OneDrive, will behave as if a physical device were restored to restore point.
+Cloud PCs have same risks as all Windows PCs when performing a full disk restore.  These risks and results include:
+
+- All changes made to the Cloud PC between the saved restore point and when the restore is started will be lost. This lost information includes all data, documents, installed applications, configurations, downloads, and other changes. External data stored in cloud services, like OneDrive, won't be lost.
+- The chances of data loss and rolling updates increase with longer time gaps between the selected restore point and the current time.
+
+## Best practices
+
+- To minimize data loss and the risk of a rolling password conflict, choose a restore point that is as close as possible to the current time.
+- After a restoration is complete, the user should immediately sign into their Cloud PC to verify that they can successfully connect. If a user can't connect, or experiences unexpected behavior, try a second restoration to a different restore point that is more recent. On rare occasions you may need to reprovision/reset a Cloud PC if all restore points have obsolete rolling credentials.
 
 <!-- ########################## -->
 ## Next steps
