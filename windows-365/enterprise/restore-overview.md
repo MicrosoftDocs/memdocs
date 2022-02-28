@@ -53,7 +53,7 @@ Cloud PCs have same risks as all Windows PCs when performing a full disk restore
 <!-- ########################## -->
 ## Next steps
 
-To get started with the restore feature, you must first [configure a new or existing user setting](restore-configure.md) to give users the right permissions. After you’ve done that, admins can:
-
-- [Restore a single Cloud PC](restore-single-cloud-pc.md) (users with permission can also restore their own Cloud PC)
-- [Bulk restore multiple Cloud PCs](restore-bulk.md)
+- To get started with the restore feature, you must first [configure a new or existing user setting](restore-configure.md) to give users the right permissions. After you’ve done that, admins can:
+  - [Restore a single Cloud PC](restore-single-cloud-pc.md) (users with permission can also restore their own Cloud PC)
+  - [Bulk restore multiple Cloud PCs](restore-bulk.md)
+- Check [Known issues with restoring your Cloud PC](known-issues.md)
