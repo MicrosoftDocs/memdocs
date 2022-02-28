@@ -30,9 +30,11 @@ For more information, see [Configuration Manager on Azure](../understand/configu
 ## Prerequisites
 
 This process requires an Azure subscription in which you can create the following objects: 
-- Two Standard_B2s virtual machines for domain controller, management point, and distribution point. Choice available to choose client count(0-3) as a parameter.
-- One Standard_B2ms virtual machine for the primary site server and the SQL Server database server and one other Standard_B2ms virtual machine for Central Administration Site if choosing to create hierarchy bench.
-- Standard_LRS storage account
+- Two Standard_B2s virtual machines for domain controller, management point, and distribution point. 
+- Zero to three virtual machines for client devices.
+- One Standard_B2ms virtual machine for the primary site server and the SQL Server database server
+- If you choose to create a hierarchy, one other Standard_B2ms virtual machine for the central administration site.
+- Standard_LRS storage account.
 
 > [!Tip]  
 > To help determine potential costs, see the [Azure pricing calculator](https://azure.microsoft.com/pricing/calculator/).  
@@ -63,7 +65,7 @@ This process requires an Azure subscription in which you can create the followin
 
         - **Admin Password**: The password must meet the Azure complexity requirements. For more information, see [adminPassword](/rest/api/compute/virtualmachines/createorupdate#osprofile).  
         
-        -  **Configuration**: User can choose "Standalone" or "Hierarchy". This setting is available for Current Branch template only. 
+        -  **Configuration**: You can choose "Standalone" or "Hierarchy". This setting is available for the current branch template only. 
 
     > [!Important]  
     > The following settings are required by Azure. Use the default values. Don't change these values.  
@@ -73,11 +75,12 @@ This process requires an Azure subscription in which you can create the followin
     > - **\_artifacts Location Sas Token**: The sasToken is required to access the artifacts location  
     > 
     > - **Location**: The location for all resources
-
 > [!NOTE]
 
-> If the azure template was edited before being deployed then the _artifactsLocation value needs to be changed. For Tech Preview template the value is “https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/sccm/sccm-technicalpreview/azuredeploy.json”.
-For Current Branch template value is “https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/sccm/sccm-currentbranch/azuredeploy.json”.
+> If you edited the Azure template before you deployed it, then you need to change the `_artifactsLocation` value.
+>
+> - For the technical preview template, the value is `https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/sccm/sccm-technicalpreview/azuredeploy.json`
+> - For the current branch template, the value is `https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/sccm/sccm-currentbranch/azuredeploy.json`
 
 4. Read the terms and conditions. If you agree, select **I agree to the terms and conditions stated above**. Then select **Purchase** to continue. 
 
@@ -88,8 +91,8 @@ Azure validates the settings, and then begins the deployment. Check the status o
 
 To see the status of the configuration scripts, connect to the `<prefix>PS01` server, and view the following file: `%windir%\TEMP\ProvisionScript\PS01.json`. If it shows all steps as complete, the process is done.
 
- [!NOTE]
-> When using the Current Branch Template, the json file used is CAS.json at same location in `<prefix>CS01` server.
+> [!NOTE]
+> When you use the current branch template, it uses the CAS.json file at the same location on the `<prefix>CS01` server.
 
 To connect to the VMs, first get from the Azure portal the public IP addresses for each VM. When you connect to the VM, the domain name is `contoso.com`. Use the credentials that you specified in the deployment template. For more information, see [How to connect and log on to an Azure virtual machine running Windows](/azure/virtual-machines/windows/connect-logon).
 
@@ -97,7 +100,7 @@ To connect to the VMs, first get from the Azure portal the public IP addresses f
 
 ## Azure VM info
 
-All Three VMs (VM count depends upon which configuration/clients count was chosen) have the following specifications:
+All  VMs have the following specifications:
 - 150 GB of disk space
 - Both a public and private IP address. The public IPs are in a network security group that only allows remote desktop connections on TCP port 3389. 
 
