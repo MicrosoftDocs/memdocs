@@ -126,7 +126,7 @@ It can take up to eight hours before a noncompliant status for a device update t
 
 ### Can a user manually check for compliance after fixing an issue on a device in order to identify if the issue is resolved and compliant? 
 
-Yes, user can go to [Company Portal website](https://portal.manage.microsoft.com) and in case there is currently a non-compliant custom compliance setting displayed, user can trigger sync.
+Yes, a user can go to the [Company Portal website](https://portal.manage.microsoft.com) and trigger a sync to update the device status after fixing a non-compliant custom compliance setting. 
 
 ### Why aren’t additional operators and operands supported?
 
