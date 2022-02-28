@@ -4,8 +4,8 @@
 title: Remotely assist users that are authenticated by your organization. 
 description: With the remote help app, provide remote assistance to authenticated users who also run the remote help app.
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: Smritib17
 manager: dougeby
 ms.date: 02/14/2022
 ms.topic: how-to
