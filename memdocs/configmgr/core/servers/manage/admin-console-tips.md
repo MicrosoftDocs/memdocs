@@ -2,7 +2,7 @@
 title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 12/01/2021
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
