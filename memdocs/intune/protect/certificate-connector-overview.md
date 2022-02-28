@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/18/2022
+ms.date: 02/28/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,7 +87,7 @@ The Certificate Connector for Microsoft Intune supports:
 
 Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
 
-Intune supports each connector release for six months after its released. After the six months have passed, the connector is no longer be supported and might not function as expected.
+Intune supports each connector release for six months after its released. After the six months have passed, the connector is no longer supported and might not function as expected.
 
 If you don’t allow the connector to automatically update, plan to manually update it to the latest version at the first opportunity.
 
@@ -217,12 +217,14 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 
 ## What's new for the Certificate Connector
 
-Updates for the Certificate Connector for Microsoft Intune are released periodically. When we update the connector, you can read about the changes here.
+Updates for the Certificate Connector for Microsoft Intune are released periodically and then [supported for six months](#lifecycle). When we update the connector, you can read about the changes here.
 
 New updates for the connector can take a week or more to become available for each tenant.
 
+<!-- Note for future use if/when relevant>
 > [!IMPORTANT]
-> On February 1, 2022, Intune certificate connectors earlier than version **6.1806.5.0** will no longer allow you to issue certificates to users and devices.
+> On [DATE], certificate connectors earlier than version [version] will no longer allow you to issue certificates to users and devices.
+-->
 
 ### February 18, 2022
 
