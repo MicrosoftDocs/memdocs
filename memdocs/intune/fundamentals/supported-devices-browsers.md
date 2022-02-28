@@ -95,7 +95,7 @@ The Samsung device models in the following table do not support Knox solutions a
 
 ## Intune supported web browsers
 
-Device management and administrative tasks are done in the Microsoft Endpoint Management admin center. Use these portals to access the admin center:  
+Device management and administrative tasks are done in the Microsoft Endpoint Manager admin center. Use these portals to access the admin center:  
 
 - [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Azure portal](https://portal.azure.com/)
