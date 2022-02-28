@@ -43,7 +43,7 @@ As time passes and a new restore point is added, the oldest restore point is rem
 Cloud PCs have same risks as all Windows PCs when performing a full disk restore.  These risks and results include:
 
 - All changes made to the Cloud PC between the saved restore point and when the restore is started will be lost. This lost information includes all data, documents, installed applications, configurations, downloads, and other changes. External data stored in cloud services, like OneDrive, won't be lost.
-- The chances of data loss and rolling updates increase with longer time gaps between the selected restore point and the current time.
+- The chances of data loss and [automated machine account password updates](known-issues-enterprise.md#restore-and-automatic-rolling-credentials) increase with longer time gaps between the selected restore point and the current time.
 
 ## Best practices
 
@@ -56,4 +56,4 @@ Cloud PCs have same risks as all Windows PCs when performing a full disk restore
 - To get started with the restore feature, you must first [configure a new or existing user setting](restore-configure.md) to give users the right permissions. After you’ve done that, admins can:
   - [Restore a single Cloud PC](restore-single-cloud-pc.md) (users with permission can also restore their own Cloud PC)
   - [Bulk restore multiple Cloud PCs](restore-bulk.md)
-- Check [Known issues with restoring your Cloud PC](known-issues.md)
+- Check [Known issues with restoring your Cloud PC](known-issues-enterprise.md)
