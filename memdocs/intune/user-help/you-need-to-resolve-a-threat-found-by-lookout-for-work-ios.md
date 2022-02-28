@@ -33,7 +33,7 @@ ms.collection:
 
 # Resolve a threat found by Lookout for Work on iOS
 
-The Lookout for Work app is a Mobile Threat Defender service that identifies potential threats on your iOS device. These threats are reported to the Company Portal app, and appear there as unresolved, noncompliant issues. As long as these threats are present, you may be unable to:
+The Lookout for Work app is a Mobile Threat Defender for Cloud service that identifies potential threats on your iOS device. These threats are reported to the Company Portal app, and appear there as unresolved, noncompliant issues. As long as these threats are present, you may be unable to:
 
 * Connect to corporate e-mail
 * Connect to corporate Wi-Fi
@@ -62,4 +62,3 @@ If you install an app that Lookout for Work identifies as a threat, you'll recei
 Select the app name shown at the top of your screen. Then follow the instructions to remove and uninstall the app. As long as the app is on your device, you'll be unable to access company resources.    
 
 Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).    
-

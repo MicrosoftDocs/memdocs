@@ -31,7 +31,7 @@ ms.collection:
 
 # Resolve a threat found by Zimperium zIPS on Android
 
-Zimperium zIPS is a Mobile Threat Defender service that identifies potential threats on your Android devices. These threats are reported to the Company Portal app, and appear as unresolved, noncompliant issues. If your device is identified as being noncompliant, you may be unable to:
+Zimperium zIPS is a Mobile Threat Defender for Cloud service that identifies potential threats on your Android devices. These threats are reported to the Company Portal app, and appear as unresolved, noncompliant issues. If your device is identified as being noncompliant, you may be unable to:
 
 * Connect to corporate e-mail
 * Connect to corporate Wi-Fi

@@ -33,7 +33,7 @@ ms.collection:
 
 # Resolve a threat found by Symantec Endpoint Protection Mobile on iOS
 
-Symantec Endpoint Protection (SEP) Mobile is a Mobile Threat Defender service that identifies potential threats on your Android devices. These threats are reported to the Company Portal app, and appear as unresolved, noncompliant issues. If your device is identified as being noncompliant, you may be unable to:
+Symantec Endpoint Protection (SEP) Mobile is a Mobile Threat Defender for Cloud service that identifies potential threats on your Android devices. These threats are reported to the Company Portal app, and appear as unresolved, noncompliant issues. If your device is identified as being noncompliant, you may be unable to:
 
 * Connect to corporate e-mail
 * Connect to corporate Wi-Fi
@@ -61,4 +61,3 @@ If you install an app that's seen as a threat to your device, you'll receive a n
 To resolve, select the app from the list of threats in SEP Mobile. Then follow the on-screen instructions to remove and uninstall the app.  
 
 Still need help? Check in with your company support. You can find their contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
-
