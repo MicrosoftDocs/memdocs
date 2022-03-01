@@ -37,8 +37,8 @@ ms.collection:
 
 Upload and renew your Apple MDM push certificates in Microsoft Intune. An Apple MDM Push certificate is required to manage iOS/iPadOS and macOS devices in Microsoft Intune, and enables devices to enroll via: 
 
-- The Intune Company Portal app
-- Apple bulk enrollment methods, such as the Device Enrollment Program, Apple School Manager, and Apple Configurator
+- The Intune Company Portal app.
+- Apple bulk enrollment methods, such as the Device Enrollment Program, Apple School Manager, and Apple Configurator.
 
 Certificates must be renewed annually. 
 
