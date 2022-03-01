@@ -2159,9 +2159,6 @@ Enable default enrollment with the following steps:
    <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
    ```
 
-   > [!NOTE] 
-   > This must be the only MAM integration in the app. If there are any other attempts to call MAMEnrollmentManager APIs, conflicts will arise.
-
 3. Enable MAM policy required by adding the following value in the manifest under the `<application>` tag:
 
    ```xml 
