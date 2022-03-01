@@ -43,6 +43,7 @@ As time passes and a new restore point is added, the oldest restore point is rem
 Cloud PCs have same risks as all Windows PCs when performing a full disk restore.  These risks and results include:
 
 - All changes made to the Cloud PC between the saved restore point and when the restore is started will be lost. This lost information includes all data, documents, installed applications, configurations, downloads, and other changes. External data stored in cloud services, like OneDrive, won't be lost.
+- Various applications, agents and tools also use rolling passwords, secrets, certificates, and keys.  If any of these credentials are updated between the current time and the restore point, the associated service or application will be impacted.
 - The chances of data loss and [automated machine account password updates](known-issues-enterprise.md#restore-and-automatic-rolling-credentials) increase with longer time gaps between the selected restore point and the current time.
 
 ## Best practices
