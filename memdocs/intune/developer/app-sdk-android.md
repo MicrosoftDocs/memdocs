@@ -1003,7 +1003,7 @@ Authority and NonBrokerRedirectURI may be specified if necessary.
 ## MAM managed applications
 
 ### Overview
-MAM allows apps to be managed by Intune without the need for the device to be enrolled in Intune MDM. MAM works for both enrolled and unenrolled devices. The Company Portal is still required to be installed on the device, but the user does not need to sign into the Company Portal and enroll the device.
+MAM works for both enrolled and unenrolled devices. The Company Portal is still required to be installed on the device, but the user does not need to sign into the Company Portal and enroll the device.
 
 > [!NOTE]
 > All apps are required to be MAM managed.
@@ -2017,7 +2017,7 @@ the same app, there may be multiple conflicting values available for
 the same key.
 
 > [!NOTE] 
-> Configurations setup for delivery via MAM can not be delivered in `offline` (when the Company Portal is not installed).  Only Android Enterprise AppRestrictions will be delivered via a `MAMUserNotification` on an empty identity in this case.
+> Configurations setup for delivery via App Configuration Policies (ACP) can not be delivered in `offline` (when the Company Portal is not installed).  Only Android Enterprise AppRestrictions will be delivered via a `MAMUserNotification` on an empty identity in this case.
 
 ### Get the App Config For a User
 App config may be retrieved as follows:
