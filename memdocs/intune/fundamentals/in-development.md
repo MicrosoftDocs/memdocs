@@ -109,6 +109,22 @@ More drilldowns are available and additional assignment filters are supported. F
 ### See the IPv4 address and Wi-Fi subnet ID on Andriod Enterprise devices<!-- 12396463 -->
 Customers will now have the ability to see IPv4 address and Wi-Fi subnet ID reported for AE corporate-owned fully managed, dedicated, and work profile devices.
 
+### Support for bootstrap tokens on enrolled macOS devices (public preview)<-- 9539461 -->
+Intune will support the use of bootstrap tokens on enrolled devices running macOS, version 10.15 or later.
+
+On macOS 10.15 and later, you can use a bootstrap token to grant a secure token to mobile accounts and device enrollment-created administrator accounts. 
+
+On macOS 11 and later, you can use a bootstrap token to grant a secure token to any user, including standard (or local) users. Bootstrap tokens allow for non-admin users to have increased MDM permissions, and perform specific software functions on behalf of the IT admin.
+
+Tokens will be supported on:  
+- Supervised devices (in Intune, that's all user-approved enrollments)
+- Devices enrolled in Intune via Apple automated device enrollment
+
+For more information about bootstrap tokens, see the Apple Support topic for [Using secure and bootstrap tokens](https://support.apple.com/guide/deployment/use-secure-and-bootstrap-tokens-dep24dbdcf9e/1/web/1.0).  
+
+### Enroll macOS virtual machines running Apple silicon<-- 13242738 -->
+Use the Company Portal app for macOS to enroll virtual machines running on Apple silicon. Intune supports using macOS virtual machines for testing purposes only. For more information about how to set up macOS enrollment in Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md).  
+
 <!-- ***********************************************-->
 
 ## Device configuration
