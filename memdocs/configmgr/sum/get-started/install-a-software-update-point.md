@@ -5,7 +5,7 @@ description: Primary sites require a software update point on the central admini
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/21/2021
+ms.date: 03/28/2022
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -99,58 +99,56 @@ You can enable a software update point to accept communication from clients on t
 
  You can also configure whether to create WSUS reporting events on the **Synchronization Source** page of the wizard or on the **Sync Settings** tab in Software Update Point Component Properties. Configuration Manager doesn't use these events; therefore, you will normally choose the default setting **Do not create WSUS reporting events**.  
 
-## Synchronization schedule  
+## Synchronization schedule
+
  Configure the synchronization schedule on the **Synchronization Schedule** page of the wizard or in the Software Update Point Component Properties. This setting is configured only on the software update point at the top-level site.  
 
  If you enable the schedule, you can configure a recurring simple or custom synchronization schedule. When you configure a simple schedule, the start time is based on the local time for the computer that runs the Configuration Manager console at the time when you create the schedule. When you configure the start time for a custom schedule, it's based on the local time for the computer that runs the Configuration Manager console.  
 
 > [!TIP]  
->  Schedule software updates synchronization to run by using a time-frame that is appropriate for your environment. One typical scenario is to set the software updates synchronization schedule to run shortly after the Microsoft regular security update release on the second Tuesday of each month, which is normally referred to as Patch Tuesday. Another typical scenario is to set the software updates synchronization schedule to run daily when you use software updates to deliver the Endpoint Protection definition and engine updates.  
-
-> [!NOTE]  
->  When you choose not to enable software updates synchronization on a schedule, you can manually synchronize software updates from the **All Software Updates** or **Software Update Groups** node in the Software Library workspace. For more information, see [synchronize software updates](synchronize-software-updates.md).  
+> - Schedule software updates synchronization to run by using a time-frame that is appropriate for your environment. One typical scenario is to set the software updates synchronization schedule to run shortly after the Microsoft regular security update release on the second Tuesday of each month, which is commonly referred to as Patch Tuesday. Another typical scenario is to set the software updates synchronization schedule to run daily when you use software updates to deliver the Endpoint Protection definition and engine updates.  
+> - When you choose not to enable software updates synchronization on a schedule, you can manually synchronize software updates from the **All Software Updates** or **Software Update Groups** node in the Software Library workspace. For more information, see [synchronize software updates](synchronize-software-updates.md).  
 
 ## Supersedence rules
 
  Configure the supersedence settings on the **Supersedence Rules** page of the wizard or on the **Supersedence Rules** tab in Software Update Point Component Properties. You can configure the supersedence rules only on the top-level site. You can also specify the supersedence rules behavior for **feature updates** separately from **non-feature updates**. <!--3098809, 2977644-->
 
+> [!NOTE]  
+> The **Supersedence Rules** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.
+
  On this page, you can specify when superseded software updates are expired in Configuration Manager, which prevents them from being included in new deployments and flags the existing deployments to indicate that the superseded software updates contain one or more expired software updates. You can specify a period of time before the superseded software updates are expired, which allows you to continue to deploy them. For more information, see [Supersedence rules](../plan-design/plan-for-software-updates.md#BKMK_SupersedenceRules).  
 
  The default setting is to wait 3 months before expiring a superseded update. The 3 month default is to give you time to verify the update is no longer needed by any of your client computers. It's recommended that you don't assume that superseded updates should be immediately expired in favor of the new, superseding update. You can display a list of the software updates that supersede the software update on the **Supersedence Information** tab in the software update properties.  
 
+## Classifications
 
-
-> [!NOTE]  
->  The **Supersedence Rules** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  
-
-## Classifications  
  Configure the classifications settings on the **Classifications** page of the wizard, or on the **Classifications** tab in Software Update Point Component Properties. For more information about software update classifications, see [Update classifications](../plan-design/plan-for-software-updates.md#BKMK_UpdateClassifications).  
 
-> [!NOTE]  
->  The **Classifications** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  
+> [!TIP]
+> - The **Classifications** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.
+> - When you first install the software update point on the top-level site, clear all of the software updates classifications. After the initial software updates synchronization, configure the classifications from an updated list, and then re-initiate synchronization. This setting is configured only on the software update point at the top-level site.  
 
-> [!TIP]  
->  When you first install the software update point on the top-level site, clear all of the software updates classifications. After the initial software updates synchronization, configure the classifications from an updated list, and then re-initiate synchronization. This setting is configured only on the software update point at the top-level site.  
+## Products
 
-## Products  
  Configure the product settings on the **Products** page of the wizard, or on the **Products** tab in Software Update Point Component Properties.  
 
-> [!NOTE]  
->  The **Products** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  
+> [!TIP]
+> - The **Products** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.  
+> - When you first install the software update point on the top-level site, clear all of the products. After the initial software updates synchronization, configure the products from an updated list, and then re-initiate synchronization. This setting is configured only on the software update point at the top-level site.  
 
-> [!TIP]  
->  When you first install the software update point on the top-level site, clear all of the products. After the initial software updates synchronization, configure the products from an updated list, and then re-initiate synchronization. This setting is configured only on the software update point at the top-level site.  
+## Languages
 
-## Languages  
  Configure the language settings on the **Languages** page of the wizard, or on the **Languages** tab in Software Update Point Component Properties. Specify the languages for which you want to synchronize software update files and summary details. The **Software Update File** setting is configured at each software update point in the Configuration Manager hierarchy. The **Summary Details** settings are configured only on the top-level software update point. For more information, see [Languages](../plan-design/plan-for-software-updates.md#BKMK_UpdateLanguages).  
 
 > [!NOTE]  
->  The **Languages** page of the wizard is available only when you install the software update point at the central administration site. You can configure the Software Update File languages at child sites from the **Languages** tab in Software Update Point Component Properties.  
+> The **Languages** page of the wizard is available only when you install the software update point at the central administration site. You can configure the Software Update File languages at child sites from the **Languages** tab in Software Update Point Component Properties.  
 
 ## Third party updates
-Beginning in Configuration Manager version 1802, you can enable third party updates for Configuration Manager clients. When you Enable third party software updates in the SUP component properties, the SUP will download the signing certificate used by WSUS for third party updates. This option is not available during install of the software update point, and should be configured after the SUP is installed. To enable the client settings for third party updates, see the [About client settings](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) article.
+
+You can enable third party updates for Configuration Manager clients. When you Enable third party software updates in the SUP component properties, the SUP will download the signing certificate used by WSUS for third party updates. This option is not available during install of the software update point, and should be configured after the SUP is installed. To enable the client settings for third party updates, see the [About client settings](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) article.
 
 ## Next steps
+
 You installed the software update point starting at the top-most site in your Configuration Manager hierarchy. Repeat the procedures in this article to install the software update point on child sites.
 
 Once you have your software update points installed, go to [synchronize software updates](synchronize-software-updates.md).

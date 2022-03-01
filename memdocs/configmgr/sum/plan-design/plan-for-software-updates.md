@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/20/2021
+ms.date: 03/28/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -428,7 +428,7 @@ You can specify the maximum amount of time a software update installation has to
     - Windows Server 2012 R2
     - Windows Server 2016
     - Windows Server 2019
-    - Office 365
+    - Office 365 
 
 - All other updates outside of these categories, such as third-party updates, are given a default maximum run time of 10 minutes. These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
    > [!NOTE]
