@@ -78,7 +78,9 @@ You can choose any image for any Windows 365 license. However, for optimal perfo
 | Windows 365 license | Recommended gallery image |
 | --- | --- |
 | 2vCPU/4GB/64GB and above | Windows 10/11 Enterprise + Microsoft 365 Apps |
-| 1vCPU/2GB/64GB | Windows 10 Enterprise + OS Optimizations |
+| 1vCPU/2GB/64GB* | Windows 10 Enterprise + OS Optimizations |
+
+\* The 1vCPU option is being retired. Instead, we recommend the 2vCPU as the minimum configuration for new purchases.
 
 ### Gallery image update cycle
 

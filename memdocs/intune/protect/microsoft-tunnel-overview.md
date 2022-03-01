@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/17/2022
+ms.date: 03/01/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,7 +57,7 @@ Through a Microsoft Tunnel client app, iOS/iPadOS and Android Enterprise devices
 To connect to the tunnel, devices use one of the following Microsoft Tunnel client apps, depending on device platform. The apps are available from each platforms app store:
 
 - **Android**: Microsoft Defender for Endpoint, which includes support for Microsoft Tunnel.
-- **iOS/iPadOS**: Microsoft Tunnel standalone app.
+- **iOS/iPadOS**: Microsoft Tunnel standalone app and Microsoft Defender for Endpoint, which includes support for Microsoft Tunnel. Both remain in preview.
 
 You can install multiple Linux servers to support Microsoft Tunnel, and combine servers into logical groups called *Sites*. Each server can join a single Site. When you configure a Site, you’re defining a connection point for devices to use when they access the tunnel. Sites require a *Server configuration* that you’ll define and assign to the Site. The Server configuration is applied to each server you add to that Site, simplifying the configuration of more servers.
 
@@ -66,7 +66,9 @@ To direct devices to use the tunnel, you create and deploy a VPN policy for Micr
   > [!Important]
   > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app on Android devices, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
   >
-  > iOS/iPadOS continues to use the standalone client app, which remains in preview, and a connection type of *Microsoft Tunnel (standalone client)*.
+  > iOS/iPadOS supports the following:
+  > - The standalone tunnel client app, which remains in preview. This app uses the VPN profile connection type of *Microsoft Tunnel (standalone client) (preview)*.
+  > - Microsoft Defender for Endpoint as the tunnel client app, which remains in preview. This app uses the VPN profile connection type of *Microsoft Tunnel (preview)*.
 
 Features of the VPN profiles for the tunnel include:
 
