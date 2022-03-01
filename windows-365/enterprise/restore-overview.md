@@ -30,11 +30,13 @@ ms.collection: M365-identity-device-management
 
 # Point-in-time restore (preview)
 
-Point-in-time restore lets an administrator restore a Cloud PC to an earlier point in time. Admins can also give users permission to restore their own Cloud PCs.
+Point-in-time restore lets an administrator restore a Cloud PC to the exact state it was at an earlier point in time. Admins can also give users permission to restore their own Cloud PCs.
 
 ## Restore point options
 
-You can choose to save restore points every 4, 6, 12, 16, or 24 hours. Each Cloud PC will have 10 restore points saved at the intervals that you define in the user setting. For example, if you chose four hour intervals, a Cloud PC will have 10 restore points spread out every four hours over the last 40 hours.
+You can choose to save short-term restore points every 4, 6, 12, 16, or 24 hours. Each Cloud PC will have 10 restore points saved at the intervals that you define in the user setting. For example, if you chose four hour intervals, a Cloud PC will have 10 restore points spread out every four hours over the last 40 hours.
+
+In addition to these configurable short-term restore points, there are also four long-term restore points that aren't configurable. These long-term restore points are saved every seven days.
 
 As time passes and a new restore point is added, the oldest restore point is removed.
 
