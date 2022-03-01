@@ -194,7 +194,7 @@ Follow [these instructions](https://github.com/AzureAD/microsoft-authentication-
 
 ### If your app does not use MSAL
 
-If your app does not already use MSAL for its own authentication mechanism, then you will need to create an app registration in AAD with a custom redirect URI in the format specified [here](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). You will also need to add permissions to the registration as described [here](https://docs.microsoft.com/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional).
+If your app does not already use MSAL for its own authentication mechanism, then you will need to create an app registration in AAD with a custom redirect URI, for more informawtion see [Migrating from ADAL Objective C to MSAL Objective C](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). You will also need to add permissions to the registration. For more information, see [Give your app access to the Intune app protection service](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional).
 
 
 ### Configure MSAL settings for the Intune App SDK
