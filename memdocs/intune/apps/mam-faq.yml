@@ -36,18 +36,8 @@ sections:
     questions:
       - question: What is MAM?
         answer: |
-          [Intune mobile application management](app-lifecycle.md) refers to the suite of Intune management features that lets you publish, push, configure, secure, monitor, and update mobile apps for your users.
+          [MAM Overview](../apps/app-management.md#mobile-application-management-mam-basics)
           
-      - question: What are the benefits of MAM app protection?
-        answer: |
-          MAM protects an organization's data within an application. With MAM, a work or school-related app that contains sensitive data can be managed on almost any device, including personal devices in bring-your-own-device (BYOD) scenarios. Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of [Intune-managed apps](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) available for public use.
-          
-      - question: What device configurations does MAM support?
-        answer: |
-          Intune MAM supports two configurations:
-          - **Intune MDM + MAM**: IT administrators can only manage apps using MAM on devices that are enrolled with Intune mobile device management (MDM). To manage apps using MDM + MAM, customers should use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-          
-          - **Unenrolled devices with MAM managed applications**: IT administrators can manage apps using MAM on devices that are not enrolled with Intune MDM. This means apps can be managed by Intune on devices enrolled with third-party EMM providers. To manage apps using MAM, customers should use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Also, apps can be managed by Intune on devices enrolled with third-party Enterprise Mobility Management (EMM) providers or not enrolled with an MDM at all.
           
   - name: App protection policies
     questions: 
