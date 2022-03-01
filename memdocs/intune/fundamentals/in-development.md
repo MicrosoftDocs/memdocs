@@ -134,15 +134,6 @@ Does not apply to:
 - Device Firmware Configuration Interface (DFCI) (Windows 10/11)
 - OEMConfig (Android Enterprise)
 
-### New wired networks device configuration profile for Windows devices<!-- 1746923 -->
-There will be a new **Wired Networks** device configuration profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Wired networks** for profile type).
-
-Use this profile to configure common wired network settings, including authentication, EAP type, server trust, and more.
-
-Applies to:
-- Windows 11
-- Windows 10
-
 ### Use the Settings Catalog to create a Universal Print policy on Windows 11 devices<!-- 5513123 -->
 Many organizations are moving their printer infrastructure to the cloud. [Universal Print](/universal-print/fundamentals/universal-print-whatis) is a cloud-based printing solution for Microsoft 365 customers. It uses built-in cloud printers, built-in legacy printers, and runs entirely in Microsoft Azure. When Universal Print is deployed with Universal Print-compatible printers, it doesn't require any on-premises infrastructure. 
 
