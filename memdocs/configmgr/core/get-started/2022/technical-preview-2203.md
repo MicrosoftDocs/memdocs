@@ -24,13 +24,9 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2203/1234567.md)] -->
 
-[!INCLUDE [5858991](includes/2203/5858991.md)]
-[!INCLUDE [9070525](includes/2203/9070525.md)]
-[!INCLUDE [10454717](includes/2203/10454717.md)]
-[!INCLUDE [12451634](includes/2203/12451634.md)]
-[!INCLUDE [12486569](includes/2203/12486569.md)]
-[!INCLUDE [12558856](includes/2203/12558856.md)]
-[!INCLUDE [12594695](includes/2203/12594695.md)]
+[!INCLUDE [Dark theme for the console](includes/2203/9070525.md)]
+[!INCLUDE [Escrow BitLocker recovery password to the site during a task sequence](includes/2203/10454717.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2203/13395691.md)]
 
 <!-- ## General known issues  -->
  

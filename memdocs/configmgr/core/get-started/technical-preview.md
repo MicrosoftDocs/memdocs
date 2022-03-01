@@ -123,13 +123,9 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2203
 
-- [5858991](2022/technical-preview-2203.md) <!--5858991-->
-- [9070525](2022/technical-preview-2203.md) <!--9070525-->
-- [10454717](2022/technical-preview-2203.md) <!--10454717-->
-- [12451634](2022/technical-preview-2203.md) <!--12451634-->
-- [12486569](2022/technical-preview-2203.md) <!--12486569-->
-- [12558856](2022/technical-preview-2203.md) <!--12558856-->
-- [12594695](2022/technical-preview-2203.md) <!--12594695-->
+- [Dark theme for the console](2022/technical-preview-2203.md#bkmk_dark) <!--9070525-->
+- [Escrow BitLocker recovery password to the site during a task sequence](2022/technical-preview-2203.md#bkmk_blmts) <!--10454717-->
+- [PowerShell release notes preview](2022/technical-preview-2203.md#bkmk_powershell) <!--13395691-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
