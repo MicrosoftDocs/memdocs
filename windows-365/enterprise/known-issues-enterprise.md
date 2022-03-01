@@ -46,10 +46,6 @@ The machine account password is maintained on the Cloud PC. If the Cloud PC is r
 
 For more information, see [Machine Account Password Process](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/machine-account-password-process/ba-p/396026).
 
-Various applications, agents and tools also use rolling passwords, secrets, certificates, and keys.  If any of these credentials are updated between the current time and the restore point, the associated service or application will be impacted.
-
-The chances of data loss and automated machine account password updates increase with longer time gaps between the selected restore point and the current time.
-
 ## Next steps
 
 [Troubleshoot Windows 365 Enterprise Cloud PC](troubleshooting.md)
