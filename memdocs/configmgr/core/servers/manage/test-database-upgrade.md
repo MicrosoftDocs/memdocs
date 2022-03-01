@@ -2,7 +2,7 @@
 title: Test database update
 titleSuffix: Configuration Manager
 description: Test upgrade the site database when installing updates for Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -54,7 +54,7 @@ The upgrade test runs against a backup of your site database that you restore to
 
 1. Create a backup of the site database that you want to test upgrade. Then restore a copy of that database to an instance of SQL Server that doesn't host a Configuration Manager site. The SQL Server instance needs to be the same edition of SQL Server as your site database. For more information, see [Quickstart: Backup and restore a SQL Server database on-premises](/sql/relational-databases/backup-restore/quickstart-backup-restore-database).
 
-1. After you restore the database copy, run **Setup** from the CD.Latest folder. When you run Setup, use the **/TESTDBUPGRADE** command-line option. If the SQL Server instance that hosts the database copy isn't the default instance, provide the [command-line options](../deploy/install/command-line-options-for-setup.md#testdbupgrade) to identify the instance that hosts the site database copy.
+1. After you restore the database copy, run **Setup** from the CD.Latest folder. When you run Setup, use the `/TESTDBUPGRADE` command-line option. If the SQL Server instance that hosts the database copy isn't the default instance, provide the [command-line options](../deploy/install/command-line-options-for-setup.md#testdbupgrade) to identify the instance that hosts the site database copy.
 
     For example, you have a site database with the database name `CM_ABC`. You restore a copy of this site database to a supported instance of SQL Server with the instance name `DBTest`. To test an upgrade of this copy of the site database, use the following command line: `setup.exe /TESTDBUPGRADE DBtest\CM_ABC`
 

@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/19/2021
+ms.date: 02/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -148,7 +148,7 @@ Complete the following steps to create a dynamic Azure AD device group for devic
 5. Choose **Add query** > **Create**.  
 
 
-### Enroll devices    
+## Enroll devices    
 After you set up and assign the Android (AOSP) enrollment profiles, you can enroll devices via QR code. 
 
 1. Turn on your new or factory-reset device.  
@@ -158,14 +158,16 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 > [!TIP]
 > To access the token in Intune, select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, userless devices**. Select your enrollment profile, and then select **Tokens**. 
 
-3. Follow the on-screen prompts to finish enrolling and registering the device. 
+3. Follow the on-screen prompts to finish enrolling and registering the device. During setup, Intune automatically installs and opens the apps that are needed for enrollment. Those apps include:  
 
-The Microsoft Intune and Microsoft Authenticator apps automatically install and open on the device, which allows the device to be enrolled. You'll be locked in the enrollment process until it's complete.  
+    *  Microsoft Authenticator app  
+    *  Microsoft Intune app  
+    *  Intune Company Portal app  
 
 ## After enrollment 
 
-### Update Microsoft Intune and Microsoft Authenticator  
-The Intune app automatically installs available app updates for itself and Authenticator. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
+### App updates    
+The Microsoft Intune app automatically installs available app updates for itself, Authenticator, and Company Portal. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
 
 ### Manage devices remotely    
 
@@ -207,7 +209,7 @@ The following are known limitations when working with AOSP devices in Intune:
     * Alphanumeric  
     * Alphanumeric with symbols    
     * Weak biometric   
-*  Device compliance reporting is not available for for Android (AOSP).   
+*  Device compliance reporting is not available for Android (AOSP).   
 
 * Android (AOSP) management is not supported in these environments:  
     * Intune for Government Community Cloud (GCC) High and Department of Defense (D0D)  

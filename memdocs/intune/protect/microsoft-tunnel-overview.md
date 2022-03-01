@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/28/2022
+ms.date: 02/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -51,6 +51,7 @@ Through the Microsoft Endpoint Manager admin center, you’ll:
 Through a Microsoft Tunnel client app, iOS/iPadOS and Android Enterprise devices:
 
 - Use Azure Active Directory (Azure AD) to authenticate to the tunnel.
+- Use Active Directory Federation Services (AD FS) to authenticate to the tunnel.
 - Are evaluated against your Conditional Access policies. If the device isn’t compliant, then it won’t have access to your VPN server or your on-premises network.
 
 To connect to the tunnel, devices use one of the following Microsoft Tunnel client apps, depending on device platform. The apps are available from each platforms app store:
