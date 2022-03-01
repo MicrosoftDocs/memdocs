@@ -55,7 +55,7 @@ Enabling Mobile Threat Defense integration between Wandera and Intune entails:
 - Enabling Wandera’s UEM Connect service to synchronize information with Azure and Intune. This includes user and device Life Cycle Management (LCM) metadata, along with Mobile Threat Defense (MTD) device threat level.
 - Create Activation Profiles in Wandera to define device enrollment behavior.
 - Deploy Wandera over-the-air to managed iOS and Android devices.
-- Configure Wandera for end user self-service using MAM on unenrolled iOS and Android devices.
+- Configure Wandera for end user self-service using MAM on iOS and Android devices.
 
 ## Set up Wandera Mobile Threat Defense integration
 
@@ -95,7 +95,7 @@ After creating an Activation Profile in Wandera, you “assign” it to users an
 The steps from here assume you have created an Activation Profile in Wandera that you would like to deploy via Intune to your target devices. Please see the [Activation Profiles Guide](https://radar.wandera.com/?return_to=https://wandera.force.com/Customer/s/article/Enrollment-Links) for more details on creating and using Wandera Activation Profiles.
 
 > [!NOTE]
-> When creating Activation Profiles for deployment via Intune or MAM, be sure to set Associated User to the Authenticated by Identity Provider > Azure Active Directory option for maximum security, cross-platform compatibility, and a streamlined end user experience.
+> When creating Activation Profiles for deployment via Intune, be sure to set Associated User to the Authenticated by Identity Provider > Azure Active Directory option for maximum security, cross-platform compatibility, and a streamlined end user experience.
 
 ## Deploying Wandera Over-the-Air to MDM-Managed Devices
 
