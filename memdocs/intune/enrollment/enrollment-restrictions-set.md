@@ -85,9 +85,6 @@ Default restrictions are automatically provided for both device type and device 
     > - If both platforms are allowed, but blocked for the same versions, then users on devices with the blocked versions will be taken down the Android device administrator enrollment flow and then get blocked from enrollment and prompted to sign out. 
     >
     > Worth noting that neither work profile or device administrator enrollment will work unless the appropriate prequisites have been completed in Android Enrollment. 
-    
-   > [!Note]
-   > Windows 10 and Windows 11 do not provide the rev number during enrollment, so for example, if you enter in 10.0.17134.100, and the device is 10.0.17134.174, it will be blocked during enrollment.  
 
 6. Under **Personally-owned**, choose **Allow** for the platforms that you want to permit as personally owned devices.
 7. Under **Device manufacturer**, enter a comma-separated list of the manufacturers that you want to block.
