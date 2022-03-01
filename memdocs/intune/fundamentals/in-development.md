@@ -136,7 +136,7 @@ There are some new features when using filters:
   When you select **View report**, the report has an **Assignment Filter** column. Use this column to determine if a filter successfully applied to your policy.
 
 - Endpoint Security policies will support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create. 
-- When you create a new endpoint security policy, it will automatically use the [new device configuration profile reporting](ErikRe: Add shortcut to https://msazure.visualstudio.com/Intune/_workitems/edit/8466004 header). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
+- When you create a new endpoint security policy, it will automatically use the [new device configuration profile reporting](../fundamentals/in-development.md#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
 
 For more information on filters, see:
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
@@ -168,7 +168,8 @@ Applies to:
  Intune's remote action to [Collect diagnostics](../remote-actions/collect-diagnostics.md) will soon collect additional details from Windows devices.  (**Devices** > **Windows** > *select a Windows device* > **Collect diagnostics**) 
  
 The new details include the **Microsoft-Windows-AppxPackaging/Operational** Event Viewer and the following office log files to assist in troubleshooting office installation issues:
-`%windir%\temp\%computername%*.log`
+
+`%windir%\temp\%computername%*.log`<br>
 `%windir%\temp\officeclicktorun*.log`
 
 <!-- ***********************************************-->
