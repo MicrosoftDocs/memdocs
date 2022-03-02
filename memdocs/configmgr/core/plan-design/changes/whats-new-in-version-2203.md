@@ -65,7 +65,7 @@ We've made the following improvements for Power BI Report Server integration:
 <!--12441118-->
 When you install the [data warehouse](../../servers/manage/data-warehouse.md), it synchronizes a set of default tables from the site database. These tables are required for data warehouse reports. While troubleshooting issues, you may want to stop synchronizing these default tables. Starting in this release, you can exclude one or more of these required tables from synchronization.
 
-<!--For more information, see [Exclude data warehouse reporting tables from synchronization](../../servers/manage/data-warehouse.md#bkmk_exclude).-->
+For more information, see [Exclude data warehouse reporting tables from synchronization](../../servers/manage/data-warehouse.md#bkmk_exclude).
 
 ### Improvements to Management Insights
 <!--10875436, 12451634 -->
