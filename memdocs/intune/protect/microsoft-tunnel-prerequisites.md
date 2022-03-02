@@ -145,9 +145,7 @@ Docker uses the file **/etc/docker/daemon.json** to configure a new default brid
 
    ```
    {
-   "bip": "192.168.128.1/24",
-   "mtu": 1500,
-   "default-gateway": "192.168.128.254",
+   "bip": "192.168.128.1/24"
    }
    ```
 

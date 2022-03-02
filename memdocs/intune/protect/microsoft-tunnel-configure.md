@@ -27,7 +27,6 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Tunnel for Intune
 
-
 - Review and [Configure prerequisites for Microsoft Tunnel](microsoft-tunnel-prerequisites.md).
 - Run the Microsoft Tunnel [readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
 
