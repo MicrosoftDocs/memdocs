@@ -87,7 +87,7 @@ You can now perform client notification actions, including **Run Scripts**, from
 Based on your feedback, there are two new client health checks in this release:
 
 - Verify disk space not near capacity
-- Verify CCMCache is not near drive capacity
+- Verify CCMCache isn't near drive capacity
 
 <!-- For more information, see [Client health checks](../../../../clients/manage/client-health-checks.md). -->
 
@@ -113,7 +113,7 @@ When installing software updates from Configuration Manager, you can now choose 
 <!--4639895-->
 You can now enable Windows Low Extra Delay Background Transport (LEDBAT) for your software update points. LEDBAT adjusts download speeds during client scans against WSUS to help control network congestion.
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Install a software update point](../../../sum/get-started/install-a-software-update-point.md#bkmk_ledbat).
 
 ### Pre-download content for available software updates
 <!--4497776-->
@@ -123,14 +123,14 @@ You can now pre-download content for software updates that are included in avail
 
 ### Customize maximum run time for other software update types
 <!--12770887-->
- Previously, software updates that didn't belong to the following update categories defaulted to a maximum run time of 60 minutes (or 10 minutes prior to version 2103):
+Previously, software updates that didn't belong to the following update categories defaulted to a maximum run time of 60 minutes (or 10 minutes prior to version 2103):
 - Windows feature updates
 - Windows non-feature updates
 - Office 365 updates
 
-Starting in this version, you can customize the maximum run time for all other software updates, which includes third-party updates.
+You can now customize the maximum run time for all other software updates, which includes third-party updates.
 
-<!-- For more information, see  [maximum run time](../../../sum/plan-design/plan-for-software-updates.md#bkmk_maxruntime). -->
+For more information, see [Maximum run time](../../../sum/plan-design/plan-for-software-updates.md#bkmk_maxruntime) and [Install and configure a software update point](../../../sum/get-started/install-a-software-update-point.md#bkmk_maxruntime).
 
 ### ADR scheduling improvements for deployments
 <!--12707738, 7033417-->

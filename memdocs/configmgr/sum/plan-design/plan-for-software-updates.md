@@ -5,7 +5,7 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/20/2021
+ms.date: 03/28/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -17,7 +17,6 @@ ms.localizationpriority: medium
 *Applies to: Configuration Manager (current branch)*
 
 Before you use software updates in a Configuration Manager production environment, it's important that you go through the planning process. Having a good plan for the software update point infrastructure is key to a successful software updates implementation. For information about capacity planning for software updates, see [Size and scale numbers](../../core/plan-design/configs/size-and-scale-numbers.md#software-update-point).
-
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
 
@@ -115,7 +114,7 @@ Start this change on a device collection. Once triggered, the clients look for a
 
 1.  In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.  
 
-2.  Select the target collection. On the **Home** tab of the ribbon, in the **Collection** group, click **Client Notification**, and then click **Switch to next Software Update Point**.  
+2.  Select the target collection. On the **Home** tab of the ribbon, in the **Collection** group, select **Client Notification**, and then select **Switch to next Software Update Point**.  
 
 
 ###  <a name="BKMK_SUP_CrossForest"></a> Software update points in an untrusted forest  
@@ -194,7 +193,7 @@ You can use the **Third-Party Software Update Catalogs** node in the Configurati
 For more information, see [Third-party software updates](../deploy-use/third-party-software-updates.md).
 
 #### System Center Updates Publisher
-System Center Updates Publisher (SCUP) is a stand-alone tool that enables independent software vendors or line-of-business application developers to manage custom updates. These updates include those with dependencies, like drivers and update bundles. SCUP can also be used for third-party update catalogs that aren't available directly in the console. 
+System Center Updates Publisher (SCUP) is a stand-alone tool that enables independent software publishers or line-of-business application developers to manage custom updates. These updates include those with dependencies, like drivers and update bundles. SCUP can also be used for third-party update catalogs that aren't available directly in the console. 
 
 For more information, see [System Center Updates Publisher](../tools/updates-publisher.md).
 
@@ -237,7 +236,7 @@ When you install more than one software update point at a primary site, use the 
 
 #### Configuring the WSUS content directory path
 
-When you install WSUS, you'll need to provide a content directory path. The WSUS content directory is primarily used for storing the Microsoft Software License Terms files needed by clients during scanning. The Configuration Manager  The WSUS content directory should not overlap with your content source directory for Configuration Manager software deployment packages. Overlapping the WSUS content directory and the Configuration Manager package source will result in incorrect files being removed from the WSUS content directory.
+When you install WSUS, you'll need to provide a content directory path. The WSUS content directory is primarily used for storing the Microsoft Software License Terms files needed by clients during scanning. The Configuration Manager  The WSUS content directory shouldn't overlap with your content source directory for Configuration Manager software deployment packages. Overlapping the WSUS content directory and the Configuration Manager package source will result in incorrect files being removed from the WSUS content directory.
 
 ####  <a name="BKMK_CustomWebSite"></a> Configure WSUS to use a custom website  
 When you install WSUS, you have the option to use the existing IIS Default website, or to create a custom WSUS website. Create a custom website for WSUS so that IIS hosts the WSUS services in a dedicated virtual website. Otherwise it shares the same website that's used by the other Configuration Manager site systems or applications. This configuration is especially necessary when you install the software update point role on the site server. When you run WSUS in Windows Server 2012 or later, WSUS is configured by default to use port 8530 for HTTP and port 8531 for HTTPS. Specify these ports when you create the software update point at a site.  
@@ -391,7 +390,6 @@ Configure languages for the **Software update file** setting in the properties f
 Configure the software update file language settings with the languages that are most often used in your environment. For example, clients in your site use mostly English and Japanese for Windows or applications. There are few other languages that are used at the site. Select only English and Japanese in the **Software Update File** column when you download or deploy the software update. This action allows you to use the default settings on the **Language Selection** page of the deployment and download wizards. This action also prevents unneeded update files from being downloaded. Configure this setting at each software update point in the Configuration Manager hierarchy.  
 
 
-
 #### Summary details  
 During the synchronization process, the summary details information (software updates metadata) is updated for software updates in the languages that you specify. The metadata provides information about the software update, for example:
 - Name
@@ -408,33 +406,9 @@ Configure the summary details settings only on the top-level site. The summary d
 >  Select all of the summary details languages that you need. When the software update point at the top-level site synchronizes with the synchronization source, the selected summary details languages determine the software updates metadata that it retrieves. If you modify the summary details languages after synchronization ran at least one time, it retrieves the software updates metadata for the modified summary details languages only for new or updated software updates. The software updates that have already been synchronized aren't updated with new metadata for the modified languages unless there's a change to the software update on the synchronization source.
 
 
-###  <a name="bkmk_maxruntime"></a> Maximum run time
+### <a name="bkmk_maxruntime"></a> Maximum run time
 <!--3734426-->
-*(Introduced in version 1906)*
-
-You can specify the maximum amount of time a software update installation has to complete. You can specify the maximum run time for the following:
-
-- **Maximum run time for Windows feature updates (minutes)**
-  - **Feature updates** - An update that is in one of these three classifications:
-    - Upgrades
-    - Update rollups
-    - Service packs
-
-- **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**
-  - **Non-feature updates** - An update that isn't a feature upgrade and whose product is listed as one of the following:
-    - Windows 11
-    - Windows 10 (all versions)
-    - Windows Server 2012
-    - Windows Server 2012 R2
-    - Windows Server 2016
-    - Windows Server 2019
-    - Office 365
-
-- All other updates outside of these categories, such as third-party updates, are given a default maximum run time of 10 minutes. These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
-   > [!NOTE]
-   > Starting in Configuration Manager 2103, the default maximum run time for all other updates outside of these categories, such as third-party updates, is 60 minutes rather than 10 minutes. The new maximum run time will only apply to new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing updates. <!--7833866-->
-
-- If you need to change the maximum run time of an update, you can [configure the software update settings](../get-started/manage-settings-for-software-updates.md#BKMK_SoftwareUpdatesSettings) for it. 
+[!INCLUDE [maximum-run-time](../includes/maximum-run-time.md)]
 
 ##  <a name="BKMK_MaintenanceWindow"></a> Plan for a software updates maintenance window  
 
