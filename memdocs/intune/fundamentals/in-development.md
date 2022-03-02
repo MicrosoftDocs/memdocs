@@ -82,8 +82,8 @@ Feedback settings will be provided to address M365 enterprise feedback policies 
 ### Apps UI when using Android 12L OS<!-- 12536901 -->
 The Android 12L OS contains new features designed to improve the Android 12 experience on large and folding dual-screen devices. Intune apps will support Android 12L when the update is released to devices.
 
-### Uninstall DMG-type applications on managed macOS devices<!-- 13155022 -->
-You will be able to use the **Uninstall** assignment type to remove DMG-type applications on managed macOS devices from Microsoft Endpoint Manager. You can find macOS DMG apps in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS**. For related information, [Microsoft Intune management agent for macOS](../apps/lob-apps-macos-agent.md).
+### Uninstall DMG-type applications on managed macOS devices (Public preview)<!-- 13155022 idready idstaged -->
+You will be able to use the Uninstall assignment type to remove DMG-type applications on managed macOS devices from Microsoft Endpoint Manager. You can find macOS DMG apps in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **macOS app (.DMG)**. For related information, [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md). 
 
 ### Deploy macOS LOB apps by uploading PKG-type installer files (Public preview)<!-- 13155147 -->
 You will be able to upload and deploy PKG-type installer files as macOS line-of-business apps. You can add a macOS LOB app from [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **Add** > **Line-of-business app**. For more information about macOS LOB apps, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
@@ -128,6 +128,16 @@ Use the Company Portal app for macOS to enroll virtual machines running on Apple
 <!-- ***********************************************-->
 
 ## Device configuration
+
+### Google Chrome settings are in Settings Catalog and Administrative Templates <!-- 6198569 -->
+Currently, to configure Google Chrome settings on Windows devices, you create a custom OMA-URI device configuration policy. Google Chrome settings will be included in the Settings Catalog and Administrative Templates.
+
+For more information on these policy types, see:
+- [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md)
+- [Use ADMX templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
+
+Applies to:
+- Windows 10/11
 
 ### Android (AOSP) will support scope tags and RBAC settings<!-- 8503981 -->
 When you create a policy for Android (AOSP), you can use role-based access control (RBAC) and scope tags.
