@@ -459,7 +459,7 @@ namespace IntuneGraphExample
 
 ### Authenticate Azure AD (PowerShell)
 
-PowerShell scripts can uses the AzureAD PowerShell module for authentication.  To learn more, see [Azure Active Directory PowerShell Version 2](/powershell/azure/active-directory/install-adv2) and the [Intune PowerShell examples](https://github.com/microsoftgraph/powershell-intune-samples).
+PowerShell scripts can use the AzureAD PowerShell module for authentication.  To learn more, see [Azure Active Directory PowerShell Version 2](/powershell/azure/active-directory/install-adv2) and the [Intune PowerShell examples](https://github.com/microsoftgraph/powershell-intune-samples).
 
 ## Support multiple tenants and partners
 
