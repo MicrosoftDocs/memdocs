@@ -18,7 +18,6 @@ ms.localizationpriority: medium
 
 Before you use software updates in a Configuration Manager production environment, it's important that you go through the planning process. Having a good plan for the software update point infrastructure is key to a successful software updates implementation. For information about capacity planning for software updates, see [Size and scale numbers](../../core/plan-design/configs/size-and-scale-numbers.md#software-update-point).
 
-
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
 
 This section includes the following subtopics:    
@@ -391,7 +390,6 @@ Configure languages for the **Software update file** setting in the properties f
 Configure the software update file language settings with the languages that are most often used in your environment. For example, clients in your site use mostly English and Japanese for Windows or applications. There are few other languages that are used at the site. Select only English and Japanese in the **Software Update File** column when you download or deploy the software update. This action allows you to use the default settings on the **Language Selection** page of the deployment and download wizards. This action also prevents unneeded update files from being downloaded. Configure this setting at each software update point in the Configuration Manager hierarchy.  
 
 
-
 #### Summary details  
 During the synchronization process, the summary details information (software updates metadata) is updated for software updates in the languages that you specify. The metadata provides information about the software update, for example:
 - Name
@@ -408,33 +406,9 @@ Configure the summary details settings only on the top-level site. The summary d
 >  Select all of the summary details languages that you need. When the software update point at the top-level site synchronizes with the synchronization source, the selected summary details languages determine the software updates metadata that it retrieves. If you modify the summary details languages after synchronization ran at least one time, it retrieves the software updates metadata for the modified summary details languages only for new or updated software updates. The software updates that have already been synchronized aren't updated with new metadata for the modified languages unless there's a change to the software update on the synchronization source.
 
 
-###  <a name="bkmk_maxruntime"></a> Maximum run time
+### <a name="bkmk_maxruntime"></a> Maximum run time
 <!--3734426-->
-*(Introduced in version 1906)*
-
-You can specify the maximum amount of time a software update installation has to complete. You can specify the maximum run time for the following:
-
-- **Maximum run time for Windows feature updates (minutes)**
-  - **Feature updates** - An update that is in one of these three classifications:
-    - Upgrades
-    - Update rollups
-    - Service packs
-
-- **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**
-  - **Non-feature updates** - An update that isn't a feature upgrade and whose product is listed as one of the following:
-    - Windows 11
-    - Windows 10 (all versions)
-    - Windows Server 2012
-    - Windows Server 2012 R2
-    - Windows Server 2016
-    - Windows Server 2019
-    - Office 365 
-
-- All other updates outside of these categories, such as third-party updates, are given a default maximum run time of 10 minutes. These settings only change the maximum runtime for new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing feature or non-feature updates.
-   > [!NOTE]
-   > Starting in Configuration Manager 2103, the default maximum run time for all other updates outside of these categories, such as third-party updates, is 60 minutes rather than 10 minutes. The new maximum run time will only apply to new updates that are synchronized from Microsoft Update. It doesn't change the run time on existing updates. <!--7833866-->
-
-- If you need to change the maximum run time of an update, you can [configure the software update settings](../get-started/manage-settings-for-software-updates.md#BKMK_SoftwareUpdatesSettings) for it. 
+[!INCLUDE [maximum-run-time](../includes/maximum-run-time.md)]
 
 ##  <a name="BKMK_MaintenanceWindow"></a> Plan for a software updates maintenance window  
 
