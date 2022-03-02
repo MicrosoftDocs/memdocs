@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/01/2022
+ms.date: 03/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -155,8 +155,6 @@ The following outlines where break and inspect is not supported and where it is 
 
 - The Management Agent is authorized against Azure AD using Azure app ID/secret keys.
 
-- The Tunnel Gateway server uses NAT to provide addresses to VPN clients that are connecting to the corporate network.
-  
 ## Next steps
 
 [Prerequisites for the Microsoft Tunnel in Intune](microsoft-tunnel-prerequisites.md)
