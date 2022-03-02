@@ -21,7 +21,6 @@ You can specify the maximum amount of time a software update installation has to
   - **Non-feature updates** - An update that isn't a feature upgrade and whose product is listed as one of the following:
     - Windows 11
     - Windows 10 (all versions)
-    - Windows Server 2012
     - Windows Server 2012 R2
     - Windows Server 2016
     - Windows Server 2019

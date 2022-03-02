@@ -39,9 +39,9 @@ You can add the software update point site system role to an existing site syste
 
    - Specify whether to use the proxy server when Configuration Manager synchronizes the software updates and when it downloads content by using an automatic deployment rule. Configure the software update point proxy server settings on the **Proxy and Account Settings** page of the wizard or on the **Proxy and Account Settings** tab in Software update point Properties.  
 
-   - The **Use a proxy when downloading content by using automatic deployment rules** setting is available but it is not used for a software update point on a secondary site. Only the software update point on the central administration site and primary site downloads content from the Microsoft Update page.  
+   - The **Use a proxy when downloading content by using automatic deployment rules** setting is available but it isn't used for a software update point on a secondary site. Only the software update point on the central administration site and primary site downloads content from the Microsoft Update page.  
 
-  - By default, the **Local System** account for the server on which an automatic deployment rule was created is used to connect to the Internet and download software updates when the automatic deployment rules run. When this account does not have access to the Internet, software updates fail to download and the following entry is logged to ruleengine.log: **Failed to download the update from internet. Error = 12007**. Configure the credentials to connect to the proxy server when the Local System account does not have Internet access. 
+  - By default, the **Local System** account for the server on which an automatic deployment rule was created is used to connect to the Internet and download software updates when the automatic deployment rules run. When this account doesn't have access to the Internet, software updates fail to download and the following entry is logged to ruleengine.log: **Failed to download the update from internet. Error = 12007**. Configure the credentials to connect to the proxy server when the Local System account doesn't have Internet access. 
 
 
 ## WSUS settings
@@ -114,7 +114,7 @@ The following list provides more information about each option that you can use 
 
 - **Do not synchronize from Microsoft Update or upstream data source**: Use this setting to manually synchronize software updates when the software update point at the top-level site is disconnected from the Internet. For more information, see [Synchronize software updates from a disconnected software update point](synchronize-software-updates-disconnected.md).  
 
-You can also configure whether to create WSUS reporting events on the **Synchronization Source** page of the wizard or on the **Sync Settings** tab in Software Update Point Component Properties. Configuration Manager doesn't use these events; therefore, you will normally choose the default setting **Do not create WSUS reporting events**.  
+You can also configure whether to create WSUS reporting events on the **Synchronization Source** page of the wizard or on the **Sync Settings** tab in Software Update Point Component Properties. Configuration Manager doesn't use these events; therefore, you'll normally choose the default setting **Do not create WSUS reporting events**.  
 
 ## Synchronization schedule
 
@@ -141,7 +141,7 @@ The default setting is to wait 3 months before expiring a superseded update. The
 
 Configuration Manager can automatically run the most common WSUS maintenance tasks for you. For more information about these tasks, see [Software updates maintenance](../deploy-use/software-updates-maintenance.md).
 
-## <a name="bkmk_maxruntime"></a> Maximum Run Time
+## <a name="bkmk_maxruntime"></a> Maximum run time
 
 [!INCLUDE [maximum-run-time](../includes/maximum-run-time.md)]
 
@@ -170,7 +170,7 @@ Configure the classifications settings on the **Classifications** page of the wi
 
 ## Third party updates
 
-You can enable third party updates for Configuration Manager clients. When you Enable third party software updates in the SUP component properties, the SUP will download the signing certificate used by WSUS for third party updates. This option is not available during install of the software update point, and should be configured after the SUP is installed. To enable the client settings for third party updates, see the [About client settings](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) article.
+You can enable third party updates for Configuration Manager clients. When you Enable third party software updates in the SUP component properties, the SUP will download the signing certificate used by WSUS for third party updates. This option isn't available during install of the software update point, and should be configured after the SUP is installed. To enable the client settings for third party updates, see the [About client settings](../../core/clients/deploy/about-client-settings.md#enable-third-party-software-updates) article.
 
 ## Next steps
 

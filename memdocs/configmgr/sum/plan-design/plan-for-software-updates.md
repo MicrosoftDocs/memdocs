@@ -114,7 +114,7 @@ Start this change on a device collection. Once triggered, the clients look for a
 
 1.  In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.  
 
-2.  Select the target collection. On the **Home** tab of the ribbon, in the **Collection** group, click **Client Notification**, and then click **Switch to next Software Update Point**.  
+2.  Select the target collection. On the **Home** tab of the ribbon, in the **Collection** group, select **Client Notification**, and then select **Switch to next Software Update Point**.  
 
 
 ###  <a name="BKMK_SUP_CrossForest"></a> Software update points in an untrusted forest  
@@ -193,7 +193,7 @@ You can use the **Third-Party Software Update Catalogs** node in the Configurati
 For more information, see [Third-party software updates](../deploy-use/third-party-software-updates.md).
 
 #### System Center Updates Publisher
-System Center Updates Publisher (SCUP) is a stand-alone tool that enables independent software vendors or line-of-business application developers to manage custom updates. These updates include those with dependencies, like drivers and update bundles. SCUP can also be used for third-party update catalogs that aren't available directly in the console. 
+System Center Updates Publisher (SCUP) is a stand-alone tool that enables independent software publishers or line-of-business application developers to manage custom updates. These updates include those with dependencies, like drivers and update bundles. SCUP can also be used for third-party update catalogs that aren't available directly in the console. 
 
 For more information, see [System Center Updates Publisher](../tools/updates-publisher.md).
 
@@ -236,7 +236,7 @@ When you install more than one software update point at a primary site, use the 
 
 #### Configuring the WSUS content directory path
 
-When you install WSUS, you'll need to provide a content directory path. The WSUS content directory is primarily used for storing the Microsoft Software License Terms files needed by clients during scanning. The Configuration Manager  The WSUS content directory should not overlap with your content source directory for Configuration Manager software deployment packages. Overlapping the WSUS content directory and the Configuration Manager package source will result in incorrect files being removed from the WSUS content directory.
+When you install WSUS, you'll need to provide a content directory path. The WSUS content directory is primarily used for storing the Microsoft Software License Terms files needed by clients during scanning. The Configuration Manager  The WSUS content directory shouldn't overlap with your content source directory for Configuration Manager software deployment packages. Overlapping the WSUS content directory and the Configuration Manager package source will result in incorrect files being removed from the WSUS content directory.
 
 ####  <a name="BKMK_CustomWebSite"></a> Configure WSUS to use a custom website  
 When you install WSUS, you have the option to use the existing IIS Default website, or to create a custom WSUS website. Create a custom website for WSUS so that IIS hosts the WSUS services in a dedicated virtual website. Otherwise it shares the same website that's used by the other Configuration Manager site systems or applications. This configuration is especially necessary when you install the software update point role on the site server. When you run WSUS in Windows Server 2012 or later, WSUS is configured by default to use port 8530 for HTTP and port 8531 for HTTPS. Specify these ports when you create the software update point at a site.  
