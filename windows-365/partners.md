@@ -34,6 +34,14 @@ Windows 365 gives opportunities to independent software vendors. When building t
 
 Here’s the list of approved partners that build and innovate with Windows 365.
 
+## 10ZiG
+
+![10ZiG image](./media/partners/10zig.png)
+
+10ZiG Technology is a world-market leader in Thin & Zero Client endpoint devices for Virtual Desktop Infrastructure and Cloud. Microsoft Windows 365 Cloud PC securely streams the Windows experience to any 10ZiG endpoint device including personalized apps, data, and settings. It reduces security risks by storing information in the Cloud, and not on devices.
+
+For more information, visit the [10ZiG website](https://www.10zig.com/resources/vdi-blog/microsoft-windows-365-cloud).
+
 ## IGEL
 
 ![IGEL image](./media/partners/igel.png)
