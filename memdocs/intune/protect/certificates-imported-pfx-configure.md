@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/22/2021
+ms.date: 02/28/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -65,9 +65,6 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
   - Overview of the [Certificate Connector for Microsoft Intune](certificate-connector-overview.md).
   - [Prerequisites](certificate-connector-prerequisites.md).
   - [Installation and configuration](certificate-connector-install.md).
-
-  > [!TIP]
-  > Beginning on July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. With the release of version 6.2109.51.0 of the Certificate Connector for Microsoft, the previous connectors are no longer supported.
 
 - **Windows Server**:
 

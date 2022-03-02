@@ -43,6 +43,16 @@ Disable user input during setup, but display the setup wizard. Only use this opt
 
 Run a site reset. This action resets the database and service accounts for the site. For more information, see [Run a site reset](../../manage/modify-your-infrastructure.md#bkmk_reset).
 
+## `/SQLMOVE`
+
+Move the site database. This action moves the site database to a new instance of SQL Server on the same computer, or to a different computer that runs a supported version of SQL Server. For more information, see [Modify the site database configuration](../../manage/modify-your-infrastructure.md#bkmk_dbconfig).
+
+Provide the SQL server name, database name and instance name in the following format:
+
+`/SQLMOVE <SQL Server FQDN>:<Database Name>:<SSB Port>`
+
+`/SQLMOVE <SQL Server FQDN>:<InstanceName>\<Database Name>:<SSB Port>`
+
 ## `/TESTDBUPGRADE`
 
 Run a test on a backup of the site database to make sure that the database can upgrade.

@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 02/03/2022
+ms.date: 02/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -140,11 +140,14 @@ Currently, the Group Policy analytics (preview) tool only supports non-ADMX sett
 
     - **Ready for migration**: The policy has a matching setting in Intune, and is ready to be migrated to Intune.
     - **Not supported**: The policy doesn't have a matching setting. Typically, policy settings that show this status aren't exposed to MDM providers, including Intune.
-    - **Deprecated**: The policy may apply to older Windows versions, and no longer used in Windows 10/11.
+    - **Deprecated**: The policy may apply to older Windows versions, older Microsoft Edge versions, and more policies that aren't used anymore.
+
+      > [!NOTE]
+      > When the Microsoft Intune product team updates the mapping logic, your imported GPOs are automatically updated. You don't need to reimport your GPOs.
 
 3. Select the **Reports** tab > **Group policy migration readiness**. In this report, you can:
 
-    - See the number of settings in your GPO that can be configure in a device configuration profile. It also shows if the settings can be in a custom profile, aren't supported, or are deprecated.
+    - See the number of settings in your GPO that can be configured in a device configuration profile. It also shows if the settings can be in a custom profile, aren't supported, or are deprecated.
     - Filter the report output using the **Migration Readiness**, **Profile type**, and **CSP Name** filters.
     - Select **Generate report** or **Generate again** to get current data.
     - See the list of settings in your GPO.
