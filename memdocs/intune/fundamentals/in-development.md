@@ -82,11 +82,14 @@ Feedback settings will be provided to address M365 enterprise feedback policies 
 ### Apps UI when using Android 12L OS<!-- 12536901 -->
 The Android 12L OS contains new features designed to improve the Android 12 experience on large and folding dual-screen devices. Intune apps will support Android 12L when the update is released to devices.
 
-### Uninstall DMG-type applications on managed macOS devices (Public preview)<!-- 13155022 idready idstaged -->
+### Uninstall DMG-type applications on managed macOS devices (Public preview)<!-- 13155022 -->
 You will be able to use the Uninstall assignment type to remove DMG-type applications on managed macOS devices from Microsoft Endpoint Manager. You can find macOS DMG apps in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **macOS app (.DMG)**. For related information, [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md). 
 
 ### Deploy macOS LOB apps by uploading PKG-type installer files (Public preview)<!-- 13155147 -->
 You will be able to upload and deploy PKG-type installer files as macOS line-of-business apps. You can add a macOS LOB app from [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **Add** > **Line-of-business app**. For more information about macOS LOB apps, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
+
+### iOS/iPadOS notifications will require upcoming March Company Portal update<!-- 9819536 -->
+We will be making service side updates to iOS/iPadOS notifications expected in Intune's April (2204) service release which will require users to have updated to at least the March version of the iOS/iPadOS Company Portal app. If you are using a functionality that could generate push notifications, you will want to ensure your users update the iOS/iPadOS Company Portal. There is no additional change in functionality. The Company Portal update will be released prior to the service change, so most users will likely have updated the app and will not be impacted. However, you may want to notify users of this change to ensure all users continue to receive push notifications sent by your organization. For related information, see [Update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app).
 
 <!-- ***********************************************-->
 
