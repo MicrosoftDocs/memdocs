@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/28/2022
+ms.date: 03/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -339,12 +339,14 @@ You can use the **./mst-cli** command-line tool to update the TLS certificate on
 
 1. Copy the certificate file to **/etc/mstunnel/private/site.pfx**
 2. Run: `mst-cli import_cert`
+3. Run: `mst-cli server restart`
 
 **PEM**:
 
 1. Copy the new certificate to **/etc/mstunnel/certs/site.crt**
 2. Copy the private key to **/etc/mstunnel/private/site.key**
 3. Run: `mst-cli import_cert`
+4. Run: `mst-cli server restart`
 
 For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md).
 
