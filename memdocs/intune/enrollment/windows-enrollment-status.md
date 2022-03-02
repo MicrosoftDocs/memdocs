@@ -3,12 +3,12 @@
 
 title: Set up the Enrollment Status Page
 titleSuffix: Microsoft Intune
-description: Set up a greeting page for users enrolling Windows 10 or Windows 11 devices.
+description: Set up a greeting page for users signing in and enrolling Windows devices.
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/24/2022
+ms.date: 03/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -41,16 +41,18 @@ ms.collection:
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-The Enrollment Status Page (ESP) displays provisioning progress after a new device is enrolled, as well as when new users sign into the device.  This enables IT administrators to optionally prevent (block) access to the device until it has been fully provisioned, while at the same time giving users information about the tasks remaining in the provisioning process.
+The Enrollment Status Page (ESP) displays provisioning progress after a new device is enrolled, and also when new users sign in to the device. The ESP provides a user interface so that the device user can monitor and track setup and enrollment progress. It locks the device during setup and doesn't let the user progress beyond the screen until provisioning is complete. 
 
-The ESP can be used as part of any [Windows Autopilot](../../autopilot/index.yml) provisioning scenario, and can also be used separately from Windows Autopilot as part of the default out-of-box experience (OOBE) for Azure AD Join, as well as for any new users signing into the device for the first time.
+You can show the enrollment status page during the default out-of-box experience (OOBE) for Azure AD Join, any [Windows Autopilot](../../autopilot/index.yml) provisioning scenario, or when new users sign into the device for the first time.  
 
-Within the profile you can configure:   
+To deploy the enrollment status page, you have to create an enrollment status page profile in Microsoft Intune. Within a profile, you can configure:   
 
-- Visibility of installation progress
+- The visibility of installation progress
 - Blocking device access until the provisioning process is completed
 - Time limits
 - Allowed troubleshooting operations  
+
+This article describes how to create and edit a profile for the enrollmnet status page, and describes the information that the enrollment status page tracks.     
 
 
 ## Create new profile 
