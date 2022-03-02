@@ -2,7 +2,7 @@
 title: Technical preview 2203
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2203.
-ms.date: 03/01/2022
+ms.date: 03/02/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -31,8 +31,6 @@ The following sections describe the new features to try out in this version:
 <!-- ## General known issues  -->
  
 <!--  [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
-
-
 ## Next steps
 
 For more information about installing or updating the technical preview branch, see [Technical preview](../technical-preview.md).
