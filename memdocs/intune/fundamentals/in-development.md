@@ -129,6 +129,16 @@ Use the Company Portal app for macOS to enroll virtual machines running on Apple
 
 ## Device configuration
 
+### Android (AOSP) will support scope tags and RBAC settings<!-- 8503981 -->
+When you create a policy for Android (AOSP), you can use role-based access control (RBAC) and scope tags.
+
+For more information on these features, see:
+- [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
+- [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md)
+
+Applies to:
+- Android Open Source Project (AOSP)
+
 ### Endpoint security profiles support filters; See the filter status on a device configuration profile report<!-- 11889620 -->
 There are some new features when using filters:
 - When you create a device configuration profile for Windows devices, a per-policy report will show reporting information in the **Device and user check-in status** (**Devices** > **Configuration profiles** > Select an existing policy).
