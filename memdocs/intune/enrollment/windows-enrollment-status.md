@@ -52,7 +52,7 @@ To deploy the enrollment status page, you have to create an enrollment status pa
 - Time limits
 - Allowed troubleshooting operations  
 
-This article describes how to create and edit a profile for the enrollmnet status page, and describes the information that the enrollment status page tracks.     
+This article describes how to create and edit a profile, and describes the information that the enrollment status page tracks.     
 
 
 ## Create new profile 
