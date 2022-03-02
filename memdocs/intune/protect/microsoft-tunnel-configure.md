@@ -45,7 +45,10 @@ Use of a *Server configuration* lets you create a configuration a single time an
 
 3. On the **Settings** tab, configure the following items:
 
-   - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
+   - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. The Tunnel Client IP address range specified must not conflict with an on-prem network range. For example, *169.254.0.0/16*.
+     - We recommend the Automatic Private IP Addressing (APIPA) range of 169.254.0.0/16, as this range avoids conflicts with other corporate networks.
+     - If the client IP address range conflicts with the destination, it will loopback and fail to communicate with the corporate network.
+     - When you select a different client IP address range you must ensure it won't conflict with any existing corporate network IP address ranges.
 
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
 
