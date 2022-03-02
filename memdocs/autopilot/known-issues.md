@@ -28,6 +28,10 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### Device goes through Autopilot deployment without an assigned profile
+
+When a device is registered in Autopilot and no profile is assigned, it will take the default Autopilot profile. This is by design to ensure that all devices registered with Autopilot, goes through the Autopilot experience. If you do not want the device to go through an Autopilot deployment, you must remove the Autopilot registration. 
+
 ### White screen during HAADJ deployment
 
 There is a UI bug on Autopilot HAADJ deployments where the Enrollment Status page is displayed as a white screen. This issue is limited to the UI and should not impact the deployment process. 
