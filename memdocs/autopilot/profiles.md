@@ -103,6 +103,8 @@ After you've created an Autopilot deployment profile, you can edit certain parts
     > [!NOTE]
     > Changes to the profile are applied to devices assigned to that profile. However, the updated profile won't be applied to a device that has already enrolled in Intune until after the device is reset and reenrolled.
 
+If a device is registered in Autopilot and a profile is not assigned, it will receive the default Autopilot profile. If you do not want a device to go through Autopilot, you must remove the Autopilot registration.
+
 ## Alerts for Windows Autopilot unassigned devices
 <!-- 163236 -->
 
