@@ -147,7 +147,7 @@ If you assign a user or device more than one ESP profile, the profile with the h
 3. If no profiles are assigned to the device or user, Intune applies the default ESP profile.    
 
 ### Set priority  
-To prioritze your profiles:  
+To prioritize your profiles:  
 
 1. Hover over the profile in the list with your cursor until you see three vertical dots.  
 2. Drag the profile to the desired position in the list.  
