@@ -69,6 +69,6 @@ Other help and support documentation is available for IT pros and Intune adminis
 
 * [Docs.microsoft.com](https://docs.microsoft.com): Home to the Microsoft technical documentation where you can explore all guides and articles by product. 
 * [Microsoft Endpoint Manager documentation](/mem): Official product documentation for Microsoft Endpoint Manager, which includes Microsoft Intune, Microsoft Endpoint Configuration Manager, and Windows Autopilot.  
-* [Troubleshooting device enrollment in Intune](/mem/intune/troubleshoot-device-enrollment-in-intune): Microsoft Intune article suggestions for troubleshooting device enrollment issues in Microsoft Intune.  
+* [Troubleshooting device enrollment in Intune](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune): Microsoft Intune article suggestions for troubleshooting device enrollment issues in Microsoft Intune.  
 
 
