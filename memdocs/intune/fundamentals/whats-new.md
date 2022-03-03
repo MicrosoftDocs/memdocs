@@ -60,6 +60,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
+## Week of February 28, 2022
+
+### Device configuration
+
+#### Cellular data plan for Apple's Automated Device Enrollment<!-- 13729221 -->
+As part of an iOS/iPadOS enrollment profile when configuring Automated Device Enrollment (ADE), you can now configure devices to activate cellular data. Configuring this option will send a command to activate cellular data plans for your organization's eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. This setting applies to devices running iOS/iPadOS 13.0 and later that are enrolling with ADE. For more information, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios#create-an-apple-enrollment-profile.md).
+
 ## Week of February 21, 2022 (Service release 2202)
 
 ### Device security
