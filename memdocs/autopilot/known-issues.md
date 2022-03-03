@@ -42,7 +42,7 @@ This article describes known issues that can often be resolved by configuration 
 
 3. **Hybrid Azure AD devices**: When Hybrid Azure AD devices are deployed with Autopilot, 2 device IDs are initially associated with the same device – one Azure AD and one hybrid.  The hybrid compliance state will display as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in. 
 
-    The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified.
+    The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or hybrid Azure AD joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
 
 4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices, because until the device has been rebooted the status of BitLocker and Secure Boot have not been captured, and cannot be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
 
