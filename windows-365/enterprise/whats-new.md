@@ -59,7 +59,7 @@ Administrators and users can now restore a Cloud PC to a state from a previous p
 
 ### Higher Cloud PC screen resolution option (preview)<!--38301718 -->
 
-Cloud PC users can now choose a higher screen resolution when they connect to their Cloud PC from http://windows365.microsoft.com.
+Cloud PC users can now choose a higher screen resolution when they connect to their Cloud PC from https://windows365.microsoft.com.
 
 <!-- ########################## -->
 ## Week of February 14, 2022

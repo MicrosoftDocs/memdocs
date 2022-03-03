@@ -54,7 +54,7 @@ Learn what new features are available in Windows 365 Business.
 ### Device management
 
 #### Point-in-time restore<!--37063579 -->
-Users now restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points are available. For more information, see []().
+Users can now restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points are available. For more information, see [Point-in-time restore for Windows 365 Business](restore-overview.md).
 
 #### Windows 365 link on Microsoft 365 admin center<!--37188422 -->
 
@@ -62,7 +62,7 @@ To make it easier for admins to set up Windows 365, a link has been added to the
 
 #### Higher Cloud PC screen resolution option (preview)<!--38301718 wnready-->
 
-Cloud PC users will be able to choose a higher screen resolution when they connect to their Cloud PC from https://windows365.microsoft.com.
+Cloud PC users can now choose a higher screen resolution when they connect to their Cloud PC from https://windows365.microsoft.com.
 
 <!-- ########################## -->
 ## Week of December 6, 2021 (Service release 2111)
