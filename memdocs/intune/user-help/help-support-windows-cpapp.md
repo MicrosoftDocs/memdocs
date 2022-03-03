@@ -55,7 +55,7 @@ For the step-by-step procedure, see [Send logs to your company support from the 
 Use your organization's helpdesk details, such as phone number, emails, and website to quickly troubleshoot work or school access.  
 
 ## Find answers to frequently asked questions  
-The **Frequently asked questions** section lists some of the most common questions people ask when enrolling their devices. Select a question to go to the most relevant help article on docs.microsoft.com. Select **See all help topics** to browse through all of the Windows enrollment documentation available for you. 
+The **Frequently asked questions** section lists some of the most common questions people ask when enrolling their devices. Select a question to go to the most relevant help article on Docs.microsoft.com. Select **See all help topics** to browse through all Windows enrollment articles.   
 
 ## Report app problems to Microsoft  
 Select **Report problem to Microsoft** to open the **Send feedback** page. From there, you can:  
@@ -65,10 +65,10 @@ Select **Report problem to Microsoft** to open the **Send feedback** page. From 
 * Leave a review for the app in Microsoft Store   
 
 ## IT pro and administrator documentation  
-Additional help and support documentation is available for IT pros and Intune administrators on docs.microsoft.com. 
+Other help and support documentation is available for IT pros and Intune administrators on docs.microsoft.com. 
 
-* [Docs.microsoft.com](docs.microsoft.com): Home to the Microsoft technical documentation where you can explore all guides and articles by product. 
-* [Microsoft Endpoint Manager documentation](https://docs.microsoft.com/mem): Official product documentation for Microsoft Endpoint Manager, which includes Microsoft Intune, Microsoft Endpoint Configuration Manager, and Windows Autopilot.  
+* [Docs.microsoft.com](https://docs.microsoft.com): Home to the Microsoft technical documentation where you can explore all guides and articles by product. 
+* [Microsoft Endpoint Manager documentation](/mem): Official product documentation for Microsoft Endpoint Manager, which includes Microsoft Intune, Microsoft Endpoint Configuration Manager, and Windows Autopilot.  
 * [Troubleshooting device enrollment in Intune](/mem/intune/troubleshoot-device-enrollment-in-intune): Microsoft Intune article suggestions for troubleshooting device enrollment issues in Microsoft Intune.  
 
 
