@@ -44,7 +44,7 @@ This article describes known issues that can often be resolved by configuration 
 
     The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified.
 
-4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices because until the device has been rebooted the status of BitLocker and Secure Boot have not been captured and cannot be used as part of the Compliance Policy.  The grace period can be as short as 0.25 days.
+4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices, because until the device has been rebooted the status of BitLocker and Secure Boot have not been captured, and cannot be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
 
 ### Device goes through Autopilot deployment without an assigned profile
 
