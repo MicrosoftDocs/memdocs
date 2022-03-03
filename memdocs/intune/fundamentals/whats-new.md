@@ -462,6 +462,7 @@ The following details for Windows 10 and Windows 11 devices are now collected an
 - System Management BIOS version
 - TPM Manufacturer version
 - TPM Manufacturer ID
+
 These details are also included when you *Export* the details from the *All devices* pane.  
 
 #### Settings for Shared iPad now generally available<!-- 10975827  -->  
