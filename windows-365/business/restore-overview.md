@@ -34,7 +34,7 @@ Point-in-time restore lets end users restore a Cloud PC to the exact state it wa
 
 ## Restore point intervals
 
-Short-term restore points are saved every every 12 hours. Each Cloud PC will have 10 short-term restore points saved at these intervals.
+Short-term restore points are saved every 12 hours. Each Cloud PC will have 10 short-term restore points saved at these intervals.
 
 In addition to these short-term restore points, there are also four long-term restore points. These long-term restore points are saved every seven days.
 
