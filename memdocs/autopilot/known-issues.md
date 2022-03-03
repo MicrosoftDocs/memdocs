@@ -30,16 +30,21 @@ This article describes known issues that can often be resolved by configuration 
 
 ### Device-based Conditional Access policies
 
-The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn’t supported.  See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
+1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn’t supported.  See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
 
-Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Autopilot enrollment in cases where restrictive polices are present such as:
-- Conditional Access policy 1: Block all apps except those on an exclusion list.
-- Conditional Access policy 2: Require a compliant device for the apps on the exclusion list.
-In this case, Microsoft Intune Enrollment and Microsoft Intune should be included in that exclusion list of policy 1.
+2. Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Autopilot enrollment in cases where restrictive polices are present such as:
+    - Conditional Access policy 1: Block all apps except those on an exclusion list.
+    - Conditional Access policy 2: Require a compliant device for the apps on the exclusion list.
+ 
+    In this case, Microsoft Intune Enrollment and Microsoft Intune should be included in that exclusion list of policy 1.
 
-If a policy is in place such that **all cloud apps** require a compliant device (there is no exclusion list), Microsoft Intune Enrollment will already be excluded by default, so that the device can register with Azure AD and enroll with Intune and avoid a circular dependency.
+    If a policy is in place such that **all cloud apps** require a compliant device (there is no exclusion list), Microsoft Intune Enrollment will already be excluded by default, so that the device can register with Azure AD and enroll with Intune and avoid a circular dependency.
 
-When Hybrid Azure AD devices are deployed with Autopilot, 2 device IDs get associated with the same device – one Azure AD and one hybrid.  The hybrid compliance state will display as **N/A** when viewed from the devices list in the Azure portal. Intune only syncs with the Hybrid device ID after a successful user login. This can cause issues with any device based Conditional Access polices that block access based on compliance. Conditional Access is behaving as intended in this situation. Intune/Autopilot should validate that they are configuring correctly then escalate to the devices team if correct. Only 1 object should exist.
+3. **Hybrid Azure AD devices**: When Hybrid Azure AD devices are deployed with Autopilot, 2 device IDs are initially associated with the same device – one Azure AD and one hybrid.  The hybrid compliance state will display as **N/A** when viewed from the devices list in the Azure portal. Intune only syncs with the Hybrid device ID after a successful user login. 
+
+    This can cause issues with any device based Conditional Access polices that block access based on compliance. Conditional Access is behaving as intended in this situation. To resolve the conflict, a user must to sign in to the device, or the policy must be modified for the device.
+
+4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices because until the device has been rebooted the status of BitLocker and Secure Boot have not been captured and cannot be used as part of the Compliance Policy.  The grace period can be as short as 0.25 days.
 
 ### Device goes through Autopilot deployment without an assigned profile
 
