@@ -43,7 +43,7 @@ Learn what's new each week in Microsoft Intune. You can also find [important not
 >
 > Some features may roll out over several weeks and might not be available to all customers in the first week.
 >
-> Check the [In development page](in-development.md) for a list of upcoming features in a release.
+> For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md). For new information about Autopilot, see [Windows Autopilot What's New](/mem/autopilot/windows-autopilot-whats-new).
 
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
@@ -59,6 +59,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of February 28, 2022
+
+### Device configuration
+
+#### Cellular data plan for Apple's Automated Device Enrollment<!-- 13729221 -->
+As part of an iOS/iPadOS enrollment profile when configuring Automated Device Enrollment (ADE), you can now configure devices to activate cellular data. Configuring this option will send a command to activate cellular data plans for your organization's eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. This setting applies to devices running iOS/iPadOS 13.0 and later that are enrolling with ADE. For more information, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 ## Week of February 21, 2022 (Service release 2202)
 
