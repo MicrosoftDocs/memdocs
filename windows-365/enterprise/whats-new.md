@@ -57,7 +57,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 Administrators and users can now restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points are available. For more information, see [Point-in-time restore for Windows 365 Enterprise](restore-overview.md).
 
-### Higher Cloud PC screen resolution option (preview)<!--38301718 -->
+#### Higher Cloud PC screen resolution option (preview)<!--38301718 -->
 
 Cloud PC users can now choose a higher screen resolution when they connect to their Cloud PC from https://windows365.microsoft.com.
 
