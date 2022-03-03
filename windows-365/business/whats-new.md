@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/08/2021
+ms.date: 03/03/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,23 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of February  28, 2022 (Service release 2202)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Point-in-time restore<!--37063579 -->
+Users now restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points are available. For more information, see []().
+
+#### Windows 365 link on Microsoft 365 admin center<!--37188422 -->
+
+To make it easier for admins to set up Windows 365, a link has been added to the M365 admin center home page. Admins with Windows 365 Enterprise licenses will see a link for [endpoint.microsoft.com](https://endpoint.microsoft.com) and admins with Windows 365 Business licenses will see a link for [windows365.microsoft.com](https://windows365.microsoft.com).
+
+#### Higher Cloud PC screen resolution option (preview)<!--38301718 wnready-->
+
+Cloud PC users will be able to choose a higher screen resolution when they connect to their Cloud PC from https://windows365.microsoft.com.
 
 <!-- ########################## -->
 ## Week of December 6, 2021 (Service release 2111)

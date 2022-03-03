@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/18/2022
+ms.date: 03/03/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,20 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of February 28, 2022 (Service release 2202)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Point-in-time restore<!--37063579-->
+
+Administrators and users can now restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points are available. For more information, see [Point-in-time restore for Windows 365 Enterprise](restore-overview.md).
+
+### Higher Cloud PC screen resolution option (preview)<!--38301718 -->
+
+Cloud PC users can now choose a higher screen resolution when they connect to their Cloud PC from http://windows365.microsoft.com.
 
 <!-- ########################## -->
 ## Week of February 14, 2022
