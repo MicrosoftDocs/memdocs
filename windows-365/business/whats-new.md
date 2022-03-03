@@ -53,7 +53,7 @@ Learn what new features are available in Windows 365 Business.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Point-in-time restore (preview)!<!--37063579 -->
+#### Point-in-time restore (preview)<!--37063579 -->
 Users can now restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points are available. For more information, see [Point-in-time restore for Windows 365 Business](restore-overview.md).
 
 #### Windows 365 link on Microsoft 365 admin center<!--37188422 -->
