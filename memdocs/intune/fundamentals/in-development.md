@@ -109,7 +109,7 @@ We are continuing to update Intune's report experience to enhance consistency, a
 
 More drilldowns are available and additional assignment filters are supported. For related information about reporting, see [Intune reports](../fundamentals/reports.md).
 
-### See the IPv4 address and Wi-Fi subnet ID on Andriod Enterprise devices<!-- 12396463 -->
+### See the IPv4 address and Wi-Fi subnet ID on Android Enterprise devices<!-- 12396463 -->
 Customers will now have the ability to see the IPv4 address and Wi-Fi subnet ID reported for AE corporate-owned fully managed, dedicated, and work profile devices.
 
 ### Support for bootstrap tokens on enrolled macOS devices (public preview)<!-- 9539461 -->
