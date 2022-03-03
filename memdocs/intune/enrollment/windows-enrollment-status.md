@@ -89,7 +89,7 @@ This article describes how to create and edit a profile, and describes the infor
        > If you only want the ESP to appear on Autopilot devices during initial device setup, select the **No** option. Then create a new ESP profile, choose the **Yes** option, and target the profile to an Autopilot device group.  
 
 
-     - **Block device use until all apps and profiles are installed**: This setting applies to all *required* apps assigned to the user or device. Your options:
+     - **Block device use until all apps and profiles are installed**: Your options:
        - **No**: Users can leave the ESP before Intune is finished setting up the device. 
        - **Yes**: Users can't leave the ESP until Intune is done setting up the device. This option unlocks additional settings for this scenario.  
  
