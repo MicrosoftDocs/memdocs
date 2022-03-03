@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Overview of restoring a Cloud PC to a previous state
+title: Overview of restoring a Cloud PC to a previous state with Windows 365 Enterprise
 titleSuffix:
-description: Learn about restoring a Cloud PC to a previous state.
+description: Learn about restoring a Cloud PC to a previous state with Windows 365 Enterprise.
 keywords:
 author: ErikjeMS 
 ms.author: erikje
@@ -28,7 +28,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Point-in-time restore (preview)
+# Point-in-time restore for Windows 365 Enterprise (preview)
 
 Point-in-time restore lets an administrator restore a Cloud PC to the exact state it was at an earlier point in time. Admins can also give users permission to restore their own Cloud PCs.
 
