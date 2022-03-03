@@ -28,6 +28,19 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### Device-based Conditional Access policies
+
+The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn’t supported.  See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
+
+Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Autopilot enrollment in cases where restrictive polices are present such as:
+- Conditional Access policy 1: Block all apps except those on an exclusion list.
+- Conditional Access policy 2: Require a compliant device for the apps on the exclusion list.
+In this case, Microsoft Intune Enrollment and Microsoft Intune should be included in that exclusion list of policy 1.
+
+If a policy is in place such that **all cloud apps** require a compliant device (there is no exclusion list), Microsoft Intune Enrollment will already be excluded by default, so that the device can register with Azure AD and enroll with Intune and avoid a circular dependency.
+
+When Hybrid Azure AD devices are deployed with Autopilot, 2 device IDs get associated with the same device – one Azure AD and one hybrid.  The hybrid compliance state will display as **N/A** when viewed from the devices list in the Azure portal. Intune only syncs with the Hybrid device ID after a successful user login. This can cause issues with any device based Conditional Access polices that block access based on compliance. Conditional Access is behaving as intended in this situation. Intune/Autopilot should validate that they are configuring correctly then escalate to the devices team if correct. Only 1 object should exist.
+
 ### Device goes through Autopilot deployment without an assigned profile
 
 When a device is registered in Autopilot and no profile is assigned, it will take the default Autopilot profile. This is by design to ensure that all devices registered with Autopilot, goes through the Autopilot experience. If you do not want the device to go through an Autopilot deployment, you must remove the Autopilot registration. 
