@@ -40,9 +40,9 @@ This article describes known issues that can often be resolved by configuration 
 
     If a policy is in place such that **all cloud apps** require a compliant device (there is no exclusion list), Microsoft Intune Enrollment will already be excluded by default, so that the device can register with Azure AD and enroll with Intune and avoid a circular dependency.
 
-3. **Hybrid Azure AD devices**: When Hybrid Azure AD devices are deployed with Autopilot, 2 device IDs are initially associated with the same device – one Azure AD and one hybrid.  The hybrid compliance state will display as **N/A** when viewed from the devices list in the Azure portal. Intune only syncs with the Hybrid device ID after a successful user login. 
+3. **Hybrid Azure AD devices**: When Hybrid Azure AD devices are deployed with Autopilot, 2 device IDs are initially associated with the same device – one Azure AD and one hybrid.  The hybrid compliance state will display as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in. 
 
-    This can cause issues with any device based Conditional Access polices that block access based on compliance. Conditional Access is behaving as intended in this situation. To resolve the conflict, a user must to sign in to the device, or the policy must be modified for the device.
+    The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified.
 
 4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices because until the device has been rebooted the status of BitLocker and Secure Boot have not been captured and cannot be used as part of the Compliance Policy.  The grace period can be as short as 0.25 days.
 
