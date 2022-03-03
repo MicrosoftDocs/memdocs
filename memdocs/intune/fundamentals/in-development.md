@@ -188,6 +188,7 @@ Applies to:
 The Settings Catalog will have new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
 
 **User Experience > Accessibility**:
+
 - Close View Far Point
 - Close View Hotkeys Enabled
 - Close View Near Point
@@ -211,41 +212,51 @@ The Settings Catalog will have new macOS settings you can configure (**Devices**
 - White On Black
 
 **Air Play**:
+
 - Allow List
 - Password
 
 **User Experience > Desktop**: 
+
 - Override Picture Path
 
 **Preferences > Global Preferences**: 
+
 - Auto Log Out Delay
 - Multiple Session Enabled
 
 **Printing > Printing**: 
+
 - Require Admin To Print Locally
 
 **Security > Security Preferences**: 
+
 - Do Not Allow Firewall UI
 - Do Not Allow Lock Message UI
 - Do Not Allow Password Reset UI
 
 **Preferences > System Preferences**:
+
 - Disabled Preference Panes
 - Enabled Preference Panes
 
 **Preferences > User Preferences**: 
+
 - Disable Using Cloud Password
 
 The following settings will also be in Settings Catalog. Currently, they're only available in Templates:
 
 **Printing > Air Print**:
-- Force TLS
-- Port
+
+- IP Address 
+- Resource Path
 
 **Login > Login Items**:
+
 - Hide
 
 **Login > Login Window Behavior**:
+
 - Admin Host Info
 - Allow List
 - Deny List
@@ -267,10 +278,12 @@ The following settings will also be in Settings Catalog. Currently, they're only
 - Sleep Disabled
 
 **System Policy > System Policy Control**:
+
 - Allow Identified Developers
 - Enable Assessment
 
 **System Policy** > **System Policy Managed**:
+
 - Disable Override
 
 There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
