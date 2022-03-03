@@ -50,7 +50,7 @@ The following Windows 365 Enterprise and Business objects are automatically encr
 Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information, see [Privacy and personal data in Windows 365](./privacy-personal-data.md).
 
 >[!NOTE]
->BitLocker is not supported as an encryption option for Windows 365 Cloud PCs. For additional information, see [using Windows 10 virtual machines in Intune] (/mem/intune/fundamentals/windows-10-virtual-machines).
+>BitLocker is not supported as an encryption option for Windows 365 Cloud PCs. For additional information, see [using Windows 10 virtual machines in Intune](https://go.microsoft.com/fwlink/?linkid=2188944).
 
 ## Encryption of data in transit
 
