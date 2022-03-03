@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 02/08/2022
+ms.date: 03/03/2022
 audience: Admin
 ms.topic: troubleshooting
 ms.service: cloudpc
@@ -33,6 +33,10 @@ ms.collection: M365-identity-device-management
 The following items are known issues for Windows 365 Enterprise.
 
 [!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
+
+## Using resize with restore
+
+A [resize](resize-cloud-pc.md) of a Cloud PC eliminates all existing [restore](restore-overview.md) points for that Cloud PC. New restore points will be captured at the intervals defined in the user setting.
 
 ## Next steps
 
