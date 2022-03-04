@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Get started with cloud native Windows endpoints 
+title: Tutorial-Get started with cloud native Windows endpoints 
 titleSuffix: Microsoft Endpoint Manager
 description: Set up secure cloud native Windows endpoints that are Azure AD joined, enrolled in Intune, and then deploy at scale with Autopilot.
 keywords:
@@ -9,7 +9,7 @@ author: scottbreenmsft
   
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/01/2021
+ms.date: 03/03/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -30,7 +30,7 @@ ms.collection:
   - highpri
 ---
 
-# Get started with cloud native Windows endpoints with Microsoft Endpoint Manager
+# Tutorial: Get started with cloud native Windows endpoints with Microsoft Endpoint Manager
 
 Increasing demand for remote work is accelerating adoption of Zero Trust security models, enabled by cloud- powered solutions. The shifting of device management to the cloud provides a better end-user experience and simplifies IT operations, while reducing reliance on on-premises infrastructure. This guide walks you through the steps to create a cloud native Windows endpoint configuration for your organization.
 
@@ -49,36 +49,7 @@ The table below describes the key difference between this guide and *Windows in 
 
 You can use this guide in combination with *Windows in cloud configuration* to further customize the pre-built experience.
 
-## Overview
-
-### What is a cloud native Windows endpoint?
-
-A cloud native Windows endpoint is joined to [Azure AD](/azure/active-directory/devices/concept-azure-ad-join) (AADJ) and managed by a Mobile Device Management (MDM) solution. Unlike traditional domain join or [Hybrid Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) endpoints, it has no dependencies on on-premises Active Directory. This document focuses on Microsoft Endpoint Manager (MEM) as the MDM solution. Cloud native endpoints can be easily deployed by using [Autopilot](./autopilot/windows-autopilot.md) to transform the pre-installed Windows operating system.
-
-:::image type="content" source="./media/cloud-native-windows-endpoints/cloud-native-endpoint-graphic.png" alt-text="Graphic representation of a cloud native Windows endpoint.":::
-
-### Benefits of cloud native Windows endpoints
-
-- **Best for remote work**  
-  Cloud native endpoints don't require line of sight to an on-premises domain controller, which significantly simplifies the user experience especially in remote work situations. For instance, a VPN connection isn't required for the initial device sign-in or to update the local device password after a network password change.
-- **Reduced reliance on on-premises infrastructure**  
-  Reducing your reliance on on-premises infrastructure will allow devices to be provisioned on any network, simplifying requirements and management.
-
-- **Unified cross platform endpoint management**  
-  You can step away from complex Group Policy management and modernize endpoint management by using a unified MDM solution that handles multiple platforms, like iOS, Android, macOS, and Windows all together in one place.
-
-- **Preserve Single-Sign-On (SSO) to on-premises applications**  
-  Cloud native endpoints don't compromise the user experience while on the corporate network. They natively provide SSO to on-premises infrastructure such as file servers, print servers, and web applications. For more information, see [SSO to on-premises resources](/azure/active-directory/devices/azuread-join-sso).
-
-- **Personalization preservation**  
-  Cloud native endpoints can easily take advantage of Microsoft 365 services to provide a synchronized and seamless experience across endpoints, including:
-  - Windows wallpaper
-  - Automatic sync of documents and desktop files to OneDrive
-  - Settings for Office
-  - Outlook signatures
-  - Microsoft Edge settings
-
-### How to get started
+## How to get started
 
 Use the five ordered phases in this guide, which build on each other to help you prepare your cloud native Windows endpoint configuration. By completing these phases in order, you'll see tangible progress along the way and to be ready to provision new devices at the end of this guide.
 
@@ -503,13 +474,17 @@ In this phase, you'll apply organization-specific settings, apps, and review you
 - [Applications](#applications)
 
 ### Microsoft Edge
+
 #### Microsoft Edge Deployment
+
 Microsoft Edge is included on devices that run:
- - Windows 11.
- - Windows 10 20H2 or later.
- - Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update.
+
+ - Windows 11
+ - Windows 10 20H2 or later
+ - Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update
 
 Microsoft Edge will update automatically post user logon. To trigger an update for Microsoft Edge during deployment you could run the following command:
+
 ```powershell
 Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" -argumentlist "/silent /install appguid={56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}&appname=Microsoft%20Edge&needsadmin=True"
 ```
@@ -517,6 +492,7 @@ Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEd
 To deploy Microsoft Edge to previous versions of Windows, see [Add Microsoft Edge for Windows to Microsoft Intune](./intune/apps/apps-windows-edge.md).
 
 #### Microsoft Edge Configuration
+
 Two components of the Microsoft Edge experience, which apply when users sign in with their Microsoft 365 credentials, can be configured from the Microsoft 365 Admin Center.
 
 - The start page logo in Microsoft Edge can be customized by configuring the *Your organization* section within the Microsoft 365 admin center. For more information, see [Customize ‎Office 365‎ for your organization](/microsoft-365/admin/setup/customize-your-organization-theme).
