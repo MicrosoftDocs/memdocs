@@ -4,7 +4,7 @@ description: include file
 author: ErikjeMS  
 ms.service: cloudpc
 ms.topic: include
-ms.date: 02/08/2022
+ms.date: 03/04/2022
 ms.author: erikje
 ms.custom: include file
 ---
@@ -23,3 +23,11 @@ Many devices registered with Active Directory might have a machine account passw
 The machine account password is maintained on the Cloud PC. If the Cloud PC is restored to a point that has a previous password stored, the Cloud PC won't be able to sign onto the domain.
 
 For more information, see [Machine Account Password Process](https://techcommunity.microsoft.com/t5/ask-the-directory-services-team/machine-account-password-process/ba-p/396026).
+
+## Cursor visible location offset from actual position
+
+In a remote desktop session, when you click one position in a text file, the cursor in the Cloud PC has some offset with the real position.
+
+**Possible cause**: In high DPI mode, both the server and Cloud PC browser scale the cursor. This conflict results in an offset between the visible cursor position and the actual cursor focus.
+
+**Troubleshooting steps**: Turn off high DPI mode.
