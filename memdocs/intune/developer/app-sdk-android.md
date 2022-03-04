@@ -47,15 +47,15 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 
 The Intune App SDK consists of the following files:
 
-* **Microsoft.Intune.MAM.SDK.aar**: The SDK components, with the exception of the Support Library JAR files.
+* **Microsoft.Intune.MAM.SDK.aar**: The SDK components, except for the Support Library JAR files.
 * **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: This AAR contains
-  stubs for Android system classes which are present only on newer
-  devices but which are referenced by methods in [MAMActivity]. Newer
+  stubs for Android system classes, which are present only on newer
+  devices, but which are referenced by methods in [MAMActivity]. Newer
   devices will ignore these stub classes. This AAR is necessary only
   if your app performs reflection on classes deriving from
   `MAMActivity`, and most apps do not need to include it. The AAR
   contains ProGuard rules to exclude all its classes.
-* **com.microsoft.intune.mam.build.jar**: A Gradle plugin which [aids in integrating the SDK](#build-tooling).
+* **com.microsoft.intune.mam.build.jar**: A Gradle plugin, which [aids in integrating the SDK](#build-tooling).
 * **CHANGELOG.md**: Provides a record of changes made in each SDK version.
 * **THIRDPARTYNOTICES.TXT**:  An attribution notice that acknowledges third-party and/or OSS code that will be compiled into your app.
 
@@ -107,13 +107,13 @@ The Intune App SDK is a standard Android library with no external dependencies. 
 #### ProGuard
 
 If [ProGuard](https://www.guardsquare.com/products/proguard) (or any other shrinking/obfuscation mechanism) is used as a build step, 
-the SDK has additional configuration rules which must be included. When including the *.AAR* in your build, our rules are 
+the SDK has additional configuration rules, which must be included. When including the *.AAR* in your build, our rules are 
 automatically integrated into the proguard step and the necessary class files are kept.
 
 The [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview#languages-and-frameworks) may have its own ProGuard restrictions. If your app integrates MSAL, you must follow the MSAL documentation on these restrictions.
 
 ### Policy enforcement
-The Intune App SDK is an Android library which allows your app to
+The Intune App SDK is an Android library, which allows your app to
 support and participate in the enforcement of Intune policies. 
 
 Most policies are enforced semi-automatically, but certain policies require 
@@ -144,7 +144,7 @@ registration](#mam-managed-applications),
 [AndroidManifest modifications](#manifest-replacements) or [MSAL
 configuration](#configure-microsoft-authentication-library-msal)
 so these must be completed before your app is fully Intune
-enabled. Please carefully review the rest of this documentation for
+enabled. Carefully review the rest of this documentation for
 integration points relevant to your app.
 
 > [!NOTE]
@@ -438,7 +438,7 @@ the BuildPlugin do it.
 
 Some classes have most of their methods wrapped, e.g. `ClipboardManager`, `ContentProviderClient`, `ContentResolver`,
 and `PackageManager` while other classes have only one or two methods wrapped, e.g. `DownloadManager`, `PrintManager`, `PrintHelper`,
-`View`, `DragEvent`, `NotificationManager` and `NotificationManagerCompat`. Please consult APIs exposed by the MAM equivalent
+`View`, `DragEvent`, `NotificationManager` and `NotificationManagerCompat`. Consult APIs exposed by the MAM equivalent
 classes for the exact method if you do not use the BuildPlugin.
 
 ### Manifest Replacements
@@ -539,7 +539,7 @@ MAMStrictMode.enable();
 
 When a MAM Strict Mode check fails, try to determine whether it is a
 real issue that can be fixed in your app, or a false positive. If you
-believe it's a false positive or you aren't sure, please let the
+believe it's a false positive or you aren't sure, let the
 Intune MAM team know. This will allow us to make sure we agree with
 the false positive determination and to attempt to improve detection
 for future releases. To suppress false positives, disable the failing
@@ -561,7 +561,7 @@ where `handler` implements `MAMStrictViolationHandler`.
 
 ### Suppressing Checks
 If a check fails in a situation where your app is doing nothing
-incorrect, please report it as mentioned above. At some times,
+incorrect, report it as mentioned above. At some times,
 however, it may be necessary to disable the check encountering a false
 positive, at least while waiting for an updated SDK. The check which
 failed will be shown in the error raised by the default handler, or
@@ -914,7 +914,7 @@ Once your app's receiver returns, it will no longer have access to encryption ke
 > For more information, see [Update your applications to use Microsoft Authentication Library (MSAL)].
 > To migrate your app from ADAL to MSAL, see [Migrate Android ADAL to MSAL] and [Differences between ADAL and MSAL].
 
-First, please read the MSAL integration guidelines found in the [MSAL repository on GitHub].
+First, read the MSAL integration guidelines found in the [MSAL repository on GitHub].
 For more information, see [Overview of Microsoft Authentication Library (MSAL)] and the [MSAL Wiki].
 
 Due to ADALs deprecation, apps should integrate with [MSAL].
@@ -1226,7 +1226,7 @@ When an account is first registered, it begins in the `PENDING` state, indicatin
 | `ENROLLMENT_FAILED` | The enrollment attempt failed.  Further details can be found in the device logs.  The app should not allow access to corporate data in this state, since it was previously determined that the user is licensed for Intune. All apps should ensure that corporate data access is unauthorized, until `ENROLLMENT_SUCCEEDED` is obtained by your app.|
 | `WRONG_USER` | Only one user per device can enroll an app with the MAM service. This result indicates that the user for whom this result was delivered (the second user) is targeted with MAM policy, but a different user is already enrolled. Because MAM policy cannot be enforced for the second user, your app must not allow access to this user's data (possibly by removing the user from your app) unless/until enrollment for this user succeeds at a later time. Concurrent with delivering this `WRONG_USER` result, MAM will prompt with the option to remove the existing account. If the human user answers in the affirmative, it will indeed be possible to enroll the second user a short time later. As long as the second user remains registered, MAM will retry enrollment periodically. |
 | `UNENROLLMENT_SUCCEEDED` | Unenrollment was successful.|
-| `UNENROLLMENT_FAILED` | The unenrollment request failed.  Further details can be found in the device logs. In general, this will not occur as long as the app passes a valid (neither null nor empty) UPN. There is no direct, reliable remediation the app can take. If this value is received when unregistering a valid UPN, please report as a bug to the Intune MAM team.|
+| `UNENROLLMENT_FAILED` | The unenrollment request failed.  Further details can be found in the device logs. In general, this will not occur as long as the app passes a valid (neither null nor empty) UPN. There is no direct, reliable remediation the app can take. If this value is received when unregistering a valid UPN, report as a bug to the Intune MAM team.|
 | `PENDING` | The initial enrollment attempt for the user is in progress.  The app can block access to corporate data until the enrollment result is known, but is not required to do so. |
 | `COMPANY_PORTAL_REQUIRED` | The user is licensed for Intune, but the app cannot be enrolled until the Company Portal app is installed on the device. The Intune App SDK will attempt to block access to the app for the given user and direct them to install the Company Portal app (see below for details). |
 
