@@ -72,14 +72,6 @@ In a future release, Windows 365 8vCPU/32GB licenses will support nested virtual
 
 The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
 
-### Point-in-time restore<!--37063579 -->
-
-Administrators and users will be able to restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points will be available. Administrators will be able to:
-
-- Configure the restore point frequency
-- Grant or deny users restore permissions
-- Bulk restore
-
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 

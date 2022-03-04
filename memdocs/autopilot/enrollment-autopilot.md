@@ -73,6 +73,9 @@ ms.collection:
 
 3. Select **Create**.
 
+> [!NOTE]
+> Anything assigned to these attributes will only be assigned if the device is Autopilot registered.
+
 ## Add devices
 
 For information about formatting and using a CSV file to manually add Windows Autopilot devices, see [Manually register devices with Windows Autopilot](add-devices.md).
