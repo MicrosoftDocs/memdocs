@@ -43,7 +43,7 @@ In earlier versions of the Intune console, Intune provided several default manag
 To add a built-in app to your available apps in Microsoft Intune, do the following:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **Select app type** pane, under the available **Store app** types, select **Built-In app**.
+3. In the **Select app type** pane, under the available **Other** types, select **Built-In app**.
 4. Click **Select**. The **Add app** steps are displayed.
 5. In the **Select Built-in apps** page, click **Select app** to select the apps that you want to include.
 6. Select the built-in apps that you want to include. 
