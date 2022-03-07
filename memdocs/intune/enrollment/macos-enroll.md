@@ -68,7 +68,7 @@ For information about other end-user tasks, see these articles:
 For organizations that purchase devices for their users, Intune supports the following macOS company-owned device enrollment methods:
 - [Apple's Automated Device Enrollment (ADE)](device-enrollment-program-enroll-macos.md): Organizations can purchase macOS devices through ADE. ADE lets you deploy an enrollment profile "over the air" to bring devices into management.
 - [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): You can use a DEM account to enroll up to 1,000 devices.
-- [Direct enrollment](device-enrollment-direct-enroll-macos.md): Direct enrollment does not wipe the device.
+- [Direct enrollment](device-enrollment-direct-enroll-macos.md): Direct enrollment doesn't wipe the device.
 
 ## Block macOS enrollment
 By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).
@@ -76,7 +76,7 @@ By default, Intune lets macOS devices enroll. To block macOS devices from enroll
 # Enroll virtual macOS machines for testing
 
 > [!NOTE]
-> Intune supports macOS virtual machines for testing purposes only. Do not use macOS virtual machines as official devices for employees or students.  
+> Intune supports macOS virtual machines for testing purposes only. Don't use macOS virtual machines as official devices for employees or students.  
 
 Intune supports virtual machines running:
 
@@ -84,12 +84,12 @@ Intune supports virtual machines running:
 * VMware Fusion  
 * Apple Silicon  
 
-Intune needs to know the VM's hardware model and serial number to recognize and enroll it as a device. If you try to enroll a VM without providing those details, enrollment fails. This section provides more information about how to satisy this requirement before enrollment. 
+Intune needs to know the VM's hardware model and serial number to recognize and enroll it as a device. If you try to enroll a VM without providing those details, enrollment fails. This section provides more information about how to satisfy this requirement before enrollment. 
 
 ### Parallels Desktop 
 Modify the VM's configuration settings to add or change a VM serial number and hardware model identifier. Enter any string of alphanumeric characters for the serial number. For hardware model, we recommend using the model of the device that's running the VM. To find your Mac's hardware model, select the Apple menu and go to **About This Mac** > **System Report** > **Model Identifier**.   
 
-See the Parallels knowledge base for more information about:  
+For more information, see the following topics in the Parallels knowledge base:  
 
 * [How to enroll a macOS VM in Parallels Desktop using Intune](https://kb.parallels.com/en/124564)  
 * [How to find and change the serial number](http://kb.parallels.com/123455)  
@@ -108,7 +108,7 @@ Enter any string of alphanumeric characters for the serial number. For hardware 
 See the VMware customer connect website for more information about [editing the .vmx file for your VMware Fusion VM](https://kb.vmware.com/s/article/1014782).  
 
 ### Apple Silicon 
-No changes are required for virtual machines running on Apple Silicon hardware. Parallels Desktop and VMware Fusion are supported on Macs with Apple Silicon, so if you set up a VM this way, you do not need to modify the hardware model ID or serial number. 
+No changes are required for virtual machines running on Apple Silicon hardware. Parallels Desktop and VMware Fusion are supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number. 
 
 ## User Approved enrollment
 
@@ -116,7 +116,7 @@ User Approved MDM enrollment is a type of macOS enrollment that you can use to m
  
 As of June 2020, all new macOS MDM enrollments in Intune, including those not done through Automated Device Enrollment (ADE), are considered user approved. The end-user must manually install the management profile in **System Preferences** > **Profiles**, and thus provide approval of the management profile. System Preferences is launched automatically from the Company Portal app for BYOD macOS users. [Instructions to install the management profile](../user-help/enroll-your-device-in-intune-macos-cp.md) are provided in the Company Portal app.     
 
-BYOD macOS MDM enrollments prior to June 2020 may not be user approved if the end-user did not manually provide approval of the management profile in **System Preferences** > **Profiles**. For BYOD enrollments after June 2020, the Company Portal app launches **System Preferences** for the user and the user will need to select Install. If the user did not approve the management profile during enrollment, the user can go to **System Preferences** > **Profiles**, choose the management profile, and select **Approve** to approve the profile at a later point in time.
+BYOD macOS MDM enrollments prior to June 2020 may not be user approved if the end-user did not manually provide approval of the management profile in **System Preferences** > **Profiles**. For BYOD enrollments after June 2020, the Company Portal app launches **System Preferences** for the user and the user will need to select Install. If the user didn't approve the management profile during enrollment, the user can go to **System Preferences** > **Profiles**, choose the management profile, and select **Approve** to approve the profile at a later point in time.
 
 ### Find out if a device is User Approved
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
