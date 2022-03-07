@@ -63,7 +63,7 @@ There are three categories of policy settings: *Data relocation*, *Access requir
 | **Third party keyboards** | Choose **Block** to prevent the use of third-party keyboards in managed applications.<p>When this setting is enabled, the user receives a one-time message stating that the use of third-party keyboards is blocked. This message appears the first time a user interacts with organizational data that requires the use of a keyboard. Only the standard iOS/iPadOS keyboard is available while using managed applications, and all other keyboard options are disabled. This setting will affect both the organization and personal accounts of multi-identity applications. This setting does not affect the use of third-party keyboards in unmanaged applications.<p>**Note:** This feature requires the app to use Intune SDK version 12.0.16 or later. Apps with SDK versions from 8.0.14 to, and including, 12.0.15, will not have this feature correctly apply for multi-identity apps. For more details, see [Known issue: Third party keyboards are not blocked in iOS/iPadOS for personal accounts](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Updated-Known-issue-Third-party-keyboards-are-not-blocked-in-iOS/ba-p/339486). | **Allow** |
   
 > [!NOTE]
-> App protection policy will be requited with IntuneMAMUPN for Managed Devices.
+> An app protection policy is required with IntuneMAMUPN for managed devices.
 
 ### Encryption
 | Setting | How to use | Default value |
