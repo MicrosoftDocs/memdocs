@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/12/2020
+ms.date: 03/23/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -73,16 +73,42 @@ For organizations that purchase devices for their users, Intune supports the fol
 ## Block macOS enrollment
 By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).
 
-## Enroll virtual macOS machines for testing
+# Enroll virtual macOS machines for testing
 
 > [!NOTE]
-> macOS virtual machines are only supported for testing. You should not use macOS virtual machines as production devices for your end users. 
+> Intune supports macOS virtual machines for testing purposes only. Do not use macOS virtual machines as official devices for employees or students.  
 
-You can enroll macOS virtual machines for testing using either Parallels Desktop or VMware Fusion. 
+Intune supports virtual machines running:
 
-For Parallels Desktop, you need to set the hardware type and the serial number for the virtual machines so that Intune can recognize them. Follow Parallels' instructions for setting hardware type and [serial number](http://kb.parallels.com/123455) to set up the necessary settings for testing. We recommend that you match the hardware type of the device running the virtual machines to the hardware type of the virtual machines that you're creating. You can find this hardware type in **Apple menu** > **About this Mac** > **System Report** > **Model Identifier**. 
+* Parallel Desktop
+* VMware Fusion  
+* Apple Silicon  
 
-For VMware Fusion, you need to [edit the .vmx file](https://kb.vmware.com/s/article/1014782) to set the virtual machine's hardware model and serial number. We recommend that you match the hardware type of the device running the virtual machines to the hardware type of the virtual machines that you're creating. You can find this hardware type in **Apple menu** > **About this Mac** > **System Report** > **Model Identifier**. 
+Intune needs to know the VM's hardware model and serial number to recognize and enroll it as a device. If you try to enroll a VM without providing those details, enrollment fails. This section provides more information about how to satisy this requirement before enrollment. 
+
+### Parallels Desktop 
+Modify the VM's configuration settings to add or change a VM serial number and hardware model identifier. Enter any string of alphanumeric characters for the serial number. For hardware model, we recommend using the model of the device that's running the VM. To find your Mac's hardware model, select the Apple menu and go to **About This Mac** > **System Report** > **Model Identifier**.   
+
+See the Parallels knowledge base for more information about:  
+
+* [How to enroll a macOS VM in Parallels Desktop using Intune](https://kb.parallels.com/en/124564)  
+* [How to find and change the serial number](http://kb.parallels.com/123455)  
+
+
+### VMware Fusion
+Add the following lines to your .vmx file to set the VM's hardware model and serial number. The values shown in this sample are examples.  
+
+```
+serialNumber = "ABC123456789"  
+hw.model = "MacBookAir10,1"  
+```
+
+Enter any string of alphanumeric characters for the serial number. For hardware model, we recommend using the model of the device that's running the VM. To find your Mac's hardware model, select the Apple menu and go to **About This Mac** > **System Report** > **Model Identifier**.   
+
+See the VMware customer connect website for more information about [editing the .vmx file for your VMware Fusion VM](https://kb.vmware.com/s/article/1014782).  
+
+### Apple Silicon 
+No changes are required for virtual machines running on Apple Silicon hardware. Parallels Desktop and VMware Fusion are supported on Macs with Apple Silicon, so if you set up a VM this way, you do not need to modify the hardware model ID or serial number. 
 
 ## User Approved enrollment
 
