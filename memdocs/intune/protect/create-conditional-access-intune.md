@@ -36,9 +36,9 @@ A Conditional Access policy specifies the app or services you want to protect, t
 
 To Create a device-based Conditional Access policy your account must have one of the following permissions in Azure AD:
 
-Global Administrator	
-Intune Service Administrator	
-Conditional Access Administrator	
+    - Global administrator	
+    - Intune Service administrator	
+    - Conditional Access administrator	
 
 > [!IMPORTANT]
 > Before you set up Conditional Access, you'll need to set up Intune device compliance policies to evaluate devices based on whether they meet specific requirements. See [Get started with device compliance policies in Intune](device-compliance-get-started.md).
