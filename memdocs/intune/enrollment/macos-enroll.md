@@ -73,7 +73,7 @@ For organizations that purchase devices for their users, Intune supports the fol
 ## Block macOS enrollment
 By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).
 
-# Enroll virtual macOS machines for testing
+## Enroll virtual macOS machines for testing
 
 > [!NOTE]
 > Intune supports macOS virtual machines for testing purposes only. Don't use macOS virtual machines as official devices for employees or students.  
