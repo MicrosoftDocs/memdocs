@@ -61,7 +61,7 @@ To use device compliance policies, be sure you:
 
 - Enroll devices in Intune (required to see the compliance status)
 
-- Enroll devices to one user, or enroll without a primary user. Devices enrolled to multiple users aren't supported.
+- Enroll devices to one user, or enroll without a primary user. Single devices cannot be enrolled to multiple users.
 
 If you plan to use custom settings for device compliance (*in preview*), you'll need prepare a custom JSON file and PowerShell script before you create a policy. For more information about custom compliance settings, including supported platforms, prerequisites, and how to configure the *Custom Compliance* category while creating a policy, see [Use custom compliance settings](../protect/compliance-use-custom-settings.md).
 ## Create the policy
