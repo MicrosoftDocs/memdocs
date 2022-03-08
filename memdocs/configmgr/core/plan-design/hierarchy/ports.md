@@ -567,6 +567,8 @@ During the installation of a site that uses a remote SQL Server to host the site
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |Server Message Block (SMB)|--|445|
+|RPC Endpoint Mapper|135|135|
+|RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|
 |HTTP|--|80 or 8530 <sup>[Note 3](#bkmk_note3)</sup>|
 |HTTPS|--|443 or 8531 <sup>[Note 3](#bkmk_note3)</sup>|
 
