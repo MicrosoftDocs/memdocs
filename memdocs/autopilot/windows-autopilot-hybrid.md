@@ -133,7 +133,6 @@ The Intune Connector requires the [same endpoints as Intune](../intune/fundament
 > [!NOTE]
 > The Global administrator role is a temporary requirement at the time of installation.
 
-
 > [!NOTE]
 > After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
 
