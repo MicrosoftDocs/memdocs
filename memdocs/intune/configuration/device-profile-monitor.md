@@ -80,7 +80,7 @@ After you create your device profile, Intune provides graphical charts. These ch
 
       - **Scope tags**: See any existing [scope tags](../fundamentals/scope-tags.md) used in the policy. Select **Edit** to add or remove a scope tag.
       - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../fundamentals/filters.md) in the policy. Select **Edit** to update the policy assignment, and add or remove a filter.
-      - **Applicability Rules**: On your Windows devices, see the [applicability rules](/device-profile-create.md#applicability-rules) used in the policy. Select **Edit** to add or remove an applicability rule.
+      - **Applicability Rules**: On your Windows devices, see the [applicability rules](device-profile-create.md#applicability-rules) used in the policy. Select **Edit** to add or remove an applicability rule.
 
     - **Device status**: The devices assigned to the profile are listed, and it shows if the profile is successfully deployed. You can select a specific device to get even more details, including the installed apps.
     - **User status**: Lists the user names with devices affected by this profile, and if the profile successfully deployed. You can select a specific user to get even more details.
