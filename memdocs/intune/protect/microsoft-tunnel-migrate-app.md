@@ -217,11 +217,11 @@ Before you begin your migration to Defender for Endpoint, use the [Microsoft End
 
   2. From Properties, record the available values including those that are assigned as *required* or are assigned as *available*. This information will help you to create similar deployments for the Microsoft Defender for Endpoint app.
 
-## Manage VPN profiles for iOS/iPadOS
+### Manage VPN profiles for iOS/iPadOS
 
 To enable devices to use Microsoft Defender for Endpoint to connect to Microsoft Tunnel Gateway, deploy VPN profiles that use the **Microsoft Tunnel (preview)** connection type. During migration you can choose to edit your existing profiles to use the new connection type, or create new VPN profiles with the new connection type.
 
-### Modify a VPN Profile for Microsoft Tunnel
+#### Modify a VPN Profile for Microsoft Tunnel
 
 Use the following steps to modify a VPN profile to migrate devices from  the standalone tunnel client app to Microsoft Defender for Endpoint as the tunnel client app.
 
@@ -245,7 +245,7 @@ Use the following steps to modify a VPN profile to migrate devices from  the sta
 5. After the profile redeploys, wait for devices to check in or force devices to sync to get the new policies.
 6. Verify that users can connect to Tunnel manually in the Defender for Endpoint app. If your VPN Profile includes on-demand rules, users must open the Defender for Endpoint app one time before the new on-demand rules can apply.
 
-### Create a new VPN profile for Microsoft Tunnel
+#### Create a new VPN profile for Microsoft Tunnel
 
 Use the following steps to create a new VPN profile for devices that will use *Microsoft Defender for Endpoint* as the tunnel client app. When the profile is configured as a per-app VPN, the last step requires you to restart devices after they receive the VPN profile. To avoid this you can choose to [modify an existing VPN profile](#modify-a-vpn-profile-for-microsoft-tunnel) instead of creating and deploying a new one.
 
