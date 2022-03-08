@@ -55,6 +55,10 @@ Configuration Manager-managed devices send data to Intune via the connector on t
 
 - Endpoint analytics insights are not available for devices running Windows Server editions.
 - Using multiple Configuration Manager hierarchies with a single Endpoint analytics instance is not currently supported.
+- Proactive Remediations limitations with tenant attached (https://docs.microsoft.com/en-us/mem/analytics/proactive-remediations#bkmk_prereq):
+  - Devices must be Azure AD joined or hybrid Azure AD joined and meet one of the following conditions:
+   -  Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
+   -  A co-managed device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the Client apps workload pointed to Intune (only applicable up to version 1607).
 
 ## <a name="bkmk_cm_enroll"></a> Enroll devices managed by Configuration Manager
 <!--6051638, 5924760-->
