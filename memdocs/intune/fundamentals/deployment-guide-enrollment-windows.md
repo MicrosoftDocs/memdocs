@@ -312,7 +312,7 @@ This enrollment option is available for domain-joined devices that you want to m
 > [!TIP]
 > In the Endpoint Manager admin center, you can use [Group Policy analytics](../configuration/group-policy-analytics.md) to see your on-premises group policies settings that are supported by cloud MDM providers, including Microsoft Intune.
 > 
-> If you want a cloud native solution to manage devices, then [Windows Autopit](#windows-autopilot) (in this article) might be the best option for your organization.
+> If you want a cloud native solution to manage devices, then [Windows Autopilot](#windows-autopilot) (in this article) might be the best option for your organization.
 
 You create a group policy on your local AD. When a group policy refresh occurs on the device, users are notified to complete the configuration. The configuration uses the user's Azure AD account to automatically enroll the device in Intune.
 
