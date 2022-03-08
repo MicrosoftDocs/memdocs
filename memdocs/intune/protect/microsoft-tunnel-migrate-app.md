@@ -240,7 +240,7 @@ Use the following steps to modify a VPN profile to migrate devices from  the sta
 
 4. Select **Review + save** to save the profile.
 5. After the profile redeploys, wait for devices to check in or force devices to sync to get the new policies.
-6. Verify that users can connect to Tunnel manually in the Defender for Endpoint app. If your VPN Profile includes on-demand rules, users must open the Defender for Endpoint app one time before the new on-demand rules can apply.
+6. Verify that users can connect to Tunnel manually in the Defender for Endpoint app. If your VPN profile includes on-demand rules, users must open the Defender for Endpoint app one time before the new on-demand rules can apply.
 
 #### Create a new VPN profile for Microsoft Tunnel
 
@@ -253,10 +253,10 @@ If you’re using only the Tunnel functionality from the Defender for Endpoint a
 
 3. After the profile deploys, wait for devices to check in or force devices to sync to get the new policies.
 
-4. Verify that users can connect to Tunnel manually in the Defender for Endpoint app. If your VPN Profile includes on-demand rules, users must open the Defender for Endpoint app one time before the new on-demand rules can apply.
+4. Verify that users can connect to Tunnel manually in the Defender for Endpoint app. If your VPN profile includes on-demand rules, users must open the Defender for Endpoint app one time before the new on-demand rules can apply.
 
 5. If you’re using per-app VPN:
-   1. Wait at least 10 minutes after creating the new VPN profile. After 10 minutes you can then change the app deployment assignments from the *Microsoft Tunnel (standalone client) (preview)* VPN profile to the new VPN Profile for *Microsoft Tunnel (preview)*.
+   1. Wait at least 10 minutes after creating the new VPN profile. After 10 minutes you can then change the app deployment assignments from the *Microsoft Tunnel (standalone client) (preview)* VPN profile to the new VPN profile for *Microsoft Tunnel (preview)*.
 
    2. After the new VPN profile deploys to a device, that device must restart before the new VPN profile is used. To restart a device, see [remotely restart devices with Intune](/intune/remote-actions/device-restart.md). 
 
