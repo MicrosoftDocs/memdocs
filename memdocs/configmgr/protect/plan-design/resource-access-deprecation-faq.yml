@@ -32,9 +32,9 @@ sections:
   - name: Ignored
     questions:
       - question: |
-          Will these features be removed from Configuration Manager?
+          When will these features be removed from Configuration Manager?
         answer: |
-          Yes. In version 2203, these features will no longer be available. If you're actively using these features, don't upgrade to version 2203.
+          Starting in version 2203, these features will still be in Configuration Manager, but no longer tested or supported. These features will be removed in version 2207.
 
       - question: |
           What functionality is available to replace these features?
@@ -46,14 +46,19 @@ sections:
       - question: |
           What do I do if I'm deploying wi-fi profiles with Configuration Manager?
         answer: |
-          Before you upgrade to Configuration Manager version 2203, [enable co-management](../../comanage/how-to-enable.md), and deploy the same wi-fi profiles with Intune. For more information, see [Add and use Wi-Fi settings on your devices in Microsoft Intune](../../../intune/configuration/wi-fi-settings-configure.md).
+          Before you upgrade to Configuration Manager version 2203, [enable co-management](../../comanage/how-to-enable.md), and deploy the same wi-fi profiles with Intune. For more information, see [Add and use Wi-Fi settings on your devices in Microsoft Intune](../../../intune/configuration/wi-fi-settings-configure.md). If you don't take action, the existing wi-fi profiles will persist on devices but are unmanaged.
 
       - question: |
           What happens if I don't enable co-management?
         answer: |
-          If you upgrade to version 2203, you can't deploy any wi-fi, VPN, Windows Hello for Business, or certificate (SCEP, PFX, or root CA) profiles to Configuration Manager clients. Any existing deployed profiles won't remove from devices. For example, existing wi-fi connections should still function, and certificates won't be removed from Windows.
+          If you currently use these features, they're not tested or supported in version 2203. When you upgrade to version 2207, they'll cause error prerequisite checks. You can't deploy any wi-fi, VPN, Windows Hello for Business, or certificate (SCEP, PFX, or root CA) profiles to Configuration Manager clients. Any existing deployed profiles won't be removed from devices, and will continue to function. These existing profiles will be unmanaged. For example, When a certificate expires, Configuration Manager won't renew it.
 
       - question: |
           What happens if I've enabled co-management, but haven't switched the resource access workload?
         answer: |
-          Starting in version 2203, the behavior is the same as the workload switched to Intune.
+          Starting in version 2207, co-managed clients will get their policy for this workload from the Intune management authority. This behavior is the same as if you used Configuration Manager version 2111 or earlier to switch the resource access workload to Intune.
+
+      - question: |
+          What alternative options are available?
+        answer: |
+          Configuration Manager version 2111 fully supports these features and is supported until June 2023. For more information, see [Supported versions](../../core/servers/manage/updates.md#supported-versions).
