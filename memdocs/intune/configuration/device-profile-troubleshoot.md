@@ -117,7 +117,7 @@ When you delete a profile, or remove a device from a group that's assigned the p
 - A profile applies to a user group. Later, a user is removed from the group. For the settings to be removed from that user, it can take up to 7 hours or more for:
 
   - The profile to be removed from the policy assignment in the Endpoint Manager admin center
-  - The device to sync with the Intune using the [platform-specific policy refresh cycle](#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) (in this article)
+  - The device to sync with the Intune object using the [platform-specific policy refresh cycle](#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) (in this article)
 
 ## I changed a device restriction profile, but the changes haven't taken effect
 
