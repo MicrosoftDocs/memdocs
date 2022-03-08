@@ -35,9 +35,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune lets you manage macOS devices to give users access to company email and apps.
-
-As an Intune admin, you can set up enrollment for company-owned macOS devices and personally owned macOS devices ("bring your own device" or BYOD). 
+ Intune supports enrollment on personal and company-owned devices. This article provides the preqrequisites that enable macOS device management and describes the supported enrollment methods for personal, company-owned, and VM devices. 
 
 ## Prerequisites
 
@@ -84,13 +82,13 @@ For Parallels Desktop, you need to set the hardware type and the serial number f
 
 For VMware Fusion, you need to [edit the .vmx file](https://kb.vmware.com/s/article/1014782) to set the virtual machine's hardware model and serial number. We recommend that you match the hardware type of the device running the virtual machines to the hardware type of the virtual machines that you're creating. You can find this hardware type in **Apple menu** > **About this Mac** > **System Report** > **Model Identifier**. 
 
-## User approved enrollment
+## User-approved enrollment
 
 This type of enrollment lets you manage macOS devices that aren't part of Apple School Manager or Apple Business Manager. It provides the same level of control as supervised macOS devices enrolled using Automated Device Enrollment or Apple Configurator. 
 
-All MDM enrollments in Intune, except those enrolled via Automated Device Enrollment (ADE), are considered user-approved. Intune automatically turns on supervision for the devices running macOS 11 or later. Devices that update to macOS 11 or later also become supervised. 
+All MDM enrollments in Intune, except those enrolled via Automated Device Enrollment (ADE), are considered user-approved. Intune automatically turns on supervision for user-approved devices running macOS 11 and later. It also does this for enrolled devices that later update to macOS 11 or later.  
 
-During bring-your-own-device (BYOD) enrollment, the Company Portal app automatically opens the device's system preferences and then prompts the user to install the management profile. Device users must go to **System Preferences** > **Profiles** to  approve the management profile installation. They should use the on-screen instructions provided in Company Portal to finish [setting up the management profile.](../user-help/enroll-your-device-in-intune-macos-cp.md). Device users that don't provide approval during enrollment can return to system preferences later to give approval.  
+The signs in to the Company Portal app to initiate enrollment. The app opens the device's system preferences and then prompts the user to install the management profile. Device users must go to **System Preferences** > **Profiles** to  approve the management profile installation. They should use the on-screen instructions provided in Company Portal to finish [setting up the management profile.](../user-help/enroll-your-device-in-intune-macos-cp.md). Device users that don't provide approval during enrollment can return to system preferences later to give approval.  
 
 > [!NOTE]
 > Intune announced support for user approved enrollment in June 2020. BYOD enrollments that occured before that time may not be user-approved. For more information about Apple devices becoming user approved, see [User approved MDM enrollment](https://support.apple.com/HT208019) on the Apple Support website. 
@@ -106,4 +104,6 @@ During bring-your-own-device (BYOD) enrollment, the Company Portal app automatic
 
 ## Next steps
 
-After macOS devices are enrolled, you can [create custom settings for macOS devices](../configuration/custom-settings-macos.md).
+* For user-help documentation, which provides step-by-step enrollment instructions for device users, see [Enroll your macOS device in Intune](../user-help/enroll-your-device-in-intune-macos-cp.md). You can also create your own instructions if you prefer to capture your organization's branded or customized enrollment experience.  
+
+* After macOS devices are enrolled, you can [create custom settings for macOS devices](../configuration/custom-settings-macos.md).
