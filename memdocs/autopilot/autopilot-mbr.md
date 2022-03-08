@@ -141,7 +141,7 @@ Those repair facilities with access to the OA3 Tool (which is part of the ADK) c
 Instead, the [WindowsAutoPilotInfo PowerShell script](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) can be used to capture the 4K HH.
 
 > [!NOTE]
-> Other methods in addition to Windows PowerShell are also available to capture the hardware hash. For more information, see [Collect the hardware hash](add-devices#collect-the-hardware-hash).
+> Other methods in addition to Windows PowerShell are also available to capture the hardware hash. For more information, see [Collect the hardware hash](add-devices.md#collect-the-hardware-hash).
 
 To use the **WindowsAutoPilotInfo** PowerShell script, follow these steps:
 
