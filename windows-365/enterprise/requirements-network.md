@@ -59,6 +59,12 @@ You must allow traffic in your Azure network configuration to the following serv
 - rdweb.wvd.microsoft.com
 - rdbroker.wvd.microsoft.com
 - Provisioning and on-premises network connection endpoints:
+  - cpcsaamssa1prodprap01.blob.core.windows.net
+  - cpcsaamssa1prodprau01.blob.core.windows.net
+  - cpcsaamssa1prodpreu01.blob.core.windows.net
+  - cpcsaamssa1prodpreu02.blob.core.windows.net
+  - cpcsaamssa1prodprna01.blob.core.windows.net
+  - cpcsaamssa1prodprna02.blob.core.windows.net
   - cpcsacnrysa1prodprna02.blob.core.windows.net
   - cpcsacnrysa1prodprap01.blob.core.windows.net
   - cpcsacnrysa1prodprau01.blob.core.windows.net
@@ -71,12 +77,6 @@ You must allow traffic in your Azure network configuration to the following serv
   - cpcstprovprodprna02.blob.core.windows.net
   - cpcstprovprodprap01.blob.core.windows.net
   - cpcstprovprodprau01.blob.core.windows.net
-  - cpcsaamssa1prodprap01.blob.core.windows.net
-  - cpcsaamssa1prodprau01.blob.core.windows.net
-  - cpcsaamssa1prodpreu01.blob.core.windows.net
-  - cpcsaamssa1prodpreu02.blob.core.windows.net
-  - cpcsaamssa1prodprna01.blob.core.windows.net
-  - cpcsaamssa1prodprna02.blob.core.windows.net
   - prna01.prod.cpcgateway.trafficmanager.net
   - prna02.prod.cpcgateway.trafficmanager.net
   - preu01.prod.cpcgateway.trafficmanager.net
