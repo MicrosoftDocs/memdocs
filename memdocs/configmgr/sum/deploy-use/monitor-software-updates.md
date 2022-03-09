@@ -67,7 +67,7 @@ After you configure the alert settings, if the specified conditions occur, Confi
 
 1. Click the software update group or software update for which you want to monitor the deployment status.  
 
-1. On the **Home** tab, in the **Deployment** group, click **View Status**.  
+1. On the **Home** tab, in the **Deployment** group, click **View Status**. 
 
 > [!TIP]
 > - Starting in version 2107, you can right-click the status of a deployment and select **Evaluate Software Update Deployments** to send a notification to the selected devices to run a software update deployment evaluation cycle.
