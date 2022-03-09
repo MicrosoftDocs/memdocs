@@ -81,8 +81,8 @@ From the **Deployments** node, you can review deployment details for each compli
 - The maximum number of items that the **Deployment Status** pane can display is 20,000. If you need to see more items, use Configuration Manager reports to review application status data.
 - The status of deployment types is aggregated in the **Deployment Status** pane. To display more detailed information about the deployment types, use the **Application Infrastructure Errors** report.
 - Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view. Use the right-click menu on either a group of clients in a **Category** or a single client in the **Asset details** pane to display the client notification actions. <!--7079837-->
-   :::image type="content" source="./media/7079837-deployment-status-client-notification.png" alt-text="Screenshot of the Deployment Status view showing the client notification actions. " lightbox="./media/7079837-deployment-status-client-notification.png":::
 
+   :::image type="content" source="./media/7079837-deployment-status-client-notification.png" alt-text="Screenshot of the Deployment Status view showing the client notification actions. " lightbox="./media/7079837-deployment-status-client-notification.png":::
 
 ### Summarized data
 
