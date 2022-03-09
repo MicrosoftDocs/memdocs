@@ -60,7 +60,7 @@ For more information about how to configure reporting in Configuration Manager, 
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Deployments** node.
 
-   If your site has a lot of deployments, filter the list to just application deployments.
+   If your site has numerous deployments, filter the list to just application deployments.
    1. At the top of the list next to the *Search* field, select **Add Criteria**. Choose **Feature Type** and then select **Add**.
    1. The search area adds the default criteria, **AND Feature Type Content Distribution**. Select **Content Distribution** and choose **Application** instead.
    1. Select **Search** to refresh the list.
