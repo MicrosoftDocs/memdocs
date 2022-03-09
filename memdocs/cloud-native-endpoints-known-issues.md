@@ -84,8 +84,8 @@ The following list includes common features and services that might use machine 
 
   Additional resources:
 
-  - [IIS Authentication <windowsAuthentication>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/)
-  - [IIS Security Authorization <authorization>](/iis/configuration/system.webserver/security/authorization/)
+  - [IIS Authentication `<windowsAuthentication>`](/iis/configuration/system.webserver/security/authentication/windowsauthentication/)
+  - [IIS Security Authorization `<authorization>`](/iis/configuration/system.webserver/security/authorization/)
 
 - Standard **print management and discovery** depends on machine authentication. On Azure AD joined Windows endpoints, users can't print using standard print.
 

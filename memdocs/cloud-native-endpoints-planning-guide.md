@@ -105,7 +105,7 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
   - Traditional policy enforcement using group policy isn't possible with cloud native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](/mem/intune/configuration/settings-catalog) and [administrative templates](/mem/intune/configuration/administrative-templates-windows).
 
-    [Group Policy analytics](mem/intune/configuration/group-policy-analytics) can analyze your on-premises GPOs, and see if those same settings are supported in the cloud.
+    [Group Policy analytics](/mem/intune/configuration/group-policy-analytics) can analyze your on-premises GPOs, and see if those same settings are supported in the cloud.
 
   - If you have existing policies that issue certificates, manage BitLocker, and provide endpoint protection, then these features will need moved to Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)).
 
