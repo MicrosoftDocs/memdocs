@@ -25,6 +25,8 @@ items:
       href: plan-design/security-and-privacy-for-wifi-vpn-profiles.md
     - name: Certificate profiles
       href: plan-design/security-and-privacy-for-certificate-profiles.md
+  - name: Resource access deprecation FAQ
+    href: plan-design/resource-access-deprecation-faq.yml
 - name: Deploy and use
   items:
   - name: Endpoint Protection
