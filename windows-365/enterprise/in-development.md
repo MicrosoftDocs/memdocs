@@ -64,7 +64,7 @@ Currently, Windows 365 and Azure Virtual Desktop share a common framework for id
 <!-- ***********************************************-->
 ## Device management
 
-### New remote action: remote help<--38310389-->
+### New remote action: remote help<!--38310389-->
 
 The upcoming Remote Help remote action (in the Microsoft Endpoint Manager admin center) will let admins start a remote session into an end user’s Cloud PC.
 
@@ -103,13 +103,11 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 The device history report will have new information to help you evaluate Cloud PC performance:
 
-Top 5 processes impacting CPU spike times
-Top 5 processes impacting RAM spike times
-
+- Top 5 processes impacting CPU spike times
+- Top 5 processes impacting RAM spike times
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->
-
 
 <!-- ***********************************************-->
 <!--## Role-based access control-->
