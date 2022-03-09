@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/08/2022
+ms.date: 03/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -321,9 +321,11 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 15. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch. The device name template entry cannot exceed the length of 63 characters, including the variables.
 
-16. Select **Next: Setup Assistant Customization**.
+16. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.
 
-17. On the **Setup Assistant Customization** tab, configure the following profile settings:
+17. Select **Next: Setup Assistant Customization**.
+
+18. On the **Setup Assistant Customization** tab, configure the following profile settings:
 
     | Department setting | Description |
     |---|---|
@@ -365,9 +367,9 @@ Now that you've installed your token, you can create an enrollment profile for A
     | **iCloud diagnostics** | Display the **iCloud Analytics** screen. For macOS 10.12.4 and later. |
     | **iCloud Storage** | Display the **iCloud Documents and Desktop** screen. For macOS 10.13.4 and later. |
 
-18. Select **Next** to go to the **Review + create** tab.
+19. Select **Next** to go to the **Review + create** tab.
 
-19. To save the profile, select **Create**.
+20. To save the profile, select **Create**.
 
 > [!NOTE]
 > If you need to re-enroll your Automated Device Enrollment device, you need to first wipe the device from the Intune admin console. To re-enroll:

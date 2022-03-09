@@ -64,6 +64,13 @@ To make it easier for admins to set up Windows 365, a link has been added to the
 
 Cloud PC users can now choose a higher screen resolution when they connect to their Cloud PC from https://windows365.microsoft.com.
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 approved partners
+
+We’ve published a new help documentation article. For more information, see [Windows 365 approved partners](../partners.md).
+
 <!-- ########################## -->
 ## Week of December 6, 2021 (Service release 2111)
 
