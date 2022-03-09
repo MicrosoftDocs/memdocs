@@ -179,7 +179,6 @@ Based on your feedback, we’ve made a few improvements to the console and user 
 - Additional Management Insights rules now have click-through actions
 - Copy/paste is available for more objects from details panes.
    - Added the **Name** property in the details pane for configuration items, configuration item related policies, and applications
-- Company portal no longer displays an available package as a featured application
 
 For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#bkmk_2203).
 
