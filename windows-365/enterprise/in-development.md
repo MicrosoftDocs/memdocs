@@ -72,6 +72,10 @@ The upcoming Remote Help remote action (in the Microsoft Endpoint Manager admin 
 
 Customers using Azure Active Directory (Azure AD) Join without additional Azure infrastructure will be able to upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscriptions.
 
+### windows365.microsoft.com will move to general availability<!--38195529-->
+
+The windows365.microsoft.com web client will be moving out of preview and into general availability.
+
 ### Nested virtualization<!--37800910-->
 
 In a future release, Windows 365 8vCPU/32GB licenses will support nested virtualizations for most currently supported regions. Southeast Asia and West US 2 will follow at a later date.
@@ -82,6 +86,14 @@ The **Provisioning policies** page is getting a new column: **Image status**. It
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
+
+### End-user error log collection<!--38195529-->
+
+End users will be able to collect error logs.
+
+### End-user feedback<!--38195529-->
+
+End users will be able to provide feedback to Microsoft from within the Windows 365 web client.
 
 ### End user manual connectivity check<!--37679345 -->
 
