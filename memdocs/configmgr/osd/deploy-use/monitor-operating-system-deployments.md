@@ -43,7 +43,7 @@ The Configuration Manager console provides the following ways to help you monito
 
 > [!TIP]  
 > - When an upgrade is initiated, status message 52200 is generated. This contains the user that did the upgrade.
-> - Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view. <!--7079837-->
+> - Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view.Use the right-click menu on either a group of clients in a **Category** or a single client in the **Asset details** pane to display the client notification actions. <!--7079837-->
 
 ##  <a name="BKMK_TSReports"></a> Operating system deployment reports  
  There are many predefined operating system deployment reports available. They are organized in several categories and can be used to report on specific information about state migration and task sequence deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  

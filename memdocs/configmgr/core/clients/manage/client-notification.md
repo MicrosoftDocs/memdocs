@@ -69,7 +69,7 @@ This action requires the **Run CMPivot** permission on the **Collection** object
 These actions are under the **Client notification** menu, on the ribbon in the Device or Collection group of the Home tab. You can start a **Client Notification** from the **Devices** node or within a collection membership view.
 
 > [!Note]
-> Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view. <!--7079837-->
+> Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view. Use the right-click menu on either a group of clients in a **Category** or a single client in the **Asset details** pane to display the client notification actions.<!--7079837-->
 
 #### Permissions - Client notification
 

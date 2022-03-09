@@ -71,7 +71,7 @@ After you configure the alert settings, if the specified conditions occur, Confi
 
 > [!TIP]
 > - Starting in version 2107, you can right-click the status of a deployment and select **Evaluate Software Update Deployments** to send a notification to the selected devices to run a software update deployment evaluation cycle.
-> - Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view. <!--7079837-->
+> - Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view. Use the right-click menu on either a group of clients in a **Category** or a single client in the **Asset details** pane to display the client notification actions. <!--7079837-->
 
 
 ##  <a name="BKMK_SUReports"></a> Software updates reports  
