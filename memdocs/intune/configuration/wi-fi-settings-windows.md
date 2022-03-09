@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 03/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,7 +70,7 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WPA/WPA2-Personal**: A more secure option, and is commonly used for Wi-Fi connectivity. For more security, you can also enter a pre-shared key password or network key.
 
-    - **Pre-shared key** (PSK): Optional. Shown when you choose **WPA/WPA2-Personal** as the security type. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value. Enter a string between 8-64 characters. If your password or network key is 64 characters, enter hexadecimal characters.
+    - **Pre-shared key** (PSK): Optional. Shown when you choose **WPA/WPA2-Personal** as the security type. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value. Enter an ASCII string that is 8-63 characters long or use 64 hexadecimal characters.
 
       > [!IMPORTANT]
       > The PSK is the same for all devices you target the profile to. If the key is compromised, it can be used by any device to connect to the Wi-Fi network. Keep your PSKs secure to avoid unauthorized access.
