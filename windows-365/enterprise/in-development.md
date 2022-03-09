@@ -103,13 +103,11 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 The device history report will have new information to help you evaluate Cloud PC performance:
 
-Top 5 processes impacting CPU spike times
-Top 5 processes impacting RAM spike times
-
+- Top 5 processes impacting CPU spike times
+- Top 5 processes impacting RAM spike times
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->
-
 
 <!-- ***********************************************-->
 <!--## Role-based access control-->
