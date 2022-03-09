@@ -79,7 +79,7 @@ A new management insights group was added to **Management Insights**. The **Depr
 <!--7079837-->
 You can now perform client notification actions, including **Run Scripts**, from the **Deployment Status** view.
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Review deployment details](../../../apps/deploy-use/monitor-applications-from-the-console.md#review-deployment-details). -->
 
 ### New client health checks
 <!--10954111-->
