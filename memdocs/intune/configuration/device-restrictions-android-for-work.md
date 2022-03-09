@@ -617,7 +617,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 - **Add and remove accounts**: **Block** prevents users from manually adding or removing accounts in the work profile. For example, when you deploy the Gmail app into the work profile, you can prevent users from adding or removing accounts in this work profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding accounts in the work profile.  
 
   > [!NOTE]
-  > Google accounts can't be added to personally owned devices with a work profile.
+  > Google accounts can't be added to devices with a work profile. This includes both Personally Owned and Corporate Owned devices with a work profile.
 
 - **Contact sharing via Bluetooth**: **Enable** allows sharing and access to personally owned devices with a work profile contacts from another device, including a car, that's paired using Bluetooth. Enabling this setting may allow certain Bluetooth devices to cache work contacts upon first connection. Disabling this policy after an initial pairing/sync may not remove work contacts from a Bluetooth device.
 
