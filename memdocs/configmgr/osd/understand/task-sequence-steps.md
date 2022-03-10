@@ -1092,7 +1092,7 @@ If you configure the [task sequence properties](../deploy-use/manage-task-sequen
   - Has a boot image referenced in its properties.
   - There are multiple instances of this task sequence, with different boot images as needed by architecture and language
 
-## <a name="BKMK_EnableBitLocker"></a> Enable BitLocker
+## Enable BitLocker
 
 BitLocker drive encryption provides low-level encryption of the contents of a disk volume. Use this step to enable BitLocker encryption on at least two partitions on the hard drive. The first active partition contains the Windows bootstrap code. Another partition contains the OS. The bootstrap partition must remain unencrypted.
 
@@ -1127,11 +1127,11 @@ If the hard drive is already encrypted, but BitLocker is disabled, then the **En
 
 Use the following task sequence variables with this step:
 
-- [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
-- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
-- [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
-- [OSDRecoveryKeyPollingFrequency](task-sequence-variables.md#OSDRecoveryKeyPollingFrequency) (starting in version 2203)
-- [OSDRecoveryKeyPollingTimeout](task-sequence-variables.md#OSDRecoveryKeyPollingTimeout) (starting in version 2203)
+- [OSDBitLockerPIN](task-sequence-variables.md#osdbitlockerpin)
+- [OSDBitLockerRecoveryPassword](task-sequence-variables.md#osdbitlockerrecoverypassword)
+- [OSDBitLockerStartupKey](task-sequence-variables.md#osdbitlockerstartupkey)
+- [OSDRecoveryKeyPollingFrequency](task-sequence-variables.md#osdrecoverykeypollingfrequency) _(starting in version 2203)_
+- [OSDRecoveryKeyPollingTimeout](task-sequence-variables.md#osdrecoverykeypollingtimeout) _(starting in version 2203)_
 
 ### Cmdlets for Enable BitLocker
 

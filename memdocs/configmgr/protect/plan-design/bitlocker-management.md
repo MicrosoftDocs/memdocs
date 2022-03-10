@@ -145,7 +145,7 @@ BitLocker management doesn't support all client types that are supported by Conf
 
   Starting in version 2203, you can configure this task sequence step to escrow the BitLocker recovery information for the OS volume to Configuration Manager.<!--10454717-->
 
-  For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
+  For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#enable-bitlocker).
 
 > [!IMPORTANT]
 > The `Invoke-MbamClientDeployment.ps1` PowerShell script is for [stand-alone MBAM](/microsoft-desktop-optimization-pack/mbam-v25/) only. It should not be used with Configuration Manager BitLocker Management.
