@@ -54,7 +54,7 @@ Complete the following prerequisites before setting up macOS device enrollment:
 
 ## User-owned macOS devices (BYOD)
 
-People can BYOD, or *bring-your-own-device*, and enroll personal devices in Intune themselves. To set up enrollment for BYOD scenarios, complete the prerequisites in this article. Then tell your device users to use one of these options to enroll devices:  
+Intune supports *bring-your-own-device*, or *BYOD*, which lets people enroll their personal devices themselves. To set up enrollment for BYOD scenarios, complete the prerequisites in this article. Then tell your device users to use one of these options to enroll devices:  
 
 - Sign in to [Company Portal website](https://portal.manage.microsoft.com) and follow on-screen instructions to add device. 
 - Install Company Portal app for Mac at [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) and follow-on screen instructions to add device.    
@@ -65,7 +65,7 @@ Intune supports the following enrollment methods for company-owned macOS devices
 
 - [Apple Automated Device Enrollment](device-enrollment-program-enroll-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air,so you don't need to have physical access to devices.  
 - [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Azure Active Directory account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.   
-- [Direct enrollment](device-enrollment-direct-enroll-macos.md): Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. Because there is no user associated, you can't use the Company Portal or Microsoft Intune apps to enroll devices. Instead, you download the profile and transfer it to the macOS device. This method requires you to have physical access to the Macs you're enrolling. 
+- [Direct enrollment](device-enrollment-direct-enroll-macos.md): Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling.  
 
 ## Bootstrap tokens    
 
