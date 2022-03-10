@@ -86,7 +86,7 @@ For VMware Fusion, you need to [edit the .vmx file](https://kb.vmware.com/s/arti
 
 This type of enrollment lets you manage macOS devices that aren't part of Apple School Manager or Apple Business Manager. It provides the same level of control as supervised macOS devices enrolled using Automated Device Enrollment or Apple Configurator. 
 
-All MDM enrollments in Intune, except those enrolled via Automated Device Enrollment (ADE), are considered user-approved. Intune automatically turns on supervision for user-approved devices running macOS 11 and later. It also does this for enrolled devices that later update to macOS 11 or later.  
+All Mac enrollments in Intune, except those enrolled via Automated Device Enrollment (ADE), are considered user-approved. Intune automatically turns on supervision for user-approved devices running macOS 11 and later. It also does this for enrolled devices that later update to macOS 11 or later.  
 
 > [!NOTE]
 > Intune announced support for user approved enrollment in June 2020. BYOD enrollments that occured before that time may not be user-approved. For more information about Apple devices becoming user approved, see [User approved MDM enrollment](https://support.apple.com/HT208019) on the Apple Support website. 
