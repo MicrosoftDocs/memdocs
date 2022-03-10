@@ -1130,6 +1130,8 @@ Use the following task sequence variables with this step:
 - [OSDBitLockerPIN](task-sequence-variables.md#OSDBitLockerPIN)
 - [OSDBitLockerRecoveryPassword](task-sequence-variables.md#OSDBitLockerRecoveryPassword)
 - [OSDBitLockerStartupKey](task-sequence-variables.md#OSDBitLockerStartupKey)
+- [OSDRecoveryKeyPollingFrequency](task-sequence-variables.md#OSDRecoveryKeyPollingFrequency) (starting in version 2203)
+- [OSDRecoveryKeyPollingTimeout](task-sequence-variables.md#OSDRecoveryKeyPollingTimeout) (starting in version 2203)
 
 ### Cmdlets for Enable BitLocker
 

@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 12/01/2021
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
@@ -375,7 +375,7 @@ A read-only variable for whether the **Network adapter connected** check returne
 
 ### <a name="TSCRUEFI"></a> _TS_CRUEFI
 
-*Starting in version 2006* <!--6452769-->
+<!--6452769-->
 
 *Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
@@ -1239,6 +1239,22 @@ Specifies a randomly generated password for the local Administrator account in t
 - `true` (default): Windows Setup disables the local Administrator account on the target computer  
 
 - `false`: Windows Setup enables the local administrator account on the target computer, and sets the account password to the value of [OSDLocalAdminPassword](#OSDLocalAdminPassword)  
+
+### OSDRecoveryKeyPollingFrequency
+<!--10454717-->
+_Applies to the [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) step._
+
+_Applies to version 2203 and later._
+
+The frequency, in seconds, that the BitLocker action will poll the site database for recovery key escrow status. Minimum value is 15 seconds.
+
+### OSDRecoveryKeyPollingTimeout
+<!--10454717-->
+_Applies to the [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) step._
+
+_Applies to version 2203 and later._
+
+The maximum number of seconds for the BitLocker action to wait for the recovery key to be escrowed to the site database. Minimum value is 30 seconds.
 
 ### <a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (input)
 
