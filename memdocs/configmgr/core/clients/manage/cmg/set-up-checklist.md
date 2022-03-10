@@ -2,7 +2,7 @@
 title: Set up checklist for CMG
 titleSuffix: Configuration Manager
 description: Get an overview of the cloud management gateway (CMG) setup process and make sure you have all prerequisites ready to start.
-ms.date: 09/09/2021
+ms.date: 03/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: overview
@@ -69,6 +69,8 @@ Use the following checklist to make sure you have the necessary information and 
 - An Azure **subscription owner** role for when you create the CMG in Azure.
 
 - At least one existing site system server on which you plan to add the **CMG connection point** role.
+
+- Review the [internet access requirements](data-flow.md#internet-access-requirements) to make sure each required services can be reached.
 
 You'll set up other prerequisite components during the next steps in the process.
 

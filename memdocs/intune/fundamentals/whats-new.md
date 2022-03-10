@@ -43,7 +43,7 @@ Learn what's new each week in Microsoft Intune. You can also find [important not
 >
 > Some features may roll out over several weeks and might not be available to all customers in the first week.
 >
-> Check the [In development page](in-development.md) for a list of upcoming features in a release.
+> For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md). For new information about Autopilot, see [Windows Autopilot What's New](/mem/autopilot/windows-autopilot-whats-new).
 
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
@@ -59,6 +59,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of February 28, 2022
+
+### Device configuration
+
+#### Cellular data plan for Apple's Automated Device Enrollment<!-- 13729221 -->
+As part of an iOS/iPadOS enrollment profile when configuring Automated Device Enrollment (ADE), you can now configure devices to activate cellular data. Configuring this option will send a command to activate cellular data plans for your organization's eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. This setting applies to devices running iOS/iPadOS 13.0 and later that are enrolling with ADE. For more information, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 ## Week of February 21, 2022 (Service release 2202)
 
@@ -578,6 +585,7 @@ The following details for Windows 10 and Windows 11 devices are now collected an
 - System Management BIOS version
 - TPM Manufacturer version
 - TPM Manufacturer ID
+
 These details are also included when you *Export* the details from the *All devices* pane.  
 
 #### Settings for Shared iPad now generally available<!-- 10975827  -->  
@@ -1309,7 +1317,7 @@ The previous connectors remain in support but are no longer available for downlo
 
 #### Windows Autopilot diagnostics page (public preview)
 
-[Available settings](../enrollment/windows-enrollment-status.md#available-settings) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](../../autopilot/windows-autopilot-whats-new.md#preview-windows-autopilot-diagnostics-page). 
+[Available settings](../enrollment/windows-enrollment-status.md) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](../../autopilot/windows-autopilot-whats-new.md#windows-autopilot-diagnostics-page). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -1641,7 +1649,7 @@ We have a pair of updates to announce for the Microsoft Tunnel Gateway this mont
   - Android Enterprise Fully Managed
   - Android Enterprise Corporate-Owned Work Profile
 
-  However, for Android Enterprise Personally-Owned Work profile, use *only* the VPN profile with custom settings. Personally-Owned Work Profile devices that receive a separate app configuration profile for Microsoft Defender for Endpoint in addition to a Microsoft Tunnel VPN profile may be unable to connect to the Microsoft Tunnel.
+  However, for an Android Enterprise Personally-Owned Work profile, use *only* the VPN profile with custom settings. Personally-Owned Work Profile devices that receive a separate app configuration profile for Microsoft Defender for Endpoint in addition to a Microsoft Tunnel VPN profile may be unable to connect to the Microsoft Tunnel.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -1896,7 +1904,7 @@ Endpoint analytics [startup performance](../../analytics/startup-performance.md)
 
 ### New modern authentication method with Apple Setup Assistant (public preview)<!--4843770 -->
 
-When creating an Automated Device Enrollment profile, can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from Setup Assistant but avoids the issue of leaving end users stuck on a device they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD Multi-Factor Authentication during the setup assistant screens. This will require an additional Azure AD login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS. For macOS, here are the options to get the Company Portal on the device - [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
+When creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from Setup Assistant but avoids the issue of leaving end users stuck on a device they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD Multi-Factor Authentication during the setup assistant screens. This will require an additional Azure AD login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS. For macOS, here are the options to get the Company Portal on the device - [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
 
 Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when the user lands on the home screen after the setup screens, however the device will not be fully registered with Azure AD until the Company Portal login. The device will not show up in a given user's device list in the Azure AD portal until the Company Portal login. If the tenant has multifactor  authentication turned on for these devices or users, the users will be asked to complete multifactor authentication during enrollment during Setup Assistant. Multifactor  authentication is not required, but it is available for this authentication method within Conditional Access if needed.
 
@@ -2532,7 +2540,7 @@ Intune device detail logs are now available. In [Microsoft Endpoint Manager admi
 
 #### Scope tag support for the Enrollment Status Page <!--4172335 -->
 
-You can now assign scope tags to the Enrollment Status Page so only the roles you define will be able to see it. For more information, see [Create Enrollment Status Page profile and assign to a group](../enrollment/windows-enrollment-status.md#create-enrollment-status-page-profile-and-assign-to-a-group).
+You can now assign scope tags to the Enrollment Status Page so only the roles you define will be able to see it. For more information, see [Create Enrollment Status Page profile and assign to a group](../enrollment/windows-enrollment-status.md#create-new-profile).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Scripts

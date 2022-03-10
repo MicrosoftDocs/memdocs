@@ -1,0 +1,64 @@
+### YamlMime:FAQ
+metadata:
+  title: FAQ for resource access deprecation
+  titleSuffix: Configuration Manager
+  description: Frequently asked questions (FAQ) about the end of support for compliance settings for company resource access features.
+  author: aczechowski
+  ms.author: aaroncz
+  ms.reviewer: dannygu
+  manager: dougeby
+  ms.date: 02/17/2022
+  ms.topic: faq
+  ms.prod: configuration-manager
+  ms.technology: configmgr-protect
+  ms.localizationpriority: medium
+
+title: Frequently asked questions about resource access deprecation
+summary: |
+  *Applies to: Configuration Manager (current branch)* 
+
+  Starting in Configuration Manager version 2103, the following company resource access [features are deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md):<!-- 9315387 -->
+
+  - Certificate profiles
+  - VPN profiles
+  - Wi-Fi profiles
+  - Windows Hello for Business settings
+  - Email profiles
+  - The co-management resource access workload
+
+  This article answers your frequently asked questions about these deprecated features.
+
+sections:
+  - name: Ignored
+    questions:
+      - question: |
+          When will these features be removed from Configuration Manager?
+        answer: |
+          Starting in version 2203, these features will still be in Configuration Manager, but no longer tested or supported. These features will be removed in version 2207.
+
+      - question: |
+          What functionality is available to replace these features?
+        answer: |
+          Use Microsoft Intune to deploy resource access profiles. For more information, see [Apply features and settings on your devices using device profiles in Microsoft Intune](../../../intune/configuration/device-profiles.md).
+
+          Use [co-management](../../comanage/overview.md) to enroll Configuration Manager clients to Intune.
+
+      - question: |
+          What do I do if I'm deploying wi-fi profiles with Configuration Manager?
+        answer: |
+          Before you upgrade to Configuration Manager version 2203, [enable co-management](../../comanage/how-to-enable.md), and deploy the same wi-fi profiles with Intune. For more information, see [Add and use Wi-Fi settings on your devices in Microsoft Intune](../../../intune/configuration/wi-fi-settings-configure.md). If you don't take action, the existing wi-fi profiles will persist on devices but are unmanaged.
+
+      - question: |
+          What happens if I don't enable co-management?
+        answer: |
+          If you currently use these features, they're not tested or supported in version 2203. When you upgrade to version 2207, they'll cause error prerequisite checks. You can't deploy any wi-fi, VPN, Windows Hello for Business, or certificate (SCEP, PFX, or root CA) profiles to Configuration Manager clients. Any existing deployed profiles won't be removed from devices, and will continue to function. These existing profiles will be unmanaged. For example, When a certificate expires, Configuration Manager won't renew it.
+
+      - question: |
+          What happens if I've enabled co-management, but haven't switched the resource access workload?
+        answer: |
+          Starting in version 2207, co-managed clients will get their policy for this workload from the Intune management authority. This behavior is the same as if you used Configuration Manager version 2111 or earlier to switch the resource access workload to Intune.
+
+      - question: |
+          What alternative options are available?
+        answer: |
+          Configuration Manager version 2111 fully supports these features and is supported until June 2023. For more information, see [Supported versions](../../core/servers/manage/updates.md#supported-versions).
