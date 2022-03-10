@@ -70,7 +70,7 @@ The upcoming Remote Help remote action (in the Microsoft Endpoint Manager admin 
 
 ### Upload a custom image without an on-premises network connection<!--8341750-->
 
-Customers using Azure Active Directory (Azure AD) Join without additional Azure infrastructure will be able to upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscriptions.
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network will be able to upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
 
 ### windows365.microsoft.com will move to general availability<!--38195529-->
 
