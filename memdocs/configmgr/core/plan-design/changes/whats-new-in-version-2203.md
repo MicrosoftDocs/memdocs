@@ -38,7 +38,7 @@ If you deploy an application or app group to a user collection that's based on a
 <!--7759984-->
 Clients now prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP when the boundary group uses the **Prefer cloud based source over on-premises source** option.
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Link text](link).
 
 ## Site infrastructure
 

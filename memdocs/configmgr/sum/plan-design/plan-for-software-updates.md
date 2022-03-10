@@ -20,7 +20,7 @@ Before you use software updates in a Configuration Manager production environmen
 
 ##  <a name="BKMK_SUPInfrastructure"></a> Determine the software update point infrastructure  
 
-This section includes the following subtopics:    
+This section includes the following subtopics:
 - [Software update point list](#BKMK_SUPList)
 - [Software update point switching](#BKMK_SUPSwitching)
 - [Manually switch clients to a new software update point](#BKMK_ManuallySwitchSUPs)
@@ -95,7 +95,7 @@ When Configuration Manager receives any of the following Windows Update Agent er
 
 2149842970, 2147954429, 2149859352, 2149859362, 2149859338, 2149859344, 2147954430, 2147747475, 2149842974, 2149859342, 2149859372, 2149859341, 2149904388, 2149859371, 2149859367, 2149859366, 2149859364, 2149859363, 2149859361, 2149859360, 2149859359, 2149859358, 2149859357, 2149859356, 2149859354, 2149859353, 2149859350, 2149859349, 2149859340, 2149859339, 2149859332, 2149859333, 2149859334, 2149859337, 2149859336, 2149859335
 
-To look up the meaning of an error code, convert the decimal error code to hexadecimal, and then search for the hexadecimal value on a site such as the [Windows Update Agent - Error Codes Wiki](https://social.technet.microsoft.com/wiki/contents/articles/15260.windows-update-agent-error-codes.aspx).‭ For example, the decimal error code 2149842970 is hexadecimal 8024001A‬, which means WU_E_POLICY_NOT_SET A policy value was not set.  
+To look up the meaning of an error code, convert the decimal error code to hexadecimal, and then search for the hexadecimal value on a site such as the [Windows Update Agent - Error Codes Wiki](https://social.technet.microsoft.com/wiki/contents/articles/15260.windows-update-agent-error-codes.aspx). For example, the decimal error code 2149842970 is hexadecimal 8024001A, which means WU_E_POLICY_NOT_SET A policy value was not set.  
 
 
 ###  <a name="BKMK_ManuallySwitchSUPs"></a> Manually switch clients to a new software update point
