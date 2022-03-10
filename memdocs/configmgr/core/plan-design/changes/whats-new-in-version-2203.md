@@ -147,6 +147,14 @@ You can now organize software update groups and packages by using folders. This 
 
 ## OS deployment
 
+### Escrow BitLocker recovery password to the site during a task sequence
+
+<!--10454717-->
+
+You can now configure the **Enable BitLocker** step of a task sequence to escrow the BitLocker recovery information for the OS volume to Configuration Manager. Previously, you had to escrow to Active Directory, or wait for the Configuration Manager client to receive BitLocker management policy after the task sequence. This new option makes sure that the device is fully protected by BitLocker when the task sequence completes, and that you can recover the OS volume immediately.
+
+For more information, see [Task sequence steps: Enable BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
+
 ### Custom icon support for task sequences and packages
 
 <!--12486335-->
