@@ -90,40 +90,12 @@ The bootstrap token is automatically generated when:
 The token is then automatically escrowed to Microsoft Intune. You can use a command line tool to manually view, generate, and escrow a bootstrap token, if needed. For more information, see [Use secure token, bootstrap token, and volume ownership in deployments](https://support.apple.com/guide/deployment/use-secure-and-bootstrap-tokens-dep24dbdcf9e/1/web/1.0) on Apple Support.  
 
 ### Manage kernel extensions  
-A bootstrap token can be used to approve the installation of both kernel extensions and software updates on a Mac with Apple silicon. Kernel extenstion management is automatically available on Macs running macOS 11 or later and enrolled via automated device enrollment. 
+A bootstrap token can be used to approve the installation of both kernel extensions and software updates on a Mac with Apple silicon. Kernel extension management is automatically available on Macs running macOS 11 or later and enrolled via automated device enrollment. 
 
-To enable it on a device that wasn't enrolled via automated device enrollment, you must restart the device in recoveryOS and downgrade its security settings. Shut down the device and then complete these steps as the device reboots:     
-
-1. Press and hold the power button until you see **Loading startup options**.  
-
-2. Select **Options** > **Continue**.
-
-3. If requested, enter the administrator account's password.  
-
-4. The Mac enters recovery mode and opens macOS Recovery. Select **Utilities** > **Startup Security Utility**.  
-
-5. Select the startup disk you want to use for the security policy. If the disk is encrypted with FileVault:
-    a. Select Unlock.   
-    b. Enter the password. 
-    c. Select Unlock.  
-
-6. Select **Security Policy**.
-
-7. From the security options, select **Reduced Security**.
-8. Enter the administrator's username and password. 
-9. Select from the available settings. Your options: 
-    - **Allow user management of kernel extensions from identified developers**: Select the checkbox to allow local users to approve the installation of software that uses legacy kernel extensions.  
-    - **Allow remote management of kernel extensions and automatic software updates**: Select the checkbox to authorize remote management of legacy kernel extensions and software updates in Intune.
-
-9. Select **OK**.
-
-10. Restart your Mac for the changes to take effect.  
-
-> [!TIP]
-> If you have problems starting up your Mac with Apple silicon, and think the problem is caused by third-party software installed on the device, try starting your Mac in safe mode.    
+To authorize the remote management of kernel extensions on a device that isn't enrolled via automated device enrollment, you must restart the Mac in recovery mode and downgrade its security settings. For more information, see [Change security settings on the startup disk of a Mac with Apple silicon](https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac) on Apple Support.      
 
 ## Block macOS enrollment  
-By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).
+By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).  
 
 ## Enroll virtual macOS machines for testing
 
