@@ -50,7 +50,7 @@ For more information on the Intune feature, see [Manage Windows software updates
 ## Resource access policies
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, these company resource access features of Configuration Manager and this co-management workload are [deprecated](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../intune/configuration/device-profiles.md).
+> Starting in Configuration Manager version 2103, these company resource access features of Configuration Manager and this co-management workload are [deprecated](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../intune/configuration/device-profiles.md). For more information, see [Frequently asked questions about resource access deprecation](../protect/plan-design/resource-access-deprecation-faq.yml).
 
 Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices.
 

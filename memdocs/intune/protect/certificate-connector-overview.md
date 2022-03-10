@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/28/2022
+ms.date: 03/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -225,6 +225,12 @@ New updates for the connector can take a week or more to become available for ea
 > [!IMPORTANT]
 > On [DATE], certificate connectors earlier than version [version] will no longer allow you to issue certificates to users and devices.
 -->
+
+### March 10, 2022
+
+Version **6.2202.38.0**. This update includes:
+
+- Changes to support TLS 1.2 for auto-update
 
 ### February 18, 2022
 

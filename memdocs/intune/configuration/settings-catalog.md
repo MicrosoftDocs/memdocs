@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/23/2022
+ms.date: 03/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -119,7 +119,7 @@ The next time the device checks for configuration updates, the settings you conf
 
 There are thousands of settings available in the settings catalog. To make it easier to find specific settings, use the built-in features:
 
-- In your policy, use **Add settings** > **Search** to find specific settings. You can search by category, such as `browser`, search for a keyword, such as `office`, and search for specific settings.
+- In your policy, use **Add settings** > **Search** to find specific settings. You can search by category, such as `browser`, search for a keyword, such as `office` or `google`, and search for specific settings.
 
   For example, search for `internet explorer`. All the settings with `internet explorer` are shown. Select a category to see the available settings:
 
