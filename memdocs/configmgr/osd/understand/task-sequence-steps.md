@@ -1740,7 +1740,7 @@ The [Windows Autopilot for existing devices](../../../autopilot/existing-devices
 
 ## <a name="BKMK_PreProvisionBitLocker"></a> Pre-provision BitLocker
 
-Use this step to enable BitLocker on a drive while in Windows PE. By default, only the used drive space is encrypted, so encryption times are much faster. You apply the key management options by using the [Enable BitLocker](#BKMK_EnableBitLocker) step after the OS installs.
+Use this step to enable BitLocker on a drive while in Windows PE. By default, only the used drive space is encrypted, so encryption times are much faster. You apply the key management options by using the [Enable BitLocker](#enable-bitlocker) step after the OS installs.
 
 > [!IMPORTANT]
 > Pre-provisioning BitLocker requires that the computer has a supported and enabled Trusted Platform Module (TPM).
