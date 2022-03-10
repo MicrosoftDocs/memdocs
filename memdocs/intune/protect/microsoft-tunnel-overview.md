@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/01/2022
+ms.date: 03/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -131,7 +131,7 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 >
 > - Tunnel gateway maintains two channels with the client. A control channel is established over TCP, and TLS. This also serves as a backup data channel. It then looks to establish a UDP channel using DTLS (Datagram TLS, an implementation of TLS over UDP) that serves as the main data channel. If the UDP channel fails to establish or is temporarily unavailable, the backup channel over TCP/TLS is used. By default port 443 is used for both TCP and UDP, but this can be customized via the Intune Server Configuration - [*Server port* setting](../protect/microsoft-tunnel-configure.md#create-a-server-configuration). If changing the default port (443) ensure your inbound firewall rules are adjusted to the custom port.
 >
-> - The assigned client IP addresses (the*IP address range* setting in a [Server configuration](../protect/microsoft-tunnel-configure.md#to-create-a-server-configuration) for Tunnel) are not visible to other devices on the network. These addresses won't conflict with any internal/corporate network IP address on the network.  Client traffic will have the source IP address of the Linux server host. Microsoft Tunnel Gateway uses port address translation (PAT). PAT is a type of network address translation (NAT) where multiple private IP addresses from the Server configuration are mapped into a single IP (many-to-one) by using ports. Client traffic will have the source IP address of the Linux server host.
+> - The assigned client IP addresses (the *IP address range* setting in a [Server configuration](../protect/microsoft-tunnel-configure.md#to-create-a-server-configuration) for Tunnel) are not visible to other devices on the network. Microsoft Tunnel Gateway uses port address translation (PAT). PAT is a type of network address translation (NAT) where multiple private IP addresses from the Server configuration are mapped into a single IP (many-to-one) by using ports. Client traffic will have the source IP address of the Linux server host.
 
 **Break and inspect**:
 
@@ -155,8 +155,6 @@ The following outlines where break and inspect is not supported and where it is 
 
 - The Management Agent is authorized against Azure AD using Azure app ID/secret keys.
 
-- The Tunnel Gateway server uses NAT to provide addresses to VPN clients that are connecting to the corporate network.
-  
 ## Next steps
 
 [Prerequisites for the Microsoft Tunnel in Intune](microsoft-tunnel-prerequisites.md)

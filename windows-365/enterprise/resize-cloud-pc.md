@@ -28,7 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Resize a Cloud PC
+# Resize a Cloud PC (preview)
 
 The **Resize** remote action lets you upgrade a Cloud PC’s RAM, CPU, and storage size to meet the user’s needs. Resizing is important for users that need:
 
