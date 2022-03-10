@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/17/2022
+ms.date: 03/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -108,6 +108,73 @@ with documentation for the application, and packages with helper utilities. For 
   - The TLS certificate can be in **PEM** or **pfx** format.
 
 - **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn’t available, the connection can fall back to use TLS 1.2.
+
+### Default bridge network
+
+Both Podman and Docker containers use a bridge network to forward traffic through the Linux host. When the containers bridge network conflicts with a corporate network, Tunnel Gateway can’t successfully route traffic to that corporate network.
+
+The default bridge networks are:
+
+- Docker:  **172.17.0.0/16**
+- Podman: **10.0.88.0.0/16**
+
+To avoid conflicts, you can reconfigure both Podman and Docker to use a bridge network that you specify.
+
+> [!IMPORTANT]
+> The Tunnel Gateway server must be installed before you can change the bridge network configuration.
+
+#### Change the default bridge network used by Docker
+
+Docker uses the file **/etc/docker/daemon.json** to configure a new default bridge IP address. In the file, the bridge IP address must be specified in CIDR (Classless inter-domain routing) notation, a compact way to represent an IP address along with its associated subnet mask and routing prefix.  
+
+> [!IMPORTANT]
+> The IP address that's used in the following steps is an example. Be sure the IP address you use doesn't conflict with your corporate network.
+
+1. Use the following command to stop the MS Tunnel Gateway container:  `sudo mst-cli server stop ; sudo mst-cli agent stop`
+
+2. Next, run the following command to remove the existing Docker bridge device: `sudo ip link del docker0`
+
+3. If the file **/etc/docker/daemon.json** is present on your server, use a file editor like *vi* or *nano* to modify the file. Run the file editor with root or sudo permissions:
+
+   - When the **“bip”:** entry is present with an IP address, modify it by adding a new IP address in CIDR notation.
+   - When the **“bip”:** entry isn't present, you must add both the value **"bip":** and the new IP address in CIDR notation.
+
+   The following example shows the structure of a *daemon.json* file with an updated **“bip”:** entry that uses a modified IP address of **“192.168.128.1/24”**.
+
+   Example of daemon.json:
+
+   ```
+   {
+   "bip": "192.168.128.1/24"
+   }
+   ```
+
+4. If the file **/etc/docker/daemon.json** isn’t present on your server, run a command similar to the following example to create the file and define the bridge IP that you want to use.
+
+   Example: `sudo echo '{ "bip":"192.168.128.1/24" }' > /etc/docker/daemon.json`
+
+5. Use the following command to start the MS Tunnel Gateway container: `sudo mst-cli agent start ; sudo mst-cli server start`
+
+For more information, see [Use bridge networks](https://docs.docker.com/network/bridge/#configure-the-default-bridge-network) in the Docker documentation.
+
+#### Change the default bridge network used by Podman
+
+Podman uses the file **/etc/cni/net.d as 87-podman-bridge.conflist** to configure a new default bridge IP address.
+
+1. Use the following command to stop the MS Tunnel Gateway container: `sudo mst-cli server stop ; sudo mst-cli agent stop`
+
+2. Next, run the following command to remove the existing Podman bridge device: `sudo ip link del cni-podman0`
+
+3. Using root permissions and a file editor like *vi* or *nano*, modify **/etc/cni/net.d as 87-podman-bridge.conflist** to update the defaults for **“subnet:”** and **“gateway:”** by replacing the Podman default values with your desired subnet and gateway addresses. The *subnet* address must be specified in CIDR notation.
+
+   The Podman defaults are:
+
+   - subnet: 10.88.0.0/16
+   - gateway: 10.88.0.1
+
+4. Use the following command to restart the MS Tunnel Gateway containers: `sudo mst-cli agent start ; sudo mst-cli server start`
+
+For more information, see [Configuring container networking with Podman](https://www.redhat.com/sysadmin/container-networking-podman) in the Red Hat documentation.
 
 ## Network
 

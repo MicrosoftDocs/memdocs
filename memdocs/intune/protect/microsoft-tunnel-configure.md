@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/02/2022
+ms.date: 03/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,7 +27,6 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Tunnel for Intune
 
-
 - Review and [Configure prerequisites for Microsoft Tunnel](microsoft-tunnel-prerequisites.md).
 - Run the Microsoft Tunnel [readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
 
@@ -45,7 +44,10 @@ Use of a *Server configuration* lets you create a configuration a single time an
 
 3. On the **Settings** tab, configure the following items:
 
-   - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
+   - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. The Tunnel Client IP address range specified must not conflict with an on-premises network range.
+     - Consider using the Automatic Private IP Addressing (APIPA) range of 169.254.0.0/16, as this range avoids conflicts with other corporate networks.
+     - If the client IP address range conflicts with the destination, it will loopback and fail to communicate with the corporate network.
+     - You can select any client IP address range you want to use if it does not conflict with your corporate network IP address ranges.
 
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
 

@@ -19,6 +19,9 @@ highlightedContent:
     - title: Compare Windows 365 Business and Enterprise
       itemType: overview
       url: business-enterprise-comparison.md
+    - title: Windows 365 approved partners
+      itemType: overview
+      url: partners.md
 
 # productDirectory section (optional)
 productDirectory:

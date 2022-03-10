@@ -257,4 +257,4 @@ PKCS certificates stay on the device (certificates aren't revoked or removed) wh
 
 ## Next steps
 
-[Use certificates for authentication](certificates-configure.md)
+[Use certificates for authentication](certificates-configure.md)  <!-- Test for second -->
