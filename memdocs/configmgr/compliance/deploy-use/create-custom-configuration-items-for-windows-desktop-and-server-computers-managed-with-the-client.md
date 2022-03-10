@@ -220,7 +220,9 @@ The value returned by the script is used to assess the compliance of the global 
 
 - **Discovery script**: Select **Add Script**, and enter or browse to a script. This script is used to find the value. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
 
-- **Remediation script (optional)**: Select **Add Script**, and enter or browse to a script. This script is used to remediate non-compliant setting values. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
+- **Remediation script (optional)**: Select **Add Script**, and enter or browse to a script. This script is used to remediate non-compliant setting values. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.
+    > [!IMPORTANT]  
+    > - To properly report a remediation failure, scripts need to throw exceptions rather than a nonzero exit code. <!--8760430-->
 
 - **Run scripts by using the logged on user credentials**: If you enable this option, the script runs on client computers that use the credentials of the signed-in user.  
 
@@ -319,7 +321,7 @@ Compliance rules specify the conditions that define the compliance of a configur
     - **WQL query**  
 
     > [!IMPORTANT]  
-    > - To properly report a remediation failure,scripts need to throw exceptions rather than a nonzero exit code. <!--8760430-->
+    > - To properly report a remediation failure, scripts need to throw exceptions rather than a nonzero exit code. <!--8760430-->
     > - You can only remediate noncompliant rules when the rule operator is set to **Equals**. 
 
 
