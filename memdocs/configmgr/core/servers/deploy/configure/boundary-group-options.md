@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.localizationpriority: medium
+ms.localizationpriority: medium 
 ---
 
 # Boundary group options
@@ -113,7 +113,8 @@ If you have a branch office with a faster internet link, you can prioritize clou
 - Microsoft Update
 
   > [!NOTE]
-  > You can only use **Microsoft Update** as a source when you enable the following option in the software update deployment download settings: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
+  > - You can only use **Microsoft Update** as a source when you enable the following option in the software update deployment download settings: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
+  > - Starting in version 2203, this setting also applies for software update scanning. Existing clients don't automatically switch to a cloud-based software update point. For more information, see [Boundary groups and software update points](boundary-groups-software-update-points.md#bkmk_prefer_cmgsup). <!--7759984-->
 
 ## Next steps
 

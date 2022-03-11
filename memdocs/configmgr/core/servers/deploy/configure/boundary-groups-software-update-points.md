@@ -80,23 +80,23 @@ This behavior is useful in the following scenarios:
 
 - If the only software update point for the boundary group is the CMG software update point, then all intranet and internet devices will scan against it.
 
-## <a name="bkmk_prefer_cmgsup"></a> Prefer cloud-based software update points on switching
+## <a name="bkmk_prefer_cmgsup"></a> Prefer cloud-based software update points
 <!--7759984-->
 *(Introduced in version 2203)*
 
-Starting in version 2203, clients prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP when the boundary group uses the **Prefer cloud based source over on-premises source** option. To reduce the performance impact of this change, clients [don't automatically switch their SUP](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs) to a cloud-based SUP. The client will stay assigned to their current SUP unless their current SUP fails or the client is manually switched to a new SUP. You won't need to manually switch the SUP for any new clients added to the environment after the the boundary group option is set.
+Starting in version 2203, clients prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP when the boundary group uses the **Prefer cloud based source over on-premises source** option. To reduce the performance impact of this change, clients [don't automatically switch their SUP](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs) to a cloud-based SUP. The client will stay assigned to their current SUP unless their current SUP fails or the client is manually switched to a new SUP. You won't need to manually switch the SUP for any new clients added to the environment after the boundary group option is set.
 
+Use the following high-level guidance to set your clients to prefer a cloud-based software update point:
 
-1. Ensure your [cloud management gateway](../../../../clients/manage/cmg/set-up-checklist.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) is configured and functional
+1. Ensure your [cloud management gateway](../../../clients/manage/cmg/set-up-checklist.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) is configured and functional
 1. Verify that your [software update points](../../../../../sum/get-started/install-a-software-update-point.md) are functional and synchronized.
-1. Enable the [**Allow Configuration Manager cloud management gateway traffic**](../../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role) option for any SUP you want to use with CMG.
-1. [Configure the boundary group](../../../../servers/deploy/configure/boundary-group-procedures.md#configure-a-boundary-group) for this behavior by enabling the **Prefer cloud based sources over on-premises sources** option and adding the CGM SUP server to the **Site system servers** list.
-1. To manually switch clients to a new SUP, use the **Switch to next Software Update Point** [client notification](../../../../clients/manage/client-notification.md#switch-to-the-next-software-update-point) action for a device or for a collection.
-   - Clients in the boundary group [don't automatically switch to a new SUP](../../../../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching) unless scanning against their current SUP fails four times over the course of two hours.
-   - You won't need to manually switch the SUP for any new clients added to the environment after the the boundary group option is set.
+1. Enable the [**Allow Configuration Manager cloud management gateway traffic**](../../../clients/manage/cmg/setup-cloud-management-gateway.md#bkmk_role) option for any SUP you want to use with CMG.
+1. [Configure the boundary group](../../deploy/configure/boundary-group-procedures.md#configure-a-boundary-group) for this behavior by enabling the **Prefer cloud based sources over on-premises sources** option and adding the CGM SUP server to the **Site system servers** list.
+1. To manually switch clients to a new SUP, use the **Switch to next Software Update Point** [client notification](../../../clients/manage/client-notification.md#switch-to-the-next-software-update-point) action for a device or for a collection.
+   - Clients in the boundary group [don't automatically switch to a new SUP](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_ManuallySwitchSUPs)*9 unless scanning against their current SUP fails four times over the course of two hours.
+   - You won't need to manually switch the SUP for any new clients added to the environment after the boundary group option is set.
 1. To verify that clients prefer the CMG SUP, start a software update scan cycle on some of the clients that you switched.
    - To limit potential performance issues caused by a large number of clients scanning against a new SUP simultaneously, we recommend that if you're immediately calling a scan cycle on a large number of clients that you start with no more than 100 clients every 10-15 minutes. Increase or decrease the number of clients and the frequency once you gauge the performance impact in your environment.
-1. The client's **LocationServices.log** will show the CMG SUP listed as the first `LocationRecord WSUSURL` in the `WSUSLocationReply`. The CMG SUP will also be listed as the server for the update scan in the **WUAHandler.log**.
 
 ## Next steps
 
