@@ -108,10 +108,7 @@ Deletes the selected collection. You can also delete all of the resources in the
 
 You can't delete the collections that are built into Configuration Manager. For a list of the built-in collections, see [Introduction to collections](introduction-to-collections.md#built-in-collections).
 
-Collections might also not delete due to dependent collections. When reviewing a dependant collection you want to delete, also ensure that the dependant collection isn't: <!--9708999-->
-- **Used by cloud attach**: For more information, see [Enable cloud attach for Configuration Manager](../../../../cloud-attach/enable.md).
-- **Used for upload to Microsoft Endpoint Manager**: For more information, see [Make Configuration Manager collections available to assign Endpoint security policies](../../../../tenant-attach/endpoint-security-get-started.md#bkmk_collections).
-- **Assigned to user**: For more information, see [Modify the administrative scope of an administrative user](../../../servers/deploy/configure/configure-role-based-administration.md#modify-the-administrative-scope-of-an-administrative-user).
+Starting in version 2203, when you delete a collection, you can review and delete its dependent collections at the same time. For more information, see [Delete collection references](#delete-collection-references).
 
 #### Simulate deployment
 
@@ -142,6 +139,42 @@ Move the selected collection to another folder in the **Device Collections** nod
 #### Properties
 
 For more information, see [Collection properties](#collection-properties).
+
+### Delete collection references
+
+<!--9708999-->
+
+Previously, when you would delete a collection with dependent collections, you first had to delete the dependencies. The process of finding and deleting all of these collections could be difficult and time consuming. Starting in version 2203, when you delete a collection, you can review and delete its dependent collections at the same time.
+
+A new **Details** window shows more information about the relationship types, and lets you [view collection relationships](../../../../clients/manage/collections/view-relationships.md) in a graphical chart.
+
+:::image type="content" source="../../media/9708999-delete-collection-references.png" alt-text="View collection dependencies in list and graphical form when deleting a collection" lightbox="../../media/9708999-delete-collection-references.png":::
+
+1. Delete a collection that has dependent collections.
+
+1. In the **Delete Collection Error** window, select **Details**.
+
+1. Once the relationship types finish loading, select **View Relationships** to see the graph.
+
+1. If all of the dependent collections can be deleted, select **Delete all listed collections**.
+
+1. Review the list of collections and any software deployments that the site will also remove. You also can **Delete each collection member from the database**.
+
+There are several reasons why the site can't delete a dependent collection:
+
+- **Assigned to user**: For more information, see [Modify the administrative scope of an administrative user](../../../../servers/deploy/configure/configure-role-based-administration.md#modify-the-administrative-scope-of-an-administrative-user).
+
+- **Used by cloud attach**: For more information, see [Enable cloud attach for Configuration Manager](../../../../../cloud-attach/enable.md).
+
+- **Use for upload to Microsoft Endpoint Manager**: For more information, see [Make Configuration Manager collections available to assign Endpoint security policies](../../../../../tenant-attach/endpoint-security-get-started.md#bkmk_collections).
+
+The details window lists collections that can't be deleted with the reason why.
+
+#### Known issue when deleting collection references
+
+<!--13235415-->
+
+Consider the scenario where you're deleting collections with references, and another administrative user is simultaneously creating a reference to a collection that you're deleting. When this behavior occurs, the console displays an error, and the collection isn't deleted.
 
 ### Manage user collections
 
