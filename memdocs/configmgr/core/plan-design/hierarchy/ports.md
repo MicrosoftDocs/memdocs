@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 12/21/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -567,6 +567,8 @@ During the installation of a site that uses a remote SQL Server to host the site
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |Server Message Block (SMB)|--|445|
+|RPC Endpoint Mapper|135|135|
+|RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|
 |HTTP|--|80 or 8530 <sup>[Note 3](#bkmk_note3)</sup>|
 |HTTPS|--|443 or 8531 <sup>[Note 3](#bkmk_note3)</sup>|
 
@@ -679,7 +681,7 @@ The following sections provide more information about ports that Configuration M
 
 Clients use Server Message Block (SMB) whenever they connect to UNC shares. For example:
 
-- Manual client installation that specifies the CCMSetup.exe **/source:** command-line property
+- Manual client installation that specifies the CCMSetup.exe `/source:` command-line property
 
 - Endpoint Protection clients that download definition files from a UNC path
 

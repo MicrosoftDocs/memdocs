@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2022
+ms.date: 03/03/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -102,9 +102,9 @@ Using Visual Studio, create a Console App (.NET Framework) project that supports
          var applicationId = ConfigurationManager.AppSettings["appId"].ToString();
          SecureString applicationSecret = ConvertToSecureStr(ConfigurationManager.AppSettings["appKey"].ToString()); // Load as SecureString from configuration file or secret store (i.e. Azure KeyVault)
          var tenantDomain = ConfigurationManager.AppSettings["tenantDomain"].ToString();
-         var adalContext = new AuthenticationContext($"https://login.windows.net/" + tenantDomain + "/oauth2/token");
+         var msalContext = new AuthenticationContext($"https://login.windows.net/" + tenantDomain + "/oauth2/token");
     
-         AuthenticationResult authResult = adalContext.AcquireTokenAsync(
+         AuthenticationResult authResult = msalContext.AcquireTokenAsync(
              resource: "https://api.manage.microsoft.com/",
              clientCredential: new ClientCredential(
                  applicationId,

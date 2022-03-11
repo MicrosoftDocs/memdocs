@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/11/2022
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,7 +43,7 @@ Learn what's new each week in Microsoft Intune. You can also find [important not
 >
 > Some features may roll out over several weeks and might not be available to all customers in the first week.
 >
-> Check the [In development page](in-development.md) for a list of upcoming features in a release.
+> For a list of upcoming Intune feature releases, see [In development for Microsoft Intune](../fundamentals/in-development.md). For new information about Autopilot, see [Windows Autopilot What's New](/mem/autopilot/windows-autopilot-whats-new).
 
 You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
@@ -59,6 +59,129 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of February 28, 2022
+
+### Device configuration
+
+#### Cellular data plan for Apple's Automated Device Enrollment<!-- 13729221 -->
+As part of an iOS/iPadOS enrollment profile when configuring Automated Device Enrollment (ADE), you can now configure devices to activate cellular data. Configuring this option will send a command to activate cellular data plans for your organization's eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. This setting applies to devices running iOS/iPadOS 13.0 and later that are enrolling with ADE. For more information, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+
+## Week of February 21, 2022 (Service release 2202)
+
+### Device security
+
+#### Mobile Threat Defense partner Zimperium is now available in GCC High tenants<!-- 10013537 -->
+Zimperium is now available as a Mobile Threat Defense (MTD) partner in US GCC High environments.
+ 
+With this support, you’ll find the Intune [connector for Zimperium](../protect/zimperium-mobile-threat-defense-connector.md) as available in the list of [MTD connectors that you can enable](../protect/mtd-connector-enable.md#to-enable-the-mobile-threat-defense-connector) in your GCC High tenant.
+ 
+The GCC High environment is a more regulated environment, and only connectors for those MTD partners that are supported for the GCC High environment are available in it. For more information about support in GCC High tenants, [Microsoft Intune for US Government GCC High and DoD service description](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
+
+#### Manage the app inventory data for iOS/iPadOS devices that Intune sends to third-party MTD partners<!-- 10722315 -->
+You can now configure the type of application inventory data for personally-owned iOS/iPadOS devices that Intune sends to your chosen third-party Mobile Threat Defense (MTD) partner.
+ 
+To control the app inventory data, configure the following setting as part of the *MDM Compliance Policy Settings* on the [Mobile Threat Defense connector](../protect/mtd-connector-enable.md#to-enable-the-mobile-threat-defense-connector) for your partner:
+ 
+- **Send full application inventory data on personally-owned iOS/iPadOS Devices**
+ 
+  Options for this setting include:
+  - **On** - If your MTD partner syncs app data and requests a list of the iOS/iPadOS applications from Intune, that list includes unmanage apps (those not deployed through Intune) in addition to those deployed through Intune. This is the current behavior.
+  - **Off** - Data about unmanaged apps won’t be provided, and the MTD partner only receives details about apps that were deployed through Intune.
+ 
+For corporate devices, data about managed and unmanaged apps continues to be included with requests for app data by your MTD vendor.
+
+### Device management
+
+#### Support for Audio Alert on Android Dedicated (COSU) devices<!-- 10567852 -->
+You can now use the **Play lost device sound** device action to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise dedicated device.
+For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
+
+#### UI updates when creating an on-demand VPN device configuration policy on iOS/iPadOS devices<!-- 13092960 -->
+You can create an on-demand VPN connection for your iOS/iPadOS devices (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **VPN** for profile type > **Automatic VPN** > **On-demand VPN**).
+
+The UI is updated to closer match Apple's technical naming. To see the on-demand VPN settings you can configure, go to [Automatic VPN settings on iOS and iPadOS devices](../configuration/vpn-settings-ios.md#automatic-vpn).
+
+Applies to:
+- iOS/iPadOS
+
+#### On Android Enterprise, use the Connect Automatically setting on enterprise Wi-Fi profiles<!-- 10697036 -->
+On Android Enterprise devices, you can create Wi-Fi profiles that include common enterprise Wi-Fi settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Fully Managed, Dedicated, and Corporate-Owned work profile** > **Wi-Fi** for profile type > **Enterprise** for Wi-Fi type).
+
+You can configure the **Connect automatically** setting that automatically connects to your Wi-Fi network when devices are in range.
+
+To see the settings you can configure, go to [Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices](../configuration/wi-fi-settings-android-enterprise.md).
+
+Applies to:
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+
+#### Deprecated status in Group Policy Analytics migration readiness report automatically reevaluates your GPOs<!-- 7983435 -->
+Using Group Policy Analytics, you can import your Group Policy Objects (GPOs) to see the settings that are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
+
+The Intune product team updates the mapping logic. When the updates happen, the deprecated settings are automatically reevaluated. Previously, you had to reimport your GPOs.
+
+For more information on Group Policy Analytics and the reporting, see [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager](../configuration/group-policy-analytics.md).
+
+Applies to:
+- Windows 11
+- Windows 10
+
+#### Create terms of use for Android (AOSP) user-associated devices<!-- 8506575 -->
+Require Android (AOSP) users to accept your terms and conditions in the Intune Company Portal app before they enroll their devices. This feature is available for corporate-owned, user-associated devices only. For more information about creating terms of use in Intune, see [Terms and conditions for user access](../enrollment/terms-and-conditions-create.md).
+
+### Enforce Azure AD terms of use with Microsoft Intune or Microsoft Intune Enrollment cloud apps<!-- 12522105 -->
+Use the Microsoft Intune cloud app and/or Microsoft Intune Enrollment cloud app to enforce a conditional access, Azure AD Terms of Use acceptance policy on iOS and iPadOS devices during automated device enrollment. This functionality is available when you select Setup Assistant with modern authentication as your authentication method.  Both cloud apps now ensure that users accept the terms of use during enrollment and/or during Company Portal sign-in if required by your conditional access policy.
+
+#### New macOS settings in the Settings Catalog<!-- 12987685 -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. When you create a Settings Catalog policy, there are new settings available for macOS devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog (preview)** for profile type).
+
+New settings include:
+
+- Domains > Email Domains
+
+- Printing > Printing:
+  - Allow Local Printers
+  - Default Printer
+    - Device URI
+    - Display Name
+  - Footer Font Name
+  - Footer Font Size
+  - Print Footer
+  - Print MAC Address
+  - Require Admin To Add Printers
+  - Show Only Managed Printers
+  - User Printer List
+    - Device URI
+    - Display Name
+    - Location
+    - Model
+    - PPD URL
+    - Printer Locked
+
+- Profile Removal Password > Removal Password
+
+- Global HTTP Proxy:
+  - Proxy Captive Login Allowed
+  - Proxy PAC Fallback Allowed
+  - Proxy PAC URL
+  - Proxy Password
+  - Proxy Server
+  - Proxy Server Port
+  - Proxy Type
+  - Proxy Username
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Monitor and troubleshoot
+
+#### Remote help is moving in the Microsoft Endpoint Manager admin center<!-- 12868177 -->
+The remote help page in the Microsoft Endpoint Manager admin center has moved and its now available directly under **Tenant administration** instead of **Connectors and tokens**. 
+For more information about remote help, see [Use remote help](../remote-actions/remote-help.md).
+
+
+
+
 
 ## Week of February 7, 2022
 
@@ -462,6 +585,7 @@ The following details for Windows 10 and Windows 11 devices are now collected an
 - System Management BIOS version
 - TPM Manufacturer version
 - TPM Manufacturer ID
+
 These details are also included when you *Export* the details from the *All devices* pane.  
 
 #### Settings for Shared iPad now generally available<!-- 10975827  -->  
@@ -1193,7 +1317,7 @@ The previous connectors remain in support but are no longer available for downlo
 
 #### Windows Autopilot diagnostics page (public preview)
 
-[Available settings](../enrollment/windows-enrollment-status.md#available-settings) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](../../autopilot/windows-autopilot-whats-new.md#preview-windows-autopilot-diagnostics-page). 
+[Available settings](../enrollment/windows-enrollment-status.md) on the Enrollment Status Page are updated from **Allow users to collect logs about installation errors** to **Turn on log collection and diagnostics page for end users** to support the Windows Autopilot diagnostics page, available in Windows 11. For more information, see [Windows Autopilot: What's new](../../autopilot/windows-autopilot-whats-new.md#windows-autopilot-diagnostics-page). 
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -1525,7 +1649,7 @@ We have a pair of updates to announce for the Microsoft Tunnel Gateway this mont
   - Android Enterprise Fully Managed
   - Android Enterprise Corporate-Owned Work Profile
 
-  However, for Android Enterprise Personally-Owned Work profile, use *only* the VPN profile with custom settings. Personally-Owned Work Profile devices that receive a separate app configuration profile for Microsoft Defender for Endpoint in addition to a Microsoft Tunnel VPN profile may be unable to connect to the Microsoft Tunnel.
+  However, for an Android Enterprise Personally-Owned Work profile, use *only* the VPN profile with custom settings. Personally-Owned Work Profile devices that receive a separate app configuration profile for Microsoft Defender for Endpoint in addition to a Microsoft Tunnel VPN profile may be unable to connect to the Microsoft Tunnel.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -1780,7 +1904,7 @@ Endpoint analytics [startup performance](../../analytics/startup-performance.md)
 
 ### New modern authentication method with Apple Setup Assistant (public preview)<!--4843770 -->
 
-When creating an Automated Device Enrollment profile, can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from Setup Assistant but avoids the issue of leaving end users stuck on a device they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD Multi-Factor Authentication during the setup assistant screens. This will require an additional Azure AD login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS. For macOS, here are the options to get the Company Portal on the device - [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
+When creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from Setup Assistant but avoids the issue of leaving end users stuck on a device they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD Multi-Factor Authentication during the setup assistant screens. This will require an additional Azure AD login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS. For macOS, here are the options to get the Company Portal on the device - [Add the Company Portal for macOS app](../apps/apps-company-portal-macos.md).
 
 Enrollment is completed once the user lands on the home screen, and users can freely use the device for resources not protected by Conditional Access. User affinity is established when the user lands on the home screen after the setup screens, however the device will not be fully registered with Azure AD until the Company Portal login. The device will not show up in a given user's device list in the Azure AD portal until the Company Portal login. If the tenant has multifactor  authentication turned on for these devices or users, the users will be asked to complete multifactor authentication during enrollment during Setup Assistant. Multifactor  authentication is not required, but it is available for this authentication method within Conditional Access if needed.
 
@@ -2416,7 +2540,7 @@ Intune device detail logs are now available. In [Microsoft Endpoint Manager admi
 
 #### Scope tag support for the Enrollment Status Page <!--4172335 -->
 
-You can now assign scope tags to the Enrollment Status Page so only the roles you define will be able to see it. For more information, see [Create Enrollment Status Page profile and assign to a group](../enrollment/windows-enrollment-status.md#create-enrollment-status-page-profile-and-assign-to-a-group).
+You can now assign scope tags to the Enrollment Status Page so only the roles you define will be able to see it. For more information, see [Create Enrollment Status Page profile and assign to a group](../enrollment/windows-enrollment-status.md#create-new-profile).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Scripts

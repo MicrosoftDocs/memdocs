@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/31/2022
+ms.date: 03/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,7 +27,6 @@ ms.collection: M365-identity-device-management
 
 # Configure Microsoft Tunnel for Intune
 
-
 - Review and [Configure prerequisites for Microsoft Tunnel](microsoft-tunnel-prerequisites.md).
 - Run the Microsoft Tunnel [readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) to confirm your environment is ready to support use of the tunnel.
 
@@ -45,7 +44,10 @@ Use of a *Server configuration* lets you create a configuration a single time an
 
 3. On the **Settings** tab, configure the following items:
 
-   - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. For example, *169.254.0.0/16*.
+   - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. The Tunnel Client IP address range specified must not conflict with an on-premises network range.
+     - Consider using the Automatic Private IP Addressing (APIPA) range of 169.254.0.0/16, as this range avoids conflicts with other corporate networks.
+     - If the client IP address range conflicts with the destination, it will loopback and fail to communicate with the corporate network.
+     - You can select any client IP address range you want to use if it does not conflict with your corporate network IP address ranges.
 
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
 
@@ -109,7 +111,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
      ![Screen capture for download of installation script](./media/microsoft-tunnel-configure/download-installation-script.png)
 
-   - Use a Linux command to get the readiness tool directly. For example, on the server where you’ll install the tunnel, you can use **wget** or **curl** to open the link <https://aka.ms/microsofttunneldownload>.
+   - Use a Linux command to get download the tunnel software directly. For example, on the server where you’ll install the tunnel, you can use **wget** or **curl** to open the link <https://aka.ms/microsofttunneldownload>.
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
 
@@ -336,12 +338,14 @@ You can use the **./mst-cli** command-line tool to update the TLS certificate on
 
 1. Copy the certificate file to **/etc/mstunnel/private/site.pfx**
 2. Run: `mst-cli import_cert`
+3. Run: `mst-cli server restart`
 
 **PEM**:
 
 1. Copy the new certificate to **/etc/mstunnel/certs/site.crt**
 2. Copy the private key to **/etc/mstunnel/private/site.key**
 3. Run: `mst-cli import_cert`
+4. Run: `mst-cli server restart`
 
 For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md).
 

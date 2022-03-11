@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/25/2022
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -36,7 +36,7 @@ Personal and organization-owned devices can be enrolled in Intune. Once they're 
 - [Apple Configurator](#apple-configurator-enrollment)
 - [BYOD: User and Device enrollment](#byod-user-and-device-enrollment)
 
-This article provides recommendations on the iOS/iPadOS enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll macOS devices](../enrollment/ios-enroll.md).
+This article provides recommendations on the iOS/iPadOS enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll iOS/iPadOS devices](../enrollment/ios-enroll.md).
 
 > [!TIP]
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
@@ -223,7 +223,7 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
 ## Apple Configurator enrollment
 
-Use on devices owned by your organization, and includes [Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md). This option requires you to physically connect macOS devices to a Mac computer using the USB port.
+Use on devices owned by your organization, and includes [Direct Enrollment](../enrollment/apple-configurator-enroll-ios.md#direct-enrollment). This option requires you to physically connect iOS/iPadOS devices to a Mac computer using the USB port.
 
 For more specific information on this enrollment type, see [Apple Configurator enrollment](../enrollment/apple-configurator-enroll-ios.md).
 

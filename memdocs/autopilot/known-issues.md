@@ -28,6 +28,40 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### Device-based Conditional Access policies
+
+1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn’t supported.  See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
+
+2. Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Autopilot enrollment in cases where restrictive polices are present such as:
+    - Conditional Access policy 1: Block all apps except those on an exclusion list.
+    - Conditional Access policy 2: Require a compliant device for the apps on the exclusion list.
+ 
+    In this case, Microsoft Intune Enrollment and Microsoft Intune should be included in that exclusion list of policy 1.
+
+    If a policy is in place such that **all cloud apps** require a compliant device (there is no exclusion list), Microsoft Intune Enrollment will already be excluded by default, so that the device can register with Azure AD and enroll with Intune and avoid a circular dependency.
+
+3. **Hybrid Azure AD devices**: When Hybrid Azure AD devices are deployed with Autopilot, 2 device IDs are initially associated with the same device – one Azure AD and one hybrid.  The hybrid compliance state will display as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in. 
+
+    The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or hybrid Azure AD joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
+
+4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices, because until the device has been rebooted the status of BitLocker and Secure Boot have not been captured, and cannot be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
+
+### Device goes through Autopilot deployment without an assigned profile
+
+When a device is registered in Autopilot and no profile is assigned, it will take the default Autopilot profile. This is by design to ensure that all devices registered with Autopilot, goes through the Autopilot experience. If you do not want the device to go through an Autopilot deployment, you must remove the Autopilot registration. 
+
+### White screen during HAADJ deployment
+
+There is a UI bug on Autopilot HAADJ deployments where the Enrollment Status page is displayed as a white screen. This issue is limited to the UI and should not impact the deployment process. 
+
+### Virtual machine failing at “Preparing your device for mobile management”
+
+This error can be resolved by configuring your virtual machine with a minimum of 2 processers and 4GB of memory. 
+
+### ODJConnectorSvc.exe leaks memory
+
+When using a proxy server with the ODJConnector service, the memory file can get too large when processing requests resulting in impacts to performance. The current workaround for this issue is to restart the ODJConnectSvc.exe service.
+
 ### Reset button causes pre-provisioning to fail on retry
 
 When ESP fails during the pre-provisioning flow and the user selects the reset button, TPM attestation may fail during the retry. 

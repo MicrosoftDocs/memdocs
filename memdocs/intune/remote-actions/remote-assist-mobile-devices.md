@@ -56,4 +56,4 @@ There are four options available for remotely administering devices managed by  
 
 \* Teams requires Microsoft 365 licensing. Use of TeamViewer and Intune requires licensing from both TeamViewer and Intune. Remote Control is a feature of Configuration Manager and requires Configuration Manager licensing.
 
-\** Unattended access can be initiated from the TeamViewer Management Console, but not from the Microsoft Endpoint Management admin center.
+\** Unattended access can be initiated from the TeamViewer Management Console, but not from the Microsoft Endpoint Manager admin center.

@@ -7,4 +7,12 @@ items:
   href: business-enterprise-comparison.md
 - name: Export Cloud PC names 
   href: export-cloud-pc-names.md
+- name: Partners
+  href: partners.md  
+- name: Public preview 
+  href: public-preview.md
+- name: Windows 365 Business docs
+  href: business/index.yml
+- name: Windows 365 Enterprise docs
+  href: enterprise/index.yml
   
