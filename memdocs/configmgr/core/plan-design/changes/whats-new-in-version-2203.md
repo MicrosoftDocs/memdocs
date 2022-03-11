@@ -36,7 +36,7 @@ If you deploy an application or app group to a user collection that's based on a
 
 ### Prefer cloud-based software update points
 <!--7759984-->
-Clients now prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP when the boundary group uses the **Prefer cloud based source over on-premises source** option. 
+Clients now prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP when the boundary group uses the **Prefer cloud based source over on-premises source** option. To reduce the performance impact of this change, existing clients don't automatically switch to a cloud-based software update point.
 
 For more information, see [Boundary groups and software update points](/servers/deploy/configure/boundary-groups-software-update-points.md#bkmk_prefer_cmgsup).
 

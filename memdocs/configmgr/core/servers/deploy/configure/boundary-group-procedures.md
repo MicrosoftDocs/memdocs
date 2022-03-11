@@ -118,7 +118,7 @@ To configure options for clients in this boundary group, switch to the **Options
 - **Prefer cloud based sources over on-premises sources**: A common scenario is if you have a branch office with a faster internet link, you can prioritize cloud content and policy. This behavior includes cloud management gateways (CMG) or Microsoft Update.
   
    > [!NOTE]
-   > Starting in version 2203, this setting also applies for software update scanning. Existing clients don't automatically switch to a cloud-based software update point. For more information, see [Boundary groups and software update points](boundary-groups-software-update-points.md#bkmk_prefer_cmgsup). <!--7759984--> 
+   > Starting in version 2203, this setting also applies for software update scanning. To reduce the performance impact of this change, existing clients don't automatically switch to a cloud-based software update point. For more information, see [Boundary groups and software update points](boundary-groups-software-update-points.md#bkmk_prefer_cmgsup). <!--7759984--> 
 
 ## Configure a fallback site for automatic site assignment
 

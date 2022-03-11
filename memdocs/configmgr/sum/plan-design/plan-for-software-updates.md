@@ -146,7 +146,7 @@ Create a cloud management gateway in Microsoft Azure and enable at least one on-
 For more information, see [Overview of cloud management gateway](../../core/clients/manage/cmg/overview.md) and [Configure boundary groups](../../core/servers/deploy/configure/boundary-groups-software-update-points.md).
 
 > [!NOTE]
-> Starting in version 2203, you can set clients to prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP. This behavior is controlled by the **Prefer cloud based source over on-premises source** option in the boundary group. Existing clients don't automatically [switch their SUP](#BKMK_SUPSwitching) to a cloud-based SUP. The client will stay assigned to their current SUP unless their current SUP fails or the client is manually switched to a new SUP.
+> Starting in version 2203, you can set clients to prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP. This behavior is controlled by the **Prefer cloud based source over on-premises source** option in the boundary group. To reduce the performance impact of this change, existing clients don't automatically [switch their SUP](#BKMK_SUPSwitching) to a cloud-based SUP. The client will stay assigned to their current SUP unless their current SUP fails or the client is manually switched to a new SUP.
 
 
 #### Internet-based client management

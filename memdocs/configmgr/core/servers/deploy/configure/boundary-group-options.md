@@ -110,11 +110,10 @@ By default, the management point prioritizes peer cache sources at the top of th
 If you have a branch office with a faster internet link, you can prioritize cloud-based sources, which include the following locations:<!-- SCCMDocs#1529 -->
 
 - Cloud management gateway (CMG). Clients will prefer the CMG for both policy and content.
+   - Starting in version 2203, this setting also applies for software update scanning. To reduce the performance impact of this change, existing clients don't automatically switch to a cloud-based software update point. For more information, see [Boundary groups and software update points](boundary-groups-software-update-points.md#bkmk_prefer_cmgsup). <!--7759984-->
 - Microsoft Update
+  - You can only use **Microsoft Update** as a source when you enable the following option in the software update deployment download settings: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
 
-  > [!NOTE]
-  > - You can only use **Microsoft Update** as a source when you enable the following option in the software update deployment download settings: **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**.
-  > - Starting in version 2203, this setting also applies for software update scanning. Existing clients don't automatically switch to a cloud-based software update point. For more information, see [Boundary groups and software update points](boundary-groups-software-update-points.md#bkmk_prefer_cmgsup). <!--7759984-->
 
 ## Next steps
 
