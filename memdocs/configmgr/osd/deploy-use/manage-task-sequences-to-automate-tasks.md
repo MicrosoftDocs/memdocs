@@ -114,10 +114,27 @@ Any task sequence that meets certain conditions is automatically defined as high
 
 To improve the overall speed of the task sequence, run it with the high-performance power plan. It configures Windows to use its built-in high-performance power plan, which delivers maximum performance at the expense of higher power consumption. For more information, see [Task sequence performance](task-sequence-performance.md).
 
+#### Custom icons for task sequences
 
+<!--12486335-->
 
+Starting in version 2203, add custom icons for task sequences. These icons appear in Software Center when you deploy the task sequence. Instead of a default icon, a custom icon can improve the user experience to better identify the software.
 
+On the **More Options** tab of task sequence properties, in the section for the icon, select **Browse**. Select an icon from the default shell library, or browse to another file in a local or network path.
 
+- It supports the following file types:
+  - Programs (`.exe`)
+  - Libraries (`.dll`)
+  - Icons (`.ico`)
+  - Images (`.png`, `.jpeg`, `.jpg`)
+- The file doesn't need to be on clients that you target with the deployment. Configuration Manager includes the image with the deployment policy.
+- The maximum file size for an image is 256 KB.
+- Icons can have pixel dimensions of up to 512 x 512.
+
+When clients receive the deployment policy, they'll display the icon in Software Center.
+
+> [!NOTE]
+> To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
 ## Additional actions
 
