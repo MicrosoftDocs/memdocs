@@ -146,7 +146,7 @@ For more information, see [Collection properties](#collection-properties).
 
 Previously, when you would delete a collection with dependent collections, you first had to delete the dependencies. The process of finding and deleting all of these collections could be difficult and time consuming. Starting in version 2203, when you delete a collection, you can review and delete its dependent collections at the same time.
 
-A new **Details** window shows more information about the relationship types, and lets you [view collection relationships](../../../../clients/manage/collections/view-relationships.md) in a graphical chart.
+A new **Details** window shows more information about the relationship types, and lets you [view collection relationships](view-relationships.md) in a graphical chart.
 
 :::image type="content" source="media/9708999-delete-collection-references.png" alt-text="View collection dependencies in list and graphical form when deleting a collection" lightbox="media/9708999-delete-collection-references.png":::
 
@@ -162,11 +162,11 @@ A new **Details** window shows more information about the relationship types, an
 
 There are several reasons why the site can't delete a dependent collection:
 
-- **Assigned to user**: For more information, see [Modify the administrative scope of an administrative user](../../../../servers/deploy/configure/configure-role-based-administration.md#modify-the-administrative-scope-of-an-administrative-user).
+- **Assigned to user**: For more information, see [Modify the administrative scope of an administrative user](../../../servers/deploy/configure/configure-role-based-administration.md#modify-the-administrative-scope-of-an-administrative-user).
 
-- **Used by cloud attach**: For more information, see [Enable cloud attach for Configuration Manager](../../../../../cloud-attach/enable.md).
+- **Used by cloud attach**: For more information, see [Enable cloud attach for Configuration Manager](../../../../cloud-attach/enable.md).
 
-- **Use for upload to Microsoft Endpoint Manager**: For more information, see [Make Configuration Manager collections available to assign Endpoint security policies](../../../../../tenant-attach/endpoint-security-get-started.md#bkmk_collections).
+- **Use for upload to Microsoft Endpoint Manager**: For more information, see [Make Configuration Manager collections available to assign Endpoint security policies](../../../../tenant-attach/endpoint-security-get-started.md#bkmk_collections).
 
 The details window lists collections that can't be deleted with the reason why.
 
