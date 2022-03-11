@@ -153,7 +153,7 @@ You can now organize software update groups and packages by using folders. This 
 
 Previously, task sequences and legacy packages would always display a default icon in Software Center. Based on your feedback, you can now add custom icons for task sequences and legacy packages. These icons appear in Software Center when you deploy these objects. Instead of a default icon, a custom icon can improve the user experience to better identify the software.
 
-For more information, see [Manage task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#more-options-tab) and [Packages and programs](../../../apps/deploy-use/packages-and-programs.md).
+For more information, see [Manage task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#more-options-tab) and [Packages and programs](../../../apps/deploy-use/packages-and-programs.md#custom-icons-for-packages).
 
 <!--## Protection-->
 ## Configuration Manager console
