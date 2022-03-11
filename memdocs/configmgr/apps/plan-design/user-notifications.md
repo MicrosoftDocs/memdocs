@@ -78,7 +78,7 @@ In the [Computer Restart](../../core/clients/deploy/about-client-settings.md#com
 Configuring this client setting changes the user experience for all required deployments that require a restart of the following types:
 
 - [Application](../deploy-use/deploy-applications.md)
-- [Task sequence](../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
+- [Task sequence](../../osd/deploy-use/deploy-a-task-sequence.md)
 - [Software update](../../sum/deploy-use/deploy-software-updates.md)
 
 From the following toast notification:

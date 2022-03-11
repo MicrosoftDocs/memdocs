@@ -174,7 +174,7 @@ This release includes the following improvements to Software Center warning mess
 - The default high-impact deployment message for in-place upgrades now states that
 your apps, data, and settings are automatically migrated. Previously, the default message for any operating system installation indicated that all apps, data, and settings would be lost, which was not true for an in-place upgrade.
 
-For details, see [Configure high-impact task sequence settings](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#set-a-task-sequence-as-a-high-impact-task-sequence)
+For more information, see [Set a task sequence as high-impact](../../../osd/deploy-use/high-impact-task-sequence-settings.md#set-a-task-sequence-as-high-impact).
 
 ### Return to previous page when a task sequence fails
 You can now return to a previous page when you run a task sequence and there is a failure. Prior to this release, you had to restart the task sequence when there was a failure. For example, you can use the **Previous** button in the following scenarios:

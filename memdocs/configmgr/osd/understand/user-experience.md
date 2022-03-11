@@ -30,7 +30,7 @@ For a high-impact deployment, you can customize the message that Software Center
 
 :::image type="content" source="../media/user-notification-enduser.png" alt-text="Customized task sequence notification to the end user from Software Center.":::
 
-For more information on how to customize the message in this window, see [Create a custom notification for high-risk deployments](../deploy-use/manage-task-sequences-to-automate-tasks.md#create-a-custom-notification-for-high-risk-deployments).
+For more information on how to customize the message in this window, see [Create a custom notification](../deploy-use/high-impact-task-sequence-settings.md#create-a-custom-notification).
 
 You can also customize the organization name at the top of the window. (The above example shows the default value, `IT Organization`). Change the **Organization name** client setting in the **Computer Agent** group. For more information, see [About client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).
 
