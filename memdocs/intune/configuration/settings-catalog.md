@@ -191,6 +191,26 @@ The **Templates** include a logical group of settings, such as device restrictio
 
 The **Settings catalog** lists all the available settings. If you want to see all the available Firewall settings, or all the available BitLocker settings, then use this option. Also, use this option if you're looking for specific settings.
 
+## Device vs. User Scope settings
+When selecting settings it is important to note that some settings have a (User) tag in the name.
+This denotes that the setting is user scope as described here: https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider
+
+Device and user groups are used for assignment while device and user scopes describe how a policy is enforced.
+
+When deploying policy from Intune, you can assign either scope to any type of target group. Behavior of the policy per user will vary based on the scope of the setting. User scoped policy writes to HKCU and device scoped policy writes to HKLM.
+
+When a device checks into Intune it will always present a deviceID and may or may not present a userID depending on the timing of the check-in and if there is a user logged in.
+
+These are the four possible combinations of scope and assignment and the expected behavior:
+•	If a device scope policy is assigned to a device, all users on that device will have that setting applied.
+•	If a user scope policy is assigned to a device, all users on that device will have that setting applied. This is basically loopback set to merge.
+
+•	If a user scoped policy is assigned to a user, only that user will have that setting applied.
+•	If a device scoped policy is assigned to a user, once that user logs in and a sync takes place, the device scope settings will apply to all users using that machine.
+
+If there is no user hive during initial check ins, you may see some user scope settings marked as not applicable in the early moments of a device before a user is present.
+
+
 ## Next steps
 
 - Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
