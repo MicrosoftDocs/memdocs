@@ -89,7 +89,11 @@ Based on your feedback, there are two new client health checks in this release:
 - Verify disk space not near capacity
 - Verify CCMCache isn't near drive capacity
 
-<!-- For more information, see [Client health checks](../../../../clients/manage/client-health-checks.md). -->
+Configuration Manager client functionality can be limited when the disk is full. These checks help you maintain healthy clients, which help you better manage the devices.
+
+For more information, see [Client health checks](../../clients/manage/client-health-checks.md).
+
+This release also includes performance improvements to the [Client health dashboard](../../clients/manage/client-health-dashboard.md).
 
 ## Collections
 
