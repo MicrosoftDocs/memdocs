@@ -250,7 +250,7 @@ For more information, see [Manage Windows as a service](../../../osd/deploy-use/
 <!--7721999 & 8177793-->
 Starting in Configuration Manager version 1910, to improve the overall speed of the task sequence, you could activate the Windows power plan for **High Performance**. Starting in this release, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby) and other devices that don't have that default power plan.
 
-For more information, see [Performance improvements for power plans](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_perf).
+For more information, see [Task sequence performance](../../../osd/deploy-use/task-sequence-performance.md).
 
 ## Protection
 

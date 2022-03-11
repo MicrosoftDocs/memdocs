@@ -357,7 +357,7 @@ You can right-click and notify devices to run a software updates evaluation cycl
 <!--6601203-->
 *(Introduced in version 2010)*
 
-When you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to [applications](../../../apps/deploy-use/import-export-applications.md), [packages](../../../apps/deploy-use/packages-and-programs.md), [driver packages](../../../osd/get-started/manage-drivers.md#driver-packages), and [task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#export-and-import).
+When you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to [applications](../../../apps/deploy-use/import-export-applications.md), [packages](../../../apps/deploy-use/packages-and-programs.md), [driver packages](../../../osd/get-started/manage-drivers.md#driver-packages), and [task sequences](../../../osd/deploy-use/export-import-task-sequences.md).
 
 ### See task sequence size in the console
 
