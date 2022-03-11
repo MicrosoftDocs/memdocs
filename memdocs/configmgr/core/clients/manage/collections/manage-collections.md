@@ -148,7 +148,7 @@ Previously, when you would delete a collection with dependent collections, you f
 
 A new **Details** window shows more information about the relationship types, and lets you [view collection relationships](../../../../clients/manage/collections/view-relationships.md) in a graphical chart.
 
-:::image type="content" source="../../media/9708999-delete-collection-references.png" alt-text="View collection dependencies in list and graphical form when deleting a collection" lightbox="../../media/9708999-delete-collection-references.png":::
+:::image type="content" source="media/9708999-delete-collection-references.png" alt-text="View collection dependencies in list and graphical form when deleting a collection" lightbox="media/9708999-delete-collection-references.png":::
 
 1. Delete a collection that has dependent collections.
 
