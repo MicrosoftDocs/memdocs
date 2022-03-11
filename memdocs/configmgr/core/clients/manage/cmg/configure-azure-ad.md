@@ -2,7 +2,7 @@
 title: Configure Azure AD for CMG
 titleSuffix: Configuration Manager
 description: Integrate the Configuration Manager site with Azure Active Directory to support the cloud management gateway.
-ms.date: 08/24/2021
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -127,19 +127,20 @@ For more information, see [Configure Azure services](../../../servers/deploy/con
 
 ## Configure Azure resource providers
 
-The CMG service requires that you register specific resource providers in your Azure subscription. The providers vary depending upon how you deploy the CMG:
-
-Starting in version 2010,<!--3601040--> if you'll deploy the CMG to a virtual machine scale set, register the following resource providers:
+The CMG service requires that you register specific resource providers in your Azure subscription. When you deploy the CMG to a virtual machine scale set, register the following resource providers:<!--3601040-->
 
 - Microsoft.KeyVault
 - Microsoft.Storage
 - Microsoft.Network
 - Microsoft.Compute
 
-If you'll deploy the CMG using a classic cloud service, your Azure subscription requires the following two resource providers:
-
-- Microsoft.ClassicCompute
-- Microsoft.Storage
+> [!NOTE]
+> If you previously deployed the CMG using a classic cloud service, your Azure subscription requires the following two resource providers:
+>
+> - Microsoft.ClassicCompute
+> - Microsoft.Storage
+>
+> Starting in version 2203, the option to deploy a CMG as a **cloud service (classic)** is removed.<!-- 13235079 --> All CMG deployments should use a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
 Your Azure AD account needs permission to do the `/register/action` operation for the resource provider. By default, the **Contributor** and **Owner** roles include this permission.
 
