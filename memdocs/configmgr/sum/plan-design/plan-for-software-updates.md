@@ -57,10 +57,9 @@ Configuration Manager provides the client with a software update point list in t
 
 The client randomly selects a software update point from the list. It prioritizes the software update points in the same forest. Configuration Manager provides clients with a different list depending on the type of client:  
 
--   **Intranet-based clients**: Receive a list of software update points that you can configure to allow connections only from the intranet, or a list of software update points that allow internet and intranet client connections.  
+- **Intranet-based clients**: Receive a list of software update points that you can configure to allow connections only from the intranet, or a list of software update points that allow internet and intranet client connections.  
 
--   **Internet-based clients**: Receive a list of software update points that you configure to allow connections only from the internet, or a list of software update points that allow internet and intranet client connections.  
-
+- **Internet-based clients**: Receive a list of software update points that you configure to allow connections only from the internet, or a list of software update points that allow internet and intranet client connections.  
 
 ###  <a name="BKMK_SUPSwitching"></a> Software update point switching  
 
@@ -142,9 +141,13 @@ The software update point is optional on a secondary site. Install only one soft
 When you need to manage devices that roam off your network onto the internet, develop a plan for how to manage software updates on these devices. Configuration Manager supports several technologies for this scenario. Use one or a combination as necessary to meet the requirements of your organization.
 
 #### Cloud management gateway
-Create a cloud management gateway in Microsoft Azure and enable at least one on-premises software update point to allow traffic from internet-based clients. As clients roam onto the internet, they continue to scan against your software update points. All internet-based clients always get content from the Microsoft Update cloud service. 
+Create a cloud management gateway in Microsoft Azure and enable at least one on-premises software update point to allow traffic from internet-based clients. As clients roam onto the internet, they continue to scan against your software update points. All internet-based clients always get content from the Microsoft Update cloud service.
 
-For more information, see [Overview of cloud management gateway](../../core/clients/manage/cmg/overview.md) and [Configure boundary groups](../../core/servers/deploy/configure/boundary-groups-software-update-points.md).  
+For more information, see [Overview of cloud management gateway](../../core/clients/manage/cmg/overview.md) and [Configure boundary groups](../../core/servers/deploy/configure/boundary-groups-software-update-points.md).
+
+> [!NOTE]
+> Starting in version 2203, you can set clients to prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP. This behavior is controlled by the **Prefer cloud based source over on-premises source** option in the boundary group. Existing clients don't automatically [switch their SUP](#BKMK_SUPSwitching) to a cloud-based SUP. The client will stay assigned to their current SUP unless their current SUP fails or the client is manually switched to a new SUP.
+
 
 #### Internet-based client management
 Place a software update point in an internet-facing network and enable it to allow traffic from internet-based clients. As clients roam onto the internet, they switch to this software update point for scanning. All internet-based clients always get content from the Microsoft Update cloud service.
