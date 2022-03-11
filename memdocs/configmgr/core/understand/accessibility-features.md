@@ -59,7 +59,7 @@ Most [web browser keyboard shortcuts](https://support.microsoft.com/topic/intern
 ### Collection relationship diagram shortcuts
 
 <!--8543508-->
-When you [view collection relationships](../clients/manage/collections/manage-collections.md#view-collection-relationships) in the Configuration Manager console, use the **TAB** key to change the focus. By default, the focus is on the page number controls. When the focus is on the graph itself (navigator), use the following keyboard shortcuts to navigate:
+When you [view collection relationships](../clients/manage/collections/view-relationships.md) in the Configuration Manager console, use the **TAB** key to change the focus. By default, the focus is on the page number controls. When the focus is on the graph itself (navigator), use the following keyboard shortcuts to navigate:
 
 |Navigator shortcut|Purpose|
 |--------|--------|
