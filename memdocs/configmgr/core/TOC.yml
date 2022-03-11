@@ -401,6 +401,8 @@ items:
         href: servers/deploy/configure/deploy-and-manage-content.md
       - name: Monitor content
         href: servers/deploy/configure/monitor-content-you-have-distributed.md
+      - name: Visualize content distribution status
+        href: servers/deploy/configure/visualize-content-distribution-status.md
       - name: Microsoft Connected Cache
         href: plan-design/hierarchy/microsoft-connected-cache.md
       - name: Troubleshoot Microsoft Connected Cache
