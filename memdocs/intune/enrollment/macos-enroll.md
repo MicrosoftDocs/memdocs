@@ -72,27 +72,28 @@ Intune supports the following enrollment methods for company-owned macOS devices
 > [!IMPORTANT]
 > This feature is in [public preview](../fundamentals/public-preview.md). It is not available in GCC High and government cloud tenants.  
 
-Intune supports the use of bootstrap tokens on enrolled Macs running macOS 10.15 or later. Bootstrap tokens grant volume ownership status to local user accounts, so that non-admin users can approve important operations that an admin would otherwise need to do.  Operations such as: 
+Intune supports the use of bootstrap tokens on enrolled Macs running macOS 10.15 or later. Bootstrap tokens grant volume ownership status to local user and guest accounts, so that non-admin users can approve important operations that an admin would otherwise need to do.  Operations such as: 
 
-* User-initiated software updates  
-* Silent FileVault encryption  
+* User-initiated software updates   
 * Kernel extension installation on Apple silicon  
 
- You can utilize bootstrap tokens on supervised Macs, and Macs enrolled via automated device enrollment.   
+ You can utilize bootstrap tokens on supervised Macs, and Macs enrolled via macOS automated device enrollment.   
 
 ### Get bootstrap token  
  
 The bootstrap token is automatically generated when:  
 
 * A newly-enrolled Mac checks in with Intune and 
-* A secure token-enabled user (typically an Intune administrator) signs in to the Mac with their clear text password
+* A secure token-enabled user (typically an Intune administrator) signs in to the Mac with their cleartext password
 
-The token is then automatically escrowed to Microsoft Intune. You can use a command line tool to manually view, generate, and escrow a bootstrap token, if needed. For more information, see [Use secure token, bootstrap token, and volume ownership in deployments](https://support.apple.com/guide/deployment/use-secure-and-bootstrap-tokens-dep24dbdcf9e/1/web/1.0) on Apple Support.  
+The token is then automatically escrowed to Microsoft Intune. You can use a command line tool to manually view, generate, and escrow a bootstrap token on supported macOS devices, if needed. For more information, see [Use secure token, bootstrap token, and volume ownership in deployments](https://support.apple.com/guide/deployment/use-secure-and-bootstrap-tokens-dep24dbdcf9e/1/web/1.0) on Apple Support.  
 
-### Manage kernel extensions  
-A bootstrap token can be used to approve the installation of both kernel extensions and software updates on a Mac with Apple silicon. Kernel extension management is automatically available on Macs running macOS 11 or later and enrolled via automated device enrollment. 
+### Manage kernel extensions and software updates  
+A bootstrap token can be used to approve the installation of both kernel extensions and software updates on a Mac with Apple silicon. 
 
-To authorize the remote management of kernel extensions on a device that isn't enrolled via automated device enrollment, you must restart the Mac in recovery mode and downgrade its security settings. For more information, see [Change security settings on the startup disk of a Mac with Apple silicon](https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac) on Apple Support.      
+To utilize the bootstrap token to perform user-initiated software updates, the mac must be enrolled with automated device enrollment up until macOS 11.1 or you must restart the Mac in recovery mode and downgrade its security settings. With macOS 11.2+, and mac just needs to be supervised in order for the bootstrap token to perform user-initiated software updates. For more information, see [Change security settings on the startup disk of a Mac with Apple silicon](https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac) on Apple Support.
+
+Kernel extension management is automatically available on Macs running macOS 11 or later and enrolled via automated device enrollment. To authorize the remote management of kernel extensions on a device that isn't enrolled via automated device enrollment, you must restart the Mac in recovery mode and downgrade its security settings. For more information, see [Change security settings on the startup disk of a Mac with Apple silicon](https://support.apple.com/guide/mac-help/change-security-settings-startup-disk-a-mac-mchl768f7291/mac) on Apple Support.      
 
 ## Block macOS enrollment  
 By default, Intune lets macOS devices enroll. To block macOS devices from enrollment, see [Set device type restrictions](enrollment-restrictions-set.md).  
