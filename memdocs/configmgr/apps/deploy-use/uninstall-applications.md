@@ -87,8 +87,6 @@ Starting in version 2111, this behavior also supports [application groups](creat
 
 Starting in version 2203, if you deploy an application or app group to a user collection that's based on a security group, and you enable implicit uninstall, changes to the security group are now honored. When the site discovers the change in group membership, Configuration Manager uninstalls the app for the user that you removed from the security group.<!--12488148-->
 
-If there are multiple deployments of the same application, the Configuration Manager client honors any explicit user action over an implicit administrator action. For example, if a user installs an app from an available deployment, and then you remove that user from a collection with a deployment that has the implicit uninstall setting, the client doesn't uninstall the app.<!-- 13788498 -->
-
 ### Enable implicit uninstall
 
 When you [deploy the application](deploy-applications.md) to a collection, configure the following settings on the **Deployment Settings** page:
@@ -119,7 +117,7 @@ Depending upon the timing of those steps, the longest time period for the client
 
 > [!NOTE]
 > - For this behavior, the site can process up to 1000 collection membership changes every 10 minutes.
-> - If the uninstall doesn't occur, it's likely that there's a conflicting install deployment of the same application, application group, or a different application group with the same apps. <!--12618105-->
+> - If the uninstall doesn't occur, it's likely that there's a conflicting install deployment of the same application, application group, or a different application group with the same apps.<!--12618105--> Configuration Manager always honors an install deployment over an uninstall deployment.
 
 ### Known issues
 
