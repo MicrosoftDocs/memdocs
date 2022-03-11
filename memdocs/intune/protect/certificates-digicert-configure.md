@@ -27,9 +27,9 @@ ms.custom: intune-azure
 
 ms.collection: M365-identity-device-management
 ---
-# Set up the Certificate Connector for DigiCert PKI Platform
+# Set up the Certificate Connector for Microsoft Intune to support the DigiCert PKI Platform
 
-Use the Certificate Connector for Microsoft Intune to issue PKCS certificates from DigiCert PKI Platform to Intune-managed devices. You can use the connector with only a DigiCert certification authority (CA), or with both a DigiCert CA and a Microsoft CA.
+You can use the *Certificate Connector for Microsoft Intune* to issue PKCS certificates from DigiCert PKI Platform to Intune-managed devices. The certificate connector works with either a DigiCert certification authority (CA) only, or with both a DigiCert CA and a Microsoft CA.
 
 > [!TIP]
 > DigiCert acquired Symantec's Website Security and related PKI Solutions business. For more information about this change, see the [Symantec technical support article](https://support.symantec.com/en_US/article.INFO4722.html).
@@ -149,21 +149,21 @@ You'll need the following to support use of a DigiCert CA:
 
       `RA Cert Thumbprint: "EA7A4E0CD1A4F81CF0740527C31A57F6020C17C5"`
   
-      Later, after you install the Microsoft Certificate Connector for Intune, you'll use this value to update three .config files for the Certificate Connector.
+      Later, after you install the Certificate Connector for Microsoft Intune, you'll use this value to update three .config files for the connector.
 
     > [!NOTE]
     > For assistance in getting the RA certificate from the DigiCert CA, contact [DigiCert customer support](mailto:enterprise-pkisupport@digicert.com).
 
-## Configure the Certificate Connector to support DigiCert
+## Configure the certificate connector to support DigiCert
 
-1. Use the information at [Configure the certificate connector](../protect/certificate-connector-install.md#configure-the-certificate-connector) to install the Microsoft Certificate Connector for Intune:
+1. Use the information at [Install the Certificate Connector for Microsoft Intune](../protect/certificate-connector-install.md) to first download and then install and configure the Certificate Connector for Microsoft Intune:
 
-   - During installation step 2 of the connector install procedure, select the options for **PKCS** and optionally for **Certificate revocation**.
+   - During installation step **2** of the connector install procedure, select the options for **PKCS** and optionally for **Certificate revocation**.
    - After you complete the connector installation and configuration procedure, return to this procedure to continue.
 
-2. Configure the connector by modifying three .config files for the connector, and then restarting their related services:
+2. Configure the connector to support DigiCert by modifying three *.config* files for the connector, and then restarting their related services:
 
-   1. On the server where the connector installed, go to *%ProgramFiles%\Microsoft Intune\PFXCertificateConnector\ConnectorSvc*. (By default, the Microsoft Certificate Connector for Intune installs to %ProgramFiles%\Microsoft Intune\PFXCertificateConnector.)
+   1. On the server where the connector installed, go to *%ProgramFiles%\Microsoft Intune\PFXCertificateConnector\ConnectorSvc*. (By default, the Certificate Connector for Microsoft Intune installs to %ProgramFiles%\Microsoft Intune\PFXCertificateConnector.)
 
    2. Use a simple text editor like Notepad.exe to update the *RACertThumbprint* key value in the following three files. Replace the value in the files with the value you copied during step **6.g.** of the procedure in the [preceding section](#install-the-digicert-ra-certificate):
 
@@ -229,13 +229,13 @@ The certificate profile OID is associated with a certificate profile template in
    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later.
    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
-6. In **Configuration settings**, configure parameters with the values from the following table. These values are required to issue PKCS certificates from a DigiCert CA, through Intune Certificate Connector.
+6. In **Configuration settings**, configure parameters with the values from the following table. These values are required to issue PKCS certificates from a DigiCert CA, through the Certificate Connector for Microsoft Intune.
 
    |PKCS certificate parameter | Value | Description |
    | --- | --- | --- |
-   | Certificate authority | pki-ws.symauth.com | This value must be the DigiCert CA base service FQDN without trailing slashes. If you aren't sure whether this is the correct base service FQDN for your DigiCert CA subscription, contact DigiCert customer support. <br><br>*With the change from Symantec to DigiCert, this URL remains unchanged*. <br><br> If this FQDN is incorrect, Intune Certificate Connector won't issue PKCS certificates from the DigiCert CA.| 
-   | Certificate authority name | Symantec | This value must be the string **Symantec**. <br><br> If there's any change to this value, Intune Certificate Connector won't issue PKCS certificates from the DigiCert CA.|
-   | Certificate template name | Certificate profile OID from the DigiCert CA. For example: **2.16.840.1.113733.1.16.1.2.3.1.1.61904612**| This value must be a certificate profile OID [obtained in the previous section](#get-the-certificate-profile-oid) from the DigiCert CA certificate profile template. <br><br> If Intune Certificate Connector can't find a certificate template associated with this certificate profile OID in the DigiCert CA, it won't issue PKCS certificates from the DigiCert CA.|
+   | Certificate authority | pki-ws.symauth.com | This value must be the DigiCert CA base service FQDN without trailing slashes. If you aren't sure whether this is the correct base service FQDN for your DigiCert CA subscription, contact DigiCert customer support. <br><br>*With the change from Symantec to DigiCert, this URL remains unchanged*. <br><br> If this FQDN is incorrect, the certificate connector won't issue PKCS certificates from the DigiCert CA.| 
+   | Certificate authority name | Symantec | This value must be the string **Symantec**. <br><br> If there's any change to this value, the certificate connector won't issue PKCS certificates from the DigiCert CA.|
+   | Certificate template name | Certificate profile OID from the DigiCert CA. For example: **2.16.840.1.113733.1.16.1.2.3.1.1.61904612**| This value must be a certificate profile OID [obtained in the previous section](#get-the-certificate-profile-oid) from the DigiCert CA certificate profile template. <br><br> If the certificate connector can't find a certificate template associated with this certificate profile OID in the DigiCert CA, it won't issue PKCS certificates from the DigiCert CA.|
 
    ![Selections for CA and certificate template](./media/certificates-digicert-configure/certificates-digicert-pkcs-example.png)
 
@@ -246,14 +246,14 @@ The certificate profile OID is associated with a certificate profile template in
 
 8. On the *Overview* page of the new profile, select **Assignments** and configure an appropriate group that will receive this profile. At least one user or device must be part of the assigned group.
 
-After you complete the previous steps, Intune Certificate Connector will issue PKCS certificates from the DigiCert CA to Intune-managed devices in the assigned group. These certificates will be available in the **Personal** store of the **Current User** certificate store on the Intune-managed device.
+After you complete the previous steps, Certificate Connector for Microsoft Intune will issue PKCS certificates from the DigiCert CA to Intune-managed devices in the assigned group. These certificates will be available in the **Personal** store of the **Current User** certificate store on the Intune-managed device.
 
 ### Supported attributes for the PKCS certificate profile
 
 |Attribute | Intune supported formats | DigiCert Cloud CA supported formats | result |
 | --- | --- | --- | --- |
 | Subject name |Intune supports the subject name in following three formats only: <br><br> 1. Common name <br> 2. Common name that includes email <br> 3. Common name as email <br><br> For example: <br><br> `CN = IWUser0 <br><br> E = IWUser0@samplendes.onmicrosoft.com` | The DigiCert CA supports more attributes.  If you want to select more attributes, they must be defined with fixed values in the DigiCert certificate profile template.| We use common name or email from the PKCS certificate request. <br><br> Any mismatch in attribute selection between the Intune certificate profile and the DigiCert certificate profile template results in no certificates issued from the DigiCert CA.|
-| SAN | Intune supports only the following SAN field values: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **AltNameTypeOtherName** (encoded value) | The DigiCert Cloud CA also supports these parameters. If you want to select more attributes, they must be defined with fixed values in the DigiCert certificate profile template. <br><br> **AltNameTypeEmail**: If this type isn't found in the SAN, Intune Certificate Connector uses the value from **AltNameTypeUpn**.  If **AltNameTypeUpn** is also not found in the SAN, then Intune Certificate Connector uses the value from the subject name if it's in email format.  If the type is still not found, Intune Certificate Connector fails to issue the certificates. <br><br> Example: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **AltNameTypeUpn**: If this type is not found in the SAN, Intune Certificate Connector uses the value from **AltNameTypeEmail**. If **AltNameTypeEmail** is also not found in the SAN, then Intune Certificate Connector uses the value from subject name if it's in email format. If the type is still not found, Intune Certificate Connector fails to issue the certificates.  <br><br> Example: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **AltNameTypeOtherName**: If this type isn't found in the SAN, Intune Certificate Connector fails to issue the certificates. <br><br> Example: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  The value of this field is supported only in encoded format (hexadecimal value) by the DigiCert CA. For any value in this field, Intune Certificate Connector converts it to base64 encoding before it submits the certificate request. *Intune Certificate Connector doesn't validate whether this value is already encoded or not.* | None |
+| SAN | Intune supports only the following SAN field values: <br><br> **AltNameTypeEmail** <br> **AltNameTypeUpn** <br> **AltNameTypeOtherName** (encoded value) | The DigiCert Cloud CA also supports these parameters. If you want to select more attributes, they must be defined with fixed values in the DigiCert certificate profile template. <br><br> **AltNameTypeEmail**: If this type isn't found in the SAN, the certificate connector uses the value from **AltNameTypeUpn**.  If **AltNameTypeUpn** is also not found in the SAN, then the certificate connector uses the value from the subject name if it's in email format.  If the type is still not found, the certificate connector fails to issue the certificates. <br><br> Example: `RFC822 Name=IWUser0@ndesvenkatb.onmicrosoft.com`  <br><br> **AltNameTypeUpn**: If this type is not found in the SAN, the certificate connector uses the value from **AltNameTypeEmail**. If **AltNameTypeEmail** is also not found in the SAN, then the certificate connector uses the value from subject name if it's in email format. If the type is still not found, the certificate connector fails to issue the certificates.  <br><br> Example: `Other Name: Principal Name=IWUser0@ndesvenkatb.onmicrosoft.com` <br><br> **AltNameTypeOtherName**: If this type isn't found in the SAN, the certificate connector fails to issue the certificates. <br><br> Example: `Other Name: DS Object Guid=04 12 b8 ba 65 41 f2 d4 07 41 a9 f7 47 08 f3 e4 28 5c ef 2c` <br><br>  The value of this field is supported only in encoded format (hexadecimal value) by the DigiCert CA. For any value in this field, the certificate connector converts it to base64 encoding before it submits the certificate request. *Certificate Connector for Microsoft Intune doesn't validate whether this value is already encoded or not.* | None |
 
 ## Troubleshooting
 
