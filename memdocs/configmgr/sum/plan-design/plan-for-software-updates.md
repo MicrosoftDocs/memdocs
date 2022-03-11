@@ -22,7 +22,7 @@ Before you use software updates in a Configuration Manager production environmen
 
 This section includes the following subtopics:
 - [Software update point list](#BKMK_SUPList)
-- [Software update point switching](#BKMK_SUPSwitching)
+- [Software update point switching](#BKMK_SUPSwitching) 
 - [Manually switch clients to a new software update point](#BKMK_ManuallySwitchSUPs)
 - [Software update points in an untrusted forest](#BKMK_SUP_CrossForest)
 - [Use an existing WSUS server as the synchronization source at the top-level site](#BKMK_WSUSSyncSource)
@@ -38,7 +38,7 @@ The central administration site and all child primary sites must have a software
 - Whether you need a software update point at secondary sites  
 
 > [!IMPORTANT]  
->  For more information about the internal and external dependencies that are required for software updates, see [Prerequisites for software updates](prerequisites-for-software-updates.md).  
+> For more information about the internal and external dependencies that are required for software updates, see [Prerequisites for software updates](prerequisites-for-software-updates.md).  
 
 Add multiple software update points at a Configuration Manager primary site to provide fault tolerance. The failover design of the software update point is different than the pure randomization model that's used in the design for management points. Unlike in the design of management points, there are client and network performance costs in the software update point design when clients switch to a new software update point. When the client switches to a new WSUS server to scan for software updates, the result is an increase in the catalog size and associated client-side and network performance demands. Therefore, the client preserves affinity with the last software update point from which it successfully scanned.  
 
