@@ -20,7 +20,7 @@ The Configuration Manager console provides the following ways to help you monito
 
 
 ##  <a name="BKMK_OSDAlerts"></a> Alerts for operating system deployments  
- You can configure an alert in the task sequence  deployment settings to notify administrative users when compliance levels for the  deployment is below the configured percentage.  
+ You can configure an alert in the task sequence deployment settings to notify administrative users when compliance levels for the deployment are below the configured percentage.  
 
  After you configure the alert settings, if the specified conditions occur, Configuration Manager generates an alert. You can review task sequence deployment alerts at the following locations:  
 
