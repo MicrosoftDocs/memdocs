@@ -321,7 +321,7 @@ M365 feedback policies include the following policies:
 
 To configure feedback policy settings:
 
-1. Go to [https://config.office.com](https://config.office.com) and login.
+1. Go to [Microsoft 365 Apps admin center](https://config.office.com/) and login.
 2. Select **Customization** > **Policy Management** > **Create**.
 3. Enter **name** and **description**.
 4. Choose the type of user that this policy will apply.
