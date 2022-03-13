@@ -68,7 +68,6 @@ If you have both Intune and Azure device limit restrictions set, the following t
 | Android device administrator DEM | No | | No | 
 | iOS/macOS BYOD | Yes | Yes | Yes |
 | iOS/macOS Automated Device Enrollment (ADE) | Yes | Yes | Yes |
-| iOS/macOS ADE | No | Yes | No |
 | Windows BYOD | Yes | Yes | Yes |
 | Windows MD-only | | Yes | Yes |
 | Windows Azure AD joined| Yes | Yes | No |
