@@ -73,7 +73,7 @@ To require MFA when a device is enrolled, follow these steps:
 8. Choose **Done**.
 9. In the **Assignments** section, for **Conditions** you don't need to configure any settings for MFA.
 10. In the **Access controls** section, choose **Grant**.
-11. In **Grant**, choose **Grant access**, and then select **Require multi-factor authentication**. Don't select **Require device to be marked as compliant** because a device can't be evaluated for compliance until it's enrolled. Then choose **Select**.
+11. In **Grant**, choose **Grant access**, and then select **Require multi-factor authentication** and **Require device to be marked as compliant**. Then choose **Select**.
 12. In **New policy**, choose **Enable policy** > **On**, and then choose **Create**.
 
 > [!NOTE]
