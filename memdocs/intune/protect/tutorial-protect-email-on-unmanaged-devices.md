@@ -137,7 +137,7 @@ When you configure Conditional Access policies in the Microsoft Endpoint Manager
 6. Under **Assignments**, select **Conditions** > **Device platforms**.
 
    1. Under **Configure**, select **Yes**.
-   2. On the **Include** tab, Click  **Select device platforms** and Select **Android** and **IOS**
+   2. On the **Include** tab, choose **Select device platforms** and select **Android** and **IOS**.
    3. Select **Done**.
 
 7. On the **Conditions** pane, select **Client apps**.
