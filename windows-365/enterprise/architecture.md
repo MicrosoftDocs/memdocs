@@ -127,7 +127,7 @@ Windows 365 Cloud PCs don't support third-party connection brokers.
 
 The "hosted on behalf of" architecture lets Microsoft services, after they’re delegated appropriate and scoped permissions to a virtual network by a subscription owner, attach hosted Azure services to a customer subscription. This connectivity model lets a Microsoft service provide software-as-a-service and user licensed services as opposed to standard consumption-based services.
 
-The following diagrams show the logcial architecture for an Azure AD Join configuration using a Microsoft hosted network, an Azure AD Join configuration using a customer's network connection ("bring your own network"), and a Hybrid Azure AD Join configuration using an OPNC, respectively.
+The following diagrams show the logical architecture for an Azure AD Join configuration using a Microsoft hosted network, an Azure AD Join configuration using a customer's network connection ("bring your own network"), and a Hybrid Azure AD Join configuration using an OPNC, respectively.
 
 ![Azure AD Join architecture with Microsoft hosted network](media/architecture/aadjhostednetwork.png)
 
