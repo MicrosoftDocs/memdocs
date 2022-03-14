@@ -108,9 +108,32 @@ For more information on how to use Azure AD Conditional Access with Windows 365,
 
 Windows 365 Cloud PCs can be either Hybrid Azure AD joined or Azure AD Joined. When using Hybrid Azure AD Join, Cloud PCs must domain join to an AD DS domain. This domain must be synchronized with Azure AD. The domain’s domain controllers may be hosted in Azure or on-premises. If hosted on-premises, connectivity must be established from Azure to the on-premises environment. The connectivity can be in the form of [Azure Express Route](/azure/architecture/reference-architectures/hybrid-networking/expressroute) or a [site-to-site VPN](/azure/architecture/reference-architectures/hybrid-networking/vpn). For more information on establish hybrid network connectivity, see [implement a secure hybrid network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). The connectivity must allow communication from the Cloud PCs to the domain controllers required by Active Directory. For more information, see [Configure firewall for AD domain and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
 
+## User connectivity
+
+Cloud PC connectivity is provided by Azure Virtual Desktop. No inbound connections direct from the Internet are made to the Cloud PC. Instead, connections are made from:
+
+- The Cloud PC to the Azure Virtual Desktop endpoints.
+- The Remote Desktop clients to Azure Virtual Desktop endpoints.
+
+For more information on these ports, see [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list). To ease configuration of network security controls, use Service Tags for Azure Virtual Desktop to identity those endpoints. For more information on Azure Service Tags, see [Azure service tags overview](/azure/virtual-network/service-tags-overview).
+
+There's no requirement to configure your Cloud PCs to make these connections. Windows 365 seamlessly integrates Azure Virtual Desktop connectivity components into gallery or custom images.
+
+For more information on the network architecture of Azure Virtual Desktop, see [Understanding Azure Virtual Desktop network connectivity](/azure/virtual-desktop/network-connectivity).
+
+Windows 365 Cloud PCs don't support third-party connection brokers. 
+
 ## "Hosted on behalf of" architecture
 
 The "hosted on behalf of" architecture lets Microsoft services, after they’re delegated appropriate and scoped permissions to a virtual network by a subscription owner, attach hosted Azure services to a customer subscription. This connectivity model lets a Microsoft service provide software-as-a-service and user licensed services as opposed to standard consumption-based services.
+
+The following diagrams show the logical architecture for an Azure AD Join configuration using a Microsoft hosted network, an Azure AD Join configuration using a customer's network connection ("bring your own network"), and a Hybrid Azure AD Join configuration using an OPNC, respectively.
+
+![Azure AD Join architecture with Microsoft hosted network](media/architecture/aadjhostednetwork.png)
+
+![Azure AD Join architecture with BYO network](media/architecture/aadjbyon.png)
+
+![Hybrid Azure AD Join architecture](./media/architecture/haadjarch.png)
 
 All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exist in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
 
@@ -126,21 +149,6 @@ Windows 365 aligns with Microsoft 365 data protection policies and provisions. C
 - Monitored for unauthorized access, excessive resource consumption, and availability.
 
 For more information about Windows 365 Cloud PC encryption, see [Data encryption in Windows 365](encryption.md).
-
-## Azure Virtual Desktop connectivity
-
-Cloud PC connectivity is provided by Azure Virtual Desktop. No inbound connections direct from the Internet are made to the Cloud PC. Instead, connections are made from:
-
-- The Cloud PC to the Azure Virtual Desktop endpoints.
-- The Remote Desktop clients to Azure Virtual Desktop endpoints.
-
-For more information on these ports, see [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list). To ease configuration of network security controls, use Service Tags for Azure Virtual Desktop to identity those endpoints. For more information on Azure Service Tags, see [Azure service tags overview](/azure/virtual-network/service-tags-overview).
-
-There's no requirement to configure your Cloud PCs to make these connections. Windows 365 seamlessly integrates Azure Virtual Desktop connectivity components into gallery or custom images.
-
-For more information on the network architecture of Azure Virtual Desktop, see [Understanding Azure Virtual Desktop network connectivity](/azure/virtual-desktop/network-connectivity).
-
-Windows 365 Cloud PCs don't support third-party connection brokers. 
 
 <!-- ########################## -->
 ## Next steps

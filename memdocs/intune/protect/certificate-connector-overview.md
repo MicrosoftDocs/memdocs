@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/10/2022
+ms.date: 03/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -160,6 +160,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - *PkcsRequestSuccess* - Successfully fulfilled and uploaded a PKCS Request to Intune.
   - *PkcsRequestFailure* - Failed to fulfill or upload a PKCS Request to Intune.
 - **Operational**
+  - *PkcsDigiCertRequest* - Successfully downloaded PKCS request for DigiCert CA from Intune
   - *PkcsDownloadSuccess* - Successfully downloaded PKCS requests from Intune
   - *PkcsDownloadFailure* - A failure occurred when downloading PKCS requests from Intune
   - *PkcsDownloadedRequest* - Details of a single downloaded request from Intune
@@ -189,6 +190,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - *RevokeRequestSuccess* - Successfully downloaded Revocation requests from Intune
   - *RevokeRequestFailure* - A failure occurred when downloading Revocation requests from Intune
 - **Operational**
+  - *RevokeDigicertRequest* - Received revoke request from Intune and forwarding request to Digicert for fulfillment of request.
   - *RevokeDownloadSuccess* - Successfully downloaded Revocation requests from Intune
   - *RevokeDownloadFailure* - A failure occurred when downloading Revocation requests from Intune
   - *RevokeDownloadedRequest* - Details of a single downloaded request from Intune
