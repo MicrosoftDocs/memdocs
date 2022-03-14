@@ -173,7 +173,7 @@ After you configure devices to sync to Microsoft Endpoint Manager admin center, 
   
    ![Configure cloud sync](../media/tenant-attach-intune/cloud-sync.png)
    
-3. Click on **Add**  and **Select** the Azure Active Diretiry group that you would like to syncrhonize Collect memberhsip results with.
+3. Select **Add**  and then **Select** the Azure Active Directory group that you would like to synchronize with Collect membership results.
 
 3. Select **OK** to save the configuration.
 
