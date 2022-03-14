@@ -196,7 +196,7 @@ sections:
   - name: App experience on Android
     questions: 
       - question: Why is the Company Portal app needed for Intune app protection to work on Android devices?
-        answer: Much of app protection functionality is built into the Company Portal app. Device enrollment is _not required_ even though the Company Portal app is always required. For MAM, the end user just needs to have the Company Portal app installed on the device.
+        answer: [Company Portal app and Intune app protection](../apps/app-protection-policies.md#company-portal-app-and-intune-app-protection) 
 
       - question: How do multiple Intune app protection access settings that are configured to the same set of apps and users work on Android?
         answer: |
