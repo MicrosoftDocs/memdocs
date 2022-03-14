@@ -230,7 +230,7 @@ To view the **User check in status** report:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Device configuration profiles (preview)** > *select a configuration profile* > **User status**.
 
-## Device assignment status (Operational)
+## Device assignment status report (Operational)
 
 The **Device assignment status** report provides a list of devices and the last logged on user of the device. This report includes devices in a pending state. Also, it provides the total assigned devices and assigned users for all devices in the tenant.
 
@@ -239,7 +239,7 @@ To view the **Device assignment status** report:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Device configuration profiles (preview)** > *select a configuration profile* > **Device assignment status**.
 
-## Per setting status (Operational)
+## Per setting status report (Operational)
 
 The **Per setting status** report provides the status for the aggregate total of devices that accessed a specific setting. The status for the setting includes the total number of errors, conflicts, and successes. You can drill down to a list of devices and users making up each aggregate total to view more device information for a given configuration profile.
 
