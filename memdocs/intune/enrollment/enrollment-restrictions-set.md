@@ -121,7 +121,7 @@ Default restrictions are automatically provided for both device type and device 
     - **MDM** (Windows, macOS, and iOS/iPadOS only): Select **Allow** to permit devices running the selected platform to enroll in Intune. 
     - **Allow min/max range** (Android, Windows, iOS/iPadOS only): Enter the minimum and maximum OS versions allowed to enroll. For iOS and Android, version restrictions only apply to devices enrolled with the Company Portal. Supported version formats include:  
       - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
-      - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
+      - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app. However, while ADE enrollments using authenticate with Company Portal won't be blocked, the registration will be impacted if the device does not meet the Min/Max OS requirements set, and this will prevent the device from creating the Azure AD Device record used to evaluate Conditional Access Policies. The message **Couldn't map device record with a user** will be received after signing in to Company Portal in such scenarios.
       - Windows supports major.minor.build.rev for Windows 10 and Windows 11 only.
     - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.  
     - **Device manufacturer**: Enter a comma-separated list of the manufacturers that you want to block.  
