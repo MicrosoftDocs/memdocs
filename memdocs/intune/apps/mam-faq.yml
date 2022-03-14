@@ -196,7 +196,7 @@ sections:
   - name: App experience on Android
     questions: 
       - question: Why is the Company Portal app needed for Intune app protection to work on Android devices?
-        answer: [Company Portal app and Intune app protection](../apps/app-protection-policies.md#company-portal-app-and-intune-app-protection) 
+        answer: [Company Portal app and Intune app protection](../apps/app-protection-policy.md#company-portal-app-and-intune-app-protection) 
 
       - question: How do multiple Intune app protection access settings that are configured to the same set of apps and users work on Android?
         answer: |
