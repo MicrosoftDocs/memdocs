@@ -164,7 +164,7 @@ After you configure devices to sync to Microsoft Endpoint Manager admin center, 
 
 #### Enable collections for use with endpoint security policies
 
-1. From a Configuration Manager console connected to your top-level site, right-click on a device collection that you synchronize to Microsoft Endpoint Manager admin center and select **Properties**.
+1. From a Configuration Manager console connected to your top-level site, right-click on a device collection that you synchronized to Microsoft Endpoint Manager admin center and select **Properties**.
 
 2. On the **Cloud Sync** tab, enable the option to **Make this collection available to assign Endpoint security policies from Microsoft Endpoint Manager admin center**.
 
