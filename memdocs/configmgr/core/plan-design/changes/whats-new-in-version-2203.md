@@ -98,10 +98,12 @@ This release also includes performance improvements to the [Client health dashbo
 ## Collections
 
 ### Delete collection references
+
 <!--9708999-->
+
 Previously, when you would delete a collection with dependent collections, you first had to delete the dependencies. The process of finding and deleting all of these collections could be difficult and time consuming. Now when you delete a collection, you can review and delete its dependent collections at the same time.
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Delete collection references](../../clients/manage/collections/manage-collections.md#delete-collection-references).
 
 <!-- ## Software Center -->
 
