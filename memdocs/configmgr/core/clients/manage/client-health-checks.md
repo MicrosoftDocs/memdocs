@@ -2,7 +2,7 @@
 title: Client health checks
 titleSuffix: Configuration Manager
 description: The checks that the Configuration Manager client runs regularly to keep healthy.
-ms.date: 12/01/2021
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -71,6 +71,28 @@ There are two other checks to test the overall health of WMI on the device:
 - The WMI repository integrity test checks that Configuration Manager client entries exist in WMI.<!--A81778B5-9A1E-4A52-9C6E-6939CEFAA118--> If this check fails, reinstall the Configuration Manager client.
 
 - The WMI event sink test checks whether the Configuration Manager-related WMI event sink is lost.<!--C35E790D-4C05-40A8-BB46-A68578966D19--> If this check fails, restart the client service.
+
+### Verify CCMCache is not near drive capacity
+
+_Applies to version 2203 and later._
+<!--10954111-->
+
+Verify that the remaining cache space isn't near the available disk drive space.
+
+The client compares the remaining cache space against free space on the drive with the client cache. If the space remaining on the drive is less than 1% of the total default size, or the remaining cache space is greater than the available drive space, the check fails.
+
+To remediate a failure with this check, free disk space on the drive that contains the cache.
+
+### Verify disk space not near capacity
+
+_Applies to version 2203 and later._
+<!--10954111-->
+
+Verify that the device's primary disk drive isn't close to full.
+
+The client compares the WMI entry for free disk space against total disk space. If the space remaining is lower than 15% of total disk space, the check fails.
+
+To remediate a failure with this check, free disk space on the primary drive.
 
 ### Verify the antimalware service
 
