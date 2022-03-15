@@ -63,6 +63,8 @@ Windows 365 integrates with the rest of Microsoft 365 to make sure that you can 
 
 Windows 365 can also be protected by [Azure AD Conditional Access](/azure/active-directory/conditional-access/overview). This protection includes optionally excluding Windows 365 itself from device compliance policies to ensure that your end users can access their Cloud PCs from any device. You can still use multi-factor authentication, sign-in risk, and other controls to ensure that the user is securely authenticated.
 
+Windows 365 uses the Windows Update auto-scan ability to install the latest quality updates. To make sure that updates are installed promptly, the end user should sign in to the newly provisioned Cloud PC as soon as possible.
+
 You can also disable clipboard and drive redirection to ensure a foundation of data loss prevention. Disabling prevents users from:
 
 - Copy/pasting information from their Cloud PCs to other unmanaged locations.
