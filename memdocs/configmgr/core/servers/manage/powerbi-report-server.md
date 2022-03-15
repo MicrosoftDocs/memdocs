@@ -2,7 +2,7 @@
 title: Integrate with Power BI Report Server
 titleSuffix: Configuration Manager
 description: Integrate Power BI Report Server with Configuration Manager reporting for modern visualization and better performance.
-ms.date: 11/03/2021
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
