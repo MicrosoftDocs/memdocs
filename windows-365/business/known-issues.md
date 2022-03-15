@@ -88,6 +88,10 @@ If your email service uses Simple Mail Transfer Protocol (SMTP) for your email c
 
 Or you can ask your email service provider for help to configure their email client app to use secure SMTP over Transport Layer Security (TLS), which uses a different port.
 
+## Virtual Private Network support<!--38270291-->
+
+Because of the wide array of Virtual Private Network (VPN) solutions available, Microsoft can't confirm which services work with Windows 365 Business. For more information, consult your VPN provider. For organizations that have advanced networking needs, Windows 365 Enterprise is recommended. For more information, see [Network requirements](/windows-365/enterprise/requirements-network).
+
 [!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
 
 ## Next steps
