@@ -34,7 +34,7 @@ The rest of this article describes the other settings on the **Properties** tab 
 
 - **Disable this step**: The task sequence skips this step when it runs on a computer. The icon for this step is greyed out in the task sequence editor.  
 
-- **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md#BKMK_TSGroups).  
+- **Continue on error**: If an error occurs while running the step, the task sequence continues. For more information, see [Planning considerations for automating tasks](../plan-design/planning-considerations-for-automating-tasks.md#task-sequence-groups).
 
 - **Add Condition**: The task sequence evaluates these conditional statements to determine if it runs the step. For an example of using a task sequence variable as a condition, see [How to use task sequence variables](using-task-sequence-variables.md#bkmk_access-condition). For more information about conditions, see [Task sequence editor - Conditions](task-sequence-editor.md#bkmk_conditions).
 
@@ -1077,7 +1077,7 @@ If the task sequence fails to download a package, it starts to download the next
 
 <!-- SCCMDocs-pr #4202 -->
 
-If you configure the [task sequence properties](../deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_prop-advanced) to **Use a boot image**, then adding a boot image to this step is redundant. Only add a boot image to this step if it's not specified on the properties of the task sequence.
+If you configure the [task sequence properties](../deploy-use/manage-task-sequences-to-automate-tasks.md#advanced-tab) to **Use a boot image**, then adding a boot image to this step is redundant. Only add a boot image to this step if it's not specified on the properties of the task sequence.
 
 #### Example use case
 
