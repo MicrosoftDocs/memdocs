@@ -43,14 +43,18 @@ For more information, see [Boundary groups and software update points](/servers/
 ## Site infrastructure
 
 ### Visualize content distribution status
+
 <!--9495651-->
+
 You can now monitor content distribution path and status in a graphical format. The graph shows distribution point type, distribution state, and associated status messages. This visualization allows you to more easily understand the status of your content package distribution. It helps you answer questions like:
 
 - Has the site successfully distributed the content?
 - Is the content distribution in progress?
 - Which distribution points have already processed the content?
 
-<!-- For more information, see [Link text](link). -->
+:::image type="content" source="media/9495651-view-content-distribution-small.png" alt-text="Visualization of content distribution status of the Configuration Manager client package in an example hierarchy.":::
+
+For more information, see [Visualize content distribution status](../../servers/deploy/configure/visualize-content-distribution-status.md).
 
 ### Improvements to Power BI Report Server Integration
 <!--12487076-->
