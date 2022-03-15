@@ -16,6 +16,8 @@ ms.date: 12/18/2020
   
    ![Configure cloud sync](../media/tenant-attach-intune/cloud-sync.png)
 
-3. Select **OK** to save the configuration.
+3. Click on **Add** and **Select** the Azure Active Diretiry group that you would like to syncrhonize Collect memberhsip results with.
+
+4. Select **OK** to save the configuration.
 
    Devices in this collection can now onboard with Microsoft Defender for Endpoint, and support use of Intune endpoint security policies.
