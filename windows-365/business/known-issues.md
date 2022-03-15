@@ -66,7 +66,7 @@ Users can manually set their internet search engine's location. For example, on 
 
 ## Microsoft Narrator screen reader not turned on
 
-When users sign into their Cloud PCs from windows365.microsoft.com, the Microsoft Narrator screen reader is not turned on.
+When users sign into their Cloud PCs from windows365.microsoft.com, the Microsoft Narrator screen reader isn't turned on.
 
 ### Troubleshooting steps
 
@@ -78,9 +78,9 @@ To turn on Narrator when accessing your Cloud PC from the web interface:
 
 3. On your keyboard, press Alt+F3+Ctrl+Enter.
 
-## Sending outbound email messages using port 25 is not supported
+## Sending outbound email messages using port 25 isn't supported
 
-Sending outbound email messages directly on port 25 from a Windows 365 Business Cloud PC is not supported. Communication over port TCP/25 is blocked at the Windows 365 Business network layer for security reasons.
+Sending outbound email messages directly on port 25 from a Windows 365 Business Cloud PC isn't supported. Communication over port TCP/25 is blocked at the Windows 365 Business network layer for security reasons.
 
 ### Troubleshooting steps
 
@@ -90,7 +90,7 @@ Or you can ask your email service provider for help to configure their email cli
 
 ## Virtual Private Network support<!--38270291-->
 
-Because of the wide array of Virtual Private Network (VPN) solutions available, Microsoft can't confirm which services work with Windows 365 Business. For more information, consult your VPN provider. For organizations that have advanced networking needs, Windows 365 Enterprise is recommended. For more information, see [Network requirements](/windows-365/enterprise/requirements-network).
+Because of the many Virtual Private Network (VPN) solutions available, Microsoft can't confirm which services work with Windows 365 Business. For more information, consult your VPN provider. For organizations that have advanced networking needs, Windows 365 Enterprise is recommended. For more information, see [Network requirements](/windows-365/enterprise/requirements-network).
 
 [!INCLUDE [Missing start menu and taskbar when using iPad and the Remote Desktop app to access a Cloud PC](../includes/known-issues.md)]
 
