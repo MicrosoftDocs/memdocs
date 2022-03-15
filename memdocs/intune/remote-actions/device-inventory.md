@@ -80,12 +80,12 @@ Depending on the carrier used by the devices, not all details might be collected
 |Management name|The device name used only in the console. Changing this name won't change the name on the device.|Windows, iOS, Android|
 |UDID|The device's Unique Device identifier.|Windows, iOS|
 |Intune Device ID|A GUID that uniquely identifies the device.|Windows, iOS, Android|
-|Serial number|The device's serial number from the manufacturer.|Windows, iOS, Android <br/><br/> Intune doesn't display serial number for Android personally-owned work profile devices running Android 12 and newer.|
+|Serial number|The device's serial number from the manufacturer.|Windows, iOS, iPadOS, Android <br/><br/> Intune doesn't display serial number for Android personally-owned work profile devices running Android 12 and newer.|
 |Shared device|If **Yes**, the device is shared by more than one user.|Windows, iOS|
 |User approved enrollment|If **Yes**, then the device has user approved enrollment that lets admins manage certain security settings on the device.|Windows, iOS|
 |Operating system|The operating system used on the device.|Windows, iOS, Android|
-|Operating system version|The version of the operating system on the device.|Windows, iOS, Android|
-|Operating system language|The language set for the operating system on the device.|Windows, iOS,Android|
+|Operating system version|The version of the operating system on the device.|Windows, iOS, iPadOS, Android|
+|Operating system language|The language set for the operating system on the device.|Windows, iOS, Android|
 |Build number|The operating system's build number.|Android|
 |Security patch level|The security patch level for the device.|Android|
 |Total storage space|The total storage space on the device (in gigabytes).|Windows, iOS|
