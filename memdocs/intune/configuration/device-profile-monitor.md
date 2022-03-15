@@ -39,6 +39,9 @@ Intune includes some features to help monitor and manage your device configurati
 
 All of your profiles are shown. You also see the platform, the type of profile, and if the profile is assigned.
 
+> [!NOTE]
+> For additional reporting information about device configuration profiles, see [Intune reports](../fundamentals/reports.md).
+
 ## View details on a profile
 
 After you create your device profile, Intune provides graphical charts. These charts display the status of a profile, such as it being successfully assigned to devices, or if the profile shows a conflict.
