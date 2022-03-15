@@ -76,11 +76,11 @@ This process requires an Azure subscription in which you can create the followin
     > 
     > - **Location**: The location for all resources
 
-> [!NOTE]
-> If you edited the Azure template before you deployed it, then you need to change the `_artifactsLocation` value.
->
-> - For the technical preview template, the value is `https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/sccm/sccm-technicalpreview/azuredeploy.json`
-> - For the current branch template, the value is `https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/sccm/sccm-currentbranch/azuredeploy.json`
+    > [!NOTE]
+    > If you edited the Azure template before you deployed it, then you need to change the `_artifactsLocation` value.
+    >
+    > - For the technical preview template, the value is `https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/sccm/sccm-technicalpreview/azuredeploy.json`
+    > - For the current branch template, the value is `https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/sccm/sccm-currentbranch/azuredeploy.json`
 
 4. Read the terms and conditions. If you agree, select **I agree to the terms and conditions stated above**. Then select **Purchase** to continue. 
 
