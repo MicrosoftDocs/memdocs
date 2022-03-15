@@ -2,7 +2,7 @@
 title: Modify a CMG
 titleSuffix: Configuration Manager
 description: If you need to change the configuration, you can modify the cloud management gateway (CMG).
-ms.date: 03/11/2022
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -55,6 +55,9 @@ View the packages that are assigned to the cloud storage account for this CMG. S
 To verify that the content files for a package are available on the content-enabled CMG, go to the **Content Status** node in the **Monitoring** workspace. For more information, see [Monitor content you distribute](../../../servers/deploy/configure/monitor-content-you-have-distributed.md).
 
 ## Convert
+
+> [!NOTE]
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/optional-features.md).
 
 <!--8959690-->
 

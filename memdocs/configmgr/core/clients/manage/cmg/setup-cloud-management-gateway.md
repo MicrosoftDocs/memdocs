@@ -29,8 +29,10 @@ This step of the overall process includes the following actions:
 
 ## Set up a CMG
 
-> [!TIP]
+> [!NOTE]
 > Deploying a CMG with a **virtual machine scale set** in Azure was first introduced in version 2010 as a [pre-release feature](../../../servers/manage/pre-release-features.md).<!--3601040--> Beginning with version 2107, it's no longer a pre-release feature.<!-- 8959690 -->
+>
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/optional-features.md).
 
 Do this procedure on the top-level site. That site is either a standalone primary site, or the central administration site (CAS).
 
@@ -139,7 +141,7 @@ To add the CMG connection point, the following steps summarize the instructions 
 To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 > [!TIP]
-> Optionally, you can also use the PowerShell cmdlet **Add-CMCloudManagementGatewayConnectionPoint** to add the CMG connection point role to a site system server. 
+> Optionally, you can also use the PowerShell cmdlet **Add-CMCloudManagementGatewayConnectionPoint** to add the CMG connection point role to a site system server.
 >
 > For more information, see [Add-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Add-CMCloudManagementGatewayConnectionPoint).
 
