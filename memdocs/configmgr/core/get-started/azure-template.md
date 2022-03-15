@@ -2,7 +2,7 @@
 title: Create a lab in Azure
 titleSuffix: Configuration Manager
 description: Automate the creation of a Configuration Manager technical preview lab or current branch evaluation lab using Azure templates
-ms.date: 07/22/2019
+ms.date: 03/14/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -75,8 +75,8 @@ This process requires an Azure subscription in which you can create the followin
     > - **\_artifacts Location Sas Token**: The sasToken is required to access the artifacts location  
     > 
     > - **Location**: The location for all resources
-> [!NOTE]
 
+> [!NOTE]
 > If you edited the Azure template before you deployed it, then you need to change the `_artifactsLocation` value.
 >
 > - For the technical preview template, the value is `https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/application-workloads/sccm/sccm-technicalpreview/azuredeploy.json`
