@@ -105,6 +105,9 @@ For more information, see the following resources:
 
 Alternate content providers aren't supported to get content from a content-enabled CMG. You can still use them on a client that communicates with a CMG and gets content from other supported content locations.<!-- CMADO-10205600 -->
 
+> [!TIP]
+> Starting in version 2203, you can also configure the task sequence to allow token authentication with alternate content providers. For more information, see [Task sequence variables: SMSTSAllowTokenAuthURLForACP](../../../../osd/understand/task-sequence-variables.md#smstsallowtokenauthurlforacp).<!-- 13788624 -->
+
 ## Next steps
 
 Next, plan how the design the CMG for the best performance at the appropriate scale:
