@@ -30,7 +30,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 If you deploy an application or app group to a user collection that's based on a security group, and you enable implicit uninstall, changes to the security group are now honored. When the site discovers the change in group membership, Configuration Manager uninstalls the app for the user that you removed from the security group.
 
-<!-- For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall). -->
+For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall).
 
 ## Cloud-attached management
 
