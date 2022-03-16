@@ -53,12 +53,12 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   
   |Distributon version    | Container requirements   | Considerations     |
   |-----------------------|--------------------------|--------------------|
-  | CentOS 7.4+           | Docker CE                | CentOS 8+ isn’t supported |
-  | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
+  | CentOS 7.4+           | Docker CE/EE             | CentOS 8+ isn’t supported |
+  | Red Hat (RHEL) 7.4+   | Docker CE/EE             |                    |
   | Red Hat (RHEL) 8.4    | Podman 3.0               |                    |
   | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
-  | Ubuntu 18.04           | Docker CE               |                    |
-  | Ubuntu 20.04           | Docker CE               |                    |
+  | Ubuntu 18.04           | Docker CE/EE            |                    |
+  | Ubuntu 20.04           | Docker CE/EE               |                    |
 
 
 - **Size the Linux server**: Use the following guidance to meet your expected use:
@@ -76,8 +76,8 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 - **CPU**: 64-bit AMD/Intel processor.
 
-- **Install Docker CE or Podman**: Depending on the version of Linux you use for your Tunnel server, you'll need to install one of the following on the Linux server:
-  - Docker version 19.03 CE or later
+- **Install Docker CE/EE or Podman**: Depending on the version of Linux you use for your Tunnel server, you'll need to install one of the following on the Linux server:
+  - Docker version 19.03 CE/EE or later
   - Podman version 3.0
   
 
