@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/08/2022 
+ms.date: 03/10/2022 
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -71,6 +71,11 @@ You must allow traffic in your Azure network configuration to the following serv
   - cpcsacnrysa1prodpreu01.blob.core.windows.net
   - cpcsacnrysa1prodpreu02.blob.core.windows.net
   - cpcsacnrysa1prodprna01.blob.core.windows.net
+  - cpcstcnryprodprap01.blob.core.windows.net
+  - cpcstcnryprodprau01.blob.core.windows.net
+  - cpcstcnryprodpreu01.blob.core.windows.net
+  - cpcstcnryprodprna01.blob.core.windows.net
+  - cpcstcnryprodprna02.blob.core.windows.net
   - cpcstprovprodpreu01.blob.core.windows.net
   - cpcstprovprodpreu02.blob.core.windows.net
   - cpcstprovprodprna01.blob.core.windows.net
@@ -100,7 +105,7 @@ All endpoints connect over port 443.
 
 ### Remote Desktop Protocol (RDP) broker service endpoints
 
-Azure Virtual Desktop RDP broker service endpoints are critical to Cloud PC performance. These endpoints affect both connectivity and latency. To align with the [Microsoft 365 network connectivity principles](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?view=o365-worldwide#new-office-365-endpoint-categories), you should categorize these endpoints as **Optimize** endpoints.
+Azure Virtual Desktop RDP broker service endpoints are critical to Cloud PC performance. These endpoints affect both connectivity and latency. To align with the [Microsoft 365 network connectivity principles](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles#new-office-365-endpoint-categories), you should categorize these endpoints as **Optimize** endpoints.
 
 To make it easier to configure network security controls, use Azure Virtual Desktop service tags to identity those endpoints for direct routing using an [Azure Networking User Defined Route (UDR)](/azure/virtual-network/virtual-networks-udr-overview). A UDR will result in direct routing between your virtual network and the RDP broker for lowest latency. For more information about Azure Service Tags, see (Azure service tags overview)[/azure/virtual-desktop/network-connectivity].
 
