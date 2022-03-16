@@ -60,6 +60,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
+## Week of March 14, 2022
+
+### App management
+
+#### Apps UI when using Android 12L OS<!-- 12536901 -->
+The Android 12L OS contains new features designed to improve the Android 12 experience on large and folding dual-screen devices. Intune apps now supports Android 12L OS on Android dual-screen devices.
+
 ## Week of February 28, 2022
 
 ### Device configuration
