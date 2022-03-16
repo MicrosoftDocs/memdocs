@@ -94,6 +94,9 @@ To make changes that the conversion process doesn't support, you need to [Redepl
 
 ### Process to convert a CMG to a virtual machine scale set
 
+> [!IMPORTANT]
+> First review the prerequisites for [virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets). For example, make sure that you register the necessary [Azure resource providers](configure-azure-ad.md#configure-azure-resource-providers) in the subscription.<!-- memdocs#2434 -->
+
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.
 
 1. Select a CMG instance whose **Status** is _Ready_. In the ribbon, select **Convert**. This action opens the Convert CMG wizard.
