@@ -51,9 +51,9 @@ When you deploy the CMG as a [virtual machine scale set](plan-cloud-management-g
   > [!IMPORTANT]
   > The **Lab (B2s)** size VM is only intended for lab testing and small proof-of-concept environments. It isn't intended for production use with the CMG. The B2s VMs are low cost and low performing.
 
-  You can't change the VM size after you deploy the CMG. To change the VM size, you need to [Redeploy the service](modify-cloud-management-gateway.md#redeploy-the-service).
+  You can change the VM size after you deploy the CMG. This action updates the Azure service to use a new VM.<!-- memdocs#2286 -->
 
-- In version 2103 and earlier, the CMG uses a Standard [A2_v2](/azure/virtual-machines/av2-series) VM. The VM size isn't configurable.
+- In version 2103 and earlier, the CMG uses a Standard [A2_v2](/azure/virtual-machines/av2-series) VM. The VM size isn't configurable. To change the VM size, you need to [Redeploy the service](modify-cloud-management-gateway.md#redeploy-the-service).
 
 - You select how many VM instances support the CMG. One is the default, and 16 is the maximum. This number is set when you create the CMG, but you can change it afterwards to scale the service as needed.
 
