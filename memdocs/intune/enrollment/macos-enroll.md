@@ -63,7 +63,7 @@ Intune supports *bring-your-own-device*, or *BYOD*, which lets people enroll the
 ## Company-owned macOS devices
 Intune supports the following enrollment methods for company-owned macOS devices:  
 
-- [Apple Automated Device Enrollment](device-enrollment-program-enroll-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air,so you don't need to have physical access to devices.  
+- [Apple Automated Device Enrollment](device-enrollment-program-enroll-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air, so you don't need to have physical access to devices.  
 - [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Azure Active Directory account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.   
 - [Direct enrollment](device-enrollment-direct-enroll-macos.md): Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling.  
 
@@ -119,13 +119,13 @@ Modify the VM's configuration settings to add or change a VM serial number and h
 For more information, see the following topics in the Parallels knowledge base:  
 
 * [How to enroll a macOS VM in Parallels Desktop using Intune](https://kb.parallels.com/en/124564)  
-* [How to find and change the serial number](http://kb.parallels.com/123455)  
+* [How to find and change the serial number](https://kb.parallels.com/123455)  
 
 
 ### VMware Fusion
 Add the following lines to your .vmx file to set the VM's hardware model and serial number. The values shown in this sample are examples.  
 
-```
+```md
 serialNumber = "ABC123456789"  
 hw.model = "MacBookAir10,1"  
 ```
