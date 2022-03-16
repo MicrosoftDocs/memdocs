@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.date: 12/16/2020
 ms.reviewer: jubaptis
 manager: dougeby
