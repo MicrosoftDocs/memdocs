@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/17/2022
+ms.date: 03/16/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -78,7 +78,7 @@ To enhance your use of gradual rollouts, you can configure *Intelligent rollouts
 
 With intelligent rollouts, the Windows Update for Business Deployment Service uses data that it collects from devices to optimize the device members in the offer groups of your gradual rollout deployments. The first offer group will include the fewest number of devices that have the largest pool of variations in your environment. You can think of this as a *pilot ring* for the deployment.
 
-To enable intelligent rollout, you deploy a [settings catalog](../configuration/settings-catalog.md) profile for device configuration to *Allow WUfB Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles.
+To enable intelligent rollout, you deploy a [settings catalog](../configuration/settings-catalog.md) profile for device configuration to *Allow WUfB Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles. You only need to deploy this profile to a device a single time. The change then applies to all future deployments for that device.
 
 ### Likely issue safeguard holds
 
