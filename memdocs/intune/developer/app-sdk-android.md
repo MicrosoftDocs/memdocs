@@ -1003,7 +1003,7 @@ Authority and NonBrokerRedirectURI may be specified if necessary.
 ## MAM managed applications
 
 ### Overview
-MAM works for both enrolled and unenrolled devices. The Company Portal is still required to be installed on the device, but the user does not need to sign into the Company Portal and enroll the device.
+MAM supports both enrolled and unenrolled devices. The Company Portal is still required to be installed on the device, but the user does not need to sign into the Company Portal and enroll the device.
 
 
 ### Workflow
