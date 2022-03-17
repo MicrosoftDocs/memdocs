@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/24/2022
+ms.date: 03/17/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,184 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of March 21, 2022 (Service release 2203)
+
+### App management
+
+#### iOS/iPadOS notifications will require March Company Portal update<!-- 9819536 -->
+If you are using a functionality that could generate iOS/iPadOS Company Portal push notifications, you will want to ensure your users update the iOS/iPadOS Company Portal in March or April 2022. There is no additional change in functionality. We will be making service side updates to iOS/iPadOS notifications expected in Intune's May (2205) service release. The Company Portal update will be released prior to the service change, so most users will likely have updated the app and will not be impacted. However, you may want to notify users of this change to ensure all users continue to receive push notifications sent by your organization. For related information, see [Update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app).
+
+#### Feedback settings for Company Portal and Microsoft Intune apps<!-- 10012370 -->
+Feedback settings are provided to address M365 enterprise feedback policies for the currently logged in user via the [Microsoft 365 Apps admin center](https://config.office.com/). The settings are used to determine whether feedback can be enabled or must be disabled for a user. This feature is available for Intune Company Portal and Microsoft Intune apps. For more information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
+
+#### Deploy macOS LOB apps by uploading PKG-type installer files (Public preview)<!-- 13155147 -->
+You can now upload and deploy PKG-type installer files as macOS line-of-business apps. You can add a macOS LOB app from [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **Add** > **Line-of-business app**. For more information about macOS LOB apps, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
+
+### Device management
+
+#### Android (AOSP) users can view all devices in Intune app<!-- 10454654 -->
+AOSP device users can now view a list of their managed devices and device properties in the Microsoft Intune app. This feature is available on devices enrolled in Intune as user-associated (Android) AOSP devices.
+
+### Device enrollment
+
+#### Utilize bootstrap tokens on enrolled macOS devices (public preview)<-- 9539461 -->
+Intune now supports the use of bootstrap tokens on enrolled devices running macOS, version 10.15 or later. Bootstrap tokens allow for non-admin users to have increased MDM permissions, and perform specific software functions on behalf of the IT admin.  Tokens are supported on:  
+
+Supervised devices (in Intune, that's all user-approved enrollments)  
+Devices enrolled in Intune via Apple automated device enrollment   
+For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md#boostrap-tokens-preview).  
+
+### Enroll macOS virtual machines running Apple silicon<-- 13242738 -->
+Use the Company Portal app for macOS to enroll virtual machines running on Apple silicon. Intune supports using macOS virtual machines for testing purposes only. For more information about enrolling virtual machines in Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md).
+
+### Device configuration
+
+#### New reporting experience for device configuration profiles<!-- 8466004 -->
+There is now a new reporting experience for device configuration profiles. This reporting experience excludes Windows administrative template (ADMX), Android Enterprise devices with OEMConfig, and Device Firmware Configuration Interface (DFCI) profile types. 
+
+We are continuing to update Intune's report experience to enhance consistency, accuracy, organization, and data representation, which gives an overall "facelift" of Intune's per policy reporting. The new experience updates the per policy overview page to shift away from donut charts to a sleeker overview chart that quickly updates as devices/users check-in. 
+
+There are three reports available from the per policy view:
+- **Device and user check-in status** - This report combines information that was previously split into separate device status and user status reports. This report shows the list of device and user check-ins for the device configuration profile, with the check-in status and last check-in time. When you open the report, the aggregate chart will remain at the top of the page, and the data will be consistent with the list data. Use the filter column to view assignment filter options.
+- **Device assignment status** - This report surfaces data on the latest status for assigned devices from the device configuration profile.
+- **Per setting status** - This report surfaces the summary of device and user check-ins that are in **Success**, **Conflict**, **Error** states at the granular setting level within the device configuration profile. This report leverages the same consistency and performance updates as well as navigation tools we’ve made available to other reports.
+
+More drilldowns are available and additional assignment filters are supported for each report. For more information about each of these reports, see [Intune reports](../fundamentals/reports.md).
+
+#### Google Chrome settings are in Settings Catalog and Administrative Templates<!-- 6198569 -->
+Google Chrome settings are included in the Settings Catalog and Administrative Templates (ADMX). Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
+
+For more information on these policy types, see:
+- [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md)
+- [Use ADMX templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
+
+Applies to:
+- Windows 10/11
+
+#### Endpoint security profiles support filters; See the filter status on a device configuration profile report<!-- 11889620 -->
+There are some new features when using filters:
+- When you create a device configuration profile for Windows devices, a per-policy report shows reporting information in the **Device and user check-in status** (**Devices** > **Configuration profiles** > *Select an existing policy*).
+
+  When you select **View report**, the report has an **Assignment Filter** column. Use this column to determine if a filter successfully applied to your policy.
+
+- Endpoint Security policies support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create.
+
+- When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting](#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > *Select an existing endpoint security policy* > **View report**). Use this column to determine if a filter successfully applied to your policy.
+
+For more information on filters, see:
+- [Use filters when assigning your apps, policies, and profiles](filters.md)
+- [List of platforms, policies, and app types supported by filters](filters-supported-workloads.md)
+
+Applies to:
+- All platforms
+
+Does not apply to:
+- Administrative Templates (Windows 10/11)
+- Device Firmware Configuration Interface (DFCI) (Windows 10/11)
+- OEMConfig (Android Enterprise)
+
+#### New macOS settings in the Settings Catalog<!-- 13111526 idready idstaged wnready -->
+The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
+
+**User Experience > Accessibility**:
+- Close View Far Point
+- Close View Hotkeys Enabled
+- Close View Near Point
+- Close View Scroll Wheel Toggle
+- Close View Smooth Images
+- Contrast
+- Flash Screen
+- Mouse Driver
+- Mouse Driver Cursor Size
+- Mouse Driver Ignore Trackpad
+- Mouse Driver Initial Delay
+- Mouse Driver Max Speed
+- Slow Key
+- Slow Key Beep On
+- Slow Key Delay
+- Stereo as Mono
+- Sticky Key
+- Sticky Key Beep On Modifier
+- Sticky Key Show Window
+- Voice Over On Off Key
+- White On Black
+
+**Air Play**:
+- Allow List
+- Password
+
+**User Experience > Desktop**: 
+-  Override Picture Path
+
+**Preferences > Global Preferences**: 
+- Auto Log Out Delay
+- Multiple Session Enabled
+
+**Printing > Printing**: 
+- Require Admin To Print Locally
+
+**Security > Security Preferences**: 
+- Do Not Allow Firewall UI
+- Do Not Allow Lock Message UI
+- Do Not Allow Password Reset UI
+
+**Preferences > System Preferences**:
+- Disabled Preference Panes
+- Enabled Preference Panes
+
+**Preferences > User Preferences**: 
+- Disable Using Cloud Password
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**Printing > Air Print**:
+- IP Address
+- Resource Path
+
+**Networking > Firewall**:
+- Allowed
+- Bundle ID
+- Block All Incoming
+- Enable Firewall
+- Enable Stealth Mode
+
+**Login > Login Items**:
+- Hide
+
+**Login > Login Window Behavior**:
+- Admin Host Info
+- Allow List
+- Deny List
+- Disable Console Access
+- Disable Screen Lock Immediate
+- Hide Admin Users
+- Hide Local Users
+- Include Network User
+- Log Out Disabled While Logged In
+- Login Window Text
+- Power Off Disabled While Logged In
+- Restart Disabled
+- Restart Disabled While Logged In
+- Show Full Name
+- Show Other Users Managed
+- Shut Down Disabled
+- Shut Down Disabled While Logged In
+- Sleep Disabled
+
+**System Policy > System Policy Control**:
+- Allow Identified Developers
+- Enable Assessment
+
+**System Policy** > **System Policy Managed**:
+- Disable Override
+
+There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
+
+Applies to:
+- macOS
 
 ## Week of March 14, 2022
 
