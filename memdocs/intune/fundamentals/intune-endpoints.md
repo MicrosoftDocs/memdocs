@@ -107,7 +107,7 @@ For Delivery Optimization metadata:
 |Communications with APNS servers|#-courier.push.apple.com<br>'#' is a random number from 0 to 50.|    TCP     |  5223 and 443  |
 |Various functionalities including accessing the World Wide Web, iTunes store, macOS app store, iCloud, messaging, etc. |phobos.apple.com<br>ocsp.apple.com<br>ax.itunes.apple.com<br>ax.itunes.apple.com.edgesuite.net| HTTP/HTTPS |  80 or 443   |
 
-For more information, see Apple's [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944), [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999), and [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609).  
+For more information, see [Use Apple products on enterprise networks](https://support.apple.com/HT210060), [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944), [About macOS, iOS/iPadOS, and iTunes server host connections and iTunes background processes](https://support.apple.com/HT201999), and [If your macOS and iOS/iPadOS clients aren't getting Apple push notifications](https://support.apple.com/HT203609).  
 
 ## Android port information
 
@@ -134,3 +134,17 @@ Intune leverages Google Firebase Cloud Messaging (FCM) for push notification to 
 ## Endpoint analytics
 
 For more information on the required endpoints for endpoint analytics, see [Endpoint analytics proxy configuration](../../analytics/troubleshoot.md#bkmk_endpoints).
+
+
+## Related topics
+
+[Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges)
+
+[Microsoft 365 network connectivity overview](https://support.office.com/article/client-connectivity-4232abcf-4ae5-43aa-bfa1-9a078a99c78b)
+
+[Content delivery networks (CDNs)](https://support.office.com/article/content-delivery-networks-0140f704-6614-49bb-aa6c-89b75dcd7f1f)
+
+[Other endpoints not included in the Office 365 IP Address and URL Web service](/microsoft-365/enterprise/additional-office365-ip-addresses-and-urls)
+
+[Managing Office 365 endpoints](/microsoft-365/enterprise/managing-office-365-endpoints)
+
