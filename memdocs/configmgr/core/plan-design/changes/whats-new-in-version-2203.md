@@ -185,7 +185,7 @@ For more information, see [Manage task sequences](../../../osd/deploy-use/manage
 
 ### Improvements to dashboards
 <!--10024154-->
-Dashboards, such as the**Windows Servicing** and **Microsoft Edge Management** dashboards, now use the Microsoft Edge WebView2 Runtime. To use dashboards, install the WebView2 console extension, then reopen the console.
+Dashboards, such as the **Windows Servicing** and **Microsoft Edge Management** dashboards, now use the Microsoft Edge WebView2 Runtime. To use dashboards, install the WebView2 console extension, then reopen the console.
 
 <!-- For more information, see the [WebView2 console extension](../../servers/manage/admin-console-extensions.md#get-console-extensions). -->
 
