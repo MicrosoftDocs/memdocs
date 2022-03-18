@@ -152,6 +152,10 @@ To use SCEP with a Microsoft CA, you’ll need to add NDES to the server that ho
 
 For guidance on configuring the NDES server role for the Certificate Connector for Microsoft Intune, see [Set up NDES](../protect/certificates-scep-configure.md#set-up-ndes) in **Configure infrastructure to support SCEP with Intune**.
 
+### Azure Active Directory User
+
+When configuring the connector, you'll need to use a user account that: is either a Global Admin or Intune Admin, has an Intune license assigned, and must be a synchronized account from your local Active Directory.
+
 ## Next steps
 
 [Install the Certificate Connector for Microsoft Intune](../protect/certificate-connector-install.md)
