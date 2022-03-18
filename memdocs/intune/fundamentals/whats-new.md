@@ -269,6 +269,9 @@ Applies to:
 #### Apps UI when using Android 12L OS<!-- 12536901 -->
 The Android 12L OS contains new features designed to improve the Android 12 experience on large and folding dual-screen devices. Intune apps now supports Android 12L OS on Android dual-screen devices.
 
+#### Display Android Enterprise device serial number using Managed Home Screen app<!-- 11020860 -->
+On Android Enterprise dedicated devices using Managed Home Screen, customers can now use app configuration to configure the Managed Home Screen app to show the serial number for the device on all supported OS versions (8 and above). For information related to the Managed Home Screen app, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
 ## Week of February 28, 2022
 
 ### Device configuration
