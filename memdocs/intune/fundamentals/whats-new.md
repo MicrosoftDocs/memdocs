@@ -76,7 +76,7 @@ You can now upload and deploy PKG-type installer files as macOS line-of-business
 ### Device management
 
 #### See the IPv4 address and Wi-Fi subnet ID on Andriod Enterprise devices<!-- 12396463 -->
-Customers can view the IPv4 address and Wi-Fi subnet ID reported for AE corporate-owned fully managed, dedicated, and work profile devices. 
+Customers can view the IPv4 address and Wi-Fi subnet ID reported for Android Enterprise corporate-owned fully managed, dedicated, and work profile devices. 
 
 #### Android (AOSP) users can view all devices in Intune app<!-- 10454654 -->
 AOSP device users can now view a list of their managed devices and device properties in the Microsoft Intune app. This feature is available on devices enrolled in Intune as user-associated (Android) AOSP devices.
@@ -92,14 +92,14 @@ The new details include the **Microsoft-Windows-AppxPackaging/Operational** Even
 
 ### Device enrollment
 
-#### Utilize bootstrap tokens on enrolled macOS devices (public preview)<-- 9539461 -->
+#### Utilize bootstrap tokens on enrolled macOS devices (public preview)<!-- 9539461 -->
 Intune now supports the use of bootstrap tokens on enrolled devices running macOS, version 10.15 or later. Bootstrap tokens allow for non-admin users to have increased MDM permissions, and perform specific software functions on behalf of the IT admin.  Tokens are supported on:  
 
 Supervised devices (in Intune, that's all user-approved enrollments)  
-Devices enrolled in Intune via Apple automated device enrollment   
-For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md).  
+- Devices enrolled in Intune via Apple automated device enrollment   
+- For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md).  
 
-### Enroll macOS virtual machines running Apple silicon<-- 13242738 -->
+### Enroll macOS virtual machines running Apple silicon<!-- 13242738 -->
 Use the Company Portal app for macOS to enroll virtual machines running on Apple silicon. Intune supports using macOS virtual machines for testing purposes only. For more information about enrolling virtual machines in Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md).
 
 ### Device configuration
