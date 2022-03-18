@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/17/2022
+ms.date: 03/18/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -75,8 +75,20 @@ You can now upload and deploy PKG-type installer files as macOS line-of-business
 
 ### Device management
 
+#### See the IPv4 address and Wi-Fi subnet ID on Andriod Enterprise devices<!-- 12396463 -->
+Customers can view the IPv4 address and Wi-Fi subnet ID reported for AE corporate-owned fully managed, dedicated, and work profile devices. 
+
 #### Android (AOSP) users can view all devices in Intune app<!-- 10454654 -->
 AOSP device users can now view a list of their managed devices and device properties in the Microsoft Intune app. This feature is available on devices enrolled in Intune as user-associated (Android) AOSP devices.
+
+### Monitor and troubleshoot
+
+#### AppxPackaging event viewer is part of collect diagnostics<!-- 12809781 -->
+ Intune's remote action to [Collect diagnostics](../remote-actions/collect-diagnostics.md) will collect additional details from Windows devices.  (**Devices** > **Windows** > *select a Windows device* > **Collect diagnostics**)
+ 
+The new details include the **Microsoft-Windows-AppxPackaging/Operational** Event Viewer and the following office log files to assist in troubleshooting office installation issues:
+`%windir%\temp\%computername%*.log`
+`%windir%\temp\officeclicktorun*.log`  
 
 ### Device enrollment
 
@@ -237,6 +249,18 @@ For more information about configuring Settings catalog profiles in Intune, see 
 
 Applies to:
 - macOS
+
+### Role-based access control
+
+#### Android (AOSP) will support scope tags and RBAC settings<!-- 8503981 -->
+When you create a policy for Android (AOSP), you can use role-based access control (RBAC) and scope tags. 
+
+For more information on these features, see:
+- [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
+- [Use RBAC and scope tags for distributed IT](scope-tags.md)
+
+Applies to:
+- Android Open Source Project (AOSP)
 
 ## Week of March 14, 2022
 
