@@ -68,4 +68,6 @@ Device images being used in a provisioning policy can't be deleted. Delete the p
 <!-- ########################## -->
 ## Next steps
 
-[Create a provisioning policy](create-provisioning-policy.md)
+[Create a provisioning policy](create-provisioning-policy.md).
+
+For more information on virtual machines and creating custom images in Azure, see [Virtual machines in Azure](/azure/virtual-machines/).
