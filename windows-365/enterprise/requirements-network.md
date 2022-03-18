@@ -99,7 +99,10 @@ You must allow traffic in your Azure network configuration to the following serv
   - login.live.com
   - enterpriseregistration.windows.net
   - global.azure-devices-provisioning.net (443 & 5671 outbound)
-  - hm-iot-in-*.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-preu01.azure-devices.net (443 & 5671 outbound)
+  -	hm-iot-in-prod-prap01.azure-devices.net (443 & 5671 outbound)
+  -	hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-prau01.azure-devices.net (443 & 5671 outbound)
 
 All endpoints connect over port 443.
 
