@@ -80,10 +80,6 @@ The windows365.microsoft.com web client will be moving out of preview and into g
 
 In a future release, for most currently supported regions, Windows 365 8vCPU/32GB licenses will support nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 will follow at a later date.
 
-### Operating system end of support status for Cloud PCs<!--36852572 -->
-
-The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
-
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
