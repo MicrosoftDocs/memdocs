@@ -159,18 +159,6 @@ This change will affect you only if you currently manage, or plan to manage, mac
 
 Check your Intune reporting to see what devices or users might be affected. Go to **Devices** > **All devices** and filter by macOS. You can add more columns to help identify who in your organization has devices running macOS 10.14 or earlier. Ask your users to upgrade their devices to a supported OS version before the release of macOS 12.
 
-### Update your iOS Company Portal minimum version to v4.16.0<!-- 9964998 -->
-We recently released an updated Company Portal for iOS to the Apple Store, which is a required app update. The minimum supported version of the iOS Company Portal is now v4.16.0.
-
-#### How does this affect you or your users?
-Most users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users who have an earlier app version will be prompted to update to the latest Company Portal app.
-
-#### How can you prepare?
-
-If you've enabled the [Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised) device restriction setting, you'll likely need to push an update to the related devices. 
-
-Otherwise, no action is needed. But if you have a helpdesk, you might want to make it aware of the prompt to update the Company Portal app.
-
 ### Plan for change: Intune is ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
 
 Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated. Support will end after January 31, 2022. When support ends, the standalone tunnel app will be removed from the Google Play store.

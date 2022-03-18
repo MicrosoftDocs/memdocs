@@ -38,6 +38,12 @@ The following items are known issues for Windows 365 Enterprise.
 
 A [resize](resize-cloud-pc.md) of a Cloud PC eliminates all existing [restore](restore-overview.md) points for that Cloud PC. New restore points will be captured at the intervals defined in the user setting.
 
+## Windows doesn’t scan for software updates until the first time a user signs in<!--38212344-->
+
+ While a Windows PC (physical or Cloud PC) sits idle before the first user signs in, Windows Update doesn’t scan for or install monthly quality patches. This means that the PC might miss important security updates. Without the latest security updates, the device is exposed to security vulnerabilities. 
+
+ **Troubleshooting steps**: Make sure that a user signs in to new Cloud PCs as soon as possible.
+
 ## Next steps
 
 [Troubleshoot Windows 365 Enterprise Cloud PC](troubleshooting.md)

@@ -9,8 +9,8 @@ ms.sitesec: library
 ms.pagetype: deploy
 ms.localizationpriority: medium
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 09/24/2021
