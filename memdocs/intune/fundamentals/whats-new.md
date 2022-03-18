@@ -87,7 +87,8 @@ AOSP device users can now view a list of their managed devices and device proper
  Intune's remote action to [Collect diagnostics](../remote-actions/collect-diagnostics.md) will collect additional details from Windows devices.  (**Devices** > **Windows** > *select a Windows device* > **Collect diagnostics**)
  
 The new details include the **Microsoft-Windows-AppxPackaging/Operational** Event Viewer and the following office log files to assist in troubleshooting office installation issues:
-`%windir%\temp\%computername%*.log`
+
+`%windir%\temp\%computername%*.log`</br>
 `%windir%\temp\officeclicktorun*.log`  
 
 ### Device enrollment
