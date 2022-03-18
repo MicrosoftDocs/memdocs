@@ -38,6 +38,16 @@ Before you start, make sure you have an Azure AD **global administrator** availa
 > [!NOTE]
 > If you plan to import precreated app registrations, you first need to create them in Azure AD. Start with the article to [Manually register Azure AD apps for CMG](manually-register-azure-ad-apps.md). Then return to this article to run the Azure Services wizard and import the apps to Configuration Manager.
 
+## Purpose of app registrations
+
+These two Azure AD app registrations represent the server and client side of the CMG.
+
+- The _client app_ represents managed clients and users that connect to the CMG. It defines what resources they have access to within Azure, including the CMG itself.
+
+- The _server app_ represents the CMG components that are hosted in Azure. It defines what resources they have access to within Azure. The server app is used to facilitate authentication and authorization from managed clients, users, and the CMG connection point to the Azure-based CMG components. This communication includes traffic to on-premises management points and software update points, initial CMG provisioning in Azure, and Azure AD discovery.
+
+If clients use PKI-issued client authentication certificates, then the two client apps aren't used for device-centric activity. For example, software distribution targeted to a device collection. User-centric activity always uses these two app registrations for authentication and authorization purposes.
+
 ## Start the Azure Services wizard
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Azure Services** node.
@@ -115,7 +125,7 @@ When the wizard closes, you'll see the new connection in the **Azure Services** 
 ### Disable Azure AD authentication for non-device or user tenants
 <!--8537319-->
 
-If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices.
+If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, you can disable authentication for tenants not associated with users and devices.
 
 1. Open the properties of the **Cloud Management** service.
 
@@ -158,7 +168,7 @@ The following steps summarize the process to register a resource provider. For m
 
 ## Automate with PowerShell
 
-Starting in version 2010, you can optionally automate aspects of these configurations using PowerShell.<!--6978300-->
+You can optionally automate aspects of these configurations using PowerShell.<!--6978300-->
 
 1. Use the [Import-CMAADServerApplication](/powershell/module/configurationmanager/Import-CMAADServerApplication) cmdlet to define the Azure AD web/server app in Configuration Manager.
 
