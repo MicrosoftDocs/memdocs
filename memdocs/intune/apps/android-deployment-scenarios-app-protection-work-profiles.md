@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: App protection policies and Android Enterprise personally-owned work profiles in Microsoft Intune
-description: See the differences and pros and cons when deciding to use app protection policies or Android Enterprise personally-owned work profiles for personal or BYOD Android Enterprise devices in Microsoft Intune. Compare the differences and features you get with app protection policies without enrollment (APP-WE) and Android Enterprise personally-owned work profiles.
+title: Mobile Application Management (MAM) and Android Enterprise personally-owned work profiles in Microsoft Intune
+description: See the available features when deciding to use Mobile Application Management (MAM) and/or Android Enterprise personally-owned work profiles for personal or BYOD Android devices in Microsoft Intune.
 keywords:
 
 author: Erikre
