@@ -39,6 +39,9 @@ Intune includes some features to help monitor and manage your device configurati
 
 All of your profiles are shown. You also see the platform, the type of profile, and if the profile is assigned.
 
+> [!NOTE]
+> For additional reporting information about device configuration profiles, see [Intune reports](../fundamentals/reports.md).
+
 ## View details on a profile
 
 After you create your device profile, Intune provides graphical charts. These charts display the status of a profile, such as it being successfully assigned to devices, or if the profile shows a conflict.
@@ -55,12 +58,6 @@ After you create your device profile, Intune provides graphical charts. These ch
 3. The top graphical chart shows the number of devices assigned to the device profile. For example, if the configuration device profile applies to macOS devices, the chart lists the count of the macOS devices.
 
     When you monitor a Windows profile, the count in the **Profile assignment status** is per device per user. So, if two users sign in to the same device, then that device is counted twice.
-
-    It can also show the number of devices for other platforms that are assigned the same device profile. For example, it shows the count of the non-macOS devices.
-
-    :::image type="content" source="./media/device-profile-monitor/device-configuration-profile-graphical-chart.png" alt-text="See or view the number of devices assigned to the device profile in Microsoft Intune and Endpoint Manager admin center.":::
-
-    The bottom graphical chart shows the number of users assigned to the device profile. For example, if the configuration device profile applies to macOS users, the chart lists the count of the macOS users.
 
 4. Select the top graphical chart. Or, select **Device status**. **Device status** opens.
 

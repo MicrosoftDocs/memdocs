@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -211,6 +211,35 @@ To view the Device configuration report:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > *select a device* > **Device configuration**.
+
+## Device and user check-in status (Operational)
+
+The **Device and user check-in status** report combines information that was previously split into separate device status and user status reports. This report shows the list of device and user check-ins for the device configuration profile, with the check-in status and last check-in time. When you open the report, the aggregate chart will remain at the top of the page, and the data will be consistent with the list data. Use the filter column to view assignment filter options. You can also view additional columns for device properties in the report: **Model**, **Manufacturer**, and **Intune device ID**. Tools are available to search across the entire dataset, sort on every column, use paging controls to navigate through data, view number of records within the report. Also, you can apply filters to the exported data.
+
+To view the **Device and user check-in status** report:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Device configuration profiles (preview)** > *select a configuration profile* > **Device and user check-in status**.
+
+## Device assignment status report (Operational)
+
+The **Device assignment status** report surfaces data on the latest status for assigned devices from the device configuration profile. To view this report, select the**Device assignment status** card on the profile overview page. By default, the report will return empty until you generate the report with or without a filter for the assignment status. Once completed, the report will include a timestamp for when it was last generated. The reporting data will be available for up to three days before needing to be generated again. 
+
+Like the **Device and user check-in status** report, the **Device assignment status** report page includes an aggregate chart that summarizes the list data. The aggregate counts the number of device check-ins based on the last active user across **Success**, **Error**, **Conflict**, **Not Applicable**, and **Pending** states. A denominator shows the total count of assigned devices and primary users targeted by the policy. The list records reflect the same data, surfacing only one entry per device based on its last active user. 
+
+To view the **Device assignment status** report:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Device configuration profiles (preview)** > *select a configuration profile* > **Device assignment status**.
+
+## Per setting status report (Operational)
+
+The **Per setting status** report surfaces the summary of device and user check-ins that are in **Success**, **Conflict**, **Error** states at the granular setting level within the device configuration profile. This report leverages the same consistency and performance updates as well as navigation tools we’ve made available to other reports. 
+
+To view the **Per setting status** report:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Device configuration profiles (preview)** > *Select a configuration profile* > **Per setting status**.
 
 ## Profile configuration status report (Organizational)
 
