@@ -81,7 +81,7 @@ Typically, this error is caused by an issue with the admin account. Below are th
 
 **Error message:** Error validating request. Verify that the Configuration Manager service connection point can reach the internet endpoints required for tenant attach.
 
-**Possible causes:** Typically this error is seen when URLs that are needed by tenant attach are blocked. If the service connection point can't access the needed internet endpoints, a validation error will occur. For more information, see [Internet endpoints](device-sync-actions.md#internet-endpoints).
+**Possible causes:** Typically this error is seen when URLs that are needed by tenant attach are blocked. If the service connection point can't access the needed internet endpoints, a validation error will occur. For more information, see [Internet endpoints](prerequisites.md#internet-endpoints).
 
 ## <a name="bkmk_1603"></a> Unexpected error occurred
 
