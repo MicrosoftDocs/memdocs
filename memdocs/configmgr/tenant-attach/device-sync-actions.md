@@ -69,6 +69,12 @@ When co-management isn't enabled, use the instructions below to enable device up
 1. Select **Summary** to review your selection, then choose **Next**.
 1. When the wizard is complete, select **Close**.  
 
+## Scope tags
+<!--IN12698965-->
+Tenant-attached devices receive the [default scope tag](../../intune/fundamentals/scope-tags.md#default-scope-tag) from Microsoft Intune. If you remove the default scope tag from a tenant-attached device, the device won't be displayed at all in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/). Currently, tenant-attached devices can't be assigned scope tags unlike [co-managed devices](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) can.
+
+However, sometimes you don’t want certain [Intune roles](../../intune/fundamentals/role-based-access-control.md#built-in-roles) to see tenant-attached devices. For instance, you may not want someone with Intune's **Help Desk Operator** role to see tenant-attached devices because they're servers. In these cases, create or use a custom role in Intune that doesn't have **Default** listed for its **Scope tags**. When [creating custom Intune roles](../../intune/fundamentals/create-custom-role.md#to-create-a-custom-role), keep in mind that the default scope tag is automatically added to all untagged objects.
+
 ## Perform device actions
 
 1. In a browser, navigate to `endpoint.microsoft.com`
