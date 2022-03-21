@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2022
+ms.date: 03/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -97,6 +97,20 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Automatic**: Updates are automatically installed without user interaction. Setting this policy immediately installs any pending updates.
   - **Postponed**: Updates are postponed for 30 days. At the end of the 30 days, Android prompts users to install the update. It's possible for device manufacturers or carriers to prevent (exempt) important security updates from being postponed. An exempted update shows a system notification to users on the device.
   - **Maintenance window**: Installs updates automatically during a daily maintenance window that you set in Intune. Installation tries daily for 30 days, and can fail if there's insufficient space or battery levels. After 30 days, Android prompts users to install. This window is also used to install updates for Play apps. Use this option for dedicated devices, such as kiosks, as single-app dedicated device foreground apps can be updated.
+- **Freeze periods for system updates**: Optional. When you set the **System update** setting to **Automatic**, **Postponed**, or **Maintenance window**, use this setting to create a freeze period:
+
+  - **Start date**: Enter the start date in `MM/DD` format, up to 90 days long. For example, enter `11/15` to start the freeze period on November 15.
+  - **End date**: Enter the end date in `MM/DD` format, up to 90 days long. For example, enter `01/15` to end the freeze period on January 15.
+
+  During this annual freeze period, all incoming system updates and security patches are blocked.
+
+  When a device's clock is outside the freeze period, the device continues to receive updates based on your **System update** setting.
+
+  To set multiple annually recurring freeze periods, make sure the freeze periods are separated by at least 60 days.
+
+  This setting applies to:
+
+  - Android 9.0 and newer
 
 #### Fully managed and dedicated devices
 
@@ -353,6 +367,12 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         - **Number of seconds the device shows screen saver before turning off screen**: Choose how long the device shows the screensaver. Enter a value between 0-9999999 seconds. Default is `0` seconds. When left blank, or set to zero (`0`), the screen saver is active until a user interacts with the device.
         - **Number of seconds the device is inactive before showing screen saver**: Choose how long the device is idle before showing the screensaver. Enter a value between 1-9999999 seconds. Default is `30` seconds. You must enter a number greater than zero (`0`).
         - **Detect media before starting screen saver**: **Enable** (default) doesn't show the screen saver if audio or video is playing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the screen saver, even if audio or video is playing.
+
+        > [!NOTE] 
+        > Managed Home Screen starts the screensaver whenever the lock screen appears:
+        > 
+        >  - If the system's lock screen timeout is longer than the number of seconds for device to show the screensaver, then the screensaver shows until the lock screen appears.
+        >  - If the system's lock screen timeout is shorter than the number of seconds the device is inactive, then the screensaver shows as soon as the device's lock screen appears.
 
       - **MHS Sign-in screen**: **Enable** shows a sign-in screen on the Managed Home Screen. When set to **Not configured** (default), Intune doesn't change or update this setting. This sign-in screen and related settings are intended for use on dedicated devices enrolled with AAD Shared device mode.
 
