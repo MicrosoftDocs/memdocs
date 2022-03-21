@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2022
+ms.date: 03/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -97,7 +97,20 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - **Automatic**: Updates are automatically installed without user interaction. Setting this policy immediately installs any pending updates.
   - **Postponed**: Updates are postponed for 30 days. At the end of the 30 days, Android prompts users to install the update. It's possible for device manufacturers or carriers to prevent (exempt) important security updates from being postponed. An exempted update shows a system notification to users on the device.
   - **Maintenance window**: Installs updates automatically during a daily maintenance window that you set in Intune. Installation tries daily for 30 days, and can fail if there's insufficient space or battery levels. After 30 days, Android prompts users to install. This window is also used to install updates for Play apps. Use this option for dedicated devices, such as kiosks, as single-app dedicated device foreground apps can be updated.
-- **Freeze periods for system updates**: On OS 9 and higher devices, optionally freeze the **Automatic**, **Postponed**, or **Maintenance window** update policy set with **System update**. To freeze the OS version running on the device, define an annually repeating time period (MM/DD), up to 90 days long, where all incoming system updates and security patches are blocked.  When a device's clock is outside the freeze period, it will continue to receive updates based on the **Automatic**, **Postponed**, or **Maintenance window** policy behavior that is set with **System update**. To set multiple annually recurring freeze periods for a given device or group of devices, ensure they are separated by at least 60 days. 
+- **Freeze periods for system updates**: Optional. When you set the **System update** setting to **Automatic**, **Postponed**, or **Maintenance window**, use this setting to create a freeze period:
+
+  - **Start date**: Enter the start date in `MM/DD` format, up to 90 days long. For example, enter `11/15` to start the freeze period on November 15.
+  - **End date**: Enter the end date in `MM/DD` format, up to 90 days long. For example, enter `01/15` to end the freeze period on January 15.
+
+  During this annual freeze period, all incoming system updates and security patches are blocked.
+
+  When a device's clock is outside the freeze period, the device continues to receive updates based on your **System update** setting.
+
+  To set multiple annually recurring freeze periods, make sure the freeze periods are separated by at least 60 days.
+
+  This setting applies to:
+
+  - Android 9.0 and newer
 
 #### Fully managed and dedicated devices
 
