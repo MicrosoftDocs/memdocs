@@ -34,7 +34,7 @@ ms.collection: M365-identity-device-management
 Keep current on updates to the Intune Data Warehouse.
 
 ## 2202
-_Released Feburary 2022_
+_Released February 2022_
 
 The  `applicationInventory` entity has been removed from the Intune Data Warehouse. A new dataset is now available in the UI and via Intune's export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
