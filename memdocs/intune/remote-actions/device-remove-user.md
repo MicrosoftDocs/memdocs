@@ -5,8 +5,8 @@ title: Remove a user from an iOS/iPadOS device with Microsoft Intune
 titleSuffix:
 description: Learn how to remove a user from a shared iOS/iPadOS device with Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/22/2018
 ms.topic: how-to

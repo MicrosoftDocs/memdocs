@@ -6,11 +6,11 @@ ms.date: 10/01/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 97e23075-549c-4e45-ab1e-0671027edacf
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1906 of Configuration Manager current branch
@@ -22,10 +22,6 @@ Update 1906 for Configuration Manager current branch is available as an in-conso
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1906](../../servers/manage/checklist-for-installing-update-1906.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-1906.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-> [!Tip]  
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1906+-+Configuration+Manager%22&locale=en-us`
 
 
 ## Requirement changes
@@ -408,7 +404,7 @@ For more information, see [Remove the application catalog](../../../apps/plan-de
 <!--3555904-->
 The **New Software is Available** notification will only show once for a user for a given application and revision. The user will no longer see the notification each time they sign in. They'll only see another notification for an application if it has changed or was redeployed.
 
-For more information, see [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md#end-user-experience).
+For more information, see [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md#user-experience).
 
 ### More frequent countdown notifications for restarts
 

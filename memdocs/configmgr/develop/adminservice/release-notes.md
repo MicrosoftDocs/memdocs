@@ -10,6 +10,8 @@ ms.assetid: 0a3dea00-39c9-49f2-ba07-19b70994a2b5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Administration service release notes

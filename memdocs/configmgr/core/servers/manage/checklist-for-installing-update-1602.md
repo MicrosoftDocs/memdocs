@@ -1,18 +1,16 @@
 ---
-title: "Checklist for 1602"
-titleSuffix: "Configuration Manager"
-description: "Learn about actions to take before updating from Configuration Manager version 1511 to version 1602."
+title: Checklist for 1602
+titleSuffix: Configuration Manager
+description: Learn about actions to take before updating from Configuration Manager version 1511 to version 1602.
 ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: b63ef197-01f0-4894-b929-5ef8403c5195
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Checklist for installing update 1602 for Configuration Manager
 

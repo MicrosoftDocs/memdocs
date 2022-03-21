@@ -1,26 +1,22 @@
 ---
 title: Troubleshooting the device timeline
 titleSuffix: Configuration Manager
-description: "Troubleshooting the device timeline for Configuration Manager tenant attach"
-ms.date: 12/03/2020
+description: Troubleshooting the device timeline for Configuration Manager tenant attach
+ms.date: 01/25/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 54a58548-45f3-4f75-93d6-d2fd96227e6a
 manager: dougeby
-author: mestew 
+author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
-# <a name="bkmk_timeline"></a> Troubleshoot the timeline for devices uploaded to the admin center (preview)
-<!--CM7141381, IN7552762 pubpreview Sept8, 2020 -->
+# <a name="bkmk_timeline"></a> Troubleshoot the timeline for devices uploaded to the admin center
+<!--CM7141381, IN7552762 pubpreview Sept8, 2020, GA 2201 -->
 *Applies to: Configuration Manager (current branch)*
 
 Use the following to troubleshoot the device timeline in the Microsoft Endpoint Manager admin center:
-
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
 
 ## <a name="bkmk_common"></a> Common errors from the Microsoft Endpoint Manager admin center
 

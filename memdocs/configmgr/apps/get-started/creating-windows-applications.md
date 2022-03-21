@@ -2,14 +2,14 @@
 title: Create Windows applications
 titleSuffix: Configuration Manager
 description: Learn more information about creating and deploying Windows applications in Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: 9181c84e-d74f-44ea-9bb9-f7805eb465fc
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
+ms.localizationpriority: medium
 ---
 
 # Create Windows applications in Configuration Manager
@@ -20,7 +20,7 @@ In addition to the other Configuration Manager requirements and procedures for [
 
 ## <a name="bkmk_general"></a> General considerations  
 
-Configuration Manager supports the deployment of Windows app package (.appx) and app bundle (.appxbundle) formats for Windows 8.1 and Windows 10 devices.
+Configuration Manager supports the deployment of Windows app package (`.appx`) and app bundle (`.appxbundle`) formats.
 
 When you create an application in the Configuration Manager console, select the application installation file **Type** as **Windows app package (\*.appx, \*.appxbundle, \*.msix, \*.msixbundle)**. For more information on creating apps in general, see [Create applications](../deploy-use/create-applications.md). For more information on the MSIX format, see [Support for MSIX format](#bkmk_msix).
 
@@ -34,14 +34,9 @@ Provision an application with a Windows app package for all users on the device.
 > [!Important]  
 > Be careful with installing, provisioning, and updating different versions of the same Windows app package on a device, which may cause unexpected results. This behavior may occur when using Configuration Manager to provision the app, but then allowing users to update the app from the Microsoft Store. For more information, see the next step guidance when you [Manage apps from the Microsoft Store for Business](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).  
 
-When deploying offline apps to Windows 10 devices with the Configuration Manager client, don't allow users to update applications external to Configuration Manager deployments. Control of updates to offline apps is especially important in multi-user environments such as classrooms. For more information, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).<!-- MEMDocs#316 -->
+When deploying offline apps to Windows devices with the Configuration Manager client, don't allow users to update applications external to Configuration Manager deployments. Control of updates to offline apps is especially important in multi-user environments such as classrooms. For more information, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](../deploy-use/manage-apps-from-the-windows-store-for-business.md#next-steps).<!-- MEMDocs#316 -->
 
-Configuration Manager supports app provisioning on all supported versions of Windows 10.<!--SCCMDocs-pr issue 2762-->
-
-<!--
-- Install action: Windows 10, version 1607 and later
-- Uninstall action: Windows 10, version 1703 and later
--->
+Configuration Manager supports app provisioning on all supported versions of Windows 10 and later.<!--SCCMDocs-pr issue 2762-->
 
 To configure a Windows app deployment type for this feature, enable the option to **Provision this application for all users on the device**. For more information, see [Create applications](../deploy-use/create-applications.md).
 
@@ -51,7 +46,7 @@ To configure a Windows app deployment type for this feature, enable the option t
 ## <a name="bkmk_msix"></a> Support for MSIX format
 <!--1357427-->
 
-Configuration Manager supports the Windows 10 app package (.msix) and app bundle (.msixbundle) formats. Windows 10 version 1809 or later support these formats.
+Configuration Manager supports the Windows app package (`.msix`) and app bundle (`.msixbundle`) formats. Supported versions of Windows 10 and later support these formats.
 
 - For an overview of MSIX, see [A closer look at MSIX](/archive/blogs/sgern/a-closer-look-at-msix).  
 
@@ -82,7 +77,7 @@ Don't install any other apps or services on this device. It's your reference sys
 
 1. Elevate the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Applications** node.  
 
-2. Select an application that has a Windows Installer (.msi) deployment type.  
+2. Select an application that has a Windows Installer (`.msi`) deployment type.  
 
     > [!Note]  
     > You need to be able to access the application's source content from the reference device.  
@@ -99,7 +94,7 @@ If the process fails, the summary page points to the log file with more informat
 
 To use this MSIX app, you first need to digitally sign it so that clients trust it. For more information on this process, see the following articles:
 
-- [MSIX – The MSIX Packaging Tool – signing the MSIX package](/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
+- [MSIX - The MSIX Packaging Tool - signing the MSIX package](/archive/blogs/sgern/msix-the-msix-packaging-tool-signing-the-msix-package)
 - [How to sign an app package using SignTool](/windows/desktop/appxpkg/how-to-sign-a-package-using-signtool)
 
 After signing the app, create a new deployment type on the application in Configuration Manager. For more information, see [Create deployment types for the application](../deploy-use/create-applications.md#bkmk_create-dt).
@@ -109,9 +104,9 @@ After signing the app, create a new deployment type on the application in Config
 <!--3555953-->
 
 > [!Note]  
-> In this version of Configuration Manager, the task sequence deployment type is a pre-release feature. To enable it, see [Pre-release features](../../core/servers/manage/pre-release-features.md).  
+> In this version of Configuration Manager, the task sequence deployment type is a pre-release feature. To enable it, see [Pre-release features](../../core/servers/manage/pre-release-features.md).
 
-Starting in version 2002, you can install complex applications using task sequences via the application model. Add a task sequence deployment type to an app either to install or uninstall the app. This deployment type provides the following behaviors:
+You can install complex applications using task sequences via the application model. Add a task sequence deployment type to an app either to install or uninstall the app. This deployment type provides the following behaviors:
 
 - Display the app task sequence with an icon in Software Center. An icon makes it easier for users to find and identify the app task sequence.
 
@@ -127,6 +122,18 @@ Starting in version 2006, use the following Windows PowerShell cmdlets to add an
 
 - [Add-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/add-cmtasksequencedeploymenttype)
 - [Set-CMTaskSequenceDeploymentType](/powershell/module/configurationmanager/set-cmtasksequencedeploymenttype)
+
+> [!NOTE]
+> Consider the following scenario:<!--10422235-->
+>
+> - An application has a task sequence deployment type.
+> - It's deployed as available.
+> - A device has maintenance windows defined.
+> - A user on the device runs the deployment in Software Center outside of a maintenance window.
+>
+> Configuration Manager honors the user's intent to install the application, even though there's no available maintenance window. In version 2107 and earlier, when the task sequence ran, the **Restart Computer** step would fail because of the maintenance window.
+>
+> Starting in version 2111, this step now ignores maintenance windows only when the task sequence is run as an app deployment type.
 
 ### Prerequisites for a task sequence deployment type
 
@@ -150,9 +157,9 @@ When you create the application, to add a task sequence deployment type, your us
 
 - In version 2006 and earlier, you can't yet deploy an app task sequence to a user collection. This issue was resolved in version 2010.
 
-## <a name="bkmk_uwp"></a> Support for Universal Windows Platform (UWP) apps  
+## <a name="bkmk_uwp"></a> Support for Universal Windows Platform (UWP) apps
 
-Windows 10 devices don't require a sideloading key to install line-of-business apps. To enable sideloading on Windows, however, the registry key `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps` must have a value of **1**.  
+Windows 10 or later devices don't require a sideloading key to install line-of-business apps. To enable sideloading on Windows, however, the registry key `HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\Appx\AllowAllTrustedApps` must have a value of **1**.  
 
 If you don't configure this registry key, Configuration Manager automatically sets this value to **1** the first time you deploy an app to the device. If you've set this value to **0**, Configuration Manager can't automatically change the value, and your line-of-business app deployment fails.  
 
@@ -168,7 +175,7 @@ To sign mobile app packages, use the following table to determine the type of co
 
 ## <a name="bkmk_mdm-msi"></a> Deploy Windows Installer apps to MDM-enrolled Windows 10 devices  
 
-The **Windows Installer through MDM (\*.msi)** deployment type lets you create and deploy Windows Installer-based apps to MDM-enrolled devices running Windows 10.  
+The **Windows Installer through MDM (\*.msi)** deployment type lets you create and deploy Windows Installer-based apps to MDM-enrolled devices running Windows 10 or later.
 
 When you use this deployment type, consider the following points:
 

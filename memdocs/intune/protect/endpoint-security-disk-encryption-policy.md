@@ -39,7 +39,7 @@ Find the endpoint security policies for disk encryption under *Manage* in the **
 ## Prerequisites for disk encryption policy
 
 - **macOS** - macOS 10.13 or later
-- **Windows** - Windows 10 or later
+- **Windows** - Windows 10/11
 
 ## Disk encryption profiles
 
@@ -51,13 +51,13 @@ Find the endpoint security policies for disk encryption under *Manage* in the **
 
   To create a FileVault profile, see [Use FileVault disk encryption for macOS](../protect/encrypt-devices-filevault.md).
 
-**Windows 10 profiles**:
+**Windows profiles**:
 
 - **BitLocker** - BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers
 
   Manage [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker) for Windows 10.
 
-  To create a BitLocker profile, see [Use BitLocker disk encryption for Windows 10](../protect/encrypt-devices.md).
+  To create a BitLocker profile, see [Use BitLocker disk encryption for Windows](../protect/encrypt-devices.md).
 
 ## Manage device encryption
 

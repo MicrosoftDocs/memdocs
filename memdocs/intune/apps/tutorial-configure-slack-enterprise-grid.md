@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/15/2021
+ms.date: 12/16/2021
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 55db37c5-0da7-4d9c-8027-525afb1c6349
 Customer intent: As an Intune admin, I want to learn how to configure Slack to use Intune for EMM and app configuration..

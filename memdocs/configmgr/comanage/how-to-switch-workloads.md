@@ -7,14 +7,15 @@ ms.technology: configmgr-comanage
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 07/16/2020
+ms.date: 10/05/2021
 ms.topic: how-to
-ms.assetid: 60e2022f-a4f9-40dd-af01-9ecb37b43878
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # How to switch Configuration Manager workloads to Intune
 
-One of the benefits of co-management is switching workloads from Configuration Manager to Microsoft Intune. When a Windows 10 device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
+One of the benefits of co-management is switching workloads from Configuration Manager to Microsoft Intune. When a Windows 10 or later device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
 If you switch a workload to Intune, but later change your mind, you can switch it back to Configuration Manager.
 
@@ -34,7 +35,7 @@ You can configure different pilot collections for each of the co-management work
 
     - **Pilot Intune**: Switch this workload only for the devices in the pilot collection. You can change the **Pilot collections** on the **Staging** tab of the co-management properties page.  
 
-    - **Intune**: Switch this workload for all Windows 10 devices enrolled in co-management.  
+    - **Intune**: Switch this workload for all Windows devices enrolled in co-management.  
 
 4. Go to the **Staging** tab and change the **Pilot collection** for any of the workloads if needed.
   

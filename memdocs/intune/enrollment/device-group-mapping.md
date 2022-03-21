@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/22/2018
+ms.date: 11/10/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Categorize devices into groups
@@ -49,10 +51,12 @@ You can create any device categories you want. For example:
 
 ## How to configure device categories
 
-### Step 1: Create device categories on the Intune blade of the Azure portal
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Device categories**.
-2. On the **Device categories** page, choose **Create** to add a new category.
-3. On the **Create device category** blade, enter a **Name** for the new category, and an optional **Description**.
+You need to be a Global Administrator or Intune Administrator to perform these steps.
+
+### Step 1: Create device categories in Intune
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Choose **Devices** > **Device categories** > **Create device category** to add a new category.
+3. On the **Create device category** pane, enter a **Name** for the new category, and an optional **Description**.
 4. When you are done, select **Create**. You can see the new category in the list of categories.
 
 You'll use the device category name when you create Azure Active Directory (Azure AD) security groups in step 2.
@@ -83,7 +87,7 @@ If the **Device category** column isn't shown, select **Columns** > **Category**
 
 When users of iOS/iPadOS and Android devices enroll their device, they must choose a category from the list of categories you configured. After they choose a category and finish enrollment, their device is added to the Intune device group, or the Active Directory security group that corresponds with the category they chose.
 
-Windows users should use the Company Portal website to select a category.
+Windows users should use the Company Portal website or the Company Portal app to select a category.
 
 Regardless of platform, your users can always go to portal.manage.microsoft.com after enrolling the device. Have the user access the Company Portal website, and go to **My Devices**. The user can choose an enrolled device listed on the page, and then select a category.
 

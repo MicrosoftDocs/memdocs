@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,7 +28,11 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-# Delivery Optimization settings for Windows 10 devices in Intune
+# Delivery Optimization settings for Windows devices in Intune
+
+Applies to:  
+- Windows 10
+- Windows 11
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -39,9 +43,9 @@ Most options in the Intune console directly map to Delivery Optimization setting
 
 The following tables include:  
 
-- **Setting**: The setting as it appears in Intune. Settings that are links open the relevant entry in [Configure Delivery Optimization for Windows 10 updates](/windows/deployment/update/waas-delivery-optimization) in the Windows documentation where you can learn more about the setting.
+- **Setting**: The setting as it appears in Intune. Settings that are links open the relevant entry in [Configure Delivery Optimization for Windows updates](/windows/deployment/update/waas-delivery-optimization) in the Windows documentation where you can learn more about the setting.
 
-- **Windows version**: The minimum version of Windows 10 that includes support for this setting.  
+- **Windows version**: The minimum version of Windows that includes support for this setting.
 
 - **Details**: A brief description of how Intune implements the setting, including the Intune default. When available, there are links to [Delivery Optimization Policy configuration service provider](/windows/client-management/mdm/policy-csp-deliveryoptimization) (CSP) entries.  
 
@@ -49,7 +53,7 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 
 ## Before you begin
 
-[Create a Windows 10 Delivery Optimization profile](delivery-optimization-windows.md).
+[Create a Windows Delivery Optimization profile](delivery-optimization-windows.md).
 
 ## Delivery Optimization  
 

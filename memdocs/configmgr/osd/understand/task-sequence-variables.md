@@ -2,14 +2,14 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
-ms.assetid: 62f15230-d3a6-4afc-abd4-1e07e7ba6c97
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Task sequence variables
@@ -176,7 +176,12 @@ Specifies the path defined by the [SMSTSLocalDataDrive](#SMSTSLocalDataDrive) va
 
 ### <a name="SMSTSMediaType"></a> _SMSTSMediaType
 
-Specifies the type of media that's used to initiate the installation. Examples of types of media are Boot Media, Full Media, PXE, and Prestaged Media.
+Specifies the type of media used to initiate the installation, which includes:
+
+- `BootMedia`: Boot Media
+- `FullMedia`: Full Media
+- `PXE`: PXE
+- `OEMMedia`: Prestaged Media
 
 ### <a name="SMSTSModel"></a> _SMSTSModel
 
@@ -371,9 +376,10 @@ A read-only variable for whether the **Network adapter connected** check returne
 ### <a name="TSCRUEFI"></a> _TS_CRUEFI
 
 *Starting in version 2006* <!--6452769-->
+
 *Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
-A read-only variable for whether the **Computer is in UEFI mode** returned BIOS (`0`) or UEFI (`1`). If you don't enable the check, the value of this read-only variable is blank.
+A read-only variable for whether the **Computer is in UEFI mode** check returned BIOS (`0`) or UEFI (`1`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSCRWIRED"></a> _TS_CRWIRED
 
@@ -381,6 +387,22 @@ A read-only variable for whether the **Computer is in UEFI mode** returned BIOS 
 *Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
 A read-only variable for whether the **Network adapter is not wireless** check returned true (`1`) or false (`0`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRTPMACTIVATED"></a> _TS_CRTPMACTIVATED
+
+*Starting in version 2111* <!--9575077-->
+
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **TPM 2.0 or above is activated** check returned inactive (`0`) or active (`1`). If you don't enable the check, the value of this read-only variable is blank.
+
+### <a name="TSCRTPMENABLED"></a> _TS_CRTPMENABLED
+
+*Starting in version 2111* <!--9575077-->
+
+*Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
+
+A read-only variable for whether the **TPM 2.0 or above is enabled** check returned disabled (`0`) or enabled (`1`). If you don't enable the check, the value of this read-only variable is blank.
 
 ### <a name="TSAppInstallStatus"></a> _TSAppInstallStatus
 
@@ -805,7 +827,7 @@ Specifies additional options to add to the DISM command line when applying a dri
 
 To use this variable, enable the setting, **Install driver package via running DISM with recurse option**, on the **Apply Driver Package** step.
 
-For more information, see [Windows 10 DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
+For more information, see [DISM command-line options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).
 
 ### <a name="OSDJoinAccount"></a> OSDJoinAccount
 
@@ -1265,7 +1287,7 @@ Specifies the Windows Server license mode that's used.
 
 (input)
 
-Specifies the additional command-line options that are added to Windows Setup during a Windows 10 upgrade. The task sequence doesn't verify the command-line options.
+Specifies the additional command-line options that are added to Windows Setup during an upgrade. The task sequence doesn't verify the command-line options.
 
 For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
@@ -1695,7 +1717,7 @@ Use this variable with the existing [SMSTSRebootDelay](task-sequence-variables.m
 
 #### Example
 
-You want to give users a 60-minute reboot notification at the start of a Windows 10 in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
+You want to give users a 60-minute reboot notification at the start of a Windows in-place upgrade task sequence. After that first long timeout, you want additional timeouts to only be 60 seconds. Set SMSTSRebootDelay to `3600`, and SMSTSRebootDelayNext to `60`.  
 
 
 ### <a name="SMSTSRebootMessage"></a> SMSTSRebootMessage

@@ -5,10 +5,10 @@ title: Network endpoints for US government deployments - Microsoft Intune
 titleSuffix: 
 description: Review US government endpoints for Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 05/30/2019
+ms.date: 10/04/2021  
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -42,7 +42,7 @@ You can modify proxy server settings on individual client computers. You can als
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
-For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up enrollment for Windows devices](../enrollment/windows-enroll.md#windows-10-auto-enrollment-and-device-registration).
+For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up enrollment for Windows devices](../enrollment/windows-enroll.md#windows-auto-enrollment-and-device-registration).  
 
 The following tables list the ports and services that the Intune client accesses:
 

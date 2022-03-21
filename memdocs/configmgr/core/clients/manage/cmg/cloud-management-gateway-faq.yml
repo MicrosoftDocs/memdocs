@@ -6,11 +6,12 @@ metadata:
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
-  ms.date: 08/02/2021
-  ms.topic: reference
+  ms.date: 12/01/2021
+  ms.topic: faq
   ms.prod: configuration-manager
   ms.technology: configmgr-client
-    
+  ms.collection: highpri
+
 title: Frequently asked questions about the CMG
 summary: |
   *Applies to: Configuration Manager (current branch)*
@@ -28,7 +29,7 @@ sections:
           
           - **Server authentication certificate**: The CMG creates an HTTPS service to which internet-based clients connect. The service requires a server authentication certificate to build the secure channel. You can acquire a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG server authentication certificate](server-auth-cert.md).
           
-          - **Client authentication certificate**: Depending upon your environment and CMG design, you can use PKI certificates for client authentication. This authentication method doesn't support user-centric scenarios, but supports devices running Windows 8.1 or Windows 10. For more information, see [Configure client authentication for CMG: PKI certificate](configure-authentication.md#pki-certificate).
+          - **Client authentication certificate**: Depending upon your environment and CMG design, you can use PKI certificates for client authentication. This authentication method doesn't support user-centric scenarios, but supports devices running any supported version of Windows. For more information, see [Configure client authentication for CMG: PKI certificate](configure-authentication.md#pki-certificate).
           
               When you use this client authentication method, you also need to export the client certificate's trusted root chain. You then use this chain of certificates when you create the CMG and on the CMG connection point.
           
@@ -66,9 +67,12 @@ sections:
           
           To clarify terms:
           
-          - The _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
-          - A _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+          - The Azure AD _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+          - An Azure _subscription_ separates billing, resources, and services. It's associated with a single tenant.
           
+          > [!TIP]
+          > For more information, see [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings).
+
           This question is common in the following scenarios:  
           
           - When you have distinct test and production Active Directory and Azure AD environments, but one single, centralized Azure hosting subscription.
@@ -111,9 +115,9 @@ sections:
           <!-- MEMDocs#277 -->
           You can use Azure AD or a client authentication certificate for devices to authenticate to the CMG service. You can also use Configuration Manager site-issued tokens for authentication.
           
-          If you manage traditional Windows clients with Active Directory domain-joined identity, they need PKI certificates to secure the communication channel. These clients can include Windows 8.1 and Windows 10. You can use all CMG-supported features, but software distribution is limited to devices only. Install the Configuration Manager client before the device roams onto the internet, or use token authentication.
+          If you manage traditional Windows clients with Active Directory domain-joined identity, they need PKI certificates to secure the communication channel. These clients can include any supported version of Windows. You can use all CMG-supported features, but software distribution is limited to devices only. Install the Configuration Manager client before the device roams onto the internet, or use token authentication.
           
-          You can also manage Windows 10 clients with modern identity, either hybrid or pure cloud domain-joined with Azure AD. Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. You can do all of the same management activities plus software distribution to the user. It also enables additional methods to install the client on a remote device.
+          You can also manage Windows 10 or later clients with modern identity, either hybrid or pure cloud domain-joined with Azure AD. Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. You can do all of the same management activities plus software distribution to the user. It also enables additional methods to install the client on a remote device.
           
           Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network.
           
@@ -136,6 +140,6 @@ sections:
       - question: |
           Do I need to do anything with the deprecation of the Azure AD Graph API and Azure AD Authentication Library (ADAL)?
         answer: |
-          No. You may have seen the following blog post and are wondering how it applies to Configuration Manager: [Update your applications to use Microsoft Authentication Library and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363). This post is referring to any developed code that uses these authentication libraries. Configuration Manager has been using the Microsoft Graph API and Microsoft Authentication Library (MSAL) in some places for several years. Some other components will be updated in a later release. If you stay current with Configuration Manager versions, there's nothing else you need to do.
+          No. You may have seen the following blog post and are wondering how it applies to Configuration Manager: [Update your applications to use Microsoft Authentication Library and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363). This post is referring to any developed code that uses these authentication libraries. Configuration Manager has been using the Microsoft Graph API and Microsoft Authentication Library (MSAL) in some places for several years. All other components are updated in Configuration Manager version 2107 with the [update rollup](../../../../hotfix/2107/11121541.md). If you stay current with Configuration Manager versions, there's nothing else you need to do.
 
           Some people confuse the information in this blog post with the application registrations in Azure AD that Configuration Manager uses for various cloud-attached services. These app registrations are cloud-based service principals that don't directly use these authentication libraries. If an Azure global administrator manually created the Configuration Manager app registrations in Azure AD, they can double-check that those registrations have permissions for the **Microsoft Graph** API. They don't need permissions for the _Azure AD Graph_ API. For more information, see [Manually register Azure AD apps](manually-register-azure-ad-apps.md).<!--10488538-->

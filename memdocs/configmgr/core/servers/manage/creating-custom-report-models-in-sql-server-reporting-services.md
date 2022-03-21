@@ -1,17 +1,15 @@
 ---
-title: "Create custom reports"
-titleSuffix: "Configuration Manager"
-description: "Define report models to meet your business requirements, and then deploy the report models to Configuration Manager."
+title: Create custom reports
+titleSuffix: Configuration Manager
+description: Define report models to meet your business requirements, and then deploy the report models to Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: f2df88b4-c348-4dcf-854a-54fd6eedf485
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 # Creating custom report models for Configuration Manager in SQL Server Reporting Services
 

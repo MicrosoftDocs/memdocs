@@ -2,13 +2,14 @@
 title: Plan for the SMS Provider
 titleSuffix: Configuration Manager
 description: Learn about the SMS Provider site system role in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 10/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Plan for the SMS Provider
@@ -56,7 +57,7 @@ The SMS Provider has the following prerequisites:
 
   - Starting in version 2107, the SMS Provider requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5 or later. For more information, [Site and site system prerequisites](../configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
-  - Enable Windows server role **Web Server (IIS)**
+  - In version 2006 and earlier, enable the Windows server role **Web Server (IIS)**. Starting in version 2010, this role is no longer required.
 
     > [!NOTE]
     > Every SMS Provider attempts to install the administration service, which requires a certificate. This service has a dependency on IIS to bind that certificate to HTTPS port 443. If you enable [Enhanced HTTP](enhanced-http.md), then the site binds that certificate using IIS APIs. If your site uses PKI, you need to manually bind a PKI certificate in IIS on the SMS Provider. Unless the server already has a PKI-based certificate, the site automatically uses the site's self-signed certificate.

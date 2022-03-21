@@ -2,13 +2,14 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 08/02/2021
+ms.date: 01/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Site and site system prerequisites for Configuration Manager
@@ -203,6 +204,9 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ## Asset Intelligence synchronization point
 
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
+
 ### .NET Framework for the AISP
 
 Install a supported version of the .NET Framework. For more information, [.NET version requirements](#net-version-requirements).
@@ -328,6 +332,9 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ## Enrollment point
 
+> [!IMPORTANT]
+> With the deprecation of on-premises MDM and the Configuration Manager client for macOS, this site system role is also deprecated. For more information, see [Removed and deprecated features for Configuration Manager](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901,12927803 -->
+
 ### Windows Server roles and features for the enrollment point
 
 - .NET Framework 3.5
@@ -375,6 +382,9 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 ## Enrollment proxy point
+
+> [!IMPORTANT]
+> With the deprecation of on-premises MDM and the Configuration Manager client for macOS, this site system role is also deprecated. For more information, see [Removed and deprecated features for Configuration Manager](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901,12927803 -->
 
 ### Windows Server roles and features for the enrollment proxy point
 

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 02/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: ochukwunyere
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -143,6 +143,64 @@ Updates for the Microsoft Tunnel release periodically. When a new version is ava
 After an update releases, it rolls out to tenants over the following days. This rollout time means new updates might not be available for your tunnel servers for a few days.
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
+
+### February 16, 2022
+
+Image hash values:
+
+- **agentImageDigest**: sha256:3298794bfda519886591cd8676a3074adb05911fa63278cc1436dd7a0b223166
+
+- **serverImageDigest**: sha256:4021370532c3659e304bbc594fde7d788bd660a53542e427048931a0d660bfaa
+
+Changes in this release:
+- Minor bug fixes
+
+### January 31, 2022
+
+Image hash values:
+
+- **agentImageDigest**: sha256:7371a4bd6979f71260093b7ab51ad414c28f3894284f7a7ae950362917a4654b
+
+- **serverImageDigest**: sha256:c8e2be399ca813b0d70c71e56c3b15946a341458c5e1e0ccd07bfd7574e47827
+
+Changes in this release:
+
+- Minor bug fixes
+- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5, do not.
+
+  For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).  
+
+
+
+### October 25, 2021
+
+Image hash values:
+
+- **agentImageDigest**: sha256:fa4a1e5bd701adc447aa41f11daf83c615b7b16b7994b5d86c383955fd6cdad7
+
+- **serverImageDigest**: sha256:aefcb35c5410b87eb8a46da3e98199aa60e74cdc12eb5b86a0a36420cd64005d
+
+Changes in this release:
+
+- Added ability to get a client network trace
+- Added ability to enabled resource access tracking
+- Added support for Podman when using [some versions](../protect/microsoft-tunnel-prerequisites.md#linux-server) of Red Hat Enterprise Linux
+- Minor bug fixes
+
+### September 7, 2021
+
+Image hash values:
+
+- **agentImageDigest**: sha256:21ea5938137c1339a2425c16009ba7de0fd0179a61399f8fe840814f51f45ded
+
+- **serverImageDigest**: sha256:f7b89b8358b90e24a2d7a478944cccfdca960b8b0267f31849b35d933f5a9a7b
+
+Changes in this release:
+
+- Added ability to add host entries to the server container
+- Security patches applied
+- Minor bug fixes
+
 
 ### June 14, 2021
 

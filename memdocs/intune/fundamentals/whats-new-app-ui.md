@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/11/2020 
+ms.date: 11/19/2021 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,9 +37,18 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](../user-help/use-managed-devices-to-get-work-done.md).  
 
+## Week of November 15, 2021  
+
+### New privacy consent screen during Company Portal installation <!-- 6600502 wn -->  
+
+We've added a new privacy consent screen to Company Portal to meet privacy requirements for certain app stores, such as those in China. People installing Company Portal for the first time from those stores will see the new screen during installation. The screen explains what information Microsoft collects and how it's used. A person must agree to the terms before they can use the app. Users who installed Company Portal prior to this release will not see the new screen.  
+
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of new privacy screen that appears to some users in Company Portal.](./media/whats-new-app-ui/privacy-screen-company-portal-windows-2111.png)  
+
 ## Week of November 9, 2020  
 
-### Improvements to work profile messaging in Company Portal for Android<!--8378333 wnready -->  
+### Improvements to work profile messaging in Company Portal for Android<!--8378333 -->  
 
 We've updated messaging in Company Portal for Android to better introduce and explain how work profile works. After the work profile setup flow, users see a new informational screen explaining where to find work apps, with links to help documentation.   
 
@@ -607,20 +616,15 @@ If users have used their work or school account to sign in to other Microsoft ap
 
 The Managed Browser is receiving updated icons for both the Android and iOS versions of the app. The new icon will contain the updated Intune badge to make it more consistent with other apps in Enterprise Mobility + Security (EM+S).
 
-<html>
-<body>
-   <table id="wrapper">
-      <tr>
-         <td>
-            <img src="/intune/media/cp_manbro_before_042017.png" alt="The previous version of the Managed Browser app icon." width="200" height="366" align="center">
-          </td>
-          <td>
-             <img src="/intune/media/cp_manbro_after_042017.png" alt="The updated version of the Managed Browser app icon." width="200" height="366" align="center">
-           </td>
-      </tr>
-   </table>
-</body>
-</html>
+Before    
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of the previous version of the Managed Browser app icon.](/intune/media/cp_manbro_before_042017.png)  
+
+
+After  
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of the new version of the Managed Browser app icon.](/intune/media/cp_manbro_before_042017.png)  
+
 
 The Company Portal is also receiving updated icons for the Android, iOS, and Windows versions of the app to improve consistency with other apps in EM+S. These icons will be gradually released across platforms from April to late May.
 
@@ -628,23 +632,13 @@ The Company Portal is also receiving updated icons for the Android, iOS, and Win
 
 An update to the Android Company Portal app shows a sign-in progress indicator when the user launches or resumes the app. The indicator progresses through new statuses, beginning with "Connecting...", then "Signing in...", then "Checking for security requirements..." before allowing the user to access the app.
 
-<html>
-<body>
-   <table id="wrapper">
-      <tr>
-         <td>
-            <img src="/intune/media/cp_android_connecting_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it." width="200" height="366" align="center">
-          </td>
-          <td>
-             <img src="/intune/media/cp_android_signing_in_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Signing in' underneath it." width="200" height="366" align="center">
-           </td>
-           <td>
-              <img src="/intune/media/cp_android_checking_security_reqs_042017.png" alt="The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Checking for security requirements' underneath it." width="200" height="366" align="center">
-           </td>
-      </tr>
-   </table>
-</body>
-</html>
+**Before**  
+ > [!div class="mx-imgBorder"]
+ > ![The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it.](/intune/media/cp_android_connecting_042017.png)  
+
+ **After**  
+ > [!div class="mx-imgBorder"]
+ > ![The Company Portal app for Android sign-in screen that shows a partially filled loading bar with the phrase 'Connecting' underneath it.](/intune/media/cp_android_connecting_042017.png)   
 
 ### Improved app install status for the Windows 10 Company Portal app <!--676495-->
 The Windows 10 Company Portal app now provides an install progress bar on the app details page. This is supported for modern apps on devices running the Windows 10 Anniversary Update and up.
@@ -668,19 +662,10 @@ Beginning in March, the Company Portal app for Android will follow [material des
 
 ![On the left, an image of the Company Portal app for Android before the update. On the right, an image of the Company Portal app for Android after the update. Both images show the Apps tab as the selected tab from the three available tabs of Apps, Devices, and Contact IT.](./media/whats-new-app-ui/CP_Android_AppsTab_BeforeAfter.png)
 
-* __Navigation__: All Apps shows a tabbed view of __Featured__, __All__ and __Categories__ for easier navigation. __Contact IT__ has been streamlined for improved readability.
+* __Navigation__: All Apps shows a tabbed view of __Featured__, __All__ and __Categories__ for easier navigation. __Contact IT__ has been streamlined for improved readability.  
 
-<html>
-<body>
-   <table id="wrapper">
-      <tr>
-         <td>
-            <img src="/intune/media/cp_android_contactit_after.png" alt="The Company Portal app for Android displaying an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information." width="200" height="366" align="center">
-          </td>
-      </tr>
-   </table>
-</body>
-</html>
+ > [!div class="mx-imgBorder"]
+ > ![Screenshot of Company Portal app for Android showing an updated version of the Contact IT tab. The tab shows available contact information for IT, including phone number, email address, IT website, and IT contact information.](/intune/media/cp_android_contactit_after.png)  
 
 ## January 2017
 

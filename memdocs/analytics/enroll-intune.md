@@ -2,16 +2,16 @@
 title: Quickstart - Enroll Intune devices
 titleSuffix: Microsoft Endpoint Manager
 description: In this quickstart, you enroll Intune devices into Endpoint analytics.
-ms.date: 10/23/2020
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: quickstart
-ms.assetid: 1be507b8-c3bf-46fd-b010-e2f432659a63
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
 # Customer intent: As a Microsoft Endpoint Manager administrator, I want to enroll Intune devices into Endpoint analytics so that I can gain insights into the user experience.
+ms.localizationpriority: high
+ms.collection: highpri
 ---
 
 # Quickstart: Enroll Intune devices into Endpoint analytics
@@ -24,17 +24,18 @@ Before you start this tutorial, make sure you have the following prerequisites:
 
 ### Intune device requirements
 
-- Intune enrolled or co-managed devices on the following Windows 10 versions:
-   - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
-   - Version 1903 or later
-   - July 2021 cumulative update or later
-- Windows 10 devices must be Azure AD joined or hybrid Azure AD joined.
+- Intune enrolled or co-managed devices running the following:
+   - Windows 10 version 1903 or later
+      - The cumulative update from July 2021 or later installed
+     - Pro, Pro Education, Enterprise, or Education. Home and long-term servicing channel (LTSC) aren't supported.
+
+- Windows devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined or Azure AD registered devices aren't supported.
 - The **Connected User Experiences and Telemetry** service on the device is running
 
 ### <a name="bkmk_endpoints"></a> Endpoints required for Intune-managed devices
 
-To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows 10 and Windows Server **Connected User Experiences and Telemetry** component (DiagTrack) to collect the data from Intune-managed devices.
+To enroll devices to Endpoint analytics, they need to send required functional data to Microsoft public cloud. Endpoint Analytics uses the Windows **Connected User Experiences and Telemetry** component (DiagTrack) to collect the data from Intune-managed devices.
 
 | Endpoint  | Function  |
 |-----------|-----------|
@@ -42,10 +43,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 ### Licensing Prerequisites
 
-Endpoint analytics is included in the following plans:
-
-- [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
-- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher.
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Endpoint Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 ### Endpoint analytics permissions
 

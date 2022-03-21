@@ -2,13 +2,14 @@
 title: OSD infrastructure requirements
 titleSuffix: Configuration Manager
 description: Learn the external and product dependencies and requirements for OS deployment in Configuration Manager
-ms.date: 07/22/2021
+ms.date: 09/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Infrastructure requirements for OS deployment in Configuration Manager
@@ -27,16 +28,14 @@ The Windows Assessment and Deployment Kit (ADK) is a set of tools and documentat
 
 For more information, see the following articles:
 
-- [Windows ADK for Windows 10 scenarios for IT Pros](/windows/deployment/windows-adk-scenarios-for-it-pros)
+- [Support for the Windows ADK in Configuration Manager](../../core/plan-design/configs/support-for-windows-adk.md)
 
 - [Download the Windows ADK](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
     > Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
 
-- [Support for Windows 10](../../core/plan-design/configs/support-for-windows-10.md)
-
-- [Support for the Windows ADK](../../core/plan-design/configs/support-for-windows-adk.md)
+- [Windows ADK scenarios for IT Pros](/windows/deployment/windows-adk-scenarios-for-it-pros)
 
 #### Site systems
 
@@ -71,13 +70,13 @@ For a list of the versions of the Windows ADK that you can use with different ve
 
 ### User State Migration Tool (USMT)
 
-Configuration Manager uses a USMT package that includes the USMT 10 source files to capture and restore the user state as part of your OS deployment. Configuration Manager setup at the top-level site automatically creates the USMT package. USMT 10 captures user state from Windows 7, Windows 8.1, and Windows 10.
+Configuration Manager uses a USMT package that includes the USMT source files to capture and restore the user state as part of your OS deployment. Configuration Manager setup at the top-level site automatically creates the USMT package. USMT captures user state from supported versions of Windows.
 
 For more information, see the following articles:
 
-- [Common Migration Scenarios for USMT 10](/windows/deployment/usmt/usmt-common-migration-scenarios)
+- [Manage user state with Configuration Manager](../get-started/manage-user-state.md)
 
-- [Manage user state](../get-started/manage-user-state.md)
+- [Common migration scenarios for USMT](/windows/deployment/usmt/usmt-common-migration-scenarios)
 
 ### Windows PE
 
@@ -135,7 +134,7 @@ To optimize your OS deployments by using multicast, configure a distribution poi
 
 When you capture and restore user state data for side-by-side and refresh deployments, configure a state migration point to store the user state data on another computer.
 
-For more about how to configure the state migration point, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).
+For more about how to configure the state migration point, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#state-migration-point).
 
 For more information about how to capture and restore user state, see [Manage user state](../get-started/manage-user-state.md).
 

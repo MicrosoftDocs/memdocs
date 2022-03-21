@@ -6,10 +6,10 @@ ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: a49a9564-0863-44c3-991e-a8e271fed586
 author: mestew
-ms.author: mstewart 
+ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Changes to CMPivot

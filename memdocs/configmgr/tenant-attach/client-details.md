@@ -1,27 +1,23 @@
 ---
-title: Tenant attach - ConfigMgr client details (preview) in the admin center
+title: Tenant attach - ConfigMgr client details in the admin center
 titleSuffix: Configuration Manager
-description: "View client details for Configuration Manager devices from the admin center."
-ms.date: 04/05/2021
+description: View client details for Configuration Manager devices from the admin center.
+ms.date: 01/25/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 7a597d9e-a878-48d0-a7ce-56a1dbfd0e5c
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 
-# <a name="bkmk_mem"></a> Tenant attach: ConfigMgr client details in the admin center (preview)
-<!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020-->
+# <a name="bkmk_mem"></a> Tenant attach: ConfigMgr client details in the admin center
+<!--6024387, 6374854, 6521921, intune 7552762 pubpreview July 7, 2020, GA 2201-->
 *Applies to: Configuration Manager (current branch)*
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can see ConfigMgr client details including collections, boundary group membership, and real-time client information for a specific device in the admin center.
-
-> [!Important]
-> - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-> - The boundary groups tab functions only for stand alone sites. The tab will be empty in the admin center for anything other than a standalone primary site.
 
 ## Prerequisites
 
@@ -47,7 +43,7 @@ The user account accessing tenant attach features within the Microsoft Endpoint 
 1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
-1. Select the **Client details (preview)**.
+1. Select the **Client details**.
    - The primary site updates the following fields once an hour:
       - **Last policy request**
       - **Last active time**
@@ -55,7 +51,7 @@ The user account accessing tenant attach features within the Microsoft Endpoint 
 
    :::image type="content" source="media/6024387-device-details.png" alt-text="Client details in Microsoft Endpoint Manager admin center" lightbox="media/6024387-device-details.png":::
 
-1. Select the **Collections (preview)** to list the client's collections. <!--6024390-->
+1. Select the **Collections** to list the client's collections. <!--6024390-->
 
    :::image type="content" source="media/6024387-device-collections.png" alt-text="Client collections in Microsoft Endpoint Manager admin center" lightbox="media/6024387-device-collections.png":::
 

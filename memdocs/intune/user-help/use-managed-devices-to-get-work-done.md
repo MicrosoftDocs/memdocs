@@ -1,14 +1,15 @@
 ---
 # required metadata
 title: What is device enrollment | Microsoft Docs
-description: Understand what it means to enroll your device with the Company Portal and Microsoft Intune app.
+description: Learn what it means to enroll your device with the Company Portal and Microsoft Intune app.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
+ms.localizationpriority: high
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology:
@@ -28,13 +29,23 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# What is device enrollment?
-To get access to work or school resources from your device, you'll need to enroll your device with the Intune Company Portal app or Microsoft Intune app. 
+# What is device enrollment?  
+
+**Applies to**  
+- Windows 10  
+- Windows 11  
+- Windows 10 Mobile  
+- Windows 8.1  
+- Android OS  
+- iOS  
+- macOS  
+
+Device enrollment enables you to access your work or school's internal resources (such as apps, Wi-Fi, and email) from your mobile device.  
 
 During device enrollment:
 
 * Your device is registered with your organization. This step ensures that you're authorized to access your organization's email, apps, and Wi-Fi. 
-* Your organization's device management policies are applied to your device. Policies could include requirements for things like device passwords and encryption. The purpose of these requirements is to keep your device and your organization's data secure from unauthorized access.
+* Your organization's device management policies are applied to your device. Policies can include requirements for things like device passwords and encryption. The purpose of these requirements is to keep your device and your organization's data secure from unauthorized access.  
 
 Once you update your device settings to meet your organization's requirements, enrollment is complete. You can securely sign in to your work or school account from virtually anywhere.  
 
@@ -55,25 +66,22 @@ In some cases, your organization will install the Company Portal app on your dev
 If you're required to use the Microsoft Intune app, your organization will install it on your device for you.  
 
 ## What's the difference between the apps and the website?
-The Company Portal app is available for Windows 10, iOS, macOS, and Android devices. It integrates seamlessly with your device's respective platform. The website version is accessible from any device and gives you the same, universal experience no matter what device you're using. 
+The Company Portal app is available for Windows 10/11, iOS, macOS, and Android devices. It integrates seamlessly with your device's respective platform. The website version is accessible from any device and gives you the same, universal experience no matter what device you're using. 
 
 The Microsoft Intune app is for corporate-owned Android devices and doesn't have a website.  
 
 ## What kind of devices can you enroll with Company Portal?
-You can enroll the following devices with Company Portal:  
+You can use Company Portal to enroll devices running: 
 
-- Windows devices
-  - Windows 10 Mobile
-  - Windows 10 Desktop
-  - Windows 8.1
-- Apple devices
-    - iOS
-    - macOS
-- Android devices
-
+- Windows 10/11  
+- Windows 10 Mobile  
+- Windows 8.1  
+- Android OS  
+- iOS  
+- macOS  
 
 ## What kind of devices can you enroll with the Microsoft Intune app?  
-You can enroll corporate-owned Android devices that your organization has set up to use with the app. The app supports Android 6.0 and later. 
+You can enroll corporate-owned Android devices that your organization has set up to use with the app. The app supports Android 8.0 and later. 
 
 ## Can you remove a device from the Company Portal?
 You can remove or reset a device from the Company Portal. There is a difference between **remove** and **reset**.
@@ -99,7 +107,7 @@ You can also contact your IT support person. The Company Portal and Microsoft In
 ## Next steps  
 If you're ready to access your work or school account, follow your organization's instructions to enroll your device. You can also find step-by-step enrollment guidance in the following articles.
 
-* [Enroll your Windows 10 device](enroll-windows-10-device.md)
+* [Enroll your Windows 10/11 device](enroll-windows-10-device.md)
 * [Enroll your Android device](enroll-device-android-company-portal.md)
 * [Enroll with Android work profile](enroll-device-android-work-profile.md)
 * [Enroll with Microsoft Intune app](enroll-device-android-microsoft-intune-app.md)

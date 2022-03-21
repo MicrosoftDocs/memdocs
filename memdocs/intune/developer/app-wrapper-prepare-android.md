@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/26/2021
+ms.date: 12/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -24,8 +24,10 @@ ms.reviewer: jamiesil
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
+ms.collection:
+- M365-identity-device-management
+- Android
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
 ---
 
 # Prepare Android apps for app protection policies with the Intune App Wrapping Tool
@@ -47,22 +49,19 @@ Before running the tool, review [Security considerations for running the App Wra
 
   - It cannot be encrypted.
   - It must not have previously been wrapped by the Intune App Wrapping Tool.
-  - It must be written for Android 4.0 or later.
+  - It must be written for Android 9.0 or later.
 
   > [!NOTE]
   > If your input app is an Android App Bundle (.aab), you will need to convert it to an APK before using the Intune App Wrapping Tool. For details, see [Convert Android App Bundle (AAB) to APK](#convert-android-app-bundle-aab-to-apk). As of August 2021, [new private apps can still be published to the Google Play Store as APKs](https://support.google.com/googleplay/work/answer/6145139?hl=en).
   
-- The app must be developed by or for your company. You cannot use this tool on apps downloaded from the Google Play Store.
+- The app must be developed by or for your company. You cannot use this tool on apps that are available in the Google Play Store. This includes downloading or obtaining the app from the Google Play Store.
 
 - To run the App Wrapping Tool, you must install the latest version of the [Java Runtime Environment](https://java.com/download/) and then ensure that the Java path variable has been set to C:\ProgramData\Oracle\Java\javapath in your Windows environment variables. For more help, see the [Java documentation](https://java.com/en/download/help/index.html).
 
     > [!NOTE]
     > In some cases, the 32-bit version of Java may result in memory issues. It's a good idea to install the 64-bit version.
 
-- Android requires all app packages (.apk) to be signed. For **reusing** existing certificates and overall signing certificate guidance, see [Reusing signing certificates and wrapping apps](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps). The Java executable keytool.exe is used to generate **new** credentials needed to sign the wrapped output app. Any passwords that are set must be secure, but make a note of them because they're needed to run the App Wrapping Tool.
-
-    > [!NOTE]
-    > The Intune App Wrapping Tool does not support Google's v2 and upcoming v3 signature schemes for app signing. After you have wrapped the .apk file using the Intune App Wrapping Tool, the recommendation is to use [Google's provided Apksigner tool]( https://developer.android.com/studio/command-line/apksigner). This will ensure that once your app gets to end user devices, it can be launched properly by Android standards. 
+- Android requires all app packages (.apk) to be signed. For **reusing** existing certificates and overall signing certificate guidance, see [Reusing signing certificates and wrapping apps](app-wrapper-prepare-android.md#reusing-signing-certificates-and-wrapping-apps). After you have wrapped the .apk file using the Intune App Wrapping Tool, the recommendation is to use [Google's provided Apksigner tool]( https://developer.android.com/studio/command-line/apksigner). This will ensure that once your app gets to end user devices, it can be launched properly by Android standards.
 
 - (Optional) Sometimes an app may hit the Dalvik Executable (DEX) size limit due to the Intune MAM SDK classes that are added during wrapping. DEX files are a part of the compilation of an Android app. The Intune App Wrapping Tool automatically handles DEX file overflow during wrapping for apps with a min API level of 21 or higher (as of [v. 1.0.2501.1](https://github.com/msintuneappsdk/intune-app-wrapping-tool-android/releases)). For apps with a min API level of < 21, best practice would be to increase the min API level using the wrapper's `-UseMinAPILevelForNativeMultiDex` flag. For customers unable to increase the app's minimum API level, the following DEX overflow workarounds are available. In certain organizations, this may require working with whoever compiles the app (ie. the app build team):
 
@@ -93,22 +92,15 @@ Note the folder to which you installed the tool. The default location is: C:\Pro
 3. Run the tool by using the **invoke-AppWrappingTool** command, which has the following usage syntax:
 
    ```PowerShell
-   Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> -KeyStorePath <String> -KeyStorePassword <SecureString>
-   -KeyAlias <String> -KeyPassword <SecureString> [-SigAlg <String>] [<CommonParameters>]
+   Invoke-AppWrappingTool [-InputPath] <String> [-OutputPath] <String> [<CommonParameters>]
    ```
 
    The following table details the properties of the **invoke-AppWrappingTool** command:
 
-|Property|Information|Example|
-|-------------|--------------------|---------|
-|**-InputPath**&lt;String&gt;|Path of the source Android app (.apk).| |
- |**-OutputPath**&lt;String&gt;|Path to the output Android app. If this is the same directory path as InputPath, the packaging will fail.| |
-|**-KeyStorePath**&lt;String&gt;|Path to the keystore file that has the public/private key pair for signing.|By default, keystore files are stored in "C:\Program Files (x86)\Java\jreX.X.X_XX\bin". |
-|**-KeyStorePassword**&lt;SecureString&gt;|Password used to decrypt the keystore. Android requires all application packages (.apk) to be signed. Use Java keytool to generate the KeyStorePassword. Read more about Java [KeyStore](https://docs.oracle.com/javase/7/docs/api/java/security/KeyStore.html) here.| |
-|**-KeyAlias**&lt;String&gt;|Name of the key to be used for signing.| |
-|**-KeyPassword**&lt;SecureString&gt;|Password used to decrypt the private key that will be used for signing.| |
-|**-SigAlg**&lt;SecureString&gt;| (Optional) The name of the signature algorithm to be used for signing. The algorithm must be compatible with the private key.|Examples: SHA256withRSA, SHA1withRSA|
-|**-UseMinAPILevelForNativeMultiDex**| (Optional) Use this flag to increase the source Android app's minimum API level to 21. This flag will prompt for confirmation as it will limit who may install this app. Users can skip the confirmation dialog by appending the parameter "-Confirm:$false" to their PowerShell command. The flag should only be used by customers on apps with min API < 21 that fail to wrap successfully due to DEX overflow errors. | |
+|Property|Information|
+|-------------|--------------------|
+|**-InputPath**&lt;String&gt;|Path of the source Android app (.apk).|
+ |**-OutputPath**&lt;String&gt;|Path to the output Android app. If this is the same directory path as InputPath, the packaging will fail.|
 | **&lt;CommonParameters&gt;** | (Optional) The command supports common PowerShell parameters like verbose and debug. |
 
 
@@ -131,10 +123,8 @@ Import-Module "C:\Program Files (x86)\Microsoft Intune Mobile Application Manage
 Run the App Wrapping Tool on the native app HelloWorld.apk.
 
 ```PowerShell
-invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped\HelloWorld_wrapped.apk -KeyStorePath "C:\Program Files (x86)\Java\jre1.8.0_91\bin\mykeystorefile" -keyAlias mykeyalias -SigAlg SHA1withRSA -Verbose
+invoke-AppWrappingTool -InputPath .\app\HelloWorld.apk -OutputPath .\app_wrapped\HelloWorld_wrapped.apk -Verbose
 ```
-
-You will then be prompted for **KeyStorePassword** and **KeyPassword**. Enter the credentials you used to create the key store file.
 
 The wrapped app and a log file are generated and saved in the output path you specified.
 
@@ -154,7 +144,7 @@ Some best practices for rewrapping include:
 
 Android requires that all apps must be signed by a valid certificate in order to be installed on Android devices.
 
-Wrapped apps can be signed either as part of the wrapping process or *after* wrapping using your existing signing tools (any signing information in the app before wrapping is discarded). If possible, the signing information that was already used during the build process should be used during wrapping. In certain organizations, this may require working with whoever owns the keystore information (ie. the app build team). 
+Wrapped apps can be signed *after* wrapping using your existing signing tools (any signing information in the app before wrapping is discarded). If possible, the signing information that was already used during the build process should be used during wrapping. In certain organizations, this may require working with whoever owns the keystore information (ie. the app build team).
 
 If the previous signing certificate cannot be used, or the app has not been deployed before, you may create a new signing certificate by following the instructions in the [Android Developer Guide](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 
@@ -164,7 +154,7 @@ If the app has been deployed previously with a different signing certificate, th
 
 To prevent potential spoofing, information disclosure, and elevation of privilege attacks:
 
-- Ensure that the input line-of-business (LOB) application, output application, and Java KeyStore are on the same Windows computer where the App Wrapping Tool is running.
+- Ensure that the input line-of-business (LOB) application, and the output application are on the same Windows computer where the App Wrapping Tool is running.
 
 - Import the output application to Intune on the same machine where the tool is running. See [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html) for more about the Java keytool.
 

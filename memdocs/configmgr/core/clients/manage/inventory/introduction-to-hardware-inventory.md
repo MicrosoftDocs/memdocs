@@ -9,6 +9,7 @@ ms.topic: overview
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Introduction to hardware inventory

@@ -6,12 +6,10 @@ ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: ed931751-18f2-4230-a09e-a0a329fbfa1c
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # About discovery methods for Configuration Manager
 

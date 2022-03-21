@@ -1,38 +1,38 @@
 ---
 # required metadata
-title: Protection settings for Windows 10 devices in Microsoft Intune
-description: On Windows 10 devices, use or configure endpoint protection settings to enable Microsoft Defender features, including Application Guard, Firewall, SmartScreen, encryption and BitLocker, Exploit Guard, Application Control, Security Center, and security on local devices in Microsoft Intune.
+title: Settings you can deploy with Intune to protect managed Windows devices
+description: On Windows 10 or Windows 11 devices, configure endpoint protection settings to enable Microsoft Defender features, including Application Guard, Firewall, SmartScreen, encryption and BitLocker, Exploit Guard, Application Control, Security Center, and security on local devices in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 02/03/2022
 ms.topic: conceptual
-ms.technology:
 ms.service: microsoft-intune
-ms.assetid: 3af7c91b-8292-4c7e-8d25-8834fcf3517a
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: mattsha
+ms.reviewer: mattcall
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
-# Windows 10 (and later) settings to protect devices using Intune
+# Windows settings you can deploy with Intune policy to protect Windows devices
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-Microsoft Intune includes many settings to help protect your devices. This article describes some of the settings you can enable and configure in Windows 10 and newer devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
+Microsoft Intune includes many settings to help protect your devices. This article describes some of the settings you can enable and configure in Windows 10 and Windows 11 devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
 
-To configure Microsoft Defender Antivirus, see [Windows 10 device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus).  
+To configure Microsoft Defender Antivirus, see [Windows device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) or use [endpoint security Antivirus policy](endpoint-security-antivirus-policy.md).  
 
 ## Before you begin  
 
@@ -44,7 +44,7 @@ For more information about configuration service providers (CSPs), see [Configur
 
 While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration. For more information, see [Create a network boundary on Windows devices](../configuration/network-boundary-windows.md).
 
-Application Guard is only available for Windows 10 (64-bit) devices. Using this profile installs a Win32 component to activate Application Guard.  
+Application Guard is only available for 64-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.  
 
 - **Application Guard**  
   **Default**: Not configured  
@@ -303,7 +303,7 @@ The following settings are each listed in this article a single time, but all ap
 
 ### Firewall rules  
 
-You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows 10 devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-10-devices).  
+You can **Add** one or more custom Firewall rules. For more information, see [Add custom firewall rules for Windows devices](endpoint-protection-configure.md#add-custom-firewall-rules-for-windows-1011-devices).  
 
 Custom Firewall rules support the following options:  
 
@@ -459,17 +459,6 @@ Microsoft Edge must be installed on the device.
   
   If Windows encryption is turned on while another encryption method is active, the device might become unstable.  
 
-<!-- Support Deprecated for Windows 10 Mobile as of August 2020
-
-- **Encrypt storage card (mobile only)**  
-  *This setting only applies to Windows 10 mobile.*  
-  **Default**: Not configured  
-  BitLocker CSP: [RequireStorageCardEncryption](/windows/client-management/mdm/bitlocker-csp#requirestoragecardencryption)  
-
-  - **Require** to encrypt any removable storage cards used by the device.  
-  - **Not configured** - Don't require storage card encryption, and don't prompt the user to turn it on.  
--->
-
 ### BitLocker base settings  
 
 Base settings are universal BitLocker settings for all types of data drives. These settings manage what drive encryption tasks or configuration options the end user can modify across all types of data drives.  
@@ -527,7 +516,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
   - **Encryption for removable data-drives**  
     **Default**: AES-CBC 128-bit  
 
-    Choose the encryption method for removable data drives. If the removable drive is used with devices that aren't running Windows 10, then we recommend you use the AES-CBC algorithm.  
+    Choose the encryption method for removable data drives. If the removable drive is used with devices that aren't running Windows 10/11, then we recommend you use the AES-CBC algorithm.  
     - **AES-CBC 128-bit**  
     - **AES-CBC 256-bit**  
     - **XTS-AES 128-bit**  
@@ -1056,7 +1045,7 @@ Microsoft Defender Credential Guard protects against credential theft attacks. I
     > [!NOTE]
     > If you use this setting, and then later want to disable Credential Guard, you must set the Group Policy to **Disabled**. And, physically clear the UEFI configuration information from each computer. As long as the UEFI configuration persists, Credential Guard is enabled.​  
 
-  - **Enable without UEFI lock** - Allows Credential Guard to be disabled remotely by using Group Policy. The devices that use this setting must be running Windows 10 version 1511 and newer.​  
+  - **Enable without UEFI lock** - Allows Credential Guard to be disabled remotely by using Group Policy. The devices that use this setting must be running Windows 10 version 1511 and newer, or Windows 11.​  
 
   When you *enable* Credential Guard, the following required features are also enabled:  
   
@@ -1224,7 +1213,7 @@ You can choose to **Display in app and in notifications**, **Display only in app
  
 ## Local device security options  
 
-Use these options to configure the local security settings on Windows 10 devices.  
+Use these options to configure the local security settings on Windows 10/11 devices.  
 
 ### Accounts  
 

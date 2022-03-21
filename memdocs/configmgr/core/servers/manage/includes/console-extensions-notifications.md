@@ -3,9 +3,10 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 08/02/2021
+ms.date: 12/01/2021
+ms.localizationpriority: medium
 ---
-<!--This file is shared by the admin-console-extensions.md, and admin-console-notifications.md files. Some headings may be context driven by the article-->
+<!--This file is shared by the admin-console-extensions.md, admin-console-notifications.md, and community-hub-extension.md files. Some headings may be context driven by the article. -->
 
 Users are notified when console extensions are approved for installation. These notifications occur for users when console extensions are approved and notifications are enabled from **Administration** > **Overview** > **Updates and Servicing** > **Console Extensions**. When notifications are enabled, users within the [security scope](../../../understand/fundamentals-of-role-based-administration.md#security-scopes) for the extension receive the following prompts:
 

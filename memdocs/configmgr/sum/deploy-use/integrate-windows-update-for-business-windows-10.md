@@ -1,22 +1,22 @@
 ---
 title: Integrate Windows Update for Business
 titleSuffix: Configuration Manager
-description: Use Windows Update for Business (WUfB) to keep Windows 10 up-to-date for devices connected to the Windows Update service.
-author: mestew  
+description: Use Windows Update for Business (WUfB) to keep Windows up-to-date for devices connected to the Windows Update service.
+author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/25/2021
+ms.date: 10/20/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 183315fe-27bd-456f-b2c5-e8d25e05229b
+ms.localizationpriority: medium
 ---
 
 # Integrate with Windows Update for Business
 
 *Applies to: Configuration Manager (current branch)*
 
-Windows Update for Business (WUfB) allows you to keep Windows 10-based devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows 10 computers that use WUfB and WSUS for getting software updates.  
+Windows Update for Business (WUfB) allows you to keep Windows 10 or later devices in your organization always up-to-date with the latest security defenses and Windows features when these devices connect directly to the Windows Update (WU) service. Configuration Manager can differentiate between Windows computers that use WUfB and WSUS for getting software updates.  
 
 > [!WARNING]
 > If you are using co-management for your devices and you have moved the [Windows Update policies](../../comanage/workloads.md#windows-update-policies) to Intune, then your devices will get their [Windows Update for Business policies from Intune](/intune/windows-update-for-business-configure).
@@ -39,15 +39,15 @@ Windows Update for Business (WUfB) allows you to keep Windows 10-based devices i
 
 - Configuration Manager full client deployment that uses the software updates infrastructure won't work for clients that are connected to WUfB to receive updates.  
 
-## Identify clients that use WUfB for Windows 10 updates
+## Identify clients that use WUfB for Windows updates
 
-Use the following procedure to identify clients that use WUfB to get Windows 10 updates and upgrades. Then configure these clients to stop using WSUS to get updates, and deploy a client agent setting to disable the software updates workflow for these clients.  
+Use the following procedure to identify clients that use WUfB to get Windows updates and upgrades. Then configure these clients to stop using WSUS to get updates, and deploy a client agent setting to disable the software updates workflow for these clients.  
 
 ### Prerequisites for WUfB
 
 - Clients that run Windows 10 Desktop Pro or Windows 10 Enterprise Edition version 1511 or later
 
-- [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use WUfB to get Windows 10 updates and upgrades.  
+- [Windows Update for Business](/windows/deployment/update/waas-manage-updates-wufb) is deployed and clients use WUfB to get Windows updates and upgrades.  
 
 ### To identify clients that use WUfB  
 
@@ -65,20 +65,20 @@ Use the following procedure to identify clients that use WUfB to get Windows 10 
 
 ## Configure Windows Update for Business deferral policies
 <!-- 1290890 -->
-Beginning in Configuration Manager version 1706, you can configure deferral policies for Windows 10 Feature Updates or Quality Updates for Windows 10 devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows 10 Servicing**.
+You can configure deferral policies for Windows 10 or later Feature Updates or Quality Updates for Windows devices managed directly by Windows Update for Business. You can manage the deferral policies in the new **Windows Update for Business Policies** node under **Software Library** > **Windows Servicing**.
 
 > [!NOTE]
-> Beginning in Configuration Manager version 1802, you can set deferral policies for Windows Insider. <!--507201-->  
+> You can set deferral policies for Windows Insider. <!--507201-->  
 For more information about the Windows Insider program, see [Getting started with Windows Insider program for Business](/windows-insider/business/server-get-started).
 
 ### Prerequisites for deferral policies
 
 - Windows 10 version 1703 or later
-- Windows 10 devices managed by Windows Update for Business must have Internet connectivity
+- Windows 10 or later devices managed by Windows Update for Business must have Internet connectivity
 
 #### To create a Windows Update for Business deferral policy
 
-1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
+1. In **Software Library** > **Windows Servicing** > **Windows Update for Business Policies**
 1. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
 1. On the **General** page, provide a name and description for the policy.
 1. On the **Deferral Policies** page, configure whether to defer or pause Feature Updates. Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
@@ -100,7 +100,7 @@ For more information about the Windows Insider program, see [Getting started wit
 
 #### To deploy a Windows Update for Business deferral policy
 
-1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
+1. In **Software Library** > **Windows Servicing** > **Windows Update for Business Policies**
 1. On the **Home** tab, in the **Deployment** group, select **Deploy Windows Update for Business Policy**.
 1. Configure the following settings:
     - **Configuration policy to deploy**: Select the Windows Update for Business policy that you would like to deploy.

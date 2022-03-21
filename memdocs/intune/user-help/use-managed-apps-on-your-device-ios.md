@@ -90,5 +90,3 @@ The following list describes the settings your IT support person can control wit
 * Contact your IT support person for more information about any apps on your device. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
 
 * For information about using work or school apps on an Android device, see [Get work or school apps for Android](use-managed-apps-on-your-device-android.md).  
-
-* Learn how to [update your iOS device](update-device-outlook-iOS.md) so that you can install Microsoft Outlook.  

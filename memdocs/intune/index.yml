@@ -8,8 +8,9 @@ metadata:
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
-  manager: mtillman
-  ms.date: 03/09/2020
+  manager: johmar
+  ms.date: 11/10/2021
+  ms.collection: highpri
 
 highlightedContent:
   items:
@@ -113,9 +114,6 @@ conceptualContent:
         - url: ./protect/device-compliance-get-started.md
           itemType: concept
           text: Compliance overview
-        - url: ./protect/use-network-locations.md
-          itemType: how-to-guide
-          text: "Network fencing + compliance on Android"
         - url: ./protect/actions-for-noncompliance.md
           itemType: how-to-guide
           text: Actions for non-compliant devices
@@ -269,13 +267,13 @@ additionalContent:
           summary: Ask technical questions in the product forums
           url: /answers/products/mem
         # Card
-        - title: UserVoice product feedback
-          summary: Share product ideas with the engineering team
-          url: https://microsoftintune.uservoice.com/forums/291681-ideas
-        # Card
         - title: Intune tech community conversations
           summary: Check out active conversations from the technical community
           url: https://techcommunity.microsoft.com/t5/Microsoft-Intune/bd-p/Microsoft-Intune
+        # Card
+        - title: Feedback for Intune
+          summary: Share product ideas with the engineering team
+          url: https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472
         # Card
         - title: "#Intune on Twitter"
           summary: Stay current with the active Twitter community

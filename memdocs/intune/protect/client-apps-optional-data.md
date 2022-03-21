@@ -97,7 +97,7 @@ The data do not include any customer information, like:
 
 
 ## Turn off data collection
-We think there are compelling reasons for people to share this optional data. All optional diagnostic data Microsoft collects during the use of any Microsoft 365 Apps for enterprise applications and services is pseudonymized as defined in the ISO/IEC 19944:2017 (section 8.3.3) standard. 
+We think there are compelling reasons for people to share this optional data. All optional diagnostic data Microsoft collects during the use of any Microsoft 365 Apps for enterprise applications and services is pseudonymized as defined in the ISO/IEC 19944-1:2020 (section 8.3.3) standard. 
 Users can [turn off usage data collection](../user-help/turn-off-microsoft-usage-data-collection-android.md) for their individual devices.
 
 

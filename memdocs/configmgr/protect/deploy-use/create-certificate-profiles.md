@@ -2,16 +2,14 @@
 title: Create SCEP certificate profiles
 titleSuffix: Configuration Manager
 description: Learn how to use certificate profiles to provision managed devices with the certificates they need
-ms.date: 04/05/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Create certificate profiles
@@ -111,7 +109,7 @@ Complete the **SCEP Enrollment** page of the Create Certificate Profile Wizard.
 
   - **Install to Trusted Platform Module (TPM) otherwise fail**: Installs the key to the TPM. If the TPM module isn't present, the installation fails.  
 
-  - **Install to Windows Hello for Business otherwise fail**: This option is available for Windows 10 devices. It allows you to store the certificate in the Windows Hello for Business store, which is protected by multi-factor authentication. For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+  - **Install to Windows Hello for Business otherwise fail**: This option is available for Windows 10 or later devices. It allows you to store the certificate in the Windows Hello for Business store, which is protected by multi-factor authentication. For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
     > [!NOTE]  
     > This option doesn't support Smart card logon for the Enhanced key usage on the Certificate Properties page.

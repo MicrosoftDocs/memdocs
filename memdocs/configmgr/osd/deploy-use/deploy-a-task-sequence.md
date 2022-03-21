@@ -1,15 +1,15 @@
 ---
 title: Deploy a task sequence
 titleSuffix: Configuration Manager
-description: Use this information to deploy a task sequence to the computers in a collection.  
+description: Use this information to deploy a task sequence to the computers in a collection.
 ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Deploy a task sequence
@@ -227,12 +227,12 @@ You create a task sequence that only has several **Install Package** steps for t
 
 :::image type="content" source="media/deploy-option-3.png" alt-text="Deploy task sequence, three deployment options":::
 
-## Deploy Windows 10 in-place upgrade via CMG
+## Deploy Windows in-place upgrade via CMG
 
 <!-- 1357149 -->
-The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
+The Windows in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG). This ability allows remote users to more easily upgrade Windows without needing to connect to the intranet.
 
-For more information, see [Deploy a task sequence over the internet](deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).
+For more information, see [Deploy a task sequence over the internet](deploy-task-sequence-over-internet.md#deploy-windows-in-place-upgrade-via-cmg).
 
 ## <a name="bkmk_high-risk"></a> High-risk deployments
 

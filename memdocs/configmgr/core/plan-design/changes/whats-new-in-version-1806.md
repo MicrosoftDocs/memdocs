@@ -6,11 +6,11 @@ ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1806 of Configuration Manager current branch
@@ -125,7 +125,7 @@ For more information, see [Windows LEDBAT](../hierarchy/fundamental-concepts-for
 <!--1357346-->
 Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group. 
 
-For more information, see [Partial download support](../hierarchy/client-peer-cache.md#bkmk_parts). 
+For more information, see [Partial download support](../hierarchy/client-peer-cache.md#partial-download-support). 
 
 
 ### Boundary group options for peer downloads
@@ -561,7 +561,7 @@ For more information, see [Surface dashboard](../../clients/manage/surface-devic
 
 ### View the currently signed on user for a device
 <!--1358202-->
-Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](../../clients/manage/monitor-clients.md#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
+Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](../../clients/manage/monitor-clients.md#monitor-individual-clients). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
 
 For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#view-users-for-a-device).
 

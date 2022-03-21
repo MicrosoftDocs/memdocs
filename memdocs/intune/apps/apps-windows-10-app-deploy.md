@@ -1,18 +1,18 @@
 ---
 # required metadata
 
-title: Windows 10 app deployment by using Microsoft Intune
+title: Windows 10/11 app deployment by using Microsoft Intune
 titleSuffix: 
-description: Learn about Windows 10 app deployment scenarios available with Microsoft Intune.
+description: Learn about Windows 10/11 app deployment scenarios available with Microsoft Intune.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/15/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
 
@@ -26,10 +26,13 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Windows
+- highpri
 ---
 
-# Windows 10 app deployment by using Microsoft Intune 
+# Windows 10/11 app deployment by using Microsoft Intune 
 
 Microsoft Intune supports a variety of app types and deployment scenarios on Windows 10 devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows 10 scenarios, and also covers key details to note when you're deploying apps to Windows. For information about deploying an app, also known as assigning an app, see [Assign an app](../apps/apps-deploy.md#assign-an-app) to a group.
 

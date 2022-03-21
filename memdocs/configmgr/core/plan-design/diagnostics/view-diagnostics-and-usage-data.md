@@ -2,13 +2,14 @@
 title: View diagnostics data
 titleSuffix: Configuration Manager
 description: View diagnostic and usage data to confirm that your Configuration Manager hierarchy contains no sensitive information.
-ms.date: 08/13/2021
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to view diagnostics and usage data for Configuration Manager
@@ -17,11 +18,11 @@ manager: dougeby
 
 You can view diagnostic and usage data from your Configuration Manager hierarchy to confirm that it includes no sensitive or identifiable information. The site summarizes and stores its diagnostic data in the **TEL_TelemetryResults** table of the site database. It formats the data to be programmatically usable and efficient.
 
-The information in this article gives you a view of the exact data sent to Microsoft. It's not intended to be used for other purposes, like data analysis.  
+The information in this article gives you a view of the exact data sent to Microsoft. It's not intended to be used for other purposes, like data analysis.
 
 ## View data in database
 
-Use the following SQL command to view the contents of this table and show the exact data that's sent:  
+Use the following SQL command to view the contents of this table and show the exact data that's sent:
 
 ``` SQL
 SELECT * FROM TEL_TelemetryResults
@@ -33,7 +34,7 @@ When the service connection point is in offline mode, use the service connection
 
 For more information, see [Use the service connection tool](../../servers/manage/use-the-service-connection-tool.md).
 
-## <a name="bkmk_hashes"></a> One-way hashes
+## One-way hashes
 
 Some data consists of strings of random alphanumeric characters. Configuration Manager uses the SHA-256 algorithm to create one-way hashes. This process makes sure that Microsoft doesn't collect potentially sensitive data. The hashed data can still be used for correlation and comparison purposes.
 
@@ -48,14 +49,14 @@ When you view the raw data, a common hashed value appears in each row of data. T
 2. Use the following Windows PowerShell script to do the one-way hash of your support ID.
 
     ``` PowerShell
-    Param( [Parameter(Mandatory=$True)] [string]$value )  
-      $guid = [System.Guid]::NewGuid()  
-      if( [System.Guid]::TryParse($value,[ref] $guid) -eq $true ) {  
-      #many of the values we hash are Guids  
-      $bytesToHash = $guid.ToByteArray()  
-    } else {  
-      #otherwise hash as string (unicode)  
-      $ue = New-Object System.Text.UnicodeEncoding  
+    Param( [Parameter(Mandatory=$True)] [string]$value )
+      $guid = [System.Guid]::NewGuid()
+      if( [System.Guid]::TryParse($value,[ref] $guid) -eq $true ) {
+      #many of the values we hash are Guids
+      $bytesToHash = $guid.ToByteArray()
+    } else {
+      #otherwise hash as string (unicode)
+      $ue = New-Object System.Text.UnicodeEncoding
       $bytesToHash = $ue.GetBytes($value)
     }  
       # Load Hash Provider (https://en.wikipedia.org/wiki/SHA-2)
@@ -67,9 +68,11 @@ When you view the raw data, a common hashed value appears in each row of data. T
     return $result
     ```
 
-3. Compare the script output against the GUID in the raw data. This process shows how the data is obscured.
+1. Compare the script output against the GUID in the raw data. This process shows how the data is obscured.
 
 ## Next steps
+
+Next, learn about the levels of diagnostics and usage data that Configuration Manager collects:
 
 > [!div class="nextstepaction"]
 > [Levels of diagnostic usage data](levels-overview.md)

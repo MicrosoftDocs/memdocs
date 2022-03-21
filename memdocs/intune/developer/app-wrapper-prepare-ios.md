@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/26/2021
+ms.date: 12/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- iOS/iPadOS
 ---
 
 # Prepare iOS apps for app protection policies with the Intune App Wrapping Tool
@@ -171,7 +173,7 @@ You will need the following to distribute apps wrapped by Intune:
 
 1. Download the files for the App Wrapping Tool from [GitHub](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) to a macOS computer.
 
-2. Double-click **Microsoft Intune App Wrapping Tool for iOS.dmg**. A window with the End User License Agreement (EULA) will appear. Read the document carefully.
+2. Double-click **Microsoft Intune Application Restrictions Packager for iOS.dmg**. A window with the End User License Agreement (EULA) will appear. Read the document carefully.
 
 3. Choose **Agree** to accept EULA, which mounts the package to your computer.
 
@@ -185,7 +187,7 @@ You will need the following to distribute apps wrapped by Intune:
 Open the macOS Terminal and run the following command:
 
 ```bash
-/Volumes/IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
+/Volumes/IntuneMAMAppPackager/IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
 ```
 
 > [!NOTE]

@@ -6,10 +6,11 @@ ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
-ms.assetid: 8fac7ac5-96a3-4ec1-85cb-623b26bf5b1c
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # How to enable co-management in Configuration Manager
@@ -20,9 +21,13 @@ The phrase **Pilot group** is used throughout the co-management feature and conf
 
 Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](overview.md#prerequisites).
 
-## Enable co-management
+## Enable co-management for versions 2111 and later
 
-[!INCLUDE [Enable Co-management in version 1906 and later](includes/enable-co-management-1906-and-higher.md)]
+[!INCLUDE [Enable Co-management starting in version 2111](includes/enable-co-management-2111.md)]
+
+## Enable co-management for versions 2107 and earlier
+
+[!INCLUDE [Enable Co-management in versions 1906 through 2107](includes/enable-co-management-1906-2107.md)]
 
 
 ## Next steps

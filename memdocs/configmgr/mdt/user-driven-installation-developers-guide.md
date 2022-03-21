@@ -1,5 +1,4 @@
 ---
-
 title: User driven installation (UDI)
 titleSuffix: Microsoft Deployment Toolkit
 description: Developers guide for user driven installation (UDI) of Microsoft Deployment Toolkit (MDT)
@@ -7,10 +6,11 @@ ms.date: 09/09/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: a2b3a3a0-7b81-4191-b1f9-c618e59347c3
-author: aczechowski  
-ms.author: aaroncz 
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # User Driven Installation - Developers Guide
@@ -57,9 +57,9 @@ Figure 1. Relationship between the UDI Wizard and UDI Wizard Designer
 
   - [WPF](/dotnet/desktop-wpf/) version 4.0  
 
-  - [Microsoft Prism](https://compositewpf.codeplex.com/) version 4.0  
+  - [Microsoft Prism](https://www.codeproject.com/Articles/165370/Creating-View-Switching-Applications-with-Prism-4) version 4.0  
 
-  - [Microsoft Unity Application Block](https://unity.codeplex.com/) (Unity) version 2.1  
+  - [Microsoft Unity Application Block](https://www.codeproject.com/articles/42524/a-basic-introduction-to-the-unity-application-bloc) (Unity) version 2.1  
 
     MDT includes all the assemblies necessary to create a custom wizard page editor for use in the UDI Wizard Designer. The UDI SDK includes an example of how to create custom wizard page editors.  
 
@@ -3973,7 +3973,7 @@ Table 84 provides information about the [DLLs](#DLLs) element.
 ##### Element Attributes  
  Table 86 lists the attributes of the [Error](#Error) element and provides a description of each.  
 
-###  
+### Table 86. Error Element Information 
 
 | **Attribute** |                                                                                                                                                                                      **Description**                                                                                                                                                                                       |
 |---------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

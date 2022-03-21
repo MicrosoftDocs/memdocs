@@ -6,10 +6,10 @@ ms.date: 08/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
-ms.author: mstewart 
+ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # CMPivot for real-time data in Configuration Manager

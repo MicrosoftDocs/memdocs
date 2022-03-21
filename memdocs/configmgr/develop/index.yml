@@ -12,7 +12,9 @@ metadata:
   ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
-  ms.date: 04/01/2020
+  manager: dougeby
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
 
 landingContent:
   - title: About Configuration Manager SDK
@@ -22,7 +24,7 @@ landingContent:
           - text: SDK overview
             url: core/misc/system-center-configuration-manager-sdk.md
           - text: What's new
-            url: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+            url: core/changes/whats-new-sdk.md
           - text: SDK requirements
             url: core/reqs/about-configuration-manager-sdk-requirements.md
       - linkListType: reference

@@ -4,15 +4,13 @@
 title: Use role-based access control (RBAC) and scope tags for distributed IT in Intune | Microsoft Docs
 description: Use scope tags to filter configuration profiles to specific roles.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 08/06/2019
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.technology:
-ms.assetid: a21d3039-f2ed-4f43-b6fa-d00c071edbc4
 
 # optional metadata
 
@@ -24,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Use role-based access control (RBAC) and scope tags for distributed IT

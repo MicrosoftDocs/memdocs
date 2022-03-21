@@ -6,13 +6,11 @@ ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: bcde47a7-433e-4944-964b-539b17d15d64
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 
 # Capabilities in Configuration Manager technical preview version 1807 
@@ -72,7 +70,7 @@ The **Community** workspace also includes the following nodes:
 
 - **Documentation**: Displays the Configuration Manager [documentation library](/sccm/)  
 
-- **Feedback**: Displays the Configuration Manager [UserVoice site](https://configurationmanager.uservoice.com/)  
+- **Feedback**: Displays the Configuration Manager product feedback site
 
 
 ### Prerequisites
@@ -96,7 +94,7 @@ Contributing items to the hub isn't currently available in this version.
 ## <a name="bkmk_osd"></a> Specify the drive for offline OS image servicing  
 <!--1358924-->
 
-Based on your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/33506009-gui-option-for-offline-os-image-servicing-drive), now specify the drive that Configuration Manager uses during offline servicing of OS images. This process can consume a large amount of disk space with temporary files, so this option gives you flexibility to select the drive to use. 
+Based on your feedback, now specify the drive that Configuration Manager uses during offline servicing of OS images. This process can consume a large amount of disk space with temporary files, so this option gives you flexibility to select the drive to use.
 
 
 ### Try it out!
@@ -140,7 +138,7 @@ For more information about enabling co-management, see [Co-management for Window
 ## <a name="bkmk_app-repair"></a> Repair applications
 <!--1357866-->
 
-Based on your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8365071-force-reinstall-of-application), now specify a repair command line for Windows Installer and Script Installer deployment types. 
+Based on your feedback, now specify a repair command line for Windows Installer and Script Installer deployment types.
 
 
 ### Try it out!

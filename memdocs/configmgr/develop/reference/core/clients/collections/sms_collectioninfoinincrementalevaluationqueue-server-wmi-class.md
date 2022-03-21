@@ -10,6 +10,8 @@ ms.assetid: 9807ade7-dc2d-41de-98f3-8ed15c3ac3f7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_CollectionInfoInIncrementalEvaluationQueue server WMI class

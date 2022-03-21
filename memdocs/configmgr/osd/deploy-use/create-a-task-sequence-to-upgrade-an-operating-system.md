@@ -1,21 +1,22 @@
 ---
 title: Create an OS upgrade task sequence
 titleSuffix: Configuration Manager
-description: Use a task sequence to automatically upgrade from Windows 7 or later to Windows 10
-ms.date: 08/10/2021
+description: Use a task sequence to automatically upgrade Windows to a later version
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create a task sequence to upgrade an OS in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use task sequences in Configuration Manager to automatically upgrade an OS on a destination computer. This upgrade can be from Windows 7 or later to Windows 10, or from Windows Server 2012 or later to Windows Server 2016 or later. Create a task sequence that references an OS upgrade package or feature update and any other content to install, such as applications or software updates. The task sequence to upgrade an OS is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
+Use task sequences in Configuration Manager to automatically upgrade an OS on a destination computer. This upgrade can be from Windows 7 or later to Windows 10 or later, or from Windows Server 2012 or later to Windows Server 2016 or later. Create a task sequence that references an OS upgrade package or feature update and any other content to install, such as applications or software updates. The task sequence to upgrade an OS is part of the [Upgrade Windows to the latest version](upgrade-windows-to-the-latest-version.md) scenario.  
 
 Starting in version 2103, you can upgrade by using a feature update deployed with the task sequence. This integration combines the simplicity of Windows servicing with the flexibility of task sequences. Servicing uses content that you synchronize through the software update point. This process simplifies the need to manually get, import, and maintain the Windows image content used with a standard task sequence to upgrade Windows. The size of the servicing ESD file is generally smaller than the OS upgrade package and WIM image file.<!--3555906-->
 
@@ -46,7 +47,7 @@ Before you create the task sequence, make sure the following requirements are in
 - For a deployment package that contains the feature update, distribute it to a distribution point that the client can access. For more information, see [Download software updates](../../sum/deploy-use/download-software-updates.md).
 
     > [!NOTE]
-    > If the feature update isn't already downloaded, you can manage the deployment package when you deploy the task sequence.
+    > If the feature update isn't already downloaded, you can manage the deployment package when you deploy the task sequence. 
     >
     > When you deploy the task sequence, you can also select the option of **No deployment package** for the feature update. When clients run the task sequence, they download the feature update from peers or the Microsoft cloud.
     >
@@ -61,6 +62,8 @@ Before you create the task sequence, make sure the following requirements are in
   - **Allow clients to download delta content when available**: If you use Windows Delivery Optimization, the content that the client downloads may be much smaller.
 
 #### Known issues with feature updates in a task sequence
+Windows 11 Feature Upgrades are not visible to be selected from the Wizard. This happens if the License Terms of the desired Feature Upgrade have not been accepted yet. To do so navigate to the Feature Upgrade and select "Review Licence" from the context menu. Review and Accept the licensing terms to make this Upgrade "deployable".
+<!-- Bug 13189927 -->
 
 ##### Create a new task sequence
 
@@ -70,11 +73,11 @@ _Applies to version 2103_
 If you need to create a new task sequence, you need an OS upgrade package to complete the Create Task Sequence Wizard.
 
 > [!NOTE]
-> To create a task sequence to upgrade an OS to Windows 10, you typically use the steps in the [Process](#process) section. The task sequence includes the **Upgrade OS** step, as well as additional recommended steps and groups to handle the end-to-end upgrade process.
+> To create a task sequence to upgrade Windows, you typically use the steps in the [Process](#process) section. The task sequence includes the **Upgrade OS** step, as well as additional recommended steps and groups to handle the end-to-end upgrade process.
 >
 > You can create a custom task sequence and add the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) step. If you choose this method, also add the [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step after the **Upgrade OS** step. Make sure to use the setting for **The currently installed default operating system** to restart the computer into the installed OS and not Windows PE.
 
-If you have an existing Windows 10 in-place upgrade task sequence, [edit](../understand/task-sequence-editor.md#bkmk_edit) or [copy](manage-task-sequences-to-automate-tasks.md#copy) it. Then change the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to install the feature update.
+If you have an existing in-place upgrade task sequence, [edit](../understand/task-sequence-editor.md#bkmk_edit) or [copy](manage-task-sequences-to-automate-tasks.md#copy) it. Then change the [Upgrade OS](../understand/task-sequence-steps.md#BKMK_UpgradeOS) task sequence step to install the feature update.
 
 Starting in version 2107, you can create a new task sequence with just a feature update.<!-- 10092835 -->
 
@@ -146,7 +149,7 @@ To upgrade the OS on clients, create a task sequence and select **Upgrade an ope
 
 ## Customize
 
-The default task sequence template for Windows 10 in-place upgrade includes other groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading devices to Windows 10. For more information, see [In-place upgrade recommendations](../understand/in-place-upgrade-recommendations.md).
+The default task sequence template for in-place upgrade includes other groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading devices to Windows 10 or later. For more information, see [In-place upgrade recommendations](../understand/in-place-upgrade-recommendations.md).
 
 ## Next steps
 

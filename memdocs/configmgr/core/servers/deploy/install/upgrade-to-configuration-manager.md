@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Upgrade to Configuration Manager current branch
@@ -69,7 +69,7 @@ Resolve issues as detailed in the following Microsoft Support article: [Configur
 
   - The prerequisite checker for Configuration Manager doesn't verify the prerequisites for site system roles on the site server or on remote site systems.
 
-- Review required prerequisites for each computer that hosts a site system role. For example, to deploy an OS, Configuration Manager uses the Windows 10 Assessment and Deployment Kit (Windows ADK). Before you run Setup, you must download and install Windows 10 ADK on the site server and on each computer that runs an instance of the SMS Provider.
+- Review required prerequisites for each computer that hosts a site system role. For example, to deploy an OS, Configuration Manager uses the Windows Assessment and Deployment Kit (ADK). Before you run Setup, download and install the Windows ADK on the site server and on each computer that runs an instance of the SMS Provider.
 
 For more information about supported platforms and prerequisite configurations, see [Supported configurations](../../../plan-design/configs/supported-configurations.md).
 
@@ -263,7 +263,7 @@ When you upgrade to Configuration Manager, the following actions occur automatic
 
 - A site reset. This action includes a reinstallation of all site system roles.
 
-- If the site is the top-level site of a hierarchy, it updates the client installation package on each distribution point in the hierarchy. The site also updates the default boot images to use the new Windows PE version that's included with the Windows 10 ADK. However, the upgrade doesn't upgrade existing media for use with image deployment.
+- If the site is the top-level site of a hierarchy, it updates the client installation package on each distribution point in the hierarchy. The site also updates the default boot images to use the new Windows PE version for the same version of the Windows ADK. However, the upgrade doesn't upgrade existing media for use with image deployment.
 
 - If the site is a primary site, it updates the client upgrade package for that site.
 

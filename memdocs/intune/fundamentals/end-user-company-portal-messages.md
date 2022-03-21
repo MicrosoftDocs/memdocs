@@ -13,8 +13,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 3df993aa-48c5-4799-b68d-c85fe4f7b02c
 
 # optional metadata
 
@@ -26,13 +24,15 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Help end users understand Company Portal app messages
 
 > [!NOTE]
-> The following information applies only on devices with Android 6.0+ and iOS 10+.
+> The following information applies only on devices with Android 8.0+ and iOS 10+.
 
 Understand the different app messages that end users may see in the Company Portal. These app messages are commonly displayed at different points in the enrollment process. Learn where the messages appear, what the messages mean, and what happens if users deny access. Additionally, learn how to best explain the messages to users.
 

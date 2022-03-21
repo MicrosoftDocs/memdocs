@@ -2,13 +2,14 @@
 title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Approve applications in Configuration Manager
@@ -17,25 +18,28 @@ manager: dougeby
 
 When [deploying an application](deploy-applications.md) in Configuration Manager, you can require approval before installation. Users request the application in Software Center, and then you review the request in the Configuration Manager console. You can approve or deny the request.
 
+> [!NOTE]
+> Starting in version 2111, you can also use most approval behaviors with [application groups](create-app-groups.md#app-approval).<!-- 10992210 -->
+
 ## <a name="bkmk_approval"></a> Approval settings
 
-The application approval behavior depends upon whether you enable the recommended [optional app approval experience](#bkmk_opt). One of the following approval settings appears on the **Deployment Settings** page of the application deployment:  
+The application approval behavior depends upon whether you enable the recommended [optional app approval experience](#bkmk_opt). One of the following approval settings appears on the **Deployment Settings** page of the application deployment:
 
 ### <a name="bkmk_opt"></a> An administrator must approve a request for this application on the device
 
 > [!NOTE]
 > Configuration Manager doesn't enable this feature by default. Before using it, enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 >
-> If you don't enable this feature, you see the [prior experience](#bkmk_prior).  
+> If you don't enable this feature, you see the [prior experience](#bkmk_prior).
 
-The administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection. <!--1357015-->  
+The administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection. <!--1357015-->
 
 > [!NOTE]
-> To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.<!--SCCMDocs issue 646-->  
+> To take advantage of new Configuration Manager features, first update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.<!--SCCMDocs issue 646-->
 
 View **Application Requests** under **Application Management** in the **Software Library** workspace of the Configuration Manager console. There's a **Device** column in the list for each request. When you take action on the request, the Application Request dialog also includes the device name from which the user submitted the request.
 
-If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
+If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.
 
 When you require approval on a deployment to a device collection, the app isn't displayed in Software Center. If you require approval on a deployment to a user collection, the app is displayed in Software Center. You can still hide it from users with the client setting, **Hide unapproved applications in Software Center**. For more information, see [Software Center client settings](../../core/clients/deploy/about-client-settings.md#software-center).
 
@@ -56,8 +60,8 @@ You can retry the installation of an app that you previously approved for a user
 
 1. Deploy an app that requires approval, and approve it.
 
-    > [!Tip]  
-    > Alternatively, [Install an application for a device](install-app-for-device.md). It creates an approved request for the app on the device.  
+    > [!TIP]
+    > Alternatively, [install an application for a device](install-app-for-device.md). It creates an approved request for the app on the device.
 
 If the application doesn't install successfully, or the user uninstalls the app, use the following process to retry:
 
@@ -72,14 +76,14 @@ If the application doesn't install successfully, or the user uninstalls the app,
 
 ### <a name="bkmk_prior"></a> Require administrator approval if users request this application
 
-> [!Note]  
+> [!NOTE]
 > This experience applies if you don't enable the recommended [optional app approval experience](#bkmk_opt).
 
-The administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
+The administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.
 
-Application approval requests are displayed in the **Application Requests** node, under **Application Management** in the **Software Library** workspace. If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.  
+Application approval requests are displayed in the **Application Requests** node, under **Application Management** in the **Software Library** workspace. If a request isn't approved within 30 days, it's removed. Reinstalling the client might cancel any pending approval requests.
 
-After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.  
+After you've approved an application for installation, you can **Deny** the request in the Configuration Manager console. This action doesn't cause the client to uninstall the application from any devices. It stops users from installing new copies of the application from Software Center.
 
 ## <a name="bkmk_email-approve"></a> Email notifications
 
@@ -99,21 +103,14 @@ Users can add a comment to the request from Software Center. This comment shows 
 
 With these prerequisites, recipients receive an email with notification of the request. If they are on the internal network, they can also approve or deny the request from the email.
 
-- Enable the [optional feature](../../core/servers/manage/optional-features.md) **Approve application requests for users per device**.  
+- Enable the [optional feature](../../core/servers/manage/optional-features.md) **Approve application requests for users per device**.
 
-- Configure [email notification for alerts](../../core/servers/manage/configure-alerts.md#configure-email-notification-for-alerts).  
+- Configure [email notification for alerts](../../core/servers/manage/configure-alerts.md#configure-email-notification-for-alerts).
 
     > [!NOTE]
     > The administrative user that deploys the application needs permission to create an alert and subscription. If this user doesn't have these permissions, they'll see an error at the end of the **Deploy Software Wizard**: "You do not have security rights to perform this operation."<!-- 2810283 -->
 
-- Enable the SMS Provider on the primary site to use a certificate.<!--SCCMDocs-pr issue 3135--> Use one of the following options:  
-
-  - (Recommended) Enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md) for the primary site.
-
-    > [!Note]  
-    > When the primary site creates a certificate for the SMS Provider, it won't be trusted by the web browser on the client. Based on your security settings, when responding to an application request, you may see a security warning.  
-
-  - Manually bind a PKI-based certificate to port 443 in IIS on the server that hosts the SMS Provider role on the primary site.
+- [Set up the administration service in Configuration Manager](../../develop/adminservice/set-up.md).
 
 > [!NOTE]
 > If you have multiple child primary sites in a hierarchy, configure these prerequisites for each primary site where you want to enable this feature. The links in the email notification are for the administration service at the primary site.<!-- 7108472 -->
@@ -122,37 +119,45 @@ With these prerequisites, recipients receive an email with notification of the r
 
 With these additional optional prerequisites, recipients can approve or deny the request from anywhere they have internet access.
 
-- Enable the SMS Provider administration service through the cloud management gateway. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node. Select the server with the SMS Provider role. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the Site Role tab. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.  
+- Enable the SMS Provider administration service through the cloud management gateway. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Servers and Site System Roles** node. Select the server with the SMS Provider role. In the details pane, select the **SMS Provider** role, and select **Properties** in the ribbon on the Site Role tab. Select the option to **Allow Configuration Manager cloud management gateway traffic for administration service**.
 
 - Install a supported version of the .NET Framework. Starting in version 2107, the SMS Provider requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5 or later. For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
 - Set up a [cloud management gateway](../../core/clients/manage/cmg/overview.md).
 
+    > [!NOTE]
+    > This scenario currently doesn't support CMG deployments with a virtual machine scale set.
+
 - Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**.
 
 - Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
 
-- Manually configure settings in Azure AD:  
+- Manually configure settings in Azure AD:
 
-    1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**.  
+    1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Azure Active Directory**, and select **App registrations**.
 
-    1. Select the application that you created for Configuration Manager **Cloud Management** integration.  
+    1. Select the application that you created for Configuration Manager **Cloud Management** integration.
 
-    1. In the **Manage** menu, select **Authentication**.  
+    1. In the **Manage** menu, select **Authentication**.
 
-        1. In the **Redirect URIs** section, paste in the following path: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`  
+        1. In the **Redirect URIs** section, paste in the following path: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`
 
-        1. Replace `<CMG FQDN>` with the fully qualified domain name (FQDN) of your cloud management gateway (CMG) service. For example, GraniteFalls.Contoso.com.  
+        1. Replace `<CMG FQDN>` with the fully qualified domain name (FQDN) of your cloud management gateway (CMG) service. For example, GraniteFalls.Contoso.com.
 
-        1. Then select **Save**.  
+        1. For Configuration Manager version 2111 and later, in the **Implicit grant and hybrid flows** section, select the following options:<!-- 12510370 -->
 
-    1. In the **Manage** menu, select **Manifest**.  
+            - **Access tokens (used for implicit flows)**
+            - **ID tokens (used for implicit and hybrid flows)**
 
-        1. In the Edit manifest pane, find the **oauth2AllowImplicitFlow** property.  
+        1. Then select **Save**.
 
-        1. Change its value to **true**. For example, the entire line should look like the following line: `"oauth2AllowImplicitFlow": true,`  
+    1. For Configuration Manager version 2107 and earlier, in the **Manage** menu, select **Manifest**.
 
-        1. Select **Save**.  
+        1. In the Edit manifest pane, find the **oauth2AllowImplicitFlow** property.
+
+        1. Change its value to **true**. For example, the entire line should look like the following line: `"oauth2AllowImplicitFlow": true,`
+
+        1. Select **Save**.
 
 ### Configure email approval
 

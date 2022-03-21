@@ -1,23 +1,25 @@
 ---
 title: Co-manage internet-based devices
 titleSuffix: Configuration Manager
-description: Learn how to prepare your Windows 10 internet-based devices for co-management.
+description: Learn how to prepare your Windows internet-based devices for co-management.
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 02/16/2022
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # How to prepare internet-based devices for co-management
 
-This article focuses on the second path to co-management, for new internet-based devices. This scenario is when you have new Windows 10 devices that join Azure AD and automatically enroll to Intune. You install the Configuration Manager client to reach a co-management state.
+This article focuses on the second path to co-management, for new internet-based devices. This scenario is when you have new Windows 10 or later devices that join Azure AD and automatically enroll to Intune. You install the Configuration Manager client to reach a co-management state.
 
 ## Windows Autopilot
 
-For new Windows 10 devices, you can use the Autopilot service to configure the out of box experience (OOBE). This process includes joining the device to Azure AD and enrolling the device in Intune.
+For new Windows devices, you can use the Autopilot service to configure the out of box experience (OOBE). This process includes joining the device to Azure AD and enrolling the device in Intune.
 
 For more information, see [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md).
 
@@ -51,7 +53,7 @@ For more information, see [Windows Autopilot for existing devices task sequence]
 
 ## Install the Configuration Manager client
 
-For internet-based devices in the second path, you need to create an app in Intune. Deploy this app to Windows 10 devices that aren't already Configuration Manager clients.
+For internet-based devices in the second path, you need to create an app in Intune. Deploy this app to Windows 10 or later devices that aren't already Configuration Manager clients.
 
 > [!NOTE]
 > Before you assign this app to devices in Intune, make sure that the devices trust the CMG server authentication certificate. For more information, see [CMG server authentication certificate](../core/clients/manage/cmg/server-auth-cert.md). If a device doesn't trust the CMG server authentication certificate, you'll see a WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA error in the ccmsetup.log on the client.
@@ -59,11 +61,13 @@ For internet-based devices in the second path, you need to create an app in Intu
 ### Get the command line from Configuration Manager
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Attach** node.
-   - For version 2103 and earlier, select the **Co-management** node.
+
+   > [!TIP]
+   > For version 2103 and earlier, select the **Co-management** node.
 
 1. Select the co-management object, and then choose **Properties** in the ribbon.
 
-1. On the **Enablement** tab, copy the command line. Paste it into Notepad to save for the next process. The command line only shows if you've met all of the prerequisites, such as set up a cloud management gateway.<!-- MEMDocs#635 -->
+1. On the **Enablement** tab, copy the command line. Paste it into Notepad to save for the next process. The command line only shows if you've met all of the prerequisites, such as a cloud management gateway.<!-- MEMDocs#635 -->
 
 The following command line is an example:
 `CCMSETUPCMD="CCMHOSTNAME=contoso.cloudapp.net/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC"`
@@ -72,27 +76,27 @@ The following command line is an example:
 Decide which command-line properties you require for your environment:
 
 - The following command-line properties are required in all scenarios:
-  - CCMHOSTNAME
-  - SMSSITECODE
+
+  - `CCMHOSTNAME`
+
+  - `SMSSITECODE`
 
 - If a device uses Azure AD for client authentication and also has a PKI-based client authentication certificate, specify the following properties to use Azure AD:<!-- MEMDocs#1483 -->
-  - AADCLIENTAPPID
-  - AADRESOURCEURI
 
-- If the client roams back to the intranet, use the following property:
-  - SMSMP
+  - `AADCLIENTAPPID`
 
-- If using your own PKI certificate, and your CRL isn't published to the internet, the following parameter is required:
-  - /noCRLCheck
+  - `AADRESOURCEURI`
 
-    For more information, see [Planning for CRLs](../core/plan-design/security/plan-for-certificates.md#pki-certificate-revocation).
+- If the client roams back to the intranet, use the `SMSMP` property.
 
-- Starting in version 2002, use the following property to bootstrap a task sequence immediately after client registration:
-  - PROVISIONTS
+- If you use your own PKI certificate, and your CRL isn't published to the internet, use the `/NoCRLCheck` parameter. For more information, see [About client installation properties: /NoCRLCheck](../core/clients/deploy/about-client-installation-properties.md#nocrlcheck).
 
-    For more information, see [About client installation properties - PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts).
+  > [!IMPORTANT]
+  > Microsoft recommends publishing the CRL. For more information, see [Planning for CRLs](../core/plan-design/security/plan-for-certificates.md#pki-certificate-revocation).<!-- memdocs#1942 -->
 
-The site publishes other Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSITECODE**.<!--3607731-->
+- To bootstrap a task sequence immediately after client registration, use the `PROVISIONTS` property. For more information, see [About client installation properties: PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts).
+
+The site publishes other Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are `CCMHOSTNAME` and `SMSSITECODE`.<!--3607731-->
 
 > [!NOTE]
 > If you're already deploying the Configuration Manager client from Intune, update the Intune app with a new command line and new MSI.<!-- SCCMDocs-pr issue 3084 -->

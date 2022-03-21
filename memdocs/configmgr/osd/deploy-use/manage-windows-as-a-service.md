@@ -1,75 +1,81 @@
 ---
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
-description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows 10 clients are near end of support.
-ms.date: 03/26/2020
+description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows clients are near end of support.
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-ms.assetid: da1e687b-28f6-43c4-b14a-ff2b76e60d24 
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Manage Windows as a service using Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-In Configuration Manager, you can view the state of Windows as a Service (WaaS) in your environment. Create servicing plans to form deployment rings, and keep Windows 10 systems up to date when new builds are released. You can also view alerts when Windows 10 clients are near end of support for their semi-annual channel build.
+In Configuration Manager, you can view the state of Windows as a service in your environment. Create servicing plans to form deployment rings, and keep Windows systems up to date when new builds are released. You can also view alerts when Windows clients are near end of support for the build version.
 
-For more information about Windows 10 servicing options, see  [Overview of Windows as a Service](/windows/deployment/update/waas-overview#servicing-channels).
+For more information about Windows servicing options, see [Overview of Windows as a Service](/windows/deployment/update/waas-overview).
 
 ## Prerequisites
 
-- Windows 10 computers must use Configuration Manager software updates with Windows Server Update Services (WSUS) for software update management. When computers use Windows Update for Business (or Windows Insiders) for software update management, the computer isn't evaluated in Windows 10 servicing plans. For more information, see [Integration with Windows Update for Business in Windows 10](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).
+- Windows computers must use Configuration Manager software updates with Windows Server Update Services (WSUS) for software update management. When a computer uses Windows Update for Business or Windows Insiders, it isn't evaluated in Windows servicing plans. For more information, see [Integration with Windows Update for Business](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).
 
 - Use a supported WSUS version:
   - WSUS 10.0.14393, a role in Windows Server 2016
   - WSUS 10.0.17763, a role in Windows Server 2019
   - WSUS 6.2 and 6.3, a role in Windows Server 2012 and Windows Server 2012 R2. Also install [KB 3095113 and KB 3159706](../../sum/plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012) or later.
 
-- Enable heartbeat discovery. The data displayed in the Windows 10 servicing dashboard is found by using discovery. For more information, see [Configure Heartbeat Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).
+- Enable heartbeat discovery. The data that the Windows servicing dashboard displays comes from discovery. For more information, see [Configure heartbeat discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).
 
-  The following Windows 10 channel and build information is discovered and stored in the following attributes on Windows 10 devices:  
+  > [!TIP]
+  > The following Windows channel and build information is discovered and stored in the following attributes:
+  >
+  > - **Operating System Readiness Branch**: Specifies the Windows channel.
+  >   - **Don't defer upgrades** (`0`): The semi-annual channel - targeted
+  >   - **Defer upgrades** (`1`): The semi-annual channel
+  >   - **LTSB** (`2`): The long-term servicing channel (LTSC)
+  >
+  > - **Operating System Build**: Specifies the OS build. For example, `10.0.18362` for Windows 10, version 1903, or `10.0.19041` for Windows 10, version 2004.
 
-  - **Operating System Readiness Branch**: Specifies the Windows 10 channel.
-    - **Don't defer upgrades** (`0`): The semi-annual channel - targeted
-    - **Defer upgrades** (`1`): The semi-annual channel
-    - **LTSB** (`2`): The long-term servicing channel (LTSC)
+- Configure the service connection point for **Online, persistent connection** mode. When the site is in offline mode, you don't see data updates in the dashboard until you get Configuration Manager servicing updates. For more information, see [About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md).
 
-  - **Operating System Build**: Specifies the OS build. For example, `10.0.18362` (version 1903) or `10.0.19041` (version 2004).
-
-- Configure the service connection point for **Online, persistent connection** mode. When you are in offline mode, you don't see data updates in the dashboard until you get Configuration Manager servicing updates. For more information, see [About the service connection point](../../core/servers/deploy/configure/about-the-service-connection-point.md).
-
-- Configure and synchronize software updates. Before any Windows 10 feature upgrades are available in the Configuration Manager console, select the **Upgrades** classification, and synchronize software updates. For more information, see [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md).
+- Configure and synchronize software updates. Before any Windows feature upgrades are available in the Configuration Manager console, select the **Upgrades** classification, and synchronize software updates. For more information, see [Prepare for software updates management](../../sum/get-started/prepare-for-software-updates-management.md).
 
 - Verify the configuration of the following client settings, to make sure they're appropriate for your environment:
+
   - [Specify thread priority for feature updates](../../core/clients/deploy/about-client-settings.md#bkmk_thread-priority)
   - [Enable Dynamic Update for feature updates](../../core/clients/deploy/about-client-settings.md#bkmk_du)<!--4062619-->
 
-
-## <a name="bkmk_2103-dashboard"></a> Windows 10 servicing dashboard in version 2103 or later
+## <a name="bkmk_2103-dashboard"></a> Windows servicing dashboard in version 2103 or later
 <!--3555940-->
 (*Introduced in version 2103*)
 
-Starting in version 2103, the **Windows 10 Servicing** dashboard was simplified to make it more relevant. Servicing plan and Windows 10 ring information were removed from the dashboard. The following charts are displayed for the selected **Collection**:
+Starting in version 2103, the **Windows Servicing** dashboard was simplified to make it more relevant. Servicing plan and Windows 10 ring information were removed from the dashboard. The following charts are displayed for the selected **Collection**:
 
-**Feature Update Versions**: Displays the distribution of Windows 10 major releases. This chart as previously called **Windows 10 Usage**.
+**Feature Update Versions**: Displays the distribution of Windows major releases. This chart as previously called **Windows 10 Usage**.
 
-**Quality Update Versions**: This chart displays the top five revisions of Windows 10 across your devices.
+**Quality Update Versions**: This chart displays the top five revisions of Windows across your devices.
 
-**Latest Feature Update**: This chart shows the number of devices that installed the latest feature update.
+**Windows 10 Latest Feature Update** (added in 2111): This chart shows the number of devices that installed the latest feature update for Windows 10. <!--10579996-->
+
+**Windows 11 Latest Feature Update** (added in 2111): This chart shows the number of devices that installed the latest feature update for Windows 11. <!--10579996-->
+
+**Latest Feature Update** (versions 2103 and 2107): This chart shows the number of devices that installed the latest feature update. 
 
 **Collection Errors**: This tile shows the number of devices that failed with the specified error code. For more information, see [Analyze SetupDiag errors](#analyze-setupdiag-errors).
 
 **Errors Timeline**: Displays the top errors and the number of devices with each error over the course of time for the chosen collection.
 
-:::image type="content" source="./media/3555940-servicing-dashboard.png" alt-text="The Windows 10 Servicing dashboard in Configuration Manager" lightbox="./media/3555940-servicing-dashboard.png":::
+:::image type="content" source="./media/3555940-10579996-servicing-dashboard.png" alt-text="Screenshot of the Windows Servicing dashboard in Configuration Manager." lightbox="./media/3555940-10579996-servicing-dashboard.png":::
 
 > [!IMPORTANT]
-> - The information shown in the Windows 10 servicing dashboard is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you.
-> - For more detailed information about Windows 10 builds, see the [Product Lifecycle dashboard](../../core/clients/manage/asset-intelligence/product-lifecycle-dashboard.md). <!--3446861-->
+> - The **Windows Servicing** dashboard in Configuration Manager versions 2103 and 2107 includes Windows 11 devices with the latest version of Windows 10. They don't distinguish a version for Windows 11.<!-- 10732387 -->
+> - The information shown in the Windows servicing dashboard is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you. For more detailed information about Windows builds, see the [Product Lifecycle dashboard](../../core/clients/manage/asset-intelligence/product-lifecycle-dashboard.md). <!--3446861-->
+
 ## Windows 10 servicing dashboard in version 2010 and earlier
 
 The Windows 10 servicing dashboard provides you with information about Windows 10 computers in your environment, servicing plans, and compliance information. The data in the Windows 10 servicing dashboard is dependent on the service connection point. The dashboard has the following tiles:
@@ -98,9 +104,9 @@ For more detailed information about Windows 10 builds, see the [Product Lifecycl
 ## Drill through required updates
 <!--4224414-->
 
-You can drill through compliance statistics to see which devices require a specific Windows 10 feature update. To view the device list, you need permission to view updates and the collections the devices belong to.
+You can drill through compliance statistics to see which devices require a specific Windows feature update. To view the device list, you need permission to view updates and the collections the devices belong to.
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows 10 Servicing**, and select the **All Windows 10 Updates** node.
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows Servicing**, and select the **All Windows Feature Updates** node.
 
 1. Select any update that is required by at least one device.
 
@@ -110,7 +116,7 @@ You can drill through compliance statistics to see which devices require a speci
 
 ## Servicing plan workflow
 
-Windows 10 servicing plans in Configuration Manager are much like automatic deployment rules for software updates. You create a servicing plan with the following criteria that Configuration Manager evaluates:
+Windows servicing plans in Configuration Manager are much like automatic deployment rules for software updates. You create a servicing plan with the following criteria that Configuration Manager evaluates:
 
 - **Upgrades classification**: Only updates that are in the **Upgrades** classification are evaluated.
 
@@ -118,23 +124,23 @@ Windows 10 servicing plans in Configuration Manager are much like automatic depl
 
 - **Time deferral**: The number of days that you specify for **How many days after Microsoft has published a new upgrade would you like to wait before deploying in your environment** in the servicing plan. If the current date is after the release date plus the configured number of days, Configuration Manager evaluates whether to include an upgrade in the deployment.
 
-  When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection. It does these actions based on the settings that you configure in the servicing plan. Monitor the deployments with the **Service Plan Monitoring** tile on the Windows 10 servicing dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).
+  When an upgrade meets the criteria, the servicing plan adds the upgrade to the deployment package, distributes the package to distribution points, and deploys the upgrade to the collection. It does these actions based on the settings that you configure in the servicing plan. Monitor the deployments with the **Service Plan Monitoring** tile on the Windows servicing dashboard. For more information, see [Monitor software updates](../../sum/deploy-use/monitor-software-updates.md).
 
 > [!NOTE]
 > **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10** product like earlier versions. This change caused you to do a number of manual steps to make sure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. For more information, see [Configuring products for versions of Windows 10](../../sum/get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later).<!--4682946-->
 
-## Windows 10 servicing plan
+## Windows servicing plan
 
-As you deploy Windows 10 semi-annual channel, you can create one or more servicing plans. These plans define the deployment rings that you want in your environment. Then monitor them in the Windows 10 servicing dashboard. Servicing plans use only the **Upgrades** software updates classification, not cumulative updates for Windows 10. For cumulative updates, continue to use the software updates workflow. The end-user experience with a servicing plan is the same as with software updates, including the settings that you configure in the servicing plan.
+As you deploy Windows, you can create one or more servicing plans. These plans define the deployment rings that you want in your environment. Then monitor them in the Windows servicing dashboard. Servicing plans use only the **Upgrades** software updates classification, not cumulative updates for Windows. For cumulative updates, continue to use the software updates workflow. The end-user experience with a servicing plan is the same as with software updates, including the settings that you configure in the servicing plan.
 
 > [!NOTE]
-> You can use a task sequence to deploy an upgrade for each Windows 10 build, but it requires more manual work. You would need to import the updated source files as an OS upgrade package, and then create and deploy the task sequence to the appropriate set of computers. However, a task sequence provides additional customized options, such as the pre-deployment and post-deployment actions.
+> You can use a task sequence to deploy an upgrade for each Windows build, but it requires more manual work. You would need to import the updated source files as an OS upgrade package, and then create and deploy the task sequence to the appropriate set of computers. However, a task sequence provides additional customized options, such as the pre-deployment and post-deployment actions.
 
-You can create a basic servicing plan from the Windows 10 servicing dashboard. After you specify the name, collection, deployment package, and readiness state, Configuration Manager creates the servicing plan with default values for the other settings. You can also start the Create Servicing Plan wizard to configure all of the settings.
+You can create a basic servicing plan from the Windows servicing dashboard. After you specify the name, collection, deployment package, and readiness state, Configuration Manager creates the servicing plan with default values for the other settings. You can also start the Create Servicing Plan wizard to configure all of the settings.
 
 ### Create a servicing plan with the Create Servicing Plan wizard
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows 10 Servicing**, and then select the **Servicing Plans** node.
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows Servicing**, and then select the **Servicing Plans** node.
 
 1. On the **Home** tab of the ribbon, in the **Create** group, select **Create Servicing Plan**.
 
@@ -144,7 +150,7 @@ You can create a basic servicing plan from the Windows 10 servicing dashboard. A
 
     - **Description**: Optionally, specify a description for the servicing plan. The description could provide an overview of the servicing plan. You might note any other relevant information that helps to identify and differentiate the plan among others in the Configuration Manager site. The description field is optional, and has a limit of 256 characters.
 
-1. On the **Servicing Plan** page, specify the **Target Collection**. Members of the collection receive the Windows 10 upgrades that the servicing plan defines.
+1. On the **Servicing Plan** page, specify the **Target Collection**. Members of the collection receive the Windows upgrades that the servicing plan defines.
 
     > [!IMPORTANT]
     > When you deploy a high-risk deployment, such as servicing plan, the **Select Collection** window displays only the custom collections that meet the deployment verification settings. Configure these settings in the site properties.
@@ -206,7 +212,6 @@ You can create a basic servicing plan from the Windows 10 servicing dashboard. A
             > [!NOTE]
             > The actual installation deadline time is the displayed deadline interval plus a random amount of time up to 2 hours. This randomization reduces the potential impact of all clients in the collection installing the upgrade at the same time.
 
-
         - **Delay enforcement of this deployment according to user preferences, up to the grace period defined on the client**: Select this option to honor the [**Grace period for enforcement after deployment deadline (hours)** client setting](../../core/clients/deploy/about-client-settings.md#grace-period-for-enforcement-after-deployment-deadline-hours).
 
 1. On the **User Experience** page, configure the following settings:  
@@ -263,12 +268,12 @@ After you complete the wizard, the site runs the servicing plan for the first ti
 
 ## Modify a servicing plan
 
-After you create a basic servicing plan from the Windows 10 servicing dashboard, or you need to change the settings for an existing servicing plan, go to properties for the servicing plan.
+After you create a basic servicing plan from the Windows servicing dashboard, or you need to change the settings for an existing servicing plan, go to properties for the servicing plan.
 
 > [!NOTE]
 > You can configure settings in the properties for the servicing plan that aren't available in the wizard. The wizard uses default settings for  the following areas: download settings, deployment settings, and alerts.
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows 10 Servicing**, and select the **Servicing Plans** node. Then select the servicing plan that you want to modify.
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows Servicing**, and select the **Servicing Plans** node. Then select the servicing plan that you want to modify.
 
 1. On the **Home** tab of the ribbon, select **Properties**.
 
@@ -292,7 +297,7 @@ The following settings are available in the servicing plan properties that weren
 - Specify whether to have clients download the content from Microsoft Update, if it's not available on distribution points.
 
     > [!IMPORTANT]
-    > Don't use this setting for Windows 10 servicing updates. Configuration Manager fails to download the Windows 10 servicing updates from Microsoft Update.
+    > Don't use this setting for Windows servicing updates. Configuration Manager fails to download the Windows servicing updates from Microsoft Update.
 
 - Specify whether to allow clients to download after an installation deadline when they use metered internet connections.
 
@@ -308,12 +313,11 @@ You can review recent alerts from the **Software Updates** node in the **Softwar
 
 With the release of Windows 10, version 2004, the [SetupDiag](/windows/deployment/upgrade/setupdiag) diagnostic tool is included with Windows Setup. If there's an issue with the upgrade, SetupDiag automatically runs to determine the cause of the failure.
 
-Starting in version 2010, Configuration Manager gathers and summarizes SetupDiag results from feature update deployments with Windows 10 servicing.
+Starting in version 2010, Configuration Manager gathers and summarizes SetupDiag results from feature update deployments with Windows servicing.
 
-The **Windows 10 Servicing** dashboard in the **Software Library** workspace of the Configuration Manager console includes a tile for **Collection Errors**. Each bar shows the number of devices that failed with the specified error code. For more information, see [Windows upgrade error codes](/windows/deployment/upgrade/upgrade-error-codes).
+The **Windows Servicing** dashboard in the **Software Library** workspace of the Configuration Manager console includes a tile for **Collection Errors**. Each bar shows the number of devices that failed with the specified error code. For more information, see [Windows upgrade error codes](/windows/deployment/upgrade/upgrade-error-codes).
 
-
-:::image type="content" source="media/4385028-collection-errors-tile.png" alt-text="Collection Errors tile in Windows 10 Servicing dashboard":::
+:::image type="content" source="media/4385028-collection-errors-tile.png" alt-text="Collection Errors tile in Windows Servicing dashboard.":::
 
 Each bar shows the number of devices that failed with the specified error code. For more information, see [Windows upgrade error codes](/windows/deployment/upgrade/upgrade-error-codes).
 

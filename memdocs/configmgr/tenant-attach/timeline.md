@@ -1,25 +1,22 @@
 ---
-title: Tenant attach - Device timeline (preview)
+title: Tenant attach - Device timeline
 titleSuffix: Configuration Manager
-description: "View the timeline for Configuration Manager devices from the admin center."
-ms.date: 01/13/2021
+description: View the timeline for Configuration Manager devices from the admin center.
+ms.date: 01/25/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: b2d914d8-6714-4fa1-9e14-0046b77e6b40
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
-# <a name="bkmk_timeline"></a> Tenant attach: Device timeline in the admin center (preview)
-<!--CM7141381, IN7552762 pubpreview Sept 8, 2020-->
+# <a name="bkmk_timeline"></a> Tenant attach: Device timeline in the admin center
+<!--CM7141381, IN7552762 pubpreview Sept 8, 2020, GA 2201-->
 *Applies to: Configuration Manager (current branch)*
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. When Configuration Manager synchronizes a device to Microsoft Endpoint Manager through tenant attach, you can see a timeline of events. This timeline shows past activity on the device that can help you troubleshoot problems.
-
-> [!Important]
-> - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Prerequisites
 
@@ -86,7 +83,7 @@ You will receive a time out error if the following condition applies:
 
 - You're opening **Timeline** for the very first time after restarting SMSExecutive on the service connection point's on-premises server. 
 
-To workaround the issue, reload the **Timeline** page.
+To work around the issue, reload the **Timeline** page.
 
 ## Next steps
 

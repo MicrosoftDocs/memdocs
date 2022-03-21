@@ -94,6 +94,10 @@ Find out more about [what happens when you create a work profile](what-happens-w
 
 Work profile setup is supported in [countries and regions where Android Enterprise is available](https://support.google.com/work/android/answer/6270910) (opens Google Support website). Company Portal can't set up a work profile on your device if you're outside these areas. If Android Enterprise isn't available in your country or region, ask your support person for other ways to access work resources.  
 
+## Update Google Play services  
+
+If the version of Google Play services on your device is outdated, you may be unable to enroll your device. [Open Google Play services](https://play.google.com/store/apps/details?id=com.google.android.gms)(opens Google Play) to check for and install available updates. For more information about how to update Android apps, see [Update your Android apps](https://support.google.com/googleplay/answer/113412)(opens Google Play Help). 
+
 ## Next steps  
 
 Now that your device is enrolled, you can install school or work apps on your device. Go to the managed Google Play store to find and install these apps. 

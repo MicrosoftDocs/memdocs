@@ -1,14 +1,16 @@
 ---
 title: Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
-description: "Upload your Configuration Manager devices to the cloud service and take actions from the admin center."
-ms.date: 08/10/2021
+description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
+ms.date: 12/21/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
+ms.collection: highpri
 ---
 
 # <a name="bkmk_attach"></a> Microsoft Endpoint Manager tenant attach: Device sync and device actions
@@ -34,7 +36,9 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
   - Device sync to Intune
   - Device actions in the Microsoft Endpoint Manager admin center
 
-- At least one Intune license for you as the administrator to access the Intune portal. <!--10254915-->
+- At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center. <!--10254915-->
+
+- The [administration service](../develop/adminservice/overview.md) in Configuration Manager needs to be set up and functional. <!--1104776-->
 
 - The user accounts triggering device actions have the following prerequisites:
    - The user account needs to be a synced user object in Azure AD (hybrid identity). This means that the user is synced to Azure Active Directory from Active Directory.
@@ -90,11 +94,14 @@ If you don't have co-management enabled, you'll use the **Cloud Attach Configura
 When co-management isn't enabled, use the instructions below to enable device upload:
 
 1. In the Configuration Manager admin console, go to **Administration** > **Overview** > **Cloud Services** >  **Cloud Attach**. For version 2103 and earlier, select the **Co-management** node.
+
+    - Starting in Configuration Manager version 2111, the tenant attach onboarding experience changed. The cloud attach wizard makes it easier to enable tenant attach and other [cloud features](../cloud-attach/overview.md). You can choose a streamlined set of recommended defaults, or customize your cloud attach features. For more information on enabling tenant attach with the new wizard, see [Enable cloud attach](../cloud-attach/enable.md).<!--10964629-->
+
 1. In the ribbon, select **Configure Cloud Attach** to open the wizard. For version 2103 and earlier, select **Configure co-management** to open the wizard.
 1. On the onboarding page, select **AzurePublicCloud** for your environment. Azure Government Cloud and Azure China 21Vianet aren't supported.
    - Starting in version 2107, US Government customers can select **AzureUSGovernmentCloud**.<!-- 8353823 -->
 1. Select **Sign In**. Use your *Global Administrator* account to sign in.
-1. Ensure the **Upload to Microsoft Endpoint Manager admin center** option is selected on the onboarding** page.
+1. Ensure the **Enable Microsoft Endpoint Manager admin center** option is selected on the **Cloud attach** page. For version 2103 and earlier, select the **Upload to Microsoft Endpoint Manager admin center** option on the **Tenant onboarding** page.
    - Make sure the option **Enable automatic client enrollment for co-management** isn't checked if you don't want to enable co-management now. If you do want to enable co-management, select the option.
    - If you enable co-management along with device upload, you'll be given additional pages in the wizard to complete. For more information, see [Enable co-management](../comanage/how-to-enable.md).
 
@@ -120,51 +127,17 @@ When co-management isn't enabled, use the instructions below to enable device up
 
    [![Device overview in Microsoft Endpoint Manager admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
 
-## <a name="bkmk_aad_app"></a> Import a previously created Azure AD application (optional)
-<!--6479246-->
-*(Introduced in version 2006)*
 
-During a [new onboarding](#bkmk_config), an administrator can specify a previously created application during onboarding to tenant attach. Don't share or reuse Azure AD applications across multiple hierarchies. If you have multiple hierarchies, create separate Azure AD applications for each.
-
-From the onboarding page in the **Cloud Attach Configuration Wizard** (**Co-management Configuration Wizard** in versions 2103 and earlier), select **Optionally import a separate web app to synchronize Configuration Manager client data to Microsoft Endpoint Manager admin center**. This option will prompt you to specify the following information for your Azure AD app:
-
-- Azure AD tenant name
-- Azure AD tenant ID
-- Application name
-- Client ID
-- Secret key
-- Secret key expiry
-- App ID URI
-
-> [!Important]
-> When you use an imported Azure AD app, you aren't notified of an upcoming expiration date from [console notifications](../core/servers/manage/admin-console-notifications.md). <!--10568158--> 
-
-### Azure AD application permissions and configuration
-
-Using a previously created application during onboarding to tenant attach requires the following permissions:
-
-- Configuration Manager Microservice permissions:
-   - CmCollectionData.read
-   - CmCollectionData.write
-
-- Microsoft Graph permissions:
-   - Directory.Read.All [Applications permission](/graph/permissions-reference#application-permissions)
-   - Directory.Read.All [Delegated directory permission](/graph/permissions-reference#directory-permissions)
-
-- Ensure **Grant admin consent for Tenant** is selected for the Azure AD application. For more information, see [Grant admin consent in App registrations](/azure/active-directory/manage-apps/grant-admin-consent).
-
-- The imported application needs to be configured as follows:
-   - Registered for **Accounts in this organizational directory only**. For more information, see [Change who can access your application](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
-   -  Has a valid application ID URI and secret
+[!INCLUDE [Import a previously created Azure AD application](includes/import-azure-app.md)]
 
 ## Display the Configuration Manager connector status from the admin console
  <!--IN9229333, CM7138634-->
-From the Microsoft Endpoint Manager admin center, you can review the status of your Configuration Manager connector. To display the connector status, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy running version 2006, or later to display additional information about it.
+From the Microsoft Endpoint Manager admin center, you can review the status of your Configuration Manager connector. To display the connector status, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy to display additional information about it.
    
 :::image type="content" source="media/7138634-connector-status.png" alt-text="Microsoft Endpoint Configuration Manager connector in the admin center" lightbox="media/7138634-connector-status.png":::
 
 > [!NOTE]
-> Some information isn't available if the hierarchy is running Configuration Manager version 2006.
+> Some information isn't available if the hierarchy is running Configuration Manager version 2006 or earlier.
 
 ## <a name="bkmk_offboard"></a> Offboard from tenant attach
 
@@ -181,15 +154,18 @@ When tenant attach is already enabled, edit the co-management properties to disa
 
 ### Offboard from the Microsoft Endpoint Manager admin center
 <!-- CMADO7043245 INADO9412904 -->
-If needed, you can offboard a Configuration Manager version 2006 or later hierarchy from the Microsoft Endpoint Manager admin center. For example, you may need to offboard from the admin center following a disaster recovery scenario where the on-premises environment was removed. Follow the steps below to remove your Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center:
+If needed, you can offboard a Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center. For example, you may need to offboard from the admin center following a disaster recovery scenario where the on-premises environment was removed. Follow the steps below to remove your Configuration Manager hierarchy from the Microsoft Endpoint Manager admin center:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Tenant administration** then **Connectors and tokens**.
 1. Select **Microsoft Endpoint Configuration Manager**.
 1. Choose the name of the site you would like to offboard, then select **Delete**.
-   - This option is only visible for sites running Configuration Manager version 2006 or later.
+   - The connector may be listed as **Unknown** for version 2002 sites or if site information is lacking. <!--10569820, 10944009-->
 
 When you offboard a hierarchy from the admin center, it may take up to two hours to remove from the Microsoft Endpoint Manager admin center. If you offboard a Configuration Manager 2103 or later site that's online and healthy, the process may only take a few minutes.
+
+> [!NOTE]
+> If you are using custom [RBAC roles with Intune](../../intune/fundamentals/role-based-access-control.md#roles), you will need to grant the **Organization** > **Delete** permission to offboard a hierarchy.
 
 ## Next steps
 

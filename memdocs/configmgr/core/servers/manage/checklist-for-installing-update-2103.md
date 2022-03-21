@@ -6,10 +6,10 @@ ms.date: 04/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: c012ed7d-dba6-4075-9db2-61d0939d07a8
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Checklist for installing update 2103 for Configuration Manager
@@ -329,4 +329,4 @@ For more information, see [Configuration Manager PowerShell cmdlets: Update help
 
 ## Next steps
 
-Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. There's a tip at the top of that article about how to receive RSS notifications of changes.
+Review the [release notes](../deploy/install/release-notes.md). This article can be updated regularly, especially right after a new current branch release. You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../use-docs.md#notifications).

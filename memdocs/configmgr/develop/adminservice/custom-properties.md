@@ -2,13 +2,15 @@
 title: Custom properties for devices
 titleSuffix: Configuration Manager
 description: Use the administration service to set custom property data on devices, for reporting or collections.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Custom properties for devices
@@ -27,6 +29,11 @@ Many customers have other data that's external to Configuration Manager but usef
 
 Starting in version 2107, you can [use the administration service](usage.md) to set this data on devices. The site stores the property's name and its value in the site database as the **Device Custom Properties** class. You can then use the custom properties in Configuration Manager for reporting or to create collections.
 
+Starting in version 2111, you can create and edit these custom properties in the Configuration Manager console. This new user interface makes it easier to view and edit these properties.
+
+> [!NOTE]
+> You can use unicode characters for custom property _values_, but not the property _names_. For more information, see [Unicode and ASCII support in Configuration Manager](../../core/plan-design/hierarchy/unicode-and-ascii-support.md).<!-- 12377169 -->
+
 ## Prerequisites
 
 The account that makes the API calls requires the following permissions on a collection that contains the target device:
@@ -35,7 +42,25 @@ The account that makes the API calls requires the following permissions on a col
 - To view properties: **Read Resource**
 - To remove properties: **Delete Resource**
 
-## Set properties
+## Set properties via UI
+
+<!--10642650-->
+
+_Applies to version 2111 or later_
+
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Devices** node.
+
+1. Select a device, and then in the ribbon select **Properties**
+
+1. Switch to the **Custom Properties** tab.
+
+1. Select the gold star icon :::image type="icon" source="media/new-icon.png" border="false"::: to create a new custom property. Provide a name for the property and set a value for this device. Select **OK** to save the properties.
+
+:::image type="content" source="media/10642650-custom-device-properties.png" alt-text="Custom Properties tab on a device with multiple values.":::
+
+## Set properties via API
+
+_Applies to version 2107 or later_
 
 To set properties on a device, use the **SetExtensionData** API. Make a POST call to the URI `https://<SMSProviderFQDN>/AdminService/v1.0/Device(<DeviceResourceID>)/AdminService.SetExtensionData` with a JSON body. The resource ID is an integer value, for example `16777345`.
 
@@ -105,8 +130,13 @@ from SMS_R_System inner join SMS_G_System_ExtensionData on SMS_G_System_Extensio
 where SMS_G_System_ExtensionData.PropertyName = "AssetTag" and SMS_G_System_ExtensionData.PropertyValue = "0580255"
 ```
 
+> [!NOTE]
+> To use custom properties WQL statements with incremental collection updates, use Configuration Manager version 2107 with the [update rollup](../../hotfix/2107/11121541.md) or later.<!--10964944-->
+
 ## Next steps
 
 [How to use the administration service](usage.md)
 
 [Create a collection](../../core/clients/manage/collections/create-collections.md)
+
+[How to manage clients](../../core/clients/manage/manage-clients.md)

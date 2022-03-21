@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for operating system deployment
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join operating system deployment views to each other and to compliance settings views.
@@ -12,6 +12,8 @@ ms.assetid: d31a8e79-87a1-4e4d-bcaa-856006b4889a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Sample queries for operating system deployment in Configuration Manager
@@ -24,13 +26,13 @@ The following query lists all task sequence packages, by package ID and package 
 
 ```sql
     SELECT DISTINCT 
-      v_TaskSequencePackage.PackageID AS [Task Sequence Package ID], 
-      v_TaskSequencePackage.Name AS [Task Sequence Package Name], 
-      v_TaskSequencePackage.BootImageID AS [Boot Image Package ID], 
-      v_BootImagePackage.Name AS [Boot Image Package Name], 
-      v_BootImagePackage.PkgSourcePath AS [Boot Image Package Source Path] 
+    ��v_TaskSequencePackage.PackageID AS [Task Sequence Package ID], 
+    ��v_TaskSequencePackage.Name AS [Task Sequence Package Name], 
+    ��v_TaskSequencePackage.BootImageID AS [Boot Image Package ID], 
+    ��v_BootImagePackage.Name AS [Boot Image Package Name], 
+    ��v_BootImagePackage.PkgSourcePath AS [Boot Image Package Source Path] 
     FROM v_TaskSequencePackage LEFT OUTER JOIN v_BootImagePackage ON 
-      v_TaskSequencePackage.BootImageID = v_BootImagePackage.PackageID 
+    ��v_TaskSequencePackage.BootImageID = v_BootImagePackage.PackageID 
     ORDER BY [Task Sequence Package ID] 
 ```
 
@@ -40,15 +42,15 @@ The following query lists all operating system deployment boot image packages, b
 
 ```sql
     SELECT v_BootImagePackage.PackageID AS [Boot Image Package ID], 
-      v_BootImagePackage.Name AS [Boot Image Package Name], 
-      v_LocalizedCIProperties.DisplayName AS [Driver Name], 
-      v_BootImagePackage_References.SourcePath AS [Driver Source Path] 
+    ��v_BootImagePackage.Name AS [Boot Image Package Name], 
+    ��v_LocalizedCIProperties.DisplayName AS [Driver Name], 
+    ��v_BootImagePackage_References.SourcePath AS [Driver Source Path] 
     FROM v_BootImagePackage INNER JOIN v_BootImagePackage_References ON 
-      v_BootImagePackage.PackageID = v_BootImagePackage_References.PkgID 
-      INNER JOIN v_ConfigurationItems ON 
-      v_BootImagePackage_References.CI_ID = v_ConfigurationItems.CI_ID 
-      INNER JOIN v_LocalizedCIProperties ON 
-      v_ConfigurationItems.CI_ID = v_LocalizedCIProperties.CI_ID 
+    ��v_BootImagePackage.PackageID = v_BootImagePackage_References.PkgID 
+    ��INNER JOIN v_ConfigurationItems ON 
+    ��v_BootImagePackage_References.CI_ID = v_ConfigurationItems.CI_ID 
+    ��INNER JOIN v_LocalizedCIProperties ON 
+    ��v_ConfigurationItems.CI_ID = v_LocalizedCIProperties.CI_ID 
     ORDER BY [Boot Image Package ID], [Driver Name] 
 ```
 

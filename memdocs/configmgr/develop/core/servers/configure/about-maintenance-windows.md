@@ -9,6 +9,8 @@ ms.assetid: efbb6dc8-cb1c-4513-95a4-eb3a8c3936b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # About Maintenance Windows

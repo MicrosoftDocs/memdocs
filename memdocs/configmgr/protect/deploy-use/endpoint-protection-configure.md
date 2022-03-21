@@ -6,12 +6,10 @@ ms.date: 03/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Configure Endpoint Protection
@@ -27,8 +25,8 @@ Before you can use Endpoint Protection to manage security and malware on Configu
  Use the following table for the steps, details, and more information about how to configure Endpoint Protection.  
 
 > [!IMPORTANT]  
->  If you manage endpoint protection for Windows 10 computers, then you must configure Configuration Manager to update and distribute malware definitions for Windows Defender. Windows Defender is included in Windows 10 but SCEPInstall must still be installed and custom client settings for Endpoint Protection (**Step 5** below) are still required. </br> </br>
-> Starting in Configuration Manager 1802, Windows 10 devices do not need to have the Endpoint Protection agent (SCEPInstall) installed. If it is already installed on Windows 10 devices, Configuration Manager will not remove it. Administrators can remove the Endpoint Protection agent on Windows 10 devices that are running at least the 1802 client version. SCEPInstall.exe may still be present in C:\Windows\ccmsetup on some machines but should not be downloaded on new client installations. Custom client settings for Endpoint Protection (**Step 5** below) are still required. <!--503654-->
+>  If you manage endpoint protection for Windows 10 or later computers, then you must configure Configuration Manager to update and distribute malware definitions for Windows Defender. Windows Defender is included in Windows 10 and later but custom client settings for Endpoint Protection (**Step 5** below) are still required. </br> </br>
+
 
 |Steps|Details|  
 |-----------|-------------|  

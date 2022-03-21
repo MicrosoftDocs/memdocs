@@ -5,19 +5,21 @@ items:
   items:
   - name: Enable tenant attach
     href: device-sync-actions.md
-  - name: Client details (preview)
+  - name: Client details
     href: client-details.md
-  - name: Install applications (preview)
+  - name: Install applications
     href: applications.md
-  - name: Device timeline (preview)
+  - name: Device timeline
     href: timeline.md
-  - name: Resource explorer (preview)
+  - name: Resource explorer
     href: resource-explorer.md
-  - name: Run scripts (preview)
+  - name: Run scripts
     href: scripts.md
-- name: CMPivot for tenant attached devices (preview)
+  - name: BitLocker recovery keys
+    href: bitlocker-recovery-keys.md
+- name: CMPivot for tenant attached devices
   items:
-  - name: Launch CMPivot (preview)
+  - name: Launch CMPivot
     href: cmpivot-start.md
   - name: CMPivot usage overview
     href: cmpivot-overview-attached.md
@@ -32,7 +34,9 @@ items:
   - name: Create and deploy antivirus policy
     href: deploy-antivirus-policy.md  
   - name: Create and deploy firewall policy
-    href: deploy-firewall-policy.md  
+    href: deploy-firewall-policy.md
+  - name: Create and deploy attack surface reduction policy
+    href: deploy-asr-policy.md     
 - name: Reference
   items:
   - name: Tenant attach data collection
@@ -44,23 +48,25 @@ items:
   - name: Firewall policy settings
     href: ../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
   - name: Endpoint Detection and Response policy settings
-    href: ../../intune/protect/endpoint-security-edr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
+    href: ../../intune/protect/endpoint-security-edr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json
+  - name: Attack surface reduction policy settings
+    href: ../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
 - name: Troubleshoot
   items:
   - name: Tenant attach and device actions
     href: troubleshoot.md
-  - name: Client details (preview)
+  - name: Client details
     href: troubleshoot-client-details.md
-  - name: Application installation (preview)
+  - name: Application installation
     href: troubleshoot-applications.md
   - name: Common error codes for application installation
     href: app-install-error-reference.md
-  - name: Timeline (preview)
+  - name: Timeline
     href: troubleshoot-timeline.md
-  - name: Resource explorer (preview)
+  - name: Resource explorer
     href: troubleshoot-resource-explorer.md
-  - name: Run scripts (preview)
+  - name: Run scripts
     href: troubleshoot-scripts.md
-  - name: CMPivot (preview)
+  - name: CMPivot
     href: troubleshoot-cmpivot.md
 

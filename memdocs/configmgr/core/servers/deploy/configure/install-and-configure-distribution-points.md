@@ -9,6 +9,7 @@ ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install and configure distribution points in Configuration Manager
@@ -180,7 +181,7 @@ This process automatically populates the **Members** tab of the Create New Distr
 
 Many customers have large Configuration Manager infrastructures, and are reducing primary or secondary sites to simplify their environment. They still need to keep distribution points at branch office locations to serve content to managed clients. These distribution points often contain multiple terabytes or more of content. This content is costly for time and network bandwidth to distribute to these remote servers.
 
-This feature lets you reassign a distribution point to another primary site without redistributing the content. The target and destination sites can be either a primary or secondary site.<!-- SCCMDocs #1677, MEMDocs #1356--> This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first do this action on a single distribution point. Then continue with other servers one at a time.
+This feature lets you reassign a distribution point to another primary site without redistributing the content. The distribution point's current site can be either a primary or secondary site.<!-- SCCMDocs #1677, MEMDocs #1356--> This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first do this action on a single distribution point. Then continue with other servers one at a time.
 
 > [!IMPORTANT]
 > The target server can only host the distribution point role. If the site system server hosts another Configuration Manager server role, such as the state migration point, you can't reassign the distribution point. You can't reassign a cloud management gateway.

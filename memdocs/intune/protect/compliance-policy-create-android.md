@@ -7,13 +7,11 @@ keywords:
 author: brenduns    
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/09/2021
+ms.date: 09/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-ms.technology:
-ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
 
 # optional metadata
 
@@ -25,12 +23,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Device Compliance settings for Android device administrator in Intune
 
-This article lists the compliance settings you can configure on Android device administrator devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted (jailbroken) devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
+This article lists the compliance settings you can configure on Android device administrator devices in Intune. As part of your mobile device management (MDM) solution, use these settings to mark rooted devices as not compliant, set an allowed threat level, enable Google Play Protect, and more.
 
 This feature applies to:
 
@@ -65,7 +65,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   Prevent rooted devices from having corporate access. (This compliance check is supported for Android 4.0 and above.)
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
-  - **Block** - Mark rooted (jailbroken) devices as not compliant.
+  - **Block** - Mark rooted devices as not compliant.
 
 - **Require the device to be at or under the Device Threat Level**  
   Use this setting to take the risk assessment from a connected Mobile Threat Defense service as a condition for compliance.
@@ -77,6 +77,9 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **High** - This option is the least secure, and allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
 
 ### Google Play Protect
+
+> [!IMPORTANT]
+> Devices operating in regions or countries where Google Mobile Services are not available will fail Google Play Protect compliance policy setting evaluations. For more information, see [Managing Android devices where Google Mobile Services are not available](https://techcommunity.microsoft.com/t5/intune-customer-success/intune-customer-success-managing-android-devices-where-google/ba-p/1628793).
 
 - **Google Play Services is configured**  
   Google Play services allows security updates, and is a base-level dependency for many security features on certified-Google devices.
@@ -159,7 +162,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Block** - Prevent devices from using the USB debugging feature.
 
 - **Minimum security patch level**  
-  *(Supported on Android 6.0 or later)*
+  *(Supported on Android 8.0 or later)*
 
   Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the `YYYY-MM-DD` format.
 

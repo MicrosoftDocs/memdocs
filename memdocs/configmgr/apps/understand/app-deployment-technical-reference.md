@@ -6,12 +6,10 @@ ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: troubleshooting
-ms.assetid: a4eb09c8-e570-4369-9adb-ded9c8ad3400
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Technical Reference for Application Deployment in Configuration Manager

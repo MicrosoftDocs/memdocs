@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Update your Windows 10 device | Microsoft Docs
-description: Learn how to update your Windows 10 device to access company resources.
+title: Update your Windows device | Microsoft Docs
+description: Learn how to update your Windows device to access company resources.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/06/2017
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,14 +30,19 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Update your Windows 10 device
+# Update your Windows device  
 
-Your work or school wants to ensure that devices accessing their resources are secured. One way they've chosen to make sure that your device is set up to access those resources is to make sure that your devices are up-to-date. On your device, this is called the "OS Build". Here's how you can update your Windows 10 device:
+**Applies to**  
 
-1. In **Start**, open **Settings**.
-2. Go to **Settings** > **System** > **About** > **OS Build**.
-3. If the OS Build is lower than what your company wants you to use, select **Update** to update to a newer version of Windows.
+- Windows 10  
+- Windows 11  
 
-If your Windows version is newer than what your company supports, you need to [try some different steps to fix the issue](your-windows-version-isnt-yet-supported.md)
+You can manually update the operating system (OS) build on your Windows device to stay up to date with your organization's requirements and latest OS features.  
 
-Still need help? Contact your company support. For their contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+1. Select **Start**.
+2. Open the **Settings**  app. 
+3. Select **Update & Security** > **Windows Update**, and then select **Check for updates**.
+
+If your Windows version is newer than what your company supports, you need to [try some different steps to fix the issue](your-windows-version-isnt-yet-supported.md)  
+
+Still need help? Contact your company support. For their contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

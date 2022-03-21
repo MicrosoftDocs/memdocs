@@ -5,11 +5,11 @@ ms.date: 02/17/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-ms.assetid: 6d665cef-fc67-4686-bcb3-0572c0a3760c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 description: Additional links for Configuration Manager help documentation
+ms.localizationpriority: medium
 ---
 
 # Online documentation for Configuration Manager

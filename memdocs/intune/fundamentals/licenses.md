@@ -4,17 +4,14 @@
 title: Licenses available for Microsoft Intune
 description: Intune is available with these licenses
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Erikre
+ms.author: erikre
 manager: dougeby
-ms.date: 4/14/2021
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.assetid: 4a94440c-11cb-11e8-b642-0ed5f89f718b
-
-
 
 # optional metadata
 
@@ -25,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Microsoft Intune licensing
@@ -67,6 +66,31 @@ For existing Configuration Manager-managed devices to enroll into Intune for co-
 ## Unlicensed admins
 
 For more information about giving administrators access to Microsoft Endpoint Manager without them having an Intune license, see [Unlicensed admins](unlicensed-admins.md).
+
+## Confirm your licenses
+
+A Microsoft Intune license is created for you when you sign up for the Intune free trial. As part of this trial, you'll also have a trial Enterprise Mobility + Security (EMS) subscription. An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune.
+
+> [!NOTE]
+> If you are unable to access this portal using the step below, or if you don't have an Intune license, you can sign up now for the [Intune free trial](./free-trial-sign-up.md). When setting up Intune, you can give an administrators access to Microsoft Endpoint Manager [without them requiring an Intune license](./unlicensed-admins.md).
+
+To confirm your Microsoft Intune license or trial, use the following steps:
+
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Tenant administration** > **Tenant status**.<br>
+   Under the **Tenant details** tab, you will see the **MDM authority**, the **Total licenses users**, and the **Total Intune licenses**.
+3. Select **Tenant administration** > **Roles** > **My permissions**.
+4. Confirm you are an **administrator** with **full** permissions to **all** Intune resources.
+
+> [!NOTE]
+> For more in-depth information about Microsoft Intune, see the learning module: [Set up Microsoft Intune](/learn/modules/set-up-microsoft-intune?azure-portal=true).
+
+To check on your Azure AD Premium license, use the following steps:
+
+1. Sign in to the [Azure portal](https://portal.azure.com).
+2. Select **Azure Active Directory**. Under **Basic information**, view your license.
+
+If you don't have a license for Azure AD Premium, see [Sign up for Azure Active Directory Premium editions](/azure/active-directory/fundamentals/active-directory-get-started-premium).
 
 ## Next steps
 

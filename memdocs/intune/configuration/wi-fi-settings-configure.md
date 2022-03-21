@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a Wi-Fi profile for devices in Microsoft Intune
-description: See the steps to create a Wi-Fi device configuration profile in Microsoft Intune. Create profiles for Android device administrator, Android Enterprise, Android kiosk, iOS, iPadOS, macOS, Windows 10 and newer, and Windows Holographic for Business. Use these profiles to create a WiFi connection to use certificates, choose an EAP type, select an authentication method, enable a proxy, and more.
+description: See the steps to create a Wi-Fi device configuration profile in Microsoft Intune. Create profiles for Android device administrator, Android Enterprise, Android kiosk, iOS, iPadOS, macOS, Windows 10/11, and Windows Holographic for Business. Use these profiles to create a WiFi connection to use certificates, choose an EAP type, select an authentication method, enable a proxy, and more.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 01/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Add and use Wi-Fi settings on your devices in Microsoft Intune
@@ -48,7 +50,9 @@ Wi-Fi profiles support the following device platforms:
 - iOS 11.0 and newer
 - iPadOS 13.0 and newer
 - macOS X 10.12 and newer
-- Windows 10 and newer, and Windows Holographic for Business
+- Windows 11
+- Windows 10
+- Windows Holographic for Business
 
 > [!NOTE]
 > For devices running Windows 8.1, you can import a Wi-Fi configuration that was previously exported from another device. For more information, see [Import Wi-Fi settings for Windows devices](wi-fi-settings-import-windows-8-1.md).
@@ -88,7 +92,7 @@ Wi-Fi profiles support the following device platforms:
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), including dedicated devices
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
-    - [Windows 10 and newer](wi-fi-settings-windows.md)
+    - [Windows 10/11](wi-fi-settings-windows.md)
     - [Windows 8.1 and newer](wi-fi-settings-import-windows-8-1.md), including Windows Holographic for Business
 
 8. Select **Next**.

@@ -2,13 +2,14 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Upgrade on-premises infrastructure that supports Configuration Manager
@@ -66,6 +67,8 @@ Use the steps in this section for any of the following upgrade scenarios:
 #### Before upgrade
 
 - (_Windows Server 2012 or Windows Server 2012 R2 only_): Remove the System Center Endpoint Protection (SCEP) client. Windows Server now has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server.
+
+- (_Windows Server 2012 or Windows Server 2012 R2 only_): Install the latest Cumulative Update and uninstall Windows Management Framework 5.1 before attempting the upgrade.
 
 - Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.
 
@@ -175,9 +178,9 @@ Configuration Manager supports an in-place upgrade of the OS for Configuration M
 
 - If Configuration Manager supports the resulting service pack level, it supports in-place upgrade to a later Windows service pack.
 
-- In-place upgrade of Windows from a supported version to Windows 10. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
+- In-place upgrade of Windows from a supported version to Windows 10 or later. For more information, see [Upgrade Windows to the latest version](../../../osd/deploy-use/upgrade-windows-to-the-latest-version.md).
 
-- Build-to-build servicing upgrades of Windows 10. For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).
+- Build-to-build servicing upgrades of Windows 10 or later. For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).
 
 ## Upgrade SQL Server
 
@@ -190,6 +193,9 @@ For information about the versions of SQL Server that Configuration Manager supp
 If Configuration Manager still supports the resulting SQL Server service pack level, it supports the in-place upgrade of SQL Server to a later service pack.
 
 When you have more than one Configuration Manager site in a hierarchy, each site can run a different service pack version of SQL Server. There's no limitation to the order in which sites upgrade the service pack version of SQL Server.
+
+> [!IMPORTANT]
+> If you use [BitLocker management](../../../protect/plan-design/bitlocker-management.md) in Configuration Manager, and you encrypt recovery data in the database, before you upgrade SQL Server, make sure the certificate is for a supported version. For example, certificates created with SQL Server 2014 or earlier aren't compatible with SQL Server 2016 or later. For more information, see [Manage the encryption certificate on SQL Server upgrade](../../../protect/deploy-use/bitlocker/encrypt-recovery-data.md#manage-the-encryption-certificate-on-sql-server-upgrade).<!-- 12405266 -->
 
 ### Upgrade to a new version of SQL Server
 

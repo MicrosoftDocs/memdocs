@@ -1,2 +1,2 @@
-{:allowed-branchname-matches ["master" "release-.*"]
+{:allowed-branchname-matches ["main" "release-.*"]
  :allowed-filename-matches ["(?i)memdocs/(?:(?!configmgr/mdt/use-the-mdt.md))" "windows-365"]}

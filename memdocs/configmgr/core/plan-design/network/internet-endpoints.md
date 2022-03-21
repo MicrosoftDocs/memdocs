@@ -2,13 +2,14 @@
 title: Internet access requirements
 titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Internet access requirements
@@ -49,6 +50,8 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `download.windowsupdate.com`  
 
+- `download.visualstudio.microsoft.com`  
+
 - `sccmconnected-a01.cloudapp.net`  
 
 - `configmgrbits.azureedge.net`
@@ -72,7 +75,7 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `*-umwatsonc.events.data.microsoft.com`
 
-## Windows 10 servicing
+## Windows servicing
 
 For more information, see [Manage Windows as a service](../../../osd/deploy-use/manage-windows-as-a-service.md).
 
@@ -91,7 +94,7 @@ For more information, see [Configure Azure services for use with Configuration M
 
 ## Co-management
 
-If you enroll Windows 10 devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
+If you enroll Windows devices to Microsoft Intune for co-management, make sure those devices can access the endpoints required by Intune. For more information, see [Network endpoints for Microsoft Intune](/intune/intune-endpoints).
 
 ## Microsoft Store for Business
 
@@ -243,6 +246,18 @@ If you use [asset intelligence](../../clients/manage/asset-intelligence/introduc
 ## Deploy Microsoft Edge
 
 [!INCLUDE [Internet endpoints for deploying Microsoft Edge](includes/internet-endpoints-deploy-microsoft-edge.md)]
+
+## External notifications
+
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
+
+The service connection point needs to communicate with the notification service, for example Azure Logic Apps. The access endpoint for the logic app typically has the following format: `https://*.<RegionName>.logic.azure.com:443`. For example: `https://prod1.westus2.logic.azure.com:443`
+
+To get the access endpoint for the logic app, as well as the associated IP addresses, use the following process:
+
+1. In the Azure portal, under **Logic Apps**, select the logic app for your notification. For more information, see [Manage logic apps in the Azure portal](/azure/logic-apps/manage-logic-apps-with-azure-portal).
+1. In the app's menu, in the **Settings** section, select **Properties**.
+1. View or copy the values for the **Access endpoint** and the **Access endpoint IP addresses**.
 
 ## Microsoft public IP addresses
 

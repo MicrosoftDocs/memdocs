@@ -1,17 +1,15 @@
 ---
-title: "Manage the LTSB"
-titleSuffix: "Configuration Manager"
-description: "Management differences for the LTSB of System Center Configuration Manager."
+title: Manage the LTSB
+titleSuffix: Configuration Manager
+description: Management differences for the LTSB of System Center Configuration Manager.
 ms.date: 05/01/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 8da2887a-fd8e-438c-b926-849c121f7fdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Manage the Long Term Servicing Branch of Configuration Manager
 

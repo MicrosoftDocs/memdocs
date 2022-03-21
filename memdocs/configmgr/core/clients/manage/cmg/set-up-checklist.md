@@ -2,13 +2,14 @@
 title: Set up checklist for CMG
 titleSuffix: Configuration Manager
 description: Get an overview of the cloud management gateway (CMG) setup process and make sure you have all prerequisites ready to start.
-ms.date: 08/02/2021
+ms.date: 03/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: overview
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Set up checklist for CMG
@@ -39,7 +40,10 @@ The following terms are used in the context of setting up a CMG. They're defined
 
 - Azure AD _tenant_: The directory of user accounts and app registrations. One tenant can have multiple subscriptions.
 
-- Azure AD _subscription_: A subscription separates billing, resources, and services. It's associated with a single tenant.
+- Azure _subscription_: A subscription separates billing, resources, and services. It's associated with a single tenant.
+
+  > [!TIP]
+  > For more information, see [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings).
 
 - Azure _resource group_: A container that holds related resources for an Azure solution. The resource group includes those resources that you want to manage as a group. You decide which resources belong in a resource group based on what makes the most sense for your organization. For more information, see [Resource groups](/azure/azure-resource-manager/management/overview#resource-groups).
 
@@ -65,6 +69,8 @@ Use the following checklist to make sure you have the necessary information and 
 - An Azure **subscription owner** role for when you create the CMG in Azure.
 
 - At least one existing site system server on which you plan to add the **CMG connection point** role.
+
+- Review the [internet access requirements](data-flow.md#internet-access-requirements) to make sure each required services can be reached.
 
 You'll set up other prerequisite components during the next steps in the process.
 

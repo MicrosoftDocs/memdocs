@@ -6,12 +6,10 @@ ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: b0fcb30e-147c-4910-ba88-5e5b60996e60
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Flowchart - Set up a site server in passive mode

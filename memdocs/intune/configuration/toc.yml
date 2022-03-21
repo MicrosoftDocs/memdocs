@@ -161,6 +161,10 @@ items:
         href: vpn-settings-android.md
       - name: Wi-Fi
         href: wi-fi-settings-android.md
+    - name: Android (AOSP) 
+      items: 
+      - name: Device restrictions
+        href: device-restrictions-android-aosp.md  
     - name: Android Enterprise
       items:
       - name: Custom
@@ -207,7 +211,7 @@ items:
         href: wi-fi-settings-macos.md
       - name: Wired networks
         href: wired-network-settings-macos.md
-    - name: Windows 10 and later
+    - name: Windows 10/11
       items:
       - name: Custom
         href: custom-settings-windows-10.md

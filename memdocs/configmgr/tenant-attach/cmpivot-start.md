@@ -1,23 +1,20 @@
 ---
-title:  Launch tenant attached CMPivot (preview)
+title: Launch tenant attached CMPivot
 titleSuffix: Configuration Manager
 description: Launch CMPivot for Microsoft Endpoint Manager tenant attached devices.
 ms.date: 12/03/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: ae6c0c83-2299-4463-958d-5555e3fcbdbe
 author: mestew
-ms.author: mstewart 
+ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: high
 ---
 
-# <a name="bkmk_cmpivot"></a> Tenant attach: Launch CMPivot from the admin center (preview)
+# <a name="bkmk_cmpivot"></a> Tenant attach: Launch CMPivot from the admin center
 
 *Applies to: Configuration Manager (current branch)* 
-
-> [!Important]
-> - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 <!--6024392-->
 Bring the power of on-premises [CMPivot](../core/servers/manage/cmpivot.md) to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to be able to initiate real-time queries from the cloud against an individual ConfigMgr managed device and return the results back to the admin center. This gives all the traditional benefits of CMPivot, which allows IT Admins and other designated personas the ability to quickly assess the state of devices in their environment and take action.
@@ -50,7 +47,7 @@ The user account needs the following permissions:
 1. In a browser, navigate to [https://endpoint.microsoft.com](https://endpoint.microsoft.com).
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
-1. Select **CMPivot (preview)**.
+1. Select **CMPivot**.
 1. Type your query in the script pane, then select **Run**.
 
 ## Close CMPivot

@@ -6,11 +6,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/18/2020
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 
 ms.reviewer: dagerrit
@@ -82,7 +82,7 @@ The final step allows you to review a summary of the settings you configured. On
 ### Verification
 
 1. Verify that the selected is assigned MDM user scope
-    - Ensure [MDM User scope](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment) is:
+    - Ensure [MDM User scope](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment) is:
         - Set to **All** for the **Microsoft Intune** app or,
         - Set to **Some**. Also, add the user group created by this guided scenario.
 2. Verify that the selected user is able to join devices to Azure Active Directory.

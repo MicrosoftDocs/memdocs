@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/23/2020
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -29,7 +29,13 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Enable code integrity
+# Enable code integrity  
+
+**Applies to**  
+
+- Windows 10  
+- Windows 11  
+
 
 If you receive a message that you need to enable code integrity, contact your support person. They can help you enable Secure Boot, which will trigger code integrity the next time you start up your device. 
 
@@ -42,7 +48,7 @@ Code integrity is a threat protection feature that checks the drivers and system
 
 ## IT pro support  
 
-If you're an Intune administrator and want to learn more about Intune's device health compliance settings, see [Add a device compliance policy for Windows 10 devices in Intune](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
+If you're an Intune administrator and want to learn more about Intune's device health compliance settings, see [Add Windows 10/11 device compliance policy](../protect/compliance-policy-create-windows.md). For a detailed look at the compliance actions you can take in Intune, see the [HealthAttestation CSP](/windows/client-management/mdm/healthattestation-csp#step-8-take-appropriate-policy-action-based-on-evaluation-results).  
 
 ## Next steps
 

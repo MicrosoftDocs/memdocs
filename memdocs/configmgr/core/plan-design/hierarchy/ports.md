@@ -2,13 +2,14 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 08/02/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Ports used in Configuration Manager
@@ -238,8 +239,8 @@ The Configuration Manager console uses internet access for the following actions
 
 - Downloading software updates from Microsoft Update for deployment packages.
 - The Feedback item in the ribbon.
-- Links to documentation within the console.
-<!--506823-->
+- Links to documentation within the console.  <!--506823-->
+- Downloading items from Community hub
 
 ### <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager console `-->` Reporting services point
 
@@ -383,6 +384,14 @@ A distribution point communicates to the management point in the following scena
 
 For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md).
 
+### <a name="bkmk_scp-notify"></a> Service connection point `-->` Azure Logic App
+
+| Description                     | UDP | TCP |
+|---------------------------------|-----|-----|
+| HTTPS for external notification | --  | 443 |
+
+For more information, see [External notifications](../../servers/manage/external-notifications.md).
+
 ### <a name="BKMK_PortsSite-AISP"></a> Site server `<-->` Asset Intelligence synchronization point
 
 |Description|UDP|TCP|
@@ -480,6 +489,7 @@ For more information, see [Ports and data flow](use-a-cloud-based-distribution-p
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |HTTP|--|80 <sup>[Note 1](#bkmk_note1)</sup>|
+|HTTPS|--|443|
 
 ### <a name="BKMK_PortsIssuingCA_SiteServer"></a> Site server `<-->` Issuing certification authority (CA)
 
@@ -557,6 +567,8 @@ During the installation of a site that uses a remote SQL Server to host the site
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |Server Message Block (SMB)|--|445|
+|RPC Endpoint Mapper|135|135|
+|RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|
 |HTTP|--|80 or 8530 <sup>[Note 3](#bkmk_note3)</sup>|
 |HTTPS|--|443 or 8531 <sup>[Note 3](#bkmk_note3)</sup>|
 
@@ -669,7 +681,7 @@ The following sections provide more information about ports that Configuration M
 
 Clients use Server Message Block (SMB) whenever they connect to UNC shares. For example:
 
-- Manual client installation that specifies the CCMSetup.exe **/source:** command-line property
+- Manual client installation that specifies the CCMSetup.exe `/source:` command-line property
 
 - Endpoint Protection clients that download definition files from a UNC path
 
@@ -704,7 +716,7 @@ Configure the following ports:
 - RPC Endpoint Mapper: TCP 135
 
 > [!WARNING]
-> Configuration Manager doesn't support dynamic ports. by default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port for intrasite communication.
+> Configuration Manager doesn't support dynamic ports. By default, SQL Server named instances use dynamic ports for connections to the database engine. When you use a named instance, manually configure the static port for intrasite communication.
 
 The following site system roles communicate directly with the SQL Server database:
 
@@ -763,6 +775,8 @@ On-premises Configuration Manager clients or site systems can make the following
 - [Software update point `-->` Upstream WSUS Server](#BKMK_PortsSUP-WSUS)
 
 - [Service connection point `-->` Azure](#bkmk_scp-cmg)
+
+- [Service connection point `-->` Azure Logic App](#bkmk_scp-notify)
 
 - [CMG connection point `-->` CMG cloud service](#bkmk_cmgcp-cmg)
 

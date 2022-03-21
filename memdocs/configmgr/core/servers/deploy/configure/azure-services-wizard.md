@@ -9,6 +9,7 @@ ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configure Azure services for use with Configuration Manager
@@ -23,7 +24,7 @@ Configure the following Azure services using this wizard:
 
 - **Cloud Management**: This service enables the site and clients to authenticate by using Azure AD. This authentication enables other scenarios, such as:  
 
-  - [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](../../../clients/deploy/deploy-clients-cmg-azure.md)  
+  - [Install and assign Configuration Manager clients using Azure AD for authentication](../../../clients/deploy/deploy-clients-cmg-azure.md)  
 
   - [Configure Azure AD User Discovery](configure-discovery-methods.md#azureaadisc)  
 
@@ -259,6 +260,9 @@ Starting in version 2006, the Configuration Manager console displays notificatio
 To mitigate both cases, renew the secret key.
 
 For more information on how to interact with these notifications, see [Configuration Manager console notifications](../../manage/admin-console-notifications.md).
+
+> [!NOTE]
+> You need to have at least the "Cloud Application Administrator" Azure AD role assigned to be able to renew the key.
 
 ### Renew key for created app
 

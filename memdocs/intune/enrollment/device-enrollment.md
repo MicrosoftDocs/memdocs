@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 4/24/2021
+ms.date: 12/03/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # What is device enrollment in Intune?
@@ -41,9 +43,9 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 
 ## iOS/iPadOS enrollment methods
 
-| **Method** | **Reset Required** | [**User Affinity**](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) | **Locked** | **Details** |
+| **Method** | **Reset required** | **User affinity** | **Locked** | **Details** |
 |:---:|:---:|:---:|:---:|:---:|
-| | Devices are wiped during enrollment. | Associates each device with a user.| If yes, users can't unenroll devices. | |
+|Method used to enroll devices. |If yes, devices are wiped during enrollment. | If yes, each device is associated with a user.| If yes, users can't unenroll devices. |More information about method. |
 |**[BYOD](#bring-your-own-device)** | No| Yes | No | [More information](apple-mdm-push-certificate-get.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No | [More information](device-enrollment-manager-enroll.md)|
 |**[ADE](#apple-automated-device-enrollment)**| Yes | Optional | Optional|[More information](device-enrollment-program-enroll-ios.md)|
@@ -52,19 +54,21 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 
 ## macOS enrollment methods
 
-| **Method** |  **Reset Required** |  **User Affinity** | **Locked** | **Details**|
+| **Method** |  **Reset required** |  **User affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|
+|Method used to enroll devices. |If yes, devices are wiped during enrollment. | If yes, each device is associated with a user.| If yes, users can't unenroll devices. |More information about method.  |
 |**[BYOD](#bring-your-own-device)** | No| Yes | No | [More information](macos-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No  | [More information](device-enrollment-manager-enroll.md)|
 |**[ADE](#apple-automated-device-enrollment)**| Yes | Optional | Optional|[More information](device-enrollment-program-enroll-macos.md)|
 
 ## Windows enrollment methods
 
-| **Method** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
+| **Method** | **Reset required** | **User affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|
+|Method used to enroll devices. | If yes, devices are wiped during enrollment. | If yes, each device is associated with a user.| If yes, users can't unenroll devices. | More information about method. |
 |**[BYOD](#bring-your-own-device)** | No | Yes | No | [More information](windows-enroll.md)|
 |**[DEM](#device-enrollment-manager)**| No |No |No |[More information](device-enrollment-manager-enroll.md)|
-|**Auto-enroll** | No |Yes |No | [More information](windows-enroll.md#enable-windows-10-automatic-enrollment)|
+|**Auto-enroll** | No |Yes |No | [More information](windows-enroll.md#enable-windows-automatic-enrollment)|
 |**Autopilot** |Yes |Yes |No | [More information](../../autopilot/enrollment-autopilot.md)
 |**Bulk enroll** |No |No |No | [More information](windows-bulk-enroll.md) |
 |**Co-management** |No |Yes |No | [More information](/configmgr/core/clients/manage/co-management-overview)
@@ -74,15 +78,19 @@ By default, devices for all platforms are allowed to enroll in Intune. However, 
 
 ### Personal enrollment methods
 
-| **Personal** | **Enrollment Methods** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
+| **Enrollment type** | **Enrollment method** | **Reset required** | **User affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
+|Name of enrollment type. |Method used to enroll devices.| If yes, devices are wiped during enrollment. | If yes, each device is associated with a user.| If yes, users can't unenroll devices. |More information about method. |
 |**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](../user-help/enroll-device-android-company-portal.md)|
 |**Android Enterprise personally-owned with Work Profile**|**User initiated via Company Portal**| No | Yes | No | [More information](android-work-profile-enroll.md)|
 
 ### Corporate enrollment methods
 
-| **Corporate** | **Enrollment Methods** | **Reset Required** | **User Affinity** | **Locked** | **Details**|
+| **Enrollment type** | **Enrollment method** | **Reset required** | **User affinity** | **Locked** | **Details**|
 |:---:|:---:|:---:|:---:|:---:|:---:|
+|Name of enrollment type. |Method used to enroll devices.| If yes, devices are wiped during enrollment. | If yes, each device is associated with a user.| If yes, users can't unenroll devices. |More information about method. |
+|**Android (AOSP) user-associated**|**QR code**|Yes|Yes|Configurable via policy|[More information](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
+|**Android (AOSP) userless**|**QR code**|Yes|No|Configurable via policy|[More information](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
 |**Android Device Admin**|**[DEM](#device-enrollment-manager) initiated via Company Portal**| No | No | No |[More information](device-enrollment-manager-enroll.md)|
 |**Android Device Admin**|**(Pre-declared IMEI or SN) User initiated via Company Portal**| No | Yes | No | [More information](corporate-identifiers-add.md)|
 |**Android Device Admin with Zebra Mobility Extensions**|**User or [DEM](#device-enrollment-manager) initiated via Company Portal**| No | Yes if user initiated, No if [DEM](#device-enrollment-manager) initiated | No | [More information](../configuration/android-zebra-mx-overview.md)|

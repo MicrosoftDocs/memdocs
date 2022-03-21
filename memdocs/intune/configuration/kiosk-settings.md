@@ -2,12 +2,12 @@
 # required metadata
 
 title: Kiosk settings for Windows and Holographic devices in Microsoft Intune
-description: Configure your Windows 10 (and later) and Windows Holographic for Business devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune. 
+description: Configure your Windows 10/11 and Windows Holographic for Business devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/26/2021
+ms.date: 01/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -26,13 +27,14 @@ ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 10 and Windows Holographic for Business device settings to run as a dedicated kiosk using Intune
+# Windows and Windows Holographic for Business device settings to run as a dedicated kiosk using Intune
 
-On Windows 10 devices, use Intune to run devices as a kiosk, sometimes known as a dedicated device. A device in kiosk mode can run one app, or run many apps. You can show and customize a start menu, add different apps, including Win32 apps, add a specific home page to a web browser, and more. 
+On Windows devices, use Intune to run devices as a kiosk, sometimes known as a dedicated device. A device in kiosk mode can run one app, or run many apps. You can show and customize a start menu, add different apps, including Win32 apps, add a specific home page to a web browser, and more.
 
 This feature applies to:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 - Windows Holographic for Business
 
 To create kiosk profiles for other platforms, see [Android device administrator](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
@@ -41,7 +43,7 @@ Intune supports one kiosk profile per device. If you need multiple kiosk profile
 
 Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to groups in your organization.
 
-This article shows you how to create a device configuration profile. For a list of all the settings, and what they do, see [Windows 10 kiosk settings](kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md).
+This article shows you how to create a device configuration profile. For a list of all the settings, and what they do, see [Windows client kiosk settings](kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md).
 
 ## Create the profile
 
@@ -70,9 +72,12 @@ This article shows you how to create a device configuration profile. For a list 
 
         The benefit of a multi-app kiosk, or fixed-purpose device, is to provide an easy-to-understand experience for users by only accessing apps they need. And, also removing from their view the apps they don't need.
 
+        > [!NOTE]
+        > Currently, multi-app kiosk is only supported on Windows 10. It's not supported on Windows 11.
+
     For a list of all settings, and what they do, see:
 
-      - [Windows 10 kiosk settings](kiosk-settings-windows.md)
+      - [Windows client kiosk settings](kiosk-settings-windows.md)
       - [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md)
 
 8. Select **Next**.
@@ -97,5 +102,5 @@ You can also create kiosk profiles for devices that run the following platforms:
 
 - [Android device administrator](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#device-experience)
-- [Windows 10 and later](kiosk-settings-windows.md)
+- [Windows 10/11](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)

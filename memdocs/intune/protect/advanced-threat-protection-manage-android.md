@@ -86,7 +86,7 @@ To configure web protection on devices, use the following procedures to create a
      - **Data type**: Select **Integer** in the drop-down list. 
      - **Value**: Enter **0** to disable the VPN-based scan.
        > [!NOTE]
-       > Enter **1** to enable web protection. This setting is the default.
+       > Enter **1** to enable VPN-based scan. This setting is the default.
 
    Select **Add** to save the OMA-URI settings configuration, and then select **Next** to continue.
 

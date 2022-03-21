@@ -12,7 +12,9 @@ metadata:
   ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
-  ms.date: 01/28/2020
+  manager: dougeby
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
 
 landingContent:
   - title: About OS deployment

@@ -1,17 +1,15 @@
 ---
 title: Prerequisites for software updates
-titleSuffix: "Configuration Manager"
-description: "Learn about prerequisites for software updates in Configuration Manager."
+titleSuffix: Configuration Manager
+description: Learn about prerequisites for software updates in Configuration Manager.
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 11/30/2020
+ms.date: 10/20/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: fdf05118-162a-411e-b72e-386b9dc9a5e1
-
-
+ms.localizationpriority: medium
 ---
 
 # Prerequisites for software updates in Configuration Manager
@@ -32,7 +30,7 @@ This article lists the prerequisites for software updates in Configuration Manag
 - WSUS 10.0.14393 (role in Windows Server 2016)
 - WSUS 10.0.17763 (role in Windows Server 2019) (Requires Configuration Manager 1810 or later)
 - WSUS 6.2 and 6.3 (role in Windows Server 2012 and Windows Server 2012 R2)
-  - [KB 3095113 and KB 3159706 (or an equivalent update)](#BKMK_wsus2012) are needed for WSUS 6.2 and 6.3 if you deploy Windows 10 upgrades.
+  - [KB 3095113 and KB 3159706 (or an equivalent update)](#BKMK_wsus2012) are needed for WSUS 6.2 and 6.3 if you deploy Windows upgrades.
 
 > [!NOTE]
 > - When you have multiple software update points at a site, ensure that they're all running the same version of WSUS.
@@ -83,21 +81,21 @@ Two updates are required for syncing **Upgrades** classification in WSUS 6.2 and
 
 - You must install [KB 3095113](https://support.microsoft.com/kb/3095113), released in October 2015, on your software update points and site servers before you synchronize the **Upgrades** classification.
   - This update enables the **Upgrades** classification.
-- To service Windows 10 version 1607 and later, you must install and configure [KB 3159706](https://support.microsoft.com/help/3159706). KB 3159706 was released in May 2016.
+- To service Windows 10 or later clients, you must install and configure [KB 3159706](https://support.microsoft.com/help/3159706). KB 3159706 was released in May 2016.
   - This update enables WSUS to natively decrypt the files used for upgrading Windows 10 version 1607 and later.
 
 >[!IMPORTANT]
 > Both KB 3095113 and KB 3159706 are included in the **Security Monthly Quality Rollup** starting in July 2017. This means you may not see KB 3095113 and KB 3159706 as installed updates since they may have been installed with a rollup. However, if you need either of these updates, we recommend installing a **Security Monthly Quality Rollup** released after October 2017 since they contain an additional WSUS update to decrease memory utilization on WSUS's clientwebservice.
 
-## <a name="BKMK_RecoverUpgrades"></a> Download of Windows 10 upgrades fails with "Error: Invalid certificate signature" or 0xc1800118
+## <a name="BKMK_RecoverUpgrades"></a> Download of Windows upgrades fails with "Error: Invalid certificate signature" or 0xc1800118
 
 The updates and issue described in this section only apply to WSUS running on Windows Server 2012 or Windows Server 2012 R2 machines (WSUS 6.2 and 6.3). Typically, you'll only see the issues described in this section if you installed WSUS before July 2017 and you've recently enabled the **Upgrades** classification. However, it's possible to see these issues in other situations too.
 
 ### Historical information about KB 3095113
 
- [KB 3095113](https://support.microsoft.com/kb/3095113) was [released as a hotfix](/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113) in October 2015 to add support for Windows 10 upgrades to WSUS. The update enables WSUS to synchronize and distribute updates in the **Upgrades** classification for Windows 10.
+ [KB 3095113](https://support.microsoft.com/kb/3095113) was [released as a hotfix](/archive/blogs/wsus/important-update-for-wsus-4-0-kb-3095113) in October 2015 to add support for Windows 10 upgrades to WSUS. The update enables WSUS to synchronize and distribute updates in the **Upgrades** classification for Windows.
 
-If you synchronize any upgrades without having first installed [KB 3095113](https://support.microsoft.com/kb/3095113), you populate the WSUS database (SUSDB) with unusable data. That data must be cleared before the upgrades can be properly deployed. Windows 10 upgrades in this state can't be downloaded by using the Download Software Updates Wizard.
+If you synchronize any upgrades without having first installed [KB 3095113](https://support.microsoft.com/kb/3095113), you populate the WSUS database (SUSDB) with unusable data. That data must be cleared before the upgrades can be properly deployed. Windows upgrades in this state can't be downloaded by using the Download Software Updates Wizard.
 
 Errors that resemble the following appear on the Completion page of the Download Software Updates Wizard:
 
@@ -126,7 +124,7 @@ KB 3148812 was initially released in April 2016 to enable WSUS to natively decry
 1. From an elevated command prompt run `"C:\Program Files\Update Services\Tools\wsusutil.exe" postinstall /servicing`.
 1. Restart the WSUS service on all of the WSUS servers.
 
-If you don't realize that KB 3159706 had manual steps after installation, or you synchronized in the upgrade for Windows 10 1607 before installing KB 3159706, you would run into issues connecting to the WSUS console and deploying the upgrade respectively. When a client downloaded the upgrade file, it would get a **0xC1800118** error code.
+If you don't realize that KB 3159706 had manual steps after installation, or you synchronized in the upgrades before installing KB 3159706, you would run into issues connecting to the WSUS console and deploying the upgrade respectively. When a client downloaded the upgrade file, it would get a **0xC1800118** error code.
 
 Because the resolution steps are similar to the resolution for synchronizing upgrades before KB 3095113 installation, we've combined both sets of steps into a single resolution in the next section.
  

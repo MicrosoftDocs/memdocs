@@ -5,10 +5,11 @@ ms.date: 12/23/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: 6e32ce6d-585d-4801-a345-ff0f6f2d90ad
-author: aczechowski  
-ms.author: aaroncz 
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Microsoft Deployment Toolkit release notes  
@@ -48,7 +49,7 @@ The following list is a summary of the major changes in this version:
 
 MDT releases are no longer tagged with year or update version. To align better with the current branches of Windows 10 and Configuration Manager, and to simplify the branding and release process, it's now simply **Microsoft Deployment Toolkit**. The build number is used to distinguish each release. For example, the latest build available for download is 8456.
 
-Unlike Configuration Manager with a predetermined release schedule, MDT only releases as required to support new versions of Windows 10, the Windows ADK, or Configuration Manager current branch. Any [known issues](known-issues.md) with these components will be documented in this article as necessary.
+Unlike Configuration Manager with a predetermined release schedule, MDT only releases as required to support new versions of Windows, the Windows ADK, or Configuration Manager current branch. Any [known issues](known-issues.md) with these components will be documented in this article as necessary.
 
 The following OS versions are supported for deployment with this build of MDT:
 

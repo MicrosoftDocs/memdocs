@@ -2,16 +2,14 @@
 title: Create custom configuration items
 titleSuffix: Configuration Manager
 description: Manage settings for Windows computers and servers with a custom configuration item for Windows desktops and servers
-ms.date: 01/04/2021
+ms.date: 03/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 1eb2fcaf-acac-4388-9b31-6cccafacaabe
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client
@@ -222,7 +220,9 @@ The value returned by the script is used to assess the compliance of the global 
 
 - **Discovery script**: Select **Add Script**, and enter or browse to a script. This script is used to find the value. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
 
-- **Remediation script (optional)**: Select **Add Script**, and enter or browse to a script. This script is used to remediate non-compliant setting values. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.  
+- **Remediation script (optional)**: Select **Add Script**, and enter or browse to a script. This script is used to remediate non-compliant setting values. You can use Windows PowerShell, VBScript, or Microsoft JScript scripts.
+    > [!IMPORTANT]  
+    > - To properly report a remediation failure, scripts need to throw exceptions rather than a nonzero exit code. <!--8760430-->
 
 - **Run scripts by using the logged on user credentials**: If you enable this option, the script runs on client computers that use the credentials of the signed-in user.  
 
@@ -321,7 +321,9 @@ Compliance rules specify the conditions that define the compliance of a configur
     - **WQL query**  
 
     > [!IMPORTANT]  
-    > You can only remediate noncompliant rules when the rule operator is set to **Equals**.  
+    > - To properly report a remediation failure, scripts need to throw exceptions rather than a nonzero exit code. <!--8760430-->
+    > - You can only remediate noncompliant rules when the rule operator is set to **Equals**. 
+
 
 - **Report noncompliance if this setting instance is not found**: If this setting isn't found on client computers, enable this option for the configuration item to report noncompliance.  
 

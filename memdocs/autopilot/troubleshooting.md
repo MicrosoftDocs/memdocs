@@ -2,8 +2,6 @@
 title: Windows Autopilot troubleshooting overview
 description: Learn how to handle issues as they arise during the Windows Autopilot deployment process.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.reviewer: mniehaus
-manager: laurawi
 ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -11,9 +9,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
-ms.date: 12/17/2020
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
+ms.date: 02/09/2022
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -21,13 +21,19 @@ ms.topic: troubleshooting
 
 # Troubleshooting overview
 
-**Applies to: Windows 10**
+**Applies to**
+
+- Windows 11
+- Windows 10
 
 Windows Autopilot is designed to simplify all parts of the Windows device lifecycle, but there are always situations where issues may arise. When troubleshooting an issue, it is helpful to understand:
 
 - The Windows Autopilot [process flow](#windows-autopilot-flow)
 - How Windows Autopilot [device profiles](#profile-download) are downloaded
 - [Key activities](#key-troubleshooting-activities) to perform during troubleshooting
+
+## Windows Autopilot diagnostics page
+On Windows 11, you can open the Autopilot diagnostic page to view additional detailed troubleshooting information about the Autopilot provisioning process. The diagnostics page can be enabled by going to the ESP profile and selecting **Yes** to **Turn on log collection and diagnostics page for end users**. Once it is enabled you can select the **View Diagnostics button** or the keyboard shortcut Ctrl+Shift+D to access any diagnostic information. The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
 
 ## Windows Autopilot flow
 
@@ -42,9 +48,9 @@ Whether you're performing user-driven or self-deploying device deployments, the 
 
 ## Profile download
 
-When an Internet-connected Windows 10 device boots up, it will attempt to connect to the Autopilot service and download an Autopilot profile. Note: It's important that a profile exists at this stage so that a blank profile isn't cached locally on the PC. To remove the currently cached local profile in Windows 10 version 1803 and earlier, it's necessary to re-generalize the OS using **sysprep /generalize /oobe**, reinstall the OS, or re-image the PC. In Windows 10 version 1809 and later, you can retrieve a new profile by rebooting the PC.
+When an Internet-connected Windows device boots up, it will attempt to connect to the Autopilot service and download an Autopilot profile. Note: It's important that a profile exists at this stage so that a blank profile isn't cached locally on the PC. To remove the currently cached local profile in Windows 10 version 1803 and earlier, it's necessary to re-generalize the OS using **sysprep /generalize /oobe**, reinstall the OS, or re-image the PC. In Windows 10 version 1809 and later, you can retrieve a new profile by rebooting the PC.
 
-When a profile is downloaded depends upon the version of Windows 10 that is running on the PC. See the following table.
+When a profile is downloaded depends upon the version of Windows client that is running on the PC. See the following table.
 
 | Windows 10 version | Profile download behavior |
 | --- | --- |
@@ -80,4 +86,4 @@ See the following topics for help troubleshooting specific issues:
 
 ## Related topics
 
-[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>
+[Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)

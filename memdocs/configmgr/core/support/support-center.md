@@ -2,13 +2,14 @@
 title: Support Center
 titleSuffix: Configuration Manager
 description: Troubleshoot Configuration Manager clients with the Support Center.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Support Center for Configuration Manager
@@ -87,6 +88,23 @@ After you install it, find the following items on the Start menu in the **Micros
 Starting in version 2103, the Start menu group for Support Center includes these five tools:
 
 :::image type="content" source="media/8693068-support-center-start-menu.png" alt-text="Start menu showing five Support Center tools in version 2103 and later.":::
+
+> [!TIP]
+> When installing Support Center, you can install tools individually. To install only the OneTrace log viewer, use the **Advanced** option when using the Support Center installer. You can also use the `ADDLOCAL` property, for example `supportcenterinstaller.msi ADDLOCAL=OneTraceApplication` <!--10915091-->
+
+## Command line options
+<!--9947307-->
+Starting in version 2111, the following new command-line options have been added to the Support Center Data Collector and Client Tools:
+
+|Option| Description | Use case|
+|---|---|---|
+| `-l` | Specifies to launch as current user without elevation | If `-l` is used, no elevation is requested and local connections are disabled </br></br> `-l` can be used exclusively from `-m` and `-p`. If `-m` and/or `-p` is used without `-l`, elevation will still be requested. |
+|`-m <machinename>`| Allows specifying a machine name | If `-m <machinename>` is used, an attempt is made to connect to the specified machine name using integrated authentication (unless `-p` is used) |
+|`-p`| Disables integrated authentication| If `-p` is used, the connection screen is launched when the client tools are opened. If used with `-m`, the machine name gets pre-populated with the specified value|
+|`--help`| Displays help||
+
+> [!NOTE]
+> When using `-m <machinename>`, the account making the connection needs administrator access on the target machine to collect the data.
 
 ## Known issues
 

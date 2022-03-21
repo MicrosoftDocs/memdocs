@@ -2,16 +2,14 @@
 title: Create and run scripts
 titleSuffix: Configuration Manager
 description: Create and run PowerShell scripts on client devices.
-ms.date: 04/30/2020
+ms.date: 12/28/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: cc230ff4-7056-4339-a0a6-6a44cdbb2857
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Create and run PowerShell scripts from the Configuration Manager console
@@ -329,6 +327,18 @@ Microsoft Windows 10 Enterprise
 
 - On the site server, by default in C:\Program Files\Configuration Manager\Logs:
   - **SMS_Message_Processing_Engine.log**
+
+## Automate with Windows PowerShell
+
+You can use the following PowerShell cmdlets to automate some of these tasks:
+
+- [Approve-CMScript](/powershell/module/configurationmanager/approve-cmscript)
+- [Deny-CMScript](/powershell/module/configurationmanager/deny-cmscript)
+- [Get-CMScript](/powershell/module/configurationmanager/get-cmscript)
+- [Invoke-CMScript](/powershell/module/configurationmanager/invoke-cmscript)
+- [New-CMScript](/powershell/module/configurationmanager/new-cmscript)
+- [Remove-CMScript](/powershell/module/configurationmanager/remove-cmscript)
+- [Set-CMScript](/powershell/module/configurationmanager/set-cmscript)
 
 ## See Also
 

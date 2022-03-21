@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: How to sign in to Company Portal app | Microsoft Docs
-description: Learn where to get the Company Portal app and the three different ways to sign in.
+title: Get the Intune Company Portal app | Microsoft Docs
+description: Learn where to get the Company Portal app and how to sign in.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/27/2020
+ms.date: 12/08/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -29,37 +29,56 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# How to sign in to Company Portal  
+# Get the Intune Company Portal app   
 
-Company Portal is available for Windows 10, Android, iOS, and macOS devices from the following locations (respectively): 
+Microsoft Intune helps organizations manage access to their internal apps, data, and resources. Intune Company Portal is the app that lets you, as an employee or student in your organization, securely access those resources. 
 
-* [Microsoft Store](https://go.microsoft.com/fwlink/?linkid=2141417)  
-* [Google Play](https://go.microsoft.com/fwlink/?linkid=2141416)  
-* [Apple App Store](https://go.microsoft.com/fwlink/?linkid=2141414)  
-* [Enroll my Mac](https://go.microsoft.com/fwlink/?linkid=853070): Selecting this link will immediately download the Company Portal installer package on your device.  
+The app is available for desktop (Windows and macOS) and mobile (Android and iOS) devices. You must have a work or school account through your organization to sign in to the app.    
 
-There are three ways to sign in to the Company Portal app.
+## Install app  
+Intune Company Portal is available for Android, iOS, macOS, and Windows. 
+
+### Android  
+Install Company Portal for Android from these stores:  
+
+* [Portal AppStore](https://portal.facebook.com/help/467356237073256/)(Opens Portal help documentation)  
+* [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)  
+* [Amazon Appstore for Android](https://www.amazon.com/Microsoft-Corporation-Intune-Company-Portal/dp/B092BCFLBJ/)  
+
+If the app stores listed above are unavailable, or you're using a device that doesn't support Google Mobile Services, you can [download Microsoft Intune Company Portal for Android](https://www.microsoft.com/download/details.aspx?id=49140) on your device and side-load the app. When installed this way, the app doesn't receive updates or fixes automatically. Be sure to regularly update and patch the app yourself.  
+
+Google Play Store is not available in People's Republic of China. You can install the Company Portal app from select Chinese app marketplaces instead. For more information, see [Install Company Portal app in People's Republic of China](install-company-portal-android-china.md).   
+
+### iOS  
+Install Company Portal for iOS from the [Apple App Store](https://apps.apple.com/app/intune-company-portal/id719171358).  
+
+### macOS
+Install Company Portal for macOS from [Enroll my Mac](https://go.microsoft.com/fwlink/?linkid=853070). Selecting this link will immediately download the Company Portal installer package on your device.  
+
+### Windows  
+Install Company Portal for Windows from the [Microsoft Store](https://www.microsoft.com/p/company-portal/9wzdncrfj3pz?rtc=2&activetab=pivot:overviewtab).  
+
+## Sign in to app   
+
+There are three ways to sign in to Company Portal:  
 
 * Sign in with your school or work email address and password.  
 * Sign in with certificate-based authentication.  
-* Sign in from another device.   
+* Sign in from another device.  
 
-This article describes how to sign in using each of these methods. For the best experience, use the method that your organization recommends or requires. 
+ For the best experience, use the method that your organization recommends or requires. 
 
-
-## Sign in with school or work account    
-Complete the following steps to sign in to Company Portal with your school or work account. 
+### Sign in with school or work account    
 
 1. Open the app and tap **Sign In**.  
 
-2. Enter the email address associated with your school or work account and then tap **Next**.
+2. Enter the email address associated with your school or work account and then tap **Next**.  
 
-3. Enter your password and tap **Sign In**.
-
+3. Enter your password and tap **Sign In**.  
 
 4. Wait while the app verifies your credentials. When done, you can access the features in the app and your organization's resources.  
 
-## Sign in with certificate  
+### Sign in with certificate  
 You'll only see this sign-in option if your organization allows certificate-based authentication and you have a certificate available to use.  
 
 1. Open the Company Portal app on your device.  
@@ -71,7 +90,7 @@ You'll only see this sign-in option if your organization allows certificate-base
 4. Tap **Continue** to use the certificate.  
 5. Wait while the app verifies your certificate. When done, you can access the features in the app and your organization's resources.  
 
-## Sign in via another device    
+### Sign in via another device    
 
 If you normally use a smart card to access work resources, follow the steps in this section to sign in to Company Portal.  
 
@@ -95,5 +114,6 @@ If you normally use a smart card to access work resources, follow the steps in t
 
 
 ## Next steps  
+After you install the app on your device, follow your organization's instructions to set up your device for school or work. For enrollment help, see [Enroll Android device with Intune Company Portal](enroll-device-android-company-portal.md). 
 
 Stuck or need help? Contact your IT support person. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

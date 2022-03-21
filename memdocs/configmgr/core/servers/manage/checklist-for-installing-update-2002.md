@@ -6,10 +6,11 @@ ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 2993032a-1204-4bd8-b5af-17a980bb0649
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Checklist for installing update 2002 for Configuration Manager

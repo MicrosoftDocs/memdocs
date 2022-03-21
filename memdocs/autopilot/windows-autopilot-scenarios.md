@@ -2,16 +2,16 @@
 title: Windows Autopilot scenarios and capabilities
 description: Follow along with several typical Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, white glove, pre-provision
-ms.reviewer: mniehaus
-manager: laurawi
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 12/16/2020
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
@@ -22,14 +22,15 @@ ms.topic: conceptual
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004 or later
 
 ## Scenarios
 
 Windows Autopilot supports a growing list of scenarios that organizations commonly need. These needs vary based on:
 - Organization type.
-- Progress moving to Windows 10.
+- Progress moving to Windows 10/11.
 - How far they've [transitioned to modern management](/windows/client-management/manage-windows-10-in-your-organization-modern-management).
 
 The following Windows Autopilot scenarios are described in this guide:
@@ -40,7 +41,7 @@ The following Windows Autopilot scenarios are described in this guide:
 | Deploy devices to be automatically configured for shared use, as a kiosk, or as a digital signage device.| [Windows Autopilot self-deploying mode](self-deploying.md) |
 | Redeploy a device in a business-ready state.| [Windows Autopilot Reset](windows-autopilot-reset.md) |
 | Pre-provision a device with up-to-date applications, policies, and settings.| [Pre-provisioning](pre-provision.md) |
-| Deploy Windows 10 on an existing Windows 7 or 8.1 device | [Windows Autopilot for existing devices](existing-devices.md) |
+| Deploy Windows 10/11 on an existing Windows 7 or 8.1 device | [Windows Autopilot for existing devices](existing-devices.md) |
 
 These scenarios are summarized in the following video.
 
@@ -60,7 +61,7 @@ You can't opt out of these Autopilot updates because they're required for Window
 
 ### Cortana voiceover and speech recognition during OOBE
 
-In Windows 10, version 1903 and later, Cortana voiceover and speech recognition during OOBE is DISABLED by default. This default applies to all Windows 10 Pro, Education, and Enterprise SKUs.
+In Windows 10, version 1903 and later, Cortana voiceover and speech recognition during OOBE is DISABLED by default. This default applies to all Windows Pro, Education, and Enterprise editions.
 
 You can also enable Cortana voiceover and speech recognition during OOBE by creating the following registry key. This key doesn't exist by default:
 

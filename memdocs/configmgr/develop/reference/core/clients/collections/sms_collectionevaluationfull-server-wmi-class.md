@@ -10,6 +10,8 @@ ms.assetid: 54cee097-715c-4c4e-b8d3-49e69bb1fa2e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_CollectionEvaluationFull server WMI class

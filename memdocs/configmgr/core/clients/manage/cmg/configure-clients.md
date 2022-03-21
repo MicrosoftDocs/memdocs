@@ -2,13 +2,15 @@
 title: Configure clients for CMG
 titleSuffix: Configuration Manager
 description: Understand how to configure clients to use the cloud management gateway (CMG).
-ms.date: 08/02/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Configure clients for cloud management gateway
@@ -46,7 +48,7 @@ Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate 
 This command displays any internet-based management points the client knows about. While the CMG isn't technically an internet-based management point, clients view it as one.
 
 > [!NOTE]
-> To troubleshoot CMG client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
+> To troubleshoot CMG client traffic, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 ## Install off-premises clients using a CMG
 
@@ -54,7 +56,7 @@ There are two methods to install the Configuration Manager client on devices tha
 
 - The first method is to use a bulk registration token to install the client on a device. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token).
 
-- For the second method, when you run **ccmsetup.exe**, use the **/mp** parameter to specify the CMG's URL. For more information, see [About client installation parameters and properties](../../deploy/about-client-installation-properties.md#mp). This method requires one of the following conditions:
+- For the second method, when you run **ccmsetup.exe**, use the `/mp` parameter to specify the CMG's URL. For more information, see [About client installation parameters and properties](../../deploy/about-client-installation-properties.md#mp). This method requires one of the following conditions:
 
   - The Configuration Manager site is properly configured to use PKI certificates for client authentication. Additionally, the client systems each have a valid, unique, and trusted client authentication certificate previously issued to them.
 

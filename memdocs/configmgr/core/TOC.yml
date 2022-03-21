@@ -27,10 +27,12 @@ items:
       href: servers/manage/admin-console.md
     - name: Console notifications
       href: servers/manage/admin-console-notifications.md
-    - name: Console extensions
+    - name: Manage console extensions
       href: servers/manage/admin-console-extensions.md
+    - name: Import console extensions
+      href: servers/manage/import-admin-console-extensions.md     
     - name: Console changes and tips
-      href: servers/manage/admin-console-tips.md
+      href: servers/manage/admin-console-tips.md      
   - name: Fundamentals
     items: 
     - name: Configuration Manager fundamentals
@@ -85,6 +87,8 @@ items:
       href: plan-design/changes/features-and-capabilities.md
     - name: What's new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 2111
+      href: plan-design/changes/whats-new-in-version-2111.md
     - name: What's new in version 2107
       href: plan-design/changes/whats-new-in-version-2107.md
     - name: What's new in version 2103
@@ -93,8 +97,6 @@ items:
       href: plan-design/changes/whats-new-in-version-2010.md
     - name: What's new in version 2006
       href: plan-design/changes/whats-new-in-version-2006.md
-    - name: What's new in version 2002
-      href: plan-design/changes/whats-new-in-version-2002.md
     - name: What's changed from Configuration Manager 2012
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: Removed and deprecated
@@ -117,7 +119,9 @@ items:
       href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
     - name: Supported operating systems for clients and devices
       href: plan-design/configs/supported-operating-systems-for-clients-and-devices.md
-    - name: Support for Windows 10 as a client
+    - name: Support for Windows 11
+      href: plan-design/configs/support-for-windows-11.md
+    - name: Support for Windows 10
       href: plan-design/configs/support-for-windows-10.md
     - name: Support for the Windows ADK
       href: plan-design/configs/support-for-windows-adk.md
@@ -221,6 +225,8 @@ items:
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 2111
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2111.md
         - name: Data for version 2107
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2107.md
         - name: Data for version 2103
@@ -229,8 +235,8 @@ items:
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2010.md
         - name: Data for version 2006
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
-        - name: Data for version 2002
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
+    - name: Configuration Manager tools
+      href: plan-design/diagnostics/tools.md
     - name: Frequently asked questions (FAQ)
       href: plan-design/diagnostics/frequently-asked-questions.yml
   - name: Security and privacy for Configuration Manager
@@ -279,16 +285,14 @@ items:
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
-    - name: 2108 features
-      href: get-started/2021/technical-preview-2108.md
-    - name: 2107 features
-      href: get-started/2021/technical-preview-2107.md
-    - name: 2106 features
-      href: get-started/2021/technical-preview-2106.md
-    - name: 2105.2 features
-      href: get-started/2021/technical-preview-2105-2.md
-    - name: 2105 features
-      href: get-started/2021/technical-preview-2105.md
+    - name: 2203 features
+      href: get-started/2022/technical-preview-2203.md 
+    - name: 2202 features
+      href: get-started/2022/technical-preview-2202.md 
+    - name: 2201 features
+      href: get-started/2022/technical-preview-2201.md       
+    - name: 2112 features
+      href: get-started/2021/technical-preview-2112.md      
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -484,7 +488,7 @@ items:
     - name: Release notes
       href: servers/deploy/install/release-notes.md
     - name: State messages
-      href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md   
+      href: plan-design/hierarchy/state-messages.md
     - name: Unicode and ASCII support
       href: plan-design/hierarchy/unicode-and-ascii-support.md
 - name: Manage infrastructure
@@ -498,7 +502,7 @@ items:
     - name: Contribute to Community hub
       href: servers/manage/community-hub-contribute.md
     - name: Console extensions in Community hub
-      href: servers/manage/community-hub-extensions.md      
+      href: servers/manage/community-hub-extensions.md 
   - name: CMPivot
     items:
     - name: CMPivot overview
@@ -559,6 +563,8 @@ items:
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 2111
+      href: servers/manage/checklist-for-installing-update-2111.md
     - name: Checklist for installing update 2107
       href: servers/manage/checklist-for-installing-update-2107.md
     - name: Checklist for installing update 2103
@@ -567,8 +573,6 @@ items:
       href: servers/manage/checklist-for-installing-update-2010.md
     - name: Checklist for installing update 2006
       href: servers/manage/checklist-for-installing-update-2006.md
-    - name: Checklist for installing update 2002
-      href: servers/manage/checklist-for-installing-update-2002.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery
@@ -771,22 +775,28 @@ items:
   items:
   - name: Manage clients overview
     href: clients/manage/monitor-and-manage-clients.md
-  - name: Monitor and manage clients
+  - name: Monitor clients
     items:
     - name: How to monitor clients
       href: clients/manage/monitor-clients.md
+    - name: Client health dashboard
+      href: clients/manage/client-health-dashboard.md
+    - name: Client health checks
+      href: clients/manage/client-health-checks.md
+    - name: Surface device dashboard
+      href: clients/manage/surface-device-dashboard.md
+    - name: Sync data to Azure Monitor
+      href: /azure/azure-monitor/logs/collect-sccm?toc=/mem/configmgr/core/toc.json&bc=/mem/configmgr/core/breadcrumb/toc.json
+  - name: Manage clients
+    items:
     - name: How to manage clients
       href: clients/manage/manage-clients.md
     - name: Configure the client cache
       href: clients/manage/configure-client-cache.md
     - name: Client notification
       href: clients/manage/client-notification.md
-    - name: Sync data to Azure Monitor
-      href: /azure/azure-monitor/logs/collect-sccm?toc=/mem/configmgr/core/toc.json&bc=/mem/configmgr/core/breadcrumb/toc.json
     - name: Maintain Mac clients
       href: clients/manage/maintain-mac-clients.md
-    - name: Surface device dashboard
-      href: clients/manage/surface-device-dashboard.md
   - name: Collections
     items:
     - name: Introduction to collections

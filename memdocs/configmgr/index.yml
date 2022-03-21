@@ -4,6 +4,9 @@ summary: "Official product documentation for the following components of Microso
 metadata:
    ms.topic: hub-page
    ms.prod: configuration-manager
+   ms.localizationpriority: high
+   ms.date: 11/10/2021
+   ms.collection: highpri
 
 highlightedContent: 
   items: 
@@ -202,9 +205,9 @@ additionalContent:
       - title: In-console feedback
         summary: Send a smile or frown to the engineering team
         url: ./core/understand/product-feedback.md
-      - title: UserVoice product feedback
+      - title: Product feedback
         summary: Share product ideas with the engineering team
-        url: https://configurationmanager.uservoice.com/forums/300492-ideas
+        url: https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472
       - title: Product support
         summary: Get professional help from Microsoft support
         url: https://aka.ms/cmcbsupport

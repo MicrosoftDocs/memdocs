@@ -2,13 +2,14 @@
 title: Encrypt recovery data over the network
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes over the network.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Encrypt recovery data over the network
@@ -21,21 +22,29 @@ When you create a BitLocker management policy, Configuration Manager deploys the
 
 Given the sensitive nature of this information, you need to protect it.
 
+[!INCLUDE [11108795 note about recovery service](includes/11108795-bitlocker-recovery-service.md)]
+
 ## HTTPS certificate requirements
 
-Configuration Manager requires an HTTPS connection between the client and the recovery service to encrypt the data in transit across the network. Use one of the following options:
+> [!NOTE]
+> These requirements only apply if the site is version 2010 or earlier, or if you deploy BitLocker management policies to devices with Configuration Manager client version 2010 or earlier.
 
-- Enable the site for [enhanced HTTP](../../../core/plan-design/hierarchy/enhanced-http.md). This option applies to version 2103 or later.<!-- 9503186 -->
+Configuration Manager requires a secure connection between the client and the recovery service to encrypt the data in transit across the network. Use one of the following options:
 
-- HTTPS-enable the IIS website on the management point that hosts the recovery service, not the entire management point role.<!-- 5925660 -->
+- [HTTPS-enable the IIS website](#https-enable-the-iis-website) on the management point that hosts the recovery service, not the entire management point role.<!-- 5925660 -->
 
-- Configure the management point for HTTPS. On the properties of the management point, the **Client connections** setting must be **HTTPS**. This option applies to all supported versions of Configuration Manager.
+- [Configure the management point for HTTPS](#configure-the-management-point-for-https). On the properties of the management point, the **Client connections** setting must be **HTTPS**.
 
-## Configure the management point for HTTPS
+> [!NOTE]
+> If your site has more than one management point, enable HTTPS on all management points at the site with which a BitLocker-managed client could potentially communicate. If the HTTPS management point is unavailable, the client could fail over to an HTTP management point, and then fail to escrow its recovery key.
+>
+> This recommendation applies to both options: enable the management point for HTTPS, or enable the IIS website that hosts the recovery service on the management point.
+
+### Configure the management point for HTTPS
 
 In earlier versions of Configuration Manager current branch, to integrate the BitLocker recovery service you had to HTTPS-enable a management point. The HTTPS connection is necessary to encrypt the recovery keys across the network from the Configuration Manager client to the management point. Configuring the management point and all clients for HTTPS can be challenging for many customers.
 
-## HTTPS-enable the IIS website
+### HTTPS-enable the IIS website
 
 The HTTPS requirement is now for the IIS website that hosts the recovery service, not the entire management point role. This configuration relaxes the certificate requirements, and still encrypts the recovery keys in transit.
 
@@ -52,15 +61,12 @@ The **Client connections** property of the management point can be **HTTP** or *
 > [!TIP]
 > The only clients that need to communicate with the recovery service are those clients that you plan to target with a BitLocker management policy and includes a **Client Management** rule.
 
+## Troubleshoot the connection
+
 On the client, use the **BitLockerManagementHandler.log** to troubleshoot this connection. For connectivity to the recovery service, the log shows the URL that the client is using. Locate an entry in the log based on the version of Configuration Manager:<!-- MEMDocs#1688 -->
 
 - In version 2103 and later, the entry starts with `Recovery keys escrowed to MP`
 - In version 2010 and earlier, the entry starts with `Checking for Recovery Service at`
-
-> [!NOTE]
-> If your site has more than one management point, enable HTTPS on all management points at the site with which a BitLocker-managed client could potentially communicate. If the HTTPS management point is unavailable, the client could fail over to an HTTP management point, and then fail to escrow its recovery key.
->
-> This recommendation applies to both options: enable the management point for HTTPS, or enable the IIS website that hosts the recovery service on the management point.
 
 ## Next steps
 

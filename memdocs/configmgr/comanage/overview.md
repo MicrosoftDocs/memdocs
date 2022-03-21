@@ -1,16 +1,17 @@
 ---
-title: Co-management for Windows 10 devices
+title: Co-management for Windows devices
 titleSuffix: Configuration Manager
-description: Learn how to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune.
+description: Learn how to concurrently manage Windows 10 or later devices by using both Configuration Manager and Microsoft Intune.
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 06/01/2021
+ms.date: 10/05/2021
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
-ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 #Customer intent: As an IT Pro, I want to enable co-management so that Configuration Manager is cloud-attached to Microsoft Intune.
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # What is co-management?
@@ -18,9 +19,9 @@ ms.assetid: d6bbc787-83a5-44b4-ad64-016e5da7413f
 <!-- 1350871 -->
 Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It helps you unlock additional cloud-powered capabilities like conditional access.
 
-Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
+Co-management enables you to concurrently manage Windows 10 or later devices by using both Configuration Manager and Microsoft Intune. It lets you cloud-attach your existing investment in Configuration Manager by adding new functionality. By using co-management, you have the flexibility to use the technology solution that works best for your organization.
 
-When a Windows 10 device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
+When a Windows device has the Configuration Manager client and is enrolled to Intune, you get the benefits of both services. You control which workloads, if any, you switch the authority from Configuration Manager to Intune. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
 
 You're also able to pilot a workload with a separate collection of devices. Piloting allows you to test the Intune functionality with a subset of devices before switching a larger group.
 
@@ -29,15 +30,15 @@ You're also able to pilot a workload with a separate collection of devices. Pilo
 [View the diagram at full size](media/co-management-overview.svg)
 
 > [!Note]  
-> When you concurrently manage Windows 10 devices with both Configuration Manager and Microsoft Intune, this configuration is called *co-management*. When you manage devices with Configuration Manager and enroll to a third-party MDM service, this configuration is called *coexistence*. Having two management authorities for a single device can be challenging if not properly orchestrated between the two. With co-management, Configuration Manager and Intune balance the [workloads](#workloads) to make sure there are no conflicts. This interaction doesn't exist with third-party services, so there are limitations with the management capabilities of coexistence. For more information, see [Third-party MDM coexistence with Configuration Manager](coexistence.md).
+> When you concurrently manage devices with both Configuration Manager and Microsoft Intune, this configuration is called *co-management*. When you manage devices with Configuration Manager and enroll to a third-party MDM service, this configuration is called *coexistence*. Having two management authorities for a single device can be challenging if not properly orchestrated between the two. With co-management, Configuration Manager and Intune balance the [workloads](#workloads) to make sure there are no conflicts. This interaction doesn't exist with third-party services, so there are limitations with the management capabilities of coexistence. For more information, see [Third-party MDM coexistence with Configuration Manager](coexistence.md).
 
 ## Paths to co-management
 
 There are two main paths to reach to co-management:  
 
-- **Existing Configuration Manager clients**: You have Windows 10 devices that are already Configuration Manager clients. You set up hybrid Azure AD, and enroll them into Intune.  
+- **Existing Configuration Manager clients**: You have Windows 10 or later devices that are already Configuration Manager clients. You set up hybrid Azure AD, and enroll them into Intune.  
 
-- **New internet-based devices**: You have new Windows 10 devices that join Azure AD and automatically enroll to Intune. You install the Configuration Manager client to reach a co-management state.  
+- **New internet-based devices**: You have new Windows 10 or later devices that join Azure AD and automatically enroll to Intune. You install the Configuration Manager client to reach a co-management state.  
 
 For more information on the paths, see [Paths to co-management](quickstart-paths.md).
 
@@ -62,7 +63,7 @@ For more information on this immediate value from co-management, see the quickst
 Co-management also enables you to orchestrate with Intune for several workloads. For more information, see the [Workloads](#workloads) section.
 
 > [!NOTE]
-> Co-management by itself isn't a solution to manage remotely connected Windows 10 systems. The Configuration Manager client still needs to communicate with its assigned site. To manage remotely connected Windows 10 systems with Configuration Manager, enable a [cloud management gateway (CMG)](../core/clients/manage/cmg/overview.md). A CMG isn't required for co-management, and co-management isn't required with a CMG, but they can be used together.
+> Co-management by itself isn't a solution to manage remotely connected Windows systems. The Configuration Manager client still needs to communicate with its assigned site. To manage remotely connected Windows systems with Configuration Manager, enable a [cloud management gateway (CMG)](../core/clients/manage/cmg/overview.md). A CMG isn't required for co-management, and co-management isn't required with a CMG, but they can be used together.
 
 ## Prerequisites
 
@@ -72,7 +73,7 @@ Co-management has these prerequisites in the following areas:
 - [Configuration Manager](#configuration-manager)  
 - [Azure Active Directory](#azure-ad) (Azure AD)  
 - [Microsoft Intune](#intune)  
-- [Windows 10](#windows-10)  
+- [Windows](#windows)  
 - [Permissions and roles](#permissions-and-roles)  
 
 ### Licensing
@@ -82,7 +83,7 @@ Co-management has these prerequisites in the following areas:
     > [!Note]  
     > An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune.
 
-- At least one Intune license for you as the administrator to access the Intune portal.
+- At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center.
 
     > [!Tip]
     > Make sure you assign an Intune license to the account that you use to sign in to your tenant. Otherwise, sign in fails with the error message *An unanticipated error occurred*.<!-- MEMDocs#691 -->
@@ -99,7 +100,7 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 ### Azure AD
 
-- Windows 10 devices must be connected to Azure AD. They can be either of the following types:  
+- Windows devices must be connected to Azure AD. They can be either of the following types:  
 
   - [Hybrid Azure AD-joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid), where the device is joined to your on-premises Active Directory and registered with your Azure Active Directory.
 
@@ -112,14 +113,11 @@ Enabling co-management itself doesn't require that you onboard your site with Az
 
 - [Set up Intune](/intune/setup-steps)  
 
-- [Enable Windows 10 automatic enrollment](/intune/windows-enroll#enable-windows-10-automatic-enrollment)  
+- [Enable automatic enrollment](/intune/windows-enroll#enable-windows-automatic-enrollment)  
 
-### Windows 10
+### Windows
 
-Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#key-articles-about-adopting-windows-as-a-service).
-
-> [!IMPORTANT]
-> Windows 10 mobile devices don't support co-management.
+Upgrade your devices to Windows 10, version 1709 or later. For more information, see [Adopting Windows as a service](../core/understand/configuration-manager-and-windows-as-service.md#windows-as-a-service).
 
 ### Permissions and roles
 

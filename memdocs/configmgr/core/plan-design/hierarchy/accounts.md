@@ -9,6 +9,7 @@ ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Accounts used in Configuration Manager
@@ -649,7 +650,7 @@ Configuration Manager automatically creates and maintains the following role obj
 
 ### smsdbrole_AITool
 
-Configuration Manager grants this permission to users accounts based on role-based access to import volume license information for Asset Intelligence. This account could be added by a Full Administrator or Asset Manager role.
+Configuration Manager grants this permission to administrative user accounts based on role-based access to import volume license information for Asset Intelligence. This account could be added by a Full Administrator, Operations Administrator or Asset Manager role, or any role with 'Manage Asset Intelligence' permission.
 
 ### smsdbrole_AIUS
 

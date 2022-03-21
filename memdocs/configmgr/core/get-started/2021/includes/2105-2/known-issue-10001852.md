@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.date: 05/28/2021
+ms.localizationpriority: medium
 ---
 
 ### <a name="ki_ta"></a> Known issue with tenant attach onboarding

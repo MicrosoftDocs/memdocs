@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/14/2021
+ms.date: 10/25/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -62,7 +62,7 @@ Create an [Android Enterprise VPN device configuration profile](vpn-settings-con
   - **Microsoft Tunnel** (Not supported on Android Enterprise dedicated devices.)  
 
     > [!Important]
-    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after October 26, 2021.
+    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 
@@ -115,7 +115,7 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
   - **Microsoft Tunnel**  
 
     > [!Important]
-    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after October 26, 2021.
+    > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
 
 The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
 

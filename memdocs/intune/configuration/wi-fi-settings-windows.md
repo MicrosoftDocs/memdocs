@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Wi-Fi settings for Windows 10 devices in Microsoft Intune
-description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10 and later devices in Microsoft Intune. You can configure basic settings, or enterprise level settings. 
+title: Wi-Fi settings for Windows 10/11 devices in Microsoft Intune
+description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10/11 client devices in Microsoft Intune. You can configure basic settings, or enterprise level settings. 
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 03/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,18 +27,18 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add Wi-Fi settings for Windows 10 and newer devices in Intune
+# Add Wi-Fi settings for Windows 10/11 devices in Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-You can create a profile with specific WiFi settings. Then, deploy this profile to your Windows 10 and newer devices. Microsoft Intune offers many features, including authenticating to your network, using a pre-shared key, and more.
+You can create a profile with specific WiFi settings. Then, deploy this profile to your Windows client devices. Microsoft Intune offers many features, including authenticating to your network, using a pre-shared key, and more.
 
 This article describes some of these settings.
 
 ## Before you begin
 
-Create a [Windows 10 Wi-Fi device configuration profile](wi-fi-settings-configure.md).
+Create a [Windows 10/11 Wi-Fi device configuration profile](wi-fi-settings-configure.md).
 
 These settings use the [Wi-Fi CSP](/windows/client-management/mdm/wifi-csp).
 
@@ -70,7 +70,7 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WPA/WPA2-Personal**: A more secure option, and is commonly used for Wi-Fi connectivity. For more security, you can also enter a pre-shared key password or network key.
 
-    - **Pre-shared key** (PSK): Optional. Shown when you choose **WPA/WPA2-Personal** as the security type. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value. Enter a string between 8-64 characters. If your password or network key is 64 characters, enter hexadecimal characters.
+    - **Pre-shared key** (PSK): Optional. Shown when you choose **WPA/WPA2-Personal** as the security type. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value. Enter an ASCII string that is 8-63 characters long or use 64 hexadecimal characters.
 
       > [!IMPORTANT]
       > The PSK is the same for all devices you target the profile to. If the key is compromised, it can be used by any device to connect to the Wi-Fi network. Keep your PSKs secure to avoid unauthorized access.

@@ -34,6 +34,12 @@ With Intune, enhance Conditional Access in Azure Active Directory by adding mobi
 
 A Conditional Access policy specifies the app or services you want to protect, the conditions under which the apps or services can be accessed, and the users the policy applies to. Although Conditional Access is an Azure AD premium feature, the Conditional Access node you access from *Intune* is the same node as accessed from *Azure AD*.
 
+To Create a device-based Conditional Access policy your account must have one of the following permissions in Azure AD:
+
+- Global administrator	
+- Intune Service administrator	
+- Conditional Access administrator	
+
 > [!IMPORTANT]
 > Before you set up Conditional Access, you'll need to set up Intune device compliance policies to evaluate devices based on whether they meet specific requirements. See [Get started with device compliance policies in Intune](device-compliance-get-started.md).
 
@@ -80,13 +86,6 @@ A Conditional Access policy specifies the app or services you want to protect, t
    - **Sign-in risk**: Select *Yes* to use Azure AD Identity Protection sign-in risk detection with this policy, and then choose the sign-in risk levels the policy should apply to.
 
    - **Device platforms**: On the **Include** tab, identify the device platforms you want to this Conditional Access policy to apply to. Use the **Exclude** tab to exclude platforms from this policy.
-
-   - **Locations**: On the **Include** tab, specify whether the policy applies to:
-     - Any location
-     - Trusted network locations that are under the control of your IT department
-     - Specific network locations.
-
-     Use the **Exclude** tab to exclude network locations from this policy.
 
    - **Client apps**: Select *Yes* to specify if the policy should apply to browser apps, mobile apps, and desktop clients.
 

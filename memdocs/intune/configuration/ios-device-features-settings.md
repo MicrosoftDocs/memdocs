@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 01/19/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid:
 #ms.tgt_pltfrm:
@@ -240,14 +240,42 @@ This feature applies to:
 
 - **"If Lost, Return to..." Message**: If devices are lost or stolen, enter a note that might help get the device returned if found. You can enter any text you want. For example, enter something like `If found, call Contoso at ...`.
 
- The text you enter is shown on the sign in window and lock screen on devices.
+  The text you enter is shown on the sign in window and lock screen on devices.
 
 - **Asset tag information**: Enter information about the asset tag of the device. For example, enter `Owned by Contoso Corp` or `Serial Number: {{serialnumber}}`.
 
-  Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}` or `Device ID: {{DEVICEID}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `DEVICENAME` or any other device-specific value.
+  Device tokens can also be used to add device-specific information to these fields. For example, to show the serial number, enter `Serial Number: {{serialnumber}}` or `Device ID: {{DEVICEID}}`. On the lock screen, the text shows similar to `Serial Number 123456789ABC`. When entering variables, be sure to use curly brackets `{{ }}`.
+  
+  The following device information variables are supported:
 
+  - `{{AADDeviceId}}`:  Azure AD device ID
+  - `{{AccountId}}`:  Intune tenant ID or account ID
+  - `{{AccountName}}`:  Intune tenant name or account name
+  - `{{AppleId}}`:  Apple ID of the user
+  - `{{Department}}`:  Department assigned during Setup Assistant
+  - `{{DeviceId}}`:  Intune device ID
+  - `{{DeviceName}}`:  Intune device name
+  - `{{domain}}`:  Domain name
+  - `{{EASID}}`: Exchange Active Sync ID
+  - `{{EDUUserType}}`: Type of user
+  - `{{IMEI}}`:  IMEI of the device
+  - `{{mail}}`:  Email address of the user
+  - `{{ManagedAppleId}}`: Managed Apple ID of the user
+  - `{{MEID}}`:  MEID of the device
+  - `{{partialUPN}}`:  UPN prefix before the @ symbol
+  - `{{SearchableDeviceKey}}`:  NGC Key ID
+  - `{{SerialNumber}}`:  Device serial number
+  - `{{SerialNumberLast4Digits}}`: Last 4 digits of the device serial number
+  - `{{SIGNEDDEVICEID}}`:  Device ID blob assigned to client during Company Portal enrollment
+  - `{{SignedDeviceIdWithUserId}}`:  Device ID blob assigned to client with user-affinity during Apple Setup Assistant
+  - `{{UDID}}`: Device UDID
+  - `{{UDIDLast4Digits}}`:  Last 4 digits of the device UDID
+  - `{{UserId}}`:  Intune user ID
+  - `{{UserName}}`:  User name
+  - `{{userPrincipalName}}`:  UPN of the user
+ 
   > [!NOTE]
-  > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}` or '{{DEVICEID}}', then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix. 
+  > Variables aren't validated in the UI, and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}` instead of `{{deviceid}}` or '{{DEVICEID}}', then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
 
 ## Single sign-on
 
@@ -313,7 +341,7 @@ This feature applies to:
   - **Specific websites only** (for the Safari web browser only): These URLs are added to the Safari browser's bookmarks. Users are **only** allowed to visit these sites; no other sites can be opened. Use this option only if you know the exact list of URLs that users can access.
 
     - **URL**: Enter the URL of the website you want to allow. For example, enter `https://www.contoso.com`.
-    - **Bookmark Path**: Apple changed this setting. All bookmarks go into the **Approved Sites** folder. Bookmarks don't go in to the bookmark path you enter.
+    - **Bookmark Path**: Apple changed this setting. All bookmarks go into the **Allowed Sites** folder. Bookmarks don't go in to the bookmark path you enter.
     - **Title**: Enter a descriptive title for the bookmark.
 
     If you don't enter any URLs, then users can't access any websites except for `microsoft.com`, `microsoft.net`, and `apple.com`. These URLs are automatically allowed by Intune.
@@ -398,6 +426,13 @@ This feature applies to:
   > - If you only have one realm, leave it **Not configured** (default).
 
 - **Block Autodiscover** (Kerberos only): **Yes** prevents the Kerberos extension from automatically using LDAP and DNS to determine its Active Directory site name. 
+
+- **Allow only managed apps** (Kerberos only): When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow non-managed apps to access the credential. 
+
+  This feature applies to:
+  
+  - iOS/iPadOS 14 and newer
+
 - **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
 
   > [!TIP]
@@ -407,6 +442,12 @@ This feature applies to:
 
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You may not need to change this value, as the Kerberos extension may automatically find the Active Directory site code.
 - **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.
+- **Sign in window text** (Kerberos only): Enter the text shown to users at the Kerberos sign in window.
+
+  This feature applies to:
+  
+  - iOS/iPadOS 14 and newer
+
 - **App bundle IDs** (Microsoft Azure AD, Kerberos): Enter the bundle IDs of the additional apps that should get single sign-on through an extension on your devices.
 
   If you use the **Microsoft Azure AD SSO app extension** type, then:

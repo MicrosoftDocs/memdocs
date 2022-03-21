@@ -2,13 +2,14 @@
 title: Uninstall applications
 titleSuffix: Configuration Manager
 description: Uninstall an application by using Configuration Manager
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Uninstall applications with Configuration Manager
@@ -77,38 +78,48 @@ Then [deploy the application](deploy-applications.md). On the **Deployment Setti
 
 Many customers have lots of collections because for every application they need at least two collections: one for install and another for uninstall. This practice adds overhead of managing more collections, and can reduce site performance for collection evaluation.
 
-Starting in version 2107, you can enable an application deployment to support implicit uninstall. If a device is in a collection, the application installs. Then when you remove the device from the collection, the application uninstalls.
+Starting in version 2107, you can enable an application deployment to support implicit uninstall. If a resource is in a collection, the application installs. Then when you remove the resource from the collection, the application uninstalls.
+
+Starting in version 2111, this behavior also supports [application groups](create-app-groups.md#app-approval).<!-- 10479618 --> When this article refers to an _application_, it also applies to app groups.
 
 > [!NOTE]
-> This behavior only applies to deployments to device collections.
+> In version 2111 and later, this behavior applies to deployments to device or user collections.<!--10393847--> In version 2107, this behavior only applies to deployments to device collections.
 
 ### Enable implicit uninstall
 
-When you [deploy the application](deploy-applications.md) to a device collection, configure the following settings on the **Deployment Settings** page:
+When you [deploy the application](deploy-applications.md) to a collection, configure the following settings on the **Deployment Settings** page:
 
 - **Action**: Install
 
 - **Purpose**: Required
 
 - Enable the option to **Uninstall this application if the targeted object falls out of the collection**
+   - In version 2111, this option was renamed to **When a resource is no longer a member of the collection, uninstall the application**
 
+   
 > [!IMPORTANT]
 > Be careful with enabling this option on deployments to large query-based collections. Especially queries to external sources like Active Directory groups. An unexpected external change could automatically trigger a large number of devices to uninstall the application.
 
+
 ### Implicit uninstall process
 
-After you remove the device from the collection, the following process happens:
+After you remove the resource from the collection, the following process happens:
 
-- A background worker process runs on the site server every 10 minutes. This task keeps track of apps for which you've enabled this option. It then detects devices that you removed from the target collection. To help you troubleshoot this process, view the **SMS_ImplicitUninstall.log** file on the site server.
+- A background worker process runs on the site server every 10 minutes. This task keeps track of apps for which you've enabled this option. It then detects resources that you removed from the target collection. To help you troubleshoot this process, view the **SMS_ImplicitUninstall.log** file on the site server.
 
-- The client needs to download computer policy. By default, the [client policy polling interval](../../core/clients/deploy/about-client-settings.md#client-policy) client setting is 60 minutes. To accelerate this step, manually [Download computer policy](../../core/clients/manage/manage-clients.md#BKMK_PolicyRetrieval).
+- The client needs to download policy. By default, the [client policy polling interval](../../core/clients/deploy/about-client-settings.md#client-policy) client setting is 60 minutes. To accelerate this step, manually [download policy](../../core/clients/manage/manage-clients.md#start-policy-retrieval).
 
 - 15 minutes after the client receives the updated policy, it uninstalls the app.
 
-Depending upon the timing of those steps, the longest time period for the client to uninstall the app is 85 minutes. If the first step happens immediately, and you manually download computer policy on the device, the overall process is 15 minutes.
+Depending upon the timing of those steps, the longest time period for the client to uninstall the app is 85 minutes. If the first step happens immediately, and you manually download policy on the device, the overall process is 15 minutes.
 
 > [!NOTE]
-> For this behavior, the site can process up to 1000 collection membership changes every 10 minutes.
+> - For this behavior, the site can process up to 1000 collection membership changes every 10 minutes.
+> - If the uninstall doesn't occur, it's likely that there's a conflicting install deployment of the same application, application group, or a different application group with the same apps. <!--12618105-->
+
+### Known issues
+
+You configure an app's installation behavior to **Install for system**, and then deploy it to a user collection. A device has multiple users who are both in the collection, and the app installs on the device. If you then remove _one user_ from the collection, the app is uninstalled from the device for all users.<!-- 11104790 -->
 
 ## Next steps
 

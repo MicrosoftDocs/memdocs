@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Learn about security baselines in Microsoft Intune
+title: Learn about Windows security baselines you can deploy with Microsoft Intune
 description: Deploy security baselines to devices to help protect users and data on devices you manage with Microsoft Intune. The default baseline configurations are the recommended windows security settings from the relevant security teams. You can also customize baselines to meet your business requirements. 
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 01/04/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -26,18 +24,27 @@ ms.suite: ems
 ms.custom: 
    - intune-azure
    - contperf-fy21q1
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
-# Use security baselines to configure Windows 10 devices in Intune
+# Use security baselines to configure Windows devices in Intune
 
-Use Intune's security baselines to help you secure and protect your users and devices. Security baselines are pre-configured groups of Windows settings that help you apply the security settings that are recommended by the relevant security teams. You can also customize the baselines you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple *device configuration* profiles.
+Intune makes it easy to deploy Windows security baselines to help you secure and protect your users and devices.
+
+Even though Windows and Windows Server are designed to be secure out-of-the-box, many organizations still want more granular control over their security configurations. To navigate the large number of controls, organizations often seek guidance on configuring various security features. Microsoft provides this guidance in the form of security baselines.
+
+Security baselines are groups of pre-configured Windows settings that help you apply and enforce granular security settings that are recommended by the relevant security teams. You can also customize each baseline you deploy to enforce only those settings and values you require. When you create a security baseline profile in Intune, you're creating a template that consists of multiple *device configuration* profiles.
+
+To learn more about why and when you might want to deploy security baselines, see [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) in the Windows security documentation.
 
 This feature applies to:
 
 - Windows 10 version 1809 and later
+- Windows 11
 
-You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10 or later. For example, the *MDM Security Baseline* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
+You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10/11. For example, the *MDM Security Baseline* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
 
 Separate baseline types can include the same settings but use different default values for those settings. It's important to understand the defaults in the baselines you choose to use, and to then modify each baseline to fit your organizational needs.
 
@@ -50,40 +57,44 @@ Security baselines can help you to have an end-to-end secure workflow when worki
 - If you're new to Intune, and not sure where to start, then security baselines gives you an advantage. You can quickly create and deploy a secure profile, knowing that you're helping protect your organization's resources and data.
 - If you currently use group policy, migrating to Intune for management is much easier with these baselines. These baselines are natively built in to Intune, and include a modern management experience.
 
-[Windows security baselines](/windows/security/threat-protection/windows-security-baselines) is a great resource to learn more about this feature. [Mobile device management](/windows/client-management/mdm/) (MDM) is a great resource about MDM, and what you can do on Windows devices.
-
 ## Available security baselines
 
-The following security baseline instances are available for use with Intune. Use the links to view the settings for the most recent instance of each baseline.
+The following security baseline instances are available for use with Intune. Use the links to view the settings for recent instances of each baseline.
 
-- **MDM Security Baseline**  
-  - [MDM Security Baseline for December 2020](security-baseline-settings-mdm-all.md?pivots=december-2020)
-  - [MDM Security Baseline for August 2020](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
-  - [MDM Security Baseline for May 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
+- **Security Baseline for Windows 10 and later**  
+  - [November 2021](security-baseline-settings-mdm-all.md?pivots=november-2021)
+  - [December 2020](security-baseline-settings-mdm-all.md?pivots=december-2020)
+  - [August 2020](security-baseline-settings-mdm-all.md?pivots=mdm-sept-2020)
+<!-- deprecating from content 
+  - [May 2019](security-baseline-settings-mdm-all.md?pivots=mdm-may-2019)
   - [Preview: MDM Security Baseline for October 2018](security-baseline-settings-mdm-all.md?pivots=mdm-preview)
+-->
 
 - **Microsoft Defender for Endpoint baseline**  
   *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites))*.
-  - [Microsoft Defender for Endpoint baseline for December 2020 - version 6](security-baseline-settings-defender-atp.md?pivots=december-2020)
-  - [Microsoft Defender for Endpoint baseline for August 2020 - version 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
-  - [Microsoft Defender for Endpoint baseline for April 2020 - version 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
-  - [Microsoft Defender for Endpoint baseline for March 2020 - version 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
+  - [Version 6](security-baseline-settings-defender-atp.md?pivots=december-2020)
+  - [Version 5](security-baseline-settings-defender-atp.md?pivots=atp-sept-2020)
+  - [Version 4](security-baseline-settings-defender-atp.md?pivots=atp-april-2020)
+  - [Version 3](security-baseline-settings-defender-atp.md?pivots=atp-march-2020)
 
   > [!NOTE]
   > The Microsoft Defender for Endpoint security baseline has been optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments.  For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
 - **Microsoft Edge Baseline**
-  - [Microsoft Edge baseline for September 2020 (Edge version 85 and later)](security-baseline-settings-edge.md?pivots-edge-sept-2020)
-  - [Microsoft Edge baseline for April 2020 (Edge version 80 and later)](security-baseline-settings-edge.md?pivots-edge-april-2020)
-  - [Preview: Microsoft Edge baseline for October 2019 (Edge version 77 and later)](security-baseline-settings-edge.md?pivots=edge-october-2019)
+  - [September 2020 (Edge version 85 and later)](security-baseline-settings-edge.md?pivots-edge-sept-2020)
+  - [April 2020 (Edge version 80 and later)](security-baseline-settings-edge.md?pivots-edge-april-2020)
+  - [Preview: October 2019 (Edge version 77 and later)](security-baseline-settings-edge.md?pivots=edge-october-2019)
 
-After a new version for a profile releases, settings in profiles based on the older versions become read-only. You can continue using those older profiles, including editing their name, description and assignments, but you won't be able to edit settings for them or create new profiles based on the older versions.
+- **Windows 365 Security Baseline**
+  - [Windows 365 Security Baseline version 2101](security-baseline-settings-windows-365.md)
+
+After a new version for a profile releases, settings in profiles based on the older versions become read-only. You can continue using those older profiles, including editing their name, description, and assignments, but you won't be able to edit settings for them or create new profiles based on the older versions.
 
 When you're ready to use the more recent version of a baseline, you can create new profiles or update your existing profiles to the new version. See [Change the baseline version for a profile](security-baselines-configure.md#change-the-baseline-version-for-a-profile) in the *Manage security baseline profiles* article.
 
 ## About baseline versions and instances
 
-Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows 10 settings become available with new versions of Windows 10, the MDM Security Baseline might receive a new version instance that includes the newest settings.
+Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows settings become available with new versions of Windows 10/11, the MDM Security Baseline might receive a new version instance that includes the newest settings.
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines** you'll see a list of the available baselines. The list includes:
 - The baseline template name.
@@ -97,7 +108,7 @@ You can choose to [change of the version](security-baselines-configure.md#change
 
 ### Compare baseline versions
 
-On the **Versions** pane for a security baseline is a list of each version of this baseline that you've deployed. This list also includes the most recent and active version of the baseline. When you create a new security baseline *profile*, the profile uses that most recent version of the security baseline. You can continue using profiles based on older versions, including editing their name, description and assignments, but you won't be able to edit settings for those older profile versions.
+On the **Versions** pane for a security baseline is a list of each version of this baseline that you've deployed. This list also includes the most recent and active version of the baseline. When you create a new security baseline *profile*, the profile uses that most recent version of the security baseline. You can continue using profiles based on older versions, including editing their name, description, and assignments, but you won't be able to edit settings for those older profile versions.
 
 To understand what's changed between versions, select the checkboxes for two different versions, and then select **Compare baselines**. You're then prompted to download a CSV file that details those differences.
 

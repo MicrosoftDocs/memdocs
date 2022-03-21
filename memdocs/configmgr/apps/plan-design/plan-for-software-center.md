@@ -2,13 +2,14 @@
 title: Plan for Software Center
 titleSuffix: Configuration Manager
 description: Decide how you want to configure and brand Software Center for users to interact with Configuration Manager.
-ms.date: 08/27/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Plan for Software Center
@@ -27,9 +28,10 @@ Use client settings to configure the appearance and behaviors of Software Center
 - Change the branding of Software Center to include your organization's name, colors, and logo. For more information, see [Brand Software Center](#brand-software-center).
 
 - Configure which default tabs are visible, and add up to five custom tabs to Software Center.<!--4063773-->
-   - In Configuration Manager 2103 and earlier, when single sign on with multifactor authentication is used, you may not be able to sign into custom tabs that load a website that's subject to conditional access policies. <!--10436429-->
 
-- Starting in version 2006, you can configure co-managed devices to use the Company Portal for both Intune and Configuration Manager apps. For more information, see [Use the Company Portal app on co-managed devices](../../comanage/company-portal.md).<!--CMADO-3601237,INADO-4297660-->
+  In Configuration Manager 2103 and earlier, when single sign on with multifactor authentication is used, you may not be able to sign into custom tabs that load a website that's subject to conditional access policies. <!--10436429-->
+
+- You can configure co-managed devices to use the Company Portal for both Intune and Configuration Manager apps. For more information, see [Use the Company Portal app on co-managed devices](../../comanage/company-portal.md).<!--CMADO-3601237,INADO-4297660-->
 
 You can allow users to set in Software Center if they regularly use the computer for work. This option configures an affinity between the user and device, which can affect some deployments. For more information, see [Link users and devices with user device affinity](../deploy-use/link-users-and-devices-with-user-device-affinity.md#let-users-create-their-own-device-affinities).
 
@@ -47,7 +49,7 @@ When you deploy an app with the purpose **Available** to a user collection, user
 
 Software Center gets application deployment information in policy from the management point. It uses the same management point from the assigned primary site as the Configuration Manager client. In a large environment, you can scale client communication to management points by assigning them to [boundary groups](../../core/servers/deploy/configure/boundary-groups-management-points.md).<!--1358309-->
 
-Users can browse and install user-available applications on Azure Active Directory (Azure AD)-joined devices. Starting in version 2006, they can get user-available apps on internet-based, domain-joined devices. For more information, see [Prerequisites to deploy user-available applications](prerequisites-deploy-user-available-apps.md).
+Users can browse and install user-available applications on Azure Active Directory (Azure AD)-joined devices and internet-based, domain-joined devices. For more information, see [Prerequisites to deploy user-available applications](prerequisites-deploy-user-available-apps.md).
 
 The site optimizes user-available deployments to reduce policy traffic between the server and clients. This behavior allows a large number of applications to be available for the user without significantly affecting performance of the overall infrastructure.
 
@@ -79,14 +81,18 @@ Change the appearance of Software Center to meet your organization's branding re
 <!-- 1351224 -->
 Customize the appearance of Software Center by adding your organization's branding elements:
 
-- **Organization name**: Software Center displays this name in the top banner
-- **Color scheme**: The primary color for the banner and other elements
+- **Organization name**: Software Center displays this name in the top banner.
+- **Color scheme**: The primary color for the banner and other elements.
 - **Foreground color**: By default, when you select an item, the font color is white. Starting in version 2103, you can change this color for better visibility with certain primary colors, and better accessibility.<!--8655575-->
-- **Logo**: A JPG, PNG, or BMP of 400 x 100 pixels, with a maximum size of 750 KB
+- **Logo for Software Center**: Your organization's logo helps users to trust Software Center.
 
 The following image shows an example of Software Center that's customized with all four branding settings:
 
 :::image type="content" source="media/8655575-software-center-foreground-color.png" alt-text="Software Center with customized branding.":::
+
+Starting in version 2111, you can also configure a **Logo for notifications**. It's a separate image file specifically for notifications on devices running Windows 10 or later. Your organization's logo helps users to trust these notifications. When you deploy software to a client, the user sees notifications with your logo.<!--4993167--> For example:
+
+:::image type="content" source="media/4993167-notification-with-logo.png" alt-text="New software is available notification with custom logo.":::
 
 For more information, see the following articles:
 

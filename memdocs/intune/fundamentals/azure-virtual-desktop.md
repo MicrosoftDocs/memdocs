@@ -5,8 +5,8 @@ title: Using Azure Virtual Desktop single-session with Microsoft Endpoint Manage
 titleSuffix: 
 description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Endpoint Manager. 
 keywords:
-author: ErikjeMS  
-ms.author: erikje
+author: Smritib17  
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 9/02/2021
 ms.topic: conceptual
@@ -44,6 +44,7 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
     - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are hybrid Azure AD joined.
     - [Configuration Manager co-management](/configmgr/comanage/overview).
     - [User self-enrollment via Azure AD Join](../enrollment/windows-enrollment-methods.md#user-self-enrollment-in-intune).
+    - Azure AD-join and enroll by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 

@@ -9,9 +9,11 @@ metadata:
   ms.service: microsoft-intune
   ms.subservice: remote-actions
   ms.topic: landing-page 
-  ms.collection: collection
-  author: ErikjeMS
-  ms.author: erikje
+  ms.collection: 
+    - collection
+    - highpri
+  author: Smritib17
+  ms.author: smbhardwaj
   ms.date: 09/13/2019  
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new

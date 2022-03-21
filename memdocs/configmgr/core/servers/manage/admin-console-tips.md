@@ -2,14 +2,14 @@
 title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: 2162d67d-31a9-45b2-bb9e-835f3ac6e6fe
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configuration Manager console changes and tips
@@ -19,6 +19,21 @@ manager: dougeby
 Use the information below to find out about changes to the Configuration Manager console and tips for using the console:
 
 ## General tips
+
+### <a name="bkmk_csv"></a> Export to CSV
+<!--9663857-->
+*(Introduced in version 2111)*
+
+Starting in Configuration Manager 2111, you can export the contents of a grid view in the console along with the column headers to a comma-separated values (CSV) file that can be used to import to Excel or other applications. While you could previously cut and paste from a grid view, exporting to CSV makes extracting a large number of rows faster and easier. You can export either all or selected items from the following nodes:
+
+- Device Collections
+- User Collections
+- Devices
+- Users
+
+To export the information, select **Export to CSV file** from either the ribbon or the right-click menu. Choose **Export selected items** to only export items you've already selected, or you can choose to **Export all items**.
+
+:::image type="content" source="./media/9663857-export-csv.png" alt-text="Screenshot of the export to csv option in the ribbon of the device collections node.":::
 
 ### <a name="bkmk_code"></a> Enhanced code editor
 <!--8495588-->
@@ -149,11 +164,11 @@ You can set security scopes on folders. If you have access to an object in the f
 
 We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:  
 
-- Number Errors​
-- Number In Progress​
-- Number Other​
-- Number Success​
-- Number Unknown​  
+- Number Errors
+- Number In Progress
+- Number Other
+- Number Success
+- Number Unknown
 
 ### Move the warning for a large number of results
 
@@ -167,17 +182,31 @@ There's now additional blank space in between this warning and the search field.
 
 <!--1357542-->
 
-Submit product feedback from the console.  
+Submit product feedback from the console.
 
-- **Send a smile**: Send feedback on what you liked  
+- **Send a smile**: Send feedback on what you liked
 
-- **Send a frown**: Send feedback on what you didn't like  
+- **Send a frown**: Send feedback on what you didn't like
 
-- **Send a suggestion**: Takes you to UserVoice to share your idea  
+- **Send a suggestion**: Takes you to the product feedback site to share your idea
 
 For more information, see [Product Feedback](../../understand/product-feedback.md).
 
 ## Assets and Compliance workspace
+
+### Co-management Eligible Devices collection
+<!--12377291-->
+*(Introduced in version 2111)* 
+
+There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date.
+
+### Collections tab
+<!--9575773, 10480635-->
+*(Introduced in version 2111)*
+
+When you show the members of a device collection, and select a device in the list, switch to the **Collections** tab in the details pane. This new view shows the list of collections of which the selected device is a member. It makes it easier for you to see this information.<!-- 10480635 -->
+
+:::image type="content" source="./media/10480635-collections-tab.png" alt-text="Collections tab in the details pane of the list of collection members.":::
 
 ### Navigate to collection
 <!--9502958-->
@@ -345,7 +374,7 @@ In the **Software Library** workspace, expand **Application Management**, go to 
 1. Go to one of the following places in the Configuration Manager console:
 
    - **Software Library** > **Software Updates** > **All Software Updates**
-   - **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**
+   - **Software Library** > **Windows Servicing** > **All Windows Updates**
    - **Software Library** > **Office 365 Client Management** > **Office 365 Updates**
 
 1. Select any update that is required by at least one device.
@@ -378,6 +407,14 @@ In the **Software Library** workspace, expand **Operating Systems**, and select 
    - This action is also available from the right-click context menu on the deployment in this view.
 
 ## Monitoring workspace
+
+### Collection evaluation time
+<!--9575773, 9648622-->
+*(Introduced in version 2111)*
+
+When viewing a collection, you could previously see the amount of time the site took to evaluate the collection membership. This data is now also available in the **Monitoring** workspace.<!-- 9648622 --> When you select a collection in either subnode of the **Collection Evaluation** node, the details pane displays this collection evaluation time data.
+
+:::image type="content" source="./media/9648622-collection-evaluation-data.png" alt-text="Full Evaluation Status node in the Monitoring workspace of the Configuration Manager console, showing collection evaluation times.":::
 
 ### Correct names for client operations
 <!--4616810-->

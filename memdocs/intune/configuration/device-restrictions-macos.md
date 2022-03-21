@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 01/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,12 +19,14 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-ms.reviewer: mikedano, kakyker; annovich
+ms.reviewer: beflamm, jayeren
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # macOS device settings to allow or restrict features using Intune
@@ -86,7 +88,7 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 ### Settings apply to: All enrollment types
 
 - **Block iCloud Keychain sync**: **Yes** disables syncing credentials stored in the Keychain to iCloud. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to sync these credentials.
-- **Block iCloud Desktop and Document Sync**: **Yes** prevents iCloud from syncing documents and data. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow document and key-value synchronization to your iCloud storage space.
+- **Block iCloud Document and Data Sync**: **Yes** prevents iCloud from syncing documents and data. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow document and key-value synchronization to your iCloud storage space.
 - **Block iCloud Mail Backup**: **Yes** prevents iCloud from syncing to the macOS Mail app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Mail synchronization to iCloud.
 - **Block iCloud Contact Backup**: **Yes** prevents iCloud from syncing the device contacts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow contact sync using iCloud.
 - **Block iCloud Calendar Backup**: **Yes** prevents iCloud from syncing to the macOS Calendar app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Calendar synchronization to iCloud.
@@ -98,6 +100,15 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
 
   This feature applies to:  
   - macOS 10.15 and newer
+
+### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)
+
+- **Block iCloud Private Relay**: **Yes** disables the iCloud Private Relay. When disabled, Apple doesn't encrypt internet traffic leaving the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow this feature, which prevents networks and servers from monitoring a user's activity across the internet.
+
+  This feature applies to:  
+  - macOS 12 and newer
+
+  [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's web site)
 
 ## Connected devices
 
@@ -125,24 +136,38 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
   This feature applies to:  
   - macOS 10.13 and newer
 
-- **Block screenshots and screen recording**: Device must be enrolled in Apple's Automated Device Enrollment (DEP). **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
+- **Block screenshots and screen recording**: **Yes** prevents users from saving screenshots of the display. It also prevents the Classroom app from observing remote screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to capture screenshots, and allows the Classroom app to view remote screens.
 
 ### Settings apply to: User approved device enrollment, Automated device enrollment (supervised)  
 
-- **Defer software updates**: **Yes** allows you to delay when OS updates and non-OS updates are shown on devices. This setting doesn't control when updates are or aren't installed. When nothing is selected, Intune doesn't change or update this setting.
+- **Defer software updates**: This setting lets you defer the visibility of software updates on devices for up to 90 days. For example, if Apple releases a macOS update on a specific date, it naturally shows on devices around the release date. This setting can hide the update so that users don't see it as soon as it's available.   
 
-  By default, the OS might show updates on devices as Apple releases them. By default, software updates aren't delayed. If you configure this setting, then OS and non-OS software updates are delayed, depending on the options you select. The drop-down does exactly what you choose. It can delay both, delay neither, or delay one of them.
+  This setting doesn't control when updates are installed and doesn't impact scheduled updates. Seed build updates are allowed without delay. 
 
-  For example, if a macOS update gets released by Apple on a specific date, then that update naturally shows on devices around the release date. Seed build updates are allowed without delay.  
+  To use this setting, select the software updates you want to delay. Your options: 
 
-  - **Delay visibility of software updates**: Enter a value from 0-90 days. By default, updates are delayed for `30` days. This value applies to the **Defer software updates** options you select. If you only select **Operating system updates**, then only OS updates are delayed for 30 days. If you select **Operating system updates** and **Non operating system updates**, then both are delayed for 30 days.
+  - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might show newly released software updates to users as soon as they're released.    
+  - **Major OS software updates**: Major OS software updates, such as macOS 12, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of major OS software updates** field. Requires macOS 11.3 and newer. 
+  - **Minor OS software updates**: Minor OS software updates, such as macOS 12.x, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of minor OS software updates** field. Requires macOS 11.3 and newer.  
+  - **Non-OS software updates**: Non-OS software updates, such as Safari updates, are deferred for 30 days by default, unless otherwise specified in the **Delay visibility of non OS software updates** field. Requires macOS 11.0 and later.    
+  
+  Then enter how long you want to delay each type of update, from 1-90 days. For example, if a macOS update is available on January 1, and **Delay visibility** is set to 5 days, then the update isn't shown as an available update. On the sixth day following the release, that update becomes available, and users are notified to update to the earliest version available when the delay was triggered. Your options: 
 
-    When the delay expires, users get a notification to update to the earliest version available when the delay was triggered.
+   - **Delay default visibility of software updates**: Enter the number of days to delay all software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. Intune will override this value if you choose to delay major OS, minor OS, or non-OS software updates individually.  
+  - **Delay visibility of major OS software updates**: Enter the number of days to delay all major OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.  
 
-    For example, if a macOS update is available on **January 1**, and **Delay visibility** is set to **5 days**, then the update isn't shown as an available update. On the **sixth day** following the release, that update is available, and users can install it.
+     This feature applies to:  
+    - macOS 11.3 and newer 
 
-    This feature applies to:  
-    - macOS 10.13.4 and newer
+  - **Delay visibility of minor OS software updates**: Enter the number of days to delay all minor OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.    
+
+     This feature applies to:  
+    - macOS 11.3 and newer 
+
+  - **Delay visibility of non-OS software updates**: Enter the number of days to delay all non-OS software updates, from 1-90. If you don't enter anything, updates will be deferred for 30 days, by default. This value overrides the value in **Delay default visibility of software updates**.   
+
+     This feature applies to:  
+    - macOS 11.0 and newer  
 
 ### Settings apply to: Automated device enrollment  
 
@@ -166,15 +191,20 @@ Create a [macOS device restrictions configuration profile](device-restrictions-c
   This feature applies to:  
   - macOS 10.13 and newer  
 
+- **Block users from erasing all content and settings on device**: **Yes** disables the reset option on supervised devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to erase all content and settings on their device.  
+
+  This feature applies to:  
+  - macOS 12 and newer  
+
 ## Password
 
 These settings use the [Passcode payload](https://developer.apple.com/documentation/devicemanagement/passcode) (opens Apple's web site).
 
 > [!IMPORTANT]
 > 
-> - On macOS devices running 10.14.2 to 11.x (except all versions of macOS 10.15 Catalina), users are prompted to change the device password when the device updates to a new major OS version. This password update happens once. After users update the password, any other password policies are enforced. If a passcode is required in at least one policy, then this behavior only occurs for the local machine user. 
+> - On macOS devices running 10.14.2 and later (except all versions of macOS 10.15 Catalina), users are prompted to change the device password when the device updates to a new major OS version. This password update happens once. After users update the password, any other password policies are enforced. If a passcode is required in at least one policy, then this behavior only occurs for the local machine user. 
 >
-> - Any time the password policy is updated, all users running these macOS versions must change the password, even if the current password is compliant with the new requirements. For example, when your macOS device turns on after upgrading to Big Sur (macOS 11), users need to change the device password before they can sign in.
+> - Any time the password policy is updated, all users running these macOS versions must change the password, even if the current password is compliant with the new requirements. For example, when your macOS device turns on after upgrading to a new major OS version such as Big Sur (macOS 11) or Monterey (macOS 12), users need to change the device password before they can sign in.
 
 ### Settings apply to: All enrollment types
 
@@ -200,7 +230,7 @@ These settings use the [Passcode payload](https://developer.apple.com/documentat
 
     After six failed attempts, macOS automatically forces a time delay before a passcode can be entered again. The delay increases with each attempt. Set the **Lockout duration** to add a delay before the next passcode can be entered.
 
-    - **Lockout duration**: Enter the number of minutes a lockout lasts, from 0-10000. During a device lockout, the sign in screen is inactive, and users can't sign in. When the lockout ends, user can try to sign in again.
+    - **Lockout duration**: Enter the number of minutes a lockout lasts, from 0-10000. During a device lockout, the sign-in screen is inactive, and users can't sign in. When the lockout ends, user can try to sign in again.
 
       If you leave this value blank, or don't change it, then `30` minutes is used by default.
 
@@ -211,6 +241,15 @@ These settings use the [Passcode payload](https://developer.apple.com/documentat
 - **Block user from modifying passcode**: **Yes** stops the passcode from being changed, added, or removed. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passcodes to be added, changed, or removed.
 
 - **Block Touch ID to unlock device**: **Yes** prevents using fingerprints to unlock devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to unlock the device using a fingerprint.
+
+- **Timeout (hours of inactivity)**: Enter a value of inactive hours that users must enter their password, instead of TouchID.
+
+  The default inactivity period is 48 hours. After 48 hours of inactivity, the device prompts for the password, instead of Touch ID.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might set the timeout to 48 hours (172,800 seconds).
+
+  This feature applies to:  
+  - macOS 12 and newer
 
 - **Block password AutoFill**: **Yes** prevents using the AutoFill Passwords feature on macOS. Choosing **Yes** also has the following impact:
 
@@ -392,7 +431,7 @@ This feature applies to:
 - **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
 
   - **Not configured** (default): Intune doesn't change or update this setting. By default, users might have access to apps you assign, and built-in apps.
-  - **Approved apps**: List the apps that users are allowed to install. To stay compliant, users must not install other apps. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list. But if they do, it's reported in Intune.
+  - **Approved apps**: List the apps that users are allowed to install. Users must not install other apps. If users install apps that aren't allowed, then it's reported in Intune. Apps that are managed by Intune are automatically allowed, including the Company Portal app. Users aren't prevented from installing an app that isn't on the approved list. 
   - **Prohibited apps**: List the apps (not managed by Intune) that users aren't allowed to install and run. Users aren't prevented from installing a prohibited app. If a user installs an app from this list, it's reported in Intune.
 
 - **Apps list**: **Add** apps to your list:

@@ -8,8 +8,10 @@ metadata:
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
-  manager: mtillman
-  ms.date: 07/06/2020
+  manager: johmar
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
+  ms.collection: highpri
 
 highlightedContent:
   items:
@@ -28,6 +30,9 @@ highlightedContent:
     - title: Secure your remote workforce
       itemType: get-started
       url: /enterprise-mobility-security/remote-work/
+    - title: Microsoft Endpoint Manager fundamentals
+      itemType: learn
+      url: /learn/paths/endpoint-manager-fundamentals/
 
 conceptualContent:
   items:

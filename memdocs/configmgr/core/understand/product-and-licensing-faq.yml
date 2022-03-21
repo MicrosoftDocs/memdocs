@@ -3,14 +3,15 @@ metadata:
   title: Product and licensing FAQ
   titleSuffix: Configuration Manager
   description: Find answers for common product and license questions for Configuration Manager.
-  ms.date: 07/15/2021
+  ms.date: 10/01/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
-  ms.topic: conceptual
+  ms.topic: faq
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
-    
+  ms.collection: highpri
+
 title: Frequently asked questions for Configuration Manager branches and licensing
 summary: |
   *Applies to: Configuration Manager (current branch) & System Center Configuration Manager (long-term servicing branch)*
@@ -24,7 +25,7 @@ sections:
       - question: |
           What's current branch?
         answer: |
-          The current branch is the production-ready build of Configuration Manager that provides an active servicing model. This servicing model is like the experience with Windows 10. This approach supports customers who are moving at a cloud cadence and wish to innovate more quickly. With the current branch servicing model, you continue to receive new features and functionality. For this reason, only customers with active Software Assurance on Configuration Manager licenses, or with equivalent subscription rights, may install and use the current branch of Configuration Manager.
+          The current branch is the production-ready build of Configuration Manager that provides an active servicing model. This servicing model is like the experience with Windows. This approach supports customers who are moving at a cloud cadence and wish to innovate more quickly. With the current branch servicing model, you continue to receive new features and functionality. For this reason, only customers with active Software Assurance on Configuration Manager licenses, or with equivalent subscription rights, may install and use the current branch of Configuration Manager.
 
       - question: |
           What's the long-term servicing branch (LTSB)?  
@@ -79,9 +80,9 @@ sections:
           
           - Devices already managed by Configuration Manager that you enroll to Intune for co-management have almost the same rights as an Intune standalone-managed PC. If you reset Windows on this device, you can't provision it with Windows Autopilot. Autopilot requires a full Intune license.
           
-          - If you enroll a Windows 10 device to Intune by other means, it still requires a full Intune license. For example, you use Autopilot to provision a device, or a user manually does self-service enrollment.
+          - If you enroll a Windows device to Intune by other means, it still requires a full Intune license. For example, you use Autopilot to provision a device, or a user manually does self-service enrollment.
           
-          - For existing Configuration Manager-managed devices to enroll into Intune for co-management at scale without user interaction, co-management uses an Azure Active Directory (Azure AD) feature called Windows 10 auto-enrollment. Auto-enrollment with co-management requires licenses for both Azure AD Premium (AADP1) and Intune. Starting on December 1, 2019, you no longer need to assign individual Intune licenses for this scenario. Microsoft Endpoint Manager now includes the Intune licenses for co-management. The separate AADP1 licensing requirement remains the same for this scenario to work. You still need to assign Intune licenses for other enrollment scenarios.
+          - For existing Configuration Manager-managed devices to enroll into Intune for co-management at scale without user interaction, co-management uses an Azure Active Directory (Azure AD) feature called Windows auto-enrollment. Auto-enrollment with co-management requires licenses for both Azure AD Premium (AADP1) and Intune. Starting on December 1, 2019, you no longer need to assign individual Intune licenses for this scenario. Microsoft Endpoint Manager now includes the Intune licenses for co-management. The separate AADP1 licensing requirement remains the same for this scenario to work. You still need to assign Intune licenses for other enrollment scenarios.
           
           - If you want to use Intune for managing iOS, Android, or macOS devices, then you need the appropriate Intune subscription through a standalone Intune license, Enterprise Mobility + Security (EMS), or Microsoft 365.
           
@@ -96,7 +97,7 @@ sections:
           
           |Feature | Co-management license | Full Intune license |
           |---------|---------|---------|
-          |Windows 10 enrollment|Yes (only for existing ConfigMgr-managed devices)|Yes|
+          |Windows enrollment|Yes (only for existing ConfigMgr-managed devices)|Yes|
           |iOS, Android, macOS enrollment|No|Yes|
           |Autopilot|No|Yes|
           |Mobile Application Management (MAM)|No|Yes|

@@ -5,16 +5,14 @@ title: Add groups to organize users and devices
 titleSuffix: Microsoft Intune
 description: Add groups to organize users and devices by geography, department, or hardware specifics.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 11/29/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: f0a2b858-a824-4598-ab81-bdd8e62ac3b3
 
 # optional metadata
 
@@ -26,12 +24,17 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Add groups to organize users and devices
 
 Intune uses Azure Active Directory (Azure AD) groups to manage devices and users. As an Intune admin, you can set up groups to suit your organizational needs. Create groups to organize users or devices by geographic location, department, or hardware characteristics. Use groups to manage tasks at scale. For example, you can set policies for many users or deploy apps to a set of devices.
+
+> [!NOTE]
+> Default groups created from [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339) are not security enabled. You must explicitly create security enabled Microsoft 365 groups in [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), the [Azure AD admin center](https://portal.azure.com/), or [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 You can add the following types of groups:
 
@@ -88,26 +91,19 @@ Please note: Only security-enabled Microsoft 365 Groups are supported
 > Consider some of the other dynamic user and device groups you can create, such as:
 >
 > - All Students in Contoso high school
-> - All Android Enterprise devices
 > - All iOS 11 and older devices
 > - Marketing
 > - Human Resources
 > - All Charlotte employees
 > - All WA employees
 
-## Groups and policies
+## Intune All Users and All Devices groups
+When assigning policies and apps in the admin center you can choose to assign to **All Users** or **All devices** groups, which are pre-created. The **All devices** group targets all devices that are enrolled into management and the **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you do not create them or view them in Azure Active Directory. They are convenient to use (because they are pre-created in your tenant) and they are a faster targeting unit than Azure AD groups.
 
-Access to your organization's resources are controlled by users and groups you create.
+When assigning policies and applications to large groups such as **All users** and **All devices** you may choose to use **Filters**, so that you can dynamically control which devices the policy or app deployment should apply to.
 
-When you create groups, consider how you'll apply [compliance policies](../protect/device-compliance-get-started.md) and [configuration profiles](../configuration/device-profiles.md). For example, you might have:
+For more guidance on using Filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md)
 
-- Policies that are specific to a device operating system.
-- Policies that are specific to different roles in your organization.
-- Policies that are specific to organizational units you defined in Active Directory.
-
-To create the basic compliance requirements of your organization, you can create a default policy that applies to all groups and devices. Then, create more specific policies for the broadest categories of users and devices. For example, you might create email policies for each of the device operating systems.
-
-For configuration profile recommendations and guidance, see [Assign policies to user groups or device groups](../configuration/device-profile-assign.md#user-groups-vs-device-groups) and [profile recommendations](../configuration/device-profile-create.md#recommendations).
 
 ## See also
 

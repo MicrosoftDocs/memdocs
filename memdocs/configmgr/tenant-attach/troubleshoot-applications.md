@@ -1,25 +1,22 @@
 ---
 title: Troubleshooting application installation
 titleSuffix: Configuration Manager
-description: "Troubleshooting application installation for Configuration Manager tenant attach"
-ms.date: 12/03/2020
+description: Troubleshooting application installation for Configuration Manager tenant attach
+ms.date: 01/25/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
-# Troubleshoot application installation for devices uploaded to the admin center (preview)
+# Troubleshoot application installation for devices uploaded to the admin center
 <!--6374854, 6521921-->
 *Applies to: Configuration Manager (current branch)*
 
 Use the following to troubleshoot Configuration Manager applications in the Microsoft Endpoint Manager admin center:
-
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Common errors from the Microsoft Endpoint Manager admin center
 

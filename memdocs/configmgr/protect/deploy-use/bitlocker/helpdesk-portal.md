@@ -2,14 +2,14 @@
 title: BitLocker administration and monitoring website
 titleSuffix: Configuration Manager
 description: How to use the BitLocker administration and monitoring website (helpdesk portal) in Configuration Manager
-ms.date: 11/29/2019
+ms.date: 09/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
-ms.assetid: 81f03922-90f6-4e8f-be65-da64ccb21cf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # BitLocker administration and monitoring website
@@ -20,7 +20,7 @@ manager: dougeby
 
 The BitLocker administration and monitoring website is an administrative interface for BitLocker Drive Encryption. It's also referred to as the help desk portal. Use this website to review reports, recover users' drives, and manage device TPMs.
 
-[![Screenshot of default BitLocker administration and monitoring website](media/bitlocker-helpdesk-website.png)](media/bitlocker-helpdesk-website.png#lightbox)
+:::image type="content" source="media/bitlocker-helpdesk-website.png" alt-text="The default BitLocker administration and monitoring website." lightbox="media/bitlocker-helpdesk-website.png":::
 
 Before you can use it, install this component on a web server. For more information, see [Set up BitLocker reports and portals](setup-websites.md).
 
@@ -52,7 +52,7 @@ For more information about TPM ownership, see [Configure MBAM to escrow the TPM 
 
 1. In the left pane, select the **Manage TPM** area.
 
-    ![BitLocker administration and monitoring website Manage TPM page](media/bitlocker-admin-manage-tpm.png)
+    :::image type="content" source="media/bitlocker-admin-manage-tpm.png" alt-text="BitLocker administration and monitoring website Manage TPM page.":::
 
 1. Enter the fully qualified domain name for the computer and the computer name.
 
@@ -86,6 +86,9 @@ For more information about TPM ownership, see [Configure MBAM to escrow the TPM 
 
 ## Drive recovery
 
+> [!TIP]
+> Starting in version 2107, you can also get BitLocker recovery keys for a tenant-attached device from the Microsoft Endpoint Manager admin center.<!--6979225--> For more information, see [Tenant attach: BitLocker recovery keys](../../../tenant-attach/bitlocker-recovery-keys.md).
+
 ### <a name="bkmk_recovery"></a> Recover a drive in recovery mode
 
 Drives go into recovery mode in the following scenarios:
@@ -102,7 +105,7 @@ To get a recovery password, use the **Drive recovery** area of the administratio
 
 1. In the left pane, select the **Drive Recovery** area.
 
-    ![BitLocker administration and monitoring website Driver Recovery page](media/bitlocker-admin-drive-recovery.png)
+    :::image type="content" source="media/bitlocker-admin-drive-recovery.png" alt-text="BitLocker administration and monitoring website Driver Recovery page.":::
 
 1. If necessary, enter the user's domain and user name to view recovery information.
 

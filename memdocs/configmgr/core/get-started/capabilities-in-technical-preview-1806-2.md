@@ -6,13 +6,11 @@ ms.date: 06/27/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 3af2a69d-30e7-4dce-832d-82b7a1c082f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 
 # Capabilities in Technical Preview 1806.2 for Configuration Manager
@@ -247,7 +245,7 @@ If the peer source client has more than one IP address (IPv4, IPv6, or both), th
 
 ## <a name="bkmk_3pupdate"></a> Third-party software updates support for custom catalogs
 <!--1358714-->
-This release further iterates on support for third-party software updates as a result of your [UserVoice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co). [Technical preview version 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) provided support for *partner catalogs*, which are registered catalogs from software vendors. Catalogs that you provide, which aren't registered with Microsoft, are called *custom catalogs*. Add custom catalogs in the Configuration Manager console.  
+This release further iterates on support for third-party software updates as a result of your feedback. [Technical preview version 1806](capabilities-in-technical-preview-1806.md#bkmk-3pupdate) provided support for *partner catalogs*, which are registered catalogs from software vendors. Catalogs that you provide, which aren't registered with Microsoft, are called *custom catalogs*. Add custom catalogs in the Configuration Manager console.  
 
 
 ### Prerequisites 

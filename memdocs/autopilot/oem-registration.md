@@ -1,7 +1,5 @@
 ---
 title: Windows Autopilot OEM registration process
-ms.reviewer: 
-manager: laurawi
 description: How OEMs add devices to Windows Autopilot
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -10,8 +8,10 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 12/16/2020
 ms.topic: how-to
 ms.collection: 
@@ -23,7 +23,8 @@ ms.collection:
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004
 
 ## Device registration process

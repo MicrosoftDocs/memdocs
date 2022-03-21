@@ -6,10 +6,10 @@ ms.date: 06/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 8c65ba1a-152e-467a-ac56-c46efe2e7f0d
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2103 of Configuration Manager current branch
@@ -24,10 +24,6 @@ Update 2103 for Configuration Manager current branch is available as an in-conso
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2103](../../servers/manage/checklist-for-installing-update-2103.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2103.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2103+-+Configuration+Manager%22&locale=en-us`
 
 ## Microsoft Endpoint Manager tenant attach
 
@@ -253,7 +249,7 @@ Starting in this release, BitLocker management policies over a CMG support the f
 
 - TPM password hash, otherwise known as TPM owner authorization
 
-For more information on BitLocker management over CMG, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/deploy-management-agent.md#recovery-service).
+For more information on BitLocker management over CMG, see [Deploy BitLocker management](../../../protect/deploy-use/bitlocker/recovery-service.md).
 
 This release also provides support for the following features:
 

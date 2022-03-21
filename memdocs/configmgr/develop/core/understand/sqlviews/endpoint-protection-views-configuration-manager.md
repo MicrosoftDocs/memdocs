@@ -1,4 +1,4 @@
-﻿---
+---
 title: Endpoint protection views
 titleSuffix: Configuration Manager
 description: Information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
@@ -12,11 +12,13 @@ ms.assetid: 5f6b3676-b5d8-48f7-92c7-35366169a855
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Endpoint protection views in Configuration Manager
 
-The Configuration Manager Endpoint Protection views provide information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
+The Configuration�Manager�Endpoint�Protection views provide information about the status of Endpoint Protection clients and malware activity in your Configuration Manager site.
 
 The following sections provide detailed information about the Endpoint Protection views.
 
@@ -40,7 +42,7 @@ This view can be joined to other views by using the **CollectionID** column.
 
 ### v_EndpointProtectionCollections
 
-Contains the collection ID and collection name of all collections that have the option **View this collection in the Endpoint Protection dashboard** checked on the **Alerts** tab of the *collection name* **Properties** dialog box.
+Contains the collection ID and collection name of all collections that have the option **View this collection in the Endpoint Protection dashboard** checked on the **Alerts** tab of the *collection name*�**Properties** dialog box.
 This view can be joined to other views by using the **CollectionID** and **CollectionName** columns.
 
 ### v_EndpointProtectionHealthStatus

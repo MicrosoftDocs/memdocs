@@ -12,6 +12,8 @@ ms.assetid: 3f516dae-a958-440e-9e7c-28de24bf2803
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # ImportMachineEntryToMultipleCollections method in class SMS_Site

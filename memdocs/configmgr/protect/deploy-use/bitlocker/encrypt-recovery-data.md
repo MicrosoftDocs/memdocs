@@ -2,14 +2,14 @@
 title: Encrypt recovery data in the database
 titleSuffix: Configuration Manager
 description: Encrypt BitLocker recovery keys, recovery packages, and TPM password hashes in the Configuration Manager database.
-ms.date: 11/30/2020
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
-ms.assetid: 1ee6541a-e243-43ea-be16-d0349f7f0c6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Encrypt recovery data in the database
@@ -51,9 +51,37 @@ Alternatively, you can use your own process to create and deploy this certificat
 
 - Deploy the same certificate at every site database in your hierarchy.
 
-- Create the certificate with the latest version of SQL Server in your environment. For example:
-  - Certificates created with SQL Server 2016 or later are compatible with SQL Server 2014 or earlier.
-  - Certificates created with SQL Server 2014 or earlier aren't compatible with SQL Server 2016 or later.
+- Create the certificate with the latest version of SQL Server.
+
+    > [!IMPORTANT]
+    >
+    > - Certificates created with SQL Server 2016 or later are compatible with SQL Server 2014 or earlier.
+    > - Certificates created with SQL Server 2014 or earlier aren't compatible with SQL Server 2016 or later.
+
+### Manage the encryption certificate on SQL Server upgrade
+
+<!-- 12405266 -->
+
+If your site database is on SQL Server 2014 or earlier, before you upgrade SQL Server to version 2016 or later, use the following procedure to rotate the certificate to a supported version.
+
+1. On an instance of SQL Server running the latest available version, at least version 2016:
+
+    1. [Create a new certificate](#create-certificate)
+
+    1. [Back up the new certificate](#back-up-certificate)
+
+1. On the SQL Server instance with the encrypted site database that you plan to upgrade:
+
+    1. Move the existing certificate on the site database server SQL Server instance to another name.
+
+    1. [Restore the new certificate](#restore-certificate).
+
+    1. Rotate the new certificate in for the existing certificate. Use the provided SQL function `[RecoveryAndHardwareCore].[RecryptKey]`
+
+> [!IMPORTANT]
+> If you upgrade SQL Server before you rotate the certificate, contact Microsoft Support for assistance with a work around.
+
+You can also use this process if your business requirements specify that you need to regularly renew this certificate.
 
 ## Example scripts
 
@@ -92,7 +120,9 @@ END
 ```
 
 > [!NOTE]
-> The certificate expiration date is not checked or enforced by SQL Server when the certificate is used for database encryption as is the case here.
+> The certificate expiration date isn't checked or enforced by SQL Server when the certificate is used for database encryption as is the case here.
+>
+> If your business requirements specify that you regularly renew this certificate, use the same process to [Manage the encryption certificate on SQL Server upgrade](#manage-the-encryption-certificate-on-sql-server-upgrade).<!-- memdocs#1011 -->
 
 ### Back up certificate
 
@@ -112,6 +142,8 @@ BACKUP CERTIFICATE BitLockerManagement_CERT TO FILE = 'C:\BitLockerManagement_CE
 ```
 
 > [!IMPORTANT]
+> Always back up the certificate. In case you need to recover the site database, you may need to restore the certificate to regain access to the recovery keys.
+>
 > Store the exported certificate file and associated password in a secure location.
 
 ### Restore certificate

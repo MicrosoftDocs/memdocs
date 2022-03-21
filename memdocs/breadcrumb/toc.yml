@@ -52,6 +52,9 @@ items:
         - name: Device compliance
           tocHref: /mem/configmgr/compliance/
           topicHref: /mem/configmgr/compliance/
+        - name: Cloud attach
+          tocHref: /mem/configmgr/cloud-attach/
+          topicHref: /mem/configmgr/cloud-attach/
         - name: Core infrastructure guide
           tocHref: /mem/configmgr/core/
           topicHref: /mem/configmgr/core/

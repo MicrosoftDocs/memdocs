@@ -1,7 +1,5 @@
 ---
 title: Automatic registration of existing devices - Windows Autopilot
-ms.reviewer: 
-manager: laurawi
 description: Automatically add devices to Windows Autopilot
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -10,9 +8,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
-ms.date: 12/16/2020
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
+ms.date: 11/05/2021
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
@@ -23,21 +23,26 @@ ms.collection:
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004
 
 ## Requirements
 
 You can automatically register an existing device if it's:
-- running a [supported version](/windows/release-information/) of Windows 10 semi-annual channel, and
-- enrolled in an MDM service such an Intune
-- a corporate device that is not already registered with Windows Autopilot
 
-For devices that meet both these requirements, the MDM service can ask the device for the hardware hash. After it has that, it can automatically register the device with Windows Autopilot.
+- Running a [supported version](/windows/release-information/) of Windows
+- Enrolled in an MDM service such as Intune
+- A corporate device that's not already registered with Autopilot
+
+> [!NOTE]
+> Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD device into a Azure AD Autopilot device.<!-- MEMDocs#2175 -->
+
+For devices that meet these requirements, the MDM service can ask the device for the hardware hash. After it has that, it can automatically register the device with Windows Autopilot.
 
 For more information on how to do this with Microsoft Intune, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile) and review the description of the **Convert all targeted devices to Autopilot** setting. See the following example:
 
-![Convert all targeted devices](images/convert-devices.png)
+![Convert all targeted devices.](images/convert-devices.png)
 
 ## Windows Autopilot for existing devices
 

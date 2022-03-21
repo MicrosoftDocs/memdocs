@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mobile device management views
 titleSuffix: Configuration Manager
 description: Information about the mobile device configuration items and configuration packages.
@@ -12,6 +12,8 @@ ms.assetid: 3c8dc27b-0839-488d-9931-c897f136bfad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Mobile device management views in Configuration Manager

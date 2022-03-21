@@ -2,18 +2,20 @@
 title: Windows Autopilot User-Driven Mode
 description: With Windows Autopilot user-driven mode, you can configure devices to deploy to a ready-to-use state without requiring help from IT personnel.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.reviewer: mniehaus
-manager: laurawi
 ms.prod: w10
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 09/02/2021
-ms.collection: M365-modern-desktop
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: how-to
 ---
 
@@ -25,13 +27,13 @@ ms.topic: how-to
 - Windows 10, version 1809 or later
 - Windows 11
 
-Windows Autopilot user-driven mode lets you configure new Windows 10 devices to automatically transform them from their factory state to a ready-to-use state. This process doesn't require that IT personnel touch the device.
+Windows Autopilot user-driven mode lets you configure new Windows devices to automatically transform them from their factory state to a ready-to-use state. This process doesn't require that IT personnel touch the device.
 
 The process is very simple. Devices can be shipped or distributed to the end user directly with the following instructions:
 
 1. Unbox the device, plug it in, and turn it on.
 2. Choose a language (only required when multiple languages are installed), locale, and keyboard.
-3. Connect it to a wireless or wired network with internet access. If using wireless, the user must establish the Wi-Fi link. 
+3. Connect it to a wireless or wired network with internet access. If using wireless, the user must establish the Wi-Fi link.
 4. Specify your e-mail address and password for your organization account.
 
 The rest of the process is automated. The device will:
@@ -50,14 +52,14 @@ Windows Autopilot user-driven mode supports Azure AD and Hybrid Azure AD joined 
 The process flow completed during the user-driven process are as follows:
 
 1. After connecting to a network, the device downloads a Windows Autopilot profile. The profile defines the settings used for the device. For example, define the prompts suppressed during OOBE.
-2. Windows 10 checks for critical OOBE updates. If updates are available, they're automatically installed (rebooting if necessary).
+2. Windows checks for critical OOBE updates. If updates are available, they're automatically installed (rebooting if necessary).
 3. The user is prompted for Azure Active Directory credentials. This customized user experience shows the Azure AD tenant name, logo, and sign-in text.
 4.  The device joins Azure Active Directory or Active Directory, depending on the Windows Autopilot profile settings.
 5. The device enrolls in Intune (or other configured MDM services). Depending on your organizational needs, this enrollment occurs:
     - during the Azure Active Directory join process using MDM auto-enrollment
     - or before the Active Directory join process.
 6. If configured, the [enrollment status page](enrollment-status.md) (ESP) will be displayed.
-7. After the device configuration tasks complete, the user is signed into Windows 10 using the credentials they previously provided. (If the device reboots during the device ESP process, the user must reenter their credentials as these details aren't persisted across reboots.)
+7. After the device configuration tasks complete, the user is signed into Windows using the credentials they previously provided. (If the device reboots during the device ESP process, the user must reenter their credentials as these details aren't persisted across reboots.)
 8. After sign-in, the enrollment status page displays for user-targeted configuration tasks.
 
 If any issues are found during this process, see the [Windows Autopilot Troubleshooting](troubleshooting.md) documentation.
@@ -122,14 +124,15 @@ With the addition of VPN support for this scenario, you can configure the Hybrid
 
 In addition to the core requirements for user driven hybrid Azure AD join mentioned above, the following additional requirements apply to a remote scenario of Hybrid Azure AD Join with VPN support:
 
-- A supported version of Windows 10:
-    - Windows 10 1903 + December 10 Cumulative update (KB4530684, OS build 18362.535) or higher 
-    - Windows 10 1909 + December 10 Cumulative update (KB4530684, OS build 18363.535) or higher 
-    - Windows 10 2004 or later 
-- Enable the “Skip domain connectivity check” toggle in the Hybrid Azure AD Join Autopilot profile.
+- A supported version of Windows:
+  - Windows 10 version 1903 + December 10 Cumulative update (KB4530684, OS build 18362.535) or higher
+  - Windows 10 version 1909 + December 10 Cumulative update (KB4530684, OS build 18363.535) or higher
+  - Windows 10 version 2004 or later
+  - Windows 11
+- Enable the **Skip domain connectivity check** toggle in the Hybrid Azure AD Join Autopilot profile.
 - A VPN configuration that:
-  - can be deployed with Intune and lets the user manually establish a VPN connection from the Windows logon screen, or
-  - one that automatically establishes a VPN connection as needed. 
+  - Can be deployed with Intune and lets the user manually establish a VPN connection from the Windows logon screen, or
+  - One that automatically establishes a VPN connection as needed.
 
 The specific VPN configuration required depends on the VPN software and authentication being used. For third-party (non-Microsoft) VPN solutions, this typically would involve deploying a Win32 app (containing the VPN client software itself and any specific connection information, for example: VPN endpoint host names) via Intune Management Extensions. Consult your VPN provider's documentation for configuration details specific to that provider.
 
@@ -154,13 +157,13 @@ Next, validate that the VPN configuration (Win32 app, certs, and any other requi
 For VPN configurations that automatically connect, the validation steps may be different.
 
 > [!NOTE]
-> Always On VPN can be used for this scenario. For more information, see the [Deploy Always On VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) documentation. Note that Intune can't yet deploy the needed per-machine VPN profile. 
+> Always On VPN can be used for this scenario. For more information, see the [Deploy Always On VPN](/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy-deployment) documentation. Note that Intune can't yet deploy the needed per-machine VPN profile.
 
 To validate the process, ensure the needed Windows 10 cumulative update has been installed on Windows 10 1903 or Windows 10 1909. You can manually install the update during OOBE by first downloading the latest cumulative from https://catalog.update.microsoft.com. Follow these steps:
 
 1. Press Shift-F10 to open a command prompt.
 2. Insert a USB key containing the downloaded update.
-3. Install the update using the command (substituting the real file name): WUSA.EXE <i>filename</i>.msu /quiet
+3. Install the update using the command (substituting the real file name): WUSA.EXE _filename_.msu /quiet
 4. Reboot the computer using the command: shutdown.exe /r /t 0
 
 Or, you can start Windows Update to install the latest updates:
@@ -172,7 +175,7 @@ Or, you can start Windows Update to install the latest updates:
 
 ### Step-by-step instructions
 
-See [Deploy hybrid Azure AD joined devices using Intune and Windows Autopilot](/intune/windows-autopilot-hybrid).
+[Deploy hybrid Azure AD joined devices using Intune and Windows Autopilot](windows-autopilot-hybrid.md)
 
 ## Related topics
 

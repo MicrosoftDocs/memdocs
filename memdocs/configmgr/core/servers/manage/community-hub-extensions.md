@@ -2,13 +2,14 @@
 title: Console extensions from Community hub
 titleSuffix: Configuration Manager
 description: Learn about managing Community hub console extensions for Configuration Manager
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Console extensions from Community hub
@@ -46,4 +47,5 @@ You'll download the extension from Community hub, then use the **Console Extensi
 ## Next steps
 
 - [Manage console extensions](admin-console-extensions.md)
+- [Import console extensions](import-admin-console-extensions.md)
 - [Create and contribute your own console extension](../../../develop/core/servers/console/console-extension-register.md)

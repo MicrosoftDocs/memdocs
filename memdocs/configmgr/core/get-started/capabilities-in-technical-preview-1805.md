@@ -6,13 +6,11 @@ ms.date: 05/21/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 7996b3eb-5259-483b-af40-adae2943d123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 
 # Capabilities in Technical Preview 1805 for Configuration Manager
@@ -229,7 +227,7 @@ In this screenshot, CMPivot displays two separate BIOS versions with a device co
 
 ![CMPivot window with example query fro BIOSVersion](media/1358456-cmpivot-biosversion.png)
 
-You can click on the device count to drill down to see the specific devices. When displaying devices in CMPivot, you can right-click a device and select the following [client notification actions](../clients/manage/manage-clients.md#BKMK_ManagingClients_DevicesNode):
+You can click on the device count to drill down to see the specific devices. When displaying devices in CMPivot, you can right-click a device and select the following [client notification actions](../clients/manage/manage-clients.md#manage-clients-from-the-devices-node):
 - Run Script
 - Remote Control
 - Resource Explorer
@@ -334,7 +332,7 @@ You can see these certificates in the Configuration Manager console. Go to the *
 
 ## Improvements for enabling third-party software update support
 <!--1357605-->
-As a result of your UserVoice feedback on [third-party software update support](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8803711-3rd-party-patching-scup-integration-with-sccm-co), this release further iterates on the integration with System Center Updates Publisher (SCUP). Configuration Manager technical preview [version 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients) added the ability to read the certificate from WSUS for third-party updates, and then deploy that certificate to clients. But you still needed to use the SCUP tool to create and manage the certificate for signing third-party software updates.
+As a result of your feedback on third-party software update support, this release further iterates on the integration with System Center Updates Publisher (SCUP). Configuration Manager technical preview [version 1803](capabilities-in-technical-preview-1803.md#enable-third-party-software-update-support-on-clients) added the ability to read the certificate from WSUS for third-party updates, and then deploy that certificate to clients. But you still needed to use the SCUP tool to create and manage the certificate for signing third-party software updates.
 
 In this release, you can enable the Configuration Manager site to automatically configure the certificate. The site communicates with WSUS to generate a certificate for this purpose. Configuration Manager then continues to deploy that certificate to clients. This iteration removes the need to use the SCUP tool to create and manage the certificate. 
 
@@ -396,7 +394,7 @@ The CMTrace log viewing tool is now automatically installed along with the Confi
 <!--1358202-->
 We've made the following improvement to the Configuration Manager console:
 
-- Device lists under Assets and Compliance, Devices, now by default display the currently logged on user. This value is as current as the [client status](../clients/manage/monitor-clients.md#bkmk_indStatus). The value is cleared when the user logs off. If no user is logged on, the value is blank. 
+- Device lists under Assets and Compliance, Devices, now by default display the currently logged on user. This value is as current as the [client status](../clients/manage/monitor-clients.md#monitor-individual-clients). The value is cleared when the user logs off. If no user is logged on, the value is blank. 
 
 <!-- ### Known issues
 The currently logged on user value is blank in the Devices node or when viewing a device list under the Device Collections node. To work around this issue, download this [SQL script](https://gallery.technet.microsoft.com/ConfigMgr-1805-BgbUpdateLiv-306ff46c). Run sp_BgbUpdateLiveData.sql on the site database server, and then restart the smsexec and sms_notification_server services on the management point.<!--514471

@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/12/2021
+ms.date: 10/04/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -26,10 +26,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
-# Set up enrollment for Windows devices
+# Set up enrollment for Windows devices  
+
+**Applies to**
+- Windows 10
+- Windows 11
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -37,18 +43,18 @@ This article helps IT administrators simplify Windows enrollment for their users
 
 As an Intune admin, you can simplify enrollment in the following ways:
 
-- [Enable automatic enrollment](#enable-windows-10-automatic-enrollment) (Azure AD Premium required).
+- [Enable automatic enrollment](#enable-windows-automatic-enrollment) (Azure AD Premium required).
 - [CNAME registration](#simplify-windows-enrollment-without-azure-ad-premium).
 - [Enable bulk enrollment](windows-bulk-enroll.md) (Azure AD Premium and Windows Configuration Designer required).
 
 Two factors determine how you can simplify Windows device enrollment:
 
 - **Do you use Azure Active Directory Premium?** [Azure AD Premium](/azure/active-directory/active-directory-get-started-premium) is included with Enterprise Mobility + Security and other licensing plans.
-- **What versions of Windows clients will users enroll?** Windows 10 devices can automatically enroll by adding a work or school account. Earlier versions must enroll using the Company Portal app.
+- **What versions of Windows clients will users enroll?** Devices running Windows 11 or Windows 10 can automatically enroll by adding a work or school account. Devices running earlier versions must enroll using the Company Portal app.  
 
 | | **Azure AD Premium** | **Other AD** |
 |----------|---------------|---------------|  
-| **Windows 10** | [Automatic enrollment](#enable-windows-10-automatic-enrollment) | User enrollment |
+| **Windows 10/11** | [Automatic enrollment](#enable-windows-automatic-enrollment) | User enrollment |
 | **Earlier Windows versions** | User enrollment | User enrollment |
 
 Organizations that can use automatic enrollment can also configure [bulk enroll devices](windows-bulk-enroll.md) by using the Windows Configuration Designer app.
@@ -63,10 +69,10 @@ You can also let unlicensed admins sign in to MEM. For more information, see [Un
 
 Intune supports multiple users on devices that both:
 
-- Run the Windows 10 Creator's update
-- Are Azure Active Directory domain-joined.
+- Run Windows 11 or the Windows 10 Creator's update  
+- Are Azure Active Directory domain-joined  
 
-When standard users sign in with their Azure AD credentials, they receive apps and policies assigned to their user name. Only the device's [Primary user](../remote-actions/find-primary-user.md) can use the Company Portal for self-service scenarios like installing apps and device actions (like Remove or Reset). For shared Windows 10 devices that don't have a primary user assigned, the Company Portal can still be used to install Available apps.
+When standard users sign in with their Azure AD credentials, they receive apps and policies assigned to their user name. Only the device's [Primary user](../remote-actions/find-primary-user.md) can use the Company Portal for self-service scenarios like installing apps and device actions (like Remove or Reset). For shared Windows 10/11 devices that don't have a primary user assigned, the Company Portal can still be used to install Available apps.  
 
 [!INCLUDE [AAD-enrollment](../includes/win10-automatic-enrollment-aad.md)]
 
@@ -123,10 +129,10 @@ Tell your users how to enroll their Windows devices and what to expect after the
 > [!NOTE]
 > End users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
 
-For end-user enrollment instructions, see [Enroll Windows 10 device](../user-help/enroll-windows-10-device.md) and [Enroll Windows 8.1 or Windows RT 8.1 device](../user-help/enroll-your-w81-or-rt81-windows.md). You can also tell users to review [What can my IT admin see on my device](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
+For end-user enrollment instructions, see [Enroll Windows 10/11 device](../user-help/enroll-windows-10-device.md) and [Enroll Windows 8.1 or Windows RT 8.1 device](../user-help/enroll-your-w81-or-rt81-windows.md). You can also tell users to review [What can my IT admin see on my device](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 
 >[!IMPORTANT]
-> If you do not have Auto-MDM enrollment enabled, but you have Windows 10 devices that have been joined to Azure AD, two records will be visible in the Intune console after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.
+> If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Azure AD, two records will be visible in the Intune console after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.
 
 For more information about end-user tasks, see [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md).
 
@@ -141,9 +147,9 @@ Azure Active Directory has a different CNAME that it uses for device registratio
 For more information about device registration, see
 [Manage device identities using the Azure portal](/azure/active-directory/devices/device-management-azure-portal)
 
-## Windows 10 auto enrollment and device registration
+## Windows auto enrollment and device registration  
 
-This section applies to US government cloud customers.
+This section applies to US government cloud customers on devices running Windows 10 or Windows 11.  
 
 Although creating CNAME DNS entries is optional, CNAME records make enrollment easier for users. If no enrollment CNAME record is found, users are prompted to manually enter the MDM server name, enrollment.manage.microsoft.us.
 

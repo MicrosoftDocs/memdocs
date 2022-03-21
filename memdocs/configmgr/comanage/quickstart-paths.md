@@ -2,19 +2,19 @@
 title: Paths to co-management
 titleSuffix: Configuration Manager
 description: Understand the prerequisites for the two primary ways for you to setup co-management.
-ms.date: 01/28/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: conceptual
-ms.assetid: 5beb5564-2fdf-4f0a-8801-d0cec8214c43
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Paths to co-management
 
-There are two primary ways for you to set up co-management. It's important to understand the prerequisites for each path. They each require some combination of Azure Active Directory (Azure AD), Configuration Manager, Microsoft Intune, and Windows 10.
+There are two primary ways for you to set up co-management. It's important to understand the prerequisites for each path. They each require some combination of Azure Active Directory (Azure AD), Configuration Manager, Microsoft Intune, and Windows 10 or later.
 
 1. [Auto-enroll existing Configuration Manager-managed devices into Intune](#bkmk_path1)  
 
@@ -47,6 +47,8 @@ Here's what you need to set it up:
 For a tutorial on this path, see [Tutorial: Enable co-management for existing Configuration Manager clients](tutorial-co-manage-clients.md).
 
 ## <a name="bkmk_path2"></a> Path 2: Bootstrap with modern provisioning
+
+This path is for those devices that are first enrolled with Intune. They are cloud-first devices and use Intune to install the Configuration Manager client.
 
 Here's what you need to set it up:
 

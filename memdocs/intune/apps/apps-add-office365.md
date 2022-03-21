@@ -1,18 +1,18 @@
 ---
 # required metadata
 
-title: Add Microsoft 365 apps to Windows 10 devices using Microsoft Intune
+title: Add Microsoft 365 apps to Windows 10/11 devices using Microsoft Intune
 titleSuffix: 
-description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on Windows 10 devices.
+description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on Windows 10/11 devices.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2021
+ms.date: 01/14/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 3292671a-5f5a-429e-90f7-b20019787d22
 
@@ -26,10 +26,13 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure, seoapril2019
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Windows
+- highpri
 ---
 
-# Add Microsoft 365 apps to Windows 10 devices with Microsoft Intune
+# Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune
 
 Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
 
@@ -44,6 +47,8 @@ Before you can assign, monitor, configure, or protect apps, you must add them to
 
 > [!IMPORTANT]
 > If there are .msi Office apps on the end-user device, you must use the **Remove MSI** feature to safely uninstall these apps. Otherwise, the Intune delivered Microsoft 365 apps will fail to install.
+> 
+> Multiple required or available app assignments are not additive. A later app assignment will overwrite pre-existing installed app assignments.
 
 - Devices to which you deploy these apps must be running the Windows 10 Creators Update or later.
 - Intune supports adding Office apps from the Microsoft 365 Apps suite only.
@@ -78,7 +83,6 @@ In this step, you provide information about the app suite. This information help
     - **Developer**: Microsoft appears as the developer.
     - **Owner**: Microsoft appears as the owner.
     - **Notes**: Enter any notes that you want to associate with this app.
-    - **Logo**: The Microsoft 365 Apps logo is displayed with the app when users browse the company portal.
 2. Click **Next** to display the **Configure app suite** page.
 
 ## Step 2 - (**Option 1**) Configure app suite using the configuration designer 

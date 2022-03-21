@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/20/2021
+ms.date: 02/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -113,10 +113,14 @@ Be sure you have the required permissions to register an Azure AD app. See [Requ
       2. Expand **Application** and select the checkbox for **Application.Read.All** (Read all applications).
       3. Select **Add permissions** to save this configuration.
 
-   1. Select **Add a permission** again.
-      1. On the *Request API permissions* page, select **Azure Active Directory Graph** > **Application permissions**.
-      2. Expand **Application** and select the checkbox for **Application.Read.All** (Read all applications). 
-      3. Select **Add permissions** to save this configuration.
+   1. Use *Microsoft Graph* to add the following permissions to the app:
+
+      - **Application.Read.All** (Read all applications).
+
+      For information on how to complete this step, see [Use Microsoft Graph to configure required Azure AD Graph permissions for an app registration](/graph/migrate-azure-ad-graph-configure-permissions).
+
+      > [!NOTE]  
+      > Previously, these permissions were configured by using Azure AD Graph, and available through the App registration UI. Azure AD Graph is now deprecated and will be retired on June 30, 2022. As part of this deprecation path, the capability to add Azure AD Graph permissions to the required permissions for an app registration through the Azure portal is now disabled.
 
 8. Remain on the **API permissions** page, and select **Grant admin consent for** ***\<your tenant>***, and then select **Yes**.  
 
@@ -142,9 +146,11 @@ The following third-party certification authorities support Intune:
 - [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)
 - [Entrust](https://go.entrustdatacard.com/pki/intune/)
 - [EverTrust](https://evertrust.fr/en/products/)
-- [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 - [GlobalSign](https://downloads.globalsign.com/acton/attachment/2674/f-6903f60b-9111-432d-b283-77823cc65500/1/-/-/-/-/globalsign-aeg-microsoft-intune-integration-guide.pdf)
+- [HID Global](https://help.hydrantid.com/HydrantID_Intune_Integration.pdf)
 - [IDnomic](https://www.idnomic.com/)
+- [KeyTalk](https://keytalk.com/our-services)
+- [Nexus Certificate Manager](https://doc.nexusgroup.com/display/PUB/Example%3A+SCEP+Intune+configuration+in+Protocol+Gateway)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/glueckkanja-gabag.scepman)
 - [Sectigo](https://sectigo.com/products)
 - [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)

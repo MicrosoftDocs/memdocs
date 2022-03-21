@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.topic: how-to
 ms.service: mem
 ms.subservice: fundamentals
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
  
 # How to get support in Microsoft Endpoint Manager admin center
@@ -33,7 +35,7 @@ Microsoft provides global technical, pre-sales, billing, and subscription suppor
 
 Support is available both online and by phone for paid and trial subscriptions. Online technical support is available in English and Japanese. Phone support and online billing support are available in additional languages.
 
-With administrative access to the admin center, you can use the **Help and Support** option to file an on-line support ticket for a supported service. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the *action* **microsoft.office365.supportTickets**. For information about Azure AD roles and permissions that are required to create a support ticket, see [administrator roles in Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
+With administrative access to the admin center, you can use the **Help and Support** option to file an on-line support ticket for a supported service. To create and manage a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the *action* **microsoft.office365.supportTickets**. Guest users are an exception. They can't file support tickets, even when granted the correct action. For information about Azure AD roles and permissions that are required to create a support ticket, see [administrator roles in Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
 
 > [!IMPORTANT]  
 > For technical support with third-party products that work with Intune (like Saaswedo, Cisco, or Lookout), contact the supplier of that product first. Before you open a request with Intune support, make sure you configured the other product correctly.
@@ -86,7 +88,6 @@ On the *Help and support* pane, select a tile to focus support on the scenario y
 - **Windows 365**:
   - When you have a subscription for Windows 365, this tile opens Help and support for Windows 365.
 
-
 > [!TIP]  
 > Help and Support might fail to open for newly created tenants, and the following message is presented:
 >
@@ -94,28 +95,46 @@ On the *Help and support* pane, select a tile to focus support on the scenario y
 >
 > The error details include a *Session ID*, *Extension* details, and more.
 >
-> This problem occurs when you've not authenticated and accessed the Need Help from your new tenant account through either the **Microsoft 365 Admin Center** at [https://admin.microsoft.com](https://admin.microsoft.com), or the **Office 365 portal** at [https://portal.office.com](https://portal.office.com). To resolve this problem, select the link for *Microsoft 365 Admin Center* in the message, or visit [https://portal.office.com](https://portal.office.com), and sign in. Following authentication at either site, go to the Admin area and click the Need Help icon in the lower right.  After completeing these steps *Help and Support* for Intune becomes accessible.
+> This problem occurs when you've not authenticated and accessed the *How can we help?* page from your new tenant account through either the **Microsoft 365 Admin Center** at [https://admin.microsoft.com](https://admin.microsoft.com), or the **Office 365 portal** at [https://portal.office.com](https://portal.office.com). To resolve this problem, select the link for *Microsoft 365 Admin Center* in the message, or visit [https://portal.office.com](https://portal.office.com), and sign in. Following authentication at either site, go to the Admin area and click the Need Help icon in the lower right.  After completing these steps *Help and Support* for Intune becomes accessible.
 
 ## The support experience
 
 After you select a support scenario, the admin center presents the Help and Support page where the support scenario you’ve selected appears at the top **(1)**. If the wrong support scenario was selected, you’ll need to go back to make a different selection:
 
-![View the need help window](./media/get-support/confirm-management-selection.png)
+:::image type="content" source="./media/get-support/confirm-management-selection.png" alt-text="View the How can we help window":::
 
-Above the *Need Help?* title are three icons that you can select to open different panes of the *Need Help?* window. The pane your viewing is identified by the underline.
+Above the *How can we help?* title are three icons that you can select to open different panes of the *How can we help?* window. The pane your viewing is identified by the underline.
 
 > [!TIP]  
 > Customers with a **Premier** or **Unified** support contract have [additional options](#premier-and-unified-support-customers) for support. If you've a Premier or Unified support contract, you'll see a banner thats similar to the following image:
 >
 > ![Premier banner](./media/get-support/premier-banner.png)
 
-By default, the Help and support page opens to the *Find Solutions* pane. However, if you have an active support case then help and support opens to the Se*rvice requests* pane where you can view details about your active and closed support cases.
+By default, the Help and support page opens to the *Find Solutions* pane. However, if you have an active support case then help and support opens to the *Service requests* pane where you can view details about your active and closed support cases.
 
 ### Find solutions
 
 ![Select the find solutions pane](./media/get-support/find-solutions.png)
 
-On the *Find solutions* pane, specify a few details about an issue in the provided text box. The pane returns one or more of the following options based on the details you provide:
+On the *Find solutions* pane, specify a few details about an issue in the provided text box. As you enter details, the console might offer suggestions based on what you've entered. Depending on the presence of specific keywords, the console offers one of two support experiences:
+
+#### Support scenarios
+
+*This support experience is currently available for Intune and Co-management.*
+
+Some keywords will lead to an enhanced support scenario. For example, if your're using Microsoft Intune and enter a generic search for *Need help with Intune* the console offers several more focused scenarios you can select, to drill into the problem and find more focused results:
+
+:::image type="content" source="./media/get-support/scenarios-example.png" alt-text="View of the scenario options":::
+
+When you select a scenario, new options are offered to help narrow down the issue:
+
+:::image type="content" source="./media/get-support/drill-in-scenarios.png" alt-text="View of scenario options":::
+
+When presented, you can run automated tests or diagnostics where applicable, and view insightful information to help troubleshoot the problem. You might also see remediation steps to help you fix the issue.
+
+#### Traditional experience
+
+When the keywords you enter don't have deeper dedicated support available through the admin center, the pane returns one or more of the following options based on the details you provide:
 
 - **Run diagnostics** – From the console you can start automated tests and investigations of your Tenant that can reveal known issues. When you run a diagnostic, you might receive mitigation steps you can take to help resolve the issue.
 - **View insights** – Find links to documentation that provide context and background for the product area or actions you’ve described.
@@ -151,7 +170,7 @@ The *Service requests* pane displays your case history. Active cases are at the 
 
 If you have an active support case number, you can enter it here to jump to that issue, or you can select any incident from the list of active and closed incidents to view more information about it.
 
-When you're done viewing details for an incident, select the left arrow that appears at the top of the service request window just above the icons for the three *Need Help?* pane icons. The back arrow returns the display to the list of support incidents you've opened.
+When you're done viewing details for an incident, select the left arrow that appears at the top of the service request window just above the icons for the *How can we help?* pane icons. The back arrow returns the display to the list of support incidents you've opened.
 
 ## Premier and Unified support customers
 

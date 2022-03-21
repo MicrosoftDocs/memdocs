@@ -2,16 +2,14 @@
 title: Manage Endpoint Protection using Group Policies
 titleSuffix: Configuration Manager
 description: Learn how to manage Endpoint Protection using Group Policies.
-ms.date: 08/05/2020
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: e63f2394-6eb1-4a33-bec5-8377fc62a34e
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Use Group Policy settings to manage Endpoint Protection in previous versions of Windows
 
@@ -38,7 +36,7 @@ You can manage Endpoint Protection in such devices using Group Policy settings, 
     - [Local device](#load-endpoint-protection-group-policy-settings-into-your-local-device)
 
 > [!NOTE]
-> For information on how to use Group Policy settings to manage Microsoft Defender Antivirus in Windows 10, Windows Server 2019, and Windows Server 2016, see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
+> For information on how to use Group Policy settings to manage Microsoft Defender Antivirus in Windows 10, Windows Server 2019, Windows Server 2016, or later as well as [on Windows Server 2012 R2 after installing Microsoft Defender for Endpoint using the modern, unified solution](/microsoft-365/security/defender-endpoint/configure-server-endpoints#windows-server-2012-r2-and-windows-server-2016) see [Use Group Policy settings to configure and manage Microsoft Defender Antivirus](/windows/security/threat-protection/microsoft-defender-antivirus/use-group-policy-microsoft-defender-antivirus).
 
 ## Copy Endpoint Protection policy definitions
 

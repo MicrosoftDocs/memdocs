@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/16/2021
+ms.date: 03/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ For Microsoft Intune to support use of certificates for authentication and the s
 This article introduces the Certificate Connector for Microsoft Intune, its lifecycle, and how to keep it up to date.
 
 > [!TIP]
-> Beginning on July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Although the [previous connectors remain in support](../protect/certificate-connectors.md), they are no longer available for download.  If you need to install a new connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune.
+> Beginning on July 29, 2021, the **Certificate Connector for Microsoft Intune** replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. With the release of version 6.2109.51.0 of the Certificate Connector for Microsoft, the previous connectors are no longer supported.
 
 ## Connector overview
 
@@ -85,9 +85,9 @@ The Certificate Connector for Microsoft Intune supports:
 
 ## Lifecycle
 
-Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What’s New](../fundamentals/whats-new.md) article for Intune, and in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
+Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
 
-When a new version releases, support for the previous version is deprecated with a limited grace period for its continued use. After the grace period expires, support for that deprecated version ends, and it can stop functioning at any time. The grace period is six months.
+Intune supports each connector release for six months after its released. After the six months have passed, the connector is no longer supported and might not function as expected.
 
 If you don’t allow the connector to automatically update, plan to manually update it to the latest version at the first opportunity.
 
@@ -160,6 +160,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - *PkcsRequestSuccess* - Successfully fulfilled and uploaded a PKCS Request to Intune.
   - *PkcsRequestFailure* - Failed to fulfill or upload a PKCS Request to Intune.
 - **Operational**
+  - *PkcsDigiCertRequest* - Successfully downloaded PKCS request for DigiCert CA from Intune
   - *PkcsDownloadSuccess* - Successfully downloaded PKCS requests from Intune
   - *PkcsDownloadFailure* - A failure occurred when downloading PKCS requests from Intune
   - *PkcsDownloadedRequest* - Details of a single downloaded request from Intune
@@ -189,6 +190,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - *RevokeRequestSuccess* - Successfully downloaded Revocation requests from Intune
   - *RevokeRequestFailure* - A failure occurred when downloading Revocation requests from Intune
 - **Operational**
+  - *RevokeDigicertRequest* - Received revoke request from Intune and forwarding request to Digicert for fulfillment of request.
   - *RevokeDownloadSuccess* - Successfully downloaded Revocation requests from Intune
   - *RevokeDownloadFailure* - A failure occurred when downloading Revocation requests from Intune
   - *RevokeDownloadedRequest* - Details of a single downloaded request from Intune
@@ -215,25 +217,64 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - *ScepNotifyAttemptFailed* - Failed attempt to notify Intune of request status.
   - *ScepNotifySaveToDiskFailed* - Failed to write notification to disk. Will not be able to notify Intune of request status.
 
-
 ## What's new for the Certificate Connector
 
-Updates for the Certificate Connector for Microsoft Intune are released periodically. When we update the connector, you can read about the changes here.
+Updates for the Certificate Connector for Microsoft Intune are released periodically and then [supported for six months](#lifecycle). When we update the connector, you can read about the changes here.
 
-New updates for the connector can take several days to become available for each tenant. If an update isn’t available for your tenant yet, check back in a day or so.
+New updates for the connector can take a week or more to become available for each tenant.
+
+<!-- Note for future use if/when relevant>
+> [!IMPORTANT]
+> On [DATE], certificate connectors earlier than version [version] will no longer allow you to issue certificates to users and devices.
+-->
+
+### March 10, 2022
+
+Version **6.2202.38.0**. This update includes:
+
+- Changes to support TLS 1.2 for auto-update
+
+### February 18, 2022
+
+Version **6.2201.7.0**. This update includes:
+
+- Support changes for account moves
+- Explicit disabling for older versions of TLS
+
+### January 6, 2022
+
+Version **6.2112.1.0**. This update includes:
+
+- New configuration logging on startup of services
+- New logging for configuration changes during service processing
+- Fix for configuration tool to appropriately clear proxy information on removal
+- Bug fix affecting reconnections to Intune in scenarios where proxies are in use
+
+### October 11, 2021
+
+Version **6.2110.201.0**. This update includes:
+
+- Bug fix for reading the SCEP application pool during configuration.
+
+### September 23, 2021
+
+Version **6.2109.51.0**. - With the release of this update, support ends for the two previous certificate connectors, *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*.
+
+This update includes:
+
+- Additional logging for Digicert PKCS requests
+- Enhancement to cryptography operations made during handling of PKCS requests
 
 ### August 16, 2021
 
-Version **6.2108.18.0**. - Changes in this release:
-
-This update includes:
+Version **6.2108.18.0**. This update includes:
 
 - A fix to correctly display the current connector status in Microsoft Endpoint Manager admin center.
 - A fix to correctly report on failures to deliver SCEP certificates.
 
 ### July 29, 2021
 
-Version **6.2107.45.0** - The Certificate Connector for Microsoft Intune is released. 
+Version **6.2107.45.0** - The Certificate Connector for Microsoft Intune is released.
 
 This connector is a unified connector in that it includes the capabilities of both the *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*, which it replaces.  With this release, the previous connectors remain supported, but are no longer developed nor available for download. Plan to replace existing installations of the individual with installations of this new unified connector.
 

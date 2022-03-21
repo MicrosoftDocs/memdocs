@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/19/2021
+ms.date: 07/21/2021
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Getting started with Microsoft Endpoint Manager
@@ -137,7 +139,7 @@ The following articles will help you understand how to create and monitor compli
 
 ## Intune app protection policies
 
-Intune app protection policies (APP) allow you to protect organizational data within an application. Together with app configuration capabilities, you can implement mobile application management (MAM) in Intune to help protect sensitive data that is accessed from both managed and unmanaged devices. With MAM without enrollment (MAM-WE), you can use Intune to manage work or school-related apps, including productivity apps such as the Microsoft Office apps, on almost any [device](./intune/apps/app-management.md#app-management-capabilities-by-platform), including personal devices in bring-your-own-device (BYOD) scenarios. See the official list of [Microsoft Intune protected apps](./intune/apps/apps-supported-intune-apps.md) available for public use.
+Intune app protection policies (APP) allow you to protect organizational data within an application. Together with app configuration capabilities, you can implement mobile application management (MAM) in Intune to help protect sensitive data that is accessed from managed applications. See the official list of [Microsoft Intune protected apps](./intune/apps/apps-supported-intune-apps.md) available for public use.
 
 To get an overview of app protection policies and how they work, check out the following articles:
 

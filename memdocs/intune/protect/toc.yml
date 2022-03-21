@@ -57,8 +57,15 @@ items:
       href: device-compliance-get-started.md    
     - name: Create a policy
       href: create-compliance-policy.md
+    - name: Custom compliance settings
+      href: compliance-use-custom-settings.md 
+      items:   
+      - name: JSON for custom settings
+        href: compliance-custom-json.md    
+      - name: PowerShell script for custom settings
+        href: compliance-custom-script.md    
     - name: Location-based compliance
-      href: use-network-locations.md
+      href: ./create-compliance-policy.md
     - name: Actions for noncompliance
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
@@ -106,6 +113,8 @@ items:
         href: advanced-threat-protection-manage-android.md
       - name: Monitor Defender for Endpoint
         href: advanced-threat-protection-monitor.md
+      - name: MDE Security Configuration Management (Preview)
+        href: mde-security-integration.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
     - name: Tenant attach
@@ -195,6 +204,11 @@ items:
         - name: Better Mobile and Intune integration
           href: better-mobile-mtd-connector-integration.md
           displayName: sso
+      - name: Set up BlackBerry Protect Mobile 
+        href: blackberry-mobile-threat-defense-connector.md
+        items:
+        - name: BlackBerry and Intune integration
+          href: blackberry-mtd-connector-integration.md
       - name: Set up Check Point
         href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
         items:
@@ -289,6 +303,8 @@ items:
         href: windows-10-feature-updates.md
       - name: Expedite updates policy
         href: windows-10-expedite-updates.md
+      - name: Windows rollout options
+        href: windows-update-rollout-options.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies
@@ -321,8 +337,6 @@ items:
       items:
       - name: Troubleshoot Exchange connectors
         href: /troubleshoot/mem/intune/troubleshoot-exchange-connector
-      - name: Common problems 
-        href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-problems
       - name: Common errors   
         href: /troubleshoot/mem/intune/troubleshoot-exchange-connector-common-errors
     - name: Troubleshoot BitLocker policies
@@ -336,7 +350,9 @@ items:
   - name: Compliance policy settings
     items:
     - name: Compliance settings - Android device administrator
-      href: compliance-policy-create-android.md
+      href: compliance-policy-create-android.md  
+    - name: Compliance settings - Android (AOSP) 
+      href: compliance-policy-create-android-aosp.md
     - name: Compliance settings - Android Enterprise
       href: compliance-policy-create-android-for-work.md
     - name: Compliance settings - iOS
@@ -382,6 +398,8 @@ items:
       href: security-baseline-settings-defender-atp.md
     - name: Microsoft Edge baseline settings
       href: security-baseline-settings-edge.md
+    - name: Windows 365 baseline settings
+      href: security-baseline-settings-windows-365.md
   - name: Microsoft Tunnel command-line tools
     href: microsoft-tunnel-reference.md
   - name: Windows update settings

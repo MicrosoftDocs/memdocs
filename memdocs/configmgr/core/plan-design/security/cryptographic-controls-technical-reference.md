@@ -2,13 +2,15 @@
 title: Cryptographic controls technical reference
 titleSuffix: Configuration Manager
 description: Learn how signing and encryption can help protect attacks from reading data in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Cryptographic controls technical reference
@@ -150,6 +152,24 @@ After Configuration Manager deploys the OS installs the client, the client requi
 Independent Software Vendors (ISVs) can create applications that extend Configuration Manager. For example, an ISV could create extensions to support non-Windows client platforms such as macOS. However, if the site systems require HTTPS client connections, these clients must also use PKI certificates for communication with the site. Configuration Manager includes the ability to assign a certificate to the ISV proxy that enables communications between the ISV proxy clients and the management point. If you use extensions that require ISV proxy certificates, consult the documentation for that product.
 
 If the ISV certificate is compromised, block the certificate in the **Certificates** node in the **Administration** workspace, **Security** node.
+
+#### Copy GUID for ISV proxy certificate
+
+<!--2842082-->
+
+Starting in version 2111, to simplify the management of these ISV proxy certificates, you can now copy its GUID in the Configuration Manager console.
+
+1. In the Configuration Manager console, go to the **Administration** workspace.
+
+1. Expand **Security**, and select the **Certificates** node.
+
+1. Sort the list of the certificates by the **Type** column.
+
+1. Select a certificate of type **ISV Proxy**.
+
+1. In the ribbon, select **Copy Certificate GUID**.
+
+This action copies this certificate's GUID, for example: `aa05bf38-5cd6-43ea-ac61-ab101f943987`
 
 ### Asset Intelligence and certificates
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/26/2021
+ms.date: 01/25/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # List of platforms, policies, and app types supported by filters in Microsoft Endpoint Manager
 
-When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the policy, you can also use filters. For example, you can assign policies to Windows 10 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the policy, you can also use filters. For example, you can assign policies to Windows client devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
 Filters support some of the different workloads available in Microsoft Intune. This article lists the app types, compliance policies, and device configuration profiles that support filters. It also lists the workloads that aren't supported.
 
@@ -71,7 +71,7 @@ You can use filters for some common app policies on the following platforms. For
 | Managed Android line-of-business app | ✔️ |
 
 > [!NOTE]
-> Filters aren't supported on Android Enterprise corporate owned work profile devices when used in "Available" app assignments. If users are targeted with an "Available" app intent, then the app continues to show as available to install from the Google managed play store. Any include or exclude filtering is ignored.
+> Filters aren't supported on Android Enterprise personally-owned devices with work profile (BYOD) when used in "Available" app assignments. If users are targeted with an "Available" app intent, then the app continues to show as available to install from the Google managed play store. Any include or exclude filtering is ignored.
 
 ### iOS/iPadOS
 
@@ -96,7 +96,7 @@ You can use filters for some common app policies on the following platforms. For
 | Web link | ❌ |
 | Line-of-business apps | ✔️ |
 
-### Windows 10 and newer
+### Windows 10/11
 
 | App type | Supported |
 | --- | --- |
@@ -117,7 +117,8 @@ You can use filters for all compliance policies on the following platforms:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## Device configuration profiles and Endpoint security
 
@@ -141,6 +142,7 @@ You can use filters for some common device configuration policies on the followi
 | Email | N/A |
 | Email (Samsung KNOX only) | ✔️ |
 | Endpoint Protection | N/A |
+| Enrollment restrictions | ❌ |
 | MX profile (Zebra only) | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -170,6 +172,7 @@ You can use filters for some common device configuration policies on the followi
 | Device Features | N/A |
 | Email | ✔️ |
 | Endpoint Protection | N/A |
+| Enrollment restrictions | ❌ |
 | OEMConfig | ❌ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -199,6 +202,7 @@ You can use filters for some common device configuration policies on the followi
 | Device Features | ✔️ |
 | Email | ✔️ |
 | Endpoint Protection | N/A |
+| Enrollment restrictions | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
 | SCEP certificate | ✔️ |
@@ -227,6 +231,7 @@ You can use filters for some common device configuration policies on the followi
 | Device features | ✔️ |
 | Email | N/A |
 | Endpoint Protection | ✔️ |
+| Enrollment restrictions | ✔️ |
 | Extensions | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -246,11 +251,11 @@ You can use filters for some common device configuration policies on the followi
 | Firewall | ❌ |
 | Security Baselines | N/A |
 
-### Windows 10 and newer
+### Windows 10/11
 
 | Profile type | Supported |
 | --- | --- |
-| Windows 10 update rings | ✔️ |
+| Update rings for Windows 10/11 | ✔️ |
 | **Device configuration profile** | &nbsp; |
 | Administrative Templates | ✔️ |
 | Custom | ✔️ |
@@ -259,14 +264,16 @@ You can use filters for some common device configuration policies on the followi
 | Device restrictions | ✔️ |
 | Device Restrictions (Windows 10 Team) | ✔️ |
 | Device Features | N/A |
-| Device Firmware Configuration Interface (DFCI) on Windows 10 RS5 (1809) and newer on supported UEFI | ✔️ |
+| Device Firmware Configuration Interface (DFCI) on Windows 11 and Windows 10 RS5 (1809)+ on supported UEFI | ✔️ |
 | Domain Join | ✔️ |
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
+|Endpoint analytics proactive remediations scripts|✔️ |
 | Endpoint Protection | ✔️ |
+| Enrollment restrictions | ✔️ |
 | Identity Protection | ✔️ |
 | Kiosk | ✔️ |
-| Microsoft Defender for Endpoint (Windows 10 Desktop) | ✔️ |
+| Microsoft Defender for Endpoint (Windows 10/11 Desktop) | ✔️ |
 | Network boundary | ✔️ |
 | PKCS certificate | ✔️ |
 | PKCS imported certificate | ✔️ |
@@ -292,19 +299,18 @@ You can use filters for some common device configuration policies on the followi
 The following features don't support using filters:
 
 - App configuration policies for Android and iOS/iPadOS
-- App protection policies for Android, iOS/iPadOS, and Windows 10
+- App protection policies for Android, iOS/iPadOS, and Windows
 - End user experiences customization policies
-- Enrollment restrictions
 - iOS/iPadOS app provisioning profiles
 - Partner device management
 - Policies for Office apps
 - Policy sets
-- PowerShell scripts for Windows 10
+- PowerShell scripts for Windows
 - S mode supplemental policies for Windows 10
 - Shell scripts for macOS
 - Terms and conditions
 - Update policies for iOS/iPadOS
-- Windows 10 feature updates
+- Feature updates for Windows
 
 ## Next steps
 

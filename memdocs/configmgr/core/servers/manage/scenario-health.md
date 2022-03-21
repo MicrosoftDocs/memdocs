@@ -2,21 +2,21 @@
 title: Monitor scenario health
 titleSuffix: Configuration Manager
 description: Use Configuration Manager to monitor the health of end-to-end scenarios.
-ms.date: 11/30/2020
+ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 5cff8290-d2f7-4a10-a292-51b030872455
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Monitor scenario health in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-You can now use Configuration Manager to monitor the health of end-to-end scenarios. Monitoring scenario health enhances awareness of system latency and component backlogs which are critical for cloud service-attached features. Configuration Manager simulates activities to expose performance metrics and failure points.It simulates activities to expose performance metrics and failure points. These synthetic activities are similar to methods that Microsoft uses to monitor some components in its cloud services. Use this additional data to better understand timeframes for activities. If failures occur, it can help focus your investigation. <!--7699463-->
+You can use Configuration Manager to monitor the health of end-to-end scenarios. Monitoring scenario health enhances awareness of system latency and component backlogs which are critical for cloud service-attached features. Configuration Manager simulates activities to expose performance metrics and failure points.It simulates activities to expose performance metrics and failure points. These synthetic activities are similar to methods that Microsoft uses to monitor some components in its cloud services. Use this additional data to better understand timeframes for activities. If failures occur, it can help focus your investigation. <!--7699463-->
 
 Starting in version 2010, Configuration Manager monitors the health for the following two scenarios:
 
@@ -26,7 +26,10 @@ Starting in version 2010, Configuration Manager monitors the health for the foll
 
 In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Scenario Health** node. The list view displays the available scenarios:
 
-:::image type="content" source="media/scenario-health-2010.png" alt-text="Scenario Health node in Configuration Manager console version 2010" lightbox="media/scenario-health-2010.png":::
+:::image type="content" source="media/scenario-health-2010.png" alt-text="Scenario Health node in Configuration Manager console version 2010." lightbox="media/scenario-health-2010.png":::
+
+> [!NOTE]
+> If you use a [high availability option](../deploy/configure/high-availability-options.md), scenario health only monitors the active node. For the SQL Server Service Broker scenario, it only applies to the primary replica of the SQL Server Always On availability group. The client action health scenario only applies to the site server in active mode.<!-- memdocs#1653 -->
 
 ## Prerequisites
 
@@ -38,7 +41,7 @@ In the **Scenario Health** node, when you select a scenario, the following actio
 
 - **Show Status**: This action is the main one you'll use to view the latest results of tests for the scenario. This action opens a window with more information. The top section shows the overall status per site. Select a site, to see more detailed status for that site in the bottom section.
 
-    :::image type="content" source="media/scenario-health-service-broker-2010.png" alt-text="SQL Server Service Broker synthetic activity status" lightbox="media/scenario-health-service-broker-2010.png":::
+    :::image type="content" source="media/scenario-health-service-broker-2010.png" alt-text="SQL Server Service Broker synthetic activity status." lightbox="media/scenario-health-service-broker-2010.png":::
 
 - **Scenario Settings**: Configure the settings for this scenario: such as whether it's enabled, and the time interval in minutes.
 
@@ -65,7 +68,7 @@ Configuration Manager includes the following tests for this scenario:
 > [!NOTE]
 > Not all sites run all tests.
 
-With this health information, you can see how long it takes for SQL Server to exchange messages via the service broker. A longer delay or timeout shows a backlog in the processing queue. A failure indicates a larger problem with the service broker, such as the queue is disabled. Since SQL Server service broker is a core component, issues with it can impact many other scenarios. For example, [client notifications](../../clients/manage/client-notification.md), [client status](../../clients/manage/monitor-clients.md#bkmk_about), and some tenant attach features.
+With this health information, you can see how long it takes for SQL Server to exchange messages via the service broker. A longer delay or timeout shows a backlog in the processing queue. A failure indicates a larger problem with the service broker, such as the queue is disabled. Since SQL Server service broker is a core component, issues with it can impact many other scenarios. For example, [client notifications](../../clients/manage/client-notification.md), [client status](../../clients/manage/monitor-clients.md#about-client-status), and some tenant attach features.
 
 ## Client action health
 

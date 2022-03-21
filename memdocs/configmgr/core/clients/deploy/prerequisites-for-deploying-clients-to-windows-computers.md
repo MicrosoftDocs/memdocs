@@ -2,13 +2,14 @@
 title: Windows client prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Prerequisites for deploying clients to Windows computers
@@ -61,15 +62,17 @@ If you need to manage a client on a version of Windows that's not updated, or ol
 The Configuration Manager client has external dependencies. These dependencies depend on the OS version and the installed software on the client computer. If the client requires these dependencies to complete the installation, it automatically installs them.
 
 | Component | Description |
-|-----------|-------------|
-|Microsoft Core XML Services (MSXML) version 6.20.5002 or later (`msxml6.msi`)|Required to support the processing of XML documents in Windows.|
-|Microsoft Visual C++ 2015-2019 Redistributable version 14.28.29914.0 (`vcredist_x*.exe`)|(_Version 2107 and later_) Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.<!-- 5170229 -->|
-|Microsoft Visual C++ 2013 Redistributable version 12.0.40660.0 (`vcredist_x*.exe`)|(_Version 2103 and earlier_) Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.<!-- SCCMDocs#1526 -->|
-|Windows Imaging APIs 6.0.6001.18000 or later (`wimgapi.msi`)|Required to allow Configuration Manager to manage Windows image (.wim) files.|
-|Microsoft Policy Platform 1.2.3514.0 or later (`MicrosoftPolicyPlatformSetup.msi`)|Required to allow clients to evaluate compliance settings.|
-|Microsoft .NET Framework version 4.6.2 or later (`NDP462-KB3151800-x86-x64-AllOS-ENU.exe`)|_Version 2107 and later_:<!--10402814--> Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net).|
-|Microsoft .NET Framework version 4.5.2 or later (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`)|_Version 2103 and earlier_: Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net).|
-|Microsoft SQL Server Compact 4.0 SP1 components|Required to store information related to client operations.|
+|--|--|
+| Microsoft Visual C++ 2015-2019 Redistributable version 14.28.29914.0 (`vcredist_x*.exe`) | (_Version 2107 and later_) Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.<!-- 5170229 --> |
+| Microsoft Visual C++ 2013 Redistributable version 12.0.40660.0 (`vcredist_x*.exe`) | (_Version 2103 and earlier_) Required to support client operations. When you install this update on client computers, it might require a restart to complete the installation.<!-- SCCMDocs#1526 --> |
+| Windows Imaging APIs 6.0.6001.18000 or later (`wimgapi.msi`) | Required to allow Configuration Manager to manage Windows image (.wim) files. |
+| Microsoft Policy Platform 1.2.3514.0 or later (`MicrosoftPolicyPlatformSetup.msi`) | Required to allow clients to evaluate compliance settings. |
+| Microsoft .NET Framework version 4.6.2 or later (`NDP462-KB3151800-x86-x64-AllOS-ENU.exe`) | _Version 2107 and later_:<!--10402814--> Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net). |
+| Microsoft .NET Framework version 4.5.2 or later (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`) | _Version 2103 and earlier_: Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net). |
+| Microsoft SQL Server Compact Edition (CE) 4.0 SP1 components | Required to store information related to client operations. |
+| Microsoft Monitoring Agent version 10.20.18053.0 (`MMASetup-*.exe`) | Installed as needed by devices that you onboard to Microsoft Defender for Endpoint. |
+| Windows Firewall configuration (`WindowsFirewallConfigurationProvider.msi`) | Required for certain endpoint protection policies. |
+| Microsoft WebView2 (`Microsoft.WebView2.FixedVersionRuntime.x86.cab`) | Installed as needed when you use Software Center custom tabs. |
 
 #### More details about Microsoft .NET
 
@@ -86,7 +89,12 @@ Microsoft recommends that you install the latest version of .NET version 4.8 to 
 >
 > For more information, see [.NET Framework system requirements](/dotnet/framework/get-started/system-requirements).
 
-Whether you update .NET before updating the Configuration Manager client, or CCMSetup updates it, .NET may require a restart to complete its installation. CCMSetup suppresses a restart if necessary. The user sees a **Restart required** notification in the system tray. The following scenarios are common reasons why .NET requires the computer to restart:
+Whether you update .NET before updating the Configuration Manager client, or CCMSetup updates it, .NET may require a restart to complete its installation. CCMSetup suppresses a restart if necessary. The user sees a **Restart required** notice in the Windows notification area.
+
+> [!IMPORTANT]
+> When the Configuration Manager client updates to version 2111 or later, client notifications are dependent upon .NET 4.6.2 or later. Until you update .NET to version 4.6.2 or later, and restart the device, users won't see notifications from Configuration Manager. Other client-side functionality may be affected until the device is updated and restarted.<!-- 10682548 -->
+
+The following scenarios are common reasons why .NET requires the computer to restart:
 
 - .NET applications or services are running on the computer.
 

@@ -186,7 +186,7 @@ To update a security baseline profile to the latest version of that baseline, se
   - **Disabled** - Microsoft Defender SmartScreen is turned off and users can't turn it on.
   - **Not configured**  Users can choose whether to use Microsoft Defender SmartScreen.
 
-  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
+  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10/11 Pro or Enterprise instances that are enrolled for device management.
 
 - **Configure Microsoft Defender SmartScreen to block potentially unwanted apps**  
     Configure Microsoft Defender SmartScreen behavior for blocking potentially unwanted apps. Microsoft Defender SmartScreen can provide a warning messages to help protect users from adware, coin miners, bundleware, and other low-reputation apps that are hosted by websites. Potentially unwanted app blocking in Microsoft Defender SmartScreen is turned off by default.
@@ -195,7 +195,7 @@ To update a security baseline profile to the latest version of that baseline, se
   - **Disabled** - Potentially unwanted apps are not blocked.
   - **Not configured** - Users can choose whether to use potentially unwanted app blocking in Microsoft Defender SmartScreen.
 
-  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
+  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10/11 Pro or Enterprise instances that are enrolled for device management.
 
 - **Allow users to proceed from the SSL warning page**  
    CSP: [Browser/PreventCertErrorOverrides](/windows/client-management/mdm/policy-csp-browser#browser-preventcerterroroverrides)  
@@ -334,7 +334,7 @@ To update a security baseline profile to the latest version of that baseline, se
   - If you disable this setting, Microsoft Defender SmartScreen is turned off and users can't turn it on.
   - When set to *Not Configured*, users can choose whether to use Microsoft Defender SmartScreen.
   
-  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10 Pro or Enterprise instances that are enrolled for device management.
+  This policy is available only on Windows instances that are joined to a Microsoft Active Director domain, or on Windows 10/11 Pro or Enterprise instances that are enrolled for device management.
 
 - **Allow user-level native messaging hosts (installed without admin permissions)**  
   **Default**: Disabled
@@ -353,7 +353,7 @@ To update a security baseline profile to the latest version of that baseline, se
   By default, Microsoft Edge forbids certificates signed using SHA-1 as allowing SHA-1 chains is not a secure configuration.
 This policy depends on the operating system (OS) certificate verification stack allowing SHA-1 signatures. If an OS update changes the OS handling of SHA-1 certificates, this policy might no longer have effect. Further, this policy is intended as a temporary workaround to give Enterprises more time to move away from SHA-1.
 
-  This policy is only available on Windows instances that are joined to a Microsoft Active Directory domain or Windows 10 Pro or Enterprise instances enrolled for device management.
+  This policy is only available on Windows instances that are joined to a Microsoft Active Directory domain or Windows 10/11 Pro or Enterprise instances enrolled for device management.
 
   This policy will be removed in Microsoft Edge 92 releasing in mid-2021.
 

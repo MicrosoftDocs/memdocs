@@ -1,17 +1,15 @@
 ---
 title: Manage Microsoft 365 Apps updates
-titleSuffix: "Configuration Manager"
-description: "Configuration Manager synchronizes Microsoft 365 Apps client updates from the WSUS catalog to the site server to make updates available to deploy to clients."
+titleSuffix: Configuration Manager
+description: Configuration Manager synchronizes Microsoft 365 Apps client updates from the WSUS catalog to the site server to make updates available to deploy to clients.
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/22/2021
+ms.date: 01/05/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
-
-
+ms.localizationpriority: medium
 ---
 
 # Manage Microsoft 365 Apps with Configuration Manager
@@ -19,7 +17,7 @@ ms.assetid: eac542eb-9aa1-4c63-b493-f80128e4e99b
 *Applies to: Configuration Manager (current branch)*
 
 > [!Note]
-> Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
+> On April 21, 2020, Office 365 ProPlus was renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see references to the old name in the Configuration Manager console and supporting documentation while the console is being updated.
 
 Configuration Manager lets you manage Microsoft 365 Apps in the following ways:
 
@@ -29,7 +27,7 @@ Configuration Manager lets you manage Microsoft 365 Apps in the following ways:
 
   - Starting in Configuration Manager version 2002, you can import Microsoft 365 Apps updates into disconnected environments. For more information, see [Synchronize Microsoft 365 Apps updates from a disconnected software update point](../get-started/synchronize-office-updates-disconnected.md).
 
-- [Add languages for Microsoft 365 Apps update downloads](#bkmk_o365_lang): You can add support for Configuration Manager to download updates for any languages supported by Microsoft 365 Apps. Meaning Configuration Manager doesn't have to support the language as long as Microsoft 365 Apps does. Prior to Configuration Manager version 1610 you must download and deploy updates in the same languages configured on Microsoft 365 Apps clients.
+- [Add languages for Microsoft 365 Apps update downloads](#bkmk_o365_lang): You can add support for Configuration Manager to download updates for any languages supported by Microsoft 365 Apps. Meaning Configuration Manager doesn't have to support the language as long as Microsoft 365 Apps does.
 
 - [Change the update channel](#bkmk_channel): You can use group policy to distribute a registry key value change to Microsoft 365 Apps clients to change the update channel.
 
@@ -54,9 +52,10 @@ For previous Configuration Manager versions, you must take the following steps t
 ### Limitations
 
 - Content-enabled cloud management gateways don't support content for Microsoft 365 Apps updates. <!--7366753-->
+- In certain circumstances when using Office Customization Tool for Click-to-Run, you may encounter the following exception:  `Could not load type 'System.Runtime.InteropServices.Architecture' from assembly 'mscorlib Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'`. To work around the issue, update .NET Framework to version 4.7.1 or later for the machine running the Configuration Manager console. <!--12109686-->
 
-### Deploy Microsoft 365 Apps using Configuration Manager version 1806 or higher: 
-Starting in Configuration Manager 1806, the Office Customization Tool is integrated with the installer in the Configuration Manager console. When creating a deployment for Microsoft 365 Apps, you can dynamically configure the latest manageability settings. <!--1358149, these instructions are for 1806 and later-->
+### Deploy Microsoft 365 Apps using Configuration Manager 
+The Office Customization Tool is integrated with the installer in the Configuration Manager console. When creating a deployment for Microsoft 365 Apps, you can dynamically configure the latest manageability settings. <!--1358149, these instructions are for 1806 and later-->
 
 1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.
 2. Select **Office 365 Installer** in the upper-right pane. The installation wizard opens.
@@ -91,10 +90,10 @@ Use the following steps to deploy Microsoft 365 Apps updates with Configuration 
 
 1. [Verify the requirements](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#requirements-for-using-configuration-manager-to-manage-office-365-client-updates) for using Configuration Manager to manage Microsoft 365 Apps client updates in the **Requirements for using Configuration Manager to manage Microsoft 365 Apps client updates** section of the article.  
 
-2. [Configure software update points](../get-started/configure-classifications-and-products.md) to synchronize the Microsoft 365 Apps client updates. Set **Updates** for the classification and select **Office 365 Client** for the product. Synchronize software updates after you configure the software update points to use the **Updates** classification.
+2. [Configure software update points](../get-started/configure-classifications-and-products.md) to synchronize the Microsoft 365 Apps client updates. Set **Updates** for the classification and select **Microsoft 365 Apps/Office 2019/Office LTSC** for the product. Synchronize software updates after you configure the software update points to use the **Updates** classification.
 3. Enable Microsoft 365 Apps clients to receive updates from Configuration Manager. Use Configuration Manager client settings or group policy to enable the client.
 
-    **Method 1**: Beginning in Configuration Manager version 1606, you can use the Configuration Manager client setting to manage the Microsoft 365 Apps client agent. After you configure this setting and deploy Microsoft 365 Apps updates, the Configuration Manager client agent communicates with the Microsoft 365 Apps client agent to download the updates from a distribution point and install them. Configuration Manager takes inventory of Microsoft 365 Apps client settings.    
+    **Method 1**: You can use the Configuration Manager client setting to manage the Microsoft 365 Apps client agent. After you configure this setting and deploy Microsoft 365 Apps updates, the Configuration Manager client agent communicates with the Microsoft 365 Apps client agent to download the updates from a distribution point and install them. Configuration Manager takes inventory of Microsoft 365 Apps client settings.    
 
       1. In the Configuration Manager console, select **Administration** > **Overview** > **Client Settings**.  
 
@@ -113,7 +112,10 @@ If Microsoft 365 Apps was installed recently and deployed updates are not detect
 
 ## Restart behavior and client notifications for Microsoft 365 Apps updates
 
-The client receives pop-up and in-app notifications, and a countdown dialog, prior to installing the update. If any Microsoft 365 Apps are running during a client update enforcement, the Microsoft 365 Apps will not be forced to close. Instead, the update install will return as requiring a system restart. <!--510006--> For more information about notifications from Microsoft 365 Apps see [End-user update notifications for Microsoft 365 Apps](/deployoffice/end-user-update-notifications-microsoft-365-apps).
+The client receives pop-up and in-app notifications, and a countdown dialog, prior to installing the update. If any Microsoft 365 Apps are running during a client update enforcement, the Microsoft 365 Apps will not be forced to close. Instead, the update install will return as requiring a system restart. <!--510006--> For more information about notifications from Microsoft 365 Apps, see [End-user update notifications for Microsoft 365 Apps](/deployoffice/end-user-update-notifications-microsoft-365-apps).
+
+> [!NOTE]
+> Starting in version 2111, you can configure the end-user notification experience for Microsoft 365 Apps updates. The **Enable update notifications from Microsoft 365 Apps** option was added to the **Software Updates** group of client settings. For more information about this setting and the user notification experience, see [About client settings in Configuration Manager](../../core/clients/deploy/about-client-settings.md#enable-update-notifications-from-microsoft-365-apps).<!--10628998-->
 
 ## <a name="bkmk_o365_lang"></a> Add languages for Microsoft 365 Apps update downloads
 You can add support for Configuration Manager to download updates for any languages that are supported by Microsoft 365 Apps.

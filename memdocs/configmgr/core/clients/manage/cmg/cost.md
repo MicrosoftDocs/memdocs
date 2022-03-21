@@ -9,6 +9,8 @@ ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Cost of CMG
@@ -120,7 +122,7 @@ For more information, see [Monitor CMG](monitor-clients-cloud-management-gateway
 To help reduce the number of data transfers from cloud-based sources by clients, use one of the following peer caching technologies:
 
 - Configuration Manager peer cache
-- Windows 10 Delivery Optimization  
+- Windows Delivery Optimization
 - Windows BranchCache
 
   > [!NOTE]

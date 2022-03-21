@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/11/2020
+ms.date: 01/18/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -76,4 +76,4 @@ In the following example, Windows 8.1 phone devices are prevented from changing 
 
 [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-Create a [custom profile on Windows 10 devices](custom-settings-windows-10.md).
+Create a [custom profile on Windows 10/11 devices](custom-settings-windows-10.md).

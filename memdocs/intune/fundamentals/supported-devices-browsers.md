@@ -5,16 +5,14 @@ title: Operating systems and browsers supported by Microsoft Intune
 titleSuffix: 
 description: Lists supported device platforms and browsers for Intune device management
 keywords:
-author: ErikjeMS  
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 01/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 5d1ac59c-a885-4276-8576-f3cf81c2d268
 
 # optional metadata
 
@@ -26,37 +24,37 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic; get-started; seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Supported operating systems and browsers in Intune
 
 Before setting up Microsoft Intune, review the supported operating systems and browsers.
 
-For help installing Intune on your device, see [using managed devices to get work done](../user-help/use-managed-devices-to-get-work-done.md) and [Intune network bandwidth usage](network-bandwidth-use.md).
+For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).  
 
-For more information on configuration service provider support, visit the [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference).
-
-> [!NOTE]
-> Intune requires Android 6.x or higher for applications and devices to access company resources via the Company Portal app for Android and the Intune App SDK for Android. This requirement does NOT apply to Polycom Android-based Teams devices running 4.4. These devices will continue to be supported.
 
 ## Intune supported operating systems
 
-You can manage devices running the following operating systems:
+Intune supports devices running the following operating systems (OS):
+
+* iOS
+* Android 
+* Windows
+* macOS 
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
-> [!NOTE]
-> Intune does not currently support managing UWF enabled devices. See [Unified Write Filter (UWF) feature](/windows-hardware/customize/enterprise/unified-write-filter) for more information.
+### Supported Samsung Knox Standard devices  
 
-### Supported Samsung Knox Standard devices
-
-To avoid Knox activation errors that prevent MDM enrollment, the Company Portal app only attempts Samsung Knox activation during MDM enrollment if the device appears in the [list of supported Knox devices](https://www.samsungknox.com/knox-supported-devices/knox-workspace). Devices that don't support Samsung Knox activation enroll as standard Android devices. A Samsung device might have some model numbers that support Knox, while others don't. Verify Knox compatibility with your device reseller before you buy and deploy Samsung devices.
+Microsoft Intune only attempts Samsung Knox activation during enrollment on supported Knox devices. Devices that don't support Samsung Knox enroll as standard Android devices. For a list of devices that support Samsung Knox, see [Devices secured by Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace) on the Samsung Knox website. It's important to look for your device model number when verifying support, because some device models support Knox while others do not. Always verify Knox compatibility with your device reseller before you buy and deploy Samsung devices.  
 
 > [!NOTE]
-> Enrolling Samsung Knox devices may require you to enable access to Samsung servers.
+> You may need to enable access to Samsung servers to enroll Samsung Knox devices. For more information about enrollment, see [Automatically enroll Android devices by using Samsung's Knox Mobile Enrollment](../enrollment/android-samsung-knox-mobile-enroll.md).  
 
-The following list of Samsung device models do not support Knox. They are enrolled as native Android devices by the Company Portal app for Android:
+The Samsung device models in the following table do not support Knox solutions and features. Intune enrolls them as native Android devices. 
 
 | **Device Name** | **Device Model Numbers** |
 | --- | --- |
@@ -97,14 +95,20 @@ The following list of Samsung device models do not support Knox. They are enroll
 
 ## Intune supported web browsers
 
-Different administrative tasks require that you use one of the following administrative websites.
+Device management and administrative tasks are done in the Microsoft Endpoint Manager admin center. Use these portals to access the admin center:  
 
 - [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854)
 - [Azure portal](https://portal.azure.com/)
 
-The following browsers are supported for these portals:
+Microsoft Endpoint Manager is supported with the following web browsers: 
 
 - Microsoft Edge (latest version)
 - Safari (latest version, Mac only)
 - Chrome (latest version)
-- Firefox (latest version)
+- Firefox (latest version)  
+
+## Next steps  
+For network configuration requirements, or to learn more about setting up devices using the configuration service provider (CSP), see:
+
+* [Intune network configuration requirements and bandwidth](network-bandwidth-use.md)   
+* [Configuration service provider reference](/windows/client-management/mdm/configuration-service-provider-reference)  

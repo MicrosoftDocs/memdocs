@@ -1,24 +1,21 @@
 ---
-title: "Setup reference"
-titleSuffix: "Configuration Manager"
-description: "Review this reference to help you prepare to install a Configuration Manager site or hierarchy."
-ms.date: 04/18/2017
+title: Setup reference
+titleSuffix: Configuration Manager
+description: Review this reference to help you prepare to install a Configuration Manager site or hierarchy.
+ms.date: 01/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: cdb9fb0c-0912-41e4-b427-f40620971763
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Reference for Configuration Manager Setup
 
 *Applies to: Configuration Manager (current branch)*
 
 Configuration Manager Setup provides links to several topics that are detailed in the following sections. The information presented here can help you prepare  to install a Configuration Manager site or hierarchy, and help prepare you for some of the decisions you must make during the installation.  
-
 
 ##  <a name="bkmk_start"></a> Before you begin  
 Before you install new Configuration Manager sites, make sure you have reviewed the following information, which can help set the stage for a successful deployment design:  
@@ -32,16 +29,6 @@ Before you begin the installation of a new site, make sure that the site server 
 
 -   [Supported configurations for Configuration Manager](../../../../core/plan-design/configs/supported-configurations.md)  
 -   [Prerequisite Checker](prerequisite-checker.md)  
-
-## <a name="bkmk_Addclients"></a> Clients for additional operating systems
-
-You can download client software for Configuration Manager from the Microsoft Download Center for macOS.
-
-Use the following links to download clients for the version of Configuration Manager you use:  
-
-- [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850)
-
-- [Microsoft Configuration Manager clients for additional operating systems](https://www.microsoft.com/download/details.aspx?id=47719)
 
 ##  <a name="bkmk_usage"></a> Usage data levels and settings  
 When you install your first Configuration Manager site, Configuration Manager automatically installs and configures a new site system role, the **service connection point**,  on the site server. The service connection point has these default settings:  

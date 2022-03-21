@@ -2,13 +2,14 @@
 title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 08/02/2021
+ms.date: 12/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to use the Configuration Manager console
@@ -21,7 +22,7 @@ Administrators use the Configuration Manager console to manage the Configuration
 
 The Configuration Manager console is always installed on every site server. You can also install it on other computers. For more information, see [Install the Configuration Manager console](../deploy/install/install-consoles.md).
 
-The simplest method to open the console on a Windows 10 computer, press **Start** and start typing `Configuration Manager console`. You may not need to type the entire string for Windows to find the best match.
+The simplest method to open the console on a Windows computer is to go to **Start** and start typing `Configuration Manager console`. You may not need to type the entire string for Windows to find the best match.
 
 If you browse the Start menu, look for the **Configuration Manager console** icon in the **Microsoft Endpoint Manager** group.
 
@@ -87,6 +88,14 @@ Use the **navigation bar** to move around the console when you minimize the navi
 In the console, nodes are sometimes organized into folders. When you select the folder, it usually displays a **navigation index** or a **dashboard**.
 
 :::image type="content" source="media/software-updates-navigation-index.png" alt-text="Configuration Manager software updates navigation index.":::
+
+> [!NOTE]
+> You can use PowerShell to manage console folders with the following cmdlets:
+>
+> - [Get-CMFolder](/powershell/module/configurationmanager/get-cmfolder)
+> - [New-CMFolder](/powershell/module/configurationmanager/new-cmfolder)
+> - [Remove-CMFolder](/powershell/module/configurationmanager/remove-cmfolder)
+> - [Set-CMFolder](/powershell/module/configurationmanager/set-cmfolder)
 
 ### Ribbon
 

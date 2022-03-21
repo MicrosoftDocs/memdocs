@@ -2,13 +2,14 @@
 title: Prerequisites to deploy user-available apps
 titleSuffix: Configuration Manager
 description: When you deploy apps as Available to user collections, there are other requirements for some types of clients.
-ms.date: 07/15/2021
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Prerequisites to deploy user-available apps
@@ -36,7 +37,7 @@ If you deploy applications as available to users, they can browse and install th
 
 - Enable the client setting **Use new Software Center** in the [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent) group
 
-- The client OS must be Windows 10, and joined to Azure AD. Either as purely cloud domain-joined, or hybrid Azure AD-joined.
+- The client OS must be Windows 10 or later, and joined to Azure AD. Either as purely cloud domain-joined, or hybrid Azure AD-joined.
 
 - To support internet-based clients:
 
@@ -63,7 +64,7 @@ Starting in version 2010, an internet-based, domain-joined device that isn't joi
 
 Configure the following prerequisites to enable this functionality:
 
-- Windows 10 device
+- Windows 10 or later device
 
   - Joined to your on-premises Active Directory domain
 

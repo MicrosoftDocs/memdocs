@@ -1,27 +1,27 @@
 ---
-title: Tenant attach - Applications (preview) in the admin center
+title: Tenant attach - Applications in the admin center
 titleSuffix: Configuration Manager
-description: "Install applications for uploaded Configuration Manager devices from the admin center."
-ms.date: 06/28/2021
+description: Install applications for uploaded Configuration Manager devices from the admin center.
+ms.date: 01/25/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
-# <a name="bkmk_apps"></a> Tenant attach: Install an application from the admin center (preview)
-<!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
+# <a name="bkmk_apps"></a> Tenant attach: Install an application from the admin center
+<!--cm 6024389, in 7220536 pubpreview Aug 10, 2020, GA 2201-->
 *Applies to: Configuration Manager (current branch)*
-
-> [!Important]
-> - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. From the Microsoft Endpoint Management admin center, you can initiate an application install in real time for a tenant attached device.
 
-   :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Screenshot of applications in Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-list.png":::
+   :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Screenshot of applications in Microsoft Endpoint Manager admin center." lightbox="media/6024389-tenant-attach-application-list.png":::
+
+> [!NOTE]
+> Starting in version 2111, this behavior also supports [application groups](../apps/deploy-use/create-app-groups.md#app-approval).<!-- 10992210 --> When this article refers to an *application*, it also applies to app groups.
 
 ## Prerequisites
 
@@ -74,8 +74,6 @@ You can filter the application list based on the status. The application status 
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Applications**.
 1. Select the application and choose **Install**.
-
-   :::image type="content" source="media/6024389-tenant-attach-application-install.png" alt-text="Screenshot of application installation from Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-install.png":::
 
 You can export all of the data currently in the view into a .csv file. At the top of the page, select the **Export** option to create the file. If the view exceeds 500 rows, only the first 500 are exported.
 
@@ -143,7 +141,7 @@ The option, **An administrator must approve a request for this application on th
 
 1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) and sign in.
 1. From **Devices** > **All devices**, choose a device managed by **ConfigMgr**.
-1. Select **Applications (preview)** then select an application that has a **Status** of **Required**.
+1. Select **Applications** then select an application that has a **Status** of **Required**.
 1. Review the details of the schedule for the installation of the application.
 
 ## <a name="bkmk_display"></a> What applications and actions are available for my version of Configuration Manager?

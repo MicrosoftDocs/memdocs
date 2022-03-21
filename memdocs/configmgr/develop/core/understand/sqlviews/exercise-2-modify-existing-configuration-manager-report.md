@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Exercise 2: Modify an existing report'
 titleSuffix: Configuration Manager
 description: Modify a Configuration Manager report and then run the modified report.
@@ -12,6 +12,8 @@ ms.assetid: 24bde9a6-d05d-428d-b26e-cd8dc1ffe9ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Exercise 2: Modify an existing report in Configuration Manager

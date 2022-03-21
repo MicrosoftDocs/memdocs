@@ -12,9 +12,21 @@ metadata:
   ms.topic: landing-page
   author: bhuney
   ms.author: brianhun
-  ms.date: 06/10/2021
+  manager: dougeby
+  ms.date: 12/09/2021
+  ms.localizationpriority: high
 
 landingContent:
+  - title: Configuration Manager 2111
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 11052354 Summary of changes in 2111
+            url: 2111/11052354.md
+          - text: KB 12709700 Update for Configuration Manager 2111
+            url: 2111/12709700.md
+          - text: KB 12896009 Update rollup for Configuration Manager 2111
+            url: 2111/12896009.md
   - title: Configuration Manager 2107
     linkLists:
       - linkListType: overview
@@ -23,6 +35,8 @@ landingContent:
             url: 2107/10096997.md
           - text: KB 10503003 Early update ring
             url: 2107/10503003.md
+          - text: KB 11121541 Update rollup for 2107
+            url: 2107/11121541.md
   - title: Configuration Manager 2103
     linkLists:
       - linkListType: overview

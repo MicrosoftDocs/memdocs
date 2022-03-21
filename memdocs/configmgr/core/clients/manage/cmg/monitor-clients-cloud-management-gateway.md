@@ -9,6 +9,7 @@ ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Monitor the CMG
@@ -62,7 +63,7 @@ To aid troubleshooting, use the CMG connection analyzer for real-time verificati
 
 1. In the CMG connection analyzer window, select one of the following options to authenticate with the service:
 
-     1. **Azure AD user**: Use this option to simulate communication the same as a cloud-based user identity signed in to an Azure AD-joined Windows 10 device. Select **Sign In** to securely enter the credentials for an Azure AD user account.
+     1. **Azure AD user**: Use this option to simulate communication the same as a cloud-based user identity signed in to an Azure AD-joined Windows device. Select **Sign In** to securely enter the credentials for an Azure AD user account.
 
      1. **Client certificate**: Use this option to simulate communication the same as a Configuration Manager client with a [client authentication certificate](configure-authentication.md#pki-certificate).
 

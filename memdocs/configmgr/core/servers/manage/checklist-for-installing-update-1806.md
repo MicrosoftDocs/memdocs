@@ -6,11 +6,11 @@ ms.date: 08/22/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: bb0a87a6-fd65-440b-90a5-2fef35622c9d
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Checklist for installing update 1806 for Configuration Manager

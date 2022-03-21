@@ -5,6 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: include
 ms.date: 08/02/2021
+ms.localizationpriority: medium
 ---
 
 This section covers the following features:

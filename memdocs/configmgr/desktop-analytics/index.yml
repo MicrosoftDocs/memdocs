@@ -12,8 +12,10 @@ metadata:
   ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
+  manager: dougeby
   ms.reviewer: acabello
-  ms.date: 01/28/2020
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
 
 landingContent:
   - title: About Desktop Analytics

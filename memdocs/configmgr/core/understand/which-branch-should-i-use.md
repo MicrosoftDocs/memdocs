@@ -6,12 +6,10 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: a3be4f8f-3d44-4e3c-9fa1-e85f30a36e72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Which branch of Configuration Manager should I use?
@@ -104,7 +102,7 @@ The LTSB is based on the current branch version 1606 and has the following limit
 - Doesn't support the following capabilities:
   - Cloud-attached features like co-management or Desktop Analytics
   - On-premises MDM
-  - The Windows 10 servicing dashboard, servicing plans, or Windows 10 semi-annual channel
+  - The Windows servicing dashboard, servicing plans, or Windows release channels
   - Future releases of Windows 10 LTSB and Windows Server
   - Asset intelligence
   - Any pre-release features

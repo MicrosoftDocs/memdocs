@@ -1,17 +1,15 @@
 ---
-title: "Install Updates Publisher"
-titleSuffix: "Configuration Manager"
-description: "Install System Center Updates Publisher in your environment"
-ms.date: 08/22/2019
+title: Install Updates Publisher
+titleSuffix: Configuration Manager
+description: Install System Center Updates Publisher in your environment
+ms.date: 10/20/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-ms.assetid: ab5cda93-b67c-4aa5-904d-7b63ce790aa0
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Install Updates Publisher
 
@@ -27,10 +25,11 @@ The following sections detail requirements to install and use Updates Publisher,
 ### Operating systems
 Install and run Updates Publisher on a 64-bit editions of the following operating systems. There are no minimum cumulative update or service pack requirements.
 
--   Windows Server 2016 (Standard, Datacenter)
--   Windows Server 2012 R2 (Standard, Datacenter)
--   Windows 10 (Pro, Education, Pro Education, Enterprise)
--   Windows 8.1 (Professional, Enterprise)
+- Windows Server 2016 (Standard, Datacenter)
+- Windows Server 2012 R2 (Standard, Datacenter)
+- Windows 11
+- Windows 10 (Pro, Education, Pro Education, Enterprise)
+- Windows 8.1 (Professional, Enterprise)
 
 ### Prerequisites
 The following are required on the computer that runs Updates Publisher.
@@ -38,7 +37,7 @@ The following are required on the computer that runs Updates Publisher.
 -   **64-bit operating system**: The computer where you install Updates Publisher must run a 64-bit operating system.
 -   **WSUS 6.2 or later**:
     -   On Windows Server, install the default Administration Console to meet this requirement.
-    -   For Windows 10 and Windows 8.1, install the [Remote Server Administration Tools (RSAT) for Windows operating systems](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). This installs the necessary support to use Updates Publisher (*API and PowerShell cmdlets*, and *User Interface Management Console*).
+    -   For Windows 8.1 or later operating systems, install the [Remote Server Administration Tools (RSAT) for Windows operating systems](https://support.microsoft.com/help/2693643/remote-server-administration-tools-rsat-for-windows-operating-systems). This installs the necessary support to use Updates Publisher (*API and PowerShell cmdlets*, and *User Interface Management Console*).
 -   **Permissions**:
     -   Installation: Local admin
     -   Most operations: local user

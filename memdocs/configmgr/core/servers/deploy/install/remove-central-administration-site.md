@@ -2,13 +2,14 @@
 title: Remove CAS
 titleSuffix: Configuration Manager
 description: Remove the central administration site (CAS) to simplify your Configuration Manager infrastructure to a single, standalone primary site.
-ms.date: 08/02/2021
+ms.date: 10/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Remove the central administration site
@@ -42,9 +43,6 @@ If the hierarchy consists of the central administration site (CAS) and a single 
   - Data warehouse service point
   - Cloud management gateway (CMG)
 
-    > [!NOTE]
-    > If you enabled the CMG for content, plan to redistribute the content after you recreate the CMG on the primary site.<!-- 6608659 -->
-
 - Turn off distributed views
 
 - Configuration Manager automatically handles package source locations for built-in packages, like the Configuration Manager client. Review all other content source locations to make sure they aren't using a share on the CAS.
@@ -63,7 +61,7 @@ If the hierarchy consists of the central administration site (CAS) and a single 
 
 ## Prerequisites
 
-- The [latest released version of Configuration Manager current branch](../../manage/updates.md#version-details).
+- Configuration Manager version 2103 or later.
 
 - The administrative user that runs Configuration Manager setup needs the following security rights:
 

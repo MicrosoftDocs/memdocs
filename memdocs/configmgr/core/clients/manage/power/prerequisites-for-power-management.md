@@ -1,17 +1,15 @@
 ---
-title: "Prerequisites for power management"
-titleSuffix: "Configuration Manager"
-description: "Get the prerequisites for power management in Configuration Manager."
+title: Prerequisites for power management
+titleSuffix: Configuration Manager
+description: Get the prerequisites for power management in Configuration Manager.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 9c062f13-3c1f-4621-9cae-de0e322aa03f
 author: aczechowski
 manager: dougeby
 ms.author: aaroncz
-
-
+ms.localizationpriority: medium
 ---
 # Prerequisites for power management in Configuration Manager
 

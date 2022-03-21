@@ -2,13 +2,14 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 08/02/2021
+ms.date: 01/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Supported OS versions for clients and devices for Configuration Manager
@@ -29,30 +30,34 @@ To manage the following Windows OS versions, use the client that's included with
 
 ### Supported client OS versions
 
+- **Windows 11** (_starting in Configuration Manager version 2107_)
+
+    > [!NOTE]
+    > You can continue to use Microsoft Endpoint Manager to manage devices running Windows 11 the same as with Windows 10. For more information, including some known issues, see [Support for Windows 11](support-for-windows-11.md).
+
 - **Windows 10**
 
-    For more detailed information, see [Support for Windows 10](support-for-windows-10.md).
+    For more information, see [Support for Windows 10](support-for-windows-10.md).
 
 - **Windows 8.1** (x86, x64): Professional, Enterprise
+
+For more information on the versions of the Windows Assessment and Deployment Kit (Windows ADK) that Configuration Manager current branch supports, see [Support for the Windows ADK](support-for-windows-adk.md).
 
 #### Azure Virtual Desktop
 
 <!--3556025-->
 [Azure Virtual Desktop](/azure/virtual-desktop/) is a desktop and app virtualization service that runs on Microsoft Azure. You can use Configuration Manager to manage these virtual devices running Windows in Azure.
 
-Similar to a terminal server, some of these virtual devices allow multiple concurrent active user sessions. To help with client performance, Configuration Manager now disables user policies on any device that allows these multiple user sessions. Even if you enable user policies, the client disables them by default on these devices, which include Windows 10 Enterprise multi-session and terminal servers.
+Similar to a terminal server, some of these virtual devices allow multiple concurrent active user sessions. To help with client performance, Configuration Manager disables user policies on any device that allows these multiple user sessions. Even if you enable user policies, the client disables them by default on these devices, which include Windows Enterprise multi-session and terminal servers.
 
 The client only disables user policy when it detects this type of device during a new installation. For an existing client of this type that you update to this version, the previous behavior persists. On an existing device, it configures the user policy setting even if it detects that the device allows multiple user sessions.
 
 If you require user policy in this scenario, and accept any potential performance impact, use [client settings](../../clients/deploy/configure-client-settings.md) to enable user policy. In the **Client Policy** group, configure the following setting: **Enable user policy for multiple user sessions**.<!-- 4737447 -->
 
-> [!NOTE]
-> You can't use co-management with a client running Windows 10 Enterprise multi-session. <!-- SCCMDocs-pr#3950 -->
-
-Starting in version 2006, the **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.<!--6527576-->
+Starting in version 2006, the **Windows 10 Enterprise multi-session** platform is available in the list of supported OS versions on objects with requirement rules or applicability lists.<!--6527576--> Starting in version 2107, the **Windows 11 Enterprise multi-session** platform is available.
 
 > [!NOTE]
-> If you previously selected the top-level **Windows 10** platform, this action automatically selected all child platforms. This new platform isn't automatically selected. If you want to add **Windows 10 Enterprise multi-session**, manually select it in the list.
+> If you previously selected the top-level platform, this action automatically selected all child platforms. New platforms aren't automatically selected. For example, if you want to add **Windows 10 Enterprise multi-session**, manually select it under the **Windows 10** platform.
 
 For more information, see the following articles:
 
@@ -61,7 +66,7 @@ For more information, see the following articles:
 
 ### Supported server OS versions
 
-- **Windows Server 2022**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> (_starting in version 2107_)<!-- 10200029 -->
+- **Windows Server 2022**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup> (_starting in Configuration Manager version 2107_)<!-- 10200029 -->
 
 - **Windows Server 2019**: Standard, Datacenter <sup>[Note 1](#bkmk_note1)</sup>
 
@@ -81,7 +86,7 @@ For more information, see the following articles:
 
 The following versions specifically refer to the Server Core installation of the OS. <sup>[Note 3](#bkmk_note3)</sup>
 
-Windows Server semi-annual channel versions are Server Core installations, such as Windows Server, version 1809. As a Configuration Manager client, they're supported the same as the associated Windows 10 semi-annual channel version. For more information, see [Support for Windows 10](support-for-windows-10.md).
+Windows Server semi-annual channel versions are Server Core installations, such as Windows Server, version 1809. As a Configuration Manager client, they're supported the same as the associated Windows 11 or Windows 10 semi-annual channel version. For more information, see [Support for Windows 11](support-for-windows-11.md) or [Support for Windows 10](support-for-windows-10.md).
 
 - **Windows Server 2022** (x64) <sup>[Note 2](#bkmk_note2)</sup> (_starting in version 2107_)<!-- 10200029 -->
 
@@ -123,37 +128,45 @@ Manage Windows Embedded devices by installing the Configuration Manager client o
 
 ### Supported OS versions
 
+- **Windows 11 Enterprise**
+
+- **Windows 11 IoT Enterprise** <sup> [Note 4](#bkmk_note4)</sup>
+
 - **Windows 10 Enterprise** (x86, x64)
 
-- **Windows 10 IoT Enterprise** (x86, x64)
-    This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->
+- **Windows 10 IoT Enterprise** (x86, x64) <sup> [Note 4](#bkmk_note4)</sup>
 
 - **Windows Embedded 8.1 Industry** (x86, x64)
 
 - **Windows Embedded 8 Standard** (x86, x64)
 
-- **Windows Thin PC** (x86, x64)
 
-- **Windows Embedded POSReady 7** (x86, x64)
+#### <a name="bkmk_note4"></a> Note 4: Windows IoT Enterprise
 
-- **Windows Embedded Standard 7 with SP1** (x86, x64)
+This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](/windows/iot/iot-enterprise/getting_started).<!--SCCMDocs issue 560-->
 
 ## <a name="bkmk_ESU"></a> Extended Security Updates and Configuration Manager
 
-The [Extended Security Updates (ESU)](https://support.microsoft.com/help/4497181/lifecycle-faq-extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. For example, Windows 7. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product's End of Extended Support date.
+The [Extended Security Updates (ESU)](/lifecycle/faq/extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. For example, Windows 7. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product's End of Extended Support date.
 
-Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](../../servers/manage/updates.md#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy Windows 10 to devices running Windows 7.
+Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](../../servers/manage/updates.md#version-details) can be used to deploy and install Windows security updates released under the program. The latest released version can also be used to deploy a supported version of Windows to devices running Windows 7.
 
 Client management features not related to Windows software update management or OS deployment will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 
-> [!Tip]
+> [!TIP]
 > Starting in Configuration Manager 2010, you'll be notified in-console about devices with operating systems that are past the end of support date and that are no longer eligible to receive security updates. For more information, see [Console notifications](../../servers/manage/admin-console-notifications.md#bkmk_2010). This information is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update or license compliance. Be sure to verify the accuracy of the information provided to you.
 
 ## Mac computers
 
-Manage Apple Mac computers with the Configuration Manager client for macOS.
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12927803 --> The macOS client installation package isn't available for new deployments, but existing deployments are supported until December 31, 2022.
+>
+> Migrate management of macOS devices to Microsoft Intune:
+>
+> 1. First, uninstall the Configuration Manager client for macOS. For more information, see [Uninstalling the Mac client](../../clients/manage/maintain-mac-clients.md#uninstalling-the-mac-client).
+> 2. Then enroll the device to Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../intune/fundamentals/deployment-guide-platform-macos.md).
 
-The macOS client installation package isn't supplied with the Configuration Manager media. Download it from the Microsoft Download Center, [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850).
+Manage Apple Mac computers with the Configuration Manager client for macOS.
 
 For more information, see [How to deploy clients to Macs](../../clients/deploy/deploy-clients-to-macs.md).
 
@@ -171,18 +184,19 @@ For more information, see [How to deploy clients to Macs](../../clients/deploy/d
 
 ## <a name="bkmk_OnpremOS"></a> On-premises MDM
 
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901 -->
+
 Configuration Manager has built-in capabilities for managing mobile devices that are on-premises without installing client software. For more information, see [Manage mobile devices with on-premises infrastructure](../../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).
 
 ### Supported operating systems
 
 - **Windows 10 Pro** (x86, x64)
 
-- **Windows 10 Pro Enterprise** (x86, x64)
+- **Windows 10 Enterprise** (x86, x64)
 
 - **Windows 10 IoT Enterprise** (x86, x64)
     This version includes the long-term servicing channel (LTSC). For more information, see [Overview of Windows 10 IoT Enterprise](/windows/iot-core/windows-iot-enterprise).<!--SCCMDocs issue 560-->
-
-- **Windows 10 IoT Mobile Enterprise**
 
 - **Windows 10 Team for Surface Hub**
 

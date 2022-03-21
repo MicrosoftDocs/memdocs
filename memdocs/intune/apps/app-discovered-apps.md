@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/19/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 07dd262f-13e7-4cb2-9cc2-b755d1c276cf
 
@@ -58,8 +58,8 @@ The following list provides the app platform type, the apps that are monitored f
 
 | Platform | For personally-owned devices | For company-owned devices | Refresh cycle |
 |------------------------------------------------------------------------|----------------------------------|--------------------------------------------------|---------------------------------------|
-| Windows 10 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | MSI installed apps on the device | Every 24 hours from device enrollment |
-| Windows 10 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every 7 days from device enrollment |
+| Windows 10/11 (Win32 Apps) NOTE: [Requires Intune Management Extension](intune-management-extension.md) on device | Not Applicable | MSI installed apps on the device | Every 24 hours from device enrollment |
+| Windows 10/11 (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every 7 days from device enrollment |
 | Windows 8.1 | Only managed apps | Only managed apps | Every 7 days from device enrollment |
 | Windows RT | Only managed apps | Only managed apps | Every 7 days from device enrollment |
 | iOS/iPadOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
@@ -68,9 +68,9 @@ The following list provides the app platform type, the apps that are monitored f
 | Android Enterprise | Only managed apps | Only apps installed in the Android Enterprise fully managed work profile | Every 7 days from device enrollment |
 
 > [!NOTE]
-> - Windows 10 co-managed devices, as shown in the [client apps](../../configmgr/comanage/workloads.md#client-apps) workload in Configuration Manager, do not currently collect app inventory through the Intune Management Extension (IME) as per the above schedule. To mitigate this issue, the [client apps](../../configmgr/comanage/workloads.md#client-apps) workload in Configuration Manager should be switched to Intune for the IME to be installed on the device (IME is required for Win32 inventory and PowerShell deployment). Note that any changes or updates on this behavior are announced in [in development](../fundamentals/in-development.md) and/or [what's new](../fundamentals/whats-new.md).
+> - Windows 10/11 co-managed devices, as shown in the [client apps](../../configmgr/comanage/workloads.md#client-apps) workload in Configuration Manager, do not currently collect app inventory through the Intune Management Extension (IME) as per the above schedule. To mitigate this issue, the [client apps](../../configmgr/comanage/workloads.md#client-apps) workload in Configuration Manager should be switched to Intune for the IME to be installed on the device (IME is required for Win32 inventory and PowerShell deployment). Note that any changes or updates on this behavior are announced in [in development](../fundamentals/in-development.md) and/or [what's new](../fundamentals/whats-new.md).
 > - Personally-owned macOS devices enrolled before November 2019 may continue to show all apps installed on the device until the devices are enrolled again.
-> - Android Enterprise Fully Managed and Dedicated do not display discovered apps.
+> - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile devices do not display discovered apps.
 
 The number of discovered apps may not match the app install status count. Possibilities for inconsistencies include:
 

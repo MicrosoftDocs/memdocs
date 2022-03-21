@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/01/2021
+ms.date: 02/11/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: ochukwunyere
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -201,6 +201,11 @@ Following are environment variables you might want to configure when you install
 
 The following are common commands for Docker that can be of use if you must investigate problems on a tunnel server.
 
+> [!NOTE]
+> Most Linux distributions use Docker. However, some like *Red Hat Enterprise Linux (RHEL) 8.4* do not support Docker. Instead, these distributions use Podman. See [Linxu servers](../protect/microsoft-tunnel-prerequisites.md#linux-server) in the prerequisites for more details about supported distributions and the Docker or Podman requirements of each.
+>
+> The references and command lines that are written for Docker can be used with Podman by replacing *docker* with *podman*.
+
 Command-line interface:
 
 - `docker ps –a` – See all containers.
@@ -213,6 +218,14 @@ Command-line interface:
 - **To run something in a container**:
   - `docker exec –it mstunnel-server bash`
   - `docker exec –it mstunnel-agent bash`
+
+## Podman commands
+
+The following are commands for Podman that can be of use if you must investigate problems on a tunnel server. For additional commands you can use with Podman, see [Docker commands](#docker-commands).
+
+- `sudo podman images` - List all running containers.
+- `sudo podman stats` - Display container CPU utilization, MEM usage, Network and Block IO.
+- `sudo podman port mstunnel-server` - List the port mappings from tunnel-server to the local Linux host.
 
 ## Linux commands
 
@@ -233,3 +246,13 @@ The following are common Linux commands you might use with a tunnel server.
 - `curl <URL>` – Checks access to a website. For example: `curl https://microsoft.com`
 
 - `./<filename>` -  Run a script.
+
+### Manually load ip_tables
+
+Use the following commands to check for, and manually load if necessary, ip_tables in the Linux server kernel. Use the sudo context:
+
+- Validate the presence of ip_tables on the server: `lsmod |grep ip_tables`
+
+- Create a config file that will load the ip_tables into kernel when the server boots: `echo ip_tables > /etc/modules-load.d/mstunnel_iptables.conf`
+
+- To load ip_tables into the kernel immediately: `/sbin/modprobe ip_tables`

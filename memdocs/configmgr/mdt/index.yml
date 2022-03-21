@@ -11,7 +11,10 @@ metadata:
   ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
-  ms.date: 12/23/2020
+  manager: dougeby
+  ms.date: 09/23/2021
+  ms.localizationpriority: null
+  ms.collection: openauth
 
 landingContent:
   - title: Get MDT

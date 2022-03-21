@@ -2,14 +2,14 @@
 title: Endpoint analytics page in Microsoft Productivity Score
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about endpoint analytics in Microsoft Productivity Score
-ms.date: 07/08/2021
+ms.date: 11/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: a98ec089-a85f-4b5b-bce5-ec0ffd84f318
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: high
 ---
 
 # Endpoint analytics in Microsoft Productivity Score
@@ -30,7 +30,7 @@ The **Endpoint analytics** page looks similar to the other pages in Productivity
 
 ## About the Endpoint analytics scores
 
-The **Endpoint analytics score** is a 50/50 weighted average of the [**Recommended software**](recommended-software.md) and [**Startup performance scores**](startup-performance.md).
+The **Endpoint analytics score** is a weighted average of the [Startup performance](startup-performance.md), [Application reliability](app-reliability.md), and [Work from anywhere](work-from-anywhere.md) scores.
 
 [!INCLUDE [Endpoint analytics startup score](includes/startup-score.md)]
 
@@ -51,7 +51,7 @@ Selecting the **Learn more** link under the startup performance information give
 
 :::image type="content" source="media/8529842-startup-performance-metrics.png" alt-text="Endpoint analytics startup performance metrics" lightbox="media/8529842-startup-performance-metrics.png":::
 
-## Application reliability (preview) metrics
+## Application reliability metrics
 
 The overall **Application reliability score** for your tenant is shown with the peer benchmark in the chart. Selecting the **Learn more about app reliability** link under the app reliability information gives you additional details and a link to **View more in Microsoft Endpoint Manager**. The following **Application reliability** information is provided from [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score):
 
@@ -74,5 +74,5 @@ Currently, the following roles aren't supported:
 ## Next steps
 
 For more information, see:
-- [Recommended software](recommended-software.md) 
+- [Work from anywhere](work-from-anywhere.md) 
 - [Startup performance scores](startup-performance.md)

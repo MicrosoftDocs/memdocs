@@ -1,71 +1,73 @@
 ---
-title: "Learn more about PowerShell script security"
+title: Learn more about PowerShell script security
 titleSuffix: Configuration Manager
-description: "Resources to help learn about PowerShell script security."
-ms.date: 03/22/2018
+description: Resources to help learn about PowerShell script security.
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: a0bd093d-67a5-4f74-bf79-dd604889f5ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Learn more about PowerShell script security
 
 *Applies to: Configuration Manager (current branch)*
 
-It is the administrator's responsibility to validate proposed PowerShell and PowerShell parameter usage in their environment. Here are some helpful resources to help educate administrators about the power of PowerShell and potential risk surfaces. This is to help mitigate potential risk surfaces and allow safe scripts to be used.
+It's the administrator's responsibility to validate proposed PowerShell and PowerShell parameter usage in their environment. Here are some helpful resources to help educate administrators about the power of PowerShell and potential risk surfaces. This guidance is to help you mitigate potential risk surfaces and allow safe scripts to be used.
 
 ## PowerShell Script Security
-Built into the Run Scripts is a feature to visually review and approve scripts that are requested to be run in the environment. Administrators should be aware PowerShell scripts can have obfuscated script: script that is malicious and difficult to detect with visual inspection during the script approval process. As a best practice, using certain inspection tools, in additional to visually reviewing PowerShell scripts, will help detect suspicious scripts issues. These tools can't always determine the PowerShell author's intent so it can bring attention to a suspicious script. However, the tools will require the administrator to judge if it is malicious or intentional script syntax.
+
+The Configuration Manager scripts feature lets you visually review and approve scripts. Another administrator can request that their script is allowed. Administrators should be aware PowerShell scripts can have obfuscated scripts. An obfuscated script could be malicious and difficult to detect with visual inspection during the script approval process. Visually review PowerShell scripts and use inspection tools to help detect suspicious script issues. These tools can't always determine the PowerShell author's intent, so it can bring attention to a suspicious script. However, the tools will require the administrator to judge if it's malicious or intentional script syntax.
 
 ## Recommendations
-- Familiarize yourself with PowerShell security best practices using the various links referenced below.
-- **Sign your scripts**: Another method for keeping scripts Secure is by having them vetted and then signed, before importing them for usage.
+
+- Familiarize yourself with PowerShell security guidance using the various links referenced below.
+- **Sign your scripts**: Another method for keeping scripts secure is by having them vetted and then signed, before importing them for usage.
 - Don't store secrets (such as passwords) in PowerShell scripts and learn more about how to handle secrets.
 
+## General information about PowerShell security
 
-## General information about PowerShell security best practices
+This collection of links was chosen to give Configuration Manager administrators a starting point for learning about PowerShell script security recommendations.
 
-This collection of links was chosen to give Configuration Manager administrators a starting point for learning about PowerShell script security best practices.  
+<!-- [PowerShell Security Best Practices](https://devblogs.microsoft.com/powershell/powershell-security-best-practices/)
 
-[Introduction to PowerShell Security Best Practices](https://blogs.msdn.microsoft.com/powershell/2013/12/16/powershell-security-best-practices/ )
+> [!VIDEO https://channel9.msdn.com/Events/Blue-Hat-Security-Briefings/BlueHat-Security-Briefings-Fall-2013-Sessions/PowerShell-Best-Practices/player] -->
 
+[Defending Against PowerShell Attacks](https://devblogs.microsoft.com/powershell/defending-against-powershell-attacks/)
 
-<iframe src="https://channel9.msdn.com/Events/Blue-Hat-Security-Briefings/BlueHat-Security-Briefings-Fall-2013-Sessions/PowerShell-Best-Practices/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
+[Protecting Against Malicious Code Injection](https://devblogs.microsoft.com/powershell/protecting-against-malicious-code-injection/)
 
-[Defending Against PowerShell Attacks, PowerShell team blog](https://blogs.msdn.microsoft.com/powershell/2017/10/23/defending-against-powershell-attacks/)
+[PowerShell - The Blue Team, discusses Deep Script block logging, Protected Event Logging, Antimalware Scan Interface, and Secure Code Generation APIs](https://devblogs.microsoft.com/powershell/powershell-the-blue-team/)
 
-[Defending Against PowerShell Attacks twitter, from a Microsoft PowerShell and Security advocate Lee Holmes](https://twitter.com/Lee_Holmes/status/922462821081694208)
-
-[Protecting Against Malicious Code Injection](https://blogs.msdn.microsoft.com/powershell/2006/11/22/protecting-against-malicious-code-injection/)
-
-[PowerShell The Blue Team, discusses Deep Script block logging, Protected Event Logging , Antimalware Scan Interface, Secure Code Generation APIs](https://blogs.msdn.microsoft.com/powershell/2015/06/09/powershell-the-blue-team/)
-
-[For Windows 10, there is an API for an anti-malware scan interface](https://cloudblogs.microsoft.com/microsoftsecure/2015/06/09/windows-10-to-offer-application-developers-new-malware-defenses/?source=mmpc)
+[API for anti-malware scan interface](https://cloudblogs.microsoft.com/microsoftsecure/2015/06/09/windows-10-to-offer-application-developers-new-malware-defenses/)
 
 ## PowerShell parameters security
-Passing parameters is a way to have flexibility with your scripts and defer decisions until run time. It also opens up another risk surface. 
-Best practices for preventing malicious parameters or script injection are:
+
+Passing parameters is a way to have flexibility with your scripts and defer decisions until run time. It also opens up another risk surface.
+
+The following list includes recommendations to prevent malicious parameters or script injection:
 
 - Only allow usage of pre-defined parameters.
 - Use the regular expression feature, to validate parameters that are allowed.
-    - Example: If only a certain range of values are allowed, use a regular expression to check for only those characters or values that can make up the range.
-    - Validating parameters can help prevent users trying use certain characters that can be escaped, like quotes. Be aware that there can be multiple types of quotes, so using regular expressions to validate which characters you've decided are permissible is often easier than trying to define all the inputs that not permissible.
-- Leverage the PowerShell module ["injection hunter"](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) in the PowerShell Gallery.
-    - There can be false positives, so look for intent when something is flagged as suspicious to determine if it is a real issue or not. 
-- Microsoft Visual Studio has a Script analyzer, that can assist with checking PowerShell syntax.
-- This video titled: "DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server" gives an overview of the types of issues that you can secure against (especially the section 12:20 to 17:50):
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/ahxMOAAani8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  - Example: If only a certain range of values are allowed, use a regular expression to check for only those characters or values that can make up the range.
+  - Validating parameters can help prevent users trying use certain characters that can be escaped, like quotes. There can be multiple types of quotes, so using regular expressions to validate which characters you've decided are permissible is often easier than trying to define all the inputs that not permissible.
+- Use the PowerShell module ["injection hunter"](https://www.powershellgallery.com/packages/InjectionHunter/1.0.0) in the PowerShell Gallery.
+  - There can be false positives, so look for intent when something is flagged as suspicious to determine if it's a real issue or not.
+- Microsoft Visual Studio has a script analyzer, that can assist with checking PowerShell syntax.
 
-## Environment Recommendations
-General recommendations for PowerShell administrators.
-1. Deploy latest version of PowerShell, such as version 5 or greater, built into Windows 10. Alternatively, you can deploy the [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616). 
-2. Enable, and collect PowerShell logs, optionally including Protected Event Logging. Incorporate these logs into your signatures, hunting, and incident response workflows.
-3. Implement Just Enough Administration on high-value systems to eliminate or reduce unconstrained administrative access to those systems.
-4. Deploy Windows Defender Application Control policies to allow pre-approved administrative tasks to use the full capability of the PowerShell language, while limiting interactive and unapproved use to a limited subset of the PowerShell language.
-5. Deploy Windows 10 to give your antivirus provider full access to all content (including content generated or de-obfuscated at runtime) processed by Windows Scripting Hosts including PowerShell.
+The following video titled: "DEF CON 25 - Lee Holmes - Get $pwnd: Attacking Battle Hardened Windows Server" gives an overview of the types of issues that you can secure against (especially the section 12:20 to 17:50):
+
+> [!VIDEO https://www.youtube.com/embed/ahxMOAAani8]
+
+## Environment recommendations
+
+The following list includes general recommendations for PowerShell administrators:
+
+- Deploy the latest version of PowerShell, such as version 5 or later, which is built into Windows 10 or later. You can also deploy the [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616).
+- Enable, and collect PowerShell logs, optionally including Protected Event Logging. Incorporate these logs into your signatures, hunting, and incident response workflows.
+- Implement Just Enough Administration on high-value systems to eliminate or reduce unconstrained administrative access to those systems.
+- Deploy Windows Defender Application Control policies to allow pre-approved administrative tasks to use the full capability of the PowerShell language, while limiting interactive and unapproved use to a limited subset of the PowerShell language.
+- Deploy Windows 10 or later to give your antivirus provider full access to all content (including content generated or de-obfuscated at runtime) processed by Windows Scripting Hosts including PowerShell.

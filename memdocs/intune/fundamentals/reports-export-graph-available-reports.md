@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/16/2021
+ms.date: 12/02/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -42,6 +42,7 @@ Microsoft Endpoint Manager will export reports using the following Microsoft Gra
 ```http
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 ```
+
 The following table contains the possible values for the `reportName` parameter. These are the currently available reports for export.
 
 |         ReportName (Export Parameter)  |            Associated   Report in Microsoft Endpoint Manager        |
@@ -52,6 +53,7 @@ The following table contains the possible values for the `reportName` parameter.
 |         DetectedAppsAggregate  |            Detected   Apps report        |
 |         FeatureUpdatePolicyFailuresAggregate  |            Under   **Devices** > **Monitor** > **Failure for feature updates**       |
 |         DeviceFailuresByFeatureUpdatePolicy  |            Under   **Devices** > **Monitor** > **Failure for feature updates** > *click   on error*        |
+|         DiscoveredAppsRawData  |            Under **Apps** > **Monitor** > **Discoverd apps** > **Export**         |
 |         FeatureUpdateDeviceState  |            Under   **Reports** > **Window Updates** > **Reports** > **Windows   Feature Update Report**         |
 |         UnhealthyDefenderAgents  |            Under   **Endpoint Security** > **Antivirus** > **Win10 Unhealthy   Endpoints**        |
 |         DefenderAgents  |            Under   **Reports** > **MicrosoftDefender** > **Reports** > **Agent   Status**        |
@@ -61,6 +63,18 @@ The following table contains the possible values for the `reportName` parameter.
 |         AppInstallStatusAggregate  |             Under **Apps** > **Monitor** > **App install status**         |
 |         DeviceInstallStatusByApp  |            Under **Apps** > **All Apps** > *Select an individual app*       |
 |         UserInstallStatusAggregateByApp  |            Under **Apps** > **All Apps** > *Select an individual app*         |
+|         ComanagedDeviceWorkloads  |            Under **Reports** > **Cloud attached devices** > **Reports** > **Co-Managed Workloads**        |
+|         ComanagementEligibilityTenantAttachedDevices  |            Under **Reports** > **Cloud attached devices** > **Reports** > **Co-Management Eligibility**        |
+|         DeviceRunStatesByProactiveRemediation  |            Under **Reports** > **Endpoint Analytics** > **Proactive remediations** > *Select a remediation* > **Device status**        |
+|         DevicesWithInventory  |            Under **Devices** > **All Devices** > **Export**        |
+|         FirewallStatus  |            Under **Reports** > **Firewall** > **MDM Firewall status for Windows 10 and later**        |
+|         GPAnalyticsSettingMigrationReadiness  |            Under **Reports** > **Group policy analytics** > **Reports** > **Group policy migration readiness**        |
+|         QualityUpdateDeviceErrorsByPolicy  |            Under **Devices** > **Monitor** > **Windows Expedited update failures** > *Select a profile*        |
+|         QualityUpdateDeviceStatusByPolicy  |            Under **Reports** > **Windows updates** > **Reports** > **Windows Expedited Update Report**        |
+|         MAMAppProtectionStatus  |            Under **Apps** > **Monitor** > **App protection status** > **App protection report: iOS, Android**       |
+|         MAMAppConfigurationStatus  |            Under **Apps** > **Monitor** > **App protection status** > **App configuration report**        |
+
+
 
 Each of the listed reports is described below.
 
@@ -139,7 +153,7 @@ The following table contains the possible output when calling the `DeviceInstall
 | AppInstallStateDetails_loc |
 | HexErrorCode    |
 
-You can choose to filter the `AppInstallStatusAggregate` report's output based on the following columns:
+You can choose to filter the `DeviceInstallStatusByApp` report's output based on the following columns:
 - `ApplicationId`
 - `AppInstallState`
 - `HexErrorCode` (Used as ErrorCode)
@@ -384,6 +398,28 @@ You can choose to filter the `DeviceFailuresByFeatureUpdatePolicy` report's outp
 - `RecommendedAction` 
 - `WindowsUpdateVersion` 
 
+## DiscoveredAppsRawData report
+
+The following table contains the possible output when calling the `DiscoveredAppsRawData` report:
+
+| Available   properties |
+|-|
+| ApplicationKey |
+| ApplicationName |
+| ApplicationPublisher |
+| ApplicationShortVersion |
+| ApplicationSize |
+| ApplicationVersion |
+| DeviceId |
+| DeviceName |
+| ImeiNumber |
+| OSDescription |
+| OSVersion |
+| Platform |
+| UserId |
+| EmailAddress |
+| UserName |
+
 ## FeatureUpdateDeviceState report
 
 The following table contains the possible output when calling the `FeatureUpdateDeviceState` report:
@@ -489,6 +525,302 @@ You can choose to filter the `ActiveMalware` and `Malware` report's output based
 - `Severity` 
 - `ExecutionState` 
 - `State` 
+
+## ComanagedDeviceWorkloads 
+
+The following table contains the possible output when calling the `ComanagedDeviceWorkloads` report:
+
+| Available   properties |
+|-|
+|   DeviceName  |
+|   DeviceId    | 
+|   CompliancePolicy    | 
+|   ResourceAccess   |
+|   DeviceConfiguration  |
+|   WindowsUpdateforBusiness     |
+|   EndpointProtection   |
+|   ModernApps   |
+|   OfficeApps   |
+
+You can choose to filter the `ComanagedDeviceWorkloads` report's output based on the following columns:
+- `CompliancePolicy`
+- `ResourceAccess`
+- `DeviceConfiguration`
+- `WindowsUpdateforBusiness`
+- `EndpointProtection`
+- `ModernApps`
+- `OfficeApps`
+
+## ComanagementEligibilityTenantAttachedDevices 
+
+The following table contains the possible output when calling the `ComanagementEligibilityTenantAttachedDevices` report:
+
+| Available   properties |
+|-|
+|   DeviceName   |
+|   DeviceId   |
+|   Status   |
+|   OSDescription   |
+|   OSVersion   |
+
+You can choose to filter the `ComanagementEligibilityTenantAttachedDevices` report's output based on the following columns:
+- `Status` 
+
+## DeviceRunStatesByProactiveRemediation 
+
+The following table contains the possible output when calling the `DeviceRunStatesByProactiveRemediation` report:
+
+| Available   properties |
+|-|
+|   PolicyId   | 
+|   DeviceId   | 
+|   UserId   | 
+|   InternalVersion   | 
+|   ModifiedTime   | 
+|   PostRemediationDetectionScriptError   | 
+|   PostRemediationDetectionScriptOutput   | 
+|   PreRemediationDetectionScriptError   | 
+|   PreRemediationDetectionScriptOutput   | 
+|   RemediationScriptErrorDetails   | 
+|   RemediationStatus   | 
+|   DeviceName   | 
+|   OSVersion   | 
+|   UPN   | 
+|   UserEmail   | 
+|   UserName   | 
+|   DetectionStatus   | 
+|   UniqueKustoKey   | 
+|   DetectionScriptStatus   | 
+|   RemediationScriptStatus   | 
+|   PolicyId   | 
+
+You can choose to filter the `DeviceRunStatesByProactiveRemediation` report's output based on the following columns:
+- `PolicyId` **(required)**
+- `RemediationStatus`
+- `DetectionStatus`
+
+## DevicesWithInventory 
+
+> [!NOTE]
+> To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API will allow you to select, to what you will receive back.
+>
+> The column alias can only be accepted by the select parameter, and can not be accepted by the filter parameter.
+>
+> The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` will only be exported when they are included in the select parameter. These columns will not be exported by default.
+
+The following table contains the possible output when calling the `DevicesWithInventory` report:
+
+| Requestable Columns  | Columns received  |
+|---|---|
+| DeviceId  | Device ID  |
+| DeviceName  | Device name  |
+| CreatedDate  | Enrollment date  |
+| LastContact  | Last check-in  |
+| ReferenceId  | Azure AD Device ID  |
+| OSVersion  | OS version  |
+| GraphDeviceIsManaged  | Azure AD registered  |
+| EasID  | EAS activation ID  |
+| SerialNumber  | Serial number  |
+| Manufacturer  | Manufacturer  |
+| Model  | Model  |
+| EasActivationStatus  | EAS activated  |
+| IMEI  | IMEI  |
+| EasLastSyncSuccessUtc  | Last EAS sync time  |
+| EasStateReason  | EAS reason  |
+| EasAccessState  | EAS status  |
+| InGracePeriodUntil  | Compliance grace period expiration  |
+| AndroidPatchLevel  | Security patch level  |
+| WifiMacAddress  | Wi-Fi MAC  |
+| MEID  | MEID  |
+| SubscriberCarrierNetwork  | Subscriber carrier  |
+| StorageTotal  | Total storage  |
+| StorageFree  | Free storage  |
+| ManagedDeviceName  | Management name  |
+| CategoryName  | Category  |
+| UserId  | UserId  |
+| UPN  | Primary user UPN  |
+| UserEmail  | Primary user email address  |
+| UserName  | Primary user display name  |
+| WiFiIPv4Address  | WiFiIPv4Address  |
+| WiFiSubnetID  | WiFiSubnetID  |
+| CompliantState *(alias: ComplianceState)*  | Compliance  |
+| ManagementAgent  | Managed by  |
+| OwnerType  | Ownership  |
+| ManagementState  | Device state  |
+| DeviceRegistrationState  | Intune registered  |
+| IsSupervised  | Supervised  |
+| IsEncrypted  | Encrypted  |
+| DeviceType *(alias: OS)*  | OS  |
+| SkuFamily  | SkuFamily  |
+| JoinType  | JoinType  |
+| PhoneNumber  | Phone number  |
+| JailBroken  | Jailbroken  |
+| ICCID  | ICCID  |
+| EthernetMAC  | EthernetMAC  |
+| CellularTechnology  | CellularTechnology  |
+| ProcessorArchitecture  | ProcessorArchitecture  |
+| EID  | EID  |
+| EnrollmentType  | EnrollmentType  |
+| PartnerFeaturesBitmask  | PartnerFeaturesBitmask  |
+| ManagementAgents  | ManagementAgents  |
+| CertExpirationDate  | CertExpirationDate  |
+| IsManaged  | IsManaged  |
+| SystemManagementBIOSVersion  | SystemManagementBIOSVersion  |
+| TPMManufacturerId  | TPMManufacturerId  |
+| TPMManufacturerVersion  | TPMManufacturerVersion  |
+
+You can choose to filter the `DevicesWithInventory` report's output based on the following columns:
+- `CreatedDate`
+- `LastContact`
+- `CategoryName` 
+- `CompliantState` 
+- `ManagementAgents` 
+- `OwnerType`
+- `ManagementState`
+- `DeviceType`
+- `JailBroken` 
+- `EnrollmentType` 
+- `PartnerFeaturesBitmask` 
+
+## FirewallStatus  
+
+The following table contains the possible output when calling the `FirewallStatus` report:
+
+| Available   properties |
+|-|
+| DeviceName  | 
+| FirewallStatus  | 
+| FirewallStatus_loc   |
+| _ManagedBy   |
+| _ManagedBy_loc   |
+| UPN   |
+
+You can choose to filter the `FirewallStatus` report's output based on the following columns:
+- `FirewallStatus` 
+
+## GPAnalyticsSettingMigrationReadiness
+
+The following table contains the possible output when calling the `GPAnalyticsSettingMigrationReadiness` report:
+
+| Available   properties |
+|-|
+| SettingName   | 
+| SettingCategory   | 
+| MigrationReadiness   | 
+| OSVersion   | 
+| Scope   | 
+| ProfileType   | 
+| CSPName   | 
+| MdmMapping   | 
+
+You can choose to filter the `GPAnalyticsSettingMigrationReadiness` report's output based on the following columns:
+- `MigrationReadiness` 
+- `ProfileType` 
+- `CSPName` 
+
+## QualityUpdateDeviceErrorsByPolicy 
+
+The following table contains the possible output when calling the `QualityUpdateDeviceErrorsByPolicy` report:
+
+| Available   properties |
+|-|
+| PolicyId   | 
+| DeviceName   |  
+| AlertMessage   |  
+| AlertMessage_loc   |  
+| Win32ErrorCode   |  
+| UPN   |  
+| ExpediteQUReleaseDate   |  
+| DeviceId   |  
+
+You can choose to filter the `QualityUpdateDeviceErrorsByPolicy` report's output based on the following columns:
+- `PolicyId` **(required)** 
+- `AlertMessage` 
+
+## QualityUpdateDeviceStatusByPolicy 
+
+The following table contains the possible output when calling the `QualityUpdateDeviceStatusByPolicy` report:
+
+| Available   properties |
+|-|
+| PolicyId   |  
+| DeviceName   |  
+| UPN   |  
+| DeviceId   |  
+| AADDeviceId   |  
+| EventDateTimeUTC   |  
+| CurrentDeviceUpdateStatus   |  
+| CurrentDeviceUpdateStatus_loc   |  
+| CurrentDeviceUpdateSubstatus   |  
+| CurrentDeviceUpdateSubstatus_loc   |  
+| AggregateState   |  
+| AggregateState_loc   |  
+| LatestAlertMessage   |  
+| LatestAlertMessage_loc   |  
+| LastWUScanTimeUTC   |  
+| OwnerType   |  
+
+You can choose to filter the `QualityUpdateDeviceStatusByPolicy` report's output based on the following columns:
+- `PolicyId` **(required)** 
+- `AggregateState`
+- `OwnerType`
+
+## MAMAppProtectionStatus 
+
+The following table contains the possible output when calling the `MAMAppProtectionStatus` report:
+
+| Available   properties |
+|-|
+| User   | 
+| Email   | 
+| App   | 
+| AppVersion   | 
+| SdkVersion   | 
+| AppInstanceId   | 
+| DeviceName   | 
+| DeviceHealth   | 
+| DeviceType   | 
+| DeviceManufacturer   | 
+| DeviceModel   | 
+| AndroidPatchVersion   | 
+| AADDeviceID   | 
+| MDMDeviceID   | 
+| Platform   | 
+| PlatformVersion   | 
+| ManagementType   |
+| AppProtectionStatus   | 
+| Policy   | 
+| LastSync   |
+| ComplianceState   | 
+
+There are no filters for this report.
+
+## MAMAppConfigurationStatus 
+
+The following table contains the possible output when calling the `MAMAppConfigurationStatus` report:
+
+| Available   properties |
+|-|
+| User   | 
+| Email   | 
+| App   | 
+| AppVersion   | 
+| SdkVersion   | 
+| AppInstanceId   | 
+| DeviceName   | 
+| DeviceHealth   | 
+| DeviceType   | 
+| DeviceManufacturer   | 
+| DeviceModel   | 
+| AndroidPatchVersion   | 
+| AADDeviceID   | 
+| MDMDeviceID    |
+| Platform   | 
+| PlatformVersion   | 
+| Policy   | 
+| LastSync   | 
+
+There are no filters for this report.
 
 ## Next steps
 

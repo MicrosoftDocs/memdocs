@@ -2,13 +2,14 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 08/02/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Task sequence steps
@@ -144,7 +145,7 @@ Specify the driver package that contains the needed device drivers. Select **Bro
 
 Select this option to add the `/recurse` parameter to the DISM command line when Windows applies the driver package.
 
-When you enable this option, you can also specify additional DISM command-line parameters. Use the [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) task sequence variable to include more options. For more information, see [Windows 10 DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
+When you enable this option, you can also specify additional DISM command-line parameters. Use the [OSDInstallDriversAdditionalOptions](task-sequence-variables.md#OSDInstallDriversAdditionalOptions) task sequence variable to include more options. For more information, see [Windows DISM Command-Line Options](/windows-hardware/manufacture/desktop/deployment-image-servicing-and-management--dism--command-line-options).<!-- SCCMDocs#2125 -->
 
 #### Select the mass storage driver within the package that needs to be installed before setup on pre-Windows Vista operating systems
 
@@ -241,7 +242,7 @@ This task sequence step runs only in Windows PE. It doesn't run in the full OS.
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Apply Operating System Image**.
 
 > [!TIP]
-> Windows 10 media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#support-notes).
+> Windows 11 and Windows 10 media include multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-11.md#support-notes).
 >
 > Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 >
@@ -812,6 +813,8 @@ Starting in version 2006, this step includes includes a check to determine if th
 
 Starting in version 2103, the task sequence progress displays more information about readiness checks. If a task sequence fails because the client doesn't meet the requirements of this step, the user can select an option to **Inspect**. This action shows the checks that failed on the device. For more information, see [User experiences for OS deployment](user-experience.md#task-sequence-error).<!--8888218-->
 
+Starting in version 2111, this step includes checks for TPM 2.0. These checks can help you better deploy Windows 11.<!-- 9575077 -->
+
 > [!IMPORTANT]
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
@@ -834,6 +837,8 @@ Use the following task sequence variables with this step:
 - [_TS_CRNETWORK](task-sequence-variables.md#TSCRNETWORK)
 - [_TS_CRUEFI](task-sequence-variables.md#TSCRUEFI) (starting in version 2006)
 - [_TS_CRWIRED](task-sequence-variables.md#TSCRWIRED)
+- [_TS_CRTPMACTIVATED](task-sequence-variables.md#TSCRTPMACTIVATED) (starting in version 2111)
+- [_TS_CRTPMENABLED](task-sequence-variables.md#TSCRTPMENABLED) (starting in version 2111)
 
 ### Cmdlets for Check Readiness
 
@@ -897,6 +902,14 @@ Verify that the device has a network adapter that's connected to the network. Yo
 #### Computer is in UEFI mode
 
 Starting in version 2006, determine whether the device is configured for UEFI or BIOS.
+
+#### TPM 2.0 or above is enabled
+
+Starting in version 2111, checks whether the device that's running the task sequence has a TPM 2.0 that's enabled.<!--9575077-->
+
+#### TPM 2.0 or above is activated
+
+Starting in version 2111, if the device has an enabled TPM 2.0, check that it's activated.<!--9575077-->
 
 ### Options for Check Readiness
 
@@ -2521,14 +2534,14 @@ When you run an OS deployment task sequence on an internet-based client, that's 
 
 ## <a name="BKMK_UpgradeOS"></a> Upgrade Operating System
 
-Use this step to upgrade an older version of Windows to a newer version of Windows 10.
+Use this step to upgrade an earlier version of Windows to a later version of Windows.
 
 This task sequence step runs only in the full OS. It doesn't run in Windows PE.
 
 To add this step in the task sequence editor, select **Add**, select **Images**, and select **Upgrade Operating System**.
 
 > [!TIP]
-> Windows 10 media includes multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-10.md#support-notes).
+> Windows 11 and Windows 10 media include multiple editions. When you configure a task sequence to use an OS upgrade package or OS image, be sure to select a [supported edition](../../core/plan-design/configs/support-for-windows-11.md#support-notes).
 >
 > Use content pre-caching to download an applicable OS upgrade package before a user installs the task sequence. For more information, see [Configure pre-cache content](../deploy-use/configure-precache-content.md).
 
@@ -2555,11 +2568,11 @@ On the **Properties** tab for this step, configure the settings described in thi
 
 #### Upgrade package
 
-Select this option to specify the Windows 10 OS upgrade package to use for the upgrade.
+Select this option to specify the Windows OS upgrade package to use for the upgrade.
 
 #### Source path
 
-Specifies a local or network path to the Windows 10 media that Windows Setup uses. This setting corresponds to the Windows Setup command-line option `/InstallFrom`.
+Specifies a local or network path to the Windows media that Windows Setup uses. This setting corresponds to the Windows Setup command-line option `/InstallFrom`.
 
 You can also specify a variable, such as `%MyContentPath%` or `%DPC01%`. When you use a variable for the source path, set its value earlier in the task sequence. For example, use the [Download Package Content](#BKMK_DownloadPackageContent) step to specify a variable for the location of the OS upgrade package. Then, use that variable for the source path for this step.
 
@@ -2587,7 +2600,7 @@ The user experience with a feature update in a task sequence is the same as with
 
 #### Provide the following driver content to Windows Setup during upgrade
 
-Add drivers to the destination computer during the upgrade process. The drivers must be compatible with Windows 10. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. For more information, see [Windows Setup command-line options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
+Add drivers to the destination computer during the upgrade process. The drivers must be compatible with Windows 10 or later. This setting corresponds to the Windows Setup command-line option `/InstallDriver`. For more information, see [Windows Setup command-line options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#installdrivers).
 
 Specify one of the following options:
 
@@ -2601,6 +2614,9 @@ Specify one of the following options:
 > - Use multiple instances of this step with conditions for the hardware types and separate driver content.
 >
 > - Use multiple instances of the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageContent) step. Place the content in a common location, and then use the **Staged content** option. The benefit of this method is the task sequence has a single **Upgrade OS** step.
+
+> [!NOTE]
+> This option is not compatible with feature updates.
 
 #### Time-out (minutes)
 

@@ -2,13 +2,14 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 08/10/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # List of prerequisite checks for Configuration Manager
@@ -63,6 +64,9 @@ Starting in version 2107, this error happens if the site has either of the follo
 Support for the application catalog was removed in version 1910. For more information, see [Remove the application catalog](../../../../apps/plan-design/plan-for-and-configure-application-management.md#remove-the-application-catalog).
 
 ### Asset Intelligence synchronization point on the expanded primary site
+
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
 
 *Applies to: Central administration site*
 
@@ -287,6 +291,18 @@ The instance for SQL Server is configured to use the **SQL_Latin1_General_CP1_CI
 If the Configuration Manager site database is already installed, this check also applies to the database. For information about changing your SQL Server instance and database collations, see [SQL Server collation and unicode support](/sql/relational-databases/collations/collation-and-unicode-support).
 
 If you're using a Chinese OS and require GB18030 support, this check doesn't apply. For more information about enabling GB18030 support, see [International support](../../../plan-design/hierarchy/international-support.md).
+
+### Required version of Microsoft .NET Framework (error)
+
+_Applies to: CAS, primary site, secondary site_
+
+<!--10644702-->
+This rule checks if the .NET Framework is at least version 4.6.2. You'll see this error if the system has less than version 4.6.2.
+
+Starting in version 2111, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
+
+> [!NOTE]
+> Third-party add-ons that use Microsoft .NET Framework and rely on Configuration Manager libraries also need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462)<!--10529267-->.
 
 ### Server service is running
 
@@ -703,12 +719,6 @@ When you install site roles that require HTTPS, configure IIS site bindings on t
 
 There are discovery records that are no longer valid. These records will be marked for deletion.
 
-### Microsoft XML Core Services 6.0 (MSXML60)
-
-*Applies to Central administration site, primary site, secondary site, Configuration Manager console, management point, distribution point*
-
-Verifies that MSXML 6.0 or a later version is installed.
-
 ### Network access protection (NAP) is no longer supported
 
 *Applies to: Primary site*
@@ -772,14 +782,17 @@ Starting in version 2107, Configuration Manager requires Microsoft .NET Framewor
 
 Setup can establish a remote connection to WMI on the secondary site server.
 
-### Required version of Microsoft .NET Framework
+### Required version of Microsoft .NET Framework (warning)
 
 _Applies to: CAS, primary site, secondary site_
 
 <!--10402814-->
-This rule checked if the .NET Framework is at least version 4.6.2. You'll see this warning if the system has less than version 4.6.2.
+In version 2107, this rule checks if the .NET Framework is at least version 4.6.2. You'll see this warning if the system has less than version 4.6.2.
 
-Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
+> [!IMPORTANT]
+> Starting in version 2111, if this check fails, it returns an [error](#required-version-of-microsoft-net-framework-error) instead of a warning.
+
+Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
 
 ### Schema extensions
 

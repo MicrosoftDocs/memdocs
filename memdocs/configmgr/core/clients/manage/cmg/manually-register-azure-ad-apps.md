@@ -2,13 +2,14 @@
 title: Manually register Azure AD apps
 titleSuffix: Configuration Manager
 description: Manually create the required apps in Azure Active Directory (Azure AD) to integrate the Configuration Manager site to support the cloud management gateway (CMG).
-ms.date: 08/24/2021
+ms.date: 03/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Manually register Azure AD apps for the CMG
@@ -146,7 +147,7 @@ The web (server) app for CMG is now registered in Azure AD.
 
     1. Under Advanced settings, set **Allow public client flows** to **Yes**. Select **Save**.
 
-1. If you're going to use Azure AD User Discovery in Configuration Manager, you need to adjust the permissions on this app. In the menu of the app properties, select **API permissions**. By default it should have the **User.Read** delegated permission for the **Microsoft Graph** API.
+1. Adjust the permissions on this app. In the menu of the app properties, select **API permissions**. By default it should have the **User.Read** delegated permission for the **Microsoft Graph** API.
 
     1. On the API permissions pane, select **Add a permission**.
 

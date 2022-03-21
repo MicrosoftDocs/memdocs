@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Get help and support in Company Portal for Windows 10  | Microsoft Docs
-description: Send logs, contact helpdesk, and read FAQs on the Company Portal Help & support page.  
+title: Get help and support in Company Portal for Windows devices | Microsoft Docs
+description: Learn how to get help and support in Company Portal for Windows.   
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 03/03/2022
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -21,44 +21,54 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer: scottduf
+ms.reviewer:
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Get help and support in Company Portal for Windows 10
+# Get help and support in Company Portal for Windows devices  
 
-Visit the Company Portal **Help & support** page to start troubleshooting your app and access problems.   
+**Applies to**
+- Windows 10  
+- Windows 11 
+
+Visit the Company Portal **Help & support** page to start troubleshooting your app and access problems. If the problem you're experiencing prevents you from accessing Help & support in the Company Portal app, try to access the page on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980). Use your work or school email to sign in to your account.      
 
 From **Help & support** you can:  
 
 * Get help with app problems
 * View helpdesk contact details
 * Find answers to your frequently asked questions (FAQs) 
-* Report app problems to Microsoft
+* Report app problems to Microsoft  
 
-![Example screenshot of the Company Portal app for Windows 10, Help & support page, highlighting each section title.](./media/1812_UCP_Help_Support_sections.png)  
+![Example screenshot of the Company Portal app for Windows 10/11, Help & support page, highlighting each section title.](./media/1812_UCP_Help_Support_sections.png)  
 
 ## Get help with app problems
 
-Email your organization about any problems you experience in Company Portal. Select **Get Help** to start describing the problem. Your organization will use the information you provide to troubleshoot the problem. If more help is needed to determine the problem, your organization will use the diagnostic ID&ndash;automatically included in the email&ndash;to reach out to Microsoft's support team.  
+Email your organization about any problems you experience in Company Portal. Select **Get Help** to start describing the problem. Your organization will use the information you provide to troubleshoot the problem. If more help is needed to determine the problem, your organization will use the diagnostic ID in the email to reach out to Microsoft's support team.  
 
-For the step-by-step procedure, see [Send logs to your company support from the Company Portal app for Windows 10](send-logs-to-your-it-admin-cp-windows.md).  
+For the step-by-step procedure, see [Send logs to your company support from the Company Portal app for Windows 10/11](send-logs-to-your-it-admin-cp-windows.md).  
 
 ## View helpdesk contact details  
 Use your organization's helpdesk details, such as phone number, emails, and website to quickly troubleshoot work or school access.  
 
 ## Find answers to frequently asked questions  
-We've put together a list of FAQs to help answer or troubleshoot your enrollment and access concerns. Select any topic to view its help article on Microsoft.docs.com.  
+The **Frequently asked questions** section lists some of the most common questions people ask when enrolling their devices. Select a question to go to the most relevant help article on Docs.microsoft.com. Select **See all help topics** to browse through all Windows enrollment articles.   
 
 ## Report app problems to Microsoft  
-When you select **Report problem to Microsoft**, you'll go to the **Send feedback** page. From there, you can:
+Select **Report problem to Microsoft** to open the **Send feedback** page. From there, you can:  
 
 * Report a problem or bug that you see in the app  
 * Send a suggestion or idea you have for the app  
 * Leave a review for the app in Microsoft Store   
 
+## IT pro and administrator documentation  
+Other help and support documentation is available for IT pros and Intune administrators on docs.microsoft.com. 
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+* [Docs.microsoft.com](https://docs.microsoft.com): Home to the Microsoft technical documentation where you can explore all guides and articles by product. 
+* [Microsoft Endpoint Manager documentation](/mem): Official product documentation for Microsoft Endpoint Manager, which includes Microsoft Intune, Microsoft Endpoint Configuration Manager, and Windows Autopilot.  
+* [Troubleshooting device enrollment in Intune](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune): Microsoft Intune article suggestions for troubleshooting device enrollment issues in Microsoft Intune.  
+
+

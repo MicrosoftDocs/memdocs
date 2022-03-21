@@ -1,17 +1,15 @@
 ---
-title: "How to create configuration items"
-titleSuffix: "Configuration Manager"
-description: "Create and deploy configurations to devices that are managed by Configuration Manager and enrolled with Microsoft Intune."
-ms.date: 05/08/2019
+title: How to create configuration items
+titleSuffix: Configuration Manager
+description: Create and deploy configurations to devices that are managed by Configuration Manager and enrolled with Microsoft Intune.
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 6271259d-e0ea-432b-90ec-5a452fba4264
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 # Create configuration items in Configuration Manager
 
@@ -23,7 +21,7 @@ Compliance settings in Configuration Manager let you create and deploy configura
 
 Before you start, read [Get started with compliance settings](../../compliance/get-started/get-started-with-compliance-settings.md). To learn some basics about compliance settings, read [Plan for and configure compliance settings](../../compliance/plan-design/plan-for-and-configure-compliance-settings.md) to implement any necessary prerequisites. In each scenario, you'll create a configuration item that does a specific task.
 
-- [How to create configuration items for Windows 10 devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md)
+- [How to create configuration items for Windows 10 or later devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md)
 - [How to create configuration items for macOS X devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items-for-mac-os-x-devices-managed-with-the-client.md)
 - [How to create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client](../../compliance/deploy-use/create-custom-configuration-items-for-windows-desktop-and-server-computers-managed-with-the-client.md)
 

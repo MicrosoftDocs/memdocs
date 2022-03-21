@@ -31,9 +31,14 @@ ms.reviewer: mattcall
 
 View the settings you can configure in profiles for [Endpoint detection and response policy](../protect/endpoint-security-edr-policy.md) in the endpoint security node of Intune.
 
+Applies to:
+
+- Windows 10
+- Windows 11
+
 Supported platforms and profiles:
 
-- **Windows 10 and later**: Use this platform for policy you deploy to devices managed with Intune.
+- **Windows 10 and later**: Use this platform for policy you deploy to Windows 10 and Windows 11 devices managed with Intune.
   - Profile: **Endpoint detection and response (MDM)**
 
 - **Windows 10, Windows 11, and Windows Server (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.

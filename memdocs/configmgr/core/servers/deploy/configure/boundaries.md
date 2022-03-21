@@ -2,14 +2,14 @@
 title: Define boundaries
 titleSuffix: Configuration Manager
 description: Understand how to define network locations on your intranet that can contain devices you want to manage.
-ms.date: 08/11/2020
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 4a9dc4d9-e114-42ec-ae2b-73bee14ab04f
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Define network locations as boundaries for Configuration Manager
@@ -88,6 +88,8 @@ You can configure a VPN boundary in several ways:
 > To take full advantage of this feature, after you update the site, also update clients to the latest version. New functionality appears in the Configuration Manager console when you update the site and console. The complete scenario isn't functional until the client version is also the latest.
 >
 > To use this VPN boundary during an OS deployment, make sure to also update the boot image to include the latest client binaries.
+
+Starting in version 2111, you can now match the start of a connection name or description instead of the whole string. Some third-party VPN drivers dynamically create the connection, which starts with a consistent string but also has a unique connection identifier. For example, `Virtual network adapter #19`. When you use the **Connection name** or **Connection description** options, also use the new **Starts with** option.<!--7822886-->
 
 ## Create a boundary
 

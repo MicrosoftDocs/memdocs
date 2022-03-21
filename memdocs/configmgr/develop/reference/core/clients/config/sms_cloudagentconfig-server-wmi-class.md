@@ -9,6 +9,8 @@ ms.assetid: 969c2e06-c475-409b-903b-71be831fa754
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_CloudAgentConfig Server WMI Class

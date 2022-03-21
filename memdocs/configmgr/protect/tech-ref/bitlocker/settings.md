@@ -2,14 +2,14 @@
 title: BitLocker settings reference
 titleSuffix: Configuration Manager
 description: All of the BitLocker management settings available in Configuration Manager
-ms.date: 08/21/2020
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: reference
-ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # BitLocker settings reference
@@ -53,9 +53,9 @@ For Windows 8.1 devices, enable the option for **Drive encryption method and cip
 
 For more information on how to create this policy with Windows PowerShell, see [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy).
 
-#### Windows 10 devices
+#### Windows 10 or later devices
 
-For Windows 10 devices, enable the option for **Drive encryption method and cipher strength (Windows 10)**. Then individually select one of the following encryption methods for OS drives, fixed data drives, and removable data drives:
+For Windows 10 or later devices, enable the option for **Drive encryption method and cipher strength (Windows 10 or later)**. Then individually select one of the following encryption methods for OS drives, fixed data drives, and removable data drives:
 
 - AES-CBC 128-bit
 - AES-CBC 256-bit
@@ -63,7 +63,7 @@ For Windows 10 devices, enable the option for **Drive encryption method and ciph
 - XTS-AES 256-bit
 
 > [!TIP]
-> BitLocker uses Advanced Encryption Standard (AES) as its encryption algorithm with configurable key lengths of 128 or 256 bits. On Windows 10 devices, the AES encryption supports cipher block chaining (CBC) or ciphertext stealing (XTS).
+> BitLocker uses Advanced Encryption Standard (AES) as its encryption algorithm with configurable key lengths of 128 or 256 bits. On Windows 10 or later devices, the AES encryption supports cipher block chaining (CBC) or ciphertext stealing (XTS).
 >
 > If you need to use a removable drive on devices that don't run Windows 10, use AES-CBC.
 
@@ -198,7 +198,7 @@ For more information on how to create this policy with Windows PowerShell, see [
 
 *Suggested configuration*: **Not configured**
 
-When BitLocker locks the OS drive, use this setting to display a custom recovery message or a URL on the pre-boot BitLocker recovery screen. This setting only applies to Windows 10 devices.
+When BitLocker locks the OS drive, use this setting to display a custom recovery message or a URL on the pre-boot BitLocker recovery screen. This setting only applies to Windows 10 or later devices.
 
 When you enable this setting, select one of the following options for the pre-boot recovery message:
 

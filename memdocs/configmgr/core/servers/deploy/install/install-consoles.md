@@ -2,13 +2,14 @@
 title: Install console
 titleSuffix: Configuration Manager
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
-ms.date: 08/23/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install the Configuration Manager console
@@ -88,25 +89,25 @@ If you create a package for installing the console on other computers, make sure
 
 ### ConsoleSetup.exe command-line options
 
-#### /q
+#### `/q`
 
-Installs the Configuration Manager console unattended. The **TargetDir** and **DefaultSiteServerName** options are required when you use this option.
+Installs the Configuration Manager console unattended. The `TargetDir` and `DefaultSiteServerName` options are required when you use this option.
 
-#### /uninstall
+#### `/uninstall`
 
-Uninstalls the Configuration Manager console. Specify this option first when you use it with the **/q** option.
+Uninstalls the Configuration Manager console. Specify this option first when you use it with the `/q` option.
 
-#### LangPackDir
+#### `LangPackDir`
 
 Specifies the path to the folder that contains the language files. You can use **Setup Downloader** to download the language files. If you don't use this option, Setup looks for the language folder in the current folder. If the language folder isn't found, Setup continues to install English only. For more information, see [Setup Downloader](setup-downloader.md).
 
-#### TargetDir
+#### `TargetDir`
 
-Specifies the installation folder to install the Configuration Manager console. This option is required when you use the **/q** option.
+Specifies the installation folder to install the Configuration Manager console. This option is required when you use the `/q` option.
 
-#### DefaultSiteServerName
+#### `DefaultSiteServerName`
 
-Specifies the FQDN of the site server to which the console connects when it opens. This option is required when you use the **/q** option.
+Specifies the FQDN of the site server to which the console connects when it opens. This option is required when you use the `/q` option.
 
 ### Examples
 

@@ -56,6 +56,8 @@ items:
       href: remote-assist-mobile-devices.md
     - name: Use TeamViewer for remote administration
       href: teamviewer-support.md
+    - name: Use remote help
+      href: remote-help.md
     - name: Synchronize device
       href: device-sync.md
     - name: Examine device inventory

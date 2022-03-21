@@ -4,7 +4,8 @@ ms.author: aaroncz
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: include
-ms.date: 09/17/2020
+ms.date: 01/27/2022
+ms.localizationpriority: medium
 ---
 
 The following table lists the log files that contain information related to the cloud management gateway.
@@ -19,7 +20,7 @@ The following table lists the log files that contain information related to the 
 
 - For troubleshooting deployments, use **CloudMgr.log** and **CMGSetup.log**
 - For troubleshooting service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**.
-- For troubleshooting client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**.
+- For troubleshooting client traffic, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**.
 
 #### <a name="bkmk_note1"></a> Note 1: Logs synchronized from Azure
 

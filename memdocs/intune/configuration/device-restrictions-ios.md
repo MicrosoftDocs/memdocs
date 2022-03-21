@@ -7,24 +7,25 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano, kakyker
+ms.reviewer: beflamm, jayeren
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # iOS and iPadOS device settings to allow or restrict features using Intune
@@ -38,7 +39,16 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Before you begin
 
-Create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
+When configuring device restriction policies, the broad range of settings enable you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for iOS device restriction policies.
+
+The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level.
+
+The available levels and settings in each level vary by device type:
+
+- For personal devices, see [iOS/iPadOS personal device security configurations](../enrollment/ios-ipados-personal-device-security-configurations.md)
+- For supervised devices, see [iOS/iPadOS supervised device security configurations](../enrollment/ios-ipados-supervised-device-security-configurations.md)
+
+When you're ready to proceed, create an [iOS/iPadOS device restrictions configuration profile](device-restrictions-configure.md).
 
 > [!NOTE]
 > These settings apply to different enrollment types, with some settings applying to all enrollment options. For more information on the different enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
@@ -66,6 +76,8 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
 - **Block viewing non-corporate documents in corporate apps**: **Yes** prevents viewing non-corporate documents in corporate apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow any document to be viewed in corporate managed apps.
 
   **Yes** also prevents contact export synchronization in Outlook for iOS/iPadOS. For more information, see [Support Tip: Enabling Outlook iOS/iPadOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Enabling-Outlook-iOS-Contact-Sync-with-iOS12-MDM/ba-p/298453).
+
+- **Allow copy/paste to be affected by managed open-in**: **Yes** enforces copy/paste restrictions based on how you configured **Block viewing corporate documents in unmanaged apps** and **Block viewing non-corporate documents in corporate apps**. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce any copy/paste restrictions.  
 
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
@@ -104,7 +116,8 @@ Create an [iOS/iPadOS device restrictions configuration profile](device-restrict
 
   This feature applies to:  
   - iOS 13.0 and newer
-  - iPadOS 13.0 and newer
+  - iPadOS 13.0 and newer  
+
 
 ## Autonomous single app mode (ASAM)
 
@@ -157,7 +170,12 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Block Siri for dictation**: **Yes** prevents connections to Siri servers. Users can't use Siri to dictate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for dictation.
 
   This feature applies to:  
-  - iOS/iPadOS 14.5 and newer
+  - iOS/iPadOS 14.5 and newer  
+
+- **Block Siri for translation**: **Yes** prevents connections to Siri servers so that users can't use Siri to translate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for translation.  
+
+  This feature applies to:  
+  - iOS/iPadOS 15.0 and newer  
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -248,6 +266,13 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
 
+- **Block iCloud Private Relay**: **Yes** disables the iCloud Private Relay. When disabled, Apple doesn't encrypt internet traffic leaving the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow this feature, which prevents networks and servers from monitoring a user's activity across the internet.
+
+  This feature applies to:  
+  - iOS/iPadOS 15 and newer
+
+  [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's web site)
+
 ## Connected Devices
 
 ### Settings apply to: All enrollment types
@@ -257,7 +282,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 ### Settings apply to: Device enrollment, Automated device enrollment (supervised)
 
 - **Require AirPlay outgoing requests pairing password**: **Yes** requires a pairing password when using AirPlay to stream content to other Apple devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to stream content using AirPlay without entering a password.
-- **Block Apple Watch auto unlock**: **Yes** prevents users from unlocking their device with Apple Watch. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Apple Watch to auto unlock a device.
+- **Block Apple Watch auto unlock**: **Yes** prevents users from unlocking their device with Apple Watch when an obstruction, such as a mask, prevents Face ID from recognizing a user's face. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Apple Watch to auto unlock a device if an obstruction is preventing Face ID from recognizing the user.
 
   This feature applies to:  
   - iOS/iPadOS 14.5 and newer
@@ -611,7 +636,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - iOS 11.0 and newer
   - iPadOS 13.0 and newer
   
-<sup>1</sup> When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, then the screen turns off automatically after five minutes, and devices are locked after an another five minutes. However, if users turn off the screen manually, then the second setting is immediately applied. In the same example, after users turn off the screen, the device locks five minutes later.
+<sup>1</sup> When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, then the screen turns off automatically after five minutes, and devices are locked after another five minutes. However, if users turn off the screen manually, then the second setting is immediately applied. In the same example, after users turn off the screen, the device locks five minutes later.
 
 ## Restricted apps
 
@@ -690,6 +715,9 @@ This feature applies to:
 You can also:
 
 - **Import** a CSV file with details about the app, including the URL. Use the `<app url>, <app name>, <app publisher>` format. Or, **Export** to create a list of the restricted apps you added, in the same format.
+
+  > [!TIP]
+  > You can import a list of preinstalled Apple apps by downloading the [Apple App BundleIDs CSV](https://github.com/microsoft/Intune-Config-Frameworks/blob/master/iOS/Supervised/Apple-App-BundleIDs.csv) (opens a Microsoft GitHub site).
 
 ## Wireless
 

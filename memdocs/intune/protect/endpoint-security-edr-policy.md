@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/27/2021
+ms.date: 11/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,6 +31,11 @@ ms.reviewer: mattcall
 # Endpoint detection and response policy for endpoint security in Intune
 
 When you integrate Microsoft Defender for Endpoint with Intune, you can use endpoint security policies for endpoint detection and response (EDR) to manage the EDR settings and onboard devices to Microsoft Defender for Endpoint.
+
+Applies to:
+
+- Windows 10/11
+- Windows Server 2012 R2 and later
 
 The capabilities of Microsoft Defender for Endpoint endpoint detection and response provide advanced attack detections that are near real-time and actionable. Security analysts can prioritize alerts effectively, gain visibility into the full scope of a breach, and take response actions to remediate threats.
 
@@ -56,14 +61,22 @@ View [settings for Endpoint detection and response profiles](endpoint-security-e
 
 ## EDR profiles
 
-### Devices managed by Intune
+### Devices managed by Microsoft Endpoint Manager
 
 [View the settings](endpoint-security-edr-profile-settings.md) you can configure for the following platforms and profiles.
 
 **Intune** – The following are supported for devices you manage with Intune:
 
-- Platform: **Windows 10 and later** - Intune deploys the policy to devices in your Azure AD groups.
-- Profile: **Endpoint detection and response (MDM)**
+- Platform: **Windows 10 and later**
+    - Profile: **Endpoint detection and response (MDM)** - Intune deploys the policy to devices in your Azure AD groups.
+
+- Platform **Windows 10, Windows 11, and Windows Server (Preview)**
+    - Profile: **Endpoint detection and response (Preview)** - Endpoint Manager deploys policy to Azure AD Groups, and distributes it to Microsoft Defender for Endpoint Clients.
+
+**Defender for Endpoint** - The following are supported for devices that receive security management policy with Microsoft Defender for Endpoint:
+
+- Platform **Windows 10, Windows 11, and Windows Server (Preview)**
+    - Profile: **Endpoint detection and response (Preview)** - Endpoint Manager deploys policy to Azure AD Groups, and distributes it to Microsoft Defender for Endpoint Clients.
 
 ### Devices managed by Configuration Manager
 

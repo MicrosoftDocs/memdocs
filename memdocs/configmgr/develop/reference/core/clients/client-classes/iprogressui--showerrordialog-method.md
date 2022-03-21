@@ -12,6 +12,8 @@ ms.assetid: 13e3b9a0-96ea-4b63-be49-5a5d4e61228f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # IProgressUI::ShowErrorDialog method

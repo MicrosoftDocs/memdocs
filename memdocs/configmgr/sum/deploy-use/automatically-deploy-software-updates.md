@@ -5,13 +5,11 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/25/2021
+ms.date: 12/01/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-
-
+ms.localizationpriority: medium
 ---
 
 #  Automatically deploy software updates  
@@ -90,12 +88,15 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
      - If needed, filter on the content size for software updates in automatic deployment rules. For more information, see [Configuration Manager and simplified Windows servicing on down level operating systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).  
 
-     - Starting in version 1910, you can use **Deployed** as an update filter for your automatic deployment rules. This filter helps identify new updates that may need to be deployed to your pilot or test collections. The software update filter can also help avoid redeploying older updates. 
+     - Starting in version 2111, the following options were added in the **Date Released or Revised** search criteria:<!--7023634 , 7033309-->
+       - Older than 30 days
+       - Older than 60 days
+       - Older than 90 days
+       - Older than 6 months
+       - Older than 1 year  
+     - You can use **Deployed** as an update filter for your automatic deployment rules. This filter helps identify new updates that may need to be deployed to your pilot or test collections. The software update filter can also help avoid redeploying older updates. 
          - When using **Deployed** as a filter, be mindful that you may have already deployed the update to another collection, such as a pilot or test collection. <!--4852033-->
-     - Starting in version 1806, a property filter for **Architecture** is now available. Use this filter to exclude architectures like Itanium and ARM64 that are less common. Remember that there are 32-bit (x86) applications and components running on 64-bit (x64) systems. Unless you're certain that you don't need x86, enable it as well when you choose x64.<!--1322266-->  
-
-    > [!NOTE]  
-    > **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. For more information, see [Configuring products for versions of Windows 10](../get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later) <!--4682946-->
+     - A property filter for **Architecture** is now available. Use this filter to exclude architectures like Itanium and ARM64 that are less common. Remember that there are 32-bit (x86) applications and components running on 64-bit (x64) systems. Unless you're certain that you don't need x86, enable it as well when you choose x64.<!--1322266-->
 
 
 6. On the **Evaluation Schedule** page, specify whether to enable the ADR to run on a schedule. When enabled, click **Customize** to set the recurring schedule.  
@@ -108,7 +109,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     - To manually run the ADR, select the rule in the **Automatic Deployment Rule** node of the console, and then click **Run Now** in the ribbon.  
 
-    - Starting in version 1802, ADRs can be scheduled to evaluate offset from a base day. For example, if Patch Tuesday actually falls on Wednesday for you, set the evaluation schedule for the second Tuesday of the month offset by one day.<!--1357133-->  
+    - ADRs can be scheduled to evaluate offset from a base day. For example, if Patch Tuesday actually falls on Wednesday for you, set the evaluation schedule for the second Tuesday of the month offset by one day.<!--1357133-->  
         - When scheduling evaluation with an offset during the last week of the month, if you choose an offset that continues into the next month, the site schedules evaluation for the last day of the month.<!--506731-->  
         ![ADR custom evaluation schedule offset from base day](./media/ADR-evaluation-schedule-offset.PNG)
 
@@ -171,7 +172,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     - Specify if clients should download and install the updates from a distribution point in the site default boundary group, when the content for the software updates isn't available from a distribution point in the current or neighbor boundary groups.  
 
-    - **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache). Starting in version 1802, BranchCache is always enabled on clients. This setting is removed, as clients use BranchCache if the distribution point supports it.  
+    - **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache). BranchCache is always enabled on clients. This setting is removed, as clients use BranchCache if the distribution point supports it.  
 
     - **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**: Select this setting to have intranet-connected clients download software updates from Microsoft Update if updates aren't available on distribution points. Internet-based clients always go to Microsoft Update for software updates content.  
 
@@ -202,7 +203,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
         - **Enable binary differential replication**: Enable this setting to use binary differential replication for the deployment package. For more information, see [Binary differential replication](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
-    - **No deployment package**: Starting in version 1806, deploy software updates to devices without first downloading and distributing content to distribution points. This setting is beneficial when dealing with extremely large update content. Also use it when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Microsoft 365 Apps updates.<!--1357933-->  
+    - **No deployment package**: Deploy software updates to devices without first downloading and distributing content to distribution points. This setting is beneficial when dealing with extremely large update content. Also use it when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Microsoft 365 Apps updates.<!--1357933-->  
 
         > [!Note]  
         > Once you select this option and apply the settings, it can no longer be changed. The other options are greyed out.<!--SCCMDocs-pr issue 3003-->  

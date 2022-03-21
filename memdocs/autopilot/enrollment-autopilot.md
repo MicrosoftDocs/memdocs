@@ -5,10 +5,11 @@ title: Create device groups for Windows Autopilot - Microsoft Intune | Microsoft
 titleSuffix: Microsoft Intune
 description: Learn how to create device groups for Windows Autopilot.
 keywords:
-author: greg-lindsay
-ms.author: greglin
-manager: laurawi
-ms.date: 03/16/2021
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
+ms.date: 02/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +22,6 @@ ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
 #ROBOTS:
 #audience:
 
-ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,13 +30,15 @@ ms.collection:
 - M365-modern-desktop
 - m365initiative-coredeploy
 - M365-identity-device-management
+- highpri
 ---
 
 # Create device groups
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004 or later
 
 > [!NOTE]
@@ -71,18 +73,26 @@ ms.collection:
 
 3. Select **Create**.
 
+> [!NOTE]
+> Anything assigned to these attributes will only be assigned if the device is Autopilot registered.
+
 ## Add devices
 
 For information about formatting and using a CSV file to manually add Windows Autopilot devices, see [Manually register devices with Windows Autopilot](add-devices.md).
 
 ## Assign a user to a specific Autopilot device
 
+> [!NOTE]
+> Assigning a licensed user to a registered Autopilot device using Microsoft Endpoint Manager no longer pre-fills any user information as described below. Please see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452) for details on this change. This change does not impact user assigned policies and apps which are still deployed to the device when a licensed user is assigned. See [Windows Autopilot for pre-provisioned deployment](./pre-provision.md#preparation) for details on this.
+
 You can assign a licensed Intune user to a specific Autopilot device. This assignment:
 - Pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup.
 - Lets you set a custom greeting name.
 - Doesn't pre-fill or modify Windows sign-in.
 
-Prerequisites: Azure Active Directory Company Portal has been configured and Windows 10, version 1809 or later.
+Prerequisites: 
+- Azure Active Directory Company Branding has been configured.
+- Windows 10, version 1809 or later.
 
 > [!NOTE]
 > Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.

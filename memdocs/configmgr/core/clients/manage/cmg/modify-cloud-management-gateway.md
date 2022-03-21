@@ -2,13 +2,15 @@
 title: Modify a CMG
 titleSuffix: Configuration Manager
 description: If you need to change the configuration, you can modify the cloud management gateway (CMG).
-ms.date: 08/02/2021
+ms.date: 10/25/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Modify a CMG
@@ -27,6 +29,8 @@ After you create a CMG, you can modify some of its settings. Select the CMG in t
 
   > [!NOTE]
   > When you renew the server authentication certificate for the CMG, the FQDN that you specify for the certificate's common name (CN) is case-sensitive. For example, if the CN of the current certificate is `granitefalls.contoso.com`, create the new certificate with the same lowercase CN. The wizard won't accept a certificate with the CN `GRANITEFALLS.CONTOSO.COM`.
+  >
+  > If you make significant changes to the certificate, you may need to [Redeploy the service](#redeploy-the-service). For example, changing the organization name on the certificate.<!-- memdocs#1927 -->
 
 - **Description**: Specify an optional description to further identify this CMG in the Configuration Manager console.
 
@@ -36,7 +40,7 @@ After you create a CMG, you can modify some of its settings. Select the CMG in t
 
 - **Verify Client Certificate Revocation**: If you didn't originally enable this setting when you created the CMG, you can enable it afterwards after you publish the CRL. For more information, see [Publish the certificate revocation list](security-and-privacy-for-cloud-management-gateway.md#publish-the-certificate-revocation-list).
 
-- **Enforce TLS 1.2**: The CMG enables this option by default. Require it to use the TLS 1.2 encryption protocol. For more information, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
+- **Enforce TLS 1.2**: The CMG enables this option by default. Require it to use the TLS 1.2 encryption protocol. Starting in version 2107 with the [update rollup](../../../../hotfix/2107/11121541.md), this setting also applies to the CMG storage account.<!--10800237--> For more information, see [How to enable TLS 1.2](../../../plan-design/security/enable-tls-1-2.md).
 
 - **Allow CMG to function as a cloud distribution point and serve content from Azure storage**: The CMG enables this option by default. If you plan on targeting deployments with content to clients, you need to configure the CMG to serve content.<!--1358651-->
 
@@ -121,6 +125,7 @@ More significant changes, such as the following configurations, require that you
 - Service name
 - Region
 - Resource group
+- Significant changes to the server authentication certificate
 
 Always keep at least one active CMG for internet-based clients to receive updated policy. Internet-based clients can't communicate with a removed CMG. Clients don't know about a new one until they refresh policy. When you create a second CMG instance to delete the first, also create another CMG connection point.
 

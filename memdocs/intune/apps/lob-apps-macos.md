@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/04/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: ef8008ac-8b85-4bfc-86ac-1f9fcbd3db76
 
@@ -26,7 +26,10 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- macOS
+- highpri
 ---
 
 # How to add macOS line-of-business (LOB) apps to Microsoft Intune
@@ -121,6 +124,10 @@ You can use scope tags to determine who can see client app information in Intune
 ## Step 3 - Assignments
 
 1. Select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+
+> [!NOTE]
+> Uninstall intend will only be displayed for LOB apps created with **Install as managed** set to **Yes**. For more information review **App information section** earlier on this article.
+
 2. Click **Next** to display the **Review + create** page. 
 
 ## Step 4 - Review + create

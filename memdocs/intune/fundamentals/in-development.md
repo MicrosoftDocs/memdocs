@@ -3,16 +3,15 @@
 
 title: In development - Microsoft Intune
 titleSuffix: 
-description: Microsoft Intune features in development
+description: This article describes Microsoft Intune features that are in development.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: dougeby 
+ms.author: dougeby
 manager: dougeby
-ms.date: 9/1/2021
+ms.date: 03/03/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.assetid:
 
 # optional metadata
 
@@ -23,24 +22,26 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # In development for Microsoft Intune
 
-To help in your readiness and planning, this page lists Intune UI updates and features that are in development but not yet released. In addition to the information on this page:
+To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. In addition to the information in this article:
 
-- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in Office message center.
-- When a feature enters production, whether it's a preview or generally available, the feature description will move from this page to [What's new](whats-new.md).
-- This page and the [What's new](whats-new.md) page are updated periodically. Check back for more updates.
+- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in the Office message center.
+- When a feature enters production, whether it's in preview or generally available, the feature description will move from this article to [What's new](whats-new.md).  
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
+This article and the [What's new](whats-new.md) article are updated periodically. Check back for more updates.
+
 > [!NOTE]
-> This page reflects our current expectations about Intune capabilities in an upcoming release. Dates and individual features might change. This page doesn't describe all features in development.
+> This article reflects our current expectations about Intune capabilities in an upcoming release. Dates and individual features might change. This article doesn't describe all features in development. It was last updated on the date shown under the title.
 
-**RSS feed**: Find out when this page is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us`
-
-**This article was last updated on the date listed under the title above.**
+You can use RSS to be notified when this article is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
+<!-- **RSS feed**: Find out when this article is updated by copying and pasting the following URL into your feed reader: `https://docs.microsoft.com/api/search/rss?search=%22in+development+-+microsoft+intune%22&locale=en-us` -->
 
 <!--
 ## What's coming to Intune in the Azure portal 
@@ -61,273 +62,247 @@ To help in your readiness and planning, this page lists Intune UI updates and fe
 -->
 
 <!-- ***********************************************-->
+
 ## App management
 
-### Export underlying discovered apps list data<!-- 9370255  -->
+### iOS Company Portal minimum required version<!-- 13016075 -->
+With an upcoming release of the MS Authenticator app, users will be required to update to v5.2204 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
-In addition to exporting the summarized discovered apps list data, you'll also be able export the more extensive underlying data. The current summarized export experience provides summarized aggregate data, however the new experience will also provide the raw data. The raw data export will give you the entire dataset, which is used to create the summarized aggregate report. The raw data will be a list of every device and each app discovered for that device. This functionality is being added to the Intune console to replace the Intune Data Warehouse Application Inventories dataset, which will be removed in an upcoming Intune service release. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **Monitor** > **Discovered apps** > **Export** to display the export options. For related information, see [Intune discovered apps](../apps/app-discovered-apps.md) and [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
+### Password complexity for Android devices<!-- 9321870 -->
+The **Require device lock** setting in Intune will be extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn't meet the minimum password requirement, you'll be able to **warn**, **wipe data**, or **block** the end user from accessing a managed account in a managed app. 
 
-### Maximum OS version setting for app conditional launch<!-- 9493137  -->
+This feature targets devices that operate on Android 11+. For devices that operate on Android 10 and earlier, setting a complexity value of **Low**, **Medium**, or **High** will default to the expected behavior for **Low Complexity**. For related information, see [Android app protection policy settings in Microsoft Intune](..\apps\app-protection-policy-settings-android.md).
 
-Using iOS app protection policies in Microsoft Intune app protection policies, you'll be able to add a new conditional launch setting to ensure end users are not using a pre-release or beta OS build to access work or school account data. This setting ensures that you can vet all OS releases before end users are actively using new OS functionality. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you'll be able to find this setting by selecting **Apps** > **App protection policies**. For related information, see [How to create and assign app protection policies](../apps/app-protection-policies.md).
+### Improvements to Win32 App Log collection<!-- 9978316 -->
+Win32 App Log collection via Intune Management Extension has moved to the Windows 10 device diagnostic platform, reducing time to collect logs from 1-2 hours to 20 minutes.  We've also increased the size from 60mb to 250mb.  Along with performance improvements, the app logs will also be available under the **Device diagnostics monitor** action for each device, as well as the managed app monitor. For information about how to collect diagnostics, see [Collect diagnostics from a Windows device](..\remote-actions\collect-diagnostics.md) and [Troubleshooting Win32 app installations with Intune](/troubleshoot/mem/intune/troubleshoot-win32-app-install).
 
-### Unified delivery of Azure AD Enterprise and Office Online applications in the Android Company Portal<!-- 1817862  -->
+### Feedback settings for Company Portal and Microsoft Intune apps<!-- 10012370 -->
+Feedback settings will be provided to address M365 enterprise feedback policies for the currently logged in user via the Microsoft 365 Apps admin center. The settings are used to determine whether feedback can be enabled or must be disabled for a user. The feature will be available for Intune Company Portal and Microsoft Intune apps.
 
-Last year, we announced [Unified delivery of Azure AD Enterprise and Office Online applications in the Company Portal website](../fundamentals/whats-new-archive.md#unified-delivery-of-azure-ad-enterprise-and-office-online-applications-in-the-windows-company-portal). This feature will be supported for users who get their apps directly from the Android Company Portal. On the **Customization** pane of Intune, select to **Hide** or **Show** both **Azure AD Enterprise applications** and **Office Online applications** in the Company Portal. Each end user will see their entire application catalog from the chosen Microsoft service. By default, each additional app source will be set to **Hide**. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Customization** to find this configuration setting. For related information, see [How to customize the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+### Uninstall DMG-type applications on managed macOS devices (Public preview)<!-- 13155022 -->
+You will be able to use the Uninstall assignment type to remove DMG-type applications on managed macOS devices from Microsoft Endpoint Manager. You can find macOS DMG apps in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **macOS app (.DMG)**. For related information, [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md). 
 
-#### New app categories available to better target app protection policies<!-- 4802581  -->
+### Deploy macOS LOB apps by uploading PKG-type installer files (Public preview)<!-- 13155147 -->
+You will be able to upload and deploy PKG-type installer files as macOS line-of-business apps. You can add a macOS LOB app from [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **Add** > **Line-of-business app**. For more information about macOS LOB apps, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
 
-We have improved the UX of Microsoft Endpoint Manager by creating categories of apps that you can use to more easily and quickly target app protection policies. These categories are **All public apps**, **Microsoft apps**, and **Core Microsoft apps**. After you have created the targeted app protection policy, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy. As new apps are supported, we will dynamically update these categories to include those apps as appropriate, and your policies will be automatically applied to all apps in your selected category. If needed, you can continue to target policies for individual apps as well. For more information, see [How to create and assign app protection policies](../apps/app-protection-policies.md) and [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create.md).
-
-<!-- ***********************************************-->
-## Device configuration
-
-### Use a Settings Catalog policy in a policy set for Windows and macOS devices<!-- 8851701  -->
-
-In Intune, you can create a policy using [Settings Catalog](../configuration/settings-catalog.md), which lists all the settings you can configure. Now, you can use the Settings Catalog policy within a policy set.
-
-For more information, see [Use policy sets to group collections of management objects](policy-sets.md).
-
-Applies to:
-
-- macOS
-- Windows 10 and newer
-
-### Settings catalog policies for policy sets<!-- 8683467  -->
-
-In addition to profiles based on templates, you'll be able to add a profile based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
-
-### Use filters on DFCI configuration profiles on Windows 10 RS5 (1809) and newer devices<!-- 8817773  -->
-
-In Endpoint Manager, you can create filters to target devices based on different properties. When you create a Device Firmware Configuration Interface (DFCI) profile, you'll be able to use filters when assigning the profile.
-
-- For more information about filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
-- For more information about the DFCI profile, see [Use Device Firmware Configuration Interface profiles on Windows devices](../configuration/device-firmware-configuration-interface-windows.md).
-
-Applies to:
-
-- Windows 10 RS5 (1809) and newer on supported UEFI
-
-### Use filters to assign Endpoint analytics proactive remediations scripts and Endpoint Security policies in Endpoint Manager admin center - public preview<!-- 7566953 7591178  -->
-
-In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies. You'll be able to use filters to assign the following policies:
-
-- [Endpoint analytics proactive remediations Windows PowerShell scripts](../../analytics/proactive-remediations.md) (**Reports** > **Endpoint analytics** > **Proactive remediations**)
-- [Endpoint Security policies](../protect/endpoint-security-policy.md), including Account protection, Antivirus, Attack surface reduction, and more.
-
-For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles](filters.md).
-
-Applies to:
-
-- macOS
-- Windows 10 and newer
-
-### Manage Windows 10 security updates for Windows 10 Enterprise multi-session VMs<!-- 8682461  -->
-
-You’ll soon be able to use the Settings Catalog to deploy Windows 10 quality updates to Windows 10 Enterprise multi-session virtual machines. (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 or later** > **Settings catalog**)
-
-To find the relevant settings, in the Settings Catalog, [use the Settings filter to focus on the OS type of Enterprise multi-session](../fundamentals/azure-virtual-desktop-multi-session.md#to-configure-policies). Then select the Windows Update for Business category where you’ll now see only those settings that are supported for multi-session VMs.
-
-The Windows Update settings for quality updates that you’ll soon be able to use with multi-session VMs include:
-
-- Active Hours End
-- Active Hours Max Range
-- Active Hours Start
-- Block "Pause Updates" ability
-- Configure Deadline Grace Period
-- Defer Quality Updates Period (Days)
-- Pause Quality Updates Start Time
-- Quality Update Deadline Period (Days)
+### iOS/iPadOS notifications will require upcoming March Company Portal update<!-- 9819536 -->
+We will be making service side updates to iOS/iPadOS notifications expected in Intune's April (2204) service release which will require users to have updated to at least the March version of the iOS/iPadOS Company Portal app. If you are using a functionality that could generate push notifications, you will want to ensure your users update the iOS/iPadOS Company Portal. There is no additional change in functionality. The Company Portal update will be released prior to the service change, so most users will likely have updated the app and will not be impacted. However, you may want to notify users of this change to ensure all users continue to receive push notifications sent by your organization. For related information, see [Update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md).
 
 <!-- ***********************************************-->
-## Device enrollment
 
-### Four new Shared iPad enrollment settings<!--9684925 -->
-
-Four new settings will be available for Shared iPad devices. These settings get applied at the time of Automated Device Enrollment.
-
-- For iPadOS 14.5 and later in Shared iPad mode:
-  - Require Shared iPad temporary setting only: When set to Yes, users only see the Guest Welcome pane, and can only sign in as a guest user. Users can't sign in with a Managed Apple ID.
-  - Maximum seconds of inactivity until temporary session logs out: If there isn't any activity after the value you enter, then the temporary session automatically signs out.
-  - Maximum seconds of inactivity until user session logs out: If there isn't any activity after the value you enter, then the user session automatically signs out.
-- For iPadOS 13.0 and later in Shared iPad mode:
-  - Maximum seconds after screen lock before password is required for Shared iPad.
-
-### New device restrictions setting prevents sharing work profile contacts with paired Bluetooth devices  <!-- 8630136  -->
-
-A new device restrictions setting for corporate-owned work profile devices will prevent users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  The new setting will be available in **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
-
-- Setting name:  **Contact sharing via Bluetooth (work profile-level)**
-- Setting toggles:  
-- **Block**: Blocks users from sharing work profile contacts via Bluetooth.
-- **Not configured**:  Doesn't enforce any restrictions on the device, so users might be able to share their work profile contacts via Bluetooth.
-
-<!-- ***********************************************-->
 ## Device management
 
-### Tenant attach: Offboarding <!--9412904 -->
+### Android (AOSP) users can view all devices in Intune app<!-- 10454654 -->
+AOSP device users will be able to view a list of their managed devices and device properties in the Microsoft Intune app. This feature will be available on devices enrolled in Intune as user-associated (Android) AOSP devices.
 
-While we know customers get enormous value by enabling tenant attach with Configuration Manager, there are rare cases where you might need to offboard a hierarchy. For example, you may need to offboard from the cloud following a disaster recovery scenario where the on-premises environment was removed. You'll soon be able to offboard a Configuration Manager environment from the Microsoft Endpoint Manager admin center.
+### New reporting experience for device configuration profiles<!-- 8466004 -->
+You can now expect a new reporting experience for device configuration profiles. This reporting experience excludes ADMX, OEM Config, DFCI profile types.
 
-### Intune moving to support iOS/iPadOS 13 and higher later this year<!-- 9964998 idrady-->
+We are continuing to update Intune's report experience to enhance consistency, accuracy, organization, and data representation, which will give an overall "facelift" of Intune's per policy reporting. The new experience will update the per policy overview page to shift away from donut charts to a sleeker overview chart that quickly updates as devices/users check in. There are three reports available from the per policy view:
 
-Later this year, Apple is expected to release iOS 15. Microsoft Intune, including the Intune Company Portal and Intune app protection policies will require [iOS/iPadOS 13 and higher](supported-devices-browsers.md) shortly after the release of iOS 15.
+- **Device and user check in status** - This report shows the full list of devices and users that have checked into using the policy and also provides the related status.
+- **Device assignment status** - This new report shows the list of devices and the last logged on user of the device to provide the latest device status. This report includes devices in a pending state and provides the denominator of total assigned devices and assigned users.
+- **Per setting status** - This report shows the state of the aggregate of devices/users that have checked in per setting. The states include error, conflict, and success.
 
-### Intune moving to support  macOS 10.15 and later with the release of macOS 12<!-- 10154527 -->
+More drilldowns are available and additional assignment filters are supported. For related information about reporting, see [Intune reports](../fundamentals/reports.md).
 
-Apple is expected to release macOS 12 (Monterey) in the fall of 2021. Microsoft Intune, including the Company Portal and Intune MDM agent, will require macOS 10.15 (Catalina) and later shortly after the release of macOS 12.
+### See the IPv4 address and Wi-Fi subnet ID on Android Enterprise devices<!-- 12396463 -->
+Customers will now have the ability to see the IPv4 address and Wi-Fi subnet ID reported for AE corporate-owned fully managed, dedicated, and work profile devices.
 
-### New Android device filtering options<!--7479654 -->
+### Support for bootstrap tokens on enrolled macOS devices (public preview)<!-- 9539461 -->
+Intune will support the use of bootstrap tokens on enrolled devices running macOS, version 10.15 or later.
 
-You'll be able to choose the following Android enrollment types when filtering by OS in the **All devices** list in Intune:
+On macOS 10.15 and later, you can use a bootstrap token to grant a secure token to mobile accounts and device enrollment-created administrator accounts. 
 
-- Android (personally-owned work profile)
-- Android (corporate-owned work profile)
-- Android (fully managed)
-- Android (dedicated)
-- Android (device administrator)
+On macOS 11 and later, you can use a bootstrap token to grant a secure token to any user, including standard (or local) users. Bootstrap tokens allow for non-admin users to have increased MDM permissions, and perform specific software functions on behalf of the IT admin.
 
-### Support for Locate device remote action on Android Enterprise dedicated devices<!--8589952 -->
+Tokens will be supported on:  
+- Supervised devices (in Intune, that's all user-approved enrollments)
+- Devices enrolled in Intune via Apple automated device enrollment
 
-You'll be able to use the **Locate device** remote action to get the current location of a lost or stolen Android Enterprise dedicated device that is online. For an offline device, you can get the last known location (for a limited time). For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
+For more information about bootstrap tokens, see the Apple Support topic for [Using secure and bootstrap tokens](https://support.apple.com/guide/deployment/use-secure-and-bootstrap-tokens-dep24dbdcf9e/1/web/1.0).  
 
-### Android Enterprise dedicated devices will support the Rename remote action<!--8590028 -->
-
-You'll be able to use the Rename remote action on Android Enterprise dedicated devices. You can rename devices individually and in bulk. When using bulk Rename actions, you must include either a random number or the device's serial number.
-
-### New device restriction setting for Android Enterprise: Developer settings<!--10510385 -->
-
-A new Android Enterprise device restriction setting will be available: Developer settings. When set to **Allow**, the setting lets users access developer settings on the device. By default, it's set to **Not configured**.
-
-### New iOS device restriction settings for connected devices, doc viewing  <!--10119553 -->
-
-There will be two new device restriction settings you can configure on iOS devices (**Devices** > **iOS/iPadOS** > **Configuration profiles** > **Create profile**  and select **Device restrictions** for profile) in Intune.  
-
-- **Block Siri for translation** (Connected devices): Disables the connection to Siri servers so that users can't use Siri to translate text. Applies to iOS and iPadOS versions 15 and later.  
-- **Allow copy/paste to be affected by managed open-in** (App Store, Doc Viewing, Gaming): Enforces copy/paste restrictions based on how you configured **Block viewing corporate documents in unmanaged apps**  and **Block viewing non-corporate documents in corporate apps**.
-
-For more information about iOS device restriction profiles in Intune, see [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
-
-### New macOS device restriction setting blocks users from erasing all content and settings on device<!--10131859 -->
-
-When creating a device restriction policy for macOS devices, there will be a new general setting available (**Devices** > **macOS** > **Configuration profiles** > **Create profile** > and then select **Templates** > **Device restrictions** for profile) that lets you Block users from erasing all content and settings on device. Use this setting to disable the reset option on supervised devices, so that users can't reset their device to factory settings.
-
-For more information about macOS device restriction profiles in Intune, see [macOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-macos.md).
-
-Applies to:
-
-- macOS version 12 and later
-
-### New software update restriction settings for macOS<!--10255184 -->
-
-There will be five new software update settings available when configuring a macOS device restriction profile (**Devices** > **macOS** > **Configuration profiles** > **Create profile** > and then select **Templates** > **Device restrictions** for profile) in Intune.  
-
-- **Defer software updates** (General): Prevents users from seeing certain types of newly released updates until after a deferral period. Deferring software updates doesn't stop or change scheduled updates. Types of software updates you can defer include: **Major OS software updates**, **Minor OS software updates**, **Non-OS software updates**, or any combination of the three.
-
-- **Delay default visibility of software updates**(General): Defers the default visibility of all software updates for up to 90 days.  After the deferral period, updates will become available to users. This value takes precedence over the default visibility value. Applies to macOS, version 10.13.4 and later.  
-- **Delay visibility of major OS software updates**(General):  Delays visibility of major OS software updates for up to 90 days. After the deferral period, updates will become available to users. This value takes precedence over the default visibility value. Applies to macOS, version 11.3 and later.  
-
-- **Delay visibility of minor OS software updates**(General): Delays visibility of minor OS software updates for up to 90 days. After the deferral period, updates will become available to users. This value takes precedence over the default visibility value. Applies to  macOS, version 11.3 and later.  
-- **Delay visibility of non OS software updates**(General): Delays visibility of non-OS software updates (such as Safari updates) for up to 90 days. After the deferral period, updates will become available to users. This value takes precedence over the default visibility value. Applies to macOS, version 11.0 and later.
-
-For more information about macOS device restriction profiles in Intune, see [macOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-macos.md).  
+### Enroll macOS virtual machines running Apple silicon<!-- 13242738 -->
+Use the Company Portal app for macOS to enroll virtual machines running on Apple silicon. Intune supports using macOS virtual machines for testing purposes only. For more information about how to set up macOS enrollment in Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md).  
 
 <!-- ***********************************************-->
-## Intune apps
 
-### Intune management agent for macOS devices will be a universal app<!-- 9294405  -->
+## Device configuration
 
-When you deploy shell scripts or custom attributes for macOS devices from Microsoft Endpoint Manager, it will deploy the new universal version of the Intune management agent app that runs natively on Apple Silicon Mac machines. The same deployment will install the x64 version of the app on Intel Mac machines. For related information, see [Microsoft Intune management agent for macOS](../apps/macos-shell-scripts.md#microsoft-intune-management-agent-for-macos).
+### Google Chrome settings are in Settings Catalog and Administrative Templates <!-- 6198569 -->
+Currently, to configure Google Chrome settings on Windows devices, you create a custom OMA-URI device configuration policy. Google Chrome settings will be included in the Settings Catalog and Administrative Templates.
 
-### Syncing the iOS/iPadOS/macOS Company Portal version<!-- 10535709  -->
+For more information on these policy types, see:
+- [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md)
+- [Use ADMX templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
 
-The version of the iOS/iPadOS Company Portal and the macOS Company Portal syncing to version 5.2019 for the next release. Going forward, the iOS/iPadOS and macOS Company Portal apps will have the same version number. For related information, see [How to configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
+Applies to:
+- Windows 10/11
 
-### Improved flow when saving logs in Android Company Portal app<!-- 10414688  -->
+### Android (AOSP) will support scope tags and RBAC settings<!-- 8503981 -->
+When you create a policy for Android (AOSP), you can use role-based access control (RBAC) and scope tags.
 
-In the Android Company Portal app, when users need to download a copy of the Android Company Portal logs they will be prompted to choose a folder location. In the Android Company Portal app, users will select **Settings** > **Diagnostic logs** > **SAVE LOGS** to choose the folder location.
+For more information on these features, see:
+- [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
+- [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md)
 
-#### Notifications from the iOS/iPadOS Company Portal app<!-- 10565849 -->
+Applies to:
+- Android Open Source Project (AOSP)
 
-Notifications from the iOS/iPadOS Company Portal app will now be delivered to devices using the default Apple sound, rather than being delivered silently. To turn the notification sound off from the iOS/iPadOS Company Portal app, select **Settings** > **Notifications** > **Comp Portal** and select the **Sound** toggle. For related information, see [Company Portal app notifications](../apps/company-portal-app.md#company-portal-app-notifications).
+### Endpoint security profiles support filters; See the filter status on a device configuration profile report<!-- 11889620 -->
+There are some new features when using filters:
+- When you create a device configuration profile for Windows devices, a per-policy report will show reporting information in the **Device and user check-in status** (**Devices** > **Configuration profiles** > Select an existing policy).
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+  When you select **View report**, the report has an **Assignment Filter** column. Use this column to determine if a filter successfully applied to your policy.
+
+- Endpoint Security policies will support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create. 
+- When you create a new endpoint security policy, it will automatically use the [new device configuration profile reporting](../fundamentals/in-development.md#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
+
+For more information on filters, see:
+- [Use filters when assigning your apps, policies, and profiles](filters.md)
+- [List of platforms, policies, and app types supported by filters](filters-supported-workloads.md)
+
+Applies to:
+- All platforms
+
+Does not apply to:
+- Administrative Templates (Windows 10/11)
+- Device Firmware Configuration Interface (DFCI) (Windows 10/11)
+- OEMConfig (Android Enterprise)
+
+### Use the Settings Catalog to create a Universal Print policy on Windows 11 devices<!-- 5513123 -->
+Many organizations are moving their printer infrastructure to the cloud. [Universal Print](/universal-print/fundamentals/universal-print-whatis) is a cloud-based printing solution for Microsoft 365 customers. It uses built-in cloud printers, built-in legacy printers, and runs entirely in Microsoft Azure. When Universal Print is deployed with Universal Print-compatible printers, it doesn't require any on-premises infrastructure. 
+
+In the Endpoint Manager admin center, you'll be able to use the Settings Catalog to create a printer policy (**Device configuration** > **Create profile** > **Windows 10 and later** for platform > **Settings catalog** for profile type > **Printer provisioning**). When you deploy the policy, users select the printer from a list of registered Universal Print printers, and can also select a default printer.
+
+Currently, you must use the [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool), which requires more manual steps, and has some limitations.
+
+Applies to:
+- Windows 11
+
+### New macOS settings in the Settings Catalog<!-- 13111526 -->
+
+The Settings Catalog will have new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
+
+**User Experience > Accessibility**:
+
+- Close View Far Point
+- Close View Hotkeys Enabled
+- Close View Near Point
+- Close View Scroll Wheel Toggle
+- Close View Smooth Images
+- Contrast
+- Flash Screen
+- Mouse Driver
+- Mouse Driver Cursor Size
+- Mouse Driver Ignore Trackpad
+- Mouse Driver Initial Delay
+- Mouse Driver Max Speed
+- Slow Key
+- Slow Key Beep On
+- Slow Key Delay
+- Stereo as Mono
+- Sticky Key
+- Sticky Key Beep On Modifier
+- Sticky Key Show Window
+- Voice Over On Off Key
+- White On Black
+
+**Air Play**:
+
+- Allow List
+- Password
+
+**User Experience > Desktop**: 
+
+- Override Picture Path
+
+**Preferences > Global Preferences**: 
+
+- Auto Log Out Delay
+- Multiple Session Enabled
+
+**Printing > Printing**: 
+
+- Require Admin To Print Locally
+
+**Security > Security Preferences**: 
+
+- Do Not Allow Firewall UI
+- Do Not Allow Lock Message UI
+- Do Not Allow Password Reset UI
+
+**Preferences > System Preferences**:
+
+- Disabled Preference Panes
+- Enabled Preference Panes
+
+**Preferences > User Preferences**: 
+
+- Disable Using Cloud Password
+
+The following settings will also be in Settings Catalog. Currently, they're only available in Templates:
+
+**Printing > Air Print**:
+
+- IP Address 
+- Resource Path
+
+**Login > Login Items**:
+
+- Hide
+
+**Login > Login Window Behavior**:
+
+- Admin Host Info
+- Allow List
+- Deny List
+- Disable Console Access
+- Disable Screen Lock Immediate
+- Hide Admin Users
+- Hide Local Users
+- Hide Mobile Accounts
+- Include Network User
+- Log Out Disabled While Logged In
+- Login Window Text
+- Power Off Disabled While Logged In
+- Restart Disabled
+- Restart Disabled While Logged In
+- Show Full Name
+- Show Other Users Managed
+- Shut Down Disabled
+- Shut Down Disabled While Logged In
+- Sleep Disabled
+
+**System Policy > System Policy Control**:
+
+- Allow Identified Developers
+- Enable Assessment
+
+**System Policy** > **System Policy Managed**:
+
+- Disable Override
+
+There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
+
+Applies to:
+- macOS
+
+<!-- ***********************************************-->
+
 ## Monitor and troubleshoot
 
-### Account protection policy changes in Endpoint security<!--  7492116   -->
+### AppxPackaging event viewer is part of collect diagnostics<!-- 12809781 --> 
+ Intune's remote action to [Collect diagnostics](../remote-actions/collect-diagnostics.md) will soon collect additional details from Windows devices.  (**Devices** > **Windows** > *select a Windows device* > **Collect diagnostics**) 
+ 
+The new details include the **Microsoft-Windows-AppxPackaging/Operational** Event Viewer and the following office log files to assist in troubleshooting office installation issues:
 
-We’re reworking the endpoint security Account protection policy to use the new APIs for Windows Hello for Business. The new APIs will result in a more consistent experience. The new API is *./Device/Vendor/MSFT/PassportForWork*, which includes more options that can help reduce conflicts.   This API replaces the use of  *./User/Vendor/MSFT/PassportForWork*.  (**Endpoint security** > **Account protection**)
-
-After the change, only new policies you then create will use the new API. Your existing policies won’t be affected by this change and will continue to use the older API.
-
-### Filter evaluation report will be improved<!-- 9974516   -->
-
-The **Filter evaluation** page, which shows every app or policy that was filtered, will be improved to include results for available app assignments. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices** > *select a device* > **Filter evaluation**.
-
-### Device filter evaluation reports now include filter results for assigned apps<!-- 9974516   -->
-
-If you’re using filters for assigning apps as available, you can now use the filter evaluation report on a device to determine if an app has been made available for install. You can see this report per device, under **Devices > All Devices > select a device > Filter evaluation (preview)**.
-
-- For more information on filters, see [Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
-- For more information on filter reports, see [Filter reports and troubleshooting in Microsoft Endpoint Manager](filters-reports-troubleshoot.md).
-
-Applies to:
-
-- Android device administrator
-- Android Enterprise
-- iOS/iPadOS
-- macOS
-- Windows 10 and newer
-
-### Update to the Assignment failures operational report<!-- 6473096  -->
-
-We will be adding [security baselines](../protect/security-baselines.md) and endpoint security profiles to the existing **Assignment failures** report. Role-based access control (RBAC) permissions will be applied to the report to filter on the set of policies that an admin can see. The profile types are differentiated using the **Policy type** column with the ability to filter. The report will show the number of devices in a state of error and conflict for a given profile, with the ability to drill down into a detailed list of those devices or users and further into the setting details. You can find the **Assignment failures** report in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Monitor**, or by selecting **Endpoint Security** > **Monitor**. For more information, see [Assignment failures report (Operational)](../fundamentals/reports.md#assignment-failures-report-operational).
-
-### Organizational report focused on device configuration<!-- 8455708  -->
-
-We will be releasing a new **Device configuration** organizational report. This report will replace the existing **Assignment status** report found in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Devices** > **Monitor**. The **Device configuration** report will allow you to generate a list of profiles in the tenant that have devices in a state of success, error, conflict, or not applicable. You can use filters for the profile type, OS, and state. The returned results will provide search, sort, filter, pagination, and export capabilities. In addition to device configuration details, this report will provide resource access details, and new settings catalog profile details. For related information, see [Intune Reports](../fundamentals/reports.md).
-
-<!-- ***********************************************
-## Role-based access control
--->
+`%windir%\temp\%computername%*.log`<br>
+`%windir%\temp\officeclicktorun*.log`
 
 <!-- ***********************************************-->
-## Scripting
-
-### Update when exporting Intune reports using the Graph API<!-- 8764428  -->
-
-When you use the Graph API to export Intune reports without selecting any columns for the devices report, you'll receive the default column set. To reduce confusion, we'll be removing columns from the default column set starting January 2021. The columns being removed are `PhoneNumberE164Format`, `_ComputedComplianceState`, `_OS`, and `OSDescription`. These columns will still be available for selection if you need them, but only explicitly, and not by default. If you have built automation around the default columns of the device export, and that automation uses any of these columns, you need to refactor your processes to explicitly select these and any other relevant columns. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
-
-### Intune Data Warehouse updates<!-- 9370034 -->
-
-The  `applicationInventory`  entity will be removed from the Intune Data Warehouse in an upcoming Intune service release. We're introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
-
-<!-- ***********************************************-->
-## Security
-
-### Attack Surface Reduction profiles for  Configuration Manager tenant attach<!--7323386  -->
-
-We’re adding two endpoint security profiles for *Attack Surface Reduction* to Intune in support of  [Configuration Manager tenant attach](../protect/tenant-attach-intune.md). (**Endpoint security** > **Create Policy** > **Attack surface reduction**)
-
-The new profiles:
-
-- **Exploit Protection** - This profile will allow a device that connects to Intune via tenant attach to receive and apply the exploit protection profile.
-- **Web Protection** - This profile will allow a device that connects to Intune though tenant attach to receive and apply the web protection profile.
-
-For more information about these profiles, see [Attack surface reduction profiles](../protect/endpoint-security-asr-policy.md#attack-surface-reduction-profiles).
-
-### Expanded support for Windows Defender Security Center  for tenant attach devices<!-- 7323443   -->
-
-Today Intune supports Tamper Protection on [tenant attached devices](../protect/tenant-attach-intune.md) through the *Windows Security Experience* profile, which is part of endpoint security Antivirus policy.  
-
-Soon, we'll add additional settings to that profile to configure the Windows Defender Security Center.  (**Endpoint security** > **Antivirus** > **Create Policy** > Platform **Windows 10, and Windows Server (ConfigMgr)** > Profile:
-**Windows Security experience**).
-
-### See policy compliance for a device in tenant attach in Endpoint Manager<!-- 9264837 -->
-
-To manage your devices from the cloud, you can attach your Configuration Manager infrastructure to Endpoint Manager. When deploying Endpoint Security policy to tenant attached devices, you can see the overall compliance status for the policy. With device level reporting, you can see the compliance state for a policy at the device level in the Microsoft Endpoint Manager admin center.
-
-For more information on what you can do in Endpoint Manager in a tenant attach setup, see [Microsoft Endpoint Manager tenant attach](/mem/configmgr/tenant-attach/device-sync-actions).
 
 ## Notices
 

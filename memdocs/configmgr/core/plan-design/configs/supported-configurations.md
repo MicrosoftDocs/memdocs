@@ -2,14 +2,14 @@
 title: Supported configurations
 titleSuffix: Configuration Manager
 description: Identify key configurations and requirements so you can plan, deploy, and maintain a functional Configuration Manager deployment.
-ms.date: 03/05/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-ms.assetid: 45a10878-ff48-4318-9c6d-c014b38a4039
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Supported configurations for Configuration Manager
@@ -35,7 +35,9 @@ Products and product versions that aren't listed in these articles aren't suppor
 
 - [Supported operating systems for clients and devices](supported-operating-systems-for-clients-and-devices.md): Learn about which operating systems you can manage with Configuration Manager. These include Windows, Windows Embedded, macOS, and mobile devices.
 
-- [Support for Windows 10 as a client](support-for-windows-10.md): Learn about the Windows 10 versions that are supported as clients or for OS deployment.
+- [Support for Windows 11](support-for-windows-11.md) and [Support for Windows 10](support-for-windows-10.md): Learn about the Windows 11 and Windows 10 versions that are supported as clients.
+
+- [Support for the Windows ADK](support-for-windows-adk.md): Learn about the Windows Assessment and Deployment Kit (Windows ADK) version that are supported with Configuration Manager current branch for OS deployment.
 
 - [Supported operating systems for the console](supported-operating-systems-consoles.md): Learn about which operating systems can host the Configuration Manager console.
 

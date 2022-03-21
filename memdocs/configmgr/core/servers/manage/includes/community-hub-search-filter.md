@@ -4,6 +4,7 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 03/02/2021
+ms.localizationpriority: medium
 ---
 <!--This file is shared by the community-hub and community-hub-extensions.md files for 8516139. H2s/H3s are driven by the article-->
 

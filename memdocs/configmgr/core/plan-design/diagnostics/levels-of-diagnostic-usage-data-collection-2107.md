@@ -9,6 +9,7 @@ ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Diagnostic and usage data for version 2107
@@ -40,7 +41,7 @@ For Configuration Manager version 2107, this level includes the following data:
 
 - Count of Configuration Manager client versions, OS versions, and Office versions
 
-- Count of Windows 10 devices by branch, build, and unique Active Directory forest
+- Count of Windows 10 and later devices by branch, build, and unique Active Directory forest
 
 - Count of clients joined to Azure Active Directory
 
@@ -164,7 +165,7 @@ For Configuration Manager version 2107, this level includes the following data:
 
 - Basic OS deployment counts of images
 
-- Count of Windows 10 clients that use Windows Update for Business
+- Count of Windows clients that use Windows Update for Business
 
 - Count of operating systems for managed devices and policies set by the Exchange Connector
 
@@ -212,7 +213,7 @@ For Configuration Manager version 2107, this level includes the following data:
 
 - Count of package/program deployments
 
-- Count of Windows 10 licensed application licenses
+- Count of Windows 10 and later licensed application licenses
 
 - Count of Windows Installer deployment types by uninstall content settings
 
@@ -462,7 +463,7 @@ For Configuration Manager version 2107, this level includes the following data:
 
 ### On-premises mobile device management (MDM) (Level 2)
 
-- Count of Windows 10 bulk enrollment packages and profiles
+- Count of Windows bulk enrollment packages and profiles
 
 - Deployment success/failure statistics for on-premises MDM application deployments
 
@@ -500,7 +501,7 @@ For Configuration Manager version 2107, this level includes the following data:
 
 - Grouped sizes of task sequence policies
 
-- Count of error codes from feature upgrades for Windows 10 clients
+- Count of error codes from feature upgrades for Windows clients
 
 - ***[NEW]*** Count of supported and unsupported OS versions
 
@@ -520,9 +521,9 @@ For Configuration Manager version 2107, this level includes the following data:
 
 - Cluster patching statistics
 
-- Configuration of Windows 10 express updates
+- Configuration of Windows express updates
 
-- Configurations that are used for active Windows 10 servicing plans
+- Configurations that are used for active Windows servicing plans
 
 - Count of deployed Microsoft 365 Apps updates
 
@@ -556,7 +557,7 @@ For Configuration Manager version 2107, this level includes the following data:
 
 - Update scan error codes and machine count
 
-- Windows 10 dashboard content versions
+- Windows servicing dashboard content versions
 
 - Count of third-party software update catalog subscriptions and usage
 

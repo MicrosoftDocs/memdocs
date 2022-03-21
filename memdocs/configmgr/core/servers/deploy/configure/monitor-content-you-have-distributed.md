@@ -2,13 +2,14 @@
 title: Monitor content
 titleSuffix: Configuration Manager
 description: Understand how to monitor distributed content by using the Configuration Manager console.
-ms.date: 07/15/2021
+ms.date: 10/13/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Monitor content you distribute with Configuration Manager
@@ -23,8 +24,10 @@ Use the Configuration Manager console to monitor distributed content, including:
 - The state of content assigned to a distribution point.
 - The status of optional features for each distribution point (content validation, PXE, and multicast).
 
-> [!NOTE]
-> Configuration Manager only monitors the content on a distribution point that's in the content library. It doesn't monitor content stored on the distribution point in package or custom shares.
+Configuration Manager only monitors the content on a distribution point that's in the content library. It doesn't monitor content stored on the distribution point in package or custom shares.
+
+> [!TIP]
+> The [Power BI sample reports](../../manage/powerbi-sample-reports.md) for Configuration Manager includes a report called **Content Status**. This report can also help with monitoring content. <!--5679791, 10123832, 10131458, 10488910-->  
 
 ## Content status monitoring
 
@@ -190,9 +193,9 @@ Displays the sources from which clients got content:
 >
 > - Configure the client setting, **Enable installation of Express Updates on clients** in the Software Updates group
 >
-> - Deploy Windows 10 express updates
+> - Deploy Windows express updates
 >
-> For more information, see [Manage Express installation files for Windows 10 updates](../../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
+> For more information, see [Manage Express installation files for Windows updates](../../../../sum/deploy-use/manage-express-installation-files-for-windows-10-updates.md).
 
 #### Content downloads using fallback source
 

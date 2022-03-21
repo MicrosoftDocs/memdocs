@@ -5,13 +5,11 @@ description: A plan for the software update point infrastructure is essential be
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 06/21/2021
+ms.date: 10/20/2021
 ms.topic: conceptual
-ms.prod: configuration-manager 
+ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: d071b0ec-e070-40a9-b7d4-564b92a5465f
-
-
+ms.localizationpriority: medium
 ---
 
 # Plan for software updates in Configuration Manager
@@ -155,7 +153,7 @@ Place a software update point in an internet-facing network and enable it to all
 For more information on the advantages and disadvantages of internet-based client management, see [Manage clients on the internet](../../core/clients/manage/manage-clients-internet.md).
 
 #### Windows Update for Business
-Windows Update for Business allows you to keep Windows 10 devices always up-to-date with the latest quality and feature updates. These devices connect directly to the Windows Update cloud service. Configuration Manager can differentiate between Windows 10 computers that use WUfB and WSUS for getting software updates.
+Windows Update for Business allows you to keep Windows 10 or later devices always up-to-date with the latest quality and feature updates. These devices connect directly to the Windows Update cloud service. Configuration Manager can differentiate between Windows computers that use WUfB and WSUS for getting software updates.
 
 For more information, see [Integration with Windows Update for Business](../deploy-use/integrate-windows-update-for-business-windows-10.md).
 
@@ -169,10 +167,10 @@ By default, the software update management process in Configuration Manager uses
 
 For more information, see [Download software updates](../deploy-use/download-software-updates.md).
 
-#### Manage express installation files for Windows 10
-Configuration Manager supports the use of express installation files for Windows 10 updates. Express update files and supporting technologies such as Delivery Optimization can help reduce the network impact of large content files downloading to clients. 
+#### Manage express installation files for Windows 10 or later
+Configuration Manager supports the use of express installation files for Windows updates. Express update files and supporting technologies such as Delivery Optimization can help reduce the network impact of large content files downloading to clients. 
 
-For more information, see [Optimize Windows 10 update delivery](../deploy-use/optimize-windows-10-update-delivery.md).
+For more information, see [Optimize Windows update delivery](../deploy-use/optimize-windows-10-update-delivery.md).
 
 #### Clients download content from the internet
 When you deploy software updates to clients, configure the deployment for clients to download content from the Microsoft Update cloud service. When clients aren't able to download content from another content source, they can still download the content from the internet. 
@@ -339,7 +337,7 @@ Configuration Manager supports synchronization of the following update classific
 
 -   **Updates**: An update to an application or file that's currently installed.  
 
--   **Upgrades**: A feature update to a new version of Windows 10.  
+-   **Upgrades**: A feature update to a new version of Windows.  
 
 Configure the update classification settings only on the top-level site. The update classification settings aren't configured on the software update point on child sites, because the software updates metadata is replicated from the top-level site. When you select the update classifications, be aware the more classifications that you select, the longer it takes to synchronize the software updates metadata.  
 
@@ -424,6 +422,7 @@ You can specify the maximum amount of time a software update installation has to
 
 - **Maximum run time for Office 365 updates and non-feature updates for Windows (minutes)**
   - **Non-feature updates** - An update that isn't a feature upgrade and whose product is listed as one of the following:
+    - Windows 11
     - Windows 10 (all versions)
     - Windows Server 2012
     - Windows Server 2012 R2

@@ -1,15 +1,15 @@
 ---
 title: Troubleshoot tenant attach and device actions
 titleSuffix: Configuration Manager
-description: "Troubleshoot tenant attach and device actions for Configuration Manager"
-ms.date: 08/11/2020
+description: Troubleshoot tenant attach and device actions for Configuration Manager.
+ms.date: 09/09/2021
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 44c2eb8a-3ccc-471f-838b-55d7971bb79e
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # Troubleshooting tenant attach and device actions
@@ -124,6 +124,57 @@ Ensure the user running the action from the Microsoft Endpoint Manager admin cen
 
 
 ## Known issues
+
+### Data synchronization failures
+
+<!-- 10877392 -->
+
+If you have issues viewing the tenant attach details in the Microsoft Endpoint Manager admin center, it may be because of an issue with the hierarchy onboarding configuration. This issue can be caused by onboarding a hierarchy that's already onboarded.
+
+You can also detect this issue from entries in the **GenericUploadWorker.log** and **CMGatewayNotificationWorker.log** files. For more information, see [Example errors in log files that require resetting the tenant attach configuration](#example-errors-in-log-files-that-require-resetting-the-tenant-attach-configuration).
+
+#### Workaround for data synchronization failures
+
+To reset the tenant attach configuration:
+
+1. Offboard the hierarchy. For more information, see [Offboard from tenant attach](device-sync-actions.md#bkmk_offboard).
+
+1. Wait at least two hours for the service to clean up the existing record.
+
+1. Onboard the hierarchy again. For more information, see [Enable tenant attach](device-sync-actions.md).
+
+#### Example errors in log files that require resetting the tenant attach configuration
+
+##### Errors for AccountOnboardingInfo and DevicePost requests in GenericUploadWorker.log
+
+```log
+[OnboardScenario] Creating web request to: https://us.gateway.configmgr.manage.microsoft.com/api/gateway/AccountOnboardingInfo Method: POST Activity ID: ed2186a0-fb43-4cf1-84df-9283dd45a461 Timeout: 00:02:00
+[OnboardScenario] Response from https://us.gateway.configmgr.manage.microsoft.com/api/gateway/AccountOnboardingInfo is: 400 (Bad Request)
+Response status code: 400 (BadRequest) Activity ID: a579728b-eca0-4144-80ac-eea25ee5bcf6
+Unexpected exception for worker GenericUploadWorker
+Exception details:
+[Critical][GenericUploadWorker][0][System.Net.WebException][0x80131509]
+The remote server returned an error: (400) Bad Request.    at Microsoft.ConfigurationManager.ServiceConnector.ExtensionMethods.<GetResponseAsync>d__13.MoveNext()
+
+[UploadDelta_HelpdeskUpload] Response from https://us.gateway.configmgr.manage.microsoft.com/api/gateway/DevicePost is: 401 (Unauthorized)
+Response status code: 401 (Unauthorized) Activity ID: 6daac983-5f94-464e-b1bd-9b634a051d1d
+[WebException]: Failed to upload data to 'https://us.gateway.configmgr.manage.microsoft.com/api/gateway/DevicePost'
+Exception details:
+[Warning][GenericUploadWorker][0][System.Net.WebException][0x80131509]
+The remote server returned an error: (401) Unauthorized.    at Microsoft.ConfigurationManager.ServiceConnector.ExtensionMethods.<GetResponseAsync>d__13.MoveNext()
+```
+
+##### Errors for device actions in CMGatewayNotificationWorker.log
+
+```log
+[GetNotifications] Response from https://us.gateway.configmgr.manage.microsoft.com/api/gateway/Notification is: 401 (Unauthorized)
+Response status code: 401 (Unauthorized) Activity ID: 4c536a72-fd7f-4d08-948a-3e65d2129e44
+Web exception when getting new notification
+Exception details:
+[Warning][CMGatewayNotificationWorker][0][System.Net.WebException][0x80131509]
+The remote server returned an error: (401) Unauthorized.    at Microsoft.ConfigurationManager.ServiceConnector.ExtensionMethods.<GetResponseAsync>d__13.MoveNext()
+Response in the web exception: {"Message":"An error has occurred."}
+```
 
 ### Specific devices don't synchronize
 

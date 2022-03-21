@@ -2,14 +2,15 @@
 title: How to set up the admin service
 titleSuffix: Configuration Manager
 description: Use the steps in this article to set up the administration service on your SMS Provider
-ms.date: 11/30/2020
+ms.date: 12/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
-ms.assetid: 829eb4a4-8791-4746-a777-1fb0382b6d7c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # How to set up the administration service in Configuration Manager
@@ -22,63 +23,14 @@ Use the steps in this article to set up the administration service on your SMS P
 
 Configure the administration service to use a secure HTTPS connection to protect the data in transit across the network.
 
-Starting in version 2010,<!--8613105--> you no longer need to enable IIS on the SMS Provider for the administration service. The site creates a self-signed certificate for the SMS Provider, and automatically binds it without requiring IIS. If you previously had IIS installed on the SMS Provider, you can remove it. Then restart the SMS_REST_PROVIDER component. Remember that you need to open HTTPS port 443 on your firewall. 
+Starting in version 2010,<!--8613105--> you no longer need to enable IIS on the SMS Provider for the administration service. The site creates a self-signed certificate for the SMS Provider, and automatically binds it without requiring IIS. If you previously had IIS installed on the SMS Provider, you can remove it. Then restart the SMS_REST_PROVIDER component. Remember that you need to open HTTPS port 443 on your firewall.
 
-Starting in version 2002,<!--5728365--> the administration service automatically uses the site's self-signed certificate. This change helps reduce the friction for easier use of the administration service. The site always generates this certificate. Now the administration service ignores the Enhanced HTTP site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP. You can still manually bind a PKI-based server authentication certificate. If you've already bound a PKI certificate to port 443 on the SMS Provider server, the administration service uses that existing certificate.
-
-In version 1910 and earlier, use one of the following options:
-
-- Enable the site to use Enhanced HTTP (recommended)
-
-- Manually bind a server authentication certificate to port 443 in IIS on the server that hosts the SMS Provider role. This certificate can come from your organization's PKI, or from a third-party certificate provider.
-
-### Enable Enhanced HTTP
-
-> [!NOTE]
-> The configuration in this section applies to version 1910 and earlier.
->
-> Starting in version 2002, the administration service automatically uses the site's self-signed certificate. The Enhanced HTTP site setting to **Use Configuration Manager-generated certificates for HTTP site systems** only controls whether site systems use it or not. Now the administration service ignores this site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP.
-
-If you enable [Enhanced HTTP](../../core/plan-design/hierarchy/enhanced-http.md), the site generates certificates for site system roles like the SMS Provider. The site server issues and signs these certificates with its self-signed **SMS Issuing** root certificate. This option doesn't require a public key infrastructure (PKI). Configuration Manager creates and manages the certificates, and binds them to the IIS services as needed.
-
-When the site creates a certificate for the SMS Provider, clients won't trust it by default. If you try to access the administration service from a web browser on a client, you may see a security warning. Export the SMS Issuing root certificate from the Configuration Manager site, and install it on clients in the Trusted Root Certification Authorities store.
-
-1. In the Configuration Manager console, go to the **Administration** workspace. Expand the **Security** node, and select **Certificates**.
-
-1. Search for the **SMS Issuing** certificate. You can also locate it by this name in the **Issued To** column.
-
-1. If there's more than one SMS Issuing certificate, select the current valid certificate.
-
-1. In the ribbon, on the **Home** tab, select **Properties**. This action opens the standard Windows certificate properties.
-
-1. To easily add the certificate to the local computer, select **Install Certificate**.
-
-    1. In the Certificate Import Wizard, select **Local Machine** for the store location. To continue, you need to have local administrative rights on the computer.
-    1. Select **Place all certificates in the following store** and then select **Browse**. Select **Trusted Root Certification Authorities**.
-    1. Finish the certificate import wizard.
-
-    > [!NOTE]
-    > This action only imports the SMS Issuing certificate to the local computer where you're currently running the Configuration Manager console.
-
-1. To install the certificate on multiple computers, first export it to a file. In the certificate properties window, switch to the **Details** tab. Select **Copy to File**.
-
-    1. On the **Export File Format** page of the Certificate Export Wizard, select the default certificate format, **DER encoded binary X.509 (.CER)**.
-    1. On the **File to Export** page, specify a path and file name with the `.cer` file extension.
-    1. Finish the certificate export wizard.
-
-    > [!IMPORTANT]
-    > Store this exported certificate in a secure location. Any device with this root certificate trusts any certificate that the Configuration Manager site issues.
-
-1. Distribute and import the root certificate to the Trusted Root Certification Authorities store on any computer that you want to access the administration service.
-
-    - Manually import the certificate where you need it. See the steps above for the Certificate Import Wizard.
-    - Use Configuration Manager to distribute and install the certificate using a custom script. For example, use the [Import-Certificate](/powershell/module/pki/import-certificate) PowerShell cmdlet.
-    - Use the following Active Directory group policy: **Computer Configuration\Policies\Windows Settings\Security Settings\Public Key Policies\Trusted Root Certification Authorities**
+The administration service automatically uses the site's self-signed certificate.<!--5728365--> This behavior helps reduce the friction for easier use of the administration service. The site always generates this certificate. The administration service ignores the Enhanced HTTP site setting, as it always uses the site's certificate even if no other site system is using Enhanced HTTP. You can still manually bind a PKI-based server authentication certificate. If you've already bound a PKI certificate to port 443 on the SMS Provider server, the administration service uses that existing certificate.
 
 ### Use a server authentication certificate
 
 > [!NOTE]
-> Starting in version 2002, by default the administration service automatically uses the site's self-signed certificate. You can still manually bind a PKI-based server authentication certificate. Before you can bind your PKI-based certificate, manually unbind the site's self-signed certificate from port 443 on the SMS Provider.
+> By default, the administration service automatically uses the site's self-signed certificate. You can still manually bind a PKI-based server authentication certificate. Before you can bind your PKI-based certificate, manually unbind the site's self-signed certificate from port 443 on the SMS Provider.
 
 There are two primary methods of using a server authentication certificate:
 
@@ -151,6 +103,9 @@ To access the administration service from the internet, replace the SMS Provider
 >    ```
 
 ## Enable console usage
+
+> [!NOTE]
+> Starting in version 2111, the option to **Enable the Configuration Manager console to use the administration service** is removed. The administration service is always on, so the console will use it when needed.<!-- 12377138 -->
 
 <!--4223683-->
 Enable some nodes of the Configuration Manager console to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI.
