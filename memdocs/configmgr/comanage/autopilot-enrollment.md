@@ -2,7 +2,7 @@
 title: How to enroll with Autopilot
 titleSuffix: Configuration Manager
 description: Enable clients to enroll with co-management when they provision with Windows Autopilot.
-ms.date: 09/03/2021
+ms.date: 04/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
@@ -39,7 +39,7 @@ The following components are required to support Autopilot into co-management:
 
   - User-driven scenario only
 
-- Configuration Manager version 2010 or later
+- Configuration Manager version 2011 or later, and the following features:
 
   - Set up a cloud management gateway (CMG). For more information, see [CMG overview](../core/clients/manage/cmg/overview.md).
 
@@ -71,7 +71,7 @@ Use the following process to configure the co-management policy in Intune:
 
 1. Specify the client installation command-line parameters. You can copy these parameters from the co-management properties page.
 
-:::image type="content" source="media/intune-comanage-settings.png" alt-text="Co-management settings in Microsoft Intune.":::
+    :::image type="content" source="media/intune-comanage-settings.png" alt-text="Co-management settings in Microsoft Intune.":::
 
 1. After you configure these settings, go to the **Assignments** page and select a target group. For more information, see [Assign user and device profiles in Microsoft Intune](../../intune/configuration/device-profile-assign.md).
 
