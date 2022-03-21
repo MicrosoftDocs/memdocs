@@ -55,8 +55,6 @@ Before you can run reports for remote control, install the reporting services po
 
 - Permitted viewers must be given permission to use remote control by adding these users to the **Permitted viewers of Remote Control and Remote Assistance** list in the **Remote Tools** client settings.
 
-- If the user account that you use for remote control is joined to Azure Active Directory (Azure AD), you may need to set a group policy setting on the client to be remote-controlled. In the policy path **Computer Configuration\Windows Settings\Security Settings\Local Policies\Security Options**, enable the following policy: **Network security: Allow PKU2U authentication requests to this computer to use online identities**. Also add the Azure AD user account to the local **Remote Desktop Users** group on the client.
-
 For more information, see [Configure role-based administration](../../../servers/deploy/configure/configure-role-based-administration.md).
 
 ### Remote clients
