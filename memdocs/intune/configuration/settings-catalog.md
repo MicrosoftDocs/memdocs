@@ -191,25 +191,29 @@ The **Templates** include a logical group of settings, such as device restrictio
 
 The **Settings catalog** lists all the available settings. If you want to see all the available Firewall settings, or all the available BitLocker settings, then use this option. Also, use this option if you're looking for specific settings.
 
-## Device vs. User Scope settings
-When selecting settings it is important to note that some settings have a (User) tag in the name.
-This denotes that the setting is user scope as described here: https://docs.microsoft.com/en-us/windows/client-management/mdm/policy-configuration-service-provider
+## Device scope vs. user scope settings
 
-Device and user groups are used for assignment while device and user scopes describe how a policy is enforced.
+When selecting settings, some settings have a `(User)` tag or `(Device)` tag in the setting name, such as `Allow EAP Cert SSO (User)` or `Grouping (Device)`. When you see these tags, the policy only affects the user scope or the device scope.
 
-When deploying policy from Intune, you can assign either scope to any type of target group. Behavior of the policy per user will vary based on the scope of the setting. User scoped policy writes to HKCU and device scoped policy writes to HKLM.
+For more information on user scope and device scope, see the [Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider).
 
-When a device checks into Intune it will always present a deviceID and may or may not present a userID depending on the timing of the check-in and if there is a user logged in.
+Device and user groups are used when you assign your policies. Device and user scopes describe how a policy is enforced.
 
-These are the four possible combinations of scope and assignment and the expected behavior:
-•	If a device scope policy is assigned to a device, all users on that device will have that setting applied.
-•	If a user scope policy is assigned to a device, all users on that device will have that setting applied. This is basically loopback set to merge.
+When deploying policy from Intune, you can assign user scope or device scope to any type of target group. Behavior of the policy per user depends on the scope of the setting:
 
-•	If a user scoped policy is assigned to a user, only that user will have that setting applied.
-•	If a device scoped policy is assigned to a user, once that user logs in and a sync takes place, the device scope settings will apply to all users using that machine.
+- User scoped policy writes to `HKEY Current User (HKCU)`. 
+- Device scoped policy writes to `HKEY Local Machine (HKLM)`.
 
-If there is no user hive during initial check ins, you may see some user scope settings marked as not applicable in the early moments of a device before a user is present.
+When a device checks-in to Intune, the device always presents a `deviceID`. The device may or may not present a `userID`, depending on the check-in timing and if a user is signed in.
 
+These are some possible combinations of scope, assignment, and the expected behavior:
+
+- If a device scope policy is assigned to a device, then all users on that device have that setting applied.
+- If a user scope policy is assigned to a device, then all users on that device have that setting applied. This behavior is like a [loopback set to merge](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy).
+- If a user scoped policy is assigned to a user, then only that user has that setting applied.
+- If a device scoped policy is assigned to a user, once that user signs in and an Intune sync occurs, then the device scope settings applies to all users on the device.
+
+If there is no [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, then you may see some user scope settings marked as not applicable. This behavior happens in the early moments of a device before a user is present.
 
 ## Next steps
 
