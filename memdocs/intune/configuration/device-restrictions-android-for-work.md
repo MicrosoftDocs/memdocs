@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/10/2022
+ms.date: 03/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -354,10 +354,11 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         - **Number of seconds the device is inactive before showing screen saver**: Choose how long the device is idle before showing the screensaver. Enter a value between 1-9999999 seconds. Default is `30` seconds. You must enter a number greater than zero (`0`).
         - **Detect media before starting screen saver**: **Enable** (default) doesn't show the screen saver if audio or video is playing on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the screen saver, even if audio or video is playing.
 
-      > [!NOTE] 
-      > Managed Home Screen will start the screensaver whenever the lock screen appears. If the system's lock screen timeout is longer than the number of seconds for device to
-      > show screensaver then the screen saver will show until the lock screen appears. If the system's lock screen timeout is shorter than the number of seconds the device is 
-      > inactive then the screensaver wil appear as soon as the device's lock screen appears.
+        > [!NOTE] 
+        > Managed Home Screen starts the screensaver whenever the lock screen appears:
+        > 
+        >  - If the system's lock screen timeout is longer than the number of seconds for device to show the screensaver, then the screensaver shows until the lock screen appears.
+        >  - If the system's lock screen timeout is shorter than the number of seconds the device is inactive, then the screensaver shows as soon as the device's lock screen appears.
 
       - **MHS Sign-in screen**: **Enable** shows a sign-in screen on the Managed Home Screen. When set to **Not configured** (default), Intune doesn't change or update this setting. This sign-in screen and related settings are intended for use on dedicated devices enrolled with AAD Shared device mode.
 
