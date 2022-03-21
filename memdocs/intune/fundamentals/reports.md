@@ -138,7 +138,7 @@ To view the **Feature update failures** report, use the following steps:
 
 ## Assignment failures report (Operational)
 
-The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to the this report. The profile types are differentiated using the **Policy type** column. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You can also filter by type and platform, sort based on column, and search by profile name.
+The **Assignment failures** operational report helps you troubleshoot errors and conflicts for configuration profiles that have been targeted to devices. This report will show a list of configuration profiles for the tenant and the number of devices in a state of error or conflict. [Security baselines](../protect/security-baselines.md) and endpoint security profiles have been added to this report. The profile types are differentiated using the **Policy type** column. Using this information, you can drill down to a profile to see a list of devices and users in a failure state related to the profile. Additionally, you can drill down even further to view a list of settings and setting details related to the cause of the failure. You can also filter by type and platform, sort based on column, and search by profile name.
 
 Role-based access control (RBAC) permissions have been applied to the report to filter on the set of policies that an admin can see. Those RBAC permissions include the Security Baseline permission, the Device Configuration permission, and the Device Compliance Policies permission.
 
@@ -168,7 +168,7 @@ And the **Dashboard**:
 
 ## App Install Status report (Operational)
 
-The **App Install Status** report provides a list of apps with versions and installation details. App installation details includes **Version**, **Publisher**, and **Platform**. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well.
+The **App Install Status** report provides a list of apps with versions and installation details. App installation details include **Version**, **Publisher**, and **Platform**. Additionally, the installation details provide the app install and failure totals for devices and users. You have the ability to sort and search this report as well.
 
 To see a generated report, you can use the following steps:
 
@@ -185,7 +185,7 @@ To see a generated report of device state, you can use the following steps:
 2. Select **Apps** > **All Apps** > *Select an app* > **Device Install status**.
 
 > [!NOTE]
-> If the device's platform differs from the application's platform, rather then showing **Not Applicable** for the **Status details** of the entry, the entry will not be provided. For example, if an Android app has been select and the app is targeted to an iOS device, rather than providing a **Not Applicable** device status value, the device status for that entry will not be shown in the **Device Install Status** report.
+> If the device's platform differs from the application's platform, rather than showing **Not Applicable** for the **Status details** of the entry, the entry will not be provided. For example, if an Android app has been select and the app is targeted to an iOS device, rather than providing a **Not Applicable** device status value, the device status for that entry will not be shown in the **Device Install Status** report.
 
 ## All devices report (Operational)
 
@@ -291,8 +291,8 @@ The report is available from the primary **Microsoft Defender Antivirus** worklo
 - If a device has real-time or network protection, as well as the state
 - The status of Windows Defender
 - If Tamper protection is enabled
-- If the device is a virtual machine, or a physical device.
-- Calls out the unhealthy device, the user name, and severity.
+- If the device is a virtual machine, or a physical device
+- Calls out the unhealthy device, the user name, and severity
 
 This report shows data visualizations as a pie chart for a breakdown of agent status count across devices, and includes remote actions. 
 
@@ -317,7 +317,7 @@ Additional reports for Microsoft Defender Antivirus include:
 
 ## Detected malware report (Organizational)
 
-The **Detected malware** report provides the malware state of your organization's devices. This report shows the number of devices with detected malware, as well as malware details. The data found in this report is timely, calls out the device name and severity, as well as other malware related details. This report show a pie chart for the count of devices in each malware state. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting.
+The **Detected malware** report provides the malware state of your organization's devices. This report shows the number of devices with detected malware, as well as malware details. The data found in this report is timely, calls out the device name and severity, as well as other malware related details. This report shows a pie chart for the count of devices in each malware state. The report is available from the primary **Microsoft Defender Antivirus** workload. This report also provides filtering, searching, paging, and sorting.
 
 You can view the **Detected malware** report using the following steps:
 
