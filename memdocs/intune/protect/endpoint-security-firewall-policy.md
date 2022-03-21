@@ -115,7 +115,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 
 - Device name
 - Firewall status
-- User principle name
+- User principal name
 - Target (The method of device management)
 - Last check in time
 

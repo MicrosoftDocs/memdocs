@@ -341,6 +341,9 @@ The view can be joined to other views by using the **CI_ID**, **AssignmentID**, 
 Lists all software updates, by **CI_ID**, in software update deployments, listed by **AssignmentID**, and summarized state reported by targeted clients. The view includes the target collection ID and name; the time of the last summarization; the total number of client computers targeted; the count of client computers reporting unknown, not applicable, missing (required), and present (already installed) states; the number of clients that have installed the software update and failed to install the update; and so on. The view is also listed and described in the [Software Updates Views in Configuration Manager](software-updates-views-configuration-manager.md) topic.
 The view can be joined to other views by using the **CI_ID**, **AssignmentID**, and **CollectionID** columns.
 
+> [!NOTE]
+> This view has been deprecated, no longer generates summary data, and may be removed in the future.
+
 ### v_UpdateEnforcementSummaryPerCollection
 
 Lists the summary state for all software updates that have been deployed. The view provides the software update, by **CI_ID**, target collection, collection name, and summarized enforcement state reported by clients in the collection. The view is also listed and described in the [Software Updates Views in Configuration Manager](software-updates-views-configuration-manager.md) topic.
