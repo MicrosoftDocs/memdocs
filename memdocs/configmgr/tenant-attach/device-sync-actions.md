@@ -1,5 +1,5 @@
 ---
-title: Microsoft Endpoint Manager tenant attach
+title: Enable Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
 ms.date: 03/21/2022
@@ -13,15 +13,15 @@ ms.localizationpriority: high
 ms.collection: highpri
 ---
 
-# <a name="bkmk_attach"></a> Microsoft Endpoint Manager tenant attach: Device sync and device actions
+# <a name="bkmk_attach"></a> Enable Microsoft Endpoint Manager tenant attach: Device sync and device actions
 <!--3555758 live 3/4/2020  Configuration Manager version 2002 min-->
 *Applies to: Configuration Manager (current branch)*
 
-Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center. Before you enable tenant attach, verify that the [prerequisites for tenant attach](prerequisites.md) have been met.
+Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can upload your Configuration Manager devices to the cloud service and take actions from the **Devices** blade in the admin center.
 
 ## <a name="bkmk_edit"></a> Enable device upload when co-management is already enabled
 
-If you have co-management enabled currently, you'll use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Cloud Attach Configuration Wizard**](#bkmk_config) to enable device upload instead.
+If you have co-management enabled currently, you'll use the co-management properties to enable device upload. When co-management isn't already enabled, [Use the **Cloud Attach Configuration Wizard**](#bkmk_config) to enable device upload instead.  Before you enable tenant attach, verify that the [prerequisites for tenant attach](prerequisites.md) have been met.
 
 When co-management is already enabled, edit the co-management properties to enable device upload using the instructions below:
 
@@ -44,7 +44,7 @@ When co-management is already enabled, edit the co-management properties to enab
 
 ## <a name="bkmk_config"></a> Enable device upload when co-management isn't enabled
 
-If you don't have co-management enabled, you'll use the **Cloud Attach Configuration Wizard** to enable device upload. You can upload your devices without enabling automatic enrollment for co-management or switching workloads to Intune. All Devices managed by Configuration Manager that have **Yes** in the **Client** column will be uploaded. If needed, you can limit upload to a single device collection. If co-management is already enabled in your environment, [Edit co-management properties](#bkmk_edit) to enable device upload instead.
+If you don't have co-management enabled, you'll use the **Cloud Attach Configuration Wizard** to enable device upload. You can upload your devices without enabling automatic enrollment for co-management or switching workloads to Intune. All Devices managed by Configuration Manager that have **Yes** in the **Client** column will be uploaded. If needed, you can limit upload to a single device collection. If co-management is already enabled in your environment, [Edit co-management properties](#bkmk_edit) to enable device upload instead. Before you enable tenant attach, verify that the [prerequisites for tenant attach](prerequisites.md) have been met.
 
 When co-management isn't enabled, use the instructions below to enable device upload:
 

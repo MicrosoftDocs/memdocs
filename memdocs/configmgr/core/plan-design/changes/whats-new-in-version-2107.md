@@ -82,7 +82,7 @@ United States Government customers can now use the following Microsoft Endpoint 
 - Device sync to Intune
 - Device actions in the Microsoft Endpoint Manager admin center
 
-For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisites](../../../tenant-attach/device-sync-actions.md#prerequisites).
+For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisites](../../../tenant-attach/prerequisites.md).
 
 ### Renamed Co-management node to Cloud Attach
 <!--10158821, 10115058-->
