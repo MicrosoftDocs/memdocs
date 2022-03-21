@@ -2,7 +2,7 @@
 title: Tutorial&#58; Enable co-management for existing clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows devices with Configuration Manager.
-ms.date: 10/05/2021
+ms.date: 03/21/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: tutorial
@@ -38,17 +38,17 @@ Use this tutorial when:
 
 ### Azure services and environment
 
-- Azure Subscription ([free trial](https://azure.microsoft.com/free))
+- Azure subscription ([free trial](https://azure.microsoft.com/free))
 - Azure Active Directory Premium
 - Microsoft Intune subscription
-   - An Enterprise Mobility + Security (EMS) Subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS Subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
 
-If not already present in your environment, during this tutorial you'll:
+  > [!TIP]
+  > An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).
 
-- Configure [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (AD) tenant.
+If not already present in your environment, during this tutorial you'll configure [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (Azure AD) tenant.
 
-> [!TIP]
-> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager-).
+> [!NOTE]
+> Devices that are only registered with Azure AD aren't supported with co-management. This configuration is sometimes referred to as _workplace joined_. They need to be either joined to Azure AD or hybrid Azure AD joined. For more information, see [Handling devices with Azure AD registered state](/azure/active-directory/devices/hybrid-azuread-join-plan#handling-devices-with-azure-ad-registered-state).<!-- 9342566 -->
 
 ### On-premises infrastructure
 
