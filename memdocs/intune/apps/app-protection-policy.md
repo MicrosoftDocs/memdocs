@@ -366,7 +366,7 @@ When dealing with different types of settings, an Intune SDK version requirement
  > Note that users targeted with APP policies on non-dedicated devices will not be impacted.
 
 ### Microsoft Teams Android devices
-The Teams app on [Microsoft Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) does not support APP (does not receive policy though the Company Portal app). This means that app protection policy settings will not be applied to Teams on Microsoft Teams Android devices.
+The Teams app on [Microsoft Teams Android devices](https://www.microsoft.com/microsoft-teams/across-devices/devices?rtc=2) does not support APP (does not receive policy through the Company Portal app). This means that app protection policy settings will not be applied to Teams on Microsoft Teams Android devices.
 
 ### Device biometric authentication
 For Android devices that support biometric authentication, you can allow end users to use fingerprint or Face Unlock, depending on what their Android device supports. You can configure whether all biometric types beyond fingerprint can be used to authenticate. Note that fingerprint and Face Unlock are only available for devices manufactured to support these biometric types and are running the correct version of Android. Android 6 and higher is required for fingerprint, and Android 10 and higher is required for Face Unlock.

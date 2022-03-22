@@ -301,7 +301,7 @@ The tool expects the following parameters.
 | `--input`          | Yes      | A semi-colon delimited list of jar files and directories of class files to modify. This should include all jars/directories that you intend to rewrite.                          |
 | `--output`         | Yes      | A semi-colon delimited list of jar files and directories to store the modified classes to. There should be one output entry per input entry, and they should be listed in order. |
 | `--classpath`      | Yes      | The build classpath. This may contain both jars and class directories.                                                                                                           |
-| `--processed`      | No       | A semi-colon delimited list of jar files and directories containing classes which have already been been processed by a previous invocation of the build tool.                   |
+| `--processed`      | No       | A semi-colon delimited list of jar files and directories containing classes which have already been processed by a previous invocation of the build tool.                   |
 | `--excludeClasses` | No       | A semi-colon delimited list containing the names of the classes that should be excluded from rewriting.                                                                          |
 | `--report`         | No       | Directory to write an HTML report about modified classes to. If not specified, no report is written.                                                                             |
 
@@ -734,7 +734,7 @@ When checking the open policy, the `username` should be the UPN/username/email a
 file or cloud service being opened from. `OpenLocation.LOCAL` is not a cloud service location, but may be tagged with 
 an identity to indicate ownership. When opening a file from local storage, the file owner must always be considered, 
 because the file owner's save-as policy may or may not permit other users to open the file. For identity-tagged files, 
-`username` should be the the file owner's identity. For files without an identity tag, 
+`username` should be the file owner's identity. For files without an identity tag, 
 `username` should be null. 
 
 >[!NOTE]
@@ -1055,7 +1055,7 @@ void registerAuthenticationCallback(MAMServiceAuthenticationCallback callback);
 void updateToken(String upn, String aadId, String resourceId, String token);
 ```
 
-1. The app must implement the [MAMServiceAuthenticationCallback] interface to allow the SDK to request an AAD token for the given user and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its registerAuthenticationCallback method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's Application subclass.
+1. The app must implement the [MAMServiceAuthenticationCallback] interface to allow the SDK to request an AAD token for the given user and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its registerAuthenticationCallback method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's Application subclass.
 
 2. The **acquireToken** method should acquire the access token for the requested resource ID for the given user. If it can't acquire the requested token, it should return null.
 
@@ -1655,7 +1655,7 @@ a set of **IdentitySwitchOption** values.
      
 * `DATA_FROM_INTENT`: Use if requesting an identity switch when data
    from the intent will be displayed in the activity. The opposite of
-   `IGNORE_INTENT`. This will cause receive policy for the new
+   `IGNORE_INTENT`. This will cause the receive policy for the new
    identity to treat the intent as incoming data.
    
    For example: Your app receives an intent containing metadata that
@@ -1789,7 +1789,7 @@ In addition to the app's ability to set the identity, a thread, or a context's i
           final AppIdentitySwitchResultCallback callback);
   ```
 
-  * The **AppIdentitySwitchReason** captures the source of the implicit switch, and can accept the values `CREATE`, `RESUME_CANCELLED`, and `NEW_INTENT`.  The `RESUME_CANCELLED` reason is used when activity resume causes PIN, authentication, or other compliance UI to be displayed and the user attempts to cancel out of that UI, generally though use of the back button.
+  * The **AppIdentitySwitchReason** captures the source of the implicit switch, and can accept the values `CREATE`, `RESUME_CANCELLED`, and `NEW_INTENT`.  The `RESUME_CANCELLED` reason is used when activity resume causes PIN, authentication, or other compliance UI to be displayed and the user attempts to cancel out of that UI, generally through use of the back button.
 
 
     * The **AppIdentitySwitchResultCallback** is as follows:
@@ -1962,7 +1962,7 @@ Apps that make use of [MAMDataProtectionManager] should implement a receiver for
 enabled when the buffers were protected. An app can remediate this situation by calling
 `MAMDataProtectionManager.unprotect` on all buffers during this notification. It
 is also safe to call protect during this notification if it is desired to preserve identity
-information -- encryption is guaranteed to be disabled during the notification.
+information (encryption is guaranteed to be disabled during the notification).
 
 
 ### Content Providers

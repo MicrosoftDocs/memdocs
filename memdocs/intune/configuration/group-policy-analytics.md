@@ -51,7 +51,7 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 ## Prerequisites
 
-- In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator with a role that has the **Security Baselines** permission.
+- In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security Baselines** permission.
 
   For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
 

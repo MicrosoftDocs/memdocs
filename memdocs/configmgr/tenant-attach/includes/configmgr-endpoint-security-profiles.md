@@ -13,7 +13,7 @@ The following profiles are supported for devices you manage with Configuration M
 
 - Platform: **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
 
-  - Profile: **Microsoft Defender Antivirus Policy (preview)** - Manage [Antivirus policy settings for Configuration Manager devices](../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
+  - Profile: **Microsoft Defender Antivirus Policy** - Manage [Antivirus policy settings for Configuration Manager devices](../../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
 
     This profile is supported with devices that are tenant attached and run the following platforms:
     - Windows 10 and later (x86, x64, ARM64)
