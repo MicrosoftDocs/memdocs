@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 03/22/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -137,6 +137,9 @@ Use one of the following options to work around this issue:
 ### Offline servicing
 
 <!-- 12661534 -->
+
+> [!IMPORTANT]
+> This issue is resolved with the March 2022 cumulative update (KB5011493). For any version of Windows 11, you can successfully use offline servicing with the March 2022 cumulative update.
 
 When you [apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#apply-software-updates-to-an-image) for Windows 11, the process will fail. You'll see errors similar to the following entries in the offline servicing log file, `OfflineServicingMgr.log`:
 
