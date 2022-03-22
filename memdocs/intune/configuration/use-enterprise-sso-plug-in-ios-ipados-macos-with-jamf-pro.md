@@ -92,11 +92,11 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
 1. Sign in to the Jamf Pro portal.
 2. Select **Computers** > **Configuration profiles** > **New** to create a macOS profile or select **Devices** > **Configuration profiles** > **New** to create an iOS/iPadOS profile.
 
-:::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/jamf-pro-configuration-profiles.png" alt-text="Navigation to Jamf Pro portal configuration profiles for macOS":::
+    :::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/jamf-pro-configuration-profiles.png" alt-text="Navigation to Jamf Pro portal configuration profiles for macOS":::
 
 3. Scroll down in the Options column and select **Single Sign-On Extensions** > **Add**.
 
-:::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-creation.png" alt-text="Select configuration profiles SSO option and click add":::
+    :::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-creation.png" alt-text="Select configuration profiles SSO option and click add":::
 
 4. Enter the following properties:
 
@@ -119,39 +119,39 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
         - `https://login.usgovcloudapi.net`
         - `https://login-us.microsoftonline.com`
 
-:::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-1.png" alt-text="Basic configuration settings part 1":::
+    :::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-1.png" alt-text="Basic configuration settings part 1":::
 
-:::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-2.png" alt-text="Basic configuration settings part 2":::
+    :::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-basic-settings-2.png" alt-text="Basic configuration settings part 2":::
         
 5. In **Custom Configuration** you will define other required properties. Jamf Pro requires that these properties are configured via an uploaded PLIST file. The full list of configurable properties is covered in the [Azure AD Apple SSO Extension documentation](/azure/active-directory/develop/apple-sso-plugin#manual-configuration-for-other-mdm-services). This is a recommended PLIST file that will meet the needs of most organizations:
 
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-    <key>AppPrefixAllowList</key>
-    <string>com.microsoft.,com.apple.</string>
-    <key>browser_sso_interaction_enabled</key>
-    <integer>1</integer>
-    <key>disable_explicit_app_prompt</key>
-    <integer>1</integer>
-</dict>
-</plist>
-```
+    ```xml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+    <plist version="1.0">
+    <dict>
+        <key>AppPrefixAllowList</key>
+        <string>com.microsoft.,com.apple.</string>
+        <key>browser_sso_interaction_enabled</key>
+        <integer>1</integer>
+        <key>disable_explicit_app_prompt</key>
+        <integer>1</integer>
+    </dict>
+    </plist>
+    ```
 
-:::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-custom-configuration-plist.png" alt-text="Custom configuration with PLIST file":::
+    :::image type="content" source="media/use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro/sso-extension-custom-configuration-plist.png" alt-text="Custom configuration with PLIST file":::
 
-- These PLIST settings configure the following SSO Extension options:
+    - These PLIST settings configure the following SSO Extension options:
 
-| Key | Type | Value |
-| --- | --- | --- |
-| **AppPrefixAllowList** | String | Enter a list of prefixes for apps that don't support MSAL **and** are allowed to use SSO. For example, enter `com.microsoft.` to allow all Microsoft apps.<br/><br/>Be sure these apps [meet the allowlist requirements](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).|
-| **browser_sso_interaction_enabled** | Integer | When set to `1`, users can sign in from Safari browser, and from apps that don't support MSAL. Enabling this setting allows users to bootstrap the extension from Safari or other apps.|
-| **disable_explicit_app_prompt** | Integer | Some apps might incorrectly enforce end-user prompts at the protocol layer. If you see this problem, users are prompted to sign in, even though the Microsoft Enterprise SSO plug-in works for other apps. <br/><br/>When set to `1` (one), you reduce these prompts. |
+    | Key | Type | Value |
+    | --- | --- | --- |
+    | **AppPrefixAllowList** | String | Enter a list of prefixes for apps that don't support MSAL **and** are allowed to use SSO. For example, enter `com.microsoft.` to allow all Microsoft apps.<br/><br/>Be sure these apps [meet the allowlist requirements](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).|
+    | **browser_sso_interaction_enabled** | Integer | When set to `1`, users can sign in from Safari browser, and from apps that don't support MSAL. Enabling this setting allows users to bootstrap the extension from Safari or other apps.|
+    | **disable_explicit_app_prompt** | Integer | Some apps might incorrectly enforce end-user prompts at the protocol layer. If you see this problem, users are prompted to sign in, even though the Microsoft Enterprise SSO plug-in works for other apps. <br/><br/>When set to `1` (one), you reduce these prompts. |
 
-> [!TIP]
-> For more information on these properties, and other properties you can configure, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin#more-configuration-options).
+    > [!TIP]
+    > For more information on these properties, and other properties you can configure, see [Microsoft Enterprise SSO plug-in for Apple devices (preview)](/azure/active-directory/develop/apple-sso-plugin#more-configuration-options).
 
 6. Select the **Scope** tab. Specify the computers or devices that should be targeted to receive the SSO Extension MDM profile.
 7. Select **Save**.
