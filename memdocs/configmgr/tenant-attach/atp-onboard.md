@@ -1,8 +1,8 @@
 ---
-title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center (preview)
+title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Endpoint Manager admin center
 titleSuffix: Configuration Manager
 description: "Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center."
-ms.date: 09/27/2021
+ms.date: 03/21/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -12,12 +12,9 @@ ms.author: mstewart
 ms.localizationpriority: high
 ---
 
-# <a name="bkmk_atp"></a> Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center (preview)
+# <a name="bkmk_atp"></a> Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
-
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. You can deploy Microsoft Defender for Endpoint onboarding policies to Configuration Manager managed clients. These clients don't require Azure AD or MDM enrollment, and the policy is targeted at ConfigMgr collections rather than Azure AD Groups.
 

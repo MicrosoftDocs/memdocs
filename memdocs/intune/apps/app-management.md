@@ -90,7 +90,7 @@ You can find most app-related information in the **Apps** workload, which you ca
 
 The apps workload provides links to access common app information and functionality. 
 
-The top of the App workload navigation menu provide commonly used app details:
+The top of the App workload navigation menu provides commonly used app details:
 - **Overview**: Select this option to view the tenant name, the MDM authority, the tenant location, the account status, app installation status, and app protection policy status.
 - **All apps**: Select this option to display a list of all available apps. You can add additional apps from this page. Additionally, you can see the status of each app, as well as whether each app is assigned. For more information, see [Add apps](apps-add.md) and [Assign apps](apps-deploy.md).
 - **Monitor apps**
