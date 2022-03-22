@@ -61,8 +61,8 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
     ![Screenshot of select member groups.](./media/scope-tags/select-member-groups.png)
 
-4. On the **Scope Groups** page, select one of the following options for **Included rgroups**
-    - **Add groups**: select the groups containing the users/deivces that you want to manage. All users/devices in the selected groups will be managed by the users in the Admin Groups.
+4. On the **Scope Groups** page, select one of the following options for **Included groups**:
+    - **Add groups**: Select the groups containing the users/devices that you want to manage. All users/devices in the selected groups will be managed by the users in the Admin Groups.
     - **Add All users**: All users can be managed by the users in the Admin Groups.
     - **Add All devices**: All devices can be managed by the users in the Admin Groups.
 
