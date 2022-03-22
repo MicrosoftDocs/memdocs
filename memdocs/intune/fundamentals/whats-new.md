@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/18/2022
+ms.date: 03/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -80,6 +80,11 @@ Customers can view the IPv4 address and Wi-Fi subnet ID reported for Android Ent
 
 #### Android (AOSP) users can view all devices in Intune app<!-- 10454654 -->
 AOSP device users can now view a list of their managed devices and device properties in the Microsoft Intune app. This feature is available on devices enrolled in Intune as user-associated (Android) AOSP devices.
+
+### Device security
+
+#### Tenant attach: Antivirus profile<!-- 13425641 -->
+The Endpoint Security Microsoft Defender Anti-virus profile is now generally available. For more information, see [Tenant attach: Create and deploy Antivirus policies from the admin center](../../configmgr/tenant-attach/endpoint-security-get-started.md).
 
 ### Monitor and troubleshoot
 
