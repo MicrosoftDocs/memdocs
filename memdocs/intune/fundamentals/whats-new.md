@@ -84,7 +84,7 @@ AOSP device users can now view a list of their managed devices and device proper
 #### Update eSim cellular data plan in bulk for iOS/iPadOS (public preview)<!-- 13139261a -->  
 You can now perform a Bulk device action (**Devices** > **Bulk device action** > **Update cellular data**) to remotely activate or update the cellular data plan on iOS/iPadOS devices that support it. This feature is currently in public preview. For related information, see [Use bulk device actions](..\remote-actions\bulk-device-actions.md).
 
-### Preserve cellular data plan when bulk wiping iOS/iPadOS devices<!-- 13139261b --> 
+#### Preserve cellular data plan when bulk wiping iOS/iPadOS devices<!-- 13139261b --> 
 When you perform a Bulk device action (**Devices** > **Bulk device action** > **Wipe**) to remotely wipe iOS/iPadOS devices from Intune, any cellular data plan on the device will be preserved. However, if you would like to have the devices' data plan removed, then you have the option to select a checkbox and remove the cellular data plan when wiping the devices. For related information, see [Use bulk device actions](..\remote-actions\bulk-device-actions.md).
 
 #### Freeze the install of system updates for Android Enterprise corporate-owned devices<!-- 7912819  -->
