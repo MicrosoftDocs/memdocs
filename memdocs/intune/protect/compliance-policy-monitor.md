@@ -100,7 +100,7 @@ Descriptions of the different device compliance policy states:
 
 Devices keep a compliance status of **Error** for up to 7 days to allow time for the compliance calculation to complete correctly. Within those 7 days, its previous compliance status applies until the device evaluates as **Compliant** or **Not compliant**. If after 7 days, the device still has a status of **Error**, it becomes **Not compliant**. Note that grace periods do not apply to devices with an Error status.
 
-### Examples:
+##### Examples:
 	
 - A device is initially marked **Compliant**, but then its status changes to **Error**. After 3 days, compliance evaluation completes successfully and the device is marked **Not compliant**. The user can continue to use the device to access Conditional Access-protected resources within the first 3 days after the status changes to **Error**. Once the device is marked **Not compliant**, this access is removed until the device becomes **Compliant** again.
 	
