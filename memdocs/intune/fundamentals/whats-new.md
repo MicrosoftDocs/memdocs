@@ -75,7 +75,7 @@ You can now upload and deploy PKG-type installer files as macOS line-of-business
 
 ### Device management
 
-#### See the IPv4 address and Wi-Fi subnet ID on Andriod Enterprise devices<!-- 12396463 -->
+#### See the IPv4 address and Wi-Fi subnet ID on Android Enterprise devices<!-- 12396463 -->
 Customers can view the IPv4 address and Wi-Fi subnet ID reported for Android Enterprise corporate-owned fully managed, dedicated, and work profile devices. 
 
 #### Android (AOSP) users can view all devices in Intune app<!-- 10454654 -->
@@ -103,6 +103,8 @@ Intune now supports the use of bootstrap tokens on enrolled devices running macO
 
 - Supervised devices (in Intune, that's all user-approved enrollments)  
 - Devices enrolled in Intune via Apple automated device enrollment   
+
+Bootstrap tokens will begin to function no sooner than March 26, 2022, and it could take longer before they begin to function in all tenants.
 
 For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md).  
 
