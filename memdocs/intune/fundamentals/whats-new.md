@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/21/2022
+ms.date: 03/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -80,6 +80,21 @@ Customers can view the IPv4 address and Wi-Fi subnet ID reported for Android Ent
 
 #### Android (AOSP) users can view all devices in Intune app<!-- 10454654 -->
 AOSP device users can now view a list of their managed devices and device properties in the Microsoft Intune app. This feature is available on devices enrolled in Intune as user-associated (Android) AOSP devices.
+
+#### Update eSim cellular data plan in bulk for iOS/iPadOS (public preview)<!-- 13139261a -->  
+You can now perform a Bulk device action (**Devices** > **Bulk device action** > **Update cellular data**) to remotely activate or update the cellular data plan on iOS/iPadOS devices that support it. This feature is currently in public preview. For related information, see [Use bulk device actions](..\remote-actions\bulk-device-actions.md).
+
+### Preserve cellular data plan when bulk wiping iOS/iPadOS devices<!-- 13139261b --> 
+When you perform a Bulk device action (**Devices** > **Bulk device action** > **Wipe**) to remotely wipe iOS/iPadOS devices from Intune, any cellular data plan on the device will be preserved. However, if you would like to have the devices' data plan removed, then you have the option to select a checkbox and remove the cellular data plan when wiping the devices. For related information, see [Use bulk device actions](..\remote-actions\bulk-device-actions.md).
+
+#### Freeze the install of system updates for Android Enterprise corporate-owned devices<!-- 7912819  -->
+For Android Enterprise corporate-owned devices that run version 9.0 and later, you can configure freeze periods during which no system or security updates can install.
+
+To configure a freeze, use Intune device restriction profiles to set one or more blocks that can recur each year. Each block can be for up to 90 days, but you must have a minimum of 60 days between freeze periods, when system updates are allowed to install.
+
+For information about configuring a freeze period, see **Freeze periods for system updates** in [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+For information about Android requirements for implementing a freeze, see [FreezePeriod](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#freezeperiod) in the Google developer documentation.
 
 ### Device security
 
