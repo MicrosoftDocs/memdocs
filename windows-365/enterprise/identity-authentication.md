@@ -43,10 +43,14 @@ A device can also have an identity which is determined by its join type to Azure
 
 ## Identity types
 
-There are two identity types:
+There are three identity types:
 
 - **[Hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity)**: Users or devices that are created in on-premises Windows Server Active Directory, then synchronized to Azure AD.
 - **Cloud-only identity**: Users or devices that are created and only exist in Azure AD.
+- **[External identity](/azure/active-directory/external-identities/identity-providers)**: Users who are created and managed outside of your Azure AD tenant but are invited in to your Azure AD tenant to access your organization's resources.
+
+>[!NOTE]
+>Windows 365 does not support external identities.
 
 ## Device join types
 
