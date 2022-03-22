@@ -77,8 +77,8 @@ If any issues are found during this process, see [Windows Autopilot troubleshoot
 
 For more information on the available join options, see the following sections:
 
-- [Azure AD join](#user-driven-mode-for-azure-active-directory-join) is available if devices don't need to join an on-premises Active Directory domain.
-- [Hybrid Azure AD join](#user-driven-mode-for-hybrid-azure-active-directory-join) is available for devices that need to join both Azure AD and your on-premises Active Directory domain.
+- [Azure AD join](#user-driven-mode-for-azure-ad-join) is available if devices don't need to join an on-premises Active Directory domain.
+- [Hybrid Azure AD join](#user-driven-mode-for-hybrid-azure-ad-join) is available for devices that need to join both Azure AD and your on-premises Active Directory domain.
 
 ## User-driven mode for Azure AD join
 
