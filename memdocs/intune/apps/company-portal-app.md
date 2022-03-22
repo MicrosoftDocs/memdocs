@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/08/2021
+ms.date: 03/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -135,6 +135,8 @@ The following table provides privacy-specific configuration details:
 | Privacy statement URL | 79 | Set your organization's privacy statement to appear when   users click on privacy links. You must enter a valid URL in the format `https://www.contoso.com`. This is a mandatory field. |
 | Privacy message about what support can't see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can't see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
 | Privacy message about what support can see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
+
+For related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
 
 ### Device ownership notification
 
@@ -301,6 +303,31 @@ The Company Portal app can store, as well as display, push notifications sent to
 Notifications from the iOS/iPadOS Company Portal app are now delivered to devices using the default Apple sound, rather than being delivered silently. To turn the notification sound off from the iOS/iPadOS Company Portal app, select **Settings** > **Notifications** > **Comp Portal** and select the **Sound** toggle.
 
 For more information about notifications, see [Receive a custom notification](../remote-actions/custom-notifications.md#receive-a-custom-notification).
+
+## Configure feedback settings for Company Portal and Microsoft Intune apps
+
+There are a number of M365 enterprise policies which affect whether feedback must be enabled or disabled for currently logged users. These policies are available via the [Microsoft 365 Apps admin center](https://config.office.com/). In relation to Microsoft Intune, these policies affect feedback and surveys for the Intune Company Portal app and Microsoft Intune app.
+
+M365 feedback policies include the following policies:
+
+| Policy   Name | Default State | Policy Summary |
+|---|---|---|
+| Allow the use of connected experiences in Office | Enabled | Controls whether clients can use the suite of connected experiences, including feedback. |
+| Allow users to submit feedback to Microsoft | Enabled | Controls the feedback entry points across applications. |
+| Allow users to receive and respond to in-product surveys from Microsoft | Enabled | Controls the survey prompts within the product. |
+| Allow users to include screenshots and attachments when they submit feedback to Microsoft | Disabled | Controls the metadata the user can decide to submit with the feedback and survey. |
+| Allow Microsoft to follow up on feedback submitted by users | Disabled | Controls whether the user can share contact info with the feedback and survey. |
+| Allow users to include log files and content samples when feedback is submitted to Microsoft | Disabled | Controls the metadata the user can decide to submit with the feedback and survey. |
+
+To configure feedback policy settings:
+
+1. Go to [Microsoft 365 Apps admin center](https://config.office.com/) and login.
+2. Select **Customization** > **Policy Management** > **Create**.
+3. Enter **name** and **description**.
+4. Choose the type of user that this policy will apply.
+5. Choose the group for your tenant that this policy will apply.
+6. Search for **Feedback** and **Survey** to find and select the policies.
+7. For each policy listed, set the value to either **Enabled** or **Disabled**.
 
 ## Next steps
 
