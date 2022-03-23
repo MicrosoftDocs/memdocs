@@ -2,12 +2,12 @@
 # required metadata
 
 title: Configure iOS/iPadOS software update policies in Microsoft Intune
-description: In Microsoft Intune, create or add a configuration policy to restrict when software updates automatically install on iOS/iPadOS devices. You can choose the date and time when updates aren't installed. You can also assign this policy to groups, users, or devices, and check for any installation failures. 
+description: Use Microsoft Intune to manage system updates for supervised iOS/iPadOS devices.
 keywords:
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/15/2021
+ms.date: 03/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,17 +30,17 @@ ms.collection:
 
 # Add iOS/iPadOS software update policies in Intune
 
-Software update policies apply to supervised iOS/iPadOS devices to install OS updates. [Supervised devices](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) are devices that enrolled using either Apple Business Manager or Apple School Manager.
-
-When configuring a policy to deploy updates, you can:
-
-- Choose to deploy the *latest update* that's available, or choose to deploy an older update by the update version number if you don't want to deploy the latest update. If you choose to deploy an older update, you must also set a Device Configuration policy to restrict visibility of software updates.
-- Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in, or creating date and time ranges during which updates can install or are blocked from installing.
+Use Microsoft Intune device configuration profiles to manage software updates for iOS/iPad devices that enrolled as supervised devices. [Supervised devices](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) are devices that enrolled using either Apple Business Manager or Apple School Manager.
 
 This feature applies to:
 
 - iOS 10.3 and later (supervised)
 - iPadOS 13.0 and later (supervised)
+
+When configuring a policy to deploy updates, you can:
+
+- Choose to deploy the *latest update* that's available, or choose to deploy an older update, based on the update version number. If you choose to deploy an older update, you must also set a Device Configuration policy to restrict visibility of software updates.
+- Specify a schedule that determines when the update installs. Schedules can be as simple as installing updates the next time that the device checks in, or creating date and time ranges during which updates can install or are blocked from installing.
 
 By default, devices check in with Intune about every 8 hours. If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration. Profiles don't prevent users from updating the OS manually. Users can be prevented from updating the OS manually with a Device Configuration policy to restrict visibility of software updates.
 

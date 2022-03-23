@@ -7,7 +7,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 02/03/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 
 # optional metadata
