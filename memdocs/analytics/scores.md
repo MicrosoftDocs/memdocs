@@ -2,7 +2,7 @@
 title: Scores, baselines, and insights in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about scores, baselines, and insights in Endpoint Analytics
-ms.date: 12/15/2021
+ms.date: 03/22/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -57,7 +57,11 @@ To help you identify devices that could be impacting user experience, Endpoint a
 
 Selecting a device from the **Devices scores** tab loads a device page that gives you more information. From the device's **Startup performance** tab, review **Boot history** and **Sign-in history** for experience impacting trends. The **Application reliability** tab provides insight into potential issues for desktop applications on the managed device.
 
-:::image type="content" source="media/8816759-per-device-scores.png" alt-text="Screenshot of a device's Endpoint analytics score with the startup performance and application reliability subscores." lightbox="media/8816759-per-device-scores.png"::: 
+:::image type="content" source="media/8816759-per-device-scores.png" alt-text="Screenshot of a device's Endpoint analytics score with the startup performance and application reliability subscores." lightbox="media/8816759-per-device-scores.png":::
+
+You can also access per device scores on a device's **User experience** page. From the **User experience** page you can review the **Endpoint analytics**, **Startup performance**, and **Application reliability** information for the specific device.
+
+:::image type="content" source="media/user-experience-page.png" alt-text="Screenshot of a device's user experience page displaying the startup performance tab." lightbox="media/user-experience-page.png":::
 
 ### <a name="bkmk_drill-in"></a> Device level drill-in from reports
 
