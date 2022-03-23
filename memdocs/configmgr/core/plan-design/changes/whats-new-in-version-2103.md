@@ -49,7 +49,7 @@ The discovery prerequisite for user accounts accessing tenant attach features wi
 - Azure Active Directory user discovery
 - Active Directory user discovery
 
-For more information, see [Tenant attach prerequisites](../../../tenant-attach/device-sync-actions.md#prerequisites).
+For more information, see [Tenant attach prerequisites](../../../tenant-attach/prerequisites.md).
 
 ### Application details
 <!--8364465-->
