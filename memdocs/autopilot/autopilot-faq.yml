@@ -250,7 +250,7 @@ sections:
         answer: |
           All available values are used, although there may be specific usage rules. The serial number of the system disk is more important than the other disks available. Network interfaces that are removable shouldn't be used if detected as they're removable. LAN vs WLAN shouldn't matter, as both will be used.
 
-  - name: end-user experience
+  - name: End-user experience
     questions:
       - question: |
           How do I know that I received Autopilot?

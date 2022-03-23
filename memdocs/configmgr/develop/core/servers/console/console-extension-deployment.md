@@ -1,20 +1,20 @@
 ---
-title: "Console Extension Deployment"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Console extension deployment
+description: The deployment of a typical Configuration Manager extension has to account for actions, forms, views, management classes and node extensions.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-ms.assetid: d15d00a9-a77a-4916-88c6-0ac04234fc1e
-author: aczechowski
-ms.author: aaroncz
+author: mestew
+ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
-
 ---
-# Configuration Manager Console Extension Deployment
+
+# Configuration Manager console extension deployment
+
 The deployment of a typical Configuration Manager extension has to account for actions, forms, views, management classes and node extensions.  
 
  When you deploy a Configuration Manager extension, you install the files in the following directories:  

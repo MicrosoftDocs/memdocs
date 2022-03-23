@@ -316,7 +316,7 @@ For more information, see [How to create collections in Configuration Manager](.
 1. The **Include updates** page selects by default the option to **Do not install any software updates**.
 
     > [!TIP]
-    > Use offline image servicing to keep the image up to date with the latest Windows cumulative updates. For more information, see [Apply software updates to an OS image](../get-started/manage-operating-system-images.md#BKMK_OSImagesApplyUpdates).
+    > Use offline image servicing to keep the image up to date with the latest Windows cumulative updates. For more information, see [Apply software updates to an OS image](../configmgr/osd/get-started/manage-operating-system-images.md#BKMK_OSImagesApplyUpdates).
 
 1. On the **Install applications** page, you can select applications to install during the task sequence. However, Microsoft recommends that you mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.  
 
@@ -332,7 +332,7 @@ If you edit the task sequence, it's similar to the default task sequence to appl
 
 - **Apply Windows Autopilot configuration**: This step applies the Autopilot configuration file from the specified package. It's not a new type of step, it's a **Run Command Line** step to copy the file.
 
-- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](../understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture).
+- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](../configmgr/osd/understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture).
 
 For more information on editing the task sequence, see [Use the task sequence editor](../configmgr/osd/understand/task-sequence-editor.md) and [Task sequence steps](../configmgr/osd/understand/task-sequence-steps.md).
 
