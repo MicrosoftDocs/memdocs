@@ -48,9 +48,10 @@ The following errors can occur when connecting to a Cloud PC.
 3. On the **Configuration settings** page, search for and select **Network Security Allow PKU2U Authentication Requests** > **Allow**.
 ![Screenshot with the **Network Security Allow PKU2U Authentication Requests** set to **Allow**.](./media/connection-errors/allow-pku2u.png)
 5. On the **Assignments** page, select **Add all devices** > **Edit filter** > **Include filtered devices in assignment** > select the filter you created for all Cloud PCs.
-6. Complete the creation of the device configuration policy.
+6. On the **Assignments** page, also select an Azure AD group containing the user or the user's physical device.
+7. Complete the creation of the device configuration policy.
 
-If the user's physical device is managed, assign the user or the user's physical device to the same device configuration policy. If the user's physical device is unmanaged or you manage through Group Policy, create a Group Policy Object (GPO) to [allow PKU2U authentication requests to this computer to use online identities](/windows/security/threat-protection/security-policy-settings/network-security-allow-pku2u-authentication-requests-to-this-computer-to-use-online-identities).
+If you only manage the user's physical device through Group Policy or you don't manage the user's physical device, you (or the user) can manage this setting through the [allow PKU2U authentication requests to this computer to use online identities](/windows/security/threat-protection/security-policy-settings/network-security-allow-pku2u-authentication-requests-to-this-computer-to-use-online-identities) policy.
 
 **Potential cause #2**: [Per-user multi-factor authentication](/azure/active-directory/authentication/howto-mfa-userstates) is turned on for the user account. Because it blocks sign-in, per-user multi-factor authentication isn't supported for users connecting to Azure AD joined Cloud PCs.
 
