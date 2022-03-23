@@ -37,7 +37,7 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
    - [That states they're **Optimized for Power BI Report Server**](/power-bi/report-server/install-powerbi-desktop). Don't use versions that aren't **Optimized for Power BI Report Server**.
 
    > [!Note]
-   > When using Configuration Manager version 2111 or earlier with Power BI Desktop Optimized for Power BI Report Server - May 2021) or later, you may notice the following behavior:<!--12428948, 2203CB-12487076 -->
+   > When using Configuration Manager version 2111 or earlier with Power BI Desktop (Optimized for Power BI Report Server - May 2021) or later, you may notice the following behavior:<!--12428948, 2203CB-12487076 -->
    > - You might experience delays updating the data source on newly updated reports.
    > - You may receive `The remote server returned an error; (400) Bad Request.` errors in the **SRSRP.log**.
    > For more information about the relevant change to Power BI Desktop (optimized for Power BI Report Server) May 2021, see [Change data source connection strings in Power BI reports](/power-bi/report-server/connect-data-source-apis). The version before the connection change ocurred is [January 2021](https://www.microsoft.com/download/details.aspx?id=55330).
