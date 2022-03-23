@@ -2,7 +2,7 @@
 title: Cost of CMG
 titleSuffix: Configuration Manager
 description: Understand the costs of operating the cloud management gateway (CMG) service in Microsoft Azure.
-ms.date: 08/02/2021
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -40,11 +40,9 @@ CMG uses Azure platform as a service (PaaS), which uses virtual machines (VMs). 
 
 ### Virtual machine scale set
 
-If you deploy the CMG as a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets), use this section.
+When you deploy the CMG as a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets), the following factors affect the cost of the service:
 
-- In version 2103 and earlier, CMG uses a Standard [A2_v2](/azure/virtual-machines/av2-series) VM. The VM size isn't configurable.
-
-- In version 2107 and later, you can configure the VM size, which will affect this cost.<!-- 3555749 -->
+- In version 2107 and later, you can configure the VM size:<!-- 3555749 -->
 
   - Lab ([B2s](/azure/virtual-machines/sizes-b-series-burstable))
   - Standard ([A2_v2](/azure/virtual-machines/av2-series))
@@ -53,7 +51,9 @@ If you deploy the CMG as a [virtual machine scale set](plan-cloud-management-gat
   > [!IMPORTANT]
   > The **Lab (B2s)** size VM is only intended for lab testing and small proof-of-concept environments. It isn't intended for production use with the CMG. The B2s VMs are low cost and low performing.
 
-  You can't change the VM size after you deploy the CMG. To change the VM size, you need to [Redeploy the service](modify-cloud-management-gateway.md#redeploy-the-service).
+  You can change the VM size after you deploy the CMG. This action updates the Azure service to use a new VM.<!-- memdocs#2286 -->
+
+- In version 2103 and earlier, the CMG uses a Standard [A2_v2](/azure/virtual-machines/av2-series) VM. The VM size isn't configurable. To change the VM size, you need to [Redeploy the service](modify-cloud-management-gateway.md#redeploy-the-service).
 
 - You select how many VM instances support the CMG. One is the default, and 16 is the maximum. This number is set when you create the CMG, but you can change it afterwards to scale the service as needed.
 
@@ -61,9 +61,10 @@ If you deploy the CMG as a [virtual machine scale set](plan-cloud-management-gat
 
 ### Virtual machine
 
-If you deploy the CMG as a classic cloud service, this deployment method replaces the [virtual machine scale set](#virtual-machine-scale-set) when estimating cost. The specific details are otherwise the same. With this deployment method, it uses a Standard A2_v2 VM. The VM size isn't configurable.
+> [!IMPORTANT]
+> Starting in version 2203, the option to deploy a CMG as a **cloud service (classic)** is removed.<!-- 13235079 --> All CMG deployments should use a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
-The cost difference between a virtual machine and a virtual machine scale set should be negligible, but may vary by Azure region.
+If you deployed the CMG as a classic cloud service, when estimating cost, this deployment method replaces the [virtual machine scale set](#virtual-machine-scale-set). The specific details are otherwise the same. With this deployment method, it uses a Standard A2_v2 VM. The VM size isn't configurable. The cost difference between a virtual machine and a virtual machine scale set should be negligible, but may vary by Azure region.
 
 ## Outbound data transfer
 

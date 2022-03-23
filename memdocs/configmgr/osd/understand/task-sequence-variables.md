@@ -1566,6 +1566,15 @@ Specifies the number of seconds that the warning is displayed to the user before
 - `0` (default): Don't display a reboot message  
 - `60`: Display the warning for one minute  
 
+### SMSTSAllowTokenAuthURLForACP
+
+<!-- 13788624 -->
+_Applies to version 2203 and later_
+
+When you use the [SMSTSDownloadProgram](#smstsdownloadprogram) variable to use an alternate content provider, set this variable to `true` to allow it to use token authentication. If you don't set this variable or set it to `false`, it skips any token authentication sources. The alternate content provider has to support token authentication.
+
+For more information, see [CMG client authentication](../../core/clients/manage/cmg/plan-client-authentication.md#site-token).
+
 ### <a name="SMSTSAssignmentsDownloadInterval"></a> SMSTSAssignmentsDownloadInterval
 
 The number of seconds to wait before the client attempts to download the policy since the last attempt that returned no policies. By default, the client waits **0** seconds before retrying.
@@ -1610,9 +1619,9 @@ By default on a 64-bit OS, the task sequence locates and runs the program in the
 
 ### <a name="SMSTSDownloadAbortCode"></a> SMSTSDownloadAbortCode
 
-This variable contains the abort code value for the external program downloader. This program is specified in the [SMSTSDownloadProgram](#SMSTSDownloadProgram) variable. If the program returns an error code equal to the value of the SMSTSDownloadAbortCode variable, then the content download fails and no other download method is attempted.
+This variable contains the abort code value for the external program downloader. This program is specified in the [SMSTSDownloadProgram](#smstsdownloadprogram) variable. If the program returns an error code equal to the value of the SMSTSDownloadAbortCode variable, then the content download fails and no other download method is attempted.
 
-### <a name="SMSTSDownloadProgram"></a> SMSTSDownloadProgram
+### SMSTSDownloadProgram
 
 Use this variable to specify an alternate content provider (ACP). An ACP is a downloader program that's used to download content. The task sequence uses the ACP instead of the default Configuration Manager downloader. As part of the content download process, the task sequence checks this variable. If specified, the task sequence runs the program to download the content.
 

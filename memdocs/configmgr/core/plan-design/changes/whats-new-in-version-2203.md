@@ -218,7 +218,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 
 As previously announced, version 2203 drops support for the following features:
 
-- The ability to deploy a cloud management gateway (CMG) as a **cloud service (classic)**. All CMG deployments should use a [virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586-->
+- The ability to deploy a cloud management gateway (CMG) as a **cloud service (classic)**. All CMG deployments should use a [virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586,13235079-->
 - The following compliance settings for **Company resource access**: <!-- 9315387 -->
    - [Certificate profiles](../../../protect/deploy-use/introduction-to-certificate-profiles.md)
    - [VPN profiles](../../../protect/deploy-use/vpn-profiles.md)

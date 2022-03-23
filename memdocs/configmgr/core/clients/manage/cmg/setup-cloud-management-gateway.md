@@ -5,7 +5,7 @@ description: Use this step-by-step process for setting up a cloud management gat
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 10/25/2021
+ms.date: 03/28/2022
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-client
@@ -29,8 +29,10 @@ This step of the overall process includes the following actions:
 
 ## Set up a CMG
 
-> [!TIP]
+> [!NOTE]
 > Deploying a CMG with a **virtual machine scale set** in Azure was first introduced in version 2010 as a [pre-release feature](../../../servers/manage/pre-release-features.md).<!--3601040--> Beginning with version 2107, it's no longer a pre-release feature.<!-- 8959690 -->
+>
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/optional-features.md).
 
 Do this procedure on the top-level site. That site is either a standalone primary site, or the central administration site (CAS).
 
@@ -45,10 +47,9 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
 1. Next choose how you want to deploy the CMG in Azure:
 
-    > [!NOTE]
-    > In version 2006 and earlier, you don't have this choice. All deployments use the **cloud service (classic)** method.
-
     - **Virtual machine scale set**
+
+        - Starting in version 2203, virtual machine scale set is the only option.<!-- 13235079 -->
 
         - Starting in version 2107, this option is the recommended deployment method.<!-- 8959690 --> Even if you have an existing CMG deployed with the cloud service (classic) method, deploy new CMG instances as a virtual machine scale set.
 
@@ -56,12 +57,12 @@ Do this procedure on the top-level site. That site is either a standalone primar
 
     - **Cloud service (classic)**
 
-        - In versions 2010 and 2103, most customers should use this deployment method. Use this option.
+        > [!IMPORTANT]
+        > Starting in version 2203, the option to deploy a CMG as a **cloud service (classic)** is removed.<!-- 13235079 --> All CMG deployments should use a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
         - In version 2107 and later, only use this option if you can't deploy with a virtual machine scale set because of one of the [limitations](plan-cloud-management-gateway.md#limitations-with-versions-2107-and-later).
 
-        > [!IMPORTANT]
-        > The option to deploy a CMG as a **cloud service (classic)** is deprecated. All CMG deployments should use a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
+        - In versions 2010 and 2103, most customers should use this deployment method.
 
 1. Select **Sign in**. Authenticate with an Azure **Subscription Owner** account. The wizard automatically populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the subscription you want to use.
 
@@ -108,7 +109,7 @@ Configuration Manager starts to set up the service. The amount of time it takes 
 To troubleshoot CMG deployments, use **CloudMgr.log** and **CMGSetup.log**. For more information, see [Monitor CMG](monitor-clients-cloud-management-gateway.md#monitor-logs).
 
 > [!TIP]
-> Starting in version 2010, you can also use the PowerShell cmdlet **New-CMCloudManagementGateway** for this process.<!--6978300--> Optionally use this cmdlet to create the CMG service. While it was available in earlier versions, version 2010 includes significant improvements to this cmdlet. For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/New-CMCloudManagementGateway).
+> You can also use the PowerShell cmdlet **New-CMCloudManagementGateway** for this process.<!--6978300--> Optionally use this cmdlet to create the CMG service. For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/New-CMCloudManagementGateway).
 
 ## Configure primary site for client certificate authentication
 
@@ -140,7 +141,7 @@ To add the CMG connection point, the following steps summarize the instructions 
 To troubleshoot CMG service health, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 > [!TIP]
-> Optionally, you can also use the PowerShell cmdlet **Add-CMCloudManagementGatewayConnectionPoint** to add the CMG connection point role to a site system server. 
+> Optionally, you can also use the PowerShell cmdlet **Add-CMCloudManagementGatewayConnectionPoint** to add the CMG connection point role to a site system server.
 >
 > For more information, see [Add-CMCloudManagementGatewayConnectionPoint](/powershell/module/configurationmanager/Add-CMCloudManagementGatewayConnectionPoint).
 

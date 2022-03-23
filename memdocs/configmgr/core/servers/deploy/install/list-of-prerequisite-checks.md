@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 12/01/2021
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -106,7 +106,7 @@ You're installing the management point on a server that doesn't have a different
 
 *Applies to: Central administration site*
 
-When you expand a primary site to a hierarchy, the cloud management gateway role isn't installed on the standalone primary site.
+When you expand a primary site to a hierarchy, the cloud management gateway (CMG) role isn't installed on the standalone primary site.
 
 ### Connection to SQL Server on central administration site
 
@@ -946,7 +946,7 @@ For more information, see [Prepare Active Directory for site publishing](../../.
 
 WinRM 1.1 is installed on the primary site server or the Configuration Manager console computer to run the out-of-band management console.
 
-WinRM is automatically installed with all currently-supported versions of Windows. For more information, see [Installation and configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
+WinRM is automatically installed with all versions of Windows currently supported. For more information, see [Installation and configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
 
 ### WSUS on site server
 
