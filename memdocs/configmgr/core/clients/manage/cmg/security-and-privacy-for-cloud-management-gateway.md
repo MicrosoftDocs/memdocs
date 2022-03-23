@@ -54,7 +54,7 @@ Configuration Manager rotates the storage account key for the CMG. This process 
 
 ### Security mechanisms and protections
 
-The CMG resources in Azure are part of the Azure platform as a service (PaaS). They're protected in the same manner and with the same default protections as all other resources in Azure. It's not supported to change any of the configurations of the CMG resources or architecture in Azure. These changes include the use any sort of firewall in front the CMG to intercept, filter, or otherwise process traffic before it reaches the CMG. All traffic destined for a CMG is processed through an Azure load balancer. CMG deployments as a virtual machine scale set are protected by Microsoft Defender for Cloud.
+The CMG resources in Azure are part of the Azure platform as a service (PaaS). They're protected in the same manner and with the same default protections as all other resources in Azure. It's not supported to change any of the configurations of the CMG resources or architecture in Azure. These changes include the use of any sort of firewall in front the CMG to intercept, filter, or otherwise process traffic before it reaches the CMG. All traffic destined for a CMG is processed through an Azure load balancer. CMG deployments as a virtual machine scale set are protected by Microsoft Defender for Cloud.
 
 #### Service principals and authentication
 
