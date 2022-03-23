@@ -85,6 +85,8 @@ items:
       displayName: airprint, home screen, lock screen, sso, single sign-on
     - name: Use Enterprise SSO plug-in
       href: use-enterprise-sso-plug-in-ios-ipados-macos.md
+    - name: Use Enterprise SSO plug-in in Jamf Pro
+      href: use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md
   - name: Extensions on macOS
     href: kernel-extensions-overview-macos.md
     displayName: kernel extensions, system extensions

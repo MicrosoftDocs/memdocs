@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 03/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -42,6 +42,7 @@ You can use bulk device actions for the following remote actions:
 - [Retire](devices-wipe.md#retire)
 - [Sync](device-sync.md)
 - [Wipe](devices-wipe.md#wipe)
+- [Update cellular data plan](update-cellular-data-plan.md)
 
 Most actions support up to 100 devices. For specific details of each remote action, like options or platform support, see the help page for each.
 
