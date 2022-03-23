@@ -63,7 +63,7 @@ We've made the following improvements for Power BI Report Server integration:
 - You can now use Microsoft Power BI Desktop (Optimized for Power BI Report Server) versions that were released after January 2021
 - Configuration Manager now correctly handles Power BI reports saved by Power BI Desktop (optimized for Power BI Report Server) May 2021 or later.
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Integrate with Power BI Report Server](../../servers/manage/powerbi-report-server.md).
 
 ### Exclude data warehouse reporting tables from synchronization
 <!--12441118-->
