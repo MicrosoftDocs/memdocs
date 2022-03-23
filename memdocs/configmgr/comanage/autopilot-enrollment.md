@@ -19,7 +19,7 @@ When you use [Windows Autopilot](../../autopilot/windows-autopilot.md) to provis
 
 Now you can configure device enrollment in Intune to enable co-management, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
-You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune enrollment policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG)), so you don't need to provide and manage the client content in Intune. You do still specify the command-line parameters. This list can optionally include the [PROVISIONTS property](../core/clients/deploy/about-client-installation-properties.md#provisionts) to specify a task sequence.
+You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune enrollment policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. You do still specify the command-line parameters. This list can optionally include the [PROVISIONTS property](../core/clients/deploy/about-client-installation-properties.md#provisionts) to specify a task sequence.
 
 If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../../intune/enrollment/windows-enrollment-status.md), the device waits for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
 
@@ -69,7 +69,7 @@ Use the following process to configure the co-management policy in Intune:
 
 1. Select **Yes** to automatically install the Configuration Manager client.
 
-1. Specify the client installation command-line parameters. You can copy these parameters from the co-management properties page.
+1. Specify the client installation command-line parameters. You can copy these parameters from the co-management properties page. For more information and specific command-line parameters, see [Get the command line from Configuration Manager](how-to-prepare-Win10.md#get-the-command-line-from-configuration-manager).
 
     :::image type="content" source="media/intune-comanage-settings.png" alt-text="Co-management settings in Microsoft Intune.":::
 
