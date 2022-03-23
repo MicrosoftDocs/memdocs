@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 03/03/2022
+ms.date: 04/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -813,6 +813,18 @@ This property specifies a Configuration Manager site to which you assign the cli
 > If you also specify an internet-based management point with the [`CCMHOSTNAME`](#ccmhostname) property, don't use `AUTO` with `SMSSITECODE`. Directly assign the client to its site by specifying the site code.
 
 Example: `CCMSetup.exe SMSSITECODE=XZY`
+
+### `UPGRADETOLATEST`
+
+<!-- Intune 13745717 -->
+
+This property forces CCMSetup to send a location request to the management point to get the latest version of the Configuration Manager client installation source. There are several scenarios where this property is especially useful:
+
+- Pre-production clients. A newly installed client uses the production baseline because it can't evaluate the pre-production collection until the client is installed. In that scenario, after the client is installed and it evaluates policy, it will later upgrade to the pre-production client version. Use this property so that the device immediately installs the latest version of the client.
+
+    This scenario also includes when using [Autopilot into co-management](../../../comanage/autopilot-enrollment.md). Use this property to make sure the newly provisioned Autopilot device uses the pre-production client version right away.
+
+- Pull distribution points. Allow pull distribution points to install the latest client version even if it's not in the pre-production collection. This action makes sure that the client version on the pull distribution point is the same as the distribution point binaries. If these versions aren't the same, it may cause issues.
 
 ## <a name="BKMK_attributevalues"></a> Attribute values for certificate selection criteria
 

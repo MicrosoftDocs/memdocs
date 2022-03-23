@@ -96,6 +96,8 @@ Decide which command-line properties you require for your environment:
 
 - To bootstrap a task sequence immediately after client registration, use the `PROVISIONTS` property. For more information, see [About client installation properties: PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts).
 
+- To make sure that internet-based devices get the latest version of the Configuration Manager client, use the `UPGRADETOLATEST` property. For more information, see [About client installation properties: `UPGRADETOLATEST`](../core/clients/deploy/about-client-installation-properties.md#upgradetolatest).<!-- Intune 13745717 -->
+
 The site publishes other Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are `CCMHOSTNAME` and `SMSSITECODE`.<!--3607731-->
 
 The following example includes all of these properties:
