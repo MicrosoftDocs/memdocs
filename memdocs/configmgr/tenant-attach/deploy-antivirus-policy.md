@@ -1,8 +1,8 @@
 ---
-title: Tenant attach - Create and deploy Antivirus policies from the admin center (preview)
+title: Tenant attach - Create and deploy Antivirus policies from the admin center
 titleSuffix: Configuration Manager
 description: "Create and deploy Antivirus policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 09/27/2021
+ms.date: 03/21/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -12,14 +12,11 @@ ms.author: mstewart
 ms.localizationpriority: high
 ---
 
-# <a name="bkmk_atp"></a> Tenant attach: Create and deploy Antivirus policies from the admin center (preview)
+# <a name="bkmk_atp"></a> Tenant attach: Create and deploy Antivirus policies from the admin center
 <!--5691658-->
 *Applies to: Configuration Manager (current branch)*
 
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
-
- Create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections.
+Create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager console and deploy them to Configuration Manager collections.
 
 <!--Adding Include for Prerequisites-->
 
@@ -31,12 +28,15 @@ ms.localizationpriority: high
 1. Select **Endpoint security** then **Antivirus**.
 1. Select **Create Policy**.
 1. For the **Platform**, select **Windows 10, Windows 11, and Windows Server (ConfigMgr)**.
-1. For the **Profile**, select **Microsoft Defender Antivirus (Preview)** then **Create**.
+1. For the **Profile**, select **Microsoft Defender Antivirus** then **Create**.
 1. Assign a **Name** and optionally a **Description** on the **Basics** page.
 1. On the **Configuration settings** page, configure the settings you want to manage with this profile. When your done configuring settings, select **Next**. For more information about available policies, see [Antivirus policy settings for tenant attached devices](../../intune/protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json).
 1. Assign the policy to a Configuration Manager collection on the **Assignments** page.
 
 ## <a name="bkmk_security"></a> Assign Windows Security experience policy to a collection
+
+> [!Important]
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 1. In a browser, go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
 1. Select **Endpoint security** then **Antivirus**.

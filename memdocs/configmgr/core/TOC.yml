@@ -401,6 +401,8 @@ items:
         href: servers/deploy/configure/deploy-and-manage-content.md
       - name: Monitor content
         href: servers/deploy/configure/monitor-content-you-have-distributed.md
+      - name: Visualize content distribution status
+        href: servers/deploy/configure/visualize-content-distribution-status.md
       - name: Microsoft Connected Cache
         href: plan-design/hierarchy/microsoft-connected-cache.md
       - name: Troubleshoot Microsoft Connected Cache
@@ -811,10 +813,12 @@ items:
       href: clients/manage/collections/create-collections.md
     - name: How to manage collections
       href: clients/manage/collections/manage-collections.md
-    - name: How to use maintenance windows
-      href: clients/manage/collections/use-maintenance-windows.md
+    - name: View collection relationships
+      href: clients/manage/collections/view-relationships.md
     - name: How to view collection evaluation
       href: clients/manage/collections/collection-evaluation-view.md
+    - name: How to use maintenance windows
+      href: clients/manage/collections/use-maintenance-windows.md
     - name: Security and privacy for collections
       href: clients/manage/collections/security-and-privacy-for-collections.md
   - name: Hardware inventory

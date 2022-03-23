@@ -17,7 +17,7 @@ ms.collection: highpri
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2203 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2010 or later. <!-- baseline only statement:--> When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability.--> This article summarizes the changes and new features in Configuration Manager, version 2203.
+Update 2203 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2010 or later. <!-- baseline only statement:--> When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the update. This article summarizes the changes and new features in Configuration Manager, version 2203.
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2203](../../servers/manage/checklist-for-installing-update-2203.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2203.md#post-update-checklist).
 
@@ -30,27 +30,31 @@ To take full advantage of new Configuration Manager features, after you update t
 
 If you deploy an application or app group to a user collection that's based on a security group, and you enable implicit uninstall, changes to the security group are now honored. When the site discovers the change in group membership, Configuration Manager uninstalls the app for the user that you removed from the security group.
 
-<!-- For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall). -->
+For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall).
 
 ## Cloud-attached management
 
-### Prefer cloud-based software update points on switching
+### Prefer cloud-based software update points
 <!--7759984-->
-Clients now prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP when the boundary group uses the **Prefer cloud based source over on-premises source** option.
+Clients now prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP when the boundary group uses the **Prefer cloud based source over on-premises source** option. To reduce the performance impact of this change, existing clients don't automatically switch to a cloud-based software update point.
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Boundary groups and software update points](/servers/deploy/configure/boundary-groups-software-update-points.md#bkmk_prefer_cmgsup).
 
 ## Site infrastructure
 
 ### Visualize content distribution status
+
 <!--9495651-->
+
 You can now monitor content distribution path and status in a graphical format. The graph shows distribution point type, distribution state, and associated status messages. This visualization allows you to more easily understand the status of your content package distribution. It helps you answer questions like:
 
 - Has the site successfully distributed the content?
 - Is the content distribution in progress?
 - Which distribution points have already processed the content?
 
-<!-- For more information, see [Link text](link). -->
+:::image type="content" source="media/9495651-view-content-distribution-small.png" alt-text="Visualization of content distribution status of the Configuration Manager client package in an example hierarchy.":::
+
+For more information, see [Visualize content distribution status](../../servers/deploy/configure/visualize-content-distribution-status.md).
 
 ### Improvements to Power BI Report Server Integration
 <!--12487076-->
@@ -89,15 +93,21 @@ Based on your feedback, there are two new client health checks in this release:
 - Verify disk space not near capacity
 - Verify CCMCache isn't near drive capacity
 
-<!-- For more information, see [Client health checks](../../../../clients/manage/client-health-checks.md). -->
+Configuration Manager client functionality can be limited when the disk is full. These checks help you maintain healthy clients, which help you better manage the devices.
+
+For more information, see [Client health checks](../../clients/manage/client-health-checks.md).
+
+This release also includes performance improvements to the [Client health dashboard](../../clients/manage/client-health-dashboard.md).
 
 ## Collections
 
 ### Delete collection references
+
 <!--9708999-->
+
 Previously, when you would delete a collection with dependent collections, you first had to delete the dependencies. The process of finding and deleting all of these collections could be difficult and time consuming. Now when you delete a collection, you can review and delete its dependent collections at the same time.
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Delete collection references](../../clients/manage/collections/manage-collections.md#delete-collection-references).
 
 <!-- ## Software Center -->
 
@@ -105,7 +115,7 @@ Previously, when you would delete a collection with dependent collections, you f
 
 ### Windows Update native experience for software updates
 <!--4316341, 10543514-->
-When installing software updates from Configuration Manager, you can now choose to use the native Windows Update interface and restart experience. The client's Windows Update Settings page will display the updates like they appear when using Windows Update for scanning. Restarts from software updates will also behave as though you're using Windows Update. When you use the Windows restart experience, you can also brand it for your organization and specify and when forced restarts will occur.
+When installing software updates from Configuration Manager, you can now choose to use the native Windows Update interface and restart experience. The client's Windows Update Settings page will display the updates like they appear when using Windows Update for scanning. Restarts from software updates will also behave as though you're using Windows Update. When you use the Windows restart experience, you can also brand it for your organization and specify when forced restarts will occur.
 
 For more information, see [Computer restart client settings](../../clients/deploy/device-restart-notifications.md#bkmk_wu).
 
@@ -147,13 +157,21 @@ You can now organize software update groups and packages by using folders. This 
 
 ## OS deployment
 
+### Escrow BitLocker recovery password to the site during a task sequence
+
+<!--10454717-->
+
+You can now configure the **Enable BitLocker** step of a task sequence to escrow the BitLocker recovery information for the OS volume to Configuration Manager. Previously, you had to escrow to Active Directory, or wait for the Configuration Manager client to receive BitLocker management policy after the task sequence. This new option makes sure that the device is fully protected by BitLocker when the task sequence completes, and that you can recover the OS volume immediately.
+
+For more information, see [Task sequence steps: Enable BitLocker](../../../osd/understand/task-sequence-steps.md#enable-bitlocker).
+
 ### Custom icon support for task sequences and packages
 
 <!--12486335-->
 
 Previously, task sequences and legacy packages would always display a default icon in Software Center. Based on your feedback, you can now add custom icons for task sequences and legacy packages. These icons appear in Software Center when you deploy these objects. Instead of a default icon, a custom icon can improve the user experience to better identify the software.
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Manage task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#more-options-tab) and [Packages and programs](../../../apps/deploy-use/packages-and-programs.md#custom-icons-for-packages).
 
 <!--## Protection-->
 ## Configuration Manager console
@@ -167,7 +185,7 @@ Previously, task sequences and legacy packages would always display a default ic
 
 ### Improvements to dashboards
 <!--10024154-->
-Dashboards, such as the**Windows Servicing** and **Microsoft Edge Management** dashboards, now use the Microsoft Edge WebView2 Runtime. To use dashboards, install the WebView2 console extension, then reopen the console.
+Dashboards, such as the **Windows Servicing** and **Microsoft Edge Management** dashboards, now use the Microsoft Edge WebView2 Runtime. To use dashboards, install the WebView2 console extension, then reopen the console.
 
 <!-- For more information, see the [WebView2 console extension](../../servers/manage/admin-console-extensions.md#get-console-extensions). -->
 

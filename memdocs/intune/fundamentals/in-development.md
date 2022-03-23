@@ -79,9 +79,6 @@ Win32 App Log collection via Intune Management Extension has moved to the Window
 ### Feedback settings for Company Portal and Microsoft Intune apps<!-- 10012370 -->
 Feedback settings will be provided to address M365 enterprise feedback policies for the currently logged in user via the Microsoft 365 Apps admin center. The settings are used to determine whether feedback can be enabled or must be disabled for a user. The feature will be available for Intune Company Portal and Microsoft Intune apps.
 
-### Apps UI when using Android 12L OS<!-- 12536901 -->
-The Android 12L OS contains new features designed to improve the Android 12 experience on large and folding dual-screen devices. Intune apps will support Android 12L when the update is released to devices.
-
 ### Uninstall DMG-type applications on managed macOS devices (Public preview)<!-- 13155022 -->
 You will be able to use the Uninstall assignment type to remove DMG-type applications on managed macOS devices from Microsoft Endpoint Manager. You can find macOS DMG apps in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **macOS app (.DMG)**. For related information, [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md). 
 

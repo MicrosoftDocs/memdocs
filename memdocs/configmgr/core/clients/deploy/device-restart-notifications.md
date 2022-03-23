@@ -28,7 +28,7 @@ The notifications a user receives for a pending device restart can vary dependin
 The [Computer restart client settings](#client-settings) change the user experience for all required deployments that require a restart of the following types:
 
 - [Application](../../../apps/deploy-use/deploy-applications.md)
-- [Task sequence](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
+- [Task sequence](../../../osd/deploy-use/deploy-a-task-sequence.md)
 - [Software update](../../../sum/deploy-use/deploy-software-updates.md)
 
 ## Restart notification types
