@@ -226,7 +226,7 @@ When you expand a stand-alone primary site, you install a new CAS that uses the 
 
 Before you start, first see the [prerequisites to expand a site](prerequisites-for-installing-sites.md#bkmk_expand).
 
-To expand the site, use the procedure [to install a primary or central administration site](#process-to-install-a-primary-or-cas) with the following caveats:
+To expand the site, use the [process to install a CAS or primary site](#process-to-install-a-cas-or-primary-site) with the following caveats:
 
 - Install the CAS by using the same version of Configuration Manager as the stand-alone primary site.
 
