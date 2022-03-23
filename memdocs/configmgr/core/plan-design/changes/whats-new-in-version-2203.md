@@ -63,7 +63,7 @@ We've made the following improvements for Power BI Report Server integration:
 - You can now use Microsoft Power BI Desktop (Optimized for Power BI Report Server) versions that were released after January 2021
 - Configuration Manager now correctly handles Power BI reports saved by Power BI Desktop (optimized for Power BI Report Server) May 2021 or later.
 
-For more information, see [Integrate with Power BI Report Server](../../servers/manage/powerbi-report-server.md).
+For more information, see [Integrate with Power BI Report Server](../../servers/manage/powerbi-report-server.md). 
 
 ### Exclude data warehouse reporting tables from synchronization
 <!--12441118-->
@@ -174,7 +174,12 @@ Previously, task sequences and legacy packages would always display a default ic
 For more information, see [Manage task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#more-options-tab) and [Packages and programs](../../../apps/deploy-use/packages-and-programs.md#custom-icons-for-packages).
 
 <!--## Protection-->
+
 ## Configuration Manager console
+
+### Delete a contribution you made to Community hub
+<!--10416767-->
+You can now delete contributions you've made to the Community hub. For more information, see [Contribute to Community hub](../../servers/manage/community-hub-contribute.md#bkmk_delete).
 
 ### Improvements for sending feedback
 <!--11754191, 12890088-->
