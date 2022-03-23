@@ -354,7 +354,13 @@ items:
       - name: Prerequisites for installing sites
         href: servers/deploy/install/prerequisites-for-installing-sites.md
       - name: Use the setup wizard
-        href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+        items:
+        - name: Setup wizard overview
+          href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+        - name: Install a central administration or primary site
+          href: servers/deploy/install/setup-wizard-central-primary.md
+        - name: Install a secondary site
+          href: servers/deploy/install/setup-wizard-secondary.md
       - name: Use a command-line
         items:
         - name: Command-line overview

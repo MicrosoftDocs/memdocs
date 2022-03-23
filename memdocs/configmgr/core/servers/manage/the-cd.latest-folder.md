@@ -55,14 +55,14 @@ When you want to install a new child primary site below a central administration
 
 ### Expand a stand-alone primary site
 
-When you expand a stand-alone primary site by installing a new central administration site, use Setup and the source files from the CD.Latest folder from the primary site. This process uses installation source files that match the version of the primary site. For more information, see [Expand a stand-alone primary site](../deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand).
+When you expand a stand-alone primary site by installing a new central administration site, use Setup and the source files from the CD.Latest folder from the primary site. This process uses installation source files that match the version of the primary site. For more information, see [Expand a stand-alone primary site](../deploy/install/setup-wizard-central-primary.md#expand-a-stand-alone-primary-site).
 
 ### Install a secondary site
 <!-- SCCMDocs-pr issue #3164 -->
 
 When you want to install a new secondary site below a primary site that has installed one or more in-console updates, use the source files from the CD.Latest folder from the primary site.
 
-For more information, see [Install a secondary site](../deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_secondary).
+For more information, see [Install a secondary site](../deploy/install/setup-wizard-secondary.md).
 
 ## Unsupported scenarios
 
