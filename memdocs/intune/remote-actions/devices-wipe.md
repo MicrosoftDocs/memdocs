@@ -75,8 +75,6 @@ A wipe is useful for resetting a device before you give the device to a new user
 
 6. The **Wipe device, and continue to wipe even if device loses power** option makes sure that the wipe action can't be circumvented by turning off the device. This option will keep trying to reset the device until successful. In some configurations, this action may leave the device [unable to reboot](/troubleshoot/mem/intune/troubleshoot-device-actions#wipe-action).
 7. For iOS/iPadOS eSIM devices, the cellular data plan is preserved by default when you wipe a device. If you want to remove the data plan from the device when you wipe the device, select the **Also remove the devices data plan...** option.
-    >[!NOTE]
-    >If you're using bulk actions to wipe several iOS/iPadOS devices at once, the data plan is not preserved by default.
 8. To confirm the wipe, select **Yes**.
 
 If the device is on and connected, the **Wipe** action propagates across all device types in less than 15 minutes.

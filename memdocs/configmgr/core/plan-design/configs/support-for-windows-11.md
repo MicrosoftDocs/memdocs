@@ -138,6 +138,9 @@ Use one of the following options to work around this issue:
 
 <!-- 12661534 -->
 
+> [!IMPORTANT]
+> This issue is resolved with the March 2022 cumulative update (KB5011493). For any version of Windows 11, you can successfully use offline servicing with the March 2022 cumulative update.
+
 When you [apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#apply-software-updates-to-an-image) for Windows 11, the process will fail. You'll see errors similar to the following entries in the offline servicing log file, `OfflineServicingMgr.log`:
 
 ```log

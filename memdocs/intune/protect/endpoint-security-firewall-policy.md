@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/02/2021
+ms.date: 03/22/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -145,6 +145,12 @@ You can filter returns for this report by using one or more of the status detail
 
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Status report](media/endpoint-security-firewall-policy/firewall-status.png)
+
+## Investigate issues for Firewall rules
+
+To learn more about Firewall rules in Intune, and how to troubleshoot common problems, see the following *Intune Customer Success* blog:
+
+- [How to trace and troubleshoot the Intune Endpoint Security Firewall rule creation process](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-trace-and-troubleshoot-the-intune-endpoint-security/ba-p/3261452)
 
 ## Next steps
 
