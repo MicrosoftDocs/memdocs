@@ -1,8 +1,7 @@
 ---
 # required metadata
-title: Settings you can deploy with Intune to protect managed Windows devices
-description: On Windows 10 or Windows 11 devices, configure endpoint protection settings to enable Microsoft Defender features, including Application Guard, Firewall, SmartScreen, encryption and BitLocker, Exploit Guard, Application Control, Security Center, and security on local devices in Microsoft Intune.
-keywords:
+title: Windows 10/11 settings you can deploy with Microsoft Intune to protect managed Windows devices
+description: Use Microsoft Intune endpoint protection profiles to manage settings that help protect your enrolled Windows 10 and 11 devices. 
 author: brenduns
 ms.author: brenduns
 manager: dougeby

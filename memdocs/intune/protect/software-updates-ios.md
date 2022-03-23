@@ -87,7 +87,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
        If you don't configure times to start or end, the configuration results in no restriction and updates can install at any time.  
 
        > [!NOTE]
-       > You can configure settings in [Device Restrictions](../configuration/device-restrictions-ios.md#general) to hide an update from device users for a period of time on your supervised iOS/iPadOS devices. A restriction period can give you time to test an update before its visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
+       > You can configure settings in [Device Restrictions](../configuration/device-restrictions-ios.md#general) to hide an update from device users for a period of time on your supervised iOS/iPadOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
        >
        > When you use a device restriction to hide an update, review your software update policies to ensure they wont schedule the install of the update before that restriction period ends. Software update policies install updates based on their own schedule, regardless of the update being hidden or visible to the device user.
 
