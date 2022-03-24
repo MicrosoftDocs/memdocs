@@ -11,7 +11,7 @@ ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
 ---
-
+ 
 # List of prerequisite checks for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -619,6 +619,12 @@ To resolve this warning, check whether the despooler and scheduler site system c
 *Applies to: Management point*
 
 The Background Intelligent Transfer Service (BITS) is installed and enabled in IIS.
+
+### Check if the site uses the Asset Intelligence sync point
+<!--12451634-->
+*Applies to: Central administration site, primary site*
+
+Starting in version 2203, this check warns about the presence of the asset intelligence synchronization point role.
 
 ### Check if the site uses Microsoft Operations Management Suite (OMS) Connector
 
