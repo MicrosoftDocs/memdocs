@@ -129,7 +129,7 @@ For more information, see [Install a software update point](../../../sum/get-sta
 <!--4497776-->
 You can now pre-download content for software updates that are included in available deployments. Required deployments already pre-download content by default. Enabling this new setting reduces installation wait times for clients since installation notifications won't be visible in Software Center until the content has fully downloaded.
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Deploy software updates](../../../sum/deploy-use/manually-deploy-software-updates.md#process-to-manually-deploy-the-software-updates-in-a-software-update-group).
 
 ### Customize maximum run time for other software update types
 <!--12770887-->
