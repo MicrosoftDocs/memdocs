@@ -125,7 +125,7 @@ Specifies the FQDN of the site server to which the console connects when it open
 
 ## Postinstallation information
 
-The Configuration Manager console requires installation of the built-in WebView2 extension for certain features such as Community hub and dashboards. A notification to install the extension is given to the console user when they open the console. For more information see,the [WebView2 console extension](../../servers/manage/admin-console-extensions.md#bkmk_notification). 
+The Configuration Manager console requires installation of the built-in WebView2 extension for certain features such as Community hub and dashboards. A notification to install the extension is given to the console user when they open the console. For more information see,the [WebView2 console extension](../../manage/admin-console-extensions.md#bkmk_notification). 
 
 ## Next steps
 
