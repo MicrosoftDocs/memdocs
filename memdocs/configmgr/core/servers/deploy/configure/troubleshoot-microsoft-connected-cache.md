@@ -14,7 +14,7 @@ ms.localizationpriority: medium
 
 # Troubleshoot Microsoft Connected Cache in Configuration Manager
 
-This article provides technical details about Microsoft Connected Cache in Configuration Manager. Use it to help troubleshoot issues that you may have in your environment. For more information on how it works and how to use it, see [Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
+This article provides technical details about Microsoft Connected Cache in Configuration Manager. Use it to help troubleshoot issues that you might have in your environment. For more information on how it works and how to use it, see [Microsoft Connected Cache in Configuration Manager](../../../plan-design/hierarchy/microsoft-connected-cache.md).
 
 ## Verify
 
@@ -24,9 +24,9 @@ Verify this behavior [on a client](#verify-on-a-client) or [on the server](#veri
 
 ### Verify on a client
 
-1. On client running a supported version of Windows 10 or later, download cloud-managed content. For more information on the types of content that Connected Cache supports, see [Supported content types](../../../plan-design/hierarchy/microsoft-connected-cache.md#supported-content-types).
+1. On a client running a supported version of Windows 10 or later, download cloud-managed content. For more information on the types of content that Connected Cache supports, see [Supported content types](../../../plan-design/hierarchy/microsoft-connected-cache.md#supported-content-types).
 
-2. Open PowerShell and run the following command: `Get-DeliveryOptimizationStatus`
+1. Open PowerShell and run the following command: `Get-DeliveryOptimizationStatus`.
 
 For example:
 
@@ -64,16 +64,16 @@ IsPinned                    : False
 
 Notice that the `BytesFromCacheServer` attribute isn't zero.
 
-If the client isn't configured correctly, or the cache server isn't installed correctly, the Delivery Optimization client falls back to the original cloud source. Then the BytesFromCacheServer attribute will be zero.
+If the client isn't configured correctly, or the cache server isn't installed correctly, the Delivery Optimization client falls back to the original cloud source. Then the `BytesFromCacheServer` attribute will be zero.
 
 ### Verify on the server
 
-First, verify the registry properties are configured correctly: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache`. For example, the drive cache location is `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294`, where `PrimaryDrivesInput` can be multiple drives such as `C,D,E`.
+First, verify the registry properties are configured correctly: `HKLM\SOFTWARE\Microsoft\Delivery Optimization In-Network Cache`. For example, the drive cache location is `PrimaryDrivesInput\DOINC-E77D08D0-5FEA-4315-8C95-10D359D59294`, where `PrimaryDrivesInput` can be multiple drives, such as `C,D,E`.
 
 Next, use the following method to simulate a client download request to the server with the mandatory headers.
 
 1. Open a 64-bit PowerShell window as an administrator.
-2. Run the following command, and replace the name or IP address of your server for `<DoincServer>`:
+1. Run the following command, and replace the name or IP address of your server for `<DoincServer>`:
 
 ```PowerShell
 Invoke-WebRequest -URI "http://<DoincServer>/mscomtest/wuidt.gif" -Headers @{"Host"="b1.download.windowsupdate.com"}
@@ -106,13 +106,10 @@ The following attributes indicate success:
 
 ## Log files
 
-- ARR setup log: `%temp%\arr_setup.log`
-
-- Connected Cache server setup log: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` on the distribution point, and `DistMgr.log` on the site server
-
-- IIS operational logs: By default, `%SystemDrive%\inetpub\logs\LogFiles`
-
-- Connected Cache server operational log: `C:\Doinc\Product\Install\Logs`
+- **Application Request Routing (ARR) setup log**: `%temp%\arr_setup.log`
+- **Connected Cache server setup log**: `SMS_DP$\Ms.Dsp.Do.Inc.Setup\DoincSetup.log` on the distribution point and `DistMgr.log` on the site server
+- **Internet Information Services (IIS) operational logs**: By default, `%SystemDrive%\inetpub\logs\LogFiles`
+- **Connected Cache server operational log**: `C:\Doinc\Product\Install\Logs`
 
     > [!TIP]
     > Among other uses, this log can help you identify connectivity issues with the Microsoft cloud.
@@ -168,15 +165,15 @@ When Configuration Manager installs the Connected Cache component on the distrib
 
 ## IIS configurations
 
-The Connected Cache server install makes several modifications to the IIS configuration on the distribution point.
+The Connected Cache server installation makes several modifications to the IIS configuration on the distribution point.
 
 ### Application request routing
 
-The Connected Cache server installs and configures IIS [Application Request Routing (ARR)](https://www.iis.net/downloads/microsoft/application-request-routing). To avoid potential conflicts, the distribution point can't already have this component installed.
+The Connected Cache server installs and configures IIS [Application Request Routing](https://www.iis.net/downloads/microsoft/application-request-routing). To avoid potential conflicts, the distribution point can't already have this component installed.
 
 ### Allowed server variables
 
-After you install the Connected Cache server, the default web site has the following *local* server variables:
+After you install the Connected Cache server, the default website has the following *local* server variables:
 
 - HTTP_HOST
 - QUERY_STRING
@@ -218,12 +215,12 @@ To change the custom header name for each server farm:
 
 1. Open IIS Manager.
 1. Select **Server Farms**.
-1. Select a server farm and the proxy icon. 
+1. Select a server farm and the proxy icon.
 1. Under **Custom Headers**, change the value `X-Forwarded-For` to `X-Forwarded-For-<custom-name>`.
 
 ## Manage server resources
 
-Disk space required for each Connected Cache server may vary, based on your organization's update requirements. 100 GB should be enough space to cache the following content:
+Disk space required for each Connected Cache server might vary, based on your organization's update requirements. Disk space of 100 GB should be enough to cache the following content:
 
 - A feature update
 - Two to three months of quality and Microsoft 365 Apps updates
@@ -231,7 +228,7 @@ Disk space required for each Connected Cache server may vary, based on your orga
 
 The Connected Cache server shouldn't consume much system memory or processor time. After you install the Connected Cache server, if you notice significant process or memory resource consumption, analyze the IIS and ARR log files.
 
-If the IIS and ARR log files take up too much space on the server, there are several methods you can use to manage the log files. For more information, see [Managing IIS Log File Storage](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
+If the IIS and ARR log files take up too much space on the server, there are several methods you can use to manage the log files. For more information, see [Managing IIS log file storage](/iis/manage/provisioning-and-managing-iis/managing-iis-log-file-storage#overview).
 
 ## See also
 
