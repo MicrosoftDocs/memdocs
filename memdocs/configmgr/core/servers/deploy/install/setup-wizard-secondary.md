@@ -106,6 +106,9 @@ Before you start, review the [overview for using the setup wizard](use-the-setup
 
         - **Specify how client devices communicate with the distribution point**: Choose between HTTP and HTTPS.
 
+            > [!IMPORTANT]
+            > Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
+
         - **Create a self-signed certificate or import a PKI client certificate**: Choose between using a self-signed certificate or importing a certificate from your PKI. A self-signed certificate lets you also allow anonymous connections from Configuration Manager clients to the content library. The certificate is used to authenticate the distribution point to a management point before the distribution point sends status messages. For more information, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).
 
     - _Optional settings:_

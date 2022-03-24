@@ -159,10 +159,15 @@ If you're installing a CAS as part of a site expansion scenario, first read [Exp
 
 1. On the **Client Communication Settings** page, choose how clients will communicate with site systems. The more secure option is to require all site systems to use HTTPS. Otherwise, you individually configure the communication method for each site system role.
 
-    When you select **All site system roles accept only HTTPS communication from clients**, the client computer must have a valid PKI certificate for client authentication. For more information, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).
+    > [!IMPORTANT]
+    > Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
+
+    - **All site system roles accept only HTTPS communication from clients**: When you select this option, clients must have a valid PKI certificate for client authentication. For more information, see [PKI certificate requirements](../../../plan-design/network/pki-certificate-requirements.md).
+
+    - **Configure the communication method on each site system role**: Starting in version 2203, when you select this option, setup configures the site to use [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).<!-- 13237187 -->
 
     > [!NOTE]
-    > This step only applies when you install a primary site. If you're installing a CAS, skip this step.
+    > This page only applies when you install a primary site. If you're installing a CAS, skip this page.
 
 1. On the **Site System Roles** page, choose whether to install a management point or distribution point. For each role that you choose to have installed by Setup:
 
@@ -241,8 +246,5 @@ To expand the site, use the [process to install a CAS or primary site](#process-
 [Use the setup wizard to install a secondary site](setup-wizard-secondary.md)
 
 [Configure sites and hierarchies](../configure/configure-sites-and-hierarchies.md)
-
-> [!IMPORTANT]
-> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 [Install consoles](install-consoles.md)
