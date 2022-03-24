@@ -28,39 +28,39 @@ Verify this behavior [on a client](#verify-on-a-client) or [on the server](#veri
 
 1. Open PowerShell and run the following command: `Get-DeliveryOptimizationStatus`.
 
-For example:
+    For example:
 
-```PowerShell
-PS C:\> Get-DeliveryOptimizationStatus
+    ```PowerShell
+    PS C:\> Get-DeliveryOptimizationStatus
 
-FileId                      : ec523d49c4f7c3c4444f0d9b952286ce40fdcee4
-FileSize                    : 549064
-TotalBytesDownloaded        : 549064
-PercentPeerCaching          : 0
-BytesFromPeers              : 0
-BytesFromHttp               : 0
-Status                      : Caching
-Priority                    : Background
-BytesFromCacheServer        : 549064
-BytesFromLanPeers           : 0
-BytesFromGroupPeers         : 0
-BytesFromInternetPeers      : 0
-BytesToLanPeers             : 0
-BytesToGroupPeers           : 0
-BytesToInternetPeers        : 0
-DownloadDuration            : 00:00:00.0780000
-HttpConnectionCount         : 2
-LanConnectionCount          : 0
-GroupConnectionCount        : 0
-InternetConnectionCount     : 0
-DownloadMode                : 99
-SourceURL                   : http://au.download.windowsupdate.com/c/msdownload/update/software/defu/2019/09/am_delta_p
-                              atch_1.301.664.0_ec523d49c4f7c3c4444f0d9b952286ce40fdcee4.exe
-NumPeers                    : 0
-PredefinedCallerApplication : WU Client Download
-ExpireOn                    : 9/6/2019 8:36:19 AM
-IsPinned                    : False
-```
+    FileId                      : ec523d49c4f7c3c4444f0d9b952286ce40fdcee4
+    FileSize                    : 549064
+    TotalBytesDownloaded        : 549064
+    PercentPeerCaching          : 0
+    BytesFromPeers              : 0
+    BytesFromHttp               : 0
+    Status                      : Caching
+    Priority                    : Background
+    BytesFromCacheServer        : 549064
+    BytesFromLanPeers           : 0
+    BytesFromGroupPeers         : 0
+    BytesFromInternetPeers      : 0
+    BytesToLanPeers             : 0
+    BytesToGroupPeers           : 0
+    BytesToInternetPeers        : 0
+    DownloadDuration            : 00:00:00.0780000
+    HttpConnectionCount         : 2
+    LanConnectionCount          : 0
+    GroupConnectionCount        : 0
+    InternetConnectionCount     : 0
+    DownloadMode                : 99
+    SourceURL                   : http://au.download.windowsupdate.com/c/msdownload/update/software/defu/2019/09/am_delta_p
+                                atch_1.301.664.0_ec523d49c4f7c3c4444f0d9b952286ce40fdcee4.exe
+    NumPeers                    : 0
+    PredefinedCallerApplication : WU Client Download
+    ExpireOn                    : 9/6/2019 8:36:19 AM
+    IsPinned                    : False
+    ```
 
 Notice that the `BytesFromCacheServer` attribute isn't zero.
 
@@ -75,34 +75,34 @@ Next, use the following method to simulate a client download request to the serv
 1. Open a 64-bit PowerShell window as an administrator.
 1. Run the following command, and replace the name or IP address of your server for `<DoincServer>`:
 
-```PowerShell
-Invoke-WebRequest -URI "http://<DoincServer>/mscomtest/wuidt.gif" -Headers @{"Host"="b1.download.windowsupdate.com"}
-```
+    ```PowerShell
+    Invoke-WebRequest -URI "http://<DoincServer>/mscomtest/wuidt.gif" -Headers @{"Host"="b1.download.windowsupdate.com"}
+    ```
 
-The output looks similar to the following example:
+    The output looks similar to the following example:
 
-```PowerShell
-PS C:\WINDOWS\system32> Invoke-WebRequest -URI "http://SERVER01.CONTOSO.COM/mscomtest/wuidt.gif" -Headers @{"Host"="b1.download.windowsupdate.com"}
+    ```PowerShell
+    PS C:\WINDOWS\system32> Invoke-WebRequest -URI "http://SERVER01.CONTOSO.COM/mscomtest/wuidt.gif" -Headers @{"Host"="b1.download.windowsupdate.com"}
 
 
-StatusCode        : 200
-StatusDescription : OK
-Content           : {71, 73, 70, 56...}
-RawContent        : HTTP/1.1 200 OK
-                    X-HW: 1567797125.dop019.se2.t,1567797125.cds058.se2.s,1567797125.dop114.at2.r,1567797125.cds079.at2
-                    .p,1567797125.cds058.se2.p
-                    X-CCC: cdP+dRBgUCoZO1mezA9zhg2VwQ7P1JWTh9k+GhfQmu8=_SLwv...
-Headers           : {[X-HW, 1567797125.dop019.se2.t,1567797125.cds058.se2.s,1567797125.dop114.at2.r,1567797125.cds079.a
-                    t2.p,1567797125.cds058.se2.p], [X-CCC,
-                    cdP+dRBgUCoZO1mezA9zhg2VwQ7P1JWTh9k+GhfQmu8=_SLwvtSBQdT3uPQ5ikBe1ABMbdYIIncem+h5dtcLI6GY=],
-                    [X-CID, 100], [Accept-Ranges, bytes]...}
-RawContentLength  : 969710
-```
+    StatusCode        : 200
+    StatusDescription : OK
+    Content           : {71, 73, 70, 56...}
+    RawContent        : HTTP/1.1 200 OK
+                        X-HW: 1567797125.dop019.se2.t,1567797125.cds058.se2.s,1567797125.dop114.at2.r,1567797125.cds079.at2
+                        .p,1567797125.cds058.se2.p
+                        X-CCC: cdP+dRBgUCoZO1mezA9zhg2VwQ7P1JWTh9k+GhfQmu8=_SLwv...
+    Headers           : {[X-HW, 1567797125.dop019.se2.t,1567797125.cds058.se2.s,1567797125.dop114.at2.r,1567797125.cds079.a
+                        t2.p,1567797125.cds058.se2.p], [X-CCC,
+                        cdP+dRBgUCoZO1mezA9zhg2VwQ7P1JWTh9k+GhfQmu8=_SLwvtSBQdT3uPQ5ikBe1ABMbdYIIncem+h5dtcLI6GY=],
+                        [X-CID, 100], [Accept-Ranges, bytes]...}
+    RawContentLength  : 969710
+    ```
 
-The following attributes indicate success:
+    The following attributes indicate success:
 
-- `StatusCode : 200`
-- `StatusDescription : OK`
+    - `StatusCode : 200`
+    - `StatusDescription : OK`
 
 ## Log files
 
