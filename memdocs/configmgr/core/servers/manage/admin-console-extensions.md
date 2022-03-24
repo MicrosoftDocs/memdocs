@@ -82,7 +82,7 @@ Starting in version 2111, the site creates status messages for events related to
 - The user that made the change
 - The ID of the extension
 - The version of the extension
-
+ 
 There are four categories of message events:
 
 - Required or optional
