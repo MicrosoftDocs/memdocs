@@ -66,7 +66,7 @@ Support for the application catalog was removed in version 1910. For more inform
 ### Asset Intelligence synchronization point on the expanded primary site
 
 > [!IMPORTANT]
-> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Asset intelligence deprecation](../../../clients/manage/asset-intelligence/deprecation.md).
 
 *Applies to: Central administration site*
 

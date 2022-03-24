@@ -863,6 +863,8 @@ items:
       href: clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md
     - name: Use the Product Lifecycle dashboard
       href: clients/manage/asset-intelligence/product-lifecycle-dashboard.md
+    - name: Asset intelligence deprecation
+      href: clients/manage/asset-intelligence/deprecation.md
   - name: Remote control
     items:
     - name: Introduction to remote control
