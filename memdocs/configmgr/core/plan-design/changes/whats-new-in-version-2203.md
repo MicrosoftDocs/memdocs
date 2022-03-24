@@ -190,9 +190,9 @@ You can now delete contributions you've made to the Community hub. For more info
 
 ### Improvements to dashboards
 <!--10024154-->
-Dashboards, such as the **Windows Servicing** and **Microsoft Edge Management** dashboards, now use the Microsoft Edge WebView2 Runtime. To use dashboards, install the WebView2 console extension, then reopen the console.
+Dashboards, such as the **Windows Servicing** and **Microsoft Edge Management** dashboards, now use the Microsoft Edge WebView2 Runtime. To use dashboards, install the WebView2 console extension, then reopen the console..
 
-<!-- For more information, see the [WebView2 console extension](../../servers/manage/admin-console-extensions.md#get-console-extensions). -->
+For more information, see the [WebView2 console extension](../../servers/manage/admin-console-extensions.md#bkmk_notification).
 
 ### Console and user experience improvements
 <!--12726153-->

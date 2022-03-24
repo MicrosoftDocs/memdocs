@@ -2,7 +2,7 @@
 title: Manage Windows as a Service
 titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows clients are near end of support.
-ms.date: 12/01/2021
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -22,12 +22,14 @@ For more information about Windows servicing options, see [Overview of Windows a
 
 ## Prerequisites
 
+- For Configuration Manager version 2203 or later, the [WebView2 console extension](../../core/servers/manage/admin-console-extensions.md#bkmk_notification) must be installed.
+
 - Windows computers must use Configuration Manager software updates with Windows Server Update Services (WSUS) for software update management. When a computer uses Windows Update for Business or Windows Insiders, it isn't evaluated in Windows servicing plans. For more information, see [Integration with Windows Update for Business](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).
 
 - Use a supported WSUS version:
   - WSUS 10.0.14393, a role in Windows Server 2016
   - WSUS 10.0.17763, a role in Windows Server 2019
-  - WSUS 6.2 and 6.3, a role in Windows Server 2012 and Windows Server 2012 R2. Also install [KB 3095113 and KB 3159706](../../sum/plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012) or later.
+  - WSUS 6.3, a role in Windows Server 2012 R2. Also install [KB 3095113 and KB 3159706](../../sum/plan-design/prerequisites-for-software-updates.md#BKMK_wsus2012) or later.
 
 - Enable heartbeat discovery. The data that the Windows servicing dashboard displays comes from discovery. For more information, see [Configure heartbeat discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#BKMK_ConfigHBDisc).
 
