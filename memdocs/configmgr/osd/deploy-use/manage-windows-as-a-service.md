@@ -22,7 +22,7 @@ For more information about Windows servicing options, see [Overview of Windows a
 
 ## Prerequisites
 
-- For Configuration Manager version 2203 or later, the [WebView2 console extension](../../core/servers/manage/admin-console-extensions.md#bkmk_notification) must be installed.
+- For Configuration Manager version 2203 or later, the [WebView2 console extension](../../core/servers/manage/admin-console-extensions.md#bkmk_notification) must be installed. If needed, select the notification bell in the top right corner of the console to install the extension. <!--10024154-->
 
 - Windows computers must use Configuration Manager software updates with Windows Server Update Services (WSUS) for software update management. When a computer uses Windows Update for Business or Windows Insiders, it isn't evaluated in Windows servicing plans. For more information, see [Integration with Windows Update for Business](../../sum/deploy-use/integrate-windows-update-for-business-windows-10.md).
 
