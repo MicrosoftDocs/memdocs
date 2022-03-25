@@ -68,7 +68,7 @@ The following functional areas aren't currently included in the deprecation and 
   - Product family
   - Hardware requirement
 
-- The ability to customize the inventoried software title information such as the product name and vendor.
+- The ability to customize the inventoried software title information such as the product name and vendor
 
 - The ability to add custom software categories, families, and labels to inventoried software titles.
 
