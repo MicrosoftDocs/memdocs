@@ -24,7 +24,7 @@ The following functional areas are deprecated and may be removed in a future ver
 
 - The [asset intelligence catalog](introduction-to-asset-intelligence.md#BKMK_AssetIntelligenceCatalog), which includes the following functionality:
 
-  - Cloud updates to the predefined software title information such as product name and vendor.
+  - Cloud updates to the predefined software title information such as product name and vendor
 
   - Cloud updates to the predefined [software categories](introduction-to-asset-intelligence.md#BKMK_SoftwareCategories) and [software families](introduction-to-asset-intelligence.md#BKMK_SoftwareFamilies) and the associated SQL views and reports.
 
