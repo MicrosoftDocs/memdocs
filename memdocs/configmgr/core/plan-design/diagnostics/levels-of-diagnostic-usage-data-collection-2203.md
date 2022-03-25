@@ -57,6 +57,8 @@ For Configuration Manager version 2203, this level includes the following data:
 
 - Count of clients by OS type and version that are joined to Azure AD or hybrid-joined
 
+- ***[New]*** Count of clients by OS and system processor type
+
 ### Cloud services (Level 1)
 
 - Count of clients by co-management enrollment method
@@ -64,6 +66,8 @@ For Configuration Manager version 2203, this level includes the following data:
 - Error statistics for co-management enrollment
 
 - Aggregated usage statistics of co-management: number of clients ever enrolled, number of enrolled clients, number of clients pending enrollment, clients receiving policy, workload states, pilot/exclusion collection sizes, and enrollment errors
+
+- ***[New]*** Count of clients piloting or using each co-management workload
 
 - Count of Azure AD applications and services connected to Configuration Manager
 
@@ -77,7 +81,7 @@ For Configuration Manager version 2203, this level includes the following data:
 
 - Aggregated statistics on Desktop Analytics enrollment errors and usage
 
-- Count of clients by OS type and version that are co-managed, cloud-attached, or both
+- ***[Updated]*** Count of clients by OS type and version that are co-managed, cloud-attached, or use a cloud management gateway (CMG)
 
 ### Configuration Manager console (Level 1)
 
@@ -275,7 +279,7 @@ For Configuration Manager version 2203, this level includes the following data:
 
 - Active Management Technology (AMT) client version
 
-- BIOS age in years
+- ***[Updated]*** BIOS age in years, and distribution of ages in months
 
 - Count of devices with Secure Boot enabled
 
@@ -367,7 +371,7 @@ For Configuration Manager version 2203, this level includes the following data:
 
 - Collections without a deployment
 
-- Count of collections synchronized to Azure AD
+- ***[Updated]*** Count of collections synchronized to Azure AD, including type and size
 
 ### Compliance settings (Level 2)
 
@@ -397,7 +401,7 @@ For Configuration Manager version 2203, this level includes the following data:
 
 - Counts of active and viewed console notification messages by type
 
-- Count of folders
+- ***[Updated]*** Count of folders by object type
 
 - Console performance information
 
@@ -436,6 +440,8 @@ For Configuration Manager version 2203, this level includes the following data:
 - Count of boundary groups by configuration
 
 - Count of subnets excluded from peer cache
+
+- ***[New]*** Count and type of operations on the `SMSDPProvider` service for distribution points
 
 ### Protection (Level 2)
 
@@ -512,6 +518,8 @@ For Configuration Manager version 2203, this level includes the following data:
 - Count of error codes from feature upgrades for Windows clients
 
 - Count of supported and unsupported OS versions
+
+- ***[New]*** Count of task sequences and legacy packages with custom icons
 
 ### Site updates (Level 2)
 
@@ -644,6 +652,8 @@ For Configuration Manager version 2203, this level includes the following data:
 - Count of site-to-site accounts by type
 
 - Usage statistics for user and device custom properties
+
+- ***[New]*** Count and type of edits to asset intelligence categories
 
 ## Level 3 - Full
 

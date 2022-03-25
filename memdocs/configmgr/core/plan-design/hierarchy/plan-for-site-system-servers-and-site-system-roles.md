@@ -64,7 +64,7 @@ To install additional providers, run Configuration Manager setup to [Manage the 
 ### Asset Intelligence synchronization point
 
 > [!IMPORTANT]
-> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Asset intelligence deprecation](../../clients/manage/asset-intelligence/deprecation.md).
 
 A site system role that connects to Microsoft to download information for the Asset Intelligence catalog. This role also uploads uncategorized titles, so that Microsoft can consider them for future inclusion in the catalog. A hierarchy supports only a single instance of this role at the top-tier site of your hierarchy. If you expand a standalone primary site into a larger hierarchy, uninstall this role from the primary site. Then install it at the central administration site.
 

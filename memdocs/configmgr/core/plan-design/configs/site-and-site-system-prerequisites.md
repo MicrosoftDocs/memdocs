@@ -205,7 +205,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 ## Asset Intelligence synchronization point
 
 > [!IMPORTANT]
-> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Asset intelligence deprecation](../../clients/manage/asset-intelligence/deprecation.md).
 
 ### .NET Framework for the AISP
 
