@@ -248,7 +248,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
     - **Platform**: Select **Windows 10 and later**.
     - **Profile type**: Select **Tempplates**, Choose the Template name **Domain Join** and click on **Create**
 3. Enter the **Name**, **Description** and Click on **Next** 
-5. Provide a **Computer name prefix**, **Domain name**.
+5. Provide a **Computer name prefix** and **Domain name**.
 6. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
     - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
     - Provide an OU in which you've delegated control to the root computers in your on-prem Active Directory.
