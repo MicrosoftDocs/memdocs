@@ -161,6 +161,7 @@ You can have up to 500 rows in the file's list of devices. The header and line f
 
 Keep these other requirements for the CSV file in mind:
 
+- Each entry above is represented by a different column without the commas (eg: A1 - A5 and the results should be represented from B1 - B5).
 - You can't use extra columns. 
 - You can't use quotation marks. 
 - You can use only ANSI-format text files (not Unicode). 
