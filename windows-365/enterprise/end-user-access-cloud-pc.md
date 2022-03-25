@@ -65,6 +65,25 @@ While on windows365.microsoft.com, end users can perform actions on their Cloud 
   | Can’t connect to Cloud PC. We’re working to fix it, try again later. | A Microsoft service required for connectivity is unavailable. Try connecting again later. |
   | We couldn’t fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it couldn't be fixed. This issue exist because of an ongoing Windows update or another issue. If this error persists for an extended period of time, the Cloud PC may need to be reprovisioned. |
 
+## Windows 365 web client
+
+On their Windows 365 home page, users see the Cloud PCs they have access to in the Your Cloud PCs section.
+![Windows 365 home.](./media/get-started-windows-365-business/cloud-pc-home.png)
+Users can select Open in browser to open their Cloud PC. This will open a new tab and once logged in, will allow users to use their Cloud PC from the browser.
+
+The user can select the gear icon next to the user avatar to update settings on the client or to capture logs of their session.
+If the user wants to copy/paste from the web client, use the printer or mic they can choose the "In session" option under settings.
+
+If there is some issue with accessing their Cloud PC or if their Cloud PC encounters an issue while accessing through the browser, the user can obtain logs directly from the web client by selecting "Capture logs" under Settings.
+![Remote desktop clients.](./media/windows-365/enterprise/media/settings_logs.png)
+
+This will collect all the console logs from the browser and allow the user to save it to a location of their choice. This can be passed on to support or their admin for further troubleshooting.
+
+Additionally, the user can now provide feedback on their experience using the feedback icon next to the full screen icon in the right hand corner of the client.
+The feedback will be delivered directly to the service.
+![Remote desktop clients.](./media/windows-365/enterprise/media/feedback_main_eg.png)
+
+
 ## Remote Desktop
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC.
