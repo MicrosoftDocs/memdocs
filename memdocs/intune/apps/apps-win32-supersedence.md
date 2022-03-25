@@ -70,7 +70,7 @@ A *superseding app* is an app that updates or replaces other apps. A *superseded
 
 | Scenarios | Targeting for required intent | Targeting for available intent |
 |-|-|-|
-| **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app will be   uninstalled, and the superseding app will be installed on the device.<p> **NOTE:** Even if the superseded app is not targeted, it will be uninstalled. | Only Superseding apps will be shown in the company portal and can be installed. |
+| **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app will be uninstalled, and the superseding app will be installed on the device.<p> **NOTE:** Even if the superseded app is not targeted, it will be uninstalled. | Only superseding apps will be shown in the company portal and can be installed. |
 | **Scenario   2:**<br>The superseded app exists on the device and **Uninstall previous version** is set to **No**. | The superseding app will be installed on the device. Whether the superseded app will be uninstalled or not is dependent on the superseding app’s installer. | Only superseding apps will be shown in the company portal and can be installed. |
 | **Scenario   3:**<br>The superseded app does not exist on the device. | The superseding app will be   installed. | The new app will appear in the   Company Portal. |
 
