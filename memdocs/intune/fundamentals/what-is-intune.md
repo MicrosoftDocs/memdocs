@@ -110,7 +110,7 @@ Intune integrates with Azure AD to enable a broad set of access control scenario
 
 There are many ways to get Intune. For more information, see [Licenses available for Microsoft Intune](licenses.md).
 
-Intune is used in many sectors, including [government](/enterprise-mobility-security/solutions/ems-govt-service-description), [education](/education/intune), [kiosk or dedicated device](../configuration/kiosk-settings.md) for manufacturing and retail, and more.
+Intune is used in many sectors, including [government](/enterprise-mobility-security/solutions/ems-govt-service-description), [education](https://www.microsoft.com/education/intune), [kiosk or dedicated device](../configuration/kiosk-settings.md) for manufacturing and retail, and more.
 
 ## Next steps
 
