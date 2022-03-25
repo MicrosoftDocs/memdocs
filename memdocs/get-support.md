@@ -170,7 +170,7 @@ If you have an active support case number, you can enter it here to jump to that
 
 When you're done viewing details for an incident, select the left arrow that appears at the top of the service request window just above the icons for the **How can we help?** pane icons. The back arrow returns the display to the list of support incidents you've opened.
 
-## Premier and Unified support optionss
+## Premier and Unified support options
 
 As a customer with a **Premier** or **Unified** support contract, you can specify a severity for your issue, and schedule a support callback for a specific time and day. These options are available when you open or submit a new issue and when you edit an active support case.
 
