@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 03/23/2022
+ms.date: 03/25/2022
 audience: Admin
 ms.topic: troubleshooting
 ms.service: cloudpc
@@ -57,6 +57,12 @@ Windows 365 provisioning failures may occur because both:
 2. If yes, review the related GPO. Is PowerShell Execution set to AllSigned?
 3. If it is, either remove the GPO or reset the PowerShell Execution to RemoteSigned/ByPass.
 4. Retry the OPNC health check. If this succeeds, retry provisioning.
+
+## Default and custom Enrollment Status Page profiles for Windows 365 Cloud PCs
+
+Only the default Enrollment Status Page (ESP) profile is supported for Windows 365 Cloud PCs. Custom ESP profiles aren’t supported for Cloud PCs.
+
+For default ESP profiles, when using hybrid Azure Active Directory (Azure AD) Join, you must set the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting to **No**.
 
 ## Next steps
 
