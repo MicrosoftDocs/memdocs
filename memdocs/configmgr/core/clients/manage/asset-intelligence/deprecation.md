@@ -60,7 +60,7 @@ The following functional areas aren't currently included in the deprecation and 
 
 - The ability to view the asset intelligence inventory in the console from the **Inventoried Software** node.
 
-- The existing static predefined software title information provided with setup for new and existing sites:
+- The existing static, predefined software title information provided with setup for new and existing sites:
 
   - Product name
   - Vendor
