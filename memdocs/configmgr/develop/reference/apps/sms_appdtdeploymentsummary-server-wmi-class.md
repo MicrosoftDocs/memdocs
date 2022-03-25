@@ -1,4 +1,5 @@
 ---
+description: Article outlining the use of SMS_AppDTDeploymentSummary in Configuration Manager.
 title: "SMS_AppDTDeploymentSummary Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

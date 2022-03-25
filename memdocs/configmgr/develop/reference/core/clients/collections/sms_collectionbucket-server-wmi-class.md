@@ -1,4 +1,5 @@
 ---
+description: Article detailing use of the SMS_CollectionBucket Server in Configuration Manager.
 title: "SMS_CollectionBucket Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

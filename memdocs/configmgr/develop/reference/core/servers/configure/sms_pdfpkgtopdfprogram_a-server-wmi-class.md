@@ -1,4 +1,5 @@
 ---
+description: Article outlining the use of SMS_PDFPkgToPDFProgram class in Configuration Manager.
 title: "SMS_PDFPkgToPDFProgram_a Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

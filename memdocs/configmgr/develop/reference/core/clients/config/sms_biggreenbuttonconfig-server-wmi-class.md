@@ -1,4 +1,5 @@
 ---
+Description: Article outlining the use of SMS_BigGreenButtonConfig in Configuration Manager.
 title: "SMS_BigGreenButtonConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
