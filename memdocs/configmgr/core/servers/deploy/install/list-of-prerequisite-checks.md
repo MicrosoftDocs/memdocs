@@ -11,7 +11,7 @@ ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
 ---
-
+ 
 # List of prerequisite checks for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
