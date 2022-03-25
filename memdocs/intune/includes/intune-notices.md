@@ -124,7 +124,7 @@ No action is needed at this time. Review our [In Development](../fundamentals/in
 
 ### Plan for change: Intune is moving to support iOS/iPadOS 13 and later<!--10144130-->
 
-Apple has released iOS 15. Microsoft Intune, including Intune Company Portal and Intune app protection policies (APP, also known as mobile application management), require iOS/iPadOS 13 and later.
+Apple has released iOS 15. Microsoft Intune, including Intune Company Portal and Intune app protection policies (APP, also known as mobile application management), now requires iOS/iPadOS 13 and later.
 
 #### How does this affect you or your users?
 
