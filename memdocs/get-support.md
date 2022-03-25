@@ -109,29 +109,15 @@ Above the *How can we help?* title are three icons that you can select to open d
 
 ![Select the find solutions pane](./media/get-support/find-solutions.png)
 
-On the *Find solutions* pane, specify a few details about an issue in the provided text box. As you enter details, the console might offer suggestions based on what you've entered. Depending on the presence of specific keywords, the console offers one of two support experiences, depending on what is available for the product you selected:  scenario-specific information and troubleshooting, or traditional support options.
-
-#### Scenario-specific support experience
-
-*This support experience is currently available for Intune and Co-management.*
-
-Some keywords will lead to an enhanced support scenario. For example, if you're using Microsoft Intune and enter a generic search for *Need help with Intune*, the console offers several more focused scenarios you can select, to drill into the problem and find more focused results.
-
-:::image type="content" source="./media/get-support/scenarios-example.png" alt-text="View of the scenario options":::
-
-When you select a scenario, new options are offered to help narrow down the issue.
-
-:::image type="content" source="./media/get-support/drill-in-scenarios.png" alt-text="View of scenario options":::
-
-When presented, you can run automated tests or diagnostics where applicable, and view insightful information to help troubleshoot the problem. You might also see remediation steps to help you fix the issue.
+On the **Find solutions** pane, specify a few details about an issue in the provided text box. As you enter details, the console might offer suggestions based on what you've entered. Depending on the presence of specific keywords, the console offers one of two support experiences, depending on what is available for the product you selected: the traditional support experience and the updated support experience.
 
 #### Traditional experience
 
-When the keywords you enter don't have deeper dedicated support available through the admin center, the pane returns one or more of the following options based on the details you provide:
+For products that use traditional support, when you enter keywords, the **Find solutions** pane returns one or more of the following options based on the details you provide:
 
 - **Run diagnostics** – From the console you can start automated tests and investigations of your tenant that can reveal known issues. When you run a diagnostic, you might receive mitigation steps you can take to help resolve the issue.
-- **View insights** – Find links to documentation that provide context and background for the product area or actions you’ve described.
-- **Recommended articles** – Follow links to troubleshooting and related content that focus on the issue you’ve described.
+- **View insights** – Find links to documentation that provide context and background specific to the product area or actions you’ve described.
+- **Recommended articles** – Browse suggested to troubleshooting topics and other content related to the issue you’ve described.
 
 For example, for Microsoft Intune you might enter **device enrollment failure**. With these criteria, your results include the option to run diagnostics for a user account:
 
@@ -140,6 +126,20 @@ For example, for Microsoft Intune you might enter **device enrollment failure**.
 Running the diagnostics can identify issues for that account in Azure Active Directory (Azure AD). In this example, the user wasn’t assigned a license for Intune, preventing the device enrollment, and we see a link to relevant content:
 
 :::image type="content" source="./media/get-support/diagnostic-resuslts.png" alt-text="View the diagnostic results":::
+
+#### Updated support experience
+
+*This support experience is currently available for Intune and Co-management.*
+
+Some keywords will lead to an enhanced experience that helps you drill down to more scenario-specific support. For example, if you're using Microsoft Intune and enter a generic search for *Need help with Intune*, the console offers several more focused scenarios you can select clarify the problem and find more focused results.
+
+:::image type="content" source="./media/get-support/scenarios-example.png" alt-text="View of the scenario options":::
+
+When you select a scenario, new options are offered to help narrow down the issue.
+
+:::image type="content" source="./media/get-support/drill-in-scenarios.png" alt-text="View of scenario options":::
+
+When presented, you can run automated tests or diagnostics where applicable, and view insightful information to help troubleshoot the problem. You might also see remediation steps to help you fix the issue.
 
 ### Contact support
 
