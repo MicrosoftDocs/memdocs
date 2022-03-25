@@ -67,7 +67,7 @@ Windows 10 or Windows 11 Enterprise multi-session VMs are treated as a separate 
 
 ## Create the device configuration profile
 
-To configure configuration policies for Windows 10 or Windows 11 Enterprise multi-session VMs, you'll usually use the [Settings catalog](../configuration/settings-catalog.md) in the Microsoft Endpoint Manager admin center.
+To configure configuration policies for Windows 10 or Windows 11 Enterprise multi-session VMs, you'll need to use the [Settings catalog](../configuration/settings-catalog.md) in the Microsoft Endpoint Manager admin center.
 
 The existing device configuration profile templates aren't supported for Windows 10 or Windows 11 Enterprise multi-session VMs, with the exception of the following templates:
 
@@ -105,9 +105,6 @@ Windows 10 or Windows 11 Administrative Templates are supported for Windows 10 o
 
 - ADMX-backed policies are supported. Some policies are not yet available in the Settings catalog.
 - ADMX-ingested policies are supported, including Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings will not be applicable to Windows 10 or Windows 11 Enterprise multi-session.
-
-> [!NOTE]
-> Some ADMX settings currently require an insider build. You can hover over the information bubble next to the setting name to see if an insider build is required for a specific setting.
 
 ## Compliance and Conditional access
 
@@ -218,7 +215,6 @@ Configuration policy reports as Not applicable|Some policies are not applicable 
 |Administrative template policy did not apply|Some ADMX settings currently require a Windows Insider Preview Build. You can hover over the information bubble next to the setting name to see if an Insider build is required for a specific setting.|
 |Microsoft Edge/Microsoft Office ADMX policy does not show up when I apply the filter for Windows 10 or Windows 11 Enterprise multi-session edition|Applicability for these settings is not based on the Windows version or edition but on whether those apps have been installed on the device. To add these settings to your policy, you may have to remove any filters applied in the settings picker.|
 |App configured to install in system context did not apply|Confirm the app does not have a dependency or supersedence relationship on any apps configured to install in user context. User context apps are not currently supported on Windows 10 or Windows 11 Enterprise multi-session.|
-|Update rings for Windows 10 and later policy did not apply|Confirm the app does not have a dependency or supersedence relationship on any apps configured to install in the user context. User context apps are not currently supported on Windows 10 or Windows 11 Enterprise multi-session.|
 |Update rings for Windows 10 and later policy did not apply|Windows Update for Business policies are not currently supported.|
 
 ## Next steps
