@@ -75,7 +75,7 @@ For more information, see [Exclude data warehouse reporting tables from synchron
 <!--10875436, 12451634 -->
 A new management insights group was added to **Management Insights**. The **Deprecated and unsupported features** group contains rules that will help you manage and remove deprecated features. The prerequisite checker will also check for deprecated and unsupported features during site installs and upgrades.
 
-For more information, see [Management Insights](../../servers/manage/management-insights.md#deprecated-and-unsupported-features) and [prerequisite checks](../../servers/deploy/install/list-of-prerequisite-checks.md).
+For more information, see [Management Insights](../../servers/manage/management-insights.md#deprecated-and-unsupported-features).
 
 ## Client management
 
