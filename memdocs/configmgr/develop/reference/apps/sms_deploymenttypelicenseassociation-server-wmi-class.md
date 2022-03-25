@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: Learn about the syntax, methods, properties, and requirements of the SMS_DeploymentTypeLicenseAssociation server class.
 
 ---
 # SMS_DeploymentTypeLicenseAssociation Server WMI Class

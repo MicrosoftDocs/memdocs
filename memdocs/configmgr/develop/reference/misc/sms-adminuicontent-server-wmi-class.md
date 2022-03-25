@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+descriptions: Learn about the syntax, methods, properties, and requirements of the SMS_AdminUIContent server class.
 
 ---
 # SMS_AdminUIContent Server WMI Class
