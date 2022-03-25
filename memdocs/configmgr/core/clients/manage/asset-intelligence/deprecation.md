@@ -36,7 +36,7 @@ The following functional areas are deprecated and may be removed in a future ver
 
   - The ability to [request catalog updates](operations-for-asset-intelligence.md#BKMK_RequestCatalogUpdate) for uncategorized software
 
-- The [Microsoft Volume License import and reconciliation](configuring-asset-intelligence.md#BKMK_ImportSoftwareLicenseInformation) including the associated SQL views and reports.
+- The [Microsoft Volume License import and reconciliation](configuring-asset-intelligence.md#BKMK_ImportSoftwareLicenseInformation) including the associated SQL views and reports
 
 ## Supported functionality
 
