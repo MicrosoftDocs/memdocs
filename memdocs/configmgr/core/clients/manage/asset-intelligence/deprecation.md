@@ -56,7 +56,7 @@ The following functional areas aren't currently included in the deprecation and 
 
 - The [product lifecycle dashboard](product-lifecycle-dashboard.md) and its associated reports
 
-- The [General License Statement import and reconciliation](configuring-asset-intelligence.md#BKMK_CreateGeneralLicenseStatement) and the associated SQL views and reports.
+- The [General License Statement import and reconciliation](configuring-asset-intelligence.md#BKMK_CreateGeneralLicenseStatement) and the associated SQL views and reports
 
 - The ability to view the asset intelligence inventory in the console from the **Inventoried Software** node.
 
