@@ -186,11 +186,11 @@ You can now delete contributions you've made to the Community hub. For more info
 - You now have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account. User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data.
 - The feedback button is now displayed in additional console locations
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Product feedback](../../understand/product-feedback.md#recent-changes-to-feedback).
 
 ### Improvements to dashboards
 <!--10024154-->
-Dashboards, such as the **Windows Servicing** and **Microsoft Edge Management** dashboards, now use the Microsoft Edge WebView2 Runtime. To use dashboards, install the WebView2 console extension, then reopen the console..
+Dashboards, such as the **Windows Servicing** and **Microsoft Edge Management** dashboards, now use the Microsoft Edge WebView2 Runtime. To use dashboards, install the WebView2 console extension, then reopen the console.
 
 For more information, see the [WebView2 console extension](../../servers/manage/admin-console-extensions.md#bkmk_notification).
 
