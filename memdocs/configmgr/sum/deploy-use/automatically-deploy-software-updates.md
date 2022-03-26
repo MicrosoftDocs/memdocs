@@ -75,9 +75,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
     -   **Detail level**: Specify the level of detail for the update enforcement state messages that are reported by clients.  
 
         > [!IMPORTANT]  
-        >  When you deploy definition updates, set the detail level to **Error only** to have the client report a state message only when a definition update fails. Otherwise, the client reports a large number of state messages that might impact site server performance.  
-        
-        > [!NOTE]  
+        > - When you deploy definition updates, set the detail level to **Error only** to have the client report a state message only when a definition update fails. Otherwise, the client reports a large number of state messages that might impact site server performance.  
         > The **Error only** detail level does not send the enforcement status messages required for tracking pending reboots.
 
     -   **License terms setting**: Specify whether to automatically deploy software updates with associated license terms. Some software updates include license terms. When you automatically deploy software updates, the license terms aren't displayed, and there isn't an option to accept the license terms. Choose to automatically deploy all software updates regardless of an associated license term, or only deploy updates that don't have associated license terms.  
