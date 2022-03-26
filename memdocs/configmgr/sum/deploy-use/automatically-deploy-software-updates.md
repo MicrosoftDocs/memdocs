@@ -128,8 +128,8 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
         -   **Specific time**: Makes software updates included in the deployment available to clients at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment aren't available for installation until after the configured date and time.  
         
-    > [!Note]
-    > Starting in version 2203, the **Software available time** and **Installation deadline** for deployments created by an ADR are now calculated based on the time the ADR evaluation is scheduled and starts. Previously, these times were calculated based on when the ADR evaluation completed. This change makes the  **Software available time** and **Installation deadline** consistent and predictable for deployments. <!--12707738, 7033417-->
+       > [!Note]
+       > Starting in version 2203, the **Software available time** and **Installation deadline** for deployments created by an ADR are now calculated based on the time the ADR evaluation is scheduled and starts. Previously, these times were calculated based on when the ADR evaluation completed. This change makes the  **Software available time** and **Installation deadline** consistent and predictable for deployments. <!--12707738, 7033417-->
 
     -   **Installation deadline**: These options are only available for **Required** deployments. Select one of the following settings to specify the installation deadline for the software updates in the deployment:  
 
@@ -140,8 +140,8 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
              - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of clients in the collection installing updates in the deployment at the same time.  
 
              - The **Disable deadline randomization** in the **Computer Agent** group doesn't override the randomization behavior. For more information, see [Computer Agent client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).  <!--9388804-->
-    > [!Note]
-    > Starting in version 2203, the **Software available time** and **Installation deadline** for deployments created by an ADR are now calculated based on the time the ADR evaluation is scheduled and starts. Previously, these times were calculated based on when the ADR evaluation completed. This change makes the  **Software available time** and **Installation deadline** consistent and predictable for deployments. <!--12707738, 7033417-->
+       > [!Note]
+       > Starting in version 2203, the **Software available time** and **Installation deadline** for deployments created by an ADR are now calculated based on the time the ADR evaluation is scheduled and starts. Previously, these times were calculated based on when the ADR evaluation completed. This change makes the  **Software available time** and **Installation deadline** consistent and predictable for deployments. <!--12707738, 7033417-->
 
     -  **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**: Enable this setting to give users more time to install required software updates beyond the deadline.  
 
