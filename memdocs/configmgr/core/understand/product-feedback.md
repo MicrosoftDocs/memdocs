@@ -2,7 +2,7 @@
 title: Product feedback
 titleSuffix: Configuration Manager
 description: Share feedback with the Configuration Manager product team.
-ms.date: 12/01/2021
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -26,7 +26,8 @@ From the Configuration Manager console, you can share feedback directly to the M
 
 - **Send a suggestion** (**ALT** + **SHIFT** + **9**): Open the Configuration Manager product feedback website to share your idea. For more information, see [Send a suggestion](#send-a-suggestion).
 
-There's also an option to **Contact support** (**ALT** + **SHIFT** + **0**), which opens the [Microsoft support for business portal](https://aka.ms/cmcbsupport).
+- **Contact support** (**ALT** + **SHIFT** + **0**): Opens the [Microsoft support for business portal](https://aka.ms/cmcbsupport).
+
 
 When using the feedback wizard from the console, the following items are displayed where needed<!--3180826-->:
 - A description of the feedback is required
@@ -38,12 +39,18 @@ When using the feedback wizard from the console, the following items are display
 > [!NOTE]
 > This wizard is in the Configuration Manager console. [Support Center](#feedback-for-support-center) has a similar feedback experience.
 
-<!--4262917-->
-Starting in version 2107, error messages include a link to **Report error to Microsoft**. This action opens the standard [send a frown](#send-a-frown) window to provide feedback. It automatically includes details about the user interface and the error to better help Microsoft engineers diagnose the error. Aside from making it easier to send a frown, it also includes the full context of the error message when you share a screenshot.
+## Recent changes to feedback
 
-Starting in Configuration Manager 2111, when you **Report error to Microsoft** the error information included with the feedback can't be altered or removed. <!--10883931-->
+Starting in version 2203, you have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account. User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data. Currently, Azure AD authentication for government clouds isn't available. After selecting either **Send a smile** or **Send a frown**: <!--11754191-->
+1. Select **Sign in** and sign in with your Azure AD user account.
+   - Selecting **Continue without signing in** will allow you to send feedback, but we won't be able to contact you with questions or updates.
+1. Once you're signed in, select **Next** then provide your feedback. If you need to use a different account, you can select **Sign out** to start again.
 
-Starting in Configuration Manager 2111, wizards and some property pages include an icon to provide feedback allowing you to quickly send feedback right from your current activity.<!--2711343--> 
+Starting in version 2203, the feedback button is displayed in additional console locations. You can also use the keyboard shortcuts for **Send a smile** and **Send a frown** from more locations in the console. <!--12890088-->
+
+Starting in Configuration Manager 2111, when you **Report error to Microsoft** the error information included with the feedback can't be altered or removed. <!--10883931-->Wizards and some property pages also include an icon to provide feedback allowing you to quickly send feedback right from your current activity.<!--2711343-->
+
+Starting in version 2107, error messages include a link to **Report error to Microsoft**. This action opens the standard [send a frown](#send-a-frown) window to provide feedback. It automatically includes details about the user interface and the error to better help Microsoft engineers diagnose the error. Aside from making it easier to send a frown, it also includes the full context of the error message when you share a screenshot. <!--4262917-->
 
 ## Prerequisites
 
