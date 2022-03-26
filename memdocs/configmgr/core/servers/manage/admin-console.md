@@ -202,7 +202,8 @@ The **Documentation** node has no explicit proxy configuration. It uses any OS-d
 
 Starting in version 2203, the Configuration Manager console offers a dark theme. Using a console theme can help you easily distinguish a test environment from a production environment or one hierarchy from another. To use the theme, select the arrow from the top left of the ribbon, then choose **Switch console theme**. Select **Switch console theme** again to return to the light theme.
 
-The console dark theme is a [pre-release](pre-release-features.md) feature. Currently, there are certain locations in the console that may not display the dark theme correctly.  
+> [!Note]
+> The console dark theme is a [pre-release](pre-release-features.md) feature. Currently, there are certain locations in the console that may not display the dark theme correctly.  
 
 :::image type="content" source="./media/9070525-console-dark-theme.png" alt-text="Screenshot of the Configuration Manager using the dark theme for the console. The 'Switch console theme' option is displayed in the upper right corner of the image.":::
 
