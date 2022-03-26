@@ -146,7 +146,7 @@ For more information, see [Maximum run time](../../../sum/plan-design/plan-for-s
 <!--12707738, 7033417-->
 The **Software available time** and **Installation deadline** for deployments created by an automatic deployment rule (ADR) are now calculated based on the time the ADR evaluation is scheduled and starts. Previously, these times were calculated based on when the ADR evaluation completed. This change makes the  **Software available time** and **Installation deadline** consistent and predictable for deployments.
 
-<!-- For more information, see [automatic deployment rule (ADR)](../../../sum/deploy-use/automatically-deploy-software-updates.md). -->
+For more information, see [Automatic deployment rules (ADR)](../../../sum/deploy-use/automatically-deploy-software-updates.md).
 
 ### Added folder support for nodes in the Software Library
 <!--3601129-->
