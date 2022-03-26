@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/23/2022
+ms.date: 03/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -149,28 +149,6 @@ For more information on these policy types, see:
 
 Applies to:
 - Windows 10/11
-
-#### Endpoint security profiles support filters; See the filter status on a device configuration profile report<!-- 11889620 -->
-There are some new features when using filters:
-- When you create a device configuration profile for Windows devices, a per-policy report shows reporting information in the **Device and user check-in status** (**Devices** > **Configuration profiles** > *Select an existing policy*).
-
-  When you select **View report**, the report has an **Assignment Filter** column. Use this column to determine if a filter successfully applied to your policy.
-
-- Endpoint Security policies support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create.
-
-- When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting](#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > *Select an existing endpoint security policy* > **View report**). Use this column to determine if a filter successfully applied to your policy.
-
-For more information on filters, see:
-- [Use filters when assigning your apps, policies, and profiles](filters.md)
-- [List of platforms, policies, and app types supported by filters](filters-supported-workloads.md)
-
-Applies to:
-- All platforms
-
-Does not apply to:
-- Administrative Templates (Windows 10/11)
-- Device Firmware Configuration Interface (DFCI) (Windows 10/11)
-- OEMConfig (Android Enterprise)
 
 #### New macOS settings in the Settings Catalog<!-- 13111526 idready idstaged wnready -->
 The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
