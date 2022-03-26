@@ -2,7 +2,7 @@
 title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 12/16/2021
+ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -195,6 +195,20 @@ The **Documentation** node in the **Community** workspace includes information a
 ### Troubleshooting connection errors
 
 The **Documentation** node has no explicit proxy configuration. It uses any OS-defined proxy in the **Internet Options** control panel applet. To retry after a connection error, refresh the **Documentation** node.
+
+## <a name="bkmk_dark"></a> Dark theme for the console
+<!--9070525-->
+*(Introduced in version 2203)*
+
+Starting in version 2203, the Configuration Manager console offers a dark theme. Using a console theme can help you easily distinguish a test environment from a production environment or one hierarchy from another. To use the theme, select the arrow from the top left of the ribbon, then choose **Switch console theme**. Select **Switch console theme** again to return to the light theme.
+
+The console dark theme is a [pre-release](pre-release-features.md) feature. Currently, there are certain locations in the console that may not display the dark theme correctly.  
+
+:::image type="content" source="./media/9070525-console-dark-theme.png" alt-text="Screenshot of the Configuration Manager using the dark theme for the console. The 'Switch console theme' option is displayed in the upper right corner of the image.":::
+
+### Known issue
+
+When you first switch to a different theme, you may notice the node navigation pane doesn't properly render when you move to a new workspace. To work around this issue, restart the console.
 
 ## Connect via Windows PowerShell
 

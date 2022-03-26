@@ -176,6 +176,9 @@ For more information, see [Manage task sequences](../../../osd/deploy-use/manage
 <!--## Protection-->
 
 ## Configuration Manager console
+###  Dark theme for the console
+<!--9070525-->
+The Configuration Manager console now offers a dark theme. For more information, see [How to use the Configuration Manager console](../../servers/manage/admin-console.md#bkmk_dark).
 
 ### Delete a contribution you made to Community hub
 <!--10416767-->
