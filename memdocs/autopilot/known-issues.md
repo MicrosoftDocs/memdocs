@@ -12,7 +12,7 @@ author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 03/28/2022
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -28,12 +28,13 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
-### DefaultuserX profile not deleted 
+### `DefaultuserX` profile not deleted
 
-When using the [EnableWebSignIn CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin) , the defaultuserX profile may not be deleted. This CSP is not supported and is currently in private preview mode only and nor recommended for production purposes at this time. 
+When using the [EnableWebSignIn CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin), the `defaultuserX` profile may not be deleted. This CSP isn't currently supported. It's in private preview mode only and not recommended for production purposes at this time.
 
-### Autopilot reset ran into trouble. Could not find the recovery environment 
-When attempting an Autopilot reset, an administrator is presented with the message “Autopilot reset ran into trouble. Could not find the recovery environment”. Entering administrator credentials will allow you to continue successfully with the reset if there is not an issue with the recovery environment.
+### Autopilot reset ran into trouble. Could not find the recovery environment
+
+When attempting an Autopilot reset, an administrator sees the following message: _Autopilot reset ran into trouble. Could not find the recovery environment_. If there isn't an issue with the recovery environment, enter administrator credentials to continue with the reset process.
 
 ### Device-based Conditional Access policies
 
