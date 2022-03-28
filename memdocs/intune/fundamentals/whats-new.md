@@ -1117,7 +1117,7 @@ As a [bulk device action](../remote-actions/bulk-device-actions.md) for Windows 
 
 #### Support for Locate device remote action on Android Enterprise dedicated devices<!--8589952  -->
 
-You can use the **Locate device** remote action to get the current location of a lost or stolen Android Enterprise dedicated device that is online. If you attempt to locate a device that’s currently off-line, you’ll see its last known location instead, so long as that device was able to check-in with Intune within the last seven days.
+You can use the **Locate device** remote action to get the current location of a lost or stolen Android Enterprise dedicated device that is online. If you attempt to locate a device that’s currently off-line, you’ll see its last known location instead, so long as that device was able to check in with Intune within the last seven days.
 
 For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
 
@@ -1171,7 +1171,7 @@ We have released a new **Device configuration** organizational report. This repo
 
 #### Updated support experience in Microsoft Endpoint Manager admin center<!-- 8920053   -->
 
-Available for Intune and co-management support flows, we’ve updated an improved [support experience](../../get-support.md#support-scenarios) in the Microsoft Endpoint Manager admin center. The new experience guides you to issue-specific troubleshooting insights and web-based solutions, to get you a resolution faster.
+Available for Intune and co-management support flows, we’ve updated an improved [support experience](../../get-support.md#updated-support-experience) in the Microsoft Endpoint Manager admin center. The new experience guides you to issue-specific troubleshooting insights and web-based solutions, to get you a resolution faster.
 
 To learn more about this change, see the [support blog post](https://aka.ms/EndpointManager-support-experience).
 

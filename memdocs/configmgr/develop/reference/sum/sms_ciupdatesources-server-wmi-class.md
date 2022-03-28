@@ -1,6 +1,7 @@
 ---
 title: "SMS_CIUpdateSources Class"
 titleSuffix: "Configuration Manager"
+description: "Provides information on all the update sources associated with an [SMS_SoftwareUpdate Server WMI Class]"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

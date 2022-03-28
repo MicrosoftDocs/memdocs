@@ -1,4 +1,5 @@
 ---
+description: Learn how to list instances of service windows in Configuration Manager using CCM_ServiceWindow class.
 title: "CCM_ServiceWindow Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

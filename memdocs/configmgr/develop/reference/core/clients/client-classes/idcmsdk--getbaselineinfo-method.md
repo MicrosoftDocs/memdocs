@@ -1,4 +1,5 @@
 ---
+description: Learn how to retrieve the baseline info for the specified configuration item using IDCMSDK::GetBaselineInfo method.
 title: "IDCMSDK::GetBaselineInfo"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

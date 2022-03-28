@@ -1,6 +1,7 @@
 ---
 title: "WMI Provider Fundamentals"
 titleSuffix: "Configuration Manager"
+description: "Windows Script Host-based applications and scripts work in Windows Management Instrumentation (WMI) through the WMI Object Model, which defines the programming interface to WMI."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
