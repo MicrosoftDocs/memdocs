@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the email template embedded by SMS_Subscription using SMS_AlertEmailTemplate.
 title: "SMS_AlertEmailTemplate Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

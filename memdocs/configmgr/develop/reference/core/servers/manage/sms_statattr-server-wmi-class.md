@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a high performance version of SMS StatMsgAttributes Server class with SMS_StatAttr.
 title: "SMS_StatAttr Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
