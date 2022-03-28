@@ -1,6 +1,7 @@
 ---
 title: "GetFeatures Method"
 titleSuffix: "Configuration Manager"
+description: "For internal use only."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

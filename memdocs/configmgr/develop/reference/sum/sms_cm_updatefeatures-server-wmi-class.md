@@ -1,6 +1,7 @@
 ---
 title: "SMS_CM_UpdateFeatures Class"
 titleSuffix: "Configuration Manager"
+description: "The  `SMS_CM_UpdateFeatures` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents update feature extensions."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
