@@ -183,7 +183,7 @@ You can now delete contributions you've made to the Community hub. For more info
 
 ### Search filter list
 <!--7281922-->
-The console now displays a list of filters you can use when searching the Community hub. For more information, see [Filter Community hub content when searching](../../servers/manage/community-hub-contribute.md#bkmk_search).
+The console now displays a list of filters you can use when searching the Community hub. For more information, see [Filter Community hub content when searching](../../servers/manage/community-hub.md#bkmk_search).
 
 ## Configuration Manager console
 ###  Dark theme for the console
