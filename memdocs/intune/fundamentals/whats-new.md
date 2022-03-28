@@ -60,12 +60,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
-## Week of March 21, 2022 (Service release 2203)
+## Week of March 28, 2022
 
 ### App management
 
 #### Uninstall DMG-type applications on managed macOS devices (Public preview)<!-- 13155022 -->
 You can use the **Uninstall** assignment type to remove DMG-type applications on managed macOS devices from Microsoft Endpoint Manager. You can find macOS DMG apps in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **macOS app (.DMG)**. For related information, see [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md). 
+
+## Week of March 21, 2022 (Service release 2203)
+
+### App management
 
 #### iOS/iPadOS notifications will require March Company Portal update<!-- 9819536 -->
 If you are using a functionality that could generate iOS/iPadOS Company Portal push notifications, you will want to ensure your users update the iOS/iPadOS Company Portal in March or April 2022. There is no additional change in functionality. We will be making service side updates to iOS/iPadOS notifications expected in Intune's May (2205) service release. The Company Portal update will be released prior to the service change, so most users will likely have updated the app and will not be impacted. However, you may want to notify users of this change to ensure all users continue to receive push notifications sent by your organization. For related information, see [Update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md).
