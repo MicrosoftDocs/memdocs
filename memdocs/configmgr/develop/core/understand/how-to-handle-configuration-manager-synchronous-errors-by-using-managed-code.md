@@ -1,6 +1,7 @@
 ---
 title: "Handle Synchronous Errors by Using Managed Code"
 titleSuffix: "Configuration Manager"
+description: "To handle a Configuration Manager error raised in a synchronous query, catch the SmsQueryException exception."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
