@@ -65,6 +65,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Enterprise feedback policies for Web Company Portal<!-- 9846764 -->
+Feedback settings will be provided to address M365 enterprise feedback policies for the currently logged in user via the Microsoft 365 Apps Admin Center. The settings are used to determine whether feedback can be enabled or must be disabled for a user in the Web Company Portal.
+
 ### iOS Company Portal minimum required version<!-- 13016075 -->
 With an upcoming release of the MS Authenticator app, users will be required to update to v5.2204 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
