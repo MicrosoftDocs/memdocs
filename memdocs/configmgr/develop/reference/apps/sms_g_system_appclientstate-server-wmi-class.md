@@ -2,6 +2,7 @@
 title: "SMS_G_System_AppClientState Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
+description: "The `SMS_G_System_AppClientState` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application state."
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
