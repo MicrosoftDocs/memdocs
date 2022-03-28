@@ -41,8 +41,8 @@ When using the feedback wizard from the console, the following items are display
 
 ## Recent changes to feedback
 
-Starting in version 2203, you have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account. User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data. Currently, Azure AD authentication for government clouds isn't available. After selecting either **Send a smile** or **Send a frown**: <!--11754191-->
-1. Select **Sign in** and sign in with your Azure AD user account.
+Starting in version 2203, you have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account or Microsoft Account (MSA). User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data. Currently, Azure AD authentication for government clouds isn't available. After selecting either **Send a smile** or **Send a frown**: <!--11754191-->
+1. Select **Sign in** and sign in with either your Azure AD user account or your Microsoft account.
    - Selecting **Continue without signing in** will allow you to send feedback, but we won't be able to contact you with questions or updates.
 1. Once you're signed in, select **Next** then provide your feedback. If you need to use a different account, you can select **Sign out** to start again.
 
