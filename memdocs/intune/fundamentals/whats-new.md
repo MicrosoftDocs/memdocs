@@ -913,7 +913,7 @@ As a [bulk device action](../remote-actions/bulk-device-actions.md) for Windows 
 
 #### Support for Locate device remote action on Android Enterprise dedicated devices<!--8589952  -->
 
-You can use the **Locate device** remote action to get the current location of a lost or stolen Android Enterprise dedicated device that is online. If you attempt to locate a device that’s currently off-line, you’ll see its last known location instead, so long as that device was able to check-in with Intune within the last seven days.
+You can use the **Locate device** remote action to get the current location of a lost or stolen Android Enterprise dedicated device that is online. If you attempt to locate a device that’s currently off-line, you’ll see its last known location instead, so long as that device was able to check in with Intune within the last seven days.
 
 For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
 
