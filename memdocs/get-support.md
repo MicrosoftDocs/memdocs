@@ -31,7 +31,7 @@ ms.collection:
  
 # How to get support in Microsoft Endpoint Manager admin center
 
-Microsoft provides global technical, pre-sales, billing, and subscription support for device management cloud-based services, including Intune, Configuration Manager, Windows 365, and Microsoft Managed Desktop. You can access support for all of these from **Help and Support** in the Microsoft Endpoint Manager admin center. In this article, we explain how to get to Help and support and review your different support options from within the admin center.
+Microsoft provides global technical, pre-sales, billing, and subscription support for device management cloud-based services, including Intune, Configuration Manager, Windows 365, and Microsoft Managed Desktop. You can access support for all of these from **Help and support** in the Microsoft Endpoint Manager admin center. In this article, we explain how to get to Help and support and review your different support options from within the admin center.
 
 Support is available both online and by phone for paid and trial subscriptions. Online technical support is available in English and Japanese. Phone support and online billing support are available in additional languages.
 
@@ -98,7 +98,7 @@ After you select a support scenario, the admin center presents the Help and Supp
 
 :::image type="content" source="./media/get-support/confirm-management-selection.png" alt-text="View the How can we help window":::
 
-Above the *How can we help?* title are three icons that you can select to open different panes: **Find solutions**, **Contact support**, and **Service requests**. The pane you’re viewing is identified by which icon is underlined. By default, the Help and support page opens to the **Find solutions** pane. However, if you have an active support case, then Help and support opens to the **Service requests** pane where you can view details about your active and closed support cases.
+Above the *How can we help?* title are three icons that you can select to open different panes: *Find solutions*, *Contact support*, and *Service requests*. The pane you’re viewing is identified by which icon is underlined. By default, the Help and support page opens to the *Find solutions* pane. However, if you have an active support case, then Help and support opens to the *Service requests* pane where you can view details about your active and closed support cases.
 
 > [!TIP]  
 > Customers with a **Premier** or **Unified** support contract have [additional options](#premier-and-unified-support-options) for support. If you've a Premier or Unified support contract, you'll see a banner similar to the following image:
@@ -109,11 +109,11 @@ Above the *How can we help?* title are three icons that you can select to open d
 
 ![Select the find solutions pane](./media/get-support/find-solutions.png)
 
-On the **Find solutions** pane, specify a few details about an issue in the provided text box. As you enter details, the console might offer suggestions based on what you've entered. Depending on the presence of specific keywords, the console offers one of two support experiences, depending on what is available for the product you selected: the traditional support experience and the updated support experience.
+On the *Find solutions* pane, specify a few details about an issue in the provided text box. As you enter details, the console might offer suggestions based on what you've entered. Depending on the presence of specific keywords, the console offers one of two support experiences depending on what is available for the product you selected: the traditional support experience and the updated support experience.
 
 #### Traditional experience
 
-For products that use traditional support, when you enter keywords, the **Find solutions** pane returns one or more of the following options based on the details you provide:
+For products that use traditional support, when you enter keywords, the *Find solutions* pane returns one or more of the following options based on the details you provide:
 
 - **Run diagnostics** – From the console you can start automated tests and investigations of your tenant that can reveal known issues. When you run a diagnostic, you might receive mitigation steps you can take to help resolve the issue.
 - **View insights** – Find links to documentation that provide context and background specific to the product area or actions you’ve described.
@@ -143,7 +143,7 @@ When presented, you can run automated tests or diagnostics where applicable, and
 
 ### Contact support
 
-If you have administrative access to the admin center, you will see the **Contact Support** option which you can use to file an online support ticket for a supported service. This pane is available after you provide some basic keywords on the **Find solutions** pane.
+If you have administrative access to the admin center, you will see the **Contact Support** option, which you can use to file an online support ticket for a supported service. This pane is available after you provide some basic keywords on the *Find solutions* pane.
 
 :::image type="content" source="./media/get-support/contact-support.png" alt-text="Select the contact support icon":::
 
@@ -162,7 +162,7 @@ After you fill in the required information, select **Contact me** to submit the 
 
 ![Select the service requests pane](./media/get-support/service-requests.png)
 
-The **Service requests** pane displays your case history. Active cases are at the top of the list, with closed issues also available for review.
+The *Service requests* pane displays your case history. Active cases are at the top of the list, with closed issues also available for review.
 
 ![View your service request list](./media/get-support/service-requests-pane.png)
 
