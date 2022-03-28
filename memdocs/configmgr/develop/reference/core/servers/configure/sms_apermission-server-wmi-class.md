@@ -1,4 +1,5 @@
 ---
+description: Learn how to describe the permission granted to a specific admin in Configuration Manager using SMS_APermission class.
 title: "SMS_APermission Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
