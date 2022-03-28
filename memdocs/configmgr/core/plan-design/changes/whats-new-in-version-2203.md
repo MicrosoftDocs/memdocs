@@ -175,14 +175,20 @@ For more information, see [Manage task sequences](../../../osd/deploy-use/manage
 
 <!--## Protection-->
 
-## Configuration Manager console
-###  Dark theme for the console
-<!--9070525-->
-The Configuration Manager console now offers a dark theme. For more information, see [How to use the Configuration Manager console](../../servers/manage/admin-console.md#bkmk_dark).
+## Community hub
 
 ### Delete a contribution you made to Community hub
 <!--10416767-->
 You can now delete contributions you've made to the Community hub. For more information, see [Contribute to Community hub](../../servers/manage/community-hub-contribute.md#bkmk_delete).
+
+### Search filter list
+<!--7281922-->
+The console now displays a list of filters you can use when searching the Community hub. For more information, see [Filter Community hub content when searching](../../servers/manage/community-hub-contribute.md##bkmk_search).
+
+## Configuration Manager console
+###  Dark theme for the console
+<!--9070525-->
+The Configuration Manager console now offers a dark theme. For more information, see [How to use the Configuration Manager console](../../servers/manage/admin-console.md#bkmk_dark).
 
 ### Improvements for sending feedback
 <!--11754191, 12890088-->
