@@ -249,6 +249,8 @@ The insights in this group highlight potential configuration issues to avoid thr
 
 - **Update Microsoft .NET Framework on site systems**: <!--10402814-->Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8. For more information, [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
+- **Update servers running Windows Server 2012 and 2012 R2**:<!--9519162--> Detects servers that are running Windows Server 2012 or 2012 R2 operating systems. The support lifecycle for these operating systems ends on October 9, 2023. For more information, see the [Product lifecycle](/lifecycle/announcements/sql-server-2012-windows-server-2012-end-of-support).
+
 - **Upgrade peer cache sources to the latest version of the Configuration Manager client**:<!--1358008--> Identify clients that serve as a peer cache source but haven't upgraded from a pre-1806 client version. Pre-1806 clients can't be used as a peer cache source for clients that run version 1806 or later. Select **Take action** to open a device view that displays the list of clients.<!-- B51C6733-F9FF-46BC-8F5E-624F2CBED719 -->
 
 > [!TIP]

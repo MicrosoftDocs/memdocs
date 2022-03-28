@@ -72,10 +72,14 @@ When you install the [data warehouse](../../servers/manage/data-warehouse.md), i
 For more information, see [Exclude data warehouse reporting tables from synchronization](../../servers/manage/data-warehouse.md#bkmk_exclude).
 
 ### Improvements to Management Insights
-<!--10875436, 12451634 -->
-A new management insights group was added to **Management Insights**. The **Deprecated and unsupported features** group contains rules that will help you manage and remove deprecated features. The prerequisite checker will also check for deprecated and unsupported features during site installs and upgrades.
 
-For more information, see [Management Insights](../../servers/manage/management-insights.md#deprecated-and-unsupported-features).
+The following improvements have been made to Management Insights:
+
+- A new management insights group was added to **Management Insights**. The **Deprecated and unsupported features** group contains rules that will help you manage and remove deprecated features. The prerequisite checker will also check for deprecated and unsupported features during site installs and upgrades. <!--10875436, 12451634 -->
+
+- A new rule for detecting Windows Server 2012 and 2012 R2 was added to the **Proactive Maintenance** group. <!--9519162-->
+
+For more information, see [Management Insights for deprecated and unsupported features](../../servers/manage/management-insights.md#deprecated-and-unsupported-features) and [Management Insights for proactive maintenance](../../servers/manage/management-insights.md#proactive-maintenance).
 
 ## Client management
 
