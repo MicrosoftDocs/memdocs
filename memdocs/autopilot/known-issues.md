@@ -28,6 +28,13 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### DefaultuserX profile not deleted 
+
+When using the [EnableWebSignIn CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin) , the defaultuserX profile may not be deleted. This CSP is not supported and is currently in private preview mode only and nor recommended for production purposes at this time. 
+
+### Autopilot reset ran into trouble. Could not find the recovery environment 
+When attempting an Autopilot reset, an administrator is presented with the message “Autopilot reset ran into trouble. Could not find the recovery environment”. Entering administrator credentials will allow you to continue successfully with the reset if there is not an issue with the recovery environment.
+
 ### Device-based Conditional Access policies
 
 1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn’t supported.  See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
