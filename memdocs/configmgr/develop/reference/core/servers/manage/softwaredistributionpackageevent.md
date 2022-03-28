@@ -1,4 +1,5 @@
 ---
+description: Learn ow to set the base class for all software distribution package related status messages using SoftWareDistributionPackageEvent.
 title: "SoftwareDistributionPackageEvent"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

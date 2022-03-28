@@ -1,4 +1,5 @@
 ---
+description: Learn about the runtime requirements for applications runthat run on Microsoft Configuration Manager. 
 title: "Client Runtime Requirements"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
