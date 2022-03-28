@@ -192,7 +192,7 @@ The Configuration Manager console now offers a dark theme. For more information,
 
 ### Improvements for sending feedback
 <!--11754191, 12890088-->
-- You now have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account. User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data.
+- You now have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account or Microsoft Account (MSA). User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data.
 - The feedback button is now displayed in additional console locations.
 
 For more information, see [Product feedback](../../understand/product-feedback.md#recent-changes-to-feedback).
