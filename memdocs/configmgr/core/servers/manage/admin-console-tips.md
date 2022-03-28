@@ -30,6 +30,7 @@ The following improvements were made to the console and user experience:
 - Additional Management Insights rules now have click-through actions
 - Copy/paste is available for more objects from details panes.
    - Added the **Name** property in the details pane for configuration items, configuration item related policies, and applications
+- The console now offers a dark theme. For more information, see [How to use the console](admin-console.md#bkmk_dark).
 
 ### <a name="bkmk_csv"></a> Export to CSV
 <!--9663857-->
