@@ -183,7 +183,7 @@ To configure your tenant to support remote help, review and complete the followi
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help (preview)**.
 
 2. On the **Settings** tab:
-   1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Enabled*.
+   1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Disabled*.
    2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting *Disabled*.
 
 3. Select **Save**.
