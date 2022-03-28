@@ -1,6 +1,7 @@
 ---
 title: "Delete a Driver Package"
 titleSuffix: "Configuration Manager"
+description: "Delete an operating system deployment driver package by deleting its [SMS_DriverPackage]." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

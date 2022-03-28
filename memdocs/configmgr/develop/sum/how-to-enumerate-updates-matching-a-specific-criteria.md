@@ -1,6 +1,7 @@
 ---
 title: "Enumerate Updates Matching a Specific Criteria"
 titleSuffix: "Configuration Manager"
+description: "Enumerate software updates that match specific criteria in Configuration Manager by building a query and then using the `ExecuteQuery` method of the `QueryProcessor` class to run the query."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "InsertMultipleResourceIds Method"
 titleSuffix: "Configuration Manager"
+description: "The class method, in Configuration Manager, inserts multiple resource IDs."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

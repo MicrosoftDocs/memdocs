@@ -1,6 +1,7 @@
 ---
 title: "About OS Configuration Item Examples"
 titleSuffix: "Configuration Manager"
+description: "Examples include all of the functionality of general configuration items yet they are tightly coupled with a specific version of the Windows operating system."   
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

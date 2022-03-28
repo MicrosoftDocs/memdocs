@@ -1,6 +1,7 @@
 ---
 title: "SMS_CIToContent Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager. It exposes the configuration item to content relationship for a software update."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "Connect to an SMS Provider by Using WMI"
 titleSuffix: "Configuration Manager"
+description: "Use the WMI [SWbemLocator] object or the Windows Script Host `GetObject` method to connect to an SMS Provider."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "How to Define the Hosting Technology"
 titleSuffix: "Configuration Manager"
+description: "The hosting technology is defined by implementing the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

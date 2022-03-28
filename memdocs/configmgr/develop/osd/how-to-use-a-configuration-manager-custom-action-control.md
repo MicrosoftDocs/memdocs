@@ -1,6 +1,7 @@
 ---
 title: "Use a Custom Action Control"
 titleSuffix: "Configuration Manager"
+description: "The custom action control is used to configure a custom action that you have defined. The custom action then becomes a step in the task sequence you are editing."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

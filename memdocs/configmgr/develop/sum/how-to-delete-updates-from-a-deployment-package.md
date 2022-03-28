@@ -1,6 +1,7 @@
 ---
 title: "Delete Updates from a Deployment Package"
 titleSuffix: "Configuration Manager"
+description: "Remove update content from the existing software updates management package by using the `RemoveContent` method."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
