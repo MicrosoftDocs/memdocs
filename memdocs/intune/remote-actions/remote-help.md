@@ -133,7 +133,7 @@ When an update to remote help is required, users are prompted to install that ve
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **10.0.10011.16384**
+The most recent version of remote help is **10.0.22467.1000**
 
 ### Deploy remote help as a Win32 app
 
@@ -167,7 +167,7 @@ After you repackage remote help as a *.intunewin* file, use the procedures in [A
    - For *File or folder*, specify **RemoteHelp.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
-   - For *Value*, specify the [version of remote help](#download-remote-help) you are deploying. For example, **10.0.10011.16384**
+   - For *Value*, specify the [version of remote help](#download-remote-help) you are deploying. For example, **10.0.22467.1000**
    - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
 
 5. Proceed to the Assignments page, and then select an applicable device group or groups that should install the remote help app.

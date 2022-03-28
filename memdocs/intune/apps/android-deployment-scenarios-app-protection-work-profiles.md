@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: App protection policies and Android Enterprise personally-owned work profiles in Microsoft Intune
-description: See the differences and pros and cons when deciding to use app protection policies or Android Enterprise personally-owned work profiles for personal or BYOD Android Enterprise devices in Microsoft Intune. Compare the differences and features you get with app protection policies without enrollment (APP-WE) and Android Enterprise personally-owned work profiles.
+title: Mobile Application Management (MAM) and Android Enterprise personally-owned work profiles in Microsoft Intune
+description: See the available features when deciding to use Mobile Application Management (MAM) and/or Android Enterprise personally-owned work profiles for personal or BYOD Android devices in Microsoft Intune.
 keywords:
 
 author: Erikre
@@ -86,7 +86,7 @@ An Android Enterprise personally-owned work profile includes the following featu
 
 - **Traditional MDM functionality**: Key MDM capabilities, such as app lifecycle management using managed Google Play, is available in any Android Enterprise scenario. Managed Google Play provides a robust experience to install and update apps without any user intervention. IT can also push app configuration settings to organizational apps. It also doesn't require end users to allow installations from unknown sources. Other common MDM activities, such as deploying certificates, configuring WiFi/VPNs, and setting device passcodes are available with Android Enterprise personally-owned work profiles.
 
-- **DLP on the Android Enterprise personally-owned work profile boundary**: With a Android Enterprise personally-owned work profile, DLP policies are enforced at the work profile level, not the app level. For example, copy/paste protection is enforced by the APP settings applied to an app, or enforced by the work profile. When the app is deployed into a work profile, administrators can pause copy/paste protection to the work profile by turning off this policy at the APP level.
+- **DLP on the Android Enterprise personally-owned work profile boundary**: With an Android Enterprise personally-owned work profile, DLP policies are enforced at the work profile level, not the app level. For example, copy/paste protection is enforced by the APP settings applied to an app, or enforced by the work profile. When the app is deployed into a work profile, administrators can pause copy/paste protection to the work profile by turning off this policy at the APP level.
 
 ## Tips to optimize the work profile experience
 

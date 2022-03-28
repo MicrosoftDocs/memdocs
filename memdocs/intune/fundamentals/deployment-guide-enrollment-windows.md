@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2022
+ms.date: 03/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -64,7 +64,8 @@ You can also use this enrollment method to automatically bulk enroll devices wit
 | Feature | Use this enrollment option when |
 | --- | --- |
 | You have Azure AD Premium | ✔️ |
-| You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md). | ✔️ On Windows 11 and Windows 10 1803+, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
+| You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md) with a provisioning package. | ✔️ On Windows 11 and Windows 10 1803+, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
+| You have remote workers. | ✔️ |
 | Devices are personal or BYOD. | ✔️ |
 | Devices are owned by the organization or school. | ✔️ |
 | You have new or existing devices. | ✔️ |
@@ -161,7 +162,7 @@ For more information on Windows Autopilot, see [Windows Autopilot overview](../.
 | --- | --- |
 | You purchase devices from an [OEM that supports the Windows Autopilot deployment service](https://aka.ms/windowsautopilot), or from resellers or distributors that are in the [Cloud Solution Partners (CSP)](https://partner.microsoft.com/membership/cloud-solution-provider) program. | ✔️ |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. <br/><br/>A full Azure AD joined solution might be better for your organization. For more information, see the [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353) blog.|
-| You have remote workers, and want to send devices directly to these users. | ✔️ |
+| You have remote workers. | ✔️ <br/><br/> The OEM or partner can send devices directly to your users.|
 | Devices are owned by the organization or school. | ✔️ |
 | You have new or existing devices. | ✔️ <br/><br/> You can update existing desktops running older Windows versions, such as Windows 7, to Windows 10. This option also uses Microsoft Endpoint Configuration Manager. |
 | Need to enroll a small number of devices, or a large number of devices (bulk enrollment). | ✔️ |
@@ -240,7 +241,7 @@ With User enrollment, you can "register" the devices with Azure AD or "join" the
 | --- | --- |
 | Devices are hybrid Azure AD joined. | ✔️ <br/><br/> Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. Devices in Azure AD are available to Intune. Devices that aren't registered in Azure AD aren't available to Intune. <br/><br/>A full Azure AD joined solution might be better for your organization. For more information, see the [Success with remote Windows Autopilot and hybrid Azure Active Directory join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353) blog. |
 | You have Azure AD Premium. |❌ Azure AD Premium isn't required.<br/><br/> ✔️   If the devices join Azure AD, then they can use Azure AD Premium features, such as conditional access. |
-| You have remote or hybrid workers. | ✔️ <br/><br/> Users should know that their personal devices might be managed by the organization IT. |
+| You have remote workers. | ✔️ <br/><br/> Users should know that their personal devices might be managed by the organization IT. |
 | Devices are personal or BYOD. | ✔️ |
 | Devices are owned by the organization or school. | ✔️ <br/><br/> You can use User enrollment, but it's recommended to use [Windows Autopilot](#windows-autopilot) (in this article) or [Windows Automatic enrollment](#windows-automatic-enrollment) (in this article). They require fewer steps for your users. |
 | You have new or existing devices. | ✔️ |

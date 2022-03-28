@@ -1087,6 +1087,11 @@
             "source_path": "memdocs/configmgr/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager.md",
             "redirect_url": "/mem/configmgr/core/plan-design/hierarchy/state-messages",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/configmgr/sum/deploy-use/uup-preview.md",
+            "redirect_url": "/mem/configmgr/sum/index",
+            "redirect_document_id": true
         }
     ]
 }

@@ -124,7 +124,7 @@ No action is needed at this time. Review our [In Development](../fundamentals/in
 
 ### Plan for change: Intune is moving to support iOS/iPadOS 13 and later<!--10144130-->
 
-Later this year, we expect Apple to release iOS 15. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as mobile application management), will require  iOS/iPadOS 13 and later shortly after iOS 15's release.
+Apple has released iOS 15. Microsoft Intune, including Intune Company Portal and Intune app protection policies (APP, also known as mobile application management), now requires iOS/iPadOS 13 and later.
 
 #### How does this affect you or your users?
 
@@ -158,18 +158,6 @@ This change will affect you only if you currently manage, or plan to manage, mac
 #### How can you prepare?
 
 Check your Intune reporting to see what devices or users might be affected. Go to **Devices** > **All devices** and filter by macOS. You can add more columns to help identify who in your organization has devices running macOS 10.14 or earlier. Ask your users to upgrade their devices to a supported OS version before the release of macOS 12.
-
-### Update your iOS Company Portal minimum version to v4.16.0<!-- 9964998 -->
-We recently released an updated Company Portal for iOS to the Apple Store, which is a required app update. The minimum supported version of the iOS Company Portal is now v4.16.0.
-
-#### How does this affect you or your users?
-Most users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users who have an earlier app version will be prompted to update to the latest Company Portal app.
-
-#### How can you prepare?
-
-If you've enabled the [Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised) device restriction setting, you'll likely need to push an update to the related devices. 
-
-Otherwise, no action is needed. But if you have a helpdesk, you might want to make it aware of the prompt to update the Company Portal app.
 
 ### Plan for change: Intune is ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
 

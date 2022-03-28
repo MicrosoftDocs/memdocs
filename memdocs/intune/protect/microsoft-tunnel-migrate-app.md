@@ -44,7 +44,7 @@ The following device platforms support Microsoft Defender for Endpoint as the tu
 
   If you've previously configured Microsoft Tunnel for Android using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the Tunnel client app before support for the Android standalone Tunnel client app ends on October 26, 2021.
 
-  When using Microsoft Defender for Endpoint to connect to Tunnel for Android, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile. If you don't intend to use any Defender functionality, including web protection, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
+  When using Microsoft Defender for Endpoint to connect to Tunnel for Android, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint instead of using a separate app configuration profile. If you don't intend to use any Defender for Endpoint functionality, including web protection, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile and set the **defendertoggle** setting to **0**.
 
 - **iOS/iPadOS devices (in public preview)**:
 
@@ -54,7 +54,7 @@ The following device platforms support Microsoft Defender for Endpoint as the tu
 
   To configure the Microsoft Defender for Endpoint app to connect to Tunnel, you'll need to create a new VPN profile with the *Microsoft Tunnel (preview)* connection type.
 
-  When using Microsoft Defender for Endpoint to connect to Tunnel for iOS/iPadOS, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint. If you don't intend to use any Defender functionality, including web protection, use custom settings in the VPN profile and set the **TunnelOnly** setting to **True**.
+  When using Microsoft Defender for Endpoint to connect to Tunnel for iOS/iPadOS, use [custom settings](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) in the VPN profile to manage Defender for Endpoint. If you don't intend to use any Defender for Endpoint functionality, including web protection, use custom settings in the VPN profile and set the **TunnelOnly** setting to **True**.
 
 ## Changes introduced to support Defender for Endpoint
 
@@ -103,9 +103,9 @@ The functionality that’s available in the Microsoft Defender for Endpoint app 
 
 - **Dashboard** – This tab displays a summary of the device’s overall health, app security status, web protection status, and Tunnel status.
 
-- **App security** (Android only) – On this tab, users can view the status of automatic scans on the device. Users can also uninstall the apps identified as threats and run a manual scan. This tab isn’t available when the VPN profile turns off the Defender functionality or the Defender functionality is turned off by a separate app configuration profile.
+- **App security** (Android only) – On this tab, users can view the status of automatic scans on the device. Users can also uninstall the apps identified as threats and run a manual scan. This tab isn’t available when the VPN profile turns off the Defender for Endpoint functionality or when the Defender for Endpoint functionality is turned off by a separate app configuration profile.
 
-- **Web Protection** – This tab displays the status of the feature enabled or disabled by administrators, and details of the feature described in the flip cards. This tab isn’t available when the VPN profile turns off the Defender functionality (iOS/iPadOS and Android) or the Defender functionality is turned off by a separate app configuration profile (Android).
+- **Web Protection** – This tab displays the status of the feature enabled or disabled by administrators, and details of the feature described in the flip cards. This tab isn’t available when the VPN profile turns off the Defender for Endpoint functionality (iOS/iPadOS and Android) or the Defender for Endpoint functionality is turned off by a separate app configuration profile (Android).
 
 Screenshot of the Defender for Endpoint app on Android:
 
@@ -163,7 +163,7 @@ To enable devices to use Microsoft Defender for Endpoint to connect to Microsoft
 
 2. During configuration, reference the settings you recorded from your existing profiles, but use a *connection type* of **Microsoft Tunnel**.
 
-   If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **defendertoggle** that is set to **0**. This configuration disables the Defender functionality, leaving only the Tunnel capabilities.
+   If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **defendertoggle** that is set to **0**. This configuration disables the Defender for Endpoint functionality, leaving only the Tunnel capabilities.
 
 > [!NOTE]  
 > If you are using the Microsoft Defender for Endpoint app for Android, have web protection enabled, and are using per-app VPN, web protection will only apply to the apps in the per-app VPN list. On devices with a work profile, in this scenario we recommend adding all web browsers in the work profile to the per-app VPN list to ensure all work profile web traffic is protected.
@@ -249,7 +249,7 @@ Use the following steps to create a new VPN profile for devices that will use *M
 1. Use the information from [Create a VPN Profile](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) to create and deploy new VPN profiles for your iOS/iPadOS devices.
 
 2. During configuration, reference the settings you recorded from your existing profiles, but use a *connection type* of **Microsoft Tunnel (preview)**.
-If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **TunnelOnly** that is set to **True**. This configuration disables the Defender functionality, leaving only the Tunnel capabilities.
+If you’re using only the Tunnel functionality from the Defender for Endpoint app, and not Defender-specific functionality, add a [custom setting](../protect/microsoft-tunnel-configure.md#use-custom-settings-for-microsoft-defender-for-endpoint) of **TunnelOnly** that is set to **True**. This configuration disables the Defender for Endpoint functionality, leaving only the Tunnel capabilities.
 
 3. After the profile deploys, wait for devices to check in or force devices to sync to get the new policies.
 
@@ -258,7 +258,7 @@ If you’re using only the Tunnel functionality from the Defender for Endpoint a
 5. If you’re using per-app VPN:
    1. Wait at least 10 minutes after creating the new VPN profile. After 10 minutes you can then change the app deployment assignments from the *Microsoft Tunnel (standalone client) (preview)* VPN profile to the new VPN profile for *Microsoft Tunnel (preview)*.
 
-   2. After the new VPN profile deploys to a device, that device must restart before the new VPN profile is used. To restart a device, see [remotely restart devices with Intune](/intune/remote-actions/device-restart.md). 
+   2. After the new VPN profile deploys to a device, that device must restart before the new VPN profile is used. To restart a device, see [remotely restart devices with Intune](/intune/remote-actions/device-restart). 
 
 ## Next Steps
 

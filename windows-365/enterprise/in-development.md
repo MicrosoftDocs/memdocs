@@ -64,13 +64,13 @@ Currently, Windows 365 and Azure Virtual Desktop share a common framework for id
 <!-- ***********************************************-->
 ## Device management
 
-### New remote action: remote help<--38310389-->
+### New remote action: remote help<!--38310389-->
 
 The upcoming Remote Help remote action (in the Microsoft Endpoint Manager admin center) will let admins start a remote session into an end user’s Cloud PC.
 
 ### Upload a custom image without an on-premises network connection<!--8341750-->
 
-Customers using Azure Active Directory (Azure AD) Join without additional Azure infrastructure will be able to upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscriptions.
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network will be able to upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
 
 ### windows365.microsoft.com will move to general availability<!--38195529-->
 
@@ -78,11 +78,7 @@ The windows365.microsoft.com web client will be moving out of preview and into g
 
 ### Nested virtualization<!--37800910-->
 
-In a future release, Windows 365 8vCPU/32GB licenses will support nested virtualizations for most currently supported regions. Southeast Asia and West US 2 will follow at a later date.
-
-### Operating system end of support status for Cloud PCs<!--36852572 -->
-
-The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
+In a future release, for most currently supported regions, Windows 365 8vCPU/32GB licenses will support nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 will follow at a later date.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -103,13 +99,11 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 The device history report will have new information to help you evaluate Cloud PC performance:
 
-Top 5 processes impacting CPU spike times
-Top 5 processes impacting RAM spike times
-
+- Top 5 processes impacting CPU spike times
+- Top 5 processes impacting RAM spike times
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->
-
 
 <!-- ***********************************************-->
 <!--## Role-based access control-->

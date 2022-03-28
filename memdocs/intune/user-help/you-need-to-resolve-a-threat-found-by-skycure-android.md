@@ -61,4 +61,3 @@ If you install an app that's seen as a threat to your device, you'll receive a n
 To resolve, select the app from the list of threats in SEP Mobile. Then follow the on-screen instructions to remove and uninstall the app.  
 
 Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
-

@@ -12,8 +12,8 @@ audience: itproF
 ms.reviewer: jubaptis
 manager: dougeby
 ms.audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.date: 10/18/2021
 ms.collection:
   - M365-modern-desktop
