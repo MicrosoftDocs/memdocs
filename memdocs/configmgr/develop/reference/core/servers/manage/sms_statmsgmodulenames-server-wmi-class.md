@@ -1,5 +1,5 @@
 ---
-description: Article outlining the use of SMS_StatMsgModuleNames in Configuration Manager to map module names to the message DLL that contains the status message text.
+description: Learn how to map module names to the message DLL containing the status message text using SMS_StatMsgModuleNames.
 title: "SMS_StatMsgModuleNames Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

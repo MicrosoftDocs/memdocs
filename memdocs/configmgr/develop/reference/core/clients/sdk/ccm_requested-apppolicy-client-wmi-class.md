@@ -1,5 +1,5 @@
 ---
-description: Article detailing the use of CCM_RequestedAppPolicy in Configuration Manager.
+description: Learn how to represent an application policy request with CCM_RequestedAppPolicy in Configuration Manager.
 title: "CCM_Requested AppPolicy Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

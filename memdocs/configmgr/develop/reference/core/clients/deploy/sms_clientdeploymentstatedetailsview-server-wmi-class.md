@@ -1,5 +1,5 @@
 ---
-description: Article detailing the use of SMS_ClientDeploymentStateDetailsView in Configuration Manager.
+description: Learn how to represent a clients deployment state using SMS_ClientDeploymentStateDetailsView in Configuration Manager.
 title: "SMS_ClientDeploymentStateDetailsView Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

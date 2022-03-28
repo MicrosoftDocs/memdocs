@@ -1,5 +1,5 @@
 ---
-description: Article outlining the use of SMS_PDFPkgToPDFProgram class in Configuration Manager.
+description: Learn how to use SMS_PDFPkgToPDFProgram class to relate a SMS PDF Packager Server class object with an SMS PDF Program Server class object.
 title: "SMS_PDFPkgToPDFProgram_a Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

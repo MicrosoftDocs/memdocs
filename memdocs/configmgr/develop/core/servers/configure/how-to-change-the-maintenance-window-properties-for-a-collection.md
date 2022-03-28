@@ -1,5 +1,5 @@
 ---
-description: Article outlining how to use Configuration Manager to change the maintenance window properties for a collection.
+description: Learn how to use the Configuration Manager to change the maintenance window properties for a collection.
 title: "Change Maintenance Window Properties for a Collection"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

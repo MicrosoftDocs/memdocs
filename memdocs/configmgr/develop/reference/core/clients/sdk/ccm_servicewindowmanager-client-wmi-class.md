@@ -1,5 +1,5 @@
 ---
-description: Article detailing how to use CCM_ServiceWindowManager in COnfiguration Manager to manage service windows on the client computer.
+description: Article detailing how to use CCM_ServiceWindowManager in Configuration Manager to manage service windows on the client computer.
 title: "CCM_ServiceWindowManager Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
