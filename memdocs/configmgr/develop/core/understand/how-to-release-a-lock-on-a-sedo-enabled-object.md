@@ -70,7 +70,7 @@ class Program
 |AssignedUser|Indicates the currently assigned user of the requested lock.|  
 |AssignedObjectLockContext|Indicates ObjectLockContext the lock is currently assigned to.|  
 |AssignedMachine|Indicates the currently assigned computer of the requested lock.|  
-|AssignedSiteCode|Indicates the currently site of the requested lock.|  
+|AssignedSiteCode|Indicates the current site of the requested lock.|  
 |AssignedTimeUTC|Indicates the time at which the requested lock was assigned.|  
 
  RequestState  
