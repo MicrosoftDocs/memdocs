@@ -1,6 +1,8 @@
 ---
 title: "SMS_TopThreatSummary Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager, that summarizes the top threats per collection."  
+
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

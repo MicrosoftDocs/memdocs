@@ -1,6 +1,7 @@
 ---
 title: "UnPackNALPath Method"
 titleSuffix: "Configuration Manager"
+description: "Decodes a network abstraction layer (NAL) path into its components."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
