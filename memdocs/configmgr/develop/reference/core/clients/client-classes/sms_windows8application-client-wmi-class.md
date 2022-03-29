@@ -1,5 +1,5 @@
 ---
-description: Learn how to that define a Windows 8 style application or a Windows Store application in Configuration Manager.
+description: Learn how to define a Windows 8 style application or a Windows Store application in Configuration Manager.
 title: "SMS_Windows8Application Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
