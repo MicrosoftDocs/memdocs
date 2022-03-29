@@ -1,6 +1,7 @@
 ---
 title: "Application Configuration Item Example 1"
 titleSuffix: "Configuration Manager"
+description: "The Application Configuration Item Instance example determines whether the Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
