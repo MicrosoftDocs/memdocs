@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/03/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -41,7 +41,7 @@ You deploy the trusted certificate profile to the same devices and users that re
 
 To use PKCS,  SCEP, and PKCS imported certificates, devices must trust your root Certification Authority. To establish trust, export the Trusted Root CA certificate, and any intermediate or issuing Certification Authority certificates, as a public certificate (.cer). You can get these certificates from the issuing CA, or from any device that trusts your issuing CA.
 
-To export the certificate, refer to the documentation for your Certification Authority. You'll need to export the public certificate as a .cer file.  Don't export the private key, a .pfx file.
+To export the certificate, refer to the documentation for your Certification Authority. You'll need to export the public certificate as a DER-encoded .cer file.  Don't export the private key, a .pfx file.
 
 You'll use this .cer file when you [create trusted certificate profiles](#create-trusted-certificate-profiles) to deploy that certificate to your devices.
 
