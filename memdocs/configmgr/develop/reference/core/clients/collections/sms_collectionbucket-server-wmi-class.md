@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the joining of collection and bucket with the SMS_CollectionBucket class.
 title: "SMS_CollectionBucket Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_SIIB_SysResRole to represent a system role associated with a console property page resource.
 title: "SMS_SIIB_SysResRole Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
