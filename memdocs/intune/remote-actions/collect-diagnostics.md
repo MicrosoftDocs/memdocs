@@ -103,29 +103,32 @@ Event Viewers:
 30. Microsoft-Windows-AppLocker/MSI and Script
 31. Microsoft-Windows-AppLocker/Packaged app-Deployment
 32. Microsoft-Windows-AppLocker/Packaged app-Execution
-33. Microsoft-Windows-Bitlocker/Bitlocker Management
-34. Microsoft-Windows-HelloForBusiness/Operational
-35. Microsoft-Windows-SENSE/Operational
-36. Microsoft-Windows-SenseIR/Operational
-37. Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
-38. Setup
-39. System
+33. Microsoft-Windows-AppxPackaging/Operational
+34. Microsoft-Windows-Bitlocker/Bitlocker Management
+35. Microsoft-Windows-HelloForBusiness/Operational
+36. Microsoft-Windows-SENSE/Operational
+37. Microsoft-Windows-SenseIR/Operational
+38. Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
+39. Setup
+40. System
 
 Files:
 
-40. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
-41. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
-42. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
-43. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
-44. %temp%\MDMDiagnostics\battery-report.html
-45. %temp%\MDMDiagnostics\energy-report.html
-46. %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
-47. %temp%\MDMDiagnostics\msinfo32.log
-48. %windir%\ccm\logs\*.log
-49. %windir%\ccmsetup\logs\*.log
-50. %windir%\logs\CBS\cbs.log
-51. %windir%\logs\measuredboot\*.*
-52. %windir%\Logs\WindowsUpdate\*.etl
+41. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
+42. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
+43. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
+44. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
+45. %temp%\MDMDiagnostics\battery-report.html
+46. %temp%\MDMDiagnostics\energy-report.html
+47. %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
+48. %temp%\MDMDiagnostics\msinfo32.log
+49. %windir%\ccm\logs\*.log
+50. %windir%\ccmsetup\logs\*.log
+51. %windir%\logs\CBS\cbs.log
+52. %windir%\logs\measuredboot\*.*
+53. %windir%\Logs\WindowsUpdate\*.etl
+54. %windir%\temp\%computername%*.log
+55. %windir%\temp\officeclicktorun*.log
 
 ## Disable device diagnostics
 

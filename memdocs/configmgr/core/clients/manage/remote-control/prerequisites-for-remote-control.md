@@ -2,7 +2,7 @@
 title: Remote control prerequisites
 titleSuffix: Configuration Manager
 description: Get the prerequisites for remote control in Configuration Manager.
-ms.date: 12/07/2021
+ms.date: 03/18/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual

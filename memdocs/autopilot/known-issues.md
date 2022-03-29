@@ -8,11 +8,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 03/28/2022
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -27,6 +27,32 @@ ms.topic: troubleshooting
 This article describes known issues that can often be resolved by configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
 ## Known issues
+
+### `DefaultuserX` profile not deleted
+
+When using the [EnableWebSignIn CSP](/windows/client-management/mdm/policy-csp-authentication#authentication-enablewebsignin), the `defaultuserX` profile may not be deleted. This CSP isn't currently supported. It's in private preview mode only and not recommended for production purposes at this time.
+
+### Autopilot reset ran into trouble. Could not find the recovery environment
+
+When attempting an Autopilot reset, an administrator sees the following message: _Autopilot reset ran into trouble. Could not find the recovery environment_. If there isn't an issue with the recovery environment, enter administrator credentials to continue with the reset process.
+
+### Device-based Conditional Access policies
+
+1. The Intune Enrollment app must be excluded from any Conditional Access policy requiring **Terms of Use** because it isn’t supported.  See [Per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use).
+
+2. Exceptions to Conditional Access policies to exclude **Microsoft Intune Enrollment** and **Microsoft Intune** cloud apps are needed to complete Autopilot enrollment in cases where restrictive polices are present such as:
+    - Conditional Access policy 1: Block all apps except those on an exclusion list.
+    - Conditional Access policy 2: Require a compliant device for the apps on the exclusion list.
+ 
+    In this case, Microsoft Intune Enrollment and Microsoft Intune should be included in that exclusion list of policy 1.
+
+    If a policy is in place such that **all cloud apps** require a compliant device (there is no exclusion list), Microsoft Intune Enrollment will already be excluded by default, so that the device can register with Azure AD and enroll with Intune and avoid a circular dependency.
+
+3. **Hybrid Azure AD devices**: When Hybrid Azure AD devices are deployed with Autopilot, 2 device IDs are initially associated with the same device – one Azure AD and one hybrid.  The hybrid compliance state will display as **N/A** when viewed from the devices list in the Azure portal until a user signs in. Intune only syncs with the Hybrid device ID after a successful user sign-in. 
+
+    The temporary **N/A** compliance state can cause issues with device based Conditional Access polices that block access based on compliance. In this case, Conditional Access is behaving as intended. To resolve the conflict, a user must to sign in to the device, or the device-based policy must be modified. For more information, see [Conditional Access: Require compliant or hybrid Azure AD joined device](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device).
+
+4. Conditional Access policies such as BitLocker compliance require a grace period for Autopilot devices, because until the device has been rebooted the status of BitLocker and Secure Boot have not been captured, and cannot be used as part of the Compliance Policy. The grace period can be as short as 0.25 days.
 
 ### Device goes through Autopilot deployment without an assigned profile
 

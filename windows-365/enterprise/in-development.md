@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 02/16/2022
+ms.date: 03/09/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -64,32 +64,46 @@ Currently, Windows 365 and Azure Virtual Desktop share a common framework for id
 <!-- ***********************************************-->
 ## Device management
 
+### New remote action: remote help<!--38310389-->
+
+The upcoming Remote Help remote action (in the Microsoft Endpoint Manager admin center) will let admins start a remote session into an end user’s Cloud PC.
+
+### Upload a custom image without an on-premises network connection<!--8341750-->
+
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network will be able to upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
+
+### windows365.microsoft.com will move to general availability<!--38195529-->
+
+The windows365.microsoft.com web client will be moving out of preview and into general availability.
+
 ### Nested virtualization<!--37800910-->
 
-In a future release, Windows 365 8vCPU/32GB licenses will support nested virtualizations for most currently supported regions. Southeast Asia and West US 2 will follow at a later date.
-
-### Operating system end of support status for Cloud PCs<!--36852572 -->
-
-The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
-
-### Point-in-time restore<!--37063579 -->
-
-Administrators and users will be able to restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points will be available. Administrators will be able to:
-
-- Configure the restore point frequency
-- Grant or deny users restore permissions
-- Bulk restore
+In a future release, for most currently supported regions, Windows 365 8vCPU/32GB licenses will support nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 will follow at a later date.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
+
+### End-user error log collection<!--38195529-->
+
+End users will be able to collect error logs.
+
+### End-user feedback<!--38195529-->
+
+End users will be able to provide feedback to Microsoft from within the Windows 365 web client.
 
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
+### Device history report – new information for Cloud PC performance<!--38310774  -->
+
+The device history report will have new information to help you evaluate Cloud PC performance:
+
+- Top 5 processes impacting CPU spike times
+- Top 5 processes impacting RAM spike times
+
 <!-- ***********************************************-->
 <!-- ## Provisioning -->
-
 
 <!-- ***********************************************-->
 <!--## Role-based access control-->

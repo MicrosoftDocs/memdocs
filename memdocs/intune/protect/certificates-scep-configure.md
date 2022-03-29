@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/28/2022
+ms.date: 03/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -145,8 +145,6 @@ The version of Android on a device can affect the available encryption type:
 - **Android 10 and later:** Devices installed with Android 10 or later by the OEM will use file-based encryption and won't require a PIN for SCEP to provision a certificate. Devices that upgrade to version 10 or later and begin to use file-based encryption might still require a PIN.
 
 - **Android 8 to 9**: These versions of Android support the use of file-based encryption, but it’s not required. Each OEM chooses which encryption type to implement for a device. It’s also possible that OEM modifications will result in a PIN not being required even when full-disk encryption is in use.
-
-- **Android 7 and earlier**: Disk-based encryption is typical, if not universal. With version 7, file-based encryption is an end-user option. For devices on which users choose to use file-based encryption a PIN might still be required before SCEP can provision a certificate. It’s also possible that OEM modifications result in a PIN not being required.
 
 For more information, see the following articles in the Android documentation:  
 

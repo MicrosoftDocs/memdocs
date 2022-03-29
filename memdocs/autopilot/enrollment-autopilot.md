@@ -5,8 +5,8 @@ title: Create device groups for Windows Autopilot - Microsoft Intune | Microsoft
 titleSuffix: Microsoft Intune
 description: Learn how to create device groups for Windows Autopilot.
 keywords:
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 02/09/2022
@@ -73,8 +73,8 @@ ms.collection:
 
 3. Select **Create**.
 
-[!NOTE] 
-Anything assigned to these attributes will only be assigned if the device is Autopilot registered.
+> [!NOTE]
+> Anything assigned to these attributes will only be assigned if the device is Autopilot registered.
 
 ## Add devices
 

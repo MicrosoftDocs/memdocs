@@ -1,6 +1,7 @@
 ---
 title: "SMS Provider Field Length Restrictions in Configuration Manager"
 ms.date: "09/20/2016"
+description: "Places restrictions on the width of character fields for schema classes."
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
