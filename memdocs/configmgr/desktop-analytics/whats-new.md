@@ -37,9 +37,9 @@ To take advantage of this change, make sure your environment is up to date:
 - The Windows diagnostic data processor configuration is supported on devices that meet the configuration requirements:
   - Use a supported version of Windows 10
   - The following editions are supported:
-   - Enterprise
-   - Professional
-   - Education
+    - Enterprise
+    - Professional
+    - Education
   - The device must be joined to Azure Active Directory.
 
   > [!IMPORTANT]
