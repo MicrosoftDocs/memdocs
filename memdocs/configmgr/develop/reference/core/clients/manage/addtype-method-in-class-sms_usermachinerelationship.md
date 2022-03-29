@@ -1,5 +1,5 @@
 ---
-description: Learn how to add a type of the relationship between a user and a device in Configuration Manager using AddType.
+description: Learn how to add the type of relationship between a user and a device in Configuration Manager using AddType.
 title: "AddType Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
