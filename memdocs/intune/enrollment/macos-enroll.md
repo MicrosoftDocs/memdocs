@@ -35,13 +35,13 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
- Intune supports enrollment on personal and company-owned devices. This article describes the supported enrollment methods for personal, company-owned, and VM devices. 
+ Microsoft Intune supports enrollment on personal and company-owned devices. This article describes the methods and features you can use to enroll personal, company-owned, and VM devices in Intune. 
+ 
+## Enable macOS enrollment 
 
-## Enable macOS device enrollment
+Before enrolling devices, you must enable enrollment in your Microsoft Intune tenant. Complete this list of prerequisites to ensure that people can successfully enroll thier devices.   
 
-Complete the following prerequisites to enable enrollment for the people and devices in your organization.    
-
-- [Make sure your device is eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility).
+- [Verify that devices are eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility)
 - [Configure domains](../fundamentals/custom-domain-name-configure.md)
 - [Set the MDM Authority](../fundamentals/mdm-authority-set.md)
 - [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md)  
@@ -56,7 +56,6 @@ Intune supports *bring-your-own-device*, or *BYOD*, which lets people enroll the
 
 - Sign in to [Company Portal website](https://portal.manage.microsoft.com) and follow on-screen instructions to add device. 
 - Install Company Portal app for Mac at [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) and follow-on screen instructions to add device.    
-
 
 ## Company-owned macOS devices
 Intune supports the following enrollment methods for company-owned macOS devices:  
