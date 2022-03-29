@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/28/2022
+ms.date: 03/29/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -43,7 +43,7 @@ To be successful, you need to consider these key areas during planning and deplo
 
 Managing your endpoints, including cloud native endpoints, is an important task for all organizations. With cloud native endpoints, the management tools you use must manage the endpoints wherever they go.
 
-If you don't currently use a mobile device management (MDM) solution to manage your endpoints, or want to move to a Microsoft solution, then look at [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
+If you don't currently use a mobile device management (MDM) solution, or want to move to a Microsoft solution, then look at [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 
 With Microsoft Endpoint Manager, you get the following endpoint management options:
 
@@ -61,9 +61,11 @@ With Microsoft Endpoint Manager, you get the following endpoint management optio
 
 ## Review your endpoint and user workloads
 
-At a high level, deploying cloud native endpoints require modern strategies for identity, software distribution, device management, OS updates, and managing user data & configuration. Microsoft has solutions that support these areas for your cloud native endpoints.
+At a high level, deploying cloud native endpoints requires modern strategies for identity, software distribution, device management, OS updates, and managing user data & configuration. Microsoft has solutions that support these areas for your cloud native endpoints.
 
-To start, review each workload, and determine if it can support cloud native endpoints. If they don't support cloud native endpoints, then <need something>. Plan to update your workloads to support cloud native endpoints. Your workloads should have the following characteristics:
+To start, review each workload, and determine if it can support cloud native endpoints. If a workload doesn't support cloud native endpoints, then ??NEED SOME TEXT??. 
+
+Plan to update your workloads to support cloud native endpoints. Your workloads should have the following characteristics:
 
 - Get access securely from anywhere
 - Delivered from the cloud ??
@@ -130,7 +132,7 @@ Your exact workloads, details, and how to update the workloads for cloud native 
   - **Deploy Microsoft 365 app updates** using the following options:
 
     - **Office Content Delivery Network** (CDN): Manage the CDN using a servicing profile in the Microsoft 365 Apps admin center or using an Intune policy ??How do you manage CDN using Intune policy? I don't see any docs on this??.
-    - **Intune**: Create a policy that sets the Update Channel, remove other versions, and more.
+    - **Intune**: Create a policy that sets the Update Channel, removes other app versions, and more.
     - **Configuration Manager** (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)): Manage your apps, including update stats, copy, retire, and more.
 
     For more information, see:
@@ -164,9 +166,11 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 Modernizing workloads and adopting cloud native endpoints will require changes to operational processes and procedures. For example:
 
 - Administrators need to understand how changes to existing workloads might change their processes.
-- The service desk needs to understand the new scenarios that they'll be supporting.
+- The service desk needs to understand the new scenarios they'll be supporting.
 
 When reviewing your endpoints and workloads, break down the transition into phases. This section provides an overview on some recommended phases your organization can use. These phases can be repeated as many times as needed.
+
+??I feel like we need a common example, and we can build off that example with each phase. It might make more sense to readers??
 
 ### ✅ Phase 1: Get info on your workloads
 
@@ -176,7 +180,7 @@ In this phase:
 
 2. Verify the end-state for each workload. Identify known blockers that prevent getting to this end-state or prevent supporting cloud native endpoints.
 
-    Getting to the end-state for each workload may include updating software, lifting and shifting to a new platform, migrating to a new solution, or making configuration changes. The steps needed for each workload are different with each organization.
+    Getting to the end-state for each workload may include updating software, "lifting and shifting" to a new platform, migrating to a new solution, or making configuration changes. The steps needed for each workload are different with each organization.
 
 ### ✅ Phase 2: Prioritize any blockers
 
@@ -189,6 +193,8 @@ After you've identified the key workloads and their end-state blockers, then:
 2. To support testing and proof of concept, start with a minimum set of workloads. The goal is to test and validate a sample of your workloads.
 
 ### ✅ Phase 3: Transition your workloads
+
+In this phase, you're ready to implement your changes.
 
 1. Move unblocked workloads to your planned cloud native solutions or end-state. Ideally, this step should be broken into smaller work items. The goal is to continue business operations with minimal disruption.
 
@@ -274,11 +280,15 @@ Once all blockers and issues have been resolved, you can move existing devices t
 
   When resetting an existing Windows endpoint, be sure to clean up (??Does this mean delete? Need more info??) the existing Azure AD device object, the Intune device object, and the Windows Autopilot device registration. Then, re-provision the endpoint.
 
+When the devices are ready, join these devices to Azure AD using the option that best for your organization. For more specific information, see [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) and [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan).
+
 ## Move from group policy objects (GPOs)
 
-Many organizations use GPOs to configure and manage their Windows endpoints. Over time, it gets complicated due to a lack of documentation, lack of clarity in the policy's purpose or requirements, using legacy or non-functional policies, and using complex features. For example, there might be policies that include WMI filters, have complex OU structures, and use inheritance blocking, loopback, or security filtering.
+Many organizations use GPOs to configure and manage their Windows endpoints. 
 
-### ✅ Manage settings using Intune
+Over time, it gets complicated due to a lack of documentation, lack of clarity in the policy's purpose or requirements, using legacy or non-functional policies, and using complex features. For example, there might be policies that include WMI filters, have complex OU structures, and use inheritance blocking, loopback, or security filtering.
+
+### Manage settings using Intune
 
 Microsoft Intune has many built-in settings that can be configured and deployed to your cloud native endpoints. When moving to Intune for policy management, you have some options.
 
@@ -329,23 +339,26 @@ Intune also has built-in features that can help you configure your cloud native 
 
   For more information, see [Security baselines in Endpoint Manager](/mem/intune/protect/security-baselines).
 
-## Windows Autopilot guidance
+## Use Windows Autopilot to provision new or existing Windows endpoints
 
-You purchase endpoints from an OEM or partner, and the OEM can send the devices directly to your end users. Users receive the endpoints, sign in with their organization account, and Windows Autopilot automatically provision these endpoints. You can also use Windows Autopilot to provision existing endpoints that you or end users reset.
-
-### ✅ Use Windows Autopilot to provision new or existing Windows endpoints
+If you purchase endpoints from an OEM or partner, then you should use Windows Autopilot.
 
 Some of the benefits include:
 
 - **Built-in Windows setup process**: It presents a branded, guided, and simplified end-user experience.
-- **Drop-ship endpoints directly to end-users**: Vendors and OEMs can ship endpoints directly to your users. This feature helps limit overhead and costs involved with high-touch internal IT processes and shipping.
+
+- **Drop-ship endpoints directly to end-users**: Vendors and OEMs can ship endpoints directly to your users. Users receive the endpoints, sign in with their organization account (`user@contoso.com`), and Windows Autopilot automatically provisions the endpoint.
+
+  This feature helps limit overhead and costs involved with high-touch internal IT processes and shipping.
 
   For best results, pre-register your endpoints with the OEMs or vendors. Pre-registering helps avoid any delays that can occur when manually registering endpoints.
 
 - **End-users can reset existing endpoints themselves**: If users have existing Windows endpoints, they can reset the devices themselves. When they're reset, it restores the endpoints to a minimum baseline and managed state. It doesn't require a high cost IT intervention or physical access to the endpoint.
 
 > [!NOTE]
-> It's not recommended to use Windows Autopilot to hybrid Azure AD join newly provisioned endpoints. It works, but there can be some challenges. It's recommended to use Windows Autopilot to Azure AD join newly provisioned endpoints
+> It's not recommended to use Windows Autopilot to hybrid Azure AD join newly provisioned endpoints. It works, but there are some challenges. On newly provisioned endpoints, use Windows Autopilot to Azure AD join (not hybrid Azure AD join).
+>
+> To help determine the join method that's right for your organization, see [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md).
 
 For more information on Windows Autopilot, see:
 

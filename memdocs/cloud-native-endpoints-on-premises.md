@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 03/29/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -90,7 +90,7 @@ The following steps are an overview. For more specific information, see [Primary
     > [!NOTE]
     > PKINIT is a preauthentication mechanism for Kerberos 5 which uses X.509 certificates to authenticate the Key Distribution Center (KDC) to clients and vice versa.
     > 
-    > [[MS-PKCA]: Public Key Cryptography for Initial Authentication (PKINIT) in Kerberos Protocol]](/openspecs/windows_protocols/ms-pkca/d0cf1763-3541-4008-a75f-a577fa5e8c5b)
+    > [MS-PKCA: Public Key Cryptography for Initial Authentication (PKINIT) in Kerberos Protocol](/openspecs/windows_protocols/ms-pkca/d0cf1763-3541-4008-a75f-a577fa5e8c5b)
 
 6. The DC authenticates the user. The DC returns a Kerberos Ticket-Granting Ticket (TGT) or a NTLM token based on the protocol that the on-premises resource or application supports (which Windows caches). ??Caches what specifically??
 
@@ -118,5 +118,5 @@ The following steps are an overview. For more specific information, see [Primary
 - [What are cloud native endpoints?](cloud-native-endpoints-overview.md)
 - [Tutorial: Get started with cloud native Windows endpoints with Microsoft Endpoint Manager](cloud-native-windows-endpoints.md)
 - [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-- [Planning guide](cloud-native-endpoints-planning-guide.md)
+- [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md)
 - [Known issues](cloud-native-endpoints-known-issues.md)
