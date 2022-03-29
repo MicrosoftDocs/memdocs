@@ -1,4 +1,5 @@
 ---
+description: Learn how to provide a summary report of the health of packages and distribution points in the site within Configuration Manager.
 title: "SMS_PackageStatus Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

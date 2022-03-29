@@ -1,4 +1,5 @@
 ---
+description: Learn how to reset the policy on a client resulting in the next policy request receiving a full policy in Configuration Manager.
 title: "ResetPolicy Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

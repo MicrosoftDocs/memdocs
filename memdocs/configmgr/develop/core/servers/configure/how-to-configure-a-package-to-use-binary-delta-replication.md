@@ -1,4 +1,5 @@
 ---
+description: Learn how to how to configure an existing package to use binary delta replication in Configuration Manager.
 title: "Configure a Package to Use Binary Delta Replication"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how to specify how client computers deploy software in Configuration Manager using SMS_SoftwareDistributionAgentConfig.
 title: "SMS_SoftwareDistributionAgentConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

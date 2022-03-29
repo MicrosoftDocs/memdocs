@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent Windows Hello for Business profile settings in Configuration Manager using SMS_PassportForWorkProfileSettings.
 title: "SMS_PassportForWorkProfileSettings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

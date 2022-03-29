@@ -1,4 +1,5 @@
 ---
+description: Learn how to display Configuration Manager actions by specified conditions such as Regular expressions, method calls, or security permissions.
 title: "Conditional Actions"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
