@@ -119,27 +119,25 @@ For more information, see the following topics in the Parallels knowledge base:
 * [How to enroll a macOS VM in Parallels Desktop using Intune](https://kb.parallels.com/en/124564)  
 * [How to find and change the serial number](https://kb.parallels.com/123455)  
 
-
-## User-approved enrollment
-
-This type of enrollment lets you manage macOS devices that aren't part of Apple School Manager or Apple Business Manager. It provides the same level of control as supervised macOS devices enrolled using Automated Device Enrollment or Apple Configurator. 
-
-All Mac enrollments in Intune, except those enrolled via Automated Device Enrollment (ADE), are considered user-approved. Intune automatically turns on supervision for user-approved devices running macOS 11 and later. It also does this for enrolled devices that later update to macOS 11 or later.  
-=======
 ### VMware Fusion
 Add the following lines to your .vmx file to set the VM's hardware model and serial number. The values shown in this sample are examples.  
 
 ```md
 serialNumber = "ABC123456789"  
 hw.model = "MacBookAir10,1"  
-```
-
+```  
 Enter any string of alphanumeric characters for the serial number. For hardware model, we recommend using the model of the device that's running the VM. To find your Mac's hardware model, select the Apple menu and go to **About This Mac** > **System Report** > **Model Identifier**.   
 
 See the VMware customer connect website for more information about [editing the .vmx file for your VMware Fusion VM](https://kb.vmware.com/s/article/1014782).  
 
 ### Apple Silicon 
-No changes are required for virtual machines running on Apple Silicon hardware. Parallels Desktop and VMware Fusion are supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number. 
+No changes are required for virtual machines running on Apple Silicon hardware. Parallels Desktop and VMware Fusion are supported on Macs with Apple Silicon, so if you set up a VM this way, you don't need to modify the hardware model ID or serial number.  
+
+## User-approved enrollment
+
+This type of enrollment lets you manage macOS devices that aren't part of Apple School Manager or Apple Business Manager. It provides the same level of control as supervised macOS devices enrolled using Automated Device Enrollment or Apple Configurator. 
+
+All Mac enrollments in Intune, except those enrolled via Automated Device Enrollment (ADE), are considered user-approved. Intune automatically turns on supervision for user-approved devices running macOS 11 and later. It also does this for enrolled devices that later update to macOS 11 or later.  
 
 
 > [!NOTE]
