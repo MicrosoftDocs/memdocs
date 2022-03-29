@@ -1,5 +1,5 @@
 ---
-description: Learn how to use XML to define nodes and their content, that you see in the Configuration Manager console.
+description: Learn how to use XML to define nodes and their content, which you see in the Configuration Manager console.
 title: "Configuration Manager Console Nodes"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
