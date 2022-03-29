@@ -1,7 +1,7 @@
 ---
 title: "Verifying the Application Management Extension"
 titleSuffix: "Configuration Manager"
-description: "Verify the new Deployment Type is available in the console"
+description: "Verifying the Application Management Extension. Verify the new Deployment Type is available in the console."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
