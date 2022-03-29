@@ -1,6 +1,7 @@
 ---
 title: "Extending Application Management Overview"
 titleSuffix: "Configuration Manager"
+description: "Partners that must continue to use a specific deployment technology not natively supported by Configuration Manager, can extend the Application Management model to support a custom deployment type."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
