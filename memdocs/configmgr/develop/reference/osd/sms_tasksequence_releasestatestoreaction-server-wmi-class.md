@@ -1,7 +1,7 @@
 ---
 title: "SMS_TaskSequence_ReleaseStateStoreAction Class"
 titleSuffix: "Configuration Manager"
-description: "An SMS Provider server class that represents a task sequence action that notifies the state migration point of completion of a capture or restore action."  
+description: "An SMS Provider server class that represents a task sequence action. It notifies the state migration point of completion of a capture or restore action."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
