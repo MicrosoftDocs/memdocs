@@ -1,6 +1,7 @@
 ---
 title: "UpdateProfileIDForDevices Method"
 titleSuffix: "Configuration Manager"
+description: "update the  profile IDs for device serial numbers." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
