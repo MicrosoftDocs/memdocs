@@ -1,7 +1,6 @@
 ---
 title: "SQL View Security"
 titleSuffix: "Configuration Manager"
-description: "The Configuration Manager object security mechanism facilitates instance (or row) level security on core object classes."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,7 +1,6 @@
 ---
 title: "SyncToken Method"
 titleSuffix: "Configuration Manager"
-description: "Initiate a synchronization of the Apple Volume Purchase Program (VPP) token."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
