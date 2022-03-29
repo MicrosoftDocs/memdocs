@@ -1,7 +1,7 @@
 ---
 title: "Set the PXE Service Point Response for a Specific Network Interface"
 titleSuffix: "Configuration Manager"
-description: "Creates a copy of the current boot image source .wim file and updates the copy with the most current operating system deployment binaries."
+description: "In Configuration Manager, you set the operating system deployment to respond to a specific set of network addresses by adding the required media access control (MAC) addresses to the BindExcept embedded property list."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

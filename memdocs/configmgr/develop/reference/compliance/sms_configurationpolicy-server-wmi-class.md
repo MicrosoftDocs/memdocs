@@ -1,7 +1,7 @@
 ---
 title: "SMS_ConfigurationPolicy Class"
 titleSuffix: "Configuration Manager"
-description: "The IsClientOperationUpdateAllowed Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks whether a user has permission to update an operation."
+description: "The SMS_ConfigurationPolicy Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the desired values of settings declared in a subclass of SMS_SettingsDefinitionBase."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
