@@ -1,7 +1,7 @@
 ---
 title: "EvaluateAllAutoDeployment Method"
 titleSuffix: "Configuration Manager"
-description: "Evaluates all automatic deployments."
+description: "In Configuration Manager, the EvaluateAllAutoDeployment WMI class method evaluates all automatic deployments."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

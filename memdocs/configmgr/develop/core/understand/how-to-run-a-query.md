@@ -1,7 +1,7 @@
 ---
 title: "Run a Query"
 titleSuffix: "Configuration Manager"
-description: "Run a SMS_Query- based query by getting the query instance and then by running WQL query in the SMS_Query object Expression property."  
+description: "Run a SMS_Query based query by getting the query instance and then by running WQL query in the SMS_Query object Expression property."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,7 +1,7 @@
 ---
 title: "Unlock Method in SMS_OperatingSystemInstallPackage"
 titleSuffix: "Configuration Manager"
-description: "set the source site to the current site, unlocking the operating system install package."  
+description: "Set the source site to the current site, unlocking the operating system install package."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
