@@ -1,7 +1,7 @@
 ---
 title: "AppContentInfo Structure"
 titleSuffix: "Configuration Manager"
-description: "the AppContentInfo structure provides information about the application content." 
+description: "The AppContentInfo structure provides information about the application content." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
