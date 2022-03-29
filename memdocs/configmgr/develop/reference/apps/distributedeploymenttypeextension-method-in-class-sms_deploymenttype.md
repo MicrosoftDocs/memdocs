@@ -1,6 +1,7 @@
 ---
 title: "DistributeDeploymentTypeExtension Method"
 titleSuffix: "Configuration Manager"
+description: "The DistributeDeploymentTypeExtension Windows Management Instrumentation (WMI) class method, in Configuration Manager, schedules a Deployment Type Extension to be distributed throughout the hierarchy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
