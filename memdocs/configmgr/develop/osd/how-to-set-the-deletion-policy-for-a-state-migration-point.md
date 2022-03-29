@@ -1,7 +1,6 @@
 ---
 title: "Set the Deletion Policy for a State Migration Point"
 titleSuffix: "Configuration Manager"
-description: ""Configure the state migration point deletion policy by updating the **SMPStoreDeletionDelayTimeInMinutes** and **SMPStoreDeletionCycleTimeInMinutes** embedded properties."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
