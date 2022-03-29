@@ -60,6 +60,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
+## Week of March 28, 2022
+
+### App management
+
+#### Newly available protected apps for Intune<!-- 13157367 -->
+The following protected apps are now available for Microsoft Intune:
+- CAPTOR for Intune by Inkscreen LLC
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
 ## Week of March 21, 2022 (Service release 2203)
 
 ### App management
