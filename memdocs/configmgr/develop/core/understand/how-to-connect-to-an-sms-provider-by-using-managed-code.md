@@ -1,6 +1,7 @@
 ---
 title: "Connect to an SMS Provider by Using Managed Code"
 titleSuffix: "Configuration Manager"
+description: "To connect to a SMS Provider, use WqlConnectionManager.Connect."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

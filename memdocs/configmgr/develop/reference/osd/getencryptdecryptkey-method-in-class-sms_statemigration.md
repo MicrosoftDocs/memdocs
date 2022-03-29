@@ -1,6 +1,7 @@
 ---
 title: "GetEncryptDecryptKey Method"
 titleSuffix: "Configuration Manager"
+description: "The GetEncryptDecryptKey WMI class method retrieves the symmetric key that is used to encrypt and decrypt the user state during state migration."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

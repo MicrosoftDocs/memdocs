@@ -1,6 +1,7 @@
 ---
 title: "SMS_ImageUpdateStatusView Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ImageUpdateStatusView WMI class represents software update information that is used by offline servicing image."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
