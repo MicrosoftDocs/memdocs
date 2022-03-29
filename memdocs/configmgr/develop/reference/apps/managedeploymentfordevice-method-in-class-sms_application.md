@@ -1,6 +1,7 @@
 ---
 title: "ManageDeploymentForDevice Method"
 titleSuffix: "Configuration Manager"
+description: "The following syntax is simplified from Managed Object Format (MOF) code and defines the method."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Article detailing the use of SMS_SiteDetailSummarizer to provide per-site status of components and the system.
 title: "SMS_SiteDetailSummarizer Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

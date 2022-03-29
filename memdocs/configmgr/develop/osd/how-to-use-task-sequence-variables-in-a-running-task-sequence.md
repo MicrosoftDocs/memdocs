@@ -1,6 +1,7 @@
 ---
 title: "Use Task Sequence Variables in a Running Task Sequence"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, you can create, get, and set task sequence variables in a running task sequence by using the task sequence environment COM automation object."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

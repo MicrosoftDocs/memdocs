@@ -1,4 +1,5 @@
 ---
+description: Learn how to run a synchronous query in Configuration Manager using ManagementObjectSearcher object.
 title: "Perform a Synchronous Query by Using System.Management"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

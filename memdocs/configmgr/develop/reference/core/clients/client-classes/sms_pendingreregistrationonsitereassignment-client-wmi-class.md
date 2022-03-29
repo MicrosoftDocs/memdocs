@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a pending re-registration at the time of site reassignment in Configuration Manager.
 title: "SMS_PendingReRegistrationOnSiteReAssignment Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

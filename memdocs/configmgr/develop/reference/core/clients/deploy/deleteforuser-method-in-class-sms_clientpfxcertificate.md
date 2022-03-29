@@ -1,4 +1,5 @@
 ---
+description: Article outlining how to delete a certificate for a user with DeleteForUser class method in Configuration Manager.
 title: "DeleteForUser Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

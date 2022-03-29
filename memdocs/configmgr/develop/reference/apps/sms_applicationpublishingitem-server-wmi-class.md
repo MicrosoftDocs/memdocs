@@ -1,6 +1,7 @@
 ---
 title: "SMS_ApplicationPublishingItem Class"
 titleSuffix: "Configuration Manager"
+description: "represents the `ConfigurationItem` object where the `PublishingItem` defined in an `Application` digest is stored in the database."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

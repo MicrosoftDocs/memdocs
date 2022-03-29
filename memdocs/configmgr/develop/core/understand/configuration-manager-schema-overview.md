@@ -1,6 +1,7 @@
 ---
 title: "Schema Overview"
 titleSuffix: "Configuration Manager"
+description: "This article discusses the Configuration Manager Schema Overview." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
