@@ -38,7 +38,7 @@ The following features are optional in the latest version of Configuration Manag
 <!--Note to include in target articles
 
 > [!NOTE]
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](optional-features.md).
+> Configuration Manager doesn't enable this optional feature by default. Before using it, you need to enable this feature. For more information, see [Enable optional features from updates](optional-features.md).
 
 -->
 
