@@ -45,7 +45,7 @@ UInt32 ResetPolicy(
  A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
 
 ## Remarks  
- Indiscriminate calling of this method could have adverse affects. For example, if you purge the existing policy (`ulFlags` = 1) software distribution programs could be run more than once. If the request is for full policy (`ulFlags` = 0), you could generate unnecessary network traffic.  
+ Indiscriminate calling of this method could have adverse effects. For example, if you purge the existing policy (`ulFlags` = 1) software distribution programs could be run more than once. If the request is for full policy (`ulFlags` = 0), you could generate unnecessary network traffic.  
 
 ## Requirements  
 
