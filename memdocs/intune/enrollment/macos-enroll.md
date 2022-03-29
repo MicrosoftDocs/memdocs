@@ -35,11 +35,11 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
- Intune supports enrollment on personal and company-owned devices. This article provides the preqrequisites that enable macOS device management and describes the supported enrollment methods for personal, company-owned, and VM devices. 
+ Intune supports enrollment on personal and company-owned devices. This article describes the supported enrollment methods for personal, company-owned, and VM devices. 
 
-## Prerequisites
+## Enable macOS device enrollment
 
-Complete the following prerequisites before setting up macOS device enrollment:
+Complete the following prerequisites to enable enrollment for the people and devices in your organization.    
 
 - [Make sure your device is eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility).
 - [Configure domains](../fundamentals/custom-domain-name-configure.md)
