@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-description: Learn about how to configuring compliance settings and the custom configuration requirements using the Configuration Manager site.
+description: Learn about how to configure compliance settings and the custom configuration requirements using the Configuration Manager site.
 
 ---
 # About Compliance Settings (DCM) Setup and Configuration
