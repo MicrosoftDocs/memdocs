@@ -359,7 +359,7 @@ You don't need to make any changes to the configuration when adding a secondary 
 
 When a site database uses an availability group, run the built-in **Backup Site server** maintenance task to back up common Configuration Manager settings and files. Don't use the MDF or LDF files created by that backup. Instead, make direct backups of these database files by using SQL Server.
 
-You can still use the SQL server back up, however you can't restore it directly to a SQL server Always On cluster. You need to restore it on a standalone server and move it back to SQL server Always On.
+You can still use the SQL Server back up, however you can't restore it directly to a SQL Server Always On cluster. You need to restore it on a standalone server and move it back to SQL Server Always On.
 
 ### Transaction log
 
