@@ -994,7 +994,7 @@ WinRM is automatically installed with all versions of Windows currently supporte
 
 *Applies to: Central administration site, primary site, secondary site*
 
-Starting in version 2203, this warning displays if you have site systems running a version of Windows Server that will soon be out of support. The support lifecycle for Windows Server 2012 and Windows Server 2012 R2 ends on October 10, 2023. Plan to upgrade the OS on your site servers. For more information, see the following blog post: [Know your options for SQL Server 2012 and Windows Server 2012 end of support](https://cloudblogs.microsoft.com/sqlserver/2021/07/14/know-your-options-for-sql-server-2012-and-windows-server-2012-end-of-support/).
+Starting in version 2203, this warning displays if you have site systems running a version of Windows Server that will soon be out of support. The support lifecycle for Windows Server 2012 and Windows Server 2012 R2 ends on October 10, 2023. Plan to upgrade the OS on your site servers. For more information, see the following blog post: [Know your options for SQL Server 2012 and Windows Server 2012 end of support](https://cloudblogs.microsoft.com/sqlserver/2021/07/14/know-your-options-for-sql-server-2012-and-windows-server-2012-end-of-support/). <!--9519162-->
 
 ### WSUS on site server
 
