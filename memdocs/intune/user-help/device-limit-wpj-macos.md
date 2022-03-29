@@ -3,7 +3,6 @@
 
 title: Registered macOS device limit has been reached
 titlesuffix: Intune Company Portal
-description:
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -16,7 +15,7 @@ ms.technology:
 ms.assetid: c8920bf0-e1bb-4601-961d-8c25290e53fb
 searchScope:
  - User help
-
+description: "Every company sets a limit on the number of devices you can use to access company resources to keep company information safe. There are three things you can do if you see a message that tells you 'Couldn't register your device because you've reach the limit of the number of devices." 
 # optional metadata
 
 ROBOTS:  
