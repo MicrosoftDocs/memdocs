@@ -1,4 +1,5 @@
 ---
+description: Learn how to instruct the provider to modify the source location for a given job in Configuration Manager.
 title: "ICcmAlternateDownloadProvider : ModifyJobSource"
 titleSuffix: "Configuration Manager"
 ms.date: "07/25/2017"
