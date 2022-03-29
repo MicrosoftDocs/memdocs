@@ -26,7 +26,7 @@ ms.collection: openauth
 
 3.  On the **Home** tab, in the **Create** group, click **Create Application**.  
 
-4.  In the **Type** field, verify that the new deployment type is available in the pull down menu.  
+4.  In the **Type** field, verify that the new deployment type is available in the pull-down menu.  
 
      The image below shows an example from the RDP sample project.  
 
@@ -43,7 +43,7 @@ ms.collection: openauth
 
 3.  On the **Home** tab, in the **Create** group, click **Create Application**.  
 
-4.  In the **Type** field, select the new deployment type from the pull down menu.  
+4.  In the **Type** field, select the new deployment type from the pull-down menu.  
 
 5.  Continue through the wizard until successful completion.  
 
@@ -58,7 +58,7 @@ ms.collection: openauth
 
 3.  Select an application and then, on the **Home** tab, in the **Application** group, click **Create Deployment Type** to create a new deployment type for this application.  
 
-4.  In the **Type** field, select the new deployment type from the pull down menu.  
+4.  In the **Type** field, select the new deployment type from the pull-down menu.  
 
 5.  Continue through the wizard until successful completion.  
 
