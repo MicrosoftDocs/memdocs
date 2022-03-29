@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a Configuration Manager server component installed on one or more servers at a site.
 title: "SMS_SCI_Component Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

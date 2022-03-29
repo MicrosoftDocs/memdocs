@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_SoftwareConversionRules to describe rules to convert the company or product name resource string into a standard name.
 title: "SMS_SoftwareConversionRules Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

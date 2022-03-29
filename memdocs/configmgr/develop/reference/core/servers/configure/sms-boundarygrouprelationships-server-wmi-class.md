@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the fallback relationships for boundary groups in Configuration Manager using SMS_BoundaryGroupRelationships.
 title: "SMS_BoundaryGroupRelationships Class"
 titleSuffix: "Configuration Manager"
 ms.date: "03/13/2017"

@@ -1,4 +1,5 @@
 ---
+description: Article describing how to use RemoveSource in Configuration Manager to remove a source for the relationship between a user and a device.
 title: "RemoveSource Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

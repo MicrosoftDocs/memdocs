@@ -1,4 +1,5 @@
 ---
+description: Learn how to use CCM_Policy Client Windows Management Instrumentation class in Configuration Manager to represent a client policy.
 title: "CCM_Policy Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

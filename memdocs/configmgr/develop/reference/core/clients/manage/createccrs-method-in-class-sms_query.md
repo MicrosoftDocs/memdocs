@@ -1,4 +1,5 @@
 ---
+description: Learn how to generate client configuration requests (CCRs) for the query in Configuration Manager using CreateCCRs.
 title: CreateCCRs method in class SMS_Query
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

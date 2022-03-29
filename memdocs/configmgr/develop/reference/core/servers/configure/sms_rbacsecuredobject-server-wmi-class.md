@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_RbacSecuredObject class, in Configuration Manager, that represents the RBAC Security Object.
 title: "SMS_RbacSecuredObject Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
