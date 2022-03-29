@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 03/29/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -105,36 +105,48 @@ The following list includes common features and services that might use machine 
 
 ## Group policy objects might not apply
 
-**Issue**: It's possible some of your older policies aren't available, or don't apply to cloud native endpoints.
-
-Evaluate your existing **group policy** objects (GPO) using [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics) in Endpoint Manager.
+It's possible some of your older policies aren't available, or don't apply to cloud native endpoints.
 
 **Resolution**:
 
+- Using [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics) in Endpoint Manager, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
 - In endpoint management, policies are deployed to users and groups. They aren't applied in LSDOU order. This is a mind shift, so make sure your users and groups are in order.
-- Inventory your policies, and determine what they do. You may find categories, such as policies that focus on security, policies that focus on the OS, and so on.
+
+  For more specific information and guidance on policy assignment in Microsoft Intune, see [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).
+
+- Inventory your policies, and determine what they do. You may find categories or groupings, such as policies that focus on security, policies that focus on the OS, and so on.
+
+  You can create an Intune policy that includes the settings from your categories or groupings. The [Settings Catalog](/mem/intune/configuration/settings-catalog) is a good resource.
+
 - Be prepared to create new policies. The built-in features of modern endpoint management, like Microsoft Intune, may have better options to create and deploy policies.
+
+  The [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md#move-from-group-policy-objects-gpos) is a good resource.
+
 - Don't migrate all your policies. Remember, your old policies might not make any sense with cloud native endpoints.
 
   Instead of doing what you've always done, focus on the what you actually want to achieve.
 
 ## Local Administrator Password Solution (LAPS) aren't supported
 
-**Issue**: Currently, cloud native endpoints don't support the [Microsoft Local Administrator Password Solution (LAPS)](/defender-for-identity/cas-isp-laps) (opens another Microsoft website).
+Currently, cloud native endpoints don't support the [Microsoft Local Administrator Password Solution (LAPS)](/defender-for-identity/cas-isp-laps) (opens another Microsoft website).
 
 LAPS manages local administrator account passwords for domain-joined devices. Passwords are randomized and stored in Active Directory (AD), and protected by ACLs. So, only eligible users can read the password or request a password reset.
 
 Microsoft will release an update to provide LAPS for Azure AD joined devices. When it's released, you can use it to manage local administrator account passwords on cloud native endpoints.
 
-**Resolution**: Azure AD joined devices use Azure AD to configure users and groups that will have local administrator privileges. For more information and guidance, see [How to manage local administrators on Azure AD joined devices](/azure/active-directory/devices/assign-local-admin).
+**Resolution**: 
+
+Azure AD joined devices use Azure AD to configure users and groups that will have local administrator privileges. For more information and guidance, see [How to manage local administrators on Azure AD joined devices](/azure/active-directory/devices/assign-local-admin).
 
 ## Synchronized user accounts can't complete first sign-in
 
-**Issue**: Synchronized user accounts are on-premises AD domain users that are synchronized to Azure AD using Azure AD Connect.
+Synchronized user accounts are on-premises AD domain users that are synchronized to Azure AD using Azure AD Connect.
 
 Currently, synchronized user accounts with passwords that have **User must change password at next logon** configured can't complete a first-time sign in to a cloud native endpoint.
 
-**Resolution**: Use Password Hash Sync and Azure AD connect, which forces the **force password change at logon** attribute to sync.
+**Resolution**: 
+
+Use Password Hash Sync and Azure AD connect, which forces the **force password change at logon** attribute to sync.
 
 For more specific information, see [Implement password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon).
 
@@ -144,4 +156,4 @@ For more specific information, see [Implement password hash synchronization with
 - [Tutorial: Get started with cloud native Windows endpoints with Microsoft Endpoint Manager](cloud-native-windows-endpoints.md)
 - [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
 - [Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
-- [Planning guide](cloud-native-endpoints-planning-guide.md)
+- [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md)
