@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent System Center Endpoint Protection alerts using SMS_EPAlert in Configuration Manager.
 title: "SMS_EPAlert Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
