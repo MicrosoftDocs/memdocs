@@ -1,6 +1,7 @@
 ---
 title: "GetContextHandle Method"
 titleSuffix: "Configuration Manager"
+description: "The GetContextHandle method, in Configuration Manager, stores context objects on the server."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

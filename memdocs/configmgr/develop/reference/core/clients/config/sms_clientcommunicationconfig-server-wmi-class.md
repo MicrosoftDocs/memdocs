@@ -1,4 +1,5 @@
 ---
+description: Learn how to control how Windows 8 client computers communicate with Configuration Manager sites when they use metered Internet connections.
 title: "SMS_ClientCommunicationConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

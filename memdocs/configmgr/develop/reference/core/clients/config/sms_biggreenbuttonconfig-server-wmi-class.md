@@ -1,4 +1,5 @@
 ---
+description: Learn how to stop clients from connecting to the client notification server with SMS_BigGreenButtonConfig.
 title: "SMS_BigGreenButtonConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,7 @@
 ---
 title: "Calling Code Snippets"
 titleSuffix: "Configuration Manager"
+description: "How to set up the calling code for the code examples that are used throughout the Configuration Manager Software Development Kit (SDK)."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

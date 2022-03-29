@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the settings and properties used by the client agent using SMS_ClientResourcesConfig.
 title: "SMS_ClientResourcesConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
