@@ -1,4 +1,5 @@
 ---
+description: Learn how to cancel a job in Configuration Manager using ICcmAlternateDownloadProvider::CancelJob method.
 title: "ICcmAlternateDownloadProvider : CancelJob"
 titleSuffix: "Configuration Manager"
 ms.date: "07/25/2017"

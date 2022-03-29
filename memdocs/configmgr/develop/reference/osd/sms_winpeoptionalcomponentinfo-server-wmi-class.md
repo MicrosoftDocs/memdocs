@@ -1,6 +1,7 @@
 ---
 title: "SMS_WinPEOptionalComponentInfo Class"
 titleSuffix: "Configuration Manager"
+description: "Represents WinPE optional components information."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

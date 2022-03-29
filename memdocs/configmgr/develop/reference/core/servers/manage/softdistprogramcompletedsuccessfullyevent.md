@@ -1,4 +1,5 @@
 ---
+description: Learn how to update the Advertisement Status in Configuration Manager console using SoftDistProgramCompletedSuccessfullyEvent message.
 title: "SoftDistProgramCompletedSuccessfullyEvent"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 03/28/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -37,13 +37,13 @@ This feature applies to:
 
 - Windows cloud native endpoints
 
-## Use a MDM provider to manage your endpoints
+To be successful, you need to consider these key areas during planning and deployment. With proper planning, communications, and process updates, the benefits of cloud native endpoints will be achieved.
+
+## Manage devices using a cloud native MDM provider
 
 Managing your endpoints, including cloud native endpoints, is an important task for all organizations. With cloud native endpoints, the management tools you use must manage the endpoints wherever they go.
 
-### ✅ Manage devices using a cloud native MDM provider
-
-If you don't currently use a mobile device management (MDM) solution to manage your endpoints, or want to move to Microsoft solution, then look at [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
+If you don't currently use a mobile device management (MDM) solution to manage your endpoints, or want to move to a Microsoft solution, then look at [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 
 With Microsoft Endpoint Manager, you get the following endpoint management options:
 
@@ -55,23 +55,23 @@ With Microsoft Endpoint Manager, you get the following endpoint management optio
   - [Deployment guide: Setup or move to Microsoft Intune](/mem/intune/fundamentals/deployment-guide-intune-setup)
   - [Microsoft Intune planning guide](/mem/intune/fundamentals/intune-planning-guide)
 
-- **[Microsoft Endpoint Configuration Manager](/mem/configmgr/)**: Configuration Manager uses an on-premises infrastructure, and can manage servers. When using [co-management](/mem/configmgr/comanage/overview), some workloads use Configuration Manager (on-premises), and some workloads use Microsoft Intune (cloud).
+- **[Microsoft Endpoint Configuration Manager](/mem/configmgr/)**: Configuration Manager uses an on-premises infrastructure, and can manage servers. When you use [co-management](/mem/configmgr/comanage/overview), some workloads use Configuration Manager (on-premises), and some workloads use Microsoft Intune (cloud).
 
   For cloud-native endpoints, your Configuration Manager solutions should use a [Cloud Management Gateway (CMG)](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10).
 
 ## Review your endpoint and user workloads
 
-Cloud native endpoints also include the services and workloads that support the endpoints.
+At a high level, deploying cloud native endpoints require modern strategies for identity, software distribution, device management, OS updates, and managing user data & configuration. Microsoft has solutions that support these areas for your cloud native endpoints.
 
-### ✅ Review the services and workloads in your organization
-
-It's common for workloads to depend on other workloads. Plan to update your workloads to support cloud native endpoints. For example, your workloads should have the following characteristics:
+To start, review each workload, and determine if it can support cloud native endpoints. If they don't support cloud native endpoints, then <need something>. Plan to update your workloads to support cloud native endpoints. Your workloads should have the following characteristics:
 
 - Get access securely from anywhere
 - Delivered from the cloud ??
 - Device independent ??
 
-### Common workloads
+Remember, it's common for workloads to depend on other workloads. Cloud native endpoints also include the services and workloads that support the endpoints.
+
+### Common workloads and solutions
 
 The following workloads are customer specific configuration, tools, processes, and services for enabling user productivity and endpoint management.
 
@@ -94,7 +94,7 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 - **Deploy software and apps**
 
   - Programs and apps should be deployed from a cloud-based system, like Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)).
-  - User self-service should be strongly considered to reduce provisioning time and configuration bloat.??
+  - User self-service should be considered to reduce provisioning time and configuration bloat.??
 
   For more information, see:
 
@@ -107,7 +107,7 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
     [Group Policy analytics](/mem/intune/configuration/group-policy-analytics) can analyze your on-premises GPOs, and see if those same settings are supported in the cloud.
 
-  - If you have existing policies that issue certificates, manage BitLocker, and provide endpoint protection, then these features will need moved to Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)).
+  - If you have existing policies that issue certificates, manage BitLocker, and provide endpoint protection, then these features will need moved ??"moved"?? to Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)).
 
     For more information, see:
 
@@ -120,14 +120,14 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
 - **Deploy security, feature, and app updates**
 
-  - Deploy Windows updates using a cloud-based system, like Windows Update for Business. Using Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)), you can use Windows Update for Business to deploy security updates and feature updates.
+  - **Deploy Windows updates** using a cloud-based system, like Windows Update for Business. Using Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)), you can use Windows Update for Business to deploy security updates and feature updates.
 
     For more information, see:
 
     - [Manage Windows 10 and Windows 11 software updates in Intune](/mem/intune/protect/windows-update-for-business-configure)
     - [Integrate Configure Manager with Windows Update for Business](/mem/configmgr/sum/deploy-use/integrate-windows-update-for-business-windows-10)
 
-  - Deploy Microsoft 365 app updates using the following options:
+  - **Deploy Microsoft 365 app updates** using the following options:
 
     - **Office Content Delivery Network** (CDN): Manage the CDN using a servicing profile in the Microsoft 365 Apps admin center or using an Intune policy ??How do you manage CDN using Intune policy? I don't see any docs on this??.
     - **Intune**: Create a policy that sets the Update Channel, remove other versions, and more.
@@ -161,13 +161,18 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
 ## Transition your workloads in phases
 
+Modernizing workloads and adopting cloud native endpoints will require changes to operational processes and procedures. For example:
+
+- Administrators need to understand how changes to existing workloads might change their processes.
+- The service desk needs to understand the new scenarios that they'll be supporting.
+
 When reviewing your endpoints and workloads, break down the transition into phases. This section provides an overview on some recommended phases your organization can use. These phases can be repeated as many times as needed.
 
 ### ✅ Phase 1: Get info on your workloads
 
 In this phase:
 
-1. Inventory current workload information and details, including their current state. Understand and define the end goal for all workloads, which should be to support cloud native endpoints.
+1. Inventory your current workload information and details, including their current state. Understand and define the end goal for all workloads, which should be to support cloud native endpoints.
 
 2. Verify the end-state for each workload. Identify known blockers that prevent getting to this end-state or prevent supporting cloud native endpoints.
 
@@ -189,11 +194,17 @@ After you've identified the key workloads and their end-state blockers, then:
 
 2. After the initial set of workloads support cloud native endpoints, identify more workloads, and continue the process.
 
+### ✅ Phase 4: Prepare your end users
+
+End users will have different experiences for receiving, deploying, and being supported on their devices. Administrators should:
+
+- Review existing processes and documentation to identify where changes will be visible to end users.
+- Update documentation.
+- Develop an education strategy to share the changes and benefits users will experience.
+
 ## Transition your organization in phases
 
-
-
-The following phases contain a high-level approach for an organization to move their environment to one that fully supports cloud-native Windows endpoints. These phases are parallel to transitioning endpoint and user workloads and may depend on certain workloads being partially or fully transitioned to support cloud-native Windows endpoints.
+The following phases contain a high-level approach for organizations to move their environment to fully support cloud-native Windows endpoints. These phases are parallel to transitioning endpoints and user workloads. They may depend on certain workloads being partially or fully transitioned to support cloud-native Windows endpoints.
 
 ### ✅ Phase 1: Planning
 
@@ -207,7 +218,7 @@ Define and clarify additional items that need to be planned logistically to supp
 4. Automatic connection
 5. User-initiated
 6. Autopilot device registration, group tag, profile, and targeting planning
-7. tomato -> I added this to be funny. Currently This list is just "words" that don't make any sense.
+7. tomato -> I added this to be funny. Currently, this list is just "words" that don't make any sense.
 
 ### ✅ Phase 2: Enable endpoint cloud hybrid identity
 
@@ -249,7 +260,7 @@ This phase can start at nearly any time and is critical to identify potential (a
 
 ### ✅ Phase 5: Implement full modern provisioning
 
-?? This whole section needs rewritten. This needs explained. Is a whole phase just one sentence? ??
+?? This whole section needs rewritten. This needs explained. Is a whole phase needed for just one sentence? ??
 
 This phase transitions new Windows endpoint provisioning to Azure AD joined.
 
@@ -320,7 +331,7 @@ Intune also has built-in features that can help you configure your cloud native 
 
 ## Windows Autopilot guidance
 
-You purchase endpoints fromm an OEM or partner, and the OEM can send the devices directly to your end users. Users receive the endpoints, sign in with their organization account, and Windows Autopilot automatically provision these endpoints. You can also use Windows Autopilot to provision existing endpoints that you or end users reset.
+You purchase endpoints from an OEM or partner, and the OEM can send the devices directly to your end users. Users receive the endpoints, sign in with their organization account, and Windows Autopilot automatically provision these endpoints. You can also use Windows Autopilot to provision existing endpoints that you or end users reset.
 
 ### ✅ Use Windows Autopilot to provision new or existing Windows endpoints
 
