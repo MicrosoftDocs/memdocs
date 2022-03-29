@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a distribution point from which a given package has been distributed to clients in Configuration Manager.
 title: SMS_DistributionPoint class
 titleSuffix: Configuration Manager
 ms.date: 05/24/2019
