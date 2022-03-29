@@ -1,6 +1,7 @@
 ---
 title: "GetContentHash Method"
 titleSuffix: "Configuration Manager"
+description: "gets the hash of specific Configuration Manager content"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
