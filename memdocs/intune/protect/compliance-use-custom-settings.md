@@ -124,6 +124,10 @@ Refresh the current view. If the issue persists, cancel the policy creation flow
 
 It can take up to eight hours before a noncompliant status for a device update to show compliance.
 
+### Can a user manually check for compliance after fixing an issue on a device in order to identify if the issue is resolved and compliant? 
+
+Yes, a user can go to the [Company Portal website](https://portal.manage.microsoft.com) and trigger a sync to update the device status after fixing a non-compliant custom compliance setting. 
+
 ### Why aren’t additional operators and operands supported?
 
 Please contact your account manager to request the addition of specific operators and operands. They can then be considered for a future update.

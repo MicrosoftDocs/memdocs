@@ -1,5 +1,5 @@
 ---
-description: Article detailing the use of SMS_StatMsgInsStrings in Configuration Manager to represent insertion strings that are inserted into the status message.
+description: Learn how to represent insertion strings in the status message using SMS_StatMsgInsStrings class in Configuration Manager. 
 title: "SMS_StatMsgInsStrings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
