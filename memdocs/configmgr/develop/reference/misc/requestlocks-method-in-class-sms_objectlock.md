@@ -1,7 +1,7 @@
 ---
 title: "RequestLocks Method"
 titleSuffix: "Configuration Manager"
-description: "The `RequestLocks` Windows Management Instrumentation (WMI) class method, in Configuration Manager, synchronously acquires locks to edit multiple global objects."
+description: "The RequestLocks Windows Management Instrumentation (WMI) class method, in Configuration Manager, synchronously acquires locks to edit multiple global objects."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
