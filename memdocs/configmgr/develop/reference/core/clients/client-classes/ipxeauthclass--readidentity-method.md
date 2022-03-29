@@ -1,4 +1,5 @@
 ---
+description: Learn how to read a PXE certificate identity from the client configuration (PFX) file using ReadIdentity method.
 title: "IPxeAuthClass::ReadIdentity"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

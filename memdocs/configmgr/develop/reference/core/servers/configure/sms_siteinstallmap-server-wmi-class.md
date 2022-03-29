@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the site install map, which describes the layout of all installed features in Configuration Manager.
 title: "SMS_SiteInstallMap Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
