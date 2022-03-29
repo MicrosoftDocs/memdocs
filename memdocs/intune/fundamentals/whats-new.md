@@ -64,9 +64,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management
 
-#### Newly available protected apps for Intune<!-- 13157367 -->
-The following protected apps are now available for Microsoft Intune:
-- CAPTOR for Intune by Inkscreen LLC
+#### Newly available protected app for Intune<!-- 13157367 -->
+The following protected app is now available for Microsoft Intune:
+- CAPTOR&trade; for Intune by Inkscreen LLC
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
