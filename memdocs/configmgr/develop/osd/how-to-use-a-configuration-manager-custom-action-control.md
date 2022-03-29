@@ -16,7 +16,7 @@ ms.collection: openauth
 
 ---
 # How to Use a Configuration Manager Custom Action Control
-In Configuration Manager, you use a custom action control by selecting it in the Configuration Manager console Task Sequence Editor. The custom action control is used to configure a custom action that you have defined. The custom action is then becomes a step in the task sequence you are editing. The following procedure assumes that you have completed the tasks in the following topics:  
+In Configuration Manager, you use a custom action control by selecting it in the Configuration Manager console Task Sequence Editor. The custom action control is used to configure a custom action that you have defined. The custom action becomes a step in the task sequence you are editing. The following procedure assumes that you have completed the tasks in the following topics:  
 
  [How to Create a Configuration Manager Custom Action Control](../../develop/osd/how-to-create-a-configuration-manager-custom-action-control.md)  
 
