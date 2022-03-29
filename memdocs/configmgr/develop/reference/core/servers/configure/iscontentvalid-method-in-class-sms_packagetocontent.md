@@ -1,4 +1,5 @@
 ---
+description: Learn how to determine if the package content is valid using IsContentValid WMI class method in Configuration Manager. 
 title: "IsContentValid Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

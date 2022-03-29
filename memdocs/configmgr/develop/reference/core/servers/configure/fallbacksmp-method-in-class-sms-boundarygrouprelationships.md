@@ -1,4 +1,5 @@
 ---
+description: Learn how to  set the fallback time, in minutes, for a state migration point (SMP) using FallbackSMP.
 title: "FallbackSMP Method"
 titleSuffix: "Configuration Manager"
 ms.date: "03/13/2017"
