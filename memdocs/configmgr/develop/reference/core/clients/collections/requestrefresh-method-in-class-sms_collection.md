@@ -1,4 +1,5 @@
 ---
+description: Learn how to trigger a re-evaluation of collection membership by the Configuration Manager collection evaluator component.
 title: "RequestRefresh Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

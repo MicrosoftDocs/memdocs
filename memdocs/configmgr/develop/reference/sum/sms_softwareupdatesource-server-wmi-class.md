@@ -1,6 +1,7 @@
 ---
 title: "SMS_SoftwareUpdateSource Class"
 titleSuffix: "Configuration Manager"
+description: "Lists all software update sources available on the site, for use in synchronizing metadata during a deployment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

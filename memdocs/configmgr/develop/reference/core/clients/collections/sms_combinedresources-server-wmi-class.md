@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent all the device and user resources in the system within Configuration Manager using SMS_CombinedResources.
 title: "SMS_CombinedResources Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

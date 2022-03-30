@@ -1,4 +1,5 @@
 ---
+description: Learn how to use CheckDuplicateShareName class to determine if the specified share name has been used by another package.
 title: "CheckDuplicateShareName Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

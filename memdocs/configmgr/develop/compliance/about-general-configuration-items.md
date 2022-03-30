@@ -1,6 +1,7 @@
 ---
 title: "About General Configuration Items"
 titleSuffix: "Configuration Manager"
+description: "Models of settings and objects, which together represent a meaningful unit of configuration management."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
