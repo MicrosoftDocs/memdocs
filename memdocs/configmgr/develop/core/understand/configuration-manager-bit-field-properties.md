@@ -42,7 +42,7 @@ Some Configuration Manager object properties are implemented as bit fields, wher
 
  A typical value of this bit field might be 10100000111. Bit 0 is the least significant bit (on the right) and the other bits are counted right to left. Therefore, in this example, the available class permissions include READ, MODIFY, DELETE, ADMINISTER, and CREATE, corresponding to bit fields 0, 1, 2, 8, and 10, respectively.  
 
- The difficulty arises when the binary number 10100000111 appears as the decimal number 1287 in an Configuration Manager console display and in how you interpret the bits. The solution is to open the Windows Calculator application (Calc.exe, in the Accessories group). Use the Scientific view, set the calculator for decimal mode, and enter 1287. Use the radio buttons of the calculator to convert to a binary display. The binary bit field 10100000111 appears. You can read the selected bit flags from this display.  
+ The difficulty arises when the binary number 10100000111 appears as the decimal number 1287 in a Configuration Manager console display and in how you interpret the bits. The solution is to open the Windows Calculator application (Calc.exe, in the Accessories group). Use the Scientific view, set the calculator for decimal mode, and enter 1287. Use the radio buttons of the calculator to convert to a binary display. The binary bit field 10100000111 appears. You can read the selected bit flags from this display.  
 
 > [!NOTE]
 >  In a typical bit field property, many of the bits are unused and have no defined meaning.  
