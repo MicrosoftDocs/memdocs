@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent file list information for a Configuration Manager component using SMS_SIIB_Component_FileList class.
 title: "SMS_SIIB_Component_FileList Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
