@@ -38,9 +38,14 @@ Here’s the list of approved partners that build and innovate with Windows 365.
 
 ![10ZiG image](./media/partners/10zig.png)
 
-10ZiG Technology is a world-market leader in Thin & Zero Client endpoint devices for Virtual Desktop Infrastructure and Cloud. Microsoft Windows 365 Cloud PC securely streams the Windows experience to any 10ZiG endpoint device including personalized apps, data, and settings. It reduces security risks by storing information in the Cloud, and not on devices.
+Securely stream the Microsoft Windows 365 Cloud PC experience to high-performing 10ZiG endpoints:
 
-For more information, visit the [10ZiG website](https://www.10zig.com/resources/vdi-blog/microsoft-windows-365-cloud).
+- Highly secure and purpose-built Windows 10 IoT LTSC 2021 and in-house Linux-based operating systems
+- Wide range of hardware to choose from with customization options available
+- Manage and deploy via Microsoft Endpoint Manager (MEM) and/or The 10ZiG Manager™ for increased safety, remote access, and ease of use
+- Try it yourself with a FREE 10ZiG demo device, delivered direct to your door. Order it [HERE](https://www.10zig.com/free-demo).
+
+For more information, visit the [10ZiG website](https://www.10zig.com/).
 
 ## IGEL
 
@@ -58,7 +63,7 @@ For more information, visit the [IGEL website](https://www.igel.com/windows365/)
 
 ![Nerdio image](./media/partners/nerdio.png)
 
-Windows 365 and Nerdio Manager help users to be productive from anywhere, on any device with a cloud-powered, secure, and always up-to-date Windows experience. Nerdio seamlessly lets MSPs and IT professionals:
+Windows 365 and Nerdio Manager help users to be productive from anywhere, on any device with a cloud-powered, highly secure, and up-to-date Windows experience. Nerdio seamlessly lets MSPs and IT professionals:
 
 - Instantly provision Cloud PCs.
 - Manage physical and virtual devices through a unified portal.
