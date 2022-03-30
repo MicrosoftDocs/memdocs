@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Set up nested virtualization on your Cloud PC (preview)
 
-Nested virtualization is a feature that lets customers use systems like the following on their Windows 365 Enterprise Cloud PCs:
+Nested virtualization is a feature that lets customers use the following systems on their Windows 365 Enterprise Cloud PCs:
 
 - Windows Subsystem for Linux (WSL)
 - Windows Subsystem for Android
@@ -59,7 +59,7 @@ To use nested virtualization, the Cloud PC must meet these requirements:
 ## Set up nested virtualization
 
 1. If the Cloud PC was provisioned before April 5, 2022, you must [reprovision](reprovision-cloud-pc.md) the Cloud PC.
-2. To set up a specific nested virtualizaiton system, see the following articles:
+2. To set up a specific nested virtualization system, see the following articles:
     - [Set up a WSL development environment](/windows/wsl/setup/environment).
     - [Windows Subsystem for Android™️](/windows/android/wsa/).
     - [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
