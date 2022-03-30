@@ -1,6 +1,7 @@
 ---
 title: FindResourceSite method in class SMS_Collection
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the FindResourceSite WMI class method gets site code information for resources."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
