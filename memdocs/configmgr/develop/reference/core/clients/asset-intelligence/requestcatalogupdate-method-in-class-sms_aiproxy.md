@@ -1,4 +1,5 @@
 ---
+description: Learn how to synchronize the Asset Intelligence catalog with the System Center Online service using the RequestCatalogUpdate class.
 title: "RequestCatalogUpdate Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,7 @@
 ---
 title: "Embedded Objects"
 titleSuffix: "Configuration Manager"
+description: "You cannot use Windows Management Instrumentation (WMI) to enumerate, query, get, or put embedded objects. You can only retrieve and store embedded objects through the parent instance."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

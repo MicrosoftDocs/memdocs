@@ -1,6 +1,7 @@
 ---
 title: "View Monthly Usage Summary Information"
 titleSuffix: "Configuration Manager"
+description: "Use the SMS_MeteredFiles, SMS_MonthlyUsageSummary, SMS_MeteredUser, and SMS_R_System classes to view the monthly usage summary information."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "Class and Property Qualifiers"
 titleSuffix: "Configuration Manager"
+description: "This table shows the qualifiers that are specific to Microsoft Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

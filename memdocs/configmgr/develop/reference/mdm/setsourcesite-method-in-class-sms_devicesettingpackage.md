@@ -1,6 +1,7 @@
 ---
 title: SetSourceSite method in class SMS_DeviceSettingPackage
 titleSuffix: "Configuration Manager"
+description: "The SetSourceSite WMI class method sets the code of the source site for the device setting package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

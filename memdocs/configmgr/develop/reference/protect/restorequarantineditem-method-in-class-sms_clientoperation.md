@@ -1,6 +1,7 @@
 ---
 title: "RestoreQuarantinedItem Method"
 titleSuffix: "Configuration Manager"
+description: "The RestoreQuarantinedItem WMI class method that restores quarantined items to all members in a collection infected by specified threat."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

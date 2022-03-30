@@ -1,6 +1,7 @@
 ---
 title: "SMS_DeviceSettingItem Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_DeviceSettingItem WMI class provides the functionality to create a device setting configuration item in the database."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
