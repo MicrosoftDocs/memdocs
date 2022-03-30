@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the status of a configuration item deployment for unknown status using SMS_CIDeploymentUnknownStatus class.
 title: "SMS_CIDeploymentUnknownStatus Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -67,7 +68,7 @@ Class SMS_CIDeploymentUnknownStatus : SMS_BaseClass
 
  Qualifiers: [key, not_null, read]  
 
- Stauts category.  
+ Status category.  
 
  `CI_ID`  
  Data type: `UInt32`  

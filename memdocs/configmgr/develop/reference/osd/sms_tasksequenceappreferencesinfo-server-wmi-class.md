@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a Configuration Manager application in the task sequence using SMS_TaskSequenceAppReferencesInfo class.
 title: "SMS_TaskSequenceAppReferencesInfo Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
