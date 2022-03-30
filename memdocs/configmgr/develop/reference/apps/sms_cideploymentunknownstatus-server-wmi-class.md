@@ -68,7 +68,7 @@ Class SMS_CIDeploymentUnknownStatus : SMS_BaseClass
 
  Qualifiers: [key, not_null, read]  
 
- Stauts category.  
+ Status category.  
 
  `CI_ID`  
  Data type: `UInt32`  
