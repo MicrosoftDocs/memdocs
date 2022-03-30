@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/14/2022
+ms.date: 03/31/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -227,40 +227,95 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - **Event ID: 2052** - *PkcsImportReencryptFailure*  
     Failed to re-encrypt an imported certificate.
 
-  - **Event ID: ** - *PkcsImportUploadFailure* - A failure occurred when uploading requests to Intune
-  - **Event ID: ** - *PkcsImportUploadedRequest* - Details of an uploaded request to Intune
+  - **Event ID: 2100** - *PkcsImportUploadSuccess*  
+    Successfully uploaded request to Intune.
 
-**Revocation**
-- **Admin**
-  - **Event ID: ** - *RevokeRequestSuccess* - Successfully downloaded Revocation requests from Intune
-  - **Event ID: ** - *RevokeRequestFailure* - A failure occurred when downloading Revocation requests from Intune
+  - **Event ID: 2101** - *PkcsImportUploadFailure*  
+    A failure occurred when uploading requests to Intune.
+
+  - **Event ID: 2102** - *PkcsImportUploadedRequest*  
+    Details of an uploaded request to Intune.
+
+**Revocation**  
+
+- **Admin**  
+
+  - **Event ID: 3000** - *RevokeRequestSuccess*  
+    Successfully downloaded Revocation requests from Intune.
+
+  - **Event ID: 3001** - *RevokeRequestFailure*  
+    A failure occurred when downloading Revocation requests from Intune.
+
 - **Operational**
-  - **Event ID: ** - *RevokeDigicertRequest* - Received revoke request from Intune and forwarding request to Digicert for fulfillment of request.
-  - **Event ID: ** - *RevokeDownloadSuccess* - Successfully downloaded Revocation requests from Intune
-  - **Event ID: ** - *RevokeDownloadFailure* - A failure occurred when downloading Revocation requests from Intune
-  - **Event ID: ** - *RevokeDownloadedRequest* - Details of a single downloaded request from Intune
-  - **Event ID: ** - *RevokeSuccess* - Successfully revoked certificate
-  - **Event ID: ** - *RevokeFailure* - A failure occurred while revoking a certificate
-  - **Event ID: ** - *RevokeFailedAttempt* - Failed to revoke a certificate
-  - **Event ID: ** - *RevokeUploadSuccess* - Details of successful request that was uploaded to Intune
-  - **Event ID: ** - *RevokeUploadFailure* - A failure occurred when uploading requests to Intune
-  - **Event ID: ** - *RevokeUploadedRequest* - Details of an uploaded request to Intune
+
+  - **Event ID: 3002** - *RevokeDownloadSuccess*  
+    Successfully downloaded Revocation requests from Intune.
+
+  - **Event ID: 3003** - *RevokeDownloadFailure*  
+    A failure occurred when downloading Revocation requests from Intune.
+
+  - **Event ID: 3020** - *RevokeDownloadedRequest*  
+    Details of a single downloaded request from Intune
+
+  - **Event ID:  3032** - *RevokeDigicertRequest*  
+    Received revoke request from Intune and forwarding request to Digicert for fulfillment of request.
+
+  - **Event ID: 3050** - *RevokeSuccess*  
+    Successfully revoked certificate.
+
+  - **Event ID: 3051** - *RevokeFailure*  
+    A failure occurred while revoking a certificate.
+
+  - **Event ID: 3052** - *RevokeFailedAttempt*  
+    Failed to revoke a certificate, will try again
+
+  - **Event ID: 3100** - *RevokeUploadSuccess*  
+    Details of successful request that was uploaded to Intune.
+
+  - **Event ID: 3101** - *RevokeUploadFailure*  
+    A failure occurred when uploading requests to Intune.
+
+  - **Event ID: 3102** - *RevokeUploadedRequest*  
+    Details of an uploaded request to Intune.
 
 **SCEP**
+
 - **Admin**
-  - **Event ID: ** - *ScrepRequestSuccess* - Successfully received and processed SCEP request and notified Intune
-  - **Event ID: ** - *ScepRequestIssuedFailure* - Failed to issue certificate for SCEP request
-  - **Event ID: ** - *ScepRequestUploadFailure* - Successfully processed SCEP request but failed to notify Intune
+
+  - **Event ID: 4000** - *ScrepRequestSuccess*  
+    Successfully received and processed SCEP request and notified Intune.
+
+  - **Event ID: 4001** - *ScepRequestIssuedFailure*  
+    Failed to issue certificate for SCEP request.
+
+  - **Event ID: 4002** - *ScepRequestUploadFailure*  
+    Successfully processed SCEP request but failed to notify Intune.
 
 - **Operational**
-  - **Event ID: ** - *ScepRequestReceived* - Received request from device
-  - **Event ID: ** - *ScepVerifySuccess* - Successfully verified request with Intune
-  - **Event ID: ** - *ScepVerifyFailure* - Verification of request failed
-  - **Event ID: ** - *ScepIssuedSuccess* - Successfully issued certificate for request
-  - **Event ID: ** - *ScepIssuedFailure* - Failed to issue certificate for request
-  - **Event ID: ** - *ScepNotifySuccess* - Successfully notified Intune of request
-  - **Event ID: ** - *ScepNotifyAttemptFailed* - Failed attempt to notify Intune of request status.
-  - **Event ID: ** - *ScepNotifySaveToDiskFailed* - Failed to write notification to disk. Will not be able to notify Intune of request status.
+
+  - **Event ID: 4003** - *ScepRequestReceived*  
+    Received request from device.
+
+  - **Event ID: 4004** - *ScepVerifySuccess*  
+    Successfully verified request with Intune.
+
+  - **Event ID: 4005** - *ScepVerifyFailure*  
+    Verification of request failed.
+
+  - **Event ID: 4006** - *ScepIssuedSuccess*  
+    Successfully issued certificate for request.
+
+  - **Event ID: 4007** - *ScepIssuedFailure*  
+    Failed to issue certificate for request.
+
+  - **Event ID: 4008** - *ScepNotifySuccess*  
+    Successfully notified Intune of request.
+
+  - **Event ID: 4009** - *ScepNotifyAttemptFailed*  
+    Failed attempt to notify Intune of request status.
+
+  - **Event ID: 4010** - *ScepNotifySaveToDiskFailed*  
+    Failed to write notification to disk. Will not be able to notify Intune of request status.
 
 ## What's new for the Certificate Connector
 
