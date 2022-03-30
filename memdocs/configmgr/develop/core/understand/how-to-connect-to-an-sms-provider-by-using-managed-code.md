@@ -21,7 +21,7 @@ To connect to an SMS Provider, use **WqlConnectionManager.Connect**. After it is
 > [!NOTE]
 >  **WqlConnectionManager.Connect** is a WMI-specific derivation of [ConnectionManagerBase](/previous-versions/system-center/developer/cc147366(v=msdn.10)).  
 
- If you are connecting to a local SMS Provider, you do not supply user credentials. If you are connecting to a remote SMS Provider, you do not need to supply user credentials if the if the current user/computer context has permissions on the remote SMS Provider.  
+ If you are connecting to a local SMS Provider, you do not supply user credentials. If you are connecting to a remote SMS Provider, you do not need to supply user credentials if the current user/computer context has permissions on the remote SMS Provider.  
 
  If you do not have access privileges on the remote SMS Provider, or if you want to use a different user account, then you must supply user credentials for a user account that has access privileges.  
 
@@ -37,7 +37,7 @@ To connect to an SMS Provider, use **WqlConnectionManager.Connect**. After it is
 |ConnectedSiteCode|The site code for the Configuration Manager site that the connection is connected to. For example, XXX.|  
 |ServerName|The computer name, for example, COMPUTERNAME.|  
 |SiteName|The Configuration Manager site code. For example, Central Site.|  
-|ConnectedServerVersion|Ther version for the connected server. For example, 4.00.5830.0000|  
+|ConnectedServerVersion|The version for the connected server. For example, 4.00.5830.0000|  
 |BuildNumber|The Configuration Manager installation build number. For example, 5830.|  
 
 > [!NOTE]
