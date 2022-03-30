@@ -1,4 +1,5 @@
 ---
+description: Learn how to update the statistics for the application using UpdateStats class method in Configuration Manager.
 title: UpdateStats method in class SMS_Application
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
