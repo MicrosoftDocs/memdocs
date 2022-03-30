@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_SiteControlFile class which represents the site control file and methods to maintain version control of the site control file.
 title: "SMS_SiteControlFile Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

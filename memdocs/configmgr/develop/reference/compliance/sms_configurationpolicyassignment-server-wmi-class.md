@@ -1,4 +1,5 @@
 ---
+description: Learn how to use 
 title: "SMS_ConfigurationPolicyAssignment Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

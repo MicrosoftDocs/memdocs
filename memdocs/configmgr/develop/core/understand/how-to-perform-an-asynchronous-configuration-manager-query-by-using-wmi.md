@@ -1,4 +1,5 @@
 ---
+description: Learn how to perform an synchronous query for Configuration Manager objects and implement a sink method to handle query results.
 title: "Perform an Asynchronous Query by Using WMI"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent metered files and implement the matching between the meter rule and the file information in Configuration Manager.
 title: "SMS_MeteredFiles Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
