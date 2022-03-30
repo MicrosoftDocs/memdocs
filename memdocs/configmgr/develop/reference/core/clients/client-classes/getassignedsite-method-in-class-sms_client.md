@@ -1,5 +1,5 @@
 ---
-description: Learn how to use GetAssignedSite method to get the current assigned site of the client in Configuration Manager. 
+description: Learn how to use the GetAssignedSite method to get the current assigned site of the client in Configuration Manager. 
 title: "GetAssignedSite Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

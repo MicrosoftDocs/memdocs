@@ -1,5 +1,5 @@
 ---
-description: Learn how to  excludes scan paths from all members in a specified collection using the ExcludeScanPaths class method in Configuration Manager.
+description: Learn how to excludes scan paths from all members in a specified collection using the ExcludeScanPaths class method in Configuration Manager.
 title: "ExcludeScanPaths Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
