@@ -122,6 +122,17 @@ For more information, see [Locate lost or stolen devices](../remote-actions/devi
 
 ## Device configuration
 
+### Administrative Templates will apply to Windows professional editions<!-- 13812105 -->
+You can use Administrative Templates to configure settings, and deploy the policy settings to your devices (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Administrative Templates** for profile type).
+
+The Administrative Templates will apply to Windows devices running Windows professional edition. Currently, these settings show as **Not applicable** on devices running Windows professional edition.
+
+To learn more about Administrative Templates in Intune, see [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md).
+
+Applies to:
+- Windows 11
+- Windows 10
+
 ### New wired networks device configuration profile for Windows devices<!-- 1746923 -->
 There will be a new **Wired Networks** device configuration profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Wired networks** for profile type).
 
