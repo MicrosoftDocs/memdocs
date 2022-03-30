@@ -430,7 +430,7 @@ Class SMS_ApplicationLatest : SMS_ConfigurationItemLatestBaseClass
 
  Qualifiers: [enumeration, read]  
 
- Whether this application requires a user logon to setup. Possible values are:  
+ Whether this application requires a user logon to set up. Possible values are:  
 
 |Value|Logon required?|  
 |-|-|  
