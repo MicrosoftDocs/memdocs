@@ -45,7 +45,7 @@ Class SMS_SiteControlFile : SMS_BaseClass
 
  Qualifiers: [lazy]  
 
- Build number of the Configuration Manager installation that create the site control file. The default value is "".  
+ Build number of the Configuration Manager installation that creates the site control file. The default value is "".  
 
  `FileType`  
  Data type: `UInt32`  
