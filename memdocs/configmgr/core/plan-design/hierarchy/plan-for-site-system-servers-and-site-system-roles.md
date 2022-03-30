@@ -2,7 +2,7 @@
 title: Plan site system roles
 titleSuffix: Configuration Manager
 description: Consider site system servers and site system roles as you plan your Configuration Manager hierarchy.
-ms.date: 01/04/2022
+ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -71,6 +71,9 @@ A site system role that connects to Microsoft to download information for the As
 For more information, see [Asset Intelligence in Configuration Manager](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
 
 ### Certificate registration point
+
+> [!WARNING]
+> Starting in version 2203, the certificate registration point is no longer supported.<!--13951253--> For more information, see [Frequently asked questions about resource access deprecation](../../../protect/plan-design/resource-access-deprecation-faq.yml).
 
 A site system role that communicates with a server that runs the Network Device Enrollment Service (NDES). This role manages device certificate requests that use the Simple Certificate Enrollment Protocol (SCEP). This role is supported only at primary sites and the central administration site.
 

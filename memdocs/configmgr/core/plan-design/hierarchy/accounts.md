@@ -2,7 +2,7 @@
 title: Accounts used
 titleSuffix: Configuration Manager
 description: Identify and manage the Windows groups, accounts, and SQL Server objects used in Configuration Manager.
-ms.date: 08/02/2021
+ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -299,6 +299,9 @@ This account must have **Full Control** permissions to the **System Management**
 For more information, see [Active Directory forest discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutForest).
 
 ### Certificate registration point account
+
+> [!WARNING]
+> Starting in version 2203, the certificate registration point is no longer supported.<!--13951253--> For more information, see [Frequently asked questions about resource access deprecation](../../../protect/plan-design/resource-access-deprecation-faq.yml).
 
 The certificate registration point uses the **Certificate registration point account** to connect to the Configuration Manager database. It uses its computer account by default, but you can configure a user account instead. When the certificate registration point is in an untrusted domain from the site server, you must specify a user account. This account requires only **Read** access to the site database, because the state message system handles write tasks.
 

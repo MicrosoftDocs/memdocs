@@ -23,20 +23,11 @@ Always review the latest checklist for installing this update. For more informat
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-## Application management
-
-### Improvements to implicit uninstall
-<!--12488148-->
-
-If you deploy an application or app group to a user collection that's based on a security group, and you enable implicit uninstall, changes to the security group are now honored. When the site discovers the change in group membership, Configuration Manager uninstalls the app for the user that you removed from the security group.
-
-For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall).
-
 ## Cloud-attached management
 
 ### Prefer cloud-based software update points
 <!--7759984-->
-Clients now prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP when the boundary group uses the **Prefer cloud based source over on-premises source** option. To reduce the performance impact of this change, existing clients don't automatically switch to a cloud-based software update point.
+Clients now prefer to scan against a cloud management gateway (CMG) software update point (SUP) over an on-premises SUP when the boundary group uses the **Prefer cloud based source over on-premises source** option. To reduce the performance effect of this change, existing clients don't automatically switch to a cloud-based software update point.
 
 For more information, see [Boundary groups and software update points](/servers/deploy/configure/boundary-groups-software-update-points.md#bkmk_prefer_cmgsup).
 
@@ -56,14 +47,14 @@ You can now monitor content distribution path and status in a graphical format. 
 
 For more information, see [Visualize content distribution status](../../servers/deploy/configure/visualize-content-distribution-status.md).
 
-### Improvements to Power BI Report Server Integration
+### Improvements to Power BI Report Server integration
 <!--12487076-->
 We've made the following improvements for Power BI Report Server integration:
 
 - You can now use Microsoft Power BI Desktop (Optimized for Power BI Report Server) versions that were released after January 2021
 - Configuration Manager now correctly handles Power BI reports saved by Power BI Desktop (optimized for Power BI Report Server) May 2021 or later.
 
-For more information, see [Integrate with Power BI Report Server](../../servers/manage/powerbi-report-server.md). 
+For more information, see [Integrate with Power BI Report Server](../../servers/manage/powerbi-report-server.md).
 
 ### Exclude data warehouse reporting tables from synchronization
 <!--12441118-->
@@ -71,15 +62,15 @@ When you install the [data warehouse](../../servers/manage/data-warehouse.md), i
 
 For more information, see [Exclude data warehouse reporting tables from synchronization](../../servers/manage/data-warehouse.md#bkmk_exclude).
 
-### Improvements to Management Insights
+### Improvements to management insights
 
-The following improvements have been made to Management Insights:
+The following improvements have been made to management insights:
 
 - A new management insights group was added to **Management Insights**. The **Deprecated and unsupported features** group contains rules that will help you manage and remove deprecated features. The prerequisite checker will also check for deprecated and unsupported features during site installs and upgrades. <!--10875436, 12451634 -->
 
 - A new rule for detecting Windows Server 2012 and 2012 R2 was added to the **Proactive Maintenance** group. <!--9519162-->
 
-For more information, see [Management Insights for deprecated and unsupported features](../../servers/manage/management-insights.md#deprecated-and-unsupported-features) and [Management Insights for proactive maintenance](../../servers/manage/management-insights.md#proactive-maintenance).
+For more information, see [Management insights for deprecated and unsupported features](../../servers/manage/management-insights.md#deprecated-and-unsupported-features) and [Management insights for proactive maintenance](../../servers/manage/management-insights.md#proactive-maintenance).
 
 ## Client management
 
@@ -179,6 +170,15 @@ For more information, see [Manage task sequences](../../../osd/deploy-use/manage
 
 <!--## Protection-->
 
+## Application management
+
+### Improvements to implicit uninstall
+<!--12488148-->
+
+If you deploy an application or app group to a user collection that's based on a security group, and you enable implicit uninstall, changes to the security group are now honored. When the site discovers the change in group membership, Configuration Manager uninstalls the app for the user that you removed from the security group.
+
+For more information, see [implicit uninstall](../../../apps/deploy-use/uninstall-applications.md#implicit-uninstall).
+
 ## Community hub
 
 ### Delete a contribution you made to Community hub
@@ -190,14 +190,15 @@ You can now delete contributions you've made to the Community hub. For more info
 The console now displays a list of filters you can use when searching the Community hub. For more information, see [Filter Community hub content when searching](../../servers/manage/community-hub.md#bkmk_search).
 
 ## Configuration Manager console
-###  Dark theme for the console
+
+### Dark theme for the console
 <!--9070525-->
 The Configuration Manager console now offers a dark theme. For more information, see [How to use the Configuration Manager console](../../servers/manage/admin-console.md#bkmk_dark).
 
 ### Improvements for sending feedback
 <!--11754191, 12890088-->
 - You now have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account or Microsoft Account (MSA). User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data.
-- The feedback button is now displayed in additional console locations.
+- The feedback button is now displayed in other console locations.
 
 For more information, see [Product feedback](../../understand/product-feedback.md#recent-changes-to-feedback).
 
@@ -209,12 +210,12 @@ For more information, see the [WebView2 console extension](../../servers/manage/
 
 ### Console and user experience improvements
 <!--12726153-->
-Based on your feedback, we’ve made a few improvements to the console and user experience.
+Based on your feedback, we've made a few improvements to the console and user experience.
 
 - When using temporary device nodes, device actions like **Run Scripts** are now available to make the experience in the console consistent.
-- Additional Management Insights rules now have click-through actions
+- Other management insights rules now have drill-through actions.
 - Copy/paste is available for more objects from details panes.
-   - Added the **Name** property in the details pane for configuration items, configuration item related policies, and applications
+- The **Name** property is added to the details pane for configuration items, configuration item related policies, and applications.
 
 For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#bkmk_2203).
 
@@ -232,26 +233,28 @@ The following features are deprecated. You can still use them now, but Microsoft
 As previously announced, version 2203 drops support for the following features:
 
 - The ability to deploy a cloud management gateway (CMG) as a **cloud service (classic)**. All CMG deployments should use a [virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586,13235079-->
-- The following compliance settings for **Company resource access**: <!-- 9315387 -->
-   - [Certificate profiles](../../../protect/deploy-use/introduction-to-certificate-profiles.md)
-   - [VPN profiles](../../../protect/deploy-use/vpn-profiles.md)
-   - [Wi-Fi profiles](../../../protect/deploy-use/create-wifi-profiles.md)
-   - [Windows Hello for Business settings](../../../protect/deploy-use/windows-hello-for-business-settings.md), and email profiles
-   - This deprecation includes the [co-management resource access workload](../../../comanage/workloads.md#resource-access-policies). Use Microsoft Intune to [deploy resource access profiles](../../../../intune/configuration/device-profiles.md).
 
-<!--
+- The following compliance settings for **Company resource access**: <!-- 9315387 -->
+  - Certificate profiles and the certificate registration point site system role
+  - VPN profiles
+  - Wi-Fi profiles
+  - Windows Hello for Business settings
+  - Email profiles
+  - Co-management resource access workload
+
+    For more information, see [Frequently asked questions about resource access deprecation](../../../protect/plan-design/resource-access-deprecation-faq.yml).
+
 ## Other updates
 
 Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 
--->
-<!--
+- [Task sequence debugger](../../../osd/deploy-use/debug-task-sequence.md)
+
 For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2203 release notes](/powershell/sccm/2203-release-notes).
 
-Aside from new features, this release also includes other changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2203](../../../hotfix/2111/11052354.md). -->
-
-
 <!--
+Aside from new features, this release also includes other changes such as bug fixes. For more information, see [Summary of changes in Configuration Manager current branch, version 2203](../../../hotfix/2111/11052354.md).
+
 The following update rollup (4517869) is available in the console starting on October 1, 2019: [Update rollup for Configuration Manager current branch, version 1906](https://support.microsoft.com/help/4517869).
 -->
 
@@ -269,9 +272,9 @@ The following additional hotfixes are available to address specific issues:
 
 At this time, version 2203 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2203.md#early-update-ring).
 
-<!--As of December 15, 2021, version 2111 is globally available for all customers to install.
+<!--As of December 15, 2021, version 2203 is globally available for all customers to install.-->
 
-When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2111](../../servers/manage/checklist-for-installing-update-2111.md). --> 
+When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2203](../../servers/manage/checklist-for-installing-update-2203.md).
 
 > [!TIP]
 > To install a new site, use a baseline version of Configuration Manager.
@@ -283,4 +286,4 @@ When you're ready to install this version, see [Installing updates for Configura
 
 For known significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 
-After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2111.md#post-update-checklist).
+After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2203.md#post-update-checklist).
