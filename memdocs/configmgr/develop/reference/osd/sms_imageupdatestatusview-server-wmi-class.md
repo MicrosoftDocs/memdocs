@@ -54,7 +54,7 @@ Class SMS_ImageUpdateStatusView : SMS_BaseClass
 
  Qualifiers: [key]  
 
- Index for offline servcing image.  
+ Index for offline servicing image.  
 
  `ImagePackageID`  
  Data type: `String`  
