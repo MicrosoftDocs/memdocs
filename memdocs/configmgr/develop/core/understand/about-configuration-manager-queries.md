@@ -1,5 +1,6 @@
 ---
 title: "Configuration Manager Queries"
+description: "Create and run the queries that are accessible in the Configuration Manager console under Queries."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

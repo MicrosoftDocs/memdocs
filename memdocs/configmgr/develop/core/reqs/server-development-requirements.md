@@ -1,6 +1,7 @@
 ---
 title: "Server Development Requirements"
 titleSuffix: "Configuration Manager"
+description: "The SMS Provider and associated technologies can be programmed by using managed code, VBScript, C++, and other languages."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
