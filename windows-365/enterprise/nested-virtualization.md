@@ -60,9 +60,9 @@ To use nested virtualization, the Cloud PC must meet these requirements:
 
 1. If the Cloud PC was provisioned before April 5, 2022, you must [reprovision](reprovision-cloud-pc.md) the Cloud PC.
 2. To set up a specific nested virtualizaiton system, see the following articles:
-  - [Set up a WSL development environment](/windows/wsl/setup/environment).
-  - [Windows Subsystem for Android™️](/windows/android/wsa/).
-  - [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
+    - [Set up a WSL development environment](/windows/wsl/setup/environment).
+    - [Windows Subsystem for Android™️](/windows/android/wsa/).
+    - [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
 
 
 <!-- ########################## -->
