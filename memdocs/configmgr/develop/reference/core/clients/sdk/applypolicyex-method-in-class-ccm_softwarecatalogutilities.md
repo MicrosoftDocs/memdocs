@@ -1,7 +1,7 @@
 ---
 title: "ApplyPolicyEx Method"
 titleSuffix: "Configuration Manager"
-description: "The ApplyPolicyEx WMI class method, in Configuration Manager, that applies policy."
+description: "The ApplyPolicyEx WMI class method, in Configuration Manager, applies policy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
