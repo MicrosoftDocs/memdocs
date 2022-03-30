@@ -1,5 +1,5 @@
 ---
-description: Learn how to use 
+description: Learn how to use the  SMS_ConfigurationPolicyAssignment to represent the deployment of an instance of SMS_ConfigurationPolicy in Configuration Manager.
 title: "SMS_ConfigurationPolicyAssignment Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
