@@ -163,6 +163,281 @@ Currently, you must use the [Universal Print printer provisioning tool](/univers
 Applies to:
 - Windows 11
 
+### New macOS settings in Setting Catalog<!-- 13654614 -->
+The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
+
+**Accounts > Mobile Accounts**:
+
+- Ask For Secure Token Auth Bypass
+- Create At Login
+- Expiry Delete Disused Seconds
+- Warn On Create
+- Warn On Create Allow Never
+
+**App Management > Autonomous Single App Mode**:
+
+- Bundle Identifier
+- Team Identifier
+
+**App Management > NS Extension Management**: 
+
+- Allowed Extensions
+- Denied Extension Points
+- Denied Extensions
+
+**App Store**: 
+
+- Disable Software Update Notifications
+- Restrict Store Software Update Only
+- restrict-store-disable-app-adoption
+
+**Authentication > Directory Service**: 
+
+- AD Allow Multi Domain Auth
+- AD Allow Multi Domain Auth Flag
+- AD Create Mobile Account At Login
+- AD Create Mobile Account At Login Flag
+- AD Default User Shell
+- AD Default User Shell Flag
+- AD Domain Admin Group List
+- AD Domain Admin Group List Flag
+- AD Force Home Local 
+- AD Force Home Local Flag
+- AD Map GGID Attribute
+- AD Map GGID Attribute Flag
+- AD Map GID Attribute
+- AD Map GID Attribute Flag
+- AD Map UID Attribute
+- AD Map UID Attribute Flag
+- AD Mount Style
+- AD Namespace
+- AD Namespace Flag
+- AD Organizational Unit
+- AD Packet Encrypt
+- AD Packet Encrypt Flag
+- AD Packet Sign
+- AD Packet Sign Flag
+- AD Preferred DC Server
+- AD Preferred DC Server Flag
+- AD Restrict DDNS
+- AD Restrict DDNS Flag
+- AD Trust Change Pass Interval Days
+- AD Trust Change Pass Interval Days Flag
+- AD Use Windows UNC Path
+- AD Use Windows UNC Path Flag
+- AD Warn User Before Creating MA Flag
+- Client ID
+- Description
+- Password
+- User Name
+
+**Authentication > Identification**: 
+
+- Prompt
+- Prompt Message
+
+**Login > Login Window Login Items**:
+
+- Disable Login Items Suppression
+
+**Media Management Disc Burning**:
+
+- Burn Support
+
+**Parental Controls > Parental Controls Application Restrictions**:
+
+- Family Controls Enabled
+
+**Parental Controls > Parental Controls Content Filter**:
+
+- Allowlist Enabled
+- Filter Allowlist
+- Filter Blocklist
+- Site Allowlist
+- Address
+- Page Title
+- Use Content Filter
+
+**Parental Controls > Parental Controls Dictionary**:
+
+- Parental Control
+
+**Parental Controls > Parental Controls Game Center**:
+
+- GK Feature Account Modification Allowed
+
+**System Configuration > File Provider**:
+
+- Allow Managed File Providers To Request Attribution
+
+**System Configuration > Screensaver**:
+
+- Ask For Password
+- Ask For Password Delay
+- Login Window Idle Time
+- Login Window Module Path
+
+**User Experience > Finder**:
+
+- Prohibit Burn
+- Prohibit Connect To
+- Prohibit Eject
+- Prohibit Go To Folder
+- Show External Hard Drives On Desktop
+- Show Hard Drives On Desktop
+- Show Mounted Servers On Desktop
+- Show Removable Media On Desktop
+- Warn On Empty Trash
+
+**User Experience > Managed Menu Extras**:
+
+- AirPort
+- Battery
+- Bluetooth
+- Clock
+- CPU
+- Delay Seconds
+- Displays
+- Eject
+- Fax
+- HomeSync
+- iChat
+- Ink
+- IrDA
+- Max Wait Seconds
+- PCCard
+- PPP
+- PPPoE
+- Remote Desktop
+- Script Menu
+- Spaces
+- Sync
+- Text Input
+- TimeMachine
+- Universal Access
+- User
+- Volume
+- VPN
+- WWAN
+
+**User Experience > Notifications**:
+
+- Alert Type
+- Badges Enabled
+- Critical Alert Enabled
+- Notifications Enabled
+- Show In Lock Screen
+- Show In Notification Center
+- Sounds Enabled
+
+**User Experience > Time Machine**:
+
+- Auto Backup
+- Backup All Volumes
+- Backup Size MB
+- Backup Skip System
+- Base Paths
+- Mobile Backups
+- Skip Paths
+
+**Xsan**:
+
+- San Auth Method
+
+**Xsan > Xsan Preferences**:
+
+- Deny DLC
+- Deny Mount
+- Only Mount
+- Prefer DLC
+- Use DLC
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**App Management > Associated Domains**:
+
+- Enable Direct Downloads
+
+**Networking > Content Caching**:
+
+- Allow Cache Delete
+- Allow Personal Caching
+- Allow Shared Caching
+- Auto Activation
+- Auto Enable Tethered Caching
+- Cache Limit
+- Data Path
+- Deny Tethered Caching
+- Display Alerts
+- Keep Awake
+- Listen Ranges
+- Listen Ranges Only
+- Listen With Peers And Parents
+- Local Subnets Only
+- Log Client Identity
+- Parent Selection Policy
+- Parents
+- Peer Filter Ranges
+- Peer Listen Ranges
+- Peer Local Subnets Only
+- Port
+- Public Range
+
+**Restrictions**:
+
+- Allow Activity Continuation
+- Allow Adding Game Center Friends
+- Allow Air Drop
+- Allow Auto Unlock
+- Allow Camera
+- Allow Cloud Address Book
+- Allow Cloud Bookmarks
+- Allow Cloud Calendar
+- Allow Cloud Desktop And Documents
+- Allow Cloud Document Sync
+- Allow Cloud Keychain Sync
+- Allow Cloud Mail
+- Allow Cloud Notes
+- Allow Cloud Photo Library
+- Allow Cloud Private Relay
+- Allow Cloud Reminders
+- Allow Content Caching
+- Allow Diagnostic Submission
+- Allow Dictation
+- Allow Erase Content And Settings
+- Allow Fingerprint For Unlock
+- Allow Game Center
+- Allow iTunes File Sharing
+- Allow Multiplayer Gaming
+- Allow Music Service
+- Allow Passcode Modification
+- Allow Password Auto Fill
+- Allow Password Proximity Requests
+- Allow Password Sharing
+- Allow Remote Screen Observation
+- Allow Screen Shot
+- Allow Spotlight Internet Results
+- Allow Wallpaper Modification
+- Enforced Fingerprint Timeout
+- Enforced Software Update Delay
+- Enforced Software Update Major OS Deferred Install Delay
+- Enforced Software Update Minor OS Deferred Install Delay
+- Enforced Software Update Non OS Deferred Install Delay
+- Force Classroom Automatically Join Classes
+- Force Classroom Request Permission To Leave Classes
+- Force Classroom Unprompted App And Device Lock
+- Force Delayed App Software Updates
+- Force Delayed Major Software Updates
+- Force Delayed Software Updates
+- Safari Allow Autofill
+
+There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
+
+Applies to:
+- macOS
+
 <!-- ***********************************************-->
 
 ## Device security
