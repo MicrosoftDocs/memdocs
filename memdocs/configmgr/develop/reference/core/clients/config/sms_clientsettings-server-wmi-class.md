@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the settings that apply to the clients which belong to a specified collection using SMS_ClientSettings class.
 title: "SMS_ClientSettings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

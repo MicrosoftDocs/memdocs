@@ -1,4 +1,5 @@
 ---
+description: Learn how to create the node XML for the Configuration Manager console default grid view by creating an XML file describing a RootNodeDescription element.
 title: "How to Create Node XML for a Grid View"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
