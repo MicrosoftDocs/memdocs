@@ -2,6 +2,7 @@
 title: "Reorder an OS Deployment Task Sequence"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
+description: "In Configuration Manager, you can reorder the steps (an action or a group) in a task sequence or group by rearranging the step sequence in the [Steps] property array."
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: how-to

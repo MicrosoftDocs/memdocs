@@ -1,6 +1,7 @@
 ---
 title: "SetMemberOrder Method"
 titleSuffix: "Configuration Manager"
+description: "Set the order of the members of a collection. It is used when the members of a server group collection need to be patched in a particular order."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

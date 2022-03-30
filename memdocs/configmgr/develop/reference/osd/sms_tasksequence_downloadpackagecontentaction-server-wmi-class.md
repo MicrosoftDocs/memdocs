@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_DownloadPackageContentAction Class"
 titleSuffix: "Configuration Manager"
+description: "Represents a task sequence action that downloads the contents of a package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

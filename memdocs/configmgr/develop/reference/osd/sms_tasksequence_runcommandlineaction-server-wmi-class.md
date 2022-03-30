@@ -1,6 +1,7 @@
 ---
 title: SMS_TaskSequence_RunCommandLineAction class
 titleSuffix: Configuration Manager
+description: "an SMS Provider server class in Configuration Manager. It represents a task sequence action that runs a user-specified command line."
 ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

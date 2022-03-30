@@ -1,4 +1,5 @@
 ---
+description: Learn how to create an XML file that describes an SmsFormData class using a Create Form XML for a Configuration Manager property sheet. 
 title: "Create Form XML for a Property Sheet"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: Learn about the simplified syntax, parameters, return values, and requirement for the BlockAccess method.
 
 ---
 # BlockAccess Method in Class SMS_DeviceMethods

@@ -1,6 +1,7 @@
 ---
 title: "SMS_MDMCorpEnrollmentProfiles Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager, that represents On-premises Mobile Device Management (MDM) corporate enrollment profiles."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
