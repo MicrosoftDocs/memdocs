@@ -76,7 +76,7 @@ The Remote help app supports the following capabilities:
 > [!NOTE]
 > Remote help has the following limitations:  
 >
-> - Remote help is not supported on GCC High tenants.
+> - Remote help is not supported on GCC, GCC High or DoD Tenants.
 > - You cannot establish a remote help session from one tenant to a different tenant.
 > - May not be available in all markets or localizations.
 
@@ -122,9 +122,11 @@ Microsoft does not store any data about either the sharer or the helper for long
 
 ## Install and update remote help
 
-Remote help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a remote help session.
+Remote help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a remote help session. During the installation of remote help, you can opt out of automatic updates. 
 
-When an update to remote help is required, users are prompted to install that version of remote help when the app opens. You can use the same process to download and install remote help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
+If you do not opt out of automatic updates, when an update is available, remote help will automatically install the update on your device.
+
+If you opt out of automatic updates, when an update to remote help is required, you will be prompted to install that version of remote help when the app opens. You can use the same process to download and install remote help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
