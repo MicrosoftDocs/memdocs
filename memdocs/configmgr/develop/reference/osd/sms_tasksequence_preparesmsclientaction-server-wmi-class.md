@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a task sequence action that prepares the Configuration Manager client on the reference computer for capture.
 title: "SMS_TaskSequence_PrepareSMSClientAction Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
