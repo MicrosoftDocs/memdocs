@@ -108,12 +108,6 @@ For more information, see [Delete collection references](../../clients/manage/co
 
 ## Software updates
 
-### Windows Update native experience for software updates
-<!--4316341, 10543514-->
-When installing software updates from Configuration Manager, you can now choose to use the native Windows Update interface and restart experience. The client's Windows Update Settings page will display the updates like they appear when using Windows Update for scanning. Restarts from software updates will also behave as though you're using Windows Update. When you use the Windows restart experience, you can also brand it for your organization and specify when forced restarts will occur.
-
-For more information, see [Computer restart client settings](../../clients/deploy/device-restart-notifications.md#bkmk_wu).
-
 ### LEDBAT support for software update points
 <!--4639895-->
 You can now enable Windows Low Extra Delay Background Transport (LEDBAT) for your software update points. LEDBAT adjusts download speeds during client scans against WSUS to help control network congestion.

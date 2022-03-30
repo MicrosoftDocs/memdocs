@@ -141,30 +141,6 @@ For a low-rights user on a device that runs Windows Server, by default they aren
 > [!IMPORTANT]
 > Allowing low-rights users to restart a server can potentially impact other users or services.
 
-### <a name="bkmk_wu"></a> Select the restart experience to be shows to end users
-<!--4316341-->
-(*Introduced in version 2203*)
-
-When installing software updates from Configuration Manager, you can choose to use the native Windows Update interface and restart experience. The client's Windows Update Settings page will display the updates like they appear when using Windows Update for scanning. Restarts from software updates will also behave as though you're using Windows Update. To use this feature, client devices must be running [Windows Insider build 21277 or later](/windows-insider/active-dev-branch#build-21277). Select the restart experience:
-
-- **Configuration Manager**: Use the Configuration Manager restart experience (default)
-- **Windows**: Use the Windows Update native restart experience
-
-When the **Windows** restart experience is selected, you can change the following forced restart and branding settings:
-
-- **Specify a deadline, the time (in days) from when a device is pending reboot until the device is forced to restart**
-   - Minimum value: 1 day
-   - Maximum value: 30 days
-   - Default value: 2 days
-  
-  This deadline option is only available when **Windows** is selected as the restart experience.
-
-  :::image type="content" source="./media/4316341-restart.png" alt-text="Screenshot of a device using the Windows Update native experience for software updates":::
-
-- **Specify organization name**: <!--10543514-->
- Enter the organization name to display in the Windows restart notifications for updates. This branding option is only available when **Windows** is selected as the restart experience.
-
-   :::image type="content" source="./media/10543514-branded-restart.png" alt-text="Screenshot of the computer restart notification for a client. The organization name is displayed in the notification and is outlined in red.":::
 
 ## Device restart notifications
 <!--3976435-->
