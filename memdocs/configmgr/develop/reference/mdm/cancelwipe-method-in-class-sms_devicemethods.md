@@ -1,7 +1,7 @@
 ---
 title: "CancelWipe Method"
 titleSuffix: "Configuration Manager"
-description: "The CancelWipe Windows Management Instrumentation (WMI) class method cancels a pending wipe request on mobile devices or Exchange ActiveSync devices. "
+description: "The CancelWipe Windows Management Instrumentation (WMI) class method cancels a pending wipe request on mobile devices or Exchange ActiveSync devices."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
