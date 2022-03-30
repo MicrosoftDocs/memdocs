@@ -1,7 +1,7 @@
 ---
 title: "SMS_MDMCorpOwnedDevices Class"
 titleSuffix: "Configuration Manager"
-description: "The SMS_MDMCorpOwnedDevices WMI class represents On-premises Mobile Device Management (MDM) corporate owned devices. "
+description: "The SMS_MDMCorpOwnedDevices WMI class represents On-premises Mobile Device Management (MDM) corporate owned devices."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
