@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent an application in Configuration Manager using SMS_ApplicationLatest class.
 title: "SMS_ApplicationLatest Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
