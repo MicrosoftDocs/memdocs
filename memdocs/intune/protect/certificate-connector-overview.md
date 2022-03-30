@@ -160,10 +160,16 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 - **Admin**  
 
   - **Event ID: 1000** - *PkcsRequestSuccess*  
-    Successfully fulfilled and uploaded a PKCS Request to Intune.
+    Successfully uploaded a PKCS Request to Intune.
 
   - **Event ID: 1001** - *PkcsRequestFailure*  
     Failed to fulfill or upload a PKCS Request to Intune.
+
+  - **Event ID: 1200** - *PkcsRecryptRequestSuccess*  
+    Successfully processed PKCS Reencrypt request.
+
+  - **Event ID: 1201** - *PkcsRecryptRequestFailure*  
+    Failed to process PKCS Reencrypt request.
 
 - **Operational**
 
@@ -171,31 +177,61 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
     Successfully downloaded PKCS requests from Intune.
 
   - **Event ID: 1003** - *PkcsDownloadFailure*  
-    A failure occurred when downloading PKCS requests from Intune.
+    Failed to download PKCS requests from Intune.
 
   - **Event ID: 1020** - *PkcsDownloadedRequest*  
-    Details of a single downloaded request from Intune.
+    Successfully downloaded PKCS request from Intune
 
   - **Event ID: 1032** - *PkcsDigiCertRequest*  
-    Successfully downloaded PKCS request for DigiCert CA from Intune.
+    Successfully downloaded a PKCS request for DigiCert CA from Intune.
 
   - **Event ID: 1050** - *PkcsIssuedSuccess*  
-    Issued a certificate for a request.
+    Successfully issued a PKCS certificate.
 
   - **Event ID: 1051** - *PkcsIssuedFailedAttempt*  
-    A failure occurred while issuing a certificate for a request.
+    Failed to issue a PKCS certificate, will try again.
 
   - **Event ID: 1052** - *PkcsIssuedFailure*  
-    Failed to issue a certificate for a Request.
+    Failed to issue a PKCS certificate.
 
   - **Event ID: 1100** - *PkcsUploadSuccess*  
-    Successfully uploaded PKCS request to Intune.
+    Successfully uploaded PKCS request results to Intune.
 
   - **Event ID: 1101** - *PkcsUploadFailure*  
-    A failure occurred when uploading requests to Intune.
+    Failed to upload PKCS request results to Intune.
 
   - **Event ID: 1102** - *PkcsUploadedRequest*  
-    Details of an uploaded request to Intune.
+    Successfully uploaded PKCS request to Intune.
+
+  - **Event ID: 1202** - *PkcsRecryptDownloadSuccess*  
+    Successfully downloaded PKCS Reencrypt requests.
+
+  - **Event ID: 1203** - *PkcsRecryptDownloadFailure*  
+    Failed to download PKCS Reencrypt requests.
+
+  - **Event ID: 1220** - *PkcsRecryptDownloadedRequest*  
+    Successfully downloaded a PKCS Reencrypt request.
+
+  - **Event ID: 1250** - *PkcsRecryptReencryptSuccess*  
+    Successfully re-encrypted PKCS certificate payload.
+
+  - **Event ID: 1251** - *PkcsRecryptDecryptSuccess*  
+    Successfully decrypted PKCS certificate payload.
+
+  - **Event ID: 1252** - *PkcsRecryptDecryptFailure*  
+    Failed to decrypt PKCS certificate payload.
+
+  - **Event ID: 1253** - *PkcsRecryptReencryptFailure*  
+    Failed to re-encrypt PKCS certificate payload.
+
+  - **Event ID: 1300** - *PkcsRecryptUploadSuccess*  
+    Successfully uploaded PKCS Reencrypt request results to Intune.
+
+  - **Event ID: 1301** - *PkcsRecryptUploadFailure*  
+    Failed to upload PKCS Reencrypt request results to Intune.
+
+  - **Event ID: 1302** - *PkcsRecryptUploadedRequest*  
+    Successfully uploaded a PKCS Reencrypt request to Intune.
 
 **PKCS Import**  
 
@@ -204,8 +240,8 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - **Event ID: 2000** - *PkcsImportRequestSuccess*  
     Successfully downloaded PKCS Import requests from Intune.
 
-  - **Event ID: 2001** - *PkcsImportRequestFailure* 
-    A failure occurred when downloading PKCS Import requests from Intune.
+  - **Event ID: 2001** - *PkcsImportRequestFailure*  
+    Failed to process a PKCS Import request from Intune.
 
 - **Operational**  
 
@@ -213,28 +249,28 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
     Successfully downloaded PKCS Import requests from Intune.
 
   - **Event ID: 2203** - *PkcsImportDownloadFailure*  
-    A failure occurred when downloading PKCS Import requests from Intune.
+    Failed to download PKCS Import requests from Intune.
 
   - **Event ID: 2020** - *PkcsImportDownloadedRequest*  
-    Details of a single downloaded request from Intune.
+    Successfully downloaded a PKCS Import request from Intune.
 
   - **Event ID: 2050** - *PkcsImportReencryptSuccess*  
-    Re-encrypted an imported certificate.
+    Successfully re-encrypted a PKCS Import certificate.
 
   - **Event ID: 2051** - *PkcsImportReencryptFailedAttempt*  
-    A failure occurred while re-encrypting an imported certificate, and will try again.
+    Failed to re-encrypt a PKCS Import certificate, will try again.
 
   - **Event ID: 2052** - *PkcsImportReencryptFailure*  
     Failed to re-encrypt an imported certificate.
 
   - **Event ID: 2100** - *PkcsImportUploadSuccess*  
-    Successfully uploaded request to Intune.
+    Successfully uploaded PKCS Import request results to Intune.
 
   - **Event ID: 2101** - *PkcsImportUploadFailure*  
-    A failure occurred when uploading requests to Intune.
+    Failed to upoload PKCS request results to Intune.
 
   - **Event ID: 2102** - *PkcsImportUploadedRequest*  
-    Details of an uploaded request to Intune.
+    Successfully uploaded a PKCS Import request to Intune.
 
 **Revocation**  
 
@@ -267,26 +303,26 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
     A failure occurred while revoking a certificate.
 
   - **Event ID: 3052** - *RevokeFailedAttempt*  
-    Failed to revoke a certificate, will try again
+    Failed to revoke a certificate, will try again.
 
   - **Event ID: 3100** - *RevokeUploadSuccess*  
-    Details of successful request that was uploaded to Intune.
+    Successfully uploaded Revocation request results to Intune.
 
   - **Event ID: 3101** - *RevokeUploadFailure*  
-    A failure occurred when uploading requests to Intune.
+    Failed to upload Revocation request results to Intune.
 
   - **Event ID: 3102** - *RevokeUploadedRequest*  
-    Details of an uploaded request to Intune.
+    Successfully uploaded Revocation request to Intune.
 
 **SCEP**
 
 - **Admin**
 
   - **Event ID: 4000** - *ScrepRequestSuccess*  
-    Successfully received and processed SCEP request and notified Intune.
+    Successfully processed a SCEP request and notified Intune.
 
   - **Event ID: 4001** - *ScepRequestIssuedFailure*  
-    Failed to issue certificate for SCEP request.
+    Failed to process a SCEP request and notified Intune.
 
   - **Event ID: 4002** - *ScepRequestUploadFailure*  
     Successfully processed SCEP request but failed to notify Intune.
@@ -294,28 +330,28 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 - **Operational**
 
   - **Event ID: 4003** - *ScepRequestReceived*  
-    Received request from device.
+    Successfully received a SCEP request from a device.
 
   - **Event ID: 4004** - *ScepVerifySuccess*  
-    Successfully verified request with Intune.
+    Successfully verified a SCEP request with Intune.
 
   - **Event ID: 4005** - *ScepVerifyFailure*  
-    Verification of request failed.
+    Failed to verify a SCEP request with Intune.
 
   - **Event ID: 4006** - *ScepIssuedSuccess*  
-    Successfully issued certificate for request.
+    Successfully issued certificate for a SCEP request.
 
   - **Event ID: 4007** - *ScepIssuedFailure*  
-    Failed to issue certificate for request.
+    Failed to issue certificate for SCEP request.
 
   - **Event ID: 4008** - *ScepNotifySuccess*  
-    Successfully notified Intune of request.
+    Successfully notified Intune of the result for a SCEP request.
 
   - **Event ID: 4009** - *ScepNotifyAttemptFailed*  
-    Failed attempt to notify Intune of request status.
+    Failed to notify Intune of the result of a SCEP request, will try again.
 
   - **Event ID: 4010** - *ScepNotifySaveToDiskFailed*  
-    Failed to write notification to disk. Will not be able to notify Intune of request status.
+    Failed to write notification to disk and cannot notify Intune of the request status.
 
 ## What's new for the Certificate Connector
 
