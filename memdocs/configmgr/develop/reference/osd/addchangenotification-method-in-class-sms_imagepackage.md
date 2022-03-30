@@ -1,6 +1,7 @@
 ---
 title: "AddChangeNotification Method in SMS_ImagePackage"
 titleSuffix: "Configuration Manager"
+description: "The AddChangeNotification Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds an image package change notification."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

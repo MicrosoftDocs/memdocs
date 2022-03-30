@@ -1,6 +1,7 @@
 ---
 title: "SMS_MAMStoreApplication Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MAMStoreApplication WMI class is an SMS Provider server class that represents mobile application management store application lists."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

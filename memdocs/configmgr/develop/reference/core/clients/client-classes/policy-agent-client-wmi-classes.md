@@ -1,6 +1,8 @@
 ---
 title: "Policy Agent Client WMI Classes"
 titleSuffix: "Configuration Manager"
+description: "Describe the classes used, in Configuration Manager, to manage policy on client computers and devices."  
+
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
