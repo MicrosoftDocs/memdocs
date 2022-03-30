@@ -1,4 +1,5 @@
 ---
+description: Learn how to get a count of all members in a collection, not including subcollections using GetNumResults.
 title: "GetNumResults Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

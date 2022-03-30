@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_ADDomain class which contains Active Directory domains discovered by Configuration Manager Forest Discovery.
 title: "SMS_ADDomain Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

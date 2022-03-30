@@ -1,4 +1,5 @@
 ---
+description: Learn how to notify the caller that a Desired Configuration Management Agent job has failed to be completed using IDCMAgentCallback::NotifyError.
 title: "IDCMAgentCallback::NotifyError"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

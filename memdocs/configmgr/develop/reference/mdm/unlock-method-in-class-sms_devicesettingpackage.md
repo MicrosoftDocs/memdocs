@@ -1,6 +1,7 @@
 ---
 title: "Unlock Method"
 titleSuffix: "Configuration Manager"
+description: "Sets the source site to the current site, unlocking the device setting package in Configuration Manager." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

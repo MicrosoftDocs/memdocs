@@ -1,4 +1,5 @@
 ---
+description: Learn how to set an event property in Configuration Manager using ICcmEvent::SetProperty method class.
 title: "ICCMEvent::SetProperty Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

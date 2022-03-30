@@ -1,4 +1,5 @@
 ---
+description: Learn how CIJobState enumeration defines configuration item agent job states and is used by ICIINFO Interface.
 title: "CIJobState Enumeration"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

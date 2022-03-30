@@ -1,4 +1,5 @@
 ---
+description: Learn how to create a client configuration request (CCR) for a particular resource in Configuration Manager.
 title: "CreateCCR Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

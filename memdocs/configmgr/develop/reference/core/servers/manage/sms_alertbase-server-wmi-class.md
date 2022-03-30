@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the base class for SMS_Alert, SMS_EPAlert, and SMS_SCHALert using SMS_AlertBase class.
 title: "SMS_AlertBase Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

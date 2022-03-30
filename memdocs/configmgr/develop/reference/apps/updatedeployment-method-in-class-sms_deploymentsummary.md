@@ -1,4 +1,5 @@
 ---
+description: Learn how to update the summarized results for a specific Classic Deployment in Configuration Manager using UpdateDeployment.
 title: "UpdateDeployment Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

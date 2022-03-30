@@ -45,7 +45,7 @@ As an Intune administrator, you can create and manage enrollment restrictions th
 You can create multiple restrictions and apply them to different user groups. You can set the [priority order](#change-enrollment-restriction-priority) for your different restrictions.
 
 >[!NOTE]
->Enrollment restrictions are not security features. Compromised devices can misrepresent their character. These restrictions are a best-effort barrier for non-malicious users.
+>Enrollment restrictions are not security features. Compromised devices can misrepresent their character. These restrictions are a best-effort barrier for non-malicious users. Additionally, for each type of enrollment restriction policy (device limit or device platform), there is a limit of maximum 25 policies per tenant. If you try to create more than 25, the creation will fail with a "Resouce limit reached" error. 
 
 The specific enrollment restrictions that you can create include:
 
