@@ -1,6 +1,7 @@
 ---
 title: "Create a Collection Variable"
 titleSuffix: "Configuration Manager"
+description: "Add instances of SMS_CollectionVariable Server WMI Class to the CollectionVariables property of SMS_CollectionSettings Server WMI Class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
