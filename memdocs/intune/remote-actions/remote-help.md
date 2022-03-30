@@ -76,7 +76,7 @@ The Remote help app supports the following capabilities:
 > [!NOTE]
 > Remote help has the following limitations:  
 >
-> - Remote Help is not supported on GCC, GCC High or DoD Tenants.
+> - Remote help is not supported on GCC, GCC High or DoD Tenants.
 > - You cannot establish a remote help session from one tenant to a different tenant.
 > - May not be available in all markets or localizations.
 
