@@ -35,12 +35,12 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) running on a Mac computer. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment. You can enroll devices into Intune with Apple Configurator in two ways:
+Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) running on a Mac computer. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment. You can enroll devices into Intune with Apple Configurator in two ways:  
+
 - **Setup Assistant enrollment** - Wipes the device and prepares it to enroll during Setup Assistant.
 - **Direct enrollment** - Does not wipe the device and enrolls the device through iOS/iPadOS settings. This method only supports devices with **no user affinity**.
 
-Apple Configurator enrollment methods can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md).
-Note- Enrolling devices with Apple Configurator is only applicable to iOS/iPadOS Devices. This method does not work for enrolling macOS devices. 
+Apple Configurator enrollment methods can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md).  
 
 ## Prerequisites
 
@@ -179,4 +179,10 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 
 6. On the iOS/iPadOS device, open **Settings** and go to **General** > **Device Management** > **Management Profile**. Confirm that the profile installation is listed, and check the iOS/iPadOS policy restrictions and installed apps. Policy restrictions and apps might take up to 10 minutes to appear on the device.
 
-7. Distribute devices. The iOS/iPadOS device is now enrolled in Intune and managed.
+7. Distribute devices. The iOS/iPadOS device is now enrolled in Intune and managed.  
+
+## Next steps  
+
+* Manage enrolled devices in Microsoft Endpoint Manager by using the actions and features available in the admin center. For more information about accessing device management actions and device details in the admin center, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)  
+
+* For information about enrolling macOS devices via direct enrollment, see [Use Direct Enrollment for macOS devices](device-enrollment-direct-enroll-macos.md).
