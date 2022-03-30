@@ -1,4 +1,5 @@
 ---
+description: Learn how to configure the Heartbeat Discovery settings by modifying the necessary site control file settings in Configuration Manager.
 title: "Configure Heartbeat Discovery"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
