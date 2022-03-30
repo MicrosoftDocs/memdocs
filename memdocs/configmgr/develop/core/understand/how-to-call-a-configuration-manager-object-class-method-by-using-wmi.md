@@ -1,6 +1,7 @@
 ---
 title: "Call an Object Class Method by Using WMI"
 titleSuffix: "Configuration Manager"
+description: "To call a SMS Provider class method, use the SWbemServices object ExecMethod method to call methods that are defined by the class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
