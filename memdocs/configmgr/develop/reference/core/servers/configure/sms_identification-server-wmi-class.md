@@ -104,7 +104,7 @@ Class SMS_Identification : SMS_BaseClass
 
  Qualifiers: None  
 
- Name of the Configuration Manager service account, which is a special user account having administrative privileges that uses Configuration Manager to perform certain activities. The value includes the domain.  
+ Name of the Configuration Manager service account, which is a special user account having administrative privileges, that uses Configuration Manager to perform certain activities. The value includes the domain.  
 
  `SMSAvailableConsoleVersion`  
  Data type: `String`  
