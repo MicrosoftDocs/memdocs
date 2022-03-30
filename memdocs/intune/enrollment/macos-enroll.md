@@ -37,30 +37,32 @@ ms.collection:
 
  Microsoft Intune supports enrollment on personal and company-owned devices. This article describes the methods and features you can use to enroll personal, company-owned, and VM devices in Intune. 
  
-## Enable macOS enrollment 
+## Enable enrollment in Microsoft Intune  
 
-Before enrolling devices, you must enable enrollment in your Microsoft Intune tenant. Complete this list of prerequisites to ensure that people can successfully enroll thier devices.   
+Complete these steps to enable enrollment in your Microsoft Intune tenant. 
 
-- [Verify that devices are eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility)
-- [Configure domains](../fundamentals/custom-domain-name-configure.md)
-- [Set the MDM Authority](../fundamentals/mdm-authority-set.md)
-- [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md)  
-- Assign user licenses in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854)
-- [Create groups](../fundamentals/groups-add.md)
-- [Configure the Company Portal app](../apps/company-portal-app.md)
+1. [Verify that devices are eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility)
+2. [Configure domains](../fundamentals/custom-domain-name-configure.md)
+3. [Set the MDM Authority](../fundamentals/mdm-authority-set.md)
+4. [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md)  
+5. Assign user licenses in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854)
+6. [Create groups](../fundamentals/groups-add.md)
+7. [Configure the Company Portal app](../apps/company-portal-app.md)
 
+## Enroll devices
+After you enable enrollment, use one of the supported methods described in this section to enroll user-owned and company-owned devices.   
 
 ## User-owned macOS devices (BYOD)
 
-Intune supports *bring-your-own-device*, or *BYOD*, which lets people enroll their personal devices themselves. To set up enrollment for BYOD scenarios, complete the prerequisites in this article. Then tell your device users to use one of these options to enroll devices:  
+Intune supports *bring-your-own-device*, or *BYOD*, which lets people enroll their personal devices themselves. To finish setting up enrollment for BYOD scenarios, tell your licensed users to use one of these options to enroll devices:  
 
 - Sign in to [Company Portal website](https://portal.manage.microsoft.com) and follow on-screen instructions to add device. 
 - Install Company Portal app for Mac at [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) and follow-on screen instructions to add device.    
 
 ## Company-owned macOS devices
-Intune supports the following enrollment methods for company-owned macOS devices:  
+Intune supports the following enrollment methods for company-owned macOS devices. Select a hyperlinked method to open its setup steps. 
 
-- [Apple Automated Device Enrollment](device-enrollment-program-enroll-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air, so you don't need to have physical access to devices.  
+- [Apple Automated Device Enrollment](device-enrollment-program-enroll-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air, so you don't need to have physical access to devices.   
 - [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Azure Active Directory account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.   
 - [Direct enrollment](device-enrollment-direct-enroll-macos.md): Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling.  
 
@@ -134,9 +136,9 @@ No changes are required for virtual machines running on Apple Silicon hardware. 
 
 ## User-approved enrollment
 
-This type of enrollment lets you manage macOS devices that aren't part of Apple School Manager or Apple Business Manager. It provides the same level of control as supervised macOS devices enrolled using Automated Device Enrollment or Apple Configurator. 
+All Mac enrollments in Intune are considered user-approved. User-approved enrollment lets you manage macOS devices that aren't part of Apple School Manager or Apple Business Manager. It provides the same level of control as supervised macOS devices enrolled using Automated Device Enrollment or Apple Configurator. 
 
-All Mac enrollments in Intune, except those enrolled via Automated Device Enrollment (ADE), are considered user-approved. Intune automatically turns on supervision for user-approved devices running macOS 11 and later. It also does this for enrolled devices that later update to macOS 11 or later.  
+Intune automatically turns on supervision for user-approved devices running macOS 11 and later. It also does this for enrolled devices that later update to macOS 11 or later.  
 
 
 > [!NOTE]
