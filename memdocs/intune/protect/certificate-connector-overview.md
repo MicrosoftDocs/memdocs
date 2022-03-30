@@ -156,66 +156,111 @@ All events have one of the following IDs:
 All events are tagged with a Task Category to aid in filtering.  Task categories contain but aren't limited to the following list:
 
 **PKCS**  
+
 - **Admin**  
-  - *PkcsRequestSuccess* - Successfully fulfilled and uploaded a PKCS Request to Intune.
-  - *PkcsRequestFailure* - Failed to fulfill or upload a PKCS Request to Intune.
+
+  - **Event ID: 1000** - *PkcsRequestSuccess*  
+    Successfully fulfilled and uploaded a PKCS Request to Intune.
+
+  - **Event ID: 1001** - *PkcsRequestFailure*  
+    Failed to fulfill or upload a PKCS Request to Intune.
+
 - **Operational**
-  - *PkcsDigiCertRequest* - Successfully downloaded PKCS request for DigiCert CA from Intune
-  - *PkcsDownloadSuccess* - Successfully downloaded PKCS requests from Intune
-  - *PkcsDownloadFailure* - A failure occurred when downloading PKCS requests from Intune
-  - *PkcsDownloadedRequest* - Details of a single downloaded request from Intune
-  - *PkcsIssuedSuccess* - Issued a certificate for a request
-  - *PkcsIssuedFailedAttempt* - A failure occurred while issuing a certificate for a request
-  - *PkcsIssuedFailure* - Failed to issue a certificate for a Request
-  - *PkcsUploadSuccess* - Details of successful request that was uploaded to Intune
-  - *PkcsUploadFailure* - A failure occurred when uploading requests to  Intune
-  - *PkcsUploadedRequest* - Details of an uploaded request to Intune
+
+  - **Event ID: 1002** - *PkcsDownloadSuccess*  
+    Successfully downloaded PKCS requests from Intune.
+
+  - **Event ID: 1003** - *PkcsDownloadFailure*  
+    A failure occurred when downloading PKCS requests from Intune.
+
+  - **Event ID: 1020** - *PkcsDownloadedRequest*  
+    Details of a single downloaded request from Intune.
+
+  - **Event ID: 1032** - *PkcsDigiCertRequest*  
+    Successfully downloaded PKCS request for DigiCert CA from Intune.
+
+  - **Event ID: 1050** - *PkcsIssuedSuccess*  
+    Issued a certificate for a request.
+
+  - **Event ID: 1051** - *PkcsIssuedFailedAttempt*  
+    A failure occurred while issuing a certificate for a request.
+
+  - **Event ID: 1052** - *PkcsIssuedFailure*  
+    Failed to issue a certificate for a Request.
+
+  - **Event ID: 1100** - *PkcsUploadSuccess*  
+    Successfully uploaded PKCS request to Intune.
+
+  - **Event ID: 1101** - *PkcsUploadFailure*  
+    A failure occurred when uploading requests to Intune.
+
+  - **Event ID: 1102** - *PkcsUploadedRequest*  
+    Details of an uploaded request to Intune.
 
 **PKCS Import**  
+
 - **Admin**  
-  - *PkcsImportRequestSuccess* - Successfully downloaded PKCS Import requests from Intune
-  - *PkcsImportRequestFailure* - A failure occurred when downloading PKCS Import requests from Intune
-- **Operational**
-  - *PkcsImportDownloadSuccess* - Successfully downloaded PKCS Import requests from Intune
-  - *PkcsImportDownloadFailure* - A failure occurred when downloading PKCS Import requests from Intune
-  - *PkcsImportDownloadedRequest* - Details of a single downloaded request from Intune
-  - *PkcsImportReencryptSuccess* - Re-encrypted an imported certificate
-  - *PkcsImportReencryptFailedAttempt* - A failure occurred while re-encrypting an imported certificate
-  - *PkcsImportReencryptFailure* - Failed to re-encrypt an imported certificate
-  - *PkcsImportUploadFailure* - A failure occurred when uploading requests to Intune
-  - *PkcsImportUploadedRequest* - Details of an uploaded request to Intune
+
+  - **Event ID: 2000** - *PkcsImportRequestSuccess*  
+    Successfully downloaded PKCS Import requests from Intune.
+
+  - **Event ID: 2001** - *PkcsImportRequestFailure* 
+    A failure occurred when downloading PKCS Import requests from Intune.
+
+- **Operational**  
+
+  - **Event ID: 2202** - *PkcsImportDownloadSuccess*  
+    Successfully downloaded PKCS Import requests from Intune.
+
+  - **Event ID: 2203** - *PkcsImportDownloadFailure*  
+    A failure occurred when downloading PKCS Import requests from Intune.
+
+  - **Event ID: 2020** - *PkcsImportDownloadedRequest*  
+    Details of a single downloaded request from Intune.
+
+  - **Event ID: 2050** - *PkcsImportReencryptSuccess*  
+    Re-encrypted an imported certificate.
+
+  - **Event ID: 2051** - *PkcsImportReencryptFailedAttempt*  
+    A failure occurred while re-encrypting an imported certificate, and will try again.
+
+  - **Event ID: 2052** - *PkcsImportReencryptFailure*  
+    Failed to re-encrypt an imported certificate.
+
+  - **Event ID: ** - *PkcsImportUploadFailure* - A failure occurred when uploading requests to Intune
+  - **Event ID: ** - *PkcsImportUploadedRequest* - Details of an uploaded request to Intune
 
 **Revocation**
 - **Admin**
-  - *RevokeRequestSuccess* - Successfully downloaded Revocation requests from Intune
-  - *RevokeRequestFailure* - A failure occurred when downloading Revocation requests from Intune
+  - **Event ID: ** - *RevokeRequestSuccess* - Successfully downloaded Revocation requests from Intune
+  - **Event ID: ** - *RevokeRequestFailure* - A failure occurred when downloading Revocation requests from Intune
 - **Operational**
-  - *RevokeDigicertRequest* - Received revoke request from Intune and forwarding request to Digicert for fulfillment of request.
-  - *RevokeDownloadSuccess* - Successfully downloaded Revocation requests from Intune
-  - *RevokeDownloadFailure* - A failure occurred when downloading Revocation requests from Intune
-  - *RevokeDownloadedRequest* - Details of a single downloaded request from Intune
-  - *RevokeSuccess* - Successfully revoked certificate
-  - *RevokeFailure* - A failure occurred while revoking a certificate
-  - *RevokeFailedAttempt* - Failed to revoke a certificate
-  - *RevokeUploadSuccess* - Details of successful request that was uploaded to Intune
-  - *RevokeUploadFailure* - A failure occurred when uploading requests to Intune
-  - *RevokeUploadedRequest* - Details of an uploaded request to Intune
+  - **Event ID: ** - *RevokeDigicertRequest* - Received revoke request from Intune and forwarding request to Digicert for fulfillment of request.
+  - **Event ID: ** - *RevokeDownloadSuccess* - Successfully downloaded Revocation requests from Intune
+  - **Event ID: ** - *RevokeDownloadFailure* - A failure occurred when downloading Revocation requests from Intune
+  - **Event ID: ** - *RevokeDownloadedRequest* - Details of a single downloaded request from Intune
+  - **Event ID: ** - *RevokeSuccess* - Successfully revoked certificate
+  - **Event ID: ** - *RevokeFailure* - A failure occurred while revoking a certificate
+  - **Event ID: ** - *RevokeFailedAttempt* - Failed to revoke a certificate
+  - **Event ID: ** - *RevokeUploadSuccess* - Details of successful request that was uploaded to Intune
+  - **Event ID: ** - *RevokeUploadFailure* - A failure occurred when uploading requests to Intune
+  - **Event ID: ** - *RevokeUploadedRequest* - Details of an uploaded request to Intune
 
 **SCEP**
 - **Admin**
-  - *ScrepRequestSuccess* - Successfully received and processed SCEP request and notified Intune
-  - *ScepRequestIssuedFailure* - Failed to issue certificate for SCEP request
-  - *ScepRequestUploadFailure* - Successfully processed SCEP request but failed to notify Intune
+  - **Event ID: ** - *ScrepRequestSuccess* - Successfully received and processed SCEP request and notified Intune
+  - **Event ID: ** - *ScepRequestIssuedFailure* - Failed to issue certificate for SCEP request
+  - **Event ID: ** - *ScepRequestUploadFailure* - Successfully processed SCEP request but failed to notify Intune
 
 - **Operational**
-  - *ScepRequestReceived* - Received request from device
-  - *ScepVerifySuccess* - Successfully verified request with Intune
-  - *ScepVerifyFailure* - Verification of request failed
-  - *ScepIssuedSuccess* - Successfully issued certificate for request
-  - *ScepIssuedFailure* - Failed to issue certificate for request
-  - *ScepNotifySuccess* - Successfully notified Intune of request
-  - *ScepNotifyAttemptFailed* - Failed attempt to notify Intune of request status.
-  - *ScepNotifySaveToDiskFailed* - Failed to write notification to disk. Will not be able to notify Intune of request status.
+  - **Event ID: ** - *ScepRequestReceived* - Received request from device
+  - **Event ID: ** - *ScepVerifySuccess* - Successfully verified request with Intune
+  - **Event ID: ** - *ScepVerifyFailure* - Verification of request failed
+  - **Event ID: ** - *ScepIssuedSuccess* - Successfully issued certificate for request
+  - **Event ID: ** - *ScepIssuedFailure* - Failed to issue certificate for request
+  - **Event ID: ** - *ScepNotifySuccess* - Successfully notified Intune of request
+  - **Event ID: ** - *ScepNotifyAttemptFailed* - Failed attempt to notify Intune of request status.
+  - **Event ID: ** - *ScepNotifySaveToDiskFailed* - Failed to write notification to disk. Will not be able to notify Intune of request status.
 
 ## What's new for the Certificate Connector
 
