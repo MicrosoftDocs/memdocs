@@ -1,6 +1,7 @@
 ---
 title: "CollectableFileItem Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CollectableFileItem class is a client Windows Management Instrumentation class that defines attributes of a file collection rule."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
