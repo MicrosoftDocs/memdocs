@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the referenced entities of the specified entities in Configuration Manager using GetEntityReferences class method.
 title: "GetEntityReferences Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

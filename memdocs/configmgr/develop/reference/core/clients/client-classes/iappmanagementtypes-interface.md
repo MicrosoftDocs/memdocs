@@ -1,4 +1,5 @@
 ---
+description: Learn how to use IAppManagementTypes interface, in Configuration Manager, which is a container for Application Management related type definitions.
 title: "IAppManagementTypes Interface"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
