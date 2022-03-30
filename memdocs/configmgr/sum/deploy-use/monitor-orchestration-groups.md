@@ -74,7 +74,7 @@ In the **Orchestration Group** node, select an orchestration group. In the ribbo
 - **OG Unique ID**: Unique ID of the orchestration group the member belongs to.
 - **Resource ID**: Resource ID of the device.
 
-## Alerts for orchestration groups {#alerts}
+## <a name="bkmk_alerts"></a> Alerts for orchestration groups
 *(Introduced in version 2203)*
 
 Starting in version 2203, if an orchestration group fails, an alert is generated. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Alerts**, and then select **Active Alerts** or **All Alerts**. For more information about alerts, see [Configure alerts](../../core/servers/manage/configure-alerts.md).

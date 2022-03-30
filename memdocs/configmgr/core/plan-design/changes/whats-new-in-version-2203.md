@@ -152,7 +152,7 @@ You can now organize software update groups and packages by using folders. This 
 
 ### Alerts for orchestration groups
 <!--12725116-->
-If an orchestration group fails, an alert is now displayed in in **Monitoring** > **Alerts** > **Active Alerts**. For more information, see [Monitor orchestration groups](../../../sum/deploy-use/monitor-orchestration-groups.md#alerts)
+If an orchestration group fails, an alert is now displayed in in **Monitoring** > **Alerts** > **Active Alerts**. For more information, see [Monitor orchestration groups](../../../sum/deploy-use/monitor-orchestration-groups.md#bkmk_alerts)
 
 ## OS deployment
 
