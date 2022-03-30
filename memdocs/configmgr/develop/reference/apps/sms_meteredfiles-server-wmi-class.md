@@ -52,7 +52,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `ApplyToChildSites`  
  Data type: `Boolean`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -61,7 +61,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `Comment`  
  Data type: `String`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -70,7 +70,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `Enabled`  
  Data type: `Boolean`  
 
- Access type : Read/Write  
+Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -79,7 +79,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `FileName`  
  Data type: `String`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -88,7 +88,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `FileVersion`  
  Data type: `String`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -97,7 +97,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `LanguageID`  
  Data type: `UInt32`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -106,7 +106,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `MeteredFileID`  
  Data type: `SInt64`  
 
- Access type : Read/Write  
+Access type: Read/Write  
 
  Qualifiers: [key]  
 
@@ -115,7 +115,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `MeteredFileName`  
  Data type: `String`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -124,7 +124,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `MeteredFileVersion`  
  Data type: `String`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -133,7 +133,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `MeteredProductID`  
  Data type: `UInt32`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -142,7 +142,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `MeteredProductLanguage`  
  Data type: `UInt32`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -151,7 +151,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `OriginalFileName`  
  Data type: `String`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -160,7 +160,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `ProductName`  
  Data type: `String`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -169,7 +169,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `RuleID`  
  Data type: `UInt32`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: [key]  
 
@@ -178,7 +178,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `SecurityKey`  
  Data type: `String`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -187,7 +187,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `SiteCode`  
  Data type: `String`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
@@ -196,7 +196,7 @@ Class SMS_MeteredFiles : SMS_BaseClass
  `SourceSite`  
  Data type: `String`  
 
- Access type : Read/Write  
+ Access type: Read/Write  
 
  Qualifiers: None  
 
