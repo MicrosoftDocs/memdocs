@@ -1,6 +1,7 @@
 ---
 title: "SoftDistDownloadFailedEvent"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SoftDistDownloadFailedEvent message is raised when a download for a package fails. It appears in **Package Status** in the Configuration Manager console."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
