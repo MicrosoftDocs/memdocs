@@ -35,7 +35,7 @@ uint32 GetClientVersion
 
  Qualifiers: [id("0"), out]  
 
- Version number of the of the installed client software.   
+ Version number of the installed client software.   
 
 ## Remarks  
 
