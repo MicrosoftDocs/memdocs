@@ -2,7 +2,7 @@
 # required metadata
 
 title: How to reconnect a compromised Android device | Microsoft Docs
-description:
+description: Your company support detected that you are using a rooted device, which can compromise security and might be a threat to your company resources.
 keywords:
 author: lenewsad
 ms.author: lanewsad

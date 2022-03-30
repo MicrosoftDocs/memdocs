@@ -1,4 +1,5 @@
 ---
+description: Learn how to invoke the Content Transfer Manager using the ICcmContentTransferManager4 interface and the associated parameters.
 title: "ICcmContentTransferManager4 Interface"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

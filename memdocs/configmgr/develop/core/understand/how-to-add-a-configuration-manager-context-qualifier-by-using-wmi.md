@@ -1,6 +1,7 @@
 ---
 title: "Add a Context Qualifier by Using WMI"
 titleSuffix: "Configuration Manager"
+description: "Add context qualifiers to a connection (SWbemServices) or object (SWbemObject) by creating a SWbemNamedValueSet value set to hold the context qualifiers."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

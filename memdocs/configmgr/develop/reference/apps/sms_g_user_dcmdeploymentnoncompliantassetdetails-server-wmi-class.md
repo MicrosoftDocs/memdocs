@@ -1,6 +1,7 @@
 ---
 title: "SMS_G_USER_DCMDeploymentNonCompliantAssetDetails Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_G_USER_DCMDeploymentNonCompliantAssetDetails WMI class represents non-compliant asset details for a deployment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

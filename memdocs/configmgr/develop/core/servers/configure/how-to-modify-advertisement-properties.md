@@ -1,6 +1,7 @@
 ---
 title: "Modify Advertisement Properties"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the following example shows how to modify an existing advertisement by using the SMS_Advertisement class and class properties."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

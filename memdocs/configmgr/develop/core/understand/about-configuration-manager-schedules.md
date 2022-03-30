@@ -1,5 +1,6 @@
 ---
 title: "Configuration Manager Schedules"
+description: "The SMS_ScheduleToken WMI class is an abstract parent class for the SMS_ST_ schedule token classes that handle the scheduling of events with differing frequencies."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
