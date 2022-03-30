@@ -21,7 +21,7 @@ ms.localizationpriority: medium
 The task sequence debugger is a troubleshooting tool. You deploy a task sequence in debug mode to a small collection. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation. The debugger currently runs on the same device as the task sequence engine, it's not a remote debugger.
 
 > [!TIP]
-> This feature was first introduced in version 1906 as a [pre-release feature](pre-release-features.md). Beginning with version 2203, it's no longer a pre-release feature.
+> This feature was first introduced in version 1906 as a [pre-release feature](../../core/servers/manage/pre-release-features.md). Beginning with version 2203, it's no longer a pre-release feature.
 >
 > Configuration Manager doesn't enable this optional feature by default. Before using it, you need to enable this feature. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 
