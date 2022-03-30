@@ -115,6 +115,8 @@ items:
           href: teams-on-cloud-pc.md
         - name: Create custom image to support Teams
           href: create-custom-image-support-teams.md
+      - name: Nested virtualization
+        href: nested-virtualization.md
       - name: App Assure
         href: app-assure.md
       - name: Optimize Cisco Webex
