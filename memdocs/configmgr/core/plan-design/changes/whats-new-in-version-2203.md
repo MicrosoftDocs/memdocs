@@ -150,6 +150,10 @@ You can now organize software update groups and packages by using folders. This 
 
 <!-- For more information, see [Link text](link). -->
 
+### Alerts for orchestration groups
+<!--12725116-->
+If an orchestration group fails, an alert is now displayed in in **Monitoring** > **Alerts** > **Active Alerts**. For more information, see [Monitor orchestration groups](../../../sum/deploy-use/monitor-orchestration-groups.md#alerts)
+
 ## OS deployment
 
 ### Escrow BitLocker recovery password to the site during a task sequence
