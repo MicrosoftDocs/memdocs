@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequenceReferenceDps Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class in Configuration Manager. It represents the package that is available for the task sequence at a specified distribution point."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
