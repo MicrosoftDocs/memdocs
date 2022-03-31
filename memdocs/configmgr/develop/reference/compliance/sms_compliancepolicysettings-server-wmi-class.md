@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent compliance policy settings using SMS_CompliancePolicySettings class in Configuration Manager.
 title: "SMS_CompliancePolicySettings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

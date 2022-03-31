@@ -51,6 +51,8 @@ You can create any device categories you want. For example:
 
 ## How to configure device categories
 
+You need to be a Global Administrator or Intune Administrator to perform these steps.
+
 ### Step 1: Create device categories in Intune
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **Device categories** > **Create device category** to add a new category.

@@ -370,6 +370,15 @@ A distribution point communicates to the management point in the following scena
 |-----------------|---------|---------|
 |HTTPS|--|443|
 
+### <a name="BKMK_PortsPullDP-DPSource"></a> Pull-Distribution point `-->` Distribution point configured as source
+
+|Description|UDP|TCP|
+|-----------------|---------|---------|
+|HTTP|--|80 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
+|HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
+|Express updates|--|8005 <sup>[Note 2](#bkmk_note2) Alternate port available</sup><!-- SCCMDocs#2091 -->|
+
+
 ### <a name="BKMK_PortsRSP-SQL"></a> Reporting Services point `-->` SQL Server
 
 |Description|UDP|TCP|
@@ -567,6 +576,8 @@ During the installation of a site that uses a remote SQL Server to host the site
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |Server Message Block (SMB)|--|445|
+|RPC Endpoint Mapper|135|135|
+|RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|
 |HTTP|--|80 or 8530 <sup>[Note 3](#bkmk_note3)</sup>|
 |HTTPS|--|443 or 8531 <sup>[Note 3](#bkmk_note3)</sup>|
 

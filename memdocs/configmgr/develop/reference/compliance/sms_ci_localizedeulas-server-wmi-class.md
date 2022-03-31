@@ -1,6 +1,7 @@
 ---
 title: "SMS_CI_LocalizedEulas Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class in Configuration Manager. It contains the localized Microsoft Software License Terms information for a configuration item." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

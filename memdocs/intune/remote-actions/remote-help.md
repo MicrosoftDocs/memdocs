@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
  
 # Use remote help with Intune and Microsoft Endpoint Manager
 
-In [public preview](../fundamentals/public-preview.md), *remote help* is an application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. During the session they can view the devices display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
+In [public preview](../fundamentals/public-preview.md), *remote help* is an application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. During the session, they can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
 
 This feature applies to:  
 - Windows 10/11
@@ -55,7 +55,7 @@ The Remote help app supports the following capabilities:
 
 - **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
 
-  Unenrolled devices always report as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and as such is unable to establish its compliance status.
+  Unenrolled devices are always reported as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and as such is unable to establish its compliance status.
 
 - **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access, like:
   - The users who can help others and the range of actions they can do while providing help, like who can run elevated privileges while helping.
@@ -71,7 +71,7 @@ The Remote help app supports the following capabilities:
 
 - [Intune subscription](../fundamentals/licenses.md)
 - Windows 10/11
-- Devices must install the *remote help* app. Device users can download the app directly from the Microsoft. See [Install and update remote help](#install-and-update-remote-help)
+- Devices must install the *remote help* app. Device users can download the app directly from Microsoft. See [Install and update remote help](#install-and-update-remote-help)
 
 > [!NOTE]
 > Remote help has the following limitations:  
@@ -122,9 +122,9 @@ Microsoft does not store any data about either the sharer or the helper for long
 
 ## Install and update remote help
 
-Remote help is available as  download from Microsoft and must be installed on each device before that device can be used to participate in a remote help session.
+Remote help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a remote help session.
 
-When an update to remote help that is required, users are prompted to install that version of remote help when the app opens. You can use the same process to download and install remote help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
+When an update to remote help is required, users are prompted to install that version of remote help when the app opens. You can use the same process to download and install remote help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
@@ -133,7 +133,7 @@ When an update to remote help that is required, users are prompted to install th
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **10.0.10011.16384**
+The most recent version of remote help is **10.0.22467.1000**
 
 ### Deploy remote help as a Win32 app
 
@@ -167,7 +167,7 @@ After you repackage remote help as a *.intunewin* file, use the procedures in [A
    - For *File or folder*, specify **RemoteHelp.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
-   - For *Value*, specify the [version of remote help](#download-remote-help) you are deploying. For example, **10.0.10011.16384**
+   - For *Value*, specify the [version of remote help](#download-remote-help) you are deploying. For example, **10.0.22467.1000**
    - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
 
 5. Proceed to the Assignments page, and then select an applicable device group or groups that should install the remote help app.
@@ -183,14 +183,14 @@ To configure your tenant to support remote help, review and complete the followi
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help (preview)**.
 
 2. On the **Settings** tab:
-   1. Set **Enable remote help** to **Enabled** to allow use of remote help. By default, this setting is *Enabled*.
+   1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Enabled*.
    2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting *Disabled*.
 
 3. Select **Save**.
 
 ### Task 2 – Configure permissions for remote help
 
-The following Intune RBAC permissions manage use of the remote help app. Set each to *Yes* to grant the permission:
+The following Intune RBAC permissions manage the use of the remote help app. Set each to *Yes* to grant the permission:
 
 - Category: **Remote help app**
 - Permissions:
@@ -215,7 +215,7 @@ After creating the custom roles that you'll use to provide different users with 
 
 4. On the **Admin Groups** page, select the group that contains the user you want to give the permissions to. Choose **Next**.
 
-5. On the **Scope (Groups)** page, choose a group containing the users/devices that the member above will be allowed to manage. You also can choose all users, or all devices. Choose **Next** to continue.
+5. On the **Scope (Groups)** page, choose a group containing the users/devices that the member above will be allowed to manage. You also can choose all users or all devices. Choose **Next** to continue.
 
    >[!IMPORTANT]
    >If a sharer’s device isn’t in the scope of a helper, that helper cannot provide assistance.
@@ -243,7 +243,7 @@ As a sharer, when you’ve requested help and both you and the helper are ready 
 
    At this time, the helper might request a session with full control of your device or choose only screen sharing. If they request full control, you can select the option to *Allow full control* or choose to *Decline the request*. Full control must be established before the help session starts. If full control is required after the sessions starts, both users must disconnect and restart the remote help session.
 
-4. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now assist resolving any issues on the device.
+4. After establishing the type of session (full control or screen sharing), the session is established, and the helper can now assist in resolving any issues on the device.
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
@@ -268,9 +268,9 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 3. After the sharer enters the security code, as the helper you'll see information about the sharer, including their full name, job title, company, profile picture, and verified domain. The sharer will see similar information about you.
 
-   At this time, you can request a session with full control of the sharers device or choose only screen sharing. If you request full control, the sharer can choose to *Allow full control* or to *Decline the request*. Full control must be established before the help session starts. If full control is required after the sessions starts, both users must disconnect and restart the remote help session.
+   At this time, you can request a session with full control of the sharer's device or choose only screen sharing. If you request full control, the sharer can choose to *Allow full control* or to *Decline the request*. Full control must be established before the help session starts. If full control is required after the sessions starts, both users must disconnect and restart the remote help session.
 
-4. After establishing that the session will use a shared display or full control, remote help will display a **Compliance Warning* if the sharers device fails to meet the conditions of its assigned compliance policies.
+4. After establishing that the session will use a shared display or full control, remote help will display a **Compliance Warning* if the sharer's device fails to meet the conditions of its assigned compliance policies.
 
    During assistance, helpers that have the *Elevation* permission can enter local admin permissions on your shared device. *Elevation* allows the helper to run executable programs or take similar actions when you lack sufficient permissions.
 
@@ -293,7 +293,7 @@ You can monitor the use of remote help from within Microsoft Endpoint Manager.
 
 Remote help logs data during installation and during remote help sessions, which can be of use when investigating issues with the app.
 
-**Installation of remote help** - When remote help installs or uninstalls, the following two logs are created in the device users Temp folder, for example `C:\Users\<username>\AppData\Local\Temp`. The \* in the log file name represents a date and time stamp of when the log was created.
+**Installation of remote help** - When remote help installs or uninstalls, the following two logs are created in the device users' Temp folder, for example, `C:\Users\<username>\AppData\Local\Temp`. The \* in the log file name represents a date and time stamp of when the log was created.
 
 - Remote_help_*_QuickAssist_Win10_x64.msi.log
 - Remote_help_*.log

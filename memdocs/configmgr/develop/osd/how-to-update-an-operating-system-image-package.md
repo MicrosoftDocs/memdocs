@@ -1,6 +1,7 @@
 ---
 title: "Update an OS Image Package"
 titleSuffix: "Configuration Manager"
+description: "Update an operating system using a Windows Image file that is associated with the operating system package in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

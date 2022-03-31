@@ -1,6 +1,7 @@
 ---
 title: "SMS_ConfigurationItemBaseClass Class"
 titleSuffix: "Configuration Manager"
+description: "The `SMS_ConfigurationItemBaseClass` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as an abstract base class for several Configuration Manager classes."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

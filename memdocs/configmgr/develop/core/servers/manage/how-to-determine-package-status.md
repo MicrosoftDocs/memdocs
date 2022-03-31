@@ -1,4 +1,5 @@
 ---
+description: Learn multiple ways to determine package status using package summarizer classes during the software distribution process. 
 title: "Determine Package Status"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

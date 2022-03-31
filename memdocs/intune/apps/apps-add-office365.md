@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/14/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -83,7 +83,6 @@ In this step, you provide information about the app suite. This information help
     - **Developer**: Microsoft appears as the developer.
     - **Owner**: Microsoft appears as the owner.
     - **Notes**: Enter any notes that you want to associate with this app.
-    - **Logo**: The Microsoft 365 Apps logo is displayed with the app when users browse the company portal.
 2. Click **Next** to display the **Configure app suite** page.
 
 ## Step 2 - (**Option 1**) Configure app suite using the configuration designer 

@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the Configuration Manager Console Node XML to cause a grid view to appear in the view panel displaying the RoleName and SiteCode properties.
 title: "Console Node XML"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

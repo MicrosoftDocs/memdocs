@@ -1,4 +1,5 @@
 ---
+description: Learn how to add a new rule to the CollectionRules property of the SMS_Collection Server WMI Class in Configuration Manager.
 title: "AddMembershipRule Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

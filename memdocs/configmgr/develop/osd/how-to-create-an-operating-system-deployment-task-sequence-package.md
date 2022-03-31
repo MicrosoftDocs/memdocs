@@ -1,6 +1,7 @@
 ---
 title: "Create an OS Deployment Task Sequence Package"
-titleSuffix: "Configuration Manager"
+titleSuffix: "Configuration Manager" 
+description: "creates an instance of the SMS_TaskSequencePackage class. It is advertised to clients who can then run the task sequence." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

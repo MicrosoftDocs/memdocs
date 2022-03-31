@@ -56,6 +56,8 @@ To enable modern authentication during enrollment, push the app to the device by
 
 To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required VPP app with an [application configuration policy](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment) applied. Deploy the Company Portal app in this way to enable Device Staging for devices only without user affinity. With Device Staging, a device is fully enrolled and receives device policies before the addition of a user affinity. Device Staging can also be used to transition a device without user affinity, to a device with user affinity.
 
+Specifically for the authentication method Setup Assistant with modern authentication, do not separately deploy the Company Portal app as a client app, with or without an app config targeted to it. ADE devices enrolling with Setup Assistant with modern authentication should be excluded from any separate Company Portal targeting in the tenant. The Company Portal is sent as a required app automatically when Setup Assistant with modern authentication is chosen as the authentication method in the assigned enrollment profile. 
+
 ## What is supervised mode?
 
 Apple introduced supervised mode in iOS/iPadOS 5. An iOS/iPadOS device in supervised mode provides more management control, like blocking of screen captures and blocking of the installation of apps from App Store. So it's especially useful for corporate-owned devices. Intune supports configuring devices for supervised mode as part of ADE.

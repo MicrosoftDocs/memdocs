@@ -1,4 +1,5 @@
 ---
+description: Learn how to add distribution points to the SMS_ContentPackage Server WMI Class content package with AddDistributionPoints.
 title: "AddDistributionPoints Method in Class SMS_ContentPackage"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

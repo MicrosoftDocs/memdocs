@@ -1,4 +1,5 @@
 ---
+description: Learn how to enable or disable the Software Distribution Advertised Programs Client Agent setting in the site control file.
 title: "Enable or Disable the Advertised Programs Client Agent"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

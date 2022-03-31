@@ -1,6 +1,7 @@
 ---
 title: "Add an OS Image Package"
 titleSuffix: "Configuration Manager"
+description: "Add an operating system image package by creating an instance of the SMS_ImagePackage class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

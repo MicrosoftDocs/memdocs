@@ -1,6 +1,7 @@
 ---
 title: "SMS_PackageBaseclass Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, WMI class is an SMS Provider server class that serves as the abstract base class for all packages."
 ms.date: "12/14/2017"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

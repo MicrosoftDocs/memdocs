@@ -2,12 +2,12 @@
 # required metadata
 
 title: Platforms and policy types supported by filters in Microsoft Intune
-description: Supported apps, compliance policies, and device configuration profiles that support filters in Microsoft Endpoint Manager and Microsoft Intune.
+description: See the supported apps, compliance policies, and device configuration profiles that support filters in Microsoft Endpoint Manager and Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/25/2022
+ms.date: 03/21/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -268,7 +268,7 @@ You can use filters for some common device configuration policies on the followi
 | Domain Join | ✔️ |
 | Edition upgrade and S mode switch | ✔️ |
 | Email | ✔️ |
-|Endpoint analytics proactive remediations scripts|✔️ |
+| Endpoint analytics proactive remediations scripts|✔️ |
 | Endpoint Protection | ✔️ |
 | Enrollment restrictions | ✔️ |
 | Identity Protection | ✔️ |
@@ -286,13 +286,13 @@ You can use filters for some common device configuration policies on the followi
 | Wi-Fi | ✔️ |
 | Windows health monitoring | ✔️ |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ❌ |
-| Antivirus | ❌ |
-| Attack surface reduction | ❌ |
-| Disk encryption | ❌ |
-| Endpoint detection and response | ❌ |
-| Firewall | ❌ |
-| Security Baselines | ❌ |
+| Account protection | ✔️ |
+| Antivirus | ✔️ |
+| Attack surface reduction | ✔️ |
+| Disk encryption | ✔️ |
+| Endpoint detection and response | ✔️ |
+| Firewall | ✔️ |
+| Security Baselines | ✔️ |
 
 ## Not supported
 

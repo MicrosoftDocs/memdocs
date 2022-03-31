@@ -9,8 +9,8 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 07/30/2021
@@ -28,7 +28,7 @@ ms.topic: troubleshooting
 When the out-of-box-experience (OOBE) includes unexpected Autopilot behavior, it's useful to check if the device received an Autopilot profile. If so, check the settings that the profile contained. Depending on the Windows client release, there are different mechanisms available to do that.
 
 > [!NOTE]
-> **[Preview]** With Windows 11, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. The [Windows Autopilot diagnostics page](windows-autopilot-whats-new.md#preview-windows-autopilot-diagnostics-page) provides IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. This feature can be enabled by going to the [ESP profile](../intune/enrollment/windows-enrollment-status.md) and selecting **Yes** to **Allow users to collect logs about installation errors**. This feature is currently supported for commercial OOBE, and Autopilot user-driven mode.
+> With Windows 11, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. The [Windows Autopilot diagnostics page](windows-autopilot-whats-new.md#windows-autopilot-diagnostics-page) provides IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. This feature can be enabled by going to the [ESP profile](../intune/enrollment/windows-enrollment-status.md) and selecting **Yes** to **Allow users to collect logs about installation errors**. This feature is currently supported for commercial OOBE, and Autopilot user-driven mode.
 
 ## Can't connect to MDM terms of use error
 

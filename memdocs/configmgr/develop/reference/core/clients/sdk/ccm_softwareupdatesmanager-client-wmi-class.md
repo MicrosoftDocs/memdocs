@@ -1,6 +1,7 @@
 ---
 title: "CCM_SoftwareUpdatesManager Class"
 titleSuffix: "Configuration Manager"
+description: "The CCM_SoftwareUpdatesManager WMI class is a client class that exposes methods to install, schedule and other actions on set of software updates."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
