@@ -1,5 +1,5 @@
 ---
-description: Learn how to utilize Configuration Manager's ability to be aware of system resources state and act accordingly using  the LaunchConditions class.
+description: Learn how to utilize Configuration Manager's ability to be aware of system resources state and act accordingly using the LaunchConditions class.
 title: "Client Resource Conditions"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
