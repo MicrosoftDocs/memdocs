@@ -39,7 +39,7 @@ ms.collection:
  
 ## Enable enrollment in Microsoft Intune  
 
-Complete these steps to enable enrollment in your Microsoft Intune tenant. 
+Complete these steps first to enable enrollment in your Microsoft Intune tenant. 
 
 1. [Verify that devices are eligible for Apple device enrollment](https://support.apple.com/en-us/HT204142#eligibility)
 2. [Configure domains](../fundamentals/custom-domain-name-configure.md)
