@@ -1,6 +1,7 @@
 ---
 title: "SMS_IntuneAccountInfo Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_IntuneAccountInfo WMI class is an SMS Provider server class that represents Microsoft Intune account information."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

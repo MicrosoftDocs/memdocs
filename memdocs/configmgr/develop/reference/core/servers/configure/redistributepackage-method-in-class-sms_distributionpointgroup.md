@@ -1,6 +1,7 @@
 ---
 title: "ReDistributePackage Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, The ReDistributePackage WMI class method redistributes a package to all of the member distribution points."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
