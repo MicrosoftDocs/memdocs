@@ -302,6 +302,9 @@ Remote help logs data during installation and during remote help sessions, which
 
 - Event Viewer > Application and Services > Microsoft > Windows > RemoteHelp
 
+## Known Issues
+
+
 ## Next steps
 
 [Get support in Microsoft Endpoint Manager admin center](../../get-support.md)
