@@ -1,6 +1,7 @@
 ---
 title: "SMS_ImageServicingProgress Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ImageServicingProgress WMI class is an SMS Provider server class that represents software update installation status in offline servicing image."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

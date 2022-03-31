@@ -1,6 +1,7 @@
 ---
 title: "CancelRetire Method"
 titleSuffix: "Configuration Manager"
+description: "The CancelRetire WMI class method cancels the retirement of this device from Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

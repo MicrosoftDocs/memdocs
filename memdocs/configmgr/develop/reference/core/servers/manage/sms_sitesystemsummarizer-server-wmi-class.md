@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a site system summarizer using the SMS_SiteSystemSummarizer class in Configuration Manager.
 title: "SMS_SiteSystemSummarizer Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_MeteredFiles and SMS_FileUsageSummary classes to view file usage summary in Configuration Manager.
 title: "View File Usage Summary Information"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

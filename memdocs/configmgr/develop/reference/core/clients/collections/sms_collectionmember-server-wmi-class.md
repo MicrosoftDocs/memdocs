@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_CollectionMember class that serves as the abstract base class for the member classes for each collection.
 title: "SMS_CollectionMember Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
