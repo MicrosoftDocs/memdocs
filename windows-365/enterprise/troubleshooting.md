@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 03/31/2022
 ms.topic: troubleshooting
 ms.service: cloudpc
 ms.subservice: 
@@ -80,6 +80,16 @@ Finally, consider temporarily deploying a test Azure virtual machine to the Azur
 ## Troubleshooting by end users
 
 The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](end-user-access-cloud-pc.md#end-user-actions)
+
+## Improve video playback
+
+You can improve video playback performance on your Cloud PCs by using multimedia redirection (MMR).
+
+For Cloud PCs, MMR is supported on the following platforms: Windows, macOS, ChromeOS, Linux.
+
+For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection).
+
+MMR is in [public preview](/windows-365/public-preview) for Windows 365 Cloud PCs.
 
 ## Audio and video redirection not working
 

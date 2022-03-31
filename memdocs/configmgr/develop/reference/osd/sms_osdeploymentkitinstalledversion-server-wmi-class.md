@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a mapping of server names to an installed Assessment and Deployment Kit (ADK) version using SMS_OSDeploymentKitInstalledVersion class.
 title: "SMS_OSDeploymentKitInstalledVersion Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

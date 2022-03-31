@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_SoftwareConditionExpression Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a condition expression to verify if a specified product is installed on the destination computer."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
