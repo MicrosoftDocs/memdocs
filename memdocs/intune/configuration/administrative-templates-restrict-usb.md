@@ -95,7 +95,7 @@ After the device configuration profile is deployed to your targeted devices, you
 
 If a USB device is blocked from installing, then you see a message similar to the following message:
 
-:::image type="content" source="media/administrative-templates-restrict-usb/installation-forbidden.png" alt-text="The installation of the device is forbidden by system policy message.":::
+`The installation of this device is forbidden by system policy. Contact your system administrator.`
 
 In the following example, the iPad is blocked because its device ID isn't in the allowed device ID list:
 
@@ -103,9 +103,9 @@ In the following example, the iPad is blocked because its device ID isn't in the
 
 ## A device is blocked but should be allowed
 
-Some USB devices have multiple GUIDs, and it's common to miss some GUIDs in your settings. As a result, a USB device that's allowed in your settings, might be blocked on the device.
+Some USB devices have multiple GUIDs, and it's common to miss some GUIDs in your policy settings. As a result, a USB device that's allowed in your settings, might be blocked on the device.
 
-For example, in the **Allow installation of devices using drivers that match these device setup classes** setting, the Multimedia class GUID is entered, and the camera is blocked:
+In the following example, in the **Allow installation of devices using drivers that match these device setup classes** setting, the Multimedia class GUID is entered, and the camera is blocked:
 
 :::image type="content" source="media/administrative-templates-restrict-usb/camera-blocked.png" alt-text="Windows can't find your camera message on a Windows device.":::
 
@@ -119,11 +119,11 @@ To find the GUID of your device, use the following steps:
 2. In the file:
 
     1. Search for **Restricted installation of devices not described by policy**. 
-    2. In this section, find the `Class GUID of device changed to: {GUID}` text. This `{GUID}` needs to added your policy.
+    2. In this section, find the `Class GUID of device changed to: {GUID}` text. This `{GUID}` needs added to your policy.
 
-        In the following example, look at **Class GUID of device changed to: {36fc9e60-c465-11cf-8056-444553540000}**:
+        In the following example, you see the `Class GUID of device changed to: {36fc9e60-c465-11cf-8056-444553540000}` text:
 
-        ```output
+        ```log
         >>>  [Device Install (Hardware initiated) - USB\VID_046D&PID_C534\5&bd89ed7&0&2]
         >>>  Section start 2020/01/20 17:26:03.547
        dvi: {Build Driver List} 17:26:03.597
@@ -167,12 +167,12 @@ To find the GUID of your device, use the following steps:
 
 ## Common class GUIDs to allow USB devices
 
-- **Keyboard and mouse**: To allow, add the following GUIDs to the device profile:
+- **Keyboard and mouse**: Add the following GUIDs to the device profile:
 
   - Keyboard: `{4d36e96b-e325-11ce-bfc1-08002be10318}`
   - Mouse: `{4d36e96f-e325-11ce-bfc1-08002be10318}`
 
-- **Cameras, headphones and microphones**: To allow, add the following GUIDs to the device profile:
+- **Cameras, headphones and microphones**: Add the following GUIDs to the device profile:
 
   - USB Bus devices (hubs and host controllers): `{36fc9e60-c465-11cf-8056-444553540000}`
   - Human Interface Devices (HID): `{745a17a0-74d3-11d0-b6fe-00a0c90f57da}`
@@ -183,7 +183,7 @@ To find the GUID of your device, use the following steps:
   - Biometric devices: `{53d29ef7-377c-4d14-864b-eb3a85769359}`
   - Generic software devices: `{62f9c741-b25a-46ce-b54c-9bccce08b6f2}`
 
-- **3.5 mm headphones**: To allow, add the following GUIDs to the device profile:
+- **3.5 mm headphones**: Add the following GUIDs to the device profile:
 
   - Multimedia devices: `{4d36e96c-e325-11ce-bfc1-08002be10318}`
   - Audio endpoint: `{c166523c-fe0c-4a94-a586-f1a80cfbbf3e}`
