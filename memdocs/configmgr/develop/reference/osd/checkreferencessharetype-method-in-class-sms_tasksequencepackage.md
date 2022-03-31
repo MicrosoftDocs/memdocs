@@ -1,6 +1,7 @@
 ---
 title: "CheckReferencesShareType Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CheckReferencesShareType WMI class method checks all referred packages for this task sequence and returns all packages that are not shared." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
