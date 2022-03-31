@@ -1,6 +1,7 @@
 ---
 title: "Delete a Software Metering Rule"
 titleSuffix: "Configuration Manager"
+description: "Delete a software metering rule by loading the instance of the rule identified by the software metering rule ID, and calling the delete method."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
