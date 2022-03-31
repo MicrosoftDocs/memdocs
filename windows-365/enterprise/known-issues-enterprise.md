@@ -78,9 +78,9 @@ The following device compliance settings report as **Not Compliant** when being 
 
 **Troubleshooting steps**: Follow these steps:
 
-- [Create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs).
-- For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
-- Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment. 
+1. [Create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs).
+2. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
+3. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment. 
 
 ## Next steps
 
