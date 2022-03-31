@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent an update to an instance of SMS_UserApplicationRequest using SMS_UserApplicationRequestHistoryItem class.
 title: "SMS_UserApplicationRequestHistoryItem Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

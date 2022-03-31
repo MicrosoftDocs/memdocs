@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_CaptureSystemImageAction Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_TaskSequence_CaptureSystemImageAction class represents a task sequence action that specifies an existing network share and WIM file to use when saving the image."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

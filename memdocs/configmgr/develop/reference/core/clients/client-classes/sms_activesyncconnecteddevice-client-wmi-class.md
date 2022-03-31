@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a device connected to the ActiveSyn service using SMS_ActiveSyncConnectedDevice class.
 title: "SMS_ActiveSyncConnectedDevice Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

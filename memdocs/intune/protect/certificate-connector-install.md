@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/29/2021
+ms.date: 03/30/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -102,6 +102,8 @@ Use the following procedure to both configure a new connector and modify a previ
    - **Domain user account** – Use any domain user account that is an administrator on the Windows Server.
 
 4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access. For example, `http://proxy.contoso.com`.
+   > [!TIP]  
+   > Be sure to include the HTTP or HTTPS prefix, which is a change from proxy configurations for previous connectors.
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
@@ -134,7 +136,7 @@ After you configure a Certificate Connector for Microsoft Intune on a server, yo
 
 ## Remove the connector
 
-To uninstall the Certificate Connector for Microsoft Intune form a Windows Server, on the server run **IntuneCertificateConnector.exe**, which is the same [software you use to install the connector](#download-and-install-the-connector-software). When run on a server that has the connector installed, the only available option is to remove the current connector installation.
+To uninstall the Certificate Connector for Microsoft Intune from a Windows Server, on the server run **IntuneCertificateConnector.exe**, which is the same [software you use to install the connector](#download-and-install-the-connector-software). When run on a server that has the connector installed, the only available option is to remove the current connector installation.
 ## Next steps
 
 Deploy:

@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the current operational state of the configuration item that is part of a job or task with ICIINFO::GetJobState.
 title: "ICIINFO::GetJobState"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

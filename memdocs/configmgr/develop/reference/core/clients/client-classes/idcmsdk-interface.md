@@ -1,6 +1,7 @@
 ---
 title: "IDCMSDK Interface"
 titleSuffix: "Configuration Manager"
+description: "The interface represents the Desired Configuration Management SDK and defines methods used to perform operations on baseline configuration items."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

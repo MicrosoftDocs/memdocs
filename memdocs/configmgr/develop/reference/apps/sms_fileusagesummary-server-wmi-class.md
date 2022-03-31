@@ -11,8 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
-
+description: Learn about the simplified syntax, methods, properties and requirements of the SMS_FileUsageSummary server class.
 ---
 # SMS_FileUsageSummary Server WMI Class
 The `SMS_FileUsageSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides a usage summary of a metered file.  

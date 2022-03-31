@@ -1,4 +1,5 @@
 ---
+description: Learn how to create an abstract base class representing operating system extended history for a client computer using SMS_G_System_ExtHistory.
 title: "SMS_G_System_ExtHistory Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

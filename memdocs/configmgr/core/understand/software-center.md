@@ -197,6 +197,9 @@ Specify how Software Center applies changes to software before the deadline.
 
 - **Suspend Software Center activities when my computer is in presentation mode**: This setting is enabled by default.
 
+> [!NOTE]
+> These settings are designed to be managed by end users and do not impact deployment deadlines.
+
 When instructed by your IT admin, select **Sync Policy**. This computer checks with the servers for anything new, such as applications, software updates, or operating systems.
 
 ### Remote Control

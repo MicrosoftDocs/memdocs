@@ -1,6 +1,7 @@
 ---
 title: "SMS_DPGroupPackages Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_DPGroupPackages WMI class is an SMS Provider server class that represents distribution point packages."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the operating system deployment task sequencing environment with ITSEnvClass.
 title: "ITSEnvClass Interface"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

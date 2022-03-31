@@ -1,4 +1,5 @@
 ---
+description: Learn all about software distribution programs and how they are packaged and made available to a collection of clients. 
 title: "Software Distribution Programs"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

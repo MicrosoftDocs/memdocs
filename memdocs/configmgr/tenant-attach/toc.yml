@@ -3,6 +3,8 @@ items:
   href: index.yml
 - name: Deploy and use
   items:
+  - name: Prerequisites for tenant attach
+    href: prerequisites.md  
   - name: Enable tenant attach
     href: device-sync-actions.md
   - name: Client details

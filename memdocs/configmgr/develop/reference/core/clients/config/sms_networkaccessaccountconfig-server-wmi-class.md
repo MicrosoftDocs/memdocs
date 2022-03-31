@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a computer or domain account used to access files on a Configuration Manager site system.
 title: "SMS_NetworkAccessAccountConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

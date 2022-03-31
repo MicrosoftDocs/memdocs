@@ -1,6 +1,7 @@
 ---
 title: "Perform a Synchronous Query by Using WMI"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, you perform a synchronous query for Configuration Manager objects by calling the SWbemServices object ExecQuery method and passing a WQL query."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Learn how to define functions to interact with the handler in Configuration Manager using IAppManagementHandler.
 title: "IAppManagementHandler Interface"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,7 @@
 ---
 title: "Read the Tally Intervals for a Site"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, you can read the available tally intervals for a site by inspecting the site control file SMS_COMPONENT_STATUS_SUMMARIZER object Summary_Intervals embedded property list."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

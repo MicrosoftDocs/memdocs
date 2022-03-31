@@ -1,6 +1,7 @@
 ---
 title: "Date and Time Formats"
 titleSuffix: "Configuration Manager"
+description: "When you write queries or compose reports from information that is stored in the Configuration Manager site database, you can express the date and time in any valid SQL format."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

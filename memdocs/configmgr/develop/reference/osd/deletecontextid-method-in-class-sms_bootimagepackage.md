@@ -1,4 +1,5 @@
 ---
+description: Learn how to delete the status queue that is associated with the specified context ID for the boot image package using the DeleteContextID.
 title: "DeleteContextID Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,7 @@
 ---
 title: "ResolvePendingRegistrationRecord Method"
 titleSuffix: "Configuration Manager"
+description: "The ResolvePendingRegistrationRecord Windows Management Instrumentation (WMI) class method resolves any conflicts for the pending registration records."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
