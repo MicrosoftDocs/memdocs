@@ -1,6 +1,7 @@
 ---
 title: "SMS_ImagePackage Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that serves as the unit of distribution for image source files. The image source files are used to deploy a valid operating system."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

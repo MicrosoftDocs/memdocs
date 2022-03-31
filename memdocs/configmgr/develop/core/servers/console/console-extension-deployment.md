@@ -1,6 +1,7 @@
 ---
 title: "Console Extension Deployment"
 titleSuffix: "Configuration Manager"
+description: "The deployment of a typical Configuration Manager extension has to account for actions, forms, views, management classes and node extensions."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

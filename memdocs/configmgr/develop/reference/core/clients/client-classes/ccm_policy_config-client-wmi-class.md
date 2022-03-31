@@ -1,6 +1,7 @@
 ---
 title: "CCM_Policy_Config Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CCM_Policy_Config class is a client WMI class that represents a policy configuration used by the Policy Agent that needs to be replicated."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

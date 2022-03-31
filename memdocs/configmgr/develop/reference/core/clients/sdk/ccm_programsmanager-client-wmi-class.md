@@ -1,6 +1,7 @@
 ---
 title: "CCM_ProgramsManager Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CCM_ProgamsManager WMI class is a public client class that manages a specified software distribution program."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
