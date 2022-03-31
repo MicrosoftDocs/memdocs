@@ -1,6 +1,7 @@
 ---
 title: "SMS_OperatingSystemInstallPackage Class"
 titleSuffix: "Configuration Manager"
+description: "Serves as the unit of distribution for source files. The source files are used in a scripted installation of a valid operating system."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

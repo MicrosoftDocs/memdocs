@@ -1,6 +1,7 @@
 ---
 title: "CCM_RemoteControlManager Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager, that contains several methods to help manage client remote control settings."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
