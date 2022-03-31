@@ -1,4 +1,5 @@
 ---
+description: Learn how to add a property page to an existing property sheet, in Configuration Manager,
 title: "Add a Property Page to an Existing Property Sheet"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

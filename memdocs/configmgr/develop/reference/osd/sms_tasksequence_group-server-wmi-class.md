@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a group of steps in a task sequence using SMS_TaskSequence_Group class in Configuration Manager.
 title: "SMS_TaskSequence_Group Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
