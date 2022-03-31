@@ -1,6 +1,7 @@
 ---
 title: "Console RootNodes Element"
 titleSuffix: "Configuration Manager"
+description: "The RootNodes element is responsible for rendering a node. The `NodeDescription` node defines these user interface elements."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
