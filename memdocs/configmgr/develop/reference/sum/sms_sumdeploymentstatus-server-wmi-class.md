@@ -1,6 +1,7 @@
 ---
 title: "SMS_SUMDeploymentStatus Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_SUMDeploymentStatus WMI class represents per-deployment-state summary for SUM deployments in-console monitoring."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
