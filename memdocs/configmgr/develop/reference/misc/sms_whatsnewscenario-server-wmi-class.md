@@ -1,7 +1,7 @@
 ---
 title: "SMS_WhatsNewScenario Class"
 titleSuffix: "Configuration Manager"
-description: "SMS_WhatsNewScenario Server WMI Class is for internal use only"
+description: "SMS_WhatsNewScenario Server WMI Class is for internal use only."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
