@@ -1,6 +1,7 @@
 ---
 title: "IAppManagementHandler::CompleteEnforcement"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the IAppManagementHandler::CompleteEnforcement method completes the installation of a specific application. This method will be called only when the handler returned valid reconnection data in the EnforceApp call."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

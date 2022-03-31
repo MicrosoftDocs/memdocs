@@ -1,4 +1,5 @@
 ---
+description: Learn how to validate a new location for a driver update using ValidateNewPackageSource class in Configuration Manager.
 title: ValidateNewPackageSource method in class SMS_DriverPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

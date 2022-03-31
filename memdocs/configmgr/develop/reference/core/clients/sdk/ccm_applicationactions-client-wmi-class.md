@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent application actions using CCM_ApplicationActions class in Configuration Manager.
 title: "CCM_ApplicationActions Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,7 @@
 ---
 title: "VerifySignature Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the VerifySignature WMI class method verifies the data signature."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
