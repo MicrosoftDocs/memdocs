@@ -67,13 +67,17 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
 
 1. On an internet-connected Windows PC or server, open an elevated Windows PowerShell command window.
 
-1. Enter the following commands to install the necessary modules:
+1. Enter the following commands to install and import the necessary modules:
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
     Install-Module AzureAD -Force
-    Install-Module WindowsAutopilotIntune -Force
     Install-Module Microsoft.Graph.Intune -Force
+    Install-Module WindowsAutopilotIntune -Force
+
+    Import-Module AzureAD
+    Import-Module Microsoft.Graph.Intune
+    Import-Module WindowsAutopilotIntune
     ```
 
 1. Enter the following commands and provide Intune administrative credentials:
