@@ -64,7 +64,7 @@ Only the default Enrollment Status Page (ESP) profile is supported for Windows 3
 
 For default ESP profiles, when using hybrid Azure Active Directory (Azure AD) Join, you must set the **Only show page to devices provisioned by out-of-box experience (OOBE)** setting to **No**.
 
-## Device compliance policies for Windows 365 Cloud PCs
+## Cloud PC reports as not compliant for compliance policy
 
 The following device compliance settings report as **Not applicable** when being evaluated for a Cloud PC:
 
