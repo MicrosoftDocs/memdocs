@@ -1,6 +1,7 @@
 ---
 title: "RemovePackages Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the RemovePackages WMI class method removes a set of packages from this distribution point group."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
