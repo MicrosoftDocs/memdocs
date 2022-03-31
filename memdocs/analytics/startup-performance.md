@@ -2,7 +2,7 @@
 title: Startup performance in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about device startup performance in Endpoint Analytics
-ms.date: 11/15/2021
+ms.date: 03/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -73,6 +73,10 @@ The **Startup performance** page has reporting tabs that provide support for the
    - **Device count**: The count of devices that experienced a delay to a responsive desktop from the process.
    - **Median delay**: The median delay time of the process for the counted devices.
    - **Total delay**: The sum of the delays for all of the counted devices.
+
+## Known issues
+
+[!INCLUDE [Endpoint analytics export to csv value mapping known issue](includes/known-issue-csv-mapping.md)]
 
 ## Next steps
 
