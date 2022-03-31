@@ -21,6 +21,7 @@ When reporting data is exported to a `.csv` file, the exported data doesn't use 
 
 - A value of `-1` or `-2` in the `EndpointAnalyticsScore`, `StartupPerformanceScore`, and `AppReliabilityScore` columns means the associated score is unavailable
 - Health status: </br>
+
    |HealthStatus `.csv` value| Report value|
    |---|---|
    |0|Unknown|
