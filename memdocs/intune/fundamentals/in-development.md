@@ -104,6 +104,9 @@ As a public preview, we’re adding new Setup Assistant screens you can configur
 
 ## Device management
 
+### Device actions available to Android (AOSP) users in Microsoft Intune app<!-- 12645718 -->
+AOSP device users will be able to delete, wipe, and rename their enrolled devices in the Microsoft Intune app. This feature will be available on devices enrolled in Intune as user-associated (Android) AOSP devices. 
+
 ### Updating the device diagnostics folder structure<!-- 8504019 -->
 We’re updating how Intune exports [Windows Device Diagnostic data](../remote-actions/collect-diagnostics.md). Today, the zip file is flat structure of numbered folders that doesn’t identify their contents. Once updated, the logs collected will be named to match the data that was collected, and if multiple files are collected a folder will be created.
 
