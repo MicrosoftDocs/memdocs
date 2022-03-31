@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a program or command to run when software is distributed to a client computer using SMS_Program class.
 title: "SMS_Program Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

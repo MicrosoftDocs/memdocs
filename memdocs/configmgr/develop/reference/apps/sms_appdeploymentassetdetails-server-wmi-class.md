@@ -1,6 +1,7 @@
 ---
 title: "SMS_AppDeploymentAssetDetails Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_AppDeploymentAssetDetails WMI class is an SMS Provider server class that represents asset-level details about the deployment."
 ms.date: "04/30/2020"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

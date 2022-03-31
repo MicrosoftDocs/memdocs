@@ -1,6 +1,7 @@
 ---
 title: "Import a New Computer"
 titleSuffix: "Configuration Manager"
+description: "Add a new computer directly to the Configuration Manager database by calling the ImportMachineEntry Method in Class SMS_Site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

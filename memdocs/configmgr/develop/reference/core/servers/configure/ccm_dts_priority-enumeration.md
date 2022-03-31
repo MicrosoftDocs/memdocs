@@ -1,6 +1,7 @@
 ---
 title: CCM_DTS_PRIORITY enumeration
 titleSuffix: Configuration Manager
+description: The CCM_DTS_PRIORITY enumeration indicates the priority of the download.
 ms.date: 09/20/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

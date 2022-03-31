@@ -1,6 +1,7 @@
 ---
 title: "AddChangeNotification Method in SMS_OperatingSystemInstallPackage"
 titleSuffix: "Configuration Manager"
+description: "The AddChangeNotification WMI class method adds an operating system install package change notification."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

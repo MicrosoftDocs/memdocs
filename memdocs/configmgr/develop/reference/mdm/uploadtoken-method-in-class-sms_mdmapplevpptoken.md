@@ -1,6 +1,7 @@
 ---
 title: "UploadToken Method"
 titleSuffix: "Configuration Manager"
+description: "The UploadToken WMI class method uploads an Apple Volume Purchase Program (VPP) token to Microsoft Intune."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
