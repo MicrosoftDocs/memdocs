@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/10/2021
+ms.date: 03/31/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -57,7 +57,7 @@ To use this feature, you need:
 * An Azure subscription that you can sign in to. If you don't have an Azure subscription, you can [sign up for a free trial](https://azure.microsoft.com/free/).
 * A Microsoft Intune environment (tenant) in Azure
 * A user who's a **Global Administrator** or **Intune Service Administrator** for the Intune tenant.
-* A user needs a Log Analytics Contributor role in Log Analytics Workspace to be able to configure the collection of logs from Azure Storage.
+* To configure the log collection from Azure Storage, you need the **Log Analytics Contributor** role in the Log Analytics Workspace. For more information on the different roles, and what they can do, see [Manage access to log data and workspaces in Azure Monitor](/azure/azure-monitor/logs/manage-access).
 
 Depending on where you want to route the audit log data, you need one of the following services:
 
