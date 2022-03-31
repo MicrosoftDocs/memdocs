@@ -1,6 +1,7 @@
 ---
 title: "AcceptEULA Method in SMS_SoftwareUpdate"
 titleSuffix: "Configuration Manager"
+description: "The AcceptEULA WMI class method accepts or declines the Microsoft Software License Terms of a configuration item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

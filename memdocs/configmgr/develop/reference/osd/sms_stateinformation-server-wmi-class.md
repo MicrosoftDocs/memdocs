@@ -1,6 +1,7 @@
 ---
 title: "SMS_StateInformation Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_StateInformation WMI class provides information about a state message."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

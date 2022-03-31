@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent all OSD-related constants and settings with their ADK-specific values using SMS_OSDeploymentConfig class.
 title: "SMS_OSDeploymentConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

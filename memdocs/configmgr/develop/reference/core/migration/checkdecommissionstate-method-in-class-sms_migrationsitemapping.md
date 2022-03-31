@@ -1,4 +1,5 @@
 ---
+description: Learn how to check to see if site mapping can be decommissioned using CheckDecommissionState class method.
 title: "CheckDecommissionState Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
