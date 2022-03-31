@@ -52,14 +52,14 @@ Complete these steps first to enable enrollment in your Microsoft Intune tenant.
 ## Enroll devices
 After you enable enrollment, use one of the supported methods described in this section to enroll user-owned and company-owned devices.   
 
-## User-owned macOS devices (BYOD)
+### User-owned macOS devices (BYOD)
 
 Intune supports *bring-your-own-device*, or *BYOD*, which lets people enroll their personal devices themselves. To finish setting up enrollment for BYOD scenarios, tell your licensed users to use one of these options to enroll devices:  
 
 - Sign in to [Company Portal website](https://portal.manage.microsoft.com) and follow on-screen instructions to add device. 
 - Install Company Portal app for Mac at [aka.ms/EnrollMyMac](https://aka.ms/EnrollMyMac) and follow-on screen instructions to add device.    
 
-## Company-owned macOS devices
+### Company-owned macOS devices
 Intune supports the following enrollment methods for company-owned macOS devices. Select a hyperlinked method to open its setup steps. 
 
 - [Apple Automated Device Enrollment](device-enrollment-program-enroll-macos.md): Use this method to automate the enrollment experience on devices purchased through Apple Business Manager or Apple School Manager. Automated device enrollment deploys the enrollment profile over-the-air, so you don't need to have physical access to devices.   
