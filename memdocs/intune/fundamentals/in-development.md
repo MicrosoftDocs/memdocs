@@ -116,7 +116,7 @@ To take advantage of this diagnostic logging update, devices must install one of
 
 These updates are expected to be made available through Windows Updates on April 12, 2022.
 
-### Support for Audio Alert on Andriod corporate owned work profiles and fully managed (COBO and COPE) devices<!-- 13499471 -->
+### Support for Audio Alert on Android corporate-owned work- profiles and fully managed (COBO and COPE) devices<!-- 13499471 -->
 You'll be able to use the **Play lost device sound** device action to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise corporate owned work profiles and fully managed devices.
 
 For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
