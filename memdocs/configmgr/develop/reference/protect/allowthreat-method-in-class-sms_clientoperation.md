@@ -1,6 +1,7 @@
 ---
 title: "AllowThreat Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the AllowThreat WMI class method that allows the specified threat to all members in a specific collection."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "ReportSMSStatusMessage Function"
 titleSuffix: "Configuration Manager"
+description: "The ReportSMSStatusMessage function submits a status message object to the Configuration Manager status system and then deallocates the object."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
