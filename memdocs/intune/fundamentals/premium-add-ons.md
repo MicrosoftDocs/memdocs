@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Premium add-ons 
+title: Premium add-ons for Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Microsoft Endpoint Manager is introducing a new centralized experience to help IT admins identify which capabilities are Premium add-ons. These capabilities can be added at an extra cost to the licensing options that include Microsoft Endpoint Manager or Intune. You can find it under **Tenant administration** > **Premium add-ons**. The **Summary** blade shows all Premium add-ons that have been released, a short description, and the status of the add-on. 
+description: When you purchase licenses for Premium add-ons for Microsoft Intune, you expand the capabilities for device management with Microsoft Endpoint Manager.  
 keywords:
 author: smbhardwaj 
 ms.author: smbhardwaj
@@ -25,18 +25,18 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: 
+  - M365-identity-device-management 
   - highpri
 ---
 
 # Use Premium add-ons capabilities with Intune
 
-Microsoft Endpoint Manager now supports Premium add-ons. All Premium add-ons can be found under **Tenant administration** > **Premium add-ons**. The **Summary** blade shows all Premium add-ons that have been made Generally Available, a short description, and the status of the add-on. 
+Microsoft Endpoint Manager now offers Premium add-ons. You can find premium add-ons in Intune under **Tenant administration** > **Premium add-ons**. The **Summary** blade shows all premium add-ons that have been released, a short description, and the status of the add-on. You can view the status of each add-on as either **Active** or **Available for trial or purchase**. 
 
-You can view the status of each add-on as either **Active** or **Available for trial or purchase**. Global and Billing administrators can use the **Premium add-ons** page to start free trials or purchase licenses for each Premium add-on. 
+Licenses for the Premium add-ons can be added for an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
 
-Premium add-ons capabilities can be added for an extra cost to the licensing options that include Microsoft Endpoint Manager or Intune. 
-
-## What add-ons are available 
+Global and Billing administrators can use the **Premium add-ons** page from the [Microsoft 365 admin center](https://admin.microsoft.com) to start a free trial or purchase licenses for each Premium add-on. 
+## What add-ons capabilities are available 
 
 The following Premium add-ons are available: 
 
@@ -44,17 +44,17 @@ The following Premium add-ons are available:
 
 ## What happens when you try/buy the Premium add-ons capability 
 
-Global and Billing administrators have the appropriate permissions to start free trials or purchase licenses for Premium add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com).  
+Global and Billing administrators can choose to start free trials or purchase licenses for Premium add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com).  
  
-Starting a free trial gives you a 90-day period to use the Premium add-on without any charge. You'll get 250 user licenses to use within your tenant. At the end of the trial period, there's a 30-day grace period. After this point, you'll be unable to use the Premium add-on within your tenant unless you have purchased licenses associated with your tenant. There's a one-time limit to start a trial for each tenant.  
+Starting a free trial gives you a 90-day period to use the Premium add-on capability without any charge. Trials can be up to 250 users per tenant. At the end of the trial period, there's a 30-day grace period. After this point, you'll be unable to use the Premium add-on capability in Endpoint Manager for users within your tenant unless you've purchased the appropriate licenses. There's a one-time limit to start a trial for each tenant.  
  
-Purchasing licenses lets you use the Premium add-on in your tenant for the duration in which the licenses are active on your tenant based on the option selected during the Billing process. 
+Purchasing licenses lets you use the Premium add-on capability in your tenant for the duration in which the licenses are active on your tenant based on the option selected during the Billing process. 
 
 ## How to try or buy the premium add-ons capability 
 
-Premium add-ons are disabled in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. Global and Billing administrators have the appropriate permissions to start free trials or purchase licenses for Premium add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). 
+Premium add-on capabilities are disabled in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) unless you are in the free trial period or have purchased licenses. Global and Billing administrators can choose to start a free trial or purchase licenses for Premium add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). 
 
-Administrators who aren't Global or Billing administrators can still see the status of all Premium add-ons in their tenant (but can't start a free trial or purchase licenses).  
+Administrators who aren't Global or Billing administrators can still see the status of their tenant's Premium add-ons trial or active licenses in the centralized Premium add-on page in Endpoint Manager (but can't start a free trial or purchase licenses).  
 
 ### How to start a trial through the Microsoft 365 admin center 
 
@@ -76,7 +76,10 @@ For information on how to assign licenses in Microsoft Endpoint Manager admin ce
 
 ## Monitor license use 
 
-Each of the Premium add-ons might have their own requirements for how many licenses need to be purchased as they may calculate usage differently.
+Each of the Premium add-ons might have their own requirements for how many licenses need to be purchased.
 
 - [Remote help](..\remote-actions\remote-help.md)
 
+## Next steps
+
+Learn about [Remote help](..\remote-actions\remote-help.md). 
