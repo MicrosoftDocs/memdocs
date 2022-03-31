@@ -85,7 +85,7 @@ If you want, you can set up an [enrollment status page](enrollment-status.md) (E
     Make sure the user account you specify has sufficient administrative rights.
 
     ```powershell
-    Connect-MSGraph
+    Connect-MSGraphApp
     ```
 
     Windows requests the user and password for your account with a standard Azure AD form. Type your username and password, and then select **Sign in**.
