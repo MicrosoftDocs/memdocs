@@ -191,8 +191,6 @@ To find the GUID of your device, use the following steps:
 > [!NOTE]
 > The actual GUIDs may be different for your specific devices.
 
-[!INCLUDE [Third-party information disclaimer](../../includes/third-party-disclaimer.md)]
-
 ## Next steps
 
 [Learn more about ADMX templates in Microsoft Intune](administrative-templates-windows.md)
