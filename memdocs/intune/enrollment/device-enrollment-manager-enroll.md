@@ -33,7 +33,7 @@ ms.collection:
 
 # Enroll devices in Intune by using a device enrollment manager account
 
-You can enroll up to 1,000 mobile devices with a single Azure Active Directory account by using a device enrollment manager (DEM) account. DEM is an Intune permission that can be applied to an Azure AD user account and lets the user enroll up to 1,000 devices. A DEM account is useful for scenarios where devices are enrolled and prepared before handing them out to the users of the devices. By design, there's a limit of 150 Device Enrollment Manager (DEM) accounts in Microsoft Intune.
+You can enroll up to 1,000 devices with a single Azure Active Directory account by using a device enrollment manager (DEM) account. DEM is an Intune permission that can be applied to an Azure AD user account and lets the user enroll up to 1,000 devices. A DEM account is useful for scenarios where devices are enrolled and prepared before handing them out to the users of the devices. By design, there's a limit of 150 Device Enrollment Manager (DEM) accounts in Microsoft Intune.
 
 ## Limitations of devices that are enrolled with a DEM account
 
@@ -44,6 +44,7 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 - Only the local device appears in the Company Portal app or website.
 - DEM user accounts cannot use Apple Volume Purchase Program (VPP) apps with Apple VPP user licenses because of per-user Apple ID requirements for app management.
 - Microsoft Intune does not support the use of DEM accounts when enrolling devices via Apple Automated Device Enrollment (ADE).  
+- DEM accounts cannot support conditional access because conditional access is intended for per-user scenarios. 
 - Devices can install VPP apps if they have Apple VPP device licenses.
 - On Windows 10 1709 and older, conditional access isn't available for Windows devices enrolled using bulk enrollment.
 - Every device enrolled with DEM accounts needs to be properly licensed to be managed by Intune. The license could be an Intune user license or an Intune device license.

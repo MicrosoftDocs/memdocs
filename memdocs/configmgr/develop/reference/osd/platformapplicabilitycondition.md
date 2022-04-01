@@ -1,4 +1,5 @@
 ---
+description: Learn how to specify one supported platform for an operating system deployment driver in Configuration Manager using PlatformApplicabilityCondition.
 title: "PlatformApplicabilityCondition"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

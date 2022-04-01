@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/22/2021
+ms.date: 03/29/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -121,6 +121,9 @@ Set the app availability based on a date and time for a required app by using th
     - **Select when to display the restart countdown dialog box before the restart occurs (minutes)**: The default value is 15 minutes.
     - **Allow user to snooze the restart notification**: You can choose **Yes** or **No**.
         - **Select the snooze duration (minutes)**: The default value is 240 minutes (4 hours). The snooze value can't be more than the reboot grace period.
+
+    > [!IMPORTANT]
+    > Restart time is not registered when the user doesn't have admin privileges to the device.
 
 11. Select **Review + save**.
 

@@ -1,6 +1,7 @@
 ---
 title: "About Maintenance Windows"
 titleSuffix: "Configuration Manager"
+description: "Use Maintenance Windows article provides more information about Configuration Manager maintenance Windows."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -5,8 +5,8 @@ title: Bypass iOS/iPadOS Activation Lock with Intune
 titleSuffix: Microsoft Intune
 description: Learn how to use Intune to bypass iOS/iPadOS Activation Lock to access locked devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/27/2020
 ms.topic: how-to

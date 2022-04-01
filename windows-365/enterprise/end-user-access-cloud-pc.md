@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: alcort
+ms.reviewer: ivivano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -75,7 +75,7 @@ For a list of clients by operating system, see [Remote Desktop clients](/windows
 
 To set up their Remote Desktop client, users follow these steps:
 
-1. Download the Remote Desktop app from the Download App page on [www.microsoft.com/windows-365?rtc=1](https://www.microsoft.com/windows-365?rtc=1).
+1. Download the Remote Desktop app from the [Remote Desktop clients page](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients).
 2. Select **Subscribe**.
 3. Enter their Azure Active Directory credentials.
 4. The Cloud PC appears in the list, and they can double-click it to launch.

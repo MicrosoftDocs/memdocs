@@ -1,6 +1,7 @@
 ---
 title: "Read and Write to the Site Control File by Using Managed Code"
 titleSuffix: "Configuration Manager"
+description: "To write to the Configuration Manager site control file by using the managed SMS Provider, get the site definition file by querying for the required resource or component."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

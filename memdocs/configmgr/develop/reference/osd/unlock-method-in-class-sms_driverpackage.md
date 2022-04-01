@@ -1,6 +1,7 @@
 ---
 title: "Unlock Method in SMS_DriverPackage"
 titleSuffix: "Configuration Manager"
+description: "Set the source site to the current site, unlocking the driver package."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

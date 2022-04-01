@@ -2,7 +2,7 @@
 title: Troubleshoot scripts for devices uploaded to the admin center
 titleSuffix: Configuration Manager
 description: Troubleshooting scripts for Configuration Manager tenant attach
-ms.date: 12/03/2020
+ms.date: 01/25/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -12,14 +12,11 @@ ms.author: mstewart
 ms.localizationpriority: high
 ---
 
-# Troubleshoot Scripts (preview) for devices uploaded to the admin center
+# Troubleshoot Scripts for devices uploaded to the admin center
 <!--6024392-->
 *Applies to: Configuration Manager (current branch)*
 
 Use the following to troubleshoot Scripts in the Microsoft Endpoint Manager admin center:
-
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Common issues
 

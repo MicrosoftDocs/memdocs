@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/02/2021
+ms.date: 03/22/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,7 @@ ms.reviewer: mattcall
 
 # Firewall policy for endpoint security in Intune
 
-Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and /11.
+Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10/11.
 
 While you can configure the same firewall settings by using Endpoint Protection profiles for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to firewalls and can complicate the task of configuring only firewall settings for your environment.
 
@@ -115,7 +115,7 @@ Data is reported through the Windows [DeviceStatus CSP](/windows/client-manageme
 
 - Device name
 - Firewall status
-- User principle name
+- User principal name
 - Target (The method of device management)
 - Last check in time
 
@@ -145,6 +145,12 @@ You can filter returns for this report by using one or more of the status detail
 
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Status report](media/endpoint-security-firewall-policy/firewall-status.png)
+
+## Investigate issues for Firewall rules
+
+To learn more about Firewall rules in Intune, and how to troubleshoot common problems, see the following *Intune Customer Success* blog:
+
+- [How to trace and troubleshoot the Intune Endpoint Security Firewall rule creation process](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-trace-and-troubleshoot-the-intune-endpoint-security/ba-p/3261452)
 
 ## Next steps
 

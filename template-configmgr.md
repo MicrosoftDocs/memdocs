@@ -1,136 +1,201 @@
 ---
-title: [ARTICLE TITLE in 35 chars or less]
+title: # ARTICLE TITLE in 35 chars or less, most important for SEO. Best to match H1 and TOC, but doesn't have to.
 titleSuffix: Configuration Manager
-description: 
+description: # A summary of the content. 75-300 characters. Used in site search. Sometimes used on a search engine results page for improved SEO. Always end with period.
 ms.date: mm/dd/yyyy
 ms.prod: configuration-manager
 ms.technology: configmgr-other #analytics app client comanage compliance core mdm mdt osd other protect sdk sum
 ms.topic: conceptual #reference troubleshooting how-to end-user-help overview
 ms.localizationpriority: medium #high null
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: # GitHub username (aczechowski)
+ms.author: # MS alias (aaroncz)
+manager: # MS alias of manager (dougeby)
 ---
 
 # Metadata and Markdown Template
 
 *Applies to: Configuration Manager (current branch, technical preview branch, long-term servicing branch)*
 
-This docs.ms template contains examples of markdown syntax, as well as guidance on setting the metadata. It is available in the root directory of each EM Pilot repository (e.g. ~/Azure-RMSDocs-pr
-/template.md) and is meant to be read as a markdown file, although you can refer to [the published version](https://stage.docs.microsoft.com/en-us/rights-management/template) to see how the markdown examples rendeer.
+This docs.ms template contains examples of markdown syntax, and guidance on setting the metadata. It's available in the root directory of the MEM repository (`~\memdocs-pr\template-configmgr.md`).
 
-When creating a markdown file you should copy the template to a new file, fill out the metadata as specified below, set the H1 heading above to the title of the article, and delete the content.
-
+When you create a new markdown file article, **Save as** this template to a new file, fill out the metadata as specified below, set the H1 heading above (`#`) to the title of the article, and delete the template content.
 
 ## Metadata
 
-The full metadata block is above, divided into required fields and optional fields; see the [OPS metadata cheatsheet](https://ppe.msdn.microsoft.com/en-us/ce-csi-docs/ops/ops-onboarding/managing-content/content-meta-data) for more details. Some key notes:
+The full metadata block is above the markdown between the `---` lines. For more information, see [Metadata attributes](https://review.docs.microsoft.com/en-us/help/contribute/metadata-attributes?branch=main) in the contributor guide. Some key notes:
 
-- You **must** have a space between the colon (:) and the value for a metadata element.
-- If an optional metadata element does not have a value, comment out the element with a # (do not leave it blank or use "na"); if you are adding a value to an element that was commented out, be sure to remove the #.
-- Colons in a value (e.g., a title) break the metadata parser. In their place, use the HTML encoding of &#58; (e.g., "title: Azure Rights Management&#58; the basics | Azure RMS").
-- **title**: This title will appear in search engine results. The title should end with a pipe (|) followed by the name of the service (e.g. see above). The title need not (and probably should not) be identical to the title in your H1 heading. It should be roughly 65 characters (including | SERVICE NAME)
-- **author**, **manager**, **reviewer**: The author field should contain the **Github username** of the author, not their alias.  The "manager" and "reviewer" fields, on the other hand, should contain aliases. ms.reviewer specifies the name of the PM associated with the article or service.
-- **ms.assetid**: This is the GUID of the article from CAPS. When creating a new markdown file, get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com).
-- **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Possible values for these elements can be found [here](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
+- You _must_ have a space between the colon (`:`) and the value for a metadata element.
 
-## Basic Markdown and GFM
+- Remove all metadata comments (`#`)
 
-All basic and Github-flavored markdown is supported. For more information on these, see:
+- Colons in a value (like the title) break the metadata parser. In their place, use the HTML encoding `&#58;` (for example, `title: Azure Rights Management&#58; the basics`).
 
+- `title`: This title appears in search engine results and the browser tab.
+  - Don't include a pipe (`|`) with the product name, the build handles that automatically with the `titleSuffix` attribute.
+  - Don't end with a period.
+  - Use Microsoft style _sentence case_.
+  - The title can match the H1 heading (`#`) and the name in the tox.yml, but doesn't have to.
+  - It should be roughly 35 characters or less to allow for the titleSuffix and best search engine optimization (SEO).
+
+- `titleSuffix`: Should always be `Configuration Manager` for ConfigMgr content. This value is appended to the title, for example, "title - titleSuffix | Microsoft Docs"
+
+- `description`: Summarize the content, shows in search engine results. 75-300 characters. Always end with a period.
+
+- `ms.date`: After you Save As this template to the target file, with the Docs Authoring Pack extension installed, right-click anywhere in the .md file to **Update `ms.date` metadata value** and save the file.
+
+- `author`: The author field contains the **Github username** of the author.
+  - This value is used in GitHub notifications, assignments, and other build automation in both the private and public repositories.
+  - It's also used to display the first (left-most) contributor in the published article.
+
+- `ms.author` & `manager`: Microsoft aliases. ms.author and author are typically the same.
+  - `reviewer`: Optionally can specify the name of the PM associated with the article. Just for reference, not currently used by any automation.
+
+- `ms.prod`: Should always be `configuration-manager` for ConfigMgr content.
+
+- `ms.technology`: Select one of the options based on the feature area. Prefix all options with `configmgr-`.
+
+- `ms.topic`: Select one of the options based on the content type. This attribute is used in calculating content health (different content types are used differently by customers, so have different metrics).
+
+- `ms.localizationpriority`: Medium is the default, which is machine translation. For specific, high priority content that requires human translation (extra cost), set this value to high. For SDK, MDT, or other components that are only en-us, set this value to null for no localization.
+
+## Basic markdown and GFM
+
+All basic and Github-flavored markdown (GFM) is supported. For more information, see the following articles:
+
+- [Docs Markdown reference in the Contributor Guide](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=main)
 - [Baseline markdown syntax](https://daringfireball.net/projects/markdown/syntax)
-- [Github-flavored markdown (GFM) documentation](https://guides.github.com/features/mastering-markdown)
+- [Github-flavored markdown (GFM) documentation](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 
 ## Headings
 
 Examples of first- and second-level headings are above.
 
-There **must** be only one first-level heading in your topic, which will be displayed as the on-page title.  
+There **must** be only one first-level heading (`#`, also known as H1) in your article, which is displayed as the published title at the top of the page.
 
-Second-level headings will generate the on-page TOC that appears in the "In this article" section underneath the on-page title.
+Second-level headings (`##`, also known as H2) generate the on-page TOC that appears in the **In this article** section beside or underneath the on-page title.
+
+Limit the length of second-level headings to avoid excessive line wraps.
+
+Make sure _all_ headings of any level have a unique name for the article. The build creates an anchor for all headings on the page using kebab formatting. For example, from the [Docs Markdown reference](https://review.docs.microsoft.com/help/contribute/markdown-reference?branch=main) article, the heading **Alerts (Note, Tip, Important, Caution, Warning)** becomes the anchor `#alerts-note-tip-important-caution-warning`. If there are duplicate headings, then the anchors don't behave properly. This behavior also applies when using include files, make sure the headings are unique across the main markdown file, and all include markdown files.
+
+Don't skip levels. For example, don't have an H3 (`###`) without a parent H2 (`##`).
+
+Configuration Manager content does use custom anchors in some articles. They're almost always prefixed with `bkmk_`, for example, `bkmk_client`. These anchors can help reduce the anchor size, but does require HTML code that may not always be supported by the docs build system. There's other functionality with the Docs Authoring Pack and the build validation that only works with native header anchors. Use custom anchors sparingly, and remove them in older articles when possible. When removing custom anchors, make sure to update all internal links from the old custom anchor to the native header kebab format.
 
 ### Third-level heading
+
+Third-level headings (and beyond) can be any length, as they don't appear **In this article**.
+
 #### Fourth-level heading
+
 ##### Fifth level heading
-###### Sixth-level heading
 
 ## Text styling
 
-*Italics*
+_Italics_ (a single asterisk (`*`) also works, but the underscore (`_`) helps differentiate with the double asterisk (`**`) for bold)
 
 **Bold**
 
 ~~Strikethrough~~
 
-
-
 ## Links
 
-To link to a markdown file in the same repo, use [relative links](https://www.w3.org/TR/WD-html40-970917/htmlweb.html#h-5.1.2).
+> [!TIP]
+> Use the **Docs Authoring Pack** extension to easily add links!
+>
+> 1. **Alt** + **M** to open the Docs Authoring Pack menu.
+> 1. Select **Link** and then follow the prompts.
+>
+> It supports headings in the current and other files too! (Just not the custom `bkmk` anchors that are sometimes used in this content.)
 
-- Example: [What is Azure Rights Management](./understand-explore/what-is-azure-rights-management.md)
+For more information, see [Add links to articles](https://review.docs.microsoft.com/help/contribute/links-how-to?branch=main) in the contributor guide.
 
-To link to a header in the same markdown file, view the source of the published article, find the id of the head (e.g. `id="blockquote"`, and link using # + id (e.g. `#blockquote`).
+### Article in the same repo
 
-- Example: [Blockquotes](#blockquote)
+To link to an article in the same repo (for example, Configuration Manager, Intune, or Autopilot), use **file-relative links**. These links have the path to the target as relative to the current file, and always include the `.md` or `.yml` extension. For example, `[Get support for Endpoint analytics](../analytics/get-support.md)`
 
-To link to a header in a markdown file in the same repo, use relative linking + hashtag linking.
+#### Link to headings
 
-- Example: [technical overiew of the sign-up process](./understand-explore/rms-for-individuals-user-signup.md#technical-overview-of-the-sign-up-process)
+To link to a heading _in the same markdown file_, add just the anchor as the link. It's either a custom HTML anchor (`#bkmk_client`) or the kebab case of the header. For example: `[Ordered list with an embedded list](#ordered-list-with-an-embedded-list)`.
 
-To link to an external file, use the full URL as the link.
+To link to a heading _in a markdown file in the same repo_, use relative linking + hashtag linking. For example: `[Help and support](../analytics/get-support.md#help-and-support)`
 
-- Example: [Github](http://www.github.com)
+### Another docs.ms article
 
-If a URL appears in a markdown file, it will be transformed into a clickable link.
+To link to another docs.ms article not in the same repo, use a **root-relative link**. This style supports the potential future use of the doc content in a separate disconnected environment, like for a high security government customer, which would have a different domain. For example, `[Public contributor guide](/contribute/additional-resources)`.
 
-- Example: http://www.github.com
+### External URLs
+
+To link to an external file, use the full URL as the link. For example: `[Github](https://www.github.com)`
+
+- The link should always be **HTTPS**.
+- Remove any local from the URL, unless it doesn't work without it. Most all microsoft.com properties support language neutral URLs.
+
+### Example links
+
+If you need to provide an example of a URL in the article, enclose it in a code block. For example: `https://www.contoso.com`
+This style makes sure the URL is ignored during build validation and the broken links report.
+
+### Tips for links
+
+When your pull request runs, the build system validates all file-relative links and non-custom anchors. It will return a warning if it can't resolve a link.
+
+VSCode supports file-relative links and anchors, so you can easily navigate between pages, and test that links are valid.
+
+There's a broken link report that runs once a week in the build system:
+
+1. Go to https://ops.microsoft.com.
+1. Sign in with GitHub.
+1. Go to the **memdocs-pr** repo.
+1. Select the **Broken Links** tab.
+
+Don't use URL shorteners like `go.microsoft.com/fwlink` or `aka.ms`. Include the full URL to the target.
+
+For more information, see [Add links to articles](https://review.docs.microsoft.com/help/contribute/links-how-to?branch=main) in the contributor guide.
 
 ## Lists
 
 ### Ordered lists
 
-1. This
-1. Is
-1. An
-1. Ordered
-1. List  
+1. This list is ordered.
+1. This list is ordered.
+1. This list is ordered.
+1. This list is ordered.
+1. This list is ordered.
 
+You can explicitly number each line if needed, but this style lets the build autonumber it. This style is beneficial if you need to add or remove a step.
 
 #### Ordered list with an embedded list
 
-1. Here
-1. comes
-1. an
-1. embedded
-    1. Miss Scarlett
-    1. Professor Plum
-1. ordered
-1. list
-
+1. This list is ordered.
+1. This list is ordered.
+1. This list is ordered.
+1. This list is ordered.
+    1. This list is embedded.
+    1. This list is embedded.
+1. This list is ordered.
+1. This list is ordered.
 
 ### Unordered Lists
 
-- This
-- is
-- a
-- bulleted
-- list
+- This list is bulleted.
+- This list is bulleted.
+- This list is bulleted.
+- This list is bulleted.
+- This list is bulleted.
 
+#### Unordered list with embedded lists
 
-##### Unordered list with an embedded lists
-
-- This
-- bulleted
-- list
-    - Mrs. Peacock
-    - Mr. Green
-- contains  
-- other
-    1. Colonel Mustard
-    1. Mrs. White
-- lists
-
+- This list is bulleted.
+- This list is bulleted.
+- This list is bulleted.
+  - This list is embedded.
+  - This list is embedded.
+- This list is bulleted.
+- This list is bulleted.
+    1. This list is embedded and ordered.
+    1. This list is embedded and ordered.
+- This list is bulleted.
 
 ## Horizontal rule
 
@@ -144,6 +209,7 @@ If a URL appears in a markdown file, it will be transformed into a clickable lin
 | col 2 is      | centered      |   $12 |
 | col 1 is default | left-aligned     |    $1 |
 
+The Docs Authoring Pack has features to manage markdown tables. Select the entire table, then right-click to see the options.
 
 ## Code
 
@@ -156,33 +222,37 @@ If a URL appears in a markdown file, it will be transformed into a clickable lin
    flushTimeout": "00:00:30"
    }
 }
- ```
+```
 
 ### In-line code
 
-This is an example of `in-line code`.
+This sentence includes an example of `in-line code`.
 
-## Blockquotes
+## Blockquote
 
 > The drought had lasted now for ten million years, and the reign of the terrible lizards had long since ended. Here on the Equator, in the continent which would one day be known as Africa, the battle for existence had reached a new climax of ferocity, and the victor was not yet in sight. In this barren and desiccated land, only the small or the swift or the fierce could flourish, or even hope to survive.
 
 ## Images
 
+Use the Docs Authoring Pack menu to easily insert media.
+
+Always include alt text for accessibility, and always end it with a period.
+
 ### Static Image
 
-:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This is the alt text.":::
+:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This sentence is the alt text.":::
 
 ### Image with lightbox
 
-:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This is the alt text." lightbox="memdocs/media/docs-github-edit.png":::
+:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This sentence is the alt text." lightbox="memdocs/media/docs-github-edit.png":::
 
 ### Animated gif
 
-:::image type="content" source="memdocs/media/docs-filter-toc.gif" alt-text="This is the alt text.":::
+:::image type="content" source="memdocs/media/docs-filter-toc.gif" alt-text="This sentence is the alt text.":::
 
 ### Linked Image
 
-[![alt text for linked image](./media/AzRMS_elements.png)](https://azure.microsoft.com)
+[![Alt text for linked image.](memdocs/media/docs-github-edit.png)](https://azure.microsoft.com)
 
 ## Alerts
 
@@ -213,30 +283,11 @@ This is an example of `in-line code`.
 
 ## Videos
 
-### Channel 9
+### YouTube
 
-<iframe src="https://channel9.msdn.com/Series/Azure-Active-Directory-Videos-Demos/Azure-Active-Directory-Connect-Express-Settings/player" width="960" height="540" allowFullScreen frameBorder="0"></iframe>
-
-
-### Youtube
-
-<iframe width="420" height="315" src="https://www.youtube.com/embed/R6_eWWfNB54" frameborder="0" allowfullscreen></iframe>
+> [!VIDEO https://www.youtube.com/embed/rnhnZTrSZzI]
 
 ## docs.ms extensions
 
-### Button
-
-> [!div class="button"]
-[button links](/rights-management)
-
-### Selector
-
-> [!div class="op_single_selector"]
-- [foo](/rights-management/template.md)
-- [bar](/rights-management/scratch.md)
-
-### Step-By-Step
-
->[!div class="step-by-step"]
-[Pre](https://www.example.com)
-[Next](https://www.example.com)
+> [!div class="nextstepaction"]
+> [Next step action](/mem/configmgr)

@@ -14,6 +14,7 @@ ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology:
 ms.assetid: 12655728-a1af-4d89-97bc-925fe36c0dc4
+ms.localizationpriority: high
 searchScope:
  - User help
 

@@ -18,7 +18,7 @@ If you have Windows 10 or later devices joined to on-premises Active Directory, 
 
 In the following video, senior program manager Sandeep Deo and product marketing manager Adam Harbour discuss and demo configuring devices in Azure AD:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Configuring-Devices-in-Azure-Active-Directory/player]
+> [!VIDEO https://aka.ms/docs/player?id=a40c36a8-8e70-4a5e-9df1-3af055e8d6c3]
 
 The hybrid Azure AD-join process automatically registers your on-premises domain-joined devices with Azure AD. For more information on this process, see the following articles:
 

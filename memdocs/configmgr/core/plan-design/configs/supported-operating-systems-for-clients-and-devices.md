@@ -2,7 +2,7 @@
 title: Supported clients and devices
 titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
-ms.date: 12/01/2021
+ms.date: 01/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -158,9 +158,15 @@ Client management features not related to Windows software update management or 
 
 ## Mac computers
 
-Manage Apple Mac computers with the Configuration Manager client for macOS.
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is [deprecated](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12927803 --> The macOS client installation package isn't available for new deployments, but existing deployments are supported until December 31, 2022.
+>
+> Migrate management of macOS devices to Microsoft Intune:
+>
+> 1. First, uninstall the Configuration Manager client for macOS. For more information, see [Uninstalling the Mac client](../../clients/manage/maintain-mac-clients.md#uninstalling-the-mac-client).
+> 2. Then enroll the device to Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../intune/fundamentals/deployment-guide-platform-macos.md).
 
-The macOS client installation package isn't supplied with the Configuration Manager media. Download it from the Microsoft Download Center, [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850).
+Manage Apple Mac computers with the Configuration Manager client for macOS.
 
 For more information, see [How to deploy clients to Macs](../../clients/deploy/deploy-clients-to-macs.md).
 

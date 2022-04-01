@@ -2,7 +2,7 @@
 title: Console extensions for Configuration Manager
 titleSuffix: Configuration Manager
 description: Learn about managing Configuration Manager console extensions
-ms.date: 12/01/2021
+ms.date: 12/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -33,6 +33,9 @@ The old style of console extensions will start being phased out in favor of the 
    > [!Important]
    > If this setting is used, your old style extensions that aren't approved through the **Console Extensions** node will no longer be able to be used. The setting, **Only allow console extensions that are approved for the hierarchy**, is `enabled` by default if you installed from the [2103 baseline image](updates.md#bkmk_Baselines). The setting remains `disabled` by default, if you upgraded from a version prior to 2103. If the setting was enabled in error, disabling the setting allows the old style extensions to be used again.
 
+## Prerequisites
+
+The Configuration Manager console needs to be able to connect to the [administration service](../../../develop/adminservice/set-up.md) and the administration service needs to be functional. <!--1104776-->
 
 [!INCLUDE [console extensions node](includes/console-extensions-node.md)]
 

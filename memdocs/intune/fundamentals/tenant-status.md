@@ -3,12 +3,12 @@
 
 title: Microsoft Intune Tenant Status page
 titleSuffix: Microsoft Intune
-description: Use the Intune Tenant Status page to view important tenant details
+description: If you use Microsoft Intune, use the Tenant Status page to view details about your tenant, the status of Intune connectors you've configured, view recent service health incidents and advisories.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/17/2021
+ms.date: 03/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals

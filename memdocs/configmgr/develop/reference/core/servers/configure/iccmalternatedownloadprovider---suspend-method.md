@@ -1,6 +1,7 @@
 ---
 title: "ICcmAlternateDownloadProvider : Suspend"
 titleSuffix: "Configuration Manager"
+description: "The ICcmAlternateDownloadProvider::Suspend method, in Configuration Manager, instructs the provider to suspend a given job."
 ms.date: "07/25/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

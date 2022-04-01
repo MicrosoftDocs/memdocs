@@ -56,15 +56,15 @@ To use these remote actions, you must have either of the following Azure Active 
 ## Remotely manage Cloud PCs by using the Microsoft 365 admin center
 
 1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com).
-2. In the left navigation select **Users** -> **Active users**.
+2. In the left navigation, select **Users** -> **Active users**.
 3. Select the user whose Cloud PC you want to manage.
 4. Select **Devices**.
 5. Select the Cloud PC you want to manage.
-6. Select the action that you want to perform .
+6. Select the action that you want to perform.
 
 ## Remote management actions
 
-The following remote actions are supported on winodws365.microsoft.com and the Microsoft 365 admin center:
+The following remote actions are supported on windows365.microsoft.com and the Microsoft 365 admin center:
 
 **Change account type**: Change the role of a user on their Cloud PC. Options include Standard User and Local Administrator. For the role change to take effect, the user must sign out of Windows on their Cloud PC and sign back in. Alternatively, the admin can remotely restart the Cloud PC, but the user may lose any unsaved data.
 
@@ -76,11 +76,13 @@ The following remote actions are supported on winodws365.microsoft.com and the M
 - Removes all apps and locally stored files.
 - Removes changes made to settings.
 
+For Windows 365 Business users, it’s not possible to upgrade their Windows 10 Cloud PC to Windows 11 and retain their data and settings. Instead, to upgrade them to a Windows 11 Cloud PC, you must use the **Reset** remote action and choose Windows 11. Reset is a destructive action that removes all the user's data and settings from their Cloud PC.
+
 **Restart**: Restart a user’s Cloud PC on their behalf.
 
 ## Grant remote action permissions to another user
 
-If you want to grant remote action permissions to another user, you can assign the Windows 365 Administrator role to them. This role is scoped to performing actions that can alter the state of a Cloud PC. This role cannot manage users, licenses, or billing.
+If you want to grant remote action permissions to another user, you can assign the Windows 365 Administrator role to them. This role is scoped to performing actions that can alter the state of a Cloud PC. This role can't manage users, licenses, or billing.
 
 To assign a Windows 365 Administrator role to a user:
 

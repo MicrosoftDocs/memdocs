@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Use group policy analytics to import GPOs in Microsoft Intune
-description: Import and analyze your group policy objects in Microsoft Intune and Endpoint Manager. See the policies that have the same Configuration Service Provider (CSP) setting in the cloud, and assign to your Windows 10 users and devices.
+title: Use group policy analytics to import and analyze GPOs in Microsoft Intune
+description: Import and analyze your group policy objects in Microsoft Intune and Endpoint Manager. See the policies that are supported and aren't supported in cloud MDM providers.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 11/18/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,21 +33,30 @@ ms.collection:
 
 # Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview
 
-Group policy objects (GPOs) are used on-premises to configure settings on personal computers, and other on-premises devices. In device management, GPOs help control security and features in the Windows OS, Internet Explorer, Office apps, and more.
+> [!TIP]
+> Looking for information on ADMX templates? See [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md).
 
-Many organizations are looking at cloud solutions to support the growing remote workforce. **Group Policy analytics** is a tool and feature in Microsoft Endpoint Manager that analyzes your on-premises GPOs. It helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
+**Group Policy analytics** is a tool in Microsoft Endpoint Manager that analyzes your on-premises GPOs, and:
+
+- Shows which settings are supported in cloud-based MDM providers, including Microsoft Intune.
+- Shows any deprecated settings, or settings not available.
 
 If your organization uses GPOs, and you want to move some workloads to Microsoft Endpoint Manager and Intune, then Group Policy analytics will help.
 
+Currently, this feature provides importing and analysis. In a future release (no ETA), you'll be able to create a policy based off your imported GPO, and deploy the policy.
+
 This feature applies to:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
-This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results. 
+This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results.
 
 ## Prerequisites
 
-Sign in as the Intune administrator with a role that has the **Security Baselines** permission. For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
+- In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security Baselines** permission.
+
+  For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
 
 ## Export GPOs as an XML file
 
@@ -61,7 +70,7 @@ Sign in as the Intune administrator with a role that has the **Security Baseline
 
 Be sure the file is less than 4 MB and has a proper unicode encoding. If the exported file is greater than 4 MB, then include fewer GPOs when you save your report from the GPMC.msc tool.
 
-## Use Group Policy analytics
+## Import GPOs and run analytics
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
 2. Select **Import**, and then select your saved XML file. When you select the XML file, Intune automatically analyzes the GPO in the XML file.
@@ -75,9 +84,9 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
     - **MDM Support**: Shows the percentage of group policy settings in the GPO that have the same setting in Intune.  
 
         > [!NOTE]
-        > Whenever the Microsoft Intune product team makes changes to the mapping in Intune, the percentage under MDM Support automatically updates to reflect those changes.   
+        > Whenever the Microsoft Intune product team makes changes to the mapping in Intune, the percentage under MDM Support automatically updates to reflect those changes.
 
-    - **Unknown Settings**: Shows GPO settings that fall outside of the list of the Configuration Service Providers (CSPs) that this tool can parse.
+    - **Unknown Settings**: There are some CSPs that can't be analyzed. **Unknown Settings** lists the GPOs that can't be analyzed.
     - **Targeted in AD**: **Yes** means the GPO is linked to an OU in on-premises group policy. **No** means the GPO isn't linked to an on-premises OU.
     - **Last imported**: Shows the date of the last import.
 
@@ -95,17 +104,15 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
 
       **No** means there isn't a matching setting available to MDM providers, including Intune.
 
-      For more information on device configuration profiles, see [Apply features and settings on your devices using device profiles](device-profiles.md).
-
     - **Value**: Shows the value imported from the GPO. It shows different values, such `true`, `900`, `Enabled`, `false`, and so on.
     - **Scope**: Shows if the imported GPO targets users or targets devices.
-    - **Min OS Version**: Shows the minimum Windows OS version build numbers that the GPO setting applies. It may show `18362` (1903), `17130` (1803), and other Windows 10 versions.
+    - **Min OS Version**: Shows the minimum Windows OS version build numbers that the GPO setting applies. It may show `18362` (1903), `17130` (1803), and other Windows client versions.
 
       For example, if a policy setting shows `18362`, then the setting supports build `18362` and newer builds.
 
-    - **CSP Name**: A Configuration Service Provider (CSP) exposes device configuration settings in Windows 10. This column shows the CSP that includes the setting. For example, you may see Policy, BitLocker, PassportforWork, and so on.
+    - **CSP Name**: A Configuration Service Provider (CSP) exposes device configuration settings in Windows client. This column shows the CSP that includes the setting. For example, you may see Policy, BitLocker, PassportforWork, and so on.
 
-      For more information on CSPs, see the [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference).
+      The [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference) lists the available CSPs, shows the supported OS editions, and more.
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
 
@@ -136,11 +143,14 @@ Currently, the Group Policy analytics (preview) tool only supports non-ADMX sett
 
     - **Ready for migration**: The policy has a matching setting in Intune, and is ready to be migrated to Intune.
     - **Not supported**: The policy doesn't have a matching setting. Typically, policy settings that show this status aren't exposed to MDM providers, including Intune.
-    - **Deprecated**: The policy may apply to older Windows versions, and no longer used in Windows 10 and newer.
+    - **Deprecated**: The policy may apply to older Windows versions, older Microsoft Edge versions, and more policies that aren't used anymore.
+
+      > [!NOTE]
+      > When the Microsoft Intune product team updates the mapping logic, your imported GPOs are automatically updated. You don't need to reimport your GPOs.
 
 3. Select the **Reports** tab > **Group policy migration readiness**. In this report, you can:
 
-    - See the number of settings in your GPO that are available in a device configuration profile, if they can be in a custom profile, aren't supported, or are deprecated.
+    - See the number of settings in your GPO that can be configured in a device configuration profile. It also shows if the settings can be in a custom profile, aren't supported, or are deprecated.
     - Filter the report output using the **Migration Readiness**, **Profile type**, and **CSP Name** filters.
     - Select **Generate report** or **Generate again** to get current data.
     - See the list of settings in your GPO.
@@ -150,10 +160,11 @@ Currently, the Group Policy analytics (preview) tool only supports non-ADMX sett
     > [!NOTE]
     > After you add or remove your imported GPOs, it can take about 20 minutes to update the Migration Readiness reporting data.
 
-
 ## Send product feedback
 
-You can provide feedback on Group Policy Analytics when you select **Got feedback**. Examples of feedback areas:
+You can provide feedback on Group Policy Analytics. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)** > **Got feedback**.
+
+Examples of feedback areas:
 
 - You received errors during GPO import or analytics, and you need more specific information.
 - How easy is it to use Group Policy analytics to find the supported group policies in Microsoft Intune?
@@ -174,7 +185,7 @@ At any time, you can delete imported GPOs:
 
 ## Next steps
 
-- [Use Windows 10 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md)
+- [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md)
 
 - [Add endpoint protection settings in Microsoft Endpoint Manager](../protect/endpoint-protection-configure.md)
 

@@ -2,7 +2,7 @@
 title: Unattended recovery
 titleSuffix: Configuration Manager
 description: Use a script to recover your sites in Configuration Manager.
-ms.date: 05/03/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -16,9 +16,9 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
-To recover a Configuration Manager central administration site (CAS) or primary site without user interaction, create an unattended installation script to use with the **/script** setup command-line option. The script provides the same type of information that the setup wizard prompts for, except that there are no default settings. Specify all values for the setup keys that apply to the type of recovery.
+To recover a Configuration Manager central administration site (CAS) or primary site without user interaction, create an unattended installation script to use with the `/script` setup command-line option. The script provides the same type of information that the setup wizard prompts for, except that there are no default settings. Specify all values for the setup keys that apply to the type of recovery.
 
-To use the **/script** setup command-line option, first create an answer file. Then specify this file name on the command line. The name of the file is your decision, but it requires the `.ini` file extension. When you reference this answer file from the command line, provide the full path to the file. For example, if your setup answer file is named `setup.ini`, and it's stored in the `C:\setup` folder, your command line would be:
+To use the `/script` setup command-line option, first create an answer file. Then specify this file name on the command line. The name of the file is your decision, but it requires the `.ini` file extension. When you reference this answer file from the command line, provide the full path to the file. For example, if your setup answer file is named `setup.ini`, and it's stored in the `C:\setup` folder, your command line would be:
 
 `setup.exe /script c:\setup\setup.ini`
 

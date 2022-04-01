@@ -7,7 +7,7 @@ description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authe
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/25/2020
+ms.date: 12/13/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -55,6 +55,26 @@ See the instructions for [adding iOS store apps to Microsoft Intune](../apps/sto
 ## Configure your MTD apps with an app configuration policy
 
 To simplify user onboarding, the Mobile Threat Defense apps on MDM-managed devices use app configuration. For unenrolled devices, MDM based app configuration is not available, so please refer to [Add Mobile Threat Defense apps to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md).
+
+### BlackBerry Protect configuration policy
+
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the BlackBerry Protect iOS app configuration policy.
+
+<!-- Pending revision to the following to support the BlackBerry app  >
+
+- For **Configuration settings format**, select **Enter XML data**, copy the following content and paste it into the configuration policy body. Replace the `https://client.bmobi.net` URL with the appropriate console URL.
+
+   ```
+    <dict>
+   <key>better_server_url</key>
+   <string>https://client.bmobi.net</string>
+   <key>better_udid</key>
+   <string>{{aaddeviceid}}</string>
+   <key>better_user</key>
+   <string>{{userprincipalname}}</string>
+   </dict>
+   ```
+-->
 
 ### Better Mobile app configuration policy
 
@@ -294,7 +314,7 @@ Choose the section that corresponds to your MTD provider:
 ### Assigning Wandera
 
 - **Android**
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Wandera Mobile app store URL](https://play.google.com/store/apps/details?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 6.0**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Wandera Mobile app store URL](https://play.google.com/store/apps/details?id=com.wandera.android) for the **Appstore URL**. For **Minimum operating system**, select **Android 8.0**.
 
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Wandera Mobile app store URL](https://itunes.apple.com/app/wandera/id605469330) for the **Appstore URL**.

@@ -5,8 +5,8 @@ title: Erase a macOS device
 titleSuffix: Microsoft Intune
 description: Learn how to erase all data, including the operating system, from a macOS device.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/27/2020
 ms.topic: how-to

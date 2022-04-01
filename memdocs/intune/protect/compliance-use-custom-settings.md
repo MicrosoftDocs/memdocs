@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/01/2021
+ms.date: 02/04/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -44,11 +44,15 @@ Before you can add custom settings to a policy, you’ll need to prepare the Pow
 
 - The JSON file defines the settings you want to base your custom compliance on, and the acceptable values for those settings. You can also configure messages for device users for how to restore compliance for each setting. You’ll upload the file when you create a compliance policy that will include custom compliance settings.
 
-After you’ve deployed custom compliance settings and devices have reported back, you’ll be able to view the results alongside the built-in compliance setting details in the Microsoft Endpoint Manager admin center.  Custom settings can also be used for conditional access decisions, the same as the built-in compliance settings. 
+After you’ve deployed custom compliance settings and devices have reported back, you’ll be able to view the results alongside the built-in compliance setting details in the Microsoft Endpoint Manager admin center.  Custom compliance settings will be used for conditional access decisions, the same way built-in compliance settings are.  Together they form a compound rule set, equally affecting the device compliance state.
 
 ## Prerequisites
 
-- **Azure Active Directory (Azure AD) joined** – Devices that are not Azure AD joined are evaluated as not applicable.
+- **Azure Active Directory (Azure AD) joined** devices, *including* hybrid Azure AD-joined devices. 
+
+  Hybrid Azure AD-joined devices are devices that are joined to Azure AD and also joined to on-premises Active Directory. For more information, see [Plan your hybrid Azure AD join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
+  
+  Devices that are not Azure AD joined or are not hybrid Azure AD-joined are evaluated as not applicable.
 
 - **PowerShell discovery script** - This is a script that you create that runs on a device to discover the custom settings defined in your JSON file and returns the configuration value of those settings to Intune. You’ll upload your script to the Microsoft Endpoint Manager admin center before you create a compliance policy and then select the script you want to use when creating a policy.
 
@@ -85,14 +89,13 @@ During the workflow to create a compliance policy, on the *Compliance settings* 
 5. Complete the compliance policy creation task and assign the policy to devices.
 
 > [!NOTE]  
-> When a Windows device receives a compliance policy with custom settings, the device runs an MSI that installs services that enable the client to download and run PowerShell scripts that are part of a compliance policy, and to upload compliance results. Actions managed by the services include:
+> When a Windows device receives a compliance policy with custom settings, it checks for the presence of [Intune Management Extensions](../apps/intune-management-extension.md). If not found, the device runs an MSI that installs the extensions, enabling the client to download and run PowerShell scripts that are part of a compliance policy, and to upload compliance results. Actions managed by the services include:
 >
 > - Checking for new or updated PowerShell scripts every eight hours.
 > - Running the discovery scripts every eight hours.
 > - Running scripts that download when a user selects Check Compliance on the device. However, there is no check for new or updated scripts when Check Compliance is run.
 > - Don't support push notifications to enable custom compliance to run on demand.
 >
-> For more  information, see [Add PowerShell Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune.
 
 ## Monitor custom compliance policy
 
@@ -111,7 +114,7 @@ Check the device compliance reports for the following error codes and insight in
 - 65009: Invalid json for the discovered setting
 - 65010: Invalid datatype for the discovered setting
 
-To see errors related to the PowerShell script, add the following line to the end of the PowerShell script file: `return $hash | ConvertTo-Json -Compress`
+To see errors related to the PowerShell script, ensure the following line is at the end of the PowerShell script file: `return $hash | ConvertTo-Json -Compress`
 
 ### PowerShell scripts aren’t visible to select, or remain visible after being deleted
 
@@ -120,6 +123,10 @@ Refresh the current view. If the issue persists, cancel the policy creation flow
 ### After fixing an issue on a device, subsequent syncs don’t identify the issue as resolved and compliant
 
 It can take up to eight hours before a noncompliant status for a device update to show compliance.
+
+### Can a user manually check for compliance after fixing an issue on a device in order to identify if the issue is resolved and compliant? 
+
+Yes, a user can go to the [Company Portal website](https://portal.manage.microsoft.com) and trigger a sync to update the device status after fixing a non-compliant custom compliance setting. 
 
 ### Why aren’t additional operators and operands supported?
 

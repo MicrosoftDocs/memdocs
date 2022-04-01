@@ -4,8 +4,8 @@
 title: Use role-based access control (RBAC) and scope tags for distributed IT in Intune | Microsoft Docs
 description: Use scope tags to filter configuration profiles to specific roles.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 08/06/2019
 ms.topic: how-to
@@ -57,15 +57,14 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > **Assign**.
 2. On the **Basics** page, provide an **Assignment name** and **Description**. Choose **Next**.
-3. On the **Admin Groups** page, choose **Select groups to include**, and select the groups that you want as part of this assignment. Users in these group will have permissions to manage users/devices in the Scope (Groups). Choose **Next**.
+3. On the **Admin Groups** page, choose **Add groups**, and select the groups that you want as part of this assignment. Users in these groups will have permissions to manage users/devices in the Scope (Groups). Choose **Next**.
 
     ![Screenshot of select member groups.](./media/scope-tags/select-member-groups.png)
 
-4. On the **Scope Groups** page, select one of the following options for **Assign to**
-    - **Selected groups**: select the groups containing the users/deivces that you want to manage. All users/devices in the selected groups will be managed by the users in the Admin Groups.
-    - **All users**: All users can be managed by the users in the Admin Groups.
-    - **All devices**: All devices can be managed by the users in the Admin Groups.
-    - **All users and all devices**: All users and devices can be managed by the users in the Admin Groups.
+4. On the **Scope Groups** page, select one of the following options for **Included groups**:
+    - **Add groups**: Select the groups containing the users/devices that you want to manage. All users/devices in the selected groups will be managed by the users in the Admin Groups.
+    - **Add All users**: All users can be managed by the users in the Admin Groups.
+    - **Add All devices**: All devices can be managed by the users in the Admin Groups.
 
 5. Choose **Next**
 6. On the **Scope tags** page, select the tags that you want to add to this role. Users in the Admin Groups will have access to Intune objects that also have the same scope tag. You can assign a maximum of 100 scope tags to a role.

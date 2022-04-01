@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/19/2021
+ms.date: 01/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -27,13 +27,13 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Use filters (preview) when assigning your apps, policies, and profiles in Microsoft Endpoint Manager
+# Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager
 
 When you create a policy, you can use filters to assign a policy based on rules you create. A filter allows you to narrow the assignment scope of a policy. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more.
 
 For example, you can use filters in the following scenarios:
 
-- Deploy a Windows 10 device restriction policy to only the corporate devices in the Marketing department, while excluding personal devices.
+- Deploy a Windows device restriction policy to only the corporate devices in the Marketing department, while excluding personal devices.
 - Deploy an iOS/iPadOS app to only the iPad devices in the Finance users group.
 - Deploy an Android mobile phone compliance policy to all users in the company, and exclude Android meeting room devices that don't support the mobile phone compliance policy settings.
 
@@ -42,7 +42,7 @@ Filters include the following features and benefits:
 - Improve flexibility and granularity when assigning Intune policies and apps.
 - Are used when assigning app, policies, and profiles. They dynamically target devices based on device properties you enter.
 - Can include or exclude devices in a specific group based on criteria you enter.
-- Create a query of device properties based on the device platform, including Android, iOS/iPadOS, macOS, and Windows 10.
+- Create a query of device properties based on the device platform, including Android, iOS/iPadOS, macOS, and Windows client.
 - Can be used and reused in multiple scenarios in “Include” or “Exclude” mode.
 
 This feature applies to:
@@ -51,7 +51,8 @@ This feature applies to:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer
+- Windows 10/11
+
 
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
 
@@ -71,33 +72,14 @@ Before a policy is applied to a device, filters dynamically evaluate applicabili
 
 ## Prerequisites
 
-- Sign in as an Intune administrator. For more information, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
+- Sign in as an Intune administrator. For more information on Intune roles, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
-## Enable filters, and add a filter
-
-### Enable filters public preview
-
-To use filters, you must enable it in your organization tenant.
+## Create a filter
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Tenant administration** > **Filters (preview)** > **Try out the filters (preview) feature**.
-3. Set **Filters (preview)** to **On**:
+2. Select **Tenant administration** > **Filters** > **Create**.
 
-    :::image type="content" source="./media/filters/turn-on-filters.png" alt-text="Turn on or enable the filters feature in Microsoft Endpoint Manager and Microsoft Intune.":::
- 
-> [!TIP]
-> 
-> - Public preview features for Microsoft Endpoint Manager are fully supported by Microsoft. For more information, see [Public preview in Microsoft Intune.](public-preview.md)
-> - To enable or disable filters for your tenant, your account must have have the Intune Service Administrator (also known as Intune Administrator) permission .
-> - You can disable the **Filters (preview)** feature by setting it back to **Off**. To turn off this feature, you must remove any filter assignments, and then delete all the filters you created.
-> - Microsoft wants your feedback about this feature. To provide feedback, go to [Tell us what you think about the Filters (preview) feature](https://forms.office.com/r/ibB4tf6CAz).
-
-### Create a filter
-
-1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Tenant administration** > **Filters (preview)** > **Create**.
-
-    You can also create filters in **Devices** > **Filters (preview)**, or **Apps** > **Filters (preview)**.
+    You can also create filters in **Devices** > **Filters**, or **Apps** > **Filters**.
 
 3. In **Basics**, enter the following properties:
 
@@ -108,7 +90,7 @@ To use filters, you must enable it in your organization tenant.
       - Android Enterprise
       - iOS/iPadOS
       - macOS
-      - Windows 10
+      - Windows 10 and later
 
 4. Select **Next**.
 5. In **Rules**, there are two ways to create a rule: Use the **rule builder**, or use the **rule syntax**.
@@ -144,8 +126,9 @@ To use filters, you must enable it in your organization tenant.
     > - When you create a rule, it's validated for the correct syntax, and any errors are shown.
     > - If you enter syntax that's not supported by the basic rule builder, then the rule builder is disabled. For example, using nested parenthesis disables the basic rule builder.
 
-6. Select **Next**.
-7. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+6. Select **Preview devices**. A list of enrolled devices that match the filter criteria you defined is shown.
+7. Select **Next**.
+8. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -165,12 +148,12 @@ After the filter is created, it's ready to use when assigning your apps or polic
 3. Assign your policy to a users group or a devices group.
 4. Select **Edit filter**. Your options:
 
-    - **Do not apply a filter**: All targeted users or devices recieve the app or policy without filtering.
-    - **Include filtered devices in assignment**: Devices that match the filter conditions recieve the app or policy. Devices that don't match the filter conditions don't receive the app or policy.
+    - **Do not apply a filter**: All targeted users or devices receive the app or policy without filtering.
+    - **Include filtered devices in assignment**: Devices that match the filter conditions receive the app or policy. Devices that don't match the filter conditions don't receive the app or policy.
 
       A list of filters that match the policy platform is shown.
 
-    - **Exclude filtered devices in assignment**: Devices that match the filter conditions don't recieve the app or policy. Devices that don't match the filter conditions receive the app or policy.
+    - **Exclude filtered devices in assignment**: Devices that match the filter conditions don't receive the app or policy. Devices that don't match the filter conditions receive the app or policy.
 
       A list of filters that match the policy platform is shown.
 
@@ -189,9 +172,9 @@ When the device checks in with the Intune service, the properties defined in the
 After a filter is created, it can be changed or updated.
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Tenant administration** > **Filters (preview)**. A list of all the filters is shown.
+2. Select **Tenant administration** > **Filters**. A list of all the filters is shown.
 
-    You can also update filters in **Devices** > **Filters (preview)**, or **Apps** > **Filters (preview)**.
+    You can also update filters in **Devices** > **Filters**, or **Apps** > **Filters**.
 
 3. Select the filter you want to change. Select **Rules** > **Edit**, and make your changes:
 
@@ -202,9 +185,9 @@ After a filter is created, it can be changed or updated.
 ## Delete a filter
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Tenant administration** > **Filters (preview)**. A list of all the filters is shown.
+2. Select **Tenant administration** > **Filters**. A list of all the filters is shown.
 
-    You can also delete filters in **Devices** > **Filters (preview)**, or **Apps** > **Filters (preview)**.
+    You can also delete filters in **Devices** > **Filters**, or **Apps** > **Filters**.
 
 3. Next to the filter, select the ellipses (**...**), and select **Delete**:
 

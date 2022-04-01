@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequenceReferencesInfo Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_TaskSequenceReferencesInfo class associates a task sequence with its package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

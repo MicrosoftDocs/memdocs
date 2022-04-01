@@ -1,4 +1,5 @@
 ---
+description: Learn to set the fallback time, in minutes, for a software update point(SUP) using FallbackSUP class method.
 title: "FallbackSUP Method"
 titleSuffix: "Configuration Manager"
 ms.date: "03/13/2017"

@@ -1,6 +1,7 @@
 ---
 title: "SMS_CIAllCategories Class"
 titleSuffix: "Configuration Manager"
+description: "Lists all SMS_CategoryInstance Server WMI Class or SMS_UpdateCategoryInstance Server WMI Class object instances for a given SMS_ConfigurationItem object."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a task sequence action that specifies the Sysprep options to use when capturing Windows settings from the reference computer.
 title: SMS_TaskSequence_PrepareOSAction class
 titleSuffix: Configuration Manager
 ms.date: 08/11/2020

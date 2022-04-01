@@ -2,7 +2,7 @@
 title: Site components
 titleSuffix: Configuration Manager
 description: Learn how to configure site components to modify the behavior of site system roles and site status reporting.
-ms.date: 04/05/2021
+ms.date: 12/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -49,9 +49,23 @@ For more information, see [Use a pull-distribution point](../../../plan-design/h
 
 For more information, see [Network access account](../../../plan-design/hierarchy/accounts.md#network-access-account).
 
+#### Automate software distribution site component with PowerShell
+
+To programmatically view and configure the **Software distribution** site component, use the following PowerShell cmdlets:
+
+- [Get-CMSoftwareDistributionComponent](/powershell/module/configurationmanager/get-cmsoftwaredistributioncomponent)
+- [Set-CMSoftwareDistributionComponent](/powershell/module/configurationmanager/set-cmsoftwaredistributioncomponent)
+
 ### Software update point
 
 For more information, see [Install a software update point](../../../../sum/get-started/install-a-software-update-point.md).
+
+#### Automate software update point site component with PowerShell
+
+To programmatically view and configure the **Software update point** site component, use the following PowerShell cmdlets:
+
+- [Get-CMSoftwareUpdatePointComponent](/powershell/module/configurationmanager/get-cmsoftwareupdatepointcomponent)
+- [Set-CMSoftwareUpdatePointComponent](/powershell/module/configurationmanager/set-cmsoftwareupdatepointcomponent)
 
 ### OS deployment
 
@@ -74,9 +88,23 @@ When clients on the intranet can't use Active Directory Domain Services to find 
 
 For general information about service location, see [Understand how clients find site resources and services](../../../plan-design/hierarchy/understand-how-clients-find-site-resources-and-services.md).
 
+#### Automate management point site component with PowerShell
+
+To programmatically view and configure the **Management point** site component, use the following PowerShell cmdlets:
+
+- [Get-CMManagementPointComponent](/powershell/module/configurationmanager/get-cmmanagementpointcomponent)
+- [Set-CMManagementPointComponent](/powershell/module/configurationmanager/set-cmmanagementpointcomponent)
+
 ### Status reporting
 
 These settings directly set up the level of detail that's included in status reports from sites and clients.
+
+#### Automate status reporting site component with PowerShell
+
+To programmatically view and configure the **Status reporting** site component, use the following PowerShell cmdlets:
+
+- [Get-CMStatusReportingComponent](/powershell/module/configurationmanager/get-cmstatusreportingcomponent)
+- [Set-CMStatusReportingComponent](/powershell/module/configurationmanager/set-cmstatusreportingcomponent)
 
 ### Email notification
 
@@ -84,11 +112,25 @@ Specify account and email server details to enable Configuration Manager to send
 
 For more information, see [Configure alerts](../../manage/configure-alerts.md#configure-email-notification-for-alerts).
 
+#### Automate email notification site component with PowerShell
+
+To programmatically view and configure the **Email notification** site component, use the following PowerShell cmdlets:
+
+- [Get-CMEmailNotificationComponent](/powershell/module/configurationmanager/get-cmemailnotificationcomponent)
+- [Set-CMEmailNotificationComponent](/powershell/module/configurationmanager/set-cmemailnotificationcomponent)
+
 ### <a name="bkmk_colleval"></a> Collection membership evaluation
 
 Use this component to set how often collection membership is incrementally evaluated. Incremental evaluation updates a collection membership with only new or changed resources.
 
 For more information, see [Best practices for collections](../../../clients/manage/collections/best-practices-for-collections.md).
+
+#### Automate collection membership evaluation site component with PowerShell
+
+To programmatically view and configure the **Collection membership evaluation** site component, use the following PowerShell cmdlets:
+
+- [Get-CMCollectionMembershipEvaluationComponent](/powershell/module/configurationmanager/get-cmcollectionmembershipevaluationcomponent)
+- [Set-CMCollectionMembershipEvaluationComponent](/powershell/module/configurationmanager/set-cmcollectionmembershipevaluationcomponent)
 
 ## Configuration Manager Service Manager
 

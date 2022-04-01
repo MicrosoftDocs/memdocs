@@ -63,7 +63,7 @@ When clients download cloud-managed content, they use Delivery Optimization from
 
 ## How it works
 
-When you configure clients to use the Connected Cache server, they no longer request Microsoft cloud-managed content from the internet. Clients request this content from the cache server installed on the distribution point. The on-premises server caches this content using the IIS feature for Application Request Routing (ARR). Then the cache server can quickly respond to any future requests for the same content. If the Connected Cache server is unavailable, or the content isn't yet cached, clients download the content from the internet. Clients also use Delivery Optimization to download portions of the content from peers in their network.
+When you configure clients to use the Connected Cache server, they no longer request Microsoft cloud-managed content from the internet. Clients request this content from the cache server installed on the distribution point. The on-premises server caches this content using the IIS feature for Application Request Routing (ARR). Then the cache server can quickly respond to any future requests for the same content. If the Connected Cache server is unavailable, clients download the content from the internet. Clients also use Delivery Optimization to download portions of the content from peers in their network.
 
 :::image type="content" source="media/3555764-microsoft-connected-cache.png" alt-text="Diagram of how Connected Cache works.":::
 
@@ -77,7 +77,7 @@ When you configure clients to use the Connected Cache server, they no longer req
 
 5. If the cache server fails to respond, the client downloads the content from the CDN.
 
-6. Clients use DO to get pieces of the content from peers.
+6. Clients will also use DO to get pieces of the content from peers, such as client B and client C.
 
 ## Prerequisites and limitations
 

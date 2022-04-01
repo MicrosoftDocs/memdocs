@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 11/24/2021
+ms.date: 03/09/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -22,7 +22,7 @@ ms.reviewer: traceyadams
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
+ms.custom: seodec18, references_regions
 ms.collection: M365-identity-device-management
 ---
 
@@ -43,7 +43,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- Common categories:  
 ## App management
 ## Device configuration
-## Device enrollment
+## Device provisioning
 ## Device management
 ## Intune apps
 ## Monitor and troubleshoot
@@ -64,29 +64,46 @@ Currently, Windows 365 and Azure Virtual Desktop share a common framework for id
 <!-- ***********************************************-->
 ## Device management
 
-### Cloud PCs in grace period count towards active Cloud CP license usage<!-- 37017463-->
+### New remote action: remote help<!--38310389-->
 
-In a future update, Cloud PCs that are in grace period will count towards your active Cloud PC license usage. This makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
+The upcoming Remote Help remote action (in the Microsoft Endpoint Manager admin center) will let admins start a remote session into an end user’s Cloud PC.
 
-For more information about grace period, see [Device management overview](device-management-overview.md) and [End grace period](end-grace-period.md).
+### Upload a custom image without an on-premises network connection<!--8341750-->
 
-### Support for Azure AD joined Cloud PCs<!-- 35060203-->
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network will be able to upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
 
-Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These devices will run in a Microsoft-hosted network, so customers:
+### windows365.microsoft.com will move to general availability<!--38195529-->
 
-- Don’t need their own Azure infrastructure
-- Don’t need to create an on-premises network connection.
+The windows365.microsoft.com web client will be moving out of preview and into general availability.
 
-### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
+### Nested virtualization<!--37800910-->
 
-New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
-
-### Operating system end of support status for Cloud PCs<!--36852572 -->
-
-The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
+In a future release, for most currently supported regions, Windows 365 8vCPU/32GB licenses will support nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 will follow at a later date.
 
 <!-- ***********************************************-->
-<!--## Provisioning-->
+## Monitor and troubleshoot
+
+### End-user error log collection<!--38195529-->
+
+End users will be able to collect error logs.
+
+### End-user feedback<!--38195529-->
+
+End users will be able to provide feedback to Microsoft from within the Windows 365 web client.
+
+### End user manual connectivity check<!--37679345 -->
+
+End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+### Device history report – new information for Cloud PC performance<!--38310774  -->
+
+The device history report will have new information to help you evaluate Cloud PC performance:
+
+- Top 5 processes impacting CPU spike times
+- Top 5 processes impacting RAM spike times
+
+<!-- ***********************************************-->
+<!-- ## Provisioning -->
 
 <!-- ***********************************************-->
 <!--## Role-based access control-->

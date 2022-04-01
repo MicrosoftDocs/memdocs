@@ -1,4 +1,5 @@
 ---
+description: Learn how to define a policy object rule used in the PolicyRules property with the CCM_Policy_Rule class.
 title: "CCM_Policy_Rule Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

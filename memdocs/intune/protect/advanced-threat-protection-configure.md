@@ -60,7 +60,7 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
    :::image type="content" source="./media/advanced-threat-protection-configure/atp-device-compliance-open-microsoft-defender.png" alt-text="Screen shot that shows the patch to open the Microsoft Defender Security Center.":::
 
 3. In **Microsoft 365 Defender**, (previously the *Microsoft Defender Security Center*):
-   1. Select **Settings** > **Endpoints** >**Advanced features**.
+   1. Select [**Settings** > **Endpoints** >**Advanced features**](https://security.microsoft.com/preferences2/integration).
    2. For **Microsoft Intune connection**, choose **On**:
 
       :::image type="content" source="./media/advanced-threat-protection-configure/atp-security-center-intune-toggle.png" alt-text="Screen shot of the Microsoft Intune connection setting.":::

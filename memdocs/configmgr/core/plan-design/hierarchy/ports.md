@@ -2,7 +2,7 @@
 title: Ports used for connections
 titleSuffix: Configuration Manager
 description: Learn about the required and customizable network ports that Configuration Manager uses for connections.
-ms.date: 12/01/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -239,8 +239,8 @@ The Configuration Manager console uses internet access for the following actions
 
 - Downloading software updates from Microsoft Update for deployment packages.
 - The Feedback item in the ribbon.
-- Links to documentation within the console.
-<!--506823-->
+- Links to documentation within the console.  <!--506823-->
+- Downloading items from Community hub
 
 ### <a name="BKMK_PortsConsole-RSP"></a> Configuration Manager console `-->` Reporting services point
 
@@ -370,6 +370,15 @@ A distribution point communicates to the management point in the following scena
 |-----------------|---------|---------|
 |HTTPS|--|443|
 
+### <a name="BKMK_PortsPullDP-DPSource"></a> Pull-Distribution point `-->` Distribution point configured as source
+
+|Description|UDP|TCP|
+|-----------------|---------|---------|
+|HTTP|--|80 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
+|HTTPS|--|443 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
+|Express updates|--|8005 <sup>[Note 2](#bkmk_note2) Alternate port available</sup><!-- SCCMDocs#2091 -->|
+
+
 ### <a name="BKMK_PortsRSP-SQL"></a> Reporting Services point `-->` SQL Server
 
 |Description|UDP|TCP|
@@ -489,6 +498,7 @@ For more information, see [Ports and data flow](use-a-cloud-based-distribution-p
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |HTTP|--|80 <sup>[Note 1](#bkmk_note1)</sup>|
+|HTTPS|--|443|
 
 ### <a name="BKMK_PortsIssuingCA_SiteServer"></a> Site server `<-->` Issuing certification authority (CA)
 
@@ -566,6 +576,8 @@ During the installation of a site that uses a remote SQL Server to host the site
 |Description|UDP|TCP|
 |-----------------|---------|---------|
 |Server Message Block (SMB)|--|445|
+|RPC Endpoint Mapper|135|135|
+|RPC|--|DYNAMIC <sup>[Note 6](#bkmk_note6)</sup>|
 |HTTP|--|80 or 8530 <sup>[Note 3](#bkmk_note3)</sup>|
 |HTTPS|--|443 or 8531 <sup>[Note 3](#bkmk_note3)</sup>|
 
@@ -678,7 +690,7 @@ The following sections provide more information about ports that Configuration M
 
 Clients use Server Message Block (SMB) whenever they connect to UNC shares. For example:
 
-- Manual client installation that specifies the CCMSetup.exe **/source:** command-line property
+- Manual client installation that specifies the CCMSetup.exe `/source:` command-line property
 
 - Endpoint Protection clients that download definition files from a UNC path
 

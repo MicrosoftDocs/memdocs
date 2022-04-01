@@ -2,7 +2,7 @@
 # required metadata
 
 title: Reset device passcode from Intune Company Portal website | Microsoft Docs
-description:
+description: Use the Company Portal website to reset a lost or forgotten device PIN or password. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -37,9 +37,9 @@ The reset passcode option might not appear for a corporate-enrolled device. In t
 
 Passcode reset can't be used on the following types of enrolled devices:
 
-* Personally-owned device with a work profile, running Android 7.0 and later  
-* Android Enterprise dedicated device, running Android 7.0 and later  
-* Android device administrator device, running Android 7.0 and later  
+* Personally-owned device with a work profile, running Android 8.0 and later  
+* Android Enterprise dedicated device, running Android 8.0 and later  
+* Android device administrator device, running Android 8.0 and later  
 
 If you forget your passcode on one of these devices, you must reset it to factory settings.  
 

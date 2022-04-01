@@ -1,4 +1,5 @@
 ---
+description: Learn how to remove one or more site system servers from a default boundary group using the RemoveSiteSystem class.
 title: RemoveSiteSystem method in class SMS_DefaultBoundaryGroup
 titleSuffix: "Configuration Manager"
 ms.date: "03/13/2017"

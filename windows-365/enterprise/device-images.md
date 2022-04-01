@@ -36,7 +36,7 @@ Windows 365 uses both default and custom operating system images to automaticall
 
 Both marketplace and custom images must meet the following requirements:
 
-- Windows 10 Enterprise version 1909 or later.
+- Windows 10 Enterprise version 1909 or later, excluding 2004.
 - Windows 11 Enterprise 21H2.
 - Generation 2 images.
     > [!Note]
@@ -78,7 +78,22 @@ You can choose any image for any Windows 365 license. However, for optimal perfo
 | Windows 365 license | Recommended gallery image |
 | --- | --- |
 | 2vCPU/4GB/64GB and above | Windows 10/11 Enterprise + Microsoft 365 Apps |
-| 1vCPU/2GB/64GB | Windows 10 Enterprise + OS Optimizations |
+| 1vCPU/2GB/64GB* | Windows 10 Enterprise + OS Optimizations |
+
+\* The 1vCPU option is being retired. Instead, we recommend the 2vCPU as the minimum configuration for new purchases.
+
+### Gallery image update cycle
+
+All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This happens around the middle of each month.
+
+Each updated image includes:
+
+- [Windows 10/11 monthly image updates](https://support.microsoft.com/topic/windows-10-release-on-azure-marketplace-update-history-da826e21-45ae-f6b9-de71-5f0ee2ec1563)
+- [Microsoft 365 Apps security updates](/officeupdates/microsoft365-apps-security-updates) and [feature updates](/officeupdates/monthly-enterprise-channel)
+- [Microsoft Teams updates](https://support.microsoft.com/office/what-s-new-in-microsoft-teams-d7092a6d-c896-424c-b362-a472d5f105de)
+- [WebRTC redirector service updates](/azure/virtual-desktop/teams-on-avd#install-the-teams-websocket-service)
+
+Newly provisioned Cloud PCs are automatically created with the latest images. For existing Cloud PCs, you can receive the updates by reprovisioning.
 
 ## Custom images
 

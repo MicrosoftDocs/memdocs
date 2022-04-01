@@ -1,6 +1,7 @@
 ---
 title: RefreshPkgSource method in class SMS_SoftwareUpdatesPackage
 titleSuffix: "Configuration Manager"
+description: "Refresh the package source at all distribution points. The source version of the package is incremented, and the package content is replicated to child sites."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

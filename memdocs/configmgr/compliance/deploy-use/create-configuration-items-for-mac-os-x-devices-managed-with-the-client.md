@@ -2,7 +2,7 @@
 title: Create configuration items for macOS
 titleSuffix: Configuration Manager
 description: Use the Configuration Manager macOS X configuration item to manage settings for macOS devices.
-ms.date: 05/08/2019
+ms.date: 01/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: how-to
@@ -13,6 +13,9 @@ ms.localizationpriority: medium
 ---
 
 # Create configuration items for macOS X devices
+
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is deprecated.<!-- 12927803 --> For more information, see [Mac computers](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 Use the Configuration Manager **Mac OS X (custom)** configuration item to manage settings for macOS X devices that are managed by the Configuration Manager client.  
   

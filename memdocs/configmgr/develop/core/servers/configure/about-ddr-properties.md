@@ -1,6 +1,7 @@
 ---
 title: "About DDR Properties"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the architecture for a resource is defined in both the database and the data discovery record."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

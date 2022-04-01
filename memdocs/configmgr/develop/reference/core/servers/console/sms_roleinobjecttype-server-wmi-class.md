@@ -1,4 +1,5 @@
 ---
+description: Learn how to map a role and its associated object types in Configuration Manager using the SMS_RoleInObjectType class.
 title: "SMS_RoleInObjectType Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

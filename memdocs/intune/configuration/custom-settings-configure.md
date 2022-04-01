@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use custom device settings in Microsoft Intune
-description: Add or create a profile to use custom settings for Windows 8.1, Windows 10 and later, Android device administrator, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune.
+description: Add or create a profile to use custom settings for Windows 8.1, Windows 10/11 client, Android device administrator, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 01/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -36,7 +37,7 @@ This feature applies to:
 - Android Enterprise personally-owned devices with a work profile
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer
+- Windows 10/11
 
 Custom settings are configured differently for each platform. For example, to control features on Android and Windows devices, you can enter Open Mobile Alliance Uniform Resource Identifier (OMA-URI) values. For Apple devices, you can import a file you created with the [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) or [Apple Profile Manager](https://support.apple.com/profile-manager).
 
@@ -63,7 +64,7 @@ This article shows you how to create a custom profile for Android device adminis
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10: Custom profile that enables AllowVPNOverCellular custom OMA-URI**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10/11: Custom profile that enables AllowVPNOverCellular custom OMA-URI**.
     - **Description**: Enter a description for the policy. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -74,7 +75,7 @@ This article shows you how to create a custom profile for Android device adminis
     - [Android Enterprise](custom-settings-android-for-work.md)
     - [iOS/iPadOS](custom-settings-ios.md)
     - [macOS](custom-settings-macos.md)
-    - [Windows 10](custom-settings-windows-10.md)
+    - [Windows 10/11](custom-settings-windows-10.md)
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
 
 8. Select **Next**.
@@ -90,7 +91,7 @@ This article shows you how to create a custom profile for Android device adminis
 
 ## Example
 
-In the following example, the **Connectivity/AllowVPNOverCellular** setting is enabled. This setting allows a Windows 10 device to open a VPN connection when on a cellular network.
+In the following example, the **Connectivity/AllowVPNOverCellular** setting is enabled. This setting allows a Windows client device to open a VPN connection when on a cellular network.
 
 > [!div class="mx-imgBorder"]
 > ![Example of a custom policy containing VPN settings in Intune and Endpoint Manager](./media/custom-settings-configure/custom-policy-example.png)

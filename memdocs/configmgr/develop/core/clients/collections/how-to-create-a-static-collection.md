@@ -1,4 +1,5 @@
 ---
+description: Learn how to create a static collection with defined attributes and members within Configuration Manager.
 title: "Create a Static Collection"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

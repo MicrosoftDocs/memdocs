@@ -97,7 +97,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 1. On the **Client Management** page, specify the following settings:
 
     > [!IMPORTANT]
-    > If you don't have a management point with an HTTPS-enabled website, don't configure this setting. For more information, see [Recovery service](recovery-service.md).
+    > For versions of Configuration Manager prior to 2103, if you don't have a management point with an HTTPS-enabled website, don't configure this setting. For more information, see [Recovery service](recovery-service.md).
 
     - **Configure BitLocker Management Services**: When you enable this setting, Configuration Manager automatically and silently backs up key recovery information in the site database. If you disable or don't configure this setting, Configuration Manager doesn't save key recovery information.
 

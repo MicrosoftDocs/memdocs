@@ -1,6 +1,7 @@
 ---
 title: "SMS_CM_UpdatePackDetailedMonitoring Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager. It is used to get the detailed update package installation status per site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
