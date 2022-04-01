@@ -2,7 +2,7 @@
 title: Windows client prerequisites
 titleSuffix: Configuration Manager
 description: Learn about the prerequisites for deploying the Configuration Manager client to Windows computers.
-ms.date: 12/01/2021
+ms.date: 04/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -69,10 +69,12 @@ The Configuration Manager client has external dependencies. These dependencies d
 | Microsoft Policy Platform 1.2.3514.0 or later (`MicrosoftPolicyPlatformSetup.msi`) | Required to allow clients to evaluate compliance settings. |
 | Microsoft .NET Framework version 4.6.2 or later (`NDP462-KB3151800-x86-x64-AllOS-ENU.exe`) | _Version 2107 and later_:<!--10402814--> Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net). |
 | Microsoft .NET Framework version 4.5.2 or later (`NDP452-KB2901907-x86-x64-AllOS-ENU.exe`) | _Version 2103 and earlier_: Required to support client operations. Automatically installed on the computer if it doesn't have this version installed. For more information, see [More details about Microsoft .NET](#more-details-about-microsoft-net). |
-| Microsoft SQL Server Compact Edition (CE) 4.0 SP1 components | Required to store information related to client operations. |
 | Microsoft Monitoring Agent version 10.20.18053.0 (`MMASetup-*.exe`) | Installed as needed by devices that you onboard to Microsoft Defender for Endpoint. |
 | Windows Firewall configuration (`WindowsFirewallConfigurationProvider.msi`) | Required for certain endpoint protection policies. |
 | Microsoft WebView2 (`Microsoft.WebView2.FixedVersionRuntime.x86.cab`) | Installed as needed when you use Software Center custom tabs. |
+
+> [!NOTE]
+> Starting in version 2107, the Configuration Manager client no longer has an external dependency on Microsoft SQL Server Compact Edition (CE) 4.0 SP1. It now uses a built-in version of this component to store information related to client operations.<!-- 13993273 -->
 
 #### More details about Microsoft .NET
 
