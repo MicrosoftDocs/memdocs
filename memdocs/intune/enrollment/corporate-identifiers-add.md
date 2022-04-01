@@ -38,7 +38,8 @@ At the time of enrollment, Intune automatically assigns corporate-owned status t
 
 - Enrolled with a [device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms)
 - Enrolled with the Apple [Device Enrollment Program](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md), or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS/iPadOS only)
-- [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with a serial number (iOS/iPadOS and Android)
+- [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with an international mobile equipment identifier (IMEI) numbers (all platforms with IMEI numbers) or serial number (iOS/iPadOS and Android)
+- Enrolled as [Android Enterprise corporate-owned devices with work profile](/mem/intune/enrollment/android-corporate-owned-work-profile-enroll)
 - Joined to Azure Active Directory with work or school credentials. [Devices that are Azure Active Directory registered](/azure/active-directory/devices/overview) will be marked as personal.
 - Set as corporate in the [device's properties list](#change-device-ownership)
 
