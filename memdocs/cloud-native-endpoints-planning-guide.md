@@ -31,7 +31,7 @@ ms.collection:
 
 # High level planning guide to move to cloud native endpoints
 
-??We need a few sentences for the intro??.
+Moving your windows endpoints to cloud-native has many long-term advantages. This is not an overnight process however and must be carefully planned to avoid issues, outages, or user impact. The below guide discusses many points for you to consider and account for. It also contains a high level approach for you to start your organization on its journey to cloud-native.
 
 This feature applies to:
 
@@ -63,7 +63,12 @@ With Microsoft Endpoint Manager, you get the following endpoint management optio
 
 At a high level, deploying cloud native endpoints requires modern strategies for identity, software distribution, device management, OS updates, and managing user data & configuration. Microsoft has solutions that support these areas for your cloud native endpoints.
 
-To start, review each workload, and determine if it can support cloud native endpoints. If a workload doesn't support cloud native endpoints, then ??NEED SOME TEXT??. 
+To start, review each workload, and determine how it can or will support your cloud-native endpoints. The workload itself may natively support cloud-native endpoints. This is strongly dependent upon that workload, your organization's implementation of the services behind that workload, and your users usage of those services. You will need to research and validate these services to determine whether they can support cloud native endpoints.
+
+In the event a service does not support cloud-native endpoints you will have to determine impact and criticality of this on your users and your organization. From this you can determine a path forward which is wholly based on that service and may include contacting the vendor, updating to a new version, adopting a completely new service, implementing a work around for accessing that service from a cloud-native endpoint, validating the requirements for that service, or accepting that that service is not cloud-native friendly.
+
+> [!NOTE]
+> This isn't necessarily an all or nothing proposition as you may not be able to make some services friendly to cloud-native for all users and your organization may be willing to accept this.
 
 Plan to update your workloads to support cloud native endpoints. Your workloads should have the following characteristics:
 
