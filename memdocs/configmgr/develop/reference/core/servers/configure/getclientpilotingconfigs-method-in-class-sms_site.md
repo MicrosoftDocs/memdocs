@@ -1,6 +1,7 @@
 ---
 title: "GetClientPilotingConfigs Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the GetClientPilotingConfigs WMI class method gets the configurations for client piloting settings."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

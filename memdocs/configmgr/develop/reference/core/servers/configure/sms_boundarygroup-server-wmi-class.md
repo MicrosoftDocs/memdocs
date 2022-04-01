@@ -1,6 +1,7 @@
 ---
 title: "SMS_BoundaryGroup Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_BoundaryGroup WMI class is an SMS Provider server class that represents a boundary group defined in the site hierarchy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
