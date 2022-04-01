@@ -43,7 +43,7 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 - Wipe can't be done from the Company Portal. Wiping a device enrolled by a DEM user account can be done from the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 - Only the local device appears in the Company Portal app or website.
 - DEM user accounts cannot use Apple Volume Purchase Program (VPP) apps with Apple VPP user licenses because of per-user Apple ID requirements for app management.
-- Using DEM accounts when enrolling devices via Apple's Automated Device Enrollment (ADE) is not a Supported configuration.
+- Microsoft Intune does not support the use of DEM accounts when enrolling devices via Apple Automated Device Enrollment (ADE).  
 - Devices can install VPP apps if they have Apple VPP device licenses.
 - On Windows 10 1709 and older, conditional access isn't available for Windows devices enrolled using bulk enrollment.
 - Every device enrolled with DEM accounts needs to be properly licensed to be managed by Intune. The license could be an Intune user license or an Intune device license.
