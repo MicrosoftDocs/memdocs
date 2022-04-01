@@ -141,6 +141,7 @@ For more information, see [CMG data flow](../../clients/manage/cmg/data-flow.md)
 |DHCP|67 and 68|--|
 |TFTP|69 <sup>[Note 4](#bkmk_note4)</sup> |--|
 |Boot Information Negotiation Layer (BINL)|4011|--|
+|DHCPv6 (only if: "Enable a PXE responder without WDS" is checked |547|--|
 
 > [!IMPORTANT]
 > If you enable a host-based firewall, make sure that the rules allow the server to send and receive on these ports. When you enable a distribution point for PXE, Configuration Manager can enable the inbound (receive) rules on the Windows Firewall. It doesn't configure the outbound (send) rules.<!--SCCMDocs issue #744-->
