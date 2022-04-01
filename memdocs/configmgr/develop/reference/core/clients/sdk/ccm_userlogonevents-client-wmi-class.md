@@ -1,6 +1,7 @@
 ---
 title: "CCM_UserLogonEvents Class"
 titleSuffix: "Configuration Manager"
+description: "A client class that represents a user logon event."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
