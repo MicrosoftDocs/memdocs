@@ -1,6 +1,7 @@
 ---
 title: "AssociateCollections Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the AssociateCollections WMI class method associates a set of collections to this distribution point group."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

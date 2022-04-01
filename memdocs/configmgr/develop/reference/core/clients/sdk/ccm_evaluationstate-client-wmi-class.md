@@ -1,6 +1,7 @@
 ---
 title: "CCM_EvaluationState Class"
 titleSuffix: "Configuration Manager"
+description: "The CCM_EvaluationState WMI class is an SMS Provider server class in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
