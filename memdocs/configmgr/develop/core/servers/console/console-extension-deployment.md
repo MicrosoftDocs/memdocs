@@ -81,7 +81,7 @@ The deployment of a typical Configuration Manager extension has to account for a
 ### Installing a Custom Management Class  
  Copy the management class assembly to either %*ProgramFiles*%\ Microsoft Endpoint Manager\AdminConsole\bin or to your application's installation folder.  
 
- To install an custom management class XML file, copy the file to the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\ManagementClasses folder. Because all custom management classes are placed in this folder, you must ensure that your XML file has a unique name. It is suggested that you use your company name as part of the file name.  
+ To install a custom management class XML file, copy the file to the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\ManagementClasses folder. Because all custom management classes are placed in this folder, you must ensure that your XML file has a unique name. It is suggested that you use your company name as part of the file name.  
 
 ### Removing a Custom Management Class  
  To remove a custom management class, delete the custom management class XML file. If there are no other XML files in the folder then it is safe to remove the folder.  
