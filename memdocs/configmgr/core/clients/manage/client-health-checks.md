@@ -54,7 +54,7 @@ Verify that the client check scheduled task (`CcmEval`) has run at least one tim
 
 <!--7B9F8FF6-EDF7-42CA-A67F-073A2E161C19-->
 
-The client uses Microsoft SQL Server Compact Edition (CE) to locally store information. If this check fails, reinstall the Configuration Manager client to remediate.
+The client uses a built-in version of SQL Server Compact Edition (CE) to locally store information. If this check fails, reinstall the Configuration Manager client to remediate.
 
 ### Verify WMI
 
