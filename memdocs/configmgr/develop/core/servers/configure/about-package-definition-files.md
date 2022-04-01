@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager to help automate package creation using package definition files.
 title: "About Package Definition Files"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
