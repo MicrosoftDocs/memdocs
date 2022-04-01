@@ -1,6 +1,7 @@
 ---
 title: "Configuration Manager SEDO"
 ms.date: "09/20/2016"
+description: "SEDO in the SDK provides a mechanism for assigning and unassigning locks to globally replicated SDK provider objects in the context of a site, computer, and user."
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
