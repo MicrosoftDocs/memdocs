@@ -142,7 +142,7 @@ For more information, see [Automatic deployment rules (ADR)](../../../sum/deploy
 
 You can now organize software update groups and packages by using folders. This change allows for better categorization and management of software updates.
 
-<!-- For more information, see [Link text](link). -->
+For more information, see [Deploy software updates](../../../sum/deploy-use/deploy-software-updates.md#bkmk_folder).
 
 ### Alerts for orchestration groups
 <!--12725116-->

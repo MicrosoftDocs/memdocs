@@ -330,6 +330,14 @@ When searching in a device collection, it doesn't search the keyword against all
 This behavior significantly improves the time it takes to search by name, especially in a large environment. Custom searches by specific criteria are unaffected by this change.
 
 ## Software Library workspace
+
+### Folder support for software update nodes
+<!--3601129-->
+
+*(Introduced in version 2203)*
+
+You can organize software update groups and packages by using folders. This change allows for better categorization and management of software updates. For more information, see [Deploy software updates](../../../sum/deploy-use/deploy-software-updates.md#bkmk_folder).
+
 ### Improvements to console search
 <!--8325332, 9506942, 9506938, 9506934-->
 *(Introduced in version 2107)*
