@@ -1,6 +1,7 @@
 ---
 title: "SMS_InventoryReport Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_InventoryReport WMI class is an SMS Provider server class that represents the classes and properties that are enabled to be collected."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
