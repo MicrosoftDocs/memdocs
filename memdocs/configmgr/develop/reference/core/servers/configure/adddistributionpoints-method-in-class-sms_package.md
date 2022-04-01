@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the AddDistributionPoints method in Class SMS_Package to add distribution points for the package.
 title: "AddDistributionPoints Method in Class SMS_Package"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
