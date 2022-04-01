@@ -1,6 +1,7 @@
 ---
 title: "ApproveClients Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the ApproveClients WMI class method approves specified client computers to join the site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
