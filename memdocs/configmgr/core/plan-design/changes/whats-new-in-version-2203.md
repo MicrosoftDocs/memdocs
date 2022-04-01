@@ -80,20 +80,6 @@ You can now perform client notification actions, including **Run Scripts**, from
 
 For more information, see [Review deployment details](../../../apps/deploy-use/monitor-applications-from-the-console.md#review-deployment-details).
 
-### New client health checks
-<!--10954111-->
-
-Based on your feedback, there are two new client health checks in this release:
-
-- Verify disk space not near capacity
-- Verify CCMCache isn't near drive capacity
-
-Configuration Manager client functionality can be limited when the disk is full. These checks help you maintain healthy clients, which help you better manage the devices.
-
-For more information, see [Client health checks](../../clients/manage/client-health-checks.md).
-
-This release also includes performance improvements to the [Client health dashboard](../../clients/manage/client-health-dashboard.md).
-
 ## Collections
 
 ### Delete collection references
