@@ -25,7 +25,7 @@ items:
     href: device-images.md
   - name: Lifecycle and operating system end of support
     href: end-of-support.md
-  - name: Customer permission
+  - name: Customer permissions
     href: customer-permissions.md  
   - name: Device configuration with MEM
     href: device-configuration.md
