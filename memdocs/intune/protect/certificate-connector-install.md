@@ -65,6 +65,9 @@ To support your use of certificates with Intune, you can install the Certificate
 
 After a connector installs, you can run the installation program again to uninstall the connector.
 
+> [!TIP]
+> The installer will attempt to install the .NET Framework 4.7.2. If you experience issues during this process you can choose to pre-install the .NET Framework using the [Microsoft .NET Framework 4.7.2 offline installer for Windows](https://support.microsoft.com/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2)
+
 ## Configure the certificate connector
 
 To configure the certificate connector, you use the **Certificate Connector for Microsoft Intune** wizard. The configuration can start automatically when you choose *Configure Now* at the end of a certificate connector install, or manually by opening an elevated command prompt and running **C:\Program Files\Microsoft Intune\PFXCertificateConnector\ConnectorUI\PFXCertificateConnectorUI.exe**. An example is provided below. The command must be run as an administrator.
