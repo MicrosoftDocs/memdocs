@@ -5,8 +5,8 @@ title: Data security and sharing in Intune
 titleSuffix: Microsoft Intune
 description: Learn how personal data is secured and shared in Intune.
 keywords: privacy, data
-author: ErikjeMS
-ms.author: erikje
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 09/01/2020
 ms.topic: conceptual
