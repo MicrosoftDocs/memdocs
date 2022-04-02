@@ -1,6 +1,7 @@
 ---
 title: "SMS_SiteInstallItemBase Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents the abstract base class from which all specific site install item configuration classes are derived."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

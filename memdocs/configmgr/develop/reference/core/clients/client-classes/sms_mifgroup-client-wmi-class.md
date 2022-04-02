@@ -1,6 +1,7 @@
 ---
 title: "SMS_MIFGroup Class"
 titleSuffix: "Configuration Manager"
+description: "A client Windows Management Instrumentation class that serves as a dynamic instance provider class allowing WMI reporting of Management Information Format files that extend the client inventory."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

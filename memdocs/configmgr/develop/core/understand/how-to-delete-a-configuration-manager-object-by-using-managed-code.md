@@ -1,7 +1,7 @@
 ---
+description: Learn how to create a Configuration Manager object by using the managed SMS Provider with WqlConnectionManager.CreateInstance method.
 title: "Delete an Object by Using Managed Code"
 titleSuffix: "Configuration Manager"
-description: "Delete a Configuration Manager object by using the managed SMS Provider. You can use the IResultObject.Delete method."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "IAppManagementHandler::CheckReconnectData"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the IAppManagementHandler::CheckReconnectData method checks whether the reconnection data is valid."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
