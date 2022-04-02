@@ -1,6 +1,7 @@
 ---
 title: "Remove an Object Association with a Security Scope"
 titleSuffix: "Configuration Manager"
+description: "Remove a security scope from an object by using an SMS_SecuredCategoryMembership class instance."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

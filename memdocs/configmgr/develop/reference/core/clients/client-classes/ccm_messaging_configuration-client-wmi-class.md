@@ -1,6 +1,7 @@
 ---
 title: "CCM_Messaging_Configuration Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CCM_Messaging_Configuration class is a client WMI class that supports messaging-related settings that are exposed to administrators."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

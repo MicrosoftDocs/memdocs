@@ -1,6 +1,7 @@
 ---
 title: "SetSummarizationSettings Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SetSummarizationSettings WMI class method sets the summarization schedule."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

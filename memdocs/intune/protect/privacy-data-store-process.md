@@ -5,8 +5,8 @@ title: Data storage and processing in Intune
 titleSuffix: Microsoft Intune
 description: Learn how personal data is stored and processed in Intune.
 keywords: data, privacy
-author: ErikjeMS
-ms.author: erikje
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 09/01/2020
 ms.topic: conceptual
