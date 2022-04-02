@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_InstallDeployToolsAction Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a task sequence action to specify the Sysprep package for use with the operating system. The Sysprep package captures the reference computer settings."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

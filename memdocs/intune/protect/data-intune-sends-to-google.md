@@ -5,8 +5,8 @@ title: Data Intune sends to Google
 titleSuffix: Microsoft Intune
 description: List of data that Intune sends to Google.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 11/16/2020
 ms.topic: conceptual

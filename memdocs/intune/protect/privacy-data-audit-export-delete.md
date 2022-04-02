@@ -5,8 +5,8 @@ title: Audit, export, or delete personal data
 titleSuffix: Microsoft Intune
 description: Learn how to audit, export, or delete personal data.
 keywords: GDPR, personal data, privacy
-author: ErikjeMS
-ms.author: erikje
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 9/10/2020
 ms.topic: conceptual
