@@ -59,7 +59,7 @@ Azure device limit restrictions set the maximum number of devices that either Az
 If you have both Intune and Azure device limit restrictions set, the following table shows you what is applied based on your user affinity setting.
 
 | Device platform | User affinity | Azure applies | Intune applies |  
-| ----- | ----- | ----- | ----- | ----- |  
+| ----- | ----- | ----- | ----- |
 | Android Enterprise personally-owned work profile | Yes | Yes | Yes|  
 | Android Enterprise dedicated device | No | No | No |  
 | Android Enterprise fully managed | Yes | Yes | Yes |  
