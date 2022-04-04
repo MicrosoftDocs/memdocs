@@ -2,7 +2,7 @@
 # required metadata
 
 title: Set how much time before your screen locks | Microsoft Docs
-description:
+description: "Reconnect to your work by setting the password timeout on your device and follow the steps for the type of device you have." 
 keywords:
 author: lenewsad
 ms.author: lanewsad
