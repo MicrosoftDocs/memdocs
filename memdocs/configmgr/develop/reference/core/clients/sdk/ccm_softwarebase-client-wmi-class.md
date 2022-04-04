@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the CCM_SoftwareBase class to represent the base class for management entities like software updates.
 title: "CCM_SoftwareBase Class"
 titleSuffix: "Configuration Manager"
 description: "An SMS Provider server class that represents the base class for management entities like software updates, applications and so on."
