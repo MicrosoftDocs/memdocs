@@ -54,6 +54,9 @@ For more information about the options available with User Enrollment, see [User
 
 ## Create a User Enrollment profile in Intune
 
+> [!NOTE]
+> An iOS User Enrollment profile overrides an enrollment restriction policy.
+
 An enrollment profile defines the settings applied to a group of devices during enrollment. 
 
 1. Federate your Azure AD instance with Apple Business Manager or Apple School Manager. For more information, see [Intro to federated authentication with Apple Business Manager](https://support.apple.com/en-euro/guide/apple-business-manager/welcome/web).
