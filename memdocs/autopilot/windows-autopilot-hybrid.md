@@ -126,9 +126,12 @@ The Intune Connector requires the [same endpoints as Intune](../intune/fundament
 4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
 5. At the end of the setup, select **Configure**.
 6. Select **Sign In**.
-7. Enter the user Global Administrator or Intune Administrator role credentials. 
+7. Enter the Global administrator or Intune administrator role credentials. 
  The user account must have an assigned Intune license.
 8. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
+
+> [!NOTE]
+> The Global administrator role is a temporary requirement at the time of installation.
 
 > [!NOTE]
 > After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
