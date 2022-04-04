@@ -1,6 +1,7 @@
 ---
 title: "Inventory Agent Client WMI Classes"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the inventory client agent classes can be broken into three categories."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

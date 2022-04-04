@@ -63,6 +63,7 @@ You can use the following methods to enroll devices using DEM accounts:
 - [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows devices bulk enrollment](windows-bulk-enroll.md)
 - [DEM initiated via Company Portal](../user-help/use-managed-devices-to-get-work-done.md)
+- [DEM initiated via Azure AD join](/mem/intune/enrollment/device-enrollment-manager-enroll)
 
 ## Add a device enrollment manager
 
