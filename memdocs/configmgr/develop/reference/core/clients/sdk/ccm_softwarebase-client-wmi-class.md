@@ -66,7 +66,7 @@ Class CCM_SoftwareBase :
 
  The deadline specified by the administrator to deploy this managed entity on a client computer.  
 
- `Description`  
+ Description  
  Data type: `String`  
 
  Access type: Read/Write  
