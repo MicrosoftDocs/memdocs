@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the GetDeviceId method to return the device (client) identifier.
 title: "GetDeviceId Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

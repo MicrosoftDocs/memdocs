@@ -1,4 +1,5 @@
 ---
+description: Learn how to synchronize the asset intelligence catalog outside the normal synchronization schedule.
 title: "Initiate a Synchronization"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
