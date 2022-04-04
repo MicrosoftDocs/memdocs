@@ -54,7 +54,7 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 **Platform: Windows 10, Windows 11, and Windows Server**:
 
 > [!NOTE]  
-> Beginning in April 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
 >
 > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
 >

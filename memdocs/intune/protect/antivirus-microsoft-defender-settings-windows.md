@@ -31,7 +31,7 @@ ms.reviewer: laarrizz
 # Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices
 
 > [!NOTE]  
-> This article details the settings in the  Microsoft Defender Antivirus and Microsoft Defender Antivirus Exclusions profiles for the *Windows 10 and later* platform for endpoint security Antivirus policy. Beginning in April 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles. The settings details in this article apply to those deprecated profiles. 
+> This article details the settings in the  Microsoft Defender Antivirus and Microsoft Defender Antivirus Exclusions profiles for the *Windows 10 and later* platform for endpoint security Antivirus policy. Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles. The settings details in this article apply to those deprecated profiles. 
 
 View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 and later in Microsoft Intune.  
 

@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/04/2022
+ms.date: 04/05/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -83,7 +83,6 @@ The following profile templates are now available in the new settings format:
 | Antivirus | Windows 10, Windows 11, and Windows Server | Windows Security experience |
 | Antivirus | Windows 10, Windows 11, and Windows Server | Windows Defender Antivirus    |
 | Antivirus | Windows 10, Windows 11, and Windows Server | Windows Defender Antivirus Exclusions
-| Disk Encryption | Windows 10 and Later | BitLocker |
 | Firewall | Windows 10, Windows 11, and Windows Server | Microsoft Defender Firewall |
 | Firewall | Windows 10, Windows 11, and Windows Server | Microsoft Defender Firewall Rules |
 | Endpoint detection and response | Windows 10, Windows 11, and Windows Server | Endpoint detection and response |

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/01/2021
+ms.date: 04/04/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -210,6 +210,9 @@ Supported platforms and profiles:
 ### Attack surface reduction rules profile
 
 #### Attack Surface Reduction Rules
+
+> [!NOTE]  
+> This section details the settings in Attack Surface Reduction Rules profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.  
 
 - **Block persistence through WMI event subscription**  
   [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
@@ -542,6 +545,9 @@ Supported platforms and profiles:
 ### Exploit protection profile
 
 #### Exploit protection
+
+  > [!NOTE]  
+  > This  section details the settings you can find in Exploit protection profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.
 
 - **Upload XML**  
   CSP: [ExploitProtectionSettings](/windows/client-management/mdm/policy-csp-exploitguard#exploitguard-exploitprotectionsettings)

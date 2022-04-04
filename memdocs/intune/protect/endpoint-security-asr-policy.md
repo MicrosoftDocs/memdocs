@@ -53,6 +53,13 @@ Find the endpoint security policies for attack surface reduction under *Manage* 
 
 ## Attack surface reduction profiles
 
+> [!NOTE]  
+> Beginning on April 5, 2022, the following profiles for Attack surface reduction policy have been updated to use the settings format as found in the Settings Catalog, while the other profiles are unchanged:  
+> - Attack surface reduction rules
+> - Exploit protection
+> The new versions of these two profiles include the same settings as the older profile templates they replace. With this change, all new instances of these profiles will use the new settings format. Your previously crated instances of these profiles remain available to use and edit.
+
+
 ### Devices managed by Intune
 
 **Windows 10/11 profiles**:
@@ -83,7 +90,6 @@ Find the endpoint security policies for attack surface reduction under *Manage* 
   - Behaviors that apps don't usually start during normal day-to-day work
 Reducing your attack surface means offering attackers fewer ways to perform attacks.
 
-  To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
 
   **Merge behavior for Attack surface reduction rules in Intune**:
 
@@ -105,8 +111,6 @@ Reducing your attack surface means offering attackers fewer ways to perform atta
   To learn more, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in the Microsoft Defender for Endpoint documentation.
 
 - **Exploit protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of a number of mitigations that can be applied to either the operating system or individual apps.
-
-  To learn more, see [Enable exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) in the Microsoft Defender for Endpoint documentation.
 
 ### Devices managed by Configuration Manager
 
@@ -150,6 +154,4 @@ Policy merge doesn’t compare or merge the configurations from different settin
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
 
-View details for the Windows settings in the deprecated profiles:
-
-- [Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).
+View details for the settings in profiles for [Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).
