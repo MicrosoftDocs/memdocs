@@ -124,6 +124,8 @@ The below apps support the core Intune App Protection Policy settings.
 |Microsoft Whiteboard|[iOS](https://apps.apple.com/app/microsoft-whiteboard/id1352499399)|✔|No settings|
 |Microsoft Whiteboard|[Android](https://play.google.com/store/apps/details?id=com.microsoft.whiteboard.publicpreview)|✔|No settings|
 
+> [!NOTE]
+> For Microsoft Office for Android, add the Office Hub, Office Hub (HL), and Office Hub (ROW) apps to Android App Protection Policies.
 
 ## Partner productivity apps
 
