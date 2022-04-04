@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the FileSystemFile Class to represent local file information.
 title: "FileSystemFile Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
