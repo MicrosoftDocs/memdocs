@@ -1,5 +1,5 @@
 ---
-Description: The following examples demonstrate various Microsoft Configuration Manager SQL view queries.
+description: The following examples demonstrate various Microsoft Configuration Manager SQL view queries.
 title: "See a View by Using SQL Server"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
