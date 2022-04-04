@@ -308,6 +308,8 @@ Remote help logs data during installation and during remote help sessions, which
 
 ## Known Issues
 
+- When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the remote help session won’t be established. 
+If a conditional access policy is configured as described above and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant will not be able to use remote help. 
 
 ## Next steps
 
