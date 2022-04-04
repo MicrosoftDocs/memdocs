@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager SMS_AutoDeployment Windows Management Instrumentation (WMI) class to represent an automatic deployment.
 title: "SMS_AutoDeployment Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager GetLockInformation Windows Management Instrumentation (WMI) class method to get current lock information.
 title: "GetLockInformation Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
