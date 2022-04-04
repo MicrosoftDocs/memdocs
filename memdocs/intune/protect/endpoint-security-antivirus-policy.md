@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/02/2021
+ms.date: 04/04/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,14 +32,12 @@ ms.reviewer: mattcall
 
 Intune Endpoint security Antivirus policies can help security admins focus on managing the discrete group of antivirus settings for managed devices.
 
-Antivirus policy includes several profiles. Each profile contains only the settings that are relevant for Microsoft Defender for Endpoint antivirus for macOS, Windows 10/11, or for the user experience in the Windows Security app on Windows 10/11 devices.
+Antivirus policy includes several profiles. Each profile contains only the settings that are relevant for Microsoft Defender for Endpoint antivirus for macOS and Windows devices, or for the user experience in the Windows Security app on Windows devices.
 
 You'll find the antivirus policies under **Manage** in the Endpoint security node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-Antivirus policies include the same settings as *endpoint protection* or *device restriction* profiles for [device configuration](../configuration/device-profile-create.md) policy. However, those policy types include additional categories of settings that are unrelated to Antivirus. The additional settings can complicate the task of configuring Antivirus workload. Additionally, the settings found in the Antivirus policy for macOS aren't available through the other policy types. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
+Antivirus policies include the same settings as found *endpoint protection* or *device restriction* templates for [device configuration](../configuration/device-profile-create.md) policy. However, those policy types include additional categories of settings that are unrelated to Antivirus. The additional settings can complicate the task of configuring Antivirus workload. Additionally, the settings found in the Antivirus policy for macOS aren't available through the other policy types. The macOS Antivirus profile replaces the need to configure the settings by using `.plist` files.
 
->[!Note]
-> The Security Management for Microsoft Defender for Endpoint added an additional platform **Windows 10, Windows 11, and Windows Server (Preview)**. This new platform applies to both devices enrolled through Microsoft Intune as well as Microsoft Defender for Endpoint.
 
 ## Prerequisites for antivirus policy
 
@@ -49,12 +47,8 @@ Antivirus policies include the same settings as *endpoint protection* or *device
   - Any supported version of macOS
   - For Intune to manage antivirus settings on a device, Microsoft Defender for Endpoint must be installed on that device. See. [Microsoft Defender for Endpoint for macOS](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac) (In the Microsoft Defender for Endpoint documentation)
 
-- **Windows 10 and later**
-  - No additional prerequisites are required.
-
-- **Windows 10, Windows 11, and Windows Server (Preview)**
-  - No additional prerequisites are required.
-  
+- **Windows 10, Windows 11, and Windows Server** 
+  - No additional prerequisites are required.  
 
 **Support for Configuration Manager clients**:
 
@@ -114,9 +108,15 @@ The following profiles are supported for devices you manage with Intune:
 
     When you use [Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), you can configure and deploy Antivirus settings to your managed macOS devices through Intune instead of configuring those settings by use of `.plist` files.
 
-**Windows 10**:
+**Windows 10, 11, and Windows Server**:
 
-- Platform: **Windows 10 profiles**
+> [!NOTE]  
+> Beginning in April 2022, the *Windows 10 and later* platform is replaced by the *Windows 10, Windows 11, and Windows Server* platform. Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
+
+- Platform: **Windows 10, Windows 11, and Windows Server**  
+  Profiles for this platform can be used with devices enrolled with Intune, and devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
+
+
 
   - Profile: **Microsoft Defender Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10/11.
 
@@ -139,34 +139,6 @@ The following profiles are supported for devices you manage with Intune:
   - Profile: **Windows Security experience**-  Manage the [Windows Security app settings](../protect/antivirus-security-experience-windows-settings.md) that end users can view in the Microsoft Defender Security center and the notifications they receive.
 
     The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
-
-- Platform: **Windows 10, Windows 11, and Windows Server (Preview)**
-
-  - Profile: **Microsoft Defender Antivirus (Preview)** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10/11.
-
-    Defender Antivirus is the next-generation protection component of Microsoft Defender for Endpoint. Next-generation protection brings together technologies like machine learning and cloud infrastructure to protect devices in your enterprise organization.
-
-    The *Microsoft Defender Antivirus* profile is a separate instance of the antivirus settings that are found in the *Device Restriction profile* for Device Configuration policy.
-  
-    Unlike the antivirus settings in a *Device Restriction profile*, you can use these settings to with devices that are co-managed. To use these settings, the [co-management workload slider](/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection must be set to Intune.
-
-    The settings in this profile apply to devices that are enrolled to Endpoint Manager with **Intune or Microsoft Defender for Endpoint**.
-
-    To setup security management for MDE, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md).
-
-**Windows Server:**
-
-- Platform: **Windows 10, Windows 11, and Windows Server (Preview)**
-
-  - Profile: **Microsoft Defender Antivirus (Preview)** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10/11.
-
-    Defender Antivirus is the next-generation protection component of Microsoft Defender for Endpoint. Next-generation protection brings together technologies like machine learning and cloud infrastructure to protect devices in your enterprise organization.
-
-    The *Microsoft Defender Antivirus* profile is a separate instance of the antivirus settings that are found in the *Device Restriction profile* for Device Configuration policy.
-  
-    The settings in this profile apply to devices that are enrolled to Endpoint Manager with **Microsoft Defender for Endpoint**.
-
-    To setup security management for MDE, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md).
 
 ### Devices managed by Configuration Manager
 
@@ -192,9 +164,9 @@ The following settings support policy merge:
 
 [Microsoft Defender Antivirus policies](../protect/antivirus-microsoft-defender-settings-windows.md)
 
-- **Defender Processes To Exclude** - CSP: [Defender/ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
-- **File extensions to exclude from scans and real-time protection** - CSP: [Defender/ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
-- **Defender Files And Folders To Exclude** - CSP: [Defender/ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
+- **Excluded Processes** - CSP: [Defender/ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
+- **Excluded Extensions** - CSP: [Defender/ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
+- **Excluded Paths** - CSP: [Defender/ExcludedPaths](/windows/client-management/mdm/policy-csp-defender#defender-excludedpaths)
 
 ## Antivirus policy reports
 

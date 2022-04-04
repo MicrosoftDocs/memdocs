@@ -66,7 +66,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 #### New profile templates and settings structure for endpoint security policies<!-- 13742640 -->
 
-We’ve begun to release new [endpoint security profile templates](../intune/protect/endpoint-security-policy.md) that use the settings format as found in the Settings Catalog. Each new profile template includes the same settings as the older profile it replaces, while bringing the following improvements:
+We’ve begun to release new [endpoint security profile templates](../intune/protect/endpoint-security-policy.md) , while bringing the following improvements:
 
 - **Setting names match the Windows CSP name**: Each setting name in the new profiles use the same name as the CSP that the setting configures. However, in the Intune UI we’ve added spaces to that name to make the setting name easier to read. For example, a setting in the Intune UI that’s named *Allow USB Connection* configures the CSP named [AllowUSBConnection](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection).
 
