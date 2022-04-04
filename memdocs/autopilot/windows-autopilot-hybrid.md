@@ -204,6 +204,7 @@ Here is a list of VPN clients that are known to be tested and validated:
 - Checkpoint (Win32 client)
 - Citrix NetScaler (Win32 client)
 - SonicWall (Win32 client)
+- FortiClient VPN (Win32 client)
 
 **Not supported clients:**
 - UWP-based VPN plug-ins
