@@ -214,7 +214,7 @@ The following sections provide troubleshooting guidance for common issues.
 |--------|------------------------------|
 |Settings catalog policy fails|Confirm the VM is enrolled using device credentials. Enrollment with user credentials is not currently supported for Windows 10 or Windows 11 Enterprise multi-session.|
 |Configuration policy did not apply|Templates (with the exception of Certificates) are not supported on Windows 10 or Windows 11 Enterprise multi-session. All policies must be created via the settings catalog.|
-Configuration policy reports as Not applicable|Some policies are not applicable to Azure Virtual Desktop VMs. For a detailed list, review the documentation.|
+Configuration policy reports as Not applicable|Some policies are not applicable to Azure Virtual Desktop VMs.|
 |Administrative template policy did not apply|Some ADMX settings currently require a Windows Insider Preview Build. You can hover over the information bubble next to the setting name to see if an Insider build is required for a specific setting.|
 |Microsoft Edge/Microsoft Office ADMX policy does not show up when I apply the filter for Windows 10 or Windows 11 Enterprise multi-session edition|Applicability for these settings is not based on the Windows version or edition but on whether those apps have been installed on the device. To add these settings to your policy, you may have to remove any filters applied in the settings picker.|
 |App configured to install in system context did not apply|Confirm the app does not have a dependency or supersedence relationship on any apps configured to install in user context. User context apps are not currently supported on Windows 10 or Windows 11 Enterprise multi-session.|
