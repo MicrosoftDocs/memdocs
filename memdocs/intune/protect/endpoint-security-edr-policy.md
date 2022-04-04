@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/02/2021
+ms.date: 04/04/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -45,7 +45,6 @@ EDR policies deploy to groups of devices in Azure Active Directory (Azure AD) th
 
 Find the endpoint security policies for EDR under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-View [settings for Endpoint detection and response profiles](endpoint-security-edr-profile-settings.md).
 
 ## Prerequisites for EDR policies
 
@@ -63,20 +62,17 @@ View [settings for Endpoint detection and response profiles](endpoint-security-e
 
 ### Devices managed by Microsoft Endpoint Manager
 
-[View the settings](endpoint-security-edr-profile-settings.md) you can configure for the following platforms and profiles.
-
 **Intune** – The following are supported for devices you manage with Intune:
 
-- Platform: **Windows 10 and later**
-    - Profile: **Endpoint detection and response (MDM)** - Intune deploys the policy to devices in your Azure AD groups.
+> [!NOTE]  
+> Beginning in April 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+>
+> The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+>
+>Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
-- Platform **Windows 10, Windows 11, and Windows Server (Preview)**
-    - Profile: **Endpoint detection and response (Preview)** - Endpoint Manager deploys policy to Azure AD Groups, and distributes it to Microsoft Defender for Endpoint Clients.
-
-**Defender for Endpoint** - The following are supported for devices that receive security management policy with Microsoft Defender for Endpoint:
-
-- Platform **Windows 10, Windows 11, and Windows Server (Preview)**
-    - Profile: **Endpoint detection and response (Preview)** - Endpoint Manager deploys policy to Azure AD Groups, and distributes it to Microsoft Defender for Endpoint Clients.
+- Platform: **Windows 10, Windows 11, and Windows Server**
+  - Profile: **Endpoint detection and response** - Intune deploys the policy to devices in your Azure AD groups. Profiles for this platform can be used with devices enrolled with Intune, and wit devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
 ### Devices managed by Configuration Manager
 
@@ -133,8 +129,8 @@ If you're planning to enable co-management, be familiar with co-management, its 
 
 The following are supported for devices you manage with Intune:
 
-- Platform: **Windows 10 and later** - Intune deploys the policy to devices in your Azure AD groups.
-  - Profile: **Endpoint detection and response (MDM)**
+- Platform: **Windows 10, Windows 11, and Windows Server** - Intune deploys the policy to devices in your Azure AD groups.
+  - Profile: **Endpoint detection and response**
 
 ## Create and deploy EDR policies
 
@@ -158,8 +154,8 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 3. Select the platform and profile for your policy. The following information identifies your options:
 
    - Intune - Intune deploys the policy to devices in your Azure AD groups. When you create the policy, select:
-     - Platform: **Windows 10 and later**
-     - Profile: **Endpoint detection and response (MDM)**
+     - Platform: **Windows 10, Windows 11, and Windows Server**
+     - Profile: **Endpoint detection and response**
 
    - Configuration Manager - Configuration Manager deploys the policy to devices in your Configuration Manager collections. When you create the policy, select:
      - Platform: **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
@@ -173,7 +169,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
    When your done configuring settings, select **Next**.
 
-7. *This step only applies for the **Endpoint detection and response (MDM)** profile*:  
+7. *This step only applies for the **Endpoint detection and response** profile and the Windows 10, Windows 11, and Windows Server platform*:  
 
    On the **Scope tags** page, choose **Select scope tags** to open the *Select tags* pane to assign scope tags to the profile.
   
@@ -196,15 +192,19 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
 You can view details about the EDR policies you deploy in the Microsoft Endpoint Manager admin center. To view details, go to **Endpoint security** > **Endpoint deployment and response**, and select a policy for which you want to view compliance details:
 
-- For policies that target the **Windows 10 and later** platform (Intune), you’ll see an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
+- For policies that target the **Windows 10, Windows 11, and Windows Server** platform (Intune), you’ll see an overview of compliance to the policy. You can also select the chart to view a list of devices that received the policy, and drill-in to individual devices for more details.
 
-  The chart for **Devices with Defender for Endpoint sensor** displays only devices that successfully onboard to Microsoft Defender for Endpoint through use of the **Windows 10 and later** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Microsoft Defender for Endpoint by external means, like Group Policy or PowerShell, are counted as **Devices without the Defender for Endpoint sensor**.
+  The chart for **Devices with Defender for Endpoint sensor** displays only devices that successfully onboard to Microsoft Defender for Endpoint through use of the **Windows 10, Windows 11, and Windows Server** profile. To ensure you have full representation of your devices in this chart, deploy the onboarding profile to all your devices. Devices that onboard to Microsoft Defender for Endpoint by external means, like Group Policy or PowerShell, are counted as **Devices without the Defender for Endpoint sensor**.
 
 - For policies that target the **Windows 10, Windows 11, and Windows Server (ConfigMgr)** platform (Configuration Manager), you’ll see an overview of compliance to the policy but can't drill-in to view additional details. The view is limited because the admin center receives limited status details from Configuration Manager, which manages the deployment of the policy to Configuration Manager devices.
 
-[View the settings](endpoint-security-edr-profile-settings.md) you can configure for both platforms and profiles.
+
 
 ## Next steps
 
 - [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy)
 - Learn more about [endpoint detection and response](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender for Endpoint documentation.
+
+View details for the settings in the deprecated Endpoint detection and response profile for the *Windows 10 and later* platform:
+
+- [Endpoint detection and response profile settings](endpoint-security-edr-profile-settings.md) you can configure for both platforms and profiles.

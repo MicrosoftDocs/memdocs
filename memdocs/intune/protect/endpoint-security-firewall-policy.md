@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/22/2022
+ms.date: 04/04/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,13 +30,11 @@ ms.reviewer: mattcall
 
 # Firewall policy for endpoint security in Intune
 
-Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10/11.
+Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows devices.
 
 While you can configure the same firewall settings by using Endpoint Protection profiles for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to firewalls and can complicate the task of configuring only firewall settings for your environment.
 
 Find the endpoint security policies for firewalls under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-View [settings for Firewall profiles](../protect/endpoint-security-Firewall-profile-settings.md).
 
 ## Prerequisites for Firewall profiles
 
@@ -53,22 +51,19 @@ View [settings for Firewall profiles](../protect/endpoint-security-Firewall-prof
 
 - **macOS firewall** – Enable and configure settings for the built-in firewall on macOS.
 
-**Platform: Windows 10 and Later**:
+**Platform: Windows 10, Windows 11, and Windows Server**:
+
+> [!NOTE]  
+> Beginning in April 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+>
+> The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+>
+>Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
+
 
 - **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
 
 - **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
-
-**Platform: Windows 10, Windows 11, and Windows Server (Preview)**:
-
-- **Microsoft Defender Firewall (Preview)** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
-
-- **Microsoft Defender Firewall rules (Preview)** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
-
-    >[!Note]
-    > The *Windows 10, Windows 11, and Windows Server (Preview)* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
-    >
-    >To setup security management for MDE, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md).
 
 ### Devices managed by Configuration Manager
 
@@ -155,3 +150,7 @@ To learn more about Firewall rules in Intune, and how to troubleshoot common pro
 ## Next steps
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+
+View details for the settings in the deprecated Firewall profiles for the *Windows 10 and later* platform:  
+
+- [Firewall profile settings](../protect/endpoint-security-Firewall-profile-settings.md).

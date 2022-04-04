@@ -35,8 +35,6 @@ Use one of the following policy types to configure BitLocker on your managed dev
 
 - **[Endpoint security disk encryption policy for BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. The BitLocker profile in *Endpoint security* is a focused group of settings that is dedicated to configuring BitLocker.
 
-  View the BitLocker settings that are available in [BitLocker profiles from disk encryption policy](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker).
-
 - **[Device configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-bitlocker)**. BitLocker settings are one of the available settings categories for Windows 10/11 endpoint protection.
 
   View the BitLocker settings that are available for [BitLocker in endpoint protection profiles from device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
@@ -134,7 +132,7 @@ A device must meet the following conditions to be eligible for silently enabling
 Depending on the type of policy that you use to silently enable BitLocker, configure the following settings.
 
 **Endpoint security disk encryption policy** - Configure the following settings in the BitLocker profile:
-
+<!-- the following two settings are part of the original BitLocker profile, now deprecated by DCv2 settings. The correct settings from the new profile are pending identification from the PM team -->
 - **Hide prompt about third-party encryption** = *Yes*
 - **Alow standard users to enable encryption during Autopilot** = *Yes*
 

@@ -76,8 +76,15 @@ Prerequisites to support tamper protection for devices managed by Intune:
 
 Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Endpoint Manager](#devices-managed-by-microsoft-endpoint-manager):
 
-- Platform: **Windows 10 later**
+- Platform: **Windows 10, Windows 11, and Windows Server**
   - Profile: **Windows Security experience**  
+
+> [!NOTE]  
+> Beginning in April 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+>
+> The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+>
+>Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
 You can also use the [Endpoint protection](../protect/endpoint-protection-configure.md) profile for *Device configuration* policy to configure tamper protection for devices managed by Intune.
 
@@ -108,25 +115,29 @@ The following profiles are supported for devices you manage with Intune:
 
     When you use [Microsoft Defender for Endpoint for Mac](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-mac), you can configure and deploy Antivirus settings to your managed macOS devices through Intune instead of configuring those settings by use of `.plist` files.
 
-**Windows 10, 11, and Windows Server**:
+**Windows**:
 
 > [!NOTE]  
-> Beginning in April 2022, the *Windows 10 and later* platform is replaced by the *Windows 10, Windows 11, and Windows Server* platform. Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
+> Beginning in April 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform. 
+>
+> The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+>
+> Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
 - Platform: **Windows 10, Windows 11, and Windows Server**  
   Profiles for this platform can be used with devices enrolled with Intune, and devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
 
 
-  - Profile: **Microsoft Defender Antivirus** - Manage [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md) for Windows 10/11.
+  - Profile: **Microsoft Defender Antivirus** - Manage Antivirus policy settings for Windows devices.
 
     Defender Antivirus is the next-generation protection component of Microsoft Defender for Endpoint. Next-generation protection brings together technologies like machine learning and cloud infrastructure to protect devices in your enterprise organization.
 
     The *Microsoft Defender Antivirus* profile is a separate instance of the antivirus settings that are found in the *Device Restriction profile* for Device Configuration policy.
   
-    Unlike the antivirus settings in a *Device Restriction profile*, you can use these settings to with devices that are co-managed. To use these settings, the [co-management workload slider](/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection must be set to Intune.
+    Unlike the antivirus settings in a *Device Restriction profile*, you can use these settings with devices that are co-managed. To use these settings, the [co-management workload slider](/configmgr/comanage/how-to-switch-workloads) for Endpoint Protection must be set to Intune.
 
-  - Profile: **Microsoft Defender Antivirus exclusions** - Manage policy settings for only [Antivirus exclusions](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions).
+  - Profile: **Microsoft Defender Antivirus exclusions** - Manage policy settings for only Antivirus exclusion.
   
     With this policy, you can manage settings for the following Microsoft Defender Antivirus configuration service providers (CSPs) that define Antivirus exclusions:
 
@@ -136,7 +147,7 @@ The following profiles are supported for devices you manage with Intune:
 
     These CSPs for antivirus exclusion are also managed by *Microsoft Defender Antivirus* policy, which includes identical settings for exclusions. Settings from both policy types  (*Antivirus* and *Antivirus exclusions*) are subject to [policy merge](#policy-merge-for-settings), and create a super set of exclusions for applicable devices and users.
 
-  - Profile: **Windows Security experience**-  Manage the [Windows Security app settings](../protect/antivirus-security-experience-windows-settings.md) that end users can view in the Microsoft Defender Security center and the notifications they receive.
+  - Profile: **Windows Security experience**-  Manage the Windows Security app settings that end users can view in the Microsoft Defender Security center and the notifications they receive.
 
     The Windows security app is used by a number of Windows security features to provide notifications about the health and security of the machine. Security app notifications include firewalls, antivirus products, Windows Defender SmartScreen, and others.
 
@@ -161,8 +172,6 @@ When processed separately, policy conflicts are resolved as follows:
 ### Settings and CSPs that support policy merge
 
 The following settings support policy merge:
-
-[Microsoft Defender Antivirus policies](../protect/antivirus-microsoft-defender-settings-windows.md)
 
 - **Excluded Processes** - CSP: [Defender/ExcludedProcesses](/windows/client-management/mdm/policy-csp-defender#defender-excludedprocesses)
 - **Excluded Extensions** - CSP: [Defender/ExcludedExtensions](/windows/client-management/mdm/policy-csp-defender#defender-excludedextensions)
@@ -205,3 +214,9 @@ The information for this report is based on details available from the following
 ## Next steps
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+
+View details for the Windows settings in the deprecated profiles for the *Windows 10 and later* platform:
+
+- [Antivirus policy settings](../protect/antivirus-microsoft-defender-settings-windows.md)
+- [Antivirus exclusions](../protect/antivirus-microsoft-defender-settings-windows.md#microsoft-defender-antivirus-exclusions)
+- [Windows Security app settings](../protect/antivirus-security-experience-windows-settings.md)

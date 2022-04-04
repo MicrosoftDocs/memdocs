@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/06/2021
+ms.date: 04/04/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,10 @@ ms.reviewer: mattsha
 
 # Settings for the Windows Security experience profile in Microsoft Intune
 
-View the Antivirus policy settings you can configure for the **Windows Security Experience** profile for Windows 10 and Windows 11 devices as part of a Microsoft Intune [Endpoint security policy](../protect/endpoint-security-policy.md).
+> [!NOTE]  
+> This article details the settings in the  Windows Security experience profile for the *Windows 10 and later* platform for endpoint security Antivirus policy. Beginning in April 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.
+
+View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Windows Security Experience profile for Windows 10 and later in Microsoft Intune.
 
 **Windows Security**
 

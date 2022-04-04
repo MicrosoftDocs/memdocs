@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/15/2020
+ms.date: 04/04/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -53,9 +53,11 @@ Find the endpoint security policies for disk encryption under *Manage* in the **
 
 **Windows profiles**:
 
+> [!NOTE]  
+> Beginning in April 2022, the *BitLocker* profile for the *Windows 10 and later* platform was replaced by by a new profile instance. This new profile use the settings format as found in the Settings Catalog. The new profile template includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profile. Your existing instances of the old profile remain available to use and edit.
+
 - **BitLocker** - BitLocker Drive Encryption is a data protection feature that integrates with the operating system and addresses the threats of data theft or exposure from lost, stolen, or inappropriately decommissioned computers
 
-  Manage [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker) for Windows 10.
 
   To create a BitLocker profile, see [Use BitLocker disk encryption for Windows](../protect/encrypt-devices.md).
 
@@ -71,3 +73,7 @@ After you deploy policy to encrypt a device disk, see the following articles for
 
 - [To create a FileVault profile](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
 - [To create a BitLocker profile](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-bitlocker)
+
+View details for the Windows settings in the deprecated profile for Windows BitLocker:
+
+- [BitLocker settings](../protect/endpoint-security-disk-encryption-profile-settings.md#bitlocker)
