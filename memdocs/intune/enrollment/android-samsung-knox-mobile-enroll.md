@@ -134,7 +134,7 @@ Still need help? Check out the complete [KME User Guide](https://docs.samsungkno
 
 - **Device Owner support:** - **Device Owner support:** Intune supports enrolling Dedicated and Fully Managed devices by using the KME portal. Other Android enterprise device owner modes will be supported as they become available in Intune.
 
-- **No work profile support:** KME is a corporate device enrollment method and devices enrolled in Android personally-owned work profile ensure work and personal data are separate on personal devices. So, device enrollment to personally-owned work profile using KME isn't a supported scenario in Intune.
+- **work profile support:** KME is a corporate device enrollment method and devices enrolled in Android personally-owned work profile ensure work and personal data are separate on personal devices. Device enrollment to personally-owned work profile using KME is a supported scenario in Intune.
 
 - **Factory reset to enroll to Android enterprise:** If repurposing devices that have already been set up, devices need to be factory reset when enrolling to Android enterprise.
 
