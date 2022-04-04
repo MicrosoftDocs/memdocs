@@ -50,7 +50,9 @@ From within the admin center, use one of the following methods to access Help an
 
 - From any node in the admin center, select **Help and support** to open the *Help and support* pane.
 
-- From any node in the admin center, select the **?** icon in the upper-right corner to open the *Help* pane. Then, select **Help + support** to open the *Help and support* pane
+- From any node in the admin center, select the **?** icon in the upper-right corner to open the *Help* pane. Then, select **Help + support** to open the *Help and support* pane.
+
+### Choose the right support scenario
 
 The following image is an example of accessing help and support for Microsoft Intune by navigating to the Endpoint security node for Intune, and then selecting Help and support.
 
@@ -103,7 +105,7 @@ After you select a support scenario, the admin center presents the Help and Supp
 
 :::image type="content" source="./media/get-support/confirm-management-selection.png" alt-text="View the How can we help window":::
 
-Above the *How can we help?* title are three icons that you can select to open different panes: *Find solutions*, *Contact support*, and *Service requests*. The pane you’re viewing is identified by which icon is underlined. By default, the Help and support page opens to the *Find solutions* pane. However, if you have an active support case, then Help and support opens to the *Service requests* pane where you can view details about your active and closed support cases.
+Above the *How can we help?* title are three icons that you can select to open different panes: *Find solutions*, *Contact support*, and *Service requests*. The pane you’re viewing is identified by which icon is underlined. By default, the Help and support page opens to the *Find solutions* pane.
 
 > [!TIP]  
 > Customers with a **Premier** or **Unified** support contract have [additional options](#premier-and-unified-support-options) for support. If you've a Premier or Unified support contract, you'll see a banner similar to the following image:
