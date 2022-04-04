@@ -63,7 +63,7 @@ While on windows365.microsoft.com, end users can perform actions on their Cloud 
   | No issues detected | None of the checks discovered an issue with the Cloud PC. |
   | Issues resolved  | An issue was detected and fixed. |
   | Can’t connect to Cloud PC. We’re working to fix it, try again later. | A Microsoft service required for connectivity is unavailable. Try connecting again later. |
-  | We couldn’t fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it couldn't be fixed. This issue exist because of an ongoing Windows update or another issue. If this error persists for an extended period of time, the Cloud PC may need to be reprovisioned. |
+  | We couldn’t fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it couldn't be fixed. ause of an ongoing Windows update or another issue. If this error persists for an extended period of time, the Cloud PC may need to be reprovisioned. |
 
 ## Remote Desktop
 
