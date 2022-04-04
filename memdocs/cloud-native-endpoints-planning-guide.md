@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 04/04/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -31,13 +31,17 @@ ms.collection:
 
 # High level planning guide to move to cloud native endpoints
 
-Moving your windows endpoints to cloud-native has many long-term advantages. This is not an overnight process however and must be carefully planned to avoid issues, outages, or user impact. The below guide discusses many points for you to consider and account for. It also contains a high level approach for you to start your organization on its journey to cloud-native.
+This high level planning guide includes ideas and suggestions you need to consider for your adoption and migration to cloud native endpoints. It discusses managing devices, reviewing & transitioning existing workloads, making organization changes, using Windows Autopilot, and more.
 
 This feature applies to:
 
 - Windows cloud native endpoints
 
-To be successful, you need to consider these key areas during planning and deployment. With proper planning, communications, and process updates, the benefits of cloud native endpoints will be achieved.
+Moving your Windows endpoints to cloud native has many advantages, including in the long term. It's not an overnight process and must be planned to avoid issues, outages, and negative user impact.
+
+For more information on the benefits to the organization and its end users, see [Get started with cloud native endpoints and Microsoft Endpoint Manager](cloud-native-endpoints-overview.md).
+
+To be successful, consider these key areas during planning and deployment. With proper planning, communications, and process updates, your organization can be cloud native.
 
 ## Manage devices using a cloud native MDM provider
 
@@ -63,14 +67,18 @@ With Microsoft Endpoint Manager, you get the following endpoint management optio
 
 At a high level, deploying cloud native endpoints requires modern strategies for identity, software distribution, device management, OS updates, and managing user data & configuration. Microsoft has solutions that support these areas for your cloud native endpoints.
 
-To start, review each workload, and determine how it can or will support your cloud-native endpoints. The workload itself may natively support cloud-native endpoints. This is strongly dependent upon that workload, your organization's implementation of the services behind that workload, and your users usage of those services. You will need to research and validate these services to determine whether they can support cloud native endpoints.
+To start, review each workload, and determine how it can or will support your cloud native endpoints. Some workloads may already support cloud native endpoints. This is strongly dependent upon that workload, your organization's implementation of the services behind that workload, and your users usage of those services. To determine if your workloads support cloud native endpoints, you need to research and validate these services.
 
-In the event a service does not support cloud-native endpoints you will have to determine impact and criticality of this on your users and your organization. From this you can determine a path forward which is wholly based on that service and may include contacting the vendor, updating to a new version, adopting a completely new service, implementing a work around for accessing that service from a cloud-native endpoint, validating the requirements for that service, or accepting that that service is not cloud-native friendly.
+If a service or solution doesn't support cloud native endpoints, then determine its impact and its criticality on your users and your organization. When you have this information, you can determine the next steps, which may include:
 
-> [!NOTE]
-> This isn't necessarily an all or nothing proposition as you may not be able to make some services friendly to cloud-native for all users and your organization may be willing to accept this.
+- Working with the service vendor
+- Updating to a new version
+- Using a new service
+- Implementing a work around for accessing and using that service from a cloud native endpoint
+- Validating the service requirements
+- Accepting that the service isn't cloud native friendly, which may be acceptable for your users and your organization
 
-Plan to update your workloads to support cloud native endpoints. Your workloads should have the following characteristics:
+Either way, you should plan to update your workloads to support cloud native endpoints. Your workloads should have the following characteristics:
 
 - Get access securely from anywhere
 - Delivered from the cloud ??
