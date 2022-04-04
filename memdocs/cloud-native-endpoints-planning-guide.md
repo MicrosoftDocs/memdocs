@@ -67,7 +67,9 @@ With Microsoft Endpoint Manager, you get the following endpoint management optio
 
 At a high level, deploying cloud native endpoints requires modern strategies for identity, software distribution, device management, OS updates, and managing user data & configuration. Microsoft has solutions that support these areas for your cloud native endpoints.
 
-To start, review each workload, and determine how it can or will support your cloud native endpoints. Some workloads may already support cloud native endpoints. This is strongly dependent upon that workload, your organization's implementation of the services behind that workload, and your users usage of those services. To determine if your workloads support cloud native endpoints, you need to research and validate these services.
+To start, review each workload, and determine how it can or will support your cloud native endpoints. Some workloads may already support cloud native endpoints. Native support depends on the specific workload, how your organization implements the workload services, and how your users use the services.
+
+To determine if your workloads support cloud native endpoints, you need to research and validate these services.
 
 If a service or solution doesn't support cloud native endpoints, then determine its impact and its criticality on your users and your organization. When you have this information, you can determine the next steps, which may include:
 
@@ -78,7 +80,9 @@ If a service or solution doesn't support cloud native endpoints, then determine 
 - Validating the service requirements
 - Accepting that the service isn't cloud native friendly, which may be acceptable for your users and your organization
 
-Either way, you should plan to update your workloads to support cloud native endpoints. Your workloads should have the following characteristics:
+Either way, you should plan to update your workloads to support cloud native endpoints. 
+
+Your workloads should have the following characteristics:
 
 - Get access securely from anywhere
 - Delivered from the cloud ??
