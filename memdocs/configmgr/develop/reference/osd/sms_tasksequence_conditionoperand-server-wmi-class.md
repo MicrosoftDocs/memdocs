@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_ConditionOperand Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that's the abstract base class for operators and expressions used by task sequence steps."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

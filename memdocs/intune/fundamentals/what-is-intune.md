@@ -108,13 +108,9 @@ Intune integrates with Azure AD to enable a broad set of access control scenario
 
 ## How to get Intune
 
-Intune is available:
+There are many ways to get Intune. For more information, see [Licenses available for Microsoft Intune](licenses.md).
 
-- As a stand-alone [Azure service](https://go.microsoft.com/fwlink/?linkid=2090973)
-- Included with [Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise-mobility-security/microsoft-intune) and [Microsoft 365 government](https://www.microsoft.com/microsoft-365/government)
-- As [Mobile Device Management in Microsoft 365](https://support.office.com/article/Set-up-Mobile-Device-Management-MDM-in-Office-365-dd892318-bc44-4eb1-af00-9db5430be3cd), which consists of some limited Intune features
-
-Intune is used in many sectors, including [government](/enterprise-mobility-security/solutions/ems-govt-service-description), [education](https://www.microsoft.com/en-us/education/intune), [kiosk or dedicated device](../configuration/kiosk-settings.md) for manufacturing and retail, and more.
+Intune is used in many sectors, including [government](/enterprise-mobility-security/solutions/ems-govt-service-description), [education](https://www.microsoft.com/education/intune), [kiosk or dedicated device](../configuration/kiosk-settings.md) for manufacturing and retail, and more.
 
 ## Next steps
 

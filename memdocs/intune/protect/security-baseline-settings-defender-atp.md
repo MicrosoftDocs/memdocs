@@ -804,6 +804,9 @@ For more information, see [Firewall CSP](/windows/client-management/mdm/firewall
   - **Unicast responses to multicast broadcasts required**  
     CSP: [/DisableUnicastResponsesToMulticastBroadcast](/windows/client-management/mdm/firewall-csp#disableunicastresponsestomulticastbroadcast)
 
+    - **Yes** (*default*)
+    - **Not configured**
+
   - **Authorized application rules from group policy not merged**  
     CSP: [/AuthAppsAllowUserPrefMerge](/windows/client-management/mdm/firewall-csp#authappsallowuserprefmerge)
 

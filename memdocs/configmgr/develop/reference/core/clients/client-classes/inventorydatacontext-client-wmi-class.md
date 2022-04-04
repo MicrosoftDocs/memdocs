@@ -1,6 +1,7 @@
 ---
 title: "InventoryDataContext Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the InventoryDataContext class is a client WMI class that represents the WMI context qualifiers to be used with inventory client agent WMI queries built from InventoryDataItem Client WMI class objects."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

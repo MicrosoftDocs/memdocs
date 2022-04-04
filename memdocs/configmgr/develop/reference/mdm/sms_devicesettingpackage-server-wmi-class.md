@@ -1,6 +1,7 @@
 ---
 title: "SMS_DeviceSettingPackage Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a device setting package in the database." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

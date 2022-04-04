@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the extended data that the current user and its groups have using GetAdminExtendedData. 
 title: "GetAdminExtendedData Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

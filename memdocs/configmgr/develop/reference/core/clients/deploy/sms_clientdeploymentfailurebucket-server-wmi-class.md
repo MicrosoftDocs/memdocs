@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a client deployment failure bucket used to get the total number of clients with the same failed state message ID.
 title: "SMS_ClientDeploymentFailureBucket Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

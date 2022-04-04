@@ -1,6 +1,7 @@
 ---
 title: "RemoveDriverContent Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the RemoveDriverContent WMI class method removes the specified driver from the driver package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

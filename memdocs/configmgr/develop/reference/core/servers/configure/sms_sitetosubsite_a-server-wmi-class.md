@@ -1,6 +1,7 @@
 ---
 title: "SMS_SiteToSubSite_a Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_SiteToSubSite_a WMI class is an SMS Provider server class that defines the hierarchy of sites by relating an SMS_Site Server WMI Class object with its subsites." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

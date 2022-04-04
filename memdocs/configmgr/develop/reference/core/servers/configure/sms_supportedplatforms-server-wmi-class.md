@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the platforms that Configuration Manager supports using the SMS_SupportedPlatforms.
 title: "SMS_SupportedPlatforms Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

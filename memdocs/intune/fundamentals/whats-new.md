@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/23/2022
+ms.date: 03/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of March 28, 2022
+
+### App management
+
+#### Newly available protected app for Intune<!-- 13157367 -->
+The following protected app is now available for Microsoft Intune:
+- CAPTOR&trade; for Intune by Inkscreen LLC
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of March 21, 2022 (Service release 2203)
 
@@ -149,28 +159,6 @@ For more information on these policy types, see:
 
 Applies to:
 - Windows 10/11
-
-#### Endpoint security profiles support filters; See the filter status on a device configuration profile report<!-- 11889620 -->
-There are some new features when using filters:
-- When you create a device configuration profile for Windows devices, a per-policy report shows reporting information in the **Device and user check-in status** (**Devices** > **Configuration profiles** > *Select an existing policy*).
-
-  When you select **View report**, the report has an **Assignment Filter** column. Use this column to determine if a filter successfully applied to your policy.
-
-- Endpoint Security policies support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create.
-
-- When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting](#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > *Select an existing endpoint security policy* > **View report**). Use this column to determine if a filter successfully applied to your policy.
-
-For more information on filters, see:
-- [Use filters when assigning your apps, policies, and profiles](filters.md)
-- [List of platforms, policies, and app types supported by filters](filters-supported-workloads.md)
-
-Applies to:
-- All platforms
-
-Does not apply to:
-- Administrative Templates (Windows 10/11)
-- Device Firmware Configuration Interface (DFCI) (Windows 10/11)
-- OEMConfig (Android Enterprise)
 
 #### New macOS settings in the Settings Catalog<!-- 13111526 idready idstaged wnready -->
 The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
@@ -1139,7 +1127,7 @@ As a [bulk device action](../remote-actions/bulk-device-actions.md) for Windows 
 
 #### Support for Locate device remote action on Android Enterprise dedicated devices<!--8589952  -->
 
-You can use the **Locate device** remote action to get the current location of a lost or stolen Android Enterprise dedicated device that is online. If you attempt to locate a device that’s currently off-line, you’ll see its last known location instead, so long as that device was able to check-in with Intune within the last seven days.
+You can use the **Locate device** remote action to get the current location of a lost or stolen Android Enterprise dedicated device that is online. If you attempt to locate a device that’s currently off-line, you’ll see its last known location instead, so long as that device was able to check in with Intune within the last seven days.
 
 For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
 
@@ -1193,7 +1181,7 @@ We have released a new **Device configuration** organizational report. This repo
 
 #### Updated support experience in Microsoft Endpoint Manager admin center<!-- 8920053   -->
 
-Available for Intune and co-management support flows, we’ve updated an improved [support experience](../../get-support.md#support-scenarios) in the Microsoft Endpoint Manager admin center. The new experience guides you to issue-specific troubleshooting insights and web-based solutions, to get you a resolution faster.
+Available for Intune and co-management support flows, we’ve updated an improved [support experience](../../get-support.md#updated-support-experience) in the Microsoft Endpoint Manager admin center. The new experience guides you to issue-specific troubleshooting insights and web-based solutions, to get you a resolution faster.
 
 To learn more about this change, see the [support blog post](https://aka.ms/EndpointManager-support-experience).
 

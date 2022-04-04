@@ -1,4 +1,5 @@
 ---
+description: Learn how to use CCM_ServiceBITSConfiguration class which supports BITS-related settings used by CCMEXEC for uploading and downloading message payloads.
 title: "CCM_Service_BITSConfiguration Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Article outlining the use of SMS_SettableSecuredCategory class to assign secured categories to select objects.
 title: "SMS_SettableSecuredCategory Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

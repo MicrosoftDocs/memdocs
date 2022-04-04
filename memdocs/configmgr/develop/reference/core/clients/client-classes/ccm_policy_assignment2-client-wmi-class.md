@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the CCM_Policy_Assignment2 class to represent a policy assignment in Configuration Manager.
 title: "CCM_Policy_Assignment2 Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

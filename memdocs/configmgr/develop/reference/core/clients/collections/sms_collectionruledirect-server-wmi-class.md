@@ -1,6 +1,7 @@
 ---
 title: "SMS_CollectionRuleDirect Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a resource. The resource is to be made an unconditional member of the collection."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

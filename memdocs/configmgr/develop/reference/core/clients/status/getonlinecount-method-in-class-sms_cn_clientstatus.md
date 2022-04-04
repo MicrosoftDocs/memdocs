@@ -1,4 +1,5 @@
 ---
+description: Learn how to get an online count of the selected clients of the target collection using GetOnlineCount class method.
 title: "GetOnlineCount Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

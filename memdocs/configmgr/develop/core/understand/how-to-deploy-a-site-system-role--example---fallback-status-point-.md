@@ -1,6 +1,7 @@
 ---
 title: "Deploy a Site System Role"
 titleSuffix: "Configuration Manager"
+description: "The features and capabilities of a site are determined by the site roles applied to it. Configuring a site is performed through Windows Management Instrumentation (WMI) classes."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

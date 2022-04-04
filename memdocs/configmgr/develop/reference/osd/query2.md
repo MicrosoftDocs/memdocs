@@ -1,6 +1,7 @@
 ---
 title: "Query2"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, Query2 specifies a query that is used to identify the platform that a client computer is running. This information should come from SMS_SupportedPlatforms Server WMI class objects and match the platform information specified in the PlatformApplicabilityCondition node."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

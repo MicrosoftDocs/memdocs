@@ -1,6 +1,7 @@
 ---
 title: "Determine the Health of a Site"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, you can determine the overall health or status of a site by inspecting the SMS_SummarizerSiteStatus object Status property."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

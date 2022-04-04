@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent an operating system deployment task sequence using SMS_TaskSequence class in Configuration Manager.
 title: "SMS_TaskSequence Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

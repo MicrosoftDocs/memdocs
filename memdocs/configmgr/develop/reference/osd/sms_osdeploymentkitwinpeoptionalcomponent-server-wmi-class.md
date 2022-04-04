@@ -1,6 +1,7 @@
 ---
 title: "SMS_OSDeploymentKitWinPEOptionalComponent Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_OSDeploymentKitWinPEOptionalComponent WMI class is an SMS Provider server class that Maps Assessment and Deployment Kit versions to supported optional components."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

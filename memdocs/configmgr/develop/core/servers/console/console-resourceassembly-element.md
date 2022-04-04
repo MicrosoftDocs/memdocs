@@ -1,4 +1,5 @@
 ---
+description: Learn how to define the resources that are used by the node with the ResourceAssembly element in Configuration Manager.
 title: "Console ResourceAssembly Element"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

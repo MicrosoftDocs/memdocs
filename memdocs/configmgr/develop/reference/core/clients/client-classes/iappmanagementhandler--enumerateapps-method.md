@@ -1,4 +1,5 @@
 ---
+description: Learn how to run a synchronous discovery operation for the provided synclet in Configuration Manager. 
 title: "IAppManagementHandler::EnumerateApps"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how how to use the AddMemberships Windows Management Instrumentation (WMI) class method, in Configuration Manager, for a batch operation to assign objects to security categories.
 title: "AddMemberships Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

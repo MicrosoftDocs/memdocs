@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 03/31/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Enterprise feedback policies for Web Company Portal<!-- 9846764 -->
+Feedback settings will be provided to address M365 enterprise feedback policies for the currently logged in user via the Microsoft 365 Apps Admin Center. The settings are used to determine whether feedback can be enabled or must be disabled for a user in the Web Company Portal.
+
 ### iOS Company Portal minimum required version<!-- 13016075 -->
 With an upcoming release of the MS Authenticator app, users will be required to update to v5.2204 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
@@ -76,99 +79,71 @@ This feature targets devices that operate on Android 11+. For devices that opera
 ### Improvements to Win32 App Log collection<!-- 9978316 -->
 Win32 App Log collection via Intune Management Extension has moved to the Windows 10 device diagnostic platform, reducing time to collect logs from 1-2 hours to 20 minutes.  We've also increased the size from 60mb to 250mb.  Along with performance improvements, the app logs will also be available under the **Device diagnostics monitor** action for each device, as well as the managed app monitor. For information about how to collect diagnostics, see [Collect diagnostics from a Windows device](..\remote-actions\collect-diagnostics.md) and [Troubleshooting Win32 app installations with Intune](/troubleshoot/mem/intune/troubleshoot-win32-app-install).
 
-### Feedback settings for Company Portal and Microsoft Intune apps<!-- 10012370 -->
-Feedback settings will be provided to address M365 enterprise feedback policies for the currently logged in user via the Microsoft 365 Apps admin center. The settings are used to determine whether feedback can be enabled or must be disabled for a user. The feature will be available for Intune Company Portal and Microsoft Intune apps.
-
 ### Uninstall DMG-type applications on managed macOS devices (Public preview)<!-- 13155022 -->
-You will be able to use the Uninstall assignment type to remove DMG-type applications on managed macOS devices from Microsoft Endpoint Manager. You can find macOS DMG apps in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **macOS app (.DMG)**. For related information, [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md). 
+You will be able to use the Uninstall assignment type to remove DMG-type applications on managed macOS devices from Microsoft Endpoint Manager. You can find macOS DMG apps in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **macOS app (.DMG)**. For related information, [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md).
 
-### Deploy macOS LOB apps by uploading PKG-type installer files (Public preview)<!-- 13155147 -->
-You will be able to upload and deploy PKG-type installer files as macOS line-of-business apps. You can add a macOS LOB app from [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **Add** > **Line-of-business app**. For more information about macOS LOB apps, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
+### Update to the App configuration policies list<!-- 13903969 -->
+In Intune, the **Assigned** column in the **App configuration policies** list will be removed. To view the assigned groups for an app configuration policy, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apps** > **App configuration policies** > *select a policy* > **Overview**.
 
-### iOS/iPadOS notifications will require upcoming March Company Portal update<!-- 9819536 -->
-We will be making service side updates to iOS/iPadOS notifications expected in Intune's April (2204) service release which will require users to have updated to at least the March version of the iOS/iPadOS Company Portal app. If you are using a functionality that could generate push notifications, you will want to ensure your users update the iOS/iPadOS Company Portal. There is no additional change in functionality. The Company Portal update will be released prior to the service change, so most users will likely have updated the app and will not be impacted. However, you may want to notify users of this change to ensure all users continue to receive push notifications sent by your organization. For related information, see [Update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md).
+<!-- ***********************************************-->
+
+## Device enrollment
+
+### Improvements for enrollment profiles for Apple’s Automated Device Enrollment (Public preview)<!-- 10111795 -->
+As a public preview, we’re adding new Setup Assistant screens you can configure when [creating enrollment profiles](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) for Apple’s Automated Device Enrollment (ADE). The following new screens will be available on the *Setup Assistant* tab for both iOS/iPadOS and macOS as follows:  
+ 
+- iOS/iPadOS 13 and later - **Get Started (preview)**
+  - Default – Show
+  - Admin can configure to hide the Get Started pane (Setup Assistant screen) during ADE enrollment.
+ 
+- macOS 12 and later - **Auto Unlock with Apple Watch (preview)**
+  - Default – Show
+  - Admin can configure to hide the Unlock Your Mac with your Apple Watch pane (Setup Assistant screen) during ADE enrollment.
 
 <!-- ***********************************************-->
 
 ## Device management
 
-### Android (AOSP) users can view all devices in Intune app<!-- 10454654 -->
-AOSP device users will be able to view a list of their managed devices and device properties in the Microsoft Intune app. This feature will be available on devices enrolled in Intune as user-associated (Android) AOSP devices.
+### Device actions available to Android (AOSP) users in Microsoft Intune app<!-- 12645718 -->
+AOSP device users will be able to delete, wipe, and rename their enrolled devices in the Microsoft Intune app. This feature will be available on devices enrolled in Intune as user-associated (Android) AOSP devices. 
 
-### New reporting experience for device configuration profiles<!-- 8466004 -->
-You can now expect a new reporting experience for device configuration profiles. This reporting experience excludes ADMX, OEM Config, DFCI profile types.
+### Updating the device diagnostics folder structure<!-- 8504019 -->
+We’re updating how Intune exports [Windows Device Diagnostic data](../remote-actions/collect-diagnostics.md). Today, the zip file is flat structure of numbered folders that doesn’t identify their contents. Once updated, the logs collected will be named to match the data that was collected, and if multiple files are collected a folder will be created.
 
-We are continuing to update Intune's report experience to enhance consistency, accuracy, organization, and data representation, which will give an overall "facelift" of Intune's per policy reporting. The new experience will update the per policy overview page to shift away from donut charts to a sleeker overview chart that quickly updates as devices/users check in. There are three reports available from the per policy view:
+To take advantage of this diagnostic logging update, devices must install one of the following updates:
+- Windows 11 - KB5011563
+- Windows 10 - KB5011543
 
-- **Device and user check in status** - This report shows the full list of devices and users that have checked into using the policy and also provides the related status.
-- **Device assignment status** - This new report shows the list of devices and the last logged on user of the device to provide the latest device status. This report includes devices in a pending state and provides the denominator of total assigned devices and assigned users.
-- **Per setting status** - This report shows the state of the aggregate of devices/users that have checked in per setting. The states include error, conflict, and success.
+These updates are expected to be made available through Windows Updates on April 12, 2022.
 
-More drilldowns are available and additional assignment filters are supported. For related information about reporting, see [Intune reports](../fundamentals/reports.md).
+### Support for Audio Alert on Android corporate-owned work- profiles and fully managed (COBO and COPE) devices<!-- 13499471 -->
+You'll be able to use the **Play lost device sound** device action to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise corporate owned work profiles and fully managed devices.
 
-### See the IPv4 address and Wi-Fi subnet ID on Android Enterprise devices<!-- 12396463 -->
-Customers will now have the ability to see the IPv4 address and Wi-Fi subnet ID reported for AE corporate-owned fully managed, dedicated, and work profile devices.
-
-### Support for bootstrap tokens on enrolled macOS devices (public preview)<!-- 9539461 -->
-Intune will support the use of bootstrap tokens on enrolled devices running macOS, version 10.15 or later.
-
-On macOS 10.15 and later, you can use a bootstrap token to grant a secure token to mobile accounts and device enrollment-created administrator accounts. 
-
-On macOS 11 and later, you can use a bootstrap token to grant a secure token to any user, including standard (or local) users. Bootstrap tokens allow for non-admin users to have increased MDM permissions, and perform specific software functions on behalf of the IT admin.
-
-Tokens will be supported on:  
-- Supervised devices (in Intune, that's all user-approved enrollments)
-- Devices enrolled in Intune via Apple automated device enrollment
-
-For more information about bootstrap tokens, see the Apple Support topic for [Using secure and bootstrap tokens](https://support.apple.com/guide/deployment/use-secure-and-bootstrap-tokens-dep24dbdcf9e/1/web/1.0).  
-
-### Enroll macOS virtual machines running Apple silicon<!-- 13242738 -->
-Use the Company Portal app for macOS to enroll virtual machines running on Apple silicon. Intune supports using macOS virtual machines for testing purposes only. For more information about how to set up macOS enrollment in Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md).  
+For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
 
 <!-- ***********************************************-->
 
 ## Device configuration
 
-### Google Chrome settings are in Settings Catalog and Administrative Templates <!-- 6198569 -->
-Currently, to configure Google Chrome settings on Windows devices, you create a custom OMA-URI device configuration policy. Google Chrome settings will be included in the Settings Catalog and Administrative Templates.
+### New wired networks device configuration profile for Windows devices<!-- 1746923 -->
+There will be a new **Wired Networks** device configuration profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Wired networks** for profile type).
 
-For more information on these policy types, see:
-- [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md)
-- [Use ADMX templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
+Use this profile to configure common wired network settings, including authentication, EAP type, server trust, and more.
 
 Applies to:
-- Windows 10/11
+- Windows 11
+- Windows 10
 
-### Android (AOSP) will support scope tags and RBAC settings<!-- 8503981 -->
-When you create a policy for Android (AOSP), you can use role-based access control (RBAC) and scope tags.
+### Create a Settings Catalog policy using your imported GPOs with Group Policy analytics (public preview)<!-- 6379751 -->
+Using Group Policy analytics, you can import your on-premises GPO, and see the settings that are supported in Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
 
-For more information on these features, see:
-- [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
-- [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md)
+When the analysis runs, you'll see the settings that are ready for migration. There will be a **Migrate** option (public preview) that creates a Settings Catalog profile using these settings. Then, you can assign the profile to your groups.
 
-Applies to:
-- Android Open Source Project (AOSP)
-
-### Endpoint security profiles support filters; See the filter status on a device configuration profile report<!-- 11889620 -->
-There are some new features when using filters:
-- When you create a device configuration profile for Windows devices, a per-policy report will show reporting information in the **Device and user check-in status** (**Devices** > **Configuration profiles** > Select an existing policy).
-
-  When you select **View report**, the report has an **Assignment Filter** column. Use this column to determine if a filter successfully applied to your policy.
-
-- Endpoint Security policies will support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create. 
-- When you create a new endpoint security policy, it will automatically use the [new device configuration profile reporting](../fundamentals/in-development.md#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
-
-For more information on filters, see:
-- [Use filters when assigning your apps, policies, and profiles](filters.md)
-- [List of platforms, policies, and app types supported by filters](filters-supported-workloads.md)
+For more information on what you can do now, see [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager](../configuration/group-policy-analytics.md).
 
 Applies to:
-- All platforms
-
-Does not apply to:
-- Administrative Templates (Windows 10/11)
-- Device Firmware Configuration Interface (DFCI) (Windows 10/11)
-- OEMConfig (Android Enterprise)
+- Windows 11
+- Windows 10
 
 ### Use the Settings Catalog to create a Universal Print policy on Windows 11 devices<!-- 5513123 -->
 Many organizations are moving their printer infrastructure to the cloud. [Universal Print](/universal-print/fundamentals/universal-print-whatis) is a cloud-based printing solution for Microsoft 365 customers. It uses built-in cloud printers, built-in legacy printers, and runs entirely in Microsoft Azure. When Universal Print is deployed with Universal Print-compatible printers, it doesn't require any on-premises infrastructure. 
@@ -180,108 +155,273 @@ Currently, you must use the [Universal Print printer provisioning tool](/univers
 Applies to:
 - Windows 11
 
-### New macOS settings in the Settings Catalog<!-- 13111526 -->
+### New macOS settings in Setting Catalog<!-- 13654614 -->
+The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
 
-The Settings Catalog will have new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
+**Accounts > Mobile Accounts**:
 
-**User Experience > Accessibility**:
+- Ask For Secure Token Auth Bypass
+- Create At Login
+- Expiry Delete Disused Seconds
+- Warn On Create
+- Warn On Create Allow Never
 
-- Close View Far Point
-- Close View Hotkeys Enabled
-- Close View Near Point
-- Close View Scroll Wheel Toggle
-- Close View Smooth Images
-- Contrast
-- Flash Screen
-- Mouse Driver
-- Mouse Driver Cursor Size
-- Mouse Driver Ignore Trackpad
-- Mouse Driver Initial Delay
-- Mouse Driver Max Speed
-- Slow Key
-- Slow Key Beep On
-- Slow Key Delay
-- Stereo as Mono
-- Sticky Key
-- Sticky Key Beep On Modifier
-- Sticky Key Show Window
-- Voice Over On Off Key
-- White On Black
+**App Management > Autonomous Single App Mode**:
 
-**Air Play**:
+- Bundle Identifier
+- Team Identifier
 
-- Allow List
+**App Management > NS Extension Management**: 
+
+- Allowed Extensions
+- Denied Extension Points
+- Denied Extensions
+
+**App Store**: 
+
+- Disable Software Update Notifications
+- Restrict Store Software Update Only
+- restrict-store-disable-app-adoption
+
+**Authentication > Directory Service**: 
+
+- AD Allow Multi Domain Auth
+- AD Allow Multi Domain Auth Flag
+- AD Create Mobile Account At Login
+- AD Create Mobile Account At Login Flag
+- AD Default User Shell
+- AD Default User Shell Flag
+- AD Domain Admin Group List
+- AD Domain Admin Group List Flag
+- AD Force Home Local 
+- AD Force Home Local Flag
+- AD Map GGID Attribute
+- AD Map GGID Attribute Flag
+- AD Map GID Attribute
+- AD Map GID Attribute Flag
+- AD Map UID Attribute
+- AD Map UID Attribute Flag
+- AD Mount Style
+- AD Namespace
+- AD Namespace Flag
+- AD Organizational Unit
+- AD Packet Encrypt
+- AD Packet Encrypt Flag
+- AD Packet Sign
+- AD Packet Sign Flag
+- AD Preferred DC Server
+- AD Preferred DC Server Flag
+- AD Restrict DDNS
+- AD Restrict DDNS Flag
+- AD Trust Change Pass Interval Days
+- AD Trust Change Pass Interval Days Flag
+- AD Use Windows UNC Path
+- AD Use Windows UNC Path Flag
+- AD Warn User Before Creating MA Flag
+- Client ID
+- Description
 - Password
+- User Name
 
-**User Experience > Desktop**: 
+**Authentication > Identification**: 
 
-- Override Picture Path
+- Prompt
+- Prompt Message
 
-**Preferences > Global Preferences**: 
+**Login > Login Window Login Items**:
 
-- Auto Log Out Delay
-- Multiple Session Enabled
+- Disable Login Items Suppression
 
-**Printing > Printing**: 
+**Media Management Disc Burning**:
 
-- Require Admin To Print Locally
+- Burn Support
 
-**Security > Security Preferences**: 
+**Parental Controls > Parental Controls Application Restrictions**:
 
-- Do Not Allow Firewall UI
-- Do Not Allow Lock Message UI
-- Do Not Allow Password Reset UI
+- Family Controls Enabled
 
-**Preferences > System Preferences**:
+**Parental Controls > Parental Controls Content Filter**:
 
-- Disabled Preference Panes
-- Enabled Preference Panes
+- Allowlist Enabled
+- Filter Allowlist
+- Filter Blocklist
+- Site Allowlist
+- Address
+- Page Title
+- Use Content Filter
 
-**Preferences > User Preferences**: 
+**Parental Controls > Parental Controls Dictionary**:
 
-- Disable Using Cloud Password
+- Parental Control
 
-The following settings will also be in Settings Catalog. Currently, they're only available in Templates:
+**Parental Controls > Parental Controls Game Center**:
 
-**Printing > Air Print**:
+- GK Feature Account Modification Allowed
 
-- IP Address 
-- Resource Path
+**System Configuration > File Provider**:
 
-**Login > Login Items**:
+- Allow Managed File Providers To Request Attribution
 
-- Hide
+**System Configuration > Screensaver**:
 
-**Login > Login Window Behavior**:
+- Ask For Password
+- Ask For Password Delay
+- Login Window Idle Time
+- Login Window Module Path
 
-- Admin Host Info
-- Allow List
-- Deny List
-- Disable Console Access
-- Disable Screen Lock Immediate
-- Hide Admin Users
-- Hide Local Users
-- Hide Mobile Accounts
-- Include Network User
-- Log Out Disabled While Logged In
-- Login Window Text
-- Power Off Disabled While Logged In
-- Restart Disabled
-- Restart Disabled While Logged In
-- Show Full Name
-- Show Other Users Managed
-- Shut Down Disabled
-- Shut Down Disabled While Logged In
-- Sleep Disabled
+**User Experience > Finder**:
 
-**System Policy > System Policy Control**:
+- Prohibit Burn
+- Prohibit Connect To
+- Prohibit Eject
+- Prohibit Go To Folder
+- Show External Hard Drives On Desktop
+- Show Hard Drives On Desktop
+- Show Mounted Servers On Desktop
+- Show Removable Media On Desktop
+- Warn On Empty Trash
 
-- Allow Identified Developers
-- Enable Assessment
+**User Experience > Managed Menu Extras**:
 
-**System Policy** > **System Policy Managed**:
+- AirPort
+- Battery
+- Bluetooth
+- Clock
+- CPU
+- Delay Seconds
+- Displays
+- Eject
+- Fax
+- HomeSync
+- iChat
+- Ink
+- IrDA
+- Max Wait Seconds
+- PCCard
+- PPP
+- PPPoE
+- Remote Desktop
+- Script Menu
+- Spaces
+- Sync
+- Text Input
+- TimeMachine
+- Universal Access
+- User
+- Volume
+- VPN
+- WWAN
 
-- Disable Override
+**User Experience > Notifications**:
+
+- Alert Type
+- Badges Enabled
+- Critical Alert Enabled
+- Notifications Enabled
+- Show In Lock Screen
+- Show In Notification Center
+- Sounds Enabled
+
+**User Experience > Time Machine**:
+
+- Auto Backup
+- Backup All Volumes
+- Backup Size MB
+- Backup Skip System
+- Base Paths
+- Mobile Backups
+- Skip Paths
+
+**Xsan**:
+
+- San Auth Method
+
+**Xsan > Xsan Preferences**:
+
+- Deny DLC
+- Deny Mount
+- Only Mount
+- Prefer DLC
+- Use DLC
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**App Management > Associated Domains**:
+
+- Enable Direct Downloads
+
+**Networking > Content Caching**:
+
+- Allow Cache Delete
+- Allow Personal Caching
+- Allow Shared Caching
+- Auto Activation
+- Auto Enable Tethered Caching
+- Cache Limit
+- Data Path
+- Deny Tethered Caching
+- Display Alerts
+- Keep Awake
+- Listen Ranges
+- Listen Ranges Only
+- Listen With Peers And Parents
+- Local Subnets Only
+- Log Client Identity
+- Parent Selection Policy
+- Parents
+- Peer Filter Ranges
+- Peer Listen Ranges
+- Peer Local Subnets Only
+- Port
+- Public Range
+
+**Restrictions**:
+
+- Allow Activity Continuation
+- Allow Adding Game Center Friends
+- Allow Air Drop
+- Allow Auto Unlock
+- Allow Camera
+- Allow Cloud Address Book
+- Allow Cloud Bookmarks
+- Allow Cloud Calendar
+- Allow Cloud Desktop And Documents
+- Allow Cloud Document Sync
+- Allow Cloud Keychain Sync
+- Allow Cloud Mail
+- Allow Cloud Notes
+- Allow Cloud Photo Library
+- Allow Cloud Private Relay
+- Allow Cloud Reminders
+- Allow Content Caching
+- Allow Diagnostic Submission
+- Allow Dictation
+- Allow Erase Content And Settings
+- Allow Fingerprint For Unlock
+- Allow Game Center
+- Allow iTunes File Sharing
+- Allow Multiplayer Gaming
+- Allow Music Service
+- Allow Passcode Modification
+- Allow Password Auto Fill
+- Allow Password Proximity Requests
+- Allow Password Sharing
+- Allow Remote Screen Observation
+- Allow Screen Shot
+- Allow Spotlight Internet Results
+- Allow Wallpaper Modification
+- Enforced Fingerprint Timeout
+- Enforced Software Update Delay
+- Enforced Software Update Major OS Deferred Install Delay
+- Enforced Software Update Minor OS Deferred Install Delay
+- Enforced Software Update Non OS Deferred Install Delay
+- Force Classroom Automatically Join Classes
+- Force Classroom Request Permission To Leave Classes
+- Force Classroom Unprompted App And Device Lock
+- Force Delayed App Software Updates
+- Force Delayed Major Software Updates
+- Force Delayed Software Updates
+- Safari Allow Autofill
 
 There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
 
@@ -292,15 +432,14 @@ Applies to:
 
 <!-- ***********************************************-->
 
-## Monitor and troubleshoot
+## Device security
 
-### AppxPackaging event viewer is part of collect diagnostics<!-- 12809781 --> 
- Intune's remote action to [Collect diagnostics](../remote-actions/collect-diagnostics.md) will soon collect additional details from Windows devices.  (**Devices** > **Windows** > *select a Windows device* > **Collect diagnostics**) 
- 
-The new details include the **Microsoft-Windows-AppxPackaging/Operational** Event Viewer and the following office log files to assist in troubleshooting office installation issues:
+### Microsoft Defender for Endpoint as the Tunnel client app for iOS will soon be out of Preview<!-- 9849514 --> 
+The preview version of Microsoft Defender for Endpoint that supports [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md) on iOS/iPadOS will soon be out of preview and become generally available.
 
-`%windir%\temp\%computername%*.log`<br>
-`%windir%\temp\officeclicktorun*.log`
+When the Microsoft Defender for Endpoint app with support for Microsoft Tunnel becomes generally available for iOS, the standalone tunnel client app for iOS will be deprecated with support ending 60 days later.
+
+If you are using the standalone tunnel app for iOS, prepare for this change by planning to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md) before support for the standalone app ends.
 
 <!-- ***********************************************-->
 

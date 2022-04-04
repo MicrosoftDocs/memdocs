@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 03/24/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,16 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of March 24, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### New remote action: remote help<!--38310389-->
+
+The [Remote Help remote action](/mem/intune/remote-actions/remote-help) (in the Microsoft Endpoint Manager admin center) lets admins start a remote session into an end user’s Cloud PC.
 
 <!-- ########################## -->
 ## Week of February 28, 2022 (Service release 2202)

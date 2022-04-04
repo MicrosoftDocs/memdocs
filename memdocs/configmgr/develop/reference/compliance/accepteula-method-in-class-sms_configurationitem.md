@@ -1,4 +1,5 @@
 ---
+description: Learn how to accept or decline the Microsoft Software License Terms of a configuration item using AcceptEULA class in Configuration Manager.
 title: "AcceptEULA Method in Class SMS_ConfigurationItem"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

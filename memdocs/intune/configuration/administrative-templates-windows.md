@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use templates for Windows 10/11 devices in Microsoft Intune
+title: Use ADMX templates on Windows 10/11 devices in Microsoft Intune
 description: Use Administrative templates in Microsoft Intune and Endpoint Manager to create groups of settings for Windows 10/11 client devices. Use these settings in a device configuration profile to control Office programs, Microsoft Edge, secure Internet Explorer, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use HTTP printing, control user sign-in, and change the event log size.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2022
+ms.date: 03/30/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,18 +31,22 @@ ms.collection:
 
 # Use Windows 10/11 templates to configure group policy settings in Microsoft Intune
 
-When managing devices in your organization, you want to create groups of settings that apply to different device groups. For example, you have several device groups. For GroupA, you want to assign a specific set of settings. For GroupB, you want to assign a different set of settings. You also want a simple view of the settings you can configure.
-
-You can complete this task using **Administrative Templates** in Microsoft Intune. The administrative templates include thousands of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Google Chrome, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings allow group administrators to manage group policies using the cloud.
+**Administrative Templates** in Microsoft Intune include thousands of settings that control features in Microsoft Edge version 77 and later, Internet Explorer, Google Chrome, Microsoft Office programs, remote desktop, OneDrive, passwords, PINs, and more. These settings allow administrators to create group policies using the cloud.
 
 This feature applies to:
 
 - Windows 11
 - Windows 10
 
-The Windows settings are similar to group policy (GPO) settings in Active Directory (AD). These settings are built in to Windows, and are [ADMX-backed settings](/windows/client-management/mdm/understanding-admx-backed-policies) that use XML. The Office and Microsoft Edge settings are ADMX-ingested, and use the ADMX settings in [Office administrative template files](https://www.microsoft.com/download/details.aspx?id=49030) and [Microsoft Edge administrative template files](https://www.microsoftedgeinsider.com/enterprise). And, the Intune templates are 100% cloud-based. They offer a simple and straight-forward way to configure the settings, and find the settings you want.
+The Intune templates are 100% cloud-based, are built in to Intune (no downloading), and don't require any customizations, including using OMA-URI. They offer a straight-forward way to configure the settings, and find the settings you want:
 
-**Administrative Templates** are built in to Intune, and don't require any customizations, including using OMA-URI. As part of your mobile device management (MDM) solution, use these template settings as a one-stop shop to manage your Windows client devices.
+- The **Windows settings** are similar to group policy (GPO) settings in Active Directory (AD). These settings are built in to Windows, and are [ADMX-backed settings](/windows/client-management/mdm/understanding-admx-backed-policies) that use XML.
+
+- The **Office and Microsoft Edge** settings are ADMX-ingested, and use the same Office administrative template files and Microsoft Edge administrative template files that you would download in on-premises environments.
+
+When managing devices in your organization, you want to create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task using **Administrative Templates** in Microsoft Intune.
+
+As part of your mobile device management (MDM) solution, use these template settings as a one-stop shop to manage your Windows client devices.
 
 This article lists the steps to create a template for Windows client devices, and shows how to filter all the available settings in Intune. When you create the template, it creates a device configuration profile. You can then assign or deploy this profile to Windows client devices in your organization.
 
@@ -50,9 +54,11 @@ This article lists the steps to create a template for Windows client devices, an
 
 - Some of these settings are available starting with Windows 10 version 1709 (RS2/build 15063). Some settings aren't included in all the Windows editions. For the best experience, it's suggested to use Windows 10 Enterprise version 1903 (19H1/build 18362) and newer.
 
-- The Windows settings use [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). The CSPs work on different editions of Windows, such as Home, Professional, Enterprise, and so on. To see if a CSP works on a specific edition, go to [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
+- The Windows settings use the [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies). The CSPs work on different editions of Windows, such as Home, Professional, Enterprise, and so on. To see if a CSP works on a specific edition, go to [Windows policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider#policies-supported-by-group-policy-and-admx-backed-policies).
 
-- There are two ways to create an administrative template: Using a template, or using the Settings Catalog. This article focuses on using the **Administrative Templates** template. The Settings Catalog has more Administrative Template settings available. For the specific steps to use the Settings Catalog, see [Use the settings catalog to configure settings](settings-catalog.md).
+- There are two ways to create an administrative template: Using a template, or using the Settings Catalog. This article focuses on using the **Administrative Templates** template. The Settings Catalog has more Administrative Template settings available.
+
+  For the specific steps to use the Settings Catalog, see [Use the settings catalog to configure settings](settings-catalog.md).
 
 ## Create the template
 
@@ -110,15 +116,15 @@ This article lists the steps to create a template for Windows client devices, an
     - And much more...
 
 12. Select **Next**.
-13. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](..//fundamentals/scope-tags.md).
+13. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-14. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+14. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles in Intune](device-profile-assign.md).
 
     If the profile is assigned to user groups, then configured ADMX settings apply to any device that the user enrolls, and signs in to. If the profile is assigned to device groups, then configured ADMX settings apply to any user that signs into that device. This assignment happens if the ADMX setting is a computer configuration (`HKEY_LOCAL_MACHINE`), or a user configuration (`HKEY_CURRENT_USER`). With some settings, a computer setting assigned to a user may also impact the experience of other users on that device.
 
-    For more information, see [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
+    For more information, see [User groups vs. device groups when assigning policies](device-profile-assign.md#user-groups-vs-device-groups).
 
     Select **Next**.
 
@@ -146,8 +152,9 @@ There are thousands of settings available in these templates. To make it easier 
 
 ## Next steps
 
-The template is created, but may not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- The template is created, but may not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
 
-Update [Microsoft 365 using administrative templates](administrative-templates-update-office.md).
+- [Update Office using administrative templates](administrative-templates-update-office.md).
+- [Restrict USB devices using administrative templates](administrative-templates-restrict-usb.md).
 
-[Tutorial: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)
+- [Tutorial: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

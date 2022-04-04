@@ -1,6 +1,7 @@
 ---
 title: "CCM_ClientAgentSettings Class"
 titleSuffix: "Configuration Manager"
+description: "A client class, in Configuration Manager, that contains common client agent settings."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

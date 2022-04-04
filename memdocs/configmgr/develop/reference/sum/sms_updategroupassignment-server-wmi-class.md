@@ -1,4 +1,5 @@
 ---
+description: Learn how to  represent a deployment of an update group in Configuration Manager using SMS_UpdateGroupAssignment.
 title: "SMS_UpdateGroupAssignment Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

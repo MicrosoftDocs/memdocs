@@ -1,6 +1,7 @@
 ---
 title: "AcceptEULA Method in Class SMS_ConfigurationPolicy"
 titleSuffix: "Configuration Manager"
+description: "Accepts or declines the Microsoft Software License Terms of a configuration item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

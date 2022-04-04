@@ -1,4 +1,5 @@
 ---
+description: Learn how to verify that the query collection rule is a valid WQL or Extended WQL statement using ValidateQuery class method.
 title: "ValidateQuery Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

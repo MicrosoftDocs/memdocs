@@ -1,4 +1,5 @@
 ---
+description: Learn how to retrieve the targeted users of an application deployment type using GetTargetedUsers class method.
 title: "GetTargetedUsers Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

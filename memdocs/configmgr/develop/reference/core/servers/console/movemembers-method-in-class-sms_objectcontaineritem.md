@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager MoveMembers Windows Management Instrumentation (WMI) class method to move folder items to another folder.
 title: "MoveMembers Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
