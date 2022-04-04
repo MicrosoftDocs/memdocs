@@ -924,6 +924,21 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "windows-365/enterprise/end-user-access-cloud-pc.md",
+            "redirect_url":"windows-365/end-user-access-cloud-pc",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/end-user-hardware-requirements.md",
+            "redirect_url":"windows-365/end-user-hardware-requirements",
+            "redirect_document_id": false
+        },                
+        {
+            "source_path": "windows-365/business/get-users-started.md",
+            "redirect_url":"windows-365/business/get-users-started",
+            "redirect_document_id": false
+        },                        
+        {
             "source_path": "windows-365/get-cloud-pc-audit-logs-using-powershell.md",
             "redirect_url":"/windows-365/enterprise/get-cloud-pc-audit-logs-using-powershell",
             "redirect_document_id": false
