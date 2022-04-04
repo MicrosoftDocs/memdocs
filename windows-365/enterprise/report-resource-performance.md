@@ -78,8 +78,6 @@ You can review the CPU spike time and RAM spike time scores and percentages by f
 
 When you click on a particular device in one of the reports, you'll see specific information for that device. If device score is below the baseline, you can improve device performance and score by adding more resources to the device and taking a resize action.
 
-Below the charts, the Top 5 lists help you determine the specific processes that most impact the Cloud PC’s CPU and RAM performance. The items in the list are aggregated over the last 14 days.
-
 ![Screenshot of using the device history](./media/report-resource-performance/device-history.png)
 
 <!-- ########################## -->
