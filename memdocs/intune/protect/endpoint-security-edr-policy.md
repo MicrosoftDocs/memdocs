@@ -72,7 +72,7 @@ Find the endpoint security policies for EDR under *Manage* in the **Endpoint sec
 >Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
 - Platform: **Windows 10, Windows 11, and Windows Server**
-  - Profile: **Endpoint detection and response** - Intune deploys the policy to devices in your Azure AD groups. Profiles for this platform can be used with devices enrolled with Intune, and wit devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
+  - Profile: **Endpoint detection and response** - Intune deploys the policy to devices in your Azure AD groups. Profiles for this platform can be used with devices enrolled with Intune, and with devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
 
 ### Devices managed by Configuration Manager
 

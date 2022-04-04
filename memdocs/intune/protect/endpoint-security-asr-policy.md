@@ -56,7 +56,8 @@ Find the endpoint security policies for attack surface reduction under *Manage* 
 > [!NOTE]  
 > Beginning on April 5, 2022, the following profiles for Attack surface reduction policy have been updated to use the settings format as found in the Settings Catalog, while the other profiles are unchanged:  
 > - Attack surface reduction rules
-> - Exploit protection
+> - Exploit protection  
+>
 > The new versions of these two profiles include the same settings as the older profile templates they replace. With this change, all new instances of these profiles will use the new settings format. Your previously crated instances of these profiles remain available to use and edit.
 
 
