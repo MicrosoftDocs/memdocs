@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/25/2022
+ms.date: 04/01/2022
 ms.topic: how-to
 ms.service: mem
 ms.subservice: fundamentals
@@ -33,6 +33,8 @@ ms.collection:
 
 Microsoft provides global technical, pre-sales, billing, and subscription support for device management cloud-based services, including Intune, Configuration Manager, Windows 365, and Microsoft Managed Desktop. You can access support for all of these from **Help and support** in the Microsoft Endpoint Manager admin center. In this article, we explain how to get to Help and support and review your different support options from within the admin center.
 
+To access support resources in the Endpoint Manager admin center, including creating and managing a support incident, your account must have an Azure Active Directory (Azure AD) role that includes the *action* **microsoft.office365.supportTickets**. Guest users are an exception: they can't file support tickets, even when granted the correct action. For information about Azure AD roles and permissions that are required to create a support ticket, see [administrator roles in Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
+
 Support is available both online and by phone for paid and trial subscriptions. Online technical support is available in English and Japanese. Phone support and online billing support are available in additional languages.
 
 ## Access Help and support
@@ -48,7 +50,9 @@ From within the admin center, use one of the following methods to access Help an
 
 - From any node in the admin center, select **Help and support** to open the *Help and support* pane.
 
-- From any node in the admin center, select the **?** icon in the upper-right corner to open the *Help* pane. Then, select **Help + support** to open the *Help and support* pane
+- From any node in the admin center, select the **?** icon in the upper-right corner to open the *Help* pane. Then, select **Help + support** to open the *Help and support* pane.
+
+### Choose the right support scenario
 
 The following image is an example of accessing help and support for Microsoft Intune by navigating to the Endpoint security node for Intune, and then selecting Help and support.
 
@@ -96,9 +100,12 @@ On the **Help and support** pane, select a tile to focus support on the scenario
 
 After you select a support scenario, the admin center presents the Help and Support page where the support scenario you’ve selected appears at the top **(1)**. If the wrong support scenario was selected, you’ll need to go back to make a different selection.
 
+> [!NOTE]
+> To access support scenarios in the Endpoint Manager admin center, your account must have an Azure Active Directory (Azure AD) role that includes the *action* **microsoft.office365.supportTickets**.
+
 :::image type="content" source="./media/get-support/confirm-management-selection.png" alt-text="View the How can we help window":::
 
-Above the *How can we help?* title are three icons that you can select to open different panes: *Find solutions*, *Contact support*, and *Service requests*. The pane you’re viewing is identified by which icon is underlined. By default, the Help and support page opens to the *Find solutions* pane. However, if you have an active support case, then Help and support opens to the *Service requests* pane where you can view details about your active and closed support cases.
+Above the *How can we help?* title are three icons that you can select to open different panes: *Find solutions*, *Contact support*, and *Service requests*. The pane you’re viewing is identified by which icon is underlined. By default, the Help and support page opens to the *Find solutions* pane.
 
 > [!TIP]  
 > Customers with a **Premier** or **Unified** support contract have [additional options](#premier-and-unified-support-options) for support. If you've a Premier or Unified support contract, you'll see a banner similar to the following image:
@@ -123,7 +130,7 @@ For example, for Microsoft Intune you might enter **device enrollment failure**.
 
 :::image type="content" source="./media/get-support/troubleshooting-insights.png" alt-text="View of Need help pane with options to run diagnostics, view insights, and read recommended articles":::
 
-Running the diagnostics can identify issues for that account in Azure Active Directory (Azure AD). In this example, the user wasn’t assigned a license for Intune, preventing the device enrollment, and we see a link to relevant content:
+Running the diagnostics can identify issues for that account in Azure AD. In this example, the user wasn’t assigned a license for Intune, preventing the device enrollment, and we see a link to relevant content:
 
 :::image type="content" source="./media/get-support/diagnostic-resuslts.png" alt-text="View the diagnostic results":::
 
@@ -143,14 +150,12 @@ When presented, you can run automated tests or diagnostics where applicable, and
 
 ### Contact support
 
-If you have administrative access to the admin center, you will see the **Contact Support** option, which you can use to file an online support ticket for a supported service. This pane is available after you provide some basic keywords on the *Find solutions* pane.
-
-:::image type="content" source="./media/get-support/contact-support.png" alt-text="Select the contact support icon":::
-
-To create and manage a support incident, your account must have an Azure AD role that includes the *action* **microsoft.office365.supportTickets**. Guest users are an exception. They can't file support tickets, even when granted the correct action. For information about Azure AD roles and permissions that are required to create a support ticket, see [administrator roles in Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal).
+The **Contact Support** option is available after you provide some basic keywords on the *Find solutions* pane. You can use this pane to file an online support ticket for a supported service.
 
 > [!IMPORTANT]  
 > For technical support with third-party products that work with Intune (like Saaswedo, Cisco, or Lookout), contact the supplier of that product first. Before you open a request with Intune support, make sure you configured the other product correctly.
+
+:::image type="content" source="./media/get-support/contact-support.png" alt-text="Select the contact support icon":::
 
 When requesting assistance, provide a description of the problem with as much detail as needed. After confirming your phone and email contact information, select the method of contact you prefer. The window displays a response time for each contact method, which gives you an expectation of when you'll be contacted. Before submitting your request, attach files like logs or screenshots that can help fill in details about the issue.
 
