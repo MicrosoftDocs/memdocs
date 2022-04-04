@@ -125,7 +125,7 @@ This profile includes the DFCI settings you configure.
         - **Enabled**: UEFI (BIOS) allows booting from non-hard drive storage.
         - **Disabled**: UEFI (BIOS) doesn't allow booting from non-hard drive storage, which also disables booting from network adapters. 
 
-          When set to **Disabled**, don't set the **Boot from network adapters** setting to **Enabled**. It causes the **Boot from external media (USB, SD)** or **Boot from network adapters** to become not compliant.
+          When set to **Disabled**, don't set the **Boot from network adapters** setting to **Enabled**. It causes the **Boot from external media (USB, SD)** setting or **Boot from network adapters** setting to become not compliant.
 
     - **Boot from network adapters**: Your options:
         - **Not configured**: Intune doesn't change or update this setting.
