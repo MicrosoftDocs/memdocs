@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the Close method in Class SMS_EPAlert to postpone the alert.
 title: "Close Method in Class SMS_EPAlert"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
