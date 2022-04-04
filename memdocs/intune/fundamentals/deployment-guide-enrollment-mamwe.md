@@ -53,7 +53,6 @@ For an overview, including any Intune-specific prerequisites, see [Deployment gu
 
 Use for personal or bring your own devices (BYOD). Or, use on organization-owned devices that need specific app configuration, or extra app security.
 
----
 | Feature | Use this enrollment option when |
 | --- | --- |
 | You want to configure specifics apps, and control access to these apps, such as Outlook or Microsoft Teams. | ✔️ |
@@ -65,8 +64,6 @@ Use for personal or bring your own devices (BYOD). Or, use on organization-owned
 | You use the device enrollment manager (DEM) account. | ✔️ |
 | Devices are owned by the organization or school. |  ❌ <br/><br/> Not recommended as the *only* enrollment method for organization-owned devices. Organization-owned devices should be enrolled and managed by Intune. If you want extra security for specific apps, then use enrollment and MAM together. |
 | Devices are user-less, such as kiosk, or dedicated device. | ❌ <br/><br/>Typically, user-less or shared devices are organization-owned. These devices should be enrolled and managed by Intune. |
-
----
 
 ### MAM administrator tasks
 
