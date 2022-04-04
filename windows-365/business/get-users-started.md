@@ -78,6 +78,10 @@ While on the Windows 365 home page, users can take actions on their Cloud PCs. T
 
 - **System Information**: Displays information about the Cloud PC specification.
 
+## User feedback
+
+Users can provide feedback about their Cloud PC experience by using the feedback icon in the upper right corner.
+
 ## Remote Desktop
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC. Windows 365 users can download and install the Remote Desktop client from the Windows 365 home page.
