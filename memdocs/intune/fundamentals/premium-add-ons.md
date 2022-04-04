@@ -36,6 +36,10 @@ Microsoft Endpoint Manager now offers Premium add-ons. You can find premium add-
 Licenses for the Premium add-ons can be added for an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune.
 
 Global and Billing administrators can use the **Premium add-ons** page from the [Microsoft 365 admin center](https://admin.microsoft.com) to start a free trial or purchase licenses for each Premium add-on. 
+
+> [!NOTE]
+Premium add-ons are currently not supported in Sovereign clouds.
+
 ## What add-ons capabilities are available 
 
 The following Premium add-ons are available: 
@@ -61,13 +65,18 @@ Administrators who aren't Global or Billing administrators can still see the sta
 1. Navigate to **Tenant administration** > **Premium add-ons** as a Global or Billing administrator.
 2. Find the Premium add-on to start a trial. For add-ons that say **Available for trial or purchase** in their status, you don't have a free trial started or any licenses purchased for those add-ons.
 3. Click **View details** and see the details. :::image type="content" source="./media/premium-add-ons/remote-help-details.png" alt-text="Remote help details.":::
-4. Click the **To try or buy, go to Purchase services** link to navigate to the Microsoft 365 Admin Center. A new tab opens on the **Product details** page for the relevant Premium add-on. *Screenshot will be added here.* 
-5. In the Microsoft 365 Admin Center, follow the prompts to **Start free trial** and confirm your order. *Screenshot will be added here.* 
+4. Click the **To try or buy, go to Purchase services** link to navigate to the Microsoft 365 Admin Center. A new tab opens on the **Product details** page for the relevant Premium add-on. :::image type="content" source="./media/premium-add-ons/remote-help-product-details.png" alt-text="Remote help product details."::: 
+5. In the Microsoft 365 Admin Center, follow the prompts to **Start free trial** and confirm your order. :::image type="content" source="./media/premium-add-ons/confirm-order.png" alt-text="Confirm order."::: 
 6. Navigate to **Tenant administration** > **Premium add-ons** and see that the Premium add-on capability you added is now **Active**.
 
 ### How to purchase premium add-ons
 
-Licenses for Premium add-ons can be purchased just as you would purchase Intune licenses,  through a web direct purchase in the Microsoft 365 Admin Center, Microsoft Volume License Servicing Center (VLSC) or through your existing relationships with Microsoft partners/resellers. 
+Licenses for Premium add-ons can be purchased just as you would purchase Intune licenses through the following ways:
+   
+- web direct purchase in the Microsoft 365 Admin Center
+- Microsoft Volume License Servicing Center (VLSC) 
+- existing relationships with Microsoft partners/resellers
+ 
 After you buy licenses via any source, the licenses are available in your Tenant and the status of the Premium add-ons capability will update accordingly. 
 
 ## How to assign licenses 
