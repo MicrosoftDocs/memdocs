@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 04/04/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -28,7 +28,7 @@ ms.collection:
   - highpri
 ---
 
-# Deployment guide: Mobile Application Management (MAM) for unerolled devices in Microsoft Intune
+# Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune
 
 MAM for unenrolled devices uses app configuration profile to deploy or configure apps on devices without enrolling the device. When combined with app protection policies, you can protect data within an app.
 
@@ -87,7 +87,7 @@ The specific tasks depend on how you tell users to install the apps.
 
   - Go to the app store, and download the app.
   - Go to the app store, and download the Company Portal app. The Company Portal app authenticates the user. Open the Company Portal app, and sign in with their organization credentials (`user@contoso.com`). They see a list of available apps, including required apps.
-  - Go to the Company Portal web site at `portal.manage.microsoft.com`, and sign in with their organization credentials (`user@contoso.com`). Once signed in, they see a list of available apps, including required apps.
+  - Go to the Company Portal web site at `portal.manage.microsoft.com`, and sign in with their organization credentials (`user@contoso.com`). After users sign in, they see a list of available apps, including required apps.
 
 - After the app is installed, they open the app, and are prompted to sign in with their organization credentials (`user@contoso.com`). When users sign in, they may have to restart the app. After the restart, the app data is "managed" by Intune.
 
