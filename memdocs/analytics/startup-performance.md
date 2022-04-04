@@ -47,7 +47,7 @@ The **Startup performance** page also provides a prioritized list of **Insights 
 
 Startup performance provides an insight on the number of devices on which the boot drive is a hard disk. Hard disk drives typically result in boot times three to four times longer than solid-state drives. We also report the expected improvement to start up performance you would gain by moving to solid-state drives.
 
-Click though to see the list of devices that have hard disk drives. The recommended action is to upgrade these devices to solid-state drives.
+Click through to see the list of devices that have hard disk drives. The recommended action is to upgrade these devices to solid-state drives.
 
 ### <a name="bkmk_gp"></a> Group Policy
 
