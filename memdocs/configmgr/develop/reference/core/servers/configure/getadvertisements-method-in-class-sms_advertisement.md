@@ -1,7 +1,7 @@
 ---
 title: "GetAdvertisements Method"
 titleSuffix: "Configuration Manager"
-description: " A Windows Management Instrumentation class method that gets the advertisement ID for a computer."
+description: "A Windows Management Instrumentation class method that gets the advertisement ID for a computer."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
