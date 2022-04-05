@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/24/2022
+ms.date: 04/05/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -41,11 +41,36 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Device provisioning
 ### Device management
 ### Device security
-### Intune apps
+### Apps
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of April 4, 2022 (Service release 2203)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+### Nested virtualization (preview)<!--37800910 -->
+
+For most currently supported regions, Windows 365 8vCPU/32GB licenses now supports nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 aren't currently supported for this feature. For more information, see [Set up nested virtualization on your Cloud PC](nested-virtualization.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### windows365.microsoft.com now generally available<!--38195529-->
+
+The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has moved out of preview and into general availability.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Upload a custom image without an on-premises network connection<!--8341750 -->
+
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
+
 
 <!-- ########################## -->
 ## Week of March 24, 2022
