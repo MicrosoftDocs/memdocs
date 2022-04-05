@@ -1,7 +1,7 @@
 ---
 title: "CIEvalState Enumeration"
 titleSuffix: "Configuration Manager"
-"In Configuration Manager, the CIEvalState enumeration is used by the the ICIINFO Interface."   
+description: "In Configuration Manager, the CIEvalState enumeration is used by the the ICIINFO Interface."   
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

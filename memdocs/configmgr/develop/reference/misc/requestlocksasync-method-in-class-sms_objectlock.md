@@ -2,7 +2,6 @@
 description: Learn how to asynchronously acquire locks to edit multiple global objects using RequestLocksAsync class method in Configuration Manager.
 title: "RequestLocksAsync Method"
 titleSuffix: "Configuration Manager"
-"In Configuration Manager, the RequestLocksAsync Windows Management Instrumentation class method asynchronously acquires locks to edit multiple global objects." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
