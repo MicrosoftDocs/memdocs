@@ -85,7 +85,7 @@ A Cloud PC’s name is now appended to the network interface name within the Azu
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### End-user experience
 
-[!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
+[!INCLUDE [End user feedback and log collection](../includes/whats-new-feedback-log-collection.md)]
 
 <!-- ########################## -->
 ## Week of March 24, 2022
