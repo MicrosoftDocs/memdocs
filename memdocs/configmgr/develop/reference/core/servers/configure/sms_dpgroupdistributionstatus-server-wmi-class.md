@@ -1,5 +1,5 @@
 ---
-describe: Learn how the SMS_DPGroupDistributionStatus Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes distribution information for a given distribution point group.
+description: Learn how the SMS_DPGroupDistributionStatus Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes distribution information for a given distribution point group.
 title: "SMS_DPGroupDistributionStatus Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
