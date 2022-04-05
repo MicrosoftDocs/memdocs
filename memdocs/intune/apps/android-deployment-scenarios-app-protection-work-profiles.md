@@ -80,7 +80,7 @@ This feature applies to:
 
 ### Android Enterprise personally-owned work profiles
 
-Android Enterprise personally-owned work profiles is the core Android Enterprise deployment scenario . The Android Enterprise personally-owned work profile is a separate partition created at the Android OS level that can be managed by Intune.
+Android Enterprise personally-owned work profiles are the core Android Enterprise deployment scenario. The Android Enterprise personally-owned work profile is a separate partition created at the Android OS level that can be managed by Intune.
 
 An Android Enterprise personally-owned work profile includes the following features:
 
