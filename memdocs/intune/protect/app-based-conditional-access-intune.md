@@ -67,7 +67,7 @@ In this example, the admin has applied app protection policies to the Outlook ap
 
 1. The user tries to authenticate to Azure AD from the Outlook app.
 
-2. The user gets redirected to the app store to install a broker app when trying to authenticate for the first time. The broker app can be either the Microsoft Authenticator for iOS, or the Microsoft Company portal for Android devices.
+2. The user gets redirected to the app store to install a broker app when trying to authenticate for the first time. The broker app can be the Microsoft Authenticator for iOS, or either the Microsoft Authenticator or Microsoft Company portal for Android devices.
 
    If users try to use a native e-mail app, they'll be redirected to the app store to then install the Outlook app.
 
