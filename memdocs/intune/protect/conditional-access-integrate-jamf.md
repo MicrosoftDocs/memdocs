@@ -108,7 +108,7 @@ To connect Intune with Jamf Pro:
 8. Next, we will add permissions to update device attributes. At the top left of the **API permissions** page, select **Add a permission** to add a new permission. 
 
 9. On the **Request API permissions** page, select **Intune**, and then select **Application permissions**. Select only the check box for **update_device_attributes** and save the new permission.
-10. Under **Microsoft Graph**, click **Application permissions**, and then select **Application.Read.All**.
+10. Under **Microsoft Graph**, select **Application permissions**, then select **Application.Read.All**.
 
 11. Select **Add permissions**.
 
