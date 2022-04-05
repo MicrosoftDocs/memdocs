@@ -38,7 +38,7 @@ Using Microsoft Teams on a Cloud PC is different from using it on a physical PC.
 - [Prepare your network](/microsoftteams/prepare-network/) for Microsoft Teams.
 - Confirm that [required components](/azure/virtual-desktop/teams-on-avd) for Microsoft Teams optimizations are installed.
 - Conform to [Cloud PCs sizing requirements](cloud-pc-size-recommendations.md) for Microsoft Teams.
-- Conform to [End-user hardware requirements](end-user-hardware-requirements.md) for Microsoft Teams.
+- Conform to [End-user hardware requirements](..\end-user-hardware-requirements.md) for Microsoft Teams.
 
 ## Teams optimizations
 

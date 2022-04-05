@@ -89,7 +89,7 @@ Users must authenticate with the Windows 365 service when:
 
 - They access [windows365.microsoft.com](https://windows365.microsoft.com).
 - They navigate to the URL that maps directly to their Cloud PC.
-- They use a [Remote Desktop client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients to list their Cloud PCs.
+- They use a [Remote Desktop client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) to list their Cloud PCs.
 
 This authentication triggers an Azure Active Directory prompt, allowing any credential type that is supported by both Azure Active Directory and your OS.
 

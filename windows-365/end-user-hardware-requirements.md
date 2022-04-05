@@ -2,7 +2,7 @@
 # required metadata
 title: End-user hardware requirements in Windows 365
 titleSuffix:
-description: Learn about the hardware requirements for end-users ot access their Cloud PC.
+description: Learn about the hardware requirements for end-users to access their Cloud PC.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
