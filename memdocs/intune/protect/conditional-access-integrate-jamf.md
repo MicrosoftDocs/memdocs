@@ -118,7 +118,7 @@ To connect Intune with Jamf Pro:
 
 14. Next, grant admin consent for this app by selecting **Grant admin consent for _\<your tenant>_** in the top left of the **API permissions** page. You may need to re-authenticate your account in the new window and grant the application access by following the prompts.  
 
-15. Refresh the page by click on the **Refresh** button at the top of the page. Confirm that admin consent has been granted for the **update_device_attributes** permission. 
+15. Refresh the page by selecting **Refresh** at the top of the page. Confirm that admin consent has been granted for the **update_device_attributes** permission. 
 
 16. After the app is registered successfully, the API permissions should only contain one permission called **update_device_attributes** and should appear as follows:
 
