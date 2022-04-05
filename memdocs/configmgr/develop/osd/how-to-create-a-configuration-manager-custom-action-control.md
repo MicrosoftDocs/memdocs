@@ -1,6 +1,7 @@
 ---
 title: "Create a Custom Action Control"
 titleSuffix: "Configuration Manager"
+description: "Learn how to create a custom action control in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

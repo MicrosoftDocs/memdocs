@@ -93,6 +93,16 @@ The following profile templates are now available in the new settings format:
 To download the profile details from the Download Center, go to [](). 
 -->
 
+### Device management
+
+#### Microsoft Endpoint Manager premium add-ons<!-- 12953253  -->
+
+Microsoft Endpoint Manager is introducing a new centralized experience to help IT admins identify premium add-on capabilities. These capabilities can be added for an additional licensing cost available for Microsoft Endpoint Manager using Intune. The first premium add-on is Remote Help.
+
+You can find premium add-ons in Intune under **Tenant administration** > **Premium add-ons**. The **Summary** blade shows all premium add-ons that have been released, a short description, and the status of the add-on. You can view the status of each add-on as either **Active** or **Available for trial or purchase**. The premium add-ons capability can be used by Global and Billing administrators to start trials or purchase licenses for premium add-ons.
+
+For more information about Premium add-ons, see [Use Premium add-ons capabilities with Intune](../fundamentals/premium-add-ons.md).
+
 ## Week of March 28, 2022
 
 ### App management

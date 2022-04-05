@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the ValidateNewPackageSource class method to validate a new package source location for a software update.
 title: ValidateNewPackageSource method in class SMS_SoftwareUpdatesPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
