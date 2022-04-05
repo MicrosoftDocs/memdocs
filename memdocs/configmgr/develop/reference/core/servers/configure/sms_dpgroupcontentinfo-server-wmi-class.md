@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_DPGroupContentInfo class to describe package information for a given distribution point group.
 title: "SMS_DPGroupContentInfo Class"
 titleSuffix: "Configuration Manager"
 description: "An SMS Provider server class that describes package information for a given distribution point group."
