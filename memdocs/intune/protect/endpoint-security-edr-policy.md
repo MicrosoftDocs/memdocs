@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 04/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -64,15 +64,21 @@ Find the endpoint security policies for EDR under *Manage* in the **Endpoint sec
 
 **Intune** – The following are supported for devices you manage with Intune:
 
-> [!NOTE]  
-> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
->
-> The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
->
->Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
-
 - Platform: **Windows 10, Windows 11, and Windows Server**
   - Profile: **Endpoint detection and response** - Intune deploys the policy to devices in your Azure AD groups. Profiles for this platform can be used with devices enrolled with Intune, and with devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md).
+  
+  > [!NOTE]  
+  > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+  >
+  > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+  >
+  > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
+
+**Options for** ***Microsoft Defender for Endpoint client configuration package type***:  
+
+After you configure the [service-to-service connection](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune) between Intune and Microsoft Defender for Endpoint, the **Auto from connector** option becomes available for the setting **Microsoft Defender for Endpoint client configuration package type**. This option is not available until you've configured the connection.
+
+When you select **Auto from connector**, Intune automatically gets the onboarding package (blob) from your Defender for Endpoint deployment. This replaces the need to manually configure an **Onboard** package for this profile. There is no option to automatically configure an offboard package.
 
 ### Devices managed by Configuration Manager
 

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 04/06/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,7 +59,6 @@ Find the endpoint security policies for attack surface reduction under *Manage* 
 > - Exploit protection  
 >
 > The new versions of these two profiles include the same settings as the older profile templates they replace. With this change, all new instances of these profiles will use the new settings format. Your previously crated instances of these profiles remain available to use and edit.
-
 
 ### Devices managed by Intune
 

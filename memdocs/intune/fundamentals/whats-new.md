@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 04/06/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -89,9 +89,7 @@ The following profile templates are now available in the new settings format:
 | Attack surface reduction | Windows 10 and Later | Attack surface reduction rules |
 | Attack surface reduction | Windows 10 and Later | Exploit protection |
 
-<!-- To learn more about this change, see the Device Management team blog at []().
-To download the profile details from the Download Center, go to [](). 
--->
+<!-- To learn more about this change, see the Device Management team blog at [](). -->
 
 ### Device management
 

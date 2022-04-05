@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 04/06/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,7 +31,7 @@ ms.reviewer: aanavath
 
 > [!NOTE]  
 > Beginning on April 5, 2022, the *Windows 10 and later* platform and profiles for Windows devices were replaced by the *Windows 10, Windows 11, and Windows Server* platform and new instances of those same profiles. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles. The settings details for Windows profiles in this article apply to those deprecated profiles.
- 
+
 View the settings you can configure in profiles for *Firewall* policy in the endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
 
 Applies to:
