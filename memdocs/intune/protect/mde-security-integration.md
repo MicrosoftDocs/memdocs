@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 04/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,7 +46,7 @@ This scenario extends the Microsoft Endpoint Manager Endpoint Security surface t
 
 ## Monitor status
 
-Status and reports for MDE policies are available from the policy node under Endpoint security in the Microsoft Endpoint Manager admin center.
+Status and reports for policies targeted at devices in this channel are available from the policy node under Endpoint security in the Microsoft Endpoint Manager admin center.
 
 Drill in to the policy type, Antivirus or Firewall, and then select the policy to view its status. Policies for MDE have a *Policy type* of either *Microsoft Defender Antivirus (Preview)* or *Microsoft Defender Firewall (Preview)*.
 
@@ -57,6 +57,10 @@ When you select a policy, you'll see information about the device check-in statu
 - **Per setting status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
 
 ## Known limitations and considerations
+
+### Assignment Filters and Security Management for Microsoft Defender for Endpoint
+
+Assignment filters are not supported for devices communicating through the Microsoft Defender for Endpoint channel. While assignment filters can be added to a policy that could be targeted at these devices, the device will ignore assignment filters. For assignment filter support, the device must be enrolled in to Microsoft Endpoint Manager.
 
 ### Co-existence with Microsoft Endpoint Configuration Manager
 
@@ -76,7 +80,7 @@ The following security settings are pending deprecation. The Security Management
 - AllowOnAccessProtection (under **Antivirus**)
 - AllowIntrusionPreventionSystem (under **Antivirus**)
 
-### Managing Security Configurations on domain controllers
+### Managing security configurations on domain controllers
 
 Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We are looking at ways to add support in the future.
 
