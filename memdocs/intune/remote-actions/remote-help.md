@@ -74,7 +74,7 @@ The Remote help app supports the following capabilities:
 > [!NOTE]
 > Remote help has the following limitations:  
 >
-> - Remote Help is not supported on GCC, GCC High or DoD Tenants.
+> - Remote help is not supported on GCC, GCC High or DoD Tenants.
 > - You cannot establish a remote help session from one tenant to a different tenant.
 > - May not be available in all markets or localizations.
 
@@ -133,9 +133,7 @@ For users that opted out of automatic updates, when an update to remote help is 
 
 ### Download remote help
 
-Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
-
-The most recent version of remote help is **4.0.0.0**
+The generally available remote help installer will be released soon.
 
 ### Deploy remote help as a Win32 app
 
