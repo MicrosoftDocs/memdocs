@@ -53,9 +53,13 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Apps
 
-### Nested virtualization (preview)<!--37800910 -->
+#### Nested virtualization (preview)<!--37800910 -->
 
 For most currently supported regions, Windows 365 8vCPU/32GB licenses now support nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 aren't currently supported for this feature. For more information, see [Set up nested virtualization on your Cloud PC](nested-virtualization.md).
+
+#### Improve video playback by using multimedia redirection<!--38686511-->
+
+You can improve video playback performance on your Cloud PCs by using multimedia redirection (MMR). For more information, see [Improve video playback](troubleshooting.md#improve-video-playback).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -71,6 +75,9 @@ The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has
 
 Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
 
+#### Cloud PC name appended to the network interface name<!--38793957-->
+
+A Cloud PC’s name is now appended to the network interface name within the Azure portal. This naming makes it easier to find the IP address for the Cloud PC when an Azure network connection is selected. 
 
 <!-- ########################## -->
 ## Week of March 24, 2022
