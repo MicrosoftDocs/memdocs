@@ -88,7 +88,7 @@ Users can collect logs of their Cloud PC sessions. The logs are collected from t
 
 To turn on log collection, in the client, select the gear icon > **Capture logs**.
 
-   ![Capture logs.](media/get-users-started/capture-logs.png)
+   ![Capture logs.](media/get-users-started/settings-logs.png)
 
 ## Remote Desktop
 
