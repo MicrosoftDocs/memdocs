@@ -5,7 +5,7 @@ description: Learn about changes to the Configuration Manager console and tips f
 ms.date: 03/28/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: reference
+ms.topic: reference 
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -30,6 +30,7 @@ The following improvements were made to the console and user experience:
 - Additional Management Insights rules now have click-through actions
 - Copy/paste is available for more objects from details panes.
    - Added the **Name** property in the details pane for configuration items, configuration item related policies, and applications
+- Software update search results and the search criteria are now cached when you navigate to another node. When you navigate back to the **All Software Updates** node, your search criteria and results are preserved from your last query. Closing the console will clear the cached query.
 - The console now offers a dark theme. For more information, see [How to use the console](admin-console.md#bkmk_dark).
 
 ### <a name="bkmk_csv"></a> Export to CSV
