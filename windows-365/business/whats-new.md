@@ -56,6 +56,11 @@ Learn what new features are available in Windows 365 Business.
 
 [!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
 
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End-user experience
+
+[!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
+
 <!-- ########################## -->
 ## Week of February  28, 2022 (Service release 2202)
 
