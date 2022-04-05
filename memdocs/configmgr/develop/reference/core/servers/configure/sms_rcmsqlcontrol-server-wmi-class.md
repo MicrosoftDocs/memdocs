@@ -1,5 +1,5 @@
 ---
-description: The `SMS_RcmSqlControl` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
+description: The SMS_RcmSqlControl Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
 title: "SMS_RcmSqlControl Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

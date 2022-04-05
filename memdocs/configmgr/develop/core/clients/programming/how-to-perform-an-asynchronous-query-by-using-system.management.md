@@ -1,5 +1,5 @@
 ---
-description: To perform an asynchronous query on a Configuration Manager client Windows Instrumentation (WMI) namespace, create a `ManagementObjectSearcher` object that specifies a WQL query.
+description: To perform an asynchronous query on a Configuration Manager client Windows Instrumentation (WMI) namespace, create a ManagementObjectSearcher object that specifies a WQL query.
 title: "Perform an Asynchronous Query by Using System.Management"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
