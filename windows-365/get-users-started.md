@@ -88,6 +88,8 @@ Users can collect logs of their Cloud PC sessions. The logs are collected from t
 
 To turn on log collection, in the client, select the gear icon > **Capture logs**.
 
+   ![Capture logs.](media/get-started/capture-logs.png)
+
 ## Remote Desktop
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC. Windows 365 users can download and install the Remote Desktop client from the Windows 365 home page.
