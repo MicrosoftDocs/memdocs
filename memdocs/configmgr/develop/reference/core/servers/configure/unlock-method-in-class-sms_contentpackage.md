@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the Unlock method in class SMS_ContentPackage to set the source site to the current site, unlocking the package.  
 title: "Unlock Method in Class SMS_ContentPackage"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,7 @@
 ---
 title: "Asset Intelligence Client WMI Classes"
 titleSuffix: "Configuration Manager"
+description: "Learn about the Asset Intelligence client Windows Management Instrumentation classes that query client computers for usage, software, and licensing data."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
