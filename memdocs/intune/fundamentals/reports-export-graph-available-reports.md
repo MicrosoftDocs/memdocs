@@ -172,7 +172,8 @@ The following table contains the possible output when calling the `UserInstallSt
 | NotInstalledCount |
 | NotApplicableCount    |
 
-There are no filters for this report.
+You can choose to filter the `UserInstallStatusAggregateByApp` report's output based on the following column:
+- `ApplicationId`
 
 ## DeviceCompliance report
 
