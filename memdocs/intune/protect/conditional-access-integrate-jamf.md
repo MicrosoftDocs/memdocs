@@ -49,7 +49,7 @@ You need the following to configure Conditional Access with Jamf Pro:
 
 - Jamf Pro 10.1.0 or later
 - Microsoft Intune and Microsoft AAD Premium P1 licenses (recommended Microsoft Enterprise Mobility + Security license bundle)
-- Global Administrator role in Azure Active Directory.
+- Global admin role in Azure Active Directory.
 - A user with Microsoft Intune Integration privileges in Jamf Pro
 - [Company Portal app for macOS](https://aka.ms/macoscompanyportal)
 - macOS devices with OS X 10.12 Yosemite or later
