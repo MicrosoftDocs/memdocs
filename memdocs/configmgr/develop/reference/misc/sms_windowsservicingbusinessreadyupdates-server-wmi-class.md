@@ -1,6 +1,7 @@
 ---
 title: "SMS_WindowsServicingBusinessReadyUpdates Class"
 titleSuffix: "Configuration Manager"
+description: "An internal-only Windows Management Instrumentation class method.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
