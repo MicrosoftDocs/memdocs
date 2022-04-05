@@ -56,19 +56,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!--## App management-->
 
 <!-- ***********************************************-->
-## Device management
-
-### Upload a custom image without an on-premises network connection<!--8341750-->
-
-Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network will be able to upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
-
-### windows365.microsoft.com will move to general availability<!--38195529-->
-
-The windows365.microsoft.com web client will be moving out of preview and into general availability.
-
-### Nested virtualization<!--37800910-->
-
-In a future release, for most currently supported regions, Windows 365 8vCPU/32GB licenses will support nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 will follow at a later date.
+<!--## Device management-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
