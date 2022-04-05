@@ -47,6 +47,15 @@ Learn what new features are available in Windows 365 Business.
 ### Scripts
 -->
 
+
+<!-- ########################## -->
+## Week of April 4, 2022 (Service release 2203)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+[!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
+
 <!-- ########################## -->
 ## Week of February  28, 2022 (Service release 2202)
 

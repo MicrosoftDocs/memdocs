@@ -45,6 +45,7 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+### End user experience
 -->
 
 <!-- ########################## -->
@@ -52,6 +53,8 @@ Learn what new features are available in Windows 365 Enterprise.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Apps
+
+[!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
 
 #### Nested virtualization (preview)<!--37800910 -->
 
@@ -78,6 +81,11 @@ Customers using Azure Active Directory (Azure AD) Join without bringing an Azure
 #### Cloud PC name appended to the network interface name<!--38793957-->
 
 A Cloud PC’s name is now appended to the network interface name within the Azure portal. This naming makes it easier to find the IP address for the Cloud PC when an Azure network connection is selected. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End-user experience
+
+[!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
 
 <!-- ########################## -->
 ## Week of March 24, 2022
