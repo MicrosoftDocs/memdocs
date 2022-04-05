@@ -935,7 +935,7 @@
         },                
         {
             "source_path": "windows-365/business/get-users-started.md",
-            "redirect_url":"windows-365/get-users-started",
+            "redirect_url":"/windows-365/get-users-started",
             "redirect_document_id": false
         },                        
         {
