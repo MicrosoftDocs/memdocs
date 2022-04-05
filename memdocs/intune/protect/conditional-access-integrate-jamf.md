@@ -110,7 +110,7 @@ To connect Intune with Jamf Pro:
 9. On the **Request API permissions** page, select **Intune**, and then select **Application permissions**. Select only the check box for **update_device_attributes** and save the new permission.
 10. Under **Microsoft Graph**, click **Application permissions**, and then select **Application.Read.All**.
 
-11. Click **Add permissions**.
+11. Select **Add permissions**.
 
 12. Navigate to **APIs my organization uses**. Search for and select **Windows Azure Active Directory**. Select **Application permissions**, and then select **Application.Read.All**.
 
