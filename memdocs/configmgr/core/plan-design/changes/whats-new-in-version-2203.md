@@ -200,6 +200,7 @@ Based on your feedback, we've made a few improvements to the console and user ex
 - Other management insights rules now have drill-through actions.
 - Copy/paste is available for more objects from details panes.
 - The **Name** property is added to the details pane for configuration items, configuration item related policies, and applications.
+- Software update search results and the search criteria are now cached when you navigate to another node. When you navigate back to the **All Software Updates** node, your search criteria and results are preserved from your last query.
 
 For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#bkmk_2203).
 
