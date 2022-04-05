@@ -37,6 +37,8 @@ As an Intune admin, you can identify devices as corporate-owned to refine manage
 At the time of enrollment, Intune automatically assigns corporate-owned status to devices that are:
 
 - Enrolled with a [device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms)
+- Enrolled by using [Google Zero Touch](/android-dedicated-devices-fully-managed-enroll#enroll-by-using-google-zero-touch)
+- Enrolled by using [Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md)
 - Enrolled with the Apple [Device Enrollment Program](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md), or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS/iPadOS only)
 - [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with an international mobile equipment identifier (IMEI) numbers (all platforms with IMEI numbers) or serial number (iOS/iPadOS and Android)
 - Enrolled as [Android Enterprise corporate-owned devices with work profile](/mem/intune/enrollment/android-corporate-owned-work-profile-enroll)
