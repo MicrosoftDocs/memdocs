@@ -1,4 +1,5 @@
 ---
+description: Learn how to modify an Object by using WMI.
 title: "Modify an Object by Using WMI"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
