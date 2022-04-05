@@ -105,7 +105,7 @@ For a list of clients by operating system, see [Remote Desktop clients](/windo
 
 ## Next steps
 
-[Users installing apps](business/apps-install.md)
+[Users installing apps](business/apps-install.md) 
 
 [Manage your Cloud PCs](business/device-management.md)
 
