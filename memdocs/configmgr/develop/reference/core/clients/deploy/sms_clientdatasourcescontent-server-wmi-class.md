@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_ClientDataSourcesContent class to represent client content data sources per boundary group.
 title: "SMS_ClientDataSourcesContent Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

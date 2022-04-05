@@ -1,6 +1,7 @@
 ---
 title: "SetSequence Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that updates the task sequence package with the specified task sequence."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

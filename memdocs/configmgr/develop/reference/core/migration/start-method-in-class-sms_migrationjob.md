@@ -1,6 +1,7 @@
 ---
 title: "Start Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the Start Windows Management Instrumentation class method starts the migration job."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the ICIIINFO::GetVersion method to get the version of the configuration item in Configuration Manager.
 title: "ICIINFO::GetVersion"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

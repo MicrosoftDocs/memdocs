@@ -1,4 +1,5 @@
 ---
+description: Learn how to add content to the SMS_ContentPackage Server WMI Class content package using AddContent.
 title: "AddContent Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

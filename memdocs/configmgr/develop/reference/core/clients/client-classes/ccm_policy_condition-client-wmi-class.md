@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a policy condition in Configuration Manager using CCM_Policy_Condition. 
 title: "CCM_Policy_Condition Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

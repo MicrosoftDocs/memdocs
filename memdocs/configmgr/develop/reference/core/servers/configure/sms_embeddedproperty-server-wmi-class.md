@@ -1,6 +1,7 @@
 ---
 title: "SMS_EmbeddedProperty Class"
 titleSuffix: "Configuration Manager"
+description: " An SMS Provider that represents a general-purpose embedded property. The property is used by the site control file to define the properties of a site control item."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

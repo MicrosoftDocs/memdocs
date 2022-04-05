@@ -1,6 +1,7 @@
 ---
 title: Compliance settings classes
 titleSuffix: Configuration Manager
+description: "Assists you in assessing computer compliance. You can also use these classes to check for compliance with software updates and security settings."
 ms.date: 08/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

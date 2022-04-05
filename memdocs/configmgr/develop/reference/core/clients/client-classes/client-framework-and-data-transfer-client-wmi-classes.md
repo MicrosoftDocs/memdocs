@@ -1,6 +1,7 @@
 ---
 title: "Client Framework and Data Transfer Classes"
 titleSuffix: "Configuration Manager"
+description: "This section describes the CCM framework and data transfer classes in Configuration Manager for the client."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

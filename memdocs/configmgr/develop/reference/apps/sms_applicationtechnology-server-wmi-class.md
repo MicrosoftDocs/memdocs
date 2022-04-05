@@ -1,6 +1,7 @@
 ---
 title: "SMS_ApplicationTechnology Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager, that represents the technology extension of an application."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

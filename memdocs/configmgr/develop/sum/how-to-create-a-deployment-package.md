@@ -1,6 +1,7 @@
 ---
 title: "Create a Deployment Package"
 titleSuffix: "Configuration Manager"
+description: "A software updates deployment package initiated by creating an instance of the SMS_SoftwareUpdatesPackage class and populating the properties."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

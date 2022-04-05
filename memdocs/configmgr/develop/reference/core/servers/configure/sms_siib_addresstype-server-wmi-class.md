@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the sender address type used by the Configuration Manager console with the SMS_SIIB_AddressType class. 
 title: "SMS_SIIB_AddressType Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,8 @@
 ---
 title: "Modify a Collection"
 titleSuffix: "Configuration Manager"
+description: "How to modify a collection by using the collection ID provided. The example property values are modified using the name and comment values."  
+
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

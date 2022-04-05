@@ -1,6 +1,7 @@
 ---
 title: ReloadImageProperties method in class SMS_BootImagePackage
 titleSuffix: "Configuration Manager"
+description: "Reloads image metadata from a boot image source .wim file and synchronizes the metadata with the database."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

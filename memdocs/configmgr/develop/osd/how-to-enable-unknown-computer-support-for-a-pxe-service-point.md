@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn about how to set an operating system deployment response to PXE service requests from unknown computers.
 
 
 ---

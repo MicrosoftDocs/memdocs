@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_PendingRegistrationRecord Windows Management Instrumentation (WMI) class, in Configuration Manager, that describes hardware conflicts between two computers.
 title: "SMS_PendingRegistrationRecord Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

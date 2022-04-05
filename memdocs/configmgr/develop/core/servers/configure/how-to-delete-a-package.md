@@ -1,4 +1,5 @@
 ---
+description: Learn how to delete a package in Configuration Manager using the SMS_Package class with the following example. 
 title: "Delete a Package"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

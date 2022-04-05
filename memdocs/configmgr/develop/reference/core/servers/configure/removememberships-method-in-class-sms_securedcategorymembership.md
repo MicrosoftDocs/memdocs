@@ -1,6 +1,7 @@
 ---
 title: "RemoveMemberships Method"
 titleSuffix: "Configuration Manager"
+description: "The RemoveMemberships Windows Management Instrumentation (WMI) class method is a batch operation to remove objects from categories."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

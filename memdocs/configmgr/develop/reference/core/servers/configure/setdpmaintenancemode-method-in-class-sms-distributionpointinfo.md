@@ -1,4 +1,5 @@
 ---
+description: Learn how to set a distribution point in maintenance mode using SetDPMaintenanceMode class method in Configuration Manager.
 title: SetDPMaintenanceMode method
 titleSuffix: Configuration Manager
 ms.date: 05/24/2019

@@ -1,6 +1,7 @@
 ---
 title: "SMS_Identification Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_Identification Windows Management Instrumentation (WMI) class is an SMS Provider server class that provides basic information about the installed SMS_Site Server WMI Class object."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -103,7 +104,7 @@ Class SMS_Identification : SMS_BaseClass
 
  Qualifiers: None  
 
- Name of the Configuration Manager service account, which is a special user account having administrative privileges that uses Configuration Manager to perform certain activities. The value includes the domain.  
+ Name of the Configuration Manager service account, which is a special user account having administrative privileges, that uses Configuration Manager to perform certain activities. The value includes the domain.  
 
  `SMSAvailableConsoleVersion`  
  Data type: `String`  

@@ -1,4 +1,5 @@
 ---
+description: Learn how to define the installer technology used to install a specific application to devices in Configuration Management.
 title: "How To Define the Installer Technology"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

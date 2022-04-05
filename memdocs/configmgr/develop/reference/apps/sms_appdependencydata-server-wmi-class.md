@@ -1,6 +1,7 @@
 ---
 title: "SMS_AppDependencyData Class"
 titleSuffix: "Configuration Manager"
+description: "The `SMS_AppDependencyData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application deployment dependency data."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

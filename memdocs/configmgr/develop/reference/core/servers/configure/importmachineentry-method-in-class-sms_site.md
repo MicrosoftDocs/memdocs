@@ -1,4 +1,5 @@
 ---
+description: Learn how to import computer information using ImportMachineEntry class method in Configuration Manager.
 title: "ImportMachineEntry Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

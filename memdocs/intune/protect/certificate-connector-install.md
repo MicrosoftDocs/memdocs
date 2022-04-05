@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/29/2021
+ms.date: 03/30/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -65,6 +65,9 @@ To support your use of certificates with Intune, you can install the Certificate
 
 After a connector installs, you can run the installation program again to uninstall the connector.
 
+> [!TIP]
+> The installer will attempt to install the .NET Framework 4.7.2. If you experience issues during this process you can choose to pre-install the .NET Framework using the [Microsoft .NET Framework 4.7.2 offline installer for Windows](https://support.microsoft.com/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2)
+
 ## Configure the certificate connector
 
 To configure the certificate connector, you use the **Certificate Connector for Microsoft Intune** wizard. The configuration can start automatically when you choose *Configure Now* at the end of a certificate connector install, or manually by opening an elevated command prompt and running **C:\Program Files\Microsoft Intune\PFXCertificateConnector\ConnectorUI\PFXCertificateConnectorUI.exe**. An example is provided below. The command must be run as an administrator.
@@ -102,6 +105,8 @@ Use the following procedure to both configure a new connector and modify a previ
    - **Domain user account** – Use any domain user account that is an administrator on the Windows Server.
 
 4. On the *Proxy* page, add details for your proxy server if you require a proxy for internet access. For example, `http://proxy.contoso.com`.
+   > [!TIP]  
+   > Be sure to include the HTTP or HTTPS prefix, which is a change from proxy configurations for previous connectors.
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
@@ -134,7 +139,7 @@ After you configure a Certificate Connector for Microsoft Intune on a server, yo
 
 ## Remove the connector
 
-To uninstall the Certificate Connector for Microsoft Intune form a Windows Server, on the server run **IntuneCertificateConnector.exe**, which is the same [software you use to install the connector](#download-and-install-the-connector-software). When run on a server that has the connector installed, the only available option is to remove the current connector installation.
+To uninstall the Certificate Connector for Microsoft Intune from a Windows Server, on the server run **IntuneCertificateConnector.exe**, which is the same [software you use to install the connector](#download-and-install-the-connector-software). When run on a server that has the connector installed, the only available option is to remove the current connector installation.
 ## Next steps
 
 Deploy:

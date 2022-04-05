@@ -1,6 +1,7 @@
 ---
 title: "RemoveType Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the RemoveType WMI class method removes a type of the relationship between a user and a device."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

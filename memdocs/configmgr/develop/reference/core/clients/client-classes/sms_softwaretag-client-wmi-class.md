@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_SoftwareTag class to indicate the presence of a software application on a computer. 
 title: "SMS_SoftwareTag Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

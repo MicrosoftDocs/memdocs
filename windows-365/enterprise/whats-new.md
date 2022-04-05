@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 04/05/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -41,11 +41,61 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Device provisioning
 ### Device management
 ### Device security
-### Intune apps
+### Apps
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+### End user experience
 -->
+
+<!-- ########################## -->
+## Week of April 4, 2022 (Service release 2203)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+[!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
+
+#### Nested virtualization (preview)<!--37800910 -->
+
+For most currently supported regions, Windows 365 8vCPU/32GB licenses now support nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 aren't currently supported for this feature. For more information, see [Set up nested virtualization on your Cloud PC](nested-virtualization.md).
+
+#### Improve video playback by using multimedia redirection<!--38686511-->
+
+You can improve video playback performance on your Cloud PCs by using multimedia redirection (MMR). For more information, see [Improve video playback](troubleshooting.md#improve-video-playback).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### windows365.microsoft.com now generally available<!--38195529-->
+
+The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has moved out of preview and into general availability.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Upload a custom image without an on-premises network connection<!--8341750 -->
+
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
+
+#### Cloud PC name appended to the network interface name<!--38793957-->
+
+A Cloud PC’s name is now appended to the network interface name within the Azure portal. This naming makes it easier to find the IP address for the Cloud PC when an Azure network connection is selected. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End-user experience
+
+[!INCLUDE [End user feedback and log collection](../includes/whats-new-feedback-log-collection.md)]
+
+<!-- ########################## -->
+## Week of March 24, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### New remote action: remote help<!--38310389-->
+
+The [Remote Help remote action](/mem/intune/remote-actions/remote-help) (in the Microsoft Endpoint Manager admin center) lets admins start a remote session into an end user’s Cloud PC.
 
 <!-- ########################## -->
 ## Week of February 28, 2022 (Service release 2202)
@@ -97,9 +147,9 @@ When creating a provisioning policy, admins can now configure the installed lang
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
-#### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--37678745 -->
+#### Use Collect diagnostics to collect more details from Windows 365 devices through Intune remote actions<!--37678745 -->
 
-Intune’s remote action to Collect diagnostics now collects additional details from Windows 365 Cloud PCs.
+Intune’s remote action to Collect diagnostics now collects more details from Windows 365 Cloud PCs.
 
 The new details for Windows 365 Cloud PCs include the following registry data:
 
@@ -265,7 +315,7 @@ The [Windows365LanguagesInstaller PowerShell script]( https://www.powershellgall
 
 #### End grace period option<!--34841603-->
 
-Certain conditions put a Cloud PC into a seven-day grace period. At the end of this time the Cloud PC will be deprovisioned and user will lose access.
+Certain conditions put a Cloud PC into a seven-day grace period. At the end of this time, the Cloud PC will be deprovisioned and user will lose access.
 
 You can now immediately end the grace period for individual Cloud PCs. By ending the grace period manually, you won’t have to wait the full seven days to remove user access from the Cloud PC.
 

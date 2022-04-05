@@ -1,4 +1,5 @@
 ---
+description: Article outlining how to use the SMS_PfxCertificateSettings in Configuration Manager to represent personal information exchange (PFX) certificate settings.
 title: "SMS_PfxCertificateSettings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

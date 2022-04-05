@@ -1,6 +1,7 @@
 ---
 title: "GetSummary Method in Class SMS_AIHardwareRequirements"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the GetSummary WMI class method provides a summary count of validated and user-defined state items in the SMS_AIHardwareRequirements class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
