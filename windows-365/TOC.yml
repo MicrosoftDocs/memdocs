@@ -15,4 +15,11 @@ items:
   href: business/index.yml
 - name: Windows 365 Enterprise docs
   href: enterprise/index.yml
-  
+- name: End-user experience
+  items:  
+  - name: Get users started
+    href: get-users-started.md
+  - name: End-user hardware requirements
+    href: end-user-hardware-requirements.md
+  - name: Access a Cloud PC
+    href: end-user-access-cloud-pc.md

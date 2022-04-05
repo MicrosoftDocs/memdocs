@@ -162,9 +162,9 @@ items:
     - name: End-user experience
       items:
       - name: End-user hardware requirements
-        href: end-user-hardware-requirements.md
+        href: ../end-user-hardware-requirements.md
       - name: Access a Cloud PC
-        href: end-user-access-cloud-pc.md
+        href: ../end-user-access-cloud-pc.md
 - name: Troubleshoot
   items:
     - name: Troubleshooting

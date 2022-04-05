@@ -79,7 +79,7 @@ Finally, consider temporarily deploying a test Azure virtual machine to the Azur
 
 ## Troubleshooting by end users
 
-The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](end-user-access-cloud-pc.md#end-user-actions)
+The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#end-user-actions)
 
 ## Improve video playback
 
