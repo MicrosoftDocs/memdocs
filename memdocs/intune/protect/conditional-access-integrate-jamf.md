@@ -147,7 +147,7 @@ The app registration process in Azure AD is complete.
    2. Select the check box for **Enable Intune Integration for macOS**. When this setting is enabled, Jamf Pro sends inventory updates to Microsoft Intune. Clear the selection if you want to disable the connection but save your configuration.
    3. Select **Manua** under Connection Type.
    4. From the **Sovereign Cloud** pop-up menu, select the location of your Sovereign Cloud from Microsoft.
-   5. Click **Open administrator consent URL**, and follow the onscreen instructions to allow the Jamf Native macOS Connector app to be added to your Azure AD tenant.
+   5. Select **Open administrator consent URL** and follow the onscreen instructions to allow the Jamf Native macOS Connector app to be added to your Azure AD tenant.
    6. Add the **Azure AD Tenant Name** from Microsoft Azure.
    7. Add the **Application ID** and **Client Secret** (previously called Application Key) for the Jamf Pro application from Microsoft Azure.
    8. Select **Save**. Jamf Pro tests your settings and verifies your success.
