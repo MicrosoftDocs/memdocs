@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_FolderConditionExpression Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a condition expression to check for the existence of a folder and when it was created."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

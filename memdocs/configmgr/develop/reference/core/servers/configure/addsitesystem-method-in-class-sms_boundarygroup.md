@@ -1,7 +1,7 @@
 ---
-description: Learn how to add a site system to a boundary group in Configuration Manager using the AddSiteSystem class.
 title: AddSiteSystem method in class SMS_BoundaryGroup
 titleSuffix: "Configuration Manager"
+description: "Learn how to add a site system to a boundary group in Configuration Manager using the AddSiteSystem class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
