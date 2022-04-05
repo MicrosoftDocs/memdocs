@@ -55,7 +55,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 ### Nested virtualization (preview)<!--37800910 -->
 
-For most currently supported regions, Windows 365 8vCPU/32GB licenses now supports nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 aren't currently supported for this feature. For more information, see [Set up nested virtualization on your Cloud PC](nested-virtualization.md).
+For most currently supported regions, Windows 365 8vCPU/32GB licenses now support nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 aren't currently supported for this feature. For more information, see [Set up nested virtualization on your Cloud PC](nested-virtualization.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -132,9 +132,9 @@ When creating a provisioning policy, admins can now configure the installed lang
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
-#### Use Collect diagnostics to collect additional details from Windows 365 devices through Intune remote actions<!--37678745 -->
+#### Use Collect diagnostics to collect more details from Windows 365 devices through Intune remote actions<!--37678745 -->
 
-Intune’s remote action to Collect diagnostics now collects additional details from Windows 365 Cloud PCs.
+Intune’s remote action to Collect diagnostics now collects more details from Windows 365 Cloud PCs.
 
 The new details for Windows 365 Cloud PCs include the following registry data:
 
@@ -300,7 +300,7 @@ The [Windows365LanguagesInstaller PowerShell script]( https://www.powershellgall
 
 #### End grace period option<!--34841603-->
 
-Certain conditions put a Cloud PC into a seven-day grace period. At the end of this time the Cloud PC will be deprovisioned and user will lose access.
+Certain conditions put a Cloud PC into a seven-day grace period. At the end of this time, the Cloud PC will be deprovisioned and user will lose access.
 
 You can now immediately end the grace period for individual Cloud PCs. By ending the grace period manually, you won’t have to wait the full seven days to remove user access from the Cloud PC.
 
