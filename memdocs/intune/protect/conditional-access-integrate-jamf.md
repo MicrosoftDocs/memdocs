@@ -114,7 +114,7 @@ To connect Intune with Jamf Pro:
 
 12. Navigate to APIs my organization uses. Search for and click **Windows Azure Active Directory**. Click **Application permissions**, and then select **Application.Read.All**.
 
-13. Click **Add permissions**.
+13. Select **Add permissions**.
 
 14. Next, grant admin consent for this app by selecting **Grant admin consent for _\<your tenant>_** in the top left of the **API permissions** page. You may need to re-authenticate your account in the new window and grant the application access by following the prompts.  
 
