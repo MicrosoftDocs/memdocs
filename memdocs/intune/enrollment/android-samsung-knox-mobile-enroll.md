@@ -132,7 +132,7 @@ Still need help? Check out the complete [KME User Guide](https://docs.samsungkno
 
 ## Frequently asked questions
 
-- **Device Owner support:** - **Device Owner support:** Intune supports enrolling Dedicated and Fully Managed devices by using the KME portal. Other Android enterprise device owner modes will be supported as they become available in Intune.
+- **Device Owner support:** Intune supports enrolling Dedicated and Fully Managed devices by using the KME portal. Other Android enterprise device owner modes will be supported as they become available in Intune.
 
 - **work profile support:** KME is a corporate device enrollment method and devices enrolled in Android personally-owned work profile ensure work and personal data are separate on personal devices. Device enrollment to personally-owned work profile using KME is a supported scenario in Intune.
 
