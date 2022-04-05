@@ -32,6 +32,9 @@ ms.collection:
 
 *This feature is in public preview.*
 
+> [!IMPORTANT]
+> This feature is not supported on GCC High/DoD cloud environments.
+
 With *Feature updates for Windows 10 and later* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at, like Windows 10 version 1909 or a version of Windows 11. Intune supports setting a feature level to any version that remains in support at the time you create the policy.
 
 You can also use feature updates policy to [upgrade devices that run Windows 10 to Windows 11](#upgrade-devices-to-windows-11).
