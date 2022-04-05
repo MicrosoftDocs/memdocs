@@ -1,4 +1,5 @@
 ---
+description: Learn how the ICIINFO::GetDetailedComplianceInfo method, in Configuration Manager, gets detailed compliance information from the last compliance evaluation run for the configuration item. 
 title: "ICIINFO::GetDetailedComplianceInfo"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

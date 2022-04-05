@@ -1,4 +1,5 @@
 ---
+description: Learn how the SMS_DCMAgentConfig Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies how client computers retrieve compliance settings.
 title: "SMS_DCMAgentConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
