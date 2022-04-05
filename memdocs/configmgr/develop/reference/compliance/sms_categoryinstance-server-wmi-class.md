@@ -1,6 +1,7 @@
 ---
 title: "SMS_CategoryInstance Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a category instance for replicating information about a category, for example, a product or a classification, to all child sites."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
