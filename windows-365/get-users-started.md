@@ -41,7 +41,7 @@ Users can navigate to [https://windows365.microsoft.com](https://windows365.micr
 
 On their Windows 365 home page, users see the Cloud PCs they have access to in the **Your Cloud PCs** section.
 
-![Windows 365 home.](./media/get-started-windows-365-business/cloud-pc-home.png)
+![Windows 365 home.](business/media/get-started-windows-365-business/cloud-pc-home.png)
 
 Users can select **Open in browser** to open their Cloud PC.
 
@@ -52,7 +52,7 @@ Users can select **Open in browser** to open their Cloud PC.
 
 While on the Windows 365 home page, users can take actions on their Cloud PCs. To do so, they can select the gear icon on a Cloud PC card.
 
-![Card menu.](./media/get-started-windows-365-business/cloud-pc-gear.png)
+![Card menu.](business/media/get-started-windows-365-business/cloud-pc-gear.png)
 
 - **Restart**: Restarts the Cloud PC.
 
@@ -78,6 +78,16 @@ While on the Windows 365 home page, users can take actions on their Cloud PCs. T
 
 - **System Information**: Displays information about the Cloud PC specification.
 
+## User feedback
+
+Users can provide feedback about their Cloud PC experience by using the feedback icon in the upper right corner.
+
+## Collect user logs
+
+Users can collect logs of their Cloud PC sessions. The logs are collected from the browser and the user can choose the save location.
+
+To turn on log collection, in the client, select the gear icon > **Capture logs**.
+
 ## Remote Desktop
 
 The Microsoft Remote Desktop app lets users access and control a remote PC, including a Cloud PC. Windows 365 users can download and install the Remote Desktop client from the Windows 365 home page.
@@ -89,14 +99,14 @@ To set up their Remote Desktop client, users follow these steps:
 1. On the **Windows 365 home page**, select the **Microsoft Remote Desktop apps** icon (under the home icon).
 2. On the **Microsoft Remote Desktop apps** page, download and install the Remote Desktop app you need.
 
-   ![Remote desktop clients.](./media/get-started-windows-365-business/remote-desktop-apps.png)
+   ![Remote desktop clients.](business/media/get-started-windows-365-business/remote-desktop-apps.png)
 
 For a list of clients by operating system, see [Remote Desktop clients](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients).
 
 ## Next steps
 
-[Users installing apps](apps-install.md)
+[Users installing apps](business/apps-install.md) 
 
-[Manage your Cloud PCs](device-management.md)
+[Manage your Cloud PCs](business/device-management.md)
 
 [Set up Microsoft Teams in your small business](/microsoftteams/deploy-small-business)

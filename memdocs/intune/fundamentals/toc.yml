@@ -214,6 +214,8 @@ items:
       href: filters-reports-troubleshoot.md
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
+  - name: Premium add-ons
+    href: premium-add-ons.md
   - name: Developer guidance
     href: ../developer/index.yml
   - name: Get help and support

@@ -49,6 +49,7 @@ You need the following to configure Conditional Access with Jamf Pro:
 
 - Jamf Pro 10.1.0 or later
 - Microsoft Intune and Microsoft AAD Premium P1 licenses (recommended Microsoft Enterprise Mobility + Security license bundle)
+- Global admin role in Azure Active Directory.
 - A user with Microsoft Intune Integration privileges in Jamf Pro
 - [Company Portal app for macOS](https://aka.ms/macoscompanyportal)
 - macOS devices with OS X 10.12 Yosemite or later
@@ -107,12 +108,19 @@ To connect Intune with Jamf Pro:
 8. Next, we will add permissions to update device attributes. At the top left of the **API permissions** page, select **Add a permission** to add a new permission. 
 
 9. On the **Request API permissions** page, select **Intune**, and then select **Application permissions**. Select only the check box for **update_device_attributes** and save the new permission.
+10. Under **Microsoft Graph**, select **Application permissions**, then select **Application.Read.All**.
 
-10. Next, grant admin consent for this app by selecting **Grant admin consent for _\<your tenant>_** in the top left of the **API permissions** page. You may need to re-authenticate your account in the new window and grant the application access by following the prompts.  
+11. Select **Add permissions**.
 
-11. Refresh the page by click on the **Refresh** button at the top of the page. Confirm that admin consent has been granted for the **update_device_attributes** permission. 
+12. Navigate to **APIs my organization uses**. Search for and select **Windows Azure Active Directory**. Select **Application permissions**, and then select **Application.Read.All**.
 
-12. After the app is registered successfully, the API permissions should only contain one permission called **update_device_attributes** and should appear as follows:
+13. Select **Add permissions**.
+
+14. Next, grant admin consent for this app by selecting **Grant admin consent for _\<your tenant>_** in the top left of the **API permissions** page. You may need to re-authenticate your account in the new window and grant the application access by following the prompts.  
+
+15. Refresh the page by selecting **Refresh** at the top of the page. Confirm that admin consent has been granted for the **update_device_attributes** permission. 
+
+16. After the app is registered successfully, the API permissions should only contain one permission called **update_device_attributes** and should appear as follows:
 
    ![Successful permissions](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
@@ -135,10 +143,14 @@ The app registration process in Azure AD is complete.
 
 1. Activate the connection in the Jamf Pro console:
 
-   1. Open the Jamf Pro console and navigate to **Global Management** > **Conditional Access**. Click the **Edit** button on the **macOS Intune Integration** tab.
-   2. Select the check box for **Enable Intune Integration for macOS**.
-   3. Provide the required information about your Azure tenant, including **Location**, **Domain name**, the **Application ID**, and the value for the *client secret* that you saved when you created the app in Azure AD.
-   4. Select **Save**. Jamf Pro tests your settings and verifies your success.
+   1. Open the Jamf Pro console and navigate to **Global Management** > **Conditional Access**. Select **Edit** on the **macOS Intune Integration** tab.
+   2. Select the check box for **Enable Intune Integration for macOS**. When this setting is enabled, Jamf Pro sends inventory updates to Microsoft Intune. Clear the selection if you want to disable the connection but save your configuration.
+   3. Select **Manual** under **Connection type**.
+   4. From the **Sovereign Cloud** pop-up menu, select the location of your Sovereign Cloud from Microsoft.
+   5. Select **Open administrator consent URL** and follow the onscreen instructions to allow the Jamf Native macOS Connector app to be added to your Azure AD tenant.
+   6. Add the **Azure AD Tenant Name** from Microsoft Azure.
+   7. Add the **Application ID** and **Client Secret** (previously called Application Key) for the Jamf Pro application from Microsoft Azure.
+   8. Select **Save**. Jamf Pro tests your settings and verifies your success.
 
    Return to the **Partner device management** page in Intune to complete the configuration.
 
