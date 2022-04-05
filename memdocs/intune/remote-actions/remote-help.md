@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/14/2022
+ms.date: 04/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -133,7 +133,9 @@ For users that opted out of automatic updates, when an update to remote help is 
 
 ### Download remote help
 
-The generally available remote help installer will be released soon.
+Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
+
+The most recent version of remote help is **4.0.0.0**
 
 ### Deploy remote help as a Win32 app
 
