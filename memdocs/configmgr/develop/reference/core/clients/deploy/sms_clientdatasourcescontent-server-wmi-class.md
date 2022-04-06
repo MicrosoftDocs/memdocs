@@ -1,5 +1,5 @@
 ---
-description: Learn how to use the SMS_ClientDataSourcesContent class to represent client content data sources per boundary group.
+description: The SMS_ClientDataSourcesContent Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager.
 title: "SMS_ClientDataSourcesContent Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
