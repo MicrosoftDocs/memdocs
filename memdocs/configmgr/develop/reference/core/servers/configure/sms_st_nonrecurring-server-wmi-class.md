@@ -1,4 +1,4 @@
---- 
+---
 title: "SMS_ST_NonRecurring Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
