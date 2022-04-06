@@ -16,7 +16,7 @@ ms.collection: openauth
 
 ---
 # SMS_SIIB_Configuration Server WMI Class
-The `SMS_SIIB_Configuration` Windows Management Instrumentation (WMI)class is an SMS Provider server class, in Configuration Manager, that represents the configuration for a property page in the Configuration Manager console.  
+The `SMS_SIIB_Configuration` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the configuration for a property page in the Configuration Manager console.  
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 
@@ -63,7 +63,7 @@ Class SMS_SIIB_Configuration : SMS_SiteInstallItemBase
 
  Qualifiers: None  
 
- Name of the configuration unit to find in the site control file..  
+ Name of the configuration unit to find in the site control file.
 
  `ConfigurationName`  
  Data type: `String`  
