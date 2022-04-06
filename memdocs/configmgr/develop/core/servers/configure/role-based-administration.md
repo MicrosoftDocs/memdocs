@@ -1,6 +1,7 @@
 ---
 title: "Role-Based Administration"
 titleSuffix: "Configuration Manager"
+description: "This section provides topics about programmatically managing role-based administration in Configuration Manager." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
