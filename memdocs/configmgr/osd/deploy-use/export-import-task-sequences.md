@@ -2,7 +2,7 @@
 title: Export and import task sequences
 titleSuffix: Configuration Manager
 description: Export and import task sequences with or without their related objects.
-ms.date: 03/28/2022
+ms.date: 04/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to

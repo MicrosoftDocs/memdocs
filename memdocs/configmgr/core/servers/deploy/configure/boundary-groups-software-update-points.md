@@ -2,7 +2,7 @@
 title: Boundary groups and software update points
 titleSuffix: Configuration Manager
 description: Understand how clients and software update points behave with boundary groups.
-ms.date: 03/28/2022
+ms.date: 04/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

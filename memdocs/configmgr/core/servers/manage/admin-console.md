@@ -2,7 +2,7 @@
 title: Configuration Manager console
 titleSuffix: Configuration Manager
 description: Learn about navigating through the Configuration Manager console.
-ms.date: 03/28/2022
+ms.date: 04/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

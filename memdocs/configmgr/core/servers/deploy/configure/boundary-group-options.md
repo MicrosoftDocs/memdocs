@@ -2,7 +2,7 @@
 title: Boundary group options
 titleSuffix: Configuration Manager
 description: Configure boundary group options to control policy and content distribution.
-ms.date: 03/28/2022
+ms.date: 04/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

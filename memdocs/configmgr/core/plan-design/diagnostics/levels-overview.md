@@ -2,7 +2,7 @@
 title: Levels of diagnostic usage data
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data that Configuration Manager collects
-ms.date: 03/28/2022
+ms.date: 04/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual

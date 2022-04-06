@@ -2,7 +2,7 @@
 title: Monitor operating system deployments
 titleSuffix: Configuration Manager
 description: To help you to monitor operating system deployment objects, the Configuration Manager console provides alerts, reports, and various status indicators.
-ms.date: 03/28/2022
+ms.date: 04/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
