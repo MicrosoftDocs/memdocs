@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/21/2021
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano, kakyker
+ms.reviewer: beflamm, jayeren
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -265,6 +265,13 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Block iCloud Keychain sync**: **Yes** disables syncing credentials stored in the Keychain to iCloud. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to sync these credentials.
 
   Starting with iOS/iPadOS 13.0, this setting requires supervised devices.
+
+- **Block iCloud Private Relay**: **Yes** disables the iCloud Private Relay. When disabled, Apple doesn't encrypt internet traffic leaving the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow this feature, which prevents networks and servers from monitoring a user's activity across the internet.
+
+  This feature applies to:  
+  - iOS/iPadOS 15 and newer
+
+  [iCloud Private Relay](https://support.apple.com/HT212614) (opens Apple's web site)
 
 ## Connected Devices
 
@@ -629,7 +636,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - iOS 11.0 and newer
   - iPadOS 13.0 and newer
   
-<sup>1</sup> When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, then the screen turns off automatically after five minutes, and devices are locked after an another five minutes. However, if users turn off the screen manually, then the second setting is immediately applied. In the same example, after users turn off the screen, the device locks five minutes later.
+<sup>1</sup> When you configure the **Maximum minutes of inactivity until screen locks** and **Maximum minutes after screen lock before password is required** settings, they're applied in sequence. For example, if you set the value for both settings to **5** minutes, then the screen turns off automatically after five minutes, and devices are locked after another five minutes. However, if users turn off the screen manually, then the second setting is immediately applied. In the same example, after users turn off the screen, the device locks five minutes later.
 
 ## Restricted apps
 
@@ -708,6 +715,9 @@ This feature applies to:
 You can also:
 
 - **Import** a CSV file with details about the app, including the URL. Use the `<app url>, <app name>, <app publisher>` format. Or, **Export** to create a list of the restricted apps you added, in the same format.
+
+  > [!TIP]
+  > You can import a list of preinstalled Apple apps by downloading the [Apple App BundleIDs CSV](https://github.com/microsoft/Intune-Config-Frameworks/blob/master/iOS/Supervised/Apple-App-BundleIDs.csv) (opens a Microsoft GitHub site).
 
 ## Wireless
 

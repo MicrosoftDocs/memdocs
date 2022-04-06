@@ -404,6 +404,7 @@ Use Endpoint Security in Microsoft Endpoint Manager to configure encryption with
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
 These settings can be enabled in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com)  by going to **Endpoint Security** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
+Configuring the BitLocker settings specified below will result in silenty enabling 128 bit encryption for standard users, which is one of the most common scenarios. However your organisation might have different security requirements, so consult the [BitLocker documentation](./intune/protect/encrypt-devices.md) for additional settings.
 
 **BitLocker – Base Settings**:
 
@@ -432,9 +433,9 @@ These settings can be enabled in the [Microsoft Endpoint Manager admin center](h
 - BitLocker system drive policy: **Configure**
   - Startup authentication required: **Yes**
   - Compatible TPM startup: **Required**
-  - Compatible TPM startup PIN: **Not configured**
-  - Compatible TPM startup key: **Not configured**
-  - Compatible TPM startup key and PIN: **Not configured**
+  - Compatible TPM startup PIN: **Block**
+  - Compatible TPM startup key: **Block**
+  - Compatible TPM startup key and PIN: **Block**
   - Disable BitLocker on devices where TPM is incompatible: **Not configured**
   - Enable preboot recovery message and url: **Not configured**
 - System drive recovery: **Configure**

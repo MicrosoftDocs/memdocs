@@ -31,7 +31,7 @@ ms.collection:
 
 # Resolve a threat found by SandBlast Mobile Protect on iOS
 
-SandBlast Mobile Protect is a Mobile Threat Defender service that identifies and assesses potential threats on your iOS devices. It then reports the threats so that you can view them from the Company Portal app. Threats appear to you in the app as unresolved, noncompliant issues. As long as these threats are present, you may be unable to:   
+SandBlast Mobile Protect is a Mobile Threat Defender service that identifies and assesses potential threats on your iOS devices. It then reports the threats so that you can view them from the Company Portal app. Threats appear to you in the app as unresolved, noncompliant issues. As long as these threats are present, you may be unable to:
 
 * Connect to corporate e-mail
 * Connect to corporate Wi-Fi

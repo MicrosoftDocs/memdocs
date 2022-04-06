@@ -4,8 +4,8 @@
 title: Remotely administer devices in Microsoft Intune
 description: View the required roles to use TeamViewer, how to install the TeamViewer connector, and step-by-step guidance to remotely administer devices using Microsoft Intune in the Azure portal
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 11/02/2021
 ms.topic: how-to
@@ -29,7 +29,7 @@ ms.collection:
 
 # Use TeamViewer to remotely administer Intune devices
 
-Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com). TeamViewer is a partner program that you purchase separately. This articles shows you how to configure TeamViewer within Intune, and how to remotely administer a device.
+Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com). TeamViewer is a partner program that you purchase separately. This article shows you how to configure TeamViewer within Intune, and how to remotely administer a device.
 
 This feature applies to:
 
@@ -43,10 +43,7 @@ This feature applies to:
 
 - The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Endpoint Manager without them requiring an Intune license. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md). 
 
-- The Intune administrator in the Endpoint Manager admin center must have the following [Intune roles](../fundamentals/role-based-access-control.md):  
-
-  - **Update Remote Assistance**: Allows administrators to modify the TeamViewer connector settings.
-  - **Request Remote Assistance**: Allows administrators to start a new remote assistance session for any user. Users with this role are not limited by any Intune role within a scope. Also, user or device groups assigned an Intune role within a scope can also request remote assistance. 
+- Only a Global administrator or Intune administrator in the Endpoint Manager admin center can onboard TeamViewer. 
 
 - Use a supported Intune-managed device:
 

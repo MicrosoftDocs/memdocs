@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/30/2021
+ms.date: 04/05/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -41,11 +41,164 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Device provisioning
 ### Device management
 ### Device security
-### Intune apps
+### Apps
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+### End user experience
 -->
+
+<!-- ########################## -->
+## Week of April 4, 2022 (Service release 2203)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+[!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
+
+#### Nested virtualization (preview)<!--37800910 -->
+
+For most currently supported regions, Windows 365 8vCPU/32GB licenses now support nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 aren't currently supported for this feature. For more information, see [Set up nested virtualization on your Cloud PC](nested-virtualization.md).
+
+#### Improve video playback by using multimedia redirection<!--38686511-->
+
+You can improve video playback performance on your Cloud PCs by using multimedia redirection (MMR). For more information, see [Improve video playback](troubleshooting.md#improve-video-playback).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### windows365.microsoft.com now generally available<!--38195529-->
+
+The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has moved out of preview and into general availability.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Upload a custom image without an on-premises network connection<!--8341750 -->
+
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
+
+#### Cloud PC name appended to the network interface name<!--38793957-->
+
+A Cloud PC’s name is now appended to the network interface name within the Azure portal. This naming makes it easier to find the IP address for the Cloud PC when an Azure network connection is selected. 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End-user experience
+
+[!INCLUDE [End user feedback and log collection](../includes/whats-new-feedback-log-collection.md)]
+
+<!-- ########################## -->
+## Week of March 24, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### New remote action: remote help<!--38310389-->
+
+The [Remote Help remote action](/mem/intune/remote-actions/remote-help) (in the Microsoft Endpoint Manager admin center) lets admins start a remote session into an end user’s Cloud PC.
+
+<!-- ########################## -->
+## Week of February 28, 2022 (Service release 2202)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Point-in-time restore (preview)<!--37063579-->
+
+Administrators and users can now restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points are available. For more information, see [Point-in-time restore for Windows 365 Enterprise](restore-overview.md).
+
+#### Higher Cloud PC screen resolution option (preview)<!--38301718 -->
+
+Cloud PC users can now choose a higher screen resolution when they connect to their Cloud PC from https://windows365.microsoft.com.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 approved partners
+
+We’ve published a new help documentation article. For more information, see [Windows 365 approved partners](../partners.md).
+
+<!-- ########################## -->
+## Week of February 14, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 identity and authentication
+
+We’ve published a new help documentation article. For more information, see [Windows 365 identity and authentication](identity-authentication.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for Azure AD joined Cloud PCs<!-- 35060203 36751258-->
+
+Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These devices can run in either:
+
+- A Microsoft-hosted network:
+  - You don’t need to bring any Azure infrastructure
+  - You don't need to create an on-premises network connection.
+- Your own network (using an on-premises network connection)
+
+#### Configure installed language and region for provisioning Cloud PCs<!--37095808 -->
+
+When creating a provisioning policy, admins can now configure the installed language and region for new Cloud PCs. Previously, Cloud PCs were only created with English (United States). For more information, see [Provide users a localized Windows experience](provide-localized-windows-experience.md)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Use Collect diagnostics to collect more details from Windows 365 devices through Intune remote actions<!--37678745 -->
+
+Intune’s remote action to Collect diagnostics now collects more details from Windows 365 Cloud PCs.
+
+The new details for Windows 365 Cloud PCs include the following registry data:
+
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server\AddIns\WebRTC Redirector
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Teams\
+
+To learn more about the **Collect diagnostics** remote action, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New supported Azure regions: US Central and German West Central<!--37678838 -->
+
+Two new Azure regions are now for Windows 365 Cloud PC provisioning: US Central and German West Central.
+
+For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
+## Week of January 17, 2022
+
+#### New documentation article: Optimize Cisco Webex on a Windows 365 Cloud PC<!--37106382-->
+
+We’ve published a new help documentation article. For more information, see [Optimize Cisco Webex on a Windows 365 Cloud PC](cisco-webex-support.md).
+
+<!-- ########################## -->
+## Week of January 10, 2022
+
+#### New documentation: Data encryption in Windows 365<!--36626607-->
+
+We've added information to the help documentation about encryption for Windows 365 Cloud PCs. For more information, see [Data encryption in Windows 365](encryption.md).
+
+<!-- ########################## -->
+## Week of January 3, 2022
+
+#### New documentation: Gallery image update cycle<!--36626607-->
+
+We've added information to the help documentation about the update cycle for Windows 365 Cloud PC gallery images. For more information, see [Gallery image update cycle](device-images.md#gallery-image-update-cycle).
+
+<!-- ########################## -->
+## Week of December 13, 2021
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Cloud PCs in grace period count towards active Cloud PC license usage<!-- 37017463-->
+
+Cloud PCs that are in grace period now count towards your active Cloud PC license usage. This makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
+
+For more information about grace period, see [Device management overview](device-management-overview.md) and [End grace period](end-grace-period.md).
 
 <!-- ########################## -->
 ## Week of November 29, 2021 (Service release 2111)
@@ -59,7 +212,7 @@ The **Provisioning policies** page has a new column: **Image status**. It tells 
 
 #### New documentation article: Optimize Zoom on a Windows 365 Cloud PC<!--37106382-->
 
-We’ve just published a new help documentation article. For more information, see [Optimize Zoom on a Windows 365 Cloud PC](zoom-support.md).
+We’ve published a new help documentation article. For more information, see [Optimize Zoom on a Windows 365 Cloud PC](zoom-support.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device security
@@ -162,7 +315,7 @@ The [Windows365LanguagesInstaller PowerShell script]( https://www.powershellgall
 
 #### End grace period option<!--34841603-->
 
-Certain conditions put a Cloud PC into a seven-day grace period. At the end of this time the Cloud PC will be deprovisioned and user will lose access.
+Certain conditions put a Cloud PC into a seven-day grace period. At the end of this time, the Cloud PC will be deprovisioned and user will lose access.
 
 You can now immediately end the grace period for individual Cloud PCs. By ending the grace period manually, you won’t have to wait the full seven days to remove user access from the Cloud PC.
 

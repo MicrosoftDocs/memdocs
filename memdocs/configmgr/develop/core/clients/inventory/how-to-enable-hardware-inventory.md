@@ -1,6 +1,7 @@
 ---
 title: "Enable Hardware Inventory"
 titleSuffix: "Configuration Manager"
+description: "Modify the site control file settings to enable or disable the Hardware Inventory Client Agent in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 12/01/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -458,7 +458,7 @@ Choose one of the following options for this setting:
 > [!IMPORTANT]
 > The client always permits software installations from Software Center, regardless of the metered internet connection settings. If the user requests a software installation while the device is on a metered network, Software Center honors the user's intent.<!-- MEMDocs#285 -->
 
-Client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter **/AllowMetered**. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
+Client install and update both work when you configure this client setting to **Allow** or **Limit**. This behavior allows the client to stay current, but still manage the client communication on a metered network. You can control this behavior during client install with the ccmsetup parameter `/AllowMetered`. For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md#allowmetered).<!--6976145-->
 
 ## Power management  
 
@@ -676,10 +676,11 @@ _Applies to version 2103 and later_
 
 Enable this option for Software Center to use the Microsoft Edge WebView2 browser control. The WebView2 browser control provides improved security and user experience. For example, more websites should work with these custom tabs without displaying script errors or security warnings.
 
-If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device.
+If it's not already installed, the Configuration Manager client installs the **Microsoft Edge WebView2 runtime (fixed version)** on the device. Clients download the WebView2 redistributable installation file from the management point. The installer is over 100 MB in size. If you need to enable this setting on a large number of clients, and are concerned about the effect of network usage, predeploy the WebView2 runtime as an application. Use the software distribution features of Configuration Manager to better control the content distribution and timing of software installation.<!-- 12769440 -->
 
 > [!NOTE]
-> If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control. Starting in version 2107, the client requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Prerequisites for deploying clients to Windows computers](prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).
+> - If the client device isn't running .NET Framework version 4.6.2 or later, it falls back to use the Internet Explorer browser control. Starting in version 2107, the client requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> For more information, see [Prerequisites for deploying clients to Windows computers](prerequisites-for-deploying-clients-to-windows-computers.md#more-details-about-microsoft-net).
+> - When using custom tabs in certain circumstances, you may encounter the following exception:  `Could not load type 'System.Runtime.InteropServices.Architecture' from assembly 'mscorlib Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'`. To work around the issue, update .NET Framework to version 4.7.1 or later for the client. <!--12109686-->
 
 If you don't enable this option, Software Center uses the Windows built-in Internet Explorer browser control.
 

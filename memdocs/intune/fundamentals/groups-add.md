@@ -5,8 +5,8 @@ title: Add groups to organize users and devices
 titleSuffix: Microsoft Intune
 description: Add groups to organize users and devices by geography, department, or hardware specifics.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 11/29/2021
 ms.topic: how-to

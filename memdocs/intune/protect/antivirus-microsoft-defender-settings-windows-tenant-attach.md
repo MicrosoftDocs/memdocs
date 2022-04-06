@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 12/30/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -113,7 +113,6 @@ For each setting in this group, you can expand the setting, select **Add**, and 
   - **Allowed** Turns on real-time behavior monitoring.
 
 - **Allow Intrusion Prevention System**  
-  CSP: [AllowIntrusionPreventionSystem](/windows/client-management/mdm/policy-csp-defender#defender-allowintrusionpreventionsystem)
 
   Configure Defender to allow or disallow Intrusion Prevention functionality.
 

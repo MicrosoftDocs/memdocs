@@ -7,7 +7,7 @@ keywords: SDK
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/29/2021
+ms.date: 12/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -47,15 +47,15 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 
 The Intune App SDK consists of the following files:
 
-* **Microsoft.Intune.MAM.SDK.aar**: The SDK components, with the exception of the Support Library JAR files.
+* **Microsoft.Intune.MAM.SDK.aar**: The SDK components, except for the Support Library JAR files.
 * **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: This AAR contains
-  stubs for Android system classes which are present only on newer
-  devices but which are referenced by methods in [MAMActivity]. Newer
+  stubs for Android system classes, which are present only on newer
+  devices, but which are referenced by methods in [MAMActivity]. Newer
   devices will ignore these stub classes. This AAR is necessary only
   if your app performs reflection on classes deriving from
   `MAMActivity`, and most apps do not need to include it. The AAR
   contains ProGuard rules to exclude all its classes.
-* **com.microsoft.intune.mam.build.jar**: A Gradle plugin which [aids in integrating the SDK](#build-tooling).
+* **com.microsoft.intune.mam.build.jar**: A Gradle plugin, which [aids in integrating the SDK](#build-tooling).
 * **CHANGELOG.md**: Provides a record of changes made in each SDK version.
 * **THIRDPARTYNOTICES.TXT**:  An attribution notice that acknowledges third-party and/or OSS code that will be compiled into your app.
 
@@ -107,13 +107,13 @@ The Intune App SDK is a standard Android library with no external dependencies. 
 #### ProGuard
 
 If [ProGuard](https://www.guardsquare.com/products/proguard) (or any other shrinking/obfuscation mechanism) is used as a build step, 
-the SDK has additional configuration rules which must be included. When including the *.AAR* in your build, our rules are 
+the SDK has additional configuration rules, which must be included. When including the *.AAR* in your build, our rules are 
 automatically integrated into the proguard step and the necessary class files are kept.
 
 The [Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview#languages-and-frameworks) may have its own ProGuard restrictions. If your app integrates MSAL, you must follow the MSAL documentation on these restrictions.
 
 ### Policy enforcement
-The Intune App SDK is an Android library which allows your app to
+The Intune App SDK is an Android library, which allows your app to
 support and participate in the enforcement of Intune policies. 
 
 Most policies are enforced semi-automatically, but certain policies require 
@@ -139,12 +139,12 @@ The tools perform [direct
 replacements](#class-and-method-replacements)
 only. They do not perform any more complex SDK integrations such as
 [Save-As Policy](#enable-features-that-require-app-participation),
-[Multi-Identity](#multi-identity-optional), [App-WE
-registration](#app-protection-policy-without-device-enrollment),
+[Multi-Identity](#multi-identity-optional), [MAM
+registration](#mam-managed-applications),
 [AndroidManifest modifications](#manifest-replacements) or [MSAL
 configuration](#configure-microsoft-authentication-library-msal)
 so these must be completed before your app is fully Intune
-enabled. Please carefully review the rest of this documentation for
+enabled. Carefully review the rest of this documentation for
 integration points relevant to your app.
 
 > [!NOTE]
@@ -301,7 +301,7 @@ The tool expects the following parameters.
 | `--input`          | Yes      | A semi-colon delimited list of jar files and directories of class files to modify. This should include all jars/directories that you intend to rewrite.                          |
 | `--output`         | Yes      | A semi-colon delimited list of jar files and directories to store the modified classes to. There should be one output entry per input entry, and they should be listed in order. |
 | `--classpath`      | Yes      | The build classpath. This may contain both jars and class directories.                                                                                                           |
-| `--processed`      | No       | A semi-colon delimited list of jar files and directories containing classes which have already been been processed by a previous invocation of the build tool.                   |
+| `--processed`      | No       | A semi-colon delimited list of jar files and directories containing classes which have already been processed by a previous invocation of the build tool.                   |
 | `--excludeClasses` | No       | A semi-colon delimited list containing the names of the classes that should be excluded from rewriting.                                                                          |
 | `--report`         | No       | Directory to write an HTML report about modified classes to. If not specified, no report is written.                                                                             |
 
@@ -438,7 +438,7 @@ the BuildPlugin do it.
 
 Some classes have most of their methods wrapped, e.g. `ClipboardManager`, `ContentProviderClient`, `ContentResolver`,
 and `PackageManager` while other classes have only one or two methods wrapped, e.g. `DownloadManager`, `PrintManager`, `PrintHelper`,
-`View`, `DragEvent`, `NotificationManager` and `NotificationManagerCompat`. Please consult APIs exposed by the MAM equivalent
+`View`, `DragEvent`, `NotificationManager` and `NotificationManagerCompat`. Consult APIs exposed by the MAM equivalent
 classes for the exact method if you do not use the BuildPlugin.
 
 ### Manifest Replacements
@@ -539,7 +539,7 @@ MAMStrictMode.enable();
 
 When a MAM Strict Mode check fails, try to determine whether it is a
 real issue that can be fixed in your app, or a false positive. If you
-believe it's a false positive or you aren't sure, please let the
+believe it's a false positive or you aren't sure, let the
 Intune MAM team know. This will allow us to make sure we agree with
 the false positive determination and to attempt to improve detection
 for future releases. To suppress false positives, disable the failing
@@ -561,7 +561,7 @@ where `handler` implements `MAMStrictViolationHandler`.
 
 ### Suppressing Checks
 If a check fails in a situation where your app is doing nothing
-incorrect, please report it as mentioned above. At some times,
+incorrect, report it as mentioned above. At some times,
 however, it may be necessary to disable the check encountering a false
 positive, at least while waiting for an updated SDK. The check which
 failed will be shown in the error raised by the default handler, or
@@ -734,7 +734,7 @@ When checking the open policy, the `username` should be the UPN/username/email a
 file or cloud service being opened from. `OpenLocation.LOCAL` is not a cloud service location, but may be tagged with 
 an identity to indicate ownership. When opening a file from local storage, the file owner must always be considered, 
 because the file owner's save-as policy may or may not permit other users to open the file. For identity-tagged files, 
-`username` should be the the file owner's identity. For files without an identity tag, 
+`username` should be the file owner's identity. For files without an identity tag, 
 `username` should be null. 
 
 >[!NOTE]
@@ -914,7 +914,7 @@ Once your app's receiver returns, it will no longer have access to encryption ke
 > For more information, see [Update your applications to use Microsoft Authentication Library (MSAL)].
 > To migrate your app from ADAL to MSAL, see [Migrate Android ADAL to MSAL] and [Differences between ADAL and MSAL].
 
-First, please read the MSAL integration guidelines found in the [MSAL repository on GitHub].
+First, read the MSAL integration guidelines found in the [MSAL repository on GitHub].
 For more information, see [Overview of Microsoft Authentication Library (MSAL)] and the [MSAL Wiki].
 
 Due to ADALs deprecation, apps should integrate with [MSAL].
@@ -1000,13 +1000,11 @@ Also see the requirements for [Conditional Access](#conditional-access) below.
 
 Authority and NonBrokerRedirectURI may be specified if necessary.
 
-## App protection policy without device enrollment
+## MAM managed applications
 
 ### Overview
-Intune app protection policy without device enrollment, also known as APP-WE or MAM-WE, allows apps to be managed by Intune without the need for the device to be enrolled Intune MDM. APP-WE works with or without device enrollment. The Company Portal is still required to be installed on the device, but the user does not need to sign into the Company Portal and enroll the device.
+MAM supports both enrolled and unenrolled devices. The Company Portal is still required to be installed on the device, but the user does not need to sign into the Company Portal and enroll the device.
 
-> [!NOTE]
-> All apps are required to support app protection policy without device enrollment.
 
 ### Workflow
 
@@ -1057,7 +1055,7 @@ void registerAuthenticationCallback(MAMServiceAuthenticationCallback callback);
 void updateToken(String upn, String aadId, String resourceId, String token);
 ```
 
-1. The app must implement the [MAMServiceAuthenticationCallback] interface to allow the SDK to request an AAD token for the given user and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its registerAuthenticationCallback method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's Application subclass.
+1. The app must implement the [MAMServiceAuthenticationCallback] interface to allow the SDK to request an AAD token for the given user and resource ID. The callback instance must be provided to the `MAMEnrollmentManager` by calling its registerAuthenticationCallback method. A token may be needed early in the app lifecycle for enrollment retries or app protection policy refresh check-ins, so the callback must be registered in the `onCreate()` (or `onMAMCreate()`) method of the app's Application subclass.
 
 2. The **acquireToken** method should acquire the access token for the requested resource ID for the given user. If it can't acquire the requested token, it should return null.
 
@@ -1228,7 +1226,7 @@ When an account is first registered, it begins in the `PENDING` state, indicatin
 | `ENROLLMENT_FAILED` | The enrollment attempt failed.  Further details can be found in the device logs.  The app should not allow access to corporate data in this state, since it was previously determined that the user is licensed for Intune. All apps should ensure that corporate data access is unauthorized, until `ENROLLMENT_SUCCEEDED` is obtained by your app.|
 | `WRONG_USER` | Only one user per device can enroll an app with the MAM service. This result indicates that the user for whom this result was delivered (the second user) is targeted with MAM policy, but a different user is already enrolled. Because MAM policy cannot be enforced for the second user, your app must not allow access to this user's data (possibly by removing the user from your app) unless/until enrollment for this user succeeds at a later time. Concurrent with delivering this `WRONG_USER` result, MAM will prompt with the option to remove the existing account. If the human user answers in the affirmative, it will indeed be possible to enroll the second user a short time later. As long as the second user remains registered, MAM will retry enrollment periodically. |
 | `UNENROLLMENT_SUCCEEDED` | Unenrollment was successful.|
-| `UNENROLLMENT_FAILED` | The unenrollment request failed.  Further details can be found in the device logs. In general, this will not occur as long as the app passes a valid (neither null nor empty) UPN. There is no direct, reliable remediation the app can take. If this value is received when unregistering a valid UPN, please report as a bug to the Intune MAM team.|
+| `UNENROLLMENT_FAILED` | The unenrollment request failed.  Further details can be found in the device logs. In general, this will not occur as long as the app passes a valid (neither null nor empty) UPN. There is no direct, reliable remediation the app can take. If this value is received when unregistering a valid UPN, report as a bug to the Intune MAM team.|
 | `PENDING` | The initial enrollment attempt for the user is in progress.  The app can block access to corporate data until the enrollment result is known, but is not required to do so. |
 | `COMPANY_PORTAL_REQUIRED` | The user is licensed for Intune, but the app cannot be enrolled until the Company Portal app is installed on the device. The Intune App SDK will attempt to block access to the app for the given user and direct them to install the Company Portal app (see below for details). |
 
@@ -1657,7 +1655,7 @@ a set of **IdentitySwitchOption** values.
      
 * `DATA_FROM_INTENT`: Use if requesting an identity switch when data
    from the intent will be displayed in the activity. The opposite of
-   `IGNORE_INTENT`. This will cause receive policy for the new
+   `IGNORE_INTENT`. This will cause the receive policy for the new
    identity to treat the intent as incoming data.
    
    For example: Your app receives an intent containing metadata that
@@ -1791,7 +1789,7 @@ In addition to the app's ability to set the identity, a thread, or a context's i
           final AppIdentitySwitchResultCallback callback);
   ```
 
-  * The **AppIdentitySwitchReason** captures the source of the implicit switch, and can accept the values `CREATE`, `RESUME_CANCELLED`, and `NEW_INTENT`.  The `RESUME_CANCELLED` reason is used when activity resume causes PIN, authentication, or other compliance UI to be displayed and the user attempts to cancel out of that UI, generally though use of the back button.
+  * The **AppIdentitySwitchReason** captures the source of the implicit switch, and can accept the values `CREATE`, `RESUME_CANCELLED`, and `NEW_INTENT`.  The `RESUME_CANCELLED` reason is used when activity resume causes PIN, authentication, or other compliance UI to be displayed and the user attempts to cancel out of that UI, generally through use of the back button.
 
 
     * The **AppIdentitySwitchResultCallback** is as follows:
@@ -1964,7 +1962,7 @@ Apps that make use of [MAMDataProtectionManager] should implement a receiver for
 enabled when the buffers were protected. An app can remediate this situation by calling
 `MAMDataProtectionManager.unprotect` on all buffers during this notification. It
 is also safe to call protect during this notification if it is desired to preserve identity
-information -- encryption is guaranteed to be disabled during the notification.
+information (encryption is guaranteed to be disabled during the notification).
 
 
 ### Content Providers
@@ -2007,7 +2005,7 @@ app manually to prevent the user from accessing in-memory data after a wipe occu
 
 ## Enabling MAM targeted configuration for your Android applications (optional)
 Application-specific key-value pairs may be configured in the Intune
-console for [MAM-WE](../apps/app-configuration-policies-managed-app.md)
+console for [MAM](../apps/app-configuration-policies-managed-app.md)
 and [Android Enterprise](../apps/app-configuration-policies-use-android.md).
 These key-value pairs are not interpreted by Intune at all,
 but are passed on to the app. Applications that want to
@@ -2017,7 +2015,7 @@ the same app, there may be multiple conflicting values available for
 the same key.
 
 > [!NOTE] 
-> Configurations setup for delivery via MAM-WE can not be delivered in `offline` (when the Company Portal is not installed).  Only Android Enterprise AppRestrictions will be delivered via a `MAMUserNotification` on an empty identity in this case.
+> Configurations setup for delivery via App Configuration Policies (ACP) can not be delivered in `offline` (when the Company Portal is not installed).  Only Android Enterprise AppRestrictions will be delivered via a `MAMUserNotification` on an empty identity in this case.
 
 ### Get the App Config For a User
 App config may be retrieved as follows:
@@ -2160,9 +2158,6 @@ Enable default enrollment with the following steps:
    ```xml 
    <meta-data android:name="com.microsoft.intune.mam.DefaultMAMServiceEnrollment" android:value="true" />
    ```
-
-   > [!NOTE] 
-   > This must be the only MAM-WE integration in the app. If there are any other attempts to call MAMEnrollmentManager APIs, conflicts will arise.
 
 3. Enable MAM policy required by adding the following value in the manifest under the `<application>` tag:
 

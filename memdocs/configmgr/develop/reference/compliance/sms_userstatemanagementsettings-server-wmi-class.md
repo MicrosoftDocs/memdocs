@@ -1,6 +1,7 @@
 ---
 title: "SMS_UserStateManagementSettings Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_UserStateManagementSettings WMI class is an SMS Provider server class that represents the user state management settings definitions used to define configuration rules." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

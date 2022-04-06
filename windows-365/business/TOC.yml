@@ -11,6 +11,28 @@ items:
   href: windows-365-business-sizing.md
 - name: Cloud PC location 
   href: cloud-pc-location.md
+- name: How-to guides
+  items:
+  - name: Apps
+    items:
+    - name: Users installing apps
+      href: apps-install.md   
+  - name: Device and user management
+    items:
+    - name: Manage your Cloud PCs
+      href: device-management.md
+    - name: Add a user and assign licenses
+      href: add-user-assign-licenses.md
+    - name: Assign or unassign a license
+      href: assign-unassign-license.md
+    - name: Change organization defaults
+      href: change-organization-default-settings.md
+    - name: Remotely manage Cloud PCs
+      href: remotely-manage-business-cloud-pcs.md
+    - name: Reset a user's password
+      href: reset-user-password.md
+    - name: Restore a Cloud PC to an earlier state
+      href: restore-overview.md
 - name: Troubleshoot
   items:
   - name: Troubleshooting

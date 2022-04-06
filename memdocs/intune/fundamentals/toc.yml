@@ -58,7 +58,7 @@ items:
       href: guided-scenarios-cloud-managed-pc.md   
     - name: Secure Microsoft Office mobile apps
       href: guided-scenarios-office-mobile.md              
-    - name: Windows 10 in cloud configuration
+    - name: Windows 10/11 in cloud configuration
       href: cloud-configuration.md
   - name: Common scenarios
     href: common-scenarios.md
@@ -93,7 +93,7 @@ items:
         items:
         - name: Overview
           href: deployment-guide-enrollment.md
-        - name: MAM-WE 
+        - name: MAM
           href: deployment-guide-enrollment-mamwe.md
         - name: Android, Android Enterprise
           href: deployment-guide-enrollment-android.md
@@ -214,6 +214,8 @@ items:
       href: filters-reports-troubleshoot.md
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
+  - name: Premium add-ons
+    href: premium-add-ons.md
   - name: Developer guidance
     href: ../developer/index.yml
   - name: Get help and support

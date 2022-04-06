@@ -1,6 +1,7 @@
 ---
 title: "Create an Association Between Two Computers"
 titleSuffix: "Configuration Manager"
+description: "You create an association between a reference and destination computer, in Configuration Manager, by calling the AddAssociation Method in Class SMS_StateMigration"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

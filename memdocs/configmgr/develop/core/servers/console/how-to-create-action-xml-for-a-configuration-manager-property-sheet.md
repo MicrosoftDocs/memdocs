@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Create Action XML for a Property Sheet to you create a ShowDialog action. Like other actions, the ShowDialog action defines a context menu and action pane action that the user selects to show the dialog box. 
 title: "Create Action XML for a Property Sheet"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn about the simplified syntax, parameters, return values, and requirement of the AllowAccess method.
 
 
 ---

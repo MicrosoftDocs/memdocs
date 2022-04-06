@@ -59,6 +59,8 @@ Device-based Conditional Access policies for Exchange online and other Microsoft
 > 2. Go to the **Settings** page from the menu.
 > 3. In the **Enable Browser Access** section, tap the **ENABLE** button.
 > 4. Close and then restart the browser app.
+> 
+> This enables access in browser apps, but not to browser WebViews that open within apps.
 
 ## Applications available in Conditional Access for controlling Microsoft Intune
 When you are configuring conditional access in the Azure Active Directory portal, you have two applications available:

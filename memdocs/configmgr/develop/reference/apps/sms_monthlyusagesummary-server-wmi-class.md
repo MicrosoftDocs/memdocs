@@ -1,6 +1,7 @@
 ---
 title: "SMS_MonthlyUsageSummary Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MonthlyUsageSummary WMI class is an SMS Provider server class that represents a monthly usage summary for a particular file."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

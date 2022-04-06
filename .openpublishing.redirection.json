@@ -924,15 +924,20 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "windows-365/end-user-access-cloud-pc.md",
-            "redirect_url":"/windows-365/enterprise/end-user-access-cloud-pc",
+            "source_path": "windows-365/enterprise/end-user-access-cloud-pc.md",
+            "redirect_url":"windows-365/end-user-access-cloud-pc",
             "redirect_document_id": false
         },
         {
-            "source_path": "windows-365/end-user-hardware-requirements.md",
-            "redirect_url":"/windows-365/enterprise/end-user-hardware-requirements",
+            "source_path": "windows-365/enterprise/end-user-hardware-requirements.md",
+            "redirect_url":"windows-365/end-user-hardware-requirements",
             "redirect_document_id": false
-        },
+        },                
+        {
+            "source_path": "windows-365/business/get-users-started.md",
+            "redirect_url":"/windows-365/get-users-started",
+            "redirect_document_id": false
+        },                        
         {
             "source_path": "windows-365/get-cloud-pc-audit-logs-using-powershell.md",
             "redirect_url":"/windows-365/enterprise/get-cloud-pc-audit-logs-using-powershell",
@@ -1081,6 +1086,16 @@
         {
             "source_path": "memdocs/configmgr/develop/core/understand/sqlviews/reports-supplied-with-configuration-manager.md",
             "redirect_url": "/mem/configmgr/core/servers/manage/list-of-reports",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/configmgr/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager.md",
+            "redirect_url": "/mem/configmgr/core/plan-design/hierarchy/state-messages",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/configmgr/sum/deploy-use/uup-preview.md",
+            "redirect_url": "/mem/configmgr/sum/index",
             "redirect_document_id": true
         }
     ]

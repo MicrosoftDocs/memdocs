@@ -5,8 +5,8 @@ title: View and correct personal data
 titleSuffix: Microsoft Intune
 description: Learn how to view and correct personal data.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 05/18/2018
 ms.topic: conceptual

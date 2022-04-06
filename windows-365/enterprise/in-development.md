@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 11/24/2021
+ms.date: 03/09/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -22,7 +22,7 @@ ms.reviewer: traceyadams
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: seodec18
+ms.custom: seodec18, references_regions
 ms.collection: M365-identity-device-management
 ---
 
@@ -43,7 +43,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- Common categories:  
 ## App management
 ## Device configuration
-## Device enrollment
+## Device provisioning
 ## Device management
 ## Intune apps
 ## Monitor and troubleshoot
@@ -53,40 +53,35 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 -->
 
 <!-- ***********************************************-->
-## App management
-
-### Use conditional access to group Windows 365 and Azure Virtual Desktop app policies together <!-- 36360788 -->
-
-In a future update, you’ll be able to target Conditional Access (CA) policies to a single application that applies to both the Windows 365 and Azure Virtual Desktop apps.
-
-Currently, Windows 365 and Azure Virtual Desktop share a common framework for identity access by using Azure Active Directory (Azure AD) and security controls with CA policies. You can target CA policies to the Windows 365 app and this applies only to windows365.microsoft.com web client. To apply CA policies to the full Windows client and non-windows clients, you must assign CA policies to both the Windows 365 and Azure Virtual Desktop apps.  For more information, see [Assign a Conditional Access policy for Cloud PCs](set-conditional-access-policies.md).
+<!--## App management-->
 
 <!-- ***********************************************-->
-## Device management
-
-### Cloud PCs in grace period count towards active Cloud CP license usage<!-- 37017463-->
-
-In a future update, Cloud PCs that are in grace period will count towards your active Cloud PC license usage. This makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
-
-For more information about grace period, see [Device management overview](device-management-overview.md) and [End grace period](end-grace-period.md).
-
-### Support for Azure AD joined Cloud PCs<!-- 35060203-->
-
-Windows 365 Enterprise will support Cloud PCs that are Azure AD Joined. These devices will run in a Microsoft-hosted network, so customers:
-
-- Don’t need their own Azure infrastructure
-- Don’t need to create an on-premises network connection.
-
-### Support for Cloud PC sizes based on virtual graphics processing units (GPU)<!--35091874 -->
-
-New Windows 365 licenses will be available that include virtual graphics processing unit options that support advanced graphic workloads on Cloud PCs.
-
-### Operating system end of support status for Cloud PCs<!--36852572 -->
-
-The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
+<!--## Device management-->
 
 <!-- ***********************************************-->
-<!--## Provisioning-->
+## Monitor and troubleshoot
+
+### End-user error log collection<!--38195529-->
+
+End users will be able to collect error logs.
+
+### End-user feedback<!--38195529-->
+
+End users will be able to provide feedback to Microsoft from within the Windows 365 web client.
+
+### End user manual connectivity check<!--37679345 -->
+
+End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
+
+### Device history report – new information for Cloud PC performance<!--38310774  -->
+
+The device history report will have new information to help you evaluate Cloud PC performance:
+
+- Top 5 processes impacting CPU spike times
+- Top 5 processes impacting RAM spike times
+
+<!-- ***********************************************-->
+<!-- ## Provisioning -->
 
 <!-- ***********************************************-->
 <!--## Role-based access control-->

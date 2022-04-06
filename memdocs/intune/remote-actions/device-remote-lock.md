@@ -4,10 +4,10 @@
 title: Lock devices with Microsoft Intune
 description: Use the Remote lock action in Microsoft Intune to lock a device that is protected by a PIN or password. 
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 02/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -33,6 +33,8 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 The **Remote lock** device action locks the device. To unlock the device, the device owner enters their passcode. You can remotely lock devices that have a PIN or password set. Devices that don't have a PIN or password can't be remotely locked.
+
+When **Remote lock** is applied to a device that doesn’t have a PIN or password, the device’s screen will turn off but the device will not be locked and the user will be able to wake the device and start using it again without entering a PIN or password. Ensure devices have a PIN or password policy enforced before using the **Remote lock** action to lock the device.
 
 ## Supported platforms
 

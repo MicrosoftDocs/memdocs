@@ -9,6 +9,7 @@ manager: dougeby
 ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
+ms.localizationpriority: high
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology:
@@ -80,7 +81,7 @@ You can use Company Portal to enroll devices running:
 - macOS  
 
 ## What kind of devices can you enroll with the Microsoft Intune app?  
-You can enroll corporate-owned Android devices that your organization has set up to use with the app. The app supports Android 6.0 and later. 
+You can enroll corporate-owned Android devices that your organization has set up to use with the app. The app supports Android 8.0 and later. 
 
 ## Can you remove a device from the Company Portal?
 You can remove or reset a device from the Company Portal. There is a difference between **remove** and **reset**.

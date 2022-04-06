@@ -1,6 +1,7 @@
 ---
 title: "Call a WMI Class Method by Using System.Management"
 titleSuffix: "Configuration Manager"
+description: "To call a client Windows Management Instrumentation (WMI) class method, call the InvokeMethod of the WMI class's ManagementClass."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

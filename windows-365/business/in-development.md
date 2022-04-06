@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 11/05/2021
+ms.date: 03/09/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -55,17 +55,16 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 <!-- ***********************************************-->
 ## Device management
 
-### Windows 11 support for newly created Cloud PCs<!--35091970 -->
+### windows365.microsoft.com will move to general availability<!--38195529-->
 
-In a future update, Windows 365 Business Cloud PCs will be created with Windows 11 installed by default. Admins will be able to choose between Windows 10 and 11 for their organization's Cloud PCs. On windows365.microsoft.com, users will be able to easily see the difference between their Windows 10 and 11 Cloud PCs.
+The windows365.microsoft.com web client will be moving out of preview and into general availability.
 
-#### Manage Cloud PCs in the Microsoft 365 admin center and windows365.microsoft.com<!--36859306-->
+<!-- ***********************************************-->
+## Monitor and troubleshoot
 
-You’ll be able to control organization-wide Cloud PC settings and device-level actions in the Microsoft 365 admin center and on windows365.microsoft.com.
+### End user manual connectivity check<!--37679345 -->
 
-- **Organizational defaults**: You’ll be able to choose defaults for operating system (Windows 10 or 11) and account type (Standard or Local Administrator).
-- **Device level actions**: You’ll be able to use the following actions on any Cloud PC in your organization: Change account type, Restart, Reset, Rename, and Troubleshoot.
-- **Other management actions**: You’ll be able to create and delete users, reset passwords, and manage licenses for Windows 365 Cloud PCs and Microsoft 365 products.
+End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
 ## Next steps
 

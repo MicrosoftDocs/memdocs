@@ -2,7 +2,7 @@
 title: Scores, baselines, and insights in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about scores, baselines, and insights in Endpoint Analytics
-ms.date: 08/23/2021
+ms.date: 03/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -57,13 +57,32 @@ To help you identify devices that could be impacting user experience, Endpoint a
 
 Selecting a device from the **Devices scores** tab loads a device page that gives you more information. From the device's **Startup performance** tab, review **Boot history** and **Sign-in history** for experience impacting trends. The **Application reliability** tab provides insight into potential issues for desktop applications on the managed device.
 
-:::image type="content" source="media/8816759-per-device-scores.png" alt-text="Screenshot of a device's Endpoint analytics score with the startup performance and application reliability subscores." lightbox="media/8816759-per-device-scores.png"::: 
+:::image type="content" source="media/8816759-per-device-scores.png" alt-text="Screenshot of a device's Endpoint analytics score with the startup performance and application reliability subscores." lightbox="media/8816759-per-device-scores.png":::
+
+You can also access per device scores on a device's **User experience** page. From the **User experience** page you can review the **Endpoint analytics**, **Startup performance**, and **Application reliability** information for the specific device.
+
+:::image type="content" source="media/user-experience-page.png" alt-text="Screenshot of a device's user experience page displaying the startup performance tab." lightbox="media/user-experience-page.png":::
 
 ### <a name="bkmk_drill-in"></a> Device level drill-in from reports
 
 When reviewing your organization's **Startup performance** or **Application reliability** reports, you can display individual device scores. To drill-in to  information for a specific device, select the **Device performance** tab, then choose a device.
 
 :::image type="content" source="media/8816759-per-device-startup-score.png" alt-text="Screenshot of Endpoint analytics startup performance page for a single device." lightbox="media/8816759-per-device-startup-score.png":::
+
+## Filter reports
+<!--7207888-->
+Use the **Add filter** option on tables to display items that match your criteria. You can add more filters to drill further into your data. Using filters enables you to discover trends in your environment or spot potential issues. For instance, in the **Device performance** tab of the **Startup performance** report, you might use a filter to identify devices with a high **Time to responsive desktop**. After reviewing your filtered data, you add another filter to include devices with a high **Group Policy sign-in time**. With the additional filter, you can gauge the impact Group Policy has on the user experience for devices that take a long time to get to a responsive desktop.
+
+:::image type="content" source="media/7207888-filter.png" alt-text="Screenshot of a table filter in Endpoint analytics." lightbox="media/7207888-filter.png":::
+
+> [!NOTE]
+> There are currently limitations in the following filters:
+> - The **Disk type** filter doesn't support the value **Unknown**<!--12829141-->. 
+> - Filtering on **Startup performance score** from **Overview** > **Device Scores** returns devices with a score of "--". <!--12829158-->
+
+## Known issues
+
+[!INCLUDE [Endpoint analytics export to csv value mapping known issue](includes/known-issue-csv-mapping.md)]
 
 ## Next steps
 

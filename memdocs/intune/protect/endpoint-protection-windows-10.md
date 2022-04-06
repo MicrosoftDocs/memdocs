@@ -1,13 +1,12 @@
 ---
 # required metadata
-title: Settings you can deploy with Intune to protect managed Windows devices
-description: On Windows 10 or Windows 11 devices, configure endpoint protection settings to enable Microsoft Defender features, including Application Guard, Firewall, SmartScreen, encryption and BitLocker, Exploit Guard, Application Control, Security Center, and security on local devices in Microsoft Intune.
-keywords:
+title: Windows 10/11 settings you can deploy with Microsoft Intune to protect managed Windows devices
+description: Use Microsoft Intune endpoint protection profiles to manage settings that help protect your enrolled Windows 10 and 11 devices. 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
-ms.topic: conceptual
+ms.date: 02/03/2022
+ms.topic: reference
 ms.service: microsoft-intune
 
 # optional metadata
@@ -44,7 +43,7 @@ For more information about configuration service providers (CSPs), see [Configur
 
 While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary, which are configured in Device Configuration. For more information, see [Create a network boundary on Windows devices](../configuration/network-boundary-windows.md).
 
-Application Guard is only available for b4-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.  
+Application Guard is only available for 64-bit Windows devices. Using this profile installs a Win32 component to activate Application Guard.  
 
 - **Application Guard**  
   **Default**: Not configured  

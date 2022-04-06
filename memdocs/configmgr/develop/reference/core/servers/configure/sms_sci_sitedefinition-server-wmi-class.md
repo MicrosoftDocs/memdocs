@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_SCI_SiteDefinition class which contains general definitions for the site and accounts used by Configuration Manager.
 title: "SMS_SCI_SiteDefinition Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

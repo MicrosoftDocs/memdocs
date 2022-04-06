@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_ApplicationInfo Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_TaskSequence_ApplicationInfo WMI class represents application information for the application that is installed by using a task sequence."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

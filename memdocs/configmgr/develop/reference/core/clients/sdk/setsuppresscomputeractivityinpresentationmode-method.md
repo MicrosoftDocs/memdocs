@@ -1,4 +1,5 @@
 ---
+description: Learn how to set the value for SuppressComputerActivityInPresentationMode in Configuration Manager using SetSuppressComputerActivityInPresentationMode class.
 title: "SetSuppressComputerActivityInPresentationMode Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

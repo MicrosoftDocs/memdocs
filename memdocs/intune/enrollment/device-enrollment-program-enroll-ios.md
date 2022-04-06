@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/11/2021
+ms.date: 03/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -55,6 +55,8 @@ ADE enrollments aren't compatible with the App Store version of the Company Port
 To enable modern authentication during enrollment, push the app to the device by using **Install Company Portal with VPP** (Volume Purchase Program) in the ADE profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's ADE](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
 
 To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required VPP app with an [application configuration policy](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment) applied. Deploy the Company Portal app in this way to enable Device Staging for devices only without user affinity. With Device Staging, a device is fully enrolled and receives device policies before the addition of a user affinity. Device Staging can also be used to transition a device without user affinity, to a device with user affinity.
+
+Specifically for the authentication method Setup Assistant with modern authentication, do not separately deploy the Company Portal app as a client app, with or without an app config targeted to it. ADE devices enrolling with Setup Assistant with modern authentication should be excluded from any separate Company Portal targeting in the tenant. The Company Portal is sent as a required app automatically when Setup Assistant with modern authentication is chosen as the authentication method in the assigned enrollment profile. 
 
 ## What is supervised mode?
 
@@ -207,13 +209,9 @@ Now that you've installed your token, you can create an enrollment profile for A
     - **Setup Assistant with modern authentication**: Devices running iOS/iPadOS 13.0 and later can use this method. Older iOS/iPadOS devices in this profile will fall back to using the **Setup Assistant (legacy)** process.  
 
         > [!NOTE]
-        > MFA won't work for Setup Assistant with modern authentication if you're using a 3rd party MFA provider to present the MFA screen during enrollment. Only the Azure AD MFA screen works during enrollment.  
+        > MFA won't work for Setup Assistant with modern authentication if you're using a 3rd party MFA provider to present the MFA screen during enrollment. Only the Azure AD MFA screen works during enrollment. For the latest support updates about custom controls for MFA, see [Upcoming changes to Custom Controls](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/upcoming-changes-to-custom-controls/ba-p/1144696).  
 
         This method provides the same security as Company Portal authentication but avoids the issue of leaving end users with a device they can't use until the Company Portal installs.  
-
-         > [!IMPORTANT]
-         > If you select Setup Assistant with modern authentication as the authentication method, and you also apply a *conditional access - terms of use* policy that requires end users to accept the Azure AD Terms of Use, you must apply a *conditional access* policy that uses the Microsoft Intune cloud app, not the Microsoft Intune Enrollment cloud app. Otherwise, enrollment will fail and devices will need to be wiped to reset enrollment.  
-
 
         The Company Portal will be installed without user interaction (the user won't see the **Install Company Portal** option) in both of the following situations:
 
@@ -236,16 +234,7 @@ Now that you've installed your token, you can create an enrollment profile for A
         - Won’t be evaluated for device compliance.
         - Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.
 
-7. If you selected **Company Portal** for your authentication method, you can use a VPP token to automatically install Company Portal on the device. In this case, the user doesn't have to provide an Apple ID. To install Company Portal by using a VPP token, select a token in **Install Company Portal with VPP**. You need to have already added Company Portal to the VPP token. To ensure that Company Portal continues to be updated after enrollment, make sure that you've configured an app deployment in Intune (In Endpoint Manager select **Apps** > **All apps** > **Add**).
 
-   To ensure that user interaction isn't required, you'll probably want to make Company Portal an iOS/iPadOS VPP app, make it a required app, and use device licensing for the assignment. Make sure that the token doesn't expire and that you have enough device licenses for Company Portal. If the token expires or runs out of licenses, Intune installs the App Store Company Portal instead and prompts for an Apple ID.
-
-    > [!NOTE]
-    > If you set the authentication method to **Company Portal**, make sure that the device enrollment process is completed within the first 24 hours of the Company Portal download to the ADE device. Otherwise enrollment might fail, and a factory reset will be needed to enroll the device.
-
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/install-cp-with-vpp.png" alt-text="Screenshot that shows the options for installing the Company Portal app with VPP.":::
-
-   For more information about connecting Intune to Apple Volume Purchase Program (VPP), see [Manage Apple volume-purchased apps](../apps/vpp-apps-ios.md). After you've connected to VPP, you can add the Company Portal app to your Apple Business Manager/Apple School Manager inventory so it can be assigned through Intune.
 8. If you selected **Setup Assistant (legacy)** for the authentication method but you also want to use Conditional Access or deploy company apps on the devices, you need to install Company Portal on the devices and sign in to complete the Azure AD registration. To do so, select **Yes** for **Install Company Portal**. If you want users to receive Company Portal without having to authenticate in to the App Store, in **Install Company Portal with VPP**, select a VPP token. Make sure the token doesn't expire and that you have enough device licenses for the Company Portal app to deploy correctly.
 
 9. If you select a token for **Install Company Portal with VPP**, you can lock the device in Single App Mode (specifically, the Company Portal app) right after the Setup Assistant completes. Select **Yes** for **Run Company Portal in Single App Mode until authentication** to set this option. To use the device, the user must first authenticate by signing in with Company Portal.
@@ -325,9 +314,11 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 15. You can specify a naming format for devices that's automatically applied when they're enrolled and upon each successive check-in. To create a naming template, select **Yes** under **Apply device name template**. Then, in the **Device Name Template** box, enter the template to use for the names that use this profile. You can specify a template format that includes the device type and serial number. This feature supports iPhone, iPad, and iPod Touch. The device name template entry cannot exceed the length of 63 characters, including the variables.
 
-16. Select **Next: Setup Assistant Customization**.
+16. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.
 
-17. On the **Setup Assistant Customization** tab, configure the following profile settings:
+17. Select **Next: Setup Assistant Customization**.
+
+18. On the **Setup Assistant Customization** tab, configure the following profile settings:
 
     | Department setting | Description |
     |---|---|
@@ -369,9 +360,9 @@ Now that you've installed your token, you can create an enrollment profile for A
     | **iCloud diagnostics** | Display the **iCloud Analytics** screen. For macOS 10.12.4 and later. |
     | **iCloud Storage** | Display the **iCloud Documents and Desktop** screen. For macOS 10.13.4 and later. |
 
-18. Select **Next** to go to the **Review + create** tab.
+19. Select **Next** to go to the **Review + create** tab.
 
-19. To save the profile, select **Create**.
+20. To save the profile, select **Create**.
 
 > [!NOTE]
 > If you need to re-enroll your Automated Device Enrollment device, you need to first wipe the device from the Intune admin console. To re-enroll:

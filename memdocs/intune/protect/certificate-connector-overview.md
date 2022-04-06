@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/02/2021
+ms.date: 03/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,7 +36,7 @@ For Microsoft Intune to support use of certificates for authentication and the s
 This article introduces the Certificate Connector for Microsoft Intune, its lifecycle, and how to keep it up to date.
 
 > [!TIP]
-> Beginning on July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. With the release of version 6.2109.51.0 of the Certificate Connector for Microsoft, the previous connectors are no longer supported.
+> Beginning on July 29, 2021, the **Certificate Connector for Microsoft Intune** replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. With the release of version 6.2109.51.0 of the Certificate Connector for Microsoft, the previous connectors are no longer supported.
 
 ## Connector overview
 
@@ -87,7 +87,7 @@ The Certificate Connector for Microsoft Intune supports:
 
 Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
 
-Intune supports each connector release for six months after its released. After the six months have passed, the connector is no longer be supported and might not function as expected.
+Intune supports each connector release for six months after its released. After the six months have passed, the connector is no longer supported and might not function as expected.
 
 If you don’t allow the connector to automatically update, plan to manually update it to the latest version at the first opportunity.
 
@@ -160,6 +160,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - *PkcsRequestSuccess* - Successfully fulfilled and uploaded a PKCS Request to Intune.
   - *PkcsRequestFailure* - Failed to fulfill or upload a PKCS Request to Intune.
 - **Operational**
+  - *PkcsDigiCertRequest* - Successfully downloaded PKCS request for DigiCert CA from Intune
   - *PkcsDownloadSuccess* - Successfully downloaded PKCS requests from Intune
   - *PkcsDownloadFailure* - A failure occurred when downloading PKCS requests from Intune
   - *PkcsDownloadedRequest* - Details of a single downloaded request from Intune
@@ -189,6 +190,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - *RevokeRequestSuccess* - Successfully downloaded Revocation requests from Intune
   - *RevokeRequestFailure* - A failure occurred when downloading Revocation requests from Intune
 - **Operational**
+  - *RevokeDigicertRequest* - Received revoke request from Intune and forwarding request to Digicert for fulfillment of request.
   - *RevokeDownloadSuccess* - Successfully downloaded Revocation requests from Intune
   - *RevokeDownloadFailure* - A failure occurred when downloading Revocation requests from Intune
   - *RevokeDownloadedRequest* - Details of a single downloaded request from Intune
@@ -217,12 +219,35 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 
 ## What's new for the Certificate Connector
 
-Updates for the Certificate Connector for Microsoft Intune are released periodically. When we update the connector, you can read about the changes here.
+Updates for the Certificate Connector for Microsoft Intune are released periodically and then [supported for six months](#lifecycle). When we update the connector, you can read about the changes here.
 
 New updates for the connector can take a week or more to become available for each tenant.
 
-> [!IMPORTANT]
-> On February 1, 2022, Intune certificate connectors earlier than version **6.1806.5.0** will no longer allow you to issue certificates to users and devices.
+> [!IMPORTANT]  
+> On June 1, 2022, Intune certificate connectors earlier than version **6.2101.13.0** will no longer allow you to issue certificates to users and devices. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article) on July 29, 2021.
+ 
+
+### March 10, 2022
+
+Version **6.2202.38.0**. This update includes:
+
+- Changes to support TLS 1.2 for auto-update
+
+### February 18, 2022
+
+Version **6.2201.7.0**. This update includes:
+
+- Support changes for account moves
+- Explicit disabling for older versions of TLS
+
+### January 6, 2022
+
+Version **6.2112.1.0**. This update includes:
+
+- New configuration logging on startup of services
+- New logging for configuration changes during service processing
+- Fix for configuration tool to appropriately clear proxy information on removal
+- Bug fix affecting reconnections to Intune in scenarios where proxies are in use
 
 ### October 11, 2021
 

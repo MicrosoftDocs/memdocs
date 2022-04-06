@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the update package download status per site in Configuration Manager using  SMS_CM_UpdatePackDownloadMonitoring. 
 title: "SMS_CM_UpdatePackDownloadMonitoring Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

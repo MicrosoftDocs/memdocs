@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: "Windows Server Update Services (WSUS) component settings are configured in Configuration Manager by modifying the site control file."
 
 ---
 # How to Configure the WSUS Settings

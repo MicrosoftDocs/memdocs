@@ -1,6 +1,7 @@
 ---
 title: "SMS_SCI_ClientComp Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_SCI_ClientComp WMI class is an SMS Provider server class that represents the component to install on a client computer."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

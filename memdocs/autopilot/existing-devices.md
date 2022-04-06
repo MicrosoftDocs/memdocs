@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 01/05/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -34,7 +34,7 @@ This topic describes how to convert Windows 7 or Windows 8.1 domain-joined compu
 Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD device into a Azure AD Autopilot device.
 
 > [!NOTE]
-> Windows Autopilot for existing devices only supports user-driven Azure Active Directory and Hybrid Azure AD profiles. Self-deploying profiles are not supported.
+> Windows Autopilot for existing devices only supports user-driven Azure Active Directory and Hybrid Azure AD profiles. Self-deploying and pre-provisioning profiles are not supported.
 
 ## Prerequisites
 
@@ -253,7 +253,7 @@ See the following examples.
     - **AutopilotConfigurationFile.json** must be the name of the JSON file present in the Autopilot for existing devices package that was created earlier.
 
      > [!IMPORTANT]
-     > TThe AutopilotConfigurationFile.json file will persist on the device across all future device wipes and resets. The only way for the JSON file to be fully removed is to perform a clean install of the operating system.
+     > The AutopilotConfigurationFile.json file will persist on the device across all future device wipes and resets. The only way for the JSON file to be fully removed is to perform a clean install of the operating system.
 
 
 17. In the **Apply Autopilot for existing devices config file** step, select the **Package** > **Browse**.

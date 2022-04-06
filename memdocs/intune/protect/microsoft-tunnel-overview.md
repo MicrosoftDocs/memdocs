@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/03/2021
+ms.date: 03/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -16,7 +16,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: tycast
+ms.reviewer: ochukwunyere
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -51,12 +51,13 @@ Through the Microsoft Endpoint Manager admin center, you’ll:
 Through a Microsoft Tunnel client app, iOS/iPadOS and Android Enterprise devices:
 
 - Use Azure Active Directory (Azure AD) to authenticate to the tunnel.
+- Use Active Directory Federation Services (AD FS) to authenticate to the tunnel.
 - Are evaluated against your Conditional Access policies. If the device isn’t compliant, then it won’t have access to your VPN server or your on-premises network.
 
 To connect to the tunnel, devices use one of the following Microsoft Tunnel client apps, depending on device platform. The apps are available from each platforms app store:
 
 - **Android**: Microsoft Defender for Endpoint, which includes support for Microsoft Tunnel.
-- **iOS/iPadOS**: Microsoft Tunnel standalone app.
+- **iOS/iPadOS**: Microsoft Tunnel standalone app and Microsoft Defender for Endpoint, which includes support for Microsoft Tunnel. Both remain in preview.
 
 You can install multiple Linux servers to support Microsoft Tunnel, and combine servers into logical groups called *Sites*. Each server can join a single Site. When you configure a Site, you’re defining a connection point for devices to use when they access the tunnel. Sites require a *Server configuration* that you’ll define and assign to the Site. The Server configuration is applied to each server you add to that Site, simplifying the configuration of more servers.
 
@@ -65,7 +66,9 @@ To direct devices to use the tunnel, you create and deploy a VPN policy for Micr
   > [!Important]
   > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app on Android devices, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
   >
-  > iOS/iPadOS continues to use the standalone client app, which remains in preview, and a connection type of *Microsoft Tunnel (standalone client)*.
+  > iOS/iPadOS supports the following:
+  > - The standalone tunnel client app, which remains in preview. This app uses the VPN profile connection type of *Microsoft Tunnel (standalone client) (preview)*.
+  > - Microsoft Defender for Endpoint as the tunnel client app, which remains in preview. This app uses the VPN profile connection type of *Microsoft Tunnel (preview)*.
 
 Features of the VPN profiles for the tunnel include:
 
@@ -102,7 +105,7 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 **Components**:  
 - **A** – Microsoft Intune.
 - **B**- Azure Active Directory (AD).
-- **C** – Linux server with Podman (Red Hat Enterprise Linux 8.4) or Docker CE (all other Linux distributions).
+- **C** – Linux server with Podman or Docker CE (See the [Linux server](../protect/microsoft-tunnel-prerequisites.md#linux-server) requirements for details about which versions require Podman or Docker) 
   - **C.1** - Microsoft Tunnel Gateway.
   - **C.2** – Management Agent.
   - **C.3** – Authentication plugin – Authorization plugin, which authenticates with Azure AD.
@@ -121,14 +124,30 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 - **5** - Device authenticates to Azure AD. Conditional Access policies are evaluated.  
 - **6** - With split tunnel:  
   - **6.a** - Some traffic goes directly to the public internet.  
-  - **6.b** - Some traffic goes to your public facing IP address for the Tunnel. The VPN channel will use TCP, TLS, UDP, and DTLS over port 443.
-- **7** - The Tunnel routes traffic to your internal proxy (optional) and your corporate network.
+  - **6.b** - Some traffic goes to your public facing IP address for the Tunnel. The VPN channel will use TCP, TLS, UDP, and DTLS over port 443. This requires inbound and outbound [Firewall ports](../protect/microsoft-tunnel-prerequisites.md#firewall) to be open
+- **7** - The Tunnel routes traffic to your internal proxy (optional) and/or your corporate network. IT Admins must ensure that traffic from the Tunnel Gateway server internal interface can successfully route to internal corporate resource (IP address ranges and ports).
 
 > [!NOTE]  
 >
 > - Tunnel gateway maintains two channels with the client. A control channel is established over TCP, and TLS. This also serves as a backup data channel. It then looks to establish a UDP channel using DTLS (Datagram TLS, an implementation of TLS over UDP) that serves as the main data channel. If the UDP channel fails to establish or is temporarily unavailable, the backup channel over TCP/TLS is used. By default port 443 is used for both TCP and UDP, but this can be customized via the Intune Server Configuration - [*Server port* setting](../protect/microsoft-tunnel-configure.md#create-a-server-configuration). If changing the default port (443) ensure your inbound firewall rules are adjusted to the custom port.
 >
-> - Client traffic will have the source IP address of the Linux server host. Microsoft Tunnel Gateway uses port address translation (PAT). PAT is a type of network address translation (NAT) where the multiple private IP addresses are mapped into a single public IP (many-to-one) by using ports.
+> - The assigned client IP addresses (the *IP address range* setting in a [Server configuration](../protect/microsoft-tunnel-configure.md#to-create-a-server-configuration) for Tunnel) are not visible to other devices on the network. Microsoft Tunnel Gateway uses port address translation (PAT). PAT is a type of network address translation (NAT) where multiple private IP addresses from the Server configuration are mapped into a single IP (many-to-one) by using ports. Client traffic will have the source IP address of the Linux server host.
+
+**Break and inspect**:
+
+Many enterprise networks enforce network security for internet traffic using technologies like proxy servers, firewalls, SSL break and inspect, deep packet inspection, and data loss prevention systems. These technologies provide important risk mitigation for generic internet requests but can dramatically reduce performance, scalability, and the quality of end user experience when applied to Microsoft Tunnel Gateway and Intune service endpoints.
+
+The following outlines where break and inspect is not supported and where it is supported with Microsoft Tunnel Gateway. References are to the architecture diagram from the preceding section.
+
+- **Break and inspect is not supported in the following areas**:
+
+  - Tunnel Gateway does not support SSL break and inspect, TLS break and inspect, or deep packet inspection for client connections.
+  - The Use of firewalls, proxies, load balancers, or any technology that terminates and inspects the client sessions that go into the Tunnel Gateway is not supported and will cause clients connections to fail. (Refer to **F**, **D**, and **C** in the Architecture diagram).
+  - If Tunnel Gateway uses an outbound proxy for internet access, the proxy server cannot perform break and inspect. This is because Tunnel Gateway Management Agent uses TLS mutual authentication when connecting to Intune (Refer to **3** in the Architecture diagram above). If break and inspect is enabled on the proxy server, network admins that manage the proxy server must add the Tunnel Gateway server IP address and Fully Qualified Domain Name (FQDN) to an approve-list to these [Intune endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+
+- **Break and inspect is supported in the following area**:
+
+  The Microsoft Tunnel [client VPN profile](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) that gets delivered to mobile clients supports a proxy configuration. If using this setting, the proxy (Refer to **G** in the Architecture diagram) specified can use “Break and Inspect” on the client traffic routed out (refer to **7** in the Architecture diagram) of the Tunnel Gateway server to the corporate network.
 
 **Additional details**:
 
@@ -136,8 +155,6 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 
 - The Management Agent is authorized against Azure AD using Azure app ID/secret keys.
 
-- The Tunnel Gateway server uses NAT to provide addresses to VPN clients that are connecting to the corporate network.
-  
 ## Next steps
 
 [Prerequisites for the Microsoft Tunnel in Intune](microsoft-tunnel-prerequisites.md)

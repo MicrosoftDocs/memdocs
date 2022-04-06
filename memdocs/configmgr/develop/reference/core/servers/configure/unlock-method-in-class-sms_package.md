@@ -1,6 +1,7 @@
 ---
 title: "Unlock Method in Class SMS_Package"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that sets the source site to the current site, unlocking the package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

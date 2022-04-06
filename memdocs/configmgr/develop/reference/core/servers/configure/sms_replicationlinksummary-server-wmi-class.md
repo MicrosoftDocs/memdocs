@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_ReplicationLinkSummary class to represent summaries of database replication link statuses.
 title: "SMS_ReplicationLinkSummary Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune and Endpoint Manager to configure thousands of settings for Windows 10 devices, and configure Microsoft Edge on macOS devices. Add these settings in a device configuration profile to secure devices, and control different programs and features.
+description: Use settings catalog in Microsoft Intune and Endpoint Manager to configure thousands of settings for Windows 10/11 client devices, and configure Microsoft Edge on macOS devices. Add these settings in a device configuration profile to secure devices, and control different programs and features.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 03/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -39,14 +39,13 @@ This feature applies to:
 
 - **macOS**
 
+  - **Configure device settings**. Device settings that are directly generated from Apple Profile-Specific Payload Keys are continually being added. To learn more about these keys, see, [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
   - **Configure Microsoft Edge version 77 and newer**. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
   - **Configure Microsoft Defender for Endpoint**. Previously, you had to [use a property list (plist) file](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website). For a list of the settings you can configure, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
-- **Windows 10 and newer**
+- **Windows 10/11**
 
   There are thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
-
-  Settings Catalog policies are not supported on U.S. Government GCC High and DoD.
 
 > [!TIP]
 > To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
@@ -88,7 +87,7 @@ This article lists the steps to create a policy, and shows how to search and fil
 
 8. Select any setting you want to configure. Or, choose **Select all these settings**:
 
-    :::image type="content" source="./media/settings-catalog/settings-picker-select-all-settings.png" alt-text="In Settings Catalog, choose select all these settings in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog/settings-picker-select-all-settings.png" alt-text="In Settings Catalog, select all these settings in Microsoft Intune and Endpoint Manager admin center.":::
 
     After you add your settings, close the settings picker. All the settings are shown, and configured with a default value, such as **Block** or **Allow**. These defaults values are the same default values in the OS. If you don't want to configure a setting, then select the minus:
 
@@ -120,7 +119,7 @@ The next time the device checks for configuration updates, the settings you conf
 
 There are thousands of settings available in the settings catalog. To make it easier to find specific settings, use the built-in features:
 
-- In your policy, use **Add settings** > **Search** to find specific settings. You can search by category, such as `browser`, search for a keyword, such as `office`, and search for specific settings.
+- In your policy, use **Add settings** > **Search** to find specific settings. You can search by category, such as `browser`, search for a keyword, such as `office` or `google`, and search for specific settings.
 
   For example, search for `internet explorer`. All the settings with `internet explorer` are shown. Select a category to see the available settings:
 
@@ -129,6 +128,9 @@ There are thousands of settings available in the settings catalog. To make it ea
 - In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value. In **value**, you can filter to only show the settings that apply to Holographic for Business, Windows Enterprise, and other editions:
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="In Settings Catalog, filter the settings list by Windows edition in Microsoft Intune and Endpoint Manager admin center.":::
+
+  > [!NOTE]
+  > For the Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, then the Edge, Office, and OneDrive settings aren't shown.
 
 ## Duplicate a profile  
 
@@ -187,7 +189,31 @@ When you create the policy, you have two policy types: **Settings catalog** and 
 
 The **Templates** include a logical group of settings, such as device restrictions, kiosk, and more. Use this option if you want to use these groupings to configure your settings.
 
-For Windows, the **Settings catalog** lists all the available settings. If you want to see all the available Firewall settings, or all the available BitLocker settings, then use this option. Also, use this option if you're looking for specific settings.
+The **Settings catalog** lists all the available settings. If you want to see all the available Firewall settings, or all the available BitLocker settings, then use this option. Also, use this option if you're looking for specific settings.
+
+## Device scope vs. user scope settings
+
+When selecting settings, some settings have a `(User)` tag or `(Device)` tag in the setting name, such as `Allow EAP Cert SSO (User)` or `Grouping (Device)`. When you see these tags, the policy only affects the user scope or the device scope.
+
+For more information on user scope and device scope, see the [Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider).
+
+Device and user groups are used when you assign your policies. Device and user scopes describe how a policy is enforced.
+
+When deploying policy from Intune, you can assign user scope or device scope to any type of target group. Behavior of the policy per user depends on the scope of the setting:
+
+- User scoped policy writes to `HKEY_CURRENT_USER (HKCU)`. 
+- Device scoped policy writes to `HKEY_LOCAL_MACHINE (HKLM)`.
+
+When a device checks-in to Intune, the device always presents a `deviceID`. The device may or may not present a `userID`, depending on the check-in timing and if a user is signed in.
+
+These are some possible combinations of scope, assignment, and the expected behavior:
+
+- If a device scope policy is assigned to a device, then all users on that device have that setting applied.
+- If a user scope policy is assigned to a device, then all users on that device have that setting applied. This behavior is like a [loopback set to merge](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy).
+- If a user scoped policy is assigned to a user, then only that user has that setting applied.
+- If a device scoped policy is assigned to a user, once that user signs in and an Intune sync occurs, then the device scope settings apply to all users on the device.
+
+If there is no [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, then you may see some user scope settings marked as not applicable. This behavior happens in the early moments of a device before a user is present.
 
 ## Next steps
 

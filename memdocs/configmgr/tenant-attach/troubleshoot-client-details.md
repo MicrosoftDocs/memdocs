@@ -2,7 +2,7 @@
 title: Troubleshoot client details
 titleSuffix: Configuration Manager
 description: Troubleshoot client details for Configuration Manager tenant attach
-ms.date: 09/13/2021
+ms.date: 01/25/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -12,14 +12,11 @@ ms.author: mstewart
 ms.localizationpriority: high
 ---
 
-# Troubleshoot ConfigMgr client details in the admin center (preview)
+# Troubleshoot ConfigMgr client details in the admin center
 <!--6374854, 6521921-->
 *Applies to: Configuration Manager (current branch)*
 
 When viewing the ConfigMgr client details, you may run across a common error. Use the following information of common error messages to troubleshoot ConfigMgr client details in the Microsoft Endpoint Manager admin center:
-
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## <a name="bkmk_intune"></a> You don’t have access to view this information
 <!--7980141-->
@@ -84,7 +81,7 @@ Typically, this error is caused by an issue with the admin account. Below are th
 
 **Error message:** Error validating request. Verify that the Configuration Manager service connection point can reach the internet endpoints required for tenant attach.
 
-**Possible causes:** Typically this error is seen when URLs that are needed by tenant attach are blocked. If the service connection point can't access the needed internet endpoints, a validation error will occur. For more information, see [Internet endpoints](device-sync-actions.md#internet-endpoints).
+**Possible causes:** Typically this error is seen when URLs that are needed by tenant attach are blocked. If the service connection point can't access the needed internet endpoints, a validation error will occur. For more information, see [Internet endpoints](prerequisites.md#internet-endpoints).
 
 ## <a name="bkmk_1603"></a> Unexpected error occurred
 
@@ -106,7 +103,6 @@ Typically, this error is caused by an issue with the admin account. Below are th
 
 The empty list is a known issue for Configuration Manager version 2002 when you have a hierarchy of Configuration Manager sites.
 
-:::image type="content" source="media/6024387-known-issue-device-details.png" alt-text="Boundary group list is empty" lightbox="media/6024387-known-issue-device-details.png":::
 
 [!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 

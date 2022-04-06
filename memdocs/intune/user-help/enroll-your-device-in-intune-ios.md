@@ -10,6 +10,7 @@ manager: dougeby
 ms.date: 08/07/2020
 ms.topic: end-user-help
 ms.prod:
+ms.localizationpriority: high
 ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology:
@@ -62,7 +63,7 @@ To learn more about enrollment, see [What happens when I install the Company Por
 
 ## Prerequisites    
 
-* Device running iOS 11.0 and later.   
+* Device running iOS 13.0 and later.   
 * Install Company Portal app [from App Store](https://go.microsoft.com/fwlink/?linkid=2141414).
 * Maintain a Wi-Fi connection until all steps are complete.
 * Have access to Safari web browser on your device.
@@ -119,7 +120,7 @@ Pausing for more than a few minutes during enrollment might cause the Company Po
 
     ![Example screenshot of the Settings app, Enroll in organization option.](./media/enroll-in-organization-ios-1909.PNG)  
 
-   If neither options appear, go to **General** > **Profiles & Device Management**> **Management Profile**. If you still don't see a management profile, you may need to download it again.  
+   If neither options appear, go to **General** and select the VPN & device management option to view installed profiles. If you still don't see the profile, try downloading it again. 
 
 5. Tap **Install**.  
     
@@ -127,9 +128,7 @@ Pausing for more than a few minutes during enrollment might cause the Company Po
 
 7. The next screen is a standard system warning about device management. To continue with installation, tap **Install**. If prompted to trust remote management, tap **Trust**.  
 
-8. After installation is complete, tap **Done**. To verify that the profile was installed, go to the **Profiles & Device Management** settings. You should see the profile listed under **Mobile Device Management**.   
-
-    ![Example screenshot of Settings app, Profiles & Device Management settings, showing the management profile.](./media/ios-12-cp-enroll-1904.PNG)  
+8. After installation is complete, tap **Done**. To verify that the profile was installed, go to your VPN and device management settings. You should see the profile listed under **Mobile Device Management**.   
 
 9. Return to the Company Portal app. Company Portal will begin to sync and set up your device. Company Portal might prompt you to update additional device settings. If it does, tap **Continue**.  
 
@@ -169,7 +168,7 @@ Pausing for more than a few minutes during enrollment might cause the Company Po
 
     ![Example screenshot of the Settings app, Enroll in organization option.](./media/enroll-in-organization-ios-1909.PNG)  
 
-   If neither options appear, go to **General** > **Profiles & Device Management**> **Management Profile**. If you still don't see a management profile, you may need to download it again.   
+   If neither options appear, go to **General** and select the VPN & device management option to view installed profiles. If you still don't see the profile, try downloading it again. 
 
 
 6. On the **User Enrollment** screen, tap **Enroll My iPhone**.  
@@ -180,9 +179,7 @@ Pausing for more than a few minutes during enrollment might cause the Company Po
 
 8. On the **Sign in** screen, enter the password for your managed Apple ID. In most cases, these credentials will be the same ones you use to sign in to your work or school account, unless your organization provided you with a different set of credentials. 
 9. Tap **Sign in**.  
-10. A success message will appear on the screen briefly after the profile is installed. To verify that the profile is installed, go to the **Profiles & Device Management** settings. You should see the profile listed under **Mobile Device Management.**  
-
-    ![Example screenshot of Settings app, Profiles & Device Management settings, showing the management profile.](./media/ios-12-cp-enroll-1904.PNG)  
+10. A success message will appear on the screen briefly after the profile is installed. To verify that the profile was installed, go to your VPN and device management settings. You should see the profile listed under **Mobile Device Management**. 
 
 11. Return to the Company Portal app. Company Portal will begin to sync and set up your device. Company Portal might prompt you to update additional device settings. If it does, tap **Continue**.    
 

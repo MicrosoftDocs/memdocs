@@ -43,10 +43,7 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 ### Licensing Prerequisites
 
-Endpoint analytics is included in the following plans:
-
-- [Enterprise Mobility + Security E3](https://www.microsoftvolumelicensing.com/ProductResults.aspx?doc=Product%20Terms,OST&fid=51) or higher
-- [Microsoft 365 Enterprise E3](https://www.microsoft.com/en-us/microsoft-365/enterprise?rtc=1) or higher.
+Devices enrolled in Endpoint analytics need a valid license for the use of Microsoft Endpoint Manager. For more information, see [Microsoft Intune licensing](../intune/fundamentals/licenses.md) or [Microsoft Endpoint Configuration Manager licensing](../configmgr/core/understand/learn-more-editions.md).
 
 ### Endpoint analytics permissions
 

@@ -1,6 +1,7 @@
 ---
 title: "OS Configuration Item Example 1"
 titleSuffix: "Configuration Manager"
+description: "Example 1 for Operating System Configuration Item"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

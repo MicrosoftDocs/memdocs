@@ -106,10 +106,10 @@ To use Desktop Analytics, make sure your environment meets the following prerequ
   > - Use different Commercial IDs and Azure AD tenants.
   > - Configure both hierarchies to use the same Commercial ID to share the Azure AD tenant and Desktop Analytics instance. Use [different apps](connect-configmgr.md#bkmk_connect) for connecting each hierarchy. It may take up to 30 days after you disconnect a hierarchy for the portal to reflect changes.
 
-- Devices running Windows 7, Windows 8.1, or Windows 10.
+- Devices running Windows 10.
 
     > [!IMPORTANT]
-    > Starting in July 2021, Desktop Analytics supports the Windows diagnostic data processor configuration. This configuration is only for supported versions of Windows 10. Data for Windows 7, Windows 8, and earlier versions of Windows 10 will only show in Desktop Analytics until January 31, 2022. For more information, see [Support for the Windows diagnostic data processor configuration](whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->
+    > Starting in July 2021, Desktop Analytics supports the Windows diagnostic data processor configuration. This configuration is only for supported versions of Windows 10. For more information, see [Support for the Windows diagnostic data processor configuration](whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->
     >
     > Desktop Analytics doesn't support Windows 11.<!-- 10797955 --> For information about Windows 11 hardware readiness, Microsoft recommends that you enable tenant attach and [Endpoint analytics](../../analytics/overview.md).
 

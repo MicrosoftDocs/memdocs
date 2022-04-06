@@ -14,6 +14,7 @@ ms.service: microsoft-intune
 ms.subservice: end-user
 ms.technology:
 ms.assetid: 12655728-a1af-4d89-97bc-925fe36c0dc4
+ms.localizationpriority: high
 searchScope:
  - User help
 
@@ -43,7 +44,7 @@ Your organization cannot see your personal information when you enroll a device 
 - Passwords
 - Pictures, including what's in the photos app or camera roll
 - Files
-- Additionally, for corporate-owned devices with a work profile:  
+- Additionally, for corporate-owned Android devices with a work profile:
   - Apps and data in your personal profile
   - Phone number 
 
@@ -52,7 +53,7 @@ Your organization cannot see your personal information when you enroll a device 
 - Device model, like Google Pixel
 - Device manufacturer, like Microsoft
 - Operating system and version, like iOS 12.0.1
-- App inventory and app names, like Microsoft Word. On personal devices, your organization can only see your managed app inventory. For corporate-owned fully managed and dedicated devices, your organization can see all of your app inventory. For corporate-owned devices with a work profile, your organization can only see the app inventory in your work profile.
+- App inventory and app names, like Microsoft Word. On personal devices, your organization can only see your managed app inventory. For corporate devices, your organization can see all of your app inventory. For corporate-owned Android devices with a work profile, your organization can only see the app inventory in your work profile.
 - Device owner
 - Device name
 - Device serial number

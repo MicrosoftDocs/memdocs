@@ -6,12 +6,10 @@ metadata:
   ms.date: 07/23/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
-  ms.topic: conceptual
+  ms.topic: faq
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
-  
-    
 title: Configuration Manager on Azure FAQ
 summary: |
   *Applies to: Configuration Manager (current branch)*

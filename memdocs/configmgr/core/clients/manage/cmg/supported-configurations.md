@@ -2,7 +2,7 @@
 title: Supported configurations for CMG
 titleSuffix: Configuration Manager
 description: A list of the features and configurations that the Configuration Manager cloud management gateway supports.
-ms.date: 08/02/2021
+ms.date: 12/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -64,13 +64,13 @@ The following table lists CMG support for Configuration Manager features:
 | Automatic site assignment | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Software approval requests | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Configuration Manager console | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
-| Remote tools | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Remote tools | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: <sup>[Note&nbsp;3](#bkmk_note3)</sup> |
 | Reporting website | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Wake on LAN | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | macOS clients | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Peer cache | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | On-premises MDM | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
-| Alternate content providers | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: <sup>[Note&nbsp;3](#bkmk_note3)</sup> |
+| Alternate content providers | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: <sup>[Note&nbsp;4](#bkmk_note4)</sup> |
 | Content for App-V streaming applications | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | Content for Microsoft 365 Apps updates <!--7366753--> | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 | [Prestage content](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent) | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
@@ -100,7 +100,19 @@ In version 2002 and earlier, for domain-joined devices to apply endpoint protect
 
 For more information about support for deploying a task sequence to a client via the CMG, see [Deploy a task sequence over the internet](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md).
 
-#### <a name="bkmk_note3"></a> Note 3: Support for alternate content providers
+#### <a name="bkmk_note3"></a> Note 3: Support for remote tools
+
+As announced at Microsoft Ignite 2021, a public preview of the new remote assistance solution is now available in the Microsoft Endpoint Manager admin center. This cloud-based tool can help you more securely support users of Windows devices.
+
+For more information, see the following resources:
+
+- [Remote help: a new remote assistance tool from Microsoft (blog post)](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/remote-help-a-new-remote-assistance-tool-from-microsoft/ba-p/2822622)
+
+- [Enable remote help scenarios with Microsoft Endpoint Manager (demo video)](https://techcommunity.microsoft.com/t5/video-hub/enable-remote-help-scenarios-with-microsoft-endpoint-manager/ba-p/2911349)
+
+- [Use remote help with Intune and Microsoft Endpoint Manager](../../../../../intune/remote-actions/remote-help.md)
+
+#### <a name="bkmk_note4"></a> Note 4: Support for alternate content providers
 
 Alternate content providers aren't supported to get content from a content-enabled CMG. You can still use them on a client that communicates with a CMG and gets content from other supported content locations.<!-- CMADO-10205600 -->
 

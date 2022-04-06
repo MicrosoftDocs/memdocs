@@ -2,12 +2,12 @@
 # required metadata
 
 title: Update Windows BIOS features using MDM policies in Microsoft Intune
-description: Add a Device Firmware Configuration Interface (DFCI) profile to manage UEFI settings, such as the CPU, built-in hardware, and boot options on Windows 10 devices in Microsoft Intune.
+description: Add a Device Firmware Configuration Interface (DFCI) profile to manage UEFI settings, such as the CPU, built-in hardware, and boot options on Windows 10/11 client devices in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 04/04/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: dagerrit
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -37,9 +37,10 @@ In Intune, use this feature to control BIOS settings. Typically, firmware is mor
 
 This feature applies to:
 
+- Windows 11 on supported UEFI
 - Windows 10 RS5 (1809) and later on supported UEFI
 
-For example, you use Windows 10 devices in a secure environment, and want to disable the camera. You can disable the camera at the firmware-layer, so it doesn't matter what the end user does. Reinstalling the OS or wiping the computer won't turn the camera back on. In another example, lock down the boot options to prevent users from booting up another OS, or an older version of Windows that doesn't have the same security features.
+For example, you use Windows client devices in a secure environment, and want to disable the camera. You can disable the camera at the firmware-layer, so it doesn't matter what the end user does. Reinstalling the OS or wiping the computer won't turn the camera back on. In another example, lock down the boot options to prevent users from booting up another OS, or an older version of Windows that doesn't have the same security features.
 
 When you reinstall an older Windows version, install a separate OS, or format the hard drive, you can't override DFCI management. This feature can prevent malware from communicating with OS processes, including elevated OS processes. DFCI's trust chain uses public key cryptography, and doesn't depend on local UEFI (BIOS) password security. This layer of security blocks local users from accessing managed settings from the device's UEFI (BIOS) menus.
 
@@ -60,7 +61,7 @@ When you reinstall an older Windows version, install a separate OS, or format th
 Autopilot deployment profiles are assigned to Azure AD security groups. Be sure to create groups that include your DFCI-supported devices. For DFCI devices, most organization may create device groups, instead of user groups. Consider the following scenarios:
 
 - Human Resources (HR) has different Windows devices. For security reasons, you don't want anyone in this group to use the camera on the devices. In this scenario, you can create an HR security users group so the policy applies to users in the HR group, whatever the device type.
-- On the manufacturing floor, you have 10 devices. On all devices, you want to prevent booting the devices from a USB device. In this scenario, you can create a security devices group, and add these 10 devices to the group.
+- On the manufacturing floor, you have ten devices. On all devices, you want to prevent booting the devices from a USB device. In this scenario, you can create a security devices group, and add these ten devices to the group.
 
 For more information on creating groups in Intune, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 
@@ -122,7 +123,10 @@ This profile includes the DFCI settings you configure.
     - **Boot from external media (USB, SD)**: Your options:
         - **Not configured**: Intune doesn't change or update this setting.
         - **Enabled**: UEFI (BIOS) allows booting from non-hard drive storage.
-        - **Disabled**: UEFI (BIOS) doesn't allow booting from non-hard drive storage.
+        - **Disabled**: UEFI (BIOS) doesn't allow booting from non-hard drive storage, which also disables booting from network adapters. 
+
+          When set to **Disabled**, don't set the **Boot from network adapters** setting to **Enabled**. It causes the **Boot from external media (USB, SD)** setting or **Boot from network adapters** setting to become not compliant.
+
     - **Boot from network adapters**: Your options:
         - **Not configured**: Intune doesn't change or update this setting.
         - **Enabled**: UEFI (BIOS) allows booting from built-in network interfaces.

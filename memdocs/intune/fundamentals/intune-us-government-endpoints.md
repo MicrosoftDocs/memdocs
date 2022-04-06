@@ -5,8 +5,8 @@ title: Network endpoints for US government deployments - Microsoft Intune
 titleSuffix: 
 description: Review US government endpoints for Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 10/04/2021  
 ms.topic: conceptual

@@ -1,6 +1,7 @@
 ---
 title: SMS_TaskSequence_InstallApplicationAction class
 titleSuffix: Configuration Manager
+description: "The SMS_TaskSequence_InstallApplicationAction WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that installs an application."
 ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

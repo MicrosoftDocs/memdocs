@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: Learn about the different operating system deployment site roles and how to configure these roles by using the SMS_SiteControlFile class. 
 
 ---
 # About Operating System Deployment Site Role Configuration

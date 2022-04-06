@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/25/2021
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,6 +56,16 @@ Intune for Education is included in the following licenses:
 
 For existing Configuration Manager-managed devices to enroll into Intune for co-management at scale without user interaction, co-management uses an Azure Active Directory (Azure AD) feature called Windows 10 auto-enrollment. Auto-enrollment with co-management requires licenses for both Azure AD Premium (AADP1) and Intune. Starting on December 1, 2019, you no longer need to assign individual Intune licenses for this scenario. Microsoft Endpoint Manager now includes the Intune licenses for co-management. The separate AADP1 licensing requirement remains the same for this scenario to work. You still need to assign Intune licenses for other enrollment scenarios.
 
+## Premium add-ons 
+
+Microsoft Endpoint Manager offers premium add-ons. Licenses for the premium add-ons can be added for an additional cost to the licensing options that include Microsoft Endpoint Manager or Intune. 
+
+- **Remote help**: This add-on capability allows secure, helpdesk-to-endpoint connections with role-based remote access permissions.
+ 
+  - [Learn more about remote help](../remote-actions/remote-help.md)
+  
+  - For information about trial and purchasing, see [Getting started with premium add-ons](premium-add-ons.md)
+  
 ## Additional information
 
 - A Microsoft Intune user and device subscription is available as a standalone, in addition to the bundles listed above.

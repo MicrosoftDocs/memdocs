@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent Automatic Deployment Rule (ADR) deployment settings in Configuration Manager.
 title: "SMS_ADRDeploymentSettings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

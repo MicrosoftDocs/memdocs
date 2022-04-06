@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a resource group that serves as the abstract base class for SMS_G_System Server WMI Class using SMS_Group class.
 title: "SMS_Group Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

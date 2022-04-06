@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 10/25/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -82,6 +82,7 @@ The app you've created is displayed in the apps list, where you can assign it to
 > Currently, Apple does not provide a way for Intune to uninstall Microsoft Defender for Endpoint on macOS devices.
 
 ## Next steps
+- To learn about Intune-based deployment for Microsoft Defender for Endpoint on macOS, see [Intune-based deployment for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-install-with-intune)
 - To learn about applying an antivirus policy for endpoint security in Intune, see [Antivirus policy for endpoint security in Intune](../protect/endpoint-security-antivirus-policy.md) 
 - To learn about including and excluding app assignments from groups of users, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
 - To learn how to assign apps to groups in Intune, see [Assign apps to groups](apps-deploy.md).

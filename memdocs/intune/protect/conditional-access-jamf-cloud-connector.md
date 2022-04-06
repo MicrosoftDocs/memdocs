@@ -89,7 +89,7 @@ For more information about these ports, see the following articles:
 Procedures in this article require use of accounts with the following permissions:
 
 - **Jamf Pro console**: An account with permissions to manage Jamf Pro
-- **Microsoft Endpoint Management admin center**: Global Administrator
+- **Microsoft Endpoint Manager admin center**: Global Administrator
 - **Azure portal**: Global Administrator
 
 ## Remove the Jamf Pro integration for a previously configured tenant

@@ -39,7 +39,7 @@ groups:
     - id: atp-april-2020 
       title: April 2020
     - id: atp-march-2020
-      title: March 
+      title: March 2020
 - id: windows-365-baseline-versions
   title: Windows 365 baseline versions
   prompt: Choose a version

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/17/2021
+ms.date: 01/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,15 +34,15 @@ ms.collection:
 
 Device profiles allow you to add and configure settings, and then push these settings to devices in your organization. You have some options when creating policies:
 
-- **Administrative templates**: On Windows 10 and later devices, these templates are ADMX settings that you configure. If you're familiar with ADMX policies or group policy objects (GPO), then using administrative templates is a natural step to Microsoft Intune and Endpoint Manager.
+- **Administrative templates**: On Windows 10/11 devices, these templates are ADMX settings that you configure. If you're familiar with ADMX policies or group policy objects (GPO), then using administrative templates is a natural step to Microsoft Intune and Endpoint Manager.
 
   For more information, see [Administrative Templates](administrative-templates-windows.md)
 
-- **Baselines**: On Windows 10 and later devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
+- **Baselines**: On Windows 10/11 devices, these baselines include preconfigured security settings. If you want to create security policy using recommendations by Microsoft security teams, then security baselines are for you.
 
   For more information, see [Security baselines](../protect/security-baselines.md).
 
-- **Settings catalog**: On Windows 10 and later devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings. 
+- **Settings catalog**: On Windows 10/11 devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings. 
 
   For more information, see [Settings catalog](settings-catalog.md).
 
@@ -59,7 +59,7 @@ This article:
 
 - Lists the steps to create a profile.
 - Shows you how to add a scope tag to "filter" your policies.
-- Describes applicability rules on Windows 10 devices, and shows you how to create a rule.
+- Describes applicability rules on Windows client devices, and shows you how to create a rule.
 - Lists the check-in refresh cycle times when devices receive profiles and any profile updates.
 
 ## Create the profile
@@ -134,9 +134,10 @@ For more information about scope tags, and what you can do, see [Use RBAC and sc
 
 Applies to:
 
-- Windows 10 and later
+- Windows 11
+- Windows 10
 
-Applicability rules allow administrators to target devices in a group that meet specific criteria. For example, you create a device restrictions profile that applies to the **All Windows 10 devices** group. And, you only want the profile assigned to devices running Windows 10 Enterprise.
+Applicability rules allow administrators to target devices in a group that meet specific criteria. For example, you create a device restrictions profile that applies to the **All Windows 10/11 devices** group. And, you only want the profile assigned to devices running Windows Enterprise.
 
 To do this task, create an **applicability rule**. These rules are great for the following scenarios:
 
@@ -174,12 +175,12 @@ When you assign the profile to the groups, the applicability rules act as a filt
 
 3. In **Property**, choose your filter. Your options: 
 
-    - **OS edition**: In the list, check the Windows 10 editions you want to include (or exclude) in your rule.
-    - **OS version**: Enter the **min** and **max** Windows 10 version numbers of you want to include (or exclude) in your rule. Both values are required.
+    - **OS edition**: In the list, check the Windows client editions you want to include (or exclude) in your rule.
+    - **OS version**: Enter the **min** and **max** Windows client version numbers of you want to include (or exclude) in your rule. Both values are required.
 
       For example, you can enter `10.0.16299.0` (RS3 or 1709) for minimum version and `10.0.17134.0` (RS4 or 1803) for maximum version. Or, you can be more granular and enter `10.0.16299.001` for minimum version and `10.0.17134.319` for maximum version.
 
-      For more version numbers, see [Windows 10 release information](/windows/release-health/release-information).
+      For more version numbers, see [Windows client release information](/windows/release-health/release-information).
 
 4. Select **Add** to save your changes.
 

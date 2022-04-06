@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2021
+ms.date: 03/03/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -161,6 +161,10 @@ The following sample contains a simple REST client. The code uses the **httpClie
 2. Choose **File** > **New Project**. Expand **Visual C#**, and choose **Console App (.NET Framework)**.
 3. Name the project `IntuneDataWarehouseSamples`, browse to where you would like to save the project, and then select **OK**.
 4. Right-click the name of the solution in the Solution Explorer, and then select **Manage NuGet Packages for Solution**. Select **Browse**, and then type `Microsoft.IdentityModel.Clients.ActiveDirectory` in the search box.
+
+	> [!NOTE]
+	> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
+
 5. Choose the package, select the **IntuneDataWarehouseSamples** project under Manage Packages for Your Solution, and then select **Install**.
 6. Select **I Accept** to accept the NuGet package license.
 7. Open `Program.cs` from the Solution Explorer.
@@ -203,8 +207,8 @@ The following sample contains a simple REST client. The code uses the **httpClie
    var warehouseUrl = "https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0";
    var collectionName = "dates";
 
-   var adalContext = new AuthenticationContext("https://login.windows.net/common/oauth2/token");
-   AuthenticationResult authResult = adalContext.AcquireTokenAsync(
+   var msalContext = new AuthenticationContext("https://login.windows.net/common/oauth2/token");
+   AuthenticationResult authResult = msalContext.AcquireTokenAsync(
    resource: "https://api.manage.microsoft.com/",
    clientId: applicationId,
    userCredential: new UserPasswordCredential(emailAddress, password)).Result;

@@ -1,6 +1,7 @@
 ---
 title: "RestartComputer Method"
 titleSuffix: "Configuration Manager"
+description: "Learn about RestartComputer Windows Management Instrumentation class method in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

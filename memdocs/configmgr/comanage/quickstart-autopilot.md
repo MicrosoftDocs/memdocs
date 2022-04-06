@@ -33,7 +33,7 @@ Windows Autopilot supports several scenarios, all of which are maximized with co
 
 In the following video, senior program manager Danny Guillory and principal program manager Andrew McMurray discuss and demo Windows Autopilot with co-management:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Using-Windows-Autopilot-with-Co-Management/player]
+> [!VIDEO https://aka.ms/docs/player?id=86b3188d-1f01-4655-b001-2274f072e910]
 
 ## Benefits
 

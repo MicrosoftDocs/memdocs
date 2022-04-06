@@ -61,7 +61,7 @@ You’ll manage your Cloud PC devices by using the [Microsoft Endpoint Manager a
 
 ## Inventory your environment
 
-All users [connect to a Cloud PC](end-user-access-cloud-pc.md) through a Remote Desktop Client or a supported browser. This lets users access their Cloud PC from a wide range of devices.
+All users [connect to a Cloud PC](../end-user-access-cloud-pc.md) through a Remote Desktop Client or a supported browser. This lets users access their Cloud PC from a wide range of devices.
 
 **Task**: For each use case determine how your end users will connect to their Cloud PC. Determine which platforms they'll use to connect. Will they use a browser or a Remote Desktop Client to connect?
 

@@ -4,8 +4,8 @@
 title: Unlicensed admins in Microsoft Intune | Microsoft Docs
 description: Learn how to give unlicensed admins permissions to access Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/08/2021
 ms.topic: how-to

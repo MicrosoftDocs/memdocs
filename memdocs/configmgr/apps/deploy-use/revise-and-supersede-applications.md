@@ -2,7 +2,7 @@
 title: Revise and supersede applications
 titleSuffix: Configuration Manager
 description: Learn how to work with Configuration Manager application versions and supersede applications.
-ms.date: 11/24/2020
+ms.date: 12/16/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
@@ -127,6 +127,13 @@ The end result is that all deployments of the main application use the new depen
 1. On the **Home** tab of the ribbon, in the **Relationships** group, select **View relationships**, and then select **Supersedence**.
 
 This action shows a graphical diagram of the relationships of the selected application to other applications. For the supersedence relationships, it shows applications that the selected application supersedes, and applications that the selected application is superseded by.
+
+### Manage supersedence with PowerShell
+
+You can add, view, and remove supersedence relationships using the following PowerShell cmdlets:
+
+- [Get-CMDeploymentTypeSupersedence](/powershell/module/configurationmanager/get-cmdeploymenttypesupersedence)
+- [Set-CMApplicationSupersedence](/powershell/module/configurationmanager/set-cmapplicationsupersedence)
 
 ## Next steps
 

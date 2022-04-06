@@ -4,8 +4,8 @@
 title: Set up Microsoft Intune
 description: Requirements and prerequisites for starting to use your Intune subscription
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 04/14/2021
 ms.topic: how-to

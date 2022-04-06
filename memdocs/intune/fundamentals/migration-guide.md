@@ -66,7 +66,7 @@ We created some planning and deployment guides to help plan your adoption or mov
 
   - [Enroll devices](deployment-guide-enrollment.md): Use these guides to determine the best enrollment method for your devices. Get an overview of the admin tasks, and the end user tasks. The deployment enrollment guides cover the following areas:
 
-    - [Mobile application management without enrollment (MAM-WE)](deployment-guide-enrollment-mamwe.md)
+    - [Mobile Application Management (MAM)](deployment-guide-enrollment-mamwe.md)
     - [Android](deployment-guide-enrollment-android.md)
     - [iOS/iPadOS](deployment-guide-enrollment-ios-ipados.md)
     - [macOS](deployment-guide-enrollment-macos.md)

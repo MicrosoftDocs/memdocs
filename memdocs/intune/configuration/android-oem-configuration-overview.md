@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 01/26/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -184,6 +184,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Datalogic | com.datalogic.settings.oemconfig | |
 | Ecom - Ex-Handy 10 | com.ecom.econfig | |
 | Ecom - Smart-Ex 02 | com.ecom.econfig.smart | |
+| Getac | com.getac.app.getacoemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
 | Honeywell - Scanpal EDA | com.honeywell.oemconfig.scanpal | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
@@ -207,7 +208,7 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Spectralink - Device | com.spectralink.slnkdevicesettings  |  |
 | Spectralink - Logging | com.spectralink.slnklogger |  |
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
-| Sunmi | com.sunmi.oemconfig.V25 | |
+| Sunmi | com.sunmi.oemconfig.V2S | |
 | Unitech Electronics | com.unitech.oemconfig | |
 | Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig ) |
 

@@ -5,8 +5,8 @@ title: Data Apple sends to Intune
 titleSuffix: Microsoft Intune
 description: List of data that Apple sends to Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 04/19/2018
 ms.topic: conceptual

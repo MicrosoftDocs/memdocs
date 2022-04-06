@@ -1,4 +1,5 @@
 ---
+description: Article detailing the use of ClearLastNBSAdvForCollection in Configuration Manager to clear the last Network Boot advertisement for a selected collection.
 title: "ClearLastNBSAdvForCollection Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

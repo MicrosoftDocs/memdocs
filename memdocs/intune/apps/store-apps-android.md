@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -73,3 +73,7 @@ The **Overview** blade of the app you've created is displayed.
 ## Next steps
 
 - [Assign apps to groups](apps-deploy.md)
+
+## Related topics
+
+- [Add Managed Google Play apps to Android Enterprise devices with Intune](/mem/intune/apps/apps-add-android-for-work)

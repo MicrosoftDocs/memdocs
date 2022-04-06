@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: "In Configuration Manager, you set the operating system deployment PXE service point response delay by updating the ResponseDelay embedded property."
 
 ---
 # How to Set the Response Delay for a PXE Service Point

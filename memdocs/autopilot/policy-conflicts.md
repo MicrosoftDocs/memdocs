@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 8/31/2021
+ms.date: 12/08/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -36,7 +36,7 @@ Some policy settings can cause issues in some Windows Autopilot scenarios. These
 |-------|---------------|
 | [AppLocker CSP](/windows/client-management/mdm/applocker-csp) | The AppLocker CSP is not supported in the Enrollment Status Page as it triggers a reboot when a policy is applied or a deletion occurs. |
 |Device restriction / [Password Policy](/windows/client-management/mdm/devicelock-csp) | The out-of-box experience (OOBE) or user desktop autologon can fail when a device reboots during the device Enrollment Status Page (ESP). This failure can occur when certain [DeviceLock policies](/windows/client-management/mdm/policy-csp-devicelock) are applied to a device. Such policies can include:<ul><li>Minimum password length and password complexity</li><li>Any similar group policy settings (including any that disable autologon)</li></ul>This possible failure is especially true for kiosk scenarios where passwords are automatically generated. |
-| Windows Security Baseline / [Administrator elevation prompt behavior](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)<br><br>Windows Security Baseline / [Require admin approval mode for administrators](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions) | More prompts may appear when modifying user account control (UAC) settings during the OOBE using the device Enrollment Status Page (ESP). Increased prompts are more likely if the device reboots after policies are applied. To work around this issue, the policies can be targeted to users instead of devices so that they apply later in the process. |
+| Windows Security Baseline / [Administrator elevation prompt behavior](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)<br><br>Windows Security Baseline / [Require admin approval mode for administrators](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions)<br><br>Windows Security Baseline / [Enable virtualization based security](/windows/client-management/mdm/policy-csp-deviceguard) | These policies require a reboot, as a result more prompts may appear when modifying user account control (UAC) settings during the OOBE using the device Enrollment Status Page (ESP). Increased prompts are more likely if the device reboots after policies are applied. To work around this issue, the policies can be targeted to users instead of devices so that they apply later in the process. |
 | Device restrictions / Cloud and Storage / [Microsoft Account sign-in assistant](../intune/configuration/device-restrictions-windows-10.md#cloud-and-storage) | Setting this policy to "disabled" will disable the Microsoft Sign-in Assistant service (wlidsvc). This service is required by Windows Autopilot to obtain the Windows Autopilot profile. |
 | Registry keys that affect Windows Autopilot for [pre-provisioned deployment](pre-provision.md)<br><br>**Registry path**:<br>`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\Automatic logon` | **Registry key**:<br>If the [AutoAdminLogon](/troubleshoot/windows-server/user-profiles-and-logon/turn-on-automatic-logon) registry key is set to `0` (disabled), this breaks Windows Autopilot pre-provisioning. |
 | [MDM wins over Group Policy](/windows/client-management/mdm/policy-csp-controlpolicyconflict) | This policy allows the IT admin to control which policy will be used when both the MDM policy and its equivalent Group Policy (GP) are set on the device. |

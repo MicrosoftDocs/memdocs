@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a summary for a given software update in given software updates deployment in Configuration Manager.
 title: "SMS_UpdateDeploymentSummary Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

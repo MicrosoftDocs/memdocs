@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 01/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -42,7 +43,7 @@ Intune supports one kiosk profile per device. If you need multiple kiosk profile
 
 Intune uses "configuration profiles" to create and customize these settings for your organization's needs. After you add these features in a profile, push or deploy these settings to groups in your organization.
 
-This article shows you how to create a device configuration profile. For a list of all the settings, and what they do, see [Windows 10 kiosk settings](kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md).
+This article shows you how to create a device configuration profile. For a list of all the settings, and what they do, see [Windows client kiosk settings](kiosk-settings-windows.md) and [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md).
 
 ## Create the profile
 
@@ -76,7 +77,7 @@ This article shows you how to create a device configuration profile. For a list 
 
     For a list of all settings, and what they do, see:
 
-      - [Windows 10 kiosk settings](kiosk-settings-windows.md)
+      - [Windows client kiosk settings](kiosk-settings-windows.md)
       - [Windows Holographic for Business kiosk settings](kiosk-settings-holographic.md)
 
 8. Select **Next**.
@@ -101,5 +102,5 @@ You can also create kiosk profiles for devices that run the following platforms:
 
 - [Android device administrator](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md#device-experience)
-- [Windows 10 and later](kiosk-settings-windows.md)
+- [Windows 10/11](kiosk-settings-windows.md)
 - [Windows Holographic for Business](kiosk-settings-holographic.md)
