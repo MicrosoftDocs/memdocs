@@ -1,4 +1,5 @@
 ---
+description: Learn how the following will modify a program, in Configuration Manager, by using the SMS_Package and SMS_Program classes and properties.
 title: "Modify Program Properties"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

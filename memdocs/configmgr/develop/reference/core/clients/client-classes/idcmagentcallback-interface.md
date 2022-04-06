@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the IDCMAgentCallback interface to represent the callback for the desired configuration management agent. This interface inherits from IUnknown.  
 title: "IDCMAgentCallback Interface"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

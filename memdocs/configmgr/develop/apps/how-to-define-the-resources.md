@@ -1,6 +1,7 @@
 ---
 title: "How to Define the Resources"
 titleSuffix: "Configuration Manager"
+description: "To support the Installer, a custom XML schema should be included as part of the assembly and the schema XSD file must be included as a resource in the assembly."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

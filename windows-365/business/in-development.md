@@ -62,14 +62,6 @@ The windows365.microsoft.com web client will be moving out of preview and into g
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### End-user error log collection<!--38195529-->
-
-End users will be able to collect error logs.
-
-### End-user feedback<!--38195529-->
-
-End users will be able to provide feedback to Microsoft from within the Windows 365 web client.
-
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).

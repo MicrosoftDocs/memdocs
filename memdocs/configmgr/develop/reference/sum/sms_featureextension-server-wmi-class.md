@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_FeatureExtension class to represent feature extensions.  
 title: "SMS_FeatureExtension Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

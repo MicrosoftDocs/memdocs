@@ -1,4 +1,5 @@
 ---
+description: Learn how the GetNextID Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the ID number that will be used for the next advertisement created.
 title: "GetNextID Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
