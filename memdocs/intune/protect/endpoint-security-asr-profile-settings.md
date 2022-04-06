@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/01/2021
+ms.date: 04/06/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -211,6 +211,9 @@ Supported platforms and profiles:
 
 #### Attack Surface Reduction Rules
 
+> [!NOTE]  
+> This section details the settings in Attack Surface Reduction Rules profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.  
+
 - **Block persistence through WMI event subscription**  
   [Reduce attack surfaces with attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
@@ -220,7 +223,7 @@ Supported platforms and profiles:
 
   - **Not configured** (default) – The setting returns to the Windows default, which is off and persistence is not blocked.
   - **Block** – Persistence through WMI is blocked.
-  - **Audit** – Evaluate how this rule affects your organization if its enabled (set to Block).
+  - **Audit** – Evaluate how this rule affects your organization if it's enabled (set to Block).
   - **Disable** - Turn this rule off. Persistence is not blocked.
 
   To learn more about this setting, see [Block persistence through WMI event subscription](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx#block-persistence-through-wmi-event-subscription).
@@ -542,6 +545,9 @@ Supported platforms and profiles:
 ### Exploit protection profile
 
 #### Exploit protection
+
+  > [!NOTE]  
+  > This  section details the settings you can find in Exploit protection profiles created before April 5, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.
 
 - **Upload XML**  
   CSP: [ExploitProtectionSettings](/windows/client-management/mdm/policy-csp-exploitguard#exploitguard-exploitprotectionsettings)

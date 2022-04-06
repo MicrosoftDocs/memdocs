@@ -1,6 +1,7 @@
 ---
 title: "CCM_PolicyAgent_Configuration Class"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class that represents the Policy Agent configuration for a given authority."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

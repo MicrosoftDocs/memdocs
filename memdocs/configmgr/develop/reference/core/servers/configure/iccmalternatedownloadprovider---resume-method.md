@@ -1,6 +1,7 @@
 ---
 title: "ICcmAlternateDownloadProvider : Resume"
 titleSuffix: "Configuration Manager"
+description: "The ICcmAlternateDownloadProvider::Resume method instructs the provider to resume a given job."
 ms.date: "07/25/2017"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

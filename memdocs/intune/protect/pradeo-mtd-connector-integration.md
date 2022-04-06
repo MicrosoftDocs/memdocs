@@ -71,7 +71,7 @@ The Pradeo app authorization process follows:
 
 ## To set up Pradeo integration
 
-1. Go to [Pradeo Security console](https://www.pradeo-security.com) and sign in with your credentials.
+1. Go to [Pradeo Security console](https://pradeo-security.com/) and sign in with your credentials.
 
 2. Choose **Administration - Enterprise Mobility Management** from the menu.
 

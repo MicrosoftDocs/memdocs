@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/20/2021
+ms.date: 04/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -63,6 +63,9 @@ The actual time that a device starts to update depends on the device being onlin
 - Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update rings for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
 
 ## Prerequisites
+
+> [!IMPORTANT]
+> This feature is not supported on GCC High/DoD cloud environments.
 
 The following are requirements to qualify for installing expedited quality updates with Intune:
 
