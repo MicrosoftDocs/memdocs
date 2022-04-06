@@ -1,4 +1,5 @@
 ---
+description: The SMS_ST_NonRecurring Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents a schedule token for non-recurring events. 
 title: "SMS_ST_NonRecurring Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

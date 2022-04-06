@@ -1,4 +1,5 @@
 ---
+description: The UpdateAutoUpgradeClientContent Windows Management Instrumentation class method, in Configuration Manager, updates auto-upgrade client content to all distribution points.
 title: "UpdateAutoUpgradeClientContent Method"
 titleSuffix: "Configuration Manager"
 description: "A Windows Management Instrumentation class method that updates auto-upgrade client content to all distribution points."
