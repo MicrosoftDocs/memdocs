@@ -1,4 +1,5 @@
 ---
+description: The IDCMSDK::EvaluateBaseline method, in Configuration Manager, runs the discover operation for the specified baseline configuration item. 
 title: "IDCMSDK::EvaluateBaseline"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

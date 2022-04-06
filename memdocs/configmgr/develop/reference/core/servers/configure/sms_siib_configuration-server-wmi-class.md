@@ -1,4 +1,5 @@
 ---
+description: The SMS_SIIB_Configuration WMI class is an SMS Provider server class, in Configuration Manager, that represents the configuration in the Configuration Manager console.
 title: "SMS_SIIB_Configuration Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

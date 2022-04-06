@@ -1,4 +1,5 @@
 ---
+description: The GetTotalNumResults Windows Management Instrumentation class method gets a count of all members in a collection, including subcollections.
 title: "GetTotalNumResults Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
