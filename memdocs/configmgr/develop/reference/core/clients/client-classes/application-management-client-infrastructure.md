@@ -1,5 +1,6 @@
 ---
 title: "Application Management Client Infrastructure"
+description: Learn about reference information for the Configuration Manager application management client infrastructure.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

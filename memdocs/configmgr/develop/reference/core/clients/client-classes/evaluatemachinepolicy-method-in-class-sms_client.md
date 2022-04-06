@@ -1,5 +1,6 @@
 ---
 title: "EvaluateMachinePolicy Method"
+description: Learn how the EvaluateMachinePolicy method initiates the evaluation of the policy assigned to a specified computer or device. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
