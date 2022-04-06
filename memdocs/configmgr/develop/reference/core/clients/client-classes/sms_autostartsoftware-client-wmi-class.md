@@ -1,5 +1,6 @@
 ---
 title: "SMS_AutoStartSoftware Class"
+description: The SMS_AutoStartSoftware class is a client Windows Management Instrumentation (WMI) class that enumerates software that starts automatically with the operating system.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

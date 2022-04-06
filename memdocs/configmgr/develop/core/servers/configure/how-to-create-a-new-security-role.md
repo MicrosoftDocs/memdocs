@@ -1,5 +1,6 @@
 ---
 title: "Create a New Security Role"
+description: Learn how the administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
