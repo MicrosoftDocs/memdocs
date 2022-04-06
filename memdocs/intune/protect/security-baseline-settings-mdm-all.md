@@ -1661,14 +1661,14 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
   Specify the level of cloud-delivered protection. Not Configured uses the default Microsoft Defender Antivirus blocking level and provides strong detection without increasing the risk of detecting legitimate files. High applies a strong level of detection. High + uses the High level and applies addition protection measures (may impact client performance). Zero tolerance blocks all unknown executables While unlikely, setting to High may cause some legitimate files to be detected. 
 
-**Default**: Not Configured
+  **Default**: Not Configured
 
 - **Scan network files**:  
   CSP: [Defender/AllowScanningNetworkFiles](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
   When set to Yes, Microsoft Defender will scan network files. When set to Not configured, the client will return to default with is disabling scanning of network files.
 
-**Default**: Yes
+  **Default**: Yes
 
 - **Turn on real-time protection**  
   CSP: [Defender/AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
