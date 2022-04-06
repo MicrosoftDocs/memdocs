@@ -1,4 +1,5 @@
 ---
+description: The IDCMSDK::EvaluateBaseline method, in Configuration Manager, runs the discover operation for the specified baseline configuration item. 
 title: "IDCMSDK::EvaluateBaseline"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -42,7 +43,7 @@ HRESULT EvaluateBaseline(
 
  Qualifiers: [in]  
 
- Pointer to an [IDCMAgentCallback Interface](../../../../../develop/reference/core/clients/client-classes/idcmagentcallback-interface.md) object which is used to notify the agent of the of progress, completion or failure of the operation.  
+ Pointer to an [IDCMAgentCallback Interface](../../../../../develop/reference/core/clients/client-classes/idcmagentcallback-interface.md) object which is used to notify the agent of the progress, completion, or failure of the operation.
 
  `bForce`  
  Data type: `BOOL`  

@@ -1,4 +1,5 @@
 ---
+description: The SMS_AppFailedVEsData Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
 title: "SMS_AppFailedVEsData Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,7 @@
 ---
 title: "GetTsPolicies Method"
 titleSuffix: "Configuration Manager"
+description: "The GetTsPolicies WMI class method gets all policies associated with the specified task sequence."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

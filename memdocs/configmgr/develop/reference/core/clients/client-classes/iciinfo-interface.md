@@ -1,6 +1,7 @@
 ---
 title: "ICIINFO Interface"
 titleSuffix: "Configuration Manager"
+description: "ICIINFO can represent a configuration item which has been downloaded and stored by the Desired Configuration Management client or a baseline configuration item in a Desired Configuration Management Agent job in the client data store."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

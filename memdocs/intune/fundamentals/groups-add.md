@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/29/2021
+ms.date: 03/31/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -97,8 +97,8 @@ Please note: Only security-enabled Microsoft 365 Groups are supported
 > - All Charlotte employees
 > - All WA employees
 
-## Intune All Users and All Devices groups
-When assigning policies and apps in the admin center you can choose to assign to **All Users** or **All devices** groups, which are pre-created. The **All devices** group targets all devices that are enrolled into management and the **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you do not create them or view them in Azure Active Directory. They are convenient to use (because they are pre-created in your tenant) and they are a faster targeting unit than Azure AD groups.
+## Intune All users and All devices groups
+When assigning policies and apps in the admin center you can choose to assign to **All users** or **All devices** groups, which are pre-created. The **All devices** group targets all devices that are enrolled into management and the **All users** group is a simple way to target all users that are assigned an Intune license. These groups are considered "virtual" because you do not create them or view them in Azure Active Directory. They are convenient to use (because they are pre-created in your tenant) and they are a faster targeting unit than Azure AD groups.
 
 When assigning policies and applications to large groups such as **All users** and **All devices** you may choose to use **Filters**, so that you can dynamically control which devices the policy or app deployment should apply to.
 

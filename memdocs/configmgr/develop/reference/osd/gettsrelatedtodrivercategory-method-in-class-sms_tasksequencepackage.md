@@ -1,6 +1,7 @@
 ---
 title: "GetTSRelatedToDriverCategory Method"
 titleSuffix: "Configuration Manager"
+description: "The GetTSRelatedToDriverCategory WMI class method gets task sequence packages related to the specified category."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

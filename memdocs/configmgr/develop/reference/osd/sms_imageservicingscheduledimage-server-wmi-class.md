@@ -1,6 +1,7 @@
 ---
 title: "SMS_ImageServicingScheduledImage Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ImageServicingScheduledImage WMI class represents all schedules for offline servicing image."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
