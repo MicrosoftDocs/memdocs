@@ -47,7 +47,9 @@ Intune supports devices running the following operating systems (OS):
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
-Supported platforms for MDE Integration: https://docs.microsoft.com/en-us/mem/intune/protect/mde-security-integration
+### Supported platforms for MDE Integration
+
+For more information, see [Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md)
 
 ### Supported Samsung Knox Standard devices  
 
