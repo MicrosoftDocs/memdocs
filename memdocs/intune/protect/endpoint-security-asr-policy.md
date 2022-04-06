@@ -137,7 +137,7 @@ Device control profiles support policy merge for USB Device IDs. The profile set
 
 Policy merge applies to the configuration of each setting across the different profiles that apply that specific setting to a device. The result is a single list for each of the supported settings being applied to a device. For example:
 
-- Policy merge evaluates the lists of *setup classes* that were configured in each instance of *Allow hardware device installation by setup classes* that applies to a device. The into a single allowlist where any duplicate setup classes are removed.
+- Policy merge evaluates the lists of *setup classes* that were configured in each instance of *Allow hardware device installation by setup classes* that applies to a device. The lists are merged into a single allowlist where any duplicate setup classes are removed.
 
   Removal of duplicates from the list is done to remove the common source of conflicts. The combined allowlist is then delivered to the device.
 

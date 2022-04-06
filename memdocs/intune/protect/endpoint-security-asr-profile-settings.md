@@ -223,7 +223,7 @@ Supported platforms and profiles:
 
   - **Not configured** (default) – The setting returns to the Windows default, which is off and persistence is not blocked.
   - **Block** – Persistence through WMI is blocked.
-  - **Audit** – Evaluate how this rule affects your organization if its enabled (set to Block).
+  - **Audit** – Evaluate how this rule affects your organization if it's enabled (set to Block).
   - **Disable** - Turn this rule off. Persistence is not blocked.
 
   To learn more about this setting, see [Block persistence through WMI event subscription](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx#block-persistence-through-wmi-event-subscription).
