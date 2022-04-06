@@ -304,7 +304,7 @@ Starting in version 2111, Configuration Manager requires Microsoft .NET Framewor
 > [!NOTE]
 > Third-party add-ons that use Microsoft .NET Framework and rely on Configuration Manager libraries also need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462).
 >
->To determine the systems that need to be updated, please review the ConfigMgrPrereq.log found on the system drive of the computer.
+> To determine the systems that need to be updated, review the **ConfigMgrPrereq.log** found on the system drive of the computer. <!--10977707-->
 <!--10529267-->
 
 ### Server service is running
