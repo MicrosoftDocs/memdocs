@@ -1,5 +1,6 @@
 ---
 title: "CreateSMSStatusMessage Function"
+description: Learn how the CreateSMSStatusMessage function allocates a status message object, initializes it, and retrieves a handle to it.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

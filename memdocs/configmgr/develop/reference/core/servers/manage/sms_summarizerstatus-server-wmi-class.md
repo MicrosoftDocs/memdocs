@@ -1,5 +1,7 @@
 ---
 title: "SMS_SummarizerStatus Class"
+description: Learn how the SMS_SummarizerStatus class is an SMS Provider server class that identifies registered summarizers, without defining any specific status information.
+description: Learn how the 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
