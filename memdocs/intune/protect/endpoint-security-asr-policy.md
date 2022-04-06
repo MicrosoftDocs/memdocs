@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/20/2020
+ms.date: 04/06/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -36,8 +36,6 @@ Attack surface reduction policies help reduce your attack surfaces, by minimizin
 
 Find the endpoint security policies for attack surface reduction under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each attack surface reduction *profile* manages settings for a specific area of a Windows 10/11 device.
 
-View [settings for Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).
-
 ## Prerequisites for Attack surface reduction profiles
 
 **General**:
@@ -54,6 +52,13 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
   To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
 ## Attack surface reduction profiles
+
+> [!NOTE]  
+> Beginning on April 5, 2022, the following profiles for Attack surface reduction policy have been updated to use the settings format as found in the Settings Catalog, while the other profiles are unchanged:  
+> - Attack surface reduction rules
+> - Exploit protection  
+>
+> The new versions of these two profiles include the same settings as the older profile templates they replace. With this change, all new instances of these profiles will use the new settings format. Your previously crated instances of these profiles remain available to use and edit.
 
 ### Devices managed by Intune
 
@@ -85,7 +90,6 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
   - Behaviors that apps don't usually start during normal day-to-day work
 Reducing your attack surface means offering attackers fewer ways to perform attacks.
 
-  To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
 
   **Merge behavior for Attack surface reduction rules in Intune**:
 
@@ -107,8 +111,6 @@ Reducing your attack surface means offering attackers fewer ways to perform atta
   To learn more, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in the Microsoft Defender for Endpoint documentation.
 
 - **Exploit protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of a number of mitigations that can be applied to either the operating system or individual apps.
-
-  To learn more, see [Enable exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) in the Microsoft Defender for Endpoint documentation.
 
 ### Devices managed by Configuration Manager
 
@@ -135,7 +137,7 @@ Device control profiles support policy merge for USB Device IDs. The profile set
 
 Policy merge applies to the configuration of each setting across the different profiles that apply that specific setting to a device. The result is a single list for each of the supported settings being applied to a device. For example:
 
-- Policy merge evaluates the lists of *setup classes* that were configured in each instance of *Allow hardware device installation by setup classes* that applies to a device. The into a single allowlist where any duplicate setup classes are removed.
+- Policy merge evaluates the lists of *setup classes* that were configured in each instance of *Allow hardware device installation by setup classes* that applies to a device. The lists are merged into a single allowlist where any duplicate setup classes are removed.
 
   Removal of duplicates from the list is done to remove the common source of conflicts. The combined allowlist is then delivered to the device.
 
@@ -151,3 +153,5 @@ Policy merge doesn’t compare or merge the configurations from different settin
 ## Next steps
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+
+View details for the settings in profiles for [Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).

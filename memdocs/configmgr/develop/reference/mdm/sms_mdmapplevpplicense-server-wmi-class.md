@@ -1,6 +1,7 @@
 ---
 title: "SMS_MDMAppleVppLicense Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MDMAppleVppLicense WMI class represents an Apple Volume Purchase Program (VPP) licensed application."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
