@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_SofwareDistribution_Event class to create other advertisement status-message classes.
 title: "SMS_SofwareDistribution_Event"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

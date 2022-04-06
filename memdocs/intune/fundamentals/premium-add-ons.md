@@ -38,7 +38,7 @@ Licenses for the Premium add-ons can be added for an additional cost to the lice
 Global and Billing administrators can use the **Premium add-ons** page from the [Microsoft 365 admin center](https://admin.microsoft.com) to start a free trial or purchase licenses for each Premium add-on. 
 
 > [!NOTE]
-Premium add-ons are currently not supported in Sovereign clouds.
+> Premium add-ons are currently not supported in Sovereign clouds.
 
 ## What add-ons capabilities are available 
 

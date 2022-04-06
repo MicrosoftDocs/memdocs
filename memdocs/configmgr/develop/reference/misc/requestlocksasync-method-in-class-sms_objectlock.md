@@ -37,7 +37,6 @@ SInt32 RequestLocksAsync(
  Qualifiers: [in]  
 
  The paths of the objects for which the locks are requested.  
-
  `RequestTransfer`  
  Data type: `Boolean`  
 

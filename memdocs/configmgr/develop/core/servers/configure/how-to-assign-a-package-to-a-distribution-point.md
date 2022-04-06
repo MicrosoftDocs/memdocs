@@ -1,6 +1,7 @@
 ---
 title: "Assign a Package to a Distribution Point"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the following example shows how to assign a distribution point to a package by using the SMS_DistributionPoint and SMS_SystemResourceList classes."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

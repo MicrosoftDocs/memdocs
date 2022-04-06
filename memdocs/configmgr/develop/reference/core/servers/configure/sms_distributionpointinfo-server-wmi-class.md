@@ -1,6 +1,7 @@
 ---
 title: SMS_DistributionPointInfo class
 titleSuffix: Configuration Manager
+description: "An SMS Provider server class that provides information about a specific SMS_DistributionPoint server WMI class object."
 ms.date: 05/24/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

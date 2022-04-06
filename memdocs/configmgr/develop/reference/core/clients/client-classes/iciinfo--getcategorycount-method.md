@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the ICIINFO::GetCategoryCount method to get the count of categories that are associated with the configuration item.  
 title: "ICIINFO::GetCategoryCount"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

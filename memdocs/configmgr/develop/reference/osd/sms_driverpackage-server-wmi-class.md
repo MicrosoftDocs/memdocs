@@ -1,6 +1,7 @@
 ---
 title: "SMS_DriverPackage Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents the package, which is the unit of distribution of program binaries with which one or more device drivers are associated."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

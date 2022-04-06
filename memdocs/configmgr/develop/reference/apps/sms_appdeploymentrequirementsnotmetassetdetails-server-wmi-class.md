@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_AppDeploymentRequirementsNotMetAssetDetails class to represent asset-level details of application deployments where requirements are not met.  
 title: "SMS_AppDeploymentRequirementsNotMetAssetDetails Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

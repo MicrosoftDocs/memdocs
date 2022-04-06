@@ -1,6 +1,7 @@
 ---
 title: "LoadIconForPDF Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the LoadIconForPDF Windows Management Instrumentation class method imports a required icon for a package definition file."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
