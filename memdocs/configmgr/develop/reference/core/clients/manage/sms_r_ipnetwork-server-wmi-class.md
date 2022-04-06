@@ -1,4 +1,5 @@
 ---
+description: The SMS_R_IPNetwork WMI class is an SMS Provider server class, in Configuration Manager, that is generated dynamically and contains data for resources discovered by the Network Discovery Agent. 
 title: "SMS_R_IPNetwork Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
