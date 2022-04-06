@@ -1,4 +1,5 @@
 ---
+description: The ICIINFO::GetEvalState method, in Configuration Manager, gets the current evaluation state of the configuration item.
 title: "ICIINFO::GetEvalState"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

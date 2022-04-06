@@ -1,4 +1,5 @@
 ---
+description: The InstallStatusMIF function creates a status Management Information Format (MIF) file that Configuration Manager uses to correlate the install status for an advertisement.
 title: "InstallStatusMIF Function"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
