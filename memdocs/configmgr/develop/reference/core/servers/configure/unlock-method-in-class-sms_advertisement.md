@@ -1,6 +1,7 @@
 ---
 title: "Unlock Method in Class SMS_Advertisement"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the Unlock WMI class method sets the source site to the current site, unlocking the advertisement."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
