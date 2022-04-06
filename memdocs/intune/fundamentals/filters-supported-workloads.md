@@ -286,13 +286,13 @@ You can use filters for some common device configuration policies on the followi
 | Wi-Fi | ✔️ |
 | Windows health monitoring | ✔️ |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ✔️ <br/> This feature isn’t working as expected, and will be fixed in an upcoming release. |
-| Antivirus | ✔️ <br/> This feature isn’t working as expected, and will be fixed in an upcoming release.|
-| Attack surface reduction | ✔️ <br/> This feature isn’t working as expected, and will be fixed in an upcoming release.|
-| Disk encryption | ✔️ <br/> This feature isn’t working as expected, and will be fixed in an upcoming release.|
-| Endpoint detection and response | ✔️ <br/> This feature isn’t working as expected, and will be fixed in an upcoming release.|
-| Firewall | ✔️ <br/> This feature isn’t working as expected, and will be fixed in an upcoming release.|
-| Security Baselines | ✔️ <br/> This feature isn’t working as expected, and will be fixed in an upcoming release.|
+| Account protection | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment. |
+| Antivirus | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Attack surface reduction | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Disk encryption | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Endpoint detection and response | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Firewall | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Security Baselines | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
 
 ## Not supported
 
