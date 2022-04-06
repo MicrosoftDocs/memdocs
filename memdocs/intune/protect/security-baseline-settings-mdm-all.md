@@ -7,7 +7,7 @@ description: Review the defaults and available settings for the different versio
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2021
+ms.date: 04/06/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -66,6 +66,16 @@ To update a security baseline profile to the latest version of that baseline, se
 
 ::: zone-end
 ::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+
+## Above Lock
+
+- **Voice activate apps from locked screen**
+  Specifies whether or not the user can interact with a voice assistant using speech while the system is locked. If you enable or don’t configure this setting, the user can interact with voice assistant using speech while the system is locked. If you disable this setting, the system will need to be unlocked for the user to interact using speech.
+  [Learn More](/windows/client-management/mdm/policy-csp-privacy)
+
+- **Block display of toast notifications**
+  Block toast notifications above the device lock screen.
+  [Learn More](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)
 
 ## App Runtime
 
@@ -1628,7 +1638,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
   Specify the scan type to use for a schedule scan
 
-  **Default** Quick scan
+  **Default**: Quick scan
 
 - **Defender schedule scan day**:  
   Defender schedule scan day.
@@ -1645,6 +1655,20 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
 ::: zone-end
 ::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+
+- **Cloud-delivered protection level**
+  CSP: [Defender/CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
+
+  Specify the level of cloud-delivered protection. Not Configured uses the default Microsoft Defender Antivirus blocking level and provides strong detection without increasing the risk of detecting legitimate files. High applies a strong level of detection. High + uses the High level and applies addition protection measures (may impact client performance). Zero tolerance blocks all unknown executables While unlikely, setting to High may cause some legitimate files to be detected. 
+
+**Default**: Not Configured
+
+- **Scan network files**
+  CSP: [Defender/AllowScanningNetworkFiles](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
+
+  When set to Yes, Microsoft Defender will scan network files. When set to Not configured, the client will return to default with is disabling scanning of network files.
+
+**Default**: Yes
 
 - **Turn on real-time protection**  
   CSP: [Defender/AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
@@ -1677,6 +1701,13 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   CSP: [Defender/AllowBehaviorMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
   When this setting is set to Yes, behavior monitoring will be enforced and the user can't disable it. When set to Not configured, the setting is returned to client default, which is on, but the user can change it. To disable real-time monitoring, use a custom URI.
+
+  **Default**: Yes
+
+- **Turn on cloud-delivered protection**
+  CSP: [Defender/AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
+
+  When set to Yes, Defender will send information to Microsoft about any problems it finds. If set to Not configured, the client will return to default which enables the feature but allows the user to disable it.
 
   **Default**: Yes
 
@@ -1725,6 +1756,13 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
 
   When set to yes, Defender will block execution of obfuscated scripts. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This ASR rule is controlled via the following GUID: 5BEB7EFE-FD9A-4556-801D-275E5FFC04CC
+  
+  **Default**: Block
+
+- **Block JavaScript or VBScript from launching downloaded executable content**:  
+  [Protect devices from exploits](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction)
+
+  When set to Yes, Defender will block Javascript or VBScript files that have been downloaded from the Internet from being executed. When set to Audit only, Windows events will be raised instead of blocking. Setting to Not Configured will return the setting to Windows default, which is off. This attack surface reduction (ASR) rule is controlled via the following GUID: D3E037E1-3EB8-44C8-A917-57927947596D
   
   **Default**: Block
 
