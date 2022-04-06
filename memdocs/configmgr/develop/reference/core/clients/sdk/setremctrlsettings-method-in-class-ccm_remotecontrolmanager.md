@@ -1,6 +1,7 @@
 ---
 title: "SetRemCtrlSettings Method"
 titleSuffix: "Configuration Manager"
+description: "The SetRemCtrlSettings WMI class method specifies the remote control settings on a client computer."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

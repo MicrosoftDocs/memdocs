@@ -1,6 +1,7 @@
 ---
 title: "GetImageProperties Method in SMS_BootImagePackage"
 titleSuffix: "Configuration Manager"
+description: "The GetImageProperties WMI class method reads all metadata from the specified .wim source file for a boot image to an XML string."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

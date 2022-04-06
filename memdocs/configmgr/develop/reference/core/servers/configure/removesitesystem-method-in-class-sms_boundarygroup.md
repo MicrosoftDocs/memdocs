@@ -1,6 +1,7 @@
 ---
 title: RemoveSiteSystem method in class SMS_BoundaryGroup
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that removes site systems from a boundary group."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

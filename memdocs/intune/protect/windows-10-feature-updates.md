@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 04/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,6 +57,9 @@ When a device receives a policy for Feature updates:
 - You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md).
 
 ## Prerequisites
+
+> [!IMPORTANT]
+> This feature is not supported on GCC High/DoD cloud environments.
 
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 

@@ -1,5 +1,6 @@
 ---
 title: "ITSEnvClass::Create"
+description: Learn how the `Create` method creates an operating system deployment task sequence environment in the Configuration Manager.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

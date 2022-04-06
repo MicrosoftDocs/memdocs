@@ -302,7 +302,10 @@ This rule checks if the .NET Framework is at least version 4.6.2. You'll see thi
 Starting in version 2111, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
 
 > [!NOTE]
-> Third-party add-ons that use Microsoft .NET Framework and rely on Configuration Manager libraries also need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462)<!--10529267-->.
+> Third-party add-ons that use Microsoft .NET Framework and rely on Configuration Manager libraries also need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462).
+>
+> To determine the systems that need to be updated, review the **ConfigMgrPrereq.log** found on the system drive of the computer. <!--10977707-->
+<!--10529267-->
 
 ### Server service is running
 
@@ -815,7 +818,7 @@ _Applies to: CAS, primary site, secondary site_
 In version 2107, this rule checks if the .NET Framework is at least version 4.6.2. You'll see this warning if the system has less than version 4.6.2.
 
 > [!IMPORTANT]
-> Starting in version 2111, if this check fails, it returns an [error](#required-version-of-microsoft-net-framework-error) instead of a warning.
+> Starting in version 2111, if this check fails, it returns an [error](#required-version-of-microsoft-net-framework-error) instead of a warning. To determine the systems that need to be updated, review the ConfigMgrPrereq.log found on the system drive of the computer. <!--10977707-->
 
 Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
 

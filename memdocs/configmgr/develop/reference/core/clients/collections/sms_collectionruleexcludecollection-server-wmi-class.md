@@ -1,5 +1,6 @@
 ---
 title: "SMS_CollectionRuleExcludeCollection Class"
+description: The SMS_CollectionRuleExcludeCollection class is an SMS Provider server class represents an exclusion rule that is added as a rule to the SMS_Collection instance.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
