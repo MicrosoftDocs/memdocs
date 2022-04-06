@@ -1,6 +1,7 @@
 ---
 title: AddDistributionPoints method in class SMS_SoftwareUpdatesPackage
 titleSuffix: "Configuration Manager"
+description: "The AddDistributionPoints WMI class method adds the distribution points for the software updates package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
