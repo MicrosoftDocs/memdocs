@@ -69,12 +69,12 @@ To update a security baseline profile to the latest version of that baseline, se
 
 ## Above Lock
 
-- **Voice activate apps from locked screen**
-  Specifies whether or not the user can interact with a voice assistant using speech while the system is locked. If you enable or don’t configure this setting, the user can interact with voice assistant using speech while the system is locked. If you disable this setting, the system will need to be unlocked for the user to interact using speech.
+- **Voice activate apps from locked screen**:  
+  Specifies whether or not the user can interact with a voice assistant using speech while the system is locked. If you enable or don’t configure this setting, the user can interact with voice assistant using speech while the system is locked. If you disable this setting, the system will need to be unlocked for the user to interact using speech.  
   [Learn More](/windows/client-management/mdm/policy-csp-privacy)
 
-- **Block display of toast notifications**
-  Block toast notifications above the device lock screen.
+- **Block display of toast notifications**:  
+  Block toast notifications above the device lock screen.  
   [Learn More](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)
 
 ## App Runtime
@@ -1656,14 +1656,14 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 ::: zone-end
 ::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
 
-- **Cloud-delivered protection level**
+- **Cloud-delivered protection level**:  
   CSP: [Defender/CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
   Specify the level of cloud-delivered protection. Not Configured uses the default Microsoft Defender Antivirus blocking level and provides strong detection without increasing the risk of detecting legitimate files. High applies a strong level of detection. High + uses the High level and applies addition protection measures (may impact client performance). Zero tolerance blocks all unknown executables While unlikely, setting to High may cause some legitimate files to be detected. 
 
 **Default**: Not Configured
 
-- **Scan network files**
+- **Scan network files**:  
   CSP: [Defender/AllowScanningNetworkFiles](/windows/client-management/mdm/policy-csp-defender#defender-allowscanningnetworkfiles)
 
   When set to Yes, Microsoft Defender will scan network files. When set to Not configured, the client will return to default with is disabling scanning of network files.
@@ -1704,7 +1704,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 
   **Default**: Yes
 
-- **Turn on cloud-delivered protection**
+- **Turn on cloud-delivered protection**:  
   CSP: [Defender/AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
   When set to Yes, Defender will send information to Microsoft about any problems it finds. If set to Not configured, the client will return to default which enables the feature but allows the user to disable it.
