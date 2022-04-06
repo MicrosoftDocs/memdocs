@@ -1,6 +1,7 @@
 ---
 title: "Create a New Administrator"
 titleSuffix: "Configuration Manager"
+description: "Learn how administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
