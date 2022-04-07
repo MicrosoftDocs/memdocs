@@ -78,7 +78,7 @@ public void CreateSMSAdmin(WqlConnectionManager connection, string distinguished
 | --------- | ---- | ----------- |
 |`connection`|-   Managed: `WqlConnectionManager`|A valid connection to the SMS Provider.|  
 |`distinguishedName`|-   Managed: `String`|Like "CN=John Doe,OU=UserAccounts,DC=contoso,DC=com"|  
-|`categoryID`|-   Managed: `String`|The RBA secured categories associated with this account .|  
+|`categoryID`|-   Managed: `String`|The RBA secured categories associated with this account.|  
 |`CategoryTypeID`|-   Managed: `Integer`|The type of the category (collection or secured scope).|  
 
 ## Compiling the Code  
