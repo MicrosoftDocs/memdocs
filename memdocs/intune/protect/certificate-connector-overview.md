@@ -87,7 +87,7 @@ The Certificate Connector for Microsoft Intune supports:
 
 Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
 
-Intune supports each connector release for six months after its released. After the six months have passed, the connector is no longer supported and might not function as expected.
+Intune supports each connector release for six months after it's released. After the six months have passed, the connector is no longer supported and might not function as expected.
 
 If you don’t allow the connector to automatically update, plan to manually update it to the latest version at the first opportunity.
 
