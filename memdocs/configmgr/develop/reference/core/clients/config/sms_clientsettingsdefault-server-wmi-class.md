@@ -1,6 +1,7 @@
 ---
 title: "SMS_ClientSettingsDefault Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents simple read-only default client settings properties."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
