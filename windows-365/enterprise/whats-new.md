@@ -62,7 +62,7 @@ For most currently supported regions, Windows 365 8vCPU/32GB licenses now suppor
 
 #### Improve video playback by using multimedia redirection<!--38686511-->
 
-You can improve video playback performance on your Cloud PCs by using multimedia redirection (MMR). For more information, see [Improve video playback](troubleshooting.md#improve-video-playback).
+You can improve video playback performance on your Cloud PCs by using multimedia redirection (MMR). For more information, see [Video playback improvement](troubleshooting.md#video-playback-improvement).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
