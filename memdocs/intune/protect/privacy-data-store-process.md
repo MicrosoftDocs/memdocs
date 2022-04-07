@@ -49,7 +49,7 @@ Existing customers that have their Customer Data stored in an already existing d
 
 We offer existing customers an option to request migration of their organization's Customer Data at rest to the datacenter geography that matches their signup Country or region. 
 
-With this option, eligible customers with data residency requirements can request migration of their organization's Customer Data at rest to their new datacenter geography if minimal data loss and reconfiguration is acceptable. Microsoft will offer a committed deadline to all eligible customers who request migration. [Contact support](./get-support.md) to request your data move. Our support team will guide you through the preparation steps you’ll need to take and limitations you should be aware of. Data moves can take up to 24 months after the request period ends to complete.
+With this option, eligible customers with data residency requirements can request migration of their organization's Customer Data at rest to their new datacenter geography if minimal data loss and reconfiguration is acceptable. Microsoft will offer a committed deadline to all eligible customers who request migration. [Contact support](../../get-support.md) to request your data move. Our support team will guide you through the preparation steps you’ll need to take and limitations you should be aware of. Data moves can take up to 24 months after the request period ends to complete.
 
 During migration, certain features may not be accessible. The actual down time and impact to end-users depends on the volume of data to be migrated and features in use. When migration is complete, support will contact you to make sure everything is working.
 
