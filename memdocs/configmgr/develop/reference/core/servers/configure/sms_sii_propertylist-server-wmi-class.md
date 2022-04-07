@@ -1,5 +1,6 @@
 ---
 title: "SMS_SII_PropertyList Class"
+description: The SMS_SII_PropertyList class is an SMS Provider server class that represents a general-purpose storage object defining property lists for a site install item.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

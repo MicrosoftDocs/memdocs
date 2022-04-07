@@ -1,6 +1,7 @@
 ---
 title: "SMS_DmInvVersion Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, The SMS_DmInvVersion class is a client Windows Management Instrumentation class that represents the device management inventory version."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

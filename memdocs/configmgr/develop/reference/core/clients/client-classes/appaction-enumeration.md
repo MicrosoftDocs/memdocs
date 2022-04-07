@@ -1,6 +1,7 @@
 ---
 title: "AppAction Enumeration"
 titleSuffix: "Configuration Manager"
+description: "Learn how the AppAction enumeration defines action types."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

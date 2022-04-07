@@ -1,6 +1,7 @@
 ---
 title: "SMS_ImageDiskInformation Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_ImageDiskInformation WMI class is an SMS Provider server class, in Configuration Manager, that represents all disks and partition information in an operating system image and installer.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

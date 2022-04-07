@@ -1,6 +1,7 @@
 ---
 title: "SMS_AdminRole Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_AdminRole Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents the association between the admin account and the security role.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
