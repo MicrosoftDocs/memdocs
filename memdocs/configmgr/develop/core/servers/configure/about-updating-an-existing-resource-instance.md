@@ -1,6 +1,7 @@
 ---
 title: "Update an Existing Resource Instance"
 titleSuffix: "Configuration Manager"
+description: When the Data Discovery Manager, in Configuration Manager, finds an existing resource that matches the data discovery record, the resource instance is updated; otherwise, a new instance is created.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
