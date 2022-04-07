@@ -1,6 +1,7 @@
 ---
 title: "Check if a User Has Permissions for an Object"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, you can check for object permissions using the UserHasPermissions Method in Class SMS_RbacSecuredObject (../../../../develop/reference/core/servers/configure userhaspermissions-method-in-class-sms_rbacsecuredobject.md)." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
