@@ -1,6 +1,7 @@
 ---
 title: "ICIINFO::GetDependantPackages"
 titleSuffix: "Configuration Manager"
+description: The ICIINFO::GetDependantPackages method, in Configuration Manager, gets the dependent package information for the configuration item.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
