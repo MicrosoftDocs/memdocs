@@ -53,7 +53,7 @@ With this option, eligible customers with data residency requirements can reques
 
 During migration, certain features may not be accessible. The actual down time and impact to end-users depends on the volume of data to be migrated and features in use. When migration is complete, support will contact you to make sure everything is working.
 
-Data moves to the new datacenter geo are completed at no additional cost to the customer.
+Data moves to the new datacenter geographies are completed at no additional cost to the customer.
 
 
 ### Personal data retention
