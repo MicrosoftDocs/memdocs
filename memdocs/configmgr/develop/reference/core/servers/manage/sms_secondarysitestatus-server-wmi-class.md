@@ -1,4 +1,5 @@
 ---
+description: The SMS_SecondarySiteStatus WMI class is an SMS Provider server class, in Configuration Manager, that represents secondary site installation or uninstallation status.
 title: "SMS_SecondarySiteStatus Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

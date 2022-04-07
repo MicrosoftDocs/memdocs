@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/03/2021
+ms.date: 04/06/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,26 @@ To make sure that the correct language packs are available on the Cloud PC at fi
 All Cloud PCs provisioned with this policy will have the chosen language pack at the first sign-in experience.
 
 You can also [edit provisioning policies](edit-provisioning-policy.md) to change the Language & Region configuration. After saving the policy and [reprovisioning](reprovision-cloud-pc.md) the associated Cloud PCs, the chosen language pack will be on the Cloud PCs.
+
+## URLs to allow
+
+To successfully install the language packs, make sure to add the following URLs to your firewall allow list:
+
+- Windows 11 21H2
+  - LanguagePack: https://software-download.microsoft.com/download/sg/22000.1.210604-1628.co_release_amd64fre_CLIENT_LOF_PACKAGES_OEM.iso
+  - FodToLP: https://download.microsoft.com/download/7/6/0/7600F9DC-C296-4CF8-B92A-2D85BAFBD5D2/Windows-10-1809-FOD-to-LP-Mapping-Table.xlsx
+- Windows 10 21H2 and 21H1
+  - LanguagePack: https://software-download.microsoft.com/download/pr/19041.1.191206-1406.vb_release_CLIENTLANGPACKDVD_OEM_MULTI.iso
+  - FOD: https://software-download.microsoft.com/download/pr/19041.1.191206-1406.vb_release_amd64fre_FOD-PACKAGES_OEM_PT1_amd64fre_MULTI.iso
+  - InboxApps: https://software-download.microsoft.com/download/sg/19041.928.210407-2138.vb_release_svc_prod1_amd64fre_InboxApps.iso
+- Windows 10 20H2
+  - LanguagePack: https://software-download.microsoft.com/download/pr/19041.1.191206-1406.vb_release_CLIENTLANGPACKDVD_OEM_MULTI.iso
+  - FOD: https://software-download.microsoft.com/download/pr/19041.1.191206-1406.vb_release_amd64fre_FOD-PACKAGES_OEM_PT1_amd64fre_MULTI.iso
+  - InboxApps: https://software-download.microsoft.com/download/pr/19041.508.200905-1327.vb_release_svc_prod1_amd64fre_InboxApps.iso
+- Windows 10 1909
+  - LanguagePack: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_CLIENTLANGPACKDVD_OEM_MULTI.iso
+  - FOD: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_amd64fre_FOD-PACKAGES_OEM_PT1_amd64fre_MULTI.iso
+  - InboxApps: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_amd64fre_InboxApps.iso
 
 ## Create a custom device image
 

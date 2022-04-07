@@ -1,4 +1,5 @@
 ---
+description: The SMS_PackageStatusRootSummarizer Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that lists the distribution summary for a given package.
 title: "SMS_PackageStatusRootSummarizer Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
