@@ -44,11 +44,11 @@ Create a [wired network device configuration profile](wired-networks-configure.m
 OUSTANDING ??
 - Not configured: By default, the OS might ??
 - If you leave this value empty or blank,
-- What CSP? [WiredNetwork CSP](/windows/client-management/mdm/wirednetwork-csp)
+- [WiredNetwork CSP](/windows/client-management/mdm/wirednetwork-csp)
 
 ## Wired Network
 
-- **Authentication method**: Select how the profile authenticates with the network server ??what server??. If you’re using certificate authentication, make sure the certificate type matches the authentication type.
+- **Authentication mode**: Select how the profile authenticates with the network. If you’re using certificate authentication, make sure the certificate type matches the authentication type.
 
   Your options:
 
@@ -76,7 +76,7 @@ OUSTANDING ??
 
 - **802.1x**: When set to **Enforce**, the automatic configuration service for wired networks (Wired AutoConfig) requires using 802.1X for port authentication. When set to **Do not enforce** (default), the Wired AutoConfig service doesn't require using 802.1X for port authentication.
 
-- **Block period (minutes)**: After a failed authentication attempt, the OS automatically tries to authenticate again. Enter the number of minutes to block these automatic authentication attempts, from 0-1440. If you leave this value empty or blank, then the OS automatically tries to authenticate again. ??does it eventually stop, or just keeps retrying forever??
+- **Block period (minutes)**: After a failed authentication attempt, the OS automatically tries to authenticate again. Enter the number of minutes to block these automatic authentication attempts, from 0-1440. If you leave this value empty or blank, then the OS might automatically try to authenticate again.
 
 - **EAP type**: Select the Extensible Authentication Protocol (EAP) type to authenticate secured wired connections. Your options:
 
@@ -85,10 +85,10 @@ OUSTANDING ??
   - **EAP-TLS**: Also enter:
 
     - **Server Trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window shown on user devices when they connect to this network.
-    - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server ??what server??. This certificate authenticates the connection.
+    - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server. This certificate authenticates the connection.
     - **Client Authentication** - **Authentication method**: Select the authentication method used by your device clients. Your options:
-      - **SCEP certificate**: Select the SCEP client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server ??What server?? to authenticate the connection. PKCS certificates aren't supported.
-      - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server ??what server?? to authenticate the connection.
+      - **SCEP certificate**: Select the SCEP client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection. PKCS certificates aren't supported.
+      - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the connection.
       - **PFX Import certificate**: Select the imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the connection. For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](/protect/certificates-imported-pfx-configure).
       - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
@@ -125,7 +125,7 @@ OUSTANDING ??
 
     - **Root certificate for server validation**: Select the trusted root certificate profile used to authenticate the network connection.  
 
-    - **Perform server validation**: When set to **Yes**, in PEAP negotiation phase 1, devices validate the certificate, and verify the server. Select **No** to block or prevent this validation. When set to **Not configured**, Intune doesn't change or update this setting.
+    - **Perform server validation**: When set to **Yes**, in PEAP negotiation phase 1, devices validate the certificate, and verify the server. Select **No** to block or prevent this validation. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might ??
 
       If you select **Yes**, also configure:
 
@@ -143,7 +143,7 @@ OUSTANDING ??
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
-      - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server ??what server?? to authenticate the network connection.
+      - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the network connection.
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
@@ -156,3 +156,5 @@ OUSTANDING ??
 ## Next steps
 
 The profile is created, but it may not be doing anything. Be sure to [assign this profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+
+[Wired network settings for macOS devices](wired-network-settings-macos.md)

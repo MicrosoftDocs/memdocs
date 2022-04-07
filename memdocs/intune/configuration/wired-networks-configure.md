@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Add and use wired networks settings on your macOS and Windows devices in Microsoft Intune
 
-Microsoft Intune includes built-in settings to configure wired networks for your macOS and Windows devices. You can configure the network interface, accepted EAP types, server trust settings, and more. 
+Microsoft Intune includes built-in settings to configure wired networks for your macOS and Windows devices. You can configure the network interface, accepted EAP types, server trust settings, and more.
 
 Wired networks are used by many organizations to give network access to desktop computers and devices that must use a network cable connected to a modem.
 

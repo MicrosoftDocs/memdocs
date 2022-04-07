@@ -98,3 +98,5 @@ Create a [macOS wired network device configuration profile](wired-networks-confi
 ## Next steps
 
 The profile is created, but it may not be doing anything. Be sure to [assign this profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+
+[Wired network settings for Windows devices](wired-network-settings-windows.md)
