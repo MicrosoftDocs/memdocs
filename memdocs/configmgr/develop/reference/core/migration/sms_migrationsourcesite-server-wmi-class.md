@@ -155,7 +155,7 @@ Class SMS_MigrationSourceSite : SMS_BaseClass
  This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
 
 ## Remarks  
- All of the instances are gathered from the Configuration Manager database, except for the first one which is created when you specify the source hierarchy.Each instance carries basic information for the source site, such as the parent site code, the site type and the FQDN of the site.  
+ All of the instances are gathered from the Configuration Manager database, except for the first one which is created when you specify the source hierarchy. Each instance carries basic information for the source site, such as the parent site code, the site type and the FQDN of the site.  
 
 ## Requirements  
 
