@@ -298,7 +298,7 @@ To add a condition that evaluates a variable value, do the following steps:
       - Greater than or equals
       - Less than
       - Less than or equals
-      - Like
+      - Like (supports wildcards of `*` and `?`) <!-- wildcards per https://www.reddit.com/r/SCCM/comments/6zg9az/why_is_there_a_like_condition_for_task_sequence/dmvs6tx -->
       - Not like (version 2103 or later)<!--8764365-->
 
     - **Value**: The value of the variable to check. For example, `false`.  
