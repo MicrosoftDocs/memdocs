@@ -166,7 +166,7 @@ Class SMS_Content : SMS_BaseClass
 
  Qualifiers: none  
 
- The security key of the content. Content may secured by application or package.  
+ The security key of the content. Content may be secured by application or package.  
 
 ## Requirements  
 
