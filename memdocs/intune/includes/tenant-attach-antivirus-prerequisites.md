@@ -32,4 +32,4 @@ Manage [Antivirus settings for Configuration Manager devices](../protect/antivir
 - Windows 10 and later (x86, x64, ARM64)
 - Windows 11 and later (x86, x64, ARM64)
 - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010 <!--8763780, 8740844-->
-- Windows Server 2016 and later(x64)
+- Windows Server 2016 and later (x64)
