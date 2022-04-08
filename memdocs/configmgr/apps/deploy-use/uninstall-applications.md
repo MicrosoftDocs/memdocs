@@ -2,7 +2,7 @@
 title: Uninstall applications
 titleSuffix: Configuration Manager
 description: Uninstall an application by using Configuration Manager
-ms.date: 12/01/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
@@ -85,6 +85,8 @@ Starting in version 2111, this behavior also supports [application groups](creat
 > [!NOTE]
 > In version 2111 and later, this behavior applies to deployments to device or user collections.<!--10393847--> In version 2107, this behavior only applies to deployments to device collections.
 
+Starting in version 2203, if you deploy an application or app group to a user collection that's based on a security group, and you enable implicit uninstall, changes to the security group are now honored. When the site discovers the change in group membership, Configuration Manager uninstalls the app for the user that you removed from the security group.<!--12488148-->
+
 ### Enable implicit uninstall
 
 When you [deploy the application](deploy-applications.md) to a collection, configure the following settings on the **Deployment Settings** page:
@@ -93,13 +95,13 @@ When you [deploy the application](deploy-applications.md) to a collection, confi
 
 - **Purpose**: Required
 
-- Enable the option to **Uninstall this application if the targeted object falls out of the collection**
-   - In version 2111, this option was renamed to **When a resource is no longer a member of the collection, uninstall the application**
+- Enable the following option: **When a resource is no longer a member of the collection, uninstall the application**
 
-   
+    > [!TIP]
+    > In version 2107, this option is named: **Uninstall this application if the targeted object falls out of the collection**
+
 > [!IMPORTANT]
 > Be careful with enabling this option on deployments to large query-based collections. Especially queries to external sources like Active Directory groups. An unexpected external change could automatically trigger a large number of devices to uninstall the application.
-
 
 ### Implicit uninstall process
 
@@ -115,7 +117,7 @@ Depending upon the timing of those steps, the longest time period for the client
 
 > [!NOTE]
 > - For this behavior, the site can process up to 1000 collection membership changes every 10 minutes.
-> - If the uninstall doesn't occur, it's likely that there's a conflicting install deployment of the same application, application group, or a different application group with the same apps. <!--12618105-->
+> - If the uninstall doesn't occur, it's likely that there's a conflicting install deployment of the same application, application group, or a different application group with the same apps.<!--12618105--> Configuration Manager always honors an install deployment over an uninstall deployment.
 
 ### Known issues
 
