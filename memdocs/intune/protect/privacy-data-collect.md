@@ -8,7 +8,7 @@ keywords: privacy, personal data
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/01/2020
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect

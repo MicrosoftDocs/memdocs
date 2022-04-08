@@ -8,7 +8,7 @@ keywords: privacy, data
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/01/2020
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,7 +30,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Data security and sharing in Intune
-
 
 ## Data security
 
