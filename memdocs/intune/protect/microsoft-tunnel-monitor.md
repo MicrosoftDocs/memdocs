@@ -141,12 +141,12 @@ For more information and command-line examples, see [mst-cli command-line tool f
 
 ## View Microsoft Tunnel logs
 
-Microsoft Tunnel logs information to the Linux server logs in the *syslog* format. To view log entries, use the **journalctl -t** command followed by one or more tags that are specific to Microsoft Tunnel entries:
+Microsoft Tunnel logs information to the Linux server logs in the *syslog* format. To view log entries, use the **journalctl -t** command followed by one or more tags that are specific to Microsoft Tunnel entries:    
 
 - **ocserv** -  Display server logs.
 - **mstunnel-agent**: Display agent logs.
 - **mstunnel_monitor**: Display monitoring task logs.
-
+  
 For example, to view information for only the tunnel server, run `journalctl -t ocserv`.  To view information for all three, you can run `journalctl -t ocserv -t mstunnel-agent -t mstunnel_monitor`.
 
 You can add  `-f` to the command to display an active and continuing view of the log file.   For example, to actively monitor ongoing processes for Microsoft Tunnel, run `journalctl -t mstunnel_monitor -f`.
@@ -157,6 +157,7 @@ More options for *journalctl*:
 - `man journalctl` – Display additional information.
 - `man journalctl.conf` Display information on configuration
 For more information about *journalctl*, see the documentation for the version of Linux that you use.  
+<!-- Pending ocserv-access -->
 
 ## Next steps
 
