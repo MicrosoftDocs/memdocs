@@ -5,7 +5,7 @@ description: Manually create software deployments to get your clients up-to-date
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum

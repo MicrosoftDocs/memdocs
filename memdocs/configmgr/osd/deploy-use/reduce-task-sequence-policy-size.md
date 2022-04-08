@@ -2,7 +2,7 @@
 title: Reduce task sequence policy size
 titleSuffix: Configuration Manager
 description: When the size of the task sequence policy exceeds 32 MB, the client fails to process the large policy. The client then fails to run the task sequence deployment. Manage the size of task sequence policy to reduce deployment failures.
-ms.date: 04/06/2022
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to

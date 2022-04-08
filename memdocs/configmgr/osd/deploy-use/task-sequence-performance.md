@@ -2,7 +2,7 @@
 title: Task sequence performance
 titleSuffix: Configuration Manager
 description: To improve the overall speed of the task sequence, run it with the Windows high-performance power plan.
-ms.date: 04/06/2022
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
