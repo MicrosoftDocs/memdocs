@@ -1,6 +1,7 @@
 ---
 title: "Smscstat.dll Status Message Functions"
 titleSuffix: "Configuration Manager"
+description: In Configuration Manager, the functions that are defined by the Smscstat.dll dynamic-link library, report status messages that can be called by using a C interface.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
