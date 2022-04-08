@@ -3,12 +3,12 @@
 
 title: Data Google sends to Intune
 titleSuffix: Microsoft Intune
-description: List of data that Google sends to Intune.
+description: List of data that Google sends to Intune when Android enterprise device management is enabled with Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2018
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,12 +32,9 @@ ms.collection: M365-identity-device-management
 
 # Data Google sends to Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
 When Android enterprise device management is enabled on a device, Microsoft Intune establishes a connection with Google and user and device information is shared between Intune and Google. Before Microsoft Intune can establish a connection, you must create a Google account.
 
-The following table lists the data that Google sends to Intune when device management is enabled on a device:
-
+The following table lists the data that Google sends to Intune when device management is enabled on an Android device:
 
 | Data Google sends to Intune | Details | Used for | Example |
 |:---:|:---:|:---:|:---:|
@@ -45,7 +42,4 @@ The following table lists the data that Google sends to Intune when device manag
 | Application data | Data for managed Play Store applications. | Targeting the application to users or devices as available or required. | **Application Name** example: Contoso Warehouse Inventory Application.<br>**Unique Identifier to represent application** example: app:com.Contoso.Warehouse.InventoryTracking |
 | Service account | Unique internal Google service account for use with specific customer calls. | Used for making calls into Google on the customer behalf (to view apps, devices, and more) | **Name** example: InternalAccount@InternalService.com.<br>**Keys** example: ServiceAccountPassword |
 
-
 To stop using Android enterprise device management with Microsoft Intune and delete the data, you must both disable the Microsoft Intune Android enterprise device management and also delete your Google account. Refer to Google account how to perform account management.
-
-

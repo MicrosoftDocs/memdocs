@@ -2,7 +2,7 @@
 title: Set up checklist for CMG
 titleSuffix: Configuration Manager
 description: Get an overview of the cloud management gateway (CMG) setup process and make sure you have all prerequisites ready to start.
-ms.date: 03/08/2022
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: overview
@@ -56,11 +56,11 @@ The following terms are used in the context of setting up a CMG. They're defined
 
 ## Checklist
 
-Use the following checklist to make sure you have the necessary information and prerequisites to create a CMG:  
+Use the following checklist to make sure you have the necessary information and prerequisites to create a CMG:
 
-- The Azure environment to use. For example, the Azure Public Cloud or the Azure US Government Cloud.  
+- The Azure environment to use. For example, the Azure Public Cloud or the Azure US Government Cloud.
 
-- The Azure region for this CMG deployment.  
+- The Azure region for this CMG deployment.
 
 - How many VM instances you need for scale and redundancy.
 
@@ -71,6 +71,8 @@ Use the following checklist to make sure you have the necessary information and 
 - At least one existing site system server on which you plan to add the **CMG connection point** role.
 
 - Review the [internet access requirements](data-flow.md#internet-access-requirements) to make sure each required services can be reached.
+
+- [Enable this optional feature](../../../servers/manage/optional-features.md).
 
 You'll set up other prerequisite components during the next steps in the process.
 
@@ -121,6 +123,6 @@ The CMG connection point site system role:
 ## Next steps
 
 Get started with your CMG setup by getting a server authentication certificate:
-  
+
 > [!div class="nextstepaction"]
 > [CMG server authentication certificate](server-auth-cert.md)

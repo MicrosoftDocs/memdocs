@@ -2,7 +2,7 @@
 title: Tenant attach data collection
 titleSuffix: Configuration Manager
 description: Learn about the diagnostics data that Configuration Manager collects for tenant attach features.
-ms.date: 09/15/2020
+ms.date: 03/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -17,7 +17,7 @@ ms.localizationpriority: high
 *Applies to: Configuration Manager (current branch)*
 
 <!-- 6505626 -->
-When you attach your Configuration Manager site with a Microsoft Intune tenant, the site sends additional data to Microsoft. This article summarizes the data that's sent.
+When you attach your Configuration Manager site with a Microsoft Intune tenant, the site sends more data to Microsoft. This article summarizes the data that's sent.
 
 Tenant attach makes the Microsoft Endpoint Manager admin center your console in the cloud. The architecture allows the Configuration Manager site to synchronize data about the device and the user to your Intune tenant. You can then query and present data from your on-premises environment in the cloud console in real time without active synchronization. It can fetch large volatile data from your on-premises site. Tenant attach uses a mixture of these methods to provide efficient up-to-date information in the cloud console.
 
@@ -85,6 +85,22 @@ For any collection that you select for Endpoint policy deployment:
 - **CountFailed**: The count of devices that failed to process this policy
 - **CountActivated**
 - **CountEnforced**
+
+## Azure Application Insights
+<!-- 7544688 -->
+
+The site uploads data to the Azure Application Insights service. Application Insights detects issues for problem solving and continuous application improvement. The following data is sent to this service:
+
+- OS version information for the service connector point
+- Site version information
+- Site support ID, also known as the hierarchy ID
+- Language information
+- Azure tenant ID
+- Azure AD client ID
+- Exceptions and errors that the service connector point generates
+- Status events for the service operation
+
+For more information on this service, see [Application Insights API for custom events and metrics](/azure/azure-monitor/app/api-custom-events-metrics). Configuration Manager currently uses the following API methods: `TrackEvent`, `TrackException`, `TrackRequest`, and `TrackTrace`.
 
 ## See also
 
