@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/11/2022
+ms.date: 08/23/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -141,32 +141,15 @@ For more information and command-line examples, see [mst-cli command-line tool f
 
 ## View Microsoft Tunnel logs
 
-Microsoft Tunnel logs information to the Linux server logs in the *syslog* format. To view log entries, use the **journalctl -t** command followed by one or more tags that are specific to Microsoft Tunnel entries
+Microsoft Tunnel logs information to the Linux server logs in the *syslog* format. To view log entries, use the **journalctl -t** command followed by one or more tags that are specific to Microsoft Tunnel entries:
 
+- **ocserv** -  Display server logs.
 - **mstunnel-agent**: Display agent logs.
 - **mstunnel_monitor**: Display monitoring task logs.
-- **ocserv** -  Display server logs.
-- **ocserv-access** - Display access logs.
 
-  By default, access logging is disabled. Enabling access logs can reduce performance, depending on the number of active connections and usage patterns on the server. Logging for DNS connections increases the verbosity of the logs, which can become noisy.
+For example, to view information for only the tunnel server, run `journalctl -t ocserv`.  To view information for all three, you can run `journalctl -t ocserv -t mstunnel-agent -t mstunnel_monitor`.
 
-  Access logs have the following format: `<Server timestamp><Server Name><ProcessID on Server><userId><deviceId><protocol><src IP and port><dst IP and port><bytes sent><bytes received><connection time in seconds>` For example:
-
-  - *Feb 25 16:37:56 MSTunnelTest-VM ocserv-access[9528]: ACCESS_LOG,41150dc4-238x-4dwv-9q89-55e987f30c32,f5132455-ef2dd-225a-a693-afbbqed482dce,tcp,169.254.54.149:49462,10.88.0.5:80,112,60,10*
-  
-  To enable access logging:
-
-  1. set TRACE_SESSIONS=1 in /etc/mstunnel/env.sh
-  2. set TRACE_SESSIONS=2 to include logging for DNS connections
-  3. Run `mst-cli server restart` to restart the server.
-
-  If access logs are too noisy, you can turn off DNS connection logging by setting TRACE_SESSIONS=1 and restarting the server.
-
-Command line examples for *journalctl*:
-
-- To view information for only the tunnel server, run `journalctl -t ocserv`. 
-- To view information for all log options, you can run `journalctl -t ocserv -t ocserv-access -t mstunnel-agent -t mstunnel_monitor`.
-- Add `-f` to the command to display an active and continuing view of the log file. For example, to actively monitor ongoing processes for Microsoft Tunnel, run `journalctl -t mstunnel_monitor -f`.
+You can add  `-f` to the command to display an active and continuing view of the log file.   For example, to actively monitor ongoing processes for Microsoft Tunnel, run `journalctl -t mstunnel_monitor -f`.
 
 More options for *journalctl*:
 
