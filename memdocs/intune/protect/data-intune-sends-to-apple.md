@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/26/2018
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,9 +33,7 @@ ms.collection: M365-identity-device-management
 
 # Data Intune sends to Apple
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-When any of the following Apple services are enabled on a device, Microsoft Intune establishes a connection with Apple and shares user and device information with Apple: 
+When any of the following Apple services are enabled on a device, Microsoft Intune establishes a connection with Apple and shares user and device information with Apple:
 
 - [Apple Device Enrollment Program (DEP)](../enrollment/device-enrollment-program-enroll-ios.md)
 - [Apple MDM Push certificate (APNS)](../enrollment/apple-mdm-push-certificate-get.md)

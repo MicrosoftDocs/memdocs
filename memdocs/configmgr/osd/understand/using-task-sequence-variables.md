@@ -73,7 +73,7 @@ When you specify a name for a new task sequence variable, follow these guideline
 
 - Task sequence variable names can't begin or end with a space. They also can't have embedded spaces. The task sequence ignores any spaces at the beginning or the end of a variable name.  
 
-There's no set limit to how many task sequence variables you can create. However, the number of variables is limited by the size of the task sequence environment. The total size limit for the task sequence environment is 8 KB. For more information, see [Reduce the size of task sequence policy](../deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
+There's no set limit to how many task sequence variables you can create. However, the number of variables is limited by the size of the task sequence environment. The total size limit for the task sequence environment is 8 KB. For more information, see [Reduce the size of task sequence policy](../deploy-use/reduce-task-sequence-policy-size.md).
 
 ### <a name="bkmk_read-only"></a> Read-only variables
 
