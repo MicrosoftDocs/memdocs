@@ -2,7 +2,7 @@
 title: Checklist for 2203
 titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2203.
-ms.date: 03/28/2022
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
-When you use the current branch of Configuration Manager, you can install the in-console update for version 2203 to update your hierarchy from a previous version. <!-- baseline only statement: -->Version 2203 will also be available as [baseline media](updates.md#bkmk_note1) soon after global availability, so you can use the installation media to install the first site of a new hierarchy.
+When you use the current branch of Configuration Manager, you can install the in-console update for version 2203 to update your hierarchy from a previous version. <!-- baseline only statement: -->Version 2203 will also be available as [baseline media](updates.md#bkmk_note1) soon after global availability of the in-console update, so you can use the installation media to install the first site of a new hierarchy.
 
 To get the update for version 2203, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](use-the-service-connection-tool.md).<!-- SCCMDocs#1946 -->
 

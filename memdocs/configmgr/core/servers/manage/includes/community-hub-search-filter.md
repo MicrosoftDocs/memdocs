@@ -3,7 +3,7 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 03/28/2022
+ms.date: 04/08/2022
 ms.localizationpriority: medium
 ---
 <!--This file is shared by the community-hub and community-hub-extensions.md files for 8516139. H2s/H3s are driven by the article-->

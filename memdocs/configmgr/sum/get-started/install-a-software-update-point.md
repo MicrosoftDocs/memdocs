@@ -5,7 +5,7 @@ description: Primary sites require a software update point on the central admini
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/28/2022
+ms.date: 04/08/2022
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-sum

@@ -5,7 +5,7 @@ description: Learn how to manually or automatically deploy software updates in t
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 03/28/2022
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum

@@ -2,7 +2,7 @@
 title: Monitor applications from the console
 titleSuffix: Configuration Manager
 description: Monitor deployment applications with the Monitoring workspace in Configuration Manager.
-ms.date: 03/28/2022
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
