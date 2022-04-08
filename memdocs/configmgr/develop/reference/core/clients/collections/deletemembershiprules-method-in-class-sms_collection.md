@@ -1,6 +1,7 @@
 ---
 title: "DeleteMembershipRules Method"
 titleSuffix: "Configuration Manager"
+description: The DeleteMembershipRules Windows Management Instrumentation class method, in Configuration Manager, is used to delete multiple membership rules from the collection.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
