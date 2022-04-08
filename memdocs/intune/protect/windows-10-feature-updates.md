@@ -54,6 +54,8 @@ When a device receives a policy for Feature updates:
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
+- The ability to *Uninstall* the Feature update is still honored by the Update Rings.
+
 - You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md).
 
 ## Prerequisites
