@@ -61,7 +61,7 @@ Antivirus policies include the same settings as found *endpoint protection* or *
 
 - **Set up Defender for Endpoint Security Configuration Management** - To support deploying antivirus policy to devices communicating with Endpoint Manager via Defender for Endpoint, configure *Security Management for Microsoft Defender for Endpoint*.
   
-  To setup security management for MDE, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md).
+  To set up security management for MDE, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md).
 
 ### Prerequisites for tamper protection
 
