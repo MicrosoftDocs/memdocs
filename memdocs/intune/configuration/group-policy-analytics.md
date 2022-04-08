@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 04/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,7 +31,7 @@ ms.collection:
   - highpri
 ---
 
-# Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview
+# Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager (public preview)
 
 > [!TIP]
 > Looking for information on ADMX templates? See [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md).
@@ -43,20 +43,20 @@ ms.collection:
 
 If your organization uses GPOs, and you want to move some workloads to Microsoft Endpoint Manager and Intune, then Group Policy analytics will help.
 
-Currently, this feature provides importing and analysis. In a future release (no ETA), you'll be able to create a policy based off your imported GPO, and deploy the policy.
-
 This feature applies to:
 
 - Windows 11
 - Windows 10
 
-This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results.
+This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results. For information on migrating your GPOs to a Settings Catalog policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager (public preview)](group-policy-analytics-migrate.md).
 
-## Prerequisites
+## Before you begin
 
 - In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security Baselines** permission.
 
   For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
+
+- This feature is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
 ## Export GPOs as an XML file
 
