@@ -27,7 +27,7 @@ items:
     href: cmpivot-overview-attached.md
   - name: CMPivot sample scripts
     href: cmpivot-samples-attached.md
-- name: Endpoint security for tenant attached devices (preview)
+- name: Endpoint security for tenant attached devices
   items:
   - name: Get started with endpoint security policies
     href: endpoint-security-get-started.md
@@ -35,9 +35,9 @@ items:
     href: atp-onboard.md
   - name: Create and deploy antivirus policy
     href: deploy-antivirus-policy.md  
-  - name: Create and deploy firewall policy
+  - name: Create and deploy firewall policy (preview)
     href: deploy-firewall-policy.md
-  - name: Create and deploy attack surface reduction policy
+  - name: Create and deploy attack surface reduction policy (preview)
     href: deploy-asr-policy.md     
 - name: Reference
   items:
