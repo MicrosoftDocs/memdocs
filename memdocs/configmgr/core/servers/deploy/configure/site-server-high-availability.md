@@ -2,7 +2,7 @@
 title: Site server high availability
 titleSuffix: Configuration Manager
 description: How to configure high availability for the Configuration Manager site server by adding a passive mode site server.
-ms.date: 02/10/2022
+ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -218,6 +218,8 @@ Similarly as with backup and recovery, plan and practice your process to change 
     > - Tuesday: Promote the site server in passive mode to be the active site server.
     >
     > By Wednesday or Thursday, this action may cause *all* clients to upgrade, not just the pilot collection. This behavior can cause significant network usage and unexpected load on the distribution points.<!-- SCCMDocs-pr#4794 -->
+
+  - If you enable the pre-production client, review the known issue with site server high availability. For more information, see [Known issues](../../../clients/manage/upgrade/test-client-upgrades.md#known-issues).<!-- 13846674 -->
 
 ### Process to promote the site server in passive mode to active mode
 
