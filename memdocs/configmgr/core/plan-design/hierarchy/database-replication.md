@@ -144,7 +144,10 @@ If a replication link has a type of data enabled for distributed views, the chil
 
 - You can only install one reporting services point at the CAS. Install SQL Server Reporting Services on the site database server. This configuration supports Kerberos authentication. The SQL Server at the CAS requires Kerberos to access the SQL Server at the child primary site.
 
-- You can't host the site database on a [SQL Server Always On failover cluster instance](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md).
+- You can host the site database on a [SQL Server Always On failover cluster instance](../../servers/deploy/configure/use-a-sql-server-cluster-for-the-site-database.md), if it has the following configurations:<!-- 13846496 -->
+
+  - The CAS database is on a single SQL Server with a local SMS Provider.
+  - The primary site listener is on port 1433.
 
 - The computer account of the CAS database server requires **Read** permissions on the primary site database.
 
