@@ -52,7 +52,7 @@ ms.collection:
 
     - **Group type**: Select **Security**.
     - **Group name** and **Group description**: Enter a name and description for your group.
-    - **Azure AD roles can be assigned to the group**: **Yes** allows Azure AD roles to be assigned to the group you're creating. Once set, the group is permanently and always allowed to be assigned Azure AD roles. When set to **No**, Azure AD roles aren't assigned to the this group.
+    - **Azure AD roles can be assigned to the group**: **Yes** allows Azure AD roles to be assigned to the group you're creating. Once set, the group is permanently and always allowed to be assigned Azure AD roles. When set to **No**, Azure AD roles aren't assigned to this group.
 
       For more information, see [Use cloud groups to manage role assignments in Azure AD](/azure/active-directory/roles/groups-concept).
 
