@@ -2,7 +2,7 @@
 # required metadata
 title: Use a provisioning policy to set upo a default display language on Cloud PCs
 titleSuffix:
-description: Learn how to provide a localized Windows experience for your end users.
+description: Learn how to provide a localized Windows experience for your Cloud PC users.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
