@@ -32,12 +32,12 @@ ms.collection: M365-identity-device-management
 
 To create a custom device image that gives users a localized Windows experience, follow these steps:
 
-1. [Create a custom device image with the languages installed](#create-a-custom-image-with-the-languages-installed).
+1. [Create a custom device image](#create-a-custom-image).
 2. [Configure the default language using Group Policy](#configure-the-default-language-using-group-policy).
 
 Cloud PCs provisioned from this image will be fully configured to work in any of the installed languages, without any user action. When the user signs in to the Cloud PC, Group Policy will evaluate the device and set the appropriate pre-installed language as the user's preferred language for Windows.
 
-## Create a custom image with the languages installed
+## Create a custom image
 
 Creating a custom image with the languages installed is the best way to make sure that the desired languages are available on the Cloud PC when the user signs in.
 
