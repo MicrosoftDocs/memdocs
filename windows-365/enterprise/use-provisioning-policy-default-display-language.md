@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Use a provisioning policy to set upo a default display language on Cloud PCs
+title: Use a provisioning policy to set up a default display language on Cloud PCs
 titleSuffix:
 description: Learn how to provide a localized Windows experience for your Cloud PC users by using provisioning policies.
 keywords:
@@ -36,7 +36,7 @@ To make sure that the correct language packs are available on the Cloud PC at fi
 
 All Cloud PCs provisioned with this policy will have the chosen language pack at the first sign-in experience.
 
-You can also [edit provisioning policies](edit-provisioning-policy.md) to change the Language & Region configuration. After saving the policy and [reprovisioning](reprovision-cloud-pc.md) the associated Cloud PCs, the chosen language pack will be on the Cloud PCs.
+You can also [edit provisioning policies](edit-provisioning-policy.md) to change the Language & Region configuration. After you save the policy and [reprovision](reprovision-cloud-pc.md) the associated Cloud PCs, the chosen language pack will be on the Cloud PCs.
 
 ## Next steps
 
