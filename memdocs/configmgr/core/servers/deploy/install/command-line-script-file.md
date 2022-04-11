@@ -138,7 +138,7 @@ When you're installing a CAS to expand a standalone primary site into a hierarch
 | `CCARSiteServer` | No | CAS FQDN | The FQDN of the CAS that a primary site attaches to when it joins the Configuration Manager hierarchy. Specify the CAS during setup. |
 | `CASRetryInterval` | No | Minutes | If the connection to the CAS fails, the primary site waits this number of minutes, and then reattempts the connection. |
 | `WaitForCASTimeout` | No | `0` to `100` | The maximum timeout value in minutes for a primary site to connect to the CAS. |
-| `UseDistributionView` | No | - `0`: Don't enable<br>- `1`:&nbsp;Enable | Specify whether to use [distributed views](../../../plan-design/hierarchy/database-replication.md#bkmk_distviews) to optimize database replication. |
+| `UseDistributionView` | No | - `0`: Don't enable<br>- `1`:&nbsp;Enable | Specify whether to use [distributed views](../../../plan-design/hierarchy/database-replication.md#distributed-views) to optimize database replication. |
 | `JoinPrimarySiteName` | No | Site server FQDN | The FQDN of the primary site server to expand. |
 
 ## Manage languages

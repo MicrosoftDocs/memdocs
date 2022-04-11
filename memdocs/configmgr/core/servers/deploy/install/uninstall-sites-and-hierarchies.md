@@ -124,7 +124,7 @@ You might want to uninstall a primary site from your hierarchy for the following
 - Consolidate sites to reduce costs and complexity
 - Reconfigure or redesign the sites of the hierarchy
 
-Before you uninstall a child primary site that uses [distributed views](../../../plan-design/hierarchy/database-replication.md#bkmk_distviews) for its replication link to the CAS, first turn off distributed views in your hierarchy. For more information, see [Uninstall a primary site that is configured with distributed views](#bkmk_distviews).
+Before you uninstall a child primary site that uses [distributed views](../../../plan-design/hierarchy/database-replication.md#distributed-views) for its replication link to the CAS, first turn off distributed views in your hierarchy. For more information, see [Uninstall a primary site that is configured with distributed views](#bkmk_distviews).
 
 ### <a name="bkmk_pri-plan"></a> Plan to uninstall a primary site
 
