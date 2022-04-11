@@ -1,6 +1,7 @@
 ---
 title: "SMS_AICategory Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_AICategory Windows Management Instrumentation class categorizes the software entries in the SMS_AISoftwareList Server WMI class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

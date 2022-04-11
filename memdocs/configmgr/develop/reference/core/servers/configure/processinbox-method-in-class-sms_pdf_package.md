@@ -1,6 +1,7 @@
 ---
 title: "ProcessInBox Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the ProcessInBox Windows Management Instrumentation class method imports package definition files from the package definition file inbox."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
