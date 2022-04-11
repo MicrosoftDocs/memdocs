@@ -89,8 +89,8 @@ You can also use this enrollment method to automatically bulk enroll devices wit
 
     - If you want to manage the device, then choose **Some** or **All**.
     - If you don't want to manage the device, then choose **None**.
-    - If you want to only manage the organization account on the device, then choose **None**, and configure the **MAM user scope**.
-    - If you want to manage the device *and* manage the organization account on the device, then choose **Some** or **All**, and configure the **MAM user scope**.
+    - If you want to only manage the organization account on the device, then choose **None**, and configure the **MDM user scope**.
+    - If you want to manage the device *and* manage the organization account on the device, then choose **Some** or **All**, and configure the **MDM user scope**.
 
   - **MAM user scope**: When set to **Some** or **All**, the organization account on the device is managed by Intune. Devices are "registered" in Azure AD. Devices aren't "joined" to Azure AD, and aren't managed by Intune. This option is designed for BYOD or personal devices.
 
@@ -98,8 +98,8 @@ You can also use this enrollment method to automatically bulk enroll devices wit
 
     - If you want to manage the organization account on the device, then choose **Some** or **All**.
     - If you don't want to manage the organization account on the device, then choose **None**.
-    - If you want to only manage the device, then choose **None**, and configure the **MDM user scope**.
-    - If you want to manage the device *and* manage the organization account on the device, then choose **Some** or **All**, and configure the **MDM user scope**.
+    - If you want to only manage the device, then choose **None**, and configure the **MAM user scope**.
+    - If you want to manage the device *and* manage the organization account on the device, then choose **Some** or **All**, and configure the **MAM user scope**.
 
   For more information on joined devices vs. registered devices, see:
 
