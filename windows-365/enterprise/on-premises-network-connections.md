@@ -45,7 +45,7 @@ There are two kinds of OPNCs based on their join type. Both let you manage traff
 
 ## Provisioning
 
-When a Cloud PC is provisioned, the information in the OPNC is used by the provisioning policy to provision the Cloud PC the Azure subnet. The information required in an OPNC includes:
+When a Cloud PC is provisioned, the information in the OPNC is used by the provisioning policy to provision the Cloud PC (to? or within?) the Azure subnet. The information required in an OPNC includes:
 
 - **Network details**: The Azure subscription, resource group, virtual network, and subnet that the Cloud PC will be associated with. When a provisioning policy runs, it creates a Cloud PC in the Microsoft hosted Azure subscription. To connect to a customers on-premises network, a virtual network interface card (vNic) is injected into a customer-provided Azure virtual network (vNet). To create this vNic, Windows 365 needs sufficient access to an Azure subscription.
 - **Active Directory domain**: The Active Directory domain to join, an Organizational Unit (OU) destination for the computer object, and Active Directory user credentials with sufficient permissions to perform the domain join. When a provisioning policy runs, the Cloud PC is joined to this Active Directory domain. The credentials will be stored securely in the Windows 365 service.
