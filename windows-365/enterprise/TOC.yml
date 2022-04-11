@@ -68,11 +68,11 @@ items:
       - name: Provide a localized Windows experience
         items:
         - name: Provide a localized Windows experience
-        - href: provide-localized-windows-experience.md
+          href: provide-localized-windows-experience.md
         - name: Use a policy to set up default display language
-        - href: use-provisioning-policy-default-display-language.md
-        - name: Create a custom image with lanaguages installed
-        - href: create-custom-image-languages.md
+          href: use-provisioning-policy-default-display-language.md
+        - name: Create a custom image with languages installed
+          href: create-custom-image-languages.md
       - name: Device images
         items:
         - name: Add or delete device images

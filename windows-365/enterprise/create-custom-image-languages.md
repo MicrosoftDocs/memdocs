@@ -2,7 +2,7 @@
 # required metadata
 title: Create a custom image with languages already installed
 titleSuffix:
-description: Learn how to provide a localized Windows experience for your Cloud PC users.
+description: Learn how to provide a localized Windows experience for your Cloud PC users by using custom images.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
