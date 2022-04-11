@@ -67,7 +67,7 @@ The Remote help app supports the following capabilities:
 ## Prerequisites
 
 - [Intune subscription](../fundamentals/licenses.md)
-- Remote help subscription or active trial (https://aka.ms/PremiumAddOnsDocs)
+- Remote help subscription or active trial (https://aka.ms/PremiumAddOnsDocs).  The number of remote help licenses required should align with all users and helpers that are targeted to use remote help and benefit from the service. Remote help is licensed separately from licenses for Microsoft Endpoint Manager.
 - Windows 10/11
 - Devices must install the *remote help* app. Device users can download the app directly from Microsoft. See [Install and update remote help](#install-and-update-remote-help)
 
