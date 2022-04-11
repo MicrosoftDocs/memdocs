@@ -49,85 +49,107 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
   For the specific steps, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview](group-policy-analytics.md).
 
-- This feature is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
+- This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
-- Currently, the Migrate functionality isn't supported in sovereign clouds. For more information on sovereign clouds, see [What is Azure Government?](https://docs.microsoft.com/azure/azure-government/documentation-government-welcome).
+- Currently, the Migrate feature isn't supported in sovereign clouds. For more information on sovereign clouds, see [What is Azure Government?](https://docs.microsoft.com/azure/azure-government/documentation-government-welcome).
 
-## Migrate your GPOs to a Settings Catalog policy
+## Review and migrate your GPOs to a Settings Catalog policy
 
-Group Policy analytics shows the settings that are **Ready for migration**. These settings can be migrated to a Settings Catalog policy. 
-
-Once you’ve assessed your Group Policy analytics data on settings that are Ready for migration, Not supported, and Deprecated, you can create a Settings Catalog profile using the “Migrate” capability in Group Policy analytics: 
+After you import your GPOs, review the settings that can be migrated. Remember, some settings don't make sense on cloud native endpoints, like Windows 10/11 devices. After they've been reviewed, you can migrate the settings to a Settings Catalog policy.
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
-2. In the list, your imported GPOs are shown. Select the GPOs you want in your Settings Catalog profile. You can select one GPO or many GPOs.
+2. In the list, your imported GPOs are shown. Next to the GPOs you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
 
-    INSERT SCREEN SHOT
+    :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png" alt-text="Select the Migrate checkbox next to your imported GPO in Endpoint Manager and Microsoft Intune.":::
 
 3. Select **Migrate**:
 
-    INSERT SCREEN SHOT
+    :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-see-all-settings.png" alt-text="Select the Migrate button to see all the settings in your imported GPO in Endpoint Manager and Microsoft Intune.":::
 
-4. In the **Settings to Migrate** column, select the settings you want to include in your Settings Catalog profile. To help you pick the settings, you can use the built-in features:
+    All the settings in your imported GPO are shown.
+
+4. In the **Settings to migrate** tab, select the **Migrate** column for the settings you want to include in your Settings Catalog profile:
+
+      :::image type="content" source="./media/group-policy-analytics-migrate/settings-to-migrate-tab.png" alt-text="In the Settings to migrate, select the Migrate checkbox in Endpoint Manager and Microsoft Intune.":::
+
+    To help you pick the settings, you can use the built-in features:
 
     - **Select all on this page**: Select this option if you want all settings on the existing page to be included in your Settings Catalog profile.  
-    - **Search bar**: Enter the setting name to find the settings you want.
-    - **Sort**: Sort using the Migrate, Setting Name, Group Policy Setting Category, MDM Support, Value, Scope, Min OS version, CSP name columns.
+
+      :::image type="content" source="./media/group-policy-analytics-migrate/select-all-on-this-page.png" alt-text="Use the Select all on this page button to include all page settings in Group Policy Analytics migrate feature in Endpoint Manager and Microsoft Intune.":::
+
+    - **Search by setting name**: Enter the setting name to find the settings you want:
+
+      :::image type="content" source="./media/group-policy-analytics-migrate/search-by-setting-name.png" alt-text="Search for the setting name in Group Policy Analytics migrate feature in Endpoint Manager and Microsoft Intune.":::
+
+    - **Sort**: Sort your settings using the column names:
+
+      :::image type="content" source="./media/group-policy-analytics-migrate/sort-using-column-names.png" alt-text="Sort the settings using the Migrate, Setting name, Group policy setting category, MDM support, value, scope, min OS version, and CSP name Group Policy Analytics migrate feature in Endpoint Manager and Microsoft Intune.":::
 
     > [!TIP]
     > If you haven't already, review your Group Policy settings. It's possible some settings don't apply to cloud-based policy management or don't apply to cloud-native endpoints, like Windows 10/11 devices. It's not recommended to include all your Group Policy without reviewing them.
 
 5. Select **Next**.
-6. In **Configuration**, your settings and their values are shown. The values are the same values in the on-premises Group Policy. Review these settings and their values. 
+6. In **Configuration**, your settings and their values are shown. The values are the same values in the on-premises Group Policy. Review these settings and their values.
 
     Select **Next**.
 
-    After you create the Settings Catalog  policy, you can change any values.
+    After you create the Settings Catalog policy, you can change any values.
 
-7. In **Profile**, enter the following settings:
+7. In **Profile info**, enter the following settings:
 
     - **Name**: Enter a descriptive name for the Setting Catalog profile. Name your profiles so you can easily identify them later. For example, a good profile name is **Windows 10/11: Imported Microsoft Edge GPOs**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 8. Select **Next**.
-9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles in Intune](device-profile-assign.md).
+9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, see [Assign user and device profiles in Intune](device-profile-assign.md).
 
     Select **Next**.
 
-10. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the **Devices** tab > profiles list.
+10. In **Review + deploy**, review your settings.
 
-The next time any device within your assigned groups checks for configuration updates, the settings you configured are applied. 
+    When you select **Create**, your changes are saved, and the profile is assigned. The policy is shown in the **Devices** > **Configuration profiles** list.
+
+The next time any device within your assigned groups checks for configuration updates, the settings you configured are applied.
 
 ## Known issues
 
 ### Conflicting settings during migration
 
-It's possible you have multiple GPOs that include the same setting, and that the setting is set to different values. When you select these conflicting settings, these settings show the following error:
+It's possible you have multiple GPOs that include the same setting, and that the setting is set to different values. When you're creating a policy, and selecting your settings in the **Settings to migrate** tab, any conflicting settings will show the following error:
 
-`INSERT ERROR MESSAGE`
+`Conflicts are detected for the following settings: <setting name>. Select only one version with the value you prefer in order to continue.`
 
-You need to resolve this conflict before migrating the GPOs. You can do resolve the conflict when creating the Settings Catalog policy. In the **Settings to Migrate** column, uncheck the conflicting setting, an
+:::image type="content" source="./media/group-policy-analytics-migrate/conflicting-settings.png" alt-text="Conflicts are detected error message with Group Policy Analytics migrate feature in Endpoint Manager and Microsoft Intune.":::
 
-
-When selecting settings to migrate, you may hit the scenario where there is a setting that is selected twice, each time with a different value. This may be more likely to occur in the event you have selected multiple GPOs to run through the “Migrate” functionality.  
-
-If more than one of the same setting is selected for migrate with a conflicting value, you will see an error message indicating that you must specify a single value for each specified setting before proceeding in your profile creation process. Please resolve this on the “Settings to Migrate” tab before hitting “Next”.
+Before migrating the GPOs, you need to resolve this conflict. When you're creating the policy, uncheck a conflicting setting.
 
 ### Settings fail to migrate
 
-The “Migrate” functionality takes what is parsed from the imported Group Policy object (GPO) and translates it into the relevant setting (if one exists) in Settings Catalog. Given the variation between settings that can be imported, and what the Settings Catalog expects, there may occasionally be some errors during the process. The “Migrate” functionality is best effort – this means that when creating a Settings Catalog profile, any settings that can be included in the profile will be included. Settings that throw an error during profile creation get surfaced via the Notifications pane in Microsoft Endpoint Manager. Some reasons a setting may throw an error is: 
+The **Migrate** feature takes the parsed data from the imported Group Policy object (GPO) and translates it to a relevant setting in the Settings Catalog, if the setting exists. There can be some differences with the imported settings and the settings in Settings Catalog. It's possible there will be some errors when the settings are migrating.
 
-- If the value for a setting is in an unexpected format. 
+**Migrate** is best effort. When you create a Settings Catalog profile, any settings that can be included in the profile will be included. Settings that show an error when the profile is being created are shown in **Notifications**:
 
-- If a child setting is missing from the imported GPO but required to configure the parent setting. 
+:::image type="content" source="./media/group-policy-analytics-migrate/notifications.png" alt-text="Notifications shows additional information when the policy is being created in Endpoint Manager and Microsoft Intune.":::
 
-- < Other scenarios >
+Some common reasons a setting may show an error include:
 
-### Alternative technology available  
+- When the setting value is in an unexpected format
+- When a child setting is missing from the imported GPO and is required to configure the parent setting
 
-In some cases, in the “MDM Support” column, settings may be identified as having MDM Support, however, the exact same setting as it was configured in Group Policy no longer makes sense to use in MDM. For example, you may see this for older Office Administrative Template settings, or for Google Chrome settings that have an equivalent setting in Microsoft Edge.
+### Use the built-in features
+
+In some scenarios, the **MDM Support** column will show **Yes** for settings that shouldn't be configured using the **Migrate** feature.
+
+For example, you may import GPOs that include older Office Administrative Template settings, older Google Chrome settings, older Internet Explorer settings, and more. Some of these settings as they're configured in Group Policy don't make sense on cloud native endpoints, like Windows 10/11 devices.
+
+Instead, use the built-in ADMX settings or the Settings Catalog to configure equivalent settings in Microsoft Office, Google Chrome, Microsoft Edge, and more.
+
+- [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md)
+- [Use the settings catalog to configure settings on Windows and macOS devices - preview](settings-catalog.md)
 
 ## Next steps
 
 - [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview](group-policy-analytics.md)
 - [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md)
+- [Use the settings catalog to configure settings on Windows and macOS devices - preview](settings-catalog.md)
