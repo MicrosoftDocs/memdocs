@@ -83,8 +83,6 @@ The level 2 settings include all the policy settings recommended for level 1. Ho
 | App Store, Doc Viewing, Gaming | Block viewing non-corporate documents in corporate apps | Not configured | Enabling this device restriction blocks Outlook for iOS’s ability to export contacts. This setting is not recommended if using Outlook for iOS. For more information, see [Support Tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-enabling-outlook-ios-contact-sync-with-ios12-mdm/ba-p/298453). |
 | App Store, Doc Viewing, Gaming | Allow managed apps to write contacts to unmanaged contacts accounts | Yes | This setting is needed to allow Outlook for iOS to export contacts when **Block viewing corporate documents in unmanaged apps** is set to *Yes*. For more information, see [Support Tip: Enabling Outlook iOS Contact Sync with iOS12 MDM Controls](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-enabling-outlook-ios-contact-sync-with-ios12-mdm/ba-p/298453). |
 | App Store, Doc Viewing, Gaming | Allow copy/paste to be affected by managed open-in | Not configured | Enabling this setting will block personal accounts within managed Microsoft apps from sharing data to unmanaged apps. |
-| Built-in Apps | Block Siri for dictation   | Yes ||
-| Built-in Apps | Block Siri for translation   | Yes ||
 | Cloud Storage | Block backup of enterprise books | Yes |  |
 | Cloud Storage | Block notes and highlights sync for enterprise books | Yes |  |
 | General | Block sending diagnostic and usage data to Apple | Yes |  |
