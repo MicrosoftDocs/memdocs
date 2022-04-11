@@ -34,8 +34,8 @@ For users to be productive on their Windows 365 Cloud PC, it's important for Win
 
 There are two different ways to provide a localized Windows experience when users first sign in:
 
-- [Use a provisioning policy](use-provisioning-policy-default-display-language.md)
-- [Create a custom device image](create-custom-image-languages.md)
+- [Use a provisioning policy](use-provisioning-policy-default-display-language.md). If you plan on using a gallery image,you cna select the language when you create the provisioning policy.
+- [Create a custom device image](create-custom-image-languages.md). If you plan on using a custom image and you manage your Cloud PCs through group policy, you can include the language as part of the custom image.
 
 ## URLs to allow
 
