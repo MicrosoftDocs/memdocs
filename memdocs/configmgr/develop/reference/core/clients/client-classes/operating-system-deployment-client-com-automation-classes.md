@@ -1,6 +1,7 @@
 ---
 title: "OS Deployment Client COM Automation Classes"
 titleSuffix: "Configuration Manager"
+description: "This section provides reference content for the operating system deployment task client COM automation classes in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "Handle Synchronous Errors by Using WMI"
 titleSuffix: "Configuration Manager"
+description: "Handle synchronous errors by using the SWbemLastError object when an error occurs."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

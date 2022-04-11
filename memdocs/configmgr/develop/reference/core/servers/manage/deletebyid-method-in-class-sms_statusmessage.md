@@ -1,5 +1,6 @@
 ---
 title: "DeleteByID Method"
+description: Learn how the DeleteByID Windows Management Instrumentation (WMI) class method deletes a group of up to 256 status messages.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

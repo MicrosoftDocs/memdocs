@@ -1,4 +1,5 @@
 ---
+description: Learn how the following example shows how to configure the properties of an existing package, in Configuration Manager, by using the SMS_Package class.
 title: "Configure Package Properties"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

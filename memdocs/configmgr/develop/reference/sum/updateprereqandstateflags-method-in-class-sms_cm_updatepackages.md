@@ -1,6 +1,7 @@
 ---
 title: "UpdatePrereqAndStateFlags Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the UpdatePrereqAndStateFlags Windows Management Instrumentation class method updates the installation state of update packages."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

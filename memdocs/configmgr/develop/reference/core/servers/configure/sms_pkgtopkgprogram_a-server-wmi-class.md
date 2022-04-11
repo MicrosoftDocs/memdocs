@@ -1,4 +1,5 @@
 ---
+description: Learn how to relate an SMS Package Server Class with related objects with SMS_PkgToPkgProgram_a and the PackageID property.
 title: "SMS_PkgToPkgProgram_a Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

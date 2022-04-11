@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: "You can export a configuration baseline or configuration item by using Configuration Manager SDK and reading the relevant SMS_ConfigurationItem instance and writing the SDMPackageXML property (string) to a file."
 
 ---
 # How to Export Configuration Baselines and Configuration Items

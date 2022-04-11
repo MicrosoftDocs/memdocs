@@ -1,4 +1,5 @@
 ---
+description: Learn how the Configuration Manager console with an XML-based architecture can be easily extended.
 title: "Configuration Manager Console Extension"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

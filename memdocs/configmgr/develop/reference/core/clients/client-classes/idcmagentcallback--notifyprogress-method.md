@@ -1,4 +1,5 @@
 ---
+description: Learn how to notify the caller of progress made on a Desired Configuration Management Agent job using IDCMAgentCallback::NotifyProgress.
 title: "IDCMAgentCallback::NotifyProgress"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

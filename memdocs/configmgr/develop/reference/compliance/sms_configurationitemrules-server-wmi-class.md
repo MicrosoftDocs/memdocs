@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent configuration item rules using SMS_ConfigurationItemRules in Configuration Manager.
 title: "SMS_ConfigurationItemRules Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

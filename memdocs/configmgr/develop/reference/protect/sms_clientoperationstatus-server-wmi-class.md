@@ -1,6 +1,7 @@
 ---
 title: "SMS_ClientOperationStatus Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_ClientOperationStatus WMI class is an SMS Provider server class that summarizes the client operation."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: "Creating a Deployment Type Extension File is the first step in installing the application management extension files. The application management extension must be installed on each Configuration Manager administrator console computer that will create a custom deployment technology."
 
 ---
 # How to Create the Deployment Type Extension File (*.cmdtx)
@@ -49,7 +49,7 @@ The application management extension must be installed on each Configuration Man
 
 3.  Use the method DeploymentTypeExtender.CreateExtension, which is located in Microsoft.ConfigurationManagement.ApplicationManagement namespace, to create the Deployment Type Extension (*.cmdtx) file based on the content in the staging directory.  
 
-    ```  
+    ```csharp  
     // Summarizes progress from CreateExtension method to a log file or the console.   
     // <param name="summaryText">Summary text to be presented</param>  
     public void Summarize(string summaryText)   

@@ -1,4 +1,5 @@
 ---
+description: Learn how to specify how client computers retrieve software inventory in Configuration Manager using SMS_SoftwareInventoryAgentConfig.
 title: "SMS_SoftwareInventoryAgentConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

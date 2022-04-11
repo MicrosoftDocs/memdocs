@@ -1,6 +1,7 @@
 ---
 title: "SaveToXml Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SaveToXml WMI class method serializes a task sequence from WMI objects to XML."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

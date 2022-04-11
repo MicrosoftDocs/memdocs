@@ -1,4 +1,5 @@
 ---
+description: Learn how the Configuration Manager expands the abilities of system administrators to centrally manage computers effectively by providing a refined tool set for software distribution.
 title: "Software Distribution Overview"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent configuration item settings using the SMS_ConfigurationItemSettings class in Configuration Manager. 
 title: "SMS_ConfigurationItemSettings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

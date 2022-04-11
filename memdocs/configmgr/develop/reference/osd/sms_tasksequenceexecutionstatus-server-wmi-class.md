@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequenceExecutionStatus Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, The SMS_TaskSequenceExecutionStatus WMI class is an SMS Provider server class that represents the status of an execution of a task sequence."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: RebuildPackage method in class SMS_SoftwareUpdatesPackage
 titleSuffix: "Configuration Manager"
+description: "The RebuildPackage WMI class method brings the software updates package to its expected state if files are found to be corrupt or have been deleted."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

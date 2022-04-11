@@ -1,6 +1,7 @@
 ---
 title: "Call an Object Class Method by Using Managed Code"
 titleSuffix: "Configuration Manager"
+description: "To call a SMS Provider class method in Configuration Manager, use the ExecuteMethod method."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

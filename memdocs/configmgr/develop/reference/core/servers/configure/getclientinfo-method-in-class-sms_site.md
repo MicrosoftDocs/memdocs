@@ -1,6 +1,7 @@
 ---
 title: "GetClientInfo Method"
 titleSuffix: "Configuration Manager"
+description: The GetClientInfo Windows Management Instrumentation class method, in Configuration Manager,  gets information about a client.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

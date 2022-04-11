@@ -1,6 +1,7 @@
 ---
 title: "SMS_SiteAndSubsites Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_SiteAndSubsites WMI class reads the current site and child site information."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

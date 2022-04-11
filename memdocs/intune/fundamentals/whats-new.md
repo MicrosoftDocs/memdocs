@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/28/2022
+ms.date: 04/11/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,12 +60,63 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
-## Week of March 28, 2022
+## Week of April, 11, 2022
 
 ### App management
 
 #### Uninstall DMG-type applications on managed macOS devices (Public preview)<!-- 13155022 -->
 You can use the **Uninstall** assignment type to remove DMG-type applications on managed macOS devices from Microsoft Endpoint Manager. You can find macOS DMG apps in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **macOS** > **macOS app (.DMG)**. For related information, see [Add a macOS DMG app to Microsoft Intune](../apps/lob-apps-macos-dmg.md). 
+
+## Week of April 4, 2022
+
+### Device security
+
+#### New profile templates and settings structure for endpoint security policies<!-- 13742640 -->
+
+We’ve begun to release new [endpoint security profile templates](../protect/endpoint-security-policy.md) that use the settings format as found in the Settings Catalog. Each new profile template includes the same settings as the older profile it replaces, while bringing the following improvements:
+
+- **Setting names match the Windows CSP name**: In most cases, each setting name in the new profiles is a match to the name of the CSP that the setting configures. However, in the Intune UI we’ve added spaces to that name to make the setting name easier to read. For example, a setting in the Intune UI that’s named *Allow USB Connection* configures the CSP named [AllowUSBConnection](/windows/client-management/mdm/policy-csp-connectivity#connectivity-allowusbconnection).
+
+- **Setting options align to those of the Windows CSP**: Options for settings now align directly to those options as described and supported by the Windows CSP, with one addition. The addition is that we’ve included the option of Not configured. When a setting is set to Not configured, that Intune profile does not actively manage that setting. When a profile is changed to go from active configuration of  setting Not configured, Intune stops actively enforcing the configuration for that setting on the device.
+
+- **Setting guidance is taken from the Windows CSP**: The information about the setting found in the Intune UI is taken directly from the Windows CSP content, with Learn more links opening the documentation for the relevant CSP, or the content page that includes that CSP. The CSP defines and manages the settings behavior.
+
+When a new platform and profile template is available for a policy type, the older profile of the same name will no longer be available to create new profiles. Instead, new profiles must use the new profiles and settings format. Eventually, your old profiles will be supported for conversion to the new profile format.  Until that conversion is available, you can still use, edit, and deploy your existing profiles.  
+
+The following profile templates are now available in the new settings format:
+
+| Policy type  | Platform  | Profile (template) name  |
+|-----------------|-----------------|-----------------|
+| Antivirus | Windows 10, Windows 11, and Windows Server | Windows Security experience |
+| Antivirus | Windows 10, Windows 11, and Windows Server | Windows Defender Antivirus    |
+| Antivirus | Windows 10, Windows 11, and Windows Server | Windows Defender Antivirus Exclusions
+| Firewall | Windows 10, Windows 11, and Windows Server | Microsoft Defender Firewall |
+| Firewall | Windows 10, Windows 11, and Windows Server | Microsoft Defender Firewall Rules |
+| Endpoint detection and response | Windows 10, Windows 11, and Windows Server | Endpoint detection and response |
+| Attack surface reduction | Windows 10 and Later | Attack surface reduction rules |
+| Attack surface reduction | Windows 10 and Later | Exploit protection |
+
+<!-- To learn more about this change, see the Device Management team blog at [](). -->
+
+### Device management
+
+#### Microsoft Endpoint Manager premium add-ons<!-- 12953253  -->
+
+Microsoft Endpoint Manager is introducing a new centralized experience to help IT admins identify premium add-on capabilities. These capabilities can be added for an additional licensing cost available for Microsoft Endpoint Manager using Intune. The first premium add-on is Remote Help.
+
+You can find premium add-ons in Intune under **Tenant administration** > **Premium add-ons**. The **Summary** blade shows all premium add-ons that have been released, a short description, and the status of the add-on. You can view the status of each add-on as either **Active** or **Available for trial or purchase**. The premium add-ons capability can be used by Global and Billing administrators to start trials or purchase licenses for premium add-ons.
+
+For more information about Premium add-ons, see [Use Premium add-ons capabilities with Intune](../fundamentals/premium-add-ons.md).
+
+## Week of March 28, 2022
+
+### App management
+
+#### Newly available protected app for Intune<!-- 13157367 -->
+The following protected app is now available for Microsoft Intune:
+- CAPTOR&trade; for Intune by Inkscreen LLC
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of March 21, 2022 (Service release 2203)
 

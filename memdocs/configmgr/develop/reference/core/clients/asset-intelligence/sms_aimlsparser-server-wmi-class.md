@@ -1,6 +1,7 @@
 ---
 title: "SMS_AIMLSParser Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_AIMLSParser Windows Management Instrumentation class imports license data." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

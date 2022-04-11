@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_SystemConsoleUsage class to define usage data about devices based on the Windows security event log.
 title: "SMS_SystemConsoleUsage Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

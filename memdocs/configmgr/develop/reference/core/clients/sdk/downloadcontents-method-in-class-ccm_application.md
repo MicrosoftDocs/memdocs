@@ -1,6 +1,7 @@
 ---
 title: "DownloadContents Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the DownloadContents Windows Management Instrumentation class method that downloads the content for an application."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

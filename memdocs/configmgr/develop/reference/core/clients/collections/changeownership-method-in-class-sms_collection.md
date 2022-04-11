@@ -1,5 +1,6 @@
 ---
 title: "ChangeOwnership Method"
+description: Learn how the ChangeOwnership Windows Management Instrumentation (WMI) class method, in Configuration Manager, changes ownership of the devices. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

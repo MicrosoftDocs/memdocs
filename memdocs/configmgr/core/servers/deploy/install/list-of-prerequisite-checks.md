@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 12/01/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -11,7 +11,7 @@ ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
 ---
-
+ 
 # List of prerequisite checks for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
@@ -66,7 +66,7 @@ Support for the application catalog was removed in version 1910. For more inform
 ### Asset Intelligence synchronization point on the expanded primary site
 
 > [!IMPORTANT]
-> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Asset intelligence deprecation](../../../clients/manage/asset-intelligence/deprecation.md).
 
 *Applies to: Central administration site*
 
@@ -106,7 +106,7 @@ You're installing the management point on a server that doesn't have a different
 
 *Applies to: Central administration site*
 
-When you expand a primary site to a hierarchy, the cloud management gateway role isn't installed on the standalone primary site.
+When you expand a primary site to a hierarchy, the cloud management gateway (CMG) role isn't installed on the standalone primary site.
 
 ### Connection to SQL Server on central administration site
 
@@ -302,7 +302,10 @@ This rule checks if the .NET Framework is at least version 4.6.2. You'll see thi
 Starting in version 2111, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
 
 > [!NOTE]
-> Third-party add-ons that use Microsoft .NET Framework and rely on Configuration Manager libraries also need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462)<!--10529267-->.
+> Third-party add-ons that use Microsoft .NET Framework and rely on Configuration Manager libraries also need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../../develop/core/changes/whats-new-sdk.md#external-dependencies-require-net-462).
+>
+> To determine the systems that need to be updated, review the **ConfigMgrPrereq.log** found on the system drive of the computer. <!--10977707-->
+<!--10529267-->
 
 ### Server service is running
 
@@ -620,6 +623,25 @@ To resolve this warning, check whether the despooler and scheduler site system c
 
 The Background Intelligent Transfer Service (BITS) is installed and enabled in IIS.
 
+### Check for a cloud management gateway (CMG) as a cloud service (classic)
+
+*Applies to: Central administration site, primary site*
+
+Starting in version 2203, this warning displays if you have a cloud management gateway (CMG) deployed with the classic cloud service. The option to deploy a CMG as a cloud service (classic) is deprecated. All CMG deployments should use a virtual machine scale set. If you have a CMG deployed with the classic cloud service, you can convert it to a virtual machine scale set deployment. For more information, see [Convert a CMG to a virtual machine scale set](../../../clients/manage/cmg/modify-cloud-management-gateway.md#convert).
+
+### Check for site system roles associated with deprecated or removed features
+
+*Applies to: Central administration site, primary site*
+
+Starting in version 2203, this warning appears if there are site system roles installed for deprecated features that will be removed in a future release. Remove the following site system roles:
+
+- Enrollment point
+- Enrollment point proxy
+
+For more information, see [Remove a site system role](uninstall-sites-and-hierarchies.md#bkmk_role).
+
+The device management point is also deprecated. It's a management point that you allow for mobile and macOS devices. You can entirely remove the role, or you can reconfigure the management point. On the properties of the management point site system role, disable the option to **Allow mobile devices and Mac Computer to use this management point**, This option effectively turns the _device_ management point into a regular management point. For more information, see [Configure roles for on-premises MDM](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md#configure-roles).
+
 ### Check if the site uses Microsoft Operations Management Suite (OMS) Connector
 
 *Applies to: Central administration site, primary site*
@@ -641,6 +663,12 @@ Desktop Analytics is the evolution of Windows Analytics. For more information, s
 If your Configuration Manager site had a connection to Upgrade Readiness, you need to remove it and reconfigure clients. For more information, see [Remove Upgrade Readiness connection](../../../clients/manage/upgrade-readiness.md#bkmk_remove).
 
 If you ignore this prerequisite warning, Configuration Manager setup automatically removes the Upgrade Readiness connector.<!-- #4898 -->
+
+### Check if the site uses the asset intelligence synchronization point role
+
+*Applies to: Central administration site, primary site*
+
+Starting in version 2203, this warning displays if you have the asset intelligence synchronization point site system role. The asset intelligence feature is deprecated and will be removed in a future release. Remove the asset intelligence synchronization point role. For more information, see [Remove a site system role](uninstall-sites-and-hierarchies.md#bkmk_role).
 
 ### Cloud management gateway requires either token-based authentication or an HTTPS management point
 
@@ -790,9 +818,26 @@ _Applies to: CAS, primary site, secondary site_
 In version 2107, this rule checks if the .NET Framework is at least version 4.6.2. You'll see this warning if the system has less than version 4.6.2.
 
 > [!IMPORTANT]
-> Starting in version 2111, if this check fails, it returns an [error](#required-version-of-microsoft-net-framework-error) instead of a warning.
+> Starting in version 2111, if this check fails, it returns an [error](#required-version-of-microsoft-net-framework-error) instead of a warning. To determine the systems that need to be updated, review the ConfigMgrPrereq.log found on the system drive of the computer. <!--10977707-->
 
 Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. If possible in your environment, .NET version 4.8 is recommended. A later version of Configuration Manager will require .NET version 4.8. Before you run setup to install or update the site, first update .NET and restart the system. For more information, [Site and site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md).
+
+### Resource access policies are no longer supported
+
+_Applies to: CAS, primary site_
+
+Starting in version 2203, resource access policies are no longer supported. Remove the certificate registration point site system role and all policies for company resource access features:
+
+- Certificate profiles
+- VPN profiles
+- Wi-Fi profiles
+- Windows Hello for Business settings
+- Email profiles
+- The co-management resource access workload
+
+For more information, see [Frequently asked questions about resource access deprecation](../../../../protect/plan-design/resource-access-deprecation-faq.yml).
+
+For more information on removing the certificate registration point role, see [Remove a site system role](uninstall-sites-and-hierarchies.md#bkmk_role).
 
 ### Schema extensions
 
@@ -946,7 +991,13 @@ For more information, see [Prepare Active Directory for site publishing](../../.
 
 WinRM 1.1 is installed on the primary site server or the Configuration Manager console computer to run the out-of-band management console.
 
-WinRM is automatically installed with all currently-supported versions of Windows. For more information, see [Installation and configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
+WinRM is automatically installed with all versions of Windows currently supported. For more information, see [Installation and configuration for Windows Remote Management](/windows/win32/winrm/installation-and-configuration-for-windows-remote-management).
+
+### Windows Server 2012/R2 lifecycle
+
+*Applies to: Central administration site, primary site, secondary site*
+
+Starting in version 2203, this warning displays if you have site systems running a version of Windows Server that will soon be out of support. The support lifecycle for Windows Server 2012 and Windows Server 2012 R2 ends on October 10, 2023. Plan to upgrade the OS on your site servers. For more information, see the following blog post: [Know your options for SQL Server 2012 and Windows Server 2012 end of support](https://cloudblogs.microsoft.com/sqlserver/2021/07/14/know-your-options-for-sql-server-2012-and-windows-server-2012-end-of-support/). <!--9519162-->
 
 ### WSUS on site server
 

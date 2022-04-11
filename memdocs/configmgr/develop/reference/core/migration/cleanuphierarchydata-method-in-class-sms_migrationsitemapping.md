@@ -1,6 +1,8 @@
 ---
 title: "CleanupHierarchyData Method"
 titleSuffix: "Configuration Manager"
+description: "The CleanupHierarchyData Windows Management Instrumentation (WMI) class method cleans up hierarchy data." 
+
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

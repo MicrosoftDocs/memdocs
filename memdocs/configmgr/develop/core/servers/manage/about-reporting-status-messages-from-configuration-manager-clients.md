@@ -1,6 +1,7 @@
 ---
 title: "Reporting Status Messages from Clients"
 titleSuffix: "Configuration Manager"
+description: You can raise Configuration Manager client status messages in the Windows event log by using a compiled Managed Object Format (MOF) file on client computers.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

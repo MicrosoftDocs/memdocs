@@ -1,6 +1,7 @@
 ---
 title: "CIPackageInfo Structure"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CIPackageInfo structure contains package information for a configuration item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

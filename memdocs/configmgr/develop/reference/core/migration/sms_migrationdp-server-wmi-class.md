@@ -1,6 +1,7 @@
 ---
 title: "SMS_MigrationDP Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MigrationDP WMI class is an SMS Provider server class that represents the shared distribution points between the current active Configuration Manager 2007 hierarchy and the System Center 2012 Configuration Manager hierarchy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

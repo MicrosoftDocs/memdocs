@@ -1,4 +1,5 @@
 ---
+description: Learn all about the infrastructure of Configuration Manager including Control Panel, client framework and data transfer, and policy functionality.
 title: "Client Infrastructure"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how to create an informational status message in Configuration Manager using RaiseInformationalStatusMsg class.
 title: "RaiseInformationalStatusMsg Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how to get and evaluate the user policy for a client device using GetUserPolicy WMI class method.
 title: "GetUserPolicy Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

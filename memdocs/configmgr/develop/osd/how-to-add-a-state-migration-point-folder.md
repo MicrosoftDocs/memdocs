@@ -1,6 +1,7 @@
 ---
 title: "Add a State Migration Point Folder"
 titleSuffix: "Configuration Manager"
+description: "Add an operating system deployment state migration point folder by adding the folder description to the Directories embedded property list."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

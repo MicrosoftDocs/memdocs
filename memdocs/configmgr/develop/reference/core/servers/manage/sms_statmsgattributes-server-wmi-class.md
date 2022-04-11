@@ -1,5 +1,6 @@
 ---
 title: "SMS_StatMsgAttributes Class"
+description: Learn how the SMS_StatMsgAttributes class is an SMS Provider server class that represents optional data associated with a status message. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

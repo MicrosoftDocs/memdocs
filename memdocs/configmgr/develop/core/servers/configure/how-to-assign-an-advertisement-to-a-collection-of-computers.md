@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_Advertisement class to assign an advertisement to a collection of computers.
 title: "Assign an Advertisement to a Collection of Computers"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

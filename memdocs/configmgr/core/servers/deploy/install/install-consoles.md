@@ -2,7 +2,7 @@
 title: Install console
 titleSuffix: Configuration Manager
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
-ms.date: 02/16/2022
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -122,6 +122,10 @@ Specifies the FQDN of the site server to which the console connects when it open
 #### Silent uninstall
 
 `ConsoleSetup.exe /uninstall /q`
+
+## Postinstallation information
+
+The Configuration Manager console requires installation of the built-in WebView2 extension for certain features such as Community hub and dashboards. A notification to install the extension is given to the console user when they open the console. For more information see,the [WebView2 console extension](../../manage/admin-console-extensions.md#bkmk_notification). 
 
 ## Next steps
 

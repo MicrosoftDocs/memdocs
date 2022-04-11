@@ -1,6 +1,7 @@
 ---
 title: "Commit Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method, which indicates that the content package is ready for processing."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

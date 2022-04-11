@@ -1,6 +1,7 @@
 ---
 title: "Define the UI Extension Assembly"
 titleSuffix: "Configuration Manager"
+description: "From the Configuration Manager, the custom wizard assembly is responsible for collecting data and passing it on to the wizard." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

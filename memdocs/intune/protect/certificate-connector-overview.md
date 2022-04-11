@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/14/2022
+ms.date: 03/31/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -87,7 +87,7 @@ The Certificate Connector for Microsoft Intune supports:
 
 Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
 
-Intune supports each connector release for six months after its released. After the six months have passed, the connector is no longer supported and might not function as expected.
+Intune supports each connector release for six months after it's released. After the six months have passed, the connector is no longer supported and might not function as expected.
 
 If you don’t allow the connector to automatically update, plan to manually update it to the latest version at the first opportunity.
 
@@ -156,66 +156,202 @@ All events have one of the following IDs:
 All events are tagged with a Task Category to aid in filtering.  Task categories contain but aren't limited to the following list:
 
 **PKCS**  
+
 - **Admin**  
-  - *PkcsRequestSuccess* - Successfully fulfilled and uploaded a PKCS Request to Intune.
-  - *PkcsRequestFailure* - Failed to fulfill or upload a PKCS Request to Intune.
+
+  - **Event ID: 1000** - *PkcsRequestSuccess*  
+    Successfully uploaded a PKCS Request to Intune.
+
+  - **Event ID: 1001** - *PkcsRequestFailure*  
+    Failed to fulfill or upload a PKCS Request to Intune.
+
+  - **Event ID: 1200** - *PkcsRecryptRequestSuccess*  
+    Successfully processed PKCS Reencrypt request.
+
+  - **Event ID: 1201** - *PkcsRecryptRequestFailure*  
+    Failed to process PKCS Reencrypt request.
+
 - **Operational**
-  - *PkcsDigiCertRequest* - Successfully downloaded PKCS request for DigiCert CA from Intune
-  - *PkcsDownloadSuccess* - Successfully downloaded PKCS requests from Intune
-  - *PkcsDownloadFailure* - A failure occurred when downloading PKCS requests from Intune
-  - *PkcsDownloadedRequest* - Details of a single downloaded request from Intune
-  - *PkcsIssuedSuccess* - Issued a certificate for a request
-  - *PkcsIssuedFailedAttempt* - A failure occurred while issuing a certificate for a request
-  - *PkcsIssuedFailure* - Failed to issue a certificate for a Request
-  - *PkcsUploadSuccess* - Details of successful request that was uploaded to Intune
-  - *PkcsUploadFailure* - A failure occurred when uploading requests to  Intune
-  - *PkcsUploadedRequest* - Details of an uploaded request to Intune
+
+  - **Event ID: 1002** - *PkcsDownloadSuccess*  
+    Successfully downloaded PKCS requests from Intune.
+
+  - **Event ID: 1003** - *PkcsDownloadFailure*  
+    Failed to download PKCS requests from Intune.
+
+  - **Event ID: 1020** - *PkcsDownloadedRequest*  
+    Successfully downloaded PKCS request from Intune
+
+  - **Event ID: 1032** - *PkcsDigiCertRequest*  
+    Successfully downloaded a PKCS request for DigiCert CA from Intune.
+
+  - **Event ID: 1050** - *PkcsIssuedSuccess*  
+    Successfully issued a PKCS certificate.
+
+  - **Event ID: 1051** - *PkcsIssuedFailedAttempt*  
+    Failed to issue a PKCS certificate, will try again.
+
+  - **Event ID: 1052** - *PkcsIssuedFailure*  
+    Failed to issue a PKCS certificate.
+
+  - **Event ID: 1100** - *PkcsUploadSuccess*  
+    Successfully uploaded PKCS request results to Intune.
+
+  - **Event ID: 1101** - *PkcsUploadFailure*  
+    Failed to upload PKCS request results to Intune.
+
+  - **Event ID: 1102** - *PkcsUploadedRequest*  
+    Successfully uploaded PKCS request to Intune.
+
+  - **Event ID: 1202** - *PkcsRecryptDownloadSuccess*  
+    Successfully downloaded PKCS Reencrypt requests.
+
+  - **Event ID: 1203** - *PkcsRecryptDownloadFailure*  
+    Failed to download PKCS Reencrypt requests.
+
+  - **Event ID: 1220** - *PkcsRecryptDownloadedRequest*  
+    Successfully downloaded a PKCS Reencrypt request.
+
+  - **Event ID: 1250** - *PkcsRecryptReencryptSuccess*  
+    Successfully re-encrypted PKCS certificate payload.
+
+  - **Event ID: 1251** - *PkcsRecryptDecryptSuccess*  
+    Successfully decrypted PKCS certificate payload.
+
+  - **Event ID: 1252** - *PkcsRecryptDecryptFailure*  
+    Failed to decrypt PKCS certificate payload.
+
+  - **Event ID: 1253** - *PkcsRecryptReencryptFailure*  
+    Failed to re-encrypt PKCS certificate payload.
+
+  - **Event ID: 1300** - *PkcsRecryptUploadSuccess*  
+    Successfully uploaded PKCS Reencrypt request results to Intune.
+
+  - **Event ID: 1301** - *PkcsRecryptUploadFailure*  
+    Failed to upload PKCS Reencrypt request results to Intune.
+
+  - **Event ID: 1302** - *PkcsRecryptUploadedRequest*  
+    Successfully uploaded a PKCS Reencrypt request to Intune.
 
 **PKCS Import**  
-- **Admin**  
-  - *PkcsImportRequestSuccess* - Successfully downloaded PKCS Import requests from Intune
-  - *PkcsImportRequestFailure* - A failure occurred when downloading PKCS Import requests from Intune
-- **Operational**
-  - *PkcsImportDownloadSuccess* - Successfully downloaded PKCS Import requests from Intune
-  - *PkcsImportDownloadFailure* - A failure occurred when downloading PKCS Import requests from Intune
-  - *PkcsImportDownloadedRequest* - Details of a single downloaded request from Intune
-  - *PkcsImportReencryptSuccess* - Re-encrypted an imported certificate
-  - *PkcsImportReencryptFailedAttempt* - A failure occurred while re-encrypting an imported certificate
-  - *PkcsImportReencryptFailure* - Failed to re-encrypt an imported certificate
-  - *PkcsImportUploadFailure* - A failure occurred when uploading requests to Intune
-  - *PkcsImportUploadedRequest* - Details of an uploaded request to Intune
 
-**Revocation**
-- **Admin**
-  - *RevokeRequestSuccess* - Successfully downloaded Revocation requests from Intune
-  - *RevokeRequestFailure* - A failure occurred when downloading Revocation requests from Intune
+- **Admin**  
+
+  - **Event ID: 2000** - *PkcsImportRequestSuccess*  
+    Successfully downloaded PKCS Import requests from Intune.
+
+  - **Event ID: 2001** - *PkcsImportRequestFailure*  
+    Failed to process a PKCS Import request from Intune.
+
+- **Operational**  
+
+  - **Event ID: 2202** - *PkcsImportDownloadSuccess*  
+    Successfully downloaded PKCS Import requests from Intune.
+
+  - **Event ID: 2203** - *PkcsImportDownloadFailure*  
+    Failed to download PKCS Import requests from Intune.
+
+  - **Event ID: 2020** - *PkcsImportDownloadedRequest*  
+    Successfully downloaded a PKCS Import request from Intune.
+
+  - **Event ID: 2050** - *PkcsImportReencryptSuccess*  
+    Successfully re-encrypted a PKCS Import certificate.
+
+  - **Event ID: 2051** - *PkcsImportReencryptFailedAttempt*  
+    Failed to re-encrypt a PKCS Import certificate, will try again.
+
+  - **Event ID: 2052** - *PkcsImportReencryptFailure*  
+    Failed to re-encrypt an imported certificate.
+
+  - **Event ID: 2100** - *PkcsImportUploadSuccess*  
+    Successfully uploaded PKCS Import request results to Intune.
+
+  - **Event ID: 2101** - *PkcsImportUploadFailure*  
+    Failed to upoload PKCS request results to Intune.
+
+  - **Event ID: 2102** - *PkcsImportUploadedRequest*  
+    Successfully uploaded a PKCS Import request to Intune.
+
+**Revocation**  
+
+- **Admin**  
+
+  - **Event ID: 3000** - *RevokeRequestSuccess*  
+    Successfully downloaded Revocation requests from Intune.
+
+  - **Event ID: 3001** - *RevokeRequestFailure*  
+    A failure occurred when downloading Revocation requests from Intune.
+
 - **Operational**
-  - *RevokeDigicertRequest* - Received revoke request from Intune and forwarding request to Digicert for fulfillment of request.
-  - *RevokeDownloadSuccess* - Successfully downloaded Revocation requests from Intune
-  - *RevokeDownloadFailure* - A failure occurred when downloading Revocation requests from Intune
-  - *RevokeDownloadedRequest* - Details of a single downloaded request from Intune
-  - *RevokeSuccess* - Successfully revoked certificate
-  - *RevokeFailure* - A failure occurred while revoking a certificate
-  - *RevokeFailedAttempt* - Failed to revoke a certificate
-  - *RevokeUploadSuccess* - Details of successful request that was uploaded to Intune
-  - *RevokeUploadFailure* - A failure occurred when uploading requests to Intune
-  - *RevokeUploadedRequest* - Details of an uploaded request to Intune
+
+  - **Event ID: 3002** - *RevokeDownloadSuccess*  
+    Successfully downloaded Revocation requests from Intune.
+
+  - **Event ID: 3003** - *RevokeDownloadFailure*  
+    A failure occurred when downloading Revocation requests from Intune.
+
+  - **Event ID: 3020** - *RevokeDownloadedRequest*  
+    Details of a single downloaded request from Intune
+
+  - **Event ID:  3032** - *RevokeDigicertRequest*  
+    Received revoke request from Intune and forwarding request to Digicert for fulfillment of request.
+
+  - **Event ID: 3050** - *RevokeSuccess*  
+    Successfully revoked certificate.
+
+  - **Event ID: 3051** - *RevokeFailure*  
+    A failure occurred while revoking a certificate.
+
+  - **Event ID: 3052** - *RevokeFailedAttempt*  
+    Failed to revoke a certificate, will try again.
+
+  - **Event ID: 3100** - *RevokeUploadSuccess*  
+    Successfully uploaded Revocation request results to Intune.
+
+  - **Event ID: 3101** - *RevokeUploadFailure*  
+    Failed to upload Revocation request results to Intune.
+
+  - **Event ID: 3102** - *RevokeUploadedRequest*  
+    Successfully uploaded Revocation request to Intune.
 
 **SCEP**
+
 - **Admin**
-  - *ScrepRequestSuccess* - Successfully received and processed SCEP request and notified Intune
-  - *ScepRequestIssuedFailure* - Failed to issue certificate for SCEP request
-  - *ScepRequestUploadFailure* - Successfully processed SCEP request but failed to notify Intune
+
+  - **Event ID: 4000** - *ScrepRequestSuccess*  
+    Successfully processed a SCEP request and notified Intune.
+
+  - **Event ID: 4001** - *ScepRequestIssuedFailure*  
+    Failed to process a SCEP request and notified Intune.
+
+  - **Event ID: 4002** - *ScepRequestUploadFailure*  
+    Successfully processed SCEP request but failed to notify Intune.
 
 - **Operational**
-  - *ScepRequestReceived* - Received request from device
-  - *ScepVerifySuccess* - Successfully verified request with Intune
-  - *ScepVerifyFailure* - Verification of request failed
-  - *ScepIssuedSuccess* - Successfully issued certificate for request
-  - *ScepIssuedFailure* - Failed to issue certificate for request
-  - *ScepNotifySuccess* - Successfully notified Intune of request
-  - *ScepNotifyAttemptFailed* - Failed attempt to notify Intune of request status.
-  - *ScepNotifySaveToDiskFailed* - Failed to write notification to disk. Will not be able to notify Intune of request status.
+
+  - **Event ID: 4003** - *ScepRequestReceived*  
+    Successfully received a SCEP request from a device.
+
+  - **Event ID: 4004** - *ScepVerifySuccess*  
+    Successfully verified a SCEP request with Intune.
+
+  - **Event ID: 4005** - *ScepVerifyFailure*  
+    Failed to verify a SCEP request with Intune.
+
+  - **Event ID: 4006** - *ScepIssuedSuccess*  
+    Successfully issued certificate for a SCEP request.
+
+  - **Event ID: 4007** - *ScepIssuedFailure*  
+    Failed to issue certificate for SCEP request.
+
+  - **Event ID: 4008** - *ScepNotifySuccess*  
+    Successfully notified Intune of the result for a SCEP request.
+
+  - **Event ID: 4009** - *ScepNotifyAttemptFailed*  
+    Failed to notify Intune of the result of a SCEP request, will try again.
+
+  - **Event ID: 4010** - *ScepNotifySaveToDiskFailed*  
+    Failed to write notification to disk and cannot notify Intune of the request status.
 
 ## What's new for the Certificate Connector
 
@@ -223,10 +359,9 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 
 New updates for the connector can take a week or more to become available for each tenant.
 
-<!-- Note for future use if/when relevant>
-> [!IMPORTANT]
-> On [DATE], certificate connectors earlier than version [version] will no longer allow you to issue certificates to users and devices.
--->
+> [!IMPORTANT]  
+> On June 1, 2022, Intune certificate connectors earlier than version **6.2101.13.0** will no longer allow you to issue certificates to users and devices. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article) on July 29, 2021.
+ 
 
 ### March 10, 2022
 

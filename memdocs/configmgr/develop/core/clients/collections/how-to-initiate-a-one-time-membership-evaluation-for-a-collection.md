@@ -1,6 +1,7 @@
 ---
 title: "Initiate a One-time Membership Evaluation for a Collection"
 titleSuffix: "Configuration Manager"
+description: "Initiate a One-time Membership Evaluation for a Collection. Get a specific collection instance by using the collection ID provided."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

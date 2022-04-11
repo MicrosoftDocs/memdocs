@@ -1,5 +1,6 @@
 ---
 title: "Configuration Manager Status Summarizers"
+description: "Summarizers are summary classes that help you determine the health or status of different aspects of your Configuration Manager site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "CCM_DTS_FLAG Enumeration"
 titleSuffix: "Configuration Manager"
+description: The CCM_DTS_FLAG enumeration indicates special options on download jobs. 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

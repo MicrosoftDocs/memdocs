@@ -1,5 +1,6 @@
 ---
 title: "About Configuration Manager SDK Requirements"
+description: Learn how developing applications and scripts for Microsoft Configuration Manager can be done using a number of development languages and tools.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Learn how to configure the Active Directory User Discovery settings by modifying the necessary site control file settings.
 title: "Configure Active Directory User Discovery"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

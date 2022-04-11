@@ -1,6 +1,7 @@
 ---
 title: "SMS_MDMAppleVppToken Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager, that represents an Apple Volume Purchase Program (VPP) token."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

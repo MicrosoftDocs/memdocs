@@ -1,4 +1,5 @@
 ---
+description: Learn how the DeleteStatistics Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes status message counts for Configuration Manager components.
 title: "DeleteStatistics Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

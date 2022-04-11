@@ -1,6 +1,7 @@
 ---
 title: "SMS_EndpointProtectionThreatData Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents Microsoft official threats. It is a metadata table and all data is extracted from the signature update."   
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

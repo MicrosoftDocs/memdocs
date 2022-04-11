@@ -53,22 +53,11 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 -->
 
 <!-- ***********************************************-->
-## Device management
-
-### windows365.microsoft.com will move to general availability<!--38195529-->
-
-The windows365.microsoft.com web client will be moving out of preview and into general availability.
+<!--## Device management
+-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
-
-### End-user error log collection<!--38195529-->
-
-End users will be able to collect error logs.
-
-### End-user feedback<!--38195529-->
-
-End users will be able to provide feedback to Microsoft from within the Windows 365 web client.
 
 ### End user manual connectivity check<!--37679345 -->
 

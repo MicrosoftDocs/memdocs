@@ -1,6 +1,7 @@
 ---
 title: "Use Objects Passed to a Form"
 titleSuffix: "Configuration Manager"
+description: "Learn how to use the SmsPageControl.PropertyManager object to access objects selected in the Configuration Manager console." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

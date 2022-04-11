@@ -1,6 +1,7 @@
 ---
 title: "ICIINFO::GetContextInfo"
 titleSuffix: "Configuration Manager"
+description: The ICIINFO::GetContextInfo method, in Configuration Manager, gets the context information by name from the configuration item. 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

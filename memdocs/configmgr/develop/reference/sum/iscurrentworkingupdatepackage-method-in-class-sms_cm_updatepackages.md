@@ -1,6 +1,7 @@
 ---
 title: "IsCurrentWorkingUpdatePackage Method"
 titleSuffix: "Configuration Manager"
+description: "The IsCurrentWorkingUpdatePackage WMI class method checks whether the update package is the package that setup is currently working on."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

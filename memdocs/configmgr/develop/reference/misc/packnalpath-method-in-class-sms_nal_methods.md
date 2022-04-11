@@ -1,6 +1,7 @@
 ---
 title: "PackNALPath Method"
 titleSuffix: "Configuration Manager"
+description: "Encode a network abstraction layer (NAL) path from its components. A NAL path is an abstract representation of a network path or a user account."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

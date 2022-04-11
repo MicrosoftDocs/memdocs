@@ -1,6 +1,7 @@
 ---
 title: "Read a Task Sequence from a Task Sequence Package"
 titleSuffix: "Configuration Manager"
+description: "Read a task sequence from a task sequence package, in Configuration Manager, by calling the SMS_TaskSequencePackage method."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

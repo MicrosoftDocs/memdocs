@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/03/2021
+ms.date: 04/11/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -28,26 +28,36 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Provide users a localized Windows experience
+# Provide a localized Windows experience
 
 For users to be productive on their Windows 365 Cloud PC, it's important for Windows to use a display language that they're comfortable with. Users can always change the display language themselves through the Settings app in Windows. But the Windows experience is more welcoming if the user sees the right language immediately, starting when they first sign in.
 
 There are two different ways to provide a localized Windows experience when users first sign in:
 
-- Configure a provisioning policy
-- Create a custom device image
+- [Use a provisioning policy](use-provisioning-policy-default-display-language.md). If you plan on using a gallery image, you can select the language when you create the provisioning policy.
+- [Create a custom device image](create-custom-image-languages.md). If you plan on using a custom image and you manage your Cloud PCs through group policy, you can include the language as part of the custom image.
 
-## Configure a provisioning policy
+## URLs to allow
 
-To make sure that the correct language packs are available on the Cloud PC at first sign-in, you can configure a provisioning policy:
+For both the provisioning policy and custom image options to set up the display languages, make sure to add the following URLs to your firewall allow list:
 
-- [Create a provisioning policy](create-provisioning-policy.md) and choose a **Language & Region pack** under **Configuration**. There are 38 Windows language packs available for Windows 365. Windows 365 will automatically use the default remote keyboard layout for the language pack.
+- Windows 11 21H2
+  - LanguagePack: https://software-download.microsoft.com/download/sg/22000.1.210604-1628.co_release_amd64fre_CLIENT_LOF_PACKAGES_OEM.iso
+  - FodToLP: https://download.microsoft.com/download/7/6/0/7600F9DC-C296-4CF8-B92A-2D85BAFBD5D2/Windows-10-1809-FOD-to-LP-Mapping-Table.xlsx
+- Windows 10 21H2 and 21H1
+  - LanguagePack: https://software-download.microsoft.com/download/pr/19041.1.191206-1406.vb_release_CLIENTLANGPACKDVD_OEM_MULTI.iso
+  - FOD: https://software-download.microsoft.com/download/pr/19041.1.191206-1406.vb_release_amd64fre_FOD-PACKAGES_OEM_PT1_amd64fre_MULTI.iso
+  - InboxApps: https://software-download.microsoft.com/download/sg/19041.928.210407-2138.vb_release_svc_prod1_amd64fre_InboxApps.iso
+- Windows 10 20H2
+  - LanguagePack: https://software-download.microsoft.com/download/pr/19041.1.191206-1406.vb_release_CLIENTLANGPACKDVD_OEM_MULTI.iso
+  - FOD: https://software-download.microsoft.com/download/pr/19041.1.191206-1406.vb_release_amd64fre_FOD-PACKAGES_OEM_PT1_amd64fre_MULTI.iso
+  - InboxApps: https://software-download.microsoft.com/download/pr/19041.508.200905-1327.vb_release_svc_prod1_amd64fre_InboxApps.iso
+- Windows 10 1909
+  - LanguagePack: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_CLIENTLANGPACKDVD_OEM_MULTI.iso
+  - FOD: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_amd64fre_FOD-PACKAGES_OEM_PT1_amd64fre_MULTI.iso
+  - InboxApps: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_amd64fre_InboxApps.iso
 
-All Cloud PCs provisioned with this policy will have the chosen language pack at the first sign-in experience.
-
-You can also [edit provisioning policies](edit-provisioning-policy.md) to change the Language & Region configuration. After saving the policy and [reprovisioning](reprovision-cloud-pc.md) the associated Cloud PCs, the chosen language pack will be on the Cloud PCs.
-
-## Create a custom device image
+## Create a custom device image with languages already installed
 
 To create a custom device image that gives users a localized Windows experience, follow these steps:
 

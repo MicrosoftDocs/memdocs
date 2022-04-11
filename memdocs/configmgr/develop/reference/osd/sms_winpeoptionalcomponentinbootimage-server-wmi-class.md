@@ -1,6 +1,7 @@
 ---
 title: "SMS_WinPEOptionalComponentInBootImage Class"
 titleSuffix: "Configuration Manager"
+description: "This is an SMS Provider server class in Configuration Manager. It represents the association between a boot image package and a WinPE optional component."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the GetFileBinary Method to get the binary user interface for a feature.
 title: "GetFileBinary Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

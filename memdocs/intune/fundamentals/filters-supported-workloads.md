@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2022
+ms.date: 04/06/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -286,13 +286,13 @@ You can use filters for some common device configuration policies on the followi
 | Wi-Fi | ✔️ |
 | Windows health monitoring | ✔️ |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ✔️ |
-| Antivirus | ✔️ |
-| Attack surface reduction | ✔️ |
-| Disk encryption | ✔️ |
-| Endpoint detection and response | ✔️ |
-| Firewall | ✔️ |
-| Security Baselines | ✔️ |
+| Account protection | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment. |
+| Antivirus | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Attack surface reduction | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Disk encryption | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Endpoint detection and response | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Firewall | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Security Baselines | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
 
 ## Not supported
 

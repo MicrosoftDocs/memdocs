@@ -1,5 +1,6 @@
 ---
 title: "SMS_Content Class"
+description: Learn how the SMS_Content class is an SMS Provider server class, in Configuration Manager, that provides additional information about a CI_Content instance.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -165,7 +166,7 @@ Class SMS_Content : SMS_BaseClass
 
  Qualifiers: none  
 
- The security key of the content. Content may secured by application or package.  
+ The security key of the content. Content may be secured by application or package.  
 
 ## Requirements  
 
