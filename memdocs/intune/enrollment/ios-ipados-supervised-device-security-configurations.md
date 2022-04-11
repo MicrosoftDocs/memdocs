@@ -82,7 +82,7 @@ To simplify the table below, only configured settings are listed. Undocumented d
 
 ## Supervised enhanced security (Level 2)
 
-Level 2 is the recommended configuration for personal devices where users access more sensitive information. These devices are a natural target in enterprises today. These settings don't assume a large staff of highly skilled security personnel. Therefore, they should be accessible to most enterprise organizations. This configuration is applicable to most mobile users accessing work or school data on a device.
+Level 2 is the recommended configuration for supervised  devices where users access more sensitive information. These devices are a natural target in enterprises today. These settings don't assume a large staff of highly skilled security personnel. Therefore, they should be accessible to most enterprise organizations. This configuration is applicable to most mobile users accessing work or school data on a device.
 
 This configuration expands upon the configuration in Level 1 by enacting data transfer controls and blocking access to USB devices.
 
