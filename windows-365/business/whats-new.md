@@ -47,6 +47,15 @@ Learn what new features are available in Windows 365 Business.
 ### Scripts
 -->
 
+<!-- ########################## -->
+## Week of April 11, 2022)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### windows365.microsoft.com is now generally available<!--38195529-->
+
+The windows365.microsoft.com web client has moved out of preview and into general availability.
 
 <!-- ########################## -->
 ## Week of April 4, 2022 (Service release 2203)
