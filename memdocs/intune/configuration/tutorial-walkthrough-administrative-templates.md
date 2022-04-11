@@ -538,7 +538,7 @@ This section uses the following resources. We'll install these resources in this
 11. Find the definition ID using the setting display name. Enter:
 
     ```powershell
-    $desiredSettingDefinition = $settingDefinitions.value | ? {$_.DisplayName -Match "Silently sign in users to the OneDrive sync App with their Windows credentials"}
+    $desiredSettingDefinition = $settingDefinitions.value | ? {$_.DisplayName -Match "Silently sign in users to the OneDrive sync app with their Windows credentials"}
     ```
 
 12. Configure a setting. Enter:
