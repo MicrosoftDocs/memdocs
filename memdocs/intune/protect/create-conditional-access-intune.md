@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 With Microsoft Intune device compliance policies, your Azure Active Directory (Azure AD) Conditional Access policies can use a devices status to either grant or deny access to your organizations apps and services.
 
-You can use the Microsoft Endpoint Manager admin center to configure your device-based Conditional Access policies. The admin center presents the same UI for creating Conditional Access policies as found in Azure AD, providing access to all the options you would have if you were to configure the policy from within the Azure portal. The policies you create can specify the app or services you want to protect, the conditions under which the apps or services can be accessed, and the users the policy applies to.
+You can use the Microsoft Endpoint Manager admin center to configure your device-based Conditional Access policies. From within the admin center you have access to the Conditional Access policy UI as found in Azure AD. Use of the Azure AD UI provides access to all the options you would have if you were to configure the policy from within the Azure portal. The policies you create can specify the apps or services you want to protect, the conditions under which the apps or services can be accessed, and the users the policy applies to.
 
 To Create a device-based Conditional Access policy your account must have one of the following permissions in Azure AD:
 
@@ -56,8 +56,8 @@ To take advantage of device compliance status, configure Conditional Access poli
 
 3. Under **Assignments**, select **Users or workload identities** to configure the Identities in the directory that the policy applies to. To learn more, see [Users and groups](/azure/active-directory/conditional-access/concept-conditional-access-users-groups) in the Azure AD documentation.
 
-   - On the Include tab, configure the user and groups you want to include.  
-   - Use the Exclude tab if there are any users, roles, or groups you want to exclude from this policy.
+   - On the **Include** tab, configure the user and groups you want to include.  
+   - Use the **Exclude** tab if there are any users, roles, or groups you want to exclude from this policy.
 
    > [!TIP]
    > Test the policy against a smaller group of users to make sure it works as expected.
@@ -68,14 +68,14 @@ To take advantage of device compliance status, configure Conditional Access poli
 
      If you choose **Select apps**, select the apps and services you want to protect with this policy. 
 
-   > [!CAUTION]
-   > If you choose  **All cloud apps**, be sure to review the warning, and then be sure to **Exclude** from this policy your account or other relevant users and groups will retain access to use the Azure portal or Microsoft Endpoint Manager admin center after this policy takes effect.
+     > [!CAUTION]
+     > If you choose  **All cloud apps**, be sure to review the warning, and then **Exclude** from this policy your account or other relevant users and groups that should retain access to use the Azure portal or Microsoft Endpoint Manager admin center after this policy takes effect.
 
    - Use the **Exclude** tab if there are any apps or services you want to exclude from this policy.
 
-   For more information, see [Cloud apps or actions](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps) in the Azure Ad documentation.
+   For more information, see [Cloud apps or actions](/azure/active-directory/conditional-access/concept-conditional-access-cloud-apps) in the Azure AD documentation.
 
-5. Next, configure **Conditions**, and then select the signals you want to use as conditions for this policy. Options include:
+5. Next, configure **Conditions**. Select the signals you want to use as conditions for this policy. Options include:
 
    - User risk
    - Sign-in risk
