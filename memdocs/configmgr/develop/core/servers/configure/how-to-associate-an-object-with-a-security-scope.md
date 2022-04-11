@@ -1,6 +1,7 @@
 ---
 title: "Associate an Object with a Security Scope"
 titleSuffix: "Configuration Manager"
+description: To assign multiple objects to a scope, use the AddMemberships Method in Class SMS_SecuredCategoryMembership.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "SMS_InventoryClass Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_InventoryClass Windows Management Instrumentation class is an SMS Provider server class that represents inventory classes that exist in the system."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
