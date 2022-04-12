@@ -142,7 +142,7 @@ Before you uninstall a primary site, review the following tasks:
 
   - Client reassignment may impact reports and queries that rely on inventory data, and state-based compliance. Consider temporarily adjusting any client cycles during the transition.
 
-  - Review all client assignment methods to make sure that none refer to this primary site.
+  - Review all client assignment methods to make sure that none refers to this primary site.
 
 - Check if any actively used objects in the hierarchy have static references to the site code. For example, collection queries, task sequences, or administrative scripts.
 
