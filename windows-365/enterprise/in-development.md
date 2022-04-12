@@ -68,6 +68,13 @@ Non-admin users will be able to change their Cloud PC’s time zone.
 The term **on-premises network connection** will be renamed to **Azure network connection** in all user interfaces, documentation, and communications.
 
 <!-- ***********************************************-->
+## Device provisioning
+
+### Provision Cloud PCs with Secure Boot<!--38012584-->
+
+You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality.
+
+<!-- ***********************************************-->
 ## Monitor and troubleshoot
 
 ### End-user error log collection<!--38195529-->
