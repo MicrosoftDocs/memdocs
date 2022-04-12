@@ -189,8 +189,6 @@ At any time, you can delete imported GPOs:
 
 - [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md)
 
-- [Add endpoint protection settings in Microsoft Endpoint Manager](../protect/endpoint-protection-configure.md)
-
 ## See also
 
 Learn more about [Configuration Service Providers (CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
