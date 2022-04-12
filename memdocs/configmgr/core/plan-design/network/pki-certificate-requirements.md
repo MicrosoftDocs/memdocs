@@ -35,7 +35,7 @@ For more information, see the following articles:
 
 ### Secure Hash Algorithm 2 (SHA-2) certificates
 
-Issue new server and client authentication certificates that are signed with SHA-2, which includes SHA-256 and SHA-512. All internet-facing services should use a SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase a SHA-2 certificate.
+Issue new server and client authentication certificates that are signed with SHA-2, which includes SHA-256 and SHA-512. All internet-facing services should use an SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase an SHA-2 certificate.
 
 Windows doesn't trust certificates signed with SHA-1. For more information, see [Windows Enforcement of SHA1 certificates](https://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx).
 
