@@ -126,7 +126,7 @@ Include the following keys in the `SABranchOptions` section to install a site:<!
 | Key name | Required | Values | Details |
 |----------|----------|--------|---------|
 | `SAActive` | No | - `0`: You don't have SA<br>- `1`: SA is active | Specify if you have active Software Assurance (SA). For more information, see [Product and licensing FAQ](../../../understand/product-and-licensing-faq.yml). |
-| `CurrentBranch` | No | - `0`: Install the LTSB<br>- `1`: Install current branch | Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](../../../understand/which-branch-should-i-use.md). |
+| `CurrentBranch` | No | - `0`: Install the LTSB<br>- `1`: Install current branch | Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](../../../understand/which-branch-should-i-use.md) |
 | `SAExpiration` | No | Date | The date when SA expires, used as a convenient reminder of that date. For more information, see [Licensing and branches](../../../understand/learn-more-editions.md). |
 
 ### `HierarchyExpansionOption` section for site expansion
