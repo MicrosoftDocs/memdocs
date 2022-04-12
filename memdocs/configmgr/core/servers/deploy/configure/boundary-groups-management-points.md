@@ -24,7 +24,7 @@ Previously, a common problem occurred when you had a protected management point 
 > [!NOTE]
 > If you enable distribution points in the site default boundary group to fallback, and a management point is collocated on a distribution point, the site also adds that management point to the site default boundary group.<!--VSO 2841292-->
 
-If a client is in a boundary group that with no assigned management point, the site gives the client the entire list of management points. This behavior makes sure that a client always receives a list of management points.
+If a client is in a boundary group with no assigned management point, the site gives the client the entire list of management points. This behavior makes sure that a client always receives a list of management points.
 
 > [!TIP]
 > If you enable the option to **Prefer cloud-based sources over on-premises sources** then clients will prefer a cloud management gateway (CMG) for both policy and content.
