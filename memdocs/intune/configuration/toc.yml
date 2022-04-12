@@ -82,6 +82,9 @@ items:
     displayName: delivery optimization, windows updates
   - name: Upgrade Windows and S mode
     href: edition-upgrade-configure-windows-10.md
+  - name: Wired networks
+    href: wired-networks-configure.md
+    displayName: 802.1x
   - name: Device features on iOS/iPadOS and macOS
     items:
     - name: Device features
@@ -97,9 +100,6 @@ items:
   - name: Preference file on macOS
     href: preference-file-settings-macos.md
     displayName: property list files, plist
-  - name: Wired networks on macOS
-    href: wired-networks-configure.md
-    displayName: 802.1x
   - name: Mobility Extensions on Zebra devices
     displayName: mx, android, stagenow
     items:
@@ -245,6 +245,8 @@ items:
         href: vpn-settings-windows-10.md
       - name: Wi-Fi
         href: wi-fi-settings-windows.md
+      - name: Wired network
+        href: wired-network-settings-windows.md
     - name: Windows Holographic for Business
       items:
       - name: Custom
