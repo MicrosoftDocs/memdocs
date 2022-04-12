@@ -348,7 +348,7 @@ The following settings are on the **Communication** page of the Create Site Syst
 
   - When you **Enable PXE support for clients** on the **PXE Settings** page, the distribution point sends it to computers that PXE boot. These computers then use it to connect to a management point during the OS deployment process.
 
-    When you configure all your management points in the site for HTTP, select the option to **Create self-signed certificate**. When you configure the management points for HTTPS, use the option to **Import certificate** from PKI. In other words, don't use self-signed certificates on distribution points when management points use certificates. Issues may occur otherwise. For example, distribution points won't sent state messages.<!-- 13860499 -->
+    When you configure all your management points in the site for HTTP, select the option to **Create self-signed certificate**. When you configure the management points for HTTPS, use the option to **Import certificate** from PKI. In other words, don't use self-signed certificates on distribution points when management points use certificates. Issues may occur otherwise. For example, distribution points won't send state messages.<!-- 13860499 -->
 
     To import the certificate, browse to a valid Public Key Cryptography Standard (PKCS #12) file. This PFX or CER file has the PKI certificate with the following requirements for Configuration Manager:
 
