@@ -16,6 +16,9 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
+> [!IMPORTANT]
+> Starting in April 2022, this feature of Configuration Manager is [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 13846745 --> The baseline media for version 2203 is the last version of Configuration Manager current branch that will support upgrade from any version of System Center 2012 Configuration Manager. Current branch version 2303 media will only support new installs of current branch.
+
 Do an in-place upgrade to Configuration Manager current branch from a site and hierarchy that runs System Center 2012 Configuration Manager. Before upgrading from System Center 2012 Configuration Manager, you must prepare the sites. This preparation requires you to remove specific configurations that can prevent a successful upgrade. Then follow the upgrade sequence when more than a single site is involved.
 
 > [!TIP]
