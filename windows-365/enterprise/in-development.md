@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/09/2022
+ms.date: 04/12/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -49,6 +49,7 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 ## Monitor and troubleshoot
 ## Role-based access control
 ## Security
+## End-user experience
 
 -->
 
@@ -56,7 +57,15 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!--## App management-->
 
 <!-- ***********************************************-->
-<!--## Device management-->
+## Device management
+
+### Change Cloud PC time zone<!--38902639 -->
+
+Non-admin users will be able to change their Cloud PC’s time zone.
+
+### On-premises network connection getting renamed to Azure network connection<!--38457869 -->
+
+The term **on-premises network connection** will be renamed to **Azure network connection** in all user interfaces, documentation, and communications.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -79,6 +88,10 @@ The device history report will have new information to help you evaluate Cloud P
 
 - Top 5 processes impacting CPU spike times
 - Top 5 processes impacting RAM spike times
+
+### Forensic auditing of Cloud PCs<!--38726407-->
+
+You’ll be able to place a Cloud PC under review. This action initiates a process to create a secure snapshot of a Cloud PC. You’ll be able to analyze the snapshot using electronic discovery solutions.
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->
