@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 04/11/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,18 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of April 11, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Scripts
+
+#### Windows365-PSScripts Github repository is now open for contributions
+
+The Windows365-PSSCripts Github repository is now open. It contains Windows 365-related scripts to help admins manage Cloud PCs. You can also contribute your own scripts to help others use Windows 365.
+
+For more information, see the [Windows365-PSScripts Github repository readme](https://github.com/microsoft/Windows365-PSScripts).
 
 <!-- ########################## -->
 ## Week of April 4, 2022 (Service release 2203)
