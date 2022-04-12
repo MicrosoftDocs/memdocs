@@ -185,6 +185,8 @@ At any time, you can delete imported GPOs:
 
 ## Next steps
 
+- [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager (public preview)](group-policy-analytics-migrate.md)
+
 - [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md)
 
 - [Add endpoint protection settings in Microsoft Endpoint Manager](../protect/endpoint-protection-configure.md)
