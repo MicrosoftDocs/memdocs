@@ -51,7 +51,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 - This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
-- Currently, the Migrate feature isn't supported in sovereign clouds. For more information on sovereign clouds, see [What is Azure Government?](https://docs.microsoft.com/azure/azure-government/documentation-government-welcome).
+- Currently, the Migrate feature isn't supported in sovereign clouds. For more information on sovereign clouds, see [What is Azure Government?](/azure/azure-government/documentation-government-welcome).
 
 ## Review and migrate your GPOs to a Settings Catalog policy
 
@@ -78,7 +78,7 @@ After you import your GPOs, review the settings that can be migrated. Remember, 
 
     - **Search by setting name**: Enter the setting name to find the settings you want:
 
-      :::image type="content" source="./media/group-policy-analytics-migrate/search-by-setting-name.png" alt-text="Search for the setting name in Group Policy Analytics migrate feature in Endpoint Manager and Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/search-by-setting-name.png:::
+      :::image type="content" source="./media/group-policy-analytics-migrate/search-by-setting-name.png" alt-text="Search for the setting name in Group Policy Analytics migrate feature in Endpoint Manager and Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/search-by-setting-name.png":::
 
     - **Sort**: Sort your settings using the column names:
 
