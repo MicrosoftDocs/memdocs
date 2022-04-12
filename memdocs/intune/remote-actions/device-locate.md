@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 2/16/2022 
+ms.date: 4/12/2022 
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -56,6 +56,8 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md).
 - **Android Enterprise dedicated devices** - Requires the Intune app running 2202.01 or later 
+- **Android Enterprise corporate-owned work profile (COPE) devices**
+- **Android Enterprise corporate-owned fully managed (COBO) devices**
 
 **Unsupported** - Device location capabilities aren't supported for the following platforms:
 
