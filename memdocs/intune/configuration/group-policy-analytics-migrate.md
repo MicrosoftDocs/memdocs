@@ -110,9 +110,7 @@ After you import your GPOs, review the settings that can be migrated. Remember, 
 
 The next time any device within your assigned groups checks for configuration updates, the settings you configured are applied.
 
-## Known issues
-
-### Conflicting settings during migration
+## Conflicting settings are detected early
 
 It's possible you have multiple GPOs that include the same setting, and that the setting is set to different values. When you're creating a policy, and selecting your settings in the **Settings to migrate** tab, any conflicting settings will show the following error:
 
@@ -120,31 +118,32 @@ It's possible you have multiple GPOs that include the same setting, and that the
 
 :::image type="content" source="./media/group-policy-analytics-migrate/conflicting-settings.png" alt-text="Conflicts are detected error message with Group Policy Analytics migrate feature in Endpoint Manager and Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/conflicting-settings.png":::
 
-Before migrating the GPOs, you need to resolve this conflict. When you're creating the policy, uncheck a conflicting setting.
+To resolve the conflict, uncheck a conflicting setting, and continue the migration.
 
-### Settings fail to migrate
+## What you need to know
 
-The **Migrate** feature takes the parsed data from the imported Group Policy object (GPO) and translates it to a relevant setting in the Settings Catalog, if the setting exists. There can be some differences with the imported settings and the settings in Settings Catalog. It's possible there will be some errors when the settings are migrating.
+The **Migrate** feature takes the parsed data from the imported Group Policy object (GPO) and translates it to a relevant setting in the Settings Catalog, if the setting exists. 
 
-**Migrate** is best effort. When you create a Settings Catalog profile, any settings that can be included in the profile will be included. Settings that show an error when the profile is being created are shown in **Notifications**:
+**Migrate** is best effort. 
 
-:::image type="content" source="./media/group-policy-analytics-migrate/notifications.png" alt-text="Notifications shows additional information when the policy is being created in Endpoint Manager and Microsoft Intune.":::
+When you create the Settings Catalog profile, any settings that can be included in the profile will be included. There can be some differences with the imported settings and the settings in Settings Catalog.
 
-Some common reasons a setting may show an error include:
+- **Some settings don't migrate exactly, and may use a different setting**
 
-- The setting value is in an unexpected format.
-- A child setting is missing from the imported GPO and is required to configure the parent setting.
+  In some scenarios, some GPO settings won't migrate to the exact same setting in the Settings Catalog. An alternate setting that has a similar impact is recommended.
 
-### Use the built-in features
+  For example, you may see this behavior if you import GPOs that include older Office Administrative Template settings or older Google Chrome settings.
 
-In some scenarios, the **MDM Support** column will show **Yes** for settings that shouldn't be configured using the **Migrate** feature.
+- **Some settings fail to migrate**
 
-For example, you may import GPOs that include older Office Administrative Template settings, older Google Chrome settings, older Internet Explorer settings, and more. Some of these settings as they're configured in Group Policy don't make sense on cloud native endpoints, like Windows 10/11 devices.
+  It's possible there will be some errors when the settings are migrating. When the profile is being created, settings that return an error are shown in **Notifications**:
 
-Instead, use the built-in ADMX settings or the Settings Catalog to configure equivalent settings in Microsoft Office, Google Chrome, Microsoft Edge, and more.
+  :::image type="content" source="./media/group-policy-analytics-migrate/notifications.png" alt-text="Notifications shows additional information when the policy is being created in Endpoint Manager and Microsoft Intune.":::
 
-- [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](administrative-templates-windows.md)
-- [Use the settings catalog to configure settings on Windows and macOS devices - preview](settings-catalog.md)
+  Some common reasons a setting may show an error include:
+
+  - The setting value is in an unexpected format.
+  - A child setting is missing from the imported GPO and is required to configure the parent setting.
 
 ## Next steps
 
