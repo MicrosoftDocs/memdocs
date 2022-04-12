@@ -1,6 +1,7 @@
 ---
 title: "SMS_BootImagePackage Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_BootImagePackage WMI class is an SMS Provider server class, in Configuration Manager, that serves as the unit of distribution for boot image source files.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
