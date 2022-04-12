@@ -51,7 +51,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 - This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
-- Currently, the Migrate feature isn't supported in sovereign clouds. For more information on sovereign clouds, see [What is Azure Government?](https://docs.microsoft.com/azure/azure-government/documentation-government-welcome).
+- Currently, the Migrate feature isn't supported in sovereign clouds. For more information on sovereign clouds, see [What is Azure Government?](/azure/azure-government/documentation-government-welcome).
 
 ## Review and migrate your GPOs to a Settings Catalog policy
 
