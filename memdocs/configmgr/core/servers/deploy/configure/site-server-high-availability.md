@@ -219,7 +219,7 @@ Similarly as with backup and recovery, plan and practice your process to change 
     >
     > By Wednesday or Thursday, this action may cause *all* clients to upgrade, not just the pilot collection. This behavior can cause significant network usage and unexpected load on the distribution points.<!-- SCCMDocs-pr#4794 -->
 
-  - If you enable the pre-production client, review the known issue with site server high availability. For more information, see [Known issues](../../../clients/manage/upgrade/test-client-upgrades.md#known-issues).<!-- 13846674 -->
+  - If you enable the pre-production client, review the known issue with site server high availability. For more information, see [Pre-production client and site server high availability](../../../clients/manage/upgrade/test-client-upgrades.md#pre-production-client-and-site-server-high-availability).<!-- 13846674 -->
 
 ### Process to promote the site server in passive mode to active mode
 
