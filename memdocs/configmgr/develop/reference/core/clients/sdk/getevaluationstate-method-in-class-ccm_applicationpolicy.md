@@ -1,6 +1,7 @@
 ---
 title: "GetEvaluationState Method"
 titleSuffix: "Configuration Manager"
+description: The GetEvaluationState Windows Management Instrumentation (WMI) class method in Configuration Manager.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

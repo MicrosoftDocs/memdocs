@@ -1,6 +1,7 @@
 ---
 title: "QueryOSDBinaryInjectionStatus Method"
 titleSuffix: "Configuration Manager"
+description: The QueryOSDBinaryInjectionStatus WMI class method, in Configuration Manager, queries the current status of the injection of operating system deployment binaries into a boot image.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
