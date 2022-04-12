@@ -70,7 +70,7 @@ The term **on-premises network connection** will be renamed to **Azure network c
 <!-- ***********************************************-->
 ## Device provisioning
 
-## Provision Cloud PCs with Secure Boot<!--38012584-->
+### Provision Cloud PCs with Secure Boot<!--38012584-->
 
 You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality.
 
