@@ -57,6 +57,6 @@ For both the provisioning policy and custom image options to set up the display 
   - FOD: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_amd64fre_FOD-PACKAGES_OEM_PT1_amd64fre_MULTI.iso
   - InboxApps: https://software-download.microsoft.com/download/pr/18362.1.190318-1202.19h1_release_amd64fre_InboxApps.iso
 
-## Create a cust## Next steps
+## Next steps
 
-[Use a provisioning policy](use-provisioning-policy-default-display-language.md) or [create a custom device image](create-custom-image-languages.md).
+[Use a provisioning policy](use-provisioning-policy-default-display-language.md) or [create a custom device image](create-custom-image-languages.md) to set up the display language.
