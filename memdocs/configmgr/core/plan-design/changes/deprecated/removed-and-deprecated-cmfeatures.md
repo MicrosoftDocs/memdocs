@@ -5,7 +5,7 @@ description: Learn about the features that Configuration Manager no longer suppo
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.date: 04/08/2022
+ms.date: 04/11/2022
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -29,8 +29,9 @@ The following features are deprecated. You can still use them now, but Microsoft
 > Starting in November 2021, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md). <comment the work item ID> (refer to alternative or blog with more info)Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
  -->
 
-|Feature|Deprecation first announced|Support&nbsp;removed|
-|-------|---------------------------|--------------------|
+|Feature|Deprecation first announced|Planned end of support|
+|-------|---------------------------|----------------------|
+| Upgrade from any version of System Center 2012 Configuration Manager to current branch. For more information, see [Upgrade to Configuration Manager current branch](../../../servers/deploy/install/upgrade-to-configuration-manager.md)<!-- 13846745 --> | April 2022 | Version 2303 |
 | The Configuration Manager client for **macOS** and Mac client management. For more information, see [Supported clients: Mac computers](../../configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).<!-- 12927803 --> Migrate management of macOS devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../../intune/fundamentals/deployment-guide-platform-macos.md). | January 2022 | December 31, 2022 |
 | The site system roles for on-premises MDM and macOS clients: **enrollment proxy point and enrollment point**.<!-- 12454901,12927803 --> | January 2022 | December 31, 2022 |
 | The **Microsoft Store for Business and Education**. For more information, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).<!-- 10884039 --> | November 2021 | The first release after March 1, 2023 |
