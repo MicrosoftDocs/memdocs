@@ -2,7 +2,7 @@
 title: Task sequence steps
 titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
-ms.date: 04/08/2022
+ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
@@ -1318,14 +1318,16 @@ The applications must meet the following criteria:
 
 - If the application [checks for running executable files](../../apps/deploy-use/check-for-running-executable-files.md), the task sequence will fail to install it. If you don't configure this step to continue on error, then the entire task sequence fails.
 
+It's not supported to install applications during an OS deployment task sequence when the device also has policies assigned for [Windows Defender Application Control](../../protect/deploy-use/use-device-guard-with-configuration-manager.md). In this scenario, you can't use these applications after the task sequence completes. To work around this timing issue, [deploy the applications](../../apps/deploy-use/deploy-applications.md) after the task sequence completes.<!-- 13847501 -->
+
 > [!NOTE]
-> Starting in version 2107, there's a seven-minute delay before this step when the following conditions are true:
+> Starting in version 2107, when the following conditions are true, there's a seven-minute delay before this step:
 >
 > - The task sequence is running from standalone media.
 > - The previous step was **Restart Computer**.
 > - The current **Install Application** step doesn't _continue on error_.
 >
-> In versions 2103 and earlier, under these conditions the step would fail. The task sequence didn't properly evaluate that the app install was successful.<!-- 9849096 -->
+> In versions 2103 and earlier, the step would fail under these conditions. The task sequence didn't properly evaluate that the app install was successful.<!-- 9849096 -->
 
 When this step runs, the application checks the applicability of the requirement rules and detection method on its deployment types. Based on the results of this check, the application installs the applicable deployment type. If a deployment type contains dependencies, the dependent deployment type is evaluated and installed as part of this step. Application dependencies aren't supported for stand-alone media.  
 

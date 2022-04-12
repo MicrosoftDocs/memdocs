@@ -70,6 +70,9 @@ To use Application Control with Configuration Manager, devices must be running s
 
 - Once a policy is successfully processed on a device, Configuration Manager is configured as a _managed installer_ on that client. After the policy processes, software deployed by Configuration Manager is automatically trusted. Before the device processes the Application Control policy, software installed by Configuration Manager isn't automatically trusted.
 
+  > [!NOTE]
+  > For example, you can't use the **Install Application** step in a task sequence to install applications during an OS deployment. For more information, see [Task sequence steps - Install Application](../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication).<!-- 13847501 -->
+
 - The default compliance evaluation schedule for Application Control policies is every day. This schedule is configurable during policy deployment. If you notice issues in policy processing, configure the compliance evaluation schedule to be more frequent. For example, every hour. This schedule dictates how often clients reattempt to process an Application Control policy if a failure occurs.
 
 - Regardless of the enforcement mode you select, when you deploy an Application Control policy, devices can't run HTML applications with the `.hta` file extension.
