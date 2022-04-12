@@ -204,12 +204,18 @@ Certificate requirements:
 This certificate has two purposes:
 
 - It authenticates the distribution point to an HTTPS-enabled management point before the distribution point sends status messages.
+
+    > [!NOTE]
+    > When you configure all management points for HTTPS, then HTTPS-enabled distribution points must use a PKI-issued certificate. Don't use self-signed certificates on distribution points when management points use certificates. Issues may occur otherwise. For example, distribution points won't sent state messages.<!-- 13860499 -->
+
 - A PXE-enabled distribution point sends this certificate to computers. If the task sequence includes client actions like client policy retrieval or sending inventory information, the computer can connect to an HTTPS-enabled management point during the OS deployment process.
 
-This certificate is only used during the OS deployment process. It isn't installed on the client. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
-
-> [!NOTE]
-> The requirements for this certificate are the same as the client certificate for boot images. Because the requirements are the same, you can use the same certificate file.
+    > [!NOTE]
+    > For this PXE scenario, this certificate is only used during the OS deployment process. It isn't installed on the client. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
+    >
+    > The requirements for this certificate are the same as the client certificate for boot images. Because the requirements are the same, you can use the same certificate file.
+    >
+    > The certificate that you specify to HTTPS-enable a distribution point applies to all content distribution operations, not just OS deployment.
 
 Certificate requirements:
 
