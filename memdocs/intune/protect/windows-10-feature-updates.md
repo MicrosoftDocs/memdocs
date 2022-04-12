@@ -97,11 +97,11 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 ## Limitations for Feature updates for Windows 10 and later policy
 
 - When you deploy a *Feature updates for Windows 10 and later* policy to a device that also receives an *Update rings for Windows 10 and later* policy, review the update ring for the following configurations:
-  - The **Feature update deferral period (days)** must be set to **0**.
+  - We recommend setting the **Feature update deferral period (days)** to **0**. This configuration ensures your feature updates are not delayed by update deferrals that might be configured in an update ring policy.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
   > [!TIP]
-  > If you're using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations.
+  > If you're using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations.  
   >
   > For more information, see [Move from update ring deferrals to feature updates policy](../protect/windows-update-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
 
