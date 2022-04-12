@@ -1,6 +1,7 @@
 ---
 title: "ResolveConflict Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the ResolveConflict Windows Management Instrumentation class method is used to resolve conflicts that result by creating or editing software entries, and the same software entry created by Microsoft through the online synchronization."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

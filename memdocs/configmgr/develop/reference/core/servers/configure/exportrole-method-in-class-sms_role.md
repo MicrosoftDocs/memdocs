@@ -1,6 +1,7 @@
 ---
 title: "ExportRole Method"
 titleSuffix: "Configuration Manager"
+description: The ExportRole Windows Management Instrumentation class method, in Configuration Manager, exports roles to an XML string.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: GetProperty method in class CCM_Application
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the GetProperty Windows Management Instrumentation class method that gets an application property value."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

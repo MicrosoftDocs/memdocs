@@ -2,7 +2,7 @@
 # required metadata
 
 title: Remotely assist mobile devices managed by Intune 
-description: You can use a four different options to remotely assist users with their mobile devices.
+description: You can use a five different options to remotely assist users with their mobile devices.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Remotely assist mobile devices managed by Microsoft Endpoint Manager
 
-There are four options available for remotely administering devices managed by  Microsoft Endpoint Manager:
+There are five options available for remotely administering devices managed by  Microsoft Endpoint Manager:
 
 - [Microsoft Teams](https://products.office.com/microsoft-teams/) is the hub for teamwork where you can chat, meet, and collaborate no matter where you are.
 - [Quick Assist](https://support.microsoft.com/help/4027243/windows-10-solve-pc-problems-with-quick-assist) is a Windows 10 application that lets two people share a device over a remote connection.
