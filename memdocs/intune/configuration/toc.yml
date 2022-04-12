@@ -61,6 +61,8 @@ items:
     items:
     - name: Group Policy analytics
       href: group-policy-analytics.md
+    - name: Create policy using imported GPOs
+      href: group-policy-analytics-migrate.md
     - name: Create administrative templates
       href: administrative-templates-windows.md
     - name: Update Office using ADMX
