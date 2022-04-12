@@ -60,11 +60,11 @@ After you import your GPOs, review the settings that can be migrated. Remember, 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
 2. In the list, your imported GPOs are shown. Next to the GPO you want in your Settings Catalog profile, select the **Migrate** checkbox. You can select one GPO or many GPOs:
 
-    :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png" alt-text="Select the Migrate checkbox next to your imported GPO in Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png" alt-text="Select the Migrate checkbox next to your imported GPO in Endpoint Manager and Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/select-migrate-checkbox-imported-gpo.png":::
 
 3. To see all the settings in your imported GPO, select **Migrate**:
 
-    :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-see-all-settings.png" alt-text="Select the Migrate button to see all the settings in your imported GPO in Endpoint Manager and Microsoft Intune.":::
+    :::image type="content" source="./media/group-policy-analytics-migrate/select-migrate-see-all-settings.png" alt-text="Select the Migrate button to see all the settings in your imported GPO in Endpoint Manager and Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/select-migrate-see-all-settings.png":::
 
 4. In the **Settings to migrate** tab, select the **Migrate** column for the settings you want to include in your Settings Catalog profile:
 
