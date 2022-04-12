@@ -2,7 +2,7 @@
 title: Test client upgrades
 titleSuffix: Configuration Manager
 description: Test client upgrades in a pre-production collection in Configuration Manager.
-ms.date: 04/11/2022
+ms.date: 04/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -78,9 +78,11 @@ The updated client version now replaces the client version in use in your hierar
 > [!NOTE]
 > To enable the pre-production client, or to promote a pre-production client to a production client, your account must be a member of a security role that has **Read** and **Modify** permissions for the **Update Packages** object.
 >
-> Client upgrades honor any Configuration Manager maintenance windows you have configured.
+> Client upgrades honor any Configuration Manager maintenance windows you configure. For more information on a known issue, see [Client upgrade and maintenance windows](upgrade-clients-for-windows-computers.md#client-upgrade-and-maintenance-windows).
 
 ## Known issues
+
+### Pre-production client and site server high availability
 
 <!-- 13846674 -->
 Consider the following scenario:
