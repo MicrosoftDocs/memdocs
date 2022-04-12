@@ -36,15 +36,11 @@ This article describes the settings you can configure.
 
 ## Before you begin
 
-Create a [wired network device configuration profile](wired-networks-configure.md).
+- Create a [wired network device configuration profile](wired-networks-configure.md).
 
-> [!NOTE]
-> These settings are available for all enrollment types. For more information on the enrollment types, see [Set up enrollment for Windows devices](../enrollment/windows-enroll.md).
+- These settings are available for all enrollment types. For more information on the enrollment types, see [Set up enrollment for Windows devices](../enrollment/windows-enroll.md).
 
-OUSTANDING ??
-- Not configured: By default, the OS might ??
-- If you leave this value empty or blank,
-- [WiredNetwork CSP](/windows/client-management/mdm/wirednetwork-csp)
+- These settings use the [WiredNetwork CSP](/windows/client-management/mdm/wirednetwork-csp).
 
 ## Wired Network
 
@@ -62,7 +58,7 @@ OUSTANDING ??
 
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable this feature, and cache the credentials.
   - **Enable**: Caches user credentials when entered the first time users connect to the network. Cached credentials are used for future connections, and users don't need to reenter them.
-  - **Disable**: User credentials aren't remembered or cached. When connecting to the network, users must enter their credentials every time.
+  - **Disable**: User credentials aren't remembered or cached. When users connect to the network, users must enter their credentials every time.
 
 - **Authentication period**: Enter the number of seconds devices must wait after trying to authenticate, from 1-3600. If the device doesn't connect in the time you enter, then authentication fails. If you leave this value empty or blank, then `18` seconds is used.
 
@@ -87,51 +83,56 @@ OUSTANDING ??
     - **Server Trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). When you enter this information, you can bypass the dynamic trust window shown on user devices when they connect to this network.
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server. This certificate authenticates the connection.
     - **Client Authentication** - **Authentication method**: Select the authentication method used by your device clients. Your options:
-      - **SCEP certificate**: Select the SCEP client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection. PKCS certificates aren't supported.
-      - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the connection.
-      - **PFX Import certificate**: Select the imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the connection. For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](/protect/certificates-imported-pfx-configure).
-      - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **SCEP certificate**: Select an existing SCEP client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
+      - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the connection.
+      - **PFX Import certificate**: Select an existing imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the connection.
+
+        For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](/protect/certificates-imported-pfx-configure).
+
+      - **Derived credential**: Select an existing certificate profile that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
   - **EAP-TTLS**: Also enter:
 
     - **Server Trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this network.
-    - **Root certificates for server validation**: Select the trusted root certificate profile used to authenticate the network connection.
+    - **Root certificates for server validation**: Select an existing trusted root certificate profile used to authenticate the network connection.
     - **Client Authentication** - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the network connection. Also enter:
-        - **Non-EAP method (inner identity)**: Choose how you authenticate the network connection. Be sure you select the same protocol that's configured on your network.
+        - **Non-EAP method (inner identity)**: Choose how to authenticate the network connection. Be sure you select the same protocol that's configured on your network.
 
-          Your options: **Unencrypted password (PAP)**, **Challenge Handshake (CHAP)**, **Microsoft CHAP (MS-CHAP)**, and **Microsoft CHAP Version 2 (MS-CHAP v2)**
-
-        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
-
-      - **SCEP certificate**: Select the SCEP client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to authenticate the network connection.
+          Your options: **Unencrypted password (PAP)**, **Challenge Handshake (CHAP)**, **Microsoft CHAP (MS-CHAP)**, or **Microsoft CHAP Version 2 (MS-CHAP v2)**
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
-      - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to authenticate the network connection.
+      - **SCEP certificate**: Select an existing SCEP client certificate profile that's also deployed to the device. This certificate is the identity presented by the device to authenticate the network connection.
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
-      - **PFX Import certificate**: Select the imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the network connection. For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](/protect/certificates-imported-pfx-configure).
+      - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to authenticate the network connection.
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
-      - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **PFX Import certificate**: Select an existing imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the network connection.
+
+        For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](/protect/certificates-imported-pfx-configure).
+
+        - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
+
+      - **Derived credential**: Select an existing certificate profile that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
   - **Protected EAP (PEAP)**: Also enter:
 
     - **Server trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this network.  
 
-    - **Root certificate for server validation**: Select the trusted root certificate profile used to authenticate the network connection.  
+    - **Root certificate for server validation**: Select an existing trusted root certificate profile used to authenticate the network connection.  
 
-    - **Perform server validation**: When set to **Yes**, in PEAP negotiation phase 1, devices validate the certificate, and verify the server. Select **No** to block or prevent this validation. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might ??
+    - **Perform server validation**: When set to **Yes**, in PEAP negotiation phase 1, devices validate the certificate, and verify the server. Select **No** to block or prevent this validation. When set to **Not configured**, Intune doesn't change or update this setting.
 
       If you select **Yes**, also configure:
 
-      - **Disable user prompts for server validation**: When set to **Yes**, in PEAP negotiation phase 1, user prompts asking to authorize new PEAP servers for trusted certification authorities aren't shown. Select **No** to show the prompts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might ??
+      - **Disable user prompts for server validation**: When set to **Yes**, in PEAP negotiation phase 1, user prompts asking to authorize new PEAP servers for trusted certification authorities aren't shown. Select **No** to show the prompts. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-    - **Require cryptographic binding**: **Yes** prevents connections to PEAP servers that don't use cryptobinding during the PEAP negotiation. **No** doesn't require cryptobinding. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might ??
+    - **Require cryptographic binding**: **Yes** prevents connections to PEAP servers that don't use cryptobinding during the PEAP negotiation. **No** doesn't require cryptobinding. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
     - **Client Authentication** - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
@@ -139,19 +140,21 @@ OUSTANDING ??
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
-      - **SCEP certificate**: Select the SCEP **client certificate** profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the network connection.
+      - **SCEP certificate**: Select an existing SCEP **client certificate** profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the network connection.
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
-      - **PKCS certificate**: Select the PKCS **client certificate** profile and trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the network connection.
+      - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the network connection.
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
-      - **PFX Import certificate**: Select the imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the network connection. For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](/protect/certificates-imported-pfx-configure).
+      - **PFX Import certificate**: Select an existing imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the network connection.
+
+        For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](/protect/certificates-imported-pfx-configure).
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
-      - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+      - **Derived credential**: Select an existing certificate profile that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
 ## Next steps
 
