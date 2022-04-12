@@ -128,6 +128,12 @@ The **Migrate** feature takes the parsed data from the imported Group Policy obj
 
 When you create the Settings Catalog profile, any settings that can be included in the profile will be included. There can be some differences with the imported settings and the settings in Settings Catalog.
 
+- **Some settings don't migrate exactly, and may use a different setting**
+
+  In some scenarios, some GPO settings won't migrate to the exact same setting in the Settings Catalog. An alternate setting that has a similar impact is recommended.
+
+  For example, you may see this behavior if you import GPOs that include older Office Administrative Template settings or older Google Chrome settings.
+
 - **Some settings fail to migrate**
 
   It's possible there will be some errors when the settings are migrating. When the profile is being created, settings that return an error are shown in **Notifications**:
@@ -138,12 +144,6 @@ When you create the Settings Catalog profile, any settings that can be included 
 
   - The setting value is in an unexpected format.
   - A child setting is missing from the imported GPO and is required to configure the parent setting.
-
-- **Some settings don't migrate exactly, and may use a different setting**
-
-  In some scenarios, some GPO settings won't migrate to the exact same setting in the Settings Catalog. An alternate setting that has a similar impact is recommended.
-
-  For example, you may see this behavior if you import GPOs that include older Office Administrative Template settings or older Google Chrome settings.
 
 ## Next steps
 
