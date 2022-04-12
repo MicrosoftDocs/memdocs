@@ -1727,7 +1727,7 @@ Select this option to have Sysprep automatically build a list of mass storage dr
 
 Select this option to prevent Sysprep from resetting the product activation flag.  
 
-#### Shutdown the computer after running this action
+#### Shut down the computer after running this action
 
 <!--SCCMDocs-pr issue 2695-->
 This option instructs Sysprep to shutdown the computer instead of its default restart behavior.
@@ -1736,7 +1736,7 @@ The [Windows Autopilot for existing devices](../../../autopilot/existing-devices
 
 - If you want the task sequence to refresh the device and then immediately start OOBE for Autopilot, leave this option off.  
 
-- Enable this option to shutdown the device after imaging. Then you can deliver the device to a user, who starts OOBE with Autopilot when they turn it on for the first time.  
+- Enable this option to shut down the device after imaging. Then you can deliver the device to a user, who starts OOBE with Autopilot when they turn it on for the first time.  
 
 
 
