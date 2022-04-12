@@ -113,7 +113,6 @@ Be sure you have the required permissions to register an Azure AD app. See [Requ
       2. Expand **Application** and select the checkbox for **Application.Read.All** (Read all applications).
       3. Select **Add permissions** to save this configuration.
 
-   
 8. Remain on the **API permissions** page, and select **Grant admin consent for** ***\<your tenant>***, and then select **Yes**.  
 
    The app registration process in Azure AD is complete.
