@@ -83,14 +83,13 @@ After you create your device profile, Intune provides graphical charts. These ch
 
       Select **View report** to see the following information:
       
-      - The devices that received to the profile
-      - The user names with devices that received this profile
+      - The devices that received the profile
+      - The user names with devices that received the profile
       - The check-in status and the last time the user/device checked in with the profile
-      - Select a specific device to get even more details
 
-      You can use the filter column to see the assignment filter options.
+      You can also select a specific device to get more details and use the filter column to see the assignment filter options.
 
-    - **Device assignment status**: Select **Generate report** to see the latest profile assignment states for the devices that received the profile. You can also filter the assignment status to see only errors, conflicts, and other states.
+    - **Device assignment status**: Select **Generate report** to see the latest profile assignment states for the devices that received the profile. You can also filter the assignment status to see only errors, conflicts, and more.
 
     - **Per setting status**: Shows the individual settings in the profile, and their status.
 
