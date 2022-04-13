@@ -2,7 +2,7 @@
 title: Prerequisite checks
 titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
-ms.date: 04/08/2022
+ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -306,6 +306,9 @@ Starting in version 2111, Configuration Manager requires Microsoft .NET Framewor
 >
 > To determine the systems that need to be updated, review the **ConfigMgrPrereq.log** found on the system drive of the computer. <!--10977707-->
 <!--10529267-->
+
+> [!IMPORTANT]
+> If you're upgrading from System Center 2012 Configuration Manager R2 Service Pack 1, you need to manually verify that remote site systems have at least .NET version 4.6.2. Configuration Manager current branch setup skips the check in this scenario.<!-- 13846610 -->
 
 ### Server service is running
 
