@@ -2,7 +2,7 @@
 title: External notifications
 titleSuffix: Configuration Manager
 description: Enable the site to send notifications to an external system or application.
-ms.date: 12/01/2021
+ms.date: 04/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -115,6 +115,9 @@ Use the following process to create a sample app in Azure Logic Apps to receive 
 1. Select **Done** and then select **Save**.
 
 1. Copy the generated URL for the logic app. You'll use this URL later when you create the subscription in Configuration Manager.
+
+    > [!NOTE]
+    > The URL from Azure for the logic app includes the secret key. When saved in Configuration Manager, it's protected the same as any other password or secret key. If your environment uses a proxy server or other network inspection device, there's a risk that it will log this URL and expose the secret key. Control access to such systems, and be prepared to renew the secret key for the logic app in the Azure portal. You can also set an expiration date for the secret key in the Azure portal. For more information, see [Secure your logic apps](/azure/logic-apps/logic-apps-securing-a-logic-app#generate-shared-access-signatures-sas).<!-- 10060737 -->
 
 1. To add a new step in the designer, select **+ New Step**. Choose an appropriate action when it receives a notification from Configuration Manager. For example:
 

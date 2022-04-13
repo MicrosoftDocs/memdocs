@@ -317,7 +317,7 @@ Windows 11 Cloud PCs require Generation 2 (Gen2) virtual machines. For informati
 
 #### New PowerShell script for installing languages on custom device images<!--35726116-->
 
-The [Windows365LanguagesInstaller PowerShell script]( https://www.powershellgallery.com/packages/Windows365LanguagesInstaller) can install 38 additional languages on your custom device images. For more information, see [Provide a localized Windows experience](provide-localized-windows-experience.md#add-languages-to-windows-using-a-script-and-capture-the-image).
+The [Windows365LanguagesInstaller PowerShell script](https://www.powershellgallery.com/packages/Windows365LanguagesInstaller) can install 38 additional languages on your custom device images. For more information, see [Provide a localized Windows experience](create-custom-image-languages.md#add-languages-to-windows-using-a-script-and-capture-the-image).
 
 <!-- ########################## -->
 ## Week of September 6, 2021 (Service release 2108)
