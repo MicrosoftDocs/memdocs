@@ -141,7 +141,7 @@ You can validate the app configuration policy using the following three methods:
 You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** for settings deployed through the managed app configuration policies. In addition to the below steps, you can access managed app logs using Microsoft Edge. For more information, see [Use Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 1. If not already installed on the device, download and install the **Microsoft Edge** from the App Store. For more information, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
-2. Launch the **Microsoft Edge** and Type about:intunehelp in the address box.
+2. Launch the **Microsoft Edge** and enter **about:intunehelp** in the address box.
 3. Click **Get Started**.
 4. Click **Share Logs**.
 5. Use the mail app of your choice to send the log to yourself so they can be viewed on your PC. 
