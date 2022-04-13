@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/12/2022
+ms.date: 04/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -360,10 +360,7 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 New updates for the connector can take a week or more to become available for each tenant.
 
 > [!IMPORTANT]  
-> On June 1, 2022, Intune certificate connectors earlier than version **6.2101.13.0** will no longer allow you to issue certificates to users and devices. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article) on July 29, 2021.
-> 
-> Starting in April 2022, deprecated connectors will show a status of *Error*. This status does not affect their functionality.
- 
+> Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. This status does not affect functionality. Starting June 2022, such connectors will not be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
 
 ### March 10, 2022
 
