@@ -185,7 +185,7 @@ Your application configuration details should match the application configuratio
 You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
 
 1. If not already installed on the device, download and install the **Microsoft Edge** from the App Store. For more information, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
-2. Launch **Microsoft Edge** and Type about:intunehelp in the address box.
+2. Launch **Microsoft Edge** and enter **about:intunehelp** in the address box.
 3. Click **Get Started**.
 4. Click **Share Logs**.
 5. Use the mail app of your choice to send the log to yourself so they can be viewed on your PC. 
