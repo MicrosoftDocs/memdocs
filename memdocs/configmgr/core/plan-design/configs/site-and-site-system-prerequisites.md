@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 03/29/2022
+ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -62,6 +62,9 @@ Starting in version 2107, site servers and specific site systems require Microso
 If the site server doesn't have any collocated roles that require .NET, it still requires .NET, but setup doesn't automatically install it. Make sure the site server itself has at least .NET version 4.6.2. If possible, install .NET 4.8.
 
 ### Site systems
+
+> [!IMPORTANT]
+> If you're upgrading from System Center 2012 Configuration Manager R2 Service Pack 1, you need to manually verify that remote site systems have at least .NET version 4.6.2. Configuration Manager current branch setup skips the check in this scenario.<!-- 13846610 -->
 
 During Configuration Manager setup, if site systems have a version earlier than 4.6.2, you'll see a prerequisite check warning. This check is a warning instead of an error, because setup will install version 4.6.2. When .NET updates, it usually requires Windows to restart. Site systems will send status message 4979 when a restart is required. Configuration Manager suppresses the restart; the system doesn't restart automatically.
 

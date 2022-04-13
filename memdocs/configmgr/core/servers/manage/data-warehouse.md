@@ -58,7 +58,7 @@ When the site system role installs, it installs and configures the data warehous
 
   - SQL Server Always On failover cluster instance
 
-- If you use [distributed views](../../plan-design/hierarchy/database-replication.md#bkmk_distviews), install the data warehouse service point on the same server that hosts the CAS's database.
+- If you use [distributed views](../../plan-design/hierarchy/database-replication.md#distributed-views), install the data warehouse service point on the same server that hosts the CAS's database.
 
 For more information on SQL Server licensing, see the [product and licensing FAQ](../../understand/product-and-licensing-faq.yml).<!-- sms500967 -->
 
