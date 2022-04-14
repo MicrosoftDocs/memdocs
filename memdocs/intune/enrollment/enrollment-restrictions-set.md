@@ -33,9 +33,6 @@ ms.collection:
 
 # Set enrollment restrictions  
 
-> [!IMPORTANT]
-> This article discusses capabilities that are in public preview that might be modified before they’re released. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
 As an Intune administrator, you can create and manage enrollment restrictions that define what devices can enroll into management with Intune, including the:
@@ -74,6 +71,7 @@ Default restrictions are automatically provided for both device type and device 
     > - If you allow both OS platforms for the same group and refine it for specific and non-overlapping versions, devices will go through the enrollment throw that's selected for their version.   
     > - If you allow both platforms, but block the same versions, devices running blocked versions will go through the Android device administrator enrollment flow, get blocked from enrollment, and be prompted to sign out. 
     > - Neither work profile nor device administrator enrollment will work unless the appropriate prerequisites have been completed for Android erollment.  
+
 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  

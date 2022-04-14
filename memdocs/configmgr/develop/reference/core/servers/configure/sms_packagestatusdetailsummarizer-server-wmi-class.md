@@ -1,6 +1,7 @@
 ---
 title: "SMS_PackageStatusDetailSummarizer Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_PackageStatusDetailSummarizer Windows Management Instrumentation class is an SMS Provider server class that lists the distribution summary for a given package for a given site in a hierarchy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
