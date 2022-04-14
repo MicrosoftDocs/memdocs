@@ -69,7 +69,7 @@ When you configure Conditional Access in the Azure AD portal, you have two appli
 1. **Microsoft Intune** - This application controls access to the Microsoft Endpoint Manager console and data sources. Configure grants/controls on this application when you want to target the Microsoft Endpoint Manager console and data sources.
 2. **Microsoft Intune Enrollment** - This application controls the enrollment workflow. Configure grants/controls on this application when you want to target the enrollment process. For more information, see [Require multi-factor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md).
 
-## Conditional access based on network access control
+## Conditional Access based on network access control
 
 Intune integrates with partners like Cisco ISE, Aruba Clear Pass, and Citrix NetScaler to provide access controls based on the Intune enrollment and the device compliance state.
 
