@@ -1,6 +1,7 @@
 ---
 title: "Delete Status Messages"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, you delete status messages by calling the SMS_StatusMessage class DeleteByID method and supplying an array of status message RecordID identifiers."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

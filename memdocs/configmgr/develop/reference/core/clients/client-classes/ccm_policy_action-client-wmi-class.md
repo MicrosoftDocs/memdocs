@@ -1,6 +1,7 @@
 ---
 title: "CCM_Policy_Action Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CCM_Policy_Action class is a client Windows Management Instrumentation class that represents settings for a policy action."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
