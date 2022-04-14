@@ -1,6 +1,7 @@
 ---
 title: "SMS_Subscription Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_Subscription Windows Management Instrumentation class is an SMS Provider server class that represents email subscriptions."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
