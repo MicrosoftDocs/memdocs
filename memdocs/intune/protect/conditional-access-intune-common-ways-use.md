@@ -31,7 +31,7 @@ ms.collection:
 
 # Common ways to use Conditional Access with Intune
 
-There are two types of Conditional Access policies you can use with Intune: device-based Conditional Access and app-based Conditional Access. To support each, you'll need to configure the related Intune compliance policies. When the Intune policies are in place and deployed, you can then use Conditional Access to do things like allow or block access to Exchange, control access to your network, or integrate with a Mobile Threat Defense solution.
+There are two types of Conditional Access policies you can use with Intune: device-based Conditional Access and app-based Conditional Access. To support each, you'll need to configure the related Intune policies. When the Intune policies are in place and deployed, you can then use Conditional Access to do things like allow or block access to Exchange, control access to your network, or integrate with a Mobile Threat Defense solution.
 
 The information in this article can help you understand how to use the Intune mobile *device* compliance capabilities and the Intune mobile *application* management (MAM) capabilities.
 
