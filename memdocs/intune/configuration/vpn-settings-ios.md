@@ -35,7 +35,8 @@ Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPa
 Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
 
 > [!NOTE]
->
+
+> - Some services, such as the M365 service, may not support the use of a VPN. See [https://docs.microsoft.com/en-US/office365/troubleshoot/miscellaneous/office-365-third-party-network-devices#more-information].
 > - These settings are available for all enrollment types except user enrollment. User enrollment is limited to [per-app VPN](./vpn-setting-configure-per-app.md). For more information on the enrollment types, see [iOS/iPadOS enrollment](../enrollment/ios-enroll.md).
 >
 > - The available settings depend on the VPN client you choose. Some settings are only available for specific VPN clients.
