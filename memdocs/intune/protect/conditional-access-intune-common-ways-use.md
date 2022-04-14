@@ -40,9 +40,9 @@ The information in this article can help you understand how to use the Intune mo
 
 ## Device-based Conditional Access
 
-Intune and Azure AD work together to make sure only managed and compliant devices can access your organizations email, Microsoft 365 services, Software as a service (SaaS) apps, and [on-premises apps](/azure/active-directory/active-directory-application-proxy-get-started). Additionally, you can set a policy in Azure AD to only enable domain-joined computers or mobile devices that are enrolled in Intune to access Microsoft 365 services.
+Intune and Azure AD work together to make sure only managed and compliant devices can access your organization's email, Microsoft 365 services, Software as a service (SaaS) apps, and [on-premises apps](/azure/active-directory/active-directory-application-proxy-get-started). Additionally, you can set a policy in Azure AD to only enable domain-joined computers or mobile devices that are enrolled in Intune to access Microsoft 365 services.
 
-With Intune, you deploy device compliance policies to determine if a device meets your expected configuration and security requirements. The compliance policy evaluation determines the devices compliance status, which is reported to both Intune and Azure AD. It's in Azure AD that Conditional Access policies can use a devices compliance status to make decisions on whether to allow or block access to your organizations resources from that device.
+With Intune, you deploy device compliance policies to determine if a device meets your expected configuration and security requirements. The compliance policy evaluation determines the devices compliance status, which is reported to both Intune and Azure AD. It's in Azure AD that Conditional Access policies can use a device's compliance status to make decisions on whether to allow or block access to your organization's resources from that device.
 
 Device-based Conditional Access policies for Exchange online and other Microsoft 365 products are configured through the [Microsoft Endpoint Manager admin center](../fundamentals/what-is-intune.md).
 
@@ -101,7 +101,7 @@ Conditional access for PCs provides capabilities similar to those available for 
 
 ### Bring your own device (BYOD)
 
-- **Workplace join and Intune management:** Here the user can join their personal devices to access corporate resources and services. You can use Workplace join and enroll devices into Intune MDM to receive device-level policies, which are another option to evaluate conditConditional Access criteria.
+- **Workplace join and Intune management:** Here the user can join their personal devices to access corporate resources and services. You can use Workplace join and enroll devices into Intune MDM to receive device-level policies, which are another option to evaluate Conditional Access criteria.
 
 Learn more about [Device Management in Azure Active Directory](/azure/active-directory/devices/overview).
 
