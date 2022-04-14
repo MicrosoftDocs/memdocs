@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Conditional Access with Microsoft Intune
+title: Use Conditional Access with Microsoft Intune compliance policies
 titleSuffix: Microsoft Intune
-description: Learn about using Conditional Access with Microsoft Intune to define the conditions that users, devices, and apps must meet to access company resources.
+description: Combine Conditional Access with Intune compliance policies to define the requirements that users and devices must meet before gaining access your organizations resources. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby    
-ms.date: 04/14/2021
+ms.date: 04/14/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -21,7 +21,7 @@ ms.assetid: a1973f38-ea55-43eb-a151-505fb34a8afb
 #ROBOTS:
 #audience:
 
-#ms.reviewer: samyada
+#ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Learn about Conditional Access and Intune
 
-Use Conditional Access with Microsoft Intune to control the devices and apps that can connect to your email and company resources. When integrated, you can gate access to keep your corporate data secure, while giving users an experience that allows them to do their best work from any device, and from any location.
+Use Conditional Access with Microsoft Intune compliance policies to control the devices and apps that can connect to your email and company resources. When integrated, you can gate access to keep your corporate data secure, while giving users an experience that allows them to do their best work from any device, and from any location.
 
 [Conditional Access](/azure/active-directory/conditional-access/overview) is an Azure Active Directory capability that is included with an Azure Active Directory Premium license. Through Azure Active Directory, Conditional Access brings signals together to make decisions, and enforce organizational policies. Intune enhances this capability by adding mobile device compliance and mobile app management data to the solution. Common signals include:
 

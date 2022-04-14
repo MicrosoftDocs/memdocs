@@ -1,6 +1,7 @@
 ---
 title: "SMS_Authority Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_Authority class is a client Windows Management Instrumentation class that represents the Configuration Manager site that manages the client."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

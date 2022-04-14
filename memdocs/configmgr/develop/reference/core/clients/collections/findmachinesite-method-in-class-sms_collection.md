@@ -1,6 +1,7 @@
 ---
 title: "FindMachineSite Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the FindMachineSite Windows Management Instrumentation class method gets site code information for a specific resource."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
