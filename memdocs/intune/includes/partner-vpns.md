@@ -16,7 +16,7 @@ Some Microsoft 365 services, such as Outlook, may not perform well using third p
 
 If removing the VPN resolves the behavior, then you can:
 
-- Work with the third party or partner VPN for possible resolutions.
+- Work with the third party or partner VPN for possible resolutions. Microsoft doesn't provide technical support for third party or partner VPNs.
 - Don't use a VPN with Outlook traffic.
 - If you need to use a VPN, then [use a split-tunnel VPN, such as Microsoft Tunnel](../protect/microsoft-tunnel-overview.md). And, allow the Outlook traffic to bypass the VPN.
 
