@@ -35,6 +35,7 @@ Depending on the settings you choose, not all values in the following list are c
 ## Before you begin
 
 - Create a [macOS VPN device configuration profile](vpn-settings-configure.md).
+
 - [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
 
 > [!NOTE]
