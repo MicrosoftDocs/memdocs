@@ -310,7 +310,7 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
 6. By default, all device platforms can enroll in Intune. If you want to prevent specific platforms, then create a restriction.
 
-    For more information, see [Create a device type restriction](../enrollment/enrollment-restrictions-set.md#create-a-device-type-restriction).
+    For more information, see [Create a device platform restriction](../enrollment/enrollment-restrictions-set.md#create-a-device-platform-restriction).
 
 7. Customize the Company Portal app so it includes your organization details. Users will use this app to enroll their devices, install apps, and get IT help desk support.
 

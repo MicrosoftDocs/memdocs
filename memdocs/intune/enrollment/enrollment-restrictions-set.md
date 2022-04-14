@@ -58,24 +58,16 @@ The specific enrollment restrictions that you can create include:
   - Maximum version.
 - Restrict [personally owned devices](device-enrollment.md#bring-your-own-device) (iOS, Android device administrator, Android Enterprise work profile, macOS, and Windows).
 
-## Default restrictions
 
-Default restrictions are automatically provided for both device type and device limit enrollment restrictions. You can change the options for the defaults. Default restrictions apply to all user and userless enrollments. You can override these defaults by creating new restrictions with higher priorities.
-    
+## Default restrictions  
+
+Default policies are available in Intune for both device type and device limit enrollment restrictions. The defaults apply to all user and userless enrollments. You can edit and change the defaults. You can also override the default restrictions by creating new restriction policies with higher priority.    
+
  
 ## Create a device platform restriction   
 
-    > [!IMPORTANT]
-    > Android Enterprise work profile and Android device administrator platforms have the following behavior:
-    > - If you allow both OS platforms for the same group, users on supported devices will enroll with a work profile. Devices that aren't supported will enroll under Android device administrator, without a profile. 
-    > - If you allow both OS platforms for the same group and refine it for specific and non-overlapping versions, devices will go through the enrollment throw that's selected for their version.   
-    > - If you allow both platforms, but block the same versions, devices running blocked versions will go through the Android device administrator enrollment flow, get blocked from enrollment, and be prompted to sign out. 
-    > - Neither work profile nor device administrator enrollment will work unless the appropriate prerequisites have been completed for Android erollment.  
-
-
-
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-2. Go to **Devices** > **Enroll devicess** > **Enrollment device platform restrictions**.  
+2. Go to **Devices** > **Enroll devices** > **Enrollment device platform restrictions**.  
 3. Select the tab along the top of the page that corresponds with the platform you're configuring. Your options:  
 
     * **Android restrictions**
@@ -111,6 +103,13 @@ Default restrictions are automatically provided for both device type and device 
 14. On the **Review + create** page, select **Create** to save and create your restriction.  
 
 You can view the new restriction and access its properties from the **Device type restrictions** table. Select and drag the restriction to reposition it in the table and change its priority.  
+
+### Applying Android restrictions  
+Neither work profile nor device administrator enrollment will work unless the appropriate prerequisites for Android erollment are complete. The Android Enterprise work profile and Android device administrator platforms have the following behavior when restrictions are applied:  
+
+* If you allow both OS platforms for the same group, users on supported devices will enroll with a work profile. Devices that aren't supported will enroll under Android device administrator, without a profile. 
+* *If you allow both OS platforms for the same group and refine it for specific and non-overlapping versions, devices will go through the enrollment throw that's selected for their version.   
+* *If you allow both platforms, but block the same versions, devices running blocked versions will go through the Android device administrator enrollment flow, get blocked from enrollment, and be prompted to sign out.  
 
 
 ## Create a device limit restriction
@@ -148,7 +147,7 @@ During BYOD enrollments, users see a notification that tells them when they've m
 
 ## Change enrollment restrictions
 
-You can change the settings for an enrollment restriction by following the steps below. These restrictions don't effect devices that have already been enrolled. 
+You can change the settings for an enrollment restriction by following the steps below. These restrictions don't affect devices that have already been enrolled. 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > choose the restriction that you want to change > **Properties**.
 2. Choose **Edit** next to the settings that you want to change.
