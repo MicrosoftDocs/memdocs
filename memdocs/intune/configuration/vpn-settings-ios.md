@@ -32,7 +32,8 @@ Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPa
 
 ## Before you begin
 
-Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
+- Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
+- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
 
 > [!NOTE]
 >
