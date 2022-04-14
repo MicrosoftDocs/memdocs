@@ -52,7 +52,7 @@ To take advantage of device compliance status, configure Conditional Access poli
 2. Select **Endpoint security** > **Conditional Access** > **Policies** > **New policy**.
 :::image type="content" source="./media/create-conditional-access-intune/create-ca.png" alt-text="Create a new Conditional Access policy":::
 
-   The **New** pane opens, which is the configuration pane from Azure AD. The policy you’re creating is an Azure AD policy for conditional access. To learn more about this pane and Conditional Access policies, see [Conditional Access policy components](/azure/active-directory/conditional-access/concept-conditional-access-policies) in the Azure AD content.
+   The **New** pane opens, which is the configuration pane from Azure AD. The policy you’re creating is an Azure AD policy for Conditional Access. To learn more about this pane and Conditional Access policies, see [Conditional Access policy components](/azure/active-directory/conditional-access/concept-conditional-access-policies) in the Azure AD content.
 
 3. Under **Assignments**, select **Users or workload identities** to configure the Identities in the directory that the policy applies to. To learn more, see [Users and groups](/azure/active-directory/conditional-access/concept-conditional-access-users-groups) in the Azure AD documentation.
 
