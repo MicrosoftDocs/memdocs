@@ -31,7 +31,7 @@ ms.collection:
 
 # Common ways to use Conditional Access with Intune
 
-There are two types of Conditional Access policies you can use with Intune: device-based conditional access and app-based conditional access. To support each, you'll need to configure the related Intune compliance policies. When the Intune policies are in place and deployed, you can then use Conditional Access to do things like allow or block access to Exchange, control access to your network, or integrate with a Mobile Threat Defense solution.
+There are two types of Conditional Access policies you can use with Intune: device-based Conditional Access and app-based Conditional Access. To support each, you'll need to configure the related Intune compliance policies. When the Intune policies are in place and deployed, you can then use Conditional Access to do things like allow or block access to Exchange, control access to your network, or integrate with a Mobile Threat Defense solution.
 
 The information in this article can help you understand how to use the Intune mobile *device* compliance capabilities and the Intune mobile *application* management (MAM) capabilities.
 
@@ -77,7 +77,7 @@ Users can be allowed or denied access to corporate Wi-Fi or VPN resources based 
 
 - Learn more about the [NAC integration with Intune](network-access-control-integrate.md).
 
-## Conditional access based on device risk
+## Conditional Access based on device risk
 
 Intune partners with Mobile Threat Defense vendors that provide a security solution to detect malware, Trojans, and other threats on mobile devices.
 
@@ -89,9 +89,9 @@ The Intune and mobile threat defense integration plays a factor in the Condition
 
 - Learn more about [Intune mobile threat defense](mobile-threat-defense.md).
 
-## Conditional access for Windows PCs
+## Conditional Access for Windows PCs
 
-Conditional access for PCs provides capabilities similar to those available for mobile devices. Let's talk about the ways you can use Conditional Access when managing PCs with Intune.
+Conditional Access for PCs provides capabilities similar to those available for mobile devices. Let's talk about the ways you can use Conditional Access when managing PCs with Intune.
 
 ### Corporate-owned
 
@@ -111,9 +111,9 @@ Intune and Azure AD work together to make sure only managed apps can access corp
 
 - Learn more about [app-based Conditional Access with Intune](app-based-conditional-access-intune.md).
 
-## Intune Conditional access for Exchange on-premises
+## Intune Conditional Access for Exchange on-premises
 
-Conditional access can be used to allow or block access to **Exchange on-premises** based on the device compliance policies and enrollment state. When Conditional Access is used in combination with a device compliance policy, only compliant devices are allowed access to Exchange on-premises.
+Conditional Access can be used to allow or block access to **Exchange on-premises** based on the device compliance policies and enrollment state. When Conditional Access is used in combination with a device compliance policy, only compliant devices are allowed access to Exchange on-premises.
 
 You can configure advanced settings in Conditional Access for more granular control such as:
 
