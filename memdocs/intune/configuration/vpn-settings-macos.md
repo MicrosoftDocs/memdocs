@@ -87,7 +87,7 @@ Select the type of automatic VPN you want: On-demand VPN or Per-app VPN:
 
   - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
 
-    For example, a URL string probe is an auditing Web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPNs ability to connect to a site before the device connects to the target URL through the VPN.
+    For example, a URL string probe is an auditing Web server URL that checks device compliance before connecting the VPN. Or, the URL tests the VPN's ability to connect to a site before the device connects to the target URL through the VPN.
 
 - **Prevent users from disabling automatic VPN**: Your options:
 
