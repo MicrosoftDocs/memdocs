@@ -68,7 +68,7 @@ Conditional Access works with Intune device configuration and compliance policie
 
   Intune and Azure Active Directory work together to make sure only managed apps can access corporate e-mail or other Microsoft 365 services.
 
-  Learn more about [app-based conditional access with Intune](../protect/app-based-conditional-access-intune.md).
+  Learn more about [app-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md).
 
 ## Next steps
 

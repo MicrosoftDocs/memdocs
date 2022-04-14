@@ -64,7 +64,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device Management
 
-#### Updating the device diagnostics folder structure<!-- 8504019 -->
+#### Updating the device diagnostics folder structure<!-- 8637490 -->
 
 Intune now exports [Windows Device Diagnostic data](../remote-actions/collect-diagnostics.md) in an updated format. With the updated format, the logs collected are named to match the data collected, and when multiple files are collected a folder is created. With the earlier format, the zip file used a flat structure of numbered folders that did not identify their contents.
 
