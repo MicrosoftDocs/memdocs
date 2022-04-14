@@ -33,9 +33,6 @@ ms.collection:
 
 # Set enrollment restrictions  
 
-> [!IMPORTANT]
-> This article discusses capabilities that are in public preview that might be modified before they’re released. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
-
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
 As an Intune administrator, you can create and manage enrollment restrictions that define what devices can enroll into management with Intune, including the:
@@ -98,7 +95,7 @@ Default restrictions are automatically provided for both device type and device 
 14. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).  
 
 
-## Create a device platform restriction (preview)  
+## Create a device platform restriction 
 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
