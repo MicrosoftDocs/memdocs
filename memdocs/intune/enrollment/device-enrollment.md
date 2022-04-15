@@ -39,7 +39,7 @@ Intune lets you manage your workforce's devices and apps and how they access you
 
 As you can see in the following tables, there are several methods to enroll your workforce's devices. Each method depends on the device's ownership (personal or corporate), device type (iOS, Windows, Android), and management requirements (resets, affinity, locking).
 
-By default, devices for all platforms are allowed to enroll in Intune. However, you can [restrict devices by platform](enrollment-restrictions-set.md#create-a-device-type-restriction).
+By default, devices for all platforms are allowed to enroll in Intune. However, you can [restrict devices by platform](enrollment-restrictions-set.md#create-a-device-platform-restriction) in Intune.
 
 ## iOS/iPadOS enrollment methods
 
