@@ -1,11 +1,6 @@
 ---
 # required metadata
 
-title: Use app-based Conditional Access policies with Intune
-titleSuffix: Microsoft Intune
-description: Learn about using app-based Conditional Access policies with Microsoft Intune for both enrolled and unenrolled devices.
-
-
 title: Set up app-based Conditional Access policies with Intune
 titleSuffix: Microsoft Intune
 description: Create Conditional Access policies that work with Intune app protection policies
