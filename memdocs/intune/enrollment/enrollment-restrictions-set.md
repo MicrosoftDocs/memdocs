@@ -105,8 +105,8 @@ You can view the new restriction and access its properties from the **Device typ
 Neither work profile nor device administrator enrollment will work unless the appropriate prerequisites for Android erollment are complete. The Android Enterprise work profile and Android device administrator platforms have the following behavior when restrictions are applied:  
 
 * If you allow both OS platforms for the same group, users on supported devices will enroll with a work profile. Devices that aren't supported will enroll under Android device administrator, without a profile. 
-* *If you allow both OS platforms for the same group and refine it for specific and non-overlapping versions, devices will go through the enrollment throw that's selected for their version.   
-* *If you allow both platforms, but block the same versions, devices running blocked versions will go through the Android device administrator enrollment flow, get blocked from enrollment, and be prompted to sign out.  
+* If you allow both OS platforms for the same group and refine it for specific and non-overlapping versions, devices will go through the enrollment throw that's selected for their version.   
+* If you allow both platforms, but block the same versions, devices running blocked versions will go through the Android device administrator enrollment flow, get blocked from enrollment, and be prompted to sign out.  
 
 
 ## Create a device limit restriction
