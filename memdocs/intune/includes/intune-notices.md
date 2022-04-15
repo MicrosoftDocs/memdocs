@@ -4,12 +4,32 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 01/19/2022
+ms.date: 04/15/2022
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.  
+
+### Plan for Change: iOS/iPadOS notifications require minimum version 5.2203.0<!-- 14131757 -->
+
+We will be making service side updates to iOS/iPadOS notifications in Microsoft Intune's April (2205) service release that will require users to have updated to at least version 5.2202.0 of the iOS/iPadOS Company Portal (released in March 2022).
+
+#### How does this affect you or your users?
+
+There is no change in functionality for push notifications, however, users will need to update to the latest Company Portal version. Scenarios that send push notifications to the Company Portal include:
+
+- [Custom notifications](../remote-actions/custom-notifications.md)
+- [Push notifications for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)
+- [Device ownership change push notifications](../apps/company-portal-app.md#device-ownership-notification)
+- [Delivery of S/MIME certificates for iOS to access Outlook](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/smime-outlook-for-ios-and-android)
+- [Derived credential enrollment](../protect/derived-credentials.md)
+
+If users do not update the Company Portal app to version 5.2203.0 prior to this change, they will not receive messages sent by your organization and will instead receive a notification telling them to update their app. Once they update their app, push notifications will resume.
+
+#### How can you prepare?  
+
+The required version of the Company Portal has been released, so most users have likely [updated the app](../user-help/install-a-new-version-of-the-company-portal-app.md) and will not be impacted. However, you may want to notify users of this change to ensure all users continue to receive push notifications sent by your organization.
 
 ### Plan for change: Intune is moving to support Android 8.0 and later in January 2022<!-- 10946003 -->  
 
