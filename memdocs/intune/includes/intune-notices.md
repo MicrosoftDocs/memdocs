@@ -11,7 +11,7 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.  
 
-### Plan for Change: iOS/iPadOS notifications require minimum version 5.2203.0<!-- 14131757 -->
+### Plan for Change: iOS/iPadOS notifications will require minimum version of the Company Portal<!-- 14131757 -->
 
 We will be making service side updates to iOS/iPadOS notifications in Microsoft Intune's April (2205) service release that will require users to have updated to at least version 5.2202.0 of the iOS/iPadOS Company Portal (released in March 2022).
 
