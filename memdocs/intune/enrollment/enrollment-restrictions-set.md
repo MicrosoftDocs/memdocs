@@ -76,9 +76,6 @@ Default policies are available in Intune for both device type and device limit e
     * **iOS restrictions**  
 
 4. Select **Create restriction**.  
-
-    > [!div class="mx-imgBorder"]
-    > ![Example image of the Enrollment device platform restrictions page highlighting the platform tabs and Create restriction option.](./media/enrollment-restrictions-set/intune-enrollment-device-platform-restrictions-2112.png) 
 5. On the **Basics** page, give the restriction a name and optional description. 
 6. Select **Next**.  
 7. On the **Platform settings** page, configure the restrictions for your selected platform. Your options:       
