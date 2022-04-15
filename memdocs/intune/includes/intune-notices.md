@@ -179,18 +179,6 @@ This change will affect you only if you currently manage, or plan to manage, mac
 
 Check your Intune reporting to see what devices or users might be affected. Go to **Devices** > **All devices** and filter by macOS. You can add more columns to help identify who in your organization has devices running macOS 10.14 or earlier. Ask your users to upgrade their devices to a supported OS version before the release of macOS 12.
 
-### Plan for change: Intune is ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
-
-Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated. Support will end after January 31, 2022. When support ends, the standalone tunnel app will be removed from the Google Play store.
-
-#### How does this affect you or your users?
-
-If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before January 31, 2022. This move will ensure that users can still access the Tunnel Gateway configuration.
-
-#### How can you prepare?
-
-For your devices that run Android Enterprise and currently use the standalone tunnel app, plan to [replace the standalone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Microsoft Defender for Endpoint as the tunnel client app.
-
 ### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
 
 We've released an upgrade to the Microsoft Intune Management Extension to improve handling of Transport Layer Security (TLS) errors on Windows 10 devices.
