@@ -82,9 +82,9 @@ Default policies are available in Intune for both device type and device limit e
     - **Platform** (Android only): Select **Allow** to permit devices running the Android or Android Enterprise platforms to enroll in Intune.  
     - **MDM** (Windows, macOS, and iOS/iPadOS): Select **Allow** to permit devices running the selected platform to enroll in Intune. 
     - **Allow min/max range** (Android, Windows, iOS/iPadOS only): Enter the minimum and maximum OS versions allowed to enroll. For iOS and Android, version restrictions only apply to devices enrolled through the Company Portal. Supported version formats include:  
-      - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
-      - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
-      - Windows supports major.minor.build.rev for Windows 10 and Windows 11 only.
+        - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
+        - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
+        - Windows supports major.minor.build.rev for Windows 10 and Windows 11 only.
     - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.  
     - **Device manufacturer**: Enter a comma-separated list of the manufacturers that you want to block.  
 
