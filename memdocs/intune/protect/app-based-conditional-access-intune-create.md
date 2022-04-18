@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Set up app-based Conditional Access policy with Intune
+title: Set up app-based Conditional Access policies with Intune
 titleSuffix: Microsoft Intune
-description: Learn how to create an app-based Conditional Access policy with Intune.
+description: Create Conditional Access policies that work with Intune app protection policies
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/30/2021
+ms.date: 04/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,30 +50,18 @@ Before you can create Conditional Access policies from the Microsoft Endpoint Ma
 
 2. Select **Endpoint security** > **Conditional access** > **New policy**.
 
-3. Enter a policy **Name**, and then under *Assignments*, select **Users and groups**. Use the Include or Exclude options to add your groups for the policy, and select **Done**.
+3. Enter a policy **Name**, and then under *Assignments*, select **Users or workload identities**, and apply the policy to *Users and groups*. Use the Include or Exclude options to add your groups for the policy.
 
-4. Select **Cloud apps or actions**, and choose which apps to protect. For example, choose **Select apps**, and select **Office 365 (preview)**.
+4. Select **Cloud apps or actions**, and apply the policy to *Cloud apps*. Use the Include or Exclude options to select the apps to protect. For example, choose **Select apps**, and select **Office 365 (preview)**.
 
-   Select **Done** to save your changes.
+5. Select **Conditions** > **Client apps** to apply the policy to apps and browsers. For example, select **Yes**, and then select the checkboxes for enable **Browser** and **Mobile apps and desktop clients**.
 
-5. Select **Conditions** > **Client apps** to apply the policy to apps and browsers. For example, select **Yes**, and then enable **Browser** and **Mobile apps and desktop clients**.
+6. Under *Access controls*, select **Grant** to apply Conditional Access based on a device compliance status. For example, select **Grant access** > **Require approved client app** and **Require app protection policy**, then select **Require one of the selected controls**.
 
-   Select **Done** to save your changes.
-
-6. Under *Access controls*, select **Grant** to apply Conditional Access based on device compliance. For example, select **Grant access** > **Require approved client app** and **Require app protection policy** then select **Require one of the selected controls**
-
-   Choose **Select** to save your changes.
-
-7. For **Enable policy**, select **On**, and then select **Create** to save your changes.
-
-
-
-
+7. For **Enable policy**, select **On**, and then select **Create** to save your changes. By default, *Enable policy* is set to *Report-only*.
 
 ## Next steps
-[Block apps that don't have modern authentication](app-modern-authentication-block.md)
 
-## See also
-
-[Protect app data with app protection policies](../apps/app-protection-policies.md)
-[Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access)
+- [Block apps that don't have modern authentication](app-modern-authentication-block.md)
+- [Protect app data with app protection policies](../apps/app-protection-policies.md)
+- Learn about [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access)
