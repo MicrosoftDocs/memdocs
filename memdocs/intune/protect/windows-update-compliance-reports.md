@@ -180,11 +180,11 @@ To use the report:
        - **Admin paused** – The update is on hold because the Deployment being paused by an explicit Administrator action.
        - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.
      - **Canceled**:
-       - **Admin Cancelled** – The update offer was cancelled by explicit Administrator action.
-       - **Service Cancelled** – The update was cancelled by Windows Update for one of the following reasons:  
+       - **Admin Cancelled** – The update offer was canceled by explicit Administrator action.
+       - **Service Cancelled** – The update was canceled by Windows Update for one of the following reasons:  
            - The *end of service* for the selected content was reached and it’s no longer offered by Windows Update. For example, the device might have been added to a deployment after the content’s availability expired, or the content reached its end of service date before it could install on the device.
            - The deployment content has been superseded for the device. This can happen when the device is targeted by another deployment that deploys newer content. For example, one deployment targets the Windows 10 device to install version 2004 and a second deployment targets that same device with version 21H1. In this event, 2004 is superseded by the 21H1 deployment and Windows Update cancels the 2004 deployment to the device.
-       - **Removed from Deployment** – The update offer was cancelled because it was removed from the Deployment by explicit Administrator action.
+       - **Removed from Deployment** – The update offer was canceled because it was removed from the Deployment by explicit Administrator action.
      - **Offering**:
        - **OfferReady** – The update is currently being offered to the device by Windows Update.
 
@@ -209,8 +209,8 @@ To use the report:
        - **Update Uninstalled** – The update successfully uninstalled.
        - **Rollback complete** – A rollback has completed.
      - **Cancelled**:
-       - **User Cancelled** – A user cancelled the update.
-       - **Device Cancelled** – The device cancelled the update for a user. This action is usually because the update no longer applies.
+       - **User Cancelled** – A user canceled the update.
+       - **Device Cancelled** – The device canceled the update for a user. This action is usually because the update no longer applies.
 
    - **Other**:
      - **Needs attention**: The device has some issue and needs attention.
@@ -253,7 +253,7 @@ The following list identifies Alert Messages, and suggested remediation actions:
 
 |Alert Message |Description  |Recommendation |
 |----|----|----|
-| **CancelledByUser** | User cancelled the update. | Retry the installation. |
+| **CancelledByUser** | User canceled the update. | Retry the installation. |
 | **DamagedMedia**  | The update file or the hard drive is damaged. | Run **Chkdsk /F** on the device with administrator privileges, then retry the update. |
 | **DeploymentConflict** | Device is in more than one deployment of the same update type. Only the first deployment assigned is effective. | Remove the device from any deployments that shouldn't apply. |
 | **DeviceRegistrationInvalidAzureADDeviceId**|The device isn't able to register or authenticate properly with Windows Update  because of an invalid Azure AD Device ID. | Check that the device is joined to the Azure Active Directory tenant making the request. |
@@ -276,7 +276,7 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **IncompatibleArchitecture**| This update is for a different CPU architecture. | Make sure the target operating system architecture matches the host operating system architecture. |
 | **IncompatibleServicingChannel** | Device is in a servicing channel that is incompatible with a deployment to which the device belongs. | Configure the device's servicing channel to a retail (Generally Available) update channel. |
 | **InstallAccessDenied** | Installer doesn't have permission to access or replace a file. The installer might have tried to replace a file that an antivirus, antimalware, or a backup program is currently scanning. | Retry the installation. |
-| **InstallCancelled** | The installation was cancelled. | Retry the installation. |
+| **InstallCancelled** | The installation was canceled. | Retry the installation. |
 | **InstallFileLocked** | Installer couldn't access a file that is already in use. The installer might have tried to replace a file that an antivirus, antimalware, or backup program is currently scanning. | Check the files under the *%SystemDrive%\$Windows.~bt* directory. Retry the installation. |
 | **InstallIssue**  | There was an issue installing the update. | Run **dism /online /cleanup-image /restorehealth** on the device with administrator privileges, then retry the update. If the commands fail, a reinstall of Windows might be required. |
 | **InstallIssueRedirection**| A known folder that doesn't support redirection to another drive might have been redirected to another drive. | Report this issue to Microsoft if this error is encountered more than a once. |
