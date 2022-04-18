@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 04/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -60,7 +60,7 @@ The actual time that a device starts to update depends on the device being onlin
 
   If a device doesn’t restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update rings for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
+- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
 
 ## Prerequisites
 
@@ -81,6 +81,8 @@ In addition to a license for Intune, your organization must have one of the foll
 **Supported Windows 10/11 versions**:
 
 - Windows 10/11 versions that remain in support for Servicing, on x86 or x64 architecture
+- 
+Only update builds that are generally available are supported. Preview builds, including the Beta and Dev channels, are not supported with expedited updates.
 
 **Supported Windows 10/11 editions**:
 
@@ -132,7 +134,7 @@ To help avoid conflicts or configurations that can block installation of expedit
 
 | Update ring setting       | Recommended value        |
 |---------------------------|-------------------------------------|
-| Servicing channel         | **Semi-Annual Channel**  <br><br> Expedite doesn't support additional channels at this time. |
+| Enable pre-release builds | This setting should be set to **Not configured**. Preview builds, including the Beta and Dev channels, are not supported with expedited updates. |
 | Automatic update behavior | **Reset to default**  <br><br> Other values might cause a poor user experience and  slow the process to expedite updates. |
 | Change notification update level | Use any value other than **Turn off all notifications, including restart warnings** |
 
