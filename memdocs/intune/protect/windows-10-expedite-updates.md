@@ -134,7 +134,7 @@ To help avoid conflicts or configurations that can block installation of expedit
 
 | Update ring setting       | Recommended value        |
 |---------------------------|-------------------------------------|
-| Enable pre-release builds | This setting should be left **Not configured**. Preview builds, including the Beta and Dev channels, are not supported with expedited updates. |
+| Enable pre-release builds | This setting should be set to **Not configured**. Preview builds, including the Beta and Dev channels, are not supported with expedited updates. |
 | Automatic update behavior | **Reset to default**  <br><br> Other values might cause a poor user experience and  slow the process to expedite updates. |
 | Change notification update level | Use any value other than **Turn off all notifications, including restart warnings** |
 
