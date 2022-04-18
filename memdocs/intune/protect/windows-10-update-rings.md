@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 04/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -58,7 +58,9 @@ The following prerequisites must be met to use Windows updates for Windows 10/11
     Windows Holographic for Business supports a subset of settings for Windows updates, including:
     - **Automatic update behavior**
     - **Microsoft product updates**
-    - **Servicing channel**: Supports **Semi-annual channel** and **Semi-annual channel (Targeted)** options. For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
+    - **Servicing channel**: Any update build that is generally available.
+
+    For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
 
   > [!NOTE]
   > **Unsupported versions and editions**:  
