@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Create on-premises network connections for Windows 365
+title: Create Azure network connections for Windows 365
 titleSuffix:
-description: Learn how to create on-premises network connections for Windows 365.
+description: Learn how to create Azure network connections for Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -28,9 +28,9 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Create on-premises network connection
+# Create Azure network connection
 
-[On-premises network connections](on-premises-network-connections.md) (OPNC) let you provision Cloud PCs that are attached to a virtual network that you manage.
+[Azure network connections](on-premises-network-connections.md) (ANC) let you provision Cloud PCs that are attached to a virtual network that you manage.
 
 You can have up to 10 OPNCs per tenant.
 
@@ -51,7 +51,7 @@ To create an OPNC, you must:
 
 ## Create an OPNC
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **On-premises network connection** > **Create**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Azure network connection** > **Create**.
 2. Depending on the type of OPNC you want to create, choose **Azure AD Join (preview)** or **Hybrid Azure AD Join**.
 ![Screenshot of create connection dropdown](./media/create-on-premises-network-connection/create-connection-dropdown.png)
 3. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
@@ -72,4 +72,4 @@ To create an OPNC, you must:
 <!-- ########################## -->
 ## Next steps
 
-[Edit on-premises network connection](edit-on-premises-network-connection.md).
+[Edit Azure network connection](edit-on-premises-network-connection.md).

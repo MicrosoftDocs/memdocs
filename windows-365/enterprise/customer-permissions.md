@@ -32,12 +32,12 @@ ms.collection: M365-identity-device-management
 
 For some operations, Windows 365 needs permissions to other services. These operations include:
 
-- Create an on-premises network connection (OPNC)
+- Create an Azure network connection (ANC)
 - Add a custom image
 
 Windows 365 uses the Azure role-based access control (RBAC) permissions required for the corresponding operations.
 
-## Create on-premises network connections
+## Create Azure network connections
 
 You create OPNCs to define the connection between your network and the Windows 365 system so that Cloud PCs can be successfully provisioned. When you create an OPNC, the Windows 365 service requires the following permissions:
 
@@ -47,7 +47,7 @@ You create OPNCs to define the connection between your network and the Windows 3
 
 When you create an OPNC, you must be signed in with an account that is an Owner of the subscription.
 
-For more information, see [Create on-premises network connection](create-on-premises-network-connection.md).
+For more information, see [Create Azure network connection](create-on-premises-network-connection.md).
 
 ## Add a custom image
 

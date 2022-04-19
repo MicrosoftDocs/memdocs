@@ -37,9 +37,9 @@ Windows 365 provides a per-user per-month license model by hosting Cloud PCs on 
 Each Cloud PC has a virtual network interface card (NIC) in Microsoft Azure. You have two NIC management options:
 
 - If you use Azure Active Directory (Azure AD) Join and a Microsoft hosted network, you don’t need to bring an Azure subscription or manage the NIC.
-- If you bring your own network and use an on-premises network connection, the NICs are created by Windows 365 in your Azure subscription.
+- If you bring your own network and use an Azure network connection (ANC), the NICs are created by Windows 365 in your Azure subscription.
 
-The NICs are attached to an Azure Virtual Network based on your [on-premises network connection (OPNC)](on-premises-network-connections.md) configuration.
+The NICs are attached to an Azure Virtual Network based on your [Azure network connection (OPNC)](on-premises-network-connections.md) configuration.
 
 Windows 365 is [supported in many Azure regions](requirements.md#supported-azure-regions-for-cloud-pc-provisioning). You can control which Azure region is used in two ways:
 
