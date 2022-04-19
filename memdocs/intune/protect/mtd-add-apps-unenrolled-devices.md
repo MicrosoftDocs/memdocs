@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2021
+ms.date: 04/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -42,13 +42,13 @@ Optionally, you can use Intune to add and deploy the Microsoft Authenticator, an
 >
 > - Microsoft Defender for Endpoint (Android,iOS/iPadOS)
 > - Better Mobile (Android,iOS/iPadOS)
-> - Check Point Sandblast (Android, iOS/iPadOS)
+> - Check Point Harmony Mobile (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - MVISION Mobile (Android,iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)
 > - Wandera (Android,iOS/iPadOS)
 > - Zimperium (Android,iOS/iPadOS)
-
+>
 > For unenrolled devices, you **do not need an iOS app configuration policy** that sets up the Mobile Threat Defense for iOS app you use with Intune. This is a key difference compared to Intune enrolled devices.
 
 ## Configure Microsoft Authenticator for iOS via Intune (optional)
@@ -62,7 +62,7 @@ However, should you wish to make the app available to end users via the Intune C
 
 ## Making Mobile Threat Defense apps available via Intune (optional)
 
-When using Intune app protection policies with Mobile Threat Defense, Intune will guide the end user to install and sign in to the required Mobile Threat Defense client app.
+When you use Intune app protection policies with Mobile Threat Defense, Intune guides the end user to install and sign in to the required Mobile Threat Defense client app.
 
 However, should you wish to make the app available to end users via the Intune Company Portal, you can follow the steps provided in the following sections. Make sure you're familiar with the process of:
 
@@ -77,13 +77,13 @@ However, should you wish to make the app available to end users via the Intune C
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield - App Store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) when completing the **Configure app information** section.
 
-### Making Check Point SandBlast Mobile available to end users
+### Making Check Point Harmony Mobile Protect available to end users
 
 - **Android**  
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Check Point SandBlast Mobile - Play Store URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) when completing the **Configure app information** section. 
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Harmony Mobile Protect - Play Store URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) when completing the **Configure app information** section. 
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point SandBlast Mobile - App Store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) when completing the **Configure app information** section.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Harmony Mobile Protect - App Store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) when completing the **Configure app information** section.
 
 ### Making Lookout for Work available to end users
 
