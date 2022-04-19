@@ -155,9 +155,9 @@ If you have a web proxy in your networking environment, ensure that the Intune C
 
 4. If you selected **Dynamic Devices** for the membership type, in the **Group** pane, select **Dynamic device members**.
 
-5. In the **Advanced rule** box, enter one of the following code lines:
+5. Select **Edit** in the **Rule syntax** box and enter one of the following code lines:
     - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag(OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag (OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
     - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
  
 6. Select **Save** > **Create**. 
@@ -250,7 +250,7 @@ It takes about 15 minutes for the device profile status to change from *Not assi
     - **Name**: Enter a descriptive name for the new profile.
     - **Description**: Enter a description for the profile.
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Templates**, choose the template name **Domain Join** and select **Create**.
+    - **Profile type**: Select **Templates**, choose the template name **Domain Join**, and select **Create**.
 3. Enter the **Name** and **Description** and select **Next**. 
 5. Provide a **Computer name prefix** and **Domain name**.
 6. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
