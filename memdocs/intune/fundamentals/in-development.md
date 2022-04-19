@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 04/14/2022
+ms.date: 04/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -103,15 +103,6 @@ As a public preview, we’re adding new Setup Assistant screens you can configur
 
 ### Device actions available to Android (AOSP) users in Microsoft Intune app<!-- 12645718 -->
 AOSP device users will be able to delete, wipe, and rename their enrolled devices in the Microsoft Intune app. This feature will be available on devices enrolled in Intune as user-associated (Android) AOSP devices. 
-
-### Updating the device diagnostics folder structure<!-- 8504019 -->
-We’re updating how Intune exports [Windows Device Diagnostic data](../remote-actions/collect-diagnostics.md). Today, the zip file is flat structure of numbered folders that doesn’t identify their contents. Once updated, the logs collected will be named to match the data that was collected, and if multiple files are collected a folder will be created.
-
-To take advantage of this diagnostic logging update, devices must install one of the following updates:
-- Windows 11 - KB5011563
-- Windows 10 - KB5011543
-
-These updates are expected to be made available through Windows Updates on April 12, 2022.
 
 ### Support for Audio Alert on Android corporate-owned work- profiles and fully managed (COBO and COPE) devices<!-- 13499471 -->
 You'll be able to use the **Play lost device sound** device action to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise corporate owned work profiles and fully managed devices.
