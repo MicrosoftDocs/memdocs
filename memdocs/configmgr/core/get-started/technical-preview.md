@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 04/08/2022
+ms.date: 04/27/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -121,11 +121,10 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2203
+### Technical preview version 2204
 
-- [Dark theme for the console](2022/technical-preview-2203.md#bkmk_dark) <!--9070525-->
-- [Escrow BitLocker recovery password to the site during a task sequence](2022/technical-preview-2203.md#bkmk_blmts) <!--10454717-->
-- [PowerShell release notes preview](2022/technical-preview-2203.md#bkmk_powershell) <!--13395691-->
+- [12952905](2022/technical-preview-2204.md) <!--12952905-->
+- [13507410](2022/technical-preview-2204.md) <!--13507410-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -144,6 +143,12 @@ The following features were released with previous versions of the Configuration
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 <!-- ### Technical preview version 2111 -->
+
+### Technical preview version 2203
+
+- [Dark theme for the console](2022/technical-preview-2203.md#bkmk_dark) <!--9070525-->
+- [Escrow BitLocker recovery password to the site during a task sequence](2022/technical-preview-2203.md#bkmk_blmts) <!--10454717-->
+- [PowerShell release notes preview](2022/technical-preview-2203.md#bkmk_powershell) <!--13395691-->
 
 ### Technical preview version 2202
 
