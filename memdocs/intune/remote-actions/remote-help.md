@@ -184,7 +184,7 @@ To configure your tenant to support remote help, review and complete the followi
 
 ### Task 1 – Enable remote help
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help (preview)**.
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help**.
 
 2. On the **Settings** tab:
    1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Enabled*.
@@ -305,6 +305,37 @@ Remote help logs data during installation and during remote help sessions, which
 **Operational logs** - During use of remote help, operational details are logged in the Windows Event Viewer:
 
 - Event Viewer > Application and Services > Microsoft > Windows > RemoteHelp
+
+## Installation details
+
+Remote help will create the following firewall inbound rules:
+- Quick Assist Firewall Exception
+- Quick Assist RDP Firewall Exception
+- Remote help Firewall Exception
+
+## Languages Supported
+
+Remote help is supported in the following languages:
+- Czech
+- Danish
+- Dutch
+- English
+- Finnish
+- French
+- German
+- Greek
+- Hungarian
+- Italian
+- Japanese
+- Korean
+- Norwegian
+- Polish
+- Portuguese (Portugal)
+- Romanian
+- Russian
+- Spanish
+- Swedish
+- Turkish
 
 ## Known Issues
 

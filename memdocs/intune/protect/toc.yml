@@ -209,10 +209,10 @@ items:
         items:
         - name: BlackBerry and Intune integration
           href: blackberry-mtd-connector-integration.md
-      - name: Set up Check Point
+      - name: Set up Check Point Harmony
         href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
         items:
-        - name: Check Point and Intune integration
+        - name: Check Point Harmony and Intune integration
           href: checkpoint-sandblast-mobile-mtd-connector-integration.md
       - name: Set up Lookout
         href: lookout-mobile-threat-defense-connector.md
