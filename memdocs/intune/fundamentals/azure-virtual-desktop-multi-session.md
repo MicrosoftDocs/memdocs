@@ -34,7 +34,7 @@ ms.collection:
 > [!IMPORTANT]
 > Azure Virtual Desktop multi-session with Microsoft Intune is currently in preview and may be modified before it’s released. See [Public preview in Microsoft Intune](public-preview.md) for more information.
 
-You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Endpoint Manager admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you must use device-based configurations. Such configurations require user-less enrollments.
+You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Endpoint Manager admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you must use device-based configurations. Such configurations require user-less enrollments. 
 
 Windows 10 or Windows 11 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure. It provides the following benefits:
 
