@@ -172,7 +172,7 @@ In `- startProvidingItemAtURL:completionHandler:` check if you should encrypt fi
 
 In `- importDocumentAtURL:toParentItemIdentifier:completionHandler:` check whether the file is encrypted using `isFileEncrytped:` API in `IntuneMAMFileProtectionManager`. If it is then decrypt it using `decryptFile:toCopyPath:` API of `IntuneMAMFileProtectionManager`.
 
-## Configure MSAL
+## Setup MSAL
 
 The Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
@@ -180,17 +180,23 @@ Typically, MSAL requires apps to register with Azure Active Directory (AAD) and 
 
 If your app does not already use MSAL, you will need to configure an app registration in AAD and specify the client ID and redirect URI that the Intune SDK should use.  
 
+If your app currently uses ADAL to authenticate users, refer to [this]](https://docs.microsoft.com/en-us/azure/active-directory/develop/migrate-objc-adal-msal) for more information on migrating your app from ADAL to MSAL.
+
 It is recommended that your app links to the latest release of [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases).
 
-### Link to MSAL binaries
+### Link MSAL to Your Project
 
-Follow [these instructions](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) to link your app to the MSAL binaries.
+Follow the [installation](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) section to put the MSAL binaries in your app.
 
-1. If your app does not have any keychain access groups defined, add the app's bundle ID as the first group.
+### Configure MSAL
 
-2. Enable MSAL single sign-on (SSO) by adding `com.microsoft.adalcache` to the keychain access groups.
+Follow the [configuration](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal) section to configure MSAL. Make sure you follow all the steps in the configuration section. Disregard step one if your app is already registered in AAD. 
 
-3. In the case you are explicitly setting the MSAL shared cache keychain group, make sure it is set to `<appidprefix>.com.microsoft.adalcache`. MSAL will set this for you unless you override it. If you want to specify a custom keychain group to replace `com.microsoft.adalcache`, specify that in the Info.plist file under IntuneMAMSettings, by using the key `ADALCacheKeychainGroupOverride`.
+The points below contains additional information to configure MSAL and link to it. Follow these if they apply to you.
+
+* If your app does not have any keychain access groups defined, add the app's bundle ID as the first group.
+* Enable MSAL single sign-on (SSO) by adding `com.microsoft.adalcache` to the keychain access groups.
+* In the case you are explicitly setting the MSAL shared cache keychain group, make sure it is set to `<appidprefix>.com.microsoft.adalcache`. MSAL will set this for you unless you override it. If you want to specify a custom keychain group to replace `com.microsoft.adalcache`, specify that in the Info.plist file under IntuneMAMSettings, by using the key `ADALCacheKeychainGroupOverride`.
 
 ### If your app does not use MSAL
 
