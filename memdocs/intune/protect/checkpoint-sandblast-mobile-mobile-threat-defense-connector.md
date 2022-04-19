@@ -122,7 +122,7 @@ Access is granted on remediation:
 
 ## Next steps
 
-- [Integrate Check Point Harmony Mobile with Intune](checkpoint-harmony-mobile-mtd-connector-integration.md)
+- [Integrate Check Point Harmony Mobile with Intune](checkpoint-sandblast-mobile-mtd-connector-integration.md)
 
 - [Set up Harmony Mobile Protect app](mtd-apps-ios-app-configuration-policy-add-assign.md)
 

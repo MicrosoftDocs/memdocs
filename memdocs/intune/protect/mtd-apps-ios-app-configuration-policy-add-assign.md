@@ -221,7 +221,7 @@ To install the Mobile Threat Defense app on the end user device, you can follow 
 Choose the section that corresponds to your MTD provider:
 
 - [Better Mobile](#assigning-better-mobile)
-- [Check Point Harmony Mobile Protect](#assigning-check-point-harmondy-mobile-protect)
+- [Check Point Harmony Mobile Protect](#assigning-check-point-harmony-mobile-protect)
 - [Lookout for Work](#assigning-lookout-for-work)
 - [MVISION Mobile](#assigning-mvision-mobile)
 - [Pradeo](#assigning-pradeo)
