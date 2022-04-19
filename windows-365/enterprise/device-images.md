@@ -111,7 +111,7 @@ When you upload a custom device image, Windows 365:
 2. Runs the following validation checks on the image:
     1. Verifies all the Windows 365 image requirements are met.
     2. Deploys a virtual machine and makes sure that the images can be booted and provisioned as a Cloud PC.
-3. If you have a Hybrid Azure AD Join connection, Windows 365 replicates the image across all Azure regions where you have an on-premises network connection.
+3. If you have a Hybrid Azure AD Join connection, Windows 365 replicates the image across all Azure regions where you have an Azure network connection.
 4. If you have an Azure AD Join connection, Windows 365 replicates the image to the provisioned region during provisioning.
 
 <!-- ########################## -->

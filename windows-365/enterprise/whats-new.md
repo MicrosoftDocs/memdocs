@@ -86,9 +86,9 @@ The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning
 
-#### Upload a custom image without an on-premises network connection<!--8341750 -->
+#### Upload a custom image without an Azure network connection<!--8341750 -->
 
-Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription which provides the image.
 
 #### Cloud PC name appended to the network interface name<!--38793957-->
 
@@ -149,8 +149,8 @@ Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These de
 
 - A Microsoft-hosted network:
   - You don’t need to bring any Azure infrastructure
-  - You don't need to create an on-premises network connection.
-- Your own network (using an on-premises network connection)
+  - You don't need to create an Azure network connection.
+- Your own network (using an Azure network connection)
 
 #### Configure installed language and region for provisioning Cloud PCs<!--37095808 -->
 

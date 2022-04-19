@@ -1,8 +1,8 @@
 ---
 # required metadata
-title: Troubleshoot on-premises network connections
+title: Troubleshoot Azure network connections
 titleSuffix:
-description: Troubleshoot on-premises network connections in Windows 365.
+description: Troubleshoot Azure network connections in Windows 365.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
@@ -28,9 +28,9 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Troubleshoot on-premises network connections
+# Troubleshoot Azure network connections
 
-The on-premises network connection (OPNC) periodically checks your environment to make sure that all requirements are met and are in a healthy state. If any check fails, you'll see error messages in the Microsoft Endpoint Manager admin center. This guide contains some further instructions for troubleshooting issues that may cause checks to fail.
+The Azure network connection (ANC) periodically checks your environment to make sure that all requirements are met and are in a healthy state. If any check fails, you'll see error messages in the Microsoft Endpoint Manager admin center. This guide contains some further instructions for troubleshooting issues that may cause checks to fail.
 
 ## Active Directory domain join
 
@@ -59,7 +59,7 @@ If provisioning fails, make sure that:
 
 ## Azure subnet IP address range usage
 
-As part of the OPNC setup, you provide a subnet. This subnet is used for all Cloud PCs during the provisioning process. Each Cloud PC provisioning will create a virtual NIC and consume an IP address from the subnet.  
+As part of the ANC setup, you provide a subnet. This subnet is used for all Cloud PCs during the provisioning process. Each Cloud PC provisioning will create a virtual NIC and consume an IP address from the subnet.  
 
 Make sure that there is sufficient IP Address allocation available for the volume of Cloud PCs you expect to provision. Also, plan enough address space for provisioning failures and potential disaster recovery.  
 
@@ -82,7 +82,7 @@ Also, visit the Azure portal and view Policies. Make sure that there are no poli
 
 ## Azure virtual network readiness
 
-When creating an OPNC, we block the use of any vNet located in an unsupported region. For a list of supported regions, see [Requirements](requirements.md).  
+When creating an ANC, we block the use of any vNet located in an unsupported region. For a list of supported regions, see [Requirements](requirements.md).  
 
 If this check fails, make sure that the vNet provided is in a region in the supported region list.
 
@@ -96,7 +96,7 @@ This test attempts to resolve the domain name provided. For example, contoso.com
 - The subnet/vNet is routed correctly so that the Cloud PC can reach the DNS server provided.  
 - The Cloud PCs/virtual machines in the declared subnet can NSLOOKUP on the DNS server, and it responds with internal names.
 
-Along with standard the DNS lookup on the supplied domain name, we also check for the existence of _ldap._tcp.yourDomain.com records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure tht these records are accessible through the vNet provided in your on-premises network connection.
+Along with standard the DNS lookup on the supplied domain name, we also check for the existence of _ldap._tcp.yourDomain.com records. This record indicates the DNS server provided is an Active Directory domain controller. The record is a reliable way to confirm that AD domain DNS is reachable. Make sure tht these records are accessible through the vNet provided in your Azure network connection.
 
 ## Endpoint connectivity
 
@@ -122,7 +122,7 @@ We suggest you retry the checks in case of this error. If it persists, contact s
 
 ## First party app permissions
 
-When creating an OPNC, the wizard grants a certain level of permissions on the resource group and subscription. This lets the service smoothly provision Cloud PCs.  
+When creating an ANC, the wizard grants a certain level of permissions on the resource group and subscription. This lets the service smoothly provision Cloud PCs.  
 
 These permissions can be viewed and modified by Azure admins who hold such permissions.  
 
@@ -139,4 +139,4 @@ Also, make sure that the permissions haven't been granted as [classic subscripti
 <!-- ########################## -->
 ## Next steps
 
-[Learn about the OPNC health checks](health-checks.md).
+[Learn about the ANC health checks](health-checks.md).

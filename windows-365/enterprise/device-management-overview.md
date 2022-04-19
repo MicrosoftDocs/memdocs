@@ -39,7 +39,7 @@ The Overview tab is the landing page for managing your Cloud PCs. To see it, sig
 Here you'll see some info to give you a quick idea of how your Cloud PCs are doing:
 
 - **Provisioning** status: A summary of the Cloud PC state in your organization.
-- **Connection health**:  A summary of the on-premises network connection health in your organization.  
+- **Connection health**:  A summary of the Azure network connection health in your organization.  
 
 ## All Cloud PCs page
 

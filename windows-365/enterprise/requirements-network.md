@@ -58,7 +58,7 @@ You must allow traffic in your Azure network configuration to the following serv
 - [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list)
 - rdweb.wvd.microsoft.com
 - rdbroker.wvd.microsoft.com
-- Provisioning and on-premises network connection endpoints:
+- Provisioning and Azure network connection endpoints:
   - cpcsaamssa1prodprap01.blob.core.windows.net
   - cpcsaamssa1prodprau01.blob.core.windows.net
   - cpcsaamssa1prodpreu01.blob.core.windows.net
@@ -163,7 +163,7 @@ Full HD (1920x1080p) isn’t a supported resolution for Microsoft Teams on Cloud
 
 ## Traffic interception technologies
 
-Some enterprise customers use traffic interception, SSL decryption, deep packet inspection, and other similar technologies for security teams to monitor network traffic. Cloud PC provisioning may need direct access to the virtual machine. These traffic interception technologies can cause issues with running on-premises network connection checks or Cloud PC provisioning. Make sure no network interception is enforced for Cloud PCs provisioned within the Windows 365 service.
+Some enterprise customers use traffic interception, SSL decryption, deep packet inspection, and other similar technologies for security teams to monitor network traffic. Cloud PC provisioning may need direct access to the virtual machine. These traffic interception technologies can cause issues with running Azure network connection checks or Cloud PC provisioning. Make sure no network interception is enforced for Cloud PCs provisioned within the Windows 365 service.
 
 ## Bandwidth
 
