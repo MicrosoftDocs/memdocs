@@ -911,6 +911,10 @@ By default, apps are considered single identity. The SDK sets the process identi
 
 If your app integrates with Siri Intents or makes Siri Intent Donations, please make sure to read the comments for `areSiriIntentsAllowed` in `IntuneMAMPolicy.h` for instructions on supporting this scenario. 
     
+ ## Printing
+
+ If your app implements printing and provides a custom print action on a custom menu, be sure to utilize `UIPrintInteractionController.isPrintingAvailable()` to determine if you should add your print action to your custom menu.
+ 
 ## Notifications
 
 If your app receives notifications, please make sure to read the comments for `notificationPolicy` in `IntuneMAMPolicy.h` for instructions on supporting this scenario.  It is recommended that apps register for `IntuneMAMPolicyDidChangeNotification` described in `IntuneMAMPolicyManager.h`, and communicate this value to their `UNNotificationServiceExtension` via the keychain.
