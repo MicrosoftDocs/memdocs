@@ -49,7 +49,7 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of April 11, 2022
+## Week of April 18, 2022
 
 ### On-premises network connection has been renamed to Azure network connection<!--38457869 idready-->
 
