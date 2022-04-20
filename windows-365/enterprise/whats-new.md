@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/11/2022
+ms.date: 04/21/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,14 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of April 11, 2022
+
+### On-premises network connection has been renamed to Azure network connection<!--38457869 idready-->
+
+The term **on-premises network connection** has been renamed to **Azure network connection** in all user interfaces, documentation, and communications.
+
 
 <!-- ########################## -->
 ## Week of April 11, 2022
