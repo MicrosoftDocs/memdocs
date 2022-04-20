@@ -64,11 +64,11 @@ Assignment filters are not supported for devices communicating through the Micro
 
 ### Deleting and removing devices
 
-Devices that are using this flow will be unable to be deleted from the Endpoint Manager admin center. The enrollment state is driven from Microsoft Defender for Endpoint, and deleting them from admin center would only cause them to be removed temporarily. If devices need to be removed from management, they should be removed from the scope of Configuration Management in the Security Center. Once removed, that change will be propogated across services.
+Devices that are using this flow will be unable to be deleted from the Microsoft Endpoint Manager admin center. The enrollment state is driven from Microsoft Defender for Endpoint, and deleting them from the admin center would only cause them to be removed temporarily. If devices need to be removed from management, they should be removed from the scope of Configuration Management in the Security Center. Once removed, that change will be propogated across services.
 
 ### Unable to enable the Security Management for Microsoft Defender for Endpoint workload in Endpoint Security
 
-Most initial provisioning flows will be completed typically be created by an Administrator of both services. There are some scenarios where Role-based Administration is used to customize the permissions of administrators. Today, those delegated the 'Endpoint Security Manager' role may not have the necessary permissions to enable this feature. We will address this in a future release.
+Most initial provisioning flows are completed typically and created by an Administrator of both services. There are some scenarios where Role-based Administration is used to customize the permissions of administrators. Today, those delegated the *Endpoint Security Manager* role may not have the necessary permissions to enable this feature. We will address this in a future release.
 
 ### Co-existence with Microsoft Endpoint Configuration Manager
 
