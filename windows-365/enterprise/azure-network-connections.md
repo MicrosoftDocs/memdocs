@@ -122,7 +122,7 @@ After completing either of these operations, you can delete the ANC.
 
 Each tenant has a limit of 10 Azure network connections. If your organization needs more than 10 Azure network connections, contact support.
 
-## User sign in
+## User sign-in
 
 When users attempt to sign in to their Cloud PC, user authentication occurs.
 

@@ -61,7 +61,7 @@ If a user has multiple Windows 365 SKUs assigned to them, they’ll get multiple
 
 **Status**: The current provisioning status of the Cloud PC. Possible states include:
   
-- **Provisioned**: The Cloud PC provisioning was successful and the assigned user can logon.
+- **Provisioned**: The Cloud PC provisioning was successful and the assigned user can log on.
 - **Provisioning**: Provisioning is currently in progress.  
 - **Provisioned with warnings**: If a non-critical step in the provisioning process fails, user access isn’t blocked but a warning is flagged.  
 - **Not provisioned**: The user has been assigned a Windows 365 license but no provisioning policy has been targeted. To provision a Cloud PC, assign this user to a provisioning policy.

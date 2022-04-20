@@ -38,7 +38,7 @@ When a Cloud PC is provisioned, it’s automatically joined to the provided doma
 
 - The domain join user has sufficient permissions to join the domain provided.  
 - The domain join user can write to the organizational unit (OU) provided.  
-- The domain join user is not restricted in how many computers they can join. For example, the default maximum joins per user is 10 and this can effect Cloud PC provisioning.
+- The domain join user is not restricted in how many computers they can join. For example, the default maximum joins per user is 10 and this can affect Cloud PC provisioning.
 - The subnet being used can reach a domain controller.
 - You test Add-Computer using the domain join credentials on a VM connected to the Cloud PC vNet/subnet.
 - You troubleshoot domain join failures like any physical computer in your organization.

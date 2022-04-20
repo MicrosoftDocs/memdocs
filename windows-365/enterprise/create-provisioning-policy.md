@@ -58,7 +58,7 @@ A few things to keep in mind:
 6. Select **Next**.
 7. On the **Configuration** page, choose a language pack in the dropdown. The selected language pack will be installed on Cloud PCs provisioned with this policy. Select **Next**.
 8. On the **Assignments** page, choose **Select groups** > choose the groups you want this policy assigned to > **Select** > **Next**.
-9. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete The time depends on when the Azure AD connect sync last happened.
+9. On the **Review + create** page, select **Create**. If you used Hybrid Azure AD Join as the join type, it can take up to 60 minutes for the policy creation process to complete. The time depends on when the Azure AD connect sync last happened.
 
 <!-- ########################## -->
 ## Next steps
