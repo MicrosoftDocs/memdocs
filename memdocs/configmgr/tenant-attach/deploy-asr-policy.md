@@ -33,6 +33,7 @@ ms.author: brenduns
 
    - **Platform**: Windows 10 and later (ConfigMgr)
    - **Profile**: Choose one of the following profiles:
+     - Attack Surface Reduction Rules (ConfigMgr) (preview)
      - Exploit Protection (ConfigMgr) (preview)
      - Web Protection (ConfigMgr) (preview)
 
