@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/11/2022
+ms.date: 04/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,7 +60,353 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
-## Week of April, 11, 2022
+## Week of April 27, 2022 (Service release 2204)
+
+### App management
+
+#### Updated app configuration policies list<!-- 13903969 -->
+The **App configuration policies** list has been modified in Intune. This list will no longer contain the **Assigned** column. To view whether an app configuration policy has been assigned, navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Apps** > **App configuration policies** > *select a policy* > **Overview**.
+
+#### Photo library data transfer support via app protection policies<!-- 9450163 -->
+You can now select to include **Photo Library** as a supported application storage service. By selecting **Photo Library** in the **Allow users to open data from selected services** setting within Intune, you can allow managed accounts to allow *incoming* data from their device's photo library to their managed apps on iOS and Android platforms. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create Policy**. Choose either **iOS/iPadOS** or **Android**. This setting is available as part of the **Data protection** step and specifically for **Policy managed apps**. For related information, see [Data protection](../apps/app-protection-framework.md#data-protection-2).
+
+#### Password complexity for Android devices<!-- 9321870 -->
+The **Require device lock** setting in Intune has been extended to include values (**Low Complexity**, **Medium Complexity**, and **High Complexity**). If the device lock doesn’t meet the minimum password requirement, you can **warn**, **wipe data**, or **block** the end user from accessing a managed account in a managed app. This feature targets devices that operate on Android 11+. For devices operating on Android 11 and earlier, setting a complexity value of **Low**, **Medium**, or **High** will default to the expected behavior for **Low Complexity**. For related information, see [Android app protection policy settings in Microsoft Intune](..\apps\app-protection-policy-settings-android.md).
+
+### Device management
+
+#### Support for Audio Alert on Andriod corporate owned work profiles and fully managed (COBO and COPE) devices<!-- 13499471 -->
+You can now use the device action **Play lost device sound**  to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise corporate owned work profile and fully managed devices. For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
+
+### Device enrollment
+
+#### New enrollment profile settings for Apple Automated Device Enrollment (public preview)<!-- 10111795 -->
+We've added two new Setup Assistant settings that you can use with Apple Automated Device Enrollment. Each setting controls the visibility of a Setup Assistant pane shown during enrollment. Setup Assistant panes are shown during enrollment by default, so you have to adjust the settings in Microsoft Intune if you want to hide them. The new Setup Assistant settings are the following:<p>
+- **Get Started** (preview):  Show or hide the Get Started pane during enrollment. For devices running iOS/iPadOS 13 and later. 
+- **Auto Unlock with Apple Watch** (preview):  Show or hide the Unlock Your Mac with your Apple Watch pane during enrollment. For devices running macOS 12 and later.
+
+ To configure Setup Assistant settings for Automated Device Enrollment, [create an iOS/iPadOS enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) or [macOS enrollment profile](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile) in Microsoft Intune.  
+
+### Device configuration
+
+#### Endpoint security profiles support filters; See the filter status on a device configuration profile report<!-- 11889620 -->
+There are some new features when using filters:
+- When you create a device configuration profile for Windows devices, a per-policy report shows reporting information in the **Device and user check-in status** (**Devices** > **Configuration profiles** > Select an existing policy).
+
+  When you select **View report**, the report has an **Assignment Filter** column. Use this column to determine if a filter successfully applied to your policy.
+
+- Endpoint Security policies support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create. 
+
+- When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting](#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
+
+For more information on filters, see:
+- [Use filters when assigning your apps, policies, and profiles](filters.md)
+- [List of platforms, policies, and app types supported by filters](filters-supported-workloads.md)
+
+Applies to:
+- All platforms
+
+Does not apply to:
+- Administrative Templates (Windows 10/11)
+- Device Firmware Configuration Interface (DFCI) (Windows 10/11)
+- OEMConfig (Android Enterprise)
+
+#### Create a Settings Catalog policy using your imported GPOs with Group Policy analytics (public preview)<!-- 6379751 -->
+Using Group Policy analytics, you can import your on-premises GPO, and see the settings that are supported in Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
+
+When the analysis runs, you see the settings that are ready for migration. There is a **Migrate** option (public preview) that creates a Settings Catalog profile using your imported settings. Then, you can assign this profile to your groups.
+
+For more information, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager (public preview)
+](../configuration/group-policy-analytics-migrate.md).
+
+Applies to:
+- Windows 11
+- Windows 10
+
+#### New wired networks device configuration profile for Windows devices<!-- 1746923 -->
+There is a new **Wired Networks** device configuration profile for Windows 10/11 devices (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Wired networks** for profile type).
+
+Use this profile to configure common wired network settings, including authentication, EAP type, server trust, and more. For more information on the settings you can configure, go to [Add wired network settings for Windows devices in Microsoft Intune](../configuration/wired-network-settings-windows.md).
+
+Applies to:
+- Windows 11
+- Windows 10
+
+#### "ADMX_" Policy CSP settings in Administrative Templates and Settings Catalog apply to Windows Professional editions<!-- 13812105 -->
+The [Windows Policy CSP settings](../windows/client-management/mdm/policy-configuration-service-provider) that begin with "ADMX_" apply to Windows devices running Windows Professional edition. Previously, these settings were shown as **Not applicable** on devices running Windows Professional edition.
+
+You can use Administrative Templates and Settings Catalog to configure these "ADMX_" settings in a policy, and deploy the policy to your devices (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Settings catalog** or **Administrative Templates** or for profile type).
+
+To use this set of "ADMX_" settings, the following updates must be installed on your Windows 10/11 devices:
+- **Windows 11**: [March 28, 2022—KB5011563 (OS Build 22000.593) Preview](https://support.microsoft.com/topic/march-28-2022-kb5011563-os-build-22000-593-preview-40df54c9-b5a9-42e5-ae1c-9a33ff91ca91)
+
+- **Windows 10** (20H1, 20H2, 21H1, 21H2): [March 22, 2022—KB5011543 (OS Builds 19042.1620, 19043.1620, and 19044.1620) Preview
+](https://support.microsoft.com/topic/march-22-2022-kb5011543-os-builds-19042-1620-19043-1620-and-19044-1620-preview-4fe2d1c0-720f-47fe-9523-75339bc107a1)
+
+To learn more about these features, go to:
+-  [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md)
+- [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md)
+- [The latest in Group Policy settings parity in Mobile Device Management blog post](https://techcommunity.microsoft.com/t5/intune-customer-success/the-latest-in-group-policy-settings-parity-in-mobile-device/ba-p/2269167)
+
+To see a list of all the ADMX settings that support Windows Professional edition, go to [Windows Policy CSP settings](/windows/client-management/mdm/policy-configuration-service-provider). Any setting that begins with "ADMX_" supports Windows Professional edition.
+
+Applies to:
+- Windows 11
+- Windows 10
+
+#### New macOS settings in Setting Catalog<!-- 13654614 -->
+The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
+
+**Accounts > Mobile Accounts**:
+- Ask For Secure Token Auth Bypass
+- Create At Login
+- Expiry Delete Disused Seconds
+- Warn On Create
+- Warn On Create Allow Never
+
+**App Management > Autonomous Single App Mode**:
+- Bundle Identifier
+- Team Identifier
+
+**App Management > NS Extension Management**: 
+- Allowed Extensions
+- Denied Extension Points
+- Denied Extensions
+
+**App Store**: 
+- Disable Software Update Notifications
+- Restrict Store Software Update Only
+- restrict-store-disable-app-adoption
+
+**Authentication > Directory Service**: 
+- AD Allow Multi Domain Auth
+- AD Allow Multi Domain Auth Flag
+- AD Create Mobile Account At Login
+- AD Create Mobile Account At Login Flag
+- AD Default User Shell
+- AD Default User Shell Flag
+- AD Domain Admin Group List
+- AD Domain Admin Group List Flag
+- AD Force Home Local 
+- AD Force Home Local Flag
+- AD Map GGID Attribute
+- AD Map GGID Attribute Flag
+- AD Map GID Attribute
+- AD Map GID Attribute Flag
+- AD Map UID Attribute
+- AD Map UID Attribute Flag
+- AD Mount Style
+- AD Namespace
+- AD Namespace Flag
+- AD Organizational Unit
+- AD Packet Encrypt
+- AD Packet Encrypt Flag
+- AD Packet Sign
+- AD Packet Sign Flag
+- AD Preferred DC Server
+- AD Preferred DC Server Flag
+- AD Restrict DDNS
+- AD Restrict DDNS Flag
+- AD Trust Change Pass Interval Days
+- AD Trust Change Pass Interval Days Flag
+- AD Use Windows UNC Path
+- AD Use Windows UNC Path Flag
+- AD Warn User Before Creating MA Flag
+- Client ID
+- Description
+- Password
+- User Name
+
+**Authentication > Identification**: 
+- Prompt
+- Prompt Message
+
+**Login > Login Window Login Items**:
+- Disable Login Items Suppression
+
+**Media Management Disc Burning**:
+- Burn Support
+
+**Parental Controls > Parental Controls Application Restrictions**:
+- Family Controls Enabled
+
+**Parental Controls > Parental Controls Content Filter**:
+- Allowlist Enabled
+- Filter Allowlist
+- Filter Blocklist
+- Site Allowlist
+- Address
+- Page Title
+- Use Content Filter
+
+**Parental Controls > Parental Controls Dictionary**:
+- Parental Control
+
+**Parental Controls > Parental Controls Game Center**:
+- GK Feature Account Modification Allowed
+
+**System Configuration > File Provider**:
+- Allow Managed File Providers To Request Attribution
+
+**System Configuration > Screensaver**:
+- Ask For Password
+- Ask For Password Delay
+- Login Window Idle Time
+- Login Window Module Path
+
+**User Experience > Finder**:
+- Prohibit Burn
+- Prohibit Connect To
+- Prohibit Eject
+- Prohibit Go To Folder
+- Show External Hard Drives On Desktop
+- Show Hard Drives On Desktop
+- Show Mounted Servers On Desktop
+- Show Removable Media On Desktop
+- Warn On Empty Trash
+
+**User Experience > Managed Menu Extras**:
+- AirPort
+- Battery
+- Bluetooth
+- Clock
+- CPU
+- Delay Seconds
+- Displays
+- Eject
+- Fax
+- HomeSync
+- iChat
+- Ink
+- IrDA
+- Max Wait Seconds
+- PCCard
+- PPP
+- PPPoE
+- Remote Desktop
+- Script Menu
+- Spaces
+- Sync
+- Text Input
+- TimeMachine
+- Universal Access
+- User
+- Volume
+- VPN
+- WWAN
+
+**User Experience > Notifications**:
+- Alert Type
+- Badges Enabled
+- Critical Alert Enabled
+- Notifications Enabled
+- Show In Lock Screen
+- Show In Notification Center
+- Sounds Enabled
+
+**User Experience > Time Machine**:
+- Auto Backup
+- Backup All Volumes
+- Backup Size MB
+- Backup Skip System
+- Base Paths
+- Mobile Backups
+- Skip Paths
+
+**Xsan**:
+- San Auth Method
+
+**Xsan > Xsan Preferences**:
+- Deny DLC
+- Deny Mount
+- Only Mount
+- Prefer DLC
+- Use DLC
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**App Management > Associated Domains**:
+- Enable Direct Downloads
+
+**Networking > Content Caching**:
+- Allow Cache Delete
+- Allow Personal Caching
+- Allow Shared Caching
+- Auto Activation
+- Auto Enable Tethered Caching
+- Cache Limit
+- Data Path
+- Deny Tethered Caching
+- Display Alerts
+- Keep Awake
+- Listen Ranges
+- Listen Ranges Only
+- Listen With Peers And Parents
+- Local Subnets Only
+- Log Client Identity
+- Parent Selection Policy
+- Parents
+- Peer Filter Ranges
+- Peer Listen Ranges
+- Peer Local Subnets Only
+- Port
+- Public Range
+
+**Restrictions**:
+- Allow Activity Continuation
+- Allow Adding Game Center Friends
+- Allow Air Drop
+- Allow Auto Unlock
+- Allow Camera
+- Allow Cloud Address Book
+- Allow Cloud Bookmarks
+- Allow Cloud Calendar
+- Allow Cloud Desktop And Documents
+- Allow Cloud Document Sync
+- Allow Cloud Keychain Sync
+- Allow Cloud Mail
+- Allow Cloud Notes
+- Allow Cloud Photo Library
+- Allow Cloud Private Relay
+- Allow Cloud Reminders
+- Allow Content Caching
+- Allow Diagnostic Submission
+- Allow Dictation
+- Allow Erase Content And Settings
+- Allow Fingerprint For Unlock
+- Allow Game Center
+- Allow iTunes File Sharing
+- Allow Multiplayer Gaming
+- Allow Music Service
+- Allow Passcode Modification
+- Allow Password Auto Fill
+- Allow Password Proximity Requests
+- Allow Password Sharing
+- Allow Remote Screen Observation
+- Allow Screen Shot
+- Allow Spotlight Internet Results
+- Allow Wallpaper Modification
+- Enforced Fingerprint Timeout
+- Enforced Software Update Delay
+- Enforced Software Update Major OS Deferred Install Delay
+- Enforced Software Update Minor OS Deferred Install Delay
+- Enforced Software Update Non OS Deferred Install Delay
+- Force Classroom Automatically Join Classes
+- Force Classroom Request Permission To Leave Classes
+- Force Classroom Unprompted App And Device Lock
+- Force Delayed App Software Updates
+- Force Delayed Major Software Updates
+- Force Delayed Software Updates
+- Safari Allow Autofill
+
+There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
+
+Applies to:
+- macOS
+
+## Week of April 11, 2022
 
 ### Device Management
 
