@@ -78,18 +78,15 @@ Spot by NetApp delivers fully managed, continuously optimized cloud desktops as 
 
 For more information, read about Spot on the [NetApp website](https://spot.io/products/spotpc/).
 
-
 ## Rimo3
 
 ![Rimo3 image](./media/partners/rimo3.png)
 
-Rimo3 helps organizations understand the impact of adopting both traditional operational updates, like OS, app, and security patches, and new strategic technologies, like Windows 365 and Cloud PCs. With Rimo3, organizations can verify the readiness of their applications and unique operating environment for compatibility, functionality, and performance metrics, including MSIX suitability. Rimo3 supports businesses across the globe to adopt Windows 365 and deliver a best-in-class application experience.
+Rimo3 helps organizations onboard Windows 365 by verifying apps and updates for Cloud PCs. It helps you understand the impact of OS, app, and security updates on your Cloud PCs in your unique operating environment. With Rimo3, you can:
 
-With Rimo3, you can:
-
-- Rapidly discover application suitability for onboarding to Windows 365 and provisioning Cloud PCs
-- Test applications readiness against critical security and OS patch updates up to 10x faster than current processes
-- Quickly assess resource and performance impacts for end-users before production implementation
+- Rapidly verify app (including MSIX) compatibility, functionality, and performance metrics for Cloud PCs.
+- Test app readiness against security and OS updates up to 10 times faster than current processes.
+- Quickly assess end user resource and performance impacts before production implementation.
 
 ## ServiceNow
 
