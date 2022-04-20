@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/15/2022
+ms.date: 04/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -82,7 +82,8 @@ You can have up to 25 restrictions for each restriction type, per tenant.
 9. Optionally, add scope tags to the restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). 
 
       > [!NOTE]
-      >  When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies. 
+      >  If you apply scope tags to a restriction, only Intune users within scope can view and manage the policy. Only people in scope can view and reorder a restriction, or change its priorty level. They can also see the relative priority of the restrictions, even if they can't see all restrictions.  
+
 10. Select **Next**. 
 11. On the **Assignments** page, select **Add groups** and then use the search box to find and select groups. To assign the restriction to all device users, select **Add all users**. If you don't assign a restriction to at least one group, the restriction won't take effect.  
 12. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Using filters with enrollment restriction and ESP policies](enrollment-restrictions-set.md#using-filters-with-enrollment-restriction-and-esp-policies) (in this article).  
@@ -118,7 +119,7 @@ You can enforce device limit restrictions on devices that meet the following cri
 
 Instead, you can configure a hard limit for these enrollment types in Azure AD. For more information, see [Manage device identities by using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).  
 
-### Create device limit restrictions  
+### Create a device limit restriction  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction** > **Device limit restriction**.
 2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
@@ -126,7 +127,7 @@ Instead, you can configure a hard limit for these enrollment types in Azure AD. 
 4. For **Device limit**, select the maximum number of devices that a user can enroll.
     ![Screen cap for choosing device limit](./media/enrollment-restrictions-set/choose-device-limit.png)
 5. Choose **Next** to go to the **Scope tags** page.
-6. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). When using scope tags with enrollment restrictions, users can only re-order policies for which they have scope. Also, they can only reorder for the policy positions for which they have scope. Users see the true policy priority number on each policy. A scoped user can tell the relative priority of their policies even if they can't see all the other policies.
+6. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). 
 7. Choose **Next** to go to the **Assignments** page.
 8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
@@ -137,13 +138,13 @@ Instead, you can configure a hard limit for these enrollment types in Azure AD. 
 
 ### What device users see   
 
-BYOD users receive a message during enrollment if they reach their device limit. To continue enrolling, the device user must unenroll an existing device. Alternatively, you can increase the device limit.  For more information about troubleshooting enrollment errors such as this one, see [Troubleshoot device enrollment](troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
+BYOD users receive a message during enrollment if they reach their device limit. To continue enrolling, the device user must unenroll an existing device. Alternatively, you can increase the device limit.  For more information about troubleshooting enrollment errors such as this one, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
 
 ![Example image of device limit notification which reads, "Couldn't add your device. You have added the maximum number of devices allowed by your IT support. You must remove a device before you can add a new one.](./media/enrollment-restrictions-set/enrollment-restrictions-ios-set-limit-notification.png)  
 
 ## Edit enrollment restrictions  
 
-Edits have no affect on devices that are already enrolled. 
+Edits do not affect devices that are already enrolled. 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > choose the restriction that you want to change > **Properties**.
 2. Choose **Edit** next to the settings that you want to change.
@@ -183,9 +184,9 @@ The following filter properties are always available to use with enrollment poli
 For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#device-properties). Filters cannot be used with Android enrollment restrictions.
 
 ## Blocking personal Android devices
-- If you block personally owned Android device administrator devices from enrollment, personally-owned Android Enterprise work profile devices can still enroll.
-- By default, your Android Enterprise work profile devices settings are the same as your settings for your Android device administrator devices. After you change your Android Enterprise personally-owned work profile or your Android device administrator settings, that's no longer the case.
-- If you block Android Enterprise personal work profile enrollment, only corporate-owned Android devices can enroll with [Android Enterprise personally-owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles).
+By default, until you manually make changes in the admin center, your Android Enterprise work profile device settings and Android device administrator device settings are the same. 
+
+If you block Android Enterprise work profile enrollment on personal devices, only corporate-owned devices can enroll with [personally-owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles).  
 
 ## Blocking personal Windows devices
 If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized as a corporate enrollment. Unauthorized enrollments will be blocked.
@@ -220,7 +221,12 @@ By default, Intune classifies iOS/iPadOS devices as personally-owned. To be clas
 
 ## Change enrollment restriction priority
 
-Priority is used when a user exists in multiple groups that are assigned restrictions. Users are subject only to the highest priority restriction assigned to a group that they are in. For example, Joe is in group A assigned to priority 5 restrictions and also in group B assigned to priority 2 restrictions. Joe is subject only to the priority 2 restrictions.
+The priority level helps Intune assign restrictions to users who belong to multiple groups. Users are subject only to the highest priority restriction assigned to a group that they are in. For example:
+
+1. Joe belongs to two user groups in Intune: Group A and Group B. 
+2. Group A is assigned a restriction policy. Its priority level is 5.
+3. Group B is assigned a restriction policy. The priority level is 2.
+4. Joe is subject only to the priority 2 restrictions.
 
 When you create a restriction, it's added to the list just above the default.
 
