@@ -106,6 +106,7 @@ To support Microsoft Defender for Endpoint security configuration management thr
       :::image type="content" source="../media/mde-security-integration/add-role.png" alt-text="Grant users permissions to manage settings.":::
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and set **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
+
    :::image type="content" source="../media/mde-security-integration/enable-mde-settings-management-mem.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft Endpoint Manager admin center.":::
    When you set this option to *On*, all devices in the platform scope in Microsoft Defender for Endpoint that aren't managed by Microsoft Endpoint Manager will qualify to onboard to Microsoft Defender for Endpoint.
 
