@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 04/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -56,11 +56,19 @@ When you select a policy, you'll see information about the device check-in statu
 
 - **Per setting status** - View the settings that are managed by the policy, and a count of success, errors, or conflicts for each setting.
 
-## Known limitations and considerations
+## Frequently asked questions and considerations
 
 ### Assignment Filters and Security Management for Microsoft Defender for Endpoint
 
 Assignment filters are not supported for devices communicating through the Microsoft Defender for Endpoint channel. While assignment filters can be added to a policy that could be targeted at these devices, the device will ignore assignment filters. For assignment filter support, the device must be enrolled in to Microsoft Endpoint Manager.
+
+### Deleting and removing devices
+
+Devices that are using this flow will be unable to be deleted from the Endpoint Manager admin center. The enrollment state is driven from Microsoft Defender for Endpoint, and deleting them from admin center would only cause them to be removed temporarily. If devices need to be removed from management, they should be removed from the scope of Configuration Management in the Security Center. Once removed, that change will be propogated across services.
+
+### Unable to enable the Security Management for Microsoft Defender for Endpoint workload in Endpoint Security
+
+Most initial provisioning flows will be completed typically be created by an Administrator of both services. There are some scenarios where Role-based Administration is used to customize the permissions of administrators. Today, those delegated the 'Endpoint Security Manager' role may not have the necessary permissions to enable this feature. We will address this in a future release.
 
 ### Co-existence with Microsoft Endpoint Configuration Manager
 
@@ -77,7 +85,6 @@ To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Sec
 The following security settings are pending deprecation. The Security Management for Microsoft Defender for Endpoint flow does not support these settings:
 
 - Expedite telemetry reporting frequency (under **Endpoint Detection and Response**)
-- AllowOnAccessProtection (under **Antivirus**)
 - AllowIntrusionPreventionSystem (under **Antivirus**)
 
 ### Managing security configurations on domain controllers
@@ -90,7 +97,7 @@ Due to the potential effect on Azure Active Directory environments with respect 
 
 ### Server Core installation
 
-Due to the limited scope of Server core installations, these are not supported by Security Management for Microsoft Defender for Endpoint.
+Due to the platform limitations of Server core installations, these are not supported by Security Management for Microsoft Defender for Endpoint.
 
 ## Next steps
 
