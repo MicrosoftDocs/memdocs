@@ -1097,6 +1097,31 @@
             "source_path": "memdocs/configmgr/sum/deploy-use/uup-preview.md",
             "redirect_url": "/mem/configmgr/sum/index",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "windows-365/enterprise/on-premises-network-connections.md",
+            "redirect_url":"windows-365/azure-network-connections",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/create-on-premises-network-connection.md",
+            "redirect_url":"windows-365/create-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/edit-on-premises-network-connection.md",
+            "redirect_url":"windows-365/edit-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/delete-on-premises-network-connection.md",
+            "redirect_url":"windows-365/delete-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/troubleshoot-on-premises-network-connection.md",
+            "redirect_url":"windows-365/troubleshoot-azure-network-connection",
+            "redirect_document_id": false
         }
     ]
 }
