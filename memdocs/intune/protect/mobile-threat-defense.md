@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/13/2021
+ms.date: 04/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -102,7 +102,7 @@ Learn how to protect access to company resource based on device, network, and ap
 
 - [Better Mobile](better-mobile-threat-defense-connector.md)
 - [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md)
-- [Check Point SandBlast Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
+- [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md)
 - [Lookout for Work](lookout-mobile-threat-defense-connector.md)
 - [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
 - [MVISION Mobile](mcafee-mobile-threat-defense-connector.md)

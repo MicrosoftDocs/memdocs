@@ -50,7 +50,7 @@ An app can be included so that Intune can manage aspects of the app.
 Use the following steps to add an app to Intune:
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. 
-2. In the **App type** drop-down box, select **Windows 10**.
+2. In the **App type** drop-down box, select **Windows 10 and later** from **Microsoft 365 Apps**.
 3. Click **Select**. The **Add app** steps are displayed.
 4. Confirm the default details in the **App suite information** step and click **Next**.
 5. Confirm the default settings in the **App settings** step and click **Next**.
