@@ -88,6 +88,8 @@ Rimo3 helps organizations onboard Windows 365 by verifying apps and updates for 
 - Test app readiness against security and OS updates up to 10 times faster than current processes.
 - Quickly assess end user resource and performance impacts before production implementation.
 
+For more information, visit the [Rimo3 website](https://www.rimo3.com/solution/application-modernization).
+
 ## ServiceNow
 
 ![ServiceNow image](./media/partners/servicenow.png)
