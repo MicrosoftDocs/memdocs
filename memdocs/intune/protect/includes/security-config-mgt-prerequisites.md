@@ -96,7 +96,7 @@ To support Microsoft Defender for Endpoint security configuration management thr
 1. Configure Pilot Mode and Configuration Manager authority settings to fit your organization needs.
    :::image type="content" source="../media/mde-security-integration/pilot-CMAuthority-mde-settings-management-defender.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft 365 Defender portal.":::
    > [!TIP]
-   > Use pilot mode and the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, and device that falls into the scope configured will automatically be enrolled.
+   > Use pilot mode and the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, any device that falls into the scope configured will automatically be enrolled.
 
 1. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Endpoint Manager or grant those permissions by configuring a role in the Microsoft 365 Defender portal. Go to **Settings** > **Roles** > **Add item**:
    :::image type="content" source="../media/mde-security-integration/add-role-in-mde.png" alt-text="Create a new role in the Defender portal.":::
@@ -109,8 +109,8 @@ To support Microsoft Defender for Endpoint security configuration management thr
    :::image type="content" source="../media/mde-security-integration/enable-mde-settings-management-mem.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft Endpoint Manager admin center.":::
    When you set this option to *On*, all devices in the platform scope in Microsoft Defender for Endpoint that aren't managed by Microsoft Endpoint Manager will qualify to onboard to Microsoft Defender for Endpoint.
 
->[!TIP]
->Users delegated the ability to manage endpoint security settings may not have the ability to implement tenant-wide configurations in Endpoint Manager.  Check with your Endpoint Manager administrator for more information on roles and permissions in your organization.
+> [!TIP]
+> Users that are delegated the ability to manage endpoint security settings may not have the ability to implement tenant-wide configurations in Endpoint Manager.  Check with your Endpoint Manager administrator for more information on roles and permissions in your organization.
 
 ## Onboard devices to Microsoft Defender for Endpoint
 
