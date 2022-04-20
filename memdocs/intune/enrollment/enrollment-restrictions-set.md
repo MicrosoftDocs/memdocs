@@ -47,8 +47,8 @@ Use *enrollment restrictions* to enforce platform and device limit restrictions 
 
 Restriction settings are available in the Microsoft Endpoint Manager admin center and include:   
 
-- Device platform restrictions, which lets you restrict OS platforms, OS versions, and personally owned devices.  
-- Device limit restrictions, which lets you restrict the number of devices allowed to enroll. 
+- Device platform restrictions, which let you restrict OS platforms, OS versions, and personally owned devices.  
+- Device limit restrictions, which let you restrict the number of devices allowed to enroll. 
 
 You can create new restrictions or use the Intune defaults. Each type of restriction comes with one default policy that you can edit and customize as needed. Intune will apply the default to all user and userless enrollments until you assign a higher-priority restriction.   
 
