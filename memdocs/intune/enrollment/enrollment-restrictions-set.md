@@ -43,16 +43,16 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
-Use enrollment restrictions to prevent certain devices from enrolling in Intune and accessing your data. *Enrollment restrictions* block enrollment on devices that fall outside your device platform or limit requirements. 
+Use *enrollment restrictions* to enforce platform and device limit restrictions on devices enrolling in Intune. Enrollment restrictions work by blocking enrollment on devices that fall short of your requirements. 
 
-Intune supports:    
+Restriction settings are available in the Microsoft Endpoint Manager admin center and include:   
 
-- Device platform restrictions, which let you restrict OS platforms, OS versions, and personally owned devices.  
-- Device limit restrictions, which let you restrict the number of devices allowed to enroll. 
+- Device platform restrictions, which lets you restrict OS platforms, OS versions, and personally owned devices.  
+- Device limit restrictions, which lets you restrict the number of devices allowed to enroll. 
 
-You can create new restrictions or use the Intune defaults. Each type of restriction comes with one default policy that you can use as-is or edit and customize. Intune will apply the default to all user and userless enrollments until you assign a higher-priority restriction.  
+You can create new restrictions or use the Intune defaults. Each type of restriction comes with one default policy that you can edit and customize as needed. Intune will apply the default to all user and userless enrollments until you assign a higher-priority restriction.   
 
-You can have up to 25 restrictions for each restriction type, per tenant.   
+You can have up to 25 restrictions per type.  
 
 ## Create a device platform restriction   
 
