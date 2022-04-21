@@ -53,7 +53,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 ### On-premises network connection has been renamed to Azure network connection<!--38457869 idready-->
 
-The term **on-premises network connection** has been renamed to **Azure network connection** in all user interfaces, documentation, and communications.
+The term **on-premises network connection** has been renamed to **Azure network connection** in all user interfaces, documentation, and communications. 
 
 
 <!-- ########################## -->
