@@ -43,7 +43,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
-Enrollment restrictions block enrollment on devices that fall short of your device requirements. This feature is available in the Microsoft Endpoint Manager admin center and includes the following types of restrictions:   
+Enrollment restrictions block Intune enrollment on devices that fall short of your device requirements. Enrollment restriction configurations are available in the Microsoft Endpoint Manager admin center and includes the following types of restrictions:   
 
 - Device platform restrictions, which let you restrict device platforms, OS versions, and personally owned devices.  
 - Device limit restrictions, which let you restrict the number of devices allowed to enroll. 
@@ -181,7 +181,7 @@ Instead, you can configure a hard limit for these enrollment types in Azure AD. 
 
 ### What device users see during enrollment     
 
-Once restrictions are applied, BYOD users who reach their device limit receive a message during enrollment explaining the limitation. To continue enrolling, the device user must unenroll an existing device. Alternatively, you can increase the device limit the admin center. For more information about troubleshooting enrollment errors such as this one, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
+If restrictions are applied, BYOD users who reach their device limit receive a message during enrollment explaining the limitation. To continue enrolling, the device user must unenroll an existing device. Alternatively, you can increase the device limit in the admin center. For more information about troubleshooting enrollment errors such as this one, see [Troubleshoot device enrollment](/troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune#device-cap-reached).  
 
 ![Example image of device limit notification which reads, "Couldn't add your device. You have added the maximum number of devices allowed by your IT support. You must remove a device before you can add a new one.](./media/enrollment-restrictions-set/enrollment-restrictions-ios-set-limit-notification.png)  
 
@@ -204,16 +204,18 @@ Once restrictions are applied, BYOD users who reach their device limit receive a
 
 ## Apply filters to enrollment restriction and ESP policies 
 
-You can use assignment filters to include and exclude additional devices from certain group-targeted policies. 
+You can use assignment filters to include and exclude additional devices from certain group-targeted policies. Enrollment restrictions and ESP policies both support the use of assignment filters.   
 
-For example, you can apply a filter that uses the `operatingSystemSKU` property to your enrollment restrictions following these steps:  
+For example, you can use a filter to allow personal Windows devices to enroll while blocking devices that run a specific operating system SKU. To achieve this outcome, apply a preconfigured filter to your enrollment restiction assignments. The filter needs to have the `operatingSystemSKU` property in its rules. Example steps:  
 
-1. Create a platform enrollment restriction policy for Windows.  
-2. In the platform settings, select the option that allows personally-owned devices to enroll. 
-3. In the assignments settings, select the groups you want to assign.
-4. Select **Edit filter** and then apply your preconfigured filter that contains the `operatingSystemSKU` property to an assigned group. The applied property blocks devices running Windows 10 Home edition. 
+  1. Create a platform enrollment restriction policy for Windows.  
+  2. In the platform settings, select the option that allows personally-owned devices to enroll. 
+  3. In the assignments settings, select the groups you want to assign.
+  4. Select **Edit filter** and then apply your preconfigured filter that contains the `operatingSystemSKU` property. The applied property blocks devices running Windows 10 Home edition. 
 
 For more information about creating filters, see [Create a filter](../fundamentals/filters.md). 
+
+### Supported filter properties  
 
 Enrollment restrictions support fewer filter properties than other group-targeted policies. This is because devices are not yet enrolled, so Intune doesn't have the device info to support all properties. You'll see the limited selection of properties when you:  
 
@@ -246,7 +248,7 @@ Edits are applied to new enrollments and do not affect devices that are already 
 2. Choose **Edit** next to the settings that you want to change.
 3. On the **Edit** page, make the changes that you want and proceed to the **Review + save** page, then choose **Save**.  
 
-## Change priority  
+## Change restriction priority  
 
 When a group is assigned multiple restrictions, the priority level determines which policy gets applied. The restriction with highest priority (*1* being the highest priority position) is applied and the other restrictions are disregarded. For example:  
 
@@ -255,9 +257,7 @@ When a group is assigned multiple restrictions, the priority level determines wh
 3. Group B is assigned a restriction policy. The priority level is 2.
 4. Joe is subject only to the priority 2 restrictions.
 
-When you create a restriction, it's added to the list just above the default.
-
-You can change the priority of non-default restriction.  
+When you create a restriction, it's added to the list just above the default. You can change the priority of non-default restrictions.  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Enroll devices** > **Enrollment restrictions**.
 2. Select **Device type restrictions** or **Device limit restrictions** to view the priority list.               
@@ -265,7 +265,7 @@ You can change the priority of non-default restriction.
 
 
 >[!NOTE]
->Enrollment restrictions are applied to users. In enrollment scenarios that are not user-driven (e.g. Windows Autopilot self-deploying mode or white glove provisioning), only the Default priority restrictions (targeted to "All Users") will be enforced.
+>Enrollment restrictions are applied to users. For enrollment scenarios that are not user-driven, such as Windows Autopilot self-deploying mode, Intune only enforces the default restrictions targeted to all users.  
  
 
 ## View enrollment reports
@@ -303,7 +303,7 @@ The device enrollment page shows the enrollment policies (both enrollment restri
   * Target (either user or device) 
   * Filters, with a link to the filter evaluation results (only available if the enrollment policy was assigned using an assignment filter)  
 
-To access the device enrollment page:  
+To access report data:   
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **All devices**.
 2. Select an enrolled iOS/iPadOS, macOS, or Windows device.  
@@ -314,6 +314,5 @@ To access the device enrollment page:
     > ![Example image of the Device enrollment page, showing a table of enrollment profiles.](./media/enrollment-restrictions-set/enrollment-page-report-2112.png)  
 
 >[!NOTE]
->Report data is only available for devices enrolled after the Microsoft Intune 2112 service release. No results are available for devices enrolled prior to that release.
->This page is not available for Android devices. 
+>Report data is only available for devices enrolled after the Microsoft Intune 2112 service release. No results are available for devices enrolled prior to that release.  
 
