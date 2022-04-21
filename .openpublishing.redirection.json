@@ -1100,27 +1100,27 @@
         },
         {
             "source_path": "windows-365/enterprise/on-premises-network-connections.md",
-            "redirect_url":"windows-365/enterprise/azure-network-connections",
+            "redirect_url":"/windows-365/enterprise/azure-network-connections",
             "redirect_document_id": false
         },
         {
             "source_path": "windows-365/enterprise/create-on-premises-network-connection.md",
-            "redirect_url":"windows-365/enterprise/create-azure-network-connection",
+            "redirect_url":"/windows-365/enterprise/create-azure-network-connection",
             "redirect_document_id": false
         },
         {
             "source_path": "windows-365/enterprise/edit-on-premises-network-connection.md",
-            "redirect_url":"windows-365/enterprise/edit-azure-network-connection",
+            "redirect_url":"/windows-365/enterprise/edit-azure-network-connection",
             "redirect_document_id": false
         },
         {
             "source_path": "windows-365/enterprise/delete-on-premises-network-connection.md",
-            "redirect_url":"windows-365/enterprise/delete-azure-network-connection",
+            "redirect_url":"/windows-365/enterprise/delete-azure-network-connection",
             "redirect_document_id": false
         },
         {
             "source_path": "windows-365/enterprise/troubleshoot-on-premises-network-connection.md",
-            "redirect_url":"windows-365/enterprise/troubleshoot-azure-network-connection",
+            "redirect_url":"/windows-365/enterprise/troubleshoot-azure-network-connection",
             "redirect_document_id": false
         }
     ]
