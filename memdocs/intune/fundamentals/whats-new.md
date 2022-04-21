@@ -90,6 +90,11 @@ We've added two new Setup Assistant settings that you can use with Apple Automat
 
  To configure Setup Assistant settings for Automated Device Enrollment, [create an iOS/iPadOS enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) or [macOS enrollment profile](../enrollment/device-enrollment-program-enroll-macos.md#create-an-apple-enrollment-profile) in Microsoft Intune.  
 
+### Device security
+
+#### Attack surface reduction rules profile<!-- 8858871 -->
+The **Attack Surface Reduction Rules (ConfigMgr)** profile for tenant attached devices is now in public preview. For more information, see [Tenant attach: Create and deploy attack surface reduction policies](../../configmgr/tenant-attach/deploy-asr-policy.md#bkmk_asr).
+
 ### Device configuration
 
 #### Endpoint security profiles support filters; See the filter status on a device configuration profile report<!-- 11889620 -->
