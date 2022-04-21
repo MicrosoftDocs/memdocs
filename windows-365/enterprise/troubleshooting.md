@@ -110,8 +110,4 @@ MMR is in [public preview](../public-preview.md) for Windows 365 Cloud PCs.
 <!-- ########################## -->
 ## Next steps
 
-<<<<<<< HEAD
 [Troubleshoot Azure network connections](troubleshoot-azure-network-connection.md).
-=======
-[Troubleshoot on-premises network connections](troubleshoot-on-premises-network-connection.md).
->>>>>>> 5a0d083381cbb0230a81a5893a976fe1e3b795b9
