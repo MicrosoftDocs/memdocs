@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/11/2022
+ms.date: 04/21/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -49,16 +49,24 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of April 18, 2022
+
+### On-premises network connection has been renamed to Azure network connection<!--38457869 idready-->
+
+The term **on-premises network connection** has been renamed to **Azure network connection** in all user interfaces, documentation, and communications.
+
+
+<!-- ########################## -->
 ## Week of April 11, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Scripts
 
-#### Windows365-PSScripts Github repository is now open for contributions
+#### Windows365-PSScripts GitHub repository is now open for contributions
 
-The Windows365-PSSCripts Github repository is now open. It contains Windows 365-related scripts to help admins manage Cloud PCs. You can also contribute your own scripts to help others use Windows 365.
+The Windows365-PSSCripts GitHub repository is now open. It contains Windows 365-related scripts to help admins manage Cloud PCs. You can also contribute your own scripts to help others use Windows 365.
 
-For more information, see the [Windows365-PSScripts Github repository readme](https://github.com/microsoft/Windows365-PSScripts).
+For more information, see the [Windows365-PSScripts GitHub repository readme](https://github.com/microsoft/Windows365-PSScripts).
 
 <!-- ########################## -->
 ## Week of April 4, 2022 (Service release 2203)
@@ -86,9 +94,9 @@ The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning
 
-#### Upload a custom image without an on-premises network connection<!--8341750 -->
+#### Upload a custom image without an Azure network connection<!--8341750 -->
 
-Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription which provides the image.
 
 #### Cloud PC name appended to the network interface name<!--38793957-->
 
@@ -149,8 +157,8 @@ Windows 365 Enterprise now supports Cloud PCs that are Azure AD joined. These de
 
 - A Microsoft-hosted network:
   - You don’t need to bring any Azure infrastructure
-  - You don't need to create an on-premises network connection.
-- Your own network (using an on-premises network connection)
+  - You don't need to create an Azure network connection
+- Your own network (using an Azure network connection)
 
 #### Configure installed language and region for provisioning Cloud PCs<!--37095808 -->
 
@@ -360,7 +368,7 @@ For more information, see [Remoting connection report](report-remoting-connectio
 
 ### Windows 365 now generally available<!--10393594 -->
 
-Windows 365 is a new service from Microsoft that automatically creates Cloud PCs for your end users. Cloud PCs are a new hybrid personal computing category that use both the power of the cloud and the accessing device to provide a full and personalized Windows virtual machine. Admins can use Microsoft Endpoint Manager to define the configurations and applications that are provisioned for each user’s Cloud PC. End users can access their Cloud PC from any device and any location. Windows 365 stores the end user’s Cloud PC and data in the cloud, not on the device, providing a secure experience.
+Windows 365 is a new service from Microsoft that automatically creates Cloud PCs for your end users. Cloud PCs are a new hybrid personal computing category that uses both the power of the cloud and the accessing device to provide a full and personalized Windows virtual machine. Admins can use Microsoft Endpoint Manager to define the configurations and applications that are provisioned for each user’s Cloud PC. End users can access their Cloud PC from any device and any location. Windows 365 stores the end user’s Cloud PC and data in the cloud, not on the device, providing a secure experience.
 
 For more information about Windows 365, see [Windows 365](https://www.microsoft.com/windows-365?rtc=1).
 

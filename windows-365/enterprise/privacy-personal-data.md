@@ -45,7 +45,7 @@ To protect and maintain enrolled devices, Windows 365 processes and copies data 
 
 ## Windows 365 data storage
 
-Depending on a tenant's region and preference, Windows 365 stores its customer content in Azure regions in North America, Europe, or Asia Pacific. Customer content, data and storage associated with the Cloud PC lives in the Azure region that the Cloud PC is provisioned in. For Windows 365 Enterprise, the region is defined in the [on-prem network connection's (ONPC)](on-premises-network-connections.md) **Virtual network** setting.  Windows 365 Business stores customer data in the Azure region of the Cloud PC itself.
+Depending on a tenant's region and preference, Windows 365 stores its customer content in Azure regions in North America, Europe, or Asia Pacific. Customer content, data and storage associated with the Cloud PC lives in the Azure region that the Cloud PC is provisioned in. For Windows 365 Enterprise, the region is defined in the [on-prem network connection's (ONPC)](azure-network-connections.md) **Virtual network** setting.  Windows 365 Business stores customer data in the Azure region of the Cloud PC itself.
 
 Windows 365  stores service-generated metadata in Azure data centers in North America, Europe, or Asia Pacific, as defined by the tenant's country. This is mapped based on Microsoft Online tenant's country to the nearest region.
 
