@@ -65,7 +65,7 @@ There are two sets of images available to choose from across the different versi
   - WebRTC Redirector (Teams).
   - Microsoft Teams (Teams).
   - Edge settings like sleeping tabs, startup boost, and first time optimizations based on Azure AD and synchronization.
-  - Microsoft Outlook first-time configuration settings (auto logon based on Azure AD profile, support for other profiles).
+  - Microsoft Outlook first-time configuration settings (auto log-on based on Azure AD profile, support for other profiles).
 - **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
   - Services optimized for virtualization.
   - UWP packages removed.
