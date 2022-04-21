@@ -228,7 +228,7 @@ For account setup, the Enrollment Status Page tracks the following items if they
 ### Known issues
 
 The following are known issues related to the Enrollment Status Page.
-
+- When creating apps that will be deployed during ESP, any reboots that are packaged within the app may cause ESP to hang and fail the deployment. We recommend specifying the reboot behavior in Intune instead of triggering the reboot within the package. 
 - Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. 
 - A reboot during Device setup will force the user to enter their credentials before transitioning to Account setup phase. User credentials aren't preserved during reboot. Have the user enter their credentials then the Enrollment Status Page can continue. 
 - Enrollment Status Page will always time out during an Add work and school account enrollment on Windows 10 versions earlier than 1903. The Enrollment Status Page waits for Azure AD registration to complete. The issue is fixed on Windows 10 version 1903 and newer.  
