@@ -152,7 +152,7 @@ Intune also blocks personal devices using these enrollment methods:
 
 10. Select **Next**. 
 11. On the **Assignments** page, select **Add groups** and then use the search box to find and select groups. To assign the restriction to all device users, select **Add all users**. If you don't assign a restriction to at least one group, the restriction won't take effect.  
-12. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Using filters with enrollment restriction and ESP policies](enrollment-restrictions-set.md#apply-filters-to-enrollment-restriction-and-ESP-policies) (in this article).  
+12. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Using filters with enrollment restriction and ESP policies](enrollment-restrictions-set.md#apply-filters-to-enrollment-restriction-and-esp-policies) (in this article).  
 13. Select **Next**. 
 14. On the **Review + create** page, select **Create** to save and create your restriction.  
 
@@ -198,7 +198,7 @@ If restrictions are applied, BYOD users who reach their device limit receive a m
 8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 9. Select **Next** to go to the **Review + create** page.
-10. Select **Create** to create the restriction. The new restriction is appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](enrollment-restrictions-set.md#achange-restriction-policy)(in this article).  
+10. Select **Create** to create the restriction. The new restriction is appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](enrollment-restrictions-set.md#change-restriction-policy)(in this article).  
 
 ## Apply filters to enrollment restriction and ESP policies 
 
