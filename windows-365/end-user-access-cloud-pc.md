@@ -83,4 +83,4 @@ To set up their Remote Desktop client, users follow these steps:
 <!-- ########################## -->
 ## Next steps
 
-For information about the different protocol network requirements per scenario, see [Network requirements](requirements-network.md).
+For information about the different protocol network requirements per scenario, see [Network requirements](./enterprise/requirements-network.md).

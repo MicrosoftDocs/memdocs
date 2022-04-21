@@ -104,10 +104,11 @@ For Cloud PCs, MMR is supported on the following platforms: Windows, macOS, Chro
 
 For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection).
 
-MMR is in [public preview](/windows-365/public-preview) for Windows 365 Cloud PCs.
+MMR is in [public preview](../public-preview.md) for Windows 365 Cloud PCs.
 
 
 <!-- ########################## -->
 ## Next steps
 
 [Troubleshoot Azure network connections](troubleshoot-azure-network-connection.md).
+
