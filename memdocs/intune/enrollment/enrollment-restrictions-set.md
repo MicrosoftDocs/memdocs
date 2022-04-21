@@ -86,40 +86,39 @@ Since there are two Android platforms, it's important to understand how version 
 ### Restrict personally-owned devices  
 Restrict personal devices from enrolling in Intune. This restriction helps prevent device users from accidentally enrolling their personal devices.  
 
-#### Personal Android devices
+#### Blocking personal Android devices
 By default, until you manually make changes in the admin center, your Android Enterprise work profile device settings and Android device administrator device settings are the same. 
 
 If you block Android Enterprise work profile enrollment on personal devices, only corporate-owned devices can enroll with [personally-owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles).  
 
-### Personal Windows devices
-If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized as a corporate enrollment. Unauthorized enrollments will be blocked.
 
-The following methods qualify as being authorized as a Windows corporate enrollment:
+#### Blocking personal iOS/iPadOS devices
+By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
+- [Registered with a serial number](corporate-identifiers-add.md).
+- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
+
+> [!NOTE]
+> An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).  
+
+### Blocking personal Windows devices
+If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  
+
+The following enrollment methods are authorized for corporate enrollment:  
 - The enrolling user is using a [device enrollment manager account]( device-enrollment-manager-enroll.md).
 - The device enrolls through [Windows Autopilot](../../autopilot/enrollment-autopilot.md).
 - The device is registered with Windows Autopilot but isn't an MDM enrollment only option from Windows Settings.
 - The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
 - The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths#bkmk_path1).
  
-The following enrollments are marked as corporate by Intune. But since they don't offer the Intune administrator per-device control, they'll be blocked:
+Intune marks devices going through the following types of enrollments as corporate-owned. But Intune blocks devices enrolling  since they don't offer the Intune administrator per-device control, they are blocked:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network)\*.
  
-The following personal enrollment methods will also be blocked:
+Intune also blocks personal devices using these enrollment methods:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Add Work Account from Windows Settings](/azure/active-directory/user-help/user-help-join-device-on-network)\*.
 - [MDM enrollment only]( /windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device) option from Windows Settings.
 
-\* These won't be blocked if registered with Autopilot.
-
-
-#### Personal iOS/iPadOS devices
-By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
-- [Registered with a serial number](corporate-identifiers-add.md).
-- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
-
-> [!NOTE]
-> An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).
->
+\* These won't be blocked if registered with Autopilot.  
 
 ## Create a device platform restriction   
 
@@ -153,7 +152,7 @@ By default, Intune classifies iOS/iPadOS devices as personally-owned. To be clas
 
 10. Select **Next**. 
 11. On the **Assignments** page, select **Add groups** and then use the search box to find and select groups. To assign the restriction to all device users, select **Add all users**. If you don't assign a restriction to at least one group, the restriction won't take effect.  
-12. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Using filters with enrollment restriction and ESP policies](enrollment-restrictions-set.md#using-filters-with-enrollment-restriction-and-esp-policies) (in this article).  
+12. Optionally, after you assign groups, select **Edit filter** to restrict the policy assignment further with filters. Filters are available for macOS, iOS, and Windows policies. For more information, see [Using filters with enrollment restriction and ESP policies](enrollment-restrictions-set.md#apply-filters-to-enrollment-restriction-and-ESP-policies) (in this article).  
 13. Select **Next**. 
 14. On the **Review + create** page, select **Create** to save and create your restriction.  
 
@@ -199,8 +198,7 @@ If restrictions are applied, BYOD users who reach their device limit receive a m
 8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 9. Select **Next** to go to the **Review + create** page.
-10. Select **Create** to create the restriction.
-11. The new restriction is created with a priority just above the default. You can [change the priority](#change-enrollment-restriction-priority).  
+10. Select **Create** to create the restriction. The new restriction is appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](enrollment-restrictions-set.md#achange-restriction-policy)(in this article).  
 
 ## Apply filters to enrollment restriction and ESP policies 
 
