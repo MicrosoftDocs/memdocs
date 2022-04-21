@@ -79,7 +79,7 @@ Restrict device versions by setting a maximum and minimum OS version. Devices ru
 > For Android and iOS/iPadOS, version restrictions are only supported on devices that enrolled via Intune Company Portal.    
 
 #### Android version restrictions    
-Since there are two Android platforms, it's important to understand how version restrictions work in conjuction with platform restrictions: 
+Since there are two Android platforms, it's important to understand how version restrictions work in conjunction with platform restrictions: 
   * If you allow both platforms for the same group, and then refine it for specific and non-overlapping versions, devices are sent through the Android enrollment flow that's picked for their version.   
   * If you allow both platforms, but block the same versions, devices running blocked versions cannot enroll. Users on these devices are sent through the Android device administrator enrollment flow before they are blocked and prompted to sign out. 
 
