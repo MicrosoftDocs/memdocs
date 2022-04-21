@@ -198,13 +198,13 @@ If restrictions are applied, BYOD users who reach their device limit receive a m
 8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 9. Select **Next** to go to the **Review + create** page.
-10. Select **Create** to create the restriction. The new restriction is appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](enrollment-restrictions-set.md#change-restriction-priority)(in this article).  
+10. Select **Create** to create the restriction. The new restriction appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](enrollment-restrictions-set.md#change-restriction-priority)(in this article).  
 
 ## Apply filters to enrollment restriction and ESP policies 
 
 You can use assignment filters to include and exclude additional devices from certain group-targeted policies. Enrollment restrictions and ESP policies both support the use of assignment filters.   
 
-For example, you can use a filter to allow personal Windows devices to enroll while blocking devices that run a specific operating system SKU. To achieve this outcome, apply a preconfigured filter to your enrollment restiction assignments. The filter needs to have the `operatingSystemSKU` property in its rules. Example steps:  
+For example, you can use a filter to allow personal Windows devices to enroll while blocking devices that run a specific operating system SKU. To achieve this outcome, apply a preconfigured filter to your enrollment restriction assignments. The filter needs to have the `operatingSystemSKU` property in its rules. Example steps:  
 
   1. Create a platform enrollment restriction policy for Windows.  
   2. In the platform settings, select the option that allows personally-owned devices to enroll. 
