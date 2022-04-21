@@ -100,7 +100,7 @@ By default, Intune classifies iOS/iPadOS devices as personally-owned. To be clas
 > [!NOTE]
 > An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).  
 
-### Blocking personal Windows devices
+#### Blocking personal Windows devices
 If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  
 
 The following enrollment methods are authorized for corporate enrollment:  
