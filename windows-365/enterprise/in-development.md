@@ -63,10 +63,6 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 Non-admin users will be able to change their Cloud PC’s time zone.
 
-### Azure network connection getting renamed to Azure network connection<!--38457869 -->
-
-The term **Azure network connection** will be renamed to **Azure network connection** in all user interfaces, documentation, and communications.
-
 <!-- ***********************************************-->
 ## Device provisioning
 
