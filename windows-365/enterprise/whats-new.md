@@ -55,6 +55,9 @@ Learn what new features are available in Windows 365 Enterprise.
 
 The term **on-premises network connection** has been renamed to **Azure network connection** in all user interfaces, documentation, and communications.
 
+### Change Cloud PC time zone<!--38902639 -->
+
+Non-admin users can now change their Cloud PC’s time zone.
 
 <!-- ########################## -->
 ## Week of April 11, 2022
