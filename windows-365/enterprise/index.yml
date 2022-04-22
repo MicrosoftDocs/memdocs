@@ -59,9 +59,9 @@ conceptualContent:
         - url: assign-licenses.md
           itemType: how-to-guide
           text: Assign licenses to users
-        - url: create-on-premises-network-connection.md
+        - url: create-azure-network-connection.md
           itemType: how-to-guide
-          text: Create on-premises network connection
+          text: Create Azure network connection
         - url: add-device-images.md
           itemType: how-to-guide
           text: Add device images 
