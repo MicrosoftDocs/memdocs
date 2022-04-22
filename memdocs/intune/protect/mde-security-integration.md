@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/20/2022
+ms.date: 04/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -68,7 +68,7 @@ Devices that are using this flow will be unable to be deleted from the Microsoft
 
 ### Unable to enable the Security Management for Microsoft Defender for Endpoint workload in Endpoint Security
 
-Most initial provisioning flows are completed typically and created by an Administrator of both services. There are some scenarios where Role-based Administration is used to customize the permissions of administrators. Today, those delegated the *Endpoint Security Manager* role may not have the necessary permissions to enable this feature. We will address this in a future release.
+Most initial provisioning flows are typically completed by an Administrator of both services (such as a Global Administrator). There are some scenarios where Role-based Administration is used to customize the permissions of administrators. Today, those delegated the *Endpoint Security Manager* role may not have the necessary permissions to enable this feature. We will address this in a future release.
 
 ### Co-existence with Microsoft Endpoint Configuration Manager
 
@@ -76,7 +76,7 @@ When using Configuration Manager, the best path for management of security polic
 
 ### Active Directory joined devices
 
-Devices that are joined to Active Directory will use their **existing infrastructure** to complete Hybrid Azure Active Directory join. While the Defender for Endpoint component will start this process, the join action uses your Federation provider or Azure Active Directory Connect (AAD Connect) to complete the join. Review [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to learn more about configuring your environment.
+Devices that are joined to Active Directory will use their **existing infrastructure** to complete the Hybrid Azure Active Directory join process. While the Defender for Endpoint component will start this process, the join action uses your Federation provider or Azure Active Directory Connect (AAD Connect) to complete the join. Review [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to learn more about configuring your environment.
 
 To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Security Configuration Management Azure Active Directory onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt).
 
