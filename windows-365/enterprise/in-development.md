@@ -57,11 +57,9 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!--## App management-->
 
 <!-- ***********************************************-->
-## Device management
+<!-- ## Device management
+-->
 
-### Change Cloud PC time zone<!--38902639 -->
-
-Non-admin users will be able to change their Cloud PC’s time zone.
 
 <!-- ***********************************************-->
 ## Device provisioning
