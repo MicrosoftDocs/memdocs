@@ -1,11 +1,11 @@
 ---
 # required metadata
-title: Windows 10/11 settings you can deploy with Microsoft Intune to protect managed Windows devices
-description: Use Microsoft Intune endpoint protection profiles to manage settings that help protect your enrolled Windows 10 and 11 devices. 
+title: Settings you can manage wiht Intunes Endpoint Protection profile for Windows 10/11 devices
+description: View the available settings from Intune's endpoint protection profiles for managed Windows 10 and 11 devices. 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/03/2022
+ms.date: 04/22/2022
 ms.topic: reference
 ms.service: microsoft-intune
 
@@ -29,7 +29,7 @@ ms.collection:
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-Microsoft Intune includes many settings to help protect your devices. This article describes some of the settings you can enable and configure in Windows 10 and Windows 11 devices. These settings are created in an endpoint protection configuration profile in Intune to control security, including BitLocker and Microsoft Defender.  
+Microsoft Intune includes many settings to help protect your devices. This article describes the settings in the device configuration *Endpoint protection* template. In addition to this profile and use of the settings catalog, you can use [endpoint security policies](../protect/endpoint-security-policy.md) to focus more directly on specific areas of device security.  
 
 To configure Microsoft Defender Antivirus, see [Windows device restrictions](../configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) or use [endpoint security Antivirus policy](endpoint-security-antivirus-policy.md).  
 
