@@ -24,7 +24,7 @@ ms.collection:
   - highpri
 ---
 
-# Windows settings you can manage through an Intune Endpoint Protection profile.
+# Windows settings you can manage through an Intune Endpoint Protection profile
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
