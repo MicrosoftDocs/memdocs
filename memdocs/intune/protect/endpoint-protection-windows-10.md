@@ -1,7 +1,7 @@
 ---
 # required metadata
-title: Settings you can manage wiht Intunes Endpoint Protection profile for Windows 10/11 devices
-description: View the available settings from Intune's endpoint protection profiles for managed Windows 10 and 11 devices. 
+title: Settings you can manage with Intune Endpoint Protection profiles for Windows 10/11 devices
+description: View the available settings in Intune endpoint protection profiles for managed Windows 10 and 11 devices. 
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -24,7 +24,7 @@ ms.collection:
   - highpri
 ---
 
-# Windows settings you can deploy with Intune policy to protect Windows devices
+# Windows settings you can manage through an Intune Endpoint Protection profile
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
