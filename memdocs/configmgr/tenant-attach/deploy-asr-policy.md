@@ -2,7 +2,7 @@
 title: Tenant attach - Create and deploy Attack surface reduction policies from the admin center (preview)
 titleSuffix: Configuration Manager
 description: "Create and deploy Attack surface reduction policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 09/29/2021
+ms.date: 04/25/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -33,6 +33,7 @@ ms.author: brenduns
 
    - **Platform**: Windows 10 and later (ConfigMgr)
    - **Profile**: Choose one of the following profiles:
+     - Attack Surface Reduction Rules (ConfigMgr) (preview) 
      - Exploit Protection (ConfigMgr) (preview)
      - Web Protection (ConfigMgr) (preview)
 
