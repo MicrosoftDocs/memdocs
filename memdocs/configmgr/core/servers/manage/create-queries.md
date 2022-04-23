@@ -88,7 +88,7 @@ This section contains example WQL queries that you can use in your hierarchy or 
 
 ### Computers that run Windows 10
 
-Use the following query to return the NetBIOS name and operating system version of all computers that run Windows 7.  
+Use the following query to return the NetBIOS name and operating system version of all computers that run Windows 10.  
 
 ``` WQL
 select SMS_R_System.NetbiosName,  
