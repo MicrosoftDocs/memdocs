@@ -1122,6 +1122,11 @@
             "source_path": "windows-365/enterprise/troubleshoot-on-premises-network-connection.md",
             "redirect_url": "/windows-365/enterprise/troubleshoot-azure-network-connection",
             "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/remote-actions/remote-assist-mobile-devices.md",
+            "redirect_url": "/mem/intune/remote-actions/remote-help",
+            "redirect_document_id": false
         }
     ]
 }
