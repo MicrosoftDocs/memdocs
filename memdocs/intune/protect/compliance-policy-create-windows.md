@@ -197,7 +197,10 @@ Applies only to co-managed devices running Windows 10/11. Intune-only devices re
   [Firewall CSP](/windows/client-management/mdm/firewall-csp)
 
   > [!NOTE]
-  > If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](../user-help/sync-your-device-manually-windows.md).
+  > - If the device immediately syncs after a reboot, or immediately syncs waking from sleep, then this setting may report as an **Error**. This scenario might not affect the overall device compliance status. To re-evaluate the compliance status, manually [sync the device](../user-help/sync-your-device-manually-windows.md).
+  > 
+  > - If a group policy is applied to a device that configures Defender Firewall to allow all inbound traffic, or turns off the firewall, setting **Firewall** to **Require** will return **Not compliant**, even if Intune device configuration policy turns Firewall on. This is because the group policy object overrides the Intune policy. To fix this issue, we recommend that you remove any conflicting group policy settings, or that you migrate your Firewall-related group policy settings to Intune device configuration policy. In general, we recommend that you [keep default settings](windows-itpro-docs/blob/public/windows/security/threat-protection/windows-firewall/best-practices-configuring.md#keep-default-settings), including blocking inbound connections. For more information, see [Best practices for configuring Windows Defender Firewall](windows-itpro-docs/blob/public/windows/security/threat-protection/windows-firewall/best-practices-configuring.md).
+
 
 - **Trusted Platform Module (TPM)**:  
   - **Not configured** (*default*) -  Intune doesn't check the device for a TPM chip version.
