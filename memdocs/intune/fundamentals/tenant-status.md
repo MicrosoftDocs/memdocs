@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Microsoft Intune Tenant Status page
+title: About the Microsoft Intune tenant status page
 titleSuffix: Microsoft Intune
-description: If you use Microsoft Intune, use the Tenant Status page to view details about your tenant, the status of Intune connectors you've configured, view recent service health incidents and advisories.
+description: The Intune tenant status page displays details about your tenant and the status of connectors you've configured, and messages intended for tenants and about the Intune service health. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/23/2022
+ms.date: 04/22/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -26,9 +26,15 @@ ms.collection:
   - M365-identity-device-management
   - highpri
 ---
-# Use the Intune Tenant Status page
+# View details about your Tenant on the Intune tenant status page
 
-The Microsoft Intune Tenant Status page is a centralized hub where you can view current and important details about your tenant. Details include license availability and use, connector status, and important communications about the Intune service.
+The Microsoft Intune tenant status page is a centralized hub where you can view important details about your tenant. Details include:
+
+- Your tenant name and location
+- Service release versions
+- Licensed users and enrolled devices
+
+You can also view the status of the Intune connectors you've configured, and health messages for the Intune service and general messages for Tenants.
 
 > [!TIP]
 > A tenant is an instance of Azure Active Directory (Azure AD). Your subscription to Intune is hosted by an Azure AD Tenant. For more information, see [Set up a tenant](/azure/active-directory/develop/quickstart-create-new-tenant) in the Azure AD documentation.
@@ -57,6 +63,7 @@ When there's more than a single connector of any one type, the status is a summa
 > Some connectors can report a status of *Healthy* or *Connected* but might not be functioning correctly. If you encounter issues with a specific connector, review the any applicable connector logs or open a case with [support](../../get-support.md) to investigate further.
 
 **Connector status:**
+
 - **Unhealthy:**
   - The certificate or credential has expired
   - The last synchronization was three or more days ago
