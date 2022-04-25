@@ -103,8 +103,8 @@ Your exact workloads, details, and how to update the workloads for cloud native 
   - For cloud native endpoints, Azure AD join is the best choice for the device's identity. It doesn't require any connectivity to an on-premises network, resource, or service.
   - On-premises AD join and hybrid Azure AD join require connectivity to an on-premises domain controller. They need connectivity for initial user sign in, to deliver group policies, and change passwords. These options aren’t suitable for cloud native endpoints.
 
-> [!NOTE]
-> Azure AD registration, sometimes referred to as workplace join, is for BYOD scenarios only. It shouldn't be for organization owned Windows endpoints. Some functionality may not be supported or work as expected on Azure AD registered Windows endpoints.
+  > [!NOTE]
+  > Azure AD registration, sometimes referred to as workplace join, is for BYOD scenarios only. It shouldn't be for organization owned Windows endpoints. Some functionality may not be supported or work as expected on Azure AD registered Windows endpoints.
 
 - **Provision your endpoints**
 
@@ -254,7 +254,7 @@ End users will have different experiences for receiving, deploying, and being su
 
 The following phases contain a high-level approach for organizations to move their environment to fully support cloud-native Windows endpoints. These phases are parallel to transitioning endpoints and user workloads. They may depend on certain workloads being partially or fully transitioned to support cloud-native Windows endpoints.
 
-### ✅ Phase 1: Planning
+### ✅ Phase 1: Define endpoints, dependencies, and milestones
 
 Define and clarify additional items that need to be planned logistically to support workloads and their move to supporting cloud-native.
 
@@ -344,7 +344,7 @@ Important steps for this phase include:
 
 4. **Validate functionality**
 
-Validation is an interative process, and is based on the workloads and their configuration within an organization.
+    Validation is an interative process, and is based on the workloads and their configuration within an organization.
 
     - Collect user feedback on the POC endpoints, workloads, and their functionality. This feedback should be from users that used the cloud native endpoints.
 
