@@ -66,7 +66,7 @@ To create an ANC, you must:
     - **AD domain password**: The password for the user specified above.
     - **Confirm AD domain password**: The password for the user specified above.
 
-  Cloud PCs that use the defined ANC will be joined to the domain and OU specified. Make sure that the domain selected is the desired domain for the computers to join
+    Cloud PCs that use the defined ANC will be joined to the domain and OU specified. Make sure that the domain selected is the desired domain for the computers to join
 8. Select **Next**.
 9. On the **Review + Create** page, select **Create**.
 
