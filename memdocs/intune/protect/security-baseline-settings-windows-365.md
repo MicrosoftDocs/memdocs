@@ -81,7 +81,7 @@ You can choose to deploy this baseline in its default configuration to apply tha
 
 ## App Runtime
 
-- **Microsoft accounts optional for Windows Store apps**:  
+- **Microsoft accounts optional for Microsoft store apps**:  
   Baseline default: *Enabled*  
   CSP [appruntime-allowmicrosoftaccountstobeoptional](/windows/client-management/mdm/policy-csp-appruntime#appruntime-allowmicrosoftaccountstobeoptional)
 
