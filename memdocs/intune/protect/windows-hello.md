@@ -38,7 +38,7 @@ If you choose not to configure a tenant-wide policy for Windows Hello for Busine
 
 In addition, Intune can manage some settings for Windows Hello through the following methods:
 
-- [Security baselines](../protect/security-baseline.md): Some settings for Windows Hello can be managed by security baselines like the baselines for *Microsoft Defender for Endpoint security* or  *Security Baseline for Windows 10 and later*.
+- [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed by security baselines like the baselines for *Microsoft Defender for Endpoint security* or  *Security Baseline for Windows 10 and later*.
 - [Endpoint security Account protection policy](../protect/endpoint-security-account-protection-policy.md): Account protection policies include some of the settings used by Windows Hello.
 
 <!-- OLD>
