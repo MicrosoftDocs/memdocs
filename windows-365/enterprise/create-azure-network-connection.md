@@ -62,10 +62,10 @@ To create an ANC, you must:
 7. For hybrid Azure AD join ANCs, on the **AD domain** page, provide the following information:
     - **AD domain name**: The DNS name of the Active Directory domain that you want to use for connecting and provisioning Cloud PCs. For example, corp.contoso.com.
     - **Organizational unit**: (Optional.) An organizational unit (OU) is a container within an Active Directory domain, which can hold users, groups, and computers. Make sure that this OU is enabled to sync with Azure AD Connect. Provisioning will fail if this OU isn't syncing.
-    - **AD domain username**: The username, in user principal name (UPN) format, that you want to use for connecting the Cloud PCs to your Active Directory domain. For example, svcDomainJoin@corp.contoso.com. This service account must have permission to join computers to the domain and, if set, the target OU. 
+    - **AD domain username**: The username, in user principal name (UPN) format, that you want to use for connecting the Cloud PCs to your Active Directory domain. For example, svcDomainJoin@corp.contoso.com. This service account must have permission to join computers to the domain and, if set, the target OU.
+    - **AD domain password**: The password for the user specified above.
+    - **Confirm AD domain password**: The password for the user specified above.
 
-    - AD domain password: The password for the user specified above.
-    - Confirm AD domain password: The password for the user specified above.
   Cloud PCs that use the defined ANC will be joined to the domain and OU specified. Make sure that the domain selected is the desired domain for the computers to join
 8. Select **Next**.
 9. On the **Review + Create** page, select **Create**.
