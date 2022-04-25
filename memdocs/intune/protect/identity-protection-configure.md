@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Deploy policy for Windows Hello groups of Windows 10 and Windows 11 devices in Microsoft Intune
+title: Deploy policy for Windows Hello to groups of Windows 10 and Windows 11 devices in Microsoft Intune
 description: Use an Identity protection profile in Microsoft Intune to configure groups of devices to use Windows Hello for Business. 
 keywords:
 author: brenduns

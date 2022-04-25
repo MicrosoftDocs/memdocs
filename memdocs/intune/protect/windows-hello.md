@@ -1,6 +1,6 @@
 ---
 # required metadata
-title: Configure tenant-wide Windows Hello for Business policies with Microsoft Intune
+title: Configure a tenant-wide Windows Hello for Business policy with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Apply policy for Windows Hello for Business on devices at the time they enroll with Microsoft Intune
 keywords:
