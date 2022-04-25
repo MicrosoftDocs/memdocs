@@ -47,7 +47,7 @@ To create an ANC, you must:
 - Be an [Intune Administrator in Azure AD](/azure/active-directory/roles/permissions-reference).
 - Have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) that contains the virtual network with connectivity to your on-premises domain controller and network.
 - Make sure that your PowerShell execution policy is configured to allow Unrestricted scripts. If you use Group Policy to set execution policy, make sure that the Group Policy Object (GPO) targeted at the Organizational Unit (OU) defined in the ANC is configured to allow Unrestricted scripts. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).
-- For Disaster Recovery (DR) purposes, make sure that there are at least 50% of the IP addresses available in your subnet. If reprovisioning for DR is required, sufficient new IP addresses are required for each Cloud PC provisioned on the subnet. 
+- For Disaster Recovery (DR) purposes, make sure that there are at least 50% of the IP addresses available in your subnet. If reprovisioning for DR is required, sufficient new IP addresses are required for each Cloud PC provisioned on the subnet.
 
 ## Create an ANC
 
@@ -66,7 +66,7 @@ To create an ANC, you must:
 
     - AD domain password: The password for the user specified above.
     - Confirm AD domain password: The password for the user specified above.
-
+  Cloud PCs that use the defined ANC will be joined to the domain and OU specified. Make sure that the domain selected is the desired domain for the computers to join
 8. Select **Next**.
 9. On the **Review + Create** page, select **Create**.
 
