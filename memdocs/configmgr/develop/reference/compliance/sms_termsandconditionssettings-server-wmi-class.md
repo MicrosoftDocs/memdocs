@@ -1,6 +1,7 @@
 ---
 title: "SMS_TermsAndConditionsSettings Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents Terms and Conditions settings."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

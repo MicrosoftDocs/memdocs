@@ -45,7 +45,7 @@ The *Collect diagnostics* remote action is supported for:
 - Windows 10 version 1909 and later.
 - Windows 11
 - Microsoft HoloLens 2 2004 and later.
-- Global Admins, Intune Admins, or a role with **Collect diagnostics** permissions (under **Remote tasks**).
+- Global Admins, Intune Admins, or a role with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions.
 - Corporate-owned devices.
 - Devices that are online and able to communicate with the service during diagnostics.
 
@@ -61,7 +61,9 @@ To use the *Collect diagnostics* action:
 
 ## Data collected
 
-No personal information is collected. This list below is the same order as the diagnostic zip.  Each collection contains the following data:
+No personal information is collected. If you've installed KB5011543 on Windows 10 or KB5011563 on Windows 11, the format of the zip file will be simpler, including a flattened structure where the logs collected are named to match the data collected, and when multiple files are collected a folder is created.  
+
+This list below is the same order as the diagnostic zip.  Each collection contains the following data:
 
 Registry Keys:
 

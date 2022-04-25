@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 04/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -54,9 +54,14 @@ When a device receives a policy for Feature updates:
 
 - Unlike using *Pause* with an update ring, which expires after 35 days, the Feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
 
+- The ability to *Uninstall* the Feature update is still honored by the Update Rings.
+
 - You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](../protect/windows-update-rollout-options.md).
 
 ## Prerequisites
+
+> [!IMPORTANT]
+> This feature is not supported on GCC High/DoD cloud environments.
 
 The following are prerequisites for Intune's Feature updates for Windows 10 and later:
 
@@ -92,11 +97,11 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 ## Limitations for Feature updates for Windows 10 and later policy
 
 - When you deploy a *Feature updates for Windows 10 and later* policy to a device that also receives an *Update rings for Windows 10 and later* policy, review the update ring for the following configurations:
-  - The **Feature update deferral period (days)** must be set to **0**.
+  - We recommend setting the **Feature update deferral period (days)** to **0**. This configuration ensures your feature updates are not delayed by update deferrals that might be configured in an update ring policy.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
   > [!TIP]
-  > If you're using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations.
+  > If you're using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations.  
   >
   > For more information, see [Move from update ring deferrals to feature updates policy](../protect/windows-update-for-business-configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
 

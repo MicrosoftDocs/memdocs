@@ -2,13 +2,13 @@
 # required metadata
 
 title: Use group policy analytics to import and analyze GPOs in Microsoft Intune
-description: Import and analyze your group policy objects in Microsoft Intune and Endpoint Manager. See the policies that have the same Configuration Service Provider (CSP) setting in the cloud, and assign to your Windows 10/11 users and devices.
+description: Import and analyze your group policy objects in Microsoft Intune and Endpoint Manager. See the policies that are supported and aren't supported in cloud MDM providers.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 02/23/2022
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -36,7 +36,10 @@ ms.collection:
 > [!TIP]
 > Looking for information on ADMX templates? See [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md).
 
-**Group Policy analytics** is a tool and feature in Microsoft Endpoint Manager that analyzes your on-premises GPOs. It helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
+**Group Policy analytics** is a tool in Microsoft Endpoint Manager that analyzes your on-premises GPOs, and:
+
+- Shows which settings are supported in cloud-based MDM providers, including Microsoft Intune.
+- Shows any deprecated settings, or settings not available.
 
 If your organization uses GPOs, and you want to move some workloads to Microsoft Endpoint Manager and Intune, then Group Policy analytics will help.
 
@@ -51,7 +54,7 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 ## Prerequisites
 
-- In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator with a role that has the **Security Baselines** permission.
+- In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security Baselines** permission.
 
   For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
 

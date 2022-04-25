@@ -34,7 +34,7 @@ Windows 365 offers fixed-price licensing (through Microsoft 365) for different C
 
 If extra resources are needed for the Cloud PC, an admin or end user can easily upgrade the size of their Cloud PC. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).  
 
-For information about end-user hardware requirements, see [End-user hardware requirements](end-user-hardware-requirements.md).
+For information about end-user hardware requirements, see [End-user hardware requirements](..\end-user-hardware-requirements.md).
 
 This table shows examples of the different sizes available for a Cloud PC:
 

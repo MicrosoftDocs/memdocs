@@ -63,10 +63,12 @@ items:
       href: group-policy-analytics.md
     - name: Create administrative templates
       href: administrative-templates-windows.md
-    - name: Update Office using administrative templates
+    - name: Update Office using ADMX
       href: administrative-templates-update-office.md
-    - name: Create Microsoft Edge policy
+    - name: Create Microsoft Edge policy using ADMX
       href: administrative-templates-configure-edge.md
+    - name: Restrict USB devices using ADMX
+      href: administrative-templates-restrict-usb.md
   - name: BIOS settings on Windows
     href: device-firmware-configuration-interface-windows.md
     displayName: dfci, firmware
@@ -85,6 +87,8 @@ items:
       displayName: airprint, home screen, lock screen, sso, single sign-on
     - name: Use Enterprise SSO plug-in
       href: use-enterprise-sso-plug-in-ios-ipados-macos.md
+    - name: Use Enterprise SSO plug-in in Jamf Pro
+      href: use-enterprise-sso-plug-in-ios-ipados-macos-with-jamf-pro.md
   - name: Extensions on macOS
     href: kernel-extensions-overview-macos.md
     displayName: kernel extensions, system extensions

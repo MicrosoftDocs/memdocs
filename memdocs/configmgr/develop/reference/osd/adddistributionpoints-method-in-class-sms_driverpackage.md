@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager AddDistributionPoints Windows Management Instrumentation (WMI) class method to add the distribution points for the driver package.
 title: "AddDistributionPoints Method in SMS_DriverPackage"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

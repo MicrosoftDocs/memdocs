@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the summarization schedule using the GetSummarizationSettings class method in Configuration Manager.
 title: "GetSummarizationSettings Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

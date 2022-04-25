@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the settings and properties used by the software updates client agent using SMS_SoftwareUpdatesAgentConfig class.
 title: "SMS_SoftwareUpdatesAgentConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

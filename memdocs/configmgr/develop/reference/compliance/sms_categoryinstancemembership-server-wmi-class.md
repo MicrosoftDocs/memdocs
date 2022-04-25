@@ -1,6 +1,7 @@
 ---
 title: "SMS_CategoryInstanceMembership Class"
 titleSuffix: "Configuration Manager"
+description: "The `SMS_CategoryInstanceMembership` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, which represents the relationship between categories and configuration item objects."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

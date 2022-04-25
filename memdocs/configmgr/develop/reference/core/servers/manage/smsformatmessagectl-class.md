@@ -1,6 +1,7 @@
 ---
 title: "SMSFormatMessageCtl Class"
 titleSuffix: "Configuration Manager"
+description: The SMSFormatMessageCtl class supports message formatting for the Configuration Manager status system.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

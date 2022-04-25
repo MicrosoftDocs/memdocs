@@ -114,4 +114,4 @@ To learn more about using Mobile Threat Defense connectors for Intune App Protec
 
 ## Next steps
 
-- [Create Mobile Threat Defense (MTD) app protection policy with Intune](mtd-app-protection-policy.md).
+- [Create Mobile Threat Defense (MTD) device compliance policy with Intune](mtd-device-compliance-policy-create.md).

@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SiteCode property to relate an SMS_Package Server class object to the SMS_Site Server class object for the site that created the package.
 title: "SMS_PackageToSourceSite_a Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

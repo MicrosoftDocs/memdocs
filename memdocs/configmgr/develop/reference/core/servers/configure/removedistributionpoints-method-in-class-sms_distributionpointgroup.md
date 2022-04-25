@@ -1,6 +1,7 @@
 ---
 title: "RemoveDistributionPoints Method"
 titleSuffix: "Configuration Manager"
+description: "The RemoveDistributionPoints WMI class method removes distribution points from this distribution point group."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

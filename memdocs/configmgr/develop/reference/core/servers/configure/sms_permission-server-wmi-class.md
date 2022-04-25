@@ -1,6 +1,7 @@
 ---
 title: "SMS_Permission Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_Permission Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents RBAC Security User Permissions.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

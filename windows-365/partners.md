@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/24/2022
+ms.date: 04/20/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -38,7 +38,11 @@ Here’s the list of approved partners that build and innovate with Windows 365.
 
 ![10ZiG image](./media/partners/10zig.png)
 
-10ZiG Technology is a world-market leader in Thin & Zero Client endpoint devices for Virtual Desktop Infrastructure and Cloud. Microsoft Windows 365 Cloud PC securely streams the Windows experience to any 10ZiG endpoint device including personalized apps, data, and settings. It reduces security risks by storing information in the Cloud, and not on devices.
+Securely stream the Microsoft Windows 365 Cloud PC experience to high-performing 10ZiG endpoints that offer:
+
+- Highly secure Windows 10 IoT LTSC 2021 and in-house Linux-based operating systems.
+- A wide range of hardware with customization options available.
+- Options to manage and deploy Cloud PCs by using Microsoft Endpoint Manager (MEM) and/or the 10ZiG Manager™ for increased safety, remote access, and ease of use.
 
 For more information, visit the [10ZiG website](https://www.10zig.com/resources/vdi-blog/microsoft-windows-365-cloud).
 
@@ -73,6 +77,18 @@ For more information, visit the [Nerdio website](https://getnerdio.com/windows-3
 Spot by NetApp delivers fully managed, continuously optimized cloud desktops as a service.
 
 For more information, read about Spot on the [NetApp website](https://spot.io/products/spotpc/).
+
+## Rimo3
+
+![Rimo3 image](./media/partners/rimo3.png)
+
+Rimo3 helps organizations onboard Windows 365 by verifying apps and updates for Cloud PCs. It helps you understand the impact of OS, app, and security updates on your Cloud PCs in your unique operating environment. With Rimo3, you can:
+
+- Rapidly verify app (including MSIX) compatibility, functionality, and performance metrics for Cloud PCs.
+- Test app readiness against security and OS updates up to 10 times faster than current processes.
+- Quickly assess end user resource and performance impacts before production implementation.
+
+For more information, visit the [Rimo3 website](https://www.rimo3.com/solution/application-modernization).
 
 ## ServiceNow
 

@@ -241,7 +241,7 @@ For more information on this enrollment option, and its prerequisites, see [macO
 
 ## Next steps
 
-- [MAM-WE](deployment-guide-enrollment-mamwe.md)
+- [MAM](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)

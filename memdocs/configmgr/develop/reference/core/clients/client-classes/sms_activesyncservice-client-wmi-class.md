@@ -1,5 +1,6 @@
 ---
 title: "SMS_ActiveSyncService Class"
+description: Learn how the SMS_ActiveSyncService class is a client Windows Management Instrumentation (WMI) class that represents the ActiveSync service on the client.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

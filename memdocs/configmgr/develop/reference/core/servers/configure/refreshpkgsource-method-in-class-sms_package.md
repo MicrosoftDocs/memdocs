@@ -1,6 +1,7 @@
 ---
 title: RefreshPkgSource method in class SMS_Package
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that refreshes the package source at all distribution points."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

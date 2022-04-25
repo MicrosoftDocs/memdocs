@@ -53,7 +53,7 @@ These categories and their associated threat levels are configurable in Wandera'
 
 * Using **Device Compliance Policies** with Conditional Access, administrators set policies to automatically mark a managed device as “out of compliance” based upon the Wandera-reported threat level. This compliance flag subsequently drives Conditional Access Policies to allow or deny access to applications that utilize modern authentication.  See [Create Mobile Threat Defense (MTD) device compliance policy](../protect/mtd-device-compliance-policy-create.md) with Intune for configuration details.
 
-* Using **App Protection Policies** with Conditional Launch, administrators can set policies that are enforced at the native app level (e.g. Android and iOS/iPad OS apps like Outlook, OneDrive, etc.) based upon the Wandera-reported threat level.  These policies may also be used with unmanaged devices (MAM-WE) to provide uniform policy across all device platforms and ownership modes. See [Create Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md) with Intune for configuration details.
+* Using **App Protection Policies** with Conditional Launch, administrators can set policies that are enforced at the native app level (e.g. Android and iOS/iPad OS apps like Outlook, OneDrive, etc.) based upon the Wandera-reported threat level. These policies may also be used for unenrolled devices with MAM managed applications to provide uniform policy across all device platforms and ownership modes. See [Create Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md) with Intune for configuration details.
 
 ## Supported platforms  
 

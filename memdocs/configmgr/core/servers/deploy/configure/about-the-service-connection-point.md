@@ -128,7 +128,7 @@ There are several scenarios in which you may need to move the service connection
 
 - [Recovery](../../manage/recover-sites.md)
 - [Site server high availability](site-server-high-availability.md)
-- [Site expansion](../install/use-the-setup-wizard-to-install-sites.md#bkmk_expand)
+- [Site expansion](../install/setup-wizard-central-primary.md#expand-a-stand-alone-primary-site)
 
 After you move the service connection point, check all site functions. For example, you may need to renew the secret key for any connections to Azure Active Directory (Azure AD) tenants. For more information, see [Renew secret key](azure-services-wizard.md#bkmk_renew).
 

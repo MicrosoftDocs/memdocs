@@ -38,6 +38,9 @@ The **Restart** device action causes the device you choose to be restarted (with
 ## Supported platforms
 
 - Windows - Supported on Windows 8.1 and later
+    > [!Note] 
+    > Windows attempts to show the user a message with the following text: "Your device administrator has scheduled a reboot." The message is shown when the 5 minute restart counter is started. Restart of Windows devices immediately requires push notifications via Windows Notification Services (WNS). 
+    > For more information on WNS, see [Network Endpoint Requirements](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns).
 - Android Enterprise dedicated devices - Supported on Android 8.0 and later
 - Android Enterprise fully managed devices - Supported on Android 8.0 and later
 - Android Enterprise corporate-owned with work profile devices - Not supported 

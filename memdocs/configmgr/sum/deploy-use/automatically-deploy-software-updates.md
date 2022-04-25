@@ -5,7 +5,7 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 12/01/2021
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -65,15 +65,17 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
        - Select **Required** to create a mandatory software update deployment. The software updates are automatically installed on clients before the installation deadline you configure.
 
        - Select **Available** to create an optional software update deployment. This deployment is available for users to install from Software Center.
+       > [!NOTE]  
+       > Starting in Configuration Manager version 2203, you can select the **Pre-download content for this deployment** setting for **Available** deployments. This setting reduces installation wait times for clients since installation notifications won't be visible in Software Center until the content has fully downloaded. <!--4497776-->
+       > - If an update is in multiple deployments for a client and the **Pre-download content for this deployment** setting is enabled for a least one of the deployments, then the content will pre-download.
+       > - If you edit an existing deployment to use the **Pre-download content for this deployment** setting, the content will only pre-download if the software update is not yet available on the client.
 
     -   **Use Wake on LAN to wake up clients for required deployments**: Specifies whether to enable Wake On LAN at the deadline. Wake On LAN sends wake-up packets to computers that require one or more software updates in the deployment. The site wakes up any computers that are in sleep mode at the installation deadline time so the installation can initiate. Clients that are in sleep mode that don't require any software updates in the deployment aren't started. By default, this setting isn't enabled. Before using this option, configure computers and networks for Wake On LAN. For more information, see [How to configure Wake On LAN](../../core/clients/deploy/configure-wake-on-lan.md).  
 
     -   **Detail level**: Specify the level of detail for the update enforcement state messages that are reported by clients.  
 
         > [!IMPORTANT]  
-        >  When you deploy definition updates, set the detail level to **Error only** to have the client report a state message only when a definition update fails. Otherwise, the client reports a large number of state messages that might impact site server performance.  
-        
-        > [!NOTE]  
+        > - When you deploy definition updates, set the detail level to **Error only** to have the client report a state message only when a definition update fails. Otherwise, the client reports a large number of state messages that might impact site server performance.  
         > The **Error only** detail level does not send the enforcement status messages required for tracking pending reboots.
 
     -   **License terms setting**: Specify whether to automatically deploy software updates with associated license terms. Some software updates include license terms. When you automatically deploy software updates, the license terms aren't displayed, and there isn't an option to accept the license terms. Choose to automatically deploy all software updates regardless of an associated license term, or only deploy updates that don't have associated license terms.  
@@ -125,6 +127,9 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
         -   **As soon as possible**: Makes the software updates in the deployment available to clients as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment and the software updates are available for installation.  
 
         -   **Specific time**: Makes software updates included in the deployment available to clients at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment aren't available for installation until after the configured date and time.  
+        
+        > [!Note]
+        > Starting in version 2203, the **Software available time** and **Installation deadline** for deployments created by an ADR are now calculated based on the time the ADR evaluation is scheduled and starts. Previously, these times were calculated based on when the ADR evaluation completed. This change makes the  **Software available time** and **Installation deadline** consistent and predictable for deployments. <!--12707738, 7033417-->
 
     -   **Installation deadline**: These options are only available for **Required** deployments. Select one of the following settings to specify the installation deadline for the software updates in the deployment:  
 
@@ -135,6 +140,8 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
              - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of clients in the collection installing updates in the deployment at the same time.  
 
              - The **Disable deadline randomization** in the **Computer Agent** group doesn't override the randomization behavior. For more information, see [Computer Agent client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).  <!--9388804-->
+        > [!Note]
+        > Starting in version 2203, the **Software available time** and **Installation deadline** for deployments created by an ADR are now calculated based on the time the ADR evaluation is scheduled and starts. Previously, these times were calculated based on when the ADR evaluation completed. This change makes the  **Software available time** and **Installation deadline** consistent and predictable for deployments. <!--12707738, 7033417-->
 
     -  **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**: Enable this setting to give users more time to install required software updates beyond the deadline.  
 

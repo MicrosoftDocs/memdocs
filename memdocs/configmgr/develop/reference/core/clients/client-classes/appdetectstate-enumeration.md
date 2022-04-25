@@ -1,4 +1,5 @@
 ---
+description: Learn how to define application installation states in Configuration Manager using AppDetectState enumeration.
 title: "AppDetectState Enumeration"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

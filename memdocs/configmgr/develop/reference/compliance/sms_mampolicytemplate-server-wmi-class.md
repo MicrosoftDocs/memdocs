@@ -1,4 +1,5 @@
 ---
+description: Learn how the SMS_MAMPolicyTemplate Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents mobile application management (MAM) policy templates. 
 title: "SMS_MAMPolicyTemplate Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

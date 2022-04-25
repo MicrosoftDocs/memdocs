@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 04/14/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -199,7 +199,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Data Transfer |       Dialer App URL Scheme  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | On iOS/iPadOS, this value must be replaced with the URL scheme for the custom dialer app being used. If the URL scheme is not known, contact the app developer for more information. For more information on URL schemes, see [Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
 | Data transfer |       Receive   data from other apps  |          Policy   managed apps  |          iOS/iPadOS, Android         |  |
 | Data transfer |       Open data into Org documents  |          Block  |          iOS/iPadOS, Android         |  |
-| Data transfer |       Allow users to open data from selected services  |          OneDrive for Business, SharePoint  |          iOS/iPadOS, Android         |  |
+| Data transfer |       Allow users to open data from selected services  |          OneDrive for Business, SharePoint, Camera  |          iOS/iPadOS, Android         |  |
 | Data transfer |       Third-party   keyboards  |          Block  |          iOS/iPadOS        | On iOS/iPadOS, this blocks all third-party keyboards from   functioning within the app.  |
 | Data transfer |       Approved   keyboards  |          Require  |          Android        |  |
 | Data transfer |       Select   keyboards to approve  |          *add/remove   keyboards*  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |

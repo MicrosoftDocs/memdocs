@@ -48,6 +48,29 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
+## Week of April 11, 2022)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### windows365.microsoft.com is now generally available<!--38195529-->
+
+The windows365.microsoft.com web client has moved out of preview and into general availability.
+
+<!-- ########################## -->
+## Week of April 4, 2022 (Service release 2203)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+[!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End-user experience
+
+[!INCLUDE [End user feedback and log collection](../includes/whats-new-feedback-log-collection.md)]
+
+<!-- ########################## -->
 ## Week of February  28, 2022 (Service release 2202)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->

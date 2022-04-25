@@ -2,7 +2,7 @@
 title: Monitor applications from the console
 titleSuffix: Configuration Manager
 description: Monitor deployment applications with the Monitoring workspace in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
@@ -60,27 +60,29 @@ For more information about how to configure reporting in Configuration Manager, 
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, and select the **Deployments** node.
 
-    > [!TIP]
-    > If your site has a lot of deployments, filter the list to just application deployments.
-    >
-    > 1. At the top of the list next to the _Search_ field, select **Add Criteria**. Choose **Feature Type** and then select **Add**.
-    > 1. The search area adds the default criteria, **AND Feature Type Content Distribution**. Select **Content Distribution** and choose **Application** instead.
-    > 1. Select **Search** to refresh the list.
+   If your site has numerous deployments, filter the list to just application deployments.
+   1. At the top of the list next to the *Search* field, select **Add Criteria**. Choose **Feature Type** and then select **Add**.
+   1. The search area adds the default criteria, **AND Feature Type Content Distribution**. Select **Content Distribution** and choose **Application** instead.
+   1. Select **Search** to refresh the list.
 
 1. Select a deployment for the app to monitor.
 
-:::image type="content" source="media/monitor-app-deployments.png" alt-text="Screenshot of the Monitoring workspace, Deployments node, filtered to applications" lightbox="media/monitor-app-deployments.png":::
+   :::image type="content" source="media/monitor-app-deployments.png" alt-text="Screenshot of the Monitoring workspace, Deployments node, filtered to applications" lightbox="media/monitor-app-deployments.png":::
 
-- To review general status information about an application deployment, see the **Summary** tab in the details pane.
+The following two tabs in the details pane are populated for the selected deployment:
 
-- To review status for the application's deployment types, switch to the **Deployment Types** tab in the details pane.
+- **Summary**: Displays general status information about an application deployment.
+- **Deployment Types**: Displays status for the application's deployment types.
 
-- To review deployment details for each compliance state and the resources in that state, select **View status** on the **Home** tab of the ribbon. This action opens the **Deployment Status** pane. Here you can view the assets in each compliance state. To view more detailed information about the deployment status to an asset, select it in the Asset Details list. Then select **More Details** on the right side of the window.
+### Review deployment details
 
-    > [!NOTE]
-    > The maximum number of items that the **Deployment Status** pane can display is 20,000. If you need to see more items, use Configuration Manager reports to view application status data.
-    >
-    > The status of deployment types is aggregated in the **Deployment Status** pane. To view more detailed information about the deployment types, use the **Application Infrastructure Errors** report.
+From the **Deployments** node, you can review deployment details for each compliance state and the resources in that state. To review the deployment details, select **View status** on the **Home** tab of the ribbon. This action opens the **Deployment Status** pane. Here you can review the assets in each compliance state. To display Details list. Then select **More Details** on the right side of the window.
+
+- The maximum number of items that the **Deployment Status** pane can display is 20,000. If you need to see more items, use Configuration Manager reports to review application status data.
+- The status of deployment types is aggregated in the **Deployment Status** pane. To display more detailed information about the deployment types, use the **Application Infrastructure Errors** report.
+- Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view. Use the right-click menu on either a group of clients in a **Category** or a single client in the **Asset details** pane to display the client notification actions. <!--7079837-->
+
+   :::image type="content" source="./media/7079837-deployment-status-client-notification.png" alt-text="Screenshot of the Deployment Status view showing the client notification actions. " lightbox="./media/7079837-deployment-status-client-notification.png":::
 
 ### Summarized data
 

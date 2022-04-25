@@ -39,4 +39,4 @@ Before a user can use a Cloud PC, you must assign a [Windows 365 license](https:
 <!-- ########################## -->
 Next, check out the following article: 
 
-[Create on-premises network connection](create-on-premises-network-connection.md).
+[Create Azure network connection](create-azure-network-connection.md).

@@ -1,4 +1,5 @@
 ---
+description: Article describing the use of ClearDeploymentLocksForCollection class method in Configuration Manager.
 title: "ClearDeploymentLocksForCollection Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

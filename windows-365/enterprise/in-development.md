@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 03/09/2022
+ms.date: 04/12/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -49,40 +49,24 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 ## Monitor and troubleshoot
 ## Role-based access control
 ## Security
+## End-user experience
 
 -->
 
 <!-- ***********************************************-->
-## App management
-
-### Use conditional access to group Windows 365 and Azure Virtual Desktop app policies together <!-- 36360788 -->
-
-In a future update, you’ll be able to target Conditional Access (CA) policies to a single application that applies to both the Windows 365 and Azure Virtual Desktop apps.
-
-Currently, Windows 365 and Azure Virtual Desktop share a common framework for identity access by using Azure Active Directory (Azure AD) and security controls with CA policies. You can target CA policies to the Windows 365 app and this applies only to windows365.microsoft.com web client. To apply CA policies to the full Windows client and non-windows clients, you must assign CA policies to both the Windows 365 and Azure Virtual Desktop apps.  For more information, see [Assign a Conditional Access policy for Cloud PCs](set-conditional-access-policies.md).
+<!--## App management-->
 
 <!-- ***********************************************-->
-## Device management
+<!-- ## Device management
+-->
 
-### New remote action: remote help<!--38310389-->
 
-The upcoming Remote Help remote action (in the Microsoft Endpoint Manager admin center) will let admins start a remote session into an end user’s Cloud PC.
+<!-- ***********************************************-->
+## Device provisioning
 
-### Upload a custom image without an on-premises network connection<!--8341750-->
+### Provision Cloud PCs with Secure Boot<!--38012584-->
 
-Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network will be able to upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an OPNC for the destination Azure subscription which provides the image.
-
-### windows365.microsoft.com will move to general availability<!--38195529-->
-
-The windows365.microsoft.com web client will be moving out of preview and into general availability.
-
-### Nested virtualization<!--37800910-->
-
-In a future release, for most currently supported regions, Windows 365 8vCPU/32GB licenses will support nested virtualizations for different developer scenarios to use systems like WSL/Hyper-V. Southeast Asia and West US 2 will follow at a later date.
-
-### Operating system end of support status for Cloud PCs<!--36852572 -->
-
-The **Provisioning policies** page is getting a new column: **Image status**. It tells you if the device image for each provisioning policy uses an operating system (OS) that is supported by Microsoft Windows security and other updates.
+You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
@@ -105,6 +89,10 @@ The device history report will have new information to help you evaluate Cloud P
 
 - Top 5 processes impacting CPU spike times
 - Top 5 processes impacting RAM spike times
+
+### Forensic auditing of Cloud PCs<!--38726407-->
+
+You’ll be able to place a Cloud PC under review. This action initiates a process to create a secure snapshot of a Cloud PC. You’ll be able to analyze the snapshot using electronic discovery solutions.
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->

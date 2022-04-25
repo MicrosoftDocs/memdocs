@@ -1,6 +1,7 @@
 ---
 title: "SMS_RcmSqlControlProperty Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_RcmSqlControlProperty Windows Management Instrumentation class is an SMS Provider server class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

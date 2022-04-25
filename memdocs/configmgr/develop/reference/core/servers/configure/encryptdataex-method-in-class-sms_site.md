@@ -1,4 +1,5 @@
 ---
+description: Learn how to encrypt data using the specified site server's public key and return the encrypted data using EncryptDataEx.
 title: "EncryptDataEx Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

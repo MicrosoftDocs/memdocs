@@ -1,6 +1,7 @@
 ---
 title: "Decommission Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that decommissions site mapping."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

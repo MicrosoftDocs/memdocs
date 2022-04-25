@@ -1,6 +1,7 @@
 ---
 title: "AddDistributionPointGroup Method"
 titleSuffix: "Configuration Manager"
+description: The AddDistributionPointGroup Windows Management Instrumentation class method, in Configuration Manager, adds the content package to a set of distribution point groups.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

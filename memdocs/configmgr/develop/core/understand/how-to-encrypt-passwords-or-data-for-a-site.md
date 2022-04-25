@@ -1,6 +1,7 @@
 ---
 title: "Encrypt Passwords or Data for a Site"
 titleSuffix: "Configuration Manager"
+description: "Encrypt Passwords or Data for a Site. Using a new WMI method, the user accounts' passwords can be encrypted for a specific site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

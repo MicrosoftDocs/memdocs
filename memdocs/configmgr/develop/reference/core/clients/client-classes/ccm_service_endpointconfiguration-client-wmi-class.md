@@ -1,4 +1,5 @@
 ---
+description: Article outlining the use of CCM_Service_EndpointConfiguration class that supports endpoint configuration for the CCMEXEC service.
 title: "CCM_Service_EndpointConfiguration Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

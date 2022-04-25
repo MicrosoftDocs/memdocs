@@ -1,6 +1,7 @@
 ---
 title: "ReleaseLocks Method"
 titleSuffix: "Configuration Manager"
+description: "A class method that releases locks to multiple global objects."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

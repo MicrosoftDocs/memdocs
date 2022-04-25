@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the IsUsedCert method to verify whether the specified certificate is used.  
 title: "IsUsedCert Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

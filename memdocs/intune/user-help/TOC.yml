@@ -97,7 +97,7 @@ items:
       href: you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md
     - name: Symantec Endpoint Protection Mobile
       href: you-need-to-resolve-a-threat-found-by-skycure-android.md
-    - name: SandBlast Mobile Protect
+    - name: Harmony Mobile Protect
       href: you-need-to-resolve-a-threat-found-by-checkpoint-android.md
     - name: Zimperium zIPS
       href: you-need-to-resolve-a-threat-found-by-zips-android.md
@@ -163,7 +163,7 @@ items:
       href: you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md
     - name: Symantec Endpoint Protection Mobile
       href: you-need-to-resolve-a-threat-found-by-skycure-ios.md
-    - name: SandBlast Mobile Protect
+    - name: Harmony Mobile Protect
       href: you-need-to-resolve-a-threat-found-by-checkpoint-ios.md
     - name: Zimperium zIPS
       href: you-need-to-resolve-a-threat-found-by-zips-ios.md

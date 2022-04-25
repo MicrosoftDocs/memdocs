@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_G_System_CollectedFile class which contains information about a file copied from the client computer to the site server.
 title: "SMS_G_System_CollectedFile Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the status of Configuration Manager Active Directory Forest Discovery with SMS_ADForestDiscoveryStatus.
 title: "SMS_ADForestDiscoveryStatus Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

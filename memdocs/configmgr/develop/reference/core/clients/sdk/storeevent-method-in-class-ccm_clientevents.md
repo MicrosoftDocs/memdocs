@@ -1,6 +1,7 @@
 ---
 title: "StoreEvent Method"
 titleSuffix: "Configuration Manager"
+description: "The StoreEvent Windows Management Instrumentation class method generates store events."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "Device Management Server WMI Classes"
 titleSuffix: "Configuration Manager"
+description: "Device management server Windows Management Instrumentation (WMI) classes in Configuration Manager assist in assessment of computer compliance considering a number of mobile device configurations."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

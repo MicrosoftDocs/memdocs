@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_InventoryClassProperty Windows Management Instrumentation (WMI) class that is embedded in the SMS_InventoryClass.
 title: "SMS_InventoryClassProperty Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

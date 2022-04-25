@@ -1,6 +1,7 @@
 ---
 title: "Create Form XML for a Dialog Box"
 titleSuffix: "Configuration Manager"
+description: "To create the form XML for a Configuration Manager dialog box, you create an XML file that describes an SmsFormData."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

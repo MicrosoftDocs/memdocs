@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/14/2022
+ms.date: 04/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
  
 # Use remote help with Intune and Microsoft Endpoint Manager
 
-In [public preview](../fundamentals/public-preview.md), *remote help* is an application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. During the session, they can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
+Now generally available, *remote help* is a premium add-on application that works with Intune and enables your information and front-line workers to get assistance when needed over a remote connection. With this connection, your support staff can remote connect to the user's device. During the session, they can view the device's display and if permitted by the device user, take full control. Full control enables a helper to directly make configurations or take actions on the device.
 
 This feature applies to:  
 - Windows 10/11
@@ -39,9 +39,6 @@ In this article, we'll refer to the users who provide help as *helpers*, and use
 Remote help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
 The remote help app is available from Microsoft to install on both devices enrolled with Intune and devices that aren’t enrolled. The app can also be deployed through Intune to your managed devices.
-
-> [!NOTE]
-> On 12/08/2021, the remote help installer was renamed from *remotehelp.exe* to *remotehelpinstaller.exe* to resolve issues with silent deployments and interactive installations. Although app functionality hasn't changed, we recommend using the same [*download link*](#download-remote-help) to download the updated version with the renamed installer. The installation command lines in this article have been updated to reflect the new installer file name.
 
 ## Remote help capabilities and requirements
 
@@ -70,13 +67,14 @@ The Remote help app supports the following capabilities:
 ## Prerequisites
 
 - [Intune subscription](../fundamentals/licenses.md)
+- Remote help add-on license for all IT support workers (helpers) and users (https://aka.ms/PremiumAddOnsDocs)
 - Windows 10/11
-- Devices must install the *remote help* app. Device users can download the app directly from Microsoft. See [Install and update remote help](#install-and-update-remote-help)
+- The remote help app for Windows. See [Install and update remote help](#install-and-update-remote-help)
 
 > [!NOTE]
 > Remote help has the following limitations:  
 >
-> - Remote help is not supported on GCC High tenants.
+> - Remote help is not supported on GCC, GCC High or DoD Tenants.
 > - You cannot establish a remote help session from one tenant to a different tenant.
 > - May not be available in all markets or localizations.
 
@@ -122,18 +120,22 @@ Microsoft does not store any data about either the sharer or the helper for long
 
 ## Install and update remote help
 
-Remote help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a remote help session.
+Remote help is available as download from Microsoft and must be installed on each device before that device can be used to participate in a remote help session. By default, users will be opted into automatic updates and remote help will update itself when an update is available.
 
-When an update to remote help is required, users are prompted to install that version of remote help when the app opens. You can use the same process to download and install remote help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
+For users that opted out of automatic updates, when an update to remote help is required, users are prompted to install that version of remote help when the app opens. You can use the same process to download and install remote help to install an updated version. There's no need to uninstall the previous version before installing the updated version.
 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
+
+[!NOTE]
+- On April 5th, 2022, existing users of remote help will see a recommended upgrade screen when they open the remote help app. Users will be able to continue using remote help without upgrading. 
+- On April 12th, 2022, existing users of remote help will see a mandatory upgrade screen when they open the remote help app. They will not be able to proceed until they upgrade to the latest version of remote help.
 
 ### Download remote help
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **10.0.10011.16384**
+The most recent version of remote help is **4.0.0.0**
 
 ### Deploy remote help as a Win32 app
 
@@ -147,11 +149,13 @@ After you repackage remote help as a *.intunewin* file, use the procedures in [A
 
 2. On the Program page, configure the following options:
 
-   - For *Install command line*, specify **remotehelpinstaller.exe /install /quiet acceptTerms=Yes**
-   - For *Uninstall command line*, specify **remotehelpinstaller.exe /uninstall /quiet acceptTerms=Yes**
+   - For *Install command line*, specify **remotehelpinstaller.exe /quiet acceptTerms=1**
+   - For *Uninstall command line*, specify **remotehelpinstaller.exe /uninstall /quiet acceptTerms=1**
+
+To opt out of automatic updates, specify enableAutoUpdates=0 as part of the install command **remotehelpinstaller.exe /quiet acceptTerms=1 enableAutoUpdates=0**
 
    > [!IMPORTANT]
-   > The command line option *acceptTerms* is always case sensitive.
+   > The command line options *acceptTerms* and *enableAutoUpdates* are always case sensitive.
 
    You can leave the rest of the options at their default values and select **Next** to continue.
 
@@ -167,7 +171,7 @@ After you repackage remote help as a *.intunewin* file, use the procedures in [A
    - For *File or folder*, specify **RemoteHelp.exe**
    - For *Detection method*, select **String (version)**
    - For *Operator*, select **Greater than or equal to**
-   - For *Value*, specify the [version of remote help](#download-remote-help) you are deploying. For example, **10.0.10011.16384**
+   - For *Value*, specify the [version of remote help](#download-remote-help) you are deploying. For example, **10.0.22467.1000**
    - Leave *Associated with a 32-bit app on 64-bit clients* set to **No**
 
 5. Proceed to the Assignments page, and then select an applicable device group or groups that should install the remote help app.
@@ -180,7 +184,7 @@ To configure your tenant to support remote help, review and complete the followi
 
 ### Task 1 – Enable remote help
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help (preview)**.
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help**.
 
 2. On the **Settings** tab:
    1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Enabled*.
@@ -301,6 +305,42 @@ Remote help logs data during installation and during remote help sessions, which
 **Operational logs** - During use of remote help, operational details are logged in the Windows Event Viewer:
 
 - Event Viewer > Application and Services > Microsoft > Windows > RemoteHelp
+
+## Installation details
+
+Remote help will create the following firewall inbound rules:
+- Quick Assist Firewall Exception
+- Quick Assist RDP Firewall Exception
+- Remote help Firewall Exception
+
+## Languages Supported
+
+Remote help is supported in the following languages:
+- Czech
+- Danish
+- Dutch
+- English
+- Finnish
+- French
+- German
+- Greek
+- Hungarian
+- Italian
+- Japanese
+- Korean
+- Norwegian
+- Polish
+- Portuguese (Portugal)
+- Romanian
+- Russian
+- Spanish
+- Swedish
+- Turkish
+
+## Known Issues
+
+- When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the remote help session won’t be established. 
+If a conditional access policy is configured as described above and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant will not be able to use remote help. 
 
 ## Next steps
 

@@ -1,6 +1,7 @@
 ---
 title: "Set Software Updates Branding Information"
 titleSuffix: "Configuration Manager"
+description: "Set the Software Updates client branding information by modifying the necessary site control file settings."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

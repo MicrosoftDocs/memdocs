@@ -1,6 +1,7 @@
 ---
 title: "GetPolicyState Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation (WMI) class method that returns the state of a policy object."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
