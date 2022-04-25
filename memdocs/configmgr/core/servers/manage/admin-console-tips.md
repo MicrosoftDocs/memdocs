@@ -29,8 +29,14 @@ The following improvements were made to the console and user experience:
 - When using temporary device nodes, device actions like **Run Scripts** are now available to make the experience in the console consistent.
 - Additional Management Insights rules now have click-through actions
 - Copy/paste is available for more objects from details panes.
-   - Added the **Name** property in the details pane for configuration items, configuration item related policies, and applications
+   - Added the **Name** property in the details pane for configuration items, configuration item related policies, and applications.
 - Software update search results and the search criteria are now cached when you navigate to another node. When you navigate back to the **All Software Updates** node, your search criteria and results are preserved from your last query. Closing the console will clear the cached query.
+- Added a search filter to the **Products** and **Classifications** tabs in the **Software Update Point Component Properties**. <!--10998089, 9575773-->
+- You can now exclude subcontainers when doing **Active Directory System Discovery** and **Active Directory User Discovery** in untrusted domains. <!--4655840, 9575773-->
+- Added a **Cloud Sync** column to collections to indicate if the collection is synchronizing with Azure Active Directory. <!--12433024, 9575773-->
+- Added the **Collection ID** to the collection summary details tab <!--12630582, 9575773-->
+- Increased the size of the **Membership Rules** pane in the **Properties** page for collections. <!--12947295, 9575773 -->
+- Added a **View Script** option for **Run PowerShell Script** steps when using the **View** action for a task sequence. <!--12498818, 9575773 -->
 - The console now offers a dark theme. For more information, see [How to use the console](admin-console.md#bkmk_dark).
 
 ### <a name="bkmk_csv"></a> Export to CSV

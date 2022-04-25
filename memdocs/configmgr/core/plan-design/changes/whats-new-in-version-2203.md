@@ -2,7 +2,7 @@
 title: What's new in version 2203
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2203 of Configuration Manager current branch.
-ms.date: 04/08/2022
+ms.date: 04/25/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -201,6 +201,12 @@ Based on your feedback, we've made a few improvements to the console and user ex
 - Copy/paste is available for more objects from details panes.
 - The **Name** property is added to the details pane for configuration items, configuration item related policies, and applications.
 - Software update search results and the search criteria are now cached when you navigate to another node. When you navigate back to the **All Software Updates** node, your search criteria and results are preserved from your last query.
+- Added a search filter to the **Products** and **Classifications** tabs in the **Software Update Point Component Properties** <!--10998089, 9575773-->
+- You can now exclude subcontainers when doing **Active Directory System Discovery** and **Active Directory User Discovery** in untrusted domains <!--4655840, 9575773-->
+- Added a **Cloud Sync** column to collections to indicate if the collection is synchronizing with Azure Active Directory <!--12433024, 9575773-->
+- Added the **Collection ID** to the collection summary details tab <!--12630582, 9575773-->
+- Increased the size of the **Membership Rules** pane in the **Properties** page for collections <!--12947295, 9575773 -->
+- Added a **View Script** option for **Run PowerShell Script** steps when using the **View** action for a task sequence <!--12498818, 9575773 -->
 
 For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#bkmk_2203).
 
