@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/10/2022
+ms.date: 04/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -199,6 +199,8 @@ If the user does not have the Company Portal app installed, the user will be tak
 > [!NOTE]
 > To improve page load performance on the Company Portal website, app icons will now load in batches. End users may temporarily see a placeholder icon for some of their applications while loading the Company Portal website. 
 
+For feedback related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
+
 ## Company Portal and Apple Setup Assistant for iOS/iPadOS
 
 For iOS/iPadOS devices running 13.0 and later, when creating an Automated Device Enrollment profile, you can now choose a new authentication method: **Setup Assistant with modern authentication**. This method provides all the security from authenticating with the Company Portal but avoids the issue of leaving end users stuck on a device that they can't use while the Company Portal installs on the device. The user has to authenticate using Azure AD credentials during the setup assistant screens. This will require an additional Azure AD login post-enrollment in the Company Portal app to gain access to corporate resources protected by Conditional Access and for Intune to assess device compliance. The correct Company Portal version will automatically be sent down as a required app to the device for iOS/iPadOS, which we recommend choosing a VPP token for from the enrollment profile.
@@ -306,7 +308,7 @@ For more information about notifications, see [Receive a custom notification](..
 
 ## Configure feedback settings for Company Portal and Microsoft Intune apps
 
-There are a number of M365 enterprise policies which affect whether feedback must be enabled or disabled for currently logged users. These policies are available via the [Microsoft 365 Apps admin center](https://config.office.com/). In relation to Microsoft Intune, these policies affect feedback and surveys for the Intune Company Portal app and Microsoft Intune app.
+There are a number of M365 enterprise policies which affect whether feedback must be enabled or disabled for currently logged users. These policies are available via the [Microsoft 365 Apps admin center](https://config.office.com/). In relation to Microsoft Intune, these policies affect feedback and surveys for the Intune Company Portal app, the Web Company Portal, and Microsoft Intune app.
 
 M365 feedback policies include the following policies:
 
