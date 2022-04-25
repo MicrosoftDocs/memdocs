@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 04/04/2022
+ms.date: 04/25/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -84,27 +84,27 @@ Either way, you should plan to update your workloads to support cloud native end
 
 Your workloads should have the following characteristics:
 
-- Securely accessible from anywhere an end user is located or connected without requiring a connection to a corporate or internal network
-- Hosted in, by, or through a cloud service
-- Not dependant on the use of any specific end user device
+- Securely access apps and data from anywhere an end user is located. Access doesn't require a connection to a corporate or internal network.
+- Hosted in, hosted by, or hosted through a cloud service.
+- Doesn't require or depends on a specific device.
 
-Remember, it's common for workloads to depend on other workloads. Cloud native endpoints also include the services and workloads that support the endpoints.
+Cloud native endpoints also include the services and workloads that support the endpoints.
 
 ### Common workloads and solutions
 
-The following workloads are customer specific configuration, tools, processes, and services for enabling user productivity and endpoint management.
+The following workloads are configuration, tools, processes, and services for enabling user productivity and endpoint management.
 
-Your exact workloads, details, and how to update the workloads for cloud native endpoints might be different. Also, you don’t need to transition every workload. But, you do need to consider each workload, its impact on user productivity, and the device management abilities. Converting some workloads to use cloud native endpoints might take longer than others. Workloads may also have interdepdnancies on one another that must be considered.
+Your exact workloads, details, and how to update the workloads for cloud native endpoints might be different. Also, you don’t need to transition every workload. But, you do need to consider each workload, its impact on user productivity, and the device management abilities. Converting some workloads to use cloud native endpoints might take longer than others. Workloads may also have interdepdnancies on each another.
 
 - **Device identity**
   
-  A device's identity is determined by which identity providers (IdP) have knowledge of and a seucirty trust with the device. For Windows endpoints, the two prevalent IdP's are on-premises Active Directory (AD) and Azure Active Directory (AAD). Endpoint's with identities from one of these two IdP's are typically joined to one or both.
+  A device's identity is determined by the identity providers (IdP) that have knowledge of the device and a security trust with the device. For Windows endpoints, the most common IdP's are on-premises Active Directory (AD) and Azure Active Directory (Azure AD). Endpoints with identities from one of these two IdP's are typically joined to one or both.
 
-  - For cloud native endpoints, AAD join is the best choice for the device's identity as this requires no connectivity to an on-premises network, resource, or service.
-  - On-premises AD join and hybrid Azure AD join require connectivity to an on-premises domain controller. They need connectivity for initial user sign in, to delivery group policies, and change passwords. These options aren’t suitable for cloud native endpoints.
+  - For cloud native endpoints, Azure AD join is the best choice for the device's identity. It doesn't require any connectivity to an on-premises network, resource, or service.
+  - On-premises AD join and hybrid Azure AD join require connectivity to an on-premises domain controller. They need connectivity for initial user sign in, to deliver group policies, and change passwords. These options aren’t suitable for cloud native endpoints.
 
 > [!NOTE]
-> AAD registration, sometimes referred to as workplace join, is intended as a BYOD scenario only and should not be considered for use on corporate owned Windows endpoints. Because of this, some functionality may not be supported or work as expected on AAD registered Windows endpoints.
+> Azure AD registration, sometimes referred to as workplace join, is for BYOD scenarios only. It shouldn't be for organization owned Windows endpoints. Some functionality may not be supported or work as expected on Azure AD registered Windows endpoints.
 
 - **Provision your endpoints**
 
@@ -117,10 +117,11 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
 - **Deploy software and applications**
 
-  Nearly all users rely heavily on software and applications not included with the core operating system to be productive and perform their job. Which software applications each user may need is highly variable in most organizations based on many different circumstances and criteria. In many cases, the full matrix of these requirements may not be fully known or understood by the central IT department, however, delivering and managing these applications is still the repsonsbility of that same IT department. Users should be able to request and install the applications they need to complete their job functions regardless of which endpoint they are using or where they are using it from.
+  Most users need and use software and applications not included with the core operating system. In many cases, IT doesn't know or understand the specific app requirements. However, delivering and managing these applications is still the responsibility of your IT team. Users should be able to request and install the applications they need to do their jobs, regardless of the endpoint they're using or where they're using it from.
 
-  - Software and applications should be deployed from a cloud-based system, like Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)).
-  - User self-service should be considered to reduce initial provisioning time, eliminate unnecessary complexity, and reduce user confusion that may result from deploying software not needed by the end user. This is reduces the buden from IT from attempting to micro-manage and pre-determine every possible permutation or combination of software to install to users within the origanization.
+  - To deploy software and applications, use a cloud-based system, like Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)).
+
+  - Consider user self-service. ??Does this mean users install their own apps??This option reduces initial provisioning time, eliminates unnecessary complexity, and reduces user confusion from deploying software not needed by the users. It reduces the burden from IT from attempting to micro-manage and pre-determine every possible permutation or combination of software to install to users within the origanization.
 
   For more information, see:
 
@@ -129,11 +130,11 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
 - **Configure device settings using policies**
 
-  Policy management, including security, is the foundation for most endpoint management. Endpoint policies enable an organization to enforce a specific security baseline as well as a standard configuration on managed endpoints. With a cloud-native endpoint, a lighter-touch approach is strongly recommended particularily for items considered user preferences.
+  Policy and security management is the foundation for endpoint management. Endpoint policies allow your organization to enforce a specific security baseline and a standard configuration on your managed endpoints. With cloud native endpoints, a lighter-touch ?? approach is strongly recommended particularily for items considered user preferences.
 
   - Traditional policy enforcement using group policy isn't possible with cloud native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](/mem/intune/configuration/settings-catalog) and [administrative templates](/mem/intune/configuration/administrative-templates-windows).
 
-    [Group Policy analytics](/mem/intune/configuration/group-policy-analytics) can analyze your on-premises GPOs, and see if those same settings are supported in the cloud.
+    [Group Policy analytics](/mem/intune/configuration/group-policy-analytics) can analyze your on-premises GPOs, see if those same settings are supported in the cloud, and create a policy using those settings.
 
   - If you have existing policies that issue certificates, manage BitLocker, and provide endpoint protection, then these features will need moved ??"moved"?? to Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)).
 
@@ -148,7 +149,7 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
 - **Deploy security, feature, and app updates**
 
-  The requirement and need to deploy updates, particularily security updates, is universally understood and accepted so no justification is needed for this workload. However, many traditional on-prem solutions are not capable of delviering updates to cloud-native endpoints at all or in an efficient manner. From a security perspective, this may be the most important, and thus first worload that you should transition to support cloud-native Windows endpoints.
+    Use additional on-prem solutions can't deploy updates to cloud native endpoints or deploy them efficiently. From a security perspective, this workload may be the most important. It should be the first workload that you transition to support cloud native Windows endpoints.
 
   - **Deploy Windows updates** using a cloud-based system, like Windows Update for Business. Using Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)), you can use Windows Update for Business to deploy security updates and feature updates.
 
@@ -171,23 +172,32 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
 - **Manage user data and settings**
 
-  <JS> We need some more discussion on this as these are great questions that we (Microsoft) have provided no good answers for.
-  
-  User data is the most critical product of a user's work. This data is often shared with other users, both internal and external to an organization for a variety of purposes. For a user to be productive in a cloud-native context, they must have the ability to produce data and access that content on any endpoint they choose to work on. Depending on the application used to create the content and how that content is stored, the content may or may not synchronized to the local endpoint. Also, Depending on the criticiality and sensitivity of the data, this data may be protected, but it must still be accesible. User data includes the following items:
+  User data includes the following items:
 
-    - User documents
-    - Mail app configuration
-    - Browser favorites
-    - LOB application-specific data
-    - LOB application-specific configuration
+  - User documents
+  - Mail app configuration
+  - Web browser favorites
+  - Line of Business (LOB) application specific data
+  - Line of Business (LOB) application specific configuration settings
   
-  User settings, while not necessarily as critical as user data, may still be important to a user's productivity. These settings include user preferences for operating system and application settings as well as configuration for applications and the operating system that enable the user to complete their work. Most operating system specific settings and configuration are stored in the registry. This is true for many applications as well but this is application specific and determined by the application vendor and not Microsoft.
+  Users need to create and access their data from any endpoint. This data also needs to be protected, and might need to be shared with other users.
   
-  User data is best stored in a cloud storage provider that handles underlying details like synchronization, sharing, offline access, and conflict resolution. Microsoft OneDrive is the best example of a cloud storage provider. User settings, because of their variable nature and possible volatility have no one solution to meet the requirements of cloud-native endpoints.
+  - Store user data and settings in a cloud storage provider, like Microsoft OneDrive. Cloud storage providers can handle data synchronization, sharing, offline access, conflict resolution, and more.
+  
+    For more information, go to [OneDrive guide for enterprises](/onedrive/plan-onedrive-enterprise).
+
+  > [!IMPORTANT]
+  > Some user settings, like OS preferences or application-specific settings, are stored in the registry. Accessing these settings from anywhere may not be realistic, and might be prohibited from synchronizing with different endpoints. 
+  >
+  > It's possible these settings can be exported, and then imported in another device. For example, you can export user settings from Outlook, Word, and other Office apps.
+  >
+  > If you need to export user settings for the OS or a specific app, then review the vendor's documentation.
 
 - **Access on-premises resources**
   
-  While you can transition most workloads to a cloud-native friendly solution, this will some amount of time in most cases. In some cases, your organization may simply not be able to transition to a cloud-native firendly solution in the forseeable future. For these scenarios, accessing the existing on-p;remises resource or service may be the only viable choice and thus some level of access for at least some users will still be required. For these on-premises services, resources, and applications, there are two main consideration that you must reconcile.
+  Some organizations can't transition some workloads to cloud native solutions. The only option might be accessing existing on-premises resources or services from a cloud native endpoint. For these scenarios, users need access.
+  
+  For these on-premises services, resources, and applications, consider the following tasks:
 
   - **Authentication and authorization**: To access on-premises resources from cloud native endpoints, users need to authenticate and verify who they are. For more specific information, see [Authentication and access to on-premises resources with cloud native endpoint](cloud-native-endpoints-on-premises.md#authentication-and-access-to-on-premises-resources).
 
@@ -248,20 +258,54 @@ The following phases contain a high-level approach for organizations to move the
 
 Define and clarify additional items that need to be planned logistically to support workloads and their move to supporting cloud-native.
 
-1. Define the endpoints that require a cloud identity. This is necessary as not all endpoints in an organization may require a cloud identity. Endpoints not connected to the Internet or for on-premises use only cannot or should not have a cloud identity and thus should not be considered for migration to cloud-native.
-2. Define dependencies. Workloads, users, and devices have many technical and non-technical dependancies. To successfully transition a workload with minimal impact to users and the orgnaization, you must account for these dependancies. A wide variety of things may be a dpednancy depending on the workload including business processes and continuity, security standards, local laws and regulations, user knowledge and use of the workload, and cpaital or operational costs and budget. The basic question to answer for each workload is what will be affected if we change anything about the services provided by this workload. You must account for the effects of this change.
-3. Define milestones and success criteria for each workload's transition to cloud-native friendly. This is a basic tracking mechanism to understand and define the progress of the transition. Each workload will have it's own milestones and success criteria based on the organization's use of the workload and it's applicability to specific endpoints and users.
-4. Autopilot planning including the following items:
-  - How and when devices will be registered
-  - Necessary group tags for targeting policies
-  - Profile creation, configuration, and targeting
+1. **Define the endpoints that require a cloud identity**
+
+    - Endpoints that use internet access require a cloud identity.
+    - Endpoints that don't use the internet or are only used on-premises shouldn't have a cloud identity. Don't migrate these scenarios to be cloud native.
+
+2. **Define dependencies**
+
+    Workloads, users, and devices have technical and non-technical dependancies. To transition with minimal impact to users and the organization, you must account for these dependencies.
+
+    For example, a dependency can be:
+    
+    - Business processes and continuity
+    - Security standards
+    - Local laws and regulations
+    - User knowledge and use of a workload
+    - Capital, operational costs and budget
+
+    For each workload, ask "What will be affected if we change anything about the services provided by this workload?". You must account for the effects of this change.
+
+3. **Define milestones and success criteria for each workload**
+
+    Each workload has its own milestones and success criteria. They can can be based on the organization's use of the workload and its applicability to specific endpoints and users. 
+
+    To understand and define the progress of the transition, track and monitor this information. 
+
+4. **Use Windows Autopilot, and plan for your endpoints**
+
+    - Determine how and when devices will be registered to your organization.
+    - Determine and create the necessary group tags to target your Windows Autopilot policies.
+    - Create your Windows Autopilot profile with its configuration settings, and target the devices that'll receive your profile.
 
 ### ✅ Phase 2: Enable endpoint cloud hybrid identity
 
-For existing Windows endpoints that you do not wish to reset at this time, enable hybrid Azure AD join so that these existing endpoints can use cloud services that require a cloud identity. This is a trasitory step on your organization's path to cloud-native and is not a final stage or expected end state for any endpoints. All existing endpoints should eventually be reset to fully embrace cloud-native. See [Configure hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join) for complete details on enabling hybrid Azure AD join.
+To be fully cloud native, your existing Windows endpoints must be reset. When you reset, the endpoint is restored back to factory settings. All apps, settings, and personal data on the device is deleted.
+
+If you're not ready to reset your endpoints, then you can enable hybrid Azure AD join. A cloud identity is created for hybrid Azure AD join endpoints. Remember, hybrid Azure AD join still requires on-premises connectivity.
+
+Hybrid Azure AD join is a transitionary step to cloud native, and isn't the end goal. The end goal is for all existing endpoints to be fully cloud native. 
+
+When endpoints are fully cloud native, user data is stored in a cloud storage provider, like OneDrive. So when an endpoint is reset, the user applications, configuration, and data is still accessible, or will replicate to a newly provisioned endpoint.
+
+For more information, go to:
+
+- [Azure AD joined (AADJ) vs. Hybrid Azure AD joined (HAADJ)](azure-ad-joined-hybrid-azure-ad-joined.md)
+- [Configure hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join)
   
 > [!NOTE]
-> There is no Microsoft supported path to convert existing endpoints from on-premises domain joined or hybrid Azure Active Directory joined to Azure Active Directory joined. One end-result of using fully cloud-native endpoints is enabling user independence from their devices such that resetting an endpoint is does not impact the end-user. This is because their applications, configuration, and data is still readily accessible or will replicate to the newly provisioned endpoint in a short-amount of time.
+> There isn't a Microsoft supported path to convert existing endpoints from on-premises domain joined or hybrid Azure AD joined to Azure AD joined. These endpoints must be reset.
 
 ### ✅ Phase 3: Cloud attach Configuration Manager (optional)
 
@@ -273,12 +317,40 @@ For more specific information, see [Cloud attach your Configuration Manager envi
 
 ### ✅ Phase 4: Create an Azure AD joined proof of concept
 
-This phase can start at nearly any time and is critical to identify potential (and possibly unknown) issues and validate overall functionality and resolutions to those issues. As with all proofs of concept, the ultimate intent is to prove and validate functionality in an actual enterpise environment instead of a pristine lab environment. Important steps for this phase include the following:
+This phase can start at any time and is critical. It helps identify potential and possibly unknown issues, and validates overall functionality and resolutions to those issues. As with all POCs, the goal is to prove and validate functionality in an actual enterpise environment instead of a lab environment.
 
-1. Implement a minimum viable configuration for enforcement using Intune. This is important as you do not want to introduce endpoints onto your internal network or for production use that do not adhere to your organization's security standards or are not configured for an end user to perform their work. This minimum configuration does not and should not have all possible configuration applied as the intent is to discover additional configuration required for end users to be succesful.
-2. Configure Windows Autopilot for Azure AD joined. Provisioning new endpoints and reprovisioning existing endpoints using Autopilot is the best and fastest way to introduce AAD joined systems to your organization and is thus an important part of the POC. 
-3. Deploy POC Azure AD joined systems. POC endpoints should be a cross-section of endpoints in the environment that are indicative and representative of various configurations and users to enable as much validation of this new system state as possible. Only real production use by real production users will fully validate the functionality of all workloads within an organization. Through natural, day-to-day use of the POC AAD endpoints, users will organicly test and validate all workloads in an organization. Checklists of business critical functionality and scenarios can be provided to users of these POC devices as well if desired to ensure these are accounted for. These will be specific to each organization and may evolve or change as workloads are transitioned to cloud-native friendly workloads.
-4. Validate functionality. Based on feedback from the users of the POC endpoints, workloads and their functionality with repect to cloud-native endpoints is validated through actual use. In some cases, additional blockers or previously unknown or unaccounted for workloads or scenarios may also be discovered. Validation is utlimately an interative process based on the workloads and their configuration within an organization. Using the milestones and success criteria previously established for each workload is key in determining the progress and scope of the POC. 
+Important steps for this phase include:
+
+1. **Implement a minimum viable configuration for enforcement using Intune**
+
+    This step is important. You don't want to introduce endpoints to your network or to production use that:
+    
+    - Don't follow your organization's security standards
+    - Aren't configured for an end user to perform their work. 
+
+    This minimum configuration doesn't and shouldn't have all possible configurations applied. Remember, the intent is to discover additional configuration that's required for end users to be succesful.
+
+2. **Configure Windows Autopilot for Azure AD joined endpoints**
+
+    Using Windows Autopilot to provision new endpoints and reprovision existing endpoints is the fastest way to introduce Azure AD joined systems to your organization. It's an important part of the POC.
+
+3. **Deploy a POC for Azure AD joined systems**
+
+    - Use a mix of endpoints that represent different configurations and users. You want as much validation of this new system state as possible.
+
+    - Only real production use by real production users will fully validate the workloads and their functionality. Through natural, day-to-day use of the POC Azure AD endpoints, users organically test and validate your workloads. 
+
+    - Create checklists of business critical functionality and scenarios, and give these lists to your POC users. The checklists are specific to each organization and may change as workloads are transitioned to cloud native friendly workloads.
+
+4. **Validate functionality**
+
+Validation is an interative process, and is based on the workloads and their configuration within an organization.
+
+    - Collect user feedback on the POC endpoints, workloads, and their functionality. This feedback should be from users that used the cloud native endpoints.
+
+      Additional blockers, and previously unknown or unaccounted for workloads/scenarios may be discovered.
+
+    - Use the milestones and success criteria previously established for each workload. They will help determine the progress and scope of the POC.
 
 ### ✅ Phase 5: Implement full modern provisioning
 
