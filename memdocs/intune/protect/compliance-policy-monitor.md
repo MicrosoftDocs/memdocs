@@ -96,21 +96,19 @@ Descriptions of the different device compliance policy states:
 > [!IMPORTANT]
 > Devices that are enrolled into Intune, but not targeted by any device compliance policies are included in this report under the **Compliant** bucket.
 
-#### Device behavior with a compliance status of Error
+#### Device behavior with a compliance settings in Error state
 
-Devices keep a compliance status of **Error** for up to seven days to allow time for the compliance calculation to complete correctly. Within those seven days, its previous compliance status applies until the device evaluates as **Compliant** or **Not compliant**. If after seven days, the device still has a status of **Error**, it becomes **Not compliant**. Note that grace periods do not apply to devices with an Error status.
+When a setting for a compliance policy returns a value of **Error**, the existing compliance state on the device remains unaffected for up to seven days to allow time for the compliance calculation to complete correctly for that setting. Within those seven days, the device's existing compliance status continues to apply until the compliance policy setting evaluates as **Compliant** or **Not compliant**. If after seven days, the setting still has a status of **Error**, the device becomes **Not compliant** immediately. Note that grace periods do not apply to compliance policies with a setting in an **Error** state.
 
 ##### Examples:
-	
-- A device is initially marked **Compliant**, but then its status changes to **Error**. After three days, compliance evaluation completes successfully and the device is marked **Not compliant**. The user can continue to use the device to access Conditional Access-protected resources within the first three days after the status changes to **Error**. Once the device is marked **Not compliant**, this access is removed until the device becomes **Compliant** again.
-	
-- A device is initially marked **Compliant**, but then its status changes to **Error**. After three days, compliance evaluation completes successfully and the device is marked **Compliant**. The user is able to continue to access Conditional Access-protected resources without interruption.
-	
 
-- A device is initially marked **Compliant**, but then its status changes to **Error**. The user is able to access Conditional Access-protected resources for seven days, but after seven days, the compliance status is still **Error**. At this point, the device becomes **Not compliant** and the user loses access to the protected resources until the device becomes **Compliant** – even if there is a grace period set for the applicable compliance policy.
-	
+- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. After three days, compliance evaluation completes successfully and the setting now reports **Not compliant**. The user can continue to use the device to access Conditional Access-protected resources within the first three days after the setting states changes to **Error**, but once the setting returns **Not compliant**, the device is marked **Not compliant** and this access is removed until the device becomes **Compliant** again.
+ 
+- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. After three days, compliance evaluation completes successfully, the setting returns **Compliant**, and the device's compliance status becomes **Compliant**. The user is able to continue to access Conditional Access protected resources without interruption.
 
-- A device is initially marked **Not compliant**, but then its status changes to **Error**. After three days, compliance evaluation completes successfully and the device is marked **Compliant**. The user is prevented from accessing Conditional Access-protected resources for the first three days. Once the device is marked **Compliant**, the user can begin to access protected resources on the device.
+- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. The user is able to access Conditional Access protected resources for seven days, but after seven days, the compliance setting still returns **Error**. At this point, the device becomes Not compliant immediately and the user loses access to the protected resources until the device becomes **Compliant** – even if there is a grace period set for the applicable compliance policy.
+
+-  A device is initially marked **Not compliant**, but then a setting in one of the compliance policies targeted to the device reports Error. After three days, compliance evaluation completes successfully, the setting returns **Compliant**, and the device's compliance status becomes **Compliant**. The user is prevented from accessing Conditional Access protected resources for the first three days (while the setting returns **Error**). Once the setting returns **Compliant** and the device is marked **Compliant**, the user can begin to access protected resources on the device.
 
 #### Drill down for more details
 

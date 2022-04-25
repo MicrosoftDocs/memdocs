@@ -48,7 +48,7 @@ Two built-in roles are available for Cloud PC:
 - Azure network connection configuration
 - Provisioning
 
-**Cloud PC Reader**: Views Cloud PC data available in the Cloud PC node in Microsoft Endpoint Manager, but can’t make changes.
+**Cloud PC Reader**: Views Cloud PC data available in the Windows 365 node in Microsoft Endpoint Manager, but can’t make changes.
 
 ## Custom roles (public preview)
 
