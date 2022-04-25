@@ -26,7 +26,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Deploy settings for Windows Hello for Business on Windows to groups of devices with Microsoft Intune
+# Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune
 
 Use an Identity protection profile to manage Windows Hello for Business on groups of devices in Microsoft Intune. [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) is a method for signing in to Windows devices by replacing passwords, smart cards, and virtual smart cards. Intune includes built-in settings so Administrators can configure and use Windows Hello for Business. For example, you can use these settings to:
 
