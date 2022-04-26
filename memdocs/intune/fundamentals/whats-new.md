@@ -60,6 +60,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
+## Week of April, 25, 2022
+
+### Device Management
+
+#### Windows 10 and Windows 11 Enterprise multi-session is generally available<!-- 14012240-->
+
+In addition to the existing functionality, you can now: 
+
+ - Configure profiles under Endpoint Security when you select **Platform** Windows 10, Windows 11, and Windows Server.
+ - Manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs created in Azure Government Cloud in US Government Community (GCC) High and DoD. 
+
+For more information, see [Windows 10/11 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md)
+
 ## Week of April, 11, 2022
 
 ### Device Management

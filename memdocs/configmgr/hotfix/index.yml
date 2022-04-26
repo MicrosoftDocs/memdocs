@@ -17,6 +17,12 @@ metadata:
   ms.localizationpriority: high
 
 landingContent:
+  - title: Configuration Manager 2203
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 11052354 Summary of changes in 2203
+            url: 2203/13174460.md
   - title: Configuration Manager 2111
     linkLists:
       - linkListType: overview
