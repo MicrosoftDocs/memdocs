@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Using Azure Virtual Desktop multi-session with Microsoft Intune (preview)
+title: Using Azure Virtual Desktop multi-session with Microsoft Intune
 titleSuffix: 
 description: Guidelines for using Azure Virtual Desktop multi-session with Microsoft Intune
 keywords:
 author: smbhardwaj  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/18/2021
+ms.date: 04/26/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,10 +29,9 @@ ms.collection:
   - highpri
 ---
 
-# Windows 10 or Windows 11 Enterprise multi-session remote desktops (preview)
+# Windows 10 or Windows 11 Enterprise multi-session remote desktops
 
-> [!IMPORTANT]
-> Azure Virtual Desktop multi-session with Microsoft Intune is currently in preview and may be modified before it’s released. See [Public preview in Microsoft Intune](public-preview.md) for more information.
+Azure Virtual Desktop multi-session with Microsoft Intune is now generally available.
 
 You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Endpoint Manager admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you must use device-based configurations. Such configurations require user-less enrollments. 
 
@@ -42,19 +41,21 @@ Windows 10 or Windows 11 Enterprise multi-session is a new Remote Desktop Sessio
 - Gives users a familiar Windows 10 or Windows 11 experience.
 - Supports use of existing per-user Microsoft 365 licensing.
 
+You can manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs created in Azure Government Cloud in US Government Community (GCC), GCC High, and DoD. 
+
 ## Overview
 
 Microsoft Intune only supports managing Windows 10 or Windows 11 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
 
 ## Prerequisites
 
-This public preview feature supports Windows 10 or Windows 11 Enterprise multi-session VMs which are:
+This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs which are:
 
 - Running Windows 10 multi-session, version 1903 or later, or running Windows 11 multi-session.
 - Set up as remote desktops in pooled host pools that have been deployed through Azure Resource Manager.
 - Running a Azure Virtual Desktop agent version of 1.0.2944.1400 or later.
 - [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Microsoft Intune using one of the following methods:
-  - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined. For this preview, we only support enrollment via group policy if you're using a single MDM provider.
+  - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
 - Azure AD-joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 
@@ -82,7 +83,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > **Configuration profiles** > **Create Profile**.
 2. For **Platform**, select **Windows 10 and later**.
-3. For **Profile type**, select **Settings Catalog (Preview)**, or when deploy settings by using a Template, select **Templates** and then the name of the supported Template.
+3. For **Profile type**, select **Settings catalog (Preview)**, or when deploy settings by using a Template, select **Templates** and then the name of the supported Template.
 4. Select **Create**.
 5. On the **Basics** page, provide a **Name** and (optionally) **Description** > **Next**.
 6. On the **Configuration settings** page, select **Add settings**.
@@ -138,6 +139,12 @@ All other policies report as **Not applicable**.
 > [!NOTE]
 > [Conditional Access for Exchange on-premises](../protect/conditional-access-exchange-create.md) isn't supported for Windows 10 or Windows 11 Enterprise multi-session VMs.
 
+## Endpoint security
+
+You can configure profiles under Endpoint security for multi-session VMs by selecting Platform Windows 10, Windows 11, and Windows Server. 
+
+For more information, see [Manage device security with endpoint security policies in Microsoft Intune](../protect/endpoint-security-policy.md)
+
 ## Application deployment
 
 All Windows 10 or Windows 11 apps can be deployed to Windows 10 or Windows 11 Enterprise multi-session with the following restrictions:
@@ -192,7 +199,7 @@ Out of Box Experience (OOBE) enrollment isn't supported for Window 10 or Windows
 - Windows Autopilot and Commercial OOBE aren't supported.
 - Enrollment status page isn’t supported.
 
-Windows 10 or Windows 11 Enterprise multi-session managed by Microsoft Intune is not currently supported for US Government Community (GCC), GCC High, DoD, or China.
+Windows 10 or Windows 11 Enterprise multi-session managed by Microsoft Intune is not currently supported for China.
 
 ## Troubleshooting
 
@@ -212,7 +219,6 @@ The following sections provide troubleshooting guidance for common issues.
 |Settings catalog policy fails|Confirm the VM is enrolled using device credentials. Enrollment with user credentials is not currently supported for Windows 10 or Windows 11 Enterprise multi-session.|
 |Configuration policy did not apply|Templates (with the exception of Certificates) are not supported on Windows 10 or Windows 11 Enterprise multi-session. All policies must be created via the settings catalog.|
 Configuration policy reports as Not applicable|Some policies are not applicable to Azure Virtual Desktop VMs.|
-|Administrative template policy did not apply|Some ADMX settings currently require a Windows Insider Preview Build. You can hover over the information bubble next to the setting name to see if an Insider build is required for a specific setting.|
 |Microsoft Edge/Microsoft Office ADMX policy does not show up when I apply the filter for Windows 10 or Windows 11 Enterprise multi-session edition|Applicability for these settings is not based on the Windows version or edition but on whether those apps have been installed on the device. To add these settings to your policy, you may have to remove any filters applied in the settings picker.|
 |App configured to install in system context did not apply|Confirm the app does not have a dependency or supersedence relationship on any apps configured to install in user context. User context apps are not currently supported on Windows 10 or Windows 11 Enterprise multi-session.|
 |Update rings for Windows 10 and later policy did not apply|Windows Update for Business policies are not currently supported.|
