@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 04/26/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -47,15 +47,15 @@ The endpoint is joined to Azure AD. It's not joined to an on-premises AD domain.
 
 To join Windows endpoints to Azure AD, you have some options:
 
-- Use [Windows Autopilot](/mem/autopilot/). Windows Autopilot guides users through the Windows Out of Box Experience (OOBE). When users enter their their work or school account, the endpoint joins Azure AD.
+- **Use [Windows Autopilot](/mem/autopilot/)**. Windows Autopilot guides users through the Windows Out of Box Experience (OOBE). When users enter their their work or school account, the endpoint joins Azure AD.
 
   All devices registered with Windows Autopilot are automatically considered organization owned devices. Windows Autopilot is one of the most adopted approaches by organizations, big and small, to get their devices joined to Azure AD, and managed by IT.  
 
-- Use Windows Out of Box Experience (OOBE). When users enter their work or school account on the device, the endpoint automatically joins Azure AD.
+- **Use Windows Out of Box Experience (OOBE)**. When users enter their work or school account on the device, the endpoint automatically joins Azure AD.
 
-- Use the **Settings** app. On the device, end users open the Settings app (**Accounts** > **Access work or school** > **Connect**), and use their work or school account.
+- **Use the Settings app**. On the device, end users open the Settings app (**Accounts** > **Access work or school** > **Connect**), and use their work or school account.
 
-- Use a Window Provisioning Package. For more information, see:
+- **Use a Window Provisioning Package**. For more information, see:
 
   - [Provisioning packages for Windows](/windows/configuration/provisioning-packages/provisioning-packages)
   - [Bulk join a Windows device to Azure AD and Microsoft Endpoint Manager using a provisioning package - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/bulk-join-a-windows-device-to-azure-ad-and-microsoft-endpoint/ba-p/2381400) blog post
@@ -109,5 +109,5 @@ For new, refurbished, or refreshed Windows devices, Microsoft recommends [Azure 
 - [What are cloud native endpoints?](cloud-native-endpoints-overview.md)
 - [Tutorial: Get started with cloud native Windows endpoints with Microsoft Endpoint Manager](cloud-native-windows-endpoints.md)
 - [Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
-- [Planning guide](cloud-native-endpoints-planning-guide.md)
-- [Known issues](cloud-native-endpoints-known-issues.md)
+- [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md)
+- [Known issues and important information](cloud-native-endpoints-known-issues.md)

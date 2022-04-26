@@ -20,8 +20,6 @@ items:
         href: azure-ad-joined-hybrid-azure-ad-joined.md
       - name: Cloud native endpoints and on-premises resources
         href: cloud-native-endpoints-on-premises.md
-      - name: Azure AD Kerberos
-        href: azure-ad-kerberos.md
     - name: Planning guide
       href: cloud-native-endpoints-planning-guide.md
     - name: Known issues

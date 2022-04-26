@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 04/26/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -35,20 +35,20 @@ Cloud native endpoints can access on-premises resources. This article goes into 
 
 ## Prerequisites
 
-For cloud-native Windows endpoints to access on-premises resources and services that use on-premises Active Directory for authentication, the following prerequisites are required:
+For cloud-native Windows endpoints to access on-premises resources and services that use on-premises Active Directory (AD) for authentication, the following prerequisites are required:
 
 - Client apps must use Windows integrated authentication (WIA). For more specific information, see [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication).
-- Configure Azure AD Connect. Azure AD Connect synchronizes user accounts from the on-premises Active Directory to Azure Active Directory. For more specific information, see [Azure AD Connect sync: Understand and customize synchronization](/azure/active-directory/hybrid/how-to-connect-sync-whatis).
+- Configure Azure AD Connect. Azure AD Connect synchronizes user accounts from the on-premises AD to Azure AD. For more specific information, see [Azure AD Connect sync: Understand and customize synchronization](/azure/active-directory/hybrid/how-to-connect-sync-whatis).
 
   In Azure AD Connect, you may have to adjust your domain-based filtering to confirm that the required domains data is synchronized to Azure AD.
 
-- The device has line of sight connectivity (either directly or through VPN) to a domain controller from the Active Directory domain and to the service or resource being accessed.
+- The device has line of sight connectivity (either directly or through VPN) to a domain controller from the AD domain and to the service or resource being accessed.
 
 ## Similar to on-premises Windows devices
 
 For end users, a Windows cloud native endpoint behaves like any other on-premises Windows device. 
 
-The following list is common set of on-premises resources that users can access from their Windows Azure AD joined devices:
+The following list is a common set of on-premises resources that users can access from their Windows Azure AD joined devices:
 
 - A file server: Using SMB (Server Message Block), you can map a network drive to a domain-member server that hosts a network share or NAS (Network Attached Storage).
 
@@ -67,7 +67,7 @@ The following list is common set of on-premises resources that users can access 
 
 The following steps describe how an Azure AD joined endpoint authenticates and accesses (based on permissions) an on-premises resource.
 
-The following steps are an overview. For more specific information, see [Primary Refresh Token (PRT) and Azure AD - Azure Active Directory](/azure/active-directory/devices/concept-primary-refresh-token).
+The following steps are an overview. For more specific information, see [Primary Refresh Token (PRT) and Azure AD](/azure/active-directory/devices/concept-primary-refresh-token).
 
 1. When end users sign in, their credentials are sent to the Cloud Authentication Provider (CloudAP) and the Web Account Manager (WAM).
 
@@ -75,7 +75,7 @@ The following steps are an overview. For more specific information, see [Primary
 
 3. During Windows sign in, the Azure AD CloudAP plugin requests a Primary Refresh Token (PRT) from Azure AD using the end user credentials. It also caches the PRT, which enables cached sign in when end users don't have an internet connection. When users try to access applications, the Azure AD WAM plugin uses the PRT to enable SSO.
 
-4. Azure AD authenticates the user and device, and returns a PRT and an ID token. The ID token includes the following attributes about the user. These attributes are synced from on-premises Active Directory using Azure AD Connect:
+4. Azure AD authenticates the user and device, and returns a PRT and an ID token. The ID token includes the following attributes about the user. These attributes are synced from on-premises AD using Azure AD Connect:
 
     - `sAMAccountName`
     - `netBIOSDomainName`
@@ -96,7 +96,7 @@ The following steps are an overview. For more specific information, see [Primary
 
     If the attempt to get the Kerberos TGT or NTLM token for the domain fails (related DCLocator timeout can cause a delay), then Windows Credential Manager retries. Or, the user may receive an authentication pop-up requesting credentials for the on-premises resource.
 
-7. All apps that use [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication) automatically get SSO when a user tries to access the apps. **This** includes standard user authentication to an on-premises Active Directory domain using NTLM or Kerberos when accessing on-premises services or resources. ??What's meant by 'this'? Do you mean SSO??
+7. All apps that use [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication) automatically get SSO when a user tries to access the apps. **This** includes standard user authentication to an on-premises AD domain using NTLM or Kerberos when accessing on-premises services or resources. ??What's meant by 'this'? Do you mean SSO??
 
     For more information, see [How SSO to on-premises resources works on Azure AD joined devices](/azure/active-directory/devices/azuread-join-sso).
 
@@ -106,12 +106,12 @@ The following steps are an overview. For more specific information, see [Primary
 
 ## Helpful online resources
 
-- [Primary Refresh Token (PRT) and Azure AD - Azure Active Directory](/azure/active-directory/devices/concept-primary-refresh-token)
+- [Primary Refresh Token (PRT) and Azure AD](/azure/active-directory/devices/concept-primary-refresh-token)
 - [How SSO to on-premises resources works on Azure AD joined devices](/azure/active-directory/devices/azuread-join-sso)
 - [How Windows Hello for Business works - Authentication - Windows security](/windows/security/identity-protection/hello-for-business/hello-how-it-works-authentication)
 - [Integrated Windows Authentication](/aspnet/web-api/overview/security/integrated-windows-authentication)
 - [Azure AD Kerberos authentication (Preview)](/azure/active-directory/authentication/how-to-authentication-kerberos)
-- [Azure Active Directory Authentication documentation](/azure/active-directory/authentication/)
+- [Azure AD Authentication documentation](/azure/active-directory/authentication/)
 
 ## Next steps
 
