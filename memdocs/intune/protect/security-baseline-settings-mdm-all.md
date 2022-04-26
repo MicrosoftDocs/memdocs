@@ -506,7 +506,7 @@ For more information, see [Policy CSP - DeviceLock](/windows/client-management/m
     *A setting of Yes prevents use of simple passwords.*
 
 - **Password minimum age in days**:  
-  The Minimum password age policy setting determines the how long (in days) that a password must be used before the user can change it. You can set a value between 1 and 998 days, or you can allow password changes immediately by setting the number of days to 0. The minimum password age must be less than the Maximum password age, unless the maximum password age is set to 0, indicating that passwords will never expire. If the maximum password age is set to 0, the minimum password age can be set to any value between 0 and 998.  
+  The Minimum password age policy setting determines how long (in days) that a password must be used before the user can change it. You can set a value between 1 and 998 days, or you can allow password changes immediately by setting the number of days to 0. The minimum password age must be less than the Maximum password age, unless the maximum password age is set to 0, indicating that passwords will never expire. If the maximum password age is set to 0, the minimum password age can be set to any value between 0 and 998.  
   [Learn more](/windows/client-management/mdm/policy-csp-devicelock#devicelock-minimumpasswordage)
 
   **Default**: 1
@@ -737,7 +737,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Disable
 
-- **Internet Explorer internet zone allow only approved domains to use tdc ActiveX controls**:  
+- **Internet Explorer internet zone allows only approved domains to use tdc ActiveX controls**:  
   This policy setting controls if the user can run the TDC ActiveX control on websites. If you enable this policy setting, the TDC ActiveX control won't run from websites in this zone. If you disable this policy setting, the TDC Active X control will run from all sites in this zone.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstousetdcactivexcontrol)
 
@@ -946,7 +946,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Disabled
 
-- **Internet Explorer internet zone allow VBscript to run**:  
+- **Internet Explorer internet zone allows VBscript to run**:  
   This policy setting lets you decide whether VBScript can run on pages in specific Internet Explorer zones. Options include:
 
   - *Enable* - VBScript runs on pages in specific zones, without any interaction.
@@ -959,7 +959,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Disable
 
-- **Internet Explorer restricted zone allow only approved domains to use tdc Active X controls**:  
+- **Internet Explorer restricted zone allows only approved domains to use tdc Active X controls**:  
   This policy setting controls if the user can run the TDC ActiveX control on websites. If you enable this policy setting, the TDC ActiveX control won't run from websites in this zone. If you disable this policy setting, the TDC Active X control will run from all sites in this zone.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowonlyapproveddomainstousetdcactivexcontrol)
 
@@ -1115,13 +1115,13 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Disable java
 
-- **Internet Explorer internet zone allow only approved domains to use ActiveX controls**:  
+- **Internet Explorer internet zone allows only approved domains to use ActiveX controls**:  
   This policy setting controls if the user is prompted to allow ActiveX controls to run on websites other than the website that installed the ActiveX control. If you enable this policy setting, the user is prompted before ActiveX controls can run from websites in this zone. The user can choose to allow the control to run from the current site or from all sites. If you disable this policy setting, the user doesn't see the per-site ActiveX prompt, and ActiveX controls can run from all sites in this zone.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstouseactivexcontrols)
 
   **Default**: Enabled
 
-- **Internet Explorer include all network paths**:  
+- **Internet Explorer includes all network paths**:  
   Internet Explorer include all network paths.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-includeallnetworkpaths)
 
@@ -1169,7 +1169,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Prompt
 
-- **Internet Explorer restricted zone allow VBScript to run**:  
+- **Internet Explorer restricted zone allows VBScript to run**:  
   This policy setting allows you to manage whether VBScript can run on pages from the specified zone in Internet Explorer. If you selected Enable in the drop-down box, VBScript can run without user intervention. If you selected Prompt in the drop-down box, users are asked to choose whether to allow VBScript to run. If you selected Disable in the drop-down box, VBScript is prevented from running. If you don't configure or disable this policy setting, VBScript is prevented from running.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowvbscripttorunininternetexplorer)
 
@@ -1337,7 +1337,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Enabled
 
-- **Internet Explorer restricted zone allow only approved domains to use Active X controls**:  
+- **Internet Explorer restricted zone allows only approved domains to use Active X controls**:  
   This policy setting controls if the user is prompted to allow ActiveX controls to run on websites other than the website that installed the ActiveX control. If you enable this policy setting, the user is prompted before ActiveX controls can run from websites in this zone. The user can choose to allow the control to run from the current site or from all sites. If you disable this policy setting, the user doesn't see the per-site ActiveX prompt, and ActiveX controls can run from all sites in this zone.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowonlyapproveddomainstouseactivexcontrols)
 
