@@ -128,14 +128,15 @@ For users that opted out of automatic updates, when an update to remote help is 
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
 
 [!NOTE]
-- On April 5th, 2022, existing users of remote help will see a recommended upgrade screen when they open the remote help app. Users will be able to continue using remote help without upgrading. 
-- On April 12th, 2022, existing users of remote help will see a mandatory upgrade screen when they open the remote help app. They will not be able to proceed until they upgrade to the latest version of remote help.
+- In May 2022, existing users of remote help will see a recommended upgrade screen when they open the remote help app. Users will be able to continue using remote help without upgrading. 
+- On May 23rd, 2022, existing users of remote help will see a mandatory upgrade screen when they open the remote help app. They will not be able to proceed until they upgrade to the latest version of remote help.
+- Remote help will now require the Microsoft Edge WebView2 Runtime. During the remote help installation, if the Microsoft Edge WebView2 Runtime is not installed on the device, the remote help installation will install it. When uninstalling remote help, the Microsoft Edge WebView2 Runtime will not be uninstalled.
 
 ### Download remote help
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **4.0.0.0**
+The most recent version of remote help is **4.0.0.18**
 
 ### Deploy remote help as a Win32 app
 
