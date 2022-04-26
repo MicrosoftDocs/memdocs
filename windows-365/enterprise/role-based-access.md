@@ -45,10 +45,10 @@ Two built-in roles are available for Cloud PC:
 **Cloud PC Administrator**: Manages all aspects of Cloud PCs, like:
 
 - OS image management
-- On-premises network connection configuration
+- Azure network connection configuration
 - Provisioning
 
-**Cloud PC Reader**: Views Cloud PC data available in the Cloud PC node in Microsoft Endpoint Manager, but can’t make changes.
+**Cloud PC Reader**: Views Cloud PC data available in the Windows 365 node in Microsoft Endpoint Manager, but can’t make changes.
 
 ## Custom roles (public preview)
 
@@ -57,7 +57,7 @@ You can create custom roles for Windows 365 in [Microsoft Endpoint Manager admin
 To create a provisioning policy, an admin needs the following permissions:
 
 - Provisioning Policy Read/Create
-- On-premises network connection Read
+- Azure network connection Read
 - Supported region Read
 - Image Read permissions
 

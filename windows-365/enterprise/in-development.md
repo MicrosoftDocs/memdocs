@@ -57,15 +57,9 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!--## App management-->
 
 <!-- ***********************************************-->
-## Device management
+<!-- ## Device management
+-->
 
-### Change Cloud PC time zone<!--38902639 -->
-
-Non-admin users will be able to change their Cloud PC’s time zone.
-
-### On-premises network connection getting renamed to Azure network connection<!--38457869 -->
-
-The term **on-premises network connection** will be renamed to **Azure network connection** in all user interfaces, documentation, and communications.
 
 <!-- ***********************************************-->
 ## Device provisioning
