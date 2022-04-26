@@ -68,7 +68,7 @@ Use this task to delete aged application requests from the database. For more in
 |**Primary site**|Enabled|
 |Secondary site|Not available|
 
-### Delete Aged Application Revisions
+### Delete Unused Application Revisions
 
 Use this task to delete application revisions that are no longer referenced. For more information, see [How to revise and supersede applications](../../../apps/deploy-use/revise-and-supersede-applications.md).
 
