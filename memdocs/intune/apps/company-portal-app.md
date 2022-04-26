@@ -308,7 +308,7 @@ For more information about notifications, see [Receive a custom notification](..
 
 ## Configure feedback settings for Company Portal and Microsoft Intune apps
 
-There are a number of M365 enterprise policies which affect whether feedback must be enabled or disabled for currently logged users. These policies are available via the [Microsoft 365 Apps admin center](https://config.office.com/). In relation to Microsoft Intune, these policies affect feedback and surveys for the Intune Company Portal app, the Web Company Portal, and Microsoft Intune app.
+There are a number of M365 enterprise policies which affect whether feedback must be enabled or disabled for currently logged users. These policies are available via the [Microsoft 365 Apps admin center](https://config.office.com/). In relation to Microsoft Intune, these policies affect feedback and surveys for the Intune Company Portal app and Microsoft Intune app.
 
 M365 feedback policies include the following policies:
 
