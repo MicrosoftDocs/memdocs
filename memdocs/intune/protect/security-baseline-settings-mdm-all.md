@@ -880,7 +880,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   - *Automatic sign in only in Intranet zone* - Use this option to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session.
 
-  - *Automatic sign in with current user name and password*- Use this option to attempt sign in using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the user's network user name and password are used for sign-in. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password.
+  - *Automatic sign in with current user name and password* - Use this option to attempt sign in using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the user's network user name and password are used for sign-in. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password.
 
   If you disable this policy setting, sign-in is set to *Automatic sign in only in Intranet zone*. If you don't configure this policy setting, sign-in is set to *Prompt* for username and password.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonelogonoptions)
