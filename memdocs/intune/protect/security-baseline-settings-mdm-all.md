@@ -402,7 +402,7 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
 
     **Default**: Yes
 
-  - **Block list**
+  - **Block list**: 
     Manage a list of device setup class globally unique identifiers that for device drivers that Windows is prevented from installing.
  
 ::: zone-end
