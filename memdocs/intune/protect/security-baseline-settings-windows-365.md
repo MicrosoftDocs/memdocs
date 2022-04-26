@@ -37,12 +37,12 @@ View the settings in the Windows 365 Cloud PC security baseline for deployment b
 
 ::: zone pivot="win365-2101"
 
-**Windows 365 CLoud PC security baseline version 2101**
+**Windows 365 Cloud PC security baseline version 2101**
 
 ::: zone-end
 ::: zone pivot="win365-2110"
 
-**Windows 365 CLoud PC security baseline version 2110**
+**Windows 365 Cloud PC security baseline version 2110**
 
 ::: zone-end
 ::: zone pivot="win365-2110"
@@ -81,7 +81,7 @@ You can choose to deploy this baseline in its default configuration to apply tha
 
 ## App Runtime
 
-- **Microsoft accounts optional for Windows Store apps**:  
+- **Microsoft accounts optional for Microsoft store apps**:  
   Baseline default: *Enabled*  
   CSP [appruntime-allowmicrosoftaccountstobeoptional](/windows/client-management/mdm/policy-csp-appruntime#appruntime-allowmicrosoftaccountstobeoptional)
 
@@ -550,11 +550,11 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Disable*  
   CSP [InternetExplorer/InternetZoneAllowNETFrameworkReliantComponents](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallownetframeworkreliantcomponents)
 
-- **Internet Explorer internet zone allow only approved domains to use ActiveX controls**  
+- **Internet Explorer internet zone allows only approved domains to use ActiveX controls**  
   Baseline default: *Enabled*  
   CSP [InternetExplorer/InternetZoneAllowOnlyApprovedDomainsToUseActiveXControls](https://go.microsoft.com/fwlink/?linkid=2067091)
 
-- **Internet Explorer internet zone allow only approved domains to use tdc ActiveX controls**  
+- **Internet Explorer internet zone allows only approved domains to use tdc ActiveX controls**  
   Baseline default: *Enabled*  
   CSP [InternetExplorer/InternetZoneAllowOnlyApprovedDomainsToUseTDCActiveXControl](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstousetdcactivexcontrol)
 
@@ -582,7 +582,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Disabled*  
   CSP [InternetExplorer/InternetZoneAllowUserDataPersistence](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowuserdatapersistence)
 
-- **Internet Explorer internet zone allow VBscript to run**  
+- **Internet Explorer internet zone allows VBscript to run**  
   Baseline default: *Disable*  
   CSP [InternetExplorer/InternetZoneAllowVBScriptToRunInInternetExplorer](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowvbscripttorunininternetexplorer)
 
@@ -762,11 +762,11 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Disable*  
   CSP [InternetExplorer/RestrictedSitesZoneAllowNETFrameworkReliantComponents](https://go.microsoft.com/fwlink/?linkid=2067077)
 
-- **Internet Explorer restricted zone allow only approved domains to use Active X controls**  
+- **Internet Explorer restricted zone allows only approved domains to use Active X controls**  
   Baseline default: *Enabled*  
   CSP [InternetExplorer/RestrictedSitesZoneAllowOnlyApprovedDomainsToUseActiveXControls](https://go.microsoft.com/fwlink/?linkid=2067233)
 
-- **Internet Explorer restricted zone allow only approved domains to use tdc Active X controls**  
+- **Internet Explorer restricted zone allows only approved domains to use tdc Active X controls**  
   Baseline default: *Enabled*  
   CSP [InternetExplorer/RestrictedSitesZoneAllowOnlyApprovedDomainsToUseTDCActiveXControl](https://go.microsoft.com/fwlink/?linkid=2067032)
 
@@ -794,7 +794,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Disabled*  
   CSP [InternetExplorer/RestrictedSitesZoneAllowUserDataPersistence](https://go.microsoft.com/fwlink/?linkid=2067081)
 
-- **Internet Explorer restricted zone allow vbscript to run**  
+- **Internet Explorer restricted zone allows vbscript to run**  
   Baseline default: *Disable*  
   CSP [InternetExplorer/RestrictedSitesZoneAllowVBScriptToRunInInternetExplorer](https://go.microsoft.com/fwlink/?linkid=2067173)
 
