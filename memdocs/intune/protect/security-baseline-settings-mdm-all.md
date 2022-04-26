@@ -206,7 +206,7 @@ For more information, see [Policy CSP - ApplicationManagement](/windows/client-m
   **Default**: Success
 
 - **Privilege Use Audit Sensitive Privilege Use (Device)**:  
-  This policy setting allows you to audit events generated when sensitive privileges (user rights) are used such as the following: A privileged service is called. One of the following privileges are called: Act as part of the operating system. Back up files and directories. Create a token object. Debug programs. Enable computer and user accounts to be trusted for delegation. Generate security audits. Impersonate a client after authentication. Load and unload device drivers. Manage auditing and security log. Modify firmware environment values. Replace a process-level token. Restore files and directories. Take ownership of files or other objects. If you configure this policy setting, an audit event is generated when sensitive privilege requests are made. Success audits record successful requests and Failure audits record unsuccessful requests. If you don't configure this policy setting, no audit event is generated when sensitive privilege requests are made.
+  This policy setting allows you to audit events generated when sensitive privileges (user rights) are used such as the following: A privileged service is called. One of the following privileges is called: Act as part of the operating system. Back up files and directories. Create a token object. Debug programs. Enable computer and user accounts to be trusted for delegation. Generate security audits. Impersonate a client after authentication. Load and unload device drivers. Manage auditing and security log. Modify firmware environment values. Replace a process-level token. Restore files and directories. Take ownership of files or other objects. If you configure this policy setting, an audit event is generated when sensitive privilege requests are made. Success audits record successful requests and Failure audits record unsuccessful requests. If you don't configure this policy setting, no audit event is generated when sensitive privilege requests are made.
 
   **Default**: Success and Failure
 
@@ -521,7 +521,8 @@ For more information, see [Policy CSP - DeviceLock](/windows/client-management/m
   Disables the lock screen slide show settings in PC Settings and prevents a slide show from playing on the lock screen. By default, users can enable a slide show that will run after they lock the machine. If you enable this setting, users can't modify slide show settings in PC Settings, and no slide show can start.  
   [Learn more](/windows/client-management/mdm/policy-csp-devicelock#devicelock-preventlockscreenslideshow)
 
-  **Default**: Enabled *A setting of Enabled prevents slide shows from running.*
+  **Default**: Enabled. 
+![Note] A setting of Enabled prevents slide shows from running.
 
 ## DMA Guard
 
@@ -879,7 +880,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   - *Automatic sign in only in Intranet zone* - Use this option to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session.
 
-  - *Automatic sign in with current user name and password*- Use this option to attempt sign in using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for sign in. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password.
+  - *Automatic sign in with current user name and password*- Use this option to attempt sign in using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the user's network user name and password are used for sign-in. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password.
 
   If you disable this policy setting, sign-in is set to *Automatic sign in only in Intranet zone*. If you don't configure this policy setting, sign-in is set to *Prompt* for username and password.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonelogonoptions)
@@ -1113,7 +1114,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   This policy setting allows you to manage permissions for Java applets. If you enable this policy setting, you can choose options from the drop-down box. Custom, to control permissions settings individually. Low Safety enables applets to do all operations. Medium Safety enables applets to run in their sandbox (an area in memory outside of which the program can't make calls), plus capabilities like scratch space (a safe and secure storage area on the client computer) and user-controlled file I/O. High Safety enables applets to run in their sandbox. Disable Java to prevent any applets from running. If you disable this policy setting, Java applets can't run. If you don't configure this policy setting, Java applets are disabled.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszonejavapermissions)
 
-  **Default**: Disable java
+  **Default**: Disable Java
 
 - **Internet Explorer internet zone allows only approved domains to use ActiveX controls**:  
   This policy setting controls if the user is prompted to allow ActiveX controls to run on websites other than the website that installed the ActiveX control. If you enable this policy setting, the user is prompted before ActiveX controls can run from websites in this zone. The user can choose to allow the control to run from the current site or from all sites. If you disable this policy setting, the user doesn't see the per-site ActiveX prompt, and ActiveX controls can run from all sites in this zone.  
@@ -1122,7 +1123,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   **Default**: Enabled
 
 - **Internet Explorer includes all network paths**:  
-  Internet Explorer include all network paths.  
+  Internet Explorer includes all network paths.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-includeallnetworkpaths)
 
   **Default**: Disabled
@@ -1659,7 +1660,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 - **Cloud-delivered protection level**:  
   CSP: [Defender/CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
-  Specify the level of cloud-delivered protection. Not Configured uses the default Microsoft Defender Antivirus blocking level and provides strong detection without increasing the risk of detecting legitimate files. High applies a strong level of detection. High + uses the High level and applies addition protection measures (may impact client performance). Zero tolerance blocks all unknown executables While unlikely, setting to High may cause some legitimate files to be detected. 
+  Specify the level of cloud-delivered protection. Not Configured uses the default Microsoft Defender Antivirus blocking level and provides strong detection without increasing the risk of detecting legitimate files. High applies a strong level of detection. High + uses the High level and applies addition protection measures (may impact client performance). Zero tolerance blocks all unknown executables. While unlikely, setting to High may cause some legitimate files to be detected. 
 
   **Default**: Not Configured
 
@@ -1804,7 +1805,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 - **Defender sample submission consent type**:  
   [Defender/SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
-  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not, (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
+  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not, and if the user has specified never to ask, the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
 
   **Default**: Send safe samples automatically
 
