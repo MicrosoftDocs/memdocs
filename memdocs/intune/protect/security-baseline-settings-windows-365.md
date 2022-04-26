@@ -37,12 +37,12 @@ View the settings in the Windows 365 Cloud PC security baseline for deployment b
 
 ::: zone pivot="win365-2101"
 
-**Windows 365 CLoud PC security baseline version 2101**
+**Windows 365 Cloud PC security baseline version 2101**
 
 ::: zone-end
 ::: zone pivot="win365-2110"
 
-**Windows 365 CLoud PC security baseline version 2110**
+**Windows 365 Cloud PC security baseline version 2110**
 
 ::: zone-end
 ::: zone pivot="win365-2110"
