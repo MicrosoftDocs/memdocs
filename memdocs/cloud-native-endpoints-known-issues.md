@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 04/27/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -41,20 +41,24 @@ In this article, **Azure AD joined** and **cloud native endpoints** are used int
 
 When a Windows endpoint, like a Windows 10/11 device joins an Active Directory Domain, a computer account is automatically created.
 
-Machine authentication occurs when on-premises resources, like file shares, printers, applications, and web sites are accessed using Active Directory computer accounts instead of users.  Machine authentication happens when administrators or application developers configure on-premises resource access using machine accounts instead of users or user groups.
+Machine authentication happens when:
 
-Cloud native endpoints are joined to Azure AD, and don't exist in Active Directory. So, cloud native endpoints don't support Active Directory machine authentication. Strictly configuring access to on-premises file shares, applications, or services using only Active Directory machine accounts will fail on cloud native endpoints.
+- On-premises resources, like file shares, printers, applications, and web sites, are accessed using AD computer accounts instead of users.
+- Administrators or application developers configure on-premises resource access using machine accounts instead of users or user groups.
 
+Cloud native endpoints are joined to Azure AD, and don't exist in Active Directory. So, cloud native endpoints don't support AD machine authentication. Strictly configuring access to on-premises file shares, applications, or services using only AD machine accounts will fail on cloud native endpoints.
 
 ### Switch to user-based authentication
 
-- Don't use machine authentication for any new projects in your organization. It's not common or a recommended practice, but it's something you need to know and be aware.
-- Review your environment and identify any applications and services that use machine authentication. Then, change the access to user-based authentication or service account-based authentication.
+- When creating new projects, don't use machine authentication. It's not common or a recommended practice, but it's something you need to know and be aware.
+- Review your environment and identify any applications and services that currently use machine authentication. Then, change the access to user-based authentication or service account-based authentication.
 
 > [!IMPORTANT]
-> The Azure AD Connect device writeback feature does not create equivalent AD computer accounts in the on-premises AD domain. The devices created in Active Directory because of device writeback do not support on-premises machine authentication. 
+> The Azure AD Connect device writeback feature tracks devices that are registered in Azure AD. These devices are shown in on-premises AD as registered devices.
+> 
+> Azure AD Connect device writeback doesn't create identical AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication. 
 >  
-> For information on scenarios supported with Device Writeback refer to - [Azure AD Connect: Enabling device writeback](https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-device-writeback).
+> For information on scenarios supported with device writeback, go to [Azure AD Connect: Enabling device writeback](/azure/active-directory/hybrid/how-to-connect-device-writeback).
 
 ### Common services that use machine accounts
 
@@ -76,15 +80,16 @@ The following list includes common features and services that might use machine 
   - Won't work if the apps access resources that are secured with groups that include only machine accounts.
 
   **Recommendation**: 
-  - If machine authentication is present in Win32 apps, consider migrating application authentication to Azure Active Directory.  For more information see [Migrate application authentication to Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
+  - If your Win32 apps use machine authentication, then update the app to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure AD](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
   - Check the authentication and identities of your applications and kiosk devices. Update the authentication and identities to use user account-based security.
-  - Update Win32 apps to move away from the use of Active Directory machine account authentication.
-  - Reference: [Authentication - Win32 apps](https://docs.microsoft.com/en-us/windows/win32/secauthn/authentication-portal).
+
+  For more information, go to [Authentication and Win32 apps](/windows/win32/secauthn/authentication-portal).
 
 - **IIS web server** deployments that restrict site access using ACL permissions with only computer accounts, or groups of computer accounts, will fail. Authentication strategies that limit access to only computer accounts or groups of computer accounts will also fail.
 
   **Recommendation**: 
-  - Consider using Kerberos authentication or [migrating on premises web infrastructure - IIS authentiation to Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory). 
+  - Consider using Kerberos authentication ??Do you mean Azure AD Kerberos??
+  - Update your web server apps to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure Active Directory](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory). 
   
   Additional resources:
 
@@ -99,12 +104,14 @@ The following list includes common features and services that might use machine 
 
   **Recommendation**: Configure your scheduled tasks to use **logged in user**, or another form of account-based authentication.
 
-- **Login scripts** Active Directory logon scripts assigned as part of an Active Directory users’ properties or delivered via a Group Policy Object (GPO) are not available for cloud native endpoints.  
+- **Active Directory login scripts** are assigned in the AD user's properties or deployed using a Group Policy Object (GPO). These scripts aren't available for cloud native endpoints.  
 
-  **Recommendation**: As an alternative consider using consider using Intune PowerShell scripts feature for Windows.  In addition, consider the use of OneDrive and SharePoint Online.
-  Reference: 
-  - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](https://docs.microsoft.com/en-us/mem/intune/apps/intune-management-extension)
-  - [Introduction to OneDrive in Microsoft 365](https://docs.microsoft.com/en-us/learn/modules/m365-onedrive-collaboration-use/)
+  **Recommendation**: You can use Windows PowerShell scripts and deploy these scripts using Microsoft Intune. In addition, consider the use of OneDrive and SharePoint Online.??Use OneDrive or SharePoint Online to do what exactly??
+  
+  For  more information, go to:
+
+  - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](/mem/intune/apps/intune-management-extension)
+  - [Introduction to OneDrive in Microsoft 365](/learn/modules/m365-onedrive-collaboration-use/)
 
 ## Group policy objects might not apply
 
