@@ -286,13 +286,13 @@ You can use filters for some common device configuration policies on the followi
 | Wi-Fi | ✔️ |
 | Windows health monitoring | ✔️ |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ✔️ |
+| Account protection | ✔️ (Excluding Account protection (Preview) |
 | Antivirus | ✔️ |
-| Attack surface reduction | ✔️ |
-| Disk encryption | ✔️ |
+| Attack surface reduction | ✔️ (Excluding Web protection, Application control) |
+| Disk encryption | ❌ (Bitlocker coming soon) |
 | Endpoint detection and response | ✔️ |
 | Firewall | ✔️ |
-| Security Baselines | ✔️ |
+| Security Baselines | ❌ |
 
 ## Not supported
 
