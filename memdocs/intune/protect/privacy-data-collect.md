@@ -49,7 +49,7 @@ Data in the required category consists of data that is necessary to make our ser
 
 Required data collected by Intune may include, but isn't limited to: 
 
-|Category |   Data       |  MAM workload |
+|Category |   Data       |  MAM workload <sup>**1**</sup> |
 |-------- |:------------ |---------------|
 | **Access control information**   | Privacy keys for certificates  | No  |
 |         | Static authenticators (customer's password)             | No  |
@@ -130,6 +130,7 @@ Required data collected by Intune may include, but isn't limited to:
 |         |   Third-party user identifies (like AppleID)   | No  |
 |         |   User Principal Name or email address         | Yes |
 
+<sup>**1**</sup> Intune Mobile Application Management (MAM) can be deployed independent of other Intune workloads. For customers only using Intune MAM, this column identifies which required data is collected.
 
 ## Optional data
 
