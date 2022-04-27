@@ -1,5 +1,6 @@
 ---
-title: "How to Define the AppSynclet MOF File"
+title: "How to Define the AppSynclet MOF File"z
+description: To define a custom synclet MOF file, create an instance of the CCM_AppHandlers class.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

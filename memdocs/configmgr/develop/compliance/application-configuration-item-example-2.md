@@ -1,5 +1,6 @@
 ---
 title: "Application Configuration Item Example 2"
+description: In Configuration Manager, the following Application Configuration Item Instance example determines whether Notepad.exe is installed.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

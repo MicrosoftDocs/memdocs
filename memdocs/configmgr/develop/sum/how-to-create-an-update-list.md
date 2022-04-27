@@ -1,5 +1,6 @@
 ---
 title: "Create an Update List"
+description: You create an update list that contains a set of software updates, in Configuration Manager, by creating an instance of the SMS_AuthorizationList class and populating the properties. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
