@@ -60,7 +60,7 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs whic
   - [Configuration Manager co-management](/configmgr/comanage/overview).
 - Azure AD-joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 
-> [!Note]
+> [!NOTE]
 > If you're joining session hosts to an Azure AD DS domain, you can't manage them using Intune.
 
 > [!IMPORTANT]
