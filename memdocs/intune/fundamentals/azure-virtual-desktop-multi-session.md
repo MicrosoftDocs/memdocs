@@ -47,6 +47,7 @@ You can manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs cr
 
 Microsoft Intune only supports managing Windows 10 or Windows 11 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
 
+
 ## Prerequisites
 
 This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs which are:
@@ -58,6 +59,9 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs whic
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
 - Azure AD-joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
+
+> [!Note]
+> If you're joining session hosts to an Azure AD DS domain, you can't manage them using Intune.
 
 > [!IMPORTANT]
 > If you’re using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Endpoint Manager admin center, like remote sync, won’t work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
