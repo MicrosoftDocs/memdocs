@@ -65,6 +65,9 @@ Also, the following profiles aren't currently supported:
 
 Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-allowuserstoconnectremotely) isn't disabled.
 
+> [!NOTE]
+> Configuration and compliance policies for Secure Boot and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
+
 ### Remote actions
 
 The following Windows 10 desktop device remote actions aren't supported/recommended for Azure Virtual Desktop VMs:
