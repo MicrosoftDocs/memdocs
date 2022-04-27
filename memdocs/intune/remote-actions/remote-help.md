@@ -127,9 +127,9 @@ For users that opted out of automatic updates, when an update to remote help is 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
 
-[!NOTE]
-- On April 5th, 2022, existing users of remote help will see a recommended upgrade screen when they open the remote help app. Users will be able to continue using remote help without upgrading. 
-- On April 12th, 2022, existing users of remote help will see a mandatory upgrade screen when they open the remote help app. They will not be able to proceed until they upgrade to the latest version of remote help.
+> [!NOTE]
+> - On April 5th, 2022, existing users of remote help will see a recommended upgrade screen when they open the remote help app. Users will be able to continue using remote help without upgrading. 
+> - On April 12th, 2022, existing users of remote help will see a mandatory upgrade screen when they open the remote help app. They will not be able to proceed until they upgrade to the latest version of remote help.
 
 ### Download remote help
 
