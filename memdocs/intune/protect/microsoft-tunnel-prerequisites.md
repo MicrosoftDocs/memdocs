@@ -220,7 +220,6 @@ By default, the Microsoft Tunnel and server use the following ports:
 **Outbound ports**:
 
 - TCP 443 – Required to access Intune services. Required by Docker or Podman to pull images.
-- TCP – 80 – Required to access Intune services.
 
 When creating the Server configuration for the tunnel, you can specify a different port than the default of 443. If you specify a different port, configure firewalls to support your configuration.
 

@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 04/26/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -90,11 +90,13 @@ Cloud native endpoints provide many benefits to end users and IT:
 
   With [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview), end users can sign in to their device, and access resources without passwords.
 
+  For more information, go to [Passwordless Strategy](/windows/security/identity-protection/hello-for-business/passwordless-strategy).
+
 - **Seamless experience for documents, settings, and preferences**
 
-  With [One Drive for Business](/onedrive/), end users automatically gain access to their documents, can restore any previous Office and Windows settings, and avoid spending time recovering data.
+  With [OneDrive](/onedrive/plan-onedrive-enterprise), end users automatically gain access to their documents, can restore any previous Office and Windows settings, and avoid spending time recovering data.
 
-  For example, you can store the following user data on One Drive for Business:
+  For example, you can store the following user data on OneDrive:
 
   - Windows wallpaper
   - Automatic sync of documents and desktop files to OneDrive
@@ -102,7 +104,7 @@ Cloud native endpoints provide many benefits to end users and IT:
   - Outlook email signatures
   - Microsoft Edge settings
 
-  When user data is stored on One Drive for Business, it can synchronize the data with all user endpoints.
+  When user data is stored on OneDrive, it can synchronize the data with all user endpoints.
 
 ## How to get started
 
@@ -124,7 +126,7 @@ Cloud native endpoints provide many benefits to end users and IT:
   - Knowledge workers who primarily access content that’s already in the cloud and rely heavily on Microsoft 365 apps
   - Frontline worker devices that are highly mobile, or are in environments where they don't have access to the organization network
 
-  For these groups, use the [high level planning guide](cloud-native-endpoints-planning-guide.md) to review their workloads. Determine how these workloads can move to modern management, including identity, software distribution, device management, and more. For each of the areas in your pilot, the number of items or tasks should be low.
+  For these groups, use the [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md) to review their workloads. Determine how these workloads can move to modern management, including identity, software distribution, device management, and more. For each of the areas in your pilot, the number of items or tasks should be low.
 
   This initial pilot helps you develop the processes and procedures required for more groups. It also helps develop your long term strategy.
 
@@ -134,4 +136,4 @@ Cloud native endpoints provide many benefits to end users and IT:
 - [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
 - [Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
 - [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md)
-- [Known issues](cloud-native-endpoints-known-issues.md)
+- [Known issues and important information](cloud-native-endpoints-known-issues.md)
