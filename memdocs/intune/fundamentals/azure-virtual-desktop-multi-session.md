@@ -201,6 +201,9 @@ Out of Box Experience (OOBE) enrollment isn't supported for Window 10 or Windows
 
 Windows 10 or Windows 11 Enterprise multi-session managed by Microsoft Intune is not currently supported for China.
 
+## Additional Limitations
+
+Configuration and compliance policies for Secure Boot and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
 ## Troubleshooting
 
 The following sections provide troubleshooting guidance for common issues.

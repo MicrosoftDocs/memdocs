@@ -89,6 +89,9 @@ The following table provides a set of known issues along with more information a
 | Cannot auto-enroll if tenant has more than one MDM provider | This issue will be fixed in the future. |
 | Modern apps, such as Universal Windows Platform (UWP) apps, are not working correctly if [FSLogix](/fslogix/overview) is configured | Using FSLogix and Modern apps could cause compatibility issues. We recommend that you don’t configure Modern apps when FSLogix is configured.|
 
+## Additional Limitations
+
+Configuration and compliance policies for Secure Boot and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
 ## Next steps
 
 * [Learn more about Azure Virtual Desktops](/azure/virtual-desktop/).

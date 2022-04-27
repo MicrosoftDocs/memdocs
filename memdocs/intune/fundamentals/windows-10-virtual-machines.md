@@ -8,7 +8,7 @@ keywords:
 author: Smritib17  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/20/2019
+ms.date: 04/26/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -54,5 +54,8 @@ Deallocated virtual machines may contribute to noncompliant device reports becau
 ## Retirement
 If you only have RDP access, don't use the [Wipe action](../remote-actions/devices-wipe.md#wipe). The Wipe action will delete the virtual machine's RDP settings and prevent you from ever connecting again.
 
+## Additional Limitations
+
+Configuration and compliance policies for Secure Boot and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
 ## Next steps
 [Learn about using Azure Virtual Desktop with Intune](azure-virtual-desktop.md)
