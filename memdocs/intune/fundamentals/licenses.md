@@ -44,6 +44,8 @@ Intune is included in the following licenses:
 - Microsoft 365 Government G5
 - Microsoft 365 Government G3
 - Intune for Education
+- Microsoft Teams Rooms Standard	
+- Microsoft Teams Rooms Premium	
 
 ## Microsoft Intune for Education
 
