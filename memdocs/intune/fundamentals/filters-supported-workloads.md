@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/18/2022
+ms.date: 04/27/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -286,10 +286,10 @@ You can use filters for some common device configuration policies on the followi
 | Wi-Fi | ✔️ |
 | Windows health monitoring | ✔️ |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ✔️ (Excluding Account protection (Preview) |
+| Account protection | ✔️ <br/> **Local user group membership** only |
 | Antivirus | ✔️ |
-| Attack surface reduction | ✔️ (Excluding Web protection, Application control) |
-| Disk encryption | ❌ (Bitlocker coming soon) |
+| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)** and **Application control** |
+| Disk encryption | ❌ |
 | Endpoint detection and response | ✔️ |
 | Firewall | ✔️ |
 | Security Baselines | ❌ |
