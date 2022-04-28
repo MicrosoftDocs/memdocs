@@ -1,5 +1,6 @@
 ---
 title: "ImportForProfile Method"
+description: The ImportForProfile Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports an On-Premises Mobile Device Management (MDM)  bulk enrollment package for a profile. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

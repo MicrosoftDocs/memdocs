@@ -1,5 +1,6 @@
 ---
 title: "Object Security"
+description: The delegate verb in Configuration Manager provides administrators with a way of allowing users to assign to other users the instance permissions to an object in a very limited way.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
