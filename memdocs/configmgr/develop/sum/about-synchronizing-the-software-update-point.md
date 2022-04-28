@@ -1,5 +1,6 @@
 ---
 title: "Synchronize the Software Update Point"
+description: In Configuration Manager, software updates must be synchronized before the update information is available in the Configuration Manager console.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

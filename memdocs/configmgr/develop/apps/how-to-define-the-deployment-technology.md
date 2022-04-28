@@ -1,5 +1,6 @@
 ---
 title: "How to Define the Deployment Technology"
+description: To define a custom application management deployment technology, implement the Microsoft.ConfigurationManagement.ApplicationManagement.DeploymentTechnology class.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
