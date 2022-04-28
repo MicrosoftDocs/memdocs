@@ -1,6 +1,6 @@
 ---
 title: "Define the Deployment Technology Registration File "
-description: To define a deployment technology registration file, create an XML file based on the http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest schema.
+description: To define a deployment technology registration file, create an XML file based on the AppMgmtDigest schema.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
