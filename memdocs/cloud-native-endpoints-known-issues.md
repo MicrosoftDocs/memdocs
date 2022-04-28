@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 04/27/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -39,21 +39,26 @@ In this article, **Azure AD joined** and **cloud native endpoints** are used int
 
 ## Don't use machine authentication
 
-Machine authentication occurs when resources, like file shares, printers, and web sites use computer or machine accounts to authenticate, instead of using users or user groups to authenticate.
+When a Windows endpoint, like a Windows 10/11 device joins an Active Directory Domain, a computer account is automatically created.
 
-When a Windows endpoint, like a Windows 10/11 device joins Active Directory, a computer account is automatically created. A unique password is negotiated between the endpoint and AD. These computer accounts identify the device, and are independent of any user signed in to the device.
+Machine authentication happens when:
 
-Cloud native endpoints are joined to Azure AD, and don't exist in Active Directory. So, cloud native endpoints don't support machine authentication. Securing file shares, applications, or services using machine accounts will fail on cloud native endpoints.
+- On-premises resources, like file shares, printers, applications, and web sites, are accessed using AD computer accounts instead of users.
+- Administrators or application developers configure on-premises resource access using machine accounts instead of users or user groups.
+
+Cloud native endpoints are joined to Azure AD, and don't exist in Active Directory. So, cloud native endpoints don't support AD machine authentication. Strictly configuring access to on-premises file shares, applications, or services using only AD machine accounts will fail on cloud native endpoints.
 
 ### Switch to user-based authentication
 
-- Don't use machine authentication. It's not common, but it's something you need to know and be aware.
-- Review your environment and identify any applications and services that use machine authentication. Then, change the access to user-based authentication or service account-based authentication.
+- When creating new projects, don't use machine authentication. It's not common or a recommended practice, but it's something you need to know and be aware.
+- Review your environment and identify any applications and services that currently use machine authentication. Then, change the access to user-based authentication or service account-based authentication.
 
 > [!IMPORTANT]
-> Azure AD Connect doesn't create equivalent AD computer accounts in the on-premises AD domain. Using Azure AD joined device for on-premises machine authentication isn't supported in this configuration. ??What is meant by "this"??
->
-> For more specific information and guidance, see [What is Azure AD Connect?](/azure/active-directory/hybrid/whatis-azure-ad-connect).
+> The Azure AD Connect device writeback feature tracks devices that are registered in Azure AD. These devices are shown in on-premises AD as registered devices.
+> 
+> Azure AD Connect device writeback doesn't create identical AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication. 
+>  
+> For information on scenarios supported with device writeback, go to [Azure AD Connect: Enabling device writeback](/azure/active-directory/hybrid/how-to-connect-device-writeback).
 
 ### Common services that use machine accounts
 
@@ -74,14 +79,18 @@ The following list includes common features and services that might use machine 
   - Won't work if the apps use machine account authentication.
   - Won't work if the apps access resources that are secured with groups that include only machine accounts.
 
-  **Recommendation**: ?? Need something here. I added the following??
+  **Recommendation**: 
+  - If your Win32 apps use machine authentication, then update the app to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure AD](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
+  - Check the authentication and identities of your applications and kiosk devices. Update the authentication and identities to use user account-based security.
 
-  - Check the authentication and identities of your kiosk devices and applications. Update the authentication and identities to use user account-based security.
+  For more information, go to [Authentication and Win32 apps](/windows/win32/secauthn/authentication-portal).
 
 - **IIS web server** deployments that restrict site access using ACL permissions with only computer accounts, or groups of computer accounts, will fail. Authentication strategies that limit access to only computer accounts or groups of computer accounts will also fail.
 
-  **Recommendation**: ?? Need something here??
-
+  **Recommendation**: 
+  - Consider using Kerberos authentication ??Do you mean Azure AD Kerberos??
+  - Update your web server apps to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure Active Directory](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory). 
+  
   Additional resources:
 
   - [IIS Authentication `<windowsAuthentication>`](/iis/configuration/system.webserver/security/authentication/windowsauthentication/)
@@ -95,13 +104,14 @@ The following list includes common features and services that might use machine 
 
   **Recommendation**: Configure your scheduled tasks to use **logged in user**, or another form of account-based authentication.
 
-- **Login scripts** aren't available for cloud native endpoints. ??Why? I assume it's related to machine authentication. If no, create a separate H2??
+- **Active Directory login scripts** are assigned in the AD user's properties or deployed using a Group Policy Object (GPO). These scripts aren't available for cloud native endpoints.  
 
-  **Recommendation**: In your login scripts, look at the actions to determine if there is a modern equivalent.
+  **Recommendation**: You can use Windows PowerShell scripts and deploy these scripts using Microsoft Intune. In addition, consider the use of OneDrive and SharePoint Online.??Use OneDrive or SharePoint Online to do what exactly??
+  
+  For  more information, go to:
 
-  For example, migrate user’s home drives to OneDrive, and migrate shared folder content to SharePoint Online. ??I assume this example is related to an action that has a modern equivalent. If yes, then we should explain more. Currently, it's confusing.??
-
-  If actions in the script don't have a modern equivalent, then you can deploy the script using [Endpoint Manager Windows PowerShell scripts](/mem/intune/apps/intune-management-extension).
+  - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](/mem/intune/apps/intune-management-extension)
+  - [Introduction to OneDrive in Microsoft 365](/learn/modules/m365-onedrive-collaboration-use/)
 
 ## Group policy objects might not apply
 
