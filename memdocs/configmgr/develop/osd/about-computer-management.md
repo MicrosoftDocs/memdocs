@@ -1,5 +1,6 @@
 ---
 title: "Computer Management"
+description: Computer management in Configuration Manager operating system deployment covers the following areas.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
