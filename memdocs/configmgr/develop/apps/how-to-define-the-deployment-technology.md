@@ -20,7 +20,7 @@ To define a custom application management deployment technology, implement the `
 
  The DeploymentTechnology class is the object that is registered with the Configuration Manager Application Model SDK. The DeploymentTechnology class contains references to three different types of objects that compose the technology. When implementing a new deployment technology you must implement a class that derives from this class.  
 
- In the Remote Desktop Protocol (RDP) sample project, a new deployment technology is required for Remote Desktop Protocol (RDP) files. Deployment support for RDP files is not built-in to Configuration Manager, so a custom deployment technology is required.  
+ In the Remote Desktop Protocol (RDP) sample project, a new deployment technology is required for Remote Desktop Protocol (RDP) files. Deployment support for RDP files is not built in to Configuration Manager, so a custom deployment technology is required.  
 
 > [!IMPORTANT]
 >  The DeploymentTechnology class name must match the class specified in the DeploymentTechnology.xml file.  
