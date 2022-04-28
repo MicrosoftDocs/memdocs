@@ -22,7 +22,7 @@ ms.collection: openauth
 
  To some extent, these explicitly granted rights provide the user with a certain level of ownership of the object. With the delegate right, this ownership is extended to the control of the default group of instance rights. To limit which rights a user can delegate, only rights explicitly granted to them (not a group to which they belong) can be delegated. A user can also remove other users (or groups) instance rights if the user has the delegate permission and explicit rights to an object (this is why a user is said to own an object if they have explicit instance rights). Users with administrator rights still have full control of administering permissions.  
 
- A common scenario for using the delegate verb is when a user has create and delegate rights for an object type and wants to create an object and allow members of a user group to see it. They create an instance of the object and then delegate read permissions for the instance to the user group.  
+ A common scenario for using the delegate verb is when a user has created and delegated rights for an object type and wants to create an object and allow members of a user group to see it. They create an instance of the object and then delegate read permissions for the instance to the user group.  
 
  The delegate verb is applicable to the follow Configuration Manager classes:  
 
@@ -41,7 +41,7 @@ ms.collection: openauth
 -   `SMS_MeteredProductRule`  
 
 ## System Resource (SMS_R_System) as a Secured Resource  
- Secured resources are resources (the SMS_R_* classes) that require collection read rights to be viewed. If the user has class-level collection read rights, the user can see all the instances of a secured resource. If the user only has instance-level read rights to certain collections, the user only has rights to see resources that are a members of those collections. `SMS_R_User` and `SMS_R_UserGroup` are secured resources in SMS 2.0. In SMS 2003, `SMS_R_System` (the system resource) is also a secured resource.  
+ Secured resources are resources (the SMS_R_* classes) that require collection read rights to be viewed. If the user has class-level collection read rights, the user can see all the instances of a secured resource. If the user only has instance-level read rights to certain collections, the user only has rights to see resources that are members of those collections. `SMS_R_User` and `SMS_R_UserGroup` are secured resources in SMS 2.0. In SMS 2003, `SMS_R_System` (the system resource) is also a secured resource.  
 
  Inventory instances (SMS_G_System_*) are secured similarly with the read resource verb. If a user has class-level rights, that user can see inventory data belonging to all resources. If the user does not have class-level rights, the user can see only inventory data for inventory that belongs to resources that are members of collections to which the user has instance-level read resource rights. Conversely, if a user has read resource rights to a collection, a user can see the inventory data for the members of that collection. This has not been affected by the change in security to `SMS_R_System`. Read resource rights cannot be granted to a user without granting read rights. When a user does not have the appropriate class-level collection rights, resource security is enforced through collection limiting.  
 
