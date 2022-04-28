@@ -10,9 +10,9 @@ items:
     href: endpoint-manager-getting-started.md
   - name: Cloud native Windows endpoints
     items:
-    - name: Overview and benefits
+    - name: DONE-Overview and benefits
       href: cloud-native-endpoints-overview.md
-    - name: Tutorial-Get started with cloud native Windows endpoints
+    - name: DONE-Tutorial-Get started with cloud native Windows endpoints
       href: cloud-native-windows-endpoints.md
     - name: Azure AD concepts and on-premises resources
       items:

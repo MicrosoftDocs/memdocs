@@ -3,13 +3,13 @@
 
 title: What are cloud native Windows endpoints 
 titleSuffix: Microsoft Endpoint Manager
-description: Learn more about cloud native endpoints and what they are. See a list of benefits, and the impact on end users and IT administrators. Cloud native endpoints help with remote workers and hybrid workers.
+description: Learn more about cloud native endpoints and what they are. See a list of benefits, and the impact on end users and IT administrators. Cloud native endpoints help with remote workers and hybrid workers, and use Microsoft Endpoint Manager to manage devices.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 04/26/2022
+ms.date: 04/28/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -29,14 +29,34 @@ ms.collection:
   - M365-identity-device-management
 ---
 
-# Get started with cloud native endpoints and Microsoft Endpoint Manager
+# Learn more about cloud native endpoints and the benefits to organizations and end users
 
-Organizations are focusing on supporting remote or hybrid workers. Many organizations want to:
+Organizations are focusing on supporting remote and hybrid workers. With cloud native endpoints, organizations can:
 
 - Ship devices directly to users.
 - Automatically configure apps and settings on devices using an internet connection.
 - Have users reset their devices and redeploy apps without losing data.
 - Allow users to be productive from anywhere, while protecting and securing user and organization data.
+
+In this set of articles, you will:
+
+- **Learn about cloud native endpoints** and the benefits to organizations and end users (this article).
+- **Step through a tutorial** that creates a Windows device that's cloud native: 
+
+  - [Tutorial: Get started with cloud native Windows endpoints with Microsoft Endpoint Manager](cloud-native-windows-endpoints.md)
+
+- **Learn more about the Azure AD concepts** that are part of cloud native endpoints, including accessing on-premises resources:
+
+  - [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md) 
+  - [Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
+
+- **Get guidance and advice** on moving your workloads and your organization to become cloud native:
+
+  - [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md)
+
+- **Read about some scenarios** that can affect your cloud native migration:
+
+  - [Known issues and important information](cloud-native-endpoints-known-issues.md)
 
 ## What are cloud native endpoints
 
@@ -90,7 +110,7 @@ Cloud native endpoints provide many benefits to end users and IT:
 
   With [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview), end users can sign in to their device, and access resources without passwords.
 
-  For more information, go to [Passwordless Strategy](/windows/security/identity-protection/hello-for-business/passwordless-strategy).
+  For more specific information, go to [Passwordless Strategy](/windows/security/identity-protection/hello-for-business/passwordless-strategy).
 
 - **Seamless experience for documents, settings, and preferences**
 
@@ -108,6 +128,8 @@ Cloud native endpoints provide many benefits to end users and IT:
 
 ## How to get started
 
+The [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md) is a good resource. It covers the following areas:
+
 - **Plan**: In adopting cloud native endpoints, organizations focus on several key areas:
 
   - Review your existing workloads for modernization, and determine the next steps to support cloud native.
@@ -118,17 +140,7 @@ Cloud native endpoints provide many benefits to end users and IT:
 
 - **Create a Proof of Concept**: Do an initial proof of concept (POC) using a lab environment. The goal is to understand changes and their impact.
 
-  As part of the POC, identify a set of users and devices to run a production pilot. In many organizations, there's a role or business group that will be easier to migrate.
-
-  For example, target the following scenarios for migration to cloud management:
-
-  - Highly mobile sales team whose primary requirements are productivity tools and an online customer relationship management solution
-  - Knowledge workers who primarily access content that’s already in the cloud and rely heavily on Microsoft 365 apps
-  - Frontline worker devices that are highly mobile, or are in environments where they don't have access to the organization network
-
-  For these groups, use the [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md) to review their workloads. Determine how these workloads can move to modern management, including identity, software distribution, device management, and more. For each of the areas in your pilot, the number of items or tasks should be low.
-
-  This initial pilot helps you develop the processes and procedures required for more groups. It also helps develop your long term strategy.
+  For more specific information, see the [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md).
 
 ## Next steps
 

@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 04/27/2022
+ms.date: 04/28/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -39,24 +39,24 @@ In this article, **Azure AD joined** and **cloud native endpoints** are used int
 
 ## Don't use machine authentication
 
-When a Windows endpoint, like a Windows 10/11 device joins an Active Directory Domain, a computer account is automatically created.
+When a Windows endpoint, like a Windows 10/11 device joins an Active Directory Domain, a computer account is automatically created. The computer/machine account can be used to authenticate.
 
 Machine authentication happens when:
 
-- On-premises resources, like file shares, printers, applications, and web sites, are accessed using AD computer accounts instead of users.
+- On-premises resources, like file shares, printers, applications, and web sites, are accessed using on-premises AD computer accounts instead of user accounts.
 - Administrators or application developers configure on-premises resource access using machine accounts instead of users or user groups.
 
-Cloud native endpoints are joined to Azure AD, and don't exist in Active Directory. So, cloud native endpoints don't support AD machine authentication. Strictly configuring access to on-premises file shares, applications, or services using only AD machine accounts will fail on cloud native endpoints.
+Cloud native endpoints are joined to Azure AD, and don't exist in on-premises Active Directory. So, cloud native endpoints don't support on-premises AD machine authentication. Configuring access to on-premises file shares, applications, or services using only on-premises AD machine accounts will fail on cloud native endpoints.
 
 ### Switch to user-based authentication
 
-- When creating new projects, don't use machine authentication. It's not common or a recommended practice, but it's something you need to know and be aware.
+- When creating new projects, don't use machine authentication. It's not common or a recommended practice, but it's something you need to know and be aware. Instead, use user-based authentication.
 - Review your environment and identify any applications and services that currently use machine authentication. Then, change the access to user-based authentication or service account-based authentication.
 
 > [!IMPORTANT]
 > The Azure AD Connect device writeback feature tracks devices that are registered in Azure AD. These devices are shown in on-premises AD as registered devices.
 > 
-> Azure AD Connect device writeback doesn't create identical AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication. 
+> Azure AD Connect device writeback doesn't create identical on-premises AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication. 
 >  
 > For information on scenarios supported with device writeback, go to [Azure AD Connect: Enabling device writeback](/azure/active-directory/hybrid/how-to-connect-device-writeback).
 
@@ -70,9 +70,9 @@ The following list includes common features and services that might use machine 
 
   - **Server and workstation file shares**: Update permissions to use user account-based security. When you do, use [Azure AD single sign-on (SSO)](/azure/active-directory/devices/azuread-join-sso) to access resources that use Windows integrated authentication.
 
-    Move file share content to SharePoint Online or OneDrive for Business. For more specific information, see [Migrate file shares to SharePoint and OneDrive](/sharepointmigration/fileshare-to-odsp-migration-guide).
+    Move file share content to SharePoint Online or OneDrive. For more specific information, see [Migrate file shares to SharePoint and OneDrive](/sharepointmigration/fileshare-to-odsp-migration-guide).
 
-  - **Network File System (NFS) root access**: Direct users to access specific folders, not the root. If you can, move content from a NFS to SharePoint Online or OneDrive for Business.
+  - **Network File System (NFS) root access**: Direct users to access specific folders, not the root. If you can, move content from an NFS to SharePoint Online or OneDrive.
 
 - On Azure AD joined Windows endpoints, **Win32 apps**:
 
@@ -88,7 +88,7 @@ The following list includes common features and services that might use machine 
 - **IIS web server** deployments that restrict site access using ACL permissions with only computer accounts, or groups of computer accounts, will fail. Authentication strategies that limit access to only computer accounts or groups of computer accounts will also fail.
 
   **Recommendation**: 
-  - Consider using Kerberos authentication ??Do you mean Azure AD Kerberos??
+  - On your web sites, enable Kerberos authentication. ??Do you mean Azure AD Kerberos??
   - Update your web server apps to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure Active Directory](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory). 
   
   Additional resources:
@@ -104,7 +104,7 @@ The following list includes common features and services that might use machine 
 
   **Recommendation**: Configure your scheduled tasks to use **logged in user**, or another form of account-based authentication.
 
-- **Active Directory login scripts** are assigned in the AD user's properties or deployed using a Group Policy Object (GPO). These scripts aren't available for cloud native endpoints.  
+- **Active Directory login scripts** are assigned in the on-premises AD user's properties or deployed using a Group Policy Object (GPO). These scripts aren't available for cloud native endpoints.  
 
   **Recommendation**: You can use Windows PowerShell scripts and deploy these scripts using Microsoft Intune. In addition, consider the use of OneDrive and SharePoint Online.??Use OneDrive or SharePoint Online to do what exactly??
   
@@ -120,7 +120,7 @@ It's possible some of your older policies aren't available, or don't apply to cl
 **Resolution**:
 
 - Using [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics) in Endpoint Manager, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
-- In endpoint management, policies are deployed to users and groups. They aren't applied in LSDOU order. This is a mind shift, so make sure your users and groups are in order.
+- In endpoint management, policies are deployed to users and groups. They aren't applied in LSDOU order. This behavior is a mind shift, so make sure your users and groups are in order.
 
   For more specific information and guidance on policy assignment in Microsoft Intune, see [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).
 
@@ -134,13 +134,13 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
 - Don't migrate all your policies. Remember, your old policies might not make any sense with cloud native endpoints.
 
-  Instead of doing what you've always done, focus on the what you actually want to achieve.
+  Instead of doing what you've always done, focus on what you actually want to achieve.
 
 ## Local Administrator Password Solution (LAPS) aren't supported
 
 Currently, cloud native endpoints don't support the [Microsoft Local Administrator Password Solution (LAPS)](/defender-for-identity/cas-isp-laps) (opens another Microsoft website).
 
-LAPS manages local administrator account passwords for domain-joined devices. Passwords are randomized and stored in Active Directory (AD), and protected by ACLs. So, only eligible users can read the password or request a password reset.
+LAPS manages local administrator account passwords for domain-joined devices. Passwords are randomized and stored in on-premises Active Directory (AD), and protected by ACLs. So, only eligible users can read the password or request a password reset.
 
 Microsoft will release an update to provide LAPS for Azure AD joined devices. When it's released, you can use it to manage local administrator account passwords on cloud native endpoints.
 
