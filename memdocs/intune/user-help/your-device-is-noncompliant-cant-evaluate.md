@@ -2,7 +2,7 @@
 # required metadata
 
 title: Your device is noncompliant | Microsoft Docs
-description:
+description: Your device is noncompliant with at least one of your organization's security policies, but the error can't be displayed right now. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
