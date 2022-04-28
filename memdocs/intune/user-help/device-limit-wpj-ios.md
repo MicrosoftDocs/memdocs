@@ -3,7 +3,7 @@
 
 title: Registered iOS device limit has been reached
 titlesuffix: Intune Company Portal
-description: There are three things that you can do if you see a message that tells you that you Couldn't register your device because you've reached the limit of the number of devices.
+description: Steps to take if the limit of iOS devices you can register has been reached.
 keywords:
 author: lenewsad
 ms.author: lanewsad
