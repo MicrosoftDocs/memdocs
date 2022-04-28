@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 04/26/2022
+ms.date: 04/28/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -29,15 +29,22 @@ ms.collection:
   - M365-identity-device-management
 ---
 
-# Azure AD joined (AADJ) vs. Hybrid Azure AD joined (HAADJ)
+# Azure AD joined (AADJ) vs. Hybrid Azure AD joined (HAADJ) in cloud native endpoints
 
-This article describes the differences between Azure AD joined and hybrid Azure AD joined devices.
+**TO DO:**
+
+- ??Still need a checklist of when/when not to use AADJ??
+- ??Still need a checklist of when/when not to use HAADJ??
+
+When moving to cloud native endpoints, you need to understand the differences between Azure AD joined and hybrid Azure AD joined devices.
 
 To summarize:
 
 - **Azure AD joined**: Device are joined to a Azure AD. For more specific information, see [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) (opens another Microsoft website).
 
 - **Hybrid Azure AD joined**: Device are registered in Azure AD and joined to an on-premises AD domain. For more specific information, see [Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (opens another Microsoft website).
+
+This article describes the differences between Azure AD joined and hybrid Azure AD joined devices. For an overview of cloud native endpoints, and their benefits, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
 
 ## Azure AD joined
 
@@ -64,7 +71,7 @@ To join Windows endpoints to Azure AD, you have some options:
 
 - Using conditional access, you can allow or restrict access to organization resources that meet, or don't meet your requirements.
 - Settings and work data roam through enterprise compliant clouds. No personal Microsoft accounts, like Hotmail are used, and can be blocked.
-- Use Windows Hello for Business to reduce the risk of credential theft.
+- Using Windows Hello for Business, you can reduce the risk of credential theft.
 
 ### End user benefits
 
@@ -89,9 +96,9 @@ To join Windows endpoints to Azure AD, you have some options:
 
 ## Hybrid Azure AD joined
 
-[Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid) are joined to your on-premises Active Directory domain (AD domain) and are registered with Azure Active Directory (Azure AD). These devices require a network line-of-sight to your on-premises domain controllers for initial sign-in and for device management.
+[Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid) are joined to your on-premises Active Directory domain (AD domain) and are registered with Azure Active Directory (Azure AD). These devices **require** a network line-of-sight to your on-premises domain controllers for initial sign-in and for device management.
 
-If the devices can't contact a domain controller, then users might be prevented from signing in, and may not receive policy updates.
+If the devices can't connect to the domain controller, then users might be prevented from signing in, and may not receive policy updates.
 
 Many organizations with existing domain joined devices want the benefits and features of Azure AD and Endpoint Management. For these organizations, registering these existing devices with Azure AD might be the best option. When you register existing devices in Azure AD, a [device identity](/azure/active-directory/devices/overview) is created, and your devices are hybrid Azure AD joined.
 
@@ -103,6 +110,10 @@ For information on how to register your existing domain joined devices to Azure 
 - [Configure hybrid Azure Active Directory join for federated domains](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)
 
 For new, refurbished, or refreshed Windows devices, Microsoft recommends [Azure AD joined](#azure-ad-joined) (in this article).
+
+## Which option is right for your organization
+
+??Still need a checklist of when/when not to use AADJ, and when/when not to use HAADJ??
 
 ## Next steps
 

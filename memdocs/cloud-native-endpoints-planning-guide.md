@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 04/26/2022
+ms.date: 04/28/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -31,21 +31,25 @@ ms.collection:
 
 # High level planning guide to move to cloud native endpoints
 
+**TO DO:**
+
+- ??Answer outstanding questions??
+
 This high level planning guide includes ideas and suggestions you need to consider for your adoption and migration to cloud native endpoints. It discusses managing devices, reviewing & transitioning existing workloads, making organization changes, using Windows Autopilot, and more.
 
 This feature applies to:
 
 - Windows cloud native endpoints
 
-Moving your Windows endpoints to cloud native has many advantages, including in the long term. It's not an overnight process and must be planned to avoid issues, outages, and negative user impact.
+Moving your Windows endpoints to cloud native has many advantages, including long term advantages. It's not an overnight process and must be planned to avoid issues, outages, and negative user impact.
 
-For more information on the benefits to the organization and its users, see [Get started with cloud native endpoints and Microsoft Endpoint Manager](cloud-native-endpoints-overview.md).
+For an overview of cloud native endpoints, and their benefits, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
 
 To be successful, consider these key areas during planning and deployment. With proper planning, communications, and process updates, your organization can be cloud native.
 
 ## Manage devices using a cloud native MDM provider
 
-Managing your endpoints, including cloud native endpoints, is an important task for all organizations. With cloud native endpoints, the management tools you use must manage the endpoints wherever they go.
+Managing your endpoints, including cloud native endpoints, is an important task for all organizations. Device management is shifting to cloud solutions. With cloud native endpoints, the management tools you use must manage the endpoints wherever they go.
 
 If you don't currently use a mobile device management (MDM) solution, or want to move to a Microsoft solution, then look at [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 
@@ -251,7 +255,21 @@ After you've identified the key workloads and their end-state blockers, then:
 
     You may not want or need to address all blockers. For example, your organization might have workloads, or a part of workloads, that won’t support your cloud native endpoints. This lack of support may or may not be significant for your organization or users. You and your organization can make this decision.
 
-2. To support testing and proof of concept, start with a minimum set of workloads. The goal is to test and validate a sample of your workloads.
+2. To support testing, create a proof of concept (POC) and start with a minimum set of workloads. The goal is to test and validate a sample of your workloads.
+
+    As part of the POC, identify a set of users and devices to run a production pilot. In many organizations, there's a role or business group that will be easier to migrate.
+
+    For example, you can target the following scenarios in your POC:
+
+    - Highly mobile sales team whose primary requirements are productivity tools and an online customer relationship management solution
+    - Knowledge workers who primarily access content that’s already in the cloud and rely heavily on Microsoft 365 apps
+    - Frontline worker devices that are highly mobile, or are in environments where they don't have access to the organization network
+
+    For these groups, review their workloads. Determine how these workloads can move to modern management, including identity, software distribution, device management, and more.
+
+    For each of the areas in your pilot, the number of items or tasks should be low. This initial pilot helps you develop the processes and procedures required for more groups. It also helps develop your long term strategy.
+
+    For more guidance and tips, go to the [Microsoft Intune planning guide](/mem/intune/fundamentals/intune-planning-guide). It applies to to Intune, but also includes some guidance when using pilot groups and creating rollout plans.
 
 ### ✅ Phase 3: Transition your workloads
 
