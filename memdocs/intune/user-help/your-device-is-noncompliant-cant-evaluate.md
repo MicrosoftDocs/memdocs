@@ -2,7 +2,7 @@
 # required metadata
 
 title: Your device is noncompliant | Microsoft Docs
-description: Your device is noncompliant with at least one of your organization's security policies, but the error can't be displayed right now. 
+description: In the Company Portal app, tap Check Compliance. The Company Portal app will then tell you what is causing your device to be noncompliant.
 keywords:
 author: lenewsad
 ms.author: lanewsad
