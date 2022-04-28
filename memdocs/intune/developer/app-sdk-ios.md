@@ -180,7 +180,7 @@ Typically, MSAL requires apps to register with Azure Active Directory (AAD) and 
 
 If your app does not already use MSAL, you will need to configure an app registration in AAD and specify the client ID and redirect URI that the Intune SDK should use.  
 
-If your app currently uses ADAL to authenticate users, refer to [this](https://docs.microsoft.com/en-us/azure/active-directory/develop/migrate-objc-adal-msal) for more information on migrating your app from ADAL to MSAL.
+If your app currently uses ADAL to authenticate users, refer to [this](https://docs.microsoft.com/azure/active-directory/develop/migrate-objc-adal-msal) for more information on migrating your app from ADAL to MSAL.
 
 It is recommended that your app links to the latest release of [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases).
 
