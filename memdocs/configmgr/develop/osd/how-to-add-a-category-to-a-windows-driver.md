@@ -1,5 +1,6 @@
 ---
 title: "Add a Category to a Windows Driver"
+description: In Configuration Manager, you add a category to a Windows driver by adding the unique identifier for the category to the SMS_Driver Server WMI Class CategoryInstance_UniqueIDs array property.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -35,7 +36,7 @@ In Configuration Manager, you add a category to a Windows driver by adding the u
 5.  Commit the [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) changes.  
 
 ## Example  
- The following example methods adds a category to a Windows driver. `driverID` is a valid [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. For more information, see [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md).  
+ The following example method adds a category to a Windows driver. `driverID` is a valid [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. For more information, see [About Operating System Deployment Driver Management](../../develop/osd/about-operating-system-deployment-driver-management.md).  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
