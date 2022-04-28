@@ -27,7 +27,7 @@ For more information about software updates, see [Deploy and manage software upd
 
 -   A full synchronization, which synchronizes the whole catalog of updates on the WSUS server. At the end of the full synchronization, the Configuration Manager database will match the content of WSUS filtered by the current subscription.  
 
--   A delta synchronization, which synchronizes only changes (adds and removals) that occurred since the last successful synchronization. A delta synchronization will not examine at updates synchronized earlier and not changed since.  
+-   A delta synchronization, which synchronizes only changes (adds and removals) that occurred since the last successful synchronization. A delta synchronization will not examine any updates synchronized earlier and not changed since.  
 
 > [!IMPORTANT]
 >  While they are nearly identical functionally, a full synchronization will potentially repair updates from previous synchronizations that have gotten damaged or deleted. A delta synchronization will not repair any updates from previous synchronizations.  
