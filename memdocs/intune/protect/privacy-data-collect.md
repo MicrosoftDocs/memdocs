@@ -109,7 +109,7 @@ Required data collected by Intune may include, but isn't limited to:
 |         |   Device health status (jailbroken)            | Yes |
 |         |   Encryption keys                              | Yes |
 |         |   Intune device management ID                  | Yes (If device is MDM enrolled with Intune) |
-|         |   Last application check in date/time          | Yes |
+|         |   Last application check-in date/time          | Yes |
 |         |   Managed application device tag               | Yes |
 |         |   Managed application ID                       | Yes |
 |         |   Managed application SDK version              | Yes |
