@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 04/29/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice: 
@@ -39,4 +39,4 @@ You can assign some licenses on [windows365.microsoft.com](https://windows365.mi
 5. Select licenses that you want to assign to the user, or deselect licenses that you want to unassign from the user.
 6. Select **Save changes**.
     - When you assign a Windows 365 license, Windows 365 will immediately begin creating a new Cloud PC for the user.
-    - When you unassign a Windows 365 license from a user, that user can still access their Cloud PC for 24 hours. After that time, the Cloud PC will be deleted.
+    - When you unassign a Windows 365 license from a user or the license expires, that user can still access their Cloud PC for 24 hours. After that time, the Cloud PC will be deleted.
