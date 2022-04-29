@@ -2,7 +2,7 @@
 title: Technical preview 2204
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2204.
-ms.date: 04/27/2022
+ms.date: 04/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,8 +24,8 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2204/1234567.md)] -->
 
-[!INCLUDE [12952905](includes/2204/12952905.md)]
-[!INCLUDE [13507410](includes/2204/13507410.md)]
+[!INCLUDE [Administration Service Management option](includes/2204/12952905.md)]
+[!INCLUDE [Folders for automatic deployment rules (ADRs)](includes/2204/13507410.md)]
 
 <!-- ## General known issues  -->
  

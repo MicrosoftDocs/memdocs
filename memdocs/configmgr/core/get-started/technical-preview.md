@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 04/27/2022
+ms.date: 04/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -123,8 +123,8 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2204
 
-- [12952905](2022/technical-preview-2204.md) <!--12952905-->
-- [13507410](2022/technical-preview-2204.md) <!--13507410-->
+- [Administration Service Management option](2022/technical-preview-2204.md#bkmk_administration) <!--12952905-->
+- [Folders for automatic deployment rules (ADRs)](2022/technical-preview-2204.md#bkmk_folder) <!--13507410-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
