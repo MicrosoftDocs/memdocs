@@ -47,7 +47,7 @@ The initial *All devices* view displays your devices and includes key informatio
 - When the device last checked in
 - And more
 
-![All device view in the admin center](./media/endpoint-security-manage-devices/all-device-view.png)
+:::image type="content" source="./media/endpoint-security-manage-devices/all-device-view.png" alt-text="The all device view in the admin center." lightbox="./media/endpoint-security-manage-devices/all-device-view.png":::
 
 While viewing device details, you can select a device to drill-in for more information.
 
