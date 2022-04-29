@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-ms.reviewer:  coferro
+ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

@@ -24,7 +24,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer:  natgreen
+ms.reviewer: natgreen
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser

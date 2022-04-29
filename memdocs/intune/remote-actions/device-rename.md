@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer:  abstarr
+ms.reviewer: abstarr
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

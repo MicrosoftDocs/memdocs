@@ -22,7 +22,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-ms.reviewer:  aanavath  
+ms.reviewer: aanavath  
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser, contperf-fy21q1
