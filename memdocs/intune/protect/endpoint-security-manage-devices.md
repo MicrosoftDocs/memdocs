@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 04/29/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,14 +85,13 @@ Consider the following fields:
 
 ## Review a devices policy
 
-While viewing the list of devices, you can select a device to drill-in for more information about it by opening that device’s *Overview* page.
+To view information about the device configuration policies that apply to a device that's managed by MDM and Intune, you can view the [**Device configuration report**](../fundamentals/reports.md#device-configuration-report-operational). Both *endpoint security* and *security baseline* policies are device configuration policies.
 
-From the Overview page of a device, you can then select **Endpoint security configuration** to view the endpoint security policies that apply to that device. Policy details are available for devices managed by MDM and Intune.
-
+To view the report, select a device and then select **Device configuration**, which is found below the *Monitor* category.
+  
 ![View endpoint security policy details](./media/endpoint-security-manage-devices/view-policy-details.png)
 
-Devices that are managed by Configuration Manager don’t display policy details. To view additional information for these devices, use the Configuration Manager console.
-
+Devices that are managed by Configuration Manager don’t display policy details in the report. To view additional information for these devices, use the Configuration Manager console.
 ## Remote actions for devices
 
 Remote actions are actions you can start or apply to a device from the Microsoft Endpoint Manager admin center. When you view details for a device, you can access remote actions that apply to the device.
