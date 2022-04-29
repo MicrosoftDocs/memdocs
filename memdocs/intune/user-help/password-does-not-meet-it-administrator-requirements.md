@@ -24,7 +24,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: priyar
+ms.reviewer:  priyar
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser, contperf-fy21q1
