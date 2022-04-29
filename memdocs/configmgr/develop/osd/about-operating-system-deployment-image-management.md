@@ -1,5 +1,6 @@
 ---
 title: "OS Deployment Image Management"
+description: There are several package types that Configuration Manager uses to manage reference computer operating system images.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -17,7 +17,7 @@ ms.subservice: fundamentals
 #ROBOTS:
 #audience:
 
-#ms.reviewer: craigma
+ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
