@@ -1,5 +1,6 @@
 ---
 title: "SMS_Application Class"
+description: The SMS_Application Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
