@@ -194,7 +194,7 @@ The Enrollment Status Page tracks the following device setup items:
 - Applications
   - Per machine Line-of-business (LoB) MSI apps.
   - LoB store apps with installation context = Device.
-  - Offline store and LoB store apps with installation context = Device.
+  - Offline store apps with installation context = Device.
   - Win32 applications (Windows 11 and Windows 10 version 1903 and later only) 
 
   > [!NOTE]
