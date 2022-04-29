@@ -67,17 +67,20 @@ When your device protection needs extend beyond managing Defender for Endpoint, 
 
 The following table can help you understand which policies that can configure MDE settings are supported by devices that are managed by the different scenarios. When you deploy a policy that’s supported for both *MDE security configuration* and *Microsoft Endpoint Manager*, a single instance of that policy can be processed by devices that run MDE only and devices that are managed by either Intune or Configuration Manager.
 
-| Microsoft Endpoint Manager  | Workload | MDE Security configuration  |  Microsoft Endpoint Manager |
-|----------------|----------------|-------------------|------------|
-| Endpoint security    | Antivirus                   | ![Supported](../media/mde-security-integration/green-check.png)  | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Disk Encryption   |           | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Firewall (Profile and Rules)                | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Endpoint detection and response        | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Attack surface reduction    |           | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Account Protection       |       | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Device Compliance     |   | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Conditional Access    |   | ![Supported](../media/mde-security-integration/green-check.png)  |
-|                      | Security baselines      |   | ![Supported](../media/mde-security-integration/green-check.png)  |
+| Microsoft Endpoint Manager  | Workload | Policy | MDE Security configuration  |  Microsoft Endpoint Manager |
+|----------------|----------------|----------------|-------------------|------------|
+| Endpoint security  | Antivirus  | Antivirus                   | ![Supported](../media/mde-security-integration/green-check.png)  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Antivirus   | Antivirus Exclusions        | ![Supported](../media/mde-security-integration/green-check.png)  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    | Antivirus   | Windows Security Experience |  | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                    |  Disk Encryption | All |           | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Firewall | Firewall                | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Firewall | Firewall Rules                | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                     | Endpoint detection and response | Endpoint detection and response        | ![Supported](../media/mde-security-integration/green-check.png) | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                      |Attack surface reduction | All    |           | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                      |Account Protection | All       |       | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                      | Device Compliance | All    |   | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                      | Conditional Access  | All    |   | ![Supported](../media/mde-security-integration/green-check.png)  |
+|                      | Security baselines | All      |   | ![Supported](../media/mde-security-integration/green-check.png)  |
 
 **Endpoint security policies** are discrete groups of settings intended for use by security admins who focus on protecting devices in your organization.
 

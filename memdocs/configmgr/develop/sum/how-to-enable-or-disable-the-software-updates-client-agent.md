@@ -1,5 +1,6 @@
 ---
 title: "Enable or Disable the Software Updates Client Agent"
+description: You enable or disable the Software Updates Client Agent, in Configuration Manager, by modifying the site control file settings.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
