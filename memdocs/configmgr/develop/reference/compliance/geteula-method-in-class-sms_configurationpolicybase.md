@@ -1,5 +1,6 @@
 ---
 title: "GetEULA Method in Class SMS_ConfigurationPolicyBase"
+description: In Configuration Manager, the `GetEULA` Windows Management Instrumentation (WMI) class method gets the localized Microsoft Software License Terms text of the configuration item.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

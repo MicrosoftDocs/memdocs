@@ -1,5 +1,6 @@
 ---
 title: "Deployment Type Extension Versioning"
+description: Configuration Manager supports in-place versioning for minor upgrades and out-of-place versioning for major upgrades.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

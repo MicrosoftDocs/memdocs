@@ -1,6 +1,16 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/apps/store-apps-windows-phone-8-1.md",
+            "redirect_url": "/mem/intune/apps/apps-add",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/lob-apps-windows-phone.md",
+            "redirect_url": "/mem/intune/apps/apps-add",
+            "redirect_document_id": false
+        },      
+        {
             "source_path": "memdocs/intune/user-help/set-or-change-your-password-windows.md",
             "redirect_url": "https://support.microsoft.com/windows/windows-sign-in-options-and-account-protection-7b34d4cf-794f-f6bd-ddcc-e73cdf1a6fbf",
             "redirect_document_id": false
