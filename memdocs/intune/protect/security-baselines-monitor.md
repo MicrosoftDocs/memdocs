@@ -48,7 +48,7 @@ The *Overview* pane displays two status views for the selected baseline:
 - **Security baseline posture** chart - This chart displays high-level details about device status for the baseline version. The available details:
   - **Matches default baseline** – This status identifies when a devices configuration matches the default (unmodified) baseline configuration.
   - **Matches custom settings** – This status identifies when a devices configuration matches the customized version of the baseline that you've deployed. 
-  - **Misconfigured** – This status is a roll up that represents three status conditions from a device: *Error*, *Pending*, or *Conflict*. These separate states are available from other views, like the *Security baseline posture by category*, a list view that appears below this chart.
+  - **Misconfigured** – This status is a roll-up that represents three status conditions from a device: *Error*, *Pending*, or *Conflict*. These separate states are available from other views, like the *Security baseline posture by category*, a list view that appears below this chart.
   - **Not applicable** - This status represents a device that can’t receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting. 
 
 - **Security baseline posture by category** - A list view that displays device status by category. In this list view, the same details as the *Security baseline posture* chart are available. However, in place of *Misconfigured* you’ll see three columns for the status states that make up Misconfigured:
@@ -66,7 +66,7 @@ When you drill-in to the two preceding views, you can view the following details
 - **Not applicable**: The device can't receive the policy. For example, the policy updates a setting specific to the latest version of Windows, but the device runs an older (earlier) version that doesn’t support that setting.
 
 From the *Version* view, you can select **Device Status**. The Device Status view displays a list of the devices that receive this baseline and includes the following details:
-- *USER PRINCIPAL NAME* - This displays the user profile associated with the baseline on the device. 
+- *USER PRINCIPAL NAME* - The user profile associated with the baseline on the device. 
 - *SECURITY BASELINE POSTURE* - This column displays the devices state:
   - **Succeeded**: Policy is applied.
   - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
@@ -111,36 +111,21 @@ You can also reach information about settings in conflict or error through two p
 
    - Setting – The name of the setting.
    - State – The status of the setting on the device.
-   - Source Profiles – This is a list of each conflicting profile that configures the same setting but with a different value.
+   - Source Profiles – A list of each conflicting profile that configures the same setting but with a different value.
 
 3. To reconfigure conflicting profiles, select a record from the **Source Profile** list to open *Overview* for that profile. Select the profiles **Properties** and you can then review and edit settings in that profile to remove the conflict.
 
 ## View settings from profiles that apply to a device
 
-You can select a profile for a Security Baseline, and drill-in to view a list of settings from that profile as they apply to an individual device. To view that list you drill in through the following paths:
+You can select a profile for a Security Baseline, and drill-in to view a list of settings from that profile as they apply to an individual device. To  drill in:
 
-- **Endpoint security** > **Security baselines** > *select the security baseline type* > *select the Profile you want to view* > **Per-setting status** 
-- **Endpoint Security** > **All devices** > *select a device* > Device configuration > *select a baseline policy instance* > **Per-setting status**
+- **Endpoint Security** > **All devices** > *select a device* > Device configuration > *select a baseline policy instance* 
 
-After drilling in, the admin center displays a list of the settings from that profile that includes the category the setting is from and the configuration state on the device. Configuration states include the following values:
+After you drill in, the admin center displays a list of the settings from that profile and the settings status. Status states include:
 
-- **Success** or **Succeeded** – The setting on the device matches the value as configured in the profile. This is either the baselines default and recommended value, or a custom value specified by an administrator when the profile was configured.
+- **Succeeded** – The setting on the device matches the value as configured in the profile. This is either the baselines default and recommended value, or a custom value specified by an administrator when the profile was configured.
 - **Conflict** – The setting is in conflict with another policy, has an error, or is pending an update.
-- **Not applicable** – The setting is not applied by the profile.
-- **Error** - T
-
-
-## View Endpoint security configurations per device
-
-View details about the security configurations that apply to an individual device, which can help you isolate settings that  are misconfigured.
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Go to  **Devices** > **All devices** and select the device you want to view.
-
-3. In the *Monitor* category, select **Endpoint security configuration** to view the list of security configurations that apply to that device.
-
-4. You can select an Endpoint security configuration to drill in and view additional details about the evaluation of that security configuration on the device.
+- **Error** - The settings failed to apply.
 
 ## Troubleshoot using per-setting status
 
