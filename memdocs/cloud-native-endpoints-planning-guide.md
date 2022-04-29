@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 04/28/2022
+ms.date: 04/26/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -31,25 +31,21 @@ ms.collection:
 
 # High level planning guide to move to cloud native endpoints
 
-**TO DO:**
-
-- ??Answer outstanding questions??
-
 This high level planning guide includes ideas and suggestions you need to consider for your adoption and migration to cloud native endpoints. It discusses managing devices, reviewing & transitioning existing workloads, making organization changes, using Windows Autopilot, and more.
 
 This feature applies to:
 
 - Windows cloud native endpoints
 
-Moving your Windows endpoints to cloud native has many advantages, including long term advantages. It's not an overnight process and must be planned to avoid issues, outages, and negative user impact.
+Moving your Windows endpoints to cloud native has many advantages, including in the long term. It's not an overnight process and must be planned to avoid issues, outages, and negative user impact.
 
-For an overview of cloud native endpoints, and their benefits, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
+For more information on the benefits to the organization and its users, see [Get started with cloud native endpoints and Microsoft Endpoint Manager](cloud-native-endpoints-overview.md).
 
 To be successful, consider these key areas during planning and deployment. With proper planning, communications, and process updates, your organization can be cloud native.
 
 ## Manage devices using a cloud native MDM provider
 
-Managing your endpoints, including cloud native endpoints, is an important task for all organizations. Device management is shifting to cloud solutions. With cloud native endpoints, the management tools you use must manage the endpoints wherever they go.
+Managing your endpoints, including cloud native endpoints, is an important task for all organizations. With cloud native endpoints, the management tools you use must manage the endpoints wherever they go.
 
 If you don't currently use a mobile device management (MDM) solution, or want to move to a Microsoft solution, then look at [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 
@@ -143,7 +139,7 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
     [Group Policy analytics](/mem/intune/configuration/group-policy-analytics) can analyze your on-premises GPOs, see if those same settings are supported in the cloud, and create a policy using those settings.
 
-  - If you have existing policies that issue certificates, manage BitLocker, and provide endpoint protection, then these features will need moved ??"moved"?? to Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)).
+  - If you have existing policies that issue certificates, manage BitLocker, and provide endpoint protection, then you need to migrate these policies to Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)).
 
     For more information, see:
 
@@ -164,18 +160,7 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
     - [Manage Windows 10 and Windows 11 software updates in Intune](/mem/intune/protect/windows-update-for-business-configure)
     - [Integrate Configure Manager with Windows Update for Business](/mem/configmgr/sum/deploy-use/integrate-windows-update-for-business-windows-10)
-
-  - **Deploy Microsoft 365 app updates** using the following options:
-
-    - **Office Content Delivery Network** (CDN): Manage the CDN using a servicing profile in the Microsoft 365 Apps admin center or using an Intune policy ??How do you manage CDN using Intune policy? I don't see any docs on this??.
-    - **Intune**: Create a policy that sets the Update Channel, removes other app versions, and more.
-    - **Configuration Manager** (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)): Manage your apps, including update stats, copy, retire, and more.
-
-    For more information, see:
-
-    - [Content Delivery Networks (CDNs)](/microsoft-365/enterprise/content-delivery-networks)
-    - [Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune](/mem/intune/apps/apps-add-office365)
-    - [Management tasks for Configuration Manager apps](/mem/configmgr/apps/deploy-use/management-tasks-applications)
+    - [Choose how to manage updates to Microsoft 365 Apps](/deployoffice/choose-how-manage-updates-microsoft-365-apps)
 
 - **Manage user data and settings**
 
@@ -235,17 +220,21 @@ Modernizing workloads and adopting cloud native endpoints will require changes t
 
 When reviewing your endpoints and workloads, break down the transition into phases. This section provides an overview on some recommended phases your organization can use. These phases can be repeated as many times as needed.
 
-??I feel like we need a common example, and we can build off that example with each phase. It might make more sense to readers??
-
 ### ✅ Phase 1: Get info on your workloads
+
+This is the core information gathering phase that helps you to establish the entire scope of what must be considered for your organization to transition to cloud-native. It involves defining exactly what services, products, and applications make up and provide each workload in your environment.
 
 In this phase:
 
-1. Inventory your current workload information and details, including their current state. Understand and define the end goal for all workloads, which should be to support cloud native endpoints.
+1. Inventory your current workload information and details, including their current state, what they provide, who they serve, who maintains them, whether they are critical to cloud-native, and how they are hosted. From these details you should be able to understand and define the end goal, which should be to support cloud native endpoints, and state for all workloads and the services, products, and applications that compromise each. This will involve coorindation with the owners of the various services, products, and applications to ensure that cloud-native endpoints support end-user productivity without connectvity or location constraints.
+
+    Examples of common services and applications include line of business applications, internal websites, file shares, authentication requirements, application and OS update mechanisms, and application configuration. Anything and everything an end user requires to fully perform their duties. 
 
 2. Verify the end-state for each workload. Identify known blockers that prevent getting to this end-state or prevent supporting cloud native endpoints.
 
-    Getting to the end-state for each workload may include updating software, "lifting and shifting" to a new platform, migrating to a new solution, or making configuration changes. The steps needed for each workload are different with each organization.
+    Some workloads and their services and applications may already be cloud friendly or enabled, however, some may not. Getting to the end-state for each workload may require some level of investment and effort for the organization and may include updating software, "lifting and shifting" to a new platform, migrating to a new solution, or making configuration changes. The steps needed for each workload are different with each organization and highly dependant on how the service or application is hosted and accessed by end users. This end-state should address our primary challenge of enabling end-users to perform their work on a cloud-native endpoint regardless of location or connectivity to the internal network.
+    
+    Based on each defined end-state, you may discover or define that cloud-enabling a service or application is difficult or blocked. This can be for a variety of reasons including technical or finanical limitations. These need to be articulated and understood so that you can assess their impact and how to move each workload to cloud-native friendly.
 
 ### ✅ Phase 2: Prioritize any blockers
 
@@ -255,21 +244,7 @@ After you've identified the key workloads and their end-state blockers, then:
 
     You may not want or need to address all blockers. For example, your organization might have workloads, or a part of workloads, that won’t support your cloud native endpoints. This lack of support may or may not be significant for your organization or users. You and your organization can make this decision.
 
-2. To support testing, create a proof of concept (POC) and start with a minimum set of workloads. The goal is to test and validate a sample of your workloads.
-
-    As part of the POC, identify a set of users and devices to run a production pilot. In many organizations, there's a role or business group that will be easier to migrate.
-
-    For example, you can target the following scenarios in your POC:
-
-    - Highly mobile sales team whose primary requirements are productivity tools and an online customer relationship management solution
-    - Knowledge workers who primarily access content that’s already in the cloud and rely heavily on Microsoft 365 apps
-    - Frontline worker devices that are highly mobile, or are in environments where they don't have access to the organization network
-
-    For these groups, review their workloads. Determine how these workloads can move to modern management, including identity, software distribution, device management, and more.
-
-    For each of the areas in your pilot, the number of items or tasks should be low. This initial pilot helps you develop the processes and procedures required for more groups. It also helps develop your long term strategy.
-
-    For more guidance and tips, go to the [Microsoft Intune planning guide](/mem/intune/fundamentals/intune-planning-guide). It applies to to Intune, but also includes some guidance when using pilot groups and creating rollout plans.
+2. To support testing and proof of concept, start with a minimum set of workloads. The goal is to test and validate a sample of your workloads. Testing and validation should consist of real-world, end-user use as only this will fully prove whether or not the end-state truly enables end-user productivity.
 
 ### ✅ Phase 3: Transition your workloads
 
@@ -389,21 +364,15 @@ Important steps for this phase include:
 
     - Use the milestones and success criteria previously established for each workload. They'll help determine the progress and scope of the POC.
 
-### ✅ Phase 5: Implement full modern provisioning
+### ✅ Phase 5: Azure AD join your existing Windows endpoints
 
-?? This whole section needs rewritten. This needs explained. Is a whole phase needed for just one sentence? ??
-
-This phase transitions new Windows endpoint provisioning to Azure AD joined.
-
-### ✅ Phase 6: Azure AD join your existing Windows endpoints
-
-Once all blockers and issues have been resolved, you can move existing devices to be fully cloud native. You have the following options:
+This phase transitions new Windows endpoint provisioning to Azure AD joined. Once all blockers and issues have been resolved, you can move existing devices to be fully cloud native. You have the following options:
 
 - **Option 1: Replace your devices**. If the devices are end-of-life or don't support modern security, then replacing them is the best choice. Modern devices support new and enhanced security features, including the Trusted Platform Module (TPM) technology.
 
 - **Option 2: Reset the Windows devices**. If your existing devices support the newer security features, then you can reset the devices. During the out of box experience (OOBE) or when users sign in, they can join the devices to Azure AD.
 
-  When resetting an existing Windows endpoint, be sure to clean up (??Does this mean delete? Need more info??) the existing Azure AD device object, the Intune device object, and the Windows Autopilot device registration. Then, reprovision the endpoint.
+  When resetting an existing Windows endpoint, be sure to delete the existing Azure AD device object, the Intune device object, and the Windows Autopilot device registration. Then, reprovision the endpoint.
 
 When the devices are ready, join these devices to Azure AD using the option that best for your organization. For more specific information, see [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) and [How to: Plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan).
 
