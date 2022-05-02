@@ -502,7 +502,7 @@ The Intune MAM SDK provides support for the following save locations defined in 
 * `IntuneMAMSaveLocationSharePoint` - This location represents both SharePoint online and AAD Hybrid Modern Auth SharePoint on-prem locations. The identity associated with the SharePoint account should be passed in as the second argument.
 * `IntuneMAMSaveLocationLocalDrive` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for saving via a file picker or for saving to files through a share extension. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there is no identity, `nil` should be passed instead. (For example, an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.)
 * `IntuneMAMSaveLocationCameraRoll` - This location represents the iOS Photo Library. Because there is no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. 
-* `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument.  (e.g. Uploading a photo to a organization’s LOB cloud service that is tied to the organization account.)
+* `IntuneMAMSaveLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument.  (e.g. Uploading a photo to an organization’s LOB cloud service that is tied to the organization account.)
 * `IntuneMAMSaveLocationOther` - This location represents any non-organizational, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
 ##### Special considerations for save locations
@@ -529,7 +529,7 @@ The Intune MAM SDK provides support for the following open locations defined in 
 * `IntuneMAMOpenLocationCamera` - This location **only** represents new images taken by the camera. Because there is no account associated with the iOS camera, only `nil` should be passed as the second argument when this location is used. For opening data from the iOS Photo Library, use  `IntuneMAMOpenLocationPhotos`.
 * `IntuneMAMOpenLocationPhotos` - This location **only** represents existing images within the iOS Photo Library. Because there is no account associated with the iOS Photo Library, only `nil` should be passed as the second argument when this location is used. For opening images taken directly from the iOS camera, use `IntuneMAMOpenLocationCamera`.
 * `IntuneMAMOpenLocationLocalStorage` - This location represents app-sandbox storage that can only be accessed by the app. This location should **not** be used for opening files from a file picker or handling incoming files from an openURL. If an identity can be associated with the app-sandbox storage, it should be passed in as the second argument. If there is no identity, `nil` should be passed instead. (e.g. an app might use separate app-sandbox storage containers for different accounts. In this case, the account that owns the container being accessed should be used as the second argument.) 
-* `IntuneMAMOpenLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. (e.g. Downloading a photo from a organization’s LOB cloud service that is tied to the organization account.)
+* `IntuneMAMOpenLocationAccountDocument` - This location represents any organization location not previously listed that can be tied to a managed account. The organization account associated with the location should be passed in as the second argument. (e.g. Downloading a photo from an organization’s LOB cloud service that is tied to the organization account.)
 * `IntuneMAMOpenLocationOther` - This location represents any non-organizational location, not previously listed, or any unknown location. If an account is associated with the location, it should be passed in as the second argument. Otherwise, `nil` should be used instead.
 
 ##### Special considerations for open locations
@@ -668,7 +668,7 @@ For more information about how to create a MAM targeted app configuration policy
 App Protection Conditional Access blocks access to server tokens until Intune has confirmed app protection policy has been applied. This feature will require changes to your add user flows. Once a customer enables App Protection CA, applications in that customer's tenant that access protected resources will not be able to acquire an access token unless they support this feature.
 
 ### Dependencies
-In addition to the Intune SDK, you will need these two components to enable App Protectoin CA in your app.
+In addition to the Intune SDK, you will need these two components to enable App Protection CA in your app.
 
 1. iOS Authenticator app
 2. MSAL authentication library 1.0 or greater
@@ -797,8 +797,8 @@ guard let authorityURL = URL(string: kAuthority) else {
 Test Case	| How to test	|	Expected Outcome	|
 --	| --	| --	|
 MAM-CA always applied		| Ensure the user is targeted for both App Protection CA and MAM policy before enrolling in your app.|  Verify that your app handles the remediation cases described above and the app can get an access token.	|
-MAM-CA applied after user enrolled	| The user should be logged into the app already, but not targeted for App Protetion CA.	| Target the user for App Protetion CA in the console and verify that you correctly handle MAM remediation	|
-MAM-CA noncompliance	| Set up a App Protection CA policy, but do not assign a MAM policy.	| The user should not be able to acquire an access token. This is useful for testing how your app handles IntuneMAMComplianceStatus error cases.	|
+MAM-CA applied after user enrolled	| The user should be logged into the app already, but not targeted for App Protection CA.	| Target the user for App Protection CA in the console and verify that you correctly handle MAM remediation	|
+MAM-CA noncompliance	| Set up an App Protection CA policy, but do not assign a MAM policy.	| The user should not be able to acquire an access token. This is useful for testing how your app handles IntuneMAMComplianceStatus error cases.	|
 
 ## Telemetry
 
@@ -926,7 +926,7 @@ In iOS, web views can be used to surface a wide variety of web content without h
 
 Because web views exist within the app, they expose it to potential data leaks. If a user is able to navigate to arbitrary external web pages within an app (either through intentional app design or by clever maneuvering through exposed links in the rendered web page's html content), then the user may be able to leak managed data from the app. 
 
-The Intune MAM SDK provides several APIs for handling different scenarios where both managed and unmanaged content is surfaced through web views within an app. **These APIs only need to be called if there is a managed user signed into the app.** Please see the table below as a quick guide on which API applies to which scenario. 
+The Intune MAM SDK provides several APIs for handling different scenarios where both managed and unmanaged content are surfaced through web views within an app. **These APIs only need to be called if there is a managed user signed into the app.** Please see the table below as a quick guide on which API applies to which scenario. 
 
 | Scenario | APIs |
 | - | - |
@@ -979,12 +979,12 @@ If a web view is used to display user or organizational content but has a risk o
 
 > The `setWebViewPolicyDelegate:forWebViewer:` method must be called directly on a WKWebView or SFSafariViewController.
 
-Each time the web view navigates to a new page, the `isExternalURL:` delegate method will be called. Applications should determine if the URL passed to the delegate method represents an internal website where user or organizational data can be pasted in or an external website that could leak organizational data. Returning `NO` will tell the SDK that the website being loaded is a organizational location where user or organizational data can be shared. Returning `YES` will cause the SDK to open the URL in a managed browser rather than the WKWebView or SFSafariViewController if current policy settings require it. This will ensure that no user or organizational data from within the app can be leaked to the external website.
+Each time the web view navigates to a new page, the `isExternalURL:` delegate method will be called. Applications should determine if the URL passed to the delegate method represents an internal website where user or organizational data can be pasted in or an external website that could leak organizational data. Returning `NO` will tell the SDK that the website being loaded is an organizational location where user or organizational data can be shared. Returning `YES` will cause the SDK to open the URL in a managed browser rather than the WKWebView or SFSafariViewController if current policy settings require it. This will ensure that no user or organizational data from within the app can be leaked to the external website.
 
 
 ### Web View APIs Example
 
-An app is built with five web views (A, B, C, D, and E). Web views A, B, and C do not display user or organizational data. Web view D displays a organization page available to all users of the company. Web view E renders the user's documents which may contain links.
+An app is built with five web views (A, B, C, D, and E). Web views A, B, and C do not display user or organizational data. Web view D displays an organization page available to all users of the company. Web view E renders the user's documents which may contain links.
 
 Since the majority of web views are unmanaged (A, B, and C), we can set `TreatAllWebViewsAsUnmanaged` to reduce the number of times we need to call `setWebViewPolicy:forWebViewer:`.
 
