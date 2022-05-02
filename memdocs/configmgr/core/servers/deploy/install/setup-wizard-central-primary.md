@@ -2,7 +2,7 @@
 title: Install a CAS or primary site
 titleSuffix: Configuration Manager
 description: Use the Configuration Manager setup wizard to install a new central administration site (CAS) or primary site.
-ms.date: 04/08/2022
+ms.date: 05/02/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -240,6 +240,8 @@ To expand the site, use the [process to install a CAS or primary site](#process-
 - On the **Client Language Selection** page for the new CAS, select the same client languages that you configured on the original primary site.
 
 - On the **Site Installation** page, select the option to expand the stand-alone primary site.
+
+- If you enable Endpoint Analytics for devices uploaded to Microsoft Endpoint Manager, in version 2107 or later, re-enable this option. <!--13772757,  10362047-->
 
 ## Next steps
 
