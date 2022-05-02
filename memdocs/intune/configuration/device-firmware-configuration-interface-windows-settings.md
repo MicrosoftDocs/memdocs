@@ -58,7 +58,7 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Not configured**: Intune doesn't change or update this setting.
   - **Enabled**: The BIOS enables the platform's CPU and IO virtualization capabilities for use by the OS. It turns on Windows Virtualization Based Security and Device Guard technologies.
 
-- **Windows Platform Binary Table** (WPBT): The WPBT allows vendors and OEMs to run an `.exe` program in the UEFI layer. Every time Windows boots, it looks at the EUFI, and runs the `.exe`. It's used to run programs that aren't included with the Windows media.
+- **Windows Platform Binary Table** (WPBT): The WPBT allows vendors and OEMs to run an `.exe` program in the UEFI layer. Every time Windows boots, it looks at the UEFI, and runs the `.exe`. It's used to run programs that aren't included with the Windows media.
 
   Your options:
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might allow vendors and OEMs to run programs using the WPBT.
