@@ -177,7 +177,7 @@ In `- importDocumentAtURL:toParentItemIdentifier:completionHandler:` check wheth
 The Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
 ### Set up and configure an AAD app registration
-MSAL requires apps to [register](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) with Azure Active Directory (AAD) and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your application already uses MSAL for its own authentication, then there should already be an AAD app registration/client ID/redirect URI associated with the app. 
+MSAL requires apps to [register](/azure/active-directory/develop/quickstart-register-app) with Azure Active Directory (AAD) and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your application already uses MSAL for its own authentication, then there should already be an AAD app registration/client ID/redirect URI associated with the app. 
 
 Developers should [grant their new or existing app registration access to the Intune MAM service](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional), to ensure the application is able to successfully acquire MAM policies.
 
