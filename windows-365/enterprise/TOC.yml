@@ -89,6 +89,8 @@ items:
         href: delete-provisioning-policy.md
       - name: Automated provisioning steps
         href: automated-provisioning-steps.md
+      - name: Manage Cloud PCs using Configuration Manager
+        href: manage-cloud-pcs-using-configuration-manager.md
     - name: Profiles and policies
       items:
       - name: Create a dynamic device group

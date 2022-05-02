@@ -71,7 +71,7 @@ items:
       href: administrative-templates-configure-edge.md
     - name: Restrict USB devices using ADMX
       href: administrative-templates-restrict-usb.md
-  - name: BIOS settings on Windows
+  - name: UEFI BIOS settings on Windows
     href: device-firmware-configuration-interface-windows.md
     displayName: dfci, firmware
   - name: Domain Join on Windows
@@ -223,6 +223,8 @@ items:
         href: custom-settings-windows-10.md
       - name: Delivery optimization
         href: delivery-optimization-settings.md
+      - name: Device Firmware Configuration Interface (DFCI)
+        href: device-firmware-configuration-interface-windows-settings.md
       - name: Device restrictions
         href: device-restrictions-windows-10.md
       - name: Device restrictions (Windows 10 Team)

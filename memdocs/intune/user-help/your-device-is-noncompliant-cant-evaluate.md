@@ -2,7 +2,7 @@
 # required metadata
 
 title: Your device is noncompliant | Microsoft Docs
-description:
+description: Use the check compliance feature in the Company Portal app to find out why your device is noncompliant. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
