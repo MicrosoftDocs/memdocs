@@ -67,14 +67,13 @@ If your organization uses Active Directory Federation Services (ADFS), this regi
 
 ## Azure AD service connection point (SCP) misconfigured
 
-The service connection point (SCP) is used by your Cloud PCs to discover your Azure AD tenant information. You must configure your SCPs by using Azure AD connect for each forest you plan to join Cloud PCs to. 
+The service connection point (SCP) is used by your Cloud PCs to discover your Azure AD tenant information. You must configure your SCPs by using Azure AD connect for each forest you plan to join Cloud PCs to.
 
 If the SCP configuration doesn't exist, or can't be discovered by using the vNet declared, provisioning will fail. 
 
 To understand more about the SCP and learn how to configure it, see the [Azure AD documentation](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
-**Suggested test**: Confirm with your identity team that the SCP exists for all target forests. 
-
+**Suggested test**: Confirm with your identity team that the SCP exists for all target forests.
 
 ## Intune enrollment failed
 
@@ -142,6 +141,10 @@ Windows 365 uses the customer provided vNet to perform a vNic ingestion from the
 Windows 365 provisioned the Cloud PC but didn’t hide the shutdown and restart icons in the Start Menu. As a result, the user will see the shutdown and restart icons in the Start Menu. If the user ends their Cloud PC connection by selecting the shutdown icon, they may need to restart the Cloud PC from the Cloud PC portal before connecting again.
 
 **Suggested test**: Retry provisioning or create a device configuration policy to [hide the shut down button](/windows/client-management/mdm/policy-csp-start#start-hideshutdown) and to [hide the restart button](/windows/client-management/mdm/policy-csp-start#start-hiderestart).
+
+## Supported Azure regions for Cloud PCs not listed in provisioning user interface
+
+If a specific region is not listed in the Cloud PC provisioning user interface (UI), but is listed in the Windows 365 requirements documentation, Windows 365 may have expanded in a new region. If your networking infrastructure is in such a region, select **New support request** to open a support ticket for evaluation.
 
 ## Time zone redirection error
 
