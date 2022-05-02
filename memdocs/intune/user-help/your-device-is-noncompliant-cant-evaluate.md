@@ -2,7 +2,7 @@
 # required metadata
 
 title: Your device is noncompliant | Microsoft Docs
-description: In the Company Portal app, tap Check Compliance. The Company Portal app will then tell you what is causing your device to be noncompliant.
+description: Use the check compliance feature in the Company Portal app to find out why your device is noncompliant. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
