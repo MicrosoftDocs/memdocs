@@ -138,7 +138,7 @@ Intune applies the default profile to all users and all devices when no other ES
 
 
 ## Prioritize profiles       
-If you assign a user or device more than one ESP profile, the profile with the highest priority takes precedence over the other profiles.
+If you assign a user or device more than one ESP profile, the profile with the highest priority takes precedence over the other profiles. The profile set to 1 has the highest priority.
 
  Intune applies profiles in the following order:  
 
