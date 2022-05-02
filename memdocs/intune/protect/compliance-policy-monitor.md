@@ -29,7 +29,7 @@ ms.collection:
 ---
 # Monitor results of your Intune Device compliance policies
 
-Compliance reports help you understand when devices fail to meet your compliance configurations and can help you identify compliance-related issues in your organization. Using these reports, you can view information on:
+Compliance reports help you understand when devices fail to meet your [compliance configurations](../protect/device-compliance-get-started.md) and can help you identify compliance-related issues in your organization. Using these reports, you can view information on:
 
 - The overall compliance states of devices
 - The compliance status for an individual setting
