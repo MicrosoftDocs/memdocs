@@ -95,11 +95,11 @@ These settings manage the hardware components built into the devices. They don't
 ## Boot Options
 
 - **Boot from external media (USB, SD)**: Your options:
-  - **Not configured**: Intune doesn't change or update this setting.
-  - **Enabled**: UEFI (BIOS) allows booting from non-hard drive storage.
-  - **Disabled**: UEFI (BIOS) doesn't allow booting from non-hard drive storage, which also disables booting from network adapters. 
+- **Not configured**: Intune doesn't change or update this setting.
+- **Enabled**: UEFI (BIOS) allows booting from non-hard drive storage.
+- **Disabled**: UEFI (BIOS) doesn't allow booting from non-hard drive storage, which also disables booting from network adapters. 
 
-    When set to **Disabled**, don't set the **Boot from network adapters** setting to **Enabled**. It causes the **Boot from external media (USB, SD)** setting or **Boot from network adapters** setting to become not compliant.
+  When set to **Disabled**, don't set the **Boot from network adapters** setting to **Enabled**. It causes the **Boot from external media (USB, SD)** setting or **Boot from network adapters** setting to become not compliant.
 
 - **Boot from network adapters**: Your options:
   - **Not configured**: Intune doesn't change or update this setting.
@@ -108,7 +108,7 @@ These settings manage the hardware components built into the devices. They don't
 
 ## Next steps
 
-For other technical details on each setting and what editions of Windows are supported, see [Windows 10/11 Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider)
+For other technical details on each setting and what editions of Windows are supported, see [Windows 10/11 Policy CSP Reference](/windows/client-management/mdm/policy-configuration-service-provider).
 
 [Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
 
