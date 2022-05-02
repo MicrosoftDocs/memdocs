@@ -92,7 +92,7 @@ If Intune enrollment is failing, make sure that:
 - All of the required Intune endpoints are available on the vNet of your Cloud PCs.
 - There are no MDM enrollment restrictions on the tenant. Windows corporate device enrollment is allowed in custom and default policies.
 - The Intune tenant is active and healthy.
-- If co-managing Cloud PCs with Intune and Configuration Manager, ensure that the Cloud PC OU is not targeted for client push installation. Instead deploy the Configuration Manager agent from Intune. For more information, see Configuration Manager [client installation methods](/mem/configmgr/core/clients/deploy/plan/client-installation-methods#microsoft-intune-mdm-installation).
+- If co-managing Cloud PCs with Intune and Configuration Manager, ensure that the Cloud PC OU isn't targeted for client push installation. Instead deploy the Configuration Manager agent from Intune. For more information, see Configuration Manager [client installation methods](/mem/configmgr/core/clients/deploy/plan/client-installation-methods#microsoft-intune-mdm-installation).
 
 **Suggested test**: Attempt an Intune enrollment using a test device or VM.
 
@@ -144,7 +144,7 @@ Windows 365 provisioned the Cloud PC but didn’t hide the shutdown and restart 
 
 ## Supported Azure regions for Cloud PCs not listed in provisioning user interface
 
-If a specific region is not listed in the Cloud PC provisioning user interface (UI), but is listed in the Windows 365 requirements documentation, Windows 365 may have expanded in a new region. If your networking infrastructure is in such a region, select **New support request** to open a support ticket for evaluation.
+If a specific region isn't listed in the Cloud PC provisioning user interface (UI), but is listed in the Windows 365 requirements documentation, Windows 365 may have expanded in a new region. If your networking infrastructure is in such a region, select **New support request** to open a support ticket for evaluation.
 
 ## Time zone redirection error
 
