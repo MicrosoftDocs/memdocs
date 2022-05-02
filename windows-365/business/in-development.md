@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 01/13/2022
+ms.date: 04/12/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -53,7 +53,14 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 -->
 
 <!-- ***********************************************-->
-## Upcoming features
+## Device management
+
+### Set default languages/regions for Cloud PCs (preview)<!--38649676 -->
+
+You’ll be able to set the default languages for your newly created Cloud PCs. Thirty-eight languages/regions will be available.
+
+<!-- ***********************************************-->
+## Monitor and troubleshoot
 
 ### End user manual connectivity check<!--37679345 -->
 

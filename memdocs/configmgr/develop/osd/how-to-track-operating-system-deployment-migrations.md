@@ -1,6 +1,7 @@
 ---
 title: "Track OS Deployment Migrations"
 titleSuffix: "Configuration Manager"
+description: "The StoreCreationDate, StoreDeletionDate, and StoreReleaseDate properties can be used to identify the current state of the migration."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

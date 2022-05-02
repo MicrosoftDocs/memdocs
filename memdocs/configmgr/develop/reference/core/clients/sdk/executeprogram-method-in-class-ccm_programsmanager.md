@@ -1,4 +1,5 @@
 ---
+description: Learn how to manage the download of a legacy software distribution program using ExecuteProgram class method.
 title: "ExecuteProgram Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

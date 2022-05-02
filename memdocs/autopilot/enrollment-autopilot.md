@@ -5,8 +5,8 @@ title: Create device groups for Windows Autopilot - Microsoft Intune | Microsoft
 titleSuffix: Microsoft Intune
 description: Learn how to create device groups for Windows Autopilot.
 keywords:
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 02/09/2022
@@ -52,7 +52,7 @@ ms.collection:
 
     - **Group type**: Select **Security**.
     - **Group name** and **Group description**: Enter a name and description for your group.
-    - **Azure AD roles can be assigned to the group (Preview)**: **Yes** allows Azure AD roles to be assigned to the group you're creating. Once set, the group is permanently and always allowed to be assigned Azure AD roles. When set to **No**, Azure AD roles aren't assigned to the this group.
+    - **Azure AD roles can be assigned to the group**: **Yes** allows Azure AD roles to be assigned to the group you're creating. Once set, the group is permanently and always allowed to be assigned Azure AD roles. When set to **No**, Azure AD roles aren't assigned to this group.
 
       For more information, see [Use cloud groups to manage role assignments in Azure AD](/azure/active-directory/roles/groups-concept).
 

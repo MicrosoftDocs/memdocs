@@ -1,5 +1,6 @@
 ---
 title: "Create an OS Deployment Task Sequence"
+description: You create a Configuration Manager operating system deployment task sequence by creating an instance of the SMS_TaskSequence class.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

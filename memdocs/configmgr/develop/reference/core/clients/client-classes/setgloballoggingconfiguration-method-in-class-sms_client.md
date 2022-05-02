@@ -1,4 +1,5 @@
 ---
+description: Learn how to define the global logging configuration for the client with SetGlobalLoggingConfiguration method.
 title: "SetGlobalLoggingConfiguration Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

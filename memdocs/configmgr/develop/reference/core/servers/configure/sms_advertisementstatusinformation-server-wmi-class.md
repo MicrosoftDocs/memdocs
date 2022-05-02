@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the state and description for a software distribution or software update status message in Configuration Manager.
 title: "SMS_AdvertisementStatusInformation Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

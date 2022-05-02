@@ -1,6 +1,7 @@
 ---
 title: "SMS_ConfigurationItemLatestBaseClass Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager, that represents the latest version of Configuration Items in the system."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

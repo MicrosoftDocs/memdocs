@@ -1,6 +1,7 @@
 ---
 title: "About Component Status Messages"
 titleSuffix: "Configuration Manager"
+description: The message text for both the Configuration Manager components and the raw user-defined messages is contained in message DLLs.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

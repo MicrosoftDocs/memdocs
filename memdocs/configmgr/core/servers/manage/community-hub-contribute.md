@@ -83,6 +83,17 @@ You can update content you've contributed to the Community hub.
 1. Once the item is uploaded, you'll be given the pull request URL of the change for monitoring.
 1. Select **Close** when you're done to exit the wizard.
 
+## <a name="bkmk_delete"></a> Delete a contribution you made
+<!--10416767-->
+You can delete contributions you've made if you no longer want it to be displayed in the Community hub. There are two ways to delete your contributions.  
+
+Method 1:
+1. Go to **Community** > **Community hub** > **Your hub**.
+1. From the item you want to delete, select **Delete** in the far-right column.
+
+Method 2: </br> </br>
+If the pull request was never completed (merged) into the GitHub repository, then you can just close the pull request. Ensure that you're signed into GitHub with the same GitHub account that you used to create the pull request.
+
 ## <a name="bkmk_brand"></a> Personalization and organization branding of contributed content
 <!--8928812-->
 Starting in January 2021, your contributions are personalized. By default, your contributions include your personal GitHub profile picture. The default [GitHub Identicon](https://github.blog/2013-08-14-identicons/) is used if you don't have a profile picture. All contributions you've submitted before January 2021 are automatically personalized using this default.

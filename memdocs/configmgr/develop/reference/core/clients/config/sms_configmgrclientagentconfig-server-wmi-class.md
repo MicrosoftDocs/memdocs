@@ -1,4 +1,5 @@
 ---
+description: Learn how to specify the general settings for communication between server and client using SMS_COnfigMgrClientAgentConfig.
 title: "SMS_ConfigMgrClientAgentConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

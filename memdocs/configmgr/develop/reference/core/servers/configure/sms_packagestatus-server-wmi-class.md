@@ -1,4 +1,5 @@
 ---
+description: Learn how to provide a summary report of the health of packages and distribution points in the site within Configuration Manager.
 title: "SMS_PackageStatus Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -80,7 +81,7 @@ Class SMS_PackageStatus : SMS_BaseClass
 
  Qualifiers: [key]  
 
- If `Type` is MASTER (1), the compressed copy of the package on the site server. If `Type` is COPY (2), `PkgServer` is the distribution point.  
+ If `Type` is MASTER (1), is the compressed copy of the package on the site server. If `Type` is COPY (2), `PkgServer` is the distribution point.  
 
  `ShareName`  
  Data type: `String`  

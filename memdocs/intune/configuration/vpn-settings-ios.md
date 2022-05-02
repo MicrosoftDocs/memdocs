@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/24/2022
+ms.date: 04/29/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -32,7 +32,9 @@ Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPa
 
 ## Before you begin
 
-Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
+- Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
+
+- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
 
 > [!NOTE]
 >
@@ -79,12 +81,21 @@ Select the VPN connection type from the following list of vendors:
 - **IKEv2**
 
   [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
+
 - **Microsoft Tunnel (standalone client)(preview)**
 
   Applies to the Microsoft Tunnel client app.
+
+  > [!Important]
+  > Use *Microsoft Tunnel (preview)* instead. On April 29, 2022, the *Microsoft Tunnel (preview)* connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. By the end of June 2022, the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app it supports are deprecated and drop from support. Soon after the June date, this connection type will stop functioning and no longer connect to Microsoft Tunnel.
+
 - **Microsoft Tunnel (preview)**
 
-  Applies to the preview version of the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
+  Applies to the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
+
+  > [!Important]
+  > On April 29, 2022, this connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. However, the connection type continues to reflect *preview*.
+  
 - **Custom VPN**
 
 > [!NOTE]

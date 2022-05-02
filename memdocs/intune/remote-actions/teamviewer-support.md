@@ -17,7 +17,7 @@ ms.localizationpriority: high
 
 #ROBOTS:
 #audience:
-#ms.reviewer: coferro
+ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,7 +29,7 @@ ms.collection:
 
 # Use TeamViewer to remotely administer Intune devices
 
-Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com). TeamViewer is a partner program that you purchase separately. This articles shows you how to configure TeamViewer within Intune, and how to remotely administer a device.
+Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com). TeamViewer is a partner program that you purchase separately. This article shows you how to configure TeamViewer within Intune, and how to remotely administer a device.
 
 This feature applies to:
 
@@ -43,10 +43,7 @@ This feature applies to:
 
 - The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Endpoint Manager without them requiring an Intune license. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md). 
 
-- The Intune administrator in the Endpoint Manager admin center must have the following [Intune roles](../fundamentals/role-based-access-control.md):  
-
-  - **Update Remote Assistance**: Allows administrators to modify the TeamViewer connector settings.
-  - **Request Remote Assistance**: Allows administrators to start a new remote assistance session for any user. Users with this role are not limited by any Intune role within a scope. Also, user or device groups assigned an Intune role within a scope can also request remote assistance. 
+- Only a Global administrator or Intune administrator in the Endpoint Manager admin center can onboard TeamViewer. 
 
 - Use a supported Intune-managed device:
 
@@ -103,6 +100,6 @@ When you start a remote session, users see a notification flag on the Company Po
 
 ## Next steps
 
-[Remotely assist mobile devices managed by Microsoft Endpoint Manager](remote-assist-mobile-devices.md)
+[Use remote help with Intune and Microsoft Endpoint Manager](remote-help.md)
 
 [See device details in Intune](device-inventory.md)

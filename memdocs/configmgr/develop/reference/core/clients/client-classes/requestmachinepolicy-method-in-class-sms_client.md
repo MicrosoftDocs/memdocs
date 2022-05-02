@@ -1,6 +1,7 @@
 ---
 title: "RequestMachinePolicy Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the RequestMachinePolicy method initiates a request for machine policy."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

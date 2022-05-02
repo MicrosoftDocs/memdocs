@@ -182,7 +182,7 @@ For more information, see the new article on how to [use the task sequence edito
 
 You can now run a task sequence with the high-performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high-performance power plan, which delivers maximum performance at the expense of higher power consumption.
 
-For more information, see [Performance improvements for power plans](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_perf).
+For more information, see [Task sequence performance](../../../osd/deploy-use/task-sequence-performance.md).
 
 ### Task sequence download on demand over the internet
 

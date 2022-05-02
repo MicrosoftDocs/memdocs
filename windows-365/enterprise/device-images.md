@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 04/05/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -48,10 +48,10 @@ Both marketplace and custom images must meet the following requirements:
 
 A custom image must also meet the following extra requirements:
 
-- Exist in an Azure subscription that has an on-premises network connection already setup.
+- Exist in an Azure subscription.
 - Is stored as a managed image in Azure.
 
-Storing a managed image on Azure incurs storage costs. However customers can delete the managed image from Azure once they've successfully uploaded it as Device Images to Microsoft Endpoint Manager.
+Storing a managed image on Azure incurs storage costs. However, customers can delete the managed image from Azure once they've successfully uploaded it as a Custom Image to Microsoft Endpoint Manager.
 
 ## Gallery images
 
@@ -60,12 +60,12 @@ Windows 365 provides a built-in gallery of Windows Enterprise images accessible 
 There are two sets of images available to choose from across the different versions of Windows Enterprise:
 
 - **Images with pre-installed Microsoft 365 Apps**: Microsoft 365 Apps and Teams optimizations are already installed. The following settings are pre-applied:
-  - IsAVDEnvironment reg key (Teams).
+  - IsWVDEnvironment reg key (Teams).
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
   - Microsoft Teams (Teams).
-  - Edge settings like Sleeping Tabs, Startup boost, and First Time optimizations based on Azure AD and synchronization.
-  - Microsoft Outlook first-time configuration settings (auto log on based on Azure AD profile, support for other profiles).
+  - Edge settings like sleeping tabs, startup boost, and first time optimizations based on Azure AD and synchronization.
+  - Microsoft Outlook first-time configuration settings (auto log-on based on Azure AD profile, support for other profiles).
 - **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
   - Services optimized for virtualization.
   - UWP packages removed.
@@ -111,7 +111,8 @@ When you upload a custom device image, Windows 365:
 2. Runs the following validation checks on the image:
     1. Verifies all the Windows 365 image requirements are met.
     2. Deploys a virtual machine and makes sure that the images can be booted and provisioned as a Cloud PC.
-3. Replicates the image across all Azure regions where you have an on-premises network connection.
+3. If you have a Hybrid Azure AD Join connection, Windows 365 replicates the image across all Azure regions where you have an Azure network connection.
+4. If you have an Azure AD Join connection, Windows 365 replicates the image to the provisioned region during provisioning.
 
 <!-- ########################## -->
 ## Next steps

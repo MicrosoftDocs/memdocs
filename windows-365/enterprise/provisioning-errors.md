@@ -42,7 +42,7 @@ Windows 365 provisioned the Cloud PC but didn’t allocate the full OS storage a
 
 Windows 365 failed to join the Cloud PC to your on-premises Active Directory (AD) domain. This failure can be caused by many factors that are in control of your organization.
 
-- Makes sure that the AD domain, organizational unit (OU), and credentials in the associated on-premises network connection (OPNC) are correct.
+- Makes sure that the AD domain, organizational unit (OU), and credentials in the associated Azure network connection (ANC) are correct.
 - Make sure that the domain join user has sufficient permissions to perform the domain join.
 - Make sure that the vNet and subnet can reach a domain controller correctly.
 
@@ -109,7 +109,7 @@ Windows 365 provisioned the Cloud PC. However, it didn’t configure the Cloud P
 
 ## Not enough IP addresses available
 
-When providing a subnet to the OPNC, make sure that there are more than sufficient IP addresses.
+When providing a subnet to the ANC, make sure that there are more than sufficient IP addresses.
 
 Every Cloud PC provisioning process uses one of the IP addresses provided in the range.
 
@@ -117,13 +117,13 @@ If a provisioning fails, it will be retried a total of three times. Each time, a
 
 **Suggested test**: Check the vNet for available IP addresses, and make sure that there are more than enough IPs available for the retry process to succeed.
 
-## On-premises network connection isn’t healthy
+## Azure network connection isn’t healthy
 
-Cloud PC provisioning will be blocked if the associated OPNC isn’t healthy.
+Cloud PC provisioning will be blocked if the associated ANC isn’t healthy.
 
-The OPNC will refresh every 6 hours. Provisioning will fail if the OPNC refresh fails while provisioning is under way.
+The ANC will refresh every 6 hours. Provisioning will fail if the ANC refresh fails while provisioning is under way.
 
-**Suggested test**: Make sure that the OPNC is healthy and retry the provisioning.
+**Suggested test**: Make sure that the ANC is healthy and retry the provisioning.
 
 ## Provisioning policy not found
 

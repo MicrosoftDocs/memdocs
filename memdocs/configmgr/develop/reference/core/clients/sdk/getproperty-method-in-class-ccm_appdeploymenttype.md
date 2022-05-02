@@ -1,4 +1,5 @@
 ---
+description: Learn how to retrieve an application deployment type property using GetProperty class in Configuration Manager. 
 title: GetProperty method in class CCM_AppDeploymentType
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

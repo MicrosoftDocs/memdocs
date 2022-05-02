@@ -1,5 +1,6 @@
 ---
 title: "SMS_G_System_SoftwareProduct Class"
+description: The SMS_G_System_SoftwareProduct class is an SMS Provider server class that provides software product information for software files that contain resource strings.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -44,7 +44,7 @@ By assigning a Windows 365 license to a user and adding them to a group targeted
 
 Each Cloud PC is created using an operating system [image](device-images.md). Windows 365 includes a gallery of default [images](device-images.md) that provide a remote connection experience optimized for both Windows and Microsoft 365. You can also upload your own custom images and Windows 365 will perform some of the optimizations for you.
 
-Windows 365 also has monitoring infrastructure and synthetic provisioning tests built into [on-premises network connections](on-premises-network-connections.md). These tests run regularly to test your networking and other prerequisites. These tests help minimize provisioning failures due to environmental issues and helps you resolve those issues quicker.
+Windows 365 also has monitoring infrastructure and synthetic provisioning tests built into [Azure network connections](azure-network-connections.md). These tests run regularly to test your networking and other prerequisites. These tests help minimize provisioning failures due to environmental issues and helps you resolve those issues quicker.
 
 ## Configure
 
@@ -62,6 +62,8 @@ Microsoft Endpoint Manager helps you to validate that your Cloud PCs are complia
 Windows 365 integrates with the rest of Microsoft 365 to make sure that you can secure your Cloud PCs. You can use Microsoft Endpoint Manager’s [integration with Microsoft Defender for Endpoint](/mem/intune/protect/advanced-threat-protection) to protect your Cloud PCs from the moment that they’re provisioned. This protection includes using the endpoint detection and response capabilities of Microsoft Defender for Endpoint to [determine device risk](/mem/intune/protect/advanced-threat-protection-configure#create-and-assign-compliance-policy-to-set-device-risk-level).
 
 Windows 365 can also be protected by [Azure AD Conditional Access](/azure/active-directory/conditional-access/overview). This protection includes optionally excluding Windows 365 itself from device compliance policies to ensure that your end users can access their Cloud PCs from any device. You can still use multi-factor authentication, sign-in risk, and other controls to ensure that the user is securely authenticated.
+
+Windows 365 uses the Windows Update auto-scan ability to install the latest quality updates. To make sure that updates are installed promptly, the end user should sign in to the newly provisioned Cloud PC as soon as possible.
 
 You can also disable clipboard and drive redirection to ensure a foundation of data loss prevention. Disabling prevents users from:
 

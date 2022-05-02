@@ -37,14 +37,14 @@ Windows 365 provides a per-user per-month license model by hosting Cloud PCs on 
 Each Cloud PC has a virtual network interface card (NIC) in Microsoft Azure. You have two NIC management options:
 
 - If you use Azure Active Directory (Azure AD) Join and a Microsoft hosted network, you don’t need to bring an Azure subscription or manage the NIC.
-- If you bring your own network and use an on-premises network connection, the NICs are created by Windows 365 in your Azure subscription.
+- If you bring your own network and use an Azure network connection (ANC), the NICs are created by Windows 365 in your Azure subscription.
 
-The NICs are attached to an Azure Virtual Network based on your [on-premises network connection (OPNC)](on-premises-network-connections.md) configuration.
+The NICs are attached to an Azure Virtual Network based on your [Azure network connection (ANC)](azure-network-connections.md) configuration.
 
 Windows 365 is [supported in many Azure regions](requirements.md#supported-azure-regions-for-cloud-pc-provisioning). You can control which Azure region is used in two ways:
 
 - By selecting the Microsoft-hosted network and an Azure region.
-- By selecting an Azure virtual network from your Azure subscription when [creating an OPNC](create-on-premises-network-connection.md).
+- By selecting an Azure virtual network from your Azure subscription when [creating an ANC](create-azure-network-connection.md).
 
 The Azure virtual network's region determines where the Cloud PC is created and [hosted](architecture.md#hosted-on-behalf-of-architecture).
 
@@ -108,26 +108,7 @@ For more information on how to use Azure AD Conditional Access with Windows 365,
 
 Windows 365 Cloud PCs can be either Hybrid Azure AD joined or Azure AD Joined. When using Hybrid Azure AD Join, Cloud PCs must domain join to an AD DS domain. This domain must be synchronized with Azure AD. The domain’s domain controllers may be hosted in Azure or on-premises. If hosted on-premises, connectivity must be established from Azure to the on-premises environment. The connectivity can be in the form of [Azure Express Route](/azure/architecture/reference-architectures/hybrid-networking/expressroute) or a [site-to-site VPN](/azure/architecture/reference-architectures/hybrid-networking/vpn). For more information on establish hybrid network connectivity, see [implement a secure hybrid network](/azure/architecture/reference-architectures/dmz/secure-vnet-dmz). The connectivity must allow communication from the Cloud PCs to the domain controllers required by Active Directory. For more information, see [Configure firewall for AD domain and trusts](/troubleshoot/windows-server/identity/config-firewall-for-ad-domains-and-trusts).
 
-## "Hosted on behalf of" architecture
-
-The "hosted on behalf of" architecture lets Microsoft services, after they’re delegated appropriate and scoped permissions to a virtual network by a subscription owner, attach hosted Azure services to a customer subscription. This connectivity model lets a Microsoft service provide software-as-a-service and user licensed services as opposed to standard consumption-based services.
-
-All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exist in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
-
-Windows 365 manages the capacity and in-region availability in the Windows 365 subscriptions. Windows 365 determines the size and type of VM based on the [license](cloud-pc-size-recommendations.md) you [assign to the user](assign-licenses.md). Windows 365 determines the Azure region to host your Cloud PCs in based on the virtual network you select when [creating an on-prem network connection](create-on-premises-network-connection.md).
-
-Windows 365 aligns with Microsoft 365 data protection policies and provisions. Customer data within Microsoft's enterprise cloud services is protected by various technologies and processes:
-
-- Various forms of encryption.
-- Isolated logically from other tenants.
-- Accessible to a limited, controlled, and secured set of users, from specific clients.
-- Secured for access using role-based access controls.
-- Replicated to multiple servers, storage endpoints, and data centers for redundancy.
-- Monitored for unauthorized access, excessive resource consumption, and availability.
-
-For more information about Windows 365 Cloud PC encryption, see [Data encryption in Windows 365](encryption.md).
-
-## Azure Virtual Desktop connectivity
+## User connectivity
 
 Cloud PC connectivity is provided by Azure Virtual Desktop. No inbound connections direct from the Internet are made to the Cloud PC. Instead, connections are made from:
 
@@ -141,6 +122,33 @@ There's no requirement to configure your Cloud PCs to make these connections. Wi
 For more information on the network architecture of Azure Virtual Desktop, see [Understanding Azure Virtual Desktop network connectivity](/azure/virtual-desktop/network-connectivity).
 
 Windows 365 Cloud PCs don't support third-party connection brokers. 
+
+## "Hosted on behalf of" architecture
+
+The "hosted on behalf of" architecture lets Microsoft services, after they’re delegated appropriate and scoped permissions to a virtual network by a subscription owner, attach hosted Azure services to a customer subscription. This connectivity model lets a Microsoft service provide software-as-a-service and user licensed services as opposed to standard consumption-based services.
+
+The following diagrams show the logical architecture for an Azure AD Join configuration using a Microsoft hosted network, an Azure AD Join configuration using a customer's network connection ("bring your own network"), and a Hybrid Azure AD Join configuration using an ANC, respectively.
+
+![Azure AD Join architecture with Microsoft hosted network](media/architecture/aadjhostednetwork.png)
+
+![Azure AD Join architecture with BYO network](media/architecture/aadjbyon.png)
+
+![Hybrid Azure AD Join architecture](./media/architecture/haadjarch.png)
+
+All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exist in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
+
+Windows 365 manages the capacity and in-region availability in the Windows 365 subscriptions. Windows 365 determines the size and type of VM based on the [license](cloud-pc-size-recommendations.md) you [assign to the user](assign-licenses.md). Windows 365 determines the Azure region to host your Cloud PCs in based on the virtual network you select when [creating an on-prem network connection](create-azure-network-connection.md).
+
+Windows 365 aligns with Microsoft 365 data protection policies and provisions. Customer data within Microsoft's enterprise cloud services is protected by various technologies and processes:
+
+- Various forms of encryption.
+- Isolated logically from other tenants.
+- Accessible to a limited, controlled, and secured set of users, from specific clients.
+- Secured for access using role-based access controls.
+- Replicated to multiple servers, storage endpoints, and data centers for redundancy.
+- Monitored for unauthorized access, excessive resource consumption, and availability.
+
+For more information about Windows 365 Cloud PC encryption, see [Data encryption in Windows 365](encryption.md).
 
 <!-- ########################## -->
 ## Next steps

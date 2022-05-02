@@ -55,7 +55,7 @@ For an overview, including any Intune-specific prerequisites, see [Deployment gu
 
 ## BYOD: Device enrollment
 
-Use for personal or bring your own devices (BYOD). Not a traditional "enrollment" method, as it uses an app configuration profile. This option manages apps on the device. Devices aren't enrolled.
+Use for personal or bring your own devices (BYOD). 
 
 ---
 | Feature | Use this enrollment option when |
@@ -241,7 +241,7 @@ For more information on this enrollment option, and its prerequisites, see [macO
 
 ## Next steps
 
-- [MAM-WE](deployment-guide-enrollment-mamwe.md)
+- [MAM](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)

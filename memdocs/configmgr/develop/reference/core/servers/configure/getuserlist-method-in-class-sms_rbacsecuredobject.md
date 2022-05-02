@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the list of users who have been granted permission to this object with the GetUserList method.
 title: "GetUserList Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

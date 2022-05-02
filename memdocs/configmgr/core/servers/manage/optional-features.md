@@ -2,7 +2,7 @@
 title: Optional features
 titleSuffix: Configuration Manager
 description: Updates to Configuration Manager include optional features, which you have to enable before use.
-ms.date: 12/01/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -38,10 +38,11 @@ The following features are optional in the latest version of Configuration Manag
 <!--Note to include in target articles
 
 > [!NOTE]
-> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](optional-features.md).
+> Configuration Manager doesn't enable this optional feature by default. Before using it, you need to enable this feature. For more information, see [Enable optional features from updates](optional-features.md).
 
 -->
 
+- [Cloud management gateway with virtual machine scale set](../../clients/manage/cmg/plan-cloud-management-gateway.md#virtual-machine-scale-sets) <!--3601040,8959690-->
 - [Orchestration groups](../../../sum/deploy-use/orchestration-groups.md)<!--3098816, 290B66D8-C735-4895-B59A-DD732D84A697-->
 - [Task sequence deployment type](../../../apps/get-started/creating-windows-applications.md#bkmk_tsdt) <!-- 3555953, CB0CDFFB-9C6F-4B18-8954-A43A387302A2-->
 - [Remove the central administration site](../deploy/install/remove-central-administration-site.md) <!-- 3607277 -->

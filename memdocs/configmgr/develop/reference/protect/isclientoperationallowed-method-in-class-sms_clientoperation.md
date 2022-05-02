@@ -1,6 +1,7 @@
 ---
 title: "IsClientOperationAllowed Method"
 titleSuffix: "Configuration Manager"
+description: "checks whether a user has permission to execute an operation."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

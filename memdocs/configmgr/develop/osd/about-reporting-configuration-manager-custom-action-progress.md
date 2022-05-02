@@ -1,6 +1,7 @@
 ---
 title: "Report Custom Action Progress"
 titleSuffix: "Configuration Manager"
+description: "A custom action can report progress information that is used to display a progress indicator."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

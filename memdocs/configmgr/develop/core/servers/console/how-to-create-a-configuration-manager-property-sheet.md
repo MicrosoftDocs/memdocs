@@ -1,6 +1,7 @@
 ---
 title: "Create a Property Sheet"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, to create a console property sheet, you first create a NET Framework assembly that inherits from the SMSPageControl class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "SMS_DriverContainer Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_DriverContainer Windows Management Instrumentation class is an SMS Provider server class that represents boot image or driver package information that refers to the specified driver." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

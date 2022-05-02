@@ -1,4 +1,5 @@
 ---
+description: Learn how to associate a software title with hardware requirements using SMS_AIHardwareRequirements in Configuration Manager. 
 title: "SMS_AIHardwareRequirements Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

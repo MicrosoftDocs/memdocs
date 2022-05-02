@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 04/15/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,6 +28,9 @@ ms.reviewer: aanavath
 
 ---
 # Firewall policy settings for endpoint security in Intune
+
+> [!NOTE]  
+> Beginning on April 5, 2022, the *Windows 10 and later* platform and profiles for Windows devices were replaced by the *Windows 10, Windows 11, and Windows Server* platform and new instances of those same profiles. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles. The settings details for Windows profiles in this article apply to those deprecated profiles.
 
 View the settings you can configure in profiles for *Firewall* policy in the endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
 
@@ -78,6 +81,7 @@ The following settings are configured as [Endpoint Security policy for macOS Fir
     - **Bundle ID** - The ID identifies the app. For example: *com.apple.app*
 
 ## Microsoft Defender Firewall profile
+
 
 ### Microsoft Defender Firewall
 
@@ -452,7 +456,7 @@ Applications targeted with this rule:
 - **File path**  
   CSP: [FirewallRules/FirewallRuleName/App/FilePath](/windows/client-management/mdm/firewall-csp#filepath)
 
-  To specify the file path of an app, enter the apps location on the client device. For example: `C:\Windows\System\Notepad.exe` or `%WINDIR%\Notepad.exe`
+  To specify the file path of an app, enter the apps location on the client device. For example: `C:\Windows\System\Notepad.exe`
 
 - **Service name**  
   [FirewallRules/FirewallRuleName/App/ServiceName](/windows/client-management/mdm/firewall-csp#servicename)

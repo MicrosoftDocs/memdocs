@@ -2,7 +2,7 @@
 title: Work from anywhere report in Endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
 description: The Work from anywhere report in Endpoint analytics provides insights to help your end users be productive from anywhere.
-ms.date: 02/23/2022
+ms.date: 03/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -93,6 +93,9 @@ In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness
 
 The built-in baseline of **All organizations (median)** doesn't currently have metrics for the subscore metrics listed in the sections above.
 
+## Known issues
+
+[!INCLUDE [Endpoint analytics export to csv value mapping known issue](includes/known-issue-csv-mapping.md)]
 ## Next steps
 
 - View [Startup performance](startup-performance.md)

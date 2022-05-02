@@ -1,4 +1,5 @@
 ---
+description: Learn how the CancelDownload WMI class method, in Configuration Manager, cancels jobs that are downloading content that is required for legacy software distribution programs.
 title: CancelDownload method in class CCM_ProgramsManager
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,7 @@
 ---
 title: "SMS_ApplicationAssignment Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ApplicationAssignment WMI class represents the assignment of an application to a collection. "
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

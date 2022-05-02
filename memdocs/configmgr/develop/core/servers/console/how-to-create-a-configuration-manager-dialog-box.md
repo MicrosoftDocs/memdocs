@@ -1,4 +1,5 @@
 ---
+description: These procedures show you how to create a modeless dialog box assembly, in Configuration Manager, by using Visual Studio.
 title: "Create a Dialog Box"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

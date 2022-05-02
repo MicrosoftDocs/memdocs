@@ -1,4 +1,5 @@
 ---
+description: Learn how to reassign the Configuration Manager site for clients in the list using ReassignClientsToSite class method.
 title: "ReassignClientsToSite Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

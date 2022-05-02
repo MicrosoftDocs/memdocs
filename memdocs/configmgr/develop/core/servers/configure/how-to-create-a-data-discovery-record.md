@@ -1,6 +1,7 @@
 ---
 title: "Create a Data Discovery Record"
 titleSuffix: "Configuration Manager"
+description: "Specify the resource type, the discovery process, the site that discovered the resource, and the resource properties."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

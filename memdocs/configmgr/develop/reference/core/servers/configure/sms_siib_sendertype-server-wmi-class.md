@@ -1,4 +1,5 @@
 ---
+description: Article outlining the use of SMS_SIIB_SenderType in Configuration Manager to represent the sender type in Configuration Manager property pages.
 title: "SMS_SIIB_SenderType Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

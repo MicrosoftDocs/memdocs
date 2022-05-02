@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the GetCurrentUser method to get the domain\user name that is used by the SMS Provider for authentication.
 title: "GetCurrentUser Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,7 @@
 ---
 title: "Add a Step to an OS Deployment Group"
 titleSuffix: "Configuration Manager"
+description: "Add the step to the SMS_TaskSequenceGroup.Steps array property in Configuration Manager." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

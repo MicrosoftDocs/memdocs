@@ -2,7 +2,7 @@
 title: Task sequence variable reference
 titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
-ms.date: 12/01/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
@@ -375,7 +375,7 @@ A read-only variable for whether the **Network adapter connected** check returne
 
 ### <a name="TSCRUEFI"></a> _TS_CRUEFI
 
-*Starting in version 2006* <!--6452769-->
+<!--6452769-->
 
 *Applies to the [Check Readiness](task-sequence-steps.md#BKMK_CheckReadiness) step.*
 
@@ -599,9 +599,9 @@ If there are multiple device drivers in the driver catalog that are compatible w
 
 A comma-delimited list of the driver catalog category unique IDs. The **Auto Apply Driver** step only considers the drivers in at least one of the specified categories. This value is optional, and it's not set by default. Obtain the available category IDs by enumerating the list of **SMS_CategoryInstance** objects on the site.
 
-### <a name="OSDBitLockerPIN"></a> OSDBitLockerPIN
+### OSDBitLockerPIN
 <!-- MEMDOcs #764 -->
-*Applies to the [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) step.*
+*Applies to the [Enable BitLocker](task-sequence-steps.md#enable-bitlocker) step.*
 
 Specify the PIN for BitLocker encryption. This variable is only valid if the BitLocker mode is **TPM and PIN**.
 
@@ -627,17 +627,17 @@ Set this value to override the count set by the step or the [OSDBitLockerRebootC
 
 An integer from `0` to `15`.
 
-### <a name="OSDBitLockerRecoveryPassword"></a> OSDBitLockerRecoveryPassword
+### OSDBitLockerRecoveryPassword
 
-*Applies to the [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) step.*
+*Applies to the [Enable BitLocker](task-sequence-steps.md#enable-bitlocker) step.*
 
 (input)
 
 Instead of generating a random recovery password, the **Enable BitLocker** step uses the specified value as the recovery password. The value must be a valid numerical BitLocker recovery password.
 
-### <a name="OSDBitLockerStartupKey"></a> OSDBitLockerStartupKey
+### OSDBitLockerStartupKey
 
-*Applies to the [Enable BitLocker](task-sequence-steps.md#BKMK_EnableBitLocker) step.*
+*Applies to the [Enable BitLocker](task-sequence-steps.md#enable-bitlocker) step.*
 
 (input)
 
@@ -1240,6 +1240,22 @@ Specifies a randomly generated password for the local Administrator account in t
 
 - `false`: Windows Setup enables the local administrator account on the target computer, and sets the account password to the value of [OSDLocalAdminPassword](#OSDLocalAdminPassword)  
 
+### OSDRecoveryKeyPollingFrequency
+<!--10454717-->
+_Applies to the [Enable BitLocker](task-sequence-steps.md#enable-bitlocker) step._
+
+_Applies to version 2203 and later._
+
+The frequency, in seconds, that the BitLocker action will poll the site database for recovery key escrow status. Minimum value is 15 seconds.
+
+### OSDRecoveryKeyPollingTimeout
+<!--10454717-->
+_Applies to the [Enable BitLocker](task-sequence-steps.md#enable-bitlocker) step._
+
+_Applies to version 2203 and later._
+
+The maximum number of seconds for the BitLocker action to wait for the recovery key to be escrowed to the site database. Minimum value is 30 seconds.
+
 ### <a name="OSDRegisteredOrgName-input"></a> OSDRegisteredOrgName (input)
 
 *Applies to the [Apply Windows Settings](task-sequence-steps.md#BKMK_ApplyWindowsSettings) step.*
@@ -1550,6 +1566,15 @@ Specifies the number of seconds that the warning is displayed to the user before
 - `0` (default): Don't display a reboot message  
 - `60`: Display the warning for one minute  
 
+### SMSTSAllowTokenAuthURLForACP
+
+<!-- 13788624 -->
+_Applies to version 2203 and later_
+
+When you use the [SMSTSDownloadProgram](#smstsdownloadprogram) variable to use an alternate content provider, set this variable to `true` to allow it to use token authentication. If you don't set this variable or set it to `false`, it skips any token authentication sources. The alternate content provider has to support token authentication.
+
+For more information, see [CMG client authentication](../../core/clients/manage/cmg/plan-client-authentication.md#site-token).
+
 ### <a name="SMSTSAssignmentsDownloadInterval"></a> SMSTSAssignmentsDownloadInterval
 
 The number of seconds to wait before the client attempts to download the policy since the last attempt that returned no policies. By default, the client waits **0** seconds before retrying.
@@ -1594,9 +1619,9 @@ By default on a 64-bit OS, the task sequence locates and runs the program in the
 
 ### <a name="SMSTSDownloadAbortCode"></a> SMSTSDownloadAbortCode
 
-This variable contains the abort code value for the external program downloader. This program is specified in the [SMSTSDownloadProgram](#SMSTSDownloadProgram) variable. If the program returns an error code equal to the value of the SMSTSDownloadAbortCode variable, then the content download fails and no other download method is attempted.
+This variable contains the abort code value for the external program downloader. This program is specified in the [SMSTSDownloadProgram](#smstsdownloadprogram) variable. If the program returns an error code equal to the value of the SMSTSDownloadAbortCode variable, then the content download fails and no other download method is attempted.
 
-### <a name="SMSTSDownloadProgram"></a> SMSTSDownloadProgram
+### SMSTSDownloadProgram
 
 Use this variable to specify an alternate content provider (ACP). An ACP is a downloader program that's used to download content. The task sequence uses the ACP instead of the default Configuration Manager downloader. As part of the content download process, the task sequence checks this variable. If specified, the task sequence runs the program to download the content.
 

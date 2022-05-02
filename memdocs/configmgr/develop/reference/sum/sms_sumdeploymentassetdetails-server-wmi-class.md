@@ -1,6 +1,7 @@
 ---
 title: "SMS_SUMDeploymentAssetDetails Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager, that represents per-asset details for SUM deployments in-console monitoring."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

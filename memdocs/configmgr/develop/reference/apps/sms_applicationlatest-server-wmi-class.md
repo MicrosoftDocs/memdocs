@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent an application in Configuration Manager using SMS_ApplicationLatest class.
 title: "SMS_ApplicationLatest Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -429,7 +430,7 @@ Class SMS_ApplicationLatest : SMS_ConfigurationItemLatestBaseClass
 
  Qualifiers: [enumeration, read]  
 
- Whether this application requires a user logon to setup. Possible values are:  
+ Whether this application requires a user logon to set up. Possible values are:  
 
 |Value|Logon required?|  
 |-|-|  

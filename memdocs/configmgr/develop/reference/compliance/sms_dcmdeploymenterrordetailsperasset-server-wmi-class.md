@@ -1,6 +1,7 @@
 ---
 title: "SMS_DCMDeploymentErrorDetailsPerAsset Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_DCMDeploymentErrorDetailsPerAsset WMI class is an SMS Provider server class that represents asset details per asset for a deployment error."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

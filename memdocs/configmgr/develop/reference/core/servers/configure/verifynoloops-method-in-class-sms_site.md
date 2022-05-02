@@ -1,4 +1,5 @@
 ---
+description: Learn how to use VerifyNoLoops class method to determine if the insertion of a site in Configuration Manager will result in a recursive loop of the sites.
 title: "VerifyNoLoops Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
