@@ -61,6 +61,7 @@ When you reinstall an older Windows version, install a separate OS, or format th
 Autopilot deployment profiles are assigned to Azure AD security groups. Be sure to create groups that include your DFCI-supported devices. For DFCI devices, most organization may create device groups, instead of user groups. Consider the following scenarios:
 
 - Human Resources (HR) has different Windows devices. For security reasons, you don't want anyone in this group to use the camera on the devices. In this scenario, you can create an HR security users group so the policy applies to users in the HR group, whatever the device type.
+
 - On the manufacturing floor, you have 10 devices. On all devices, you want to prevent booting the devices from a USB device. In this scenario, you can create a security devices group, and add these 10 devices to the group.
 
 For more information on creating groups in Intune, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
@@ -85,8 +86,8 @@ This profile includes the DFCI settings you configure.
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Platform**: Choose **Windows 10 and later**.
-    - **Profile**: Select **Templates** > **Device Firmware Configuration Interface**.
+   - **Platform**: Choose **Windows 10 and later**.
+   - **Profile**: Select **Templates** > **Device Firmware Configuration Interface**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
@@ -94,22 +95,14 @@ This profile includes the DFCI settings you configure.
     - **Name**: Enter a descriptive name for the profile. Name your policies so you can easily identify them later. For example, a good profile name is **Windows: Configure DFCI settings on Windows devices**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
-6. Select **Next**.
-7. In **Configuration settings**, configure the settings you want to control in the UEFI firmware layer. For a list of all the settings, and what they do, see:
-
-    - [Windows](device-firmware-configuration-interface-windows-settings.md)
-
-8. Select **Next**.
-
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
-
-    Select **Next**.
-
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
-
-    Select **Next**.
-
-11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+   Select **Next**.
+6. In **Configuration settings**, configure the settings you want to control in the UEFI firmware layer. For a list of all the settings, and what they do, see [Windows](device-firmware-configuration-interface-windows-settings.md).
+   Select **Next**.
+7. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+   Select **Next**.
+8. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+   Select **Next**.
+9. In **Review + create**, review your settings and select **Create**. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 The next time each device checks in, the policy is applied.
 
@@ -128,7 +121,6 @@ The next time the device syncs with Intune, Windows receives the DFCI settings. 
 If you want to change existing DFCI settings on devices that are in use, you can. In your existing DFCI profile, change the settings, and save your changes. Since the profile is already assigned, the new DFCI settings take effect when:
 
 1. The device checks in with the Intune service to review profile updates. Check-ins happen at various times. For more information, see [when devices get a policy, profile, or app updates](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
-
 2. To enforce the new settings, reboot the device [remotely](../remote-actions/device-restart.md) or locally.
 
 You can also [signal devices to check in](../remote-actions/device-sync.md). After a successful sync, [signal to reboot](../remote-actions/device-restart.md).
