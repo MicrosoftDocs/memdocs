@@ -232,40 +232,6 @@ Applies to:
 - Android Enterprise corporate owned dedicated devices (COSU)
 - Android Enterprise corporate owned work profile (COPE)
 
-### New settings for DFCI profiles on Windows 10/11 devices<!-- 6039135 -->
-On Windows 10/11 devices, you can create a Device Firmware Configuration Interface (DFCI) profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
-
-DFCI profiles lets the Windows OS pass management commands from Intune to UEFI (Unified Extensible Firmware Interface). Typically, firmware is more resilient to malicious attacks. It limits end users control over the BIOS.
-
-There will be new settings you can configure:
-- **Built-in hardware** > **Cameras**:
-  - Front cameras
-  - Rear cameras
-  - Infrared (IR) cameras
-
-- **Built-in hardware** > **Microphones and speakers**:
-  - Microphones
-  - Speakers
-
-- **Built-in hardware** > **Radios**:
-  - Bluetooth
-  - WWAN
-  - NFC
-  - Wi-Fi
-
-- **Ports**:
-  - USB type A
-  - USB type C
-  - SD card
-
-- **Wake on LAN**
-- **Wake on power**
-
-For more information on the DFCI profile, go to [Use Device Firmware Configuration Interface profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
-
-Applies to:
-- Windows 10/11
-
 ### Import custom ADMX and ADML administrative templates to create a device configuration profile<!-- 4970862 -->
 You can create a device configuration policy that uses built-in ADMX templates (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Administrative templates**).
 
