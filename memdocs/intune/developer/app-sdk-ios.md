@@ -176,13 +176,14 @@ In `- importDocumentAtURL:toParentItemIdentifier:completionHandler:` check wheth
 
 The Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
-Typically, MSAL requires apps to register with Azure Active Directory (AAD) and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your app already uses MSAL to authenticate users, the app must use its existing registration values and override the Intune App SDK default values. This ensures that users are not prompted for authentication twice (once by the Intune App SDK and once by the app).
+### Set up and configure an AAD app registration
+MSAL requires apps to [register](https://docs.microsoft.com/azure/active-directory/develop/quickstart-register-app) with Azure Active Directory (AAD) and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your application already uses MSAL for its own authentication, then there should already be an AAD app registration/client ID/redirect URI associated with the app. 
 
-If your app does not already use MSAL, you will need to configure an app registration in AAD and specify the client ID and redirect URI that the Intune SDK should use.  
-
-It is recommended that your app links to the latest release of [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases).
+Developers should [grant their new or existing app registration access to the Intune MAM service](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional), to ensure the application is able to successfully acquire MAM policies.
 
 ### Link to MSAL binaries
+
+It is recommended that your app links to the latest release of [MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc/releases).
 
 Follow [these instructions](https://github.com/AzureAD/microsoft-authentication-library-for-objc#installation) to link your app to the MSAL binaries.
 
@@ -191,10 +192,6 @@ Follow [these instructions](https://github.com/AzureAD/microsoft-authentication-
 2. Enable MSAL single sign-on (SSO) by adding `com.microsoft.adalcache` to the keychain access groups.
 
 3. In the case you are explicitly setting the MSAL shared cache keychain group, make sure it is set to `<appidprefix>.com.microsoft.adalcache`. MSAL will set this for you unless you override it. If you want to specify a custom keychain group to replace `com.microsoft.adalcache`, specify that in the Info.plist file under IntuneMAMSettings, by using the key `ADALCacheKeychainGroupOverride`.
-
-### If your app does not use MSAL
-
-If your app does not already use MSAL for its own authentication mechanism, then you will need to create an app registration in AAD with a custom redirect URI, for more informawtion see [Migrating from ADAL Objective C to MSAL Objective C](https://github.com/AzureAD/microsoft-authentication-library-for-objc/wiki/Migrating-from-ADAL-Objective-C-to-MSAL-Objective-C#app-registration-migration). You will also need to add permissions to the registration. For more information, see [Give your app access to the Intune app protection service](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional).
 
 
 ### Configure MSAL settings for the Intune App SDK
