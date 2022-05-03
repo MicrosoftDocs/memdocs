@@ -364,7 +364,7 @@ New updates for the connector can take a week or more to become available for ea
 
 ### May 4, 2022
 
-Version **6.2203.12.**0 - Changes in this release:
+Version **6.2203.12.0** - Changes in this release:
 
 - Support CNG providers for client authentication certificates
 - Improved support for automatic renewal of client authentication certificates
