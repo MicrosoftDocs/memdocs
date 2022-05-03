@@ -141,7 +141,7 @@ You can set up user-initiated enrollment for people who want to use their person
 Intune supports the following device management configurations on personal devices: 
 
 * Android Device Administrator (also referred to as *Android Device Admin*)  
-* Android Enterprise, personal owned with a work profile 
+* Android Enterprise with work profile
 
 In the table, this data is shown in the Enrollment type column. 
 
@@ -151,7 +151,16 @@ In the table, this data is shown in the Enrollment type column.
 |Android Enterprise, personal-owned with work profile|User-initiated via Company Portal| No | Yes | No |  
 
 #### Corporate-owned Android devices    
-You can use the following methods to enroll corporate-owned Android devices in Intune:   
+Intune supports the following device management configurations on corporate-owned devices: 
+
+* User associated and userless devices created from Android Open Source Project (AOSP) 
+* Android Device Administrator (also referred to as *Android Device Admin*)  
+* Android Device Admin with Zebra Mobility Extensions 
+* Android Enterprise dedicated/kiosk-style  
+* Android Enterprise fully managed
+* Android Enterprise with work profile
+
+In the table, this data is shown in the Enrollment type column. You can use the following methods to enroll corporate-owned Android devices in Intune:   
 
 * QR code
 * Device enrollment manager (DEM) with Company Portal
