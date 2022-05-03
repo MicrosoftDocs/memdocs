@@ -1,5 +1,6 @@
 ---
 title: "About Configuration Baselines and Items"
+description: In Configuration Manager, baselines are used to define the configuration of a product or system that is established at a specific point in time.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

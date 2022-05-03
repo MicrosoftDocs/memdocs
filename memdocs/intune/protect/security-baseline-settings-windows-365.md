@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Intune security baselines settings for Windows 365 Cloud PC
+title: Settings list for the Windows 365 Cloud PC security baseline in Intune
 titleSuffix: Microsoft Intune
-description: Review settings for the Windows 365 Cloud PC security baseline for Microsoft Intune. 
+description: View a list of the settings in the Microsoft Intune security baseline for Windows 365 Cloud PC. This list includes the default values for settings as found in the default configuration of the baseline.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/19/2021
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,7 +33,9 @@ ms.collection: M365-identity-device-management
 > [!NOTE]
 > This security baseline is in public preview.
 
-View the settings in the Windows 365 Cloud PC security baseline for deployment by Microsoft Intune. Use this baseline to configure [Windows 365 devices](/windows-365/overview) with a recommended security configuration.
+View the settings that are part of the Windows 365 Cloud PC security baseline that you can deploy with Microsoft Intune. This article details the settings in the available versions of the baseline and the default values for each setting. The default baseline configuration represents the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
+
+Use this baseline to configure [Windows 365 devices](/windows-365/overview) with a recommended security configuration.
 
 ::: zone pivot="win365-2101"
 
@@ -52,14 +54,14 @@ This version of the security baseline replaces previous versions. Profiles that 
 - Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
 - Can be updated to the latest version. After you update to the current baseline version, you can edit the profile to modify settings.
 
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action. This action is available when you view the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
 
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
 ::: zone pivot="win365-2110,win365-2101"
 
-This article is a reference for the settings contained in this baseline. For each setting in this article, the default value identifies the Windows 365 Cloud PC team's recommended configuration for that setting as the setting is represented in the baseline. These defaults are not meant to identify the default configuration of the underlying CSP. To learn more about a setting, use the provided links to view that setting's *policy configuration service provider* (CSP) documentation or underlying rules like *attack surface reduction rule* documentation. The links in this document are the same as those you'll find when viewing information about the setting from within the Microsoft Endpoint Manager admin center.
+This article is a reference for the settings contained in this baseline. For each setting in this article, the default value identifies the Windows 365 Cloud PC team's recommended configuration for that setting as the setting is represented in the baseline. These defaults aren't meant to identify the default configuration of the underlying CSP. Use the provided links to view content for the setting's *policy configuration service provider* (CSP) or underlying rules like *attack surface reduction rule*. The links in this document are the same as the links available from within the baseline configuration UI in the Microsoft Endpoint Manager admin center.
 
 You can choose to deploy this baseline in its default configuration to apply that recommended security configuration to devices. You  can also create custom instances of the baseline to meet your own security needs.
 
