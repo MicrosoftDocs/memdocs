@@ -61,7 +61,7 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs whic
 - Azure AD-joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 
 > [!NOTE]
-> If you're joining session hosts to an Azure AD DS domain, you can't manage them using Intune.
+> If you're joining session hosts to Azure Active Directory Domain Services, you can't manage them using Intune.
 
 > [!IMPORTANT]
 > If you’re using Windows 10, versions 2004, 20H2, or 21H1 builds, make sure that you install the July 2021 Windows Update or a later Windows update. Otherwise, remote actions in the Microsoft Endpoint Manager admin center, like remote sync, won’t work correctly. As a result, pending policies assigned to devices might take up to 8 hours to be applied.
