@@ -96,7 +96,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
     - For each category you pick, select the settings that you want to apply to your new configuration profile.
     - For each setting, select the value that you want for this configuration profile.
 9. Select **Next** when you’re done adding settings.
-10. On the **Assignments** page, choose the user groups containing the devices to which you want this profile assigned > **Next**.
+10. On the **Assignments** page, choose the Azure AD groups containing the devices to which you want this profile assigned > **Next**.
 11. On the **Scope tags** page, optionally add the scope tags you want to apply to this profile > **Next**. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 12. On the **Review + create** page, choose **Create** to create the profile.
 
