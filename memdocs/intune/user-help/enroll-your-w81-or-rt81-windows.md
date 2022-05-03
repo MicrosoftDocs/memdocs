@@ -2,7 +2,7 @@
 # required metadata
 
 title: How to enroll your Windows 8.1 or Windows RT 8.1 device | Microsoft Docs
-description:
+description: If your company or school uses Microsoft Intune, you can enroll your devices to get access to company email, files, and other resources.
 keywords:
 author: lenewsad
 ms.author: lanewsad
