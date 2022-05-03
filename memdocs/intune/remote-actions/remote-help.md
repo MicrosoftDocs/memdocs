@@ -136,7 +136,7 @@ For users that opted out of automatic updates, when an update to remote help is 
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **4.0.0.18**
+The most recent version of remote help is **4.0.1.2**
 
 ### Deploy remote help as a Win32 app
 
@@ -206,7 +206,9 @@ The following Intune RBAC permissions manage the use of the remote help app. Set
 By default, the built-in **Help Desk Operator** role sets all of these permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote tasks and remote help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
 
 > [!IMPORTANT]  
-> When a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, the sharer is automatically signed out of their device. Therefore, it is important for helpers who are granted these permissions to understand the impact this action can have. The sharer should plan to save any active work to prevent a loss of unsaved work.
+> Now, when, during a remote help session, a helper has the *Elevation* permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for non-admin sharer's, a button will appear on the helper's remote help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. 
+> When the sharer ends the remote help session, they will be shown a dialog box that will warn them that if they continue, they will be logged off.
+> If the helper ends the session, the sharer will not be logged off.
 
 ### Task 3 – Assign user to roles
 
