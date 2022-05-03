@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 04/28/2022
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -33,8 +33,8 @@ ms.collection:
 
 **TO DO:**
 
-- ??Still need a checklist of when/when not to use AADJ??
-- ??Still need a checklist of when/when not to use HAADJ??
+- ??Need a checklist of when/when not to use AADJ??
+- ??Need a checklist of when/when not to use HAADJ??
 
 When moving to cloud native endpoints, you need to understand the differences between Azure AD joined and hybrid Azure AD joined devices.
 
@@ -113,12 +113,13 @@ For new, refurbished, or refreshed Windows devices, Microsoft recommends [Azure 
 
 ## Which option is right for your organization
 
-??Still need a checklist of when/when not to use AADJ, and when/when not to use HAADJ??
+??Need a checklist of when/when not to use AADJ, and when/when not to use HAADJ??
 
-## Next steps
+## Follow the cloud native endpoints guidance
 
-- [What are cloud native endpoints?](cloud-native-endpoints-overview.md)
-- [Tutorial: Get started with cloud native Windows endpoints with Microsoft Endpoint Manager](cloud-native-windows-endpoints.md)
-- [Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
-- [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md)
-- [Known issues and important information](cloud-native-endpoints-known-issues.md)
+1. [Overview: What are cloud native endpoints?](cloud-native-endpoints-overview.md)
+2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
+3. Concept: Azure AD joined vs. Hybrid Azure AD joined (*You are here*)
+4. [Concept: Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
+5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
+6. [Known issues and important information](cloud-native-endpoints-known-issues.md)

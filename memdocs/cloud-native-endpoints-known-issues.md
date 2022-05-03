@@ -3,13 +3,13 @@
 
 title: Common issues and resolutions with cloud native endpoints
 titleSuffix: Microsoft Endpoint Manager
-description: Learn more about the known and resolutions when using cloud native endpoints. Use user-based authentication; don't use machine authentication. Existing group policy objects might not apply. Local Administrator Password Solution (LAPS) aren't supported.
+description: Learn more about the known and resolutions when using cloud native endpoints. Use user-based authentication; don't use machine authentication. Existing group policy objects might not apply. Local Administrator Password Solution (LAPS) isn't supported.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 04/28/2022
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -39,14 +39,14 @@ In this article, **Azure AD joined** and **cloud native endpoints** are used int
 
 ## Don't use machine authentication
 
-When a Windows endpoint, like a Windows 10/11 device joins an Active Directory Domain, a computer account is automatically created. The computer/machine account can be used to authenticate.
+When a Windows endpoint, like a Windows 10/11 device, joins an on-premises Active Directory (AD) domain, a computer account is automatically created. The computer/machine account can be used to authenticate.
 
 Machine authentication happens when:
 
 - On-premises resources, like file shares, printers, applications, and web sites, are accessed using on-premises AD computer accounts instead of user accounts.
 - Administrators or application developers configure on-premises resource access using machine accounts instead of users or user groups.
 
-Cloud native endpoints are joined to Azure AD, and don't exist in on-premises Active Directory. So, cloud native endpoints don't support on-premises AD machine authentication. Configuring access to on-premises file shares, applications, or services using only on-premises AD machine accounts will fail on cloud native endpoints.
+Cloud native endpoints are joined to Azure AD, and don't exist in on-premises AD. Cloud native endpoints don't support on-premises AD machine authentication. Configuring access to on-premises file shares, applications, or services using only on-premises AD machine accounts will fail on cloud native endpoints.
 
 ### Switch to user-based authentication
 
@@ -74,7 +74,7 @@ The following list includes common features and services that might use machine 
 
   - **Network File System (NFS) root access**: Direct users to access specific folders, not the root. If you can, move content from an NFS to SharePoint Online or OneDrive.
 
-- On Azure AD joined Windows endpoints, **Win32 apps**:
+- **Win32 apps** on Azure AD joined Windows endpoints:
 
   - Won't work if the apps use machine account authentication.
   - Won't work if the apps access resources that are secured with groups that include only machine accounts.
@@ -88,10 +88,10 @@ The following list includes common features and services that might use machine 
 - **IIS web server** deployments that restrict site access using ACL permissions with only computer accounts, or groups of computer accounts, will fail. Authentication strategies that limit access to only computer accounts or groups of computer accounts will also fail.
 
   **Recommendation**: 
-  - On your web sites, enable Kerberos authentication. ??Do you mean Azure AD Kerberos??
+  - On your web sites, enable Negotiate authentication.
   - Update your web server apps to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure Active Directory](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory). 
   
-  Additional resources:
+  More resources:
 
   - [IIS Authentication `<windowsAuthentication>`](/iis/configuration/system.webserver/security/authentication/windowsauthentication/)
   - [IIS Security Authorization `<authorization>`](/iis/configuration/system.webserver/security/authorization/)
@@ -100,15 +100,17 @@ The following list includes common features and services that might use machine 
 
   **Recommendation**: Use Universal Print. For more specific information, see [What is Universal Print](/universal-print/fundamentals/universal-print-whatis).
 
-- **Windows scheduled tasks** that run in the machine-context on cloud native endpoints can't access resources on remote servers and workstations. The cloud native endpoint doesn't have an account in Active Directory, and therefore can't authenticate.
+- **Windows scheduled tasks** that run in the machine-context on cloud native endpoints can't access resources on remote servers and workstations. The cloud native endpoint doesn't have an account in on-premises AD, and therefore can't authenticate.
 
   **Recommendation**: Configure your scheduled tasks to use **logged in user**, or another form of account-based authentication.
 
 - **Active Directory login scripts** are assigned in the on-premises AD user's properties or deployed using a Group Policy Object (GPO). These scripts aren't available for cloud native endpoints.  
 
-  **Recommendation**: You can use Windows PowerShell scripts and deploy these scripts using Microsoft Intune. In addition, consider the use of OneDrive and SharePoint Online.??Use OneDrive or SharePoint Online to do what exactly??
-  
-  For  more information, go to:
+  **Recommendation**: Review your scripts. If there's a modern equivalent, then use it instead. For example, if your script sets the user's home drive, then you can move a user's home drive to OneDrive instead. If your script stores shared folder content, then migrate the shared folder content to SharePoint Online instead.
+
+  If there isn't a modern equivalent, then you can deploy Windows PowerShell scripts using Microsoft Intune.
+
+  For more information, go to:
 
   - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](/mem/intune/apps/intune-management-extension)
   - [Introduction to OneDrive in Microsoft 365](/learn/modules/m365-onedrive-collaboration-use/)
@@ -132,7 +134,7 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
   The [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md#move-from-group-policy-objects-gpos) is a good resource.
 
-- Don't migrate all your policies. Remember, your old policies might not make any sense with cloud native endpoints.
+- Don't migrate all your policies. Remember, your old policies might not make sense with cloud native endpoints.
 
   Instead of doing what you've always done, focus on what you actually want to achieve.
 
@@ -140,9 +142,9 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
 Currently, cloud native endpoints don't support the [Microsoft Local Administrator Password Solution (LAPS)](/defender-for-identity/cas-isp-laps) (opens another Microsoft website).
 
-LAPS manages local administrator account passwords for domain-joined devices. Passwords are randomized and stored in on-premises Active Directory (AD), and protected by ACLs. So, only eligible users can read the password or request a password reset.
+LAPS manages local administrator account passwords for domain-joined devices. Passwords are randomized and stored in on-premises AD, and protected by ACLs. So, only eligible users can read the password or request a password reset.
 
-Microsoft will release an update to provide LAPS for Azure AD joined devices. When it's released, you can use it to manage local administrator account passwords on cloud native endpoints.
+Microsoft will release an update to provide LAPS for Azure AD joined devices (no ETA). When it's released, you can use it to manage local administrator account passwords on cloud native endpoints.
 
 **Resolution**: 
 
@@ -160,10 +162,11 @@ Use Password Hash Sync and Azure AD connect, which forces the **force password c
 
 For more specific information, see [Implement password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon).
 
-## Next steps
+## Follow the cloud native endpoints guidance
 
-- [What are cloud native endpoints?](cloud-native-endpoints-overview.md)
-- [Tutorial: Get started with cloud native Windows endpoints with Microsoft Endpoint Manager](cloud-native-windows-endpoints.md)
-- [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-- [Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
-- [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md)
+1. [Overview: What are cloud native endpoints?](cloud-native-endpoints-overview.md)
+2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
+3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+4. [Concept: Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
+5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
+6. Known issues and important information (*You are here*)
