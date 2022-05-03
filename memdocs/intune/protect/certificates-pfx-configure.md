@@ -1,11 +1,11 @@
 ---
-title: Use private and public key certificates in Microsoft Intune
+title: Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune
 description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, and use device configuration profiles for a PKCS Certificate.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/28/2022
+ms.date: 05/03/2022
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.collection:
 ---
 # Configure and use PKCS certificates with Intune
 
-Microsoft Intune supports the use of private and public key pair (PKCS) certificates. To help you use PKCS certificates, this article reviews what's required, and can help you export a PKCS certificate, and then add the certificate to an Intune device configuration profile.
+Microsoft Intune supports the use of private and public key pair (PKCS) certificates. This article reviews what's required to use PKCS certificates with Intune, including the export of a PKCS certificate then adding it to an Intune device configuration profile.
 
 Microsoft Intune includes built-in settings to use PKCS certificates for access and authentication to your organizations resources. Certificates authenticate and secure access to your corporate resources like a VPN or a WiFi network. You deploy these settings to devices using device configuration profiles in Intune.
 
@@ -195,7 +195,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 8. Select **Next**.
 
-9. In **Assignments**, select the user or device group(s) that will be assigned the profile. For more granularity see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*. Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. In **Assignments**, select the user or device group(s) that will be assigned the profile. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*. Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
     Select **Next**.
 
@@ -243,7 +243,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
    |Setting     | Platform     | Details   |
    |------------|------------|------------|
    |**Renewal threshold (%)**        |<ul><li>All         |Recommended is 20%  |
-   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option may be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there is a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
+   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option may be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
    |**Key storage provider (KSP)**   |<ul><li>Windows 10/11  |For Windows, select where to store the keys on the device. |
    |**Certification authority**      |<ul><li>All         |Displays the internal fully qualified domain name (FQDN) of your Enterprise CA.  |
    |**Certification authority name** |<ul><li>All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority". |
@@ -319,7 +319,7 @@ Platforms:
 
   That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
 
-  User attributes are not supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won’t be able to get the user principal name when there is no user on the device.
+  User attributes aren't supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN can't get the user principal name when there isn't a user on the device.
 
 - **Device certificate type**  
   Format options for the Subject name format include the following variables:

@@ -54,7 +54,7 @@ Create a device compliance policy to require your workforce's Android users to e
 
 2.  For **Platform**, select **Android Enterprise**.
 
-3. For **Policy type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
+3. For **Profile type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
 
 4. On **Basics** step, enter **Android compliance** as the *Name*. Adding a *Description* is optional. Click **Next**.
 
