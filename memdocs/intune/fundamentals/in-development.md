@@ -86,6 +86,9 @@ These notifications are pushed through the Company Portal app on Android and iOS
 ### iOS Company Portal minimum required version<!-- 13016075 -->
 With an upcoming release of the MS Authenticator app, users will be required to update to v5.2205 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
 
+### iOS/iPadOS notifications will require March Company Portal or newer<!-- 14131757 -->
+We plan to make service side updates to iOS/iPadOS notifications in Intune's May (2205) service release that will require users to have the March Company Portal (version 5.2203.1) or newer. If you are using functionality that could generate iOS/iPadOS Company Portal push notifications, you will want to ensure your users update the iOS/iPadOS Company Portal to continue receiving push notifications. There is no additional change in functionality. For related information, see [Update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app).
+
 <!-- ***********************************************-->
 
 ## Device management
@@ -103,6 +106,30 @@ For more information, see [Enroll Android (AOSP) corporate-owned user associated
 
 ### View a managed device's group membership<!-- 4100067 -->
 In the monitor section of the **Devices** workload of Intune, you'll be able to view the group membership of all AAD groups for a managed device. When this is available, you will be able to select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices**.
+
+<!-- ***********************************************-->
+
+## Device enrollment
+
+### Enroll to co-management from Windows Autopilot<!-- 11300628 -->
+You'll be able to configure device enrollment in Intune to enable co-management, which happens during the [Windows Autopilot](../../autopilot/windows-autopilot.md) process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+
+If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../enrollment/windows-enrollment-status.md), the device will wait for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
+
+### Improvements for enrollment profiles for Apple Automated Device Enrollment<!-- 13165752 -->
+Two Setup Assistant skip panes are becoming generally available for Apple Automated Device Enrollment (ADE). The screen configurations were previously released in Intune for public preview. The following screens will be generally available for both iOS/iPadOS and macOS under the **Setup Assistant** tab:  
+  
+- iOS/iPadOS 13 and later
+   - Pane name: **Get Started ** 
+  - Default: Show pane 
+  - You can configure a setting in Intune that hides the Get Started pane in Setup Assistant during ADE enrollment.
+  
+- macOS 12 and later 
+   - Pane name: **Auto Unlock with Apple Watch** 
+  - Default: Show pane
+  - You can configure a setting in Intune that hides the Unlock Your Mac with your Apple Watch pane in Setup Assistant during ADE enrollment.  
+
+There is no change to functionality from the previous public preview release. 
 
 <!-- ***********************************************-->
 
@@ -242,11 +269,6 @@ For information on the built-in ADMX templates, see [Use Windows 10/11 templates
 Applies to:
 - Windows 11
 - Windows 10
-
-### Certificate profiles support for Android (ASOP) devices<!-- 8506319, 8506363 -->
-To expand our support for the Android Open Source Project (AOSP) platform, you’ll soon be able to deploy the following certificate profiles to corporate-owned and userless devices: 
-- Trusted certificate profile
-- PKCS certificate profile
 
 ### Use the Settings Catalog to create a Universal Print policy on Windows 11 devices<!-- 5513123 -->
 Many organizations are moving their printer infrastructure to the cloud. [Universal Print](/universal-print/fundamentals/universal-print-whatis) is a cloud-based printing solution for Microsoft 365 customers. It uses built-in cloud printers, built-in legacy printers, and runs entirely in Microsoft Azure. When Universal Print is deployed with Universal Print-compatible printers, it doesn't require any on-premises infrastructure. 
