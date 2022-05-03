@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Intune security baselines settings for Microsoft Defender for Endpoint 
+title: Settings list for the Microsoft Defender for Endpoint security baseline in Microsoft Intune  
 titleSuffix: Microsoft Intune
-description: Security baseline settings supported by Intune for managing Microsoft Defender for Endpoint
+description: View a list of the settings in the Microsoft Intune security baseline for Microsoft Defender for Endpoint. This list includes the default values for settings as found in the default configuration of the baseline.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/10/2021
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,9 +50,9 @@ March 2020 v3
 
 -->
 
-# Microsoft Defender for Endpoint baseline settings for Intune
+# Settings in the Microsoft Defender for Endpoint security baseline in Intune
 
-View the Microsoft Defender for Endpoint baseline settings that are supported by Microsoft Intune. The Microsoft Defender for Endpoint baseline defaults represent the recommended configuration for Defender for Endpoint, and might not match baseline defaults for other security baselines.
+View the settings that are part of the Microsoft Defender for Endpoint baseline that ou can deploy with Microsoft Intune. This article details the settings in the available versions of the baseline and the default values for each setting. The default baseline configuration represents the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
 
 ::: zone pivot="atp-december-2020"
 
@@ -75,7 +75,7 @@ This version of the security baseline replaces previous versions. Profiles that 
 - Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
 - Can be updated to the latest version. After you update to the current baseline version, you can edit the profile to modify settings.
 
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action. This action is available when you view the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
 
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
@@ -85,11 +85,10 @@ To update a security baseline profile to the latest version of that baseline, se
 **Microsoft Defender for Endpoint baseline for March 2020 - version 3**  
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
-
 - Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
-- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+- Can be updated to the latest version. After you update the current baseline version, you can edit the profile to modify settings.
 
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action. This action is available when you view the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
 
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
@@ -218,7 +217,7 @@ To learn more, see [Attack surface reduction rules](/windows/security/threat-pro
 
 For more information, see [WindowsDefenderApplicationGuard CSP](/windows/client-management/mdm/windowsdefenderapplicationguard-csp) in the Windows documentation.  
 
-While using Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary.  
+When you use Microsoft Edge, Microsoft Defender Application Guard protects your environment from sites that aren't trusted by your organization. When users visit sites that aren't listed in your isolated network boundary, the sites open in a Hyper-V virtual browsing session. Trusted sites are defined by a network boundary.  
 
 - **Turn on Application Guard for Edge (Options)**  
   CSP: [Settings/AllowWindowsDefenderApplicationGuard](/windows/client-management/mdm/windowsdefenderapplicationguard-csp#allowwindowsdefenderapplicationguard)
