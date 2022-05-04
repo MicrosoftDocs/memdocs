@@ -35,7 +35,9 @@ When using or moving on-premises device management to cloud native endpoints, th
 
 Cloud native endpoints are devices that are joined to Azure AD. In many cases, they don't require a direct connection to any on-premises resources for usability or management. For more specific information, see [Cloud native endpoint overview](cloud-native-endpoints-overview.md).
 
-In this article, **Azure AD joined** and **cloud native endpoints** are used interchangeably.
+In this article, the following terms are used interchangeably:
+**Azure AD joined** and **cloud native endpoints** 
+**computer accounts** and **machine accounts**
 
 ## Don't use machine authentication
 
