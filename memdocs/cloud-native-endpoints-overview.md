@@ -32,7 +32,7 @@ ms.collection:
 # Learn more about cloud native endpoints
 
 > [!TIP]
-> [!INCLUDE [cloud-native-endpoints-definitions](../includes/cloud-native-endpoints-definitions.md)]
+> [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
 
 Organizations are focusing on supporting remote and hybrid workers. With cloud native endpoints, organizations can:
 

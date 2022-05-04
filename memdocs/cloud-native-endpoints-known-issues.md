@@ -32,7 +32,7 @@ ms.collection:
 # Known issues and limitations with cloud native endpoints
 
 > [!TIP]
-> [!INCLUDE [cloud-native-endpoints-definitions](../includes/cloud-native-endpoints-definitions.md)]
+> [!INCLUDE [cloud-native-endpoints-definitions](/includes/cloud-native-endpoints-definitions.md)]
 
 When using or moving on-premises device management to cloud native endpoints, there are some scenarios you need to know. This article lists and describes some changed behaviors, limitations, and resolutions.
 
