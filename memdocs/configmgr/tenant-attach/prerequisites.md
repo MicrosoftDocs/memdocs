@@ -40,6 +40,8 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
   - Tenant sync to Intune
   - Device sync to Intune
   - Device actions in the Microsoft Endpoint Manager admin center
+ 
+- The geographic location of the Azure tenant and the service connection point should be the same. 
 
 - At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center. <!--10254915-->
 

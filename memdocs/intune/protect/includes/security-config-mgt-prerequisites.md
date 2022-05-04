@@ -124,7 +124,12 @@ Microsoft Defender for Endpoint supports several options to onboard devices. For
 
 ## Co-existence with Microsoft Endpoint Configuration Manager
 
-When using Configuration Manager, the best path for management of security policy is using [Configuration Manager tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started). In some environments it may be desired to use Security Management for Microsoft Defender for Endpoint. When using Security Management for Microsoft Defender for Endpoint with Configuration Manager, endpoint security policy should be isolated to a single control plane. Controlling policy through both channels will create the opportunity for conflicts and undesired results.
+In some environments it might be desired to use Security Management for Microsoft Defender for Endpoint with [Configuration Manager tenant attach](/mem/configmgr/tenant-attach/endpoint-security-get-started). If you use both, you’ll need to control policy through a single channel, as using more than one channel creates the opportunity for conflicts and undesired results.
+
+To support this, configure the *Manage Security settings using Configuration Manager* toggle to *Off*.  Sign in to the [Microsoft 365 Defender portal](https://security.microsoft.com/) and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**:
+
+:::image type="content" source="../media/mde-security-integration/disable-configuration-manager-toggle.png" alt-text="Screen shot of the Defender portal showing the Manage Security settings using Configuration Manager toggle set to Off.":::
+
 
 ## Create Azure AD Groups
 
