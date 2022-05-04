@@ -41,7 +41,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
   - Device sync to Intune
   - Device actions in the Microsoft Endpoint Manager admin center
  
-- In Microsoft Multi-Geo tenants, the geo location of the Azure tenant and the System Center Configuration Manager (SCCM) service connection point should be the same. 
+- The geographic location of the Azure tenant and the service connection point should be the same. 
 
 - At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center. <!--10254915-->
 
