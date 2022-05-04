@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 05/02/2022
+ms.date: 05/05/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -101,8 +101,6 @@ For more information, see [Retire or wipe devices using Microsoft Intune](../rem
 
 ### Initiate compliance checks for your AOSP devices from the Microsoft Intune app<!-- 12645739 -->
 You'll be able to initiate a compliance check for your AOSP devices from the Microsoft Intune app. Go to **Device details**. This feature will be available on devices that are enrolled in Microsoft Intune app as user-associated (Android) AOSP devices.
-
-For more information, see [Enroll Android (AOSP) corporate-owned user associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
 
 ### View a managed device's group membership<!-- 4100067 -->
 In the monitor section of the **Devices** workload of Intune, you'll be able to view the group membership of all AAD groups for a managed device. When this is available, you will be able to select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices**.
