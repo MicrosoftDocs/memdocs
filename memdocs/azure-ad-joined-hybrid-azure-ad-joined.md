@@ -29,20 +29,31 @@ ms.collection:
   - M365-identity-device-management
 ---
 
-# Azure AD joined (AADJ) vs. Hybrid Azure AD joined (HAADJ) in cloud native endpoints
+# Azure AD joined vs. Hybrid Azure AD joined in cloud native endpoints
 
 **TO DO:**
 
 - ??Need a checklist of when/when not to use AADJ??
 - ??Need a checklist of when/when not to use HAADJ??
 
+> [!TIP]
+> [!INCLUDE [cloud-native-endpoints-definitions](../includes/cloud-native-endpoints-definitions.md)]
+
 When moving to cloud native endpoints, you need to understand the differences between Azure AD joined and hybrid Azure AD joined devices.
 
 To summarize:
 
-- **Azure AD joined**: Device are joined to an Azure Active Directory (Azure AD). For more specific information, see [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) (opens another Microsoft website).
+- **Azure AD joined** (AADJ): Device are joined to an Azure Active Directory (Azure AD). They're not joined to on-premises Azure AD.
 
-- **Hybrid Azure AD joined**: Device are registered in Azure AD and joined to an on-premises AD domain. For more specific information, see [Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (opens another Microsoft website).
+  For more specific information, see [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) (opens another Microsoft website).
+
+- **Hybrid Azure AD joined** (HAADJ): Device are registered in Azure AD and joined to an on-premises AD domain.
+
+  For more specific information, see [Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (opens another Microsoft website).
+
+This feature applies to:
+
+- Windows cloud native endpoints
 
 This article describes the differences between Azure AD joined and hybrid Azure AD joined devices. For an overview of cloud native endpoints, and their benefits, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
 
@@ -100,7 +111,9 @@ To join Windows endpoints to Azure AD, you have some options:
 
 If the devices can't connect to the domain controller, then users might be prevented from signing in, and may not receive policy updates.
 
-Many organizations with existing domain joined devices want the benefits and features of Azure AD and Endpoint Management. For these organizations, registering these existing devices with Azure AD might be the best option. When you register existing devices in Azure AD, a [device identity](/azure/active-directory/devices/overview) is created, and your devices are hybrid Azure AD joined.
+Many organizations with existing domain joined devices want the benefits and features of Azure AD and Endpoint Management. If your devices can't be fully cloud native yet, then you can register these existing devices with Azure AD. When you register existing devices in Azure AD, a [device identity](/azure/active-directory/devices/overview) is created, and your devices are hybrid Azure AD joined. They're not considered cloud native endpoints.
+
+If your organization is ready and wants to be cloud native, then [Azure AD joined](#azure-ad-joined) (in this article) is the correct choice. Existing devices will need to be reset. For more specific information and guidance, go to the [High level planning guide](cloud-native-endpoints-planning-guide.md).
 
 ### Hybrid Azure AD joined resources
 
@@ -119,7 +132,7 @@ For new, refurbished, or refreshed Windows devices, Microsoft recommends [Azure 
 
 1. [Overview: What are cloud native endpoints?](cloud-native-endpoints-overview.md)
 2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
-3. Concept: Azure AD joined vs. Hybrid Azure AD joined (*You are here*)
+3. 🡺 **Concept: Azure AD joined vs. Hybrid Azure AD joined** (*You are here*)
 4. [Concept: Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
 5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
 6. [Known issues and important information](cloud-native-endpoints-known-issues.md)

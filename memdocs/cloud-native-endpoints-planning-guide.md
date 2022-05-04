@@ -31,6 +31,9 @@ ms.collection:
 
 # High level planning guide to move to cloud native endpoints
 
+> [!TIP]
+> [!INCLUDE [cloud-native-endpoints-definitions](../includes/cloud-native-endpoints-definitions.md)]
+
 This high level planning guide includes ideas and suggestions you need to consider for your adoption and migration to cloud native endpoints. It discusses managing devices, reviewing & transitioning existing workloads, making organization changes, using Windows Autopilot, and more.
 
 This feature applies to:
@@ -39,7 +42,7 @@ This feature applies to:
 
 Moving your Windows endpoints to cloud native has many advantages, including in the long term. It's not an overnight process and must be planned to avoid issues, outages, and negative user impact.
 
-For more information on the benefits to the organization and your users, go to [Learn more about cloud native endpoints and the benefits to organizations and users](cloud-native-endpoints-overview.md).
+For more information on the benefits to the organization and your users, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
 
 To be successful, consider the key areas described in this article for your planning and deployment. With proper planning, communications, and process updates, your organization can be cloud native.
 
@@ -509,5 +512,5 @@ For more information on Windows Autopilot, go to:
 2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
 3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
 4. [Concept: Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
-5. High level planning guide (*You are here*)
+5. 🡺 **High level planning guide** (*You are here*)
 6. [Known issues and important information](cloud-native-endpoints-known-issues.md)

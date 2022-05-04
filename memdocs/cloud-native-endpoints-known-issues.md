@@ -31,13 +31,18 @@ ms.collection:
 
 # Known issues and limitations with cloud native endpoints
 
+> [!TIP]
+> [!INCLUDE [cloud-native-endpoints-definitions](../includes/cloud-native-endpoints-definitions.md)]
+
 When using or moving on-premises device management to cloud native endpoints, there are some scenarios you need to know. This article lists and describes some changed behaviors, limitations, and resolutions.
 
-Cloud native endpoints are devices that are joined to Azure AD. In many cases, they don't require a direct connection to any on-premises resources for usability or management. For more specific information, see [Cloud native endpoint overview](cloud-native-endpoints-overview.md).
+Cloud native endpoints are devices that are joined to Azure AD. In many cases, they don't require a direct connection to any on-premises resources for usability or management. For more specific information, see [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
 
-In this article, the following terms are used interchangeably:
-**Azure AD joined** and **cloud native endpoints** 
-**computer accounts** and **machine accounts**
+This feature applies to:
+
+- Windows cloud native endpoints
+
+In this article, **Computer accounts** and **machine accounts** are used interchangeably.
 
 ## Don't use machine authentication
 
@@ -171,4 +176,4 @@ For more specific information, see [Implement password hash synchronization with
 3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
 4. [Concept: Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
 5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
-6. Known issues and important information (*You are here*)
+6. 🡺 **Known issues and important information** (*You are here*)
