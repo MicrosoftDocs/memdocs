@@ -40,7 +40,7 @@ When moving to cloud native endpoints, you need to understand the differences be
 
 To summarize:
 
-- **Azure AD joined**: Device are joined to a Azure AD. For more specific information, see [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) (opens another Microsoft website).
+- **Azure AD joined**: Device are joined to an Azure Active Directory (Azure AD). For more specific information, see [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) (opens another Microsoft website).
 
 - **Hybrid Azure AD joined**: Device are registered in Azure AD and joined to an on-premises AD domain. For more specific information, see [Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid) (opens another Microsoft website).
 
@@ -88,15 +88,15 @@ To join Windows endpoints to Azure AD, you have some options:
 
 ### Azure AD joined resources
 
-- [What is device identity in Azure Active Directory?](/azure/active-directory/devices/overview)
+- [What is device identity in Azure AD?](/azure/active-directory/devices/overview)
 - [What is an Azure AD joined device?](/azure/active-directory/devices/concept-azure-ad-join)
 - [How Azure AD device registration works](/azure/active-directory/devices/device-registration-how-it-works)
-- [How to plan your Azure Active Directory join implementation](/azure/active-directory/devices/azureadjoin-plan)
+- [How to plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan)
 - [Windows Hello for Business documentation - Windows security](/windows/security/identity-protection/hello-for-business/)
 
 ## Hybrid Azure AD joined
 
-[Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid) are joined to your on-premises Active Directory domain (AD domain) and are registered with Azure Active Directory (Azure AD). These devices **require** a network line-of-sight to your on-premises domain controllers for initial sign-in and for device management.
+[Hybrid Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid) are joined to your on-premises AD domain and are registered with Azure AD. These devices **require** a network line-of-sight to your on-premises domain controllers for initial sign-in and for device management.
 
 If the devices can't connect to the domain controller, then users might be prevented from signing in, and may not receive policy updates.
 
@@ -106,8 +106,8 @@ Many organizations with existing domain joined devices want the benefits and fea
 
 For information on how to register your existing domain joined devices to Azure AD, see:
 
-- [Configure hybrid Azure Active Directory join for managed domains](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)
-- [Configure hybrid Azure Active Directory join for federated domains](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)
+- [Configure hybrid Azure AD join for managed domains](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)
+- [Configure hybrid Azure AD join for federated domains](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)
 
 For new, refurbished, or refreshed Windows devices, Microsoft recommends [Azure AD joined](#azure-ad-joined) (in this article).
 

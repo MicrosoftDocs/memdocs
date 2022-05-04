@@ -89,7 +89,7 @@ The following list includes common features and services that might use machine 
 
   **Recommendation**: 
   - On your web sites, enable Negotiate authentication.
-  - Update your web server apps to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure Active Directory](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory). 
+  - Update your web server apps to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure AD](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory). 
   
   More resources:
 

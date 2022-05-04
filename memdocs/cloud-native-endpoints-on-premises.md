@@ -42,7 +42,7 @@ For an overview of cloud native endpoints, and their benefits, go to [What are c
 
 ## Prerequisites
 
-For cloud-native Windows endpoints to access on-premises resources and services that use on-premises Active Directory (AD) for authentication, the following prerequisites are required:
+For cloud native Windows endpoints to access on-premises resources and services that use on-premises Active Directory (AD) for authentication, the following prerequisites are required:
 
 - Client apps **must use Windows integrated authentication (WIA)**. For more specific information, see [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication).
 

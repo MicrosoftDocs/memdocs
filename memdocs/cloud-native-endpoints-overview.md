@@ -72,7 +72,7 @@ A cloud native endpoint has the following characteristics:
 
 - Provisioned and managed from cloud-based services
 - Can use and access other cloud-based endpoints from anywhere
-- Azure Active Directory (AD) joined
+- Azure AD joined
 - Includes configuration, data, and applications that are portable and roam with the user
 - Doesn't generally require a direct connection to any on-premises resources for usability or management
 
@@ -88,7 +88,7 @@ Cloud native endpoints provide many benefits to end users and IT:
 
 - **Best for remote workers**
 
-  End users don't worry about connecting to the VPN or other networks. They sign in to devices from anywhere, and run actions, like password reset, without connecting to on-premises Active Directory.
+  End users don't worry about connecting to the VPN or other networks. They sign in to devices from anywhere, and run actions, like password reset, without connecting to on-premises AD.
 
   Azure AD joined (also known as AADJ) endpoints do the initial sign in using an internet connection. The Azure AD joined sign in process doesn't use on-premises domain controller connectivity, and is faster than a traditional domain-based sign in.
 

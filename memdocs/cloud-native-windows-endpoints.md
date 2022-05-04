@@ -64,7 +64,7 @@ Use the five ordered phases in this guide, which build on each other to help you
 - Phase 5 – Deploy at scale with Windows Autopilot
 
 At the end of this guide, you’ll have a cloud native Windows endpoint ready to start testing in your environment.
-Before you get started, you might want to check out the Azure AD join planning guide at [How to plan your Azure Active Directory join implementation](/azure/active-directory/devices/azureadjoin-plan).
+Before you get started, you might want to check out the Azure AD join planning guide at [How to plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan).
 
 ## Phase 1 – Set up your environment
 
@@ -93,9 +93,9 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   To check your Azure AD Device MDM settings are enabled properly, see [Quickstart - Set up automatic enrollment in Intune](./intune/enrollment/quickstart-setup-auto-enrollment.md).
   
 - **Azure AD company branding**  
-  Adding your corporate logo and images to Azure Active Directory ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Windows Autopilot to work.
+  Adding your corporate logo and images to Azure AD ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Windows Autopilot to work.
 
-  For information on configuring custom branding in Azure AD, see [Add branding to your organization's Azure Active Directory sign-in page](/azure/active-directory/fundamentals/customize-branding).
+  For information on configuring custom branding in Azure AD, see [Add branding to your organization's Azure AD sign-in page](/azure/active-directory/fundamentals/customize-branding).
 
 - **Licensing**  
   Users enrolling Windows devices from the Out Of Box Experience (OOBE) into Intune will require two key capabilities.
@@ -461,7 +461,7 @@ If you’d like more granular control for Windows Updates and you use Configurat
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-4.png" alt-text="Phase 4.":::
 
-In this phase, you'll apply organization-specific settings, apps, and review your on-premises configuration. The phase helps you build any customizations specific to your organization. Notice the various components of Windows, how you can review existing configurations from an on-premises Active Directory Group Policy environment, and apply them to cloud native endpoints. There are sections for each of the following areas:
+In this phase, you'll apply organization-specific settings, apps, and review your on-premises configuration. The phase helps you build any customizations specific to your organization. Notice the various components of Windows, how you can review existing configurations from an on-premises AD Group Policy environment, and apply them to cloud native endpoints. There are sections for each of the following areas:
 
 - [Microsoft Edge](#microsoft-edge)
 - [Start and Taskbar layout](#start-and-taskbar-layout)
