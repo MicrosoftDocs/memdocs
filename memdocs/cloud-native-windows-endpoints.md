@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Get started with cloud native Windows endpoints 
+title: Tutorial-Get started with cloud native Windows endpoints 
 titleSuffix: Microsoft Endpoint Manager
-description: Set up secure cloud native Windows endpoints that are Azure AD joined, enrolled in Intune, and then deploy at scale with Autopilot.
+description: Set up secure cloud native Windows endpoints that are Azure AD joined, enrolled in Intune, and then deploy at scale with Windows Autopilot.
 keywords:
 author: scottbreenmsft
   
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/01/2021
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -30,55 +30,26 @@ ms.collection:
   - highpri
 ---
 
-# Get started with cloud native Windows endpoints with Microsoft Endpoint Manager
+# Tutorial: Set up and configure a cloud native Windows endpoint with Microsoft Endpoint Manager
 
-Increasing demand for remote work is accelerating adoption of Zero Trust security models, enabled by cloud- powered solutions. The shifting of device management to the cloud provides a better end-user experience and simplifies IT operations, while reducing reliance on on-premises infrastructure. This guide walks you through the steps to create a cloud native Windows endpoint configuration for your organization.
+This guide walks you through the steps to create a cloud native Windows endpoint configuration for your organization. For an overview of cloud native endpoints, and their benefits, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
 
 > [!TIP]
-> If you’re looking for a Microsoft recommended, standardized solution to build on top of, you might be interested in *Windows in cloud configuration* which can easily be configured using a [Guided Scenario](./intune/fundamentals/guided-scenarios-overview.md) in Intune. See [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration).
+> If you’re looking for a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). In Intune, you can configure Windows in cloud configuration using a [Guided Scenario](./intune/fundamentals/guided-scenarios-overview.md). 
+>
+> The follow table describes the key difference between this guide and *Windows in cloud configuration*:
+> 
+> ---
+> | Solution | Objective |
+> | --- | --- |
+> | Tutorial: Get started with cloud native Windows endpoints (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing. |
+> | [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies pre-built configuration based on Microsoft best practices for frontline, remote, and other workers with more focused needs. |
+> 
+> ---
+> 
+> You can use this guide combined with *Windows in cloud configuration* to customize the pre-built experience even more.
 
-The table below describes the key difference between this guide and *Windows in cloud configuration*.
-
----
-| Solution | Objective |
-| --- | --- |
-| Get started with cloud native Windows endpoints (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing |
-| [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies pre-built configuration based on Microsoft best practices for frontline, remote, and other workers with more focused needs |
-
----
-
-You can use this guide in combination with *Windows in cloud configuration* to further customize the pre-built experience.
-
-## Overview
-
-### What is a cloud native Windows endpoint?
-
-A cloud native Windows endpoint is joined to [Azure AD](/azure/active-directory/devices/concept-azure-ad-join) (AADJ) and managed by a Mobile Device Management (MDM) solution. Unlike traditional domain join or [Hybrid Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join-hybrid) endpoints, it has no dependencies on on-premises Active Directory. This document focuses on Microsoft Endpoint Manager (MEM) as the MDM solution. Cloud native endpoints can be easily deployed by using [Autopilot](./autopilot/windows-autopilot.md) to transform the pre-installed Windows operating system.
-
-:::image type="content" source="./media/cloud-native-windows-endpoints/cloud-native-endpoint-graphic.png" alt-text="Graphic representation of a cloud native Windows endpoint.":::
-
-### Benefits of cloud native Windows endpoints
-
-- **Best for remote work**  
-  Cloud native endpoints don't require line of sight to an on-premises domain controller, which significantly simplifies the user experience especially in remote work situations. For instance, a VPN connection isn't required for the initial device sign-in or to update the local device password after a network password change.
-- **Reduced reliance on on-premises infrastructure**  
-  Reducing your reliance on on-premises infrastructure will allow devices to be provisioned on any network, simplifying requirements and management.
-
-- **Unified cross platform endpoint management**  
-  You can step away from complex Group Policy management and modernize endpoint management by using a unified MDM solution that handles multiple platforms, like iOS, Android, macOS, and Windows all together in one place.
-
-- **Preserve Single-Sign-On (SSO) to on-premises applications**  
-  Cloud native endpoints don't compromise the user experience while on the corporate network. They natively provide SSO to on-premises infrastructure such as file servers, print servers, and web applications. For more information, see [SSO to on-premises resources](/azure/active-directory/devices/azuread-join-sso).
-
-- **Personalization preservation**  
-  Cloud native endpoints can easily take advantage of Microsoft 365 services to provide a synchronized and seamless experience across endpoints, including:
-  - Windows wallpaper
-  - Automatic sync of documents and desktop files to OneDrive
-  - Settings for Office
-  - Outlook signatures
-  - Microsoft Edge settings
-
-### How to get started
+## How to get started
 
 Use the five ordered phases in this guide, which build on each other to help you prepare your cloud native Windows endpoint configuration. By completing these phases in order, you'll see tangible progress along the way and to be ready to provision new devices at the end of this guide.
 
@@ -90,20 +61,20 @@ Use the five ordered phases in this guide, which build on each other to help you
 - Phase 2 – Build your first cloud native Windows endpoint
 - Phase 3 – Secure your cloud native Windows endpoint
 - Phase 4 – Apply your custom settings and applications
-- Phase 5 – Deploy at scale with Autopilot
+- Phase 5 – Deploy at scale with Windows Autopilot
 
 At the end of this guide, you’ll have a cloud native Windows endpoint ready to start testing in your environment.
-Before you get started, you might want to check out the Azure AD join planning guide at [How to plan your Azure Active Directory join implementation](/azure/active-directory/devices/azureadjoin-plan).
+Before you get started, you might want to check out the Azure AD join planning guide at [How to plan your Azure AD join implementation](/azure/active-directory/devices/azureadjoin-plan).
 
 ## Phase 1 – Set up your environment
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-1.png" alt-text="Phase 1.":::
 
-Before you build your first cloud native Windows endpoint, there are some key requirements and configuration that need to be checked. This phase will walk you through checking the requirements, configuring [Autopilot](./autopilot/windows-autopilot.md), and creating some settings and applications.
+Before you build your first cloud native Windows endpoint, there are some key requirements and configuration that need to be checked. This phase will walk you through checking the requirements, configuring [Windows Autopilot](./autopilot/windows-autopilot.md), and creating some settings and applications.
 
 ### Step 1 - Network requirements
 
-Your cloud native Windows endpoint will need access to several internet services. Start your testing on an open network or use your corporate network after providing access to all the endpoints that are listed at [Windows Autopilot networking requirements](./autopilot/networking-requirements.md).
+Your cloud native Windows endpoint will need access to several internet services. Start your testing on an open network. Or, use your corporate network after providing access to all the endpoints that are listed at [Windows Autopilot networking requirements](./autopilot/networking-requirements.md).
 
 If your wireless network requires certificates, you can start with an Ethernet connection during testing while you determine the best approach for wireless connections for device provisioning.
 
@@ -117,14 +88,14 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   For information on configuring Enrollment Restrictions, see [Set enrollment restrictions in Microsoft Intune](./intune/enrollment/enrollment-restrictions-set.md).
 
 - **Azure AD Device MDM settings**  
-  When you join a Windows device to Azure AD, Azure AD can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Autopilot to work.
+  When you join a Windows device to Azure AD, Azure AD can be configured to tell your devices to automatically enroll with an MDM. This configuration is required for Windows Autopilot to work.
   
   To check your Azure AD Device MDM settings are enabled properly, see [Quickstart - Set up automatic enrollment in Intune](./intune/enrollment/quickstart-setup-auto-enrollment.md).
   
 - **Azure AD company branding**  
-  Adding your corporate logo and images to Azure Active Directory ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Autopilot to work.
+  Adding your corporate logo and images to Azure AD ensures that users see a familiar and consistent look-and-feel when they sign-in to Microsoft 365. This configuration is required for Windows Autopilot to work.
 
-  For information on configuring custom branding in Azure AD, see [Add branding to your organization's Azure Active Directory sign-in page](/azure/active-directory/fundamentals/customize-branding).
+  For information on configuring custom branding in Azure AD, see [Add branding to your organization's Azure AD sign-in page](/azure/active-directory/fundamentals/customize-branding).
 
 - **Licensing**  
   Users enrolling Windows devices from the Out Of Box Experience (OOBE) into Intune will require two key capabilities.
@@ -142,10 +113,10 @@ Enrollment restrictions allow you to control what types of devices can enroll in
 
 ### Step 3 - Import your test device
 
-To test the Cloud Native Windows endpoint, we need to start by getting a virtual machine or physical device ready for testing. The following steps will gather the device details and upload them into the Autopilot service for use later in this document.
+To test the Cloud Native Windows endpoint, we need to start by getting a virtual machine or physical device ready for testing. The following steps will gather the device details and upload them into the Windows Autopilot service for use later in this document.
 
 > [!NOTE]
-> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Autopilot on your behalf as part of purchasing. There is more information about Autopilot in [Phase 5](#phase-5--deploy-at-scale-with-autopilot).
+> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Windows Autopilot on your behalf as part of purchasing. There is more information about Windows Autopilot in [Phase 5](#phase-5--deploy-at-scale-with-windows-autopilot).
 
 1. Install Windows (preferably 20H2 or later) in a virtual machine or reset physical device so that it’s waiting at the OOBE setup screen. For a virtual machine, you can optionally create a checkpoint.
 
@@ -177,7 +148,7 @@ To test the Cloud Native Windows endpoint, we need to start by getting a virtual
 
 ### Step 4 - Create Azure AD dynamic group for the device
 
-To limit the configurations from this guide to the test devices that you import to Autopilot, create a dynamic Azure AD group that automatically includes the devices that import to Autopilot and have the Group Tag *CloudNative*. You can then target all your configurations and applications at this group.
+To limit the configurations from this guide to the test devices that you import to Windows Autopilot, create a dynamic Azure AD group. This group should automatically include the devices that import to Windows Autopilot and have the Group Tag *CloudNative*. You can then target all your configurations and applications at this group.
 
 1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 
@@ -211,9 +182,9 @@ The enrollment status page (ESP) is the mechanism an IT pro uses to control the 
   - **Show app and profile configuration progress** - Yes
   - **Only show page to devices provisioned by out-of-box experience (OOBE)** – Yes (*default*)
 
-### Step 6 - Create and assign Autopilot profile
+### Step 6 - Create and assign the Windows Autopilot profile
 
-Now we can create an Autopilot profile and assign it to our test device. This profile tells your device to join Azure AD and what settings to apply during OOBE.
+Now we can create the Windows Autopilot profile and assign it to our test device. This profile tells your device to join Azure AD and what settings to apply during OOBE.
 
 1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 
@@ -229,9 +200,9 @@ Now we can create an Autopilot profile and assign it to our test device. This pr
 
 7. Assign the profile to the Azure AD group you created called **Autopilot Cloud Native Windows Endpoint**, select **Next**, and then select **Create**.
 
-### Step 7 - Sync Autopilot devices
+### Step 7 - Sync Windows Autopilot devices
 
-The Autopilot service will synchronize several times a day. You can also trigger a sync immediately so that your device is ready to test. To synchronize immediately:
+The Windows Autopilot service will synchronize several times a day. You can also trigger a sync immediately so that your device is ready to test. To synchronize immediately:
 
 1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 
@@ -252,14 +223,14 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
     - Automatically configure only the first profile based on Active Directory primary SMTP address - **Enabled**
 
 - **Microsoft Edge**  
-  To improve the first run experience for Microsoft Edge, the following settings will configure Edge to sync the user’s settings and skip the first run experience.
+  To improve the first run experience for Microsoft Edge, the following settings will configure Microsoft Edge to sync the user’s settings and skip the first run experience.
 
   - Microsoft Edge
     - Hide the first-run experience and splash screen - **Enabled**
     - Force synchronization of browser data and do not show the sync consent prompt - **Enabled**
 
 - **Microsoft OneDrive**  
-  To improve the first sign-in experience, the following settings will configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive. Files On-Demand (FOD) is also recommended, however as it's enabled by default, it's not included in the list below. For more information on the recommended configuration for the Onedrive sync app, see [here](/onedrive/ideal-state-configuration).
+  To improve the first sign-in experience, the following settings will configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive. Files On-Demand (FOD) is also recommended. It's enabled by default and isn't included in the following list. For more information on the recommended configuration for the OneDrive sync app, see [Recommended sync app configuration for Microsoft OneDrive](/onedrive/ideal-state-configuration).
 
   - OneDrive
     - Silently sign in users to the OneDrive sync app with their Windows credentials - **Enabled**
@@ -281,7 +252,7 @@ Before you enable synchronization in the Intune console, you must configure your
 
 3. Activate **Microsoft Intune**
     - If you don't specifically have **Microsoft Intune** available as a mobile device management tool, choose **Add management tool** to add **Microsoft Intune**.
-    - If you don't have **Microsoft Intune** activated as your mobile device management tool, click **Activate** next to **Microsoft Intune**. 
+    - If you don't have **Microsoft Intune** activated as your mobile device management tool, select **Activate** next to **Microsoft Intune**. 
       
         > **[!NOTE]**
         > Pay careful attention to the exact names used - you should activate **Microsoft Intune** rather than **Microsoft Intune Enrollment**.
@@ -302,7 +273,7 @@ Your cloud native endpoint will need some applications. To get started, we recom
 - **Company Portal**  
   Deploying the Intune *Company Portal* app to all devices as a required application is recommended. Company Portal is the self-service hub for users that they use to install applications from multiple sources, like Intune, Microsoft Store, and Configuration Manager. Users also use the portal to sync their device with Intune, check compliance status, and so on.
 
-  You can set up a relationship between Intune and the Microsoft Store for Business (MSfB) and get the Company Portal app as an offline app that can be synched to Intune and targeted at devices. For more information, see [Add and assign the Windows Company Portal app for Autopilot provisioned devices](./intune/apps/store-apps-company-portal-autopilot.md).
+  You can set up a relationship between Intune and the Microsoft Store for Business (MSfB). This step gets the Company Portal app as an offline app that can be synched to Intune and targeted at devices. For more information, see [Add and assign the Windows Company Portal app for Windows Autopilot provisioned devices](./intune/apps/store-apps-company-portal-autopilot.md).
 
 - **Microsoft Store App** (Whiteboard)  
   While Intune can deploy a wide variety of apps, we'll deploy a store app (Microsoft Whiteboard) to help keep things simple for this guide. Follow the steps from [Get the offline Company Portal app from the store](./intune/apps/store-apps-company-portal-autopilot.md#get-the-offline-company-portal-app-from-the-store) but select *Microsoft Whiteboard* as the app. Then, set the app to be *Online* and deploy it as *available* instead of as a required app. The app should later appear within Company Portal for manual installation by the user.
@@ -311,7 +282,7 @@ Your cloud native endpoint will need some applications. To get started, we recom
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-2.png" alt-text="Phase 2.":::
 
-To build your first cloud native Windows endpoint, use the same virtual machine or physical device from which you gathered and then uploaded the hardware hash to the Autopilot service in [step 3 of Phase 1](#phase-1--set-up-your-environment). With this device, go through the Autopilot process.
+To build your first cloud native Windows endpoint, use the same virtual machine or physical device that you gathered and then uploaded the hardware hash to the Windows Autopilot service in [step 3 of Phase 1](#phase-1--set-up-your-environment). With this device, go through the Windows Autopilot process.
 
 1. Resume (or reset if necessary) your Windows PC to the Out of Box Experience (OOBE).
    > [!NOTE]
@@ -324,7 +295,7 @@ To build your first cloud native Windows endpoint, use the same virtual machine 
 
 Some things to check out on your new cloud native Windows endpoint:
 
-- Notice that OneDrive folders are redirected and when Outlook opens, it's configured automatically to connect to Office 365.
+- The OneDrive folders are redirected. When Outlook opens, it's configured automatically to connect to Office 365.
 - Open **Company Portal** from the **Start Menu** and notice that **Microsoft Whiteboard** is available for installation.
 - Consider testing access from the device to on-premises resources like file shares, printers, and intranet sites.
 
@@ -404,7 +375,8 @@ Use Endpoint Security in Microsoft Endpoint Manager to configure encryption with
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
 These settings can be enabled in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com)  by going to **Endpoint Security** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
-Configuring the BitLocker settings specified below will result in silenty enabling 128 bit encryption for standard users, which is one of the most common scenarios. However your organisation might have different security requirements, so consult the [BitLocker documentation](./intune/protect/encrypt-devices.md) for additional settings.
+
+Configuring the following BitLocker settings specified results in silently enabling 128-bit encryption for standard users, which is one of the most common scenarios. However your organization might have different security requirements, so consult the [BitLocker documentation](./intune/protect/encrypt-devices.md) for additional settings.
 
 **BitLocker – Base Settings**:
 
@@ -489,7 +461,7 @@ If you’d like more granular control for Windows Updates and you use Configurat
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-4.png" alt-text="Phase 4.":::
 
-In this phase, you'll apply organization-specific settings, apps, and review your on-premises configuration. The phase is designed to help you build out customizations specific to your organization. We also draw your attention to the various components of Windows and how you can review existing configurations from an on-premises Active Directory Group Policy environment and apply them to cloud native endpoints. There are sections for each of the following:
+In this phase, you'll apply organization-specific settings, apps, and review your on-premises configuration. The phase helps you build any customizations specific to your organization. Notice the various components of Windows, how you can review existing configurations from an on-premises AD Group Policy environment, and apply them to cloud native endpoints. There are sections for each of the following areas:
 
 - [Microsoft Edge](#microsoft-edge)
 - [Start and Taskbar layout](#start-and-taskbar-layout)
@@ -503,13 +475,17 @@ In this phase, you'll apply organization-specific settings, apps, and review you
 - [Applications](#applications)
 
 ### Microsoft Edge
-#### Microsoft Edge Deployment
-Microsoft Edge is included on devices that run:
- - Windows 11.
- - Windows 10 20H2 or later.
- - Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update.
 
-Microsoft Edge will update automatically post user logon. To trigger an update for Microsoft Edge during deployment you could run the following command:
+#### Microsoft Edge Deployment
+
+Microsoft Edge is included on devices that run:
+
+- Windows 11
+- Windows 10 20H2 or later
+- Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update
+
+After users sign in, Microsoft Edge updates automatically. To trigger an update for Microsoft Edge during deployment, you can run the following command:
+
 ```powershell
 Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEdgeUpdate.exe" -argumentlist "/silent /install appguid={56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}&appname=Microsoft%20Edge&needsadmin=True"
 ```
@@ -517,10 +493,11 @@ Start-Process -FilePath "C:\Program Files (x86)\Microsoft\EdgeUpdate\MicrosoftEd
 To deploy Microsoft Edge to previous versions of Windows, see [Add Microsoft Edge for Windows to Microsoft Intune](./intune/apps/apps-windows-edge.md).
 
 #### Microsoft Edge Configuration
+
 Two components of the Microsoft Edge experience, which apply when users sign in with their Microsoft 365 credentials, can be configured from the Microsoft 365 Admin Center.
 
-- The start page logo in Microsoft Edge can be customized by configuring the *Your organization* section within the Microsoft 365 admin center. For more information, see [Customize ‎Office 365‎ for your organization](/microsoft-365/admin/setup/customize-your-organization-theme).
-- The default new tab page experience in Edge includes Office 365 information and personalized news. How this page is displayed can be customized from the Microsoft 365 admin center under **Settings** > **Org settings** > **News** > **Microsoft Edge new tab page**.
+- The start page logo in Microsoft Edge can be customized by configuring the *Your organization* section within the Microsoft 365 admin center. For more information, see [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme).
+- The default new tab page experience in Microsoft Edge includes Office 365 information and personalized news. How this page is displayed can be customized from the Microsoft 365 admin center under **Settings** > **Org settings** > **News** > **Microsoft Edge new tab page**.
 
 You can also set other settings for Microsoft Edge using settings catalog profiles. For example, you might want to configure specific sync settings for your organization.
 
@@ -538,8 +515,8 @@ You can customize and set a standard start and taskbar layout using Intune.
   After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](./intune/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
 
 - **For Windows 11**:
-  - To create and apply a Start menu layout, see [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11) for more information.
-  - To create and apply a Taskbar layout, see [Customize the Taskbar on Windows 11](/windows/configuration/customize-taskbar-windows-11) for more information.
+  - To create and apply a Start menu layout, see [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11).
+  - To create and apply a Taskbar layout, see [Customize the Taskbar on Windows 11](/windows/configuration/customize-taskbar-windows-11).
 
 ### Settings catalog
 
@@ -575,8 +552,8 @@ Following are some settings available in the settings catalog that might be rele
     - Require Private Store Only - **Only Private store is enabled**
 
 - **Block Gaming**  
-  Organizations might prefer that corporate endpoints cannot be used to play games. The Gaming page within the Settings app can be hidden entirely using the following setting.
-  For additional information on the settings page visibility, refer to the [CSP documentation](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) and the ms-settings [URI scheme reference](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
+  Organizations might prefer that corporate endpoints can't be used to play games. The Gaming page within the Settings app can be hidden entirely using the following setting.
+  For additional information on the settings page visibility, go to the [CSP documentation](/windows/client-management/mdm/policy-csp-settings#settings-pagevisibilitylist) and the ms-settings [URI scheme reference](/windows/uwp/launch-resume/launch-settings-app#ms-settings-uri-scheme-reference).
   - Settings
     - Page Visibility List – **hide:gaming-gamebar;gaming-gamedvr;gaming-broadcasting;gaming-gamemode;gaming-trueplay;gaming-xboxnetworking;quietmomentsgame**
 
@@ -587,7 +564,7 @@ Following are some settings available in the settings catalog that might be rele
     - Configure Chat Icon - **Disabled**
 
 - **Control which tenants the Teams desktop client can sign in to**
-  When this policy is configured on a device, users can only sign in with accounts homed in an Azure AD tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma seperated list of Azure AD tenant IDs. By specifing this policy and defining an Azure AD tenant you also block sign in to Teams for personal use. For more information see [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
+  When this policy is configured on a device, users can only sign in with accounts homed in an Azure AD tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Azure AD tenant IDs. By specifying this policy and defining an Azure AD tenant, you also block sign in to Teams for personal use. For more information, see [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
   
   - Administrative Templates \ Microsoft Teams
     - Restrict sign in to Teams to accounts in specific tenants (User) - **Enabled**
@@ -602,7 +579,7 @@ To create a profile that uses the Device restrictions template, in the [Microsof
   Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You’ll either host the file online or reference a file that has been copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization* and configure **Desktop background picture URL (Desktop only)**.
 
 - **Require users to connect to a network during device setup**  
-  This setting reduces the risk that a device can skip Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *General* and configure **Require users to connect to network during device setup**.
+  This setting reduces the risk that a device can skip Windows Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *General* and configure **Require users to connect to network during device setup**.
 
   > [!NOTE]
   > The setting becomes effective the next time the device is wiped or reset.
@@ -622,7 +599,7 @@ Customers using Microsoft Endpoint Configuration Manager can deploy connected ca
 
 ### Local Administrators
 
-If you have only one group of people that need local administrator access to all Windows Azure AD joined devices, you can add them to the [Azure AD Joined Device Local Administrator](/azure/active-directory/roles/permissions-reference#azure-ad-joined-device-local-administrator).
+If there's only one user group that needs local administrator access to all Windows Azure AD joined devices, then you can add them to the [Azure AD Joined Device Local Administrator](/azure/active-directory/roles/permissions-reference#azure-ad-joined-device-local-administrator).
 
 You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. With Windows 2004 or later, you can meet this requirement by using the following Configuration Service Providers (CSPs).
 
@@ -640,7 +617,7 @@ There are several options for creating your device configuration when considerin
 - Review existing Group Policies and apply required settings. You can use tools to help, like [Group Policy Analytics](./intune/configuration/group-policy-analytics.md).
 - Use Group Policy Analytics to create Device Configuration profiles directly for supported settings.
 
-The transition to a cloud native Windows endpoint represents an opportunity to review your end-user computing requirements and establish a new configuration for the future. Wherever possible, start fresh with a minimal set of policies. Try to avoid carrying forward unnecessary or legacy settings from a domain-joined environment or older operating systems, like Windows 7 or Windows XP.
+The transition to a cloud native Windows endpoint represents an opportunity to review your end-user computing requirements and establish a new configuration for the future. Wherever possible, start fresh with a minimal set of policies. Avoid carrying forward unnecessary or legacy settings from a domain-joined environment or older operating systems, like Windows 7 or Windows XP.
 
 To start fresh, review your current requirements and implement a minimal collection of settings to meet these requirements. Requirements might include regulatory or mandatory security settings and settings to enhance the end-user experience. The list of requirements should be driven by the business and not by IT. Every setting should be documented, understood, and should serve a purpose.
 
@@ -679,25 +656,32 @@ Intune supports the deployment of many different Windows application types.
 - Store apps – [Add Microsoft Store apps to Microsoft Intune](./intune/apps/store-apps-windows.md)
 - Web links – [Add web apps to Microsoft Intune](./intune/apps/web-app.md)
 
-If you have applications that use MSI, EXE, or script installers, you can deploy all of these applications using *Win32 app management in Microsoft Intune*. Wrapping these installers in the Win32 format provides more flexibility and benefits that include notifications, delivery optimization, dependencies, detection rules, and support for the Enrollment Status Page in Autopilot.
+If you have applications that use MSI, EXE, or script installers, you can deploy all of these applications using *Win32 app management in Microsoft Intune*. Wrapping these installers in the Win32 format provides more flexibility and benefits that include notifications, delivery optimization, dependencies, detection rules, and support for the Enrollment Status Page in Windows Autopilot.
 
 > [!NOTE]
 > To prevent conflicts during installation, we recommend that you stick to using the Windows line-of-business apps or Win32 apps features exclusively. If you have applications that are packaged as .msi or .exe, those can be converted to Win32 apps (.intunewin) by using the *Microsoft Win32 Content Prep Tool*, which is [available from GitHub](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool).
 
-## Phase 5 – Deploy at scale with Autopilot
+## Phase 5 – Deploy at scale with Windows Autopilot
 
 :::image type="content" source="./media/cloud-native-windows-endpoints/phase-5.png" alt-text="Phase 5.":::
 
-Now that you’ve configured your cloud native Windows endpoint and provisioned it with Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
+Now that you’ve configured your cloud native Windows endpoint and provisioned it with Windows Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
 
 - [Overview of Windows Autopilot](./autopilot/windows-autopilot.md)
 - [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
 
-If for some reason Autopilot isn’t the right option for you, there are other enrollment methods for Windows detailed here – [Intune enrollment methods for Windows devices](./intune/enrollment/windows-enrollment-methods.md).
+If for some reason Windows Autopilot isn’t the right option for you, there are other enrollment methods for Windows. For more information, go to [Intune enrollment methods for Windows devices](./intune/enrollment/windows-enrollment-methods.md).
 
-## Next steps
+## Follow the cloud native endpoints guidance
 
-Learn more about the following subjects:
+1. [Overview: What are cloud native endpoints?](cloud-native-endpoints-overview.md)
+2. Tutorial: Get started with cloud native Windows endpoints (*You are here*)
+3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+4. [Concept: Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
+5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
+6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
+
+## Good information to read
 
 - [Co-management for Windows devices](./configmgr/comanage/overview.md)
 - [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)
@@ -707,4 +691,4 @@ Learn more about the following subjects:
 - [Use certificates for authentication in Intune](./intune/protect/certificates-configure.md)
 - Deploy network profiles, including [VPN](./intune/configuration/vpn-settings-windows-10.md) and [Wi-Fi](./intune/configuration/wi-fi-settings-windows.md)
 - Deploy [Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
-- Security baseline for [Edge](./intune/protect/security-baseline-settings-edge.md)
+- Security baseline for [Microsoft Edge](./intune/protect/security-baseline-settings-edge.md)
