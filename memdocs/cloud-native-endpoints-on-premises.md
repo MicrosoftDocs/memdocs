@@ -36,7 +36,14 @@ ms.collection:
 - ??Answer some outstanding questions.??
 - ??In the "Authentication and access to on-premises resources" section, is there an image we can add? It might help??
 
+> [!TIP]
+> [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
+
 Cloud native endpoints can access on-premises resources. This article goes into more detail, and answers some common questions.
+
+This feature applies to:
+
+- Windows cloud native endpoints
 
 For an overview of cloud native endpoints, and their benefits, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
 
@@ -117,6 +124,15 @@ The following steps are an overview. For more specific information, see [Primary
 
     When users access a resource that uses WIA, like a file server, printer, web server, and more, then the TGT is exchanged with a Kerberos service ticket, which is the usual Kerberos workflow.
 
+## Follow the cloud native endpoints guidance
+
+1. [Overview: What are cloud native endpoints?](cloud-native-endpoints-overview.md)
+2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
+3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+4. 🡺 **Concept: Cloud native endpoints and on-premises resources** (*You are here*)
+5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
+6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
+
 ## Helpful online resources
 
 - [Primary Refresh Token (PRT) and Azure AD](/azure/active-directory/devices/concept-primary-refresh-token)
@@ -125,12 +141,3 @@ The following steps are an overview. For more specific information, see [Primary
 - [Integrated Windows Authentication](/aspnet/web-api/overview/security/integrated-windows-authentication)
 - [Azure AD Kerberos authentication (Preview)](/azure/active-directory/authentication/how-to-authentication-kerberos)
 - [Azure AD Authentication documentation](/azure/active-directory/authentication/)
-
-## Follow the cloud native endpoints guidance
-
-1. [Overview: What are cloud native endpoints?](cloud-native-endpoints-overview.md)
-2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
-3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-4. Concept: Cloud native endpoints and on-premises resources (*You are here*)
-5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
-6. [Known issues and important information](cloud-native-endpoints-known-issues.md)

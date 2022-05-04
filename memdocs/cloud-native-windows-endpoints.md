@@ -32,7 +32,14 @@ ms.collection:
 
 # Tutorial: Set up and configure a cloud native Windows endpoint with Microsoft Endpoint Manager
 
+> [!TIP]
+> [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
+
 This guide walks you through the steps to create a cloud native Windows endpoint configuration for your organization. For an overview of cloud native endpoints, and their benefits, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
+
+This feature applies to:
+
+- Windows cloud native endpoints
 
 > [!TIP]
 > If you’re looking for a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). In Intune, you can configure Windows in cloud configuration using a [Guided Scenario](./intune/fundamentals/guided-scenarios-overview.md). 
@@ -675,13 +682,13 @@ If for some reason Windows Autopilot isn’t the right option for you, there are
 ## Follow the cloud native endpoints guidance
 
 1. [Overview: What are cloud native endpoints?](cloud-native-endpoints-overview.md)
-2. Tutorial: Get started with cloud native Windows endpoints (*You are here*)
+2. 🡺 **Tutorial: Get started with cloud native Windows endpoints** (*You are here*)
 3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
 4. [Concept: Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
 5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
 6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
 
-## Good information to read
+## Helpful online resources
 
 - [Co-management for Windows devices](./configmgr/comanage/overview.md)
 - [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)

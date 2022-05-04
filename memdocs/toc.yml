@@ -18,7 +18,7 @@ items:
       items:
       - name: Azure AD joined vs. Hybrid Azure AD joined
         href: azure-ad-joined-hybrid-azure-ad-joined.md
-      - name: Cloud native endpoints and on-premises resources
+      - name: Access on-premises resources
         href: cloud-native-endpoints-on-premises.md
     - name: DONE-Planning guide
       href: cloud-native-endpoints-planning-guide.md

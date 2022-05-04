@@ -29,7 +29,10 @@ ms.collection:
   - M365-identity-device-management
 ---
 
-# Learn more about cloud native endpoints and the benefits to organizations and end users
+# Learn more about cloud native endpoints
+
+> [!TIP]
+> [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
 
 Organizations are focusing on supporting remote and hybrid workers. With cloud native endpoints, organizations can:
 
@@ -40,21 +43,21 @@ Organizations are focusing on supporting remote and hybrid workers. With cloud n
 
 In this set of articles, you will:
 
-- **Learn about cloud native endpoints** and the benefits to organizations and end users (this article).
-- **Step through a tutorial** that creates a Windows device that's cloud native: 
+- ✅ **Learn about cloud native endpoints** and the benefits to organizations and end users (this article).
+- ✅ **Step through a tutorial** that creates a Windows device that's cloud native: 
 
   - [Tutorial: Get started with cloud native Windows endpoints with Microsoft Endpoint Manager](cloud-native-windows-endpoints.md)
 
-- **Learn more about the Azure AD concepts** that are part of cloud native endpoints, including accessing on-premises resources:
+- ✅ **Learn more about the Azure AD concepts** that are part of cloud native endpoints, including accessing on-premises resources:
 
   - [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md) 
   - [Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
 
-- **Get guidance and advice** on moving your workloads and your organization to become cloud native:
+- ✅ **Get guidance and advice** on moving your workloads and your organization to become cloud native:
 
   - [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md)
 
-- **Read about some scenarios** that can affect your cloud native migration:
+- ✅ **Read about some scenarios** that can affect your cloud native migration:
 
   - [Known issues and important information](cloud-native-endpoints-known-issues.md)
 
@@ -79,8 +82,6 @@ A cloud native endpoint has the following characteristics:
 For end users, they only need an internet connection. Their data and critical settings can be automatically preserved and restored using [Enterprise State Roaming](/azure/active-directory/devices/enterprise-state-roaming-faqs), or similar solutions. If end users experience issues during deployment or at any time, then they can reset and reprovision the device without contacting support.
 
 Microsoft recommends customers focus on adopting cloud native endpoints.
-
-In this article, **Azure AD joined** and **cloud native endpoints** are used interchangeably.
 
 ## Benefits for users and IT
 
@@ -138,13 +139,13 @@ The [High level planning guide to move to cloud native endpoints](cloud-native-e
 
   For more specific information, see the [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md).
 
-- **Create a Proof of Concept**: Do an initial proof of concept (POC) using a lab environment. The goal is to understand changes and their impact.
+- **Create a Proof of Concept**: Do an initial proof of concept (POC). The goal is to understand changes and their impact.
 
   For more specific information, see the [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md).
 
 ## Follow the cloud native endpoints guidance
 
-1. Overview: What are cloud native endpoints? (*You are here*)
+1. 🡺 **Overview: What are cloud native endpoints?** (*You are here*)
 2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
 3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
 4. [Concept: Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
