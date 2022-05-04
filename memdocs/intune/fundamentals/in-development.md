@@ -100,7 +100,7 @@ When you select **Retire**, the device is unenrolled from Intune management. How
 For more information, see [Retire or wipe devices using Microsoft Intune](../remote-actions/devices-wipe.md).
 
 ### Initiate compliance checks for your AOSP devices from the Microsoft Intune app<!-- 12645739 -->
-You'll be able to initiate a compliance check for your AOSP devices from the Microsoft Intune app. Go to **Device details**. This feature will be available on devices that are enrolled in Microsoft Intune app as user-associated (Android) AOSP devices.
+You'll be able to initiate a compliance check for your AOSP devices from the Microsoft Intune app. Go to **Device details**. This feature will be available on devices that are enrolled in Microsoft Intune app as user-associated (Android) AOSP devices. 
 
 ### View a managed device's group membership<!-- 4100067 -->
 In the monitor section of the **Devices** workload of Intune, you'll be able to view the group membership of all AAD groups for a managed device. When this is available, you will be able to select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices**.
