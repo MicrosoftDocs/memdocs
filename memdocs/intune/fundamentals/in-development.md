@@ -78,7 +78,7 @@ The capability to deploy macOS LOB apps by uploading PKG-type installer files to
 Intune-managed Android Enterprise corporate owned dedicated devices (COSU) in Azure Active Directory (AAD) shared mode will be able to receive MAM policies and be targeted separately from other Android enterprise devices. For more information about COSU, see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
 
 ### Push notification will always be sent when device ownership changes from Personal to Corporate<!-- 12390037 -->
-We’ll soon change push notification behavior to ensure a notification is always sent when an admin changes a devices ownership from Personal to Corporate. With this change, we’re removing the following setting from the [*Customization* node](../apps/company-portal-app.md#device-ownership-notification) of the Microsoft Endpoint Manager admin center, which currently allows admins to turn off this notification behavior:
+We’ll soon change push notification behavior to ensure a notification is always sent when an admin changes a device's ownership from Personal to Corporate. With this change, we’re removing the following setting from the [*Customization* node](../apps/company-portal-app.md#device-ownership-notification) of the Microsoft Endpoint Manager admin center, which currently allows admins to turn off this notification behavior:
 - Send a push notification to users when their device ownership type changes from personal to corporate (Android and iOS/iPadOS only)​
 
 These notifications are pushed through the Company Portal app on Android and iOS/iPadOS devices.
