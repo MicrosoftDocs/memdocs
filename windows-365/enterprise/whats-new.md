@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/21/2022
+ms.date: 05/03/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,15 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of May 2, 2022
+
+### Documentation
+
+#### New documentation article: Manage Windows 365 Cloud PCs with Configuration Manager
+
+We’ve published a new help documentation article. For more information, see [Manage Windows 365 Cloud PCs with Configuration Manager](manage-cloud-pcs-using-configuration-manager.md).
 
 <!-- ########################## -->
 ## Week of April 18, 2022
