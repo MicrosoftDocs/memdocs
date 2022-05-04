@@ -52,7 +52,7 @@ To create an ANC, you must:
 ## Create an ANC
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Azure network connection** > **Create**.
-2. Depending on the type of ANC you want to create, choose **Azure AD Join (preview)** or **Hybrid Azure AD Join**.
+2. Depending on the type of ANC you want to create, choose **Azure AD Join** or **Hybrid Azure AD Join**.
 ![Screenshot of create connection dropdown](./media/create-azure-network-connection/create-connection-dropdown.png)
 3. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
 ![Screenshot of Name field](./media/create-azure-network-connection/connection-name.png)
