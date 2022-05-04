@@ -37,7 +37,7 @@ ms.collection:
 - ??In the "Authentication and access to on-premises resources" section, is there an image we can add? It might help??
 
 > [!TIP]
-> [!INCLUDE [cloud-native-endpoints-definitions](../includes/cloud-native-endpoints-definitions.md)]
+> [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
 
 Cloud native endpoints can access on-premises resources. This article goes into more detail, and answers some common questions.
 

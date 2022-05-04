@@ -33,7 +33,7 @@ ms.collection:
 # Tutorial: Set up and configure a cloud native Windows endpoint with Microsoft Endpoint Manager
 
 > [!TIP]
-> [!INCLUDE [cloud-native-endpoints-definitions](../includes/cloud-native-endpoints-definitions.md)]
+> [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
 
 This guide walks you through the steps to create a cloud native Windows endpoint configuration for your organization. For an overview of cloud native endpoints, and their benefits, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
 

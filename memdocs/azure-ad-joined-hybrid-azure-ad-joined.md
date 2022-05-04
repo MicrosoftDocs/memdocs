@@ -37,7 +37,7 @@ ms.collection:
 - ??Need a checklist of when/when not to use HAADJ??
 
 > [!TIP]
-> [!INCLUDE [cloud-native-endpoints-definitions](../includes/cloud-native-endpoints-definitions.md)]
+> [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
 
 When moving to cloud native endpoints, you need to understand the differences between Azure AD joined and hybrid Azure AD joined devices.
 

@@ -32,7 +32,7 @@ ms.collection:
 # High level planning guide to move to cloud native endpoints
 
 > [!TIP]
-> [!INCLUDE [cloud-native-endpoints-definitions](../includes/cloud-native-endpoints-definitions.md)]
+> [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
 
 This high level planning guide includes ideas and suggestions you need to consider for your adoption and migration to cloud native endpoints. It discusses managing devices, reviewing & transitioning existing workloads, making organization changes, using Windows Autopilot, and more.
 
