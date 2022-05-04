@@ -72,7 +72,11 @@ Most initial provisioning flows are typically completed by an Administrator of b
 
 ### Co-existence with Microsoft Endpoint Configuration Manager
 
-When using Configuration Manager, the best path for management of security policy is using the [Configuration Manager tenant attach](../../configmgr/tenant-attach/endpoint-security-get-started.md). In some environments it may be desired to use Security Management for Microsoft Defender for Endpoint. When using Security Management for Microsoft Defender for Endpoint with Configuration Manager, endpoint security policy should be isolated to a single control plane. Controlling policy through both channels will create the opportunity for conflicts and undesired results.
+In some environments it may be desired to use Security Management for Microsoft Defender for Endpoint in conjunction with [Configuration Manager tenant attach](../../configmgr/tenant-attach/endpoint-security-get-started.md). To support this, you’ll need to control policy through a single channel, as using more than one channel creates the opportunity for conflicts and undesired results.
+
+This is possible by setting the *Manage Security settings using Configuration Manager* toggle to *Off*, in the [Microsoft 365 Defender portal](https://security.microsoft.com/).  Sign in to the portal and go to **Settings** > **Endpoints** > **Configuration Management** > **Enforcement Scope**:
+
+:::image type="content" source="./media/mde-security-integration/disable-configuration-manager-toggle.png" alt-text="Screen shot of the Defender portal showing the Manage Security settings using Configuration Manager toggle set to Off.":::
 
 ### Active Directory joined devices
 
