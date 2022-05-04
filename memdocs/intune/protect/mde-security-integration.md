@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use Microsoft Defender for Endpoint Security Configuration Management in Microsoft Endpoint manager
+title: Use Intune to manage Microsoft Defender for Endpoint Security on devices not enrolled with Microsoft Intune 
 description: Use Intune profiles to manage security settings for Microsoft Defender for Endpoint on devices that register in your Azure Active Directory. 
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/21/2022
+ms.date: 05/04/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -46,7 +46,7 @@ This scenario extends the Microsoft Endpoint Manager Endpoint Security surface t
 
 ## Monitor status
 
-Status and reports for policies targeted at devices in this channel are available from the policy node under Endpoint security in the Microsoft Endpoint Manager admin center.
+Status and reports for policies that target devices in this channel are available from the policy node under Endpoint security in the Microsoft Endpoint Manager admin center.
 
 Drill in to the policy type, Antivirus or Firewall, and then select the policy to view its status. Policies for MDE have a *Policy type* of either *Microsoft Defender Antivirus (Preview)* or *Microsoft Defender Firewall (Preview)*.
 
@@ -60,7 +60,7 @@ When you select a policy, you'll see information about the device check-in statu
 
 ### Assignment Filters and Security Management for Microsoft Defender for Endpoint
 
-Assignment filters are not supported for devices communicating through the Microsoft Defender for Endpoint channel. While assignment filters can be added to a policy that could be targeted at these devices, the device will ignore assignment filters. For assignment filter support, the device must be enrolled in to Microsoft Endpoint Manager.
+Assignment filters aren't supported for devices communicating through the Microsoft Defender for Endpoint channel. While assignment filters can be added to a policy that could be targeted at these devices, the device will ignore assignment filters. For assignment filter support, the device must be enrolled in to Microsoft Endpoint Manager.
 
 ### Deleting and removing devices
 
@@ -68,28 +68,24 @@ Devices that are using this flow will be unable to be deleted from the Microsoft
 
 ### Unable to enable the Security Management for Microsoft Defender for Endpoint workload in Endpoint Security
 
-Most initial provisioning flows are typically completed by an Administrator of both services (such as a Global Administrator). There are some scenarios where Role-based Administration is used to customize the permissions of administrators. Today, those delegated the *Endpoint Security Manager* role may not have the necessary permissions to enable this feature. We will address this in a future release.
-
-### Co-existence with Microsoft Endpoint Configuration Manager
-
-When using Configuration Manager, the best path for management of security policy is using the [Configuration Manager tenant attach](../../configmgr/tenant-attach/endpoint-security-get-started.md). In some environments it may be desired to use Security Management for Microsoft Defender for Endpoint. When using Security Management for Microsoft Defender for Endpoint with Configuration Manager, endpoint security policy should be isolated to a single control plane. Controlling policy through both channels will create the opportunity for conflicts and undesired results.
+Most initial provisioning flows are typically completed by an Administrator of both services (such as a Global Administrator). There are some scenarios where Role-based Administration is used to customize the permissions of administrators. Today, individuals who are delegated the *Endpoint Security Manager* role might not have the necessary permissions to enable this feature.
 
 ### Active Directory joined devices
 
-Devices that are joined to Active Directory will use their **existing infrastructure** to complete the Hybrid Azure Active Directory join process. While the Defender for Endpoint component will start this process, the join action uses your Federation provider or Azure Active Directory Connect (AAD Connect) to complete the join. Review [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to learn more about configuring your environment.
+Devices that are joined to Active Directory will use their **existing infrastructure** to complete the Hybrid Azure Active Directory join process. While the Defender for Endpoint component will start this process, the join action uses your Federation provider or Azure Active Directory Connect (Azure AD Connect) to complete the join. Review [Plan your hybrid Azure Active Directory join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) to learn more about configuring your environment.
 
 To troubleshoot Azure Active Directory onboarding issues, see  [Troubleshoot Security Configuration Management Azure Active Directory onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-security-config-mgt).
 
 ### Unsupported security settings
 
-The following security settings are pending deprecation. The Security Management for Microsoft Defender for Endpoint flow does not support these settings:
+The following security settings are pending deprecation. The Security Management for Microsoft Defender for Endpoint flow doesn't support these settings:
 
 - Expedite telemetry reporting frequency (under **Endpoint Detection and Response**)
 - AllowIntrusionPreventionSystem (under **Antivirus**)
 
 ### Managing security configurations on domain controllers
 
-Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We are looking at ways to add support in the future.
+Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
 
 ### Non-persistent VDI environments
 
