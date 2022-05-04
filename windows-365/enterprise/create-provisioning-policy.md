@@ -50,7 +50,7 @@ A few things to keep in mind:
    > [!TIP]
    > Your provisioning policy name cannot contain the following characters: < > & | " ^
 
-3. On the **General** page, select a join type, followed by the appropriate network. If you select the combination of **Azure AD Join (preview)** and **Microsoft Hosted Network**, you must select a region for Microsoft to host your Cloud PC.
+3. On the **General** page, select a join type, followed by the appropriate network. If you select the combination of **Azure AD Join** and **Microsoft Hosted Network**, you must select a region for Microsoft to host your Cloud PC.
 4. For **Azure network connection**, select the connection to use for this policy > **Next**.
 5. On the **Image** page, for **Image type**, select one of the following options:
     - **Gallery image**: Choose **Select** > select an image from the gallery > **Select**. Gallery images are default images provided for your use.
