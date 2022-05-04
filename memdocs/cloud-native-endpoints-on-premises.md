@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 04/26/2022
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -42,7 +42,7 @@ For an overview of cloud native endpoints, and their benefits, go to [What are c
 
 ## Prerequisites
 
-For cloud-native Windows endpoints to access on-premises resources and services that use on-premises Active Directory (AD) for authentication, the following prerequisites are required:
+For cloud native Windows endpoints to access on-premises resources and services that use on-premises Active Directory (AD) for authentication, the following prerequisites are required:
 
 - Client apps **must use Windows integrated authentication (WIA)**. For more specific information, see [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication).
 
@@ -126,10 +126,11 @@ The following steps are an overview. For more specific information, see [Primary
 - [Azure AD Kerberos authentication (Preview)](/azure/active-directory/authentication/how-to-authentication-kerberos)
 - [Azure AD Authentication documentation](/azure/active-directory/authentication/)
 
-## Next steps
+## Follow the cloud native endpoints guidance
 
-- [What are cloud native endpoints?](cloud-native-endpoints-overview.md)
-- [Tutorial: Get started with cloud native Windows endpoints with Microsoft Endpoint Manager](cloud-native-windows-endpoints.md)
-- [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-- [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md)
-- [Known issues](cloud-native-endpoints-known-issues.md)
+1. [Overview: What are cloud native endpoints?](cloud-native-endpoints-overview.md)
+2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
+3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+4. Concept: Cloud native endpoints and on-premises resources (*You are here*)
+5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
+6. [Known issues and important information](cloud-native-endpoints-known-issues.md)

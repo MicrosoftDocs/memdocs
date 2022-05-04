@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 04/28/2022
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -72,7 +72,7 @@ A cloud native endpoint has the following characteristics:
 
 - Provisioned and managed from cloud-based services
 - Can use and access other cloud-based endpoints from anywhere
-- Azure Active Directory (AD) joined
+- Azure AD joined
 - Includes configuration, data, and applications that are portable and roam with the user
 - Doesn't generally require a direct connection to any on-premises resources for usability or management
 
@@ -88,7 +88,7 @@ Cloud native endpoints provide many benefits to end users and IT:
 
 - **Best for remote workers**
 
-  End users don't worry about connecting to the VPN or other networks. They sign in to devices from anywhere, and run actions, like password reset, without connecting to on-premises Active Directory.
+  End users don't worry about connecting to the VPN or other networks. They sign in to devices from anywhere, and run actions, like password reset, without connecting to on-premises AD.
 
   Azure AD joined (also known as AADJ) endpoints do the initial sign in using an internet connection. The Azure AD joined sign in process doesn't use on-premises domain controller connectivity, and is faster than a traditional domain-based sign in.
 
@@ -142,10 +142,11 @@ The [High level planning guide to move to cloud native endpoints](cloud-native-e
 
   For more specific information, see the [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md).
 
-## Next steps
+## Follow the cloud native endpoints guidance
 
-- [Tutorial: Get started with cloud native Windows endpoints with Microsoft Endpoint Manager](cloud-native-windows-endpoints.md)
-- [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-- [Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
-- [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md)
-- [Known issues and important information](cloud-native-endpoints-known-issues.md)
+1. Overview: What are cloud native endpoints? (*You are here*)
+2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
+3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
+4. [Concept: Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
+5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
+6. [Known issues and important information](cloud-native-endpoints-known-issues.md)

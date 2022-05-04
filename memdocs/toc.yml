@@ -20,9 +20,9 @@ items:
         href: azure-ad-joined-hybrid-azure-ad-joined.md
       - name: Cloud native endpoints and on-premises resources
         href: cloud-native-endpoints-on-premises.md
-    - name: Planning guide
+    - name: DONE-Planning guide
       href: cloud-native-endpoints-planning-guide.md
-    - name: Known issues
+    - name: DONE-Known issues
       href: cloud-native-endpoints-known-issues.md
   - name: Get Support
     href: get-support.md
