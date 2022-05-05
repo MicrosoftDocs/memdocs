@@ -60,6 +60,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
+## Week of May 2, 2022
+
+### Device security
+
+#### Security Management with Defender for Endpoint is generally available<!-- 13816763 -->
+
+The Microsoft Endpoint Manager and Microsoft Defender for Endpoint (MDE) team are excited to announce the general availability of Security Management for MDE devices. As part of this general availability, support for *Antivirus*, *Endpoint Detection and Response*, as well as *Firewall* and *Firewall rules* are now generally available. This general availability applies to Windows Server 2012 R2 and Later, as well as Windows 10 and Windows 11 clients. In the future we will be adding support for additional platforms and profiles in a preview capacity.
+
+For more information, see [Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md).
+
 ## Week of April 25, 2022 (Service release 2204)
 
 ### App management

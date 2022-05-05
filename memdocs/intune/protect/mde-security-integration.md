@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2022
+ms.date: 05/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.reviewer: mattcall
 
 ---
 
-# Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager (Preview)
+# Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager
 
 With Microsoft Defender for Endpoint (MDE), you can now deploy security configurations from Microsoft Endpoint Manager directly to your onboarded devices without requiring a full Microsoft Endpoint Manager device enrollment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this capability, devices that aren’t managed by a Microsoft Endpoint Manager service can receive security configurations for Microsoft Defender for Endpoint directly from Endpoint Manager.
 
@@ -41,14 +41,18 @@ When devices are managed through this capability:
 This scenario extends the Microsoft Endpoint Manager Endpoint Security surface to devices that aren't capable of enrolling in Endpoint Manager. When a device is managed by Endpoint Manager (enrolled to Intune) the device won't process policies for Security Management for Microsoft Defender for Endpoint. Instead, use Intune to deploy policy for Defender for Endpoint to your devices.
 
 :::image type="content" source="./media/mde-security-integration/endpoint-security-overview.png" alt-text="Conceptual diagram of the MDE-Attach solution." lightbox="./media/mde-security-integration/endpoint-security-overview.png":::
- 
+
 [!INCLUDE [Prerequisites](includes/security-config-mgt-prerequisites.md)]
 
 ## Monitor status
 
 Status and reports for policies that target devices in this channel are available from the policy node under Endpoint security in the Microsoft Endpoint Manager admin center.
 
-Drill in to the policy type, Antivirus or Firewall, and then select the policy to view its status. Policies for MDE have a *Policy type* of either *Microsoft Defender Antivirus (Preview)* or *Microsoft Defender Firewall (Preview)*.
+Drill in to the policy type and then select the policy to view its status. The following policy types support MDE security configuration:
+
+- Antivirus > *Microsoft Defender Antivirus*
+- Firewall > *Microsoft Defender Firewall* or *Microsoft Defender Firewall Rules*
+- Endpoint detection and response > *Endpoint detection and response*
 
 When you select a policy, you'll see information about the device check-in status, and can select:
 
