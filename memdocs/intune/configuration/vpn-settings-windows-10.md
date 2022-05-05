@@ -28,6 +28,8 @@ ms.collection: M365-identity-device-management
 ---
 
 # Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune
+> [!IMPORTANT]
+> Holographic currently only supports device profiles. If a user profile is deployed, it will be treated as a device profile.
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
