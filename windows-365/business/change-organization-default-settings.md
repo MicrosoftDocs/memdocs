@@ -43,7 +43,7 @@ You can change these defaults by following these steps:
 3. Select your preferred option for the following settings:
     - **Account type**: Standard User or Local Administrator.
     - **Operating system**: Windows 11 (recommended) or Windows 10.
-    - **Language and region ([preview](./public-preview.md))**: Sets the display language, time/date formats, and automatically installs any [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-language-fod) like text-to-speech and speech recognition. This setting only localizes the Windows experience. For changing the language in MIcrosoft 365 apps, see [Language Accessory Pack for Office](https://support.microsoft.com/office/language-accessory-pack-for-office-82ee1236-0f9a-45ee-9c72-05b026ee809f). If the user signs in and doesn't see the correct language, [reset](remotely-manage-business-cloud-pcs.md) the Cloud PC (this deletes all data on the Cloud PC and reinstall the language pack).
+    - **Language and region ([preview](../public-preview.md))**: Sets the display language, time/date formats, and automatically installs any [Features on Demand](/windows-hardware/manufacture/desktop/features-on-demand-language-fod) like text-to-speech and speech recognition. This setting only localizes the Windows experience. For changing the language in MIcrosoft 365 apps, see [Language Accessory Pack for Office](https://support.microsoft.com/office/language-accessory-pack-for-office-82ee1236-0f9a-45ee-9c72-05b026ee809f). If the user signs in and doesn't see the correct language, [reset](remotely-manage-business-cloud-pcs.md) the Cloud PC (this deletes all data on the Cloud PC and reinstall the language pack).
 4. Select **Save**.
 
 All new Cloud PCs will be created with the chosen settings. When these settings are changed, they won’t change the operating system, account type, or language/region of existing Cloud PCs.
@@ -54,4 +54,3 @@ To change the language settings on an already-created Cloud PC, see [Language pa
 
 > [!NOTE]  
 > The 1 vCPU/2 GB RAM/64 GB storage license doesn’t support the Windows 11 minimum hardware requirements. When this license is assigned to a user, they will always receive a Windows 10 Cloud PC.
-
