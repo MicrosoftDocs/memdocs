@@ -62,6 +62,8 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of April 2, 2022
 
+### App management
+
 #### Update priority of Managed Google Play apps<!-- 11050956 -->
 You can set the update priority of Managed Google Play apps on Android Enterprise devices that are dedicated, fully managed, or corporate-owned with a work profile. By selecting **Postpone** as the **Update Priority** app setting, the device will wait for 90 days after a new version of the app is detected before installing the app update. For related information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](..\apps\apps-add-android-for-work.md).
 
