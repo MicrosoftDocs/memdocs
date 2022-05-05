@@ -57,7 +57,7 @@ Each versions list of settings identifies:
 
 **Security Baseline for Windows 10 and later for November 2021**
 
-### Above Lock
+## Above Lock
 
 - **Voice activate apps from locked screen**:  
   Baseline default: *Disabled*  
@@ -273,7 +273,7 @@ Baseline default: *Success and Failure*
   - **Block list**:  
     *Not configured by default. Manually add one or more Identifiers.*
 
-
+##
 
 
 
@@ -283,7 +283,7 @@ Baseline default: *Success and Failure*
 
 **Security Baseline for Windows 10 and later for December 2020**
 
-### Above Lock
+## Above Lock
 
 - **Voice activate apps from locked screen**:  
   Baseline default: *Disabled*  
@@ -486,7 +486,7 @@ Baseline default: *Success and Failure*
   Baseline default: *Enable with UEFI lock*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=872424)
 
-### Device Installation
+## Device Installation
 
 - **Block hardware device installation by setup classes**:  
   Baseline default: *Yes*  
@@ -523,13 +523,13 @@ Baseline default: *Success and Failure*
   Baseline default: *Yes*  
   [Learn More](/windows/client-management/mdm/policy-csp-abovelock#abovelock-allowtoasts)  
 
-### App Runtime
+## App Runtime
 
 - **Microsoft accounts optional for Microsoft store apps**:  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-appruntime#appruntime-allowmicrosoftaccountstobeoptional)
 
-### Application Management
+## Application Management
 
 - **Block app installations with elevated privileges**:  
   Baseline default: *Yes*  
@@ -543,7 +543,7 @@ Baseline default: *Success and Failure*
   Baseline default: *Yes*  
   [Learn more](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-allowgamedvr)
 
-### Audit
+## Audit
 
 Audit settings configure the events that are generated for the conditions of the setting.
 
@@ -618,7 +618,7 @@ Audit settings configure the events that are generated for the conditions of the
 - **System Audit System Integrity (Device)**:  
   Baseline default: *Success and Failure*
 
-### Auto Play
+## Auto Play
 
 - **Auto play default auto run behavior**:  
   Baseline default: *Do not execute*  
@@ -632,7 +632,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-autoplay#autoplay-disallowautoplayfornonvolumedevices) 
 
-### BitLocker
+## BitLocker
 
 - **BitLocker removable drive policy**:  
   Baseline default: *Configure*  
@@ -642,7 +642,7 @@ Audit settings configure the events that are generated for the conditions of the
     Baseline default: *Yes*  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=872540)
 
-### Browser
+## Browser
 
 - **Block Password Manager**:  
   Baseline default: *Yes*  
@@ -664,7 +664,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067126)
 
-### Connectivity
+## Connectivity
 
 - **Configure secure access to UNC paths**:  
   Baseline default: *Configure Windows to only allow access to the specified UNC paths after fulfilling additional security requirements*  
@@ -687,19 +687,19 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067103)
 
-### Credentials UI
+## Credentials UI
 
 - **Enumerate administrators**:  
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067021)
 
-### Data Protection
+## Data Protection
 
 - **Block direct memory access**:  
   Baseline default: Yes  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067031)
 
-### Device Guard
+## Device Guard
 
 - **Virtualization based security**:  
   Baseline default: *Enable VBS with secure boot*
@@ -715,7 +715,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enable with UEFI lock*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=872424)
 
-### Device Installation
+## Device Installation
 
 - **Hardware device installation by device identifiers**:  
   Baseline default: *Block hardware device installation*
