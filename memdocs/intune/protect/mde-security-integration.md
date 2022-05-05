@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2022
+ms.date: 05/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -91,9 +91,11 @@ The following security settings are pending deprecation. The Security Management
 
 Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
 
+<!-- Removing until GA behavior is known>
 ### Non-persistent VDI environments
 
 Due to the potential effect on Azure Active Directory environments with respect to device lifecycle and service quota, we advise against testing the current installation files and builds shared in this public preview in a non-persistent VDI environment.
+-->
 
 ### Server Core installation
 

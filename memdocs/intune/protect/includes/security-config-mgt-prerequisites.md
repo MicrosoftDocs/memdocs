@@ -4,12 +4,12 @@ description: include file
 author: brenduns
 ms.service: microsoft-intune
 ms.author: brenduns
-ms.date: 05/04/2022
+ms.date: 05/12/2022
 ms.topic: include
 ---
 ## Prerequisites
 
-Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario.
+Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario:
 
 ### Environment
 
@@ -29,7 +29,7 @@ When a device that is domain joined creates a trust with Azure Active Directory,
 - Hybrid Azure Active Directory Join must be configured in your environment (either through Federation or AAD Connect Sync)
 - AAD Connect Sync must include the device objects *in scope* for synchronization with Azure Active Directory (when needed for join)
 - AAD Connect rules for sync must be modified for Server 2012 R2 (when support for Server 2012 R2 is needed)
-- All devices must register in the Azure Active Directory of the tenant that hosts Microsoft Defender for Endpoint. Cross-tenant scenarios are not supported
+- All devices must register in the Azure Active Directory of the tenant that hosts Microsoft Defender for Endpoint. Cross-tenant scenarios are not supported.
 
 ### Connectivity requirements
 
@@ -46,8 +46,8 @@ Devices must have access to the following endpoints:
 
 Policies for Microsoft Defender for Endpoint security management are supported for the following device platforms:
 
-- Windows 11 Professional/Enterprise
 - Windows 10 Professional/Enterprise (with [KB5006738](https://support.microsoft.com/topic/october-26-2021-kb5006738-os-builds-19041-1320-19042-1320-and-19043-1320-preview-ccbce6bf-ae00-4e66-9789-ce8e7ea35541))
+- Windows 11 Professional/Enterprise
 - Windows Server 2012 R2 with [Microsoft Defender for Down-Level Devices](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2016 with [Microsoft Defender for Down-Level Devices](/microsoft-365/security/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2019 (with [KB5006744](https://support.microsoft.com/topic/october-19-2021-kb5006744-os-build-17763-2268-preview-e043a8a3-901b-4190-bb6b-f5a4137411c0))
@@ -69,6 +69,7 @@ To use security management for Microsoft Defender for Endpoint, you need:
 ## Architecture
 
 The following diagram is a conceptual representation of the Microsoft Defender for Endpoint security configuration management solution.
+
 :::image type="content" alt-text="Conceptual representation of the Microsoft Defender for Endpoint security configuration management solution" source="../media/mde-security-integration/mde-architecture.png":::
 
 1. Devices onboard to Microsoft Defender for Endpoint.
@@ -130,7 +131,7 @@ To support Microsoft Defender for Endpoint security configuration management thr
 1. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and set **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
 
    :::image type="content" source="../media/mde-security-integration/enable-mde-settings-management-mem.png" alt-text="Enable Microsoft Defender for Endpoint settings management in the Microsoft Endpoint Manager admin center.":::
-
+   
    When you set this option to *On*, all devices in the platform scope in Microsoft Defender for Endpoint that aren't managed by Microsoft Endpoint Manager will qualify to onboard to Microsoft Defender for Endpoint.
 
 > [!TIP]
