@@ -210,7 +210,7 @@ The Settings Catalog has new macOS settings you can configure (**Devices** > **C
 - Token Removal Action
 - User Pairing
 
-**System Updates > Software Update**:
+**Software Update**:
 
 - Allow Pre Release Installation
 - Automatic Check Enabled
