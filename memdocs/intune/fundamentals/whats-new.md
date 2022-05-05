@@ -60,7 +60,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
-## Week of April 2, 2022
+## Week of May 2, 2022
 
 ### App management
 
