@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/03/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -283,16 +283,6 @@ Baseline default: *Success and Failure*
 
 **Security Baseline for Windows 10 and later for December 2020**
 
-This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
-
-- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
-- Can be updated to the latest version. After you update to the current baseline version, you can edit the profile to modify settings.
-
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action. THis action is available when you view the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
-
-To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
-
-
 ### Above Lock
 
 - **Voice activate apps from locked screen**:  
@@ -524,18 +514,6 @@ Baseline default: *Success and Failure*
 ## [August 2020](#tab/aug-2020)
 
 **Security Baseline for Windows 10 and later for August 2020**
-
-This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
-
-- Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
-- Can be updated to the latest version. After you update to the current baseline version, you can edit the profile to modify settings.
-
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action. THis action is available when you view the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
-
-To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
-
-
-### Above Lock
 
 - **Voice activate apps from locked screen**:  
   Baseline default: *Disabled*  
