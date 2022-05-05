@@ -287,7 +287,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 You can monitor the use of remote help from within Microsoft Endpoint Manager.
 
-1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Remote help (preview)**.
+1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Remote help**.
 
 2. On the Monitor tab, you’ll see a count of active sessions and historical data about past sessions.
 
