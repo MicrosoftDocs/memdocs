@@ -44,7 +44,7 @@ To learn more about using security baselines, see [Use security baselines](secur
 - [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) to discover what's changed from version to version.
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to update a profile to use the latest version of that baseline.
 
-## [November 2021](#tab/nov-2021)
+# [November 2021](#tab/nov-2021)
 
 **Security Baseline for Windows 10/11 for November 2021**
 
@@ -1258,7 +1258,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067330)
 
-## [December 2020](#tab/dec-2020)
+# [December 2020](#tab/dec-2020)
 
 **Security Baseline for Windows 10/11 for December 2020**
 
@@ -2468,7 +2468,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067330)
 
-## [August 2020](#tab/aug-2020)
+# [August 2020](#tab/aug-2020)
 
 **Security Baseline for Windows 10 and later for August 2020**
 
