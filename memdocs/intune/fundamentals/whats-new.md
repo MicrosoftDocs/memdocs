@@ -94,7 +94,7 @@ For more information, see [Windows 10/11 Enterprise multi-session remote desktop
 #### Device actions available to Android (AOSP) users in Microsoft Intune app<!-- 12645718 -->
 AOSP device users can now rename their enrolled devices in the Microsoft Intune app. This feature is available on devices enrolled in Intune as user-associated (Android) AOSP devices. For more information about Android (AOSP) management, see [Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md).  
 
-#### Support for Audio Alert on Andriod corporate owned work profiles and fully managed (COBO and COPE) devices<!-- 13499471 -->
+#### Support for Audio Alert on Android corporate owned work profiles and fully managed (COBO and COPE) devices<!-- 13499471 -->
 You can now use the device action **Play lost device sound**  to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise corporate owned work profile and fully managed devices. For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
 
 ### Device enrollment
