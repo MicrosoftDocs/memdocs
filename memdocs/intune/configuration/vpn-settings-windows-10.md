@@ -53,6 +53,9 @@ These settings apply to devices running:
 
 ## User scope or Device scope
 
+> [!IMPORTANT]
+> Windows Holographic devices only support device scope. VPN profiles installed on Windows Holographic device apply to all users on the device.
+
 - **Use this VPN profile with a user/device scope**: Apply the profile to the user scope or the device scope:
 
   - **User scope**: The VPN profile is installed within the user's account on the device, such as `user@contoso.com`. If another user signs in to the device, the VPN profile isn't available.
