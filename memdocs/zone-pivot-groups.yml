@@ -1,13 +1,5 @@
 ### YamlMime:ZonePivotGroups
 groups:
-- id: security-baseline-settings-one
-  title: Security baselines
-  prompt: Choose your security baseline
-  pivots:
-    - id: windows-mdm
-      title: Windows MDM
-    - id: microsoft-defender-atp
-      title: Microsoft Defender for Endpoint
 - id: windows-mdm-versions
   title: Security Baselines for Windows 10 and later
   prompt: Choose a version
