@@ -52,7 +52,7 @@ To learn more about using security baselines, see [Use security baselines](secur
 **Security Baseline for Windows 10/11 for November 2021**
 ::: zone-end
 
-::: zone pivot=mdm-december-2020"
+::: zone pivot="mdm-december-2020"
 **Security Baseline for Windows 10/11 for December 2020**
 ::: zone-end
 
@@ -1115,7 +1115,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Microsoft Defender
 
-::: zone pivot=mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-december-2020,mdm-november-2021"
 
 - **Block Adobe Reader from creating child processes**:  
   Baseline default: *Enable*  
