@@ -1078,7 +1078,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 - **Defender potentially unwanted app action**:  
   Baseline default: *Block*  
-  [Learn more](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Block untrusted and unsigned processes that run from USB**:  
   Baseline default: *Block*  
@@ -2288,7 +2288,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 - **Defender potentially unwanted app action**:  
   Baseline default: *Block*  
-  [Learn more](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Block untrusted and unsigned processes that run from USB**:  
   Baseline default: *Block*  
@@ -3432,7 +3432,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 - **Defender potentially unwanted app action**:  
   Baseline default: *Block*  
-  [Learn more](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Block untrusted and unsigned processes that run from USB**:  
   Baseline default: *Block*  
