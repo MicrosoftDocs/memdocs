@@ -46,7 +46,7 @@ To learn more about using security baselines, see [Use security baselines](secur
 
 ## [November 2021](#tab/nov-2021)
 
-**Security Baseline for Windows 10 and later for November 2021**:
+**Security Baseline for Windows 10/11 for November 2021**
 
 ## Above Lock
 
@@ -1260,7 +1260,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## [December 2020](#tab/dec-2020)
 
-**Security Baseline for Windows 10 and later for December 2020**:
+**Security Baseline for Windows 10/11 for December 2020**
 
 ## Above Lock
 
@@ -2470,7 +2470,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## [August 2020](#tab/aug-2020)
 
-**Security Baseline for Windows 10 and later for August 2020**:
+**Security Baseline for Windows 10 and later for August 2020**
 
 ## Above Lock
 
