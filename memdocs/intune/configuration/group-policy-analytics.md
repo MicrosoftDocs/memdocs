@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 04/18/2022
+ms.date: 05/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -31,25 +31,28 @@ ms.collection:
   - highpri
 ---
 
-# Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager (public preview)
+# Analyze your on-premises GPOs using Group Policy analytics in Microsoft Endpoint Manager (public preview)
 
 > [!TIP]
 > Looking for information on ADMX templates? See [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md).
 
-**Group Policy analytics** is a tool in Microsoft Endpoint Manager that analyzes your on-premises GPOs, and:
+Microsoft Intune has many of the same settings as your on-premises GPOs. **Group Policy analytics** is a tool in Microsoft Endpoint Manager that:
 
-- Shows that settings that are supported by cloud-based MDM providers, including Microsoft Intune.
+- Analyzes your on-premises GPOs.
+- Shows the settings that are supported by cloud-based MDM providers, including Microsoft Intune.
 - Shows any deprecated settings, or settings not available.
-- Can migrate your imported GPOs to a Settings Catalog policy.
+- Can [migrate your imported GPOs to a settings catalog policy](group-policy-analytics-migrate.md) that can be deployed to your devices.
 
-If your organization uses GPOs, and you want to move some workloads to Microsoft Endpoint Manager and Intune, then Group Policy analytics will help.
+If your organization uses on-premises GPOs to manage Windows 10/11 devices, then Group Policy analytics will help. With Group Policy analytics, it's possible Intune can replace your on-premises GPOs. Windows 10/11 devices are inherently cloud native. So depending on your configuration, these devices might not require access to an on-premises Active Directory.
+
+If you're ready to remove the dependency to on on-premises AD, then analyzing your GPOs with **Group Policy analytics** is a good first step. Some older settings aren't supported, or don't apply to cloud native Windows devices. After you analyze your GPOs, you'll know which settings might still be valid.
 
 This feature applies to:
 
 - Windows 11
 - Windows 10
 
-This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results. For information on migrating your GPOs to a Settings Catalog policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager (public preview)](group-policy-analytics-migrate.md).
+This article shows you how export your GPOs, import the GPOs into Endpoint Manager, and review the analysis and results. To migrate or transfer your imported GPOs to an Intune policy, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager (public preview)](group-policy-analytics-migrate.md).
 
 ## Before you begin
 
@@ -115,6 +118,8 @@ Be sure the file is less than 4 MB and has a proper unicode encoding. If the exp
       The [CSP reference](/windows/client-management/mdm/configuration-service-provider-reference) lists the available CSPs, shows the supported OS editions, and more.
 
     - **CSP Mapping**: Shows the OMA-URI path for the on-premises policy. You can use the OMA-URI in a [custom device configuration profile](custom-settings-configure.md). For example, you may see `./Device/Vendor/MSFT/BitLocker/RequireDeviceEnryption`.
+
+5. For the settings that have MDM support, you can create a Settings Catalog policy with these settings. For the specific steps, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager (public preview)](group-policy-analytics-migrate.md).
 
 ## Supported CSPs and group policies
 
