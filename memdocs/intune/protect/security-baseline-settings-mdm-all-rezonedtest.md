@@ -52,7 +52,7 @@ To learn more about using security baselines, see [Use security baselines](secur
 **Security Baseline for Windows 10/11 for November 2021**
 ::: zone-end
 
-::: zone pivot="mdm-december-2020"
+::: zone pivot=mdm-december-2020"
 **Security Baseline for Windows 10/11 for December 2020**
 ::: zone-end
 
@@ -314,7 +314,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 ## Device Installation
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block hardware device installation by setup classes**:  
   Baseline default: *Yes*  
@@ -353,7 +353,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 ## Device Lock
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Require password**:  
   Baseline default: *Yes*  
@@ -403,7 +403,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 ## DMA Guard
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**:  
   Baseline default: *Block all*
@@ -412,7 +412,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 ## Event Log Service
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Application log maximum file size in KB**:  
   Baseline default: *32768*  
@@ -430,7 +430,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 ## Experience
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block Windows Spotlight**:  
   Baseline default: *Yes*  
@@ -457,7 +457,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 ## File Explorer
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block data execution prevention**:  
   Baseline default: *Disabled*  
@@ -471,7 +471,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 ## Firewall
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796) in the Windows Protocols documentation.
 
@@ -547,7 +547,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Internet Explorer
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Internet Explorer encryption support**:  
   Baseline default: 2 items:  *TLS v1.1* and *TLS v1.2*  
@@ -1025,7 +1025,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Local Policies Security Options
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block remote logon with blank password**:  
   Baseline default: *Yes*  
@@ -1115,7 +1115,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Microsoft Defender
 
-::: zone pivot="mdm-december-2020,mdm-november-2021"
+::: zone pivot=mdm-december-2020,mdm-november-2021"
 
 - **Block Adobe Reader from creating child processes**:  
   Baseline default: *Enable*  
@@ -1333,7 +1333,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## MS Security Guide
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **SMB v1 client driver start configuration**:  
   Baseline default: *Disabled driver*  
@@ -1359,7 +1359,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## MSS Legacy
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Network IPv6 source routing protection level**:  
   Baseline default: *Highest protection*  
@@ -1381,7 +1381,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Power
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Require password on wake while on battery**:  
   Baseline default: *Enabled*  
@@ -1403,7 +1403,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Remote Assistance
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Remote Assistance solicited**:  
   Baseline default: *Disable Remote Assistance*  
@@ -1413,7 +1413,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Remote Desktop Services
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Remote desktop services client connection encryption level**:  
   Baseline default: *High*  
@@ -1438,7 +1438,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Remote Management
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block client digest authentication**:  
   Baseline default: *Enabled*  
@@ -1468,7 +1468,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Remote Procedure Call
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **RPC unauthenticated client options**:  
   Baseline default: *Authenticated*  
@@ -1478,7 +1478,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Search
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Disable indexing encrypted items**:  
   Baseline default: *Yes*  
@@ -1488,7 +1488,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Smart Screen
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Turn on Windows SmartScreen**  
   Baseline default: *Yes*  
@@ -1502,7 +1502,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## System
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **System boot start driver initialization**:  
   Baseline default: *Good unknown and bad critical*  
@@ -1512,7 +1512,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Wi-Fi
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block Automatically connecting to Wi-Fi hotspots**:  
   Baseline default: *Yes*  
@@ -1526,7 +1526,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Windows Connection Manager
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Block connection to non-domain networks**:  
   Baseline default: *Enabled*  
@@ -1536,7 +1536,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Windows Ink Workspace
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Ink Workspace**:  
   Baseline default: *Enabled*  
@@ -1546,7 +1546,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
 ## Windows PowerShell
 
-::: zone pivot="mdm-august-2020,"mdm-december-2020,mdm-november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **PowerShell script block logging**:  
   Baseline default: *Enabled*  
