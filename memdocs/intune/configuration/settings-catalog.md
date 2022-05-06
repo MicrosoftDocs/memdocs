@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/21/2022
+ms.date: 05/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Use the settings catalog to configure settings on Windows and macOS devices - preview
 
-Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added.
+Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. If you prefer to configure settings at a granular level, similar to on-premises GPO, then the settings catalog is a natural transition.
 
 When you create the policy, you start from scratch. You add only the settings you want to control and manage. For example, you can use the settings catalog to create a BitLocker policy with all BitLocker settings, and all in one place in Intune.
 
@@ -107,7 +107,7 @@ This article lists the steps to create a policy, and shows how to search and fil
 
     Select **Next**.
 
-11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -193,7 +193,7 @@ The **Settings catalog** lists all the available settings. If you want to see al
 
 ## Device scope vs. user scope settings
 
-When selecting settings, some settings have a `(User)` tag or `(Device)` tag in the setting name, such as `Allow EAP Cert SSO (User)` or `Grouping (Device)`. When you see these tags, the policy only affects the user scope or the device scope.
+When you select a setting, some settings have a `(User)` tag or `(Device)` tag in the setting name, such as `Allow EAP Cert SSO (User)` or `Grouping (Device)`. When you see these tags, the policy only affects the user scope or the device scope.
 
 For more information on user scope and device scope, see the [Policy CSP](/windows/client-management/mdm/policy-configuration-service-provider).
 
@@ -204,16 +204,16 @@ When deploying policy from Intune, you can assign user scope or device scope to 
 - User scoped policy writes to `HKEY_CURRENT_USER (HKCU)`. 
 - Device scoped policy writes to `HKEY_LOCAL_MACHINE (HKLM)`.
 
-When a device checks-in to Intune, the device always presents a `deviceID`. The device may or may not present a `userID`, depending on the check-in timing and if a user is signed in.
+When a device checks in to Intune, the device always presents a `deviceID`. The device may or may not present a `userID`, depending on the check-in timing and if a user is signed in.
 
-These are some possible combinations of scope, assignment, and the expected behavior:
+The following list includes some possible combinations of scope, assignment, and the expected behavior:
 
 - If a device scope policy is assigned to a device, then all users on that device have that setting applied.
 - If a user scope policy is assigned to a device, then all users on that device have that setting applied. This behavior is like a [loopback set to merge](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy).
 - If a user scoped policy is assigned to a user, then only that user has that setting applied.
 - If a device scoped policy is assigned to a user, once that user signs in and an Intune sync occurs, then the device scope settings apply to all users on the device.
 
-If there is no [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, then you may see some user scope settings marked as not applicable. This behavior happens in the early moments of a device before a user is present.
+If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, then you may see some user scope settings marked as not applicable. This behavior happens in the early moments of a device before a user is present.
 
 ## Next steps
 
