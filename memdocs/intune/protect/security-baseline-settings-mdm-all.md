@@ -38,7 +38,7 @@ View the settings that are part of the Windows 10/11 MDM security baseline that 
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
 - The most recent baseline version is **Security Baseline for Windows 10 and later for November 2021**
 
-::: zone pivot="november-2021"
+::: zone pivot="mdm-november-2021"
 
 **Security Baseline for Windows 10 and later for November 2021**  
 
@@ -48,12 +48,12 @@ View the settings that are part of the Windows 10/11 MDM security baseline that 
 **Security Baseline for Windows 10 and later for December 2020**  
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020"
+::: zone pivot="mdm-august-2020"
 
 **Security Baseline for Windows 10 and later for August 2020**  
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
@@ -65,7 +65,7 @@ To understand what's changed with this version of the baseline from previous ver
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 ## Above Lock
 
@@ -387,7 +387,7 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
 ## Device Installation
 
 ::: zone-end
-::: zone pivot="mdm-december-2020,november-2021"
+::: zone pivot="mdm-december-2020,mdm-november-2021"
 
 - **Block hardware device installation by setup classes**:  
   This policy setting allows you to specify a list of device setup class globally unique identifiers (GUIDs) for device drivers that Windows is prevented from installing. This policy setting takes precedence over any other policy setting that allows Windows to install a device. If you block installation, Windows is prevented from installing or updating device drivers whose device setup class GUIDs appear in the list you create. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server. If you allow installation, Windows can install and update devices as allowed or prevented by other policy settings.  
@@ -406,7 +406,7 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
     Manage a list of device setup class globally unique identifiers that for device drivers that Windows is prevented from installing.
  
 ::: zone-end
-::: zone pivot="mdm-sept-2020"
+::: zone pivot="mdm-august-2020"
 
 For more information, see [Policy CSP - DeviceInstallation](/windows/client-management/mdm/policy-csp-deviceinstallation) in the Windows documentation.
 
@@ -447,7 +447,7 @@ For more information, see [Policy CSP - DeviceInstallation](/windows/client-mana
     **Default**: *No default configuration*
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 ## Device Lock
 
@@ -581,7 +581,7 @@ For more information, see [Policy CSP - Experience](/windows/client-management/m
     **Default**: Not configured
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020"
+::: zone pivot="mdm-august-2020"
 
 ## Exploit Guard
 
@@ -594,7 +594,7 @@ For more information, see [Policy CSP - ExploitGuard](/windows/client-management
   **Default**: *Sample xml is provided*
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 ## File Explorer
 
@@ -1647,7 +1647,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: Everyday
 
 ::: zone-end
-::: zone pivot="mdm-december-2020,november-2021"
+::: zone pivot="mdm-december-2020,mdm-november-2021"
 
 - **Defender scan start time**:  
   Defender schedule scan time.
@@ -1655,7 +1655,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: Not configured
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Cloud-delivered protection level**:  
   CSP: [Defender/CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
@@ -1679,7 +1679,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: Yes  
 
 ::: zone-end
-::: zone pivot="november-2021"
+::: zone pivot="mdm-november-2021"
 
 - **Scan scripts that are used in Microsoft browsers**  
   CSP [Defender/AllowScriptScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowscriptscanning)
@@ -1689,7 +1689,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
   **Default**: Yes
 
 ::: zone-end
-::: zone pivot="mdm-sept-2020,mdm-december-2020,november-2021"
+::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Scan archive files**:  
   CSP: [Defender/AllowArchiveScanning](/windows/client-management/mdm/policy-csp-defender#defender-allowarchivescanning)
