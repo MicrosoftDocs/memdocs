@@ -2,13 +2,13 @@
 # required metadata
 
 title: Migrate your imported group policy to a policy in Microsoft Intune
-description: After you import your group policy objects in Microsoft Intune and Endpoint Manager, use the migrate feature to create a Settings Catalog policy. This policy will use your imported GPOs, and can be assigned to users and devices managed by your organizations.
+description: After you import your group policy objects in Microsoft Intune and Endpoint Manager, use the migrate feature to transfer your GPOs to a Settings Catalog policy. This policy will use your imported GPOs, and can be assigned to users and devices managed by your organizations.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 04/18/2022
+ms.date: 05/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -35,7 +35,7 @@ ms.collection:
 
 You can import your on-premises Group Policy Objects (GPOs), and create an Intune policy using these imported settings. This policy can be deployed to users and devices managed by your organization.
 
-With Group Policy Analytics, you import your on-premises GPOs. It analyzes your imported GPOs, and shows the settings that are also available in Microsoft Intune. For the settings that are available, you can create a Settings Catalog policy, and then deploy the policy.
+With Group Policy Analytics, you import your on-premises GPOs. It analyzes your imported GPOs, and shows the settings that are also available in Microsoft Intune. For the settings that are available, you can create a [Settings Catalog policy](settings-catalog.md), and then deploy the policy to your managed devices.
 
 This article shows you how to create the policy from your imported GPOs. For more information and an overview on Group Policy Analytics, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview](group-policy-analytics.md).
 
@@ -43,7 +43,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 - In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in as the Intune administrator or with a role that has the **Security Baselines** permission.
 
-  For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, see [role-based access control](../fundamentals/role-based-access-control.md).
+  For example, the **Endpoint Security Manager** role has the **Security Baselines** permission. For more information on the built-in roles, go to [role-based access control](../fundamentals/role-based-access-control.md).
 
 - Import your on-premises GPOs, and review the results.
 
@@ -51,7 +51,7 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 - This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
-- Currently, the Migrate feature isn't supported in sovereign clouds. For more information on sovereign clouds, see [What is Azure Government?](/azure/azure-government/documentation-government-welcome).
+- Currently, the Migrate feature isn't supported in sovereign clouds, like Azure Government. For more information, go to [What is Azure Government?](/azure/azure-government/documentation-government-welcome).
 
 ## Review and migrate your GPOs to a Settings Catalog policy
 
@@ -100,7 +100,7 @@ After you import your GPOs, review the settings that can be migrated. Remember, 
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 8. Select **Next**.
-9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, see [Assign user and device profiles in Intune](device-profile-assign.md).
+9. In **Assignments**, select the user or groups that will receive your profile. For more information on assigning profiles, including advice and guidance, go to [Assign user and device profiles in Intune](device-profile-assign.md).
 
     Select **Next**.
 
@@ -130,7 +130,7 @@ When you create the Settings Catalog profile, any settings that can be included 
 
 - **Some settings don't migrate exactly, and may use a different setting**
 
-  In some scenarios, some GPO settings won't migrate to the exact same setting in the Settings Catalog. An alternate setting that has a similar impact is recommended.
+  In some scenarios, some GPO settings won't migrate to the exact same setting in the Settings Catalog. Intune will show an alternate setting that has a similar effect.
 
   For example, you may see this behavior if you import GPOs that include older Office Administrative Template settings or older Google Chrome settings.
 
