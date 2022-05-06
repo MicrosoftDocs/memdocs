@@ -31,14 +31,14 @@ ms.collection:
 
 # List of the settings in the Windows 10/11 MDM security baseline in Intune
 
-This article is a reference for the settings that are available in the different versions of the Windows 10/11 MDM security baseline that you can deploy with Microsoft Intune. You can use the tabs below to select and view the current baseline version as well as a few older versions that might still be in use.
+This article is a reference for the settings that are available in the different versions of the Windows 10/11 MDM security baseline that you can deploy with Microsoft Intune. You can use the tabs below to select and view the settings in the current baseline version and a few older versions that might still be in use.
 
-For each setting you'll see the settings default configuration, which is also the recommended configuration for that setting from the relevant security team. Because the products and the security landscape evolves, the recommended defaults for one baseline version might not match the defaults you find in other versions of the same baseline, or for the same setting found in a different baseline, such as the Defender for Endpoint baseline.  
+Each setting lists its default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolves, the recommended defaults for one baseline version might not match the defaults you find in other versions of the same baseline. Similarly, the defaults for a setting that appears in multiple baseline types, like the MDM security and the Defender for Endpoint baselines, might not match.  
 
-When a new baseline version releases, it replaces the previous version.  Profiles that were created prior to the availability of a new baseline version:
+Each new baseline version replaces the previous version. With a new version release, profiles that were created prior to the availability of a new version:
 
 - Become read-only. You can continue to use those profiles, but can't edit them to change their configuration.
-- Can be updated to the latest version. After you update to the current baseline version, you can edit the profile to modify settings.
+- Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
 
