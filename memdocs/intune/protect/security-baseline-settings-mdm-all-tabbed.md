@@ -12,7 +12,6 @@ ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-zone_pivot_groups: windows-mdm-versions
 
 # optional metadata
 #ROBOTS:
