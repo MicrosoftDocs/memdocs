@@ -90,7 +90,7 @@ For more information, see [Policy CSP - AppRuntime](/windows/client-management/m
 ## Application Management
 
 For more information, see [Policy CSP - ApplicationManagement](/windows/client-management/mdm/policy-csp-applicationmanagement) in the Windows documentation.
- 
+
 - **Block app installations with elevated privileges**:
   This policy setting directs Windows Installer to use elevated permissions when it installs any program on the system. If you enable this policy setting, privileges are extended to all programs. This enables users to install programs that require access to directories that the user might not have permission to view or change, including directories on highly restricted computers.  
   [Learn more](/windows/client-management/mdm/policy-csp-applicationmanagement#applicationmanagement-msialwaysinstallwithelevatedprivileges)
