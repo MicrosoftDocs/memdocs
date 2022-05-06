@@ -64,12 +64,6 @@ Support for Azure AD joined Cloud PCs has moved out of preview and into general 
 
 Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now rolling out in Asia Pacific (APAC) regions. This feature will roll out to all customers over the next few months.
 
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Device management
-
-#### Support for Azure AD joined Cloud PCs now general available<!--38765480 -->
-Support for Azure AD joined Cloud PCs has moved out of preview and into general availability.
-
 <!-- ########################## -->
 ## Week of May 2, 2022
 

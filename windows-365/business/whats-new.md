@@ -58,7 +58,7 @@ Learn what new features are available in Windows 365 Business.
 You can now set the default languages for your newly created Cloud PCs. Thirty-eight languages/regions will be available. For more information, see [Change organizational default settings](change-organization-default-settings.md).
 
 <!-- ########################## -->
-## Week of April 11, 2022)
+## Week of April 11, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
