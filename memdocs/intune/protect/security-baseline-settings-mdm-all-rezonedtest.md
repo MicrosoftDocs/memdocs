@@ -3,7 +3,7 @@
 
 title: Settings list for the Windows 10/11 MDM security baselines in Microsoft Intune
 titleSuffix: Microsoft Intune
-description: View the settings list from the Microsoft Intune security baseline for Windows 10/11 MDM security. This list includes the default values for settings as found in the default configuration of the baseline.
+description: View the list of settings in the Microsoft Intune security baseline for Windows 10/11 MDM security. This list includes the default values for settings as found in the default configuration of the baseline.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
@@ -33,11 +33,13 @@ ms.collection:
 
 This article is a reference for the settings that are available in the different versions of the Windows 10/11 MDM security baseline that you can deploy with Microsoft Intune. You can use the tabs below to select and view the settings in the current baseline version and a few older versions that might still be in use.
 
-Each setting lists its default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolves, the recommended defaults for one baseline version might not match the defaults you find in other versions of the same baseline. Similarly, the defaults for a setting that appears in multiple baseline types, like the MDM security and the Defender for Endpoint baselines, might not match.  
+For each setting you’ll find the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, could also set different defaults.
 
-Each new baseline version replaces the previous version. With a new version release, profiles that were created prior to the availability of a new version:
+When the Intune UI includes a *Learn more* link for a setting, you’ll find that here as well. Use that link to view the settings *policy configuration service provider* (CSP) or relevant content that explains the settings operation.
 
-- Become read-only. You can continue to use those profiles, but can't edit them to change their configuration.
+When a new version of a baseline becomes available, it replaces the previous version. Profiles instances that you’ve created prior to the availability of a new version:
+
+- Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
 - Can be updated to the latest version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see [Use security baselines](security-baselines.md). In that article you'll also find information about how to:
@@ -45,9 +47,7 @@ To learn more about using security baselines, see [Use security baselines](secur
 - [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) to discover what's changed from version to version.
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to update a profile to use the latest version of that baseline.
 
-<!-- >
-# [November 2021](#tab/nov-2021)
--->
+
 ::: zone pivot="mdm-november-2021"
 **Security Baseline for Windows 10/11 for November 2021**
 ::: zone-end
