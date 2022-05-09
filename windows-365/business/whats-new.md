@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 05/09/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -48,7 +48,17 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
-## Week of April 11, 2022)
+## Week of May 9, 2022 (Service release 2204)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### Set default languages/regions for Cloud PCs (preview)<!--38649676 -->
+
+You can now set the default languages for your newly created Cloud PCs. Thirty-eight languages/regions will be available. For more information, see [Change organizational default settings](change-organization-default-settings.md).
+
+<!-- ########################## -->
+## Week of April 11, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
