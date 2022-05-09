@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Manage Windows 365 Cloud PCs with Configuration Manager
 
-By default, Cloud PCs are managed by using Microsoft Endpoint Manager. However, you can also manage Cloud PCs using co-management with Configuration Manager. To use Configuration Manager, you’ll need to [install the Configuration Manager client](/mem/configmgr/comanage/how-to-prepare-win10#install-the-configuration-manager-client) and [enable co-management](/mem/configmgr/comanage/how-to-enable). Managing Cloud PCs with Configuration Manager is fundamentally the same process as using Autopilot with Co-management.
+By default, Cloud PCs are managed by using Intune. However, you can also manage Cloud PCs using co-management with Configuration Manager. To use Configuration Manager, you’ll need to [install the Configuration Manager client](/mem/configmgr/comanage/how-to-prepare-win10#install-the-configuration-manager-client) and [enable co-management](/mem/configmgr/comanage/how-to-enable). Managing Cloud PCs with Configuration Manager is fundamentally the same process as using Autopilot with Co-management.
 
 For more information about co-management and how to set it up, see [What is co-management?]( /mem/configmgr/comanage/overview)
 
