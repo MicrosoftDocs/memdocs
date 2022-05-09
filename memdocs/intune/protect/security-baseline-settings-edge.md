@@ -50,23 +50,27 @@ To learn more about using security baselines, see [Use security baselines](secur
 
 
 ::: zone pivot="edge-sept-2020"
+
 **Microsoft Edge baseline for September 2020 (Edge version 85)**  
-::: zone-end
 
+::: zone-end
 ::: zone pivot="edge-april-2020"
-**Microsoft Edge baseline for April 2020 (Edge version 80)**  
-::: zone-end
 
+**Microsoft Edge baseline for April 2020 (Edge version 80)**  
+
+::: zone-end
 ::: zone pivot="edge-october-2019"
+
 **Microsoft Edge baseline for October 2019**
 > [!NOTE]
 > The Microsoft Edge baseline for October 2019 is in Public Preview.
-::: zone-end
 
+::: zone-end
 ::: zone pivot="edge-october-2019,edge-april-2020,edge-sept-2020"
 
 ## Microsoft Edge
 
+::: zone-end
 ::: zone pivot="edge-sept-2020,edge-april-2020"
 
 - **Supported authentication schemes**  
@@ -135,7 +139,6 @@ To learn more about using security baselines, see [Use security baselines](secur
     Baseline default: *TLS 1.2*  
 
 ::: zone-end
-
 ::: zone pivot="edge-october-2019"
 
 - **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**  
@@ -198,7 +201,6 @@ To learn more about using security baselines, see [Use security baselines](secur
   Baseline default: *Disabled*  
 
 ::: zone-end
-
 ::: zone pivot="edge-sept-2020"
 
 - **Allow certificates signed using SHA-1 when issued by local trust anchors (deprecated)**  
