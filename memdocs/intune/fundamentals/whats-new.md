@@ -60,6 +60,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
+## Week of May 9, 2022
+
+### Device management
+
+#### Elevation enhancements to Remote help<!-- 12453415 -->
+
+Elevation permissions will no longer be assigned when a session is started. Elevation permissions will now apply only when JIT (just in time) access is requested.  The access is requested with the click of a button on the toolbar. 
+When elevation permissions are assigned, the log off behavior for the sharer has been modified as follows:
+ - If the admin (helper) ends the remote help session, the user (sharer) will not be logged off.
+ - If the sharer tries to end the session, they will be prompted that they will be logged off if they continue.
+ - If the sharer is a local admin on their device, the access UAC prompt option will not be available to the helper as they can guide the sharer to perform elevated actions under their own profile.
+For more information about remote help, see [Use Remote help](../remote-actions/remote-help.md)
+
 ## Week of May 2, 2022
 
 ### App management
