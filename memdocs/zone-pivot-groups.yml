@@ -38,6 +38,6 @@ groups:
   pivots:
     - id: win365-2110
       title: Version 2110 
-    - id: win365-2101
+    - id: win365-november-2101
       title: Version 2101
 
