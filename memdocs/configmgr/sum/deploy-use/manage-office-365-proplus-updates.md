@@ -5,7 +5,7 @@ description: Configuration Manager synchronizes Microsoft 365 Apps client update
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 01/05/2022
+ms.date: 05/09/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -197,12 +197,12 @@ For update packages released on and after June 9, 2020, the title will begin wit
 
 |New Channel name|Previous Channel name|CDNBaseUrl|
 |--|--|--|
-|Semi-Annual Enterprise Channel|Semi-Annual Channel|http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114|
-|Semi-Annual Enterprise Channel (Preview)|Semi-Annual Channel (Targeted)|http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf|
-|Monthly Enterprise Channel|NA|http://officecdn.microsoft.com/pr/55336b82-a18d-4dd6-b5f6-9e5095c314a6|
-|Current Channel|Monthly Channel|http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60|
-|Current Channel (Preview)|Monthly Channel (Targeted)|http://officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be|
-|Beta Channel </br> </br> Beta Channel needs to be updated from the Office CDN on the internet instead of having Configuration Manager manage the update process. For more information, see [Use Configuration Manager to install Office Insider builds](https://insider.office.com/business/deploy/windows/configuration-manager).|Insider|http://officecdn.microsoft.com/pr/5440fd1f-7ecb-4221-8110-145efaa6372f|
+|Semi-Annual Enterprise Channel|Semi-Annual Channel|`http://officecdn.microsoft.com/pr/7ffbc6bf-bc32-4f92-8982-f9dd17fd3114`|
+|Semi-Annual Enterprise Channel (Preview)|Semi-Annual Channel (Targeted)|`http://officecdn.microsoft.com/pr/b8f9b850-328d-4355-9145-c59439a0c4cf`|
+|Monthly Enterprise Channel|NA|`http://officecdn.microsoft.com/pr/55336b82-a18d-4dd6-b5f6-9e5095c314a6`|
+|Current Channel|Monthly Channel|`http://officecdn.microsoft.com/pr/492350f6-3a01-4f97-b9c0-c7c6ddf67d60`|
+|Current Channel (Preview)|Monthly Channel (Targeted)|`http://officecdn.microsoft.com/pr/64256afe-f5d9-4f86-8936-8840a6a4f5be`|
+|Beta Channel </br> </br> Beta Channel needs to be updated from the Office CDN on the internet instead of having Configuration Manager manage the update process. For more information, see [Use Configuration Manager to install Office Insider builds](https://insider.office.com/business/deploy/windows/configuration-manager).|Insider|`http://officecdn.microsoft.com/pr/5440fd1f-7ecb-4221-8110-145efaa6372f`|
 
 For more information about how to modify your ADRs, see [Automatically deploy software updates](automatically-deploy-software-updates.md). For more information about the name change, see [Name change for Office 365 ProPlus](/deployoffice/name-change).
 
