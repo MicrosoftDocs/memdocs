@@ -53,11 +53,9 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 -->
 
 <!-- ***********************************************-->
+<!--
 ## Device management
-
-### Set default languages/regions for Cloud PCs (preview)<!--38649676 -->
-
-You’ll be able to set the default languages for your newly created Cloud PCs. Thirty-eight languages/regions will be available.
+-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
