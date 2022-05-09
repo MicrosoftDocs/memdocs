@@ -159,6 +159,9 @@ With hybrid Azure AD set-up and Configuration Manager client configurations in p
 
 When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so. You may need multiple collections since you can assign a different *Pilot group* for each workload.
 
+> [!NOTE]
+> Since devices are enrolled in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default [Intune enrollment restriction](intune/enrollment/enrollment-restrictions-set) will apply to the enrollment. 
+
 ### Enable co-management for versions 2111 and later
 
 [!INCLUDE [Enable Co-management starting in version 2111](includes/enable-co-management-2111.md)]
