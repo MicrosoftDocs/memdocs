@@ -109,6 +109,9 @@ The following enrollment methods are authorized for corporate enrollment:
 - The device is registered with Windows Autopilot but isn't an MDM enrollment only option from Windows Settings.
 - The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
 - The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths#bkmk_path1).
+
+> [!NOTE]
+> Since co-managed devices are enrolled in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default Intune enrollment restriction will apply to the enrollment. 
  
 Intune marks devices going through the following types of enrollments as corporate-owned. But Intune blocks devices enrolling  since they don't offer the Intune administrator per-device control, they are blocked:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
