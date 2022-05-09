@@ -14,12 +14,13 @@ groups:
   title: Edge baseline versions
   prompt: Choose a version
   pivots:
-    - id: edge-october-2019
-      title: October 2019
-    - id: edge-april-2020
-      title: April 2020
     - id: edge-sept-2020
       title: September 2020
+    - id: edge-april-2020
+      title: April 2020
+    - id: edge-october-2019
+      title: October 2019
+
 - id: atp-baseline-versions
   title: ATP baseline versions
   prompt: Choose a version
