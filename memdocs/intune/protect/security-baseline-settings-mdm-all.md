@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
-zone_pivot_groups: windows-mdm-versions
 
 # optional metadata
 #ROBOTS:
@@ -26,6 +25,7 @@ ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
   - highpri
+zone_pivot_groups: windows-mdm-versions
 ---
 
 
@@ -46,7 +46,6 @@ To learn more about using security baselines, see [Use security baselines](secur
 
 - [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) to discover what's changed from version to version.
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to update a profile to use the latest version of that baseline.
-
 
 ::: zone pivot="mdm-november-2021"
 **Security Baseline for Windows 10/11 for November 2021**

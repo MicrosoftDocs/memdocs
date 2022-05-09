@@ -10,10 +10,10 @@ manager: dougeby
 ms.date: 05/03/2022
 ms.topic: reference
 ms.service: microsoft-intune
+ms.subservice: protect
 ms.localizationpriority: medium
 ms.technology:
 ms.assetid:
-zone_pivot_groups: edge-baseline-versions
 
 # optional metadata
 
@@ -27,6 +27,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
+zone_pivot_groups: edge-baseline-versions
 ---
 
 # List of the settings in the Microsoft Edge security baseline in Intune
