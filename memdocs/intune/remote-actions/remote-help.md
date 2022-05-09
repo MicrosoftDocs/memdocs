@@ -206,7 +206,7 @@ The following Intune RBAC permissions manage the use of the remote help app. Set
 By default, the built-in **Help Desk Operator** role sets all of these permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote tasks and remote help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
 
 > [!IMPORTANT]  
-> Now, when, during a remote help session, a helper has the *Elevation* permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for non-admin sharer's, a button will appear on the helper's remote help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. 
+> During a remote help session, when a helper has the *Elevation* permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for a non-admin sharer, a button will appear on the helper's remote help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. 
 > When the sharer ends the remote help session, they will be shown a dialog box that will warn them that if they continue, they will be logged off.
 > If the helper ends the session, the sharer will not be logged off.
 
@@ -238,7 +238,7 @@ The use of remote help depends on whether you're requesting help or providing he
 To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your remote help instance to establish a connection to the helper's instance of remote help.
 
 > [!TIP]  
-> To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, you are signed out of your device.
+> To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to **Yes** also uses *Full control*, you are signed out of your device.
 
 As a sharer, when you’ve requested help and both you and the helper are ready to start:
 
