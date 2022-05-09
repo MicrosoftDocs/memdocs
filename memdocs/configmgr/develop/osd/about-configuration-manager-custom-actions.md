@@ -1,5 +1,6 @@
 ---
 title: "Custom Actions"
+description: You can create custom actions that can be used with existing Configuration Manager actions.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

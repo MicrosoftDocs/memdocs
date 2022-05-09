@@ -138,7 +138,7 @@ Intune applies the default profile to all users and all devices when no other ES
 
 
 ## Prioritize profiles       
-If you assign a user or device more than one ESP profile, the profile with the highest priority takes precedence over the other profiles.
+If you assign a user or device more than one ESP profile, the profile with the highest priority takes precedence over the other profiles. The profile set to 1 has the highest priority.
 
  Intune applies profiles in the following order:  
 
@@ -194,7 +194,7 @@ The Enrollment Status Page tracks the following device setup items:
 - Applications
   - Per machine Line-of-business (LoB) MSI apps.
   - LoB store apps with installation context = Device.
-  - Offline store and LoB store apps with installation context = Device.
+  - Offline store apps with installation context = Device.
   - Win32 applications (Windows 11 and Windows 10 version 1903 and later only) 
 
   > [!NOTE]

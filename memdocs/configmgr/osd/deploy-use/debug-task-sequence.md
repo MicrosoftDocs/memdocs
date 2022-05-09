@@ -2,7 +2,7 @@
 title: Debug a task sequence
 titleSuffix: Configuration Manager
 description: Use the task sequence debugging tool to troubleshoot a task sequence.
-ms.date: 04/08/2022
+ms.date: 05/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -91,7 +91,7 @@ The **Task Sequence Variables** window shows the current values for all variable
 > [!Note]
 > Some task sequence variables are for internal use only, and not listed in the reference documentation.
 
-The task sequence debugger continues to run after a [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step, but you need to recreate any break points. Even though the task sequence may not require it, since the debugger requires user interaction, you need to sign in to Windows to continue. If you don't sign in after one hour to continue debugging, the task sequence fails.
+The task sequence debugger continues to run after a [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step. The debugger keeps your break points after restart.<!-- 5012509 --> Even though the task sequence may not require it, since the debugger requires user interaction, you need to sign in to Windows to continue. If you don't sign in after one hour to continue debugging, the task sequence fails.
 
 It also steps into a child task sequence with the [Run Task Sequence](../understand/task-sequence-steps.md#child-task-sequence) step. The debugger window shows the steps of the child task sequence along with the main task sequence.
 

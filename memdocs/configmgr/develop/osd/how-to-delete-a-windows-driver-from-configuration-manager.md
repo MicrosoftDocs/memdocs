@@ -1,5 +1,6 @@
 ---
 title: "Delete a Windows Driver"
+description: You delete a Windows driver from the operating system deployment driver catalog, in Configuration Manager, by deleting its SMS_Driver Server WMI Class object.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

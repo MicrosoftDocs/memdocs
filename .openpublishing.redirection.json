@@ -1,6 +1,36 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/configuration/vpn-settings-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/email-settings-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/device-restrictions-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/custom-settings-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/store-apps-windows-phone-8-1.md",
+            "redirect_url": "/mem/intune/apps/apps-add",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/lob-apps-windows-phone.md",
+            "redirect_url": "/mem/intune/apps/apps-add",
+            "redirect_document_id": false
+        },      
+        {
             "source_path": "memdocs/intune/user-help/set-or-change-your-password-windows.md",
             "redirect_url": "https://support.microsoft.com/windows/windows-sign-in-options-and-account-protection-7b34d4cf-794f-f6bd-ddcc-e73cdf1a6fbf",
             "redirect_document_id": false

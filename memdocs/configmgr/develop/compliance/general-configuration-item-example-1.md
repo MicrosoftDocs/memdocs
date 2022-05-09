@@ -1,5 +1,6 @@
 ---
 title: "General Configuration Item Example 1"
+description: The following example is a general configuration item schema example that checks the registry to see whether, in this case, remote control is enabled in Configuration Manager.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

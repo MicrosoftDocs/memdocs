@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Intune security baselines settings for Microsoft Edge 
+title: Settings list for the Microsoft Edge security baseline in Intune
 titleSuffix: Microsoft Intune
-description: Security baseline settings supported by Intune for managing Microsoft Edge browser
+description: View a list of the settings in the Microsoft Intune security baseline for Microsoft Edge browser. This list includes the default values for settings as found in the default configuration of the baseline.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 05/03/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.localizationpriority: medium
@@ -48,7 +48,7 @@ ms.collection: M365-identity-device-management
 
 # Microsoft Edge baseline settings for Intune
 
-View the Microsoft Edge web browser baseline settings that are supported by Microsoft Intune. The Microsoft Edge baseline defaults represent the recommended configuration for Microsoft Edge browsers, and might not match baseline defaults for other security baselines.
+View the settings that are part of the Microsoft Edge web browser security baseline that you can deploy with Microsoft Intune. This article details the settings in the available versions of the baseline and the default values for each setting. The default baseline configuration represents the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
 
 ::: zone pivot="edge-october-2019"
 
@@ -73,12 +73,11 @@ To update a security baseline profile to the latest version of that baseline, se
 This version of the security baseline replaces previous versions. Profiles that were created prior to the availability of this baseline version:
 
 - Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
-- Can be updated to the latest version. After update the current baseline version, you can edit the profile to modify settings.
+- Can be updated to the latest version. After you update to the current baseline version, you can edit the profile to modify settings.
 
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action. This action is available when you view the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
 
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
-
 
 ::: zone-end
 ::: zone pivot="edge-october-2019,edge-april-2020,edge-sept-2020"
@@ -317,7 +316,7 @@ To update a security baseline profile to the latest version of that baseline, se
 
   List the specific extensions that users can't install in Microsoft Edge. When you deploy this policy, any extensions on this list that were previously installed are disabled, and the user won't be able to enable them. If you remove an item from the list of blocked extensions, that extension is automatically re-enabled anywhere it was previously installed.
   
-  Use **\*** to block all extensions that aren't explicitly listed in the allow list. If this policy is set to *Not Configured*, users can install any extension in Microsoft Edge.
+  Use **\*** to block all extensions that aren't explicitly listed in the allowlist. If this policy is set to *Not Configured*, users can install any extension in Microsoft Edge.
   
   Example value: extension_id1 extension_id2.  
   <br>

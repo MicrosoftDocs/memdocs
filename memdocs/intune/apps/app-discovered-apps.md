@@ -65,7 +65,7 @@ The following list provides the app platform type, the apps that are monitored f
 | iOS/iPadOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
 | macOS | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
 | Android | Only managed apps | All apps installed on the device | Every 7 days from device enrollment |
-| Android Enterprise | Only managed apps | Only apps installed in the Android Enterprise fully managed work profile | Every 7 days from device enrollment |
+| Android Enterprise | Only managed apps | Only apps installed on the Android Enterprise work profile device | Every 7 days from device enrollment |
 
 > [!NOTE]
 > - Windows 10/11 co-managed devices, as shown in the [client apps](../../configmgr/comanage/workloads.md#client-apps) workload in Configuration Manager, do not currently collect app inventory through the Intune Management Extension (IME) as per the above schedule. To mitigate this issue, the [client apps](../../configmgr/comanage/workloads.md#client-apps) workload in Configuration Manager should be switched to Intune for the IME to be installed on the device (IME is required for Win32 inventory and PowerShell deployment). Note that any changes or updates on this behavior are announced in [in development](../fundamentals/in-development.md) and/or [what's new](../fundamentals/whats-new.md).

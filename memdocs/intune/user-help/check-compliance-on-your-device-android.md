@@ -2,7 +2,7 @@
 # required metadata
 
 title: Check compliance on your Android device | Microsoft Docs
-description:
+description: During a check-in, Company Portal will confirm that the settings on your device meet your organization's policy requirements.
 keywords:
 author: lenewsad
 ms.author: lanewsad

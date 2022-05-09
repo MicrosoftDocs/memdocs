@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 05/03/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -31,6 +31,24 @@ ms.collection: M365-identity-device-management
 # Troubleshoot provisioning errors
 
 The following errors can occur during Cloud PC provisioning.
+
+## Azure AD service connection point (SCP) misconfigured
+
+The service connection point (SCP) is used by your Cloud PCs to discover your Azure AD tenant information. You must configure your SCPs by using Azure AD connect for each forest you plan to join Cloud PCs to.
+
+If the SCP configuration doesn't exist, or can't be discovered by using the vNet declared, provisioning will fail.
+
+To understand more about the SCP and learn how to configure it, see the [Azure AD documentation](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
+
+**Suggested test**: Confirm with your identity team that the SCP exists for all target forests.
+
+## Azure network connection isn’t healthy
+
+Cloud PC provisioning will be blocked if the associated ANC isn’t healthy.
+
+The ANC will refresh every 6 hours. Provisioning will fail if the ANC refresh fails while provisioning is under way.
+
+**Suggested test**: Make sure that the ANC is healthy and retry the provisioning.
 
 ## Disk allocation error
 
@@ -65,17 +83,6 @@ If your organization uses Active Directory Federation Services (ADFS), this regi
 - Appears in the correct OU.
 - Is successfully synced to Azure AD before provisioning times out.
 
-## Azure AD service connection point (SCP) misconfigured
-
-The service connection point (SCP) is used by your Cloud PCs to discover your Azure AD tenant information. You must configure your SCPs by using Azure AD connect for each forest you plan to join Cloud PCs to. 
-
-If the SCP configuration doesn't exist, or can't be discovered by using the vNet declared, provisioning will fail. 
-
-To understand more about the SCP and learn how to configure it, see the [Azure AD documentation](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
-
-**Suggested test**: Confirm with your identity team that the SCP exists for all target forests. 
-
-
 ## Intune enrollment failed
 
 Windows 365 performs a device-based MDM enrollment into Intune.
@@ -85,7 +92,7 @@ If Intune enrollment is failing, make sure that:
 - All of the required Intune endpoints are available on the vNet of your Cloud PCs.
 - There are no MDM enrollment restrictions on the tenant. Windows corporate device enrollment is allowed in custom and default policies.
 - The Intune tenant is active and healthy.
-- If co-managing Cloud PCs with Intune and Configuration Manager, ensure that the Cloud PC OU is not targeted for client push installation. Instead deploy the Configuration Manager agent from Intune. For more information, see Configuration Manager [client installation methods](/mem/configmgr/core/clients/deploy/plan/client-installation-methods#microsoft-intune-mdm-installation). 
+- If co-managing Cloud PCs with Intune and Configuration Manager, ensure that the Cloud PC OU isn't targeted for client push installation. Instead deploy the Configuration Manager agent from Intune. For more information, see Configuration Manager [client installation methods](/mem/configmgr/core/clients/deploy/plan/client-installation-methods#microsoft-intune-mdm-installation).
 
 **Suggested test**: Attempt an Intune enrollment using a test device or VM.
 
@@ -117,14 +124,6 @@ If a provisioning fails, it will be retried a total of three times. Each time, a
 
 **Suggested test**: Check the vNet for available IP addresses, and make sure that there are more than enough IPs available for the retry process to succeed.
 
-## Azure network connection isn’t healthy
-
-Cloud PC provisioning will be blocked if the associated ANC isn’t healthy.
-
-The ANC will refresh every 6 hours. Provisioning will fail if the ANC refresh fails while provisioning is under way.
-
-**Suggested test**: Make sure that the ANC is healthy and retry the provisioning.
-
 ## Provisioning policy not found
 
 While a provisioning is in progress, someone has deleted the provisioning policy.
@@ -142,6 +141,10 @@ Windows 365 uses the customer provided vNet to perform a vNic ingestion from the
 Windows 365 provisioned the Cloud PC but didn’t hide the shutdown and restart icons in the Start Menu. As a result, the user will see the shutdown and restart icons in the Start Menu. If the user ends their Cloud PC connection by selecting the shutdown icon, they may need to restart the Cloud PC from the Cloud PC portal before connecting again.
 
 **Suggested test**: Retry provisioning or create a device configuration policy to [hide the shut down button](/windows/client-management/mdm/policy-csp-start#start-hideshutdown) and to [hide the restart button](/windows/client-management/mdm/policy-csp-start#start-hiderestart).
+
+## Supported Azure regions for Cloud PCs not listed in provisioning user interface
+
+If a specific region isn't listed in the Cloud PC provisioning user interface (UI), but is listed in the [Windows 365 requirements documentation](requirements.md), Windows 365 may have expanded in a new region. If your networking infrastructure is in such a region, select **New support request** to open a support ticket for evaluation.
 
 ## Time zone redirection error
 

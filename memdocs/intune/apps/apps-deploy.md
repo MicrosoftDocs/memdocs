@@ -60,6 +60,8 @@ The following table lists the various options for *assigning* apps to users and 
 > To receive app updates on devices that aren't enrolled with Intune, device users must go to their organization's Company Portal and manually install app updates.
 > 
 > *Available assignments* are only valid for user groups, not device groups.
+> 
+> If Managed Google Play Pre-Production track apps are assigned as required on Android Enterprise personally-owned work profile devices, they will not install on the device. To work around this, create two identical user groups and assign the pre-production track as "available" to one and "required" to the other. The result will be that the pre-production track successfully deploys to the device. 
 
 ## Assign an app
 
