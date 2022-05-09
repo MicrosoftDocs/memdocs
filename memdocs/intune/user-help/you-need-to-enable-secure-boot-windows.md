@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Enable Secure Boot on Windows devices - Microsoft Intune | Microsoft Docs
+title: Check Secure Boot Status on Windows devices - Microsoft Intune | Microsoft Docs
 description: Learn how to make your device compliant again by enabling Secure Boot.  
 keywords:
 author: lenewsad
