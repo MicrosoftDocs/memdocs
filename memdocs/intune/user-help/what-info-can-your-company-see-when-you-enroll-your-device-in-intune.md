@@ -77,7 +77,7 @@ An app is considered a **managed app** when it's installed in one of the followi
 
 ## Things your organization might see  
 
-At times, your organization may need to review data about an enrolled device to help with enrollment, troubleshooting, or finding a lost device. This section describes the information they could view and why.   
+Your support person may seek out more information about your enrolled device to help you with registration, enrollment, or troubleshooting. This section describes the type of information that's sometimes available to them.       
 
 ### Phone number  
 If you're using a corporate-owned device (excluding corporate-owned devices with a work profile), your full phone number is visible to your organization. If you're using a personal device, the last four digits of your phone number are visible. 
