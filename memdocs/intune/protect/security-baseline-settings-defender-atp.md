@@ -31,23 +31,18 @@ zone_pivot_groups: atp-baseline-versions
 ---
 
 <!-- Pivots in use: 
-
 December 2020 v6
 ::: zone pivot="atp-december-2020"
 ::: zone-end
-
 September 2020 v5
 ::: zone pivot="atp-sept-2020"
 ::: zone-end
-
 April 2020 v4
 ::: zone pivot="atp-april-2020"
 ::: zone-end
-
 March 2020 v3
 ::: zone pivot="atp-march-2020"
 ::: zone-end
-
 -->
 
 # List of the settings in the Microsoft Defender for Endpoint security baseline in Intune
