@@ -68,7 +68,7 @@ In a future update, Windows 365 Enterprise Cloud PCs will support RDP Shortpath 
 
 ### Provision Cloud PCs with Secure Boot<!--38012584-->
 
-You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality.
+You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality. Europe and North American regions will receive this feature within the next few months.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
