@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/28/2021
+ms.date: 05/10/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,7 +32,9 @@ ms.collection:
 
 # What information can my organization see when I enroll my device?
 
-Your organization cannot see your personal information when you enroll a device with Microsoft Intune. When you enroll a device, you give your organization permission to view certain pieces of information on your device, such as device model and serial number. Your organization uses this information to help protect the work or school data that's on your device.  
+Your organization cannot see your personal information when you enroll a device in Microsoft Intune. Enrolling your device does make certain information, such as device model and serial number, visible to your Intune support person. The information is kept in the Microsoft Endpoint Manager admin center and may be viewed in certain situations to aid in device setup, apps, or some other troubleshooting topic. 
+
+This article describes everything a support person can and can't access on an enrolled device, and provides explainations for why certain data *might* be visible.   
 
 ## Things your organization can never see
 
@@ -75,21 +77,24 @@ An app is considered a **managed app** when it's installed in one of the followi
 
 ## Things your organization might see  
 
-Your organization can sometimes see other information about your device. This section describes the circumstances in which your support person would need to view this data.      
+At times, your organization may need to review data about an enrolled device to help with enrollment, troubleshooting, or finding a lost device. This section describes the information they could view and why.   
 
 ### Phone number  
-If you're using a corporate-owned device (excluding corporate-owned devices with a work profile), your full phone number is visible to your organization. If you're using a personal device, the last four digits of your phone number are visible. You can see the ownership type for each individual device on the Intune Company Portal > **Device Details** page.  
+If you're using a corporate-owned device (excluding corporate-owned devices with a work profile), your full phone number is visible to your organization. If you're using a personal device, the last four digits of your phone number are visible. 
+
+ > [!TIP]
+ > You can view the ownership type for your device on the Intune Company Portal > **Device Details** page.  
 
 ### Device storage space   
-If you can't install an app that's required for work or school, your organization can look at your storage size to figure out if space is too low.   
+If you can't install an app that's required for work or school, your organization can view your storage size to figure out if space is too low.   
 
 ### Location
 Your organization can access the location of a device to the following extent:  
 
-* Corporate-owned devices: Your organization can view the location of a lost device. 
-* Personal devices: Your organization can't see the location of a personal device, even if it's lost.  
+* Corporate-owned device: Your organization can view the location of your lost device. 
+* Personal device: Your organization can't view the location of your device, ever.   
 
-For example, a support person can put a corporate-owned iPhone or iPad into *managed last mode*, which lets them request the location of a missing device. When a support person requests access to the device location, the device locks and an on-screen message appears on the lock screen to explain what's happening. For more information about *supervision*, which is a type of configuration for corporate-owned Apple devices that allows managed lost mode, see [Get started with a supervised iPhone, iPad, or iPod touch](https://go.microsoft.com/fwlink/?linkid=853816) in the Apple support docs. 
+A support person can put a corporate-owned iPhone or iPad into *managed last mode*, which lets them request the location of a missing device. When a support person requests access to your device's location, the device locks and an on-screen message appears on the lock screen to explain what's happening. For more information about *supervision*, which is a type of configuration for corporate-owned Apple devices, see [Get started with a supervised iPhone, iPad, or iPod touch](https://go.microsoft.com/fwlink/?linkid=853816) in the Apple support docs. 
 
 ### App inventory details
 
@@ -101,7 +106,9 @@ You might be required to install a mobile threat defense (MTD) app as part of yo
 For more information about mobile threat defense, see [Install mobile threat defense app](set-up-mobile-threat-defense.md).  
 
 ### App permissions  
-Admins can grant requested permissions to apps that are in a work profile. The permissions could be for the camera, microphone, -- 
+Your IT administrator can automatically grant permissions to apps in your work profile. The permissions could be for things like the camera, microphone, and location. If they grant permission to an app that belongs to your organization, they could see that you installed the app. This applies to devices running Android 12.0 and earlier.  
+
+If you're running Android 11 or later, you'll receive a push notification on your device when your IT administrator grants permissions to an app.    
 
 ###  Network information
 Some information about network connections for Android devices may be available to your organization support. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it is connected.  
