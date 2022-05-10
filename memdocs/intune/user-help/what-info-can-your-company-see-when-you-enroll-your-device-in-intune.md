@@ -89,7 +89,7 @@ Your organization can access the location of a device to the following extent:
 * Corporate-owned devices: Your organization can view the location of a lost device. 
 * Personal devices: Your organization can't see the location of a personal device, even if it's lost.  
 
-For example, your support person can put a corporate-owned iPhone or iPad into *managed last mode*, which lets them request the location of a missing device. When a support person requests access to the device location, the device locks and an on-screen message appears on the lock screen to explain what's happening. For more information about *supervision*, which is a type of configuration for corporate-owned Apple devices that allows managed lost mode, see [Get started with a supervised iPhone, iPad, or iPod touch](https://go.microsoft.com/fwlink/?linkid=853816) in the Apple support docs. 
+For example, a support person can put a corporate-owned iPhone or iPad into *managed last mode*, which lets them request the location of a missing device. When a support person requests access to the device location, the device locks and an on-screen message appears on the lock screen to explain what's happening. For more information about *supervision*, which is a type of configuration for corporate-owned Apple devices that allows managed lost mode, see [Get started with a supervised iPhone, iPad, or iPod touch](https://go.microsoft.com/fwlink/?linkid=853816) in the Apple support docs. 
 
 ### App inventory details
 
@@ -99,6 +99,11 @@ You might be required to install a mobile threat defense (MTD) app as part of yo
 * Personal-owned device: Your support person can only view the details of your managed apps.  
 
 For more information about mobile threat defense, see [Install mobile threat defense app](set-up-mobile-threat-defense.md).  
-- Network information: Some information about network connections for Android devices may be available to your organization support. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it is connected. 
 
-## 
+### App permissions  
+Admins can grant requested permissions to apps that are in a work profile. The permissions could be for the camera, microphone, -- 
+
+###  Network information
+Some information about network connections for Android devices may be available to your organization support. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it is connected.  
+
+
