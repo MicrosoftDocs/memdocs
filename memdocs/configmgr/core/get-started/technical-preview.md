@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 04/29/2022
+ms.date: 05/20/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -121,10 +121,15 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2204
+### Technical preview version 2205
 
-- [Administration Service Management option](2022/technical-preview-2204.md#bkmk_administration) <!--12952905-->
-- [Folders for automatic deployment rules (ADRs)](2022/technical-preview-2204.md#bkmk_folder) <!--13507410-->
+- [3601042](2022/technical-preview-2205.md) <!--3601042-->
+- [3601127](2022/technical-preview-2205.md) <!--3601127-->
+- [9265511](2022/technical-preview-2205.md) <!--9265511-->
+- [13351390](2022/technical-preview-2205.md) <!--13351390-->
+- [14059872](2022/technical-preview-2205.md) <!--14059872-->
+- [14120481](2022/technical-preview-2205.md) <!--14120481-->
+
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -143,6 +148,11 @@ The following features were released with previous versions of the Configuration
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 <!-- ### Technical preview version 2111 -->
+
+### Technical preview version 2204
+
+- [Administration Service Management option](2022/technical-preview-2204.md#bkmk_administration) <!--12952905-->
+- [Folders for automatic deployment rules (ADRs)](2022/technical-preview-2204.md#bkmk_folder) <!--13507410-->
 
 ### Technical preview version 2203
 
