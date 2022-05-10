@@ -32,7 +32,7 @@ ms.collection:
 
 # What information can my organization see when I enroll my device?
 
-Your organization cannot see your personal information when you enroll a device in Microsoft Intune. Enrolling your device does make certain information, such as device model and serial number, visible to your Intune support person. The information is kept in the Microsoft Endpoint Manager admin center and may be viewed in certain situations to aid in device setup, apps, or some other troubleshooting topic. 
+Your organization cannot see your personal information when you enroll a device in Microsoft Intune. Enrolling your device does make certain information, such as device model and serial number, visible to your support person. Other information is only accessible to your support person in certain situations to help with resolving a device or app issue.   
 
 This article describes everything a support person can and can't access on an enrolled device, and provides explainations for why certain data *might* be visible.   
 
@@ -108,7 +108,8 @@ For more information about mobile threat defense, see [Install mobile threat def
 ### App permissions  
 Your IT administrator can automatically grant permissions to apps in your work profile. The permissions could be for things like the camera, microphone, and location. If they grant permission to an app that belongs to your organization, they could see that you installed the app. This applies to devices running Android 12.0 and earlier.  
 
-If you're running Android 11 or later, you'll receive a push notification on your device when your IT administrator grants permissions to an app.    
+ > [!TIP]
+ > If your device is running Android 11 or later, you'll receive a push notification when your IT administrator grants permissions to an app.    
 
 ###  Network information
 Some information about network connections for Android devices may be available to your organization support. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it is connected.  
