@@ -186,9 +186,8 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 ## BitLocker
 
-For more information, [BitLocker Group Policy settings](/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings) in the Windows documentation.
-
-::: zone pivot="atp-march-2020,atp-april-2020"
+::: zone pivot="atp-march-2020,atp-april-2020" 
+<!-- GOOD -->
 
 - **Require storage cards to be encrypted (mobile only)**  
   Baseline default: *Yes*  
@@ -197,8 +196,44 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
   > [!NOTE]
   > Support for [Windows 10 Mobile](https://support.microsoft.com/help/4485197/windows-10-mobile-end-of-support-faq) and [Windows Phone 8.1](https://support.microsoft.com/help/4036480/windows-phone-8-1-end-of-support-faq) ended in August of 2020.
 
-::: zone-end  
-::: zone pivot="atp-sept-2020,atp-december-2020"
+- **Enable full disk encryption for OS and fixed data drives**  
+  Baseline default: *Yes*  
+  [Learn more](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
+
+- **BitLocker system drive policy**  
+  Baseline default: *Configure*  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067025)  
+
+  - **Configure encryption method for Operating System drives**  
+    Baseline default: *Not configured*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872526)  
+
+- **BitLocker fixed drive policy**  
+  Baseline default: *Configure*  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067018)
+
+  - **Block write access to fixed data-drives not protected by BitLocker**  
+    Baseline default: *Yes*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872534)  
+    This setting is available when *BitLocker fixed drive policy* is set to *Configure*.
+
+  - **Configure encryption method for fixed data-drives**  
+    Baseline default: *AES 128bit XTS*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872526)  
+
+- **BitLocker removable drive policy**  
+  Baseline default: *Configure*  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067140)
+
+  - **Configure encryption method for removable data-drives**  
+    Baseline default: *AES 128bit CBC*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872526)  
+
+  - **Block write access to removable data-drives not protected by BitLocker**  
+    Baseline default: *Not configured*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872540)  
+
+::: zone pivot="atp-sept-2020
 
 - **Standby states when sleeping while on battery**
   Baseline default: *Disabled*  
@@ -208,9 +243,6 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutpluggedin)
 
-::: zone-end  
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
-
 - **Enable full disk encryption for OS and fixed data drives**  
   Baseline default: *Yes*  
   [Learn more](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
@@ -218,8 +250,6 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
 - **BitLocker system drive policy**  
   Baseline default: *Configure*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067025)  
-::: zone-end  
-::: zone pivot="atp-sept-2020,atp-december-2020"  
 
   - **Startup authentication required**  
     Baseline default: *Yes*  
@@ -236,12 +266,75 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
   - **Disable BitLocker on devices where TPM is incompatible**  
     Baseline default: *Yes*  
     [Learn more](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)  
-::: zone-end  
-::: zone pivot="atp-march-2020,atp-april-2020,atp-sept-2020,atp-december-2020"
+
 
   - **Configure encryption method for Operating System drives**  
     Baseline default: *Not configured*  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=872526)  
+
+- **BitLocker fixed drive policy**  
+  Baseline default: *Configure*  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067018)
+
+  - **Block write access to fixed data-drives not protected by BitLocker**  
+    Baseline default: *Yes*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872534)  
+    This setting is available when *BitLocker fixed drive policy* is set to *Configure*.
+
+  - **Configure encryption method for fixed data-drives**  
+    Baseline default: *AES 128bit XTS*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872526)  
+
+- **BitLocker removable drive policy**  
+  Baseline default: *Configure*  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067140)
+
+  - **Configure encryption method for removable data-drives**  
+    Baseline default: *AES 128bit CBC*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872526)  
+
+  - **Block write access to removable data-drives not protected by BitLocker**  
+    Baseline default: *Not configured*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872540)  
+
+::: zone-end  
+::: zone pivot="atp-december-2020"
+
+- **BitLocker system drive policy**  
+  Baseline default: *Configure*  
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067025)  
+
+  - **Startup authentication required**  
+    Baseline default: *Yes*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872527)
+
+  - **Compatible TPM startup PIN**  
+    Baseline default: *Allowed*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872527)
+
+  - **Compatible TPM startup key**  
+    Baseline default: *Required*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872527)
+
+  - **Disable BitLocker on devices where TPM is incompatible**  
+    Baseline default: *Yes*  
+    [Learn more](/windows/client-management/mdm/bitlocker-csp#systemdrivesrequirestartupauthentication)  
+
+  - **Configure encryption method for Operating System drives**  
+    Baseline default: *Not configured*  
+    [Learn more](https://go.microsoft.com/fwlink/?linkid=872526)  
+
+- **Standby states when sleeping while on battery**
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutonbattery)
+
+- **Standby states when sleeping while plugged in**  
+  Baseline default: *Disabled*  
+  [Learn more](/windows/client-management/mdm/policy-csp-power#power-standbytimeoutpluggedin)
+
+- **Enable full disk encryption for OS and fixed data drives**  
+  Baseline default: *Yes*  
+  [Learn more](/windows/client-management/mdm/bitlocker-csp#requiredeviceencryption)
 
 - **BitLocker fixed drive policy**  
   Baseline default: *Configure*  
@@ -585,7 +678,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
 
 - **Defender potentially unwanted app action**  
   Baseline default: *Block*  
-  [Learn more](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**  
   Baseline default: *Yes*  
@@ -624,7 +717,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
 
 - **Defender potentially unwanted app action**  
   Baseline default: *Block*  
-  [Learn more](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**  
   Baseline default: *Yes*  
@@ -734,7 +827,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
 
 - **Defender potentially unwanted app action**  
   Baseline default: *Block*  
-  [Learn more](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](//windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**  
   Baseline default: *Yes*  
@@ -884,7 +977,7 @@ For more information, [BitLocker Group Policy settings](/windows/security/inform
 
 - **Defender potentially unwanted app action**  
   Baseline default: *Block*  
-  [Learn more](https://docs.microsoft.com/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**  
   Baseline default: *Yes*  
