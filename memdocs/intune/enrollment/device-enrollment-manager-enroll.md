@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/02/2021
+ms.date: 05/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -33,9 +33,11 @@ ms.collection:
 
 # Add device enrollment managers  
 
-A device enrollment manager is a non-administrator user who can enroll devices in Intune. DEMS are useful to have when you need to enroll and prepare devices before handing them out to . DEM users can enroll up to 1,000 devices, while a standard non-admin account in Intune can only enroll 15.  
+A device enrollment manager (DEM) is a non-administrator user who can enroll devices in Intune. Device enrollment managers are useful to have when you need to enroll and prepare a lot of devices for distribution. People signed in to a DEM account can enroll and manage up to 1,000 devices, while a standard non-admin account can only enroll 15.  
 
-A DEM account requires an Intune user or device license. To enable the feature for someone in you organization, you must assign the Intune device enrollment manager permissions to their Azure AD account.  This article provides an overview of device enrollment manager accounts, limitations, and how to manage permissions.  
+A DEM account requires an Intune user or device license, and an associated Azure AD user. Global Administrators and Intune Service Administrators can add and manage device enrollment managers in the Microsoft Endpoint Manager admin center. 
+
+This article describes the limits and specifications of enrollment manager and how to manage permissions.  
 
 ## Supported enrollment methods 
 
@@ -43,8 +45,8 @@ A device enrollment manager can use the following methods to enroll devices in I
 
 - [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows devices bulk enrollment](windows-bulk-enroll.md)
-- DEM initiated via Company Portal
-- DEM initiated via Azure AD join  
+- DEM-initated via Company Portal enrollment   
+- DEM-initiated via Azure AD-join  
 
 > [!TIP]
 > To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](./enrollment-method-capab.md).  
@@ -52,21 +54,21 @@ A device enrollment manager can use the following methods to enroll devices in I
 
 ## Account permissions 
 
-Users assigned the Global Administrator or Intune Service Administrator role in Azure AD can:   
+These Azure AD roles can manage device enrollment managers: 
 
-- Assign DEM permissions      
-- See all DEM users in the admin center  
+* Global Administrator 
+* Intune Service Administrator role in Azure AD    
 
-DEMs assigned read-only permissions in Azure AD can only see the DEM users they've created.    
+They can add and delete device enrollmnet managers, and view all DEM users in the Microsoft Endpoint Manager admin center. You can assign the DEM read-only permission to users who don't meet the role requirements. It lets them see the DEM users they've created.  
 
 ## Limitations 
 
-This section describes the limitations that comes with enrolling devices from your DEM account.      
+The device enrollment manager account can't be used with all features in Microsoft Intune and has some limitations when used with others. This section describes the limitations you could encounter while sigmed in to a DEM account.  
 
 ### Android Enterprise  
-You can enroll up to 10 personally-owned devices with work profiles. 
+You can enroll up to 10 personally owned devices with work profiles. 
 
-The following types of devices can't be set up with a DEM account: 
+The following types of Android Enterprise devices can't be set up via DEM:    
 
 * Corporate-owned with a work profile
 * Fully managed  
