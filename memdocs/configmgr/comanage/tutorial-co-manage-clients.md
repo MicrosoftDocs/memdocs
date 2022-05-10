@@ -149,7 +149,7 @@ Automatic enrollment also lets users enroll their Windows 10 or later devices to
     > [!NOTE]
     > Some tenants may not have these options to configure.<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft Intune** is how you configure the MDM app for Azure AD. **Microsoft Intune Enrollment** is a specific Azure AD app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](/intune/enrollment/multi-factor-authentication).
+    > **Microsoft Intune** is how you configure the MDM app for Azure AD. **Microsoft Intune Enrollment** is a specific Azure AD app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](../../intune/enrollment/multi-factor-authentication.md).
 
 5. For MDM user scope, select **All**, and then **Save**.  
 
@@ -160,7 +160,7 @@ With hybrid Azure AD set-up and Configuration Manager client configurations in p
 When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so. You may need multiple collections since you can assign a different *Pilot group* for each workload.
 
 > [!NOTE]
-> Since devices are enrolled in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default [Intune enrollment restriction](intune/enrollment/enrollment-restrictions-set) will apply to the enrollment. 
+> Since devices are enrolled in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default [Intune enrollment restriction](../../intune/enrollment/enrollment-restrictions-set.md) will apply to the enrollment. 
 
 ### Enable co-management for versions 2111 and later
 
