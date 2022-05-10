@@ -34,7 +34,7 @@ ms.collection:
 
 Your organization cannot see your personal information when you enroll a device in Microsoft Intune. Enrolling your device does make certain information, such as device model and serial number, visible to your support person. Other information is only accessible to your support person in certain situations to help with resolving a device or app issue.   
 
-This article describes everything a support person can and can't access on an enrolled device, and provides explainations for why certain data *might* be visible.   
+This article describes everything a support person can and can't access on an enrolled device, and provides explanations for why certain data *might* be visible.   
 
 ## Things your organization can never see
 
@@ -94,7 +94,7 @@ Your organization can access the location of a device to the following extent:
 * Corporate-owned device: Your organization can view the location of your lost device. 
 * Personal device: Your organization can't view the location of your device, ever.   
 
-A support person can put a corporate-owned iPhone or iPad into *managed last mode*, which lets them request the location of a missing device. When a support person requests access to your device's location, the device locks and an on-screen message appears on the lock screen to explain what's happening. For more information about *supervision*, which is a type of configuration for corporate-owned Apple devices, see [Get started with a supervised iPhone, iPad, or iPod touch](https://go.microsoft.com/fwlink/?linkid=853816) in the Apple support docs. 
+A support person can put a corporate-owned iPhone or iPad into *managed last mode*, which lets them request the location of a missing device. When a support person requests access to your device's location, the device locks and a message appears on the lock screen to explain what's happening. For more information about *supervision*, which is a type of configuration for corporate-owned Apple devices, see [Get started with a supervised iPhone, iPad, or iPod touch](https://go.microsoft.com/fwlink/?linkid=853816) in the Apple support docs. 
 
 ### App inventory details
 
