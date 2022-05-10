@@ -229,7 +229,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
     [Learn more](https://go.microsoft.com/fwlink/?linkid=872540)  
 
 ::: zone-end  
-::: zone pivot="atp-sept-2020
+::: zone pivot="atp-sept-2020"
 
 - **Standby states when sleeping while on battery**
   Baseline default: *Disabled*  
