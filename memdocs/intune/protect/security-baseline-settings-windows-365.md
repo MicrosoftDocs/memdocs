@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/13/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -488,9 +488,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
 ::: zone pivot="win365-2110,win365-november-2101"
 
 - **Internet Explorer encryption support**  
-  Baseline defaults:  
-  - *TLS v1.1*  
-  - *TLS v1.2*  
+  Baseline defaults: Two items: *TLS v1.1* and *TLS v1.2*
 
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067057)
 
@@ -1170,9 +1168,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   Baseline default: *Enabled*  
 
   - **Supported authentication schemes**  
-    Baseline defaults:
-    - *NTLM*
-    - *Negotiate*
+    Baseline defaults: Two items: *NTLM* and *Negotiate*
 
 ::: zone-end
 

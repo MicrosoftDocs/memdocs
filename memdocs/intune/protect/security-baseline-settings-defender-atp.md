@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/13/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect

@@ -7,7 +7,7 @@ description: View a list of the settings in the Microsoft Intune security baseli
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/13/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,29 +47,21 @@ To learn more about using security baselines, see [Use security baselines](secur
 - [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) to discover what's changed from version to version.
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to update a profile to use the latest version of that baseline.
 
-
 ::: zone pivot="edge-sept-2020"
-
 **Microsoft Edge baseline for September 2020 (Edge version 85)**  
-
 ::: zone-end
 ::: zone pivot="edge-april-2020"
-
 **Microsoft Edge baseline for April 2020 (Edge version 80)**  
-
 ::: zone-end
 ::: zone pivot="edge-october-2019"
-
 **Microsoft Edge baseline for October 2019**
+
 > [!NOTE]
 > The Microsoft Edge baseline for October 2019 is in Public Preview.
-
 ::: zone-end
-::: zone pivot="edge-october-2019,edge-april-2020,edge-sept-2020"
 
 ## Microsoft Edge
 
-::: zone-end
 ::: zone pivot="edge-sept-2020,edge-april-2020"
 
 - **Supported authentication schemes**  
@@ -77,15 +69,13 @@ To learn more about using security baselines, see [Use security baselines](secur
   [Learn more](/deployedge/microsoft-edge-policies#authschemes)
   
   - **Supported authentication schemes**  
-    Baseline default:  
-    - *NTLM*
-    - *Negotiate*
+    Baseline defaults: Two items: *NTLM* and *Negotiate*
 
 - **Default Adobe Flash setting**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowflash)
 
-  - **Default Adobe Flash setting**
+  - **Default Adobe Flash setting**  
     Baseline default: *Block the Adobe Flash plugin*  
     [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
 
@@ -101,11 +91,10 @@ To learn more about using security baselines, see [Use security baselines](secur
 - **Enable saving passwords to the password manager**  
   Baseline default: *Disabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowpasswordmanager)  
- 
+
 - **Prevent bypassing Microsoft Defender SmartScreen prompts for sites**  
   Baseline default: *Enabled*  
   [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-preventsmartscreenpromptoverride)
-
 
 - **Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads**  
   Baseline default: *Enabled*  
@@ -134,7 +123,7 @@ To learn more about using security baselines, see [Use security baselines](secur
 - **Minimum SSL version enabled**  
   Baseline default: *Enabled*  
 
-  - **Minimum SSL version enabled**
+  - **Minimum SSL version enabled**  
     Baseline default: *TLS 1.2*  
 
 ::: zone-end
@@ -163,7 +152,7 @@ To learn more about using security baselines, see [Use security baselines](secur
   [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowflash)
 
   - **Default Adobe Flash setting**  
-    Baseline default: *Block the Adobe Flash plugin*
+    Baseline default: *Block the Adobe Flash plugin*  
     [Learn more](/windows/client-management/mdm/policy-csp-browser#browser-allowflashclicktorun)
 
 - **Enable site isolation for every site**  
@@ -176,9 +165,7 @@ To learn more about using security baselines, see [Use security baselines](secur
   [Learn more](/deployedge/microsoft-edge-policies#authschemes)
   
   - **Supported authentication schemes**  
-    Baseline default:  
-    - *NTLM*
-    - *Negotiate*
+    Baseline defaults: Two items: *NTLM* and *Negotiate*
 
 - **Enable saving passwords to the password manager**  
   Baseline default: *Disabled*  

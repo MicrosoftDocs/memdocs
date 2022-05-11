@@ -7,7 +7,7 @@ description: View the list of settings in the Microsoft Intune security baseline
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/13/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -50,11 +50,9 @@ To learn more about using security baselines, see [Use security baselines](secur
 ::: zone pivot="mdm-november-2021"
 **Security Baseline for Windows 10/11 for November 2021**
 ::: zone-end
-
 ::: zone pivot="mdm-december-2020"
 **Security Baseline for Windows 10/11 for December 2020**
 ::: zone-end
-
 ::: zone pivot="mdm-august-2020"
 **Security Baseline for Windows 10 and later for August 2020**
 ::: zone-end
@@ -164,7 +162,8 @@ Audit settings configure the events that are generated for the conditions of the
 - **Audit Changes to Audit Policy (Device)**:  
   Baseline default: *Success*
 
-- **Privilege Use Audit Sensitive Privilege Use (Device)**:    Baseline default: *Success and Failure*
+- **Privilege Use Audit Sensitive Privilege Use (Device)**:  
+  Baseline default: *Success and Failure*
 
 - **System Audit Other System Events (Device)**:  
   Baseline default: *Success and Failure*
@@ -247,7 +246,7 @@ Audit settings configure the events that are generated for the conditions of the
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067243)
 
   - **Hardened UNC path list**:  
-    *Not configured by default. Manually add one or more hardened UNC paths.*
+    Baseline default: *Not configured by default. Manually add one or more hardened UNC paths.*
 
 - **Block downloading of print drivers over HTTP**:  
   Baseline default: *Enabled*  
@@ -321,7 +320,7 @@ Audit settings configure the events that are generated for the conditions of the
     Baseline default: *Yes*
 
   - **Block list**:  
-    *Not configured by default. Manually add one or more Identifiers.*
+    Baseline default: *Not configured by default. Manually add one or more Identifiers.*
 
 ::: zone-end
 ::: zone pivot="mdm-august-2020"
@@ -547,7 +546,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 ::: zone pivot="mdm-august-2020,mdm-december-2020,mdm-november-2021"
 
 - **Internet Explorer encryption support**:  
-  Baseline default: 2 items:  *TLS v1.1* and *TLS v1.2*  
+  Baseline default: Two items:  *TLS v1.1* and *TLS v1.2*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067057)
 
 - **Internet Explorer prevent managing smart screen filter**:  
