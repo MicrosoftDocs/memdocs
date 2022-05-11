@@ -62,7 +62,7 @@ For more information, visit the [IGEL website](https://www.igel.com/windows365/)
 
 ![Nerdio image](./media/partners/nerdio.png)
 
-Windows 365 and Nerdio Manager help users to be productive from anywhere, on any device with a cloud-powered, secure, and always up-to-date Windows experience. Nerdio seamlessly lets MSPs and IT professionals:
+Windows 365 and Nerdio Manager help users to be productive from anywhere, on any compatible device with a cloud-powered, secure, and always up-to-date Windows experience. Nerdio seamlessly lets MSPs and IT professionals:
 
 - Instantly provision Cloud PCs.
 - Manage physical and virtual devices through a unified portal.
