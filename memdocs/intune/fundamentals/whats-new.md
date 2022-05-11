@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/04/2022
+ms.date: 05/05/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,26 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of May 9, 2022
+
+### Device management
+
+#### Elevation enhancements to Remote help<!-- 12453415 -->
+
+Elevation permissions will no longer be assigned when a session is started. Elevation permissions will now apply only when JIT (just in time) access is requested.  The access is requested with the click of a button on the toolbar. 
+When elevation permissions are assigned, the log off behavior for the sharer has been modified as follows:
+ - If the admin (helper) ends the remote help session, the user (sharer) will not be logged off.
+ - If the sharer tries to end the session, they will be prompted that they will be logged off if they continue.
+ - If the sharer is a local admin on their device, the access UAC prompt option will not be available to the helper as they can guide the sharer to perform elevated actions under their own profile.
+For more information about remote help, see [Use Remote help](../remote-actions/remote-help.md)
+
+## Week of May 2, 2022
+
+### App management
+
+#### Update priority of Managed Google Play apps<!-- 11050956 -->
+You can set the update priority of Managed Google Play apps on Android Enterprise devices that are dedicated, fully managed, or corporate-owned with a work profile. By selecting **Postpone** as the **Update Priority** app setting, the device will wait for 90 days after a new version of the app is detected before installing the app update. For related information, see [Add Managed Google Play apps to Android Enterprise devices with Intune](..\apps\apps-add-android-for-work.md).
 
 ## Week of April 25, 2022 (Service release 2204)
 

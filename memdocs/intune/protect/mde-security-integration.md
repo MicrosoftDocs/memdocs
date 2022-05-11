@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2022
+ms.date: 05/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.reviewer: mattcall
 
 ---
 
-# Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager (Preview)
+# Manage Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager
 
 With Microsoft Defender for Endpoint (MDE), you can now deploy security configurations from Microsoft Endpoint Manager directly to your onboarded devices without requiring a full Microsoft Endpoint Manager device enrollment. This capability is known as *Security Management for Microsoft Defender for Endpoint*. With this capability, devices that aren’t managed by a Microsoft Endpoint Manager service can receive security configurations for Microsoft Defender for Endpoint directly from Endpoint Manager.
 
@@ -48,7 +48,11 @@ This scenario extends the Microsoft Endpoint Manager Endpoint Security surface t
 
 Status and reports for policies that target devices in this channel are available from the policy node under Endpoint security in the Microsoft Endpoint Manager admin center.
 
-Drill in to the policy type, Antivirus or Firewall, and then select the policy to view its status. Policies for MDE have a *Policy type* of either *Microsoft Defender Antivirus (Preview)* or *Microsoft Defender Firewall (Preview)*.
+Drill in to the policy type and then select the policy to view its status. The following policy types support MDE security configuration:
+
+- Antivirus > *Microsoft Defender Antivirus*
+- Firewall > *Microsoft Defender Firewall* or *Microsoft Defender Firewall Rules*
+- Endpoint detection and response > *Endpoint detection and response*
 
 When you select a policy, you'll see information about the device check-in status, and can select:
 
@@ -87,9 +91,11 @@ The following security settings are pending deprecation. The Security Management
 
 Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
 
+<!-- Removing until GA behavior is known>
 ### Non-persistent VDI environments
 
 Due to the potential effect on Azure Active Directory environments with respect to device lifecycle and service quota, we advise against testing the current installation files and builds shared in this public preview in a non-persistent VDI environment.
+-->
 
 ### Server Core installation
 

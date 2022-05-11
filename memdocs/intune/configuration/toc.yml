@@ -267,13 +267,3 @@ items:
         href: device-restrictions-windows-8-1.md
       - name: VPN
         href: vpn-settings-windows-8-1.md
-    - name: Windows Phone 8.1
-      items:
-      - name: Custom
-        href: custom-settings-windows-phone-8-1.md
-      - name: Device restrictions
-        href: device-restrictions-windows-phone-8-1.md
-      - name: Email
-        href: email-settings-windows-phone-8-1.md
-      - name: VPN
-        href: vpn-settings-windows-phone-8-1.md
