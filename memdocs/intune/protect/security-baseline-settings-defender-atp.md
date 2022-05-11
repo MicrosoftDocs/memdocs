@@ -16,9 +16,7 @@ ms.technology:
 ms.assetid:
 
 # optional metadata
-
 #ROBOTS:
-
 #audience:
 
 ms.reviewer: laarrizz
@@ -30,19 +28,13 @@ ms.collection: M365-identity-device-management
 zone_pivot_groups: atp-baseline-versions
 ---
 
-<!-- Pivots in use: 
-December 2020 v6
-::: zone pivot="atp-december-2020"
-::: zone-end
-September 2020 v5
-::: zone pivot="atp-sept-2020"
-::: zone-end
-April 2020 v4
-::: zone pivot="atp-april-2020"
-::: zone-end
-March 2020 v3
-::: zone pivot="atp-march-2020"
-::: zone-end
+<!-- Pivots and versions still in use: 
+
+- December 2020 v6 > "atp-december-2020"
+- September 2020 v5 > "atp-sept-2020"
+- April 2020 v4 > "atp-april-2020"
+- March 2020 v3 > "atp-march-2020"
+
 -->
 
 # List of the settings in the Microsoft Defender for Endpoint security baseline in Intune
@@ -99,11 +91,11 @@ Attack surface reduction rule merge behavior is as follows:
 To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
 
 - **Block Office communication apps from creating child processes**  
-  Baseline default: *Enable*
+  Baseline default: *Enable*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=874499)
 
 - **Block Adobe Reader from creating child processes**  
-  Baseline default: *Enable*
+  Baseline default: *Enable*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=853979)
 
 - **Block Office applications from injecting code into other processes**  

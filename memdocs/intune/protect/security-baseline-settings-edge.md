@@ -16,9 +16,7 @@ ms.technology:
 ms.assetid:
 
 # optional metadata
-
 #ROBOTS:
-
 #audience:
 
 ms.reviewer: laarrizz
