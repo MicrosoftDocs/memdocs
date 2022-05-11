@@ -31,7 +31,7 @@ If you use Microsoft Tunnel as a VPN gateway solution for Microsoft Intune, plan
 
 ## Platform support
 
-If you've previously configured Microsoft Tunnel for iOS using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the tunnel client app before support for the Android standalone tunnel client app ends by the end of June 20, 2022.
+If you've previously configured Microsoft Tunnel for iOS using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the tunnel client app before support for the iOS standalone tunnel client app ends by the end of July 29, 2022.
 
 Support for the Android standalone tunnel client app ended on January 31, 2022.
 
