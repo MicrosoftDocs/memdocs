@@ -45,9 +45,11 @@ This feature applies to:
 
 <!-- ms.reviewer: mikedano -->
 
-These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome. Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
+These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome.
 
 :::image type="content" source="./media/settings-catalog-common-features/google-chrome-settings.png" alt-text="In Settings Catalog, Google Chrome settings are built in to Microsoft Intune and Endpoint Manager admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
+
+Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
 
 This feature applies to:
 
@@ -63,6 +65,8 @@ You can create a universal print policy, add printers, and then deploy this prin
 
 For more information, go to [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md).
 
+Previously, to configure Universal Print settings, you used the Universal Print printer provisioning tool, which requires more manual steps, and has some limitations.
+
 This feature applies to:
 
 - Windows 11
@@ -73,9 +77,13 @@ This feature applies to:
 
 On macOS, you can use property list (plist) files to configure features and settings that aren't built in to Intune. Some of these feature settings are now available in the settings catalog:
 
-- **Configure Microsoft Edge version 77 and newer**. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website).
+- **Microsoft Edge version 77 and newer**: For a list of the settings you can configure, go to [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website).
 
-- **Configure Microsoft Defender for Endpoint**. Previously, you had to [use a property list (plist) file](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website). For a list of the settings you can configure, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) (opens another Microsoft website).
+  Previously, you had to [use a property list (plist) file to configure Microsoft Edge](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website).
+
+- **Microsoft Defender for Endpoint**: For a list of the settings you can configure, go to [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) (opens another Microsoft website).
+
+  Previously, you had to [use a property list (plist) file to configure Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website).
 
 Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
