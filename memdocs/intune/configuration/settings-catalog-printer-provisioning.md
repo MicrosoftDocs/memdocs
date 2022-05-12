@@ -38,7 +38,6 @@ Using the settings catalog in Intune, you can create a printer policy, and deplo
 This feature applies to:
 
 - Windows 11
-- Windows 10
 
 This article shows you how to create a Universal Print policy in Microsoft Intune. To learn more about Universal Print and onboarding, go to [What is Universal Print](/universal-print/fundamentals/universal-print-whatis) and [Set up Universal Print](/universal-print/fundamentals/universal-print-getting-started).
 
@@ -93,9 +92,9 @@ This policy includes your printer information. When you assign the policy, the p
 
 6. Select **Next**.
 
-7. In **Configuration settings**, select **Add settings**. In the settings picker, select **Printer provisioning**, and select the settings you want to configure.
+7. In **Configuration settings**, select **Add settings**. In the settings picker, select **Printer Provisioning**, and select the settings you want to configure.
 
-    :::image type="content" source="./media/settings-catalog-printer-provisioning/settings-picker-printer-provisioning.png" alt-text="In Settings Catalog, add more printers to the universal print policy in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/settings-catalog-printer-provisioning/settings-picker-printer-provisioning.png" alt-text="In the Settings Catalog policy, select printer provisioning to create a universal print policy in Microsoft Intune and Endpoint Manager admin center.":::
 
     Close the settings picker.
 
@@ -116,7 +115,9 @@ This policy includes your printer information. When you assign the policy, the p
 
     Select **Next**.
 
-11. In **Assignments**, select the users that will receive your profile. These user accounts need access rights to the printer and the Universal Print service. If the profile is assigned to an Azure AD user/user group that can't access the printers because of permissions, then Intune grants the assigned user/user group the permissions.
+11. In **Assignments**, select the users that will receive your profile.
+
+    These user accounts need access rights to the printer and the Universal Print service. If the profile is assigned to an Azure AD user/user group that can't access the printers because of permissions, then Intune grants the assigned user/user group the permissions.
 
     If users don't have permissions, then the following message is shown:
 

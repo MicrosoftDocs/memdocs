@@ -50,6 +50,8 @@ This feature applies to:
 
 This article lists the steps to create a policy, and shows how to search and filter the settings in Intune. When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
 
+For information on some features you can configure using the settings catalog, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
+
 ## Create the policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

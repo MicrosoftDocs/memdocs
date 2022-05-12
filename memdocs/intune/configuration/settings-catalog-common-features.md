@@ -31,7 +31,9 @@ ms.collection: M365-identity-device-management
 
 Using the [settings catalog](settings-catalog.md) in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can access many settings that manage apps and features on your devices.
 
-This article lists and describes some of the features you can configure. For more information on the settings catalog, and what it is, go to [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md). To see all the settings you can configure, create a settings catalog policy.
+This article lists and describes some of the features you can configure in the settings catalog.
+
+For more information on the settings catalog, and what it is, go to [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md). To see all the settings you can configure, create a settings catalog policy.
 
 This feature applies to:
 
@@ -43,7 +45,7 @@ This feature applies to:
 
 <!-- ms.reviewer: mikedano -->
 
-These web browser settings are built in, and can be configured & deployed to your managed devices. on Windows devices, you can also configure Google Chrome:
+These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome. Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
 
 :::image type="content" source="./media/settings-catalog-common-features/google-chrome-settings.png" alt-text="In Settings Catalog, Google Chrome settings are built in to Microsoft Intune and Endpoint Manager admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
 
@@ -64,17 +66,18 @@ For more information, go to [Create a Universal Print policy in Microsoft Intune
 This feature applies to:
 
 - Windows 11
-- Windows 10
 
 ## Built-in macOS features replacing plist files
 
 <!-- ms.reviewer: beflamm -->
 
-Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
+On macOS, you can use property list (plist) files to configure features and settings that aren't built in to Intune. Some of these feature settings are now available in the settings catalog:
 
-- **Configure Microsoft Edge version 77 and newer**. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website). 
+- **Configure Microsoft Edge version 77 and newer**. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website).
 
 - **Configure Microsoft Defender for Endpoint**. Previously, you had to [use a property list (plist) file](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website). For a list of the settings you can configure, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) (opens another Microsoft website).
+
+Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
 This feature applies to:
 

@@ -19,8 +19,10 @@ items:
   - name: Profiles - Get started
     href: device-profile-create.md
   - name: Settings catalog
-    href: settings-catalog.md
+    displayName: gpo, admx
     items:
+    - name: Overview and get started
+      href: settings-catalog.md
     - name: Common tasks
       href: settings-catalog-common-features.md
     - name: Universal Print policy
