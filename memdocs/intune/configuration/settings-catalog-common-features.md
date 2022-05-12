@@ -65,7 +65,7 @@ You can create a universal print policy, add printers, and then deploy this prin
 
 For more information, go to [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md).
 
-Previously, to configure Universal Print settings, you used the Universal Print printer provisioning tool, which requires more manual steps, and has some limitations.
+Previously, to configure Universal Print settings, you used the [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool), which requires more manual steps, and has some limitations.
 
 This feature applies to:
 
