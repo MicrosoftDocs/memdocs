@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2022
+ms.date: 05/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,9 +39,7 @@ This feature applies to:
 
 - **macOS**
 
-  - **Configure device settings**. Device settings that are directly generated from Apple Profile-Specific Payload Keys are continually being added. To learn more about these keys, see, [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
-  - **Configure Microsoft Edge version 77 and newer**. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
-  - **Configure Microsoft Defender for Endpoint**. Previously, you had to [use a property list (plist) file](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website). For a list of the settings you can configure, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
+  Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
 
 - **Windows 10/11**
 
@@ -51,6 +49,8 @@ This feature applies to:
 > To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
 
 This article lists the steps to create a policy, and shows how to search and filter the settings in Intune. When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
+
+For information on some features you can configure using the settings catalog, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
 
 ## Create the policy
 
@@ -93,7 +93,7 @@ This article lists the steps to create a policy, and shows how to search and fil
 
     :::image type="content" source="./media/settings-catalog/default-setting-value-minus-not-configured.png" alt-text="In Settings Catalog, the default value in Microsoft Intune and Endpoint Manager admin center is the same as the OS default value.":::
 
-    When you select the minus:
+    When you select the minus (`-`):
 
     - Intune doesn't change or update this setting. The minus is the same as **Not configured**. When set to **Not configured**, the setting is no longer managed.
     - The setting is removed from the policy. The next time you open your policy, the setting isn't shown. You can add it again.
@@ -103,11 +103,11 @@ This article lists the steps to create a policy, and shows how to search and fil
     > In the Windows setting tooltips, **Learn more** links to the CSP.
 
 9. Select **Next**.
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
+11. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
@@ -132,16 +132,15 @@ There are thousands of settings available in the settings catalog. To make it ea
   > [!NOTE]
   > For the Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, then the Edge, Office, and OneDrive settings aren't shown.
 
-## Duplicate a profile  
+## Copy a profile  
 
- Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit it to adjust the settings and add assignments.      
- 
+Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit it to adjust the settings and add assignments.
+
 1. Go to **Devices** > **Configuration profiles**.
-2. Locate the profile that you want to copy in the table. Right-click the profile or select the ellipses context menu (**…**) that's in the same row.    
+2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (**…**).
 3. Select **Duplicate**.  
-4. Enter a new name for the policy, and optionally, a description. 
-5. Select **Save**.  
-
+4. Enter a new name and description for the policy.
+5. **Save** your changes.
 
 ## Reporting and conflicts
 
@@ -172,7 +171,7 @@ You create the policy, and assign it to your groups. In the Endpoint Manager adm
 6. Select the policy to see the devices. Then, select a specific device to see the setting that failed, and a possible error code.
 
 > [!TIP]
-> [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use.
+> [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use. For information on all the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
 
 ### Conflicts
 
@@ -217,8 +216,6 @@ If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initi
 
 ## Next steps
 
+- [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md)
+- [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md)
 - Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
-
-- For more information on device configuration policies, see [Device configuration overview](device-profiles.md) and [Create a device profile](device-profile-create.md).
-
-- For information on all the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
