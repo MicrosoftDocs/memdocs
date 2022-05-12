@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/25/2022
+ms.date: 05/12/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,8 +28,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune
-> [!IMPORTANT]
-> Holographic currently only supports device profiles. If a user profile is deployed, it will be treated as a device profile.
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -53,18 +51,14 @@ These settings apply to devices running:
 
 ## User scope or Device scope
 
-> [!IMPORTANT]
-> Windows Holographic devices only support device scope. VPN profiles installed on Windows Holographic device apply to all users on the device.
-
 - **Use this VPN profile with a user/device scope**: Apply the profile to the user scope or the device scope:
 
   - **User scope**: The VPN profile is installed within the user's account on the device, such as `user@contoso.com`. If another user signs in to the device, the VPN profile isn't available.
-  - **Device scope**: The VPN profile is installed in the device context, and applies to all users on the device.
+  - **Device scope**: The VPN profile is installed in the device context, and applies to all users on the device. Windows Holographic devices only support device scope.
 
 Existing VPN profiles apply to their existing scope. By default, new VPN profiles are installed in the user scope *except* for the profiles with device tunnel enabled. VPN profiles with device tunnel enabled use the device scope.
 
 ## Connection type
-
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:
 
