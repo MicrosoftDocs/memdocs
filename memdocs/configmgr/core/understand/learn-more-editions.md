@@ -54,11 +54,17 @@ Critical security updates for Configuration Manager are made available to this b
 
 The evaluation version doesn't require a Software Assurance agreement with Microsoft. [Evaluation installs](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection) are always the current branch, and you can use them for 180 days.
 
+> [!NOTE]
+> The Evaluation Center is currently unavailable. As a workaround you can download the ConfigMgr 2203 Current Branch Eval exe here : ( https://aka.ms/MECM2203CB-Eval).
+
 You can upgrade the evaluation installation to a full installation of the current branch. You can't upgrade an evaluation installation to the long-term servicing branch.
 
 ### Technical preview branch
 
 The [technical preview branch](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview) is also available. This branch is a limited build of Configuration Manager that lets you try out new features. You install the technical preview using different media than the licensed versions. For more information, see [Technical Preview](../get-started/technical-preview.md).
+
+> [!NOTE]
+> The Evaluation Center is currently unavailable. As a workaround you can download the ConfigMgr TP 2202 Baseline here : ( https://aka.ms/MECM2202TP-Baseline).
 
 
 ## Software Assurance agreements
