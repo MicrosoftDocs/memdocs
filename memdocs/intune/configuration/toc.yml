@@ -20,6 +20,12 @@ items:
     href: device-profile-create.md
   - name: Settings catalog
     href: settings-catalog.md
+    items:
+    - name: Common tasks
+      href: settings-catalog-common-features.md
+    - name: Universal Print policy
+      displayName: printers
+      href: settings-catalog-printer-provisioning.md
   - name: Custom settings
     displayName: oma-uri, csp
     items:
