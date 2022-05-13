@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/29/2022
+ms.date: 05/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -191,7 +191,12 @@ To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client ap
   - **Microsoft Tunnel** client app - For iOS/iPadOS, download the **Microsoft Tunnel** client app from the Apple **App Store**. See Add iOS store apps to Microsoft Intune.
   
   > [!Important]
-  > Use *Microsoft Defender for Endpoint* instead. On April 29, 2022, the *Microsoft Tunnel (preview)* connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. By the end of June 2022, the *Microsoft Tunnel (standalone client)(preview)* connection type and the *Microsoft Tunnel client app* it supports are deprecated and drop from support. Soon after the June date, this connection type will stop functioning and no longer connect to Microsoft Tunnel.
+  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel (preview)* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
+  > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
+  > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
+  >
+  > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
+
 
 For more information on deploying apps with Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
@@ -221,7 +226,11 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
   - **Microsoft Tunnel (standalone client) (preview)** – Use this connection type when you use the standalone Microsoft Tunnel client app. This connection type doesn’t support Microsoft Defender for Endpoint as the client Tunnel app.
 
     > [!Important]
-    > Use *Microsoft Tunnel (preview)* instead. On April 29, 2022, the *Microsoft Tunnel (preview)* connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. By the end of June 2022, the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app it supports are deprecated and drop from support. Soon after the June date, this connection type will stop functioning and no longer connect to Microsoft Tunnel.
+    > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel (preview)* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
+    > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
+    > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
+    >
+    > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
 
   The iOS platform supports routing traffic by either a per-app VPN or by split tunneling rules, but not both simultaneously. If you enable a per-app VPN for iOS, your split tunneling rules are ignored.
 
