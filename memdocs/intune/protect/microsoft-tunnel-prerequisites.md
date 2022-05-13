@@ -116,7 +116,7 @@ Both Podman and Docker containers use a bridge network to forward traffic throug
 The default bridge networks are:
 
 - Docker:  **172.17.0.0/16**
-- Podman: **10.0.88.0.0/16**
+- Podman: **10.88.0.0/16**
 
 To avoid conflicts, you can reconfigure both Podman and Docker to use a bridge network that you specify.
 
