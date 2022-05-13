@@ -31,11 +31,6 @@ ms.collection:
 
 # Azure AD joined vs. Hybrid Azure AD joined in cloud native endpoints
 
-**TO DO:**
-
-- ??Need a checklist of when/when not to use AADJ??
-- ??Need a checklist of when/when not to use HAADJ??
-
 > [!TIP]
 > [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
 
@@ -126,7 +121,13 @@ For new, refurbished, or refreshed Windows devices, Microsoft recommends [Azure 
 
 ## Which option is right for your organization
 
-??Need a checklist of when/when not to use AADJ, and when/when not to use HAADJ??
+Keep in mind that HAADJ and AADJ are not mutually exclusive, both can coexist in the same environment. However, HAADJ should not be your organization's end goal for its Windows endpoints and having both may increase the environment's complexity which may translate into additional support costs.
+
+Enabling HAADJ on existing endpoints where they cannot be reset or reposivioned is generally the path of least resistance for most organizations. This allows these devices to have a cloud identity and to use cloud services that require a cloud identity without initial impact to the end-user.
+
+For newly provisioned Windows endpoints, you should strongly consider only using AADJ whenever possible. Choosing HAADJ for newly provisioned devices leads to additional envrionmental complexity and costs because of this complexity. There are some known blockers and challeneges outside of Microsoft's control that may prevent your organization from fully adopting AADJ for newly provisioned Windows endpoints. There may also be unknown blockers that are specific to your organization and its configuration or expectations. Note that these blockers may be technical in nature or they mat arise due to other, non-technical factors. 
+
+In general, AADJ should be the default choice for organizations for newly provisioned Windows endpoints and HAADJ should only be considered when an identified and impactful blocker is discovered. Because HAADJ should not be the goal for any Windows endpoints in an envrionment, simple identification of the blocker should be the beginning of an investigation and not the end. Once identified, your organization can determine the scope of the impact and paths to overcoming these blockers which may vary between organizations and will be based on the nature of the blocker.
 
 ## Follow the cloud native endpoints guidance
 
