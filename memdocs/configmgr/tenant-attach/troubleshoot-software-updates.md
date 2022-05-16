@@ -25,7 +25,7 @@ When viewing the ConfigMgr Software Updates, you may run across some common erro
 
 **Error message:** You don’t have access to view this information. Make sure a proper user role is assigned from Intune.
 
-**Possible cause:** The user account needs an [Intune role](intune\fundamentals\role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information, and it resolves without intervention after a few minutes.
+**Possible cause:** The user account needs an [Intune role](../../intune/fundamentals/role-based-access-control.md) assigned. In some cases, this error may also occur during replication of information, and it resolves without intervention after a few minutes.
 
 ### Unable to get Software updates information
 
