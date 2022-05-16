@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/12/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -72,6 +72,10 @@ You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/desi
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
+
+### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
+
+You’ll be able to review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues.
 
 ### End-user error log collection<!--38195529-->
 
