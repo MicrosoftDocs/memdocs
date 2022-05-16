@@ -338,8 +338,8 @@ Before you begin the installation, launch the  [Prerequisite Checker](../servers
 
 1. Download the latest evaluation version of Configuration Manager.
 
-> [!NOTE]
-> The Evaluation Center is currently unavailable. As a workaround you can download the current branch evaluation from [aka.ms/MECM2203CB-Eval](https://aka.ms/MECM2203CB-Eval).<!-- 14437681 -->
+    > [!NOTE]
+    > The Evaluation Center is currently unavailable. As a workaround you can download the current branch evaluation from [aka.ms/MECM2203CB-Eval](https://aka.ms/MECM2203CB-Eval).<!-- 14437681 -->
 
 2.  Decompress the download media into your predefined location.  
 
