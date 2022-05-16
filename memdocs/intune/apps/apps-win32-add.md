@@ -122,9 +122,9 @@ On the **Program** page, configure the app installation and removal commands for
     > The Win32 app installation and uninstallation will happen under admin privilege (by default) when the app is set to install in user context and the user on the device has admin privileges.
     
 - **Device restart behavior**: Select one of the following options:
-    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes.
+    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device will restart based on the configured return code. With this configuration a Hard reboot return code will immediately trigger a restart of the device and a Soft reboot return code will notify the user that a restart is required to finish the installation.
     - **No specific action**: Choose this option to suppress device restarts during the app installation of MSI-based apps.
-    - **App install may force a device restart**: Choose this option to allow the app installation to finish without suppressing restarts.
+    - **App install may force a device restart**: Choose this option to allow the app installation to finish without suppressing restarts. This option means that the Win32 app installation is allowed to complete without suppressing restarts. With this configuration, a Hard reboot return code will notify the user that a restart of the device will be triggered in 120 minutes and a Soft reboot return code will notify the user that a restart is required to finish the installation.
     - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successful app installation.
 
 - **Specify return codes to indicate post-installation behavior**: Add the return codes that are used to specify either app installation retry behavior or post-installation behavior. Return code entries are added by default during app creation. However, you can add more return codes or change existing return codes.
