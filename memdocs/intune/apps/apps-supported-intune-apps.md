@@ -111,7 +111,7 @@ The below apps support the core Intune App Protection Policy settings.
 |Microsoft Kaizala|[Android](https://play.google.com/store/apps/details?id=com.microsoft.mobile.polymer)|✔|No settings|
 |Microsoft Kaizala|[iOS](https://apps.apple.com/app/microsoft-kaizala/id1112208399)|✔|No settings|
 |Microsoft Lens|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens)|✔|No settings|
-|Microsoft Lens|[iOS](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059|✔|No settings|
+|Microsoft Lens|[iOS](https://apps.apple.com/app/microsoft-lens-pdf-scanner/id975925059)|✔|No settings|
 |Microsoft PowerApps|[Android](https://play.google.com/store/apps/details?id=com.microsoft.msapps)|✔|No settings|
 |Microsoft PowerApps|[iOS](https://apps.apple.com/us/app/powerapps/id1047318566)|✔|No settings|
 |Microsoft Power Automate|[Android](https://play.google.com/store/apps/details?id=com.microsoft.flow)|✔|No settings|
