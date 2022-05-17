@@ -29,11 +29,14 @@ ms.collection: M365-identity-device-management
 
 # Create a Universal Print policy in Microsoft Intune
 
+> [!NOTE]
+> This feature will release over several days and won't be available to all customers immediately.
+
 Many organizations are moving their printer infrastructure to the cloud. [Universal Print](/universal-print/fundamentals/universal-print-whatis) is a cloud-based printing solution in Microsoft 365. It uses built-in cloud printers, built-in legacy printers, and runs entirely in Microsoft Azure.
 
 When Universal Print is deployed with Universal Print-compatible printers, it doesn't require any on-premises infrastructure. For a guided simulation, go to [Universal Print guided simulation](https://regale.cloud/Microsoft/viewer/1265/index.html#/0/0).
 
-Using the settings catalog in Intune, you can create a printer policy, and deploy the policy to your managed users and devices. Then, users select the printer from a list of registered Universal Print printers.
+Using the settings catalog in Intune, you can create a printer policy, and deploy the policy to your managed users and devices. Then, on their devices, end users select the printer from a list of registered Universal Print printers to print.
 
 This feature applies to:
 
