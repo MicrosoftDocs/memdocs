@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/28/2022
+ms.date: 05/16/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -259,7 +259,7 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 |    Key    |    Value    |
 |-----------------------|-----------------------|
-|    com.microsoft.intune.mam.managedbrowser.disabledFeatures    |    **password** disables prompts that offer to save passwords for the end user<br>**inprivate** disables InPrivate browsing<p>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage.     |
+|    com.microsoft.intune.mam.managedbrowser.disabledFeatures    |    **password** disables prompts that offer to save passwords for the end user<br>**inprivate** disables InPrivate browsing<br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information.<p>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage.     |
 
 #### Disable extensions
 
