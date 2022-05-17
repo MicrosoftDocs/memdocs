@@ -29,11 +29,14 @@ ms.collection: M365-identity-device-management
 
 # Create a Universal Print policy in Microsoft Intune
 
+> [!NOTE]
+> This feature will release over several days and won't be available to all customers immediately.
+
 Many organizations are moving their printer infrastructure to the cloud. [Universal Print](/universal-print/fundamentals/universal-print-whatis) is a cloud-based printing solution in Microsoft 365. It uses built-in cloud printers, built-in legacy printers, and runs entirely in Microsoft Azure.
 
-When Universal Print is deployed with Universal Print-compatible printers, it doesn't require any on-premises infrastructure.
+When Universal Print is deployed with Universal Print-compatible printers, it doesn't require any on-premises infrastructure. For a guided simulation, go to [Universal Print guided simulation](https://regale.cloud/Microsoft/viewer/1265/index.html#/0/0).
 
-Using the settings catalog in Intune, you can create a printer policy, and deploy the policy to your managed users. Then, users select the printer from a list of registered Universal Print printers.
+Using the settings catalog in Intune, you can create a printer policy, and deploy the policy to your managed users and devices. Then, on their devices, end users select the printer from a list of registered Universal Print printers to print.
 
 This feature applies to:
 
@@ -68,10 +71,6 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
   - Have access rights to the printer service and the Universal Print service
 
   If the profile is assigned to an Azure AD user/user group that can't access the printers because of permissions, then Intune grants the assigned user/user group the permissions.
-
-- The printer settings are applied to users accounts or user groups. They aren't assigned to device groups. When users sign in to their device, the policy is applied.
-
-  For more information on assigning policies to users, go to [Assign user and device profiles in Microsoft Intune: User groups vs. device groups](/mem/intune/configuration/device-profile-assign#user-groups-vs-device-groups).
 
 ## Create the policy
 
@@ -125,7 +124,7 @@ This policy includes your printer information. When you assign the policy, the p
     The selected groups may not have Universal Print permissions to selected printers. If this is the case, Intune will provide these groups with the correct permissions.
     ```
 
-    For more information on assigning profiles in Intune, see [Assign user and device profiles](device-profile-assign.md).
+    For more information on assigning profiles in Intune, go to [Assign user and device profiles](device-profile-assign.md). For more information on user scope vs. device scope in the settings catalog, go to [Use the settings catalog to configure settings: Device scope vs. user scope settings](settings-catalog.md#device-scope-vs-user-scope-settings).
 
     Select **Next**.
 
