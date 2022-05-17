@@ -410,6 +410,8 @@ The **Resolved intent** column lists the needed installation result or availabil
 
 You can switch between displaying managed app details for the primary user and other users on a device, or display app details for the device without any user. The generated app details will be displayed using the primary user of the device when the report is initially loaded, or displayed with no primary user if none exists.
 
+When you click on an app in the report, you can view the **Installation details** pane, along with the ability to collect diagnostics when applicable (such as for Win32 apps). Installation details include the history of installation related actions for the app. For instance, details may include whether the app was successfully assigned, whether the [Intune Management Extension](../apps/intune-management-extension.md) was successfully installed (if required by the app), when the device check-in was last completed, when the app was created, or whether the app installation was successful. When an app fails to install, you can see additional details by selecting **Show details** in the **Installation details** pane.
+
 To see a the report for a device, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
