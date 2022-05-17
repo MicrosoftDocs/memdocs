@@ -43,7 +43,7 @@ To manage Cloud PCs by using Configuration Manager co-management, you must meet 
 - [Enable co-management in Configuration Manager](/mem/configmgr/comanage/how-to-enable).
 - Distribute the ccmsetup.msi installer as a Line-of-Business (LOB) client app from Microsoft Intune. For more information, see How to [Install the Configuration Manager client](/mem/configmgr/comanage/how-to-prepare-win10#install-the-configuration-manager-client).
 
-For an easier client application deployment, you can create an Azure AD group based on model type, using filters, or all devices of a Windows 365 provisioning profile.  For more information, see [Create a dynamic device group containing your Cloud PCs](/windows-365/enterprise/create-dynamic-device-group-all-cloudpcs).
+For an easier client application deployment, you can create an Azure AD group based on model type, using filters, or all devices of a Windows 365 provisioning profile.  For more information, see [Create a dynamic device group containing your Cloud PCs](./create-dynamic-device-group-all-cloudpcs.md).
 
 ## Co-management workloads for Windows 365 Cloud PCs
 
@@ -56,4 +56,4 @@ If you have a large number of applications to migrate to Microsoft Intune, consi
 <!-- ########################## -->
 ## Next steps
 
-For more information about co-management and how to set it up, see [What is co-management?]( /mem/configmgr/comanage/overview) 
+For more information about co-management and how to set it up, see [What is co-management?]( /mem/configmgr/comanage/overview)
