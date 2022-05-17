@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/02/2022
+ms.date: 05/16/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -41,16 +41,14 @@ ms.collection:
  
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
  
-The Enrollment Status Page (ESP) displays provisioning progress after a new device is enrolled, and also when new users sign in to the device. The ESP provides a user interface so that the device user can monitor and track setup and enrollment progress. It locks the device during setup and doesn't let the user progress beyond the screen until provisioning is complete. 
+The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. Device users can look at the ESP to see how far along their device is in the setup process. You can utilize the ESP during the default out-of-box experience (OOBE) for Azure AD Join, any [Windows Autopilot](../../autopilot/index.yml) provisioning scenario, or when new users sign into the device for the first time. 
 
-You can show the enrollment status page during the default out-of-box experience (OOBE) for Azure AD Join, any [Windows Autopilot](../../autopilot/index.yml) provisioning scenario, or when new users sign into the device for the first time.  
+To deploy the enrollment status page to devices, you have to create an enrollment status page profile in Microsoft Intune. Within the profile, you can configure the ESP itself, including:  
 
-To deploy the enrollment status page, you have to create an enrollment status page profile in Microsoft Intune. Within a profile, you can configure:   
-
-- The visibility of installation progress
-- Blocking device access until the provisioning process is completed
-- Time limits
-- Allowed troubleshooting operations  
+- The visibility of installation progress indicators     
+- Device access during provisioning   
+- Time limits  
+- Allowed troubleshooting operations    
 
 This article describes how to create and edit a profile, and describes the information that the enrollment status page tracks.     
 
@@ -171,9 +169,15 @@ The apps that are included in this list are used by Intune to filter the list th
 
 A maximum of 100 apps can be specified.
 
-## Enrollment Status Page tracking information  
+## Enrollment status page tracking information  
 
-There are three phases where the Enrollment Status Page tracks information for; device preparation, device setup, and account setup.
+The enrollment status page provides information during these phases of provisioning:
+
+* Device preparation
+* Device setup
+* Account setup  
+
+This section describes the type of information tracked during each phase.
 
 ### Device preparation
 
