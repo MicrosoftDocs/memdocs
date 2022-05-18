@@ -85,11 +85,19 @@ The Certificate Connector for Microsoft Intune supports:
 
 ## Lifecycle
 
-Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
+Periodically, updates  to the certificate connector are released. Announcements for new connector updates, including the version and release date for each update, appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
 
-Intune supports each connector release for six months after it's released. After the six months have passed, the connector is no longer supported and might not function as expected.
+**Each new connector release**:
 
-If you don’t allow the connector to automatically update, plan to manually update it to the latest version at the first opportunity.
+- Is supported for six months after its release date. During this period, automatic updates can install a newer connector version. Updated connector versions can include but aren't limited to bug fixes and performance and feature improvements.
+
+- If an out of support connector fails, you’ll need to update to the latest supported version.
+
+- If you block the automatic update of the connector, plan to manually update the connector within six months, before support for the installed version ends. After support ends, you’ll need to update the connector to a version that remains in support to receive support for problems with the connector.
+
+- Connectors that are out of support will continue to function for up to 18 months after its release date. After 18 months, a connectors functionality might fail due to service level improvements, updates, or in addressing common security vulnerabilities that might surface in the future.
+
+For example, the connector version 6.2203.12.0 that released on May 4, 2022, will drop from support on November 4, 2022.  The same connector should continue to function (though not be supported) until November 2023. After November 2023 the connector might stop communicating with Intune.
 
 ### Automatic update
 
