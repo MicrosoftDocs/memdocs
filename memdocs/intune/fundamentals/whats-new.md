@@ -237,6 +237,15 @@ For more information, see [Retire or wipe devices using Microsoft Intune](../rem
 #### Initiate compliance checks for your AOSP devices from the Microsoft Intune app<!-- 12645739 -->
 You can now initiate a compliance check for your AOSP devices from the Microsoft Intune app. Go to **Device details**. This feature is available on devices that are enrolled in Microsoft Intune app as user-associated (Android) AOSP devices.
 
+### Device enrollment
+
+#### Enroll to co-management from Windows Autopilot<!-- 11300628 -->
+You can configure device enrollment in Intune to enable co-management, which happens during the [Windows Autopilot](../../autopilot/windows-autopilot.md) process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+
+If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../enrollment/windows-enrollment-status.md), the device will wait for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
+
+For more information, see [How to enroll to co-management with Autopilot](../../configmgr/comanage/autopilot-enrollment.md).
+
 ## Week of May 9, 2022
 
 ### Device security
@@ -297,13 +306,6 @@ AOSP device users can now rename their enrolled devices in the Microsoft Intune 
 You can now use the device action **Play lost device sound**  to trigger an alarm sound on the device to assist in locating the lost or stolen Android Enterprise corporate owned work profile and fully managed devices. For more information, see [Locate lost or stolen devices](../remote-actions/device-locate.md).
 
 ### Device enrollment
-
-#### Enroll to co-management from Windows Autopilot<!-- 11300628 -->
-You can configure device enrollment in Intune to enable co-management, which happens during the [Windows Autopilot](../../autopilot/windows-autopilot.md) process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
-
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../enrollment/windows-enrollment-status.md), the device will wait for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
-
-For more information, see [How to enroll to co-management with Autopilot](../../configmgr/comanage/autopilot-enrollment.md).
 
 #### New enrollment profile settings for Apple Automated Device Enrollment (public preview)<!-- 10111795 -->
 We've added two new Setup Assistant settings that you can use with Apple Automated Device Enrollment. Each setting controls the visibility of a Setup Assistant pane shown during enrollment. Setup Assistant panes are shown during enrollment by default, so you have to adjust the settings in Microsoft Intune if you want to hide them. The new Setup Assistant settings are the following:<p>
