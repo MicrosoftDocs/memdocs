@@ -40,8 +40,8 @@ To use RDP Shortpath for public networks with Windows 365, you must meet these r
   - UDP outbound to all public IP space (because, in most cases, it’s not possible to know the source IP address of the connecting PC).
   - STUN server IP ranges on UDP port 347.
 - Client PC Network  
-  - UDP outbound to:  
-    - the public IP addresses assigned to NAT gateway or the Azure Firewall in an Azure Hosted Network Scenario.
+  - UDP outbound:  
+    - To the public IP addresses assigned to NAT gateway or the Azure Firewall in an Azure Hosted Network Scenario.
     - For a Microsoft Hosted network scenario, all public IP spaces.
 
 ## Enable the preview of RDP Shortpath for public networks
@@ -78,7 +78,7 @@ When using RPD Shortpath, the connection with the Cloud PC proceeds as follows:
 
 The RDP Shortpath for public networks may not work with Cloud PCs in the following scenarios:
 
-- Where double NAT is in place. For example, if the traffic is routed through a Secure Web Gateway (SWG) or proxy where the connection is NATTed twice (first, on egress from Azure and, second, from the VPN/SWG endpoint.)
+- Where double NAT is in place. For example, if the traffic is routed through a Secure Web Gateway (SWG) or proxy where the connection is Natted twice (first, on egress from Azure and, second, from the VPN/SWG endpoint.)
 - Where the connection is routed through an internet proxy or other inspection device.
 - Any network that restricts UDP access or limits access to specific ports or IP ranges.
 - Where Carrier Grade NAT (CGN) is used. Where the network shares a public IP address with other networks.
