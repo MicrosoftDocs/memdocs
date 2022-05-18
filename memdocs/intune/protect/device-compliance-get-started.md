@@ -11,7 +11,7 @@ ms.date: 11/16/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.reviewer: samyada
+ms.reviewer: tycast
 
 # optional metadata
 
