@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/17/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -123,7 +123,17 @@ For new, refurbished, or refreshed Windows devices, Microsoft recommends [Azure 
 
 Keep in mind that HAADJ and AADJ are not mutually exclusive, both can coexist in the same environment. However, HAADJ should not be your organization's end goal for its Windows endpoints and having both may increase the environment's complexity which may translate into additional support costs.
 
-Enabling HAADJ on existing endpoints where they cannot be reset or reposivioned is generally the path of least resistance for most organizations. This allows these devices to have a cloud identity and to use cloud services that require a cloud identity without initial impact to the end-user.
+It depends, and there might not be a right or wrong answer. It depends on your environment, your hardware, and your organization goals. Consider the following scenarios:
+
+- **Endpoints can't be reset or reprovisioned**
+
+  In this scenario, Hybrid Azure AD joined is the easiest option. Devices have a cloud identity and can use cloud services that require a cloud identity. It might have minimal impact to end users.
+
+- **You have new endpoints or can reset existing endpoints**
+
+  In this scenario, Azure AD joined is recommended.
+
+
 
 For newly provisioned Windows endpoints, you should strongly consider only using AADJ whenever possible. Choosing HAADJ for newly provisioned devices leads to additional envrionmental complexity and costs because of this complexity. There are some known blockers and challeneges outside of Microsoft's control that may prevent your organization from fully adopting AADJ for newly provisioned Windows endpoints. There may also be unknown blockers that are specific to your organization and its configuration or expectations. Note that these blockers may be technical in nature or they mat arise due to other, non-technical factors. 
 
