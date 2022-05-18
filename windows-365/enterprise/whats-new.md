@@ -56,7 +56,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Support for RDP Shortpath for public networks<!--39316531-->
 
-Windows 365 Enterprise Cloud PCs now supports RDP Shortpath for public networks. For more information about RDP Shortpath, see [Use RDP Shortpath for public networks (preview) with Windows 365](rdp-shortpath-public-networks.md).
+Windows 365 Enterprise Cloud PCs now support RDP Shortpath for public networks. For more information about RDP Shortpath, see [Use RDP Shortpath for public networks (preview) with Windows 365](rdp-shortpath-public-networks.md).
 
 <!-- ########################## -->
 ## Week of May 9, 2022 (Service release 2204)
