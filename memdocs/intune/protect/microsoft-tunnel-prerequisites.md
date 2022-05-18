@@ -429,7 +429,9 @@ In the context of sudo, run the following commands on your Linux server:
 3. Rerun the validation to confirm the tables are now loaded: `lsmod |grep ip_tables`
 
 > [!IMPORTANT]
-> When updating the Tunnel server, a manually loaded ip_tables module might not persist. This can require you to reload the module after the update completes. After your server update is completed, review the server for the presence of the ip_tables module. If they are not present, use the preceding steps to reload the module, with the additional step to restart the server after the module is loaded.
+> When updating the Tunnel server, a manually loaded ip_tables module might not persist. This can require you to reload the module after the update completes. After your server update is completed, review the server for the presence of the ip_tables module.
+>
+> If the tables aren't present, use the preceding steps to reload the module, with the additional step to restart the server after the module is loaded.
 
 #### Configure Linux to load ip_tables at boot
 
