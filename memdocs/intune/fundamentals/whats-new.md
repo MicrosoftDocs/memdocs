@@ -60,7 +60,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
-## Week of May 25, 2022 (Service release 2205)
+## Week of May 23, 2022 (Service release 2205)
 
 ### App management
 
