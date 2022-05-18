@@ -175,7 +175,7 @@ Specifies that the device should require Azure AD join and MDM enrollment.
 
 _(GUID, required)_
 
-A unique GUID (without braces) that's provided to Intune as part of the registration process. This ID is included in the enrollment message as the `OfflineAutoPilotEnrollmentCorrelator`. This attribute is present only if enrollment happens on a device registered with Zero Touch Provisioning via offline registration.
+A unique GUID (without braces) that's provided to Intune as part of the registration process. This ID is included in the enrollment message as the `OfflineAutopilotEnrollmentCorrelator`. This attribute is present only if enrollment happens on a device registered with Zero Touch Provisioning via offline registration.
 
 #### CloudAssignedAadServerData
 
@@ -200,7 +200,7 @@ Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows Power
 ```powershell
 $AutopilotProfile = Get-AutopilotProfile
 $AutopilotProfile | ForEach-Object {
-  $_ | ConvertTo-AutoPilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
+  $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
 }
 ```
 

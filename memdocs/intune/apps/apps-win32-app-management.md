@@ -31,7 +31,7 @@ Microsoft Intune allows Win32 app management capabilities. Although it's possibl
 > This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.
 
 > [!IMPORTANT]
-> When you're deploying Win32 apps, consider using the [Intune Management Extension](../apps/intune-management-extension.md) approach exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation might fail. The Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device.
+> When you're deploying Win32 apps, consider using the [Intune Management Extension](../apps/intune-management-extension.md) approach exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during Autopilot enrollment, the app installation might fail. The Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
 ## Prerequisites
 
