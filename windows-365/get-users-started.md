@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 05/18/2022
 audience: Admin
 ms.topic: how-to
 ms.service: cloudpc
@@ -107,7 +107,7 @@ For a list of clients by operating system, see [Remote Desktop clients](/windo
 
 ## Next steps
 
-[Users installing apps](business/apps-install.md) 
+[Users installing apps](business/apps-install.md)
 
 [Manage your Cloud PCs](business/device-management.md)
 
