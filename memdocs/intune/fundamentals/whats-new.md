@@ -242,12 +242,12 @@ You can now initiate a compliance check for your AOSP devices from the Microsoft
 #### Improvements for enrollment profiles for Apple Automated Device Enrollment<!-- 13165752 -->
 Two Setup Assistant skip panes, previously released in Intune for public preview, are now generally available to use in Intune. These screens typically appear in Setup Assistant during Apple Automated Device Enrollment (ADE).  You can configure screen visibility while you're setting up an enrollment profile in Intune.  Intune-supported screen settings are available in the device enrollment profile under the **Setup Assistant** tab.  The new skip panes are: 
  
-- Pane name: **Get Started ** 
+- Pane name: **Get Started** 
   - Available for iOS/iPadOS 13 and later.
   - This pane is visible in Setup Assistant during ADE by default.  
   
 - Pane name: **Auto Unlock with Apple Watch**
-   -Available for macOS 12 and later. 
+  - Available for macOS 12 and later. 
   - This pane is visible in Setup Assistant during ADE by default.  
 
 There is no change to functionality from the public preview release.
