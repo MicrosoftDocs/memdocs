@@ -51,7 +51,7 @@ For more information, see [Windows Autopilot for existing devices](../../autopil
 
 ## Install the Configuration Manager client
 
-You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune enrollment policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. For more information, see [How to enroll with Autopilot](autopilot-enrollment.md).<!-- Intune 5637106 -->
+You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune enrollment policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. For more information, see [How to enroll with Autopilot](autopilot-enrollment.md).<!-- Intune 11300628 -->
 
 You do still specify the Configuration Manager client command-line parameters in Intune.
 

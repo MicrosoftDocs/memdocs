@@ -111,7 +111,7 @@ For each device that you'll deploy using user-driven deployment, these extra ste
   - If you use other methods, like Microsoft Store for Business or Partner Center, manually assign an Autopilot profile to the device.
 
 > [!TIP]
-> If the intended end-state of the device is co-management, you can configure device enrollment in Intune to enable co-management, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. For more information, see [How to enroll with Autopilot](../configmgr/comanage/autopilot-enrollment.md).<!-- Intune 5637106 -->
+> If the intended end-state of the device is co-management, you can configure device enrollment in Intune to enable co-management, which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune. For more information, see [How to enroll with Autopilot](../configmgr/comanage/autopilot-enrollment.md).<!-- Intune 11300628 -->
 
 ## User-driven mode for hybrid Azure AD join
 
