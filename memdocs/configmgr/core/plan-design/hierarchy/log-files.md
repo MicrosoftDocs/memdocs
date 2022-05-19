@@ -246,7 +246,6 @@ The following table lists the log files that are on the Configuration Manager si
 |CertMgr.log|Records certificate activities for intrasite communication.|Site system server|  
 |chmgr.log|Records activities of the client health manager.|Site server|  
 |Cidm.log|Records changes to the client settings by the Client Install Data Manager (CIDM).|Site server|  
-|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. | Site server|
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site server|  
 |compmon.log|Records the status of component threads monitored for the site server.|Site system server|  
 |compsumm.log|Records Component Status Summarizer tasks.|Site server|  
@@ -387,6 +386,7 @@ The following table lists the log files that contain information related to the 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CertMgr.log|Records certificate and proxy account information.|Site server|  
+|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. |Computer with the service connection point|
 |CollEval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Primary site and central administration site|  
 |Cloudusersync.log|Records license enablement for users.|Computer with the  service connection point|  
 |Dataldr.log|Records information about the processing of MIF files.|Site server|  
