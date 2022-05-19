@@ -2,7 +2,7 @@
 title: Test client upgrades
 titleSuffix: Configuration Manager
 description: Test client upgrades in a pre-production collection in Configuration Manager.
-ms.date: 07/23/2021
+ms.date: 04/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -46,7 +46,7 @@ There are three steps to test clients in pre-production:
 
 :::image type="content" source="media/test-client-upgrades.png" alt-text="Hierarchy settings window, client upgrade tab, highlighting pre-production collection.":::
 
->[!NOTE]
+> [!NOTE]
 > Only a user with the **Full Administrator** security role and the **All** security scope can change these settings.
 
 ## Configure client upgrades during site update
@@ -78,7 +78,29 @@ The updated client version now replaces the client version in use in your hierar
 > [!NOTE]
 > To enable the pre-production client, or to promote a pre-production client to a production client, your account must be a member of a security role that has **Read** and **Modify** permissions for the **Update Packages** object.
 >
-> Client upgrades honor any Configuration Manager maintenance windows you have configured.
+> Client upgrades honor any Configuration Manager maintenance windows you configure. For more information on a known issue, see [Client upgrade and maintenance windows](upgrade-clients-for-windows-computers.md#client-upgrade-and-maintenance-windows).
+
+## Known issues
+
+### Pre-production client and site server high availability
+
+<!-- 13846674 -->
+Consider the following scenario:
+
+- You enable the pre-production client.
+- The site has a [site server in passive mode](../../../servers/deploy/configure/site-server-high-availability.md).
+- You update the site to the latest version.
+- You promote the passive mode site server to the active site server.
+
+After you promote the site server, the pre-production client version shows as the production version. Depending on your configuration, it may automatically deploy to all systems.
+
+When you install an update, Configuration Manager currently updates the **Client** folder of the site server in passive mode with the pre-production client version.
+
+To work around this issue:
+
+- Wait to promote the site server in passive mode until after you promote the pre-production client version to production version.
+
+- If you have to fail over for high availability, manually correct the client version in the **Client** folder.
 
 ## Next steps
 

@@ -1,6 +1,7 @@
 ---
 title: "ICIINFO::GetId"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager,the ICIINFO::GetId method gets the ID of the configuration item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

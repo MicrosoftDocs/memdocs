@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the CCM_Policy_EmbeddedObject class to represent a policy setting embedded object.
 title: "CCM_Policy_EmbeddedObject Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

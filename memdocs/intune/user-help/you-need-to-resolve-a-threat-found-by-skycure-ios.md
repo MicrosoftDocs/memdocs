@@ -24,7 +24,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: heenamac
+ms.reviewer: heenamac
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser

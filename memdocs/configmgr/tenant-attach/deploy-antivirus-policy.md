@@ -2,7 +2,7 @@
 title: Tenant attach - Create and deploy Antivirus policies from the admin center
 titleSuffix: Configuration Manager
 description: "Create and deploy Antivirus policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 03/21/2022
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -49,7 +49,8 @@ Create Microsoft Defender antivirus policies in the Microsoft Endpoint Manager c
 
 ## <a name="bkmk_exclusion"></a> Antivirus policy exclusions merge
 <!--9089764 -->
-*(Introduced in 2103)*
+
+*(Introduced in Configuration Manager 2103)*
 
 Starting in Configuration Manager 2103, When a tenant attached device is targeted with two or more antivirus policies, the settings for antivirus exclusions will merge before being applied to the client. This change results in the client receiving the exclusions defined in each policy, allowing for more granular control of antivirus exclusions. For earlier versions of Configuration Manager, Antivirus exclusions from a single policy are applied. With this behavior, the last policy applied determines the effective exclusions. <!--9397015-->
 

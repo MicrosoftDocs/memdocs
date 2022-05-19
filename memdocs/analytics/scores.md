@@ -2,7 +2,7 @@
 title: Scores, baselines, and insights in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Learn about scores, baselines, and insights in Endpoint Analytics
-ms.date: 03/22/2022
+ms.date: 03/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -79,6 +79,10 @@ Use the **Add filter** option on tables to display items that match your criteri
 > There are currently limitations in the following filters:
 > - The **Disk type** filter doesn't support the value **Unknown**<!--12829141-->. 
 > - Filtering on **Startup performance score** from **Overview** > **Device Scores** returns devices with a score of "--". <!--12829158-->
+
+## Known issues
+
+[!INCLUDE [Endpoint analytics export to csv value mapping known issue](includes/known-issue-csv-mapping.md)]
 
 ## Next steps
 

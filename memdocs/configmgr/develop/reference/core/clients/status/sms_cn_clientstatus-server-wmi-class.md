@@ -1,6 +1,7 @@
 ---
 title: "SMS_CN_ClientStatus Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_CN_ClientStatus Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents client notification of agent status.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -149,7 +149,7 @@ Automatic enrollment also lets users enroll their Windows 10 or later devices to
     > [!NOTE]
     > Some tenants may not have these options to configure.<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft Intune** is how you configure the MDM app for Azure AD. **Microsoft Intune Enrollment** is a specific Azure AD app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](/intune/enrollment/multi-factor-authentication).
+    > **Microsoft Intune** is how you configure the MDM app for Azure AD. **Microsoft Intune Enrollment** is a specific Azure AD app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](../../intune/enrollment/multi-factor-authentication.md).
 
 5. For MDM user scope, select **All**, and then **Save**.  
 
@@ -158,6 +158,9 @@ Automatic enrollment also lets users enroll their Windows 10 or later devices to
 With hybrid Azure AD set-up and Configuration Manager client configurations in place, you're ready to flip the switch and enable co-management of your Windows 10 or later devices. The phrase **Pilot group** is used throughout the co-management feature and configuration dialogs. A *pilot group* is a collection containing a subset of your Configuration Manager devices. Use a *pilot group* for your initial testing, adding devices as needed, until you're ready to move the workloads for all Configuration Manager devices. There isn't a time limit on how long a *pilot group* can be used for workloads. A *pilot group* can be used indefinitely if you don't wish to move the workload to all Configuration Manager devices. 
 
 When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so. You may need multiple collections since you can assign a different *Pilot group* for each workload.
+
+> [!NOTE]
+> Since devices are enrolled in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default [Intune enrollment restriction](../../intune/enrollment/enrollment-restrictions-set.md) will apply to the enrollment. 
 
 ### Enable co-management for versions 2111 and later
 

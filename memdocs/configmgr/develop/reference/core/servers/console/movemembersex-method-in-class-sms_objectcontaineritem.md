@@ -1,4 +1,5 @@
 ---
+description: Learn how the MoveMembersEx Windows Management Instrumentation (WMI) class method, in Configuration Manager, moves folder items to another folder.
 title: "MoveMembersEx Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

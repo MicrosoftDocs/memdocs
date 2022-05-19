@@ -49,6 +49,10 @@ The following sections detail the prerequisites for the Microsoft Tunnel, and pr
 
 Set up a Linux based virtual machine or a physical server on which Microsoft Tunnel Gateway will install.
 
+> [!NOTE]
+> Only the opearating systems and container versions that are listed in the following table are supported. Versions not listed are not supported. Only after testing and supportability are verified are newer versions added to this list. 
+
+
 - **Supported Linux distributions** - The following table details which versions of Linux are supported for the Tunnel server, and the container they require: 
   
   |Distributon version    | Container requirements   | Considerations     |
@@ -116,7 +120,7 @@ Both Podman and Docker containers use a bridge network to forward traffic throug
 The default bridge networks are:
 
 - Docker:  **172.17.0.0/16**
-- Podman: **10.0.88.0.0/16**
+- Podman: **10.88.0.0/16**
 
 To avoid conflicts, you can reconfigure both Podman and Docker to use a bridge network that you specify.
 
@@ -220,7 +224,6 @@ By default, the Microsoft Tunnel and server use the following ports:
 **Outbound ports**:
 
 - TCP 443 – Required to access Intune services. Required by Docker or Podman to pull images.
-- TCP – 80 – Required to access Intune services.
 
 When creating the Server configuration for the tunnel, you can specify a different port than the default of 443. If you specify a different port, configure firewalls to support your configuration.
 

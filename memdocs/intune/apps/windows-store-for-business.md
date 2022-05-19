@@ -44,6 +44,9 @@ The [Microsoft Store for Business](https://www.microsoft.com/business-store) giv
 
 ## Before you start
 
+> [!IMPORTANT]
+> Microsoft Store for Business will be retired in the first quarter of 2023. However, admins can still leverage the connection to Store for Business and Education from their UEM solution to deploy apps to managed Windows 11 devices until they are retired in 2023. 
+
 Review the following information before you start syncing and assigning apps from the Microsoft Store for Business:
 
 - Configure Intune as the mobile device management authority for your organization.

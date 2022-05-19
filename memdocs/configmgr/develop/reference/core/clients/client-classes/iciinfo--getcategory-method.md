@@ -1,6 +1,7 @@
 ---
 title: "ICIINFO::GetCategory"
 titleSuffix: "Configuration Manager"
+description: "The ICIINFO::GetCategory method gets a localized category name by index and the group name of the category."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

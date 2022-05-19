@@ -1,4 +1,5 @@
 ---
+description: The GetAvailableScopes Windows Management Instrumentation class method, in Configuration Manager, returns the secured scopes, which current user has the permission to grant to other accounts.
 title: "GetAvailableScopes Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,5 +1,6 @@
 ---
 title: "SMS_CollectionSettings Class"
+description: Learn how the SMS_CollectionSettings class is an SMS Provider server class that represents settings for an SMS_Collection Server WMI Class object.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

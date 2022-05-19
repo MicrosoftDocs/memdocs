@@ -1,6 +1,7 @@
 ---
 title: "SMS_G_System_LastSoftwareScan Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_G_System_LastSoftwareScan WMI class is an SMS Provider server class that represents information about the most recent software inventory scan on the client computer.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

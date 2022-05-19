@@ -5,10 +5,10 @@ title: Data Apple sends to Intune
 titleSuffix: Microsoft Intune
 description: List of data that Apple sends to Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 04/19/2018
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -32,8 +32,6 @@ ms.collection: M365-identity-device-management
 ---
 
 # Data Apple sends to Intune
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 When any of the following Apple services are enabled on a device, Microsoft Intune establishes a connection with Apple to share user and device information:
 
@@ -111,6 +109,5 @@ The following table lists the data that an Apple device sends to Intune. [Intune
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple Business Manager location token | totalCount | The total number of licenses purchased for an app. |
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple Business Manager location token | url | The iTunes store URL of an app.|
 | [VPP](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/MobileDeviceManagementProtocolRef/5-Web_Service_Protocol_VPP/webservice.html#//apple_ref/doc/uid/TP40017387-CH8-SW1) | Apple Business Manager location token | User Status | The user status in apple VPP programs. |
-
 
 To stop using Apple services with Microsoft Intune and delete the data, you must both disable the Microsoft Intune Apple token and also delete your Apple account. Refer to Apple account how to perform account management.

@@ -1,7 +1,8 @@
 ---
 title: "SMS_WindowsServicingBusinessReadyUpdates Class"
 titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
+description: "An internal-only Windows Management Instrumentation class method."
+ms.date: 09/20/2016
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
@@ -11,9 +12,8 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
-
 ---
+
 # SMS_WindowsServicingBusinessReadyUpdates Server WMI Class
 For internal use only.  
 

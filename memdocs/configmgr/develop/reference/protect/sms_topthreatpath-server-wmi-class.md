@@ -1,5 +1,6 @@
 ---
 title: "SMS_TopThreatPath Class"
+description: The SMS_ThreatPath Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents summarizes the threats path found in 7 days per collection.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

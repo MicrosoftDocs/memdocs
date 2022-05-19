@@ -1,6 +1,7 @@
 ---
 title: "SMS_G_System_UnknownFile Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents an unknown software file, that is, a file that doesn't contain product resource information or isn't related to a software product that contains product resource information."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

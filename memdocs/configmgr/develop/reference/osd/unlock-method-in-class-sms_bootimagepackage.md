@@ -1,6 +1,7 @@
 ---
 title: "Unlock Method in SMS_BootImagePackage"
 titleSuffix: "Configuration Manager"
+description: "The Unlock WMI class method sets the source site to the current site, unlocking the boot image package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

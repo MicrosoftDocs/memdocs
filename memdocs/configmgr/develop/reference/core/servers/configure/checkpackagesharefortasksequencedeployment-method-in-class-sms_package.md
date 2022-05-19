@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the Configuration Manager with the CheckPackageShareForTaskSequenceDeployment Windows Management Instrumentation (WMI) class method to verify that the package share type meets the requirements of a task sequence deployment.
 title: "CheckPackageShareForTaskSequenceDeployment Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

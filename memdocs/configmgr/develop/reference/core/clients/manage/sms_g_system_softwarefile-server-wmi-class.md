@@ -1,5 +1,6 @@
 ---
 title: "SMS_G_System_SoftwareFile Class"
+description: The SMS_G_System_SoftwareFile class is an SMS Provider server class that contains information about all software files that were inventoried on the client computer.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

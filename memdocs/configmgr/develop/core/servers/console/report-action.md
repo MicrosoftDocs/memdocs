@@ -1,4 +1,5 @@
 ---
+description: Learn how to use report action in the configuration manager to display reports in the configuration manager console.
 title: "Configuration Manager Report Action"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

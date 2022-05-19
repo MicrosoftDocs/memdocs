@@ -1,4 +1,5 @@
 ---
+description: Learn how to enable and disable the Remote Tools Client Agent.
 title: "Enable and Disable Remote Tools"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

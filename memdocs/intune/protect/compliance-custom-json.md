@@ -91,7 +91,7 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
 "Rules":[ 
     { 
        "SettingName":"BiosVersion",
-       "Operator":"GreaterThan",
+       "Operator":"GreaterEquals",
        "DataType":"Version",
        "Operand":"2.3",
        "MoreInfoUrl":"https://bing.com",

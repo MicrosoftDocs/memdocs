@@ -1,5 +1,6 @@
 ---
 title: "Specify the Supported Platforms for a Driver"
+description: In Configuration Manager, you specify the supported platforms of a driver in the SDMPackageXML property XML of the driver's SMS_Driver Server WMI Class object.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

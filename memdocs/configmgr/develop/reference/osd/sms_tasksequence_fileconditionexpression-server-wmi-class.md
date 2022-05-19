@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_TaskSequence_FileConditionExpression class to represent a condition expression to check for the existence of a file and its creation time.  
 title: "SMS_TaskSequence_FileConditionExpression Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

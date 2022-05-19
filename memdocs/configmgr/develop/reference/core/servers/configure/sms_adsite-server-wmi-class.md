@@ -1,5 +1,6 @@
 ---
 title: "SMS_ADSite Class"
+description: Learn how the SMS_ADSite class is an SMS Provider server class that contains Active Directory sites discovered by Configuration Manager Forest Discovery. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

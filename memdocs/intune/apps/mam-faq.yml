@@ -49,7 +49,7 @@ sections:
           
       - question: Is it possible to have both MDM and MAM policies applied to the same user at the same time, for different devices? For example, if a user could be able to access their work resources from their own MAM-enabled machine, but also come to work and use an Intune MDM-managed device. Are there any caveats to this idea?
         answer: |
-          If you apply a MAM policy to the user without setting the device state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply a MAM policy based on the managed state. So when you create an app protection policy, next to Target to all app types, you'd select No. Then do any of the following:
+          If you apply a MAM policy to the user without setting the device management state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply a MAM policy based on the device management state. So when you create an app protection policy, next to Target to apps on all device types, you'd select No. Then do any of the following:
           - Apply a less strict MAM policy to Intune managed devices, and apply a more restrictive MAM policy to non MDM-enrolled devices.
           -	Apply an equally strict MAM policy to Intune managed devices as to 3rd party managed devices.
           - Apply a MAM policy to unenrolled devices only.

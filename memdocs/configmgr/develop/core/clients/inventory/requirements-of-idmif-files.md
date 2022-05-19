@@ -1,6 +1,7 @@
 ---
 title: Requirements of IDMIF files
 titleSuffix: Configuration Manager
+description: Two delta header comments are required for an IDMIF file, the name of the architecture you want to create or modify and a unique ID for the instance.
 ms.date: 01/03/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

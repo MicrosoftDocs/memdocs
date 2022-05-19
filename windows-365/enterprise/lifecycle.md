@@ -44,7 +44,7 @@ By assigning a Windows 365 license to a user and adding them to a group targeted
 
 Each Cloud PC is created using an operating system [image](device-images.md). Windows 365 includes a gallery of default [images](device-images.md) that provide a remote connection experience optimized for both Windows and Microsoft 365. You can also upload your own custom images and Windows 365 will perform some of the optimizations for you.
 
-Windows 365 also has monitoring infrastructure and synthetic provisioning tests built into [on-premises network connections](on-premises-network-connections.md). These tests run regularly to test your networking and other prerequisites. These tests help minimize provisioning failures due to environmental issues and helps you resolve those issues quicker.
+Windows 365 also has monitoring infrastructure and synthetic provisioning tests built into [Azure network connections](azure-network-connections.md). These tests run regularly to test your networking and other prerequisites. These tests help minimize provisioning failures due to environmental issues and helps you resolve those issues quicker.
 
 ## Configure
 

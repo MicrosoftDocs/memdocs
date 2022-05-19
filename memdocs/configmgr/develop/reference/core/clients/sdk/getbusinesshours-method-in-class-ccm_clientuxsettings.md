@@ -1,6 +1,7 @@
 ---
 title: "GetBusinessHours Method"
 titleSuffix: "Configuration Manager"
+description: "A class method that gets the values for business hours."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

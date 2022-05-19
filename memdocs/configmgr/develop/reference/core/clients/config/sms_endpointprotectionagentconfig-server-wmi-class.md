@@ -1,6 +1,7 @@
 ---
 title: "SMS_EndpointProtectionAgentConfig Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that specifies the settings for the Endpoint Protection client." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

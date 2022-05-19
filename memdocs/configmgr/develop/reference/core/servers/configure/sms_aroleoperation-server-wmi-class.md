@@ -1,6 +1,7 @@
 ---
 title: "SMS_ARoleOperation Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that's embedded by SMS_Role and describes the operation that's granted to this role."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

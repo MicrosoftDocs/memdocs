@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/10/2022
+ms.date: 05/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -138,14 +138,6 @@ The following table provides privacy-specific configuration details:
 
 For related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
 
-### Device ownership notification
-
-The following table provides notification-specific configuration details:
-
-| Field name | Maximum length | More information |
-|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Send a push notification to users when their device ownership type changes from personal to corporate (Android and iOS/iPadOS only)​ | N/A | Send a push notification to both your Android and iOS Company Portal users when their device ownership type has been changed from personal to corporate. By default, this push notification is set to off. When device ownership is set to corporate ownership, Intune has greater access to the device, which includes the full app inventory, FileVault key rotation, phone number retrieval, and a select few remote actions. For more information, see [Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
-
 ### App sources
 
 You can choose which additional app sources will be shown in Company Portal.
@@ -198,6 +190,8 @@ If the user does not have the Company Portal app installed, the user will be tak
 
 > [!NOTE]
 > To improve page load performance on the Company Portal website, app icons will now load in batches. End users may temporarily see a placeholder icon for some of their applications while loading the Company Portal website. 
+
+For feedback related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
 
 ## Company Portal and Apple Setup Assistant for iOS/iPadOS
 
