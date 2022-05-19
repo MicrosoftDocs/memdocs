@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 05/19/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -69,13 +69,37 @@ Microsoft Endpoint Manager offers premium add-ons. Licenses for the premium add-
 ## Additional information
 
 - A Microsoft Intune user and device subscription is available as a standalone, in addition to the bundles listed above.
-- A Microsoft Intune device-only subscription is available to manage kiosks, dedicated devices, phone-room devices, IoT, and other single-use devices that don't require user-based security and management features. For more information, see [Introduction to device licenses in Microsoft Intune](/troubleshoot/mem/intune/device-licenses-introduction).
+- A Microsoft Intune device-only subscription is available to manage kiosks, dedicated devices, phone-room devices, IoT, and other single-use devices that don't require user-based security and management features. For more information, see [Device-only licenses](../fundamentals/licenses.md#device-only-licenses).
 - The appropriate Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a [Microsoft API](/legal/microsoft-apis/terms-of-use).
 - Intune isn't included in licenses not in the previous tables.
 
 ## Unlicensed admins
 
 For more information about giving administrators access to Microsoft Endpoint Manager without them having an Intune license, see [Unlicensed admins](unlicensed-admins.md).
+
+## Device-only licenses
+
+Microsoft Intune offers a device-only subscription service that helps organizations manage devices that aren't affiliated with specific users. 
+
+You can purchase device licenses based on your estimated usage. Microsoft Intune device licenses are applicable when a devices is enrolled through any of the following methods:
+
+- [Windows Autopilot Self-Deploying mode](/windows/deployment/windows-autopilot/self-deploying)
+- [Apple Device Enrollment Program without user affinity](/mem/intune/enrollment/device-enrollment-program-enroll-ios)
+- [Apple School Manager without user affinity](/mem/intune/enrollment/apple-school-manager-set-up-ios)
+- [Apple Configurator without user affinity](/mem/intune/enrollment/apple-configurator-enroll-ios)
+- [Android Enterprise dedicated](/mem/intune/enrollment/android-kiosk-enroll)
+- [Using a device enrollment manager account](/mem/intune/enrollment/device-enrollment-manager-enroll)
+
+> [!NOTE]
+> Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page, or contact your account representative if you have any questions or you would like to receive the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.
+
+### Device-only license limitations
+
+When a device is enrolled by using a device license, the following Intune functions aren't supported:
+
+- [Intune app protection policies](/mem/intune/apps/app-protection-policy)
+- [Conditional access](/mem/intune/protect/conditional-access)
+- User-based management features, such as email and calendaring.
 
 ## Confirm your licenses
 
