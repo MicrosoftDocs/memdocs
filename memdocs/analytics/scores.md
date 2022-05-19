@@ -47,7 +47,7 @@ Baseline scores are shown on charts as triangle markers. There's a built-in base
 
 ## <a name="bkmk_per-device"></a> Per device scores
 <!--IN8462182-->
-To help you identify devices that could be impacting user experience, Endpoint analytics shows some scores per device. Reviewing scores per device may help you find and resolve end-user impacting issues before a call is made to the help desk.From the **Endpoint analytics** main page, select the **Device scores** tab to display individual device scores. Sorting by scores can assist you in finding devices that might need attention.
+To help you identify devices that could be impacting user experience, Endpoint analytics shows some scores per device. Reviewing scores per device may help you find and resolve end-user impacting issues before a call is made to the help desk. From the **Endpoint analytics** main page, select the **Device scores** tab to display individual device scores. Sorting by scores can assist you in finding devices that might need attention.
 
 :::image type="content" source="media/8816759-per-device-scores-chart.png" alt-text="Screenshot of Endpoint analytics device scores chart from the overview page." lightbox="media/8816759-per-device-scores-chart.png":::
 
@@ -61,9 +61,12 @@ You can also access per device scores on a device's **User experience** page. Fr
 
 ### <a name="bkmk_drill-in"></a> Device level drill-in from reports
 
-When reviewing your organization's **Startup performance** or **Application reliability** reports, you can display individual device scores. To drill-in to  information for a specific device, select the **Device performance** tab, then choose a device.
+When reviewing your organization's reports, you can display individual device scores. To drill-in to  information for a specific device, select the **Device performance** tab, then choose a device.
 
 :::image type="content" source="media/8816759-per-device-startup-score.png" alt-text="Screenshot of Endpoint analytics startup performance page for a single device." lightbox="media/8816759-per-device-startup-score.png":::
+
+> [!Note]
+> You may notice small differences in values when reviewing detailed reporting compared to the overall scores for devices or device models that are less granular.
 
 ## <a name="bkmk_model"></a> Per model scores
 <!--IN14439211-->
