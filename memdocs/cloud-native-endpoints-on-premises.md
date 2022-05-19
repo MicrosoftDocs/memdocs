@@ -31,11 +31,6 @@ ms.collection:
 
 # Cloud native endpoints and on-premises resources
 
-**TO DO:**
-
-- ??Answer some outstanding questions.??
-- ??In the "Authentication and access to on-premises resources" section, is there an image we can add? It might help??
-
 > [!TIP]
 > [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
 
@@ -83,7 +78,7 @@ The following list is a common set of on-premises resources that users can acces
 
 The following steps describe how an Azure AD joined endpoint authenticates and accesses (based on permissions) an on-premises resource.
 
-The following steps are an overview. For more specific information, see [Primary Refresh Token (PRT) and Azure AD](/azure/active-directory/devices/concept-primary-refresh-token).
+The following steps are an overview. For more specific information, including detailed swimlane graphics describing the full process, see [Primary Refresh Token (PRT) and Azure AD](/azure/active-directory/devices/concept-primary-refresh-token).
 
 1. When users sign in, their credentials are sent to the Cloud Authentication Provider (CloudAP) and the Web Account Manager (WAM).
 
@@ -112,11 +107,11 @@ The following steps are an overview. For more specific information, see [Primary
     > 
     > [MS-PKCA: Public Key Cryptography for Initial Authentication (PKINIT) in Kerberos Protocol](/openspecs/windows_protocols/ms-pkca/d0cf1763-3541-4008-a75f-a577fa5e8c5b)
 
-6. The DC authenticates the user. The DC returns a Kerberos Ticket-Granting Ticket (TGT) or a NTLM token based on the protocol that the on-premises resource or application supports (which Windows caches). ??Caches what specifically??
+6. The DC authenticates the user. The DC returns a Kerberos Ticket-Granting Ticket (TGT) or a NTLM token based on the protocol that the on-premises resource or application supports (Windows caches the returned TGT or NTLM token for future use).
 
     If the attempt to get the Kerberos TGT or NTLM token for the domain fails (related DCLocator timeout can cause a delay), then Windows Credential Manager retries. Or, the user may receive an authentication pop-up requesting credentials for the on-premises resource.
 
-7. All apps that use [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication) automatically get SSO when a user tries to access the apps. **This** includes standard user authentication to an on-premises AD domain using NTLM or Kerberos when accessing on-premises services or resources. ??What's meant by 'this'? Do you mean SSO??
+7. All apps that use [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication) automatically use SSO when a user tries to access the apps. Windows integrated authentication includes standard user authentication to an on-premises AD domain using NTLM or Kerberos when accessing on-premises services or resources.
 
     For more information, see [How SSO to on-premises resources works on Azure AD joined devices](/azure/active-directory/devices/azuread-join-sso).
 
