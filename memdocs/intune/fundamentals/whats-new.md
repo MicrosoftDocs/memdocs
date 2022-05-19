@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/18/2022
+ms.date: 05/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -238,6 +238,19 @@ For more information, see [Retire or wipe devices using Microsoft Intune](../rem
 You can now initiate a compliance check for your AOSP devices from the Microsoft Intune app. Go to **Device details**. This feature is available on devices that are enrolled in Microsoft Intune app as user-associated (Android) AOSP devices.
 
 ### Device enrollment
+
+#### Improvements for enrollment profiles for Apple Automated Device Enrollment<!-- 13165752 -->
+Two Setup Assistant skip panes, previously released in Intune for public preview, are now generally available to use in Intune. These screens typically appear in Setup Assistant during Apple Automated Device Enrollment (ADE).  You can configure screen visibility while you're setting up an enrollment profile in Intune.  Intune-supported screen settings are available in the device enrollment profile under the **Setup Assistant** tab.  The new skip panes are: 
+ 
+- Pane name: **Get Started ** 
+  - Available for iOS/iPadOS 13 and later.
+  - This pane is visible in Setup Assistant during ADE by default.  
+  
+- Pane name: **Auto Unlock with Apple Watch**
+   -Available for macOS 12 and later. 
+  - This pane is visible in Setup Assistant during ADE by default.  
+
+There is no change to functionality from the public preview release.
 
 #### Enroll to co-management from Windows Autopilot<!-- 11300628 -->
 You can configure device enrollment in Intune to enable co-management, which happens during the [Windows Autopilot](../../autopilot/windows-autopilot.md) process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
