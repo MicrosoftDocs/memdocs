@@ -66,7 +66,7 @@ When reviewing your organization's reports, you can display individual device sc
 :::image type="content" source="media/8816759-per-device-startup-score.png" alt-text="Screenshot of Endpoint analytics startup performance page for a single device." lightbox="media/8816759-per-device-startup-score.png":::
 
 > [!Note]
-> You may notice small differences in values when reviewing detailed reporting compared to the overall scores for devices or device models that are less granular.
+> You may notice small differences in values when reviewing detailed reporting when compared to overall less granular scores for devices and models.
 
 ## <a name="bkmk_model"></a> Per model scores
 <!--IN14439211-->
