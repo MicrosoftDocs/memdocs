@@ -38,6 +38,8 @@ landingContent:
             url: custom-notifications.md
           - text: Synchronize device
             url: device-sync.md
+          - text: Collect diagnostics
+            url: collect-diagnostics.md
           - text: Remotely administer devices with TeamViewer
             url: teamviewer-support.md
           - text: Use bulk device actions
