@@ -6,8 +6,10 @@ ms.date: 05/18/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
+ms.localizationpriority: medium
 author: aczechowski
 ms.author: aaroncz
+ms.reviewer: dannygu
 manager: dougeby
 ---
 
@@ -60,9 +62,7 @@ When you use this policy, the following actions happen on the device during Auto
 
     - If the client installation command line includes the **PROVISIONTS** parameter, the client runs that task sequence.
 
-    - The enrollment status page tracks the task sequence in the **Apps** category. The task sequence progress displays in front of the enrollment status page.
-
-        :::image type="content" source="media/esp-task-sequence-progress.png" alt-text="Enrollment status page, task sequence installation progress.":::
+    - The enrollment status page tracks the task sequence in the **Apps** category.
 
     - If necessary, the task sequence can restart the device and return to the enrollment status page afterwards.
 
