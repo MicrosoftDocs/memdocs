@@ -131,7 +131,7 @@ By default, Office for iOS and Android enables users to create Sticky Notes. For
 
 ### Set add-ins preference
 
-For iOS/iPadOS devices running Office, you (as the admin) can set whether Office add-ins are enabled. These are app settings  can be deployed using unified endpoint management.
+For iOS/iPadOS devices running Office, you (as the admin) can set whether Office add-ins are enabled. These app settings can be deployed using an [app configuration policy](../apps/app-configuration-policies-use-ios.md) in Intune.
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
@@ -143,7 +143,7 @@ If you need to enable or disable the Office Store portion of the platform for iO
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.office.OfficeWebAddinDisableOMEXCatalog    |    **true** (default) disables only the Office Store portion of the platform<br>**false** enables the Office Store portion of the platform<br>**NOTE:** Sideloaded will continue to work.    |
 
-For more information about adding configuration keys for managed iOS/iPadOS apps, see [Add app configuration policies for managed iOS/iPadOS devices](../apps/app-configuration-policies-use-ios.md).
+For more information about adding configuration keys, see [Add app configuration policies for managed iOS/iPadOS devices](../apps/app-configuration-policies-use-ios.md).
 
 ## Data protection app configuration scenarios
 
