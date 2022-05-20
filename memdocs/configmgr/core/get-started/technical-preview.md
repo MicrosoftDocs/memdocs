@@ -124,13 +124,10 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2205
 
-- [3601042](2022/technical-preview-2205.md) <!--3601042-->
-- [3601127](2022/technical-preview-2205.md) <!--3601127-->
-- [9265511](2022/technical-preview-2205.md) <!--9265511-->
-- [13351390](2022/technical-preview-2205.md) <!--13351390-->
-- [14059872](2022/technical-preview-2205.md) <!--14059872-->
-- [14120481](2022/technical-preview-2205.md) <!--14120481-->
-
+- [Offset for monthly maintenance window reoccurrence schedule](2022/technical-preview-2205.md#bkmk_offset) <!--3601127-->
+- [Improvements to cloud management gateway (CMG) workflow](2022/technical-preview-2205.md#bkmk_cmg) <!--13351390-->
+- [Script execution timeout for compliance settings](2022/technical-preview-2205.md#bkmk_timeout) <!--14120481-->
+- [PowerShell release notes preview](2022/technical-preview-2205.md#bkmk_powershell) <!--14046376-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
