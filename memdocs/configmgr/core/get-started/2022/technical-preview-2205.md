@@ -24,7 +24,7 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2205/1234567.md)] -->
 
-[!INCLUDE [Offset for monthly maintenance window reoccurrence schedule](includes/2205/3601127.md)]
+[!INCLUDE [Offset for reoccurring monthly maintenance window schedules](includes/2205/3601127.md)]
 [!INCLUDE [Improvements to cloud management gateway (CMG) workflow](includes/2205/13351390.md)]
 [!INCLUDE [Script execution timeout for compliance settings](includes/2205/14120481.md)]
 [!INCLUDE [PowerShell release notes preview](includes/2205/14046376.md)]
