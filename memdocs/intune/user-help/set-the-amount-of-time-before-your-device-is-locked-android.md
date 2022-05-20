@@ -38,7 +38,7 @@ To access the secure lock settings on your device:
 
 1. Go to the **Settings** app and tap **Lock screen**.  
 2. Tap **Secure lock settings**. 
-3. If prompted to, enter your PIN. 
+3. Enter your PIN if prompted. 
 4. Tap **Auto lock when screen turns off**.
 5. Select an amount of time. 
 
