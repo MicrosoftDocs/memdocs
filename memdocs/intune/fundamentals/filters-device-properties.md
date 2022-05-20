@@ -157,7 +157,7 @@ This article describes the different [device properties](#device-properties) and
   Examples:
 
   - `(device.enrollmentProfileName -eq "DEP iPhones")`
-  - `(device.enrollmentProfileName -startsWith "AutoPilot Profile")`
+  - `(device.enrollmentProfileName -startsWith "Autopilot Profile")`
 
   This property applies to:
 
