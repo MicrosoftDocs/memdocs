@@ -234,9 +234,6 @@ You can now use the **Retire** admin action in the **Microsoft Endpoint Manager 
 When you select **Retire**, the device is unenrolled from Intune management. However, all the data and apps associated with your personal profile will remain untouched on the device.
 For more information, see [Retire or wipe devices using Microsoft Intune](../remote-actions/devices-wipe.md).
 
-#### Initiate compliance checks for your AOSP devices from the Microsoft Intune app<!-- 12645739 -->
-You can now initiate a compliance check for your AOSP devices from the Microsoft Intune app. Go to **Device details**. This feature is available on devices that are enrolled in Microsoft Intune app as user-associated (Android) AOSP devices.
-
 ### Device enrollment
 
 #### Improvements for enrollment profiles for Apple Automated Device Enrollment<!-- 13165752 -->
