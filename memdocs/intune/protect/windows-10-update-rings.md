@@ -68,7 +68,7 @@ The following prerequisites must be met to use Windows updates for Windows 10/11
       - Windows Insider – Release Preview  
       - Beta Channel  
       - Dev Channel  
-    - [Use deadline settings](../protect/windows-update-settings.md#user-experience-settings)
+    - [Use deadline settings](../protect/windows-update-settings.md#user-experience-settings), for Feature updates. Deadline settings for Quality updates are supported. 
 
 ## Create and assign update rings
 
