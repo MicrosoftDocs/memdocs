@@ -130,7 +130,7 @@ Some of these services will also need to check certificate revocation lists (CRL
 
 ### Hybrid Azure AD join
 
-The device can be hybrid Azure AD joined. The computer should be on the internal network for hybrid Azure AD join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join).
+The device can be hybrid Azure AD joined. The computer should be on the internal network for hybrid Azure AD join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
 
 ### <a name="tpm"></a> Autopilot self-Deploying mode and Autopilot pre-provisioning
 
