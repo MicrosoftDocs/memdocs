@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/19/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -451,7 +451,7 @@ Intune also has built-in features that can help you configure your cloud native 
 
   For more information, go to [Group Policy Analytics in Endpoint Manager](/mem/intune/configuration/group-policy-analytics).
 
-- **[Settings catalog](/mem/intune/configuration/settings-catalog)**: See all the settings available in Intune, and create, configure, & deploy a policy using these settings. If you create GPOs, then the settings catalog is a natural transition to cloud native endpoint configuration.
+- **[Settings catalog](/mem/intune/configuration/settings-catalog)**: See all the settings available in Intune, and create, configure, & deploy a policy using these settings. [Tasks you can complete using the Settings Catalog in Intune](/intune/configuration/settings-catalog-common-features.md) may also be a good resource. If you create GPOs, then the settings catalog is a natural transition to cloud native endpoint configuration. 
 
   When combined with [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics), you can deploy the policies you used on-premises to your cloud native endpoints.
 
