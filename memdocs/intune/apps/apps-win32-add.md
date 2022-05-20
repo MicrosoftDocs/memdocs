@@ -186,7 +186,7 @@ On the **Detection rules** pane, configure the rules to detect the presence of t
         - **MSI product code**: Add a valid MSI product code for the app.
         - **MSI product version check**: Select **Yes** to verify the MSI product version in addition to the MSI product code.
     - **File**: Verify based on file or folder detection, date, version, or size.
-        - **Path**: Enter the full path of the folder that contains the file or folder to detect. This should not include special characters like , or " .
+        - **Path**: Enter the full path of the folder that contains the file or folder to detect. This should not include special characters such as **,** or **"**.
         - **File or folder**: Enter the file or folder to detect.
         - **Detection method**: Select the type of detection method used to validate the presence of the app.
         - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to expand any path environment variables in the 32-bit context on 64-bit clients. Select **No** (default) to expand any path variables in the 64-bit context on 64-bit clients. 32-bit clients will always use the 32-bit context.
