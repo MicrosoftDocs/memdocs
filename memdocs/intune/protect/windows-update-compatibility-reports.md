@@ -48,7 +48,7 @@ To be eligible for the Windows feature update device readiness and Windows featu
 
 - Run a supported version of Windows 10 or later with the latest cumulative update
 - Be Azure AD joined or hybrid Azure AD joined
-- Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach.md)
+- Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/)
 - Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
 
 Additionally, you must [enable Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration).
@@ -186,6 +186,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 | 2                    | Personal    |
 
 **Readiness status**:
+
 | Readiness status .csv value | Report value |
 |-----------------------------|--------------|
 | 0                    | Low risk            |
@@ -196,6 +197,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 | 5                    | Unknown             |
 
 **Sys req issues** (Some report values map to multiple .csv values):
+
 | Sys req issues .csv value | Report value        |
 |---------------------------|---------------------|
 | 1, 8, 10                  | Processor family    |
@@ -216,6 +218,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 #### Windows feature update compatibility risks report (preview)
 
 **Asset Type**:
+
 | Asset Type .csv value | Report value |
 |-----------------------|--------------|
 | 0                     | Device       |
@@ -224,6 +227,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 | 3                     | Other        |
  
 **Risk status** (This column is called *Readiness status* in the .csv export):
+
 | Readiness status .csv value | Risk status report value |
 |-----------------------------|-------------|
 | 0                           | Low risk    |
@@ -231,6 +235,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 | 2                           | High risk   |
 
 **Issue** (*Asset Type* is required to properly map exported Issue values):
+
 | Asset Type | Issue .csv value | Issue | Guidance |
 |------------|------------------|-------|----------|
 | Application, Other | 1 | Doesn't work with new OS, but won't block upgrade. | Application won't work on new OS. No action is required for upgrade to proceed.   |
