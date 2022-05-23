@@ -59,9 +59,9 @@ Selecting an update from the **Software updates** page opens the details pane fo
 
 The following **Status** values are used in the **Software updates** page:
 
-1. **Unknown**: The status of the update isn't known or is currently unavailable.
-2. **Compliant**: The update is fully compliant and assigned.
-3. **Non-compliant**: The update isn't compliant (this message doesn't mean there was an error though), it just means it's either an older version or unapproved.
-4. **Conflict detected**: There's some sort of conflict with other software on the machine causing the update to fail.
-5. **Error** - The update failed with an error.
-6. **Partial compliance** - The update is installed and partially compliant. That is, part of the software update isn't compliant.
+- **Unknown**: The status of the update isn't known or is currently unavailable.
+- **Compliant**: The update is fully compliant and assigned.
+- **Non-compliant**: The update isn't compliant (this message doesn't mean there was an error though), it just means it's either an older version or unapproved.
+- **Conflict detected**: There's some sort of conflict with other software on the machine causing the update to fail.
+- **Error** - The update failed with an error.
+- **Partial compliance** - The update is installed and partially compliant. That is, part of the software update isn't compliant.
