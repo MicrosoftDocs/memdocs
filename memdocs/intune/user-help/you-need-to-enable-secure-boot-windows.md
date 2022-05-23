@@ -35,7 +35,7 @@ ms.collection:
 
 Secure Boot is a security standard developed by members of the PC industry to help ensure that a device boots using only software that's trusted by the original equipment manufacturer (OEM). Your organization's device management policies may require you to enable it on your enrolled Windows device. Devices that don't meet this requirement may be unable to access work or school resources.     
 
-## Enable secure boot  
+## Enable Secure Boot  
 If your enrolled device is a mobile device, contact your support person and they'll help enable Secure Boot for you.  
 
 If your enrolled device is a PC, you can either:  
