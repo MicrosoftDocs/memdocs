@@ -317,4 +317,5 @@ This report can help you find devices with alerts or errors and can help you tro
 
 - Configure [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)
 - Configure [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
+- Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
 - View [Windows release information](/windows/release-information/)
