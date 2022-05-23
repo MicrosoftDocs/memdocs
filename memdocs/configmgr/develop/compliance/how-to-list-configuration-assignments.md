@@ -1,5 +1,6 @@
 ---
 title: "List Configuration Assignments"
+description: The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in Configuration Manager.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

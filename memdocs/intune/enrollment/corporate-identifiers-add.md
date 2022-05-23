@@ -20,7 +20,7 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 
 #ROBOTS:
 #audience:
-ms.reviewer: spshumwa
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,7 +41,9 @@ At the time of enrollment, Intune automatically assigns corporate-owned status t
 - Enrolled by using [Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md)
 - Enrolled with the Apple [Device Enrollment Program](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md), or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS/iPadOS only)
 - [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with an international mobile equipment identifier (IMEI) numbers (all platforms with IMEI numbers) or serial number (iOS/iPadOS and Android)
-- Enrolled as [Android Enterprise corporate-owned devices with work profile](/mem/intune/enrollment/android-corporate-owned-work-profile-enroll)
+- Enrolled as [Android Enterprise corporate-owned devices with work profile](./android-corporate-owned-work-profile-enroll.md)
+- Enrolled as [Android Enterprise fully managed devices](./android-fully-managed-enroll.md)
+- Enrolled as [Android Enterprise dedicated devices](./android-kiosk-enroll.md)
 - Joined to Azure Active Directory with work or school credentials. [Devices that are Azure Active Directory registered](/azure/active-directory/devices/overview) will be marked as personal.
 - Set as corporate in the [device's properties list](#change-device-ownership)
 

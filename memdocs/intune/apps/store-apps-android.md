@@ -76,4 +76,4 @@ The **Overview** blade of the app you've created is displayed.
 
 ## Related topics
 
-- [Add Managed Google Play apps to Android Enterprise devices with Intune](/mem/intune/apps/apps-add-android-for-work)
+- [Add Managed Google Play apps to Android Enterprise devices with Intune](./apps-add-android-for-work.md)

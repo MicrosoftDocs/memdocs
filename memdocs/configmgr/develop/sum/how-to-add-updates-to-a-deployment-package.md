@@ -1,5 +1,6 @@
 ---
 title: "Add Updates to a Deployment Package"
+description: You add updates to a software updates deployment package, in Configuration Manager, by obtaining an instance of the SMS_SoftwareUpdatesPackage class and by using the AddUpdateContent method.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

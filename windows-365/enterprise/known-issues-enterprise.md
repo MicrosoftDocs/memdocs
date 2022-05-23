@@ -53,10 +53,10 @@ Windows 365 provisioning failures may occur because both:
 
 **Troubleshooting steps**: 
 
-1. Did the on-premises network connection (OPNC) fail with the following error: `"An internal error occurred. The virtual machine deployment timed out."`?
+1. Did the Azure network connection (ANC) fail with the following error: `"An internal error occurred. The virtual machine deployment timed out."`?
 2. If yes, review the related GPO. Is PowerShell Execution set to AllSigned?
 3. If it is, either remove the GPO or reset the PowerShell Execution to RemoteSigned/ByPass.
-4. Retry the OPNC health check. If this succeeds, retry provisioning.
+4. Retry the ANC health check. If this succeeds, retry provisioning.
 
 ## Default and custom Enrollment Status Page profiles for Windows 365 Cloud PCs
 
@@ -71,10 +71,10 @@ The following device compliance settings report as **Not applicable** when being
 - **Trusted Platform Module (TPM)**
 - **Require encryption of data storage on device.**
 
-The following device compliance settings report as **Not Compliant** when being evaluated for a Cloud PC:
+The following device compliance settings may report as **Not Compliant** when being evaluated for a Cloud PC:
 
 - **Require BitLocker**
-- **Require Secure Boot to be enabled on the device.**
+- **Require Secure Boot to be enabled on the device.** Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now rolling out in Asia Pacific (APAC) regions. This feature will roll out to all customers over the next few months.
 
 **Troubleshooting steps**: 
 

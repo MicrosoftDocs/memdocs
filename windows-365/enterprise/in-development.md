@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 04/12/2022
+ms.date: 05/12/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -56,26 +56,23 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 <!--## App management-->
 
-<!-- ***********************************************-->
-## Device management
-
-### Change Cloud PC time zone<!--38902639 -->
-
-Non-admin users will be able to change their Cloud PC’s time zone.
-
-### On-premises network connection getting renamed to Azure network connection<!--38457869 -->
-
-The term **on-premises network connection** will be renamed to **Azure network connection** in all user interfaces, documentation, and communications.
+<!--***********************************************-->
+<!--## Device management
+-->
 
 <!-- ***********************************************-->
 ## Device provisioning
 
 ### Provision Cloud PCs with Secure Boot<!--38012584-->
 
-You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality.
+You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality. Europe and North American regions will receive this feature within the next few months.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
+
+### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
+
+You’ll be able to review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues.
 
 ### End-user error log collection<!--38195529-->
 

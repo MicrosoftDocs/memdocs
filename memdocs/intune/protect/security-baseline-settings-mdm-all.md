@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Intune security baselines settings for Windows 10/11 MDM
+title: Settings list for the Windows 10/11 MDM security baseline in Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Review the defaults and available settings for the different versions of the Windows MDM security baseline that you can manage with Microsoft Intune.
+description: View a list of the settings in the Microsoft Intune security baseline for Windows 10/11 MDM security. This list includes the default values for settings as found in the default configuration of the baseline.
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 05/03/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,9 +31,9 @@ ms.collection:
 ---
 
 
-# Security baseline settings Windows 10 and later with Intune
+# Settings in the Windows 10/11 MDM security baseline in Intune 
 
-View the security baseline settings that Microsoft Intune supports for devices that run Windows 10 and Windows 11. The default values for settings in this baseline represent the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
+View the settings that are part of the Windows 10/11 MDM security baseline that you can deploy with Microsoft Intune. This article details the settings in the available versions of the baseline and the default values for each setting. The default baseline configuration represents the recommended configuration for applicable devices. Defaults for one baseline might not match defaults from other security baselines, or from other versions of this baseline.
 
 - To learn about using security baselines with Intune and how to upgrade the baseline version in your security baseline profiles, see [Use security baselines](security-baselines.md).
 - The most recent baseline version is **Security Baseline for Windows 10 and later for November 2021**
@@ -60,7 +60,7 @@ This version of the security baseline replaces previous versions. Profiles that 
 - Are now read-only. You can continue to use those profiles, but can't edit them to change their configuration.
 - Can be updated to the latest version. After you update to the current baseline version, you can edit the profile to modify settings.
 
-To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action that's available when viewing the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
+To understand what's changed with this version of the baseline from previous versions, use the [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) action. THis action is available when you view the *Versions* pane for this baseline. Be sure to select the version of the baseline that you want to view.
 
 To update a security baseline profile to the latest version of that baseline, see [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile).
 
@@ -81,8 +81,8 @@ To update a security baseline profile to the latest version of that baseline, se
 
 For more information, see [Policy CSP - AppRuntime](/windows/client-management/mdm/policy-csp-appruntime) in the Windows documentation.
 
-- **Microsoft accounts optional for Windows Store apps**:  
-  This policy setting lets you control whether Microsoft accounts are optional for Windows Store apps that require an account to sign in. This policy only affects Windows Store apps that support it. If you enable this policy setting, Windows Store apps that typically require a Microsoft account to sign in will allow users to sign in with an enterprise account instead. If you disable or don't configure this policy setting, users must sign in with a Microsoft account.  
+- **Microsoft accounts optional for Microsoft store apps**:  
+  This policy setting lets you control whether Microsoft accounts are optional for Microsoft store apps that require an account to sign in. This policy only affects Microsoft store apps that support it. If you enable this policy setting, Microsoft store apps that typically require a Microsoft account to sign in will allow users to sign in with an enterprise account instead. If you disable or don't configure this policy setting, users must sign in with a Microsoft account.  
   [Learn more](/windows/client-management/mdm/policy-csp-appruntime#appruntime-allowmicrosoftaccountstobeoptional)
   
   **Default**: Enabled
@@ -206,7 +206,7 @@ For more information, see [Policy CSP - ApplicationManagement](/windows/client-m
   **Default**: Success
 
 - **Privilege Use Audit Sensitive Privilege Use (Device)**:  
-  This policy setting allows you to audit events generated when sensitive privileges (user rights) are used such as the following: A privileged service is called. One of the following privileges are called: Act as part of the operating system. Back up files and directories. Create a token object. Debug programs. Enable computer and user accounts to be trusted for delegation. Generate security audits. Impersonate a client after authentication. Load and unload device drivers. Manage auditing and security log. Modify firmware environment values. Replace a process-level token. Restore files and directories. Take ownership of files or other objects. If you configure this policy setting, an audit event is generated when sensitive privilege requests are made. Success audits record successful requests and Failure audits record unsuccessful requests. If you don't configure this policy setting, no audit event is generated when sensitive privilege requests are made.
+  This policy setting allows you to audit events generated when sensitive privileges (user rights) are used such as the following: A privileged service is called. One of the following privileges is called: Act as part of the operating system. Back up files and directories. Create a token object. Debug programs. Enable computer and user accounts to be trusted for delegation. Generate security audits. Impersonate a client after authentication. Load and unload device drivers. Manage auditing and security log. Modify firmware environment values. Replace a process-level token. Restore files and directories. Take ownership of files or other objects. If you configure this policy setting, an audit event is generated when sensitive privilege requests are made. Success audits record successful requests and Failure audits record unsuccessful requests. If you don't configure this policy setting, no audit event is generated when sensitive privilege requests are made.
 
   **Default**: Success and Failure
 
@@ -402,7 +402,7 @@ For more information, see [Policy CSP - DeviceGuard](/windows/client-management/
 
     **Default**: Yes
 
-  - **Block list**
+  - **Block list**: 
     Manage a list of device setup class globally unique identifiers that for device drivers that Windows is prevented from installing.
  
 ::: zone-end
@@ -506,7 +506,7 @@ For more information, see [Policy CSP - DeviceLock](/windows/client-management/m
     *A setting of Yes prevents use of simple passwords.*
 
 - **Password minimum age in days**:  
-  The Minimum password age policy setting determines the how long (in days) that a password must be used before the user can change it. You can set a value between 1 and 998 days, or you can allow password changes immediately by setting the number of days to 0. The minimum password age must be less than the Maximum password age, unless the maximum password age is set to 0, indicating that passwords will never expire. If the maximum password age is set to 0, the minimum password age can be set to any value between 0 and 998.  
+  The Minimum password age policy setting determines how long (in days) that a password must be used before the user can change it. You can set a value between 1 and 998 days, or you can allow password changes immediately by setting the number of days to 0. The minimum password age must be less than the Maximum password age, unless the maximum password age is set to 0, indicating that passwords will never expire. If the maximum password age is set to 0, the minimum password age can be set to any value between 0 and 998.  
   [Learn more](/windows/client-management/mdm/policy-csp-devicelock#devicelock-minimumpasswordage)
 
   **Default**: 1
@@ -521,7 +521,8 @@ For more information, see [Policy CSP - DeviceLock](/windows/client-management/m
   Disables the lock screen slide show settings in PC Settings and prevents a slide show from playing on the lock screen. By default, users can enable a slide show that will run after they lock the machine. If you enable this setting, users can't modify slide show settings in PC Settings, and no slide show can start.  
   [Learn more](/windows/client-management/mdm/policy-csp-devicelock#devicelock-preventlockscreenslideshow)
 
-  **Default**: Enabled *A setting of Enabled prevents slide shows from running.*
+  **Default**: Enabled. 
+![Note] A setting of Enabled prevents slide shows from running.
 
 ## DMA Guard
 
@@ -737,7 +738,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Disable
 
-- **Internet Explorer internet zone allow only approved domains to use tdc ActiveX controls**:  
+- **Internet Explorer internet zone allows only approved domains to use tdc ActiveX controls**:  
   This policy setting controls if the user can run the TDC ActiveX control on websites. If you enable this policy setting, the TDC ActiveX control won't run from websites in this zone. If you disable this policy setting, the TDC Active X control will run from all sites in this zone.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstousetdcactivexcontrol)
 
@@ -879,7 +880,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   - *Automatic sign in only in Intranet zone* - Use this option to query users for user IDs and passwords in other zones. After a user is queried, these values can be used silently for the rest of the session.
 
-  - *Automatic sign in with current user name and password*- Use this option to attempt sign in using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the sign in uses the user's network user name and password for sign in. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password.
+  - *Automatic sign in with current user name and password* - Use this option to attempt sign in using Windows NT Challenge Response (also known as NTLM authentication). If the server supports Windows NT Challenge Response, the user's network user name and password are used for sign-in. If the server doesn't support Windows NT Challenge Response, the user is queried to provide the user name and password.
 
   If you disable this policy setting, sign-in is set to *Automatic sign in only in Intranet zone*. If you don't configure this policy setting, sign-in is set to *Prompt* for username and password.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszonelogonoptions)
@@ -946,7 +947,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Disabled
 
-- **Internet Explorer internet zone allow VBscript to run**:  
+- **Internet Explorer internet zone allows VBscript to run**:  
   This policy setting lets you decide whether VBScript can run on pages in specific Internet Explorer zones. Options include:
 
   - *Enable* - VBScript runs on pages in specific zones, without any interaction.
@@ -959,7 +960,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Disable
 
-- **Internet Explorer restricted zone allow only approved domains to use tdc Active X controls**:  
+- **Internet Explorer restricted zone allows only approved domains to use tdc Active X controls**:  
   This policy setting controls if the user can run the TDC ActiveX control on websites. If you enable this policy setting, the TDC ActiveX control won't run from websites in this zone. If you disable this policy setting, the TDC Active X control will run from all sites in this zone.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowonlyapproveddomainstousetdcactivexcontrol)
 
@@ -1113,16 +1114,16 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
   This policy setting allows you to manage permissions for Java applets. If you enable this policy setting, you can choose options from the drop-down box. Custom, to control permissions settings individually. Low Safety enables applets to do all operations. Medium Safety enables applets to run in their sandbox (an area in memory outside of which the program can't make calls), plus capabilities like scratch space (a safe and secure storage area on the client computer) and user-controlled file I/O. High Safety enables applets to run in their sandbox. Disable Java to prevent any applets from running. If you disable this policy setting, Java applets can't run. If you don't configure this policy setting, Java applets are disabled.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-lockeddownrestrictedsiteszonejavapermissions)
 
-  **Default**: Disable java
+  **Default**: Disable Java
 
-- **Internet Explorer internet zone allow only approved domains to use ActiveX controls**:  
+- **Internet Explorer internet zone allows only approved domains to use ActiveX controls**:  
   This policy setting controls if the user is prompted to allow ActiveX controls to run on websites other than the website that installed the ActiveX control. If you enable this policy setting, the user is prompted before ActiveX controls can run from websites in this zone. The user can choose to allow the control to run from the current site or from all sites. If you disable this policy setting, the user doesn't see the per-site ActiveX prompt, and ActiveX controls can run from all sites in this zone.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-internetzoneallowonlyapproveddomainstouseactivexcontrols)
 
   **Default**: Enabled
 
-- **Internet Explorer include all network paths**:  
-  Internet Explorer include all network paths.  
+- **Internet Explorer includes all network paths**:  
+  Internet Explorer includes all network paths.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-includeallnetworkpaths)
 
   **Default**: Disabled
@@ -1169,7 +1170,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Prompt
 
-- **Internet Explorer restricted zone allow VBScript to run**:  
+- **Internet Explorer restricted zone allows VBScript to run**:  
   This policy setting allows you to manage whether VBScript can run on pages from the specified zone in Internet Explorer. If you selected Enable in the drop-down box, VBScript can run without user intervention. If you selected Prompt in the drop-down box, users are asked to choose whether to allow VBScript to run. If you selected Disable in the drop-down box, VBScript is prevented from running. If you don't configure or disable this policy setting, VBScript is prevented from running.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowvbscripttorunininternetexplorer)
 
@@ -1337,7 +1338,7 @@ For more information, see [Policy CSP - InternetExplorer](/windows/client-manage
 
   **Default**: Enabled
 
-- **Internet Explorer restricted zone allow only approved domains to use Active X controls**:  
+- **Internet Explorer restricted zone allows only approved domains to use Active X controls**:  
   This policy setting controls if the user is prompted to allow ActiveX controls to run on websites other than the website that installed the ActiveX control. If you enable this policy setting, the user is prompted before ActiveX controls can run from websites in this zone. The user can choose to allow the control to run from the current site or from all sites. If you disable this policy setting, the user doesn't see the per-site ActiveX prompt, and ActiveX controls can run from all sites in this zone.  
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer#internetexplorer-restrictedsiteszoneallowonlyapproveddomainstouseactivexcontrols)
 
@@ -1659,7 +1660,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 - **Cloud-delivered protection level**:  
   CSP: [Defender/CloudBlockLevel](/windows/client-management/mdm/policy-csp-defender#defender-cloudblocklevel)
 
-  Specify the level of cloud-delivered protection. Not Configured uses the default Microsoft Defender Antivirus blocking level and provides strong detection without increasing the risk of detecting legitimate files. High applies a strong level of detection. High + uses the High level and applies addition protection measures (may impact client performance). Zero tolerance blocks all unknown executables While unlikely, setting to High may cause some legitimate files to be detected. 
+  Specify the level of cloud-delivered protection. Not Configured uses the default Microsoft Defender Antivirus blocking level and provides strong detection without increasing the risk of detecting legitimate files. High applies a strong level of detection. High + uses the High level and applies addition protection measures (may impact client performance). Zero tolerance blocks all unknown executables. While unlikely, setting to High may cause some legitimate files to be detected. 
 
   **Default**: Not Configured
 
@@ -1707,7 +1708,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 - **Turn on cloud-delivered protection**:  
   CSP: [Defender/AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  When set to Yes, Defender will send information to Microsoft about any problems it finds. If set to Not configured, the client will return to default which enables the feature but allows the user to disable it.
+  When set to Yes, Defender will send information to Microsoft about any problems it finds. If set to Not configured, the client will return to default, which enables the feature but allows the user to disable it.
 
   **Default**: Yes
 
@@ -1804,7 +1805,7 @@ This rule prevents attacks by blocking Adobe Reader from creating additional pro
 - **Defender sample submission consent type**:  
   [Defender/SubmitSamplesConsent](/windows/client-management/mdm/policy-csp-defender#defender-submitsamplesconsent)
 
-  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not, (and if the user has specified never to ask), the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
+  Checks for the user consent level in Microsoft Defender to send data. If the required consent has already been granted, Microsoft Defender submits them. If not, and if the user has specified never to ask, the UI is launched to ask for user consent (when Defender/AllowCloudProtection is allowed) before sending data.
 
   **Default**: Send safe samples automatically
 

@@ -62,11 +62,14 @@ Proactive remediations requires the [licensing for Endpoint analytics](enroll-in
 - You can have up to 200 script packages.
    - A script package can contain a detection script only or both a detection script and a remediation script.
 - Ensure the scripts are encoded in UTF-8.
+  - If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 - The maximum allowed output size limit is 2048 characters.
 - If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, the script runs using the device's PowerShell execution policy. The default execution policy for Windows client computers is **Restricted**. The default execution for Windows Server devices is **RemoteSigned**. For more information, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
    - Scripts built into Proactive remediations are signed and the certificate is added to the **Trusted Publishers** certificate store of the device.
    - When using third-party scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the certificate authority must be trusted by the device.
   - Scripts without **Enforce script signature check** use the **Bypass** execution policy.
+- Don't put secrets in scripts. Consider using parameters to handle secrets instead. <!--13957089-->
+- Don't put reboot commands in detection or remediations scripts. <!--13957089-->
 
 ## <a name="bkmk_prs_deploy"></a> Deploy built-in script packages
 

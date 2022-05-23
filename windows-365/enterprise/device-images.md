@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 05/18/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -36,7 +36,7 @@ Windows 365 uses both default and custom operating system images to automaticall
 
 Both marketplace and custom images must meet the following requirements:
 
-- Windows 10 Enterprise version 1909 or later, excluding 2004.
+- Windows 10 Enterprise version 20H2 or later, excluding 2004.
 - Windows 11 Enterprise 21H2.
 - Generation 2 images.
     > [!Note]
@@ -64,8 +64,8 @@ There are two sets of images available to choose from across the different versi
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
   - Microsoft Teams (Teams).
-  - Edge settings like Sleeping Tabs, Startup boost, and First Time optimizations based on Azure AD and synchronization.
-  - Microsoft Outlook first-time configuration settings (auto log on based on Azure AD profile, support for other profiles).
+  - Edge settings like sleeping tabs, startup boost, and first time optimizations based on Azure AD and synchronization.
+  - Microsoft Outlook first-time configuration settings (auto log-on based on Azure AD profile, support for other profiles).
 - **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
   - Services optimized for virtualization.
   - UWP packages removed.
@@ -111,7 +111,7 @@ When you upload a custom device image, Windows 365:
 2. Runs the following validation checks on the image:
     1. Verifies all the Windows 365 image requirements are met.
     2. Deploys a virtual machine and makes sure that the images can be booted and provisioned as a Cloud PC.
-3. If you have a Hybrid Azure AD Join connection, Windows 365 replicates the image across all Azure regions where you have an on-premises network connection.
+3. If you have a Hybrid Azure AD Join connection, Windows 365 replicates the image across all Azure regions where you have an Azure network connection.
 4. If you have an Azure AD Join connection, Windows 365 replicates the image to the provisioned region during provisioning.
 
 <!-- ########################## -->

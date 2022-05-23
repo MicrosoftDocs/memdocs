@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/13/2022
+ms.date: 05/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,11 +85,19 @@ The Certificate Connector for Microsoft Intune supports:
 
 ## Lifecycle
 
-Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
+Periodically, updates  to the certificate connector are released. Announcements for new connector updates, including the version and release date for each update, appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
 
-Intune supports each connector release for six months after it's released. After the six months have passed, the connector is no longer supported and might not function as expected.
+**Each new connector release**:
 
-If you don’t allow the connector to automatically update, plan to manually update it to the latest version at the first opportunity.
+- Is supported for six months after its release date. During this period, automatic updates can install a newer connector version. Updated connector versions can include but aren't limited to bug fixes and performance and feature improvements.
+
+- If an out of support connector fails, you’ll need to update to the latest supported version.
+
+- If you block the automatic update of the connector, plan to manually update the connector within six months, before support for the installed version ends. After support ends, you’ll need to update the connector to a version that remains in support to receive support for problems with the connector.
+
+- Connectors that are out of support will continue to function for up to 18 months after its release date. After 18 months, a connectors functionality might fail due to service level improvements, updates, or in addressing common security vulnerabilities that might surface in the future.
+
+For example, the connector version 6.2203.12.0 that released on May 4, 2022, will drop from support on November 4, 2022.  The same connector should continue to function (though not be supported) until November 2023. After November 2023 the connector might stop communicating with Intune.
 
 ### Automatic update
 
@@ -140,7 +148,7 @@ The following logs are available and default to 50 MB, and have automatic archiv
 - **Admin Log** - This log contains one log event per request to the connector. Events include either a *success* with information about the request, or an *error* with information about the request and the error.
 - **Operational Log** - This log displays additional information to that found in the Admin log, and can be of use in debugging issues. This log also displays ongoing operations instead of single events.
 
-In addition to the default log level, you can enable debug logging for each log to obtain additional details.
+In addition to the default log level, you can enable debug logging for each log to obtain more details.
 ### Event IDs
 
 All events have one of the following IDs:
@@ -267,7 +275,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
     Successfully uploaded PKCS Import request results to Intune.
 
   - **Event ID: 2101** - *PkcsImportUploadFailure*  
-    Failed to upoload PKCS request results to Intune.
+    Failed to upload PKCS request results to Intune.
 
   - **Event ID: 2102** - *PkcsImportUploadedRequest*  
     Successfully uploaded a PKCS Import request to Intune.
@@ -361,6 +369,13 @@ New updates for the connector can take a week or more to become available for ea
 
 > [!IMPORTANT]  
 > Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. This status does not affect functionality. Starting June 2022, such connectors will not be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
+
+### May 4, 2022
+
+Version **6.2203.12.0** - Changes in this release:
+
+- Support CNG providers for client authentication certificates
+- Improved support for automatic renewal of client authentication certificates
 
 ### March 10, 2022
 

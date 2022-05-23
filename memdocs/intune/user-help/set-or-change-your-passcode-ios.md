@@ -23,7 +23,7 @@ searchScope:
 ROBOTS:  
 #audience:
 
-#ms.reviewer: esmich
+ms.reviewer: esmich
 #ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-enduser 

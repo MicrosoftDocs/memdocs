@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/19/2021
+ms.date: 04/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-#ms.reviewer: dougeby
+ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -63,7 +63,6 @@ This article shows you how to view all your devices, and their properties in the
    - **Device compliance** lists all assigned compliance policies, and if the device is compliant or not compliant.
    - **Device configuration** shows all device configuration policies assigned to the device, and if the policy succeeded or failed.
    - **App configuration**
-   - **Endpoint security configuration**
    - **Recovery keys** shows available BitLocker keys found for the device
    - **Managed apps** lists all the managed apps that Intune configured and has deployed to the device.
 

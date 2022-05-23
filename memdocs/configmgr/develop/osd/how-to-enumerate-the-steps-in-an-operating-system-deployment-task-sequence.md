@@ -1,5 +1,6 @@
 ---
 title: "Enumerate the Steps in an OS Deployment Task Sequence"
+description: You enumerate an operating system deployment task sequence, in Configuration Manager, by using a recursive method to scan through the task sequence steps and groups.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

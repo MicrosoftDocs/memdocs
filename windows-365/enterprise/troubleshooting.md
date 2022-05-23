@@ -71,9 +71,9 @@ If the language pack installation failed, try reprovisioning the Cloud PC to ins
 
 ## Networking
 
-The [on-premises network connection checks](health-checks.md) help to make sure that network connectivity is working. Always retry the on-premises network connection if you suspect networking issues might be causing issues. Using the on-premises network connection checks helps make sure that repeated and consistent checks are used as the first troubleshooting step.
+The [Azure network connection checks](health-checks.md) help to make sure that network connectivity is working. Always retry the Azure network connection if you suspect networking issues might be causing issues. Using the Azure network connection checks helps make sure that repeated and consistent checks are used as the first troubleshooting step.
 
-Keep in mind that the on-premises network connection checks are validating the infrastructure configuration of your environment. They don't run checks to validate any extra configuration or applications deployed to Cloud PCs after provisioning by Microsoft Endpoint Manager or third party agents. These agents or configurations can introduce other issues that the on-premises network connection can't test for ahead of provisioning.
+Keep in mind that the Azure network connection checks are validating the infrastructure configuration of your environment. They don't run checks to validate any extra configuration or applications deployed to Cloud PCs after provisioning by Microsoft Endpoint Manager or third party agents. These agents or configurations can introduce other issues that the Azure network connection can't test for ahead of provisioning.
 
 For example, if you deploy a VPN client to all devices in Microsoft Endpoint Manager, make sure that this client doesn’t:
 
@@ -84,9 +84,9 @@ Finally, consider temporarily deploying a test Azure virtual machine to the Azur
 
 ```Test-NetConnection <hostname> -Port 443```
 
-## On-premises network connections
+## Azure network connections
 
-For suggested remediations on, see [Troubleshoot on-premises network connections](troubleshoot-on-premises-network-connection.md).
+For suggested remediations on, see [Troubleshoot Azure network connections](troubleshoot-azure-network-connection.md).
 
 ## Provisioning issues
 
@@ -94,7 +94,7 @@ For suggested remediations on, see [Troubleshoot provisioning errors](provisioni
 
 ## Troubleshooting by end users
 
-The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#end-user-actions)
+The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#user-actions)
 
 ## Video playback improvements
 
@@ -104,10 +104,10 @@ For Cloud PCs, MMR is supported on the following platforms: Windows, macOS, Chro
 
 For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection).
 
-MMR is in [public preview](/windows-365/public-preview) for Windows 365 Cloud PCs.
+MMR is in [public preview](../public-preview.md) for Windows 365 Cloud PCs.
 
 
 <!-- ########################## -->
 ## Next steps
 
-[Troubleshoot on-premises network connections](troubleshoot-on-premises-network-connection.md).
+[Troubleshoot Azure network connections](troubleshoot-azure-network-connection.md).

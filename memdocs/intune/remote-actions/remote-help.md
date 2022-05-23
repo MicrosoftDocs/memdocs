@@ -19,7 +19,7 @@ ms.assetid:
 
 #ROBOTS:
 #audience:
-#ms.reviewer: nehashah
+ms.reviewer: nehashah
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -127,15 +127,16 @@ For users that opted out of automatic updates, when an update to remote help is 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
 
-[!NOTE]
-- On April 5th, 2022, existing users of remote help will see a recommended upgrade screen when they open the remote help app. Users will be able to continue using remote help without upgrading. 
-- On April 12th, 2022, existing users of remote help will see a mandatory upgrade screen when they open the remote help app. They will not be able to proceed until they upgrade to the latest version of remote help.
+> [!NOTE]
+> - In May 2022, existing users of remote help will see a recommended upgrade screen when they open the remote help app. Users will be able to continue using remote help without upgrading.
+> - On May 23, 2022, existing users of remote help will see a mandatory upgrade screen when they open the remote help app. They will not be able to proceed until they upgrade to the latest version of remote help.
+> - Remote help will now require Microsoft Edge WebView2 Runtime. During the remote help installation process, if Microsoft Edge WebView2 Runtime is not installed on the device, then remote help installation will install it. When uninstalling remote help, Microsoft Edge WebView2 Runtime will not be uninstalled.
 
 ### Download remote help
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **4.0.0.0**
+The most recent version of remote help is **4.0.1.7**
 
 ### Deploy remote help as a Win32 app
 
@@ -184,7 +185,7 @@ To configure your tenant to support remote help, review and complete the followi
 
 ### Task 1 – Enable remote help
 
-1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help (preview)**.
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Remote help**.
 
 2. On the **Settings** tab:
    1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Enabled*.
@@ -205,7 +206,9 @@ The following Intune RBAC permissions manage the use of the remote help app. Set
 By default, the built-in **Help Desk Operator** role sets all of these permissions to **Yes**. You can use the built-in role or create custom roles to grant only the remote tasks and remote help app permissions that you want different groups of users to have. For more information on using Intune RBAC, see [Role-based access control](../fundamentals/role-based-access-control.md).
 
 > [!IMPORTANT]  
-> When a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, the sharer is automatically signed out of their device. Therefore, it is important for helpers who are granted these permissions to understand the impact this action can have. The sharer should plan to save any active work to prevent a loss of unsaved work.
+> During a remote help session, when a helper has the *Elevation* permission, the helper will not automatically be able to view the sharer's UAC prompt. Instead, for a non-admin sharer, a button will appear on the helper's remote help toolbar that will allow them to request access to the UAC prompt on the sharer's device. Once requested and accepted, the helper will be able to perform elevated actions on the sharer's device. 
+> When the sharer ends the remote help session, they will be shown a dialog box that will warn them that if they continue, they will be logged off.
+> If the helper ends the session, the sharer will not be logged off.
 
 ### Task 3 – Assign user to roles
 
@@ -235,7 +238,7 @@ The use of remote help depends on whether you're requesting help or providing he
 To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your remote help instance to establish a connection to the helper's instance of remote help.
 
 > [!TIP]  
-> To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, you are signed out of your device.
+> To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to **Yes** also uses *Full control*, you are signed out of your device.
 
 As a sharer, when you’ve requested help and both you and the helper are ready to start:
 
@@ -284,7 +287,7 @@ As a helper, after receiving a request from a user who wants assistance by using
 
 You can monitor the use of remote help from within Microsoft Endpoint Manager.
 
-1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Remote help (preview)**.
+1. Sign into the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant admin** > **Remote help**.
 
 2. On the Monitor tab, you’ll see a count of active sessions and historical data about past sessions.
 
@@ -305,6 +308,37 @@ Remote help logs data during installation and during remote help sessions, which
 **Operational logs** - During use of remote help, operational details are logged in the Windows Event Viewer:
 
 - Event Viewer > Application and Services > Microsoft > Windows > RemoteHelp
+
+## Installation details
+
+Remote help will create the following firewall inbound rules:
+- Quick Assist Firewall Exception
+- Quick Assist RDP Firewall Exception
+- Remote help Firewall Exception
+
+## Languages Supported
+
+Remote help is supported in the following languages:
+- Czech
+- Danish
+- Dutch
+- English
+- Finnish
+- French
+- German
+- Greek
+- Hungarian
+- Italian
+- Japanese
+- Korean
+- Norwegian
+- Polish
+- Portuguese (Portugal)
+- Romanian
+- Russian
+- Spanish
+- Swedish
+- Turkish
 
 ## Known Issues
 

@@ -103,7 +103,7 @@ You can set up Intune in several ways to manage and help protect your company's 
 --->
 
 ## Language support
-Intune runs in the Azure portal, which supports the following languages: Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, French, German, Hungarian, Italian, Japanese, Korean, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Spanish, Swedish, and Turkish.
+Intune runs in the Azure portal, which supports the following languages: Chinese (Simplified), Chinese (Traditional), Czech, Dutch, English, French, German, Hungarian, Indonesian, Italian, Japanese, Korean, Polish, Portuguese (Brazil), Portuguese (Portugal), Russian, Spanish, Swedish, and Turkish.
 
 In addition to all the languages that the Azure portal supports, the Intune admin Console and the user-facing mobile experiences support Danish, Greek, Finnish, Norwegian, and Romanian.
 
