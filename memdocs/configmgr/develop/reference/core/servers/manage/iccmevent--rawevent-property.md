@@ -1,6 +1,7 @@
 ---
 title: "ICCMEvent::RawEvent Property"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, ICcmEvent::RawEvent is a read-only property that indicates information to add to a raw event."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

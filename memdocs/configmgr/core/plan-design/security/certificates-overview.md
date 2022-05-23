@@ -77,7 +77,7 @@ For more information on how to install clients with a copy of the site server si
 
 <!--9217033-->
 
-Configuration Manager uses self-signed certificates for client identity and to help protect communication between the client and site systems. When you update the site and clients to version 2107 or later, the client stores its certificate from the site in a hardware-bound key storage provider (KSP). This KSP is typically the trusted platform module (TPM). The certificate is also marked non-exportable.
+Configuration Manager uses self-signed certificates for client identity and to help protect communication between the client and site systems. When you update the site and clients to version 2107 or later, the client stores its certificate from the site in a hardware-bound key storage provider (KSP). This KSP is typically the trusted platform module (TPM) at least version 2.0. The certificate is also marked non-exportable.
 
 If the client also has a PKI-based certificate, it continues to use that certificate for TLS HTTPS communication. It uses its self-signed certificate for signing messages with the site. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md).
 
@@ -86,7 +86,7 @@ If the client also has a PKI-based certificate, it continues to use that certifi
 
 When you update to version 2107 or later, clients with PKI certificates will recreate self-signed certificates, but don't reregister with the site. Clients without a PKI certificate will reregister with the site, which can cause extra processing at the site. Make sure that your process to update clients allows for randomization. If you simultaneously update lots of clients, it may cause a backlog on the site server.
 
-Configuration Manager doesn't use TPMs that are known vulnerable. If a device has a vulnerable TPM, the client falls back to using a software-based KSP. The certificate is still not exportable.
+Configuration Manager doesn't use TPMs that are known vulnerable. For example, the TPM version is earlier than 2.0. If a device has a vulnerable TPM, the client falls back to using a software-based KSP. The certificate is still not exportable.
 
 OS deployment media doesn't use hardware-bound certificates, it continues to use self-signed certificates from the site. You create the media on a device that has the console, but then it can run on any client.
 

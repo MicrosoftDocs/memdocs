@@ -1,5 +1,6 @@
 ---
 title: "Add a Boot Image from a WIM File"
+description: You add a boot image from a Windows Image (WIM) file to Configuration Manager by creating an instance of SMS_BootImagePackage.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

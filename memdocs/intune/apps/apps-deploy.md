@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -60,6 +60,8 @@ The following table lists the various options for *assigning* apps to users and 
 > To receive app updates on devices that aren't enrolled with Intune, device users must go to their organization's Company Portal and manually install app updates.
 > 
 > *Available assignments* are only valid for user groups, not device groups.
+> 
+> If Managed Google Play Pre-Production track apps are assigned as required on Android Enterprise personally-owned work profile devices, they will not install on the device. To work around this, create two identical user groups and assign the pre-production track as "available" to one and "required" to the other. The result will be that the pre-production track successfully deploys to the device. 
 
 ## Assign an app
 
@@ -132,7 +134,8 @@ The information in the following table can help you understand the resulting int
 > When conflicts occur in **Uninstall on device removal** setting, the app is not removed from the device when the device is no longer managed.
 
 ## Managed Google Play app deployment to unmanaged devices
-For Android devices in a non-enrolled [App protection policies without enrollment (APP-WE)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#app-we) deployment scenario, you can use Managed Google Play to deploy store apps and line-of-business (LOB) apps to users. Managed Google Play apps targeted as **Available with or without enrollment** will appear in the Play Store app on the end user's device, and not in the Company Portal app. End user will browse and install apps deployed in this manner from the Play app. Because the apps are being installed from managed Google Play, the end user will not need to alter their device settings to allow app installation from unknown sources, which means the devices will be more secure. If the app developer publishes a new version of an app to Play that was installed on a user's device, the app will be automatically updated by Play. 
+
+For unenrolled Android devices, you can use Managed Google Play to deploy store apps and line-of-business (LOB) apps to users. Once deployed, you can use [Mobile Application Management (MAM)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam) to manage the applications. Managed Google Play apps targeted as **Available with or without enrollment** will appear in the Play Store app on the end user's device, and not in the Company Portal app. End user will browse and install apps deployed in this manner from the Play app. Because the apps are being installed from managed Google Play, the end user will not need to alter their device settings to allow app installation from unknown sources, which means the devices will be more secure. If the app developer publishes a new version of an app to Play that was installed on a user's device, the app will be automatically updated by Play. 
 
 Steps to assign a Managed Google Play app to unmanaged devices:
 

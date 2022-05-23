@@ -2,7 +2,7 @@
 title: Monitor the CMG
 titleSuffix: Configuration Manager
 description: Monitor clients and network traffic through the cloud management gateway (CMG).
-ms.date: 08/02/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -83,9 +83,9 @@ You can also configure thresholds for the amount of data that you want to store 
 
 1. Go to the **Alerts** tab to enable the threshold and alerts:
 
-    - Specify the **14-day data threshold for outbound data transfer** in gigabytes (GB). This threshold helps you to monitor the amount of data that transfers from the CMG to clients every two weeks. By default, this threshold is **10 GB**. The site raises warning and critical alerts when transfers reach values that you define. By default, these alerts occur at 50% and 90% of the threshold.
+    - Specify the **14-day data threshold for outbound data transfer** in gigabytes (GB). This threshold helps you to monitor the amount of data that transfers from the CMG to clients every two weeks. By default, this threshold is approximately **10 TB**. The default value is `10,000` GB. The site raises warning and critical alerts when transfers reach values that you define. By default, these alerts occur at 50% and 90% of the threshold.
 
-    - If the CMG is content-enabled, also specify a **storage alert threshold**. This threshold sets an upper limit on the amount of content to store on the CMG. By default, this threshold is **2 GB**. Configuration Manager generates warning and critical alerts when the remaining free space reaches the levels that you specify. By default, these alerts occur at 50% and 90% of the threshold.
+    - If the CMG is content-enabled, also specify a **storage alert threshold**. This threshold sets an upper limit on the amount of content to store on the CMG. By default, this threshold is approximately **2 TB**. The default value is `2,000` GB. Configuration Manager generates warning and critical alerts when the remaining free space reaches the levels that you specify. By default, these alerts occur at 50% and 90% of the threshold.
 
 > [!NOTE]
 > Alerts for the CMG depend on usage statistics from Azure, which can take up to 24 hours to become available. For more information about Storage Analytics for Azure, see [Storage Analytics](/azure/storage/common/storage-analytics).

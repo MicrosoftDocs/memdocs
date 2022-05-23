@@ -1,6 +1,7 @@
 ---
 title: "FormatModuleString Method"
 titleSuffix: "Configuration Manager"
+description: The FormatModuleString method, in Configuration Manager, loads string resources from the resource DLL. 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

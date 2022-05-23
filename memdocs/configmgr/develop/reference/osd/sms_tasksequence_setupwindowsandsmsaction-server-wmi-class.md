@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager SMS_TaskSequence_SetupWindowsAndSMSAction Windows Management Instrumentation (WMI) class to represent a task sequence action that specifies the additional installation properties.
 title: "SMS_TaskSequence_SetupWindowsAndSMSAction Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

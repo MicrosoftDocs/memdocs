@@ -1,6 +1,7 @@
 ---
 title: "PlatformApplicabilityConditions"
 titleSuffix: "Configuration Manager"
+description: "PlatformApplicabilityConditions contains a list of supported platforms for an operating system deployment driver in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

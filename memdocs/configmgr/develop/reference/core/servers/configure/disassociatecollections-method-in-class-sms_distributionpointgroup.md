@@ -1,6 +1,7 @@
 ---
 title: "DisassociateCollections Method"
 titleSuffix: "Configuration Manager"
+description: "The DisassociateCollections Windows Management Instrumentation class method removes a set of associated collections from this distribution point group." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

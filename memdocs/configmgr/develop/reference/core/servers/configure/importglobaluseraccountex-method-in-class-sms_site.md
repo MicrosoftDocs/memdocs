@@ -1,6 +1,7 @@
 ---
 title: "ImportGlobalUserAccountEx Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the ImportGlobalUserAccountEx WMI class method encrypts data that is shared in the hierarchy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

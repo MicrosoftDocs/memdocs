@@ -2,7 +2,7 @@
 title: Create stand-alone media
 titleSuffix: Configuration Manager
 description: Use stand-alone media to deploy the OS on a computer without a network connection.
-ms.date: 08/02/2021
+ms.date: 03/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
@@ -136,9 +136,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
         > [!IMPORTANT]  
         > If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
 
-    - **Staging folder**<!--1359388-->: The media creation process can require a lot of temporary drive space. By default this location is similar to the following path: `%UserProfile%\AppData\Local\Temp`. Starting in version 1902, to give you greater flexibility with where to store these temporary files, change this value to another drive and path.  
+    - **Staging folder**<!--1359388-->: The media creation process can require a lot of temporary drive space. By default this location is similar to the following path: `%UserProfile%\AppData\Local\Temp`. To give you greater flexibility with where to store these temporary files, change this value to another drive and path.  
 
-    - **Media label**<!--1359388-->: Starting in version 1902, add a label to task sequence media. This label helps you better identify the media after you create it. The default value is `Configuration Manager`. This text field appears in the following locations:  
+    - **Media label**<!--1359388-->: Add a label to task sequence media. This label helps you better identify the media after you create it. The default value is `Configuration Manager`. This text field appears in the following locations:  
 
         - If you mount an ISO file, Windows displays this label as the name of the mounted drive  
 
@@ -146,7 +146,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
         - Configuration Manager writes a text file called `MediaLabel.txt` to the root of the media. By default, the file includes a single line of text: `label=Configuration Manager`. If you customize the label for media, this line uses your custom label instead of the default value.  
 
-    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1906, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
+    - **Include autorun.inf file on media**<!-- 4090666 -->: Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
 
 5. On the **Security** page, specify the following options:
 
@@ -174,7 +174,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 10. On the **Distribution Points** page, specify the distribution points that contain the required content.  
 
-    Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) and [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute referenced content](distribute-task-sequence-referenced-content.md) and [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 11. On the **Customization** page, specify the following options:  
 

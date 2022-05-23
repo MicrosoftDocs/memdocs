@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent an association between the admin account and an RBA secured category in Configuration Manager using SMS_AdminCategory.
 title: "SMS_AdminCategory Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

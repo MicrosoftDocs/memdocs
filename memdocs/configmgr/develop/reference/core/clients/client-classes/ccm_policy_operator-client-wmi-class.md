@@ -1,4 +1,5 @@
 ---
+description: Learn how to store a compound expression that evaluates to either true or false in Configuration Manager using CCM_Policy_Operator.
 title: "CCM_Policy_Operator Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -38,7 +38,7 @@ You might have to back up and restore an Intune Automated Device Enrollment (ADE
 To back up and restore an iOS/iPadOS device, you must follow the Apple instructions:
 
 - To back up your device, see [How to back up your iPhone, iPad, and iPod touch](https://support.apple.com/HT203977).
-- To restore you device, see [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184).
+- To restore your device, see [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184).
 - To transfer data to a new device, see the following Apple support article:
     - [Use iCloud to transfer data from your previous iOS device to your new iPhone, iPad, or iPod touch](https://support.apple.com/HT210217)
 
@@ -69,7 +69,8 @@ While it links files and documents, it doesn't typically restore any user data a
 ### Specific to backup/restore
  
 - In most cases, your MDM enrollment state (at the time of backup) isn't of any special significance. However, in a migration scenario where you are moving from one MDM vendor to another, it is important to be aware of.  
-    - When restoring a backup, taken while enrolled in MDM vendor A and restoring it on the same device but attempting to enroll in Intune, this will result in failure. The restore will be successful (no errors) as explained above, however since the management profile from MDM vendor A has been restored, the device isn't under management by Intune. Attempting to manually enroll the device using the Company Portal app will result in an error when trying to install the new Intune management profile "The new MDM payload doesn't match the old payload". To remediate this error, you would need to remove the existing management profile belonging to MDM vendor A and then re-enroll into Intune using Company Portal. Migrating from one Intune tenant to another Intune tenant would exhibit the same behavior. 
+    - When restoring a backup, taken while enrolled in MDM vendor A and restoring it on the same device but attempting to enroll in Intune, this will result in failure. The restore will be successful (no errors) as explained above, however since the management profile from MDM vendor A has been restored, the device isn't under management by Intune. Attempting to manually enroll the device using the Company Portal app will result in an error when trying to install the new Intune management profile "The new MDM payload doesn't match the old payload". To remediate this error, you would need to remove the existing management profile belonging to MDM vendor A and then re-enroll into Intune using Company Portal. Migrating from one Intune tenant to another Intune tenant would exhibit the same behavior.
+    - To correctly and fully re-enroll an ADE device, a factory reset is required, and the device cannot be restored from its own backup (otherwise the ADE configuration and profiles in the backup will be applied). 
 
 ### Migrating without wiping the device
 

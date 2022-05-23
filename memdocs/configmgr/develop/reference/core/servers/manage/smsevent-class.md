@@ -1,6 +1,7 @@
 ---
 title: "SMSEvent Class"
 titleSuffix: "Configuration Manager"
+description: "The SmsEvent class represents a Configuration Manager event on the client. The class implements the ICcmEvent interface."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

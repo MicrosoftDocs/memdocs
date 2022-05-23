@@ -2,7 +2,7 @@
 title: Remove CAS
 titleSuffix: Configuration Manager
 description: Remove the central administration site (CAS) to simplify your Configuration Manager infrastructure to a single, standalone primary site.
-ms.date: 10/15/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -41,7 +41,6 @@ If the hierarchy consists of the central administration site (CAS) and a single 
   - Endpoint Protection point
   - Reporting services point
   - Data warehouse service point
-  - Cloud management gateway (CMG)
 
 - Turn off distributed views
 

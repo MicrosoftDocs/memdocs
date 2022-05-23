@@ -1,4 +1,5 @@
 ---
+description: The SMS_PowerAgentConfig Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that specifies power management settings on client computers. 
 title: "SMS_PowerAgentConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

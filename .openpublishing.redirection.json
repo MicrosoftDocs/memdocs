@@ -1,6 +1,36 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/configuration/vpn-settings-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/email-settings-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/device-restrictions-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/configuration/custom-settings-windows-phone-8-1.md",
+            "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/store-apps-windows-phone-8-1.md",
+            "redirect_url": "/mem/intune/apps/apps-add",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "memdocs/intune/apps/lob-apps-windows-phone.md",
+            "redirect_url": "/mem/intune/apps/apps-add",
+            "redirect_document_id": false
+        },      
+        {
             "source_path": "memdocs/intune/user-help/set-or-change-your-password-windows.md",
             "redirect_url": "https://support.microsoft.com/windows/windows-sign-in-options-and-account-protection-7b34d4cf-794f-f6bd-ddcc-e73cdf1a6fbf",
             "redirect_document_id": false
@@ -924,15 +954,20 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "windows-365/end-user-access-cloud-pc.md",
-            "redirect_url":"/windows-365/enterprise/end-user-access-cloud-pc",
+            "source_path": "windows-365/enterprise/end-user-access-cloud-pc.md",
+            "redirect_url":"windows-365/end-user-access-cloud-pc",
             "redirect_document_id": false
         },
         {
-            "source_path": "windows-365/end-user-hardware-requirements.md",
-            "redirect_url":"/windows-365/enterprise/end-user-hardware-requirements",
+            "source_path": "windows-365/enterprise/end-user-hardware-requirements.md",
+            "redirect_url":"windows-365/end-user-hardware-requirements",
             "redirect_document_id": false
-        },
+        },                
+        {
+            "source_path": "windows-365/business/get-users-started.md",
+            "redirect_url":"/windows-365/get-users-started",
+            "redirect_document_id": false
+        },                        
         {
             "source_path": "windows-365/get-cloud-pc-audit-logs-using-powershell.md",
             "redirect_url":"/windows-365/enterprise/get-cloud-pc-audit-logs-using-powershell",
@@ -1087,6 +1122,45 @@
             "source_path": "memdocs/configmgr/core/plan-design/hierarchy/state-messaging-system-center-configuration-manager.md",
             "redirect_url": "/mem/configmgr/core/plan-design/hierarchy/state-messages",
             "redirect_document_id": true
+        },
+        {
+            "source_path": "memdocs/configmgr/sum/deploy-use/uup-preview.md",
+            "redirect_url": "/mem/configmgr/sum/index",
+            "redirect_document_id": true
+        },
+        {
+            "source_path": "windows-365/enterprise/on-premises-network-connections.md",
+            "redirect_url": "/windows-365/enterprise/azure-network-connections",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/create-on-premises-network-connection.md",
+            "redirect_url": "/windows-365/enterprise/create-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/edit-on-premises-network-connection.md",
+            "redirect_url": "/windows-365/enterprise/edit-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/delete-on-premises-network-connection.md",
+            "redirect_url": "/windows-365/enterprise/delete-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/enterprise/troubleshoot-on-premises-network-connection.md",
+            "redirect_url": "/windows-365/enterprise/troubleshoot-azure-network-connection",
+            "redirect_document_id": false
+        },
+        {
+            "source_path": "windows-365/get-users-started.md",
+            "redirect_url":"/windows-365/end-user-access-cloud-pc",
+            "redirect_document_id": false
+        }, {
+            "source_path": "memdocs/intune/remote-actions/remote-assist-mobile-devices.md",
+            "redirect_url": "/mem/intune/remote-actions/remote-help",
+            "redirect_document_id": false
         }
     ]
 }

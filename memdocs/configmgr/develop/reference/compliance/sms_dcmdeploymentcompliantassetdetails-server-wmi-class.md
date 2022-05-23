@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent compliant asset details for a deployment using SMS_DCMDeploymentCompliantAssetDetails class.
 title: "SMS_DCMDeploymentCompliantAssetDetails Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

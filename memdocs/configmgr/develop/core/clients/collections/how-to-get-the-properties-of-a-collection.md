@@ -1,4 +1,5 @@
 ---
+description: Learn how to establish a connection and get the properties of a specific collection instance in Configuration Manager.
 title: "Get the Properties of a Collection"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -4,12 +4,32 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 01/19/2022
+ms.date: 04/19/2022
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.  
+
+### Plan for Change: iOS/iPadOS notifications will require minimum version 5.2203.0 of the Company Portal<!-- 14131757 -->
+
+We will be making service side updates to iOS/iPadOS notifications in Microsoft Intune's May (2205) service release that will require users to have updated to at least version 5.2203.0 of the iOS/iPadOS Company Portal (released in March 2022).
+
+#### How does this affect you or your users?
+
+There is no change in functionality for push notifications, however, users will need to update to at least version 5.2203.0 of the Company Portal. If users do not update the app prior to this change, they will not receive messages sent by your organization and will instead receive a notification telling them to update their app. Once they update their app, push notifications will resume.
+
+Scenarios that send push notifications to the Company Portal include:
+
+- [Custom notifications](../remote-actions/custom-notifications.md)
+- [Push notifications for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)
+- [Device ownership change push notifications](../apps/company-portal-app.md#device-ownership-notification)
+- [Delivery of S/MIME certificates for iOS to access Outlook](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/smime-outlook-for-ios-and-android)
+- [Derived credential enrollment](../protect/derived-credentials.md)
+
+#### How can you prepare?  
+
+The required version of the Company Portal has been released, so most users have likely [updated the app](../user-help/install-a-new-version-of-the-company-portal-app.md) and will not be impacted. However, you may want to notify users of this change to ensure all users continue to receive push notifications sent by your organization.
 
 ### Plan for change: Intune is moving to support Android 8.0 and later in January 2022<!-- 10946003 -->  
 
@@ -124,7 +144,7 @@ No action is needed at this time. Review our [In Development](../fundamentals/in
 
 ### Plan for change: Intune is moving to support iOS/iPadOS 13 and later<!--10144130-->
 
-Later this year, we expect Apple to release iOS 15. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as mobile application management), will require  iOS/iPadOS 13 and later shortly after iOS 15's release.
+Apple has released iOS 15. Microsoft Intune, including Intune Company Portal and Intune app protection policies (APP, also known as mobile application management), now requires iOS/iPadOS 13 and later.
 
 #### How does this affect you or your users?
 
@@ -158,30 +178,6 @@ This change will affect you only if you currently manage, or plan to manage, mac
 #### How can you prepare?
 
 Check your Intune reporting to see what devices or users might be affected. Go to **Devices** > **All devices** and filter by macOS. You can add more columns to help identify who in your organization has devices running macOS 10.14 or earlier. Ask your users to upgrade their devices to a supported OS version before the release of macOS 12.
-
-### Update your iOS Company Portal minimum version to v4.16.0<!-- 9964998 -->
-We recently released an updated Company Portal for iOS to the Apple Store, which is a required app update. The minimum supported version of the iOS Company Portal is now v4.16.0.
-
-#### How does this affect you or your users?
-Most users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users who have an earlier app version will be prompted to update to the latest Company Portal app.
-
-#### How can you prepare?
-
-If you've enabled the [Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised) device restriction setting, you'll likely need to push an update to the related devices. 
-
-Otherwise, no action is needed. But if you have a helpdesk, you might want to make it aware of the prompt to update the Company Portal app.
-
-### Plan for change: Intune is ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
-
-Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated. Support will end after January 31, 2022. When support ends, the standalone tunnel app will be removed from the Google Play store.
-
-#### How does this affect you or your users?
-
-If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before January 31, 2022. This move will ensure that users can still access the Tunnel Gateway configuration.
-
-#### How can you prepare?
-
-For your devices that run Android Enterprise and currently use the standalone tunnel app, plan to [replace the standalone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Microsoft Defender for Endpoint as the tunnel client app.
 
 ### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
 

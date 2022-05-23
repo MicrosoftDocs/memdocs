@@ -1,4 +1,5 @@
 ---
+description: Learn how to define configuration item presence types used in the discovery process with CIPresence enumeration.
 title: "CIPresence Enumeration"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

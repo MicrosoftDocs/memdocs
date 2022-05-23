@@ -1,4 +1,5 @@
 ---
+description: Learn how to define user information of an application in Configuration Manager with SMS_Windows8ApplicationUserInfo.
 title: "SMS_Windows8ApplicationUserInfo Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

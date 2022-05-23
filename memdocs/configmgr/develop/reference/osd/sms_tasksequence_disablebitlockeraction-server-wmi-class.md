@@ -1,6 +1,7 @@
 ---
 title: SMS_TaskSequence_DisableBitLockerAction class
 titleSuffix: Configuration Manager
+description: "An SMS Provider server class that represents a task sequence action, which disables the BitLocker encryption on the specified drive."
 ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

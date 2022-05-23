@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the gathered object entities from the Configuration Manager 2007 hierarchy using SMS_MigrationEntity.
 title: "SMS_MigrationEntity Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

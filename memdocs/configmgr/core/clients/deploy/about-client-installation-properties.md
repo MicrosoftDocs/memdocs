@@ -2,7 +2,7 @@
 title: Client installation parameters and properties
 titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
-ms.date: 02/16/2022
+ms.date: 03/03/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -605,6 +605,12 @@ If you set this property to `TRUE`, the client installer doesn't check the minim
 > If you install the Configuration Manager client without installing App-V, you can't [deploy virtual applications](../../../apps/get-started/deploying-app-v-virtual-applications.md).
 
 Example: `CCMSetup.exe IGNOREAPPVVERSIONCHECK=TRUE`
+
+### `MANAGEDINSTALLER`
+
+If you set this property to `1` then ccmsetup.exe and client.msi are set as managed installers. For more information, see [Automatically allow apps deployed by a managed installer with Windows Defender Application Control](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer).
+
+Example: `CCMSetup.exe MANGEDINSTALLER=1`
 
 ### `NOTIFYONLY`
 

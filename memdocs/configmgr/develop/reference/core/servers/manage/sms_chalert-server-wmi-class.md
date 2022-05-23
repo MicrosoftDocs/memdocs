@@ -1,6 +1,7 @@
 ---
 title: "SMS_CHAlert Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents client status alerts."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

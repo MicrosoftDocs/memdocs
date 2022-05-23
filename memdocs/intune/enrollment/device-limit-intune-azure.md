@@ -58,25 +58,24 @@ Azure device limit restrictions set the maximum number of devices that either Az
 
 If you have both Intune and Azure device limit restrictions set, the following table shows you what is applied based on your user affinity setting.
 
-| Device platform | User affinity | Azure applies | Intune applies |
-| ----- | ----- | ----- | ----- | ----- |
-| Android Enterprise personally-owned work profile | Yes | Yes | Yes|
-| Android Enterprise dedicated device | No | No | No |
-| Android Enterprise fully managed | Yes | Yes | Yes |
-| Android Enterprise corporate-owned work profile | Yes | Yes | Yes |
-| Android device administrator | Yes | Yes | Yes |
+| Device platform | User affinity | Azure applies | Intune applies |  
+| ----- | ----- | ----- | ----- |
+| Android Enterprise personally-owned work profile | Yes | Yes | Yes|  
+| Android Enterprise dedicated device | No | No | No |  
+| Android Enterprise fully managed | Yes | Yes | Yes |  
+| Android Enterprise corporate-owned work profile | Yes | Yes | Yes |  
+| Android device administrator | Yes | Yes | Yes |  
 | Android device administrator DEM | No | | No | 
-| iOS/macOS BYOD | Yes | Yes | Yes |
-| iOS/macOS Automated Device Enrollment (ADE) | Yes | Yes | Yes |
-| iOS/macOS ADE | No | Yes | No |
-| Windows BYOD | Yes | Yes | Yes |
-| Windows MD-only | | Yes | Yes |
-| Windows Azure AD joined| Yes | Yes | No |
-| Windows Autopilot | Yes | Yes | No |
-| Windows hybrid Azure AD joined | No | No | Yes |
-| Windows co-management | No | Yes | No |
-| Windows DEM | No | Yes | No |
-| Windows bulk enrollment | No | Yes | No |
+| iOS/macOS BYOD | Yes | Yes | Yes |  
+| iOS/macOS Automated Device Enrollment (ADE) | Yes | Yes | Yes |  
+| Windows BYOD | Yes | Yes | Yes |  
+| Windows MD-only | | Yes | Yes |  
+| Windows Azure AD joined| Yes | Yes | No |  
+| Windows Autopilot | Yes | Yes | No |  
+| Windows hybrid Azure AD joined | No | No | Yes |  
+| Windows co-management | No | Yes | No |  
+| Windows DEM | No | Yes | No |  
+| Windows bulk enrollment | No | Yes | No |  
 
 
 ## Android and iOS devices

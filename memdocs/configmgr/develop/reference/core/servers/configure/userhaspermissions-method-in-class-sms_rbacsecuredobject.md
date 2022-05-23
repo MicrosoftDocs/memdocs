@@ -1,6 +1,7 @@
 ---
 title: "UserHasPermissions Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the UserHasPermissions Windows Management Instrumentation class method determines whether the current user has the requested permissions for the specified object."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -5,7 +5,7 @@ description: The Configuration Manager console provides alerts and statuses to m
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -67,10 +67,12 @@ After you configure the alert settings, if the specified conditions occur, Confi
 
 1. Click the software update group or software update for which you want to monitor the deployment status.  
 
-1. On the **Home** tab, in the **Deployment** group, click **View Status**.  
+1. On the **Home** tab, in the **Deployment** group, click **View Status**. 
 
 > [!TIP]
-> Starting in version 2107, you can right-click the status of a deployment and select **Evaluate Software Update Deployments** to send a notification to the selected devices to run a software update deployment evaluation cycle.
+> - Starting in version 2107, you can right-click the status of a deployment and select **Evaluate Software Update Deployments** to send a notification to the selected devices to run a software update deployment evaluation cycle.
+> - Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view. Use the right-click menu on either a group of clients in a **Category** or a single client in the **Asset details** pane to display the client notification actions. <!--7079837-->
+
 
 ##  <a name="BKMK_SUReports"></a> Software updates reports  
  The state messages for software updates provide information about the compliance of software updates and about the evaluation and enforcement state of software update deployments. You can run software update reports to display these state messages. There are more than 30 predefined software update reports available. They're organized in several categories and can be used to report on specific information about software updates and deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  

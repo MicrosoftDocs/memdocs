@@ -1,4 +1,5 @@
 ---
+description: Learn how to notify the Content Transfer Manager of the success of a job with SentNotifySuccessToCTM method.
 title: "SendNotifySuccessToCTM Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

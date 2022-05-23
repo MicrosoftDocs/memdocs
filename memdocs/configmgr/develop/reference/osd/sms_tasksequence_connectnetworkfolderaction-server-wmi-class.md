@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a task sequence action that makes a connection to a network share with SMS_TaskSequence_ConnectNetworkFolderAction.
 title: "SMS_TaskSequence_ConnectNetworkFolderAction Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

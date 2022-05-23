@@ -1,6 +1,7 @@
 ---
 title: "SMS_LastCategoryObject Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents the object that has this assignment as the last category assignment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

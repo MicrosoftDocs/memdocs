@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/31/2022
+ms.date: 05/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -138,21 +138,28 @@ You can create VPN profiles using the following connection types:
 - L2TP
   - Windows 10/11
 
-- Microsoft Tunnel (standalone client)(preview)
-  - iOS/iPadOS  
-
 - Microsoft Tunnel  
   - Android Enterprise personally owned devices with a work profile.
   - Android Enterprise fully managed and corporate-owned work profile.
-  - iOS/iPadOS – As part of a public preview, iOS/iPadOS supports a connection type of *Microsoft Tunnel (preview)*. To use this connection type, you must use the preview version of Microsoft Defender for Endpoint that supports Tunnel on this platform.
+
+  > [!Important]  
+  > As of June 14, 2021, both the standalone tunnel app and standalone client connection type for Android are deprecated and drop from support after October 26, 2021.
+
+- Microsoft Tunnel (preview)
+  - iOS/iPadOS
+  
+  > [!Important]
+  > On April 29, 2022, this connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. However, the connection type continues to reflect *preview*.
+
+- Microsoft Tunnel (standalone client)(preview)
+  - iOS/iPadOS
 
   > [!Important]
-  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, Microsoft Tunnel used a standalone tunnel client app and a connection type of **Microsoft Tunnel (standalone client)**.
+  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel (preview)* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
+  > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
+  > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
   >
-  > For Android, as of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after October 26, 2021.
-  >
-  > For iOS/iPadOS, the standalone client app and connection type remain in support while use of Microsoft Defender for Endpoint as the client app with the Microsoft Tunnel connection type are in public preview.
-  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
+  > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
 
 - NetMotion Mobility
   - Android Enterprise personally owned devices with a work profile

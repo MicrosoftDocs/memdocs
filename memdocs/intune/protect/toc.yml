@@ -64,8 +64,6 @@ items:
         href: compliance-custom-json.md    
       - name: PowerShell script for custom settings
         href: compliance-custom-script.md    
-    - name: Location-based compliance
-      href: ./create-compliance-policy.md
     - name: Actions for noncompliance
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
@@ -113,7 +111,7 @@ items:
         href: advanced-threat-protection-manage-android.md
       - name: Monitor Defender for Endpoint
         href: advanced-threat-protection-monitor.md
-      - name: MDE Security Configuration Management (Preview)
+      - name: MDE Security Configuration Management
         href: mde-security-integration.md
     - name: Firewall rule migration
       href: endpoint-security-firewall-rule-tool.md  
@@ -145,9 +143,9 @@ items:
       href: microsoft-tunnel-migrate-app.md
   - name: Identity protection
     items:
-    - name: Windows Hello
+    - name: Windows Hello at device enrollment
       href: windows-hello.md
-    - name: Identity protection
+    - name: Windows Hello after device enrollment
       href: identity-protection-configure.md
   - name: Conditional Access
     items:
@@ -209,10 +207,10 @@ items:
         items:
         - name: BlackBerry and Intune integration
           href: blackberry-mtd-connector-integration.md
-      - name: Set up Check Point
+      - name: Set up Check Point Harmony
         href: checkpoint-sandblast-mobile-mobile-threat-defense-connector.md
         items:
-        - name: Check Point and Intune integration
+        - name: Check Point Harmony and Intune integration
           href: checkpoint-sandblast-mobile-mtd-connector-integration.md
       - name: Set up Lookout
         href: lookout-mobile-threat-defense-connector.md

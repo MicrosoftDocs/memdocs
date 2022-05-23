@@ -162,7 +162,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens**.
 2. Select an Apple School Manager token and then choose **School Data Sync**.
 3. Under **School Data Sync**, choose **Allow**. This setting allows Intune to connect with SDS in Microsoft 365.
-4. To enable a connection between Apple School Manager and Azure AD, choose **Set up Microsoft School Data Sync**. Learn more about [how to set up School Data Sync](https://support.office.com/article/Install-the-School-Data-Sync-Toolkit-8e27426c-8c46-416e-b0df-c29b5f3f62e1).
+4. To enable a connection between Apple School Manager and Azure AD, choose **Set up Microsoft School Data Sync**. Learn more about [how to set up School Data Sync](/schooldatasync/how-to-deploy-sds-using-sds-v2.1-csv-files).
 5. Click **Save** > **OK**.
 
 ## Sync managed devices

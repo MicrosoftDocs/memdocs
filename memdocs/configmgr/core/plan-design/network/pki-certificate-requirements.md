@@ -35,7 +35,7 @@ For more information, see the following articles:
 
 ### Secure Hash Algorithm 2 (SHA-2) certificates
 
-Issue new server and client authentication certificates that are signed with SHA-2, which includes SHA-256 and SHA-512. All internet-facing services should use a SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase a SHA-2 certificate.
+Issue new server and client authentication certificates that are signed with SHA-2, which includes SHA-256 and SHA-512. All internet-facing services should use an SHA-2 certificate. For example, if you purchase a public certificate for use with a cloud management gateway, make sure that you purchase an SHA-2 certificate.
 
 Windows doesn't trust certificates signed with SHA-1. For more information, see [Windows Enforcement of SHA1 certificates](https://social.technet.microsoft.com/wiki/contents/articles/32288.windows-enforcement-of-sha1-certificates.aspx).
 
@@ -204,12 +204,18 @@ Certificate requirements:
 This certificate has two purposes:
 
 - It authenticates the distribution point to an HTTPS-enabled management point before the distribution point sends status messages.
+
+    > [!NOTE]
+    > When you configure all management points for HTTPS, then HTTPS-enabled distribution points must use a PKI-issued certificate. Don't use self-signed certificates on distribution points when management points use certificates. Issues may occur otherwise. For example, distribution points won't sent state messages.<!-- 13860499 -->
+
 - A PXE-enabled distribution point sends this certificate to computers. If the task sequence includes client actions like client policy retrieval or sending inventory information, the computer can connect to an HTTPS-enabled management point during the OS deployment process.
 
-This certificate is only used during the OS deployment process. It isn't installed on the client. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
-
-> [!NOTE]
-> The requirements for this certificate are the same as the client certificate for boot images. Because the requirements are the same, you can use the same certificate file.
+    > [!NOTE]
+    > For this PXE scenario, this certificate is only used during the OS deployment process. It isn't installed on the client. Because of this temporary use, you can use the same certificate for every OS deployment if you don't want to use multiple client certificates.
+    >
+    > The requirements for this certificate are the same as the client certificate for boot images. Because the requirements are the same, you can use the same certificate file.
+    >
+    > The certificate that you specify to HTTPS-enable a distribution point applies to all content distribution operations, not just OS deployment.
 
 Certificate requirements:
 

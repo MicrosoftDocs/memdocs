@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/02/2022
+ms.date: 03/01/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -289,3 +289,4 @@ For information about BitLocker deployments and requirements, see the [BitLocker
 - [Monitor disk encryption](../protect/encryption-monitor.md)
 - [Troubleshooting BitLocker policy](/troubleshoot/mem/intune/troubleshoot-bitlocker-policies)
 - [Known issues for Enforcing BitLocker policies with Intune](/windows/security/information-protection/bitlocker/ts-bitlocker-intune-issues)
+- [BitLocker management for enterprises](/windows/security/information-protection/bitlocker/bitlocker-management-for-enterprises), in the Windows security documentation

@@ -73,3 +73,7 @@ The **Overview** blade of the app you've created is displayed.
 ## Next steps
 
 - [Assign apps to groups](apps-deploy.md)
+
+## Related topics
+
+- [Add Managed Google Play apps to Android Enterprise devices with Intune](./apps-add-android-for-work.md)

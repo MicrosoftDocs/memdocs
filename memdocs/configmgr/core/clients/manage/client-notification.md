@@ -2,7 +2,7 @@
 title: Client notification
 titleSuffix: Configuration Manager
 description: Manage clients by taking immediate action from the central Configuration Manager console.
-ms.date: 08/02/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -66,9 +66,10 @@ This action requires the **Run CMPivot** permission on the **Collection** object
 
 ## Client notification
 
-These actions are under the **Client notification** menu, on the ribbon in the Device or Collection group of the Home tab.
+These actions are under the **Client notification** menu, on the ribbon in the Device or Collection group of the Home tab. You can start a **Client Notification** from the **Devices** node or within a collection membership view.
 
-You can start a **Client Notification** from the **Devices** node or within a collection membership view.
+> [!Note]
+> Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view. Use the right-click menu on either a group of clients in a **Category** or a single client in the **Asset details** pane to display the client notification actions.<!--7079837-->
 
 #### Permissions - Client notification
 

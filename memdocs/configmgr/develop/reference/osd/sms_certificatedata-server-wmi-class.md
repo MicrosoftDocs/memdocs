@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent certificate data managed by Configuration Manager using SMS_CertificateData class.
 title: "SMS_CertificateData Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

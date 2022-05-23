@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/10/2022
+ms.date: 03/03/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -207,8 +207,8 @@ The following sample contains a simple REST client. The code uses the **httpClie
    var warehouseUrl = "https://fef.{yourinfo}.manage.microsoft.com/ReportingService/DataWarehouseFEService?api-version=v1.0";
    var collectionName = "dates";
 
-   var adalContext = new AuthenticationContext("https://login.windows.net/common/oauth2/token");
-   AuthenticationResult authResult = adalContext.AcquireTokenAsync(
+   var msalContext = new AuthenticationContext("https://login.windows.net/common/oauth2/token");
+   AuthenticationResult authResult = msalContext.AcquireTokenAsync(
    resource: "https://api.manage.microsoft.com/",
    clientId: applicationId,
    userCredential: new UserPasswordCredential(emailAddress, password)).Result;

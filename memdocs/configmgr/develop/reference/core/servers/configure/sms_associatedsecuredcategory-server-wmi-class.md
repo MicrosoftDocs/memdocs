@@ -1,4 +1,5 @@
 ---
+description: The SMS_AssociatedSecuredCategory WMI class is an SMS Provider server class, in Configuration Manager, that represents the list of RBA security categories associated with the current admin user.
 title: "SMS_AssociatedSecuredCategory Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

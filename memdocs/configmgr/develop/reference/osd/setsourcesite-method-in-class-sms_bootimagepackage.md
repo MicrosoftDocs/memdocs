@@ -1,6 +1,7 @@
 ---
 title: "SetSourceSite Method in SMS_BootImagePackage"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that sets the code of the source site for the boot image package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

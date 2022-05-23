@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
+ROBOTS: NOINDEX
 ---
 
 # Checklist for installing update 2006 for Configuration Manager

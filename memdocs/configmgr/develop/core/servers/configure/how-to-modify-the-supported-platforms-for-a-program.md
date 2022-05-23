@@ -1,6 +1,7 @@
 ---
 title: "Modify the Supported Platforms for a Program"
 titleSuffix: "Configuration Manager"
+description: "Add supported platforms to a package by obtaining specific instances of the SMS_Package and SMS_Program classes."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

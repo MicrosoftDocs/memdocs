@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the RiskyDeploymentStatusMessage method to send a warning status message about a user deployment to a risky collection.
 title: "RiskyDeploymentStatusMessage Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,4 +1,5 @@
 ---
+description: Learn how to notify Content Transfer Manager of errors using the SendNotifyErrorToCTM method, in Configuration Manager.
 title: "SendNotifyErrorToCTM Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

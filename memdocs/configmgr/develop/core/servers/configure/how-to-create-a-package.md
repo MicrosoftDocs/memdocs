@@ -1,6 +1,7 @@
 ---
 title: "Create a Package"
 titleSuffix: "Configuration Manager"
+description: "Learn how to create a package in Configuration Manager by using the SMS_Package class and class properties."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

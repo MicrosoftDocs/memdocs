@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 12/16/2020
@@ -43,6 +43,8 @@ Registration can also be performed within your organization by collecting the ha
 - [Reseller, distributor, or partner registration](partner-registration.md)
 - [Automatic registration](automatic-registration.md)
 - [Manual registration](manual-registration.md)
+
+Once a device is registered in Autopilot if a profile is not assigned, it will receive the default Autopilot profile. If you do not want a device to go through Autopilot, you must remove the Autopilot registration. 
 
 ## Terms
 

@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_MDMDeviceCategory class to represent an On-premises Mobile Device Management (MDM) device category.  
 title: "SMS_MDMDeviceCategory Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

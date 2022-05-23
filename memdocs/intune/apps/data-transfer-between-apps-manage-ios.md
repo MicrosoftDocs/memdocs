@@ -66,7 +66,7 @@ Configuring the user UPN setting is **required** for devices that are managed by
      > Additionally, the app needs to be either installed from the Intune Company Portal (if set as available) or pushed as required to the device. 
 
      > [!NOTE]
-     > Deploy IntuneMAMUPN app configuration settings to the target managed app which sends data, not the receiving app. 
+     > Deploy IntuneMAMUPN app configuration settings to the target managed app which sends data. Adding the app configuration key to the receiving app is optional. 
      
      > [!NOTE]
      > Currently, there is no support for enrolling with a different user on an app if there is a MDM enrolled account on the same device. 
@@ -86,7 +86,8 @@ Configuring the user UPN setting is **required** for devices that are managed by
 
    |Third-party MDM provider| Configuration Key | Value Type | Configuration Value|
    | ------- | ---- | ---- | ---- |
-   |Microsoft Intune| IntuneMAMUPN | String | {{UserPrincipalName}}|
+   |Microsoft Intune| IntuneMAMUPN | String | {{userprincipalname}}|
+   |Microsoft Intune| IntuneMAMOID | String | {{userid}}|
    |VMware AirWatch| IntuneMAMUPN | String | {UserPrincipalName}|
    |MobileIron | IntuneMAMUPN | String | ${userUPN} **or** ${userEmailAddress} |
    |Citrix Endpoint Management | IntuneMAMUPN | String | ${user.userprincipalname} |

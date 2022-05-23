@@ -2,7 +2,7 @@
 title: Packages and programs
 titleSuffix: Configuration Manager
 description: Support deployments that use legacy packages and programs with Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -64,16 +64,40 @@ Packages can use some new features of Configuration Manager, including distribut
         >
         > Windows limits the source path to 256 characters or less. This limit applies to package source as well as applications. For more information, see [Naming Files, Paths, and Namespaces](/windows/win32/fileio/naming-a-file).
 
-    - Starting in version 1906, if you want to pre-cache content on a client, specify the **Architecture** and **Language** of the package. For more information, see [Configure pre-cache content](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
+    - If you want to pre-cache content on a client, specify the **Architecture** and **Language** of the package. For more information, see [Configure pre-cache content](../../osd/deploy-use/configure-precache-content.md).<!--4224642-->  
 
-4. On the **Program Type** page of the **Create Package and Program Wizard**, select the type of program to create, and then choose **Next**. You can create a program for a [computer](#create-a-standard-program) or [device](#create-a-device-program), or you can skip this step and create a program later.  
+4. On the **Program Type** page of the **Create Package and Program Wizard**, select the **Standard** program type for computers. Or you can skip this step and create a program later.
 
-    > [!TIP]  
-    > To create a new program for an existing package, first select the package. Then, in the **Home** tab, in the **Package** group, choose **Create Program** to open the **Create Program Wizard**.  
+    > [!TIP]
+    > To create a new program for an existing package, first select the package. Then, in the **Home** tab, in the **Package** group, choose **Create Program** to open the **Create Program Wizard**.
+    >
+    > The **Program for device** type is a legacy option that only applies to mobile devices, which aren't currently managed by Configuration Manager.
 
-#### Create a standard program
+#### Custom icons for packages
 
-1. On the **Program Type** page of the **Create Package and Program Wizard**, choose **Standard Program**, and then choose **Next**.  
+<!--12486335-->
+
+Starting in version 2203, add custom icons for packages. These icons appear in Software Center when you deploy the package and program. Instead of a default icon, a custom icon can improve the user experience to better identify the software.
+
+On the **General** tab of package properties, in the section for the icon, select **Browse**. Select an icon from the default shell library, or browse to another file in a local or network path.
+
+- It supports the following file types:
+  - Programs (`.exe`)
+  - Libraries (`.dll`)
+  - Icons (`.ico`)
+  - Images (`.png`, `.jpeg`, `.jpg`)
+- The file doesn't need to be on clients that you target with the deployment. Configuration Manager includes the image with the deployment policy.
+- The maximum file size for an image is 256 KB.
+- Icons can have pixel dimensions of up to 512 x 512.
+
+When clients receive the deployment policy, they'll display the icon in Software Center.
+
+> [!NOTE]
+> To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
+
+### Create a program
+
+1. On the **Program Type** page of the **Create Package and Program Wizard**, choose **Standard Program**, and then choose **Next**.
 
 2. On the **Standard Program** page, specify the following information:  
 
@@ -145,35 +169,6 @@ Packages can use some new features of Configuration Manager, including distribut
         >
         > - You enable the option to **Run with administrative rights**
         > - You don't enable the option to **Allow users to view and interact with the program installation**  
-
-#### Create a device program  
-
-1. On the **Program Type** page of the **Create Package and Program Wizard**, select **Program for device**, and then choose **Next**.  
-
-2. On the **Program for Device** page, specify the following settings:  
-
-    - **Name**: Specify a name for the program with a maximum of 50 characters.  
-
-        > [!NOTE]  
-        > The program name must be unique within a package. After you create a program, you can't modify its name.  
-
-    - **Comment** (optional): Specify a comment for this device program with a maximum of 127 characters.  
-
-    - **Download folder**: Specify the name of the folder on the device in which it will store the package source files. The default value is `\Temp\`.  
-
-    - **Command Line**: Enter the command line to use to start this program. To browse to the file location, choose **Browse**.  
-
-    - **Run command line in download folder**: Select this option to run the program from the download folder.  
-
-    - **Run command line from this folder**: Select this option to specify a different folder from which to run the program.  
-
-3. On the **Requirements** page, specify the following settings:  
-
-    - **Estimated disk space**: Specify the amount of disk space that's required for the software. The client displays this value to mobile device users before they install the program.  
-
-    - **Download program**: Specify information about when the mobile device can download this program. You can specify **As soon as possible**, **Only over a fast network**, or **Only when the device is docked**.  
-
-    - **Additional requirements**: Specify any additional requirements for this program. Users see these requirements before they install the software. For example, you could notify users that they need to close all other applications before running the program.  
 
 ## Deploy packages and programs  
 
@@ -249,7 +244,7 @@ View the deployment in the **Deployments** node of the **Monitoring** workspace 
 
 To monitor package and program deployments, use the same procedures that you use to monitor applications as detailed in [Monitor applications](monitor-applications-from-the-console.md).  
 
-Packages and programs also include a number of built-in reports, which enable you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution – Packages and Programs** and **Software Distribution – Package and Program Deployment Status**.  
+Packages and programs also include a number of built-in reports, which enable you to monitor information about the deployment status of packages and programs. These reports have the report category of **Software Distribution - Packages and Programs** and **Software Distribution - Package and Program Deployment Status**.  
 
 For more information about how to configure reporting in Configuration Manager, see [Introduction to reporting](../../core/servers/manage/introduction-to-reporting.md).  
 
@@ -283,7 +278,7 @@ Opens the **Distribute Content Wizard**, to send the content for a package and p
 Opens the **Import Package Wizard**, to import a previously exported package from a .zip file.
 
 > [!TIP]
-> Starting in version 2010, when you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node.<!--6601203-->
+> When you import an object in the Configuration Manager console, it imports to the current folder. In earlier versions, Configuration Manager always put imported objects in the root node.<!--6601203-->
 
 ### Update distribution points
 

@@ -35,7 +35,7 @@ The Endpoint security node groups the tools that are available through Intune th
 
 - **Review the status of all your managed devices**. Use the [All devices](#manage-devices) view where you can view device compliance from a high level. Then, drill-in to specific devices to understand which compliance policies aren't met so you can resolve them.
 
-- **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Microsoft Defender for Endpoint and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a configuration that's recommended by the relevant security teams recommend.
+- **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Microsoft Defender for Endpoint and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a configuration that's recommended by the relevant security teams.
 
 - **Manage security configurations on devices through tightly focused policies**.  Each [Endpoint security policy](#use-policies-to-manage-device-security) focuses on aspects of device security like antivirus, disk encryption, firewalls, and several areas made available through integration with Microsoft Defender for Endpoint.
 
@@ -44,6 +44,9 @@ The Endpoint security node groups the tools that are available through Intune th
   When you integrate with Azure Active Directory (Azure AD) [conditional access policies](#configure-conditional-access) to enforce compliance policies, you can gate access to corporate resources for both managed devices, and devices that aren’t managed yet.
 
 - **Integrate Intune with your Microsoft Defender for Endpoint team**. By [integrating with Microsoft Defender for Endpoint](#set-up-integration-with-microsoft-defender-for-endpoint) you gain access to [security tasks](#review-security-tasks-from-microsoft-defender-for-endpoint). Security tasks closely tie Microsoft Defender for Endpoint and Intune together to help your security team identify devices that are at risk and hand-off detailed remediation steps to Intune admins who can then act.
+
+> [!NOTE]
+> For additional reporting information about device configuration profiles, see [Intune reports](../fundamentals/reports.md).
 
 The following sections of this article discuss the different tasks you can do from the endpoint security node of the admin center, and the role-based access control (RBAC) permissions that are required to use them.
 

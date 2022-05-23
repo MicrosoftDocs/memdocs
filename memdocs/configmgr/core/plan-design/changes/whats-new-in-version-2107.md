@@ -82,7 +82,7 @@ United States Government customers can now use the following Microsoft Endpoint 
 - Device sync to Intune
 - Device actions in the Microsoft Endpoint Manager admin center
 
-For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisites](../../../tenant-attach/device-sync-actions.md#prerequisites).
+For more information, see [Microsoft Endpoint Manager tenant attach: Prerequisites](../../../tenant-attach/prerequisites.md).
 
 ### Renamed Co-management node to Cloud Attach
 <!--10158821, 10115058-->
@@ -229,7 +229,7 @@ For more information, see [Cryptographic controls technical reference](../securi
 
 <!--9217033-->
 
-Configuration Manager uses self-signed certificates for client identity and to help protect communication between the client and site systems. When you update the site and clients to version 2107, the client stores its certificate from the site in a hardware-bound key storage provider (KSP). This KSP is typically the trusted platform module (TPM). The certificate is also marked non-exportable.
+Configuration Manager uses self-signed certificates for client identity and to help protect communication between the client and site systems. When you update the site and clients to version 2107, the client stores its certificate from the site in a hardware-bound key storage provider (KSP). This KSP is typically the trusted platform module (TPM) at least version 2.0. The certificate is also marked non-exportable.
 
 If the client also has a PKI-based certificate, it continues to use that certificate for TLS HTTPS communication. It uses its self-signed certificate for signing messages with the site.
 

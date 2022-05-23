@@ -2,7 +2,7 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -44,9 +44,9 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 11 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 11 version                         | ConfigMgr 2006 | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 | ConfigMgr 2111 |
+| Windows 11 version                         | ConfigMgr 2010 | ConfigMgr 2103 | ConfigMgr 2107 | ConfigMgr 2111 | ConfigMgr 2203 |
 |--------------------------------------------|----------------|----------------|----------------|----------------|----------------|
-| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **21H2**<br>(10.0.22000) <!--2024-10-08--> | ![Not supported](media/red-x.png) | ![Not supported](media/red-x.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
 
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
@@ -137,6 +137,9 @@ Use one of the following options to work around this issue:
 ### Offline servicing
 
 <!-- 12661534 -->
+
+> [!IMPORTANT]
+> This issue is resolved with the March 2022 cumulative update (KB5011493). For any version of Windows 11, you can successfully use offline servicing with the March 2022 cumulative update.
 
 When you [apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#apply-software-updates-to-an-image) for Windows 11, the process will fail. You'll see errors similar to the following entries in the offline servicing log file, `OfflineServicingMgr.log`:
 

@@ -1,6 +1,7 @@
 ---
 title: "SMS_TargetingAgentConfig Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_TargetingAgentConfig Windows Management Instrumentation class is an SMS Provider server class that represents how the client is configured for user and device affinity."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

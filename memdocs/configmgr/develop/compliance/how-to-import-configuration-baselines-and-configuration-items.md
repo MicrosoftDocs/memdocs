@@ -1,5 +1,6 @@
 ---
 title: "Import Configuration Baselines and Items"
+description: In Configuration Manager, importing a configuration baseline or configuration item by using the Configuration Manager SDK requires a properly formatted XML file.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

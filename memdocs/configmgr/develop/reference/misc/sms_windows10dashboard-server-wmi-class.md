@@ -1,6 +1,7 @@
 ---
 title: "SMS_Windows10Dashboard Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_Windows10Dashboard Server WMI class is available for internal use only."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

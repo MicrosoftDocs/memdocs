@@ -1,4 +1,5 @@
 ---
+description: Article describing the use of SMS_CLient class in Configuration Manager to represent the client and facilitate manipulation and retrieval of client information.
 title: "SMS_Client Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

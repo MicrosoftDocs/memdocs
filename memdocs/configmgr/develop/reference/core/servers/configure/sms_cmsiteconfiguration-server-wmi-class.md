@@ -1,4 +1,5 @@
 ---
+description: Learn how to retrieve the site's monitored configuration status, such as the SQL Server port, SQL Server Service Broker port, and SQL Server Firewall port.
 title: "SMS_CMSiteConfiguration Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

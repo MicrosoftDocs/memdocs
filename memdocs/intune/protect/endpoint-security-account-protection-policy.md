@@ -34,7 +34,7 @@ Use Intune endpoint security policies for account protection to protect the iden
 
 Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-View [settings for account protection profiles](../protect/endpoint-security-asr-profile-settings.md).
+View [settings for account protection profiles](../protect/endpoint-security-account-protection-profile-settings.md).
 
 ## Prerequisites for Account protection profiles
 

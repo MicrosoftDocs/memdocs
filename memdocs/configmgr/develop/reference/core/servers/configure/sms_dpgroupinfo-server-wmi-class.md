@@ -1,6 +1,7 @@
 ---
 title: "SMS_DPGroupInfo Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that describes a distribution point group."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

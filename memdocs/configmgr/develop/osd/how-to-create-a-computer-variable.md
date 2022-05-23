@@ -1,6 +1,7 @@
 ---
 title: "Create a Computer Variable"
 titleSuffix: "Configuration Manager"
+description: "Create a computer variable for a computer that is running Configuration Manager by adding instances of SMS_MachineVariable to the SMS_MachineSettings class MachineVariables array property."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

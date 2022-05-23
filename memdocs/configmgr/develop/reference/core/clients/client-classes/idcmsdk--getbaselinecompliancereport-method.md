@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the IDCMSDK::GetBaselineComplianceReport method to retrieve the cached discovery report for the specified configuration item baseline.
 title: "IDCMSDK::GetBaselineComplianceReport"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

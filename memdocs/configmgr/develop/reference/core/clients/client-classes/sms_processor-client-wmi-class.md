@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a device that can interpret a sequence of instructions on a computer that is running a Windows O.S. using SMS_Processor class.
 title: "SMS_Processor Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

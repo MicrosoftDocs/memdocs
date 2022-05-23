@@ -1,6 +1,7 @@
 ---
 title: SMS_TaskSequence_ApplyDriverPackageAction class
 titleSuffix: Configuration Manager
+description: "The SMS Provider server class represents an action used in a task sequence to make all device drivers in a driver package available for use by Windows setup."
 ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

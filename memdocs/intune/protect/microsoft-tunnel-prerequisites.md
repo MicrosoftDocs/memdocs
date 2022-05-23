@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/17/2022
+ms.date: 05/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,9 +49,12 @@ The following sections detail the prerequisites for the Microsoft Tunnel, and pr
 
 Set up a Linux based virtual machine or a physical server on which Microsoft Tunnel Gateway will install.
 
-- **Supported Linux distributions** - The following table details which versions of Linux are supported for the Tunnel server, and the container they require: 
-  
-  |Distributon version    | Container requirements   | Considerations     |
+> [!NOTE]
+> Only the operating systems and container versions that are listed in the following table are supported. Versions not listed are not supported. Only after testing and supportability are verified are newer versions added to this list.
+
+- **Supported Linux distributions** - The following table details which versions of Linux are supported for the Tunnel server, and the container they require:
+
+  |Distribution version    | Container requirements   | Considerations     |
   |-----------------------|--------------------------|--------------------|
   | CentOS 7.4+           | Docker CE                | CentOS 8+ isn’t supported |
   | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
@@ -59,7 +62,6 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
   | Ubuntu 18.04           | Docker CE               |                    |
   | Ubuntu 20.04           | Docker CE               |                    |
-
 
 - **Size the Linux server**: Use the following guidance to meet your expected use:
 
@@ -79,7 +81,6 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 - **Install Docker CE or Podman**: Depending on the version of Linux you use for your Tunnel server, you'll need to install one of the following on the Linux server:
   - Docker version 19.03 CE or later
   - Podman version 3.0
-  
 
   Microsoft Tunnel requires Docker or Podman on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
 
@@ -90,7 +91,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
     > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7.4. The version installed on RHEL 7.4 by default is too old to support Microsoft Tunnel Gateway.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
   - [Install Podman on Red Hat Enterprise Linux 8.4 and 8.5 (scroll down to RHEL8)](https://podman.io/getting-started/installation)  
-    These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and are usually installed together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
+    These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and that usually install together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
 with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
@@ -108,6 +109,73 @@ with documentation for the application, and packages with helper utilities. For 
   - The TLS certificate can be in **PEM** or **pfx** format.
 
 - **TLS version**: By default, connections between Microsoft Tunnel clients and servers use TLS 1.3. When TLS 1.3 isn’t available, the connection can fall back to use TLS 1.2.
+
+### Default bridge network
+
+Both Podman and Docker containers use a bridge network to forward traffic through the Linux host. When the containers bridge network conflicts with a corporate network, Tunnel Gateway can’t successfully route traffic to that corporate network.
+
+The default bridge networks are:
+
+- Docker:  **172.17.0.0/16**
+- Podman: **10.88.0.0/16**
+
+To avoid conflicts, you can reconfigure both Podman and Docker to use a bridge network that you specify.
+
+> [!IMPORTANT]
+> The Tunnel Gateway server must be installed before you can change the bridge network configuration.
+
+#### Change the default bridge network used by Docker
+
+Docker uses the file **/etc/docker/daemon.json** to configure a new default bridge IP address. In the file, the bridge IP address must be specified in CIDR (Classless inter-domain routing) notation, a compact way to represent an IP address along with its associated subnet mask and routing prefix.  
+
+> [!IMPORTANT]
+> The IP address that's used in the following steps is an example. Be sure the IP address you use doesn't conflict with your corporate network.
+
+1. Use the following command to stop the MS Tunnel Gateway container:  `sudo mst-cli server stop ; sudo mst-cli agent stop`
+
+2. Next, run the following command to remove the existing Docker bridge device: `sudo ip link del docker0`
+
+3. If the file **/etc/docker/daemon.json** is present on your server, use a file editor like *vi* or *nano* to modify the file. Run the file editor with root or sudo permissions:
+
+   - When the **“bip”:** entry is present with an IP address, modify it by adding a new IP address in CIDR notation.
+   - When the **“bip”:** entry isn't present, you must add both the value **"bip":** and the new IP address in CIDR notation.
+
+   The following example shows the structure of a *daemon.json* file with an updated **“bip”:** entry that uses a modified IP address of **“192.168.128.1/24”**.
+
+   Example of daemon.json:
+
+   ```
+   {
+   "bip": "192.168.128.1/24"
+   }
+   ```
+
+4. If the file **/etc/docker/daemon.json** isn’t present on your server, run a command similar to the following example to create the file and define the bridge IP that you want to use.
+
+   Example: `sudo echo '{ "bip":"192.168.128.1/24" }' > /etc/docker/daemon.json`
+
+5. Use the following command to start the MS Tunnel Gateway container: `sudo mst-cli agent start ; sudo mst-cli server start`
+
+For more information, see [Use bridge networks](https://docs.docker.com/network/bridge/#configure-the-default-bridge-network) in the Docker documentation.
+
+#### Change the default bridge network used by Podman
+
+Podman uses the file **/etc/cni/net.d as 87-podman-bridge.conflist** to configure a new default bridge IP address.
+
+1. Use the following command to stop the MS Tunnel Gateway container: `sudo mst-cli server stop ; sudo mst-cli agent stop`
+
+2. Next, run the following command to remove the existing Podman bridge device: `sudo ip link del cni-podman0`
+
+3. Using root permissions and a file editor like *vi* or *nano*, modify **/etc/cni/net.d as 87-podman-bridge.conflist** to update the defaults for **“subnet:”** and **“gateway:”** by replacing the Podman default values with your desired subnet and gateway addresses. The *subnet* address must be specified in CIDR notation.
+
+   The Podman defaults are:
+
+   - subnet: 10.88.0.0/16
+   - gateway: 10.88.0.1
+
+4. Use the following command to restart the MS Tunnel Gateway containers: `sudo mst-cli agent start ; sudo mst-cli server start`
+
+For more information, see [Configuring container networking with Podman](https://www.redhat.com/sysadmin/container-networking-podman) in the Red Hat documentation.
 
 ## Network
 
@@ -153,7 +221,6 @@ By default, the Microsoft Tunnel and server use the following ports:
 **Outbound ports**:
 
 - TCP 443 – Required to access Intune services. Required by Docker or Podman to pull images.
-- TCP – 80 – Required to access Intune services.
 
 When creating the Server configuration for the tunnel, you can specify a different port than the default of 443. If you specify a different port, configure firewalls to support your configuration.
 
@@ -217,14 +284,13 @@ The following details can help you configure an internal proxy when using Podmam
 
   3. Restart the Tunnel Gateway server: Run `mst-cli server restart`
 
-
-  Be aware that RHEL uses SELinux. Because a proxy that doesn't run on a SELinux port for *http_port_t* can require additional configuration, check on the use of SELinux managed ports for http. Run the following command to view the configurations: `sudo semanage port -l | grep “http_port_t” `
+  Be aware that RHEL uses SELinux. Because a proxy that doesn't run on a SELinux port for *http_port_t* can require extra configuration, check on the use of SELinux managed ports for http. Run the following command to view the configurations: `sudo semanage port -l | grep “http_port_t”`
   
   Example of the results of the port check command. In this example, the proxy uses 3128 and isn't listed:
 
   :::image type="content" source="./media/microsoft-tunnel-prerequisites/check-selinux-ports.png" alt-text="Screen shot of the port check.":::
 
-  - If your proxy runs on one of the SELinux ports for **http_port_t**, then you can continue with the Tunnel Gateway  install process.
+  - If your proxy runs on one of the SELinux ports for **http_port_t**, then you can continue with the Tunnel Gateway install process.
   - If your proxy does't run on a SELunux port for **http_port_t** as in the preceding example, you'll need to make extra configurations.
 
     **If your proxy port is not listed for** ***http_port_t***, check if the proxy port is used by another service. Use the *semnage* command to first check the port that your proxy uses and then later if needed, to change it. To check the port your proxy uses, run: `sudo semanage port -l | grep “your proxy port”`
@@ -302,7 +368,6 @@ The Microsoft Tunnel Gateway permissions group grants the following permissions:
 
 - **Read** - View Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports, and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel.
 
-
 ## Run the readiness tool
 
 Before you start a server install, we recommend you download and run the most recent version of the **mst-readiness** tool. The tool is a script that runs on your Linux server and does the following actions:
@@ -311,7 +376,7 @@ Before you start a server install, we recommend you download and run the most re
 
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.
 
-- Checks for the presence of the ip_tables module on the Linux server. This check was added to the script on February 11 2022, when support for RHEL 8.5 was added. RHEL 8.5 doesn’t load the ip_tables module by default. If they are missing after the Linux server installs, you must [manually load the ip_tables module](#manually-load-ip_tables).
+- Checks for the presence of the ip_tables module on the Linux server. This check was added to the script on February 11 2022, when support for RHEL 8.5 was added. RHEL 8.5 doesn’t load the ip_tables module by default. If they're missing after the Linux server installs, you must [manually load the ip_tables module](#manually-load-ip_tables).
 
 > [!IMPORTANT]
 > The readiness tool doesn't validate inbound ports, which is a common misconfiguration. After the readiness tool runs, review the [firewall prerequisites](#firewall) and manually validate your firewalls pass inbound traffic.
@@ -353,7 +418,7 @@ To check for the presence of this module, run the most recent version of mst-rea
 
 If the module isn’t present, the tool stops on the ip_tables module check. In this scenario, you can run the following commands to manually load the module.
 
-**Manually load the ip_tables module**:
+#### Manually load the ip_tables module
 
 In the context of sudo, run the following commands on your Linux server:
 
@@ -363,7 +428,12 @@ In the context of sudo, run the following commands on your Linux server:
 
 3. Rerun the validation to confirm the tables are now loaded: `lsmod |grep ip_tables`
 
-**Configure Linux to load ip_tables at boot**:
+> [!IMPORTANT]
+> When updating the Tunnel server, a manually loaded ip_tables module might not persist. This can require you to reload the module after the update completes. After your server update is completed, review the server for the presence of the ip_tables module.
+>
+> If the tables aren't present, use the preceding steps to reload the module, with the additional step to restart the server after the module is loaded.
+
+#### Configure Linux to load ip_tables at boot
 
 In the context of sudo, run the following command on your Linux server to create a config file that will load the ip_tables into kernel during boot time: `echo ip_tables > /etc/modules-load.d/mstunnel_iptables.conf`
 

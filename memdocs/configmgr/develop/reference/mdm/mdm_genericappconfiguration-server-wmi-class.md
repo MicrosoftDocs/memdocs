@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: Learn about the simplified syntax, methods, properties, and requirements of the MDM_GenericAppConfiguration Server class.
 
 ---
 # MDM_GenericAppConfiguration Server WMI Class

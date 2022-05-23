@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: "How to create a custom deployment technology XML File for the Create Application Wizard/."
 
 ---
 # How to Define the Create Application Wizard XML File

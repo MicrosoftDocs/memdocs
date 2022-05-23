@@ -1,6 +1,7 @@
 ---
 title: "AddMembershipRules Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the AddMembershipRules WMI class method adds multiple new rules to the CollectionRules property of the SMS_Collection Server WMI Class object."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

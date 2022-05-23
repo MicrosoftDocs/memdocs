@@ -21,7 +21,7 @@ ms.assetid: 7b668c37-40b9-4c69-8334-5d8344e78c24
 #ROBOTS:
 #audience:
 
-#ms.reviewer: jieyang
+ms.reviewer: jieyang
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -50,6 +50,8 @@ You can create any device categories you want. For example:
 - Manager
 
 ## How to configure device categories
+
+You need to be a Global Administrator or Intune Administrator to perform these steps.
 
 ### Step 1: Create device categories in Intune
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

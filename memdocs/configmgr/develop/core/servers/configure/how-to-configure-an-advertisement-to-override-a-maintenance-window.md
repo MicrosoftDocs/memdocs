@@ -1,6 +1,7 @@
 ---
 title: "Configure an Advertisement to Override a Maintenance Window"
 titleSuffix: "Configuration Manager"
+description: "Configure an advertisement to override maintenance windows using the SMS_Advertisement class and the AdvertFlags class property in Configuration Manager."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
