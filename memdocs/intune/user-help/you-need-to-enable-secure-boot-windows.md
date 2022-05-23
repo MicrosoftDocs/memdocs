@@ -54,5 +54,4 @@ To check the status of Secure Boot on your PC:
 ## Next steps  
 
 * For more detailed information about the Secure Boot feature, see the [Windows Developer Hardware docs](/windows-hardware/manufacture/desktop/secure-boot-landing).  
-
 * Still need help? Contact your support person if you're having trouble enabling Secure Boot or if it appears enabled already. Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) to check for your support person's contact information.  
