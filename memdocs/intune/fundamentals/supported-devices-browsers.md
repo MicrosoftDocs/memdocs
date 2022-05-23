@@ -47,6 +47,10 @@ Intune supports devices running the following operating systems (OS):
 
 [!INCLUDE [mdm-supported-devices](../includes/mdm-supported-devices.md)]
 
+### Supported platforms for MDE Integration
+
+For more information, see [Microsoft Defender for Endpoint on devices with Microsoft Endpoint Manager](../protect/mde-security-integration.md)
+
 ### Supported Samsung Knox Standard devices  
 
 Microsoft Intune only attempts Samsung Knox activation during enrollment on supported Knox devices. Devices that don't support Samsung Knox enroll as standard Android devices. For a list of devices that support Samsung Knox, see [Devices secured by Knox](https://www.samsungknox.com/knox-supported-devices/knox-workspace) on the Samsung Knox website. It's important to look for your device model number when verifying support, because some device models support Knox while others do not. Always verify Knox compatibility with your device reseller before you buy and deploy Samsung devices.  

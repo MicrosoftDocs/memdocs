@@ -1,6 +1,7 @@
 ---
 title: "SMS_BrowserHelperObject Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_BrowserHelperObject class is a client Windows Management Instrumentation class  that enumerates all browser helper objects on a computer."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

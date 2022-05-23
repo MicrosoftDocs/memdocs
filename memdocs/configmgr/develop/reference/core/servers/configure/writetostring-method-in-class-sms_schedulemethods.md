@@ -1,4 +1,5 @@
 ---
+description: The WriteToString Windows Management Instrumentation (WMI) class method, in Configuration Manager, writes an interval string from objects.
 title: "WriteToString Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

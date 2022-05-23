@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the GetSiteADInfo method to get Active Directory information of the site server.
 title: "GetSiteADInfo Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

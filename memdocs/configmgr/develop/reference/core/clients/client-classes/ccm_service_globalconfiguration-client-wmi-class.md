@@ -1,5 +1,6 @@
 ---
 title: "CCM_Service_GlobalConfiguration Class"
+description: Learn how the CCM_Service_GlobalConfiguration class is a client Windows Management Instrumentation (WMI) class that supports global configuration for the CCMEXEC service.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

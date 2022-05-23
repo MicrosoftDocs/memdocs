@@ -1,6 +1,7 @@
 ---
 title: "ImportRole Method"
 titleSuffix: "Configuration Manager"
+description: "The ImportRole Windows Management Instrumentation (WMI) class method imports a role defined by an XML string to the database."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

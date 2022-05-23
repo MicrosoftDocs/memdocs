@@ -1,6 +1,7 @@
 ---
 title: "CCM_Program Class"
 titleSuffix: "Configuration Manager"
+description: "A client class, in Configuration Manager, that represents a legacy software distribution program on the client."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

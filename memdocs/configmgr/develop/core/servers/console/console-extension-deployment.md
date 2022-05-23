@@ -1,6 +1,7 @@
 ---
 title: "Console Extension Deployment"
 titleSuffix: "Configuration Manager"
+description: "The deployment of a typical Configuration Manager extension has to account for actions, forms, views, management classes and node extensions."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -27,6 +28,9 @@ The deployment of a typical Configuration Manager extension has to account for a
 |Nodes|%ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\bin for the assembly<br /><br /> %*ProgramFiles*%Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\Nodes for the node XML files|  
 |ManagementClasses|%ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\bin for the assembly<br /><br /> %ProgramFiles%Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\ManagementClasses for the management classes XML files|  
 
+ > [!IMPORTANT]
+> Placing your assemblies and dependencies in the %ProgramFiles%\Microsoft Endpoint Manager\AdminConsole\bin folder may create conflicts with other console extensions and prevent your extension from loading.
+ 
  You must also perform the following tasks during installing and uninstalling actions.  
 
 ## Custom Actions  

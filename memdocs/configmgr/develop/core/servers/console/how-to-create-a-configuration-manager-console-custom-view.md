@@ -1,5 +1,6 @@
 ---
 title: "Create a Console Custom View"
+description: Learn how to create  a view that displays a custom control. In this example, the view displays the string content of a label control.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

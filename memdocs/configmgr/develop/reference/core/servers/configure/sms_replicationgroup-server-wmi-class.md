@@ -1,4 +1,5 @@
 ---
+description: Learn how to classify replication group data in Configuration Manager using SMS_ReplicationGroup WMI class.
 title: "SMS_ReplicationGroup Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

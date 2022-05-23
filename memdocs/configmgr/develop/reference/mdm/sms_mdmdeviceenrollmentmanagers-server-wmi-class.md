@@ -1,6 +1,7 @@
 ---
 title: "SMS_MDMDeviceEnrollmentManagers Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MDMDeviceEnrollmentManagers WMI class represents On-premises Mobile Device Management (MDM) device enrollment managers."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

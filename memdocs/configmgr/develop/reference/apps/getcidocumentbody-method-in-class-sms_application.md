@@ -1,6 +1,7 @@
 ---
 title: "GetCIDocumentBody Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the GetCIDocumentBody WMI class method gets the configuration item document body."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Learn how to retrieve a list of client editions and whether the DeviceOwner property may be edited using CLientEditions class method.
 title: "ClientEditions Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

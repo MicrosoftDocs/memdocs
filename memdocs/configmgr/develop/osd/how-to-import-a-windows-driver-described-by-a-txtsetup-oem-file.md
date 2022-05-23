@@ -1,6 +1,7 @@
 ---
 title: "Import a Windows Driver Described by a Txtsetup.oem File"
 titleSuffix: "Configuration Manager"
+description: "Use the CreateFromOEM Method in Class SMS_Driver to import a Windows driver that is described by a Txtsetup.oem file in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

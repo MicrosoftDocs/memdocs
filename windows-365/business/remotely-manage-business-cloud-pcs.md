@@ -64,7 +64,7 @@ To use these remote actions, you must have either of the following Azure Active 
 
 ## Remote management actions
 
-The following remote actions are supported on winodws365.microsoft.com and the Microsoft 365 admin center:
+The following remote actions are supported on windows365.microsoft.com and the Microsoft 365 admin center:
 
 **Change account type**: Change the role of a user on their Cloud PC. Options include Standard User and Local Administrator. For the role change to take effect, the user must sign out of Windows on their Cloud PC and sign back in. Alternatively, the admin can remotely restart the Cloud PC, but the user may lose any unsaved data.
 

@@ -1,6 +1,7 @@
 ---
 title: "Extended WMI Query Language"
 titleSuffix: "Configuration Manager"
+description: "A superset of the Windows Management Instrumentation (WMI) Query Language (WQL) known as Extended WQL. Configuration Manager supports both WQL and Extended WQL."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent asset level details about classic software distribution deployments using SMS_ClassicDeploymentAssetDetails class.
 title: "SMS_ClassicDeploymentAssetDetails Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

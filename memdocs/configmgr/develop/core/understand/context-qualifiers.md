@@ -1,6 +1,7 @@
 ---
 title: "Context Qualifiers"
 titleSuffix: "Configuration Manager"
+description: "Use context qualifiers when you connect to the SMS Provider and with individual SMS Provider objects."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

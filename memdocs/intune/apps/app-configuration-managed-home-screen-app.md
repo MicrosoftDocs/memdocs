@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/16/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -36,6 +36,8 @@ ms.custom: intune-azure
 The Managed Home Screen is the application used for corporate-owned Android Enterprise dedicated devices enrolled via Intune and running in multi-app kiosk mode. For these devices, the Managed Home Screen acts as the launcher for other approved apps to run on top of it. The Managed Home Screen provides IT admins the ability to customize their devices and to restrict the capabilities that the end user can access. For even more details, see [How to setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).   
 
 ## When to configure the Microsoft Managed Home Screen app
+
+First, ensure that your devices are supported. Intune supports the enrollment of Android Enterprise dedicated devices for Android devices running OS version 8.0 and above that reliably connect to Google Mobile Services. Similarly, Managed Home Screen supports Android devices running OS version 8.0 and above. 
 
 Typically, if settings are available to you through Device configuration, configure the settings there. Doing so will save you time, minimize errors, and will give you a better Intune-support experience. However, some of the Managed Home Screen settings are currently only available via the **App configuration policies** pane in the Intune console. Use this document to learn how to configure the different settings either using the configuration designer or a JSON script. Additionally, use this document to learn what Managed Home Screen settings are available using Device configuration. You may also see [Dedicated device settings](../configuration/device-restrictions-android-for-work.md#device-experience) for a full list of settings available in **Device configuration** that impact the Managed Home Screen. 
 
@@ -89,7 +91,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Show Bluetooth setting | bool | FALSE | Turning this setting to True allows the   end user to turn on or off Bluetooth and to connect to different   Bluetooth-capable devices. | ✔️ |
 | Show volume setting | bool | FALSE | Turning this setting to True allows the   end user to access a volume slider to adjust media volume. | ✔️ |
 | Show flashlight setting | bool | FALSE | Turning this setting to True allows the   end user to on or off the device's flashlight. If the device doesn't support   a flashlight, then this setting won't appear, even if configured   to True. | ✔️ |
-| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting app   or swipe-down. Accessible information includes device's make, model, and   serial number. | ✔️ |
+| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting app   or swipe-down. Accessible information includes device's make, model, and serial number for OS 8. | ✔️ |
+| Show device's name on MHS | bool | FALSE | Turn this setting to True to easily view the device's Intune portal "device name" property from the Managed Settings app or from swipe-down when **Show device info setting** is set to True. Make sure to also include the string property "Device's name," which is auto-populated by Intune with the correct value. | ❌ |
+| Show serial number for all supported OS version on MHS | choice | {{serialnumber}} | Ensure that in-app config device_serial_number is configured to display {{SerialNumber}} **Show device info setting** is set to True. This value is auto-populated by Intune with the correct value. | ❌ |
 | Enable virtual home button | bool | FALSE | True allows end users to have access to a Managed Home Screen home button that will return   the user to the Managed Home Screen from the current task they are in. | ✔️ |
 | Type of virtual home button | string | swipe_up | Use swipe_up to access home button with   a swipe up gesture. Use float to access a sticky, persistent home   button that can be moved around the screen by the end user. | ✔️ |
 | Enable notifications badge | bool | FALSE | Enables the notification badge for app icons that   shows the number of new notifications on the app. If you enable this setting,   end users will see notification badges on apps that have unread   notifications. If you keep this configuration key disabled, the end user won't see any notification badged to apps that might have unread notifications. | ✔️ |
@@ -111,8 +115,13 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Enable screen saver | bool | FALSE | To enable screen saver mode or not. If set to   true, you can configure screen_saver_image, screen_saver_show_time, inactive_time_to_show_screen_saver, and media_detect_screen_saver. | ✔️ |
 | Screen saver image | string |   | Set the URL of the screen saver image. If no URL   is set, devices will show the default screen saver image when screen saver is   activated. The default image shows the Managed Home Screen app icon. | ✔️ |
 | Screen saver show time | integer | 0 | Gives option to set the amount of time in seconds   the device will display the screen saver during screen saver mode. If set to   0, the screen saver will show on screen saver mode indefinitely until the   device becomes active. | ✔️ |
-| Inactive time to enable screen   saver | integer | 30 | The number of seconds the device is inactive   before triggering the screen saver. If set to 0, the device will never go   into screen saver mode. | ✔️ |
+| Inactive time to enable screen saver | integer | 30 | The number of seconds the device is inactive   before triggering the screen saver. If set to 0, the device will never go   into screen saver mode. | ✔️ |
 | Media detect before showing   screen saver | bool | TRUE | Choose whether the device screen should show   screen saver if audio/video is playing on device. If set to true, the device won't play audio/video, regardless of the value in inactive_time_to_show_scree_saver. If set to false, device screen will show screen saver   according to value set in inactive_time_to_show_screen_saver. | ✔️ |
+
+> [!NOTE] 
+> Managed Home Screen will start the screensaver whenever the lock screen appears. If the system's lock screen timeout is longer than **Screensaver show time** then the 
+> screen saver will show until the lock screen appears. If the system's lock screen timeout is shorter than **inactive time to enable screen saver** the screensaver will appear
+> as soon as the device's lock screen appears.
 
 **Configurations to help with troubleshooting issues on the device**:
 
@@ -120,7 +129,6 @@ The following table lists the Managed Home Screen available configuration keys, 
 |-|-|-|-|-|
 | Exit lock task mode password | string |   | Enter a 4-6-digit code to use to temporarily drop   out of lock-task mode for troubleshooting. | ✔️ |
 | Enable easy access debug menu | bool | FALSE | Turn this setting to True to access the   debug menu from the Managed Settings app or from swipe-down while in Managed   Home Screen. The debug menu is currently where the capability to exit kiosk   mode lives, and is accessed by clicking the back button about 15 times. Keep   this setting set to False to keep the entry point to debug menu   only accessible via the back button. | ✔️ |
-| Show device's name on MHS | bool | FALSE | Turn this setting to True to easily view the device's Intune portal "device name" property from the Managed Settings app or from swipe-down while in Managed Home Screen. When using app config, make sure to also include the string property "Device's name," which is auto-populated by Intune with the correct value. | ❌ |
 | Enable MAX inactive time outside   of MHS | bool | FALSE | Turn this setting to True to automatically   re-launch Managed Home Screen after a set period of inactivity. The timer   will only count inactive time and, when configured, will reset each time the   user interacts with the device while outside of Managed Home Screen. Use   **MAX inactive time outside MHS** to set the inactivity timer. By default,   this setting is off. This setting can only be used if **Exit lock task mode   password** has been configured.  | ❌ |
 | MAX inactive time outside MHS | integer | 180 | Set the maximum amount of inactive time, in   seconds, that a user can spend outside of Managed Home Screen before it is   automatically re-launched. By default, this configuration is set to 180   seconds. **Enable MAX inactive time outside of MHS** must be set to true to   use this setting. | ❌ |
 | Enable MAX time outside MHS | bool | FALSE | Turn this setting to True to automatically   re-launch Managed Home Screen after a set period of time has passed. The   timer will factor in both inactive and active time spent outside of Managed   Home Screen. Use **MAX time outside MHS** to set the inactivity timer. By   default, this setting is off. This setting can only be used if **Exit lock   task mode password** has been configured. | ❌ |
@@ -278,6 +286,18 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "show_device_info_setting",
             "valueBool": false
+        },
+	{
+            "key": "show_device_name",
+            "valueBool": false
+        },
+        {
+            "key": "device_name",
+            "valueString": "{{DeviceName}}"
+        },
+        {
+            "key": "device_serial_number",
+            "valueString": "{{SerialNumber}}"
         },
         {
             "key": "show_managed_setting",
@@ -480,11 +500,11 @@ The following syntax is an example JSON script with all the available configurat
                 }
             ]
         },
-		{
+	{
             "key": "show_notification_badge",
             "valueBool": true
         },
-		{
+	{
             "key": "show_screen_saver",
             "valueBool": true
         },
@@ -496,7 +516,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "screen_saver_show_time",
             "valueInteger": 0
         },
-	    {
+	{
             "key": "inactive_time_to_show_screen_saver",
             "valueInteger": 30
         },
@@ -504,7 +524,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "media_detect_before_screen_saver",
             "valueBool": true
         }, 
-		{
+	{
             "key": "enable_max_inactive_time_outside_MHS",
             "valueBool": false
         },
@@ -520,7 +540,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "max_absolute_time_outside_MHS",
             "valueInteger": 600
         },
-		{
+	{
             "key": "theme_color",
             "valueString": "light"
         },
@@ -552,6 +572,22 @@ The following syntax is an example JSON script with all the available configurat
             "key": "session_PIN_complexity",
             "valueString": "simple"
         },
+	{
+            "key": "max_number_of_attempts_for_session_PIN",
+            "valueInteger": 0
+        },
+        {
+            "key": "minimum_length_for_session_PIN",
+            "valueInteger": 1
+        },
+        {
+            "key": "max_number_of_attempts_for_exit_PIN",
+            "valueInteger": 0
+        },
+        {
+            "key": "amount_of_time_before_try_exit_PIN_again",
+            "valueInteger": 0
+        }
         {
             "key": "enable_auto_signout",
             "valueBool": true
@@ -575,7 +611,9 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "custom_privacy_statement_url",
             "valueString": "link to custom privacy statement here"
-        }
+        },
+
+
     ]
 }
 ```

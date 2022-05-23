@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 03/02/2022
+ms.date: 04/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -96,7 +96,8 @@ Install a baseline version for up to one year after its release. When you instal
 
 - **Technical preview version 2202**
 
-Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+> [!NOTE]
+> The Evaluation Center is currently unavailable. As a workaround you can download the latest technical preview branch baseline build from [aka.ms/MECM2202TP-Baseline](https://aka.ms/MECM2202TP-Baseline).<!-- 14437681 -->
 
 ## <a name="BKMK_TPFeedback"></a> Providing feedback
 
@@ -121,11 +122,10 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2203
+### Technical preview version 2204
 
-- [Dark theme for the console](2022/technical-preview-2203.md#bkmk_dark) <!--9070525-->
-- [Escrow BitLocker recovery password to the site during a task sequence](2022/technical-preview-2203.md#bkmk_blmts) <!--10454717-->
-- [PowerShell release notes preview](2022/technical-preview-2203.md#bkmk_powershell) <!--13395691-->
+- [Administration Service Management option](2022/technical-preview-2204.md#bkmk_administration) <!--12952905-->
+- [Folders for automatic deployment rules (ADRs)](2022/technical-preview-2204.md#bkmk_folder) <!--13507410-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -144,6 +144,12 @@ The following features were released with previous versions of the Configuration
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 <!-- ### Technical preview version 2111 -->
+
+### Technical preview version 2203
+
+- [Dark theme for the console](2022/technical-preview-2203.md#bkmk_dark) <!--9070525-->
+- [Escrow BitLocker recovery password to the site during a task sequence](2022/technical-preview-2203.md#bkmk_blmts) <!--10454717-->
+- [PowerShell release notes preview](2022/technical-preview-2203.md#bkmk_powershell) <!--13395691-->
 
 ### Technical preview version 2202
 

@@ -1,5 +1,6 @@
 ---
 title: "CIDetectInfo Structure"
+description: Learn how the CIDetectInfo structure contains identity information for baseline configuration item detection. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

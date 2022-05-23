@@ -1,4 +1,5 @@
 ---
+description: Learn how to create an error status message using RaiseErrorStatusMsg class method in Configuration Manager.
 title: "RaiseErrorStatusMsg Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -36,6 +36,9 @@ Intune integrates with network access control (NAC) partners to help organizatio
 > A new NAC service was released in July 2021 and many of our NAC partners are transitioning to this new service. Currently, the following NAC partner product supports the new NAC service:
 > 
 > - Cisco ISE 3.1 and later
+> - Citrix Gateway 13.0-84.11 and later
+> - Citrix Gateway 13.1-12.50 and later
+> - F5 BIG-IP Access Policy Manager 17.0 and later
 >
 > Contact your NAC partner if you have questions on the impact of this transition. For more information, see our [blog post on the new compliance retrieval service](https://aka.ms/new-compliance-retrieval-api/).
 

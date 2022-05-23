@@ -1,4 +1,5 @@
 ---
+description: Learn how to postpone a set of software updates to automatically install in specified non-business hours.
 title: "PostponeUpdatesToNonBusinessHours Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

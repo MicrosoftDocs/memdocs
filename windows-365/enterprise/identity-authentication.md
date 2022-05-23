@@ -43,10 +43,14 @@ A device can also have an identity which is determined by its join type to Azure
 
 ## Identity types
 
-There are two identity types:
+There are three identity types:
 
 - **[Hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity)**: Users or devices that are created in on-premises Windows Server Active Directory, then synchronized to Azure AD.
 - **Cloud-only identity**: Users or devices that are created and only exist in Azure AD.
+- **[External identity](/azure/active-directory/external-identities/identity-providers)**: Users who are created and managed outside of your Azure AD tenant but are invited in to your Azure AD tenant to access your organization's resources.
+
+>[!NOTE]
+>Windows 365 does not support external identities.
 
 ## Device join types
 
@@ -85,16 +89,18 @@ Users must authenticate with the Windows 365 service when:
 
 - They access [windows365.microsoft.com](https://windows365.microsoft.com).
 - They navigate to the URL that maps directly to their Cloud PC.
-- They use a [Remote Desktop client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients to list their Cloud PCs.
+- They use a [Remote Desktop client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) to list their Cloud PCs.
 
 This authentication triggers an Azure Active Directory prompt, allowing any credential type that is supported by both Azure Active Directory and your OS.
 
 ### Cloud PC authentication
 
-Users must authenticate with the Windows 365 service when:
+Users must authenticate to their Cloud PC when:
 
 - They navigate to the URL that maps directly to their Cloud PC.
 - They use a [Remote Desktop client](/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients) to connect to their Cloud PC.
+
+This authentication request is processed by Azure AD for Azure AD Joined Cloud PCs and on-premises Active Directory for Hybrid Azure AD Joined Cloud PCs.
 
 >[!NOTE]
 >If a user launches the web browser URL that maps directly to their Cloud PC, they will encounter the Windows 365 service authentication first, then encounter the Cloud PC authentication.
@@ -105,6 +111,8 @@ The following credential types are supported for Cloud PC authentication:
     - Smartcard
     - [Windows Hello for Business certificate trust](/windows/security/identity-protection/hello-for-business/hello-hybrid-cert-trust)
     - [Windows Hello for Business key trust with certificates](/windows/security/identity-protection/hello-for-business/hello-deployment-rdp-certs)
+>[!NOTE]
+>Smartcard and Windows Hello authentication require the Windows desktop client to be able to perform Kerberos authentication when used with Hybrid AADJ. This requires the physical client to have line of sight to a domain controller.
 - Windows store client
     - Username and password
 - Web client

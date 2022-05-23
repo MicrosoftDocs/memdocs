@@ -1,6 +1,7 @@
 ---
 title: "SetDeviceCategory Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation (WMI) class method, in Configuration Manager, assigns a category to a set of devices."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

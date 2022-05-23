@@ -9,8 +9,8 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.reviewer: jubaptis
 ms.date: 02/09/2022
@@ -30,7 +30,7 @@ ms.topic: article
 
 ## Enrollment Status Page
 
-With the 2022 Intune release, functionality has been added to the [Enrollment Status Page](enrollment-status.md) UI. The application picker for selecting blocking apps has additional improvements for admins:
+With the 2202 Intune release, functionality has been added to the [Enrollment Status Page](enrollment-status.md) UI. The application picker for selecting blocking apps has additional improvements for admins:
 - A search box has been added for easier selection of apps
 - Fixes issue where store apps could not be differentiated between Online and Offline modes
 - A new column has been added for **Version** to see which version of the application is selected

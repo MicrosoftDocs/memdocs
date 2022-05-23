@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the last PXE advertisement using the SMS_LastPXEAdvertisement class in Configuration Manager.
 title: "SMS_LastPXEAdvertisement Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

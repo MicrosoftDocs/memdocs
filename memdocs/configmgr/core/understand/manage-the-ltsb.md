@@ -1,8 +1,8 @@
 ---
 title: Manage the LTSB
 titleSuffix: Configuration Manager
-description: Management differences for the LTSB of System Center Configuration Manager.
-ms.date: 05/01/2017
+description: Management differences for the LTSB of Configuration Manager.
+ms.date: 03/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -11,37 +11,46 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: medium
 ---
-# Manage the Long Term Servicing Branch of Configuration Manager
 
-*Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
+# Manage the long term servicing branch of Configuration Manager
 
-When you use the Long-Term Servicing Branch (LTSB) of System Center Configuration Manager, the following can help you understand important changes that affect how you manage your infrastructure.
+*Applies to: System Center Configuration Manager (long term servicing branch)*
 
-Because the LTSB is equivalent to Current Branch version 1606 (with some exceptions like Intune integration and cloud-related features), most tasks you use for planning, deployment, configuration, and day-to-day management are the same.
+When you use the long term servicing branch (LTSB) of Configuration Manager, there are important changes that affect how you manage your infrastructure.
 
-For example, the LTSB supports the same number of sites, site types, clients, and general infrastructure as the Current Branch. Therefore, you use the guidance found in the site and hierarchy planning and design topics for the Current Branch. Similarly, for features with the LTSB that are supported by both branches, like Software Updates or Operating System Deployment, use the guidance found in those sections of the Current Branch documentation with the caveats of not having access to feature changes introduced after version 1606 of the Current Branch.
+The LTSB is generally the same as current branch version 1606, with some exceptions like cloud-attached features. Most tasks you use for planning, deployment, configuration, and day-to-day management are the same.
 
-The following sections provide information about manage tasks that are not similar.
+For example, the LTSB supports the same number of sites, site types, clients, and general infrastructure as the current branch. Use the same guidance for site and hierarchy planning and design as the current branch. Some features are supported by both branches, like software updates or OS deployment. Use the same guidance as the current branch, with the understanding that there were feature changes since version 1606 of the current branch.
+
+The following sections provide information about tasks that aren't similar between the long term servicing branch and the current branch.
 
 ## Updates and servicing
+
 Only critical security updates are made available as in-console updates in the LTSB.  
 
-Information about regular updates for the subsequent Current Branch releases are visible in the console, but are not made available to the LTSB. They are not downloaded and cannot be installed.
+Regular updates for the current branch are visible in the console, but aren't made available to the LTSB. They aren't downloaded and can't be installed.
 
-To support in-console updates for critical security fixes, an LTSB site requires the use of [the service connection point](../servers/deploy/configure/about-the-service-connection-point.md). You can configure this site system role in offline or online mode, as is done for the Current Branch. The LTSB collects and submits the same telemetry and usage data as the Current Branch.
+To support in-console updates for critical security fixes, an LTSB site requires the use of the [service connection point](../servers/deploy/configure/about-the-service-connection-point.md). You can configure this site system role in offline or online mode, the same as for the current branch. The LTSB collects and submits the same diagnostic and usage data as the current branch.
 
-The LTSB supports the use of the Hotfix Installer and the Update Registration tool, as documented for the Current Branch.
+The LTSB supports the use of the hotfix installer and the update registration tool, as documented for the current branch.
 
 For general information about updates and servicing, see [Updates for Configuration Manager](../servers/manage/updates.md).
 
+## Changes for site expansion and the `CD.Latest` folder
 
-## Changes for site expansion and the CD.Latest folder
-When you run the LTSB and are expanding a stand-alone primary site by installing a new central administration site, you must use Setup and the source files from the version 1606 baseline media. For the Current Branch, you run Setup and use source files from the CD.Latest folder.
+When you use the LTSB, and expand a stand-alone primary site with a new central administration site (CAS), run setup and the source files from the version 1606 baseline media. For the current branch, you run setup and use source files from the `CD.Latest` folder.
 
-Although you do not run Setup for site expansion from the CD.Latest folder, you continue to use the CD.Latest folder for site recovery, and to install a new child primary site when your first LTSB site was a central administration site.
+Although you don't run setup for site expansion from the `CD.Latest` folder, continue to use the `CD.Latest` folder for the following actions:
 
-For more information about site expansion, see [Expand a stand-alone primary site](../servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand). For more information about the CD.Latest folder, see [The CD.Latest folder](../servers/manage/the-cd.latest-folder.md).
+- Site recovery
+- Install a new child primary site when your first LTSB site was a CAS
 
+For more information about site expansion, see [Expand a stand-alone primary site](../servers/deploy/install/setup-wizard-central-primary.md#expand-a-stand-alone-primary-site). For more information about the `CD.Latest` folder, see [The `CD.Latest` folder](../servers/manage/the-cd.latest-folder.md).
 
 ## Recovery
-When you recover a site, you must restore the site or site database to its original branch. You cannot recover a Current Branch site database to a LTSB installation, or vice versa.
+
+When you recover a site, you must restore the site or site database to its original branch. You can't recover a current branch site database to an LTSB installation, or an LTSB site to a current branch installation.
+
+## Next steps
+
+[Upgrade the long-term servicing branch to the current branch](convert-to-current-branch.md)

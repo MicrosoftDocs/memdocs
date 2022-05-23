@@ -1,6 +1,7 @@
 ---
 title: "SMS_DistributionPointDriveInfo Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_DistributionPointDriveInfo WMI class is an SMS Provider server class that represents the basic information about the drives on a distribution point site system role."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

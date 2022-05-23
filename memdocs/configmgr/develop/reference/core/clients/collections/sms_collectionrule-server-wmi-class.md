@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a collection rule using SMS_CollectionRule class in Configuration Manager.
 title: "SMS_CollectionRule Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

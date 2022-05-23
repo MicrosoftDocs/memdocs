@@ -1,6 +1,7 @@
 ---
 title: "SMS_OSDeploymentKitSupportedPlatforms Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_OSDeploymentKitSupportedPlatforms Windows Management Instrumentation class is an SMS Provider server class that maps Assessment and Deployment Kit versions to supported platforms."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

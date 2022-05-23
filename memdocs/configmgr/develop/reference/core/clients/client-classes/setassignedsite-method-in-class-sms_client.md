@@ -1,4 +1,5 @@
 ---
+description: Learn how the SetAssignedSite method, in Configuration Manager, sets the client's assigned site.
 title: "SetAssignedSite Methodt"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

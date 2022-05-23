@@ -1,6 +1,7 @@
 ---
 title: "SMS_MDMBulkEnrollmentPackages Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MDMBulkEnrollmentPackages WMI class is an SMS Provider server class that represents on-premises Mobile Device Management bulk enrollment packages."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

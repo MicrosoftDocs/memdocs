@@ -1,4 +1,5 @@
 ---
+description: Learn how to add the SoftwarePropertiesHash from SoftwareCode and Title in Configuration Manager using the AddSoftwareHashData class method.
 title: "AddSoftwareHashData Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

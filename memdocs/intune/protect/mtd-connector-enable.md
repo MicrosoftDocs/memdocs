@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/23/2022
+ms.date: 05/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -58,7 +58,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**.
+2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a 3rd party Mobile Threat Defense vendor, you must be a Global administrator.
 
 3. On the **Mobile Threat Defense** pane, select **Add**.
 
@@ -114,4 +114,4 @@ To learn more about using Mobile Threat Defense connectors for Intune App Protec
 
 ## Next steps
 
-- [Create Mobile Threat Defense (MTD) app protection policy with Intune](mtd-app-protection-policy.md).
+- [Create Mobile Threat Defense (MTD) device compliance policy with Intune](mtd-device-compliance-policy-create.md).

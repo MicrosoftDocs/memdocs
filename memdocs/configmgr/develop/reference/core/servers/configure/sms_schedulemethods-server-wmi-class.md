@@ -1,4 +1,5 @@
 ---
+description: Learn how the SMS_ScheduleMethods abstract Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, represents methods for decoding and encoding schedule tokens into and from a Configuration Manager interval string. 
 title: "SMS_ScheduleMethods Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

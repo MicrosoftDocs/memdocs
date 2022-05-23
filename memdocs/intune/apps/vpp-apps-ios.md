@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 04/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -85,7 +85,7 @@ You can purchase and distribute public as well as private apps using Apple Busin
 > [!IMPORTANT]
 > - A location token can only be used with one device management solution at a time. Before you start to use purchased apps with Intune, revoke and remove any existing location tokens used with other mobile device management (MDM) vendor. 
 > - A location token is only supported for use on one Intune tenant at a time. Do not reuse the same token for multiple Intune tenants.
-> - By default, Intune synchronizes the location tokens with Apple twice a day. You can initiate a manual sync at any time from Intune.
+> - By default, Intune synchronizes the location tokens with Apple once a day. You can initiate a manual sync at any time from Intune.
 > - After you have imported the location token to Intune, do not import the same token to any other device management solution. Doing so might result in the loss of license assignment and user records.
 
 ## Migrate from Volume Purchase Program (VPP) to Apps and Books
@@ -124,7 +124,9 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
    - **Automatic app updates** - Choose from **Yes** or **No** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
 
         > [!NOTE]
-        > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
+        > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details. 
+        >
+        > When updating a VPP app, it can take up to 24 hours for the device to receive the updated VPP app. The device must be unlocked and available to install the update successfully.
 
     - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md).
 7. Click **Next** to display the **Scope tags** page.
@@ -147,10 +149,12 @@ You can synchronize the app names, metadata and license information for your pur
     > When you create a new assignment for a Apple Volume Purchase Program (VPP) app, the default license type is "device". Existing assignments remain unchanged.
 5. Once you are done, choose **Save**.
 
-
 >[!NOTE]
 >The Available deployment intent is not supported for device groups, only user groups are supported. The list of apps displayed is associated with a token. If you have an app that is associated with multiple VPP tokens, you see the same app being displayed multiple times; once for each token.
-
+   
+>[!NOTE]
+>Apps assigned as Available do not become managed on the device until the user initiates an install of the application. Once an app assigned as Available has been installed, or the user has attempted to install the application, Intune will ensure that the app is licensed.
+   
 > [!NOTE]  
 > Intune (or any other MDM for that matter) does not actually install VPP apps. Instead, Intune connects to your VPP account and tells Apple which app licenses to assign to which devices. From there, all the actual installation is handled between Apple and the device.
 > 
@@ -179,8 +183,8 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 
 | Action | iOS/iPadOS | macOS |
 |------- | ---------- | ----- |
-| Remove app assignment | Removing an app assignment is a prerequisite to revoking an app license. When you remove an app assignment for a user, Intune does not reclaim the user or device license until you revoke the license. If the app is installed, it will remain installed but it will no longer be offered for installation to the user or device. | Removing an app assignment is a prerequisite to revoking an app license. When you remove an app assignment for a user, Intune does not reclaim the user or device license until you revoke the license. If the app is installed, it will remain installed but it will no longer be offered for installation to the user or device. |
-| Revoke app license | After removing an app assignment, you can reclaim an app license from the user or device using **Revoke license** action. You must change the assignment to **Uninstall** to remove the app from the device. | After removing an app assignment, you can reclaim an app license from the user or device using **Revoke license** action. The macOS app with revoked license remains usable on the device, but cannot be updated until a license is reassigned to the user or device. According to Apple, such apps are removed after a 30-day grace period. You must change the assignment to **Uninstall** to remove the app from the device. |
+| Remove app assignment | Removing an app assignment is a prerequisite to revoking an app license. When you remove an app assignment for a user, Intune does not reclaim the user or device license until you change the assignment to **Uninstall**. If the app assignment is removed while the app is installed and never assigned as **Uninstall**, it will remain installed, but it will no longer be offered for installation to the user or device. | Removing an app assignment is a prerequisite to revoking an app license. When you remove an app assignment for a user, Intune does not reclaim the user or device license until you change the assignment to **Uninstall**. If the app assignment is removed while the app is installed and never assigned as **Uninstall**, it will remain installed, but it will no longer be offered for installation to the user or device. |
+| Revoke app license | After changing the app assignment to **Uninstall**, you can reclaim an app license from the user or device using the **Revoke license** action. You must change the assignment to **Uninstall** to remove the app from the device and revoke the app license. | After changing the app assignment to **Uninstall**, you can reclaim an app license from the user or device using the **Revoke license** action. The macOS app with revoked license remains usable on the device, but cannot be updated until a license is reassigned to the user or device. According to Apple, such apps are removed after a 30-day grace period. You must change the assignment to **Uninstall** to remove the app from the device and revoke the app license. |
 
 >[!NOTE]
 > - Intune reclaims app licenses when an employee leaves the company and is no longer part of the AAD groups.

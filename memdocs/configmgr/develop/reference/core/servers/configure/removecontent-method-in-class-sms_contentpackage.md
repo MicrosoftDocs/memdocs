@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the RemoteContent class method to remove the content for the given content ID from a package.  
 title: RemoveContent method in class SMS_ContentPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

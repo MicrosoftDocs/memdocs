@@ -1,6 +1,7 @@
 ---
 title: "SMS_EmbeddedPropertyList Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a general-purpose embedded object, which defines property lists."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

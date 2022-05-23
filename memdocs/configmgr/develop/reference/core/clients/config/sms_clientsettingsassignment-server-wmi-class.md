@@ -1,6 +1,7 @@
 ---
 title: "SMS_ClientSettingsAssignment Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_ClientSettingsAssignment WMI class is an SMS Provider server class, in Configuration Manager, that represents the collection assignments of specified SMS_ClientSettings.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

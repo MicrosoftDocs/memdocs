@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_CH_SummaryHistory class to represent client summary histories.
 title: "SMS_CH_SummaryHistory Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

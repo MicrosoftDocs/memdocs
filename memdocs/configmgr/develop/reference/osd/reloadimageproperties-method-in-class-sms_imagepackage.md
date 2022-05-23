@@ -1,6 +1,7 @@
 ---
 title: "ReloadImageProperties Method in SMS_ImagePackage"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the ReloadImageProperties WMI class method reloads image metadata from an image source .wim file."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

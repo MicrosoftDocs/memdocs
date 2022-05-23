@@ -1,6 +1,7 @@
 ---
 title: "SMS_ObjectContainerItem Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that contains information about a Configuration Manager console folder item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
