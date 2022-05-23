@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_CI_ComplianceSummary server class.
 
 ---
 # SMS_CI_ComplianceSummary Server WMI Class

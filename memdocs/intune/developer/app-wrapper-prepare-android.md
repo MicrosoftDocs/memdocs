@@ -97,11 +97,10 @@ Note the folder to which you installed the tool. The default location is: C:\Pro
 
    The following table details the properties of the **invoke-AppWrappingTool** command:
 
-|Property|Information|Example|
-|-------------|--------------------|---------|
-|**-InputPath**&lt;String&gt;|Path of the source Android app (.apk).| |
- |**-OutputPath**&lt;String&gt;|Path to the output Android app. If this is the same directory path as InputPath, the packaging will fail.| |
-|**-UseMinAPILevelForNativeMultiDex**| (Optional) Use this flag to increase the source Android app's minimum API level to 21. This flag will prompt for confirmation as it will limit who may install this app. Users can skip the confirmation dialog by appending the parameter "-Confirm:$false" to their PowerShell command. The flag should only be used by customers on apps with min API < 21 that fail to wrap successfully due to DEX overflow errors. | |
+|Property|Information|
+|-------------|--------------------|
+|**-InputPath**&lt;String&gt;|Path of the source Android app (.apk).|
+ |**-OutputPath**&lt;String&gt;|Path to the output Android app. If this is the same directory path as InputPath, the packaging will fail.|
 | **&lt;CommonParameters&gt;** | (Optional) The command supports common PowerShell parameters like verbose and debug. |
 
 

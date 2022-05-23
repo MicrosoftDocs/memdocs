@@ -1,6 +1,7 @@
 ---
 title: "Create an Object by Using WMI"
 titleSuffix: "Configuration Manager"
+description: "Create a Configuration Manager object by calling the SWbemObject object SpawnInstance_ method."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

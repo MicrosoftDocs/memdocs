@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/08/2021
+ms.date: 05/09/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,63 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of May 9, 2022 (Service release 2204)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### Set default languages/regions for Cloud PCs (preview)<!--38649676 -->
+
+You can now set the default languages for your newly created Cloud PCs. Thirty-eight languages/regions will be available. For more information, see [Change organizational default settings](change-organization-default-settings.md).
+
+<!-- ########################## -->
+## Week of April 11, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### windows365.microsoft.com is now generally available<!--38195529-->
+
+The windows365.microsoft.com web client has moved out of preview and into general availability.
+
+<!-- ########################## -->
+## Week of April 4, 2022 (Service release 2203)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+[!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End-user experience
+
+[!INCLUDE [End user feedback and log collection](../includes/whats-new-feedback-log-collection.md)]
+
+<!-- ########################## -->
+## Week of February  28, 2022 (Service release 2202)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Point-in-time restore (preview)<!--37063579 -->
+Users can now restore a Cloud PC to a state from a previous point in time. Multiple near-term and long-term restore points are available. For more information, see [Point-in-time restore for Windows 365 Business](restore-overview.md).
+
+#### Windows 365 link on Microsoft 365 admin center<!--37188422 -->
+
+To make it easier for admins to set up Windows 365, a link has been added to the M365 admin center home page. Admins with Windows 365 Enterprise licenses will see a link for [endpoint.microsoft.com](https://endpoint.microsoft.com) and admins with Windows 365 Business licenses will see a link for [windows365.microsoft.com](https://windows365.microsoft.com).
+
+#### Higher Cloud PC screen resolution option (preview)<!--38301718 wnready-->
+
+Cloud PC users can now choose a higher screen resolution when they connect to their Cloud PC from https://windows365.microsoft.com.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Windows 365 approved partners
+
+We’ve published a new help documentation article. For more information, see [Windows 365 approved partners](../partners.md).
 
 <!-- ########################## -->
 ## Week of December 6, 2021 (Service release 2111)

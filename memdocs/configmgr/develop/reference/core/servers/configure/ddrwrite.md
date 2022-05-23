@@ -1,6 +1,7 @@
 ---
 title: "DDRWrite"
 titleSuffix: "Configuration Manager"
+description: The`DDRWrite function, in Configuration Manager, writes the data discovery records (DDRs) to a file.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

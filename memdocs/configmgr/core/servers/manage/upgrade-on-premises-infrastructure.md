@@ -68,6 +68,8 @@ Use the steps in this section for any of the following upgrade scenarios:
 
 - (_Windows Server 2012 or Windows Server 2012 R2 only_): Remove the System Center Endpoint Protection (SCEP) client. Windows Server now has Windows Defender built in, which replaces the SCEP client. The presence of the SCEP client can prevent an upgrade to Windows Server.
 
+- (_Windows Server 2012 or Windows Server 2012 R2 only_): Install the latest Cumulative Update and uninstall Windows Management Framework 5.1 before attempting the upgrade.
+
 - Remove the WSUS role from the server if it's installed. You may keep the SUSDB and reattach it once WSUS is reinstalled.
 
 - If you're upgrading the OS of the site server, make sure [file-based replication](../../plan-design/hierarchy/file-based-replication.md) is healthy for the site. Check all inboxes for a backlog on both sending and receiving sites. If there are lots of stuck or pending replication jobs, wait until they clear out.<!-- SCCMDocs#1792 -->
@@ -105,7 +107,7 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 
 1. In the MMC, open the **Properties** of **WMI Control (Local)** and select the **Security** tab.
 
-1. Expand the tree below Root, select the **CCM** node, and then choose **Security**.  Make sure the **SMS Admins** group has the following permissions:
+1. Expand the tree below Root, select the **SMS** node, and then choose **Security**.  Make sure the **SMS Admins** group has the following permissions:
 
     - Enable Account
 

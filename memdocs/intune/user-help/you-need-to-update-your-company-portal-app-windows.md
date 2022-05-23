@@ -2,7 +2,7 @@
 # required metadata
 
 title: You need to update your Company Portal app | Microsoft Docs
-description:
+description: To continue to access your corporate email and documents, install the new version of the Company Portal app.
 keywords:
 author: lenewsad
 ms.author: lanewsad

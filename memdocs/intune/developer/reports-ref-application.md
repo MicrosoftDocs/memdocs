@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 02/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -105,23 +105,6 @@ The **vppProgramType** entity lists possible VPP program types for an app.
 | 3DDA2474-470B-4503-9830-2665C21C1945 | Microsoft | Microsoft's VPP program. |
 | 00000000-0000-0000-0000-000000000000 | Not Yet Available | Default value, No VPP. |
 | B54814E0-68EA-4BA4-8088-B5AAB58E737B | Apple | Apple's VPP program. |
-
-
-
-## applicationInventories
-
-The **applicationInventory** entity lists the applications found on the device at the time of inventory collection.
-
-> [!NOTE]
-> This entity is in the process of being deprecated.
-
-| Property  | Description |
-|---------|------------|
-| deviceKey | This is a reference to the Device table which contains the Intune device ID. |
-| dateKey | Reference to date table indicating the day of inventory. |
-| applicationName | The application name. |
-| applicationVersion | Version of the application. |
-| bundleSize | The size of the app in bytes. |
 
 ## mobileAppInstallStates
 

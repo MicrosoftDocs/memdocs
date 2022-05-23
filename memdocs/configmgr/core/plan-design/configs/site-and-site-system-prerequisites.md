@@ -2,7 +2,7 @@
 title: Site prerequisites
 titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
-ms.date: 12/01/2021
+ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -62,6 +62,9 @@ Starting in version 2107, site servers and specific site systems require Microso
 If the site server doesn't have any collocated roles that require .NET, it still requires .NET, but setup doesn't automatically install it. Make sure the site server itself has at least .NET version 4.6.2. If possible, install .NET 4.8.
 
 ### Site systems
+
+> [!IMPORTANT]
+> If you're upgrading from System Center 2012 Configuration Manager R2 Service Pack 1, you need to manually verify that remote site systems have at least .NET version 4.6.2. Configuration Manager current branch setup skips the check in this scenario.<!-- 13846610 -->
 
 During Configuration Manager setup, if site systems have a version earlier than 4.6.2, you'll see a prerequisite check warning. This check is a warning instead of an error, because setup will install version 4.6.2. When .NET updates, it usually requires Windows to restart. Site systems will send status message 4979 when a restart is required. Configuration Manager suppresses the restart; the system doesn't restart automatically.
 
@@ -205,7 +208,7 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 ## Asset Intelligence synchronization point
 
 > [!IMPORTANT]
-> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Introduction to asset intelligence in Configuration Manager](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Asset intelligence deprecation](../../clients/manage/asset-intelligence/deprecation.md).
 
 ### .NET Framework for the AISP
 
@@ -216,6 +219,9 @@ Install a supported version of the .NET Framework. For more information, [.NET v
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 ## Certificate registration point
+
+> [!WARNING]
+> Starting in version 2203, the certificate registration point is no longer supported.<!--13951253--> For more information, see [Frequently asked questions about resource access deprecation](../../../protect/plan-design/resource-access-deprecation-faq.yml).
 
 ### Windows Server roles and features for the CRP
 
@@ -332,6 +338,9 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 
 ## Enrollment point
 
+> [!IMPORTANT]
+> With the deprecation of on-premises MDM and the Configuration Manager client for macOS, this site system role is also deprecated. For more information, see [Removed and deprecated features for Configuration Manager](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901,12927803 -->
+
 ### Windows Server roles and features for the enrollment point
 
 - .NET Framework 3.5
@@ -379,6 +388,9 @@ When you install a new site, Configuration Manager automatically installs SQL Se
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
 
 ## Enrollment proxy point
+
+> [!IMPORTANT]
+> With the deprecation of on-premises MDM and the Configuration Manager client for macOS, this site system role is also deprecated. For more information, see [Removed and deprecated features for Configuration Manager](../changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901,12927803 -->
 
 ### Windows Server roles and features for the enrollment proxy point
 

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/22/2021
+ms.date: 05/11/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -66,9 +66,6 @@ To use imported PKCS certificates with Intune, you'll need the following infrast
   - [Prerequisites](certificate-connector-prerequisites.md).
   - [Installation and configuration](certificate-connector-install.md).
 
-  > [!TIP]
-  > Beginning on July 29, 2021, the **Certificate Connector for Microsoft** Intune replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. With the release of version 6.2109.51.0 of the Certificate Connector for Microsoft, the previous connectors are no longer supported.
-
 - **Windows Server**:
 
   The certificate connector installs on a Windows Server that meets the connectors [prerequisites](certificate-connector-prerequisites.md).
@@ -84,65 +81,6 @@ When you use Intune to deploy an **imported PFX certificate** to a user, there a
 - **Intune Service**: Stores the PFX certificates in an encrypted state and handles the deployment of the certificate to the user device.  The passwords protecting the private keys of the certificates are encrypted before they're uploaded using either a hardware security module (HSM) or Windows Cryptography, ensuring that Intune can't access the private key at any time.
 
 - **Certificate Connector for Microsoft Intune**: When a device requests a PFX certificate that was imported to Intune, the encrypted password, the certificate, and the device's public key are sent to the connector. The connector decrypts the password using the on-premises private key, and then re-encrypts the password (and any plist profiles if using iOS) with the device key before sending the certificate back to Intune. Intune then delivers the certificate to the device and the device decrypts it with the device's private key and install the certificate.
-
-<!-- Remainder is deprecated content, now covered by the install of the new certificate connector>
-
-Before you begin, [review requirements for the connector](certificate-connectors.md) and ensure your environment and your Windows server is ready to support the connector.
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **+ Add**.
-
-3. Click *Download the certificate connector software* for the connector for PKCS #12, and save the file to a location you can access from the server where you're going to install the connector.
-
-   ![Microsoft Intune Connector download](./media/certificates-imported-pfx-configure/download-connector.png)
-
-4. After the download completes, sign in to the server and run the installer (PfxCertificateConnectorBootstrapper.exe).  
-   - When you accept the default installation location, the connector installs to `Program Files\Microsoft Intune\PFXCertificateConnector`.
-   - The connector service runs under the local system account. If a proxy is required for internet access, confirm that the local service account can access the proxy settings on the server.
-
-5. The PFX Certificate Connector for Microsoft Intune opens the **Enrollment** tab after installation. To enable the connection to Intune, **Sign In**, and enter an account with Azure global administrator or Intune administrator permissions.
-
-   > [!WARNING]
-   > By default, in Windows Server **IE Enhanced Security Configuration** is set to **On** which can cause issues with the sign-in to Microsoft 365.
-
-6. Close the window.
-
-7. In the Microsoft Endpoint Manager admin center, go back to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. In a few moments, a green check mark appears and the connection status updates. The connector server can now communicate with Intune.
-
-> [!NOTE]
-> The following changes must be made for GCC High and DoD tenants prior to using the PFX Certificate Connector.
->
-> 1. Use a text editor to edit the two following *.config* files, which updates the service endpoints for the GCC High environment. Notice that these updates change the URIs from **.com** to **.us** suffixes. There are a total of three URI updates, two updates within the **PFXCertificateConnectorUI.exe.config** file, and one update in the **Microsoft.Intune.Connectors.PfxCreateLegacy.exe.config** file.  
->    - File Name: <install_Path>\Microsoft Intune\PFXCertificateConnector\ConnectorUI\ PFXCertificateConnectorUI.exe.config
->
->      Example: (%programfiles%\Microsoft Intune\PFXCertificateConnector\ConnectorUI\ PFXCertificateConnectorUI.exe.config)
->      ```
->      <appSettings>
->        <add key="SignInURL" value="https://portal.manage.microsoft.us/Home/ClientLogon" />
->        <add key="LocationServiceEndpoint" value="RestUserAuthLocationService/RestUserAuthLocationService/ServiceAddresses" />
->        <add key="AccountPortalURL" value="https://manage.microsoft.us" />
->      </appSettings> 
->      ```
->
->    - </appSettings>File Name: <install_Path>\Microsoft Intune\PFXCertificateConnector\ConnectorSvc\Microsoft.Intune.Connectors.PfxCreateLegacy.exe.config
->
->      Example: (%programfiles%\ Microsoft Intune\PFXCertificateConnector\ConnectorSvc\Microsoft.Intune.Connectors.PfxCreateLegacy.exe.config)
->      ```
->      <appSettings>
->        <add key="BaseServiceAddress" value="https://manage.microsoft.us/" />
->        <add key="TimerFrequency" value="30000" />
->        <add key="PfxTimerFrequency" value="30000" />
->        <add key="PfxImportRecryptionFrequency" value="30000" />
->        <add key="CloudCAConnTimeoutInMilliseconds" value="30000" />
->      ```
->
-> 2. On the server that hosts the connector, add or edit the following registry key to match teh following:
->    `HKLM\Software\Microsoft\MicrosoftIntune\PFXCertificateConnector\MbaseManagementAddress`
->    - If *MbaseManagementAddress* isn't present, add it as a child key below *PFXCertificateConnector*.
->    - Set the *String Value* for *MbaseManagementAddress* to `https://manage.microsoft.us`
-
--->
 
 ## Import PFX Certificates to Intune
 
@@ -162,7 +100,7 @@ To make use of the PowerShell cmdlets, you build the project yourself using Visu
 
 3. On the top, change from **Debug** to **Release**.
 
-4. Go to **Build** and select **Build PFXImportPS**. In a few moments, you'll see the **Build succeeded** confirmation appear at the bottom left of Visual Studio.
+4. Go to **Build** and select **Build PFXImportPS**. In a few moments, you'll see the **Build succeeded** confirmation at the bottom left of Visual Studio.
 
    ![Visual Studio Build option](./media/certificates-imported-pfx-configure/vs-build-release.png)
 
@@ -317,9 +255,15 @@ If you use the DigiCert PKI Platform service, you can use the DigiCert **Import 
 
 To learn more about the DigiCert Import tool, including how to obtain the tool, see https://knowledge.digicert.com/tutorials/microsoft-intune.html in the DigiCert knowledge base.
 
+### EverTrust
+
+If you use EverTrust as your PKI solution, standalone or combined to an existing PKI, you can configure EverTrust Horizon to import PFX certificates to Intune. After you complete the integration, you won’t need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) that's detailed earlier in this article.
+
+To learn more about EverTrust’s integration with Intune, see https://evertrust.fr/horizon/integrations/intune/.
+
 ### KeyTalk
 
-If you use the KeyTalk service, you can configure their service to import PFX certificates to Intune. After you complete integration, you won’t need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) to Intune that's detailed earlier in this article.
+If you use the KeyTalk service, you can configure their service to import PFX certificates to Intune. After you complete the integration, you won’t need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) to Intune that's detailed earlier in this article.
 
 To learn more about KeyTalk’s integration with Intune, see https://keytalk.com/support in the KeyTalk knowledge base.
 

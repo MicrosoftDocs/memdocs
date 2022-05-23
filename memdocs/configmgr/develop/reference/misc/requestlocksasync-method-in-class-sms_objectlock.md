@@ -1,4 +1,5 @@
 ---
+description: Learn how to asynchronously acquire locks to edit multiple global objects using RequestLocksAsync class method in Configuration Manager.
 title: "RequestLocksAsync Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -36,7 +37,6 @@ SInt32 RequestLocksAsync(
  Qualifiers: [in]  
 
  The paths of the objects for which the locks are requested.  
-
  `RequestTransfer`  
  Data type: `Boolean`  
 

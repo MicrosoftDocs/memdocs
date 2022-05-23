@@ -1,6 +1,7 @@
 ---
 title: "SMS_ClientPfxCertificate Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_ClientPfxCertificate Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that contains an imported  Pfx certificate.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

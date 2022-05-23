@@ -87,6 +87,8 @@ items:
       href: plan-design/changes/features-and-capabilities.md
     - name: What's new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 2203
+      href: plan-design/changes/whats-new-in-version-2203.md
     - name: What's new in version 2111
       href: plan-design/changes/whats-new-in-version-2111.md
     - name: What's new in version 2107
@@ -95,8 +97,6 @@ items:
       href: plan-design/changes/whats-new-in-version-2103.md
     - name: What's new in version 2010
       href: plan-design/changes/whats-new-in-version-2010.md
-    - name: What's new in version 2006
-      href: plan-design/changes/whats-new-in-version-2006.md
     - name: What's changed from Configuration Manager 2012
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: Removed and deprecated
@@ -225,6 +225,8 @@ items:
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 2203
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2203.md          
         - name: Data for version 2111
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2111.md
         - name: Data for version 2107
@@ -233,8 +235,6 @@ items:
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2103.md
         - name: Data for version 2010
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2010.md
-        - name: Data for version 2006
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
     - name: Configuration Manager tools
       href: plan-design/diagnostics/tools.md
     - name: Frequently asked questions (FAQ)
@@ -285,14 +285,14 @@ items:
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
-    - name: 2112 features
-      href: get-started/2021/technical-preview-2112.md      
-    - name: 2111 features
-      href: get-started/2021/technical-preview-2111.md
-    - name: 2110 features
-      href: get-started/2021/technical-preview-2110.md
-    - name: 2109 features
-      href: get-started/2021/technical-preview-2109.md
+    - name: 2204 features
+      href: get-started/2022/technical-preview-2204.md       
+    - name: 2203 features
+      href: get-started/2022/technical-preview-2203.md 
+    - name: 2202 features
+      href: get-started/2022/technical-preview-2202.md 
+    - name: 2201 features
+      href: get-started/2022/technical-preview-2201.md   
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -354,7 +354,13 @@ items:
       - name: Prerequisites for installing sites
         href: servers/deploy/install/prerequisites-for-installing-sites.md
       - name: Use the setup wizard
-        href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+        items:
+        - name: Setup wizard overview
+          href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+        - name: Install a central administration or primary site
+          href: servers/deploy/install/setup-wizard-central-primary.md
+        - name: Install a secondary site
+          href: servers/deploy/install/setup-wizard-secondary.md
       - name: Use a command-line
         items:
         - name: Command-line overview
@@ -401,6 +407,8 @@ items:
         href: servers/deploy/configure/deploy-and-manage-content.md
       - name: Monitor content
         href: servers/deploy/configure/monitor-content-you-have-distributed.md
+      - name: Visualize content distribution status
+        href: servers/deploy/configure/visualize-content-distribution-status.md
       - name: Microsoft Connected Cache
         href: plan-design/hierarchy/microsoft-connected-cache.md
       - name: Troubleshoot Microsoft Connected Cache
@@ -488,7 +496,7 @@ items:
     - name: Release notes
       href: servers/deploy/install/release-notes.md
     - name: State messages
-      href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md   
+      href: plan-design/hierarchy/state-messages.md
     - name: Unicode and ASCII support
       href: plan-design/hierarchy/unicode-and-ascii-support.md
 - name: Manage infrastructure
@@ -563,6 +571,8 @@ items:
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 2203
+      href: servers/manage/checklist-for-installing-update-2203.md
     - name: Checklist for installing update 2111
       href: servers/manage/checklist-for-installing-update-2111.md
     - name: Checklist for installing update 2107
@@ -571,8 +581,6 @@ items:
       href: servers/manage/checklist-for-installing-update-2103.md
     - name: Checklist for installing update 2010
       href: servers/manage/checklist-for-installing-update-2010.md
-    - name: Checklist for installing update 2006
-      href: servers/manage/checklist-for-installing-update-2006.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery
@@ -811,10 +819,12 @@ items:
       href: clients/manage/collections/create-collections.md
     - name: How to manage collections
       href: clients/manage/collections/manage-collections.md
-    - name: How to use maintenance windows
-      href: clients/manage/collections/use-maintenance-windows.md
+    - name: View collection relationships
+      href: clients/manage/collections/view-relationships.md
     - name: How to view collection evaluation
       href: clients/manage/collections/collection-evaluation-view.md
+    - name: How to use maintenance windows
+      href: clients/manage/collections/use-maintenance-windows.md
     - name: Security and privacy for collections
       href: clients/manage/collections/security-and-privacy-for-collections.md
   - name: Hardware inventory
@@ -859,6 +869,8 @@ items:
       href: clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md
     - name: Use the Product Lifecycle dashboard
       href: clients/manage/asset-intelligence/product-lifecycle-dashboard.md
+    - name: Asset intelligence deprecation
+      href: clients/manage/asset-intelligence/deprecation.md
   - name: Remote control
     items:
     - name: Introduction to remote control

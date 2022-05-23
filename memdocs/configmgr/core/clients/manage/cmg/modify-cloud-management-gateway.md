@@ -2,7 +2,7 @@
 title: Modify a CMG
 titleSuffix: Configuration Manager
 description: If you need to change the configuration, you can modify the cloud management gateway (CMG).
-ms.date: 10/25/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -56,6 +56,9 @@ To verify that the content files for a package are available on the content-enab
 
 ## Convert
 
+> [!NOTE]
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/optional-features.md).
+
 <!--8959690-->
 
 Starting in version 2107, if you have a CMG that uses the classic cloud service, convert it to use a virtual machine scale set.
@@ -90,6 +93,9 @@ To make changes that the conversion process doesn't support, you need to [Redepl
 > For more information, see [Replace a CMG with a new service name](#replace-a-cmg-with-a-new-service-name).
 
 ### Process to convert a CMG to a virtual machine scale set
+
+> [!IMPORTANT]
+> First review the prerequisites for [virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets). For example, make sure that you register the necessary [Azure resource providers](configure-azure-ad.md#configure-azure-resource-providers) in the subscription<!-- memdocs#2434 -->. You also need both Subscription Owner permission to the associated subscription and Global Administrator permissions for the associated tenant.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.
 

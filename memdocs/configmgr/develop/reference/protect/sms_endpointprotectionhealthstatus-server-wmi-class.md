@@ -1,5 +1,6 @@
 ---
 title: "SMS_EndpointProtectionHealthStatus Class"
+description: Learn how the SMS_EndpointProtectionHealthStatus class is an SMS Provider server class that represents health status of Endpoint Protection.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

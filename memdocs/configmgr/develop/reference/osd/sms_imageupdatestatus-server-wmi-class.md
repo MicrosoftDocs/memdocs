@@ -1,5 +1,6 @@
 ---
 title: "SMS_ImageUpdateStatus Class"
+description: The SMS_ImageUpdateStatus Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents software update installation status of offline servicing image.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

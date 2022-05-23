@@ -1,6 +1,7 @@
 ---
 title: "GenerateProvisioningXML Method"
 titleSuffix: "Configuration Manager"
+description: "The ImportForProfile Windows Management Instrumentation (WMI) class method generates provisioning data in XML format."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

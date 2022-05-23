@@ -1,6 +1,7 @@
 ---
 title: "SMS_ConfigurationPolicyBase Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ConfigurationPolicyBase WMI class represents the base class for configuration policy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

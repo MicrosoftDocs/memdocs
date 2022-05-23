@@ -1,6 +1,7 @@
 ---
 title: SetSourceSite method in class SMS_OperatingSystemInstallPackage
 titleSuffix: "Configuration Manager"
+description: The SetSourceSite Windows Management Instrumentation class method, in Configuration Manager, sets the code of the source site for the operating system install package. 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

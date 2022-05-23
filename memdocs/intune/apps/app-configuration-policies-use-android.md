@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -38,8 +38,9 @@ ms.custom: intune-azure
 
 App configuration policies in Microsoft Intune supply settings to Managed Google Play apps on managed Android Enterprise devices. The app developer exposes Android-managed app configuration settings. Intune uses these exposed setting to let the admin configure features for the app. The app configuration policy is assigned to your user groups. The policy settings are used when the app checks for them, typically the first time the app runs.
 
-> [!NOTE]  
-> Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
+Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
+
+[!INCLUDE [android-supported-os](../includes/android-supported-os.md)]
 
 ## Email apps
 
@@ -75,7 +76,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     <img alt="Screenshot of configuration policy - Settings" src="./media/app-configuration-policies-use-ios/app-config-policy01a.png" width="700">
 
     > [!NOTE]
-    > This setting only works for corporate-owned work profile devices.
+    > This setting only works for personally-owned work profile and corporate-owned work profile devices.
     > 
     > Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 

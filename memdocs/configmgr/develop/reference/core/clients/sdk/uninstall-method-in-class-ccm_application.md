@@ -1,4 +1,5 @@
 ---
+description: Learn how to uninstall an application using the Uninstall Windows Management Instrumentation (WMI) class method.
 title: "Uninstall Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

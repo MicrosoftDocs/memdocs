@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/11/2021
+ms.date: 01/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -29,16 +29,14 @@ ms.collection: M365-identity-device-management
 
 # Filter reports and troubleshooting in Microsoft Endpoint Manager
 
-When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
+When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10/11 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
 Devices are evaluated against these filters to meet the rules you configure. The results of the filter evaluations are logged, and reported in the Microsoft Endpoint Manager admin center.
 
 Use this article to learn more about the reporting features, and to help troubleshoot filters and conflicts.
 
 > [!IMPORTANT]
-> 
-> - From evaluation time, the filter evaluation results can take up to 30 minutes to show in Endpoint Manager admin center.
-> - This feature is in [public preview](public-preview.md). The entry point to filter evaluation results will change, and become more integrated into policy and app reports.
+> From evaluation time, the filter evaluation results can take up to 30 minutes to show in Endpoint Manager admin center.
 
 ## Reports
 
@@ -54,12 +52,12 @@ You can use the following reports to get more information on your filters:
 This report shows every app or policy with a filter that's been applied. For each evaluated app or policy, you can see the applied filters, and get more detailed information.
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **All Devices** > select a device > **Filter evaluation (preview)**. The following information is shown:
+2. Select **Devices** > **All Devices** > select a device > **Filter evaluation**. The following information is shown:
 
     - The filters that were evaluated.
     - The date and time the evaluation occurred.
     - The evaluation results: **Match** or **No match**
-    - If the filter was using Include or Exclude mode
+    - If the filter is using Include or Exclude mode
     - The filter name, description, and rules
     - The properties that were evaluated, such as `deviceName`.  
     - The available apps that can be assigned to the device.  
@@ -129,7 +127,7 @@ When you use filters, conflict resolution is handled using the following methods
 
 ### Filter mode
 
-When there's a device with conflicting assignments for the same policy, the follow precedence applies:
+When there's a device with conflicting assignments for the same policy, the following precedence applies:
 
 1. **Exclude** mode applies. **Exclude** wins over **No filter**, and wins over **Include** mode.
 2. **No filter** mode applies. **No filter** wins over **Include** mode.

@@ -2,7 +2,7 @@
 # required metadata
 
 title: How to encrypt your Windows device | Microsoft Docs
-description:
+description: To protect your company or school data, your company support might require you to encrypt your Windows device.
 keywords:
 author: lenewsad
 ms.author: lanewsad

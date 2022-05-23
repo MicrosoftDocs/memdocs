@@ -1,6 +1,7 @@
 ---
 title: "Close Method in Class SMS_CHAlert"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the Close Windows Management Instrumentation class method postpones the alert."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

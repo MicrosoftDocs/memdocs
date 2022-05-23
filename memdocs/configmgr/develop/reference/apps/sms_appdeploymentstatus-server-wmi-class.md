@@ -1,6 +1,7 @@
 ---
 title: "SMS_AppDeploymentStatus Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_AppDeploymentStatus Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents application deployment status. 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

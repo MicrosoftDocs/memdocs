@@ -1,6 +1,7 @@
 ---
 title: "Use SMSCSTAT.DLL to Create Status Messages"
 titleSuffix: "Configuration Manager"
+description: "Smscstat.dll is a library of 32-bit C APIs for reporting Configuration Manager status messages from an application that is running on either client computer."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: The SMS_DPGroupMembers Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents distribution point group members.
 title: "SMS_DPGroupMembers Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

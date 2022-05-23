@@ -51,7 +51,7 @@ The Microsoft Intune App SDK Xamarin Bindings let you incorporate Intune app pro
 
 ### Intune Mobile Application Management scenarios
 
-* Intune [APP-WE](../apps/android-deployment-scenarios-app-protection-work-profiles.md#app-we) (without device enrollment)
+* Intune [MAM](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam)
 * Intune MDM-enrolled devices
 * Third-party EMM-enrolled devices
 

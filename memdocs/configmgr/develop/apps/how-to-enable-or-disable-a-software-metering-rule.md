@@ -1,6 +1,7 @@
 ---
 title: "Enable or Disable a Software Metering Rule"
 titleSuffix: "Configuration Manager"
+description: "Enable or disable a software metering rule, in Configuration Manager, by loading an instance of the software metering rule."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Learn how to register the custom installer technology with Configuration Manager using an XML file.
 title: "Define the Installer Technology Registration File"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

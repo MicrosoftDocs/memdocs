@@ -2,7 +2,7 @@
 title: Upgrade macOS clients
 titleSuffix: Configuration Manager
 description: Upgrade the Configuration Manager client on Mac computers.
-ms.date: 09/10/2019
+ms.date: 01/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
@@ -16,14 +16,20 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is deprecated.<!-- 12927803 --> For more information, see [Mac computers](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
+
 Follow the high-level steps in this article to upgrade the client for Mac computers by using a Configuration Manager application. You can also download the Mac client installation file, copy it to a shared network location or a local folder on the Mac computer, and then instruct users to manually run the installation.  
 
 > [!NOTE]  
-> Before you do these steps, make sure that your Mac computer meets the prerequisites. See [Supported operating systems for Mac computers](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).  
+> Before you do these steps, make sure that your Mac computer meets the prerequisites. For more information, see [Supported operating systems for Mac computers](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 ## Download the latest Mac client
 
-The Mac client for Configuration Manager isn't supplied on the Configuration Manager installation media. Download it from the Microsoft Download Center, [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850). The Mac client installation files are contained in a Windows Installer file named **ConfigmgrMacClient.msi**.  
+The Mac client for Configuration Manager isn't supplied on the Configuration Manager installation media. The Mac client installation files are contained in a Windows Installer file named **ConfigmgrMacClient.msi**.
+
+> [!NOTE]
+> The macOS client installation package isn't available for new deployments, but existing deployments are supported until December 31, 2022.<!-- 12927803 -->
 
 ## Create the Mac client installation file
 
@@ -65,29 +71,29 @@ Use this procedure to prevent the Computer Enrollment Wizard from running, and t
 
 1. Add the following script to the setting:  
 
-  ``` Shell
-  #!/bin/sh  
-  echo "Starting script\n"  
-  echo "Changing directory to MAC Client\n"  
-  cd /Users/Administrator/Desktop/'MAC Client'/  
-  echo "Import root cert\n"  
-  /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/Root.pfx -A -k /Library/Keychains/System.Keychain -P ROOT  
-  echo "Using openssl to convert pfx to a crt\n"  
-  /usr/bin/sudo openssl pkcs12 -in /Users/Administrator/Desktop/'MAC Client'/Root.pfx -out Root1.crt -nokeys -clcerts -passin pass:ROOT  
-  echo "Adding trust to root cert\n"  
-  /usr/bin/sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.Keychain Root1.crt  
-  echo "Import client cert\n"  
-  /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/MacClient.pfx -A -k /Library/Keychains/System.Keychain -P MAC  
-  echo "Executing ccmclient with MP\n"  
-  sudo ./ccmsetup -MP https://SCCM34387.SCCM34387DOM.NET/omadm/cimhandler.ashx  
-  echo "Editing Plist file\n"  
-  sudo /usr/libexec/Plistbuddy -c 'Add:SubjectName string CMMAC003L' /Library/'Application Support'/Microsoft/CCM/ccmclient.plist  
-  echo "Changing directory to CCM\n"  
-  cd /Library/'Application Support'/Microsoft/CCM/  
-  echo "Making connection to the server\n"  
-  sudo open ./CCMClient  
-  echo "Ending Script\n"  
-  exit  
-  ```  
+    ``` Shell
+    #!/bin/sh  
+    echo "Starting script\n"  
+    echo "Changing directory to MAC Client\n"  
+    cd /Users/Administrator/Desktop/'MAC Client'/  
+    echo "Import root cert\n"  
+    /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/Root.pfx -A -k /Library/Keychains/System.Keychain -P ROOT  
+    echo "Using openssl to convert pfx to a crt\n"  
+    /usr/bin/sudo openssl pkcs12 -in /Users/Administrator/Desktop/'MAC Client'/Root.pfx -out Root1.crt -nokeys -clcerts -passin pass:ROOT  
+    echo "Adding trust to root cert\n"  
+    /usr/bin/sudo /usr/bin/security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.Keychain Root1.crt  
+    echo "Import client cert\n"  
+    /usr/bin/sudo /usr/bin/security import /Users/Administrator/Desktop/'MAC Client'/MacClient.pfx -A -k /Library/Keychains/System.Keychain -P MAC  
+    echo "Executing ccmclient with MP\n"  
+    sudo ./ccmsetup -MP https://SCCM34387.SCCM34387DOM.NET/omadm/cimhandler.ashx  
+    echo "Editing Plist file\n"  
+    sudo /usr/libexec/Plistbuddy -c 'Add:SubjectName string CMMAC003L' /Library/'Application Support'/Microsoft/CCM/ccmclient.plist  
+    echo "Changing directory to CCM\n"  
+    cd /Library/'Application Support'/Microsoft/CCM/  
+    echo "Making connection to the server\n"  
+    sudo open ./CCMClient  
+    echo "Ending Script\n"  
+    exit  
+    ```  
 
 1. Add the configuration item to a [configuration baseline](../../../../compliance/deploy-use/create-configuration-baselines.md). Then [deploy the configuration baseline](../../../../compliance/deploy-use/deploy-configuration-baselines.md) to all Mac computers that install a certificate independently from Configuration Manager.  

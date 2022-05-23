@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 03/07/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: beflamm, tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -60,7 +61,7 @@ Create an [iOS/iPadOS e-mail device configuration profile](email-settings-config
       - **Custom**: Get the attributes from a custom domain name. Also enter:
         - **Custom domain name to use**: Enter a value that Intune uses for the domain name, such as `contoso.com` or `contoso`.
 
-- **Email address attribute from AAD**: Choose how the email address for the user is generated. Your options:
+- **Email address attribute from AAD**: Choose how the email address for the user is generated. Make sure your users have email addresses that match the attribute you select. Your options:
   - **User principal name**: Use the full principal name as the email address, such as `user1@contoso.com` or `user1`.
   - **Primary SMTP address**: Use the primary SMTP address to sign in to Exchange, such as `user1@contoso.com`.
 - **Authentication method**: Choose how users to authenticate to the email server. Your options:

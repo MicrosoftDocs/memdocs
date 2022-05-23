@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/08/2021
+ms.date: 05/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -235,6 +235,7 @@ For dedicated, fully managed, and corporate-owned work profile devices, you can 
 
 - **Default**: The app's updates are subject to default conditions (described above). 
 - **High Priority**: The app will update as soon as possible from when a new update is released, disregarding all of the default conditions. This may be disruptive for some users since the update can occur while the device is being used.
+- **Postpone**: When the app receives a new update, a 90-day waiting period is triggered. After 90 days, the app is updated to the newest version available, even if that version was not the update that triggered the waiting period. Note that the 90-day window is not configurable. To terminate the waiting period early, change the update mode to either **Default** or **High Priority**.
 
 To edit the app update mode:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

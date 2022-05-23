@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/25/2021
+ms.date: 05/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -38,23 +38,25 @@ This feature applies to:
 - Android Enterprise personally-owned devices with a work profile
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer  
+- Windows 10
+- Windows 11
+
   > [!IMPORTANT]
-  > For Windows 11 devices, there is an issue between the Windows 11 client with the Windows VPNv2 CSP that results in a device with one or more Intune VPN profiles losing its VPN connectivity when the device processes multiple changes to VPN profiles for the device at the same time. The connectivity is restored when the device checks-in with Intune a second time to process those VPN profile changes.
+  > For Windows 11 devices, there is an issue between the Windows 11 client and the Windows VPNv2 CSP. A device with one or more Intune VPN profiles loses its VPN connectivity when the device processes multiple changes to VPN profiles for the device simultaneously. When the device checks-in with Intune a second time, it processes the VPN profile changes, and connectivity is restored.
   >
-  > Changes that can cause loss of VPN functionality include:
+  > The following changes can cause a loss of VPN functionality:
   > 
-  > - Edits to a VPN profile that was previously processed by the Windows 11 device. This action deletes the original profile and is followed by application of the updated profile.
+  > - Changes to a VPN profile that was previously processed by the Windows 11 device. This action deletes the original profile, and applies the updated profile.
   > - Two new VPN profiles apply to the device at the same time.
-  > - The removal of an active VPN profile at the same time a new VPN profile is assigned.
+  > - An active VPN profile is removed at the same time a new VPN profile is assigned.
   >
-  > This issue doesn’t apply to:
+  > This issue doesn’t apply when:
   >
-  > - A Windows 11 device when it receives a single Intune VPN profile, and the device doesn’t already have a VPN profile assigned.
-  > - Windows 11 devices that have a VPN profile assigned and are then assigned an additional VPN profile with no other profile changes.
-  > - When a Windows 10 device upgrades to Windows 11, so long as there are no changes to that device's VPN profiles. However, after the upgrade to Windows 11, any changes to the devices VPN profiles or the addition of new VPN profiles will trigger the issue.
+  > - A Windows 11 device doesn't have an existing VPN profile assigned, and it receives one Intune VPN profile.
+  > - Windows 11 devices with a VPN profile assigned, and are assigned another VPN profile with no other profile changes.
+  > - A Windows 10 device upgrades to Windows 11, and if there are no changes to that device's VPN profiles. After the upgrade to Windows 11, any changes to the devices VPN profiles or adding new VPN profiles will trigger the issue.
   >
-  > This issue and warning remain in effect until Windows updates the Windows 11 client to resolve this issue.
+  > This issue and warning remain until Windows updates the Windows 11 client that resolves this issue.
 
 - Windows 8.1 and newer
 
@@ -64,7 +66,7 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
 
 ## Before you begin
 
-- VPN profiles for a device tunnel are supported for [Windows 10 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
+- VPN profiles for a device tunnel are supported for [Windows 10/11 Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
 - If you use certificate based authentication for your VPN profile, then deploy the VPN profile, certificate profile, and trusted root profile to the same groups. This step makes sure that each device can recognize the legitimacy of your certificate authority. For more information, see [How to configure certificates with Microsoft Intune](../protect/certificates-configure.md).
 
@@ -74,7 +76,7 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
 
   - Android 4 and later
   - Enrolled devices that run Windows 8.1 and later
-  - Enrolled devices that run Windows 10 desktop
+  - Enrolled devices that run Windows 10/11
   - Windows Holographic for Business
 
 ## VPN connection types
@@ -85,7 +87,7 @@ This article lists the VPN apps you can use, shows you how to create a VPN profi
 You can create VPN profiles using the following connection types:
 
 - Automatic
-  - Windows 10
+  - Windows 10/11
 
 - Check Point Capsule VPN
   - Android device administrator
@@ -93,7 +95,7 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
   - macOS
-  - Windows 10
+  - Windows 10/11
   - Windows 8.1
 
 - Cisco AnyConnect
@@ -102,7 +104,7 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
-  - Windows 10
+  - Windows 10/11
 
 - Cisco (IPSec)
   - iOS/iPadOS
@@ -112,7 +114,7 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - Android Enterprise fully managed and corporate-owned work profiles: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
-  - Windows 10
+  - Windows 10/11
 
 - Custom VPN
   - iOS/iPadOS
@@ -126,25 +128,38 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
-  - Windows 10
+  - Windows 10/11
   - Windows 8.1
 
 - IKEv2
   - iOS/iPadOS
-  - Windows 10
+  - Windows 10/11
 
 - L2TP
-  - Windows 10
-
-- Microsoft Tunnel (standalone client)
-  - iOS/iPadOS  
+  - Windows 10/11
 
 - Microsoft Tunnel  
-  - Android Enterprise personally owned devices with a work profile
-  - Android Enterprise fully managed and corporate-owned work profile
+  - Android Enterprise personally owned devices with a work profile.
+  - Android Enterprise fully managed and corporate-owned work profile.
+
+  > [!Important]  
+  > As of June 14, 2021, both the standalone tunnel app and standalone client connection type for Android are deprecated and drop from support after October 26, 2021.
+
+- Microsoft Tunnel (preview)
+  - iOS/iPadOS
+  
+  > [!Important]
+  > On April 29, 2022, this connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. However, the connection type continues to reflect *preview*.
+
+- Microsoft Tunnel (standalone client)(preview)
+  - iOS/iPadOS
 
   > [!Important]
-  > Prior to support for using Microsoft Defender for Endpoint as the tunnel client app, a standalone tunnel client app was available in preview and used a connection type of **Microsoft Tunnel (standalone client)**. As of June 14, 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
+  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel (preview)* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
+  > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
+  > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
+  >
+  > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
 
 - NetMotion Mobility
   - Android Enterprise personally owned devices with a work profile
@@ -156,17 +171,17 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise personally owned devices with a work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - Android Enterprise fully managed and corporate-owned work profile: Use [app configuration policy](../apps/app-configuration-vpn-ae.md)
   - iOS/iPadOS
-  - Windows 10
+  - Windows 10/11
 
 - PPTP
-  - Windows 10
+  - Windows 10/11
 
 - Pulse Secure
   - Android device administrator
   - Android Enterprise personally owned devices with a work profile
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
-  - Windows 10
+  - Windows 10/11
   - Windows 8.1
 
 - SonicWall Mobile Connect
@@ -175,7 +190,7 @@ You can create VPN profiles using the following connection types:
   - Android Enterprise fully managed and corporate-owned work profile
   - iOS/iPadOS
   - macOS
-  - Windows 10
+  - Windows 10/11
   - Windows 8.1
 
 - Zscaler

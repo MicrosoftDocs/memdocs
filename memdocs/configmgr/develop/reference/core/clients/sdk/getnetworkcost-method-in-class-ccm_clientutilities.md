@@ -1,4 +1,5 @@
 ---
+description: The GetNetworkCost Windows Management Instrumentation (WMI) class method in the Configuration Manager.
 title: "GetNetworkCost Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

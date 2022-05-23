@@ -214,6 +214,9 @@ After verifying you have the [prerequisites](#prerequisites), use the following 
 
 Generate a pilot recommendation from a limiting collection at the click of a button. As soon as the action is launched, a background task starts calculating your pilot collection. Your limiting collection must contain at least one device with an Office version that isn't Office 365 Apps.
 
+> [!NOTE]
+> The **All Desktop and Server Clients (Office Pilot)** collection is managed by Configuration Manager. Manual changes aren't supported. If you delete or edit this collection, the pilot deployment won't work. <!--12610779-->
+
 ### Recommended pilot devices
 
 **Recommended pilot devices** are a minimal set of devices representing all installed add-ins across the limiting collection you used when generating the pilot. Drill down to get a list of these devices. Then use the details to exclude any devices from the pilot if needed. If all of your add-ins are already on Microsoft 365 Apps devices, then devices with those add-ins won't be included in the calculation. This also means it's possible that you won't get any results in your pilot collection since all of your add-ins have been seen on devices where Microsoft 365 Apps is installed.

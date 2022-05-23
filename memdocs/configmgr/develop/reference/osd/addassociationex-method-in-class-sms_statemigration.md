@@ -1,6 +1,7 @@
 ---
 title: "AddAssociationEx Method"
 titleSuffix: "Configuration Manager"
+description: "Adds the computer association between two system resources used in state migration."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

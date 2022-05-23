@@ -1,6 +1,7 @@
 ---
 title: "Import a Windows Driver Described by an INF File"
 titleSuffix: "Configuration Manager"
+description: "You can import a Windows driver that is described by an information (.inf) file, in Configuration Manager, by using the CreateFromINF Method in Class SMS_Driver."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_PkgToPkgServer_a class to use the `PackageID` property to relate an SMS_Package Server WMI class object with its SMS_DistributionPoint Server WMI class objects.  
 title: "SMS_PkgToPkgServer_a Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,6 +1,7 @@
 ---
 title: "Console Extension Architecture"
 titleSuffix: "Configuration Manager"
+description: "The Configuration Manager console architecture is built on the following four distinct layers."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

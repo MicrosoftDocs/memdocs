@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the GetAutoInstallRequiredSoftwaretoNonBusinessHours method to get the value for AutomaticallyInstallSoftware.   
 title: "GetAutoInstallRequiredSoftwaretoNonBusinessHours Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

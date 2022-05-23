@@ -1,6 +1,7 @@
 ---
 title: "Unique Identifier Value for a Resource"
 titleSuffix: "Configuration Manager"
+description: "An optional property that reports inventory data for a resource."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

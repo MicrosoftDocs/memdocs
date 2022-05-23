@@ -2,7 +2,7 @@
 title: Application reliability in endpoint analytics
 description: Get details about application reliability in endpoint analytics
 titleSuffix: Microsoft Endpoint Manager
-ms.date: 03/01/2021
+ms.date: 03/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -66,6 +66,8 @@ For each application in the report, the following data is provided:
 
 > [!NOTE]
 > A maximum of 10 application crash events per application, per device, per day is used. This prevents excessive data collections from devices with severe application issues and helps prevent outlier devices from having undue influence over the reliability scores for individual applications.
+> 
+> Applications with an insignificant amount of foreground usage (about 10 minutes or fewer) on a particular device may not be captured. 
 
 ### App performance details
 
@@ -86,6 +88,8 @@ The **Device performance** tab displays application reliability insights for eac
 Selecting a device name opens the **Application reliability** tab for that device. This tab displays a timeline of app crash and app unresponsive events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
 
 ## Known issues
+
+[!INCLUDE [Endpoint analytics export to csv value mapping known issue](includes/known-issue-csv-mapping.md)]
 
 ### Some eligible, enrolled devices aren't appearing in the report due to a client certificate issue
 

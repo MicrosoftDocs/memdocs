@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_ApplyNetworkSettingsAction Class"
 titleSuffix: "Configuration Manager"
+description: "Represent a task sequence action that specifies the network or workgroup configuration information for the target computer."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

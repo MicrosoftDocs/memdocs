@@ -1,4 +1,5 @@
 ---
+description: The Enable Windows Management Instrumentation (WMI) class method, in Configuration Manager, enables or disables the platforms. 
 title: "Enable Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

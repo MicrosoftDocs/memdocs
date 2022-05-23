@@ -7,4 +7,17 @@ items:
   href: business-enterprise-comparison.md
 - name: Export Cloud PC names 
   href: export-cloud-pc-names.md
-  
+- name: Partners
+  href: partners.md  
+- name: Public preview 
+  href: public-preview.md
+- name: Windows 365 Business docs
+  href: business/index.yml
+- name: Windows 365 Enterprise docs
+  href: enterprise/index.yml
+- name: End-user experience
+  items:  
+  - name: End-user hardware requirements
+    href: end-user-hardware-requirements.md
+  - name: Access a Cloud PC
+    href: end-user-access-cloud-pc.md

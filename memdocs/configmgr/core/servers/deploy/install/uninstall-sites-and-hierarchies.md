@@ -2,7 +2,7 @@
 title: Uninstall sites
 titleSuffix: Configuration Manager
 description: A guide for removing roles, and uninstalling sites and hierarchies
-ms.date: 04/01/2020
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -16,9 +16,7 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
-Use this article as a guide to uninstall a Configuration Manager site system role, site, or hierarchy.
-
-Starting in version 2002, you can also remove the central administration site (CAS) from a hierarchy, but keep the primary site.
+Use this article as a guide to uninstall a Configuration Manager site system role, site, or hierarchy. You can also remove the central administration site (CAS) from a hierarchy, but keep the primary site.
 
 ## <a name="bkmk_role"></a> Site system role
 
@@ -93,7 +91,7 @@ Use this option in the following situations:
     This option deletes all information about the site and its resources from the Configuration Manager hierarchy, but doesn't make any changes on the site server.
 
     > [!TIP]
-    >  You also can use the Hierarchy Maintenance Tool with the **/DELSITE** option to delete a secondary site. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
+    >  You also can use the Hierarchy Maintenance Tool with the `/DELSITE` option to delete a secondary site. For more information, see [Hierarchy Maintenance Tool (Preinst.exe)](../../manage/hierarchy-maintenance-tool-preinst.exe.md).
 
 ### Prerequisites to delete a secondary site
 
@@ -126,7 +124,7 @@ You might want to uninstall a primary site from your hierarchy for the following
 - Consolidate sites to reduce costs and complexity
 - Reconfigure or redesign the sites of the hierarchy
 
-Before you uninstall a child primary site that uses [distributed views](../../../plan-design/hierarchy/database-replication.md#bkmk_distviews) for its replication link to the CAS, first turn off distributed views in your hierarchy. For more information, see [Uninstall a primary site that is configured with distributed views](#bkmk_distviews).
+Before you uninstall a child primary site that uses [distributed views](../../../plan-design/hierarchy/database-replication.md#distributed-views) for its replication link to the CAS, first turn off distributed views in your hierarchy. For more information, see [Uninstall a primary site that is configured with distributed views](#bkmk_distviews).
 
 ### <a name="bkmk_pri-plan"></a> Plan to uninstall a primary site
 
@@ -144,7 +142,7 @@ Before you uninstall a primary site, review the following tasks:
 
   - Client reassignment may impact reports and queries that rely on inventory data, and state-based compliance. Consider temporarily adjusting any client cycles during the transition.
 
-  - Review all client assignment methods to make sure that none refer to this primary site.
+  - Review all client assignment methods to make sure that none refers to this primary site.
 
 - Check if any actively used objects in the hierarchy have static references to the site code. For example, collection queries, task sequences, or administrative scripts.
 
@@ -276,6 +274,6 @@ The administrative user who runs Configuration Manager setup needs the following
 
 <!-- 3607277 -->
 
-Starting in version 2002, if the hierarchy consists of the CAS and a single child primary site, you can remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single site.
+If the hierarchy consists of the CAS and a single child primary site, you can remove the CAS. This action simplifies your Configuration Manager infrastructure to a single, standalone primary site. It removes the complexities of site-to-site replication, and focuses your management tasks to the single site.
 
 For more information, see [Remove the CAS](remove-central-administration-site.md).

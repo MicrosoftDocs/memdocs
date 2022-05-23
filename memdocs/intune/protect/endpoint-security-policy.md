@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 04/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -30,13 +30,21 @@ ms.reviewer: mattcall
 
 # Manage device security with endpoint security policies in Microsoft Intune
 
-As a security admin, use the security policies found in the *Endpoint security* node of Intune to configure device security. By using these security-focused policies, you avoid the overhead of navigating through a larger body of diverse settings found in device configuration profiles and security baselines.
+Use Intune endpoint security policies to manage security settings on devices. Each endpoint security policy supports one or more profiles. These profiles are similar in concept to a device configuration policy template, a logical group of related settings.
 
-Each policy type supports one or more profiles. Profiles are where you configure settings and can group settings for different platforms, or for different areas of focus in the larger policy area.
+As a security admin concerned with device security, you can use these security-focused profiles to avoid the overhead of device configuration profiles or security baselines. Device configuration profiles and baselines include a large body of diverse settings outside the scope of securing endpoints. In contrast, each endpoint security profile focuses on a specific subset of device settings intended to configure one aspect of device security.
 
-You'll find these policies under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+When using endpoint security policies along side other policy types like security baselines or endpoint protection templates from device configuration policies, it’s important to develop a plan for using multiple policy types to minimize the risk of conflicting settings. Security baselines, device configuration policies, and endpoint security policies are all treated as equal sources of device configuration settings by Intune. A settings conflict occurs when a device receives two different configurations for a setting from multiple sources. Multiple sources can include separate policy types and multiple instances of the same policy.
 
-![Manage policies](./media/endpoint-security-policy/endpoint-security-policies.png)
+When Intune evaluates policy for a device and identifies conflicting configurations for a setting, the setting that's involved can be flagged for an error or conflict and fail to apply. Each type of configuration policy supports identifying and resolving conflicts should they arise:
+
+- [Device configuration profiles](../configuration/device-profile-monitor.md#view-conflicts)
+- [Endpoint security profiles](#manage-conflicts)
+- [Security baselines](../protect/security-baselines-monitor.md#resolve-conflicts-for-security-baselines)
+
+You'll find endpoint security policies under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+:::image type="content" source="./media/endpoint-security-policy/endpoint-security-policies.png" alt-text="Managing Endpoint security policies in the Microsoft Endpoint Manager admin center":::
 
 Following are brief descriptions of each endpoint security policy type. To learn more about them, including the available profiles for each, follow the links to content dedicated to each policy type:
 

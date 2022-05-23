@@ -1,5 +1,6 @@
 ---
 title: "SMS_CH_Settings Class"
+description: Learn how the SMS_CH_Settings class is an SMS Provider server class, in Configuration Manager, that represents client status settings.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

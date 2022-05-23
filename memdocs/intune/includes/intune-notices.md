@@ -4,12 +4,61 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 10/25/2021
+ms.date: 04/19/2022
 ms.author: erikje
 ms.custom: include file
 ---
 
-These notices provide important information that can help you prepare for future Intune changes and features.
+These notices provide important information that can help you prepare for future Intune changes and features.  
+
+### Plan for Change: iOS/iPadOS notifications will require minimum version 5.2203.0 of the Company Portal<!-- 14131757 -->
+
+We will be making service side updates to iOS/iPadOS notifications in Microsoft Intune's May (2205) service release that will require users to have updated to at least version 5.2203.0 of the iOS/iPadOS Company Portal (released in March 2022).
+
+#### How does this affect you or your users?
+
+There is no change in functionality for push notifications, however, users will need to update to at least version 5.2203.0 of the Company Portal. If users do not update the app prior to this change, they will not receive messages sent by your organization and will instead receive a notification telling them to update their app. Once they update their app, push notifications will resume.
+
+Scenarios that send push notifications to the Company Portal include:
+
+- [Custom notifications](../remote-actions/custom-notifications.md)
+- [Push notifications for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)
+- [Device ownership change push notifications](../apps/company-portal-app.md#device-ownership-notification)
+- [Delivery of S/MIME certificates for iOS to access Outlook](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/smime-outlook-for-ios-and-android)
+- [Derived credential enrollment](../protect/derived-credentials.md)
+
+#### How can you prepare?  
+
+The required version of the Company Portal has been released, so most users have likely [updated the app](../user-help/install-a-new-version-of-the-company-portal-app.md) and will not be impacted. However, you may want to notify users of this change to ensure all users continue to receive push notifications sent by your organization.
+
+### Plan for change: Intune is moving to support Android 8.0 and later in January 2022<!-- 10946003 -->  
+
+Microsoft Intune will be moving to support Android version 8.0 (Oreo) and later for mobile device management (MDM) enrolled devices on or shortly after January 7, 2022.  
+
+#### How does this affect you or your users?
+
+After January 7, 2022, MDM enrolled devices running Android version 7.x or earlier will no longer receive updates to the Android Company Portal or the Intune App. Enrolled devices will continue to have Intune policies applied but are no longer supported for any Intune scenarios. Company Portal and the Intune App will not be available for devices running Android 7.x and lower beginning mid-February; however, these devices will not be blocked from completing enrollment if the requisite app has been installed prior to this change. If you have MDM enrolled devices running Android 7.x or below, update them to Android version 8.0 (Oreo) or higher or replace them with a device on Android version 8.0 or higher.  
+
+> [!NOTE]
+> [Microsoft Teams devices](https://www.microsoft.com/en-us/microsoft-teams/across-devices/devices?rtc=2) are not impacted by this announcement and will continue to be supported regardless of their Android OS version.  
+
+#### How can you prepare?  
+
+Notify your helpdesk, if applicable, of this upcoming change in support. You can identify how many devices are currently running Android 7.x or below by navigating to **Devices** > **All devices** > **Filter**. Then filter by OS and sort by OS version. There are two admin options to help inform your users or block enrollment.
+
+Here's how you can warn users:
+
+- Create an app protection policy and configure [conditional launch](../apps/app-protection-policy-settings-android.md#conditional-launch) with a min OS version requirement that warns users.  
+- Utilize a device compliance policy for [Android device administrator](../protect/compliance-policy-create-android.md) or [Android Enterprise](../protect/compliance-policy-create-android-for-work.md) and set the action for non-compliance to send an email or push notification to users before marking them noncompliant.  
+
+Here's how you can block devices running on versions earlier than Android 8.0:  
+
+- Create an app protection policy and configure conditional launch with a min OS version requirement that blocks users from app access.  
+- Utilize a device compliance policy for Android device administrator or Android Enterprise to make devices running Android 7.x or earlier non-compliant. 
+-  Set [enrollment restrictions](../fundamentals/manage-os-versions.md) that prevent devices running Android 7.x or earlier from enrolling.  
+
+> [!NOTE]
+> Intune app protection policies are supported on devices running Android 9.0 and later. See MC282986 for more details.  
 
 ### Plan for change: Intune APP/MAM is moving to support Android 9 and higher<!-- 10937255 -->
 
@@ -95,7 +144,7 @@ No action is needed at this time. Review our [In Development](../fundamentals/in
 
 ### Plan for change: Intune is moving to support iOS/iPadOS 13 and later<!--10144130-->
 
-Later this year, we expect Apple to release iOS 15. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as mobile application management), will require  iOS/iPadOS 13 and later shortly after iOS 15's release.
+Apple has released iOS 15. Microsoft Intune, including Intune Company Portal and Intune app protection policies (APP, also known as mobile application management), now requires iOS/iPadOS 13 and later.
 
 #### How does this affect you or your users?
 
@@ -129,30 +178,6 @@ This change will affect you only if you currently manage, or plan to manage, mac
 #### How can you prepare?
 
 Check your Intune reporting to see what devices or users might be affected. Go to **Devices** > **All devices** and filter by macOS. You can add more columns to help identify who in your organization has devices running macOS 10.14 or earlier. Ask your users to upgrade their devices to a supported OS version before the release of macOS 12.
-
-### Update your iOS Company Portal minimum version to v4.16.0<!-- 9964998 -->
-We recently released an updated Company Portal for iOS to the Apple Store, which is a required app update. The minimum supported version of the iOS Company Portal is now v4.16.0.
-
-#### How does this affect you or your users?
-Most users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users who have an earlier app version will be prompted to update to the latest Company Portal app.
-
-#### How can you prepare?
-
-If you've enabled the [Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised) device restriction setting, you'll likely need to push an update to the related devices. 
-
-Otherwise, no action is needed. But if you have a helpdesk, you might want to make it aware of the prompt to update the Company Portal app.
-
-### Plan for change: Intune is ending support for standalone client apps on Microsoft Tunnel<!-- 9370486   -->
-
-Beginning on June 14, 2021, the Microsoft Defender for Endpoint app on Android supports Microsoft Tunnel functionality and is the official tunnel client app for Android Enterprise customers. With the release of Microsoft Defender for Endpoint as the Microsoft Tunnel client app, the standalone Microsoft Tunnel app for Android is deprecated. Support will end after January 31, 2022. When support ends, the standalone tunnel app will be removed from the Google Play store.
-
-#### How does this affect you or your users?
-
-If you use the standalone tunnel app for Android, you'll need to move to the Microsoft Defender for Endpoint app before January 31, 2022. This move will ensure that users can still access the Tunnel Gateway configuration.
-
-#### How can you prepare?
-
-For your devices that run Android Enterprise and currently use the standalone tunnel app, plan to [replace the standalone tunnel app with the Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md). New devices should use Microsoft Defender for Endpoint as the tunnel client app.
 
 ### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
 
@@ -204,32 +229,4 @@ If you continue to use an unsupported version of Windows 10, your users won't ge
 
 #### How can you prepare?
 
-In the Microsoft Endpoint Manager admin center, use the [discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user's device, the Company Portal version is shown on the **Settings** page of the Company Portal. Update to a supported Windows and Company Portal version.
-
-### Plan for change: Intune is moving to support Android 6.0 and later in April 2021
-
-As mentioned in MC234534, Intune will move to support Android 6.0 (Marshmallow) and later in the April (2104) service release.
-
-#### How does this affect you or your users?
-
-Because the Office mobile apps for Android ended support for Android 5.x (Lollipop) on June 30, 2019 (MC181101), this change might not affect you. You've likely already upgraded your OS or devices. 
-
-If you have any device that's still running Android version 5.x, and you decide to enroll any device that's running Android version 5.x, these devices will no longer be supported. Update them to Android version 6.0 (Marshmallow) or later, or replace them with a device on Android version 6.0 or later.
-
-> [!NOTE]
-> This announcement doesn't affect Microsoft Teams Android devices. These devices will continue to be supported regardless of their Android OS version.
-
-#### How can you prepare?
-
-Notify your helpdesk, if applicable, about this upcoming change in support. You also have admin options to help inform your users or block enrollment.
-
-Here's how you can warn users:
-
-- Use a device compliance policy for an Android device administrator or Android Enterprise. Set the action for noncompliance to send a message to users before marking them as noncompliant.
-- Configure a conditional launch setting for app protection policies with a minimum OS version requirement to warn users.
-
-Here's how you can block devices on versions earlier than Android 6.0:
-
-- Set enrollment restrictions to prevent devices on Android 5.x from enrolling.
-- Use a device compliance policy for an Android device administrator or Android Enterprise to make devices on Android 5.x noncompliant.
-- Configure a conditional launch setting for app protection policies with a minimum OS version requirement to block users from app access.
+In the Microsoft Endpoint Manager admin center, use the [discovered apps](../apps/app-discovered-apps.md) feature to find apps with these versions. On a user's device, the Company Portal version is shown on the **Settings** page of the Company Portal. Update to a supported Windows and Company Portal version.  

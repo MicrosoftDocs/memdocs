@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 11/18/2021 
+ms.date: 03/10/2022 
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -34,15 +34,21 @@ Windows 365 is a cloud-based service that lets users connect through the interne
 
 Each customer has its specific requirements based on the workload they use to pre-calculate the network requirements of their Cloud PC environment.  
 
+>[!Note]
+>This article only applies if you plan on provisioning Cloud PCs on your own Azure virtual network, as opposed to a Microsoft-hosted network.
+
 ## General network requirements
 
-To use Cloud PCs, you must meet the following requirements:
+To use your own network and provision Azure AD joined Cloud PCs, you must meet the following requirements:
 
 - Azure virtual network: You must have a virtual network (vNET) in your Azure subscription in the same region as where the Windows 365 desktops are created.
-- The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To do this, define your AD DS DNS servers as the DNS servers for the virtual network.
-- The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
+
+To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must meet the above requirements, and the following:
+
+- The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To support this resolution, define your AD DS DNS servers as the DNS servers for the virtual network.
+- The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
 
 ## Allow network connectivity
 
@@ -52,13 +58,24 @@ You must allow traffic in your Azure network configuration to the following serv
 - [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list)
 - rdweb.wvd.microsoft.com
 - rdbroker.wvd.microsoft.com
-- Provisioning and on-premises network connection endpoints:
+- Provisioning and Azure network connection endpoints:
+  - cpcsaamssa1prodprap01.blob.core.windows.net
+  - cpcsaamssa1prodprau01.blob.core.windows.net
+  - cpcsaamssa1prodpreu01.blob.core.windows.net
+  - cpcsaamssa1prodpreu02.blob.core.windows.net
+  - cpcsaamssa1prodprna01.blob.core.windows.net
+  - cpcsaamssa1prodprna02.blob.core.windows.net
   - cpcsacnrysa1prodprna02.blob.core.windows.net
   - cpcsacnrysa1prodprap01.blob.core.windows.net
   - cpcsacnrysa1prodprau01.blob.core.windows.net
   - cpcsacnrysa1prodpreu01.blob.core.windows.net
   - cpcsacnrysa1prodpreu02.blob.core.windows.net
   - cpcsacnrysa1prodprna01.blob.core.windows.net
+  - cpcstcnryprodprap01.blob.core.windows.net
+  - cpcstcnryprodprau01.blob.core.windows.net
+  - cpcstcnryprodpreu01.blob.core.windows.net
+  - cpcstcnryprodprna01.blob.core.windows.net
+  - cpcstcnryprodprna02.blob.core.windows.net
   - cpcstprovprodpreu01.blob.core.windows.net
   - cpcstprovprodpreu02.blob.core.windows.net
   - cpcstprovprodprna01.blob.core.windows.net
@@ -82,9 +99,21 @@ You must allow traffic in your Azure network configuration to the following serv
   - login.live.com
   - enterpriseregistration.windows.net
   - global.azure-devices-provisioning.net (443 & 5671 outbound)
-  - hm-iot-in-*.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-preu01.azure-devices.net (443 & 5671 outbound)
+  -	hm-iot-in-prod-prap01.azure-devices.net (443 & 5671 outbound)
+  -	hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-prau01.azure-devices.net (443 & 5671 outbound)
 
 All endpoints connect over port 443.
+
+### Remote Desktop Protocol (RDP) broker service endpoints
+
+Direct connectivity to Azure Virtual Desktop RDP broker service endpoints is critical for remoting performance to a Cloud PC. These endpoints affect both connectivity and latency. To align with the [Microsoft 365 network connectivity principles](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles#new-office-365-endpoint-categories), you should categorize these endpoints as **Optimize** endpoints. We recommend that you use a direct path from your Azure virtual network to those endpoints.
+
+To make it easier to configure network security controls, use Azure Virtual Desktop service tags to identity those endpoints for direct routing using an [Azure Networking User Defined Route (UDR)](/azure/virtual-network/virtual-networks-udr-overview). A UDR will result in direct routing between your virtual network and the RDP broker for lowest latency. For more information about Azure Service Tags, see [Azure service tags overview](/azure/virtual-desktop/network-connectivity).
+
+Changing the network routes of a Cloud PC (at the network layer or at the Cloud PC layer like VPN) might break the connection between the Cloud PC and the Azure Virtual Desktop RDP broker. If so, the end user will be disconnected from their Cloud PC until a connection be re-established.
+
 
 ## DNS requirements
 
@@ -134,7 +163,7 @@ Full HD (1920x1080p) isn’t a supported resolution for Microsoft Teams on Cloud
 
 ## Traffic interception technologies
 
-Some enterprise customers use traffic interception, SSL decryption, deep packet inspection, and other similar technologies for security teams to monitor network traffic. Cloud PC provisioning may need direct access to the virtual machine. These traffic interception technologies can cause issues with running on-premises network connection checks or Cloud PC provisioning. Make sure no network interception is enforced for Cloud PCs provisioned within the Windows 365 service.
+Some enterprise customers use traffic interception, SSL decryption, deep packet inspection, and other similar technologies for security teams to monitor network traffic. Cloud PC provisioning may need direct access to the virtual machine. These traffic interception technologies can cause issues with running Azure network connection checks or Cloud PC provisioning. Make sure no network interception is enforced for Cloud PCs provisioned within the Windows 365 service.
 
 ## Bandwidth
 
@@ -145,7 +174,9 @@ Windows 365 uses the Azure network infrastructure. An Azure subscription is requ
 - Office data (like email and OneDrive for Business file sync) incurs egress charges if the Cloud PC and a user’s data reside in different regions.
 - RDP networking traffic always incurs egress charges.
 
-For more information about costs associated with data transfers, see [Bandwidth pricing]( https://azure.microsoft.com/pricing/details/bandwidth/).
+If you bring your own network, see [Bandwidth pricing]( https://azure.microsoft.com/pricing/details/bandwidth/).
+
+If you use a Microsoft-hosted network: [!INCLUDE [Outbound data rates](../includes/outbound-data-rates.md)]
 
 <!-- ########################## -->
 ## Next steps

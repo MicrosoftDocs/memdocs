@@ -3,31 +3,33 @@ items:
   href: index.yml
 - name: Deploy and use
   items:
+  - name: Prerequisites for tenant attach
+    href: prerequisites.md  
   - name: Enable tenant attach
     href: device-sync-actions.md
-  - name: Client details (preview)
+  - name: Client details
     href: client-details.md
-  - name: Install applications (preview)
+  - name: Install applications
     href: applications.md
-  - name: Device timeline (preview)
+  - name: Device timeline
     href: timeline.md
-  - name: Resource explorer (preview)
+  - name: Resource explorer
     href: resource-explorer.md
-  - name: Run scripts (preview)
+  - name: Run scripts
     href: scripts.md
-  - name: Software updates (preview)
-    href: software-updates.md
-  - name: BitLocker recovery keys (preview)
+  - name: BitLocker recovery keys
     href: bitlocker-recovery-keys.md
-- name: CMPivot for tenant attached devices (preview)
+  - name: Software updates (preview)
+    href: software-updates.md    
+- name: CMPivot for tenant attached devices
   items:
-  - name: Launch CMPivot (preview)
+  - name: Launch CMPivot
     href: cmpivot-start.md
   - name: CMPivot usage overview
     href: cmpivot-overview-attached.md
   - name: CMPivot sample scripts
     href: cmpivot-samples-attached.md
-- name: Endpoint security for tenant attached devices (preview)
+- name: Endpoint security for tenant attached devices
   items:
   - name: Get started with endpoint security policies
     href: endpoint-security-get-started.md
@@ -35,9 +37,9 @@ items:
     href: atp-onboard.md
   - name: Create and deploy antivirus policy
     href: deploy-antivirus-policy.md  
-  - name: Create and deploy firewall policy
+  - name: Create and deploy firewall policy (preview)
     href: deploy-firewall-policy.md
-  - name: Create and deploy attack surface reduction policy
+  - name: Create and deploy attack surface reduction policy (preview)
     href: deploy-asr-policy.md     
 - name: Reference
   items:
@@ -57,19 +59,19 @@ items:
   items:
   - name: Tenant attach and device actions
     href: troubleshoot.md
-  - name: Client details (preview)
+  - name: Client details
     href: troubleshoot-client-details.md
-  - name: Application installation (preview)
+  - name: Application installation
     href: troubleshoot-applications.md
   - name: Common error codes for application installation
     href: app-install-error-reference.md
-  - name: Timeline (preview)
+  - name: Timeline
     href: troubleshoot-timeline.md
-  - name: Resource explorer (preview)
+  - name: Resource explorer
     href: troubleshoot-resource-explorer.md
-  - name: Run scripts (preview)
+  - name: Run scripts
     href: troubleshoot-scripts.md
-  - name: CMPivot (preview)
+  - name: CMPivot
     href: troubleshoot-cmpivot.md
   - name: Software updates (preview)
     href: troubleshoot-software-updates.md    

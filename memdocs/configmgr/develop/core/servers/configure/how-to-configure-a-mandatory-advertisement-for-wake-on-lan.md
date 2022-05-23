@@ -1,4 +1,5 @@
 ---
+description: Learn how to configure an existing mandatory advertisement for Wake On LAN by using the SMS_Advertisement class and properties.
 title: "Configure a Mandatory Advertisement for Wake On LAN"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

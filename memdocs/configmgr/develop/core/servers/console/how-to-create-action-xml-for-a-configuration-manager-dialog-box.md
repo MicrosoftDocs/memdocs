@@ -1,4 +1,5 @@
 ---
+description: Learn how to create action XML for dialog boxes.
 title: "Create Action XML for a Dialog Box"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

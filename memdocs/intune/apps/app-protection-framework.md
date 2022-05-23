@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 05/04/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -52,7 +52,7 @@ Microsoft recommends the following deployment ring approach for the APP data pro
 | Deployment ring  | Tenant  | Assessment teams  | Output  | Timeline  |
 |--------------------|------------------------|-------------------------------------------------------------------|----------------------------------------------------------|----------------------------------------|
 | Quality Assurance  | Pre-production tenant  | Mobile capability owners, Security, Risk Assessment, Privacy, UX  | Functional scenario validation, draft documentation  | 0-30 days  |
-| Preview  | Production tenant  | Mobile capability owners, UX  | End user scenario validation, user facing documentation  | 7-14 days, post Quality Assurance  |
+| Preview  | Production tenant  | Mobile capability owners, UX  | End-user scenario validation, user facing documentation  | 7-14 days, post Quality Assurance  |
 | Production  | Production tenant  | Mobile capability owners, IT help desk  | N/A  | 7 days to several weeks, post Preview  |
 
 As the above table indicates, all changes to the App Protection Policies should be first performed in a pre-production environment to understand the policy setting implications. Once testing is complete, the changes can be moved into production and applied to a subset of production users, generally, the IT department and other applicable groups. And finally, the rollout can be completed to the rest of the mobile user community. Rollout to production may take a longer amount of time depending on the scale of impact regarding the change. If there is no user impact, the change should roll out quickly, whereas, if the change results in user impact, rollout may need to go slower due to the need to communicate changes to the user population.
@@ -71,11 +71,11 @@ Administrators can incorporate the below configuration levels within their ring 
 
 ### Conditional Access Policies
 
-To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. These policies are described in [Require app protection policy for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-protection-based-conditional-access).
+To ensure that only apps supporting App Protection Polices access work or school account data, Azure Active Directory Conditional Access policies are required. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
- See **Scenario 1: Office 365 apps require approved apps with app protection policies** and **Scenario 2: Browser apps require approved apps with app protection policies** in [Require app protection policy for cloud app access with Conditional Access](/azure/active-directory/conditional-access/app-protection-based-conditional-access) for steps to implement the specific policies. Finally, implement the steps in [Block legacy authentication](/azure/active-directory/conditional-access/block-legacy-authentication) to block legacy authentication capable iOS and Android apps.
+ See **Require approved client apps or app protection policy with mobile devices** in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection) for steps to implement the specific policies. Finally, implement the steps in [Block legacy authentication](/azure/active-directory/conditional-access/block-legacy-authentication) to block legacy authentication capable iOS and Android apps.
 
- > [!NOTE]
+> [!NOTE]
 > These policies leverage the grant controls [Require approved client app](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-approved-client-app) and [Require app protection policy](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
 ### Apps to include in the App Protection Policies  
@@ -106,7 +106,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 
 | Setting | Setting description |             Value  |             Platform        |
 |-----------------|--------------------------------------------------------|-----------------------|----------------------------------------|
-| Data   Transfer |             Backup org data to…  |             Allow  |             iOS/iPadOS, Android        |
+| Data   Transfer |             Back up org data to…  |             Allow  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Send org   data to other apps  |             All apps  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Receive   data from other apps  |             All apps  |             iOS/iPadOS, Android        |
 | Data   Transfer |       Restrict   cut, copy, and paste between apps  |             Any app  |             iOS/iPadOS, Android        |
@@ -129,7 +129,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Simple PIN  | Allow  | iOS/iPadOS, Android  |   |
 | Select Minimum PIN length  | 4  | iOS/iPadOS, Android  |   |
 | Touch ID instead of PIN for access (iOS 8+/iPadOS)  | Allow  | iOS/iPadOS  |   |
-| Fingerprint instead of PIN for access (Android 6.0+)  | Allow  | Android  |   |
+| Fingerprint instead of PIN for access (Android 9.0+)  | Allow  | Android  |   |
 | Override biometrics with PIN after timeout  | Require  | iOS/iPadOS  |   |
 | Override fingerprint with PIN after timeout  | Require  | Android  |   |
 | Timeout (minutes of activity)  | 720  | iOS/iPadOS, Android  |   |
@@ -149,8 +149,8 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | App conditions |       Offline   grace period  |          720 /   Block access (minutes)  |          iOS/iPadOS,   Android  |                  |
 | App conditions |       Offline   grace period  |          90 / Wipe   data (days)  |          iOS/iPadOS,   Android  |                  |
 | Device conditions  |       Jailbroken/rooted   devices  |        N/A / Block   access  |          iOS/iPadOS,   Android  |                  |
-| Device conditions  |       SafetyNet   device attestation  |          Basic   integrity and certified devices / Block access  |          Android  |          <p>This   setting configures Google's SafetyNet Attestation on end user   devices. Basic integrity validates the integrity of the device. Rooted   devices, emulators, virtual devices, and devices with signs of tampering fail   basic integrity. </p><p> Basic  integrity and certified devices validates the compatibility of   the device with Google's services. Only unmodified devices that have been   certified by Google can pass this check.</p>  |
-| Device conditions  |       Require   threat scan on apps  |        N/A / Block   access  |          Android  |          This   setting ensures that Google's Verify Apps scan is turned on for end   user devices. If configured, the end user will be blocked from access until   they turn on Google's app scanning on their Android device.        |
+| Device conditions  |       SafetyNet   device attestation  |          Basic   integrity and certified devices / Block access  |          Android  |          <p>This   setting configures Google's SafetyNet Attestation on end-user   devices. Basic integrity validates the integrity of the device. Rooted   devices, emulators, virtual devices, and devices with signs of tampering fail   basic integrity. </p><p> Basic  integrity and certified devices validates the compatibility of   the device with Google's services. Only unmodified devices that have been   certified by Google can pass this check.</p>  |
+| Device conditions  |       Require   threat scan on apps  |        N/A / Block   access  |          Android  |          This   setting ensures that Google's Verify Apps scan is turned on for end   user devices. If configured, the end-user will be blocked from access until   they turn on Google's app scanning on their Android device.        |
 | Device conditions  |       Require device lock  |        N/A / Block   access  |         Android  |          This   setting ensures that Android devices have a device PIN, password, or pattern are set to enable a device lock.  This condition does not distinguish between lock options or the complexity.                |
 
 #### Level 2 enterprise enhanced data protection
@@ -163,7 +163,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 
 | Setting | Setting description |             Value  |             Platform        | Notes |
 |---------------|----------------------------------------------------------|-----------------------------------------------|---------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Data Transfer |       Backup org   data to…  |          Block  |          iOS/iPadOS,   Android  |                  |
+| Data Transfer |       Back up org   data to…  |          Block  |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Send org   data to other apps  |          Policy   managed apps  |          iOS/iPadOS,   Android  |          <p>With   iOS/iPadOS, administrators can configure this value to be "Policy managed   apps", "Policy managed apps with OS sharing", or "Policy managed apps   with Open-In/Share filtering". </p><p>Policy managed apps with OS   sharing is available when the device is also enrolled with Intune. This   setting allows data transfer to other policy managed apps, as well as   file transfers to other apps that have are managed by   Intune. </p><p>Policy managed apps with Open-In/Share filtering   filters the OS Open-in/Share dialogs to only display policy managed   apps. </p><p> For more information, see [iOS app protection policy   settings](app-protection-policy-settings-ios.md).</p> |
 | Data Transfer |       Select apps to exempt  |          Default / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Data Transfer |       Save   copies of org data  |          Block  |          iOS/iPadOS,   Android  |                  |
@@ -199,7 +199,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Data Transfer |       Dialer App URL Scheme  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | On iOS/iPadOS, this value must be replaced with the URL scheme for the custom dialer app being used. If the URL scheme is not known, contact the app developer for more information. For more information on URL schemes, see [Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
 | Data transfer |       Receive   data from other apps  |          Policy   managed apps  |          iOS/iPadOS, Android         |  |
 | Data transfer |       Open data into Org documents  |          Block  |          iOS/iPadOS, Android         |  |
-| Data transfer |       Allow users to open data from selected services  |          OneDrive for Business, SharePoint  |          iOS/iPadOS, Android         |  |
+| Data transfer |       Allow users to open data from selected services  |          OneDrive for Business, SharePoint, Camera |          iOS/iPadOS, Android         | For related information, see [Android app protection policy settings](..\apps\app-protection-policy-settings-android.md) and [iOS app protection policy settings](..\apps\app-protection-policy-settings-ios.md).  |
 | Data transfer |       Third-party   keyboards  |          Block  |          iOS/iPadOS        | On iOS/iPadOS, this blocks all third-party keyboards from   functioning within the app.  |
 | Data transfer |       Approved   keyboards  |          Require  |          Android        |  |
 | Data transfer |       Select   keyboards to approve  |          *add/remove   keyboards*  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |

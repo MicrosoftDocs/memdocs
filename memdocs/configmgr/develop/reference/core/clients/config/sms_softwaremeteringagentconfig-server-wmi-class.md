@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_SoftwareMeteringAgentConfig class to specify how client computers retrieve data about the software they use.
 title: "SMS_SoftwareMeteringAgentConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

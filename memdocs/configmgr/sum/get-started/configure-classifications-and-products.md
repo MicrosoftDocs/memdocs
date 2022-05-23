@@ -85,7 +85,7 @@ When you approve feature updates for Windows 10, version 1909, there are a few d
   - Prerequisites for the enablement package include:
     - A minimum cumulative update of [KB4517389](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4517389), released October 8, 2019.
     - A minimum servicing stack update of [KB4520390](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4520390), released September 24, 2019.
-  - This update, like any other Feature Update, isn't available for import from `https:\\catalog.update.microsoft.com`.
+  - This update, like any other Feature Update, isn't available for import from the [Microsoft Update Catalog](https://catalog.update.microsoft.com).
   - The update will automatically synchronize with WSUS if you have the **Windows 10, version 1903 and later** product and **Upgrades** classification selected for synchronization.
   - In the Configuration Manager console, go to the **Software Library** workspace, expand **Windows Servicing**, and select the **All Windows Feature Updates** node. Search for the terms "enablement" or "4517245".
 

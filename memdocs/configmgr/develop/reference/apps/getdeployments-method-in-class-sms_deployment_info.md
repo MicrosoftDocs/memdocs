@@ -1,6 +1,7 @@
 ---
 title: "GetDeployments Method"
 titleSuffix: "Configuration Manager"
+description: "The GetDeployments Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets advertisement identifier or Assignment identifier and related type for a deployment that is deployed to the specified resource."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

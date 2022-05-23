@@ -45,7 +45,7 @@ The *Collect diagnostics* remote action is supported for:
 - Windows 10 version 1909 and later.
 - Windows 11
 - Microsoft HoloLens 2 2004 and later.
-- Global Admins, Intune Admins, or a role with **Collect diagnostics** permissions (under **Remote tasks**).
+- Global Admins, Intune Admins, or a role with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions.
 - Corporate-owned devices.
 - Devices that are online and able to communicate with the service during diagnostics.
 
@@ -61,7 +61,9 @@ To use the *Collect diagnostics* action:
 
 ## Data collected
 
-No personal information is collected. This list below is the same order as the diagnostic zip.  Each collection contains the following data:
+No personal information is collected. If you've installed KB5011543 on Windows 10 or KB5011563 on Windows 11, the format of the zip file will be simpler, including a flattened structure where the logs collected are named to match the data collected, and when multiple files are collected a folder is created.  
+
+This list below is the same order as the diagnostic zip.  Each collection contains the following data:
 
 Registry Keys:
 
@@ -103,29 +105,32 @@ Event Viewers:
 30. Microsoft-Windows-AppLocker/MSI and Script
 31. Microsoft-Windows-AppLocker/Packaged app-Deployment
 32. Microsoft-Windows-AppLocker/Packaged app-Execution
-33. Microsoft-Windows-Bitlocker/Bitlocker Management
-34. Microsoft-Windows-HelloForBusiness/Operational
-35. Microsoft-Windows-SENSE/Operational
-36. Microsoft-Windows-SenseIR/Operational
-37. Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
-38. Setup
-39. System
+33. Microsoft-Windows-AppxPackaging/Operational
+34. Microsoft-Windows-Bitlocker/Bitlocker Management
+35. Microsoft-Windows-HelloForBusiness/Operational
+36. Microsoft-Windows-SENSE/Operational
+37. Microsoft-Windows-SenseIR/Operational
+38. Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
+39. Setup
+40. System
 
 Files:
 
-40. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
-41. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
-42. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
-43. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
-44. %temp%\MDMDiagnostics\battery-report.html
-45. %temp%\MDMDiagnostics\energy-report.html
-46. %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
-47. %temp%\MDMDiagnostics\msinfo32.log
-48. %windir%\ccm\logs\*.log
-49. %windir%\ccmsetup\logs\*.log
-50. %windir%\logs\CBS\cbs.log
-51. %windir%\logs\measuredboot\*.*
-52. %windir%\Logs\WindowsUpdate\*.etl
+41. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
+42. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
+43. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
+44. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
+45. %temp%\MDMDiagnostics\battery-report.html
+46. %temp%\MDMDiagnostics\energy-report.html
+47. %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
+48. %temp%\MDMDiagnostics\msinfo32.log
+49. %windir%\ccm\logs\*.log
+50. %windir%\ccmsetup\logs\*.log
+51. %windir%\logs\CBS\cbs.log
+52. %windir%\logs\measuredboot\*.*
+53. %windir%\Logs\WindowsUpdate\*.etl
+54. %windir%\temp\%computername%*.log
+55. %windir%\temp\officeclicktorun*.log
 
 ## Disable device diagnostics
 

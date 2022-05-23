@@ -1,6 +1,7 @@
 ---
 title: "SMS_WindowsServicingLocalizedNames Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_WindowsServicingLocalizedNames Server WMI Class is for internal use only.For more information about both the class qualifiers and the property qualifiers, see Configuration Manager Class and Property Qualifiers."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

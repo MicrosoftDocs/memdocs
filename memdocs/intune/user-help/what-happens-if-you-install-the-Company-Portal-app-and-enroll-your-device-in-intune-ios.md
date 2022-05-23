@@ -2,7 +2,9 @@
 # required metadata
 
 title: Installing the Company Portal app for iOS | Microsoft Docs
-description:
+description: " When you enroll your device in Intune, you are giving your company support permission to manage your device to help protect the company information on the device." 
+
+ 
 keywords:
 author: lenewsad
 

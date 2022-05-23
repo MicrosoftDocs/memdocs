@@ -1,6 +1,7 @@
 ---
 title: "CancelLockRequests Method"
 titleSuffix: "Configuration Manager"
+description: "The CancelLockRequests WMI class method, in Configuration Manager, cancels multiple lock requests."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

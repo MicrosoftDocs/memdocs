@@ -14,7 +14,7 @@ metadata:
     - highpri
   author: dougeby
   ms.author: dougeby
-  ms.date: 02/18/2020
+  ms.date: 01/19/2022
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 
@@ -42,11 +42,11 @@ landingContent:
             url: device-profile-monitor.md
 
   # Card (optional)
-  - title: Settings for Windows 10 and later
+  - title: Settings for Windows 10/11
     linkLists:
     - linkListType: how-to-guide
       links:
-      - text: Use Windows 10 templates to configure group policy settings
+      - text: Use Windows client templates to configure group policy settings
         url: administrative-templates-windows.md
       - text: Configure device restriction settings
         url: device-restrictions-configure.md
@@ -66,7 +66,7 @@ landingContent:
     linkLists:
     - linkListType: how-to-guide      
       links:
-      - text: Upgrade Windows 10 editions or switch out of S mode
+      - text: Upgrade Windows client editions or switch out of S mode
         url: edition-upgrade-configure-windows-10.md
       - text: Settings to run as a dedicated kiosk
         url: kiosk-settings.md
@@ -158,11 +158,9 @@ landingContent:
         url: ios-device-features-settings.md
       - text: macOS
         url: macos-device-features-settings.md
-      - text: Windows 10 and later
+      - text: Windows 10/11
         url: delivery-optimization-settings.md
       - text: Windows Holographic for Business
         url: device-restrictions-windows-holographic.md                      
       - text: Windows 8.1
         url: device-restrictions-windows-8-1.md
-      - text: Windows Phone 8.1
-        url: device-restrictions-windows-phone-8-1.md

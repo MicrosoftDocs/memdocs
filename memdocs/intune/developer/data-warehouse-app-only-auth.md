@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 03/03/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -102,9 +102,9 @@ Using Visual Studio, create a Console App (.NET Framework) project that supports
          var applicationId = ConfigurationManager.AppSettings["appId"].ToString();
          SecureString applicationSecret = ConvertToSecureStr(ConfigurationManager.AppSettings["appKey"].ToString()); // Load as SecureString from configuration file or secret store (i.e. Azure KeyVault)
          var tenantDomain = ConfigurationManager.AppSettings["tenantDomain"].ToString();
-         var adalContext = new AuthenticationContext($"https://login.windows.net/" + tenantDomain + "/oauth2/token");
+         var msalContext = new AuthenticationContext($"https://login.windows.net/" + tenantDomain + "/oauth2/token");
     
-         AuthenticationResult authResult = adalContext.AcquireTokenAsync(
+         AuthenticationResult authResult = msalContext.AcquireTokenAsync(
              resource: "https://api.manage.microsoft.com/",
              clientCredential: new ClientCredential(
                  applicationId,
@@ -118,6 +118,9 @@ Using Visual Studio, create a Console App (.NET Framework) project that supports
      using Microsoft.IdentityModel.Clients.ActiveDirectory;
      using System.Configuration;
     ``` 
+
+	> [!NOTE]
+	> Azure Active Directory (Azure AD) Authentication Library (ADAL) and Azure AD Graph API will be deprecated. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363).
 
 11. After the <code>Main</code> method, add the following private method to process and convert the app key:
 

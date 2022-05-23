@@ -2,7 +2,7 @@
 title: Exclude client upgrades for Windows
 titleSuffix: Configuration Manager
 description: Learn how to exclude Windows clients from getting upgraded in Configuration Manager.
-ms.date: 07/23/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -53,7 +53,7 @@ If a device is a member of a collection that you excluded from upgrade, you can 
 
 - **Client push installation**: Ccmsetup allows client push installation because it's your direct intent. This method lets you upgrade a client without removing it from the collection, or removing the entire collection from exclusion.
 
-- **Manual client installation**: Manually upgrade an excluded client by using the following Ccmsetup command-line parameter: **/IgnoreSkipUpgrade**
+- **Manual client installation**: Manually upgrade an excluded client by using the following Ccmsetup command-line parameter: `/IgnoreSkipUpgrade`
 
     If you attempt to manually upgrade a client that's a member of the excluded collection, and don't use this parameter, the client doesn't upgrade. For more information, see [How to install Configuration Manager clients manually](../../deploy/deploy-clients-to-windows-computers.md#BKMK_Manual).
 

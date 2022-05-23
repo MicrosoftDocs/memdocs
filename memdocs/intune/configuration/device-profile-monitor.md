@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 04/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -39,14 +39,17 @@ Intune includes some features to help monitor and manage your device configurati
 
 All of your profiles are shown. You also see the platform, the type of profile, and if the profile is assigned.
 
+> [!NOTE]
+> For additional reporting information about device configuration profiles, see [Intune reports](../fundamentals/reports.md).
+
 ## View details on a profile
 
 After you create your device profile, Intune provides graphical charts. These charts display the status of a profile, such as it being successfully assigned to devices, or if the profile shows a conflict.
 
-1. Select an existing profile. For example, select a macOS profile.
-2. Select the **Overview** tab. In this view, the **Profile assignment** includes the following statuses:
+1. In **Devices** > **Configuration profiles**, select an existing profile. For example, select a macOS profile.
+2. Select the **Overview** tab. In this view, the **Profile assignment status** includes the following statuses:
 
-    - **Completed**: Policy is applied successfully.
+    - **Succeeded**: Policy is applied successfully.
     - **Error**: The policy failed to apply. The message typically displays with an error code that links to an explanation.
     - **Conflict**: Two settings are applied to the same device, and Intune can't sort out the conflict. An administrator should review.
     - **Pending**: The device hasn't checked in with Intune to receive the policy yet.
@@ -54,19 +57,15 @@ After you create your device profile, Intune provides graphical charts. These ch
 
 3. The top graphical chart shows the number of devices assigned to the device profile. For example, if the configuration device profile applies to macOS devices, the chart lists the count of the macOS devices.
 
-    It can also show the number of devices for other platforms that are assigned the same device profile. For example, it shows the count of the non-macOS devices.
+    When you monitor a Windows profile, the count in the **Profile assignment status** is per device per user. So, if two users sign in to the same device, then that device is counted twice.
 
-    :::image type="content" source="./media/device-profile-monitor/device-configuration-profile-graphical-chart.png" alt-text="See or view the number of devices assigned to the device profile in Microsoft Intune and Endpoint Manager admin center.":::
-
-    The bottom graphical chart shows the number of users assigned to the device profile. For example, if the configuration device profile applies to macOS users, the chart lists the count of the macOS users.
-
-4. Select the top graphical chart. **Device status** opens.
+4. Select the top graphical chart. Or, select **Device status**. **Device status** opens.
 
     The devices assigned to the profile are listed, and it shows the deployment status. Also note that it only lists the devices with the specific platform (for example, macOS).
 
     Close the **Device status** details.
 
-5. Select the circle in the bottom graphical chart. **User status** opens.
+5. Select the circle in the bottom graphical chart. Or, select **User status**. **User status** opens.
 
     The users assigned to the profile are listed, and it shows the deployment status. Also note that it only lists the users with the specific platform (for example, macOS).
 
@@ -74,11 +73,25 @@ After you create your device profile, Intune provides graphical charts. These ch
 
 6. Back in the **Profiles** list, select a specific profile.
 
-    - **Properties**: Change the name, or update any existing settings.
-    - **Assignments**: Include or exclude devices that the policy should apply. Choose **Selected Groups** to choose specific groups.
-    - **Device status**: The devices assigned to the profile are listed, and it shows if the profile is successfully deployed. You can select a specific device to get even more details, including the installed apps.
-    - **User status**: Lists the user names with devices affected by this profile, and if the profile successfully deployed. You can select a specific user to get even more details.
-    - **Per-setting status**: Filters the output by showing the individual settings within the profile, and shows if the setting is successfully applied.
+    - **Properties**: Change the policy name, or update any existing configuration settings. You can also update:
+
+      - **Scope tags**: See any existing [scope tags](../fundamentals/scope-tags.md) used in the policy. Select **Edit** to add or remove a scope tag.
+      - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../fundamentals/filters.md) in the policy. Select **Edit** to update the policy assignment, and add or remove a filter.
+      - **Applicability Rules**: On your Windows devices, see the [applicability rules](device-profile-create.md#applicability-rules) used in the policy. Select **Edit** to add or remove an applicability rule.
+
+    - **Device and user check-in status**: Shows the number of users or devices that checked-in with the profile. When they check-in, they receive the settings in your profile.
+
+      Select **View report** to see the following information:
+      
+      - The devices that received the profile
+      - The user names with devices that received the profile
+      - The check-in status and the last time the user/device checked in with the profile
+
+      You can also select a specific device to get more details and use the filter column to see the assignment filter options.
+
+    - **Device assignment status**: Select **Generate report** to see the latest profile assignment states for the devices that received the profile. You can also filter the assignment status to see only errors, conflicts, and more.
+
+    - **Per setting status**: Shows the individual settings in the profile, and their status.
 
 > [!TIP]
 > [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use.

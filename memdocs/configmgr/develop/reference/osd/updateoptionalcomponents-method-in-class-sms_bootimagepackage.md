@@ -1,6 +1,7 @@
 ---
 title: "UpdateOptionalComponents Method"
 titleSuffix: "Configuration Manager"
+description: "The UpdateOptionalComponents WMI class method updates all specified optional components to the boot image package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

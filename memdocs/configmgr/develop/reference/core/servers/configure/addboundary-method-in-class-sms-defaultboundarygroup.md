@@ -1,4 +1,5 @@
 ---
+description: Learn how to add one or more boundaries to a default boundary group using AddBoundary in Configuration Manager.
 title: AddBoundary method in class SMS_DefaultBoundaryGroup
 titleSuffix: "Configuration Manager"
 ms.date: "03/13/2017"

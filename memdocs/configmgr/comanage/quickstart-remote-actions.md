@@ -18,7 +18,7 @@ You need to make sure that every device you manage is reachable, no matter where
 
 In the following video, principal program manager Heidi Cheng and senior program manager Danny Guillory discuss and demo remote actions with co-management:
 
-> [!VIDEO https://channel9.msdn.com/Series/Endpoint-Zone/Using-Co-Management-to-Execute-Remote-Actions/player]
+> [!VIDEO https://aka.ms/docs/player?id=0c095272-87a5-40d3-af67-c420c010c783]
 
 ## Benefits
 

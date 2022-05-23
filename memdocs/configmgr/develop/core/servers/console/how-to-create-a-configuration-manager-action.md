@@ -1,5 +1,6 @@
 ---
 title: "Create a Configuration Manager Action"
+description: "Learn how to create a console action by creating an XML file that populates an ActionDescription XML element for the action." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

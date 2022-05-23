@@ -31,7 +31,9 @@ The endpoint protection point requires the following Windows Server features:
 
 - .NET Framework 3.5
 
-- Windows Defender features (Windows Server 2016 or later)<!-- SCCMDocs#2120 -->
+- Windows Defender feature (Windows Server 2016)<!-- SCCMDocs#2120 -->
+- Windows Defender Antivirus feature (Windows Server 2019)
+- Microsoft Defender Antivirus feature (Windows Server 2022 or later)
 
 For more information, see [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md).
 

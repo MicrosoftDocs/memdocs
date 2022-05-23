@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 01/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -29,15 +29,16 @@ ms.collection: M365-identity-device-management
 
 # Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates
 
-In Intune, you can use [Windows 10 templates to configure group policy settings](administrative-templates-windows.md). This article shows you how to update Microsoft 365 using an administrative template in Intune. It also gives guidance on confirming your policies apply successfully. This information also helps when troubleshooting.
+In Intune, you can use [Windows client templates to configure group policy settings](administrative-templates-windows.md). This article shows you how to update Microsoft 365 using an administrative template in Intune. It also gives guidance on confirming your policies apply successfully. This information also helps when troubleshooting.
 
 In this scenario, you create an administrative template in Intune that updates Microsoft 365 on your devices.
 
-For more information on administrative templates, see [Windows 10 templates to configure group policy settings](administrative-templates-windows.md).
+For more information on administrative templates, see [Windows client templates to configure group policy settings](administrative-templates-windows.md).
 
 Applies to:
 
-- Windows 10 and later
+- Windows 11
+- Windows 10
 - Microsoft 365
 
 ## Prerequisites
@@ -55,7 +56,7 @@ Be sure to [enable Microsoft 365 Apps Automatic Updates](/deployoffice/configure
     > [!NOTE]
     > It's recommended to update more frequently. Semi-annually is only used as an example.
 
-2. Be sure to [assign the policy](device-profile-assign.md) to your Windows 10 devices. To test your policy sooner, you can also sync the policy:
+2. Be sure to [assign the policy](device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy:
 
     - [Sync the policy in Intune](../remote-actions/device-sync.md)
     - [Manually sync the policy on the device](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
@@ -182,4 +183,4 @@ Consider using the following steps to test your policy before deploying the poli
 
 [Overview of the Office cloud policy service for Microsoft 365 Apps](/deployoffice/overview-office-cloud-policy-service)
 
-[Use Windows 10 templates to configure group policy settings (ADMX templates) in Microsoft Intune](administrative-templates-windows.md)
+[Use Windows 10/11 templates to configure group policy settings (ADMX templates) in Microsoft Intune](administrative-templates-windows.md)

@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: Learn about how to update the OverrideServiceWindows property of deployment to configure software updates to override maintenance windows.
 
 ---
 # How to Configure Software Updates to Override Maintenance Windows

@@ -126,9 +126,12 @@ The Intune Connector requires the [same endpoints as Intune](../intune/fundament
 4. Open the downloaded Connector setup file, *ODJConnectorBootstrapper.exe*, to install the Connector.
 5. At the end of the setup, select **Configure**.
 6. Select **Sign In**.
-7. Enter the user Global Administrator or Intune Administrator role credentials. 
+7. Enter the Global administrator or Intune administrator role credentials. 
  The user account must have an assigned Intune license.
 8. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
+
+> [!NOTE]
+> The Global administrator role is a temporary requirement at the time of installation.
 
 > [!NOTE]
 > After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
@@ -152,9 +155,9 @@ If you have a web proxy in your networking environment, ensure that the Intune C
 
 4. If you selected **Dynamic Devices** for the membership type, in the **Group** pane, select **Dynamic device members**.
 
-5. In the **Advanced rule** box, enter one of the following code lines:
+5. Select **Edit** in the **Rule syntax** box and enter one of the following code lines:
     - To create a group that includes all your Autopilot devices, enter `(device.devicePhysicalIDs -any _ -contains "[ZTDId]")`.
-    - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag(OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`
+    - Intune's Group Tag field maps to the OrderID attribute on Azure AD devices. If you want to create a group that includes all of your Autopilot devices with a specific Group Tag (OrderID), type: `(device.devicePhysicalIds -any _ -eq "[OrderID]:179887111881")`.
     - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter `(device.devicePhysicalIds -any _ -eq "[PurchaseOrderId]:76222342342")`.
  
 6. Select **Save** > **Create**. 
@@ -190,6 +193,7 @@ After your Autopilot devices are *enrolled*, they're displayed in four places:
 - The **All Devices** pane in the Intune in the Azure portal. Select **Devices** > **All Devices**.
 
 After your Autopilot devices are enrolled, their names become the hostname of the device. By default, the hostname begins with *DESKTOP-*.
+A device object is pre-created in Azure AD once a device is registered in Autopilot. When a device goes through a hybrid Azure AD deployment, by design, another device object is created resulting in duplicate entries. 
 
 ## Supported BYO VPNs 
 
@@ -203,6 +207,7 @@ Here is a list of VPN clients that are known to be tested and validated:
 - Checkpoint (Win32 client)
 - Citrix NetScaler (Win32 client)
 - SonicWall (Win32 client)
+- FortiClient VPN (Win32 client)
 
 **Not supported clients:**
 - UWP-based VPN plug-ins
@@ -245,9 +250,10 @@ It takes about 15 minutes for the device profile status to change from *Not assi
     - **Name**: Enter a descriptive name for the new profile.
     - **Description**: Enter a description for the profile.
     - **Platform**: Select **Windows 10 and later**.
-    - **Profile type**: Select **Domain Join**.
-3. Select **Settings**, and then provide a **Computer name prefix**, **Domain name**.
-4. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
+    - **Profile type**: Select **Templates**, choose the template name **Domain Join**, and select **Create**.
+3. Enter the **Name** and **Description** and select **Next**. 
+5. Provide a **Computer name prefix** and **Domain name**.
+6. (Optional) Provide an **Organizational unit** (OU) in [DN format](/windows/desktop/ad/object-names-and-identities#distinguished-name). Your options include:
     - Provide an OU in which you've delegated control to your Windows 2016 device that is running the Intune Connector.
     - Provide an OU in which you've delegated control to the root computers in your on-prem Active Directory.
     - If you leave this blank, the computer object will be created in the Active Directory default container (CN=Computers if you never [changed it](https://support.microsoft.com/help/324949/redirecting-the-users-and-computers-containers-in-active-directory-dom)).

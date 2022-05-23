@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: View and correct personal data
+title: View and correct personal data collected by Intune
 titleSuffix: Microsoft Intune
-description: Learn how to view and correct personal data.
+description: Learn how to view and correct personal data that's been collected by Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: brenduns
+ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2018
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -31,21 +31,21 @@ ms.collection: M365-identity-device-management
 
 # View and correct personal data
 
-Intune admins can view some personal data based on their access permissions, but only end users can change their device's personal data.
+Based on their access permissions, Intune admins can view some personal data that's been collected by Intune but can't change that data. Only end users can change their device's personal data that has been collected by Intune.
 
 [!INCLUDE [GDPR-related guidance](../includes/gdpr-dsr-and-stp-note.md)]
 
-
 ## View personal data
 
-Admins can see end user personal information in various blades in the Intune UI. The following articles explain what information admins do and don't have access to:
+Admins can see end user personal information in various Nodes of the Intune UI in the Microsoft Endpoint Manager admin center. The following articles explain what information admins do and don't have access to:
+
 - [See device details](../remote-actions/device-inventory.md) in Intune explains how you can review details about an end user's device.
 - [Monitor app information and assignments](../apps/apps-monitor.md) explains how to see details about apps installed on an end user's device.
 - The [What information can my company see when I enroll my device? article](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md) gives end users a list of data that their company can and can't see. It's best to clearly tell your users what kind of data you're collecting and why you're collecting it. This article can be the first step in that transparency.
 
 ### Who can view the data?
 
-Microsoft uses strict controls to govern access to customer data, granting the lowest level of access required to complete key tasks and revoking access when it is no longer needed. 
+Microsoft uses strict controls to govern access to customer data, granting the lowest level of access required to complete key tasks and revoking access when it's no longer needed.
 
 You can secure and control access to end user personal data by using role-based administration control (RBAC). For more information, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
 

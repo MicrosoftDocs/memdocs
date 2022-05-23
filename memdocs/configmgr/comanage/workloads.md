@@ -5,7 +5,7 @@ description: Learn about the workloads that you can switch from Configuration Ma
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.date: 12/01/2021
+ms.date: 03/29/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -50,7 +50,7 @@ For more information on the Intune feature, see [Manage Windows software updates
 ## Resource access policies
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, these company resource access features of Configuration Manager and this co-management workload are [deprecated](../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../intune/configuration/device-profiles.md).
+> Starting in version 2203, these company resource access features of Configuration Manager and this co-management workload are no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](../protect/plan-design/resource-access-deprecation-faq.yml).
 
 Resource access policies configure VPN, Wi-Fi, email, and certificate settings on devices.
 
@@ -113,7 +113,9 @@ This workload manages Microsoft 365 Apps on co-managed devices.
 
 - Office updates may take around 24 hours to show up on client unless the devices are restarted
 
-- There's a new global condition, **Are Office 365 applications managed by Intune on the device**. This condition is added by default as a requirement to new Microsoft 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application. Then they don't install Microsoft 365 deployed via Configuration Manager.
+- There's a [global condition](../apps/deploy-use/create-global-conditions.md) that's added by default as a requirement to new Microsoft 365 applications. When you transition this workload, co-managed clients don't meet the requirement on the application. Then they don't install Microsoft 365 deployed via Configuration Manager. The global condition is named either:
+   - **Microsoft 365 apps managed by Microsoft Intune** (version 2111 or later) <!--12425123, 10784457-->
+   - **Are Office 365 applications managed by Intune on the device** (version 2107 and earlier)
 
 Updates can be managed using either of the following features:
 
@@ -144,27 +146,6 @@ When you enable Microsoft Connected Cache on your Configuration Manager distribu
 
 > [!TIP]
 > You can configure the Company Portal to also show Configuration Manager apps. If you change this app portal experience, it changes the behaviors described in the above diagram. For more information, see [Use the Company Portal app on co-managed devices](company-portal.md).<!--CMADO-3601237,INADO-4297660-->
-
-## Known issues
-
-_Applies to version 2006 and earlier_
-
-When the Endpoint Protection workload is moved over to Intune, the client may still honor policies set by Configuration Manager and Microsoft Defender.<!--5024559-->
-
-To work around this issue, apply the CleanUpPolicy.xml using ConfigSecurityPolicy.exe after the Intune policies have been received by the client using the steps below:
-
-1. Copy and save the below text as `CleanUpPolicy.xml`.
-
-   ```xml
-   <?xml version="1.0" encoding="UTF-8"?>
-   <SecurityPolicy xmlns="http://forefront.microsoft.com/FEP/2010/01/PolicyData" Name="FEP clean-up policy"><PolicySection Name="FEP.AmPolicy"><LocalGroupPolicySettings><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Microsoft Antimalware"/><IgnoreKey Name="SOFTWARE\Policies\Microsoft\Windows Defender"/></LocalGroupPolicySettings></PolicySection></SecurityPolicy>
-   ```
-
-1. Open an elevated command prompt to `ConfigSecurityPolicy.exe`. Typically this executable is in one of the following directories:
-   - C:\Program Files\Windows Defender
-   - C:\Program Files\Microsoft Security Client
-
-1. From the command prompt, pass in the xml file to clean up the policy. For example, `ConfigSecurityPolicy.exe C:\temp\CleanUpPolicy.xml`.
 
 ## Next steps
 

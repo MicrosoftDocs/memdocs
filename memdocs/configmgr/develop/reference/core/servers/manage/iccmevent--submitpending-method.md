@@ -1,4 +1,5 @@
 ---
+description: Learn how to submit an event that is stored by Windows Management Instrumentation (WMI) using the ICcmEvent::SubmitPending method.
 title: "ICCMEvent::SubmitPending Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

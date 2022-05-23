@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the GetTallyIntervals method to get an array of tally intervals and the default interval.  
 title: "GetTallyIntervals Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

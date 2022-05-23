@@ -1,6 +1,7 @@
 ---
 title: "IAppManagementHandler::EnforceApp"
 titleSuffix: "Configuration Manager"
+description: "A method that starts the installation of a specific application."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

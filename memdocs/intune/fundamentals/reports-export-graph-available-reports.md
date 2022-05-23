@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-#ms.reviewer: spenspshumwa
+ms.reviewer: 
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -172,7 +172,8 @@ The following table contains the possible output when calling the `UserInstallSt
 | NotInstalledCount |
 | NotApplicableCount    |
 
-There are no filters for this report.
+You can choose to filter the `UserInstallStatusAggregateByApp` report's output based on the following column:
+- `ApplicationId`
 
 ## DeviceCompliance report
 

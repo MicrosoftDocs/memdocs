@@ -2,7 +2,7 @@
 title: Product feedback
 titleSuffix: Configuration Manager
 description: Share feedback with the Configuration Manager product team.
-ms.date: 12/01/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -26,24 +26,31 @@ From the Configuration Manager console, you can share feedback directly to the M
 
 - **Send a suggestion** (**ALT** + **SHIFT** + **9**): Open the Configuration Manager product feedback website to share your idea. For more information, see [Send a suggestion](#send-a-suggestion).
 
-There's also an option to **Contact support** (**ALT** + **SHIFT** + **0**), which opens the [Microsoft support for business portal](https://aka.ms/cmcbsupport).
+- **Contact support** (**ALT** + **SHIFT** + **0**): Opens the [Microsoft support for business portal](https://aka.ms/cmcbsupport).
 
-<!--3180826-->
-Starting in version 2010, there's a new wizard to send feedback with a redesigned workflow. It includes the following changes:
 
-- It requires a description of the feedback
+When using the feedback wizard from the console, the following items are displayed where needed<!--3180826-->:
+- A description of the feedback is required
 - Select from a list of issue categories for the console workspace
 - It includes tips for how to write useful feedback
 - You can attach additional files
 - A summary page displays your feedback ID, and includes any error messages with suggestions to resolve them.
 
 > [!NOTE]
-> This new wizard is only in the Configuration Manager console. [Support Center](../support/support-center.md) has a similar feedback experience, which doesn't change.
+> This wizard is in the Configuration Manager console. [Support Center](#feedback-for-support-center) has a similar feedback experience.
 
-<!--4262917-->
-Starting in version 2107, error messages include a link to **Report error to Microsoft**. This action opens the standard [send a frown](#send-a-frown) window to provide feedback. It automatically includes details about the user interface and the error to better help Microsoft engineers diagnose the error. Aside from making it easier to send a frown, it also lets you include the full context of the error message when you share a screenshot.
+## Recent changes to feedback
 
-Starting in Configuration Manager 2111, wizards and some property pages include an icon to provide feedback allowing you to quickly send feedback right from your current activity. <!--2711343-->
+Starting in version 2203, you have the ability to connect feedback you send to Microsoft through the Configuration Manager console to an authenticated Azure Active Directory (Azure AD) user account or Microsoft Account (MSA). User authentication will help Microsoft ensure the privacy of your feedback and diagnostic data. Currently, Azure AD authentication for government clouds isn't available. After selecting either **Send a smile** or **Send a frown**: <!--11754191-->
+1. Select **Sign in** and sign in with either your Azure AD user account or your Microsoft account.
+   - Selecting **Continue without signing in** will allow you to send feedback, but we won't be able to contact you with questions or updates unless you provide an e-mail address.
+1. Once you're signed in, select **Next** then provide your feedback. If you need to use a different account, you can select **Sign out** to start again.
+
+Starting in version 2203, the feedback button is displayed in additional console locations. You can also use the keyboard shortcuts for **Send a smile** and **Send a frown** from more locations in the console. <!--12890088-->
+
+Starting in Configuration Manager 2111, when you **Report error to Microsoft** the error information included with the feedback can't be altered or removed. <!--10883931-->Wizards and some property pages also include an icon to provide feedback allowing you to quickly send feedback right from your current activity.<!--2711343-->
+
+Starting in version 2107, error messages include a link to **Report error to Microsoft**. This action opens the standard [send a frown](#send-a-frown) window to provide feedback. It automatically includes details about the user interface and the error to better help Microsoft engineers diagnose the error. Aside from making it easier to send a frown, it also includes the full context of the error message when you share a screenshot. <!--4262917-->
 
 ## Prerequisites
 
@@ -71,7 +78,7 @@ To send feedback on something that you like about Configuration Manager:
 
 1. When the progress is complete, select **Details** to see the transaction ID or any errors that occurred.
 
-    :::image type="content" source="media/provide feedback-complete.png" alt-text="Screenshot of Provide feedback wizard completion page." lightbox="media/provide feedback-complete.png":::
+     :::image type="content" source="media/provide feedback-complete.png" alt-text="Screenshot of Provide feedback wizard completion page." lightbox="media/provide feedback-complete.png":::
 
 ## Send a frown
 
@@ -129,23 +136,6 @@ When you **Send a suggestion**, it opens the [Feedback for Configuration Manager
 
 For more information, including the different status values, see [How Microsoft uses feedback](/microsoft-365/admin/misc/feedback-provide-microsoft#how-microsoft-uses-feedback).
 
-## Share feedback in version 2006 and earlier
-
-<!--1357542-->
-
-1. In the upper right corner of the console, select the smiley face.
-
-1. In the drop-down menu, select **Send a smile** or **Send a frown**.
-
-1. Use the text box to explain what you liked or what you didn't like.
-
-1. Choose if you would like to share your e-mail address and a screenshot.
-
-1. Select **Submit Feedback**.
-  If you don't have internet connectivity, select **Save** at the bottom. For more information, see [Send feedback that you saved for later submission](#send-feedback-that-you-saved-for-later-submission).
-
-:::image type="content" source="media/1806-feedback-form.png" alt-text="Submit feedback form in Configuration Manager 2006 and earlier." lightbox="media/1806-feedback-form.png":::
-
 ## Status messages
 <!--5891852-->
 When you **Send a smile** or **Send a frown**, it creates a status message when you submit the feedback. This message provides a record of:
@@ -159,11 +149,7 @@ When you **Send a smile** or **Send a frown**, it creates a status message when 
 
 :::image type="content" source="media/5891852-send-smile-status-message.png" alt-text="Status message for successfully submitting feedback.":::
 
-View status messages in the **Monitoring** workspace, under **System Status** in the **Status Message Queries** node. Start with the **All Status Messages** query and select your time frame. When the messages load, select **Filter messages**, and filter for message ID 53900 or 53901.
-
-Starting in version 2010, use the built-in status message query, **Feedback sent to Microsoft**.<!-- 6488450 --> This query makes it easier to find these feedback status messages.
-
-If you [create feedback that you save for later submission](#send-feedback-that-you-saved-for-later-submission), the site doesn't create a status message.
+You can use the built-in status message query, **Feedback sent to Microsoft** to easily display these status messages.<!-- 6488450 --> You can also display status messages in the **Monitoring** workspace, under **System Status** in the **Status Message Queries** node. Start with the **All Status Messages** query and select your time frame. When the messages load, select **Filter messages**, and filter for message ID 53900 or 53901. If you [create feedback that you save for later submission](#send-feedback-that-you-saved-for-later-submission), the site doesn't create a status message.
 
 ## Information sent with feedback
 
@@ -226,6 +212,24 @@ When you send feedback, it shows a confirmation message. This message includes a
 - The **UploadOfflineFeedback** command tool writes the **FeedbackID** to the console unless you use `--silent`.
 
   :::image type="content" source="media/1902-offline-feedback-id-example.png" alt-text="Feedback confirmation from UploadOfflineFeedback.exe in Configuration Manager.":::
+
+## Feedback for Support Center
+
+If you have feedback on [Support Center](../support/support-center.md), use the following instructions:
+
+1. In the upper right corner of the application, select the smiley face. <!--1357542 feedback in version 2006 and earlier-->
+
+1. In the drop-down menu, select **Send a smile** or **Send a frown**.
+   - If you select **Send a suggestion**, you will be taken to the feedback portal. For more information, see [Send a suggestion](#send-a-suggestion).
+
+1. Use the text box to explain what you liked or what you didn't like.
+
+1. Choose if you would like to share your e-mail address and a screenshot.
+
+1. Select **Submit Feedback**.
+
+
+:::image type="content" source="media/feedback-support-center.png" alt-text="Screenshot of the feedback form in Support Center." lightbox="media/feedback-support-center.png":::
 
 ## Feedback for PowerShell
 

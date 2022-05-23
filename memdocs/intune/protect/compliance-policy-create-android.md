@@ -18,7 +18,7 @@ ms.localizationpriority: medium
 #ROBOTS:
 #audience:
 
-ms.reviewer: samyada
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -162,7 +162,7 @@ As an Intune administrator, use these compliance settings to help protect your o
   - **Block** - Prevent devices from using the USB debugging feature.
 
 - **Minimum security patch level**  
-  *(Supported on Android 6.0 or later)*
+  *(Supported on Android 8.0 or later)*
 
   Select the oldest security patch level a device can have. Devices that aren't at least at this patch level are noncompliant. The date must be entered in the `YYYY-MM-DD` format.
 

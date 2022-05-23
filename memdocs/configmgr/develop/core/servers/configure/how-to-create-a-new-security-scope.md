@@ -1,5 +1,6 @@
 ---
 title: "Create a New Security Scope"
+description: Learn how to create a new security scope and that All security scopes are defined by the SMS_SecuredCategory Windows Management Instrumentation (WMI) class.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

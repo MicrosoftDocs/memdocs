@@ -6,7 +6,7 @@ description: Microsoft 365 Enterprise includes Microsoft Intune. See how Intune 
 author: MandiOhlinger 
 ms.author: mandia 
 manager: dougeby 
-ms.date: 04/14/2021
+ms.date: 01/25/2022
 ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -33,7 +33,7 @@ A key task of any Administrator is to protect and secure an organization’s res
 
 Device management enables organizations to protect and secure their resources and data, and from different devices.
 
-Using a device management provider, organization can make sure that only authorized people and devices get access to proprietary information. Similarly, device users can feel at ease accessing work data from their phone, because they know their device meet their organization's security requirements. As an organization, you might ask - **What should we use to protect our resources?**
+Using a device management provider, organization can make sure that only authorized people and devices get access to proprietary information. Similarly, device users can feel at ease accessing work data from their phone, because they know their device meets their organization's security requirements. As an organization, you might ask - **What should we use to protect our resources?**
 
 The answer is [Microsoft Intune](what-is-intune.md). Intune offers mobile device management (MDM) and mobile application management (MAM). Some key tasks of any MDM or MAM solution are to:
 
@@ -79,7 +79,7 @@ A key task of any device management solution is to provide security and protecti
 
   For example, create an iOS/iPadOS devices group in Microsoft 365. Then, use Intune to push policies to the iOS/iPadOS devices group that focus on iOS/iPadOS features, such as access to the app store, using AirDrop, backing up to iCloud, using Apple's web filter, and more.
 
-- **Windows Defender** includes many security features to help protect Windows 10 devices. For example, using Intune and Windows Defender together, you can:
+- **Windows Defender** includes many security features to help protect Windows client devices. For example, using Intune and Windows Defender together, you can:
 
   - Enable [Windows Defender SmartScreen](../protect/endpoint-protection-windows-10.md) to look for suspicious activity in files and apps on mobile devices.
   - Use [Microsoft Defender for Endpoint)](../protect/advanced-threat-protection.md) to help prevent security breaches on mobile devices. And, help limit the impact of a security breach by blocking a user from corporate resources.
@@ -108,7 +108,7 @@ On the Device Management admin center, you can:
 - [Install Exchange on-premises connector](../protect/exchange-connector-install.md)  
 - [Manage roles](role-based-access-control.md)  
 - Manage software updates
-  - [Manage Windows 10 updates](../protect/windows-update-for-business-configure.md)  
+  - [Manage Windows client updates](../protect/windows-update-for-business-configure.md)  
   - [Manage iOS/iPadOS updates](../protect/software-updates-ios.md)  
 - [Azure active directory](/azure/active-directory)  
 - [Manage users](/azure/active-directory/fundamentals/add-users-azure-active-directory)

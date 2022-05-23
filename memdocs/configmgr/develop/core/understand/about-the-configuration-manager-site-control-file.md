@@ -1,5 +1,6 @@
 ---
 title: "Configuration Manager Site Control File"
+description: "Site control in Configuration Manager defines the settings for a specific site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

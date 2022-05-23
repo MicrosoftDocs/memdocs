@@ -299,7 +299,7 @@ Manage roles and scopes on users:
 - [Add-CMSecurityRoleToAdministrativeUser](/powershell/module/configurationmanager/Add-CMSecurityRoleToAdministrativeUser): Add a security role to a user or group.
 - [Remove-CMSecurityRoleFromAdministrativeUser](/powershell/module/configurationmanager/Remove-CMSecurityRoleFromAdministrativeUser): Remove the association between a security role and an administrative user.
 - [Add-CMSecurityScopeToAdministrativeUser](/powershell/module/configurationmanager/Add-CMSecurityScopeToAdministrativeUser): Add a security scope to a user or group.
-- [Remove-CMSecurityScopeFromAdministrativeUser](/powershell/module/configurationmanager/Remove-CMSecurityScopeToAdministrativeUser): Remove the association between a security scope and an administrative user.
+- [Remove-CMSecurityScopeFromAdministrativeUser](/powershell/module/configurationmanager/remove-cmsecurityscopefromadministrativeuser): Remove the association between a security scope and an administrative user.
 
 Manage security roles:
 

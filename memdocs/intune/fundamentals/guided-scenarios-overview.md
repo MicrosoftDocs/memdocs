@@ -37,7 +37,7 @@ The following guided scenarios are available:
 - [Deploy Microsoft Edge for mobile](guided-scenarios-edge.md)
 - [Try out a cloud managed PC](guided-scenarios-cloud-managed-pc.md)
 - [Secure Microsoft Office for mobile](guided-scenarios-office-mobile.md)
-- [Windows 10 in cloud configuration](cloud-configuration.md)
+- [Windows 10/11 in cloud configuration](cloud-configuration.md)
 
 ## Guided scenario functionality 
 

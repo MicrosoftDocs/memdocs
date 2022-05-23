@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 12/09/2021
+ms.date: 04/12/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -53,9 +53,16 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 -->
 
 <!-- ***********************************************-->
-## Upcoming features
+<!--
+## Device management
+-->
 
-Check back here for announcements of upcoming features.
+<!-- ***********************************************-->
+## Monitor and troubleshoot
+
+### End user manual connectivity check<!--37679345 -->
+
+End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
 ## Next steps
 

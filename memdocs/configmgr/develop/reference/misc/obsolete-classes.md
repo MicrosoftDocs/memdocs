@@ -1,6 +1,7 @@
 ---
 title: Obsolete classes
 titleSuffix: Configuration Manager
+description: "Obsolete WMI classes in Configuration Manager."
 ms.date: 08/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

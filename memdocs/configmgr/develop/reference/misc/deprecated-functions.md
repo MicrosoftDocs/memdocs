@@ -1,6 +1,7 @@
 ---
 title: Deprecated functions
 titleSuffix: Configuration Manager
+description: "These functions, which worked in previous product version, might not be available in future releases of Configuration Manager."
 ms.date: 08/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

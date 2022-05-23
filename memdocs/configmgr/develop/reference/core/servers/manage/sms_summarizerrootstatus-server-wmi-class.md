@@ -1,6 +1,7 @@
 ---
 title: "SMS_SummarizerRootStatus Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_SummarizerRootStatus Windows Management Instrumentation class is an SMS Provider server class that represents a summarizer for the overall health of the entire site hierarchy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

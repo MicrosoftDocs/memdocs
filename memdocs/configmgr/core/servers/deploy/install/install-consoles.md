@@ -2,7 +2,7 @@
 title: Install console
 titleSuffix: Configuration Manager
 description: Install the Configuration Manager console to connect to a central administration site or primary site.
-ms.date: 08/23/2021
+ms.date: 04/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
@@ -89,25 +89,25 @@ If you create a package for installing the console on other computers, make sure
 
 ### ConsoleSetup.exe command-line options
 
-#### /q
+#### `/q`
 
-Installs the Configuration Manager console unattended. The **TargetDir** and **DefaultSiteServerName** options are required when you use this option.
+Installs the Configuration Manager console unattended. The `TargetDir` and `DefaultSiteServerName` options are required when you use this option.
 
-#### /uninstall
+#### `/uninstall`
 
-Uninstalls the Configuration Manager console. Specify this option first when you use it with the **/q** option.
+Uninstalls the Configuration Manager console. Specify this option first when you use it with the `/q` option.
 
-#### LangPackDir
+#### `LangPackDir`
 
 Specifies the path to the folder that contains the language files. You can use **Setup Downloader** to download the language files. If you don't use this option, Setup looks for the language folder in the current folder. If the language folder isn't found, Setup continues to install English only. For more information, see [Setup Downloader](setup-downloader.md).
 
-#### TargetDir
+#### `TargetDir`
 
-Specifies the installation folder to install the Configuration Manager console. This option is required when you use the **/q** option.
+Specifies the installation folder to install the Configuration Manager console. This option is required when you use the `/q` option.
 
-#### DefaultSiteServerName
+#### `DefaultSiteServerName`
 
-Specifies the FQDN of the site server to which the console connects when it opens. This option is required when you use the **/q** option.
+Specifies the FQDN of the site server to which the console connects when it opens. This option is required when you use the `/q` option.
 
 ### Examples
 
@@ -123,8 +123,14 @@ Specifies the FQDN of the site server to which the console connects when it open
 
 `ConsoleSetup.exe /uninstall /q`
 
+## Postinstallation information
+
+The Configuration Manager console requires installation of the built-in WebView2 extension for certain features such as Community hub and dashboards. A notification to install the extension is given to the console user when they open the console. For more information see,the [WebView2 console extension](../../manage/admin-console-extensions.md#bkmk_notification).
+
 ## Next steps
 
 An administrator sees objects in the console based on the permissions assigned to their user account. For more information, see [Fundamentals of role-based administration](../../../understand/fundamentals-of-role-based-administration.md).
 
 For more information on the fundamentals of navigating the Configuration Manager console, see [How to use the console](../../manage/admin-console.md).
+
+If your environment uses a proxy server, this configuration may impact the functionality of the console. For more information, see [Proxy server support - Configuration Manager console](../../../plan-design/network/proxy-server-support.md#configuration-manager-console).

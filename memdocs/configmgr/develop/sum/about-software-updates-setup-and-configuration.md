@@ -1,5 +1,6 @@
 ---
 title: "Software Updates Setup and Configuration"
+description: Before software update compliance assessment data is displayed in the Configuration Manager console and before software updates can be deployed to client computers, you must install and configure a software update point.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

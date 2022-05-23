@@ -2,7 +2,7 @@
 title: Upgrade clients on Windows
 titleSuffix: Configuration Manager
 description: Upgrade clients on Windows computers in Configuration Manager.
-ms.date: 08/23/2021
+ms.date: 04/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
@@ -89,7 +89,24 @@ Use the following procedure to configure automatic client upgrade at the CAS. Th
 Clients receive these settings when they next download policy.
 
 > [!NOTE]
-> Client upgrades honor any Configuration Manager maintenance windows you've configured. The ClientServicing thread only runs the client setup bootstrap program (ccmsetup.exe) during a maintenance window. If the device runs an edition of Windows with a write filter, ccmsetup tries to download and install at the same time. Otherwise, ccmsetup randomizes a time to download content. After it downloads content and compiles the local policy, ClientServicing schedules the client upgrade during the next maintenance window.<!-- SCCMDocs#896, MEMDocs#1920 -->
+> Client upgrades honor any Configuration Manager maintenance windows you've configured. The ClientServicing thread only runs the client setup bootstrap program (ccmsetup.exe) during a maintenance window. For more information on a known issue, see [Client upgrade and maintenance windows](#client-upgrade-and-maintenance-windows).<!-- 13901385 -->
+>
+> If the device runs an edition of Windows with a write filter, ccmsetup tries to download and install at the same time. Otherwise, ccmsetup randomizes a time to download content. After it downloads content and compiles the local policy, ClientServicing schedules the client upgrade during the next maintenance window.<!-- SCCMDocs#896, MEMDocs#1920 -->
+
+## Known issues
+
+### Client upgrade and maintenance windows
+
+<!-- 13901385 -->
+
+For clients version 2111 or earlier, when you upgrade them to a later version, the process only honors any _business hours_ that the user defines. It doesn't use the administrator-defined maintenance window. For example:
+
+- Administrator-defined maintenance window: 12 AM - 5 AM
+- User-defined business hours: 5 AM - 10 PM
+
+The client upgrade starts at 10 PM after the business hours. It doesn't wait until the start of the maintenance window at 12 AM.
+
+This issue is fixed with the version 2203 client. When you upgrade clients from version 2203 to a later version, they will honor maintenance windows.
 
 ## Next steps
 

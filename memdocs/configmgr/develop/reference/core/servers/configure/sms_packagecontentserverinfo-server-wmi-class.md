@@ -1,6 +1,7 @@
 ---
 title: "SMS_PackageContentServerInfo Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents information about a given distribution point where an application or package has been distributed." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
