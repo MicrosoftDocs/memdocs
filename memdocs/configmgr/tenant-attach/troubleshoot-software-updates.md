@@ -15,6 +15,9 @@ ms.localizationpriority: medium
 # Troubleshoot software updates in the admin center
 <!--13035723-->
 
+> [!Important]
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
+
 When reviewing software updates in the admin center, you may run across some common errors. Use the following information about common error messages to troubleshoot software updates for tenant attached devices in the Microsoft Endpoint Manager admin center:
 
 ## Common error messages

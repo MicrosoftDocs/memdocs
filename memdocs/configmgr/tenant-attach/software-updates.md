@@ -1,6 +1,6 @@
 ---
 title: Software updates in the admin center
-description: Release notes for ConfigMgr Software Updates in the Microsoft Endpoint Manager admin center
+description: Software updates for Configuration Manager devices from the admin center
 ms.date: 05/25/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -10,8 +10,11 @@ ms.manager: apoorvseth
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
-# Tenant attach: Software updates in the admin center
+# Tenant attach: Software updates (preview) in the admin center
 <!--13035723-->
+
+> [!Important]
+> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The **Software updates** page in the admin center displays the status of software updates status for devices. You can review updates that have successfully installed, failed, or that are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting.
 
