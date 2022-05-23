@@ -76,7 +76,7 @@ When ESP fails during the pre-provisioning flow and the user selects the reset b
 
 ### TPM attestation failure on Windows 11 error code 0x81039023
 
-Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039023. There is no workaround currently for this error code, we are working to resolve this issue. 
+Some devices may fail TPM attestation on Windows 11 during the pre-provisioning technician flow or self-deployment mode with the error code 0x81039023. This issue is resolved with the [April Windows Cumulative Update for Windows 10 and 11.](https://answers.microsoft.com/en-us/windows/forum/all/cumulative-updates-for-windows-10-and-windows-11/c2b48afa-7541-460f-adf7-ddd180fe0517?auth=1) 
 
 ### Duplicate device objects with hybrid Azure AD deployments 
 
