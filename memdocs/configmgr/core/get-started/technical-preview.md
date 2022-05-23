@@ -118,7 +118,7 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2021/technical-preview-2101.md) <!--ID-->
+<!-- - [title](2021/technical-preview-2101.md) <!-- ID -->
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
