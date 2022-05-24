@@ -1050,7 +1050,6 @@ Yes! Please see the [Chatr sample app](https://github.com/msintuneappsdk/Chatr-S
 
 The Intune SDK for iOS 9.0.3+ supports the ability to add a diagnostics console within the mobile app for testing policies and logging errors. `IntuneMAMDiagnosticConsole.h` defines the `IntuneMAMDiagnosticConsole` class interface, which developers can use to display the Intune diagnostic console. This allows end users or developers during test to collect and share Intune logs to help diagnose any issue they may have. This API is optional for integrators.
 
-
 ## Submit your app to the App Store
 
 Both the static library and Framework builds of the Intune App SDK are universal binaries. This means they have code for all device and simulator architectures. Apple will reject apps submitted to the App Store if they have simulator code. When compiling against the static library for device-only builds, the linker will automatically strip out the simulator code. Follow these steps to ensure all simulator code is removed before you upload your app to the App Store:
