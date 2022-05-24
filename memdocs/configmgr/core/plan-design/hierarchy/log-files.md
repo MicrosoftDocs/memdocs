@@ -2,7 +2,7 @@
 title: Log file reference
 titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
-ms.date: 08/02/2021
+ms.date: 04/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -126,7 +126,7 @@ The following table lists the log files located on the Configuration Manager cli
 |Ccmperf.log|Records activities related to the maintenance and capture of data related to client performance counters.|  
 |CcmRestart.log|Records client service restart activity.|  
 |CCMSDKProvider.log|Records activities for the client SDK interfaces.|  
-|ccmsqlce.log|Records activities for the SQL Server Compact Edition (CE) that the client uses. This log is typically only used when you enable debug logging, or there's a problem with the component. The client health task (ccmeval) usually self-corrects problems with this component.|
+|ccmsqlce.log|Records activities for the built-in version of SQL Server Compact Edition (CE) that the client uses. This log is typically only used when you enable debug logging, or there's a problem with the component. The client health task (ccmeval) usually self-corrects problems with this component.|
 |CcmUsrCse.log|Records details during user sign on for folder redirection policies.|
 |CCMVDIProvider.log|Records information for clients in a virtual desktop infrastructure (VDI).|
 |CertEnrollAgent.log|Records information for Windows Hello for Business. Specifically communication with the Network Device Enrollment Service (NDES) for certificate requests using the Simple Certificate Enrollment Protocol (SCEP).|
@@ -246,7 +246,6 @@ The following table lists the log files that are on the Configuration Manager si
 |CertMgr.log|Records certificate activities for intrasite communication.|Site system server|  
 |chmgr.log|Records activities of the client health manager.|Site server|  
 |Cidm.log|Records changes to the client settings by the Client Install Data Manager (CIDM).|Site server|  
-|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. | Site server|
 |colleval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Site server|  
 |compmon.log|Records the status of component threads monitored for the site server.|Site system server|  
 |compsumm.log|Records Component Status Summarizer tasks.|Site server|  
@@ -387,6 +386,7 @@ The following table lists the log files that contain information related to the 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
 |CertMgr.log|Records certificate and proxy account information.|Site server|  
+|CollectionAADGroupSyncWorker.log | Log file for synchronization of collection membership results to Azure Active Directory. |Computer with the service connection point|
 |CollEval.log|Records details about when collections are created, changed, and deleted by the Collection Evaluator.|Primary site and central administration site|  
 |Cloudusersync.log|Records license enablement for users.|Computer with the  service connection point|  
 |Dataldr.log|Records information about the processing of MIF files.|Site server|  
@@ -394,7 +394,7 @@ The following table lists the log files that contain information related to the 
 |Distmgr.log|Records details about content distribution requests.|Top-level site server|  
 |Dmpdownloader.log|Records details about downloads from Microsoft, such as site updates.|Computer with the service connection point|  
 |Dmpuploader.log|Records detail related to uploading database changes to Microsoft.|Computer with the service connection point|  
-|EndpointConnectivityCheckWorker.log|Starting in version 2010, records detail related to checks for important internet endpoints.|Computer with the service connection point|
+|EndpointConnectivityCheckWorker.log|Records detail related to checks for important internet endpoints.|Computer with the service connection point|
 |hman.log|Records information about message forwarding.|Site server|  
 |WsfbSyncWorker.log|Records information about the communication with the Microsoft Store for Business.|Computer with the service connection point|
 |objreplmgr.log|Records the processing of policy and assignment.|Primary site server|  

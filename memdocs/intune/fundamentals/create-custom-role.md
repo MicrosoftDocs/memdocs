@@ -113,7 +113,6 @@ The following permissions are available when creating custom roles.
  | Remote tasks/Send custom notifications | Allows admin to send customized notifications to devices. Devices receive notifications in Company Portal. | 
  | Remote tasks/Initiate Configuration Manager action | Initiate a remote action on a device managed by Configuration Manager. | 
  | Remote tasks/Update cellular data plan | Activate the data plan for cellular iOS/iPadOS devices that support eSIM.  | 
- | Remote tasks/Change organizational unit | Move a Chrome Enterprise device to an existing organizational unit in your Google Workspace domain. | 
  | Device configurations/Create | Create new device configuration profiles, or create new device enrollment restrictions. | 
  | Device configurations/Read | View device configuration profiles, or view device enrollment restrictions. | 
  | Device configurations/Update | Change device configuration profiles, or change device enrollment restrictions. | 
@@ -195,9 +194,6 @@ The following permissions are available when creating custom roles.
  | Filters/Read | View filters.  | 
  | Filters/Update | Edit filters. | 
  | Filters/Delete | Delete filters. | 
- | Chrome Enterprise/Read | View the organization's Chrome Enterprise connection settings and device details for Chrome OS devices. | 
- | Chrome Enterprise/Update connection settings | Manage or change the organization's Chrome Enterprise connection settings. | 
- | Chrome Enterprise/Delete connection settings | Delete the organization's Chrome Enterprise connection settings. | 
  | Microsoft Store For Business/Read | View the settings for synchronizing Microsoft Store for Business apps with Microsoft Intune. | 
  | Microsoft Store For Business/Modify | Modify the settings for synchronizing Microsoft Store for Business apps with Microsoft Intune. | 
  | Windows Enterprise Certificate/Read | View the code-signing certificate used to distribute line-of-business apps to your managed Windows devices. | 

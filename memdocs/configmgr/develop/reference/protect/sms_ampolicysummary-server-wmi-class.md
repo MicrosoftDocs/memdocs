@@ -1,6 +1,7 @@
 ---
 title: "SMS_AmPolicySummary Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_AmPolicySummary Windows Management Instrumentation class is an SMS Provider server class in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

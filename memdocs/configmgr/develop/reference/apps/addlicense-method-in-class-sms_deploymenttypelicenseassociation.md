@@ -1,6 +1,7 @@
 ---
 title: "AddLicense Method"
 titleSuffix: "Configuration Manager"
+description: "The AddLicense Windows Management Instrumentation (WMI) class method adds license information to an application deployment type."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

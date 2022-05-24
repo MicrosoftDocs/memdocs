@@ -56,7 +56,7 @@ After completing the sign-up process you are directed to the Microsoft 365 admin
 
 ## Sign in to Microsoft Intune
 
-Once you have signed up for Intune, you can use any device with a [supported browser](supported-devices-browsers.md#intune-supported-web-browsers) to sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) to administer the service.
+Once you have signed up for Intune, you can use any device with a [supported browser](supported-devices-browsers.md#intune-supported-web-browsers) to sign in to [Intune](https://endpoint.microsoft.com) to administer the service.
 
 By default, your account must have one of the following permissions in Azure AD:
 

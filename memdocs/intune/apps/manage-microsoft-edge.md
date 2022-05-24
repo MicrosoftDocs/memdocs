@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/19/2022
+ms.date: 05/16/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -259,7 +259,7 @@ Edge for iOS and Android allows organizations to disable certain features that a
 
 |    Key    |    Value    |
 |-----------------------|-----------------------|
-|    com.microsoft.intune.mam.managedbrowser.disabledFeatures    |    **password** disables prompts that offer to save passwords for the end user<br>**inprivate** disables InPrivate browsing<p>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage.     |
+|    com.microsoft.intune.mam.managedbrowser.disabledFeatures    |    **password** disables prompts that offer to save passwords for the end user<br>**inprivate** disables InPrivate browsing<br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information.<p>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage.     |
 
 #### Disable extensions
 
@@ -307,7 +307,7 @@ Organizations have the capability to disable Edge sync on iOS and Android.
 
 |Key  |Value  |
 |---------|---------|
-|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** (default) disables Edge sync<br>**false** allows Edge sync          |
+|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** disables Edge sync<br>**false** (default) allows Edge sync          |
 
 ### Manage restricted web sites
 
@@ -326,7 +326,7 @@ Use the following key/value pairs to configure either an allowed or blocked site
 |com.microsoft.intune.mam.managedbrowser.BlockListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character.<br>**Examples:**<br>`URL1|URL2|URL3`<br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`         |
 |com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock     |**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts are not disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context.<p>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked.         |
 |com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked     |**true** allows restricted sites to be opened in the Azure AD account's InPrivate context. If the Azure AD account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account.<p> **false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked.<p>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true.          |
-|com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar     | Enter the number of seconds that users will see the snack bar notification "Link opened with InPrivate mode. Your organization requires the use of InPrivate mode for this content." By default, the snack bar notification is shown for 7 seconds.
+|com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar     | Enter the number of seconds that users will see the snack bar notification "Access to this site is blocked by your organization. We’ve opened it in InPrivate mode for you to access the site." By default, the snack bar notification is shown for 7 seconds.
 
 The following sites are always allowed regardless of the defined allow list or block list settings:
 - `https://*.microsoft.com/*`

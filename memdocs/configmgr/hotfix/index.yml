@@ -17,6 +17,14 @@ metadata:
   ms.localizationpriority: high
 
 landingContent:
+  - title: Configuration Manager 2203
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 13174460 Summary of changes in 2203
+            url: 2203/13174460.md
+          - text: KB 13953025 Early update ring
+            url: 2203/13953025.md   
   - title: Configuration Manager 2111
     linkLists:
       - linkListType: overview
@@ -25,6 +33,8 @@ landingContent:
             url: 2111/11052354.md
           - text: KB 12709700 Update for Configuration Manager 2111
             url: 2111/12709700.md
+          - text: KB 12896009 Update rollup for Configuration Manager 2111
+            url: 2111/12896009.md
   - title: Configuration Manager 2107
     linkLists:
       - linkListType: overview

@@ -1,6 +1,7 @@
 ---
 title: "Console Management Class XML"
 titleSuffix: "Configuration Manager"
+description: "The MyClass node is a subclass of the SMS_SiteControlItem management class, which is defined in ManagementClassDescriptions.xml."    
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

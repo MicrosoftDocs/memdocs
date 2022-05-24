@@ -1,6 +1,7 @@
 ---
 title: "UpdateAutoUpgradeConfigs Method"
 titleSuffix: "Configuration Manager"
+description: The UpdateAutoUpgradeConfigs Windows Management Instrumentation class method, in Configuration Manager, updates configurations for auto-upgrade settings.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

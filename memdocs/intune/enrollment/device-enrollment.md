@@ -3,12 +3,12 @@
 
 title: What is Microsoft Intune device enrollment
 titleSuffix: Microsoft Intune
-description: Learn about enrollment for iOS/iPadOS, Android, and Windows devices.
+description: Get an overview of the types of enrollment methods and devices supported in Microsoft Intune. 
 keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/03/2021
+ms.date: 5/02/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +21,7 @@ ms.assetid: 6f67fcd2-5682-4f9c-8d74-d4ab69dc978c
 #ROBOTS:
 #audience:
 
-#ms.reviewer:
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -31,114 +31,159 @@ ms.collection:
   - highpri
 ---
 
-# What is device enrollment in Intune?
+# What is device enrollment in Intune?  
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune lets you manage your workforce's devices and apps and how they access your company data. To use this mobile device management (MDM), the devices must first be enrolled in the Intune service. When a device is enrolled, it's issued an MDM certificate. This certificate is used to communicate with the Intune service.
+To use Microsoft Intune as your mobile device management (MDM) provider, you must enroll devices in Intune using a supported enrollment method. Enrollment sets up and secures the device so that it aligns with your organization's policies and is suitable for use at work or school. Intune deploys and enforces policies through a management profile, which is installed on the device during enrollment. Enrollment is enabled for all platforms by default.  
 
-As you can see in the following tables, there are several methods to enroll your workforce's devices. Each method depends on the device's ownership (personal or corporate), device type (iOS, Windows, Android), and management requirements (resets, affinity, locking).
+Microsoft Intune supports Android, macOS, iOS, and Windows devices. Some enrollment methods require you, as the IT administrator, to initiate enrollment while other methods require your employees or students to initiate it. This article provides an overview of the types of devices and enrollment methods that Intune supports.  
 
-By default, devices for all platforms are allowed to enroll in Intune. However, you can [restrict devices by platform](enrollment-restrictions-set.md#create-a-device-type-restriction).
+## Supported device types  
+Microsoft Intune enables mobile device management for:   
+* Personal devices, including personally owned phones, tablets, and PCs. 
+* Corporate-owned devices, including phones, tablets, and PCs owned by your organization and distributed to employees and students for use at work or school. 
 
-## iOS/iPadOS enrollment methods
+### Personal devices  
+Microsoft Intune supports bring-your-own-device, or *BYOD*, enrollment. This type of enrollment enables employees and students to use their personal devices for work or school things. As the admin, you're required to add device users in the Microsoft Endpoint Manager admin center, configure their enrollment experience, and set up Intune policies. Enrollment is initiated and completed by the device user in the Intune Company Portal app.  
 
-| **Method** | **Reset required** | **User affinity** | **Locked** | **Details** |
+> [!NOTE]
+> Intune marks devices that are Azure AD-registered as personally-owned devices.  
+
+### Corporate-owned devices  
+
+Microsoft Intune automatically marks certain devices as *corporate-owned*. This classification lets you manage and configure devices with more control and access. For more information about managing and configuring corporate-owned devices, see [Identify devices as corporate-owned](corporate-identifiers-add.md).   
+
+## Compare enrollment options 
+
+Enrollment options vary by operating system (OS). When selecting a method, choose one that works with the devices and features you want to support. 
+
+ In this section, we'll use data tables to compare the available methods. Each table, separated by OS, shows the following data: 
+
+* Method: The enrollment method used to enroll devices in Intune.  
+* Enrollment type (Android): The name of the Android enrollment type.    
+* Reset required: Tells you if devices are reset to factory default settings during enrollment. Options:  
+    * **Yes**: Existing data is wiped from devices during enrollment.  
+    * **No**: Existing data is retained on devices during enrollment.  
+* User affinity: Tells you whether devices are associated with users during enrollment. Options:  
+    * **Yes**: Each device is associated with an Intune-licensed user. 
+    * **No**: Devices aren't associated with a user during enrollment, which is a typical configuration for kiosk, point of sale (POS), or shared-utility devices. 
+    * **Optional**: Microsoft Intune makes this setting available for you to configure on your own.   
+* MDM profile removable: Tells you if users can remove the MDM profile from an enrolled device. Options: 
+    * **Yes**: Device users can unenroll devices.  
+    * **No**: Device users cannot unenroll devices. 
+    * **Configurable via policy** (Android Enterprise): There's a setting in Intune that lets you block factory resets on devices, which prevents users from unenrolling their devices, but it is not configured by default. 
+
+### iOS/iPadOS enrollment methods 
+You can use the following methods to enroll iOS/iPadOS devices in Intune:    
+
+* Bring-your-own-device (BYOD)
+* Device enrollment manager
+* Apple Automated Device Enrollment  
+* Setup Assistant enrollment via USB  
+* Direct enrollment via USB  
+
+| **Method** | **Reset required** | **User affinity** | **MDM profile removable** | 
+|:---:|:---:|:---:|:---:|
+|BYOD| No| Yes | Yes | 
+|Device enrollment manager| No |No |Yes | 
+|Automated Device Enrollment| Yes | Optional | Optional|
+|Setup Assistant enrollment via USB| Yes | Optional | Yes| 
+|Direct enrollment via USB| No | No | Yes|
+
+For more information about the iOS/iPadOS enrollment methods supported in Intune, see [Enroll iOS/iPadOS devices](ios-enroll.md).  
+
+### macOS enrollment methods  
+You can use the following methods to enroll macOS devices in Intune:   
+
+* Bring-your-own-device (BYOD)
+* Device enrollment manager
+* Apple Automated Device Enrollment  
+
+| **Method** |  **Reset required** |  **User affinity** | **MDM profile removable** |
+|:---:|:---:|:---:|:---:|
+|BYOD| No| Yes | Yes | 
+|Device enrollment manager| No |No |Yes  | 
+|Apple Automated Device Enrollment| Yes | Optional | Optional|
+
+For more information about the macOS enrollment methods supported in Intune, see [Set up enrollment for macOS devices](macos-enroll.md).    
+
+### Windows enrollment methods
+You can use the following methods to enroll Windows devices in Intune:  
+
+* Bring-your-own-device (BYOD)
+* Device enrollment manager
+* Automatic enrollment via MDM 
+* Automatic enrollment via Group Policy 
+* Windows Autopilot
+* Bulk enrollment
+* Co-management with Microsoft Intune and Configuration Manager 
+
+| **Method** | **Reset required** | **User affinity** | **MDM profile removable** |
+|:---:|:---:|:---:|:---:|
+|BYOD| No | Yes | Yes | 
+|Device enrollment manager| No |No |Yes |
+|Automatic enrollment via MDM | No |Yes |Yes | 
+|Automatic enrollment via Group Policy|No |Yes |Yes | 
+|Windows Autopilot |Yes |Yes |Yes | 
+|Bulk enrollment |No |No |Yes | 
+|Co-management |No |Yes |Yes | 
+
+For more information about the Windows enrollment methods supported in Intune, see [Enrollment methods for Windows devices ](windows-enrollment-methods.md).  
+
+### Android enrollment methods
+
+To select the appropriate enrollment method for Android devices, consider the enrollment type you'll use and the device's ownership status (personal versus corporate-owned). For more information about the Android enrollment methods supported in Intune, see [Enroll Android devices](android-enroll.md).  
+
+#### Personal Android devices  
+You can set up user-initiated enrollment for people who want to use their personal devices at work or school. Employees and students initiate enrollment by signing into the Company Portal app with their work or school account. 
+
+Intune supports the following device management configurations on personal devices: 
+
+* Android Device Administrator (also referred to as *Android Device Admin*)  
+* Android Enterprise with work profile
+
+In the table, this data is shown in the Enrollment type column. 
+
+| **Enrollment type** | **Enrollment method** | **Reset required** | **User affinity** | **MDM profile removable** | 
 |:---:|:---:|:---:|:---:|:---:|
-|Method used to enroll devices. |If yes, devices are wiped during enrollment. | If yes, each device is associated with a user.| If yes, users can't unenroll devices. |More information about method. |
-|**[BYOD](#bring-your-own-device)** | No| Yes | No | [More information](apple-mdm-push-certificate-get.md)|
-|**[DEM](#device-enrollment-manager)**| No |No |No | [More information](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Yes | Optional | Optional|[More information](device-enrollment-program-enroll-ios.md)|
-|**[USB-SA](#usb-sa)**| Yes | Optional | No| [More information](apple-configurator-enroll-ios.md)|
-|**[USB-Direct](#usb-direct)**| No | No | No|[More information](apple-configurator-enroll-ios.md)|
+|Android Device Admin|User-initiated via Company Portal | No | Yes | Yes | 
+|Android Enterprise, personal-owned with work profile|User-initiated via Company Portal| No | Yes | Yes |  
 
-## macOS enrollment methods
+#### Corporate-owned Android devices    
+Intune supports the following device management configurations on corporate-owned devices: 
 
-| **Method** |  **Reset required** |  **User affinity** | **Locked** | **Details**|
+* User associated and userless devices created from Android Open Source Project (AOSP) 
+* Android Device Administrator (also referred to as *Android Device Admin*)  
+* Android Device Admin with Zebra Mobility Extensions 
+* Android Enterprise dedicated/kiosk-style  
+* Android Enterprise fully managed
+* Android Enterprise with work profile
+
+In the table, this data is shown in the Enrollment type column. You can use the following methods to enroll corporate-owned Android devices in Intune:   
+
+* QR code
+* Device enrollment manager (DEM) with Company Portal
+* User initiated with Company Portal
+* Near-field communication (NFC)
+* Token entry  
+* Google zero-touch enrollment  
+
+| **Enrollment type** | **Enrollment method** | **Reset required** | **User affinity** | **MDM profile removable** |  
 |:---:|:---:|:---:|:---:|:---:|
-|Method used to enroll devices. |If yes, devices are wiped during enrollment. | If yes, each device is associated with a user.| If yes, users can't unenroll devices. |More information about method.  |
-|**[BYOD](#bring-your-own-device)** | No| Yes | No | [More information](macos-enroll.md)|
-|**[DEM](#device-enrollment-manager)**| No |No |No  | [More information](device-enrollment-manager-enroll.md)|
-|**[ADE](#apple-automated-device-enrollment)**| Yes | Optional | Optional|[More information](device-enrollment-program-enroll-macos.md)|
+|Android (AOSP) user-associated|QR code|Yes|Yes|Configurable via policy|
+|Android (AOSP) userless|QR code|Yes|No|Configurable via policy|  
+|Android Device Admin|DEM-initiated via Company Portal| No | No | Yes |
+|Android Device Admin|User-initiated via Company Portal with predeclared IMEI or serial number | No | Yes |Yes | 
+|Android Device Admin with Zebra Mobility Extensions|User or DEM-initiated via Company Portal| No | Yes if user-initiated; no if DEM-initiated | Yes | 
+|Android Enterprise dedicated|NFC, token, QR code, Google zero-touch| Yes | No | Configurable via policy | 
+|Android Enterprise fully managed|NFC, token, QR code, Google zero-touch| Yes | Yes | Configurable via policy | 
+|Android Enterprise corporate-owned with work profile| NFC, token, QR code, Google zero-touch | Yes | Yes | Configurable via policy | 
 
-## Windows enrollment methods
+## Mobile device record cleanup  
 
-| **Method** | **Reset required** | **User affinity** | **Locked** | **Details**|
-|:---:|:---:|:---:|:---:|:---:|
-|Method used to enroll devices. | If yes, devices are wiped during enrollment. | If yes, each device is associated with a user.| If yes, users can't unenroll devices. | More information about method. |
-|**[BYOD](#bring-your-own-device)** | No | Yes | No | [More information](windows-enroll.md)|
-|**[DEM](#device-enrollment-manager)**| No |No |No |[More information](device-enrollment-manager-enroll.md)|
-|**Auto-enroll** | No |Yes |No | [More information](windows-enroll.md#enable-windows-automatic-enrollment)|
-|**Autopilot** |Yes |Yes |No | [More information](../../autopilot/enrollment-autopilot.md)
-|**Bulk enroll** |No |No |No | [More information](windows-bulk-enroll.md) |
-|**Co-management** |No |Yes |No | [More information](/configmgr/core/clients/manage/co-management-overview)
-|**GPO** |No |Yes |No | [More information](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy)
+The MDM certificate renews automatically as long as enrolled devices are communicating with the Microsoft Intune service. The MDM certificate doesn't renew for devices that have been wiped, or that fail to sync with Microsoft Intune for an extended period of time. Microsoft Intune deletes idle devices from record 180 days after the MDM certificate expires.  
 
-## Android enrollment methods
+## Next steps  
 
-### Personal enrollment methods
-
-| **Enrollment type** | **Enrollment method** | **Reset required** | **User affinity** | **Locked** | **Details**|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|Name of enrollment type. |Method used to enroll devices.| If yes, devices are wiped during enrollment. | If yes, each device is associated with a user.| If yes, users can't unenroll devices. |More information about method. |
-|**Android Device Admin**|**User initiated via Company Portal** | No | Yes | No | [More information](../user-help/enroll-device-android-company-portal.md)|
-|**Android Enterprise personally-owned with Work Profile**|**User initiated via Company Portal**| No | Yes | No | [More information](android-work-profile-enroll.md)|
-
-### Corporate enrollment methods
-
-| **Enrollment type** | **Enrollment method** | **Reset required** | **User affinity** | **Locked** | **Details**|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|Name of enrollment type. |Method used to enroll devices.| If yes, devices are wiped during enrollment. | If yes, each device is associated with a user.| If yes, users can't unenroll devices. |More information about method. |
-|**Android (AOSP) user-associated**|**QR code**|Yes|Yes|Configurable via policy|[More information](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
-|**Android (AOSP) userless**|**QR code**|Yes|No|Configurable via policy|[More information](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
-|**Android Device Admin**|**[DEM](#device-enrollment-manager) initiated via Company Portal**| No | No | No |[More information](device-enrollment-manager-enroll.md)|
-|**Android Device Admin**|**(Pre-declared IMEI or SN) User initiated via Company Portal**| No | Yes | No | [More information](corporate-identifiers-add.md)|
-|**Android Device Admin with Zebra Mobility Extensions**|**User or [DEM](#device-enrollment-manager) initiated via Company Portal**| No | Yes if user initiated, No if [DEM](#device-enrollment-manager) initiated | No | [More information](../configuration/android-zebra-mx-overview.md)|
-|**Android Enterprise Dedicated**|**NFC, Token, QR code, Zero Touch**| Yes | No | Configurable via policy | [More information](android-kiosk-enroll.md)|
-|**Android Enterprise Fully Managed**|**NFC, Token, QR code, Zero Touch**| Yes | Yes | Configurable via policy | [More information](android-dedicated-devices-fully-managed-enroll.md)|
-|**Android Enterprise corporate-owned with Work Profile** | **NFC, Token, QR code, Zero Touch** | Yes | Yes | Configurable via policy | [More information](android-corporate-owned-work-profile-enroll.md)|
-
-## Bring your own device
-
-Bring your own devices (BYOD) include personally-owned phones, tablets, and PCs. Users install and run the Company Portal app to enroll BYODs. This program lets users access company resources like email.
-
-## Corporate-owned device
-
-[Corporate-owned devices (COD)](corporate-identifiers-add.md) include phones, tablets, and PCs owned by the organization and distributed to the workforce. COD enrollment supports scenarios like automatic enrollment, shared devices, or pre-authorized enrollment requirements. A common way to enroll CODs is for an administrator or manager to use the device enrollment manager (DEM). iOS/iPadOS devices can be enrolled directly through the ADE tools that are provided by Apple. Devices with an IMEI number can also be identified and tagged as corporate-owned.
-
-### Device enrollment manager
-
-Device enrollment manager (DEM) is a special user account that's used to enroll and manage multiple corporate-owned devices. Managers can install the Company Portal and enroll many user-less devices. These types of devices are good for point-of-sale or utility apps, for example, but not for users who need to access email or company resources. Learn more about [DEM](device-enrollment-manager-enroll.md).
-
-### Apple Automated Device Enrollment
-
-Apple Automated Device Enrollment (ADE) management lets you create and deploy policy "over the air" to iOS/iPadOS and macOS devices that are purchased and managed with ADE. The device is enrolled when users turn on the device for the first time and run Setup Assistant. This method supports iOS/iPadOS supervised mode, which enables a device to be configured with specific functionality.
-
-Learn more about iOS/iPadOS ADE enrollment:
-
-- [Choose how to enroll iOS/iPadOS devices](ios-enroll.md)
-- [Enroll iOS/iPadOS devices using Device Enrollment Program](device-enrollment-program-enroll-ios.md)
-
-### USB-SA
-
-IT admins use Apple Configurator, through USB, to prepare each corporate-owned device manually for enrollment using Setup Assistant. The IT admin creates an enrollment profile and exports it to Apple Configurator. When users receive their devices, they're then prompted to run Setup Assistant to enroll their device. This method supports **iOS supervised** mode, which in turn enables the following features:
-
-- Locked enrollment
-- Kiosk mode and other advanced configurations and restrictions
-
-Learn more about iOS/iPadOS Apple Configurator enrollment with Setup Assistant:
-
-- [Decide how to enroll iOS/iPadOS devices](ios-enroll.md)
-- [Enroll iOS/iPadOS devices with Configurator and Setup Assistant](apple-configurator-enroll-ios.md)
-
-### USB-Direct
-For direct enrollment, the admin must enroll each device manually by creating an enrollment policy and exporting it to Apple Configurator. USB-connected, corporate-owned devices are enrolled directly and don't require a wipe. Devices are managed as user-less devices. They're not locked or supervised and can't support Conditional Access, jailbreak detection, or mobile application management.
-
-To learn more about iOS/iPadOS enrollment, see:
-
-- [Decide how to enroll iOS/iPadOS devices](ios-enroll.md)
-- [Enroll iOS/iPadOS devices with Configurator and direct enrollment](apple-configurator-enroll-ios.md)
-
-## Mobile device cleanup after MDM certificate expiration
-
-The MDM certificate is renewed automatically when mobile devices are communicating with the Intune service. If mobile devices are wiped, or they fail to communicate with the Intune service for some period of time, the MDM certificate isn't renewed. The device is removed from the Azure portal 180 days after the MDM certificate expires.
+You can adjust the settings in Intune to restrict specific platforms from enrolling. For more information, see [Create a device platform restriction](enrollment-restrictions-set.md#create-a-device-platform-restriction).  

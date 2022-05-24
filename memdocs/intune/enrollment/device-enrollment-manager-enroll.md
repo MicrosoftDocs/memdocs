@@ -33,7 +33,7 @@ ms.collection:
 
 # Enroll devices in Intune by using a device enrollment manager account
 
-You can enroll up to 1,000 devices with a single Azure Active Directory account by using a device enrollment manager (DEM) account. DEM is an Intune permission that can be applied to an Azure AD user account and lets the user enroll up to 1,000 devices. A DEM account is useful for scenarios where devices are enrolled and prepared before handing them out to the users of the devices. By design, there's a limit of 150 Device Enrollment Manager (DEM) accounts in Microsoft Intune.
+You can enroll up to 1,000 devices in total with a single Azure Active Directory account by using a device enrollment manager (DEM) account. DEM is an Intune permission that can be applied to an Azure AD user account and lets the user enroll up to 1,000 devices. A DEM account is useful for scenarios where devices are enrolled and prepared before handing them out to the users of the devices. By design, there's a limit of 150 active DEM accounts in Microsoft Intune.
 
 ## Limitations of devices that are enrolled with a DEM account
 
@@ -43,9 +43,9 @@ DEM user accounts and devices that are enrolled with a DEM user account have the
 - Wipe can't be done from the Company Portal. Wiping a device enrolled by a DEM user account can be done from the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 - Only the local device appears in the Company Portal app or website.
 - DEM user accounts cannot use Apple Volume Purchase Program (VPP) apps with Apple VPP user licenses because of per-user Apple ID requirements for app management.
-- DEM accounts cannot be used when enrolling devices via Apple's Automated Device Enrollment (ADE).
+- Microsoft Intune does not support the use of DEM accounts when enrolling devices via Apple Automated Device Enrollment (ADE).  
+- DEM accounts cannot support conditional access because conditional access is intended for per-user scenarios. 
 - Devices can install VPP apps if they have Apple VPP device licenses.
-- On Windows 10 1709 and older, conditional access isn't available for Windows devices enrolled using bulk enrollment.
 - Every device enrolled with DEM accounts needs to be properly licensed to be managed by Intune. The license could be an Intune user license or an Intune device license.
 - If you're [enrolling Android Enterprise personally-owned devices with work profile](android-work-profile-enroll.md) using a DEM account, there is a limit of 10 devices that can be enrolled per account.
 - [Enrolling Android Enterprise fully managed devices](android-fully-managed-enroll.md) with DEM accounts isn't supported.
@@ -61,7 +61,8 @@ You can use the following methods to enroll devices using DEM accounts:
 
 - [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows devices bulk enrollment](windows-bulk-enroll.md)
-- [DEM initiated via Company Portal](../user-help/use-managed-devices-to-get-work-done.md)
+- DEM initiated via Company Portal
+- DEM initiated via Azure AD join
 
 ## Add a device enrollment manager
 

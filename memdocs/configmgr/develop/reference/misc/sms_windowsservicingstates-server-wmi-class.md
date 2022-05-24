@@ -1,5 +1,6 @@
 ---
 title: "SMS_WindowsServicingStates Class"
+description: Describes the SMS_WindowsServicingStates Class.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

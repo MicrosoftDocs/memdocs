@@ -1,4 +1,5 @@
 ---
+description: The SMS_TaskSequence_PartitionSettings WMI class is an SMS Provider server class, in Configuration Manager, that specifies the settings to use when creating and formatting a partition on a hard drive.
 title: "SMS_TaskSequence_PartitionSettings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -9,16 +9,15 @@ metadata:
   ms.sitesec: library
   ms.pagetype: deploy
   audience: itpro
-  author: greg-lindsay
-  ms.author: greglin
+  author: aczechowski
+  ms.author: aaroncz
   ms.reviewer: jubaptis
   manager: dougeby
   ms.date: 12/02/2021
   ms.collection:
     - M365-modern-desktop
     - highpri
-  ms.topic: troubleshooting
-    
+  ms.topic: faq
 title: Windows Autopilot FAQ
 summary: |
   **Applies to: Windows 10/11**

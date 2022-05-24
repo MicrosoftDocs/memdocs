@@ -1,4 +1,5 @@
 ---
+description: Learn how to determine the correct Globally Unique Identifiers (GUIDs) for a Configuration Manager console node.
 title: "Find a Console Node GUID"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

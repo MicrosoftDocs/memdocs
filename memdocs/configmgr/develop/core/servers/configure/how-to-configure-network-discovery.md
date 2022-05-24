@@ -1,6 +1,7 @@
 ---
 title: "Configure Network Discovery"
 titleSuffix: "Configuration Manager"
+description: "Learn how to configure the Network Discovery settings in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

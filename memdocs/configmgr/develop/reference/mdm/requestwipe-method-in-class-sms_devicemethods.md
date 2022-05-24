@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager RequestWipe Windows Management Instrumentation (WMI) class method to remove Microsoft Exchange and Configuration Manager software from the mobile device or Exchange ActiveSync device.
 title: "RequestWipe Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

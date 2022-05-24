@@ -6,8 +6,8 @@ metadata:
   author: aczechowski
   ms.author: aaroncz
   ms.prod: configuration-manager
-  ms.topic: conceptual
-  ms.date: 08/02/2021
+  ms.topic: faq
+  ms.date: 02/15/2022
     
 title: Configuration Manager site sizing and performance FAQ
 summary: |
@@ -94,9 +94,9 @@ sections:
           For more information and recommendations on how to maximize Premium Storage performance and run SQL Servers in Azure IaaS VMs, see:
           
           - [Optimize application performance](/azure/storage/storage-premium-storage-performance#optimize-application-performance)
-           
-          - [Disks guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance)
-          
+
+          - [Disks guidance](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist#storage)
+
           **Example: Azure-based site server** 
           
           [Sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL Server with **50,000** clients are eight cores, 32 GB, and 1200 IOPS for site server inboxes, and 2800 IOPS for SQL Server files.
@@ -110,7 +110,7 @@ sections:
           | 1xP30 (1024 GB)   | 64k ReFS      | SQL Server (all files<sup>2</sup>) | 2800                 | 3112             |
           
           1. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations).
-          2. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
+          2. [Azure guidance](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist#storage) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
           
           **Example: Azure-based site server (for instant performance increase)** 
           
@@ -128,7 +128,7 @@ sections:
           
           1. Disks are striped using Storage Spaces.
           2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
-          3. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
+          3. [Azure guidance](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist#storage) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
           
           If you need more performance in future, you can upsize your VM to a DS14v2, which will double CPU and memory. The additional disk bandwidth allowed by that VM size will also instantly boost the available disk IOPS on your previously configured disks.
           
@@ -142,7 +142,7 @@ sections:
           
           1. Disks are striped using Storage Spaces.
           2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
-          3. [Azure guidance](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-performance#disks-guidance) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
+          3. [Azure guidance](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist#storage) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
           
   - name: Other common SQL Server-related performance questions
     questions:
@@ -190,7 +190,7 @@ sections:
       - question: |
           Should I enable SQL Server encryption on my database?
         answer: |
-          Any secrets in the Configuration Manager database are already stored securely, but adding SQL Server encryption can add yet another layer of security. There are no functional issues with enabling encryption on your database, but there can be up to a 25% performance degradation, depending on the tables you choose to encrypt and the version of SQL Server you're using. Therefore, encrypt with caution, especially in large-scale environments. Also remember to update your backup and recovery plans to ensure you can successfully recover the encrypted data.
+          Any secrets in the Configuration Manager database are already stored securely, but adding SQL Server encryption can add yet another layer of security. There are no functional issues with enabling encryption on your database, but there can be up to a 25% performance degradation. Therefore, encrypt with caution, especially in large-scale environments. Also remember to update your backup and recovery plans to ensure you can successfully recover the encrypted data.
 
       - question: |
           What version of SQL Server should I run?

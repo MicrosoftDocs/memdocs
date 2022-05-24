@@ -5,7 +5,7 @@ description: Learn how to prepare your Windows internet-based devices for co-man
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 10/05/2021
+ms.date: 02/16/2022
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -77,26 +77,26 @@ Decide which command-line properties you require for your environment:
 
 - The following command-line properties are required in all scenarios:
 
-  - **CCMHOSTNAME**
+  - `CCMHOSTNAME`
 
-  - **SMSSITECODE**
+  - `SMSSITECODE`
 
 - If a device uses Azure AD for client authentication and also has a PKI-based client authentication certificate, specify the following properties to use Azure AD:<!-- MEMDocs#1483 -->
 
-  - **AADCLIENTAPPID**
+  - `AADCLIENTAPPID`
 
-  - **AADRESOURCEURI**
+  - `AADRESOURCEURI`
 
-- If the client roams back to the intranet, use the **SMSMP** property.
+- If the client roams back to the intranet, use the `SMSMP` property.
 
-- If you use your own PKI certificate, and your CRL isn't published to the internet, use the **/NoCRLCheck** parameter. For more information, see [About client installation properties: /NoCRLCheck](../core/clients/deploy/about-client-installation-properties.md#nocrlcheck).
+- If you use your own PKI certificate, and your CRL isn't published to the internet, use the `/NoCRLCheck` parameter. For more information, see [About client installation properties: /NoCRLCheck](../core/clients/deploy/about-client-installation-properties.md#nocrlcheck).
 
   > [!IMPORTANT]
   > Microsoft recommends publishing the CRL. For more information, see [Planning for CRLs](../core/plan-design/security/plan-for-certificates.md#pki-certificate-revocation).<!-- memdocs#1942 -->
 
-- To bootstrap a task sequence immediately after client registration, use the **PROVISIONTS** property. For more information, see [About client installation properties: PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts).
+- To bootstrap a task sequence immediately after client registration, use the `PROVISIONTS` property. For more information, see [About client installation properties: PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts).
 
-The site publishes other Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are **CCMHOSTNAME** and **SMSSITECODE**.<!--3607731-->
+The site publishes other Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are `CCMHOSTNAME` and `SMSSITECODE`.<!--3607731-->
 
 > [!NOTE]
 > If you're already deploying the Configuration Manager client from Intune, update the Intune app with a new command line and new MSI.<!-- SCCMDocs-pr issue 3084 -->

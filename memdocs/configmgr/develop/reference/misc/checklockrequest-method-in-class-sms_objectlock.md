@@ -1,6 +1,7 @@
 ---
 title: "CheckLockRequest Method"
 titleSuffix: "Configuration Manager"
+description: "The CheckLockRequest Windows Management Instrumentation (WMI) class method checks a lock request."   
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

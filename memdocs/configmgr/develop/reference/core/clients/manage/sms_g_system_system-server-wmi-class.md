@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent information about hardware inventory related to a client computer operating system with SMS_G_System_SYSTEM. 
 title: "SMS_G_System_SYSTEM Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

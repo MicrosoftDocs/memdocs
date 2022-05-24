@@ -8,8 +8,8 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 08/05/2021
@@ -28,7 +28,7 @@ ms.collection:
 - Windows 10
 - Windows Holographic, version 2004
 
-You can do Windows Autopilot device registration within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-values (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows. So, this process is primarily for testing and evaluation scenarios.
+You can perform Windows Autopilot device registration within your organization by manually collecting the hardware identity of devices (hardware hashes) and uploading this information in a comma-separated-values (CSV) file. Capturing the hardware hash for manual registration requires booting the device into Windows. So, this process is primarily for testing and evaluation scenarios.
 
 Device owners can only register their devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners.
 
@@ -50,7 +50,14 @@ Device enrollment requires *Intune Administrator* or *Policy and Profile Manager
 
 ## Collect the hardware hash
 
-You can use either Microsoft Endpoint Configuration Manager or Windows PowerShell to collect the hardware hash from existing devices.
+The following methods are available to harvest a hardware hash from existing devices:
+
+1. Using [Microsoft Endpoint Configuration Manager](#configuration-manager)
+2. Using [Windows PowerShell](#powershell)
+3. During OOBE by using the [Diagnostics Page](#diagnostics-page-hash-export) (Windows 11 only)
+4. From the Desktop using [Settings > Accounts](#desktop-hash-export)
+
+Each of these methods is described below.
 
 In *Windows 10 version 1809 and earlier*, it's important to capture the hardware hash and create an Autopilot device profile before you connect a device to the internet. Those steps include collecting the hardware hash, uploading the CSV file into Microsoft Store for Business (MSfB) or Intune, assigning the profile, and confirming the profile assignment. 
 
@@ -117,6 +124,25 @@ To install the script directly and capture the hardware hash from the local comp
 > Because Intune offers free (or inexpensive) accounts that lack robust vetting, and because 4K hardware hashes contain sensitive information that only device owners should maintain, we recommend registering devices through Microsoft Endpoint Manager via a 4K hardware hash only for testing or other limited scenarios. In most cases, you should instead use the Microsoft Partner Center for Autopilot device registration.
 
 For more information about running the *Get-WindowsAutoPilotInfo.ps1* script, see the script's help by using `Get-Help Get-WindowsAutoPilotInfo`.
+
+### Diagnostics page hash export
+
+To export a hardware hash using the [Windows Autopilot Diagnostics Page](windows-autopilot-whats-new.md#windows-autopilot-diagnostics-page), the device must be running Windows 11.
+
+Windows Autopilot Diagnostics are available in OOBE. 
+
+During OOBE, press **Ctrl-Shift-D** to bring up the Diagnostics Page. From this page, you can export logs to a thumb drive. The logs will include a CSV file with the hardware hash.
+
+### Desktop hash export
+
+1. From the Windows 10 or Windows 11 Desktop, click **Settings** > **Accounts** > **Access work or school**.
+2. Export log files. The logs will include a CSV file with the hardware hash.
+   - Windows 11: In the **Export your management log files** tile, click **Export**. 
+   - Windows 10: Click the **Export your management log files** link.
+
+Log files are exported to the Users\Public\Documents\MDMDiagnostics directory.
+
+For more information, see [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)
 
 ## Ensure that the CSV file meets requirements
 

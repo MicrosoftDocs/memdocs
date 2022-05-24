@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequencePackage Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_TaskSequencePackage WMI class is an SMS Provider server class that represents a task sequence package that defines the steps to run for the task sequence."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

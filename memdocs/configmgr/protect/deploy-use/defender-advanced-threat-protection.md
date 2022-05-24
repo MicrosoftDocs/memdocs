@@ -130,6 +130,8 @@ If your target collection contains both up-level and down-level devices, or if y
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
 1. Click **Download package**.
 1. Download the compressed archive (.zip) file and extract the contents.
+> [!Note]
+> The steps have you download the onboarding file for Windows 10 and 11 but this file is also used for up-level Server operating systems. 
 
 > [!IMPORTANT]
 > - The Microsoft Defender for Endpoint configuration file contains sensitive information which should be kept secure.

@@ -1,6 +1,7 @@
 ---
 title: "ICIINFO::GetLastEvalTime"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the ICIINFO::GetLastEvalTime method gets the last evaluation time for the configuration item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

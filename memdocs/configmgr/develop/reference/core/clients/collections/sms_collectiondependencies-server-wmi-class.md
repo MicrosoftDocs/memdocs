@@ -1,6 +1,7 @@
 ---
 title: "SMS_CollectionDependencies Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class used to query dependency relationships between collections, specifically the composable collection rules, inclusion and exclusion, and the limiting collection."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

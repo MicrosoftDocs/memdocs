@@ -1,5 +1,6 @@
 ---
 title: "GetTestSmtpConnectionResult Method"
+description: Learn how the GetTestSmtpConnectionResult Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the test SMTP connection result.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

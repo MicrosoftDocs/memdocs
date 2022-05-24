@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how to view an image file's properties in XML format using a Microsoft operating system's image package.
 
 
 ---

@@ -1,4 +1,5 @@
 ---
+description: Learn how to add a boot image package change notification using AddChangeNotification class in Configuration Manager.
 title: "AddChangeNotification Method in SMS_BootImagePackage"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

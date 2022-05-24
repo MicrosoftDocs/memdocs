@@ -1,6 +1,7 @@
 ---
 title: "CCM_Download_Provider Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CCM_Download_Provider class defines and registers a non-Microsoft download plug-in provider."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/12/2022
+ms.date: 05/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -31,7 +31,7 @@ ms.collection:
 - Android
 ---
 
-# Manage collaboration experiences using Office for iOS and Android with Microsoft Intune
+# Manage collaboration experiences in Office for iOS and Android with Microsoft Intune
 
 Office for iOS and Android delivers several key benefits including:
 
@@ -42,7 +42,7 @@ Office for iOS and Android delivers several key benefits including:
 The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Azure Active Directory Premium features, such as conditional access. At a minimum, you will want to deploy a conditional access policy that allows connectivity to Office for iOS and Android from mobile devices and an Intune app protection policy that ensures the collaboration experience is protected.
 
 ## Apply Conditional Access
-Organizations can use use Azure AD Conditional Access policies to ensure that users can only access work or school content using Office for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
+Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content using Office for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
 1. Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Office for iOS and Android, but blocks third-party OAuth capable mobile device clients from connecting to Microsoft 365 endpoints.
 
@@ -64,7 +64,7 @@ The APP data protection framework is organized into three distinct configuration
 
 To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](app-protection-framework.md).
 
-Regardless of whether the device is enrolled in an unified endpoint management (UEM) solution, an Intune app protection policy needs to be created for both iOS and Android apps, using the steps in [How to create and assign app protection policies](app-protection-policies.md). These policies, at a minimum, must meet the following conditions:
+Regardless of whether the device is enrolled in a unified endpoint management (UEM) solution, an Intune app protection policy needs to be created for both iOS and Android apps, using the steps in [How to create and assign app protection policies](app-protection-policies.md). These policies, at a minimum, must meet the following conditions:
 
 1. They include all Microsoft 365 mobile applications, such as Edge, Outlook, OneDrive, Office, or Teams, as this ensures that users can access and manipulate work or school data within any Microsoft app in a secure fashion.
 
@@ -93,7 +93,7 @@ App configuration can be delivered either through the mobile device management (
 Each configuration scenario highlights its specific requirements. For example, whether the configuration scenario requires device enrollment, and thus works with any UEM provider, or requires Intune App Protection Policies.
 
 > [!IMPORTANT]
-> App configuration keys are case sensitive. Use the proper casing to ensure the configuration takes affect.
+> App configuration keys are case sensitive. Use the proper casing to ensure the configuration takes effect.
 
 > [!NOTE]
 > With Microsoft Endpoint Manager, app configuration delivered through the MDM OS channel is referred to as a **Managed Devices** App Configuration Policy (ACP); app configuration delivered through the App Protection Policy channel is referred to as a **Managed Apps** App Configuration Policy.
@@ -111,7 +111,7 @@ This configuration scenario only works with enrolled devices. However, any UEM p
 
 ## General app configuration scenarios
 
-Office for iOS and Android offers administrators the ability to customize the default configuration for several in-app settings.  This capability is offered for both enrolled devices via any UEM provider and for devices that are not enrolled when Office for iOS and Android has an Intune App Protection Policy applied.
+Office for iOS/iPadOS and Android offers administrators the ability to customize the default configuration for several in-app settings using either [iOS/iPadOS](../apps/app-configuration-policies-use-ios.md) or [Android](../apps/app-configuration-policies-use-android.md) app configuration policies.  This capability is offered for both enrolled devices via any UEM provider and for devices that are not enrolled when Office for iOS and Android has an Intune App Protection Policy applied.
 
 > [!NOTE]
 > If an App Protection Policy is targeted to the users, the recommendation is to deploy the general app configuration settings in a **Managed Apps** enrollment model. This ensures the App Configuration Policy is deployed to both enrolled devices and unenrolled devices. 
@@ -119,6 +119,7 @@ Office for iOS and Android offers administrators the ability to customize the de
 Office supports the following settings for configuration:
 
 - Manage the creation of Sticky Notes
+- Set add-ins preference
 
 ### Manage the creation of Sticky Notes
 
@@ -128,6 +129,21 @@ By default, Office for iOS and Android enables users to create Sticky Notes. For
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.office.NotesCreationEnabled    |    **true** (default) enables Sticky Notes creation for the work or school account<br>**false** disables Sticky Notes creation for the work or school account    |
 
+### Set add-ins preference
+
+For iOS/iPadOS devices running Office, you (as the admin) can set whether Office add-ins are enabled. These app settings can be deployed using an [app configuration policy](../apps/app-configuration-policies-use-ios.md) in Intune.
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.OfficeWebAddinDisableAllCatalogs    |    **true** (default) disables the entire add-in platform<br>**false** enables the add-in platform    |
+
+If you need to enable or disable the Office Store portion of the platform for iOS devices, you can use the following key.
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.OfficeWebAddinDisableOMEXCatalog    |    **true** (default) disables only the Office Store portion of the platform<br>**false** enables the Office Store portion of the platform<br>**NOTE:** Sideloaded will continue to work.    |
+
+For more information about adding configuration keys, see [Add app configuration policies for managed iOS/iPadOS devices](../apps/app-configuration-policies-use-ios.md).
 
 ## Data protection app configuration scenarios
 

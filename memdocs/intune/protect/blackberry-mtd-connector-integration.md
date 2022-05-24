@@ -70,7 +70,7 @@ For more information about consent and Azure AD applications, see [Request the p
 
 ## Set up BlackBerry Protect Mobile MTD connector 
 
-1. Sign in to the [Microsoft Endpoint Management admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune administrator account.  
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune administrator account.  
 2. Go to **All services** > **Tenant administration**.
 3. Select **Connectors and tokens**.  
 4. Under **Cross platform**, select **Mobile Threat Defense**.

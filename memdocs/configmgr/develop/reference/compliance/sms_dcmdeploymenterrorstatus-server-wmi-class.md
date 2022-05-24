@@ -1,6 +1,7 @@
 ---
 title: "SMS_DCMDeploymentErrorStatus Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_DCMDeploymentErrorStatus WMI class is an SMS Provider server class that represents error status for a deployment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

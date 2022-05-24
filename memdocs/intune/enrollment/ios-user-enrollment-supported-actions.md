@@ -100,7 +100,7 @@ The following restrictions are supported:
 The following options aren't supported on devices enrolled with User Enrollment. If you need these options, check out Device Enrollment for personally-owned devices or Automated Device Enrollment for corporate devices.
 - Collect app inventory for apps outside of the managed APFS volume.
 - Collect inventory of certificates and provisioning profiles outside of the managed APFS volume.
-- Collect UDID and other persistent device identifiers.
+- Collect UDID and other persistent device identifiers, such as phone number, serial number, and IMEI
 - User Enrollment supports a unique enrollment ID for each device enrolled, but this ID doesn't persist after unenrollment.
 - The following Intune features aren't supported because of this limitation:
 - SCEP User profiles with Subject Name Format of Serial Number.

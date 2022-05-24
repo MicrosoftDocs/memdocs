@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 02/14/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -153,7 +153,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Require Safari fraud warnings**: **Yes** requires fraud warnings to be shown in the web browser on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show these warnings.
 
-### Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Block internet search results from Spotlight**: **Yes** stops Spotlight from returning any results from an Internet search. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Spotlight search connect to the Internet to provide search results.
 
@@ -322,7 +322,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Domains
 
-### Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Unmarked email domains**: Add one or more domain URLs to the list. When users receive an email from a domain other than the domains you enter, the email is marked as untrusted in the iOS/iPadOS Mail app.
 
@@ -344,7 +344,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Block screenshots and screen recording**: **Yes** prevents screenshots or screen captures on devices. In iOS/iPadOS 9.0 and newer, it also blocks screen recordings. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image or as a video.
 
-### Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Block Untrusted TLS certificates**: **Yes** prevents untrusted Transport Layer Security (TLS) certificates on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow TLS certificates.
 - **Block over-the-air PKI updates**: **Yes** prevents your users from receiving software updates unless devices are connected to a computer. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow a device to receive software updates without being connected to a computer.
@@ -640,7 +640,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 ## Restricted apps
 
-### Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Type of restricted apps list**: Create a list of apps that users aren't allowed to install or use. Your options:
 
@@ -716,9 +716,12 @@ You can also:
 
 - **Import** a CSV file with details about the app, including the URL. Use the `<app url>, <app name>, <app publisher>` format. Or, **Export** to create a list of the restricted apps you added, in the same format.
 
+  > [!TIP]
+  > You can import a list of preinstalled Apple apps by downloading the [Apple App BundleIDs CSV](https://github.com/microsoft/Intune-Config-Frameworks/blob/master/iOS/Supervised/Apple-App-BundleIDs.csv) (opens a Microsoft GitHub site).
+
 ## Wireless
 
-### Settings apply to: Device enrollment, Automated device enrollment (supervised)
+### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Block data roaming**: **Yes** prevents data roaming over the cellular network. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow data roaming when the device is on a cellular network.
 

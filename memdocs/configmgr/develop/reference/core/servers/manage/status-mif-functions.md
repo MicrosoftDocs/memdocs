@@ -1,6 +1,7 @@
 ---
 title: "Status MIF Functions"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, status MIF functions are provided in separate libraries to create a status Management Information Format file."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

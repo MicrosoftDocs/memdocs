@@ -1,4 +1,5 @@
 ---
+description: Learn how you can extend the Configuration Manager console with new Windows forms like adding form based dialog boxes and property sheets.
 title: "Configuration Manager Console Forms"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

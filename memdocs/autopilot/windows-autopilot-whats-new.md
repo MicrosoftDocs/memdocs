@@ -9,11 +9,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
 ms.reviewer: jubaptis
-ms.date: 10/20/2021
+ms.date: 02/09/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -27,6 +27,17 @@ ms.topic: article
 - Windows 11
 - Windows 10
 - Windows Holographic, version 2004
+
+## Enrollment Status Page
+
+With the 2202 Intune release, functionality has been added to the [Enrollment Status Page](enrollment-status.md) UI. The application picker for selecting blocking apps has additional improvements for admins:
+- A search box has been added for easier selection of apps
+- Fixes issue where store apps could not be differentiated between Online and Offline modes
+- A new column has been added for **Version** to see which version of the application is selected
+
+See the following example:
+
+![Application picker](images/app-picker.png)
 
 ## Autopilot agility rolling out
 
@@ -44,7 +55,7 @@ Users must enter their credentials at initial sign-in during enrollment. We no l
 
 To improve the baseline security for Azure Active Directory (Azure AD), we changed Azure AD behavior for multi-factor authentication (MFA) during device registration. Previously, if a user completed MFA as part of their device registration, the MFA claim was carried over to the user state after registration was complete. Going forward, the MFA claim is not preserved after registration and users will be prompted to redo MFA for any apps that require MFA by policy. For more information, see [Windows Autopilot MFA changes to enrollment flow](https://techcommunity.microsoft.com/t5/intune-customer-success/windows-autopilot-mfa-changes-to-enrollment-flow/ba-p/2774687).
 
-## [Preview] Windows Autopilot diagnostics page
+## Windows Autopilot diagnostics page
 
 When you deploy Windows 11 with Autopilot, you can enable users to view additional detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics** page is available to provide IT admins and end users with a user-friendly view to troubleshoot Windows Autopilot failures. 
 
@@ -54,7 +65,7 @@ An example of the diagnostics page is shown below. In this example, **Configurat
 ![diagnostics page click](images/oobe-02.png)<br>
 ![diagnostics page expand](images/oobe-03.png)
 
-The diagnostics page can be enabled by going to the [ESP profile](../intune/enrollment/windows-enrollment-status.md#available-settings) and selecting **Yes** to **Turn on log collection and diagnostics page for end users**. 
+The diagnostics page can be enabled by going to the [ESP profile](../intune/enrollment/windows-enrollment-status.md) and selecting **Yes** to **Turn on log collection and diagnostics page for end users**. 
 
 The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode. It is currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune. 
 

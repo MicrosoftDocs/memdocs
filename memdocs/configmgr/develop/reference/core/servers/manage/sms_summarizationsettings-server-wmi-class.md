@@ -1,6 +1,7 @@
 ---
 title: "SMS_SummarizationSettings Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager, that represents the site summarization settings for a site."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

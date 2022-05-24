@@ -44,6 +44,9 @@ The [Microsoft Store for Business](https://www.microsoft.com/business-store) giv
 
 ## Before you start
 
+> [!IMPORTANT]
+> Microsoft Store for Business will be retired in the first quarter of 2023. However, admins can still leverage the connection to Store for Business and Education from their UEM solution to deploy apps to managed Windows 11 devices until they are retired in 2023. 
+
 Review the following information before you start syncing and assigning apps from the Microsoft Store for Business:
 
 - Configure Intune as the mobile device management authority for your organization.
@@ -55,7 +58,8 @@ Review the following information before you start syncing and assigning apps fro
 - Offline apps that are free of charge can also be synced to Intune. These apps are installed by Intune, not by the store.
 - To use this capability, devices must be joined to Active Directory Domain Services, Azure AD joined, or workplace-joined.
 - Enrolled devices must be using the 1511 release of Windows 10 or later.
-
+> [!NOTE]
+> Online Microsoft Store for Business apps can be used only for user context install; that is, when deployed through Intune, you need to target user groups. Device licensed offline Microsoft Store for Business apps can be installed in device context; that is, when deployed through Intune, you can target device groups as well as user groups.
 > [!NOTE]
 > If you disable access to the Store on managed devices (either manually, via policy or Group Policy), Online licensed apps will fail to install.
 

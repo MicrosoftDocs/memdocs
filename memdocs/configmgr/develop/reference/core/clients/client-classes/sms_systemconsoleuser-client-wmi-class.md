@@ -1,4 +1,5 @@
 ---
+description: The SMS_SystemConsoleUser class is a client Windows Management Instrumentation class, in Configuration Manager, that defines usage data about users, based on the Windows security event log.
 title: "SMS_SystemConsoleUser Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/26/2022
+ms.date: 01/31/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,7 +34,7 @@ Use Intune endpoint security policies for account protection to protect the iden
 
 Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-View [settings for account protection profiles](../protect/endpoint-security-asr-profile-settings.md).
+View [settings for account protection profiles](../protect/endpoint-security-account-protection-profile-settings.md).
 
 ## Prerequisites for Account protection profiles
 
@@ -62,7 +62,7 @@ View [settings for account protection profiles](../protect/endpoint-security-asr
 
 ## Manage local groups on Windows devices
 
-Use the Local user group membership (preview) profile to manage the users that are members of the built-in local groups on Windows 10/11 devices that receive this policy.
+Use the Local user group membership (preview) profile to manage the users that are members of the built-in local groups on devices that run Windows 10 [20H2 and later](/windows/client-management/mdm/policy-csp-localusersandgroups#localusersandgroups-policies), and Windows 11 devices.
 
 > [!TIP]
 > To learn more about support for managing administrator privileges using Azure Active Directory (Azure AD) groups, see [Assign local admins to Azure AD joined devices](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-azure-ad-groups-preview) in the Azure AD documentation.
@@ -79,6 +79,9 @@ The following are the configurations you can make:
 
 - **Local group**:  Select one or more groups from the drop-down. These groups will all apply the same Group and user action  to the users you assign.  You can create more than one grouping of local groups in a single profile and assign different actions and groups of users to each grouping of local groups.
 
+> [!NOTE]
+> The list of local groups is limited to the six built-in local groups which are guaranteed to be evaluated at logon, as referenced in the [Managing administrator privileges using Azure AD groups](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-azure-ad-groups-preview) documentation. 
+
 - **Group and user action**: Configure the action to apply to the selected groups. This action will apply to the users you select for this same action and grouping of local accounts.  Actions you can choose include:
   - **Add (Update)**: Adds members to the selected groups. The group membership for users that aren’t specified by the policy are not changed.
   - **Remove (Update)**: Remove members from the selected groups. The group membership for users that aren’t specified by the policy are not changed.
@@ -89,15 +92,17 @@ The following are the configurations you can make:
 
 - **User selection type**: Choose how to select users. Options include:
 
-  - **Users**: Select the users and user groups from your Azure AD.
-  - **Manual**:  Specify Azure AD users and groups manually, by username, domain/username, or the groups security identifier (SID).
+  - **Users**: Select the users and user groups from your Azure AD. (Supported for Azure AD joined devices only).
+  - **Manual**:  Specify Azure AD users and groups manually, by username, domain\username, or the groups security identifier (SID). (Supported for Azure AD joined and hybrid joined devices).
 
 - **Selected user(s)**: Depending on your selection for *User selection type*, you’ll use one of the following options:
 
   - **Select user(s)**: Select the users and user groups from your Azure AD.
-  - **Add users(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *Username, Domain/username*, or by *security identifier (SID)*.
+  - **Add users(s)**: This opens the **Add users** pane where you can then specify one or more user identifiers as they appear on a device. You can specify the user by *security identifier (SID)*, *Domain\username*, or by *Username*.
 
     :::image type="content" source="./media/endpoint-security-account-protection-policy/add-user.png" alt-text="Screen shot of the Add users page.":::
+
+Choosing the Manual option can be helpful in scenarios where you want to manage your on-prem Active Directory users from Active Directory to a local group for a hybrid Azure AD joined device. The supported formats of identifying the user selection in order of most to least preferred is through the SID, domain\username, or member’s username. Values from Active Directory must be used for hybrid joined devices, while values from Azure AD must be used for Azure AD join. Azure AD group SIDs can be obtained using [Graph API for Groups](/graph/api/resources/group?view=graph-rest-1.0#json-representation&preserve-view=true).
 
 ### Conflicts
 

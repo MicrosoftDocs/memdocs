@@ -1,6 +1,7 @@
 ---
 title: "ICIINFO::GetSdmTypeName"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the ICIINFO::GetSdmTypeName method gets the fully qualified name of a configuration item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

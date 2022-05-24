@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 12/17/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -24,6 +24,7 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2203](../../../plan-design/changes/whats-new-in-version-2203.md)
 - [What's new in version 2111](../../../plan-design/changes/whats-new-in-version-2111.md)
 - [What's new in version 2107](../../../plan-design/changes/whats-new-in-version-2107.md)
 - [What's new in version 2103](../../../plan-design/changes/whats-new-in-version-2103.md)

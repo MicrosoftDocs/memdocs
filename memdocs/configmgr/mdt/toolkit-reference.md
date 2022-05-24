@@ -214,7 +214,7 @@ ms.collection: openauth
 >  For more information about these server properties, see [Dnscmd](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/cc772069(v=ws.11)).  
 
 #### Enable BitLocker  
- This task sequence step configures BitLocker&reg; Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).  
+ This task sequence step configures BitLocker&reg; Drive Encryption on the target computer. For more information about this step type, see [Enable BitLocker](../osd/understand/task-sequence-steps.md#enable-bitlocker).  
 
  The unique properties and settings for the **Enable BitLocker** task sequence step type are:  
 

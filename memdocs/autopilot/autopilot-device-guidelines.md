@@ -8,11 +8,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 12/16/2020
+ms.date: 2/1/2022
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -36,7 +36,7 @@ The following best practices ensure that devices can easily be provisioned as pa
 - Before shipping devices to an Autopilot customer or channel partner, the OEM should upload 4K Hardware Hashes to Microsoft by using the CBR report. The hashes should be collected using the OA3 Tool RS3+ run in Audit mode on full OS.
 - Microsoft requires that OEM shipping drivers get published to Windows Update within 30 days of the CBR submission date. System firmware and driver updates are published to Windows Update within 14 days.
 - The OEM ensures that the PKID provisioned in the SMBIOS is passed on to the channel.
-- When using a VM for Autopilot testing, assign at least 2 processors and 4gb of memory. This will help to prevent application install issues in Windows 10 devices with the [May 11, 2021 cumulative update](https://support.microsoft.com/topic/may-11-2021-kb5003173-os-builds-19041-985-19042-985-and-19043-985-2824ace2-eabe-4c3c-8a49-06e249f52527) installed. *Note: The [minimum system requirements](/windows/whats-new/windows-11-requirements#virtual-machine-support) for Windows 11 are 2 processors and 4gb memory.
+- When using a VM for Autopilot testing, assign at least 2 processors and 4gb of memory. *Note: The [minimum system requirements](/windows/whats-new/windows-11-requirements#virtual-machine-support) for Windows 11 are 2 processors and 4gb memory.
 
 ## Software best practice guidelines for Windows Autopilot
 

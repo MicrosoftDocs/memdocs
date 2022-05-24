@@ -1,4 +1,5 @@
 ---
+description: Article detailing the use of the Sync class method in Configuration Manager to synchronize the entities on the source site.
 title: "Sync Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

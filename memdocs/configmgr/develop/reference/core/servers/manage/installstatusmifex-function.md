@@ -1,4 +1,5 @@
 ---
+description: Learn how to enhance the functionality of InstallStatusMIF in Configuration Manager using InstallStatusMIFEx.
 title: "InstallStatusMIFEx Function"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

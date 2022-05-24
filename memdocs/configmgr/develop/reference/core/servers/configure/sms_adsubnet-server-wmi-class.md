@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_ADSubnet class as an SMS Provider server class that contains Active Directory subnets discovered by CM Forest Discovery.
 title: "SMS_ADSubnet Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

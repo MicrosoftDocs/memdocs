@@ -1,4 +1,5 @@
 ---
+description: Learn how to describe a registered expression handler for a policy with CCM_Policy_ExpressionHandlerRegistration.
 title: "CCM_Policy_ExpressionHandlerRegistration Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -2,7 +2,7 @@
 title: Plan for BitLocker management
 titleSuffix: Configuration Manager
 description: Plan for managing BitLocker Drive Encryption with Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
@@ -94,7 +94,7 @@ Let users help themselves with a single-use key for unlocking a BitLocker encryp
 > [!NOTE]
 > Uploading of the TPM password hash mainly pertains to versions of Windows before Windows 10. Windows 10 or later by default doesn't save the TPM password hash, so these devices don't normally upload it. For more information, see [About the TPM owner password](/windows/security/information-protection/tpm/change-the-tpm-owner-password#about-the-tpm-owner-password).
 
-BitLocker management doesn't support all client types that are generally supported by Configuration Manager. For more information, see [Supported configurations](#supported-configurations).
+BitLocker management doesn't support all client types that are supported by Configuration Manager. For more information, see [Supported configurations](#supported-configurations).
 
 ### Prerequisites for the recovery service
 
@@ -119,11 +119,6 @@ BitLocker management doesn't support all client types that are generally support
 
 - To use the self-service portal or the administration and monitoring website, you need a Windows server running IIS. You can reuse a Configuration Manager site system, or use a standalone web server that has connectivity to the site database server. Use a [supported OS version for site system servers](../../core/plan-design/configs/supported-operating-systems-for-site-system-servers.md).
 
-    > [!NOTE]
-    > Starting in version 2006, you can install the BitLocker self-service portal and the administration and monitoring website at the central administration site.<!-- 5925693 -->
-    >
-    > In version 2002 and earlier, only install the self-service portal and the administration and monitoring website with a primary site database. In a hierarchy, install these websites for each primary site.
-
 - On the web server that will host the self-service portal, install [Microsoft ASP.NET MVC 4.0](/aspnet/mvc/mvc4) and .NET Framework 3.5 feature before staring the install process. Other required Windows server roles and features will be installed automatically during the portal installation process.
 
     > [!TIP]
@@ -135,16 +130,22 @@ BitLocker management doesn't support all client types that are generally support
 
 - BitLocker management isn't supported on virtual machines (VMs) or on server editions. For example, BitLocker management won't start the encryption on fixed drives of virtual machines. Additionally fixed drives in virtual machines may show as compliant even though they aren't encrypted.
 
-- Azure Active Directory (Azure AD)-joined, workgroup clients, or clients in untrusted domains aren't supported. BitLocker management in Configuration Manager only supports devices that are joined to on-premises Active Directory. Hybrid Azure AD-joined devices are also supported. This configuration is to authenticate with the recovery service to escrow keys.
+- In version 2010 and earlier, Azure Active Directory (Azure AD)-joined, workgroup clients, or clients in untrusted domains aren't supported. In these earlier versions of Configuration Manager, BitLocker management only supports devices that are joined to on-premises Active Directory including hybrid Azure AD-joined devices. This configuration is to authenticate with the recovery service to escrow keys.
+
+  Starting in version 2103, Configuration Manager supports all client join types for BitLocker management. However, the client-side BitLocker user interface component is still only supported on Active Directory-joined and hybrid Azure AD-joined devices.
 
 - Starting in version 2010, you can now manage BitLocker policies and escrow recovery keys over a [cloud management gateway (CMG)](../../core/clients/manage/cmg/overview.md). This change also provides support for BitLocker management via internet-based client management (IBCM). There's no change to the setup process for BitLocker management. This improvement supports domain-joined and hybrid domain-joined devices.<!--6979223--> For more information, see [Deploy management agent: Recovery service](../deploy-use/bitlocker/recovery-service.md).
 
-   -  If you have BitLocker management policies that you created before you updated to version 2010, to make them available to internet-based clients via CMG:
+   - If you have BitLocker management policies that you created before you updated to version 2010, to make them available to internet-based clients via CMG:
       1. In the Configuration Manager console, open the properties of the existing policy.
       1. Switch to the **Client Management** tab.
       1. Select **OK** or **Apply** to save the policy. This action revises the policy so that it's available to clients over the CMG.
 
-- By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**. For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker).
+- By default, the **Enable BitLocker** task sequence step only encrypts *used space* on the drive. BitLocker management uses *full disk* encryption. Configure this task sequence step to enable the option to **Use full disk encryption**.
+
+  Starting in version 2203, you can configure this task sequence step to escrow the BitLocker recovery information for the OS volume to Configuration Manager.<!--10454717-->
+
+  For more information, see [Task sequence steps - Enable BitLocker](../../osd/understand/task-sequence-steps.md#enable-bitlocker).
 
 > [!IMPORTANT]
 > The `Invoke-MbamClientDeployment.ps1` PowerShell script is for [stand-alone MBAM](/microsoft-desktop-optimization-pack/mbam-v25/) only. It should not be used with Configuration Manager BitLocker Management.

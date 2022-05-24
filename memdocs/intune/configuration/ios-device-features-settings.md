@@ -341,7 +341,7 @@ This feature applies to:
   - **Specific websites only** (for the Safari web browser only): These URLs are added to the Safari browser's bookmarks. Users are **only** allowed to visit these sites; no other sites can be opened. Use this option only if you know the exact list of URLs that users can access.
 
     - **URL**: Enter the URL of the website you want to allow. For example, enter `https://www.contoso.com`.
-    - **Bookmark Path**: Apple changed this setting. All bookmarks go into the **Approved Sites** folder. Bookmarks don't go in to the bookmark path you enter.
+    - **Bookmark Path**: Apple changed this setting. All bookmarks go into the **Allowed Sites** folder. Bookmarks don't go in to the bookmark path you enter.
     - **Title**: Enter a descriptive title for the bookmark.
 
     If you don't enter any URLs, then users can't access any websites except for `microsoft.com`, `microsoft.net`, and `apple.com`. These URLs are automatically allowed by Intune.

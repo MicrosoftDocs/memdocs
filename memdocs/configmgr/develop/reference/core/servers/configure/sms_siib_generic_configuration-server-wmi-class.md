@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the generic configuration for Configuration Manager components with SMS_SIIB_Generic_Configuration.
 title: "SMS_SIIB_Generic_Configuration Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

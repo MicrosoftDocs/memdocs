@@ -2,7 +2,7 @@
 title: About schema extensions
 titleSuffix: Configuration Manager
 description: Understand the benefits of extending the Active Directory schema to support Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -60,9 +60,9 @@ If you don't extend the schema, use one of the following options to provide conf
 
 - Use [manual installation](../../clients/deploy/plan/client-installation-methods.md#manual-installation). Provide at least the following client installation properties on the command line:
 
-  - Specify a management point or source path from which the computer can download the installation files. Use the CCMSetup property **/mp** or **/source**.
+  - Specify a management point or source path from which the computer can download the installation files. Use the CCMSetup property `/mp` or `/source`.
 
-  - Specify a list of initial management points for the client to use. It uses this initial management point to assign to the site and download client policy and site settings. Use the CCMSetup Client.msi property **SMSMP**.
+  - Specify a list of initial management points for the client to use. It uses this initial management point to assign to the site and download client policy and site settings. Use the CCMSetup Client.msi property `SMSMP`.
 
   For more information, see [About client installation parameters and properties](../../clients/deploy/about-client-installation-properties.md).
 

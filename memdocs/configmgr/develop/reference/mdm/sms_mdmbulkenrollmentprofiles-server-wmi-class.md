@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent On-premises Mobile Device Management (MDM) bulk enrollment profiles using SMS_BulkEnrollmentProfiles class.
 title: "SMS_MDMBulkEnrollmentProfiles Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

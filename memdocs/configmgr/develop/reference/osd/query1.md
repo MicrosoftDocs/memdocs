@@ -1,6 +1,7 @@
 ---
 title: "Query1"
 titleSuffix: "Configuration Manager"
+description: "Query1 specifies a query, in Configuration Manager, that is used to identify the platform that a client computer is running."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

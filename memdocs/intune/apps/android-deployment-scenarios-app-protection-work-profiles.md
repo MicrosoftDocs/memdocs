@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: App protection policies and Android Enterprise personally-owned work profiles in Microsoft Intune
-description: See the differences and pros and cons when deciding to use app protection policies or Android Enterprise personally-owned work profiles for personal or BYOD Android Enterprise devices in Microsoft Intune. Compare the differences and features you get with app protection policies without enrollment (APP-WE) and Android Enterprise personally-owned work profiles.
+title: Mobile Application Management (MAM) and Android Enterprise personally-owned work profiles in Microsoft Intune
+description: See the available features when deciding to use Mobile Application Management (MAM) and/or Android Enterprise personally-owned work profiles for personal or BYOD Android devices in Microsoft Intune.
 keywords:
 
 author: Erikre
@@ -30,20 +30,20 @@ ms.custom: intune-azure;workProfilesUpdate
 
 ---
 
-# Application protection policies and personally-owned work profiles on Android Enterprise devices in Intune
+# Mobile Application Management and personally-owned work profiles on Android Enterprise devices in Intune
 
 In many organizations, administrators are challenged to protect resources and data on different devices. One challenge is protecting resources for users with personal Android Enterprise devices, also known as bring-your-own-device (BYOD). Microsoft Intune supports two Android deployment scenarios for bring-your-own-device (BYOD):
 
-- [App protection policies without enrollment (APP-WE)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#app-we)
+- [Mobile Application Management (MAM)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam)
 - [Android Enterprise personally-owned work profiles](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles)
 
-The APP-WE and the Android Enterprise personally-owned work profile deployment scenarios include the following key features important for BYOD environments:
+The MAM and the Android Enterprise personally-owned work profile deployment scenarios include the following key features important for BYOD environments:
 
 - **Protection and segregation of organization-managed data**: Both solutions protect organization data by enforcing data loss prevention (DLP) controls on organization-managed data. These protections prevent accidental leaks of protected data, such as an end user accidentally sharing it to a personal app or account. They also serve to ensure that a device accessing the data is healthy and not compromised.
 
-- **End-user privacy**: APP-WE and Android Enterprise personally-owned work profiles separate end users content on the device, and data managed by the mobile device management (MDM) administrator. In both scenarios, IT admins enforce policies, such as PIN-only authentication on organization-managed apps or identities. IT admins are unable to read, access, or erase data that's owned or controlled by end users.
+- **End-user privacy**: MAM separates end user and organization content in managed applications and Android Enterprise personally-owned work profiles separate end users content on the device, and data managed by the mobile device management (MDM) administrator. In both scenarios, IT admins enforce policies, such as PIN-only authentication on organization-managed apps or identities. IT admins are unable to read, access, or erase data that's owned or controlled by end users.
 
-Whether you choose APP-WE or Android Enterprise personally-owned work profiles for your BYOD deployment depends on your requirements and business needs. The goal of this article is to provide guidance to help you decide. For more information related to managed Android devices, see [Manage Android personally-owned/corporate-owned work profile devices with Intune](../enrollment/android-enterprise-overview.md).
+Whether you choose MAM or Android Enterprise personally-owned work profiles for your BYOD deployment depends on your requirements and business needs. The goal of this article is to provide guidance to help you decide. For more information related to managed Android devices, see [Manage Android personally-owned/corporate-owned work profile devices with Intune](../enrollment/android-enterprise-overview.md).
 
 ## About Intune app protection policies
 
@@ -65,11 +65,11 @@ To see a list of apps enabled with APP, see [managed apps with a rich set of mob
 
 ## Deployment scenarios
 
-This section describes the important characteristics of the APP-WE and Android Enterprise personally-owned work profile deployment scenarios.
+This section describes the important characteristics of the MAM and Android Enterprise personally-owned work profile deployment scenarios.
 
-### APP-WE
+### MAM
 
-An APP-WE (app protection policies without enrollment) deployment defines policies on apps, not devices. In this scenario, devices typically aren't enrolled or managed by an MDM authority, such as Intune. To protect apps and access to organizational data, administrators use APP-manageable apps, and apply data protection policies to these apps.
+A MAM deployment defines policies on apps, not devices. For BYOD, MAM is often used on unenrolled devices. To protect apps and access to organizational data, administrators use APP-manageable apps, and apply data protection policies to these apps.
 
 This feature applies to:
 
@@ -78,17 +78,15 @@ This feature applies to:
 > [!TIP]
 > For more information, see [What are app protection policies?](app-protection-policy.md).
 
-APP-WE scenarios are for end users who want a small organizational footprint on their devices, and don't want to enroll in MDM. As an administrator, you still need to protect your data. These devices aren't managed. So common MDM tasks and features, such as WiFi, device VPN, and certificate management, aren't part of this deployment scenario.
-
 ### Android Enterprise personally-owned work profiles
 
-Android Enterprise personally-owned work profiles are the core Android Enterprise deployment scenario and the only scenario targeted at BYOD use cases. The Android Enterprise personally-owned work profile is a separate partition created at the Android OS level that can be managed by Intune.
+Android Enterprise personally-owned work profiles are the core Android Enterprise deployment scenario. The Android Enterprise personally-owned work profile is a separate partition created at the Android OS level that can be managed by Intune.
 
 An Android Enterprise personally-owned work profile includes the following features:
 
 - **Traditional MDM functionality**: Key MDM capabilities, such as app lifecycle management using managed Google Play, is available in any Android Enterprise scenario. Managed Google Play provides a robust experience to install and update apps without any user intervention. IT can also push app configuration settings to organizational apps. It also doesn't require end users to allow installations from unknown sources. Other common MDM activities, such as deploying certificates, configuring WiFi/VPNs, and setting device passcodes are available with Android Enterprise personally-owned work profiles.
 
-- **DLP on the Android Enterprise personally-owned work profile boundary**: Like APP-WE, IT can enforce data protection policies. With a Android Enterprise personally-owned work profile, DLP policies are enforced at the work profile level, not the app level. For example, copy/paste protection is enforced by the APP settings applied to an app, or enforced by the work profile. When the app is deployed into a work profile, administrators can pause copy/paste protection to the work profile by turning off this policy at the APP level.
+- **DLP on the Android Enterprise personally-owned work profile boundary**: With an Android Enterprise personally-owned work profile, DLP policies are enforced at the work profile level, not the app level. For example, copy/paste protection is enforced by the APP settings applied to an app, or enforced by the work profile. When the app is deployed into a work profile, administrators can pause copy/paste protection to the work profile by turning off this policy at the APP level.
 
 ## Tips to optimize the work profile experience
 
@@ -102,9 +100,9 @@ Android Enterprise personally-owned Work profiles and APP complement each other'
 
 ### Suppress APP policy for Android Enterprise personally-owned work profiles
 
-You may need to support individual users who have multiple devices - unmanaged devices in an APP-WE scenario, and managed devices with Android Enterprise personally-owned work profiles.
+You may need to support individual users who have multiple devices - unenrolled devices with MAM managed applications and managed devices with Android Enterprise personally-owned work profiles.
 
-For example, you require end users to enter a PIN when opening a work app. Depending on the device, the PIN features are handled by APP or by the work profile. For the APP-WE devices, the PIN-to-launch behavior is enforced by APP. For work profile devices, you can use a device or work profile PIN enforced by the OS. To accomplish this scenario, configure APP settings so that they don't apply *when* an app is deployed into a work profile. If you don't configure it this way, the end user gets prompted for a PIN by the device, and again at the APP layer.
+For example, you require end users to enter a PIN when opening a work app. Depending on the device, the PIN features are handled by APP or by the work profile. For MAM managed applications, access controls including the PIN-to-launch behavior is enforced by APP. For enrolled devices, the APP PIN may be disabled to avoid requiring both a device PIN and an APP PIN. (APP PIN setting for [Android](../apps/app-protection-policy-settings-android.md#access-requirements). For work profile devices, you can use a device or work profile PIN enforced by the OS. To accomplish this scenario, configure APP settings so that they don't apply *when* an app is deployed into a work profile. If you don't configure it this way, the end user gets prompted for a PIN by the device, and again at the APP layer.
 
 ### Control multi-identity behavior in Android Enterprise personally-owned work profiles
 
@@ -131,7 +129,7 @@ For example, customers in or have users in China can't use Android device manage
 
 ## Summary
 
-Using Intune, both APP-WE and Android Enterprise personally-owned work profiles are available for your Android BYOD program. To choose APP-WE or work profiles depends upon your business and usage requirements. In summary, use Android Enterprise personally-owned work profiles if you need MDM activities on managed devices, such as certificate deployment, app push, and so on. Use APP-WE if you don't want or can't manage devices, and are using only Intune APP-enabled apps.
+Using Intune, both MAM and Android Enterprise personally-owned work profiles are available for your Android BYOD program. You can choose to use MAM and/or work profiles depending upon your business and usage requirements. In summary, use Android Enterprise personally-owned work profiles if you need MDM activities on managed devices, such as certificate deployment, app push, and so on. Use MAM if you want to protect org data within applications.
 
 ## Next steps
 [Start using app protection policies](app-protection-policy.md), or [enroll your devices](../enrollment/android-enroll.md).

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 03/07/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,7 +46,6 @@ If a device doesn't check in to get the policy or profile after the first notifi
 | macOS | About every 8 hours |
 | Android | About every 8 hours |
 | Windows 10/11 PCs enrolled as devices | About every 8 hours |
-| Windows Phone | About every 8 hours |
 | Windows 8.1 | About every 8 hours |
 
 If devices recently enroll, then the compliance, non-compliance, and configuration check-in runs more frequently. The check-ins are **estimated** at:
@@ -57,10 +56,9 @@ If devices recently enroll, then the compliance, non-compliance, and configurati
 | macOS | Every 15 minutes for 1 hour, and then around every 8 hours | 
 | Android | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 | Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
-| Windows Phone | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 | Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 
-At any time, users can open the Company Portal app, **Settings** > **Sync** to immediately check for policy or profile updates.
+At any time, users can open the Company Portal app, **Settings** > **Sync** to immediately check for policy or profile updates. For related information about the Intune Management Extention agent or Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
 ## What actions cause Intune to immediately send a notification to a device?
 
@@ -114,7 +112,10 @@ When you delete a profile, or remove a device from a group that's assigned the p
 
     Intune settings are based on the Windows configuration service provider (CSPs). The behavior depends on the CSP. Some CSPs remove the setting, and some CSPs keep the setting, also called tattooing.
 
-- A profile applies to a user group. Later, a user is removed from the group. For the settings to be removed from that user, it can take up to 7 hours + the [platform-specific policy refresh cycle](#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) (in this article).
+- A profile applies to a user group. Later, a user is removed from the group. For the settings to be removed from that user, it can take up to 7 hours or more for:
+
+  - The profile to be removed from the policy assignment in the Endpoint Manager admin center
+  - The device to sync with the Intune object using the [platform-specific policy refresh cycle](#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) (in this article)
 
 ## I changed a device restriction profile, but the changes haven't taken effect
 

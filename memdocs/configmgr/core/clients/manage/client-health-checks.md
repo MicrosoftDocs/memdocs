@@ -2,7 +2,7 @@
 title: Client health checks
 titleSuffix: Configuration Manager
 description: The checks that the Configuration Manager client runs regularly to keep healthy.
-ms.date: 12/01/2021
+ms.date: 04/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
@@ -54,7 +54,7 @@ Verify that the client check scheduled task (`CcmEval`) has run at least one tim
 
 <!--7B9F8FF6-EDF7-42CA-A67F-073A2E161C19-->
 
-The client uses Microsoft SQL Server Compact Edition (CE) to locally store information. If this check fails, reinstall the Configuration Manager client to remediate.
+The client uses a built-in version of SQL Server Compact Edition (CE) to locally store information. If this check fails, reinstall the Configuration Manager client to remediate.
 
 ### Verify WMI
 

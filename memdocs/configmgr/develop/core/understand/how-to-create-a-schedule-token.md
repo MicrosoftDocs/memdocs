@@ -1,6 +1,7 @@
 ---
 title: "Create a Schedule Token"
 titleSuffix: "Configuration Manager"
+description: "Create a schedule token in Configuration Manager by creating and populating an instance of the appropriate SMS_ST_ schedule token class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

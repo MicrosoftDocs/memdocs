@@ -1,6 +1,7 @@
 ---
 title: "FallbackMP Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the FallbackMP Windows Management Instrumentation class method sets the fallback time in minutes for a management point with the default value of 120."
 ms.date: "03/13/2017"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,6 +1,7 @@
 ---
 title: "AppDeploymentTypeItem Structure"
 titleSuffix: "Configuration Manager"
+description: "Learn about the AppDeploymentTypeItem structure that contains detection results for an individual deployment type."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,5 +1,6 @@
 ---
 title: Configuration Manager API reference
+description: This reference contains detailed information about the Configuration Manager class schema, the Extended WMI Query Language (WQL), Named values and qualifiers, the Configuration Manager console libraries, and the managed SMS Provider library.
 ms.date: 08/02/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

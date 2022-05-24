@@ -1,6 +1,7 @@
 ---
 title: SMS_AzureServicesTask Class
 titleSuffix: Configuration Manager
+description: "An SMS Provider server class that represents a Microsoft Azure specific operation that can be performed on the specified Microsoft Azure service. This class can be used to initiate an operation as well as monitor the results of the operation."
 ms.date: 09/20/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk

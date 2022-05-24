@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 Windows 365 provides highly resilient user cloud pcs, including:
 
 - 99.9% highly available Windows 365 Cloud PC user sessions as defined in the [Windows 365 SLA](https://www.microsoft.com/licensing/docs/view/Service-Level-Agreements-SLA-for-Online-Services).
-- Locally Redundant Storage (LRS) with data object resiliency of 11 9s.
+- Disk storage with data object resiliency of 11 9s.
 - Automated in-zone disaster recovery for compute.
 - Recovery Point Objective (RPO) of ~0.
 
@@ -49,7 +49,7 @@ Using these Windows and Microsoft 365 solutions preserves user context and user 
 
 ## Data Resilience
 
-If there's a larger disruption, like a full zone or region outage, LRS storage makes sure that data objects on the Cloud PC OS disks are 99.999999999% resilient against data loss, over a given year.
+If there's a larger disruption, like a full zone or region outage, the disk storage provided makes sure that data objects on the Cloud PC OS disks are 99.999999999% resilient against data loss, over a given year.
 
 ## Automated in-zone Disaster Recovery for Compute
 

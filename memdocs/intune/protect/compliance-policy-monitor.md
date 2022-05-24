@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Monitor device compliance policies in Microsoft Intune
-description: Use the device compliance dashboard to monitor overall device compliance, view reports, and view per-policy and per-setting device compliance.
+title: Monitor results of your device compliance policies in Microsoft Intune
+description: Use the device compliance dashboard to understand overall device compliance the per-policy and per-setting device compliance results.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 05/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: samyada
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -27,9 +27,9 @@ ms.collection:
   - M365-identity-device-management
   - highpri
 ---
-# Monitor Intune Device compliance policies
+# Monitor results of your Intune Device compliance policies
 
-Compliance reports help you review device compliance and troubleshoot compliance-related issues in your organization. Using these reports, you can view information on:
+Compliance reports help you understand when devices fail to meet your [compliance configurations](../protect/device-compliance-get-started.md) and can help you identify compliance-related issues in your organization. Using these reports, you can view information on:
 
 - The overall compliance states of devices
 - The compliance status for an individual setting
@@ -72,7 +72,7 @@ Descriptions of the different device compliance policy states:
 
 - **Compliant**: The device successfully applied one or more device compliance policy settings.
 
-- **In-grace period:** The device is targeted with one or more device compliance policy settings. But, the user hasn't applied the policies yet. This status means the device is not-compliant, but it's in the grace-period defined by the admin.
+- **In-grace period:** The device is targeted with one or more device compliance policy settings. But, the user hasn't applied the policies yet. This status means the device is not-compliant, but it's in the grace period defined by the admin.
 
   - Learn more about [Actions for noncompliant devices](actions-for-noncompliance.md).
 
@@ -95,6 +95,20 @@ Descriptions of the different device compliance policy states:
 
 > [!IMPORTANT]
 > Devices that are enrolled into Intune, but not targeted by any device compliance policies are included in this report under the **Compliant** bucket.
+
+#### Device behavior with a compliance setting in Error state
+
+When a setting for a compliance policy returns a value of **Error**, the compliance state of the device remains unchanged for up to seven days to allow time for the compliance calculation to complete correctly for that setting. Within those seven days, the device's existing compliance status continues to apply until the compliance policy setting evaluates as **Compliant** or **Not compliant**. If a setting still has a status of **Error** after seven days, the device becomes **Not compliant** immediately. Grace periods don't apply to compliance policies with a setting in an **Error** state.
+
+##### Examples:
+
+- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. After three days, compliance evaluation completes successfully and the setting now reports **Not compliant**. The user can continue to use the device to access Conditional Access-protected resources within the first three days after the setting states changes to **Error**, but once the setting returns **Not compliant**, the device is marked **Not compliant** and this access is removed until the device becomes **Compliant** again.
+ 
+- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. After three days, compliance evaluation completes successfully, the setting returns **Compliant**, and the device's compliance status becomes **Compliant**. The user is able to continue to access Conditional Access protected resources without interruption.
+
+- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. The user is able to access Conditional Access protected resources for seven days, but after seven days, the compliance setting still returns **Error**. At this point, the device becomes Not compliant immediately and the user loses access to the protected resources until the device becomes **Compliant** – even if there's a grace period set for the applicable compliance policy.
+
+-  A device is initially marked **Not compliant**, but then a setting in one of the compliance policies targeted to the device reports Error. After three days, compliance evaluation completes successfully, the setting returns **Compliant**, and the device's compliance status becomes **Compliant**. The user is prevented from accessing Conditional Access protected resources for the first three days (while the setting returns **Error**). Once the setting returns **Compliant** and the device is marked **Compliant**, the user can begin to access protected resources on the device.
 
 #### Drill down for more details
 
@@ -203,7 +217,7 @@ This feature is included in the device status reporting:
 
 Policy conflicts can occur when multiple Intune policies are applied to a device. If the policy settings overlap, Intune resolves any conflicts by using the following rules:
 
-- If the conflicting settings are from an Intune configuration policy and a compliance policy, the settings in the compliance policy take precedence over the settings in the configuration policy. This happens even if the settings in the configuration policy are more secure.
+- If the conflict is between settings from an Intune configuration policy and a compliance policy, the settings in the compliance policy take precedence over the settings in the configuration policy. This result happens even if the settings in the configuration policy are more secure.
 
 - If you have deployed multiple compliance policies, Intune uses the most secure of these policies.
 

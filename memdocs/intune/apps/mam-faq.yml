@@ -9,7 +9,7 @@ metadata:
   ms.author: erikre
   manager: dougeby
   ms.date: 12/09/2020
-  ms.topic: conceptual
+  ms.topic: faq
   ms.service: microsoft-intune
   ms.subservice: apps
   ms.localizationpriority: high
@@ -26,7 +26,6 @@ metadata:
   ms.collection:
     - M365-identity-device-management
     - highpri
-    
 title: Frequently asked questions about MAM and app protection
 summary: This article provides answers to some frequently asked questions on Intune mobile application management (MAM) and Intune app protection.
 
@@ -36,18 +35,8 @@ sections:
     questions:
       - question: What is MAM?
         answer: |
-          [Intune mobile application management](app-lifecycle.md) refers to the suite of Intune management features that lets you publish, push, configure, secure, monitor, and update mobile apps for your users.
+          [MAM Overview](../apps/app-management.md#mobile-application-management-mam-basics)
           
-      - question: What are the benefits of MAM app protection?
-        answer: |
-          MAM protects an organization's data within an application. With MAM without enrollment (MAM-WE), a work or school-related app that contains sensitive data can be managed on almost any device, including personal devices in bring-your-own-device (BYOD) scenarios. Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of [Intune-managed apps](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) available for public use.
-          
-      - question: What device configurations does MAM support?
-        answer: |
-          Intune MAM supports two configurations:
-          - **Intune MDM + MAM**: IT administrators can only manage apps using MAM and app protection policies on devices that are enrolled with Intune mobile device management (MDM). To manage apps using MDM + MAM, customers should use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-          
-          - **MAM without device enrollment**: MAM without device enrollment, or MAM-WE, allows IT administrators to manage apps using MAM and app protection policies on devices not enrolled with Intune MDM. This means apps can be managed by Intune on devices enrolled with third-party EMM providers. To manage apps using MAM-WE, customers should use the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Also, apps can be managed by Intune on devices enrolled with third-party Enterprise Mobility Management (EMM) providers or not enrolled with an MDM at all.
           
   - name: App protection policies
     questions: 
@@ -60,7 +49,7 @@ sections:
           
       - question: Is it possible to have both MDM and MAM policies applied to the same user at the same time, for different devices? For example, if a user could be able to access their work resources from their own MAM-enabled machine, but also come to work and use an Intune MDM-managed device. Are there any caveats to this idea?
         answer: |
-          If you apply a MAM policy to the user without setting the device state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply a MAM policy based on the managed state. So when you create an app protection policy, next to Target to all app types, you'd select No. Then do any of the following:
+          If you apply a MAM policy to the user without setting the device management state, the user will get the MAM policy on both the BYOD device and the Intune-managed device. You can also apply a MAM policy based on the device management state. So when you create an app protection policy, next to Target to apps on all device types, you'd select No. Then do any of the following:
           - Apply a less strict MAM policy to Intune managed devices, and apply a more restrictive MAM policy to non MDM-enrolled devices.
           -	Apply an equally strict MAM policy to Intune managed devices as to 3rd party managed devices.
           - Apply a MAM policy to unenrolled devices only.
@@ -206,7 +195,8 @@ sections:
   - name: App experience on Android
     questions: 
       - question: Why is the Company Portal app needed for Intune app protection to work on Android devices?
-        answer: Much of app protection functionality is built into the Company Portal app. Device enrollment is _not required_ even though the Company Portal app is always required. For MAM-WE, the end user just needs to have the Company Portal app installed on the device.
+        answer: |
+          [Company Portal app and Intune app protection](../apps/app-protection-policy.md#company-portal-app-and-intune-app-protection) 
 
       - question: How do multiple Intune app protection access settings that are configured to the same set of apps and users work on Android?
         answer: |

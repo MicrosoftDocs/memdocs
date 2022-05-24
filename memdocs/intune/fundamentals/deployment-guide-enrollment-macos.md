@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/22/2021
+ms.date: 02/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -36,9 +36,7 @@ You have the following options when enrolling macOS devices:
 
 - [BYOD: Device enrollment](#byod-device-enrollment)
 - [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised)
-
-> [!NOTE]
-> Enrollment through Apple Configurator is available for iOS/iPadOS devices. It's not available for macOS devices. When you create a macOS enrollment profile, it appears that Apple Configurator is an option. This behavior is a known issue, and will be fixed in a future release (no ETA). Do not create a macOS enrollment profile with Apple Configurator. It doesn't work.
+- [Direct enrollment](#direct-enrollment)
 
 This article:
 
@@ -57,7 +55,7 @@ For an overview, including any Intune-specific prerequisites, see [Deployment gu
 
 ## BYOD: Device enrollment
 
-Use for personal or bring your own devices (BYOD). Not a traditional "enrollment" method, as it uses an app configuration profile. This option manages apps on the device. Devices aren't enrolled.
+Use for personal or bring your own devices (BYOD). 
 
 ---
 | Feature | Use this enrollment option when |
@@ -195,9 +193,55 @@ For more specific information on the end user steps, see [Enroll your macOS devi
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
+## Direct enrollment
+
+Use on devices owned by your organization that don't need user device affinity.
+
+These devices are organization-owned, and use Apple Configurator. The only purpose is to be a kiosk-style device. They aren't associated with a single or specific user. These devices are commonly used to scan items, print tickets, get digital signatures, manage inventory, and more.
+
+For more specific information on this enrollment type, see [Use Direct Enrollment for macOS devices](../enrollment/device-enrollment-direct-enroll-macos.md).
+
+---
+| Feature | Use this enrollment option when |
+| --- | --- |
+| You need a wired connection, or are having a network issue. | ✔️ |
+| Your organization doesn't want administrators to use the ABM or ASM portals, or doesn't want to set up all the requirements.  | ✔️ <br/><br/> The idea of *not* using the ABM or ASM portals is to give administrators less control.|
+| A country doesn't support Apple Business Manager (ABM) or Apple School Manager (ASM). | ✔️ <br/><br/> If your country supports ABS or ASM, then devices should be enrolled using [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article). |
+| Devices are owned by the organization or school. | ✔️ |
+| You have new or existing devices. | ✔️ |
+| Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✔️ <br/><br/> If you have a large number of devices, then this method will take some time. |
+| Devices are associated with a single user. | ❌ <br/><br/> Not recommended. Devices that need user affinity should be enrolled using [Automated device enrollment (ADE)](#automated-device-enrollment-ade-supervised). |
+| Devices are user-less, such as kiosk or dedicated device. | ✔️ |
+| Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using [MAM-WE](deployment-guide-enrollment-mamwe.md) (opens another Microsoft article), or [BYOD: Device enrollment](#byod-device-enrollment) (in this article). |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM-WE to manage specifics apps on the device. Since these devices are organization-owned, we recommend enrolling in Intune. |
+| You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
+
+---
+
+### Direct enrollment administrator tasks
+
+This task list provides an overview. For more specific information, see [macOS Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md).
+
+- Be sure your devices are [supported](supported-devices-browsers.md).
+- Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Endpoint Manager, and is active. This certificate is required to enroll macOS devices. For more information, see [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
+- In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), create an enrollment profile. Select **Enroll without user affinity** (user-less devices or shared devices). With user-less devices:
+
+  - Users can't use apps that require a user, including the Company Portal app. The Company Portal app isn't used, needed, or supported on enrollments without user affinity. Be sure users don't install the Company Portal app from the Apple app store.
+  - **Enroll with user affinity** is available in the UI, but it won't work. Don't select this option. If you need user affinity, then use [Automated Device Enrollment](#automated-device-enrollment-ade-supervised) (in this article).
+
+- When the enrollment profile is ready, export the policy, and copy the file to the macOS device. Double-click the file to install the enrollment policy.
+
+For more information on this enrollment option, and its prerequisites, see [macOS Direct Enrollment](../enrollment/device-enrollment-direct-enroll-macos.md).
+
+### Direct enrollment end user tasks
+
+- **Enroll without user affinity**: No actions. Be sure they don't install the Company Portal app from the Apple app store.
+
+  :::image type="content" source="./media/deployment-guide-enrollment-ios-ipados/configurator-enroll-without-user-affinity.png" alt-text="In the Endpoint Manager admin center and Microsoft Intune, enroll macOS devices using Direct enrollment. Select enroll without user affinity.":::
+
 ## Next steps
 
-- [MAM-WE](deployment-guide-enrollment-mamwe.md)
+- [MAM](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)

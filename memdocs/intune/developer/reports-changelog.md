@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 02/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -32,6 +32,11 @@ ms.collection: M365-identity-device-management
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 Keep current on updates to the Intune Data Warehouse.
+
+## 2202
+_Released February 2022_
+
+The  `applicationInventory` entity has been removed from the Intune Data Warehouse. A new dataset is now available in the UI and via Intune's export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
 ## 2105
 _Released May 2021_
@@ -328,7 +333,7 @@ _Released October  2017_
 
 You can now build reports and data visualizations using the user device association information that associates user and device entity collections. The data model can be accessed through the Power BI file (PBIX) retrieved from the Data Warehouse Intune page, through the OData endpoint, or by developing a custom client. For more information, see the [User Device Association](reports-ref-user-device.md).
 
-### New entities in the in Data Warehouse data model <!-- 1479526 --><!-- -->
+### New entities in the in Data Warehouse data model <!-- 1479526 -->
 
 - The entity, [**UserDeviceAssociation**](reports-ref-user-device.md), added. **UserDeviceAssociation** contains user device associations in your organization. You can now build reports and data visualizations using the user device association information that associates user and device entity collections.  
 - The entity, [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md), added. **IntuneManagementExtension** contains entities for mobile devices that track information such as version and installation status.

@@ -1,4 +1,5 @@
 ---
+description: Learn how to create a deployment template available to deploy a software update on the site directly versus using the Configuration Manager console.
 title: "SMS_Template Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

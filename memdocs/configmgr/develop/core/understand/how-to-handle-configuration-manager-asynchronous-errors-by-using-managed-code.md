@@ -1,6 +1,7 @@
 ---
 title: "Handle Asynchronous Errors by Using Managed Code"
 titleSuffix: "Configuration Manager"
+description: "To handle a Configuration Manager error raised during an asynchronous query, test the RunWorkerCompletedEventArgs parameter Error Exception property passed to the SmsBackgroundWorker.QueryProcessorCompleted event handler."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

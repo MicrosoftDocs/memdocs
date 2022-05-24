@@ -1,5 +1,6 @@
 ---
 title: "MoveFolders Method"
+description: Learn how the MoveFolders Windows Management (WMI) class method, in Configuration Manager, moves folders to another folder location.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

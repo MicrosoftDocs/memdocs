@@ -1,5 +1,6 @@
 ---
 title: "SMS_RemoteToolsAgentConfig Class"
+description: Learn how the SMS_RemoteToolsAgentConfig class is an SMS Provider server class that specifies the Remote Control settings on client computers.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

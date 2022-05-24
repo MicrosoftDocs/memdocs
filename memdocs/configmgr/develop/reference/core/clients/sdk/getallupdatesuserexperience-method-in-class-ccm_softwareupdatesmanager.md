@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the user experience mode that determines how software updates are displayed with GetAllUpdatesUserExperience.
 title: "GetAllUpdatesUserExperience Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

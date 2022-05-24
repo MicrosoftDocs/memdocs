@@ -1,6 +1,7 @@
 ---
 title: "SMS_CH_CheckSummary Class"
 titleSuffix: "Configuration Manager"
+description: "A provider server class that represents the client check summary."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

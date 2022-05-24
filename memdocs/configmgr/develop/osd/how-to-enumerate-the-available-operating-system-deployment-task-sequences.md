@@ -1,5 +1,6 @@
 ---
 title: "Enumerate the Available OS Deployment Task Sequences"
+description: You enumerate the available operating system deployment task sequences, in Configuration Manager, by querying the available task sequence packages.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

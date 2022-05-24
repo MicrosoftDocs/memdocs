@@ -1,6 +1,7 @@
 ---
 title: "Create an OS Deployment Task Sequence Group"
 titleSuffix: "Configuration Manager"
+description: "An operating system deployment task sequence group can be added to a task sequence by creating an instance of the SMS_TaskSequence_Group class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
