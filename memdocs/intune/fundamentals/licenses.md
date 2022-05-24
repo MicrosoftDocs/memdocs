@@ -81,7 +81,7 @@ For more information about giving administrators access to Microsoft Endpoint Ma
 
 Microsoft Intune offers a device-only subscription service that helps organizations manage devices that aren't affiliated with specific users. 
 
-You can purchase device licenses based on your estimated usage. Microsoft Intune device licenses are applicable when a devices is enrolled through any of the following methods:
+You can purchase device licenses based on your estimated usage. Microsoft Intune device licenses are applicable when a device is enrolled through any of the following methods:
 
 - [Windows Autopilot Self-Deploying mode](/windows/deployment/windows-autopilot/self-deploying)
 - [Apple Device Enrollment Program without user affinity](/mem/intune/enrollment/device-enrollment-program-enroll-ios)
@@ -99,7 +99,7 @@ When a device is enrolled by using a device license, the following Intune functi
 
 - [Intune app protection policies](/mem/intune/apps/app-protection-policy)
 - [Conditional access](/mem/intune/protect/conditional-access)
-- User-based management features, such as email and calendaring.
+- User-based management features, such as email and calendaring
 
 ## Confirm your licenses
 
