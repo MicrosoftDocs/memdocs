@@ -48,7 +48,7 @@ To be eligible for the Windows feature update device readiness and Windows featu
 
 - Run a supported version of Windows 10 or later with the latest cumulative update
 - Be Azure AD joined or hybrid Azure AD joined
-- Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/)
+- Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/device-sync-actions.md)
 - Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
 
 Additionally, you must [enable Windows diagnostic data processor configuration](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#enable-windows-diagnostic-data-processor-configuration).
@@ -225,7 +225,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 | 1                     | Application  |
 | 2                     | Driver       |
 | 3                     | Other        |
- 
+
 **Risk status** (This column is called *Readiness status* in the .csv export):
 
 | Readiness status .csv value | Risk status report value |
