@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/24/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -46,9 +46,9 @@ For an overview of cloud native endpoints, and their benefits, go to [What are c
 
 For cloud native Windows endpoints to access on-premises resources and services that use on-premises Active Directory (AD) for authentication, the following prerequisites are required:
 
-- Client apps **must use Windows integrated authentication (WIA)**. For more specific information, see [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication).
+- Client apps **must use Windows integrated authentication (WIA)**. For more specific information, go to [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication).
 
-- **Configure Azure AD Connect**. Azure AD Connect synchronizes user accounts from the on-premises AD to Azure AD. For more specific information, see [Azure AD Connect sync: Understand and customize synchronization](/azure/active-directory/hybrid/how-to-connect-sync-whatis).
+- **Configure Azure AD Connect**. Azure AD Connect synchronizes user accounts from the on-premises AD to Azure AD. For more specific information, go to [Azure AD Connect sync: Understand and customize synchronization](/azure/active-directory/hybrid/how-to-connect-sync-whatis).
 
   In Azure AD Connect, you may have to adjust your domain-based filtering to confirm that the required domains data is synchronized to Azure AD.
 
@@ -58,7 +58,7 @@ For cloud native Windows endpoints to access on-premises resources and services 
 
 For end users, a Windows cloud native endpoint behaves like any other on-premises Windows device. 
 
-The following list is a common set of on-premises resources that users can access from their Windows Azure AD joined devices:
+The following list is a common set of on-premises resources that users can access from their Azure AD joined devices:
 
 - A file server: Using SMB (Server Message Block), you can map a network drive to a domain-member server that hosts a network share or NAS (Network Attached Storage).
 
@@ -78,13 +78,13 @@ The following list is a common set of on-premises resources that users can acces
 
 The following steps describe how an Azure AD joined endpoint authenticates and accesses (based on permissions) an on-premises resource.
 
-The following steps are an overview. For more specific information, including detailed swimlane graphics describing the full process, see [Primary Refresh Token (PRT) and Azure AD](/azure/active-directory/devices/concept-primary-refresh-token).
+The following steps are an overview. For more specific information, including detailed swimlane graphics that describe the full process, go to [Primary Refresh Token (PRT) and Azure AD](/azure/active-directory/devices/concept-primary-refresh-token).
 
 1. When users sign in, their credentials are sent to the Cloud Authentication Provider (CloudAP) and the Web Account Manager (WAM).
 
 2. The CloudAP plugin sends the user and device credentials to Azure AD. Or, [it authenticates using Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-how-it-works-authentication).
 
-3. During Windows sign in, the Azure AD CloudAP plugin requests a Primary Refresh Token (PRT) from Azure AD using the user credentials. It also caches the PRT, which enables cached sign in when users don't have an internet connection. When users try to access applications, the Azure AD WAM plugin uses the PRT to enable SSO.
+3. During Windows sign-in, the Azure AD CloudAP plugin requests a Primary Refresh Token (PRT) from Azure AD using the user credentials. It also caches the PRT, which enables cached sign-in when users don't have an internet connection. When users try to access applications, the Azure AD WAM plugin uses the PRT to enable SSO.
 
 4. Azure AD authenticates the user and device, and returns a PRT & an ID token. The ID token includes the following attributes about the user:
 
@@ -107,17 +107,17 @@ The following steps are an overview. For more specific information, including de
     > 
     > [MS-PKCA: Public Key Cryptography for Initial Authentication (PKINIT) in Kerberos Protocol](/openspecs/windows_protocols/ms-pkca/d0cf1763-3541-4008-a75f-a577fa5e8c5b)
 
-6. The DC authenticates the user. The DC returns a Kerberos Ticket-Granting Ticket (TGT) or a NTLM token based on the protocol that the on-premises resource or application supports (Windows caches the returned TGT or NTLM token for future use).
+6. The DC authenticates the user. The DC returns a Kerberos Ticket-Granting Ticket (TGT) or an NTLM token based on the protocol that the on-premises resource or application supports. Windows caches the returned TGT or NTLM token for future use.
 
     If the attempt to get the Kerberos TGT or NTLM token for the domain fails (related DCLocator timeout can cause a delay), then Windows Credential Manager retries. Or, the user may receive an authentication pop-up requesting credentials for the on-premises resource.
 
-7. All apps that use [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication) automatically use SSO when a user tries to access the apps. Windows integrated authentication includes standard user authentication to an on-premises AD domain using NTLM or Kerberos when accessing on-premises services or resources.
+7. All apps that use [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication) automatically use SSO when a user tries to access the apps. WIA includes standard user authentication to an on-premises AD domain using NTLM or Kerberos when accessing on-premises services or resources.
 
-    For more information, see [How SSO to on-premises resources works on Azure AD joined devices](/azure/active-directory/devices/azuread-join-sso).
+    For more information, go to [How SSO to on-premises resources works on Azure AD joined devices](/azure/active-directory/devices/azuread-join-sso).
 
     It's important to emphasize the value of Windows Integrated Authentication. Native cloud endpoints simply "work" with any application configured for WIA.
 
-    When users access a resource that uses WIA, like a file server, printer, web server, and more, then the TGT is exchanged with a Kerberos service ticket, which is the usual Kerberos workflow.
+    When users access a resource that uses WIA (file server, printer, web server, etc.), then the TGT is exchanged with a Kerberos service ticket, which is the usual Kerberos workflow.
 
 ## Follow the cloud native endpoints guidance
 

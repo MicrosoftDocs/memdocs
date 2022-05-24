@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 05/19/2022
+ms.date: 05/24/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals

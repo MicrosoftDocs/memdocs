@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/24/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -36,7 +36,7 @@ ms.collection:
 
 When using or moving on-premises device management to cloud native endpoints, there are some scenarios you need to know. This article lists and describes some changed behaviors, limitations, and resolutions.
 
-Cloud native endpoints are devices that are joined to Azure AD. In many cases, they don't require a direct connection to any on-premises resources for usability or management. For more specific information, see [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
+Cloud native endpoints are devices that are joined to Azure AD. In many cases, they don't require a direct connection to any on-premises resources for usability or management. For more specific information, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
 
 This feature applies to:
 
@@ -77,7 +77,7 @@ The following list includes common features and services that might use machine 
 
   - **Server and workstation file shares**: Update permissions to use user account-based security. When you do, use [Azure AD single sign-on (SSO)](/azure/active-directory/devices/azuread-join-sso) to access resources that use Windows integrated authentication.
 
-    Move file share content to SharePoint Online or OneDrive. For more specific information, see [Migrate file shares to SharePoint and OneDrive](/sharepointmigration/fileshare-to-odsp-migration-guide).
+    Move file share content to SharePoint Online or OneDrive. For more specific information, go to [Migrate file shares to SharePoint and OneDrive](/sharepointmigration/fileshare-to-odsp-migration-guide).
 
   - **Network File System (NFS) root access**: Direct users to access specific folders, not the root. If you can, move content from an NFS to SharePoint Online or OneDrive.
 
@@ -105,7 +105,7 @@ The following list includes common features and services that might use machine 
 
 - Standard **print management and discovery** depends on machine authentication. On Azure AD joined Windows endpoints, users can't print using standard print.
 
-  **Recommendation**: Use Universal Print. For more specific information, see [What is Universal Print](/universal-print/fundamentals/universal-print-whatis).
+  **Recommendation**: Use Universal Print. For more specific information, go to [What is Universal Print](/universal-print/fundamentals/universal-print-whatis).
 
 - **Windows scheduled tasks** that run in the machine-context on cloud native endpoints can't access resources on remote servers and workstations. The cloud native endpoint doesn't have an account in on-premises AD, and therefore can't authenticate.
 
@@ -131,7 +131,7 @@ It's possible some of your older policies aren't available, or don't apply to cl
 - Using [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics) in Endpoint Manager, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
 - In endpoint management, policies are deployed to users and groups. They aren't applied in LSDOU order. This behavior is a mind shift, so make sure your users and groups are in order.
 
-  For more specific information and guidance on policy assignment in Microsoft Intune, see [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).
+  For more specific information and guidance on policy assignment in Microsoft Intune, go to [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).
 
 - Inventory your policies, and determine what they do. You may find categories or groupings, such as policies that focus on security, policies that focus on the OS, and so on.
 
@@ -155,7 +155,7 @@ Microsoft will release an update to provide LAPS for Azure AD joined devices (no
 
 **Resolution**: 
 
-Azure AD joined devices use Azure AD to configure users and groups that will have local administrator privileges. For more information and guidance, see [How to manage local administrators on Azure AD joined devices](/azure/active-directory/devices/assign-local-admin).
+Azure AD joined devices use Azure AD to configure users and groups that will have local administrator privileges. For more information and guidance, go to [How to manage local administrators on Azure AD joined devices](/azure/active-directory/devices/assign-local-admin).
 
 ## Synchronized user accounts can't complete first sign-in
 
@@ -167,7 +167,7 @@ Currently, synchronized user accounts with passwords that have **User must chang
 
 Use Password Hash Sync and Azure AD connect, which forces the **force password change at logon** attribute to sync.
 
-For more specific information, see [Implement password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon).
+For more specific information, go to [Implement password hash synchronization with Azure AD Connect sync](/azure/active-directory/hybrid/how-to-connect-password-hash-synchronization#synchronizing-temporary-passwords-and-force-password-change-on-next-logon).
 
 ## Follow the cloud native endpoints guidance
 
