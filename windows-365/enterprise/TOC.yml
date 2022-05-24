@@ -139,6 +139,8 @@ items:
         href: device-management-overview.md
       - name: Remotely manage Cloud PC devices 
         href: remotely-manage-cloud-pc.md
+      - name: RDP Shortpath for public networks 
+        href: rdp-shortpath-public-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC

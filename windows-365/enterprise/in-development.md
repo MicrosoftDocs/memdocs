@@ -57,11 +57,8 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!--## App management-->
 
 <!--***********************************************-->
-## Device management
-
-### Support for RDP Shortpath for public networks<!--39316531-->
-
-In a future update, Windows 365 Enterprise Cloud PCs will support RDP Shortpath for public networks. For more information about RDP Shortpath, see [Azure Virtual Desktop RDP Shortpath for public networks](/azure/virtual-desktop/shortpath-public).
+<!--## Device management
+-->
 
 <!-- ***********************************************-->
 ## Device provisioning
