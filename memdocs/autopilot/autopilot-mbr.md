@@ -410,7 +410,6 @@ Assuming the used HDD was previously deregistered (before being used in this rep
 We don't recommend any of these scenarios.
 
 
-<tr><td>A device repaired more than three times<td>No<td>Autopilot isn't supported when a device is repeatedly repaired. Parts NOT replaced become associated with too many parts that have been replaced. This  makes it difficult to uniquely identify that device in the future.
 <tr><td>Memory replacement<td>Yes<td>Replacing the memory on a damaged device doesn't negatively affect the Autopilot experience on that device. No de/reregistration is needed. The repair technician simply needs to replace the memory.
 <tr><td>GPU replacement<td>Yes<td>Replacing the GPU(s) on a damaged device doesn't negatively affect the Autopilot experience on that device. No de/reregistration is needed. The repair technician simply needs to replace the GPU.
 </table>
