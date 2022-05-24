@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/24/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -137,11 +137,11 @@ The [High level planning guide to move to cloud native endpoints](cloud-native-e
   - Be prepared to change operational processes and procedures.
   - Get your end users ready for change.
 
-  For more specific information, see the [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md).
+  For more specific information, go to the [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md).
 
 - **Create a Proof of Concept**: Do an initial proof of concept (POC). The goal is to understand changes and their impact.
 
-  For more specific information, see the [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md).
+  For more specific information, go to the [High level planning guide to move to cloud native endpoints](cloud-native-endpoints-planning-guide.md).
 
 ## Follow the cloud native endpoints guidance
 
