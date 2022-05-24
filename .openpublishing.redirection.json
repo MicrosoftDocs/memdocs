@@ -1154,6 +1154,10 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "windows-365/get-users-started.md",
+            "redirect_url":"/windows-365/end-user-access-cloud-pc",
+            "redirect_document_id": false
+        }, {
             "source_path": "memdocs/intune/remote-actions/remote-assist-mobile-devices.md",
             "redirect_url": "/mem/intune/remote-actions/remote-help",
             "redirect_document_id": false
