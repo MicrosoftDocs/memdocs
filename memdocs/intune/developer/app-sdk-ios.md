@@ -1047,4 +1047,4 @@ Yes! Please see the [Chatr sample app](https://github.com/msintuneappsdk/Chatr-S
 
 The Intune SDK for iOS 9.0.3+ supports the ability to add a diagnostics console within the mobile app for testing policies and logging errors. `IntuneMAMDiagnosticConsole.h` defines the `IntuneMAMDiagnosticConsole` class interface, which developers can use to display the Intune diagnostic console. This allows end users or developers during test to collect and share Intune logs to help diagnose any issue they may have. This API is optional for integrators. 
 
-If troubleshooting MSAL specific errors, consider enabling the ADALLogOverrideDisabled flag in your info.plist file and configuring logging according to [MSAL documentation](https://docs.microsoft.com/en-us/azure/active-directory/develop/msal-logging-ios?tabs=objc).
+If troubleshooting MSAL-specific errors, consider enabling the ADALLogOverrideDisabled flag in your info.plist file and configuring logging according to [MSAL documentation](/azure/active-directory/develop/msal-logging-ios?tabs=objc).
