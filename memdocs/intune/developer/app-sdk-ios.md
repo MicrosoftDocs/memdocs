@@ -1053,7 +1053,7 @@ The Intune SDK for iOS 9.0.3+ supports the ability to add a diagnostics console 
 
 ## Submit your app to the App Store
 
-Both the static library and framework builds of the Intune App SDK are universal binaries. This means they have code for all device and simulator architectures. Apple will reject apps submitted to the App Store if they have simulator code. When compiling against the static library for device-only builds, the linker will automatically strip out the simulator code. Follow the steps below to ensure all simulator code is removed before you upload your app to the App Store.
+Both the static library and Framework builds of the Intune App SDK are universal binaries. This means they have code for all device and simulator architectures. Apple will reject apps submitted to the App Store if they have simulator code. When compiling against the static library for device-only builds, the linker will automatically strip out the simulator code. Follow these steps to ensure all simulator code is removed before you upload your app to the App Store:
 
 1. Make sure `IntuneMAM.framework` is on your desktop.
 
