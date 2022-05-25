@@ -78,7 +78,7 @@ Microsoft Endpoint Configuration Manager automatically collects the hardware has
 
 ### PowerShell
 
-The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) to get a device's hardware hash and serial number. The serial number is useful for quickly seeing which device the hardware hash belongs to.
+The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows. You can use a PowerShell script ([Get-WindowsAutopilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo)) to get a device's hardware hash and serial number. The serial number is useful for quickly seeing which device the hardware hash belongs to.
 
 To use this script, you can use either of the following methods:
 
@@ -94,8 +94,8 @@ To install the script directly and capture the hardware hash from the local comp
    Set-Location -Path "C:\HWID"
    $env:Path += ";C:\Program Files\WindowsPowerShell\Scripts"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-   Install-Script -Name Get-WindowsAutoPilotInfo
-   Get-WindowsAutoPilotInfo -OutputFile AutoPilotHWID.csv
+   Install-Script -Name Get-WindowsAutopilotInfo
+   Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
    ```
 
    You can run the commands remotely if both of the following are true:
@@ -109,7 +109,7 @@ To install the script directly and capture the hardware hash from the local comp
    PowerShell.exe -ExecutionPolicy Bypass
    Install-Script -name Get-WindowsAutopilotInfo -Force
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-   Get-WindowsAutoPilotInfo -Online
+   Get-WindowsAutopilotInfo -Online
    ```
 
 3. You're prompted to sign in. An account with the Intune Administrator role is sufficient, and the device hash will then be uploaded automatically. 
@@ -123,7 +123,7 @@ To install the script directly and capture the hardware hash from the local comp
 > [!NOTE]
 > Because Intune offers free (or inexpensive) accounts that lack robust vetting, and because 4K hardware hashes contain sensitive information that only device owners should maintain, we recommend registering devices through Microsoft Endpoint Manager via a 4K hardware hash only for testing or other limited scenarios. In most cases, you should instead use the Microsoft Partner Center for Autopilot device registration.
 
-For more information about running the *Get-WindowsAutoPilotInfo.ps1* script, see the script's help by using `Get-Help Get-WindowsAutoPilotInfo`.
+For more information about running the *Get-WindowsAutopilotInfo.ps1* script, see the script's help by using `Get-Help Get-WindowsAutopilotInfo`.
 
 ### Diagnostics page hash export
 
