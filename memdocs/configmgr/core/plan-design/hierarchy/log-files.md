@@ -114,7 +114,7 @@ The following table lists the log files located on the Configuration Manager cli
 
 |Log name|Description|  
 |--------------|-----------------|  
-|ADALOperationProvider.log|Information about client authentication token requests with Azure Active Directory (Azure AD) Authentication Library (ADAL).|
+|ADALOperationProvider.log|Information about client authentication token requests with Azure Active Directory (Azure AD) Authentication Library (ADAL). (Replaced by CcmAad.log starting in version 2107)|
 |BitLockerManagementHandler.log|Records information about BitLocker management policies.|
 |CAS.log|The Content Access service. Maintains the local package cache on the client.|  
 |Ccm32BitLauncher.log|Records actions for starting applications on the client marked *run as 32 bit*.|  
@@ -726,7 +726,7 @@ The following table lists the log files that contain information related to OS d
 |MCSSetup.log|Records details about multicast server role installation.|Site system server|  
 |MCSMSI.log|Records details about multicast server role installation.|Site system server|  
 |Mcsperf.log|Records details about multicast performance counter updates.|Site system server|  
-|MP_ClientIDManager.log|Records management point responses to client ID requests that task sequences start from PXE or boot media.|Site system server|  
+|MP_ClientID.log|Records management point responses to client ID requests that task sequences start from PXE or boot media.|Site system server|  
 |MP_DriverManager.log|Records management point responses to Auto Apply Driver task sequence action requests.|Site system server|  
 |OfflineServicingMgr.log|Records details of offline servicing schedules and update apply actions on operating system Windows Imaging Format (WIM) files.|Site system server|  
 |Setupact.log|Records details about Windows Sysprep and setup logs. For more information, see [Log Files](/windows/deployment/upgrade/log-files).|Client|  
