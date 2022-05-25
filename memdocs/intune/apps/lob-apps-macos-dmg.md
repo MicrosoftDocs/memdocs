@@ -82,6 +82,7 @@ Select the app package file:
     - **Owner**: Optionally, enter a name for the owner of this app. An example is HR department.
     - **Notes**: Enter any notes that you want to associate with this app.
     - **Logo**: Upload an icon that is associated with the app. This icon is displayed with the app when users browse through the company portal.
+
 2. Click **Next** to set the requirements.
 
 ## Step 2 – Requirements
