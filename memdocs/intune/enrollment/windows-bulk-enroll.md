@@ -70,6 +70,8 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 6. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.
    ![Screenshot of account management in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-account.png)
 
+[!NOTE] Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Azure AD.
+
 7. Provide your Azure AD credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
