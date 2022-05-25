@@ -85,7 +85,7 @@ You can purchase and distribute public as well as private apps using Apple Busin
 > [!IMPORTANT]
 > - A location token can only be used with one device management solution at a time. Before you start to use purchased apps with Intune, revoke and remove any existing location tokens used with other mobile device management (MDM) vendor. 
 > - A location token is only supported for use on one Intune tenant at a time. Do not reuse the same token for multiple Intune tenants.
-> - By default, Intune synchronizes the location tokens with Apple twice a day. You can initiate a manual sync at any time from Intune.
+> - By default, Intune synchronizes the location tokens with Apple once a day. You can initiate a manual sync at any time from Intune.
 > - After you have imported the location token to Intune, do not import the same token to any other device management solution. Doing so might result in the loss of license assignment and user records.
 
 ## Migrate from Volume Purchase Program (VPP) to Apps and Books
