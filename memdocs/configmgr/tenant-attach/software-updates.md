@@ -35,7 +35,7 @@ To display the **Software updates** page for a device, use the following steps:
 
 ## Update details
 
-Selecting an update from the **Software updates** page opens the details pane for the update. The details pane lists the title of the update along with it's description, classification, product category, and link to technical information about the specific update. The pane also includes the status and the status time for the selected update on the selected device.
+Selecting an update from the **Software updates** page opens the details pane for the update. The details pane lists the title of the update along with its description, classification, product category, and link to technical information about the specific update. The pane also includes the status and the status time for the selected update on the selected device.
 
 :::image type="content" source="./media/13035723-software-updates-details.png" alt-text=" Screenshot displaying the details pane for an update." lightbox="media/13035723-software-updates-details.png":::
 
