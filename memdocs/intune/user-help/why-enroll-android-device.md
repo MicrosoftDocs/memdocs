@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Why enroll your Android device
-description: Learn why it's important to enroll your device in Intune
+title: Android device enrollment overview  
+description: Learn why enrollment is enforced in workplaces and schools and the benefits of enrolling your Android devices. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -29,7 +29,7 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Why enroll your Android device  
+# Android device enrollment overview  
 
 Schools and employers want to make sure that you're using a secure, trusted device to access internal resources such as apps and Wi-Fi. When you enroll in Intune, the Microsoft Intune and Company Portal apps ensure that you have secure access to these resources no matter where you are or what device you're using. 
 
