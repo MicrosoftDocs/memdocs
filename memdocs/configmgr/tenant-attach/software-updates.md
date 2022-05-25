@@ -22,7 +22,7 @@ The **Software updates** page in the admin center displays the status of softwar
 
 Each tenant attached device lists its applicable updates and the status of each update on the **Software updates** page. The **Software updates** page is populated with data from Configuration Manager software update scans.
 
-:::image type="content" source="./media/13035723-software-updates-page.png" alt-text="This screenshot displays software updates page for a device.":::
+:::image type="content" source="./media/13035723-software-updates-page.png" alt-text="This screenshot displays software updates page for a device." lightbox="media/13035723-software-updates-page.png":::
 
 ## Display the Software updates page
 
@@ -37,13 +37,13 @@ To display the **Software updates** page for a device, use the following steps:
 
 Selecting an update from the **Software updates** page opens the details pane for the update. The details pane lists the title of the update along with it's description, classification, product category, and link to technical information about the specific update. The pane also includes the status and the status time for the selected update on the selected device.
 
-:::image type="content" source="./media/13035723-software-updates-details.png" alt-text=" Screenshot displaying the details pane for an update.":::
+:::image type="content" source="./media/13035723-software-updates-details.png" alt-text=" Screenshot displaying the details pane for an update." lightbox="media/13035723-software-updates-details.png":::
 
 ### Software updates page options
 
 **Searching:** Searching is enabled for every category except for **Status time**. You can search for a string of words, a single word, or a partial word. For instance, searching for the string `compliant` would display results that contain the string `compliant` which would include `non-compliant`.
 
-:::image type="content" source="./media/13035723-software-updates-filter.png" alt-text="This screenshot shows searching a feature on software updates page.":::
+:::image type="content" source="./media/13035723-software-updates-filter.png" alt-text="This screenshot shows searching a feature on software updates page." lightbox="media/13035723-software-updates-filter.png":::
 
 **Sorting:** You can sort by any column. The default view is sorted based on the **Status time**.
 
@@ -63,5 +63,5 @@ The following **Status** values are used in the **Software updates** page:
 - **Compliant**: The update is fully compliant and assigned.
 - **Non-compliant**: The update isn't compliant (this message doesn't mean there was an error though), it just means it's either an older version or unapproved.
 - **Conflict detected**: There's some sort of conflict with other software on the machine causing the update to fail.
-- **Error** - The update failed with an error.
-- **Partial compliance** - The update is installed and partially compliant. That is, part of the software update isn't compliant.
+- **Error**: The update failed with an error.
+- **Partial compliance**: The update is installed and partially compliant. That is, part of the software update isn't compliant.
