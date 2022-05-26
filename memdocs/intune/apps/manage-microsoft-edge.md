@@ -474,14 +474,18 @@ For a list of the settings stored in the app logs, see [Review client app protec
 To see how to view logs on Android devices, see [Send logs to your IT admin by email](../user-help/send-logs-to-your-it-admin-by-email-android.md).
 
 ## Switch network stack between Chromium and iOS 
-By default, Edge for iOS and Android uses Chromium network stack for internal network communication, including VPN. Edge for iOS also provides iOS network stack for network communication. Organizations can choose the network preference for Edge for iOS by configuring the following setting.
+The layers of the network architecture is called the network stack. The layers of a network stack are broadly divided into sections, such as Network Interface, Network Driver Interface Specification (NDIS), Protocol Stack, System Drivers, and User-Mode Applications.
+
+By default, Edge for both iOS and Android use the Chromium network stack for internal network communication, including VPN. Edge for iOS also provides the iOS network stack for network communication. 
+
+Organizations can modify their network stack preference by configuring the following setting.
 
 |Key  |Value  |
 |---------|---------|
-|com.microsoft.intune.mam.managedbrowser.NetworkStackPref     |**0** (default) use Chromium network stack.<br>**1** use iOS network stack<br>**2** automatically switch to iOS network stack when Chromium network stack fails | 
+|com.microsoft.intune.mam.managedbrowser.NetworkStackPref     |**0** (default) use the Chromium network stack<br>**1** use the iOS network stack<br>**2** automatically switch to the iOS network stack when the Chromium network stack fails | 
 
 > [!NOTE]
-> Chromium network stack is recommended. Use iOS network stack when you run into network issues, VPN in particular.
+> Chromium network stack is recommended. Use iOS network stack when you run into network issues, such as VPN in particular.
 
 ## Next steps
 
