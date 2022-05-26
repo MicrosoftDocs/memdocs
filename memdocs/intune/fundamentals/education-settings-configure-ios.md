@@ -80,7 +80,7 @@ You can import information into SDS by using one of the following methods:
 
 ### Configure general settings
 
-1. Sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973).
+1. Sign in to [Intune]([https://go.microsoft.com/fwlink/?linkid=2090973](https://endpoint.microsoft.com)).
 3. On the **Intune** pane, choose **Device configuration**.
 2. On the **Device configuration** pane under the **Manage** section, choose **Profiles**.
 5. On the profiles pane, choose **Create profile**.
