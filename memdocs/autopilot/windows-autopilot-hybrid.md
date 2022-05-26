@@ -181,6 +181,8 @@ If your devices aren't yet enrolled, you can register them yourself. For more in
 
 If you're buying new devices, some OEMs can register the devices for you. For more information, see [OEM registration](oem-registration.md).
 
+### View registered Autopilot device
+
 Before they're enrolled in Intune, *registered* Autopilot devices are displayed in three places (with names set to their serial numbers):
 - The **Autopilot Devices** pane in the Intune in the Azure portal. Select **Device enrollment** > **Windows enrollment** > **Devices**.
 - The **Azure AD devices** pane in the Intune in the Azure portal. Select **Devices** > **Azure AD Devices**.
