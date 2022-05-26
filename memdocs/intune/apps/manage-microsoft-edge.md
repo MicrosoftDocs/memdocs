@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/16/2022
+ms.date: 05/26/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -472,6 +472,16 @@ Users with Edge for iOS and Android installed on their iOS or Android device can
 For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md).
 
 To see how to view logs on Android devices, see [Send logs to your IT admin by email](../user-help/send-logs-to-your-it-admin-by-email-android.md).
+
+## Switch network stack between Chromium and iOS 
+By default, Edge for iOS and Android uses Chromium network stack for internal network communication, including VPN. Edge for iOS also provides iOS network stack for network communication. Organizations can choose the network preference for Edge for iOS by configuring the following setting.
+
+|Key  |Value  |
+|---------|---------|
+|com.microsoft.intune.mam.managedbrowser.NetworkStackPref     |**0** (default) use Chromium network stack.<br>**1** use iOS network stack<br>**2** automatically switch to iOS network stack when Chromium network stack fails | 
+
+> [!NOTE]
+> Chromium network stack is recommended. Use iOS network stack when you run into network issues, VPN in particular.
 
 ## Next steps
 
