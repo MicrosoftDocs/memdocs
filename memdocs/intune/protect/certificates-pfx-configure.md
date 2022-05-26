@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/26/2022
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -195,8 +195,9 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 8. Select **Next**.
 
-9. In **Assignments**, select the user or device group(s) that will be assigned the profile. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*. Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. In **Assignments**, select the user or device group(s) that will be assigned the profile. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*.
 
+   Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile, and that receive a configuration profiles like a Wi-Fi  profiles that makes use of this certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
     Select **Next**.
 
 10. (*Applies to Windows 10/11 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
