@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: ankurbiswas    
+ms.reviewer: anbiswas    
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Just like physical devices, Windows 365 Enterprise Cloud PCs can be deployed, secured, and managed using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview. As part of PC ownership, you may be asked to submit Cloud PCs to internal or third parties to perform digital forensics. Digital forensics is the science that addresses the recovery and investigation of digital data to support criminal investigations or civil proceedings.
 
-To support these forensics, Windows 365 offers the ability to [place a Cloud PC under review](place-cloud-pc-under-review.md). This will securely save a snapshot of the Cloud PC to the customer’s Azure Storage Account. When transferred to that account, the customer has complete ownership of the snapshot.
+To support these forensics, Windows 365 offers the ability to [place a Cloud PC under review](place-cloud-pc-under-review.md). This action will securely save a snapshot of the Cloud PC to the customer’s Azure Storage Account. When transferred to that account, the customer has complete ownership of the snapshot.
 
 Investigators can attach disk copies of the Cloud PC snapshot and transfer it to a secure storage account dedicated to forensic analysis. This process can be done without re-creating, powering on, or accessing the original source Cloud PC.
 
@@ -40,7 +40,7 @@ Investigators can attach disk copies of the Cloud PC snapshot and transfer it to
 
 You may have to place a Cloud PC under review for any of these scenarios:
 
-1. A request from the an internal Security Operation Center (SOC) team.
+1. A request from an internal Security Operation Center (SOC) team.
 2. A response to a request from an internal or external third party auditor.
 3. As a response to a pending or ongoing legal investigation.
 

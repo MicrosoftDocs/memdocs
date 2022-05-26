@@ -20,7 +20,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: ankurbiswas    
+ms.reviewer: anbiswas    
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -34,7 +34,7 @@ As part of a digital forensics request, you may be asked to provide a snapshot o
 
 ## Requirements
 
-To place a Cloud PC under review, you must have the following:
+To place a Cloud PC under review, you must meet the following requirements:
 
 - A Windows 365 Enterprise license.
 - An Azure Storage account in the same tenant, set up as per the requirements below.
@@ -42,9 +42,9 @@ To place a Cloud PC under review, you must have the following:
 ## Set up your Azure storage account
 
 To place a Cloud PC under review, you must first have an Azure storage account in the same tenant as the Cloud PC. For more information to help you decide which type of account fits your needs, see [Storage account overview](/azure/storage/common/storage-account-overview). We recommend that you create and maintain a dedicated storage account with dedicated access controls for auditing Cloud PCs.
-As part of the process to place cloud PCs under review, Windows 365 may be granted a contributor role for your Azure storage account.
+As part of the process to place Cloud PCs under review, Windows 365 may be granted a contributor role for your Azure storage account.
 
-1. [Create a Storage Account](/azure/storage/common/storage-account-create) in the same subscription as your Azure Network Connection. To create the account, you can use PowerShell, Azure CLI, Azure Resource Manager Template, or Azure Portal.
+1. [Create a Storage Account](/azure/storage/common/storage-account-create) in the same subscription as your Azure Network Connection. To create the account, you can use PowerShell, Azure CLI, Azure Resource Manager Template, or Azure portal.
 2. For best performance, configure the storage account with the following settings;
     - **No region limit**
     - **Premium Page Blob performance**
