@@ -42,6 +42,14 @@ To use these reports, you must first ensure that prerequisites are met and that 
 
 ## Prerequisites
 
+### Licensing
+
+The Windows feature update device readiness and Windows feature update compatibility risks reports require users of enrolled devices to have one of the following licenses:
+
+- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows 10/11 Virtual Desktop Access (VDA) per user
+
 ### Devices
 
 To be eligible for the Windows feature update device readiness and Windows feature update compatibility risks reports, devices must:
@@ -71,14 +79,6 @@ In addition, to use the **Windows feature update device readiness report (previe
 - Help Desk Operator
 - Intune Role Administrator
 
-### Licensing
-
-The Windows feature update device readiness and Windows feature update compatibility risks reports require users of enrolled devices to have one of the following licenses:
-
-- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10/11 Virtual Desktop Access (VDA) per user
-
 ## Use the Windows feature update device readiness report
 
 The **Windows feature update device readiness report (preview)**  provides a device-level view of compatibility risks associated with an upgrade or update to a chosen version of Windows.
@@ -96,7 +96,7 @@ To use this report:
    - Optionally select **Ownership** and **Readiness status** to refine the report.
    - Click **Generate report**. This process can take several minutes. You'll be notified when report generation is complete.
 
-:::image type="content" source="./media/windows-update-compatibility-reports/device-readiness-report.png" alt-text="Screen shot of the Windows feature update device readiness report":::
+:::image type="content" source="./media/windows-update-compatibility-reports/device-readiness-report.png#lightbox" alt-text="Screen shot of the Windows feature update device readiness report":::
 
 >[!NOTE]  
 > When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps above and click **Generate again**.
@@ -145,7 +145,7 @@ To use this report:
    - Optionally select **Asset type** and **Risk status** to refine the report.
    - Click **Generate report**. This process can take several minutes. You'll be notified when report generation is complete.
 
-:::image type="content" source="./media/windows-update-compatibility-reports/compatibility-risks-report.png" alt-text="Screen shot of the Windows feature update compatibility risks report":::
+:::image type="content" source="./media/windows-update-compatibility-reports/compatibility-risks-report.png#lightbox" alt-text="Screen shot of the Windows feature update compatibility risks report":::
 
 > [!NOTE]
 > When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps above and click **Generate again**.
