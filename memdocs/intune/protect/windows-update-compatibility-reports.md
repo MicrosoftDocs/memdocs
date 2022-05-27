@@ -96,7 +96,7 @@ To use this report:
    - Optionally select **Ownership** and **Readiness status** to refine the report.
    - Click **Generate report**. This process can take several minutes. You'll be notified when report generation is complete.
 
-:::image type="content" source="./media/windows-update-compatibility-reports/device-readiness-report.png#lightbox" alt-text="Screen shot of the Windows feature update device readiness report":::
+[![Screen shot of the Windows feature update device readiness report.](./media/windows-update-compatibility-reports/device-readiness-report.png)](./media/windows-update-compatibility-reports/device-readiness-report.png#lightbox)
 
 >[!NOTE]  
 > When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps above and click **Generate again**.
@@ -145,7 +145,7 @@ To use this report:
    - Optionally select **Asset type** and **Risk status** to refine the report.
    - Click **Generate report**. This process can take several minutes. You'll be notified when report generation is complete.
 
-:::image type="content" source="./media/windows-update-compatibility-reports/compatibility-risks-report.png#lightbox" alt-text="Screen shot of the Windows feature update compatibility risks report":::
+[![Screen shot of the Windows feature update compatibility risks report.](./media/windows-update-compatibility-reports/compatibility-risks-report.png)](./media/windows-update-compatibility-reports/compatibility-risks-report.png#lightbox)
 
 > [!NOTE]
 > When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps above and click **Generate again**.
