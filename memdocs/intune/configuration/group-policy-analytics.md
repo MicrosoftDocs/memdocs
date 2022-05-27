@@ -62,22 +62,24 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 - This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
-## Export GPOs as an XML file
+## Export GPO as an XML file
 
-1. On your on-premises computer, open the `Group Policy Management` app (GPMC.msc).
-2. Expand your domain to see all the GPOs.
-3. Right-click any GPO > **Save report**:
+1. On your on-premises computer, open the `Group Policy Management` console (GPMC.msc).
+2. In the manageent console, expand your **domain name**.
+3. Then expand **Group Policy Objects** to see all the available GPOs.
+4. Right-click the GPO you want to migrate and choose **Save report**:
 
     :::image type="content" source="./media/group-policy-analytics/sample-group-policy-object-save-report.png" alt-text="Open Group Policy management and save a GPO as an XML file report.":::
 
-4. Save the file to an easily accessible folder, and save it as an XML file. You'll add this file in Endpoint Manager.
+4. Select an easily accessible folder for your export and choose "Save as type" **XML File**. You'll add this file in Endpoint Manager group policy analytics.
 
-Be sure the file is less than 4 MB and has a proper unicode encoding. If the exported file is greater than 4 MB, then include fewer GPOs when you save your report from the GPMC.msc tool.
+Be sure the file is less than 4 MB and has a proper unicode encoding. 
+If the exported file is greater than 4 MB, then you must reduce the amount of settings within the selected group policy object.
 
 ## Import GPOs and run analytics
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
-2. Select **Import**, and then select your saved XML file. When you select the XML file, Intune automatically analyzes the GPO in the XML file.
+2. Select **Import**, and then select your saved XML file (you can select multiple files at once). When you select the XML file, Intune automatically analyzes the GPO in the XML file.
 
     Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 4 MB. If a single GPO is larger than 4 MB, then the import will fail. XML files without the appropriate unicode ending will also fail.
 
