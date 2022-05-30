@@ -73,8 +73,8 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 4. Select an easily accessible folder for your export and choose "Save as type" **XML File**. You'll add this file in Endpoint Manager group policy analytics.
 
-Be sure the file is less than 4 MB and has a proper unicode encoding. 
-If the exported file is greater than 4 MB, then you must reduce the amount of settings within the selected group policy object.
+Make sure that the file is less than 4 MB and has a proper Unicode encoding. 
+If the exported file is greater than 4 MB, you must reduce the number of settings within the selected group policy object.
 
 ## Import GPOs and run analytics
 
