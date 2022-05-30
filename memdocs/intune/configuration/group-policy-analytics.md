@@ -62,7 +62,7 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
 - This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
-## Export GPO as an XML file
+## Export a GPO as an XML file
 
 1. On your on-premises computer, open the `Group Policy Management` console (GPMC.msc).
 2. In the manageent console, expand your **domain name**.
