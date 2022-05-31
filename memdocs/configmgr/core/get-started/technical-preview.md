@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 05/23/2022
+ms.date: 06/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -124,11 +124,10 @@ The following features are available with the most recent Configuration Manager 
 
 ### Technical preview version 2205
 
-- [Offset for reoccurring monthly maintenance window schedules](2022/technical-preview-2205.md#bkmk_offset) <!--3601127-->
-- [Improvements to cloud management gateway (CMG) workflow](2022/technical-preview-2205.md#bkmk_cmg) <!--13351390-->
-- [Script execution timeout for compliance settings](2022/technical-preview-2205.md#bkmk_timeout) <!--14120481-->
-- [Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016](2022/technical-preview-2205.md#bkmk_downlevel) <!--9265511-->
-- [PowerShell release notes preview](2022/technical-preview-2205.md#bkmk_powershell) <!--14046376-->
+- [10674394](2022/technical-preview-2206.md) <!--10674394-->
+- [14059872](2022/technical-preview-2206.md) <!--14059872-->
+- [14235392](2022/technical-preview-2206.md) <!--14235392-->
+- [14431761](2022/technical-preview-2206.md) <!--14431761-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -147,6 +146,14 @@ The following features were released with previous versions of the Configuration
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 <!-- ### Technical preview version 2111 -->
+
+### Technical preview version 2205
+
+- [Offset for reoccurring monthly maintenance window schedules](2022/technical-preview-2205.md#bkmk_offset) <!--3601127-->
+- [Improvements to cloud management gateway (CMG) workflow](2022/technical-preview-2205.md#bkmk_cmg) <!--13351390-->
+- [Script execution timeout for compliance settings](2022/technical-preview-2205.md#bkmk_timeout) <!--14120481-->
+- [Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016](2022/technical-preview-2205.md#bkmk_downlevel) <!--9265511-->
+- [PowerShell release notes preview](2022/technical-preview-2205.md#bkmk_powershell) <!--14046376-->
 
 ### Technical preview version 2204
 
