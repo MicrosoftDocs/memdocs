@@ -25,6 +25,8 @@ items:
       href: ../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: BitLocker recovery keys
       href: ../tenant-attach/bitlocker-recovery-keys.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Software updates (preview)
+      href: ../tenant-attach/software-updates.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: CMPivot for tenant attached devices
       items:
       - name: Launch CMPivot
@@ -77,6 +79,8 @@ items:
         href: ../tenant-attach/troubleshoot-scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: CMPivot
         href: ../tenant-attach/troubleshoot-cmpivot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Software updates (preview)
+        href: ../tenant-attach/troubleshoot-software-updates.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
 - name: Endpoint analytics
   items:
   - name: Endpoint analytics overview

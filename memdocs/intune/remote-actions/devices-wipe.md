@@ -120,8 +120,9 @@ The following tables describe what data is removed, and the effect of the **Reti
 Removing company data from an Android personally-owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android personally-owned work profiles.
 
 ### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
+ - The **Wipe** action is supported on Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
 
-You can only wipe Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
+ - The **Retire** action is supported on Android Enterprise Corporate-Owned Work Profile devices. When the **Retire** action is used on Android Enterprise Corporate-Owned Work Profile devices, the device is unenrolled from Intune management. The work profile is removed along with all corporate data and applications, but all the personal data and applications remain on the device.
 
 
 ### macOS

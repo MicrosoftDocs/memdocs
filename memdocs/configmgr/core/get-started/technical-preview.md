@@ -127,6 +127,7 @@ The following features are available with the most recent Configuration Manager 
 - [Offset for reoccurring monthly maintenance window schedules](2022/technical-preview-2205.md#bkmk_offset) <!--3601127-->
 - [Improvements to cloud management gateway (CMG) workflow](2022/technical-preview-2205.md#bkmk_cmg) <!--13351390-->
 - [Script execution timeout for compliance settings](2022/technical-preview-2205.md#bkmk_timeout) <!--14120481-->
+- [Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016](2022/technical-preview-2205.md#bkmk_downlevel) <!--9265511-->
 - [PowerShell release notes preview](2022/technical-preview-2205.md#bkmk_powershell) <!--14046376-->
 
 > [!NOTE]
