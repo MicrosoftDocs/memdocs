@@ -86,7 +86,7 @@ If you're using a corporate-owned device (excluding corporate-owned devices with
  > You can view the ownership type for your device on the Intune Company Portal > **Device Details** page.  
 
 ### Device storage space   
-If you can't install an app that's required for work or school, your organization can view your storage size to figure out if space is too low.   
+If you can't install an app that's required for work or school, your organization may view your storage size to figure out if space is low.   
 
 ### Location
 Your organization can access the location of a device to the following extent:  
@@ -106,10 +106,9 @@ You might be required to install a mobile threat defense (MTD) app as part of yo
 For more information about mobile threat defense, see [Install mobile threat defense app](set-up-mobile-threat-defense.md).  
 
 ### App permissions  
-Your IT administrator can automatically grant permissions to apps in your work profile. The permissions could be for things like the camera, microphone, and location. If they grant permission to an app that belongs to your organization, they could see that you installed the app. This applies to devices running Android 12.0 and earlier.  
+*Applies to Android 11 and earlier* 
 
- > [!TIP]
- > If your device is running Android 11 or later, you'll receive a push notification when your IT administrator grants permissions to an app.    
+An IT administrator can automatically grant permission to apps in the work profile. The IT admin does this to reduce the number of prompts you receive. The permissions could be for things like the camera, microphone, and location. If your device is running Android 11, you'll receive a push notification when your IT administrator grants permissions to an app.    
 
 ###  Network information
 Some information about network connections for Android devices may be available to your organization support. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it is connected.  
