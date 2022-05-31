@@ -159,14 +159,14 @@ To test the Cloud Native Windows endpoint, we need to start by getting a virtual
 5. Switch into PowerShell by running the command:
    - `powershell.exe`
 
-6. Download the *Get-WindowsAutoPilotInfo* script by running the commands:
+6. Download the *Get-WindowsAutopilotInfo* script by running the commands:
    - `Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process`
-   - `Install-Script Get-WindowsAutoPilotInfo`
+   - `Install-Script Get-WindowsAutopilotInfo`
 
 7. When prompted, enter **Y** to accept.
 
 8. Type the command:
-   - `Get-WindowsAutoPilotInfo.ps1 -GroupTag CloudNative -Online`
+   - `Get-WindowsAutopilotInfo.ps1 -GroupTag CloudNative -Online`
 
    > [!NOTE]
    > Group Tags allow you to create dynamic Azure AD groups based on a subset of devices. Group Tags can be set when importing devices or changed later in the Microsoft Endpoint Manager admin console. We'll use the Group Tag *CloudNative* in Step 4. You can set the tag name to something different for your testing.
