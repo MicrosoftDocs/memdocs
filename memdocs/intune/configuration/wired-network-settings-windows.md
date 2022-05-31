@@ -87,7 +87,7 @@ This article describes the settings you can configure.
       - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the connection.
       - **PFX Import certificate**: Select an existing imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the connection.
 
-        For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](/mem/intune/protect/certificates-imported-pfx-configure).
+        For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md).
 
       - **Derived credential**: Select an existing certificate profile that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
@@ -114,7 +114,7 @@ This article describes the settings you can configure.
 
       - **PFX Import certificate**: Select an existing imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the network connection.
 
-        For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](/mem/intune/protect/certificates-imported-pfx-configure).
+        For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md).
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
@@ -150,7 +150,7 @@ This article describes the settings you can configure.
 
       - **PFX Import certificate**: Select an existing imported PFX certificate profile. The client certificate is the identity presented by the device to authenticate the network connection.
 
-        For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](/mem/intune/protect/certificates-imported-pfx-configure).
+        For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md).
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 

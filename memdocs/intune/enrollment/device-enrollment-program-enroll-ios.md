@@ -350,7 +350,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     | **Device to Device Migration** | Give the user the option to migrate data from an old device to this device. For iOS/iPadOS 13.0 and later. |
     | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
     | **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
-    | **Get Started (preview)**| Shows users the Get Started welcome screen.  
+    | **Get Started**| Shows users the Get Started welcome screen.  
 
 19. Select **Next**.
 

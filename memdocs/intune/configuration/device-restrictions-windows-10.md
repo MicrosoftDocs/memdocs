@@ -174,7 +174,7 @@ These settings use the [Bluetooth policy CSP](/windows/client-management/mdm/pol
 These settings use the [accounts policy CSP](/windows/client-management/mdm/policy-csp-accounts), which also lists the supported Windows editions.
 
 > [!IMPORTANT]
-> Blocking or disabling these Microsoft account settings can impact enrollment scenarios that require users to sign in to Azure AD. For example, you're using [AutoPilot pre-provisioned](../../autopilot/pre-provision.md) (previously called white glove). Typically, users are shown an Azure AD sign in window. When these settings are set to **Block** or **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+> Blocking or disabling these Microsoft account settings can impact enrollment scenarios that require users to sign in to Azure AD. For example, you're using [Autopilot pre-provisioned](../../autopilot/pre-provision.md) (previously called white glove). Typically, users are shown an Azure AD sign in window. When these settings are set to **Block** or **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 - **Microsoft account**: **Block** prevents users from associating a Microsoft account with the device. **Block** may also affect some enrollment scenarios that rely on users to complete the enrollment process. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and using a Microsoft account.
 - **Non-Microsoft account**: **Block** prevents users from adding non-Microsoft accounts using the user interface. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to add email accounts that aren't associated with a Microsoft account.
@@ -183,7 +183,7 @@ These settings use the [accounts policy CSP](/windows/client-management/mdm/poli
   - **Not configured** (default): Intune doesn't change or update this setting. By default, the OS might allow users to start and stop the **Microsoft Account Sign-In Assistant** (wlidsvc) service.
   - **Disabled**: Sets the Microsoft Sign-in Assistant service (wlidsvc) to Disabled, and prevents users from manually starting it.
 
-      **Disable** may also affect some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [AutoPilot pre-provisioned](../../autopilot/pre-provision.md). Typically, users are shown an Azure AD sign in window. When set to **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
+      **Disable** may also affect some enrollment scenarios that rely on users to complete the enrollment. For example, you're using [Autopilot pre-provisioned](../../autopilot/pre-provision.md). Typically, users are shown an Azure AD sign in window. When set to **Disable**, the Azure AD sign in option may not show. Instead, users are asked to accept the EULA, and create a local account, which may not be what you want.
 
 ## Cloud Printer
 

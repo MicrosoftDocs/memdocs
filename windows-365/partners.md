@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/20/2022
+ms.date: 05/18/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,18 @@ Securely stream the Microsoft Windows 365 Cloud PC experience to high-performing
 
 For more information, visit the [10ZiG website](https://www.10zig.com/resources/vdi-blog/microsoft-windows-365-cloud).
 
+## Citrix
+
+![Citrix image](./media/partners/citrix.png)
+
+The Citrix offering for Windows 365 will enable IT to deliver enhanced work experiences on Cloud PCs that:
+
+- Allow employees to seamlessly access Citrix-enabled Cloud PCs through windows365.microsoft.com.
+- Apply granular policy controls to enhance security and protect corporate data.
+- Provide a high-definition, interactive experience across a broad range of endpoint devices and peripherals.
+- Optimize voice and video performance for multimedia applications.
+- Provides more granular controls when integrating with third-party identity solutions.
+
 ## IGEL
 
 ![IGEL image](./media/partners/igel.png)
@@ -62,7 +74,7 @@ For more information, visit the [IGEL website](https://www.igel.com/windows365/)
 
 ![Nerdio image](./media/partners/nerdio.png)
 
-Windows 365 and Nerdio Manager help users to be productive from anywhere, on any device with a cloud-powered, secure, and always up-to-date Windows experience. Nerdio seamlessly lets MSPs and IT professionals:
+Windows 365 and Nerdio Manager help users to be productive from anywhere, on any compatible device with a cloud-powered, secure, and always up-to-date Windows experience. Nerdio seamlessly lets MSPs and IT professionals:
 
 - Instantly provision Cloud PCs.
 - Manage physical and virtual devices through a unified portal.

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 05/18/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -49,6 +49,36 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of May 16, 2022 
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for RDP Shortpath for public networks<!--39316531-->
+
+Windows 365 Enterprise Cloud PCs now support RDP Shortpath for public networks. For more information about RDP Shortpath, see [Use RDP Shortpath for public networks (preview) with Windows 365](rdp-shortpath-public-networks.md).
+
+#### Windows 365 ending support for Windows 10 version 1909 (19H2)<!--39606471-->
+
+Windows 365 no longer supports Windows 10 version 1909 (19H2).
+
+<!-- ########################## -->
+## Week of May 9, 2022 (Service release 2204)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Support for Azure AD joined Cloud PCs now general available<!--38765480 -->
+Support for Azure AD joined Cloud PCs has moved out of preview and into general availability.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### Provision Cloud PCs with Secure Boot<!--38012584 -->
+
+Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now rolling out in Asia Pacific (APAC) regions. This feature will roll out to all customers over the next few months.
+
+<!-- ########################## -->
 ## Week of May 2, 2022
 
 ### Documentation
@@ -60,7 +90,7 @@ We’ve published a new help documentation article. For more information, see [M
 <!-- ########################## -->
 ## Week of April 18, 2022
 
-### On-premises network connection has been renamed to Azure network connection<!--38457869 idready-->
+### On-premises network connection has been renamed to Azure network connection<!--38457869 -->
 
 The term **on-premises network connection** has been renamed to **Azure network connection** in all user interfaces, documentation, and communications.
 
