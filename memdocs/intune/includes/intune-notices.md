@@ -23,7 +23,7 @@ Scenarios that send push notifications to the Company Portal include:
 
 - [Custom notifications](../remote-actions/custom-notifications.md)
 - [Push notifications for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)
-- [Device ownership change push notifications](../enrollment/corporate-identifiers-add.md#change-device-ownership)
+- [Device ownership change push notifications](../enrollment/corporate-identifiers-add.md#device-ownership-notification)
 - [Delivery of S/MIME certificates for iOS to access Outlook](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/smime-outlook-for-ios-and-android)
 - [Derived credential enrollment](../protect/derived-credentials.md)
 
