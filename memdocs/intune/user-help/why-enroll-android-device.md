@@ -2,7 +2,7 @@
 # required metadata
 
 title: Android device enrollment overview  
-description: Learn why enrollment is enforced in workplaces and schools and the benefits of enrolling your Android devices. 
+description: Learn about enrollment for Android devices, why workplaces and schools require it, and the benefits it provides. 
 keywords:
 author: lenewsad
 ms.author: lanewsad
