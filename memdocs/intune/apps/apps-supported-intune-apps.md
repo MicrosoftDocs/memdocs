@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/10/2022
+ms.date: 05/31/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -65,7 +65,7 @@ The below apps support the Core Intune App Protection Policy settings and are al
 |Microsoft Lens - PDF Scanner|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officelens)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft Lens - PDF Scanner|[iOS](https://apps.apple.com/us/app/microsoft-lens-pdf-scanner/id975925059)|✔|No settings|✖|N/A|✖|✖|N/A|
 |Microsoft Lists|[iOS](https://apps.apple.com/us/app/microsoft-lists/id1530637363)|✔|No settings|✔|N/A|N/A|✔|✔|
-|Microsoft Lists|[Android](https://play.google.com/store/apps/details?id=com.microsoft.lists.public&gl=US)|✔|No settings|✔|N/A|N/A|✔|✔|
+|Microsoft Lists|[Android](https://play.google.com/store/apps/details?id=com.microsoft.lists.public&gl=US)|✔|No settings|✖|N/A|N/A|✖|✖|
 |Microsoft Office|[Android](https://play.google.com/store/apps/details?id=com.microsoft.office.officehubrow)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|
 |Microsoft Office|[iOS](https://apps.apple.com/app/microsoft-office/id541164041)|✔|✔ see [Office app config](manage-microsoft-office.md)|✔|N/A|✖|✖|✔|
 |Microsoft OneDrive|[Android](https://play.google.com/store/apps/details?id=com.microsoft.skydrive)|✔|No settings|✔|N/A|✖|✔|N/A|
