@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2022
+ms.date: 05/31/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -71,15 +71,14 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
     :::image type="content" source="./media/group-policy-analytics/sample-group-policy-object-save-report.png" alt-text="Open Group Policy management and save a GPO as an XML file report.":::
 
-4. Select an easily accessible folder for your export and choose "Save as type" **XML File**. You'll add this file in Endpoint Manager group policy analytics.
+4. Select an easily accessible folder for your export. In **Save as type**, select **XML File**. You'll add this file in Endpoint Manager group policy analytics.
 
-Make sure that the file is less than 4 MB and has a proper Unicode encoding. 
-If the exported file is greater than 4 MB, you must reduce the number of settings within the selected group policy object.
+Make sure that the file is less than 4 MB and has a proper Unicode encoding. If the exported file is greater than 4 MB, then reduce the number of settings in the group policy object.
 
 ## Import GPOs and run analytics
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Group Policy analytics (preview)**.
-2. Select **Import**, and then select your saved XML file (you can select multiple files at the same time). When you select the XML file, Intune automatically analyzes the GPO in the XML file.
+2. Select **Import**, and then select your saved XML file. You can select multiple files at the same time. When you select the XML file, Intune automatically analyzes the GPO in the XML file.
 
     Check the sizes of your individual GPO XML files. A single GPO can't be bigger than 4 MB. If a single GPO is larger than 4 MB, then the import will fail. XML files without the appropriate unicode ending will also fail.
 
