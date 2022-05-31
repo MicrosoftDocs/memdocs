@@ -27,7 +27,9 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Offset for reoccurring monthly maintenance window schedules](includes/2205/3601127.md)]
 [!INCLUDE [Improvements to cloud management gateway (CMG) workflow](includes/2205/13351390.md)]
 [!INCLUDE [Script execution timeout for compliance settings](includes/2205/14120481.md)]
+[!INCLUDE [Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016](includes/2205/9265511.md)]
 [!INCLUDE [PowerShell release notes preview](includes/2205/14046376.md)]
+
 
 <!-- ## General known issues  -->
  
