@@ -73,8 +73,12 @@ The following types of Android Enterprise devices can't be set up via DEM:
 * Corporate-owned with a work profile
 * Fully managed  
 
-### Automated Device Enrollment  
+### Apple Automated Device Enrollment  
 DEM is not compatible with Apple Automated Device Enrollment (ADE).   
+
+### Apple volume purchased apps  
+* You can't use apps purchased through Apple VPP with Apple VPP user licenses, because of per-user Apple ID requirements for app management.  
+* Devices can install VPP apps if they have Apple VPP device licenses.  
 
 ### Azure AD  
 Applying an Azure AD device restriction to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.  
@@ -88,18 +92,14 @@ Conditional access is only supported with DEM on devices running:
 ### Device limit restrictions    
 DEM enrolls Windows 10/11 devices in shared device mode, so device limit restrictions won't work on them. Instead, you can configure a hard limit for these devices in the Azure AD admin center. For more information, see [Manage device identities by using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).       
 
-### Device wipe    
-Enrolled devices can't be wiped from Company Portal. You have to sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to wipe a device you enrolled.  
-
 ### Intune Company Portal  
-Only the local device appears in the Company Portal app or Company Portal website.   
+
+* Device users can't wipe DEM-enrolled devices from Company Portal. You have to sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to wipe these devices.  
+* Only the local device appears in the Company Portal app or Company Portal website.   
 
 ### Number of accounts  
 There's a limit of 150 Device Enrollment Manager (DEM) accounts in Microsoft Intune.  
 
-### Volume purchased apps  
-* You can't use apps purchased through Apple VPP with Apple VPP user licenses, because of per-user Apple ID requirements for app management.  
-* Devices can install VPP apps if they have Apple VPP device licenses.  
 
 ## Add a device enrollment manager
 
