@@ -33,8 +33,7 @@ ms.collection:
 
 # Add device enrollment managers  
 
-A device enrollment manager (DEM) is a non-administrator user who can enroll devices in Intune. Device enrollment managers are useful to have when you need to enroll and prepare a lot of devices for distribution. People signed in to a DEM account can enroll and manage up to 1,000 devices, while a standard non-admin account can only enroll 15.  
-
+A device enrollment manager (DEM) is a non-administrator user who can enroll devices in Intune. Device enrollment managers are useful to have when you need to enroll and prepare many devices for distribution. People signed in to a DEM account can enroll and manage up to 1,000 devices, while a standard non-admin account can only enroll 15.  
 
 A DEM account requires an Intune user or device license, and an associated Azure AD user. Global Administrators and Intune Service Administrators can add and manage device enrollment managers in the Microsoft Endpoint Manager admin center. 
 
@@ -60,26 +59,25 @@ These Azure AD roles can manage device enrollment managers:
 * Global Administrator 
 * Intune Service Administrator role in Azure AD    
 
-They can add and delete device enrollmnet managers, and view all DEM users in the Microsoft Endpoint Manager admin center. You can assign the DEM read-only permission to users who don't meet the role requirements. It lets them see the DEM users they've created.  
+They can add and delete device enrollment managers, and view all DEM users in the Microsoft Endpoint Manager admin center.  
 
 ## Limitations 
 
-The device enrollment manager account can't be used with all features in Microsoft Intune and has some limitations when used with others. This section describes the limitations you could encounter while sigmed in to a DEM account.  
+The device enrollment manager account can't be used with all features in Microsoft Intune and has some limitations when used with others. This section describes the limitations you could encounter while setting up devices from a DEM account.  
 
 ### Android Enterprise  
 You can enroll up to 10 personally owned devices with work profiles. 
 
 The following types of Android Enterprise devices can't be set up via DEM:    
 
-* Corporate-owned with a work profile
-* Fully managed  
+  * Corporate-owned with a work profile
+  * Fully managed  
 
 ### Apple Automated Device Enrollment  
-DEM is not compatible with Apple Automated Device Enrollment (ADE).   
+DEM isn't compatible with Apple Automated Device Enrollment (ADE).   
 
 ### Apple volume purchased apps  
-* You can't use apps purchased through Apple VPP with Apple VPP user licenses, because of per-user Apple ID requirements for app management.  
-* Devices can install VPP apps if they have Apple VPP device licenses.  
+DEM-enrolled devices can install VPP apps if they have Apple VPP device licenses. You can't use apps purchased through Apple VPP with Apple VPP user licenses, because of per-user Apple ID requirements for app management.  
 
 ### Azure AD  
 Applying an Azure AD device restriction to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.  
@@ -94,13 +92,10 @@ Conditional access is only supported with DEM on devices running:
 DEM enrolls Windows 10/11 devices in shared device mode, so device limit restrictions won't work on them. Instead, you can configure a hard limit for these devices in the Azure AD admin center. For more information, see [Manage device identities by using the Azure portal](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).       
 
 ### Intune Company Portal  
-
-* Device users can't wipe DEM-enrolled devices from Company Portal. You have to sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to wipe these devices.  
-* Only the local device appears in the Company Portal app or Company Portal website.   
+Only the local device appears in the Company Portal app or Company Portal website. Device users can't wipe DEM-enrolled devices from Company Portal. You have to sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to wipe these devices.  
 
 ### Number of accounts  
-There's a limit of 150 Device Enrollment Manager (DEM) accounts in Microsoft Intune.  
-
+There's a limit of 150 DEM accounts in Microsoft Intune.  
 
 ## Add a device enrollment manager
 
