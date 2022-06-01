@@ -63,11 +63,11 @@ The following prerequisites must be met to use Windows updates for Windows 10/11
     For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
 
   - Windows 10/11 Enterprise LTSC - While LTSC is supported, the following ring controls are not supported for LTSC:  
-    - [Pause](../intune/protect/windows-10-update-rings.md#pause) of *Feature* updates  
+    - [Pause](../protect/windows-10-update-rings.md#pause) of *Feature* updates  
     - [Feature Update Deferral period (days)](../protect/windows-update-settings.md#update-settings)  
-    - [Set feature update uninstall period (2 - 60 days)](../protect/windows-update-settings.md#update-setting)  
-    - [Enable pre-release builds](../protect/windows-update-settings.md#update-setting), which includes the following build options:   
-      - Windows Insider – Release Preview  
+    - [Set feature update uninstall period (2 - 60 days)](../protect/windows-update-settings.md#update-settings)  
+    - [Enable pre-release builds](../protect/windows-update-settings.md#update-settings), which includes the following build options:   
+      - Windows Insider – Release Preview
       - Beta Channel  
       - Dev Channel  
     - [Use deadline settings](../protect/windows-update-settings.md#user-experience-settings) for *Feature* updates.
