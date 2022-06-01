@@ -57,7 +57,7 @@ try
     if (($results -ne $null)){
         #Below necessary for Intune as of 10/2019 will only remediate Exit Code 1
         Write-Host "Match"
-        Return $results.count
+        Write-Host "$($results.count)"
         exit 1
     }
     else{
