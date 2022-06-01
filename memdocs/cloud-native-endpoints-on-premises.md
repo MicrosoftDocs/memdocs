@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Use on-premises services with cloud native endpoints
+title: Use on-premises services with cloud-native endpoints
 titleSuffix: Microsoft Endpoint Manager
-description: For cloud native endpoints to access on-premises resources, such as file servers, printers, and web servers, use Windows integrated authentication (WIA) and Azure AD Connect.
+description: For cloud-native endpoints to access on-premises resources, such as file servers, printers, and web servers, use Windows integrated authentication (WIA) and Azure AD Connect.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 05/24/2022
+ms.date: 06/01/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -29,22 +29,22 @@ ms.collection:
   - M365-identity-device-management
 ---
 
-# Cloud native endpoints and on-premises resources
+# Cloud-native endpoints and on-premises resources
 
 > [!TIP]
 > [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
 
-Cloud native endpoints can access on-premises resources. This article goes into more detail, and answers some common questions.
+Cloud-native endpoints can access on-premises resources. This article goes into more detail, and answers some common questions.
 
 This feature applies to:
 
-- Windows cloud native endpoints
+- Windows cloud-native endpoints
 
-For an overview of cloud native endpoints, and their benefits, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
+For an overview of cloud-native endpoints, and their benefits, go to [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
 
 ## Prerequisites
 
-For cloud native Windows endpoints to access on-premises resources and services that use on-premises Active Directory (AD) for authentication, the following prerequisites are required:
+For cloud-native Windows endpoints to access on-premises resources and services that use on-premises Active Directory (AD) for authentication, the following prerequisites are required:
 
 - Client apps **must use Windows integrated authentication (WIA)**. For more specific information, go to [Windows Integrated Authentication (WIA)](/aspnet/web-api/overview/security/integrated-windows-authentication).
 
@@ -56,7 +56,7 @@ For cloud native Windows endpoints to access on-premises resources and services 
 
 ## Similar to on-premises Windows devices
 
-For end users, a Windows cloud native endpoint behaves like any other on-premises Windows device. 
+For end users, a Windows cloud-native endpoint behaves like any other on-premises Windows device. 
 
 The following list is a common set of on-premises resources that users can access from their Azure AD joined devices:
 
@@ -72,7 +72,7 @@ The following list is a common set of on-premises resources that users can acces
   - Use the DHCP snap-in to administer an AD-joined DHCP server. You might need to enter the DHCP server name or address.
 
 > [!TIP]
-> To understand how Azure AD joined devices use cached credentials in a cloud native approach, watch [OPS108: Windows authentication internals in a hybrid world (syfuhs.net)](https://syfuhs.net/ops108-windows-authentication-internals-in-a-hybrid-world) (opens an external website).
+> To understand how Azure AD joined devices use cached credentials in a cloud-native approach, watch [OPS108: Windows authentication internals in a hybrid world (syfuhs.net)](https://syfuhs.net/ops108-windows-authentication-internals-in-a-hybrid-world) (opens an external website).
 
 ## Authentication and access to on-premises resources
 
@@ -119,12 +119,12 @@ The following steps are an overview. For more specific information, including de
 
     When users access a resource that uses WIA (file server, printer, web server, etc.), then the TGT is exchanged with a Kerberos service ticket, which is the usual Kerberos workflow.
 
-## Follow the cloud native endpoints guidance
+## Follow the cloud-native endpoints guidance
 
-1. [Overview: What are cloud native endpoints?](cloud-native-endpoints-overview.md)
-2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
+1. [Overview: What are cloud-native endpoints?](cloud-native-endpoints-overview.md)
+2. [Tutorial: Get started with cloud-native Windows endpoints](cloud-native-windows-endpoints.md)
 3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-4. 🡺 **Concept: Cloud native endpoints and on-premises resources** (*You are here*)
+4. 🡺 **Concept: Cloud-native endpoints and on-premises resources** (*You are here*)
 5. [High level planning guide](cloud-native-endpoints-planning-guide.md)
 6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
 
