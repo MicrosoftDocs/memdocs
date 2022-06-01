@@ -2,7 +2,7 @@
 # required metadata
 
 title: Android device enrollment overview  
-description: Learn about enrollment for Android devices, why workplaces and schools require it, and the benefits it provides. 
+description: Learn about enrollment for Android devices, including the benefits and why workplaces and schools require it.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -95,6 +95,6 @@ They can:
 
 ## Next steps  
 
-When you're ready to enroll your Android device in Intune, follow your organization's instructions to set up your device. Or select one of the doc links listed under [Why enroll your Android device](why-enroll-android-device.md#why-enroll-your-android-device) for general step-by-step instructions.    
+When you're ready to enroll your Android device in Intune, follow your organization's instructions to set up your device. Or select one of the articles listed [at the beginning of this article](why-enroll-android-device.md#android-device-enrollment-overview) for links to general setup instructions.    
 
-Contact your IT support person or look at your organization's IT support page to find out which setup instructions you should use.  Check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.  
+Contact your support person to find out which setup instructions you should use.  Check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.  
