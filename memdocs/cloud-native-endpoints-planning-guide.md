@@ -1,15 +1,15 @@
 ---
 # required metadata
 
-title: Update your workloads to support cloud native endpoints
+title: Update your workloads to support cloud-native endpoints
 titleSuffix: Microsoft Endpoint Manager
-description: To support hybrid and remote workers, convert or migrate your workloads to support cloud native endpoints. This planning guide focuses on deploying apps and updates with Endpoint Manager, moving from group policy objects, and using Windows Autopilot.
+description: To support hybrid and remote workers, convert or migrate your workloads to support cloud-native endpoints. This planning guide focuses on deploying apps and updates with Endpoint Manager, moving from group policy objects, and using Windows Autopilot.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 05/24/2022
+ms.date: 06/01/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -29,26 +29,26 @@ ms.collection:
   - M365-identity-device-management
 ---
 
-# High level planning guide to move to cloud native endpoints
+# High level planning guide to move to cloud-native endpoints
 
 > [!TIP]
 > [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
 
-This high level planning guide includes ideas and suggestions you need to consider for your adoption and migration to cloud native endpoints. It discusses managing devices, reviewing & transitioning existing workloads, making organization changes, using Windows Autopilot, and more.
+This high level planning guide includes ideas and suggestions you need to consider for your adoption and migration to cloud-native endpoints. It discusses managing devices, reviewing & transitioning existing workloads, making organization changes, using Windows Autopilot, and more.
 
 This feature applies to:
 
-- Windows cloud native endpoints
+- Windows cloud-native endpoints
 
-Moving your Windows endpoints to cloud native has many advantages, including in the long term. It's not an overnight process and must be planned to avoid issues, outages, and negative user impact.
+Moving your Windows endpoints to cloud-native has many advantages, including in the long term. It's not an overnight process and must be planned to avoid issues, outages, and negative user impact.
 
-For more information on the benefits to the organization and your users, go to [What are cloud native endpoints?](cloud-native-endpoints-overview.md).
+For more information on the benefits to the organization and your users, go to [What are cloud-native endpoints](cloud-native-endpoints-overview.md).
 
-To be successful, consider the key areas described in this article for your planning and deployment. With proper planning, communications, and process updates, your organization can be cloud native.
+To be successful, consider the key areas described in this article for your planning and deployment. With proper planning, communications, and process updates, your organization can be cloud-native.
 
-## Manage devices using a cloud native MDM provider
+## Manage devices using a cloud-native MDM provider
 
-Managing your endpoints, including cloud native endpoints, is an important task for all organizations. With cloud native endpoints, the management tools you use must manage the endpoints wherever they go.
+Managing your endpoints, including cloud-native endpoints, is an important task for all organizations. With cloud-native endpoints, the management tools you use must manage the endpoints wherever they go.
 
 If you don't currently use a mobile device management (MDM) solution, or want to move to a Microsoft solution, then look at [Microsoft Endpoint Manager](/mem/endpoint-manager-overview).
 
@@ -64,26 +64,26 @@ With Microsoft Endpoint Manager, you get the following endpoint management optio
 
 - **[Microsoft Endpoint Configuration Manager](/mem/configmgr/)**: Configuration Manager uses an on-premises infrastructure, and can manage servers. When you use [co-management](/mem/configmgr/comanage/overview), some workloads use Configuration Manager (on-premises), and some workloads use Microsoft Intune (cloud).
 
-  For cloud native endpoints, your Configuration Manager solutions should use a [Cloud Management Gateway (CMG)](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10).
+  For cloud-native endpoints, your Configuration Manager solutions should use a [Cloud Management Gateway (CMG)](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10).
 
 ## Review your endpoint and user workloads
 
-At a high level, deploying cloud native endpoints requires modern strategies for identity, software distribution, device management, OS updates, and managing user data & configuration. Microsoft has solutions that support these areas for your cloud native endpoints.
+At a high level, deploying cloud-native endpoints requires modern strategies for identity, software distribution, device management, OS updates, and managing user data & configuration. Microsoft has solutions that support these areas for your cloud-native endpoints.
 
-To start, review each workload, and determine how it can or will support your cloud native endpoints. Some workloads may already support cloud native endpoints. Native support depends on the specific workload, how your organization implements the workload services, and how your users use the services.
+To start, review each workload, and determine how it can or will support your cloud-native endpoints. Some workloads may already support cloud-native endpoints. Native support depends on the specific workload, how your organization implements the workload services, and how your users use the services.
 
-To determine if your workloads support cloud native endpoints, you need to investigate and validate these services.
+To determine if your workloads support cloud-native endpoints, you need to investigate and validate these services.
 
-If a service or solution doesn't support cloud native endpoints, then determine its impact and its criticality on your users and your organization. When you have this information, you can determine the next steps, which may include:
+If a service or solution doesn't support cloud-native endpoints, then determine its impact and its criticality on your users and your organization. When you have this information, you can determine the next steps, which may include:
 
 - Working with the service vendor
 - Updating to a new version
 - Using a new service
-- Implementing a work-around for accessing and using that service from a cloud native endpoint
+- Implementing a work-around for accessing and using that service from a cloud-native endpoint
 - Validating the service requirements
-- Accepting that the service isn't cloud native friendly, which may be acceptable for your users and your organization
+- Accepting that the service isn't cloud-native friendly, which may be acceptable for your users and your organization
 
-Either way, you should plan to update your workloads to support cloud native endpoints. 
+Either way, you should plan to update your workloads to support cloud-native endpoints. 
 
 Your workloads should have the following characteristics:
 
@@ -93,18 +93,18 @@ Your workloads should have the following characteristics:
 
 ### Common workloads and solutions
 
-Cloud native endpoints also include the services and workloads that support the endpoints.
+Cloud-native endpoints also include the services and workloads that support the endpoints.
 
 The following workloads are configuration, tools, processes, and services for enabling user productivity and endpoint management.
 
-Your exact workloads, details, and how to update the workloads for cloud native endpoints might be different. Also, you don’t need to transition every workload. But, you do need to consider each workload, its impact on user productivity, and the device management abilities. Converting some workloads to use cloud native endpoints might take longer than others. Workloads may also have interdependencies on each other.
+Your exact workloads, details, and how to update the workloads for cloud-native endpoints might be different. Also, you don’t need to transition every workload. But, you do need to consider each workload, its impact on user productivity, and the device management abilities. Converting some workloads to use cloud-native endpoints might take longer than others. Workloads may also have interdependencies on each other.
 
 - **Device identity**
   
   A device's identity is determined by the identity providers (IdP) that have knowledge of the device and a security trust with the device. For Windows endpoints, the most common IdP's are on-premises Active Directory (AD) and Azure Active Directory (Azure AD). Endpoints with identities from one of these IdP's are typically joined to one or joined to both.
 
-  - For cloud native endpoints, Azure AD join is the best choice for the device's identity. It doesn't require any connectivity to an on-premises network, resource, or service.
-  - On-premises AD join and hybrid Azure AD join require connectivity to an on-premises domain controller. They need connectivity for initial user sign-in, to deliver group policies, and change passwords. These options aren’t suitable for cloud native endpoints.
+  - For cloud-native endpoints, Azure AD join is the best choice for the device's identity. It doesn't require any connectivity to an on-premises network, resource, or service.
+  - On-premises AD join and hybrid Azure AD join require connectivity to an on-premises domain controller. They need connectivity for initial user sign-in, to deliver group policies, and change passwords. These options aren’t suitable for cloud-native endpoints.
 
   > [!NOTE]
   > Azure AD registration, sometimes referred to as workplace join, is for bring your own device (BYOD) scenarios only. It shouldn't be used for organization owned Windows endpoints. Some functionality may not be supported or work as expected on Azure AD registered Windows endpoints.
@@ -138,7 +138,7 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
   Policy and security management is core in endpoint management. Endpoint policies allow your organization to enforce a specific security baseline and a standard configuration on your managed endpoints. There are many settings you can manage and control on your endpoints. DO create policies that only configure what's required in your baseline. DON'T create policies that control common user preferences.
 
-  - Traditional policy enforcement using group policy isn't possible with cloud native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](/mem/intune/configuration/settings-catalog) and [administrative templates](/mem/intune/configuration/administrative-templates-windows).
+  - Traditional policy enforcement using group policy isn't possible with cloud-native endpoints. Instead, you can use Intune to create policies to configure many settings, including built-in features like the [Settings Catalog](/mem/intune/configuration/settings-catalog) and [administrative templates](/mem/intune/configuration/administrative-templates-windows).
 
     [Group Policy analytics in Intune](/mem/intune/configuration/group-policy-analytics) can analyze your on-premises GPOs, see if those same settings are supported in the cloud, and create a policy using those settings.
 
@@ -155,7 +155,7 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
 - **Deploy security, feature, and app updates**
 
-  Many on-premises solutions can't deploy updates to cloud native endpoints or deploy them efficiently. From a security perspective, this workload may be the most important. It should be the first workload that you transition to support cloud native Windows endpoints.
+  Many on-premises solutions can't deploy updates to cloud-native endpoints or deploy them efficiently. From a security perspective, this workload may be the most important. It should be the first workload that you transition to support cloud-native Windows endpoints.
 
   - **Deploy Windows updates** using a cloud-based system, like Windows Update for Business. Using Intune or Configuration Manager (with a [CMG](/mem/configmgr/core/clients/manage/cmg/overview) and [co-management](/mem/configmgr/comanage/how-to-prepare-win10)), you can use Windows Update for Business to deploy security updates and feature updates.
 
@@ -198,20 +198,20 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
 - **Access on-premises resources**
   
-  Some organizations can't transition some workloads to cloud native solutions. The only option might be accessing existing on-premises resources or services from a cloud native endpoint. For these scenarios, users need access.
+  Some organizations can't transition some workloads to cloud-native solutions. The only option might be accessing existing on-premises resources or services from a cloud-native endpoint. For these scenarios, users need access.
   
   For these on-premises services, resources, and applications, consider the following tasks:
 
-  - **Authentication and authorization**: To access on-premises resources from cloud native endpoints, users need to authenticate and verify who they are. For more specific information, go to [Authentication and access to on-premises resources with cloud native endpoint](cloud-native-endpoints-on-premises.md#authentication-and-access-to-on-premises-resources).
+  - **Authentication and authorization**: To access on-premises resources from cloud-native endpoints, users need to authenticate and verify who they are. For more specific information, go to [Authentication and access to on-premises resources with cloud-native endpoint](cloud-native-endpoints-on-premises.md#authentication-and-access-to-on-premises-resources).
 
   - **Connectivity**: Review and evaluate apps and resources that only live on-premises. Connectivity and access to these resources should be available off-premises, and without any direct connectivity, like a VPN. This task might include moving to SaaS versions of your apps, using [Azure AD Application Proxy](/azure/active-directory/app-proxy/application-proxy), [Azure Virtual Desktop](/azure/virtual-desktop/overview), [Windows 365](/windows-365/overview), [SharePoint](/sharepoint/introduction), [OneDrive](/onedrive/plan-onedrive-enterprise), or [Microsoft Teams](/microsoftteams/teams-overview).
 
   > [!NOTE]
-  > Azure AD doesn't support the Kerberos authentication protocol. On-premises AD does support the Kerberos authentication protocol. In your planning, you may learn more about Azure AD Kerberos (preview). When configured, users sign in to a cloud native endpoint using their Azure AD account, and can access on-premises apps or services that use Kerberos authentication.
+  > Azure AD doesn't support the Kerberos authentication protocol. On-premises AD does support the Kerberos authentication protocol. In your planning, you may learn more about Azure AD Kerberos (preview). When configured, users sign in to a cloud-native endpoint using their Azure AD account, and can access on-premises apps or services that use Kerberos authentication.
   >
   > Azure AD Kerberos:
   > 
-  > - Isn't used in cloud native solutions.
+  > - Isn't used in cloud-native solutions.
   > - Doesn't solve any connectivity issues for resources that require authentication through Azure AD.
   > - Isn't the answer or work-around for any domain authentication requirements through Azure AD.
   > - Doesn't address the machine authentication challenges listed at [Known Issues and important information](cloud-native-endpoints-known-issues.md).
@@ -224,7 +224,7 @@ Your exact workloads, details, and how to update the workloads for cloud native 
 
 ## Transition your workloads in phases
 
-Modernizing workloads and adopting cloud native endpoints will require changes to operational processes and procedures. For example:
+Modernizing workloads and adopting cloud-native endpoints will require changes to operational processes and procedures. For example:
 
 - Administrators need to understand how changes to existing workloads might change their processes.
 - The service desk needs to understand the new scenarios they'll be supporting.
@@ -233,28 +233,28 @@ When reviewing your endpoints and workloads, break down the transition into phas
 
 ### ✅ Phase 1: Get info on your workloads
 
-This phase is the information gathering phase. It helps you establish the scope of what you must consider for your organization to transition to cloud native. It involves defining exactly what services, products, and applications involved with each workload in your environment.
+This phase is the information gathering phase. It helps you establish the scope of what you must consider for your organization to transition to cloud-native. It involves defining exactly what services, products, and applications involved with each workload in your environment.
 
 In this phase:
 
-1. Inventory your current workload information and details, including their current state, what they provide, who they serve, who maintains them, if they're critical to cloud native, and how they're hosted.
+1. Inventory your current workload information and details, including their current state, what they provide, who they serve, who maintains them, if they're critical to cloud-native, and how they're hosted.
 
     When you have this information, you'll be able to understand and define the end goal, which should be:
 
-    - To support cloud native endpoints
+    - To support cloud-native endpoints
     - To know the services, products, and applications used by each workload
 
-    You'll need to coordinate with the owners of the different services, products, and applications. You want to make sure that cloud native endpoints support user productivity without connectivity or location constraints.
+    You'll need to coordinate with the owners of the different services, products, and applications. You want to make sure that cloud-native endpoints support user productivity without connectivity or location constraints.
 
     Examples of common services and applications include line of business (LOB) applications, internal websites, file shares, authentication requirements, application and OS update mechanisms, and application configuration. Basically, they include anything and everything users need to fully do their jobs.
 
-2. Verify the end-state for each workload. Identify known blockers that prevent getting to this end-state or prevent supporting cloud native endpoints.
+2. Verify the end-state for each workload. Identify known blockers that prevent getting to this end-state or prevent supporting cloud-native endpoints.
 
     Some workloads and their services & applications may already be cloud-friendly or enabled. Some may not. Getting to the end-state for each workload may require organization investment & effort, and may include updating software, "lifting and shifting" to a new platform, migrating to a new solution, or making configuration changes.
 
-    The steps needed for each workload are different with each organization. They depend on how the service or application is hosted and accessed by users. This end-state should address the primary challenge of enabling users to do their work on a cloud native endpoint, regardless of location or connectivity to the internal network.
+    The steps needed for each workload are different with each organization. They depend on how the service or application is hosted and accessed by users. This end-state should address the primary challenge of enabling users to do their work on a cloud-native endpoint, regardless of location or connectivity to the internal network.
 
-    Based on each defined end-state, you may discover or define that cloud-enabling a service or application is difficult or blocked. This situation can happen for different reasons, including technical or financial limitations. These limitations need to be clear and be understood. You'll need to review their impact and determine how to move each workload to be cloud native friendly.
+    Based on each defined end-state, you may discover or define that cloud-enabling a service or application is difficult or blocked. This situation can happen for different reasons, including technical or financial limitations. These limitations need to be clear and be understood. You'll need to review their impact and determine how to move each workload to be cloud-native friendly.
 
 ### ✅ Phase 2: Prioritize any blockers
 
@@ -262,7 +262,7 @@ After you've identified the key workloads and their end-state blockers, then:
 
 1. Prioritize each blocker and evaluate each blocker for resolution.
 
-    You may not want or need to address all blockers. For example, your organization might have workloads, or a part of workloads, that won’t support your cloud native endpoints. This lack of support may or may not be significant for your organization or users. You and your organization can make this decision.
+    You may not want or need to address all blockers. For example, your organization might have workloads, or a part of workloads, that won’t support your cloud-native endpoints. This lack of support may or may not be significant for your organization or users. You and your organization can make this decision.
 
 2. To support testing and proof of concept (POC), start with a minimum set of workloads. The goal is to test and validate a sample of your workloads.
 
@@ -284,9 +284,9 @@ After you've identified the key workloads and their end-state blockers, then:
 
 In this phase, you're ready to implement your changes.
 
-1. Move unblocked workloads to your planned cloud native solutions or end-state. Ideally, this step should be broken into smaller work items. The goal is to continue business operations with minimal disruption.
+1. Move unblocked workloads to your planned cloud-native solutions or end-state. Ideally, this step should be broken into smaller work items. The goal is to continue business operations with minimal disruption.
 
-2. After the first set of workloads support cloud native endpoints, identify more workloads, and continue the process.
+2. After the first set of workloads support cloud-native endpoints, identify more workloads, and continue the process.
 
 ### ✅ Phase 4: Prepare your users
 
@@ -298,16 +298,16 @@ Users will have different experiences for receiving, deploying, and being suppor
 
 ## Transition your organization in phases
 
-The following phases are a high-level approach for organizations to move their environment to support cloud native Windows endpoints. These phases are parallel to transitioning endpoints and user workloads. They may depend on certain workloads being partially or fully transitioned to support cloud native Windows endpoints.
+The following phases are a high-level approach for organizations to move their environment to support cloud-native Windows endpoints. These phases are parallel to transitioning endpoints and user workloads. They may depend on certain workloads being partially or fully transitioned to support cloud-native Windows endpoints.
 
 ### ✅ Phase 1: Define endpoints, dependencies, and milestones
 
-This phase is the first step for your organization migration to be fully cloud native. Look at what you currently have, define success criteria, and start planning how your devices will be added to Azure AD.
+This phase is the first step for your organization migration to be fully cloud-native. Look at what you currently have, define success criteria, and start planning how your devices will be added to Azure AD.
 
 1. **Define the endpoints that require a cloud identity**
 
     - Endpoints that use internet access require a cloud identity. You'll add these endpoints to Azure AD.
-    - Endpoints that don't use the internet or are only used on-premises shouldn't have a cloud identity. Don't migrate these scenarios to be cloud native.
+    - Endpoints that don't use the internet or are only used on-premises shouldn't have a cloud identity. Don't migrate these scenarios to be cloud-native.
 
 2. **Define dependencies**
 
@@ -342,13 +342,13 @@ This phase is the first step for your organization migration to be fully cloud n
 
 ### ✅ Phase 2: Enable endpoint cloud hybrid identity (optional)
 
-To be fully cloud native, your existing Windows endpoints must be reset. When you reset, the endpoint is restored back to factory settings. All apps, settings, and personal data on the device is deleted.
+To be fully cloud-native, your existing Windows endpoints must be reset. When you reset, the endpoint is restored back to factory settings. All apps, settings, and personal data on the device is deleted.
 
 If you're not ready to reset your endpoints, then you can enable hybrid Azure AD join. A cloud identity is created for hybrid Azure AD join endpoints. Remember, hybrid Azure AD join still requires on-premises connectivity.
 
-Hybrid Azure AD join is a transitionary step to cloud native, and isn't the end goal. The end goal is for all existing endpoints to be fully cloud native. 
+Hybrid Azure AD join is a transitionary step to cloud-native, and isn't the end goal. The end goal is for all existing endpoints to be fully cloud-native. 
 
-When endpoints are fully cloud native, user data is stored in a cloud storage provider, like OneDrive. So when an endpoint is reset, the user applications, configuration, and data is still accessible, or will replicate to a newly provisioned endpoint.
+When endpoints are fully cloud-native, user data is stored in a cloud storage provider, like OneDrive. So when an endpoint is reset, the user applications, configuration, and data is still accessible, or will replicate to a newly provisioned endpoint.
 
 For more information, go to:
 
@@ -391,13 +391,13 @@ Important steps for this phase include:
 
     - Only real production use by real production users will fully validate the workloads and their functionality. Through natural, day-to-day use of the POC Azure AD endpoints, users organically test and validate your workloads.
 
-    - Create checklists of business critical functionality and scenarios, and give these lists to your POC users. The checklists are specific to each organization and may change as workloads are transitioned to cloud native friendly workloads.
+    - Create checklists of business critical functionality and scenarios, and give these lists to your POC users. The checklists are specific to each organization and may change as workloads are transitioned to cloud-native friendly workloads.
 
 4. **Validate functionality**
 
     Validation is a repetitive process. It's based on the workloads and their configuration within your organization.
 
-    - Collect user feedback on the POC endpoints, workloads, and their functionality. This feedback should be from users that used the cloud native endpoints.
+    - Collect user feedback on the POC endpoints, workloads, and their functionality. This feedback should be from users that used the cloud-native endpoints.
 
       Other blockers, and previously unknown or unaccounted for workloads/scenarios may be discovered.
 
@@ -405,7 +405,7 @@ Important steps for this phase include:
 
 ### ✅ Phase 5: Azure AD join your existing Windows endpoints
 
-This phase transitions new Windows endpoint provisioning to Azure AD joined. Once all blockers and issues have been resolved, you can move existing devices to be fully cloud native. You have the following options:
+This phase transitions new Windows endpoint provisioning to Azure AD joined. Once all blockers and issues have been resolved, you can move existing devices to be fully cloud-native. You have the following options:
 
 - **Option 1: Replace your devices**. If the devices are end-of-life or don't support modern security, then replacing them is the best choice. Modern devices support new and enhanced security features, including the Trusted Platform Module (TPM) technology.
 
@@ -429,21 +429,21 @@ Over time, it gets complicated due to a lack of documentation, lack of clarity i
 
 ### Manage settings using Intune
 
-Microsoft Intune has many built-in settings that can be configured and deployed to your cloud native endpoints. When moving to Intune for policy management, you have some options.
+Microsoft Intune has many built-in settings that can be configured and deployed to your cloud-native endpoints. When moving to Intune for policy management, you have some options.
 
 These options aren't necessarily mutually exclusive. You can migrate a subset of policies and start new for others.
 
 - **Option 1: Start new** (recommended): Intune has many settings to configure and manage your endpoints. You can create a policy, add and configure settings in the policy, and then deploy the policy.
 
-  Many existing group policies include policies that might not apply to cloud native endpoints. Starting fresh enables an organization to validate and simplify their existing enforced policies, while eliminating legacy, forgotten, or even harmful policies. Intune has built-in templates that group common settings together, like [VPN, Wi-Fi, endpoint protection, and more](/mem/intune/configuration/device-profiles).
+  Many existing group policies include policies that might not apply to cloud-native endpoints. Starting fresh enables an organization to validate and simplify their existing enforced policies, while eliminating legacy, forgotten, or even harmful policies. Intune has built-in templates that group common settings together, like [VPN, Wi-Fi, endpoint protection, and more](/mem/intune/configuration/device-profiles).
 
 - **Option 2: Migrate**: This option involves lifting the existing policies and shifting them to the Intune policy engine. It can be cumbersome and time consuming. For example, you may have many existing group policies and there will be differences with settings on-premises vs. in the cloud.
 
-  If you choose this option, you must review and analyze your existing group policies, and determine if they're still needed or valid on your cloud native endpoints. You want to eliminate unnecessary policies, including the policies that may cause overhead, or degrade system performance or the user experience. Don't move your group policies to Intune until you know what they do.
+  If you choose this option, you must review and analyze your existing group policies, and determine if they're still needed or valid on your cloud-native endpoints. You want to eliminate unnecessary policies, including the policies that may cause overhead, or degrade system performance or the user experience. Don't move your group policies to Intune until you know what they do.
 
 ### Intune features you should know
 
-Intune also has built-in features that can help you configure your cloud native endpoints:
+Intune also has built-in features that can help you configure your cloud-native endpoints:
 
 - **[Group Policy Analytics](/mem/intune/configuration/group-policy-analytics)**: You can import your GPOs in the Microsoft Endpoint Manager admin center, and run an analysis on the policies. You can see the policies that exist in Intune, and see the policies that are deprecated.
 
@@ -451,9 +451,9 @@ Intune also has built-in features that can help you configure your cloud native 
 
   For more information, go to [Group Policy Analytics in Endpoint Manager](/mem/intune/configuration/group-policy-analytics).
 
-- **[Settings catalog](/mem/intune/configuration/settings-catalog)**: See all the settings available in Intune, and create, configure, & deploy a policy using these settings. [Tasks you can complete using the Settings Catalog in Intune](/intune/configuration/settings-catalog-common-features.md) may also be a good resource. If you create GPOs, then the settings catalog is a natural transition to cloud native endpoint configuration. 
+- **[Settings catalog](/mem/intune/configuration/settings-catalog)**: See all the settings available in Intune, and create, configure, & deploy a policy using these settings. [Tasks you can complete using the Settings Catalog in Intune](/intune/configuration/settings-catalog-common-features.md) may also be a good resource. If you create GPOs, then the settings catalog is a natural transition to cloud-native endpoint configuration. 
 
-  When combined with [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics), you can deploy the policies you used on-premises to your cloud native endpoints.
+  When combined with [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics), you can deploy the policies you used on-premises to your cloud-native endpoints.
 
   For more information, go to [Settings catalog in Endpoint Manager](/mem/intune/configuration/settings-catalog).
 
@@ -506,11 +506,11 @@ For more information on Windows Autopilot, go to:
 - [Tutorial - Use Autopilot to enroll devices in Intune](/mem/intune/enrollment/tutorial-use-autopilot-enroll-devices)
 - [Windows Autopilot FAQ](/mem/autopilot/autopilot-faq)
 
-## Follow the cloud native endpoints guidance
+## Follow the cloud-native endpoints guidance
 
-1. [Overview: What are cloud native endpoints?](cloud-native-endpoints-overview.md)
-2. [Tutorial: Get started with cloud native Windows endpoints](cloud-native-windows-endpoints.md)
+1. [Overview: What are cloud-native endpoints?](cloud-native-endpoints-overview.md)
+2. [Tutorial: Get started with cloud-native Windows endpoints](cloud-native-windows-endpoints.md)
 3. [Concept: Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
-4. [Concept: Cloud native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
+4. [Concept: Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
 5. 🡺 **High level planning guide** (*You are here*)
 6. [Known issues and important information](cloud-native-endpoints-known-issues.md)
