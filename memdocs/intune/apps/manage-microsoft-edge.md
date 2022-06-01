@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/26/2022
+ms.date: 06/01/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -482,7 +482,7 @@ Organizations can modify their network stack preference by configuring the follo
 
 |Key  |Value  |
 |---------|---------|
-|com.microsoft.intune.mam.managedbrowser.NetworkStackPref     |**0** (default) use the Chromium network stack<br>**1** use the iOS network stack<br>**2** automatically switch to the iOS network stack when the Chromium network stack fails | 
+|com.microsoft.intune.mam.managedbrowser.NetworkStackPref     |**0** (default) use the Chromium network stack<br>**1** use the iOS network stack | 
 
 > [!NOTE]
 > Chromium network stack is recommended. Use iOS network stack when you run into network issues, such as VPN in particular.
