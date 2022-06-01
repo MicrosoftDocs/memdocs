@@ -100,7 +100,7 @@ Your organization can put a missing, corporate-owned iPhone or iPad into *manage
 
 ### App inventory details
 
-You organization can require you to install a mobile threat defense (MTD) app. If you're required to install an MTD app on your device:   
+Your organization can require you to install a mobile threat defense (MTD) app. If you're required to install an MTD app on your device:   
 
 * Corporate-owned device: Your organization can view details about all apps on the device. 
 * Personal-owned device: Your organization can only view the details of your managed apps.  
@@ -113,6 +113,6 @@ For more information about mobile threat defense, see [Install mobile threat def
 An IT admin can grant permission to apps in the work profile, both manually and by automation. The IT admin does this to reduce the number of prompts you receive. The permissions could be for things like the camera, microphone, and location. If your device is running Android 11, you'll receive a push notification when someone grants permission to an app.    
 
 ###  Network information
-Some information about network connections for Android devices may be available to your organization. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it is connected.  
+Some information about network connections for Android devices may be available to your organization. For example, if your organization requires devices to remain within a certain building, your device would identify the network where it's connected.  
 
 
