@@ -4,7 +4,7 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 04/19/2022
+ms.date: 05/23/2022
 ms.author: erikje
 ms.custom: include file
 ---
@@ -23,7 +23,7 @@ Scenarios that send push notifications to the Company Portal include:
 
 - [Custom notifications](../remote-actions/custom-notifications.md)
 - [Push notifications for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)
-- [Device ownership change push notifications](../apps/company-portal-app.md#device-ownership-notification)
+- [Device ownership change push notifications](../enrollment/corporate-identifiers-add.md#change-device-ownership)
 - [Delivery of S/MIME certificates for iOS to access Outlook](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/smime-outlook-for-ios-and-android)
 - [Derived credential enrollment](../protect/derived-credentials.md)
 

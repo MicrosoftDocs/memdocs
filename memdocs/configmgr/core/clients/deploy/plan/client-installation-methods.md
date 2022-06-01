@@ -162,7 +162,7 @@ For more information about how to manually install the client on each of platfor
 
 -   Can install and assign computers on the internet.  
 
--   Can automate with Windows AutoPilot and Microsoft Intune for co-management.  
+-   Can automate with Windows Autopilot and Microsoft Intune for co-management.  
 
 #### Disadvantages
 
