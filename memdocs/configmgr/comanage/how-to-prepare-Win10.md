@@ -5,7 +5,7 @@ description: Learn how to prepare your Windows internet-based devices for co-man
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 02/16/2022
+ms.date: 05/19/2022
 ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
@@ -19,16 +19,14 @@ This article focuses on the second path to co-management, for new internet-based
 
 ## Windows Autopilot
 
-For new Windows devices, you can use the Autopilot service to configure the out of box experience (OOBE). This process includes joining the device to Azure AD and enrolling the device in Intune.
+For new Windows devices, use the Autopilot service to configure the out of box experience (OOBE). This process includes joining the device to Azure AD, enrolling the device in Intune, installing the Configuration Manager client, and configuring co-management.
 
-For more information, see [Overview of Windows Autopilot](../../autopilot/windows-autopilot.md).
-
-To configure your devices to be automatically enroll into Intune when they join Azure AD, see [Enroll Windows devices for Microsoft Intune](../../intune/enrollment/windows-enroll.md).
+For more information, see [How to enroll with Autopilot](autopilot-enrollment.md).
 
 > [!NOTE]
 > As we talk with our customers that are using Microsoft Endpoint Manager to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and hybrid Azure Active Directory (Azure AD) joined devices. Many customers confuse these two topics. Co-management is a management option, while Azure AD is an identity option. For more information, see [Understanding hybrid Azure AD and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog post aims to clarify hybrid Azure AD join and co-management, how they work together, but aren't the same thing.
 >
-> You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
+> You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the hybrid Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
 
 ### Gather information from Configuration Manager
 
@@ -47,16 +45,18 @@ For more information, see [Manually register devices with Windows Autopilot](../
 ### Autopilot for existing devices
 <!--1358333-->
 
-[Windows Autopilot for existing devices](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/New-Windows-Autopilot-capabilities-and-expanded-partner-support/ba-p/260430) is available in Windows 10, version 1809 or later. This feature allows you to reimage and provision a Windows 7 device for [Windows Autopilot user-driven mode](../../autopilot/user-driven.md) using a single, native Configuration Manager task sequence.
+_Windows Autopilot for existing devices_ allows you to reimage and provision a Windows 8.1 device for [Windows Autopilot user-driven mode](../../autopilot/user-driven.md) using a single, native Configuration Manager task sequence.
 
-For more information, see [Windows Autopilot for existing devices task sequence](../../autopilot/existing-devices.md).
+For more information, see [Windows Autopilot for existing devices](../../autopilot/existing-devices.md).
 
 ## Install the Configuration Manager client
 
-For internet-based devices in the second path, you need to create an app in Intune. Deploy this app to Windows 10 or later devices that aren't already Configuration Manager clients.
+You no longer need to create and assign an Intune app to install the Configuration Manager client. The Intune enrollment policy automatically installs the Configuration Manager client as a first-party app. The device gets the client content from the Configuration Manager cloud management gateway (CMG), so you don't need to provide and manage the client content in Intune. For more information, see [How to enroll with Autopilot](autopilot-enrollment.md).<!-- Intune 11300628 -->
+
+You do still specify the Configuration Manager client command-line parameters in Intune.
 
 > [!NOTE]
-> Before you assign this app to devices in Intune, make sure that the devices trust the CMG server authentication certificate. For more information, see [CMG server authentication certificate](../core/clients/manage/cmg/server-auth-cert.md). If a device doesn't trust the CMG server authentication certificate, you'll see a WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA error in the ccmsetup.log on the client.
+> Make sure that the devices trust the CMG server authentication certificate. For more information, see [CMG server authentication certificate](../core/clients/manage/cmg/server-auth-cert.md). If a device doesn't trust the CMG server authentication certificate, you'll see a WINHTTP_CALLBACK_STATUS_FLAG_INVALID_CA error in the ccmsetup.log on the client.
 
 ### Get the command line from Configuration Manager
 
@@ -81,7 +81,7 @@ Decide which command-line properties you require for your environment:
 
   - `SMSSITECODE`
 
-- If a device uses Azure AD for client authentication and also has a PKI-based client authentication certificate, specify the following properties to use Azure AD:<!-- MEMDocs#1483 -->
+- If devices use Azure AD for client authentication and also have a PKI-based client authentication certificate, specify the following properties to use Azure AD:<!-- MEMDocs#1483 -->
 
   - `AADCLIENTAPPID`
 
@@ -96,10 +96,9 @@ Decide which command-line properties you require for your environment:
 
 - To bootstrap a task sequence immediately after client registration, use the `PROVISIONTS` property. For more information, see [About client installation properties: PROVISIONTS](../core/clients/deploy/about-client-installation-properties.md#provisionts).
 
-The site publishes other Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are `CCMHOSTNAME` and `SMSSITECODE`.<!--3607731-->
+- To make sure that internet-based devices get the latest version of the Configuration Manager client, use the `UPGRADETOLATEST` property. For more information, see [About client installation properties: `UPGRADETOLATEST`](../core/clients/deploy/about-client-installation-properties.md#upgradetolatest).<!-- Intune 13745717 -->
 
-> [!NOTE]
-> If you're already deploying the Configuration Manager client from Intune, update the Intune app with a new command line and new MSI.<!-- SCCMDocs-pr issue 3084 -->
+The site publishes other Azure AD information to the cloud management gateway (CMG). An Azure AD-joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies enrolling devices to co-management in an environment with more than one Azure AD tenant. The only two required ccmsetup properties are `CCMHOSTNAME` and `SMSSITECODE`.<!--3607731-->
 
 The following example includes all of these properties:
 
@@ -107,24 +106,11 @@ The following example includes all of these properties:
 
 For more information, see [Client installation properties](../core/clients/deploy/about-client-installation-properties.md).
 
-### Create the app in Intune
-
-1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com), and then expand the left navigation pane.
-
-1. Select **Apps** > **All Apps** > **Add**.
-
-1. Under **Other**, select **Line-of-business app**.
-
-1. Upload the **ccmsetup.msi** app package file. Find this file in the following folder on the Configuration Manager site server: `<ConfigMgr installation directory>\bin\i386`.
-
-    > [!TIP]
-    > When you update the site, make sure you also update this app in Intune.
-
-1. After the app is updated, configure the app information with the command line that you copied from Configuration Manager.
-
 > [!IMPORTANT]
 > If you customize this command line, make sure it isn't more than 1024 characters long. When the command line length is greater than 1024 characters, the client installation fails.
 
 ## Next steps
+
+[How to enroll with Autopilot](autopilot-enrollment.md)
 
 [Switch workloads to Intune](how-to-switch-workloads.md)
