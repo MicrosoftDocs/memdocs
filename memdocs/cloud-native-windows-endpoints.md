@@ -237,6 +237,7 @@ We’ve selected a few settings to configure that will demonstrate an optimal Mi
     - Force synchronization of browser data and do not show the sync consent prompt - **Enabled**
 
 - **Microsoft OneDrive**  
+
   To improve the first sign-in experience, the following settings will configure Microsoft OneDrive to automatically sign in and redirect Desktop, Pictures, and Documents to OneDrive. Files On-Demand (FOD) is also recommended. It's enabled by default and isn't included in the following list. For more information on the recommended configuration for the OneDrive sync app, go to [Recommended sync app configuration for Microsoft OneDrive](/onedrive/ideal-state-configuration).
 
   - OneDrive
@@ -504,6 +505,7 @@ To deploy Microsoft Edge to previous versions of Windows, go to [Add Microsoft E
 Two components of the Microsoft Edge experience, which apply when users sign in with their Microsoft 365 credentials, can be configured from the Microsoft 365 Admin Center.
 
 - The start page logo in Microsoft Edge can be customized by configuring the *Your organization* section within the Microsoft 365 admin center. For more information, go to [Customize the Microsoft 365 theme for your organization](/microsoft-365/admin/setup/customize-your-organization-theme).
+
 - The default new tab page experience in Microsoft Edge includes Office 365 information and personalized news. How this page is displayed can be customized from the Microsoft 365 admin center under **Settings** > **Org settings** > **News** > **Microsoft Edge new tab page**.
 
 You can also set other settings for Microsoft Edge using settings catalog profiles. For example, you might want to configure specific sync settings for your organization.
@@ -522,6 +524,7 @@ You can customize and set a standard start and taskbar layout using Intune.
   After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](./intune/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
 
 - **For Windows 11**:
+
   - To create and apply a Start menu layout, go to [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11).
   - To create and apply a Taskbar layout, go to [Customize the Taskbar on Windows 11](/windows/configuration/customize-taskbar-windows-11).
 
@@ -571,6 +574,7 @@ Following are some settings available in the settings catalog that might be rele
     - Configure Chat Icon - **Disabled**
 
 - **Control which tenants the Teams desktop client can sign in to**
+
   When this policy is configured on a device, users can only sign in with accounts homed in an Azure AD tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Azure AD tenant IDs. By specifying this policy and defining an Azure AD tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
   
   - Administrative Templates \ Microsoft Teams
