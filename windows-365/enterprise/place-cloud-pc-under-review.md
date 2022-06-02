@@ -58,10 +58,13 @@ After setting up an Azure storage account with permissions as explained above, y
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select  **Devices** > **All Devices** > choose a device.
     ![Screenshot of choose a device](./media/place-cloud-pc-under-review/choose-device.png)
+    
 2. Select the ellipses (**…**) > **Place cloud PC under review (Preview)**.)
     ![Screenshot of place a Cloud PC under review](./media/place-cloud-pc-under-review/place-cloud-pc-under-review.png)
+    
 3. Select the Azure subscription and the Azure storage account to which the Windows 365 service was given **Storage Account Contributor** permissions.
     ![Screenshot of choose a subscription and storage](./media/place-cloud-pc-under-review/subscription-storage.png)
+    
 4. Select **Place under review**. Based on the size of the Cloud PC, it could take a few minutes for the snapshot to be saved to the storage account.
 
 ## Remove a Cloud PC from review
