@@ -153,7 +153,7 @@ Bootstrap tokens allow for non-admin users to have increased MDM permissions, an
 - Supervised devices (in Intune, that's all user-approved enrollments)  
 - Devices enrolled in Intune via Apple automated device enrollment   
 
-For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md#boostrap-tokens-preview).  
+For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md).  
 
 ### UI improvements when Android enrollment is available but not required<-- 8764312  -->
 We're updating the iconography users see in the Company Portal for Android when *Device enrollment* for *End user experiences* on your Intune tenants *Customization* page is set to **Available, no prompts**. The changes will make it easier for users to recognize when enrollment is available to them, but not required.   
@@ -735,7 +735,7 @@ Applies to:
 - Windows 10/11
 
 ### Settings catalog for macOS and Windows is generally available (GA) <!-- 9558656 -->
-The settings catalog will be generally available (GA). For more information on the settings catalog, go to [Use the settings catalog to configure settings on Windows and macOS devices](..configuration/settings-catalog.md)
+The settings catalog will be generally available (GA). For more information on the settings catalog, go to [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md)
 
 Applies to:
 - macOS
