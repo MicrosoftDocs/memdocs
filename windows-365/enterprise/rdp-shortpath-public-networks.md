@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Use RDP Shortpath for public networks (preview) with Windows 365  
 
-You can now use Remote Desktop Protocol (RDP) Shortpath for public networks with your Windows 365 Cloud PCs. RPD Shortpath for public networks can provide another connection path for improved Cloud PC connectivity, especially in suboptimal network conditions.
+You can now use Remote Desktop Protocol (RDP) Shortpath for public networks with your Windows 365 Cloud PCs. RDP Shortpath for public networks can provide another connection path for improved Cloud PC connectivity, especially in suboptimal network conditions.
 
 ## Requirements
 
@@ -66,7 +66,7 @@ For more information about RDP Shortpath benefits, see [Key benefits](/azure/vir
 
 ## RDP Shortpath connection process
 
-When using RPD Shortpath, the connection with the Cloud PC proceeds as follows:
+When using RDP Shortpath, the connection with the Cloud PC proceeds as follows:
 
 1. The RDP connection establishes a TCP-based connection using the reverse connect transport through the Gateway (in the same way as it does for connectivity without RDP Shortpath).
 2. If RDP Shortpath is enabled on the session host (Cloud PC), the service creates a UDP socket on all viable network interfaces.

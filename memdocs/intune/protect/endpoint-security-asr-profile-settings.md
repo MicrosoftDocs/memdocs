@@ -393,6 +393,9 @@ Supported platforms and profiles:
 
 #### Device Control
 
+> [!NOTE]  
+> This section details the settings found in Device control profiles created before May 23, 2022. Profiles created after that date use a new settings format as found in the Settings Catalog. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles.  
+
 - **Allow hardware device installation by device identifiers**  
   - **Not configured** *(default)*
   - **Yes** - Windows can install or update any device whose Plug and Play hardware ID or compatible ID appears in the list you create unless another policy setting specifically prevents that installation. If you enable this policy setting on a remote desktop server, the policy setting affects redirection of the specified devices from a remote desktop client to the remote desktop server.
