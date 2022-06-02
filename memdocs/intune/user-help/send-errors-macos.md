@@ -39,8 +39,9 @@ Get help or report a problem with the Company Portal app. Company Portal provide
 1. When you receive the error message, select **Report**. 
 2. In the Company Portal app, go to the menu bar and select the **Help** menu > **Save Diagnostic Report**. 
 3. Choose a location to save the file. 
-4. Go to **Help** > **Send Diagnostic Report** > **Email details**. 
-5. Enter your support person's email address in the **To** line.   
+4. Go to **Help** > **Send Diagnostic Report** > **Email details** to compose a message.
+5. Enter your support person's email address in the **To** line.  
+6. Attach the diagnostics report file if it wasn't automatically done.   
 6. In the body of the email, describe your experience with the app. Include the steps you took right up until the error occurred. 
 7. Send the email, and follow up with your support person if needed.      
 
