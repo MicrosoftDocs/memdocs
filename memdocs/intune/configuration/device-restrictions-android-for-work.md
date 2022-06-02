@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/28/2022
+ms.date: 05/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.technology:
 
 params:
   siblings_only: true
-ms.reviewer: shthilla, chmaguir, chrisbal, priyar
+ms.reviewer: andreibiswas, shthilla, chmaguir, chrisbal, priyar
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -49,14 +49,14 @@ For Android device administrator, see [Android and Samsung Knox Standard device 
 
 - When creating device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
 
-  - [Android Enterprise personally-owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
+  - [Android Enterprise personally owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
   - [Android Enterprise fully managed, dedicated, and corporate-owned work profile security settings](../enrollment/android-fully-managed-security-settings.md)
 
 ## Fully managed, dedicated, and corporate-owned work profile
 
 These settings apply to Android Enterprise enrollment types where Intune controls the entire device, such as Android Enterprise fully managed, dedicated, and corporate-owned work profile devices.
 
-Some settings are not supported by all enrollment types. To see which settings are supported by which enrollment types, see the user interface. Each setting is under a heading that indicates the enrollment types that can use the setting.
+Some settings aren't supported by all enrollment types. To see which settings are supported by which enrollment types, see the user interface. Each setting is under a heading that indicates the enrollment types that can use the setting.
 
 :::image type="content" source="./media/device-restrictions-android-for-work/setting-headers.png" alt-text="See the Android Enterprise Users and Accounts setting headers and the enrollment types they apply to in Microsoft Intune and Endpoint Manager.":::
 
@@ -309,7 +309,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
         - **Enable**: Users can access the debug menu easier. Specifically, they can swipe down, or use the Managed Settings shortcut. As always, they can continue to select the back button 15 times.
         - **Not configured** (default): Intune doesn't change or update this setting. By default, easy access to the debug menu is turned off. Users must select the back button 15 times to open the debug menu.
 
-        Using the debug menu, users can:
+        In the debug menu, users can:
 
         - See and upload Managed Home Screen logs​
         - Open Google's Android Device Policy Manager app
@@ -380,7 +380,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
         - **Set custom URL background for sign-in screen**: Enter the URL of the URL background for the sign-in screen. The sign-in screen must be enabled to configure this setting.
         - **Set custom URL branding logo for sign-in screen and session pin page**: Enter the URL branding logo for the sign-in screen and session pin page.
-        - **Require user to set a PIN for sign-in session**: When set to **Enable**, the user must set a PIN for their sign-in session. When set to **Not configured** (default), the user isn't required to set a PIN. This setting must be enabled to show the sub-settings.
+        - **Require user to set a PIN for sign-in session**: When set to **Enable**, the user must set a PIN for their sign-in session. When set to **Not configured** (default), the user isn't required to set a PIN. This setting must be enabled to show the subsettings.
           - **Choose complexity of PIN for sign-in session**: Select the complexity of the session PIN. Your options:
             -  **Not configured**: Intune doesn't change or update this setting. By default, MHS requires at least one character in the session PIN.
             -  **Simple**: Requires numbers. There are no restrictions on repeating (444) or ordered (123, 321, 246) sequences.
@@ -389,7 +389,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
             For more information on this setting, see **Complexity of session PIN** at [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
 
           - **Require user to enter session PIN if screensaver has appeared**: Select **Enable** to require the user to enter their session PIN to resume using the Managed Home Screen after the screensaver has appeared. 
-        - **Automatically sign-out of MHS and Shared device mode applications after inactivity**: Select **Enable** to auto sign-out of the Managed Home Screen based on inactivity. This setting must be enabled to show the sub-settings.
+        - **Automatically sign-out of MHS and Shared device mode applications after inactivity**: Select **Enable** to auto sign out of the Managed Home Screen based on inactivity. This setting must be enabled to show the subsettings.
           - **Number of seconds device is inactive before automatically signing user out​**: Define the period of inactivity, in seconds, before user is automatically signed out from Managed Home Screen. By default, this value is set to 300 seconds. 
           - **Number of seconds to give user notice before automatically signing them out**: Define the amount of time, in seconds, for user to have option to resume their session before getting automatically signed out from Managed Home Screen. By default, this value is set to 60 seconds. 
 
@@ -463,6 +463,15 @@ End of comment -->
   - On corporate-owned work profile devices, only **Unredacted notifications**, **Trust agents**, and **Fingerprint unlock** can be disabled.
   - If users turn off the **Use one lock** setting on their device, then disabling **Fingerprint unlock** and disabling **Trust agents** apply at the corporate-owned work profile-level. If users turn on the **Use one lock** setting, then disabling **Fingerprint unlock** and disabling **Trust agents** apply at the device-level.
 
+- **Required unlock frequency**: Strong authentication is when users unlock a device using a password, PIN, or pattern. Non-strong authentication methods are when users unlock a device using some biometric options, such as a fingerprint or face scan.
+
+  Select how long users have before they're required to unlock the device using a strong authentication method. Your options:
+
+  - **Device default** (default): The screen locks using the device's default time.
+  - **24 hours since last pin, password, or pattern unlock**: The screen locks 24 hours after users last used a strong authentication method to unlock the device. When the timeout is reached, non-strong authentication methods are disabled until the device is unlocked using strong authentication.
+
+  [2.3.4 Advanced passcode management: Strong Authentication required timeout](https://developers.google.com/android/work/requirements#2.3.-advanced-passcode-management_1) (opens Android's web site)
+
 #### Fully managed and dedicated devices
 
 - **Disable lock screen**: **Disable** blocks all Keyguard lock screen features from being used. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, when the device is in lock screen, the OS might allow all the Keyguard features, such as camera, fingerprint unlock, and more.
@@ -519,9 +528,9 @@ If you want to enable side-loading, set the **Allow installation from unknown so
 
 - **Clear local data in apps not optimized for Shared device mode**: Add any app not optimized for shared device mode to the list. The app's local data will be cleared whenever a user signs out of an app that's optimized for shared device mode. Available for dedicated devices enrolled with Shared mode running Android 9 and later. 
 
-  When you use this setting, users cannot initiate sign out from non-optimized apps and get single sign-out. 
+  When you use this setting, users can't initiate sign out from non-optimized apps and get single sign-out. 
   - Users will need to sign out of an app that has been optimized for Shared Device mode. Microsoft apps that are optimized for Shared device mode on Android include Teams and Intune’s Managed Home Screen. 
-  - For apps that have not been optimized for Shared Device mode, deleting application data extends to local app storage only. Data may be left in other areas of the device. User identifying artifacts such as email address and username may be left behind on the app and visible by others. 
+  - For apps that haven't been optimized for Shared Device mode, deleting application data extends to local app storage only. Data may be left in other areas of the device. User identifying artifacts such as email address and username may be left behind on the app and visible by others. 
   - Non-optimized apps that provide support for multiple accounts could exhibit indeterminate behavior and are therefore not recommended. 
   
   All non-optimized apps should be thoroughly tested before being used in multi-user scenarios on shared devices to ensure they work as expected. For example, validate your core scenarios in each app, verify that the app signs out properly, and that all data is sufficiently cleared for your organization’s needs.
@@ -606,6 +615,15 @@ These settings apply to corporate-owned work profiles.
   > [!NOTE]
   > Fully managed, dedicated, and corporate-owned work profile devices are not prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
 
+- **Required unlock frequency**: Strong authentication is when users unlock the work profile using a password, PIN, or pattern. Non-strong authentication methods are when users unlock the work profile using some biometric options, such as a fingerprint or face scan.
+
+  Select how long users have before they're required to unlock the work profile using a strong authentication method. Your options:
+
+  - **Device default** (default): The screen locks using the device's default time.
+  - **24 hours since last pin, password, or pattern unlock**: The screen locks 24 hours after users last used a strong authentication method to unlock the work profile. When the timeout is reached, non-strong authentication methods are disabled until the work profile is unlocked using strong authentication.
+
+  [2.3.4 Advanced passcode management: Strong Authentication required timeout](https://developers.google.com/android/work/requirements#2.3.-advanced-passcode-management_1) (opens Android's web site)
+
 ### Personal profile
 
 - **Camera**: **Block** prevents access to the camera during personal use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the camera in the personal profile.
@@ -657,7 +675,7 @@ These settings apply to Android Enterprise personally owned devices with a work 
 
 - **Search work contacts from personal profile**: **Block** prevents users from searching for work contacts in apps in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow searching for work contacts in the personal profile.
 
-- **Camera**: **Block** prevents access to the camera on the device in the personally owned work profile. The camera on the personal side is not affected by the setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
+- **Camera**: **Block** prevents access to the camera on the device in the personally owned work profile. The camera on the personal side isn't affected by the setting. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow access to the camera.
 
 - **Allow widgets from work profile apps**: **Enable** allows users to put widgets exposed by apps on the home screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable this feature.
 
@@ -736,7 +754,7 @@ These password settings apply to personally owned devices with a work profile.
 
 - **Prevent app installations from unknown sources in the personal profile**: By design, Android Enterprise personally owned devices with a work profile can't install apps from sources other than the Play Store. This setting allows administrators more control of app installations from unknown sources. **Block** prevents app installations from sources other than the Google Play Store in the personal profile. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow app installations from unknown sources in the personal profile. By nature, personally owned devices with a work profile are intended to be dual-profile:
 
-  - A personally owned devices with a work profile managed using MDM.
+  - A personally owned device with a work profile managed using MDM.
   - A personal profile that's isolated from MDM management.
 
 ### Connectivity

@@ -37,7 +37,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 1. [Download and install](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true) the **AzureAD PowerShell module**.
 
-2. Download the PowerShell script named **mst-CA-readiness.ps1** from aka.ms/mst-ca-provisioning.
+2. Download the PowerShell script named **mst-ca-provisioning.ps1** from aka.ms/mst-ca-provisioning.
 
 3. Using credentials that have the Azure Role permissions [equivalent to **Application Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator-permissions), run the script from any location in your environment, to provision your tenant.
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 05/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -40,7 +40,7 @@ The [Microsoft Store for Business](https://www.microsoft.com/business-store) giv
 * Both Online and Offline licensed versions of Apps are synchronized to Intune. App names will be appended with "Online" or "Offline" in the portal.
 * You can track how many licenses are available, and how many are being used in the Intune administration console.
 * Intune blocks assignment and installation of apps if there are an insufficient number of licenses available.
-* Apps managed by Microsoft Store for Business will automatically revoke licenses when a user leaves the enterprise, or when the administrator removes the user and the user devices.
+* Intune will revoke app licenses for apps managed by Microsoft Store for Business when the user is deleted from Azure AD.
 
 ## Before you start
 

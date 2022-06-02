@@ -253,7 +253,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     - The **Settings** > **General** > **About** screen says: **This iPhone is supervised. *Company name* can monitor your Internet traffic and locate this device.**
 
      > [!NOTE]
-     > If a device is enrolled without supervision, you need to use Apple Configurator if you want to set it to supervised. To reset the device in this way, you need to connect it to a Mac with a USB cable. For more information, see [Apple Configurator Help](http://help.apple.com/configurator/mac/2.3).
+     > If a device is enrolled without supervision, you need to use Apple Configurator if you want to set it to supervised. To reset the device in this way, you need to connect it to a Mac with a USB cable. For more information, see [Apple Configurator Help](https://support.apple.com/guide/apple-configurator-mac).
 
 11. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. To use this option, the device must have the **Supervised** management option set to **Yes**.
 
@@ -350,7 +350,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     | **Device to Device Migration** | Give the user the option to migrate data from an old device to this device. For iOS/iPadOS 13.0 and later. |
     | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
     | **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
-    | **Get Started (preview)**| Shows users the Get Started welcome screen.  
+    | **Get Started**| Shows users the Get Started welcome screen.  
 
 19. Select **Next**.
 
