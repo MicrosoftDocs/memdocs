@@ -157,6 +157,12 @@ items:
           href: restore-bulk.md
       - name: End grace period
         href: end-grace-period.md
+      - name: Digital forensics
+        items:
+        - name: Overview
+          href: digital-forensics.md
+        - name: Place a Cloud PC under review
+          href: place-cloud-pc-under-review.md
     - name: Reports
       items:
       - name: Resource performance report
