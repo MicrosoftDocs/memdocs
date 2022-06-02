@@ -113,7 +113,14 @@ The organizational unit that's granted the rights to create computers must match
 
 ## Install the Intune Connector
 
-The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. The computer must also have access to the internet and your Active Directory. To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that you want to support.
+## Prerequisites
+
+- The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. 
+- The computer must also have access to the internet and your Active Directory.
+- To increase scale and availability, you can install multiple connectors in your environment.
+- We recommend installing the Connector on a server that's not running any other Intune connectors.
+- Each connector must be able to create computer objects in any domain that you want to support.
+- The Global administrator role is a temporary requirement at the time of installation.
 
 > [!NOTE]
 > If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that's able to create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
@@ -129,9 +136,6 @@ The Intune Connector requires the [same endpoints as Intune](../intune/fundament
 7. Enter the Global administrator or Intune administrator role credentials. 
  The user account must have an assigned Intune license.
 8. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
-
-> [!NOTE]
-> The Global administrator role is a temporary requirement at the time of installation.
 
 > [!NOTE]
 > After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
