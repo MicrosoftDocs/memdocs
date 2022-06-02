@@ -32,26 +32,26 @@ ms.collection:
 
 # Report Company Portal app problems  
 
-Sometimes unexplained errors occur in the Company Portal app. When it happens, you can get help by emailing your IT support person. Company Portal provides you with an email template and helps you upload the diagnostic details to give your IT team the context to support you. 
+Get help or report a problem with the Company Portal app. Company Portal provides you with an email template and helps you upload and send the diagnostic details.   
 
-## Report problem to IT support person 
+## Get help from support  
 
-1. When you receive an error message, select **Report**.
+1. On the error message, select **Report**.  
+2. Select the **Help** menu > **Save Diagnostic Report**. 
+3. Choose a location to save the file. 
+4. Email the file to your support person. If your email app is configured, you can send the diagnostic report by going to **Help** > **Send Diagnostic Report** > **Email details**. Fill in the your support person's email address. 
+5. In the body of the email, describe your experience with the app. Include the steps you took right up until the error occurred. 
+6. Send the email, and follow up with your support person if needed.      
 
-2. Select the **Help** menu > **Save Diagnostic Report**. Choose a location to save the file. 
+## Share diagnostic details 
 
-3. Email the file to your IT support person. If your email app is configured, you can send the diagnostic report by going to **Help** > **Send Diagnostic Report** > **Email details**. You will need to fill in the email address for your support person. 
-
-4. In the body of the email, describe your experience with the app. If you can remember them, include the steps you took before the error occurred. 
-
-## Share diagnostic details with Company Portal developers 
-
-App developers want to hear from you when unexpected behavior, such as a crash, occurs in Company Portal. Your diagnostic details could help developers find the root cause of a problem and prevent it from happening to other users. 
-
-To share your diagnostic logs with Microsoft:
+If Company Portal behaves unexpectedly, you can share the diagnostic details with Microsoft. Microsoft uses the Company Portal-specific logs to learn from and improve upon future products. 
 
 1. Open the Company Portal app.
-2. Click the **Help** menu > **Send Diagnostic Report**.  After the logs are uploaded, you'll receive an incident ID. Copy and save the ID.
-3. Select **Email details**. In the body of the email, describe your experience with the app. If you can remember them, include the steps you took before the error occurred. 
+2. Select the **Help** menu > **Send diagnostic report**.  
+3. After the logs are uploaded, you'll receive an incident ID. Copy and save the ID for your personal record. 
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+## Contact information  
+To find your organization's contact information, sign in to the Company Portal app or [website](https://go.microsoft.com/fwlink/?linkid=2010980) and select **Support**.   
+
+
