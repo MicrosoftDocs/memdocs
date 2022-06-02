@@ -113,7 +113,7 @@ The organizational unit that's granted the rights to create computers must match
 
 ## Install the Intune Connector
 
-## Prerequisites
+### Prerequisites
 
 - The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. 
 - The computer must also have access to the internet and your Active Directory.
