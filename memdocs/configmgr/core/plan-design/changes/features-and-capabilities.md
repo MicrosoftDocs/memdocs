@@ -46,7 +46,7 @@ Helps you create, manage, deploy, and monitor applications to a range of differe
 
 ## OS deployment
 
-Deploy an in-place upgrade of Windows, or capture and deploy OS images. Image deployment can use PXE, multicast, or bootable media. It can also help redeploy existing devices using Windows AutoPilot. For more information, see [Introduction to OS deployment](../../../osd/understand/introduction-to-operating-system-deployment.md).  
+Deploy an in-place upgrade of Windows, or capture and deploy OS images. Image deployment can use PXE, multicast, or bootable media. It can also help redeploy existing devices using Windows Autopilot. For more information, see [Introduction to OS deployment](../../../osd/understand/introduction-to-operating-system-deployment.md).  
 
 ## Software updates
 

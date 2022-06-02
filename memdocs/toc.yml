@@ -8,7 +8,21 @@ items:
     href: endpoint-manager-overview.md
   - name: Getting started with Microsoft Endpoint Manager
     href: endpoint-manager-getting-started.md
-  - name: Getting started with cloud native Windows endpoints
-    href: cloud-native-windows-endpoints.md
+  - name: Cloud native Windows endpoints
+    items:
+    - name: Overview and benefits
+      href: cloud-native-endpoints-overview.md
+    - name: Tutorial-Get started with cloud native Windows endpoints
+      href: cloud-native-windows-endpoints.md
+    - name: Azure AD concepts and on-premises resources
+      items:
+      - name: Azure AD joined vs. Hybrid Azure AD joined
+        href: azure-ad-joined-hybrid-azure-ad-joined.md
+      - name: Access on-premises resources
+        href: cloud-native-endpoints-on-premises.md
+    - name: Planning guide
+      href: cloud-native-endpoints-planning-guide.md
+    - name: Known issues
+      href: cloud-native-endpoints-known-issues.md
   - name: Get Support
     href: get-support.md
