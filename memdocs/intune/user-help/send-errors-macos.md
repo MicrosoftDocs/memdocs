@@ -8,7 +8,7 @@ author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 06/02/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,7 +32,7 @@ ms.collection:
 
 # Report Company Portal app problems  
 
-Get help or report a problem with the Company Portal app. Company Portal provides you with an email template and helps you upload and send the diagnostic details.   
+Get help or report a problem with the Company Portal app. Company Portal provides you with an email template and helps you upload and send diagnostic details.   
 
 ## Get help from support  
 
@@ -48,7 +48,7 @@ Get help or report a problem with the Company Portal app. Company Portal provide
 If Company Portal behaves unexpectedly, you can share the diagnostic details with Microsoft. Microsoft uses the Company Portal-specific logs to learn from and improve upon future products. 
 
 1. Open the Company Portal app.
-2. Select the **Help** menu > **Send diagnostic report**.  
+2. Go to the menu bar and select the **Help** menu > **Send diagnostic report**.  
 3. After the logs are uploaded, you'll receive an incident ID. Copy and save the ID for your personal record. 
 
 ## Contact information  
