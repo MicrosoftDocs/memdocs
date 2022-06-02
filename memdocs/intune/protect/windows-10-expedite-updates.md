@@ -81,7 +81,7 @@ In addition to a license for Intune, your organization must have one of the foll
 **Supported Windows 10/11 versions**:
 
 - Windows 10/11 versions that remain in support for Servicing, on x86 or x64 architecture
-- 
+
 Only update builds that are generally available are supported. Preview builds, including the Beta and Dev channels, are not supported with expedited updates.
 
 **Supported Windows 10/11 editions**:
