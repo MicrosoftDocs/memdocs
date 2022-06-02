@@ -96,7 +96,7 @@ To see a role assignment, choose **Intune** > **Tenant administration** > **Role
 - **[Scope (Tags)](scope-tags.md)**: Users in Members can see the resources that have the same scope tags.
 
 > [!NOTE]
-> The scope tags on your roles are not the ones that are used to control what the admins can actually see, but just setting up a scope tag for that specific role.
+> The scope tags on your roles do not control what admins can see, they just set up a scope tag for that specific role.
 
 ### Multiple role assignments
 If a user has multiple role assignments, permissions, and scope tags, those role assignments extend to different objects as follows:
