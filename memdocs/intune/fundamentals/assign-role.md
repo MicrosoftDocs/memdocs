@@ -56,7 +56,7 @@ To create, edit, or assign roles, your account must have one of the following pe
 8. On the **Review + Create** page, when you're done, choose **Create**. The new assignment is displayed in the list of assignments.
 
     > [!NOTE] 
-    > You create scope groups and when you assign a scope tag, you can only target groups that are listed in the Scope (Groups) of your role assignment.
+    > When you create scope groups and assign a scope tag, you can only target groups that are listed in the Scope (Groups) of your role assignment.
 
 ## Next steps
 - [Learn more about role-based access control in Intune](role-based-access-control.md)
