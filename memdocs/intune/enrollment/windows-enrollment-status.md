@@ -116,10 +116,12 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 8. Select **Next**.  
  
 9. Optionally, in **Scope tags**, assign a tag to limit profile management to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. Then select **Next**.   
- 
-10. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. You can access the profile from your profiles list. 
 
-  The next time each device checks in, the profile is applied.  
+    > [!NOTE]
+    > Scope tags limit who can see and reprioritize ESP profiles in the admin center. A scoped user can tell the relative priority of their profile even if they can't see all of the other profiles in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).  
+ 
+10. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. Once deployed, the profile will be applied the next time the devices check in. You can access the profile from your profiles list. 
+
 
 ## Edit default profile 
 
@@ -148,15 +150,10 @@ If you assign a user or device more than one ESP profile, the profile with the h
 2. If no profiles are targeted at the device, Intune applies the highest-priority profile assigned to the user. This only works in scenarios where there is a user. In white glove and self-deploying scenarios, only profiles targeted at devices can be applied.   
 3. If no profiles are assigned to the device or user, Intune applies the default ESP profile.    
 
-### Set priority  
 To prioritize your profiles:  
 
 1. Hover over the profile in the list with your cursor until you see three vertical dots.  
-2. Drag the profile to the desired position in the list.  
- 
-### Scope tags  
-  
-Scope tags limit who can see and reprioritize an ESP profile. A scoped user can tell the relative priority of their profile even if they can't see all the other profiles in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).  
+2. Drag the profile to the desired position in the list.   
 
 ## Block access to a device until a specific application is installed
 
@@ -170,7 +167,6 @@ Specify the apps that must be installed before the user can exit the enrollment 
 6. Choose **Select apps** > choose the apps > **Select** > **Save**.
 
 The apps that are included in this list are used by Intune to filter the list that should be considered blocking.  It doesn't specify what apps should be installed.  For example, if you configure this list to include "App 1," "App 2," and "App 3" and "App 3" and "App 4" are targeted to the device or user, the Enrollment Status Page will track only "App 3."  "App 4" will still be installed, but the Enrollment Status Page will not wait for it to complete.
- 
 
 ## ESP tracking     
 
@@ -184,13 +180,21 @@ This section describes the types of information, apps, and policies tracked duri
 
 ### Device preparation
 
-The enrollment status page tracks these steps during device preparation:   
+During device preparation, the enrollment status page tracks these tasks for the device user: 
 
-1. Secure your hardware: The device completes the Trusted Platform Module (TPM) key attestation and validates its identity with Azure AD. Azure AD sends a token to the device, which is used during Azure AD join. 
+* Secure your hardware
+* Join your organization's network
+* Register your device for mobile management  
 
-  This step is required for self-deploying mode and white glove deployment. It isn't needed for Windows Autopilot scenarios in user-driven mode.   
+This section describes each task and what they accomplish.  
 
-3. Join your organization's network: The device joins Azure AD by using the token received in the previous step. 
+#### Secure your hardware
+The device completes the Trusted Platform Module (TPM) key attestation and validates its identity with Azure AD. Azure AD sends a token to the device, which is used during Azure AD join. 
+
+This step is required for self-deploying mode and white glove deployment. It isn't needed for Windows Autopilot scenarios in user-driven mode.   
+
+#### Join your organization's network  
+The device joins Azure AD by using the token received in the previous step. 
 
   This step is required in self-deploying mode and white glove deployment. Devices in user-driven mode have already completed this step by time they open the ESP.  
 
@@ -206,14 +210,16 @@ The enrollment status page tracks these items during the device setup phase:
 
 * Security policies  
 * Certificate profiles  
+* Network connection  
 * Apps  
-* Connectivity profiles  
+
+This section describes each task and what they accomplish.  
 
 #### Security policies
 ESP doesn't track security policies, such as device restrictions, but these policies are installed in the background. The ESP does track Microsoft Edge, Assigned Access, and Kiosk Browser policies. 
 
   > [!TIP]
-  >  When complete, the status for security policies appears as **(1 of 1) completed**.  
+  >  When complete, the status for security policies appears on the ESP as **(1 of 1) completed**.  
 
 #### Certificates  
 The ESP tracks the installation of SCEP certificate profiles targeted at devices.  
@@ -227,9 +233,7 @@ The ESP tracks the installation of apps deployed in a device context, and includ
   - Per machine line-of-business (LoB) MSI apps
   - LoB store apps where installation context = device 
   - Offline store apps where installation context = device 
-  - Win32 applications for:  
-    - Windows 10, version 1903 and later
-    - Windows 11    
+  - Win32 applications for Windows 10, version 1903 and later, and Windows 11.    
 
 ### Account setup
 
@@ -268,7 +272,7 @@ This section lists the known issues for the enrollment status page.
 - When creating apps that will be deployed during ESP, any reboots that are packaged within the app may cause ESP to hang and fail the deployment. We recommend specifying the reboot behavior in Intune instead of triggering the reboot within the package. 
 - Disabling the ESP profile doesn't remove ESP policy from devices and users still get ESP when they log in to device for first time. The policy isn't removed when the ESP profile is disabled. 
 - A reboot during device setup forces the user to enter their credentials before the account setup phase. User credentials aren't preserved during reboot. Instruct the device users to enter their credentials to continue to the account setup phase.  
-- The ESP always times out on devices runing Windows 10, version 1903 and earlier, and
+- The ESP always times out on devices running Windows 10, version 1903 and earlier, and
 enrolled via the *Add work and school account* option. The ESP waits for Azure AD registration to complete. The issue is fixed on Windows 10 version 1903 and later.  
 - Hybrid Azure AD Autopilot deployment with ESP takes longer than the timeout duration entered in the ESP profile. On Hybrid Azure AD Autopilot deployments, the ESP takes 40 minutes longer than the value set in the ESP profile. For example, you set the timeout duration to 30 minutes in the profile. The ESP can take 30 minutes + 40 minutes. This delay gives the on-prem AD connector time to create the new device record to Azure AD.  
 - Windows logon page isn't pre-populated with the username in Autopilot User Driven Mode. If there's a reboot during the Device Setup phase of ESP:
