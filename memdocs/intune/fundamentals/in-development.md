@@ -157,7 +157,7 @@ Bootstrap tokens allow for non-admin users to have increased MDM permissions, an
 
 For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md).  
 
-### UI improvements when Android enrollment is available but not required<-- 8764312  -->
+### UI improvements when Android enrollment is available but not required<!-- 8764312  -->
 We're updating the iconography users see in the Company Portal for Android when *Device enrollment* for *End user experiences* on your Intune tenants *Customization* page is set to **Available, no prompts**. The changes will make it easier for users to recognize when enrollment is available to them, but not required.   
 
 ### Enroll to co-management from Windows Autopilot<!-- 11300628 -->
