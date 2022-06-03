@@ -79,7 +79,7 @@ Feedback settings will be provided to address M365 enterprise feedback policies 
 You will be able to select to include **Photo Library** as a supported application storage service for *outgoing* data. This support is in addition to *incoming* data transfer support for **Photo Library**. By selecting **Photo Library** in the **Allow users to open data from selected services** setting within Intune, you can allow managed accounts to send *outgoing* data to their device's photo library from their managed apps on iOS and Android platforms. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create Policy**. Choose either **iOS/iPadOS** or **Android**. This setting will be available as part of the **Data protection** step and specifically for **Policy managed apps**. For related information, see [Data protection](../apps/app-protection-framework.md#data-protection-2).
 
 ### Use App Protection Policies with Android Enterprise dedicated devices and Android (AOSP) devices<!-- 13819227 -->
-Intune-managed Android Enterprise dedicated devices enrolled with Azure Active Directory (Azure AD) shared mode and Android (AOSP) devices will be able to receive app protection policies policies and can be targeted separately from other Android device types. For more information about Android Enterprise dedicated devices and Android (AOSP), see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices) and [Android Open Source Project](../fundamentals/deployment-guide-enrollment-android.md#android-open-source-project).
+Intune-managed Android Enterprise dedicated devices enrolled with Azure Active Directory (Azure AD) shared mode and Android (AOSP) devices will be able to receive app protection policies and can be targeted separately from other Android device types. For more information about Android Enterprise dedicated devices and Android (AOSP), see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices) and [Android Open Source Project](../fundamentals/deployment-guide-enrollment-android.md#android-open-source-project).
 
 <!-- ***********************************************-->
 
@@ -99,7 +99,7 @@ Applies to:
 For more information, see [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
 ### Remotely restart and shut down macOS device <!-- 12472418 -->
-You'll be able to remotely restart or shutdown a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
+You'll be able to remotely restart or shut down a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
 For more information, see [Restart devices with Microsoft Intune](../remote-actions/device-restart.md).
 
 ### Additional Remote actions for Android (AOSP) Corporate devices<!-- 8504019 -->
@@ -117,7 +117,7 @@ Applies to:
 ### Improved certificate reporting details<!-- 13316515 -->
 We’re changing what Intune displays when you view certificate details for devices and certificate profiles. [Microsoft Endpoint Manager admin center]( https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Monitor** > **Certificates**. 
 
-Today, the certificate reports can show certificates that are no longer valid, or that are no longer on a device. With this change, you’ll won't see information for those invalid certificates. Instead, Intune displays only those that are valid, that were revoked within the last 30 days, or that expired within the last 30 days will be shown.
+Today, the certificate reports can show certificates that are no longer valid, or that are no longer on a device. With this change, you won't see information for those invalid certificates. Instead, Intune displays only those that are valid, that were revoked within the last 30 days, or that expired within the last 30 days will be shown.
 
 ### View a managed device's group membership<!-- 4100067 -->
 In the monitor section of the **Devices** workload of Intune, you'll be able to view the group membership of all AAD groups for a managed device. When this is available, you will be able to select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **Monitor** > *select a device* > **Group Membership**.
