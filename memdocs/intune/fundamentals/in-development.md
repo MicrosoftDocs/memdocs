@@ -120,7 +120,7 @@ We’re changing what Intune displays when you view certificate details for devi
 Today, the certificate reports can show certificates that are no longer valid, or that are no longer on a device. With this change, you’ll won't see information for those invalid certificates. Instead, Intune displays only those that are valid, that were revoked within the last 30 days, or that expired within the last 30 days will be shown.
 
 ### View a managed device's group membership<!-- 4100067 -->
-In the monitor section of the **Devices** workload of Intune, you'll be able to view the group membership of all AAD groups for a managed device. When this is available, you will be able to select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices**.
+In the monitor section of the **Devices** workload of Intune, you'll be able to view the group membership of all AAD groups for a managed device. When this is available, you will be able to select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **Monitor** > *select a device* > **Group Membership**.
 
 <!-- ***********************************************-->
 
@@ -299,17 +299,6 @@ For more information on wired networks, go to [Add and use wired networks settin
 Applies to:
 - Windows 11
 - Windows 10
-
-### Filter on the user scope or device scope in the Settings Catalog for Windows devices<!-- 13949975 -->
-When you create a Settings Catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings Catalog (preview)** for profile type).
-
-When you **Add filter**, you'll be able to filter on the settings by user scope or device scope.
-
-For more information, go to [Use the settings catalog to configure settings: Device scope vs. user scope settings](../configuration/settings-catalog.md#device-scope-vs-user-scope-settings)
-
-Applies to:
-- Windows 10
-- Windows 11
 
 ### iOS/iPadOS platform is in Settings Catalog <!-- 13934066 -->
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. The iOS/iPadOS platform and some settings are now available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog (preview)** for profile type).
