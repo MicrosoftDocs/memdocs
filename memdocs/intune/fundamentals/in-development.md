@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 05/05/2022
+ms.date: 06/02/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,14 +65,8 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
-### Improved report data experience on the Managed Apps pane<!-- 10147133 -->
-The **Managed Apps** pane will be updated to better display app data. You will be able to switch between displaying app data for the primary user and other users on a device, or display data for the device without any user. The generated app data will be displayed using the primary user of the device when the report is initially loaded, or displayed with no primary user if none exists. This capability will be available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Managed Apps**.
-
 ### Photo library outgoing data transfer support via app protection policies<!-- 14062176 -->
 You will be able to select to include **Photo Library** as a supported application storage service for *outgoing* data. This support is in addition to *incoming* data transfer support for **Photo Library**. By selecting **Photo Library** in the **Allow users to open data from selected services** setting within Intune, you can allow managed accounts to send *outgoing* data to their device's photo library from their managed apps on iOS and Android platforms. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create Policy**. Choose either **iOS/iPadOS** or **Android**. This setting will be available as part of the **Data protection** step and specifically for **Policy managed apps**. For related information, see [Data protection](../apps/app-protection-framework.md#data-protection-2).
-
-### Deploy macOS LOB apps by uploading PKG-type installer files<!-- 10671861 -->
-The capability to deploy macOS LOB apps by uploading PKG-type installer files to Intune will be generally available. You can upload and deploy PKG-type installer files as macOS line-of-business apps. To add a macOS LOB app from [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **macOS** > **Add** > **Line-of-business app**. Additionally, the App Wrapping Tool for macOS will no longer be required to deploy macOS LOB apps.
 
 ### Use MAM policies with COSU devices<!-- 13819227 -->
 Intune-managed Android Enterprise corporate owned dedicated devices (COSU) in Azure Active Directory (AAD) shared mode will be able to receive MAM policies and be targeted separately from other Android enterprise devices. For more information about COSU, see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
@@ -82,9 +76,6 @@ We’ll soon change push notification behavior to ensure a notification is alway
 
 ### iOS Company Portal minimum required version<!-- 13016075 -->
 With an upcoming release of the MS Authenticator app, users will be required to update to v5.2205 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
-
-### iOS/iPadOS notifications will require March Company Portal or newer<!-- 14131757 -->
-We plan to make service side updates to iOS/iPadOS notifications in Intune's May (2205) service release that will require users to have the March Company Portal (version 5.2203.1) or newer. If you are using functionality that could generate iOS/iPadOS Company Portal push notifications, you will want to ensure your users update the iOS/iPadOS Company Portal to continue receiving push notifications. There is no additional change in functionality. For related information, see [Update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md).
 
 <!-- ***********************************************-->
 
