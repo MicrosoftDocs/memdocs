@@ -45,7 +45,7 @@ The enrollment status page (ESP) displays the provisioning status to people enro
 
 The ESP can be deployed during the default out-of-box experience (OOBE) for Azure Active Directory (Azure AD) Join, and any [Windows Autopilot](../../autopilot/index.yml) provisioning scenario.  
 
-To deploy the enrollment status page to devices, you have to create an enrollment status page profile in Microsoft Intune. Within the profile, you can configure the ESP settings that control:  
+To deploy the ESP to devices, you have to create an ESP profile in Microsoft Intune. Within the profile, you can configure the ESP settings that control:  
 
 - Visibility of installation progress indicators     
 - Device access during provisioning   
@@ -157,7 +157,7 @@ To prioritize your profiles:
 
 ## Block access to a device until a specific application is installed
 
-Specify the apps that must be installed before the user can exit the enrollment status page (ESP). You can choose up to 100 apps.   
+Specify the apps that must be installed before the user can exit the ESP. You can choose up to 100 apps.   
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 2. Choose a profile > **Settings**.
@@ -166,7 +166,7 @@ Specify the apps that must be installed before the user can exit the enrollment 
 5. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
 6. Choose **Select apps** > choose the apps > **Select** > **Save**.
 
-The apps that are included in this list are used by Intune to filter the list that should be considered blocking.  It doesn't specify what apps should be installed.  For example, if you configure this list to include "App 1," "App 2," and "App 3" and "App 3" and "App 4" are targeted to the device or user, the Enrollment Status Page will track only "App 3."  "App 4" will still be installed, but the Enrollment Status Page will not wait for it to complete.
+The apps that are included in this list are used by Intune to filter the list that should be considered blocking.  It doesn't specify what apps should be installed.  For example, if you configure this list to include "App 1," "App 2," and "App 3" and "App 3" and "App 4" are targeted to the device or user, the ESP will track only "App 3."  "App 4" will still be installed, but the ESP will not wait for it to complete.
 
 ## ESP tracking     
 
@@ -184,25 +184,22 @@ During device preparation, the enrollment status page tracks these tasks for the
 
 * Secure your hardware
 * Join your organization's network
-* Register your device for mobile management  
-
-This section describes each task and what they accomplish.  
+* Register your device for mobile management    
 
 #### Secure your hardware
-The device completes the Trusted Platform Module (TPM) key attestation and validates its identity with Azure AD. Azure AD sends a token to the device, which is used during Azure AD join. 
+This task ensures that the device completes the Trusted Platform Module (TPM) key attestation and validates its identity with Azure AD. Azure AD sends a token to the device, which is used during Azure AD join. 
 
 This step is required for self-deploying mode and white glove deployment. It isn't needed for Windows Autopilot scenarios in user-driven mode.   
 
 #### Join your organization's network  
-The device joins Azure AD by using the token received in the previous step. 
+The device uses the token received in the previous step to join Azure AD. This step is required in self-deploying mode and white glove deployment. Devices in user-driven mode have already completed this task by time they open the ESP.  
 
-  This step is required in self-deploying mode and white glove deployment. Devices in user-driven mode have already completed this step by time they open the ESP.  
+### Register your device for mobile management
+The device enrolls in Microsoft Intune for mobile device management (MDM). 
 
-4. Register your device for mobile management: The device enrolls in Microsoft Intune for mobile device management (MDM). 
+This step is required in self-deploying mode and white glove deployment. Devices in user-driven mode have already completed this step by time they open the ESP. 
 
-  This step is required in self-deploying mode and white glove deployment. Devices in user-driven mode have already completed this step by time they open the ESP.  
-
-6. Prepare your device for MDM: The device calculates the policies and apps required to track in the next phase. For Windows 10, version 1903 and later versions, the device also creates the tracking policy for the SideCar agent, and installs the Intune Management Extension that's used to install Win32 apps.   
+After enrollment, the device calculates the policies and apps required to track in the next phase. For Windows 10, version 1903 and later versions, the device also creates the tracking policy for the SideCar agent, and installs the Intune Management Extension that's used to install Win32 apps.  
 
 ### Device setup
 
