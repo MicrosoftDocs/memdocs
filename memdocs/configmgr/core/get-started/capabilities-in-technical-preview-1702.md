@@ -224,7 +224,7 @@ Additionally, you can now specify multiple certification authorities (CAs) on mu
 
 For iOS devices, you can associate a PFX certificate profile to an email profile and enable S/MIME encryption.  This then enables S/MIME in the native email client on iOS and associates the correct S/MIME encryption certificate to it.
 
-For more information about certificates in Configuration Manager, see [Introduction to certificate profiles]( /sccm/protect/deploy-use/introduction-to-certificate-profiles).
+For more information about certificates in Configuration Manager, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
 
 
 ## New compliance settings for iOS devices

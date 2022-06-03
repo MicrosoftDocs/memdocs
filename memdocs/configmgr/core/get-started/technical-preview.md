@@ -180,7 +180,7 @@ The following features were released with previous versions of the Configuration
 - [Prefer cloud-based software update points on switching](2022/technical-preview-2201.md#bkmk_cmgsup) <!--7759984-->
 - [LEDBAT support for software update points](2022/technical-preview-2201.md#bkmk_ledbat) <!--4639895-->
 - [Improvements to Power BI Report Server Integration](2022/technical-preview-2201.md#bkmk_reports) <!--12487076-->
-- [Tenant attach features are generally available ](2022/technical-preview-2201.md#bkmk_ta) <!--6374854-->
+- [Tenant attach features are generally available](2022/technical-preview-2201.md#bkmk_ta) <!--6374854-->
 - [Deployment Status client notification actions](2022/technical-preview-2201.md#bkmk_notify) <!--7079837-->
 - [Sort by icon in the console](2022/technical-preview-2201.md#bkmk_sortico) <!--3877839-->
 - [PowerShell release notes preview](2022/technical-preview-2201.md#bkmk_powershell) <!--12654996-->

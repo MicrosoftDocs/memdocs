@@ -1437,7 +1437,7 @@ We’ve added a [new setting](../protect/windows-update-settings.md#update-setti
 - **Upgrade Windows 10 devices to Latest Windows 11 release**
 By default, this setting is set to No. When set to *Yes*, eligible Windows 10 devices that receive this policy will update to the latest build of Windows 11.
 
-When set to *Yes*, Intune displays an information box that confirms that by deploying this setting you are accepting the Microsoft License Terms for devices that upgrade. The information box also contains a link to the [Microsoft License Terms]( https://go.microsoft.com/fwlink/?linkid=2171206).
+When set to *Yes*, Intune displays an information box that confirms that by deploying this setting you are accepting the Microsoft License Terms for devices that upgrade. The information box also contains a link to the [Microsoft License Terms](https://go.microsoft.com/fwlink/?linkid=2171206).
 
 For more information about update rings, see [Update Rings for Windows 10 and later](../protect/windows-10-update-rings.md).
 
@@ -1588,7 +1588,7 @@ We made a change to the Windows Autopilot self-deployment mode and pre-provision
 ### Device management
 
 #### Introducing Microsoft Surface Management Portal in Microsoft Endpoint Manager <!--10874729 -->  
-In light of our continued commitment to bring commercial customers the best possible experience, we partnered with teams across Microsoft to streamline Surface management into a single view within Microsoft Endpoint Manager. Whether you lead a large organization with thousands of devices or manage IT for a small-medium business, you can gain insights into the health of all your Surface devices and monitor device warranty and support requests in one location. Microsoft Surface management portal is available to U.S. customers now and will be rolling out globally later. For the latest information about Microsoft Surface and the new management portal, follow the [Surface IT Pro Blog]( https://techcommunity.microsoft.com/t5/surface-it-pro-blog/bg-p/SurfaceITPro).  
+In light of our continued commitment to bring commercial customers the best possible experience, we partnered with teams across Microsoft to streamline Surface management into a single view within Microsoft Endpoint Manager. Whether you lead a large organization with thousands of devices or manage IT for a small-medium business, you can gain insights into the health of all your Surface devices and monitor device warranty and support requests in one location. Microsoft Surface management portal is available to U.S. customers now and will be rolling out globally later. For the latest information about Microsoft Surface and the new management portal, follow the [Surface IT Pro Blog](https://techcommunity.microsoft.com/t5/surface-it-pro-blog/bg-p/SurfaceITPro).  
 
 ## Week of October 18, 2021 (Service release 2110)
 
@@ -2179,7 +2179,7 @@ We've added the information from the Operational Event Viewer for **Windows Hell
 
 Windows 365 is a new service from Microsoft that automatically creates Cloud PCs for your end users. Cloud PCs are a new hybrid personal computing category that use the power of the cloud and the accessing device to provide a full and personalized Windows virtual machine. Admins can use Microsoft Endpoint Manager to define the configurations and applications that are provisioned for each user’s Cloud PC. End users can access their Cloud PC from any device and any location. Windows 365 stores the end user’s Cloud PC and data in the cloud, not on the device, providing a secure experience.
 
-For more information about Windows 365, see [Windows 365]( https://www.microsoft.com/windows-365?rtc=1).
+For more information about Windows 365, see [Windows 365](https://www.microsoft.com/windows-365?rtc=1).
 
 For documentation on how to manage Windows 365 in your organization, see the [Windows 365 documentation](/windows-365/).
 

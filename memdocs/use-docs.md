@@ -127,7 +127,7 @@ To receive notifications when content changes in the documentation library, use 
 
 1. Use the [docs search](/search/) to find an article or set of articles.
 
-    - Search for a single article by title, for example: [What's new in Microsoft Intune](/search/?scope=Intune&terms="What%27s%20new%20in%20microsoft%20intune"%2B"learn%20what%27s%20new").
+    - Search for a single article by title, for example: [What's new in Microsoft Intune](/search/?scope=Intune&terms="What%27s%20new%20in%20microsoft%20intune"%2B"learn%20what%27s%20new).
 
         > [!TIP]
         > To refine the search to a single article, use the full title that displays in the docs.microsoft.com search results. You can also use a string from the first paragraph, as shown in this example.
