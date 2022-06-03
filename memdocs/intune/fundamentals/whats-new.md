@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/31/2022
+ms.date: 06/02/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -63,6 +63,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 ## Week of May 30, 2022 (Service release 2205)
 
 ### App management
+
+#### iOS Company Portal minimum required version<!-- 13016075 -->
+Starting June 1, 2022, the minimum supported version of the iOS Company Portal app will be v5.2205. If your users are running v5.2204 or below, they will be prompted for an update at login. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. For related information, see [Intune Company Portal](../apps/company-portal-app.md).
 
 #### Push notifications are automatically sent when device ownership changes from Personal to Corporate<!-- 12390037 -->
 For iOS/iPad and Android devices, a push notification is now automatically sent when a device's [ownership type is changed from Personal to Corporate](../enrollment/corporate-identifiers-add.md#change-device-ownership). The notification is pushed through the Company Portal app on the device.
