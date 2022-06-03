@@ -81,12 +81,6 @@ You will be able to select to include **Photo Library** as a supported applicati
 ### Use App Protection Policies with Android Enterprise dedicated devices and Android (AOSP) devices<!-- 13819227 -->
 Intune-managed Android Enterprise dedicated devices enrolled with Azure Active Directory (Azure AD) shared mode and Android (AOSP) devices will be able to receive app protection policies policies and can be targeted separately from other Android device types. For more information about Android Enterprise dedicated devices and Android (AOSP), see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices) and [Android Open Source Project](../fundamentals/deployment-guide-enrollment-android.md#android-open-source-project).
 
-### Push notification will always be sent when device ownership changes from Personal to Corporate<!-- 12390037 -->
-We’ll soon change push notification behavior to ensure a notification is always sent when an admin changes a device's ownership from Personal to Corporate. With this change, we’re removing the option to send a push notification to users when their device ownership type changes from personal to corporate (Android and iOS/iPadOS) in Microsoft Endpoint Manager admin center. Previously, admins were allowed to turn off this notification behavior. These notifications are pushed through the Company Portal app on Android and iOS/iPadOS devices.
-
-### iOS Company Portal minimum required version<!-- 13016075 -->
-With an upcoming release of the MS Authenticator app, users will be required to update to v5.2205 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
-
 <!-- ***********************************************-->
 
 ## Device management
@@ -125,12 +119,6 @@ We’re changing what Intune displays when you view certificate details for devi
 
 Today, the certificate reports can show certificates that are no longer valid, or that are no longer on a device. With this change, you’ll won't see information for those invalid certificates. Instead, Intune displays only those that are valid, that were revoked within the last 30 days, or that expired within the last 30 days will be shown.
 
-### Support for Retire on Android Enterprise corporate-owned work-profiles devices<!-- 10216870 -->
-You'll be able to use the **Retire** admin action in the **Endpoint Manager admin center**  to remove the work profile including all corporate apps, data, and policies from an Android Enterprise corporate-owned work profile device.  Go to **Endpoint Manager admin center** >**Devices** pane >**All Devices** > then select the name of the device you want to retire and select **Retire**.  
-
-When you select **Retire**, the device is unenrolled from Intune management. However, all the data and apps associated with your personal profile will remain untouched on the device.
-For more information, see [Retire or wipe devices using Microsoft Intune](../remote-actions/devices-wipe.md).
-
 ### View a managed device's group membership<!-- 4100067 -->
 In the monitor section of the **Devices** workload of Intune, you'll be able to view the group membership of all AAD groups for a managed device. When this is available, you will be able to select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices**.
 
@@ -149,26 +137,6 @@ For more information about how bootstrap tokens work with Intune, see [Set up en
 
 ### UI improvements when Android enrollment is available but not required<!-- 8764312  -->
 We're updating the iconography users see in the Company Portal for Android when *Device enrollment* for *End user experiences* on your Intune tenants *Customization* page is set to **Available, no prompts**. The changes will make it easier for users to recognize when enrollment is available to them, but not required.   
-
-### Enroll to co-management from Windows Autopilot<!-- 11300628 -->
-You'll be able to configure device enrollment in Intune to enable co-management, which happens during the [Windows Autopilot](../../autopilot/windows-autopilot.md) process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
-
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../enrollment/windows-enrollment-status.md), the device will wait for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
-
-### Improvements for enrollment profiles for Apple Automated Device Enrollment<!-- 13165752 -->
-Two Setup Assistant skip panes are becoming generally available for Apple Automated Device Enrollment (ADE). The screen configurations were previously released in Intune for public preview. The following screens will be generally available for both iOS/iPadOS and macOS under the **Setup Assistant** tab:  
-  
-- iOS/iPadOS 13 and later
-   - Pane name: **Get Started ** 
-  - Default: Show pane 
-  - You can configure a setting in Intune that hides the Get Started pane in Setup Assistant during ADE enrollment.
-  
-- macOS 12 and later 
-   - Pane name: **Auto Unlock with Apple Watch** 
-  - Default: Show pane
-  - You can configure a setting in Intune that hides the Unlock Your Mac with your Apple Watch pane in Setup Assistant during ADE enrollment.  
-
-There is no change to functionality from the previous public preview release. 
 
 <!-- ***********************************************-->
 
@@ -799,130 +767,11 @@ To expand our support for the Android Open Source Project (AOSP) platform, you�
 - Trusted certificate profile
 - PKCS certificate profile
 
-
-### New macOS settings in the Settings Catalog<!-- 13923348 -->
-The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
-
-**Accounts > Accounts**:
-
-- Disable Guest Account
-- Enable Guest Account
-
-**Accounts > Caldav**:
-
-- Cal DAV Account Description
-- Cal DAV Host Name
-- Cal DAV Password
-- Cal DAV Port
-- Cal DAV Principal URL
-- Cal DAV Use SSL
-- Cal DAV Username
-
-**Accounts > Carddav**: 
-
-- Card DAV Account Description
-- Card DAV Host Name
-- Card DAV Password
-- Card DAV Port
-- Card DAV Principal URL
-- Card DAV Use SSL
-- Card DAV Username
-
-**Networking > Firewall**:
-
-- Allow Signed
-- Allow Signed App
-- Enable Logging
-- Logging Option
-
-**Parental Controls > Parental Controls Time Limits**:
-
-- Family Controls Enabled
-- Time Limits
-
-**Proxies > Network Proxy Configuration**:
-
-- Proxies
-- Exceptions List
-- Fall Back Allowed
-- FTP Enable
-- FTP Passive
-- FTP Port
-- FTP Proxy
-- Gopher Enable
-- Gopher Port
-- Gopher Proxy
-- HTTP Enable
-- HTTP Port
-- HTTP Proxy
-- HTTPS Enable
-- HTTPS Port
-- HTTPS Proxy
-- Proxy Auto Config Enable
-- Proxy Auto Config URL String
-- Proxy Captive Login Allowed
-- RTSP Enable
-- RTSP Port
-- RTSP Proxy
-- SOCKS Enable
-- SOCKS Port Integer
-- SOCKS Proxy
-
-**Security > Smart Card**:
-
-- Allow Smart Card
-- Check Certificate Trust
-- Enforce Smart Card
-- One Card Per User
-- Token Removal Action
-- User Pairing
-
-**Software Update**:
-
-- Allow Pre Release Installation
-- Automatic Check Enabled
-- Automatic Download
-- Automatically Install App Updates
-- Automatically Install Mac OS Updates
-- Config Data Install
-- Critical Update Install
-- Restrict Software Update Require Admin To Install
-
-**User Experience > Screensaver User**:
-
-- Idle Time
-- Module Name
-- Module Path
-
-There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
-
-For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
-
-Applies to:
-- macOS
-
 ### Create and deploy Wi-Fi profiles to Android AOSP devices<!-- 8506299 -->
 You'll be able to configure and deploy a Wi-Fi profile to your Android AOSP devices.
 
 Applies to:
 - Android (AOSP)
-
-### Unlock Android Enterprise devices after a set time using password, PIN, or pattern<!-- 7913163 -->
-On Android Enterprise devices, you can create a device restrictions configuration profile that manages device settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type).
-
-There will be a new **How often pin, password, or pattern is needed to unlock** setting. Select how long users must unlock the device using a strong authentication method (password, PIN, or pattern). Your options:
-- **24 hours since last pin, password, or pattern unlock**: The screen locks 24 hours after users last used a strong authentication method to unlock the device or work profile.
-- **Device default** (default): The screen locks using the device's default time.
-
-For a list of settings you can currently configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
-
-[2.3.4. Advanced passcode management](https://developers.google.com/android/work/requirements#2.3.-advanced-passcode-management_1) (opens Android's web site)
-
-Applies to:
-- Android 8.0 and newer
-- Android Enterprise corporate owned fully managed (COBO)
-- Android Enterprise corporate owned dedicated devices (COSU)
-- Android Enterprise corporate owned work profile (COPE)
 
 ### Import custom ADMX and ADML administrative templates to create a device configuration profile<!-- 4970862 -->
 You can create a device configuration policy that uses built-in ADMX templates (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Administrative templates**).
@@ -934,16 +783,6 @@ For information on the built-in ADMX templates, see [Use Windows 10/11 templates
 Applies to:
 - Windows 11
 - Windows 10
-
-### Use the Settings Catalog to create a Universal Print policy on Windows 11 devices<!-- 5513123 -->
-Many organizations are moving their printer infrastructure to the cloud. [Universal Print](/universal-print/fundamentals/universal-print-whatis) is a cloud-based printing solution for Microsoft 365 customers. It uses built-in cloud printers, built-in legacy printers, and runs entirely in Microsoft Azure. When Universal Print is deployed with Universal Print-compatible printers, it doesn't require any on-premises infrastructure. 
-
-In the Endpoint Manager admin center, you'll be able to use the Settings Catalog to create a printer policy (**Device configuration** > **Create profile** > **Windows 10 and later** for platform > **Settings catalog** for profile type > **Printer provisioning**). When you deploy the policy, users select the printer from a list of registered Universal Print printers, and can also select a default printer.
-
-Currently, you must use the [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool), which requires more manual steps, and has some limitations.
-
-Applies to:
-- Windows 11
 
 <!-- ***********************************************-->
 
@@ -970,24 +809,6 @@ Features of the reusable settings groups will include:
 - Edits to a settings group that's in use are automatically applied to the Firewall Rules profiles that use that group.  
   
 Reusable groups will be configured on a new Tab for *Reusable settings* that will be available when you view endpoint security Firewall policy.  In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall**.
-
-### New settings to manage removable devices for Endpoint security Device control profiles<!-- 8844611 -->
-We’re adding five new settings for Windows 10/11 to the [*device control* profile template](../protect/endpoint-security-asr-profile-settings.md#device-control) for Attack surface reduction policy in Endpoint Security. The new settings will help you manage the use of removable devices like a USB device, and to manage read and write access to removable disks like media players, cellular phones, displays, and CE devices.
- 
- The new settings include: 
-- [ADMX_DeviceInstallation/DeviceInstall_Removable_Deny](/windows/client-management/mdm/policy-csp-admx-deviceinstallation?WT.mc_id=Portal-fx#admx-deviceinstallation-deviceinstall-removable-deny)
--  [ADMX_RemovableStorage/WPDDevices_DenyRead_Access_2](/windows/client-management/mdm/policy-csp-admx-removablestorage?WT.mc_id=Portal-fx#admx-removablestorage-wpddevices-denyread-access-2)
--  [ADMX_RemovableStorage/WPDDevices_DenyRead_Access_1](/windows/client-management/mdm/policy-csp-admx-removablestorage?WT.mc_id=Portal-fx#admx-removablestorage-wpddevices-denyread-access-1)
--  [ADMX_RemovableStorage/WPDDevices_DenyWrite_Access_2](/windows/client-management/mdm/policy-csp-admx-removablestorage?WT.mc_id=Portal-fx#admx-removablestorage-wpddevices-denywrite-access-2)
--  [ADMX_RemovableStorage/WPDDevices_DenyWrite_Access_1](/windows/client-management/mdm/policy-csp-admx-removablestorage?WT.mc_id=Portal-fx#admx-removablestorage-wpddevices-denywrite-access-1)
-
-
-### Microsoft Defender for Endpoint as the Tunnel client app for iOS will soon be out of Preview<!-- 9849514 --> 
-The preview version of Microsoft Defender for Endpoint that supports [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md) on iOS/iPadOS will soon be out of preview and become generally available.
-
-When the Microsoft Defender for Endpoint app with support for Microsoft Tunnel becomes generally available for iOS, the standalone tunnel client app for iOS will be deprecated with support ending 60 days later.
-
-If you are using the standalone tunnel app for iOS, prepare for this change by planning to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md) before support for the standalone app ends.
 
 ## Monitor and troubleshoot
 
