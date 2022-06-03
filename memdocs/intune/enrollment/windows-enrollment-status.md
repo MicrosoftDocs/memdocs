@@ -210,8 +210,6 @@ The enrollment status page tracks these items during the device setup phase:
 * Network connection  
 * Apps  
 
-This section describes each task and what they accomplish.  
-
 #### Security policies
 ESP doesn't track security policies, such as device restrictions, but these policies are installed in the background. The ESP does track Microsoft Edge, Assigned Access, and Kiosk Browser policies. 
 
