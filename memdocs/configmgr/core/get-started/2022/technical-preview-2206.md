@@ -31,7 +31,7 @@ The following sections describe the new features to try out in this version:
 
 
 <!-- ## General known issues  -->
- 
+
 <!--  [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
 ## Next steps
 
