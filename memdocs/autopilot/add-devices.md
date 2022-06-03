@@ -1,18 +1,13 @@
 ---
 title: Manually register devices with Windows Autopilot
 description: Learn how to manually add devices to Windows Autopilot.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 08/05/2021
+ms.date: 06/03/2022
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
@@ -161,13 +156,13 @@ You can have up to 500 rows in the file's list of devices. The header and line f
 
 Keep these other requirements for the CSV file in mind:
 
-- Each entry above is represented by a different column without the commas (eg: A1 - E1 and the results should be represented from A2 - E2).
 - You can't use extra columns. 
 - You can't use quotation marks. 
 - You can use only ANSI-format text files (not Unicode). 
 - Headers are case-sensitive. 
 
-Because of these requirements, editing an Excel file and saving it as .csv will not generate a usable file for importing into the Intune portal.
+> [!IMPORTANT]
+> Use a plain-text editor with this CSV file, like Notepad. Don't use Microsoft Excel. Because of the requirements, editing an Excel file and saving it as `.csv` won't generate a usable file for importing to Intune.
    
 When you upload a CSV file to assign a user, make sure that you assign valid User Principal Names (UPNs). If you assign an invalid UPN (that is, an incorrect username), your device might be inaccessible until you remove the invalid assignment. 
 
