@@ -72,8 +72,6 @@ As an admin, you will be able to create and assign two new types of Intune apps:
 
 These new app types work in a similar way to the existing **web link** application type, however they apply only for their specific platform, whereas web link applications apply across all platforms. With these new app types, you can assign to groups and also use assignment filters to limit the scope of assignment. You will find this functionality in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), by selecting **Apps** > **All Apps** > **Add**.
 
-Private preview will be after 2206 UX update (with flighting) and GA will be after that (OOB 2206 or 2207 depending on feedback and issues).
-
 ### Enterprise feedback policies for Web Company Portal<!-- 9846764 -->
 Feedback settings will be provided to address M365 enterprise feedback policies for the currently logged in user via the Microsoft 365 Apps Admin Center. The settings are used to determine whether feedback can be enabled or must be disabled for a user in the Web Company Portal.
 
@@ -93,7 +91,7 @@ With an upcoming release of the MS Authenticator app, users will be required to 
 
 ## Device management
 
-### User configuration support for  Windows 11 multi-session VMs will be public preview.<!-- 7231329 --> 
+### User configuration support for  Windows 11 multi-session VMs will be public preview<!-- 7231329 --> 
 You'll be able to:
 - Configure user scope policies using **Settings catalog** and assign to groups of users
 - Configure user certificates and assign to users
@@ -122,7 +120,7 @@ Applies to:
 - Android Open Source Project (AOSP)
 
 
-### Cleaner view of certificate details when viewing certificate reports<!-- 13316515 -->
+### Improved certificate reporting details<!-- 13316515 -->
 We’re changing what Intune displays when you view certificate details for devices and certificate profiles. [Microsoft Endpoint Manager admin center]( https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Monitor** > **Certificates**. 
 
 Today, the certificate reports can show certificates that are no longer valid, or that are no longer on a device. With this change, you’ll won't see information for those invalid certificates. Instead, Intune displays only those that are valid, that were revoked within the last 30 days, or that expired within the last 30 days will be shown.
@@ -585,7 +583,6 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Force Watch Wrist Detection
 - Force WiFi Power On
 - Force WiFi To Allowed Networks Only
-- Force WiFi Whitelisting
 - Require Managed Pasteboard
 - Safari Accept Cookies Double
 - Safari Allow Autofill
