@@ -10,11 +10,8 @@ ms.manager: apoorvseth
 ms.topic: conceptual
 ms.localizationpriority: high
 ---
-# Tenant attach: Software updates (preview) in the admin center
+# Tenant attach: Software updates in the admin center
 <!--13035723-->
-
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 The **Software updates** page in the admin center displays the status of software updates status for devices. You can review updates that have successfully installed, failed, or that are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting.
 
