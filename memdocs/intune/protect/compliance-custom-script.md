@@ -63,7 +63,7 @@ PS C:\Users\apervaiz\Documents> .\sample.ps1
 4. On **Settings**, configure the following behavior for the script:
 
    - **Run this script using the logged on credentials** – By default, the script runs in the System context on the device. Set this to Yes to have it run in the context of the logged-on user. If the user isn’t logged in, the script defaults back to the System context.
-   - **Enforce script signature check** – For more information, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.1) in the PowerShell documentation.
+   - **Enforce script signature check** – For more information, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.1&preserve-view=true) in the PowerShell documentation.
    - **Run script in 64 bit PowerShell Host** – By default, the script runs using the 32-bit PowerShell host. Set this to *Yes* to force the script to run using the 64-bit host instead.
 
 5. Complete the script creation process. The script is now visible in the *Scripts* pane of the Microsoft Endpoint Manager admin center and will be available to select when configuring compliance policies.

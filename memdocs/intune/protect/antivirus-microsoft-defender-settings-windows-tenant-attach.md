@@ -327,7 +327,7 @@ Learn more
 
 - **Allow users to view full History results**
   > [!NOTE]
-  >  This is a legacy setting that only applies to versions of Windows prior to Windows 10 version 1703. User of this setting with a current operating system has no effect. This setting is scheduled for removal from this policy. For more information, see **-DisablePrivacyMode** in [Set-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps) in the Windows PowerShell documentation.
+  >  This is a legacy setting that only applies to versions of Windows prior to Windows 10 version 1703. User of this setting with a current operating system has no effect. This setting is scheduled for removal from this policy. For more information, see **-DisablePrivacyMode** in [Set-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) in the Windows PowerShell documentation.
 
   - **Not Configured** (*default*)
   - **Yes**
