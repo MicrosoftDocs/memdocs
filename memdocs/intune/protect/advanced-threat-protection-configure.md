@@ -7,7 +7,7 @@ keywords: configure, manage, capabilities, attack surface reduction, next-genera
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/23/2022
+ms.date: 06/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -39,6 +39,8 @@ Use the information and procedures in this article to configure integration of M
 - Android and iOS/iPadOS, use [app protection policies](../protect/mtd-app-protection-policy.md) that set device risk levels. App protection polices work with both enrolled and unenrolled devices.
 
 Before starting, your environment must meet the [prerequisites](../protect/advanced-threat-protection.md#prerequisites) to use Microsoft Defender for Endpoint with Intune.
+
+In addition to managing settings for Microsoft Defender for Endpoint on devices you manage with Intune, you can manage Defender for Endpoint security configurations on devices that aren’t enrolled with Intune. This scenario is called *Security Management for Microsoft Defender for Endpoint* and requires configuring the *Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations* toggle to *On*. For more information, see [MDE Security Configuration Management](../protect/mde-security-integration.md).
 
 ## Enable Microsoft Defender for Endpoint in Intune
 
