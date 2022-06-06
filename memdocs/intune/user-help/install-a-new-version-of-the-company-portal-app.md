@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/04/2021
+ms.date: 06/02/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -65,7 +65,7 @@ When a new version of Company Portal becomes available, you'll see an **Update**
 6. Select **Check Status** to sync your changes.  
 
 > [!NOTE]
-> The minimum supported version of the iOS Company Portal app is v4.16.0. If you are running v4.14.1 or below, you will be prompted for an update at login.
+> The minimum supported version of the iOS Company Portal app is v5.2205. If your users are running v5.2204 or below, they will be prompted to update the iOS Company Portal app at login.
 
 ## Update on macOS device  
 
