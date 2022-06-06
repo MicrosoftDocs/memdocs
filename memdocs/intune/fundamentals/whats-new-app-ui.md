@@ -39,24 +39,24 @@ If you're an employee or student, be sure to check out the screenshots and links
 
 ## Week of June 6, 2022  
 
-### UI improvements to show Android enrollment is available but not required<!-- 8764312 wnready wnstaged   -->
+### UI improvements to show Android enrollment is available but not required<!-- 8764312 -->
 
-We updated the iconography in the Company Portal for Android app to make it easier for you to recognize when device enrollment is available but not required. This iconography appears in scenarios where the device enrollment availability is set to **Available, no prompts** in the admin center (**Tenant admin** > **Customization** > **Create** or **Edit** a policy > **Settings**).      
+We updated the iconography in the Company Portal for Android app to make it easier for you to recognize when device enrollment is available but not required. This iconography appears in scenarios where the device enrollment availability is set to **Available, no prompts** in the Microsoft Endpoing Manager admin center (**Tenant admin** > **Customization** > **Create** or **Edit** a policy > **Settings**).      
 
 Changes include:
 
  - On the **Devices** screen, users will no longer see a red exclamation point next to non-enrolled devices.  
- - On the **Device Details** screen, users will no longer see a red exclamation point next to the enrollment message. Instead, they will see an **Info (i)** icon.  
+ - On the **Device Details** screen, users will no longer see a red exclamation point next to the enrollment message. Instead, they will see the info **(i)** icon.  
 
-**Devices**:  
-|Updated screen|Previous screen|   
+   
+|Updated Devices|Previous Devices|   
 |---|---|   
-|<img alt="Screenshot of Company Portal **Devices** screen with exclamation point next to non-managed device." src="./media/whats-new-app-ui/company-portal-android-devices-icon-after-2206.png" width="300"> |<img alt="Screenshot of Company Portal **Devices** screen with no icon next to non-managed device" src="./media/whats-new-app-ui/company-portal-android-devices-icon-before-2206.png" width="300">|  
+|<img alt="Screenshot of Company Portal **Devices** screen with red exclamation point icon next to non-managed device." src="./media/whats-new-app-ui/company-portal-android-devices-icon-after-2206.png" width="300"> |<img alt="Screenshot of Company Portal **Devices** screen with no icon next to non-managed device" src="./media/whats-new-app-ui/company-portal-android-devices-icon-before-2206.png" width="300">|  
 
-**Device details**:  
-|Updated screen|Previous screen|   
+ 
+|Updated Device Details |Previous Device Details|   
 |---|---|   
-|<img alt="Screenshot of Company Portal **Devices** screen with exclamation point next to non-managed device." src="./media/whats-new-app-ui/company-portal-android-device-details-icon-after-2206.png" width="300"> |<img alt="Screenshot of Company Portal **Devices** screen with no icon next to non-managed device" src="./media/whats-new-app-ui/company-portal-android-device-details-icon-before-2206.png" width="300">|  
+|<img alt="Screenshot of Company Portal **Devices** screen with with info icon next to message." src="./media/whats-new-app-ui/company-portal-android-device-details-icon-after-2206.png" width="300"> |<img alt="Screenshot of Company Portal **Devices** screen with info icon next to message." src="./media/whats-new-app-ui/company-portal-android-device-details-icon-before-2206.png" width="300">|  
 
 ## Week of November 15, 2021  
 
