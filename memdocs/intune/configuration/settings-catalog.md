@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/23/2022
+ms.date: 06/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use the settings catalog to configure settings on Windows and macOS devices - preview
+# Use the settings catalog to configure settings on Windows and macOS devices
 
 Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. If you prefer to configure settings at a granular level, similar to on-premises GPO, then the settings catalog is a natural transition.
 
@@ -59,7 +59,7 @@ For information on some features you can configure using the settings catalog, g
 3. Enter the following properties:
 
     - **Platform**: Select **macOS**, or select **Windows 10 and later**.
-    - **Profile**: Select **Settings catalog (preview)**.
+    - **Profile**: Select **Settings catalog**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
