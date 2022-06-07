@@ -56,8 +56,8 @@ Lookout's mobile app, **Lookout for work**, is installed and run on mobile devic
 
 The following platforms are supported for Lookout when enrolled in Intune:
 
-- **Android 4.1 and later**  
-- **iOS 8 and later**  
+- **Android 5.0 and later**  
+- **iOS 12 and later**  
 
 For additional information about platform and language support, visit the [Lookout website](https://personal.support.lookout.com/hc/articles/114094140253).  
 
