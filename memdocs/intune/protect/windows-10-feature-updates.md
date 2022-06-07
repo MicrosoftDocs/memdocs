@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 06/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -156,7 +156,9 @@ The following are prerequisites for Intune's Feature updates for Windows 10 and 
 
 You can use policy for *Feature updates for Windows 10 and later* to upgrade devices that run Windows 10 to Windows 11.
 
-When you use feature updates policy to deploy Windows 11, you can target the policy to any of your Windows 10 devices and only devices that meet the Windows 11 minimum requirements will upgrade. Devices that don’t meet the requirements for Windows 11 won’t receive the update and remain at their current Windows 10 version.
+When you use feature updates policy to deploy Windows 11, you can target the policy to Windows 10 devices that meet the Windows 11 minimum requirements to upgrade them to Windows 11. Devices that don’t meet the requirements for Windows 11 won’t install the update and remain at their current Windows 10 version.
+
+However, if a Windows 10 device that can’t run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates will not be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy. See [Update behavior when multiple policies target a device](#update-behavior-when-multiple-policies-target-a-device).
 
 When there are multiple versions of Windows 11 available, you can choose to deploy the latest build. When you deploy the latest build to a group of devices, those devices that already run Windows 11 will update while devices that still run Windows 10 will upgrade to that version of Windows 11 if they meet the upgrade requirements. In this way, you can always upgrade supported Windows 10 devices to the latest Windows 11 version  even if you choose to delay the upgrade of some devices until a future time.
 
@@ -182,8 +184,22 @@ For more information including general licensing details, see the [Windows 11 do
 
 To deploy Windows 11, you’ll create and deploy a feature updates policy just as you might have done previously for a Windows 10 device. It’s the [same process](#create-and-assign-feature-updates-for-windows-10-and-later-policy) though instead of selecting a Windows 10 version, you’ll select a Windows 11 version from the *Feature update to deploy* dropdown list. The dropdown list displays both Windows 10 and Windows 11 version updates that are in support.
 
-- Deploying an older Windows version to a device won’t downgrade the device. Devices only install an update when it's newer than the devices current version. 
 - Policies for Windows 11 and Windows 10 can exist side by side in Microsoft Endpoint Manager.
+- Deploying an older Windows version to a device won’t downgrade the device. Devices only install an update when it's newer than the devices current version.
+- Deploying a Windows 11 update to a Windows 10 device that supports Windows 11, [upgrades that device](#upgrade-devices-to-windows-11).
+- Avoid deploying a Windows 11 policy to a Windows 10 device that doesn't support Windows 11.  
+
+## Update behavior when multiple policies target a device:
+
+Consider the following points when feature update policies target a device with more than one update policy, or target a Windows 10 device with an update for Windows 11:
+
+- Each Windows feature update policy supports a single update. When a device is targeted by more than one policy, it might be targeted with multiple update versions.  
+
+- The Windows Update service can only offer a device one feature update at a time, and always offers the latest update version that targets the device.
+
+- Because Windows 11 updates are considered to be later versions than Windows 10, the service always offers the Windows 11 update to a device targeted by both Windows 10 and Windows 11 updates. This is done because deploying a Windows 11 update to a Windows 10 device is a supported upgrade path.
+
+- The Windows Update for Business deployment service can’t determine that a device can’t run Windows 11. Therefore, if a Windows 10 device that can’t run Windows 11 is targeted with a Windows 11 update, Windows 10 updates will not be offered automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy.
 
 ## Manage Feature updates for Windows 10 and later policy
 

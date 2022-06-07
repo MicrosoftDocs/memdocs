@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/16/2022
+ms.date: 06/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -35,6 +35,7 @@ Microsoft Intune includes built-in logs that provide information about your envi
 - **Audit Logs** shows a record of activities that generate a change in Intune, including create, update (edit), delete, assign, and remote actions.
 - **Operational Logs** show details on users and devices that successfully (or failed) to enroll, and details on non-compliant devices.
 - **Device Compliance Organizational Logs** show an organizational report for device compliance in Intune, and details on non-compliant devices.
+- **IntuneDevices** show device inventory and status information for Intune enrolled and managed devices. 
 
 These logs can also be sent to Azure Monitor services, including storage accounts, event hubs, and log analytics. Specifically, you can:
 

@@ -40,9 +40,9 @@ You can configure Conditional Access policies based on Pradeo risk assessment en
 
 ## Supported platforms
 
-- **Android 4.0.3 and later**
+- **Android 5.1 and later**
 
-- **iOS 7 and later**
+- **iOS 12.1 and later**
 
 ## Prerequisites
 

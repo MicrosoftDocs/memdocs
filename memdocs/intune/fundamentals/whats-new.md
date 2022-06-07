@@ -7,11 +7,8 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-<<<<<<< HEAD
-ms.date: 06/06/2022
-=======
-ms.date: 05/31/2022
->>>>>>> 52a9eca76c0cfd20c28bacc957cd4ee554317922
+ms.date: 06/07/2022
+
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -64,7 +61,20 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
-## Week of June 6, 2022
+## Week of June 6, 2022  
+
+### App management  
+
+#### UI improvements show Android enrollment is available, not required<!-- 8764312 -->
+
+We updated the iconography in the Company Portal for Android app to make it easier for users to recognize when device enrollment is available to them but not required. The new iconography appears in scenarios where the device enrollment availability is set to **Available, no prompts** in the admin center (**Tenant admin** > **Customization** > **Create** or **Edit** a policy > **Settings**).      
+
+Changes include:  
+
+ - On the Devices screen, users will no longer see a red exclamation point next to a non-enrolled device.  
+ - On the Device Details screen, users will no longer see a red exclamation point next to the enrollment message. Instead, they will see the info **(i)** icon.    
+
+To view screenshots of the changes, see [UI updates for Intune end-user apps](../fundamentals/whats-new-app-ui.md). 
 
 ### Device management
 
@@ -79,9 +89,13 @@ Use these reports to help you plan for an upgrade from Windows 10 to 11 or for i
 
 These reports are rolling out to tenants over the next week. If you don't see them yet, check back again in a day or so. To learn about prerequisites, licensing, and what information is available with these reports, see [Windows Update compatibility reports](../protect/windows-update-compatibility-reports.md).
 
+
 ## Week of May 30, 2022 (Service release 2205)
 
 ### App management
+
+#### iOS Company Portal minimum required version<!-- 13016075 -->
+Starting June 1, 2022, the minimum supported version of the iOS Company Portal app will be v5.2205. If your users are running v5.2204 or below, they will be prompted for an update at login. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. For related information, see [Intune Company Portal](../apps/company-portal-app.md).
 
 #### Push notifications are automatically sent when device ownership changes from Personal to Corporate<!-- 12390037 -->
 For iOS/iPad and Android devices, a push notification is now automatically sent when a device's [ownership type is changed from Personal to Corporate](../enrollment/corporate-identifiers-add.md#change-device-ownership). The notification is pushed through the Company Portal app on the device.

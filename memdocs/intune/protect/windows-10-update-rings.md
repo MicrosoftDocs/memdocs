@@ -32,7 +32,7 @@ ms.collection:
 
 Create update rings that specify how and when Windows as a Service updates your Windows 10/11 devices with [*feature* and *quality* updates](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates). With Windows 10/11, new feature and quality updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows devices are up to date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
 
-Update rings can also be used to upgrade your eligible Windows 10 devices to Windows 11. To do so, when creating a policy you use the setting named *Upgrade Windows 10 devices to Latest Windows 11 release* by configuring it as *Yes*. When you use update rings to upgrade to Windows 11, devices install the most current version of Windows 11. If you later set the upgrade setting back to *No*, devices that haven't started the upgrade will not start while devices that are in the process of upgrading will continue to do so. Devices that have completed the upgrade will remain with Windows 11. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](https://www.microsoft.com/windows/windows-11-specifications).
+Update rings can also be used to upgrade your eligible Windows 10 devices to Windows 11. To do so, when creating a policy you use the setting named *Upgrade Windows 10 devices to Latest Windows 11 release* by configuring it as *Yes*. When you use update rings to upgrade to Windows 11, devices install the most current version of Windows 11. If you later set the upgrade setting back to *No*, devices that haven't started the upgrade won't start while devices that are in the process of upgrading will continue to do so. Devices that have completed the upgrade will remain with Windows 11. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](https://www.microsoft.com/windows/windows-11-specifications).
 
 Windows update rings support [scope tags](../fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
 
@@ -111,7 +111,7 @@ From this page, you can view the rings assignment status and select the followin
 
 Select **Delete** to stop enforcing the settings of the selected Windows update ring. Deleting a ring removes its configuration from Intune so that Intune no longer applies and enforces those settings.
 
-Deleting a ring from Intune doesn't modify the settings on devices that were assigned the update ring.  Instead, the device keeps its current settings. Devices don't maintain a historical record of what settings they held previously. Devices can also receive settings from additional update rings that remain active.
+Deleting a ring from Intune doesn't modify the settings on devices that were assigned the update ring.  Instead, the device keeps its current settings. Devices don't maintain a historical record of what settings they held previously. Devices can also receive settings from other update rings that remain active.
 
 #### To delete a ring
 
@@ -180,7 +180,7 @@ Consider the following when you use Uninstall:
 
 - When you initiate an uninstall of feature or quality updates on an Update Ring, Intune also pauses updates of the same type on that Update Ring.
 
-- Once the feature or quality update pause elapses on an Update Ring, devices will reinstall previously uninstalled feature or quality updates if they are still applicable.
+- Once the feature or quality update pause elapses on an Update Ring, devices will reinstall previously uninstalled feature or quality updates if they're still applicable.
 
 - For feature updates specifically, the time you can uninstall the update is limited from 2-60 days. This period is configured by the update rings Update setting **Set feature update uninstall period (2 – 60 days)**. You can't roll back a feature update that's been installed on a device after the update has been installed for longer than the configured uninstall period.
 
