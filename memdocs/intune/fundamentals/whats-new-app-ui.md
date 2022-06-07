@@ -45,8 +45,8 @@ We updated the iconography in the Company Portal for Android app to make it easi
 
 Changes include:
 
- - On the **Devices** screen, users will no longer see a red exclamation point next to non-enrolled devices.  
- - On the **Device Details** screen, users will no longer see a red exclamation point next to the enrollment message. Instead, they will see the info **(i)** icon.  
+ - On the Devices screen, users will no longer see a red exclamation point next to non-enrolled devices.  
+ - On the Device Details screen, users will no longer see a red exclamation point next to the enrollment message. Instead, they will see the info **(i)** icon.  
 
    
 |Updated Devices screen|Previous Devices screen|   
