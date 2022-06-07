@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/18/2022
+ms.date: 06/21/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -41,6 +41,11 @@ This article describes the settings you can configure.
 - These settings are available for all enrollment types. For more information on the enrollment types, see [Set up enrollment for Windows devices](../enrollment/windows-enroll.md).
 
 - These settings use the [WiredNetwork CSP](/windows/client-management/mdm/wirednetwork-csp).
+
+- Also related to the 802.1x work, one thing christie noticed while testing is that if you make an invalid configuration (one that doesn't match your actual network settings) and you have enforce 802.1x enabled, it will prevent you from having any internet access. This can lead to a broken state where the device can't connect to the internet to get an updated version of the profile so is stuck without connection. This can be fixed by manually removing the profile from the device so it has internet again, but it could cause problems for customers.
+
+
+This isn't an issue on our side, but might be worth mentioning in the documentation.
 
 ## Wired Network
 
@@ -153,6 +158,36 @@ This article describes the settings you can configure.
         For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md).
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
+
+      - **Derived credential**: Select an existing certificate profile that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+
+  - **Tunnel EAP (TEAP)**: Also enter:
+
+    - **Server trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this network.  
+
+    - **Client Authentication** - **Primary authentication method**: Select the primary authentication method used by your device clients. This authentication method is the identity certificate that's presented by the device to the server.
+
+      Your options:
+
+      - **Username and Password**: Prompt the user for a user name and password to authenticate the network connection.
+
+      - **SCEP certificate**: Select an existing SCEP **client certificate** profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the network connection.
+
+      - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the network connection.
+
+      - **Derived credential**: Select an existing certificate profile that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+
+    - **Client Authentication** - **Secondary authentication method**: Select the secondary authentication method used by your device clients. This authentication method is the identity certificate that's presented by the device to the server.
+
+      Your options:
+
+      - **Not configured**: Intune doesn't change or update this setting. By default, the OS might 
+
+      - **Username and Password**: Prompt the user for a user name and password to authenticate the network connection.
+
+      - **SCEP certificate**: Select an existing SCEP **client certificate** profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the network connection.
+
+      - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the network connection.
 
       - **Derived credential**: Select an existing certificate profile that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
