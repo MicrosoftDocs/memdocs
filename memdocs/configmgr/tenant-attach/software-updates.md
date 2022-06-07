@@ -1,7 +1,7 @@
 ---
 title: Software updates in the admin center
 description: Software updates for Configuration Manager devices from the admin center
-ms.date: 05/25/2022
+ms.date: 06/07/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 author: banreet
@@ -12,6 +12,7 @@ ms.localizationpriority: high
 ---
 # Tenant attach: Software updates in the admin center
 <!--13035723-->
+*Applies to: Configuration Manager (current branch)*
 
 The **Software updates** page in the admin center displays the status of software updates status for devices. You can review updates that have successfully installed, failed, or that are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting.
 
@@ -20,6 +21,12 @@ The **Software updates** page in the admin center displays the status of softwar
 Each tenant attached device lists its applicable updates and the status of each update on the **Software updates** page. The **Software updates** page is populated with data from Configuration Manager software update scans.
 
 :::image type="content" source="./media/13035723-software-updates-page.png" alt-text="This screenshot displays software updates page for a device." lightbox="media/13035723-software-updates-page.png":::
+
+## Prerequisites
+
+- All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md).
+- A minimum of Configuration Manager version 2111 with [update rollup KB12896009](../hotfix/2111/12896009.md) installed on all sites in the hierarchy.
+
 
 ## Display the Software updates page
 

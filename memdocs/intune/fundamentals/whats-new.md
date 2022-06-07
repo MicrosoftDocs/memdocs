@@ -229,7 +229,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Device management
 
 #### Software updates page for tenant attached devices <!-- 13089257, 13035723 -->
-There's a new **Software updates** page for tenant attached devices. This page displays the status for software updates on a device. You can review which updates are successfully installed, failed, and are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting.
+There's a new **Software updates** page for tenant attached devices. This page displays the status for software updates on a device. You can review which updates are successfully installed, failed, and are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting. For more information, see [Tenant attach: Software updates in the admin center](../../configmgr/tenant-attach/software-updates.md).
 
 #### Microsoft Defender for Endpoint support for App Sync on iOS/iPadOS<!-- 9768396 -->
 When you use Microsoft Defender for Endpoint (MDE) as your Mobile Threat Defense application, you can [configure MDE to request Application Inventory data](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune) from Intune from iOS/iPadOS devices. The following two settings are now available:
