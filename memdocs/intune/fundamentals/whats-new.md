@@ -64,13 +64,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### App management  
 
-### UI improvements to show Android enrollment is available but not required<!-- 8764312 -->
+#### UI improvements show Android enrollment is available, not required<!-- 8764312 -->
 
-We updated the iconography in the Company Portal for Android app to make it easier for users to recognize when device enrollment is available to them but not required. This iconography appears in scenarios where the device enrollment availability is set to **Available, no prompts** in the admin center (**Tenant admin** > **Customization** > **Create** or **Edit** a policy > **Settings**).      
+We updated the iconography in the Company Portal for Android app to make it easier for users to recognize when device enrollment is available to them but not required. The new iconography appears in scenarios where the device enrollment availability is set to **Available, no prompts** in the admin center (**Tenant admin** > **Customization** > **Create** or **Edit** a policy > **Settings**).      
 
 Changes include:  
 
- - On the Devices screen, users will no longer see a red exclamation point next to non-enrolled devices.  
+ - On the Devices screen, users will no longer see a red exclamation point next to a non-enrolled device.  
  - On the Device Details screen, users will no longer see a red exclamation point next to the enrollment message. Instead, they will see the info **(i)** icon.    
 
 To view screenshots of the changes, see [UI updates for Intune end-user apps](../fundamentals/whats-new-app-ui.md).  
