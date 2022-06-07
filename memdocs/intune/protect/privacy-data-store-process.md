@@ -39,7 +39,7 @@ After Intune [collects the data](privacy-data-collect.md), Intune follows the Da
 
 Microsoft offers and operates Intune services in many regions worldwide. Intune respects the storage location elections made by the administrator for Customer Data.
 
-For more information, see [Data Center Locations](/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#data-center-locations&preserve-view=true)
+For more information, see [Data Center Locations](/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#data-center-locations&preserve-view=true).
 
 ### Data residency option
 
