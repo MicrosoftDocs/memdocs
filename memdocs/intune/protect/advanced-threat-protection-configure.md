@@ -7,7 +7,7 @@ keywords: configure, manage, capabilities, attack surface reduction, next-genera
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/23/2022
+ms.date: 06/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -40,6 +40,8 @@ Use the information and procedures in this article to configure integration of M
 
 Before starting, your environment must meet the [prerequisites](../protect/advanced-threat-protection.md#prerequisites) to use Microsoft Defender for Endpoint with Intune.
 
+In addition to managing settings for Microsoft Defender for Endpoint on devices you manage with Intune, you can manage Defender for Endpoint security configurations on devices that aren’t enrolled with Intune. This scenario is called *Security Management for Microsoft Defender for Endpoint* and requires configuring the *Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations* toggle to *On*. For more information, see [MDE Security Configuration Management](../protect/mde-security-integration.md).
+
 ## Enable Microsoft Defender for Endpoint in Intune
 
 The first step you take is to set up the service-to-service connection between Intune and Microsoft Defender for Endpoint. Set up requires administrative access to both the Microsoft Defender Security Center, and to Intune.
@@ -52,7 +54,7 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 
 2. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and then select **Open the Microsoft Defender for Endpoint admin console**. 
 
-   This opens the **Microsoft 365 Defender** portal at *security.microsoft.com*, which [replaces the use of the previous portal](/microsoft-365/security/defender/microsoft-365-defender?view=o365-worldwide) at *securitycenter.windows.com*.
+   This opens the **Microsoft 365 Defender** portal at *security.microsoft.com*, which [replaces the use of the previous portal](/microsoft-365/security/defender/microsoft-365-defender?view=o365-worldwide&preserve-view=true) at *securitycenter.windows.com*.
 
    > [!TIP]
    > If the **Connection status** at the top of the page is already set to **Enabled**, the connection to Intune has already been made, and the admin center displays different UI than in the following screen shot. In this event, you can use the link **Open the Microsoft Defender for Endpoint admin console** to open the Microsoft Defender Security Center and use the guidance in the following step to confirm that the **Microsoft Intune connection** is set to **On**.
