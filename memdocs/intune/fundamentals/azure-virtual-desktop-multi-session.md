@@ -8,7 +8,7 @@ keywords:
 author: smbhardwaj  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/26/2022
+ms.date: 06/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -87,7 +87,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and choose **Devices** > **Windows** > **Configuration profiles** > **Create Profile**.
 2. For **Platform**, select **Windows 10 and later**.
-3. For **Profile type**, select **Settings catalog (Preview)**, or when deploy settings by using a Template, select **Templates** and then the name of the supported Template.
+3. For **Profile type**, select **Settings catalog**, or when deploy settings by using a Template, select **Templates** and then the name of the supported Template.
 4. Select **Create**.
 5. On the **Basics** page, provide a **Name** and (optionally) **Description** > **Next**.
 6. On the **Configuration settings** page, select **Add settings**.

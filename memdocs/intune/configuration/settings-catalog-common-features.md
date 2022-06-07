@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/23/2022
+ms.date: 06/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -84,6 +84,13 @@ On macOS, you can use property list (plist) files to configure features and sett
 - **Microsoft Defender for Endpoint**: For a list of the settings you can configure, go to [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) (opens another Microsoft website).
 
   Previously, you had to [use a property list (plist) file to configure Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website).
+
+- **Microsoft Office and Microsoft Outlook**: For a list of the Microsoft Office and Outlook settings you can configure, go to:
+
+  - [Use preferences to manage privacy controls for Office for Mac - Deploy Office](/deployoffice/privacy/mac-privacy-preferences)
+  - [Set preferences for Outlook for Mac - Deploy Office](/deployoffice/mac/preferences-outlook)
+
+  Previously, you had to [use a property list (plist) file to configure Office for Mac](deployoffice/mac/deploy-preferences-for-office-for-mac) (opens another Microsoft website).
 
 Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
