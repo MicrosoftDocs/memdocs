@@ -93,10 +93,6 @@ The device history report will have new information to help you evaluate Cloud P
 - Top 5 processes impacting CPU spike times
 - Top 5 processes impacting RAM spike times
 
-### Forensic auditing of Cloud PCs<!--38726407-->
-
-You’ll be able to place a Cloud PC under review. This action initiates a process to create a secure snapshot of a Cloud PC. You’ll be able to analyze the snapshot using electronic discovery solutions.
-
 <!-- ***********************************************-->
 <!-- ## Provisioning -->
 
