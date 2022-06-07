@@ -48,9 +48,9 @@ You can enable SEP Mobile risk assessment through Intune device compliance polic
 
 ## Supported platforms
 
-- **Android 4.1 and later**
+- **Android 5.0 and later**
 
-- **iOS 8 and later**
+- **iOS 10 and later**
 
 ## Pre-requisites
 

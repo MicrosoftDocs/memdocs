@@ -40,9 +40,9 @@ You can configure Conditional Access policies based on Check Point Harmony Mobil
 
 ## Supported platforms
 
-- **Android 4.1 and later**
+- **Android 8 and later**
 
-- **iOS 8 and later**
+- **iOS 12 and later**
 
 ## Pre-requisites
 
