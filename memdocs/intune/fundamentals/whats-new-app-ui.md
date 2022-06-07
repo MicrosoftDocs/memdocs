@@ -8,7 +8,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/19/2021 
+ms.date: 06/06/2022 
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -36,6 +36,27 @@ Learn about the most recent updates to the Microsoft Intune apps. We regularly a
 * Update your organization's documentation or helpdesk procedures.  
 
 If you're an employee or student, be sure to check out the screenshots and links to the Company Portal help documentation. For more information about how to use the Company Portal app, see the [Company Portal user help documentation](../user-help/use-managed-devices-to-get-work-done.md).  
+
+## Week of June 6, 2022  
+
+### UI improvements show Android enrollment is available, not required<!-- 8764312 -->
+
+We updated the iconography in the Company Portal for Android app to make it easier for users to recognize when device enrollment is available but not required. The new iconography appears in scenarios where the device enrollment availability is set to **Available, no prompts** in the Microsoft Endpoint Manager admin center (**Tenant admin** > **Customization** > **Create** or **Edit** a policy > **Settings**).      
+
+Changes include:
+
+ - On the Devices screen, users will no longer see a red exclamation point next to non-enrolled devices.  
+ - On the Device Details screen, users will no longer see a red exclamation point next to the enrollment message. Instead, they will see the info **(i)** icon.  
+
+   
+|Updated Devices screen|Previous Devices screen|   
+|---|---|   
+|<img alt="Screenshot of Company Portal **Devices** screen with red exclamation point icon next to non-managed device." src="./media/whats-new-app-ui/company-portal-android-devices-icon-after-2206.png" width="300"> |<img alt="Screenshot of Company Portal **Devices** screen with no icon next to non-managed device" src="./media/whats-new-app-ui/company-portal-android-devices-icon-before-2206.png" width="300">|  
+
+ 
+|Updated Device Details screen|Previous Device Details screen|   
+|---|---|   
+|<img alt="Screenshot of Company Portal **Devices** screen with with info icon next to message." src="./media/whats-new-app-ui/company-portal-android-device-details-icon-after-2206.png" width="300"> |<img alt="Screenshot of Company Portal **Devices** screen with info icon next to message." src="./media/whats-new-app-ui/company-portal-android-device-details-icon-before-2206.png" width="300">|  
 
 ## Week of November 15, 2021  
 
