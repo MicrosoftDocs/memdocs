@@ -37,9 +37,9 @@ You can configure Conditional Access policies based on Zimperium risk assessment
 
 ## Supported platforms
 
-- **Android 4.1 and later**
+- **Android 5.1 and later**
 
-- **iOS 8 and later**
+- **iOS 10 and later**
 
 ## Prerequisites
 
