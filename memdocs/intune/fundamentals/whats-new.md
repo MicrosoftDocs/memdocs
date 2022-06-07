@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/02/2022
+ms.date: 06/06/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of June 6, 2022  
+
+### App management  
+
+#### UI improvements show Android enrollment is available, not required<!-- 8764312 -->
+
+We updated the iconography in the Company Portal for Android app to make it easier for users to recognize when device enrollment is available to them but not required. The new iconography appears in scenarios where the device enrollment availability is set to **Available, no prompts** in the admin center (**Tenant admin** > **Customization** > **Create** or **Edit** a policy > **Settings**).      
+
+Changes include:  
+
+ - On the Devices screen, users will no longer see a red exclamation point next to a non-enrolled device.  
+ - On the Device Details screen, users will no longer see a red exclamation point next to the enrollment message. Instead, they will see the info **(i)** icon.    
+
+To view screenshots of the changes, see [UI updates for Intune end-user apps](../fundamentals/whats-new-app-ui.md).  
 
 ## Week of May 30, 2022 (Service release 2205)
 
@@ -229,7 +244,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Device management
 
 #### Software updates page for tenant attached devices <!-- 13089257, 13035723 -->
-There's a new **Software updates** page for tenant attached devices. This page displays the status for software updates on a device. You can review which updates are successfully installed, failed, and are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting.
+There's a new **Software updates** page for tenant attached devices. This page displays the status for software updates on a device. You can review which updates are successfully installed, failed, and are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting. For more information, see [Tenant attach: Software updates in the admin center](../../configmgr/tenant-attach/software-updates.md).
 
 #### Microsoft Defender for Endpoint support for App Sync on iOS/iPadOS<!-- 9768396 -->
 When you use Microsoft Defender for Endpoint (MDE) as your Mobile Threat Defense application, you can [configure MDE to request Application Inventory data](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune) from Intune from iOS/iPadOS devices. The following two settings are now available:
