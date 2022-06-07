@@ -45,21 +45,25 @@ This feature applies to:
 
 <!-- ms.reviewer: mikedano -->
 
-These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome.
-
-:::image type="content" source="./media/settings-catalog-common-features/google-chrome-settings.png" alt-text="In Settings Catalog, Google Chrome settings are built in to Microsoft Intune and Endpoint Manager admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
-
-Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
-
 This feature applies to:
 
 - macOS
 - Windows 11
 - Windows 10
 
+These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome.
+
+:::image type="content" source="./media/settings-catalog-common-features/google-chrome-settings.png" alt-text="In Settings Catalog, Google Chrome settings are built in to Microsoft Intune and Endpoint Manager admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
+
+Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
+
 ## Add universal printers
 
 <!-- ms.reviewer: laarrizz -->
+
+This feature applies to:
+
+- Windows 11
 
 You can create a universal print policy, add printers, and then deploy this printer list to your managed users. When the policy is deployed, it automatically installs the printers you added. Users can see these printers, and select a printer from your list.
 
@@ -67,13 +71,13 @@ For more information, go to [Create a Universal Print policy in Microsoft Intune
 
 Previously, to configure Universal Print settings, you used the [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool), which requires more manual steps, and has some limitations.
 
-This feature applies to:
-
-- Windows 11
-
 ## Built-in macOS features replacing plist files
 
 <!-- ms.reviewer: beflamm -->
+
+This feature applies to:
+
+- macOS
 
 On macOS, you can use property list (plist) files to configure features and settings that aren't built in to Intune. Some of these feature settings are now available in the settings catalog:
 
@@ -85,11 +89,14 @@ On macOS, you can use property list (plist) files to configure features and sett
 
   Previously, you had to [use a property list (plist) file to configure Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website).
 
+- **Microsoft Office and Microsoft Outlook**: For a list of the Microsoft Office and Outlook settings you can configure, go to:
+
+  - [Use preferences to manage privacy controls for Office for Mac - Deploy Office](/deployoffice/privacy/mac-privacy-preferences)
+  - [Set preferences for Outlook for Mac - Deploy Office](/deployoffice/mac/preferences-outlook)
+
+  Previously, you had to [use a property list (plist) file to configure Office and Outlook for Mac](/deployoffice/mac/deploy-preferences-for-office-for-mac) (opens another Microsoft website).
+
 Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
-
-This feature applies to:
-
-- macOS
 
 ## Learn more
 
