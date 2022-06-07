@@ -244,7 +244,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 | Application, Other | 4 | Disk encryption blocking upgrade. | Disable disk encryption before upgrading. You can re-enable it after.   |
 | Application, Other | 5 | Blocking upgrade. | Remove application before upgrading. Application may work on new OS.   |
 | Application, Other | 6 | Blocking upgrade, update application to newest version. | Update application before upgrading. Compatible version is available.   |
-| Application, Other | 7 | locking upgrade, but can be reinstalled after upgrading. | Remove application before upgrading. Application will work on new OS, but must be | reinstalled.   |
+| Application, Other | 7 | locking upgrade, but can be reinstalled after upgrading. | Remove application before upgrading. Application will work on new OS, but must be reinstalled.   |
 | Application, Other | 8 | Application is removed during upgrade. | Application is removed during upgrade due to compatibility issues. No action is required for the upgrade to proceed, but be sure to test the application on the new OS, and check with the developer for a compatible version if needed.   |
 | Application, Other | 9 | Evaluation may be required on new OS. | Windows may upgrade, but applications or drivers can have issues.   |
 | Driver | 1 | Driver won't migrate to new OS. | Check with vendor for compatible driver.   |
