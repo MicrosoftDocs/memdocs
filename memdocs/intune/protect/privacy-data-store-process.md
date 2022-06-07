@@ -39,7 +39,7 @@ After Intune [collects the data](privacy-data-collect.md), Intune follows the Da
 
 Microsoft offers and operates Intune services in many regions worldwide. Intune respects the storage location elections made by the administrator for Customer Data.
 
-For more information, see [Data Center Locations](/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#data-center-locations)
+For more information, see [Data Center Locations](/microsoft-365/enterprise/o365-data-locations?view=o365-worldwide#data-center-locations&preserve-view=true).
 
 ### Data residency option
 
@@ -63,7 +63,7 @@ Microsoft 365 Data Handling Standard policy specifies how long customer data is 
 -**Active Deletion**: The tenant has an active subscription and a user or administrator deletes data, or administrators delete a user.
 -**Passive Deletion**: The tenant subscription ends.
 
-For each of the deletion scenarios, see [Data Retention, Deletion, and Destruction in Microsoft 365](/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide).  
+For each of the deletion scenarios, see [Data Retention, Deletion, and Destruction in Microsoft 365](/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide&preserve-view=true).  
 
 In general, personal data collected by Intune is removed within 30 days after deletion. Audit logs are retained for up to one year for security purposes. 
 

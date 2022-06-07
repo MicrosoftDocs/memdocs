@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 # Create a Universal Print policy in Microsoft Intune
 
 > [!NOTE]
-> This feature will release over several days and won't be available to all customers immediately.
+> This feature will release over several days and won't be available to all tenants immediately.
 
 Many organizations are moving their printer infrastructure to the cloud. [Universal Print](/universal-print/fundamentals/universal-print-whatis) is a cloud-based printing solution in Microsoft 365. It uses built-in cloud printers, built-in legacy printers, and runs entirely in Microsoft Azure.
 
@@ -60,9 +60,11 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
   - **Printer Administrator** or **Global Administrator** roles: Needed to add printers.
 
     For more information on these roles, go to [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
+
   - **Intune Administrator** or **Global Administrator** roles: Needed to create and assign Intune policies.
 
     For more information on these roles, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
+
   - An assigned Universal Print license.
 
 - End user accounts need the following permissions/licenses:
@@ -71,6 +73,8 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
   - Have access rights to the printer service and the Universal Print service
 
   If the profile is assigned to an Azure AD user/user group that can't access the printers because of permissions, then Intune grants the assigned user/user group the permissions.
+
+- These settings use the [UniversalPrint CSP](/windows/client-management/mdm/universalprint-csp).
 
 ## Create the policy
 
