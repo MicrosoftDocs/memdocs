@@ -633,21 +633,23 @@ These settings apply to corporate-owned work profiles.
 
 ### Custom support information
 
-Using these settings, you can customize some support messages shown to users, and show messages in different languages.
+Using these settings, you can customize some support messages shown to users, and show these messages in different languages.
 
-By default, the OEM default messages are shown. When you deploy a custom message, the Intune default message is also deployed. If you don't enter a custom message for the device's default language, then the Intune default message is shown.
+By default, the OEM default messages are shown. When you deploy a custom message using Intune, the Intune default message is also deployed. If you don't enter a custom message for the device's default language, then the Intune default message is automatically shown.
 
 By default, the Intune default message is in **English (United States)**.
 
-For example, you deploy a custom message for English and French. The user changes the device's default language to Spanish. Since you didn't deploy a custom message to the Spanish language, then the Intune default message is shown on this device.
+For example, you deploy a custom message for English and French. The user changes the device's default language to Spanish. Since you didn't deploy a custom message to the Spanish language, then the Intune default message is shown.
 
-The Intune default message is translated for all languages in the Endpoint Manger admin center (**Settings** > **Language + Region**). The **Language** setting value determines the default language used by Intune. By default, it's set to **English**.
+The Intune default message is translated for all languages in the [Endpoint Manger admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Settings** > **Language + Region**). The **Language** setting value determines the default language used by Intune. By default, it's set to **English**.
+
+You can configure the following settings:
 
 - **Short support message**: When users try to change a setting that's managed by the organization, a short message is shown. Use these settings to customize this message. You can enter a different message for different languages. By default, this message is in **English (United States)**.  
 
-  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
+  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and don't enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
 
-    You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original Intune default message is used and is translated:
+    You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original short Intune default message is used and is translated:
 
     `You do not have permission for this action. For more information, contact your IT admin.`
 
@@ -665,9 +667,9 @@ The Intune default message is translated for all languages in the Endpoint Mange
 
   Using these settings, you can customize this message and enter a different message for different languages.
 
-  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
+  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and don't enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
 
-    You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original Intune default message is used and is translated:
+    You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original long Intune default message is used and is translated:
 
     `The organization's IT admin can monitor and manage apps and data associated with this device, including settings, permissions, corporate access, network activity and the device's location information.`
 
