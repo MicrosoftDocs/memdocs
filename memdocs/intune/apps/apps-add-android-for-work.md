@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/05/2022
+ms.date: 06/08/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: 2f6c06bf-e29a-4715-937b-1d2c7cf663d4
 #ROBOTS:
 #audience:
 
-ms.reviewer: chrisbal
+ms.reviewer: ilwu
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -284,6 +284,10 @@ When necessary, you can delete Managed Google Play apps from Microsoft Intune. T
 ## Android Enterprise system apps
 
 You can enable an Android Enterprise system app for [Android Enterprise dedicated devices](../enrollment/android-kiosk-enroll.md) or [fully managed devices](../enrollment/android-fully-managed-enroll.md). For more information about adding an Android Enterprise system app, see [Add Android Enterprise system apps to Microsoft Intune](apps-ae-system.md).
+
+## MAM policies with COSU devices
+
+Intune-managed Android Enterprise corporate owned dedicated devices (COSU) in Azure Active Directory (AAD) shared mode can receive MAM policies and can be targeted separately from other Android enterprise devices. Intune-managed COSU devices that are not in Shared Device Mode will continue to be blocked from getting MAM. For more information about COSU, see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
 
 ## Next steps
 
