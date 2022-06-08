@@ -225,7 +225,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
   Your options:
 
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable  the built-in SD card ports.
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in SD card ports.
   - **Enabled**: All built-in SD card ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
   - **Disabled**: All built-in SD card ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
 
