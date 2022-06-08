@@ -2,7 +2,7 @@
 title: Troubleshoot software updates for devices uploaded to the admin center
 titleSuffix: Configuration Manager
 description: Troubleshooting software updates for Configuration Manager tenant attach
-ms.date: 05/20/2022
+ms.date: 06/07/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 author: banreet
@@ -14,9 +14,6 @@ ms.localizationpriority: medium
 
 # Troubleshoot software updates in the admin center
 <!--13035723-->
-
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 When reviewing software updates in the admin center, you may run across some common errors. Use the following information about common error messages to troubleshoot software updates for tenant attached devices in the Microsoft Endpoint Manager admin center:
 
@@ -87,6 +84,12 @@ Typically, this error is caused by an issue with the admin account. Below are th
 1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../../configmgr/develop/adminservice/overview.md#prerequisites).
 1. For Configuration Manager version 2002, verify the clock on the service connection point is in sync. If the service connection point's clock is slightly behind, apply [KB4563473 - Update rollup for Configuration Manager version 2002 tenant attach issues](https://support.microsoft.com/help/4563473). Check **AdminService.log** on the provider machine for any errors.
 1. For Configuration Manager version 2002, verify the device is in the security scope for the administrator's security role. For more information, see [Fundamentals of role-based administration](../../configmgr/core/understand/fundamentals-of-role-based-administration.md).
+
+### Configuration Manager doesn't meet the minimum version prerequisite
+
+**Error message:** Configuration Manager doesn't meet the minimum version prerequisite
+
+**Possible cause:** Your Configuration Manager sites aren't running the [minimum version](software-updates.md#prerequisites) of Configuration Manager. The minimum required version is Configuration Manager version 2111 with [update rollup KB12896009](../hotfix/2111/12896009.md). This version, or a later version, needs to be installed on all sites in the hierarchy.
 
 ## Known issues
 
