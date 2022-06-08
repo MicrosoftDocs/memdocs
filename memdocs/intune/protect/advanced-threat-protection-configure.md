@@ -218,7 +218,7 @@ Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for 
 4. For **Platform**, select **iOS/iPadOS**
 5. For **Profile type**, select **Custom**, and then select **Create**.
 6. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
-7. Enter a *Configuration profile name*, and select a file to .mobileconfig file to Upload.
+7. Enter a *Configuration profile name*, and select a `.mobileconfig` file to Upload.
 8. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
 9. On the **Assignments** page, select the groups that will receive this profile. For this scenario, it's a best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
