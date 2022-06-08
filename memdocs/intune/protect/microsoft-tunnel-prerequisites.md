@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2022
+ms.date: 06/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -225,6 +225,11 @@ By default, the Microsoft Tunnel and server use the following ports:
 When creating the Server configuration for the tunnel, you can specify a different port than the default of 443. If you specify a different port, configure firewalls to support your configuration.
 
 **More requirements**:
+
+- To access the security token service and Azure storage for logs, provide access to the following FQDNs:
+
+  - Security Token Service:`*.sts.windows.net`
+  - Azure storage for tunnel logs: `*.blob.core.windows.net`
 
 - The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22.
 
