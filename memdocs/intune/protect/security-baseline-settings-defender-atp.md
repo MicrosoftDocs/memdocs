@@ -815,7 +815,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
 - **Defender potentially unwanted app action**  
   Baseline default: *Block*  
-  [Learn more](//windows/client-management/mdm/policy-csp-defender?WT.mc_id=Portal-Microsoft_Intune_Workflows#defender-puaprotection)
+  [Learn more](/windows/client-management/mdm/policy-csp-defender#defender-puaprotection)
 
 - **Turn on cloud-delivered protection**  
   Baseline default: *Yes*  
