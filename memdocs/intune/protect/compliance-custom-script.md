@@ -33,7 +33,7 @@ Before you can use [custom settings for compliance](../protect/compliance-use-cu
 
 The discovery script:
 
-- Is added to Intune before you create a compliance policy. After its added, it will be available to select when you create a compliance policy with custom settings.
+- Is added to Intune before you create a compliance policy. After it's added, it will be available to select when you create a compliance policy with custom settings.
 - Runs on a device that receives the compliance policy. The script evaluates the conditions of the JSON file you upload to the same policy.
 - Identifies one or more settings, as defined in the JSON,  and returns a list of discovered values for those settings. A single script can be assigned to each policy, and supports discovery of multiple settings.
 - Must be compressed to output results in one line. For example: `$hash = @{ ModelName = "Dell"; BiosVersion = "1.24"; TPMChipPresent = $true}`
