@@ -47,6 +47,7 @@ Wi-Fi profiles support the following device platforms:
 
 - Android 5 and newer
 - Android Enterprise and kiosk
+- Android (AOSP)
 - iOS 11.0 and newer
 - iPadOS 13.0 and newer
 - macOS X 10.12 and newer
