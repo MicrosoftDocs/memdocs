@@ -2,7 +2,7 @@
 # required metadata
 
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune and Endpoint Manager to configure thousands of settings for Windows 10/11 client devices, and configure Microsoft Edge on macOS devices. Add these settings in a device configuration profile to secure devices, and control different programs and features.
+description: Use settings catalog in Microsoft Intune and Endpoint Manager to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use the settings catalog to configure settings on Windows and macOS devices
+# Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices
 
 Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. If you prefer to configure settings at a granular level, similar to on-premises GPO, then the settings catalog is a natural transition.
 
@@ -37,13 +37,17 @@ Use the settings catalog as part of your mobile device management (MDM) solution
 
 This feature applies to:
 
+- **iOS/iPadOS**
+
+  Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
+
 - **macOS**
 
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
 
 - **Windows 10/11**
 
-  There are thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
+  There are thousands of settings, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
 
 > [!TIP]
 > To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
@@ -64,18 +68,18 @@ For information on some features you can configure using the settings catalog, g
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **macOS: MSFT Edge v77 settings** or **Win10: BitLocker settings for all Win10 devices**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **macOS: MSFT Edge settings** or **Win10: BitLocker settings for all Win10 devices**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
 
 7. In **Configuration settings**, select **Add settings**. In the settings picker, select a category to see all the available settings.
 
-    For example, choose **Windows 10 and later**, then select **Authentication** to see all the settings in this category:
+    For example, select **Windows 10 and later**, then select **Authentication** to see all the settings in this category:
 
     :::image type="content" source="./media/settings-catalog/settings-picker-authentication.png" alt-text="In Settings Catalog, select Windows and select Authentication in Microsoft Intune and Endpoint Manager admin center.":::
 
-    For example, choose **macOS**. The **Microsoft Edge - All** category lists all the settings you can configure, including any new settings. The other categories include settings that are obsolete, or settings that apply to older versions:
+    For example, select **macOS**. The **Microsoft Edge - All** category lists all the settings you can configure, including any new settings. The other categories include settings that are obsolete, or settings that apply to older versions:
 
     :::image type="content" source="./media/settings-catalog/macos-settings-picker-edge-all.png" alt-text="In Settings Catalog, select macOS, and select a feature or category in Microsoft Intune and Endpoint Manager admin center.":::
 
@@ -134,7 +138,7 @@ There are thousands of settings available in the settings catalog. To make it ea
 
 ## Copy a profile  
 
-Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit it to adjust the settings and add assignments.
+Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
 
 1. Go to **Devices** > **Configuration profiles**.
 2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (**…**).
