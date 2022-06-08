@@ -303,6 +303,8 @@ items:
         href: windows-10-expedite-updates.md
       - name: Windows rollout options
         href: windows-update-rollout-options.md
+      - name: Windows Update compatibility reports
+        href: windows-update-compatibility-reports.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies
