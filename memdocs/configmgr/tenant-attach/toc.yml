@@ -19,7 +19,7 @@ items:
     href: scripts.md
   - name: BitLocker recovery keys
     href: bitlocker-recovery-keys.md
-  - name: Software updates (preview)
+  - name: Software updates
     href: software-updates.md    
 - name: CMPivot for tenant attached devices
   items:
