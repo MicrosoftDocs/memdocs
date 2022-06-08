@@ -228,7 +228,7 @@ When creating the Server configuration for the tunnel, you can specify a differe
 
 - To access the security token service and Azure storage for logs, provide access to the following FQDNs:
 
-  - Security Token Service:`*.sts.windows.net`
+  - Security Token Service: `*.sts.windows.net`
   - Azure storage for tunnel logs: `*.blob.core.windows.net`
 
 - The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22.
