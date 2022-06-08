@@ -33,7 +33,7 @@ ms.collection:
 
 Azure Virtual Desktop multi-session with Microsoft Intune is now generally available.
 
-You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Endpoint Manager admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you must use device-based configurations. Such configurations require user-less enrollments. 
+You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Endpoint Manager admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you'll be able to use both device-based and user configuration. 
 
 Windows 10 or Windows 11 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure. It provides the following benefits:
 
@@ -45,8 +45,18 @@ You can manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs cr
 
 ## Overview
 
-Microsoft Intune only supports managing Windows 10 or Windows 11 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies aren't supported at this time.
+Device configuration support in Microsoft Intune for Windows 10 or Windows 11 Enterprise multi-session is Generally Available (GA). This means [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs. Additionally, multi-session configurations can be targeted to devices or device groups. 
 
+User configuration support in Microsoft Intune for Windows 11 multi-session VMs is in public preview. With this you'll be able to:
+
+ - Configure user scope policies using **Settings catalog** and assign to groups of users. You can use the search bar to search all configurations with scope set to "user".
+ 
+ - Configure user certificates and assign to users.
+
+ - Configure PowerShell scripts to install in the user context and assign to users.
+
+> [!NOTE]
+> User support for Windows 10 multi-session builds will be available later this year.
 
 ## Prerequisites
 
