@@ -37,6 +37,7 @@ For more information on the settings catalog, and what it is, go to [Use the set
 
 This feature applies to:
 
+- iOS/iPadOS
 - macOS
 - Windows 11
 - Windows 10
