@@ -151,8 +151,8 @@ Some settings are in a logical category, like Camera. There's also granular sett
 - In the first sync attempt, the granular setting is applied (Front camera) and the category setting is non-compliant (Camera).
 - With every sync with the Intune service after the first sync, the following behavior happens in a loop:
 
-  - Intune applies the category setting (Camera) since it's not compliant. The granular setting (Front camera) is non-compliant.
-  - Intune applies the granular setting (Front Camera) since it's not compliant. The category setting (Camera) is non-complaint.
+  - Intune applies the category setting (Camera) since it's not compliant. The granular setting (Front camera) becomes non-compliant.
+  - Intune applies the granular setting (Front Camera) since it's not compliant. The category setting (Camera) becomes non-complaint.
 
 To avoid this looping behavior, configure the category setting **or** the granular settings.
 
