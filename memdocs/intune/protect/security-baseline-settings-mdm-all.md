@@ -420,7 +420,7 @@ Audit settings configure the events that are generated for the conditions of the
 
 - **Security log maximum file size in KB**:  
   Baseline default: *196608*  
-  [Learn more](/https://go.microsoft.com/fwlink/?linkid=2067042)
+  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067042)
 
 ::: zone-end
 
