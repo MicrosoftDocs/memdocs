@@ -148,10 +148,19 @@ When you create the DFCI policy, you configure the [Windows DFCI settings](devic
 
 Some settings are in a logical category, like Camera. There's also granular settings, like Front Camera. If these settings conflict, then the following happens:
 
-- If the device supports the granular settings, such as Front Camera, then the granular setting is applied.
-- If the device doesn't support the granular settings, such as Front Camera, then the category setting is applied, such as Camera. 
+- In the first sync attempt, the granular setting is applied (Front camera) and the category setting is non-compliant (Camera).
+- With every sync with the Intune service after the first sync, the following behavior happens in a loop:
 
-Some settings aren't available for all devices. The category settings apply to all devices. The granular settings only apply to the devices that support it. To confirm if a setting is or isn't available on your device, contact your device manufacturer.
+  - Intune applies the category setting (Camera) since it's not compliant. The granular setting (Front camera) becomes non-compliant.
+  - Intune applies the granular setting (Front Camera) since it's not compliant. The category setting (Camera) becomes non-complaint.
+
+To avoid this looping behavior, configure the category setting **or** the granular settings.
+
+For example, you want to only allow Wi-Fi radios. In this scenario, you:
+
+- Leave the category **Radios (Bluetooth, Wi-Fi, NFC, etc.)** setting to **Not configured**.
+- For the **Wi-Fi** radio setting, set it to **Enable**.
+- Set all the other granular radio settings to **Disabled**.
 
 ## Reuse, retire, or recover the device
 
