@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/02/2022
+ms.date: 06/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,41 +70,183 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: Enables SMT in the UEFI layer.
   - **Disabled**: Disables SMT in the UEFI layer.
 
-## Built-in Hardware
+## Cameras
 
-These settings manage the hardware components built into the devices. They don't manage attached peripherals, such as USB webcams.
+- **Cameras**: This setting manages all the hardware cameras built into the device. They don't manage attached peripherals, such as USB webcams.
 
-- **Cameras**: Your options:
-  - **Not configured**: Intune doesn't change or update this setting.
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in cameras.
   - **Enabled**: All built-in cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
-  - **Disabled**: All built-in camera directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
+  - **Disabled**: All built-in cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
 
-- **Microphones and speakers**:  Your options:
-  - **Not configured**: Intune doesn't change or update this setting.
+- **Front cameras**: This setting manages the built-in front visible light cameras managed by UEFI (BIOS). They don't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in front visible light cameras.
+  - **Enabled**: All built-in front visible light cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
+  - **Disabled**: All built-in front visible light cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
+
+- **Rear cameras**: This setting manages the built-in rear visible light cameras managed by UEFI (BIOS). They don't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in rear cameras.
+  - **Enabled**: All built-in rear visible light cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
+  - **Disabled**: All built-in rear visible light cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
+
+- **Infrared (IR) cameras**: This setting manages the built-in infrared cameras managed by UEFI (BIOS). They don't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in infrared cameras.
+  - **Enabled**: All built-in infrared cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
+  - **Disabled**: All built-in infrared cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
+
+## Microphones and speakers
+
+- **Microphones and speakers**: This setting manages all the microphones and speakers built into the device. They don't manage attached peripherals, such as USB devices.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in microphones and speakers.
   - **Enabled**: All built-in microphones and speakers directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
   - **Disabled**: All built-in microphones and speakers directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
 
-- **Radios (Bluetooth, Wi-Fi, NFC, etc.)**: Your options:
-  - **Not configured**: Intune doesn't change or update this setting.
+- **Microphones**: This setting manages the built-in microphones managed by UEFI (BIOS). They don't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in microphones.
+  - **Enabled**: All built-in microphones directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in microphones directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+- **Speakers**: This setting manages the built-in speakers managed by UEFI (BIOS). They don't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in speakers.
+  - **Enabled**: All built-in speakers directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in speakers directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+## Radios
+
+- **Radios (Bluetooth, Wi-Fi, NFC, etc.)**: This setting manages all the built-in radios managed by UEFI (BIOS). They don't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable all built-in radios.
   - **Enabled**: All built-in radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
   - **Disabled**: All built-in radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
 
     > [!WARNING]
     > If you disable the **Radios** setting, the device requires a wired network connection. Otherwise, the device may be unmanageable.
 
+- **Bluetooth**: This setting manages the built-in Bluetooth radios managed by UEFI (BIOS). They don't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in Bluetooth radios.
+  - **Enabled**: All built-in Bluetooth radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in Bluetooth radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+- **WWAN**: This setting manages the built-in WWAN radios managed by UEFI (BIOS). They don't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in WWAN radios.
+  - **Enabled**: All built-in WWAN radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in WWAN radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+- **NFC**: This setting manages the built-in NFC radios managed by UEFI (BIOS). They don't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in NFC radios.
+  - **Enabled**: All built-in NFC radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in NFC radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+- **Wi-Fi**: This setting manages the built-in Wi-Fi radios managed by UEFI (BIOS). They don't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in Wi-Fi radios.
+  - **Enabled**: All built-in Wi-Fi radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in Wi-Fi radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
 ## Boot Options
 
-- **Boot from external media (USB, SD)**: Your options:
-- **Not configured**: Intune doesn't change or update this setting.
-- **Enabled**: UEFI (BIOS) allows booting from non-hard drive storage.
-- **Disabled**: UEFI (BIOS) doesn't allow booting from non-hard drive storage, which also disables booting from network adapters. 
+> [!WARNING]
+> Disabling all external boot options (or all external ports) significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to open the device and replace storage.
 
-  When set to **Disabled**, don't set the **Boot from network adapters** setting to **Enabled**. It causes the **Boot from external media (USB, SD)** setting or **Boot from network adapters** setting to become not compliant.
+- **Boot from external media (USB, SD)**: Your options:
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might allow booting from external media.
+  - **Enabled**: UEFI (BIOS) allows booting from non-hard drive storage.
+  - **Disabled**: UEFI (BIOS) prevents booting from non-hard drive storage, which also disables booting from network adapters.
+
+    When set to **Disabled**, don't set the **Boot from network adapters** setting to **Enabled**. It causes the **Boot from external media (USB, SD)** setting or **Boot from network adapters** setting to become not compliant.
 
 - **Boot from network adapters**: Your options:
-  - **Not configured**: Intune doesn't change or update this setting.
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might allow booting from built-in network adapters.
   - **Enabled**: UEFI (BIOS) allows booting from built-in network interfaces.
-  - **Disabled**: UEFI (BIOS) doesn't allow booting built-in network interfaces.
+  - **Disabled**: UEFI (BIOS) prevents booting built-in network interfaces.
+
+## Ports
+
+> [!WARNING]
+> Disabling all external boot options (or all external ports) significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to open the device and replace storage.
+
+- **Ports**: This setting manages all the built-in ports managed by UEFI (BIOS). It doesn't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable all built-in ports.
+  - **Enabled**: All built-in ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+- **USB type A**: This setting manages the built-in USB type A ports managed by UEFI (BIOS). It doesn't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in USB type A ports.
+  - **Enabled**: All built-in USB type A ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in USB type A ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+- **USB type C**: This setting manages the built-in USB type C ports managed by UEFI (BIOS). It doesn't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in USB type C ports.
+  - **Enabled**: All built-in USB type C ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in USB type C ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+- **SD card**: This setting manages the built-in SD card ports managed by UEFI (BIOS). It doesn't manage attached peripherals.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in SD card ports.
+  - **Enabled**: All built-in SD card ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
+  - **Disabled**: All built-in SD card ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+
+## Wake settings
+
+> [!WARNING]
+> Disabling all external boot options (or all external ports) significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to open the device and replace storage.
+
+- **Wake on LAN**: Wake on LAN allows a network administrator to remotely wake a device in sleep mode using the LAN.
+
+  Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might prevent waking a device using the LAN.
+  - **Enabled**: UEFI (BIOS) allows waking a device using the LAN.
+  - **Disabled**: UEFI (BIOS) prevents waking a device using the LAN.
+
+- **Wake on power**: Wake on power allows a network administrator to remotely wake a device in sleep mode when it's connected to a power source. Your options:
+
+  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might prevent waking a device when it's connected to a power source.
+  - **Enabled**: UEFI (BIOS) allows waking a device when it's connected to a power source.
+  - **Disabled**: UEFI (BIOS) prevents waking a device when it's connected to a power source.
 
 ## Next steps
 

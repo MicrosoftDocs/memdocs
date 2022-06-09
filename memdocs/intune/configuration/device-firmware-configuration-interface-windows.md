@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/02/2022
+ms.date: 06/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,9 +27,9 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
  
-# Use Device Firmware Configuration Interface profiles on Windows devices in Microsoft Intune
+# Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune
 
-When you use Intune to manage Autopilot devices, you can manage UEFI (BIOS) settings after they're enrolled, using the Device Firmware Configuration Interface (DFCI). For an overview of benefits, scenarios, and prerequisites, see [Overview of DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
+When you use Intune to manage Autopilot devices, you can manage UEFI (BIOS) settings after they're enrolled using the Device Firmware Configuration Interface (DFCI). For an overview of benefits, scenarios, and prerequisites, see [Overview of DFCI](https://microsoft.github.io/mu/dyn/mu_plus/DfciPkg/Docs/Dfci_Feature/).
 
 DFCI enables Windows to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface).
 
@@ -72,13 +72,19 @@ To use DFCI, create the following profiles, and assign them to your group.
 
 ### Create an Autopilot deployment profile
 
-This profile sets up and pre-configures new devices. [Autopilot deployment profile](../../autopilot/profiles.md) lists the steps to create the profile.
+This profile sets up and pre-configures new devices. The following article lists the steps to create the profile:
+
+- [Autopilot deployment profile](../../autopilot/profiles.md)
 
 ### Create an Enrollment State Page profile
 
-This profile makes sure that devices are verified and enabled for DFCI during the Windows setup. It's highly recommended to use this profile to block device use until all apps and profiles are installed. [Enrollment State Page profile](../enrollment/windows-enrollment-status.md) lists the steps to create the profile.
+This profile makes sure that devices are verified and enabled for DFCI during the Windows setup. It's highly recommended to use this profile to block device use until all apps and profiles are installed.
 
-### Create the DFCI profile
+The following article lists the steps to create the profile:
+
+- [Enrollment State Page profile](../enrollment/windows-enrollment-status.md) 
+
+### Create the DFCI profile in Intune
 
 This profile includes the DFCI settings you configure.
 
@@ -96,8 +102,12 @@ This profile includes the DFCI settings you configure.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
    Select **Next**.
-6. In **Configuration settings**, configure the settings you want to control in the UEFI firmware layer. For a list of all the settings, and what they do, see [Windows](device-firmware-configuration-interface-windows-settings.md).
-   Select **Next**.
+6. In **Configuration settings**, configure the settings you want to control in the UEFI firmware layer. For a list of all the settings, and what they do, go to:
+
+    - [Windows DFCI settings](device-firmware-configuration-interface-windows-settings.md)
+
+    Select **Next**.
+
 7. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
    Select **Next**.
 8. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).

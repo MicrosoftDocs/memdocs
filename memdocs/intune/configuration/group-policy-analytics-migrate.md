@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2022
+ms.date: 06/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,7 +37,7 @@ You can import your on-premises Group Policy Objects (GPOs), and create an Intun
 
 With Group Policy Analytics, you import your on-premises GPOs. It analyzes your imported GPOs, and shows the settings that are also available in Microsoft Intune. For the settings that are available, you can create a [Settings Catalog policy](settings-catalog.md), and then deploy the policy to your managed devices.
 
-This article shows you how to create the policy from your imported GPOs. For more information and an overview on Group Policy Analytics, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview](group-policy-analytics.md).
+This article shows you how to create the policy from your imported GPOs. For more information and an overview on Group Policy Analytics, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager](group-policy-analytics.md).
 
 ## Before you begin
 
@@ -47,11 +47,9 @@ This article shows you how to create the policy from your imported GPOs. For mor
 
 - Import your on-premises GPOs, and review the results.
 
-  For the specific steps, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview](group-policy-analytics.md).
+  For the specific steps, go to [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager](group-policy-analytics.md).
 
 - This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
-
-- Currently, the Migrate feature isn't supported in sovereign clouds, like Azure Government. For more information, go to [What is Azure Government?](/azure/azure-government/documentation-government-welcome).
 
 ## Review and migrate your GPOs to a Settings Catalog policy
 
@@ -147,6 +145,6 @@ When you create the Settings Catalog profile, any settings that can be included 
 
 ## Next steps
 
-- [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview](group-policy-analytics.md)
+- [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager](group-policy-analytics.md)
 - [Use Windows 10/11 Administrative Templates to configure group policy settings in Microsoft Endpoint Manager](administrative-templates-windows.md)
-- [Use the settings catalog to configure settings on Windows and macOS devices - preview](settings-catalog.md)
+- [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md)

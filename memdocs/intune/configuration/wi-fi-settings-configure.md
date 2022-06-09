@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 06/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,6 +47,7 @@ Wi-Fi profiles support the following device platforms:
 
 - Android 5 and newer
 - Android Enterprise and kiosk
+- Android (AOSP)
 - iOS 11.0 and newer
 - iPadOS 13.0 and newer
 - macOS X 10.12 and newer
@@ -66,6 +67,7 @@ Wi-Fi profiles support the following device platforms:
     - **Platform**: Choose the platform of your devices. Your options:
 
       - **Android device administrator**
+      - **Android (AOSP)**
       - **Android Enterprise**
       - **iOS/iPadOS**
       - **macOS**
@@ -89,6 +91,7 @@ Wi-Fi profiles support the following device platforms:
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Select your platform for detailed settings:
 
     - [Android device administrator](wi-fi-settings-android.md)
+    - [Android (AOSP)](wi-fi-settings-android-aosp.md)
     - [Android Enterprise](wi-fi-settings-android-enterprise.md), including dedicated devices
     - [iOS/iPadOS](wi-fi-settings-ios.md)
     - [macOS](wi-fi-settings-macos.md)
