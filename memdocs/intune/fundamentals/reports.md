@@ -423,10 +423,7 @@ To see a the report for a device, you can use the following steps:
 The **Group membership** report provides the group membership of all AAD groups for a specific managed device. The report provide the following columns:
 - Name
 - Object Id
-- Group Type
 - Membership Type
-- Source
-- Security enabled
 - Direct or Transitive
 
 When you click on a group, you can see the AAD pane for the group. You can identify whether the device's membership is assigned or dynamic and whether the device is a direct member or a transitive member. This report supports all device platforms and management types. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
