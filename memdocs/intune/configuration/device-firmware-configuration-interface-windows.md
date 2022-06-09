@@ -88,6 +88,10 @@ The following article lists the steps to create the profile:
 
 This profile includes the DFCI settings you configure.
 
+> [!WARNING]
+> Be careful. Configuring and assigning DFCI profiles can lock the device beyond repair. The DFCI profile settings change the device hardware, and can't be fixed by re-imaging the OS.
+
+
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:

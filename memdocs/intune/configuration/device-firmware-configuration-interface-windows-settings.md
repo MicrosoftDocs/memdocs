@@ -46,6 +46,9 @@ These settings are added to a device configuration profile in Intune, and then a
 - Some settings aren't available for all devices. To confirm if a setting is or isn't available on your device, contact your device manufacturer.
 - These settings use the [UEFI CSP](/windows/client-management/mdm/uefi-csp).
 
+> [!WARNING]
+> Be careful. Configuring and assigning DFCI profiles can lock the device beyond repair. The DFCI profile settings change the device hardware, and can't be fixed by re-imaging the OS.
+
 ## Security features
 
 - **Allow local user to change UEFI settings**: Your options:
