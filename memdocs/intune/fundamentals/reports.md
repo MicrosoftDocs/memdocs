@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/12/2022
+ms.date: 06/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -417,6 +417,21 @@ To see a the report for a device, you can use the following steps:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > *select a device* > **Managed Apps**.
 3. To see the managed apps for a specific user, select a user from the dropdown box near the top of the report.
+
+## Device group membership report (Organizational)
+
+The **Group membership** report provides the group membership of all AAD groups for a specific managed device. The report provide the following columns:
+- Name
+- Object Id
+- Membership Type
+- Direct or Transitive
+
+When you click on a group, you can see the AAD pane for the group. You can identify whether the device's membership is assigned or dynamic and whether the device is a direct member or a transitive member. This report supports all device platforms and management types. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
+
+To see the report for a device, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Monitor** > *select a device* > **Group Membership**.
 
 ## Device compliance trend report (Historical)
 
