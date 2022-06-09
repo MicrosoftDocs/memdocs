@@ -92,7 +92,8 @@ Intune will no longer remove users from all Intune reports when they are unlicen
 ### Device security
 
 #### New Device Control profile for Intune’s endpoint security Attack Surface Reduction policy<!-- 8844611 -->
-As part of the continuing [rollout of new profiles for endpoint security policies]( <!-- BROKEN LINK LocalLinkBookmarkNotFound: #new-profile-templates-and-settings-structure-for-endpoint-security-policies --> ), which began in April 2022, we’ve released a new Device Control profile template for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy for endpoint security in Intune. This profile replaces the previous profile of the same name for the *Windows 10 and later* platform.
+
+As part of the continuing [rollout of new profiles for endpoint security policies](#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022, we’ve released a new Device Control profile template for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy for endpoint security in Intune. This profile replaces the previous profile of the same name for the *Windows 10 and later* platform.
 
 With this replacement, only instances of the new profile can be created. However, any profiles you’ve previously created that use the old profile structure remain available to use, edit, and deploy.
 
@@ -362,9 +363,9 @@ There are some new features when using filters:
 
   When you select **View report**, the report has an **Assignment Filter** column. Use this column to determine if a filter successfully applied to your policy.
 
-- Endpoint Security policies support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create. 
+- Endpoint Security policies support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create.
 
-- When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting]( <!-- BROKEN LINK LocalLinkBookmarkNotFound: #new-reporting-experience-for-device-configuration-profiles --> ). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
+- When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting](#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
 
 For more information on filters, see:
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
@@ -1550,7 +1551,7 @@ We have made service side updates to custom notifications for Intune's November 
 
 #### Locations deprecated for Android device administrator<!-- 9492223 -->
 
-As [previously announced]( <!-- BROKEN LINK LocalLinkBookmarkNotFound: ../fundamentals/whats-new.md#plan-for-change-announcing-end-of-support-for-the-existing-use-locations-network-fence-feature-in-intune --> ) in October 2021, support for using locations in device compliance policy for devices enrolled as Android device administrator was deprecated. Use of locations is often referred to as network fencing.
+As [previously announced](../fundamentals/whats-new.md#plan-for-change-announcing-end-of-support-for-the-existing-use-locations-network-fence-feature-in-intune) in October 2021, support for using locations in device compliance policy for devices enrolled as Android device administrator was deprecated. Use of locations is often referred to as network fencing.
 
 For Android device administrator, the policies and dependences that relied on network fence capabilities no longer function. As previously announced, we are re-envisioning support for network fencing  and will share more information about those plans when it becomes available.
 
@@ -1820,7 +1821,7 @@ When searching devices in **Devices** > **All devices**, you can now search by A
 #### Tenant attach: Device status for endpoint security policies
 <!--IN9264837 -->
 
-You can review the status of endpoint security policies for tenant attached devices. The **Device Status** page can be accessed for all endpoint security policy types for tenant-attached clients. For more information, see [Device status]( <!-- BROKEN LINK LocalLinkBookmarkNotFound: ../../configmgr/tenant-attach/atp-onboard.md#device-status-preview --> ) for the endpoint security policy types.
+You can review the status of endpoint security policies for tenant attached devices. The **Device Status** page can be accessed for all endpoint security policy types for tenant-attached clients. For more information, see [Device status](../../configmgr/tenant-attach/atp-onboard.md#device-status-preview) for the endpoint security policy types.
 
 #### Attack surface reduction profiles for Configuration Manager tenant attach<!--7323386   -->
 
