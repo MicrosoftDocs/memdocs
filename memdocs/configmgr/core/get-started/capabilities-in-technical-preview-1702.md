@@ -71,7 +71,7 @@ To use Azure AD with Configuration Manager, you'll need the following:
 - A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
 - Configuration Manager clients that run in the same Azure AD environment.
 
-To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](/azure/active-directory-domain-services/create-instance).
+To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](/azure/active-directory-domain-services/tutorial-create-instance).
 
 ### Discover resources
 After you set up Configuration Manager to run in Azure AD, you can use the following Active Directory discovery methods to search
@@ -96,9 +96,10 @@ AAD stores users under the **AADDC Users** OU.  Configure the following:
 - **Group Discovery**  
 Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
 
-See the following for more information about Azure AD:  
-- [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) on azure.microsoft.com.
-- [Active Directory Domain Services Documentation](/azure/active-directory-domain-services) on docs.microsoft.com.
+See the following for more information about Azure AD:
+
+- [Azure Active Directory Domain Services product information](https://azure.microsoft.com/services/active-directory-ds)
+- [Active Directory Domain Services documentation](/azure/active-directory-domain-services/)
 
 ## Conditional access device compliance policy improvements
 
@@ -224,8 +225,7 @@ Additionally, you can now specify multiple certification authorities (CAs) on mu
 
 For iOS devices, you can associate a PFX certificate profile to an email profile and enable S/MIME encryption.  This then enables S/MIME in the native email client on iOS and associates the correct S/MIME encryption certificate to it.
 
-For more information about certificates in Configuration Manager, see [Introduction to certificate profiles](/sccm/protect/deploy-use/introduction-to-certificate-profiles).
-
+For more information about certificates in Configuration Manager, see [Introduction to certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
 ## New compliance settings for iOS devices
 
@@ -345,7 +345,7 @@ To try this, create a configuration item through the standard workflow, choose *
 #### Perform selective wipe
 Devices enrolled as Android for Work can only be selectively wiped because you only manage the work profile. This protects the personal profile from being wiped. Performing a selective wipe on an Android for Work device removes the work profile, including all apps and data, and unenrolls the device.
 
-To selectively wipe an Android for Work device, use the normal [selective wipe process](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) in the Configuration Manager console.
+To selectively wipe an Android for Work device, use the normal [selective wipe process](../../mdm/deploy-use/wipe-lock-reset-devices.md#selective-wipe) in the Configuration Manager console.
 
 #### Known issues for Android for Work
 **Configuring sync schedule in Android for Work email profiles causes them to fail to deploy**
