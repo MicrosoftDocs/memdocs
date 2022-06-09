@@ -74,7 +74,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ## Cameras
 
 > [!TIP]
-> These settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
+> Configure the category setting (**Cameras**) or the granular settings (**Front cameras**). If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
 
 - **Cameras**: This setting manages all the hardware cameras built into the device. They don't manage attached peripherals, such as USB webcams.
 
@@ -95,7 +95,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ## Microphones and speakers
 
 > [!TIP]
-> These settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
+> Configure the category setting (**Microphones and speakers**) or the granular settings (**Microphones**). If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
 
 - **Microphones and speakers**: This setting manages all the microphones and speakers built into the device. They don't manage attached peripherals, such as USB devices.
 
@@ -116,7 +116,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ## Radios
 
 > [!TIP]
-> These settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
+> Configure the category setting (**Radios (Bluetooth, Wi-Fi, NFC, etc.)**) or the granular settings (**Bluetooth**, **Wi-Fi**). If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
 
 - **Radios (Bluetooth, Wi-Fi, NFC, etc.)**: This setting manages all the built-in radios managed by UEFI (BIOS). They don't manage attached peripherals.
 
