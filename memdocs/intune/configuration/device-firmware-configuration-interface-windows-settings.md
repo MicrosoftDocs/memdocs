@@ -31,9 +31,6 @@ ms.collection:
 
 # Device Firmware Configuration Interface (DFCI) profile settings in Microsoft Intune
 
-> [!NOTE]
-> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
-
 This article lists and describes the DFCI profile settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to control security features, the built-in hardware, and the boot options in the UEFI layer on Windows.
 
 These settings apply to:
@@ -46,6 +43,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ## Before you begin
 
 - [Create the Windows 10/11 DFCI profile](device-firmware-configuration-interface-windows.md). There are more requirements to creating DFCI profiles. For more specific information, go to [Use DFCI profiles on Windows devices in Microsoft Intune](device-firmware-configuration-interface-windows.md).
+- Some settings aren't available for all devices. To confirm if a setting is or isn't available on your device, contact your device manufacturer.
 - These settings use the [UEFI CSP](/windows/client-management/mdm/uefi-csp).
 
 ## Security features
@@ -72,6 +70,9 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Cameras
 
+> [!TIP]
+> These settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
+
 - **Cameras**: This setting manages all the hardware cameras built into the device. They don't manage attached peripherals, such as USB webcams.
 
   Your options:
@@ -88,23 +89,10 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: All built-in front visible light cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
   - **Disabled**: All built-in front visible light cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
 
-- **Rear cameras**: This setting manages the built-in rear visible light cameras managed by UEFI (BIOS). They don't manage attached peripherals.
-
-  Your options:
-
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in rear cameras.
-  - **Enabled**: All built-in rear visible light cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
-  - **Disabled**: All built-in rear visible light cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
-
-- **Infrared (IR) cameras**: This setting manages the built-in infrared cameras managed by UEFI (BIOS). They don't manage attached peripherals.
-
-  Your options:
-
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in infrared cameras.
-  - **Enabled**: All built-in infrared cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
-  - **Disabled**: All built-in infrared cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
-
 ## Microphones and speakers
+
+> [!TIP]
+> These settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
 
 - **Microphones and speakers**: This setting manages all the microphones and speakers built into the device. They don't manage attached peripherals, such as USB devices.
 
@@ -122,15 +110,10 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: All built-in microphones directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
   - **Disabled**: All built-in microphones directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
 
-- **Speakers**: This setting manages the built-in speakers managed by UEFI (BIOS). They don't manage attached peripherals.
-
-  Your options:
-
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in speakers.
-  - **Enabled**: All built-in speakers directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
-  - **Disabled**: All built-in speakers directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
-
 ## Radios
+
+> [!TIP]
+> These settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
 
 - **Radios (Bluetooth, Wi-Fi, NFC, etc.)**: This setting manages all the built-in radios managed by UEFI (BIOS). They don't manage attached peripherals.
 
@@ -151,22 +134,6 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: All built-in Bluetooth radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
   - **Disabled**: All built-in Bluetooth radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
 
-- **WWAN**: This setting manages the built-in WWAN radios managed by UEFI (BIOS). They don't manage attached peripherals.
-
-  Your options:
-
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in WWAN radios.
-  - **Enabled**: All built-in WWAN radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
-  - **Disabled**: All built-in WWAN radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
-
-- **NFC**: This setting manages the built-in NFC radios managed by UEFI (BIOS). They don't manage attached peripherals.
-
-  Your options:
-
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in NFC radios.
-  - **Enabled**: All built-in NFC radios directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
-  - **Disabled**: All built-in NFC radios directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
-
 - **Wi-Fi**: This setting manages the built-in Wi-Fi radios managed by UEFI (BIOS). They don't manage attached peripherals.
 
   Your options:
@@ -178,7 +145,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ## Boot Options
 
 > [!WARNING]
-> Disabling all external boot options (or all external ports) significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to open the device and replace storage.
+> Disabling all external boot options or all external ports significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to physically open the device and replace the hardware storage.
 
 - **Boot from external media (USB, SD)**: Your options:
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might allow booting from external media.
@@ -195,15 +162,7 @@ These settings are added to a device configuration profile in Intune, and then a
 ## Ports
 
 > [!WARNING]
-> Disabling all external boot options (or all external ports) significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to open the device and replace storage.
-
-- **Ports**: This setting manages all the built-in ports managed by UEFI (BIOS). It doesn't manage attached peripherals.
-
-  Your options:
-
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable all built-in ports.
-  - **Enabled**: All built-in ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
-  - **Disabled**: All built-in ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
+> Disabling all external boot options or all external ports significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to physically open the device and replace the hardware storage.
 
 - **USB type A**: This setting manages the built-in USB type A ports managed by UEFI (BIOS). It doesn't manage attached peripherals.
 
@@ -213,26 +172,10 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Enabled**: All built-in USB type A ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
   - **Disabled**: All built-in USB type A ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
 
-- **USB type C**: This setting manages the built-in USB type C ports managed by UEFI (BIOS). It doesn't manage attached peripherals.
-
-  Your options:
-
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in USB type C ports.
-  - **Enabled**: All built-in USB type C ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
-  - **Disabled**: All built-in USB type C ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
-
-- **SD card**: This setting manages the built-in SD card ports managed by UEFI (BIOS). It doesn't manage attached peripherals.
-
-  Your options:
-
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in SD card ports.
-  - **Enabled**: All built-in SD card ports directly managed by UEFI (BIOS) are enabled. Peripherals, like USB devices, aren't affected.
-  - **Disabled**: All built-in SD card ports directly managed by UEFI (BIOS) are disabled. Peripherals, like USB devices, aren't affected.
-
 ## Wake settings
 
 > [!WARNING]
-> Disabling all external boot options (or all external ports) significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to open the device and replace storage.
+> Disabling all external boot options or all external ports significantly complicates OS recovery. To recover a device that can no longer boot Windows, you may have to physically open the device and replace the hardware storage.
 
 - **Wake on LAN**: Wake on LAN allows a network administrator to remotely wake a device in sleep mode using the LAN.
 

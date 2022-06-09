@@ -138,6 +138,17 @@ You can also [signal devices to check in](../remote-actions/device-sync.md). Aft
 >[!NOTE]
 > Deleting the DFCI profile, or removing a device from the group assigned to the profile doesn't remove DFCI settings or re-enable the UEFI (BIOS) menus. If you want to stop using DFCI, then update your existing DFCI profile. For more information on the steps, see [retire the device](#retire) in this article.
 
+## Conflicts
+
+When you create the DFCI policy, you configure the [Windows DFCI settings](device-firmware-configuration-interface-windows-settings.md) you want to manage.
+
+Some settings are in a logical category, like Camera. There's also granular settings, like Front Camera. If these settings conflict, then the following happens:
+
+- If the device supports the granular settings, such as Front Camera, then the granular setting is applied.
+- If the device doesn't support the granular settings, such as Front Camera, then the category setting is applied, such as Camera. 
+
+Some settings aren't available for all devices. The category settings apply to all devices. The granular settings only apply to the devices that support it. To confirm if a setting is or isn't available on your device, contact your device manufacturer.
+
 ## Reuse, retire, or recover the device
 
 ### Reuse
