@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/07/2022
+ms.date: 06/10/2022
 
 ms.topic: conceptual
 ms.service: microsoft-intune
@@ -64,6 +64,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 ## Week of June 6, 2022  
 
 ### App management  
+
+#### Photo library data transfer support via app protection policies<!-- 9450163, 14062176 -->
+You can now select to include **Photo Library** as a supported application storage service. By selecting **Photo Library** in the **Allow users to open data from selected services** setting within Intune, you can allow managed accounts to allow *incoming* and *outgoing* data to and from their device's photo library to their managed apps on iOS and Android platforms. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create Policy**. Choose either **iOS/iPadOS** or **Android**. This setting is available as part of the **Data protection** step and specifically for **Policy managed apps**. For related information, see [Data protection](../apps/app-protection-framework.md#data-protection-2).
 
 #### UI improvements show Android enrollment is available, not required<!-- 8764312 -->
 
