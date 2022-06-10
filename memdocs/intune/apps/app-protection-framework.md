@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/04/2022
+ms.date: 06/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -151,7 +151,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Device conditions  |       Jailbroken/rooted   devices  |        N/A / Block   access  |          iOS/iPadOS,   Android  |                  |
 | Device conditions  |       SafetyNet   device attestation  |          Basic   integrity and certified devices / Block access  |          Android  |          <p>This   setting configures Google's SafetyNet Attestation on end-user   devices. Basic integrity validates the integrity of the device. Rooted   devices, emulators, virtual devices, and devices with signs of tampering fail   basic integrity. </p><p> Basic  integrity and certified devices validates the compatibility of   the device with Google's services. Only unmodified devices that have been   certified by Google can pass this check.</p>  |
 | Device conditions  |       Require   threat scan on apps  |        N/A / Block   access  |          Android  |          This   setting ensures that Google's Verify Apps scan is turned on for end   user devices. If configured, the end-user will be blocked from access until   they turn on Google's app scanning on their Android device.        |
-| Device conditions  |       Require device lock  |        N/A / Block   access  |         Android  |          This   setting ensures that Android devices have a device PIN, password, or pattern are set to enable a device lock.  This condition does not distinguish between lock options or the complexity.                |
+| Device conditions  |       Require device lock  |        Low/Warn |         Android  |          This setting ensures that Android devices have a device password that meets the minimum password requirements.                |
 
 #### Level 2 enterprise enhanced data protection
 
@@ -183,6 +183,7 @@ The policy settings enforced in level 2 include all the policy settings recommen
 | Device conditions  |       Min   OS version  |          *Format: Major.Minor<br>   Example: 9.0* / Block access   |          Android        | Microsoft recommends configuring   the minimum Android major version to match the supported Android versions for   Microsoft apps. OEMs and devices adhering to Android Enterprise recommended   requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 9.0 and later for knowledge workers.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
 | Device conditions  |       Min patch   version  |          *Format:   YYYY-MM-DD <br> Example: 2020-01-01* / Block access  |          Android        | Android devices can receive monthly security patches, but the   release is dependent on OEMs and/or carriers. Organizations should ensure   that deployed Android devices do receive security updates before implementing   this setting. See [Android Security Bulletins](https://source.android.com/security/bulletin/) for the latest patch   releases.  |
 | Device conditions  |       Required SafetyNet evaluation type  |          Hardware-backed key  |          Android  |          Hardware backed attestation enhances the existing SafetyNet attestation service check by leveraging a new evaluation type called [Hardware Backed](https://developer.android.com/training/safetynet/attestation#evaluation-types), providing a more robust root detection in response to newer types of rooting tools and methods that cannot always be reliably detected by a software only solution.<p> As its name implies, hardware backed attestation leverages a hardware-based component which shipped with devices installed with Android 8.1 and later. Devices that were upgraded from an older version of Android to Android 8.1 are unlikely to have the hardware-based components necessary for hardware backed attestation. While this setting should be widely supported starting with devices that shipped with Android 8.1, Microsoft strongly recommends testing devices individually before enabling this policy setting broadly.</p>  |
+| Device conditions  |       Require device lock  |          Medium/Block Access  |          Android        | This setting ensures that Android devices have a device password that meets the minimum password requirements.  |
 
 #### Level 3 enterprise high data protection
 
@@ -204,6 +205,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Data transfer |       Approved   keyboards  |          Require  |          Android        |  |
 | Data transfer |       Select   keyboards to approve  |          *add/remove   keyboards*  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
 | Functionality |       Printing org data  |          Block  |          iOS/iPadOS, Android         |  |
+| Device conditions |       Require device lock  |          High/Block Access  |          Android        | This setting ensures that Android devices have a device password that meets the minimum password requirements.  |
 
 #### Access requirements
 
