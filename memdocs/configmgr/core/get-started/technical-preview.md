@@ -123,7 +123,7 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2205
+### Technical preview version 2206
 
 - [Default site boundary group behavior to support cloud source selection](2022/technical-preview-2206.md#bkmk_dbgmp) <!--10674394-->
 - [PowerShell release notes preview](2022/technical-preview-2206.md#bkmk_powershell) <!--14431761-->
