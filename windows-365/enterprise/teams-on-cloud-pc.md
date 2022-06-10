@@ -107,7 +107,7 @@ In some cases, Microsoft Teams doesn't automatically update on a Cloud PC.
 1. On the Cloud PC, navigate to **Settings** > **App** > **Apps and features**.
 2. Search for Microsoft Teams.
 3. Uninstall **Microsoft Teams** and **Teams Machine-Wide Installer**.
-4. Download the latest version of Microsoft Teams from [https://statics.teams.cdn.office.net/production-windows-x64/1.5.00.11865/Teams_windows_x64.msi](https://statics.teams.cdn.office.net/production-windows-x64/1.5.00.11865/Teams_windows_x64.msi).
+4. [Download the latest 64-bit version of Microsoft Teams](https://statics.teams.cdn.office.net/production-windows-x64/1.5.00.11865/Teams_windows_x64.msi).
 5. Open a command prompt and install the Teams client using the following command: `msiexec.exe /I %Filepath to the downloaded Teams MSI% ALLUSERS=1`
 6. Restart the Cloud PC. If the Teams Client doesn't automatically install after these steps, check if this registry key is set: `HKEY_CURRENT_USER\Software\Microsoft\Office\Teams\PreventInstallationFromMsi'.
 
