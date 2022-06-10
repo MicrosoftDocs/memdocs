@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Microsoft Teams is one of the core Microsoft 365 applications used with Windows 365. The [Windows 10/11 images optimized for Microsoft 365 apps](device-images.md#gallery-images) available in the Windows 365 image gallery support Teams chat, presence, calling, and meeting optimizations.
 
-Using Microsoft Teams on a Cloud PC is different from using it on a physical PC. You will need to do the following to provide the best Teams experiences from Cloud PCs:
+Using Microsoft Teams on a Cloud PC is different from using it on a physical PC. You'll need to do the following to provide the best Teams experiences from Cloud PCs:
 
 - Read the [requirements and limitations](/microsoftteams/teams-for-vdi) for using Microsoft Teams in virtualized environments.
 - [Prepare your network](/microsoftteams/prepare-network/) for Microsoft Teams.
@@ -42,7 +42,7 @@ Using Microsoft Teams on a Cloud PC is different from using it on a physical PC.
 
 ## Teams optimizations
 
-The [Windows 10/11 images](device-images.md#gallery-images) in the gallery are pre-configured with required optimization components. When you install and use Microsoft Teams in your cloud PC you get an optimized experience. These optimization components enable peer-to-peer audio and video calls from your physical endpoint to the other person's endpoint. This creates the same experience as you would have on a physical endpoint running Microsoft Teams.
+The [Windows 10/11 images](device-images.md#gallery-images) in the gallery are pre-configured with required optimization components. When you install and use Microsoft Teams in your cloud PC, you get an optimized experience. These optimization components enable peer-to-peer audio and video calls from your physical endpoint to the other person's endpoint. This creates the same experience as you would have on a physical endpoint running Microsoft Teams.
 
 Some of the key benefits of the optimizations are:
 
@@ -82,7 +82,7 @@ The following are known issues and limitations:
 - macOS
   - Audio devices can't be configured from the Teams app, and the client automatically uses the default client audio device. To switch audio devices, configure settings from the client audio preferences instead.
 
-The following calling and meeting features are not supported:
+The following calling and meeting features aren't supported:
 
 - Video calling
   - Video 3x3 gallery view
