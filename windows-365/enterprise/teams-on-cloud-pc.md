@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/23/2022
+ms.date: 06/10/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -85,7 +85,6 @@ The following are known issues and limitations:
 The following calling and meeting features are not supported:
 
 - Video calling
-  - Video background effects (blur, image)
   - Video 3x3 gallery view
   - Dynamic video call quality
 
@@ -97,12 +96,7 @@ The following calling and meeting features are not supported:
   - Live reactions (Like, Heart, Applause, Laugh and Surprised)
   - QOS setting for Teams
   - Support for http proxies
-  - Enhanced emergency services (e911)
-  - Call Me
-  - Live captions
-  - Transcription
   - Remote volume control support
-  - Multi-window (MW) functionality
 
 ## Collect Teams logs for Microsoft support
 
