@@ -83,6 +83,9 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 
       For iOS devices, Defender for Endpoint also supports the following settings:
 
+      >[!NOTE]
+      > Before you can use the following two settings, you must opt-in to an MDE Preview. To opt-in, contact `mdatpmobile@microsoft.com`.
+
       - **Enable App Sync for iOS Devices**:  Set to **On** to allow Defender for Endpoint to request metadata of iOS applications from Intune to use for threat analysis purposes. The iOS device must be MDM-enrolled and will provide updated app data during device check-in.
 
       - **Send full application inventory data on personally-owned iOS/iPadOS Devices**: This setting controls the application inventory data that Intune shares with Defender for Endpoint when Defender for Endpoint syncs app data and requests the app inventory list.
