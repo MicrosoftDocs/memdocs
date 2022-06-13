@@ -80,7 +80,7 @@ See [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirement
 
 Windows 10 or Windows 11 Enterprise multi-session VMs are treated as a separate OS edition and some Windows 10 or Windows 11 Enterprise configurations won’t be supported for this edition. Using Microsoft Intune doesn't depend on or interfere with Azure Virtual Desktop management of the same VM.
 
-## Create the device configuration profile
+## Create the configuration profile
 
 To configure configuration policies for Windows 10 or Windows 11 Enterprise multi-session VMs, you'll need to use the [Settings catalog](../configuration/settings-catalog.md) in the Microsoft Endpoint Manager admin center.
 
@@ -105,7 +105,7 @@ Microsoft Intune won't deliver unsupported templates to multi-session devices, a
     - **Key**: **OS edition**
     - **Operator**: **==**
     - **Value**: **Enterprise multi-session**
-    - Select **Apply**. The filtered list now shows all configuration profile categories that support Windows 10 or Windows 11 Enterprise multi-session. You can see the scope for the policy in parentheses (Device or User). Currently, only device settings are supported for multi-session.
+    - Select **Apply**. The filtered list now shows all configuration profile categories that support Windows 10 or Windows 11 Enterprise multi-session. The scope for a policy is shown in parantheses. For user scope it shows as (User) and all the rest are policies with device scope. 
 8. From the filtered list, pick the categories that you want.
     - For each category you pick, select the settings that you want to apply to your new configuration profile.
     - For each setting, select the value that you want for this configuration profile.
@@ -120,6 +120,7 @@ Windows 10 or Windows 11 Administrative Templates are supported for Windows 10 o
 
 - ADMX-backed policies are supported. Some policies aren't yet available in the Settings catalog.
 - ADMX-ingested policies are supported, including Office and Microsoft Edge settings available in Office administrative template files and Microsoft Edge administrative template files. For a complete list of ADMX-ingested policy categories, see [Win32 and Desktop Bridge app policy configuration](/windows/client-management/mdm/win32-and-centennial-app-policy-configuration#overview). Some ADMX ingested settings won't be applicable to Windows 10 or Windows 11 Enterprise multi-session.
+- ADMX - ingested policies are not supported for user targetting at this time.
 
 ## Compliance and Conditional access
 
@@ -173,7 +174,9 @@ All Windows 10 or Windows 11 apps can be deployed to Windows 10 or Windows 11 En
 
 ## Script deployment
 
-Scripts configured to run in the system context are supported on Windows 10 or Windows 11 Enterprise multi-session. This can be configured under Script settings by setting **Run this script using the logged on credentials** to **No**.
+Scripts configured to run in the system context and assigned to devices are supported on Windows 10 or Windows 11 Enterprise multi-session. This can be configured under Script settings by setting **Run this script using the logged on credentials** to **No**.
+
+Scripts configured to run in the user context and assigned to users are supported on Windows 11 Enterprise multi-session. This can be configured under Script settings by setting **Run this script using the logged on credentials** to **Yes**.
 
 ## Windows Update for Business
 
