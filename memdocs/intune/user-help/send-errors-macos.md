@@ -35,8 +35,7 @@ ms.collection:
 Get help or report a problem with the Company Portal app. Company Portal provides you with an email template and helps you upload and share diagnostic details. You can share diagnostic details with both your support person and Microsoft app developers.   
 
 ## Get help from support  
-For troubleshooting and support, report the problem to your support person. Reproduce the problem if you can and then follow these steps when you receive the error message:     
-
+For troubleshooting and support, report the problem to your support person. Reproduce the problem, if you can, and then complete these steps.  
 1. In the Company Portal app, go to the menu bar and select the **Help** menu > **Save Diagnostic Report**. 
 2. Choose a location to save the file. 
 3. Open your email app and attach the diagnostics file to a new email.   
@@ -45,7 +44,7 @@ For troubleshooting and support, report the problem to your support person. Repr
 
 ## Share diagnostic details 
 
-You can share the diagnostic details about an error with Microsoft. Microsoft uses the Company Portal-specific logs to learn from and improve upon future products. 
+Microsoft uses the Company Portal-specific diagnostics to learn from and improve upon future products. 
 
 First, try to reproduce the problem so that you receive the error message again. Then select **Report** to immediately upload and share the diagnostic logs. 
 
