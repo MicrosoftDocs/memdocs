@@ -73,9 +73,6 @@ These settings are added to a device configuration profile in Intune, and then a
 
 ## Cameras
 
-> [!TIP]
-> Configure the category setting (**Cameras**) **or** the granular settings (**Front cameras**). If you configure all the settings, these settings can cause a conflict. For more information, go to [DFCI profile overview: Conflicts](device-firmware-configuration-interface-windows.md#conflicts).
-
 - **Cameras**: This setting manages all the hardware cameras built into the device. They don't manage attached peripherals, such as USB webcams.
 
   Your options:
@@ -83,14 +80,6 @@ These settings are added to a device configuration profile in Intune, and then a
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in cameras.
   - **Enabled**: All built-in cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
   - **Disabled**: All built-in cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
-
-- **Front cameras**: This setting manages the built-in front visible light cameras managed by UEFI (BIOS). They don't manage attached peripherals.
-
-  Your options:
-
-  - **Not configured**: Intune doesn't change or update this setting. By default, the OS might enable the built-in front visible light cameras.
-  - **Enabled**: All built-in front visible light cameras directly managed by UEFI (BIOS) are enabled. Peripherals, like USB cameras, aren't affected.
-  - **Disabled**: All built-in front visible light cameras directly managed by UEFI (BIOS) are disabled. Peripherals, like USB cameras, aren't affected.
 
 ## Microphones and speakers
 
