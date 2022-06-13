@@ -30,16 +30,16 @@ ms.reviewer: laarrizz
 
 # Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices
 
-> [!NOTE]  
-> This article details the settings in the  Microsoft Defender Antivirus and Microsoft Defender Antivirus Exclusions profiles for the *Windows 10 and later* platform for endpoint security Antivirus policy. Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform. Although you can no longer create new instances of the original profile, you can continue to edit and use your existing profiles. The settings details in this article apply to those deprecated profiles. 
-
 View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 and later in Microsoft Intune.  
 
-These settings are available in the following profiles:
+> [!NOTE]  
+> This article details the settings you can find in Microsoft Defender Antivirus and Microsoft Defender Antivirus Exclusions profiles created before April 5, 2022, for the *Windows 10 and later* platform for endpoint security Antivirus policy. On April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+>
+> For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Endpoint Manager admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
+>
+> The following settings details for Windows profiles apply to those deprecated profiles.
 
-- Microsoft Defender Antivirus
-
-**Settings**:
+## Cloud protection
 
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
@@ -66,7 +66,7 @@ These settings are available in the following profiles:
 
 ## Microsoft Defender Antivirus Exclusions
 
-The following setting is only available in the Microsoft Defender Antivirus profile:
+The following settings are available in the Microsoft Defender Antivirus profile:
 
 - **Defender local admin merge**  
   CSP: [Configuration/DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)
