@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/15/2022
+ms.date: 06/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -192,7 +192,7 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
-- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5, do not.
+- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5 and RHEL 8.6, do not.
 
   For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).  
 
