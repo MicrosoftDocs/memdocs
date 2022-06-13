@@ -88,9 +88,8 @@ The following article lists the steps to create the profile:
 
 This profile includes the DFCI settings you configure.
 
-> [!WARNING]
-> Be careful. Configuring and assigning DFCI profiles can lock the device beyond repair. The DFCI profile settings change the device hardware, and can't be fixed by re-imaging the OS.
-
+> [!TIP]
+> Configuring and assigning DFCI profiles can lock the device beyond repair. So, pay attention to the values you configure.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
@@ -146,13 +145,13 @@ You can also [signal devices to check in](../remote-actions/device-sync.md). Aft
 
 When you create the DFCI policy, you configure the [Windows DFCI settings](device-firmware-configuration-interface-windows-settings.md) you want to manage.
 
-Some settings are in a logical category, like Camera. There's also granular settings, like Front Camera. If these settings conflict, then the following happens:
+Some settings are in a logical category, like **Microphones and Speakers**. There's also granular settings, like **Microphones**. If these settings conflict, then the following happens:
 
-- In the first sync attempt, the granular setting is applied (Front camera) and the category setting is non-compliant (Camera).
+- In the first sync attempt, the granular setting is applied (Microphones) and the category setting is non-compliant (Microphones and Speakers).
 - With every sync with the Intune service after the first sync, the following behavior happens in a loop:
 
-  - Intune applies the category setting (Camera) since it's not compliant. The granular setting (Front camera) becomes non-compliant.
-  - Intune applies the granular setting (Front Camera) since it's not compliant. The category setting (Camera) becomes non-complaint.
+  - Intune applies the category setting (Microphones and Speakers) since it's not compliant. The granular setting (Microphones) becomes non-compliant.
+  - Intune applies the granular setting (Microphones) since it's not compliant. The category setting (Microphones and Speakers) becomes non-complaint.
 
 To avoid this looping behavior, configure the category setting **or** the granular settings.
 
