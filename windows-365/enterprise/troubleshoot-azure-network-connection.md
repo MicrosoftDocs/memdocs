@@ -34,7 +34,7 @@ The Azure network connection (ANC) periodically checks your environment to make 
 
 ## Active Directory domain join
 
-When a Cloud PC is provisioned, it’s automatically joined to the provided domain. Active Directory domain join failure can occur for many reasons. If the domain join fails, make sure that:
+When a Cloud PC is provisioned, it’s automatically joined to the provided domain. To test the domain join process, a domain computer object is created in the defined Organizational Unit (OU) with a name similar to "CPC-Hth" every time Windows 365 health checks are run. These computer objects will be disabled when the health check is complete. Active Directory domain join failure can occur for many reasons. If the domain join fails, make sure that:
 
 - The domain join user has sufficient permissions to join the domain provided.  
 - The domain join user can write to the organizational unit (OU) provided.  
