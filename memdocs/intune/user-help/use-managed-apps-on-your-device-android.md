@@ -31,22 +31,17 @@ ms.collection:
 
 
 # Managed work and school apps for Android 
-Whether you're enrolled in Intune or not, you can access your work and school files securely from your Android device. This article provides an overview of Intune-managed apps and the app protection policies enforced when using your apps for work.  
+Intune-managed apps (*managed* apps for short) are work-approved apps that are configured to prevent intentional or unintentional data loss. Managed apps enable you to access your work and school files securely from your Android device, whether it's enrolled or not. This article provides an overview of managed apps and the app protection policies they enforce. 
 
-Intune-managed apps (*managed* apps for short) are work and school-approved apps that are configured to prevent intentional or unintentional data loss when used on a mobile or personal device. 
+## How do I know I'm using a managed app?
+When you sign in or try to access work data in a managed app, you'll receive an on-screen message that the app is protected by your organization. 
 
-Your organization can restrict and require the use of work apps like Microsoft Outlook, Word, and Google Play. For example, if you're signed in to an app with your work or school account, your org can restrict certain features, such as copy and paste and screen capture. Policies like these help prevent sensitive work information from being shared or leaked outside of the app. 
-
-Your organization's app protection policies are only enforced when you're using an app for work or school, like when:  
-
-* You're signed into an app with your work account.   
-* You try to access work files in OneDrive, Teams, or SharePoint.  
-* You're using apps in the work profile area on your device.  
+On a device with a work profile, a work app is marked with a briefcase badge. For more information about work profiles, see [Introduction to Android work profile](what-happens-when-you-create-a-work-profile-android.md).    
 
 
-## App protection capabilities    
+## App protection policies        
 
- An IT admin can control the following settings and features in an Android work or school app. 
+Your org can restrict features and set requirements in work apps. You may not be able to use your work apps until you meet your organization's requirements. An IT admin can control the following settings and features in an Android work or school app. 
 
 * Access to specific websites  
 
@@ -68,12 +63,13 @@ Your organization's app protection policies are only enforced when you're using 
 
 * Ability to take screenshots  
 
-* Data encryption requirements  
+* Data encryption requirements    
 
-## How do I know I'm using a managed app?
-When you sign in or try to access work data in a managed app, you'll receive an on-screen message that the app is protected by your organization. 
+Policies like these help prevent sensitive work information from being shared or leaked outside of the app. Your organization can only enforce app protection policies when you're using an app for work or school, such as when:  
 
-On a device with a work profile, a work app is marked with a briefcase badge. For more information about work profiles, see [Introduction to Android work profile](what-happens-when-you-create-a-work-profile-android.md).      
+* You're signed into an app with your work account.   
+* You try to access work files in OneDrive, Teams, or SharePoint.  
+* You're using apps in the work profile area on your device.  
 
 ## How do I install work or school apps?  
 
@@ -92,7 +88,7 @@ Only one work or school account can be associated with the managed apps on your 
 * Your IT admin assigns a policy to your second account. Company Portal will prompt you to remove the work account you're not using.   
 
 ### Available apps   
-*Available* apps aren't neccessarily required for you to install, but are appropriate apps to use for work or school. You can view all available apps in the Company Portal app. Apps are made available based on device type. For example, if you're using the Company Portal app on your Android device, you'll have access to Android apps, but not iOS apps.   
+*Available* apps aren't necessarily required for you to install, but are appropriate apps to use for work or school. You can view all available apps in the Company Portal app. Apps are made available based on device type. For example, if you're using the Company Portal app on your Android device, you'll have access to Android apps, but not iOS apps.   
 
 ### Request an app for work or school   
  If there's an app you need, but don't see in Company Portal, you can request it. You'll find contact details for your IT support person in the Company Portal app. The same contact information is available on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
