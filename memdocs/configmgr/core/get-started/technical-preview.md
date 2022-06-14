@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 06/13/2022
+ms.date: 06/15/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -95,10 +95,8 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2202**
+- **Technical preview version 2206**
 
-> [!NOTE]
-> The Evaluation Center is currently unavailable. As a workaround you can download the latest technical preview branch baseline build from [aka.ms/MECM2202TP-Baseline](https://aka.ms/MECM2202TP-Baseline).<!-- 14437681 -->
 
 ## <a name="BKMK_TPFeedback"></a> Providing feedback
 
