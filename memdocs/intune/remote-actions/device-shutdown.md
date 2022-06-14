@@ -38,7 +38,7 @@ With the **Shut down** device action you can remotely power off devices. When yo
  - macOS 10.13 and later
 
 > [!NOTE]
-> This command requires a supervised device and the device shuts down immediately. iOS/iPadOS devices that are Passcode-locked will not rejoin a Wi-Fi network after restarting. After restarting, the device might not be able to communicate with the server.
+> This command requires a supervised iOS/iPadOS device and the device shuts down immediately.  Supervision is not required for macOS devices. iOS/iPadOS devices that are Passcode-locked will not rejoin a Wi-Fi network after restarting. After restarting, the device might not be able to communicate with the server.
 
 ## Shut down an iOS/iPadOS device
 
