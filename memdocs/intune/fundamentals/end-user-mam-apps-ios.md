@@ -76,6 +76,5 @@ The following example scenario describes how multiple user accounts are treated:
 
 User A works for two companies—**Company X** and **Company Y**. User A has a work account for each company, and both use Intune to deploy app protection policies. **Company X** deploys app protection policies **before** **Company Y**. The account that's associated with **Company X** gets the app protection policy first. If you want the user account that's associated with Company Y to be managed by the app protection policies, you must remove the user account that's associated with Company X and add the user account that's associated with Company Y.  
 
-## Next steps
-
-[What to expect when your Android app is managed by app protection policies](end-user-mam-apps-android.md)
+## Next steps  
+Android device users, whether enrolled in Intune or not, can access their work or school apps securely from their mobile devices. For more information about installing or accessing managed apps on an Android device, see [Managed work and school apps for Android](../user-help/use-managed-apps-on-your-device-android.md).  

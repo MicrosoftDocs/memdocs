@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/fundamentals/end-user-mam-apps-android.md",
+            "redirect_url": "/mem/intune/user-help/use-managed-apps-on-your-device-android",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/configuration/vpn-settings-windows-phone-8-1.md",
             "redirect_url": "https://support.microsoft.com/windows/windows-phone-8-1-end-of-support-faq-7f1ef0aa-0aaf-0747-3724-5c44456778a3",
             "redirect_document_id": false

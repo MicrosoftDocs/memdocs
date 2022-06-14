@@ -30,8 +30,10 @@ ms.collection:
 ---
 
 
-# Work or school apps for Android  
-Intune-managed apps (*managed* apps for short) are work and school-approved apps that are configured to prevent intentional or unintentional data loss on a mobile device. This article describes how to access your work or school data in an Intune-protected app.    
+# Managed work and school apps for Android 
+Whether you're enrolled in Intune or not, you can access your work and school files securely from your Android device. This article provides an overview of Intune-managed apps and the app protection policies enforced when using your apps for work.  
+
+Intune-managed apps (*managed* apps for short) are work and school-approved apps that are configured to prevent intentional or unintentional data loss when used on a mobile or personal device. 
 
 Your organization can restrict and require the use of work apps like Microsoft Outlook, Word, and Google Play. For example, if you're signed in to an app with your work or school account, your org can restrict certain features, such as copy and paste and screen capture. Policies like these help prevent sensitive work information from being shared or leaked outside of the app. 
 
@@ -69,7 +71,9 @@ Your organization's app protection policies are only enforced when you're using 
 * Data encryption requirements  
 
 ## How do I know I'm using a managed app?
-When you sign in or try to access work data in a managed app, you'll receive an on-screen message that the app is protected by your organization. On a device with a work profile, a work app is marked with a briefcase badge.    
+When you sign in or try to access work data in a managed app, you'll receive an on-screen message that the app is protected by your organization. 
+
+On a device with a work profile, a work app is marked with a briefcase badge. For more information about work profiles, see [Introduction to Android work profile](what-happens-when-you-create-a-work-profile-android.md).      
 
 ## How do I install work or school apps?  
 

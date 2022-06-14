@@ -36,7 +36,7 @@ This article describes the app protection policy settings for Android devices. T
 There are three categories of policy settings: data protection settings, access requirements, and conditional launch. In this article, the term *policy-managed apps* refers to apps that are configured with app protection policies.
 
 > [!IMPORTANT]
-> The Intune Company Portal is required on the device to receive App Protection Policies for Android devices. For more information, see the [Intune Company Portal access apps requirements](../fundamentals/end-user-mam-apps-android.md).
+> The Intune Company Portal is required on the device to receive App Protection Policies for Android devices. 
 >
 > The Intune Managed Browser has been retired. Use [Microsoft Edge](../apps/manage-microsoft-edge.md) for your protected Intune browser experience. 
 
