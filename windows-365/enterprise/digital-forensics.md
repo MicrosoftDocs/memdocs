@@ -28,7 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Digital forensics and Windows 365 Enterprise Cloud PCs
+# Digital forensics and Windows 365 Enterprise Cloud PCs (preview)
 
 Just like physical devices, Windows 365 Enterprise Cloud PCs can be deployed, secured, and managed using [Microsoft Endpoint Manager](/mem/endpoint-manager-overview). As part of PC ownership, you may be asked to submit Cloud PCs to internal or third parties to perform digital forensics. Digital forensics is the science that addresses the recovery and investigation of digital data to support criminal investigations or civil proceedings.
 
