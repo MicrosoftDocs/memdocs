@@ -56,7 +56,7 @@ User configuration support in Microsoft Intune for Windows 11 multi-session VMs 
  - Configure PowerShell scripts to install in the user context and assign to users.
 
 > [!NOTE]
-> User support for Windows 10 multi-session builds will be available later this year.
+> User configuration support for Windows 10 multi-session builds will be available later this year.
 
 ## Prerequisites
 
