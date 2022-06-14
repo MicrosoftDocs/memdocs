@@ -2,13 +2,14 @@
 title: Technical preview 2206
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2206.
-ms.date: 06/10/2022
+ms.date: 06/13/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: paasin
+ms.author: paasin
+manager: apoorvseth
+ms.reviewer: mstewart,aczechowski
 ms.localizationpriority: medium
 ---
 
@@ -24,10 +25,8 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2206/1234567.md)] -->
 
-[!INCLUDE [10674394](includes/2206/10674394.md)]
-[!INCLUDE [14059872](includes/2206/14059872.md)]
-[!INCLUDE [14235392](includes/2206/14235392.md)]
-[!INCLUDE [14431761](includes/2206/14431761.md)]
+[!INCLUDE [Default site boundary group behavior to support cloud source selection](includes/2206/10674394.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2206/14431761.md)]
 
 
 <!-- ## General known issues  -->
