@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/03/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -41,7 +41,9 @@ Personal and organization-owned devices can be enrolled in Intune. Once enrolled
 
 This article provides recommendations on the Android enrollment methods. It also includes an overview of the administrator and user tasks for each enrollment type.
 
-For more specific information, see [Enroll Android devices](../enrollment/android-enroll.md).
+For more specific information, see [Enroll Android devices](../enrollment/android-enroll.md). There's also a visual guide of the different enrollment options for each platform:
+
+[![A visual representation of Intune enrollment options by platform](./media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
 > [!TIP]
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
@@ -71,7 +73,7 @@ These devices are personal or BYOD (bring your own device) Android devices that 
 
 ### Android Enterprise personally owned devices with a work profile administrator tasks
 
-This task list provides an overview. For more specific information, see [Set up enrollment of Android Enterprise personally-owned work profile devices](../enrollment/android-work-profile-enroll.md).
+This task list provides an overview. For more specific information, see [Set up enrollment of Android Enterprise personally owned work profile devices](../enrollment/android-work-profile-enroll.md).
 
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - In the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), connect your Intune organization account to your Managed Google Play account. When you connect, Intune automatically adds the Company Portal app and other common Android Enterprise apps to the devices. For the specific steps, see [Connect your Intune account to your Managed Google Play account](../enrollment/connect-intune-android-enterprise.md).

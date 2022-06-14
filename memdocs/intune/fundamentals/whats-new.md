@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/07/2022
+ms.date: 06/10/2022
 
 ms.topic: conceptual
 ms.service: microsoft-intune
@@ -64,6 +64,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 ## Week of June 6, 2022  
 
 ### App management  
+
+#### Photo library data transfer support via app protection policies<!-- 9450163, 14062176 -->
+You can now select to include **Photo Library** as a supported application storage service. By selecting **Photo Library** from the **Allow users to open data from selected services** or the **Allow users to save data to selected services** setting within Intune, you can allow managed accounts to allow *incoming* and *outgoing* data to and from their device's photo library to their managed apps on iOS and Android platforms. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create Policy**. Choose either **iOS/iPadOS** or **Android**. This setting is available as part of the **Data protection** step and specifically for **Policy managed apps**. For related information, see [Data protection](../apps/app-protection-framework.md#data-protection-2).
 
 #### UI improvements show Android enrollment is available, not required<!-- 8764312 -->
 
@@ -262,13 +265,15 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 There's a new **Software updates** page for tenant attached devices. This page displays the status for software updates on a device. You can review which updates are successfully installed, failed, and are assigned but not yet installed. Using the timestamp for the update status assists with troubleshooting. For more information, see [Tenant attach: Software updates in the admin center](../../configmgr/tenant-attach/software-updates.md).
 
 #### Microsoft Defender for Endpoint support for App Sync on iOS/iPadOS<!-- 9768396 -->
-When you use Microsoft Defender for Endpoint (MDE) as your Mobile Threat Defense application, you can [configure MDE to request Application Inventory data](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune) from Intune from iOS/iPadOS devices. The following two settings are now available:
+*Before you can use this capability you must opt-in to an MDE Preview. To opt-in, contact `mdatpmobile@microsoft.com`.* 
+
+When you use Microsoft Defender for Endpoint (MDE) as your Mobile Threat Defense application, as part of a preview from MDE, you can [configure MDE to request Application Inventory data](../protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune) from Intune from iOS/iPadOS devices. The following two settings are now available:
 
 - **Enable App Sync for iOS Devices**:  Set to **On** to allow MDE to request metadata of iOS applications from Intune to use for threat analysis purposes. The iOS device must be MDM-enrolled and will provide updated app data during device check-in.
 
-- **Send full application inventory data on personally-owned iOS/iPadOS Devices**: This setting controls the application inventory data that Intune shares with MDE when MDE syncs app data and requests the app inventory list.
+- **Send full application inventory data on personally owned iOS/iPadOS Devices**: This setting controls the application inventory data that Intune shares with MDE when MDE syncs app data and requests the app inventory list.
 
-  When set to **On**, MDE can request a list of applications from Intune for personally-owned iOS/iPadOS devices. This includes unmanaged apps as well as apps that were deployed through Intune.
+  When set to **On**, MDE can request a list of applications from Intune for personally owned iOS/iPadOS devices. This includes unmanaged apps as well as apps that were deployed through Intune.
 
   When set to **Off**, data about unmanaged apps isn’t provided. Intune does share data for the apps that were deployed through Intune.
 
@@ -1006,11 +1011,11 @@ With this support, you’ll find the Intune [connector for Zimperium](../protect
 The GCC High environment is a more regulated environment, and only connectors for those MTD partners that are supported for the GCC High environment are available in it. For more information about support in GCC High tenants, [Microsoft Intune for US Government GCC High and DoD service description](/enterprise-mobility-security/solutions/ems-intune-govt-service-description).
 
 #### Manage the app inventory data for iOS/iPadOS devices that Intune sends to third-party MTD partners<!-- 10722315 -->
-You can now configure the type of application inventory data for personally-owned iOS/iPadOS devices that Intune sends to your chosen third-party Mobile Threat Defense (MTD) partner.
+You can now configure the type of application inventory data for personally owned iOS/iPadOS devices that Intune sends to your chosen third-party Mobile Threat Defense (MTD) partner.
  
 To control the app inventory data, configure the following setting as part of the *MDM Compliance Policy Settings* on the [Mobile Threat Defense connector](../protect/mtd-connector-enable.md#to-enable-the-mobile-threat-defense-connector) for your partner:
  
-- **Send full application inventory data on personally-owned iOS/iPadOS Devices**
+- **Send full application inventory data on personally owned iOS/iPadOS Devices**
  
   Options for this setting include:
   - **On** - If your MTD partner syncs app data and requests a list of the iOS/iPadOS applications from Intune, that list includes unmanage apps (those not deployed through Intune) in addition to those deployed through Intune. This is the current behavior.
@@ -1572,7 +1577,7 @@ Now whenever Microsoft makes changes to the mappings in Intune, the **MDM Suppor
 ### App management
 
 #### Update Android Company Portal and Intune apps for custom notifications<!-- 12473860 -->
-We have made service side updates to custom notifications for Intune's November (2111) service release, which require users to have updated to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) for the best user experience. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app. For related information, see [Send custom notifications in Intune](../remote-actions/custom-notifications.md#receive-a-custom-notification).
+We have made service side updates to custom notifications for Intune's November (2111) service release, which requires users to have updated to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) for the best user experience. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app. For related information, see [Send custom notifications in Intune](../remote-actions/custom-notifications.md#receive-a-custom-notification).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 
@@ -1637,7 +1642,7 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
-#### Connected app support for Android personally-owned and corporate-owned work profiles<!-- 9206112 -->
+#### Connected app support for Android personally owned and corporate-owned work profiles<!-- 9206112 -->
 You can now allow users to turn on Connected apps experiences for supported apps. This app configuration setting enables users to connect the app information across the work and personal app instances. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Apps** > **App configuration policies** > **Add** > **Managed devices**. For more information, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -1712,7 +1717,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 ### Device management
 
 #### Removal of Wi-Fi MAC address on specific Android Enterprise devices<!-- 11004658 -->
-Intune will no longer display a Wi-Fi MAC address for newly enrolled personally-owned work profile devices and devices managed with device administrator running Android 9 and above. Google is requiring all app updates to target [API 30 by November 2021](https://developer.android.com/distribute/play-policies#APILevel30). With this change, Android prevents apps from collecting the MAC address used by the device. For related information, see [Hardware device details](../remote-actions/device-inventory.md#hardware-device-details).
+Intune will no longer display a Wi-Fi MAC address for newly enrolled personally owned work profile devices and devices managed with device administrator running Android 9 and above. Google is requiring all app updates to target [API 30 by November 2021](https://developer.android.com/distribute/play-policies#APILevel30). With this change, Android prevents apps from collecting the MAC address used by the device. For related information, see [Hardware device details](../remote-actions/device-inventory.md#hardware-device-details).
 
 <!-- ########################## -->
 #### Use Feature Updates to upgrade devices to Windows 11<!-- 10053623  -->
@@ -1803,7 +1808,7 @@ Intune enrollment and the Company Portal now support [macOS 10.15 and later](../
 
 You can now choose the following Android enrollment types when filtering by **OS** in the **All devices** list in Intune:
 
-- Android (personally-owned work profile)
+- Android (personally owned work profile)
 - Android (corporate-owned work profile)
 - Android (fully managed)
 - Android (dedicated)
@@ -1944,7 +1949,7 @@ You can now enable Outlook S/MIME settings to always sign and/or always encrypt 
 
 #### Scope tags for Managed Google Play apps<!-- 6114508  -->
 
-Scope tags determine which objects an admin with specific rights can view in Intune. Most newly-created items in Intune take on the scope tags of the creator. This is not the case for Managed Google Play Store apps. You can now optionally assign a scope tag to apply to all newly-synced Managed Google Play apps on the **Managed Google Play connector** pane. The chosen scope tag will only apply to new Managed Google Play apps, not Managed Google Play apps that have already been approved in the tenant. For related information see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md) and [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+Scope tags determine which objects an admin with specific rights can view in Intune. Most newly created items in Intune take on the scope tags of the creator. This is not the case for Managed Google Play Store apps. You can now optionally assign a scope tag to apply to all newly-synced Managed Google Play apps on the **Managed Google Play connector** pane. The chosen scope tag will only apply to new Managed Google Play apps, not Managed Google Play apps that have already been approved in the tenant. For related information see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md) and [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 #### Content of macOS LOB apps will be displayed in Intune<!-- 6991005  -->
 
@@ -2025,9 +2030,9 @@ Applies to:
 
 - iOS/iPadOS
 
-#### Add certificate server names to enterprise Wi-Fi profiles on Android Enterprise personally-owned devices with a work profile<!-- 10285509 -->
+#### Add certificate server names to enterprise Wi-Fi profiles on Android Enterprise personally owned devices with a work profile<!-- 10285509 -->
 
-On Android devices, you can use certificate-based authentication for Wi-Fi networks on personal devices with a work profile (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Personally-owned work profile** > **Wi-Fi**).
+On Android devices, you can use certificate-based authentication for Wi-Fi networks on personal devices with a work profile (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Personally owned work profile** > **Wi-Fi**).
 
 When you use the **Enterprise** Wi-Fi type, and select the **EAP type**, there's a new **Certificate server names** setting. Use this setting to add a list of the certificate server domain names used by your certificate. For example, enter `srv.contoso.com`.
 
@@ -2097,9 +2102,9 @@ The status for this internal network access check is reported as *Internal netwo
 
 Your servers will need to upgrade to the latest version of the Tunnel Gateway server software for this feature to work.
 
-#### Compliance setting for SafetyNet hardware-backed key attestation for Android Enterprise personally-owned work profile<!--8903071  -->
+#### Compliance setting for SafetyNet hardware-backed key attestation for Android Enterprise personally owned work profile<!--8903071  -->
 
-We’ve added a new device compliance setting for Android Enterprise personally-owned work profile devices, [Required SafetyNet evaluation type](../protect/compliance-policy-create-android-for-work.md#google-play-protect---for-personally-owned-work-profile). This new setting becomes available after you configure *SafetyNet device attestation* to either *Check basic integrity* or *Check basic integrity & certified devices*. The new setting:
+We’ve added a new device compliance setting for Android Enterprise personally owned work profile devices, [Required SafetyNet evaluation type](../protect/compliance-policy-create-android-for-work.md#google-play-protect---for-personally owned-work-profile). This new setting becomes available after you configure *SafetyNet device attestation* to either *Check basic integrity* or *Check basic integrity & certified devices*. The new setting:
 
 **Required SafetyNet evaluation type**:
 
@@ -2576,7 +2581,7 @@ We have a pair of updates to announce for the Microsoft Tunnel Gateway this mont
   - Android Enterprise Fully Managed
   - Android Enterprise Corporate-Owned Work Profile
 
-  However, for an Android Enterprise Personally-Owned Work profile, use *only* the VPN profile with custom settings. Personally-Owned Work Profile devices that receive a separate app configuration profile for Microsoft Defender for Endpoint in addition to a Microsoft Tunnel VPN profile may be unable to connect to the Microsoft Tunnel.
+  However, for an Android Enterprise Personally Owned Work profile, use *only* the VPN profile with custom settings. Personally Owned Work Profile devices that receive a separate app configuration profile for Microsoft Defender for Endpoint in addition to a Microsoft Tunnel VPN profile may be unable to connect to the Microsoft Tunnel.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -2783,7 +2788,7 @@ We’ve streamlined the conditional access flow on Surface Duo devices. These ch
 On a Duo device:
 
 - When access to a resource is blocked by conditional access, users are now redirected to the Company Portal app that was preinstalled on the device. Previously, they were sent to the Google Play store listing of the Company Portal app.
-- For devices that are enrolled as a personally-owned work profile, when a user tries to sign in to a personal version of an app using their work credentials they are now sent to the work version of the Company Portal where guidance messaging is shown. Previously, the user was sent to the Google Play store listing of the personal version of the Company Portal app, where they would have had to reenable the personal Company Portal to see the guidance messaging.
+- For devices that are enrolled as a personally owned work profile, when a user tries to sign in to a personal version of an app using their work credentials they are now sent to the work version of the Company Portal where guidance messaging is shown. Previously, the user was sent to the Google Play store listing of the personal version of the Company Portal app, where they would have had to reenable the personal Company Portal to see the guidance messaging.
 
 #### Configure options that apply to Tunnel Gateway server upgrades<!-- 8664465   -->
 
@@ -2951,7 +2956,7 @@ This public preview applies to:
 - Android Enterprise
   - Fully managed
   - Corporate-owned work profile
-  - Personally-owned work profile
+  - Personally owned work profile
 
 For this preview, you must opt in to gain access to the preview version of Microsoft Defender for Endpoint, and then migrate supported devices from the standalone Tunnel client app to the preview app. For details, see [Migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md).
 
@@ -3097,7 +3102,7 @@ To see these options, go to [Microsoft Endpoint Manager admin center](https://go
 You can now use the User attribute **CN={{UserPrincipalName}}** variable in the subject or SAN of a [PKCS certificate profile](../protect/certificates-pfx-configure.md#create-a-trusted-certificate-profile) or [SCEP certificate profile](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) for Android devices. This support requires the device have a user, such as devices enrolled as:
 
 - Android Enterprise fully managed
-- Android Enterprise personally-owned work profile
+- Android Enterprise personally owned work profile
 
 User attributes are not supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won’t be able to get the user principal name when there is no user on the device.
 
@@ -3277,12 +3282,12 @@ Applies to:
 When you create a VPN profile, NetMotion Mobility is available as a VPN connection type for Android Enterprise:
 
 - **Devices** > **Device configuration** > **Create profile** > **Android Enterprise** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **VPN** for profile > **NetMotion Mobility**  for connection type
-- **Devices** > **Device configuration** > **Create profile** > **Android Enterprise** > **Personally-Owned Work Profile** > **VPN** for profile > **NetMotion Mobility** for connection type
+- **Devices** > **Device configuration** > **Create profile** > **Android Enterprise** > **Personally Owned Work Profile** > **VPN** for profile > **NetMotion Mobility** for connection type
 
 For more information on VPN profiles in Intune, see [Create VPN profiles to connect to VPN servers](../configuration/vpn-settings-configure.md).
 
 Applies to:
-- Android Enterprise Personally-Owned Work Profile
+- Android Enterprise Personally Owned Work Profile
 - Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
 #### Settings catalog and Templates when creating device configuration profiles for macOS and Windows client devices<!-- 8673623 8254609  -->
@@ -3491,9 +3496,9 @@ For related information, see [Microsoft Intune Data Warehouse API](../developer/
 
 We've updated the app icon for the Company Portal for iOS, macOS, and web. This icon is also used by the Company Portal for Windows. End users will see the new icon in their device's application launcher and home screen, in Apple's App Store, and in experiences within the Company Portal apps.
 
-#### Android Enterprise system app support in personally-owned work profiles<!-- 5291507 -->
+#### Android Enterprise system app support in personally owned work profiles<!-- 5291507 -->
 
-You can now deploy Android Enterprise system apps to Android Enterprise personally-owned work profile devices. System apps are apps that do not appear in the Managed Google Play Store and often come pre-installed on the device. Once a system app is deployed, you will be unable to uninstall, hide, or otherwise remove the system app. For related information about system apps, see [Add Android Enterprise system apps to Microsoft Intune](../apps/apps-ae-system.md).
+You can now deploy Android Enterprise system apps to Android Enterprise personally owned work profile devices. System apps are apps that do not appear in the Managed Google Play Store and often come pre-installed on the device. Once a system app is deployed, you will be unable to uninstall, hide, or otherwise remove the system app. For related information about system apps, see [Add Android Enterprise system apps to Microsoft Intune](../apps/apps-ae-system.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -3543,7 +3548,7 @@ For more information about certificate connectors, including a list of connector
 
 #### Browser access enabled automatically during Android work profile enrollment<!-- 5411101  -->
 
-During new Android Enterprise personally-owned work profile enrollments, browser access is now automatically enabled on the device. With this change, compliant devices can use the browser to access resources that are protected by conditional access without needing to take additional actions. Before this change, users had to launch the Company Portal and select **Settings** > **Enable Browser Access**, and then click **Enable**.
+During new Android Enterprise personally owned work profile enrollments, browser access is now automatically enabled on the device. With this change, compliant devices can use the browser to access resources that are protected by conditional access without needing to take additional actions. Before this change, users had to launch the Company Portal and select **Settings** > **Enable Browser Access**, and then click **Enable**.
 
 This change has no impact on devices that are already enrolled.
 

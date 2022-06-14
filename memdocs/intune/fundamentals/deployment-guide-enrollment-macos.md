@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/24/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -44,7 +44,9 @@ This article:
 - Provides recommendations on the macOS enrollment method to use.
 - Includes an overview of the administrator and user tasks for each enrollment type.
 
-For more specific information, see [Enroll macOS devices](../enrollment/macos-enroll.md).
+For more specific information, see [Enroll macOS devices](../enrollment/macos-enroll.md). There's also a visual guide of the different enrollment options for each platform:
+
+[![A visual representation of Intune enrollment options by platform](./media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
 > [!TIP]
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
@@ -162,7 +164,7 @@ This task list provides an overview. For more specific information, see [Automat
 
 ### ADE end user tasks
 
-These tasks depend on how administrators tell users to install the Company Portal app. Typically, the less end users must do to enroll, the higher chance they'll want to enroll.
+These tasks depend on how administrators tell users to install the Company Portal app. Typically, the fewer steps end users must do to enroll, the higher chance they'll want to enroll.
 
 For more specific information on the end user steps, see [Enroll your macOS device using the Company Portal app](../user-help/enroll-your-device-in-intune-macos-cp.md).
 
