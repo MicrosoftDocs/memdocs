@@ -2,7 +2,7 @@
 title: Technical preview 2206
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2206.
-ms.date: 06/13/2022
+ms.date: 06/15/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the technical preview for Configuration Manager, version 2206. Install this version to update and add new features to your technical preview site.<!-- baseline only statement: When you install a new technical preview site, this release is also available as a baseline version. --> 
+This article introduces the features that are available in the technical preview for Configuration Manager, version 2206. Install this version to update and add new features to your technical preview site.<!-- baseline only statement: --> When you install a new technical preview site, this release is also available as a baseline version.
 
 Review the [technical preview](../technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
 
