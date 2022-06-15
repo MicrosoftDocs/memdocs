@@ -84,11 +84,11 @@ Microsoft Intune offers a device-only subscription service that helps organizati
 You can purchase device licenses based on your estimated usage. Microsoft Intune device licenses are applicable when a device is enrolled through any of the following methods:
 
 - [Windows Autopilot Self-Deploying mode](/windows/deployment/windows-autopilot/self-deploying)
-- [Apple Device Enrollment Program without user affinity](/mem/intune/enrollment/device-enrollment-program-enroll-ios)
-- [Apple School Manager without user affinity](/mem/intune/enrollment/apple-school-manager-set-up-ios)
-- [Apple Configurator without user affinity](/mem/intune/enrollment/apple-configurator-enroll-ios)
-- [Android Enterprise dedicated](/mem/intune/enrollment/android-kiosk-enroll)
-- [Using a device enrollment manager account](/mem/intune/enrollment/device-enrollment-manager-enroll)
+- [Apple Device Enrollment Program without user affinity](../enrollment/device-enrollment-program-enroll-ios.md)
+- [Apple School Manager without user affinity](../enrollment/apple-school-manager-set-up-ios.md)
+- [Apple Configurator without user affinity](../enrollment/apple-configurator-enroll-ios.md)
+- [Android Enterprise dedicated](../enrollment/android-kiosk-enroll.md)
+- [Using a device enrollment manager account](../enrollment/device-enrollment-manager-enroll.md)
 
 > [!NOTE]
 > Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page, or contact your account representative if you have any questions or you would like to receive the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.
@@ -97,8 +97,8 @@ You can purchase device licenses based on your estimated usage. Microsoft Intune
 
 When a device is enrolled by using a device license, the following Intune functions aren't supported:
 
-- [Intune app protection policies](/mem/intune/apps/app-protection-policy)
-- [Conditional access](/mem/intune/protect/conditional-access)
+- [Intune app protection policies](../apps/app-protection-policy.md)
+- [Conditional access](../protect/conditional-access.md)
 - User-based management features, such as email and calendaring
 
 ## Confirm your licenses
