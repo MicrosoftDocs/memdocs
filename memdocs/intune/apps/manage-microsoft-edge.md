@@ -51,10 +51,10 @@ The richest and broadest protection capabilities for Microsoft 365 data are avai
 ## Apply Conditional Access
 Organizations can use Azure AD Conditional Access policies to ensure that users can only access work or school content using Edge for iOS and Android. To do this, you will need a conditional access policy that targets all potential users. These policies are described in [Conditional Access: Require approved client apps or app protection policy](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection).
 
-1. Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Edge for iOS and Android, but blocks other mobile device web browsers from connecting to Microsoft 365 endpoints.
+Follow the steps in [Require approved client apps or app protection policy with mobile devices](/azure/active-directory/conditional-access/howto-policy-approved-app-or-app-protection#require-approved-client-apps-or-app-protection-policy-with-mobile-devices), which allows Edge for iOS and Android, but blocks other mobile device web browsers from connecting to Microsoft 365 endpoints.
 
-   >[!NOTE]
-   > This policy ensures mobile users can access all Microsoft 365 endpoints from within Edge for iOS and Android. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
+>[!NOTE]
+> This policy ensures mobile users can access all Microsoft 365 endpoints from within Edge for iOS and Android. This policy also prevents users from using InPrivate to access Microsoft 365 endpoints.
 
 With Conditional Access, you can also target on-premises sites that you have exposed to external users via the [Azure AD Application Proxy](/azure/active-directory/active-directory-application-proxy-get-started).
 
