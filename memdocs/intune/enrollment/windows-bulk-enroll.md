@@ -110,6 +110,10 @@ Provisioning is intended to be used on new Windows devices. Provisioning failure
 
 You can check for success/failure of the settings in your package in the **Provisioning-Diagnostics-Provider** Admin log in Event Viewer.
 
+> [!NOTE]
+> Bulk enrollment is considered a userless enrollment method, and because of it, only the "Default" enrollment restriction in Intune would apply during enrollment. Make sure Windows platform is allowed in the default restriction, otherwise, the enrollment will fail.
+> To check the capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](enrollment-method-capab.md).  
+
 ### Bulk enrollment with Wi-Fi 
 
 When not using an open network, you must use [device-level certificates](../protect/certificates-configure.md) to initiate connections. Bulk enrolled devices are unable to use to user-targeted certificates for network access. 
