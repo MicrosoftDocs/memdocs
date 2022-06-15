@@ -57,7 +57,7 @@ Apps that support multi-identity let you use different work and personal account
 Users might experience the PIN prompt differently across all of their apps, depending on how you configure the policies.  For example, you might configure your policies so that:       
 * Microsoft Outlook prompts the user for a PIN when they launch the app. 
 * OneDrive prompts the user for a pin when they sign in to their work account.  
-* Microsoft Word, PowerPoint, and Excel prompts the user for a pin when they access documents that are stored in the company OneDrive for Business location.  
+* Microsoft Word, PowerPoint, and Excel prompt the user for a pin when they access documents that are stored in the company OneDrive for Business location.  
 
 - Learn more about the apps that support [app protection and multi-identity](https://www.microsoft.com/cloud-platform/microsoft-intune-apps) with Intune.  
 
