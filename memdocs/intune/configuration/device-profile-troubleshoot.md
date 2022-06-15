@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/07/2022
+ms.date: 06/15/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -80,6 +80,8 @@ When two or more policies are assigned to the same user or device, then the sett
 
 - If a configuration policy setting conflicts with a setting in another configuration policy, this conflict is shown in Intune. Manually resolve these conflicts.
 
+In the Endpoint Manager admin center, there are few places you can create configuration policies, including Group Policy analytics, Endpoint Security, Security Baselines, and more. If there's a conflict and you have multiple policies, then check all the places you've configured policies. Also, the built in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
+
 ## What happens when app protection policies conflict with each other? Which one is applied to the app?
 
 Conflict values are the most restrictive settings available in an app protection policy. The exception is numeric entry fields, such as PIN attempts before reset. Numeric entry fields are set the same as the values, as if you created a MAM policy using the recommended settings option.
@@ -93,6 +95,8 @@ A policy is deployed to the app and takes effect. A second policy is deployed. I
 Intune doesn't evaluate the payload of Apple Configuration files or a custom Open Mobile Alliance Uniform Resource Identifier (OMA-URI) policy. It merely serves as the delivery mechanism.
 
 When you assign a custom policy, confirm that the configured settings don't conflict with compliance, configuration, or other custom policies. If a custom policy and its settings conflict, then the settings are applied randomly.
+
+The built in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
 
 ## What happens when a profile is deleted or no longer applicable?
 
