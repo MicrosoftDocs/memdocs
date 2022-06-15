@@ -175,7 +175,7 @@ This setting allows you to configure a homepage shortcut for Edge for iOS and An
 
 #### Multiple top site shortcuts
 
-Similarly to configuring a homepage shortcut, you can configure multiple top site shortcuts on New Tab Pages in Edge for iOS and Android. The user can't edit or delete these shortcuts in a managed context. Note: you can configure a total of 8 shortcuts, including a homepage shortcut. If you have configured a homepage shortcut, that will override the first top site configured. 
+Similarly to configuring a homepage shortcut, you can configure multiple top site shortcuts on New Tab Pages in Edge for iOS and Android. The user can't edit or delete these shortcuts in a managed context. Note: you can configure a total of 8 shortcuts, including a homepage shortcut. If you have configured a homepage shortcut, that shortcut will override the first top site configured. 
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
@@ -313,7 +313,7 @@ Organizations have the capability to disable Edge sync on iOS and Android.
 
 Organizations can define which sites users can access within the work or school account context in Edge for iOS and Android. If you use an allow list, your users are only able to access the sites explicitly listed. If you use a blocked list, users can access all sites except for those explicitly blocked. You should only impose either an allowed or a blocked list, not both. If you impose both, only the allowed list is honored.
 
-Organization also define what happens when a user attempts to navigate to a restricted web site. By default, transitions are allowed. If the organization allows it, restricted web sites can be opened in the personal account context, the Azure AD account’s InPrivate context, or whether the site is blocked entirely. For more information on the various scenarios that are supported, see [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). By allowing transitioning experiences, the organization's users stay protected, while keeping corporate resources safe.
+Organizations also define what happens when a user attempts to navigate to a restricted web site. By default, transitions are allowed. If the organization allows it, restricted web sites can be opened in the personal account context, the Azure AD account’s InPrivate context, or whether the site is blocked entirely. For more information on the various scenarios that are supported, see [Restricted website transitions in Microsoft Edge mobile](https://techcommunity.microsoft.com/t5/intune-customer-success/restricted-website-transitions-in-microsoft-edge-mobile/ba-p/1381333). By allowing transitioning experiences, the organization's users stay protected, while keeping corporate resources safe.
 
 > [!NOTE]
 > Edge for iOS and Android can block access to sites only when they are accessed directly. It doesn't block access when users use intermediate services (such as a translation service) to access the site.
@@ -474,7 +474,7 @@ For a list of the settings stored in the app logs, see [Review client app protec
 To see how to view logs on Android devices, see [Send logs to your IT admin by email](../user-help/send-logs-to-your-it-admin-by-email-android.md).
 
 ## Switch network stack between Chromium and iOS 
-The layers of the network architecture is called the network stack. The layers of a network stack are broadly divided into sections, such as Network Interface, Network Driver Interface Specification (NDIS), Protocol Stack, System Drivers, and User-Mode Applications.
+The layers of the network architecture are called the network stack. The layers of a network stack are broadly divided into sections, such as Network Interface, Network Driver Interface Specification (NDIS), Protocol Stack, System Drivers, and User-Mode Applications.
 
 By default, Edge for both iOS and Android use the Chromium network stack for internal network communication, including VPN. Edge for iOS also provides the iOS network stack for network communication. 
 
