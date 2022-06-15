@@ -46,7 +46,7 @@ After the installation, the optimizations to redirect audio and video to your lo
 
 ## Conditional access
 
-Make sure that you apply conditional access policies to the dedicated Windows 365 cloud app. You can apply these policies in the conditional access UI of Microsoft EndpointM Manager admin center or Azure Active Directory. The Windows 365 cloud app includes the Azure Virtual Desktop cloud app.
+Make sure that you apply conditional access policies to the both dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Endpoint Manager admin center or Azure Active Directory.
 
 Any conditional access policy that you apply will affect:
 
@@ -94,7 +94,7 @@ For suggested remediations on, see [Troubleshoot provisioning errors](provisioni
 
 ## Troubleshooting by end users
 
-The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#end-user-actions)
+The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#user-actions)
 
 ## Video playback improvements
 

@@ -57,11 +57,8 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!--## App management-->
 
 <!--***********************************************-->
-## Device management
-
-### Support for RDP Shortpath for public networks<!--39316531-->
-
-In a future update, Windows 365 Enterprise Cloud PCs will support RDP Shortpath for public networks. For more information about RDP Shortpath, see [Azure Virtual Desktop RDP Shortpath for public networks](/azure/virtual-desktop/shortpath-public).
+<!--## Device management
+-->
 
 <!-- ***********************************************-->
 ## Device provisioning
@@ -95,10 +92,6 @@ The device history report will have new information to help you evaluate Cloud P
 
 - Top 5 processes impacting CPU spike times
 - Top 5 processes impacting RAM spike times
-
-### Forensic auditing of Cloud PCs<!--38726407-->
-
-You’ll be able to place a Cloud PC under review. This action initiates a process to create a secure snapshot of a Cloud PC. You’ll be able to analyze the snapshot using electronic discovery solutions.
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->

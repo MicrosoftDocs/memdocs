@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 04/29/2022
+ms.date: 05/23/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -96,7 +96,8 @@ Install a baseline version for up to one year after its release. When you instal
 
 - **Technical preview version 2202**
 
-Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+> [!NOTE]
+> The Evaluation Center is currently unavailable. As a workaround you can download the latest technical preview branch baseline build from [aka.ms/MECM2202TP-Baseline](https://aka.ms/MECM2202TP-Baseline).<!-- 14437681 -->
 
 ## <a name="BKMK_TPFeedback"></a> Providing feedback
 
@@ -117,14 +118,17 @@ Enable this section if needed to include any broad change to the tech preview br
 This is the full list of new features in the latest TP release
 
 bullet format:
-<!-- - [title](2021/technical-preview-2101.md) <!--ID-->
+<!-- - [title](2021/technical-preview-2101.md) <!-- ID -->
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2204
+### Technical preview version 2205
 
-- [Administration Service Management option](2022/technical-preview-2204.md#bkmk_administration) <!--12952905-->
-- [Folders for automatic deployment rules (ADRs)](2022/technical-preview-2204.md#bkmk_folder) <!--13507410-->
+- [Offset for reoccurring monthly maintenance window schedules](2022/technical-preview-2205.md#bkmk_offset) <!--3601127-->
+- [Improvements to cloud management gateway (CMG) workflow](2022/technical-preview-2205.md#bkmk_cmg) <!--13351390-->
+- [Script execution timeout for compliance settings](2022/technical-preview-2205.md#bkmk_timeout) <!--14120481-->
+- [Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016](2022/technical-preview-2205.md#bkmk_downlevel) <!--9265511-->
+- [PowerShell release notes preview](2022/technical-preview-2205.md#bkmk_powershell) <!--14046376-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -143,6 +147,11 @@ The following features were released with previous versions of the Configuration
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 <!-- ### Technical preview version 2111 -->
+
+### Technical preview version 2204
+
+- [Administration Service Management option](2022/technical-preview-2204.md#bkmk_administration) <!--12952905-->
+- [Folders for automatic deployment rules (ADRs)](2022/technical-preview-2204.md#bkmk_folder) <!--13507410-->
 
 ### Technical preview version 2203
 

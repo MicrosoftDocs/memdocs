@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/29/2022
+ms.date: 05/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,7 +52,7 @@ The following device platforms support Microsoft Defender for Endpoint as the tu
 
   On April 29, 2022, Microsoft Defender for Endpoint became available as the Microsoft Tunnel client app for iOS/iPadOS devices for use with the Microsoft Tunnel Gateway in Microsoft Intune.
 
-  If you've previously configured Microsoft Tunnel for iOS/iPadOS using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the Tunnel client app. Support for the iOS standalone Tunnel client app ends by the end of June.
+  If you've previously configured Microsoft Tunnel for iOS/iPadOS using the standalone Microsoft Tunnel client app, you must migrate your devices to use Microsoft Defender for Endpoint as the Tunnel client app. Support for the iOS standalone Tunnel client app ends on July 29, 2022.
 
   To configure the Microsoft Defender for Endpoint app to connect to Tunnel, you'll need to create a new VPN profile with the *Microsoft Tunnel (preview)* connection type.
 

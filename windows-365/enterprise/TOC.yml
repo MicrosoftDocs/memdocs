@@ -139,6 +139,8 @@ items:
         href: device-management-overview.md
       - name: Remotely manage Cloud PC devices 
         href: remotely-manage-cloud-pc.md
+      - name: RDP Shortpath for public networks 
+        href: rdp-shortpath-public-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
@@ -155,6 +157,12 @@ items:
           href: restore-bulk.md
       - name: End grace period
         href: end-grace-period.md
+      - name: Digital forensics
+        items:
+        - name: Overview
+          href: digital-forensics.md
+        - name: Place a Cloud PC under review
+          href: place-cloud-pc-under-review.md
     - name: Reports
       items:
       - name: Resource performance report

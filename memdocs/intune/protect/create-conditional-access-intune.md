@@ -37,7 +37,7 @@ You can use the Microsoft Endpoint Manager admin center to configure your device
 To Create a device-based Conditional Access policy your account must have one of the following permissions in Azure AD:
 
 - Global administrator
-- Intune Service administrator
+- Security administrator
 - Conditional Access administrator
 
 To take advantage of device compliance status, configure Conditional Access policies to **Require device to be marked as compliant**. This option is set while configuring *Grant* access during step 6 of the following procedure.

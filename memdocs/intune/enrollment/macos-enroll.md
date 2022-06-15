@@ -69,7 +69,7 @@ Intune supports the following enrollment methods for company-owned macOS devices
 ## Bootstrap tokens (preview)    
 
 > [!IMPORTANT]
-> This feature is in [public preview](../fundamentals/public-preview.md). It is not available in GCC High and government cloud tenants.  
+> This feature is in [public preview](../fundamentals/public-preview.md).   
 
 Intune supports the use of bootstrap tokens on enrolled Macs running macOS 10.15 or later. Bootstrap tokens grant volume ownership status to local user and guest accounts, so that non-admin users can approve important operations that an admin would otherwise need to do.  Operations such as: 
 

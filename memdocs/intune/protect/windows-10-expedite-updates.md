@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/18/2022
+ms.date: 06/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -73,15 +73,15 @@ The following are requirements to qualify for installing expedited quality updat
 
 In addition to a license for Intune, your organization must have one of the following subscriptions:
 
-- Enterprise Mobility + Security E3  (included in Microsoft 365 F3, E3, or A3)
-- Enterprise Mobility + Security E5  (included in Microsoft 365 E5 or A5)
+- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows 10/11 Virtual Desktop Access (VDA) per user
 - Microsoft 365 Business Premium
 
 **Supported Windows 10/11 versions**:
 
 - Windows 10/11 versions that remain in support for Servicing, on x86 or x64 architecture
-- 
+
 Only update builds that are generally available are supported. Preview builds, including the Beta and Dev channels, are not supported with expedited updates.
 
 **Supported Windows 10/11 editions**:
@@ -317,4 +317,5 @@ This report can help you find devices with alerts or errors and can help you tro
 
 - Configure [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)
 - Configure [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
+- Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
 - View [Windows release information](/windows/release-information/)

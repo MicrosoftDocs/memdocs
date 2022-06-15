@@ -8,7 +8,7 @@ keywords:
 author: erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/14/2022
+ms.date: 06/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -397,6 +397,41 @@ To see a generated report of device state, you can use the following steps:
 3. Click **Generate report** (or **Generate again**) to retrieve current data.
 
 For related information, see [What is co-management?](../../configmgr/comanage/overview.md)
+
+## Managed Apps report (Organizational)
+
+The **Managed Apps** report provides a report of apps on a specific device that are currently installed, not installed, or available for install. For the device, the report provide the following columns:
+- Application
+- Version
+- Resolved intent
+- Installation status
+ 
+The **Resolved intent** column lists the needed installation result or availability of the app, such as **Required install**, **Required uninstall**, or **Available**. The **Installation status** column provides the last known state of the app on the device, such as **Installed**, **Not installed**, and **Available for install**.
+
+You can switch between displaying managed app details for the primary user and other users on a device, or display app details for the device without any user. The generated app details will be displayed using the primary user of the device when the report is initially loaded, or displayed with no primary user if none exists.
+
+When you click on an app in the report, you can view the **Installation details** pane, along with the ability to collect diagnostics when applicable (such as for Win32 apps). Installation details include the history of installation related actions for the app. For instance, details may include whether the app was successfully assigned, whether the [Intune Management Extension](../apps/intune-management-extension.md) was successfully installed (if required by the app), when the device check-in was last completed, when the app was created, or whether the app installation was successful. When an app fails to install, you can see additional details by selecting **Show details** in the **Installation details** pane.
+
+To see a the report for a device, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **All devices** > *select a device* > **Managed Apps**.
+3. To see the managed apps for a specific user, select a user from the dropdown box near the top of the report.
+
+## Device group membership report (Organizational)
+
+The **Group membership** report provides the group membership of all AAD groups for a specific managed device. The report provide the following columns:
+- Name
+- Object Id
+- Membership Type
+- Direct or Transitive
+
+When you click on a group, you can see the AAD pane for the group. You can identify whether the device's membership is assigned or dynamic and whether the device is a direct member or a transitive member. This report supports all device platforms and management types. This report provides filtering, searching, paging, and sorting capabilities. Also, you can drill down to help troubleshoot.
+
+To see the report for a device, you can use the following steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Monitor** > *select a device* > **Group Membership**.
 
 ## Device compliance trend report (Historical)
 
