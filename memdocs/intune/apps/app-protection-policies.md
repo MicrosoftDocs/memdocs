@@ -127,7 +127,7 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > It can take time for app protection policies to apply to existing devices. End users will see a notification on the device when the app protection policy is applied. Apply your app protection policies to devices before applying condidtional access rules.
 
 End users can download the apps from the App store or Google Play. For more information, see:
-* [Managed work and school apps for Android ](../user-help/use-managed-apps-on-your-device-android.md)
+* [Managed work and school apps for Android](../user-help/use-managed-apps-on-your-device-android.md)
 * [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
 
 ## Change existing policies
