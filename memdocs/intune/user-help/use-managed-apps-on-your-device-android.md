@@ -31,23 +31,23 @@ ms.collection:
 
 
 # Managed work and school apps for Android 
-Intune-managed apps (*managed* apps for short) are work-approved apps that are configured to prevent intentional or unintentional data loss. Managed apps enable you to access your work and school files securely from your Android device, whether it's enrolled or not. This article provides an overview of managed apps and the app protection policies they enforce. 
+Intune-managed apps (*managed* apps for short) are work-approved apps managed by your organization, and configured to prevent intentional or unintentional data loss. When signed into a managed app with your work or school account, you may encounter your organization's requirements and restrictions for access. This article provides an overview of Intune-managed apps, how to get the ones you need for work or school, and their restrictions and requirements.   
 
 ## How do I know I'm using a managed app?
-When you sign in or try to access work data in a managed app, you'll receive an on-screen message that the app is protected by your organization. 
+When you sign in or try to access work data in a managed app, you'll receive a message that the app is protected by your organization. 
 
-On a device with a work profile, a work app is marked with a briefcase badge. For more information about work profiles, see [Introduction to Android work profile](what-happens-when-you-create-a-work-profile-android.md).    
+On a device with a work profile, a work app is marked with a briefcase badge. For more information about Android work profiles, see [Introduction to Android work profile](what-happens-when-you-create-a-work-profile-android.md).    
 
 
-## App protection policies        
+## App and data protection policies        
 
-Your org can restrict features and set requirements in work apps. You may not be able to use your work apps until you meet your organization's requirements. An IT admin can control the following settings and features in an Android work or school app. 
+Managed apps enforce your organization's app and data protection policies, which may restrict or require: 
 
 * Access to specific websites  
 
 * Access to internal company websites using Microsoft Edge and the Azure Active Directory proxy  
 
-* Minimum version of app, version of OS
+* Minimum app and OS version  
 
 * Ability to share and transfer data between apps  
 
@@ -55,7 +55,7 @@ Your org can restrict features and set requirements in work apps. You may not be
 
 * Copy and paste functionality  
 
-* PIN access requirements  
+* PIN access   
 
 * How you sign in, using workplace credentials  
 
@@ -65,7 +65,7 @@ Your org can restrict features and set requirements in work apps. You may not be
 
 * Data encryption requirements    
 
-Policies like these help prevent sensitive work information from being shared or leaked outside of the app. Your organization can only enforce app protection policies when you're using an app for work or school, such as when:  
+These policies prevent sensitive work information from being shared or leaked outside of your org. Restrictions and requirements are only enforced when using an app for work or school, such as when:  
 
 * You're signed into an app with your work account.   
 * You try to access work files in OneDrive, Teams, or SharePoint.  
