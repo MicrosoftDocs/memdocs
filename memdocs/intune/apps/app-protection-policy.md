@@ -88,7 +88,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 Intune app protection policies platform support aligns with Office mobile application platform support for Android and iOS/iPadOS devices. For details, see the **Mobile apps** section of [Office System Requirements](https://products.office.com/office-system-requirements#coreui-contentrichblock-9r05pwg).
 
 > [!IMPORTANT]
-> The Intune Company Portal is required on the device to receive App Protection Policies on Android. For more information, see the [Intune Company Portal access apps requirements](../fundamentals/end-user-mam-apps-android.md#access-apps).
+> The Intune Company Portal is required on the device to receive App Protection Policies on Android.  
 
 ## App protection policy data protection framework
 
