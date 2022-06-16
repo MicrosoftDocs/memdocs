@@ -95,7 +95,7 @@ SSO requires your device to be registered by either the Microsoft Authenticator 
 > [!NOTE]
 > Device registration is a simple check-in with the Azure AD service. It doesn't require full device enrollment, and doesn't give IT any additional privileges on the device.
 
-## Utilize app configuration to manage the browsing experience
+## Use app configuration to manage the browsing experience
 
 Edge for iOS and Android supports app settings that allow unified endpoint management, like Microsoft Endpoint Manager, administrators to customize the behavior of the app.
 
@@ -158,44 +158,50 @@ To upload your organization's logo and color, first complete the following steps
 2. To set your brand's logo, next to **Show in header**, choose "Organization logo only". Transparent background logos are recommended.
 3. To set your brand's background color, select a **Theme color**. Edge for iOS and Android applies a lighter shade of the color on the New Tab Page, which ensures the page has high readability.
 
-Next, utilize the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
+Next, use the following key/value pairs to pull your organization's branding into Edge for iOS and Android:
 
-|    Key    |    Value    |
-|--------------------------------------------------------------------|------------|
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo    |    **true** shows organization's brand logo<br>**false** (default) will not expose a logo    |
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor    |    **true** shows organization's brand color<br>**false** (default) will not expose a color    |
+|Key |Value |
+|:---------|:------------|
+|com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandLogo |**true** shows organization's brand logo
+**false** (default) will not expose a logo    |
+|com.microsoft.intune.mam.managedbrowser.NewTabPage.BrandColor |**true** shows organization's brand color
+**false** (default) will not expose a color    |
 
 #### Homepage shortcut
 
 This setting allows you to configure a homepage shortcut for Edge for iOS and Android in the New Tab Page. The homepage shortcut you configure appears as the first icon beneath the search bar when the user opens a new tab in Edge for iOS and Android. The user can't edit or delete this shortcut in their managed context. The homepage shortcut displays your organization's name to distinguish it.
 
-|    Key    |    Value    |
-|-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.homepage   |    Specify a valid URL. Incorrect URLs are blocked as a security measure.<br>For example: `https://www.bing.com`     |
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.homepage |Specify a valid URL. Incorrect URLs are blocked as a security measure. 
+For example: `https://www.bing.com` |
 
 #### Multiple top site shortcuts
 
 Similarly to configuring a homepage shortcut, you can configure multiple top site shortcuts on New Tab Pages in Edge for iOS and Android. The user can't edit or delete these shortcuts in a managed context. Note: you can configure a total of 8 shortcuts, including a homepage shortcut. If you have configured a homepage shortcut, that shortcut will override the first top site configured. 
 
-|    Key    |    Value    |
-|-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.managedTopSites   |    Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character.<br>For example: `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`    |
+|Key |Value |
+|:------------------------|:------------|
+|com.microsoft.intune.mam.managedbrowser.managedTopSites |Specify set of value URLs. Each top site shortcut consists of a title and URL. Separate the title and URL with the `|` character.
+For example: `GitHub|https://github.com/||LinkedIn|https://www.linkedin.com`|
 
 #### Industry news
 
 You can configure the New Tab Page experience within Edge for iOS and Android to display industry news that is relevant to your organization. When you enable this feature, Edge for iOS and Android uses your organization's domain name to aggregate news from the web about your organization, organization's industry, and competitors, so your users can find relevant external news all from the centralized new tab pages within Edge for iOS and Android. Industry News is off by default. 
 
-|    Key    |    Value    |
-|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews    |    **true** shows Industry News on the New Tab Page<br>**false** (default) hides Industry News from the New Tab Page    |
+|Key |Value |
+|:--------------|:--------------------|
+|com.microsoft.intune.mam.managedbrowser.NewTabPage.IndustryNews |**true** shows Industry News on the New Tab Page
+**false** (default) hides Industry News from the New Tab Page |
 
 #### Homepage instead of New Tab Page experience
 
 Edge for iOS and Android allows organizations to disable the New Tab Page experience and instead have a web site launch when the user opens a new tab. While this is a supported scenario, Microsoft recommends organizations take advantage of the New Tab Page experience to provide dynamic content that is relevant to the user.
 
-|    Key    |    Value    |
-|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL    |    Specify a valid URL. If no URL is specified, the app utilizes the New Tab Page experience. Incorrect URLs are blocked as a security measure.<br>For example: `https://www.bing.com`    |
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.NewTabPage.CustomURL |Specify a valid URL. If no URL is specified, the app uses the New Tab Page experience. Incorrect URLs are blocked as a security measure.
+For example: `https://www.bing.com`|
 
 ### Bookmark experiences
 
@@ -212,17 +218,21 @@ For ease of access, you can configure bookmarks that you'd like your users to ha
 - Ensure that you prefix all URLs with **http://** or **https://** when entering them into the list.
 - Bookmarks are created in a folder named after the organization's name which is defined in Azure Active Directory.
 
-|    Key    |    Value    |
-|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.bookmarks    |    The value for this configuration is a   list of bookmarks. Each bookmark consists of the bookmark title and the   bookmark URL. Separate the title and URL with the `|` character.<br> For example: `Microsoft Bing|https://www.bing.com`<p>To configure multiple bookmarks, separate each pair with the double character `||`.<br>For example:<br>`Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`    |
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.bookmarks |The value for this configuration is a list of bookmarks. Each bookmark consists of the bookmark title and the   bookmark URL. Separate the title and URL with the `|` character.
+For example: `Microsoft Bing|https://www.bing.com`
+To configure multiple bookmarks, separate each pair with the double character `||`.
+For example: `Microsoft Bing|https://www.bing.com||Contoso|https://www.contoso.com`|
 
 #### My Apps bookmark
 
 By default, users have the My Apps bookmark configured within the organization folder inside Edge for iOS and Android.
 
-|    Key    |    Value    |
-|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.MyApps    |    **true** (default) shows My Apps within the Edge for iOS and Android bookmarks<br>**false** hides My Apps within Edge for iOS and Android    |
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.MyApps |**true** (default) shows My Apps within the Edge for iOS and Android bookmarks
+**false** hides My Apps within Edge for iOS and Android|
 
 ### App behavior experiences
 
@@ -232,42 +242,51 @@ Edge for iOS and Android offers organizations several options for managing the a
 
 The Azure AD Password single sign-on (SSO) functionality offered by Azure Active Directory brings user access management to web applications that don't support identity federation. By default, Edge for iOS and Android does not perform SSO with the Azure AD credentials. For more information, see [Add password-based single sign-on to an application](/azure/active-directory/manage-apps/configure-password-single-sign-on-non-gallery-applications).
 
-|    Key    |    Value    |
-|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|      com.microsoft.intune.mam.managedbrowser.PasswordSSO     |     **true** Azure AD Password SSO is enabled<br>**false** (default) Azure AD Password SSO is disabled     |
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.PasswordSSO |**true** Azure AD Password SSO is enabled
+**false** (default) Azure AD Password SSO is disabled|
 
 #### Default protocol handler
 
 By default, Edge for iOS and Android uses the HTTPS protocol handler when the user doesn't specify the protocol in the URL. Generally, this is considered a best practice, but can be disabled.
 
-|    Key    |    Value    |
-|---------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.defaultHTTPS     |     **true** (default) default protocol handler is HTTPS<br>**false** default protocol handler is HTTP     |
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.defaultHTTPS|**true** (default) default protocol handler is HTTPS
+**false** default protocol handler is HTTP|
 
 #### Disable data sharing for personalization
 
 By default, Edge for iOS and Android prompts users for usage data collection and sharing browsing history to personalize their browsing experience. Organizations can disable this data sharing by preventing this prompt from being shown to end users.
 
-|    Key    |    Value    |
-|----------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|    com.microsoft.intune.mam.managedbrowser.disableShareUsageData    |     **true** disables this prompt from displaying to end users<br>**false** (default) users are prompted to share usage data    |
-|     com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory    |     **true** disables this prompt from displaying to end users<br>**false** (default) users are prompted to share browsing history     |
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.disableShareUsageData |**true** disables this prompt from displaying to end users
+**false** (default) users are prompted to share usage data |
+|com.microsoft.intune.mam.managedbrowser.disableShareBrowsingHistory|**true** disables this prompt from displaying to end users
+**false** (default) users are prompted to share browsing history |
 
 #### Disable specific features
 
 Edge for iOS and Android allows organizations to disable certain features that are enabled by default. To disable these features, configure the following setting:
 
-|    Key    |    Value    |
-|-----------------------|-----------------------|
-|    com.microsoft.intune.mam.managedbrowser.disabledFeatures    |    **password** disables prompts that offer to save passwords for the end user<br>**inprivate** disables InPrivate browsing<br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information.<p>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage.     |
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user
+**inprivate** disables InPrivate browsing
+**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information.<p>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage.     |
 
 #### Disable extensions
 
 You can disable the extension framework, like Coupons, within Edge for iOS and Android to prevent users from installing or using any pre-configured app extensions. To do this, configure the following setting:
 
-|    Key    |    Value    |
-|-----------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.disableExtensionFramework    |    **true** disables the extension framework<br>**false** (default) enables the extension framework    |
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.disableExtensionFramework |**true** disables the extension framework
+**false** (default) enables the extension framework |
 
 > [!NOTE]
 > Edge for iOS does not support disabling extensions.
@@ -276,11 +295,14 @@ You can disable the extension framework, like Coupons, within Edge for iOS and A
 
 Edge for Android can be enabled as a kiosk app with the following settings:
 
-|    Key    |    Value    |
-|-----------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.enableKioskMode    |    **true** enables kiosk mode for Edge for Android<br>**false** (default) disables kiosk mode    |
-|    com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode    |    **true** shows the address bar in kiosk mode<br> **false** (default) hides the address bar when kiosk mode is enabled    |
-|    com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode    |    **true** shows the bottom action bar in kiosk mode<br> **false** (default) hides the bottom bar when kiosk mode is enabled    |
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.enableKioskMode |**true** enables kiosk mode for Edge for Android
+**false** (default) disables kiosk mode |
+|com.microsoft.intune.mam.managedbrowser.showAddressBarInKioskMode |**true** shows the address bar in kiosk mode
+**false** (default) hides the address bar when kiosk mode is enabled|
+|com.microsoft.intune.mam.managedbrowser.showBottomBarInKioskMode |**true** shows the bottom action bar in kiosk mode
+**false** (default) hides the bottom bar when kiosk mode is enabled    |
 
 ## Data protection app configuration scenarios
 
@@ -305,9 +327,10 @@ Sync functionality is enabled via user consent and users can turn sync on or off
 
 Organizations have the capability to disable Edge sync on iOS and Android. 
 
-|Key  |Value  |
-|---------|---------|
-|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** disables Edge sync<br>**false** (default) allows Edge sync          |
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.account.syncDisabled     |**true** disables Edge sync
+**false** (default) allows Edge sync |
 
 ### Manage restricted web sites
 
@@ -320,13 +343,22 @@ Organizations also define what happens when a user attempts to navigate to a res
 
 Use the following key/value pairs to configure either an allowed or blocked site list for Edge for iOS and Android. 
 
-|Key  |Value  |
-|---------|---------|
-|com.microsoft.intune.mam.managedbrowser.AllowListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2|URL3`<br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`         |
-|com.microsoft.intune.mam.managedbrowser.BlockListURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character.<br>**Examples:**<br>`URL1|URL2|URL3`<br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com`         |
-|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock     |**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts are not disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context.<p>**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked.         |
-|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked     |**true** allows restricted sites to be opened in the Azure AD account's InPrivate context. If the Azure AD account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account.<p> **false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked.<p>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true.          |
-|com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar     | Enter the number of seconds that users will see the snack bar notification "Access to this site is blocked by your organization. We’ve opened it in InPrivate mode for you to access the site." By default, the snack bar notification is shown for 7 seconds.
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.AllowListURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.
+**Examples:**
+`URL1|URL2|URL3`
+`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
+|com.microsoft.intune.mam.managedbrowser.BlockListURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character.
+ **Examples:**
+`URL1|URL2|URL3`
+`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
+|com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock |**true** (default) allows Edge for iOS and Android to transition restricted sites. When personal accounts are not disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context.
+**false** prevents Edge for iOS and Android from transitioning users. Users are simply shown a message stating that the site they are trying to access is blocked. |
+|com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked |**true** allows restricted sites to be opened in the Azure AD account's InPrivate context. If the Azure AD account is the only account configured in Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account.
+**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. 
+In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
+|com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar | Enter the number of seconds that users will see the snack bar notification "Access to this site is blocked by your organization. We’ve opened it in InPrivate mode for you to access the site." By default, the snack bar notification is shown for 7 seconds.|
 
 The following sites are always allowed regardless of the defined allow list or block list settings:
 - `https://*.microsoft.com/*`
@@ -349,17 +381,29 @@ You can use various URL formats to build your allowed/blocked sites lists. These
   - Port 443 for https
 - Using wildcards for the port number is **not** supported. For example, `http://www.contoso.com:*` and `http://www.contoso.com:*/` are not supported. 
 
-    |    URL    |    Details    |    Matches    |    Does not match    |
-    |-------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------|
-    |    `http://www.contoso.com`    |    Matches a single page    |    `www.contoso.com`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`contoso.com/`    |
-    |    `http://contoso.com`    |    Matches a single page    |    `contoso.com/`    |    `host.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com`    |
-    |    `http://www.contoso.com/*`   |    Matches all URLs that begin with `www.contoso.com`    |    `www.contoso.com`<br>`www.contoso.com/images`<br>`www.contoso.com/videos/tvshows`    |    `host.contoso.com`<br>`host.contoso.com/images`    |
-    |    `http://*.contoso.com/*`    |    Matches all subdomains under `contoso.com`    |    `developer.contoso.com/resources`<br>`news.contoso.com/images`<br>`news.contoso.com/videos`    |    `contoso.host.com`<br>`news-contoso.com`
-    |    `http://*contoso.com/*`    |    Matches all subdomains ending with `contoso.com/`    |    `news-contoso.com`<br>`news-contoso.com.com/daily`    |    `news-contoso.host.com`<br>`news.contoso.com`    |
-    `http://www.contoso.com/images`    |    Matches a single folder    |    `www.contoso.com/images`    |    `www.contoso.com/images/dogs`    |
-    |    `http://www.contoso.com:80`    |    Matches a single page, by using a port   number    |    `www.contoso.com:80`    |         |
-    |    `https://www.contoso.com`    |    Matches a single, secure page    |    `www.contoso.com`    |    `www.contoso.com`    |
-    |    `http://www.contoso.com/images/*`    |    Matches a single folder and all subfolders    |    `www.contoso.com/images/dogs`<br>`www.contoso.com/images/cats`    |    `www.contoso.com/videos`    |
+  |URL |Details |Matches |Does not match |
+  |:----|:-------|:----------|:----------------|
+  |`http://www.contoso.com` |Matches a single page |`www.contoso.com` |`host.contoso.com`
+  `www.contoso.com/images`
+  `contoso.com/` |
+  |`http://contoso.com`|Matches a single page |`contoso.com/`|`host.contoso.com`
+  `www.contoso.com/images`
+  `www.contoso.com` |
+  |`http://www.contoso.com/*`|Matches all URLs that begin with `www.contoso.com`|`www.contoso.com`
+  `www.contoso.com/images`
+  `www.contoso.com/videos/tvshows` |`host.contoso.com`
+  `host.contoso.com/images`|
+  |`http://*.contoso.com/*`|Matches all subdomains under `contoso.com`|`developer.contoso.com/resources`
+  `news.contoso.com/images`
+  `news.contoso.com/videos` |`contoso.host.com`
+  `news-contoso.com`
+  |`http://*contoso.com/*` |Matches all subdomains ending with `contoso.com/`|`news-contoso.com`
+  `news-contoso.com.com/daily` |`news-contoso.host.com`
+  `news.contoso.com`|`http://www.contoso.com/images`|Matches a single folder |`www.contoso.com/images`|`www.contoso.com/images/dogs`|
+  |`http://www.contoso.com:80`|Matches a single page, by using a port number |`www.contoso.com:80`| |
+  |`https://www.contoso.com`|Matches a single, secure page|`www.contoso.com`|`www.contoso.com`|
+  |`http://www.contoso.com/images/*`    |    Matches a single folder and all subfolders |`www.contoso.com/images/dogs`
+  `www.contoso.com/images/cats` | `www.contoso.com/videos`|
   
 - The following are examples of some of the inputs that you can't specify:
   - `*.com`
@@ -393,9 +437,10 @@ Before you start:
 
 Target Edge for iOS with the following key/value pair, to enable Application Proxy:
 
-|    Key    |    Value    |
-|-------------------------------------------------------------------|-------------|
-|    com.microsoft.intune.mam.managedbrowser.AppProxyRedirection    |    **true** enables Azure AD App Proxy redirection scenarios<br>**false** (default) prevents Azure AD App Proxy scenarios    |
+|Key |Value|
+|:-------------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.AppProxyRedirection |**true** enables Azure AD App Proxy redirection scenarios
+  **false** (default) prevents Azure AD App Proxy scenarios    |
 
 > [!NOTE]
 > Edge for Android does not consume this key. Instead, Edge for Android consumes Azure AD Application Proxy configuration automatically as long as the signed-in Azure AD account has an App Protection Policy applied.
@@ -408,10 +453,12 @@ Organizations may require users to authenticate with NTLM to access intranet web
 
 Organizations can enable NTLM credential caching for particular web sites. For these sites, after the user enters credentials and successfully authenticates, the credentials are cached by default for 30 days.
 
-
 |Key  |Value  |
-|---------|---------|
-|com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs     |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**<br>`URL1|URL2`<br>`http://app.contoso.com/|https://expenses.contoso.com`<p>For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list).         |
+|:---------|:---------|
+|com.microsoft.intune.mam.managedbrowser.NTLMSSOURLs |The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character.<p>**Examples:**
+`URL1|URL2`
+`http://app.contoso.com/|https://expenses.contoso.com`
+ For more information on the types of URL formats that are supported, see [URL formats for allowed and blocked site list](#url-formats-for-allowed-and-blocked-site-list).         |
 |com.microsoft.intune.mam.managedbrowser.durationOfNTLMSSO     |Number of hours to cache credentials, default is 720 hours         |
 
 ## Deploy app configuration scenarios with Microsoft Endpoint Manager
@@ -466,7 +513,9 @@ The newly created configuration policy is displayed on the **App configuration**
 Users with Edge for iOS and Android installed on their iOS or Android device can view the management status of all Microsoft published apps. They can send logs for troubleshooting their managed iOS or Android apps by using the following steps:
 
 1. Open Edge for iOS and Android on your device.
+
 2. Type `about:intunehelp` in the address box.
+
 3. Edge for iOS and Android launches troubleshooting mode.
 
 For a list of the settings stored in the app logs, see [Review client app protection logs](app-protection-policy-settings-log.md).
@@ -481,8 +530,9 @@ By default, Edge for both iOS and Android use the Chromium network stack for int
 Organizations can modify their network stack preference by configuring the following setting.
 
 |Key  |Value  |
-|---------|---------|
-|com.microsoft.intune.mam.managedbrowser.NetworkStackPref     |**0** (default) use the Chromium network stack<br>**1** use the iOS network stack | 
+|:---------|:---------|
+|com.microsoft.intune.mam.managedbrowser.NetworkStackPref |**0** (default) use the Chromium network stack
+ **1** use the iOS network stack | 
 
 > [!NOTE]
 > Chromium network stack is recommended. Use iOS network stack when you run into network issues, such as VPN in particular.
