@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2022
+ms.date: 06/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -34,7 +34,7 @@ At a high level, you’ll need the following to use the Microsoft Tunnel:
 - An Azure subscription.
 - An Intune subscription.
 - A Linux server that runs containers. This server can be on-premises or in the cloud:
-  - Podman for Red Hat Enterprise Linux (RHEL) 8.4 and 8.5  (See the [Linux server](#linux-server) requirements.)
+  - Podman for Red Hat Enterprise Linux (RHEL) 8.4, 8.5, and 8.6  (See the [Linux server](#linux-server) requirements.)
   - Docker for all other Linux distributions
 - A Transport Layer Security (TLS) certificate for the Linux server to secure connections from devices to the Tunnel Gateway server.
 - Devices that run Android or iOS/iPadOS.
@@ -60,6 +60,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
   | Red Hat (RHEL) 8.4    | Podman 3.0               |                    |
   | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
+  | Red Hat (RHEL) 8.6    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
   | Ubuntu 18.04           | Docker CE               |                    |
   | Ubuntu 20.04           | Docker CE               |                    |
 
@@ -90,7 +91,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
     > [!NOTE]
     > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7.4. The version installed on RHEL 7.4 by default is too old to support Microsoft Tunnel Gateway.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
-  - [Install Podman on Red Hat Enterprise Linux 8.4 and 8.5 (scroll down to RHEL8)](https://podman.io/getting-started/installation)  
+  - [Install Podman on Red Hat Enterprise Linux 8.4, 8.5, or 8.6 (scroll down to RHEL8)](https://podman.io/getting-started/installation)  
     These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and that usually install together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
 with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
 
@@ -376,7 +377,7 @@ Before you start a server install, we recommend you download and run the most re
 
 - Confirms that your network configuration allows Microsoft Tunnel to access the required Microsoft endpoints.
 
-- Checks for the presence of the ip_tables module on the Linux server. This check was added to the script on February 11 2022, when support for RHEL 8.5 was added. RHEL 8.5 doesn’t load the ip_tables module by default. If they're missing after the Linux server installs, you must [manually load the ip_tables module](#manually-load-ip_tables).
+- Checks for the presence of the ip_tables module on the Linux server. This check was added to the script on February 11 2022, when support for RHEL 8.5 was added. RHEL 8.5 and 8.6 don't load the ip_tables module by default. If they're missing after the Linux server installs, you must [manually load the ip_tables module](#manually-load-ip_tables).
 
 > [!IMPORTANT]
 > The readiness tool doesn't validate inbound ports, which is a common misconfiguration. After the readiness tool runs, review the [firewall prerequisites](#firewall) and manually validate your firewalls pass inbound traffic.
