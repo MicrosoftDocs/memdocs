@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/10/2022
+ms.date: 06/17/2022
 
 ms.topic: conceptual
 ms.service: microsoft-intune
@@ -60,6 +60,18 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of June 13, 2022
+
+### Device security
+
+#### Microsoft Tunnel support for Red Hat Enterprise Linux 8.6<!-- 14642908  -->
+
+You can now use Red Hat Enterprise Linux (RHEL) 8.6 with [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md). There are no additional requirements beyond those that are needed for RHEL 8.5 support.
+ 
+Like RHEL 8.5, you can use the [readiness tool](../protect/microsoft-tunnel-prerequisites.md#run-the-readiness-tool) (mst-readiness) to check for the presence of the ip_tables module in the Linux kernel. By default, RHEL 8.6 doesn’t load the ip_tables module.
+
+For Linux servers that don't load the module, we've provided [instructions](../protect/microsoft-tunnel-prerequisites.md#manually-load-ip_tables) to load them immediately, and to configure the Linux server to automatically load them at boot.
 
 ## Week of June 6, 2022  
 
@@ -125,6 +137,7 @@ Intune will no longer remove users from all Intune reports when they are unlicen
 ### Device security
 
 #### New Device Control profile for Intune’s endpoint security Attack Surface Reduction policy<!-- 8844611 -->
+
 As part of the continuing [rollout of new profiles for endpoint security policies](#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022, we’ve released a new Device Control profile template for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy for endpoint security in Intune. This profile replaces the previous profile of the same name for the *Windows 10 and later* platform.
 
 With this replacement, only instances of the new profile can be created. However, any profiles you’ve previously created that use the old profile structure remain available to use, edit, and deploy.
@@ -397,7 +410,7 @@ There are some new features when using filters:
 
   When you select **View report**, the report has an **Assignment Filter** column. Use this column to determine if a filter successfully applied to your policy.
 
-- Endpoint Security policies support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create. 
+- Endpoint Security policies support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create.
 
 - When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting](#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
 
@@ -1472,7 +1485,7 @@ We’ve added a [new setting](../protect/windows-update-settings.md#update-setti
 - **Upgrade Windows 10 devices to Latest Windows 11 release**
 By default, this setting is set to No. When set to *Yes*, eligible Windows 10 devices that receive this policy will update to the latest build of Windows 11.
 
-When set to *Yes*, Intune displays an information box that confirms that by deploying this setting you are accepting the Microsoft License Terms for devices that upgrade. The information box also contains a link to the [Microsoft License Terms]( https://go.microsoft.com/fwlink/?linkid=2171206).
+When set to *Yes*, Intune displays an information box that confirms that by deploying this setting you are accepting the Microsoft License Terms for devices that upgrade. The information box also contains a link to the [Microsoft License Terms](https://go.microsoft.com/fwlink/?linkid=2171206).
 
 For more information about update rings, see [Update Rings for Windows 10 and later](../protect/windows-10-update-rings.md).
 
@@ -1623,7 +1636,7 @@ We made a change to the Windows Autopilot self-deployment mode and pre-provision
 ### Device management
 
 #### Introducing Microsoft Surface Management Portal in Microsoft Endpoint Manager <!--10874729 -->  
-In light of our continued commitment to bring commercial customers the best possible experience, we partnered with teams across Microsoft to streamline Surface management into a single view within Microsoft Endpoint Manager. Whether you lead a large organization with thousands of devices or manage IT for a small-medium business, you can gain insights into the health of all your Surface devices and monitor device warranty and support requests in one location. Microsoft Surface management portal is available to U.S. customers now and will be rolling out globally later. For the latest information about Microsoft Surface and the new management portal, follow the [Surface IT Pro Blog]( https://techcommunity.microsoft.com/t5/surface-it-pro-blog/bg-p/SurfaceITPro).  
+In light of our continued commitment to bring commercial customers the best possible experience, we partnered with teams across Microsoft to streamline Surface management into a single view within Microsoft Endpoint Manager. Whether you lead a large organization with thousands of devices or manage IT for a small-medium business, you can gain insights into the health of all your Surface devices and monitor device warranty and support requests in one location. Microsoft Surface management portal is available to U.S. customers now and will be rolling out globally later. For the latest information about Microsoft Surface and the new management portal, follow the [Surface IT Pro Blog](https://techcommunity.microsoft.com/t5/surface-it-pro-blog/bg-p/SurfaceITPro).  
 
 ## Week of October 18, 2021 (Service release 2110)
 
@@ -2214,7 +2227,7 @@ We've added the information from the Operational Event Viewer for **Windows Hell
 
 Windows 365 is a new service from Microsoft that automatically creates Cloud PCs for your end users. Cloud PCs are a new hybrid personal computing category that use the power of the cloud and the accessing device to provide a full and personalized Windows virtual machine. Admins can use Microsoft Endpoint Manager to define the configurations and applications that are provisioned for each user’s Cloud PC. End users can access their Cloud PC from any device and any location. Windows 365 stores the end user’s Cloud PC and data in the cloud, not on the device, providing a secure experience.
 
-For more information about Windows 365, see [Windows 365]( https://www.microsoft.com/windows-365?rtc=1).
+For more information about Windows 365, see [Windows 365](https://www.microsoft.com/windows-365?rtc=1).
 
 For documentation on how to manage Windows 365 in your organization, see the [Windows 365 documentation](/windows-365/).
 
