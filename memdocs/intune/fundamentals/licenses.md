@@ -37,7 +37,9 @@ Intune is included in the following licenses:
 - Microsoft 365 E5
 - Microsoft 365 E3
 - Enterprise Mobility + Security E5
+- Enterprise Mobility + Security A5
 - Enterprise Mobility + Security E3
+- Enterprise Mobility + Security A3
 - Microsoft 365 Business Premium
 - Microsoft 365 F1
 - Microsoft 365 F3
