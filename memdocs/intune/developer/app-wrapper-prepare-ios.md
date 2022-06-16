@@ -203,6 +203,16 @@ Open the macOS Terminal and run the following command:
 
 You can use the following command line parameters with the App Wrapping Tool:
 
+> [!NOTE]
+> If you are using MFA authentication then -aa -ac and -ar parameters are not optional. You need to specify them in order to allow the MFA redirection to work during the sign in process
+>
+> **Example:** The following example command runs the App Wrapping Tool incorporating the required commands when MFA is used in the authentication process.
+> 
+>```bash
+>./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB" -aa https://login.microsoftonline.com/common -ac "Client ID of the input app if the app uses the Microsoft Authentication Library" -ar "Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library"  -v true
+>```
+
+
 |Property|How to use it|
 |---------------|--------------------------------|
 |**-i**|`<Path of the input native iOS application file>`. The file name must end in .app or .ipa. |
@@ -210,9 +220,9 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-p**|`<Path of your provisioning profile for iOS apps>`|
 |**-c**|`<SHA1 hash of the signing certificate>`|
 |**-h**| Shows detailed usage information about the available command line properties for the App Wrapping Tool. |
-|**-aa**|(Optional) `<Authority URI of the input app if the app uses the Microsoft Authentication Library>` i.e `https://login.microsoftonline.com/common` |
-|**-ac**|(Optional) `<Client ID of the input app if the app uses the Microsoft Authentication Library>` This is the guid in the Client ID field from your app's listing in the App Registration blade. |
-|**-ar**|(Optional) `<Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
+|**-aa**|(Optional when MFA is not used) `<Authority URI of the input app if the app uses the Microsoft Authentication Library>` i.e `https://login.microsoftonline.com/common` |
+|**-ac**|(Optional when MFA is not used) `<Client ID of the input app if the app uses the Microsoft Authentication Library>` This is the guid in the Client ID field from your app's listing in the App Registration blade. |
+|**-ar**|(Optional when MFA is not used) `<Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library>` This is the Redirect URI configured in your App Registration. Typically it would be the URL protocol of the application that the Microsoft Authenticator app would return to after brokered authentication. |
 |**-v**| (Optional) Outputs verbose messages to the console. It is recommended to use this flag to debug any errors. |
 |**-e**| (Optional) Use this flag to have the App Wrapping Tool remove missing entitlements as it processes the app. See [Setting app entitlements](#setting-app-entitlements) for more details.|
 |**-xe**| (Optional) Prints information about the iOS extensions in the app and what entitlements are required to use them. See  [Setting app entitlements](#setting-app-entitlements) for more details. |
