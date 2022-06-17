@@ -38,7 +38,7 @@ To use RDP Shortpath for public networks with Windows 365, you must meet these r
 
 - Session Host (Cloud PC)
   - UDP outbound to all public IP space (because, in most cases, it’s not possible to know the source IP address of the connecting PC).
-  - STUN server IP ranges on UDP port 347.
+  - STUN server IP ranges on UDP port 3478.
 - Client PC Network  
   - UDP outbound:  
     - To the public IP addresses assigned to NAT gateway or the Azure Firewall in an Azure Hosted Network Scenario.
