@@ -206,7 +206,7 @@ You can use the following command line parameters with the App Wrapping Tool:
 > [!NOTE]
 > If you are using MFA authentication the -aa, -ac, and -ar parameters are not optional. You need to specify them in order to allow the MFA redirection to work during the sign-in process.
 >
-> **Example:** The following example command runs the App Wrapping Tool incorporating the required commands when MFA is used in the authentication process.
+> **Example:** The following example command runs the App Wrapping Tool, incorporating the required commands when MFA is used in the authentication process.
 > 
 >```bash
 >./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB" -aa https://login.microsoftonline.com/common -ac "Client ID of the input app if the app uses the Microsoft Authentication Library" -ar "Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library"  -v true
