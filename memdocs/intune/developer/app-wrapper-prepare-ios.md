@@ -204,7 +204,7 @@ Open the macOS Terminal and run the following command:
 You can use the following command line parameters with the App Wrapping Tool:
 
 > [!NOTE]
-> If you are using MFA authentication then -aa -ac and -ar parameters are not optional. You need to specify them in order to allow the MFA redirection to work during the sign in process
+> If you are using MFA authentication the -aa, -ac, and -ar parameters are not optional. You need to specify them in order to allow the MFA redirection to work during the sign-in process.
 >
 > **Example:** The following example command runs the App Wrapping Tool incorporating the required commands when MFA is used in the authentication process.
 > 
