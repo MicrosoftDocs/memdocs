@@ -173,7 +173,7 @@ Device owners can manually un-enroll their devices as explained in the following
 
 ## Delete devices from the Intune portal
 
-If you want to remove devices from the Intune portal, you can delete them from the specific device pane. In order to remove company data, the recommended steps are to first issue a wipe or retire action and then delete the device. The delete actions does not perform a wipe.
+If you want to remove devices from the Intune portal, you can delete them from the specific device pane. In order to remove company data, the recommended steps are to first issue a wipe or retire action and then delete the device. On iOS the delete actions does not perform a wipe.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
