@@ -59,9 +59,8 @@ You can assign built-in roles to groups without further configuration. You can't
 - **Policy and Profile Manager**: Manages compliance policy, configuration profiles, Apple enrollment, corporate device identifiers, and security baselines.
 - **Help Desk Operator**: Performs remote tasks on users and devices, and can assign applications or policies to users or devices.
 - **Intune Role Administrator**: Manages custom Intune roles and adds assignments for built-in Intune roles. It's the only Intune role that can assign permissions to Administrators.
-- **Cloud PC Administrator**: Cloud PC Administrator has read and write access to all Cloud PC features located within the Cloud PC blade.
-- **Cloud PC Reader**: Cloud PC Reader has read access to all Cloud PC features located within the Cloud PC blade.
-
+- **Cloud PC Administrator**: A Cloud PC Administrator has read and write access to all Cloud PC features located within the Cloud PC blade.
+- **Cloud PC Reader**: A Cloud PC Reader has read access to all Cloud PC features located within the Cloud PC blade.
 
 
 ### Custom roles
