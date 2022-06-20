@@ -59,6 +59,10 @@ The **Overview** blade of the app you've created is displayed.
 > [!NOTE]
 > You will need to work with the OEM of your device to find the package name of the app you would like to enable/disable.
 
+
+> [!NOTE]
+> You cannot create an Android Enterprise system app when there is the same app as Managed Google Play app in Intune.
+
 The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
 
 ## Disable a system app in Intune
