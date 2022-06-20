@@ -121,10 +121,15 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2206
+### Technical preview version 2207
 
-- [Default site boundary group behavior to support cloud source selection](2022/technical-preview-2206.md#bkmk_dbgmp) <!--10674394-->
-- [PowerShell release notes preview](2022/technical-preview-2206.md#bkmk_powershell) <!--14431761-->
+- [10928371](2022/technical-preview-2207.md) <!--10928371-->
+- [12608328](2022/technical-preview-2207.md) <!--12608328-->
+- [13050464](2022/technical-preview-2207.md) <!--13050464-->
+- [13791025](2022/technical-preview-2207.md) <!--13791025-->
+- [14059872](2022/technical-preview-2207.md) <!--14059872-->
+- [14082817](2022/technical-preview-2207.md) <!--14082817-->
+- [14235392](2022/technical-preview-2207.md) <!--14235392-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -144,6 +149,11 @@ The following features were released with previous versions of the Configuration
 
 <!-- ### Technical preview version 2111 -->
 
+### Technical preview version 2206
+
+- [Default site boundary group behavior to support cloud source selection](2022/technical-preview-2206.md#bkmk_dbgmp) <!--10674394-->
+- [PowerShell release notes preview](2022/technical-preview-2206.md#bkmk_powershell) <!--14431761-->
+- 
 ### Technical preview version 2205
 
 - [Offset for reoccurring monthly maintenance window schedules](2022/technical-preview-2205.md#bkmk_offset) <!--3601127-->
