@@ -41,7 +41,7 @@ For advice and suggestions about Intune RBAC, you can check out this series of f
 ## Roles
 A role defines the set of permissions granted to users assigned to that role.
 You can use both the built-in and custom roles. Built-in roles cover some common Intune scenarios. You can [create your own custom roles](create-custom-role.md) with the exact set of permissions you need. Several Azure Active Directory roles have permissions to Intune.
-To see a role, choose **Endpoint Manager** > **Tenant administration** > **Roles** > **All roles** > choose a role. You'll can manage the role on the following pages:
+To see a role, choose **Endpoint Manager** > **Tenant administration** > **Roles** > **All roles** > choose a role. You can manage the role on the following pages:
 
 - **Properties**: The name, description, permissions, and scope tags for the role. 
 - **Assignments**: A list of [role assignments](assign-role.md) defining which users have access to which users/devices. A role can have multiple assignments, and a user can be in multiple assignments.
