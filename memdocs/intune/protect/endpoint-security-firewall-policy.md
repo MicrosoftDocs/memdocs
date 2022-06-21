@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 06/27/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -63,6 +63,23 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 > The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
 >
 > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
+
+#### Add reusable settings groups to profiles for Firewall rules
+
+Microsoft Defender Firewall rule profiles support use of [reusable settings groups](link to article) for the following platforms:
+
+- *Windows 10, Windows 11, and Windows Server platform.
+
+The following firewall rule profile settings are available in reusable settings groups:
+
+- Remote IP address ranges
+- FQDND definitions and auto-resolution
+
+When you configure a firewall rule to add one or more reusable settings groups, you’ll also configure the rules Action to define how the settings in those groups are used.
+
+Each rule you add to the profile can include both reusable settings groups and individual settings that are added directly to the rule.  However, consider using each rule for either reusable settings groups or to manage settings you add directly to the rule. This separation can help simplify future configurations or changes you might make.  
+
+For guidance on configuring reusable groups, and then adding them to this profile, see [Use reusable groups of settings with Intune policies](../protect/reusable-settings-groups.md).
 
 ### Devices managed by Configuration Manager
 
