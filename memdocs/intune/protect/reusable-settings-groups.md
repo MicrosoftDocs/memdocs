@@ -118,3 +118,18 @@ For more information, review guidance that might be specific to the profile type
 ## Next steps
 
 [Device configuration overview](../configuration/device-profiles.md)
+### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009514  -->
+ 
+We've added [reusable groups of settings](../protection/reusable-settings-groups.md) that you can use with [profiles for Microsofft Defender Firewall Rules](../protection/../protect/endpoint-security-firewall-policy.md#firewall-profiles#add-reusable-settings-groups-to-profiles-for-firewall-rules). The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
+
+Features of the reusable settings groups include:  
+
+- Add one or more remote IP addresses.  
+
+- Add one or more FQDNs that can auto resolve to the remote IP address, or for one or more simple keywords when auto resolve for the group is off.  
+
+- Use each settings group with one or more firewall rule profiles and the different  profiles can support different access configurations for the group.  
+
+  For example, you can create two firewall rule profiles that reference the same reusable settings group and assign each profile to a different group of devices. The first profile can block access to all the remote IP addresses in the reusable settings group, while the second profile can be configured to allow access.  
+
+- Edits to a settings group that's in use are automatically applied to all Firewall Rules profiles that use that group.  
