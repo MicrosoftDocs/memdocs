@@ -68,7 +68,7 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 Microsoft Defender Firewall rule profiles support use of [reusable settings groups](link to article) for the following platforms:
 
-- *Windows 10, Windows 11, and Windows Server platform.
+- *Windows 10, Windows 11, and Windows Server platform*
 
 The following firewall rule profile settings are available in reusable settings groups:
 
