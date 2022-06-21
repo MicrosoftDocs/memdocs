@@ -70,7 +70,7 @@ You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/desi
 <!--***********************************************-->
 ## End user experience
 
-### Transfer files from your Cloud PC by using windows365.microsoft.com web client<!--40096523-->
+### Transfer files from your Cloud PC by using the windows365.microsoft.com web client<!--40096523-->
 
 You'll be able to use the windows365.microsoft.com web client to transfer files to and from your Cloud PC.
 
