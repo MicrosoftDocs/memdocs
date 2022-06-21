@@ -1,6 +1,7 @@
 ---
 title: "QueueAppPolicyActivationAction Method"
 titleSuffix: "Configuration Manager"
+description: "The QueueAppPolicyActivationAction WMI class method queues an application policy activation action."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

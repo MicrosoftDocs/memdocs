@@ -25,7 +25,7 @@ To make it easier to find custom catalogs, we're providing a list of links as a 
 |</br></br>Custom catalog provider|</br></br> URL|
 |--|--|
 |Adobe | Multiple catalogs are available from Adobe. </br>  https://www.adobe.com/devnet-docs/acrobatetk/tools/DesktopDeployment/sccm.html |
-|Centero Software Manager| https://software-manager.com/csm-for-sccm-patch-management-solution |
+|Centero Software Manager| https://centero.fi/centero-software-manager/product-editions/#csm-for-mecm |
 |Dell| *Partner catalog* available in the **Third-Party Software Update Catalogs** node </br> https://www.dell.com/support/article/sln311138/ </br></br> https://downloads.dell.com/Catalog/DellSDPCatalogPC.cab </br></br>ftp://ftp.dell.com/catalog/DellSDPCatalog.cab |
 |Fujitsu| https://support.ts.fujitsu.com/GFSMS/globalflash/FJSVUMCatalogForSCCM.cab |
 |HP| *Partner catalog* available in the **Third-Party Software Update Catalogs** node <br> https://hpia.hpcloud.hp.com/downloads/sccmcatalog/HpCatalogForSms.latest.cab</br></br> `http://ftp.hp.com/pub/softlib/software/sms_catalog/HpCatalogForSms.latest.cab` |

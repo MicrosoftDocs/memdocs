@@ -1,6 +1,7 @@
 ---
 title: "CCM_Policy_ActionHandlerRegistration Class"
 titleSuffix: "Configuration Manager"
+description: "A class that supports the Configuration Manager 2007 infrastructure and isn't intended to be used directly from your code."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

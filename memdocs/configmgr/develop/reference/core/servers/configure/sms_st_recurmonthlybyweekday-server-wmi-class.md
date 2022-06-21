@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a schedule token for events that occur for a specific time interval using SMS_ST_RecurMonthlyByWeekday class. 
 title: "SMS_ST_RecurMonthlyByWeekday Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

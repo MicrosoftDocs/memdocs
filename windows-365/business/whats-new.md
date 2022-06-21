@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 06/07/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,53 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of May 16, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### User experience
+
+#### Windows 365 Cloud PC support for Teams background effects<!--39892746-->
+
+Windows 365 Cloud PCs now support background effects in Teams. For more information, see the blog [Microsoft Teams background effects generally available on Windows 365](https://techcommunity.microsoft.com/t5/windows-365/microsoft-teams-background-effects-generally-available-on/m-p/3403274).
+
+#### Windows 365 Cloud PC support for Teams multi-window and Call me <!--39892759-->
+
+Windows 365 Cloud PCs now support multi-window and Call Me in Teams. For more information, see the blog [Teams Multi-window support and Call Me generally available on Windows 365]( https://techcommunity.microsoft.com/t5/windows-365/teams-multi-window-support-and-call-me-generally-available-on/m-p/3403252).
+
+<!-- ########################## -->
+## Week of May 9, 2022 (Service release 2204)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### Set default languages/regions for Cloud PCs (preview)<!--38649676 -->
+
+You can now set the default languages for your newly created Cloud PCs. Thirty-eight languages/regions will be available. For more information, see [Change organizational default settings](change-organization-default-settings.md).
+
+<!-- ########################## -->
+## Week of April 11, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### windows365.microsoft.com is now generally available<!--38195529-->
+
+The windows365.microsoft.com web client has moved out of preview and into general availability.
+
+<!-- ########################## -->
+## Week of April 4, 2022 (Service release 2203)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+[!INCLUDE [Live captions for Microsoft Teams on Windows 365 Cloud PCs](../includes/whats-new-live-captions-teams.md)]
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### End-user experience
+
+[!INCLUDE [End user feedback and log collection](../includes/whats-new-feedback-log-collection.md)]
 
 <!-- ########################## -->
 ## Week of February  28, 2022 (Service release 2202)

@@ -1,4 +1,5 @@
 ---
+description: Learn how the SMS_Role Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an RBA role.
 title: "SMS_Role Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

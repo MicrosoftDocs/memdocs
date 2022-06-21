@@ -1,6 +1,7 @@
 ---
 title: "SMS_UnManagedApps Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_UnManagedApps WMI class is an SMS Provider server class that represents unmanaged apps."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

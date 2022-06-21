@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_Pointer Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_TaskSequence_Pointer WMI class is an SMS provider server class that represents information about an operating system deployment task sequence."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

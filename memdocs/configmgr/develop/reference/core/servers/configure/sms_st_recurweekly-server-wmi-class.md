@@ -1,6 +1,7 @@
 ---
 title: "SMS_ST_RecurWeekly Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a schedule token for events, which occur at weekly intervals, for example, every third week on Wednesday."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -1,11 +1,11 @@
 ---
-title: Use private and public key certificates in Microsoft Intune
+title: Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune
 description: Use Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune, work with root certificates and certificate templates, and use device configuration profiles for a PKCS Certificate.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/28/2022
+ms.date: 05/26/2022
 ms.topic: how-to 
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -28,7 +28,7 @@ ms.collection:
 ---
 # Configure and use PKCS certificates with Intune
 
-Microsoft Intune supports the use of private and public key pair (PKCS) certificates. To help you use PKCS certificates, this article reviews what's required, and can help you export a PKCS certificate, and then add the certificate to an Intune device configuration profile.
+Microsoft Intune supports the use of private and public key pair (PKCS) certificates. This article reviews what's required to use PKCS certificates with Intune, including the export of a PKCS certificate then adding it to an Intune device configuration profile.
 
 Microsoft Intune includes built-in settings to use PKCS certificates for access and authentication to your organizations resources. Certificates authenticate and secure access to your corporate resources like a VPN or a WiFi network. You deploy these settings to devices using device configuration profiles in Intune.
 
@@ -128,37 +128,6 @@ To authenticate a device with VPN, WiFi, or other resources, a device needs a ro
 
 For guidance, see [Install and configure the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
 
-<!-- Remainder is deprecated content, now covered by the install of the new certificate connector>
-
-Before you begin, [review requirements for the connector](certificate-connectors.md) and ensure your environment and your Windows server is ready to support the connector.
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **+ Add**.
-
-3. Select *Download the certificate connector software* for the connector for PKCS #12, and save the file to a location you can access from the server where you're going to install the connector.
-
-   :::image type="content source="./media/certificates-pfx-configure/download-connector.png" alt-text="Microsoft Intune Connector download.":::
-
-4. After the download completes, sign in to the server and run the installer (PfxCertificateConnectorBootstrapper.exe).  
-   - When you accept the default installation location, the connector installs to `Program Files\Microsoft Intune\PFXCertificateConnector`.
-   - The connector service runs under the local system account. If a proxy is required for internet access, confirm that the local service account can access the proxy settings on the server.
-
-5. The PFX Certificate Connector for Microsoft Intune opens the **Enrollment** tab after installation. To enable the connection to Intune, **Sign In**, and enter an account with Azure global administrator or Intune administrator permissions. This account must have a license for Intune.
-
-   > [!WARNING]
-   > By default, in Windows Server **IE Enhanced Security Configuration** is set to **On** which can cause issues with the sign-in to Office 365.
-
-6. Select the **CA Account** tab, and then enter credentials for an account that has the Issue and Manage Certificates permission on your issuing Certificate Authority. These credentials will be used to perform certificate issuance and certificate revocation on the Certificate Authority. (Prior to the PFX certificate connector version 6.2008.60.612, these credentials were used only for certificate revocation.)
-
-    **Apply** your changes.
-
-7. Close the window.
-
-8. In the Microsoft Endpoint Manager admin center, go back to **Tenant administration** > **Connectors and tokens** > **Certificate connectors**. In a few moments, a green check mark appears and the connection status updates. The connector server can now communicate with Intune.
-
--->
-
 ## Create a trusted certificate profile
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -195,9 +164,11 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 8. Select **Next**.
 
-9. In **Assignments**, select the user or device group(s) that will be assigned the profile. For more granularity see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*. Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. In **Assignments**, select the user or device group(s) that will be assigned the profile. For more granularity, see [Create filters in Microsoft Intune](https://go.microsoft.com/fwlink/?linkid=2150376) and apply them by selecting *Edit filter*.
 
-    Select **Next**.
+   Plan to deploy this certificate profile to the same groups that receive the PKCS certificate profile, and that recieve a configuration profile like a Wi-Fi profile that makes use of the certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+
+   Select **Next**.
 
 10. (*Applies to Windows 10/11 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
@@ -243,7 +214,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
    |Setting     | Platform     | Details   |
    |------------|------------|------------|
    |**Renewal threshold (%)**        |<ul><li>All         |Recommended is 20%  |
-   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option may be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there is a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
+   |**Certificate validity period**  |<ul><li>All         |If you didn't change the certificate template, this option may be set to one year. <br><br> Use a validity period of five days or up to 24 months. When the validity period is less than five days, there's a high likelihood of the certificate entering a near-expiry or expired state, which can cause the MDM agent on devices to reject the certificate before it’s installed. |
    |**Key storage provider (KSP)**   |<ul><li>Windows 10/11  |For Windows, select where to store the keys on the device. |
    |**Certification authority**      |<ul><li>All         |Displays the internal fully qualified domain name (FQDN) of your Enterprise CA.  |
    |**Certification authority name** |<ul><li>All         |Lists the name of your Enterprise CA, such as "Contoso Certification Authority". |
@@ -257,7 +228,7 @@ Before you begin, [review requirements for the connector](certificate-connectors
 
 8. Select **Next**.
 
-9. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the trusted certificate profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. In **Assignments**, select the user or groups that will receive your profile. Plan to deploy this certificate profile to the same groups that receive the trusted certificate profile, and that receive a configuration profile like a Wi-Fi profile that makes use of the certificate. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
    Select **Next**.
 
@@ -319,7 +290,7 @@ Platforms:
 
   That example includes a subject name format that uses the CN and E variables, and strings for Organizational Unit, Organization, Location, State, and Country values. [CertStrToName function](/windows/win32/api/wincrypt/nf-wincrypt-certstrtonamea) describes this function, and its supported strings.
 
-  User attributes are not supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN won’t be able to get the user principal name when there is no user on the device.
+  User attributes aren't supported for devices that don’t have user associations, such as devices that are enrolled as Android Enterprise dedicated. For example, a profile that uses *CN={{UserPrincipalName}}* in the subject or SAN can't get the user principal name when there isn't a user on the device.
 
 - **Device certificate type**  
   Format options for the Subject name format include the following variables:

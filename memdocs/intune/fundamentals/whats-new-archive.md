@@ -1184,7 +1184,7 @@ Later, if recovery is needed, a user can always use any device to view their per
 
 #### Improved view of security baseline details for devices<!-- 5536846  -->
 
-Now you can drill-in to the details for a device to view the settings details for security baselines that apply to the device. The settings appear in a simple, flat list, which includes the setting category, setting name, and status. For more information, see [View Endpoint security configurations per device](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device).
+Now you can drill-in to the details for a device to view the settings details for security baselines that apply to the device. The settings appear in a simple, flat list, which includes the setting category, setting name, and status. For more information, see [View Endpoint security configurations per device](../protect/security-baselines-monitor.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -2189,7 +2189,7 @@ The following platforms support import of PFX certificates:
 - Windows 10
 
 #### View the endpoint security configuration for devices<!-- 6206460  -->
-We've updated the name of the option in the Microsoft Endpoint Manager admin center, for viewing [endpoint security configurations that apply to a specific device](../protect/security-baselines-monitor.md#view-endpoint-security-configurations-per-device). This option is renamed to **Endpoint security configuration** because it shows applicable security baselines and additional policies created outside of security baselines. Previously, this option was named *Security baselines*.
+We've updated the name of the option in the Microsoft Endpoint Manager admin center, for viewing [endpoint security configurations that apply to a specific device](../protect/security-baselines-monitor.md). This option is renamed to **Endpoint security configuration** because it shows applicable security baselines and additional policies created outside of security baselines. Previously, this option was named *Security baselines*.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Role-based access control
@@ -4736,7 +4736,7 @@ Automatic app updates work for both device and user licensed apps for iOS Versio
 #### Windows Hello will target users and devices<!-- 1106609 -->
 When you create a [Windows Hello for Business](../protect/windows-hello.md) policy, it applies to all users within the organization (tenant-wide). With this update, the policy can also be applied to specific users or specific devices using a device configuration policy (**Device Configuration** > **Profiles** > **Create profile** > **Identity Protection** > **Windows Hello for Business**).
 
-In Intune in the Azure portal, the Windows Hello configuration and settings now exist in both **Device enrollment** and **Device configuration**. **Device enrollment** targets the entire organization (tenant-wide), and supports Windows AutoPilot (OOBE). **Device configuration** targets devices and users using a policy that's applied during check-in.
+In Intune in the Azure portal, the Windows Hello configuration and settings now exist in both **Device enrollment** and **Device configuration**. **Device enrollment** targets the entire organization (tenant-wide), and supports Windows Autopilot (OOBE). **Device configuration** targets devices and users using a policy that's applied during check-in.
 
 This feature applies to:  
 - Windows 10 and later
@@ -5072,7 +5072,7 @@ A new configuration setting is available to set the language and region for Auto
 A new setting will be available to configure the keyboard for Autopilot profiles during the Out of Box Experience. To see the new setting, choose **Device enrollment** > **Windows enrollment** > **Deployment profiles** > **Create profile** > **Deployment mode** = **Self-deploying** > **Defaults configured**.
 
 #### Autopilot profiles moving to group targeting<!-- 1877935 -->
-AutoPilot deployment profiles can be assigned to Azure AD groups containing AutoPilot devices.
+Autopilot deployment profiles can be assigned to Azure AD groups containing Autopilot devices.
 
 ### Device management
 
@@ -5082,7 +5082,7 @@ In some situations, you may want to restrict access to corporate resources to a 
 Applies to: Android devices 6.0 and higher, with the updated Company Portal app
 
 #### Prevent consumer apps and experiences on Windows 10 Enterprise RS4 Autopilot devices<!-- 1621980 -->
-You will be able to prevent the installation of consumer apps and experiences on your Windows 10 Enterprise RS4 AutoPilot devices. To see this feature, go to **Intune** > **Device configuration** > **Profiles** > **Create profile** > **Platform** = **Windows 10 or later** > **Profile type** = **Device restrictions** > **Configure** > **Windows Spotlight** > **Consumer features**. 
+You will be able to prevent the installation of consumer apps and experiences on your Windows 10 Enterprise RS4 Autopilot devices. To see this feature, go to **Intune** > **Device configuration** > **Profiles** > **Create profile** > **Platform** = **Windows 10 or later** > **Profile type** = **Device restrictions** > **Configure** > **Windows Spotlight** > **Consumer features**. 
 
 #### Uninstall the latest from Windows 10 software updates<!-- 1732948 -->
 Should you discover a breaking issue on your Windows 10 machines, you can choose to uninstall (rollback) the latest feature update or the latest quality update. Uninstalling a feature or quality update is only available for the servicing channel the device is on. Uninstalling will trigger a policy to restore the previous update on your Windows 10 machines. For feature updates specifically, you can limit the time from 2-60 days that an uninstall of the latest version can be applied. To set software update uninstall options, select **Software updates** from the **Microsoft Intune** blade within the Azure portal. Then, select **Windows 10 Update Rings** from the **Software updates** blade. You can then choose the **Uninstall** option from the **Overview** section.
@@ -5133,7 +5133,7 @@ In the Azure portal, instead of going to the Intune App Protection service blade
 ### Device configuration
 
 #### Require installation of policies, apps, certificate and network profiles<!-- 1553555 -->
-Admins can block end users from accessing the Windows 10 RS4 desktop until Intune installs policies, apps, and certificate and network profiles during the provisioning of AutoPilot devices. For more info, see [Set up an enrollment status page](../enrollment/windows-enrollment-status.md).
+Admins can block end users from accessing the Windows 10 RS4 desktop until Intune installs policies, apps, and certificate and network profiles during the provisioning of Autopilot devices. For more info, see [Set up an enrollment status page](../enrollment/windows-enrollment-status.md).
 
 ### Device enrollment
 
@@ -6031,8 +6031,8 @@ As an Intune administrator, you can now specify a minimum and maximum version of
 
 Intune will continue to support enrolling Windows 8.1 PCs and phones. However, only Windows 10 versions can be set with minimum and maximum limits. To permit enrollment of 8.1 devices, leave the minimum limit empty.
 
-#### Alerts for Windows AutoPilot unassigned devices <!-- 1631236 -->
-A new alert is available for Windows AutoPilot unassigned devices on the **Microsoft Intune** > **Device enrollment** > **Overview** page. This alert shows how many devices from the AutoPilot program do not have AutoPilot deployment profiles assigned. Use the information in the alert to create profiles and assign them to the unassigned devices. When you click the alert, you see a full list of Windows AutoPilot devices and detailed information about them. For more information, see [Enroll Windows devices using Windows AutoPilot deployment program](../../autopilot/enrollment-autopilot.md).
+#### Alerts for Windows Autopilot unassigned devices <!-- 1631236 -->
+A new alert is available for Windows Autopilot unassigned devices on the **Microsoft Intune** > **Device enrollment** > **Overview** page. This alert shows how many devices from the Autopilot program do not have Autopilot deployment profiles assigned. Use the information in the alert to create profiles and assign them to the unassigned devices. When you click the alert, you see a full list of Windows Autopilot devices and detailed information about them. For more information, see [Enroll Windows devices using Windows Autopilot deployment program](../../autopilot/enrollment-autopilot.md).
 
 
 #### Refresh button for Devices list   <!-- 1333581 -->
@@ -6214,8 +6214,8 @@ We have added support for certificate-based authentication (CBA) in the Company 
 
 Company apps that have been made available with or without enrollment on the Android Company Portal app can now be installed without a prompt to enroll.
 
-#### Windows AutoPilot Deployment Program support in Microsoft Intune <!-- 747617  -->
-You can now use Microsoft Intune with Windows AutoPilot Deployment Program to empower your users to provision their corporate devices without involving IT. You can customize the out-of-box experience (OOBE) and guide users to join their device to Azure AD and enroll in Intune. Working together, Microsoft Intune and Windows AutoPilot eliminate the need to deploy, maintain, and manage operating system images. For details, see [Enroll Windows devices using Windows AutoPilot deployment program](../../autopilot/enrollment-autopilot.md).
+#### Windows Autopilot Deployment Program support in Microsoft Intune <!-- 747617  -->
+You can now use Microsoft Intune with Windows Autopilot Deployment Program to empower your users to provision their corporate devices without involving IT. You can customize the out-of-box experience (OOBE) and guide users to join their device to Azure AD and enroll in Intune. Working together, Microsoft Intune and Windows Autopilot eliminate the need to deploy, maintain, and manage operating system images. For details, see [Enroll Windows devices using Windows Autopilot deployment program](../../autopilot/enrollment-autopilot.md).
 
 #### Quickstart for device enrollment <!-- 1425655 --> 
 Quickstart is now available in **Device enrollment** and provides a table of references for managing platforms and configuring the enrollment process. A brief description of each item and links to documentation with step-by-step instructions provides useful documentation to simplify getting started.

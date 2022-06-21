@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 03/30/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -152,8 +152,9 @@ There are thousands of settings available in these templates. To make it easier 
 
 ## Next steps
 
-The template is created, but may not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
+- The template is created, but may not be doing anything yet. Be sure to [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
 
-Update [Microsoft 365 using administrative templates](administrative-templates-update-office.md).
+- [Update Office using administrative templates](administrative-templates-update-office.md).
+- [Restrict USB devices using administrative templates](administrative-templates-restrict-usb.md).
 
-[Tutorial: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)
+- [Tutorial: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

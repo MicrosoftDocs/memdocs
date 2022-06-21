@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager GetImageProperties Windows Management Instrumentation (WMI) class method to read all metadata from the specified.wim source file to an XML string.
 title: "GetImageProperties Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

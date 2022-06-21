@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a collection variable that is accessible at the time of task execution using SMS_CollectionVariable.
 title: "SMS_CollectionVariable Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

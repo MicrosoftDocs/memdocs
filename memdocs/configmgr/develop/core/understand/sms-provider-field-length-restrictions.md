@@ -1,4 +1,5 @@
 ---
+description: Learn about the SMS Provider Field Length Restrictions on the width of character fields for schema classes.
 title: "SMS Provider Field Length Restrictions"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -1,5 +1,6 @@
 ---
 title: SetSourceSite method in class SMS_Advertisement
+description: Learn how the SetSourceSite Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site code for the advertisement.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

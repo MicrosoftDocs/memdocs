@@ -2,6 +2,7 @@
 title: "Create a Program"
 titleSuffix: "Configuration Manager"
 ms.date: "03/23/2020"
+description: "In Configuration Manager, the following example shows how to create a program by using the SMS_Program class and class properties."
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: how-to

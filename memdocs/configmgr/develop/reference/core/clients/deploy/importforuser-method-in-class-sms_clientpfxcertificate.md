@@ -1,4 +1,5 @@
 ---
+description: The ImportForUser Windows Management Instrumentation class method, in Configuration Manager, imports a certificate for a user, encrypted by using a password. 
 title: "ImportForUser Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

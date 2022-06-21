@@ -1,4 +1,5 @@
 ---
+description: Learn how to set the code of the source site of the package using SetSourceSite class method in Configuration Manager.
 title: SetSourceSite method in class SMS_Package
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

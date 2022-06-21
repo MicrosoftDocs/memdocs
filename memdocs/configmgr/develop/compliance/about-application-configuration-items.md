@@ -1,5 +1,6 @@
 ---
 title: "About Application Configuration Items"
+description: Application configuration items include all the functionality of general configuration items, but their identity can be detected independently of its settings and objects.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

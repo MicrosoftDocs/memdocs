@@ -1,4 +1,5 @@
 ---
+description: The SMS_ClientDataSourcesContent Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager.
 title: "SMS_ClientDataSourcesContent Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

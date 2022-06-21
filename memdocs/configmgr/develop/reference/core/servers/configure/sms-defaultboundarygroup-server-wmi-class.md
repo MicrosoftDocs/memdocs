@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a default boundary group using SMS_DefaultBoundaryGroup Windows Management Instrumentation (WMI) class.
 title: "SMS_DefaultBoundaryGroup Class"
 titleSuffix: "Configuration Manager"
 ms.date: "03/13/2017"

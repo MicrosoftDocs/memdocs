@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SetEnforcement method in class SMS_ConfigurationItem to set the enforcement and the enforcement date for a configuration item.
 title: SetEnforcement method in class SMS_ConfigurationItem
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -96,7 +96,7 @@ You will need one of the following developer guides to help you integrate the In
 
 In addition to enabling your app for app protection policy, the following is required for your app to properly function with Azure ActiveDirectory (AAD) app based Conditional Access:
 
-* App is built with the [Azure ActiveDirectory Authentication Library](/azure/active-directory/develop/active-directory-authentication-libraries) and enabled for AAD broker authentication.
+* App is built with the [Microsoft Authentication Library](/azure/active-directory/develop/reference-v2-libraries) and enabled for AAD broker authentication.
 
 * The [AAD Client ID](/azure/app-service/app-service-mobile-how-to-configure-active-directory-authentication#configure-a-native-client-application) for your app must be unique across iOS and Android platforms.
 

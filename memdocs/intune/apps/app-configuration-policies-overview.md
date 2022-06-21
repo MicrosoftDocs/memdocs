@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/01/2022
+ms.date: 04/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,7 +33,7 @@ ms.collection:
 
 # App configuration policies for Microsoft Intune
 
-App configuration policies can help you eliminate app setup up problems by letting you assign configuration settings to a policy that is assigned to end-users before they run the app. The settings are then supplied automatically when the app is configured on the end-users device, and end-users don't need to take action. The configuration settings are unique for each app.
+App configuration policies can help you eliminate app setup problems by letting you assign configuration settings to a policy that is assigned to end-users before they run the app. The settings are then supplied automatically when the app is configured on the end-users device, and end-users don't need to take action. The configuration settings are unique for each app.
 
 You can create and use app configuration policies to provide configuration settings for both iOS/iPadOS or Android apps. These configuration settings allow an app to be customized by using app configuration and management. The configuration policy settings are used when the app checks for these settings, typically the first time the app is run. 
 
@@ -55,7 +55,9 @@ The available configuration parameters and the implementation of the configurati
 >
 > You will only see apps from [Managed Google Play store](https://play.google.com/work), not the [Google Play store](https://play.google.com/store/apps), when using Managed Devices as the Enrollment Type for Android devices.
 
-You can assign an app configuration policy to a group of end-users and devices by using a combination of [include and exclude assignments](apps-inc-exl-assignments.md). Once you add an app configuration policy, you can set the assignments for the app configuration policy. When you set the assignments for the policy, you can choose to include and exclude the [groups](../fundamentals/groups-add.md) of end-users for which the policy applies. When you choose to include one or more groups, you can choose to select specific groups to include or select built-in groups. Built-in groups include **All Users**, **All Devices**, and **All Users + All Devices**.
+You can assign an app configuration policy to a group of end-users and devices by using a combination of [include and exclude assignments](apps-inc-exl-assignments.md). As part of the process to add or update an app configuration policy, you can set the assignments for the app configuration policy. When you set the assignments for the policy, you can choose to include and exclude the [groups](../fundamentals/groups-add.md) of end-users for which the policy applies. When you choose to include one or more groups, you can choose to select specific groups to include or select built-in groups. Built-in groups include **All Users**, **All Devices**, and **All Users + All Devices**.
+
+The app configuration policy workload provides a list of app configuration policies that have been created for your tenant. This list provides details, such as Name, Platform, Updated, Enrollment type, and Scope Tags. For additional details about a specific app configuration policy, select the policy. On the policy **Overview** pane, you can see specific details, such as the policy status based on device and based on user, as well as whether the policy has been assigned.
 
 ## Apps that support app configuration
 
@@ -141,7 +143,7 @@ You can validate the app configuration policy using the following three methods:
 You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** for settings deployed through the managed app configuration policies. In addition to the below steps, you can access managed app logs using Microsoft Edge. For more information, see [Use Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-edge-for-ios-and-android-to-access-managed-app-logs).
 
 1. If not already installed on the device, download and install the **Microsoft Edge** from the App Store. For more information, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
-2. Launch the **Microsoft Edge** and select **about** > **intunehelp** from the navigation bar.
+2. Launch the **Microsoft Edge** and enter **about:intunehelp** in the address box.
 3. Click **Get Started**.
 4. Click **Share Logs**.
 5. Use the mail app of your choice to send the log to yourself so they can be viewed on your PC. 
@@ -185,7 +187,7 @@ Your application configuration details should match the application configuratio
 You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** on managed devices for managed app configuration.
 
 1. If not already installed on the device, download and install the **Microsoft Edge** from the App Store. For more information, see [Microsoft Intune protected apps](apps-supported-intune-apps.md).
-2. Launch **Microsoft Edge** and select **about** > **intunehelp** from the navigation bar.
+2. Launch **Microsoft Edge** and enter **about:intunehelp** in the address box.
 3. Click **Get Started**.
 4. Click **Share Logs**.
 5. Use the mail app of your choice to send the log to yourself so they can be viewed on your PC. 

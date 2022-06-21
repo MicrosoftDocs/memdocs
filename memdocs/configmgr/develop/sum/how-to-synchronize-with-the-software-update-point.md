@@ -1,5 +1,6 @@
 ---
 title: "Synchronize with the Software Update Point"
+description: You synchronize the software update point, in Configuration Manager SP1, by calling the SyncNow method.  
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

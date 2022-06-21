@@ -1,6 +1,7 @@
 ---
 title: "SMS_ImageServicingScheduledUpdate Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ImageServicingScheduledUpdate WMI class is an SMS Provider server class that represents all schedules for one software update in offline servicing image."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

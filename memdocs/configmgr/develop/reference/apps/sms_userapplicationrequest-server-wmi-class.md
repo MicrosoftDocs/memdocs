@@ -1,6 +1,7 @@
 ---
 title: "SMS_UserApplicationRequest Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_UserApplicationRequest WMI class is an SMS Provider server class that represents a user's application request." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

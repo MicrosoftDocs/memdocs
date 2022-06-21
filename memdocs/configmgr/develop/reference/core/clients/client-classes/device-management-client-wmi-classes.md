@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the Device Management Client WMI Classes to manage device setting packages and items on the client computer.
 title: "Device Management Client WMI Classes"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 05/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -85,7 +85,7 @@ You can purchase and distribute public as well as private apps using Apple Busin
 > [!IMPORTANT]
 > - A location token can only be used with one device management solution at a time. Before you start to use purchased apps with Intune, revoke and remove any existing location tokens used with other mobile device management (MDM) vendor. 
 > - A location token is only supported for use on one Intune tenant at a time. Do not reuse the same token for multiple Intune tenants.
-> - By default, Intune synchronizes the location tokens with Apple twice a day. You can initiate a manual sync at any time from Intune.
+> - By default, Intune synchronizes the location tokens with Apple once a day. You can initiate a manual sync at any time from Intune.
 > - After you have imported the location token to Intune, do not import the same token to any other device management solution. Doing so might result in the loss of license assignment and user records.
 
 ## Migrate from Volume Purchase Program (VPP) to Apps and Books
@@ -124,7 +124,9 @@ Migrate existing purchased VPP content and tokens to Apps and Books in Apple Bus
    - **Automatic app updates** - Choose from **Yes** or **No** to enable automatic updates. When enabled, Intune detects the VPP app updates inside the app store and automatically pushes them to the device when the device checks in.
 
         > [!NOTE]
-        > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details.  
+        > Automatic app updates for Apple VPP apps will automatically update for both **Required** and **Available** install intents. For apps deployed with **Available** install intent, the automatic update generates a status message for the IT admin informing that a new version of the app is available. This status message is viewable by selecting the app, selecting Device Install Status, and checking the Status Details. 
+        >
+        > When updating a VPP app, it can take up to 24 hours for the device to receive the updated VPP app. The device must be unlocked and available to install the update successfully.
 
     - **I grant Microsoft permission to send both user and device information to Apple.** - You must select **I agree** to proceed. To review what data Microsoft sends to Apple, see [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md).
 7. Click **Next** to display the **Scope tags** page.
@@ -188,6 +190,7 @@ You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) 
 > - Intune reclaims app licenses when an employee leaves the company and is no longer part of the AAD groups.
 > - When assigning a purchased app with **Uninstall** intent, Intune both reclaims the license and uninstalls the app.
 > - App licenses are not reclaimed when a device is removed from Intune management. 
+> - Intune will revoke app licenses when the user is deleted from Azure AD.
 
 ## Deleting VPP tokens
 <!-- 820879 -->  

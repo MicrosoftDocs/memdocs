@@ -1,4 +1,5 @@
 ---
+description: Learn how to enable or disable the Software Inventory Client Agent, in Configuration Manager, by modifying the site control file settings.
 title: "Enable Software Inventory"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"

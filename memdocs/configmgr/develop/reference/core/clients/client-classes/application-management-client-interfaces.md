@@ -1,6 +1,7 @@
 ---
 title: "Application Management Client Interfaces"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the application management interfaces are used by client applications to manage application management functionality on the client."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

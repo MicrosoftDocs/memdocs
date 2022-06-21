@@ -1,6 +1,7 @@
 ---
 title: "ClearContextHandle Method"
 titleSuffix: "Configuration Manager"
+description: "The ClearContextHandle method clears cached context data associated with the specified context handle."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

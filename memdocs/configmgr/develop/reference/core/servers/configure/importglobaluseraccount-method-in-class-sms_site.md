@@ -1,6 +1,7 @@
 ---
 title: "ImportGlobalUserAccount Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that encrypts data that's shared in the hierarchy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

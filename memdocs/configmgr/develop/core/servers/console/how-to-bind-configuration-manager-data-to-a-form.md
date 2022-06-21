@@ -1,6 +1,7 @@
 ---
 title: "Bind Configuration Manager Data to a Form"
 ms.date: "09/20/2016"
+description: "In Configuration Manager, to bind console data to a property sheet, you use the DataBindings property of the property sheet's control class."
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: how-to

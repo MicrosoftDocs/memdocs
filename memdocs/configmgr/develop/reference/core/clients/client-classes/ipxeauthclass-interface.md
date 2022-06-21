@@ -1,6 +1,7 @@
 ---
 title: "IPxeAuthClass Interface"
 titleSuffix: "Configuration Manager"
+description: "The IPxeAuthClass automation interface enables configuration of a PXE service point."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

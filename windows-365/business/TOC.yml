@@ -13,10 +13,6 @@ items:
   href: cloud-pc-location.md
 - name: How-to guides
   items:
-  - name: Users
-    items:
-    - name: Get users started
-      href: get-users-started.md
   - name: Apps
     items:
     - name: Users installing apps

@@ -1,6 +1,7 @@
 ---
 title: "SetCategorizationRequest Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SetCategorizationRequest Windows Management Instrumentation class method initiates a System Center Online software categorization request."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

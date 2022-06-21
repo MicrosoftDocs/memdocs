@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/15/2022
+ms.date: 06/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -144,6 +144,32 @@ After an update releases, it rolls out to tenants over the following days. This 
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
+### April 27, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:588c0c59fb9e0032640e78b06cfe12c7be0b28b1d8ca01ad87fb315da4088446
+
+- **serverImageDigest**: sha256:81d42ec83b5157068b81d6243d46601b8c003e99513426ffb90d9cbac31bd271
+
+Changes in this release:
+- Minor bug fixes
+- Security bug fixes
+- Agent changes for forced cert renewal 
+- ADAL depcrecation, enables MSAL authentication during Agent enrollment 
+
+### April 4, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:14a5f496bf9d36ba1577e8e6059f5d06b7c03abe319eaba91a4ac88eeafc4825
+
+- **serverImageDigest**: sha256:f21481a2a299cb2beed7faadf4faba50fdcf1bb591d193ee78d1e0505bcaa192
+
+Changes in this release:
+- Minor bug fixes
+- Access log enhancements
+
 ### February 16, 2022
 
 Image hash values:
@@ -166,7 +192,7 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
-- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5, do not.
+- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5 and RHEL 8.6, do not.
 
   For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).  
 

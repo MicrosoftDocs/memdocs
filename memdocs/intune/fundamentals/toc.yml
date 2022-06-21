@@ -122,8 +122,6 @@ items:
         href: end-user-educate.md    
       - name: Company Portal messages
         href: end-user-company-portal-messages.md
-      - name: App protection on Android
-        href: end-user-mam-apps-android.md
       - name: App protection on iOS
         href: end-user-mam-apps-ios.md
       - name: How to get Android apps
@@ -214,6 +212,8 @@ items:
       href: filters-reports-troubleshoot.md
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
+  - name: Premium add-ons
+    href: premium-add-ons.md
   - name: Developer guidance
     href: ../developer/index.yml
   - name: Get help and support

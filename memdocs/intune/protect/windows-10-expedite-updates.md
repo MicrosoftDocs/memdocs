@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/20/2021
+ms.date: 06/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -60,9 +60,12 @@ The actual time that a device starts to update depends on the device being onlin
 
   If a device doesn’t restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update rings for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
+- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
 
 ## Prerequisites
+
+> [!IMPORTANT]
+> This feature is not supported on GCC High/DoD cloud environments.
 
 The following are requirements to qualify for installing expedited quality updates with Intune:
 
@@ -70,14 +73,16 @@ The following are requirements to qualify for installing expedited quality updat
 
 In addition to a license for Intune, your organization must have one of the following subscriptions:
 
-- Enterprise Mobility + Security E3  (included in Microsoft 365 F3, E3, or A3)
-- Enterprise Mobility + Security E5  (included in Microsoft 365 E5 or A5)
+- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows 10/11 Virtual Desktop Access (VDA) per user
 - Microsoft 365 Business Premium
 
 **Supported Windows 10/11 versions**:
 
 - Windows 10/11 versions that remain in support for Servicing, on x86 or x64 architecture
+
+Only update builds that are generally available are supported. Preview builds, including the Beta and Dev channels, are not supported with expedited updates.
 
 **Supported Windows 10/11 editions**:
 
@@ -129,7 +134,7 @@ To help avoid conflicts or configurations that can block installation of expedit
 
 | Update ring setting       | Recommended value        |
 |---------------------------|-------------------------------------|
-| Servicing channel         | **Semi-Annual Channel**  <br><br> Expedite doesn't support additional channels at this time. |
+| Enable pre-release builds | This setting should be set to **Not configured**. Preview builds, including the Beta and Dev channels, are not supported with expedited updates. |
 | Automatic update behavior | **Reset to default**  <br><br> Other values might cause a poor user experience and  slow the process to expedite updates. |
 | Change notification update level | Use any value other than **Turn off all notifications, including restart warnings** |
 
@@ -312,4 +317,5 @@ This report can help you find devices with alerts or errors and can help you tro
 
 - Configure [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)
 - Configure [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
+- Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
 - View [Windows release information](/windows/release-information/)

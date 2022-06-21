@@ -1,6 +1,7 @@
 ---
 title: "SMS_ScheduleToken Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ScheduleToken abstract WMI class is an SMS Provider server class that represents a schedule token that is used for the scheduling of events with different frequencies, for example, hourly and daily."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

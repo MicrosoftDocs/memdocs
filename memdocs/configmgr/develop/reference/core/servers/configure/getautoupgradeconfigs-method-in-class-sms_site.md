@@ -1,6 +1,7 @@
 ---
 title: "GetAutoUpgradeConfigs Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that gets configurations for auto-upgrade settings."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

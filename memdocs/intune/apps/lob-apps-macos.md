@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/11/2022
+ms.date: 05/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -39,8 +39,6 @@ ms.collection:
 Use the information in this article to help you add macOS line-of-business apps to Microsoft Intune. You must download an external tool to pre-process your *.pkg* files before you can upload your line-of-business file to Microsoft Intune. The pre-processing of your *.pkg* files must take place on a macOS device.
 
 > [!NOTE]
-> Uploading *.pkg* files in the **Add app** pane is in public preview.
->
 > Starting with the release of macOS Catalina 10.15, prior to adding your apps to Intune, check to make sure your macOS LOB apps are notarized. If the developers of your LOB apps did not notarize their apps, the apps will fail to run on your users' macOS devices. For more information about how to check if an app is notarized, visit [Notarize your macOS apps to prepare for macOS Catalina](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Notarizing-your-macOS-apps-to-prepare-for-macOS/ba-p/808579).
 > 
 > macOS LOB apps have a maximum size limit of 2 GB per app.
@@ -50,7 +48,7 @@ Use the information in this article to help you add macOS line-of-business apps 
 ## Before your start
 
 > [!NOTE]
-> Using the Intune App Wrapping Tool for Mac is not required when uploading *.pkg* files. Uploading *.pkg* files in the **Add app** pane is in public preview.
+> Using the Intune App Wrapping Tool for Mac is not required when uploading *.pkg* files.
 
 You must download an external tool, mark the downloaded tool as an executable, and pre-process your *.pkg* files with the tool before you can upload your line-of-business file to Microsoft Intune. The pre-processing of your *.pkg* files must take place on a macOS device. Use the Intune App Wrapping Tool for Mac to enable Mac apps to be managed by Microsoft Intune.
 
@@ -93,8 +91,6 @@ You must download an external tool, mark the downloaded tool as an executable, a
 ## Step 1 - App information
 
 > [!NOTE]
-> Uploading *.pkg* files in the **Add app** pane is in public preview.
->
 > The **minimum operating system** for uploading a *.pkg* file is macOS 10.14. Upload a *.intunemac* file to select an older minimum operating system.
 
 ### Select the app package file

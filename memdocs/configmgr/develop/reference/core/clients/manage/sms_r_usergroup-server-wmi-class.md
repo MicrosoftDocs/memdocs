@@ -1,5 +1,6 @@
 ---
 title: "SMS_R_UserGroup Class"
+description: The SMS_R_UserGroup class is an SMS Provider server class that is generated dynamically at SMS Provider run time and contains discovery data for user group objects.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

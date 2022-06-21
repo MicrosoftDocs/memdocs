@@ -1,5 +1,6 @@
 ---
 title: "FormatSystemMessage Method"
+description: Learn how the FormatSystemMessage method, in Configuration Manager, formats a system error message by using the error code and optional insertion strings.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

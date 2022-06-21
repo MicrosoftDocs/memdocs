@@ -1,6 +1,7 @@
 ---
 title: "SMS_Certificate Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that contains all of the certificates that are registered to the server."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

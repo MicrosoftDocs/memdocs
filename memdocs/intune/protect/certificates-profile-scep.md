@@ -129,7 +129,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        - **CN={{UserName}}**: The user name of the user, such as janedoe.
        - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
        - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
-       - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
+       - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune. *(not supported on Android Enterprise for Fully Managed, Dedicated, and Corporate-Owned Work Profile)*
        - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
        - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
        - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
@@ -155,7 +155,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        Format options for the Subject name format include the following variables:
 
        - **{{AAD_Device_ID}}** or **{{AzureADDeviceId}}** - Either variable can be used to identify a device by its Azure AD ID.
-       - **{{DeviceId}}** - The Intune device ID
+       - **{{DeviceId}}** - The Intune device ID *(not supported on Android Enterprise for Fully Managed, Dedicated, and Corporate-Owned Work Profile)*
        - **{{Device_Serial}}**
        - **{{Device_IMEI}}**
        - **{{SerialNumber}}**
@@ -274,6 +274,9 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
    - **Renewal threshold (%)**:
 
      Enter the percentage of the certificate lifetime that remains before the device requests renewal of the certificate. For example, if you enter 20, the renewal of the certificate will be attempted when the certificate is 80% expired. Renewal attempts continue until renewal is successful. Renewal generates a new certificate, which results in a new public/private key pair.
+     
+     > [!NOTE]
+     > Renewal behavior on iOS/iPadOS and macOS: Certificates can only be renewed during the renewal threshold phase. In addition, the device has to be unlocked while synching with Intune. If the renewal was not successful, the expired certificate will remain on the device and Intune does not trigger a renewal anymore. Also, Intune does not offer an option to redeploy expired certificates. Affected devices need to be excluded from the SCEP profile temporarily to remove the expired certificate and request a new one.
 
    - **SCEP Server URLs**:
 

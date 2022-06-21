@@ -76,10 +76,9 @@ You can review the CPU spike time and RAM spike time scores and percentages by f
 
 ## Device history
 
-When you click on a particular device in one of the reports, you'll see specific information for that device. If device score is below the baseline, you can improve device performance and score by adding more resources to the device and taking a resize action.  
+When you click on a particular device in one of the reports, you'll see specific information for that device. If device score is below the baseline, you can improve device performance and score by adding more resources to the device and taking a resize action.
 
-![Screenshot of using the device history](./media/report-resource-performance/device-history.png) 
-
+![Screenshot of using the device history](./media/report-resource-performance/device-history.png)
 
 <!-- ########################## -->
 ## Next steps

@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 *Applies to: Configuration Manager (current branch)*
 
 > [!IMPORTANT]
-> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454890 -->
+> Starting in November 2021, this feature of Configuration Manager is [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454890 --> For more information, see [Asset intelligence deprecation](deprecation.md).
 >
 > This deprecation plan doesn't include the [product lifecycle dashboard](product-lifecycle-dashboard.md).
 
