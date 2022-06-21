@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/10/2022
+ms.date: 06/27/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -81,7 +81,9 @@ Create an enrollment profile to enable enrollment on devices.
 4. Select **Next**. Review the details of your profile and then select **Create** to save the profile.  
 
 ### Access enrollment token  
-After you create a profile, Intune generates a token that's needed for enrollment. To access the token:
+After you create a profile, Intune generates a token that's needed for enrollment. The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.   
+
+To access the token:
 
 1. Go to **Corporate-owned, user-associated devices**.
 2. From the list, select your enrollment profile. 
@@ -92,7 +94,7 @@ Another way to find the token is:
 2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
 3. Select **View enrollment token**. 
 
-The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.   
+For devices that can't scan QR codes, you can export the enrollment profile JSON file and QR code image.  
 
 > [!IMPORTANT]
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
