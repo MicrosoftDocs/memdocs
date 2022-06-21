@@ -63,7 +63,7 @@ The following are prerequisites to use reusable settings groups:
 
 Each reusable settings group includes a subset of settings from the full profile you’re creating the group for. Use the following links to view the settings you can configure in a settings group for each profile:
 
-- [Microsoft Defender Firewall rules](../protect/endpoint-security-firewall-policy.md#firewall-profiles#add-reusable-settings-groups-to-profiles-for-firewall-rules)
+- [Microsoft Defender Firewall rules](../protect/endpoint-security-firewall-policy.md#add-reusable-settings-groups-to-profiles-for-firewall-rules)
 
 **To create a reusable settings group**:
 
@@ -119,8 +119,8 @@ For more information, review guidance that might be specific to the profile type
 
 [Device configuration overview](../configuration/device-profiles.md)
 ### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009514  -->
- 
-We've added [reusable groups of settings](../protection/reusable-settings-groups.md) that you can use with [profiles for Microsofft Defender Firewall Rules](../protection/../protect/endpoint-security-firewall-policy.md#firewall-profiles#add-reusable-settings-groups-to-profiles-for-firewall-rules). The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
+
+We've added [reusable groups of settings](../protect/reusable-settings-groups.md) that you can use with [profiles for Microsofft Defender Firewall Rules](../protection/../protect/endpoint-security-firewall-policy.md#add-reusable-settings-groups-to-profiles-for-firewall-rules). The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
 
 Features of the reusable settings groups include:  
 
