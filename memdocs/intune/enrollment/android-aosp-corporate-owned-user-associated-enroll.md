@@ -94,7 +94,7 @@ Another way to find the token is:
 2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
 3. Select **View enrollment token**. 
 
-For devices that can't scan QR codes, you can export the enrollment profile JSON file and QR code image, and then upload it to the device's OEM app or console.   
+For devices that can't scan QR codes, you can export the enrollment profile JSON file and QR code image.  
 
 > [!IMPORTANT]
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
