@@ -23,6 +23,10 @@ _Applies to_
 - Windows 10
 - Windows Holographic, version 2004
 
+## Device targeting changes
+
+In 2207 users will experience a new design for device targeting. This design would enforce Autopilot pre-registered devices have valid profile assignments before authorizing enrollment. With this change, customers should see increased accuracy with Autopilot profiles when making changes to assignment or resetting devices.
+
 ## Enroll to co-management from Windows Autopilot
 <!-- 11300628 -->
 
