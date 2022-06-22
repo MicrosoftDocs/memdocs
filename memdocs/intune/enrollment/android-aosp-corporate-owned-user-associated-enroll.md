@@ -83,18 +83,13 @@ Create an enrollment profile to enable enrollment on devices.
 ### Access enrollment token  
 After you create a profile, Intune generates a token that's needed for enrollment. The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.   
 
-To access the token:
+To view the token as a QR code:
 
 1. Go to **Corporate-owned, user-associated devices**.
 2. From the list, select your enrollment profile. 
-2. Select **Tokens**. 
+2. Select **Token**.   
 
-Another way to find the token is:
-1. Go to **Corporate-owned, user-associated devices**.
-2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
-3. Select **View enrollment token**. 
-
-For devices that can't scan QR codes, you can export the enrollment profile JSON file and QR code image.  
+From the Token page, you can also export the enrollment profile JSON file.   
 
 > [!IMPORTANT]
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
@@ -166,8 +161,8 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 ### Update apps    
 These apps automatically install updates when they become available: 
 
-    * Microsoft Intune app 
-    * Intune Company Portal app  
+  * Microsoft Intune app  
+  * Intune Company Portal app  
     
 When an update becomes available, the app closes and installs the update. The app must be closed completely to install the update. The app also installs available updates for Microsoft Authenticator.    
 
