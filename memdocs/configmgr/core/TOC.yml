@@ -87,6 +87,8 @@ items:
       href: plan-design/changes/features-and-capabilities.md
     - name: What's new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 2207
+      href: plan-design/changes/whats-new-in-version-2207.md
     - name: What's new in version 2203
       href: plan-design/changes/whats-new-in-version-2203.md
     - name: What's new in version 2111
@@ -95,8 +97,6 @@ items:
       href: plan-design/changes/whats-new-in-version-2107.md
     - name: What's new in version 2103
       href: plan-design/changes/whats-new-in-version-2103.md
-    - name: What's new in version 2010
-      href: plan-design/changes/whats-new-in-version-2010.md
     - name: What's changed from Configuration Manager 2012
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: Removed and deprecated
