@@ -31,9 +31,27 @@ When configuring Azure Services, a new option called **Administration Service Ma
  
 <!--For more information, see [xxxxxc](../../servers/blah.md). -->
 
+### Improvements to cloud management gateway (CMG) workflow
+<!--13351390#-->
+
+You can now approve the application workflow through email. For the application approvals through email, manually add the CMG URL in the Azure Active Directory app as single page application redirect URI. 
+
+<!--For more information, see [xxxxxc](../../servers/blah.md). -->
+
 ## Site infrastructure
 
+### Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016
+<!--9265511-->
+Configuration Manager will now utilize the Windows Server 2012 R2 and Windows Server 2016 unified solution for anti-virus and endpoint detection and response. Starting with this technical preview, devices that are targeted with Microsoft Defender for Endpoint onboarding policy will use the unified agent versus the previous Microsoft Monitoring Agent based solution (where applicable).
 
+<!--For more information, see [xxxxxc](../../servers/blah.md). -->
+
+
+### Default site boundary group behavior to support cloud source selection
+<!--10674394-->
+You can now add options via PowerShell to include and prefer cloud management gateway (CMG) management points for the default site boundary group. When a site is set up, there's a default site boundary group created for each site and all the clients are by default mapped to it until they're assigned to some custom boundary group.
+
+<!--For more information, see [xxxxxc](../../servers/blah.md). -->
 
 ## Client management
 
@@ -47,13 +65,19 @@ When configuring Azure Services, a new option called **Administration Service Ma
 
 ## Software updates
 
+### Folders for automatic deployment rules (ADRs)
+<!--13507410-->
 
+Admins can now organize ADRs by using folders. This change allows for better categorization and management of ADRs. Folder management for ADRs is also supported with PowerShell cmdlets.
 
+<!--For more information, see [xxxxxc](../../servers/blah.md). -->
 
+### Offset for reoccuring monthly maintenance window schedules
+<!--3601127#-->
 
+Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using an offset of two days after the second Tuesday of the month, sets the maintenance window for Thursday.
 
-
-
+<!--For more information, see [xxxxxc](../../servers/blah.md). -->
 
 ## OS deployment
 
