@@ -119,11 +119,11 @@ The organizational unit that's granted the rights to create computers must match
 - The computer must have access to the internet and your Active Directory. 
 - To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that you want to support.
 
-  If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that can create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
+- If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that can create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
 
-- The connector service account must have the following permissions:
+  This connector service account must have the following permissions:
 
-  - **[Logon as Service](/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2019&preserve-view=true)**
+  - **[Log on as a service](/system-center/scsm/enable-service-log-on-sm)**
   - Must be part of the **Domain user** group
   - Must be a member of the local **Administrators** group on the Windows server that hosts the connector
 
