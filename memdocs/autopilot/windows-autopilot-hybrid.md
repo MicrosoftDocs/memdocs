@@ -117,6 +117,9 @@ The Intune Connector for Active Directory must be installed on a computer that's
 
 > [!NOTE]
 > If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that's able to create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
+> The connector service account must have the following permissions:
+> - [**Logon as Service**](/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2019&preserve-view=true)
+> - Must be part of the **Domain user** group and a member of the local **Administrators** group on the Windows server that hosts the connector.
 
 The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
 
