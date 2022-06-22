@@ -31,7 +31,8 @@ ms.collection: M365-identity-device-management
 
 # Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices 
 
-*This feature is in public preview.*  
+> [!IMPORTANT]
+> This feature is in [public preview](../fundamentals/public-preview.md).  
 
 Set up enrollment in Intune for corporate-owned, user-associated devices built on the Android Open Source Project (AOSP) platform. Intune offers an *Android (AOSP)* device management solution for corporate-owned Android devices that are:  
 
@@ -39,10 +40,7 @@ Set up enrollment in Intune for corporate-owned, user-associated devices built o
 * Intended to be used by a single user. 
 * Used exclusively for work.    
 
-This article describes how to set up Android (AOSP) device management and enroll RealWear devices for use at work. 
-
-> [!IMPORTANT]
-> This feature is in [public preview](../fundamentals/public-preview.md).   
+This article describes how to set up Android (AOSP) device management and enroll RealWear devices for use at work.  
 
 ## Prerequisites
 
@@ -149,22 +147,18 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 2. When the device prompts you to, scan the token's QR code. 
 
 > [!TIP]
-> To access the token in Intune, select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, user-associated devices**. Select your enrollment profile, and then select **Tokens**.  
+> To access the token in Intune, select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, user-associated devices**. Select your enrollment profile, and then select **Token**.  
 
-3. Step through the on-screen prompts to finish enrolling and registering the device. The following apps are automatically installed for enrollment: 
+3. Step through the on-screen prompts to finish enrolling and registering the device. The following apps are automatically installed during this time and used for enrollment: 
 
-    * Microsoft Intune app or Intune Company Portal app
+    * Microsoft Intune app  
+    * Intune Company Portal app  
     * Microsoft Authenticator app  
 
 ## After enrollment 
 
 ### Update apps    
-These apps automatically install updates when they become available: 
-
-  * Microsoft Intune app  
-  * Intune Company Portal app  
-    
-When an update becomes available, the app closes and installs the update. The app must be closed completely to install the update. The app also installs available updates for Microsoft Authenticator.    
+The Microsoft Intune app automatically updates itself. When an app update becomes available, the Intune app closes and installs the update. The app must remain closed to install the update. The app also installs updates for Microsoft Authenticator and the Company Portal app.    
 
 ### Manage devices remotely  
 
