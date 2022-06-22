@@ -156,14 +156,20 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 > [!TIP]
 > To access the token in Intune, select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, user-associated devices**. Select your enrollment profile, and then select **Tokens**.  
 
-3. Follow the on-screen prompts to finish enrolling and registering the device.  
+3. Step through the on-screen prompts to finish enrolling and registering the device. The following apps are automatically installed for enrollment: 
 
-The Microsoft Intune app or Company Portal app, and the Microsoft Authenticator app, automatically install and open on the device. You'll be locked in the enrollment process until it's complete.  
+    * Microsoft Intune app or Intune Company Portal app
+    * Microsoft Authenticator app  
 
 ## After enrollment 
 
-### Update Microsoft Intune and Microsoft Authenticator  
-The Intune app automatically installs available app updates for itself and Authenticator. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
+### Update apps    
+These apps automatically install updates when they become available: 
+
+    * Microsoft Intune app 
+    * Intune Company Portal app  
+    
+When an update becomes available, the app closes and installs the update. The app must be closed completely to install the update. The app also installs available updates for Microsoft Authenticator.    
 
 ### Manage devices remotely  
 
@@ -179,8 +185,8 @@ You can take action on one device at a time. For more information about where to
 
 ## Troubleshooting  
 
-### View version of Microsoft Intune and Microsoft Authenticator apps
-To find out which version of the Microsoft Intune app or Microsoft Authenticator app is installed on a device:
+### View app versions  
+Find out which version of the Intune app or Microsoft Authenticator app is installed on a device. 
 
 1. Go to **Devices** and select the device name.    
 2. Select **Discovered apps**. 
