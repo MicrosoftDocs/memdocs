@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 04/12/2022
+ms.date: 06/21/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -56,6 +56,13 @@ To help in your readiness and planning, this page lists Windows 365 Business upd
 <!--
 ## Device management
 -->
+
+<!--***********************************************-->
+## End user experience
+
+### Transfer files from your Cloud PC by using the windows365.microsoft.com web client<!--40096523-->
+
+You'll be able to use the windows365.microsoft.com web client to transfer files to and from your Cloud PC.
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
