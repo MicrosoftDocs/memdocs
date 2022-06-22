@@ -158,7 +158,7 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 
 3. Follow the on-screen prompts to finish enrolling and registering the device.  
 
-The Microsoft Intune app and Microsoft Authenticator app automatically install and open on the device, which allows the device to be enrolled. You'll be locked in the enrollment process until it's complete.  
+The Microsoft Intune app or Company Portal app, and the Microsoft Authenticator app, automatically install and open on the device. You'll be locked in the enrollment process until it's complete.  
 
 ## After enrollment 
 
@@ -193,7 +193,7 @@ Select **Troubleshooting + Support** from the Microsoft Endpoint Manager navigat
 * Enable troubleshooting of Android (AOSP) devices the same way you can troubleshoot other user devices. 
 
 ### Share app logs with Microsoft  
-If you experience problems with enrollment or the Microsoft Intune app, you can use the Intune app to upload and send app logs to Microsoft. After you submit the logs, you'll receive an incident ID to share with your Microsoft support person.   
+If you experience problems with enrollment or access to work resources, you can share diagnostic logs with Microsoft in the Intune app or Company Portal app. After you submit the logs, you'll receive an incident ID to share with your Microsoft support person.   
 
 ## Known limitations  
 
