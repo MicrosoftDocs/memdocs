@@ -91,6 +91,8 @@ landingContent:
             url: device-supervised-mode.md
           - text: Turn on iOS/iPadOS lost mode
             url: device-lost-mode.md
+          - text: Shutdown macOS and iOS/iPadOS devices
+            url: device-shutdown.md
           - text: Erase data from macOS device
             url: device-erase.md
           - text: Disable Activation Lock
