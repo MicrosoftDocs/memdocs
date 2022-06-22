@@ -25,7 +25,11 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Cloud-attached management
 
-
+### Administration Service Management option
+<!--12952905-->
+When configuring Azure Services, a new option called **Administration Service Management** is now added for enhanced security. Selecting this option allows administrators to segment their admin privileges between cloud management gateway (CMG) and administration service. By enabling this option, access is restricted to only administration service endpoints. Configuration Management clients will authenticate to the site using Azure Active Directory.
+ 
+<!--For more information, see [xxxxxc](../../servers/blah.md). -->
 
 ## Site infrastructure
 
@@ -71,11 +75,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 
 
-### Improvements to dashboards
-<!--10024154-->
-Dashboards, such as the **Windows Servicing** and **Microsoft Edge Management** dashboards, now use the Microsoft Edge WebView2 Runtime. To use dashboards, install the WebView2 console extension, then reopen the console.
 
-For more information, see the [WebView2 console extension](../../servers/manage/admin-console-extensions.md#bkmk_notification).
 
 
 <!--## Tools-->
