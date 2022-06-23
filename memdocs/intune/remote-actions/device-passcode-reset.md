@@ -85,6 +85,10 @@ The temporary passcode must be entered on the device. The temporary passcode for
 
 Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device will prompt the user to set a new passcode in Settings.
 
+## Troubleshooting remote lock failures
+If the remote lock action failed, validate that the following have been correctly configured:
+- If the remote lock action failed on an Android (AOSP) device, confirm that you have a device passcode policy assigned to the device. If the device does not have a device passccode assigned, the remote lock action will not succeed.
+
 ## Next steps
 
 To see the status of the action you just took, in **Devices**, select **Device actions**.
