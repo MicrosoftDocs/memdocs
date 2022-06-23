@@ -118,7 +118,7 @@ The organizational unit that's granted the rights to create computers must match
 - The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. 
 - The computer must also have access to the internet and your Active Directory.
 - To increase scale and availability, you can install multiple connectors in your environment.
-- We recommend installing the Connector on a server that's not running any other Intune connectors.
+- We recommend installing the connector on a server that's not running any other Intune connectors.
 - Each connector must be able to create computer objects in any domain that you want to support.
 - The Global administrator role is a temporary requirement at the time of installation.
 
