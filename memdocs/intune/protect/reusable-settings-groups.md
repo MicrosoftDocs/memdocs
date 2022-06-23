@@ -56,8 +56,9 @@ After creating reusable groups, use an option in a profiles *Configuration setti
 
 The following are prerequisites to use reusable settings groups:
 
-- **Platforms**: Windows 10, Windows 11, and Windows Server
-- **Windows versions**: Devices must run Windows 10 20H2 or later, or Windows 11.
+- **Microsoft Defender Firewall rules**:  
+  - **Platforms**: Windows 10, Windows 11, and Windows Server
+  - **Windows versions**: Devices must run Windows 10 20H2 or later, or Windows 11.
 
 ## Create a reusable group
 
@@ -111,7 +112,7 @@ Add reusable settings groups to profiles while editing or creating the profile. 
 
 ## About policy conflicts
 
-The device configuration settings you can manage through reusable settings groups are applied by Intune the same as settings that are directly configured in a profile. This means that should conflicts or overlaps be introduced by settings from your reusable groups, you can use the same troubleshooting process to identify and resolve those conflicts.
+The device settings you can manage through reusable settings groups are applied by Intune the same as settings that are directly configured in a profile. This means that should conflicts or overlaps be introduced by settings from your reusable groups, you can use the same troubleshooting process to identify and resolve those conflicts.
 
 For more information, review guidance that might be specific to the profile types you use. For general guidance, see [Troubleshoot policies and profiles in Microsoft Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune), and [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md).
 

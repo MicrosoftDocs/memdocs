@@ -89,6 +89,8 @@ items:
       items:
         - name: Manage security policies
           href: endpoint-security-policy.md
+        - name: Use reusable settings groups
+          href: reusable-settings-groups-md
         - name: Antivirus
           href: endpoint-security-antivirus-policy.md
         - name: Disk encryption
