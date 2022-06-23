@@ -45,8 +45,7 @@ You can manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs cr
 
 ## Overview
 
-Microsoft Intune only supports managing Windows 10 or Windows 11 Enterprise multi-session with device configurations. This means only [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies aren't supported at this time.
-
+Microsoft Intune only supports managing Windows 10 or Windows 11 Enterprise multi-session with device configurations. This means only [policies defined in the Device scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs. Additionally, all multi-session configurations must be targeted to devices or device groups. User scope policies are not supported at this time.
 
 ## Prerequisites
 
@@ -82,6 +81,9 @@ The existing device configuration profile templates aren't supported for Windows
 - [VPN](../configuration/vpn-settings-configure.md#create-the-profile) - Device Tunnel only
 
 Microsoft Intune won't deliver unsupported templates to multi-session devices, and those policies appear as *Not applicable* in reports.
+
+> [!NOTE]
+> If you use co-management for Intune and Configuration Manager, in Configuration Manager, [set the workload slider](/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10 and Windows 11 clients to start the process of requesting the certificate.
 
 ### To configure policies
 
