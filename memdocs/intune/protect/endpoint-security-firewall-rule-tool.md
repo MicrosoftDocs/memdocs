@@ -29,6 +29,8 @@ ms.reviewer: laarrizz
 
 # Endpoint security firewall rule migration tool overview
 
+The script has a bug: It is looking if you have Endpoint Security policies that are "Target: MDM". If there is no existing policies like this, then the script will be stuck in an infinite loop. To make it work, you need to add either add a policy of that type or change line 46 to: while(($profileNameExist) -and ($profiles.Count -gt 0))
+
 Many organizations are moving their security configuration to Microsoft Endpoint Manager to make use of modern, cloud-based management. Endpoint security in Endpoint Manager offers rich management experiences of Windows Firewall configuration and granular firewall rule management.
 
 Because it can be challenging to move large numbers of existing Group Policies for Windows Firewall rules to Endpoint security policies in Endpoint Manager, we've created the **Endpoint security firewall rule migration tool**.
