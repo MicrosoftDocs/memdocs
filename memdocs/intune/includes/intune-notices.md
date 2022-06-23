@@ -11,7 +11,22 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.  
 
-### Plan for change: Intune is moving to support iOS/iPadOS 14 and later<!--10144130-->
+### Plan for change: Intune is moving to support macOS 11.6 and higher later this year<!--14766663-->
+
+Apple is expected to release macOS 13 (Ventura) later this year, Microsoft Intune, the Company Portal app and the Intune mobile device management agent will be moving to support macOS 11.6 (Big Sur) and later. Since the Company Portal app for iOS and macOS are a unified app, this change will occur shortly after the release of iOS/iPadOS 16.
+
+#### How does this affect you or your users?
+
+This change will affect you only if you currently manage, or plan to manage, macOS devices with Intune. This change might not affect you because your users have likely already upgraded their macOS devices. For a list of supported devices, see [macOS Big Sur is compatible with these computers](https://support.apple.com/HT211238).
+
+> [!NOTE]
+> Devices that are currently enrolled on macOS 10.15 or earlier will continue to remain enrolled even when those versions are no longer supported. New devices will be unable to enroll if they are running macOS 10.15 or earlier.
+
+#### How can you prepare?
+
+Check your Intune reporting to see what devices or users might be affected. Go to **Devices** > **All devices** and filter by macOS. You can add more columns to help identify who in your organization has devices running macOS 10.15 or earlier. Ask your users to upgrade their devices to a supported OS version.
+
+### Plan for change: Intune is moving to support iOS/iPadOS 14 and later<!--14778947-->
 
 Later this year, we expect iOS 16 to be released by Apple. Microsoft Intune, including the Intune Company Portal and Intune app protection policies (APP, also known as MAM), will require [iOS 14/iPadOS 14 and higher](../fundamentals/supported-devices-browsers.md) shortly after iOS 16’s release.
 
@@ -45,26 +60,6 @@ There is no impact to apps previously uploaded with *.intunemac* files. You can 
 
 #### How can you prepare?
 Moving forward, deploy macOS LOB apps by uploading and deploying PKG-type installer files in the Microsoft Endpoint Manager admin center. 
-
-### Plan for Change: iOS/iPadOS notifications will require minimum version 5.2203.0 of the Company Portal<!-- 14131757 -->
-
-We will be making service side updates to iOS/iPadOS notifications in Microsoft Intune's May (2205) service release that will require users to have updated to at least version 5.2203.0 of the iOS/iPadOS Company Portal (released in March 2022).
-
-#### How does this affect you or your users?
-
-There is no change in functionality for push notifications, however, users will need to update to at least version 5.2203.0 of the Company Portal. If users do not update the app prior to this change, they will not receive messages sent by your organization and will instead receive a notification telling them to update their app. Once they update their app, push notifications will resume.
-
-Scenarios that send push notifications to the Company Portal include:
-
-- [Custom notifications](../remote-actions/custom-notifications.md)
-- [Push notifications for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance)
-- [Device ownership change push notifications](../enrollment/corporate-identifiers-add.md#change-device-ownership)
-- [Delivery of S/MIME certificates for iOS to access Outlook](/exchange/clients-and-mobile-in-exchange-online/outlook-for-ios-and-android/smime-outlook-for-ios-and-android)
-- [Derived credential enrollment](../protect/derived-credentials.md)
-
-#### How can you prepare?  
-
-The required version of the Company Portal has been released, so most users have likely [updated the app](../user-help/install-a-new-version-of-the-company-portal-app.md) and will not be impacted. However, you may want to notify users of this change to ensure all users continue to receive push notifications sent by your organization.
 
 ### Plan for change: Intune is moving to support Android 8.0 and later in January 2022<!-- 10946003 -->  
 
@@ -117,18 +112,6 @@ Notify your helpdesk, if applicable, about this updated support statement. You a
 - Configure a [conditional launch setting for APP](../apps/app-protection-policy-settings-android.md#conditional-launch) with a minimum OS version requirement to warn users.
 - Use a device compliance policy for an [Android device administrator](../protect/compliance-policy-create-android.md) or [Android Enterprise](../protect/compliance-policy-create-android-for-work.md). Set the [action for noncompliance](../protect/actions-for-noncompliance.md) to send a message to users before marking them as noncompliant.
 
-### Plan for change: Enrollment restrictions will no longer be included in policy sets<!--1067033 -->
-
-With the Microsoft Intune service release (2109), you'll no longer be able to configure enrollment restrictions in policy sets. Instead, you'll need to go to **Devices** > **Policy** section > **Enrollment restrictions** to create and manage all enrollment restrictions.  
-
-#### How does this affect you or your users?
-
-If our service telemetry indicates that your existing policy sets include enrollment restrictions, we'll migrate your policies when the new restrictions are in place. To create and manage enrollment restrictions going forward, go to **Devices** > **Policy** section > **Enrollment restrictions**.
-
-#### How can you prepare?
-
-Update your documentation. Be sure to configure all new enrollment restrictions in the **Enrollment restrictions** section of Intune. We'll start migrating existing policies with the 2109 service release.
-
 ### Take action: Update to the latest version of the Android Company Portal app<!--10488117-->
 
 Starting with the October (2110) service release, Intune will no longer support new Android device administrator enrollments that use Company Portal version 5.04993.0 or earlier. The reason is a change in the integration of Intune with Samsung devices.
@@ -147,50 +130,6 @@ If applicable, inform your helpdesk in case users don't update the app before en
 
 - [How to update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md)
 - [Download the Microsoft Intune Company Portal for Android from the official Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=49140)
-
-### Plan for change: Safe boot and debugging features in Android Enterprise device restrictions will be replaced
-
-[Google announced](https://developers.google.com/android/management/release-notes#march-2021) that it has deprecated several settings in the Android Management API and will stop supporting the settings for Intune on November 1, 2021. This change affects the **Safe boot** and **Debugging features** configuration settings for Android Enterprise device restrictions. These settings will not be available after support ends. To prepare for this change, we'll add a new setting called **Developer settings** in September's (2109) service release.
-
-#### How does this affect you or your users?
-
-With the Intune October (2110) service release, **Safe boot** and **Debugging features** will be removed from the admin center UI. Those features will then be removed shortly after from Microsoft Graph API on October 31, 2021. If applicable, you should use the new setting, **Developer settings**.
-
-**Developer settings** will be available for new and existing profiles in the September (2109) service release. By default, it's set as **Not configured**. If you choose to set this to **Allow**, users will be able to access developer settings. Developer settings might include the ability to enable debugging features and/or reboot the device in **Safe boot** mode.
-
-> [!NOTE]
-> If **Developer settings** is set to **Allow**, it will override both the **Safe boot** and **Debugging features** settings.
-
-#### How can you prepare?
-
-Review the configuration settings for your Android Enterprise device restrictions. If you want users to have access to developer settings after **Safe boot** and **Debugging features** are removed, you'll need to set **Developer settings** to **Allow**. Otherwise, it will remain as **Not configured**, and users won't have access to any developer settings.
-
-### Plan for change: Announcing end of support for the existing Use Locations (network fence) feature in Intune<!-- 9492223  -->
-
-Intune is announcing end of support for the [network fence feature](../protect/create-compliance-policy.md) for use only in devices enrolled through an Android device administrator. Google has reduced support for devices enrolled through a device administrator. Intune customers provided feedback that led to a re-envisioning of location-based fencing to better meet customer needs across multiple Android enrollment options.
-
-#### How does this affect you or your users?
-
-This change will affect you only if you currently use a location-based (network fence) compliance policy, on either your trial account or your paid account. In 90 days from the date of this feature end-of-support announcement (on or around October 7, 2021 unless otherwise updated), any network location-based compliance policies targeted to devices enrolled through an Android device administrator will no longer work to provide a network fence.
-
-#### How can you prepare?
-
-No action is needed at this time. Review our [In Development](../fundamentals/in-development.md) page for advanced notice of upcoming new features. We'll follow up with more information about re-envisioned location-based services when that information is available.
-
-### Plan for change: Intune is moving to support macOS 10.15 and later with the release of macOS 12<!--10154527-->
-
-Apple is expected to release macOS 12 Monterey in the fall of 2021. Shortly after the release, Microsoft Intune, the Company Portal app, and the Intune mobile device management agent will move to support macOS 10.15 (Catalina) and later.
-
-#### How does this affect you or your users?
-
-This change will affect you only if you currently manage, or plan to manage, macOS devices by using Intune. This change might not affect you because your users have likely already upgraded their macOS devices. For a list of supported devices, see [macOS Catalina is compatible with these computers](https://support.apple.com/en-us/HT210222).
-
-> [!NOTE]
-> Devices that are currently enrolled on macOS 10.13.x and 10.14 will remain enrolled after those versions are no longer supported. New devices will be unable to enroll if they're running macOS 10.14 or earlier.
-
-#### How can you prepare?
-
-Check your Intune reporting to see what devices or users might be affected. Go to **Devices** > **All devices** and filter by macOS. You can add more columns to help identify who in your organization has devices running macOS 10.14 or earlier. Ask your users to upgrade their devices to a supported OS version before the release of macOS 12.
 
 ### Upgrade to the Microsoft Intune Management Extension<!-- 10102913 -->
 
