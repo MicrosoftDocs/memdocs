@@ -30,6 +30,8 @@ items:
       href: device-lost-mode.md
     - name: Turn on iOS/iPadOS supervised mode
       href: device-supervised-mode.md
+    - name: Shutdown macOS and iOS/iPadOS devices
+      href: device-shutdown.md
     - name: Erase macOS device
       href: device-erase.md
     - name: Disable Activation Lock
