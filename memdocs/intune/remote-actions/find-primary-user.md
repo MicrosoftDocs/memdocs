@@ -24,9 +24,7 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: 
-  - M365-identity-device-management
-  - highpri
+ms.collection: M365-identity-device-management
 ---
 
 # Find the primary user of an Intune device
