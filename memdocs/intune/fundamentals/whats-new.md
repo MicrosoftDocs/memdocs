@@ -1598,7 +1598,7 @@ We have made service side updates to custom notifications for Intune's November 
 
 #### Locations deprecated for Android device administrator<!-- 9492223 -->
 
-As [previously announced](../fundamentals/whats-new.md#plan-for-change-announcing-end-of-support-for-the-existing-use-locations-network-fence-feature-in-intune) in October 2021, support for using locations in device compliance policy for devices enrolled as Android device administrator was deprecated. Use of locations is often referred to as network fencing.
+In October 2021, support for using locations in device compliance policy for devices enrolled as Android device administrator was deprecated. Use of locations is often referred to as network fencing.
 
 For Android device administrator, the policies and dependences that relied on network fence capabilities no longer function. As previously announced, we are re-envisioning support for network fencing  and will share more information about those plans when it becomes available.
 
