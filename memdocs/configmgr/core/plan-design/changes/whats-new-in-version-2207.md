@@ -42,7 +42,7 @@ You can now approve the application workflow through email. For the application 
 
 ### Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016
 <!--9265511-->
-Configuration Manager will now utilize the Windows Server 2012 R2 and Windows Server 2016 unified solution for anti-virus and endpoint detection and response. Starting with this technical preview, devices that are targeted with Microsoft Defender for Endpoint onboarding policy will use the unified agent versus the previous Microsoft Monitoring Agent based solution (where applicable).
+Configuration Manager will now utilize the Windows Server 2012 R2 and Windows Server 2016 unified solution for anti-virus and endpoint detection and response. Devices that are targeted with Microsoft Defender for Endpoint onboarding policy will use the unified agent versus the previous Microsoft Monitoring Agent based solution (where applicable).
 
 <!--For more information, see [xxxxxc](../../servers/blah.md). -->
 
@@ -55,7 +55,11 @@ You can now add options via PowerShell to include and prefer cloud management ga
 
 ## Client management
 
+### Script execution timeout for compliance settings
+<!--14120481-->
+You can now define a **Script Execution Timeout (seconds)** when configuring client settings for compliance settings. The timeout value can be set from a minimum of 60 seconds to a maximum of 600 seconds. This new setting allows you more flexibility for configuration items when you need to run scripts that may exceed the default of 60 seconds.
 
+<!--For more information, see [xxxxxc](../../servers/blah.md). -->
 
 ## Collections
 
@@ -120,6 +124,7 @@ As previously announced, version 2207 drops support for the following features:
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):
 -->
 
+For more information on changes to the Windows PowerShell cmdlets for Configuration Manager, see [version 2207 release notes](/powershell/sccm/2207-release-notes).
 
 <!--
 
