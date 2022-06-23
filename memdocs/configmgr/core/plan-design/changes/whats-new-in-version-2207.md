@@ -17,7 +17,7 @@ ms.collection: highpri
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2207 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2010 or later. <!-- baseline only statement: When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update.--> This article summarizes the changes and new features in Configuration Manager, version 2207.
+Update 2207 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2103 or later. <!-- baseline only statement: When installing a new site, this version of Configuration Manager will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability of the in-console update.--> This article summarizes the changes and new features in Configuration Manager, version 2207.
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2207](../../servers/manage/checklist-for-installing-update-2207.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2207.md#post-update-checklist).
 
