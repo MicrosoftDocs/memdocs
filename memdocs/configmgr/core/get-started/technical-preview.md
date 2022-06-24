@@ -96,10 +96,12 @@ Install a baseline version for up to one year after its release. When you instal
 
 - **Technical preview version 2202**
 
-Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-system-center-configuration-manager-and-endpoint-protection-technical-preview).
+Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager-technical-preview).
 
+<!--
 > [!NOTE]
 > The Evaluation Center is currently unavailable. As a workaround you can download the ConfigMgr TP 2202 Baseline here : ( https://aka.ms/MECM2202TP-Baseline).
+-->
 
 ## <a name="BKMK_TPFeedback"></a> Providing feedback
 

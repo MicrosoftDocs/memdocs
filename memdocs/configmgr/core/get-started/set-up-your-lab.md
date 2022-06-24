@@ -26,7 +26,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
 -   **The lab environment uses Windows Server 2012 R2**, into which we will install Configuration Manager.  
 
-     You can download an evaluation version of Windows Server 2012 R2 from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012).  
+     You can download an evaluation version of Windows Server 2012 R2 from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2).  
 
      Consider modifying or disabling Internet Explorer Enhanced Security Configuration in order to more easily access some of the downloads referenced throughout the course of these exercises. For more information, see [Internet Explorer: Enhanced Security Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
@@ -333,10 +333,12 @@ Before you begin the installation, launch the  [Prerequisite Checker](../servers
 
 #### To download and install Configuration Manager:  
 
-1.  Navigate to the [System Center Evaluations](https://www.microsoft.com/evalcenter/evaluate-system-center-2012-configuration-manager-and-endpoint-protection) page to download the newest evaluation version of Configuration Manager.  
+1.  Navigate to the [Evaluation Center](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager) page to download the newest evaluation version of Configuration Manager.  
 
+<!--
 > [!NOTE]
 > The Evaluation Center is currently unavailable. As a workaround you can download the ConfigMgr 2203 Current Branch Eval exe here : ( https://aka.ms/MECM2203CB-Eval).
+-->
 
 2.  Decompress the download media into your predefined location.  
 
