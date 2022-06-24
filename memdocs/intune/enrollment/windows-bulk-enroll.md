@@ -70,6 +70,9 @@ Azure AD users are standard users on these devices and receive assigned Intune p
 6. Select **Enroll in Azure AD**, enter a **Bulk Token Expiry** date, and then select **Get Bulk Token**. The token validity period is 180 days.
    ![Screenshot of account management in the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-account.png)
 
+> [!NOTE]
+> Once a provisioning package is created, it can be revoked before its expiration by removing the associated package_{GUID} user account from Azure AD.
+
 7. Provide your Azure AD credentials to get a bulk token.
    ![Screenshot of signing in to the Windows Configuration Designer app](./media/windows-bulk-enroll/bulk-enroll-cred.png)
 
@@ -106,6 +109,10 @@ Provisioning is intended to be used on new Windows devices. Provisioning failure
 - Scripts run by the provisioning package are run in system context. The scripts are able to make arbitrary changes to the device file system and configurations. A malicious or bad script could put the device in a state that can only be recovered by reimaging or wiping the device.
 
 You can check for success/failure of the settings in your package in the **Provisioning-Diagnostics-Provider** Admin log in Event Viewer.
+
+> [!NOTE]
+> Bulk enrollment is considered a userless enrollment method, and because of it, only the "Default" enrollment restriction in Intune would apply during enrollment. Make sure Windows platform is allowed in the default restriction, otherwise, the enrollment will fail.
+> To check the capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](enrollment-method-capab.md).  
 
 ### Bulk enrollment with Wi-Fi 
 

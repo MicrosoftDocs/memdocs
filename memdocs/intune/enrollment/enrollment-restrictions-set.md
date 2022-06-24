@@ -21,7 +21,7 @@ ms.assetid: 9691982c-1a03-4ac1-b7c5-73087be8c5f2
 #ROBOTS:
 #audience:
 
-ms.reviewer: dagerrit
+ms.reviewer: maholdaa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -109,6 +109,9 @@ The following enrollment methods are authorized for corporate enrollment:
 - The device is registered with Windows Autopilot but isn't an MDM enrollment only option from Windows Settings.
 - The device enrolls through a [bulk provisioning package](windows-bulk-enroll.md).
 - The device enrolls through GPO, or [automatic enrollment from Configuration Manager for co-management](/configmgr/comanage/quickstart-paths#bkmk_path1).
+
+> [!NOTE]
+> Since a co-managed device enrolls in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default Intune enrollment restriction will apply to it. 
  
 Intune marks devices going through the following types of enrollments as corporate-owned. But Intune blocks devices enrolling  since they don't offer the Intune administrator per-device control, they are blocked:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
@@ -263,7 +266,9 @@ When you create a restriction, it's added to the list just above the default. Yo
 
 
 >[!NOTE]
->Enrollment restrictions are applied to users. For enrollment scenarios that are not user-driven, such as Windows Autopilot self-deploying mode, Intune only enforces the default restrictions targeted to all users.  
+>Enrollment restrictions are applied to users. For enrollment scenarios that are not user-driven such as Windows Autopilot self-deploying mode, Bulk enrollment (WCD), or Azure Virtual desktop, Intune only enforces the default restrictions targeted to all users.
+>
+>For a successful enrollment, make sure the platform is allowed in the default enrollment restriction policy.
  
 
 ## View enrollment reports

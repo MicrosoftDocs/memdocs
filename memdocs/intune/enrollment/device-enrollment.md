@@ -70,8 +70,8 @@ Enrollment options vary by operating system (OS). When selecting a method, choos
     * **No**: Devices aren't associated with a user during enrollment, which is a typical configuration for kiosk, point of sale (POS), or shared-utility devices. 
     * **Optional**: Microsoft Intune makes this setting available for you to configure on your own.   
 * MDM profile removable: Tells you if users can remove the MDM profile from an enrolled device. Options: 
-    * **Yes**: Device users cannot unenroll devices.  
-    * **No**: Device users can unenroll devices. 
+    * **Yes**: Device users can unenroll devices.  
+    * **No**: Device users cannot unenroll devices. 
     * **Configurable via policy** (Android Enterprise): There's a setting in Intune that lets you block factory resets on devices, which prevents users from unenrolling their devices, but it is not configured by default. 
 
 ### iOS/iPadOS enrollment methods 
@@ -85,11 +85,11 @@ You can use the following methods to enroll iOS/iPadOS devices in Intune:
 
 | **Method** | **Reset required** | **User affinity** | **MDM profile removable** | 
 |:---:|:---:|:---:|:---:|
-|BYOD| No| Yes | No | 
-|Device enrollment manager| No |No |No | 
+|BYOD| No| Yes | Yes | 
+|Device enrollment manager| No |No |Yes | 
 |Automated Device Enrollment| Yes | Optional | Optional|
-|Setup Assistant enrollment via USB| Yes | Optional | No| 
-|Direct enrollment via USB| No | No | No|
+|Setup Assistant enrollment via USB| Yes | Optional | Yes| 
+|Direct enrollment via USB| No | No | Yes|
 
 For more information about the iOS/iPadOS enrollment methods supported in Intune, see [Enroll iOS/iPadOS devices](ios-enroll.md).  
 
@@ -102,8 +102,8 @@ You can use the following methods to enroll macOS devices in Intune:
 
 | **Method** |  **Reset required** |  **User affinity** | **MDM profile removable** |
 |:---:|:---:|:---:|:---:|
-|BYOD| No| Yes | No | 
-|Device enrollment manager| No |No |No  | 
+|BYOD| No| Yes | Yes | 
+|Device enrollment manager| No |No |Yes  | 
 |Apple Automated Device Enrollment| Yes | Optional | Optional|
 
 For more information about the macOS enrollment methods supported in Intune, see [Set up enrollment for macOS devices](macos-enroll.md).    
@@ -121,13 +121,13 @@ You can use the following methods to enroll Windows devices in Intune:
 
 | **Method** | **Reset required** | **User affinity** | **MDM profile removable** |
 |:---:|:---:|:---:|:---:|
-|BYOD| No | Yes | No | 
-|Device enrollment manager| No |No |No |
-|Automatic enrollment via MDM | No |Yes |No | 
-|Automatic enrollment via Group Policy|No |Yes |No | 
-|Windows Autopilot |Yes |Yes |No | 
-|Bulk enrollment |No |No |No | 
-|Co-management |No |Yes |No | 
+|BYOD| No | Yes | Yes | 
+|Device enrollment manager| No |No |Yes |
+|Automatic enrollment via MDM | No |Yes |Yes | 
+|Automatic enrollment via Group Policy|No |Yes |Yes | 
+|Windows Autopilot |Yes |Yes |Yes | 
+|Bulk enrollment |No |No |Yes | 
+|Co-management |No |Yes |Yes | 
 
 For more information about the Windows enrollment methods supported in Intune, see [Enrollment methods for Windows devices ](windows-enrollment-methods.md).  
 
@@ -147,8 +147,8 @@ In the table, this data is shown in the Enrollment type column.
 
 | **Enrollment type** | **Enrollment method** | **Reset required** | **User affinity** | **MDM profile removable** | 
 |:---:|:---:|:---:|:---:|:---:|
-|Android Device Admin|User-initiated via Company Portal | No | Yes | No | 
-|Android Enterprise, personal-owned with work profile|User-initiated via Company Portal| No | Yes | No |  
+|Android Device Admin|User-initiated via Company Portal | No | Yes | Yes | 
+|Android Enterprise, personal-owned with work profile|User-initiated via Company Portal| No | Yes | Yes |  
 
 #### Corporate-owned Android devices    
 Intune supports the following device management configurations on corporate-owned devices: 
@@ -173,9 +173,9 @@ In the table, this data is shown in the Enrollment type column. You can use the 
 |:---:|:---:|:---:|:---:|:---:|
 |Android (AOSP) user-associated|QR code|Yes|Yes|Configurable via policy|
 |Android (AOSP) userless|QR code|Yes|No|Configurable via policy|  
-|Android Device Admin|DEM-initiated via Company Portal| No | No | No |
-|Android Device Admin|User-initiated via Company Portal with predeclared IMEI or serial number | No | Yes | No | 
-|Android Device Admin with Zebra Mobility Extensions|User or DEM-initiated via Company Portal| No | Yes if user-initiated; no if DEM-initiated | No | 
+|Android Device Admin|DEM-initiated via Company Portal| No | No | Yes |
+|Android Device Admin|User-initiated via Company Portal with predeclared IMEI or serial number | No | Yes |Yes | 
+|Android Device Admin with Zebra Mobility Extensions|User or DEM-initiated via Company Portal| No | Yes if user-initiated; no if DEM-initiated | Yes | 
 |Android Enterprise dedicated|NFC, token, QR code, Google zero-touch| Yes | No | Configurable via policy | 
 |Android Enterprise fully managed|NFC, token, QR code, Google zero-touch| Yes | Yes | Configurable via policy | 
 |Android Enterprise corporate-owned with work profile| NFC, token, QR code, Google zero-touch | Yes | Yes | Configurable via policy | 

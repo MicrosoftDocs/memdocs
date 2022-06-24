@@ -1,18 +1,13 @@
 ---
 title: Manually register devices with Windows Autopilot
 description: Learn how to manually add devices to Windows Autopilot.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 08/05/2021
+ms.date: 06/03/2022
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
@@ -48,6 +43,9 @@ This article provides step-by-step guidance for manual registration. For more in
 
 Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. You can also create a custom Autopilot device manager role by using [role-based access control](../intune/fundamentals/role-based-access-control.md). Autopilot device management requires only that you enable all permissions under **Enrollment programs**, except for the four token management options.
 
+> [!NOTE]
+> In both Intune Administrator and role-based access control methods, the administrative user also requires consent to use the Microsoft Intune PowerShell enterprise application. 
+
 ## Collect the hardware hash
 
 The following methods are available to harvest a hardware hash from existing devices:
@@ -78,7 +76,7 @@ Microsoft Endpoint Configuration Manager automatically collects the hardware has
 
 ### PowerShell
 
-The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows. You can use a PowerShell script ([Get-WindowsAutoPilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo)) to get a device's hardware hash and serial number. The serial number is useful for quickly seeing which device the hardware hash belongs to.
+The hardware hash for an existing device is available through Windows Management Instrumentation (WMI), as long as that device is running a supported version of Windows. You can use a PowerShell script ([Get-WindowsAutopilotInfo.ps1](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo)) to get a device's hardware hash and serial number. The serial number is useful for quickly seeing which device the hardware hash belongs to.
 
 To use this script, you can use either of the following methods:
 
@@ -94,8 +92,8 @@ To install the script directly and capture the hardware hash from the local comp
    Set-Location -Path "C:\HWID"
    $env:Path += ";C:\Program Files\WindowsPowerShell\Scripts"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-   Install-Script -Name Get-WindowsAutoPilotInfo
-   Get-WindowsAutoPilotInfo -OutputFile AutoPilotHWID.csv
+   Install-Script -Name Get-WindowsAutopilotInfo
+   Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
    ```
 
    You can run the commands remotely if both of the following are true:
@@ -109,7 +107,7 @@ To install the script directly and capture the hardware hash from the local comp
    PowerShell.exe -ExecutionPolicy Bypass
    Install-Script -name Get-WindowsAutopilotInfo -Force
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy RemoteSigned
-   Get-WindowsAutoPilotInfo -Online
+   Get-WindowsAutopilotInfo -Online
    ```
 
 3. You're prompted to sign in. An account with the Intune Administrator role is sufficient, and the device hash will then be uploaded automatically. 
@@ -123,7 +121,7 @@ To install the script directly and capture the hardware hash from the local comp
 > [!NOTE]
 > Because Intune offers free (or inexpensive) accounts that lack robust vetting, and because 4K hardware hashes contain sensitive information that only device owners should maintain, we recommend registering devices through Microsoft Endpoint Manager via a 4K hardware hash only for testing or other limited scenarios. In most cases, you should instead use the Microsoft Partner Center for Autopilot device registration.
 
-For more information about running the *Get-WindowsAutoPilotInfo.ps1* script, see the script's help by using `Get-Help Get-WindowsAutoPilotInfo`.
+For more information about running the *Get-WindowsAutopilotInfo.ps1* script, see the script's help by using `Get-Help Get-WindowsAutopilotInfo`.
 
 ### Diagnostics page hash export
 
@@ -166,7 +164,8 @@ Keep these other requirements for the CSV file in mind:
 - You can use only ANSI-format text files (not Unicode). 
 - Headers are case-sensitive. 
 
-Because of these requirements, editing an Excel file and saving it as .csv will not generate a usable file for importing into the Intune portal.
+> [!IMPORTANT]
+> Use a plain-text editor with this CSV file, like Notepad. Don't use Microsoft Excel. Because of the requirements, editing an Excel file and saving it as `.csv` won't generate a usable file for importing to Intune.
    
 When you upload a CSV file to assign a user, make sure that you assign valid User Principal Names (UPNs). If you assign an invalid UPN (that is, an incorrect username), your device might be inaccessible until you remove the invalid assignment. 
 

@@ -2,7 +2,7 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 titleSuffix: Configuration Manager
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
-ms.date: 04/07/2022
+ms.date: 05/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
@@ -29,7 +29,7 @@ For clients targeted with a Microsoft Edge deployment:
 - PowerShell [Execution Policy](/powershell/module/microsoft.powershell.core/about/about_execution_policies) can't be set to Restricted.
   - PowerShell is executed to perform the installation.
 
-- The Microsoft Edge installer and [CMPivot](../../core/servers/manage/cmpivot.md) are currently signed with the **Microsoft Code Signing PCA 2011** certificate. If you set PowerShell execution policy to **AllSigned**, then you need to make sure that devices trust this signing certificate. You can export the certificate from a computer where you've installed the Configuration Manager console. View the certificate on `"C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\CMPivot.exe"`, and then export the code signing certificate from the certification path. Then import it to the _machine_'s **Trusted Publishers** store on managed devices. You can use the process in the following blog, but make sure to export the _code signing certificate_ from the certification path: [Adding a Certificate to Trusted Publishers using Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-a-certificate-to-trusted-publishers-using-intune/ba-p/1974488).<!--CMADO-7585106, MEMDocs#1571-->
+- The Microsoft Edge installer, Attack Surface Reduction rules engine for tenant attach, and [CMPivot](../../core/servers/manage/cmpivot.md) are currently signed with the **Microsoft Code Signing PCA 2011** certificate. If you set PowerShell execution policy to **AllSigned**, then you need to make sure that devices trust this signing certificate. You can export the certificate from a computer where you've installed the Configuration Manager console. View the certificate on `"C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\CMPivot.exe"`, and then export the code signing certificate from the certification path. Then import it to the _machine_'s **Trusted Publishers** store on managed devices. You can use the process in the following blog, but make sure to export the _code signing certificate_ from the certification path: [Adding a Certificate to Trusted Publishers using Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-a-certificate-to-trusted-publishers-using-intune/ba-p/1974488).<!--CMADO-7585106, MEMDocs#1571-->
 
 [!INCLUDE [Internet endpoints for deploying Microsoft Edge](../../core/plan-design/network/includes/internet-endpoints-deploy-microsoft-edge.md)]
 

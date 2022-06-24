@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ms.reviewer: mattcall
 ---
 
@@ -35,7 +37,7 @@ The Endpoint security node groups the tools that are available through Intune th
 
 - **Review the status of all your managed devices**. Use the [All devices](#manage-devices) view where you can view device compliance from a high level. Then, drill-in to specific devices to understand which compliance policies aren't met so you can resolve them.
 
-- **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Microsoft Defender for Endpoint and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a configuration that's recommended by the relevant security teams recommend.
+- **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Microsoft Defender for Endpoint and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a configuration that's recommended by the relevant security teams.
 
 - **Manage security configurations on devices through tightly focused policies**.  Each [Endpoint security policy](#use-policies-to-manage-device-security) focuses on aspects of device security like antivirus, disk encryption, firewalls, and several areas made available through integration with Microsoft Defender for Endpoint.
 

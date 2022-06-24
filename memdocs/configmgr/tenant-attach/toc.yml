@@ -19,6 +19,8 @@ items:
     href: scripts.md
   - name: BitLocker recovery keys
     href: bitlocker-recovery-keys.md
+  - name: Software updates
+    href: software-updates.md    
 - name: CMPivot for tenant attached devices
   items:
   - name: Launch CMPivot
@@ -71,4 +73,7 @@ items:
     href: troubleshoot-scripts.md
   - name: CMPivot
     href: troubleshoot-cmpivot.md
+  - name: Software updates (preview)
+    href: troubleshoot-software-updates.md    
+
 

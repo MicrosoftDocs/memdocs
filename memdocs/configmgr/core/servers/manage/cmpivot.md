@@ -138,6 +138,8 @@ The CMPivot window contains the following elements:
 
    - The available columns vary based upon the entity and the query.  
 
+   - The color saturation of the data in the results table or chart indicates if the data is live or from the last hardware inventory scan stored in the site database.  For example, black is real-time data from an online client whereas grey is cached data.
+
    - Select a column name to sort the results by that property.  
 
    - Right-click on any column name to group the results by the same information in that column, or sort the results.  

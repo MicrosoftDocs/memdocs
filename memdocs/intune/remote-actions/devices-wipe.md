@@ -120,8 +120,9 @@ The following tables describe what data is removed, and the effect of the **Reti
 Removing company data from an Android personally-owned work profile device removes all data, apps, and settings in the work profile on that device. The device is retired from management with Intune. Wipe is not supported for Android personally-owned work profiles.
 
 ### Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices
+ - The **Wipe** action is supported on Android Enterprise Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
 
-You can only wipe Dedicated, Fully Managed, and Corporate-Owned Work Profile devices.
+ - The **Retire** action is supported on Android Enterprise Corporate-Owned Work Profile devices. When the **Retire** action is used on Android Enterprise Corporate-Owned Work Profile devices, the device is unenrolled from Intune management. The work profile is removed along with all corporate data and applications, but all the personal data and applications remain on the device.
 
 
 ### macOS
@@ -172,7 +173,7 @@ Device owners can manually un-enroll their devices as explained in the following
 
 ## Delete devices from the Intune portal
 
-If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the console.
+If you want to remove devices from the Intune portal, you can delete them from the specific device pane. In order to remove company data, the recommended steps are to first issue a wipe or retire action and then delete the device.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.
