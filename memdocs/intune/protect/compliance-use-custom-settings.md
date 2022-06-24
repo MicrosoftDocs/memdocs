@@ -70,7 +70,7 @@ Before starting:
 
 2. Prepare a JSON file that you’ll upload while creating the policy. See [Custom compliance JSON files](../protect/compliance-custom-json.md).
 
-3. When both the script and JSON are ready, start with your normal procedure to create a compliance policy, and on the *Configuration settings* page, configure custom compliance by following the steps in the procedure below.
+3. When both the script and JSON are ready, start with your normal procedure to create a compliance policy, and on the *Configuration settings* page, configure custom compliance by following the steps in the following procedure.
 
 ### Configure custom compliance settings
 
