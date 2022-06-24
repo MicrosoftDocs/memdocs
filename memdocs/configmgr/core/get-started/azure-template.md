@@ -2,7 +2,7 @@
 title: Create a lab in Azure
 titleSuffix: Configuration Manager
 description: Automate the creation of a Configuration Manager technical preview lab or current branch evaluation lab using Azure templates
-ms.date: 03/14/2022
+ms.date: 06/20/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -17,6 +17,8 @@ ms.localizationpriority: medium
 *Applies to: Configuration Manager (current branch, technical preview branch)*
 
 <!--3556017-->
+> [!Important]
+> As of June 20, 2022, there is a known issue with the Azure templates for lab environments. We are working on resolving the issue and we will update this message when it's resolved. For more information, see [known issues](#known-issues). <!--icm 314312504-->
 
 This guide describes how to build a Configuration Manager lab environment in Microsoft Azure. It uses Azure templates to simplify and automate the creation of a lab using Azure resources. Two Azure templates are provided: 
 
@@ -151,3 +153,19 @@ The prefix that you specified in the deployment template is the VM name prefix. 
 - Only for Configuration Manager current branch evaluation template
 - Windows 10
 - Configuration Manager client
+
+
+## Known issues
+<!--icm 314312504-->
+As of June 20, 2022, there is a known issue with the Azure templates for lab environments. We are working on resolving the issue and we will update this message when it's resolved. This issue occurs during deployment of the template and the following error message is displayed:
+
+```text
+{
+"status": "Failed",
+"error": {
+"code": "VMExtensionProvisioningError",
+"message": "VM has reported a failure when processing extension 'WorkFlow'. Error message: \"DSC Configuration 'Configuration' completed with error(s). Following are the first few: Failed to create an object of PowerShell class SetupDomain. The SendConfigurationApply function did not succeed. LCM failed to start desired state configuration manually.\"\r\n\r\nMore information on troubleshooting is available at https://aka.ms/VMExtensionDSCWindowsTroubleshoot "
+}
+}
+
+```
