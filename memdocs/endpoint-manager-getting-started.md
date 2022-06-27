@@ -14,7 +14,6 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
-ms.custom: intro-get-started
 
 # optional metadata
 
@@ -24,7 +23,7 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started
+ms.custom: intro-get-started
 ms.collection:
   - M365-identity-device-management
   - highpri
