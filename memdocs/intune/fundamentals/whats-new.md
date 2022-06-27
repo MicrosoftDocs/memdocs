@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/10/2022
+ms.date: 06/27/2022
 
 ms.topic: conceptual
 ms.service: microsoft-intune
@@ -60,6 +60,505 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of June 29, 2022 (Service release 2206)
+
+### App management
+
+#### Enterprise feedback policies for Web Company Portal<!-- 9846764 -->
+Feedback settings are now available to address M365 enterprise feedback policies for the currently logged in user via the [Microsoft 365 Apps admin center](https://config.office.com/). The settings are used to determine whether feedback can be enabled or must be disabled for a user in the Web Company Portal. For related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
+
+#### App Protection Policies with Android Enterprise dedicated devices and Android (AOSP) devices<!-- 13819227 -->
+Intune-managed Android Enterprise dedicated devices enrolled with Azure Active Directory (Azure AD) shared mode and Android (AOSP) devices can now receive app protection policies and can be targeted separately from other Android device types. For related information, see [MAM policies with COSU devices](../apps/apps-add-android-for-work.md#mam-policies-with-cosu-devices). For more information about Android Enterprise dedicated devices and Android (AOSP), see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
+
+### Device security
+
+#### Users assigned the Endpoint Security Manager admin role can modify Mobile Threat Defense connector settings<!-- 14179885 -->
+We’ve updated the permissions of the built-in [Endpoint Security Manager](../fundamentals/role-based-access-control.md#built-in-roles) admin role. The role now has the **Modify** permission for the **Mobile Threat Defense** category set to **Yes**. With this change, users assigned this role have permission to change the [Mobile Threat Defense connector](../protect/mtd-connector-enable.md) (MTD connector) settings for your Tenant. Previously, this permission was set to *No*.
+
+If you missed the previous notice about this coming change, now is a good time to review the users that are assigned the *Endpoint Security Manager* role for your tenant. If any should not should not have permissions to edit the MTD connector settings, update their role permissions or [create a custom role](../fundamentals/create-custom-role.md) that includes only *Read* permissions for Mobile Threat Defense.
+
+View the full list of permissions for the built-in [Endpoint Security Manager role](../protect/endpoint-security.md#permissions-granted-by-the-endpoint-security-manager-role).
+
+#### Improved certificate profile support for Android Enterprise Fully Managed devices<!-- 14217083  -->
+We’ve improved our [PKCS](../protect/certificates-pfx-configure.md) and [SCEP](../protect/certificates-profile-scep.md) certificate profile support for Android Enterprise Fully Managed (Device Owner) devices. You can now use the Intune device ID variable, **CN={{DeviceID}}**, as the subject alternative name (SAN) in your certificates for these devices. 
+
+### Device configuration
+
+#### New settings for DFCI profiles on Windows 10/11 devices<!-- 6039135 -->
+On Windows 10/11 devices, you can create a Device Firmware Configuration Interface (DFCI) profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+
+DFCI profiles lets Intune pass management commands to UEFI (Unified Extensible Firmware Interface) using the DFCI firmware layer. This additional firmware layer makes configuration more resilient to malicious attacks. DFCI also limits end users' control over the BIOS by graying out managed settings.
+
+There are new settings you can configure:
+- **Microphones and Speakers**:
+  - Microphones
+
+- **Radios**:
+  - Bluetooth
+  - Wi-Fi
+
+- **Ports**:
+  - USB type A
+
+- **Wake settings**:
+  - Wake on LAN
+  - Wake on power
+
+For more information, see the following resources:
+- [Use Device Firmware Configuration Interface profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [Device Firmware Configuration Interface (DFCI) profile settings in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows-settings.md)
+
+Applies to:
+- Windows 10/11
+
+#### Add custom support information to Android Enterprise devices<!-- 7913128 -->
+On Android Enterprise devices, you can create a device restrictions configuration profile that manages device settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type > **Custom support information**).
+
+There are some new settings you can configure:
+- **Short support message**: When users try to change a managed setting, you can add a short message that's shown to users in a system dialog window.
+- **Long support message**: You can add a long message that's shown in **Settings** > **Security** > **Device admin apps** > **Device Policy**.
+
+By default, the OEM default messages are shown. When you deploy a custom message, the Intune default message is also deployed. If you don't enter a custom message for the device's default language, then the Intune default message is shown. 
+
+For example, you deploy a custom message for English and French. The user changes the device's default language to Spanish. Since you didn't deploy a custom message to the Spanish language, the Intune default message is shown.
+
+The Intune default message is translated for all languages in the Endpoint Manger admin center (**Settings** > **Language + Region**). The **Language** setting value determines the default language used by Intune. By default, it's set to **English**.
+
+In the policy, you can customize the messages for the following languages:
+- Czech
+- German
+- English (United States)
+- Spanish (Spain)
+- French (France)
+- Hungarian
+- Indonesian
+- Italian
+- Japanese
+- Korean
+- Dutch
+- Polish
+- Portuguese (Brazil)
+- Portuguese (Portugal)
+- Russian
+- Swedish
+- Turkish
+- Chinese (Simplified)
+- Chinese (Traditional)
+
+For more information on these settings and the other settings you can configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+- Android 7.0 and newer
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+- Android Enterprise corporate owned work profile (COPE)
+
+#### Create and deploy Wi-Fi profiles to Android AOSP devices<!-- 8506299 -->
+You create configure and deploy a Wi-Fi profile to your Android AOSP devices.
+
+For more information on these settings, go to [Add Wi-Fi settings for Android (AOSP) devices in Microsoft Intune](../configuration/wi-fi-settings-android-aosp.md).
+
+Applies to:
+- Android (AOSP)
+
+#### Settings catalog is generally available (GA) for Windows and macOS devices<!-- 9558656 -->
+The settings catalog is generally available (GA). For more information, go to:
+- [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
+- [Tasks you can complete using the Settings Catalog in Intune](../configuration/settings-catalog-common-features.md)
+
+Applies to:
+- macOS
+- Windows 10/11
+
+#### Migrate feature in Group policy analytics supports sovereign clouds<!-- 13927582 -->
+Using Group Policy analytics, you can import your on-premises GPOs, and create a settings catalog policy using these GPOs. Previously, this Migrate feature wasn't supported on Sovereign Clouds.
+
+The Migrate feature is now supported on Sovereign Clouds.
+
+For more information on these features, go to:
+- [Analyze your on-premises GPOs using Group Policy analytics in Microsoft Endpoint Manager](../configuration/group-policy-analytics.md)
+- [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager](../configuration/group-policy-analytics-migrate.md)
+
+#### iOS/iPadOS platform is in Settings Catalog <!-- 13934066 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. The iOS/iPadOS platform and some settings are now available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
+
+New settings include:
+
+**Accounts > Caldav**:
+
+- Card DAV Account Description
+- Card DAV Host Name
+- Card DAV Password
+- Card DAV Port
+- Card DAV Principal URL
+- Card DAV Use SSL
+- Card DAV Username
+
+**Accounts > Carddav**:
+
+- Card DAV Account Description
+- Card DAV Host Name
+- Card DAV Password
+- Card DAV Port
+- Card DAV Principal URL
+- Card DAV Use SSL
+- Card DAV Username
+
+**AirPlay**:
+
+- Allow List
+- Password
+
+- **Managed Devices > Profile Removal Password**:
+
+- Removal Password
+
+**Proxies > Global HTTP Proxy**:
+
+- Proxy Captive Login Allowed
+- Proxy PAC Fallback Allowed
+- Proxy PAC URL
+- Proxy Password
+- Proxy Server
+- Proxy Server Port
+- Proxy Type
+- Proxy Username
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**Networking > Domains**:
+
+- Email Domains
+
+**Printing > Air Print**:
+
+- Printers
+- IP Address
+- Resource Path
+
+**Restrictions**:
+
+- Allow Activity Continuation
+- Allow Adding Game Center Friends
+- Allow Air Drop
+- Allow Auto Unlock
+- Allow Camera
+- Allow Cloud Photo Library
+- Allow Cloud Private Relay
+- Allow Definition Lookup
+- Allow Device Name Modification
+- Allow Diagnostic Submission
+- Allow Dictation
+- Allow Erase Content And Settings
+- Allow Fingerprint For Unlock
+- Allow Game Center
+- Allow Multiplayer Gaming
+- Allow Music Service
+- Allow Passcode Modification
+- Allow Password Auto Fill
+- Allow Password Proximity Requests
+- Allow Password Sharing
+- Allow Remote Screen Observation
+- Allow Screen Shot
+- Allow Spotlight Internet Results
+- Allow Wallpaper Modification
+- Enforced Software Update Delay
+- Force Classroom Automatically Join Classes
+- Force Classroom Request Permission To Leave Classes
+- Force Classroom Unprompted App And Device Lock
+- Force Classroom Unprompted Screen Observation
+- Force Delayed Software Updates
+- Safari Allow Autofill
+
+**Security > Passcode**:
+
+- Allow Simple Passcode
+- Expiration In Days
+- Force Pin
+- Lock After Inactivity Minutes
+- Max Failed Attempts
+- Max Grace Period
+- Min Complex Chars
+- Min Length
+- Passcode History
+- Require Alphanumeric Passcode
+
+**User Experience > Notifications**:
+
+- Alert Type
+- Badges Enabled
+- Bundle Identifier
+- Critical Alert Enabled
+- Notifications Enabled
+- Show In Lock Screen
+- Show In Notification Center
+- Sounds Enabled
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+- iOS/iPadOS
+
+#### Use TEAP authentication in wired networks device configuration profiles for Windows devices<!-- 14042602 -->
+On Windows devices, you can create a **Wired Networks** device configuration profile that supports the Extensible Authentication Protocol (EAP) (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Wired networks** for profile type).
+
+When you create the profile, you can use the Tunnel Extensible Authentication Protocol (TEAP).
+
+For more information on wired networks, go to [Add and use wired networks settings on your macOS and Windows devices in Microsoft Intune](../configuration/wired-networks-configure.md).
+
+Applies to:
+- Windows 11
+- Windows 10
+
+#### Unlock the work profile on Android Enterprise corporate owned work profile (COPE) devices after a set time using password, PIN, or pattern<!-- 14133548 -->
+
+On Android Enterprise devices, you can create a device restrictions configuration profile that manages device settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type).
+
+On Android Enterprise COPE devices, you can configure the **Work profile password** > **Required unlock frequency** setting. Use this setting to select how long users have before they're required to unlock the work profile using a strong authentication method.
+
+For more information on this setting, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+- Android 8.0 and newer
+- Android Enterprise corporate owned work profile (COPE)
+
+#### New macOS settings in Settings Catalog <!-- 14158964 -->
+The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog** for profile type):
+
+**Accounts > Caldav**:
+
+- Cal DAV Account Description
+- Cal DAV Host Name
+- Cal DAV Password
+- Cal DAV Port
+- Cal DAV Principal URL
+- Cal DAV Use SSL
+- Cal DAV Username
+
+**Accounts > Carddav**:
+
+- Card DAV Account Description
+- Card DAV Host Name
+- Card DAV Password
+- Card DAV Port
+- Card DAV Principal URL
+- Card DAV Use SSL
+- Card DAV Username
+
+**User Experience > Dock**:
+
+- Allow Dock Fixup Override
+- Autohide
+- Autohide Immutable
+- Contents Immutable
+- Double Click Behavior
+- Double Click Behavior Immutable
+- Large Size
+- Launch Animation
+- Launch Animation Immutable
+- Magnification
+- Magnify Immutable
+- Magsize Immutable
+- MCX Dock Special Folders
+- Minimize Effect
+- Minimize Effect Immutable
+- Minimize To Application
+- Minimize To Application Immutable
+- Orientation
+- Persistent Apps
+- Position Immutable
+- Show Process Indicators
+- Show Indicators Immutable
+- Show Recents
+- Show Recents Immutable
+- Size Immutable
+- Static Apps
+- Static Only
+- Static Others
+- Tile Size
+- Window Tabbing
+- Window Tabbing Immutable
+
+**System Configuration > Energy Saver**:
+
+- Desktop Schedule
+- Repeating Power Off
+- Repeating Power On
+- Desktop AC Power
+- Portable Battery Power
+- Portable AC Power
+- Destroy FV Key On Standby
+- Sleep Disabled
+
+**System Configuration > System Logging**:
+
+- Enable Private Data
+
+**System Configuration > Time Server**:
+
+- Time Server
+- Time Zone
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**Security > Passcode**:
+
+- Allow Simple Passcode
+- Change At Next Auth
+- Expiration In Days
+- Force Pin
+- Lock After Inactivity Minutes
+- Max Failed Attempts
+- Max Grace Period
+- Min Complex Chars
+- Min Length
+- Minutes Until Failed Login Reset
+- Passcode History
+- Require Alphanumeric Passcode
+
+There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
+
+Applies to:
+- macOS
+
+#### New Microsoft Office and Microsoft Outlook preference settings in the macOS Settings Catalog <!-- 14193331 -->
+The Settings Catalog supports preference settings for Microsoft Office and Microsoft Outlook (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type). 
+
+The following settings are available:
+
+**Microsoft Office > Microsoft Office**:
+
+- Allow experiences and functionality that analyzes user content
+- Allow experiences and functionality that downloads user content
+- Allow macros to modify Visual Basic projects
+- Allow optional connected experiences
+- Allow Visual Basic macros to use system APIs
+- Background accessibility checking
+- Default to local files for open - save
+- Diagnostic data level
+- Disable cloud fonts
+- Disable third-party store add-in catalog
+- Disable user surveys
+- Enable automatic sign-in
+- Prevent all Visual Basic macros from executing
+- Prevent Visual Basic macros from using external dynamic libraries
+- Prevent Visual Basic macros from using legacy MacScript
+- Prevent Visual Basic macros from using pipes to communicate
+- Show Template Gallery on app launch
+- Show Whats New dialog
+- Visual Basic macro policy
+
+**Microsoft Office > Microsoft Outlook**:
+
+- Allow S - MIME certificates without a matching email address
+- Allowed Email Domains
+- Default domain name
+- Default weather location
+- Disable 'Do Not Forward' options
+- Disable automatic updating of weather location
+- Disable email signatures
+- Disable export to OLM files
+- Disable import from OLM and PST files
+- Disable Junk settings
+- Disable Microsoft 365 encryption options
+- Disable Microsoft Teams meeting support
+- Disable S - MIME
+- Disable Skype for Business meeting support
+- Download embedded images
+- Enable New Outlook
+- Hide On My Computer folders
+- Hide the 'Get started with Outlook' control in the task pane
+- Hide the 'Personalize the new Outlook' dialog
+- Set the order in which S - MIME certificates are considered
+- Set theme
+- Specify first day of the week
+- Trust Office 365 autodiscover redirects
+- Use domain-based autodiscover instead of Office 365
+
+For more information about the Settings Catalog, go to:
+
+- [Tasks you can complete using the Settings Catalog in Intune](../configuration/settings-catalog-common-features.md)
+- [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md)
+
+For more information about Microsoft Office and Outlook settings you can configure, go to:
+
+- [Use preferences to manage privacy controls for Office for Mac - Deploy Office](/deployoffice/privacy/mac-privacy-preferences#preference-setting-for-connected-experiences-that-download-online-content).
+- [Set preferences for Outlook for Mac - Deploy Office](/deployoffice/mac/preferences-outlook)
+
+Applies to:
+- macOS
+
+### Device management
+
+#### Remotely restart and shut down macOS device<!-- 12472418 -->
+You'll be able to remotely restart or shutdown a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
+
+For more information, see [Restart devices with Microsoft Intune](../remote-actions/device-restart.md). 
+
+#### Additional Remote actions for Android (AOSP) Corporate devices<!-- 8504019 -->
+For Android Open Source Project (AOSP) Corporate devices, you can soon leverage additional remote actions from the Microsoft Endpoint Manager admin center - Reboot and Remote lock. 
+
+For information about these features, see:
+ - [Remotely restart devices with Intune](../remote-actions/device-restart.md)
+ - [Remotely lock devices with Intune](../remote-actions/device-remote-lock.md).
+
+Applies to:
+- Android Open Source Project (AOSP)
+
+#### User configuration support for  Windows 11 multi-session VMs is in public preview. <!-- 7231329 -->
+
+You'll be able to:
+Configure user scope policies using **Settings catalog** and assign to groups of users
+Configure user certificates and assign to users
+Configure PowerShell scripts to install in the user context and assign to users
+
+Applies to: 
+ - Windows 11
+
+[!Note]: User support for Windows 10 multi-session builds will be available later this year.
+
+For more information, go to
+[Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
+
+#### View a managed device's group membership<!-- 4100067 -->
+In the monitor section of the **Devices** workload of Intune, you can view the group membership of all AAD groups for a managed device. You can select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **Monitor** > *select a device* > **Group Membership**. For more information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
+
+#### Cleaner view of certificate details when viewing certificate reports<!-- 13316515 -->
+We’ve changed what Intune displays when you view certificate details for devices and certificate profiles. To view the report, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to > **Devices** > **Monitor** > **Certificates**.
+
+With the improved reporting view, Intune displays information for the following:
+
+- Valid certificates
+- Certificates that were revoked within the last 30 days
+- Certificates that expired within the last 30 days
+
+The report no longer displays details for certificates that are not valid or that are no longer on a device.
+
+### Device enrollment
+
+### Utilize bootstrap tokens on macOS devices <!-- 12693392 -->
+Bootstrap token support, previously in public preview, is now generally available to all Microsoft Intune customers, including GCC High and Microsoft Azure Government Cloud tenants. Intune supports the use of bootstrap tokens on enrolled devices running macOS, version 10.15 or later.
+
+Bootstrap tokens allow for non-admin users to have increased MDM permissions, and perform specific software functions on behalf of the IT admin.  Bootstrap tokens is supported on:  
+
+- Supervised devices (in Intune, that's all user-approved enrollments)  
+- Devices enrolled in Intune via Apple automated device enrollment   
+
+For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md#boostrap-tokens-preview).
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 14469921, 14645753 -->
+The following protected apps are now available for Microsoft Intune:
+
+- Condeco by Condeco Limited
+- RICOH Spaces by Ricoh Digital Services
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of June 6, 2022  
 
