@@ -23,7 +23,9 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: intro-get-started
+ms.custom: 
+  - get-started
+  - intro-get-started
 ms.collection:
   - M365-identity-device-management
   - highpri
