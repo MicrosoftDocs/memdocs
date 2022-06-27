@@ -12,7 +12,8 @@ ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
+ms.prod: Endpoint Manager
+ms.technology: configmgr-core
 ms.assetid: 
 
 # optional metadata
@@ -23,7 +24,9 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started
+ms.custom: 
+  - get-started
+  - intro-overview
 ms.collection:
   - M365-identity-device-management
   - highpri

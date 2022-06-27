@@ -12,6 +12,7 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
+ms.custom: intro-overview
 
 # optional metadata
 

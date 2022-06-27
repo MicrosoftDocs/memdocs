@@ -14,6 +14,7 @@ ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.technology:
 ms.assetid: 
+ms.custom: intro-get-started
 
 # optional metadata
 
