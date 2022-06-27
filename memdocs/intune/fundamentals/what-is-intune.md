@@ -12,8 +12,9 @@ ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.custom: intro-overview
-
+ms.custom: 
+  - intro-overview
+  - get-started
 # optional metadata
 
 #ROBOTS:
@@ -23,7 +24,6 @@ ms.reviewer: pmay
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started
 ms.collection: 
   - M365-identity-device-management
   - highpri
