@@ -548,7 +548,7 @@ Bootstrap tokens allow for non-admin users to have increased MDM permissions, an
 - Supervised devices (in Intune, that's all user-approved enrollments)  
 - Devices enrolled in Intune via Apple automated device enrollment   
 
-For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md#bootstrap-tokens-preview).
+For more information about how bootstrap tokens work with Intune, see [Set up enrollment for macOS devices](../enrollment/macos-enroll.md#bootstrap-tokens).
 
 ### Intune apps
 
