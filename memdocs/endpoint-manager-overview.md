@@ -12,8 +12,6 @@ ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.prod: Endpoint Manager
-ms.technology: configmgr-core
 ms.assetid: 
 
 # optional metadata
