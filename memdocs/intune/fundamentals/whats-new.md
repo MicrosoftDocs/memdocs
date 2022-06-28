@@ -347,8 +347,8 @@ The Settings Catalog has new macOS settings you can configure (**Devices** > **C
 **User Experience > Dock**:
 
 - Allow Dock Fixup Override
-- Autohide
-- Autohide Immutable
+- Auto Hide
+- Auto Hide Immutable
 - Contents Immutable
 - Double Click Behavior
 - Double Click Behavior Immutable
@@ -356,18 +356,19 @@ The Settings Catalog has new macOS settings you can configure (**Devices** > **C
 - Launch Animation
 - Launch Animation Immutable
 - Magnification
+- Magnification Size Immutable
 - Magnify Immutable
-- Magsize Immutable
 - MCX Dock Special Folders
 - Minimize Effect
 - Minimize Effect Immutable
+- Minimize Into Application Immutable
 - Minimize To Application
-- Minimize To Application Immutable
 - Orientation
 - Persistent Apps
+- Persistent Others
 - Position Immutable
-- Show Process Indicators
 - Show Indicators Immutable
+- Show Process Indicators
 - Show Recents
 - Show Recents Immutable
 - Size Immutable
@@ -380,13 +381,11 @@ The Settings Catalog has new macOS settings you can configure (**Devices** > **C
 
 **System Configuration > Energy Saver**:
 
+- Desktop Power
 - Desktop Schedule
-- Repeating Power Off
-- Repeating Power On
-- Desktop AC Power
-- Portable Battery Power
-- Portable AC Power
 - Destroy FV Key On Standby
+- Laptop Battery Power
+- Laptop Power
 - Sleep Disabled
 
 **System Configuration > System Logging**:
@@ -404,15 +403,15 @@ The following settings are also in Settings Catalog. Previously, they were only 
 
 - Allow Simple Passcode
 - Change At Next Auth
-- Expiration In Days
-- Force Pin
-- Lock After Inactivity Minutes
+- Force PIN
 - Max Failed Attempts
 - Max Grace Period
-- Min Complex Chars
+- Max Inactivity
+- Max PIN Age In Days
+- Min Complex Characters
 - Min Length
 - Minutes Until Failed Login Reset
-- Passcode History
+- PIN History
 - Require Alphanumeric Passcode
 
 There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
