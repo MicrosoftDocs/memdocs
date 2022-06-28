@@ -1,10 +1,6 @@
 {
     "redirections": [
         {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 6eb68332c3e4ee118a827977ffd0c81928b19d63
             "source_path": "memdocs/intune/user-help/your-device-is-noncompliant-cant-evaluate.md",
             "redirect_url": "/mem/intune/user-help/",
             "redirect_document_id": false
@@ -17,11 +13,8 @@
         {
             "source_path": "memdocs/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md",
             "redirect_url": "/mem/intune/user-help/use-managed-devices-to-get-work-done",
-<<<<<<< HEAD
-=======
-=======
-
->>>>>>> 6eb68332c3e4ee118a827977ffd0c81928b19d63
+        }, 
+        {
             "source_path": "memdocs/intune/user-help/how-to-set-the-period-before-your-android-device-is-locked.md",
             "redirect_url": "/mem/intune/user-help/set-the-amount-of-time-before-your-device-is-locked-android",
             "redirect_document_id": false
@@ -34,11 +27,6 @@
         {
             "source_path": "memdocs/intune/user-help/how-to-encrypt-your-windows-device.md",
             "redirect_url": "https://support.microsoft.com/windows/turn-on-device-encryption-0c453637-bc88-5f74-5105-741561aae838",
-<<<<<<< HEAD
->>>>>>> fa27d3242f38d12bb577e00d2270f89d5160d479
-=======
-
->>>>>>> 6eb68332c3e4ee118a827977ffd0c81928b19d63
             "redirect_document_id": false
         }, 
         {
