@@ -103,6 +103,9 @@ For more information on the Intune feature, see [Create a device profile in Micr
 > 
 > When you switch the device configuration workload, it also includes policies for the Windows Information Protection feature. Only policies from Intune will apply once the Device Configuration workload is moved to Intune.<!-- 4184095 -->
 
+> [!NOTE]
+> In order to tattoo remove Endpoint protection settings, Device Configuration workload also needs to be switched. 
+
 ## Office Click-to-Run apps
 
 <!--1357841-->

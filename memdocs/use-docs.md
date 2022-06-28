@@ -116,7 +116,7 @@ Use GitHub Issues to submit the following types of feedback:
 If you create an issue for something not related to docs, Microsoft will close the issue and redirect you to a better feedback channel. For example:
 
 - Product feedback for [Configuration Manager](configmgr/core/understand/product-feedback.md) or [Intune](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472)
-- [Product questions](/answers/products/mem)
+- [Product questions](/answers/products/enterprise-mobility-security)
 - Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Endpoint Manager](get-support.md)
 
 To share feedback on the fundamental docs.microsoft.com platform, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors.
@@ -141,7 +141,7 @@ To receive notifications when content changes in the documentation library, use 
         > [!NOTE]
         > The above RSS feed URL example includes the `&locale=en-us` variable. The `locale` variable is required, but you can change it to another supported locale. For example, `&locale=ja-jp`.
 
-    - Search for any Configuration Manager article about [BitLocker](/search/index?scope=ConfigMgr&search=BitLocker)
+    - Search for any Configuration Manager article about [BitLocker](/search/?search=BitLocker&scope=ConfigMgr)
 
     > [!NOTE]
     > Use other keywords or the Docs search filters to further refine your search query.
@@ -159,7 +159,7 @@ To receive notifications when content changes in the documentation library, use 
 
 ## Contribute
 
-The Microsoft Endpoint Manager documentation library, like most content on docs.microsoft.com, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see the [Contributor Guide](/contribute). The only prerequisite is to create a [GitHub account](https://github.com/join).
+The Microsoft Endpoint Manager documentation library, like most content on docs.microsoft.com, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see the [Contributor Guide](/contribute/). The only prerequisite is to create a [GitHub account](https://github.com/join).
 
 ### Basic steps to contribute
 

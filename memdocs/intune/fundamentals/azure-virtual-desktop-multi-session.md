@@ -58,6 +58,7 @@ User configuration support in Microsoft Intune for Windows 11 multi-session VMs 
 > [!NOTE]
 > User configuration support for Windows 10 multi-session builds will be available later this year.
 
+
 ## Prerequisites
 
 This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, which are:
@@ -92,6 +93,9 @@ The existing device configuration profile templates aren't supported for Windows
 - [VPN](../configuration/vpn-settings-configure.md#create-the-profile) - Device Tunnel only
 
 Microsoft Intune won't deliver unsupported templates to multi-session devices, and those policies appear as *Not applicable* in reports.
+
+> [!NOTE]
+> If you use co-management for Intune and Configuration Manager, in Configuration Manager, [set the workload slider](/configmgr/comanage/how-to-switch-workloads) for Resource Access Policies to **Intune** or **Pilot Intune**. This setting allows Windows 10 and Windows 11 clients to start the process of requesting the certificate.
 
 ### To configure policies
 
