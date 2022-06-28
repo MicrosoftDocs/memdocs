@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/18/2022
+ms.date: 06/21/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -60,17 +60,20 @@ This article describes the settings you can configure.
   - **Enable**: Caches user credentials when entered the first time users connect to the network. Cached credentials are used for future connections, and users don't need to reenter them.
   - **Disable**: User credentials aren't remembered or cached. When users connect to the network, users must enter their credentials every time.
 
-- **Authentication period**: Enter the number of seconds devices must wait after trying to authenticate, from 1-3600. If the device doesn't connect in the time you enter, then authentication fails. If you leave this value empty or blank, then `18` seconds is used.
+- **Authentication period**: Enter the number of seconds devices must wait after trying to authenticate, from 1-3600. If the device doesn't connect in the time you enter, then authentication fails. If you leave this value empty or blank, then `18` seconds are used.
 
 - **Authentication retry delay period**: Enter the number of seconds between a failed authentication attempt and the next authentication attempt, from 1-3600. If you leave this value empty or blank, then `1` second is used.
 
-- **Start period**: Enter the number of seconds to wait before sending an EAPOL-Start message, from 1-3600. If you leave this value empty or blank, then `5` seconds is used.
+- **Start period**: Enter the number of seconds to wait before sending an EAPOL-Start message, from 1-3600. If you leave this value empty or blank, then `5` seconds are used.
 
 - **Maximum EAPOL-start**: Enter the number of EAPOL-Start messages, from 1 and 100. If you leave this value empty or blank, then a maximum of `3` messages are sent.
 
 - **Maximum authentication failures**: Enter the maximum number of authentication failures for this set of credentials to authenticate, from 1-100. If you leave this value empty or blank, then `1` attempt is used.
 
 - **802.1x**: When set to **Enforce**, the automatic configuration service for wired networks (Wired AutoConfig) requires using 802.1X for port authentication. When set to **Do not enforce** (default), the Wired AutoConfig service doesn't require using 802.1X for port authentication.
+
+  > [!WARNING]
+  > When set to **Enforce**, make sure your configuration settings in the policy are correct and match your network settings. If the policy settings don't match your network settings, then internet access is blocked on the device. The device can't connect to the internet to get an updated policy version. To get internet access again, you have to manually remove the policy from the device.
 
 - **Block period (minutes)**: After a failed authentication attempt, the OS automatically tries to authenticate again. Enter the number of minutes to block these automatic authentication attempts, from 0-1440. If you leave this value empty or blank, then the OS might automatically try to authenticate again.
 
@@ -153,6 +156,38 @@ This article describes the settings you can configure.
         For more information on imported PFX certificates, see [Configure and use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md).
 
         - **Identity privacy (outer identity)**: Enter the text sent in response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
+
+      - **Derived credential**: Select an existing certificate profile that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+
+  - **Tunnel EAP (TEAP)**: Also enter:
+
+    - **Server trust** - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this network.  
+
+    - **Client Authentication** - **Primary authentication method**: Select the primary authentication method used by your device clients for user authentication. This authentication method is the identity certificate that's presented by the device to the server.
+
+      Your options:
+
+      - **Username and Password**: Prompt the user for a user name and password to authenticate the network connection.
+
+      - **SCEP certificate**: Select an existing SCEP **client certificate** profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the network connection.
+
+      - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the network connection.
+
+      - **Derived credential**: Select an existing certificate profile that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
+
+    - **Client Authentication** - **Secondary authentication method**: Select the secondary authentication method used by your device clients for machine authentication. This authentication method is the identity certificate that's presented by the device to the server.
+
+      If the **Primary authentication method** fails, then the **Secondary authentication method** is used. If the **Secondary authentication method** isn't available, then the **Secondary authentication method** isn't used, even if the **Primary authentication method** fails. Authentication will fail.
+
+      Your options:
+
+      - **Not configured**: Intune doesn't change or update this setting. By default, no secondary authentication method is used. If the **Primary authentication method** fails, then authentication will fail.
+
+      - **Username and Password**: Prompt the user for a user name and password to authenticate the network connection.
+
+      - **SCEP certificate**: Select an existing SCEP **client certificate** profile that's also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the network connection.
+
+      - **PKCS certificate**: Select an existing PKCS **client certificate** profile and existing trusted **root certificate** that are also deployed to the device. The client certificate is the identity presented by the device to the server to authenticate the network connection.
 
       - **Derived credential**: Select an existing certificate profile that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 

@@ -94,7 +94,7 @@ To learn more, see [Manage safeguards using the Windows Update for Business depl
 
 2. Go to **Devices** > **Configuration profiles** > **Create profile**.
 
-3. For Platform, select **Windows 10 and later** and then for Profile type, select **Settings catalog (preview)**.
+3. For Platform, select **Windows 10 and later** and then for Profile type, select **Settings catalog**.
 
 4. On the **Configuration settings** page, select **Add settings**, and then on the *Settings picker* page, search for **Allow WUfB Cloud Processing**.  You’ll find this setting in the *System* category. Select the checkbox for this setting and then close the *Settings picker* window.
 

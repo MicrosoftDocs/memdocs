@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2022
+ms.date: 06/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,7 +38,7 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 
 ## Classic conditional access policies for MTD apps
 
-When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Microsoft Defender for Endpoint](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled.
+When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Microsoft Defender for Endpoint](advanced-threat-protection.md) or any of our other [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled.
 
 If the classic policy is deleted, you'll need to delete the connection to Intune that was responsible for its creation, and then set it up again. This process recreates the classic policy. It's not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
 
@@ -58,7 +58,7 @@ To view classic conditional access policies, in [Azure](https://portal.azure.com
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a 3rd party Mobile Threat Defense vendor, you must be a Global administrator.
+2. Select **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**. To set up an integration with a third-party Mobile Threat Defense vendor, you must be an Azure *Global administrator* or be assigned the *Endpoint Security Manager* built-in admin role for Intune.
 
 3. On the **Mobile Threat Defense** pane, select **Add**.
 
@@ -87,7 +87,7 @@ You can decide which MTD toggle options you need to enable according to your org
 
   Choose from the following options:
 
-  - **On** - Allows this Mobile Threat Defense partner to request a list of iOS/iPadOS applications from Intune for personally-owned iOS/iPadOS devices. This list includes unmanaged apps (apps not deployed through Intune) as well as the apps that were deployed through Intune. 
+  - **On** - Allows this Mobile Threat Defense partner to request a list of iOS/iPadOS applications from Intune for personally-owned iOS/iPadOS devices. This list includes unmanaged apps (apps not deployed through Intune) and the apps that were deployed through Intune. 
   - **Off** - Data about unmanaged apps isn't provided to the partner. Intune does share data for the apps that are deployed through Intune.
 
   This setting has no effect for corporate devices. For corporate devices, Intune sends data about both managed and unmanaged apps when requested by this MTD vendor.
