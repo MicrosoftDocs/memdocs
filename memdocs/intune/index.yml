@@ -4,7 +4,9 @@ summary: Official product documentation for Microsoft Intune
 
 metadata:
   services: service
-  ms.service: microsoft-intune; mem
+  ms.service: 
+   - microsoft-intune
+   - mem
   ms.topic: hub-page
   author: dougeby
   ms.author: dougeby
