@@ -84,7 +84,7 @@ The following list describes the settings your IT support person can control wit
 
 - Data encryption requirements  
 
-## Approve untrusted enterprise developer  
+## Approve line-of-business app   
  By default, your device doesn't trust line-of-business (LOB) apps acquired outside of the App Store, which may prevent your organization's own company apps from being installed. You'll know this is happening if you open an installed LOB app and receive an *untrusted enterprise developer* message. 
 
 ![iOS app message - Untrusted Enterprise Developer](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)  
