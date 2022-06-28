@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 06/03/2022
+ms.date: 07/01/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,6 +65,12 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
+### Noncompliance details available for Android (AOSP) in Microsoft Intune app<!-- 12645770 -->
+Android (AOSP) users will be able to view the reasons why devices are marked as noncompliant in the Microsoft Intune app. This information will be available in the Intune app for devices enrolled as user-associated Android (AOSP) devices.
+
+### Android strong biometric change detection<!-- 9740832 -->
+The Android **Fingerprint instead of PIN for access** setting in Intune, which allows the end-user to use [fingerprint authentication](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) instead of a PIN, is being modified. This change will allow you to require end-users to set strong biometrics, as well as require end-users to confirm their app protection policy (APP) PIN if a change in strong biometrics is detected. You can find Android app protection polices in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App protection policies** > **Create policy** > **Android**.
+
 ### New app types for Microsoft Endpoint Manager<!-- 7210233 -->
 As an admin, you will be able to create and assign two new types of Intune apps:
 - **iOS/iPadOS web clip** 
@@ -72,20 +78,44 @@ As an admin, you will be able to create and assign two new types of Intune apps:
 
 These new app types work in a similar way to the existing **web link** application type, however they apply only for their specific platform, whereas web link applications apply across all platforms. With these new app types, you can assign to groups and also use assignment filters to limit the scope of assignment. You will find this functionality in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), by selecting **Apps** > **All Apps** > **Add**.
 
-### Enterprise feedback policies for Web Company Portal<!-- 9846764 -->
+### Enterprise feedback policies for Web Company Portal<!-- 9846764 removepending -->
 Feedback settings will be provided to address M365 enterprise feedback policies for the currently logged in user via the Microsoft 365 Apps Admin Center. The settings are used to determine whether feedback can be enabled or must be disabled for a user in the Web Company Portal.
 
-### Photo library outgoing data transfer support via app protection policies<!-- 14062176 -->
+### Photo library outgoing data transfer support via app protection policies<!-- 14062176 removepending -->
 You will be able to select to include **Photo Library** as a supported application storage service for *outgoing* data. This support is in addition to *incoming* data transfer support for **Photo Library**. By selecting **Photo Library** in the **Allow users to open data from selected services** setting within Intune, you can allow managed accounts to send *outgoing* data to their device's photo library from their managed apps on iOS and Android platforms. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create Policy**. Choose either **iOS/iPadOS** or **Android**. This setting will be available as part of the **Data protection** step and specifically for **Policy managed apps**. For related information, see [Data protection](../apps/app-protection-framework.md#data-protection-2).
 
-### Use App Protection Policies with Android Enterprise dedicated devices and Android (AOSP) devices<!-- 13819227 -->
+### Use App Protection Policies with Android Enterprise dedicated devices and Android (AOSP) devices<!-- 13819227 removepending -->
 Intune-managed Android Enterprise dedicated devices enrolled with Azure Active Directory (Azure AD) shared mode and Android (AOSP) devices will be able to receive app protection policies and can be targeted separately from other Android device types. For more information about Android Enterprise dedicated devices and Android (AOSP), see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices) and [Android Open Source Project](../fundamentals/deployment-guide-enrollment-android.md#android-open-source-project).
 
 <!-- ***********************************************-->
 
 ## Device management
 
-### User configuration support for  Windows 11 multi-session VMs will be public preview<!-- 7231329 --> 
+### Monitor bootstrap escrow status on a Mac<!-- 12404441 -->  
+A new macOS hardware property that you can monitor called **Bootstrap token escrowed** will be added to Microsoft Intune, and will report whether or not a bootstrap token has been escrowed on the device.
+
+### Enable Common Criteria mode in Android Enterprise devices<!-- 13158881 -->
+For Android Enterprise devices, you'll soon be able to create a device restrictions configuration profile that manages device settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type).
+
+In the **System security**, there will be a new **Common Criteria mode** setting. These are an elevated set of security standards on a device which elevates security components on the device, including and not limited to:
+- AES-GCM encryption of Bluetooth Long Term Keys
+- Wi-Fi configuration stores
+- Blocks bootloader download mode, the manual method for software updates
+- Mandates additional key zeroization on key deletion
+- Prevents non-authenticated Bluetooth connections
+- Requires that FOTA updates have 2048-bit RSA-PSS signature
+
+These configurations are typically required by only national security systems and other highly sensitive organizations.
+
+For a list of the settings you can configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+- Android 5.0 and newer
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+- Android Enterprise corporate owned work profile (COPE)
+
+### User configuration support for  Windows 11 multi-session VMs will be public preview<!-- 7231329 removepending --> 
 You'll be able to:
 - Configure user scope policies using **Settings catalog** and assign to groups of users
 - Configure user certificates and assign to users
@@ -98,11 +128,11 @@ Applies to:
 
 For more information, see [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
-### Remotely restart and shut down macOS device <!-- 12472418 -->
+### Remotely restart and shut down macOS device <!-- 12472418 removepending -->
 You'll be able to remotely restart or shut down a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
 For more information, see [Restart devices with Microsoft Intune](../remote-actions/device-restart.md).
 
-### Additional Remote actions for Android (AOSP) Corporate devices<!-- 8504019 -->
+### Additional Remote actions for Android (AOSP) Corporate devices<!-- 8504019 removepending -->
 For Android Open Source Project (AOSP) Corporate devices, you can soon leverage additional remote actions from the Microsoft Endpoint Manager admin center - Reboot and Remote lock. 
 
 For information about these features, see:
@@ -114,19 +144,25 @@ Applies to:
 - Android Open Source Project (AOSP)
 
 
-### Improved certificate reporting details<!-- 13316515 -->
+### Improved certificate reporting details<!-- 13316515 removepending -->
 We’re changing what Intune displays when you view certificate details for devices and certificate profiles. [Microsoft Endpoint Manager admin center]( https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Monitor** > **Certificates**. 
 
 Today, the certificate reports can show certificates that are no longer valid, or that are no longer on a device. With this change, you won't see information for those invalid certificates. Instead, Intune displays only those that are valid, that were revoked within the last 30 days, or that expired within the last 30 days will be shown.
 
-### View a managed device's group membership<!-- 4100067 -->
+### View a managed device's group membership<!-- 4100067 removepending -->
 In the monitor section of the **Devices** workload of Intune, you'll be able to view the group membership of all AAD groups for a managed device. When this is available, you will be able to select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **Monitor** > *select a device* > **Group Membership**.
 
 <!-- ***********************************************-->
 
 ## Device enrollment
 
-### Utilize bootstrap tokens on macOS devices <!-- 12693392 -->
+### Detect and manage hardware changes on Windows Autopilot devices <!-- 12795465 --> 
+Microsoft Intune will alert you when it detects a hardware change on an Autopilot-registered device. You'll be able to view and manage all affected devices in the admin center. Additionally, you'll have the option to remove the affected device from Windows Autopilot and register it again so that the hardware change is accounted for.
+
+### New authentication option for iOS/iPadOS automated device enrollment <!-- 12377183 -->
+A new authentication option in Microsoft Intune will allow users going through automated device enrollment (ADE) to authenticate by signing in from another device.  This option will be available for iOS/iPadOS devices enrolling via Setup Assistant with modern authentication. The screen that prompts device users to authenticate will be embedded into Setup Assistant and shown to them during enrollment.
+
+### Utilize bootstrap tokens on macOS devices <!-- 12693392 removepending -->
 Bootstrap token support, currently in public preview, will become available to all Microsoft Intune customers, including GCC High and Microsoft Azure Government Cloud tenants. Intune supports the use of bootstrap tokens on enrolled devices running macOS, version 10.15 or later. 
 
 Bootstrap tokens allow for non-admin users to have increased MDM permissions, and perform specific software functions on behalf of the IT admin.  Bootstrap tokens will be supported on:  
@@ -139,7 +175,18 @@ For more information about how bootstrap tokens work with Intune, see [Set up en
 
 ## Device configuration
 
-### New macOS settings in Settings Catalog <!-- 14158964 -->
+### Filter on the user scope or device scope in the Settings Catalog for Windows devices<!-- 13949975 -->
+When you create a Settings Catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings Catalog (preview)** for profile type).
+
+When you **Add filter**, you'll be able to filter on the settings by user scope or device scope.
+
+For more information, go to [Use the settings catalog to configure settings: Device scope vs. user scope settings](../configuration/settings-catalog.md#device-scope-vs-user-scope-settings)
+
+Applies to:
+- Windows 10
+- Windows 11
+
+### New macOS settings in Settings Catalog <!-- 14158964 removepending -->
 The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog** for profile type):
 
 **Accounts > Caldav**:
@@ -275,7 +322,7 @@ For more information about configuring Settings catalog profiles in Intune, see 
 Applies to:
 - macOS
 
-### Unlock the work profile on Android Enterprise corporate owned work profile (COPE) devices after a set time using password, PIN, or pattern<!-- 14133548 -->
+### Unlock the work profile on Android Enterprise corporate owned work profile (COPE) devices after a set time using password, PIN, or pattern<!-- 14133548 removepending -->
 On Android Enterprise devices, you can create a device restrictions configuration profile that manages device settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type).
 
 On Android Enterprise devices, you can configure the **How often pin, password, or pattern is needed to unlock** setting. This setting will also be available for the work profile on Android Enterprise COPE devices.
@@ -286,7 +333,7 @@ Applies to:
 - Android 8.0 and newer
 - Android Enterprise corporate owned work profile (COPE)
 
-### Use TEAP authentication in wired networks device configuration profiles for Windows devices<!-- 14042602 -->
+### Use TEAP authentication in wired networks device configuration profiles for Windows devices<!-- 14042602 removepending -->
 On Windows devices, you can create a **Wired Networks** device configuration profile that supports the Extensible Authentication Protocol (EAP) (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Wired networks** for profile type).
 
 When you create the profile, you'll be able to use the Tunnel Extensible Authentication Protocol (TEAP).
@@ -297,7 +344,7 @@ Applies to:
 - Windows 11
 - Windows 10
 
-### iOS/iPadOS platform is in Settings Catalog <!-- 13934066 -->
+### iOS/iPadOS platform is in Settings Catalog <!-- 13934066 removepending -->
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. The iOS/iPadOS platform and some settings are now available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
@@ -581,7 +628,7 @@ For more information about configuring Settings catalog profiles in Intune, see 
 Applies to:
 - iOS/iPadOS
 
-### Add custom support information to Android Enterprise devices<!-- 7913128 -->
+### Add custom support information to Android Enterprise devices<!-- 7913128 removepending -->
 On Android Enterprise devices, you can create a device restrictions configuration profile that manages device settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type).
 
 There will be some new settings you can configure:
@@ -644,7 +691,7 @@ Applies to:
 - Android Enterprise corporate owned dedicated devices (COSU)
 - Android Enterprise corporate owned work profile (COPE)
 
-### New settings for DFCI profiles on Windows 10/11 devices<!-- 6039135 -->
+### New settings for DFCI profiles on Windows 10/11 devices<!-- 6039135 removepending -->
 On Windows 10/11 devices, you can create a Device Firmware Configuration Interface (DFCI) profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
 
 DFCI profiles lets Intune pass management commands to UEFI (Unified Extensible Firmware Interface) using the DFCI firmware layer. This additional firmware layer makes configuration more resilient to malicious attacks. DFCI also limits end users' control over the BIOS by graying out managed settings.
@@ -679,14 +726,14 @@ For more information on the DFCI profile, go to [Use Device Firmware Configurati
 Applies to:
 - Windows 10/11
 
-### Settings catalog for macOS and Windows is generally available (GA) <!-- 9558656 -->
+### Settings catalog for macOS and Windows is generally available (GA) <!-- 9558656 removepending -->
 The settings catalog will be generally available (GA). For more information on the settings catalog, go to [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md)
 
 Applies to:
 - macOS
 - Windows 10/11
 
-### New Microsoft Office and Microsoft Outlook preference settings in the macOS Settings Catalog <!-- 14193331 -->
+### New Microsoft Office and Microsoft Outlook preference settings in the macOS Settings Catalog <!-- 14193331 removepending -->
 The Settings Catalog now supports preference settings for Microsoft Office and Microsoft Outlook (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog** for profile type). 
 
 **Microsoft Office > Microsoft Office**:
@@ -753,7 +800,7 @@ To expand our support for the Android Open Source Project (AOSP) platform, you�
 - Trusted certificate profile
 - PKCS certificate profile
 
-### Create and deploy Wi-Fi profiles to Android AOSP devices<!-- 8506299 -->
+### Create and deploy Wi-Fi profiles to Android AOSP devices<!-- 8506299 removepending -->
 You'll be able to configure and deploy a Wi-Fi profile to your Android AOSP devices.
 
 Applies to:
@@ -774,7 +821,12 @@ Applies to:
 
 ## Device security
 
-### Users assigned the Endpoint Security Manager admin role can modify Mobile Threat Defense connector settings<!-- 14179885  -->
+### Disable use of UDP connections on your Microsoft Tunnel Gateway servers<!-- 9295335 -->
+You’ll soon be able to configure your Microsoft Tunnel Servers to disable use of UDP. When you disable use of UDP, the VPN server supports only TCP connections from tunnel clients. To support use of only TCP connections, your devices must use the generally available version of [Microsoft Defender for Endpoint as the Microsoft Tunnel client app](../protect/microsoft-tunnel-migrate-app.md) as the tunnel client app.
+
+You’ll be able to disable UDP when creating or editing a *Server configuration* for Microsoft Tunnel Gateway. The Server configuration will support a new option named **Disable UDP Connections** that will be available for the *Server port* field.  [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant Administration** > **Microsoft Tunnel Gateway** > **Server configurations**.
+
+### Users assigned the Endpoint Security Manager admin role can modify Mobile Threat Defense connector settings<!-- 14179885 removepending -->
 We’re expanding the scope of the Endpoint Security Manager built-in admin role to include the capability to modify the [Mobile Threat Defense connector](../protect/mtd-connector-enable.md) (MTD connector) settings for your Tenant.
 
 Before these permissions change, we recommend you review the users that are assigned to the *Endpoint Security Manager* role for your tenant. If any should not have permissions to edit the MTD connector settings, then update their role permissions or [create a custom role](../fundamentals/create-custom-role.md) to only allow read permissions for MTD connectors settings.
