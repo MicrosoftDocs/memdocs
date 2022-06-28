@@ -1,6 +1,16 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/user-help/your-device-is-noncompliant-cant-evaluate.md",
+            "redirect_url": "/mem/intune/user-help/",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/user-help/you-need-to-update-your-company-portal-app-windows.md",
+            "redirect_url": "/mem/intune/user-help/install-a-new-version-of-the-company-portal-app",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-ios.md",
             "redirect_url": "/mem/intune/user-help/use-managed-devices-to-get-work-done",
             "redirect_document_id": false
