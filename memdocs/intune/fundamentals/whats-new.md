@@ -180,7 +180,6 @@ For more information on these features, go to:
 - [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager](../configuration/group-policy-analytics-migrate.md)
 
 #### iOS/iPadOS platform is in Settings Catalog <!-- 13934066 -->
-
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. The iOS/iPadOS platform and some settings are now available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
@@ -210,7 +209,7 @@ New settings include:
 - Allow List
 - Password
 
-- **Managed Devices > Profile Removal Password**:
+- **Profile Removal Password**:
 
 - Removal Password
 
@@ -244,10 +243,10 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Allow Air Drop
 - Allow Auto Unlock
 - Allow Camera
+- Allow Cloud Document Sync
+- Allow Cloud Keychain Sync
 - Allow Cloud Photo Library
 - Allow Cloud Private Relay
-- Allow Definition Lookup
-- Allow Device Name Modification
 - Allow Diagnostic Submission
 - Allow Dictation
 - Allow Erase Content And Settings
@@ -267,21 +266,20 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Force Classroom Automatically Join Classes
 - Force Classroom Request Permission To Leave Classes
 - Force Classroom Unprompted App And Device Lock
-- Force Classroom Unprompted Screen Observation
 - Force Delayed Software Updates
 - Safari Allow Autofill
 
 **Security > Passcode**:
 
 - Allow Simple Passcode
-- Expiration In Days
-- Force Pin
-- Lock After Inactivity Minutes
+- Force PIN
 - Max Failed Attempts
 - Max Grace Period
-- Min Complex Chars
+- Max Inactivity
+- Max PIN Age In Days
+- Min Complex Characters
 - Min Length
-- Passcode History
+- PIN History
 - Require Alphanumeric Passcode
 
 **User Experience > Notifications**:
