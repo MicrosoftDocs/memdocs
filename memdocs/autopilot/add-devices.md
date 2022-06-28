@@ -43,6 +43,9 @@ This article provides step-by-step guidance for manual registration. For more in
 
 Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. You can also create a custom Autopilot device manager role by using [role-based access control](../intune/fundamentals/role-based-access-control.md). Autopilot device management requires only that you enable all permissions under **Enrollment programs**, except for the four token management options.
 
+> [!NOTE]
+> In both Intune Administrator and role-based access control methods, the administrative user also requires consent to use the Microsoft Intune PowerShell enterprise application. 
+
 ## Collect the hardware hash
 
 The following methods are available to harvest a hardware hash from existing devices:
