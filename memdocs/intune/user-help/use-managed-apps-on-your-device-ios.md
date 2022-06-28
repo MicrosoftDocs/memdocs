@@ -82,8 +82,26 @@ The following list describes the settings your IT support person can control wit
 
 - Ability to take screenshots
 
-- Data encryption requirements
+- Data encryption requirements  
 
+## Troubleshooting  
+
+### Approve untrusted enterprise developer  
+By default, your device doesn't trust line-of-business (LOB) apps acquired outside of the App Store, and may prevent your organization's own company apps from being installed. You can provide approval for enterprise developer apps in the device management settings on your device. 
+
+![iOS app message - Untrusted Enterprise Developer](./media/end-user-company-portal-messages/end-user-company-portal-messages-01.png)
+
+1. Upon launching an installed line-of-business app, an "Untrusted Enterprise Developer" message is sent to your device. Select  **Cancel**.
+2. Go to **Settings** > **General** > **Device Management**.  
+
+   ![iOS device UI - Device Management](./media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
+
+3. Select **Management Profile** > **Enterprise app**.
+4. Select the developer name.
+5. Select **Trust developer name**.  
+6. Select **Trust** to confirm approval of the enterprise developer.  
+
+   ![iOS device UI - Trust app message](./media/end-user-company-portal-messages/end-user-company-portal-messages-03.png)  
 
 ## Next steps  
 

@@ -112,6 +112,45 @@ If you normally use a smart card to access work resources, follow the steps in t
 
 5. Once the screen says that you're signed in to Company Portal, you can close the browser and switch to your work device.  
 
+## App permissions for Android   
+The permissions described in this section apply to the Company Portal app for Android and devices running Android, versions 8.0 and later.    
+
+### Storage    
+To share diagnostic in the app, you must allow Company Portal access to photos, media, and files on the device. The Intune Company Portal app never accesses photos, media, and files. The permission text is controlled by Google and can't be changed.  
+
+If you approve access, your device can write its data logs to the device SD card. Approval enables logs to be moved via USB cable.  
+
+If you deny access, logs aren't written to the device's SD card. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.   
+
+To adjust permissions, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Storage**.  
+
+### Contacts  
+To enroll your Android device with the app, you must allow Company Portal access to your contacts. The Intune Company Portal app never accesses your contacts. The permission text is controlled by Google and can't be changed.  
+
+If you approve access, Intune can create a work account for you and manage the Azure Active Directory identity that's registered to you on your device.   
+
+If you deny access, you can't enroll your device for work. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.   
+
+To adjust permissions, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
+
+### Phone calls  
+During enrollment, Company Portal requests permission to make and manage phone calls. The Intune Company Portal app never actually makes or manages calls. The permission text is controlled by Google and can't be changed.  
+
+If you approve access, you allow your device's phone number and IMEI to be shared with Intune. These numbers are reported as hardware details in Intune and visible to your IT admin.    
+
+If you deny access, you can continue to use Company Portal and enroll your device. Your phone number and IMEI number will not be shared or visible to anyone. To ignore future messages about this permission, select the checkbox next to **Never ask again** when prompted again.  
+
+To adjust permissions, go to **Settings** > **Apps** > **Company Portal** > **Permissions** > **Phone**.  
+
+## Windows Information Protection policies 
+
+The following message is a result of a misconfiguration in Microsoft Intune and needs to be resolved by your IT administrator.    
+
+> *Your company support needs to give you access to company resources*  
+> Your company is using Windows Information Protection policies to protect your device. Your company support will need to make sure they allow the Company Portal to access those resources.  
+
+If you are an IT admin, you can resolve this by adding Company Portal to the allowed or exempt apps list in your Windows Information Protection (WIP) app protection policy. For more information about WIP in Intune, see [Create and deploy Windows Information Protection (WIP) policy with Intune](/apps/windows-information-protection-policy-create).   
+
 
 ## Next steps  
 After you install the app on your device, follow your organization's instructions to set up your device for school or work. For enrollment help, see [Enroll Android device with Intune Company Portal](enroll-device-android-company-portal.md). 
