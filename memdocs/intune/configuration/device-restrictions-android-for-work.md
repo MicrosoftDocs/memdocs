@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/23/2022
+ms.date: 06/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -47,7 +47,7 @@ For Android device administrator, see [Android and Samsung Knox Standard device 
 
 - Create an [Android device administrator device restrictions configuration profile](device-restrictions-configure.md).
 
-- When creating device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
+- When you create device restriction policies, there are many settings available. To help determine the settings that are right for your organization, you can use the security configuration framework guidance:
 
   - [Android Enterprise personally owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
   - [Android Enterprise fully managed, dedicated, and corporate-owned work profile security settings](../enrollment/android-fully-managed-security-settings.md)
@@ -630,6 +630,56 @@ These settings apply to corporate-owned work profiles.
 - **Screen capture**: **Block** prevents screen captures during personal use. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to get screen captures or screenshots in the personal profile.
 - **Allow users to enable app installation from unknown sources in the personal profile**: Select **Allow** so users can install apps from unknown sources in the personal profile. It allows users to install apps from sources other than the Google Play Store. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might prevent users from installing apps from unknown sources in the personal profile.
 - **Type of restricted apps list**: Select **Allow apps** to create a list of Managed Google Play apps that are allowed and approved to install and run in the personal profile on the device. Select **Blocked apps** to create a list of Managed Google Play apps that are prohibited and prevented from installing and running in the personal profile on the device. When set to **Not configured** (default), Intune doesn't include a list of apps to allow or block.  
+
+### Custom support information
+
+Using these settings, you can customize some support messages shown to users, and show these messages in different languages.
+
+By default, the OEM default messages are shown. When you deploy a custom message using Intune, the Intune default message is also deployed. If you don't enter a custom message for the device's default language, then the Intune default message is automatically shown.
+
+By default, the Intune default message is in **English (United States)**.
+
+For example, you deploy a custom message for English and French. The user changes the device's default language to Spanish. Since you didn't deploy a custom message to the Spanish language, then the Intune default message is shown.
+
+The Intune default message is translated for all languages in the [Endpoint Manger admin center](https://go.microsoft.com/fwlink/?linkid=2109431) (**Settings** > **Language + Region**). The **Language** setting value determines the default language used by Intune. By default, it's set to **English**.
+
+You can configure the following settings:
+
+- **Short support message**: When users try to change a setting that's managed by the organization, a short message is shown. Use these settings to customize this message. You can enter a different message for different languages. By default, this message is in **English (United States)**.  
+
+  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and don't enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
+
+    You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original short Intune default message is used and is translated:
+
+    `You do not have permission for this action. For more information, contact your IT admin.`
+
+  - **Select Locale**: Select the locale or region to show the message.
+
+    For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
+
+    You can add multiple locales and messages.
+
+  - **Message**: Enter the text you want shown, a max of 200 characters. The text you enter isn't translated to the device's default language. So if you want to show a message in Spanish, enter the text in Spanish.
+
+- **Long support message**: On the device, in **Settings** > **Security** > **Device admin apps** > **Device Policy**, a long support message is shown. Use this setting to customize this message. You can enter a different message for different languages. By default, this message is in **English (United States)**.  
+
+  In the short message, you can also select **Learn more** to see this long message.
+
+  Using these settings, you can customize this message and enter a different message for different languages.
+
+  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and don't enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
+
+    You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original long Intune default message is used and is translated:
+
+    `The organization's IT admin can monitor and manage apps and data associated with this device, including settings, permissions, corporate access, network activity and the device's location information.`
+
+  - **Select Locale**: Select the locale or region to show the message.
+
+    For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
+
+    You can add multiple locales and messages.
+
+  - **Message**: Enter the text you want shown, a max of 4096 characters. The text you enter isn't translated to the device's default language. So if you want to show a message in Spanish, enter the text in Spanish.
 
 ## Personally owned devices with a work profile
 
