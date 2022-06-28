@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 06/27/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -66,13 +66,9 @@ Intune supports the following enrollment methods for company-owned macOS devices
 - [Device enrollment manager (DEM)](device-enrollment-manager-enroll.md): Use this method for large-scale deployments and when there are multiple people in your organization who can help with enrollment setup. Someone with device enrollment manager (DEM) permissions can enroll up to 1,000 devices with a single Azure Active Directory account. This method uses the Company Portal app or Microsoft Intune app to enroll devices. You can't use a DEM account to enroll devices via Automated Device Enrollment.   
 - [Direct enrollment](device-enrollment-direct-enroll-macos.md): Direct enrollment enrolls devices with no user affinity, so this method is best for devices that aren't associated with a single user. This method requires you to have physical access to the Macs you're enrolling.  
 
-## Bootstrap tokens (preview)    
+## Bootstrap tokens   
 
-> [!IMPORTANT]
-> This feature is in [public preview](../fundamentals/public-preview.md).   
-
-Intune supports the use of bootstrap tokens on enrolled Macs running macOS 10.15 or later. Bootstrap tokens grant volume ownership status to local user and guest accounts, so that non-admin users can approve important operations that an admin would otherwise need to do.  Operations such as: 
-
+Intune supports the use of bootstrap tokens on enrolled Macs running macOS 10.15 or later. Bootstrap tokens grant volume ownership status to local user and guest accounts so that non-admin users can approve important operations that an admin would otherwise need to do.  Operations such as: 
 
 * User-initiated software updates  
 
