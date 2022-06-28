@@ -31,9 +31,7 @@ ms.collection:
 
 # Set up Datalert app for iOS and iPad  
 
-Workplaces use telecom expense management software to ensure that data and voice plans are being used within acceptable limits. If you organization monitors telecom usage, you may be promped to install the Datalert app on your enrolled device. This article describes how to install and set up Datalert on your device. 
-
-  ![A screenshot of the Datalert app welcome screen, which prompts you to move to the next screen after providing a brief explanation about how Datalert can get you the most out of your data plan.](./media/ios-enroll-11-tem-datalert-setup.png)  
+Workplaces use telecom expense management software to ensure that data and voice plans are being used within acceptable limits. If you organization monitors telecom usage, you may be promped to install the Datalert app on your enrolled device. This article describes how to install and set up Datalert on your device.  
 
 ## Install app and sign in    
 
