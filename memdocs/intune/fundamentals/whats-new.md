@@ -184,7 +184,7 @@ Applies to:
 - Windows 11
 
 #### New macOS settings in the Settings Catalog<!-- 13923348 -->
-The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
+The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog** for profile type):
 
 **Accounts > Accounts**:
 - Disable Guest Account
@@ -429,10 +429,9 @@ Does not apply to:
 #### Create a Settings Catalog policy using your imported GPOs with Group Policy analytics (public preview)<!-- 6379751 -->
 Using Group Policy analytics, you can import your on-premises GPO, and see the settings that are supported in Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
 
-When the analysis runs, you see the settings that are ready for migration. There is a **Migrate** option (public preview) that creates a Settings Catalog profile using your imported settings. Then, you can assign this profile to your groups.
+When the analysis runs, you see the settings that are ready for migration. There is a **Migrate** option that creates a Settings Catalog profile using your imported settings. Then, you can assign this profile to your groups.
 
-For more information, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager (public preview)
-](../configuration/group-policy-analytics-migrate.md).
+For more information, go to [Create a Settings Catalog policy using your imported GPOs in Microsoft Endpoint Manager](../configuration/group-policy-analytics-migrate.md).
 
 Applies to:
 - Windows 11
@@ -470,7 +469,7 @@ Applies to:
 - Windows 10
 
 #### New macOS settings in Setting Catalog<!-- 13654614 -->
-The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
+The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type):
 
 **Accounts > Mobile Accounts**:
 - Ask For Secure Token Auth Bypass
@@ -882,7 +881,7 @@ Applies to:
 - Windows 10/11
 
 #### New macOS settings in the Settings Catalog<!-- 13111526 -->
-The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
+The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type):
 
 **User Experience > Accessibility**:
 - Close View Far Point
@@ -1079,7 +1078,7 @@ Require Android (AOSP) users to accept your terms and conditions in the Intune C
 Use the Microsoft Intune cloud app and/or Microsoft Intune Enrollment cloud app to enforce a conditional access, Azure AD Terms of Use acceptance policy on iOS and iPadOS devices during automated device enrollment. This functionality is available when you select Setup Assistant with modern authentication as your authentication method.  Both cloud apps now ensure that users accept the terms of use during enrollment and/or during Company Portal sign-in if required by your conditional access policy.
 
 #### New macOS settings in the Settings Catalog<!-- 12987685 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. When you create a Settings Catalog policy, there are new settings available for macOS devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog (preview)** for profile type).
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. When you create a Settings Catalog policy, there are new settings available for macOS devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
 
@@ -1831,7 +1830,7 @@ In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?li
 
 #### Settings catalog policies for policy sets<!-- 8683467  -->
 
-In addition to profiles based on templates, you can add a profile based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices - preview](../configuration/settings-catalog.md).
+In addition to profiles based on templates, you can add a profile based on the **Settings catalog** to your policy sets. The **Settings catalog** is a list of all the settings you can configure. To create a policy set in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Policy sets** > **Policy sets** > **Create**. For more information, see [Use policy sets to group collections of management objects](../fundamentals/policy-sets.md) and [Use the settings catalog to configure settings on Windows and macOS devices](../configuration/settings-catalog.md).
 
 #### Configure Managed Home Screen sign-in settings for Android Enterprise dedicated devices<!-- 8684724  -->
 
@@ -2142,9 +2141,9 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Export GPO XML file size increased to 4 MB when using group policy analytics (preview) on Windows client devices<!-- 9560131 -->
 
-In Microsoft Endpoint Manager, you can use group policy analytics (preview) to analyze your on-premises GPOs, and determine how your GPOs translate in the cloud. To use this feature, you export your GPO as an XML file. The XML file size has increased from 750 KB to 4 MB.
+In Microsoft Endpoint Manager, you can use group policy analytics to analyze your on-premises GPOs, and determine how your GPOs translate in the cloud. To use this feature, you export your GPO as an XML file. The XML file size has increased from 750 KB to 4 MB.
 
-For more information on using group policy analytics, see [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager - Preview](../configuration/group-policy-analytics.md).
+For more information on using group policy analytics, see [Analyze your on-premises group policy objects (GPO) using Group Policy analytics in Microsoft Endpoint Manager](../configuration/group-policy-analytics.md).
 
 Applies to:
 - Windows 11
@@ -2650,7 +2649,7 @@ In addition, the following applies to configuration of the *Hide the Virus and t
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Use filters to assign policies in Endpoint Manager admin center - public preview<!-- 9518236 -->
+#### Use filters to assign policies in Endpoint Manager admin center<!-- 9518236 -->
 
 There's a new **Filters** option that can be used when assigning apps or policies to groups. To create a filter, go to:
 
@@ -3273,11 +3272,11 @@ For more information, see [Android Enterprise dedicate devices device experience
 Applies to:
 - Android Enterprise dedicated devices
 
-#### Use the settings catalog to configure Microsoft Edge browser on macOS devices - public preview <!-- 4552197   -->
+#### Use the settings catalog to configure Microsoft Edge browser on macOS devices<!-- 4552197   -->
 
 Currently on macOS devices, you configure the Microsoft Edge browser using a `.plist` preference file (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Preference file** for profile).
 
-There's an updated UI to configure the Microsoft Edge browser: **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog (preview)** for profile. Select the Microsoft Edge settings you want, and then configure them. In your profile, you can also add settings, or remove existing settings.
+There's an updated UI to configure the Microsoft Edge browser: **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile. Select the Microsoft Edge settings you want, and then configure them. In your profile, you can also add settings, or remove existing settings.
 
 To see a list of the settings you can configure, go to [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the preference file only.
 
@@ -3307,9 +3306,9 @@ Applies to:
 
 There are UI updates when creating device configuration profiles for macOS and Windows 10/11 devices (**Devices** > **Configuration profiles** > **Create profile** > **macOS** or **Windows 10 and later** for platform).
 
-The profile shows **Settings catalog - preview** and **Templates**:
+The profile shows **Settings catalog** and **Templates**:
 
-- **Settings catalog - preview**: Use this option to start from scratch and select settings you want from the library of available settings. For macOS, the settings catalog includes settings to configure the Microsoft Edge version 77 and newer. Settings catalog for Windows client includes many existing settings, and new settings, all in one place.
+- **Settings catalog**: Use this option to start from scratch and select settings you want from the library of available settings. For macOS, the settings catalog includes settings to configure the Microsoft Edge version 77 and newer. Settings catalog for Windows client includes many existing settings, and new settings, all in one place.
 - **Templates**: Use this option to configure all the existing profiles, such as device restrictions, device features, VPN, Wi-Fi, and more.
 
 This is only a UI change, and doesn't impact existing profiles.
