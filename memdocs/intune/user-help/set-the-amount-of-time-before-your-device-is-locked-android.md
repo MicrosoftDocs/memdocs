@@ -42,6 +42,6 @@ To access the secure lock settings on your device:
 4. Tap **Auto lock when screen turns off**.
 5. Select an amount of time. 
 
-Lock screen settings may present differently on your device. Refer to your device manufacturer's instructions for the most accurate steps. 
+The options may be different on your device so refer to your device manufacturer's instructions for the most accurate steps. 
 
 Contact your support person for more information about your organization's screen lock requirements. Sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) or app to find helpdesk details. 
