@@ -9,7 +9,7 @@ ms.author: dougeby
 manager: dougeby
 ms.date: 06/23/2020
 ms.topic: overview
-ms.service: microsoft-intune; mem
+ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
 ms.custom: 
