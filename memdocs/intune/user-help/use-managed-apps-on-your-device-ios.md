@@ -91,8 +91,7 @@ The following list describes the settings your IT support person can control wit
 
 This section describes how to provide approval for enterprise developer apps in the device management settings on your device. 
 
-1. Upon launching an installed line-of-business app, an "Untrusted Enterprise Developer" message is sent to your device. Select  **Cancel**.
-2. Go to **Settings** > **General** > **Device Management**.  
+1. Go to **Settings** > **General** > **Device Management**.  
 
    ![iOS device UI - Device Management](../fundamentals/media/end-user-company-portal-messages/end-user-company-portal-messages-02.png)
 
