@@ -10,6 +10,8 @@ items:
     href: what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md
   - name: Get Intune Company Portal  
     href: sign-in-to-the-company-portal.md
+  - name: Update Intune Company Portal 
+    href: install-a-new-version-of-the-company-portal-app.md
   - name: Device password requirements
     href: password-does-not-meet-it-administrator-requirements.md
   - name: Install mobile threat defense app
@@ -91,6 +93,8 @@ items:
       href: use-microsoft-tunnel-android.md
     - name: Installing Company Portal app in China 
       href: install-company-portal-android-china.md
+    - name: Set up Datalert app for Android   
+      href: enroll-your-device-with-telecom-expense-management-android.md 
   - name: Resolve a threat in MTD app
     items:
     - name: Lookout for Work
@@ -138,7 +142,9 @@ items:
     - name: Where to find work or school apps for iOS/iPadOS
       href: use-managed-apps-on-your-device-ios.md
     - name: Use Microsoft Tunnel for iOS
-      href: use-microsoft-tunnel-iOS.md
+      href: use-microsoft-tunnel-iOS.md 
+    - name: Set up Datalert app for iOS   
+      href: enroll-your-device-with-telecom-expense-management-ios.md
   - name: Update device settings
     items:
     - name: Set or change your passcode
