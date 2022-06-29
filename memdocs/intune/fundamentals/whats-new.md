@@ -84,6 +84,11 @@ We’ve improved our [PKCS](../protect/certificates-pfx-configure.md) and [SCEP]
 
 ### Device configuration
 
+### Certificate profiles support for Android (ASOP) devices<!-- 8506319, 8506363 -->
+You can now use the following [certificate profiles](../protect/certificates-configure.md) with corporate-owned and userless devices that run the Android Open Source Project (AOSP) platform: 
+- Trusted certificate profile
+- PKCS certificate profile
+
 #### New settings for DFCI profiles on Windows 10/11 devices<!-- 6039135 -->
 On Windows 10/11 devices, you can create a Device Firmware Configuration Interface (DFCI) profile (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
 
