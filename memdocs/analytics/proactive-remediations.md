@@ -134,7 +134,7 @@ The client retrieves policy for proactive remediations scripts at the following 
 
 The client reports proactive remediation information at the following times:
 
-- When a script is set to run once, the results are reported after the script runs
+- When a script is set to run once, the results are reported after the script runs.
 - Recurring scripts follow a 7 day reporting cycle:
   - Within the first 6 days, the client reports only if a change occurs. The first time the script runs would be considered a change.
   - Every 7 days the client sends a report even if there wasn't a change.
