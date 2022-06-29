@@ -2,7 +2,7 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user
-ms.date: 03/07/2022
+ms.date: 06/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -120,9 +120,24 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
 
    For information about enforcing script signature checks, see [Script requirements](#bkmk_requirements).
 1. Click **Next** then assign any **Scope tags** you need.
-1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md).     
+1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](../intune/fundamentals/filters.md).
 1. Complete the **Review + Create** step for your deployment.
 
+## <a name="bkmk_prs_policy"></a> Client policy retrieval and client reporting
+
+The client retrieves policy for proactive remediations scripts at the following times:
+
+- After a restart
+- After a user signs into the client
+- Once every 8 hours
+   - The 8 hour script retrieval schedule is fixed and isn't altered by restarts or user sign ins.
+
+The client reports proactive remediation information at the following times:
+
+- When a script is set to run once, the results are reported after the script runs
+- Recurring scripts follow a 7 day reporting cycle:
+  - Within the first 6 days, the client reports only if a change occurs. The first time the script runs would be considered a change.
+  - Every 7 days the client sends a report even if there wasn't a change.
 
 ## <a name="bkmk_prs_monitor"></a> Monitor your script packages
 
