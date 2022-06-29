@@ -10,6 +10,8 @@ items:
     href: what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md
   - name: Get Intune Company Portal  
     href: sign-in-to-the-company-portal.md
+  - name: Update Intune Company Portal 
+    href: install-a-new-version-of-the-company-portal-app.md
   - name: Device password requirements
     href: password-does-not-meet-it-administrator-requirements.md
   - name: Install mobile threat defense app
