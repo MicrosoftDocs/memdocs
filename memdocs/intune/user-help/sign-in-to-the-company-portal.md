@@ -149,7 +149,7 @@ The following message is a result of a misconfiguration in Microsoft Intune and 
 > *Your company support needs to give you access to company resources*  
 > Your company is using Windows Information Protection policies to protect your device. Your company support will need to make sure they allow the Company Portal to access those resources.  
 
-If you are an IT admin, you can resolve this by adding Company Portal to the allowed or exempt apps list in your Windows Information Protection (WIP) app protection policy. For more information about WIP in Intune, see [Create and deploy Windows Information Protection (WIP) policy with Intune](./apps/windows-information-protection-policy-create).   
+If you are an IT admin, you can resolve this by adding Company Portal to the allowed or exempt apps list in your Windows Information Protection (WIP) app protection policy. For more information about WIP in Intune, see [Create and deploy Windows Information Protection (WIP) policy with Intune](../apps/windows-information-protection-policy-create).   
 
 
 ## Next steps  
