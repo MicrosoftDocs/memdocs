@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/fundamentals/end-user-company-portal-messages.md",
+            "redirect_url": "/mem/intune/user-help/sign-in-to-the-company-portal",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/user-help/your-device-is-noncompliant-cant-evaluate.md",
             "redirect_url": "/mem/intune/user-help/",
             "redirect_document_id": false
