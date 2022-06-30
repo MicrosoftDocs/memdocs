@@ -78,9 +78,17 @@ As an admin, you will be able to create and assign two new types of Intune apps:
 
 These new app types work in a similar way to the existing **web link** application type, however they apply only for their specific platform, whereas web link applications apply across all platforms. With these new app types, you can assign to groups and also use assignment filters to limit the scope of assignment. You will find this functionality in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), by selecting **Apps** > **All Apps** > **Add**.
 
+
+
 <!-- ***********************************************-->
 
 ## Device management
+
+Intune moving to support iOS/iPadOS 16 and higher later this year<!-- 14778947 -->
+Later this year, Apple is expected to release iOS/iPadOS 16. Due to this expected release, Microsoft Intune and the Intune Company Portal will require iOS/iPadOS 14 and higher shortly after the release of iOS/iPad 16. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+
+Intune moving to support macOS 11.6 and higher later this year<!-- 14766663 -->
+With Apple's expected release of macOS 13 Ventura later this year, Microsoft Intune, the Company Portal app, and the Intune MDM agent will be moving to support macOS 11.6 (Big Sur) and later. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
 
 ### Initiate compliance checks for your AOSP devices from the Microsoft Intune app<!--12645739 -->
 You'll be able to initiate a compliance check for your AOSP devices from the Microsoft Intune app. Go to **Device details**. This feature will be available on devices that are enrolled in Microsoft Intune app as user-associated (Android) AOSP devices.
