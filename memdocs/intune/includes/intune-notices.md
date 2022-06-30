@@ -11,6 +11,37 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.  
 
+### Plan for Change: New APP biometrics settings and authorization requirements for Android devices<!--9740832-->
+
+Currently, our biometric settings do not distinguish between [Class 2 and Class 3 Biometrics](https://source.android.com/security/biometric). Expected with Intune’s July (2207) service release, we are modifying fingerprint and biometric settings for Intune app protection policies (APP) that apply to Android devices to accommodate [Class 3 Biometrics](https://developer.android.com/reference/android/hardware/biometrics/BiometricManager.Authenticators#BIOMETRIC_STRONG).
+
+When you create or modify an app protection policy, you will see the following changes on the [Access requirements](/mem/intune/apps/app-protection-policy-settings-android#access-requirements) page:
+
+- The setting **Fingerprint instead of PIN for access** will be rolled into the existing setting **Biometrics instead of PIN for access**. This setting will apply to all biometrics (Class 2 and Class 3).
+- The setting **Override fingerprint with PIN after timeout** will be modified to **Override Biometrics with PIN after timeout**. This setting will apply to all biometrics (Class 2 and Class 3).
+- There is a new setting: **Class 3 Biometrics (Android 9.0+)** with a new sub-setting: **Override Biometrics with PIN after biometric updates**. This sub-setting applies only to Class 3 Biometrics, when selected.
+
+> [!NOTE]
+> Support for Class 3 Biometrics depends on the device, so you may need to contact your device manufacturers to understand device-specific limitations.
+
+#### How does this affect you or your users?
+
+Existing policies that allow fingerprints or biometrics for authentication will be migrated with no user impact.
+
+After this change, if you configure the policy to require **Class 3 Biometrics (Android 9.0+)**, the following will occur:
+
+- For users with Android devices that support Class 3 Biometrics, the user will be prompted to enter their APP PIN the first time they sign in to the APP-protected app. Subsequent sign-ins will use Class 3 Biometrics for authentication. However, if a user does not configure biometrics that satisfy the Class 3 requirements, they will be prompted to enter their PIN with each subsequent sign-in.
+- For users with Android devices that do not support Class 3 Biometrics, the user will be prompted to enter their PIN each time they sign in to the APP-protected app.
+
+If **Override Biometrics with PIN after biometric updates** is also required, users who update their stored Class 3 Biometrics will be prompted to enter their APP PIN the next time they sign in to the APP-protected app.
+
+#### How can you prepare?
+
+Admins should be aware of the combined settings for fingerprints and Class 2 Biometrics. If your existing policy allows for fingerprint authentication but not other biometrics, it will allow for *both* once migrated. Also, if you had previously required an APP PIN after fingerprint timeout, this timeout setting will apply to all biometrics.
+
+> [!NOTE]
+> If you are using the Microsoft Graph API’s FingerprintBlocked and BiometricAuthenticationBlocked, plan to update your APIs to use the new combined FingerprintAndBiometricEnabled API. The current APIs will retain their values for existing policies and the new FingerprintAndBiometricEnabled API will be defaulted to Null for these policies, until the policy has been updated.
+
 ### Plan for change: Intune is moving to support macOS 11.6 and higher later this year<!--14766663-->
 
 Apple is expected to release macOS 13 (Ventura) later this year, Microsoft Intune, the Company Portal app and the Intune mobile device management agent will be moving to support macOS 11.6 (Big Sur) and later. Since the Company Portal app for iOS and macOS are a unified app, this change will occur shortly after the release of iOS/iPadOS 16.

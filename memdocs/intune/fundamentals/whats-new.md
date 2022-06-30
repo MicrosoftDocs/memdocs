@@ -510,17 +510,18 @@ For information about these features, see:
 Applies to:
 - Android Open Source Project (AOSP)
 
-#### User configuration support for  Windows 11 multi-session VMs is in public preview. <!-- 7231329 -->
+#### User configuration support for  Windows 11 multi-session VMs is in public preview<!-- 7231329 -->
 
 You'll be able to:
-Configure user scope policies using **Settings catalog** and assign to groups of users
-Configure user certificates and assign to users
-Configure PowerShell scripts to install in the user context and assign to users
+- Configure user scope policies using **Settings catalog** and assign to groups of users
+- Configure user certificates and assign to users
+- Configure PowerShell scripts to install in the user context and assign to users
 
 Applies to: 
  - Windows 11
 
-[!Note]: User support for Windows 10 multi-session builds will be available later this year.
+> [!Note]
+> User support for Windows 10 multi-session builds will be available later this year.
 
 For more information, go to
 [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
