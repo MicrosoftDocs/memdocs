@@ -42,20 +42,14 @@ Microsoft plans to release updates for Configuration Manager current branch a fe
 
 To install the current branch as a new site, use [baseline media](../servers/manage/updates.md#bkmk_Baselines). Also use baseline media to upgrade from System Center 2012 Configuration Manager with Service Pack 2 or System Center 2012 R2 Configuration Manager with Service Pack 1. Access to this media depends on how your organization licenses Configuration Manager.
 
-<<<<<<< HEAD
 You can also use the baseline media to install a new site that is an evaluation edition of the current branch. The evaluation edition doesn't require a license. You can use the evaluation edition for 180 days. It supports upgrade to a licensed edition of the current branch. To install only an evaluation edition, get it from the [Evaluation Center](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager).
-=======
-You can also use the baseline media to install a new site that is an evaluation edition of the current branch. The evaluation edition doesn't require a license. You can use the evaluation edition for 180 days. It supports upgrade to a licensed edition of the current branch.
->>>>>>> 8b4ccbb418343ae2ae27bbaf01cf7fda148b00c2
+
 
 <!--
 > [!NOTE]
 <<<<<<< HEAD
 > The Evaluation Center is currently unavailable. As a workaround you can download the ConfigMgr 2203 Current Branch Eval exe here : ( https://aka.ms/MECM2203CB-Eval).
 -->
-=======
-> The Evaluation Center is currently unavailable. As a workaround you can download the current branch evaluation from [aka.ms/MECM2203CB-Eval](https://aka.ms/MECM2203CB-Eval).<!-- 14437681 -->
->>>>>>> 8b4ccbb418343ae2ae27bbaf01cf7fda148b00c2
 >
 > Use baseline media to install sites for a new Configuration Manager hierarchy. If you previously installed a baseline version, use in-console updates to update your sites to a new version.  
 >
@@ -95,7 +89,7 @@ To install the LTSB as a new site or as an upgrade from a supported System Cente
 > To learn about System Center 2016, see [System Center 2016 documentation](/system-center/index). This documentation also identifies how to get System Center 2016, which requires a Microsoft license agreement or similar rights.  
 >  
 > To find Configuration Manager version 1606 in the Volume Licensing Service Center (VLSC), go to the **Downloads and Keys** tab of the [VLSC](https://www.microsoft.com/Licensing/servicecenter/Downloads/DownloadsAndKeys.aspx), search for `System Center 2016`, and then select either **System Center 2016 Datacenter** or **System Center 2016 Standard**.  
-<<<<<<< HEAD
+
 >  
 > You can also get an evaluation edition of System Center 2019 from the [Evaluation Center](https://www.microsoft.com/evalcenter/download-system-center-2019).  
 
@@ -103,8 +97,6 @@ To install the LTSB as a new site or as an upgrade from a supported System Cente
 > [!NOTE]
 > The Evaluation Center is currently unavailable. As a workaround you can download the ConfigMgr TP 2202 Baseline here : ( https://aka.ms/MECM2202TP-Baseline).
 -->
-=======
->>>>>>> 8b4ccbb418343ae2ae27bbaf01cf7fda148b00c2
 
 ### Features of the LTSB
 
