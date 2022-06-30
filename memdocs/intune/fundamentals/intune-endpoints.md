@@ -3,12 +3,12 @@
 
 title: Network endpoints for Microsoft Intune
 titleSuffix: 
-description: Review endpoints for Intune.
+description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 01/05/2022
+ms.date: 06/23/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -40,7 +40,7 @@ As a cloud-only service, Intune doesn't require on-premises infrastructure such 
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
 > [!NOTE]
-> The information in section also applies to the Microsoft Intune Certificate Connector. The connector has the same network requirements as managed devices.
+> The information in this section also applies to the [Microsoft Intune Certificate Connector](../protect/certificate-connector-prerequisites.md). The connector has the same network requirements as managed devices.
 
 - The proxy server must support both **HTTP (80)** and **HTTPS (443)** because Intune clients use both protocols. Windows Information Protection uses port 444.
 - For some tasks (like downloading software updates for the classic pc agent), Intune requires unauthenticated proxy server access to manage.microsoft.com
