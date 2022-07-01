@@ -128,9 +128,6 @@ Applies to:
 
 ## Device enrollment
 
-### Detect and manage hardware changes on Windows Autopilot devices<!-- 12795465 --> 
-Microsoft Intune will alert you when it detects a hardware change on an Autopilot-registered device. You'll be able to view and manage all affected devices in the admin center. Additionally, you'll have the option to remove the affected device from Windows Autopilot and register it again so that the hardware change is accounted for.
-
 ### New authentication option for iOS/iPadOS automated device enrollment<!-- 12377183 -->
 A new authentication option in Microsoft Intune will allow users going through automated device enrollment (ADE) to authenticate by signing in from another device.  This option will be available for iOS/iPadOS devices enrolling via Setup Assistant with modern authentication. The screen that prompts device users to authenticate will be embedded into Setup Assistant and shown to them during enrollment.
 
