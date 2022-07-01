@@ -92,7 +92,7 @@ To see a role assignment, choose **Intune** > **Tenant administration** > **Role
 
 - **Basics**: The assignments name and description.
 - **Members**: All users in the listed Azure security groups have permission to manage the users/devices that are listed in Scope (Groups).
-- **Scope (Groups)**: Scope Groups are Azure AD security groups of users or devices or both for which administrators in that role assignment are limited to performing operations on. For example: deployment of a policy or application to a user, or remotely locking a device. All users/devices in these Azure AD security groups can be managed by the users in Members.
+- **Scope (Groups)**: Scope Groups are Azure AD security groups of users or devices or both for which administrators in that role assignment are limited to performing operations on. For example deployment of a policy or application to a user or remotely locking a device. All users and devices in these Azure AD security groups can be managed by the users in Members.
 - **[Scope (Tags)](scope-tags.md)**: Users in Members can see the resources that have the same scope tags.
 
 > [!NOTE]
