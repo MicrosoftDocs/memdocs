@@ -28,11 +28,6 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
      You can download an evaluation version of Windows Server 2012 R2 from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2).  
 
-<!--
-    > [!NOTE]
-    > The Microsoft Evaluation Center is temporarily unavailable. To access this download, see [Accessing trials and kits for Windows (Eval Center workaround)](https://techcommunity.microsoft.com/t5/windows-11/accessing-trials-and-kits-for-windows-eval-center-workaround/m-p/3361125).<!-- MAXADO-6049663, CMADO-14437681 
--->
-
     Consider modifying or disabling Internet Explorer Enhanced Security Configuration in order to more easily access some of the downloads referenced throughout the course of these exercises. For more information, see [Internet Explorer: Enhanced Security Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
 -   **The lab environment uses SQL Server 2012 SP2** for the site database.  
