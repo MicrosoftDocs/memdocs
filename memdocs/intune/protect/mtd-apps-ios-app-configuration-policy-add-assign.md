@@ -101,6 +101,17 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
   `<dict><key>MDM</key><string>INTUNE</string></dict>`
 
+### Crowdstrike Falcon app configuration policy
+
+- Android
+  - See [Using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md)
+  - See [Deploying Falcon for Mobile to Android devices](https://falcon.crowdstrike.com/documentation/185/Deploying-Falcon-for-Mobile-to-Android-devices)
+
+- iOS
+  - See [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md)
+  - See [Deploying Falcon for Mobile to iOS devices](https://falcon.crowdstrike.com/documentation/186/Deploying-Falcon-for-Mobile-to-iOS-devices)
+
+
 ### Lookout for Work app configuration policy
 
 Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article.
@@ -222,6 +233,7 @@ Choose the section that corresponds to your MTD provider:
 
 - [Better Mobile](#assigning-better-mobile)
 - [Check Point Harmony Mobile Protect](#assigning-check-point-harmony-mobile-protect)
+- [Crowdstrike Falcon](#assigning-crowdstrike-falcon)
 - [Lookout for Work](#assigning-lookout-for-work)
 - [MVISION Mobile](#assigning-mvision-mobile)
 - [Pradeo](#assigning-pradeo)
@@ -246,6 +258,13 @@ Choose the section that corresponds to your MTD provider:
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point Harmony Mobile Protect app store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) for the **Appstore URL**.  
 
+### Assigning Crowdstrike Falcon
+
+- **Android**  
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Crowdstrike Falcon app store URL](https://play.google.com/store/apps/details?id=com.crowdstrike.falconmobile) for the **Appstore URL**.
+
+- **iOS**
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point Harmony Mobile Protect app store URL](https://apps.apple.com/us/app/crowdstrike-falcon/id1458815656) for the **Appstore URL**.  
 
 ### Assigning Lookout for Work
 
