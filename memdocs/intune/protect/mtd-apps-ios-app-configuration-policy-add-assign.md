@@ -104,12 +104,12 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 ### Crowdstrike Falcon app configuration policy
 
 - Android
-  - See [Using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md)
-  - See [Deploying Falcon for Mobile to Android devices](https://falcon.crowdstrike.com/documentation/185/Deploying-Falcon-for-Mobile-to-Android-devices)
+  - See [Using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md).
+  - See [Deploying Falcon for Mobile to Android devices](https://falcon.crowdstrike.com/documentation/185/Deploying-Falcon-for-Mobile-to-Android-devices).
 
 - iOS
-  - See [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md)
-  - See [Deploying Falcon for Mobile to iOS devices](https://falcon.crowdstrike.com/documentation/186/Deploying-Falcon-for-Mobile-to-iOS-devices)
+  - See [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md).
+  - See [Deploying Falcon for Mobile to iOS devices](https://falcon.crowdstrike.com/documentation/186/Deploying-Falcon-for-Mobile-to-iOS-devices).
 
 
 ### Lookout for Work app configuration policy
@@ -264,7 +264,7 @@ Choose the section that corresponds to your MTD provider:
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Crowdstrike Falcon app store URL](https://play.google.com/store/apps/details?id=com.crowdstrike.falconmobile) for the **Appstore URL**.
 
 - **iOS**
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Check Point Harmony Mobile Protect app store URL](https://apps.apple.com/us/app/crowdstrike-falcon/id1458815656) for the **Appstore URL**.  
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Crowdstrike Falcon app store URL](https://apps.apple.com/us/app/crowdstrike-falcon/id1458815656) for the **Appstore URL**.
 
 ### Assigning Lookout for Work
 
