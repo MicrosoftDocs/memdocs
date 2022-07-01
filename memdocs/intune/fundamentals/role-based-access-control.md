@@ -96,7 +96,7 @@ To see a role assignment, choose **Intune** > **Tenant administration** > **Role
 - **[Scope (Tags)](scope-tags.md)**: Users in Members can see the resources that have the same scope tags.
 
 > [!NOTE]
-> Scope Tags are freeform text values that an administrator defines and then adds to a Role Assignment. The scope tag added on a role controls visibility of the role itself. while the scope tag added in role assignment limits the visibility of Intune objects (policies, apps, and so on) or devices to only administrators in that role assignment because the role assignment contains one or more matching scope tags.
+> Scope Tags are freeform text values that an administrator defines and then adds to a Role Assignment. The scope tag added on a role controls visibility of the role itself, while the scope tag added in role assignment limits the visibility of Intune objects (such as policies and apps) or devices to only administrators in that role assignment because the role assignment contains one or more matching scope tags.
 
 ### Multiple role assignments
 If a user has multiple role assignments, permissions, and scope tags, those role assignments extend to different objects as follows:
