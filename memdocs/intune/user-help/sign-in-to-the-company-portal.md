@@ -116,7 +116,7 @@ If you normally use a smart card to access work resources, follow the steps in t
 The permissions described in this section apply to the Company Portal app for Android and devices running Android, versions 8.0 and later.    
 
 ### Storage    
-To share diagnostic in the app, you must allow Company Portal access to photos, media, and files on the device. The Intune Company Portal app never accesses photos, media, and files. The permission text is controlled by Google and can't be changed.  
+To share diagnostics in the app, you must allow Company Portal access to photos, media, and files on the device. The Intune Company Portal app never accesses photos, media, and files. The permission text is controlled by Google and can't be changed.  
 
 If you approve access, your device can write its data logs to the device SD card. Approval enables logs to be moved via USB cable.  
 
