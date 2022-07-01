@@ -49,7 +49,7 @@ There are two ways to get devices enrolled in Intune:
 
 Users can self-enroll their Windows device by using any of these methods:
 
-- [Bring your own device (BYOD)](../user-help/enroll-windows-10-device.md): Users enroll their personally owned devices by downloading and installing the **Company Portal App** This process:
+- [Bring your own device (BYOD)](../user-help/enroll-windows-10-device.md): Users enroll their personally owned devices by downloading and installing the **Company Portal App**. This process:
   - Registers the device with Azure Active Directory to gain access to corporate resource like email.
   - Enrolls the device in Intune as a personal owned device (BYOD).
 
