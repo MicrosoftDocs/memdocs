@@ -94,5 +94,4 @@ Typically, this error is caused by an issue with the admin account. Below are th
 ## Known issues
 
 1. Some of the **Classification** resources aren't translated in some of the supported languages.
-1. The "Learn more about software updates" link goes to a page which is always in English.
 1. For consoles in Japanese, the current time format is YYYY/MM/DD.
