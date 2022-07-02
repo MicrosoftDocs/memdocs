@@ -214,11 +214,13 @@ The following configurations are required:
 
 1. In the project's Info.plist file, under the **IntuneMAMSettings** dictionary with the key name `ADALClientId`, specify the client ID to be used for MSAL calls.
 
-2. Also under the **IntuneMAMSettings** dictionary with the key name `ADALRedirectUri`, specify the redirect URI to be used for MSAL calls. Alternatively, you could specify `ADALRedirectScheme` instead, if the application's redirect URI is in the format `scheme://bundle_id`.
+2. If the Azure AD app registration which maps to the client ID configured in step 1 is configured for use in only a single AAD tenant, configure the `ADALAuthority` key under the **IntuneMAMSettings** dictionary within the application's Info.plist file. Specify the Azure AD authority to be used by MSAL for acquiring tokens for the Intune mobile application management service.
+
+3. Also under the **IntuneMAMSettings** dictionary with the key name `ADALRedirectUri`, specify the redirect URI to be used for MSAL calls. Alternatively, you could specify `ADALRedirectScheme` instead, if the application's redirect URI is in the format `scheme://bundle_id`.
 
 Alternatively, apps can override these Azure AD settings at runtime. To do this, simply set the `aadAuthorityUriOverride`, `aadClientIdOverride`, and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class.
 
-3. Ensure the steps to give your iOS app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under "[Give your app access to the Intune app protection service (optional)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)".  
+4. Ensure the steps to give your iOS app permissions to the app protection policy (APP) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under "[Give your app access to the Intune app protection service (optional)](app-sdk-get-started.md#give-your-app-access-to-the-intune-app-protection-service-optional)".  
 
 > [!NOTE]
 > The Info.plist approach is recommended for all settings which are static and do not need to be determined at runtime. Values assigned to the `IntuneMAMSettings` class properties at runtime take precedence over any corresponding values specified in the Info.plist, and will persist even after the app is restarted. The SDK will continue to use them for policy check-ins until the user is unenrolled or the values are cleared or changed.
@@ -239,7 +241,7 @@ Some of these settings might have been covered in previous sections, and some do
 Setting  | Type  | Definition | Required?
 --       |  --   |   --       |  --
 ADALClientId  | String  | The app's Azure AD client identifier. | Required for all apps that use MSAL. |
-ADALAuthority | String | The app's Azure AD authority in use. You should use your own environment where AAD accounts have been configured. For more information, see [Application configuration options](/azure/active-directory/develop/msal-client-application-configuration). | Optional. Recommended if the app is a custom line-of-business application built for use within a single organization/AAD tenant. If this value is absent, the common AAD authority is used.|
+ADALAuthority | String | The app's Azure AD authority in use. You should use your own environment where AAD accounts have been configured. For more information, see [Application configuration options](/azure/active-directory/develop/msal-client-application-configuration). | Required if the app is a custom line-of-business application built for use within a single organization/AAD tenant. If this value is absent, the common AAD authority is used (which is only supported for multi-tenant applications).|
 ADALRedirectUri  | String  | The app's Azure AD redirect URI. | ADALRedirectUri or ADALRedirectScheme is required for all apps that use MSAL and any ADAL app that accesses a non-Intune AAD resource.  |
 ADALRedirectScheme  | String  | The app's Azure AD redirect scheme. This can be used in place of ADALRedirectUri if the application's redirect URI is in the format `scheme://bundle_id`. | ADALRedirectUri or ADALRedirectScheme is required for all apps that use MSAL and any ADAL app that accesses a non-Intune AAD resource. |
 ADALLogOverrideDisabled | Boolean  | Specifies whether the SDK will route all MSAL logs (including MSAL calls from the app, if any) to its own log file. Defaults to NO. Set to YES if the app will set its own MSAL log callback. | Optional. |
