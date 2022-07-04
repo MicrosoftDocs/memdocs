@@ -54,8 +54,8 @@ The default scope tag feature is similar to the security scopes feature in Micro
 4. On the **Review + create** page, choose **Create**.
 
     > [!IMPORTANT]
-    > This auto scope tags assignments will overwrite mannually assigned scope tags.
-    > You can assign multiple scope tags with this steps.
+    > Auto scope tags assignments will overwrite mannually assigned scope tags.
+    > You can assign multiple scope tags to a role.
 
 ## To assign a scope tag to a role
 
