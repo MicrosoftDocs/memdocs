@@ -28,7 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Set up nested virtualization on your Cloud PC (preview)
+# Set up nested virtualization on your Cloud PC
 
 Nested virtualization is a feature that lets customers use the following systems on their Windows 365 Enterprise Cloud PCs:
 
