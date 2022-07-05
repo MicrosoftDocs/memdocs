@@ -2,7 +2,7 @@
 title: Tutorial - Proactive remediations
 titleSuffix: Microsoft Endpoint Manager
 description: A tutorial on using Proactive remediations to enhance the user
-ms.date: 06/29/2022
+ms.date: 07/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: tutorial
@@ -127,10 +127,10 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
 
 The client retrieves policy for proactive remediations scripts at the following times:
 
-- After a restart
+- After a restart of the device or Intune management extension service
 - After a user signs into the client
 - Once every 8 hours
-   - The 8 hour script retrieval schedule is fixed and isn't altered by restarts or user sign ins.
+   - The 8 hour script retrieval schedule is fixed based on when the Intune management extension service starts. The schedule isn't altered by user sign ins.
 
 The client reports proactive remediation information at the following times:
 
