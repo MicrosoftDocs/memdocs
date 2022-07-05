@@ -26,10 +26,7 @@ Following the guidance in this topic will enable you to set up a lab for evaluat
 
 -   **The lab environment uses Windows Server 2012 R2**, into which we will install Configuration Manager.  
 
-    You can download an evaluation version of Windows Server.
-
-    > [!NOTE]
-    > The Microsoft Evaluation Center is temporarily unavailable. To access this download, see [Accessing trials and kits for Windows (Eval Center workaround)](https://techcommunity.microsoft.com/t5/windows-11/accessing-trials-and-kits-for-windows-eval-center-workaround/m-p/3361125).<!-- MAXADO-6049663, CMADO-14437681 -->
+     You can download an evaluation version of Windows Server 2012 R2 from the [Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-windows-server-2012-r2).  
 
     Consider modifying or disabling Internet Explorer Enhanced Security Configuration in order to more easily access some of the downloads referenced throughout the course of these exercises. For more information, see [Internet Explorer: Enhanced Security Configuration](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd883248(v=ws.10)).  
 
@@ -336,10 +333,12 @@ Before you begin the installation, launch the  [Prerequisite Checker](../servers
 
 #### To download and install Configuration Manager:  
 
-1. Download the latest evaluation version of Configuration Manager.
+1. Navigate to the [Evaluation Center](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager) page to download the newest evaluation version of Configuration Manager.  
 
-    > [!NOTE]
-    > The Evaluation Center is currently unavailable. As a workaround you can download the current branch evaluation from [aka.ms/MECM2203CB-Eval](https://aka.ms/MECM2203CB-Eval).<!-- 14437681 -->
+<!--
+> [!NOTE]
+> The Evaluation Center is currently unavailable. As a workaround you can download the ConfigMgr 2203 Current Branch Eval exe here : ( https://aka.ms/MECM2203CB-Eval).
+-->
 
 2.  Decompress the download media into your predefined location.  
 
