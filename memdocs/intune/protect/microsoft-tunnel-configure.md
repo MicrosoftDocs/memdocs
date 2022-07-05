@@ -218,10 +218,8 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 - **iOS/iPadOS**:
 
-  - **Microsoft Tunnel** – Use this connection type with Microsoft Defender for Endpoint as the tunnel client app.
 
-    > [!Important]
-    > On April 29, 2022, this connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. However, the connection type continues to reflect *preview*.
+  - **Microsoft Tunnel ** – Use this connection type with Microsoft Defender for Endpoint as the tunnel client app.
 
   - **Microsoft Tunnel (standalone client) (preview)** – Use this connection type when you use the standalone Microsoft Tunnel client app. This connection type doesn’t support Microsoft Defender for Endpoint as the client Tunnel app.
 
