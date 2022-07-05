@@ -2,7 +2,7 @@
 title: Connect Configuration Manager
 titleSuffix: Configuration Manager
 description: A how-to guide for connecting Configuration Manager with Desktop Analytics.
-ms.date: 08/24/2021
+ms.date: 07/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: how-to
@@ -126,7 +126,7 @@ Monitor the configuration of your devices for Desktop Analytics. In the Configur
 
 For more information, see [Monitor connection health](monitor-connection-health.md).
 
-Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to**Global Pilot**, and see your Configuration Manager device collections.
+Configuration Manager synchronizes your collections within 60 minutes of creating the connection. In the Desktop Analytics portal, go to **Global Pilot**, and see your Configuration Manager device collections.
 
 > [!NOTE]
 > The Configuration Manager connection to Desktop Analytics relies upon the service connection point. Any changes to this site system role may impact synchronization with the cloud service. For more information, see [About the service connection point](../core/servers/deploy/configure/about-the-service-connection-point.md#bkmk_move).

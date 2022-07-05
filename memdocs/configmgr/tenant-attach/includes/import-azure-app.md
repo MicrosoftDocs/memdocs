@@ -5,7 +5,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.localizationpriority: high
-ms.date: 01/06/2022
+ms.date: 07/01/2022
 ---
 <!-- This include file is currently used by device-sync-actions.md and cloud-attach/enable.md. Note H2/H3s for this include file may be context driven by article. -->
 
@@ -48,4 +48,4 @@ Using a previously created application during onboarding to tenant attach requir
 
 - The imported application needs to be configured as follows:
    - Registered for **Accounts in this organizational directory only**. For more information, see [Change who can access your application](/azure/active-directory/develop/quickstart-modify-supported-accounts#to-change-who-can-access-your-application).
-   -  Has a valid application ID URI and secret
+   -  Has a valid application ID URI and secret.

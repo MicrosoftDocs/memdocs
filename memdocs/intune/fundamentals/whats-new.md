@@ -906,7 +906,7 @@ We've added two new Setup Assistant settings that you can use with Apple Automat
 
 Use of Microsoft Defender for Endpoint that supports [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md) on iOS/iPadOS is now out of preview and is generally available. With general availability, a new version of the Defender for Endpoint app for iOS is available from the App store to download and deploy. If you’ve been using the preview version as your Tunnel client app for iOS, we recommend you upgrade to the latest Defender for Endpoint app for iOS soon to gain the benefits of the latest updates and fixes.
 
-For now, even with the general availability of Defender as the tunnel client app, the VPN profile connection type you'll use remains named **Microsoft Tunnel (preview)**.  The connection type will be renamed in a future update to **Microsoft Tunnel**.
+As of August 30, 2022, the connection type is named **Microsoft Tunnel**.
 
 With this release, by the end of June both the standalone Tunnel client app and the preview version of Defender for Endpoint as the Tunnel client app for iOS will be deprecated and be dropped from support. Soon after that deprecation, the standalone Tunnel client app will no longer function and will no longer support opening connections to Microsoft Tunnel.
 

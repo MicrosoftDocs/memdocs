@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/03/2021
+ms.date: 07/05/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -87,6 +87,12 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
   | Can’t connect to Cloud PC. We’re working to fix it, try again later. | A Microsoft service required for connectivity is unavailable. Try connecting again later. |
   | We couldn’t fix issues with your Cloud PC. Contact your administrator. | An issue was detected but it couldn't be fixed. This issue exists because of an ongoing Windows update or another issue. If this error persists for an extended period of time, the Cloud PC may need to be reset. |
 - **System Information**: Displays information about the Cloud PC specification.
+
+### Transfer files to and from a Cloud PC
+
+To transfer files from the local device to the Cloud PC, click on the upload icon to launch File Explorer. Select the files to transfer them to the Uploads folder on the Cloud PC.
+
+To transfer files from the Cloud PC to the local device, copy the files to the Downloads folder on the Cloud PC. The files will be copied to the Downloads folder of the local device.
 
 ### User feedback
 
