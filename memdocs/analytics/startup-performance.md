@@ -29,7 +29,7 @@ For devices enrolled via Intune, Startup performance insights are only available
 For devices that do not meet the above criteria, you are able to [enroll via Configuration Manager](enroll-configmgr.md).
 
 > [!Important]
-> Client devices require a restart to fully enable all analytics. <!--7698085-->
+> Client devices require a restart to fully enable all analytics. <!--7698085--> The retention period for device boot and sign-in events is 29 days. If a device has not uploaded a boot or sign-in event in the past 29 days, it will not appear in the Startup performance report.
 ## <a name="bkmk_score"></a> Startup score
 
 [!INCLUDE [Endpoint analytics startup score](includes/startup-score.md)]
