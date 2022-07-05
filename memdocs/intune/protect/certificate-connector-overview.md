@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/18/2022
+ms.date: 07/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -158,6 +158,7 @@ All events have one of the following IDs:
 - **2000-2999** - PKCS Import
 - **3000-3999** - Revoke
 - **4000-4999** - SCEP
+- **5000-5999** - Connector Health
 
 ### Task Categories
 
@@ -361,6 +362,19 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - **Event ID: 4010** - *ScepNotifySaveToDiskFailed*  
     Failed to write notification to disk and cannot notify Intune of the request status.
 
+**Connector Health**
+
+- **Operational**
+
+  - **Event ID: 5000** - *HealthMessageUploadSuccess*
+    Successfully uploaded health messages to Intune.
+
+  - **Event ID: 5001** - *HealthMessageUploadFailedAttempt*
+    Failed to upload health messages to Intune, will try again.
+
+  - **Event ID: 5002** - *HealthMessageUploadFailure*
+    Failed to upload health messages to Intune.
+
 ## What's new for the Certificate Connector
 
 Updates for the Certificate Connector for Microsoft Intune are released periodically and then [supported for six months](#lifecycle). When we update the connector, you can read about the changes here.
@@ -369,6 +383,12 @@ New updates for the connector can take a week or more to become available for ea
 
 > [!IMPORTANT]  
 > Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. This status does not affect functionality. Starting June 2022, such connectors will not be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
+
+### June 30, 2022
+
+Version **6.2205.201.0** - Changes in this release:
+
+- Updated telemetry channel to Intune to allow Intune Administrator to collect data in the portal
 
 ### May 4, 2022
 
