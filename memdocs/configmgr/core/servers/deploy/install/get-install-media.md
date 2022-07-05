@@ -19,9 +19,13 @@ If you have Configuration Manager volume licenses with Software Assurance, or if
 
 If you have a Configuration Manager license from EMS, Microsoft 365, or a Cloud Solution Provider (CSP), please see the [Product and Licensing FAQ](../../../understand/product-and-licensing-faq.yml#i-have-purchased-ems-or-microsoft-365-through-a-cloud-solution-provider--csp---do-i-have-rights-to-use-configuration-manager-).
 
-If you would like to purchase volume licenses for Configuration Manager, contact your preferred Microsoft Reseller or see [How to purchase through Volume Licensing](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). You can also download media to install an evaluation edition of Configuration Manager.
 
+If you would like to purchase volume licenses for Configuration Manager, contact your preferred Microsoft Reseller or see [How to purchase through Volume Licensing](https://www.microsoft.com/Licensing/how-to-buy/how-to-buy.aspx). You can also download media to install an evaluation edition of Configuration Manager from the [Evaluation Center](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager) website.
+
+
+<!--
 > [!NOTE]
-> The Evaluation Center is currently unavailable. As a workaround you can download the current branch evaluation from [aka.ms/MECM2203CB-Eval](https://aka.ms/MECM2203CB-Eval).<!-- 14437681 -->
+> The Evaluation Center is currently unavailable. As a workaround you can download the ConfigMgr 2203 Current Branch Eval exe here : ( https://aka.ms/MECM2203CB-Eval).
+-->
 
 To learn about baseline media for Configuration Manager, see [Baseline and update versions](../../manage/updates.md#bkmk_Baselines).

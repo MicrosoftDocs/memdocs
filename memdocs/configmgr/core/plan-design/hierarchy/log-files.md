@@ -314,7 +314,6 @@ The following table lists the log files that are on the Configuration Manager si
 |statesys.log|Records the processing of state system messages.|Site server|  
 |statmgr.log|Records the writing of all status messages to the database.|Site server|  
 |swmproc.log|Records the processing of metering files and settings.|Site server|
-|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|
 
 ### <a name="BKMK_SiteInstallLog"></a> Site server installation
 
@@ -406,7 +405,8 @@ The following table lists the log files that contain information related to the 
 |SMS_CLOUDCONNECTION.log|Records information about cloud services.|Computer with the service connection point|
 |Smsprov.log|Records activities of the SMS Provider. Configuration Manager console activities use the SMS Provider.|Computer with the SMS Provider|  
 |SrvBoot.log|Records details about the service connection point installer service.|Computer with the service connection point|  
-|Statesys.log|Records the processing of mobile device management messages.|Primary site and central administration site|  
+|Statesys.log|Records the processing of mobile device management messages.|Primary site and central administration site| 
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Computer with the service connection point|
 
 ### <a name="BKMK_SUPLog"></a> Software update point
 
@@ -601,7 +601,7 @@ The following table lists the log files that contain information related to disc
 
 |Log name|Description|Computer with log file|  
 |--------------|-----------------|----------------------------|  
-|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Site server|  
+|UXAnalyticsUploadWorker.log|Records data upload to the service for endpoint analytics.|Service connection point|  
 |SensorWmiProvider.log|Records the activity of the WMI provider for the endpoint analytics sensor.|Client|  
 |SensorEndpoint.log|Records the execution of endpoint analytics policy and upload of client data to the site server.|Client|
 |SensorManagedProvider.log|Records the gathering and processing of events and information for endpoint analytics.|Client|
