@@ -164,7 +164,7 @@ Before you update the version of a profile that's assigned to groups, [test the 
 
 ## Remove a security baseline assignment
 
-When a security baseline setting no longer applies to a device, or settings in a baseline are set to *Not configured*, those settings on a device don't revert to a pre-managed configuration. Instead, the previously managed settings on the device keep their last configurations as received from the baseline until some other process updates those settings on the device.
+When a security baseline setting no longer applies to a device, or settings in a baseline are set to *Not configured*, those settings on a device might not revert to a pre-managed configuration depending on the settings in the security baseline. The settings are based on CSPs, and each CSP can handle the change removal differently.
 
 Other processes that might later change settings on the device include a different or new security baseline, device configuration profile, Group Policy configurations, or manual edit of the setting on the device.
 
