@@ -49,7 +49,7 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
-## Week of July 5, 2022 (Service release 2206)
+## Week of July 4, 2022 (Service release 2206)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Apps
