@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 07/01/2022
+ms.date: 07/05/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -186,14 +186,6 @@ Features of the reusable settings groups will include:
   
 Reusable groups will be configured on a new Tab for *Reusable settings* that will be available when you view endpoint security Firewall policy.  In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall**.
 
-## Monitor and troubleshoot
-
-### Use Collect diagnostics to collect details about Windows expedited updates<!--  14337387 -->
-Intune’s remote action to [*Collect diagnostics*](../remote-actions/collect-diagnostics.md) will soon collect additional details about [Windows expedited updates](../protect/windows-10-expedite-updates.md) that you deploy to devices.  (**Devices** > **Windows** > *select a device* > **Collect diagnostics**)  This information can be of use when troubleshooting problems with expedited updates.
-
-The new details that will be collected include: 
-- Files:  `C:\Program Files\Microsoft Update Health Tools\Logs\*.etl`
-- Registry Keys:   `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CloudManagedUpdate`
 
 <!-- ***********************************************-->
 

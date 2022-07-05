@@ -60,6 +60,19 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
+## Week of July 4, 2022
+
+### Monitor and troubleshoot
+
+#### Use Collect diagnostics to collect details about Windows expedited updates<!--  14337387 -->
+
+Intune’s remote action to [Collect diagnostics](../remote-actions/collect-diagnostics.md) now collects additional details about [Windows expedited updates](../protect/windows-10-expedite-updates.md) that you deploy to devices. This information can be of use when troubleshooting problems with expedited updates.
+
+The new details that are collected include:  
+- Files: `C:\Program Files\Microsoft Update Health Tools\Logs\*.etl`
+- Registry Keys: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CloudManagedUpdate`
+
+
 ## Week of June 27, 2022 (Service release 2206)
 
 ### App management
