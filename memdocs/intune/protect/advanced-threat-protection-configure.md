@@ -83,6 +83,9 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 
       For iOS devices, Defender for Endpoint also supports the following settings:
 
+      >[!NOTE]
+      > Before you can use the following two settings, you must opt-in to an MDE Preview. To opt-in, contact `mdatpmobile@microsoft.com`.
+
       - **Enable App Sync for iOS Devices**:  Set to **On** to allow Defender for Endpoint to request metadata of iOS applications from Intune to use for threat analysis purposes. The iOS device must be MDM-enrolled and will provide updated app data during device check-in.
 
       - **Send full application inventory data on personally-owned iOS/iPadOS Devices**: This setting controls the application inventory data that Intune shares with Defender for Endpoint when Defender for Endpoint syncs app data and requests the app inventory list.
@@ -218,7 +221,7 @@ Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for 
 4. For **Platform**, select **iOS/iPadOS**
 5. For **Profile type**, select **Custom**, and then select **Create**.
 6. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
-7. Enter a *Configuration profile name*, and select a file to .mobileconfig file to Upload.
+7. Enter a *Configuration profile name*, and select a `.mobileconfig` file to Upload.
 8. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
 9. On the **Assignments** page, select the groups that will receive this profile. For this scenario, it's a best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/24/2022
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -36,7 +36,11 @@ Personal and organization-owned devices can be enrolled in Intune. Once they're 
 - [Apple Configurator](#apple-configurator-enrollment)
 - [BYOD: User and Device enrollment](#byod-user-and-device-enrollment)
 
-This article provides recommendations on the iOS/iPadOS enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. For more specific information, see [Enroll iOS/iPadOS devices](../enrollment/ios-enroll.md).
+This article provides recommendations on the iOS/iPadOS enrollment method to use. It also includes an overview of the administrator and user tasks for each enrollment type. 
+
+For more specific information, see [Enroll iOS/iPadOS devices](../enrollment/ios-enroll.md). There's also a visual guide of the different enrollment options for each platform:
+
+[![A visual representation of Intune enrollment options by platform](./media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
 
 > [!TIP]
 > [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
@@ -201,7 +205,7 @@ When you create an enrollment profile in the [Endpoint Manager admin center](htt
 
   2. Setup Assistant prompts the user for additional information. When the home screen appears, setup is complete. The device is fully enrolled, and user device affinity is established. Users can use their devices and see your apps and policies on their devices.
 
-      At this point, the device isn't fully registered with Azure AD and shows as non-compliant in Azure AD. The device shows it is compliant in the Microsoft Endpoint Manager admin center.
+      At this point, the device isn't fully registered with Azure AD and shows as non-compliant in Azure AD. The device shows it's compliant in the Microsoft Endpoint Manager admin center.
 
   3. If you **Install Company Portal app with VPP** (recommended), then the Company Portal app automatically installs. Users open the Company Portal app, and sign in with their work or school account (`user@contoso.com`) again. They complete Azure AD registration in the Company Portal app, which fully registers the device with Azure AD. Users then gain access to corporate resources protected by conditional access policies and the device shows as being compliant in Azure AD.
 
@@ -397,7 +401,7 @@ This task list provides an overview. For more specific information, see [Set up 
 
     - If you install apps before the user enrollment profile is applied, then these apps aren't protected or managed by the user enrollment profile.
 
-      For example, a user downloads the Outlook app from the Apple app store. The app automatically installs to the user partition on the device. The user configures Outlook for their personal email. When configuring their organization email, they're blocked by conditional access, and asked to enroll. They enroll, and a user enrollment profile deploys.
+      For example, a user downloads the Outlook app from the Apple app store. The app automatically installs to the user partition on the device. The user configures Outlook for their personal email. When users configure their organization email, they're blocked by conditional access, and asked to enroll. They enroll, and a user enrollment profile deploys.
 
       Since the Outlook app was installed before the user enrollment profile, the user enrollment profile fails. The Outlook app can't be managed because it's installed and configured in the user partition, not the work partition. Users must manually uninstall the Outlook app.
 

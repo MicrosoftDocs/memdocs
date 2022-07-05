@@ -106,7 +106,7 @@ If you need to get help while setting up Windows 365 Business in the Microsoft 3
 
 ## Next steps
 
-[Get users started on their Cloud PCs](..\get-users-started.md)
+[Get users started on their Cloud PCs](../end-user-access-cloud-pc.md)
 
 [Manage your Cloud PCs](device-management.md)
 

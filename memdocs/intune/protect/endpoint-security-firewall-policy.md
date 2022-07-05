@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ms.reviewer: mattcall
 
 ---
@@ -52,6 +54,8 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 - **macOS firewall** – Enable and configure settings for the built-in firewall on macOS.
 
 **Platform: Windows 10, Windows 11, and Windows Server**:
+
+ For information about configuring settings in the following profiles, see the [Firewall configuration service provider (CSP)](/windows/client-management/mdm/firewall-csp).
 
 - **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
 

@@ -33,24 +33,28 @@ Before you can use [custom settings for compliance](../protect/compliance-use-cu
 
 The discovery script:
 
-- Is added to Intune before you create a compliance policy. After its added, it will be available to select when you create a compliance policy with custom settings.
+- Is added to Intune before you create a compliance policy. After it's added, it will be available to select when you create a compliance policy with custom settings.
 - Runs on a device that receives the compliance policy. The script evaluates the conditions of the JSON file you upload to the same policy.
-- Identifies one or more settings, as defined in the JSON,  and returns a list of discovered values for those settings. A single script can be assigned to each policy, and supports discovery of multiple settings.
+- Identifies one or more settings, as defined in the JSON, and returns a list of discovered values for those settings. A single script can be assigned to each policy, and supports discovery of multiple settings.
 - Must be compressed to output results in one line. For example: `$hash = @{ ModelName = "Dell"; BiosVersion = "1.24"; TPMChipPresent = $true}`
 - Must include the following line at the end of the script: `return $hash | ConvertTo-Json -Compress`
 
 ## Sample discovery script
 
-The following is a sample PowerShell script.
+The following example is a sample PowerShell script.
 
 ```powershell
-$hash = @{ ModelName = "Dell"; BiosVersion = "1.24"; TPMChipPresent = $true}
+$WMI_ComputerSystem = Get-WMIObject -class Win32_ComputerSystem
+$WMI_BIOS = Get-WMIObject -class Win32_BIOS 
+$TPM = Get-Tpm
+
+$hash = @{ ModelName = $WMI_ComputerSystem.Model; BiosVersion = $WMI_BIOS.SMBIOSBIOSVersion; TPMChipPresent = $TPM.TPMPresent}
 return $hash | ConvertTo-Json -Compress
 ```
 
-The following is the output of the sample script:
+The following example is the output of the sample script:
 
-```
+```powershell
 PS C:\Users\apervaiz\Documents> .\sample.ps1
 {"ModelName":  "Dell","BiosVersion":  1.24,"TPMChipPresent":  true}
 ```
@@ -62,9 +66,9 @@ PS C:\Users\apervaiz\Documents> .\sample.ps1
 3. On **Settings**, add your script to *Detection script*. Review your script carefully. Intune doesn’t validate the script for syntax or programmatic errors.
 4. On **Settings**, configure the following behavior for the script:
 
-   - **Run this script using the logged on credentials** – By default, the script runs in the System context on the device. Set this to Yes to have it run in the context of the logged-on user. If the user isn’t logged in, the script defaults back to the System context.
+   - **Run this script using the logged on credentials** – By default, the script runs in the System context on the device. Set this value to Yes to have it run in the context of the logged-on user. If the user isn’t logged in, the script defaults back to the System context.
    - **Enforce script signature check** – For more information, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.1&preserve-view=true) in the PowerShell documentation.
-   - **Run script in 64 bit PowerShell Host** – By default, the script runs using the 32-bit PowerShell host. Set this to *Yes* to force the script to run using the 64-bit host instead.
+   - **Run script in 64 bit PowerShell Host** – By default, the script runs using the 32-bit PowerShell host. Set this value to *Yes* to force the script to run using the 64-bit host instead.
 
 5. Complete the script creation process. The script is now visible in the *Scripts* pane of the Microsoft Endpoint Manager admin center and will be available to select when configuring compliance policies.
 

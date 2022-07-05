@@ -180,5 +180,4 @@ Follow these steps to generate App Protection .csv file or App Configuration .cs
  
 ## See also
 - [Manage data transfer between iOS/iPadOS apps](data-transfer-between-apps-manage-ios.md)
-- [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
 - [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
