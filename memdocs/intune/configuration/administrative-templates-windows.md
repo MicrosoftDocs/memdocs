@@ -40,11 +40,11 @@ This feature applies to:
 
 The Intune templates are 100% cloud-based, are built in to Intune (no downloading), and don't require any customizations, including using OMA-URI. They offer a straight-forward way to configure the settings, and find the settings you want:
 
-- The **Windows settings** are similar to group policy (GPO) settings in Active Directory (AD). These settings are built in to Windows, and are [ADMX-backed settings](/windows/client-management/mdm/understanding-admx-backed-policies) that use XML.
+- The **Windows settings** are similar to group policy (GPO) settings in Active Directory (AD). These settings are built in to Windows, and are [ADMX-backed settings](/windows/client-management/mdm/understanding-admx-backed-policies) that use XML. Know Issue Rollback (KIR) policy definition that is installed in the Administrative Template can activate a KIR on managed devices. In a hybrid Azure AD or Active Directory Domain Services (AD DS) domain, you can [apply a KIR to devices by using GPO](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback#apply-a-kir-to-devices-in-a-hybrid-azure-ad-or-ad-ds-domain-using-group-policy).
 
 - The **Office and Microsoft Edge** settings are ADMX-ingested, and use the same Office administrative template files and Microsoft Edge administrative template files that you would download in on-premises environments.
 
-When managing devices in your organization, you want to create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task using **Administrative Templates** in Microsoft Intune.
+When managing devices in your organization, you want to create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task using **Administrative Templates** in Microsoft Intune. You can also use [Intune custom settings](custom-settings-windows-10.md) for ADMX ingestion and [configure ADMX-backed MDM policies to perform a KIR activation](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback#deploy-a-kir-activation-using-microsoft-intune-admx-policy-ingestion-to-the-managed-devices) without requiring a GPO.
 
 As part of your mobile device management (MDM) solution, use these template settings as a one-stop shop to manage your Windows client devices.
 
