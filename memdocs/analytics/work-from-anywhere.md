@@ -22,7 +22,10 @@ The ability for employees to work from anywhere productively is essential in tod
 
 ## <a name="bkmk_score"></a> Work from anywhere score
 
-The **Work from anywhere score** is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed the various insights for helping your end users be productive from anywhere. The score is computed for all Intune and Configuration Manager devices that have opted into [Endpoint analytics](overview.md).
+The **Work from anywhere score** is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed the various insights for helping your end users be productive from anywhere. The score is computed for all active Intune and Configuration Manager devices that have opted into [Endpoint analytics](overview.md).
+
+> [!Note]
+> A device is considered active and will appear in the **Work from anywhere** report if it has uploaded at least one Endpoint analytics event, such as a boot, sign-in, or application crash event, in the past 29 days.
 
 The following metrics are weighted and used to compute the **Work from anywhere score**:
 
