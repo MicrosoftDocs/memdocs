@@ -2,7 +2,7 @@
 title: Technical preview 2207
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2207.
-ms.date: 07/04/2022
+ms.date: 07/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -25,15 +25,9 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2207/1234567.md)] -->
 
-[!INCLUDE [10928371](includes/2207/10928371.md)]
-[!INCLUDE [12608328](includes/2207/12608328.md)]
-[!INCLUDE [13050464](includes/2207/13050464.md)]
-[!INCLUDE [13791025](includes/2207/13791025.md)]
-[!INCLUDE [14059872](includes/2207/14059872.md)]
-[!INCLUDE [14082817](includes/2207/14082817.md)]
-[!INCLUDE [14235392](includes/2207/14235392.md)]
-[!INCLUDE [14637353](includes/2207/14637353.md)]
-
+[!INCLUDE [Distribution point content migration](includes/2207/10928371.md)]
+[!INCLUDE [Improvements to Configuration Manager policies for Microsoft Defender Application Guard](includes/2207/14059872.md)]
+[!INCLUDE [PowerShell release notes preview](includes/2207/14637353.md)]
 
 <!-- ## General known issues  -->
 
