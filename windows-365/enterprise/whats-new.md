@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2022
+ms.date: 07/05/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,28 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of July 4, 2022 (Service release 2206)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Support for nested virtualization now general available<!--39989666 -->
+Support for nested virtualization has moved out of preview and into general availability. For more information, see [Set up nested virtualization on your Cloud PC](nested-virtualization.md).
+
+<!--***********************************************-->
+### End user experience
+
+#### Transfer files from your Cloud PC by using windows365.microsoft.com web client<!--40096523-->
+You can use the windows365.microsoft.com web client to transfer files to and from your Cloud PC. For more information, see [Transfer files to and from a Cloud PC](../end-user-access-cloud-pc.md#transfer-files-to-and-from-a-cloud-pc).
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### New health check: verify that Intune enrollment restrictions allow Windows enrollment<!--39998861 -->
+
+The **Azure network connection** tab has a new health check: **Intune enrollment restrictions allow Windows enrollment**. This health check verifies that Intune enrollment restrictions are configured to allow Windows enrollment. Windows 365 Enterprise requires Intune enrollment during provisioning.
 
 <!-- ########################## -->
 ## Week of June 6, 2022 (Service release 2205)
