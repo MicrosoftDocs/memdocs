@@ -683,6 +683,20 @@ You can choose to filter the `DevicesWithInventory` report's output based on the
 - `EnrollmentType` 
 - `PartnerFeaturesBitmask` 
 
+`ProcessorArchitecture` mappings:
+
+Windows 10+:
+- 9 = x64
+- 5 = ARM
+- 12 = ARM64
+- 0 = x86
+- default = Unknown
+
+Mac:
+- 9 = x64
+- 12 = ARM64
+- default = unknown
+
 ## FirewallStatus  
 
 The following table contains the possible output when calling the `FirewallStatus` report:
