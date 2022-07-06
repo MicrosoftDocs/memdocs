@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/07/2022
+ms.date: 07/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -91,8 +91,8 @@ To use this report:
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report (Preview)**.
 3. Configure settings:
-   - Click on **Select target OS** and choose the version of Windows you plan to deploy.
-   - Click on **Select scope tag** and choose which devices should be in scope for this report.
+   - Click on **Select Target OS** and choose the version of Windows you plan to deploy.
+   - Click on **Select Scope (Tags)** and choose which devices should be in scope for this report.
    - Optionally select **Ownership** and **Readiness status** to refine the report.
    - Click **Generate report**. This process can take several minutes. You'll be notified when report generation is complete.
 
@@ -141,7 +141,7 @@ To use this report:
 2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report (Preview)**.
 3. Configure settings:
 
-   - Click on **Select target OS** and choose the version of Windows you plan to deploy.
+   - Click on **Select Target OS** and choose the version of Windows you plan to deploy.
    - Optionally select **Asset type** and **Risk status** to refine the report.
    - Click **Generate report**. This process can take several minutes. You'll be notified when report generation is complete.
 
