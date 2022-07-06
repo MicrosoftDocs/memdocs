@@ -55,7 +55,7 @@ The default scope tag feature is similar to the security scopes feature in Micro
 
     > [!IMPORTANT]
     > Auto scope tags assignments will overwrite mannually assigned scope tags.
-    > You can assign multiple scope tags to a role.
+    > If a device is assigned multiple scope tags through group assignment, all scope tags will apply.
 
 ## To assign a scope tag to a role
 
