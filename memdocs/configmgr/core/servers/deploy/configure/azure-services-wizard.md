@@ -44,6 +44,8 @@ Configure the following Azure services using this wizard:
 
 - **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Get store apps for your organization that you can deploy with Configuration Manager.  
 
+- **Administration Service Management**: When configuring Azure Services, for enhanced security you can select Administration Service Management option. Selecting this option allows administrators to segment their admin privileges between [cloud management](../../../clients/manage/cmg/overview.md) and [administration service](../../../../develop/adminservice/overview.md). By enabling this option, access is restricted to only administration service endpoints. Configuration Management clients will authenticate to the site using Azure Active Directory.
+
 ### Service details
 
 The following table lists details about each of the services.  
