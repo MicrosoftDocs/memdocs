@@ -54,7 +54,7 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Apps
 
-#### Support for nested virtualization now general available<!--39989666 -->
+#### Support for nested virtualization now generally available<!--39989666 -->
 Support for nested virtualization has moved out of preview and into general availability. For more information, see [Set up nested virtualization on your Cloud PC](nested-virtualization.md).
 
 <!--***********************************************-->
