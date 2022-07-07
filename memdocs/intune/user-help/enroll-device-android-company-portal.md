@@ -35,7 +35,7 @@ Enroll your personal or corporate-owned Android device with Intune Company Porta
 Company Portal supports devices running Android 8.0 and later, including devices secured by Samsung KNOX Standard 2.4 and later. To learn how to update your Android device, see [Check & update your Android version](https://support.google.com/android/answer/7680439).  
   
 </br>
-> [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?rel=0]
+> [!VIDEO https://www.youtube.com/embed/k0Q_sGLSx6o?]
 
 > [!NOTE]
 > Samsung Knox is a type of security that certain Samsung devices use for additional 

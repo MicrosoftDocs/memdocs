@@ -120,10 +120,6 @@ items:
       items:
       - name: How to educate your end users
         href: end-user-educate.md    
-      - name: Company Portal messages
-        href: end-user-company-portal-messages.md
-      - name: App protection on Android
-        href: end-user-mam-apps-android.md
       - name: App protection on iOS
         href: end-user-mam-apps-ios.md
       - name: How to get Android apps

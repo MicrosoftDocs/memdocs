@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Get work or school apps for Android - Microsoft Intune | Microsoft Docs
-description: Learn how to get Intune-managed apps for Android, which protect your data while also helping you stay productive at school or work.  
+title: Managed work and school apps for Android - Microsoft Intune | Microsoft Docs
+description: Learn about managed apps and where to get Android apps for work or school.   
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/25/2020
+ms.date: 06/14/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,69 +30,71 @@ ms.collection:
 ---
 
 
-# Work or school apps for Android  
-Intune-managed apps (*managed* apps for short) are apps that've been configured for you to securely use at work or school. They're specially-configured to meet your organization's security requirements and protect internal data. For example, if you're signed in to one of these apps with your work or school account, your org can restrict certain features, such as copy and paste. Or they could restrict you from saving work files to your device's local storage. These types of restrictions prevent proprietary information from being shared outside of the app or org. 
-
-To maximize data protection, your organization might configure several of these apps to work together. For example:  
-1. You connect to your organization's network in a managed browser app, such as Microsoft Edge.  
-2. You click a link to open a peer's presentation file.  
-3. An appropriate managed app, such as Microsoft PowerPoint, opens the file.  
-
-Your org can require you to use a specific app to do something like opening a work file, or accessing a web link. If you don't have the app, you might not be able to do these things.  
+# Managed work and school apps for Android 
+Intune-managed apps (*managed* apps for short) are work-approved apps managed by your organization, and configured to prevent intentional or unintentional data loss. When signed into a managed app with your work or school account, you may encounter your organization's requirements and restrictions for access. This article provides an overview of Intune-managed apps, how to get the ones you need for work or school, and their restrictions and requirements.   
 
 ## How do I know I'm using a managed app?
-When you sign in or try to access work or school data in a managed app, you'll receive an on-screen message that the app is protected by your organization. 
+When you sign in or try to access work data in a managed app, you'll receive a message that the app is protected by your organization. 
 
-## Common managed apps  
-Examples of commonly required or available managed apps in schools and workplaces are:
+On a device with a work profile, a work app is marked with a briefcase badge. For more information about Android work profiles, see [Introduction to Android work profile](what-happens-when-you-create-a-work-profile-android.md).    
 
-- Microsoft Edge
 
-- Microsoft Outlook
+## App and data protection policies        
 
-- Microsoft Word, Excel, and PowerPoint
-
-## How do I get work or school apps?
-There are three ways to get these apps:   
-* Your organization automatically installs apps to your device at time of enrollment.  
-* You install an app from the Google Play store, and then sign in to the app with your work or school account.    
-* Your organization makes managed apps available to you in Company Portal. Go to the Company Portal app or website to search, view, and install available apps. For more information about these apps, see the next section, [Available apps](#available-apps).  
-
-### Available apps   
- Your organization can select apps that are appropriate and useful for you at work or school, and make them available to you in Company Portal.  
-
- Apps are also made available to you based on your device type. For example, if you're using the Company Portal app for Android, you'll have access to Android apps, but not iOS apps.   
-
-## Request an app for work or school   
- If there's an app you need, but don't see in Company Portal, you can request it. You'll find contact details for your IT support person in the Company Portal **Contact IT** tab. The same contact information is available on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).   
-
-## What can my org manage in an app?  
-The following list describes the settings your IT support person can control within an app. These settings affect how you view, access, and otherwise use work or school data on your device:
+Managed apps enforce your organization's app and data protection policies, which may restrict or require: 
 
 * Access to specific websites  
 
 * Access to internal company websites using Microsoft Edge and the Azure Active Directory proxy  
 
-* Minimum version of app, version of OS
+* Minimum app and OS version  
 
 * Ability to share and transfer data between apps  
 
-* How and where you save files  
+* How and where you save work files  
 
 * Copy and paste functionality  
 
-* PIN access requirements  
+* PIN access   
 
-* How you sign in, using company credentials  
+* How you sign in, using workplace credentials  
 
 * Ability to back up data to the cloud  
 
 * Ability to take screenshots  
 
-* Data encryption requirements  
+* Data encryption requirements    
 
-## Next step  
+These policies prevent sensitive work information from being shared or leaked outside of your org. Restrictions and requirements are only enforced when using an app for work or school, such as when:  
 
-* Contact your IT support person for more information about the managed apps on your device. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+* You're signed into an app with your work account.   
+* You try to access work files in OneDrive, Teams, or SharePoint.  
+* You're using apps in the work profile area on your device.  
 
-* For information about using work or school apps on an iOS device, see [Get work or school apps for iOS](use-managed-apps-on-your-device-ios.md).  
+## How do I install work or school apps?  
+
+There are three ways to get work apps:   
+
+* Install an app from the Google Play store, and then sign in to the app with your work or school account.  
+* Your organization configures apps to install automatically at the time of device enrollment.  
+* Your organization makes apps available to you in Company Portal.   
+
+You don't need to enroll your device in Intune to use work or school apps, unless it's required by your organization, but you do need to have the Intune Company Portal app installed on your device.    
+
+### Add work or school account      
+Only one work or school account can be associated with the managed apps on your device. You'll see this policy enforced in the following scenarios:    
+
+* You try to add a second work or school account. Company Portal will prompt you to remove the work account you're not using.   
+* Your IT admin assigns a policy to your second account. Company Portal will prompt you to remove the work account you're not using.   
+
+### Available apps   
+*Available* apps aren't necessarily required for you to install, but are appropriate apps to use for work or school. You can view all available apps in the Company Portal app. Apps are made available based on device type. For example, if you're using the Company Portal app on your Android device, you'll have access to Android apps, but not iOS apps.   
+
+### Request an app for work or school   
+ If there's an app you need, but don't see in Company Portal, you can request it from your support person. Sign in to the Company Portal app or [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980) for contact information.     
+
+### View protected media files with Azure Information Protection app  
+The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text files that cannot be opened with your regular apps for these file types. The mobile viewer app is available for Android devices on [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).  
+
+For more information about AIP, see [Mobile viewer apps for Azure Information Protection on iOS and Android](/azure/information-protection/rms-client/mobile-app-faq).  
+

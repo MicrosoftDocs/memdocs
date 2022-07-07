@@ -266,7 +266,9 @@ When you create a restriction, it's added to the list just above the default. Yo
 
 
 >[!NOTE]
->Enrollment restrictions are applied to users. For enrollment scenarios that are not user-driven, such as Windows Autopilot self-deploying mode, Intune only enforces the default restrictions targeted to all users.  
+>Enrollment restrictions are applied to users. For enrollment scenarios that are not user-driven such as Windows Autopilot self-deploying mode, Bulk enrollment (WCD), or Azure Virtual desktop, Intune only enforces the default restrictions targeted to all users.
+>
+>For a successful enrollment, make sure the platform is allowed in the default enrollment restriction policy.
  
 
 ## View enrollment reports

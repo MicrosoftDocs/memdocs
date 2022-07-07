@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 05/12/2022
+ms.date: 06/21/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -65,7 +65,12 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 
 ### Provision Cloud PCs with Secure Boot<!--38012584-->
 
-You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality. Europe and North American regions will receive this feature within the next few months.
+You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality. North American regions will receive this feature within the next few months.
+
+<!--***********************************************-->
+<!--
+## End user experience
+-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot

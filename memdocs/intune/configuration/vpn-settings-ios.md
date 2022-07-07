@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/12/2022
+ms.date: 07/05/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -87,13 +87,13 @@ Select the VPN connection type from the following list of vendors:
   Applies to the Microsoft Tunnel client app.
 
   > [!Important]
-  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel (preview)* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
+  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
   > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
   > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
   >
   > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
 
-- **Microsoft Tunnel (preview)**
+- **Microsoft Tunnel**
 
   Applies to the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
 
@@ -385,7 +385,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 These settings apply to the following VPN connection types:
 
 - **Microsoft Tunnel (standalone client) (preview)**
-- **Microsoft Tunnel (preview)**
+- **Microsoft Tunnel**
 
 **Settings**:
 

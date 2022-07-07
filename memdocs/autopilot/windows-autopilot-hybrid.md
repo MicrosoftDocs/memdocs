@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 06/22/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -113,12 +113,23 @@ The organizational unit that's granted the rights to create computers must match
 
 ## Install the Intune Connector
 
-The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. The computer must also have access to the internet and your Active Directory. To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that you want to support.
+### Before you begin
 
-> [!NOTE]
-> If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that's able to create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
+- The Intune Connector for Active Directory must be installed on a computer that's running Windows Server 2016 or later. 
+- The computer must have access to the internet and your Active Directory. 
+- To increase scale and availability, you can install multiple connectors in your environment. We recommend installing the Connector on a server that's not running any other Intune connectors. Each connector must be able to create computer objects in any domain that you want to support.
 
-The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
+- If your organization has multiple domains and you install multiple Intune Connectors, you must use a service account that can create computer objects in all domains, even if you plan to implement hybrid Azure AD join only for a specific domain. If these are untrusted domains, you must uninstall the connectors from domains in which you don't want to use Windows Autopilot. Otherwise, with multiple connectors across multiple domains, all connectors must be able to create computer objects in all domains.
+
+  This connector service account must have the following permissions:
+
+  - **[Log on as a service](/system-center/scsm/enable-service-log-on-sm)**
+  - Must be part of the **Domain user** group
+  - Must be a member of the local **Administrators** group on the Windows server that hosts the connector
+
+- The Intune Connector requires the [same endpoints as Intune](../intune/fundamentals/intune-endpoints.md).
+
+### Install steps
 
 1. Turn off IE Enhanced Security Configuration. By default Windows Server has Internet Explorer Enhanced Security Configuration turned on. If you're unable to sign in to the Intune Connector for Active Directory, then turn off IE Enhanced Security Configuration for the Administrator. [How To Turn Off Internet Explorer Enhanced Security Configuration](/archive/blogs/chenley/how-to-turn-off-internet-explorer-enhanced-security-configuration). 
 2. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory** > **Add**. 
@@ -131,13 +142,10 @@ The Intune Connector requires the [same endpoints as Intune](../intune/fundament
 8. Go to **Devices** > **Windows** > **Windows enrollment** > **Intune Connector for Active Directory**, and then confirm that the connection status is **Active**.
 
 > [!NOTE]
-> The Global administrator role is a temporary requirement at the time of installation.
-
-> [!NOTE]
-> After you sign in to the Connector, it might take a couple of minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
-
-> [!NOTE]
-> Inactive Intune connectors will still appear in the Intune Connectors blade and will automatically be cleaned up after 30 days.
+> 
+> - The Global administrator role is a temporary requirement at the time of installation.
+> - After you sign in to the Connector, it can take several minutes to appear in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). It appears only if it can successfully communicate with the Intune service.
+> - Inactive Intune connectors still appear in the Intune Connectors blade and will automatically be cleaned up after 30 days.
 
 ### Configure web proxy settings
 

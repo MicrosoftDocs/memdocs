@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/02/2022
+ms.date: 07/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -70,7 +70,7 @@ When you enable this action:
    > 
    > In government clouds, notification emails are sent from: microsoft-noreply@microsoft.com
    > 
-   > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not recieve the email notification. 
+   > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not receive the email notification. 
 
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 

@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/07/2021
+ms.date: 07/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -67,70 +67,72 @@ This list below is the same order as the diagnostic zip.  Each collection contai
 
 Registry Keys:
 
-1. HKLM\Software\Microsoft\IntuneManagementExtension
-2. HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
-3. HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection
-4. HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
-5. HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
-6. HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall
-7. HKLM\Software\Policies
-8. HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
-9. HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
-10. HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
-11. HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
+1. HKLM\SOFTWARE\Microsoft\CloudManagedUpdate
+1. HKLM\SOFTWARE\Microsoft\IntuneManagementExtension
+1. HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot
+1. HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection
+1. HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI
+1. HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings
+1. HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+1. HKLM\SOFTWARE\Policies
+1. HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL
+1. HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
+1. HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
+1. HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 Commands:
 
-12. %programfiles%\windows defender\mpcmdrun.exe -GetFiles
-13. %windir%\system32\certutil.exe -store
-14. %windir%\system32\certutil.exe -store -user my
-15. %windir%\system32\Dsregcmd.exe /status
-16. %windir%\system32\ipconfig.exe /all
-17. %windir%\system32\mdmdiagnosticstool.exe 
-18. %windir%\system32\msinfo32.exe /report %temp%\MDMDiagnostics\msinfo32.log
-19. %windir%\system32\netsh.exe advfirewall show allprofiles
-20. %windir%\system32\netsh.exe advfirewall show global
-21. %windir%\system32\netsh.exe lan show profiles
-22. %windir%\system32\netsh.exe winhttp show proxy
-23. %windir%\system32\netsh.exe wlan show profiles
-24. %windir%\system32\netsh.exe wlan show wlanreport
-25. %windir%\system32\ping.exe -n 50 localhost
-26. %windir%\system32\powercfg.exe /batteryreport /output %temp%\MDMDiagnostics\battery-report.html
-27. %windir%\system32\powercfg.exe /energy /output %temp%\MDMDiagnostics\energy-report.html
+1. %programfiles%\windows defender\mpcmdrun.exe -GetFiles
+1. %windir%\system32\certutil.exe -store
+1. %windir%\system32\certutil.exe -store -user my
+1. %windir%\system32\Dsregcmd.exe /status
+1. %windir%\system32\ipconfig.exe /all
+1. %windir%\system32\mdmdiagnosticstool.exe 
+1. %windir%\system32\msinfo32.exe /report %temp%\MDMDiagnostics\msinfo32.log
+1. %windir%\system32\netsh.exe advfirewall show allprofiles
+1. %windir%\system32\netsh.exe advfirewall show global
+1. %windir%\system32\netsh.exe lan show profiles
+1. %windir%\system32\netsh.exe winhttp show proxy
+1. %windir%\system32\netsh.exe wlan show profiles
+1. %windir%\system32\netsh.exe wlan show wlanreport
+1. %windir%\system32\ping.exe -n 50 localhost
+1. %windir%\system32\powercfg.exe /batteryreport /output %temp%\MDMDiagnostics\battery-report.html
+1. %windir%\system32\powercfg.exe /energy /output %temp%\MDMDiagnostics\energy-report.html
 
 Event Viewers:
 
-28. Application
-29. Microsoft-Windows-AppLocker/EXE and DLL
-30. Microsoft-Windows-AppLocker/MSI and Script
-31. Microsoft-Windows-AppLocker/Packaged app-Deployment
-32. Microsoft-Windows-AppLocker/Packaged app-Execution
-33. Microsoft-Windows-AppxPackaging/Operational
-34. Microsoft-Windows-Bitlocker/Bitlocker Management
-35. Microsoft-Windows-HelloForBusiness/Operational
-36. Microsoft-Windows-SENSE/Operational
-37. Microsoft-Windows-SenseIR/Operational
-38. Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
-39. Setup
-40. System
+1. Application
+1. Microsoft-Windows-AppLocker/EXE and DLL
+1. Microsoft-Windows-AppLocker/MSI and Script
+1. Microsoft-Windows-AppLocker/Packaged app-Deployment
+1. Microsoft-Windows-AppLocker/Packaged app-Execution
+1. Microsoft-Windows-AppxPackaging/Operational
+1. Microsoft-Windows-Bitlocker/Bitlocker Management
+1. Microsoft-Windows-HelloForBusiness/Operational
+1. Microsoft-Windows-SENSE/Operational
+1. Microsoft-Windows-SenseIR/Operational
+1. Microsoft-Windows-Windows Firewall With Advanced Security/Firewall
+1. Setup
+1. System
 
 Files:
 
-41. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
-42. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
-43. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
-44. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
-45. %temp%\MDMDiagnostics\battery-report.html
-46. %temp%\MDMDiagnostics\energy-report.html
-47. %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
-48. %temp%\MDMDiagnostics\msinfo32.log
-49. %windir%\ccm\logs\*.log
-50. %windir%\ccmsetup\logs\*.log
-51. %windir%\logs\CBS\cbs.log
-52. %windir%\logs\measuredboot\*.*
-53. %windir%\Logs\WindowsUpdate\*.etl
-54. %windir%\temp\%computername%*.log
-55. %windir%\temp\officeclicktorun*.log
+1. %ProgramData%\Microsoft\DiagnosticLogCSP\Collectors\*.etl
+1. %ProgramData%\Microsoft\IntuneManagementExtension\Logs\*.*
+1. %ProgramData%\Microsoft\Windows Defender\Support\MpSupportFiles.cab
+1. %ProgramData%\Microsoft\Windows\WlanReport\wlan-report-latest.html
+1. %ProgramData Microsoft Update Health Tools\Logs\*.etl
+1. %temp%\MDMDiagnostics\battery-report.html
+1. %temp%\MDMDiagnostics\energy-report.html
+1. %temp%\MDMDiagnostics\mdmlogs-<Date/Time>.cab
+1. %temp%\MDMDiagnostics\msinfo32.log
+1. %windir%\ccm\logs\*.log
+1. %windir%\ccmsetup\logs\*.log
+1. %windir%\logs\CBS\cbs.log
+1. %windir%\logs\measuredboot\*.*
+1. %windir%\Logs\WindowsUpdate\*.etl
+1. %windir%\temp\%computername%*.log
+1. %windir%\temp\officeclicktorun*.log
 
 ## Disable device diagnostics
 
