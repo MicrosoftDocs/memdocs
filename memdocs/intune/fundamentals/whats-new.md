@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/29/2022
+ms.date: 07/07/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -61,6 +61,12 @@ You can use RSS to be notified when this page is updated. For more information, 
 -->
 
 ## Week of July 4, 2022
+
+### Device management
+
+#### Endpoint analytics scores per device model <!-- 14439211 -->
+
+Endpoint analytics now displays [scores by device model](../../analytics/scores.md#bkmk_model). These scores help admins contextualize the user experience across device models in the environment. Scores per model and per device are available in all Endpoint analytics reports, including the [Work from anywhere](../../analytics/work-from-anywhere.md) report.
 
 ### Monitor and troubleshoot
 
