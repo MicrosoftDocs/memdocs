@@ -36,6 +36,10 @@ When you purchase devices from an OEM, that OEM can automatically register the d
 
 OEMs must follow [device guidelines](autopilot-device-guidelines.md) for Windows Autopilot devices.
 
+## Windows Autopilot Service
+
+The Windows Autopilot Service is managed and maintained by Microsoft.  This service provides the backend database that associates hardware hashes with customer tenants. When an OEM registers devices for a customer, they are writing that data to this database and not directly to the customer's tenant. No permissions to the customer's tenant are granted or required for OEMs to register devices on the customer's behalf.
+
 ### Customer consent
 
 Before an OEM can register devices for an organization, the organization must grant the OEM permission to do so. The OEM begins this process with approval granted by an Azure AD global administrator from your organization. For more information see [OEM authorization](registration-auth.md#oem-authorization).
