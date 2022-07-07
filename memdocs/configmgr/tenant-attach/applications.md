@@ -33,14 +33,7 @@ For Configuration Manager versions 2103, or later:
    - Is deployed to a user that's logged in to the device, primary user of the device, and applications previously installed for the user
      - When you have a large number of device available applications, using the **An administrator must approve a request for this application on the device** on application deployments is recommended. For more information, see [Display all applications for a device in the admin center](#bkmk_all).
 
-For Configuration Manager versions 2010, and earlier:
 
-- All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites)
-- A minimum of [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/)
-- Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../core/servers/manage/optional-features.md).
-- At least one application deployed to a device collection with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt).
-   - User targeted applications or applications without the approval option set don't appear in the application list when you're using Configuration Manager version 2002.
-- A minimum of Configuration Manager version 2006 is required for installing [user targeted applications](#bkmk_user)<!--7518897-->.
 
 ## Permissions
 
@@ -64,7 +57,7 @@ You can filter the application list based on the status. The application status 
 - **Failed**: The application installation failed.
 - **Requirements not met**: The application requirements haven't been met.
 - **Not installed**: The application isn't currently installed. Typically this status is seen if a different deployment or a user removed the application.
-- **Restart pending**: The application is installed but needs a restart to complete (starting in version 2006).
+- **Restart pending**: The application is installed but needs a restart to complete.
 - **Required**: Installation is required for the application (starting in version 2103)
 
 ## <a name="bkmk_deploy"></a> Deploy an application to a device
@@ -79,9 +72,8 @@ You can export all of the data currently in the view into a .csv file. At the to
 
 ## <a name="bkmk_user"></a> Deploy an application to a user
 <!--7518897-->
-*(Introduced in version 2006)*
 
-Starting in Configuration Manager version 2006, user available applications appear in the **Applications** node for a ConfigMgr device. The list of applications available for the device also includes applications deployed to the device's currently logged on user.
+User available applications appear in the **Applications** node for a ConfigMgr device. The list of applications available for the device also includes applications deployed to the device's currently logged on user.
 
 Deploying applications to a user has the following limitations:
 - Multi-user session scenarios aren't supported.
@@ -90,9 +82,9 @@ Deploying applications to a user has the following limitations:
 
 ## <a name="bkmk_repair"></a> Uninstall, repair, re-evaluate, or reinstall an application
 <!--7979972, 8227649-->
-*(Introduced in version 2010)*
 
- Starting in Configuration manager version 2010, administrators can do the following actions for applications in the Microsoft Endpoint Manager admin center:
+
+Administrators can do the following actions for applications in the Microsoft Endpoint Manager admin center:
 
 - **Uninstall** an application
 - **Repair** installation of an application
