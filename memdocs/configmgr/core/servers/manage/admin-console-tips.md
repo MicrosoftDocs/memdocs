@@ -155,6 +155,12 @@ Your user account needs at least **Read** permission to these objects.
 For more information, see [Use the status system](use-status-system.md).
 
 ### Improvements to console search
+<!--14908615-->
+*(Introduced in version 2207)*
+- The default search will now include all subfolders. That is when you navigate to any node in the console, by default, search results will include items from that node as well as from all subfolders.
+- If you want to search only current node, select the **Current Node** button in the ribbon. The search results will then include items from current node only.
+- If you want to search all subfolders, select the **All Subfolders** button in the ribbon. The search results will then include items from current node as well as from all subfolders.
+
 <!--4640570-->
 *(Introduced in version 1910)*
 
