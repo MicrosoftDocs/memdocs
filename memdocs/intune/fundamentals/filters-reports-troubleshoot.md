@@ -68,9 +68,9 @@ In the following example, you can see this information for the **TestDevice**:
 
 :::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="See the date, time, evaluation results, and other device filter assignment properties in Microsoft Endpoint Manager and Microsoft Intune.":::
 
-### App filter evaluation report
+### Workload filter evaluation reports
 
-This report shows filter information for each device that was evaluated in an app assignment. For each device, you can see the device's overall applicability for an app, and get more detailed information about the filter evaluation.
+Workload device status reports show filter information for each device that was evaluated in an app or policy assignment. For each device, you can see the device's overall applicability for a workload, and get more detailed information about the filter evaluation. Follow the steps below for apps filter evaluation reports.
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > select an app > **Device install status**.
@@ -89,6 +89,10 @@ In the following example, you can see this information for the **Microsoft Word*
 
 > [!IMPORTANT]
 > In the **Device install status** report, apps deployed as "Available" aren't shown. To troubleshoot if a user/device is filtered in or out of an Available assignment, use the **Filter evaluation report for devices**. To generate filter evaluation results, the end user must go to the list of apps in the Company portal app or website.
+> Devices that are excluded from assignment using the "Excluded groups" option are not shown in workload device status reports.
+
+> [!NOTE]
+> Filter evaluation information is available as a column in Apps and Settings Catalog device status reports but is not yet available for all Intune workloads.
 
 ## Include vs. Exclude
 
