@@ -25,7 +25,7 @@ Bring the power of the Configuration Manager on-premises Run Scripts feature to 
 Running Scripts from the admin center requires the following items:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites)
-- A minimum of Configuration Manager version 2006 with [KB4580678 - Tenant attach rollup for Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4580678) installed.
+- A supported version of Configuration Manager installed.
    - All sites in the hierarchy must meet the minimum Configuration Manager version requirement.
 - Configuration Manager clients must be running the latest version client.
 - To run PowerShell scripts, the client must be running PowerShell version 3.0 or later.

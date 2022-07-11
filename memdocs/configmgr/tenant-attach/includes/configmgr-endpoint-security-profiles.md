@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 06/28/2022
 ---
 <!--Don't apply H2/H3 in this include file since they are context driven by article. This file is currently used by endpoint-security-get-started.md and deploy-antivirus-policy.md. -->
-The following profiles are supported for devices you manage with Configuration Manager current branch 2006 or later, through the tenant attach scenario:
+The following profiles are supported for devices you manage with Configuration Manager current branch, through the tenant attach scenario:
 <!--The following profiles are supported for devices you manage with Configuration Manager Technical Preview 2007 or later, through the tenant attach scenario:-->
 
 - Platform: **Windows 10, Windows 11, and Windows Server (ConfigMgr)**
@@ -19,8 +19,8 @@ The following profiles are supported for devices you manage with Configuration M
     - Windows 10 and later (x86, x64, ARM64)
     - Windows Server 2019 and later (x64)
     - Windows Server 2016 (x64)
-    - Windows 8.1 (x86, x64), starting in Configuration Manager version 2010 <!--8763780, 8740844-->
-    - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010 <!--8763780, 8740844-->
+    - Windows 8.1 (x86, x64) <!--8763780, 8740844-->
+    - Windows Server 2012 R2 (x64) <!--8763780, 8740844-->
 
   - Profile: **Endpoint detection and response (ConfigMgr)** - Manage [Endpoint detection and response policy settings](../../../intune/protect/endpoint-security-edr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json), when you use tenant attach.
 
@@ -49,7 +49,7 @@ The following profiles are supported for devices you manage with Configuration M
     - Windows 10 and later (x86, x64, ARM64)
 
     > [!Important]
-    > To support firewall policies, install [KB4578605](https://support.microsoft.com/help/4578605/) for Configuration Manager version 2006. The update is available in the Configuration Manager console.
+    > A supported version of Configuration manager is required to support firewall policies.
 
   - Profile: **Exploit Protection (ConfigMgr)(preview)** - Manage [Exploit Protection settings for Configuration Manager devices](../../../intune/protect/endpoint-security-asr-profile-settings.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json#attack-surface-reduction-configmgr) as part of Attack surface reduction policy, when you use tenant attach.
 

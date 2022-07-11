@@ -95,17 +95,10 @@ Unexpected errors are typically caused by either [service connection point](../c
 - Use search
 - Select **Retry installation**
 
-**Possible cause:**  Ensure that [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/) and the corresponding version of the console is installed. For more information, see [prerequisites for installing an application from the admin center](applications.md#prerequisites).
+**Possible cause:**  Ensure that a supported version of Configuration Manager is installed. For more information, see [prerequisites for installing an application from the admin center](applications.md#prerequisites).
 
 ## Known issues
 
-### Application installation times out if application requires restart
-
-**Scenario:** If you're running Configuration Manager version 2002 and an application requires a restart to complete the installation process, the installation may time out.
-
-**Symptoms:** The user will see `restart pending` notifications and in Software Center. From the Microsoft Endpoint Manager admin center, the application stays in the `Installing` state.  
-
-**Workaround:** Once the user restarts the device, the correct status is displayed in the admin center.
 
 [!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 

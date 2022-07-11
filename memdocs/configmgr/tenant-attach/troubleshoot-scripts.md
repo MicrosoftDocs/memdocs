@@ -30,10 +30,7 @@ Use the following to troubleshoot Scripts in the Microsoft Endpoint Manager admi
 
 **Error message:** Configuration Manager doesn't meet the minimum version prerequisite.
 
-**Possible causes:** Your Configuration Manager sites are not running the minimum version of Configuration Manager 2006 with [KB4580678 - Tenant attach rollup for Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4580678) installed. Verify the following:
- - Configuration Manager version 2006 or higher is installed.
- - That [KB4580678](https://support.microsoft.com/help/4580678) on sites running Configuration Manager version 2006.
- - That every site in the hierarchy meets the minimums listed above.
+**Possible causes:** Your Configuration Manager sites are not running a supported version of Configuration Manager. Verify that every site in the hierarchy runs a supported version of Configuration Manager.
 
 ### <a name="bkmk_403"></a> Unable to get Scripts information
 

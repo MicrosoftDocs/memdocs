@@ -23,7 +23,6 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 The following items are needed to use the timeline from the admin center:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites).
-- A minimum of Configuration Manager version 2002 with the [Update Rollup](https://support.microsoft.com/help/4560496/) and the corresponding version of the console installed.
 - Enable Endpoint analytics data collection in Configuration Manager:
    1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Client Settings**.
    1. Right-click and select **Properties** then select the **Computer Agent** settings.

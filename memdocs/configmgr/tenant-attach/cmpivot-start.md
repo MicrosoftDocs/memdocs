@@ -24,7 +24,6 @@ Bring the power of on-premises [CMPivot](../core/servers/manage/cmpivot.md) to t
 The following items are required to use CMPivot from the admin center:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md)
-- A minimum of Configuration Manager version 2002 with the [Update Rollup](https://support.microsoft.com/help/4560496/) and the corresponding version of the console installed.
 - Upgrade the target devices to the latest version of the Configuration Manager client.  
 - Target clients require a minimum of PowerShell version 4.
 - To gather data for the following entities, target clients require a minimum of PowerShell version 5.0:  

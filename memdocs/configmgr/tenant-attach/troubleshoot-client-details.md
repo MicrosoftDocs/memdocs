@@ -35,7 +35,7 @@ When viewing the ConfigMgr client details, you may run across a common error. Us
 
 ### Error message 2: Unable to get client details (or collection) information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager
 
-**Possible causes for Configuration Manager versions 2103 and later:**
+**Possible causes:**
 
 Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
 
@@ -44,22 +44,6 @@ Typically, this error is caused by an issue with the admin account. Below are th
 
     If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 
-**Possible causes for Configuration Manager versions 2010 and earlier:**
-
-Typically, this error is caused by an issue with the admin account. Below are the most common issues with the administrative user account:
-
-1. Use the same account to sign in to the admin center. The on-premises identity must be synchronized with and match the cloud identity.
-1. Make sure that Configuration Manager has discovered the administrative user account you're using to access the tenant attach features within Microsoft Endpoint Manager admin center. In the Configuration Manager console, go to the **Assets and Compliance** workspace. Select the **Users** node, and find your user account.
-
-    If your account isn't listed in the **Users** node, check the configuration of the site's [Active Directory User discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
-
-1. Verify the discovery data. Select your user account. In the ribbon, on the **Home** tab select **Properties**. In the properties window, confirm the following discovery data:
-
-    - **Azure Active Directory Tenant ID**: This value should be a GUID for the Azure AD tenant.
-    - **Azure Active Directory User ID**: This value should be a GUID for this account in Azure AD.
-    - **User Principal Name**: The format of this value is user@domain. For example, `jqpublic@contoso.com`.
-
-    If the Azure AD properties are empty, check the configuration of the site's [Azure AD user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 ## <a name="bkmk_timeout"></a> Error loading your content
 
@@ -92,17 +76,9 @@ Typically, this error is caused by an issue with the admin account. Below are th
 1. Verify the service connection point has connectivity to the cloud using the **CMGatewayNotificationWorker.log**.
 1. Verify the administrative service is healthy by reviewing the SMS_REST_PROVIDER component from site component monitoring on both the central site and primary site that owns the device.
 1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../develop/adminservice/overview.md#prerequisites).
-1. For Configuration Manager version 2002, verify the clock on the service connection point is in sync. If the service connection point's clock is slightly behind, apply [KB4563473 - Update rollup for Configuration Manager version 2002 tenant attach issues](https://support.microsoft.com/help/4563473). Check **AdminService.log** on the provider machine for any errors.
-1. For Configuration Manager version 2002, verify the device is in the security scope for the administrator's security role. For more information, see [Fundamentals of role-based administration](../core/understand/fundamentals-of-role-based-administration.md).
+
 
 ## Known issues
-
-### Boundary groups list is empty
-
-**Error message**: No boundary groups found or the user may not have permissions to view boundary group information.
-
-The empty list is a known issue for Configuration Manager version 2002 when you have a hierarchy of Configuration Manager sites.
-
 
 [!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 

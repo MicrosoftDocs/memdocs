@@ -25,7 +25,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 The following items are required to use resource explorer from the admin center:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md).
-- A minimum of Configuration Manager version 2006 and the corresponding version of the console installed.
+- A supported version of Configuration Manager version and the corresponding version of the console installed.
    - Historical inventory data requires Configuration Manager version 2103, or later. 
 - Upgrade the target devices to the latest version of the Configuration Manager client.
 
