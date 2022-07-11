@@ -2,7 +2,7 @@
 title: Troubleshoot tenant attach and device actions
 titleSuffix: Configuration Manager
 description: Troubleshoot tenant attach and device actions for Configuration Manager.
-ms.date: 09/09/2021
+ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core

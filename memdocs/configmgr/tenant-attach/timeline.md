@@ -2,7 +2,7 @@
 title: Tenant attach - Device timeline
 titleSuffix: Configuration Manager
 description: View the timeline for Configuration Manager devices from the admin center.
-ms.date: 01/25/2022
+ms.date: 07/11/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core

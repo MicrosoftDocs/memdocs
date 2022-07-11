@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach prerequisites
 titleSuffix: Configuration Manager
 description: Prerequisites for Microsoft Endpoint Manager tenant attach.
-ms.date: 03/21/2022
+ms.date: 07/11/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core

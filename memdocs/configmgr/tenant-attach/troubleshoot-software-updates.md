@@ -2,7 +2,7 @@
 title: Troubleshoot software updates for devices uploaded to the admin center
 titleSuffix: Configuration Manager
 description: Troubleshooting software updates for Configuration Manager tenant attach
-ms.date: 06/07/2022
+ms.date: 07/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 author: banreet

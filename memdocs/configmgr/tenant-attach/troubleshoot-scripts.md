@@ -2,7 +2,7 @@
 title: Troubleshoot scripts for devices uploaded to the admin center
 titleSuffix: Configuration Manager
 description: Troubleshooting scripts for Configuration Manager tenant attach
-ms.date: 01/25/2022
+ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core

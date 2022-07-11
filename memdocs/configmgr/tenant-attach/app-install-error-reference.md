@@ -2,7 +2,7 @@
 title: Application installation error codes reference
 titleSuffix: Configuration Manager
 description: Reference Application installation errors for tenant attach
-ms.date: 10/05/2021
+ms.date: 07/11/2022
 ms.topic: reference
 ms.prod: configuration-manager
 ms.technology: configmgr-core

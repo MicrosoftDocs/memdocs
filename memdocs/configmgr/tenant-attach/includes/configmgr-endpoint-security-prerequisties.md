@@ -4,7 +4,7 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
-ms.date: 05/18/2021
+ms.date: 07/17/2022
 ms.localizationpriority: high
 ---
 
