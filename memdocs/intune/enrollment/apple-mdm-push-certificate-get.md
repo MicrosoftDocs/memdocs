@@ -63,7 +63,7 @@ Select **Download your CSR** to download and save the request file locally. The 
 4. Read and agree to the terms and conditions. Then select **Accept**.  
 5. Select **Choose File** and then select the CSR file you downloaded in Intune.  
 6. Select **Upload**. 
-7. On the Confirmation page, select **Download**.  The certificate file (.pem) downloads to your device. Save this file for later.   
+7. On the confirmation page, select **Download**.  The certificate file (.pem) downloads to your device. Save this file for later.   
 
 > [!NOTE]
 > The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address as your Apple ID and make sure the mailbox is monitored by more than one person, such as by a distribution list. Avoid using a personal Apple ID.  
