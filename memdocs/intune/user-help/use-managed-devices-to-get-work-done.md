@@ -86,7 +86,7 @@ You can remove or reset your device with Company Portal. There is a difference b
 
 During removal, Company Portal unenrolls and unregisters the device from Intune. That device loses access to the Company Portal. Work and school data might also be removed. 
 
-During a device reset, Company Portal tries to reset your device back to the manufacturer's factory default settings. All work data and all personal data is removed from the device. A reset is useful if, for example, you lose your device and there is sensitive data on it. You can remotely reset an enrolled device from the Company Portal website.  
+During a device reset, Company Portal tries to reset your device back to the manufacturer's factory default settings. All data is removed from the device. A reset is useful if, for example, you lose your device and there is sensitive data on it. You can remotely reset an enrolled device from the Company Portal website.  
 
 ## Can you remove a device from the Microsoft Intune app?
 No, there's no way for you to remove a corporate-owned device from the Microsoft Intune app.  
