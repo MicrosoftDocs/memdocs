@@ -81,7 +81,7 @@ You use the Apple portal to create a token. You also use the Apple portal to ass
 3. Select your account name to open the portal menu, and then choose **Preferences**. 
 4. Go to your MDM server assignments.
 5. Select the option to add an MDM server.  
-6. Enter the **MDM Service Name**. The purpose of the server name is to help identify your mobile device management (MDM) server in the portal. It doesn't have to be the acttual name or URL of the Microsoft Intune server. 
+6. Enter the **MDM Service Name**. The purpose of the server name is to help identify your mobile device management (MDM) server in the portal. It doesn't have to be the actual name or URL of the Microsoft Intune server. 
 7. Upload your public key file and then save your changes. Then you can download the server token.  
 
 ### Best practices  
