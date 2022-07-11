@@ -2,7 +2,7 @@
 title: Application installation error codes reference
 titleSuffix: Configuration Manager
 description: Reference Application installation errors for tenant attach
-ms.date: 10/05/2021
+ms.date: 07/11/2022
 ms.topic: reference
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -18,7 +18,7 @@ Applications can be installed on clients by creating deployments from the Config
 
 ## <a name="bkmk_general"></a> General troubleshooting tips
 
-Generally, if an application installs successfully on a device with the given command line in the system context, it will install successfully through Configuration Manager and from the Microsoft Endpoint Manager admin center. You can simulate this by using [PSExec](/sysinternals/downloads/psexec). If you're running Configuration Manager version 2002 or version 2006 and the application is targeted to the system and configured to run in user context, a retry may not trigger a reinstall or another attempt to install.
+Generally, if an application installs successfully on a device with the given command line in the system context, it will install successfully through Configuration Manager and from the Microsoft Endpoint Manager admin center. You can simulate this by using [PSExec](/sysinternals/downloads/psexec). 
 
 1. Open an administrative command prompt.
 1. Change directory to where you saved [PSExec](/sysinternals/downloads/psexec).
