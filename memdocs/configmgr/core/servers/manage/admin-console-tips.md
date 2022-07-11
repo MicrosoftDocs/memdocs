@@ -161,7 +161,7 @@ For more information, see [Use the status system](use-status-system.md).
 
 *(Introduced in version 2207)*
 
--The search bar now has the path ribbon as shown in the screenshot below - 
+- The search bar now has the path ribbon as shown in the screenshot below - 
 ![Screenshot of search bar with the path ribbon](./media/14908615-search-new-path-yellow-ribbon.png)
 - If you want to search only current node, select the **Current Node** button in the ribbon. The search results will then include items from current node only.
 - If you want to search all subfolders, select the **All Subfolders** button in the ribbon. The search results will then include items from current node as well as from all subfolders.
