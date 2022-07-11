@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/08/2022
+ms.date: 07/11/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -81,24 +81,29 @@ You use the Apple portal to create a token. You also use the Apple portal to ass
 3. Select your account name to open the portal menu, and then choose **Preferences**. 
 4. Go to your MDM server assignments.
 5. Select the option to add an MDM server.  
-6. Enter the **MDM Service Name**. The server name is for your reference to identify the mobile device management (MDM) server. It isn't the name or URL of the Microsoft Intune server.
-7. Upload your public key file. 
-8. To filter devices before assigning them to your MDM server, go to **Devices** > **Filter**. The filters available include:  
+6. Enter the **MDM Service Name**. The purpose of the server name is to help identify your mobile device management (MDM) server in the portal. It doesn't have to be the acttual name or URL of the Microsoft Intune server. 
+7. Upload your public key file and then save your changes. Then you can download the server token.  
 
-* Device management  
-* Source
-* Order number 
-* Device type
-* Storage size  
+### Best practices  
 
-9. To bulk assign these devices to your new MDM server:
-    1. Go to **Devices** > **All Devices**.
-    2. Select **Edit MDM Server**.  
-    3. Select the MDM server you want to use. 
-    4. Select **Continue**. 
-    5. When prompted to, confirm your changes. A notification appears to confirm that the devices have been assigned to the Intune MDM server.  
+While you're in the Apple portal, you can also apply device filters and assign devices to the MDM server. These things can also be configured later.  
 
-The Apple portal keeps track of your activity and changes. Select **Activity** to view assignment results and download logs.  
+   * Apply filters: To filter devices before assigning them to your MDM server, go to **Devices** > **Filter**. You can filter devices by:  
+
+        * Device management    
+        * Source  
+        * Order number 
+        * Device type  
+        * Storage size  
+
+   * Bulk assign devices: You can assign all eligible devices to your new MDM servers at the same time.     
+        1. Go to **Devices** > **All Devices** or select the devices you want to assign. 
+        2. Select **Edit MDM Server**.  
+        3. Select the MDM server you want to use. 
+        4. Select **Continue**. 
+        5. When prompted to, confirm your changes. A notification appears to confirm that the devices have been assigned to the new MDM server.  
+
+    The Apple portal keeps track of your activity and changes. Select **Activity** to view assignment results and download logs.   
 
 ### Step 3. Save the Apple ID used to create this token
 
