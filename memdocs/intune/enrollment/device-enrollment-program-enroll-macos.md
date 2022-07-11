@@ -86,7 +86,7 @@ You use the Apple portal to create a token. You also use the Apple portal to ass
 
 ### Best practices  
 
-While you're in the Apple portal, you can also apply device filters and assign devices to the MDM server. These things can also be configured later.  
+While you're in the Apple portal, you can also apply device filters and assign devices to the MDM server.   
 
    * Apply filters: To filter devices before assigning them to your MDM server, go to **Devices** > **Filter**. You can filter devices by:  
 
@@ -103,7 +103,7 @@ While you're in the Apple portal, you can also apply device filters and assign d
         4. Select **Continue**. 
         5. When prompted to, confirm your changes. A notification appears to confirm that the devices have been assigned to the new MDM server.  
 
-    The Apple portal keeps track of your activity and changes. Select **Activity** to view assignment results and download logs.   
+The Apple portal keeps track of your activity and changes. Select **Activity** to view assignment results and download logs.   
 
 ### Step 3. Save the Apple ID used to create this token
 
