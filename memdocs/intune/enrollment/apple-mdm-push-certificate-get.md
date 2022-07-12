@@ -69,7 +69,7 @@ Select **Download your CSR** to download and save the request file locally. The 
 > The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address as your Apple ID and make sure the mailbox is monitored by more than one person, such as by a distribution list. Avoid using a personal Apple ID.  
 
 #### Managed Apple ID  
-If you plan to federate your existing Azure AD accounts with Apple to use Managed Apple ID, contact Apple to have the existing APNS certificate migrated to your Managed Apple ID. For more information, see the Apple Support [user guide for Apple School Manager](https://support.apple.com/guide/apple-school-manager/apd6603d9206/web).  
+If you plan to federate your existing Azure AD accounts with Apple to use Managed Apple ID, contact Apple to have the existing APNS certificate migrated to your new Managed Apple ID. For more information, see the Apple Support [user guide for Apple School Manager](https://support.apple.com/guide/apple-school-manager/apd6603d9206/web).  
 
 ### Step 4. Enter the Apple ID used to create your Apple MDM push certificate
 Return to the admin center and enter your Apple ID as a reminder for when you need to renew the certificate.  
@@ -92,7 +92,7 @@ Renew the MDM push certificate with the same Apple ID you used to create it.
 6. Select **Choose File** and select the new CSR file you downloaded.
 7. In the provided field, enter a unique note about the certificate so that you can easily identify it later.  
    > [!TIP]
-   > A certificate has a unique UID so you can enter that in the notes. The subject ID in the certificate details shows the GUID portion of the UID. You can also find this information on the enrolled iOS/iPadOS device. Go to **Settings** > **General** > **Device Management** > **Management Profile** > **More Details** > **Management Profile**. The **Topic** value contains the unique GUID that you can match up to the certificate in the Apple Push Certificates portal.  
+   > Each certificate has a unique UID. To find it, look for the subject ID, which shows the GUID portion of the UID, in the certificate details. You can also find this information on the enrolled iOS/iPadOS device. Go to **Settings** > **General** > **Device Management** > **Management Profile** > **More Details** > **Management Profile**. The **Topic** value contains the unique GUID that you can match up to the certificate in the Apple Push Certificates portal.  
 8. Select **Upload**.    
 9. On the **Confirmation** screen, select **Download**.  
 10. Return to the admin center > **Configure MDM Push Certificate** page, and upload your certificate file. 
