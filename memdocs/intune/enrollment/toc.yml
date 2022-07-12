@@ -31,19 +31,10 @@ items:
   - name: Restrictions
     href: enrollment-restrictions-set.md
   - name: Understand Intune and Azure AD device limits
-    href: device-limit-intune-azure.md
-  - name: Apple MDM push certificate
-    href: apple-mdm-push-certificate-get.md
+    href: device-limit-intune-azure.md  
   - name: Corporate identifiers
     href: corporate-identifiers-add.md
-    displayName: COD
-  - name: Multi-factor authentication
-    href: multi-factor-authentication.md
-    displayName: mfa; multifactor        
-  - name: Device enrollment manager
-    href: device-enrollment-manager-enroll.md
-  - name: Map devices to groups
-    href: device-group-mapping.md    
+    displayName: COD     
 - name: How-to guides
   items:
   - name: Set up Windows enrollment
@@ -154,6 +145,15 @@ items:
       href: device-enrollment-direct-enroll-macos.md      
   - name: Incomplete enrollment report
     href: enrollment-report-company-portal-abandon.md
+  - name: Add device enrollment manager  
+    href: device-enrollment-manager-enroll.md  
+  - name: Configure device categories  
+    href: device-group-mapping.md   
+  - name: Get Apple MDM push certificate  
+    href: apple-mdm-push-certificate-get.md 
+  - name: Require multi-factor authentication  
+    href: multi-factor-authentication.md
+    displayName: mfa; multifactor   
   - name: Troubleshoot enrollment
     items:
     - name: Troubleshoot device enrollment
