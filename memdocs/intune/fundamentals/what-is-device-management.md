@@ -45,7 +45,7 @@ The answer is [Microsoft Intune](what-is-intune.md). Intune offers mobile device
 
 Intune is included with Microsoft Azure, Microsoft 365, and integrates with Azure Active Directory (Azure AD). Azure AD helps control who has access, and what they have access to.
 
-## Microsoft Intune
+## Microsoft Intune 
 
 Many organizations, including Microsoft, use Intune to secure proprietary data that users access from their company-owned and personally owned devices. Intune includes device and app configuration policies, software update policies, and installation statuses (charts, tables, and reports). These resources help you secure and monitor data access.
 
