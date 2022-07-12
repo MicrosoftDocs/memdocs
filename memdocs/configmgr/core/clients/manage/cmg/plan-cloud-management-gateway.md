@@ -157,6 +157,8 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 
 - A [**server authentication certificate**](server-auth-cert.md) for the CMG.
 
+- CMG names need to be between 3-24 alphanumeric characters. The name must begin with a letter, end with a letter or digit, and not contain consecutive hyphens. <!--13222041-->
+
 - **Other certificates** may be required, depending upon your client OS version and authentication model. For more information, see [Configure client authentication](configure-authentication.md).
 
 - Clients must use **IPv4**.
