@@ -200,9 +200,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 - **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it may warn users to remove the app from the device. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
 
-- **Common Criteria mode**: By default, this setting is **Not configured**.
-
-   Set *Common Criteria mode* to **Require** to enable an elevated set of security standards that are most often used in highly sensitive organizations, such as government establishments. Those settings include but are not limited to:
+- **Common Criteria mode**: **Require** enables an elevated set of security standards that are most often used in highly sensitive organizations, such as government establishments. Those settings include but are not limited to:
 
   - AES-GCM encryption of Bluetooth Long Term Keys
   - Wi-Fi configuration stores
@@ -210,6 +208,8 @@ For corporate-owned devices with a work profile, some settings only apply in the
   - Mandates additional key zeroization on key deletion
   - Prevents non-authenticated Bluetooth connections
   - Requires that FOTA updates have 2048-bit RSA-PSS signature
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting.
 
   Learn more about Common Criteria:  
   - [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org) at commoncriteriaportal.org  
