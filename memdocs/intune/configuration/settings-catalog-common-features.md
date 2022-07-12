@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 07/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,7 +33,7 @@ Using the [settings catalog](settings-catalog.md) in the [Microsoft Endpoint Man
 
 This article lists and describes some of the features you can configure in the settings catalog.
 
-For more information on the settings catalog, and what it is, go to [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md). To see all the settings you can configure, create a settings catalog policy.
+For more information on the settings catalog, and what it is, go to [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md). To see all the settings you can configure, [create a settings catalog policy](settings-catalog.md).
 
 This feature applies to:
 
@@ -90,12 +90,12 @@ On macOS, you can use property list (plist) files to configure features and sett
 
   Previously, you had to [use a property list (plist) file to configure Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website).
 
-- **Microsoft Office and Microsoft Outlook**: For a list of the Microsoft Office and Outlook settings you can configure, go to:
+- **Microsoft AutoUpdate (MAU), Microsoft Office and Microsoft Outlook**: For a list of the settings you can configure, go to:
 
   - [Use preferences to manage privacy controls for Office for Mac - Deploy Office](/deployoffice/privacy/mac-privacy-preferences)
   - [Set preferences for Outlook for Mac - Deploy Office](/deployoffice/mac/preferences-outlook)
 
-  Previously, you had to [use a property list (plist) file to configure Office and Outlook for Mac](/deployoffice/mac/deploy-preferences-for-office-for-mac) (opens another Microsoft website).
+  Previously, you had to [use a property list (plist) file to configure these features for Mac](/deployoffice/mac/deploy-preferences-for-office-for-mac) (opens another Microsoft website).
 
 Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
