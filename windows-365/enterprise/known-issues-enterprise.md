@@ -50,7 +50,7 @@ Upgrading an existing Cloud PC from Windows 10 to Windows 11 using the Settings 
 
 ## Troubleshooting steps
 
-1. Edit the related provisioning policy to change the gallery image to Windows 11
+1. Edit the related provisioning policy to change the gallery image to Windows 11.
 2. Reprovision the Cloud PC.
 
 ## Windows 365 provisioning fails<!--38483005-->
