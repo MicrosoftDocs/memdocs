@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 06/13/2022
+ms.date: 07/12/2022
 audience: Admin
 ms.topic: troubleshooting
 ms.service: cloudpc
@@ -43,6 +43,15 @@ A [resize](resize-cloud-pc.md) of a Cloud PC eliminates all existing [restore](r
 While a Windows PC (physical or Cloud PC) sits idle before the first user signs in, Windows Update doesn’t scan for or install monthly quality patches. This means that the PC might miss important security updates. Without the latest security updates, the device is exposed to security vulnerabilities.
 
  **Troubleshooting steps**: Make sure that a user signs in to new Cloud PCs as soon as possible.
+
+## Windows 10 to 11 in-place upgrade failure<!--40412134-->
+
+Upgrading an existing Cloud PC from Windows 10 to Windows 11 using the Settings app may fail.
+
+## Troubleshooting steps
+
+1. Edit the related provisioning policy to change the gallery image to Windows 11.
+2. Reprovision the Cloud PC.
 
 ## Windows 365 provisioning fails<!--38483005-->
 
