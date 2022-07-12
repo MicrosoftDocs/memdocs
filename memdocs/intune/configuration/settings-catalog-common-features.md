@@ -94,6 +94,7 @@ On macOS, you can use property list (plist) files to configure features and sett
 
   - [Use preferences to manage privacy controls for Office for Mac - Deploy Office](/deployoffice/privacy/mac-privacy-preferences)
   - [Set preferences for Outlook for Mac - Deploy Office](/deployoffice/mac/preferences-outlook)
+  - [Set a deadline for updates from Microsoft AutoUpdate](deployoffice/mac/mau-deadline)
 
   Previously, you had to [use a property list (plist) file to configure these features for Mac](/deployoffice/mac/deploy-preferences-for-office-for-mac) (opens another Microsoft website).
 
