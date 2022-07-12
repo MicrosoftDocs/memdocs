@@ -47,7 +47,7 @@ You can use an Intune app configuration policy to configure Google Chrome for An
 
     ![Search and approve Google Chrome](./media/apps-configure-chrome-android/search.png)
 
-4. Assign Google Chrome to a user group as a required app type. Google Chrome will be deployed automatically when the device is enrolled into Intune.
+4. Assign Google Chrome to a group as a required app type. Google Chrome will be deployed automatically when the device is enrolled into Intune.
 
 For additional details about adding a Managed Google Play app to Intune, see [Managed Google Play store apps](apps-add-android-for-work.md#managed-google-play-store-apps).
 
