@@ -61,7 +61,7 @@ A wipe is useful for resetting a device before you give the device to a new user
 2. Select **Devices** > **All devices**.
 3. Select the name of the device that you want to wipe.
 4. In the pane that shows the device name, select **Wipe**.
-5. For Windows 10 version 1709 or later, you also have the **Wipe device, but keep enrollment state and associated user account** option.
+5. For Windows 10 version 1709 or later, you also have the **Wipe device, but keep enrollment state and associated user account** option. If this option is selected, the following will apply:
 
     |Retained during a wipe |Not retained|
     | -------------|------------|
