@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 07/12/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -38,13 +38,13 @@ For information about end-user hardware requirements, see [End-user hardware req
 
 This table shows examples of the different sizes available for a Cloud PC:
 
-| Cloud PC CPUs, RAM, and storage | Example scenarios | Recommended gallery image | Recommended apps |
+| Cloud PC CPUs, RAM, and storage | Example scenarios | Recommended apps |
 | --- | --- | --- | --- |
-| 1vCPU/2GB/64GB\* | Firstline workers, call centers, education/training/CRM access.  | Windows 10 Enterprise with OS Optimizations  | Office (web-based), Microsoft Edge, OneDrive, lightweight line-of-business app (call center application – web-apps), Defender support. |
-| 2vCPU/4GB/256GB<br>2vCPU/4GB/128GB<br>2vCPU/4GB/64GB  | Mergers and acquisition, short-term and seasonal, customer services  | Windows 10/11 Enterprise with Microsoft 365 and Teams | Microsoft 365 Apps, Microsoft Teams (Audio only),  OneDrive, Adobe Reader, Edge, line-of-business apps, Defender support. |
-| 2vCPU/8GB/256GB<br>2vCPU/8GB/128GB | Bring-your-own-PC, work from home, market researchers, government, consultants. | Windows 10/11 Enterprise with Microsoft 365 and Teams | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, OneDrive, Adobe Reader, Edge, line-of-business apps, Defender support. |
-| 4vCPU/16GB/512GB<br>4vCPU/16GB/256GB<br>4vCPU/16GB/128GB | Finance, government, consultants, healthcare services, bring-your-own-PC, work from home. | Windows 10/11 Enterprise with Microsoft 365 and Teams | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, Power BI, Dynamics 365, OneDrive, Adobe Reader, Edge, line-of-business app, Defender support. |
-| 8vCPU/32GB/512GB<br>8vCPU/32GB/256GB<br>8vCPU/32GB/128GB | Software developers, engineers, content creators, design and engineering workstations. | Windows 10/11 Enterprise with Microsoft 365 and Teams | Microsoft 365 Apps, Microsoft Teams, Outlook, Access, OneDrive, Adobe Reader, Edge, Power BI, Visual Studio Code, virtualization-based workloads: Hyper-V, Windows Subsystem for Linux (WSL), line-of-business apps, and Defender support. |
+| 1vCPU/2GB/64GB\* | Firstline workers, call centers, education/training/CRM access.  | Office (web-based), Microsoft Edge, OneDrive, lightweight line-of-business app (call center application – web-apps), Defender support. |
+| 2vCPU/4GB/256GB<br>2vCPU/4GB/128GB<br>2vCPU/4GB/64GB  | Mergers and acquisition, short-term and seasonal, customer services  | Microsoft 365 Apps, Microsoft Teams (Audio only),  OneDrive, Adobe Reader, Edge, line-of-business apps, Defender support. |
+| 2vCPU/8GB/256GB<br>2vCPU/8GB/128GB | Bring-your-own-PC, work from home, market researchers, government, consultants. | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, OneDrive, Adobe Reader, Edge, line-of-business apps, Defender support. |
+| 4vCPU/16GB/512GB<br>4vCPU/16GB/256GB<br>4vCPU/16GB/128GB | Finance, government, consultants, healthcare services, bring-your-own-PC, work from home. | Microsoft 365 Apps, Microsoft Teams, Outlook, Excel, Access, PowerPoint, Power BI, Dynamics 365, OneDrive, Adobe Reader, Edge, line-of-business app, Defender support. |
+| 8vCPU/32GB/512GB<br>8vCPU/32GB/256GB<br>8vCPU/32GB/128GB | Software developers, engineers, content creators, design and engineering workstations. | Microsoft 365 Apps, Microsoft Teams, Outlook, Access, OneDrive, Adobe Reader, Edge, Power BI, Visual Studio Code, virtualization-based workloads: Hyper-V, Windows Subsystem for Linux (WSL), line-of-business apps, and Defender support. |
 
 \* The 1vCPU option is being retired. Instead, we recommend the 2vCPU as the minimum configuration for new purchases.
 
