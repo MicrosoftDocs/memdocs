@@ -189,13 +189,17 @@ You can edit and existing subscription by selecting **Properties** from the ribb
 > Some options are only available for v3 third-party update catalogs, which support categories for updates. These options are disabled for catalogs that aren't published in the  v3 format.<!--4469002-->
 
 1. In the **Third-Party Software Update Catalogs** node, right-click on the catalog and select **Properties** or select **Properties** from the ribbon.
-1. You can update the following information from the **General tab**:
-    - **Download URL** (not editable): The HTTPS address of the custom catalog.
+1. You can view the following information from the **General tab**, but not edit the information.:
+    > [!NOTE]
+    > If you need to change any of the information here, you have to add a new custom catalog.  
+    > Provided the download URL is unchanged, the existing catalog must be removed before one with the same download URL can be added.
+
+    - **Download URL**: The HTTPS address of the custom catalog.
     - **Publisher**: The name of the organization that publishes the catalog.
     - **Name**: The name of the catalog to display in the Configuration Manager Console.
     - **Description**: A description of the catalog.
-    - **Support URL** (optional): A valid HTTPS address of a website to get help with the catalog.
-    - **Support Contact** (optional): Contact information to get help with the catalog.
+    - **Support URL**: A valid HTTPS address of a website to get help with the catalog.
+    - **Support Contact**: Contact information to get help with the catalog.
 1. Choose your options on the **Select Categories** tab.
    - **Synchronize all update categories** (default)
        - Synchronizes all updates in the third-party update catalog into Configuration Manager.
