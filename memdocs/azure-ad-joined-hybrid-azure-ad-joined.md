@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2022
+ms.date: 07/13/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -38,7 +38,7 @@ Many critical and valuable services, including [Conditional Access](/azure/activ
 
 When moving to cloud-native endpoints, you need to understand the differences between Azure AD joined and hybrid Azure AD joined devices:
 
-- **Azure AD joined** (AADJ): Devices are joined to an Azure Active Directory (Azure AD). They're not joined to on-premises Azure AD.
+- **Azure AD joined** (AADJ): Devices are joined to an Azure Active Directory (Azure AD). They're not joined to on-premises AD.
 
   For more specific information, go to [Azure AD joined devices](/azure/active-directory/devices/concept-azure-ad-join) (opens another Microsoft website).
 
@@ -112,10 +112,7 @@ If your organization is ready and wants to be cloud-native, then [Azure AD joine
 
 ### Hybrid Azure AD joined resources
 
-For information on how to register your existing domain joined devices to Azure AD, go to:
-
-- [Configure hybrid Azure AD join for managed domains](/azure/active-directory/devices/hybrid-azuread-join-managed-domains)
-- [Configure hybrid Azure AD join for federated domains](/azure/active-directory/devices/hybrid-azuread-join-federated-domains)
+For information on how to register your existing domain joined devices to Azure AD, go to [Configure hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join). [Configure hybrid Azure AD join](/azure/active-directory/devices/howto-hybrid-azure-ad-join) includes information for managed domains and federated domains.
 
 ## Which option is right for your organization
 
