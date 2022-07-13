@@ -146,7 +146,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-### Certificate profiles support for Android (ASOP) devices<!-- 8506319, 8506363 -->
+### Certificate profiles support for Android (AOSP) devices<!-- 8506319, 8506363 -->
 To expand our support for the Android Open Source Project (AOSP) platform, you’ll soon be able to deploy the following certificate profiles to corporate-owned and userless devices: 
 - Trusted certificate profile
 - PKCS certificate profile

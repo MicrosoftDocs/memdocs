@@ -32,7 +32,7 @@ Microsoft Defender for Endpoint's cloud-based portal is [Microsoft Defender Secu
 You can onboard the following operating systems:
 
 - Windows 8.1
-- Windows 10, version 1607 or later
+- Windows 10, version  1709 or later
 - Windows 11
 - Windows Server 2012 R2
 - Windows Server 2016

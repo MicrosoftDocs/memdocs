@@ -2,7 +2,7 @@
 title: Troubleshoot tenant attach and device actions
 titleSuffix: Configuration Manager
 description: Troubleshoot tenant attach and device actions for Configuration Manager.
-ms.date: 09/09/2021
+ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -16,7 +16,7 @@ ms.localizationpriority: high
 
 *Applies to: Configuration Manager (current branch)*
 
-Starting with Configuration Manager 2002, Configuration Manager clients can be synced to Microsoft Endpoint Manager admin center. Some client actions can be run from the Microsoft Endpoint Manager admin center on the synchronized clients.
+Configuration Manager clients can be synced to Microsoft Endpoint Manager admin center. Some client actions can be run from the Microsoft Endpoint Manager admin center on the synchronized clients.
 
 The available actions are:
 - Sync Machine Policy
