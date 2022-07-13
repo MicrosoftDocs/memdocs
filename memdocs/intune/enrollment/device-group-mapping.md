@@ -33,7 +33,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune automaticallys add all devices that fall within that category to the corresponding device group in Intune.    
+Device categories allow you to easily manage and group devices in Microsoft Intune. Create a category, such as *sales* or *accounting*, and Intune automatically add all devices that fall within that category to the corresponding device group in Intune.    
 
 To enable categories in your tenant, you must create a category in the Microsoft Endpoint Manager admin center and set up dynamic Azure Active Directory (Azure AD) security groups.  
  
