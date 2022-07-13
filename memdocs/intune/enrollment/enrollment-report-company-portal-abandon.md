@@ -74,7 +74,7 @@ The line graph shows the daily incomplete enrollments for each of the four core 
 
 ### User abandonment actions
 
-The following tables list the user actions that indicate enrollmnet is incomplete.  
+The following tables list the user actions that indicate enrollment is incomplete.  
 
 
 #### Setup checklist section
