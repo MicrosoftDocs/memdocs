@@ -96,6 +96,8 @@ On macOS, you can use property list (plist) files to configure features and sett
   - [Set preferences for Outlook for Mac - Deploy Office](/deployoffice/mac/preferences-outlook)
   - [Set a deadline for updates from Microsoft AutoUpdate](/deployoffice/mac/mau-deadline)
 
+    For a list of apps that support MAU, go to [Update Microsoft applications for Mac by using msupdate](/deployoffice/mac/update-office-for-mac-using-msupdate).
+
   Previously, you had to [use a property list (plist) file to configure these features for Mac](/deployoffice/mac/deploy-preferences-for-office-for-mac) (opens another Microsoft website).
 
 Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
