@@ -1,13 +1,8 @@
 ---
 title: Windows Autopilot OEM registration process
 description: How OEMs add devices to Windows Autopilot
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
@@ -36,9 +31,9 @@ When you purchase devices from an OEM, that OEM can automatically register the d
 
 OEMs must follow [device guidelines](autopilot-device-guidelines.md) for Windows Autopilot devices.
 
-## Windows Autopilot
+### Service data
 
-Windows Autopilot is managed and maintained by Microsoft.  This service provides the backend database that associates hardware hashes with customer tenants. When an OEM registers devices for a customer, they are writing that data to this database and not directly to the customer's tenant. No permissions to the customer's tenant are granted or required for OEMs to register devices on the customer's behalf.
+Windows Autopilot is managed and maintained by Microsoft. This service provides the backend database that associates hardware hashes with customer tenants. When an OEM registers devices for a customer, they are writing that data to this database and not directly to the customer's tenant. No permissions to the customer's tenant are granted or required for OEMs to register devices on the customer's behalf.
 
 ### Customer consent
 
