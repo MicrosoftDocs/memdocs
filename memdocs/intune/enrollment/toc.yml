@@ -26,15 +26,17 @@ items:
     href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Concepts
   items:
-  - name: Terms and conditions
-    href: terms-and-conditions-create.md
-  - name: Restrictions
-    href: enrollment-restrictions-set.md
-  - name: Understand Intune and Azure AD device limits
-    href: device-limit-intune-azure.md  
   - name: Corporate identifiers
     href: corporate-identifiers-add.md
-    displayName: COD     
+    displayName: COD   
+  - name: Incomplete user enrollment report
+    href: enrollment-report-company-portal-abandon.md
+  - name: Restrictions
+    href: enrollment-restrictions-set.md  
+  - name: Terms and conditions
+    href: terms-and-conditions-create.md
+  - name: Intune and Azure AD device limits  
+    href: device-limit-intune-azure.md    
 - name: How-to guides
   items:
   - name: Set up Windows enrollment
@@ -143,8 +145,6 @@ items:
       href: device-enrollment-program-enroll-macos.md
     - name: Direct Enrollment for macOS devices
       href: device-enrollment-direct-enroll-macos.md      
-  - name: Incomplete enrollment report
-    href: enrollment-report-company-portal-abandon.md
   - name: Add device enrollment manager  
     href: device-enrollment-manager-enroll.md  
   - name: Configure device categories  
