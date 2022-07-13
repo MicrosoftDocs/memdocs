@@ -96,7 +96,7 @@ To transfer files from the Cloud PC to the local device, copy the files to the D
 
 #### Restrict users from transferring files to and from Cloud PCs
 
-You can restrict users from transferring files by using RDP drive redirection. For more information, see [Manage RDP device redirections for Cloud PCs](manage-rdp-device-redirections.md).
+You can restrict users from transferring files by using RDP drive redirection. For more information, see [Manage RDP device redirections for Cloud PCs](./enterprise/manage-rdp-device-redirections.md).
 
 ### User feedback
 
