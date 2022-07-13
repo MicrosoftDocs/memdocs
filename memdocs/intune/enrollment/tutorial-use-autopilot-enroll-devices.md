@@ -66,7 +66,7 @@ The first step in setting up Windows Autopilot is to add the Windows devices to 
 
 2. Save the CSV file.
 
-3. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows Enrollment** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
+3. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows Enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
 
     ![Screenshot of Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device.png)
 
