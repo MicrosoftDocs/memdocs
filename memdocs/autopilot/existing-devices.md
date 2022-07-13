@@ -258,7 +258,7 @@ After you save the file, move it to a location for a Microsoft Endpoint Configur
     - _Limiting collection_: **All Systems**
 
       > [!NOTE]
-      > You can optionally choose to use an alternative collection for the limiting collection. The device to be upgraded must be running the Configuration Manaber client in the collection that you select.
+      > You can optionally choose to use an alternative collection for the limiting collection. The device to be upgraded must be running the Configuration Manager client in the collection that you select.
 
 1. On the **Membership Rules** page, select **Add Rule**. Specify either a direct or query-based collection rule to add the target Windows 8.1 devices to the new collection.
 

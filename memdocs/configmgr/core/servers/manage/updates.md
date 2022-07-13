@@ -59,7 +59,6 @@ The following supported versions of Configuration Manager are currently availabl
 | [**2111**](../../plan-design/changes/whats-new-in-version-2111.md)<br /> (5.00.9068) | December 1, 2021 | June 1, 2023 | No | Yes |
 | [**2107**](../../plan-design/changes/whats-new-in-version-2107.md)<br /> (5.00.9058) | August 2, 2021 | February 2, 2023 | No | Yes |
 | [**2103**](../../plan-design/changes/whats-new-in-version-2103.md)<br /> (5.00.9049) | April 5, 2021 | October 5, 2022 | Yes<sup>[Note 1](#bkmk_note1)</sup> | Yes |
-| [**2010**](../../plan-design/changes/whats-new-in-version-2010.md)<br /> (5.00.9040) | November 30, 2020 | May 30, 2022 | No | Yes |
 
 
 > [!NOTE]
@@ -84,6 +83,7 @@ The following table lists historical versions of Configuration Manager current b
 
 | Version                          | Availability date | Support end date   | Baseline | In-console update |
 |----------------------------------|-------------------|--------------------|----------|-------------------|
+| **2010** <br /> (5.00.9040)      | November 30, 2020     | May 30, 2022    | No      | Yes               |
 | **2006** <br /> (5.00.9012)      | August 11, 2020     | February 11, 2022    | No      | Yes               |
 | **2002** <br /> (5.00.8968)      | April 1, 2020     | October 1, 2021    | Yes      | Yes               |
 | **1910** <br /> (5.00.8913)      | November 29, 2019 | May 29, 2021       | No       | Yes               |
