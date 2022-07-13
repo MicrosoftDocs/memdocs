@@ -421,9 +421,9 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
   - **Outbound connections required**:  
     Baseline default: *Yes*  
-    [Learn more](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+    [Learn more](https://aka.ms/intune-firewall-outboundaction)
 
-    - **Inbound notifications blocked**:  
+  - **Inbound notifications blocked**:  
     Baseline default: *Yes*  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=872563)
 
@@ -441,9 +441,9 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
   - **Outbound connections required**:  
     Baseline default: *Yes*  
-    [Learn more](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+    [Learn more](https://aka.ms/intune-firewall-outboundaction)
 
-   - **Inbound notifications blocked**:  
+  - **Inbound notifications blocked**:  
     Baseline default: *Yes*  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=872563)
 
@@ -461,7 +461,7 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
 
   - **Outbound connections required**:  
     Baseline default: *Yes*  
-    [Learn more](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+    [Learn more](https://aka.ms/intune-firewall-outboundaction)
 
   - **Inbound notifications blocked**:  
     Baseline default: *Yes*  
