@@ -166,11 +166,6 @@ Applies to:
 
 ## Device security
 
-### Disable use of UDP connections on your Microsoft Tunnel Gateway servers<!-- 9295335 -->
-You’ll soon be able to configure your Microsoft Tunnel Servers to disable use of UDP. When you disable use of UDP, the VPN server supports only TCP connections from tunnel clients. To support use of only TCP connections, your devices must use the generally available version of [Microsoft Defender for Endpoint as the Microsoft Tunnel client app](../protect/microsoft-tunnel-migrate-app.md) as the tunnel client app.
-
-You’ll be able to disable UDP when creating or editing a *Server configuration* for Microsoft Tunnel Gateway. The Server configuration will support a new option named **Disable UDP Connections** that will be available for the *Server port* field.  [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant Administration** > **Microsoft Tunnel Gateway** > **Server configurations**.
-
 ### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009514 -->
  
 You’ll soon be able to add reusable groups of settings to your profiles for Microsoft Defender Firewall Rules. The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
