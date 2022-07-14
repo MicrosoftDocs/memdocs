@@ -38,18 +38,6 @@ The following items are known issues for Windows 365 Enterprise.
 
 A [resize](resize-cloud-pc.md) of a Cloud PC eliminates all existing [restore](restore-overview.md) points for that Cloud PC. New restore points will be captured at the intervals defined in the user setting.
 
-## Outlook only downloads one month of mail<!--39845820-->
-
-Outlook only downloads one month of previous mail and this can't be changed in Outlook settings.
-
- **Troubleshooting steps**:
-
-1. Launch registry editor.
-2. Remove the **syncwindowsetting** regkey under the path \HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\office\16.0\outlook\cached mode.
-3. Add the **syncwindowsetting** regkey with the value 1 under the path HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode.
-
-After completing these steps, the default will be one month. However, the download period can be changed in Outlook settings.
-
 ## Windows doesn’t scan for software updates until the first time a user signs in<!--38212344-->
 
 While a Windows PC (physical or Cloud PC) sits idle before the first user signs in, Windows Update doesn’t scan for or install monthly quality patches. This means that the PC might miss important security updates. Without the latest security updates, the device is exposed to security vulnerabilities.
