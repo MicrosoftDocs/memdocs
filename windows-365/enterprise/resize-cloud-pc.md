@@ -53,6 +53,8 @@ Resizing isn’t supported for:
 - Cloud PCs provisioned through group-based licenses.
 - Cloud PCs that are Azure AD joined.
 
+To resize a Cloud PC that has been provisioned through a group-based license, please follow the PowerShell script and steps listed in the following blog https://pedholtlab.com/resize-group-based-licensed-cloud-pc-with-powershell/
+
 ## Resize a Cloud PC
 
 1. Contact your end users and have them save their work and sign out. Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin.
