@@ -33,6 +33,8 @@ items:
     href: encryption.md
   - name: Privacy and personal data
     href: privacy-personal-data.md
+  - name: What is Windows 365 for Government?
+    href: introduction-windows-365-government.md
 - name: How-to guides
   items:
     - name: Plan
