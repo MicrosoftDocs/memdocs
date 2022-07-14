@@ -58,10 +58,5 @@ The following features are not yet supported for Windows 365 GCC and/or GCCH.
 |36609973??|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |39889569??|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 
-
-![Check](./media/manage-rdp-device-restrictions/checkmark.png)
-
-
-
 <!-- ########################## -->
 ## Next steps
