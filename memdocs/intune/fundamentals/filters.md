@@ -129,7 +129,7 @@ Before a policy is applied to a device, filters dynamically evaluate applicabili
     > - When you create a rule, it's validated for the correct syntax, and any errors are shown.
     > - If you enter syntax that's not supported by the basic rule builder, then the rule builder is disabled. For example, using nested parenthesis disables the basic rule builder.
 
-6. Select **Preview devices**. A list of enrolled devices that match your the filter criteria is shown.
+6. Select **Preview devices**. A list of enrolled devices that match your filter criteria is shown.
 
     In this list, you can also search for devices by the device name, OS version, device model, device manufacturer, the user principal name, and device ID:
 
