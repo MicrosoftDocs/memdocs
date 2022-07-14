@@ -131,7 +131,7 @@ Before a policy is applied to a device, filters dynamically evaluate applicabili
 
 6. Select **Preview devices**. A list of enrolled devices that match your filter criteria is shown.
 
-    In this list, you can also search for devices by the device name, OS version, device model, device manufacturer, the user principal name, and device ID:
+    In this list, you can also search for devices by the device name, OS version, device model, device manufacturer, the user principal name of the primary user, and device ID:
 
     :::image type="content" source="./media/filters/preview-search.png" alt-text="In preview devices, search for devices when creating a filter in Microsoft Endpoint Manager and Microsoft Intune.":::
 
