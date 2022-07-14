@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/25/2022
+ms.date: 07/26/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -64,11 +64,11 @@ Before a policy is applied to a device, filters dynamically evaluate applicabili
 
 1. You create a reusable filter for any platform based on some device properties. In the example, the filter is for personal devices.
 
-2. You assign a policy or app to the group. In the assignment, you add the filter in either include or exclude mode. For example, you "include" personal devices, or you "exclude" personal devices from the policy.
+2. You assign a policy or app to the group. In the assignment, you add the filter in include or exclude mode. For example, you "include" personal devices, or you "exclude" personal devices from the policy.
 
 3. The filter is evaluated when the device enrolls, checks in with the Intune service, or at any other time a policy evaluates.
 
-4. You see the filter results based on the evaluation. For example, the app or policies applies, or it doesn't apply.
+4. You see the filter results based on the evaluation. For example, the app or policy applies, or they don't apply.
 
 ## Prerequisites
 
@@ -79,7 +79,10 @@ Before a policy is applied to a device, filters dynamically evaluate applicabili
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Tenant administration** > **Filters** > **Create**.
 
-    You can also create filters in **Devices** > **Filters**, or **Apps** > **Filters**.
+    You can also create filters in:
+
+    - **Devices** > **Filters**
+    - **Apps** > **Filters**
 
 3. In **Basics**, enter the following properties:
 
@@ -126,13 +129,18 @@ Before a policy is applied to a device, filters dynamically evaluate applicabili
     > - When you create a rule, it's validated for the correct syntax, and any errors are shown.
     > - If you enter syntax that's not supported by the basic rule builder, then the rule builder is disabled. For example, using nested parenthesis disables the basic rule builder.
 
-6. Select **Preview devices**. A list of enrolled devices that match the filter criteria you defined is shown.
+6. Select **Preview devices**. A list of enrolled devices that match your filter criteria is shown.
+
+    In this list, you can also search for devices by the device name, OS version, device model, device manufacturer, the user principal name, and device ID:
+
+    :::image type="content" source="./media/filters/preview-search.png" alt-text="In preview devices, search for devices when creating a filter in Microsoft Endpoint Manager and Microsoft Intune.":::
+
 7. Select **Next**.
 8. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-8. In **Review + create**, review your settings. When you select **Create**, your changes are saved. The filter is created, and ready to be used. The filter is also shown in the filters list.
+9. In **Review + create**, review your settings. When you select **Create**, your changes are saved. The filter is created, and ready to be used. The filter is also shown in the filters list.
 
 ## Use a filter
 
