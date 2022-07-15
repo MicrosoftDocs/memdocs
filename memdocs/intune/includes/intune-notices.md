@@ -4,12 +4,26 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 06/16/2022
+ms.date: 07/15/2022
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.  
+
+### Ending support for Windows Information Protection
+<!-- MAXADO-6010051 -->
+
+Starting in July 2022, Microsoft is deprecating Windows Information Protection. Microsoft Endpoint Manager is discontinuing future investments in managing and deploying Windows Information Protection. Support for Windows Information Protection policies in Microsoft Intune will end in December 2022.
+
+#### How does this change affect my organization?
+
+If you have Windows Information Protection policies, plan to disable these policies in the near future. Then migrate to 
+<!-- QUESTION --> **_TBD get final from Matt's blog post_**
+
+#### What do I need to do to prepare?
+
+Disable these policies to make sure that users in your organization don't lose access to documents that have been protected by Windows Information Protection. For more information, see [How to disable Windows Information Protection policies](https://aka.ms/disablewip).
 
 ### Update your certificate connector for Microsoft Intune
 
