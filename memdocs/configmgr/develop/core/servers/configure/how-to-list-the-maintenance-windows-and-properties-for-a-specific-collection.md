@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: Learn how to list the maintenance windows and properties for a specific collection with provided examples and links.
 
 ---
 # How to List the Maintenance Windows and Properties for a Specific Collection
