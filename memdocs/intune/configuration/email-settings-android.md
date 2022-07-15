@@ -39,7 +39,7 @@ As an Intune administrator, you can create and assign email settings to Android 
 ## Before you begin
 
 - Create an [Android device administrator Email device configuration profile](email-settings-configure.md).
-- Install Chrome App in the work profile to enable modern auth for Gmail.
+- Install the Chrome app in the work profile to enable modern auth for Gmail.
 
 ## Android (Samsung Knox)
 
