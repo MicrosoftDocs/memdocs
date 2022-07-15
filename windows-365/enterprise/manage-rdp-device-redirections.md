@@ -42,13 +42,14 @@ The following redirections can be managed by using the appropriate setting:
 | --- | --- |
 | Audio input | Allow audio recording redirection |
 | Audio output | Allow audio and video playback redirection |
-| Cameras | Don't allow video capture redirection |
-| Clipboard | Don't allow Clipboard redirection |
-| Printers | Don't allow client printer redirection |
-| COM ports | Don't allow COM port redirection |
-| Drives | Don't allow drive redirection |
-| Smartcards | Don't allow smart card device redirection |
-| USB drives| Don't allow supported Plug and Play device redirection |
+| Cameras | Do not allow video capture redirection |
+| Clipboard | Do not allow Clipboard redirection |
+| COM ports | Do not allow COM port redirection |
+| Drives | Do not allow drive redirection |
+| Location | Do not allow location redirection |
+| Printers | Do not allow client printer redirection |
+| Smartcards | Do not allow smart card device redirection |
+| USB drives| Do not allow supported Plug and Play device redirection |
 
 There are two ways to manage these redirections:
 
