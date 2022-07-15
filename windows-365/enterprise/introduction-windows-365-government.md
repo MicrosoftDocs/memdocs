@@ -30,7 +30,8 @@ ms.collection: M365-identity-device-management
 
 # What is Windows 365 for Government?
 
-To be supplied
+Windows 365 Government lets GCC and GCC High Us Government contractors and local, state, and federal customers securely stream their Windows apps, data, and content by using Cloud PCs from any device at any time.
+
 
 ## Features not yet supported Windows 365 for Government
 
