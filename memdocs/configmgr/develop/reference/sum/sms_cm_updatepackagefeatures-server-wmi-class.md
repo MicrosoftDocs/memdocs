@@ -1,5 +1,6 @@
 ---
 title: "SMS_CM_UpdatePackageFeatures Class"
+Description: Learn how to use the SMS_CM_UpdatePackageFeatures class in Configuration Manager to update feature extensions.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

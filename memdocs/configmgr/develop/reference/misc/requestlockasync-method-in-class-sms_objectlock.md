@@ -1,6 +1,7 @@
 ---
 title: "RequestLockAsync Method"
 titleSuffix: "Configuration Manager"
+Description: Learn how to use the RequestLockAsync method in Configuration Manager to asynchronously acquire a lock to edit global objects.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

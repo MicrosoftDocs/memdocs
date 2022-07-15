@@ -1,5 +1,6 @@
 ---
 title: "SMS_AdminUIContent Class"
+Description: Learn how to use the SMS_AdminUIContent class although it has no defined methods.
 titleSuffix: "Configuration Manager"
 ms.date: "02/15/2017"
 ms.prod: "configuration-manager"

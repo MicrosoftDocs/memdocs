@@ -1,5 +1,6 @@
 ---
 title: "SMS_CI_ComplianceHistory Class"
+Description: Learn how to use the SMS_CI_ComplianceHistory class in Configuration Manager to get the compliance history for both configuration items and configuration baselines.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

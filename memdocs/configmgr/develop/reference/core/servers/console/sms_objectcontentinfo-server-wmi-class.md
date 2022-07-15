@@ -1,5 +1,6 @@
 ---
 title: "SMS_ObjectContentInfo Class"
+Description: Learn how to use the SMS_ObjectContentInfo class in Configuration Manager to set application or package content information.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

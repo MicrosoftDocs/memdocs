@@ -1,5 +1,6 @@
 ---
 title: "SMS_DPContentInfo Class"
+Description: Learn how to use the SMS_DPContentInfo class in Configuration Manager to describe package information for a given distribution point.  
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

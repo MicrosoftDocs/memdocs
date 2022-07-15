@@ -1,5 +1,6 @@
 ---
 title: "SMS_G_USER_DCMDeploymentErrorAssetDetails Class"
+Description: Learn how to use the SMS_G_USER_DCMDeploymentErrorAssetDetails class in Configuration Manager to set the asset details for deployment errors.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

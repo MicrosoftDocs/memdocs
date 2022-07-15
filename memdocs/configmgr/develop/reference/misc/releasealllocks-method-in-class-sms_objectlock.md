@@ -1,5 +1,6 @@
 ---
 title: "ReleaseAllLocks Method"
+Description: Learn how to use the ReleaseAllLocks method in Configuration Manager to release all locks for a session. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

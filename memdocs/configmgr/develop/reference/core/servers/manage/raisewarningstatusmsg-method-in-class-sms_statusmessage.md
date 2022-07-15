@@ -1,5 +1,6 @@
 ---
 title: "RaiseWarningStatusMsg Method"
+Description: Learn how to use the RaiseWarningStatusMsg method in Configuration Manager to create a warning status message. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
