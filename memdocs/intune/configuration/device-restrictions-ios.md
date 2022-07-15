@@ -212,7 +212,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - iOS 4.0 and newer
   - iPadOS 13.0 and newer
 
-- **Block Find My iPhone**: **Yes** prevents this feature in the Find My app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using this Find My app feature to get the approximate location of the device.
+- **Block Find My iPhone**: **Yes** disables/hides "Devices" tab in the Find My app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using "devices" tab in the Find My app to get the approximate location of the device.
 
   This feature applies to:  
   - iOS 13.0 and newer
