@@ -35,6 +35,9 @@ Rename a device to make it easier to recognize from other devices. The Company P
 * iOS
 * Android  
 
+> [!NOTE]
+> Renaming the device in Company Portal is not expected to be reflected in Microsoft Endpoint Manager.
+
 ## Rename device from **Device details** page  
 Complete the following step to rename a device from the Company Portal **Device details** page. 
 
