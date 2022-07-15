@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/19/2022
+ms.date: 07/26/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -531,7 +531,13 @@ End of comment -->
   - **Wi-Fi only**: Updates are installed only when the device is connected to a Wi-Fi network.
   - **Always**: Updates are installed when they're available.
 
-- **Allow access to all apps in Google Play store**: When set to **Allow**, users get access to all apps in Google Play store. They can't access [client apps](../apps/apps-add-android-for-work.md) that aren't assigned to them. For more information on excluding users and groups from specific apps, see [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
+- **Allow access to all apps in Google Play store**: When set to **Allow**:
+
+  - Users get access to all apps in the Google Play store.
+  - Users can't use apps that are explicitly targeted with uninstall.
+  - Users can't use apps that are added to a blocklist on the personal profile of corporate-owned devices with a work profile. 
+
+  For more information on excluding users and groups from specific apps, see [Include and exclude app assignments](../apps/apps-inc-exl-assignments.md).
 
   When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might:
   

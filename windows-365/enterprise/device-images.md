@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/02/2022
+ms.date: 07/12/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -70,17 +70,6 @@ There are two sets of images available to choose from across the different versi
   - Services optimized for virtualization.
   - UWP packages removed.
   - Task scheduler actions disabled.
-
-### Recommended image by license
-
-You can choose any image for any Windows 365 license. However, for optimal performance, the following recommendations apply:
-
-| Windows 365 license | Recommended gallery image |
-| --- | --- |
-| 2vCPU/4GB/64GB and above | Windows 10/11 Enterprise + Microsoft 365 Apps |
-| 1vCPU/2GB/64GB* | Windows 10 Enterprise + OS Optimizations |
-
-\* The 1vCPU option is being retired. Instead, we recommend the 2vCPU as the minimum configuration for new purchases.
 
 ### Gallery image update cycle
 

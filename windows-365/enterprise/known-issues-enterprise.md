@@ -6,7 +6,7 @@ f1.keywords:
 ms.author: erikje
 author: ErikjeMS
 manager: dougeby
-ms.date: 06/13/2022
+ms.date: 07/12/2022
 audience: Admin
 ms.topic: troubleshooting
 ms.service: cloudpc
@@ -44,6 +44,15 @@ While a Windows PC (physical or Cloud PC) sits idle before the first user signs 
 
  **Troubleshooting steps**: Make sure that a user signs in to new Cloud PCs as soon as possible.
 
+## Windows 10 to 11 in-place upgrade failure<!--40412134-->
+
+Upgrading an existing Cloud PC from Windows 10 to Windows 11 using the Settings app may fail.
+
+**Troubleshooting steps**:
+
+1. Edit the related provisioning policy to change the gallery image to Windows 11.
+2. Reprovision the Cloud PC.
+
 ## Windows 365 provisioning fails<!--38483005-->
 
 Windows 365 provisioning failures may occur because both:
@@ -51,7 +60,7 @@ Windows 365 provisioning failures may occur because both:
 - the Desired State Configuration (DSC) extension isn't signed and
 - the PowerShell Execution policy is set to Allsigned in the Group Policy Object (GPO)
 
-**Troubleshooting steps**: 
+**Troubleshooting steps**:
 
 1. Did the Azure network connection (ANC) fail with the following error: `"An internal error occurred. The virtual machine deployment timed out."`?
 2. If yes, review the related GPO. Is PowerShell Execution set to AllSigned?
@@ -74,11 +83,11 @@ The following device compliance settings may report as **Not Compliant** when be
 - **Require BitLocker**
 - **Require Secure Boot to be enabled on the device.** Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now rolling out in Asia Pacific (APAC) regions. This feature will roll out to all customers over the next few months.
 
-**Troubleshooting steps**: 
+**Troubleshooting steps**:
 
 1. [Create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs).
 2. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.
-3. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment. 
+3. Create a new device compliance policy without either of the **Not Compliant** settings and use this new filter to include Cloud PCs for the policy assignment.
 
 ## Next steps
 
