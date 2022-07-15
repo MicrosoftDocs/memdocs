@@ -318,11 +318,14 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
       - **Wi-Fi configuration**: **Enable** shows the Wi-Fi control on the Managed Home Screen, and allows users to connect the device to different WiFi networks. Enabling this feature also turns on device location. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the Wi-Fi control on the Managed Home Screen. It prevents users from connecting to Wi-Fi networks while using the Managed Home Screen.
 
-        - **Wi-Fi allow list**: Create a list of valid wireless network names, also known as the service set identifier (SSID). Managed Home Screen users can only connect to the SSIDs you enter.
+        - **Wi-Fi allow list**: Create a list of valid wireless network names, also known as the service set identifier (SSID). Managed Home Screen users can only connect to the SSIDs you enter. 
+        > [!IMPORTANT]
+        > Wi-Fi SSIDs are **case-sensitive**. If it is a valid SSID but capitalization does not match, the intended network will not be shown.
+
 
           When left blank, Intune doesn't change or update this setting. By default, all available Wi-Fi networks are allowed.
 
-          **Import** a .csv file that includes a list of valid SSIDs.
+          **Import** a .csv file that includes a list of valid SSIDs. 
 
           **Export** your current list to a .csv file.
 
