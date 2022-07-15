@@ -236,7 +236,7 @@ To see if the device is auto-enrolled, you can:
 
 - To isolate scripting problems, you can:
 
-  - Review the PowerShell execution configuration on your devices. See the [PowerShell execution policy](/powershell/module/microsoft.powershell.security/set-executionpolicy?view=powershell-7.1) for guidance.
+  - Review the PowerShell execution configuration on your devices. See the [PowerShell execution policy](/powershell/module/microsoft.powershell.security/set-executionpolicy) for guidance.
   - Run a sample script using the Intune management extension. For example, create the `C:\Scripts` directory, and give everyone full control. Run the following script:
 
     ```powershell
