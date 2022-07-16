@@ -37,7 +37,7 @@ Using the settings catalog in Intune, you can create a printer policy, and deplo
 
 This feature applies to:
 
-- Windows 11
+- Windows 11 Insider
 
 This article shows you how to create a Universal Print policy in Microsoft Intune. To learn more about Universal Print and onboarding, go to [What is Universal Print](/universal-print/fundamentals/universal-print-whatis) and [Set up Universal Print](/universal-print/fundamentals/universal-print-getting-started).
 
