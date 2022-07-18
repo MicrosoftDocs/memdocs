@@ -709,7 +709,7 @@ You can configure the following settings:
 
 These settings apply to Android Enterprise personally owned devices with a work profile (BYOD).
 
-### Personally owned devices with a work profile settings
+### Personally owned devices with a work profile - settings
 
 - **Copy and paste between work and personal profiles**: **Block** prevents copy-and-paste between work and personal apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share data using copy-and-paste with apps in the personal profile.
 - **Data sharing between work and personal profiles**: Choose if apps in the work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** option in the Chrome browser app. This setting doesn't apply to copy/paste clipboard behavior. Your options:
