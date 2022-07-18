@@ -22,7 +22,7 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
 
 [!INCLUDE [Prerequisites for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-prerequisties.md)]
 - [Microsoft Intune and Microsoft Defender for Endpoint integration enabled](../../intune/protect/advanced-threat-protection-configure.md#enable-microsoft-defender-for-endpoint-in-intune)
-- Client onboarded to [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).<!--Adding MDE License Requirement-->
+- Client which meets the minimum requirements for, and is onboarded to [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements#licensing-requirements).<!--Adding MDE License Requirement & MAX 6198973-->
 
 ## <a name="bkmk_onboard"></a> Create Microsoft Defender for Endpoint policies
 
