@@ -13,7 +13,7 @@ author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 11/05/2021
+ms.date: 18/07/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -29,6 +29,14 @@ ms.topic: article
 - Windows Holographic, version 2004 or later
 
 After you have [created a device group](enrollment-autopilot.md), you can apply a Windows Autopilot deployment profile to each device in the group.  Deployment profiles determine the deployment mode, and customize the OOBE for your end users.
+
+Autopilot profiles can be created through:
+1.	[Microsoft Admin Center](https://admin.microsoft.com/) 
+2.	[Intune console](https://go.microsoft.com/fwlink/?linkid=2109431)
+3.	[Intune graph](/graph/api/resources/intune-graph-overview)
+
+For Intune managed devices, pre-provisioning, self-deploying and co-management profiles can only be created and assigned in Intune. 
+
 
 ## Create an Autopilot deployment profile
 
