@@ -75,7 +75,7 @@ END OLD -->
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** >  **Enrollment** > **Enroll devices** > **Windows enrollment** > **Windows Hello for Business**. The Windows Hello for Business pane opens.
+2. Go to **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Hello for Business**. The Windows Hello for Business pane opens.
 
 3. Select from the following options for **Configure Windows Hello for Business**:
 
