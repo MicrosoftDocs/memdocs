@@ -30,7 +30,7 @@ This article describes known issues that can often be resolved by configuration 
 
 ### Autopilot profile not being applied when assigned 
 
-In Windows 10 April (KB5011831) release, there is an issue where the Autopilot profile may fail to apply to the device. As a result, any settings made in the profile may not be configured for the user such as device renaming. To resolve this issue, the May (KB5015020) cumulative update needs to be applied to the device.
+In Windows 10 April and some May update releases, there is an issue where the Autopilot profile may fail to apply to the device and the hardware hash may not be harvested. As a result, any settings made in the profile may not be configured for the user such as device renaming. To resolve this issue, the May (KB5015020) cumulative update needs to be applied to the device.
 
 ### DefaultuserX profile not deleted
 
