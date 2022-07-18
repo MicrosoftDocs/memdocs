@@ -1,6 +1,6 @@
 ---
 title: "SMS_SecuredCategoryMembership Class"
-Description: Learn how to use the SMS_SecuredCategoryMembership class in Configuration Manager.  
+description: Learn how to use the SMS_SecuredCategoryMembership class in Configuration Manager.  
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,6 +1,6 @@
 ---
 title: "SMS_TaskSequence_CaptureUserStateAction Class"
-Description: Learn how to use the SMS_TaskSequence_CaptureUserStateAction class in Configuration Manager to set a task sequence action that uses the User State Migration Tool (USMT) to capture user state and settings from the target computer.
+description: Learn how to use the SMS_TaskSequence_CaptureUserStateAction class in Configuration Manager to set a task sequence action that uses the User State Migration Tool (USMT) to capture user state and settings from the target computer.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

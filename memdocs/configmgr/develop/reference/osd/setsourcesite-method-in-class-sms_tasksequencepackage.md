@@ -1,6 +1,6 @@
 ---
 title: "SetSourceSite Method in SMS_TaskSequencePackage"
-Description: Learn how to use the SetSourceSite method in Configuration Manager to set the code of the source site for the task sequence package.  
+description: Learn how to use the SetSourceSite method in Configuration Manager to set the code of the source site for the task sequence package.  
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,6 +1,6 @@
 ---
 title: "SMS_SUPSyncStatus Class"
-Description: Learn how to use the SMS_SUPSyncStatus class in Configuration Manager to list sync and replication status for SUM data for participating site/SUP.  
+description: Learn how to use the SMS_SUPSyncStatus class in Configuration Manager to list sync and replication status for SUM data for participating site/SUP.  
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

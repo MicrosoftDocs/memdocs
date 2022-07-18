@@ -1,6 +1,6 @@
 ---
 title: "SMS_AppDeploymentErrorStatus Class"
-Description: Learn how to use the SMS_AppDeploymentErrorStatus class in Configuration Manager to represent application deployment error status. 
+description: Learn how to use the SMS_AppDeploymentErrorStatus class in Configuration Manager to represent application deployment error status. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

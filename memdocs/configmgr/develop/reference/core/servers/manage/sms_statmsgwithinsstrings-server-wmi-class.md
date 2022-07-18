@@ -1,6 +1,6 @@
 ---
 title: "SMS_StatMsgWithInsStrings Class"
-Description: Learn how to use the SMS_StatMsgWithInsStrings class in Configuration Manager to set an individual status message with insertion strings.
+description: Learn how to use the SMS_StatMsgWithInsStrings class in Configuration Manager to set an individual status message with insertion strings.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

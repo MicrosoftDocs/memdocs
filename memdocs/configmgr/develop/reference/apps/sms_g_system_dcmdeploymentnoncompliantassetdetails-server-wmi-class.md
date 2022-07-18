@@ -1,6 +1,6 @@
 ---
 title: "SMS_G_SYSTEM_DCMDeploymentNonCompliantAssetDetails Class"
-Description: Learn how to use the SMS_G_SYSTEM_DCMDeploymentNonCompliantAssetDetails class in Configuration Manager to set non-compliant asset details for a deployment.
+description: Learn how to use the SMS_G_SYSTEM_DCMDeploymentNonCompliantAssetDetails class in Configuration Manager to set non-compliant asset details for a deployment.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

@@ -1,6 +1,6 @@
 ---
 title: "IPxeAuthClass::CreateIdentity"
-Description: Learn how to use the CreateIdentity method to create a new self-signed certificate.
+description: Learn how to use the CreateIdentity method to create a new self-signed certificate.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
