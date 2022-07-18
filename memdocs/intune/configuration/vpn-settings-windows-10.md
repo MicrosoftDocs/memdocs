@@ -21,7 +21,7 @@ ms.technology:
 
 ms.suite: ems
 search.appverid: MET150
-ms.reviewer: wicale
+ms.reviewer: tycast
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
