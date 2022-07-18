@@ -167,7 +167,7 @@ public void ListMaintenanceWindowsAndPropertiesForASpecificCollection(WqlConnect
 ## .NET Framework Security  
  For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../../../develop/core/servers/configure/role-based-administration.md).  
 
-## See Also  
+## See also  
  [About maintenance windows](about-maintenance-windows.md)
  [Software distribution overview](software-distribution-overview.md)
  [About deployments](about-software-distribution-deployments.md)
