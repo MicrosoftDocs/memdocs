@@ -1,6 +1,7 @@
 ---
 title: "Define the Hosting Technology Registration File"
 titleSuffix: "Configuration Manager"
+description: "To define a hosting technology registration file, create an XML file based on the http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest schema. This file registers the custom hosting technology with Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 47960cf4-e7dd-4e26-92b7-5774cfc44a1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -7,10 +7,11 @@ metadata:
   ms.author: aaroncz
   ms.reviewer: crosorio
   manager: dougeby
-  ms.date: 04/15/2021
-  ms.topic: reference
+  ms.date: 01/26/2022
+  ms.topic: faq
   ms.prod: configuration-manager
   ms.technology: configmgr-comanage
+  ms.collection: highpri
 
 title: Frequently asked questions about co-management
 summary: |
@@ -39,11 +40,16 @@ sections:
         answer: |
           Both! You can use them independently, but they work great together.
           
-          _Co-management_ enables you to concurrently manage a Windows 10 device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. You can enable co-management and not use tenant attach to upload devices to the Microsoft Endpoint Manager admin center.
+          _Co-management_ enables you to concurrently manage a Windows 10 or later device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. You can enable co-management and not use tenant attach to upload devices to the Microsoft Endpoint Manager admin center.
 
           _Tenant attach_ sets up synchronization between your Configuration Manager site and your Intune tenant. Then you can see Configuration Manager devices in the Microsoft Endpoint Manager admin center. This connection provides you with a single view for all devices that you manage with Microsoft Endpoint Manager. This web-based console may be beneficial in some scenarios that don't want to use the full Configuration Manager console, such as with help desk staff. You can also benefit from insights in [Endpoint analytics](../../analytics/overview.md). You can configure the site to upload devices to the Microsoft Endpoint Manager admin center and not enable co-management. However, those devices are still managed by ConfigMgr until you enable co-management.
 
           For more information on tenant attach and how to configure it, see [Microsoft Endpoint Manager tenant attach](../tenant-attach/device-sync-actions.md).
+
+      - question: |
+          Can I co-manage Windows 365 Cloud PCs?
+        answer: |
+          Yes! You can co-manage Windows 365 Cloud PCs.
 
   - name: Authentication
     questions:
@@ -54,7 +60,7 @@ sections:
 
           - _Hybrid Azure AD join_ is a device identity state where the device is joined to an on-premises Active Directory domain and registered in Azure Active Directory (Azure AD).
 
-          - _Co-management_ enables you to concurrently manage a Windows 10 device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. Co-management requires that the device has a cloud identity. This identity can be either hybrid Azure AD join or Azure AD join only.
+          - _Co-management_ enables you to concurrently manage a Windows 10 or later device with both Configuration Manager and Intune. You install the Configuration Manager client and enroll the device to Intune. The device communicates with both services. Configuration Manager policy controls which workloads you switch to Intune as the management authority. Co-management requires that the device has a cloud identity. This identity can be either hybrid Azure AD join or Azure AD join only.
 
           For an existing Configuration Manager client that's already joined to Active Directory, it needs to be hybrid joined before you enable co-management.
 
@@ -78,7 +84,7 @@ sections:
 
           Use Microsoft policy analytics to help you understand if there are critical settings in your GPOs that you need to migrate to Intune. For more information, see [Use group policy analytics](../../intune/configuration/group-policy-analytics.md).
 
-          Don't decide to invest in hybrid authentication only to avoid reviewing the settings that you need for your Windows 10 devices. Use this opportunity to invest the time now to be in a better position for the future. Also, a healthy and clean device configuration helps with performance and user experience. Don't buy new hardware, install the latest Windows 10 version, and then apply an old configuration.
+          Don't decide to invest in hybrid authentication only to avoid reviewing the settings that you need for your Windows 10 or later devices. Use this opportunity to invest the time now to be in a better position for the future. Also, a healthy and clean device configuration helps with performance and user experience. Don't buy new hardware, install the latest Windows version, and then apply an old configuration.
 
       - question: |
           Does a user need to be signed in for automatic enrollment to happen?
@@ -88,6 +94,11 @@ sections:
           When you set up co-management, enable autoenrollment of devices currently managed by Configuration Manager. If needed, you can scope autoenrollment only for a pilot collection. 
 
           For more information, see [How to enable co-management](how-to-enable.md). Make sure the co-management prerequisites are set up before you start this process. For more information, see [Prerequisites](overview.md#prerequisites). 
+
+      - question: |
+          Do I need to do anything with the deprecation of the Azure AD Graph API and Azure AD Authentication Library (ADAL)?
+        answer: |
+          Most likely not. For more information, see [CMG FAQ](../core/clients/manage/cmg/cloud-management-gateway-faq.yml#do-i-need-to-do-anything-with-the-deprecation-of-the-azure-ad-graph-api-and-azure-ad-authentication-library--adal--).<!--10488538-->
 
   - name: Workloads
     questions:
@@ -111,16 +122,19 @@ sections:
 
           For more information, see [How to prepare internet-based devices for co-management](how-to-prepare-win10.md).
 
+          > [!NOTE]
+          > You can't deploy the Configuration Manager client while provisioning a new computer in Windows Autopilot user-driven mode for hybrid Azure AD join. This limitation is due to the identity change of the device during the Azure AD-join process. Deploy the Configuration Manager client after the Autopilot process.<!-- CMADO-10205503 --> For alternative options to install the client, see [Client installation methods in Configuration Manager](../core/clients/deploy/plan/client-installation-methods.md).
+
       - question: |
           How do I manage updates for Windows and Microsoft 365 apps?
         answer: |
           You can manage updates for Windows and Microsoft 365 apps with either Configuration Manager or Intune. Configuration Manager provides a very detailed and controlled process for managing these updates and their content, which is important to some customers. A modern approach is to just keep devices up to date, but still control the timing and user experiences.
 
-          If you switch the **Windows Update policies** workload to Intune, then it becomes the management authority for Windows quality and feature updates. Use Intune to configure settings for update rings and feature update settings. For more information, see [Manage Windows 10 software updates in Intune](../../intune/protect/windows-update-for-business-configure.md). 
+          If you switch the **Windows Update policies** workload to Intune, then it becomes the management authority for Windows quality and feature updates. Use Intune to configure settings for update rings and feature update settings. For more information, see [Manage Windows software updates in Intune](../../intune/protect/windows-update-for-business-configure.md). 
           
           If you switch the **Office Click-to-Run apps** workload to Intune, then it becomes the management authority for Microsoft 365 apps and updates. When you create a new Microsoft 365 suite deployment, choose the update channel for your clients will be at. For more information, see the following articles:
           
-          - [Add Microsoft 365 apps to Windows 10 devices with Microsoft Intune](../../intune/apps/apps-add-office365.md) 
+          - [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune/apps/apps-add-office365.md) 
           - [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates](../../intune/configuration/administrative-templates-update-office.md)
           - [Overview of update channels for Microsoft 365 Apps](/deployoffice/overview-update-channels)
 
@@ -133,7 +147,7 @@ sections:
 
           - [Use compliance policies to set rules for devices you manage with Intune](../../intune/protect/device-compliance-get-started.md)
 
-          - [Windows 10 compliance settings in Microsoft Intune](../../intune/protect/compliance-policy-create-windows.md#configuration-manager-compliance)
+          - [Compliance settings in Microsoft Intune](../../intune/protect/compliance-policy-create-windows.md#configuration-manager-compliance)
 
   - name: Work from anywhere
     questions:
@@ -164,6 +178,6 @@ sections:
         answer: |
           No. Windows updates are already available on the internet, so you don't need to distribute them to your CMG.
 
-          In past versions, Configuration Manager blocked update packages to cloud distribution points. This constraint was removed so you can distribute third-party software updates. Don't distribute to the CMG any updates that are available from Microsoft Updates.
+          In past versions, Configuration Manager blocked update packages to cloud-based content sources. This constraint was removed so you can distribute third-party software updates. Don't distribute to the CMG any updates that are available from Microsoft Updates.
 
           Configuration Manager clients have native affinity when using a CMG to get updates directly from the Microsoft Updates cloud service. For more information on how CMG works with Microsoft Updates service and configuration guidance, see the blog post on [Managing remote machines with cloud management gateway in Microsoft Endpoint Configuration Manager](https://techcommunity.microsoft.com/t5/configuration-manager-blog/managing-remote-machines-with-cloud-management-gateway-in/ba-p/1233895).

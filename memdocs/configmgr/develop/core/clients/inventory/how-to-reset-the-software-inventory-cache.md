@@ -1,6 +1,7 @@
 ---
 title: "Reset the Software Inventory Cache"
 titleSuffix: "Configuration Manager"
+description: "Learn how to reset the software inventory cache by connecting to the inventory agent namespace and deleting the inventory action status instance for software inventory."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: fbb32170-234c-44f2-80b8-51285790e8a4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

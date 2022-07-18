@@ -1,6 +1,7 @@
 ---
 title: "GetClientVersion Method in"
 titleSuffix: "Configuration Manager"
+description: "The GetClientVersion Windows Management Instrumentation (WMI) class method returns the client version." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 7a5f103c-2967-45fa-9228-d73e1a6391ee
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -32,7 +35,7 @@ uint32 GetClientVersion
 
  Qualifiers: [id("0"), out]  
 
- Version number of the of the installed client software.   
+ Version number of the installed client software.   
 
 ## Remarks  
 

@@ -1,6 +1,7 @@
 ---
 title: "SMS_DeploymentType Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_DeploymentType Windows Management Instrumentation class is an SMS Provider server class that represents the deployment type of an application."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: bc6991d3-d016-49c9-84a6-ac0510dd8579
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

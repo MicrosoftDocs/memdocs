@@ -1,5 +1,6 @@
 ---
 title: "OS Deployment Driver Management"
+description: In Configuration Manager, the driver catalog helps manage the cost and complexity of deploying an operating system in an environment that contains different types of computers and devices.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: 789d981f-d0c5-447b-9d93-24d2e0eef5f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

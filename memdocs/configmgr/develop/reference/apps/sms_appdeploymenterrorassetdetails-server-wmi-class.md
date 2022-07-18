@@ -1,6 +1,7 @@
 ---
 title: "SMS_AppDeploymentErrorAssetDetails Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager, that represents error details of application deployment at the asset level."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 196e4faf-3c29-4184-933f-c240212ad519
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

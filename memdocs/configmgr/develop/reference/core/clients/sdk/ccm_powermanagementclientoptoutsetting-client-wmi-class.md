@@ -1,6 +1,7 @@
 ---
 title: "CCM_PowerManagementClientOptoutSetting Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CCM_PowerManagementClientOptoutSetting Windows Management Instrumentation class is an SMS Provider server class that represents the settings that allow users to exclude their device from power management."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 2341f440-5c3b-414d-9321-1e9f367758f4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

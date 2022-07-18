@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent all image information in boot image, operating system image, and operating system installer using SMS_ImageInformation.
 title: "SMS_ImageInformation Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 90235fe7-fbcd-4fd0-a76c-fa7b389bd5b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

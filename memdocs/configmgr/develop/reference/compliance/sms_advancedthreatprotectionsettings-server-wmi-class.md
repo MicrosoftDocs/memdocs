@@ -9,6 +9,8 @@ ms.assetid: 276d3f64-bd9b-4112-b869-bdad7d8b6931
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 description: An overview of SMS_AdvancedThreatProtectionSettings Server WMI Class
 
 

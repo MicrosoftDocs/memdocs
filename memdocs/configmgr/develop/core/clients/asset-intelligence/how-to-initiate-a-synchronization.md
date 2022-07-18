@@ -1,4 +1,5 @@
 ---
+description: Learn how to synchronize the asset intelligence catalog outside the normal synchronization schedule.
 title: "Initiate a Synchronization"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 6b484801-89a1-4707-ac9f-46da72365fdf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 12/16/2021
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: dab6f5c8-1ebb-42c4-a7a7-7af001f94e15
 
@@ -50,7 +50,7 @@ An app can be included so that Intune can manage aspects of the app.
 Use the following steps to add an app to Intune:
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All apps** > **Add**. 
-2. In the **App type** drop-down box, select **Windows 10**.
+2. In the **App type** drop-down box, select **Windows 10 and later** from **Microsoft 365 Apps**.
 3. Click **Select**. The **Add app** steps are displayed.
 4. Confirm the default details in the **App suite information** step and click **Next**.
 5. Confirm the default settings in the **App settings** step and click **Next**.
@@ -78,7 +78,7 @@ You now have assigned the app to an additional group.
 
 ## Install the app on the enrolled device
 
-You must install and use the Company Portal app to install the **Contoso's To-Do** app made available by Intune. Use the following steps to verify that the app is available to the user of the enrolled device.
+End users must install and use the Company Portal app to install an app made available by Intune. You, acting as an end user, can use the following steps to verify that the app is available to the user of the enrolled device.
 
 1. Log in to your enrolled Windows 10 Desktop device.
 

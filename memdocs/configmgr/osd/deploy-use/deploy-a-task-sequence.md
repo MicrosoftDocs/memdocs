@@ -1,15 +1,15 @@
 ---
 title: Deploy a task sequence
 titleSuffix: Configuration Manager
-description: Use this information to deploy a task sequence to the computers in a collection.  
+description: Use this information to deploy a task sequence to the computers in a collection.
 ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: b2abcdb0-72e0-4c70-a4b8-7827480ba5b2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Deploy a task sequence
@@ -154,7 +154,7 @@ Use the following procedure to deploy a task sequence to the computers in a coll
     - **Allow clients to use distribution points from the default site boundary group**: Specify if clients should download content from a distribution point in the site default boundary group, when it isn't available from a distribution point in the current or neighbor boundary groups.
 
         > [!NOTE]
-        > When a device runs a task sequence and needs to acquire content, it uses boundary group behaviors similar to the Configuration Manager client. For more information, see [Task sequence support for boundary groups](../../core/servers/deploy/configure/boundary-groups.md#bkmk_bgr-osd).<!--1359025-->
+        > When a device runs a task sequence and needs to acquire content, it uses boundary group behaviors similar to the Configuration Manager client. For more information, see [Task sequence support for boundary groups](../../core/servers/deploy/configure/boundary-groups-distribution-points.md#task-sequence-support).<!--1359025-->
 
 1. Starting in version 2103, if you use a feature update with the **Upgrade OS** task sequence step, the wizard also includes the **Deployment Package** page.<!--3555906--> Select one of the following options:
 
@@ -227,12 +227,12 @@ You create a task sequence that only has several **Install Package** steps for t
 
 :::image type="content" source="media/deploy-option-3.png" alt-text="Deploy task sequence, three deployment options":::
 
-## Deploy Windows 10 in-place upgrade via CMG
+## Deploy Windows in-place upgrade via CMG
 
 <!-- 1357149 -->
-The Windows 10 in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG). This ability allows remote users to more easily upgrade to Windows 10 without needing to connect to the intranet.
+The Windows in-place upgrade task sequence supports deployment to internet-based clients managed through the [cloud management gateway](../../core/clients/manage/cmg/overview.md) (CMG). This ability allows remote users to more easily upgrade Windows without needing to connect to the intranet.
 
-For more information, see [Deploy a task sequence over the internet](deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).
+For more information, see [Deploy a task sequence over the internet](deploy-task-sequence-over-internet.md#deploy-windows-in-place-upgrade-via-cmg).
 
 ## <a name="bkmk_high-risk"></a> High-risk deployments
 

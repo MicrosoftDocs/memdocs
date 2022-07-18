@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 11/11/2019
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,7 +30,11 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Install and share apps on your device
+# Install and share apps on your device  
+
+**Applies to**  
+- Windows 10  
+- Windows 11  
 
 Install apps on your device from the Company Portal app for Windows.
 
@@ -38,7 +42,7 @@ Install apps on your device from the Company Portal app for Windows.
 
 1. Open the Company Portal app and sign in with your work or school account.  
 
-    ![The Company Portal app for Windows 10 home page.](./media/RS1_AppDetailsPage_Installed_03.png)
+    ![The Company Portal app for Windows home page.](./media/RS1_AppDetailsPage_Installed_03.png)
 2. Find and install apps from any of the following sections of the Company Portal app:  
 
     * **Home**: Select from a list of your organization's featured apps.  
@@ -50,9 +54,9 @@ Install apps on your device from the Company Portal app for Windows.
 3. Select an app.   
 4. On the apps details page, click **Install**. After installation is done, you'll see an **Installed** status.  
 
-    ![The Company Portal app for Windows 10, select app, App details page.](./media/RS1_AppDetailsPage_Installed_02.png)  
+    ![The Company Portal app for Windows, select app, App details page.](./media/RS1_AppDetailsPage_Installed_02.png)  
     
-    ![The Company Portal app for Windows 10, app details page, "Installed" status showing after app is installed. Install button changes to read Reinstall.](./media/RS1_AppDetailsPage_Installed_01.png)    
+    ![The Company Portal app for Windows, app details page, "Installed" status showing after app is installed. Install button changes to read Reinstall.](./media/RS1_AppDetailsPage_Installed_01.png)    
 
 > [!IMPORTANT]
 > If a required app fails to install and your organization makes it available for you to manually install, select **Retry**. It could take up to ten minutes to see the updated status. If you select **Retry** again during this time and get an error, that's okay. Continue to wait the ten minutes for an updated status.   
@@ -62,12 +66,12 @@ Share and recommend apps to your work or school contacts. The following steps de
 
 1. In Company Portal, right-click or press and hold on any app to open its [context menu](/windows/uwp/design/controls-and-patterns/menus).  
 
-    ![The Company Portal app for Windows 10, front page, showing a list of Apps and devices. The clickable "Share" context menu is visible on top of the example app's icon. ](./media/1808_ShareContext_CP_Windows.png)  
+    ![The Company Portal app for Windows, front page, showing a list of Apps and devices. The clickable "Share" context menu is visible on top of the example app's icon. ](./media/1808_ShareContext_CP_Windows.png)  
 
 2. Select **Share**.
 3. Choose from individual contacts or select another program, such as OneNote, to send to a group. If you don't see an app you want to use, select **Get apps in Store** to see other available apps.  
 
-    ![An example screenshot of the Company Portal app for Windows 10, Share pop-up page. Page says "Learn about <example app name> in the Company Portal app." It shows one contact and 2 apps to choose from to send the link, and a "Get apps in Store" link. ](./media/1808_ShareApps_CP_Windows.png) 
+    ![Image of the Company Portal app for Windows, Share apps pop-up page. highlighting contacts and apps. ](./media/1808_ShareApps_CP_Windows.png) 
 
 After you share, the recipient will receive a link and a message to view the app's details. The link opens the Company Portal **App details** page. 
 
@@ -83,7 +87,7 @@ Apps are also made available to you based on your device type. For example, if y
 ## Request an app for work or school  
 If there's an app you need, but don't see in Company Portal, request it. Find contact details for your **Helpdesk** in the Company Portal app, on the help & support page. You'll find the same contact information on the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).    
 
-  ![The Company Portal app for Windows 10, Help & Support page, highlighting Helpdesk details. ](./media/1812_UCP_Help_Support_helpdesk.png)  
+  ![The Company Portal app for Windows, Help & Support page, highlighting Helpdesk details. ](./media/1812_UCP_Help_Support_helpdesk.png)  
 
 ## View installed apps  
 View a list of all apps installed on your device. The **Installed apps** page lists the following details about each app:
@@ -102,7 +106,7 @@ Use **Sort by** to rearrange the apps assignment type, publisher, alphabetically
 ## Installing Microsoft Office  
 Depending on the size of your company, there could be multiple versions of Office available for download from the Company Portal. If you're not sure which version is best for your role, contact your IT support person for guidance.  
 
-![The Company Portal app for Windows 10 showing 2 versions of Office side by side.](./media/multiple-office-installs-cp-win10.png)
+![The Company Portal app for Windows showing 2 versions of Office side by side.](./media/multiple-office-installs-cp-win10.png)
 
 You should only install one version of Office. If you try to install an additional one, the first one will be uninstalled.  
 

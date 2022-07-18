@@ -1,6 +1,7 @@
 ---
 title: "Configure the Software Update Point"
 titleSuffix: "Configuration Manager"
+description: "You configure the software update point, in Configuration Manager, by modifying the site control file settings."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 021e834d-aa7c-4b82-831d-97f110f7da73
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "SMS_UserSettings Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_UserSettings class describes attributes that are specific to a single user that is managed by Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: faa33a29-a719-4288-ac1f-5fb35f2b5f1b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

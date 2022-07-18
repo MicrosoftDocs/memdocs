@@ -2,14 +2,14 @@
 title: Extended interoperability client
 titleSuffix: Configuration Manager
 description: Learn about using the extended interoperability client for long-term support of a static Configuration Manager client with a current branch site.
-ms.date: 04/05/2021
+ms.date: 06/22/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 600086d5-bd9e-4ac1-8ace-c7a62de80dc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site
@@ -30,7 +30,6 @@ The following table lists the versions of the Configuration Manager client that 
 |---------|---------|---------|
 | 2103<br/>5.00.9049 | April 5, 2021 | No earlier than April 2023 |
 | 1902<br/>5.00.8790 | March 27, 2019 | March 27, 2022 |
-| 1802<br/>5.00.8634 | May 1, 2018 | April 30, 2021 |
 
 > [!TIP]
 > The EIC is supported for at least two years from the date of release. For more information on release dates, see [Support for Configuration Manager current branch versions](../servers/manage/current-branch-versions-supported.md).
@@ -47,7 +46,7 @@ Plan to update the extended interoperability client on devices that you manage w
 
 ## Limitations
 
-- Updates for the extended interoperability client software aren't available by using in-console updates. For more information on how to update the EIC, see [How to upgrade an excluded client](../clients/manage/upgrade/exclude-clients-windows.md#bkmk_override).
+- Updates for the extended interoperability client software aren't available by using in-console updates. For more information on how to update the EIC, see [How to upgrade an excluded client](../clients/manage/upgrade/exclude-clients-windows.md#how-to-upgrade-an-excluded-client).
 
 - The EIC only supports the following features:
 

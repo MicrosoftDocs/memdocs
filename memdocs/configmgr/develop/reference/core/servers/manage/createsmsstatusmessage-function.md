@@ -1,5 +1,6 @@
 ---
 title: "CreateSMSStatusMessage Function"
+description: Learn how the CreateSMSStatusMessage function allocates a status message object, initializes it, and retrieves a handle to it.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: b7c7accc-d687-4cfa-ac67-611f3d5d23c4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -163,7 +166,7 @@ typedef DWORD (WINAPI *PROC_CREATESMSSTATUSMESSAGE)
 
  The module name that you supply for the `pszModuleName` parameter is not the name of the DLL, but the name of a Configuration Manager module. The Configuration Manager site server contains a mapping of module names to DLL names. For example, the client components report status messages by using the Configuration Manager client module name. The site server is aware that the Configuration Manager client corresponds to the file Climsgs.dll.  
 
- The module name is cannot be localized to other languages, because the Configuration Manager administrator creates queries and filter rules that are based on the component name. This assists the administrator in quickly retrieving your particular status messages and in configuring Configuration Manager to handle these status messages in special ways.  
+ The module name cannot be localized to other languages, because the Configuration Manager administrator creates queries and filter rules that are based on the component name. This assists the administrator in quickly retrieving your particular status messages and in configuring Configuration Manager to handle these status messages in special ways.  
 
  In your calls to this function, use the `dwID` parameter to furnish a status message ID. As part of the procedure for preparing your application to report Configuration Manager status messages, you create an .mc file that defines all the messages. Compiling this file produces an .h file containing a #define for each defined status message. You should supply the #define symbol as the message ID. When Status Message Viewer or Windows NT Event Viewer displays your message, it uses the message ID that you supply to look up the message text in the related DLL.  
 

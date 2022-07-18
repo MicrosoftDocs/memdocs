@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager AddChangeNotification Windows Management Instrumentation (WMI) class method to add a device setting package change notification.
 title: AddChangeNotification method in class SMS_DeviceSettingPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: ce743e27-8472-4763-95f6-81ed1af526c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

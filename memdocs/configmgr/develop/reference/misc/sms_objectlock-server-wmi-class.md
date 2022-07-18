@@ -1,6 +1,7 @@
 ---
 title: "SMS_ObjectLock Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ObjectLock abstract WMI class represents methods for locking and unlocking global objects."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 65797a0a-cf39-4081-8963-c084c81531ed
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

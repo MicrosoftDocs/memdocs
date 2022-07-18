@@ -6,10 +6,10 @@ ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: c7c94ba0-d709-4129-8077-075a8abaea1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Preprovision BitLocker in Windows PE with Configuration Manager
@@ -49,4 +49,4 @@ The **Pre-provision BitLocker** task sequence step in Configuration Manager allo
 |Apply Network Settings|This step adds Network settings to the answer file. The answer file is used by the Setup Windows and ConfigMgr step to install the operating system. For more information, see [Apply Network Settings Step](../understand/task-sequence-steps.md#BKMK_ApplyNetworkSettings).|  
 |Apply Device Drivers|This step matches and installs drivers as part of the operating system deployment. For more information, see [Auto Apply Drivers](../understand/task-sequence-steps.md#BKMK_AutoApplyDrivers).|  
 |Setup Windows and ConfigMgr|This step performs the transition from Windows PE to the new operating system. This task sequence step is a required part of any operating system deployment. It installs the Configuration Manager client into the new operating system and prepares for the task sequence to continue execution in the new operating system. For more information, see [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).|  
-|Enable BitLocker|This step enables BitLocker encryption on the hard drive and sets key protectors. Because the hard drive was pre-provisioned with BitLocker, this step completes very quickly. Windows 7 requires that you add a key protector. If you do not use this step, you can run the manage-bde.exe command-line tool to set a key protector. For more information, see [Enable BitLocker](../understand/task-sequence-steps.md#BKMK_EnableBitLocker).|  
+|Enable BitLocker|This step enables BitLocker encryption on the hard drive and sets key protectors. Because the hard drive was pre-provisioned with BitLocker, this step completes very quickly. Windows 7 requires that you add a key protector. If you do not use this step, you can run the manage-bde.exe command-line tool to set a key protector. For more information, see [Enable BitLocker](../understand/task-sequence-steps.md#enable-bitlocker).|  

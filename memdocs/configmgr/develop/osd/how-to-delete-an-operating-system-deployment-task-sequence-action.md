@@ -9,7 +9,9 @@ ms.assetid: 32db0107-f390-4324-9c36-e60976edf9eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
+ms.localizationpriority: null
+ms.collection: openauth
+description: Learn about how to remove an action from an operating system deployment task sequence to delete the action from the sequence.
 
 ---
 # How to Delete an Operating System Deployment Task Sequence Action

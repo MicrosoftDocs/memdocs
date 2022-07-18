@@ -2,14 +2,14 @@
 title: CMPivot for real-time data
 titleSuffix: Configuration Manager
 description: Learn how to use CMPivot in Configuration Manager to query clients in real time.
-ms.date: 04/30/2021
+ms.date: 08/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 32e2d6b9-148f-45e2-8083-98c656473f82
 author: mestew
-ms.author: mstewart 
+ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # CMPivot for real-time data in Configuration Manager
@@ -47,48 +47,48 @@ The following components are required to use CMPivot:
 
 The following permissions are needed for CMPivot:
 
-- **Read** permission on the **SMS Scripts** object
 - **Run CMPivot** permission on the **Collection**
-   - Starting in version 1906, the **Run CMPivot** permission was split out from the general **Run Script** permission as the new permission to be used on the **Collection**. Prior to version 1906, the **Run Script** permission is required.
 - **Read** permission on **Inventory Reports**
-- The default scope.
+- **Read** permission on the **SMS Scripts** object
+   - **Read** for **SMS Scripts** isn't required starting in version 2107 <!--7898885-->
+   - CMPivot doesn't need **Read** for **SMS Scripts** for it's primary scenario starting in version 2107. However, if the administration service is down and the permission has been removed, then when the administration service falls back, CMPivot will fail. <!--10304720--> The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires **Read** permission on **SMS Scripts**  if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log. <!--8403036-->
+- The **default scope**.
+   - The **default scope** isn't required starting in version 2107 <!--7898885-->
 
-> [!TIP]
-> Starting in version 1906, [permissions for CMPivot were added](cmpivot-changes.md#bkmk_cmpivot_secadmin1906) to Configuration Manager's built-in **Security Administrator** role.
- 
+### CMPivot permissions by Configuration Manager version
+
+|1902 and earlier| Versions 1906 through 2103| 2107 or later <!--7898885-->|
+|---|---|---|
+|**Run Script** permission on the **Collection**|**Run CMPivot** permission on the **Collection**|**Run CMPivot** permission on the **Collection**|
+|**Read** permission on **Inventory Reports**|**Read** permission on **Inventory Reports**|**Read** permission on **Inventory Reports**|
+|**Read** permission on **SMS Scripts**|**Read** permission on **SMS Scripts**|N/A </br></br>  The [SMS Provider](../../plan-design/hierarchy/plan-for-the-sms-provider.md) still requires **Read** permission on **SMS Scripts** if the [administration service](../../../develop/adminservice/overview.md) falls back to it due to a 503 (Service Unavailable) error, as seen in the CMPivot.log.|
+|**Default scope** permission|**Default scope** permission|N/A|
+
 ## Limitations
 
-- In a hierarchy, connect the Configuration Manager console to a *primary site* to run CMPivot. The **Start CMPivot** action doesn't appear in the console when it's connected to a central administration site (CAS).
-  - Starting in Configuration Manager version 1902, you can run CMPivot from a CAS. In some environments, additional permissions are needed. For more information, see [CMPivot changes for version 1902](cmpivot-changes.md#bkmk_cmpivot1902).
-
-- CMPivot only returns data for clients connected to the current site.  
-
-- If a collection contains devices from another site, CMPivot results are only from devices in the current site.  
-
+- CMPivot only returns data for clients connected to the current site unless it's run from the central administration site (CAS).  
+  - If a collection contains devices from another site, CMPivot results are only from devices in the current site unless CMPivot is run from the CAS.
+  - In some environments, additional permissions are needed for CMPivot to run on the CAS. For more information, see [CMPivot changes for version 1902](cmpivot-changes.md#bkmk_cmpivot1902).  
 - You can't customize entity properties, columns for results, or actions on devices.  
-
 - Only one instance of CMPivot can run at the same time on a computer that is running the Configuration Manager console.  
-
-- In version 1806, the query for the **Administrators** entity only works if the group is named "Administrators". It doesn't work if the group name is localized. For example, "Administrateurs" in French.<!--SCCMDocs issue 759-->  
-
+- In CMPivot standalone, you're not able to access CMPivot queries stored in the Community hub. <!--9442715, 9310040, 9391017-->
+- When single sign on with multifactor authentication is used, you may not be able to sign into Community hub from CMPivot when using Configuration Manager 2103 and earlier. <!--10436429-->
 
 ## Start CMPivot
 
-1. In the Configuration Manager console, connect to the primary site. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and click **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
+1. In the Configuration Manager console, connect to the primary site or the CAS. Go to the **Assets and Compliance** workspace, and select the **Device Collections** node. Select a target collection, and select **Start CMPivot** in the ribbon to launch the tool. If you don't see this option, check the following configurations:  
    - Confirm with a site administrator that your account has the required permissions. For more information, see [Prerequisites](#prerequisites).  
-   - Connect the console to a *primary site*.  
 
 2. The interface provides further information about using the tool.  
 
-     - Manually enter query strings at the top, or click the links in the in-line documentation.  
+     - Manually enter query strings at the top, or select the links in the in-line documentation.  
 
-     - Click one of the **Entities** to add it to the query string.  
+     - Select one of the **Entities** to add it to the query string.  
 
      - The links for **Table Operators**, **Aggregation Functions**, and **Scalar Functions** open language reference documentation in the web browser. CMPivot uses the [Kusto Query Language (KQL)](/azure/kusto/query/).  
 
 3. Keep the CMPivot window open to view results from clients. When you close the CMPivot window, the session is complete.
    - If the query has been sent, then clients still send a state message response to the server.  
-
 
 
 ## How to use CMPivot
@@ -121,11 +121,12 @@ The CMPivot window contains the following elements:
 
     - Cut, copy, or paste content in the query pane.  
     <!-- markdownlint-disable MD038 -->
-    - By default, this pane uses IntelliSense. For example, if you start typing `D`, IntelliSense suggests all of the entities that start with that letter. Select an option and press Tab to insert it. Type a pipe character and a space `| `, and then IntelliSense suggests all of the table operators. Insert `summarize` and type a space, and IntelliSense suggests all of the aggregation functions. For more information on these operators and functions, click the **Home** tab in CMPivot.  
+    - By default, this pane uses IntelliSense. For example, if you start typing `D`, IntelliSense suggests all of the entities that start with that letter. Select an option and press Tab to insert it. Type a pipe character and a space `| `, and then IntelliSense suggests all of the table operators. Insert `summarize` and type a space, and IntelliSense suggests all of the aggregation functions. For more information on these operators and functions, select the **Home** tab in CMPivot.  
 
     - The query pane also provides the following options:  
 
-        - Run the query.  
+        - Run the query.
+           - To rerun your current CMPivot query on the clients, hold **Ctrl** while clicking **Run**. 
 
         - Move backwards and forwards in the history list of queries.  
 
@@ -137,7 +138,9 @@ The CMPivot window contains the following elements:
 
    - The available columns vary based upon the entity and the query.  
 
-   - Click a column name to sort the results by that property.  
+   - The color saturation of the data in the results table or chart indicates if the data is live or from the last hardware inventory scan stored in the site database.  For example, black is real-time data from an online client whereas grey is cached data.
+
+   - Select a column name to sort the results by that property.  
 
    - Right-click on any column name to group the results by the same information in that column, or sort the results.  
 
@@ -162,7 +165,7 @@ The CMPivot window contains the following elements:
 
      - **Bing it**: Launch the default web browser to https://www.bing.com with this value as the query string.  
 
-   - Click any hyperlinked text to pivot the view on that specific information.  
+   - Select any hyperlinked text to pivot the view on that specific information.  
 
    - The results pane doesn't show more than 20,000 rows. Either adjust the query to further filter the data, or restart CMPivot on a smaller collection.  
 
@@ -183,16 +186,22 @@ The CMPivot window contains the following elements:
    - The total number of rows in the results pane. For example, `1 objects`  
 
 > [!TIP]
-> To rerun your current CMPivot query on the clients, hold **Ctrl** while clicking **Run**.
+> Starting in version 2107, use the **Query devices again** button, or **Ctrl** + **F5** to force the client to retrieve the data again for the query. Using **Query devices again** is useful when you expect the data to change on the device since the last query, such as during troubleshooting. Selecting **Run query** again after the initial results are returned only parses the data CMPivot has already retrieved from the client. <!--9966861--> 
+>
+>:::image type="content" source="media/query-devices-again.png" alt-text="Screenshot of the query devices again button showing the tooltip that Ctrl + F5 is a shortcut to force clients to retrieve the data again.":::
 
-## Example scenarios
+<!--9965423-using include for shared content-->
+
+[!INCLUDE [Publish to Community hub from CMPivot](includes/cmpivot-publish.md)]
+
+## Example scenarios for CMPivot
 
 The following sections provide examples of how you might use CMPivot in your environment:
 
 
 ### Example 1: Stop a running service
 
-Your security administrator asks you to stop and disable the Computer Browser service as quickly as possible on all devices in the accounting department. You start CMPivot on a collection for all devices in accounting, and select **Query all** on the **Service** entity. 
+Your security administrator asks you to stop and disable the Computer Browser service as quickly as possible on all devices in the accounting department. You start CMPivot on a collection for all devices in accounting, and select **Query all** on the **Service** entity.
 
 `Service`
 
@@ -200,7 +209,7 @@ As results appear, you right-click on the **Name** column and select **Group by*
 
 `Service | summarize dcount( Device ) by Name`
 
-In the row for the **Browser** service, you click the hyperlinked number in the **dcount_** column. 
+In the row for the **Browser** service, you select the hyperlinked number in the **dcount_** column. 
 
 `Service | where (Name == 'Browser') | summarize count() by Device`
 

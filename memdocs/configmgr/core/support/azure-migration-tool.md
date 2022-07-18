@@ -6,10 +6,10 @@ ms.date: 01/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 1c975c5e-efd1-4d47-a315-39ccb32633dc
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Extend and migrate an on-premises site to Microsoft Azure
@@ -32,7 +32,7 @@ Starting in version 1910, this tool helps you to programmatically create Azure v
 
 - Your user account needs to be a Configuration Manager **Full Administrator** and have administrator rights on the primary site server.
 
-- To add a site server in passive mode, the site server must meet the [high availability requirements](../servers/deploy/configure/site-server-high-availability.md#prerequisites). For example, it requires a [remote content library](../plan-design/hierarchy/the-content-library.md#bkmk_remote).
+- To add a site server in passive mode, the site server must meet the [high availability requirements](../servers/deploy/configure/site-server-high-availability.md#prerequisites). For example, it requires a [remote content library](../plan-design/hierarchy/remote-content-library.md).
 
 ### Required Azure permissions
 
@@ -144,7 +144,7 @@ The tool doesn't currently have any tasks to migrate the database from on-premis
 
 - [Backup and restore the database](../servers/manage/backup-and-recovery.md)
 - [Configure a SQL Server Always On availability group and allow the data to replicate](../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#changes-for-site-backup)
-- [Migrate a SQL Server database to an Azure SQL Server VM](/azure/virtual-machines/windows/sql/virtual-machines-windows-migrate-sql)
+- [Migrate a SQL Server database to an Azure SQL Server VM](/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)
 
 ## Site system roles
 

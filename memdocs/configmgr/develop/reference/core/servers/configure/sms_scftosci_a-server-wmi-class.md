@@ -1,6 +1,7 @@
 ---
 title: "SMS_SCFToSCI_a Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_SCFToSCI_a Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that relates a WMI class object.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 42f6b479-5515-4f4f-a6c2-9bcc8d33452b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "SetAutoInstallRequiredSoftwaretoNonBusinessHours Method"
 titleSuffix: "Configuration Manager"
+description: The SetAutoInstallRequiredSoftwaretoNonBusinessHours Windows Management Instrumentation class method, in Configuration Manager, sets the value for AutomaticallyInstallSoftware.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: b02219c8-09b1-4328-8b5c-796d93bc62c0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

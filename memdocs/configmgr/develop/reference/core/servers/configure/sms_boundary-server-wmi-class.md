@@ -1,6 +1,7 @@
 ---
 title: "SMS_Boundary Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a boundary defined within the hierarchy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: b4026ec4-a938-4866-a3d0-e001582a7504
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

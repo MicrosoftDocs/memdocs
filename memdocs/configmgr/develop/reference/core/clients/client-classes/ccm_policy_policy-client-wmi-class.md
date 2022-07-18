@@ -1,6 +1,7 @@
 ---
 title: "CCM_Policy_Policy Class"
 titleSuffix: "Configuration Manager"
+description: "A client Windows Management Instrumentation class that defines a policy object for a client policy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: ba718ec2-df70-426d-a6df-997a8e98483d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

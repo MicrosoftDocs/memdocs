@@ -5,10 +5,10 @@ title: Manage Android Enterprise work profile devices in Microsoft Intune
 titleSuffix: 
 description: Microsoft Intune manages Android Enterprise personally-owned and corporate-owned work profile devices to provide additional management capabilities and privacy when people use their personal Android devices for work.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 01/22/2019
+ms.date: 10/20/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -45,7 +45,14 @@ Before enrolling Android Enterprise work profile devices, you must complete some
 
 When you manage an Android Enterprise personally-owned or corporate-owned work profile device with Intune, you don't manage the entire device. Management capabilities only affect the work profile that is created on the device during enrollment. Any apps deployed to the device with Intune get installed in the work profile. App icons in the work profile are differentiated from personal apps on the device. All Android apps and data outside the Android enterprise portion of the device remain personal and under the control of the end user. Users can install any app they choose to the personal side of the device. Administrators can manage and monitor apps and actions scoped to the work profile.
 
-Intune supplies a range of built-in general settings that you can configure on Android work personally-owned and corporate-owned profile devices. For more information, see [Android work profile device policy settings](../protect/compliance-policy-create-android-for-work.md).
+When configuring policies for device configuration or compliance, the broad range of settings enables you to tailor protection to your specific needs. To better understand how to implement specific security configuration scenarios, see the security configuration framework guidance for Android Enterprise device restriction policies.
+
+The security configuration framework is organized into distinct configuration levels that provide guidance for personally owned and supervised devices, with each level building off the previous level. The available levels and settings in each level vary by enrollment mode:
+
+- For Android Enterprise personally-owned work profile devices: [Android personally-owned work profile security settings](../enrollment/android-work-profile-security-settings.md)
+- For Android Enterprise fully managed, dedicated, and corporate-owned work profile devices: [Android fully managed-security settings](../enrollment/android-fully-managed-security-settings.md)
+
+Alternatively, you can review the [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md) and [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 ## App publishing and distribution
 
@@ -63,7 +70,11 @@ Android Enterprise doesn't provide a default email app or native email profile o
 
 Intune provides configuration templates for Gmail and Nine Work apps when managed as work apps. Other email apps that support app configuration profiles can be configured with mobile app configuration policies.
 
-If you are using Exchange ActiveSync Conditional Access for an Android Enterprise personally-owned or corporate-owned work profile device, consider using either the Gmail or Nine Work email app. The Microsoft Outlook for Android app, or any other email app that uses modern authentication via ADAL, is also supported. For more information, see [How to configure email settings in Microsoft Intune](../configuration/email-settings-configure.md).
+If you are using Exchange ActiveSync Conditional Access for an Android Enterprise personally-owned or corporate-owned work profile device, consider using either the Gmail or Nine Work email app. The Microsoft Outlook for Android app, or any other email app that uses modern authentication via MSAL, is also supported. For more information, see [How to configure email settings in Microsoft Intune](../configuration/email-settings-configure.md).
+
+   > [!NOTE]
+   > Azure Active Directory (Azure AD) Authentication Library (ADAL) will be deprecated, so we recommend updating apps that currently use it to MSAL. For more information, see [Update your applications to use Microsoft Authentication Library (MSAL) and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363). 
+
 
 ## App protection policies
 

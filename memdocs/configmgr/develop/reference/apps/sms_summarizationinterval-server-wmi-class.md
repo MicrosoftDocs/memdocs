@@ -1,6 +1,7 @@
 ---
 title: "SMS_SummarizationInterval Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_SummarizationInterval WMI class represents the months that have been summarized by a monthly usage summary."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: bab2b232-fde6-4127-9e13-5f496e385447
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Software updates views
 titleSuffix: Configuration Manager
 description: Information about the software updates metadata, software update groups, and software update bundles.
@@ -12,6 +12,8 @@ ms.assetid: 1e6741d2-7737-4446-b65f-e6e330c09458
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Software updates views in Configuration Manager
@@ -56,7 +58,7 @@ The view can be joined to other views by using the **CI_ID** and **Content_ID** 
 
 ### v_UpdateInfo
 
-Lists stand-alone software updates (CIType_ID = 1) or software update groups (CIType_ID = 8), by **CI_ID**, and information about the update or bundle, such as configuration item type, configuration item version, data created, date last modified, whether the update or bundle has been deployed, associated bulletin ID, article ID, severity, and so on. Unlike the Configuration Manager console when it displays software updates, this view does not list the updates that are part of an update bundle.
+Lists stand-alone software updates (CIType_ID = 1) or software update groups (CIType_ID = 9), by **CI_ID**, and information about the update or bundle, such as configuration item type, configuration item version, data created, date last modified, whether the update or bundle has been deployed, associated bulletin ID, article ID, severity, and so on. Unlike the Configuration Manager console when it displays software updates, this view does not list the updates that are part of an update bundle.
 The view can be joined to other views by using the **CI_ID**, **CI_UniqueID**, and **SDMPackage_ID** columns.
 
 ## Software updates status views
@@ -135,6 +137,9 @@ The view can be joined to other views by using the **CI_ID**, **AssignmentID**, 
 
 Lists all software updates, by **CI_ID**, in software update deployments, listed by assignment ID, and summarized state reported by targeted clients. The view includes the target collection ID and name; the time of the last summarization; the total number of client computers targeted; the count of client computers reporting unknown, not applicable, missing (required), and present (already installed) states; the number of clients that have installed the software update or failed to install the update; and so on.
 The view can be joined to other views by using the **CI_ID**, **AssignmentID**, and **CollectionID** columns.
+
+> [!NOTE]
+> This view has been deprecated, no longer generates summary data, and may be removed in the future.
 
 ### v_UpdateEnforcementSummaryPerCollection
 

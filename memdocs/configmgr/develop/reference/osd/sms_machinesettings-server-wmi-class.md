@@ -1,6 +1,7 @@
 ---
 title: "SMS_MachineSettings Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MachineSettings WMI class describes attributes that are specific to a single computer that is managed by Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 940ea289-0ae3-4b72-a394-58cb63f2a158
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

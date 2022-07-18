@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Use StageNow logs on Android Zebra devices in Microsoft Intune - Azure | Microsoft Docs
+title: Use StageNow logs on Android Zebra devices in Microsoft Intune
 description: See common issues and resolutions when using StageNow on Android devices with Microsoft Intune. Also learn how to get logs, and see examples of how to read the logs for success or errors.
 keywords:
 author: MandiOhlinger

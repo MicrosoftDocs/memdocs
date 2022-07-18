@@ -1,6 +1,7 @@
 ---
 title: "GetNextServiceWindowID Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the GetNextServiceWindowID WMI class method gets the identifier of the next service window instance closest to the current time."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 0d183452-3798-4ac8-a210-25368c575ddf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

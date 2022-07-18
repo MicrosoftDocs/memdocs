@@ -1,4 +1,5 @@
 ---
+description: Learn about the client runtime requirements for applications that run on Microsoft Configuration Manager. 
 title: "Client Runtime Requirements"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 6edd0792-9e2e-4ed0-9936-0eb9c815726d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

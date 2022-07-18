@@ -1,6 +1,7 @@
 ---
 title: "About General Configuration Items"
 titleSuffix: "Configuration Manager"
+description: "Models of settings and objects, which together represent a meaningful unit of configuration management."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 68b138f8-d6ba-4e71-a82a-cb2bb224e972
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

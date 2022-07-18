@@ -2,14 +2,14 @@
 title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 11/30/2020
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: reference
-ms.assetid: 2162d67d-31a9-45b2-bb9e-835f3ac6e6fe
+ms.topic: reference 
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configuration Manager console changes and tips
@@ -19,6 +19,80 @@ manager: dougeby
 Use the information below to find out about changes to the Configuration Manager console and tips for using the console:
 
 ## General tips
+
+### <a name="bkmk_2203"></a> Console improvements in version 2203
+<!--12726153-->
+*(Introduced in version 2203)*
+
+The following improvements were made to the console and user experience:
+
+- When using temporary device nodes, device actions like **Run Scripts** are now available to make the experience in the console consistent.
+- Additional Management Insights rules now have click-through actions
+- Copy/paste is available for more objects from details panes.
+   - Added the **Name** property in the details pane for configuration items, configuration item related policies, and applications.
+- Software update search results and the search criteria are now cached when you navigate to another node. When you navigate back to the **All Software Updates** node, your search criteria and results are preserved from your last query. Closing the console will clear the cached query.
+- Added a search filter to the **Products** and **Classifications** tabs in the **Software Update Point Component Properties**. <!--10998089, 9575773-->
+- You can now exclude subcontainers when doing **Active Directory System Discovery** and **Active Directory User Discovery** in untrusted domains. <!--4655840, 9575773-->
+- Added a **Cloud Sync** column to collections to indicate if the collection is synchronizing with Azure Active Directory. <!--12433024, 9575773-->
+- Added the **Collection ID** to the collection summary details tab <!--12630582, 9575773-->
+- Increased the size of the **Membership Rules** pane in the **Properties** page for collections. <!--12947295, 9575773 -->
+- Added a **View Script** option for **Run PowerShell Script** steps when using the **View** action for a task sequence. <!--12498818, 9575773 -->
+- The console now offers a dark theme. For more information, see [How to use the console](admin-console.md#bkmk_dark).
+
+### <a name="bkmk_csv"></a> Export to CSV
+<!--9663857-->
+*(Introduced in version 2111)*
+
+Starting in Configuration Manager 2111, you can export the contents of a grid view in the console along with the column headers to a comma-separated values (CSV) file that can be used to import to Excel or other applications. While you could previously cut and paste from a grid view, exporting to CSV makes extracting a large number of rows faster and easier. You can export either all or selected items from the following nodes:
+
+- Device Collections
+- User Collections
+- Devices
+- Users
+
+To export the information, select **Export to CSV file** from either the ribbon or the right-click menu. Choose **Export selected items** to only export items you've already selected, or you can choose to **Export all items**.
+
+:::image type="content" source="./media/9663857-export-csv.png" alt-text="Screenshot of the export to csv option in the ribbon of the device collections node.":::
+
+### <a name="bkmk_code"></a> Enhanced code editor
+<!--8495588-->
+*(Introduced in version 2107)*
+
+Starting in Configuration Manager 2107, you can edit scripts in an enhanced editor. The new editor supports syntax highlighting, code folding, word wrap, line numbers, and find and replace. The new editor is available in the console wherever scripts and queries can be viewed or edited. The enhanced editor improves the [syntax highlighting and code folding](#bkmk_syntax) that was first introduced in version 2010.
+
+:::image type="content" source="./media/8495588-code-editor.png" alt-text="Screenshot of the new code editor in Configuration Manager":::
+
+Open the new code editor to view or edit scripts and queries from the following locations:
+
+- Configuration item
+   - Scripts
+   - SQL and WQL queries
+   - Detection methods
+- Application detection scripts
+- Query statement properties
+- Create script wizard
+- Script properties
+- Orchestration group
+   - pre-installation scripts
+   - post-installation scripts
+- Task sequence
+   - PowerShell scripts
+   - Query WMI option
+
+The new code editor supports the following features:
+
+- Editor mode with syntax highlighting and plain text toggle
+- Toggle word wrap and line numbers
+- Code folding
+- Language selection
+- *Find*, *Find and Replace*, and *Go To* line number
+- Font type and size selection
+- Zoom using buttons or with Ctrl + mouse wheel.
+- The information bar at the bottom displays:
+   - Number of lines and characters in the script
+   - Cursor position
+   - If the script is read-only
+- Persistent settings across instances for the code window, such as code folding, word wrap, and window size.
 
 ### <a name="bkmk_syntax"></a> Syntax highlighting for scripting languages
 <!--7964912-->
@@ -109,11 +183,11 @@ You can set security scopes on folders. If you have access to an object in the f
 
 We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:  
 
-- Number Errors​
-- Number In Progress​
-- Number Other​
-- Number Success​
-- Number Unknown​  
+- Number Errors
+- Number In Progress
+- Number Other
+- Number Success
+- Number Unknown
 
 ### Move the warning for a large number of results
 
@@ -127,18 +201,55 @@ There's now additional blank space in between this warning and the search field.
 
 <!--1357542-->
 
-Submit product feedback from the console.  
+Submit product feedback from the console.
 
-- **Send a smile**: Send feedback on what you liked  
+- **Send a smile**: Send feedback on what you liked
 
-- **Send a frown**: Send feedback on what you didn't like  
+- **Send a frown**: Send feedback on what you didn't like
 
-- **Send a suggestion**: Takes you to UserVoice to share your idea  
+- **Send a suggestion**: Takes you to the product feedback site to share your idea
 
 For more information, see [Product Feedback](../../understand/product-feedback.md).
 
 ## Assets and Compliance workspace
 
+### Co-management Eligible Devices collection
+<!--12377291-->
+*(Introduced in version 2111)* 
+
+There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date.
+
+### Collections tab
+<!--9575773, 10480635-->
+*(Introduced in version 2111)*
+
+When you show the members of a device collection, and select a device in the list, switch to the **Collections** tab in the details pane. This new view shows the list of collections of which the selected device is a member. It makes it easier for you to see this information.<!-- 10480635 -->
+
+:::image type="content" source="./media/10480635-collections-tab.png" alt-text="Collections tab in the details pane of the list of collection members.":::
+
+### Navigate to collection
+<!--9502958-->
+*(Introduced in version 2107)*
+
+You can now navigate to a collection from the **Collections** tab in the **Devices** node. Select **View Collection** from either the ribbon or the right-click menu in the tab. 
+
+:::image type="content" source="./media/9502958-collection.png" alt-text="Screenshot of the Collections tab in the Devices node.":::
+
+### Added maintenance window column
+<!--9708594-->
+*(Introduced in version 2107)*
+
+A **Maintenance window** column was added to the **Collections** tab in the **Devices** node.
+
+:::image type="content" source="./media/9708594-maintenance-window.png" alt-text="Screenshot of the Maintenance window column for the Collections tab in the Devices node.":::
+
+### Display assigned users
+<!--9709014-->
+*(Introduced in version 2107)*
+
+If a collection deletion fails due to scope assignment, the assigned users are displayed.
+
+:::image type="content" source="./media/9709014-assigned-users.png" alt-text="Screenshot of assigned user list when collection fails to delete due to scope assignment.":::
 ### Copy discovery data from the console
 
 <!--6890051-->
@@ -227,19 +338,49 @@ This behavior significantly improves the time it takes to search by name, especi
 
 ## Software Library workspace
 
+### Folder support for software update nodes
+<!--3601129-->
+
+*(Introduced in version 2203)*
+
+You can organize software update groups and packages by using folders. This change allows for better categorization and management of software updates. For more information, see [Deploy software updates](../../../sum/deploy-use/deploy-software-updates.md#bkmk_folder).
+
+### Improvements to console search
+<!--8325332, 9506942, 9506938, 9506934-->
+*(Introduced in version 2107)*
+
+You can use the **All Subfolders** search option for the following nodes: 
+- **Boot Images** node
+- **Operating System Upgrade Packages** node
+- **Operating System Images** node
+
+### Run software updates evaluation from deployment status
+<!--9012080 -->
+*(Introduced in version 2107)*
+
+You can right-click and notify devices to run a software updates evaluation cycle from the [software update deployment status](../../../sum/deploy-use/monitor-software-updates.md#BKMK_SUDeployStatus). You can target a single device under the **Asset Details** pane or select a group of devices based on their deployment status.
+
+:::image type="content" source="./media/9012080-run-software-update-deployment-evaluation.png" alt-text="Screenshot of the right-click action for software updates deployment evaluation from the software update deployment status":::
+
+1. In the Configuration Manager console, navigate to **Monitoring** > **Overview** > **Deployments**.
+1. Select the software update group or software update for which you want to monitor the deployment status.
+1. On the Home tab, in the Deployment group, select **View Status**.
+1. Right-click on either a specific deployment status for the devices, or on a single device under **Asset Details** pane.
+1. Select **Evaluate Software Update Deployments** to send a notification to the selected devices to run an evaluation cycle for software update deployments.
+
 ### Import objects to current folder
 
 <!--6601203-->
 *(Introduced in version 2010)*
 
-When you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to [applications](../../../apps/deploy-use/import-export-applications.md), [packages](../../../apps/deploy-use/packages-and-programs.md), [driver packages](../../../osd/get-started/manage-drivers.md#driver-packages), and [task sequences](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#export-and-import).
+When you import an object in the Configuration Manager console, it now imports to the current folder. Previously, Configuration Manager always put imported objects in the root node. This new behavior applies to [applications](../../../apps/deploy-use/import-export-applications.md), [packages](../../../apps/deploy-use/packages-and-programs.md), [driver packages](../../../osd/get-started/manage-drivers.md#driver-packages), and [task sequences](../../../osd/deploy-use/export-import-task-sequences.md).
 
 ### See task sequence size in the console
 
 <!--7645732-->
 *(Introduced in version 2010)*
 
-When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems. For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
+When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems. For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/reduce-task-sequence-policy-size.md).
 
 ### Order by program name in task sequence
 <!--4616810-->
@@ -260,7 +401,7 @@ In the **Software Library** workspace, expand **Application Management**, go to 
 1. Go to one of the following places in the Configuration Manager console:
 
    - **Software Library** > **Software Updates** > **All Software Updates**
-   - **Software Library** > **Windows 10 Servicing** > **All Windows 10 Updates**
+   - **Software Library** > **Windows Servicing** > **All Windows Updates**
    - **Software Library** > **Office 365 Client Management** > **Office 365 Updates**
 
 1. Select any update that is required by at least one device.
@@ -294,6 +435,14 @@ In the **Software Library** workspace, expand **Operating Systems**, and select 
 
 ## Monitoring workspace
 
+### Collection evaluation time
+<!--9575773, 9648622-->
+*(Introduced in version 2111)*
+
+When viewing a collection, you could previously see the amount of time the site took to evaluate the collection membership. This data is now also available in the **Monitoring** workspace.<!-- 9648622 --> When you select a collection in either subnode of the **Collection Evaluation** node, the details pane displays this collection evaluation time data.
+
+:::image type="content" source="./media/9648622-collection-evaluation-data.png" alt-text="Full Evaluation Status node in the Monitoring workspace of the Configuration Manager console, showing collection evaluation times.":::
+
 ### Correct names for client operations
 <!--4616810-->
 *(Introduced in version 1906)*
@@ -324,7 +473,15 @@ Copy information from the **Asset Details** pane for the following monitoring no
 ![Deployment Status view, copy asset details](media/1810-deployment-status.PNG)
 
 ## Administration workspace
+### Status message shortcuts
+*(Introduced in version 2107)*
+<!--8942963-->
+Shortcuts to [status messages](use-status-system.md) were added to the **Administrative Users** node and the **Accounts** node. Select an account, then select **Show Status Messages**.
 
+:::image type="content" source="./media/8942963-show-status-messages.png" alt-text="Screenshot of Administrative Users node with the Show Status Messages option in the ribbon.":::
+
+
+### Enable some security nodes to use the administration service
 <!--4223683-->
 Starting in version 1906, you can enable some nodes under the **Security** node to use the administration service. This change allows the console to communicate with the SMS Provider over HTTPS instead of via WMI. For more information, see [Set up the administration service](../../../develop/adminservice/set-up.md#enable-console-usage).
 

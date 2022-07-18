@@ -1,6 +1,7 @@
 ---
 title: "SMS_CM_UpdatePackDetailedSiteStatus Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the  SMS_CM_UpdatePackDetailedSiteStatus WMI class is an SMS Provider server class that is used to get detailed update package installation status per site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 929a0fd5-bd56-47d5-bdbe-04f0c541e9a7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

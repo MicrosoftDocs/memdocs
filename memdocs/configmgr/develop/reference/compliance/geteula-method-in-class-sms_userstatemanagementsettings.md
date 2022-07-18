@@ -1,6 +1,7 @@
 ---
 title: "GetEULA Method in Class SMS_UserStateManagementSettings"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that gets the localized Microsoft Software License Terms text of the configuration item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 78203d37-e077-41bc-86ed-742a549cdfe3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

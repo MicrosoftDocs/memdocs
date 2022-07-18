@@ -1,6 +1,7 @@
 ---
 title: "DeleteAssociation Method"
 titleSuffix: "Configuration Manager"
+description: "Delete the computer association between two system resources used in state migration."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 9b318231-7072-428e-9201-5fbdc8ba8d1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

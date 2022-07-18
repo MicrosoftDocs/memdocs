@@ -1,4 +1,5 @@
 ---
+description: In Configuration Manager, the CCM_Service_HostedClass class is a client Windows Management Instrumentation class that configures a COM class to be hosted in the CCMEXEC service.
 title: "CCM_Service_HostedClass Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 42a42ed1-56cd-4c21-a105-cf8c42197136
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

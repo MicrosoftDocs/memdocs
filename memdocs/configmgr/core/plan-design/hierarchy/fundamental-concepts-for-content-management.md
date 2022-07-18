@@ -2,14 +2,14 @@
 title: Content management fundamentals
 titleSuffix: Configuration Manager
 description: Use tools and options in Configuration Manager to manage the content that you deploy.
-ms.date: 03/05/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: c201be2a-692c-4d67-ac95-0a3afa5320fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Fundamental concepts for content management in Configuration Manager
@@ -53,7 +53,7 @@ For more information, see [Manage network bandwidth](manage-network-bandwidth.md
 
 ## Binary differential replication
 
-Configuration Manager uses binary differential replication (BDR) to update content that you previously distributed to other sites or to remote distribution points. To support BDR's reduction of bandwidth usage, install the **Remote Differential Compression** feature on distribution points. For more information, see [Distribution point prerequisites](../configs/site-and-site-system-prerequisites.md#bkmk_2012dppreq).
+Configuration Manager uses binary differential replication (BDR) to update content that you previously distributed to other sites or to remote distribution points. To support BDR's reduction of bandwidth usage, install the **Remote Differential Compression** feature on distribution points. For more information, see [Distribution point prerequisites](../configs/site-and-site-system-prerequisites.md#distribution-point).
 
 BDR minimizes the network bandwidth used to send updates for distributed content. It resends only the new or changed content instead of sending the entire set of content source files each time you change those files.  
 
@@ -63,10 +63,9 @@ When BDR is used, Configuration Manager identifies the changes that occur to sou
 
 - Configuration Manager supports up to five incremental versions of a content set before it resends the entire content set. After the fifth update, the next change to the content set causes the site to create a new version of the content set. Configuration Manager then distributes the new version of the content set to replace the previous set and any of its incremental versions. After the new content set is distributed, later incremental changes to the source files are again replicated by BDR.  
 
-BDR is supported between each parent and child site in a hierarchy. BDR is supported within a site between the site server and its regular distribution points. However, pull-distribution points and cloud distribution points don't support BDR to transfer content. Pull-distribution points support file-level deltas, transferring new files, but not blocks within a file.
+BDR is supported between each parent and child site in a hierarchy. BDR is supported within a site between the site server and its regular distribution points. However, pull-distribution points and content-enabled cloud management gateways don't support BDR to transfer content. Pull-distribution points support file-level deltas, transferring new files, but not blocks within a file.
 
 Applications always use binary differential replication. BDR is optional for packages and isn't enabled by default. To use BDR for packages, enable this functionality for each package. Select the option **Enable binary differential replication** when you create or edit a package.
-
 
 ### BDR or delta replication
 
@@ -139,9 +138,9 @@ For more information, see [Support for Windows BranchCache](../configs/support-f
 ## Delivery Optimization
 
 <!-- 1324696 -->
-You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers. Client settings apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the content. For more information, see [delivery optimization](../../clients/deploy/about-client-settings.md#delivery-optimization) client settings.
+You use Configuration Manager boundary groups to define and regulate content distribution across your corporate network and to remote offices. [Windows Delivery Optimization](/windows/deployment/update/waas-delivery-optimization) is a cloud-based, peer-to-peer technology to share content between Windows 10 or later devices. Configure Delivery Optimization to use your boundary groups when sharing content among peers. Client settings apply the boundary group identifier as the Delivery Optimization group identifier on the client. When the client communicates with the Delivery Optimization cloud service, it uses this identifier to locate peers with the content. For more information, see [delivery optimization](../../clients/deploy/about-client-settings.md#delivery-optimization) client settings.
 
-Delivery Optimization is the recommended technology to optimize Windows 10 update delivery of express installation files for Windows 10 quality updates. Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Optimization can be used for all Windows updates. For more information, see [optimize Windows 10 update delivery](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
+Delivery Optimization is the recommended technology to optimize Windows update delivery of express installation files for Windows quality updates. Internet access to the Delivery Optimization cloud service is a requirement to utilize its peer-to-peer functionality. For information about the needed internet endpoints, see [Frequently asked questions for Delivery Optimization](/windows/deployment/update/waas-delivery-optimization#frequently-asked-questions). Optimization can be used for all Windows updates. For more information, see [optimize Windows update delivery](../../../sum/deploy-use/optimize-windows-10-update-delivery.md).
 
 ## Microsoft Connected Cache
 
@@ -182,29 +181,30 @@ For more information on Windows LEDBAT in general, see the [New transport advanc
 
 For more information on how to use Windows LEDBAT with Configuration Manager distribution points, see the setting to **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)** when you [Configure the general settings of a distribution point](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-general).
 
+> [!Note]
+> Staring in Configuration Manager version 2203, you can use LEDBAT with your software update points<!--4639895-->. If a site system has both the distribution point and software update point roles, you can configure LEDBAT independently on the roles. For more information, see the setting **Adjust the download speed to use the unused network bandwidth (Windows LEDBAT)** setting for [Installing software update points](../../../sum/get-started/install-a-software-update-point.md#bkmk_ledbat).  
+
 ## Client locations
 
-The following are locations that clients access content from:  
+The following are locations that clients access content from:
 
-- **Intranet** (on-premises):  
+- **Intranet** (on-premises):
 
-  - Distribution points can use HTTP or HTTPs.  
+  - Distribution points can use HTTP or HTTPs.
 
-  - Only use a cloud distribution point for fallback when on-premises distribution points aren't available.  
+  - Only use a content-enabled cloud management gateway for fallback when on-premises distribution points aren't available.
 
-- **Internet**:  
+- **Internet**:
 
-  - Requires internet-facing distribution points to accept HTTPS.  
+  - Requires internet-facing distribution points to accept HTTPS.
 
-  - Can use a cloud distribution point or cloud management gateway (CMG).  
+  - Can use a content-enabled cloud management gateway.
 
-    A CMG can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Modify a CMG](../../clients/manage/cmg/modify-cloud-management-gateway.md).
+- **Workgroup**:
 
-- **Workgroup**:  
+  - Requires distribution points to accept HTTPS.
 
-  - Requires distribution points to accept HTTPS.  
-
-  - Can use a cloud distribution point or CMG.  
+  - Can use a content-enabled cloud management gateway.
 
 ## Content source priority
 
@@ -221,13 +221,13 @@ The following list contains all of the possible content source locations that th
 7. A distribution point in the default site boundary group
 8. The Windows Update cloud service
 9. An internet-facing distribution point
-10. A cloud distribution point in Azure
+10. A content-enabled cloud management gateway in Azure
 
 Delivery Optimization isn't applicable to this source prioritization. This list is how the Configuration Manager client finds content. The Windows Update Agent downloads content for Delivery Optimization. If the Windows Update Agent can't find the content, then the Configuration Manager client uses this list to search for it.<!-- SCCMDocs#1607 -->
 
-BranchCache applies to this list only when you enable a distribution point for BranchCache. For example, if a client gets to option #3 in the prioritization list, it first asks the distribution point for BranchCache metadata. The BranchCache-enabled distribution point is what provides the client information for BranchCache peer discovery. The client will download content from a BranchCache peer if it can. If it can't download the content via BranchCache, it then tries the distribution point itself, before continuing down the list of content sources. This behavior applies at any point in the priority list where the client uses a BranchCache-enabled distribution point or cloud distribution point. <!-- 8287190 -->
+BranchCache applies to this list only when you enable a distribution point for BranchCache. For example, if a client gets to option #3 in the prioritization list, it first asks the distribution point for BranchCache metadata. The BranchCache-enabled distribution point is what provides the client information for BranchCache peer discovery. The client will download content from a BranchCache peer if it can. If it can't download the content via BranchCache, it then tries the distribution point itself, before continuing down the list of content sources. This behavior applies at any point in the priority list where the client uses a BranchCache-enabled distribution point. <!-- 8287190 -->
 
-The configuration of [boundary group options](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions) can modify the sort order of this priority list.
+The configuration of [boundary group options](../../servers/deploy/configure/boundary-group-options.md) can modify the sort order of this priority list.
 
 ## Content library
 
@@ -241,11 +241,11 @@ The content library is the single-instance store of content in Configuration Man
 
 Configuration Manager uses distribution points to store files that are required for software to run on client computers. Clients must have access to at least one distribution point from which they can download the files for content that you deploy.  
 
-The basic (non-specialized) distribution point is commonly referred to as a standard distribution point. There are two  variations on the standard distribution point that receive special attention:  
+The basic (non-specialized) distribution point is commonly referred to as a standard distribution point. There are two variations on the standard distribution point that receive special attention:  
 
-- **Pull-distribution point**: A variation of a distribution point where the distribution point obtains content from another distribution point (a source distribution point). This process is similar to how clients download content from distribution points. Pull-distribution points can help you avoid network bandwidth bottlenecks that occur when the site server must directly distribute content to each distribution point. [Use a pull-distribution point](use-a-pull-distribution-point.md).
+- **Pull-distribution point**: A variation of a distribution point where the distribution point obtains content from another distribution point (a source distribution point). This process is similar to how clients download content from distribution points. Pull-distribution points can help you avoid network bandwidth bottlenecks that occur when the site server must directly distribute content to each distribution point. For more information, see [Use a pull-distribution point](use-a-pull-distribution-point.md).
 
-- **Cloud distribution point**: A variation of a distribution point that's installed on Microsoft Azure. [Learn how to use a cloud distribution point](use-a-cloud-based-distribution-point.md).  
+- **Content-enabled cloud management gateway**: A variation of a distribution point that's installed on Microsoft Azure. For more information, see [Cloud management gateway overview](../../clients/manage/cmg/overview.md).
 
 Standard distribution points support a range of configurations and features:  
 
@@ -255,7 +255,7 @@ Standard distribution points support a range of configurations and features:
 
 - **BranchCache**, **peer cache**, and **Delivery Optimization** are peer-to-peer technologies to reduce the network bandwidth that's used when you deploy content.  
 
-- There are different configurations for OS deployments, such as **[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)** and **[Multicast](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_DPMulticast)**  
+- There are different configurations for OS deployments, such as **[PXE](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#configuring-distribution-points-to-accept-pxe-requests)** and **[Multicast](../../../osd/get-started/prepare-site-system-roles-for-operating-system-deployments.md#configure-distribution-points-to-support-multicast)**  
 
 - Options for **mobile devices**  
   
@@ -323,9 +323,13 @@ For more information, see [Boundary groups](../../servers/deploy/configure/bound
 
 ## On-demand content distribution
 
-On-demand content distribution is an option for individual application and package deployments. This option enables on-demand content distribution to preferred servers.  
+On-demand content distribution is an option for individual applications and packages. This option enables on-demand content distribution to preferred servers.  
 
-- To enable this setting for a deployment, enable: **Distribute the content for this package to preferred distribution points**.  
+- To enable On-Demand content distribution for a package/application, do the following : 
+
+    - In the Distribution Point properties, inside the Boundary Groups tab, select : **Enable for on-demand distribution**.  
+
+    -  Inside the distribution settings tab for package/application properties, select : **Enable for on-demand distribution**.  
 
 - When you enable this option for a deployment, and a client requests that content but the content isn't available on any of the client's preferred distribution points, Configuration Manager automatically distributes that content to the client's preferred distribution points.  
 

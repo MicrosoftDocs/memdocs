@@ -1,15 +1,15 @@
 ---
 title: Application installation error codes reference
 titleSuffix: Configuration Manager
-description: "Reference Application installation errors for tenant attach"
-ms.date: 12/14/2020
+description: Reference Application installation errors for tenant attach
+ms.date: 07/11/2022
 ms.topic: reference
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 221762d7-6c79-4be8-9bef-daa82571652f
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # Application installation common error codes reference
@@ -18,7 +18,7 @@ Applications can be installed on clients by creating deployments from the Config
 
 ## <a name="bkmk_general"></a> General troubleshooting tips
 
-Generally, if an application installs successfully on a device with the given command line in the system context, it will install successfully through Configuration Manager and from the Microsoft Endpoint Manager admin center. You can simulate this by using [PSExec](/sysinternals/downloads/psexec). If you're running Configuration Manager version 2002 or version 2006 and the application is targeted to the system and configured to run in user context, a retry may not trigger a reinstall or another attempt to install.
+Generally, if an application installs successfully on a device with the given command line in the system context, it will install successfully through Configuration Manager and from the Microsoft Endpoint Manager admin center. You can simulate this by using [PSExec](/sysinternals/downloads/psexec). 
 
 1. Open an administrative command prompt.
 1. Change directory to where you saved [PSExec](/sysinternals/downloads/psexec).
@@ -285,7 +285,7 @@ The  [MsiExec.exe and InstMsi.exe Error Messages](/windows/win32/msi/error-codes
 
 **Message**: Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel
 
-**Additional information for error resolution**: Uninstall the the unwanted version of the product. If you aren't using Configuration Manager, a script, or another management tool to uninstall, uninstall from the device manually. For Windows 10 clients,  use **Windows Settings** > **Apps** to uninstall the unwanted version of the product. For earlier versions of Windows, use **Programs and Features** from the Control Panel to uninstall the unwanted version of the product.
+**Additional information for error resolution**: Uninstall the the unwanted version of the product. If you aren't using Configuration Manager, a script, or another management tool to uninstall, uninstall from the device manually. For Windows 10 or later clients,  use **Windows Settings** > **Apps** to uninstall the unwanted version of the product. For earlier versions of Windows, use **Programs and Features** from the Control Panel to uninstall the unwanted version of the product.
 
 ### 1642
 

@@ -10,6 +10,8 @@ ms.assetid: 97f57654-c1d1-4a2f-b05f-9f16b22372b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_UserMachineRelationship server WMI class

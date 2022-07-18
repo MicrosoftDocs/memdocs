@@ -1,6 +1,7 @@
 ---
 title: "CCM_InstalledDeploymentType Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CCM_InstalledDeploymentType Windows Management Instrumentation class is an SMS Provider server class that represents an installed deployment type."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: cae7f7bf-0160-400d-86d8-d3a32933ebbb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

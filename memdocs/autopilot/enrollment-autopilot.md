@@ -5,10 +5,11 @@ title: Create device groups for Windows Autopilot - Microsoft Intune | Microsoft
 titleSuffix: Microsoft Intune
 description: Learn how to create device groups for Windows Autopilot.
 keywords:
-author: greg-lindsay
-ms.author: greglin
-manager: laurawi
-ms.date: 03/16/2021
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
+ms.date: 02/09/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +22,6 @@ ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
 #ROBOTS:
 #audience:
 
-ms.reviewer: spshumwa
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -30,13 +30,15 @@ ms.collection:
 - M365-modern-desktop
 - m365initiative-coredeploy
 - M365-identity-device-management
+- highpri
 ---
 
 # Create device groups
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004 or later
 
 > [!NOTE]
@@ -50,7 +52,7 @@ ms.collection:
 
     - **Group type**: Select **Security**.
     - **Group name** and **Group description**: Enter a name and description for your group.
-    - **Azure AD roles can be assigned to the group (Preview)**: **Yes** allows Azure AD roles to be assigned to the group you're creating. Once set, the group is permanently and always allowed to be assigned Azure AD roles. When set to **No**, Azure AD roles aren't assigned to the this group.
+    - **Azure AD roles can be assigned to the group**: **Yes** allows Azure AD roles to be assigned to the group you're creating. Once set, the group is permanently and always allowed to be assigned Azure AD roles. When set to **No**, Azure AD roles aren't assigned to this group.
 
       For more information, see [Use cloud groups to manage role assignments in Azure AD](/azure/active-directory/roles/groups-concept).
 
@@ -63,7 +65,7 @@ ms.collection:
 
       When creating expressions:
       
-      - To create a group that includes all of your Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))`.
+      - To create a group that includes all of your Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -contains "[ZTDID]"))`.
       - Intune's group tag field maps to the `OrderID` attribute on Azure AD devices. To create a group that includes all Autopilot devices with a specific group tag (the Azure AD device `OrderID`), enter: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`.
       - To create a group that includes all your Autopilot devices with a specific Purchase Order ID, enter: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
  
@@ -71,18 +73,26 @@ ms.collection:
 
 3. Select **Create**.
 
+> [!NOTE]
+> Anything assigned to these attributes will only be assigned if the device is Autopilot registered.
+
 ## Add devices
 
 For information about formatting and using a CSV file to manually add Windows Autopilot devices, see [Manually register devices with Windows Autopilot](add-devices.md).
 
 ## Assign a user to a specific Autopilot device
 
+> [!NOTE]
+> Assigning a licensed user to a registered Autopilot device using Microsoft Endpoint Manager no longer pre-fills any user information as described below. Please see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452) for details on this change. This change does not impact user assigned policies and apps which are still deployed to the device when a licensed user is assigned. See [Windows Autopilot for pre-provisioned deployment](./pre-provision.md#preparation) for details on this.
+
 You can assign a licensed Intune user to a specific Autopilot device. This assignment:
 - Pre-fills a user from Azure Active Directory in the [company-branded](/azure/active-directory/fundamentals/customize-branding) sign-in page during Windows setup.
 - Lets you set a custom greeting name.
 - Doesn't pre-fill or modify Windows sign-in.
 
-Prerequisites: Azure Active Directory Company Portal has been configured and Windows 10, version 1809 or later.
+Prerequisites: 
+- Azure Active Directory Company Branding has been configured.
+- Windows 10, version 1809 or later.
 
 > [!NOTE]
 > Assigning a user to a specific Autopilot device doesn't work if you are using ADFS.

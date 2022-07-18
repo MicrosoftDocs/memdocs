@@ -1,6 +1,7 @@
 ---
 title: "SMS_PDF_Program Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_PDF_Program WMI class is an SMS Provider server class that represents a package definition file (PDF) template from which to create an initialized program.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5acde161-499a-43f3-9470-a83cebb7a3cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

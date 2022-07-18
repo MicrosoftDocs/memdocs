@@ -1,6 +1,7 @@
 ---
 title: "SMS_R_System Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_R_System WMI class is an SMS Provider server class that is generated dynamically at SMS Provider run time and contains discovery data for all discovered system resources."
 ms.date: "02/01/2021"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a3bfa9cf-2aa0-4fcc-be1e-50983a1fb432
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

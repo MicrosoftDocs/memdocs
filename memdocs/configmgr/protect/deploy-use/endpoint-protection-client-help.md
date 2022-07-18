@@ -1,17 +1,15 @@
 ---
-title: "Endpoint Protection Client Help"
-titleSuffix: "Configuration Manager"
-description: "Learn about features and enhancements in Endpoint Protection that better help you protect your computer from threats."
-ms.date: 02/14/2017
+title: Endpoint Protection Client Help
+titleSuffix: Configuration Manager
+description: Learn about features and enhancements in Endpoint Protection that better help you protect your computer from threats.
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: fdcee455-22e3-451d-bcf3-e7b62792f04a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Endpoint Protection Client Help
 
@@ -24,7 +22,7 @@ This version of Windows Defender or Endpoint Protection includes the following f
 -   **Network Inspection System.** This feature enhances real-time protection by inspecting network traffic to help proactively block exploitation of known network-based vulnerabilities.  
 -   **Protection engine.** Real-time protection finds and stops malware from installing or running on your PC. The updated engine offers enhanced detection and cleanup capabilities with better performance.  
 
-Windows Defender comes as part of the Windows 10 operating system.  On earlier versions of Windows, your administrator can provide either Windows Defender or Endpoint Protection using management software.
+Windows Defender comes as part of the operating system starting in Windows 10. On earlier versions of Windows, your administrator can provide either Windows Defender or Endpoint Protection using management software.
 
 You can also find a list of [frequently asked questions for Windows Defender and Endpoint Protection](endpoint-protection-client-faq.yml). For help troubleshooting, see [Troubleshooting Windows Defender or Endpoint Protection client](troubleshoot-endpoint-client.md). For a list of new features, see [What's new Windows Defender client](https://support.microsoft.com/help/29276/windows-10-whats-new-in-windows-defender).
 

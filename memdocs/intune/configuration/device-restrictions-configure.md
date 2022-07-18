@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Restrict devices features using policy in Microsoft Intune - Azure | Microsoft Docs
-description: Add a device profile to restrict features on Android device administrator, Android Enterprise, macOS, iOS, iPadOS, and Windows 10 devices in Microsoft Intune and Endpoint Manager.
+title: Restrict devices features using policy in Microsoft Intune
+description: Add a device profile to restrict features on Android device administrator, Android Enterprise, macOS, iOS, iPadOS, and Windows 10/11 client devices in Microsoft Intune and Endpoint Manager.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 01/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
  
 # Configure device restriction settings in Microsoft Intune
@@ -42,11 +44,13 @@ These features are available in Intune, and are configurable by the administrato
 This feature applies to:
 
 - Android device administrator
+- Android (AOSP) (preview)  
 - Android Enterprise personally-owned devices with a work profile
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer
-- Windows 8.1 and newer
+- Windows 11
+- Windows 10
+- Windows 8.1
 
 This article shows you how to create a device restrictions profile. You can also see all the available settings for the different platforms.
 
@@ -59,6 +63,7 @@ This article shows you how to create a device restrictions profile. You can also
     - **Platform**: Choose the platform of your devices. Your options:  
 
         - **Android device administrator**
+        - **Android (AOSP)** (preview)  
         - **Android Enterprise**
         - **iOS/iPadOS**
         - **macOS**
@@ -80,11 +85,12 @@ This article shows you how to create a device restrictions profile. You can also
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
     - [Android device administrator](device-restrictions-android.md)
+    - [Android (AOSP)](device-restrictions-android-aosp.md) (in preview)  
     - [Android Enterprise](device-restrictions-android-for-work.md)
     - [iOS/iPadOS](device-restrictions-ios.md)
     - [macOS](device-restrictions-macos.md)
     - [Windows 8.1](device-restrictions-windows-8-1.md)
-    - [Windows 10 and newer](device-restrictions-windows-10.md)
+    - [Windows 10/11](device-restrictions-windows-10.md)
     - [Windows 10 Team](device-restrictions-windows-10-teams.md)
     - [Windows Holographic for Business](device-restrictions-windows-holographic.md)
 

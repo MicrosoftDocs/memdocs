@@ -1,6 +1,7 @@
 ---
 title: "CIEvalState Enumeration"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CIEvalState enumeration is used by the ICIINFO Interface."   
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 952016eb-b0b5-47a6-acef-01d65acc9f65
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

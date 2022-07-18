@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a summary for a given software update in given software updates deployment in Configuration Manager.
 title: "SMS_UpdateDeploymentSummary Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: c9c0923f-9ec6-463c-905b-59fb515b1dfb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Approve Method"
 titleSuffix: "Configuration Manager"
+description: "The `Approve` Windows Management Instrumentation (WMI) class method, in Configuration Manager, approves user application requests."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: f1517eea-0a50-40b3-b83a-a20120fd09af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

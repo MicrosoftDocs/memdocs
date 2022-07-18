@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent an application policy request with CCM_RequestedAppPolicy in Configuration Manager.
 title: "CCM_Requested AppPolicy Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 600ccdef-b722-4e0d-a7dc-4e3591afcf1b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

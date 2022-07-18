@@ -1,6 +1,7 @@
 ---
 title: "TestSmtpConnection Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that tests the SMTP connection."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: ff6b4c0d-9482-4169-9035-2af757c50450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
+ms.localizationpriority: medium
 ---
 
 # How to deploy to production with Desktop Analytics
@@ -31,7 +32,7 @@ There are three main parts to accomplishing the deployment of updates to product
 
 ## <a name="bkmk_review"></a> Review assets that need an upgrade decision
 
-Desktop Analytics guides you through the process of reviewing your assets for production deployment. In the Azure portal, go to **Deployment plans**, select a deployment plan, and then select **Prepare production** in the left menu.
+Desktop Analytics guides you through the process of reviewing your assets for production deployment. In Desktop Analytics, go to **Deployment plans**, select a deployment plan, and then select **Prepare production** in the left menu.
 
 :::image type="content" source="media/prepare-production.png" alt-text="Screenshot of Prepare Production view in Desktop Analytics." lightbox="media/prepare-production.png":::
 

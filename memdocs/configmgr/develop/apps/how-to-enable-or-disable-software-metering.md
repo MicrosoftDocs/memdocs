@@ -1,6 +1,7 @@
 ---
 title: "Enable or Disable Software Metering"
 titleSuffix: "Configuration Manager"
+description: "Enable or disable the Software Metering Client Agent by modifying the site control file settings."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 8e706653-7627-4cd9-853d-3690be0d567b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

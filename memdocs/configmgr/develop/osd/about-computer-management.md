@@ -1,5 +1,6 @@
 ---
 title: "Computer Management"
+description: Computer management in Configuration Manager operating system deployment covers the following areas.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: 57146de9-c8ca-480d-9f6f-41c88525b326
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

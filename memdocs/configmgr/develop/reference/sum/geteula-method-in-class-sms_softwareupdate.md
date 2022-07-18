@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the localized Microsoft Software License Terms content of a configuration item using GetEULA class.
 title: "GetEULA Method in SMS_SoftwareUpdate"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: bfab1311-5658-4992-9c56-a24b6cda73e5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

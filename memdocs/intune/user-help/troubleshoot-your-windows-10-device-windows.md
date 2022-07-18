@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Troubleshoot Windows 10 device access to school or work | Microsoft Intune
-description: Resolve access or account connection issues for an enrolled Windows 10 device. 
+title: Troubleshoot Windows 10/11 device access for school or work | Microsoft Intune
+description: Resolve access or account connection issues for an enrolled Windows device. 
 keywords:
 author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/22/2020
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,28 +30,35 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Troubleshoot Windows 10 device access
-This article describes how to resolve access issues for an enrolled Windows 10 device. 
+
+
+# Troubleshoot Windows device access  
+
+**Applies to**  
+- Windows 10  
+- Windows 11
+
+This article describes how to resolve access issues for an enrolled Windows 10/11 device. 
 
 ## Check Wi-Fi connection  
 
 A connection to Wi-Fi is required to access work or school resources. Verify that you're connected to Wi-Fi and then try accessing the resources again.  
 
 ## Add work or school account in Settings app  
-These steps are the same you'd use to enroll your device. However, if your account isn't appearing in the **Settings** app, you may need to run through these steps again.  
+If your account isn't appearing in the **Settings** app, go through the setup steps in the Settings app again.  
 
 1. Open the **Settings** app. 
 2. Select **Accounts**.
-3. This next step varies depending on the version of Windows 10 you're using. 
-    * Version 1607 and later: Select **Access work or school**.
-    * Version 1511 and earlier: Select **Work access**.  
+3. Identify the version of Windows you're using and then:   
+    * Windows 10 (version 1607 and later) and Windows 11: Select **Access work or school**.
+    * Windows 10, version 1511 and earlier: Select **Work access**.  
 4. Check for your account. If it's not listed, select the **Connect** plus sign button to add it. 
 5. Sign in with your work or school credentials. 
 6. Follow the onscreen prompts to finish connecting.  
 7. When complete, your account will be added as a connection. You'll have access to any resources your organization makes available.   
 
-## Contact IT support for access requirements  
-If you see your work or school account listed in the Settings app, your device and account are already connected. Contact your IT support person for further help with access problems. They may have restrictions or requirements in place that are preventing you from accessing certain resources.  
+## Contact IT support for access problems   
+If you see your work or school account listed in the Settings app, then your device and account are already connected. Contact your IT support person for further help. They may have put restrictions or requirements in place that prevent you from accessing certain resources.  
 
 ## Error messages  
 

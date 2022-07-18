@@ -1,4 +1,5 @@
 ---
+description: Learn how to import an inventory class from the MOF file content using ImportInventoryReport class in Configuration Manager.
 title: "ImportInventoryReport Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 79ae21e0-8d58-4ec0-8cc1-9322031cb582
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

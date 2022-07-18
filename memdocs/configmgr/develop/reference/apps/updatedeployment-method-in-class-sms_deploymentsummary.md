@@ -1,4 +1,5 @@
 ---
+description: Learn how to update the summarized results for a specific Classic Deployment in Configuration Manager using UpdateDeployment.
 title: "UpdateDeployment Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 22b3f4f4-a739-4c09-80c7-089fe1b34a46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

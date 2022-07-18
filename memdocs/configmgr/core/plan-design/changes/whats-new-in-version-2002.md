@@ -6,10 +6,11 @@ ms.date: 07/27/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: de718cdc-d0a9-47e2-9c99-8fa2cb25b5f8
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2002 of Configuration Manager current branch
@@ -21,10 +22,6 @@ Update 2002 for Configuration Manager current branch is available as an in-conso
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2002](../../servers/manage/checklist-for-installing-update-2002.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2002.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2002+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="bkmk_tenant"></a> Microsoft Endpoint Manager tenant attach
 
@@ -92,7 +89,7 @@ The site system's proxy settings, including authentication, are now used by:
 - Azure AD user group discovery
 - Synchronizing collection membership results to Azure Active Directory groups
 
-For more information, see [Proxy server support](../network/proxy-server-support.md#bkmk_other).
+For more information, see [Proxy server support](../network/proxy-server-support.md#other-features-that-use-the-proxy).
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
 
@@ -119,7 +116,7 @@ For more information, see [Token-based authentication for CMG](../../clients/dep
 
 <!--5834830-->
 
-When new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](../../servers/manage/install-in-console-updates.md#bkmk_options).
+When new cloud-based features are available in the Microsoft Endpoint Manager admin center, or other attached cloud services for your on-premises Configuration Manager installation, you can now opt in to these new features in the Configuration Manager console. For more information on enabling features in the Configuration Manager console, see [Enable optional features from updates](../../servers/manage/optional-features.md).
 
 ## <a name="bkmk_da"></a> Desktop Analytics
 
@@ -153,7 +150,7 @@ For more information, see [CMPivot](../../servers/manage/cmpivot-changes.md#bkmk
 
 Boundary groups include the following option for peer downloads: **During peer downloads, only use peers within the same subnet**. If you enable this option, the content location list from the management point only includes peer sources that are in the same subnet and boundary group as the client. Depending on the configuration of your network, you can now exclude certain subnets for matching. For example, you want to include a boundary but exclude a specific VPN subnet.
 
-For more information, see [Boundary group options](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+For more information, see [Boundary group options](../../servers/deploy/configure/boundary-group-options.md).
 
 ### Proxy support for Microsoft Connected Cache
 
@@ -360,7 +357,7 @@ For more information, see [Integrate with Power BI Report Server](../../servers/
 
 To help you better troubleshoot device behaviors with boundary groups, you can now view the boundary groups for specific devices. In the **Devices** node or when you show the members of a **Device Collection**, add the new **Boundary Group(s)** column to the list view.
 
-For more information, see [Boundary groups](../../servers/deploy/configure/boundary-groups.md#bkmk_show-boundary).
+For more information, see [Procedures for boundary groups](../../servers/deploy/configure/boundary-group-procedures.md#show-boundary-groups-for-devices).
 
 ### Send a smile improvements
 

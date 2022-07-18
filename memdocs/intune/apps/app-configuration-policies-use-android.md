@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
 
@@ -26,8 +26,10 @@ ms.reviewer: chrisbal
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
+ms.collection:
+- M365-identity-device-management
+- Android
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
 ---
 
 # Add app configuration policies for managed Android Enterprise devices
@@ -36,8 +38,9 @@ ms.collection: M365-identity-device-management
 
 App configuration policies in Microsoft Intune supply settings to Managed Google Play apps on managed Android Enterprise devices. The app developer exposes Android-managed app configuration settings. Intune uses these exposed setting to let the admin configure features for the app. The app configuration policy is assigned to your user groups. The policy settings are used when the app checks for them, typically the first time the app runs.
 
-> [!NOTE]  
-> Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
+Not every app supports app configuration. Check with the app developer to see if their app supports app configuration policies.
+
+[!INCLUDE [android-supported-os](../includes/android-supported-os.md)]
 
 ## Email apps
 
@@ -68,26 +71,35 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 
     For details about using the configuration designer, see [Use configuration designer](#use-the-configuration-designer). For details about entering XML data, see [Enter JSON data](#enter-json-data).
 
-12. Click **Next** to display the **Assignments** page.
-13. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.
+12. If you need to enable users to connect the targeted app across both the work and personal profiles, select **Enabled** next to **Connected apps**.<p>
 
-    ![Screenshot of Policy assignments Include tab](./media/app-configuration-policies-use-ios/app-config-policy01.png)
+    <img alt="Screenshot of configuration policy - Settings" src="./media/app-configuration-policies-use-ios/app-config-policy01a.png" width="700">
 
-14. Select **All users** in the dropdown box.
+    > [!NOTE]
+    > This setting only works for personally-owned work profile and corporate-owned work profile devices.
+    > 
+    > Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
-    ![Screenshot of Policy assignments - All Users dropdown option](./media/app-configuration-policies-use-ios/app-config-policy02.png)
+13. Click **Next** to display the **Assignments** page.
+14. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.<p>
 
-15. Click **Select groups to exclude** to display the related pane.
+    <img alt="Screenshot of policy assignments - Assignments" src="./media/app-configuration-policies-use-ios/app-config-policy01.png" width="700">
 
-    ![Screenshot of Policy assignments - Select groups to exclude pane](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+15. Select **All users** in the dropdown box.<p>
 
-16. Choose the groups you want to exclude and then click **Select**.
+    <img alt="Screenshot of policy assignments - All Users dropdown option" src="./media/app-configuration-policies-use-ios/app-config-policy02.png" width="700">
+
+16. Click **Select groups to exclude** to display the related pane.<p>
+
+    <img alt="Screenshot of policy assignments - Select groups to exclude pane" src="./media/app-configuration-policies-use-ios/app-config-policy03.png" width="400">
+
+17. Choose the groups you want to exclude and then click **Select**.
 
     >[!NOTE]
     >When adding a group, if any other group has already been included for a given assignment type, it is pre-selected and unchangeable for other include assignment types. Therefore, that group that has been used, cannot be used as an excluded group.
 
-17. Click **Next** to display the **Review + create** page.
-18. Click **Create** to add the app configuration policy to Intune.
+18. Click **Next** to display the **Review + create** page.
+19. Click **Create** to add the app configuration policy to Intune.
 
 ## Use the configuration designer
 
@@ -146,6 +158,31 @@ Some configuration settings on apps (such as apps with Bundle types) can't be co
 The policy is created and shown in the list.
 
 When the assigned app is run on a device, it runs with the settings that you configured in the app configuration policy.
+
+## Enable connected apps
+
+Applies to:<br>
+Android 11+
+
+Personally-owned work profile users must have Company Portal version 5.0.5291.0 or newer. Corporate-owned work profile users do not need a specific version of the Microsoft Intune app for support.
+
+You can allow users using Android personally-owned and corporate-owned work profiles to turn on connected apps experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances.
+
+For an app to provide this experience, the app needs to integrate with Google's connected apps SDK, so only limited apps support it. You can turn on the connected apps setting proactively, and when apps add support, users will be able to enable the connected apps experience.
+
+Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
+
+> [!WARNING]
+> If you enable the connected apps functionality for an app, work data in personal apps will not be protected by an app protection policy.
+> 
+> Additionally, regardless of your connected apps configuration, some OEMs may automatically connect certain apps or may be able to request user approval to connect apps that you did not configure. An example of an app in this case could be the OEM's keyboard app.
+
+There are two ways users may be able to connect work and personal apps after you've enabled the connected apps setting:
+1. A supported app may choose to prompt a user to approve connecting it across profiles.
+2. Users can open the Settings app and go to the Connected work & personal apps section, where they will see all supported apps listed.
+
+> [!IMPORTANT]
+> If multiple app configuration policies are assigned for the same app targeting the same device, and one policy sets **Connected Apps** to `Enabled` while the other policy does not, the app configuration will report a conflict and the resulting behavior applied on the device will be to disallow the connected apps.
 
 ## Preconfigure the permissions grant state for apps
 

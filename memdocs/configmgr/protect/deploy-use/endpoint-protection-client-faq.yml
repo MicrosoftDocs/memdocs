@@ -6,19 +6,17 @@ metadata:
   ms.date: 07/10/2020
   ms.prod: configuration-manager
   ms.technology: configmgr-protect
-  ms.topic: conceptual
+  ms.topic: faq
   ms.assetid: e3aaa9d2-a40e-42b1-ad75-5a115351729e
   author: mestew
   ms.author: mstewart
   manager: dougeby
-  
-    
 title: Endpoint Protection client frequently asked questions
 summary: |
   *Applies to: Configuration Manager (current branch)*
   
   
-  This FAQ is for computer users whose IT administrator has deployed Windows Defender or Endpoint Protection to their managed computer. The content here might not apply to other antimalware software. Microsoft System Center Endpoint Protection manages Windows Defender on Windows 10. It can also deploy and manage the Endpoint Protection client to computers before Windows 10. While Windows Defender is described in this article, its information also applies to Endpoint Protection.  
+  This FAQ is for computer users whose IT administrator has deployed Windows Defender or Endpoint Protection to their managed computer. The content here might not apply to other antimalware software. Microsoft System Center Endpoint Protection manages Windows Defender on Windows 10 or later. It can also deploy and manage the Endpoint Protection client to computers before Windows 10. While Windows Defender is described in this article, its information also applies to Endpoint Protection.  
   
 sections:
   - name: Ignored

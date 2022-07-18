@@ -1,6 +1,7 @@
 ---
 title: "Unique Identifier Value for a Resource"
 titleSuffix: "Configuration Manager"
+description: "An optional property that reports inventory data for a resource."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 1fe1e9f1-daed-4df8-bf32-df7258d9a3fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

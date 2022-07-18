@@ -1,35 +1,26 @@
 ### YamlMime:ZonePivotGroups
 groups:
-- id: security-baseline-settings-one
-  title: Security baselines
-  prompt: Choose your security baseline
-  pivots:
-    - id: windows-mdm
-      title: Windows MDM
-    - id: microsoft-defender-atp
-      title: Microsoft Defender for Endpoint
 - id: windows-mdm-versions
-  title: Windows MDM baseline versions
+  title: Security Baselines for Windows 10 and later
   prompt: Choose a version
   pivots:
+    - id: mdm-november-2021
+      title: November 2021
     - id: mdm-december-2020
       title: December 2020
-    - id: mdm-sept-2020
+    - id: mdm-august-2020
       title: August 2020
-    - id: mdm-may-2019
-      title: May 2019
-    - id: mdm-preview
-      title: Preview - October 2018
 - id: edge-baseline-versions
   title: Edge baseline versions
   prompt: Choose a version
   pivots:
-    - id: edge-october-2019
-      title: October 2019
-    - id: edge-april-2020
-      title: April 2020
     - id: edge-sept-2020
       title: September 2020
+    - id: edge-april-2020
+      title: April 2020
+    - id: edge-october-2019
+      title: October 2019
+
 - id: atp-baseline-versions
   title: ATP baseline versions
   prompt: Choose a version
@@ -42,4 +33,12 @@ groups:
       title: April 2020
     - id: atp-march-2020
       title: March 2020
+- id: windows-365-baseline-versions
+  title: Windows 365 baseline versions
+  prompt: Choose a version
+  pivots:
+    - id: win365-2110
+      title: Version 2110 
+    - id: win365-november-2101
+      title: Version 2101
 

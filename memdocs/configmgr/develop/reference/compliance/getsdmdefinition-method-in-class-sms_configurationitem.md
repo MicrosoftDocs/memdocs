@@ -1,4 +1,5 @@
 ---
+description: Learn how to retrieve the System Definition Model (SDM) definition of the configuration item in XML format using GetSDMDefinition class method.
 title: "GetSDMDefinition Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: b2daf3d7-2073-48c5-be2d-1aef24c70f93
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

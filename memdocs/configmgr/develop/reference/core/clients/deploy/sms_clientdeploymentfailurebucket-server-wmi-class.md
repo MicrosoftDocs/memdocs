@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a client deployment failure bucket used to get the total number of clients with the same failed state message ID.
 title: "SMS_ClientDeploymentFailureBucket Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 8a5608be-1f8a-4aea-a87c-e2b379c98107
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

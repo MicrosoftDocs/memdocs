@@ -1,4 +1,5 @@
 ---
+description: Learn to use AddAttributeToSMSStatusMessage to add a single optional status message attribute id-value pair to a status message object.
 title: "AddAttributeToSMSStatusMessage Function"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: fe906f97-a669-49aa-9fb3-09920f0d395e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

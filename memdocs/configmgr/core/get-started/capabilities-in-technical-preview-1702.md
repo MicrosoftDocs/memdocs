@@ -1,18 +1,16 @@
 ---
-title: "Capabilities in Technical Preview 1702"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview for Configuration Manager, version 1702."
+title: Capabilities in Technical Preview 1702
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview for Configuration Manager, version 1702.
 ms.date: 02/24/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: aedd608d-6db3-4ea5-851d-70f2dcda6bb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1702 for Configuration Manager
 
@@ -25,7 +23,7 @@ This article introduces the features that are available in the Technical Preview
 
 ##  Send feedback from the Configuration Manager console
 
-This preview introduces new feedback options in the Configuration Manager console. The Feedback options lets you send feedback directly to the development team, by way of the Configuration Manager UserVoice feedback website.  
+This preview introduces new feedback options in the Configuration Manager console. The Feedback options lets you send feedback directly to the development team, by way of the Configuration Manager product feedback website.  
 
 > You can find the **Feedback** option:
 > -  In the ribbon, at the far left of the Home tab of each node.  
@@ -34,7 +32,8 @@ This preview introduces new feedback options in the Configuration Manager consol
 -  When you right-click on any object in the console.   
     ![Righ-click option](./media/feedback-option.png)   
 
-Choosing **Feedback** opens your browser to the Configuration Manager UserVoice feedback website, at https://configurationmanager.uservoice.com/forums/300492-ideas.
+Choosing **Feedback** opens your browser to the Configuration Manager product feedback website.
+
 ##  Changes for Updates and Servicing
 The following are introduced with this preview.
 
@@ -72,7 +71,7 @@ To use Azure AD with Configuration Manager, you'll need the following:
 - A Configuration Manager site that runs on an Azure VM that is joined to your Azure AD.
 - Configuration Manager clients that run in the same Azure AD environment.
 
-To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](/azure/active-directory-domain-services/create-instance).
+To configure Azure AD Domain Service, see [Get started with Azure AD Domain Services](/azure/active-directory-domain-services/tutorial-create-instance).
 
 ### Discover resources
 After you set up Configuration Manager to run in Azure AD, you can use the following Active Directory discovery methods to search
@@ -97,9 +96,10 @@ AAD stores users under the **AADDC Users** OU.  Configure the following:
 - **Group Discovery**  
 Azure AD does not have an OU that stores groups. Instead, use the same general structure as the System or User queries and configure the LDAP query to point to the OU that contains the groups you want to discover.
 
-See the following for more information about Azure AD:  
-- [Azure Active Directory Domain Services](https://azure.microsoft.com/services/active-directory-ds) on azure.microsoft.com.
-- [Active Directory Domain Services Documentation](/azure/active-directory-domain-services) on docs.microsoft.com.
+See the following for more information about Azure AD:
+
+- [Azure Active Directory Domain Services product information](https://azure.microsoft.com/services/active-directory-ds)
+- [Active Directory Domain Services documentation](/azure/active-directory-domain-services/)
 
 ## Conditional access device compliance policy improvements
 
@@ -225,8 +225,7 @@ Additionally, you can now specify multiple certification authorities (CAs) on mu
 
 For iOS devices, you can associate a PFX certificate profile to an email profile and enable S/MIME encryption.  This then enables S/MIME in the native email client on iOS and associates the correct S/MIME encryption certificate to it.
 
-For more information about certificates in Configuration Manager, see [Introduction to certificate profiles]( /sccm/protect/deploy-use/introduction-to-certificate-profiles).
-
+For more information about certificates in Configuration Manager, see [Introduction to certificate profiles](../../protect/deploy-use/introduction-to-certificate-profiles.md).
 
 ## New compliance settings for iOS devices
 
@@ -346,7 +345,7 @@ To try this, create a configuration item through the standard workflow, choose *
 #### Perform selective wipe
 Devices enrolled as Android for Work can only be selectively wiped because you only manage the work profile. This protects the personal profile from being wiped. Performing a selective wipe on an Android for Work device removes the work profile, including all apps and data, and unenrolls the device.
 
-To selectively wipe an Android for Work device, use the normal [selective wipe process](/sccm/mdm/deploy-use/wipe-lock-reset-devices#selective-wipe) in the Configuration Manager console.
+To selectively wipe an Android for Work device, use the normal [selective wipe process](../../mdm/deploy-use/wipe-lock-reset-devices.md#selective-wipe) in the Configuration Manager console.
 
 #### Known issues for Android for Work
 **Configuring sync schedule in Android for Work email profiles causes them to fail to deploy**

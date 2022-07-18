@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_AppDTDeploymentSummary class to represent the deployment type-level summary of application deployment.
 title: "SMS_AppDTDeploymentSummary Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: e577ce4f-2653-41a3-b405-606d059c00f1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

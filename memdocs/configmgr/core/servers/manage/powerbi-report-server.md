@@ -2,14 +2,14 @@
 title: Integrate with Power BI Report Server
 titleSuffix: Configuration Manager
 description: Integrate Power BI Report Server with Configuration Manager reporting for modern visualization and better performance.
-ms.date: 04/05/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 315e2613-dc71-46b1-80cb-26161d08103a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Integrate with Power BI Report Server
@@ -18,7 +18,7 @@ manager: dougeby
 
 <!--3721603-->
 
-Starting in version 2002, you can integrate [Power BI Report Server](/power-bi/report-server/get-started) with Configuration Manager reporting. This integration gives you modern visualization and better performance. It adds console support for Power BI reports similar to what already exists with SQL Server Reporting Services.
+You can integrate [Power BI Report Server](/power-bi/report-server/get-started) with Configuration Manager reporting. This integration gives you modern visualization and better performance. It adds console support for Power BI reports similar to what already exists with SQL Server Reporting Services.
 
 Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Report Server. This process is similar as with SQL Server Reporting Services report files (.RDL). You can also launch the reports in the browser directly from the Configuration Manager console.
 
@@ -27,21 +27,23 @@ Save Power BI Desktop report files (.PBIX) and deploy them to the Power BI Repor
 - Power BI Report Server license. For more information, see [Licensing Power BI Report Server](/power-bi/report-server/get-started#licensing-power-bi-report-server).
 
 - Download [Microsoft Power BI Report Server-September 2019](https://www.microsoft.com/download/details.aspx?id=57270), or later.
+   - Don't install Power BI Report Server right away. For the proper process based on your environment, see [Configure the reporting services point](#configure-the-reporting-services-point).
+   - It's recommended that you use a [supported version of Power BI Report Server](/power-bi/report-server/support-timeline). For versioning information, see the [Change log for Power BI Report Server](/power-bi/report-server/changelog).
 
-    > [!NOTE]
-    > Don't install Power BI Report Server right away. For the proper process based on your environment, see [Configure the reporting services point](#configure-the-reporting-services-point).
+- Download Microsoft Power BI Desktop (Optimized for Power BI Report Server - September 2019), or later. It's recommended that you use a [supported version](/power-bi/report-server/support-timeline). For versioning information, see the [Change log for Power BI Report Server](/power-bi/report-server/changelog).
 
-- Download [Microsoft Power BI Desktop (Optimized for Power BI Report Server - September 2019)](https://www.microsoft.com/download/details.aspx?id=57271), or later.
+   Use versions of Power BI Desktop:
+   - That are from the [Microsoft Download Center](https://www.microsoft.com/download/). Don't use a version from the Microsoft Store.
+   - [That states they're **Optimized for Power BI Report Server**](/power-bi/report-server/install-powerbi-desktop). Don't use versions that aren't **Optimized for Power BI Report Server**.
 
-    > [!IMPORTANT]
-    >
-    > - Only use versions of Power BI Desktop from the [Microsoft Download Center](https://www.microsoft.com/download/), don't use a version from the Microsoft Store.
-    > - Only use a version of [Power BI Desktop that states it's **Optimized for Power BI Report Server**](/power-bi/report-server/install-powerbi-desktop).
-
+   > [!Note]
+   > When using Configuration Manager version 2111 or earlier with Power BI Desktop (Optimized for Power BI Report Server - May 2021) or later, you may notice the following behavior:<!--12428948, 2203CB-12487076 -->
+   > - You might experience delays updating the data source on newly updated reports.
+   > - You may receive `The remote server returned an error; (400) Bad Request.` errors in the **SRSRP.log**.
+   > For more information about the relevant change to Power BI Desktop (optimized for Power BI Report Server) May 2021, see [Change data source connection strings in Power BI reports](/power-bi/report-server/connect-data-source-apis). The version before the connection change ocurred is [January 2021](https://www.microsoft.com/download/details.aspx?id=55330).
+ 
 - Power BI integration uses the same role-based administration for reporting.
-
-    > [!NOTE]
-    > Power BI Report Server doesn't support reports that are enabled for role-based access. All report viewers will see the same results, whatever their assigned scope.
+   - Power BI Report Server doesn't support reports that are enabled for role-based access. All report viewers will see the same results, whatever their assigned scope.
 
 ## Configure the reporting services point
 
@@ -68,8 +70,7 @@ Only use this process if you already have a reporting services point in the site
 
     1. Use **Reporting Services Configuration Manager** to restore the **Encryption Keys**.
 
-    > [!TIP]
-    > Before you add the reporting services point role in Configuration Manager, use SQL Server Reporting Services Configuration Manager to test and verify the configuration. For more information, see [Verify SQL Server Reporting Services installation](configuring-reporting.md#verify-sql-server-reporting-services-installation).<!-- MEMDocs #713 -->
+     - Before you add the reporting services point role in Configuration Manager, use SQL Server Reporting Services Configuration Manager to test and verify the configuration. For more information, see [Verify SQL Server Reporting Services installation](configuring-reporting.md#verify-sql-server-reporting-services-installation).<!-- MEMDocs #713 -->
 
 1. Add the reporting services point role in Configuration Manager.
 
@@ -85,7 +86,7 @@ Only use this process if you don't already have a reporting services point in th
 
 1. On a computer that has the Configuration Manager console, update the Configuration Manager console to the latest version.
 
-1. Install Power BI Desktop. Make sure the language is the same.
+1. Install Power BI Desktop. Make sure the language is the same and verify the [versioning prerequisites](#prerequisites).
 
 1. After it installs, launch Power BI Desktop at least once before you open the Configuration Manager console.
 

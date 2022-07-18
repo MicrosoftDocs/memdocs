@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent compliant asset details for a deployment using SMS_DCMDeploymentCompliantAssetDetails class.
 title: "SMS_DCMDeploymentCompliantAssetDetails Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 3f694e79-24c2-4c18-b4b9-095fa12df1e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

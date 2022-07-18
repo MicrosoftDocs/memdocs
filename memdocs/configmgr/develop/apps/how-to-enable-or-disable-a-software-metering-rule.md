@@ -1,6 +1,7 @@
 ---
 title: "Enable or Disable a Software Metering Rule"
 titleSuffix: "Configuration Manager"
+description: "Enable or disable a software metering rule, in Configuration Manager, by loading an instance of the software metering rule."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 13812f78-4627-4427-a32c-7c8bfe64a307
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -6,12 +6,12 @@ ms.date: 04/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 3f09226c-4ca7-4e43-9ae8-5ee6e78e6bc2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Ready for modern desktop retirement FAQ

@@ -2,17 +2,17 @@
 title: Configure Azure AD for CMG
 titleSuffix: Configuration Manager
 description: Integrate the Configuration Manager site with Azure Active Directory to support the cloud management gateway.
-ms.date: 11/30/2020
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-ms.assetid: 2afe572e-d268-4c77-a22d-fdca617e2255
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
-# Configure Azure Active Directory for cloud management gateway
+# Configure Azure Active Directory for CMG
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -37,6 +37,16 @@ Before you start, make sure you have an Azure AD **global administrator** availa
 
 > [!NOTE]
 > If you plan to import precreated app registrations, you first need to create them in Azure AD. Start with the article to [Manually register Azure AD apps for CMG](manually-register-azure-ad-apps.md). Then return to this article to run the Azure Services wizard and import the apps to Configuration Manager.
+
+## Purpose of app registrations
+
+These two Azure AD app registrations represent the server and client side of the CMG.
+
+- The _client app_ represents managed clients and users that connect to the CMG. It defines what resources they have access to within Azure, including the CMG itself.
+
+- The _server app_ represents the CMG components that are hosted in Azure. It defines what resources they have access to within Azure. The server app is used to facilitate authentication and authorization from managed clients, users, and the CMG connection point to the Azure-based CMG components. This communication includes traffic to on-premises management points and software update points, initial CMG provisioning in Azure, and Azure AD discovery.
+
+If clients use PKI-issued client authentication certificates, then the two client apps aren't used for device-centric activity. For example, software distribution targeted to a device collection. User-centric activity always uses these two app registrations for authentication and authorization purposes.
 
 ## Start the Azure Services wizard
 
@@ -69,7 +79,10 @@ Before you start, make sure you have an Azure AD **global administrator** availa
 
     - **HomePage URL**: This value isn't used by Configuration Manager, but required by Azure AD. By default this value is `https://ConfigMgrService`.  
 
-    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`.  
+    - **App ID URI**: This value needs to be unique in your Azure AD tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+
+       - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+       - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
     - **Secret key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
@@ -112,7 +125,7 @@ When the wizard closes, you'll see the new connection in the **Azure Services** 
 ### Disable Azure AD authentication for non-device or user tenants
 <!--8537319-->
 
-If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices.
+If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, you can disable authentication for tenants not associated with users and devices.
 
 1. Open the properties of the **Cloud Management** service.
 
@@ -124,34 +137,38 @@ For more information, see [Configure Azure services](../../../servers/deploy/con
 
 ## Configure Azure resource providers
 
-The CMG service requires that you register specific resource providers in your Azure subscription. The providers vary depending upon how you deploy the CMG:
-
-- [Virtual machine scale set](#virtual-machine-scale-set)
-- [Cloud service (classic)](#cloud-service-classic)
-
-You need an Azure **global administrator** to register these providers.
-
-For more information including instructions on how to register providers, see [Azure resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
-
-### Virtual machine scale set
-
-Starting in version 2010,<!--3601040--> if you'll deploy the CMG to a virtual machine scale set, register the following resource providers:
+The CMG service requires that you register specific resource providers in your Azure subscription. When you deploy the CMG to a virtual machine scale set, register the following resource providers:<!--3601040-->
 
 - Microsoft.KeyVault
 - Microsoft.Storage
 - Microsoft.Network
 - Microsoft.Compute
 
-### Cloud service (classic)
+> [!NOTE]
+> If you previously deployed the CMG using a classic cloud service, your Azure subscription requires the following two resource providers:
+>
+> - Microsoft.ClassicCompute
+> - Microsoft.Storage
+>
+> Starting in version 2203, the option to deploy a CMG as a **cloud service (classic)** is removed.<!-- 13235079 --> All CMG deployments should use a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
-The CMG service requires your Azure subscription to have two resource providers registered. You need an Azure **global administrator** to register these providers:
+Your Azure AD account needs permission to do the `/register/action` operation for the resource provider. By default, the **Contributor** and **Owner** roles include this permission.
 
-- Microsoft.ClassicCompute
-- Microsoft.Storage
+The following steps summarize the process to register a resource provider. For more information, see [Azure resource providers and types](/azure/azure-resource-manager/management/resource-providers-and-types#azure-portal).
+
+1. Sign in to the [Azure portal](https://portal.azure.com/).
+
+1. On the Azure portal menu, search for **Subscriptions**. Select it from the available options.
+
+1. Select the subscription you want to view.
+
+1. On the left menu, under **Settings**, select **Resource providers**.
+
+1. Find the resource provider you want to register, and select **Register**. To maintain least privileges in your subscription, only register those resource providers that you're ready to use.
 
 ## Automate with PowerShell
 
-Starting in version 2010, you can optionally automate aspects of these configurations using PowerShell.<!--6978300-->
+You can optionally automate aspects of these configurations using PowerShell.<!--6978300-->
 
 1. Use the [Import-CMAADServerApplication](/powershell/module/configurationmanager/Import-CMAADServerApplication) cmdlet to define the Azure AD web/server app in Configuration Manager.
 

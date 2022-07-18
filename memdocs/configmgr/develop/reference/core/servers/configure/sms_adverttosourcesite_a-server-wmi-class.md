@@ -1,4 +1,5 @@
 ---
+description: Learn how to relate an SMS Advertisement Server class object with the SMS Site Server class object that created the advertisement.
 title: "SMS_AdvertToSourceSite_a Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 9e9f3288-1531-4f95-85a5-33971ef3e8e1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "About Configuration Manager Inventory"
 ms.date: "09/20/2016"
+description: "You can use Configuration Manager to collect hardware and software inventory from Configuration Manager clients by enabling the client agents on a site-by-site basis."
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -8,6 +9,8 @@ ms.assetid: cba720a8-679c-4b19-9c3b-431680994626
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

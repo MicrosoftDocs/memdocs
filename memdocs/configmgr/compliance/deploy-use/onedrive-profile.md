@@ -2,16 +2,14 @@
 title: OneDrive for Business Profiles
 titleSuffix: Configuration Manager
 description: Redirect Windows known folders to OneDrive for Business using a OneDrive for Business profile in Configuration Manager.
-ms.date: 04/11/2019
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: e217699a-28b2-471a-b421-8fbd1d1fd638
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # OneDrive for Business Profiles
@@ -26,7 +24,7 @@ Starting in Configuration Manager version 1902, you can create OneDrive for Busi
 
 ## <a name="bkmk_odfb"></a> Move Windows known folders to OneDrive
 <!--3556021-->
-Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows 10 upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
+Use Configuration Manager to move Windows known folders to OneDrive for Business. These folders include Desktop, Documents, and Pictures. To simplify your Windows upgrades, deploy these settings to Windows 7 clients before deploying a task sequence. 
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
 

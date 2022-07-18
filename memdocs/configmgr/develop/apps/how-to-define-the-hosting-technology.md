@@ -1,6 +1,7 @@
 ---
 title: "How to Define the Hosting Technology"
 titleSuffix: "Configuration Manager"
+description: "The hosting technology is defined by implementing the `Microsoft.ConfigurationManagement.ApplicationManagement.HostingTechnology` class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 242c1cf6-3cb8-4ed7-89fb-501130832730
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -17,7 +20,7 @@ To define a custom application management hosting technology, implement the `Mic
 
  The HostingTechnology class supports run time interaction and configuration for technologies. The class contains the hosting rules as defined in the HostingTechnology.xml file. If needed, additional methods and properties can be added to this class, though in most cases the existing base should be sufficient.  
 
- In the Remote Desktop Protocol (RDP) sample project, a new hosting technology is required to handle Remote Desktop Protocol (RDP) files. Hosting support for RDP files is not built-in to Configuration Manager, so a custom hosting technology is required.  
+ In the Remote Desktop Protocol (RDP) sample project, a new hosting technology is required to handle Remote Desktop Protocol (RDP) files. Hosting support for RDP files is not built in to Configuration Manager, so a custom hosting technology is required.  
 
 > [!IMPORTANT]
 >  The HostingTechnology class name must match the class specified in the HostingTechnology.xml file.  
@@ -31,7 +34,7 @@ To define a custom application management hosting technology, implement the `Mic
    The following example from the RDP sample project demonstrates how to define a hosting technology.  
 
 ```  
-// Defines the hosting technology for RDP files. Hosting support for RDP files is not built-in, so a custom  
+// Defines the hosting technology for RDP files. Hosting support for RDP files is not built in, so a custom  
 // hosting technology is needed on the client.   
 public class RdpHostingTechnology : HostingTechnology  
 {  

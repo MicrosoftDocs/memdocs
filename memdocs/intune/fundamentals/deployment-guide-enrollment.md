@@ -1,18 +1,17 @@
 ---
 # required metadata
 
-title: Device enrollment guide for Microsoft Intune - Azure | Microsoft Docs
+title: Device enrollment guide for Microsoft Intune
 description: Enroll Android, Android Enterprise, iOS, iPadOS, macOS, and Windows devices In Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 06/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -24,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Deployment guidance: Enroll devices in Microsoft Intune
@@ -40,7 +41,7 @@ Many organizations create a baseline of what all users and devices must have. Ty
 
 When a device is enrolled, it's issued an MDM certificate. This certificate communicates with the Intune service.
 
-You can enroll devices on the following platforms. For the specific versions, see [Supported operating systems](../fundamentals/supported-devices-browsers.md):
+You can enroll devices on the following platforms. For the specific versions, see [Supported operating systems](supported-devices-browsers.md):
 
 - Android
 - iOS/iPadOS
@@ -56,18 +57,18 @@ This article lists the enrollment prerequisites, has information on using other 
 
 - Intune is set up, and ready to enroll users and devices. Be sure:
 
-  - The [MDM Authority](../fundamentals/mdm-authority-set.md) is set to Intune, even when using [co-management](../../configmgr/comanage/overview.md) with Intune + Configuration Manager.
-  - [Intune licenses are assigned](../fundamentals/licenses-assign.md).
+  - The [MDM Authority](mdm-authority-set.md) is set to Intune, even when using [co-management](../../configmgr/comanage/overview.md) with Intune + Configuration Manager.
+  - [Intune licenses are assigned](licenses-assign.md).
 
   For more information, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).
 
-- Your devices [are supported](../fundamentals/supported-devices-browsers.md). This requirement includes devices that are co-managed, or hybrid Azure Active Directory (Azure AD) joined devices.
+- Your devices [are supported](supported-devices-browsers.md). This requirement includes devices that are co-managed, or hybrid Azure Active Directory (Azure AD) joined devices.
 
-- Sign in as a member of the **Global Administrator** or **Intune Service Administrator** Azure AD roles. [Role-based access control (RBAC) with Intune](../fundamentals/role-based-access-control.md) has more information. If you created an Intune trial subscription, then the account that created the subscription is the **Global administrator**.
+- Sign in as a member of the **Global Administrator** or **Intune Service Administrator** Azure AD roles. [Role-based access control (RBAC) with Intune](role-based-access-control.md) has more information. If you created an Intune trial subscription, then the account that created the subscription is the **Global administrator**.
 
-- Different platforms may have additional requirements. For example, iOS/iPadOS and macOS devices require an [MDM push certificate from Apple](../enrollment/apple-mdm-push-certificate-get.md). Any additional platform requirements are listed.
+- Different platforms may have other requirements. For example, iOS/iPadOS and macOS devices require an [MDM push certificate from Apple](../enrollment/apple-mdm-push-certificate-get.md). Any other platform requirements are listed.
 
-  | Platform | Additional requirements |
+  | Platform | Other requirements |
   | --- | --- |
   | Android | none |
   | Android Enterprise | none |
@@ -113,11 +114,17 @@ There's an enrollment guide for every platform. Choose your scenario, and get st
 - [macOS](deployment-guide-enrollment-macos.md)
 - [Windows](deployment-guide-enrollment-windows.md)
 
+## Download the visual enrollment guide
+
+There's also a visual guide of the different enrollment options for each platform:
+
+[![A visual representation of Intune enrollment options by platform](./media/deployment-guide-enrollment/msft-intune-enrollment-options-thumb-landscape.png)](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) <br/> [Download PDF version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.pdf) | [Download Visio version](https://download.microsoft.com/download/e/6/2/e6233fdd-a956-4f77-93a5-1aa254ee2917/msft-intune-enrollment-options.vsdx)
+
 ## Pilot groups
 
 When assigning your profiles, start small, and use a staged approach. Assign the enrollment profile to a pilot or test group. After initial testing, add more users to the pilot group. Then, assign the enrollment profile to more pilot groups.
 
-For more information and suggestions, see the [Planning guide: Task 5: Create a rollout plan](../fundamentals/intune-planning-guide.md#task-5-create-a-rollout-plan).
+For more information and suggestions, see the [Planning guide: Task 5: Create a rollout plan](intune-planning-guide.md#task-5-create-a-rollout-plan).
 
 ## Reporting and troubleshooting
 
@@ -128,7 +135,7 @@ For more information and suggestions, see the [Planning guide: Task 5: Create a 
 
 Choose your platform, and get started:
 
-- [MAM-WE](deployment-guide-enrollment-mamwe.md)
+- [Application Management without enrollment](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
 - [macOS enrollment guide](deployment-guide-enrollment-macos.md)

@@ -1,4 +1,5 @@
 ---
+description: Learn how to run a synchronous discovery operation for the provided synclet using IAppManagementHandler::DiscoveryApp.
 title: "IAppManagementHandler::DiscoverApp"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 818e9387-2599-405e-913a-642e96c97fd2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

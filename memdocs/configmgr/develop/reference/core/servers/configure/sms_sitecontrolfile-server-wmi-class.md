@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_SiteControlFile class which represents the site control file and methods to maintain version control of the site control file.
 title: "SMS_SiteControlFile Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 06c30f1a-fb2a-49c0-863c-6cf8adf3d162
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -42,7 +45,7 @@ Class SMS_SiteControlFile : SMS_BaseClass
 
  Qualifiers: [lazy]  
 
- Build number of the Configuration Manager installation that create the site control file. The default value is "".  
+ Build number of the Configuration Manager installation that creates the site control file. The default value is "".  
 
  `FileType`  
  Data type: `UInt32`  

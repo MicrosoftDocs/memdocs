@@ -2,19 +2,19 @@
 title: Convert BIOS to UEFI
 titleSuffix: Configuration Manager
 description: Learn how to customize an OS deployment task sequence to prepare a FAT32 partition for transition to UEFI.
-ms.date: 05/14/2020
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: bd3df04a-902f-4e91-89eb-5584b47d9efa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Task sequence steps to manage BIOS to UEFI conversion
 
-Windows 10 provides many new security features that require UEFI-enabled devices. You might have newer Windows devices that support UEFI, but are using legacy BIOS. Previously, converting a device to UEFI required you to go to each device, repartition the hard disk, and reconfigure the firmware.
+Windows includes many security features that require UEFI-enabled devices. You might have newer Windows devices that support UEFI, but are using legacy BIOS. Previously, converting a device to UEFI required you to go to each device, repartition the hard disk, and reconfigure the firmware.
 
 With Configuration Manager you can automate the following actions:
 
@@ -38,13 +38,13 @@ In an existing task sequence to install an OS, add a new group with steps to do 
 
 1. On the **Options** tab of the new group, add a new task sequence variable as a condition. Set **_SMSTSBootUEFI not equal true**. With this condition, the task sequence only runs these steps on BIOS devices.
 
-    :::image type="content" source="media/bios-to-uefi-group.png" alt-text="Condition on BIOS to UEFI group":::
+    :::image type="content" source="media/bios-to-uefi-group.png" alt-text="Condition on BIOS to UEFI group.":::
 
 1. Under the new group, add the **Restart Computer** task sequence step. In **Specify what to run after restart**, select **The boot image assigned to this task sequence is selected**. This action restarts the computer in Windows PE.
 
 1. On the **Options** tab, add a task sequence variable as a condition. Set **_SMSTSInWinPE equals false**. With this condition, the task sequence doesn't run this step if the computer is already in Windows PE.
 
-    :::image type="content" source="media/restart-in-windows-pe.png" alt-text="Condition on Restart Computer step":::
+    :::image type="content" source="media/restart-in-windows-pe.png" alt-text="Condition on Restart Computer step.":::
 
 1. Add a step to start an OEM tool to convert the firmware from BIOS to UEFI. This step is typically **Run Command Line**, with the command to run the OEM tool.
 
@@ -52,11 +52,11 @@ In an existing task sequence to install an OS, add a new group with steps to do 
 
     1. Create the FAT32 partition to convert to UEFI before the OS is installed. For **Disk type**, choose **GPT**.
 
-        :::image type="content" source="media/format-and-partition-disk.png" alt-text="Configuration of Format and Partition Disk step":::
+        :::image type="content" source="media/format-and-partition-disk.png" alt-text="Configuration of Format and Partition Disk step.":::
 
     1. Go to the properties for the FAT32 partition. In the **Variable** field, enter `TSUEFIDrive`. When the task sequence detects this variable, it prepares the partition for the UEFI transition before it restarts the computer.
 
-        :::image type="content" source="media/partition-properties.png" alt-text="Configuration of FAT32 partition properties":::
+        :::image type="content" source="media/partition-properties.png" alt-text="Configuration of FAT32 partition properties.":::
 
     1. Create an NTFS partition that the task sequence uses to save its state and to store log files.
 
@@ -67,11 +67,11 @@ In an existing task sequence to install an OS, add a new group with steps to do 
 
 ## <a name="bkmk_ipu"></a> Convert from BIOS to UEFI during in-place upgrade
 
-Windows 10 includes a simple conversion tool, **MBR2GPT**. It automates the process to repartition the hard disk for UEFI-enabled hardware. You can integrate the conversion tool into the in-place upgrade process to Windows 10. Combine this tool with your upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI.
+Windows includes a simple conversion tool, **MBR2GPT**. It automates the process to repartition the hard disk for UEFI-enabled hardware. You can integrate the conversion tool into the in-place upgrade process. Combine this tool with your upgrade task sequence and the OEM tool that converts the firmware from BIOS to UEFI.
 
 ### Requirements
 
-- A supported version of Windows 10
+- A supported version of Windows 10 or later
 - Computers that support UEFI
 - OEM tool that converts the computer's firmware from BIOS to UEFI
 
@@ -84,7 +84,7 @@ Windows 10 includes a simple conversion tool, **MBR2GPT**. It automates the proc
     1. Add the **Run Command Line** step. Specify the command line for the MBR2GPT tool. When run in the full OS, configure it to covert the disk from MBR to GPT without modifying or deleting data. In **Command line**, enter the following command: `MBR2GPT.exe /convert /disk:0 /AllowFullOS`
 
     > [!TIP]
-    > You can also choose to run the MBR2GPT.EXE tool when in Windows PE instead of in the full OS. Add a step to restart the computer to Windows PE before the step to run the MBR2GPT.EXE tool. Then remove the **/AllowFullOS** option from the command line.
+    > You can also choose to run the MBR2GPT.EXE tool when in Windows PE instead of in the full OS. Add a step to restart the computer to Windows PE before the step to run the MBR2GPT.EXE tool. Then remove the `/AllowFullOS` option from the command line.
 
     For more information about the tool and available options, see [MBR2GPT.EXE](/windows/deployment/mbr-to-gpt).
 

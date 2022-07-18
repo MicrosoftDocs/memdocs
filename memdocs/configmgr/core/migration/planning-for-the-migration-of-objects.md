@@ -1,17 +1,15 @@
 ---
-title: "Migrate objects"
-titleSuffix: "Configuration Manager"
-description: "Learn how to plan for the migration of objects between hierarchies in a Configuration Manager current branch environment."
+title: Migrate objects
+titleSuffix: Configuration Manager
+description: Learn how to plan for the migration of objects between hierarchies in a Configuration Manager current branch environment.
 ms.date: 01/12/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 066caf00-e419-4efb-93d3-ba4ba878297c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Plan for the migration of Configuration Manager objects to Configuration Manager current branch
 

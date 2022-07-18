@@ -1,6 +1,7 @@
 ---
 title: UpdateFeatureExposureStatus method in class SMS_CM_UpdateFeatures
 titleSuffix: "Configuration Manager"
+description: The UpdateFeatureExposureStatus Windows Management Instrumentation class method, in Configuration Manager, updates the feature exposure status for an update feature extension.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: b01f156d-97c2-4cf1-870c-96623fa30262
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

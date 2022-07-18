@@ -1,6 +1,7 @@
 ---
 title: "ImportGlobalUserAccount Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that encrypts data that's shared in the hierarchy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 3300967b-9080-4b60-901f-e52bc2234f8e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

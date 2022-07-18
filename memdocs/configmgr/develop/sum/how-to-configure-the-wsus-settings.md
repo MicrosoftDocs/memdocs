@@ -9,7 +9,9 @@ ms.assetid: c6d0f7c3-d794-4f15-89ce-dbdbb57d133c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
+ms.localizationpriority: null
+ms.collection: openauth
+description: "Windows Server Update Services (WSUS) component settings are configured in Configuration Manager by modifying the site control file."
 
 ---
 # How to Configure the WSUS Settings

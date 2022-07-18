@@ -1,4 +1,5 @@
 ---
+description: Learn how to configure an existing package to use binary delta replication in Configuration Manager.
 title: "Configure a Package to Use Binary Delta Replication"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: ffbb43e0-32f3-452a-9c94-9427b61817fa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

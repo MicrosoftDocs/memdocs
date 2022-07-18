@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the GetAvailableLanguages method on the SMS_Subscription class to obtain a list of available languages.
 title: "GetAvailableLanguages Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 7b950db4-135b-4107-b949-2d9615de4518
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

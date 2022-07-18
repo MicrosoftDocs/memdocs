@@ -2,14 +2,14 @@
 title: Site system role options
 titleSuffix: Configuration Manager
 description: Consult this article for details about Configuration Manager site system roles that are not necessarily self-explanatory.
-ms.date: 04/05/2021
+ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 0e9f0fbd-e442-4509-a021-bfdedf2d04dd
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configuration options for site system roles in Configuration Manager
@@ -19,6 +19,9 @@ manager: dougeby
 Most configuration options for Configuration Manager site system roles are self-explanatory or are explained in the wizard or dialog boxes when you configure them. The following sections explain site system roles whose settings might require additional information.  
 
 ## <a name="BKMK_CertificateRegistrationPoint"></a> Certificate registration point  
+
+> [!WARNING]
+> Starting in version 2203, the certificate registration point is no longer supported.<!--13951253--> For more information, see [Frequently asked questions about resource access deprecation](../../../../protect/plan-design/resource-access-deprecation-faq.yml).
 
 For more information about how to set up the certificate registration point, see [Introduction to certificate profiles](../../../../protect/deploy-use/introduction-to-certificate-profiles.md).  
 

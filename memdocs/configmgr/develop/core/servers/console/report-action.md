@@ -1,4 +1,5 @@
 ---
+description: Learn how to use report action in the configuration manager to display reports in the configuration manager console.
 title: "Configuration Manager Report Action"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -8,6 +9,8 @@ ms.assetid: 47806f0a-362a-4255-bbd5-af38146a8880
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

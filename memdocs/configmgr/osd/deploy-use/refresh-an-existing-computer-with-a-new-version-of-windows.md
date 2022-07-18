@@ -6,10 +6,10 @@ ms.date: 08/27/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: b189a346-8c0d-4870-a876-0719fbb0ab04
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Refresh an existing computer with a new version of Windows
@@ -28,7 +28,7 @@ There are several infrastructure requirements that must be in place before you c
 
 ### Install a state migration point
 
-If you want to capture settings from an existing computer, and then restore the settings to the new OS, consider using a state migration point. For more information, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).  
+If you want to capture settings from an existing computer, and then restore the settings to the new OS, consider using a state migration point. For more information, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#state-migration-point).  
 
 ## <a name="BKMK_Configure"></a> Configure  
 

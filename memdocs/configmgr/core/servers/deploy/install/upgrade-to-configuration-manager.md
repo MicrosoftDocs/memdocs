@@ -2,19 +2,22 @@
 title: Upgrade to current branch
 titleSuffix: Configuration Manager
 description: Learn the steps for running a successful in-place upgrade from a site and hierarchy that runs System Center 2012 Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: c64e7483-b4bb-4738-95f4-ecdaeb6a2ba6
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Upgrade to Configuration Manager current branch
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in April 2022, this feature of Configuration Manager is [deprecated](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 13846745 --> The baseline media for version 2203 is the last version of Configuration Manager current branch that will support upgrade from any version of System Center 2012 Configuration Manager. Current branch version 2303 media will only support new installs of current branch.
 
 Do an in-place upgrade to Configuration Manager current branch from a site and hierarchy that runs System Center 2012 Configuration Manager. Before upgrading from System Center 2012 Configuration Manager, you must prepare the sites. This preparation requires you to remove specific configurations that can prevent a successful upgrade. Then follow the upgrade sequence when more than a single site is involved.
 
@@ -67,9 +70,9 @@ Resolve issues as detailed in the following Microsoft Support article: [Configur
 
   - Some older operating systems supported by System Center 2012 Configuration Manager aren't supported by Configuration Manager current branch. Before the upgrade, remove site system roles on those OS versions. For more information, see [Supported operating systems for site system servers](../../../plan-design/configs/supported-operating-systems-for-site-system-servers.md).
 
-  - The prerequisite checker for Configuration Manager doesn't verify the prerequisites for site system roles on the site server or on remote site systems.
+  - The prerequisite checker for Configuration Manager doesn't verify the prerequisites for site system roles on the site server or on remote site systems. For example, you need to manually verify that remote site systems have at least .NET version 4.6.2.<!-- 13846610 --> For more information, see [List of prerequisite checks for Configuration Manager](list-of-prerequisite-checks.md).
 
-- Review required prerequisites for each computer that hosts a site system role. For example, to deploy an OS, Configuration Manager uses the Windows 10 Assessment and Deployment Kit (Windows ADK). Before you run Setup, you must download and install Windows 10 ADK on the site server and on each computer that runs an instance of the SMS Provider.
+- Review required prerequisites for each computer that hosts a site system role. For example, to deploy an OS, Configuration Manager uses the Windows Assessment and Deployment Kit (ADK). Before you run Setup, download and install the Windows ADK on the site server and on each computer that runs an instance of the SMS Provider.
 
 For more information about supported platforms and prerequisite configurations, see [Supported configurations](../../../plan-design/configs/supported-configurations.md).
 
@@ -263,7 +266,7 @@ When you upgrade to Configuration Manager, the following actions occur automatic
 
 - A site reset. This action includes a reinstallation of all site system roles.
 
-- If the site is the top-level site of a hierarchy, it updates the client installation package on each distribution point in the hierarchy. The site also updates the default boot images to use the new Windows PE version that's included with the Windows 10 ADK. However, the upgrade doesn't upgrade existing media for use with image deployment.
+- If the site is the top-level site of a hierarchy, it updates the client installation package on each distribution point in the hierarchy. The site also updates the default boot images to use the new Windows PE version for the same version of the Windows ADK. However, the upgrade doesn't upgrade existing media for use with image deployment.
 
 - If the site is a primary site, it updates the client upgrade package for that site.
 

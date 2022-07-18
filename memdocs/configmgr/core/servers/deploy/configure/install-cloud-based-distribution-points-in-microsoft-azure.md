@@ -2,24 +2,24 @@
 title: Install cloud distribution points
 titleSuffix: Configuration Manager
 description: Use these steps to set up a cloud distribution point in Configuration Manager.
-ms.date: 09/06/2019
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: bb83ac87-9914-4a35-b633-ad070031aa6e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install a cloud distribution point for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-> [!Important]  
+> [!WARNING]
 > The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](../../../clients/manage/cmg/modify-cloud-management-gateway.md).
 >
-> You won't be able to create a traditional cloud distribution point in the future. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
+> Starting in version 2107, you can't create a traditional cloud distribution point (CDP).<!-- 10247883 -->
 
 This article details the steps to install a Configuration Manager cloud distribution point in Microsoft Azure. It includes the following sections:
 
@@ -43,7 +43,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 - The **Azure environment** to use. For example, the Azure Public Cloud or the Azure US Government Cloud.  
 
-- Starting in version 1806 and *recommended*, use the **Azure Resource Manager deployment**. It has the following requirements:<!--1322209-->  
+- Use the **Azure Resource Manager deployment**. It has the following requirements:<!--1322209-->  
 
     - Integration with [Azure Active Directory](azure-services-wizard.md) for **Cloud Management**. Azure AD user discovery isn't required.  
 
@@ -69,17 +69,6 @@ Use the following checklist to make sure you have the necessary information and 
 
 - The Azure **region** for this deployment.  
 
-- If you still need to use the Azure **classic service deployment** in Configuration Manager version 1810 or earlier, you need the following requirements:  
-
-    > [!Important]  
-    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager. Start using Azure Resource Manager deployments for the cloud distribution point. For more information, see [Azure Resource Manager](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#azure-resource-manager).  
-    >
-    > Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud distribution point.<!-- 3605704 -->
-
-    - The Azure **Subscription ID**.  
-
-    - An Azure **management certificate**, exported as both .CER and .PFX files. An Azure subscription administrator needs to add the .CER management certificate to the subscription in the [Azure portal](https://portal.azure.com).  
-
 ### BranchCache
 
 To enable a cloud distribution point to use Windows BranchCache, install the BranchCache feature on the site server.<!-- SCCMDocs-pr#4054 -->
@@ -90,10 +79,10 @@ To enable a cloud distribution point to use Windows BranchCache, install the Bra
 
 If you've already distributed content to a cloud distribution point, and then decide to enable BranchCache, first install the feature. Then redistribute the content to the cloud distribution point.
 
-> [!NOTE]  
-> In Configuration Manager version 1810 and earlier, if you have more than one cloud distribution point, you need to manually set the BranchCache key passphrase. For more information, see [Microsoft Support KB 4458143](https://support.microsoft.com/help/4458143).
-
 ## <a name="bkmk_setup"></a> Set up  
+
+> [!WARNING]
+> Starting in version 2107, this action isn't available. You can't create a traditional cloud distribution point (CDP).<!-- 10247883 --> Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](../../../clients/manage/cmg/modify-cloud-management-gateway.md).
 
 Perform this procedure on the site to host this cloud distribution point as determined by your [design](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md#bkmk_topology).  
 
@@ -103,12 +92,7 @@ Perform this procedure on the site to host this cloud distribution point as dete
 
     1. First specify the **Azure environment**.  
 
-    2. Starting in version 1806 and *recommended*, select **Azure Resource Manager deployment** as the deployment method. Select **Sign in** to authenticate with an Azure subscription admin account. The wizard auto-populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.  
-
-    > [!Note]  
-    > Starting in version 1810, classic service deployments in Azure are deprecated in Configuration Manager.
-    >
-    > If you need to use a classic service deployment, select that option on this page. First enter your Azure **Subscription ID**. Then select **Browse** and select the .PFX file for the Azure management certificate.  
+    2. Select **Azure Resource Manager deployment** as the deployment method. Select **Sign in** to authenticate with an Azure subscription admin account. The wizard auto-populates the remaining fields from the information stored during the Azure AD integration prerequisite. If you own multiple subscriptions, select the **Subscription ID** of the desired subscription to use.  
 
 3. Select **Next**. Wait as the site tests the connection to Azure.  
 
@@ -267,7 +251,7 @@ More significant changes, such as the following configurations, require redeploy
 - Private to public PKI
 - Azure region
 
-Starting in version 1806, if you have an existing cloud distribution point on the classic deployment method, in order to use the Azure Resource Manager deployment method you need to deploy a new cloud distribution point. There are two options:
+If you have an existing cloud distribution point on the classic deployment method, in order to use the Azure Resource Manager deployment method you need to deploy a new cloud distribution point. There are two options:
 
 - If you want to reuse the same service name:  
 

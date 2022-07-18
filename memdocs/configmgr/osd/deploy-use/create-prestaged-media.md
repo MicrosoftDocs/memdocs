@@ -2,14 +2,14 @@
 title: Create prestaged media
 titleSuffix: Configuration Manager
 description: Use prestaged media in Configuration Manager to simplify deployment of Windows in several scenarios.
-ms.date: 05/02/2019
+ms.date: 03/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: ff6e7267-302a-4563-815e-cdc0d1a4b60f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create prestaged media
@@ -95,7 +95,7 @@ The hard drive of the destination computer must be formatted before the prestage
 
     - **Media file**: Specify the name and path of the output files. The wizard writes the output files to this location. For example: `\\servername\folder\outputfile.wim`  
 
-    - **Staging folder**<!--1359388-->: The media creation process can require a lot of temporary drive space. By default this location is similar to the following path: `%UserProfile%\AppData\Local\Temp`. Starting in version 1902, to give you greater flexibility with where to store these temporary files, change this value to another drive and path.  
+    - **Staging folder**<!--1359388-->: The media creation process can require a lot of temporary drive space. By default this location is similar to the following path: `%UserProfile%\AppData\Local\Temp`. To give you greater flexibility with where to store these temporary files, change this value to another drive and path.
 
 6. On the **Security** page, specify the following options:  
 
@@ -165,7 +165,7 @@ The hard drive of the destination computer must be formatted before the prestage
 
 13. On the **Distribution Points** page, select one or more distribution points from which to get content.  
 
-    Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) and [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute referenced content](distribute-task-sequence-referenced-content.md) and [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 14. On the **Customization** page, specify the following options:  
 

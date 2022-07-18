@@ -1,4 +1,5 @@
 ---
+description: Article describing the use of ClearDeploymentLocksForCollection class method in Configuration Manager.
 title: "ClearDeploymentLocksForCollection Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: d7c2626e-b99c-48ab-bde2-429e1763d48f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,15 +1,15 @@
 ---
 title: Configure CMG client authentication
 titleSuffix: Configuration Manager
-description: Select an authentication method for clients to use a cloud management gateway (CMG).
-ms.date: 04/14/2021
+description: Configure authentication methods for clients to use a cloud management gateway (CMG).
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-ms.assetid: be9aff17-b396-46c1-9477-565eeb9f58c9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configure client authentication for cloud management gateway
@@ -18,51 +18,38 @@ manager: dougeby
 
 The next step in the setup of a cloud management gateway (CMG) is to configure how clients authenticate. Because these clients are potentially connecting to the service from the untrusted public internet, they have a higher authentication requirement. There are three options:
 
-|         | Azure AD | PKI certificate | Site token |
-|---------|---------|---------|---------|
-| **ConfigMgr version** | All supported | All supported | 2002 or later |
-| **Windows client version** | Windows 10 | All supported | All supported |
-| **Scenario support** | User and device | Device-only | Device-only |
-| **Management point** | E-HTTP or HTTPS | E-HTTP or HTTPS | E-HTTP, or HTTPS |
+- Azure Active Directory (Azure AD)
+- PKI certificates
+- Configuration Manager site-issued tokens
 
-Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD modern authentication with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network.
-
-You can use one or more methods. All clients don't have to use the same method.
-
-Which ever method you choose, you may also need to reconfigure one or more [management points](#bkmk_mphttps).
+This article describes how to configure each of these options. For more foundational information, see [Plan for CMG client authentication methods](plan-client-authentication.md).
 
 ## Azure AD
 
-If your internet-based devices are running Windows 10, consider using Azure AD modern authentication with the CMG. This authentication method is the only one that enables user-centric scenarios. For example, deploying apps to a user collection.
+If your internet-based devices are running Windows 10 or later, use Azure AD modern authentication with the CMG. This authentication method is the only one that enables user-centric scenarios.
 
-First, the devices need to be either cloud domain-joined or hybrid Azure AD-joined, and the user also needs an Azure AD identity. If your organization is already using Azure AD identities, then you should be set with this prerequisite. If not, talk with your Azure administrator to plan for cloud-based identities. For more information, see [Azure AD device identity](/azure/active-directory/devices/). Until that process is complete, consider [token-based authentication](#site-token) for internet-based clients with your CMG.
+This authentication method requires the following configurations:
 
-> [!TIP]
-> To check if a device is cloud-joined, run `dsregcmd.exe /status` in a command prompt. If the device is Azure AD-joined or hybrid-joined, the **AzureAdjoined** field in the results shows **YES**. For more information, see [dsregcmd command - device state](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
+- The devices need to be either cloud domain-joined or hybrid Azure AD-joined, and the user also needs an Azure AD identity.
 
-One of the primary requirements for using Azure AD authentication for internet-based clients with a CMG is to integrate the site with Azure AD. You already completed that action in the [prior step](configure-azure-ad.md).
+  > [!TIP]
+  > To check if a device is cloud-joined, run `dsregcmd.exe /status` in a command prompt. If the device is Azure AD-joined or hybrid-joined, the **AzureAdjoined** field in the results shows **YES**. For more information, see [dsregcmd command - device state](/azure/active-directory/devices/troubleshoot-device-dsregcmd).
 
-There are a few other requirements, depending upon your environment:
+- One of the primary requirements for using Azure AD authentication for internet-based clients with a CMG is to integrate the site with Azure AD. You already completed that action in the [prior step](configure-azure-ad.md).
 
-- Enable user discovery methods for hybrid identities
-- Enable ASP.NET 4.5 on the management point
-- Configure client settings
+- There are a few other requirements, depending upon your environment:
+
+  - Enable user discovery methods for hybrid identities
+  - Enable ASP.NET 4.5 on the management point
+  - Configure client settings
 
 For more information on these prerequisites, see [Install clients using Azure AD](../../deploy/deploy-clients-cmg-azure.md).
 
-To determine if your internet-enabled management point requires HTTPS, see [management points](#bkmk_mphttps).
-
-> [!NOTE]
-> If your devices are in an Azure AD tenant that's separate from the tenant with a subscription for the CMG compute resources, starting in version 2010 you can disable authentication for tenants not associated with users and devices. For more information, see [Configure Azure services](../../../servers/deploy/configure/azure-services-wizard.md#disable-authentication).<!--8537319-->
-
 ## PKI certificate
 
-If you have a public key infrastructure (PKI) that can issue client authentication certificates to devices, then consider this authentication method for internet-based devices with your CMG. It doesn't support user-centric scenarios, but supports devices running Windows 8.1 or Windows 10.
+Use these steps if you have a public key infrastructure (PKI) that can issue client authentication certificates to devices.
 
-> [!TIP]
-> Windows 10 devices that are hybrid or cloud domain-joined don't require this certificate because they use [Azure AD](#azure-ad) to authenticate.
-
-This certificate may be required on the CMG connection point. For more information, see [CMG connection point](#bkmk_cmgcp).
+This certificate may be required on the CMG connection point. For more information, see [CMG connection point](#cmg-connection-point).
 
 ### Issue the certificate
 
@@ -74,7 +61,7 @@ The CMG client authentication certificate supports the following configurations:
 
 - This certificate supports key storage providers for certificate private keys (v3). For more information, see [CNG v3 certificates overview](../../../plan-design/network/cng-certificates-overview.md).
 
-### <a name="bkmk_clientroot"></a> Export the client certificate's trusted root
+### Export the client certificate's trusted root
 
 The CMG has to trust the client authentication certificates to establish the HTTPS channel with clients. To accomplish this trust, export the trusted root certificate chain. Then supply these certificates when you create the CMG in the Configuration Manager console.
 
@@ -113,7 +100,7 @@ After you issue a client authentication certificate to a computer, use this proc
 
 1. Export all of the certificates in the certification path of the original client authentication certificate. Make note of which exported certificates are intermediate CAs, and which ones are trusted root CAs.
 
-### <a name="bkmk_cmgcp"></a> CMG connection point
+### CMG connection point
 
 To securely forward client requests, the CMG connection point requires a secure connection with the management point. If you're using PKI client authentication, and the internet-enabled management point is HTTPS, issue a client authentication certificate to the site system server with the CMG connection point role.
 
@@ -124,19 +111,13 @@ To securely forward client requests, the CMG connection point requires a secure 
 > - Clients use Configuration Manager token-based authentication.
 > - The site uses Enhanced HTTP.
 
-For more information, see [Enable management point for HTTPS](#bkmk_mphttps).
+For more information, see [Enable management point for HTTPS](#enable-management-point-for-https).
 
 ## Site token
 
-If you can't use PKI client authentication certificates or join devices to Azure AD, then use token-based authentication with Configuration Manager version 2002 or later. Site-issued client authentication tokens work on all supported client OS versions, but only support device scenarios.
+If you can't join devices to Azure AD or use PKI client authentication certificates, then use Configuration Manager token-based authentication. For more information, or to create a bulk registration token, see [Token-based authentication for cloud management gateway](../../deploy/deploy-clients-cmg-token.md).
 
-If clients occasionally connect to your internal network, they're automatically issued a token. They need to communicate directly with an on-premises management point to register with the site and get this client token.
-
-If you can't register clients on the internal network, you can create and deploy a bulk registration token. The bulk registration token enables the client to initially install and communicate with the site. This initial communication is long enough for the site to issue the client its own, unique client authentication token. The client then uses its authentication token for all communication with the site while it's on the internet.
-
-For more information, or to create a bulk registration token, see [Token-based authentication for cloud management gateway](../../deploy/deploy-clients-cmg-token.md).
-
-## <a name="bkmk_mphttps"></a> Enable management point for HTTPS
+## Enable management point for HTTPS
 
 Depending upon how you configure the site, and which client authentication method you choose, you may need to reconfigure your internet-enabled management points. There are two options:
 

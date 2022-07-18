@@ -1,6 +1,7 @@
 ---
 title: "SMS_UserVariable Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_UserVariable Windows Management Instrumentation (WMI) class defines the settings of a specific user."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: aaeefdd5-32ac-4b17-ad1d-fd9cb50b9ae0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

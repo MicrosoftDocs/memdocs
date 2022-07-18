@@ -3,22 +3,20 @@ metadata:
   title: Diagnostic and usage data FAQ
   titleSuffix: Configuration Manager
   description: Frequently asked questions about diagnostic and usage data for Configuration Manager
-  ms.date: 04/16/2021
+  ms.date: 12/01/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
-  ms.topic: conceptual
-  ms.assetid: 3fe32aa2-d594-4ad0-a291-b8f5395ac50b
+  ms.topic: faq
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
-  ms.collection: M365-identity-device-management
-    
+
 title: Frequently asked questions about diagnostics and usage data
 summary: |
   *Applies to: Configuration Manager (current branch)*
-  
+
   This article provides answers to frequently asked questions about diagnostic and usage data in Configuration Manager.
-  
+
 
 sections:
   - name: Ignored
@@ -31,7 +29,7 @@ sections:
           - [About the service connection point](../../servers/deploy/configure/about-the-service-connection-point.md)
           - [Use the service connection tool](../../servers/manage/use-the-service-connection-tool.md)
           
-          To support new versions of Windows 10 and cloud services like Microsoft Intune, you need to update the current branch of Configuration Manager on a regular basis. Microsoft requires at least the basic level of diagnostic and usage data. This data is used to keep the product up to date, improve the update experience, and improve the quality and security of the product.
+          To support new versions of Windows and cloud services like Microsoft Intune, you need to update the current branch of Configuration Manager on a regular basis. Microsoft requires at least the basic level of diagnostic and usage data. This data is used to keep the product up to date, improve the update experience, and improve the quality and security of the product.
           
           No data is sent to the service when the service connection point is in offline mode. When you switch to online mode or use the service connection tool, it sends data to the service to check for updates.
           
@@ -59,7 +57,7 @@ sections:
       - question: |
           Can the data be used to form a network map?
         answer: |
-          No. This data doesn't include any network details, such as IP addresses or detailed geographic information. For more information, see [Levels of diagnostic usage data](levels-overview.md#bkmk_versions), and find more detail for the version you're using.
+          No. This data doesn't include any network details, such as IP addresses or detailed geographic information. For more information, see [Levels of diagnostic usage data](levels-overview.md#version-specific-details), and find more detail for the version you're using.
           
           The data does include time zone information from each site. This information can provide insight into the broad geolocation and global dispersion of sites in a hierarchy.
           
@@ -81,6 +79,8 @@ sections:
           For example, the following cloud services are a part of Microsoft Endpoint Manager:
           
           - [Desktop Analytics data privacy](../../../desktop-analytics/privacy.md)
+          - [Tenant attach data collection](../../../tenant-attach/data-collection.md)
+          - [Endpoint analytics data collection](../../../../analytics/data-collection.md)
           - [Privacy and personal data in Intune](/intune/protect/privacy-personal-data)
           - [Windows Autopilot requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
           

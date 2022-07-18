@@ -1,4 +1,5 @@
 ---
+description: Article describing how to use RemoveSource in Configuration Manager to remove a source for the relationship between a user and a device.
 title: "RemoveSource Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 683ee78e-5a8f-480c-8c95-db1333178c98
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

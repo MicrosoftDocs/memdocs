@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Android email settings in Microsoft Intune - Azure | Microsoft Docs
-description: Create a device configuration email profiles that use Exchange servers, and retrieve attributes from Azure Active Directory. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android Samsung Knox devices using Microsoft Intune.
+title: Android email settings in Microsoft Intune
+description: Create device configuration email profiles that use Exchange servers, and retrieve attributes from Azure Active Directory. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android Samsung Knox devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
-ms.topic: reference
+ms.date: 03/07/2022
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -28,7 +28,7 @@ ms.collection: M365-identity-device-management
 
 # Android device settings to configure email, authentication, and synchronization in Intune
 
-This article describes the different email settings you can control on Android Samsung Knox devices in Intune. As part of your mobile device management (MDM) solution, use these settings to configure an email server, use SSL to encrypt emails, and more.
+This article describes the different email settings you can control on Android Samsung Knox devices in Intune. As part of your mobile device management (MDM) solution, use these settings to configure an Exchange email server, use SSL to encrypt emails, and more. The email profile uses the native or built-in email app on the device, and allows users to connect to their organization email.
 
 This feature applies to:
 
@@ -56,7 +56,7 @@ Create an [Android device administrator Email device configuration profile](emai
       When choosing to use **Custom** attributes, enter:
       - **Custom domain name to use**: Enter a value that Intune uses for the domain name, such as `contoso.com` or `contoso`.
 
-- **Email address attribute from AAD**: This name is the email attribute Intune gets from Azure AD. Intune dynamically generates the email address that's used by this profile. Your options:
+- **Email address attribute from AAD**: This name is the email attribute Intune gets from Azure AD. Intune dynamically generates the email address that's used by this profile. Make sure your users have email addresses that match the attribute you select. Your options:
   - **User principal name**: Uses the full principal name, such as `user1@contoso.com` or `user1`, as the email address.
   - **Primary SMTP address**: Uses the primary SMTP address, such as `user1@contoso.com`, to sign in to Exchange.
 

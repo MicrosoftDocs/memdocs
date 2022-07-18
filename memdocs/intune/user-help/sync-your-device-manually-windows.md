@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/16/2021
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -29,21 +29,22 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Sync your Windows device manually
+# Sync your Windows device manually  
 
- A manual sync forces your device to connect with Intune to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, the sync feature ensures that you can get any updates you missed when you return.   
+**Applies to**  
+- Windows 10  
+- Windows 11  
+
+Syncing forces your device to connect with Intune to get the latest updates, requirements, and communications from your organization. Company Portal regularly syncs devices as long as you have a Wi-Fi connection. However, if you ever need to disconnect for an extended period of time, you can manually sync to get any updates you missed when you return.   
  
 Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, try syncing your device to see if an update or requirement is missing.  
 
-Intune supports manual sync from the Company Portal app, desktop taskbar or Start menu, and from the device Settings app. Company Portal app functionality is supported on Windows 10 devices running the Creator's Update (1703) or later. 
+You can start a sync from the Company Portal app, desktop taskbar or Start menu, and from the device Settings app. Company Portal app functionality is supported on Windows 10 devices running the Creator's Update (1703) or later, and Windows 11.  
 
-All Windows devices can be synced from the device Settings app, including:
-
-* [Windows 10 desktop](#windows-10-desktop)  
-* [Microsoft HoloLens](#microsoft-hololens)   
+All Windows devices can be synced from the device Settings app.  
 
 ## Sync from Company Portal app for Windows
-Complete these steps to manually sync any Windows 10 device running Creator's Update (version 1709) or later.
+Complete these steps to sync your Windows 10/11 device.  
 
 1. Open the Company Portal app on your device.
 

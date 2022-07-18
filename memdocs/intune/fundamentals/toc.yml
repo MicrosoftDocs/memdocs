@@ -58,7 +58,7 @@ items:
       href: guided-scenarios-cloud-managed-pc.md   
     - name: Secure Microsoft Office mobile apps
       href: guided-scenarios-office-mobile.md              
-    - name: Windows 10 in cloud configuration
+    - name: Windows 10/11 in cloud configuration
       href: cloud-configuration.md
   - name: Common scenarios
     href: common-scenarios.md
@@ -69,6 +69,8 @@ items:
     href: manage-os-versions.md
   - name: Manage Windows Holographic
     href: windows-holographic-for-business.md
+  - name: Microsoft Surface Management Portal
+    href: surface-management-portal.md  
 - name: How-to guides
   items:
   - name: Plan and Deploy
@@ -91,7 +93,7 @@ items:
         items:
         - name: Overview
           href: deployment-guide-enrollment.md
-        - name: MAM-WE 
+        - name: MAM
           href: deployment-guide-enrollment-mamwe.md
         - name: Android, Android Enterprise
           href: deployment-guide-enrollment-android.md
@@ -108,6 +110,8 @@ items:
           href: deployment-guide-platform-ios-ipados.md    
         - name: Android, Android Enterprise 
           href: deployment-guide-platform-android.md 
+        - name: macOS 
+          href: deployment-guide-platform-macOS.md 
       - name: Device and app management
         href: migration-guide-configure-policies.md
       - name: App protection
@@ -116,10 +120,6 @@ items:
       items:
       - name: How to educate your end users
         href: end-user-educate.md    
-      - name: Company Portal messages
-        href: end-user-company-portal-messages.md
-      - name: App protection on Android
-        href: end-user-mam-apps-android.md
       - name: App protection on iOS
         href: end-user-mam-apps-ios.md
       - name: How to get Android apps
@@ -210,6 +210,8 @@ items:
       href: filters-reports-troubleshoot.md
   - name: Use policy sets
     href: ../fundamentals/policy-sets.md
+  - name: Premium add-ons
+    href: premium-add-ons.md
   - name: Developer guidance
     href: ../developer/index.yml
   - name: Get help and support

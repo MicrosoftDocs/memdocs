@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent general configuration information that can be used by more than one client component using SMS_SCI_ClientConfig class.
 title: "SMS_SCI_ClientConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: cad6e82b-ba60-4252-8336-f83d595b69bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

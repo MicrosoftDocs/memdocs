@@ -1,5 +1,6 @@
 ---
 title: "OS Deployment Task Sequences Overview"
+description: In Configuration Manager, a task sequence is a series of one or more task steps that can be advertised to Configuration Manager clients to run user-specified actions.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: 957ac65f-a14b-4659-84b8-b83190698cc7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

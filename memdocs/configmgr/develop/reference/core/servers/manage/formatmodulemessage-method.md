@@ -1,4 +1,5 @@
 ---
+description: Learn how to resolve status messages in Srvmsgs.dll, Provmsgs.dd, and Climmsgs.dll using FormatModuleMessage method.
 title: "FormatModuleMessage Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: a7f16c46-de10-4d93-b67b-409c7e3c2991
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

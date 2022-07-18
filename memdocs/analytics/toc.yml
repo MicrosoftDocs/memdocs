@@ -5,6 +5,8 @@ items:
   items:
   - name: What is Endpoint analytics?
     href: overview.md
+  - name: Scores, baselines, and insights
+    href: scores.md
 - name: Quickstarts
   items:
   - name: Enroll Intune devices
@@ -21,10 +23,10 @@ items:
     href: startup-performance.md
   - name: Restart frequency
     href: restart-frequency.md    
-  - name: Recommended software
-    href: recommended-software.md
   - name: Application reliability
     href: app-reliability.md
+  - name: Work from anywhere
+    href: work-from-anywhere.md
   - name: Endpoint analytics in Microsoft Productivity Score
     href: productivity-score.md
 - name: How-to guides

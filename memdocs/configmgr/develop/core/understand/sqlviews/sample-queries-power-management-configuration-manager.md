@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for power management
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join power management views to other views.
@@ -12,6 +12,8 @@ ms.assetid: 4a68faf9-29c7-458b-b3ef-fb99aad5ee7d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Sample queries for power management in Configuration Manager

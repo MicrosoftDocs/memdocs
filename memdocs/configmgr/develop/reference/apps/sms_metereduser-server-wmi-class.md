@@ -1,4 +1,5 @@
 ---
+description: Learn how to list users that have used metered applications in Configuration Manager with SMS_MeteredUser.
 title: "SMS_MeteredUser Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 368c8640-fb35-43bf-83c6-611c9fea173d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

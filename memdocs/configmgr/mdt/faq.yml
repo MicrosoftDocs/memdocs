@@ -2,18 +2,17 @@
 metadata:
   title: MDT FAQ
   description: Frequently asked questions (FAQ) about the Microsoft Deployment Toolkit (MDT).
-  ms.date: 04/16/2021
+  ms.date: 10/05/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-mdt
-  ms.topic: article
-  ms.assetid: e9a145a0-9f18-4914-a082-d41880462c9a
+  ms.topic: faq
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
-    
+  ms.localizationpriority: null
+  ms.collection: openauth
 title: Microsoft Deployment Toolkit frequently asked questions (FAQ)
 summary: This article provides frequently asked questions (FAQ) about the Microsoft Deployment Toolkit (MDT). It assumes familiarity with MDT version concepts, features, and capabilities.
-
 
 sections:
   - name: Ignored
@@ -22,28 +21,30 @@ sections:
           What's the MDT support life cycle?
         answer: |
           For more information, see [Microsoft Deployment Toolkit support life cycle](/troubleshoot/windows-server/deployment/deployment-toolkit-support).
-          
+
       - question: |
-          Is this release only supported with Windows 10, Windows ADK, or Configuration Manager version 'X'?
+          Is this release only supported with version 'X' of Windows client, Windows ADK, or Configuration Manager?
         answer: |
           We primarily tested this build of MDT with the configuration listed in the [supported platforms list](release-notes.md#supported-platforms). Unless there are any explicit [known issues](known-issues.md), anything outside of the above configuration has a high probability of still working. Your mileage may vary as we haven't explicitly tested other combinations.
-          
+
+          > [!NOTE]
+          > This answer also applies to Windows 11.
+
       - question: |
           How do I get help with MDT?
         answer: |
           Use one of the following methods to get help with MDT (in prioritized order):
-          
+
           1. Post to the [MDT forum](/answers/topics/mem-mdt.html). MVPs and others in the community watch and respond to posts there. This method is probably the most efficient way to get help.  
-          
+
           2. Contact Microsoft Support. Open a support case and get some professional help.  
-          
+
           3. If you can consistently reproduce an issue and think it's a product bug, file it in the Windows 10 [Feedback Hub](https://support.microsoft.com/help/4021566/windows-10-send-feedback-to-microsoft-with-feedback-hub-app). The product team investigates everything that's reported. When filing feedback, use the **Enterprise Management** category and **OS Deployment** subcategory. This categorization helps classify and route your feedback to the MDT team.
-          
+
 additionalContent: |
 
   ## Next steps
-  
+
   [Release notes](release-notes.md)
-          
+
   [Known issues](known-issues.md)
-          

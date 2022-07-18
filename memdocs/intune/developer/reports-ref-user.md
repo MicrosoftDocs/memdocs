@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/13/2021
+ms.date: 12/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -41,8 +41,8 @@ The **user** entity collection contains user data. These records include user st
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------|
 | userKey                    | Unique identifier of the user in the data warehouse -   surrogate key.                                                                                                                                                         | 123                                  |
 | userId                     | Unique identifier of the user - similar to UserKey, but is   a natural key.                                                                                                                                                    | b66bc706-ffff-7437-0340-032819502773 |
-| userEmail                  | Email address of the user.                                                                                                                                                                                                     | John@constoso.com                    |
-| userPrincipalName                        | User principal name of the user.                                                                                                                                                                                               | John@constoso.com                    |
+| userEmail                  | Email address of the user.                                                                                                                                                                                                     | John@contoso.com                    |
+| userPrincipalName                        | User principal name of the user.                                                                                                                                                                                               | John@contoso.com                    |
 | displayName                | Display name of the user.                                                                                                                                                                                                      | John                                 |
 | intuneLicensed             | Specifies if this user is Intune licensed or not.                                                                                                                                                                              | True/False                           |
 | isDeleted                  | Indicates whether all of the user's licenses have expired   and whether the user was therefore removed from Intune. For a single record,   this flag does not change. Instead, a new record is created for a new user   state. | True/False                           |

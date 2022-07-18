@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/27/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: f5ca557e-a8e1-4720-b06e-837c4f0bc3ca
 
@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 
 # Selectively wipe data using app protection policy conditional launch actions in Intune
 
-Using Intune app protection policies, you can configure settings to block end users from accessing a corporate app or account. These settings target data relocation and access requirements set by your organization for things like jail-broken devices and minimum OS versions.
+Conditional launch actions within Intune app protection policies provide organizations the ability to block access or wipe org data when certain device or app conditions are not met.
  
 You can explicitly choose to wipe your company's corporate data from the end user's device as an action to take for non-compliance by using these settings. For some settings, you will be able to configure multiple actions, such as block access and wipe data based on different specified values.
 

@@ -1,4 +1,5 @@
 ---
+description: Learn how to notify the administrator console that an alert has changed its status with SMS_InstanceChangeNotification class.
 title: "SMS_InstanceChangeNotification Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: feda268d-16d9-43a0-8bef-d26070e5deca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

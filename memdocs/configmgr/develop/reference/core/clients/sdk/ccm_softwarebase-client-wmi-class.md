@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the CCM_SoftwareBase class to represent the base class for management entities like software updates.
 title: "CCM_SoftwareBase Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: d01a7ab7-5edd-4534-926d-161ec05d813d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

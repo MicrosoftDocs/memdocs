@@ -5,13 +5,11 @@ description: Automatically deploy software updates by using automatic deployment
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: b27682de-adf8-4edd-9572-54886af8f7fb
-
-
+ms.localizationpriority: medium
 ---
 
 #  Automatically deploy software updates  
@@ -60,16 +58,24 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
         -   When you don't enable the deployment, the updates that meet the rule's defined criteria are added to a software update group. The software update deployment content is downloaded, as necessary, and distributed to the specified distribution points. The site creates a disabled deployment on the software update group to prevent the updates from being deployed to clients. This option provides time to prepare to deploy the updates, verify the updates that meet the criteria are adequate, and then enable the deployment.  
 
-4.  On the **Deployment Settings** page, configure the following settings:  
+4.  On the **Deployment Settings** page, configure the following settings:
+
+    -  **Type of deployment**: Starting in version 2107, you can specify the deployment type for the software update deployment. Prior to version 2107, all deployments created by an automatic deployment rule are required. <!--9900107, 7033498-->
+
+       - Select **Required** to create a mandatory software update deployment. The software updates are automatically installed on clients before the installation deadline you configure.
+
+       - Select **Available** to create an optional software update deployment. This deployment is available for users to install from Software Center.
+       > [!NOTE]  
+       > Starting in Configuration Manager version 2203, you can select the **Pre-download content for this deployment** setting for **Available** deployments. This setting reduces installation wait times for clients since installation notifications won't be visible in Software Center until the content has fully downloaded. <!--4497776-->
+       > - If an update is in multiple deployments for a client and the **Pre-download content for this deployment** setting is enabled for a least one of the deployments, then the content will pre-download.
+       > - If you edit an existing deployment to use the **Pre-download content for this deployment** setting, the content will only pre-download if the software update is not yet available on the client.
 
     -   **Use Wake on LAN to wake up clients for required deployments**: Specifies whether to enable Wake On LAN at the deadline. Wake On LAN sends wake-up packets to computers that require one or more software updates in the deployment. The site wakes up any computers that are in sleep mode at the installation deadline time so the installation can initiate. Clients that are in sleep mode that don't require any software updates in the deployment aren't started. By default, this setting isn't enabled. Before using this option, configure computers and networks for Wake On LAN. For more information, see [How to configure Wake On LAN](../../core/clients/deploy/configure-wake-on-lan.md).  
 
     -   **Detail level**: Specify the level of detail for the update enforcement state messages that are reported by clients.  
 
         > [!IMPORTANT]  
-        >  When you deploy definition updates, set the detail level to **Error only** to have the client report a state message only when a definition update fails. Otherwise, the client reports a large number of state messages that might impact site server performance.  
-        
-        > [!NOTE]  
+        > - When you deploy definition updates, set the detail level to **Error only** to have the client report a state message only when a definition update fails. Otherwise, the client reports a large number of state messages that might impact site server performance.  
         > The **Error only** detail level does not send the enforcement status messages required for tracking pending reboots.
 
     -   **License terms setting**: Specify whether to automatically deploy software updates with associated license terms. Some software updates include license terms. When you automatically deploy software updates, the license terms aren't displayed, and there isn't an option to accept the license terms. Choose to automatically deploy all software updates regardless of an associated license term, or only deploy updates that don't have associated license terms.  
@@ -84,12 +90,15 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
      - If needed, filter on the content size for software updates in automatic deployment rules. For more information, see [Configuration Manager and simplified Windows servicing on down level operating systems](https://techcommunity.microsoft.com/t5/configuration-manager-archive/configuration-manager-and-simplified-windows-servicing-on-down/ba-p/274056).  
 
-     - Starting in version 1910, you can use **Deployed** as an update filter for your automatic deployment rules. This filter helps identify new updates that may need to be deployed to your pilot or test collections. The software update filter can also help avoid redeploying older updates. 
+     - Starting in version 2111, the following options were added in the **Date Released or Revised** search criteria:<!--7023634 , 7033309-->
+       - Older than 30 days
+       - Older than 60 days
+       - Older than 90 days
+       - Older than 6 months
+       - Older than 1 year  
+     - You can use **Deployed** as an update filter for your automatic deployment rules. This filter helps identify new updates that may need to be deployed to your pilot or test collections. The software update filter can also help avoid redeploying older updates. 
          - When using **Deployed** as a filter, be mindful that you may have already deployed the update to another collection, such as a pilot or test collection. <!--4852033-->
-     - Starting in version 1806, a property filter for **Architecture** is now available. Use this filter to exclude architectures like Itanium and ARM64 that are less common. Remember that there are 32-bit (x86) applications and components running on 64-bit (x64) systems. Unless you're certain that you don't need x86, enable it as well when you choose x64.<!--1322266-->  
-
-    > [!NOTE]  
-    > **Windows 10, version 1903 and later** was added to Microsoft Update as its own product rather than being part of the **Windows 10**  product like earlier versions. This change caused you to do a number of manual steps to ensure that your clients see these updates. We've helped reduce the number of manual steps you have to take for the new product in Configuration Manager version 1906. For more information, see [Configuring products for versions of Windows 10](../get-started/configure-classifications-and-products.md#windows-10-version-1903-and-later) <!--4682946-->
+     - A property filter for **Architecture** is now available. Use this filter to exclude architectures like Itanium and ARM64 that are less common. Remember that there are 32-bit (x86) applications and components running on 64-bit (x64) systems. Unless you're certain that you don't need x86, enable it as well when you choose x64.<!--1322266-->
 
 
 6. On the **Evaluation Schedule** page, specify whether to enable the ADR to run on a schedule. When enabled, click **Customize** to set the recurring schedule.  
@@ -102,7 +111,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     - To manually run the ADR, select the rule in the **Automatic Deployment Rule** node of the console, and then click **Run Now** in the ribbon.  
 
-    - Starting in version 1802, ADRs can be scheduled to evaluate offset from a base day. For example, if Patch Tuesday actually falls on Wednesday for you, set the evaluation schedule for the second Tuesday of the month offset by one day.<!--1357133-->  
+    - ADRs can be scheduled to evaluate offset from a base day. For example, if Patch Tuesday actually falls on Wednesday for you, set the evaluation schedule for the second Tuesday of the month offset by one day.<!--1357133-->  
         - When scheduling evaluation with an offset during the last week of the month, if you choose an offset that continues into the next month, the site schedules evaluation for the last day of the month.<!--506731-->  
         ![ADR custom evaluation schedule offset from base day](./media/ADR-evaluation-schedule-offset.PNG)
 
@@ -118,8 +127,11 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
         -   **As soon as possible**: Makes the software updates in the deployment available to clients as soon as possible. When you create the deployment with this setting selected, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment and the software updates are available for installation.  
 
         -   **Specific time**: Makes software updates included in the deployment available to clients at a specific date and time. When you create the deployment with this setting enabled, Configuration Manager updates the client policy. At the next client policy polling cycle, clients become aware of the deployment. However, the software updates in the deployment aren't available for installation until after the configured date and time.  
+        
+        > [!Note]
+        > Starting in version 2203, the **Software available time** and **Installation deadline** for deployments created by an ADR are now calculated based on the time the ADR evaluation is scheduled and starts. Previously, these times were calculated based on when the ADR evaluation completed. This change makes the  **Software available time** and **Installation deadline** consistent and predictable for deployments. <!--12707738, 7033417-->
 
-    -   **Installation deadline**: Select one of the following settings to specify the installation deadline for the software updates in the deployment:  
+    -   **Installation deadline**: These options are only available for **Required** deployments. Select one of the following settings to specify the installation deadline for the software updates in the deployment:  
 
         -   **As soon as possible**: Select this setting to automatically install the software updates in the deployment as soon as possible.  
 
@@ -128,6 +140,8 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
              - The actual installation deadline time is the displayed deadline time plus a random amount of time up to two hours. The randomization reduces the potential impact of clients in the collection installing updates in the deployment at the same time.  
 
              - The **Disable deadline randomization** in the **Computer Agent** group doesn't override the randomization behavior. For more information, see [Computer Agent client settings](../../core/clients/deploy/about-client-settings.md#computer-agent).  <!--9388804-->
+        > [!Note]
+        > Starting in version 2203, the **Software available time** and **Installation deadline** for deployments created by an ADR are now calculated based on the time the ADR evaluation is scheduled and starts. Previously, these times were calculated based on when the ADR evaluation completed. This change makes the  **Software available time** and **Installation deadline** consistent and predictable for deployments. <!--12707738, 7033417-->
 
     -  **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**: Enable this setting to give users more time to install required software updates beyond the deadline.  
 
@@ -141,12 +155,12 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     -   **User notifications**: Specify whether to display notification in Software Center at the configured **Software available time**. This setting also controls whether to notify users on the clients.  
 
-    -   **Deadline behavior**: Specify the behaviors when the software update deployment reaches the deadline outside of any defined maintenance windows. The options include whether to install the software updates, and whether to perform a system restart after installation. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
+    -   **Deadline behavior**: This setting is only configurable for **Required** deployments. Specify the behaviors when the software update deployment reaches the deadline outside of any defined maintenance windows. The options include whether to install the software updates, and whether to perform a system restart after installation. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
         
         > [!Note]
         > This applies only when the maintenance window is configured for the client device. If no maintenance window is defined on the device, the update of the installation and restart will always happen after the deadline.
 
-    -   **Device restart behavior**: Specify whether to suppress a system restart on servers and workstations if a restart is required to complete update installation.  
+    -   **Device restart behavior**: This setting is only configurable for **Required** deployments. Specify whether to suppress a system restart on servers and workstations if a restart is required to complete update installation.  
 
         > [!WARNING]  
         >  Suppressing system restarts can be useful in server environments, or when you don't want the target computers to restart by default. However, doing so can leave computers in an insecure state. Allowing a forced restart helps to ensure immediate completion of the software update installation.  
@@ -165,7 +179,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
     - Specify if clients should download and install the updates from a distribution point in the site default boundary group, when the content for the software updates isn't available from a distribution point in the current or neighbor boundary groups.  
 
-    - **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache). Starting in version 1802, BranchCache is always enabled on clients. This setting is removed, as clients use BranchCache if the distribution point supports it.  
+    - **Allow clients to share content with other clients on the same subnet**: Specify whether to enable the use of BranchCache for content downloads. For more information, see [BranchCache](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#branchcache). BranchCache is always enabled on clients. This setting is removed, as clients use BranchCache if the distribution point supports it.  
 
     - **If software updates are not available on distribution point in current, neighbor or site boundary groups, download content from Microsoft Updates**: Select this setting to have intranet-connected clients download software updates from Microsoft Update if updates aren't available on distribution points. Internet-based clients always go to Microsoft Update for software updates content.  
 
@@ -196,7 +210,7 @@ Automatically approve and deploy software updates by using an ADR. The rule can 
 
         - **Enable binary differential replication**: Enable this setting to use binary differential replication for the deployment package. For more information, see [Binary differential replication](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#binary-differential-replication).  
 
-    - **No deployment package**: Starting in version 1806, deploy software updates to devices without first downloading and distributing content to distribution points. This setting is beneficial when dealing with extremely large update content. Also use it when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Microsoft 365 Apps updates.<!--1357933-->  
+    - **No deployment package**: Deploy software updates to devices without first downloading and distributing content to distribution points. This setting is beneficial when dealing with extremely large update content. Also use it when you always want clients to get content from the Microsoft Update cloud service. Clients in this scenario can also download content from peers that already have the necessary content. The Configuration Manager client continues to manage the content download, thus can utilize the Configuration Manager peer cache feature, or other technologies such as Delivery Optimization. This feature supports any update type supported by Configuration Manager software updates management, including Windows and Microsoft 365 Apps updates.<!--1357933-->  
 
         > [!Note]  
         > Once you select this option and apply the settings, it can no longer be changed. The other options are greyed out.<!--SCCMDocs-pr issue 3003-->  
@@ -246,15 +260,63 @@ Deployments can also be added programmatically using Windows PowerShell cmdlets.
 For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
 ## Known issues
-<!--9354590, 9391270-->
-### Error code 0x87D20417
 
+### Error code 0x87D20417
+<!--9354590, 9391270-->
 **Scenario:** When running Configuration Manager version 2010, you may notice that an automatic deployment rule fails and returns **Last Error Code** of 0x87D20417. In the **PatchDownloader.log**, you see `Failed to create temp file with GetTempFileName() at temp location C:\Windows\TEMP\, error 80 ` and 0-byte files in the %temp% directory. 
 
 **Workaround:** Remove all the files from the temp directory specified in the **PatchDownloader.log** and rerun the ADR. 
 
 **Resolution:** Install [KB 4600089](https://support.microsoft.com/topic/update-rollup-for-microsoft-endpoint-configuration-manager-current-branch-version-2010-403fa677-e418-e39d-6eb6-f279ea991a95), Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 2010.
 
+### <a name="bkmk_script"></a> Script to apply deployment package settings for automatic deployment rule
+<!--3961933, 4396422-->
+
+If you create an ADR with the **No deployment package** option, you're' unable to go back and add one later. To help you resolve this issue, we've uploaded the following script into [Community hub](../../core/servers/manage/community-hub.md):
+
+   > [!TIP]
+   > [Open this script](https://communityhub.microsoft.com/item/19635) directly in Community hub. For more information, see [Direct links to Community hub items](../../core/servers/manage/community-hub.md).
+
+```powershell
+<# Apply-ADRDeploymentPackageSettings #>
+
+#=============================================
+# START SCRIPT
+#=============================================
+param
+(
+[parameter(Mandatory = $true)]
+[ValidateNotNullOrEmpty()]
+[ValidateLength(1,256)]
+[string]$sourceADRName,
+
+[parameter(Mandatory = $true)]
+[ValidateNotNullOrEmpty()]
+[ValidateLength(1,256)]
+[string]$targetADRName
+)
+
+Try {
+       # Source ADR that already has the needed deployment package. You may need to create one if it doesn’t exist.
+       $sourceADR = Get-CMSoftwareUpdateAutoDeploymentRule -Name $sourceADRName
+
+       # Target ADR that will be updated to use the source ADR’s deployment package. Typically, this is the ADR that used the “No deployment package” option. 
+       $targetADR = Get-CMSoftwareUpdateAutoDeploymentRule -Name $targetADRName
+
+       # Apply the deployment package settings
+       $targetADR.ContentTemplate = $sourceADR.ContentTemplate
+
+       # Update the wmi object
+       $targetADR.Put()
+}
+Catch{
+       $exceptionDetails = "Exception: " + $_.Exception.Message + "HResult: " + $_.Exception.HResult
+       Write-Error "Failed to apply ADR deployment package settings: $exceptionDetails"
+}
+#=============================================
+# END SCRIPT
+#=============================================
+```
 
 ## Next steps
 [Monitor software updates](monitor-software-updates.md)

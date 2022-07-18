@@ -1,6 +1,7 @@
 ---
 title: "SMS_HardwareInventoryAgentConfig Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_HardwareInventoryAgentConfig Windows Management Instrumentation class is an SMS Provider server class that specifies hardware inventory settings for client computers."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: df1b1aa3-66c8-45d4-bf8e-e6382ebb25b4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

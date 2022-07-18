@@ -1,6 +1,7 @@
 ---
 title: "SMS_InstalledSoftware Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_InstalledSoftware class is a client WMI class that merges installed software information from multiple sources to provide categorization and Microsoft Licensing information."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: f9dd9d35-1162-46c2-b198-5278e706012f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -6,11 +6,10 @@ ms.date: 09/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: reference
-ms.assetid: 8036825c-1ae5-4bbe-b3be-3c09eabca19f
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
+ms.localizationpriority: high
 ---
 
 # Endpoint analytics data collection
@@ -31,11 +30,11 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
 1. Devices send required functional data.
 
-    - For Intune and co-managed devices with the assigned policy, devices send require functional data directly to the Microsoft Endpoint Management Service in the Microsoft public cloud where is processed in near real time. For more information, see [Endpoints required for Intune-managed devices](troubleshoot.md#endpoints-required-for-intune-managed-devices).
+    - For Intune and co-managed devices with the assigned policy, devices send required functional data in near real time directly to the Microsoft Endpoint Management Service in the Microsoft public cloud where is processed every 24 hours. For more information, see [Endpoints required for Intune-managed devices](troubleshoot.md#endpoints-required-for-intune-managed-devices).
 
     - For Configuration Manager-managed devices, data flows to the Microsoft Endpoint Management Service through the ConfigMgr [tenant attach](../configmgr/tenant-attach/device-sync-actions.md) connector. Devices don't need direct access to the Microsoft public cloud, but the ConfigMgr connector is cloud attached and requires connection to an Intune tenant. Devices send data to the Configuration Manager Server role every 24 hours, and the connector sends data to the Gateway Service every hour. For more information, see [Tenant attach data collection](../configmgr/tenant-attach/data-collection.md)
 
-1. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the admin console using [MS Graph APIs](/graph/api/resources/intune-device-mgt-conceptual?view=graph-rest-beta&preserve-view=true). The maximum latency end to end is 25 hours and is gated by the time it takes to do the daily processing of insights and recommendations.
+1. The Microsoft Endpoint Management service processes data for each device and publishes the results for both individual devices and organizational aggregates in the admin console using [MS Graph APIs](/graph/api/resources/intune-device-mgt-conceptual?view=graph-rest-beta&preserve-view=true). The maximum latency end to end is 96 hours.
   
 > [!Note]  
 > When you first setup Endpoint analytics, add new clients to the [Intune data collection policy](settings.md#bkmk_profile), or [enable device upload](../configmgr/tenant-attach/device-sync-actions.md#bkmk_edit) for a new collection, the reports in endpoint analytics portal may not show complete data right away. The data required to compute the startup score for a device is generated during boot time. Depending on power settings and user behavior, it may take weeks after a device has been enrolled to show the startup score on the admin console.
@@ -76,7 +75,7 @@ Currently, the basic functionality of Endpoint analytics collects information as
 
 ## <a name="bkmk_stop"></a> Stop gathering data
 
-- If you're enrolling Intune managed devices only, unselect the **Boot performance** scope from  the [Intune data collection policy](settings.md#bkmk_profile) created during sign-up. Optionally, [revoke consent](settings.md#bkmk_consent) to share anonymized and aggregate metrics for seeing updated Endpoint analytics scores and insights.
+- If you're enrolling Intune managed devices only, unselect the **Endpoint analytics** scope from  the [Intune data collection policy](settings.md#bkmk_profile) created during sign-up. Optionally, [revoke consent](settings.md#bkmk_consent) to share anonymized and aggregate metrics for seeing updated Endpoint analytics scores and insights.
 
 - If you're enrolling devices that are managed by Configuration Manager, you’ll need to do the following steps to disable data upload in Configuration Manager:
 

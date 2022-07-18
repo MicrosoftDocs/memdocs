@@ -1,6 +1,7 @@
 ---
 title: "GetAdvertisements Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that gets the advertisement ID for a computer."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 269422ee-e896-49ca-9cdc-c648055d1395
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

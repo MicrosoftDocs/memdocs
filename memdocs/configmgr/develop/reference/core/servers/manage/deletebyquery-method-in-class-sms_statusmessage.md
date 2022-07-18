@@ -1,6 +1,7 @@
 ---
 title: "DeleteByQuery Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the DeleteByQuery WMI class method deletes status messages specified by a WQL query."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 0b96f338-dd8a-449d-a4c0-8177ebbb0bc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

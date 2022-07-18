@@ -3,7 +3,7 @@
 
 title: Intune shared device settings for the iOS/iPadOS Classroom app
 titleSuffix: Microsoft Intune
-description: Learn the Intune settings you can use to control settings for the Classroom app on iOS/iPadOS devices.  
+description: Learn the Intune settings you can use to control settings for the Classroom app on shared iOS/iPadOS devices.  
 keywords:
 author: lenewsad
 ms.author: lanewsad
@@ -46,7 +46,7 @@ For information about configuring dedicated (1:1) iPad devices to use the Classr
 The prerequisites to use the shared iPad capabilities are:
 
 - Setup [Apple School Manager](../enrollment/apple-school-manager-set-up-ios.md) and [School Data Sync (SDS)](https://support.office.com/article/Apple-School-Manager-integration-with-Intune-for-Education-and-School-Data-Sync-974bd1f9-2c7a-45cb-9447-b58166108617).
-- As part of Apple School Manager setup, configure [Managed Apple IDs](http://help.apple.com/schoolmanager/#/tes78b477c81) for students. [Learn more about Managed Apple IDs](https://support.apple.com/HT205918).
+- As part of Apple School Manager setup, configure [Managed Apple IDs](https://school.apple.com/) for students. [Learn more about Managed Apple IDs](https://support.apple.com/HT205918).
 - Create an enrollment profile for the device serial numbers synced from Apple School Manager.
 
 ## Step 1 - Import your school data into Azure Active Directory

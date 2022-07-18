@@ -1,6 +1,7 @@
 ---
 title: "SMS_OS_Details Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that describes the supported platforms, such as, operating system, architecture, and versions, on which a program can run."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 1be82e7a-bb57-4ffa-a5c6-96c7f9739761
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the GetAssignedSite method to get the current assigned site of the client in Configuration Manager. 
 title: "GetAssignedSite Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 62374585-a938-4b1f-8f59-1e7509b39727
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

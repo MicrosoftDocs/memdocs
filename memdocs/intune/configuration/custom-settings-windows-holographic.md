@@ -7,8 +7,8 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/18/2020
-ms.article: reference
+ms.date: 01/18/2022
+ms.article: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -20,6 +20,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -41,7 +42,7 @@ This article shows you how to create a custom profile for Windows Holographic fo
 
 ## Before you begin
 
-[Create a Windows 10 custom profile](custom-settings-configure.md#create-the-profile).
+[Create a Windows 10/11 custom profile](custom-settings-configure.md#create-the-profile).
 
 ## Custom OMA-URI Settings
 
@@ -169,6 +170,6 @@ Additionally, Intune doesn't support all of the settings listed in [CSPs support
 
 [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-Create a [custom profile on Windows 10 devices](custom-settings-windows-10.md).
+Create a [custom profile on Windows 10/11 devices](custom-settings-windows-10.md).
 
 Learn more about [custom profiles](custom-settings-configure.md) in Intune.

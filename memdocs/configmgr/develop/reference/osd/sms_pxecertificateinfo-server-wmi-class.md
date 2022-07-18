@@ -1,4 +1,5 @@
 ---
+description: Learn how to define a media certificate that is registered by Configuration Manager and used by PXE clients to communicate with a management point.
 title: "SMS_PXECertificateInfo Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 8a647b49-306e-427e-93e8-1c0f479246da
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

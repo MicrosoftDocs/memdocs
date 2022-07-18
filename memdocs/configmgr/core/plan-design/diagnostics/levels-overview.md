@@ -2,15 +2,14 @@
 title: Levels of diagnostic usage data
 titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data that Configuration Manager collects
-ms.date: 04/05/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
-ms.assetid: 3c46bdb2-5bda-47c8-b5f4-9365a4b3521c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Levels of diagnostic usage data
@@ -46,25 +45,30 @@ Some examples of data that this level doesn't collect include:
 
 The Full level includes all data in the Basic and Enhanced levels. It also includes additional information about Endpoint Protection, update compliance percentages, and software update information. This level can also include advanced diagnostic information like system files and memory snapshots. This advanced data might include personal information exists in memory or log files at the time of capture.
 
-## <a name="bkmk_change"></a> How to change the level
+## How to change the level
 
 To change the data collection level, you need **Modify** permissions on the **Site** object class.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
+
 1. Select **Hierarchy Settings** in the ribbon.
+
 1. Switch to the **Diagnostic and Usage Data** tab, then choose the data level.
 
-## <a name="bkmk_versions"></a> Version-specific details
+## Version-specific details
 
 The following articles detail the specific data that Configuration Manager collects at each level with each supported version:
 
+- [Diagnostic and usage data for 2203](levels-of-diagnostic-usage-data-collection-2203.md)
+- [Diagnostic and usage data for 2111](levels-of-diagnostic-usage-data-collection-2111.md)
+- [Diagnostic and usage data for 2107](levels-of-diagnostic-usage-data-collection-2107.md)
 - [Diagnostic and usage data for 2103](levels-of-diagnostic-usage-data-collection-2103.md)
 - [Diagnostic and usage data for 2010](levels-of-diagnostic-usage-data-collection-2010.md)
-- [Diagnostic and usage data for 2006](levels-of-diagnostic-usage-data-collection-2006.md)
-- [Diagnostic and usage data for 2002](levels-of-diagnostic-usage-data-collection-2002.md)
-- [Diagnostic and usage data for 1910](levels-of-diagnostic-usage-data-collection-1910.md)
+
 
 ## Next steps
 
+Next, learn about the diagnostics and usage data that Configuration Manager collects for its tools:
+
 > [!div class="nextstepaction"]
-> [Frequently asked questions](frequently-asked-questions.yml)
+> [Diagnostic usage data for tools](tools.md)

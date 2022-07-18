@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Domain join profile settings for Windows 10 in Microsoft Intune - Azure | Microsoft Docs
+title: Domain join profile settings for Windows 10/11 in Microsoft Intune
 description: Create a domain join device configuration profile for hybrid Azure AD joined devices. Use this profile to deploy on-premises Active Directory domain information to devices provisioned with Windows Autopilot and Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 01/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: mikedano
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -34,7 +35,8 @@ A **Domain Join** configuration profile includes on-premises Active Directory do
 
 This feature applies to:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 - Hybrid Azure AD joined devices
 - Hybrid deployment with Autopilot + Intune
 
@@ -52,8 +54,8 @@ This article shows you how to create a domain join profile for a hybrid Autopilo
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10: Windows Autopilot domain join**.
-    - **Description**: Enter a description for the policy. This setting is optional, but recommended. For example, enter **Windows 10: Domain join profile that includes on-premises domain information to enroll hybrid AD joined devices with Windows Autopilot**.
+    - **Name**: Enter a descriptive name for the policy. Name your policies so you can easily identify them later. For example, a good policy name is **Windows 10/11: Windows Autopilot domain join**.
+    - **Description**: Enter a description for the policy. This setting is optional, but recommended. For example, enter **Windows 10/11: Domain join profile that includes on-premises domain information to enroll hybrid AD joined devices with Windows Autopilot**.
 
 6. Select **Next**.
 7. In **Configuration settings**, enter the following properties:

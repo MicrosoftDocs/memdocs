@@ -1,11 +1,11 @@
 ---
 # required metadata
 
-title: Reset device passcodes with Microsoft Intune - Azure | Microsoft Docs
+title: Reset device passcodes with Microsoft Intune
 description: Remove or reset the passcode by using the remove passcode action on devices you manage or monitor with Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/27/2020
 ms.topic: how-to
@@ -20,7 +20,7 @@ ms.assetid: 47181d19-4049-4c7a-a8de-422206c4027e
 #ROBOTS:
 #audience:
 
-#ms.reviewer: coferro
+ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -63,7 +63,7 @@ To create a new work profile passcode, use the Reset Passcode action. This actio
 ## Reset a passcode
 
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Azure Active Directory Global Admin, Azure Active Directory Intune Service Admin, Helpdesk Operator, or Role Administrator.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with any of the following roles: Azure Active Directory Global Admin, Azure Active Directory Intune Service Admin (also known as Intune Administrator), Helpdesk Operator, or Role Administrator.
 2. Select **Devices**, and then select **All devices**.
 3. From the list of devices you manage, select a device, and choose **Reset passcode**.
 
@@ -84,6 +84,10 @@ The temporary passcode must be entered on the device. The temporary passcode for
 ## Remove iOS/iPadOS passcodes
 
 Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device will prompt the user to set a new passcode in Settings.
+
+## Troubleshooting remote lock failures
+If the remote lock action failed, validate that the following have been correctly configured:
+- If the remote lock action failed on an Android (AOSP) device, confirm that you have a device passcode policy assigned to the device. If the device does not have a device passcode assigned, the remote lock action will not succeed.
 
 ## Next steps
 

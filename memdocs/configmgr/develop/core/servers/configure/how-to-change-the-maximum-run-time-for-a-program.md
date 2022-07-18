@@ -1,6 +1,7 @@
 ---
 title: "Change the Maximum Run Time for a Program"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the following example shows how to modify a program by using the SMS_Package and SMS_Program classes and properties."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: af806aee-a8da-499b-9d46-86d888c6ddc4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

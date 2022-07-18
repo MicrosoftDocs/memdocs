@@ -1,6 +1,7 @@
 ---
 title: "Create an Object by Using WMI"
 titleSuffix: "Configuration Manager"
+description: "Create a Configuration Manager object by calling the SWbemObject object SpawnInstance_ method."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: c52cf79a-45d7-45c8-b8f2-5610d06b38e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

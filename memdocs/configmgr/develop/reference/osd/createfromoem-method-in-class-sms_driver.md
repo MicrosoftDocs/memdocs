@@ -1,6 +1,8 @@
 ---
 title: "CreateFromOEM Method"
 titleSuffix: "Configuration Manager"
+description: "Creates a set of mass-storage SMS_Driver Server WMI Class objects referenced by the specified Txtsetup.oem file."  
+
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +11,8 @@ ms.assetid: ff294184-6e2f-4be1-b1db-44ccd82d18db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

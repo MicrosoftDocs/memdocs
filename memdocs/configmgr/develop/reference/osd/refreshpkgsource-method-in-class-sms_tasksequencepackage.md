@@ -1,6 +1,7 @@
 ---
 title: "RefreshPkgSource Method in SMS_TaskSequencePackage"
 titleSuffix: "Configuration Manager"
+description: "The RefreshPkgSource class method refreshes the package source at all distribution points when the package properties have not changed."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 24d3514f-b1b7-4ac3-b1ac-17548aa3f273
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

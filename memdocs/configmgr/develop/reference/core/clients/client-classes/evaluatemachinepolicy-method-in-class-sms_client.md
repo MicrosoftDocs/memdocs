@@ -1,5 +1,6 @@
 ---
 title: "EvaluateMachinePolicy Method"
+description: Learn how the EvaluateMachinePolicy method initiates the evaluation of the policy assigned to a specified computer or device. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: 8f8b7106-2694-4a58-8931-6b18a9a2892b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

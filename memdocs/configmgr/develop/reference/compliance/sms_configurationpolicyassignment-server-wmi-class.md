@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the  SMS_ConfigurationPolicyAssignment to represent the deployment of an instance of SMS_ConfigurationPolicy in Configuration Manager.
 title: "SMS_ConfigurationPolicyAssignment Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: eb3f5212-bc83-403a-b684-aa3339364729
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

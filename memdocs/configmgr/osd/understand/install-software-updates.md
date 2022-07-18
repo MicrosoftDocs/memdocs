@@ -6,10 +6,10 @@ ms.date: 03/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: troubleshooting
-ms.assetid: 72d1ccd5-3763-4f88-9273-e1a73e8f4286
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install Software Updates
@@ -32,7 +32,7 @@ To help this process be successful, use the following recommendations:
 
 Use Configuration Manager to regularly install applicable software updates to your image files. This practice then reduces the number of updates that you need to install during the task sequence.
 
-For more information, see [Apply software updates to an image](../get-started/manage-operating-system-images.md#BKMK_OSImagesApplyUpdates).
+For more information, see [Apply software updates to an image](../get-started/manage-operating-system-images.md#apply-software-updates-to-an-image).
 
 ### Single index
 
@@ -50,7 +50,7 @@ dism /Image:C:\Mountdir /Cleanup-Image /StartComponentCleanup /ResetBase
 dism /Unmount-Image /MountDir:C:\Mountdir /Commit  
 ```
 
-There's an option to automate this process. For more information, see [Optimized image servicing](../get-started/manage-operating-system-images.md#bkmk_resetbase).<!--3555951-->
+There's an option to automate this process. For more information, see [Optimized image servicing](../get-started/manage-operating-system-images.md#optimized-image-servicing).<!--3555951-->
 
 ## Image engineering decisions
 
@@ -83,7 +83,7 @@ For more information on this process, see [Create a task sequence to capture an 
 
 Schedule Configuration Manager to apply software updates to your images.
 
-For more information, see [Apply software updates to an image](../get-started/manage-operating-system-images.md#BKMK_OSImagesApplyUpdates).
+For more information, see [Apply software updates to an image](../get-started/manage-operating-system-images.md#apply-software-updates-to-an-image).
 
 #### Advantages: offline servicing
 

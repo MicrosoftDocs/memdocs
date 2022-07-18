@@ -1,4 +1,5 @@
 ---
+description: Learn how to display Configuration Manager actions by specified conditions such as regular expressions, method calls, or security permissions.
 title: "Conditional Actions"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: f9e46b28-e6dc-48c8-aa0e-24079774d129
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

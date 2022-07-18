@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent configuration item rules using SMS_ConfigurationItemRules in Configuration Manager.
 title: "SMS_ConfigurationItemRules Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 870fb139-d723-4d65-b4e8-a1ff15fd19b8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

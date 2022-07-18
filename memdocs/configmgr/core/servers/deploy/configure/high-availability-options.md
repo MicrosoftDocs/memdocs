@@ -2,14 +2,14 @@
 title: High availability
 titleSuffix: Configuration Manager
 description: Learn how to deploy Configuration Manager by using options that maintain a high level of available service.
-ms.date: 04/05/2021
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 1a38421d-24c1-4fef-bf6c-42fce53109ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # High availability options for Configuration Manager
@@ -67,7 +67,7 @@ Install an additional site server in *passive* mode for a central administration
 
 ### Use a remote content library
 
-Move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [The content library](../../../plan-design/hierarchy/the-content-library.md#bkmk_remote).
+Move the site's content library to a remote location that provides highly available storage. This feature is a requirement for site server high availability. For more information, see [Configure a remote content library for the site server](../../../plan-design/hierarchy/remote-content-library.md).
 
 ### Centralize content sources
 
@@ -116,7 +116,7 @@ At each site, you deploy site system roles to provide the services that you want
 
 To provide redundancy for reporting on sites and clients, install multiple instances of the reporting services point.
 
-Failover support for a software update point in a network load balancing (NLB) cluster was deprecated in version 1702. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features). To provide redundancy for software update points, use software update point switching. This allows clients to connect to a new software update point server if one fails or becomes unavailable. For more information, see [Sofware update point switching](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching)  
+Failover support for a software update point in a network load balancing (NLB) cluster was deprecated in version 1702. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features). To provide redundancy for software update points, use software update point switching. This allows clients to connect to a new software update point server if one fails or becomes unavailable. For more information, see [Software update point switching](../../../../sum/plan-design/plan-for-software-updates.md#BKMK_SUPSwitching)  
 
 ### Built-in site backup
 
@@ -153,7 +153,7 @@ Secondary sites only support installation of one management point, which must be
 
 ### Distribution point
 
-Install multiple distribution points, and deploy content to multiple distribution points. Add more than one distribution point per boundary group to make sure clients get several options in their content request. Configure boundary group relationships so that they have a predicable fallback behavior to another boundary group or cloud distribution point. For more information, see [Configure boundary groups](boundary-groups.md).  
+Install multiple distribution points, and deploy content to multiple distribution points. Add more than one distribution point per boundary group to make sure clients get several options in their content request. Configure boundary group relationships so that they have a predicable fallback behavior to another boundary group or content-enabled cloud management gateway. For more information, see [Configure boundary groups](boundary-groups.md).
 
 ## <a name="bkmk_client"></a> High availability for clients  
 
@@ -207,6 +207,9 @@ The site database, rather than the individual client, retains important informat
 Several site systems don't support multiple instances at a site or in the hierarchy. This information can help you prepare for these site systems going offline.  
 
 ### Asset intelligence synchronization point (hierarchy)
+
+> [!IMPORTANT]
+> Starting in November 2021, this feature of Configuration Manager is deprecated.<!-- 12454890 --> For more information, see [Asset intelligence deprecation](../../../clients/manage/asset-intelligence/deprecation.md).
 
 This site system role isn't considered mission critical and provides optional functionality in Configuration Manager. If this site system goes offline, use one of the following options:  
 

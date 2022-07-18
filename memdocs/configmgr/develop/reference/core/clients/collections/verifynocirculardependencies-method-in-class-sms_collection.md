@@ -1,4 +1,5 @@
 ---
+description: Learn how to take two collections as arguments and verify that no circular dependencies form using VerifyNoCircularDependencies.
 title: "VerifyNoCircularDependencies Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 233501a5-2b33-4394-8732-e77e46331871
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

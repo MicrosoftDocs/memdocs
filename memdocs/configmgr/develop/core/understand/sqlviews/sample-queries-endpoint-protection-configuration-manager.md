@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for endpoint protection
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common Endpoint Protection views to other views.
@@ -12,6 +12,8 @@ ms.assetid: c639ace8-52dd-4e91-92fa-e11e56878bd7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Sample queries for endpoint protection in Configuration Manager

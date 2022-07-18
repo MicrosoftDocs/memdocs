@@ -1,6 +1,7 @@
 ---
 title: "ClearLastNBSAdvForMachines Method"
 titleSuffix: "Configuration Manager"
+description: The ClearLastNBSAdvForMachines Windows Management Instrumentation class method, in Configuration Manager, clears the last Network Boot advertisement for selected client computers.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: f2a51410-3735-49fe-9024-be458ab3578d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

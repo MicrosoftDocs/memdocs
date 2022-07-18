@@ -1,6 +1,7 @@
 ---
 title: SetIsExpired method in class SMS_Application
 titleSuffix: "Configuration Manager"
+description: "Set the expired status of this application."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 19057632-e75d-4b1c-ab26-72aeb1da2974
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

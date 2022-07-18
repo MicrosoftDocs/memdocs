@@ -8,7 +8,7 @@ items:
   - name: Privacy information
     href: core/misc/privacy/privacy-information.md
   - name: What's new in the SDK
-    href: core/changes/what-s-new-in-the-system-center-configuration-manager-sdk.md
+    href: core/changes/whats-new-sdk.md
 - name: Requirements
   items:
   - name: About SDK requirements
@@ -23,8 +23,6 @@ items:
     href: core/reqs/server-development-requirements.md
   - name: SDK libraries and header files
     href: core/reqs/configuration-manager-sdk-libraries-and-header-files.md
-- name: SDK samples
-  href: core/understand/configuration-manager-sdk-samples.md
 - name: Programming fundamentals
   items:
   - name: Get started with Configuration Manager programming
@@ -328,7 +326,7 @@ items:
           - name: WMI namespaces and classes for reports
             href: core/understand/sqlviews/wmi-namespaces-classes-configuration-manager-reports.md
       - name: List of reports in Configuration Manager
-        href: core/understand/sqlviews/reports-supplied-with-configuration-manager.md
+        href: ../core/servers/manage/list-of-reports.md
   - name: SMS Provider
     items:
     - name: About the SMS Provider

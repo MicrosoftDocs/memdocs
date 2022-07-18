@@ -9,7 +9,9 @@ ms.assetid: 9929aeac-7f48-4151-b228-d66be910a9c8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
+ms.localizationpriority: null
+ms.collection: openauth
+description: "You can create a software metering rule in Configuration Manager by creating an instance of the SMS_MeteredProductRule class and populating the properties."
 
 ---
 # How to Create a Software Metering Rule
@@ -30,7 +32,7 @@ You create a software metering rule, in Configuration Manager, by creating an in
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
 
-```vbs  
+```vb
 
 Sub CreateSWMRule(connection,              _  
                   newProductName,          _  

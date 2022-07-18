@@ -1,46 +1,35 @@
 ---
-title: Tenant attach - Applications (preview) in the admin center
+title: Tenant attach - Applications in the admin center
 titleSuffix: Configuration Manager
-description: "Install applications for uploaded Configuration Manager devices from the admin center."
-ms.date: 06/28/2021
+description: Install applications for uploaded Configuration Manager devices from the admin center.
+ms.date: 07/11/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 963dda08-87b8-4e80-90a7-25625efe8861
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
-# <a name="bkmk_apps"></a> Tenant attach: Install an application from the admin center (preview)
-<!--cm 6024389, in 7220536 pubpreview Aug 10, 2020-->
+# <a name="bkmk_apps"></a> Tenant attach: Install an application from the admin center
+<!--cm 6024389, in 7220536 pubpreview Aug 10, 2020, GA 2201-->
 *Applies to: Configuration Manager (current branch)*
-
-> [!Important]
-> - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 Microsoft Endpoint Manager is an integrated solution for managing all of your devices. Microsoft brings together Configuration Manager and Intune into a single console called **Microsoft Endpoint Manager admin center**. From the Microsoft Endpoint Management admin center, you can initiate an application install in real time for a tenant attached device.
 
-   :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Screenshot of applications in Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-list.png":::
+   :::image type="content" source="media/6024389-tenant-attach-application-list.png" alt-text="Screenshot of applications in Microsoft Endpoint Manager admin center." lightbox="media/6024389-tenant-attach-application-list.png":::
+
+> [!NOTE]
+> Starting in version 2111, this behavior also supports [application groups](../apps/deploy-use/create-app-groups.md#app-approval).<!-- 10992210 --> When this article refers to an *application*, it also applies to app groups.
 
 ## Prerequisites
-
-For Configuration Manager versions 2103, or later:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites).
 - An application that meets one of the following requirements: <!--8795301-->
    - Is deployed to the device
    - Is deployed to a user that's logged in to the device, primary user of the device, and applications previously installed for the user
      - When you have a large number of device available applications, using the **An administrator must approve a request for this application on the device** on application deployments is recommended. For more information, see [Display all applications for a device in the admin center](#bkmk_all).
-
-For Configuration Manager versions 2010, and earlier:
-
-- All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites)
-- A minimum of [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/)
-- Enable the optional feature **Approve application requests for users per device**. For more information, see [Enable optional features from updates](../core/servers/manage/install-in-console-updates.md#bkmk_options).
-- At least one application deployed to a device collection with the **An administrator must approve a request for this application on the device** option set on the deployment. For more information, see [Approve applications](../apps/deploy-use/app-approval.md#bkmk_opt).
-   - User targeted applications or applications without the approval option set don't appear in the application list when you're using Configuration Manager version 2002.
-- A minimum of Configuration Manager version 2006 is required for installing [user targeted applications](#bkmk_user)<!--7518897-->.
 
 ## Permissions
 
@@ -64,8 +53,8 @@ You can filter the application list based on the status. The application status 
 - **Failed**: The application installation failed.
 - **Requirements not met**: The application requirements haven't been met.
 - **Not installed**: The application isn't currently installed. Typically this status is seen if a different deployment or a user removed the application.
-- **Restart pending**: The application is installed but needs a restart to complete (starting in version 2006).
-- **Required**: Installation is required for the application (starting in version 2103)
+- **Restart pending**: The application is installed but needs a restart to complete.
+- **Required**: Installation is required for the application
 
 ## <a name="bkmk_deploy"></a> Deploy an application to a device
 
@@ -75,15 +64,12 @@ You can filter the application list based on the status. The application status 
 1. Select **Applications**.
 1. Select the application and choose **Install**.
 
-   :::image type="content" source="media/6024389-tenant-attach-application-install.png" alt-text="Screenshot of application installation from Microsoft Endpoint Manager admin center" lightbox="media/6024389-tenant-attach-application-install.png":::
-
 You can export all of the data currently in the view into a .csv file. At the top of the page, select the **Export** option to create the file. If the view exceeds 500 rows, only the first 500 are exported.
 
 ## <a name="bkmk_user"></a> Deploy an application to a user
 <!--7518897-->
-*(Introduced in version 2006)*
 
-Starting in Configuration Manager version 2006, user available applications appear in the **Applications** node for a ConfigMgr device. The list of applications available for the device also includes applications deployed to the device's currently logged on user.
+User available applications appear in the **Applications** node for a ConfigMgr device. The list of applications available for the device also includes applications deployed to the device's currently logged on user.
 
 Deploying applications to a user has the following limitations:
 - Multi-user session scenarios aren't supported.
@@ -92,9 +78,9 @@ Deploying applications to a user has the following limitations:
 
 ## <a name="bkmk_repair"></a> Uninstall, repair, re-evaluate, or reinstall an application
 <!--7979972, 8227649-->
-*(Introduced in version 2010)*
 
- Starting in Configuration manager version 2010, administrators can do the following actions for applications in the Microsoft Endpoint Manager admin center:
+
+Administrators can do the following actions for applications in the Microsoft Endpoint Manager admin center:
 
 - **Uninstall** an application
 - **Repair** installation of an application
@@ -129,9 +115,8 @@ Deploying applications to a user has the following limitations:
 
 ## <a name="bkmk_all"></a> Display all applications for a device in the admin center
 <!--8795301-->
-*(Introduced in version 2103)*
 
-Starting in Configuration Manager 2103, the **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center displays more applications from Configuration Manager. This improvement allows you to review when application installations are expected to occur on a device. Displayed applications include applications that are:
+The **Applications** view for a tenant attached device in Microsoft Endpoint Manager admin center displays more applications from Configuration Manager. This improvement allows you to review when application installations are expected to occur on a device. Displayed applications include applications that are:
 - Deployed to the device
 - Deployed to a user that's logged in to the device, primary user of the device, or was previously installed.
 
@@ -143,7 +128,7 @@ The option, **An administrator must approve a request for this application on th
 
 1. Go to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) and sign in.
 1. From **Devices** > **All devices**, choose a device managed by **ConfigMgr**.
-1. Select **Applications (preview)** then select an application that has a **Status** of **Required**.
+1. Select **Applications** then select an application that has a **Status** of **Required**.
 1. Review the details of the schedule for the installation of the application.
 
 ## <a name="bkmk_display"></a> What applications and actions are available for my version of Configuration Manager?
@@ -152,8 +137,6 @@ The displayed application and available actions are dependent on the version of 
 
 |Configuration Manager version|Applications displayed|Available actions|
 |---|---|---|
-|Configuration Manager version 2002 with devices running any client version| Device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment.| Install </br> Reinstall|
-|Configuration Manager version 2006 with devices running any client version| Device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment. </br> </br> All user-available applications| Install </br> Reinstall|
 |Configuration Manager version 2010 with devices running client versions before 2010| Device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment. </br> </br> All user-available applications| Install </br> Reinstall|
 |Configuration Manager version 2010 with devices running 2010 client versions| Device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment. </br> </br> All user-available applications|Install </br> Reinstall </br> Re-evaluate </br> Uninstall </br> Repair|
 |Configuration Manager version 2103 with devices running 2006 or earlier client versions| All applications targeted to the device </br> </br> All user targeted applications related to the device. For example, applications targeted to the logged in user, primary user, and applications previously installed for the user are displayed.| For user and device-available applications with the **An administrator must approve a request for this application on the device** option set on the deployment: </br>&nbsp;&nbsp;&nbsp;Install</br>&nbsp;&nbsp;&nbsp;Reinstall</br></br>  All other applications display status but no actions are available |

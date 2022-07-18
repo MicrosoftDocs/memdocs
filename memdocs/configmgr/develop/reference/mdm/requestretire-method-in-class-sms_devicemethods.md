@@ -1,6 +1,7 @@
 ---
 title: "RequestRetire Method"
 titleSuffix: "Configuration Manager"
+description: "The RequestRetire Windows Management Instrumentation (WMI) class method requests the retirement of this device from Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: cdea7272-1dd8-4881-8aa5-692c57d223a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

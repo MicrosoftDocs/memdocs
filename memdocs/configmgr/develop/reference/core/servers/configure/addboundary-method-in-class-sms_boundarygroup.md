@@ -1,4 +1,5 @@
 ---
+description: Learn how to add boundaries to a boundary group in Configuration Manager using AddBoundary class method.
 title: AddBoundary method in class SMS_BoundaryGroup
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 8bb764e3-c2c4-4b06-b9ec-4bc060b1fbeb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

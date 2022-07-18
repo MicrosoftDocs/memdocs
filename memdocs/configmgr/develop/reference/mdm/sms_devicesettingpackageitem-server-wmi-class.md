@@ -1,4 +1,5 @@
 ---
+description: Learn how the SMS_DeviceSettingPackageItem Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that associates a device setting configuration item with a device setting package.
 title: "SMS_DeviceSettingPackageItem Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 36769462-1a62-4830-8b44-bcd7386a508b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

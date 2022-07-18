@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create macOS system and kernel extensions with Microsoft Intune - Azure | Microsoft Docs
+title: Create macOS system and kernel extensions with Microsoft Intune
 titleSuffix:
 description: Add or create a macOS device profile that configures system extensions or kernel extensions to allow user override, adds team identifier, and adds a bundle and team identifier in Microsoft Intune.
 keywords:
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-ms.reviewer: annovich
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

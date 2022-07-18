@@ -1,11 +1,11 @@
 ---
-title: Use the Microsoft Tunnel VPN gateway with Conditional Access policies - Azure | Microsoft Docs
+title: Use Microsoft Tunnel VPN gateway with Conditional Access policies
 description: Configure your Azure tenant to support using Conditional Access policies to grant access to the Intune Microsoft Tunnel VPN gateway solution.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/24/2021
+ms.date: 01/31/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,7 +17,7 @@ ms.technology:
 #ROBOTS:
 #audience:
  
-ms.reviewer: tycast
+ms.reviewer: ochukwunyere
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -25,11 +25,11 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use Conditional Access with the Microsoft Tunnel in Intune
+# Use Conditional Access with Microsoft Tunnel in Intune
 
 If your Microsoft Intune environment uses both Azure Active Directory (AD) and Conditional Access, you can use Conditional Access policies to gate device access to your Microsoft Tunnel VPN gateway.
 
-To support integration of Conditional Access and the Microsoft Tunnel, you’ll use Azure AD PowerShell to enable your tenant to support Microsoft Tunnel. After enabling your tenant to support Microsoft Tunnel, you can then create Conditional Access policies that apply to the Microsoft Tunnel app.
+To support integration of Conditional Access and Microsoft Tunnel, you’ll use Azure AD PowerShell to enable your tenant to support Microsoft Tunnel. After enabling your tenant to support Microsoft Tunnel, you can then create Conditional Access policies that apply to the Microsoft Tunnel app.
 
 ## Provision your tenant
 
@@ -37,7 +37,7 @@ Before you can configure Conditional Access policies for the tunnel, you must en
 
 1. [Download and install](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true) the **AzureAD PowerShell module**.
 
-2. Download the PowerShell script named **mst-CA-readiness.ps1** from aka.ms/mst-ca-provisioning.
+2. Download the PowerShell script named **mst-ca-provisioning.ps1** from aka.ms/mst-ca-provisioning.
 
 3. Using credentials that have the Azure Role permissions [equivalent to **Application Administrator**](/azure/active-directory/users-groups-roles/directory-assign-admin-roles#application-administrator-permissions), run the script from any location in your environment, to provision your tenant.
 

@@ -1,6 +1,7 @@
 ---
 title: "PxeAuthClass Client COM Automation Class"
 titleSuffix: "Configuration Manager"
+description: "PxeAuthClass is a COM automation class that supports PXE service point authorization in operating system deployment and implements the IPxeAuthClass interface."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: c95a5ec0-0ec9-4c60-ad5f-4f3e93aabb5a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

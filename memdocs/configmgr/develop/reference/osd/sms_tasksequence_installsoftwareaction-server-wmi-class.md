@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_TaskSequence_InstallSoftwareAction class to represent task sequence actions that install software.
 title: "SMS_TaskSequence_InstallSoftwareAction Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: e6679d3b-6019-4404-bdb1-62ec5ae17edd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

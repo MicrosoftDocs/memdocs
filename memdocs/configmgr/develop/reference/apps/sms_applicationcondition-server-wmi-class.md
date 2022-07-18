@@ -1,6 +1,7 @@
 ---
 title: "SMS_ApplicationCondition Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents relationships between global conditions and applications." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 4d92732b-9f97-42fe-a441-559a87f05588
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

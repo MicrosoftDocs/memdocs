@@ -1,6 +1,7 @@
 ---
 title: "ExcludeAndInclude Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the ExcludeAndInclude WMI class method marks the entities as excluded or included."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: dc89e1e1-be01-4118-8590-0013ecff5c28
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

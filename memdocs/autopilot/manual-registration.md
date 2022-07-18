@@ -1,7 +1,5 @@
 ---
 title: Manual registration of devices for Windows Autopilot
-ms.reviewer: 
-manager: laurawi
 description: Manual registration overview
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -10,9 +8,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
-ms.date: 12/16/2020
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
+ms.date: 8/4/2021
 ms.topic: how-to
 ms.collection: 
 - M365-modern-desktop
@@ -23,7 +23,8 @@ ms.collection:
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004
 
 Ideally, registration of a device with Windows Autopilot is performed by the OEM, reseller, or distributor from which the device was purchased. However it is also possible to register devices manually. You might need to register a device manually if:
@@ -33,11 +34,11 @@ Ideally, registration of a device with Windows Autopilot is performed by the OEM
 
 The following diagram shows how you might use manual registration and OEM registration to deploy both new and existing devices with Windows Autopilot.
 
-![Windows Autopilot device registration process](images/image2.png)
+![Windows Autopilot device registration process.](images/image2.png)
 
 For a list of participant device manufacturers and device resellers, see [Autopilot device manufacturers and resellers](https://www.microsoft.com/microsoft-365/windows/windows-autopilot#office-SecondaryMessaging-k4if896).
 
-To [manually register a device](add-devices.md), you must first capture its hardware hash. Once this process has completed, the resulting hardware hash can be uploaded to the Windows Autopilot service. Because this process requires booting the device into Windows 10 to obtain the hardware hash, manual registration is intended primarily for testing and evaluation scenarios.
+To [manually register a device](add-devices.md), you must first capture its hardware hash. Once this process has completed, the resulting hardware hash can be uploaded to the Windows Autopilot service. Because this process requires booting the device into Windows to obtain the hardware hash, manual registration is intended primarily for testing and evaluation scenarios.
 
 > [!Note]
 > Customers can only register devices with a hardware hash. Other methods (PKID, tuple) are available through OEMs or CSP partners as described in the previous sections.
@@ -49,8 +50,11 @@ After the hardware hashes have been captured from existing devices, they can be 
 - [Microsoft Intune](add-devices.md). This is the preferred mechanism for all customers.
   - The Microsoft Endpoint Manager admin center is used for Intune device enrollment.
 - [Partner Center](https://msdn.microsoft.com/partner-center/autopilot). This is used by CSP partners to register devices on behalf of customers.
-- [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-AutoPilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
+- [Microsoft 365 Business & Office 365 Admin](https://support.office.com/article/Create-and-edit-Autopilot-profiles-5cf7139e-cfa1-4765-8aad-001af1c74faa). This is typically used by small and medium businesses (SMBs) who manage their devices using Microsoft 365 Business.
 - [Microsoft Store for Business](/microsoft-store/add-profile-to-devices#manage-autopilot-deployment-profiles). You might already be using MSfB to manage your apps and settings.
+
+>[!IMPORTANT]
+>Microsoft Store for Business and Microsoft Store for Education will be retired in the first quarter of 2023. You can continue to use the current capabilities of free apps until that time. For more information about this change, see [Evolving the Microsoft Store for Business and Education](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/evolving-the-microsoft-store-for-business-and-education/ba-p/2569423).
 
 A summary of each platform's capabilities is provided below.
 

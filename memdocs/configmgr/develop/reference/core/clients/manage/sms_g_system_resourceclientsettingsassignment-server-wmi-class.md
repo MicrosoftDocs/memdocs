@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent resource-specific client agent settings assignments in Configuration Manager.
 title: "SMS_G_SYSTEM_ResourceClientSettingsAssignment Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 6561a03d-01a3-4fe2-b6cf-220dd743421e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

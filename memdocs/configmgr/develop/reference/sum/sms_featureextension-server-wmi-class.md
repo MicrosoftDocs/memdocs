@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_FeatureExtension class to represent feature extensions.  
 title: "SMS_FeatureExtension Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 0a40d370-575f-480d-b998-9fd3c8cf7f1c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

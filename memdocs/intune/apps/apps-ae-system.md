@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/11/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 
 
@@ -25,8 +25,10 @@ ms.reviewer: priyar
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
+ms.collection:
+- M365-identity-device-management
+- Android
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
 ---
 
 # Manage Android Enterprise system apps in Microsoft Intune
@@ -56,6 +58,8 @@ The **Overview** blade of the app you've created is displayed.
 
 > [!NOTE]
 > You will need to work with the OEM of your device to find the package name of the app you would like to enable/disable.
+>
+> You cannot create an Android Enterprise system app when there is the same app in Managed Google Play in Intune.
 
 The app you've created is displayed in the apps list, where you can assign it to the groups that you select. 
 

@@ -1,6 +1,7 @@
 ---
 title: "PostponeProgramsToNonBusinessHours Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the PostponeProgramsToNonBusinessHours WMI class method schedules legacy software distribution programs to run in the next available user defined service window."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 775da6e9-420e-44d7-abdf-2dfe2ab705f9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

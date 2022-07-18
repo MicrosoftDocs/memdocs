@@ -1,6 +1,7 @@
 ---
 title: "SMS_ADForest Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that contains Active Directory forests discovered by Configuration Manager Forest Discovery."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 48fec821-d482-465c-b88e-d7f4852f1777
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

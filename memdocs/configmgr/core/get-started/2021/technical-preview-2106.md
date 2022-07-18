@@ -9,6 +9,8 @@ ms.topic: conceptual
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
+ROBOTS: NOINDEX
 ---
 
 # Features in Configuration Manager technical preview version 2106

@@ -1,6 +1,7 @@
 ---
 title: "SMS_ImageServicingScanRequest Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ImageServicingScanRequest WMI class is an SMS Provider class that represents scan request for offline servicing image."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 56060aed-2ae2-49c9-9446-a9016b4ea964
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

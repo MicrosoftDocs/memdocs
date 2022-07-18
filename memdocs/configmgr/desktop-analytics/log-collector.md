@@ -2,35 +2,35 @@
 title: Log collector
 titleSuffix: Configuration Manager
 description: Use the logs collector tool to help troubleshoot Desktop Analytics
-ms.date: 07/26/2019
+ms.date: 07/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
-ms.topic: conceptual
-ms.assetid: 349b2a69-af46-481f-afb2-24d98774e852
+ms.topic: how-to
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
+ms.localizationpriority: medium
 ---
 
 # Desktop Analytics log collector
 
-Starting in Configuration Manager version 1906, use the **DesktopAnalyticsLogsCollector.ps1** tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics device enrollment issues. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory. You can share this content with Microsoft support.
-
+Use the **DesktopAnalyticsLogsCollector.ps1** tool from the Configuration Manager install directory to help troubleshoot Desktop Analytics device enrollment issues. It runs some basic troubleshooting steps and collects the relevant logs into a single working directory. You can share this content with Microsoft support.
 
 ## Prerequisites
 
-- A Desktop Analytics client running Windows 10, Windows 8.1, or Windows 7 with Service Pack 1
+- A Desktop Analytics client running Windows 10, Windows 8.1, or Windows 7 with Service Pack 1.
 
 - Run the script on the device as an administrative user, and **Run as Administrator**.
 
-    > [!Tip]
+    > [!TIP]
     > You can use the Configuration Manager **Scripts** feature with this tool. For more information, see [Example 5: Deploy script via Configuration Manager **Scripts**](#bkmk_ex5).
 
-- For Windows 7 with Service Pack 1, PowerShell version 4.0 or later
-    - [.NET framework version 4.6 or later](https://dotnet.microsoft.com/download/dotnet-framework)
+- For Windows 7 with Service Pack 1: PowerShell version 4.0 or later
 
-    - Windows Management Framework [version 4.0](https://support.microsoft.com/help/2819745) (aka.ms/wmf4download) or [version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) (aka.ms/wmf5download)
+  - [.NET framework version 4.6 or later](https://dotnet.microsoft.com/download/dotnet-framework)
+
+  - Windows Management Framework [version 4.0](https://support.microsoft.com/topic/description-of-wmf-4-0-for-windows-7-sp1-windows-embedded-standard-7-sp1-and-windows-server-2008-r2-sp1-e3c830c7-269a-8ae0-d7e9-5ab4a0c37484) (`aka.ms/wmf4download`) or [version 5.1](https://www.microsoft.com/download/details.aspx?id=54616) (`aka.ms/wmf5download`)
 
 ## Usage
 
@@ -112,19 +112,17 @@ Specifies whether the script collects the Windows UTC trace and run connectivity
 
 **Default value**: `0` (Don't enable the UTC trace or run connectivity diagnosis)
 
-
 ## Output
 
-The script creates a *working folder* under the specified path. For example, **M365AnalyticsLogs_yy_MM_dd_HH_mm_ss**. It puts all its output files into this working folder.
+The script creates a *working folder* under the specified path. For example, `M365AnalyticsLogs_yy_MM_dd_HH_mm_ss`. It puts all its output files into this working folder.
 
-If you enable the script to write to a *log file*, it generates one in the working folder. For example, **M365AnalyticsLogs_ yy_MM_dd_HH_mm_ss.txt**.
+If you enable the script to write to a *log file*, it generates one in the working folder. For example, `M365AnalyticsLogs_ yy_MM_dd_HH_mm_ss.txt`.
 
 The script also generates other *diagnostic files* in the working folder. For example:
 
 - `installedKBs.txt`: a list of Windows updates installed on the device
 - `appcompat`: application compatibility data
 - `Reg*.txt`: a series of files with exported data from the Windows Registry
-
 
 ## Examples
 
@@ -156,19 +154,18 @@ The script also generates other *diagnostic files* in the working folder. For ex
 
 For more information, see [Create and run PowerShell scripts from the Configuration Manager console](../apps/deploy-use/create-deploy-scripts.md).
 
-DesktopAnalyticsLogsCollector.ps1 is digitally signed by Microsoft. You may need to add its Microsoft code signing certificate as a Trusted Publisher on the target device.
+**DesktopAnalyticsLogsCollector.ps1** is digitally signed by Microsoft. You may need to add its Microsoft code signing certificate as a Trusted Publisher on the target device.
 
 1. Open the properties of the script in Windows Explorer. Switch to the **Digital Signatures** tab and select **Details**.
 
 2. On the **General** tab, select **View Certificate**.
 
-    > [!Note]
+    > [!NOTE]
     > To distribute the certificate via other mechanisms, first export the certificate to a file. Go to the **Details** tab, and select **Copy to File**.
 
 3. Select **Install Certificate**. Import the certificate, placing it in the **Trusted Publishers** store.
 
-
-## See also
+## Next steps
 
 - [Troubleshoot Desktop Analytics](troubleshooting.md)
 

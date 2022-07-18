@@ -1,6 +1,7 @@
 ---
 title: "SMS_Resource Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_Resource WMI class is an SMS Provider server class that serves as an abstract base class for all discovery resource classes."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: d123b9ea-bfde-4b95-9678-7f7820de7635
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

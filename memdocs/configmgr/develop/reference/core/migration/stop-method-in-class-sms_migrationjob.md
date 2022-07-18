@@ -1,4 +1,5 @@
 ---
+description: Learn how to stop the migration job in Configuration Manager using the Stop class method.
 title: "Stop Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 24a6f364-95bd-4f92-9c68-9edf45f97bc7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

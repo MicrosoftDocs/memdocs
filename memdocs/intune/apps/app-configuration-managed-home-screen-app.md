@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/12/2021
+ms.date: 03/16/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 865c7f03-f525-4dfa-b3a8-d088a9106502
 
@@ -25,8 +25,10 @@ ms.reviewer: chmaguir
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
+ms.collection:
+- M365-identity-device-management
+- Android
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
 ---
 
 # Configure the Microsoft Managed Home Screen app for Android Enterprise
@@ -34,6 +36,8 @@ ms.collection: M365-identity-device-management
 The Managed Home Screen is the application used for corporate-owned Android Enterprise dedicated devices enrolled via Intune and running in multi-app kiosk mode. For these devices, the Managed Home Screen acts as the launcher for other approved apps to run on top of it. The Managed Home Screen provides IT admins the ability to customize their devices and to restrict the capabilities that the end user can access. For even more details, see [How to setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).   
 
 ## When to configure the Microsoft Managed Home Screen app
+
+First, ensure that your devices are supported. Intune supports the enrollment of Android Enterprise dedicated devices for Android devices running OS version 8.0 and above that reliably connect to Google Mobile Services. Similarly, Managed Home Screen supports Android devices running OS version 8.0 and above. 
 
 Typically, if settings are available to you through Device configuration, configure the settings there. Doing so will save you time, minimize errors, and will give you a better Intune-support experience. However, some of the Managed Home Screen settings are currently only available via the **App configuration policies** pane in the Intune console. Use this document to learn how to configure the different settings either using the configuration designer or a JSON script. Additionally, use this document to learn what Managed Home Screen settings are available using Device configuration. You may also see [Dedicated device settings](../configuration/device-restrictions-android-for-work.md#device-experience) for a full list of settings available in **Device configuration** that impact the Managed Home Screen. 
 
@@ -87,7 +91,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Show Bluetooth setting | bool | FALSE | Turning this setting to True allows the   end user to turn on or off Bluetooth and to connect to different   Bluetooth-capable devices. | ✔️ |
 | Show volume setting | bool | FALSE | Turning this setting to True allows the   end user to access a volume slider to adjust media volume. | ✔️ |
 | Show flashlight setting | bool | FALSE | Turning this setting to True allows the   end user to on or off the device's flashlight. If the device doesn't support   a flashlight, then this setting won't appear, even if configured   to True. | ✔️ |
-| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting app   or swipe-down. Accessible information includes device's make, model, and   serial number. | ✔️ |
+| Show device info setting | bool | FALSE | True allows end users to access quick info about the device from the Managed Setting app   or swipe-down. Accessible information includes device's make, model, and serial number for OS 8. | ✔️ |
+| Show device's name on MHS | bool | FALSE | Turn this setting to True to easily view the device's Intune portal "device name" property from the Managed Settings app or from swipe-down when **Show device info setting** is set to True. Make sure to also include the string property "Device's name," which is auto-populated by Intune with the correct value. | ❌ |
+| Show serial number for all supported OS version on MHS | choice | {{serialnumber}} | Ensure that in-app config device_serial_number is configured to display {{SerialNumber}} **Show device info setting** is set to True. This value is auto-populated by Intune with the correct value. | ❌ |
 | Enable virtual home button | bool | FALSE | True allows end users to have access to a Managed Home Screen home button that will return   the user to the Managed Home Screen from the current task they are in. | ✔️ |
 | Type of virtual home button | string | swipe_up | Use swipe_up to access home button with   a swipe up gesture. Use float to access a sticky, persistent home   button that can be moved around the screen by the end user. | ✔️ |
 | Enable notifications badge | bool | FALSE | Enables the notification badge for app icons that   shows the number of new notifications on the app. If you enable this setting,   end users will see notification badges on apps that have unread   notifications. If you keep this configuration key disabled, the end user won't see any notification badged to apps that might have unread notifications. | ✔️ |
@@ -109,8 +115,13 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Enable screen saver | bool | FALSE | To enable screen saver mode or not. If set to   true, you can configure screen_saver_image, screen_saver_show_time, inactive_time_to_show_screen_saver, and media_detect_screen_saver. | ✔️ |
 | Screen saver image | string |   | Set the URL of the screen saver image. If no URL   is set, devices will show the default screen saver image when screen saver is   activated. The default image shows the Managed Home Screen app icon. | ✔️ |
 | Screen saver show time | integer | 0 | Gives option to set the amount of time in seconds   the device will display the screen saver during screen saver mode. If set to   0, the screen saver will show on screen saver mode indefinitely until the   device becomes active. | ✔️ |
-| Inactive time to enable screen   saver | integer | 30 | The number of seconds the device is inactive   before triggering the screen saver. If set to 0, the device will never go   into screen saver mode. | ✔️ |
+| Inactive time to enable screen saver | integer | 30 | The number of seconds the device is inactive   before triggering the screen saver. If set to 0, the device will never go   into screen saver mode. | ✔️ |
 | Media detect before showing   screen saver | bool | TRUE | Choose whether the device screen should show   screen saver if audio/video is playing on device. If set to true, the device won't play audio/video, regardless of the value in inactive_time_to_show_scree_saver. If set to false, device screen will show screen saver   according to value set in inactive_time_to_show_screen_saver. | ✔️ |
+
+> [!NOTE] 
+> Managed Home Screen will start the screensaver whenever the lock screen appears. If the system's lock screen timeout is longer than **Screensaver show time** then the 
+> screen saver will show until the lock screen appears. If the system's lock screen timeout is shorter than **inactive time to enable screen saver** the screensaver will appear
+> as soon as the device's lock screen appears.
 
 **Configurations to help with troubleshooting issues on the device**:
 
@@ -127,18 +138,20 @@ The following table lists the Managed Home Screen available configuration keys, 
 
 |     Configuration Key    |     Value Type    |     Default Value    |     Description    |     Available in device configuration    |
 |-|-|-|-|-|
-|     Enable sign in    |     bool    |     FALSE    |     Turn this setting to True to enable   end-users to sign into Managed Home Screen. When used with   Azure AD Shared device mode, users who sign in to Managed Home Screen will   get automatically signed in to all other apps on the device that have participated   with Azure AD’s Shared device mode. By default this setting is off.     |     ❌          |
-|     Sign in type    |     string    |     AAD    |     Set this configuration to "AAD" to sign in   with an AAD account. Otherwise, set this configuration to "Other". Users who   sign in with a non-AAD account won't get single sign-on to all apps that   have integrated with Azure AD’s Shared device mode, but will still get signed   in to Managed Home Screen. By default, this setting uses "AAD" user accounts.   This setting can only be used if **Enable sign in** has been set to True.     |     ❌          |
-|     Set to the url of wallpaper    |     string    |          |     Allows you to set a wallpaper of your choice   for the sign in screen. To use this setting, enter the URL of the image that   you want set for the sign-in screen wallpaper. This image can be different   than the Managed Home Screen wallpaper that is configured with **Set device   wallpaper**. This setting can only be used if **Enable sign in** has been set   to True.      |     ❌          |
-|     Enable show organization logo on sign in   page    |     bool    |     TRUE    |     Turn this setting to True to use a company   logo that will appear on the sign-in screen and the Session PIN screen. This   setting is used with **Organization logo on sign in page** and   can only be used if **Enable sign in** has been set to True.      |     ❌          |
-|     Organization logo on sign in page    |     string    |          |     Allows you to brand your device with a logo   of your choice on the Managed Home Screen sign-in screen and Session PIN   screen. To use this setting, enter the URL of the image that you want set for   the logo. This setting can only be used if **Enable show organization logo on   sign in page** and **Enable sign in** have been set to True.     |     ❌          |
-|     Enable session PIN    |     bool    |     FALSE    |     Turn this setting to True if you want   end-users to get prompted to create a local Session PIN after they’ve   successfully signed in to Managed Home Screen. The Session PIN prompt will   appear before end-user gets access to the home screen, and can be used in   conjunction with other features. The Session PIN lasts for the duration of a   user’s sign-in, and is cleared upon sign-out. By default, this setting is   off. This setting can only be used if **Enable sign in** has been set to   True.      |     ❌          |
-|     Complexity of session PIN    |     string    |          |     Choose whether the local session PIN should   be "complex" or "simple". If you choose "complex," end-users will get   prompted to create a PIN with alphanumeric characters. If you choose   "simple," end-users will only be required to enter a numeric PIN. This setting   can only be used if **Enable session PIN** and **Enable sign in** have been   set to True.    |     ❌          |
+|     Enable sign in    |     bool    |     FALSE    |     Turn this setting to True to enable   end-users to sign into Managed Home Screen. When used with   Azure AD Shared device mode, users who sign in to Managed Home Screen will   get automatically signed in to all other apps on the device that have participated   with Azure AD’s Shared device mode. By default this setting is off.     |     ✔️          |
+|     Sign in type    |     string    |     AAD    |     Set this configuration to "AAD" to sign in   with an AAD account. Otherwise, set this configuration to "Other". Users who   sign in with a non-AAD account won't get single sign-on to all apps that   have integrated with Azure AD’s Shared device mode, but will still get signed   in to Managed Home Screen. By default, this setting uses "AAD" user accounts.   This setting can only be used if **Enable sign in** has been set to True.     |     ✔️          |
+|     Set to the url of wallpaper    |     string    |          |     Allows you to set a wallpaper of your choice   for the sign in screen. To use this setting, enter the URL of the image that   you want set for the sign-in screen wallpaper. This image can be different   than the Managed Home Screen wallpaper that is configured with **Set device   wallpaper**. This setting can only be used if **Enable sign in** has been set   to True.      |     ✔️          |
+|     Enable show organization logo on sign in   page    |     bool    |     TRUE    |     Turn this setting to True to use a company   logo that will appear on the sign-in screen and the Session PIN screen. This   setting is used with **Organization logo on sign in page** and   can only be used if **Enable sign in** has been set to True.      |     ✔️          |
+|     Organization logo on sign in page    |     string    |          |     Allows you to brand your device with a logo   of your choice on the Managed Home Screen sign-in screen and Session PIN   screen. To use this setting, enter the URL of the image that you want set for   the logo. This setting can only be used if **Enable show organization logo on   sign in page** and **Enable sign in** have been set to True.     |     ✔️          |
+|     Enable session PIN    |     bool    |     FALSE    |     Turn this setting to True if you want   end-users to get prompted to create a local Session PIN after they’ve   successfully signed in to Managed Home Screen. The Session PIN prompt will   appear before end-user gets access to the home screen, and can be used in   conjunction with other features. The Session PIN lasts for the duration of a   user’s sign-in, and is cleared upon sign-out. By default, this setting is   off. This setting can only be used if **Enable sign in** has been set to   True.      |     ✔️          |
+|     Complexity of session PIN    |     string    |          |     Choose whether the local session PIN should   be **simple**, **complex**, or **alphanumeric complex**. If you choose **simple**, users will only be required to enter a numeric PIN. If you choose **complex**, users will get prompted to create a PIN with alphanumeric characters and no repeating (444) or ordered sequences (123, 432, 246) are allowed. Evaluation of repeating and sequential patterns begins at three (3) digits/characters. If you choose **alphanumeric complex**, then users will get prompted to create a PIN with alphanumeric characters, and at least one symbol or letter is required. No repeating (444) or ordered sequences (123, 432, 246) are allowed. Evaluation of repeating and sequential patterns begins at three (3) characters. The default value for this setting is one (1), where one (1) means that the user must have at least one character in their Session PIN. This setting can only be used if **Enable session PIN** and **Enable sign in** have been   set to True.    |     ✔️  <p>NOTE: The **alphanumeric complex** option is only available in app config today.        |
+|     Minimum length for session PIN    |     string    |          |     Define the minimum length a user's session PIN must adhere to. This can be used with any of the complexity values for session PIN. This setting can only be used if **Enable session PIN** and **Enable sign in** have been set to True.    |     ❌        |
+|     Maximum number of attempts for session PIN    |     string    |          |     Define the maximum number of times a user can attempt to enter their session PIN before getting automatically logged out from Managed Home Screen. The default value is zero (0), where zero (0) means the user gets infinite tries. This can be used with any of the complexity values for session PIN. This setting can only be used if **Enable session PIN** and **Enable sign in** have been set to True.    |     ❌        |
 |     Customer facing folder    |     Bool    |     FALSE    |     Use this specification with   **Create   Managed Folder for grouping apps** to create a folder that can’t be exited   without a user entering their Session PIN. This setting can only be used if   **Enable session PIN** and **Enable sign in** have been set to True.     |     ❌          |
-|     Require PIN code after returning from   screensaver     |     bool    |     FALSE    |     Turn this setting True if you want to   require end-users to enter their Session PIN to resume activity on Managed   Home Screen after the screensaver has appeared. This setting can only be used   if **Enable sign in** has been set to True.        |     ❌          |
-|     Enable auto sign-out     |     bool    |     FALSE    |     Turn this setting to True to automatically   sign current user out of Managed Home Screen after a specified period of   inactivity. When used with Azure AD Shared device mode, users   will also get signed out of all apps on the device that participate with   Azure AD Shared device mode. By default, this setting is turned off. This   setting can only be used if **Enable sign in** has been set to True.     |     ❌          |
-|     Auto sign-out time    |     integer    |     300    |     Set a period of inactivity, in seconds, that   can pass before user gets automatically signed out of Managed Home Screen.   This setting can only be used if **Enable auto sign-out** and **Enable sign   in** have been set to True.      |     ❌          |
-|     Count down time on auto sign-out dialog    |     integer    |     60    |     The amount of time, in seconds, to give   notice to user before signing them out of Managed Home Screen.  This setting can only be used if **Enable   auto sign-out** and **Enable sign in** have been set to True.      |     ❌          |
+|     Require PIN code after returning from   screensaver     |     bool    |     FALSE    |     Turn this setting True if you want to   require end-users to enter their Session PIN to resume activity on Managed   Home Screen after the screensaver has appeared. This setting can only be used   if **Enable sign in** has been set to True.        |     ✔️          |
+|     Enable auto sign-out     |     bool    |     FALSE    |     Turn this setting to True to automatically   sign current user out of Managed Home Screen after a specified period of   inactivity. When used with Azure AD Shared device mode, users   will also get signed out of all apps on the device that participate with   Azure AD Shared device mode. By default, this setting is turned off. This   setting can only be used if **Enable sign in** has been set to True.     |     ✔️          |
+|     Auto sign-out time    |     integer    |     300    |     Set a period of inactivity, in seconds, that   can pass before user gets automatically signed out of Managed Home Screen.   This setting can only be used if **Enable auto sign-out** and **Enable sign   in** have been set to True.      |     ✔️          |
+|     Count down time on auto sign-out dialog    |     integer    |     60    |     The amount of time, in seconds, to give   notice to user before signing them out of Managed Home Screen.  This setting can only be used if **Enable   auto sign-out** and **Enable sign in** have been set to True.      |     ✔️          |
 |     Privacy statement title    |     string    |          |     Optionally display your organization’s   custom privacy statement on Managed Home Screen, next to Microsoft’s privacy   statement. Use this setting to name the link containing your organization’s   privacy statement, which is specified in **Privacy statement link**.    |     ❌          |
 |     Privacy statement link    |     string    |          |     Optionally display your organization’s   custom privacy statement on Managed Home Screen, next to Microsoft’s privacy   statement. If you set a link but don't set **Privacy statement title**, the   title will read "Custom privacy statement".    |     ❌          |
 
@@ -273,6 +286,18 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "show_device_info_setting",
             "valueBool": false
+        },
+	{
+            "key": "show_device_name",
+            "valueBool": false
+        },
+        {
+            "key": "device_name",
+            "valueString": "{{DeviceName}}"
+        },
+        {
+            "key": "device_serial_number",
+            "valueString": "{{SerialNumber}}"
         },
         {
             "key": "show_managed_setting",
@@ -475,11 +500,11 @@ The following syntax is an example JSON script with all the available configurat
                 }
             ]
         },
-		{
+	{
             "key": "show_notification_badge",
             "valueBool": true
         },
-		{
+	{
             "key": "show_screen_saver",
             "valueBool": true
         },
@@ -491,7 +516,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "screen_saver_show_time",
             "valueInteger": 0
         },
-	    {
+	{
             "key": "inactive_time_to_show_screen_saver",
             "valueInteger": 30
         },
@@ -499,7 +524,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "media_detect_before_screen_saver",
             "valueBool": true
         }, 
-		{
+	{
             "key": "enable_max_inactive_time_outside_MHS",
             "valueBool": false
         },
@@ -515,7 +540,7 @@ The following syntax is an example JSON script with all the available configurat
             "key": "max_absolute_time_outside_MHS",
             "valueInteger": 600
         },
-		{
+	{
             "key": "theme_color",
             "valueString": "light"
         },
@@ -547,6 +572,22 @@ The following syntax is an example JSON script with all the available configurat
             "key": "session_PIN_complexity",
             "valueString": "simple"
         },
+	{
+            "key": "max_number_of_attempts_for_session_PIN",
+            "valueInteger": 0
+        },
+        {
+            "key": "minimum_length_for_session_PIN",
+            "valueInteger": 1
+        },
+        {
+            "key": "max_number_of_attempts_for_exit_PIN",
+            "valueInteger": 0
+        },
+        {
+            "key": "amount_of_time_before_try_exit_PIN_again",
+            "valueInteger": 0
+        }
         {
             "key": "enable_auto_signout",
             "valueBool": true
@@ -570,7 +611,9 @@ The following syntax is an example JSON script with all the available configurat
         {
             "key": "custom_privacy_statement_url",
             "valueString": "link to custom privacy statement here"
-        }
+        },
+
+
     ]
 }
 ```

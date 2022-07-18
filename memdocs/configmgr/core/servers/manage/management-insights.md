@@ -2,14 +2,14 @@
 title: Management insights
 titleSuffix: Configuration Manager
 description: Learn about the management insights functionality available in the Configuration Manager console.
-ms.date: 11/30/2020
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: a79f83be-884c-48e6-94d6-ed0a68c22e2f
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Management insights in Configuration Manager
@@ -45,7 +45,7 @@ The **Prerequisites** pane lists any required items needed to run the selected i
 
 For example, the following screenshot shows an example of the **All Rules** tab for the **Cloud Services** group:
 
-:::image type="content" source="media/management-insights-all-cloud-rules.png" alt-text="Management insights: All rules and prerequisites for Cloud Services group":::
+:::image type="content" source="media/management-insights-all-cloud-rules.png" alt-text="Management insights: All rules and prerequisites for Cloud Services group.":::
 
 To see the details, select an insight, and then select **More Details**.
 
@@ -89,7 +89,7 @@ The dashboard includes the following tiles:
   - Priority: Critical, Recommended, Optional  
   - Last Changed: older dates on top  
 
-:::image type="content" source="media/1357979-management-insights-dashboard.png" alt-text="Screenshot of management insights dashboard" lightbox="media/1357979-management-insights-dashboard.png":::
+:::image type="content" source="media/1357979-management-insights-dashboard.png" alt-text="Screenshot of management insights dashboard." lightbox="media/1357979-management-insights-dashboard.png":::
 
 ## Groups and insights
 
@@ -99,6 +99,7 @@ Insights are organized into the following management insight groups:
 - [Cloud services](#cloud-services)
 - [Collections](#collections)
 - [Configuration Manager Assessment](#configuration-manager-assessment)
+- [Deprecated and unsupported features](#deprecated-and-unsupported-features)
 - [Optimize for remote workers](#optimize-for-remote-workers)
 - [Proactive maintenance](#proactive-maintenance)
 - [Security](#security)
@@ -122,15 +123,15 @@ Helps you integrate with many cloud services, which enable modern management of 
 
 - **Assess co-management readiness**: Helps you understand what steps are needed to enable co-management. This insight has prerequisites. For more information, see [Co-management overview](../../../comanage/overview.md).<!-- D99F094A-A965-402F-AFE5-EE00CCAF0A12 -->
 
-- **Devices not uploaded to Azure AD**: Starting in version 2002, this insight lists devices that the site hasn't uploaded to Azure Active Directory (Azure AD) because you haven't configured it for HTTPS.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.<!-- 609F03D4-D9B4-4D0D-A67F-9E365F6C0DD0 -->
+- **Devices not uploaded to Azure AD**: This insight lists devices that the site hasn't uploaded to Azure Active Directory (Azure AD) because you haven't configured it for HTTPS.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.<!-- 609F03D4-D9B4-4D0D-A67F-9E365F6C0DD0 -->
 
 - **Enable cloud management gateway**: The cloud management gateway (CMG) provides a simple way to manage Configuration Manager clients over the internet. By deploying the CMG as a cloud service in Microsoft Azure, you can continue to manage and serve content to clients that roam onto the internet. With CMG, you don't need any additional on-premises infrastructure exposed to the internet. For more information, see [Overview of CMG](../../clients/manage/cmg/overview.md).<!-- 451B9B3A-D86A-4EF1-ACC3-FE6A207886BA -->
 
 - **Enable devices to be hybrid Azure Active Directory joined**: Azure AD-joined devices allow users to sign in with their domain credentials, and make sure devices meet the organization's security and compliance standards. For more information, see [Azure AD hybrid identity design considerations](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-overview).<!-- 6DC6B149-8B48-45E9-B189-F1E12A62D994 -->
 
-- **Sites that don't have proper HTTPS configuration**: Starting in version 2002, this insight lists sites in your hierarchy that aren't properly configured for HTTPS. This configuration prevents the site from [synchronizing collection membership results to Azure AD groups](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync). It may cause Azure AD sync to not upload all devices. Management of these clients may not function properly.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.<!-- 73884047-3395-430E-B971-F853806D4349 -->
+- **Sites that don't have proper HTTPS configuration**: This insight lists sites in your hierarchy that aren't properly configured for HTTPS. This configuration prevents the site from [synchronizing collection membership results to Azure AD groups](../../clients/manage/collections/create-collections.md#bkmk_aadcollsync). It may cause Azure AD sync to not upload all devices. Management of these clients may not function properly.<!--6268489--> Configure [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), or enable at least one management point for HTTPS. If you already configured the site for HTTPS communication, this insight doesn't appear.<!-- 73884047-3395-430E-B971-F853806D4349 -->
 
-- **Update clients to the latest Windows 10 version**: Windows 10, version 1709 or above improves and modernizes the computing experience of your users. For more information, see [Key articles about adopting Windows as a service](../../understand/configuration-manager-and-windows-as-service.md#key-articles-about-adopting-windows-as-a-service).<!-- FD2C7B93-E5C6-4DCB-89AF-9EFCFCD01524 -->
+- **Update clients to the latest Windows 10 version**: Windows 10, version 1709 or above improves and modernizes the computing experience of your users. For more information, see [Stay current with Windows as a service](../../understand/configuration-manager-and-windows-as-service.md#windows-as-a-service).<!-- FD2C7B93-E5C6-4DCB-89AF-9EFCFCD01524 -->
 
 ### Collections
 
@@ -164,7 +165,7 @@ Insights that help simplify management by cleaning up and reconfiguring collecti
 
 <!--3607758-->
 
-Starting in version 2002, this group is courtesy of Microsoft Premier Field Engineering. These insights are a sample of the many more checks that Microsoft Premier provides in the [Services Hub](/services-hub/health/getting_started_with_on_demand_assessments).
+This group is courtesy of Microsoft Premier Field Engineering. These insights are a sample of the many more checks that Microsoft Premier provides in the [Services Hub](/services-hub/health/getting_started_with_on_demand_assessments).
 
 - **Active Directory Security Group Discovery is configured to run too frequently**: You typically don't need to configure Active Directory Security Group Discovery to occur more frequently than every three hours. A more frequent configuration can have a negative performance impact on Active Directory, the network, and Configuration Manager. Enable incremental synchronization instead of using a full sync schedule. For more information, see [Active Directory group discovery](../deploy/configure/about-discovery-methods.md#bkmk_aboutGroup).<!-- 4E739B65-AEC9-4B1D-8B36-AC6AC4A72022 -->
 
@@ -180,7 +181,7 @@ Starting in version 2002, this group is courtesy of Microsoft Premier Field Engi
 
 - **Reduce the number of applications and packages on distribution points**: Microsoft officially supports a combined total of up to 10,000 packages and applications on a distribution point. Exceeding this total can lead to operational problems. For more information, see [Size and scale numbers - distribution point](../../plan-design/configs/size-and-scale-numbers.md#distribution-point).<!-- FFE6906E-932E-4927-8EE0-BA25C37943CB -->
 
-- **Secondary site installation issues**: The installation status of some secondary sites is **Pending** or **Failed**. These states mean that you started the install but it didn't complete successfully. Until the secondary site install finishes, clients may not communicate properly with the primary site. Check the **Monitoring** workspace, and retry the installation. For more information, see [Retry installation of a failed update](install-in-console-updates.md#bkmk_retry).<!-- ED3F5BDD-2F02-44A4-87F4-BB2C1032D4DE -->
+- **Secondary site installation issues**: The installation status of some secondary sites is **Pending** or **Failed**. These states mean that you started the install but it didn't complete successfully. Until the secondary site install finishes, clients may not communicate properly with the primary site. Check the **Monitoring** workspace, and retry the installation. For more information, see [Retry installation of a failed update](post-in-console-updates.md#retry-installation-of-a-failed-update).<!-- ED3F5BDD-2F02-44A4-87F4-BB2C1032D4DE -->
 
 - **Update all sites to the same version**: Use the same version of Configuration Manager in a hierarchy. This configuration makes sure all sites provide the same functionality. Sites of different versions in the same hierarchy introduce interoperability scenarios. Later versions of Configuration Manager include new features and resolve known issues. For more information, see [Interoperability between different versions](../../plan-design/hierarchy/interoperability-between-different-versions.md).<!-- 88C630A5-6D6B-4DDB-95D7-78E12107970D -->
 
@@ -191,19 +192,31 @@ For more information on these insights, see [Remediation steps for Configuration
 >
 > For more information about Microsoft Services, see [Support Solutions](https://www.microsoft.com/enterprise/services/support).
 
+### Deprecated and unsupported features
+
+*(Introduced in version 2203)*
+
+The following management insights are about features you may be using which have been deprecated or are no longer supported. These features may be removed from the product in a future release.
+
+- **Site system roles associated with deprecated or removed features**: This insight checks for installed site system roles for deprecated features that will be removed in a future release.<!--12451634-->
+- **Check if the site uses the asset intelligence sync point role**: This insight checks for installation of the asset intelligence synchronization point role. <!--12451634-->
+- **Configuration Manager client for macOS end of support**: This insight lists the clients running macOS. Support for the Configuration Manager client for macOS and Mac client management ends on December 31, 2022.<!--12451634-->
+- **Certificate registration point is no longer supported**: This insight checks for installation of the certificate registration point site system role. This feature is no longer supported as of March 2022. Configuration Manager versions released before March 2022 will still be able to install and use certificate registration points.<!--10875436-->
+- **Company resource access policies are no longer supported**: This insight checks for company resource access policies. These features are no longer supported as of March 2022. Company resource access includes email, certificate, VPN, Wi-Fi, and Windows Hello for Business profiles. Configuration Manager versions released before March 2022 will still be able to use company resource access policies.<!--10875436-->
+
 ### Operating system deployment
 
 <!--6982275-->
 
-Starting in version 2006, the following management insights help you manage the policy size of task sequences. When the size of the task sequence policy exceeds 32 MB, the client fails to process the large policy. The client then fails to run the task sequence deployment.
+The following management insights help you manage the policy size of task sequences. When the size of the task sequence policy exceeds 32 MB, the client fails to process the large policy. The client then fails to run the task sequence deployment.
 
 - **Large task sequences may contribute to exceeding maximum policy size**: If you deploy these task sequences, clients may not be able to process the large policy objects. Reduce the size of the task sequence policy to prevent potential policy processing issues.<!-- D9A15248-832E-4780-8151-ACD1B9E53FE1 -->
 
 - **Total policy size for task sequences exceeds policy limit**: Clients can't process the policy for these task sequences because it's too large. Reduce the size of the task sequence policy to allow the deployment to run on clients.<!-- 6568F6A3-D1D8-4E63-940B-FE44F8349802 -->
 
-For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
+For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/reduce-task-sequence-policy-size.md).
 
-In version 2006, the following insight moved to this group from the **Proactive Maintenance** group:
+This group also includes the following insight:
 
 - **Unused boot images**: Boot images not referenced for PXE boot or task sequence use. For more information, see [Manage boot images](../../../osd/get-started/manage-boot-images.md).<!-- 4C1FBA51-AD56-4CA8-8326-066F65D24F0E -->
 
@@ -213,11 +226,11 @@ In version 2006, the following insight moved to this group from the **Proactive 
 
 Starting in version 2006, the following insights help you create better experiences for remote workers and reduce load on your infrastructure:
 
-- **Configure VPN connected clients to prefer cloud based content sources**: To reduce traffic on the VPN, enable the boundary group option to **Prefer cloud based sources over on-premises sources**. This option allows clients to download content from the internet instead of distribution points across the VPN. For more information, see [Boundary group options](../deploy/configure/boundary-groups.md#bkmk_bgoptions4).<!-- 1BFD7A7A-077C-4E8A-9EAA-4559E41D400A -->
+- **Configure VPN connected clients to prefer cloud based content sources**: To reduce traffic on the VPN, enable the boundary group option to **Prefer cloud based sources over on-premises sources**. This option allows clients to download content from the internet instead of distribution points across the VPN. For more information, see [Boundary group options](../deploy/configure/boundary-group-options.md).<!-- 1BFD7A7A-077C-4E8A-9EAA-4559E41D400A -->
 
 - **Define VPN boundary groups**: Create a VPN boundary and associate it to a boundary group. Associate VPN-specific site systems to the group, and configure the settings for your environment. This insight checks for at least one boundary group with at least one VPN boundary in it. From the properties of this insight, select **Review Actions** to go to the **Boundary Groups** node. For more information, see [VPN boundary type](../deploy/configure/boundaries.md#vpn).<!-- E44BF0CC-0ADA-4B00-A4DF-4005256DF73E -->
 
-- **Disable peer to peer content sharing for VPN connected clients**: To prevent unnecessary peer-to-peer traffic that likely doesn't benefit the remote clients, disable the boundary group option to **Allow peer downloads in this boundary group**. For more information, see [Boundary group options](../deploy/configure/boundary-groups.md#bkmk_bgoptions1).<!-- 60404B23-96A9-4EE2-B8D6-1F226C2F2F5A -->
+- **Disable peer to peer content sharing for VPN connected clients**: To prevent unnecessary peer-to-peer traffic that likely doesn't benefit the remote clients, disable the boundary group option to **Allow peer downloads in this boundary group**. For more information, see [Boundary group options](../deploy/configure/boundary-group-options.md).<!-- 60404B23-96A9-4EE2-B8D6-1F226C2F2F5A -->
 
 ### Proactive maintenance
 
@@ -233,6 +246,10 @@ The insights in this group highlight potential configuration issues to avoid thr
 - **Enable WSUS Cleanup**: Verifies that you've enabled the option to run WSUS cleanup on the properties of the software update point component. This option helps to improve WSUS performance. For more information, see [Software update maintenance](../../../sum/deploy-use/software-updates-maintenance.md).<!-- D43080F1-FE98-4F24-94ED-FEB1C2DDEF50 -->
 
 - **Unused configuration items**: Configuration items that aren't part of a configuration baseline and are older than 30 days. For more information, see [Create configuration baselines](../../../compliance/deploy-use/create-configuration-baselines.md).<!-- 0597907B-17D4-4EA5-92E4-CCE692E1468D -->
+
+- **Update Microsoft .NET Framework on site systems**: <!--10402814-->Starting in version 2107, Configuration Manager requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console. Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8. For more information, [Site and site system prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
+
+- **Update servers running Windows Server 2012 and 2012 R2**:<!--9519162--> Detects servers that are running Windows Server 2012 or 2012 R2 operating systems. The support lifecycle for these operating systems ends on October 9, 2023. For more information, see the [Product lifecycle](/lifecycle/announcements/sql-server-2012-windows-server-2012-end-of-support).
 
 - **Upgrade peer cache sources to the latest version of the Configuration Manager client**:<!--1358008--> Identify clients that serve as a peer cache source but haven't upgraded from a pre-1806 client version. Pre-1806 clients can't be used as a peer cache source for clients that run version 1806 or later. Select **Take action** to open a device view that displays the list of clients.<!-- B51C6733-F9FF-46BC-8F5E-624F2CBED719 -->
 
@@ -257,7 +274,7 @@ Insights that help you simplify the day-to-day management of your environment.
 
 - **Non-CB Client Versions**: Lists all clients whose versions aren't a current branch (CB) build. For more information, see [Upgrade clients](../../clients/manage/upgrade/upgrade-clients.md).<!-- 450090EA-DF71-428C-AB49-6DEBB85A004C -->
 
-- **Update clients to a supported Windows 10 version**:<!--3897268--> This insight reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!-- 560669D6-1756-4814-9505-C54BDB4930D0 -->
+- **Update clients to a supported Windows 10 version**:<!--3897268, 9742262, 9910532--> This insight reports on clients that are running a version of Windows 10 that's no longer supported.<!-- 560669D6-1756-4814-9505-C54BDB4930D0 -->
 
 ### Software Center
 
@@ -272,6 +289,8 @@ Insights for managing Software Center.
 - **Client settings aren't configured to allow clients to download delta content**: Some software updates synchronized in your environment include delta content. Enable the client setting, **Allow clients to download delta content when available**. If you don't enable this setting, when you deploy these updates, client will unnecessarily download more content than they require. For more information, see [Client settings - Software updates](../../clients/deploy/about-client-settings.md#software-updates).<!-- 3E2E9E10-1CDC-47E3-BFC9-3A46AB7FE1BD -->
 
 - **Enable the software updates product category 'Windows 10, version 1903 and later'**: There's a new software updates product category for Windows 10, version 1903 and later. If you synchronize Windows 10 updates, and have Windows 10, version 1903 or later clients, select the **Windows 10, version 1903 and later** product category in the software update point component properties. For more information, see[Configure classifications and products to synchronize](../../../sum/get-started/configure-classifications-and-products.md).<!-- 16B1152D-6511-4DC7-824E-539B2597F9B0 -->
+
+- **Configure software update points to use TLS/SSL**:<!--7470529--> Detects if your software update points are [configured to use TLS/SSL](../../../sum/get-started/software-update-point-ssl.md). Configuring Windows Server Update Services (WSUS) servers and their corresponding software update points (SUPs) to use TLS/SSL may reduce the ability of a potential attacker to remotely compromise a client and elevate privileges. This rule was added in Configuration Manager version 2107.<!--F7AC423D-7BAD-4B62-9CC6-26C351960CDF-->
 
 ### Windows 10
 

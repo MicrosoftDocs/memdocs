@@ -1,6 +1,7 @@
 ---
 title: "SMS_ST_RecurInterval Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_ST_RecurInterval Windows Management Instrumentation class is an SMS Provider server class that represents a schedule token for events that occur at regular intervals, such as every 10 days."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 1d3d70ee-36b2-41a7-b0a6-2a55f63aed0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

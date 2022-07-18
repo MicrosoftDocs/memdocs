@@ -1,6 +1,7 @@
 ---
 title: "GetDeploymentTypeForUser Method"
 titleSuffix: "Configuration Manager"
+description: "A class method that retrieves the application deployment type property for a user."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 948b18b4-8925-4a63-9b7c-a2c8606fb4ce
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

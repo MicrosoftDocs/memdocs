@@ -1,6 +1,7 @@
 ---
 title: "GetSequence Method"
 titleSuffix: "Configuration Manager"
+description: "The GetSequence Windows Management Instrumentation (WMI) class method gets a task sequence (SMS_TaskSequence Server WMI Class) from a task sequence package (SMS_TaskSequencePackage Server WMI Class.)"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 9606ae78-67c2-4b74-9736-b152c5ee0ce9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,4 +1,5 @@
 ---
+description: Article outlining the use of the GetSuppressComputerActivityInPresentationMode in Configuration Manager.
 title: "GetSuppressComputerActivityInPresentationMode Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 2286886d-040d-49e6-9739-d2950606b9e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

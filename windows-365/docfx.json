@@ -32,11 +32,12 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
-      "breadcrumb_path": "/mem/breadcrumb/toc.json",
+      "breadcrumb_path": "/windows-365/breadcrumb/toc.json",
       "feedback_system": "GitHub",
       "feedback_github_repo": "MicrosoftDocs/memdocs",
-      "brand": "Microsoft Endpoint Manager",
-      "searchScope": ["Intune"],     
+      "feedback_product_url": "https://github.com/MicrosoftDocs/memdocs/issues",
+      "brand": "Windows 365",
+      "searchScope": ["Windows 365"],     
       "contributors_to_exclude": [
         "PRMerger9",
         "PRMerger17",
@@ -56,7 +57,6 @@
         "Ja-Dunn",
         "jomolnar",
         "KatieCumming",
-        "rjagiewich",
         "deneha",
         "ktoliver",
         "itechedit",
@@ -67,8 +67,6 @@
         "rmca14",
         "trishamc",
         "Jak-MS",
-        "garycentric",
-        "jborsecnik",
         "Kellylorenebaker",
         "ShannonLeavitt",
         "v-albemi",
@@ -77,25 +75,22 @@
         "atookey",
         "tfosmark",
         "sdwheeler",
-        "meganbradley"
+        "meganbradley",
+        "rjagiewich",
+        "garycentric",
+        "jborsecnik",
+        "tiburd",
+	      "AngelaMotherofDragons",
+	      "dstrome",
+        "v-dihans",
+        "claydetels19",
+        "traya1"
       ]          
     },
     "fileMetadata": {
-      "feedback_product_url": {
-        "configmgr/**/*.md": "https://configurationmanager.uservoice.com/",
-        "configmgr/**/*.yml": "https://configurationmanager.uservoice.com/",
-        "intune/**/*.md": "https://microsoftintune.uservoice.com/"     
-      },
       "ms.date": {
         "autopilot/**/*.md": "12/16/2020"
       }, 
-      "searchScope": {
-        "configmgr/**/*.md": ["ConfigMgr"],
-        "configmgr/**/*.yml": ["ConfigMgr"],
-        "configmgr/core/**/*.md": ["ConfigMgr"],
-        "analytics/**/*.md": ["Analytics"],
-        "autopilot/**/*.md": ["Autopilot"]
-      },
       "featureFlags": {
         "*.md" : [
           "show_binary_rating"

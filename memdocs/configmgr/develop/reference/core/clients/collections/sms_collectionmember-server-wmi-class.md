@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_CollectionMember class that serves as the abstract base class for the member classes for each collection.
 title: "SMS_CollectionMember Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: d99c49a4-5643-48e4-bf3a-0893c2806ba3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

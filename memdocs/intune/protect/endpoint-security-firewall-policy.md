@@ -7,8 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
-ms.topic: reference
+ms.date: 04/06/2022
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -23,39 +23,50 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
-ms.reviewer: aanavath
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
+ms.reviewer: mattcall
 
 ---
 
 # Firewall policy for endpoint security in Intune
 
-Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows 10.
+Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows devices.
 
 While you can configure the same firewall settings by using Endpoint Protection profiles for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to firewalls and can complicate the task of configuring only firewall settings for your environment.
 
 Find the endpoint security policies for firewalls under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-View [settings for Firewall profiles](../protect/endpoint-security-Firewall-profile-settings.md).
-
 ## Prerequisites for Firewall profiles
 
-- Windows 10 or later
+- Windows 10
+- Windows 11
+- Windows Server 2012 R2 or later
 - Any supported version of macOS
 
 ## Firewall profiles
 
 ### Devices managed by Intune
 
-**macOS profiles**:
+**Platform: macOS**:
 
 - **macOS firewall** – Enable and configure settings for the built-in firewall on macOS.
 
-**Windows 10 profiles**:
+**Platform: Windows 10, Windows 11, and Windows Server**:
+
+ For information about configuring settings in the following profiles, see the [Firewall configuration service provider (CSP)](/windows/client-management/mdm/firewall-csp).
 
 - **Microsoft Defender Firewall** – Configure settings for Windows Defender Firewall with Advanced Security. Windows Defender Firewall provides host-based, two-way network traffic filtering for a device and can block unauthorized network traffic flowing into or out of the local device.
 
 - **Microsoft Defender Firewall rules** - Define granular Firewall rules, including specific ports, protocols, applications and networks, and to allow or block network traffic. Each instance of this profile supports up to 150 custom rules.
+
+> [!NOTE]  
+> Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform.
+>
+> The *Windows 10, Windows 11, and Windows Server* platform supports devices communicating with Endpoint Manager through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+>
+> Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
 ### Devices managed by Configuration Manager
 
@@ -83,7 +94,7 @@ When rules from multiple rules profiles don't conflict with each other, devices 
 
 The reports for Firewall policy display status details about the firewall status for your managed devices.  Firewall reports support managed devices that run the following operating systems.
 
-- Windows 10 or later
+- Windows 10/11
 
 ### Summary
 
@@ -94,26 +105,26 @@ This view provides:
 - An aggregate count of devices that have the firewall turned off.
 - A list of your Firewall policies, including the name, type, if it's assigned, and when it was last modified.
 
-### Windows 10 MDM devices with firewall off
+### MDM devices running Windows 10 or later with firewall off
 
-This report is located in the Endpoint security node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** >  **Windows 10 MDM devices with firewall off**.
+This report is located in the Endpoint security node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Endpoint security** > **Firewall** >  **MDM devices running Windows 10 or later with firewall off**.
 
 Data is reported through the Windows [DeviceStatus CSP](/windows/client-management/mdm/devicestatus-csp), and identifies each device where the Firewall is off. By default, visible details include:
 
 - Device name
 - Firewall status
-- User principle name
+- User principal name
 - Target (The method of device management)
 - Last check in time
 
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Off](media/endpoint-security-firewall-policy/firewall-off-report.png)
 
-### Windows 10 MDM Firewall status
+### MDM Firewall status for Windows 10 and later
 
 *This organizational report is also described in [Intune Reports](../fundamentals/reports.md#windows-10-mdm-firewall-status-organizational)*.
 
-As an organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **Windows 10 MDM Firewall status**.
+As an organizational report, this report is available from the **Reports** node.  Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 
 > [!div class="mx-imgBorder"]
 > ![Select firewall reports](media/endpoint-security-firewall-policy/select-firewall-reports.png)
@@ -133,6 +144,16 @@ You can filter returns for this report by using one or more of the status detail
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Status report](media/endpoint-security-firewall-policy/firewall-status.png)
 
+## Investigate issues for Firewall rules
+
+To learn more about Firewall rules in Intune, and how to troubleshoot common problems, see the following *Intune Customer Success* blog:
+
+- [How to trace and troubleshoot the Intune Endpoint Security Firewall rule creation process](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-trace-and-troubleshoot-the-intune-endpoint-security/ba-p/3261452)
+
 ## Next steps
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+
+View details for the settings in the deprecated Firewall profiles for the *Windows 10 and later* platform:  
+
+- [Firewall profile settings](../protect/endpoint-security-Firewall-profile-settings.md).

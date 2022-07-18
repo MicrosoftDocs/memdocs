@@ -1,6 +1,7 @@
 ---
 title: "Remove a Step from an OS Deployment Group"
 titleSuffix: "Configuration Manager"
+description: "Deletes a step from an operating system deployment task sequence group by deleting the step from the group's list of task sequence steps."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 1c143409-2ecd-44ae-9517-f37c15e0acc3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

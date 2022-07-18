@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a collection rule using SMS_CollectionRule class in Configuration Manager.
 title: "SMS_CollectionRule Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 43c23dda-0881-44b0-ac6b-65428b0c68c3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

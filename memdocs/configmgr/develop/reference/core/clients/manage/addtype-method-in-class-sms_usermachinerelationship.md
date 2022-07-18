@@ -1,4 +1,5 @@
 ---
+description: Learn how to add the type of relationship between a user and a device in Configuration Manager using AddType.
 title: "AddType Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 8b292712-09c5-438e-adc1-0458c96a50dd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

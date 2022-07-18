@@ -5,10 +5,10 @@ title: Shared iOS and iPadOS devices
 titleSuffix: Microsoft Intune
 description: Learn about Shared iOS and iPadOS devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 02/08/2021
+ms.date: 08/17/2021
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-#ms.reviewer:
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -52,8 +52,11 @@ The following table captures the key differences between the two available share
 | Device   provisioning | Shared iPad can be enabled on   iPads enrolled using Automated Device Enrollment without user affinity. | Shared   Device Mode can be configured on devices enrolling using Automated Device   Enrollment without user affinity. For more information, see [Use Intune to enable shared device mode & SSO extension](/azure/active-directory/develop/msal-ios-shared-devices#use-intune-to-enable-shared-device-mode--sso-extension). |
 | Temporary   session without signing in | Temporary   sessions that do not require a Managed Apple ID or password are allowed by   default.  Temporary sessions can be allowed or blocked by Intune policy. For more information, see [Shared iPad](../configuration/device-restrictions-ios.md#shared-ipad). | Not applicable |
 | Supported   app types | Device-licensed purchased or   custom apps (VPP), line-of-business apps, web apps. | Apps   that have been modified to support Shared Device Mode including MSAL   integration. For more information, see [Modify your iOS application to support shared device mode](/azure/active-directory/develop/msal-ios-shared-devices#modify-your-ios-application-to-support-shared-device-mode). |
-| Policy   and app assignment | Device-assigned required apps   and policies are supported. The same apps and policies apply to any user   signing in on a Shared iPad. | Device-assigned required apps   and policies are supported. |
-| Unsupported scenarios | Conditional Access<br>App Protection Policies<br>Intune Company Portal app<br>Available apps<br>User-assigned policies and apps  | Conditional Access<br>App Protection Policies<br>Intune Company Portal app<br>Available apps<br>Apps that don’t support Shared Device Mode<br>User-assigned policies and apps |
+| Policy and app assignment | Device-assigned required apps   and policies are supported. The same apps and policies apply to any user   signing in on a Shared iPad.<br>Some device configuration policies can be user-assigned. For more information, see [Configure settings for Shared iPads](../enrollment/device-enrollment-shared-ipad.md#configure-settings-for-shared-ipads). | Device-assigned required apps   and policies are supported. |
+| Unsupported scenarios | Conditional Access (see note below)<br>App Protection Policies<br>Intune Company Portal app<br>Available apps | Conditional Access (see note below)<br>App Protection Policies<br>Intune Company Portal app<br>Available apps<br>Apps that don’t support Shared Device Mode<br>User-assigned policies and apps |
+
+> [!IMPORTANT]
+> The following Conditional Access configurations are not supported:<ul><li>Granting Conditional Access conditions for a device that require an approved client app, require an app protection policy, require [per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use), or must be marked as compliant.</li><li>Conditional Access conditions that use filters for devices.</li></ul>
 
 ## Recommended iOS/iPadOS shared device strategy
 

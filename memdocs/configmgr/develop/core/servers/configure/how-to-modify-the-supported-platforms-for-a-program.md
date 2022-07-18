@@ -1,6 +1,7 @@
 ---
 title: "Modify the Supported Platforms for a Program"
 titleSuffix: "Configuration Manager"
+description: "Add supported platforms to a package by obtaining specific instances of the SMS_Package and SMS_Program classes."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 58f4f08b-bc7f-4e6e-989c-39769f0f3f12
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

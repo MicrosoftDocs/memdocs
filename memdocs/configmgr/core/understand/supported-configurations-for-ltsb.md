@@ -1,18 +1,17 @@
 ---
-title: "Supported Configurations for the LTSB "
-titleSuffix: "Configuration Manager"
-description: "Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager."
-ms.date: 05/10/2017
+title: Supported Configurations for the LTSB
+titleSuffix: Configuration Manager
+description: Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager.
+ms.date: 10/11/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: f0f818d4-7f45-402f-8758-dc88bc024953
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
+
 # Supported Configurations for the Long-Term Servicing Branch of System Center Configuration Manager
 
 *Applies to: System Center Configuration Manager (Long-Term Servicing Branch)*
@@ -92,165 +91,6 @@ You can use the LTSB to manage the following Windows Embedded devices by install
 -   Windows 10 Enterprise 2016 LTSB (x86, x64)  
 -   Windows 10 Enterprise 2015 LTSB (x86, x64)  
 -   Windows Embedded 8.1 Industry (x86, x64)    
--   Windows Thin PC (x86, x64)    
--   Windows Embedded POSReady 7 (x86, x64)    
--   Windows Embedded Standard 7 with SP1 (x86, x64)    
--   Windows Embedded POSReady 2009 (x86)   
--   Windows Embedded Standard 2009 (x86)  
-
-### Windows CE  
- You can manage Windows CE devices with the Configuration Manager mobile device legacy client that is included with Configuration Manager.  
-
-**Requirements and limitations:**  
-
--   The mobile device client requires 0.78 MB of storage space to install the client. A mobile device can require up to 256 KB of additional storage space to sign in.    
-
--   Features for these mobile devices vary by platform and client type. For information about the kind of management functions that Configuration Manager supports for a mobile device legacy client, see [Choose a device management solution for Configuration Manager](../plan-design/choose-a-device-management-solution.md).  
-
-**Supported operating systems:**  
-
--   Windows CE 7.0 (ARM and x86 processors)  
-
-**Supported languages include:**  
--   Chinese (simplified and traditional)    
--   English (US)    
--   French (France)    
--   German    
--   Italian    
--   Japanese  
--   Korean  
--   Portuguese (Brazil)  
--   Russian  
--   Spanish (Spain)  
-
-### Mac computers
-
-You can use the LTSB to manage macOS X computers with the Configuration Manager client for Mac.
-
-The Mac client installation package is not supplied with the Configuration Manager media. You can download it as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719).  
-
-Support for Mac operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Mac client installation packages for Current Branch.
-
-For more information, see [How to deploy clients to Macs](../clients/deploy/deploy-clients-to-macs.md).
-
-#### Supported versions for macOS
-
-- macOS X 10.9 (Mavericks)
-- macOS X 10.10 (Yosemite)
-- macOS X 10.11 (El Capitan)
-
-<!--
-## Linux and UNIX servers
-You can use the LTSB to manage Linux and UNIX servers with the Configuration Manager client for Linux and UNIX.
-
-The Linux and UNIX client installation packages are not supplied with the Configuration Manager media. You can download them as part of the "Clients for Additional Operating Systems" download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=47719). In addition to client installation packages, the client download includes the install script that manages the installation of the client on each computer.
-
-Support for Linux and UNIX operating systems is limited to those listed in this section. Support does not include additional operating systems that might be supported by a future update to Linux and UNIX client packages for Current Branch.
-
-**Requirements and limitations:**  
-
--   To review operating system file dependencies for the client for Linux and UNIX, see [Prerequisites for Client Deployment to Linux and UNIX Servers](../plan-design/changes/deprecated/removed-and-deprecated-client.md#BKMK_ClientDeployPrereqforLnU).  
--   For an overview of the management capabilities supported for computers that run Linux or UNIX, see [How to deploy clients to UNIX and Linux servers](../plan-design/changes/deprecated/removed-and-deprecated-client.md).  
--   For supported versions of Linux and UNIX, the listed version includes all subsequent minor versions. For example, where support is indicated for CentOS version 6, this also includes any subsequent minor version of CentOS 6, such as CentOS 6.3. Similarly, when support is listed for an operating system that uses service packs, such as SUSE Linux Enterprise Server 11 SP1, support includes subsequent service packs for that operating system version.
--   For information about client installation packages and the Universal Agent, see [How to deploy clients to UNIX and Linux servers](../plan-design/changes/deprecated/removed-and-deprecated-client.md).
-
-
-**Supported versions:**   
-The following versions are supported by using the indicated .tar file.  
-### AIX  
-
-|Version|File|  
-|-|-|  
-|Version 5.3 (Power)|ccm-Aix53ppc.&lt;build\>.tar|  
-|Version 6.1 (Power)|ccm-Aix61ppc.&lt;build\>.tar|  
-|Version 7.1 (Power)|ccm-Aix71ppc.&lt;build\>.tar|  
-
-### CentOS  
-
-|Version|File|  
-|-|-|  
-|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
-
-### Debian  
-
-|Version|File|    
-|-|-|  
-|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 6x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 7 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 8 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 8 x64|ccm-Universalx64.&lt;build\>.tar|  
-
-### HP-UX  
-
-|Version|File|  
-|-|-|  
-|Version 11iv2 IA64|ccm-HpuxB.11.23i64.&lt;build\>.tar|  
-|Version 11iv2 PA-RISC|ccm-HpuxB.11.23PA.&lt;build\>.tar|  
-|Version 11iv3 IA64|ccm-HpuxB.11.31i64.&lt;build\>.tar|  
-|Version 11iv3 PA-RISC|ccm-HpuxB.11.31PA.&lt;build\>.tar|  
-
-### Oracle Linux  
-
-|Version|File|    
-|-|-|  
-|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
-
-### Red Hat Enterprise Linux (RHEL)  
-
-|Version|File|  
-|-|-|  
-|Version 4 x86|ccm-RHEL4x86.&lt;build\>.tar|  
-|Version 4 x64|ccm-RHEL4x64.&lt;build\>.tar|  
-|Version 5 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 5 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 6 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 6 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 7 x64|ccm-Universalx64.&lt;build\>.tar|  
-
-### Solaris  
-
-|Version|File|   
-|-|-|  
-|Version 9 SPARC|ccm-Sol9sparc.&lt;build\>.tar|  
-|Version 10 x86|ccm-Sol10x86.&lt;build\>.tar|  
-|Version 10 SPARC|ccm-Sol10sparc.&lt;build\>.tar|  
-|Version 11 x86|ccm-Sol11x86.&lt;build\>.tar|  
-|Version 11 SPARC|ccm-Sol11sparc.&lt;build\>.tar|  
-
-### SUSE Linux Enterprise Server (SLES)  
-
-|Version|File|  
-|-|-|  
-|Version 9 x86|ccm-SLES9x86.&lt;build\>.tar|  
-|Version 10 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 10 SP1 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 11 SP1 x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 11 SP1 x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 12 x64|ccm-Universalx64.&lt;build\>.tar|  
-
-### Ubuntu  
-
-|Version|File|    
-|-|-|  
-|Version 10.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 10.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 12.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 12.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
-|Version 14.04 LTS x86|ccm-Universalx86.&lt;build\>.tar|  
-|Version 14.04 LTS x64|ccm-Universalx64.&lt;build\>.tar|  
--->
 
 ## Exchange Server connector
  The LTSB supports limited management of devices that connect to your Exchange Server instance, without installing client software. For more information, see [Manage mobile devices with Configuration Manager and Exchange](../../mdm/deploy-use/manage-mobile-devices-with-exchange-activesync.md).

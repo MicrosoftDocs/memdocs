@@ -1,6 +1,7 @@
 ---
 title: "SMS_SecuredCategory Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_SecuredCategory Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents the RBA security category.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 25ae1991-bb85-400b-be7e-7efed4575a57
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

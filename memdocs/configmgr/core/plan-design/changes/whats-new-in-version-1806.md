@@ -6,11 +6,11 @@ ms.date: 10/26/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 0249dbd3-1e85-4d05-a9e5-420fbe44d850
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1806 of Configuration Manager current branch
@@ -125,7 +125,7 @@ For more information, see [Windows LEDBAT](../hierarchy/fundamental-concepts-for
 <!--1357346-->
 Client peer cache sources can now divide content into parts. These parts minimize the network transfer to reduce WAN utilization. The management point provides more detailed tracking of the content parts. It tries to eliminate more than one download of the same content per boundary group. 
 
-For more information, see [Partial download support](../hierarchy/client-peer-cache.md#bkmk_parts). 
+For more information, see [Partial download support](../hierarchy/client-peer-cache.md#partial-download-support). 
 
 
 ### Boundary group options for peer downloads
@@ -136,7 +136,7 @@ Boundary groups now include additional settings to give you more control over co
 
 - **During peer downloads, only use peers within the same subnet**: The management point only includes in the content location list peer sources that are in the same subnet as the client.  
 
-For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-groups.md#bkmk_bgoptions).
+For more information, see [Boundary group options for peer downloads](../../servers/deploy/configure/boundary-group-options.md).
 
 
 ### Improvement to peer cache source location status
@@ -364,7 +364,7 @@ The [Enhanced HTTP site system](#bkmk_ehttp) feature also removes some dependenc
 
 These task sequences can be for OS deployment or custom. It's also supported for workgroup computers.
 
-For more information, see [Task sequences and the network access account](../../../osd/plan-design/planning-considerations-for-automating-tasks.md#BKMK_TSNetworkAccessAccount).
+For more information, see [Task sequences and the network access account](../../../osd/plan-design/planning-considerations-for-automating-tasks.md#task-sequences-and-the-network-access-account).
 
 
 ### Other improvements to OS deployment
@@ -391,7 +391,7 @@ For more information, see [Task sequences and the network access account](../../
  <!--SCCMDocs-pr issue 2671-->
  Both the **Enable BitLocker** and **Pre-provision BitLocker** steps now include an option to **Use full disk encryption**. By default, these steps encrypt used space on the drive. This default behavior is recommended, as it's faster and more efficient. 
 
- For more information see [Enable BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_EnableBitLocker) and [Pre-provision BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker). 
+ For more information see [Enable BitLocker](../../../osd/understand/task-sequence-steps.md#enable-bitlocker) and [Pre-provision BitLocker](../../../osd/understand/task-sequence-steps.md#BKMK_PreProvisionBitLocker). 
 
 #### Client provisioning mode isn't enabled with Windows 10 upgrade compatibility scan
  <!--SCCMDocs-pr issue 2812-->
@@ -416,9 +416,9 @@ Two new articles are now available for understanding task sequence variables:
 
 ### Software Center infrastructure improvements
 <!--1358309-->
-Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../../servers/deploy/configure/boundary-groups.md#management-points).
+Application catalog roles are no longer required to display user-available applications in Software Center. This change helps you reduce the server infrastructure required to deliver applications to users. Software Center now relies upon the management point to obtain this information, which helps larger environments scale better by assigning them to [boundary groups](../../servers/deploy/configure/boundary-groups-management-points.md).
 
-For more information, see [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#bkmk_userex)  
+For more information, see [Configure Software Center](../../../apps/plan-design/plan-for-software-center.md#configure-software-center)
 
 > [!Note]  
 > The application catalog website point and web service point roles are no longer *required* in 1806, but still *supported* roles. 
@@ -561,7 +561,7 @@ For more information, see [Surface dashboard](../../clients/manage/surface-devic
 
 ### View the currently signed on user for a device
 <!--1358202-->
-Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](../../clients/manage/monitor-clients.md#bkmk_indStatus). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
+Now by default the **Devices** node of the **Assets and Compliance** workspace displays a column for the **Currently logged on user**. It also displays for any collection-specific device list. This value is as current as the [client status](../../clients/manage/monitor-clients.md#monitor-individual-clients). When the user signs off, the client clears this value. If no user is signed on, the value is blank. 
 
 For more information, see [Console improvements in version 1806](../../servers/manage/admin-console-tips.md#view-users-for-a-device).
 

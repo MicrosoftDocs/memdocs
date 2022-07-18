@@ -9,7 +9,9 @@ ms.assetid: 39e47528-ea59-4d32-8baf-d017d3a44426
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
+ms.localizationpriority: null
+ms.collection: openauth
+description: Learn about how to configure data through the Configuration Manager console or directly editing the DCM Digest XML file.
 
 ---
 

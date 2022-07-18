@@ -1,4 +1,5 @@
 ---
+description: Learn how the ProgressUI is a COM automation class, in Configuration Manager, that represents a user interface that custom actions use to report progress to the Configuration Manager operating system deployment task sequencing environment.
 title: "ProgressUI Client COM Automation Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: f60558cd-a2c9-401d-bca0-191cdf117bbe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

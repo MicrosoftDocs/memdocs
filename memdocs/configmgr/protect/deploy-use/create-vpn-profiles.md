@@ -2,14 +2,14 @@
 title: How to create VPN profiles
 titleSuffix: Configuration Manager
 description: Learn how to create VPN profiles in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: f338e4db-73b5-45ff-92f4-1b89a8ded989
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to create VPN profiles in Configuration Manager
@@ -17,7 +17,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
+> Starting in version 2203, this company resource access feature is no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](../plan-design/resource-access-deprecation-faq.yml).
 
 Configuration Manager supports multiple VPN connection types. For more information on the connection types available for the different device platforms, see [VPN profiles](vpn-profiles.md).
 

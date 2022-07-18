@@ -1,6 +1,7 @@
 ---
 title: SetIsExpired method in class SMS_ApplicationLatest
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SetIsExpired WMI class method sets the expired status of this application."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: e9e410e4-78cb-490c-9a22-e12ddf2f2728
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

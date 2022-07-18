@@ -1,4 +1,5 @@
 ---
+description: Learn how to update the enabled/disabled state of a feature using UpdateFeatureState WMI class method. 
 title: "UpdateFeatureState Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 04077212-ba47-4e6b-8e98-80f99051c1d8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

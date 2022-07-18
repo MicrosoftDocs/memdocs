@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_WMIConditionExpression Class"
 titleSuffix: "Configuration Manager"
+description: "Represents a condition expression to check for the existence of results of a WMI query."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a412bf10-51d1-4f51-9767-fb024d85f9c6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

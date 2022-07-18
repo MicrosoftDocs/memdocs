@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Create security baseline profiles in Microsoft Intune - Azure | Microsoft Docs
+title: Create security baseline profiles in Microsoft Intune
 description: Create default profiles and customized profiles to deploy security baselines to devices you manage with Intune. Security baselines manage settings on windows devices to help keep your users and devices secure. 
 keywords:
 author: brenduns 
@@ -38,6 +38,7 @@ When you create a security baseline profile in Intune, you're creating a templat
 This feature applies to:
 
 - Windows 10 version 1809 and later
+- Windows 11
 
 See the list of [available security baselines](../protect/security-baselines.md#available-security-baselines).
 
@@ -163,7 +164,7 @@ Before you update the version of a profile that's assigned to groups, [test the 
 
 ## Remove a security baseline assignment
 
-When a security baseline setting no longer applies to a device, or settings in a baseline are set to *Not configured*, those settings on a device don't revert to a pre-managed configuration. Instead, the previously managed settings on the device keep their last configurations as received from the baseline until some other process updates those settings on the device.
+When a security baseline setting no longer applies to a device, or settings in a baseline are set to *Not configured*, those settings on a device might not revert to a pre-managed configuration depending on the settings in the security baseline. The settings are based on CSPs, and each CSP can handle the change removal differently.
 
 Other processes that might later change settings on the device include a different or new security baseline, device configuration profile, Group Policy configurations, or manual edit of the setting on the device.
 
@@ -210,7 +211,7 @@ If you have a profile associated with an older baseline, that older baseline wil
 
 ## Co-managed devices
 
-Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows 10 devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager, and also want the benefits of the cloud.
+Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows 10/11 devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager, and also want the benefits of the cloud.
 
 When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](/configmgr/comanage/workloads#device-configuration) provides more information.
 

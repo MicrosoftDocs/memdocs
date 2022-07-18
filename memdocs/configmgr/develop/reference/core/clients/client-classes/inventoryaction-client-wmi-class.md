@@ -1,4 +1,5 @@
 ---
+description: Learn how to associate a set of queries with reporting details, tying together the item to report and the destination of the report.
 title: "InventoryAction Client WMI Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 74ac1a03-44e0-477f-b5da-5e74e004a1e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

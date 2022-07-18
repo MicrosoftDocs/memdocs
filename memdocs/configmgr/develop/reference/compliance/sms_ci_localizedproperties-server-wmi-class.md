@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_CI_LocalizedProperties class in Configuration Manager which contains the localized properties for a configuration item.
 title: "SMS_CI_LocalizedProperties Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: b74eec73-00a3-40ad-a496-fa42d80f0c27
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

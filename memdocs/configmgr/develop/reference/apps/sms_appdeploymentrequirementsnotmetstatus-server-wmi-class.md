@@ -1,6 +1,7 @@
 ---
 title: "SMS_AppDeploymentRequirementsNotMetStatus Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_AppDeploymentRequirementsNotMetStatus WMI class is an SMS Provider server class that represents the status of application deployment where requirements are not met."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: efaa6ef5-e9a0-4939-bf9a-855e42d2df65
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

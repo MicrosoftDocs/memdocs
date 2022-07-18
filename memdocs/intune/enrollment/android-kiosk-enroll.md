@@ -5,8 +5,8 @@ title: Setup Intune enrollment for Android Enterprise dedicated devices
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android Enterprise dedicated devices in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 11/23/2020
 ms.topic: how-to
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Set up Intune enrollment of Android Enterprise dedicated devices
@@ -45,9 +47,9 @@ Intune helps you deploy apps and settings to Android Enterprise dedicated device
 
 ## Device requirements
 
-Devices must meet these requirements to be managed as an Android Enterprise dedicated device:
+Devices must meet these requirements to be managed by Endpoint Manager as an Android Enterprise dedicated device:
 
-- Android OS version 6.0 and above.
+- Android OS version 8.0 and above.
 - Devices must run a distribution of Android that has Google Mobile Services (GMS) connectivity. Devices must have GMS available and must be able to connect to GMS.
 
 ## Set up Android Enterprise dedicated device management

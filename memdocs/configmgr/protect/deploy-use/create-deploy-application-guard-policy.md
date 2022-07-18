@@ -2,16 +2,14 @@
 title: Manage Application Guard policies
 titleSuffix: Configuration Manager
 description: Learn how to create and deploy Microsoft Defender Application Guard policies
-ms.date: 07/09/2021
+ms.date: 10/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 33a6c1d9-4dd8-411c-a748-693a5bd2ea5a
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Create and deploy Microsoft Defender Application Guard policy
@@ -22,7 +20,7 @@ You can create and deploy [Microsoft Defender Application Guard (Application Gua
 
 ## Prerequisites
 
-To create and deploy a Microsoft Defender Application Guard policy, you must use the Windows 10 Fall Creator's Update (1709). The Windows 10 devices to which you deploy the policy must be configured with a [network isolation policy](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings). For more information, see the [Microsoft Defender Application Guard overview](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
+To create and deploy a Microsoft Defender Application Guard policy, you must use Windows 10 1709 or later. The Windows 10 or later devices to which you deploy the policy must be configured with a [network isolation policy](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard#network-isolation-settings). For more information, see the [Microsoft Defender Application Guard overview](/windows/security/threat-protection/microsoft-defender-application-guard/md-app-guard-overview).
 
 ## Create a policy, and to browse the available settings
 
@@ -36,14 +34,14 @@ To create and deploy a Microsoft Defender Application Guard policy, you must use
 5. On the **Network Definition** page, specify the corporate identity, and define your corporate network boundary.
 
     > [!NOTE]
-    > Windows 10 PCs store only one network isolation list on the client. You can create two different kinds of network isolation lists and deploy them to the client:
+    > Windows 10 or later PCs store only one network isolation list on the client. You can create two different kinds of network isolation lists and deploy them to the client:
     >
     >  - one from Windows Information Protection
     >  - one from Microsoft Defender Application Guard
     >
     > If you deploy both policies, these network isolation lists must match. If you deploy lists that don't match to the same client, the deployment will fail. For more information, see the [Windows Information Protection documentation](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr).
 
-6. When you're finished, complete the wizard, and deploy the policy to one or more Windows 10 1709 devices.
+6. When you're finished, complete the wizard, and deploy the policy to one or more Windows 10 1709 or later devices.
 
 ### <a name="bkmk_HIS"></a> Host interaction settings
 
@@ -80,7 +78,7 @@ Configures application behavior inside the Application Guard session. Before Con
 <!--3555858-->
 Starting in Configuration Manager version 1906, There's a policy setting that enables users to trust files that normally open in Application Guard. Upon successful completion, the files will open on the host device instead of in Application Guard. For more information about the Application Guard policies, see [Configure Microsoft Defender Application Guard policy settings](/windows/security/threat-protection/microsoft-defender-application-guard/configure-md-app-guard).
 
-- **Allow users to trust files that open in Windows Defender Application Guard** - Enable the user to mark files as trusted. When a file is trusted, it opens on the host rather than in Application Guard. Applies to Windows 10 version 1809 or higher clients.
+- **Allow users to trust files that open in Windows Defender Application Guard** - Enable the user to mark files as trusted. When a file is trusted, it opens on the host rather than in Application Guard. Applies to Windows 10 version 1809 or later clients.
   - **Prohibited:** Don't allow users to mark files as trusted (default).
   - **File checked by antivirus:** Allow users to mark files as trusted after an antivirus check.
   - **All files:** Allow users to mark any file as trusted.

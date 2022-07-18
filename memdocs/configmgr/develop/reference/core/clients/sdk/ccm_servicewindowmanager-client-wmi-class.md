@@ -1,4 +1,5 @@
 ---
+description: Article detailing how to use CCM_ServiceWindowManager in Configuration Manager to manage service windows on the client computer.
 title: "CCM_ServiceWindowManager Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: f8196309-a790-430c-88fb-d9f23be24a2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

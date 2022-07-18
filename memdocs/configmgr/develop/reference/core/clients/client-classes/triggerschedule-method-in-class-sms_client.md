@@ -1,6 +1,7 @@
 ---
 title: "TriggerSchedule Method"
 titleSuffix: "Configuration Manager"
+description: Trigger the client to run a specific schedule.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a4e13dea-899a-4d9e-8e5b-60b7f81c0c45
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -98,19 +101,26 @@ UInt32 TriggerSchedule(
 
 ## Examples 
 
-```  
-#Trigger Hardware Inventory via PowerShell using the [WMICLASS] Type accelerator
-PS C:\> ([wmiclass]"root\ccm:SMS_Client").TriggerSchedule("{00000000-0000-0000-0000-000000000001}")
+### Example 1: Trigger hardware inventory via PowerShell using the `WMICLASS` type accelerator
 
-#Trigger LS (Location Service) Refresh Locations Task via PowerShell using the Invoke-CIMMethod method
-PS C:\> Invoke-CimMethod -Namespace 'root\CCM' -ClassName SMS_Client -MethodName TriggerSchedule -Arguments @{sScheduleID='{00000000-0000-0000-0000-000000000024}'}
-
-#Trigger Data Discovery Record using WMI Command line tool
-C:\> WMIC.exe /namespace:\\root\ccm path sms_client CALL TriggerSchedule "{00000000-0000-0000-0000-000000000003}" /NOINTERACTIVE
-
+```powershell
+([wmiclass]"root\ccm:SMS_Client").TriggerSchedule("{00000000-0000-0000-0000-000000000001}")
 ```
 
-## See Also  
+### Example 2: Trigger location service refresh task via PowerShell using the Invoke-CIMMethod method
+
+```powershell
+Invoke-CimMethod -Namespace 'root\CCM' -ClassName SMS_Client -MethodName TriggerSchedule -Arguments @{sScheduleID='{00000000-0000-0000-0000-000000000024}'}
+```
+### Example 3: Trigger Software Update Scan cache deletion and scan via Command Prompt using WMIC
+
+```batchfile
+%windir%\System32\wbem\WMIC.exe /namespace:\\root\ccm\invagt path inventoryActionStatus where InventoryActionID="{00000000-0000-0000-0000-000000000113}" DELETE /NOINTERACTIVE
+%windir%\System32\wbem\WMIC.exe /namespace:\\root\ccm path sms_client CALL TriggerSchedule "{00000000-0000-0000-0000-000000000113}" /NOINTERACTIVE
+```
+
+## See also
+
  [SMS_Client Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_client-client-wmi-class.md)   
  [EvaluateMachinePolicy method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/evaluatemachinepolicy-method-in-class-sms_client.md)   
  [GetAssignedSite method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/getassignedsite-method-in-class-sms_client.md)   

@@ -1,6 +1,7 @@
 ---
 title: "CCM_CONTENTFLAG Enumeration"
 titleSuffix: "Configuration Manager"
+description: "Learn about the CCM_CONTENTFLAG Enumeration that contains options for transferring content."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 759cd7fa-2980-4b1a-905a-1bb1a21402af
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

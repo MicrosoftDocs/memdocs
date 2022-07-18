@@ -1,4 +1,5 @@
 ---
+description: Learn how to get sample values for a report view schema using GetSampleValues class method Configuration Manager. 
 title: "GetSampleValues Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: f15a4fd3-839e-4903-bd47-c67d38772f28
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "DDRNew"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the DDRNew function begins a new data discovery record."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 36745a1f-7b0a-4b29-b36c-5a6d48442ef7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

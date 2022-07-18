@@ -1,35 +1,31 @@
 ---
-title: Tenant attach - Run Scripts (preview) from the admin center
+title: Tenant attach - Run Scripts from the admin center
 titleSuffix: Configuration Manager
-description: "Run scripts for Configuration Manager devices from the admin center."
-ms.date: 12/03/2020
+description: Run scripts for Configuration Manager devices from the admin center.
+ms.date: 07/11/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 6b6c0a9b-01c6-4e3f-9ae4-45c780b46f8b
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
-# <a name="bkmk_scripts"></a> Tenant attach: Run Scripts (preview) from the admin center
+# <a name="bkmk_scripts"></a> Tenant attach: Run Scripts from the admin center
 <!--CM6234688, IN7220536-->
 *Applies to: Configuration Manager (current branch)*
-
-> [!Important]
-> - This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 Bring the power of the Configuration Manager on-premises Run Scripts feature to the Microsoft Endpoint Manager admin center. Allow additional personas, like Helpdesk, to run PowerShell scripts from the cloud against an individual Configuration Manager managed device in real time. This gives all the traditional benefits of PowerShell scripts that have already been defined and approved by the Configuration Manager admin to this new environment.
 
 :::image type="content" source="./media/6234688-scripts.png" alt-text="Screenshot of script list in the admin center" lightbox="./media/6234688-scripts.png":::
-
 
 ## Prerequisites
 
 Running Scripts from the admin center requires the following items:
 
 - All of the prerequisites for [Tenant attach: ConfigMgr client details](client-details.md#prerequisites)
-- A minimum of Configuration Manager version 2006 with [KB4580678 - Tenant attach rollup for Configuration Manager current branch, version 2006](https://support.microsoft.com/help/4580678) installed.
+- A supported version of Configuration Manager installed.
    - All sites in the hierarchy must meet the minimum Configuration Manager version requirement.
 - Configuration Manager clients must be running the latest version client.
 - To run PowerShell scripts, the client must be running PowerShell version 3.0 or later.

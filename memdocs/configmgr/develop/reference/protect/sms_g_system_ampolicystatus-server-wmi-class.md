@@ -1,6 +1,7 @@
 ---
 title: "SMS_G_SYSTEM_AmPolicyStatus Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_G_SYSTEM_AmPolicyStatus Windows Management Instrumentation class is an SMS Provider server class in Configuration Manager.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 80356bbf-d4d3-420f-b1ec-305e25257ae2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_G_SYSTEM_AmPolicyStatus Server WMI Class

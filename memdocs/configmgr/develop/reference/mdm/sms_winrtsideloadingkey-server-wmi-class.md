@@ -1,4 +1,5 @@
 ---
+description: Learn how to create, modify, and delete sideloading keys using SMS_WinRTSideLoadingKey class in Configuration Manager. 
 title: "SMS_WinRTSideLoadingKey Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: c91c3fbc-b267-428d-99fe-1782873c6aef
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

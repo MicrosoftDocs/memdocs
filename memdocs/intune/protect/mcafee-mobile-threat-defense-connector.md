@@ -37,9 +37,9 @@ You can configure Conditional Access policies based on MVISION Mobile risk asses
 
 ## Supported platforms
 
-- **Android 6.0 and later**
+- **Android 5.1 and later**
 
-- **iOS 9 and later**
+- **iOS 10 and later**
 
 ## Prerequisites
 

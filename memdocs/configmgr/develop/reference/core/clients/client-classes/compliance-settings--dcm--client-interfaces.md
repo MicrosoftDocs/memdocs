@@ -1,6 +1,7 @@
 ---
 title: "Compliance Settings Client Interfaces"
 titleSuffix: "Configuration Manager"
+description: "Learn about the configuration management COM automation classes and related types used by client applications to manage configuration items on the client computer."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5b566a81-4d1b-4d19-94cb-0fb6589cf76c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

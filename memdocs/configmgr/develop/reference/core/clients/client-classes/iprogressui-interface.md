@@ -1,6 +1,7 @@
 ---
 title: IProgressUI interface
 titleSuffix: Configuration Manager
+description: "IProgressUI represents the user interface that allows custom actions to report progress to the OS deployment task sequencing environment."
 ms.date: 04/03/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 2c84a3bd-f8d8-46a4-9591-07186ca5fe65
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # IProgressUI interface

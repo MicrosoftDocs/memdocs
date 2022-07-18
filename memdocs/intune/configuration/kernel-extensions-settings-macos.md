@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: macOS extension settings in Microsoft Intune - Azure | Microsoft Docs
+title: macOS extension settings in Microsoft Intune
 titleSuffix:
 description: Add, configure, or create settings on macOS devices to use system extensions and kernel extensions. Also, allow users to override approved extensions, allow all extensions from a team identifier, or allow specific extensions or apps in Microsoft Intune.
 keywords:
@@ -9,7 +9,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/25/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-ms.reviewer: annovich
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

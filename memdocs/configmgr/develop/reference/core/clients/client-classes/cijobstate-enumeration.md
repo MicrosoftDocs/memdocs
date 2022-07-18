@@ -1,4 +1,5 @@
 ---
+description: Learn how CIJobState enumeration defines configuration item agent job states and is used by ICIINFO Interface.
 title: "CIJobState Enumeration"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 3bdac2a9-16af-4dbb-bea2-3075837acd0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

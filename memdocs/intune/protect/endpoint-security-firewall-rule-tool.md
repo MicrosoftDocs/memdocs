@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Endpoint security firewall rule migration tool for Microsoft Intune - Azure | Microsoft Docs
+title: Endpoint security firewall rule migration tool for Microsoft Intune
 description: Learn about the endpoint security firewall rule migration tool for Microsoft Intune.
 keywords:
 author: brenduns
@@ -33,7 +33,7 @@ Many organizations are moving their security configuration to Microsoft Endpoint
 
 Because it can be challenging to move large numbers of existing Group Policies for Windows Firewall rules to Endpoint security policies in Endpoint Manager, we've created the **Endpoint security firewall rule migration tool**.
 
-When you run the **Endpoint security firewall rule migration tool** on a reference Windows 10 client that has firewall rules based on Group Policy applied, the tool can automatically create Endpoint security firewall rule policies in Endpoint Manager. After the endpoint security rules are created, administrators can target the rules to Azure AD groups to configure MDM and co-managed clients.
+When you run the **Endpoint security firewall rule migration tool** on a reference Windows 10/11 client that has firewall rules based on Group Policy applied, the tool can automatically create Endpoint security firewall rule policies in Endpoint Manager. After the endpoint security rules are created, administrators can target the rules to Azure AD groups to configure MDM and co-managed clients.
 
 Download the [Endpoint security firewall rule migration tool](https://aka.ms/EndpointSecurityFWRuleMigrationTool):
 

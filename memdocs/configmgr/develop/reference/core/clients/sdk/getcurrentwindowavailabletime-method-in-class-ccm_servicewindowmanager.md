@@ -1,5 +1,6 @@
 ---
 title: "GetCurrentWindowAvailableTime Method"
+description: Learn how the GetCurrentWindowAvailableTime WMI class method, in Configuration Manager, gets the time remaining in a currently active service window for a specified type.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: f3492456-84e4-44e4-ae30-b0f0073c62ce
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

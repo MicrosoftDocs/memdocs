@@ -1,18 +1,17 @@
 ---
 # required metadata
 
-title: Configure Microsoft Defender for Endpoint in Microsoft Intune - Azure | Microsoft Docs
+title: Configure Microsoft Defender for Endpoint in Microsoft Intune
 description: Configure Microsoft Defender for Endpoint in Intune, including connecting to Defender for Endpoint, onboarding devices, assigning compliance for risk levels, and conditional access policies.
 keywords: configure, manage, capabilities, attack surface reduction, next-generation protection, security controls, endpoint detection and response, auto investigation and remediation, security controls, controls, microsoft defender for endpoint, mde
 author: brenduns 
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/03/2021
+ms.date: 06/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 ms.reviewer: aanavath
 
 # optional metadata
@@ -24,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Configure Microsoft Defender for Endpoint in Intune
@@ -32,11 +33,14 @@ ms.collection: M365-identity-device-management
 Use the information and procedures in this article to configure integration of Microsoft Defender for Endpoint with Intune. Configuration includes the following general steps:
 
 - Enable Microsoft Defender for Endpoint for your tenant
-- Onboard devices that run Android, iOS/iPadOS, and Windows 10
+- Onboard devices that run Android, iOS/iPadOS, and Windows 10/11
 - Use compliance policies to set device risk levels
 - Use conditional access policies to block devices that exceed your expected risk levels
+- Android and iOS/iPadOS, use [app protection policies](../protect/mtd-app-protection-policy.md) that set device risk levels. App protection polices work with both enrolled and unenrolled devices.
 
 Before starting, your environment must meet the [prerequisites](../protect/advanced-threat-protection.md#prerequisites) to use Microsoft Defender for Endpoint with Intune.
+
+In addition to managing settings for Microsoft Defender for Endpoint on devices you manage with Intune, you can manage Defender for Endpoint security configurations on devices that aren’t enrolled with Intune. This scenario is called *Security Management for Microsoft Defender for Endpoint* and requires configuring the *Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations* toggle to *On*. For more information, see [MDE Security Configuration Management](../protect/mde-security-integration.md).
 
 ## Enable Microsoft Defender for Endpoint in Intune
 
@@ -48,35 +52,62 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and then select **Open the Microsoft Defender Security Center**.
+2. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and then select **Open the Microsoft Defender for Endpoint admin console**. 
+
+   This opens the **Microsoft 365 Defender** portal at *security.microsoft.com*, which [replaces the use of the previous portal](/microsoft-365/security/defender/microsoft-365-defender?view=o365-worldwide&preserve-view=true) at *securitycenter.windows.com*.
 
    > [!TIP]
    > If the **Connection status** at the top of the page is already set to **Enabled**, the connection to Intune has already been made, and the admin center displays different UI than in the following screen shot. In this event, you can use the link **Open the Microsoft Defender for Endpoint admin console** to open the Microsoft Defender Security Center and use the guidance in the following step to confirm that the **Microsoft Intune connection** is set to **On**.
 
    :::image type="content" source="./media/advanced-threat-protection-configure/atp-device-compliance-open-microsoft-defender.png" alt-text="Screen shot that shows the patch to open the Microsoft Defender Security Center.":::
 
-
-3. In **Microsoft Defender Security Center**:
-   1. Select **Settings** > **Advanced features**.
+3. In **Microsoft 365 Defender**, (previously the *Microsoft Defender Security Center*):
+   1. Select [**Settings** > **Endpoints** >**Advanced features**](https://security.microsoft.com/preferences2/integration).
    2. For **Microsoft Intune connection**, choose **On**:
 
       :::image type="content" source="./media/advanced-threat-protection-configure/atp-security-center-intune-toggle.png" alt-text="Screen shot of the Microsoft Intune connection setting.":::
 
    3. Select **Save preferences**.
 
-4. Return to **Microsoft Defender for Endpoint** in the Microsoft Endpoint Manager admin center. Under **MDM Compliance Policy Settings**, depending on your organization's needs:
-   - Set **Connect Android devices** to Microsoft Defender for Endpoint to **On** 
-   - Set **Connect iOS devices** to Microsoft Defender for Endpoint to **On**
-   - Set **Connect Windows devices** <!-- version 10.0.15063 and above -->to Microsoft Defender for Endpoint to **On**
+   > [!NOTE]
+   > Once the connection is established, the services are expected to sync with each other _at least_ once every 24 hours. The number of days without sync until the connection is considered unresponsive is configurable in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Select **Endpoint security** > **Microsoft Defender for Endpoint** > **Number of days until partner is unresponsive**
 
-   When these configurations are *On*, applicable devices that you currently manage with Intune, and devices you enroll in the future, are connected to Microsoft Defender for Endpoint for compliance.
+4. Return to **Microsoft Defender for Endpoint** page in the Microsoft Endpoint Manager admin center.
+
+   1. To use Defender for Endpoint with **compliance policies**, configure the following under **MDM Compliance Policy Settings** for the platforms you support:
+      - Set **Connect Android devices** to Microsoft Defender for Endpoint to **On**
+      - Set **Connect iOS devices** to Microsoft Defender for Endpoint to **On**
+      - Set **Connect Windows devices** to Microsoft Defender for Endpoint to **On**
+
+      When these configurations are *On*, applicable devices that you manage with Intune, and devices you enroll in the future, are connected to Microsoft Defender for Endpoint for compliance.
+
+      For iOS devices, Defender for Endpoint also supports the following settings:
+
+      >[!NOTE]
+      > Before you can use the following two settings, you must opt-in to an MDE Preview. To opt-in, contact `mdatpmobile@microsoft.com`.
+
+      - **Enable App Sync for iOS Devices**:  Set to **On** to allow Defender for Endpoint to request metadata of iOS applications from Intune to use for threat analysis purposes. The iOS device must be MDM-enrolled and will provide updated app data during device check-in.
+
+      - **Send full application inventory data on personally-owned iOS/iPadOS Devices**: This setting controls the application inventory data that Intune shares with Defender for Endpoint when Defender for Endpoint syncs app data and requests the app inventory list.
+
+        When set to **On**, Defender for Endpoint can request a list of applications from Intune for personally-owned iOS/iPadOS devices. This includes unmanaged apps as well as apps that were deployed through Intune. 
+
+        When set to **Off**, data about unmanaged apps isn’t provided. Intune does share data for the apps that were deployed through Intune.
+
+      For more information, see [Mobile Threat Defense toggle options](../protect/mtd-connector-enable.md#mobile-threat-defense-toggle-options).
+
+   2. To use Defender for Endpoint with **app protection policies**, configure the following under **App Protection Policy Settings** for the platforms you support. These capabilities are available for Android and iOS/iPadOS.
+      - Set **Connect Android devices** to Microsoft Defender for Endpoint for app protection policy evaluation to **On**.  
+      - Set **Connect iOS devices** to Microsoft Defender for Endpoint for app protection policy evaluation to **On**.  
+
+    For more information about both MDM Compliance Policy Settings and App Protection Policy Settings, see [Mobile Threat Defense toggle options](../protect/mtd-connector-enable.md#mobile-threat-defense-toggle-options).
 
 5. Select **Save**.
 
 > [!TIP]
 > When you integrate a new application to Intune Mobile Threat Defense and enable the connection to Intune, Intune creates a classic conditional access policy in Azure Active Directory. Each MTD app you integrate, including [Microsoft Defender for Endpoint](advanced-threat-protection.md) or any of our additional [MTD partners](mobile-threat-defense.md#mobile-threat-defense-partners), creates a new classic conditional access policy. These policies can be ignored, but should not be edited, deleted, or disabled.
 >
-> If the classic policy is deleted, you will need to delete the connection to Intune that was responsible for its creation, and then set it up again. This recreates the classic policy. Its not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
+> If the classic policy is deleted, you will need to delete the connection to Intune that was responsible for its creation, and then set it up again. This recreates the classic policy. It's not supported to migrate classic policies for MTD apps to the new policy type for conditional access.
 >
 > Classic conditional access policies for MTD apps:
 >
@@ -91,17 +122,22 @@ You only need to enable Microsoft Defender for Endpoint a single time per tenant
 
 When you enabled support for Microsoft Defender for Endpoint in Intune, you established a service-to-service connection between Intune and Microsoft Defender for Endpoint. You can then onboard devices you manage with Intune to Microsoft Defender for Endpoint. Onboarding enables collection of data about device risk levels.
 
+When onboarding devices, be sure to use most recent version of Microsoft Defender for Endpoint for each platform.
+
 ### Onboard Windows devices
 
 After you connect Intune and Microsoft Defender for Endpoint, Intune receives an onboarding configuration package from Microsoft Defender for Endpoint. You use a device configuration profile for Microsoft Defender for Endpoint to deploy the package to your Windows devices.
 
 The configuration package configures devices to communicate with [Microsoft Defender for Endpoint services](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-advanced-threat-protection) to scan files and detect threats. The device also reports its risk level to Microsoft Defender for Endpoint based on your compliance policies.
 
-After you onboard a device using the configuration package, you don't need to do it again.
+After onboarding a device using the configuration package, you don't need to do it again.
 
-In addition to device configuration policy, you can onboard devices using:
+You can also onboard devices using:
 
-- [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) policy. Intune EDR policy is part of endpoint security in Intune, which you can use to configure device security without the overhead of the larger body of settings found in device configuration profiles. You can also use EDR policy with tenant attached devices, which are devices you manage with Configuration Manager.
+- [Endpoint detection and response](../protect/endpoint-security-edr-policy.md) (EDR) policy. Intune EDR policy is part of endpoint security in Intune. Use EDR policies to configure device security without the overhead of the larger body of settings found in device configuration profiles. You can also use EDR policy with tenant attached devices, which are devices you manage with Configuration Manager.
+
+  When you configure EDR policy after connecting Intune and Microsoft Defender for Endpoint, the policy setting *Microsoft Defender for Endpoint client configuration package type* has a new configuration option: **Auto from connector**. With this option, Intune automatically gets the onboarding package (blob) from your Defender for Endpoint deployment, replacing the need to manually configure an *Onboard* package.
+
 - [Group policy or Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints).
 
 > [!TIP]
@@ -119,12 +155,12 @@ In addition to device configuration policy, you can onboard devices using:
    - **Sample sharing for all files**: Returns or sets the Microsoft Defender for Endpoint Sample Sharing configuration parameter.
    - **Expedite telemetry reporting frequency**: For devices that are at high risk, **Enable** this setting so it reports telemetry to the Microsoft Defender for Endpoint service more frequently.
 
-   [Onboard Windows 10 machines using Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) has more details on the Microsoft Defender for Endpoint settings.  
+   [Onboard Windows machines using Microsoft Endpoint Configuration Manager](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-sccm) has more details on the Microsoft Defender for Endpoint settings.  
 
    :::image type="content" source="./media/advanced-threat-protection-configure/automatic-package-configuration.png" alt-text="Screen shot of the configuration options for Endpoint Detection and Response.":::
 
    > [!NOTE]
-   > The preceding screen capture shows your configuration options after you’ve configured a connection between Intune and Microsoft Defender for Endpoint. When connected, the details for the onbording and offboarding blobs are automatically generated and transferred to Intune.
+   > The preceding screen capture shows your configuration options after you’ve configured a connection between Intune and Microsoft Defender for Endpoint. When connected, the details for the onboarding and offboarding blobs are automatically generated and transferred to Intune.
    >
    > If you haven’t configured this connection successfully, the setting *Microsoft Defender for Endpoint client configuration package type* displays with options to specify onboarding and offboarding blobs.
 
@@ -132,7 +168,7 @@ In addition to device configuration policy, you can onboard devices using:
 
 8. On the **Assignments** page, select the groups that will receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
-   When deploying to user groups, a user must sign-in on a device before the policy applies and the device can onboard to Defender for Endpoint.
+   When deploying to user groups, a user must sign in on a device before the policy applies and the device can onboard to Defender for Endpoint.
 
    Select **Next**.
 
@@ -145,13 +181,13 @@ After you establish the service-to-service connection between Intune and Microso
 
 For configuration guidance for Intune, see [Microsoft Defender for Endpoint for macOS](../apps/apps-advanced-threat-protection-macos.md).
 
-For additional information about Microsoft Defender for Endpoint for Mac, including what's new in the latest release, see [Microsoft Defender for Endpoint for Mac](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac?view=o365-worldwide&preserve-view=true) in the Microsoft 365 security documentation.
+For more information about Microsoft Defender for Endpoint for Mac, including what's new in the latest release, see [Microsoft Defender for Endpoint for Mac](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac?view=o365-worldwide&preserve-view=true) in the Microsoft 365 security documentation.
 
 ### Onboard Android devices
 
 After you establish the service-to-service connection between Intune and Microsoft Defender for Endpoint, you can onboard Android devices to Microsoft Defender for Endpoint. Onboarding configures devices to communicate with Defender for Endpoint, which then collects data about the devices risk level.
 
-There isn't a configuration package for devices that run Android. Instead, see [Overview of Microsoft Defender for Endpoint for Android](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) in the Microsoft Defender for Endpoint documentation for prerequisites and onboarding instructions for Android.
+There isn't a configuration package for devices that run Android. Instead, see [Overview of Microsoft Defender for Endpoint for Android](/windows/security/threat-protection/microsoft-defender-atp/microsoft-defender-atp-android) in the Microsoft Defender for Endpoint documentation for the prerequisites and onboarding instructions for Android.
 
 For devices that run Android, you can also use Intune policy to modify Microsoft Defender for Endpoint on Android. For more information, see [Microsoft Defender for Endpoint web protection](../protect/advanced-threat-protection-manage-android.md).
 
@@ -177,19 +213,19 @@ For devices that run iOS/iPadOS (in Supervised Mode), there is specialized abili
 
 8. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list of configuration profiles.
 
-Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for iOS team has made available a custom .mobileconfig profile to deploy to iPad/iOS devices. This .mobileconfig profile will be used to analyze network traffic to ensure a safe browsing experience - a feature of Defender for iOS.
+Further, for devices that run iOS/iPadOS (in Supervised Mode), the Defender for iOS team has made available a custom .mobileconfig profile to deploy to iPad/iOS devices. The .mobileconfig profile will be used to analyze network traffic to ensure a safe browsing experience - a feature of Defender for iOS.
 
-1. Download the .mobile profile, which is hosted here: https://aka.ms/mdatpiossupervisedprofile
+1. Download the .mobile profile, which is hosted here: [https://aka.ms/mdatpiossupervisedprofile](https://aka.ms/mdatpiossupervisedprofile).
 2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 3. Select **Devices** > **Configuration profiles** > **Create profile**.
 4. For **Platform**, select **iOS/iPadOS**
 5. For **Profile type**, select **Custom**, and then select **Create**.
 6. On the **Basics** page, enter a *Name* and *Description* (optional) for the profile, then choose **Next**.
-7. Enter a *Configuration profile name*, and select a file to .mobileconfig file to Upload.
+7. Enter a *Configuration profile name*, and select a `.mobileconfig` file to Upload.
 8. Select **Next** to open the **Scope tags** page. Scope tags are optional. Select **Next** to continue.
 9. On the **Assignments** page, select the groups that will receive this profile. For this scenario, it's a best practice to target **All Devices**. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
 
-   When deploying to user groups, a user must sign-in on a device before the policy applies.
+   When deploying to user groups, a user must sign in on a device before the policy applies.
 
    Select **Next**.
 
@@ -261,9 +297,9 @@ Conditional access policies can use data from Microsoft Defender for Endpoint to
 
 2. Select **Endpoint security** > **Conditional Access** > **New policy**.
 
-3. Enter a policy **Name**, and select **Users and groups**. Use the Include or Exclude options to add your groups for the policy, and select **Done**.
+3. Enter a policy **Name** and select **Users and groups**. Use the Include or Exclude options to add your groups for the policy, and then select **Done**.
 
-4. Select **Cloud apps**, and choose which apps to protect. For example, choose **Select apps**, and select **Office 365 SharePoint Online** and **Office 365 Exchange Online**.
+4. Select **Cloud apps**, and then choose which apps to protect. For example, choose **Select apps**, and select **Office 365 SharePoint Online** and **Office 365 Exchange Online**.
 
    Select **Done** to save your changes.
 
@@ -286,6 +322,7 @@ Learn more from the Intune documentation:
 
 - [Use security tasks with Defender for Endpoints Vulnerability Management to remediate issues on devices](atp-manage-vulnerabilities.md)
 - [Get started with device compliance policies](device-compliance-get-started.md)
+- [App protection policies overview](../apps/app-protection-policy.md)
 
 Learn more from the Microsoft Defender for Endpoint documentation:
 

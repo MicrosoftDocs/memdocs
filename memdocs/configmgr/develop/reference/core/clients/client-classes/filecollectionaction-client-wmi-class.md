@@ -1,6 +1,7 @@
 ---
 title: "FileCollectionAction Class"
 titleSuffix: "Configuration Manager"
+description: "A client Windows Management Instrumentation class that associates a set of file collection rules with reporting details, tying together files to collect with the destination of the report."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 83a2cce8-789b-4599-9823-98d02a8e733f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a clients deployment state using SMS_ClientDeploymentStateDetailsView in Configuration Manager.
 title: "SMS_ClientDeploymentStateDetailsView Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 6f8ad726-3bb7-4d01-98b9-f3b08459edef
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

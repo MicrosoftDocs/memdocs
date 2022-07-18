@@ -1,5 +1,6 @@
 ---
 title: "Close Method in Class SMS_Alert"
+description: Learn how the Close Windows Management Instrumentation (WMI) class method, in Configuration Manager, postpones the alert. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: ca06cc95-40e6-4a18-b560-c94555d4aac1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

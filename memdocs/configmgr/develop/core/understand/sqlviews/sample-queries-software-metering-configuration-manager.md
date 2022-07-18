@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for software metering
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common software metering views to other views.
@@ -12,6 +12,8 @@ ms.assetid: 2cf7208f-7684-40a0-9402-656a7abcd583
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Sample queries for software metering in Configuration Manager

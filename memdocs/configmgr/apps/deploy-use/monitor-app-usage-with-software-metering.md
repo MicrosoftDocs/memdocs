@@ -1,17 +1,15 @@
 ---
-title: "Monitor app usage with software metering"
-titleSuffix: "Configuration Manager"
-description: "Learn about operations that are available in Configuration Manager software metering."
+title: Monitor app usage with software metering
+titleSuffix: Configuration Manager
+description: Learn about operations that are available in Configuration Manager software metering.
 ms.date: 09/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: b1fdaee2-2816-4447-94cd-609f6948f215
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Software metering in Configuration Manager

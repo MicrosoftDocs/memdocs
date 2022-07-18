@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Quickstart - Enroll your Windows 10 Desktop device in Microsoft Intune
-description: Quickstart - Use the Company Portal to enroll your Windows 10 Desktop device into Microsoft Intune.
+title: Quickstart - Enroll your Windows 10/11 desktop device in Microsoft Intune
+description: Quickstart - Use the Company Portal to enroll your Windows 10/11 desktop device into Microsoft Intune.
 services: microsoft-intune
-author: Erikre
-ms.author: erikre
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 12/10/2020
+ms.date: 10/04/2021
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -25,14 +25,20 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
-# Quickstart: Enroll your Windows 10 device
+# Quickstart: Enroll your Windows device  
 
-In this quickstart, you'll first take the role of an Intune user and enroll your Windows 10 device into Microsoft Intune. Then, you'll return to Intune and confirm the device enrolled.
+**Applies to**
+- Windows 10 
+- Windows 11 
 
-Enrolling your devices into Microsoft Intune allows your Windows 10 devices to get access to your organization's secure data, including email, files, and other resources. This is true for both Windows 10 desktop and Windows 10 Mobile devices. Enrolling your devices helps secure this access for both you and your organization, and helps keep your work data separate from your personal data.
+In this quickstart, you'll first take the role of an Intune user and enroll a device running Windows 10/11 into Microsoft Intune. Then you'll return to Intune and confirm that the device enrolled.  
+
+Enrolling your devices into Microsoft Intune allows you to access your organization's secure data, including email, files, and other resources, from your Windows device. This is true for both devices running Windows 10/11 devices (including desktop) and Windows 10 Mobile devices. Enrolling your devices helps secure this access for both you and your organization, and helps keep your work data separate from your personal data. 
 
 > [!TIP]
 > Find out what happens when you [enroll your device in Intune](../user-help/what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md) and what that means for the [information on your device](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).
@@ -44,9 +50,9 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 - Microsoft Intune subscription - [sign up for a free trial account](../fundamentals/free-trial-sign-up.md)
 - To complete this quickstart, you must complete the steps to [setup automatic enrollment in Intune](quickstart-setup-auto-enrollment.md).
 
-## Confirm your Windows 10 Desktop version
+## Confirm Windows version  
 
-Before enrolling your Windows 10 Desktop, you must confirm the version of Windows that you have installed.
+Before enrolling your Windows device, you must confirm the version of Windows that you have installed.
 
 1. Right-click the Windows **Start** icon and select **Settings** to display Windows Settings options.
 
@@ -61,12 +67,12 @@ Before enrolling your Windows 10 Desktop, you must confirm the version of Window
 
 3. In the **Settings** window you will see a list of **Windows specifications** for your PC. Within this list, locate the **Version**.
 
-4. Confirm that the Windows 10 **Version** is **1607 or higher**.
+4. Confirm that the Windows **Version** is Windows 10 (version 1607 or later) or Windows 11 (version 21H2 or later). 
 
     > [!IMPORTANT]
-    > The steps presented in this quickstart are for Windows 10 version **1607 or higher**, if your version is **1511 or less**, continue with [these steps](../user-help/enroll-windows-10-device.md).  
+    > The steps presented in this quickstart are for Windows 10 (version 1607 or higher) or Windows 11 (version 21H2 or later). If your version is 1511 or earlier, see [Enroll device running Windows 10, version 1511 and earlier](../user-help/enroll-windows-10-device.md#enroll-windows-10-version-1511-and-earlier-device).  
 
-## Enroll Windows 10 Desktop
+## Enroll Windows 10/11 desktop
 
 1. Return to Windows Settings and select **Accounts**.
 
@@ -85,15 +91,15 @@ Before enrolling your Windows 10 Desktop, you must confirm the version of Window
 
     You'll see a message indicating that your company or school is registering your device.
 
-4. When you see the **You're all set!** screen, select **Done**. You're done.
+4. When you see the **You're all set!** screen, select **Done**. You're done.  
 
-5. You will now see the added account as part of the **Access work or school** settings on your Windows Desktop.
+5. You will now see the added account as part of the **Access work or school** settings on your Windows desktop.  
 
    ![Screenshot of newly added account](./media/quickstart-enroll-windows-device/quickstart-enroll-windows-device-06.png)
 
-    If you followed the previous steps, but still can't access your work or school email account and files, follow the steps in [Troubleshoot Windows 10 device access](../user-help/troubleshoot-your-windows-10-device-windows.md).  
+    If you followed the previous steps, but still can't access your work or school email account and files, follow the steps in [Troubleshoot Windows 10/11 device access](../user-help/troubleshoot-your-windows-10-device-windows.md).  
 
-## Confirm your device enrollment in Intune
+## Confirm your device enrollment in Intune  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator.
 2. Select **Devices** > **All devices** to view the enrolled devices in Intune.
@@ -107,7 +113,7 @@ To unenroll your Windows device, see [Remove your Windows device from management
 
 ## Next steps
 
-In this quickstart, you learned how to enroll a Windows 10 device into Intune. You can learn about other ways to enroll devices across all platforms. For more information about using devices with Intune, see [Use managed devices to get work done](../user-help/use-managed-devices-to-get-work-done.md).
+In this quickstart, you learned how to enroll a Windows 10/11 device into Intune. You can learn about other ways to enroll devices across all platforms. For more information about using devices with Intune, see [Use managed devices to get work done](../user-help/use-managed-devices-to-get-work-done.md).
 
 To follow this series of Intune quickstarts, continue to the next quickstart.
 

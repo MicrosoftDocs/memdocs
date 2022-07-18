@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 06/14/2021
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -30,6 +30,11 @@ ms.reviewer: mattcall
 # Account protection policy settings for endpoint security in Intune
 
 View the settings you can configure in profiles for *Account protection* policy in the endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
+
+The settings in this article apply to:
+
+- Windows 10
+- Windows 11
 
 Supported platforms and profiles:
 

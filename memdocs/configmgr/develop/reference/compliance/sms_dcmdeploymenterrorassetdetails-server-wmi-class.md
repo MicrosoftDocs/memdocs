@@ -1,6 +1,7 @@
 ---
 title: "SMS_DCMDeploymentErrorAssetDetails Class"
 titleSuffix: "Configuration Manager"
+description: "represents the asset details for deployment error."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5b0c3b0c-bb1c-4e2d-a1ff-5a7d06c23c72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

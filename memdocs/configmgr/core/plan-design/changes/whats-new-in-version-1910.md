@@ -6,12 +6,11 @@ ms.date: 01/22/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 3e1ddb65-1193-46ce-a7c0-a48dfd9fd833
 author: mestew
 ms.author: mstewart
-manager: dougeby 
-
-
+manager: dougeby
+ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1910 of Configuration Manager current branch
@@ -23,10 +22,6 @@ Update 1910 for Configuration Manager current branch is available as an in-conso
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1910](../../servers/manage/checklist-for-installing-update-1910.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-1910.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1910+-+Configuration+Manager%22&locale=en-us`
 
 ## <a name="bkmk_mem"></a> Microsoft Endpoint Configuration Manager
 
@@ -118,7 +113,7 @@ This release also includes several [other enhancements](../../servers/manage/cmp
 
 When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can now serve Microsoft Intune Win32 apps to co-managed clients.
 
-For more information, see [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md#bkmk_intune).
+For more information, see [Microsoft Connected Cache in Configuration Manager](../hierarchy/microsoft-connected-cache.md#support-for-intune-win32-apps).
 
 > [!NOTE]
 > Configuration Manager current branch version 1906 included [Delivery Optimization In-Network Cache](../hierarchy/microsoft-connected-cache.md), an application installed on Windows Server that's still in development. Starting in current branch version 1910, this feature is now called Microsoft Connected Cache.
@@ -187,7 +182,7 @@ For more information, see the new article on how to [use the task sequence edito
 
 You can now run a task sequence with the high-performance power plan. This option improves the overall speed of the task sequence. It configures Windows to use its built-in high-performance power plan, which delivers maximum performance at the expense of higher power consumption.
 
-For more information, see [Performance improvements for power plans](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_perf).
+For more information, see [Task sequence performance](../../../osd/deploy-use/task-sequence-performance.md).
 
 ### Task sequence download on demand over the internet
 
@@ -197,7 +192,7 @@ You can use the task sequence to deploy a Windows 10 in-place upgrade via the cl
 
 Starting in this release, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
 
-For more information, see [Deploy Windows 10 in-place upgrade via CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg).
+For more information, see [Deploy Windows 10 in-place upgrade via CMG](../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-in-place-upgrade-via-cmg).
 
 ### Improvements to OS deployment
 
@@ -217,7 +212,7 @@ For more information, see [Manage boot images](../../../osd/get-started/manage-b
 
 When you import an OS upgrade package, you can use the **Extract a specific image index from install.wim file of selected upgrade package** option. This behavior is similar as with [OS images](../../../osd/get-started/manage-operating-system-images.md#BKMK_AddOSImages), except that it overwrites the existing install.wim in the OS upgrade package. It extracts the image index to a temporary location and then moves it into the original source directory.
 
-For more information, see [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#BKMK_AddOSUpgradePkgs).
+For more information, see [Manage OS upgrade packages](../../../osd/get-started/manage-operating-system-upgrade-packages.md#add-an-os-upgrade-package).
 
 #### Output the results of a Run Command Line step to a variable during a task sequence
 
@@ -268,7 +263,7 @@ For more information, see [Task sequence variables - SetupCompletePause](../../.
 <!--4469002-->
 You now have more granular controls over synchronization of third-party updates catalogs. Starting in Configuration Manager version 1910, you can configure the synchronization schedule for each catalog independently. When you use catalogs that include categorized updates, you can configure synchronization to include only specific categories of updates to avoid synchronizing the entire catalog. With categorized catalogs, when you're confident you'll deploy a category, you can configure it to automatically download and publish to Windows Server Update Services (WSUS).
 
-For more information, see [Enable third-party updates](../../../sum/deploy-use/third-party-software-updates.md#bkmk_1910).
+For more information, see [Enable third-party updates](../../../sum/deploy-use/third-party-software-updates.md).
 
 ### Use Delivery Optimization for all Windows updates
 <!--4699118-->

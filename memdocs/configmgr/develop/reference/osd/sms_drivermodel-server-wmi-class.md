@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent driver model information for the specified driver in Configuration Manager using SMS_DriverModel class.
 title: "SMS_DriverModel Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 8cba1658-0445-4e9e-a51b-b1c8eba30801
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

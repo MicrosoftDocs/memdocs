@@ -1,4 +1,5 @@
 ---
+description: Learn how to delete a maintenance window for a collection in Configuration Manager with the following example.
 title: "Delete a Maintenance Window for a Collection"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 257a15d2-4408-41ae-9277-77acca0cc914
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

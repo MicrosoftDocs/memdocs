@@ -1,4 +1,5 @@
 ---
+description: Learn how to use ICcmAlternateDownloadProvider::ModifyJobTimeout method to instruct the provider to modify the timeout for a given job.
 title: "ICcmAlternateDownloadProvider : ModifyJobTimeout"
 titleSuffix: "Configuration Manager"
 ms.date: "07/25/2017"
@@ -9,6 +10,8 @@ ms.assetid: dec5c5c8-c0b3-400c-835e-08ade5256a30
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

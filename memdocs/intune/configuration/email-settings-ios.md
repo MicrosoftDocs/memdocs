@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Configure Email settings for iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure Email settings for iOS/iPadOS devices in Microsoft Intune
 description: See a list of all the email settings you can configure and add to iOS and iPadOS devices in Microsoft Intune, including using Exchange servers, and getting attributes from Azure Active Directory. You can also enable SSL, authenticate users with certificates or username/password, and synchronize email on iOS/iPadOS devices using device configuration profiles in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/15/2020
+ms.date: 03/07/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: beflamm, tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,7 +29,11 @@ ms.collection: M365-identity-device-management
 
 # Add e-mail settings for iOS and iPadOS devices in Microsoft Intune
 
-In Microsoft Intune, you can create and configure email to connect to an email server, choose how users authenticate, use S/MIME for encryption, and more.
+In Microsoft Intune, you can create and configure email to connect to an Exchange email server, choose how users authenticate, use S/MIME for encryption, and more. The email profile uses the native or built-in email app on the device, and allows users to connect to their organization email.
+
+This feature applies to:
+
+- iOS/iPadOS
 
 This article describes all the email settings available for devices running iOS/iPadOS. You can create a device configuration profile to push or deploy these email settings to your iOS/iPadOS devices.
 
@@ -56,11 +61,11 @@ Create an [iOS/iPadOS e-mail device configuration profile](email-settings-config
       - **Custom**: Get the attributes from a custom domain name. Also enter:
         - **Custom domain name to use**: Enter a value that Intune uses for the domain name, such as `contoso.com` or `contoso`.
 
-- **Email address attribute from AAD**: Choose how the email address for the user is generated. Your options:
+- **Email address attribute from AAD**: Choose how the email address for the user is generated. Make sure your users have email addresses that match the attribute you select. Your options:
   - **User principal name**: Use the full principal name as the email address, such as `user1@contoso.com` or `user1`.
   - **Primary SMTP address**: Use the primary SMTP address to sign in to Exchange, such as `user1@contoso.com`.
 - **Authentication method**: Choose how users to authenticate to the email server. Your options:
-  - **Certificate**: Select a client SCEP or PKCS certificate profile you previously created to authenticate the Exchange connection. This option provides the most secure and seamless experience for your users.
+  - **Certificate**: Select a client SCEP or PKCS certificate profile you previously created to authenticate the Exchange connection. This option provides the most secure and better experience for your users.
   - **Username and Password**: Users are prompted to enter their user name and password.
   - **Derived credential**: Use a certificate that's derived from a user's smart card. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
 
@@ -74,7 +79,7 @@ Create an [iOS/iPadOS e-mail device configuration profile](email-settings-config
 
     If the email profile uses Oauth, and the email service doesn't support it, then the **Re-Enter password** option appears broken. For example, nothing happens when the user selects **Re-Enter password** in Apple's device settings.
 
-  - When OAuth is enabled, end users have a different "Modern Authentication" email sign-in experience that supports multi-factor authentication (MFA). 
+  - When OAuth is enabled, end users have a different "Modern Authentication" email sign-in experience that supports multifactor authentication (MFA). 
 
   - Some organizations disable the end user's ability to do [self-service application access](/azure/active-directory/manage-apps/manage-self-service-access). In this scenario, the Modern Authentication sign-in may fail until an Administrator creates the "iOS Accounts" enterprise app, and grant users access to the app in Azure AD.
 

@@ -1,6 +1,7 @@
 ---
 title: "Client Development Requirements"
 titleSuffix: "Configuration Manager"
+description: "The Configuration Manager client can be programmed by using programming languages that follow."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 7114139b-9615-4057-9a60-afa877346b2d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

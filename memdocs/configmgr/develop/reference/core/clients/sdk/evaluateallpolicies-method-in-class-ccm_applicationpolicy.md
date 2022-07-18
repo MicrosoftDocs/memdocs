@@ -1,6 +1,7 @@
 ---
 title: "EvaluateAllPolicies Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that evaluates all policies."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 1d2b4471-ed93-42d5-b1d7-bf3990b69f84
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

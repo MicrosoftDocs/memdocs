@@ -1,4 +1,5 @@
 ---
+description: Learn how to generate a client configuration request by computer name using the GenerateCCRByName class method.
 title: "GenerateCCRByName Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: aefc55aa-7a13-4cc2-a5a8-aaffcd7a8f6b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "SMS_ClientRestartAgentConfig Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents the settings and properties used by the client restart agent."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: aef07b1f-8fde-4c19-9fbc-b121a2df68e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

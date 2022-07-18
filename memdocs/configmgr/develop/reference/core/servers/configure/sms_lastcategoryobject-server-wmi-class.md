@@ -1,6 +1,7 @@
 ---
 title: "SMS_LastCategoryObject Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents the object that has this assignment as the last category assignment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 7d777ba2-006e-4b23-9f14-cfdd05ba16d5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

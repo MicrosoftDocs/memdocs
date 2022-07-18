@@ -1,4 +1,6 @@
 ---
+description: Learn how to use Windows Management Instrumentation (WMI) classes that represent the objects in SMS as templates for managed objects.
+
 title: "Configuration Manager Class Schema"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -8,6 +10,8 @@ ms.assetid: 46b88ba8-9802-42fd-995f-308172d64c3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "SMS_AuthorizationList Class"
 titleSuffix: "Configuration Manager"
+description: "A collection of SMS_SoftwareUpdate objects for the software updates available on the site and authorized for deployment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: b0720303-628d-4da2-a98f-74c160816ba7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

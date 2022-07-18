@@ -1,6 +1,7 @@
 ---
 title: "CIPackageInfo Structure"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CIPackageInfo structure contains package information for a configuration item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 560625bf-5cd2-4cb0-8df8-d17951afabe7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

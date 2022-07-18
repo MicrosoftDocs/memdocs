@@ -1,12 +1,12 @@
 ---
 # required metadata
-title: Use Windows Holographic devices with Microsoft Intune - Azure | Microsoft Docs
+title: Use Windows Holographic devices with Microsoft Intune
 description: Using Microsoft Intune, you can manage and complete different tasks on devices running Windows Holographic for Business and HoloLens, including configure the Company Portal, create a compliance policy, customize OMA-URI settings, deploy apps, categorize devices in groups, create profiles, restrict devices, enable software updates, set terms and conditions, configure VPN and Wi-Fi settings, and use Hello for Business.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/20/2020
+ms.date: 05/12/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -37,7 +37,7 @@ To use Windows Holographic devices with Intune, create an Edition Upgrade profil
 
 Azure Active Directory (AD) is a great resource to help manage and control your devices running Windows Holographic for Business. Using Intune and Azure AD, you can: 
 
-- **[Join devices to Azure Active Directory](/azure/active-directory/devices/azureadjoin-plan)**: In Azure Active Directory (AD), you can add your work-owned Windows 10 devices, including devices running Windows Holographic for Business. This feature allows Azure AD to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
+- **[Join devices to Azure Active Directory](/azure/active-directory/devices/azureadjoin-plan)**: In Azure Active Directory (AD), you can add your work-owned Windows 10/11 devices, including devices running Windows Holographic for Business. This feature allows Azure AD to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
 
   [Device management in Azure AD](/azure/active-directory/devices/overview) provides more details.
 
@@ -133,6 +133,9 @@ Device restrictions let you control different settings and features on your devi
 
 Virtual private networks (VPNs) give your users secure remote access to your company network. In Intune, you can create a VPN profile that includes specific settings for your devices running Windows Holographic for Business. For example, you can create a VPN profile so all Windows Holographic for Business devices use Citrix VPN as the connection type.
 
+> [!NOTE]
+> When assigning a VPN policy to Windows Holographic for Business devices, assign the profile to the device scope. Currently, Windows Holographic only supports the device scope. When the VPN profile is installed in the device context, it applies to all users on the device. If a user profile is deployed, it's treated as a device profile.
+
 ### [Configure Wi-Fi](../configuration/wi-fi-settings-configure.md)
 
 You can also create a Wi-Fi profile in Intune to assign wireless network settings to your Windows Holographic for Business devices. When you assign a Wi-Fi profile, your end users get corporate network access, without any network configuration. For example, you can create a Wi-Fi network dedicated to only your Windows Holographic for Business devices.
@@ -147,7 +150,7 @@ Devices that run Windows Holographic for Business, such as the Microsoft HoloLen
 
 **[Manage software updates](../protect/windows-update-for-business-configure.md)**
 
-Intune includes a feature called update rings for Windows 10 devices. These update rings include a group of settings that determine how updates are installed. For example, you can create a maintenance window to install updates, or choose to restart after updates are installed. An update ring can be applied to multiple devices running Windows Holographic for Business.
+Intune includes a feature called update rings for Windows client devices. These update rings include a group of settings that determine how updates are installed. For example, you can create a maintenance window to install updates, or choose to restart after updates are installed. An update ring can be applied to multiple devices running Windows Holographic for Business.
 
 ## Terms and conditions
 

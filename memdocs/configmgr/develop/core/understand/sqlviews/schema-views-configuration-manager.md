@@ -1,4 +1,4 @@
-﻿---
+---
 title: Schema views
 titleSuffix: Configuration Manager
 description: Information about the schema that can be used when creating reports.
@@ -12,11 +12,13 @@ ms.assetid: c409ea11-a284-40d2-9a27-9833c876a318
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Schema views in Configuration Manager
 
-The Configuration Manager schema views provide information about the schema that can be used when creating reports, as well as the discovery schema views, inventory schema views, and the compliance settings schema view.
+The Configuration�Manager schema views provide information about the schema that can be used when creating reports, as well as the discovery schema views, inventory schema views, and the compliance settings schema view.
 
 ## View schema views
 
@@ -50,7 +52,7 @@ SELECT RVS.ViewName, RVS.ViewColumnName, SV.Type
 
 FROM v_SchemaViews as SV INNER JOIN v_ReportViewSchema as RVS
 
-  ON SV.ViewName = RVS.ViewName
+��ON SV.ViewName = RVS.ViewName
 
 ORDER BY SV.Type, RVS.ViewName, RVS.ViewColumnName
 ```
@@ -80,13 +82,13 @@ Because hardware inventory can be modified and extended, one Configuration Manag
 ```sql
 SELECT DISTINCT GM.DisplayName, GM.InvClassName,
 
-  GM.InvHistoryClassName, GAM.AttributeName,
+��GM.InvHistoryClassName, GAM.AttributeName,
 
-  GAM.ColumnName, GM.MIFClass
+��GAM.ColumnName, GM.MIFClass
 
 FROM v_GroupMap GM INNER JOIN v_GroupAttributeMap GAM
 
-  ON GM.GroupID = GAM.GroupID
+��ON GM.GroupID = GAM.GroupID
 ```
 
 For more information about the hardware inventory views, see [Hardware Inventory Views in Configuration Manager](hardware-inventory-views-configuration-manager.md).

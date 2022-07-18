@@ -1,4 +1,5 @@
 ---
+description: Learn how to enhance the functionality of InstallStatusMIF in Configuration Manager using InstallStatusMIFEx.
 title: "InstallStatusMIFEx Function"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: c7f89ba4-eaf4-4755-bc4d-90064d1ad918
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

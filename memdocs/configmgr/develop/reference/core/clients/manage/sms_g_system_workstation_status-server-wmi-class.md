@@ -1,6 +1,7 @@
 ---
 title: "SMS_G_System_WORKSTATION_STATUS Class"
 titleSuffix: "Configuration Manager"
+description: "In the Configuration Manager, the SMS_G_System_WORKSTATION_STATUS Windows Management Instrumentation class is an SMS Provider server class that contains information about the last time inventory was collected on a client computer." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 93fe5065-2e1a-44be-8890-73cf8f0b769f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

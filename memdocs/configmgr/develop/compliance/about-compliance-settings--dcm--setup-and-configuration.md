@@ -9,7 +9,9 @@ ms.assetid: 0ec16fc6-0775-4c7b-92db-a28f079c3404
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
+ms.localizationpriority: null
+ms.collection: openauth
+description: Learn about how to configure compliance settings and the custom configuration requirements using the Configuration Manager site.
 
 ---
 # About Compliance Settings (DCM) Setup and Configuration

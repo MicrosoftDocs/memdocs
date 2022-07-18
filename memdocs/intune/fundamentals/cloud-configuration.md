@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use Windows cloud configuration in Microsoft Intune - Azure | Microsoft Docs
-description: Use a guided scenario to configure Windows 10 in a cloud configuration. Cloud config focuses on browsing using Microsoft Intune and Endpoint Manager, and using Microsoft 365 apps.
+title: Use Windows cloud configuration in Microsoft Intune
+description: Use a guided scenario to configure Windows 10/11 in a cloud configuration. Cloud config focuses on browsing using Microsoft Intune and Endpoint Manager, and using Microsoft 365 apps.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/24/2021
+ms.date: 01/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -28,9 +28,9 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Guided scenario - Windows 10 in cloud configuration
+# Guided scenario - Windows 10/11 in cloud configuration
 
-Windows 10 in cloud configuration is a Microsoft-recommended device configuration. You can turn any Windows 10 Professional, Enterprise, and Education device into a cloud-optimized device.
+Windows 10/11 in cloud configuration is a Microsoft-recommended device configuration. You can turn any Windows 10/11 Professional, Enterprise, and Education device into a cloud-optimized device.
 
 It’s ideal for:
 
@@ -40,7 +40,7 @@ It’s ideal for:
 
 Cloud config makes these devices easy to use, and secures these devices with Microsoft-recommended security features.
 
-With Windows 10 in cloud configuration:
+With Windows 10/11 in cloud configuration:
 
 - You can configure new devices, or reuse existing hardware.
 - End users get an easy-to-use, and familiar Windows experience.
@@ -48,7 +48,7 @@ With Windows 10 in cloud configuration:
 - You can customize the names of your resources, so they're easy to see and monitor.
 
 > [!TIP]
-> To learn more about Windows 10 in cloud configuration, see [Windows 10 in cloud configuration](https://aka.ms/cloud-config).
+> To learn more about Windows 10/11 in cloud configuration, see [Windows 10/11 in cloud configuration](https://aka.ms/cloud-config).
 
 ## What this guided scenario does
 
@@ -56,12 +56,12 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
 
 - Creates a new Azure AD security group, or uses an existing Azure AD security group.
 - Deploys the Microsoft Edge and Microsoft Teams apps. For more information on deploying these apps individually, see:
-  - [Add Microsoft Edge for Windows 10](../apps/apps-windows-edge.md)
-  - [Add Microsoft 365 apps to Windows 10 devices](../apps/apps-add-office365.md)
+  - [Add Microsoft Edge for Windows 10/11](../apps/apps-windows-edge.md)
+  - [Add Microsoft 365 apps to Windows 10/11 devices](../apps/apps-add-office365.md)
 
-- Creates a Windows 10 security baseline policy with recommended security settings that are already configured.
+- Creates a Windows 10/11 security baseline policy with recommended security settings that are already configured.
 
-  For more information about security baselines, and what they do, see [Use security baselines to configure Windows 10 devices](../protect/security-baselines.md).
+  For more information about security baselines, and what they do, see [Use security baselines to configure Windows client devices](../protect/security-baselines.md).
 
 - Creates a Windows Autopilot enrollment profile that automatically enrolls devices in Microsoft Intune.
 
@@ -79,15 +79,15 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
 
 - Creates a compliance policy that monitors compliance and health. Users are allowed to use noncompliant devices, and access resources. If your organization blocks access to non-compliant devices, then create another compliance policy that blocks access, and assign it to the same group.
 
-  For more information on the compliance settings you can configure on your own, see [Windows 10 and later settings to mark devices as compliant or not compliant](../protect/compliance-policy-create-windows.md).
+  For more information on the compliance settings you can configure on your own, see [Windows client settings to mark devices as compliant or not compliant](../protect/compliance-policy-create-windows.md).
 
 - Deploys a Windows PowerShell script that removes built-in apps, and simplifies the Start menu.
 
-  For more information about PowerShell scripts, see [Use PowerShell scripts on Windows 10 devices](../apps/intune-management-extension.md).
+  For more information about PowerShell scripts, see [Use PowerShell scripts on Windows client devices](../apps/intune-management-extension.md).
 
-- Creates a Windows 10 update ring policy. This policy automatically updates the devices, including product updates, drivers, and Windows updates.
+- Creates a Windows client update ring policy. This policy automatically updates the devices, including product updates, drivers, and Windows updates.
 
-  For more information about update rings, and creating your policy, see [Windows 10 update rings policy](../protect/windows-10-update-rings.md).
+  For more information about update rings, and creating your policy, see [Update rings for Windows client devices](../protect/windows-10-update-rings.md).
 
 > [!TIP]
 > This guided scenario creates all these resources for you, automatically. If you want create your own individual resources, and not use the guided scenario, then you can. For the specific steps, see the [cloud config overview and setup guide](https://aka.ms/CloudConfigGuide).
@@ -101,20 +101,21 @@ Using Microsoft Endpoint Manager, you can use a guided scenario to deploy a clou
   - Microsoft Teams
   - OneDrive for Business
   - Windows 10 Pro
+  - Windows 11 Pro
 
   All of these services are included with the Microsoft 365 E3 license. For more security options and features, it's recommended to use the Microsoft 365 E5 license. To help decide which license is right for your organization, see [Transform your enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
 
 - [Set the MDM authority to Intune](mdm-authority-set.md). The mobile device management (MDM) authority setting determines how you manage your devices. As an IT admin, you must set an MDM authority before users can enroll devices for management.
-- Enable automatic enrollment for Windows 10 devices. For more information, see:
-  - [Quickstart: Set up automatic enrollment for Windows 10 devices](../enrollment/quickstart-setup-auto-enrollment.md)
-  - [Enable Windows 10 automatic enrollment](../enrollment/windows-enroll.md#enable-windows-10-automatic-enrollment)
+- Enable automatic enrollment for Windows client devices. For more information, see:
+  - [Quickstart: Set up automatic enrollment for Windows client devices](../enrollment/quickstart-setup-auto-enrollment.md)
+  - [Enable Windows 10/11 automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
 
 - Sign in as the Intune Service Administrator, also known as the Intune Administrator. For more information on the roles in Intune, see [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md).
 
 ## Step 1 - Introduction
 
 1. Open the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Troubleshooting + support** > **Guided scenarios** > **Deploy Windows 10 in cloud configuration** > **Start**.
+2. Select **Troubleshooting + support** > **Guided scenarios** > **Deploy Windows 10 and later in cloud configuration** > **Start**.
 3. Select **Next**.
 
 ## Step 2 - Basics
@@ -139,7 +140,7 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
   Your settings look similar to the following image:
 
-  :::image type="content" source="./media/cloud-configuration/guided-scenario-basics.png" alt-text="Configure the device name template and resource name prefix in a Windows 10 in cloud configuration guided scenario in Microsoft Intune and Endpoint Manager.":::
+  :::image type="content" source="./media/cloud-configuration/guided-scenario-basics.png" alt-text="Configure the device name template and resource name prefix in a Windows 10/11 cloud configuration guided scenario in Microsoft Intune and Endpoint Manager.":::
 
 - Select **Next**.
 
@@ -180,7 +181,7 @@ Look at the following properties:
 
   As the resources are being created in the Endpoint Manager admin center, the status is shown, similar to the following image:
 
-  :::image type="content" source="./media/cloud-configuration/guided-scenario-deployment-status.png" alt-text="Review and the Windows 10 in cloud configuration guided scenario deployment status in Microsoft Intune and Endpoint Manager.":::
+  :::image type="content" source="./media/cloud-configuration/guided-scenario-deployment-status.png" alt-text="Review the Windows 10/11 in cloud configuration guided scenario deployment status in Microsoft Intune and Endpoint Manager.":::
 
 If there's an error, then the guided scenario isn't deployed, and all changes are reverted. The [Cloud configuration overview and setup guide](https://aka.ms/CloudConfigGuide) is also a good resource.
 
@@ -197,12 +198,12 @@ When it deploys successfully, you can use the monitoring and reporting features 
   You can also:
 
   - Add preregistered Windows Autopilot devices to the group. Add them to the group before you enroll or apply any policies.
-  - Add existing Windows 10 devices that are already enrolled. Microsoft recommends removing other apps and profiles targeted to these devices. After adding them to the group, reset the devices so they start fresh with just cloud config applied.
+  - Add existing Windows client devices that are already enrolled. Microsoft recommends removing other apps and profiles targeted to these devices. After adding them to the group, reset the devices so they start fresh with just cloud config applied.
 
   For information on the policy refresh times, see [Common questions and answers with device policies in Microsoft Intune](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned).
 
 - Microsoft recommends only assigning cloud config settings and apps. After this guided scenario deploys, then you can add any other required resources, such as certificates, VPN profiles, line-of-business apps, and more. Be sure to deploy these policies to the same group as this guided scenario. Remember, keep the list small, and only include resources your users need.
-- Microsoft doesn't recommend using Windows 10 in cloud configuration with shared devices, because of a OneDrive sync issue with shared devices. Shared devices typically have multiple users that sign in and sign out.
+- Microsoft doesn't recommend using Windows 10/11 in cloud configuration with shared devices, because of a OneDrive sync issue with shared devices. Shared devices typically have multiple users that sign in and sign out.
 - After the guided scenario is deployed, you can go to a policy, and see the settings and their configured values. You can change any of these settings to another value, if you like.
 - To remove the guided scenario settings from devices, go to each policy created by the cloud config guided scenario. Configure the settings to **Not Configured**. Deploy each policy again to the same group as this guided scenario.
 
@@ -213,4 +214,4 @@ When it deploys successfully, you can use the monitoring and reporting features 
 ## Next steps
 
 - To learn more about guided scenarios, and see the other scenarios are available, go to [Guided scenarios overview](guided-scenarios-overview.md).
-- To learn more about Windows 10 in a cloud configuration, see [Windows 10 in cloud configuration](https://aka.ms/cloud-config).
+- To learn more about Windows client in a cloud configuration, see [Windows 10/11 in cloud configuration](https://aka.ms/cloud-config).

@@ -1,6 +1,7 @@
 ---
 title: "SMS_MDMCorpOwnedDevices Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MDMCorpOwnedDevices WMI class represents On-premises Mobile Device Management (MDM) corporate owned devices."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 564b7a4a-cc7c-4a56-a1cd-f4d21d4bda7f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

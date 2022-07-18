@@ -1,4 +1,5 @@
 ---
+description: Learn how to determine if a service window of a specified type and duration is available to run using IsWindowAvailableNow.
 title: "IsWindowAvailableNow Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 37702798-5d54-4ea0-90c8-df8fc66a248d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "RedistributeAutoUpgradeClientContent Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the RedistributeAutoUpgradeClientContent WMI class method redistributes auto-upgrade client content to the specified distribution point."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a38e35de-5e02-4574-8f2a-4f526ded22c0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

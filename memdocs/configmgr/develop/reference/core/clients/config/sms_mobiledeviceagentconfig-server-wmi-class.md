@@ -1,4 +1,5 @@
 ---
+description: Learn how to specify general settings for mobile devices in Configuration Manager using the SMS_MobileDeviceAgentConfig class.
 title: "SMS_MobileDeviceAgentConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 9eabac3a-3186-48b2-bd71-482163b7f83c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Connect to an SMS Provider by Using WMI"
 titleSuffix: "Configuration Manager"
+description: "Connect to the SMS Provider on a Configuration Manager site server by using the WMI SWbemLocator object or by using the Windows Script Host GetObject method."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 8f5ee4ee-11bf-4ff3-95c9-4ec046308902
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -39,7 +42,7 @@ Before connecting to the SMS Provider for a local or remote Configuration Manage
 5.  Use the [SWbemServices](/windows/desktop/wmisdk/swbemservices) object to access provider objects. For more information, see [Objects overview](configuration-manager-objects-overview.md).  
 
 ## Examples  
- The following examples connects to the server. It then attempts to connect to the SMS Provider for that server. Typically this will be the same computer. If it is not, [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) provides the correct computer name.  
+ The following example connects to the server. It then attempts to connect to the SMS Provider for that server. Typically this will be the same computer. If it is not, [SMS_ProviderLocation](../../../develop/reference/misc/sms_providerlocation-server-wmi-class.md) provides the correct computer name.  
 
  For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
 
@@ -98,7 +101,7 @@ Function Connect(server, userName, userPassword)
 End Function  
 ```  
 
- The following sample connects to the remote server using powerShell, and attempts a SMS connection.
+ The following sample connects to the remote server using powerShell, and attempts an SMS connection.
  ```powerShell
 $siteCode = ''
 $siteServer = 'server.domain'

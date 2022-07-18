@@ -1,6 +1,7 @@
 ---
 title: "RemoveMultipleResourceIds Method"
 titleSuffix: "Configuration Manager"
+description: "The RemoveMultipleResourceIds WMI class method deletes multiple resource IDs."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: e90daafd-62cd-4939-ad9b-ec65f92eb692
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

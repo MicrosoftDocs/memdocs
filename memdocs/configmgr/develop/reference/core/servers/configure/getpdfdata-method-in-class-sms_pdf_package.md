@@ -1,4 +1,5 @@
 ---
+description: Learn how to produce SMS Package and Program Server class objects from a loaded package with GetPDFData.
 title: "GetPDFData Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 1c071dbe-d601-4448-8e8f-3bb29398cd8c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

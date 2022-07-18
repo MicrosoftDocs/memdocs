@@ -1,6 +1,7 @@
 ---
 title: "View Monthly Usage Summary Information"
 titleSuffix: "Configuration Manager"
+description: "Use the SMS_MeteredFiles, SMS_MonthlyUsageSummary, SMS_MeteredUser, and SMS_R_System classes to view the monthly usage summary information."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 6c9c4ddf-0c0a-48ca-b9ef-099d2043fe27
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

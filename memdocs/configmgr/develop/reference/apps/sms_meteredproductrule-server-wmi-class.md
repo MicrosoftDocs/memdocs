@@ -1,6 +1,7 @@
 ---
 title: "SMS_MeteredProductRule Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MeteredProductRule WMI class is an SMS Provider server class that represents the rules that describe which files to meter."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: ad9f4135-37ee-4677-aa12-b0c7d393cb16
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

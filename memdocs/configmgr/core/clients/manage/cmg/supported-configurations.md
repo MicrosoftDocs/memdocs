@@ -2,13 +2,14 @@
 title: Supported configurations for CMG
 titleSuffix: Configuration Manager
 description: A list of the features and configurations that the Configuration Manager cloud management gateway supports.
-ms.date: 06/22/2021
+ms.date: 07/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Supported configurations for cloud management gateway
@@ -27,80 +28,91 @@ Use this article as a reference for the features and configurations that are sup
 
 - Software update points using a network load balancer don't work with CMG. <!--505311-->
 
-- CMG deployments with the **cloud service (classic)** method don't support subscriptions for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](/partner-center/azure-plan-available). In version 2006 and earlier, this deployment method is the only option.
+- Starting in version 2203, the option to deploy a CMG as a **cloud service (classic)** is removed.<!-- 13235079 --> All CMG deployments should use a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
-  Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure.<!--3601040--> For more information, see [Topology design: Virtual machine scale sets](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
+- CMG names need to be between 3-24 alphanumeric characters. The name must begin with a letter, end with a letter or digit, and not contain consecutive hyphens. <!--13222041-->
 
 ## Support for Configuration Manager features
 
 The following table lists CMG support for Configuration Manager features:
 
 | Feature | Support |
-|---------|---------|
-| Software updates | ![Supported](media/green_check.png) |
-| Endpoint protection | ![Supported](media/green_check.png) <sup>[Note&nbsp;1](#bkmk_note1)</sup> |
-| Hardware and software inventory | ![Supported](media/green_check.png) |
-| Client status and notifications | ![Supported](media/green_check.png) |
-| Run scripts | ![Supported](media/green_check.png) |
-| CMPivot | ![Supported](media/green_check.png) |
-| Compliance settings | ![Supported](media/green_check.png) |
-| Automatic client upgrade | ![Supported](media/green_check.png) |
-| Client install<br>(with [Azure AD integration](../../deploy/deploy-clients-cmg-azure.md)) | ![Supported](media/green_check.png) |
-| Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | ![Supported](media/green_check.png) (2002) |
-| Software distribution (device-targeted) | ![Supported](media/green_check.png) |
-| Software distribution (user-targeted, required)<br>(with Azure AD integration) | ![Supported](media/green_check.png) |
-| Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/plan-design/prerequisites-deploy-user-available-apps.md)) | ![Supported](media/green_check.png) |
-| BitLocker Management | ![Supported](media/green_check.png) (2010) |
-| Windows 10 [in-place upgrade task sequence](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
-| Task sequence without a boot image, deployed with the option to **Download all content locally before starting task sequence** <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
-| Task sequence without a boot image, deployed with [either download option](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-10-in-place-upgrade-via-cmg) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) |
-| Task sequence with a boot image, started from Software Center <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) (2006) |
-| Task sequence with a boot image, started from bootable media <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Supported](media/green_check.png) (2010) |
-| Any other task sequence scenario <sup>[Note&nbsp;2](#bkmk_note2)</sup> | ![Not supported](media/Red_X.png) |
-| Client push | ![Not supported](media/Red_X.png) |
-| Automatic site assignment | ![Not supported](media/Red_X.png) |
-| Software approval requests | ![Not supported](media/Red_X.png) |
-| Configuration Manager console | ![Not supported](media/Red_X.png) |
-| Remote tools | ![Not supported](media/Red_X.png) |
-| Reporting website | ![Not supported](media/Red_X.png) |
-| Wake on LAN | ![Not supported](media/Red_X.png) |
-| macOS clients | ![Not supported](media/Red_X.png) |
-| Peer cache | ![Not supported](media/Red_X.png) |
-| On-premises MDM | ![Not supported](media/Red_X.png) |
-| Alternate content providers | ![Not supported](media/Red_X.png) <sup>[Note&nbsp;3](#bkmk_note3)</sup> |
+|--|--|
+| Software updates | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Endpoint protection | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: <sup>[Note&nbsp;1](#bkmk_note1)</sup> |
+| Hardware and software inventory | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Client status and notifications | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Run scripts | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| CMPivot | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Compliance settings | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Automatic client upgrade | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Client install<br>(with [Azure AD integration](../../deploy/deploy-clients-cmg-azure.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Client install<br>(with [token authentication](../../deploy/deploy-clients-cmg-token.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Software distribution (device-targeted) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Software distribution (user-targeted, required)<br>(with Azure AD integration) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Software distribution (user-targeted, available)<br>([all requirements](../../../../apps/plan-design/prerequisites-deploy-user-available-apps.md)) | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| BitLocker Management | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Pull distribution point source | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Windows [in-place upgrade task sequence](../../../../osd/deploy-use/create-a-task-sequence-to-upgrade-an-operating-system.md) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Task sequence without a boot image, deployed with the option to **Download all content locally before starting task sequence** <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Task sequence without a boot image, deployed with [either download option](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md#deploy-windows-in-place-upgrade-via-cmg) <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Task sequence with a boot image, started from Software Center <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Task sequence with a boot image, started from bootable media <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: |
+| Any other task sequence scenario <sup>[Note&nbsp;2](#bkmk_note2)</sup> | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Content for PXE or multicast-enabled deployments | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Client push | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Automatic site assignment | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Software approval requests | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Configuration Manager console | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Remote tools | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: <sup>[Note&nbsp;3](#bkmk_note3)</sup> |
+| Reporting website | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Wake on LAN | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| macOS clients | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Peer cache | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| On-premises MDM | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Alternate content providers | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: <sup>[Note&nbsp;4](#bkmk_note4)</sup> |
+| Content for App-V streaming applications | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| Content for Microsoft 365 Apps updates <!--7366753--> | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
+| [Prestage content](../../../plan-design/hierarchy/manage-network-bandwidth.md#BKMK_PrestagingContent) | :::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: |
 
 |Key|
 |--|
-|![Supported](media/green_check.png) = This feature is supported with CMG by all supported versions of Configuration Manager  |
-|![Supported](media/green_check.png) (*YYMM*) = This feature is supported with CMG starting with version *YYMM* of Configuration Manager  |
-|![Not supported](media/Red_X.png) = This feature isn't supported with CMG |
+|:::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: = This feature is supported with CMG by all supported versions of Configuration Manager  |
+|:::image type="content" source="media/green-check.png" border="false" alt-text="Supported."::: (*YYMM*) = This feature is supported with CMG starting with version *YYMM* of Configuration Manager  |
+|:::image type="content" source="media/red-x.png" border="false" alt-text="Not supported."::: = This feature isn't supported with CMG |
 
 ### Support notes
 
 #### <a name="bkmk_note1"></a> Note 1: Support for endpoint protection
 
-Starting in version 2006, clients that communicate via a CMG can immediately apply endpoint protection policies without an active connection to Active Directory.<!--4773948-->
-
-<!-- 4350561 -->
-In version 2002 and earlier, for domain-joined devices to apply endpoint protection policy, they require access to the domain. Devices with infrequent access to the internal network may experience delays in applying endpoint protection policy. If you require that devices immediately apply endpoint protection policy after they receive it, consider one of the following options:
-
-- Update the site and clients to version 2006.
-
-- Use co-management and switch the [Endpoint Protection workload](../../../../comanage/workloads.md#endpoint-protection) to Intune, and manage [Microsoft Defender Antivirus](../../../../../intune/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus) from the cloud.
-
-- Use [configuration items](../../../../compliance/deploy-use/create-configuration-items.md) instead of the native [antimalware polices](../../../../protect/deploy-use/endpoint-antimalware-policies.md) feature to apply endpoint protection policy.
+Clients that communicate via a CMG can immediately apply endpoint protection policies without an active connection to Active Directory.<!--4773948-->
 
 #### <a name="bkmk_note2"></a> Note 2: Support for task sequences
 
 For more information about support for deploying a task sequence to a client via the CMG, see [Deploy a task sequence over the internet](../../../../osd/deploy-use/deploy-task-sequence-over-internet.md).
 
-#### <a name="bkmk_note3"></a> Note 3: Support for alternate content providers
+#### <a name="bkmk_note3"></a> Note 3: Support for remote tools
+
+As announced at Microsoft Ignite 2021, a public preview of the new remote assistance solution is now available in the Microsoft Endpoint Manager admin center. This cloud-based tool can help you more securely support users of Windows devices.
+
+For more information, see the following resources:
+
+- [Remote help: a new remote assistance tool from Microsoft (blog post)](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/remote-help-a-new-remote-assistance-tool-from-microsoft/ba-p/2822622)
+
+- [Enable remote help scenarios with Microsoft Endpoint Manager (demo video)](https://techcommunity.microsoft.com/t5/video-hub/enable-remote-help-scenarios-with-microsoft-endpoint-manager/ba-p/2911349)
+
+- [Use remote help with Intune and Microsoft Endpoint Manager](../../../../../intune/remote-actions/remote-help.md)
+
+#### <a name="bkmk_note4"></a> Note 4: Support for alternate content providers
 
 Alternate content providers aren't supported to get content from a content-enabled CMG. You can still use them on a client that communicates with a CMG and gets content from other supported content locations.<!-- CMADO-10205600 -->
 
+> [!TIP]
+> Starting in version 2203, you can also configure the task sequence to allow token authentication with alternate content providers. For more information, see [Task sequence variables: SMSTSAllowTokenAuthURLForACP](../../../../osd/understand/task-sequence-variables.md#smstsallowtokenauthurlforacp).<!-- 13788624 -->
+
 ## Next steps
 
-Next, understand the costs associated with operating an Azure service for the CMG:
+Next, plan how the design the CMG for the best performance at the appropriate scale:
   
 > [!div class="nextstepaction"]
-> [Cost of cloud management gateway](cost.md)
+> [CMG performance and scale](perf-scale.md)

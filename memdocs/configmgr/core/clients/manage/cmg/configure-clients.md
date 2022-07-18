@@ -2,14 +2,15 @@
 title: Configure clients for CMG
 titleSuffix: Configuration Manager
 description: Understand how to configure clients to use the cloud management gateway (CMG).
-ms.date: 09/28/2020
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-ms.assetid: 0b245bc4-64f5-4174-b3a4-bd51a5932df2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Configure clients for cloud management gateway
@@ -18,7 +19,9 @@ manager: dougeby
 
 Once the cloud management gateway (CMG) and the supporting site system roles are operational, you may need to make configuration changes on Configuration Manager clients.
 
-Clients get the location of the CMG service automatically on the next location request. Clients must be on the intranet to receive the location of the CMG service, unless you [install and assign Windows 10 clients using Azure AD for authentication](../../deploy/deploy-clients-cmg-azure.md). The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request. To force the request, restart the SMS Agent Host service (ccmexec.exe) on the computer.
+Clients that can communicate with the management point automatically get the location of the CMG service on the next location request. The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request. To force the request, restart the SMS Agent Host service (ccmexec.exe) on the computer.
+
+For devices that aren't connected to the internal network, there are several options to configure them with a CMG location. For more information, see [Install off-premises clients using a CMG](#install-off-premises-clients-using-a-cmg).
 
 > [!NOTE]
 > By default all clients receive CMG policy. Control this behavior with the client setting, **Enable clients to use a cloud management gateway**. For more information, see [About client settings](../../deploy/about-client-settings.md#enable-clients-to-use-a-cloud-management-gateway).
@@ -45,33 +48,31 @@ Get-WmiObject -Namespace Root\Ccm\LocationServices -Class SMS_ActiveMPCandidate 
 This command displays any internet-based management points the client knows about. While the CMG isn't technically an internet-based management point, clients view it as one.
 
 > [!NOTE]
-> To troubleshoot CMG client traffic, use **CMGHttpHandler.log**, **CMGService.log**, and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
+> To troubleshoot CMG client traffic, use **CMGService.log** and **SMS_Cloud_ProxyConnector.log**. For more information, see [Log files](../../../plan-design/hierarchy/log-files.md#cloud-management-gateway).
 
 ## Install off-premises clients using a CMG
 
-To install the Configuration Manager client on systems not currently connected to your intranet, one of the following conditions must be true. All cases require a local administrator account on the target system.
+There are two methods to install the Configuration Manager client on devices that aren't currently connected to your intranet. Both require a local administrator account on the target system.
 
-1. The Configuration Manager site is properly configured to use PKI certificates for client authentication. Additionally, the client systems each have a valid, unique, and trusted client authentication certificate previously issued to them.
+- The first method is to use a bulk registration token to install the client on a device. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token).
 
-2. The systems are Azure Active Directory (Azure AD) domain-joined or hybrid Azure AD domain-joined.
+- For the second method, when you run **ccmsetup.exe**, use the `/mp` parameter to specify the CMG's URL. For more information, see [About client installation parameters and properties](../../deploy/about-client-installation-properties.md#mp). This method requires one of the following conditions:
 
-3. The site is running Configuration Manager version 2002 or later.
+  - The Configuration Manager site is properly configured to use PKI certificates for client authentication. Additionally, the client systems each have a valid, unique, and trusted client authentication certificate previously issued to them.
 
-For options 1 and 2, when you run **ccmsetup.exe**, use the **/mp** parameter to specify the CMG's URL. For more information, see [About client installation parameters and properties](../../deploy/about-client-installation-properties.md#mp).
-
-For option 3, starting in Configuration Manager version 2002, you can install the client on systems not connected to your intranet using a bulk registration token. For more information on this method, see [Create a bulk registration token](../../deploy/deploy-clients-cmg-token.md#bulk-registration-token).
+  - The systems are Azure Active Directory (Azure AD) domain-joined or hybrid Azure AD domain-joined.
 
 ## Configure off-premises clients for CMG
 
-You can connect systems to a recently configured CMG where the following conditions are true:  
+You can connect devices to a recently configured CMG where the following conditions are true:
 
-- Systems already have the Configuration Manager client installed.
+- They already have the Configuration Manager client installed.
 
-- Systems aren't connected and can't be connected to your intranet.
+- They aren't connected and can't be connected to your intranet.
 
-- Systems meet one of the following conditions:
+- They meet one of the following conditions:
 
-  - Each has a valid, unique, and trusted client authentication certificate previously issued to it
+  - A valid, unique, and trusted client authentication certificate previously issued to it.
 
   - Azure AD domain-joined
 
@@ -81,7 +82,7 @@ You can connect systems to a recently configured CMG where the following conditi
 
 - You have a method to change a machine registry value and restart the **SMS Agent Host** service using a local administrator account.
 
-To force the connection on these systems, create the **REG_SZ** registry entry `CMGFQDNs` in the key `HKLM\Software\Microsoft\CCM`. Set its value to the URL of the CMG, for example, `https://GraniteFalls.contoso.com`. Then restart the **SMS Agent Host** Windows service on the device.
+To force the connection on these devices, create the **REG_SZ** registry entry `CMGFQDNs` in the key `HKLM\Software\Microsoft\CCM`. Set its value to the URL of the CMG, for example, `https://GraniteFalls.contoso.com`. Then restart the **SMS Agent Host** Windows service on the device.
 
 If the Configuration Manager client doesn't have a current CMG or internet-facing management point set in the registry, it automatically checks the `CMGFQDNs` registry value. This check occurs every 25 hours, when the **SMS Agent Host** service starts, or when it detects a network change. When the client connects to the site and learns of a CMG, it automatically updates this value.
 

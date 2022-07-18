@@ -1,4 +1,5 @@
 ---
+description: Learn how to determine the correct Globally Unique Identifiers (GUIDs) for a Configuration Manager console node.
 title: "Find a Console Node GUID"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 80fd9154-6ec2-4586-bd9d-4cf88aa835a6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # How to find a Configuration Manager console node GUID

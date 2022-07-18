@@ -1,5 +1,6 @@
 ---
 title: "SMS_DPStatusInfo Class"
+description: Learn how the SMS_DPStatusInfo class is an SMS Provider server class, in Configuration Manager, that represents distribution point status information.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: 2d5a2e47-4b71-4c8e-a31b-7074bf467fcc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

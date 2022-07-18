@@ -1,6 +1,7 @@
 ---
 title: "Special Queries"
 titleSuffix: "Configuration Manager"
+description: "Extended WMI Query Language (WQL) supports queries that are specific to Configuration Manager needs."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: d9378514-6125-4bbe-b0bf-7e84e688203e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

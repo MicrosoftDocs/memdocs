@@ -2,14 +2,14 @@
 title: Command-line overview
 titleSuffix: Configuration Manager
 description: Learn how to run Configuration Manager setup at a command prompt for different kinds of site installations.
-ms.date: 05/03/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: e7cdb1a9-140a-436e-ac71-72d083110223
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use a command line to install Configuration Manager sites
@@ -41,14 +41,14 @@ For unattended installations of Configuration Manager, you can specify a script 
 
 To use an answer file with setup, first configure the script file with required keys and values. For an unattended installation of a CAS or primary site, the script file requires the following sections:
 
-- Identification
-- Options
-- SQLConfigOptions
-- HierarchyExpansionOption
-- CloudConnectorOptions
-- SABranchOptions
+- `Identification`
+- `Options`
+- `SQLConfigOptions`
+- `HierarchyExpansionOption`
+- `CloudConnectorOptions`
+- `SABranchOptions`
 
-Then run setup with the command line-option **/SCRIPT** and specify a script file.
+Then run setup with the command line-option `/SCRIPT` and specify a script file.
 
 To [recover a site](../../manage/recover-sites.md#site-recovery-procedures), the script file also uses the RecoveryOptions section.
 
@@ -86,7 +86,7 @@ To view the full set of options, see [Command-line options for setup and scripts
 
 ## Use a setup script file
 
-To use a setup script file, specify the file name after the **/SCRIPT** command-line option.
+To use a setup script file, specify the file name after the `/SCRIPT` command-line option.
 
 - The script file name requires the `.ini` extension.
 
@@ -99,7 +99,7 @@ To use a setup script file, specify the file name after the **/SCRIPT** command-
 To modify the languages that are installed at a site from a command prompt:
 
 - Run setup from `<ConfigMgrInstallationPath>\Bin\X64` on the site server
-- Use the **/MANAGELANGS** command-line option
+- Use the `/MANAGELANGS` command-line option
 - Specify a language script file with the languages to add or remove
 
 For example, use the following command syntax: `setupwpf.exe /MANAGELANGS <language script file>`

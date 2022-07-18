@@ -1,18 +1,16 @@
 ---
-title: "Technical Preview 1802 | Microsoft Docs"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1802 for Configuration Manager."
+title: Technical Preview 1802 | Microsoft Docs
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview version 1802 for Configuration Manager.
 ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 4884a2d3-13ce-44e5-88c4-a66dc7ec6014
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1802 for Configuration Manager
 
@@ -160,13 +158,13 @@ To access the Lifecycle Dashboard, in the Configuration Manager console, go to *
 
 ## Improvements to reporting
 <!--1357653-->
-As a result of [your feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/32434147-new-builtin-reports-about-windows-10-versions-and) we added a new report, **Windows 10 Servicing details for a specific collection**. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. To access the report, go to **Monitoring** >**Reporting** >**Reports** >**Operating Systems** >**Windows 10 Servicing details for a specific collection**.
+As a result of your feedback we added a new report, **Windows 10 Servicing details for a specific collection**. This report shows Resource ID, NetBIOS name, OS name, OS release name, build, OS branch, and servicing state for Windows 10 devices. To access the report, go to **Monitoring** >**Reporting** >**Reports** >**Operating Systems** >**Windows 10 Servicing details for a specific collection**.
 
 
 
 ## Improvements to Software Center
 <!--1357592-->
-As a result of [your feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/13002684-software-center-show-only-available-software-hid) installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled. 
+As a result of your feedback installed applications can now be hidden in Software Center. Applications that are already installed will no longer show in the Applications tab when this option is enabled. 
 
 ### Try it out!
 Enable the **Hide Installed Applications in Software Center** setting in the Software Center client settings. Observe the behavior on Software Center when the end user installs an application.
@@ -190,7 +188,7 @@ When upgrading the site to this version, Configuration Manager adds all non-inte
 Management point boundary group fallback does not change the behavior during client installation (ccmsetup). If the command line does not specify the initial management point using the /MP parameter, the new client receives the full list of available management points. For its initial bootstrap process, the client uses the first management point it can access. Once the client registers with the site, it receives the management point list properly sorted with this new behavior. 
 
 ### Prerequisites
-- Enable [preferred management points](../servers/deploy/configure/boundary-groups.md#bkmk_preferred). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
+- Enable [preferred management points](../servers/deploy/configure/boundary-groups-management-points.md#preferred-management-points). In the Configuration Manager console, go to the **Administration** workspace. Expand **Site Configuration** and select **Sites**. Click **Hierarchy Settings** in the ribbon. On the **General** tab, enable **Clients prefer to use management points specified in boundary groups**. 
 
 ### Known issues
 - Operating system deployment processes are not aware of boundary groups.
@@ -256,7 +254,7 @@ Monitor the service deployment progress with **cloudmgr.log** on the service con
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. 
 
 > [!NOTE]
-> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](../servers/manage/install-in-console-updates.md#bkmk_options).
+> This feature is optional. When updating to this release, enable this feature in the update wizard. Alternatively, enable the feature in the console later. For more information, see [Enable optional features from updates](../servers/manage/optional-features.md).
 
 ### Prerequisites
 - Upgrade the Configuration Manager client to the latest version
@@ -294,9 +292,9 @@ If you deploy applications as available to users, they can now browse and instal
 
 
 
-## Report on Windows AutoPilot device information
+## Report on Windows Autopilot device information
 <!-- 1351442 -->
-Windows AutoPilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [overview of Windows AutoPilot](/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows AutoPilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information. 
+Windows Autopilot is a solution for onboarding and configuring new Windows 10 devices in a modern way. For more information, see an [overview of Windows Autopilot](/windows/deployment/windows-autopilot/windows-10-autopilot). One method of registering existing devices with Windows Autopilot is to upload device information to the Microsoft Store for Business and Education. This information includes the device serial number, Windows product identifier, and a hardware identifier. Use Configuration Manager to collect and report this device information. 
 
 ### Prerequisites
 - This device information only applies to clients on Windows 10, version 1703, and later
@@ -305,7 +303,7 @@ Windows AutoPilot is a solution for onboarding and configuring new Windows 10 de
  Try to complete the tasks. Then send **Feedback** from the **Home** tab of the ribbon letting us know how it worked.
 
 1. In the Configuration Manager console, **Monitoring** workspace, expand the **Reporting** node, expand **Reports**, and select the **Hardware - General** node.
-2. Run the new report, **Windows AutoPilot Device Information** and view the results. 
+2. Run the new report, **Windows Autopilot Device Information** and view the results. 
 3. In the report viewer click the **Export** icon, and select **CSV (comma delimited)** option.
 4. After saving the file, upload the data to the Microsoft Store for Business and Education. For more information, see [add devices in Microsoft Store for Business and Education](/microsoft-store/add-profile-to-devices#add-devices-and-apply-autopilot-deployment-profile). 
 

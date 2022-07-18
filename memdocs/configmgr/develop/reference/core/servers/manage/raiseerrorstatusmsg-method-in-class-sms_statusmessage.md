@@ -1,4 +1,5 @@
 ---
+description: Learn how to create an error status message using RaiseErrorStatusMsg class method in Configuration Manager.
 title: "RaiseErrorStatusMsg Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 200abc40-4ff2-44ba-8e8f-d49225637bf5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

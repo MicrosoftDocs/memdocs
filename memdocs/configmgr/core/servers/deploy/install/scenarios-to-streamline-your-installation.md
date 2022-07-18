@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 35586a85-4af9-4c8b-925a-0e32dc8b7346
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Scenarios to streamline your installation of Configuration Manager
@@ -46,7 +46,7 @@ The following list is a summary of the two main scenarios:
 
 1. Add other site system roles on remote servers at the CAS and primary sites. This action makes sure that the site systems run the updated version. For more information, see [Install site system roles](../configure/install-site-system-roles.md).
 
-1. If you plan to have secondary sites, at each primary site, use the in-console option to install new secondary sites. Because you didn't install secondary sites while primary sites were at the baseline version, you don't need to update the secondary sites. Instead, you install new secondary sites that run the updated version. For more information, see [Install a secondary site](use-the-setup-wizard-to-install-sites.md#bkmk_secondary).
+1. If you plan to have secondary sites, at each primary site, use the in-console option to install new secondary sites. Because you didn't install secondary sites while primary sites were at the baseline version, you don't need to update the secondary sites. Instead, you install new secondary sites that run the updated version. For more information, see [Install a secondary site](setup-wizard-secondary.md).
 
 1. Install new clients at the primary site. Because you didn't install clients while primary sites were at the baseline version, you don't need to update clients. Instead, install new clients that run the updated version. For more information, see [Deploy clients](../../../clients/deploy/deploy-clients-to-windows-computers.md).
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Windows 8.1 compliance settings in Microsoft Intune - Azure | Microsoft Docs
+title: Windows 8.1 compliance settings in Microsoft Intune
 description: See a list of all the settings you can use when setting compliance for your Windows 8.1 in Microsoft Intune. Check for compliance on the minimum and maximum operating system, set password restrictions and length, enable encryption on data storage, and more.
 keywords:
 author: brenduns
@@ -116,4 +116,4 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
 
 - [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
 - [Monitor your compliance policies](compliance-policy-monitor.md).
-- See the [compliance policy settings for Windows 10 and later](compliance-policy-create-windows.md) devices.
+- See the [compliance policy settings for Windows 10/11](compliance-policy-create-windows.md) devices.

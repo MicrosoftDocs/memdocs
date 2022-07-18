@@ -1,6 +1,7 @@
 ---
 title: "SMS_CloudAgentConfig Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_CloudAgentConfig WMI class is an SMS Provider server class in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 969c2e06-c475-409b-903b-71be831fa754
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_CloudAgentConfig Server WMI Class

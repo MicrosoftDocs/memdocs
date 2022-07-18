@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the migration feature dashboard using SMS_MigrationDashboard class in Configuration Manager.
 title: "SMS_MigrationDashboard Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: e4387471-8956-42ed-85b2-fe53f6d8df1e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,17 +1,15 @@
 ---
-title: "Create queries"
-titleSuffix: "Configuration Manager"
-description: "Discover how to create and import queries in Configuration Manager. Includes example queries and tips."
+title: Create queries
+titleSuffix: Configuration Manager
+description: Discover how to create and import queries in Configuration Manager. Includes example queries and tips.
 ms.date: 04/27/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 868049d3-3209-47ec-b34a-9cc26941893a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Create queries in Configuration Manager
 
@@ -90,7 +88,7 @@ This section contains example WQL queries that you can use in your hierarchy or 
 
 ### Computers that run Windows 10
 
-Use the following query to return the NetBIOS name and operating system version of all computers that run Windows 7.  
+Use the following query to return the NetBIOS name and operating system version of all computers that run Windows 10.  
 
 ``` WQL
 select SMS_R_System.NetbiosName,  
@@ -153,7 +151,6 @@ Use one of these values for &lt;Device ID\>:
 |Nokia Symbian|3|  
 |Windows Phone|4|  
 |Mac computer|5|  
-|Windows CE|6|  
 |Windows Embedded|7|  
 |Intel system on a chip|12|  
 |Microsoft HoloLens (MDM)|15|
@@ -163,6 +160,7 @@ Use one of these values for &lt;Device ID\>:
 > Values that aren't listed in this table are associated with devices that are no longer supported.
 
 <!-- old, unsupported values
+|Windows CE|6|
 |iOS|8|  
 |iPad|9|  
 |iPod touch|10|  

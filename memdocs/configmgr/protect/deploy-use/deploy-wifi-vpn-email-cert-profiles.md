@@ -2,14 +2,14 @@
 title: Deploy resource access profiles
 titleSuffix: Configuration Manager
 description: Learn how to deploy Wi-Fi, VPN, and certificate profiles in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 3753608d-b539-44dc-8e3f-b631319e7687
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Deploy resource access profiles in Configuration Manager
@@ -17,7 +17,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
+> Starting in version 2203, this company resource access feature is no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](../plan-design/resource-access-deprecation-faq.yml).
 
 After you create one of the following resource access profiles, deploy it to one or more collections:
 

@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the extended data that the current user and its groups have using GetAdminExtendedData. 
 title: "GetAdminExtendedData Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 25bb4ce9-df34-436b-a74a-6768963b0bd1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

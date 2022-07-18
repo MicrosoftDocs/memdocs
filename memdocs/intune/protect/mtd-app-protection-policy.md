@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 07/23/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -38,7 +38,8 @@ Intune with Mobile Threat Defense (MTD) helps you detect threats and assess risk
 > This article applies to all Mobile Threat Defense partners that support app protection policies:
 >
 > - Better Mobile (Android, iOS/iPadOS)
-> - Check Point Sandblast (Android, iOS/iPadOS)
+> - Check Point Harmony Mobile (Android, iOS/iPadOS)
+> - Microsoft Defender for Endpoint (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - MVISION Mobile (Android, iOS/iPadOS)
 > - Symantec Endpoint Security (Android, iOS/iPadOS)

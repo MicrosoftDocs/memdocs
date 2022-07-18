@@ -1,6 +1,7 @@
 ---
 title: "SMS_CIContentPackage Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_CIContentPackage WMI class represents the relationship between configuration item and associated content to SMS Package where the binary content is packaged and distributed."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 2ccab7a3-7f70-4d55-9c79-d2c8ba657523
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

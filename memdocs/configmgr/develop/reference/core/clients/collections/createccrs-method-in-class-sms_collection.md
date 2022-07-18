@@ -1,4 +1,5 @@
 ---
+description: Article describing the use of CreateCCRs in Configuration Manager to generate client configuration requests for the computers in the collection.
 title: CreateCCRs method in class SMS_Collection
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 4c3288fd-a973-4300-b9c5-475867c26fc5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

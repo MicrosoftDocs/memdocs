@@ -56,10 +56,10 @@ For iOS/iPadOS and Android devices:
 2. Learn how to [create and deploy app protection policies](../apps/app-protection-policies.md) for Office mobile apps.
 3. [Monitor the app protection policies](../apps/app-protection-policies-monitor.md) that you create and deploy.
 
-For Windows 10 devices:
+For Windows 10/11 devices:
 
 1. Learn [how Windows Information Protection (WIP) works](/windows/threat-protection/windows-information-protection/protect-enterprise-data-using-wip).
-2. Get ready to configure [app protection policies for Windows 10](../apps/app-protection-policies-configure-windows-10.md).
+2. Get ready to configure [app protection policies for Windows 10/11](../apps/app-protection-policies-configure-windows-10.md).
 3. [Create and deploy WIP app protection policies with Intune](../apps/windows-information-protection-policy-create.md).
 
 ## What to tell employees and students
@@ -67,7 +67,7 @@ For Windows 10 devices:
 As appropriate, share the following links to provide additional information:
 
 * [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)
-* [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
+* [What to expect when your Android app is managed by app protection policies](../user-help/use-managed-apps-on-your-device-android.md)
 
 ## Next steps
 

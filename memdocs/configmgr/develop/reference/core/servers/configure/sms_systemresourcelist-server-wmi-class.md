@@ -1,4 +1,5 @@
 ---
+description: Learn how to map network abstraction layer (NAL) paths, resource types, site codes, and role names for system resources located on site servers.
 title: "SMS_SystemResourceList Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: f43f66b7-5ec4-4a47-91f2-cdbd61654147
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

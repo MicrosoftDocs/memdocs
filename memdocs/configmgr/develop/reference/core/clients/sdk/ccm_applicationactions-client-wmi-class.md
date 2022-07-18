@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent application actions using CCM_ApplicationActions class in Configuration Manager.
 title: "CCM_ApplicationActions Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 1e9fe422-4ef6-4c7a-9f17-df26fb4bf5e2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

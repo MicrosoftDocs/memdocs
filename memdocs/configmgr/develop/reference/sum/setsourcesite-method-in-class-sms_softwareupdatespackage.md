@@ -1,4 +1,5 @@
 ---
+description: Learn how to set the source site for the software updates package using SetSourceSite class method.
 title: SetSourceSite method in class SMS_SoftwareUpdatesPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 9eb8190b-8999-4dce-a337-4ea9dc5d6310
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

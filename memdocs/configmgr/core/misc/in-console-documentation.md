@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 <!-- 
@@ -44,13 +45,13 @@ A curated list of important articles.
 - [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/?WT.mc_id=configmgr-console)
 - [Endpoint analytics](https://docs.microsoft.com/mem/analytics/?WT.mc_id=configmgr-console)
 - [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/?WT.mc_id=configmgr-console)
-- [Co-management for Windows 10 devices](https://docs.microsoft.com/mem/configmgr/comanage/?WT.mc_id=configmgr-console)
+- [Co-management for Windows devices](https://docs.microsoft.com/mem/configmgr/comanage/?WT.mc_id=configmgr-console)
 - [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot?WT.mc_id=configmgr-console)
 - [Plan for BitLocker management](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management?WT.mc_id=configmgr-console)
 - [Microsoft Edge management](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?WT.mc_id=configmgr-console)
 - [Manage Microsoft 365 Apps updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates?WT.mc_id=configmgr-console)
 - [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service?WT.mc_id=configmgr-console)
-- [Optimize Windows 10 update delivery with Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console)
+- [Optimize Windows update delivery with Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console)
 
 ## Troubleshooting articles
 
@@ -71,25 +72,13 @@ Guided walkthroughs to assist with troubleshooting Configuration Manager compone
 
 For more information, see [Microsoft Endpoint Configuration Manager troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager).
 
-## New and updated support articles
+## Support articles
 
-This section is updated periodically as new articles are published.
+The complete list of all hotfix and update rollup related articles, starting with Configuration Manager version 2010, is published to [Configuration Manager hotfixes and update rollups](https://docs.microsoft.com/mem/configmgr/hotfix?WT.mc_id=configmgr-console).
 
-The complete list of all hotfix and update rollup related articles, starting with version 2010, is published to [Configuration Manager hotfixes and update rollups](https://docs.microsoft.com/mem/configmgr/hotfix?WT.mc_id=configmgr-console).
-
-The short form URL for 2010 and newer hotfix related articles is `https://aka.ms/KB#######`. For example, [https://aka.ms/KB9210721](https://aka.ms/KB9210721).
+The short form URL for version 2010 and newer hotfix related articles is `https://aka.ms/KB#######`. For example, [https://aka.ms/KB9210721](https://aka.ms/KB9210721).
 Hotfix related articles for version 2006 and prior are still available on support.microsoft.com.
 
-Hotfix and support articles that are new or updated between April 14 and May 20, 2021:
+The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
 
-- [Updates aren't downloaded when you run an ADR](https://docs.microsoft.com/troubleshoot/mem/configmgr/adr-updates-download-failure)
-- [The Windows 10 servicing dashboard shows no data](https://docs.microsoft.com/troubleshoot/mem/configmgr/windows-10-servicing-dashboard-empty)
-- [Configure peer cache for Configuration Manager clients](https://docs.microsoft.com/troubleshoot/mem/configmgr/configure-peer-cache)
-- [Offline servicing a WIM image with the Latest Cumulative Update fails](https://docs.microsoft.com/troubleshoot/mem/configmgr/offline-servicing-lcu-may-fail)
-- [KB 9210721 Summary of changes in Configuration Manager current branch, version 2103](https://docs.microsoft.com/mem/configmgr/hotfix/2103/9210721)
-- [KB 9603111 Update for Microsoft Endpoint Configuration Manager version 2103, early update ring](https://docs.microsoft.com/mem/configmgr/hotfix/2103/9603111)
-- [KB 9833643 Console update for Microsoft Endpoint Configuration Manager version 2103](https://docs.microsoft.com/mem/configmgr/hotfix/2103/9833643)
-
-Note: The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
-
-To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager**.
+To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager (current branch)**.

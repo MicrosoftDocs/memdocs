@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_SCI_Address class to represent a sender address, which is a link between the site for which the site control file exists and another site.  
 title: "SMS_SCI_Address Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 757473b7-b517-4a03-b812-1dce4834cf5d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

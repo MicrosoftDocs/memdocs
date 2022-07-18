@@ -1,4 +1,5 @@
 ---
+description: Learn how to set the base class for all software distribution package related status messages using SoftWareDistributionPackageEvent.
 title: "SoftwareDistributionPackageEvent"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: a2a3025d-3ac2-4253-9537-4743e8fc3d61
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

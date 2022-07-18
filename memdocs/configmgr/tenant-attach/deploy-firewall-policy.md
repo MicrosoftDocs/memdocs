@@ -2,13 +2,14 @@
 title: Tenant attach - Deploy endpoint firewall from the Microsoft Endpoint Manager admin center  (preview)
 titleSuffix: Configuration Manager
 description: "Create and deploy firewall policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
-ms.date: 05/18/2021
+ms.date: 09/27/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Create and deploy firewall policies from the admin center (preview)
@@ -38,8 +39,10 @@ ms.author: mstewart
 1. On the **Assignments** page, select the collections to include for the policy assignment then choose **Next**.
 1. Review the settings on the **Review + Create** page and select **Create** when you're done.
 
+[!INCLUDE [Device status for Configuration Manager tenant attached devices](./includes/configmgr-endpoint-security-device-status.md)]
 ## Next steps
 
 - [Settings for firewall policy for tenant attached devices](../../intune/protect/endpoint-security-firewall-profile-settings-tenant-attach.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json)
 - [Create and deploy endpoint security Antivirus policy to tenant attached devices](deploy-antivirus-policy.md)
+- [Create and deploy endpoint security Attack surface reduction policy to tenant attached devices](deploy-asr-policy.md)
 - [Create and deploy endpoint security Endpoint Detection and Response policy to tenant attached devices](atp-onboard.md)

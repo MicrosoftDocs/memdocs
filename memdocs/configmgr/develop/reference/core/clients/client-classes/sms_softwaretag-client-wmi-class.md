@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_SoftwareTag class to indicate the presence of a software application on a computer. 
 title: "SMS_SoftwareTag Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 480a698f-3120-4469-9a9b-aa7a83fce474
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

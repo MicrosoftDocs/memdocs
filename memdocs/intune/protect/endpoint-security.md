@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 06/21/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ms.reviewer: mattcall
 ---
 
@@ -35,7 +37,7 @@ The Endpoint security node groups the tools that are available through Intune th
 
 - **Review the status of all your managed devices**. Use the [All devices](#manage-devices) view where you can view device compliance from a high level. Then, drill-in to specific devices to understand which compliance policies aren't met so you can resolve them.
 
-- **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Microsoft Defender for Endpoint and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a configuration that's recommended by the relevant security teams recommend.
+- **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Microsoft Defender for Endpoint and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a configuration that's recommended by the relevant security teams.
 
 - **Manage security configurations on devices through tightly focused policies**.  Each [Endpoint security policy](#use-policies-to-manage-device-security) focuses on aspects of device security like antivirus, disk encryption, firewalls, and several areas made available through integration with Microsoft Defender for Endpoint.
 
@@ -44,6 +46,9 @@ The Endpoint security node groups the tools that are available through Intune th
   When you integrate with Azure Active Directory (Azure AD) [conditional access policies](#configure-conditional-access) to enforce compliance policies, you can gate access to corporate resources for both managed devices, and devices that aren’t managed yet.
 
 - **Integrate Intune with your Microsoft Defender for Endpoint team**. By [integrating with Microsoft Defender for Endpoint](#set-up-integration-with-microsoft-defender-for-endpoint) you gain access to [security tasks](#review-security-tasks-from-microsoft-defender-for-endpoint). Security tasks closely tie Microsoft Defender for Endpoint and Intune together to help your security team identify devices that are at risk and hand-off detailed remediation steps to Intune admins who can then act.
+
+> [!NOTE]
+> For additional reporting information about device configuration profiles, see [Intune reports](../fundamentals/reports.md).
 
 The following sections of this article discuss the different tasks you can do from the endpoint security node of the admin center, and the role-based access control (RBAC) permissions that are required to use them.
 
@@ -57,11 +62,11 @@ For more information, see [Manage devices with endpoint security in Microsoft In
 
 ## Manage Security baselines
 
-Security baselines in Intune are pre-configured groups of settings that are best practice recommendations from the relevant Microsoft security teams for the product. Intune supports security baselines for Windows 10 device settings, Microsoft Edge, Microsoft Defender for Endpoint Protection, and more.
+Security baselines in Intune are pre-configured groups of settings that are best practice recommendations from the relevant Microsoft security teams for the product. Intune supports security baselines for Windows 10/11 device settings, Microsoft Edge, Microsoft Defender for Endpoint Protection, and more.
 
-You can use security baselines to rapidly deploy a *best practice* configuration of device and application settings to protect your users and devices. Security baselines are supported for devices that run Windows 10 version 1809 and later.
+You can use security baselines to rapidly deploy a *best practice* configuration of device and application settings to protect your users and devices. Security baselines are supported for devices that run Windows 10 version 1809 and later, and Windows 11.
 
-For more information, see [Use security baselines to configure Windows 10 devices in Intune](../protect/security-baselines.md).
+For more information, see [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md).
 
 Security baselines are one of several methods in Intune to configure settings on devices. When managing settings, it's important to understand what other methods are in use in your environment that can configure your devices so you can avoid conflicts. See [Avoid policy conflicts](#avoid-policy-conflicts) later in this article.
 
@@ -79,7 +84,7 @@ To learn more about using Security tasks, see [Use Intune to remediate vulnerabi
 
 ## Use policies to manage device security
 
-As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies, you can configure device security without the overhead of navigating the larger body and range of settings from device configuration profiles and security baselines.
+As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies, you can configure device security without having to navigate the larger body and range of settings in device configuration profiles or security baselines.
 
 ![Manage policies](./media/endpoint-security/endpoint-security-policies.png)
 
@@ -99,10 +104,7 @@ The [available compliance settings](../protect/device-compliance-get-started.md#
 - Setting password requirements
 - Specifying a maximum allowed device threat-level, as determined by Microsoft Defender for Endpoint or another Mobile Threat Defense partner
 
-In addition to the policy rules, compliance policies support:
-
-- [Locations](../protect/use-network-locations.md) that you define in Intune. When you use locations with a compliance policy, policy can ensure devices are connected to a work network to be compliant.
-- [Actions for non-compliance](../protect/actions-for-noncompliance.md). These actions are a time-ordered sequence of actions to apply to non-compliant devices. Actions include sending email or notifications to alert device users about non-compliance, remotely locking devices, or even retiring non-compliant devices and removing any company data that might be on it.
+In addition to the policy rules, compliance policies support [Actions for non-compliance](../protect/actions-for-noncompliance.md). These actions are a time-ordered sequence of actions to apply to non-compliant devices. Actions include sending email or notifications to alert device users about non-compliance, remotely locking devices, or even retiring non-compliant devices and removing any company data that might be on it.
 
 When you integrate Intune with Azure AD [conditional access policies](#configure-conditional-access) to enforce compliance policies, Conditional access can use the compliance data to gate access to corporate resources for both managed devices, and from devices that you don't manage.
 
@@ -131,7 +133,7 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 
 - Security tasks – Seamless communication between Defender for Endpoint and Intune admins about devices at risk, how to remediate them, and confirmation when those risks are mitigated.
 - Streamlined onboarding for Microsoft Defender for Endpoint on clients.
-- Use of Defender for Endpoint device risk signals in Intune compliance policies.
+- Use of Defender for Endpoint device risk signals in Intune compliance policies and app protection policies.
 - Access to *Tamper protection* capabilities.
 
  To learn more about using Microsoft Defender for Endpoint with Intune, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
@@ -151,11 +153,17 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
 
 **Permissions:**
 
+- **Android FOTA**
+  - Read
 - **Android for work**
   - Read
 - **Audit data**
   - Read
+- **Certificate Connector**
+  - Read
 - **Corporate device identifiers**
+  - Read
+- **Derived Credentials**
   - Read
 - **Device compliance policies**
   - Assign
@@ -166,6 +174,7 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
   - View reports
 - **Device configurations**
   - Read
+  - View reports
 - **Device enrollment managers**
   - Read
 - **Endpoint protection reports**
@@ -174,6 +183,8 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
   - Read device
   - Read profile
   - Read token
+- **Filters**
+  - Read
 - **Intune data warehouse**
   - Read
 - **Managed apps**
@@ -183,23 +194,35 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
   - Read
   - Set primary user
   - Update
+  - View reports
+- **Microsoft Defender ATP**
+  - Read
+- **Microsoft Store for Business**
+  - Read
+- **Mobile Threat Defense**
+  - Modify
+  - Read
 - **Mobile apps**
   - Read
 - **Organization**
   - Read
+- **Partner Device Management**
+  - Read
 - **PolicySets**
   - Read
-- **Remote assistance**
+- **Remote assistance connectors**
   - Read
+  - View reports
 - **Remote tasks**
   - Get FileVault key
   - Initiate Configuration Manger action
-  - Microsoft Defender
   - Reboot now
   - Remote lock
   - Rotate BitLockerKeys (Preview)
   - Rotate FileVault key
+  - Shut down
   - Sync devices
+  - Windows defender
 - **Roles**
   - Read
 - **Security baselines**
@@ -215,6 +238,8 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
   - Read
 - **Terms and conditions**
   - Read
+- **Windows Enterprise Certificate**
+  - Read
 
 ## Avoid policy conflicts
 
@@ -223,7 +248,7 @@ Many of the settings you can configure for devices can be managed by different f
 - Endpoint security policies
 - Security baselines
 - Device configuration policies
-- Windows 10 enrollment policies
+- Windows enrollment policies
 
 For example, the settings found in Endpoint security policies are a subset of the settings that are found in *endpoint protection* and *device restriction* profiles in device configuration policy, and which are also managed through various security baselines.
 

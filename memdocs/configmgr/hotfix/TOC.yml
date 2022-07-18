@@ -1,6 +1,38 @@
 items:
 - name: Hotfix documentation
   href: index.yml
+- name: Version 2203
+  items:
+  - name: KB 13174460 Summary of changes in 2203
+    href: 2203/13174460.md
+  - name: KB 13953025 Early update ring
+    href: 2203/13953025.md  
+  - name: KB 14480034 PKI Client registration fails in Configuration Manager 2203
+    href: 2203/14480034.md
+  - name: KB 14244456 Update rollup for Microsoft Endpoint Configuration Manager version 2203
+    href: 2203/14244456.md
+- name: Version 2111
+  items:
+  - name: KB 10096997 Summary of changes in 2111
+    href: 2111/11052354.md
+  - name: KB 12709700 Update for Configuration Manager 2111
+    href: 2111/12709700.md
+  - name: KB 12959506 Client update for Configuration Manager 2111
+    href: 2111/12959506.md
+  - name: KB 12819689 Connected cache update for Microsoft Endpoint Configuration Manager version 2111
+    href: 2111/12819689.md
+  - name: KB 12896009 Update rollup for Microsoft Endpoint Configuration Manager version 2111
+    href: 2111/12896009.md
+- name: Version 2107
+  items:
+  - name: KB 10096997 Summary of changes in 2107
+    href: 2107/10096997.md
+  - name: KB 10503003 Early update ring
+    href: 2107/10503003.md
+  - name: KB 11121541 Update rollup for 2107
+    href: 2107/11121541.md
+  - name: KB 12636660 Network access account update
+    href: 2107/12636660.md
 - name: Version 2103
   items:
   - name: KB 9210721 Summary of changes in 2103
@@ -13,6 +45,12 @@ items:
     href: 2103/10036164.md
   - name: KB 10216365 Availability group
     href: 2103/10216365.md
+  - name: KB 10372804 BitLocker management
+    href: 2103/10372804.md
+  - name: KB 10589155 Client update
+    href: 2103/10589155.md
+  - name: KB 10582136 Tenant attach update
+    href: 2103/10582136.md
 - name: Version 2010
   items:
   - name: KB 4599442 Summary of changes in 2010

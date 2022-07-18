@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a task sequence action to check the readiness of the target computer using SMS_TaskSequence_PrestartCheckAction class.
 title: SMS_TaskSequence_PrestartCheckAction class
 titleSuffix: Configuration Manager
 ms.date: 08/11/2020
@@ -9,6 +10,8 @@ ms.assetid: 6d4bf98c-7a2b-4747-9d7d-6b92b3af4fbc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_TaskSequence_PrestartCheckAction server WMI class

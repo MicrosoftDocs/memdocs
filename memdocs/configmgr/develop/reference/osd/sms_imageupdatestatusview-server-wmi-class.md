@@ -1,6 +1,7 @@
 ---
 title: "SMS_ImageUpdateStatusView Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ImageUpdateStatusView WMI class represents software update information that is used by offline servicing image."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5a94bf9c-d78e-4a52-883a-de2d9532ada6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -51,7 +54,7 @@ Class SMS_ImageUpdateStatusView : SMS_BaseClass
 
  Qualifiers: [key]  
 
- Index for offline servcing image.  
+ Index for offline servicing image.  
 
  `ImagePackageID`  
  Data type: `String`  

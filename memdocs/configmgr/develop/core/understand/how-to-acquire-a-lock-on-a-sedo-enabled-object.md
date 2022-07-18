@@ -1,6 +1,7 @@
 ---
 title: "Acquire a Lock on a SEDO-Enabled Object"
 titleSuffix: "Configuration Manager"
+description: "Learn how to acquire a lock on a SEDO-enabled object."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 0f4e9ed1-7fd9-4f7e-8a04-4da374ef7f48
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

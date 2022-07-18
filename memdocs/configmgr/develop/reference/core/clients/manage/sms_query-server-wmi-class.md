@@ -1,6 +1,7 @@
 ---
 title: "SMS_Query Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_Query Windows Management Instrumentation (WMI) class is an SMS Provider server class. It serves as a container for predefined queries."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 92214631-1cd5-45ac-a7d9-f49c32530be0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

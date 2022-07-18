@@ -2,33 +2,34 @@
 # required metadata
 
 title: Quickstart - Set up automatic enrollment in Intune
-description: Quickstart - Set up automatic enrollment for Windows 10 devices in Intune.
+description: Quickstart - Set up automatic enrollment for Windows 10/11 devices in Intune.
 services: microsoft-intune
-author: ErikjeMS
-manager: dougeby
+author: Lenewsad
+ms.author: lanewsad
 ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 09/22/2020
-ms.author: erikje
 
 # optional metadata
 
 #ROBOTS:
 #audience:
 
-ms.reviewer: spshumwa
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
-# Quickstart: Set up automatic enrollment for Windows 10 devices
+# Quickstart: Set up automatic enrollment for Windows 10/11 devices
 
-In this quickstart, you'll set up Microsoft Intune to automatically enroll devices when specific users sign in to Windows 10 devices.
+In this quickstart, you'll set up Microsoft Intune to automatically enroll devices when specific users sign in to Windows 10/11 devices.
 
 If you don't have an Intune subscription, [sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
 
@@ -41,7 +42,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as a Global Administrator. If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
 
-## Set up Windows 10 automatic enrollment
+## Set up Windows 10/11 automatic enrollment
 
 For this example, you'll use MDM enrollment so that both corporate and bring-your-own-devices can be automatically enrolled. You will sign up for a free Azure Active Directory Premium subscription.
 
@@ -84,9 +85,9 @@ To reconfigure Intune automatic enrollment, check out [Set up enrollment for Win
 
 ## Next steps
 
-In this quickstart, you learned how to set up auto-enrollment for Windows 10 devices. For more information about device enrollment, see [What is device enrollment?](device-enrollment.md)
+In this quickstart, you learned how to set up auto-enrollment for devices running Windows 10/11. For more information about device enrollment, see [What is device enrollment?](device-enrollment.md)
 
 To follow this series of Intune quickstarts, continue to the next quickstart.
 
 > [!div class="nextstepaction"]
-> [Quickstart: Enroll your Windows 10 device](quickstart-enroll-windows-device.md)
+> [Quickstart: Enroll your Windows 10/11 device](quickstart-enroll-windows-device.md)

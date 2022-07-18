@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_EndpointProtectionDashboardBucket Windows Management Instrumentation (WMI) class in Configuration Manager.
 title: "SMS_EndpointProtectionDashboardBucket Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 1db52c17-0665-45b4-963a-5c2d19e0b9b4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_EndpointProtectionDashboardBucket Server WMI Class

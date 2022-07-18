@@ -1,6 +1,7 @@
 ---
 title: "CCM_Application Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CCM_Application Windows Management Instrumentation class is an SMS Provider server class that represents an application."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: e64823ec-48c0-4001-ba00-9ba5906a7336
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

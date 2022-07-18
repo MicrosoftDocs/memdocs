@@ -1,6 +1,7 @@
 ---
 title: "SMS_ClientBaselineItem Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_ClientBaselineItem WMI class is an SMS Provider server class that represents a client deployment baseline item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 20ab5c14-ea0f-4490-99d8-0b1887705940
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

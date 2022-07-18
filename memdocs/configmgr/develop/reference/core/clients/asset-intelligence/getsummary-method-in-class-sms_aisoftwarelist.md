@@ -1,6 +1,7 @@
 ---
 title: "GetSummary Method in Class SMS_AISoftwareList"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that returns a summary count of each of the states defined by the SMS_AISoftwareList WMI class records State property."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 6647eed3-567d-47f2-a484-a749b3e37456
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

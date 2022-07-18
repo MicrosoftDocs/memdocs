@@ -1,5 +1,6 @@
 ---
 title: "Configuration Manager Queries"
+description: "Create and run the queries that are accessible in the Configuration Manager console under Queries."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -8,6 +9,8 @@ ms.assetid: e20ee196-8b6b-49c1-98e8-613438ea8279
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

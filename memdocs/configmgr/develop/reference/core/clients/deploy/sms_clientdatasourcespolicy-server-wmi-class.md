@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent client policy data sources in Configuration Manager using SMS_ClientDataSourcesPolicy class.
 title: "SMS_ClientDataSourcesPolicy Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 55bd888c-93b7-49b8-98af-273953a5fa37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

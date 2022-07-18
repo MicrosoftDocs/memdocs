@@ -2,16 +2,14 @@
 title: About log files
 titleSuffix: Configuration Manager
 description: Use log files to troubleshoot issues with Configuration Manager clients and site systems.
-ms.date: 11/29/2019
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-
-
-ms.assetid: b1751e3c-a60c-4ab7-a943-2595df1eb612
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # About log files in Configuration Manager
@@ -22,13 +20,11 @@ In Configuration Manager, client and site server components record process infor
 
 This article provides general information about the Configuration Manager log files. It includes tools to use, how to configure the logs, and where to find them. For more information on specific log files, see [Log files reference](log-files.md).
 
+## How it works
 
-## <a name="BKMK_AboutLogs"></a> How it works
+Most processes in Configuration Manager write operational information to a log file that is dedicated to that process. The log files are identified by `.log` or `.lo_` file extensions. Configuration Manager writes to a `.log` file until that log reaches its maximum size. When the log is full, the `.log` file is copied to a file of the same name but with the `.lo_` extension, and the process or component continues to write to the `.log` file. When the `.log` file again reaches its maximum size, the `.lo_` file is overwritten and the process repeats. Some components establish a log file history by appending a date and time stamp to the log file name and by keeping the `.log` extension.
 
-Most processes in Configuration Manager write operational information to a log file that is dedicated to that process. The log files are identified by **.log** or **.lo_** file extensions. Configuration Manager writes to a .log file until that log reaches its maximum size. When the log is full, the .log file is copied to a file of the same name but with the .lo_ extension, and the process or component continues to write to the .log file. When the .log file again reaches its maximum size, the .lo_ file is overwritten and the process repeats. Some components establish a log file history by appending a date and time stamp to the log file name and by keeping the .log extension.
-
-
-## <a name="bkmk_tools"></a> Log viewer tools
+## Log viewer tools
 
 All Configuration Manager log files are plain text, so you can view them with any text reader like Notepad. The logs use unique formatting that's best viewed with one of the following specialized tools:
 
@@ -51,17 +47,18 @@ To view the logs, use the Configuration Manager log viewer tool **CMTrace**. It'
 > [!NOTE]
 > Support Center Log File Viewer and OneTrace use Windows Presentation Foundation (WPF). This component isn't available in Windows PE. Continue to use CMTrace in boot images with task sequence deployments.
 
-
-## <a name="bkmk_logoptions"></a> Configure logging options
+## Configure logging options
 
 You can change the configuration of the log files, such as the verbose level, size, and history. There are several ways to change these settings:
 
-- [During client installation](#bkmk_logoptions-clientprop)
-- [Using Configuration Manager Service Manager](#bkmk_logoptions-sm)
-- [Using the Windows Registry](#bkmk_logoptions-registry)
-- [In the Configuration Manager console](#bkmk_logoptions-console)
+- [During client installation](#configure-logging-options-during-client-installation)
+- [Using Configuration Manager Service Manager](#configure-logging-options-by-using-configuration-manager-service-manager)
+- [Using the Windows Registry](#configure-logging-options-by-using-the-windows-registry)
+- [In the Configuration Manager console](#configure-logging-options-in-the-configuration-manager-console)
 
-### <a name="bkmk_logoptions-clientprop"></a> Configure logging options during client installation
+You can also use [hardware inventory to collect log settings](#hardware-inventory-for-client-log-settings) from clients.
+
+### Configure logging options during client installation
 
 You can set the configuration of the client log files during installation. Use the following properties:
 
@@ -73,7 +70,7 @@ You can set the configuration of the client log files during installation. Use t
 
 For more information, see [Client installation properties](../../clients/deploy/about-client-installation-properties.md#clientMsiProps).
 
-### <a name="bkmk_logoptions-sm"></a> Configure logging options by using Configuration Manager Service Manager
+### Configure logging options by using Configuration Manager Service Manager
 
 You can change where Configuration Manager stores the log files, and their size.  
 
@@ -97,7 +94,7 @@ To modify the size of log files, change the name and location of the log file, o
 
 8. Select **OK** to save the configuration.  
 
-### <a name="bkmk_logoptions-registry"></a> Configure logging options by using the Windows Registry
+### Configure logging options by using the Windows Registry
 
 <!-- SCCMDocs#992 -->
 Use the Windows Registry on the servers or clients to change the following logging options:
@@ -108,7 +105,7 @@ Use the Windows Registry on the servers or clients to change the following loggi
 
 When troubleshooting a problem, you can enable verbose logging for Configuration Manager to write additional details in the log files.
 
-> [!Warning]
+> [!WARNING]
 > Misconfiguration of these settings can cause Configuration Manager to log large amounts of information, or none at all. While this data can be beneficial for troubleshooting, be cautious when changing these values in production sites. Always test these changes in a lab environment first. Excessive logging can occur, which might make it difficult to find relevant information in the log files.
 
 After you make changes to these registry settings, restart the component:
@@ -118,12 +115,12 @@ After you make changes to these registry settings, restart the component:
 
 The registry settings vary depending upon the component:
 
-- [Client and management point](#bkmk_reg-client)
-- [Site server](#bkmk_reg-site)
-- [Site system role](#bkmk_reg-role)
-- [Configuration Manager console](#bkmk_reg-console)
+- [Client and management point](#client-and-management-point-logging-options)
+- [Site server](#site-server-logging-options)
+- [Site system role](#site-system-role-logging-options)
+- [Configuration Manager console](#configuration-manager-console-logging-options)
 
-#### <a name="bkmk_reg-client"></a> Client and management point logging options
+#### Client and management point logging options
 
 To configure logging options for all components on a client or management point site system, configure these **REG_DWORD** values under the following Windows Registry key:
 
@@ -135,7 +132,7 @@ To configure logging options for all components on a client or management point 
 |LogMaxHistory|Any integer greater than or equal to zero, for example:<br>`0`: No history<br>`1`: Default|When a log file reaches the maximum size, the client renames it as a backup and creates a new log file. Specify how many previous versions to keep.|
 |LogMaxSize|Any integer greater than or equal to 10,000, for example:<br>250000|The maximum log file size in bytes. When a log grows to the specified size, the client renames it as a history file, and creates a new file. The default value is 250,000 bytes.|
 
-> [!Note]  
+> [!NOTE]
 > Don't change other values that may exist in this registry key.
 
 For advanced debugging, you can also add this **REG_SZ** value under the following Windows Registry key:
@@ -148,7 +145,7 @@ For advanced debugging, you can also add this **REG_SZ** value under the followi
 
 This setting causes the client to log low-level information for troubleshooting. Avoid using this setting in production sites. Excessive logging can occur, which might make it difficult to find relevant information in the log files. Make sure to turn off this setting after you resolve the issue.
 
-#### <a name="bkmk_reg-site"></a> Site server logging options
+#### Site server logging options
 
 You can configure settings globally or for a specific component on the Configuration Manager site server.
 
@@ -164,7 +161,7 @@ Configure these values under the following Windows Registry key:
 
 Only enable SQL Server tracing for troubleshooting purposes. Avoid using it in production sites. Excessive logging can occur, which might make it difficult to find relevant information in the log files. Make sure to turn off this setting after you resolve the issue.
 
-> [!Note]  
+> [!NOTE]
 > Don't change other values that may exist in this registry key.
 
 To configure logging options for a specific server component, configure these **REG_DWORD** values under the following Windows Registry key:
@@ -180,10 +177,10 @@ To configure logging options for a specific server component, configure these **
 
 The DebugLogging setting causes the server to log low-level information for troubleshooting. Avoid using this setting in production sites. Excessive logging can occur, which might make it difficult to find relevant information in the log files. Make sure to turn off this setting after you resolve the issue.
 
-> [!Note]  
+> [!NOTE]
 > Don't change other values that may exist in this registry key.
 
-#### <a name="bkmk_reg-role"></a> Site system role logging options
+#### Site system role logging options
 
 You can configure settings globally or for a specific component on a site system that hosts a Configuration Manager server role.
 
@@ -201,17 +198,14 @@ For example, for the distribution point role:
 |LogMaxHistory|Any integer greater than or equal to zero, for example:<br>`0`: No history<br>`1`: Default|When a log file reaches the maximum size, the server renames it as a backup and creates a new log file. Specify how many previous versions to keep.|
 |LogMaxSize|Any integer greater than or equal to 10,000, for example:<br>250000|The maximum log file size in bytes. When a log grows to the specified size, the server renames it as a history file, and creates a new file. The default value is 250,000 bytes.|
 
-> [!Note]  
+> [!NOTE]
 > Don't change other values that may exist in this registry key.
 
-#### <a name="bkmk_reg-console"></a> Configuration Manager console logging options
+#### Configuration Manager console logging options
 
 To change the verbose level of the AdminUI.log for the Configuration Manager console, use the following procedure:
 
 1. Open the console configuration file, **Microsoft.ConfigurationManagement.exe.config**, in an XML editor like Notepad. The default configuration file is in the following location: `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
-
-    > [!IMPORTANT]
-    > Starting in version 1910, this path changed to use the `Microsoft Endpoint Manager` folder. Make sure you don't use an older version of the file that might exist in another folder.
 
 1. Under the **system.diagnostics** > **sources** > **source** element, change the **switchValue** attribute from `Error` to `Verbose`. For example:
 
@@ -220,11 +214,11 @@ To change the verbose level of the AdminUI.log for the Configuration Manager con
 
 1. Save the file, and restart the console.
 
-### <a name="bkmk_logoptions-console"></a> Configure logging options in the Configuration Manager console
+### Configure logging options in the Configuration Manager console
 
 <!-- 4433455 -->
 
-Starting in version 1910, enable or disable verbose logging on a client or collection from the console:
+Enable or disable verbose logging on a client or collection from the console:
 
 1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, select the **Devices** node, and choose a target device.
 
@@ -232,7 +226,23 @@ Starting in version 1910, enable or disable verbose logging on a client or colle
 
 For more information, see [Client diagnostics](../../clients/manage/client-notification.md#client-diagnostics).
 
-## <a name="BKMK_LogLocation"></a> Locating log files
+### Hardware inventory for client log settings
+
+<!--5602449-->
+Starting in version 2107, you can enable hardware inventory to collect client log file settings. Enable the hardware inventory class, **Client Diagnostics (CCM_ClientDiagnostics)**, and then select the following attributes:
+
+- Debug Logging Enabled
+- Logging Enabled
+- Log Level
+- History File Count
+- Max Log File Size
+
+> [!NOTE]
+> This inventory class isn't enabled by default.
+
+For more information, see [Enable or disable existing hardware inventory classes](../../clients/manage/inventory/extend-hardware-inventory.md#enable-or-disable-existing-classes).
+
+## Locating log files
 
 Configuration Manager and dependent components store log files in various locations. These locations depend on the process that creates the log file and the configuration of your environment.
 
@@ -254,10 +264,10 @@ The location of the task sequence log file **smsts.log** varies depending upon t
 - In Windows after the client is installed: `C:\Windows\CCM\Logs\smstslog\smsts.log`
 - In Windows after the task sequence completes: `C:\Windows\CCM\Logs\smsts.log`
 
-> [!Tip]  
+> [!TIP]
 > The read-only task sequence variable [_SMSTSLogPath](../../../osd/understand/task-sequence-variables.md#SMSTSLogPath) always contains the path of the current log file.
 
-## See also
+## Next steps
 
 - [Log files reference](log-files.md)
 

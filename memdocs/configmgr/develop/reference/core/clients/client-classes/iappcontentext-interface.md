@@ -1,6 +1,7 @@
 ---
 title: "IAppContentExt Interface"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the IAppContentExt interface defines functions to retrieve the application content information. The interface inherits from IUnknown."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 478124a0-ee88-46e5-bb5e-27753c01970c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

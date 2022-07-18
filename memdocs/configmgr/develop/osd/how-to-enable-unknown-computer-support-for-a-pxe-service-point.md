@@ -9,6 +9,9 @@ ms.assetid: fbabd2ed-c3ee-48f0-8d9d-7d0c48f69af6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
+description: Learn about how to set an operating system deployment response to PXE service requests from unknown computers.
 
 
 ---

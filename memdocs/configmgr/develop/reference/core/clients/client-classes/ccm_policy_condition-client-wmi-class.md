@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a policy condition in Configuration Manager using CCM_Policy_Condition. 
 title: "CCM_Policy_Condition Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 6a7f9c94-ccbd-43ef-9adb-ed620ba3fe5f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

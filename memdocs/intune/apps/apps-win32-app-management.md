@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 04/13/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -18,7 +18,9 @@ ms.reviewer: manchen
 ms.suite: ems
 search.appverid: MET150
 ms.custom: contperf-fy21q1
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Win32 app management in Microsoft Intune
@@ -29,7 +31,9 @@ Microsoft Intune allows Win32 app management capabilities. Although it's possibl
 > This app management capability supports both 32-bit and 64-bit operating system architecture for Windows applications.
 
 > [!IMPORTANT]
-> When you're deploying Win32 apps, consider using the [Intune Management Extension](../apps/intune-management-extension.md) approach exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation might fail. The Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device.
+> When you're deploying Win32 apps, consider using the [Intune Management Extension](../apps/intune-management-extension.md) approach exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during Autopilot enrollment, the app installation might fail as they both use the Trusted Installer service at the same time.
+> 
+> The Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device. Additionally, the Intune management extension agent checks every hour (or on service or device restart) for any new Win32 app assignments.
 
 ## Prerequisites
 
@@ -119,6 +123,9 @@ Set the app availability based on a date and time for a required app by using th
     - **Select when to display the restart countdown dialog box before the restart occurs (minutes)**: The default value is 15 minutes.
     - **Allow user to snooze the restart notification**: You can choose **Yes** or **No**.
         - **Select the snooze duration (minutes)**: The default value is 240 minutes (4 hours). The snooze value can't be more than the reboot grace period.
+
+    > [!IMPORTANT]
+    > Restart time is not registered when the user doesn't have admin privileges to the device.
 
 11. Select **Review + save**.
 

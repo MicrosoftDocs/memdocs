@@ -1,6 +1,7 @@
 ---
 title: "GetFeatureState Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that gets the enabled and disabled state of a feature."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 3350172b-3c4e-4cc5-af3e-cb94296ba052
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

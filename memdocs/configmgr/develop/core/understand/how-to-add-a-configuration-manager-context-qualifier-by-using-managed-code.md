@@ -1,6 +1,7 @@
 ---
 title: "Add a Context Qualifier by Using Managed Code"
 titleSuffix: "Configuration Manager"
+description: "To add a context qualifier by using the managed SMS Provider, use the Context property which is a Dictionary object that holds context qualifiers."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: eef96176-cbf5-4163-bb81-047c22443527
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

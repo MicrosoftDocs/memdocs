@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Walkthrough - Create administrative template in Microsoft Intune - Azure | Microsoft Docs
-description: This tutorial or walkthrough uses Microsoft Intune to configure Office, Windows, and Microsoft Edge ADMX templates on Windows 10 and newer devices.
+title: Walkthrough - Create administrative template in Microsoft Intune
+description: This tutorial or walkthrough uses Microsoft Intune to configure Office, Windows, and Microsoft Edge ADMX templates on Windows 10/11 client devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/26/2021
+ms.date: 01/20/2022
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,21 +27,21 @@ search.appverid: MET150
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 
-#Customer intent: As an administrator, I want learn and use ADMX templates in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows 10 devices.
+#Customer intent: As an administrator, I want learn and use ADMX templates in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows 10/11 devices.
 ---
 
-# Tutorial: Use the cloud to configure group policy on Windows 10 devices with ADMX templates and Microsoft Intune
+# Tutorial: Use the cloud to configure group policy on Windows 10/11 devices with ADMX templates and Microsoft Intune
 
 > [!NOTE]
 > This tutorial was created as a technical workshop for Microsoft Ignite. It has more prerequisites than typical tutorials, as it compares using and configuring ADMX policies in Intune and on-premises.
 
-Group policy administrative templates, also known as ADMX templates, include settings you can configure on Windows 10 devices, including PCs. The ADMX template settings are available by different services. These settings are used by Mobile Device Management (MDM) providers, including Microsoft Intune. For example, you can turn on Design Ideas in PowerPoint, set a home page in Microsoft Edge, block ActiveX controls in Internet Explorer, and more.
+Group policy administrative templates, also known as ADMX templates, include settings you can configure on Windows client devices, including PCs. The ADMX template settings are available by different services. These settings are used by Mobile Device Management (MDM) providers, including Microsoft Intune. For example, you can turn on Design Ideas in PowerPoint, set a home page in Microsoft Edge, block ActiveX controls in Internet Explorer, and more.
 
 ADMX templates are available for the following services:
 
 - **Microsoft Edge**: Download at [Microsoft Edge policy file](https://www.microsoftedgeinsider.com/en-us/enterprise).
 - **Office**: Download at [Microsoft 365 Apps, Office 2019, and Office 2016](https://www.microsoft.com/download/details.aspx?id=49030).
-- **Windows**: Built in to the Windows 10 OS.
+- **Windows**: Built in to the Windows client OS.
 
 For more information on ADMX policies, see [Understanding ADMX-backed policies](/windows/client-management/mdm/understanding-admx-backed-policies).
 
@@ -59,6 +59,7 @@ By the end of this lab, you'll have the skills to start using Intune and Microso
 
 This feature applies to:
 
+- Windows 11
 - Windows 10 version 1709 and newer
 
 > [!TIP]
@@ -66,7 +67,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- A Microsoft 365 E3 or E5 subscription, which includes Intune and Azure Active Directory (AD) premium. If you don't have an E3 or E5 subscription, [try it for free](/office365/admin/try-or-buy-microsoft-365?view=o365-worldwide).
+- A Microsoft 365 E3 or E5 subscription, which includes Intune and Azure Active Directory (AD) premium. If you don't have an E3 or E5 subscription, [try it for free](/microsoft-365/commerce/try-or-buy-microsoft-365).
 
   For more information on what you get with the different Microsoft 365 licenses, see [Transform your Enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans).
 
@@ -82,10 +83,10 @@ This feature applies to:
       - [Office administrative templates](https://www.microsoft.com/download/details.aspx?id=49030)
       - [Microsoft Edge administrative templates > Policy file](https://www.microsoftedgeinsider.com/en-us/enterprise)
 
-  2. Create a group policy to push these templates to a Windows 10 Enterprise administrator computer in the same domain as the DC. In this tutorial:
+  2. Create a group policy to push these templates to a Windows 10/11 Enterprise administrator computer in the same domain as the DC. In this tutorial:
 
       - The group policy we created with these templates is called **OfficeandEdge**. You'll see this name in the images.
-      - The Windows 10 Enterprise administrator computer we use is called the **Admin computer**.
+      - The Windows 10/11 Enterprise administrator computer we use is called the **Admin computer**.
 
       In some organizations, a domain administrator has two accounts:  
         - A typical domain work account
@@ -447,7 +448,7 @@ At this point, you created some administrative templates, and assigned them to g
 This section uses the following resources. We'll install these resources in this section.
 
 - [Intune PowerShell SDK](https://github.com/microsoft/Intune-PowerShell-SDK)
-- [Microsoft Graph API for Intune](/graph/api/resources/intune-graph-overview?view=graph-rest-1.0)
+- [Microsoft Graph API for Intune](/graph/api/resources/intune-graph-overview)
 
 1. On the **Admin computer**, open **Windows PowerShell** as administrator:
 
@@ -537,7 +538,7 @@ This section uses the following resources. We'll install these resources in this
 11. Find the definition ID using the setting display name. Enter:
 
     ```powershell
-    $desiredSettingDefinition = $settingDefinitions.value | ? {$_.DisplayName -Match "Silently sign in users to the OneDrive sync client with their Windows credentials"}
+    $desiredSettingDefinition = $settingDefinitions.value | ? {$_.DisplayName -Match "Silently sign in users to the OneDrive sync app with their Windows credentials"}
     ```
 
 12. Configure a setting. Enter:
@@ -595,4 +596,4 @@ In this tutorial, you got more familiar with the [Microsoft Endpoint Manager adm
 For more information on administrative templates in Intune, see:
 
 > [!div class="nextstepaction"]
-> [Use Windows 10 templates to configure group policy settings in Intune](administrative-templates-windows.md)
+> [Use Windows 10/11 templates to configure group policy settings in Intune](administrative-templates-windows.md)

@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the current client state at the time of the last hardware inventory using SMS_G_System_Current as an abstract base class.
 title: "SMS_G_System_Current Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 01e0699f-7031-47a7-a3c2-5e98aeebe5f6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

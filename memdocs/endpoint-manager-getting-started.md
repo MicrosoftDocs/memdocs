@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/19/2021
+ms.date: 07/21/2021
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -23,8 +23,12 @@ ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
-ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.custom: 
+  - get-started
+  - intro-get-started
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Getting started with Microsoft Endpoint Manager
@@ -33,7 +37,7 @@ As part of your Microsoft 365 license, your company is likely to adopt Microsoft
 
 ## A global cloud service architecture
 
-Microsoft Intune was architected from the cloud and for the cloud and is closely tied with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) (Azure AD). Intune integrates with Azure AD and Conditional Access (CA) policies to help you manage access to your organization’s apps and devices and protect and isolate corporate data. Intune enhances CA with device-based compliance and can also take risk signals from [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint), as well as [mobile threat defense](/mem/intune/protect/mobile-threat-defense) (MTD) apps. Intune also integrates with [network access control](/mem/intune/protect/network-access-control-integrate) (NAC) solutions to ensure only compliant devices can connect to your corporate network.
+Microsoft Intune was architected from the cloud and for the cloud and is closely tied with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) (Azure AD). Intune integrates with Azure AD and Conditional Access (CA) policies to help you manage access to your organization’s apps and devices and protect and isolate corporate data. Intune enhances CA with device-based compliance and can also take risk signals from [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint), as well as [mobile threat defense](./intune/protect/mobile-threat-defense.md) (MTD) apps. Intune also integrates with [network access control](./intune/protect/network-access-control-integrate.md) (NAC) solutions to ensure only compliant devices can connect to your corporate network.
 
 App stores are key parts of an Intune deployment. For iOS devices, you can use either the Apple Volume Purchase Program (VPP), which is part of Apple Business Manager, or the App Store. In the case of Android, you can use either the Google Play app store for device administrator devices, or managed Google Play for Android Enterprise devices. For Windows, the Microsoft Store for Business provides a great experience for app deployment.
 
@@ -61,7 +65,7 @@ Moving from physical machines in a private datacenter to a cloud-based, micro-se
 
 Microsoft Endpoint Configuration Manager, which is a part of Microsoft Endpoint Manager, helps you protect the on-premises devices, apps, and data that the people at your organization use to be productive. If you need to manage only cloud-based endpoints, you can use Microsoft Intune. If you need to manage only on-premises endpoints, such as the computers your organization has attached to your internal network, you can use Microsoft Endpoint Configuration Manager. However, if you need to manage a combination of both cloud and on-premises endpoints, you can use cloud attach to leverage both Intune and Configuration Manager from Microsoft Endpoint Manager.
 
-There are two steps to cloud attach your on-premises devices. The first step of attachment is called [tenant attach](/mem/configmgr/tenant-attach/), which is registering your Intune tenant with your Configuration Manager deployment. The second step is called [co-management](/mem/configmgr/comanage/), which is concurrently managing Windows 10 devices with both Configuration Manager and Microsoft Intune. These are incremental steps on the journey to having full cloud attachment. You get immediate value through tenant attach and you get additional value through co-management.
+There are two steps to cloud attach your on-premises devices. The first step of attachment is called [tenant attach](./configmgr/tenant-attach/index.yml), which is registering your Intune tenant with your Configuration Manager deployment. The second step is called [co-management](./configmgr/comanage/index.yml), which is concurrently managing Windows 10 devices with both Configuration Manager and Microsoft Intune. These are incremental steps on the journey to having full cloud attachment. You get immediate value through tenant attach and you get additional value through co-management.
 
 ## Planning and deployment
 
@@ -69,9 +73,9 @@ A successful adoption or migration to Microsoft Intune starts with a plan. This 
 
 The following resources will help plan and deploy Intune:
 
-- [Deployment guide: Setup or move to Microsoft Intune](/mem/intune/fundamentals/deployment-guide-intune-setup) 
-- [Planning guide to move to Microsoft Intune](/mem/intune/fundamentals/intune-planning-guide) 
-- [Set up Microsoft Intune](/mem/intune/fundamentals/setup-steps)
+- [Deployment guide: Setup or move to Microsoft Intune](./intune/fundamentals/deployment-guide-intune-setup.md) 
+- [Planning guide to move to Microsoft Intune](./intune/fundamentals/intune-planning-guide.md) 
+- [Set up Microsoft Intune](./intune/fundamentals/setup-steps.md)
 
 > [!TIP]
 > Get started quickly with [Microsoft Endpoint Manager fundamentals](/learn/paths/endpoint-manager-fundamentals/), [Plan your migration to Microsoft Endpoint Manager](/learn/modules/paths-to-modern-endpoint-management/), and [Determine your endpoint management implementation](/learn/modules/determine-endpoint-implementation/).
@@ -80,24 +84,24 @@ The following resources will help plan and deploy Intune:
 
 By using Intune, you can manage devices and apps, and how they access company data. To use Intune mobile device management (MDM), the devices must first be enrolled in the Intune service. When a device is enrolled, it's issued an MDM certificate. This certificate is used to communicate with the Intune service.
 
-Devices can be enrolled on the following platforms. For the specific versions, see [Supported operating systems](/mem/intune/fundamentals/supported-devices-browsers):
+Devices can be enrolled on the following platforms. For the specific versions, see [Supported operating systems](./intune/fundamentals/supported-devices-browsers.md):
 
 - Android
 - iOS/iPadOS
 - macOS
 - Windows
 
-Different platforms may have additional requirements. For example, iOS/iPadOS and macOS devices require an [MDM push certificate from Apple](/mem/intune/enrollment/apple-mdm-push-certificate-get).
+Different platforms may have additional requirements. For example, iOS/iPadOS and macOS devices require an [MDM push certificate from Apple](./intune/enrollment/apple-mdm-push-certificate-get.md).
 
 The following resources will help you learn more about device enrollment for each platform:
 
-- [What is device enrollment in Intune?](/mem/intune/enrollment/device-enrollmentd)
-- [Enrolled device management capabilities of Microsoft Intune](/mem/intune/enrollment/device-management-capabilities)
-- [Enrollment options for devices managed by Intune](/mem/intune/enrollment/enrollment-options)
-- [Intune enrollment methods for Windows devices](/mem/intune/enrollment/windows-enrollment-methods)
-- [Enroll iOS/iPadOS devices in Intune](/mem/intune/enrollment/ios-enroll)
-- [Enroll Android devices](/mem/intune/enrollment/android-enroll)
-- [Set up enrollment for macOS devices in Intune](/mem/intune/enrollment/macos-enroll)
+- [What is device enrollment in Intune?](./intune/enrollment/device-enrollment.md)
+- [Enrolled device management capabilities of Microsoft Intune](./intune/enrollment/device-management-capabilities.md)
+- [Enrollment options for devices managed by Intune](./intune/enrollment/enrollment-options.md)
+- [Intune enrollment methods for Windows devices](./intune/enrollment/windows-enrollment-methods.md)
+- [Enroll iOS/iPadOS devices in Intune](./intune/enrollment/ios-enroll.md)
+- [Enroll Android devices](./intune/enrollment/android-enroll.md)
+- [Set up enrollment for macOS devices in Intune](./intune/enrollment/macos-enroll.md)
 
 ## Device configuration
 
@@ -105,15 +109,15 @@ Microsoft Intune includes settings and features you can enable or disable on dif
 
 The following resources will help you understand how to configure device settings:
 
-- [Configure device settings](/mem/intune/configuration/)
+- [Configure device settings](./intune/configuration/index.yml)
 - [Windows security baselines](/windows/security/threat-protection/windows-security-baselines)
-- [iOS/iPadOS Enterprise security configuration framework](/mem/intune/enrollment/ios-ipados-configuration-framework)
-- [Android Enterprise security configuration framework](/mem/intune/enrollment/android-configuration-framework)
-- [Device features and settings in Microsoft Intune](/mem/intune/configuration/device-profiles)
-- [Use the settings catalog to configure settings on Windows and macOS devices](/mem/intune/configuration/settings-catalog)
-- [Assign device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign)
-- [App configuration policies for Microsoft Intune](/mem/intune/apps/app-configuration-policies-overview)
-- [Manage endpoint security in Microsoft Intune](/mem/intune/protect/endpoint-security)
+- [iOS/iPadOS Enterprise security configuration framework](./intune/enrollment/ios-ipados-configuration-framework.md)
+- [Android Enterprise security configuration framework](./intune/enrollment/android-configuration-framework.md)
+- [Device features and settings in Microsoft Intune](./intune/configuration/device-profiles.md)
+- [Use the settings catalog to configure settings on Windows and macOS devices](./intune/configuration/settings-catalog.md)
+- [Assign device profiles in Microsoft Intune](./intune/configuration/device-profile-assign.md)
+- [App configuration policies for Microsoft Intune](./intune/apps/app-configuration-policies-overview.md)
+- [Manage endpoint security in Microsoft Intune](./intune/protect/endpoint-security.md)
  
 ## Compliance policies
 
@@ -125,30 +129,30 @@ MDM solutions like Intune can help set requirements for users and devices to pro
 
 The following articles will help you understand how to create and monitor compliance policies in Intune, as well as how to integrate with MTD and NAC solutions, and Conditional Access:
 
-- [Device compliance policies in Microsoft Intune](/mem/intune/protect/device-compliance-get-started)
-- [Create a compliance policy in Microsoft Intune](/mem/intune/protect/create-compliance-policy)
-- [Enable Mobile Threat Defense connector in Microsoft Intune](/mem/intune/protect/mtd-connector-enable)
-- [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](/mem/intune/protect/advanced-threat-protection)
-- [Network access control integration with Microsoft Intune](/mem/intune/protect/network-access-control-integrate)
-- [Integrate with Conditional Access](/mem/intune/protect/device-compliance-get-started#integrate-with-conditional-access)
-- [App-based Conditional Access with Intune](/mem/intune/protect/app-based-conditional-access-intune)
-- [Conditional Access scenarios](/mem/intune/protect/conditional-access-intune-common-ways-use)
-- [Monitor device compliance policies in Microsoft Intune](/mem/intune/protect/compliance-policy-monitor)
+- [Device compliance policies in Microsoft Intune](./intune/protect/device-compliance-get-started.md)
+- [Create a compliance policy in Microsoft Intune](./intune/protect/create-compliance-policy.md)
+- [Enable Mobile Threat Defense connector in Microsoft Intune](./intune/protect/mtd-connector-enable.md)
+- [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](./intune/protect/advanced-threat-protection.md)
+- [Network access control integration with Microsoft Intune](./intune/protect/network-access-control-integrate.md)
+- [Integrate with Conditional Access](./intune/protect/device-compliance-get-started.md#integrate-with-conditional-access)
+- [App-based Conditional Access with Intune](./intune/protect/app-based-conditional-access-intune.md)
+- [Conditional Access scenarios](./intune/protect/conditional-access-intune-common-ways-use.md)
+- [Monitor device compliance policies in Microsoft Intune](./intune/protect/compliance-policy-monitor.md)
 
 ## Intune app protection policies
 
-Intune app protection policies (APP) allow you to protect organizational data within an application. Together with app configuration capabilities, you can implement mobile application management (MAM) in Intune to help protect sensitive data that is accessed from both managed and unmanaged devices. With MAM without enrollment (MAM-WE), you can use Intune to manage work or school-related apps, including productivity apps such as the Microsoft Office apps, on almost any [device](/mem/intune/apps/app-management.md#app-management-capabilities-by-platform), including personal devices in bring-your-own-device (BYOD) scenarios. See the official list of [Microsoft Intune protected apps](/mem/intune/apps/apps-supported-intune-apps) available for public use.
+Intune app protection policies (APP) allow you to protect organizational data within an application. Together with app configuration capabilities, you can implement mobile application management (MAM) in Intune to help protect sensitive data that is accessed from managed applications. See the official list of [Microsoft Intune protected apps](./intune/apps/apps-supported-intune-apps.md) available for public use.
 
 To get an overview of app protection policies and how they work, check out the following articles:
 
-- [App protection policies overview](/mem/intune/apps/app-protection-policy)
-- [Data protection framework using app protection policies](/mem/intune/apps/app-protection-framework)
-- [Understand app protection policy delivery timing](/mem/intune/apps/app-protection-policy-delivery)
-- [How to create and assign app protection policies](/mem/intune/apps/app-protection-policies)
-- [How to manage data transfer between iOS apps in Microsoft Intune](/mem/intune/apps/data-transfer-between-apps-manage-ios)
-- [How to monitor app protection policies](/mem/intune/apps/app-protection-policies-monitor)
-- [Review client app protection logs](/mem/intune/apps/app-protection-policy-settings-log)
-- [Frequently asked questions about MAM and app protection](/mem/intune/apps/mam-faq)
+- [App protection policies overview](./intune/apps/app-protection-policy.md)
+- [Data protection framework using app protection policies](./intune/apps/app-protection-framework.md)
+- [Understand app protection policy delivery timing](./intune/apps/app-protection-policy-delivery.md)
+- [How to create and assign app protection policies](./intune/apps/app-protection-policies.md)
+- [How to manage data transfer between iOS apps in Microsoft Intune](./intune/apps/data-transfer-between-apps-manage-ios.md)
+- [How to monitor app protection policies](./intune/apps/app-protection-policies-monitor.md)
+- [Review client app protection logs](./intune/apps/app-protection-policy-settings-log.md)
+- [Frequently asked questions about MAM and app protection](./intune/apps/mam-faq.yml)
 
 ## Delivering apps to devices
 
@@ -156,14 +160,14 @@ Intune supports a wide range of apps, including store apps for iOS, macOS, Andro
 
 Check out these resources to find out how to add and manage apps with Intune:
 
-- [What is app management in Microsoft Intune](/mem/intune/apps/app-management)
-- [Add apps to Microsoft Intune](/mem/intune/apps/apps-add)
-- [Add and assign managed Google Play apps to Android Enterprise devices](/mem/intune/apps/apps-add-android-for-work)
-- [Add iOS store apps to Microsoft Intune](/mem/intune/apps/store-apps-ios)
-- [How to manage iOS and macOS apps purchased through Apple Business Manager](/mem/intune/apps/vpp-apps-ios)
-- [Windows 10 app deployment by using Microsoft Intune](/mem/intune/apps/apps-windows-10-app-deploy)
-- [How to protect your company app data with Microsoft Intune](/graph/api/resources/intune-app-conceptual.md?view=graph-rest-beta&preserve-view=true)
-- [Manage Android Enterprise system apps in Microsoft Intune](/mem/intune/apps/apps-ae-system)
+- [What is app management in Microsoft Intune](./intune/apps/app-management.md)
+- [Add apps to Microsoft Intune](./intune/apps/apps-add.md)
+- [Add and assign managed Google Play apps to Android Enterprise devices](./intune/apps/apps-add-android-for-work.md)
+- [Add iOS store apps to Microsoft Intune](./intune/apps/store-apps-ios.md)
+- [How to manage iOS and macOS apps purchased through Apple Business Manager](./intune/apps/vpp-apps-ios.md)
+- [Windows 10 app deployment by using Microsoft Intune](./intune/apps/apps-windows-10-app-deploy.md)
+- [How to protect your company app data with Microsoft Intune](/graph/api/resources/intune-app-conceptual?view=graph-rest-beta&preserve-view=true)
+- [Manage Android Enterprise system apps in Microsoft Intune](./intune/apps/apps-ae-system.md)
 
 ## Privacy and personal data in Intune
 
@@ -171,11 +175,11 @@ You should understand how Intune collects, stores, retains, processes, secures, 
 
 The following resources will help you understand privacy and personal data in Intune:
 
-- [Privacy and personal data in Intune](/mem/intune/protect/privacy-personal-data)
-- [Optional diagnostic data from Intune Client apps](/mem/intune/protect/client-apps-optional-data)
-- [Data collection in Intune](/mem/intune/protect/privacy-data-collect)
-- [Data storage and processing in Intune](/mem/intune/protect/privacy-data-store-process)
-- [Audit, export, or delete personal data in Intune](/mem/intune/protect/privacy-data-audit-export-delete)
+- [Privacy and personal data in Intune](./intune/protect/privacy-personal-data.md)
+- [Optional diagnostic data from Intune Client apps](./intune/protect/client-apps-optional-data.md)
+- [Data collection in Intune](./intune/protect/privacy-data-collect.md)
+- [Data storage and processing in Intune](./intune/protect/privacy-data-store-process.md)
+- [Audit, export, or delete personal data in Intune](./intune/protect/privacy-data-audit-export-delete.md)
 
 ## Intune service updates
 New feature releases for Intune typically have a six to eight-week cadence, from planning to release, called a sprint. Intune releases use a **YYMM** naming convention. For example, 2107 would be a July 2021 release.
@@ -197,7 +201,7 @@ Updating the Company Portal app is a different process. Microsoft is subject to 
 Keeping up to date about releases and changes is an important part of your Intune deployment. Intune provides several ways to stay current about latest updates to the service:
 
 
-- [What's new in Intune](https://aka.ms/MEMWN)  – Learn what’s new each week in in Microsoft Intune, including an overview of the current release, notices, information about earlier releases, and other information. Content is published at the end of the current sprint once the UI updates start rolling out in the Microsoft Endpoint Manager admin center.
+- [What's new in Intune](./intune/fundamentals/whats-new.md)  – Learn what’s new each week in in Microsoft Intune, including an overview of the current release, notices, information about earlier releases, and other information. Content is published at the end of the current sprint once the UI updates start rolling out in the Microsoft Endpoint Manager admin center.
 - [Message Center](/microsoft-365/admin/manage/message-center) – When the service update is completely rolled out, you’ll see a message posted in the Tenant status – Service health and message center, or you can view the same messages in the Message Center at portal.office.com. We use service APIs to pull just the Microsoft Endpoint Manager messages from Office into the Microsoft Endpoint Manager admin center UI.
 - [Microsoft Intune Tenant Status page](/intune/tenant-status)  - A centralized hub where you can view current information and communications about the Intune service and your tenant status.
     1. Navigate to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
@@ -213,8 +217,7 @@ We hope you found this overview of Intune helpful. Check out [Tips and tricks fo
 
 For additional information about Microsoft Endpoint Manager, see the following documentation: 
 
-- [Microsoft Intune overview](/mem/intune/fundamentals/what-is-intune)
-- [Device management overview](/mem/intune/fundamentals/what-is-device-management)
-- [Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](/mem/intune/fundamentals/tutorial-walkthrough-endpoint-manager)
-- [High-level architecture for Microsoft Intune](/mem/intune/fundamentals/high-level-architecture)
-
+- [Microsoft Intune overview](./intune/fundamentals/what-is-intune.md)
+- [Device management overview](./intune/fundamentals/what-is-device-management.md)
+- [Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [High-level architecture for Microsoft Intune](./intune/fundamentals/high-level-architecture.md)

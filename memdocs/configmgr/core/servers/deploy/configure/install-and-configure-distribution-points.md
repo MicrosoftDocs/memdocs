@@ -2,14 +2,14 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 03/05/2021
+ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: aebafaf9-b3d5-4a0f-9ee5-685758c037a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install and configure distribution points in Configuration Manager
@@ -40,7 +40,7 @@ Configure most of the distribution point settings with either method. A few sett
 
 ## Install a distribution point
 
-Before you can make content available to clients, choose a site system server as a distribution point. Assign each distribution point to at least one [boundary group](boundary-groups.md#distribution-points). Add the distribution point role to a new server, or add it to an existing server.
+Before you can make content available to clients, choose a site system server as a distribution point. Assign each distribution point to at least one [boundary group](boundary-groups-distribution-points.md). Add the distribution point role to a new server, or add it to an existing server.
 
 ### Prerequisites
 
@@ -181,10 +181,10 @@ This process automatically populates the **Members** tab of the Create New Distr
 
 Many customers have large Configuration Manager infrastructures, and are reducing primary or secondary sites to simplify their environment. They still need to keep distribution points at branch office locations to serve content to managed clients. These distribution points often contain multiple terabytes or more of content. This content is costly for time and network bandwidth to distribute to these remote servers.
 
-This feature lets you reassign a distribution point to another primary site without redistributing the content. The target and destination sites can be either a primary or secondary site.<!-- SCCMDocs #1677, MEMDocs #1356--> This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first do this action on a single distribution point. Then continue with other servers one at a time.
+This feature lets you reassign a distribution point to another primary site without redistributing the content. The distribution point's current site can be either a primary or secondary site.<!-- SCCMDocs #1677, MEMDocs #1356--> This action updates the site system assignment while persisting all of the content on the server. If you need to reassign multiple distribution points, first do this action on a single distribution point. Then continue with other servers one at a time.
 
 > [!IMPORTANT]
-> The target server can only host the distribution point role. If the site system server hosts another Configuration Manager server role, such as the state migration point, you cannot reassign the distribution point. You cannot reassign a cloud distribution point.
+> The target server can only host the distribution point role. If the site system server hosts another Configuration Manager server role, such as the state migration point, you can't reassign the distribution point. You can't reassign a cloud management gateway.
 
 Before reassigning a distribution point, add the computer account of the destination site server to the local Administrator group on the target distribution point server.
 
@@ -269,9 +269,9 @@ For more information on automating this process with the Configuration Manager S
 
 ## <a name="bkmk_configs"></a> Configure a distribution point
 
-Individual distribution points support different kinds of configurations. However, not all distribution point types support all configurations. For example, cloud distribution points don't support PXE- or multicast-enabled deployments. For more information about specific limitations, see the following articles:
+Individual distribution points support different kinds of configurations. However, not all distribution point types support all configurations. For example, cloud management gateways don't support PXE- or multicast-enabled deployments. For more information about specific limitations, see the following articles:
 
-- [Use a cloud distribution point](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md)
+- [Supported configurations for cloud management gateway](../../../clients/manage/cmg/supported-configurations.md)
 
 - [Use a pull-distribution point](../../../plan-design/hierarchy/use-a-pull-distribution-point.md)
 
@@ -348,7 +348,7 @@ The following settings are on the **Communication** page of the Create Site Syst
 
   - When you **Enable PXE support for clients** on the **PXE Settings** page, the distribution point sends it to computers that PXE boot. These computers then use it to connect to a management point during the OS deployment process.
 
-    When you configure all your management points in the site for HTTP, select the option to **Create self-signed certificate**. When you configure the management points for HTTPS, use the option to **Import certificate** from PKI.
+    When you configure all your management points in the site for HTTP, select the option to **Create self-signed certificate**. When you configure the management points for HTTPS, use the option to **Import certificate** from PKI. In other words, don't use self-signed certificates on distribution points when management points use certificates. Issues may occur otherwise. For example, distribution points won't send state messages.<!-- 13860499 -->
 
     To import the certificate, browse to a valid Public Key Cryptography Standard (PKCS #12) file. This PFX or CER file has the PKI certificate with the following requirements for Configuration Manager:
 

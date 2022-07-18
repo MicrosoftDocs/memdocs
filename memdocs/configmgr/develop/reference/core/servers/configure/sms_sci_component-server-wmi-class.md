@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a Configuration Manager server component installed on one or more servers at a site.
 title: "SMS_SCI_Component Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: f73ab9ee-0b2b-4e98-bebb-dbd982ac5424
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

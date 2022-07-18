@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the FileSystemFile Class to represent local file information.
 title: "FileSystemFile Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: be3a4938-044d-464a-a77c-261a4531642b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

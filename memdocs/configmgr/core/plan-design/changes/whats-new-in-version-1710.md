@@ -1,18 +1,16 @@
 ---
-title: "New version 1710 | Microsoft Docs"
-titleSuffix: "Configuration Manager"
-description: "Get details about changes and new capabilities introduced in version 1710 of Configuration Manager."
+title: New version 1710 | Microsoft Docs
+titleSuffix: Configuration Manager
+description: Get details about changes and new capabilities introduced in version 1710 of Configuration Manager.
 ms.date: 01/08/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: bc6c3e5f-b9e2-400e-9d9d-446ff93c520c
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # What&#39;s new in version 1710 of Configuration Manager
 
@@ -101,7 +99,7 @@ To add an icon for your app in Software Center, see [Create applications](../../
 ## Operating system deployment
  > [!TIP]   
  > <!-- 1354281 -->
- > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](../configs/support-for-windows-10.md#windows-10-as-a-client).
+ > Beginning with the Windows 10, version 1709 (also known as the Fall Creators Update) release, Windows media includes multiple editions. When configuring a task sequence to use an operating system upgrade package or operating system image, be sure to select an [edition that is supported for use by Configuration Manager](../configs/support-for-windows-10.md).
 
 ### Add child task sequences to a task sequence
 <!-- 1261338 -->

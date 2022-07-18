@@ -6,13 +6,11 @@ ms.date: 10/09/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 5bd637b1-d7a1-411b-877a-c7aae9741173
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 # What's new in version 1802 of Configuration Manager
 
@@ -70,7 +68,7 @@ Starting in this release, use CNG certificates for the following HTTPS-enabled s
 
 ### Boundary group fallback for management points
 <!-- 1324594 -->
-Configure fallback relationships for management points between [boundary groups](../../servers/deploy/configure/boundary-groups.md). This behavior provides greater control for the management points that clients use. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups.md#management-points).
+Configure fallback relationships for management points between [boundary groups](../../servers/deploy/configure/boundary-groups.md). This behavior provides greater control for the management points that clients use. For more information, see [Configure boundary groups](../../servers/deploy/configure/boundary-groups-management-points.md).
 
 
 ### Cloud distribution point site affinity
@@ -130,7 +128,7 @@ When creating an instance of the [cloud management gateway](../../clients/manage
 
 ### Configure hardware inventory to collect strings larger than 255 characters
 <!-- 1357389 -->
-You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](../../clients/manage/inventory/extend-hardware-inventory.md#bkmk_GreaterThan255) article. 
+You can configure the length of strings to be greater than 255 characters for hardware inventory properties. This change applies only to newly added classes and for hardware inventory properties that aren't keys. For details, see the [Extend hardware inventory](../../clients/manage/inventory/extend-hardware-inventory.md#collect-strings-larger-than-255-characters) article. 
 
  ### Deprecation announcement for Linux and Unix client support
  <!--510139-->
@@ -147,7 +145,7 @@ For details, see the [Surface dashboard](../../clients/manage/surface-device-das
 
 ### Change in the Configuration Manager client install
 <!--1356195-->
-Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md#bkmk_ExternalDependencies)
+Starting in this release, Silverlight is no longer installed on client devices automatically. For more information, see [Prerequisites for deploying clients to Windows computers](../../clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md)
 
 ## Co-management
 
@@ -183,7 +181,7 @@ Configure an application deployment to not automatically upgrade any superseded 
 Starting in this release, when a user requests an application that requires approval, the specific device name is now a part of the request. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. For more information, see [Specify deployment settings](../../../apps/deploy-use/deploy-applications.md#bkmk_deploy-settings).
 
  > [!Note]  
- > This is an optional feature. For more information, see [Enable optional features from updates](../../servers/manage/install-in-console-updates.md#bkmk_options).  
+ > This is an optional feature. For more information, see [Enable optional features from updates](../../servers/manage/optional-features.md).  
 
 
 ### Run scripts improvements 

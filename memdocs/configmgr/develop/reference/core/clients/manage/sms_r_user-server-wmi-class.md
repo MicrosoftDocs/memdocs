@@ -1,6 +1,7 @@
 ---
 title: "SMS_R_User Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_R_User WMI class is an SMS Provider server class that is generated dynamically at SMS Provider run time and contains data discovery for users within a Configuration Manager site hierarchy." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: e5fee610-39c3-4502-a782-822767f15cb4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

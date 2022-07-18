@@ -2,6 +2,7 @@
 title: "CCM_Policy_AuthorityData Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
+description: "In Configuration Manager, the CCM_Policy_AuthorityData class is a client WMI class that stores information about policy from a particular authority."
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
@@ -9,6 +10,8 @@ ms.assetid: 1cbfd6ec-21ef-45c0-ad62-ea3d78768616
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

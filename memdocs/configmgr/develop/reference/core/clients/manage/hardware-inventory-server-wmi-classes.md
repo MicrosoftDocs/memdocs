@@ -1,6 +1,7 @@
 ---
 title: Hardware inventory server WMI classes
 titleSuffix: Configuration Manager
+description: "The Configuration Manager hardware inventory server WMI classes are generated dynamically and the name for a class is transformed from Win32_hardware to SMS_G_System_hardware."
 ms.date: 09/20/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 2cc63027-0dbd-4842-933d-171ee66d7c0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

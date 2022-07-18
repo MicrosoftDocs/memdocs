@@ -1,6 +1,7 @@
 ---
 title: "SMS_LocalMP Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_LocalMP class is a client Windows Management Instrumentation class, in Configuration Manager, that represents the local management point.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 88444515-6694-45a4-b5af-87dfaad22b80
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

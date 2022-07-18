@@ -2,14 +2,14 @@
 title: Supported site system servers
 titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
-ms.date: 04/05/2021
+ms.date: 10/19/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 17905b4c-3895-4ad4-a69c-5e0d0fc5a8c3
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Supported operating systems for Configuration Manager site system servers
@@ -18,176 +18,215 @@ manager: dougeby
 
 This article details the Windows versions that you can use to host a Configuration Manager site or site system role.
 
-Use the information in this article with the information in the following articles:
+## Windows Server 2022
 
-- [Recommended hardware for Configuration Manager](recommended-hardware.md)
-- [Site and site system prerequisites for Configuration Manager](site-and-site-system-prerequisites.md)
-- [Size and scale numbers for Configuration Manager](size-and-scale-numbers.md)
+_Applies to Datacenter: Azure Edition, Standard and Datacenter editions_
 
-## <a name="bkmk_2019"></a> Windows Server 2019
+Starting in version 2107<!-- 10200029 -->, this OS version is supported for the following servers.
 
-*Applies to Windows Server 2019: Standard and Datacenter* 
+Site servers:
 
-This OS version is supported for the following roles:
+- Central administration site
+- Primary site
+- Secondary site
 
-#### Site servers
+Site system servers:
 
-- Central administration site  
-- Primary site  
-- Secondary site  
-
-#### Site system servers
-
-- Asset Intelligence synchronization point  
-- Certificate registration point  
-- Cloud management gateway connection point  
-- Data warehouse service point  
-- Distribution point <sup>[Note 1](#bkmk_note1)</sup>  
-- Endpoint Protection point  
-- Enrollment point  
-- Enrollment proxy point  
-- Fallback status point  
+- Asset Intelligence synchronization point
+- Certificate registration point
+- Cloud management gateway connection point
+- Data warehouse service point
+- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
+- Endpoint Protection point
+- Enrollment point
+- Enrollment proxy point
+- Fallback status point
 - Management point
-- Reporting services point  
-- Service connection point  
-- Site database server <sup>[Note 2](#bkmk_note2)</sup>  
-- SMS_Provider  
-- Software update point  
+- Reporting services point
+- Service connection point
+- Site database server <sup>[Note 2](#bkmk_note2)</sup>
+- SMS Provider
+- Software update point
 - State migration point
 
-## <a name="bkmk_2016"></a> Windows Server 2016
+> [!NOTE]
+> If you're installing a new site, you can use the latest baseline version 2103 on a Windows Server 2022 site server, and then immediately update the site to version 2107.<!--MEMDocs#1971-->
 
-*Applies to Windows Server 2016: Standard and Datacenter*
+## Windows Server 2019
 
-This OS version is supported for the following roles:
+_Applies to Standard and Datacenter editions_
 
-#### Site servers
+Site servers:
 
-- Central administration site  
-- Primary site  
-- Secondary site  
+- Central administration site
+- Primary site
+- Secondary site
 
-#### Site system servers
+Site system servers:
 
-- Asset Intelligence synchronization point  
-- Certificate registration point  
-- Cloud management gateway connection point  
-- Data warehouse service point  
-- Distribution point <sup>[Note 1](#bkmk_note1)</sup>  
-- Endpoint Protection point  
-- Enrollment point  
-- Enrollment proxy point  
-- Fallback status point  
+- Asset Intelligence synchronization point
+- Certificate registration point
+- Cloud management gateway connection point
+- Data warehouse service point
+- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
+- Endpoint Protection point
+- Enrollment point
+- Enrollment proxy point
+- Fallback status point
 - Management point
-- Reporting services point  
-- Service connection point  
-- Site database server <sup>[Note 2](#bkmk_note2)</sup>  
-- SMS_Provider  
-- Software update point  
+- Reporting services point
+- Service connection point
+- Site database server <sup>[Note 2](#bkmk_note2)</sup>
+- SMS Provider
+- Software update point
 - State migration point
 
-## <a name="bkmk_stor2016"></a> Windows Storage Server 2016
+## Windows Server 2016
 
-#### Site system server
+_Applies to Standard and Datacenter editions_
 
-- Distribution point <sup>[Note 1](#bkmk_note1)</sup>  
+Site servers:
 
-## <a name="bkmk_2012r2"></a> Windows Server 2012 R2
+- Central administration site
+- Primary site
+- Secondary site
 
-*Applies to Windows Server 2012 R2: Standard and Datacenter*
+Site system servers:
 
-#### Site servers
-
-- Central administration site  
-- Primary site  
-- Secondary site  
-
-#### Site system servers
-
-- Asset Intelligence synchronization point  
-- Certificate registration point  
-- Cloud management gateway connection point  
-- Data warehouse service point  
-- Distribution point <sup>[Note 1](#bkmk_note1)</sup>  
-- Endpoint Protection point  
-- Enrollment point  
-- Enrollment proxy point  
-- Fallback status point  
+- Asset Intelligence synchronization point
+- Certificate registration point
+- Cloud management gateway connection point
+- Data warehouse service point
+- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
+- Endpoint Protection point
+- Enrollment point
+- Enrollment proxy point
+- Fallback status point
 - Management point
-- Reporting services point  
-- Service connection point  
-- Site database server <sup>[Note 2](#bkmk_note2)</sup>  
-- SMS_Provider  
-- Software update point  
-- State migration point  
+- Reporting services point
+- Service connection point
+- Site database server <sup>[Note 2](#bkmk_note2)</sup>
+- SMS Provider
+- Software update point
+- State migration point
 
-## <a name="bkmk_2012"></a> Windows Server 2012  
+## Windows Storage Server 2016
 
-*Applies to Windows Server 2012: Standard and Datacenter*
+Site system server:
 
-#### Site servers
+- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
 
-- Central administration site  
-- Primary site  
-- Secondary site  
+## Windows Server 2012 R2
 
-#### Site system servers
+_Applies to Standard and Datacenter editions_
 
-- Asset Intelligence synchronization point  
-- Certificate registration point  
-- Cloud management gateway connection point  
-- Data warehouse service point  
-- Distribution point <sup>[Note 1](#bkmk_note1)</sup>  
-- Endpoint Protection point  
-- Enrollment point  
-- Enrollment proxy point  
-- Fallback status point  
+Site servers:
+
+- Central administration site
+- Primary site
+- Secondary site
+
+Site system servers:
+
+- Asset Intelligence synchronization point
+- Certificate registration point
+- Cloud management gateway connection point
+- Data warehouse service point
+- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
+- Endpoint Protection point
+- Enrollment point
+- Enrollment proxy point
+- Fallback status point
 - Management point
-- Reporting services point  
-- Service connection point  
-- Site database server <sup>[Note 2](#bkmk_note2)</sup>  
-- SMS_Provider  
-- Software update point  
-- State migration point  
+- Reporting services point
+- Service connection point
+- Site database server <sup>[Note 2](#bkmk_note2)</sup>
+- SMS Provider
+- Software update point
+- State migration point
 
-## <a name="bkmk_client"></a> Client OS versions
+## Windows Server 2012
 
-The following client OS versions are supported for use as a **distribution point** <sup>[Note 1](#bkmk_note1)</sup>:  
+_Applies to Standard and Datacenter editions_
 
-- Windows 10 (x86, x64): Pro and Enterprise
+Site servers:
 
-    For more information on supported build versions, see [Support for Windows 10](support-for-windows-10.md).
+- Central administration site
+- Primary site
+- Secondary site
+
+Site system servers:
+
+- Asset Intelligence synchronization point
+- Certificate registration point
+- Cloud management gateway connection point
+- Data warehouse service point
+- Distribution point <sup>[Note 1](#bkmk_note1)</sup>
+- Endpoint Protection point
+- Enrollment point
+- Enrollment proxy point
+- Fallback status point
+- Management point
+- Reporting services point
+- Service connection point
+- Site database server <sup>[Note 2](#bkmk_note2)</sup>
+- SMS Provider
+- Software update point
+- State migration point
+
+## Client OS versions
+
+The following client OS versions are supported for use as a **distribution point** <sup>[Note 1](#bkmk_note1)</sup>:
+
+- Windows 11 (_starting in Configuration Manager version 2107_)
+
+    For more information on supported build versions and editions, see [Support for Windows 11](support-for-windows-11.md).
+
+- Windows 10 (x86, x64)
+
+    For more information on supported build versions and editions, see [Support for Windows 10](support-for-windows-10.md).
 
 - Windows 8.1 (x86, x64): Professional and Enterprise
 
-This support has the following limitation:  
+This support has the following limitation:
 
-- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. You can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
+- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. You can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
 
-## <a name="bkmk_core"></a> Server core installations
+## Server core installations
 
-The server core installation of the following server OS versions are supported for use as a **distribution point**:
+The server core installation of the following server OS versions is supported for use as a **distribution point**:
 
+- Windows Server 2022
 - Windows Server 2019
 - Windows Server, version 1809
 - Windows Server, version 1803
 - Windows Server, version 1709
-- Windows Server 2016  
-- Windows Server 2012 R2  
-- Windows Server 2012  
+- Windows Server 2016
+- Windows Server 2012 R2
+- Windows Server 2012
 
-This support has the following limitation:  
+This support has the following limitation:
 
-- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. You can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).  
+- Distribution points on this OS don't support PXE or multicast with the default Windows Deployment Services. You can PXE-enable a distribution point on this OS with the option to **Enable a PXE responder without Windows Deployment Service**. For more information, see [Install and configure distribution points](../../servers/deploy/configure/install-and-configure-distribution-points.md#bkmk_config-pxe).
 
 ## General notes
 
 ### <a name="bkmk_note1"></a> Note 1: Distribution points
 
-Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information, see [Manage content and content infrastructure](../../servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+Distribution points support several different configurations that each have different requirements. In some cases, these configurations support installation not only on servers, but on client operating systems. For more information, see [Manage content and content infrastructure](../../servers/deploy/configure/manage-content-and-content-infrastructure.md).
 
 ### <a name="bkmk_note2"></a> Note 2: Site database servers
 
-Site database servers aren't supported on a read-only domain controller (RODC). For more information, see the Microsoft Support article: [You may encounter problems when installing SQL Server on a domain controller](https://support.microsoft.com/help/2032911). 
+Site database servers aren't supported on a read-only domain controller (RODC). For more information, see [SQL Server security considerations: Installing SQL Server on a domain controller](/sql/sql-server/install/security-considerations-for-a-sql-server-installation#Install_DC).
 
-Additionally, secondary site servers aren't supported on any domain controller.  
+Additionally, secondary site servers aren't supported on any domain controller.
+
+## Next steps
+
+[Supported SQL Server versions](support-for-sql-server-versions.md)
+
+See also:
+
+- [Recommended hardware](recommended-hardware.md)
+- [Site and site system prerequisites](site-and-site-system-prerequisites.md)
+- [Size and scale numbers](size-and-scale-numbers.md)

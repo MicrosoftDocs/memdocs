@@ -2,16 +2,14 @@
 title: List of reports
 titleSuffix: Configuration Manager
 description: Review a list of reports that are supplied with Configuration Manager. The reports appear in various categories.
-ms.date: 11/27/2018
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: b7332ed3-8003-454b-bb12-1fdf8721425c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # List of reports in Configuration Manager
@@ -213,7 +211,10 @@ The following seven reports are listed under the **Data warehouse** category.
 
 ## Device management  
 
-The following 37 reports are listed under the **Device Management** category. 
+The following 37 reports are listed under the **Device Management** category.
+
+> [!NOTE]
+> Configuration Manager version 2006 dropped support for Windows CE 7.0 as a client. Deprecation was announced with [version 1906](../../plan-design/changes/whats-new-in-version-1906.md#bkmk_deprecated).
 
 |Report name|Description|  
 |-----------------|-----------------|  
@@ -333,7 +334,7 @@ The following five reports are listed under the **Hardware - General** category.
 |**Computers in a specific workgroup or domain**|Displays a list of computers in a specified Workgroup or domain.|  
 |**Inventory classes assigned to a specific collection**|Displays the inventory classes that are assigned to a specified collection.|  
 |**Inventory classes enabled on a specific computer**|Displays the inventory classes that are enabled on a specified computer.|  
-|**Windows AutoPilot Device Information**|Displays client device information that is needed for Windows AutoPilot registration.|
+|**Windows Autopilot Device Information**|Displays client device information that is needed for Windows Autopilot registration.|
 
 
 
@@ -478,7 +479,7 @@ The following 10 reports are listed under the **Operating System** category.
 |**Services - Computers running a specific service**|Displays a list of computers running a specified service.|  
 |**Services - Computers running Remote Access Server**|Displays a list of computers running Remote Access Server.|  
 |**Services - Services information for a specific computer**|Displays summary information about the services on a specified computer.|  
-|**Windows 10 Servicing details for a specific collection**|Displays general information about Windows 10 servicing for a specific collection.|
+|**Windows Servicing details for a specific collection**|Displays general information about Windows servicing for a specific collection.|
 |**Windows Server computers**|Displays a list of computers that run Windows Server operating systems.|  
 
 

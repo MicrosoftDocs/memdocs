@@ -12,7 +12,9 @@ metadata:
   ms.topic: landing-page
   author: aczechowski
   ms.author: aaroncz
-  ms.date: 01/22/2021
+  manager: dougeby
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
 
 landingContent:
   - title: Fundamentals
@@ -30,6 +32,8 @@ landingContent:
         links:
           - text: Plan for security
             url: ../core/plan-design/security/plan-for-security.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
+          - text: Certificates overview
+            url: ../core/plan-design/security/certificates-overview.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
           - text: Configure security
             url: ../core/plan-design/security/configure-security.md?toc=/mem/configmgr/security/toc.json&bc=/mem/configmgr/security/breadcrumb/toc.json
 

@@ -2,21 +2,21 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 04/05/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
-ms.assetid: 030947fd-f5e0-4185-8513-2397fb2ec96f
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Release notes for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a Microsoft Support knowledge base article.
+With Configuration Manager, product release notes are limited to urgent issues. These issues aren't yet fixed in the product, or detailed in a [troubleshooting article](/troubleshoot/mem/configmgr/).
 
 Feature-specific documentation includes information about known issues that affect core scenarios.
 
@@ -24,18 +24,37 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2203](../../../plan-design/changes/whats-new-in-version-2203.md)
+- [What's new in version 2111](../../../plan-design/changes/whats-new-in-version-2111.md)
+- [What's new in version 2107](../../../plan-design/changes/whats-new-in-version-2107.md)
 - [What's new in version 2103](../../../plan-design/changes/whats-new-in-version-2103.md)
 - [What's new in version 2010](../../../plan-design/changes/whats-new-in-version-2010.md)
-- [What's new in version 2006](../../../plan-design/changes/whats-new-in-version-2006.md)
-- [What's new in version 2002](../../../plan-design/changes/whats-new-in-version-2002.md)
-
-For information about the new features in Desktop Analytics, see [What's new in Desktop Analytics](../../../../desktop-analytics/whats-new.md).
 
 > [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us`
+> You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../../use-docs.md#notifications).
+<!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
+> `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us` -->
 
 ## Client management
+
+### Some policies may not apply to upgraded clients
+
+<!-- 10608021 -->
+_Applies to version 2107 early update ring_
+
+When you upgrade the client from versions 2010 or 2103 to version 2107, the following policies may not apply on some devices:
+
+- Co-management policies on Windows 10 Enterprise multi-session devices such as Azure Virtual Desktop, and Windows 11 Insider Preview devices
+- Desktop Analytics on any Windows version
+- Windows Update for Business policies on Windows 10 x86 and ARM
+- Microsoft Edge browser profiles on Windows 10 x64 and x86
+
+> [!NOTE]
+> The timing of how clients apply and evaluate these policies is non-deterministic. Even if you have these policies and these supported platforms, they may not immediately experience this issue.
+
+When you look at the **Configurations** tab of the Configuration Manager control panel on the client, it will be blank.
+
+This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, install the [Update for Microsoft Endpoint Configuration Manager version 2107, early update ring](../../../../hotfix/2107/10503003.md).
 
 ### Client notification actions apply to entire collection
 
@@ -53,88 +72,123 @@ For example:
 
 1. Select a device in the collection. In the ribbon on the **Home** tab, select **Client Notification**, and choose an action such as **Restart**.
 
-    Due to this issue, this action applies to all members of the collection, not just the selected client.
+    Because of this issue, this action applies to all members of the collection, not just the selected client.
 
     > [!NOTE]
     > This issue doesn't apply to the **Start CMPivot** or **Run Script** options.
 
 To work around this issue, install the following hotfix: [Client notifications sent to all collection members in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4594177).
 
-Alternatively, use the **Devices** node. Find the device in the list and start the action from there.
+You can also use the **Devices** node. Find the device in the list and start the action from there.
 
 > [!NOTE]
 > This issue also applies to the [Invoke-CMClientAction](/powershell/module/configurationmanager/invoke-cmclientaction) PowerShell cmdlet and other SDK methods, if you don't include a collection object or ID.
 
 ## Set up and upgrade
 
-### Client automatic upgrade happens immediately for all clients
+### Version 2107 update fails to download
 
-<!-- 6040412 -->
+<!--9791281,10237384-->
+_Applies to: version 2107 and later_
 
-*Applies to version 1910*
+The update for Configuration Manager version 2107 is available to download, but it fails to download. The **dmpdownloader.log** on the service connection point has entries similar to the following:
 
-If your site uses [automatic client upgrade](../../../clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade), when you update the site to version 1910, all clients immediately upgrade after the site updates successfully. The only randomization is when clients receive the policy, which by default is every hour. For a large site with many clients, this behavior can consume a significant amount of network traffic and stress distribution points.
+```log
+Download large file with BITs
+WARNING: EasySetupDownloadSinglePackage Failed with exception: The remote name could not be resolved: 'configmgrbits.azureedge.net'
+WARNING: Retry in the next polling cycle
+```
 
-For more information on affected versions, see [Client update for Configuration Manager current branch, version 1910](https://support.microsoft.com/help/4538166).
+This failure happens because the service connection point can't communicate with the required internet endpoint, `configmgrbits.azureedge.net`. Confirm that the site system that hosts the service connection point role can communicate with this internet endpoint. It was already required, but its use is expanded in version 2107. The site system can't download version 2107 or later unless your network allows traffic to this URL.
 
-### Site server in passive mode doesn't update configuration.mof
+For more information, see [internet access requirements](../../../plan-design/network/internet-endpoints.md#service-connection-point) for the service connection point.
 
-<!-- 5787848 -->
+### Management point installation or update fails because of later Visual C++ version
 
-*Applies to version 1910*
+<!-- 10518360 -->
 
-If your site includes a [site server in passive mode](../configure/site-server-high-availability.md), you may lose inventory customizations when you update the site. The site doesn't currently synchronize the configuration.mof when you fail over the site servers.
+_Applies to: version 2107 early update ring_
 
-To work around this issue, manually back up and restore the site's configuration.mof.
+If the site system server has a version of the Visual C++ redistributable later than 14.28.29914, Configuration Manager setup will fail to install or update the management point role.
 
-## Role based administration
-
-### Security scopes for certain folders don't replicate from CAS to primary sites
-<!--6306759-->
-*Applies to version 1910*
-
-After upgrade to version 1910, [security scopes for folders](../configure/configure-role-based-administration.md#how-to-configure-security-scopes-for-an-object) in user collections and device collections don't get replicated from the CAS to primary sites.
-
-## Application management
-
-### Unable to get certificate for PowerShell error when deploying Microsoft Edge, version 77 and later
-<!--5769384-->
-*Applies to: version 1910*
-
-If you are running the Configuration Manager console on an OS where the language is Swedish, Hungarian, or Japanese, you'll receive the following error when deploying Microsoft Edge, version 77 and later:
-
-`Unable to get certificate for Powershell`
-
-This error occurs because a `scripts` folder doesn't exist under the `AdminConsole\bin` directory for Swedish, Hungarian, or Japanese languages. The scripts folder is localized in these OS languages.
-
-To work around this issue, create a folder called `scripts` in the `AdminConsole\bin` directory. Copy the files from your localized folder to the newly created `scripts` folder. Deploy Microsoft Edge, version 77 and later once the files have been copied.
+To work around this issue, temporarily uninstall the later version of Visual C++ redistributable. When you install Configuration Manager version 2107, it will install version 14.28.29914.
 
 ## OS deployment
 
-### Task sequences can't run over CMG
+### Image servicing with Windows Server 2022
 
-*Applies to: version 2002*
+<!-- 11843519, MEMDocs#2108 -->
 
-There are two instances in which task sequences can't run on a device that communicates via a cloud management gateway (CMG):
+_Applies to: version 2107_
 
-- You configure the site for Enhanced HTTP and the management point is HTTP.<!-- 6358851 -->
+If you try to [apply software updates to an image](../../../../osd/get-started/manage-operating-system-images.md#apply-software-updates-to-an-image) for Windows Server 2022, no updates display as available to install.
 
-    To work around this issue, update to version 2006. Alternatively, configure the management point for HTTPS.
+This issue is caused by a change to the Windows update category for Server 2022.
 
-- You installed and registered the client with a bulk registration token for authentication.<!-- 6377921 -->
+To resolve this issue, install the [update rollup](../../../../hotfix/2107/11121541.md) for Configuration Manager version 2107.
 
-    To work around this issue, update to version 2006. Alternatively, use one of the following authentication methods:
+### Task sequence and application policy issue
 
-  - Pre-register the device on the internal network
-  - Configure the device with a client authentication certificate
-  - Join the device to Azure AD
+<!-- 10506770 -->
+
+_Applies to: version 2107 early update ring installed between August 2, 2021 and August 6, 2021_
+
+If you have all of the following conditions:
+
+- Task sequence _A_
+  - Includes the **Install Application** step with app _X_
+  - Deployed and made available to either type that includes **Configuration Manager clients**
+
+- Task sequence _B_
+  - Includes the **Install Application** step with the same app _X_
+  - Deployed and made available to either **Only media and PXE** option
+
+After you update to version 2107, if you make any change to app _X_, then task sequence _A_ will fail to run on clients that receive the deployment policy after the site update. The Configuration Manager client can't get all of the policies for the task sequence and referenced applications. For clients that already had the deployment policy for task sequence _A_ before the site update, the task sequence will run, but clients won't have the revised application policy.
+
+You can run the following SQL script on a primary site database to determine if your site has this issue:
+
+```sql
+select COUNT(*) from Policy where PolicyID like '%/VI%' 
+  AND ((ISNULL(PolicyFlags, 0) & 4096 = 4096) 
+  OR (ISNULL(PolicyFlags, 0) & 2048 = 2048))
+```
+
+If this query returns `0`, there's currently no issue. If the query returns a non-zero value, the issue only exists given the above conditions.
+
+> [!NOTE]
+> If there are many media and PXE task sequences that reference an application that you revise, the site will take longer to update these task sequence policies. During this time, some media and PXE task sequence deployments may fail. There's no workaround for this timing issue.
+
+#### Workaround for task sequence and application policy issue in version 2107 early update ring
+
+This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, install the [Update for Microsoft Endpoint Configuration Manager version 2107, early update ring](../../../../hotfix/2107/10503003.md).
+
+For OS deployment task sequences to existing clients not with PXE, you may see entries similar to the following strings in the ExecMgr.log on the client:
+
+```log
+cannot load compressed XML policy
+Failed to load policy from XML ''
+Could not find the policy in WMI for Application ScopeId_88A86770-F44E-47C8-BF8D-3C1B8A5DF3AA/Application_b711f24c-f766-41e0-9c41-02313b2c8be3
+Unable to find application policy for [advertisement: PR220005 appid: ScopeId_88A86770-F44E-47C8-BF8D-3C1B8A5DF3AA/Application_b711f24c-f766-41e0-9c41-02313b2c8be3]
+Fail to initialize TS member info, error 0x87d02004
+```
+
+For this issue, after you install the update for version 2107 early update ring, run the following SQL query on the primary site to which the client is assigned:
+
+```sql
+select distinct ci.CI_ID from vSMS_ConfigurationItems ci
+join CI_ConfigurationItemRelations_Flat cir on cir.ToCI_ID = ci.CI_ID and cir.RelationType = 11
+join vSMS_ConfigurationItems intent_ci on intent_ci.CI_ID = cir.FromCI_ID
+join policy p on p.PolicyID = intent_ci.ModelName+'/VI' and ((p.PolicyFlags & 0x800) > 0 or (p.PolicyFlags & 0x1000) > 0)
+where ci.CIType_ID = 10 and ci.IsLatest = 1 and ci.IsTombstoned = 0
+```
+
+For each **CI_ID** that this query returns, create a 0-KB file named `<ci_id>.cit`. For example, `16777225.cit`. Move the file to the **policypv.box** directory on the primary site server. For example, `\\cmpri01.contoso.com\SMS_PR1\inboxes\policypv.box\`.
 
 ## Software updates
 
 ### Security roles are missing for phased deployments
 
 <!--3479337, SCCMDocs-pr issue 3095-->
-*Applies to: versions 1810 and later*
 
 The **OS Deployment Manager** built-in security role has permissions to [phased deployments](../../../../osd/deploy-use/create-phased-deployment-for-task-sequence.md). The following roles are missing these permissions:  
 
@@ -142,7 +196,7 @@ The **OS Deployment Manager** built-in security role has permissions to [phased 
 - **Application Deployment Manager**  
 - **Software Update Manager**  
 
-The **App Author** role may appear to have some permissions to phased deployments, but shouldn't be able to create deployments.
+The **App Author** role may appear to have some permissions to phased deployments, but can't create deployments.
 
 A user with one these roles can start the Create Phased Deployment wizard, and can see phased deployments for an application or software update. They can't complete the wizard, or make any changes to an existing deployment.
 
@@ -155,38 +209,109 @@ To work around this issue, create a custom security role. Copy an existing secur
 
 For more information, see [Create custom security roles](../configure/configure-role-based-administration.md#create-custom-security-roles)
 
-## Desktop Analytics
-
-### <a name="dawin7-diagtrack"></a> An extended security update for Windows 7 causes them to show as **Unable to enroll**
-
-<!-- 7283186 -->
-_Applies to: versions 2002 and earlier_
-
-The April 2020 extended security update (ESU) for Windows 7 changed the minimum required version of the diagtrack.dll from 10586 to 10240. This change causes Windows 7 devices to show as **Unable to enroll** in the Desktop Analytics **Connection Health** dashboard. When you drill down to the device view for this status, the **DiagTrack service configuration** property displays the following state: `Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements.`
-
-No workaround is required for this issue. Don't uninstall the April ESU. If otherwise properly configured, the Windows 7 devices still report diagnostic data to the Desktop Analytics service, and still show in the portal.
-
 ## Configuration Manager console
+
+### Unable to open console because extension installation loops
+<!--12868458-->
+_Applies to: version 2111_
+
+In certain circumstances, you'll be unable to open the console due to an extension installation loop. This issue occurs when two or more versions of a single extension were marked as [required for installation](../../manage/admin-console-extensions.md#require-installation-of-a-console-extension). This issue occurs for extensions imported through the wizard, from a PowerShell script, or through Community hub. If you use the **Make optional** setting before importing a new version of the extension, this issue doesn't occur.
+
+When you encounter this issue, it initially appears as a normal console extension installation. After the extension finishes installing, you select **Close** to restart the Configuration Manager console. When the console restarts, you're prompted to install the console extension again. The extension installation will continue to loop and the Configuration Manager console doesn't fully open.
+
+To both prevent and workaround this issue, run the below SQL script on your CAS database and all of your primary site databases:
+
+```sql
+ALTER VIEW vSMS_ConsoleExtensionMetadata
+AS
+    WITH m AS(
+       SELECT *,
+           RN = ROW_NUMBER()OVER(PARTITION BY ID ORDER BY Version DESC)
+       FROM ConsoleExtensionMetadata
+    ) 
+    SELECT 
+        m.ID, 
+        m.Name, 
+        m.Description, 
+        m.Author, 
+        m.Version, 
+        m.IsEnabled, 
+        m.IsApproved, 
+        m.CreatedTime, 
+        m.CreatedBy, 
+        m.UpdateTime, 
+        m.IsTombstoned, 
+        m.IsRequired, 
+        m.IsSigned, 
+        m.IsUnsignedAllowed, 
+        CASE m.IsRequired 
+            WHEN 0 THEN ''  
+            ELSE  
+            ( 
+                SELECT top(1) author FROM ConsoleExtensionRevisionHistory h 
+                WHERE m.ID=h.ExtensionId AND m.Version=h.Version AND h.Changes & 1=1 
+                ORDER BY h.RevisionTime DESC 
+            ) 
+        END AS RequiredBy, 
+        m.IsSetupDefined 
+    FROM m
+    WHERE RN = 1
+GO
+```
+
+### Supported platform conditions don't update for some objects
+
+<!-- 10247604,10425120 -->
+_Applies to version 2107_
+
+You can select supported platforms on many objects such as applications, task sequences, and configuration items. Starting in version 2107, these lists are updated to include categories for Windows 11. After you update the primary site to version 2107, there are different behaviors depending upon the type of object:
+
+- Within 24 hours of updating the site, the supported platforms for the following objects will automatically update:
+  - Packages and programs
+  - Task sequences
+  - Compliance settings, for example, endpoint protection
+
+  In that initial 24-hour period, existing policies with Windows 10 conditions also apply to Windows 11. After the site updates the objects, they only apply to Windows 10. You can select Windows 11 as a supported platform at any time.
+
+- You need to manually review and update the supported platforms for the following objects:
+  - Applications
+  - Configuration items
+  - Objects referenced in a task sequence
+
+  For these objects, existing policies with Windows 10 conditions also apply to Windows 11. You need to manually revise the supported platform list.
+
+### Configuration Manager console settings aren't saved
+<!--5452246-->
+_Applies to version 2107_
+
+When you install the 2107 version of the Configuration Manager console, settings such as column changes, window size, and searches aren't saved. When you first open the upgraded console, it will appear as if it was never previously installed on the device. Any console settings made after installing the 2107 version of the Configuration Manager console will persist when you reopen it.
 
 ### Console extensions
 <!--3555909-->
 *Applies to version 2103* 
 
-There is a new hierarchy setting that allows for only using the new style of [console extensions](../../manage/admin-console-extensions.md). If this setting is enabled, your old style extensions that aren't approved through the **Console Extensions** node will no longer be able to be used. The setting, **Only allow console extensions that are approved for the hierarchy**, is `enabled` by default if you installed from the [2103 baseline image](../../manage/updates.md#bkmk_Baselines). It will remain `disabled` by default, if you upgraded from a version prior to 2103.
+There's a new hierarchy setting that allows for only using the new style of [console extensions](../../manage/admin-console-extensions.md). If this setting is enabled, you can't use any old style extensions that aren't approved through the **Console Extensions** node. The setting, **Only allow console extensions that are approved for the hierarchy**, is `enabled` by default if you installed from the [2103 baseline build](../../manage/updates.md#bkmk_Baselines). If you update the site from version 2010 or earlier, it's `disabled` by default.
 
 If the setting was enabled in error, disabling the setting allows the old style extensions to be used again.
-## Cloud services
 
-### Azure service for US Government cloud shows as public cloud
+<!-- ## Cloud services -->
 
-<!-- 6036748 -->
+<!-- ## Role based administration -->
 
-*Applies to version 1910*
+<!-- ## Application management -->
 
-If you create a connection to an Azure service, and set the **Azure environment** to the government cloud, the properties of the connection show the environment as the Azure public cloud. This issue is only a display problem in the console, the service is in the government cloud. To confirm the configuration, run the following SQL query on the site database:
+## CMPivot
 
-```SQL
-Select Environment, Name, TenantID From AAD_Tenant_Ex
-```
+### Favorite queries lose line breaks or are truncated
 
-For the government cloud, the result of this query is `2` for the specific tenant.
+<!-- 10517223 -->
+
+_Applies to: version 2107 early update ring_
+
+After you update the site to version 2107, there are two issues with CMPivot queries that you saved as a favorite:
+
+- When you edit the query, you may see unexpected characters like `\r` or `\t`.
+
+- The query after the last comma (`,`) is removed.
+
+This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, install the [Update for Microsoft Endpoint Configuration Manager version 2107, early update ring](../../../../hotfix/2107/10503003.md).

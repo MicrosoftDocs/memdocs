@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Add custom settings to macOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Add custom settings to macOS devices in Microsoft Intune
 titleSuffix:
 description: Export macOS settings from Apple Configurator or Apple Profile Manager tools, and then import these settings into Microsoft Intune. These settings can create, use, and control custom settings and features on macOS devices. This custom profile can then be assigned or distributed to macOS devices in your organization to create a baseline or standard.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2021
+ms.date: 08/23/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 
 #ROBOTS:
 #audience:
-ms.reviewer: kakyker
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -65,7 +65,11 @@ Create a [macOS custom device configuration profile](custom-settings-configure.m
 
 ## Custom configuration profile settings
 
-- **Configuration profile name**: Enter a name for the policy. This name is shown on the device, and in the Intune status.
+- **Configuration profile name**: Enter a name for the policy. This name is shown on the device, and in the Intune status.  
+- **Deployment channel**: Select the channel you want to use to deploy your configuration profile. If you send the profile down the wrong channel, deployment could fail. After you select a channel and save the profile, the channel can't be changed. To select a different channel, create a new profile.    
+
+  User-targeted payloads will not apply to devices enrolled without user affinity. For more information on whether a payload can be used for a device configuration profile or a user configuration profile, see [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) on the Apple Developer website.    
+
 - **Configuration profile file**: Browse to the `.xml` or `.mobileconfig` file you created using the Apple Configurator or Apple Profile Manager. The max file size is 1000000 bytes (just under 1 MB). The file you import is shown. You can also **Remove** a file after it's been added.
 
   You can also add device tokens to your `.mobileconfig` files. Device tokens are used to add device-specific information. For example, to show the serial number, enter `{{serialnumber}}`. On the device, the text shows similar to `123456789ABC`, which is unique to each device. When entering variables, be sure to use curly brackets `{{ }}`. [App configuration tokens](../apps/app-configuration-policies-use-ios.md#tokens-used-in-the-property-list) includes a list of variables that can be used. You can also use `deviceid` or any other device-specific value.

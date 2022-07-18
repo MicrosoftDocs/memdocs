@@ -1,6 +1,7 @@
 ---
 title: "RunOfflineServicingManager Method in SMS_ImagePackage"
 titleSuffix: "Configuration Manager"
+description: "The RunOfflineServicingManager WMI class method updates the site control file of the offline servicing manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 95f79650-f052-4038-bd61-bd8554541b90
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

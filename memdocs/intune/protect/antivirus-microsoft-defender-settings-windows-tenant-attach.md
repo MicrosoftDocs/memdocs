@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Windows 10 Antivirus policy settings from Microsoft Defender Antivirus for tenant attached devices | Microsoft Docs
-description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows 10 devices managed by Configuration Manager. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune after you configure tenant attach for Configuration Manager.
+title: Windows Antivirus policy settings from Microsoft Defender Antivirus for tenant attached devices | Microsoft Docs
+description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows devices managed by Configuration Manager. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune after you configure tenant attach for Configuration Manager.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/24/2020
+ms.date: 05/02/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,7 +24,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: mattsha
+ms.reviewer: mattcall
 
 ---
 
@@ -37,7 +37,7 @@ View the Microsoft Defender Antivirus settings you can manage with the **Microso
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
   - **Not allowed** Turns off the Microsoft Active Protection Service.
@@ -49,13 +49,13 @@ View the Microsoft Defender Antivirus settings you can manage with the **Microso
   Configure how aggressive Defender Antivirus is in blocking and scanning suspicious files.
   - **Not configured** (*default*) - Default Defender blocking level.
   - **High** - Aggressively block unknowns while optimizing client performance, which includes a greater chance of false positives.
-  - **High plus** - Aggressively block unknowns and apply additional protection measures that might impact client performance.
+  - **High plus** - Aggressively block unknowns and apply extra protection measures that might impact client performance.
   - **Zero tolerance** - Block all unknown executable files.
 
 - **Defender cloud extended timeout in seconds**  
   CSP: [CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
-  Defender Antivirus automatically blocks suspicious files for 10 seconds so it can scan the files in the cloud to make sure they're safe. With this setting, you can add up to 50 additional seconds to this timeout.
+  Defender Antivirus automatically blocks suspicious files for 10 seconds so it can scan the files in the cloud to make sure they're safe. With this setting, you can add up to 50 more seconds to this timeout.
 
 ## Microsoft Defender Antivirus Exclusions
 
@@ -81,7 +81,7 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 - **Turn on real-time protection**  
   CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-  Require Defender on Windows 10 desktop devices to use the real-time Monitoring functionality.
+  Require Defender on Windows 10/11 desktop devices to use the real-time Monitoring functionality.
   - **Not configured** (*default*) - The setting is restored to the system default
   - **Not allowed** Turns off the real-time monitoring service.
   - **Allowed** Turns on and runs the real-time monitoring service.
@@ -106,19 +106,18 @@ For each setting in this group, you can expand the setting, select **Add**, and 
 - **Turn on behavior monitoring**  
   CSP: [AllowBehaviorMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
-  By default, Defender on Windows 10 desktop devices uses the Behavior Monitoring functionality.
+  By default, Defender on Windows 10/11 desktop devices uses the Behavior Monitoring functionality.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
   - **Not allowed** Turns off behavior monitoring.
   - **Allowed** Turns on real-time behavior monitoring.
 
 - **Allow Intrusion Prevention System**  
-  CSP: [AllowIntrusionPreventionSystem](/windows/client-management/mdm/policy-csp-defender#defender-allowintrusionpreventionsystem)
 
   Configure Defender to allow or disallow Intrusion Prevention functionality.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
-  - **No** - Intrusion Prevention Systme is not allowed.
+  - **No** - Intrusion Prevention System is not allowed.
   - **Yes** - Intrusion Prevention System is allowed.
 
 - **Scan all downloaded files and attachments**  
@@ -327,6 +326,9 @@ Learn more
   - **No**
 
 - **Allow users to view full History results**
+  > [!NOTE]
+  >  This is a legacy setting that only applies to versions of Windows prior to Windows 10 version 1703. User of this setting with a current operating system has no effect. This setting is scheduled for removal from this policy. For more information, see **-DisablePrivacyMode** in [Set-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) in the Windows PowerShell documentation.
+
   - **Not Configured** (*default*)
   - **Yes**
   - **No**

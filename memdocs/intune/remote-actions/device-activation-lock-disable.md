@@ -5,8 +5,8 @@ title: Bypass iOS/iPadOS Activation Lock with Intune
 titleSuffix: Microsoft Intune
 description: Learn how to use Intune to bypass iOS/iPadOS Activation Lock to access locked devices.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/27/2020
 ms.topic: how-to
@@ -79,16 +79,15 @@ Before you can disable Activation Lock on devices, you must enable it by followi
 The Intune **Disable Activation Lock** remote device action removes the Activation Lock from an iOS/iPadOS device without requiring the user's Apple ID and password. After you disable the Activation Lock, the device turns on Activation Lock again when the Find My iPhone app starts. Disable the Activation Lock only if you have physical access to the device.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. On the **Intune** blade, select **Devices**.
-4. On the **Devices** blade, select **All devices**.
-5. On the list of devices that you manage, select the **Disable Activation Lock** device remote action.
-6. Go to the device's "Hardware" section, and then copy the **Activation Lock bypass code** value under **Conditional Access**.
+2. On the **Intune** blade, select **Devices**.
+3. On the **Devices** blade, select **All devices**.
+4. Go to the device's "Hardware" section, and then copy the **Activation Lock bypass code** value under **Conditional Access**.
 
     >[!NOTE]
     >Copy the bypass code before you wipe the device. If you reset the device settings before you copy the code, the code is removed from Azure.
 
-7. Go to the **Overview** blade for the device, and then select **Wipe**.
-8. After the device is reset, you are prompted for the *Apple ID* and *password*. Leave the *ID* field blank, and then enter the **bypass code** for the *password*. This removes the account from the device. 
+5. Go to the **Overview** blade for the device, and then select **Wipe**.
+6. After the device is reset, you are prompted for the *Apple ID* and *password*. Leave the *ID* field blank, and then enter the **bypass code** for the *password*. This removes the account from the device. 
 
 
 ## Next steps

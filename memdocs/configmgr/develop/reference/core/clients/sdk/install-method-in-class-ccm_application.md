@@ -1,4 +1,5 @@
 ---
+description: Learn how to install an application using the Install Windows Management Instrumentation (WMI) class method.
 title: "Install Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 8666bb0c-1969-4c88-92db-853ed3128412
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

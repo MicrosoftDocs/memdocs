@@ -6,12 +6,10 @@ ms.date: 08/17/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: 07c3c6d9-f056-4c4d-bc70-ede5ca933807
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Associate users with a destination computer in Configuration Manager
@@ -47,7 +45,7 @@ For more information, see [Task sequence variables](../understand/task-sequence-
 
 The distribution point or media supports associating users with the destination computer where the OS is deployed. Use one of the following methods: 
 
-- [Configure a distribution point to accept PXE boot requests](prepare-site-system-roles-for-operating-system-deployments.md#BKMK_PXEDistributionPoint)  
+- [Configure a distribution point to accept PXE boot requests](prepare-site-system-roles-for-operating-system-deployments.md#configuring-distribution-points-to-accept-pxe-requests)  
 - [Create bootable media](../deploy-use/create-bootable-media.md)  
 - [Create pre-staged media](../deploy-use/create-prestaged-media.md)  
 

@@ -1,18 +1,16 @@
 ---
-title: "Technical Preview 1712 | Microsoft Docs"
-titleSuffix: "Configuration Manager"
-description: "Learn about features available in the Technical Preview version 1712 for Configuration Manager."
+title: Technical Preview 1712 | Microsoft Docs
+titleSuffix: Configuration Manager
+description: Learn about features available in the Technical Preview version 1712 for Configuration Manager.
 ms.date: 12/15/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 3ce372d6-bd93-4d4d-b612-5303f89c36f0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
-
-
+ms.localizationpriority: medium
 ---
 # Capabilities in Technical Preview 1712 for Configuration Manager
 
@@ -54,7 +52,7 @@ Review [Technical Preview for Configuration Manager](technical-preview.md) befor
 
 ## Do not automatically upgrade superseded applications
 <!-- 1351266 -->
-Based upon your [user voice feedback](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/11532669-fix-supercedence-behavior), in this release you have the option to configure an application deployment to not automatically upgrade any superseded version. Now when creating the deployment, on the **Deployment Settings** page of the **Deploy Software Wizard**, for either **Available** or **Required** install purpose, you can enable or disable the option to **Automatically upgrade any superseded versions of this application**.
+Based upon your feedback, in this release you have the option to configure an application deployment to not automatically upgrade any superseded version. Now when creating the deployment, on the **Deployment Settings** page of the **Deploy Software Wizard**, for either **Available** or **Required** install purpose, you can enable or disable the option to **Automatically upgrade any superseded versions of this application**.
 
 
 ## Install multiple applications in Software Center
@@ -109,7 +107,7 @@ In the Configuration Manager console:
 
 
 ## Change in the Configuration Manager client install  
-As a result of your user voice feedback, [Silverlight is no longer installed on clients automatically.](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/10886427-please-do-not-install-silverlight-by-default-in-v) <!--1356195-->
+As a result of your feedback, Silverlight is no longer installed on clients automatically.<!--1356195-->
   
 
 ## Change to the Surface device dashboard
@@ -126,15 +124,15 @@ The Office 365 Client Management dashboard now displays a list of relevant devic
 
 
 ## Improvements to the Configuration Manager console 
-We have made the following improvements to the Configuration Manager console, which were a result of your user voice feedback.
+We have made the following improvements to the Configuration Manager console, which were a result of your feedback.
 
-- [Device list displays primary user](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/8782225-enable-a-column-for-primary-user): Device lists under Assets and Compliance, Devices, now display the primary user by default. The last logged on user can also be added as an optional column. <!-- 1357280 -->
-- [Renamed collections display in existing collection membership rules](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/20125567-fix-the-renaming-of-collections): If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282--> 
+- Device list displays primary user: Device lists under Assets and Compliance, Devices, now display the primary user by default. The last logged on user can also be added as an optional column. <!-- 1357280 -->
+- Renamed collections display in existing collection membership rules: If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282--> 
 
 
 ## Improvements to operating system deployment
-We made the following improvements to operating system deployment, some of which were the result of your user voice feedback.
-- [Default log viewer in boot image](https://configurationmanager.uservoice.com/forums/300492-ideas/suggestions/19269823-stop-cmtrace-from-asking-us-if-we-want-to-use-it-a): In Windows PE, when launching cmtrace.exe, you are no longer prompted to choose whether to make this program the default viewer for log files. <!-- SMS 500897 -->
+We made the following improvements to operating system deployment, some of which were the result of your feedback.
+- Default log viewer in boot image: In Windows PE, when launching cmtrace.exe, you are no longer prompted to choose whether to make this program the default viewer for log files. <!-- SMS 500897 -->
 - Download Package Content step: You can now add boot images to this task sequence step.
 
 
@@ -146,7 +144,7 @@ We love feedback so much that we're now enabling feedback through the [Feedback 
 - Configuration Manager OS Deployment
 - Configuration Manager Server
 
-Continue to use our [user voice page](https://configurationmanager.uservoice.com/) to vote on new feature ideas in Configuration Manager.
+Continue to use our product feedback site to vote on new feature ideas in Configuration Manager.
 
 
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->

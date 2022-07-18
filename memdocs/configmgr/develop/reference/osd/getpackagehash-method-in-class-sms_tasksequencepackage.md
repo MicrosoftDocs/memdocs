@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the hash of a Configuration Manager package using GetPackageHash class method in Configuration Manager.
 title: "GetPackageHash Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 12f67c04-b89e-4f12-b560-f08908a8d68c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

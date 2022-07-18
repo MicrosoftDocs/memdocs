@@ -1,4 +1,5 @@
 ---
+description: To determine advertisement status in Configuration Manager, you can use the queries described in this section.
 title: "Determine Advertisement Status"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 6ec6a9fd-0f61-4ad5-b7ec-4c5c877a3a27
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

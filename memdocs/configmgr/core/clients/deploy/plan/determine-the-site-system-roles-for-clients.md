@@ -2,14 +2,14 @@
 title: Site system roles for clients
 titleSuffix: Configuration Manager
 description: Determine site system roles for clients in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 01/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 984e8d92-7327-4b08-9228-0c955e6ac778
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Determine the site system roles for Configuration Manager clients
@@ -72,10 +72,13 @@ The reports aren't needed to deploy clients. You can see some deployment informa
 
 ## Enrollment point and enrollment proxy point
 
+> [!IMPORTANT]
+> With the deprecation of on-premises MDM and the Configuration Manager client for macOS, these site system roles are also deprecated. For more information, see [Removed and deprecated features for Configuration Manager](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 12454901,12927803 -->
+
 Configuration Manager requires the enrollment point and the enrollment proxy point to enroll mobile devices and to enroll certificates for Mac computers. You don't need these site system roles in the following situations:
 
 - You plan to manage mobile devices by using the Exchange Server connector
-- You install the mobile device legacy client, for example, for Windows CE
+- You install the mobile device legacy client
 - You request and install the client certificate on Mac computers independently from Configuration Manager
 
 ## Cloud management gateway connector point

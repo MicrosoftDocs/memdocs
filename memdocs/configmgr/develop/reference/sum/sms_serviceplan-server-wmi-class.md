@@ -1,6 +1,7 @@
 ---
 title: "SMS_ServicePlan Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ServicePlan Windows Management Instrumentation class is an SMS Provider server class in Configuration Manager that represents a service plan."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5a387a79-8915-4f09-a354-96da17798a89
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

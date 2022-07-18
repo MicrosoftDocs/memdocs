@@ -1,6 +1,7 @@
 ---
 title: "Reset the Hardware Inventory Cache"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, you reset the hardware inventory cache by connecting to the inventory agent namespace and deleting the inventory action status instance for hardware inventory."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5dbda4e2-ce2b-4fa4-9573-aad2087d4477
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

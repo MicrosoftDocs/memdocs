@@ -1,6 +1,7 @@
 ---
 title: "UpdateImage Method"
 titleSuffix: "Configuration Manager"
+description: "The UpdateImage Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a copy of the current boot image source .wim file and updates the copy with the most current operating system deployment binaries."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: edd9c38e-004b-4bf9-9d9b-d8e6b7d4d179
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

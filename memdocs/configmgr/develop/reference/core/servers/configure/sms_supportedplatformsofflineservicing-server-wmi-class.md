@@ -1,6 +1,7 @@
 ---
 title: "SMS_SupportedPlatformsOfflineServicing Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_SupportedPlatformsOfflineServicing Windows Management Instrumentation class is an SMS Provider server class that used to determine which operating system images can be serviced offline."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 0d06ee26-6406-4acd-b1bc-3fa925066c3c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

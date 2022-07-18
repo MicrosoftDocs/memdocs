@@ -3,7 +3,8 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 01/08/2021
+ms.date: 06/20/2022
+ms.localizationpriority: medium
 ---
 <!--This file is shared by the community-hub and community-hub-contribute .md files. Headings are context driven by the article-->
 
@@ -14,7 +15,7 @@ You can navigate to and reference items in the Configuration Manager console **C
 Prerequisites for direct links:
 
 - Configuration Manager console version 2006 or later
-- You can't use the local built-in administrator account when following a Community hub link.
+
 
 Share an item:
 1. Go the item in the hub and select **Share**.

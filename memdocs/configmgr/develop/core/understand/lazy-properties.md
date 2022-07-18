@@ -1,4 +1,5 @@
 ---
+description: Learn how to use lazy properties, which are properties that exist and contain data, but the data is not available through the SMS Administrator console.
 title: SMS object lazy properties
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: b6eb9f5c-78a8-4ded-b032-5d8c4f533694
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

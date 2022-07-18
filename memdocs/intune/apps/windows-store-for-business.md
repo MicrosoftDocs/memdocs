@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/12/2021
+ms.date: 05/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 2ed5d3f0-2749-45cd-b6bf-fd8c7c08bc1b
 
@@ -40,9 +40,12 @@ The [Microsoft Store for Business](https://www.microsoft.com/business-store) giv
 * Both Online and Offline licensed versions of Apps are synchronized to Intune. App names will be appended with "Online" or "Offline" in the portal.
 * You can track how many licenses are available, and how many are being used in the Intune administration console.
 * Intune blocks assignment and installation of apps if there are an insufficient number of licenses available.
-* Apps managed by Microsoft Store for Business will automatically revoke licenses when a user leaves the enterprise, or when the administrator removes the user and the user devices.
+* Intune will revoke app licenses for apps managed by Microsoft Store for Business when the user is deleted from Azure AD.
 
 ## Before you start
+
+> [!IMPORTANT]
+> Microsoft Store for Business will be retired in the first quarter of 2023. However, admins can still leverage the connection to Store for Business and Education from their UEM solution to deploy apps to managed Windows 11 devices until they are retired in 2023. 
 
 Review the following information before you start syncing and assigning apps from the Microsoft Store for Business:
 
@@ -55,7 +58,8 @@ Review the following information before you start syncing and assigning apps fro
 - Offline apps that are free of charge can also be synced to Intune. These apps are installed by Intune, not by the store.
 - To use this capability, devices must be joined to Active Directory Domain Services, Azure AD joined, or workplace-joined.
 - Enrolled devices must be using the 1511 release of Windows 10 or later.
-
+> [!NOTE]
+> Online Microsoft Store for Business apps can be used only for user context install; that is, when deployed through Intune, you need to target user groups. Device licensed offline Microsoft Store for Business apps can be installed in device context; that is, when deployed through Intune, you can target device groups as well as user groups.
 > [!NOTE]
 > If you disable access to the Store on managed devices (either manually, via policy or Group Policy), Online licensed apps will fail to install.
 

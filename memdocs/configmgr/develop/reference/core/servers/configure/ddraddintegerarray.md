@@ -1,6 +1,7 @@
 ---
 title: "DDRAddIntegerArray"
 titleSuffix: "Configuration Manager"
+description: "The DDRAddIntegerArray function, in Configuration Manager, adds an integer array property to the data discovery record (DDR)."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a3f9f0ae-4225-47b1-8153-8a47eb53d75d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

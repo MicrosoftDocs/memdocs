@@ -1,4 +1,5 @@
 ---
+description: Learn how to retrieve the targeted users of an application deployment type using GetTargetedUsers class method.
 title: "GetTargetedUsers Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 125f04db-bfe4-4d5d-8d8c-d754eda35065
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

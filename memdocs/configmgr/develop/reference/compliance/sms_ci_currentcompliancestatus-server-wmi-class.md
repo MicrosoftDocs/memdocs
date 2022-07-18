@@ -1,6 +1,7 @@
 ---
 title: "SMS_CI_CurrentComplianceStatus Class"
 titleSuffix: "Configuration Manager"
+description: "Represents the compliance status for a baseline configuration item."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: d36889ae-8c02-441e-996d-64f98c970eae
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

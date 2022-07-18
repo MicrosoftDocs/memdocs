@@ -1,6 +1,7 @@
 ---
 title: "Create a Package"
 titleSuffix: "Configuration Manager"
+description: "Learn how to create a package in Configuration Manager by using the SMS_Package class and class properties."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 2c295b3b-e23c-4084-ad4a-8bba328ef6fc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

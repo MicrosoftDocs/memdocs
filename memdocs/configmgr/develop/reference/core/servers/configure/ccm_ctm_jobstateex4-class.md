@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the state information for a single Content Transfer Manager job using CCM_CTM_JobStateEx4 class.
 title: "CCM_CTM_JobStateEx4 Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 22bbbfab-5613-4b83-9527-ef956aa485bc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

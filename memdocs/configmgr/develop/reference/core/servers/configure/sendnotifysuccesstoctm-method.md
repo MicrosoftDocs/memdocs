@@ -1,4 +1,5 @@
 ---
+description: Learn how to notify the Content Transfer Manager of the success of a job with SentNotifySuccessToCTM method.
 title: "SendNotifySuccessToCTM Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 574ffb2f-b576-473e-b60f-8caf7f635f96
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

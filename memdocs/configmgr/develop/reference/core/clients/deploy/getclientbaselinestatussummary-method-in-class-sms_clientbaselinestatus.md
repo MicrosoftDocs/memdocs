@@ -1,6 +1,7 @@
 ---
 title: "GetClientBaselineStatusSummary Method"
 titleSuffix: "Configuration Manager"
+description: "The GetClientBaselineStatusSummary WMI class method gets baseline status summary information by BaselineType and CollectionID."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: ff58c3a0-203e-476b-b803-e449444f4fb1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

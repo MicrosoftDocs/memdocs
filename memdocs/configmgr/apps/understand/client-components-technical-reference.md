@@ -6,12 +6,10 @@ ms.date: 11/04/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: troubleshooting
-ms.assetid: 701a3456-9dd6-4aaa-9c5a-37c1e1773216
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Understanding Application Deployment Client Components

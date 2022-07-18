@@ -1,6 +1,7 @@
 ---
 title: "How to Configure Automatic Software Metering Rule Generation"
 titleSuffix: "Configuration Manager"
+description: "You configure Automatic Software Metering Rule Generation settings, in Configuration Manager, by modifying the site control file."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 7b4ff9a8-096d-4830-a4fa-c76237419e8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

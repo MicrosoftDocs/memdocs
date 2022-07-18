@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_ServiceWindow class to represent a window of time called a maintenance window, in which a program is allowed to execute on a group of computers.  
 title: "SMS_ServiceWindow Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: a45f7f94-d2c4-4185-9035-ef07b90c7846
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

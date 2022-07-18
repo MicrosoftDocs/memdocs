@@ -1,6 +1,7 @@
 ---
 title: "VerifyPackage Method"
 titleSuffix: "Configuration Manager"
+description: "A class method that verifies the integrity of the files in a package by calculating the hash of each file."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 143aeb29-3c4d-400b-910f-0783b9ca0c5c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

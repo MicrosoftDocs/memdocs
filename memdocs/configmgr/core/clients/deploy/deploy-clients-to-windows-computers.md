@@ -2,14 +2,14 @@
 title: Deploy clients to Windows
 titleSuffix: Configuration Manager
 description: Learn how to deploy the Configuration Manager client to Windows computers.
-ms.date: 04/05/2021
+ms.date: 02/02/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-ms.assetid: 341f0d0b-f907-44cf-9e10-e1b41fc15f82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to deploy clients to Windows computers in Configuration Manager
@@ -201,19 +201,19 @@ To modify the behavior of the client installation, specify command-line options 
 
 `CCMSetup.exe /mp:SMSMP01 /logon SMSSITECODE=AUTO FSP=SMSFP01`
 
-In this example, the client installs with the following options:  
+In this example, the client installs with the following options:
 
-|Option|Description|  
-|--------------|-----------------|  
-|`/mp:SMSMP01`|This CCMSetup parameter specifies the management point SMSMP01 for downloading the required client installation files.|  
-|`/logon`|This CCMSetup parameter specifies that the installation should stop if an existing Configuration Manager client is found on the computer.|  
-|`SMSSITECODE=AUTO`|This Client.msi property specifies that the client tries to locate the Configuration Manager site code to use, by using Active Directory Domain Services, for example.|  
-|`FSP=SMSFP01`|This Client.msi property specifies that the fallback status point named SMSFP01 is used to receive state messages sent from the client computer.|  
+| Option | Description |
+|--|--|
+| `/mp:SMSMP01` | This CCMSetup parameter specifies the management point SMSMP01 for downloading the required client installation files. |
+| `/logon` | This CCMSetup parameter specifies that the installation should stop if an existing Configuration Manager client is found on the computer. |
+| `SMSSITECODE=AUTO` | This Client.msi property specifies that the client tries to locate the Configuration Manager site code to use, by using Active Directory Domain Services, for example. |
+| `FSP=SMSFP01` | This Client.msi property specifies that the fallback status point named SMSFP01 is used to receive state messages sent from the client computer. |
 
-For more information, see [About client installation parameters and properties](about-client-installation-properties.md).  
+For more information, see [About client installation parameters and properties](about-client-installation-properties.md).
 
-> [!TIP]  
-> For the procedure to install the Configuration Manager client on a modern Windows 10 device by using Azure Active Directory (Azure AD) identity, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md). That procedure is for clients on an intranet or the internet.  
+> [!TIP]
+> For the procedure to install the Configuration Manager client on a modern Windows device by using Azure Active Directory (Azure AD) identity, see [Install and assign Configuration Manager clients using Azure AD for authentication](deploy-clients-cmg-azure.md). That procedure is for clients on an intranet or the internet.
 
 ### Manual installation examples
 
@@ -303,25 +303,25 @@ Deploy the Configuration Manager client to devices that are enrolled with Micros
 
 This procedure is for a traditional client that's connected to an intranet. It uses traditional client authentication methods. To make sure the device remains in a managed state after it installs the client, it must be on the intranet and within a Configuration Manager site boundary.  
 
-For the procedure to install the Configuration Manager client on a modern Windows 10 device by using Azure AD identity, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md).
+For the procedure to install the Configuration Manager client on a Windows device by using Azure AD identity, see [Install and assign Configuration Manager clients using Azure AD for authentication](deploy-clients-cmg-azure.md).
 
 After you install the Configuration Manager client, devices don't unenroll from Intune. They can use the Configuration Manager client and MDM enrollment at the same time. For more information, see [Co-management overview](../../../comanage/overview.md).  
 
-> [!Note]
+> [!NOTE]
 > You can use other client installation methods to install the Configuration Manager client on an Intune-managed device. For example, if an Intune-managed device is on the intranet, and joined to the Active Directory domain, you can use group policy to install the Configuration Manager client.<!-- SCCMDocs#757 -->
 
 ### Install the Configuration Manager client by using Intune
 
-1. In Intune, [add a Windows line-of-business app](../../../../intune/apps/lob-apps-windows.md) that contains the Configuration Manager client installation file **CCMSetup.msi**. You can find this file in the `\bin\i386` folder of the Configuration Manager installation directory on the site server.  
+1. In Intune, [add a Windows line-of-business app](../../../../intune/apps/lob-apps-windows.md) that contains the Configuration Manager client installation file **CCMSetup.msi**. You can find this file in the `\bin\i386` folder of the Configuration Manager installation directory on the site server.
 
-2. In the Intune Software Publisher, enter command-line parameters. For example, use this command with a traditional client on an intranet:  
+2. In the Intune Software Publisher, enter command-line parameters. For example, use this command with a traditional client on an intranet:
 
-    `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<your site code> DNSSUFFIX=<DNS suffix of management point>"`  
+    `CCMSETUPCMD="/MP:<FQDN of management point> SMSMP=<FQDN of management point> SMSSITECODE=<your site code> DNSSUFFIX=<DNS suffix of management point>"`
 
-    > [!NOTE]  
-    > For an example of a command to use with a modern Windows 10 client using Azure AD authentication, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).  
+    > [!NOTE]
+    > For an example of a command to use with a Windows client using Azure AD authentication, see [How to prepare internet-based devices for co-management](../../../comanage/how-to-prepare-Win10.md#install-the-configuration-manager-client).
 
-3. [Assign the app](../../../../intune/apps/apps-deploy.md) to a group of the enrolled Windows computers.  
+3. [Assign the app](../../../../intune/apps/apps-deploy.md) to a group of the enrolled Windows computers.
 
 ## <a name="BKMK_ClientImage"></a> OS image installation
 
@@ -339,11 +339,13 @@ Preinstall the Configuration Manager client on a reference computer that you use
 
 2. At a command prompt, type `net stop ccmexec` to stop the SMS Agent Host service (CcmExec.exe) on the reference computer.  
 
-3. Delete the SMSCFG.INI file from the Windows folder on the reference computer.  
+3. Delete the SMSCFG.INI file from the Windows folder on the reference computer.
 
-4. Remove any certificates that are stored in the local computer store on the reference computer. For example, if you use PKI certificates, before you image the computer, remove the certificates in the **Personal** store for **Computer** and **User**.  
+4. Remove the certificates from the local computer's **SMS** certificate store.   
 
-5. If the clients are installed in a different Configuration Manager hierarchy than the hierarchy of the reference computer, remove the trusted root key from the reference computer.  
+5. Remove any other valid client authentication certificates that are stored in the local computer store on the reference computer. For example, if you use PKI certificates, before you image the computer, remove the certificates in the **Personal** store for **Computer** and **User**.  
+
+6. If the clients are installed in a different Configuration Manager hierarchy than the hierarchy of the reference computer, remove the trusted root key from the reference computer.  
 
     > [!NOTE]  
     > If clients can't query Active Directory Domain Services to locate a management point, they use the trusted root key to determine trusted management points. If you deploy all imaged clients in the same hierarchy as that of the master computer, leave the trusted root key in place.
@@ -398,12 +400,12 @@ This example does the following actions:
 
 This example requires the client to be on a network location that's configured in a boundary group. If this requirement isn't met, automatic site assignment won't work. The command includes a fallback status point on server FSPSERVER. This property helps to track client deployment and to identify any client communication issues.
 
-`CCMSetup.exe FSP=fspserver.constoso.com`  
+`CCMSetup.exe FSP=fspserver.constoso.com`
 
-## <a name="BKMK_ClientInternet"></a> Internet-based client management  
+## <a name="BKMK_ClientInternet"></a> Internet-based client management
 
-> [!NOTE]  
-> This section doesn't apply to clients that use a [cloud management gateway](../manage/cmg/overview.md). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md).  
+> [!NOTE]
+> This section doesn't apply to clients that use a [cloud management gateway](../manage/cmg/overview.md). To install internet-based clients by using a cloud management gateway, see [Install and assign Configuration Manager clients using Azure AD for authentication](deploy-clients-cmg-azure.md).
 
 When the Configuration Manager site supports [internet-based client management](../manage/plan-internet-based-client-management.md) for clients that are sometimes on an intranet and sometimes on the internet, you have two options when you install clients on the intranet:  
 
@@ -469,10 +471,10 @@ To assign the internet-based management point after you install the client, use 
 
 1. Open the **Configuration Manager** control panel on the client.  
 
-2. On the **Internet** tab, enter the fully qualified domain name (FQDN) of the internet-based management point as the **Internet FQDN**.  
+2. On the **Network** tab, enter the fully qualified domain name (FQDN) of the internet-based management point as the **Internet FQDN**.  
 
     > [!NOTE]  
-    > The **Internet** tab is available only if the client has a client PKI certificate.  
+    > The **Network** tab is available only if the client has a client PKI certificate.  
 
 3. If the client accesses the internet by using a proxy server, enter the proxy server settings.  
 

@@ -7,10 +7,10 @@ ms.prod: configuration-manager
 ms.technology: configmgr-mdm
 ms.topic: conceptual
 ms.collection: M365-identity-device-management
-ms.assetid: e179e30a-a1fc-461e-8087-ff3a55803450
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Install and configure the Exchange connector

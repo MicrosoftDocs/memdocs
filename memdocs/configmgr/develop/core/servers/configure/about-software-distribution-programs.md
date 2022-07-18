@@ -1,4 +1,5 @@
 ---
+description: Learn all about software distribution programs and how they are packaged and made available to a collection of clients. 
 title: "Software Distribution Programs"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 590d8888-608d-491e-a754-4831138fca2a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

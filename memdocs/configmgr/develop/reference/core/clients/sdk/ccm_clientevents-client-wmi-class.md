@@ -1,6 +1,7 @@
 ---
 title: "CCM_ClientEvents Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CCM_ClientEvents WMI class is an SMS Provider server class that represents client events."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: d7565da8-1444-4610-906a-ab6395b452a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

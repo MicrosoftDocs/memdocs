@@ -5,11 +5,13 @@ description: Learn the basics of Microsoft Endpoint Configuration Manager.
 ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
+ms.custom: intro-overview
 ms.topic: overview
-ms.assetid: 3343eccf-bf09-41cd-9e68-03e893c7f904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # What is Configuration Manager?

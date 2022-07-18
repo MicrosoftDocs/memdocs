@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Send logs using the Settings app for Windows
-description: Enroll a Windows 10 1511 device into Intune
+title: Export your management log files  
+description: Learn how to export diagnostic log files to share with your support person.    
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 01/09/2019
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -29,18 +29,22 @@ ms.custom: intune-enduser
 ms.collection: 
 ---
 
-# Send logs to your company support from the Settings app for Windows 10
+# Export your management log files     
 
-Use the Settings app to troubleshoot Company Portal for Windows 10. If you run into a problem while using the app on your Windows 10 device, you can email your support team for help. Events and errors that occur in the Company Portal app are saved on your device in a special document called a _diagnostic log_. They can contain additional insights about the error, and when exported are useful to support teams.
+**Applies to**  
+- Windows 10  
+- Windows 11  
 
-1. To open the **Settings** app, go to the **Start** menu > **Settings**. You can also search for *settings* in the search bar.
-2. Go to **Accounts** > **Access work or school**.
-3. Select **Export your management log files**.
+Whenever an an error or event occurs on your device, the details of such events are recorded and saved to a document called a _diagnostic log_. Diagnostic logs can provide your support team with enough information to diagnose and fix problems on your device.  
+
+1. Open the **Settings** app on your device.  
+2. Go to **Accounts** > **Access work or school**.  
+3. Select **Export your management log files**.  
 
    ![The "Access work or school screen", which presents the Export option underneath the "Related settings" heading.](./media/w10-export-logs.png)
 
-4. The logs will be saved in **C:\Users\Public\Public Documents\MDMDiagnostics**. Two files will be created: one is the log itself, and the other is a special document that allows your admin to review the logs in different programs, like Microsoft Excel. Attach both of these files to an email and send that email to your admin. If you do this more than once, simply choose the files from the day you created the logs. 
+4. Email the logs to your support person. Logs are saved in **C:\Users\Public\Public Documents\MDMDiagnostics**. Two files are created for each log: one is the log itself, and the other is a document that allows your admin to review the logs in different programs, such as Microsoft Excel. Include both files in your email to your support person. 
 
-You may also need to send [logs from the Company Portal app](send-logs-to-your-it-admin-cp-windows.md) to give your company support more help in trying to troubleshoot any issues they may find. 
+You can also [send Company Portal app logs](send-logs-to-your-it-admin-cp-windows.md) to your support person. 
 
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).
+Still need help? Contact your support person. For contact information, sign in to the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  

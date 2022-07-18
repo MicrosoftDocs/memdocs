@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the base class for SMS_Alert, SMS_EPAlert, and SMS_SCHALert using SMS_AlertBase class.
 title: "SMS_AlertBase Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 7de42b2c-4e70-4354-9bf0-ed9b829ff525
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

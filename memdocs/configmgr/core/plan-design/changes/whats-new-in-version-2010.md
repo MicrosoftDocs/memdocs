@@ -6,10 +6,10 @@ ms.date: 03/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: eca60d1f-6970-4a2d-b170-35353d0d961c
 author: mestew
 ms.author: mstewart
-manager: dougeby 
+manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # What's new in version 2010 of Configuration Manager current branch
@@ -21,10 +21,6 @@ Update 2010 for Configuration Manager current branch is available as an in-conso
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2010](../../servers/manage/checklist-for-installing-update-2010.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2010.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
-
-> [!TIP]
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+2010+-+Configuration+Manager%22&locale=en-us`
 
 ## Microsoft Endpoint Manager tenant attach
 
@@ -122,7 +118,7 @@ For more information, see [Monitor scenario health](../../servers/manage/scenari
 <!--5622909-->
 If the setup or update process fails to complete successfully, you can now report the error directly to Microsoft. If a failure occurs, the **Report update error to Microsoft** button is enabled. When you use the button, an interactive wizard opens allowing you to provide more information to us. In technical previews, this button is always enabled even when the setup completes successfully.
 
-For more information, see [Install in-console updates](../../servers/manage/install-in-console-updates.md#bkmk_report).
+For more information, see [Install in-console updates](../../servers/manage/post-in-console-updates.md#report-setup-and-upgrade-failures-to-microsoft).
 
 ### Delete Aged Collected Diagnostic Files task
 <!--6503308-->
@@ -239,7 +235,7 @@ Large task sequences cause problems with client processing. To further help mana
 
 - When you view the list of task sequences in the Configuration Manager console, add the **Size (KB)** column. Use this column to identify large task sequences that can cause problems.<!--7645732-->
 
-For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
+For more information, see [Reduce the size of task sequence policy](../../../osd/deploy-use/reduce-task-sequence-policy-size.md).
 
 ### Analyze SetupDiag errors for feature updates
 
@@ -254,7 +250,7 @@ For more information, see [Manage Windows as a service](../../../osd/deploy-use/
 <!--7721999 & 8177793-->
 Starting in Configuration Manager version 1910, to improve the overall speed of the task sequence, you could activate the Windows power plan for **High Performance**. Starting in this release, you can now use this option on devices with [modern standby](/windows-hardware/design/device-experiences/modern-standby) and other devices that don't have that default power plan.
 
-For more information, see [Performance improvements for power plans](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#bkmk_perf).
+For more information, see [Task sequence performance](../../../osd/deploy-use/task-sequence-performance.md).
 
 ## Protection
 

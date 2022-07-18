@@ -1,17 +1,15 @@
 ---
 title: Software updates maintenance
-titleSuffix: "Configuration Manager"
-description: "To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually."
+titleSuffix: Configuration Manager
+description: To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually.
 author: mestew
 ms.date: 04/27/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 4b0e2e90-aac7-4d06-a707-512eee6e576c
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 # Software updates maintenance
 
@@ -163,11 +161,11 @@ Starting in version 1906, the following **WSUS Server Cleanup Wizard** options a
   For more information and instructions, see [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/wsus-maintenance-guide) blog post.
 
 
-### Known issues for version 1906
+## Known issue
 
 Consider the following scenario:
 <!--5418148-->
-- You are using Configuration Manager version 1906
+- You are using Configuration Manager version 1906 or later
 - You have remote software update points using a Windows Internal Database
 - In the **Software Update Point Component Properties**, you have any of the following selected options under the **WSUS Maintenance** tab:
    - Add non-clustered indexes to the WSUS database

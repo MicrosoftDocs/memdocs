@@ -1,6 +1,7 @@
 ---
 title: "Import a New Computer"
 titleSuffix: "Configuration Manager"
+description: "Add a new computer directly to the Configuration Manager database by calling the ImportMachineEntry Method in Class SMS_Site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 84858dfe-ba1f-448b-8da1-0fe38f619cd6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Enable or Disable the Compliance Settings Agent"
+description: In Configuration Manager, you enable or disable the Desired Configuration Management Client Agent by modifying the site control file settings.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: bcb099cd-4433-4223-bb2e-23fdfd32fb41
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

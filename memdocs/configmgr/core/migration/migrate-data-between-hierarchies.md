@@ -6,12 +6,10 @@ ms.date: 11/05/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: cf014eb0-f8c2-4d37-b8d7-368d63a10b89
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Migrate data between hierarchies in Configuration Manager
@@ -123,7 +121,7 @@ After you migrate data, and you no longer need the source hierarchy to manage de
 - [Migration from Configuration Manager 2012 or another Configuration Manager hierarchy](#bkmk_2012)
 
 > [!NOTE]  
->  The expansion of a hierarchy that has a standalone site into a hierarchy that has a central administration site isn't categorized as a migration. For information about hierarchy expansion, see [Expand a stand-alone primary site](../servers/deploy/install/use-the-setup-wizard-to-install-sites.md#bkmk_expand).  
+>  The expansion of a hierarchy that has a standalone site into a hierarchy that has a central administration site isn't categorized as a migration. For information about hierarchy expansion, see [Expand a stand-alone primary site](../servers/deploy/install/setup-wizard-central-primary.md#expand-a-stand-alone-primary-site).  
 
 
 ### <a name="bkmk_2007"></a> Migration from Configuration Manager 2007 hierarchies  

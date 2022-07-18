@@ -2,26 +2,24 @@
 title: Cloud distribution point
 titleSuffix: Configuration Manager
 description: Plan and design for distributing software content through Microsoft Azure with cloud distribution points in Configuration Manager.
-ms.date: 09/24/2020
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 3cd9c725-6b42-427d-9191-86e67f84e48c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Use a cloud distribution point in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-> [!Important]  
+> [!WARNING]
 > The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. For more information, see [Modify a CMG](../../clients/manage/cmg/modify-cloud-management-gateway.md).
 >
-> You won't be able to create a traditional cloud distribution point in the future. For more information, see [Removed and deprecated features](../changes/deprecated/removed-and-deprecated-cmfeatures.md).
+> Starting in version 2107, you can't create a traditional cloud distribution point (CDP).<!-- 10247883 -->
 
 A cloud distribution point is a Configuration Manager distribution point that is hosted as Platform-as-a-Service (PaaS) in Microsoft Azure. This service supports the following scenarios:  
 
@@ -66,7 +64,7 @@ The cloud distribution point provides the following additional benefits:
 
 - Supports content download from clients configured for other content technologies, such as Windows BranchCache.  
 
-- Starting in version 1806, use cloud distribution points as source locations for pull-distribution points.  
+- Use cloud distribution points as source locations for pull-distribution points.  
 
 
 ## <a name="bkmk_topology"></a> Topology design
@@ -86,29 +84,20 @@ Deployment and operation of the cloud distribution point includes the following 
 ### Azure Resource Manager
 
 <!--1322209-->
-Starting in version 1806, create a cloud distribution point using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources. This modernized deployment doesn't require the classic Azure management certificate.  
+Create a cloud distribution point using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When deploying a cloud distribution point with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources.
 
 > [!Note]  
 > This feature doesn't enable support for Azure Cloud Service Providers (CSP). The cloud distribution point deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [available Azure services in Azure CSP](/azure/cloud-solution-provider/overview/azure-csp-available-services).  
 
-Starting in Configuration Manager version 1902, Azure Resource Manager is the only deployment mechanism for new instances of the cloud distribution point. Existing deployments continue to work.<!-- 3605704 -->
-
-In Configuration Manager version 1810 and earlier, the cloud distribution point wizard still provides the option for a **classic service deployment** using an Azure management certificate. To simplify the deployment and management of resources, use the Azure Resource Manager deployment model for all new cloud distribution points. If possible, redeploy existing cloud distribution points through Resource Manager.
-
-> [!Important]  
-> Starting in version 1810, the classic service deployment in Azure is deprecated for use in Configuration Manager. This version is the last to support creation of these Azure deployments. This functionality will be removed in a future Configuration Manager version.<!--SCCMDocs-pr issue #2993-->  
-
-Configuration Manager doesn't migrate existing classic cloud distribution points to the Azure Resource Manager deployment model. Create new cloud distribution points using Azure Resource Manager deployments, and then remove classic cloud distribution points.
+Azure Resource Manager is the only deployment mechanism for new instances of the cloud distribution point. Existing deployments continue to work.<!-- 3605704 -->
 
 ### Hierarchy design
 
-Where you create the cloud distribution point depends upon which clients need to access the content. Starting in version 1806, there are three types of cloud distribution points:  
+Where you create the cloud distribution point depends upon which clients need to access the content.
 
 - Azure Resource Manager deployment: Create this type at a primary site or the central administration site.  
 
-- Classic service deployment: Create this type only at a primary site.  
-
-- The cloud management gateway can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Overview of cloud management gateway](../../clients/manage/cmg/overview.md).<!--1358651-->  
+- The cloud management gateway (CMG) can also serve content to clients. This functionality reduces the required certificates and cost of Azure VMs. For more information, see [Overview of cloud management gateway](../../clients/manage/cmg/overview.md).<!--1358651-->  
 
 To determine whether to include cloud distribution points in boundary groups, consider the following behaviors:  
 
@@ -124,7 +113,7 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 
 - When you use the **Backup Site Server** maintenance task, Configuration Manager automatically includes the configurations for the cloud distribution point.  
 
-- Back up and save a copy of the server authentication certificate. If you use the classic service deployment in Azure, also back up and save a copy of the Azure management certificate. When you restore the Configuration Manager primary site to a different server, you must reimport the certificates.  
+- Back up and save a copy of the server authentication certificate. When you restore the Configuration Manager primary site to a different server, reimport the certificate.
 
 
 ## <a name="bkmk_requirements"></a> Requirements
@@ -140,13 +129,6 @@ When you use a cloud distribution point in your hierarchy, use the following inf
 - A **server authentication certificate**. For more information, see the [Certificates](#bkmk_certs) section below.  
 
     - To reduce complexity, use a public certificate provider for the server authentication certificate. When doing so, you also need a **DNS CNAME alias** for clients to resolve the name of the cloud service.  
-
-- In Configuration Manager version 1810 or earlier, if using the Azure classic deployment method, you need an **Azure management certificate**. For more information, see the [Certificates](#bkmk_certs) section below.  
-
-    > [!TIP]  
-    > Starting with Configuration Manager version 1806, use the **Azure Resource Manager** deployment model. It doesn't require this management certificate.  
-    >
-    > The classic deployment method is deprecated as of version 1810.  
 
 - Set the client setting, **Allow access to cloud distribution points**, to **Yes** in the **Cloud Services** group. By default, this value is set to **No**.  
 
@@ -167,13 +149,13 @@ When you use a cloud distribution point in your hierarchy, use the following inf
     > - While the Configuration Manager console doesn't block the distribution of Microsoft software updates to a cloud distribution point, you're paying Azure costs to store content that clients don't use. Internet-based clients always get Microsoft software update content from the Microsoft Update cloud service. Don't distribute Microsoft software updates to a cloud distribution point.
     > - When using a CMG for content storage, the content for third-party updates won't download to clients if the **Download delta content when available** [client setting](../../clients/deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available) is enabled. <!--6598587--> 
 
-- Starting in version 1806, configure a pull-distribution point to use a cloud distribution point as a source. For more information, see [About source distribution points](use-a-pull-distribution-point.md#about-source-distribution-points).<!--1321554-->  
+- Configure a pull-distribution point to use a cloud distribution point as a source. For more information, see [About source distribution points](use-a-pull-distribution-point.md#about-source-distribution-points).<!--1321554-->  
 
 ### Deployment settings
 
-- **Download content locally when needed by the running task sequence**. Starting in version 1910, the task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This change provides additional flexibility with your Windows 10 in-place upgrade deployments to internet-based devices.
+- **Download content locally when needed by the running task sequence**. The task sequence engine can download packages on-demand from a content-enabled CMG or a cloud distribution point. This option provides additional flexibility with your Windows in-place upgrade deployments to internet-based devices.
 
-- **Download all content locally before starting task sequence**. In Configuration Manager version 1906 and earlier, other options such as **Download content locally when needed by the running task sequence** don't work in this scenario. The task sequence engine can't download content from a cloud source. The Configuration Manager client must download the content from the cloud source before starting the task sequence. You can still use this option in version 1910 if needed to meet your requirements.
+- **Download all content locally before starting task sequence**. With this option, the Configuration Manager client downloads the content from the cloud source before starting the task sequence.
 
 - A cloud distribution point doesn't support package deployments with the option to **Run program from distribution point**. Use the deployment option to **Download content from distribution point and run locally**.  
 
@@ -205,7 +187,7 @@ Configuration Manager includes the following options to help control costs and m
 - To help reduce the number of data transfers from cloud distribution points by clients, use one of the following peer caching technologies:  
   - Configuration Manager peer cache
   - Windows BranchCache
-  - Windows 10 Delivery Optimization  
+  - Windows Delivery Optimization  
 
     For more information, see [Fundamental concepts for content management](fundamental-concepts-for-content-management.md).  
 
@@ -241,11 +223,7 @@ A cloud distribution point uses the following Azure components, which incur char
 
 - Internet-based clients get Microsoft software update content from the Microsoft Update cloud service at no charge. Don't distribute software update deployment packages with Microsoft software updates to a cloud distribution point. Otherwise, you'll incur data storage costs for content that clients never use.  
 
-- Cloud distribution points use the following standard blob storage depending upon the deployment model:  
-
-    - An Azure Resource Manager deployment use Azure locally redundant storage (LRS). This change reduces the cost of the storage account. The classic deployment wasn't using the additional features of GRS. For more information, see [Locally redundant storage](/azure/storage/common/storage-redundancy-lrs).  
-
-    - A classic deployment with Configuration Manager version 1810 or earlier uses Azure geo-redundant storage (GRS). For more information, see [Geo-redundant storage](/azure/storage/common/storage-redundancy-grs).  
+- Cloud distribution points with an Azure Resource Manager deployment use Azure locally redundant storage (LRS). For more information, see [Locally redundant storage](/azure/storage/common/storage-redundancy-lrs).
 
 #### Other costs
 

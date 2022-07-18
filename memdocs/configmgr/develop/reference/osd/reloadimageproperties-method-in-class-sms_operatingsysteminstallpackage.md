@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the ReloadImageProperties method in class SMS_OperatingSystemInstallPackage reload metadata from the source .wim file and synchronize the metadata with the database.  
 title: ReloadImageProperties method in class SMS_OperatingSystemInstallPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 3e6c970d-beb0-441b-98c6-11a8c4d26152
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,4 +1,5 @@
 ---
+description: Learn how to check if the default application catalog website point in the client agent settings is set to portalUrl.
 title: "CheckPortalUrl Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 377797dd-dd3c-476f-995c-647dbda78123
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

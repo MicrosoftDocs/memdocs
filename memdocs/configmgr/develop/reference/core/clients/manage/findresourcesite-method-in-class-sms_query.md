@@ -1,4 +1,5 @@
 ---
+description: Article describing how to use FindResourceSite in Configuration Manager to get site code information for resources from SQL.
 title: FindResourceSite method in class SMS_Query
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 27d9cf32-728f-4834-97f3-4c9f28268fba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

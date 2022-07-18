@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent application policy in Configuration Manager using the CCM_ApplicationPolicy class.
 title: "CCM_ApplicationPolicy Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: b068007e-ee61-47ce-841d-d1f534b5aaff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -6,10 +6,10 @@ ms.date: 02/14/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 0a9dc0fe-a942-40a2-bab1-7eeee4d95380
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create an Endpoint Protection point site system role
@@ -31,7 +31,9 @@ The endpoint protection point requires the following Windows Server features:
 
 - .NET Framework 3.5
 
-- Windows Defender features (Windows Server 2016 or later)<!-- SCCMDocs#2120 -->
+- Windows Defender feature (Windows Server 2016)<!-- SCCMDocs#2120 -->
+- Windows Defender Antivirus feature (Windows Server 2019)
+- Microsoft Defender Antivirus feature (Windows Server 2022 or later)
 
 For more information, see [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md).
 

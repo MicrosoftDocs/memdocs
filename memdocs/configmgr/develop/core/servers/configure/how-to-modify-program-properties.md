@@ -1,4 +1,5 @@
 ---
+description: Learn how the following will modify a program, in Configuration Manager, by using the SMS_Package and SMS_Program classes and properties.
 title: "Modify Program Properties"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 7e4018e2-f4df-426a-b3f1-b6837aee7fa8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

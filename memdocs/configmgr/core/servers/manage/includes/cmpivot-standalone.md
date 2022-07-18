@@ -3,16 +3,14 @@ author: mestew
 ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 08/11/2020
+ms.date: 10/01/2021
+ms.localizationpriority: medium
 ---
 
 <!--This file is shared by the cmpivot.md file and the cmpivot-changes.md file and contains information on how to run CMPivot standalone. H2s or HJ3s are determined by the article for which the include file is used.-->
 <!--3555890, 4619340, 4683130 -->
 
-Starting in version 1906, you can use CMPivot as a standalone app. CMPivot standalone is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
-
-> [!Tip]  
-> This feature was first introduced in version 1906 as a [pre-release feature](../pre-release-features.md). Beginning with version 2002, it's no longer a pre-release feature.  
+You can use CMPivot as a standalone app. CMPivot standalone is only available in English. Run CMPivot outside of the Configuration Manager console to view the real-time state of devices in your environment. This change enables you to use CMPivot on a device without first installing the console.
 
 You can share the power of CMPivot with other personas, such as helpdesk or security admins, who don't have the console installed on their computer. These other personas can use CMPivot to query Configuration Manager alongside the other tools that they traditionally use. By sharing this rich management data, you can work together to proactively solve business problems that cross roles.
 
@@ -28,4 +26,4 @@ You can share the power of CMPivot with other personas, such as helpdesk or secu
 
 > [!NOTE]
 > - Right-click actions, such as **Run Scripts**, **Resource Explorer**, and web search aren't available in CMPivot standalone. CMPivot standalone's primary use is querying independently from the Configuration Manager infrastructure. To help security administrators, CMPivot standalone does include the ability to connect to Microsoft Defender Security Center. <!--5605358-->
-> - Starting in version 1910, you can do [local device query evaluation using CMPivot standalone](../cmpivot-changes.md#bkmk_local-eval). <!--3197353--> 
+> - You can do [local device query evaluation using CMPivot standalone](../cmpivot-changes.md#bkmk_local-eval). <!--3197353-->

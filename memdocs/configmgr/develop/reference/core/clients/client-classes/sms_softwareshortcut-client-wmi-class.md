@@ -1,6 +1,7 @@
 ---
 title: "SMS_SoftwareShortcut Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_SoftwareShortcut class is a client Windows Management Instrumentation class that defines a shortcut to executable files or a shortcut in a common system location."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a65b6385-f80f-4aa2-8e55-b8dc119e9673
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

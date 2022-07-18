@@ -1,6 +1,7 @@
 ---
 title: "SMS_MachineVariable Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MachineVariable WMI class defines the settings of a task sequence variable that is unique to a specific computer. "
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5a0951f6-f184-4c00-a7d3-94cd3f466de9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

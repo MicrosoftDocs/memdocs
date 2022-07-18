@@ -6,10 +6,11 @@ ms.date: 04/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 0a2d6c3f-a4e4-4c19-b087-3caada480de9
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Fundamentals of role-based administration for Configuration Manager

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Evaluation of the All collections report
 titleSuffix: Configuration Manager
 description: Information about all of the collections in the Configuration Manager hierarchy.
@@ -12,6 +12,8 @@ ms.assetid: 75e0e5a3-4bb5-421b-a9e1-b4bae4e71961
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Evaluation of the All collections report in Configuration Manager

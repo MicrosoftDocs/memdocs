@@ -1,18 +1,17 @@
 ---
 # required metadata
 
-title: Configure Windows 10 update rings policy in Intune - Azure | Microsoft Docs
-description: Create and manage Intune policy for Windows 10 update rings. You can configure, deploy, and pause update installation with Windows Update for Business settings using Microsoft Intune.
+title: Configure Update rings for Windows 10 and later policy in Intune
+description: Create and manage Intune policy for Windows update rings. You can configure, deploy, and pause update installation with Windows Update for Business settings using Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 04/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -24,48 +23,60 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 #ms.custom:
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
-# Windows 10 update rings policy in Intune
+# Update rings for Windows 10 and later policy in Intune
 
-Create update rings that specify how and when Windows as a Service updates your Windows 10 devices with [*feature* and *quality* updates](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates). With Windows 10, new feature and quality updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows 10 devices are up to date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
+Create update rings that specify how and when Windows as a Service updates your Windows 10/11 devices with [*feature* and *quality* updates](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates). With Windows 10/11, new feature and quality updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows devices are up to date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
 
-Windows 10 update rings support [scope tags](../fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
+Update rings can also be used to upgrade your eligible Windows 10 devices to Windows 11. To do so, when creating a policy you use the setting named *Upgrade Windows 10 devices to Latest Windows 11 release* by configuring it as *Yes*. When you use update rings to upgrade to Windows 11, devices install the most current version of Windows 11. If you later set the upgrade setting back to *No*, devices that haven't started the upgrade won't start while devices that are in the process of upgrading will continue to do so. Devices that have completed the upgrade will remain with Windows 11. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](https://www.microsoft.com/windows/windows-11-specifications).
+
+Windows update rings support [scope tags](../fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
 
 ## Prerequisites
 
-The following prerequisites must be met to use Windows updates for Windows 10 devices in Intune.
+The following prerequisites must be met to use Windows updates for Windows 10/11 devices in Intune.
 
 - Devices must:  
-  - Run Windows 10 version 1607 or later.
+  - Run Windows 10 version 1607 or later, or Windows 11.
   - Have Telemetry turned on, with a minimum setting of [*Required*](../configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
   
     Configure Telemetry as part of a [Device Restriction policy](../configuration/device-restrictions-configure.md) for Windows 10 or later. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
 
   > [!NOTE]
-  > Although not required to configure Windows Update for Business, if the Microsoft Account Sign-In Assistant (wlidsvc) service is disabled, Windows Update doesn't offer feature updates to devices running Windows 10 1709 or later. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
+  > Although not required to configure Windows Update for Business, if the Microsoft Account Sign-In Assistant (wlidsvc) service is disabled, Windows Update doesn't offer feature updates to devices running Windows 10 1709 or later, or Windows 11. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
 
-- Update rings are supported for the following Windows 10 editions:  
-  - Windows 10 Pro
-  - Windows 10 Enterprise
-  - Windows 10 Team - for Surface Hub devices
+- Update rings are supported for the following Windows editions:  
+  - Windows 10/11 Pro
+  - Windows 10/11 Enterprise
+  - Windows 10/11 Team - for Surface Hub devices
   - Windows Holographic for Business
 
     Windows Holographic for Business supports a subset of settings for Windows updates, including:
     - **Automatic update behavior**
     - **Microsoft product updates**
-    - **Servicing channel**: Supports **Semi-annual channel** and **Semi-annual channel (Targeted)** options. For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
+    - **Servicing channel**: Any update build that is generally available.
 
-  > [!NOTE]
-  > **Unsupported versions and editions**:  
-  > *Windows 10 Enterprise LTSC*: Windows Update for Business (WUfB) does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
+    For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
+
+  - Windows 10/11 Enterprise LTSC - While LTSC is supported, the following ring controls are not supported for LTSC:  
+    - [Pause](../protect/windows-10-update-rings.md#pause) of *Feature* updates  
+    - [Feature Update Deferral period (days)](../protect/windows-update-settings.md#update-settings)  
+    - [Set feature update uninstall period (2 - 60 days)](../protect/windows-update-settings.md#update-settings)  
+    - [Enable pre-release builds](../protect/windows-update-settings.md#update-settings), which includes the following build options:   
+      - Windows Insider – Release Preview
+      - Beta Channel  
+      - Dev Channel  
+    - [Use deadline settings](../protect/windows-update-settings.md#user-experience-settings) for *Feature* updates.
 
 ## Create and assign update rings
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Windows 10 Update Rings** > **Create profile**.
+2. Select **Devices** > **Windows** > **Update rings for Windows 10 and later** > **Create profile**.
 
 3. Under *Basics*, specify a name, a description (optional), and then select **Next**.
   ![Create an update ring](./media/windows-10-update-rings/basics-tab.png)
@@ -78,13 +89,13 @@ The following prerequisites must be met to use Windows updates for Windows 10 de
 
 6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue. 
 
-   While update rings can deploy to both device and user groups, consider using only device groups [when you also use feature updates](../protect/windows-10-feature-updates.md#limitations-for-windows-10-feature-updates-policy).
+   While update rings can deploy to both device and user groups, consider using only device groups [when you also use feature updates](../protect/windows-10-feature-updates.md#limitations-for-feature-updates-for-windows-10-and-later-policy).
 
-7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows 10 update ring. Your new update ring is displayed in the list of update rings.
+7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows update ring. Your new update ring is displayed in the list of update rings.
 
-## Manage your Windows 10 Update rings
+## Manage your Windows Update rings
 
-In the portal, navigate to **Devices** > **Windows** > **Windows 10 Update Rings** and select the policy that you want to manage.  The policy opens to its **Overview** page.
+In the portal, navigate to **Devices** > **Windows** > **Update rings for Windows 10 and later** and select the policy that you want to manage.  The policy opens to its **Overview** page.
 
 From this page, you can view the rings assignment status and select the following actions from the top of the Overview pane to manage the update ring:
 
@@ -98,9 +109,9 @@ From this page, you can view the rings assignment status and select the followin
 
 ### Delete
 
-Select **Delete** to stop enforcing the settings of the selected Windows 10 update ring. Deleting a ring removes its configuration from Intune so that Intune no longer applies and enforces those settings.
+Select **Delete** to stop enforcing the settings of the selected Windows update ring. Deleting a ring removes its configuration from Intune so that Intune no longer applies and enforces those settings.
 
-Deleting a ring from Intune doesn't modify the settings on devices that were assigned the update ring.  Instead, the device keeps its current settings. Devices don't maintain a historical record of what settings they held previously. Devices can also receive settings from additional update rings that remain active.
+Deleting a ring from Intune doesn't modify the settings on devices that were assigned the update ring.  Instead, the device keeps its current settings. Devices don't maintain a historical record of what settings they held previously. Devices can also receive settings from other update rings that remain active.
 
 #### To delete a ring
 
@@ -155,21 +166,21 @@ An Intune administrator can use **Uninstall** to uninstall (roll back) the lates
 
 For Uninstall to be successful:
 
-- A device must run the Windows 10 April 2018 update (version 1803) or later.
+- A device must run the Windows 10 April 2018 update (version 1803) or later, or Windows 11.
 
-A device must have installed the latest update. Because updates are cumulative, devices that install the latest update will have the most recent feature and quality update. An example of when you might use this option is to roll back the last update should you discover a breaking issue on your Windows 10 machines.
+A device must have installed the latest update. Because updates are cumulative, devices that install the latest update will have the most recent feature and quality update. An example of when you might use this option is to roll back the last update should you discover a breaking issue on your Windows machines.
 
 Consider the following when you use Uninstall:
 
 - Uninstalling a feature or quality update is only available for the servicing channel the device is on.
 
-- Using uninstall for feature or quality updates triggers a policy to restore the previous update on your Windows 10 machines.
+- Using uninstall for feature or quality updates triggers a policy to restore the previous update on your Windows machines.
 
-- On a Windows 10 device, after a quality update is successfully rolled back, device users continue to see the update listed in **Windows settings** > **Updates** > **Update History**.
+- On a Windows 10/11 device, after a quality update is successfully rolled back, device users continue to see the update listed in **Windows settings** > **Updates** > **Update History**.
 
 - When you initiate an uninstall of feature or quality updates on an Update Ring, Intune also pauses updates of the same type on that Update Ring.
 
-- Once the feature or quality update pause elapses on an Update Ring, devices will reinstall previously uninstalled feature or quality updates if they are still applicable.
+- Once the feature or quality update pause elapses on an Update Ring, devices will reinstall previously uninstalled feature or quality updates if they're still applicable.
 
 - For feature updates specifically, the time you can uninstall the update is limited from 2-60 days. This period is configured by the update rings Update setting **Set feature update uninstall period (2 – 60 days)**. You can't roll back a feature update that's been installed on a device after the update has been installed for longer than the configured uninstall period.
 
@@ -177,7 +188,7 @@ Consider the following when you use Uninstall:
 
 For more information about Windows Update policies, see [Update CSP](/windows/client-management/mdm/update-csp) in the Windows client management documentation.
 
-#### To uninstall the latest Windows 10 update
+#### To uninstall the latest Windows update
 
 1. While viewing the overview page for a paused Update Ring, select **Uninstall**.
 2. Select from the available options to uninstall either **Feature** or **Quality** updates, and then select **OK**.
@@ -185,9 +196,10 @@ For more information about Windows Update policies, see [Update CSP](/windows/cl
 
 ## Validation and reporting
 
-There are multiple options to get in-depth reporting for Windows 10 updates with Intune. To learn more, see [Intune compliance reports](../protect/windows-update-compliance-reports.md).
+There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more, see [Intune compliance reports](../protect/windows-update-compliance-reports.md).
 
 ## Next steps
 
-- [Use Windows 10 feature updates in Intune](../protect/windows-10-feature-updates.md)
-- Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows 10 updates  
+- Use [Windows feature updates in Intune](../protect/windows-10-feature-updates.md)
+- Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
+- Use [Intune compliance reports](../protect/windows-update-compliance-reports.md) for Windows updates  

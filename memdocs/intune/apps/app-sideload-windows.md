@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/06/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: e44f1756-52e1-4ed5-bf7d-0e80363a8674
 
@@ -26,20 +26,22 @@ ms.reviewer: manchen
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Windows
 ---
 # Sign line-of-business apps so they can be deployed to Windows devices with Intune
 
-As an Intune administrator, you can deploy line-of-business (LOB) Universal apps to Windows 8.1 Desktop or Windows 10 Desktop & Mobile devices, including the Company Portal app. To deploy *.appx* apps to Windows 8.1 Desktop or Windows 10 Desktop & Mobile devices you can use code-signing certificate from a public certification authority already trusted by your Windows devices, or you can use your own certificate authority.
+As an Intune administrator, you can deploy line-of-business (LOB) Universal apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices, including the Company Portal app. To deploy *.appx* apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices you can use code-signing certificate from a public certification authority already trusted by your Windows devices, or you can use your own certificate authority.
 
  > [!NOTE]
  > Windows 8.1 Desktop requires either an enterprise policy to enable sideloading or the use of Sideloading Keys (automatically enabled for domain-joined devices). For more information, see [Windows 8 sideloading](/archive/blogs/scd-odtsp/windows-8-sideloading-requirements-from-technet).
 
-## Windows 10 sideloading
+## Windows 10/11 sideloading
 
-In Windows 10, sideloading is different than in earlier versions of Windows:
+In Windows 10/11, sideloading is different than in earlier versions of Windows:
 
-- You can unlock a device for sideloading using an enterprise policy. Intune provides a device config policy called "Trusted app installation". Setting this to <allow> is all that is needed for devices that already trust the certificate used to sign the appx app.
+- You can unlock a device for sideloading using an enterprise policy. Intune provides a device config policy called "Trusted app installation". Setting this to **allow** is all that is needed for devices that already trust the certificate used to sign the appx app.
 
 - Symantec Phone certificates and Sideloading License keys are not required. However if an on-premise certificate authority is not available then you may need to obtain a code signing certificate from a public certification authority. For more information, see [Introduction to Code Signing](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
@@ -55,7 +57,7 @@ If you deploy the app as required to users or devices then you do not need the I
 
 ### Upload the code-signing certificate
 
-If your Windows 10 device does not already trust the certificate authority, then after you have signed your appx package and uploaded it to the Intune service, you need to upload the code signing certificate to Intune using the following steps:
+If your Windows 10/11 device does not already trust the certificate authority, then after you have signed your appx package and uploaded it to the Intune service, you need to upload the code signing certificate to Intune using the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Click **Tenant administration** > **Connectors and tokens** > **Windows enterprise certificates**.
@@ -63,7 +65,7 @@ If your Windows 10 device does not already trust the certificate authority, then
 4. Select your *.cer* file and click **Open**.
 5. Click **Upload** to add your certificate file to Intune.
 
-Now any Windows 10 Desktop & Mobile device with an appx deployment by the Intune service will automatically download the corresponding enterprise certificate and the application will be allowed to launch after installation.
+Now any Windows 10/11 Desktop & Mobile device with an appx deployment by the Intune service will automatically download the corresponding enterprise certificate and the application will be allowed to launch after installation.
 
 Intune only deploys the latest .cer file that was uploaded. If you have multiple appx files created by different developers that are not associated with your organization, then you will need to either have them provide unsigned appx files for signing with your certificate, or provide them the code signing certificate used by your organization.
 

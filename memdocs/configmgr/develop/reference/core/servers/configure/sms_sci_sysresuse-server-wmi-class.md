@@ -1,6 +1,7 @@
 ---
 title: "SMS_SCI_SysResUse Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a specific usage of a server or other network resource."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: f2a6e60e-a0df-4c13-9c46-485bd6061da1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

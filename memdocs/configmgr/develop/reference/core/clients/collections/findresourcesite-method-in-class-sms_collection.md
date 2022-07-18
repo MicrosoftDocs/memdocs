@@ -1,6 +1,7 @@
 ---
 title: FindResourceSite method in class SMS_Collection
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the FindResourceSite WMI class method gets site code information for resources."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 79e82dd3-a3c1-434d-a5f8-60db7d3bc8db
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

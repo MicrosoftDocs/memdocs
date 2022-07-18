@@ -1,6 +1,7 @@
 ---
 title: "GetContentHash Method"
 titleSuffix: "Configuration Manager"
+description: "gets the hash of specific Configuration Manager content"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: b3b83197-97f0-4d92-8b99-5b9954a6c3d4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

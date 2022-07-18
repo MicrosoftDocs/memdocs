@@ -1,22 +1,22 @@
 ---
 title: In-place upgrade recommendations
 titleSuffix: Configuration Manager
-description: Recommended steps for using the task sequence to upgrade devices to Windows 10.
-ms.date: 04/05/2021
+description: Recommended steps for using the task sequence to upgrade Windows.
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: reference
-ms.assetid: 2a1ef3aa-27ce-4bf5-8772-ad8a2aab5c8d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # In-place upgrade recommendations
 
 *Applies to: Configuration Manager (current branch)*
 
-The default task sequence template for Windows 10 in-place upgrade includes groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading devices to Windows 10. This article provides information about these recommended steps during different phases of the upgrade process.
+The default task sequence template for Windows in-place upgrade includes groups with recommended actions to add before and after the upgrade process. These actions are common among many customers who are successfully upgrading Windows on devices. This article provides information about these recommended steps during different phases of the upgrade process.
 
 ## Prepare for upgrade
 
@@ -48,7 +48,7 @@ If it returns any results, then the device is running on Wi-Fi. Otherwise, the d
 
 ### Remove incompatible applications
 
-Add steps in this group to remove any applications that are incompatible with this version of Windows 10. The method to uninstall an application varies.
+Add steps in this group to remove any applications that are incompatible with the target version of Windows. The method to uninstall an application varies.
 
 If the application uses Windows Installer, copy the **Uninstall program** command line from the **Programs** tab on the Windows Installer deployment type properties of the application. Then add a **Run Command Line** step in this group with the uninstall program command line. For example:
 
@@ -56,7 +56,7 @@ If the application uses Windows Installer, copy the **Uninstall program** comman
 
 ### Remove incompatible drivers
 
-Add steps in this group to remove any drivers that are incompatible with this version of Windows 10.
+Add steps in this group to remove any drivers that are incompatible with the target version of Windows.
 
 ### Remove/suspend third-party security
 
@@ -82,7 +82,7 @@ After you create the task sequence, add more steps in the **Post-Processing** gr
 > [!NOTE]  
 > This task sequence isn't linear. There are conditions on steps that can affect the results of the task sequence. This behavior depends on whether it successfully upgrades the client computer, or if it has to roll back the client computer to the original OS.
 
-The default task sequence template for Windows 10 in-place upgrade includes other groups with recommended actions to add after the upgrade process. These actions in the **Post-Processing** group are common among many customers who are successfully upgrading devices to Windows 10. If you have an existing task sequence that doesn't already have these actions, manually add them to your task sequence in the **Post-Processing** group.
+The default task sequence template for Windows in-place upgrade includes other groups with recommended actions to add after the upgrade process. These actions in the **Post-Processing** group are common among many customers who are successfully upgrading Windows on devices. If you have an existing task sequence that doesn't already have these actions, manually add them to your task sequence in the **Post-Processing** group.
 
 ### Apply setup-based drivers
 
@@ -121,7 +121,7 @@ When something goes wrong with the upgrade process after the computer restarts, 
 ## Run actions on failure
 
 <!--1358500-->
-The default task sequence template for Windows 10 in-place upgrade includes a group to **Run actions on failure**. This group includes recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot.
+The default task sequence template for Windows in-place upgrade includes a group to **Run actions on failure**. This group includes recommended actions to add in case the upgrade process fails. These actions make it easier to troubleshoot.
 
 ### Collect logs
 
@@ -145,7 +145,7 @@ To gather logs from the client, add steps in this group.
 
 To run diagnostic tools, add steps in this group. Automate these tools for collecting additional information from the system right after the failure.
 
-One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to obtain details about why a Windows 10 upgrade was unsuccessful.
+One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It's a standalone diagnostic tool to get details about why a Windows upgrade was unsuccessful.
 
 - In Configuration Manager, [create a package](../../apps/deploy-use/packages-and-programs.md#create-a-package-and-program) for the tool.
 
@@ -159,7 +159,7 @@ One such tool is Windows [SetupDiag](/windows/deployment/upgrade/setupdiag). It'
 
 ### Windows documentation
 
-Review Windows documentation to [Resolve Windows 10 upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). This article also includes detailed information about the upgrade process.
+Review Windows documentation to [Resolve Windows client upgrade errors](/windows/deployment/upgrade/resolve-windows-10-upgrade-errors). This article also includes detailed information about the upgrade process.
 
 ### Check minimum disk space
 
@@ -202,12 +202,12 @@ If you want to change the device from BIOS to UEFI during this task sequence, se
 ### Manage BitLocker
 
 <!--SCCMDocs issue #494-->
-If you're using BitLocker Disk Encryption, then by default Windows Setup automatically suspends it during upgrade. Starting in Windows 10 version 1803, Windows Setup includes the `/BitLocker` command-line parameter to control this behavior. If your security requirements need devices to always have active disk encryption, then use the **OSDSetupAdditionalUpgradeOptions** [task sequence variable](task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) in the **Prepare for Upgrade** group to include `/BitLocker TryKeepActive`. For more information, see [Windows Setup Command-line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
+If you're using BitLocker Disk Encryption, then by default Windows Setup automatically suspends it during upgrade. Windows Setup includes the `/BitLocker` command-line parameter to control this behavior. If your security requirements need devices to always have active disk encryption, then use the **OSDSetupAdditionalUpgradeOptions** [task sequence variable](task-sequence-variables.md#OSDSetupAdditionalUpgradeOptions) in the **Prepare for Upgrade** group to include `/BitLocker TryKeepActive`. For more information, see [Windows Setup Command-line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options#bitlocker).
 
 ### Remove default apps
 
 <!--SCCMDocs issue #526-->
-Some customers remove default provisioned apps in Windows 10. For example, the Bing Weather app, or the Microsoft Solitaire Collection. In some situations, these apps return after updating Windows 10. For more information, see [How to keep apps removed from Windows 10](/windows/application-management/remove-provisioned-apps-during-update).
+Some customers remove default provisioned apps in Windows. For example, the Bing Weather app, or the Microsoft Solitaire Collection. In some situations, these apps return after upgrading Windows. For more information, see [How to keep apps removed from Windows client from returning during an update](/windows/application-management/remove-provisioned-apps-during-update).
 
 Add a **Run Command Line** step to the task sequence in the **Prepare for Upgrade** group. Specify a command line similar to the following example:
 

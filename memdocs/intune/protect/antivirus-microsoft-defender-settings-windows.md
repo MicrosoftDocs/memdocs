@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Windows 10 Antivirus policy settings for Microsoft Defender Antivirus for Intune | Microsoft Docs
-description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows 10. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune.
+title: Windows Antivirus policy settings for Microsoft Defender Antivirus for Intune | Microsoft Docs
+description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows devices. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/26/2021
-ms.topic: reference
+ms.date: 04/06/2022
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -28,22 +28,23 @@ ms.reviewer: laarrizz
 
 ---
 
-# Settings for Windows 10 Microsoft Defender Antivirus policy in Microsoft Intune
+# Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices
 
-View the Endpoint security antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 in Microsoft Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
+View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 and later in Microsoft Intune.  
+
+> [!NOTE]  
+> This article details the settings you can find in Microsoft Defender Antivirus and Microsoft Defender Antivirus Exclusions profiles created before April 5, 2022, for the *Windows 10 and later* platform for endpoint security Antivirus policy. On April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows 10, Windows 11, and Windows Server* platform. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
+>
+> For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Endpoint Manager admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
+>
+> The following settings details for Windows profiles apply to those deprecated profiles.
 
 ## Cloud protection
-
-These settings are available in the following profiles:
-
-- Microsoft Defender Antivirus
-
-**Settings**:
 
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#defender-allowcloudprotection)
 
-  By default, Defender on Windows 10 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
   - **No** - The setting is disabled. Device users can't change this setting.
@@ -65,7 +66,7 @@ These settings are available in the following profiles:
 
 ## Microsoft Defender Antivirus Exclusions
 
-The following setting is only available in the Microsoft Defender Antivirus profile:
+The following settings are available in the Microsoft Defender Antivirus profile:
 
 - **Defender local admin merge**  
   CSP: [Configuration/DisableLocalAdminMerge](/windows/client-management/mdm/defender-csp)
@@ -109,7 +110,7 @@ These settings are available in the following profiles:
 - **Turn on real-time protection**  
   CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowrealtimemonitoring)
 
-  Require Defender on Windows 10 desktop devices to use the real-time Monitoring functionality.
+  Require Defender on Windows 10/11 desktop devices to use the real-time Monitoring functionality.
   - **Not configured** (*default*) - The setting is restored to the system default
   - **No** - The setting is disabled. Device users can't change this setting.
   - **Yes** - Enforce use of real-time monitoring. Device users can't change this setting.
@@ -134,7 +135,7 @@ These settings are available in the following profiles:
 - **Turn on behavior monitoring**  
   CSP: [AllowBehaviorMonitoring](/windows/client-management/mdm/policy-csp-defender#defender-allowbehaviormonitoring)
 
-  By default, Defender on Windows 10 desktop devices uses the Behavior Monitoring functionality.
+  By default, Defender on Windows 10/11 desktop devices uses the Behavior Monitoring functionality.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
   - **No** - The setting is disabled. Device users can't change this setting.
@@ -298,13 +299,18 @@ Learn more
 - **Run daily quick scan at**  
   CSP: [ScheduleQuickScanTime](/windows/client-management/mdm/policy-csp-defender#defender-schedulequickscantime)
 
-  Select the time of day that Defender quick scans run.
-  By default, this setting is **Not configured**
+  Select the time of day that Defender quick scans run. This setting applies only when a device runs a quick scan and doesn't interact with the following three settings:
+
+  - Scan type
+  - Day of week to run a scheduled scan
+  - Time of day to run a  scheduled scan
+
+  By default, *Run daily quick scan at* is set to **Not configured**.
 
 - **Scan type**  
   CSP: [ScanParameter](/windows/client-management/mdm/policy-csp-defender#defender-scanparameter)
-
-  Select the type of scan that Defender runs.
+  
+  Select the type of scan that Defender runs. This setting interacts with the settings *Day of week to run a scheduled scan* and *Time of day to run a scheduled scan*.
 
   - **Not Configured** (*default*)
   - **Quick scan**

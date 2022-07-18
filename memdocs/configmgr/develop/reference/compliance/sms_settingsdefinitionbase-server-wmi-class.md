@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the base class for settings definition in Configuration Manager using SMS_SettingsDefinitionBase class.
 title: "SMS_SettingsDefinitionBase Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 74689e4e-e08f-490e-800c-5ed77c4e4db5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

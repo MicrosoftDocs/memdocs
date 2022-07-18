@@ -2,12 +2,12 @@
 # required metadata
 
 title: Reset device from Intune Company Portal for Windows | Microsoft Docs
-description: Learn how to factory reset a used, lost, or stolen device in Company Portal for Windows 10.
+description: Learn how to factory reset a used, lost, or stolen device in Company Portal for Windows.
 keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/05/2020
+ms.date: 10/04/2021
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,6 +32,12 @@ ms.collection:
 
 # Reset device in Company Portal app for Windows  
 
+**Applies to**  
+- Windows 10  
+- Windows 11  
+- Windows 10 Mobile  
+- Windows Phone 8.1
+
 Use the Company Portal app for Windows to reset a used, lost, or stolen device back to factory settings. All apps, settings, and personal data on the device will be deleted and the device will no longer appear in Company Portal.  
 
 The reset option may not be available for every device that appears in Company Portal. Your organization can choose to hide the option.  
@@ -52,9 +58,9 @@ Company Portal device resets aren't supported on all devices. The feasibility of
 
 |Device configuration and management|Device type|
 |---------------------------------------|---------------|
-|Your company support manages your mobile device|**Windows 10 and Windows Phone 8.1**</br>Your device won't appear in the company portal anymore, and the company portal tries to reset the device back to the manufacturer's default settings. Your personal data, apps, and settings will be removed. <br /><br />**Windows 10 Mobile**</br>The only way to unenroll your device is to reset it.|
-|Your device can access company email only|**Windows Phone 8.1**<br />Your device won't appear in the company portal anymore, and your company email account and unsaved email will be deleted.<br /><br />**Windows 7 or Windows Vista**<br />You cannot reset a computer that's running Windows 7 or earlier that's used for email only.<br /><br />**Windows 8.1 and Windows 8**<br />Your device won't appear in the company portal anymore, and your company email account and unsaved email will be deleted.|
-|PCs and laptops|**Windows 8.1 and Windows 8**<br />You cannot reset a computer that's running Windows 8 or Windows 8.1 unless it's used for email only.<br /><br />**Windows 7 or Windows Vista**<br />You cannot reset a computer that's running Windows 7 or earlier.|  
+|Your organization manages your mobile device|**Windows 10/11 and Windows Phone 8.1**</br>Your device won't appear in Company Portal anymore, and Company Portal will try to reset the device back to the manufacturer's default settings. Your personal data, apps, and settings will be removed. <br /><br />**Windows 10 Mobile**</br>The only way to unenroll your device is to reset it.|
+|Your device can access company email only|**Windows Phone 8.1**<br />Your device won't appear in Company Portal anymore, and your work email account and unsaved emails will be deleted.<br /><br />**Windows 7 or Windows Vista**<br />You cannot reset a device that's only used for email and running Windows 7 or earlier.<br /><br />**Windows 8.1 and Windows 8**<br />Your device won't appear in Company Portal anymore, and your company email account and unsaved email will be deleted.|
+|PCs and laptops|**Windows 8.1 and Windows 8**<br />You cannot reset a computer that's running Windows 8 or Windows 8.1, unless it's only being used for email.<br /><br />**Windows 7 or Windows Vista**<br />You cannot reset a computer that's running Windows 7 or earlier.|  
 
 ## Next steps 
 

@@ -1,6 +1,7 @@
 ---
 title: "ExportDefaultBootImage Method"
 titleSuffix: "Configuration Manager"
+description: "The ExportDefaultBootImage WMI class method finalizes a boot image and then exports the image from the specified source to the specified location."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: dcbcd570-3d2b-48ea-bec3-2a7273910e07
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

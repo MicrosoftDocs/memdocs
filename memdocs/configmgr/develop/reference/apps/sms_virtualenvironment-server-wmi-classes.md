@@ -1,4 +1,5 @@
 ---
+description: Learn how to track the history of a request each time a request is updated using SMS_VirtualEnvironment in Configuration Manager.
 title: "SMS_VirtualEnvironment Classes"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: b6e5fec6-6d2f-442e-8f06-ac9269165a23
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

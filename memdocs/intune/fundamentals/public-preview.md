@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Public preview overview in Microsoft Intune - Azure | Microsoft Docs
+title: Public preview overview in Microsoft Intune
 description: Learn about public preview features in Microsoft Intune, and see an example. See a list of limitations, restrictions, and more in Microsoft Endpoint Manager admin center.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/05/2021
+ms.date: 01/13/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -43,7 +43,7 @@ When working with features in public preview, these features:
 - May have restricted or limited functionality. For example, the feature may only apply to one platform.
 - Typically go through feature changes before they're generally available (GA).
 - Are fully supported by Microsoft.
-- May only be available in selected geographic regions or cloud environments. For example, the feature may not exist in the government cloud.
+- May only be available in selected geographic regions or cloud environments. For example, the feature may not exist in the [Azure Government](/azure/azure-government/documentation-government-welcome) cloud.
 - Individual features in preview may have more usage and support restrictions. If so, this information is typically noted in the feature documentation.
 
 ## Next steps

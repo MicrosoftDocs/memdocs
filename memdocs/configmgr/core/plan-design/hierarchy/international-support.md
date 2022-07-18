@@ -1,17 +1,15 @@
 ---
-title: "International support"
-titleSuffix: "Configuration Manager"
-description: "Configure Configuration Manager to comply with specific international requirements."
+title: International support
+titleSuffix: Configuration Manager
+description: Configure Configuration Manager to comply with specific international requirements.
 ms.date: 10/06/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 46dd9cb2-a812-4b6a-a747-b840f92fef8b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # International support in Configuration Manager
 

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use OEMConfig on Android Enterprise devices in Microsoft Intune - Azure | Microsoft Docs
+title: Use OEMConfig on Android Enterprise devices in Microsoft Intune
 description: Use Microsoft Intune to manage and use devices running Android Enterprise with OEMConfig. See all the steps, including an overview, see the prerequisites, create the configuration profile in Intune, and see a list of supported OEMConfig apps.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/07/2021
+ms.date: 01/26/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -180,30 +180,35 @@ Compared to standard apps, OEMConfig apps expand the managed configurations priv
 | Bartec | com.bartec.oemconfig | |
 | Bluebird | com.bluebird.android.oemconfig | |
 | Cipherlab | com.cipherlab.oemconfig.common | |
+| Crosscall | com.hmct.crosscalloemconfig | |
 | Datalogic | com.datalogic.settings.oemconfig | |
 | Ecom - Ex-Handy 10 | com.ecom.econfig | |
 | Ecom - Smart-Ex 02 | com.ecom.econfig.smart | |
+| Getac | com.getac.app.getacoemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
 | Honeywell - Scanpal EDA | com.honeywell.oemconfig.scanpal | |
 | HMDGlobal - 7.2 | com.hmdglobal.app.oemconfig.n7_2 | 
 | HMDGlobal - 4.2 | com.hmdglobal.app.oemconfig.n4_2 |
 | HMDGlobal - 5.3 | com.hmdglobal.app.oemconfig.n5_3 |
+| HMDGlobal - OEMConfig | com.hmdglobal.app.oemconfig |
 | imotion | com.iwaylink.oemconfig | |
 | Janam | com.janam.oemconfig | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
 | Lenovo | com.lenovo.oemconfig.rel | |
 | LG | com.lge.android.oemconfig | |
-| Motorola | com.motorolasolutions.lexoemconfig | |
+| Motorola Solutions | com.motorolasolutions.lexoemconfig | |
+| Motorola Mobility | com.motorola.oemconfig.rel | [Moto OEMConfig Guide](https://motorola-global-portal.custhelp.com/app/answers/prod_answer_detail/a_id/160503 ) |
 | Panasonic | com.panasonic.mobile.oemconfig | |
 | Point Mobile | device.apps.emkitagent | |
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/knox-service-plugin/admin-guide/index.htm) |
-| Seuic | com.seuic.seuicoemconfig | |
+| Seuic | com.seuic.seuicoemconfig | | 
 | Social Mobile | com.rhinomobility.oemconfig | |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |
 | Spectralink - Buttons | com.spectralink.buttons |  |
 | Spectralink - Device | com.spectralink.slnkdevicesettings  |  |
 | Spectralink - Logging | com.spectralink.slnklogger |  |
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
+| Sunmi | com.sunmi.oemconfig.V2S | |
 | Unitech Electronics | com.unitech.oemconfig | |
 | Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig ) |
 

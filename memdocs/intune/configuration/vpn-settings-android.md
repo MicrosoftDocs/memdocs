@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Use VPN settings for Android devices in Microsoft Intune - Azure | Microsoft Docs
+title: Use VPN settings for Android devices in Microsoft Intune
 description: See all the settings to create VPN connections on Android devices in Microsoft Intune. Enter the connection name, IP address or FQDN of the VPN server, choose how users authenticate, and choose Citrix, SonicWall, Check Point Capsule, and Pulse Secure connection types.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 11/12/2020
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -38,7 +38,9 @@ As an Intune administrator, you can create and assign VPN settings to Android de
 
 ## Before you begin
 
-Create an [Android device administrator VPN device configuration profile](vpn-settings-configure.md).
+- Create an [Android device administrator VPN device configuration profile](vpn-settings-configure.md).
+
+- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
 
 ## Base VPN
 

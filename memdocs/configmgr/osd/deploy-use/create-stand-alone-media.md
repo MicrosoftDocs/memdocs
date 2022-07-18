@@ -2,14 +2,14 @@
 title: Create stand-alone media
 titleSuffix: Configuration Manager
 description: Use stand-alone media to deploy the OS on a computer without a network connection.
-ms.date: 05/02/2019
+ms.date: 03/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: c6b9ccd2-78d9-4f0e-b25a-70d0866300ba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create stand-alone media
@@ -31,7 +31,7 @@ Use stand-alone media with the following OS deployment scenarios:
 
 Stand-alone media includes the task sequence that automates the steps to install the OS, and all other required content. This content includes the boot image, OS image, and device drivers. Because the stand-alone media stores everything to deploy the OS, it requires more disk space than required for other types of media.
 
-When you create stand-alone media on a central administration site, the client retrieves its assigned site code from Active Directory. Stand-alone media created at child sites automatically assigns to the client the site code for that site.  
+When you create stand-alone media on a CAS, the client retrieves its assigned site code from Active Directory. Stand-alone media created at child sites automatically assigns to the client the site code for that site.  
 
 
 ## Prerequisites
@@ -64,16 +64,27 @@ The following actions aren't supported for stand-alone media:
 
 - The **Use pre-production client package when available** setting in the **Setup Windows and ConfigMgr** task sequence step. For more information about this setting, see [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr).  
 
-> [!NOTE]  
-> An error might occur if your task sequence includes the [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site. The central administration site doesn't have the necessary client configuration policies. These policies are required to enable the software distribution agent when the task sequence runs. The following error might appear in the **CreateTsMedia.log** file:  
->
-> `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`
->
-> For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled.
->
-> Alternatively, use a custom [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step. Add it after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step. The **Run Command Line** step runs the following WMIC command to enable the software distribution agent before the first Install Package step:  
->
-> `WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE`
+#### Known issue with Install Package step and media created at the central administration site
+
+An error might occur if your task sequence includes the [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site (CAS). The CAS doesn't have the necessary client configuration policies. These policies are required to enable the software distribution agent when the task sequence runs. The following error might appear in the **CreateTsMedia.log** file: `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`
+
+For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled.
+
+Alternatively, use a custom [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) step. Add it after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step. The **Run PowerShell Script** step runs the following commands to enable the software distribution agent before the first Install Package step:
+
+```powershell
+$namespace = "root\ccm\policy\machine\requestedconfig"
+$class = "CCM_SoftwareDistributionClientConfig"
+$classArgs = @{
+    ComponentName = 'Enable SWDist'
+    Enabled = 'true'
+    LockSettings='TRUE'
+    PolicySource='local'
+    PolicyVersion='1.0'
+    SiteSettingsKey='1'
+}
+Set-WmiInstance -Namespace $namespace -Class $class -Arguments $classArgs -PutType CreateOnly
+```
 
 ### Distribute all content associated with the task sequence
 
@@ -125,9 +136,9 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
         > [!IMPORTANT]  
         > If you select an existing .iso image, the Task Sequence Media Wizard deletes that image from the drive or share as soon as you proceed to the next page of the wizard. The existing image is deleted, even if you then cancel the wizard.  
 
-    - **Staging folder**<!--1359388-->: The media creation process can require a lot of temporary drive space. By default this location is similar to the following path: `%UserProfile%\AppData\Local\Temp`. Starting in version 1902, to give you greater flexibility with where to store these temporary files, change this value to another drive and path.  
+    - **Staging folder**<!--1359388-->: The media creation process can require a lot of temporary drive space. By default this location is similar to the following path: `%UserProfile%\AppData\Local\Temp`. To give you greater flexibility with where to store these temporary files, change this value to another drive and path.  
 
-    - **Media label**<!--1359388-->: Starting in version 1902, add a label to task sequence media. This label helps you better identify the media after you create it. The default value is `Configuration Manager`. This text field appears in the following locations:  
+    - **Media label**<!--1359388-->: Add a label to task sequence media. This label helps you better identify the media after you create it. The default value is `Configuration Manager`. This text field appears in the following locations:  
 
         - If you mount an ISO file, Windows displays this label as the name of the mounted drive  
 
@@ -135,7 +146,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
         - Configuration Manager writes a text file called `MediaLabel.txt` to the root of the media. By default, the file includes a single line of text: `label=Configuration Manager`. If you customize the label for media, this line uses your custom label instead of the default value.  
 
-    - **Include autorun.inf file on media**<!-- 4090666 -->: Starting in version 1906, Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
+    - **Include autorun.inf file on media**<!-- 4090666 -->: Configuration Manager doesn't add an autorun.inf file by default. This file is commonly blocked by antimalware products. For more information on the AutoRun feature of Windows, see [Creating an AutoRun-enabled CD-ROM Application](/windows/desktop/shell/autoplay). If still necessary for your scenario, select this option to include the file.  
 
 5. On the **Security** page, specify the following options:
 
@@ -163,7 +174,7 @@ Before you run the Create Task Sequence Media Wizard to create media for a CD or
 
 10. On the **Distribution Points** page, specify the distribution points that contain the required content.  
 
-    Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute content referenced by a task sequence](manage-task-sequences-to-automate-tasks.md#BKMK_DistributeTS) and [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+    Configuration Manager only displays distribution points that have the content. Distribute all of the content associated with the task sequence to at least one distribution point before you continue. After you distribute the content, refresh the distribution point list. Remove any distribution points that you already selected on this page, go to the previous page, and then back to the **Distribution Points** page. Alternatively, restart the wizard. For more information, see [Distribute referenced content](distribute-task-sequence-referenced-content.md) and [Manage content and content infrastructure](../../core/servers/deploy/configure/manage-content-and-content-infrastructure.md).  
 
 11. On the **Customization** page, specify the following options:  
 

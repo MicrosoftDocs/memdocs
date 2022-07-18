@@ -1,6 +1,7 @@
 ---
 title: "SMS_MeterData Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MeterData Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents captured software metering data."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5e7733bb-3c1f-4b84-a7ff-9c100411b7cb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

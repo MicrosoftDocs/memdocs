@@ -1,4 +1,5 @@
 ---
+description: Learn how to check the state of an empty driver source folder with CheckSourceFolder class im Configuration Manager.
 title: "CheckSourceFolder Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 6b72a1e3-42c3-4481-ab79-f1199d187a28
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "UpdateAutoUpgradeClientContent Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that updates auto-upgrade client content to all distribution points."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5d5ec525-bed2-424b-bfb2-23ea8931fe6a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: SMS_TaskSequence_EnableBitLockerAction class
 titleSuffix: Configuration Manager
+description: "The SMS_TaskSequence_EnableBitLockerAction WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that enables the BitLocker encryption on the specified drive."
 ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5093946d-e8a5-458f-9af7-6618cf202385
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # SMS_TaskSequence_EnableBitLockerAction server WMI class

@@ -1,18 +1,18 @@
 ---
 # required metadata
 
-title: Add Microsoft Edge for Windows 10 to Microsoft Intune
+title: Add Microsoft Edge for Windows 10/11 to Microsoft Intune
 titleSuffix:
 description: Learn about adding Microsoft Edge for Windows to Microsoft Intune.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 
 
@@ -26,10 +26,12 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Windows
 ---
 
-# Add Microsoft Edge for Windows 10 to Microsoft Intune
+# Add Microsoft Edge for Windows 10/11 to Microsoft Intune
 
 Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run Windows 10.
 
@@ -76,9 +78,9 @@ In this step, you provide information about this app deployment. This informatio
 In this step, configure installation options for the app.
 
 1. In the **Add App** pane, select **App settings**.
-2. In the **App settings** pane, select either **Stable**, **Beta** or **Dev** from the **Channel** list to determine which Edge Channel you will deploy the app from.
-    - **Stable** channel is the recommended channel for deploying broadly in Enterprise environments. It updates every six weeks, each release incorporating improvements from the Beta channel.
-    - **Beta** channel is the most stable Microsoft Edge preview experience and the best choice for a full pilot within your organization. With major updates every six weeks, each release incorporates the learnings and improvements from the Dev channel.
+2. In the **App settings** pane, select either **Stable**, **Beta** or **Dev** from the **Channel** list to determine which Edge Channel you will deploy the app from. For more information, see [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule).
+    - **Stable** channel is the recommended channel for deploying broadly in Enterprise environments. It updates every four weeks, each release incorporating improvements from the Beta channel.
+    - **Beta** channel is the most stable Microsoft Edge preview experience and the best choice for a full pilot within your organization. With major updates every four weeks, each release incorporates the learnings and improvements from the Dev channel.
     - **Dev** channel is ready for enterprise feedback on Windows, Windows Server and macOS. It updates every week and contains the latest improvements and fixes.
 
     > [!NOTE]

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Microsoft Enterprise SSO plug-in in Microsoft Intune - Azure | Microsoft Docs
+title: Microsoft Enterprise SSO plug-in in Microsoft Intune
 description: Add or create an iOS, iPadOS, or macOS device profile using the Microsoft Enterprise SSO plug-in in Microsoft Intune. See if Azure AD or Kerberos authentication is right for your organization.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/27/2021
+ms.date: 07/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: 
+ms.reviewer: beflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -33,7 +33,7 @@ The Microsoft Enterprise SSO plug-in (preview) provides a single sign-on (SSO) t
 
 Once set up, apps that support the Microsoft Authentication Library (MSAL) automatically take advantage of the Microsoft Enterprise SSO plug-in (preview). Apps that don't support MSAL can be allowed to use the extension. Just add the application bundle ID or prefix to the extension configuration.  
 
-For example, to allow a Microsoft app that doesn't support MSAL, add `com.microsoft.` to the **AppPrefixAllowList** property. Be careful with the apps you allow. They automatically use the user's credentials to authenticate.
+For example, to allow a Microsoft app that doesn't support MSAL, add `com.microsoft.` to the **AppPrefixAllowList** property. Be careful with the apps you allow, they will be able to bypass interactive login prompts for the signed in user.
 
 For more information, see [Microsoft Enterprise SSO plug-in for Apple devices - apps that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#applications-that-dont-use-msal).  
 
@@ -71,7 +71,7 @@ To use the Microsoft Enterprise SSO plug-in for Apple devices:
 
 In Intune, when you use the SSO app extension, you use **Microsoft Azure AD** or **Kerberos** for authentication. The SSO app extension is designed to improve the sign-in experience for apps and websites that use these authentication methods.
 
-The Microsoft Enterprise SSO plug-in uses the SSO app extension with **Microsoft Azure AD** authentication. The Microsoft Azure AD and Kerberos extension types can both be used on a device. Be sure to create separate device profiles.
+The Microsoft Enterprise SSO plug-in uses the SSO app extension with **Microsoft Azure AD** authentication. The Microsoft Azure AD and Kerberos extension types can both be used on a device at the same time. Be sure to create separate device profiles for each extension type you plan to use on your devices.
 
 To determine the correct SSO extension type for your scenario, use the following table:
 
@@ -150,6 +150,10 @@ When the device checks in with the Intune service, it will receive this profile.
   :::image type="content" source="./media/use-enterprise-sso-plug-in-ios-ipados-macos/user-signs-in.png" alt-text="Users signs in to app or website to bootstrap the SSO app extension on iOS/iPadOS and macOS devices in Microsoft Intune.":::
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
+
+On macOS, users are prompted to opt in or out of SSO when they sign in to a work or school app. They can select **Don’t ask me again** to opt out of SSO and block future requests about it.
+
+Users can also manage their SSO preferences in the Company Portal app for macOS. To edit preferences, send them to the Company Portal menu bar > **Company Portal** > **Preferences** and tell them to select or deselect **Don’t ask me to sign in with single sign-on for this device**.    
 
 ## Next steps
 

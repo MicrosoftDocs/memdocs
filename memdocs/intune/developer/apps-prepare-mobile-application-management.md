@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/18/2021
+ms.date: 12/01/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -38,7 +38,7 @@ The App Wrapping Tool is used primarily for **internal** line-of-business (LOB) 
 
 You don't need the source code to use the tool, but you do need signing credentials. For more about signing credentials, see the [Intune blog](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). For the App Wrapping Tool documentation, see [Android App Wrapping Tool](app-wrapper-prepare-android.md) and [iOS App Wrapping Tool](app-wrapper-prepare-ios.md).
 
-The App Wrapping Tool does **not** support apps in the Apple App Store or Google Play Store. It also doesn't support certain features that require developer integration (see the following feature comparison table).
+The App Wrapping Tool does **not** support apps in or available in the Apple App Store or Google Play Store. It also doesn't support certain features that require developer integration (see the following feature comparison table).
 
 For more information about the App Wrapping Tool for app protection policies on devices that are not enrolled in Intune, see [Protect line-of-business apps and data on devices not enrolled in Microsoft Intune](../apps/apps-add.md).
 
@@ -48,7 +48,7 @@ For more information about the App Wrapping Tool for app protection policies on 
 ### Reasons to use the App Wrapping Tool
 
 * Your app does not have built-in data protection features
-* Your app is deployed internally
+* Your app is deployed internally and the app is not available in the Apple App Store or Google Play Store
 * You don't have access to the app's source code
 * You didn't develop the app
 * Your app has minimal user authentication experiences
@@ -83,7 +83,7 @@ To learn more about the SDK, see the [Overview](app-sdk.md). To get started with
 
 ## Not using an app development platform listed above?
 
-The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. While some customers have had success with Intune SDK integration with other platforms such as React Native and NativeScript, we do not provide explicit guidance or plugins for app developers using anything other than our supported platforms. 
+The Intune SDK development team actively tests and maintains support for apps built with the native Android, iOS (Obj-C, Swift), Xamarin, and Xamarin.Forms platforms. Guidance is not provided for other platforms, but it is possible to use the native SDK to create your own plug-ins.
 
 ## Feature comparison
 

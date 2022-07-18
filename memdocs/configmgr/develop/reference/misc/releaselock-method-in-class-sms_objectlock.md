@@ -1,6 +1,8 @@
 ---
 title: "ReleaseLock Method"
 titleSuffix: "Configuration Manager"
+description: "The ReleaseLock Windows Management Instrumentation (WMI) class method releases a lock to a global object."  
+
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +11,8 @@ ms.assetid: a5a94aba-ab32-4971-86aa-4e0266c37028
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "SMS_G_System_SoftwareUsageData Class"
 titleSuffix: "Configuration Manager"
+description: "Provides a view of raw metering data that combines file and user information with the raw data."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 01100026-63ae-4455-8462-218445b0df11
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

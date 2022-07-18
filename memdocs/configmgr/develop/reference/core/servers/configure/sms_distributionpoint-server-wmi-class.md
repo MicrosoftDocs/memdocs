@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a distribution point from which a given package has been distributed to clients in Configuration Manager.
 title: SMS_DistributionPoint class
 titleSuffix: Configuration Manager
 ms.date: 05/24/2019
@@ -9,6 +10,8 @@ ms.assetid: f639d294-8617-43a8-adad-6fb2a4590a5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "SMS_HealthAttestationDetails Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_HealthAttestationDetails Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents Health Attestation details.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: b402a603-f1cf-417a-a9f4-2f6bb79fd042
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

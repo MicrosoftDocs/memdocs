@@ -1,5 +1,6 @@
 ---
 title: "Configuration Manager Console Views"
+description: "Configuration Manager console views are displayed in the results pane of the Configuration Manager console."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -8,6 +9,8 @@ ms.assetid: cf102999-d4b1-46c9-a7cb-2af86423f140
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

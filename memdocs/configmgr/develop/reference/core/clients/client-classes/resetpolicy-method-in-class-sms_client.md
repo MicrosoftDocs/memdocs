@@ -1,4 +1,5 @@
 ---
+description: Learn how to reset the policy on a client resulting in the next policy request receiving a full policy in Configuration Manager.
 title: "ResetPolicy Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: c6f4411d-b917-4767-8f8b-3e165edbb9eb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
@@ -42,7 +45,7 @@ UInt32 ResetPolicy(
  A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
 
 ## Remarks  
- Indiscriminate calling of this method could have adverse affects. For example, if you purge the existing policy (`ulFlags` = 1) software distribution programs could be run more than once. If the request is for full policy (`ulFlags` = 0), you could generate unnecessary network traffic.  
+ Indiscriminate calling of this method could have adverse effects. For example, if you purge the existing policy (`ulFlags` = 1) software distribution programs could be run more than once. If the request is for full policy (`ulFlags` = 0), you could generate unnecessary network traffic.  
 
 ## Requirements  
 

@@ -9,7 +9,9 @@ ms.assetid: 718afd29-a3cc-436a-9cb7-7e35e0e77f59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
+ms.localizationpriority: null
+ms.collection: openauth
+description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_TaskSequence_RebootAction server class.
 
 ---
 # SMS_TaskSequence_RebootAction Server WMI Class

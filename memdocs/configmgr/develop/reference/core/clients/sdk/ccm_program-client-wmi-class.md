@@ -1,6 +1,7 @@
 ---
 title: "CCM_Program Class"
 titleSuffix: "Configuration Manager"
+description: "A client class, in Configuration Manager, that represents a legacy software distribution program on the client."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 2c024101-cb8e-4185-b3b2-6b9c509f7919
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

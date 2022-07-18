@@ -1,4 +1,5 @@
 ---
+description: Article outlining how to delete a certificate for a user with DeleteForUser class method in Configuration Manager.
 title: "DeleteForUser Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: af6c7a1c-824e-4ccd-ac51-c3b20df3d543
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

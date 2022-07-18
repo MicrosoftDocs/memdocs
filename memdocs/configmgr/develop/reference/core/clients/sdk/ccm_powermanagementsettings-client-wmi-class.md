@@ -1,6 +1,7 @@
 ---
 title: "CCM_PowerManagementSettings Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CCM_PowerManagementSettings Windows Management Instrumentation class is an SMS Provider server class that contains methods to help manage client power management settings."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a9fd731b-0899-4d34-a8f7-7532d07df608
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

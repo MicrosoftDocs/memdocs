@@ -1,7 +1,7 @@
 ---
 title: Office 365 Client Management dashboard
-titleSuffix: "Configuration Manager"
-description: "Review Microsoft 365 Apps client information from the Office 365 Client Management dashboard"
+titleSuffix: Configuration Manager
+description: Review Microsoft 365 Apps client information from the Office 365 Client Management dashboard
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -9,9 +9,7 @@ ms.date: 03/05/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 69f234a2-b04b-445a-b81f-6b4acfc00eaf
-
-
+ms.localizationpriority: medium
 ---
 
 # Office 365 Client Management dashboard
@@ -215,6 +213,9 @@ After verifying you have the [prerequisites](#prerequisites), use the following 
 ### Generate pilot
 
 Generate a pilot recommendation from a limiting collection at the click of a button. As soon as the action is launched, a background task starts calculating your pilot collection. Your limiting collection must contain at least one device with an Office version that isn't Office 365 Apps.
+
+> [!NOTE]
+> The **All Desktop and Server Clients (Office Pilot)** collection is managed by Configuration Manager. Manual changes aren't supported. If you delete or edit this collection, the pilot deployment won't work. <!--12610779-->
 
 ### Recommended pilot devices
 

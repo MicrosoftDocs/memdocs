@@ -2,16 +2,14 @@
 title: Create SCEP certificate profiles
 titleSuffix: Configuration Manager
 description: Learn how to use certificate profiles to provision managed devices with the certificates they need
-ms.date: 04/05/2021
+ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 634d612c-92d7-4c03-873a-b2e730c9a72d
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Create certificate profiles
@@ -19,7 +17,7 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
+> Starting in version 2203, this company resource access feature is no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](../plan-design/resource-access-deprecation-faq.yml).
 
 Use certificate profiles in Configuration Manager to provision managed devices with the certificates they need to access company resources. Before creating certificate profiles, set up the certificate infrastructure as described in [Set up certificate infrastructure](certificate-infrastructure.md).  
 
@@ -111,7 +109,7 @@ Complete the **SCEP Enrollment** page of the Create Certificate Profile Wizard.
 
   - **Install to Trusted Platform Module (TPM) otherwise fail**: Installs the key to the TPM. If the TPM module isn't present, the installation fails.  
 
-  - **Install to Windows Hello for Business otherwise fail**: This option is available for Windows 10 devices. It allows you to store the certificate in the Windows Hello for Business store, which is protected by multi-factor authentication. For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
+  - **Install to Windows Hello for Business otherwise fail**: This option is available for Windows 10 or later devices. It allows you to store the certificate in the Windows Hello for Business store, which is protected by multi-factor authentication. For more information, see [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-identity-verification).
 
     > [!NOTE]  
     > This option doesn't support Smart card logon for the Enhanced key usage on the Certificate Properties page.

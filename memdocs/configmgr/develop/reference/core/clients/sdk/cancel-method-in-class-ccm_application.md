@@ -1,4 +1,5 @@
 ---
+description: Learn how to cancel an application deployment using the Cancel class method in Configuration Manager.
 title: "Cancel Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 6e3884b5-1598-4c54-b22a-da4518dea323
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

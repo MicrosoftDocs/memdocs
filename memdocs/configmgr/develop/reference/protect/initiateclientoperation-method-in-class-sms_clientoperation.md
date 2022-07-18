@@ -1,6 +1,7 @@
 ---
 title: "InitiateClientOperation Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the InitiateClientOperation WMI class method initiates a client operation." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 0ec680b1-981e-4da4-81f0-7eab784ef2dc
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

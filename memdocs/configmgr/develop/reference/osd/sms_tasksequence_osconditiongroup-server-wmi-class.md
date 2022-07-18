@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager SMS_TaskSequence_OSConditionGroup Windows Management Instrumentation (WMI) class  to represent an evaluation of a group of operating system platforms.
 title: "SMS_TaskSequence_OSConditionGroup Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 89182703-07ff-410a-9406-f2424eca5550
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

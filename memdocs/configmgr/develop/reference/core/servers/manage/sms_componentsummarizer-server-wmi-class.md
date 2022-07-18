@@ -1,6 +1,7 @@
 ---
 title: "SMS_ComponentSummarizer Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ComponentSummarizer WMI class is an SMS Provider server class that represents a component summarizer that reports on the health of individual components."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 79363139-dce4-47c0-9c16-8a3979d2e4df
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

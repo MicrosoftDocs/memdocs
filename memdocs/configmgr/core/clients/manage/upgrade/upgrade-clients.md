@@ -2,143 +2,148 @@
 title: Upgrade clients
 titleSuffix: Configuration Manager
 description: Get information about how to upgrade clients in Configuration Manager.
-ms.date: 04/23/2017
+ms.date: 07/23/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 446c83b5-c292-4e74-ba19-0792ac6b3472
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Upgrade clients in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-You can use different methods to upgrade the Configuration Manager client software on Windows computers and Mac computers. Here are the advantages and disadvantages of each method.  
+You can use different methods to upgrade the Configuration Manager client software on Windows computers and Mac computers. Here are the advantages and disadvantages of each method.
 
-> [!TIP]  
->  If you are upgrading your server infrastructure from a previous version of Configuration Manager \(such as Configuration Manager 2007 or System Center 2012 Configuration Manager\), we recommend that you complete the server upgrades including installing all current branch updates, before upgrading the Configuration Manager clients. This way, you'll also have the most recent version of the client software.  
+> [!TIP]
+> If you are upgrading your server infrastructure from System Center 2012 Configuration Manager, before upgrading the Configuration Manager clients, complete the server upgrades including installing all current branch updates. This process makes sure that you'll have the most recent version of the client software.
 
-## Group Policy installation  
- **Supported client platform:** Windows  
+## Group Policy installation
 
-#### Advantages  
+Supported client platform: **Windows**
 
-- Does not require computers to be discovered before the client can be upgraded.  
+Advantages:
 
-- Can be used for new client installations or for upgrades.  
+- Doesn't require computers to be discovered before the client can be upgraded.
 
-- Computers can read client installation properties that have been published to Active Directory Domain Services.  
+- Can be used for new client installations or for upgrades.
 
-- Does not require you to configure and maintain an installation account for the intended client computer.  
+- Computers can read client installation properties that have been published to Active Directory Domain Services.
 
-#### Disadvantages  
+- Doesn't require you to configure and maintain an installation account for the intended client computer.
 
-- Can cause high network traffic if you're upgrading a lot of clients.  
+Disadvantages:
 
-- If the Active Directory schema is not extended for Configuration Manager, you must use [Group Policy settings](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP) to add client installation properties to computers in your site.  
+- Can cause high network traffic if you're upgrading many clients.
 
+- If you don't extend the Active Directory schema for Configuration Manager, use [Group Policy settings](../../deploy/deploy-clients-to-windows-computers.md#BKMK_ClientGP). These settings add client installation properties to computers in your site.
 
-## Logon script installation  
- **Supported client platform:** Windows  
+## Logon script installation
 
-#### Advantages  
+Supported client platform: **Windows**
 
-- Does not require computers to be discovered before the client can be installed.  
+Advantages:
 
-- Can be used for new client installations or for upgrades.  
+- Doesn't require computers to be discovered before the client can be installed.
 
-- Supports using command-line properties for CCMSetup.  
+- Can be used for new client installations or for upgrades.
 
-#### Disadvantages  
+- Supports using command-line properties for CCMSetup.
 
-- Can cause high network traffic if you're upgrading a lot of clients in a short time.  
+Disadvantages:
 
-- Can take a long time to upgrade all client computers if users do not frequently log on to the network.  
+- Can cause high network traffic if you're upgrading many clients in a short time.
 
-  For more information, see [How to Install Configuration Manager Clients by Using Logon Scripts](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript).  
+- Can take a long time to upgrade all client computers if users don't frequently sign in to the network.
 
-## Manual installation  
- **Supported client platform:** Windows, macOS X  
+For more information, see [How to install clients by using logon scripts](../../deploy/deploy-clients-to-windows-computers.md#BKMK_ClientLogonScript).
 
-#### Advantages  
+## Manual installation
 
-- Does not require computers to be discovered before the client can be upgraded.  
+Supported client platform: **Windows**, **macOS**
 
-- Can be useful for testing purposes.  
+Advantages:
 
-- Supports using command-line properties for CCMSetup.  
+- Doesn't require computers to be discovered before the client can be upgraded.
 
-#### Disadvantages  
+- Can be useful for testing purposes.
 
-- No automation, therefore time consuming.  
+- Supports using command-line properties for CCMSetup.
 
-  For more information, see the following topics:  
+Disadvantages:
 
-- [How to Install Configuration Manager Clients Manually](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)  
+- No automation, so can be time consuming.
 
-- [How to upgrade clients on Mac computers](../../../../core/clients/manage/upgrade/upgrade-clients-on-mac-computers.md)  
+For more information, see the following articles:
 
-## Upgrade installation (application management)  
- **Supported client platform:** Windows  
+- [How to install clients manually](../../deploy/deploy-clients-to-windows-computers.md#BKMK_Manual)
 
-> [!NOTE]  
->  You cannot upgrade Configuration Manager 2007 clients with this method. In this scenario, you can deploy the Configuration Manager client as a package from the Configuration Manager 2007 site, or you can use automatic client upgrade which automatically creates and deploys a package that contains the latest version of the client.  
+- [How to upgrade clients on Mac computers](upgrade-clients-on-mac-computers.md)
 
-#### Advantages  
+## Upgrade installation (application management)
 
-- Supports using command-line properties for CCMSetup.  
+Supported client platform: **Windows**
 
-#### Disadvantages  
+Advantages:
 
-- Can cause high network traffic if you distribute the client to large collections.  
+- Supports using command-line properties for CCMSetup.
 
-- Can only be used to upgrade the client software on computers that have been discovered and assigned to the site.  
+Disadvantages:
 
-  For more information, see [How to Install Configuration Manager Clients by Using a Package and Program](../../../../core/clients/deploy/deploy-clients-to-windows-computers.md#BKMK_ClientApp).  
+- Can cause high network traffic if you distribute the client to large collections.
 
-## Automatic client upgrade  
+- Can only be used to upgrade the client software on computers that have been discovered and assigned to the site.
 
-> [!NOTE]  
-> Can be used to upgrade Configuration Manager 2007 clients to Configuration Manager current branch clients. A Configuration Manager 2007 client can assign to a Configuration Manager site, but cannot perform any actions besides automatic client upgrade.  
+For more information, see [How to install clients by using a package and program](../../deploy/deploy-clients-to-windows-computers.md#BKMK_ClientApp).
 
- **Supported client platform:** Windows  
+## Automatic client upgrade
 
-#### Advantages  
+Supported client platform: **Windows**
 
-- Because of the randomization over the specified period, only auto-upgrade is suitable for large-scale client upgrades. Other methods are either too slow on large scale, or don't have randomization. 
+Advantages:
 
-    > [!Note]
-    > Client piloting isn't good for large scale as it doesn't randomize at all.  
-- Can be used to automatically keep clients in your site at the latest version.  
+- Because of the randomization over the specified period, only auto-upgrade is suitable for large-scale client upgrades. Other methods are either too slow on large scale, or don't have randomization.
 
-- Requires minimal administration.  
+  > [!NOTE]
+  > Client piloting isn't good for large scale as it doesn't randomize at all.
 
-#### Disadvantages  
+- Can be used to automatically keep clients in your site at the latest version.
 
-- Can only be used to upgrade the client software and cannot be used to install a new client.  
+- Requires minimal administration.
 
-- Applies to all clients in the hierarchy that are assigned to a site. Cannot be scoped by collection.  
+Disadvantages:
 
-- Limited scheduling options.  
+- Can only be used to upgrade the client software and can't be used to install a new client.
 
-  For more information, see [How to upgrade clients for Windows computers](../../../../core/clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+- Applies to all clients in the hierarchy that are assigned to a site. Can't be scoped by collection.
 
-## Client testing  
- **Supported client platform:** Windows  
+- Limited scheduling options.
 
-#### Advantages  
+For more information, see [How to upgrade clients for Windows computers](upgrade-clients-for-windows-computers.md).
 
-- Can be used to test new client versions in a smaller pre-production collection.  
+## Client testing
 
-- When testing is complete, clients in pre-production are promoted to production and automatically upgraded across the Configuration Manager site.  
+Supported client platform: **Windows**
 
-#### Disadvantages  
+Advantages:
 
-- Can only be used to upgrade the client software and cannot be used to install a new client.  
+- Can be used to test new client versions in a smaller pre-production collection.
 
-  [How to test client upgrades in a pre-production collection](../../../../core/clients/manage/upgrade/test-client-upgrades.md)  
+- When testing is complete, clients in pre-production are promoted to production and automatically upgraded across the Configuration Manager site.
+
+Disadvantages:
+
+- Can only be used to upgrade the client software and can't be used to install a new client.
+
+For more information, see [How to test client upgrades in a pre-production collection](test-client-upgrades.md).
+
+## Next steps
+
+[How to test client upgrades in a pre-production collection](test-client-upgrades.md)
+
+[How to exclude clients from upgrade](exclude-clients-windows.md)
+
+[How to upgrade clients for Windows computers](upgrade-clients-for-windows-computers.md)

@@ -5,8 +5,8 @@ title: Enroll Android Enterprise personally-owned work profile devices in Intune
 titleSuffix: Microsoft Intune
 description: Learn how to enroll Android Enterprise personally-owned work profile devices in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 2/10/2021
 ms.topic: how-to
@@ -26,14 +26,16 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Set up enrollment of Android Enterprise personally-owned work profile devices
 
 Intune helps you deploy apps and settings to Android Enterprise personally-owned work profile devices to make sure work and personal information are separate. For specific details about Android Enterprise, see [Android Enterprise requirements](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012).
 
-To set up Android Enterprise personally-owned work profile management, follow these steps:
+To set up [Android Enterprise personally-owned work profile](../apps/android-deployment-scenarios-app-protection-work-profiles.md#android-enterprise-personally-owned-work-profiles) management, follow these steps:
 
 1. [Connect your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
 2. Specify Android Enterprise work profile enrollment settings. Android Enterprise personally-owned work profiles are [supported on only certain Android devices](https://support.google.com/work/android/answer/6174145?hl=en&ref_topic=6151012%20style=%22target=new_window%22). Any device that supports Android Enterprise personally-owned work profiles also supports Android device administrator management. Intune lets you specify how devices that support work profiles should be managed from within [Enrollment Restrictions](enrollment-restrictions-set.md).

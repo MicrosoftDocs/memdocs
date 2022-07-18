@@ -6,10 +6,10 @@ ms.date: 06/05/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: d17e1188-d277-438f-9236-db9cd213b421
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Collection evaluation in Configuration Manager
@@ -106,4 +106,3 @@ In the following example, installing DNS on the existing server makes it a membe
 - [Best practices for collections](best-practices-for-collections.md)
 - [View collection evaluation (starting in version 2010)](collection-evaluation-view.md)
 - [Collection Evaluation Viewer](../../../support/ceviewer.md)
-- [ConfigMgrDogs Troubleshoot ConfigMgr 2012](https://channel9.msdn.com/Events/TechEd/Australia/2014/DCI411) session at TechEd Australia

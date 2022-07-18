@@ -1,6 +1,7 @@
 ---
 title: "RefreshDPGroup Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, WMI class method refreshes all of the member distribution points with the latest version of the targeted packages." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: e5448fd5-9eff-49e3-88d0-2b3299561a37
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

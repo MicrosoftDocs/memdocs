@@ -1,4 +1,5 @@
 ---
+description: Learn how to trigger a re-evaluation of collection membership by the Configuration Manager collection evaluator component.
 title: "RequestRefresh Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: fd7b5351-a3ed-40c2-a629-156f22507f88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

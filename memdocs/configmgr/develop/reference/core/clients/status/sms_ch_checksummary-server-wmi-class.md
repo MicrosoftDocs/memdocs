@@ -1,6 +1,7 @@
 ---
 title: "SMS_CH_CheckSummary Class"
 titleSuffix: "Configuration Manager"
+description: "A provider server class that represents the client check summary."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 21544fbd-26da-4357-a714-69437ca3a7d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

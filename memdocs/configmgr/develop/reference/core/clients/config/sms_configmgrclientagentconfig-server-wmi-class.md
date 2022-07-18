@@ -1,4 +1,5 @@
 ---
+description: Learn how to specify the general settings for communication between server and client using SMS_COnfigMgrClientAgentConfig.
 title: "SMS_ConfigMgrClientAgentConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 8f42cb66-ac17-444c-a93c-bd8af273437d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

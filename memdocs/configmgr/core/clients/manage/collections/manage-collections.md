@@ -2,14 +2,14 @@
 title: Manage collections
 titleSuffix: Configuration Manager
 description: Do common collections management tasks in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 02/17/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-ms.assetid: e102fd1a-76df-4d8e-b1b0-10ee18318f67
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # How to manage collections in Configuration Manager
@@ -108,6 +108,8 @@ Deletes the selected collection. You can also delete all of the resources in the
 
 You can't delete the collections that are built into Configuration Manager. For a list of the built-in collections, see [Introduction to collections](introduction-to-collections.md#built-in-collections).
 
+Starting in version 2203, when you delete a collection, you can review and delete its dependent collections at the same time. For more information, see [Delete collection references](#delete-collection-references).
+
 #### Simulate deployment
 
 Opens the **Simulate Application Deployment Wizard**. This wizard lets you test the results of an application deployment without installing or uninstalling the application. For more information, see [How to simulate application deployments](../../../../apps/deploy-use/simulate-application-deployments.md).
@@ -128,7 +130,7 @@ Displays the following options:
 
 #### View relationships
 
-For more information, see [View collection relationships](#view-collection-relationships).
+For more information, see [View collection relationships](view-relationships.md).
 
 #### Move
 
@@ -137,6 +139,42 @@ Move the selected collection to another folder in the **Device Collections** nod
 #### Properties
 
 For more information, see [Collection properties](#collection-properties).
+
+### Delete collection references
+
+<!--9708999-->
+
+Previously, when you would delete a collection with dependent collections, you first had to delete the dependencies. The process of finding and deleting all of these collections could be difficult and time consuming. Starting in version 2203, when you delete a collection, you can review and delete its dependent collections at the same time.
+
+A new **Details** window shows more information about the relationship types, and lets you [view collection relationships](view-relationships.md) in a graphical chart.
+
+:::image type="content" source="media/9708999-delete-collection-references.png" alt-text="View collection dependencies in list and graphical form when deleting a collection" lightbox="media/9708999-delete-collection-references.png":::
+
+1. Delete a collection that has dependent collections.
+
+1. In the **Delete Collection Error** window, select **Details**.
+
+1. Once the relationship types finish loading, select **View Relationships** to see the graph.
+
+1. If all of the dependent collections can be deleted, select **Delete all listed collections**.
+
+1. Review the list of collections and any software deployments that the site will also remove. You also can **Delete each collection member from the database**.
+
+There are several reasons why the site can't delete a dependent collection:
+
+- **Assigned to user**: For more information, see [Modify the administrative scope of an administrative user](../../../servers/deploy/configure/configure-role-based-administration.md#modify-the-administrative-scope-of-an-administrative-user).
+
+- **Used by cloud attach**: For more information, see [Enable cloud attach for Configuration Manager](../../../../cloud-attach/enable.md).
+
+- **Use for upload to Microsoft Endpoint Manager**: For more information, see [Make Configuration Manager collections available to assign Endpoint security policies](../../../../tenant-attach/endpoint-security-get-started.md#bkmk_collections).
+
+The details window lists collections that can't be deleted with the reason why.
+
+#### Known issue when deleting collection references
+
+<!--13235415-->
+
+Consider the scenario where you're deleting collections with references, and another administrative user is simultaneously creating a reference to a collection that you're deleting. When this behavior occurs, the console displays an error, and the collection isn't deleted.
 
 ### Manage user collections
 
@@ -181,7 +219,7 @@ When you view properties for a collection, you can view and configure the follow
 
 - **Distribution Point Groups**: Associate one or more distribution point groups to members of the selected collection. For more information, see [Manage content and content infrastructure](../../../servers/deploy/configure/manage-content-and-content-infrastructure.md).
 
-- **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. This synchronization is a [pre-release feature](../../../servers/manage/pre-release-features.md). For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
+- **Cloud Sync**: Synchronize collection membership results to Azure Active Directory groups. For more information, see [Create collections](create-collections.md#bkmk_aadcollsync).
 
     Starting in version 2006, you can also make this collection available to assign endpoint security policies when you tenant-attach the site. For more information, see [Tenant attach: Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the admin center](../../../../tenant-attach/atp-onboard.md).
 
@@ -189,119 +227,105 @@ When you view properties for a collection, you can view and configure the follow
 
 - **Alerts**: Configure when alerts are generated for client status and endpoint protection. For more information, see [How to configure client status](../../deploy/configure-client-status.md) and [How to monitor endpoint protection](../../../../protect/deploy-use/monitor-endpoint-protection.md).
 
-## View collection relationships
+## Automate with Windows PowerShell
 
-<!--3608121-->
+You can use the following PowerShell cmdlets to manage collections:
 
-Starting in version 2010, you can view dependency relationships between collections in a graphical format. It shows limiting, include, and exclude relationships.
+### Generic cmdlets for all collection types
 
-:::image type="content" source="media/3608121-view-dependent-relationships.png" alt-text="View collection dependency relationships in a graphical format" lightbox="media/3608121-view-dependent-relationships.png":::
-
-If you want to change or delete collections, view the relationships to understand the effect of the proposed change. Before you create a deployment, look at the potential target collection for any include or exclude relationships that might affect the deployment.
-
-When you select the **View Relationships** action on a device or user collection:
-
-- To view the relationships with parent collections, select **Dependency**.
-
-- To view the relationships with child collections, select **Dependent**.
-
-For example, if you select the **All Systems** collection to view its relationships, the **Dependency** node will be **0** as it has no parent collections.
-
-Use the following tips to navigate the relationship viewer:
-
-- Select the plus (`+`) or minus (`-`) icons next to the collection name to expand or collapse members of a node.
-
-- The number in parentheses after the collection name is the number of relationships. If the number is **0**, then that collection is the final or leaf node in that relationship tree.
-
-- The style and color of the line between the collections determines the type of relationship:
-
-    :::image type="content" source="media/3608121-collection-relationship-legend.png" alt-text="Collection dependency relationship line style legend":::
-
-    If you hover over a specific line, a tooltip shows the relationship type.
-
-- The maximum number of child nodes displayed depends upon the level of the graph:
-  - First level: five nodes
-  - Second level: three nodes
-  - Third level: two nodes
-  - Fourth level: one node
-
-  If there are more objects than the graph can display at that level, you'll see the **More** icon.
-
-- When the width of the tree is larger than the window, use the green arrows to the right or the left to view more.
-
-- When a node of the relationship tree is larger than the available space, select **More** to change the view to just that node.
-
-- To navigate to a prior view, select the **Back** arrow in the upper right corner. Select the **Home** icon to return to the main page.
-
-- Use the **Search** box in the upper right corner to locate a collection in the current tree view.
-
-- Use the **Navigator** in the lower right corner to zoom and pan around the tree. You can also print the current view.
-
-- You can only see relationships between collections to which you have permission:
-
-  - If you have permission for **All Systems** or **All Users and User Groups**, then you'll see all relationships.
-
-  - If you don't have permission for a specific collection, you don't see it in the graph, and can't view its relationships.
-
-### Improvements in version 2103
-
-<!--8543508-->
-
-Starting in version 2103, you can view both dependency and dependent relationships together in a single graph. This change allows you to quickly see an overview of all the relationships of a collection at once and then drill down into specific related collections. It also includes other filtering and navigation improvements.
-
-The following example shows the relationships for the "c1" collection in the center. It's dependent upon the collections above it (parents), and has dependencies below it (children).
-
-:::image type="content" source="media/8543508-view-collection-relationships.png" alt-text="Example graph of collection relationships" lightbox="media/8543508-view-collection-relationships.png":::
-
-To see the relationships of another collection in the graph, select it to open a new window targeted on that collection.
-
-Other improvements:
-
-- There's a new **Filter** button in the upper right corner. This action lets you reduce the graph to specific relationship types: **Limiting**, **Include**, or **Exclude**.
-
-- If you don't have permissions to all related collections, the graph includes a warning message that the graph may be incomplete.
-
-- When the graph is wider than the window can display, use the page navigation controls in the upper left corner. The first number is the page for parents (above), and the second number is the page for children (below). The window title also shows the page numbers.
-
-- The tooltip for a collection displays the count of dependencies it has and the count of dependant collections where applicable. This count only includes unique subcollections. The count no longer displays in the parentheses next to the collection name.
-
-- Previously the **Back** button took you through your viewing history. Now it takes you to the previously selected collection. For example, changing pages for the current collection doesn't activate the **Back** button. When you select a new collection, you can select **Back** to return to the original collection graph.
-
-> [!TIP]
-> Hold the **Ctrl** key and scroll the mouse wheel to zoom the graph.
-
-For more information on how to navigate the collection dependency graph with a keyboard, see [Accessibility features](../../../understand/accessibility-features.md#collection-relationship-diagram-shortcuts).
-
-## PowerShell
-
-You can also use PowerShell to manage collections. For more information, see the following articles:
+#### Basic cmdlets
 
 - [Get-CMCollection](/powershell/module/configurationmanager/get-cmcollection)
-- [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection)
 - [New-CMCollection](/powershell/module/configurationmanager/new-cmcollection)
-- [Copy-CMCollection](/powershell/module/configurationmanager/copy-cmcollection)
 - [Remove-CMCollection](/powershell/module/configurationmanager/remove-cmcollection)
-- [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
+- [Set-CMCollection](/powershell/module/configurationmanager/set-cmcollection)
+
+#### Other actions
+
+- [Copy-CMCollection](/powershell/module/configurationmanager/copy-cmcollection)
 - [Export-CMCollection](/powershell/module/configurationmanager/export-cmcollection)
 - [Get-CMCollectionMember](/powershell/module/configurationmanager/get-cmcollectionmember)
 - [Get-CMCollectionSetting](/powershell/module/configurationmanager/get-cmcollectionsetting)
+- [Import-CMCollection](/powershell/module/configurationmanager/import-cmcollection)
 - [Invoke-CMCollectionUpdate](/powershell/module/configurationmanager/invoke-cmcollectionupdate)
-- [Add-CMCollectionMembershipRule](/powershell/module/configurationmanager/add-cmcollectionmembershiprule)
-- [Set-CMCollectionPowerManagement](/powershell/module/configurationmanager/set-cmcollectionpowermanagement)
-- [Get-CMCollectionMembershipRule](/powershell/module/configurationmanager/get-cmcollectionmembershiprule)
-- [Remove-CMCollectionMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionmembershiprule)
+
+#### Get membership rules
+
 - [Get-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/get-cmcollectiondirectmembershiprule)
-- [Get-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
-- [Get-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
-- [Add-CMCollectionToAdministrativeUser](/powershell/module/configurationmanager/add-cmcollectiontoadministrativeuser)
-- [Remove-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
-- [Remove-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
 - [Get-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionexcludemembershiprule)
-- [Add-CMCollectionToDistributionPointGroup](/powershell/module/configurationmanager/add-cmcollectiontodistributionpointgroup)
-- [Remove-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+- [Get-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmcollectionincludemembershiprule)
+- [Get-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmcollectionquerymembershiprule)
+
+#### Remove membership rules
+
+- [Remove-CMCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmcollectiondirectmembershiprule)
 - [Remove-CMCollectionExcludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionexcludemembershiprule)
-- [Remove-CMCollectionFromAdministrativeUser](/powershell/module/configurationmanager/remove-cmcollectionfromadministrativeuser)
+- [Remove-CMCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionincludemembershiprule)
+- [Remove-CMCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmcollectionquerymembershiprule)
+
+### Device collection-specific cmdlets
+
+#### Basic actions for device collections
+
+- [Get-CMDeviceCollection](/powershell/module/configurationmanager/get-cmdevicecollection)
+- [New-CMDeviceCollection](/powershell/module/configurationmanager/new-cmdevicecollection)
+
+#### Device collection variables
+
+- [Get-CMDeviceCollectionVariable](/powershell/module/configurationmanager/get-cmdevicecollectionvariable)
+- [New-CMDeviceCollectionVariable](/powershell/module/configurationmanager/new-cmdevicecollectionvariable)
+- [Remove-CMDeviceCollectionVariable](/powershell/module/configurationmanager/remove-cmdevicecollectionvariable)
+- [Set-CMDeviceCollectionVariable](/powershell/module/configurationmanager/set-cmdevicecollectionvariable)
+
+#### Add device collection membership rules
+
+- [Add-CMDeviceCollectionDirectMembershipRule](/powershell/module/configurationmanager/add-cmdevicecollectiondirectmembershiprule)
+- [Add-CMDeviceCollectionExcludeMembershipRule](/powershell/module/configurationmanager/add-cmdevicecollectionexcludemembershiprule)
+- [Add-CMDeviceCollectionIncludeMembershipRule](/powershell/module/configurationmanager/add-cmdevicecollectionincludemembershiprule)
+- [Add-CMDeviceCollectionQueryMembershipRule](/powershell/module/configurationmanager/add-cmdevicecollectionquerymembershiprule)
+
+#### Get device collection membership rules
+
+- [Get-CMDeviceCollectionDirectMembershipRule](/powershell/module/configurationmanager/get-cmdevicecollectiondirectmembershiprule)
+- [Get-CMDeviceCollectionExcludeMembershipRule](/powershell/module/configurationmanager/get-cmdevicecollectionexcludemembershiprule)
+- [Get-CMDeviceCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmdevicecollectionincludemembershiprule)
+- [Get-CMDeviceCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmdevicecollectionquerymembershiprule)
+
+#### Remove device collection membership rules
+
+- [Remove-CMDeviceCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmdevicecollectiondirectmembershiprule)
+- [Remove-CMDeviceCollectionExcludeMembershipRule](/powershell/module/configurationmanager/remove-cmdevicecollectionexcludemembershiprule)
+- [Remove-CMDeviceCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmdevicecollectionincludemembershiprule)
+- [Remove-CMDeviceCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmdevicecollectionquerymembershiprule)
+
+### User collection-specific cmdlets
+
+- [Get-CMUserCollection](/powershell/module/configurationmanager/get-cmusercollection)
+- [New-CMUserCollection](/powershell/module/configurationmanager/new-cmusercollection)
+
+#### Add user collection membership rules
+
+- [Add-CMUserCollectionDirectMembershipRule](/powershell/module/configurationmanager/add-cmusercollectiondirectmembershiprule)
+- [Add-CMUserCollectionExcludeMembershipRule](/powershell/module/configurationmanager/add-cmusercollectionexcludemembershiprule)
+- [Add-CMUserCollectionIncludeMembershipRule](/powershell/module/configurationmanager/add-cmusercollectionincludemembershiprule)
+- [Add-CMUserCollectionQueryMembershipRule](/powershell/module/configurationmanager/add-cmusercollectionquerymembershiprule)
+
+#### Get user collection membership rules
+
+- [Get-CMUserCollectionDirectMembershipRule](/powershell/module/configurationmanager/get-cmusercollectiondirectmembershiprule)
+- [Get-CMUserCollectionExcludeMembershipRule](/powershell/module/configurationmanager/get-cmusercollectionexcludemembershiprule)
+- [Get-CMUserCollectionIncludeMembershipRule](/powershell/module/configurationmanager/get-cmusercollectionincludemembershiprule)
+- [Get-CMUserCollectionQueryMembershipRule](/powershell/module/configurationmanager/get-cmusercollectionquerymembershiprule)
+
+#### Remove user collection membership rules
+
+- [Remove-CMUserCollectionDirectMembershipRule](/powershell/module/configurationmanager/remove-cmusercollectiondirectmembershiprule)
+- [Remove-CMUserCollectionExcludeMembershipRule](/powershell/module/configurationmanager/remove-cmusercollectionexcludemembershiprule)
+- [Remove-CMUserCollectionIncludeMembershipRule](/powershell/module/configurationmanager/remove-cmusercollectionincludemembershiprule)
+- [Remove-CMUserCollectionQueryMembershipRule](/powershell/module/configurationmanager/remove-cmusercollectionquerymembershiprule)
 
 ## Next steps
 
 [Client notifications](../client-notification.md)
+
+[View collection relationships](view-relationships.md)

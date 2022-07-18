@@ -1,4 +1,5 @@
 ---
+description: Learn how to use a ManagementObject object to read the Windows Management Instrumentation (WMI) object in Configuration Manager.
 title: "Read a WMI Object by Using System.Management"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 59065142-89c1-40f8-b4c0-83803650c06d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

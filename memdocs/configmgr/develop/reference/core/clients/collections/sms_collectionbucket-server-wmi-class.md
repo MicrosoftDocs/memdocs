@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the joining of collection and bucket with the SMS_CollectionBucket class.
 title: "SMS_CollectionBucket Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: f2591859-78a3-4daa-8ca6-bfcf1db91c68
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

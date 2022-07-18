@@ -1,6 +1,7 @@
 ---
 title: "Unlock Method in SMS_ImagePackage"
 titleSuffix: "Configuration Manager"
+description: "The Unlock Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the image package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 47d22bfe-9839-48d2-948e-b3656db4f820
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

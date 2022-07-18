@@ -1,4 +1,5 @@
 ---
+description: Learn how to relate an SMS Site Server object with an SMS Identification Server object using SMS_SiteToSiteID_a.
 title: "SMS_SiteToSiteID_a Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: b3b16194-ddd8-4407-8f8b-b6f375f3e89d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

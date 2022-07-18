@@ -1,6 +1,7 @@
 ---
 title: "UpdateClassicDeployment Method"
 titleSuffix: "Configuration Manager"
+description: "The UpdateClassicDeployment Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the summarized results for a specific Classic Deployment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: f3c70bc6-229c-4c03-b1a1-ad11ee8e5d62
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

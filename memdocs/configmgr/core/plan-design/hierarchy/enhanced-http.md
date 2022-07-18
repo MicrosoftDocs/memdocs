@@ -2,14 +2,15 @@
 title: Enhanced HTTP
 titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
-ms.date: 08/07/2020
+ms.date: 12/20/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 4deac022-e397-4f1f-bc0a-cea6c6c6368d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Enhanced HTTP
@@ -18,53 +19,47 @@ manager: dougeby
 
 <!--1356889,1358460-->
 
-> [!Tip]  
-> This feature was first introduced in version 1806 as a [pre-release feature](../../servers/manage/pre-release-features.md). Beginning with version 1810, this feature is no longer a pre-release feature.  
+Microsoft recommends using HTTPS communication for all Configuration Manager communication paths, but it's challenging for some customers because of the overhead of managing PKI certificates. With enhanced HTTP, Configuration Manager can provide secure communication by issuing self-signed certificates to specific site systems.
 
-Microsoft recommends using HTTPS communication for all Configuration Manager communication paths, but it's challenging for some customers due to the overhead of managing PKI certificates.
+There are two primary goals for this configuration:
 
-Configuration Manager version 1806 includes improvements to how clients communicate with site systems. There are two primary goals for these improvements:  
+- You can secure sensitive client communication without the need for PKI server authentication certificates.
 
-- You can secure sensitive client communication without the need for PKI server authentication certificates.  
-
-- Clients can securely access content from distribution points without the need for a network access account, client PKI certificate, and Windows authentication.  
+- Clients can securely access content from distribution points without the need for a network access account, client PKI certificate, or Windows authentication.
 
 All other client communication is over HTTP. Enhanced HTTP isn't the same as enabling HTTPS for client communication or a site system.<!-- SCCMDocs issue #1212 -->
 
-> [!Note]  
-> PKI certificates are still a valid option for customers with the following requirements:  
+> [!NOTE]
+> PKI certificates are still a valid option for customers with the following requirements:
 >
-> - All client communication is over HTTPS  
+> - All client communication is over HTTPS
 > - Advanced control of the signing infrastructure
 >
-> Also, If you're already using PKI, the PKI cert bound in IIS will be used even if enhanced HTTP is turned on.
+> If you're already using PKI, site systems use the PKI certificate bound in IIS even if you enable enhanced HTTP.
 
+## Scenarios
 
+The following scenarios benefit from enhanced HTTP:
 
-## <a name="bkmk_scenario"></a> Scenarios
-
-The following scenarios benefit from these improvements:  
-
-### <a name="bkmk_scenario1"></a> Scenario 1: Client to management point
+### Scenario 1: Client to management point
 
 <!--1356889-->
 [Azure Active Directory (Azure AD)-joined devices](/azure/active-directory/devices/concept-azure-ad-join) and devices with a [Configuration Manager issued token](../../clients/deploy/deploy-clients-cmg-token.md) can communicate with a management point configured for HTTP if you enable enhanced HTTP for the site. With enhanced HTTP enabled, the site server generates a certificate for the management point allowing it to communicate via a secure channel.
 
-> [!Note]  
-> This scenario does not require using an HTTPS-enabled management point but it is supported as an alternative to using enhanced HTTP. For more information on using an HTTPS-enabled management point, see [Enable management point for HTTPS](../../clients/manage/cmg/configure-authentication.md#bkmk_mphttps).  
+> [!NOTE]
+> This scenario doesn't require using an HTTPS-enabled management point, but it's supported as an alternative to using enhanced HTTP. For more information on using an HTTPS-enabled management point, see [Enable management point for HTTPS](../../clients/manage/cmg/configure-authentication.md#enable-management-point-for-https).
 
-### <a name="bkmk_scenario2"></a> Scenario 2: Client to distribution point
+### Scenario 2: Client to distribution point
 
 <!--1358228-->
 A workgroup or Azure AD-joined client can authenticate and download content over a secure channel from a distribution point configured for HTTP. These types of devices can also authenticate and download content from a distribution point configured for HTTPS without requiring a PKI certificate on the client. It's challenging to add a client authentication certificate to a workgroup or Azure AD-joined client.
 
 This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or Software Center. For more information, see [Network access account](accounts.md#network-access-account).<!--1358278-->
 
-### <a name="bkmk_scenario3"></a> Scenario 3: Azure AD device identity
+### Scenario 3: Azure AD device identity
 
 <!--1358460-->
-An Azure AD-joined or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point for device-centric scenarios. (A user token is still required for user-centric scenarios.)  
-
+An Azure AD-joined or [hybrid Azure AD device](/azure/active-directory/devices/concept-azure-ad-join-hybrid) without an Azure AD user signed in can securely communicate with its assigned site. The cloud-based device identity is now sufficient to authenticate with the CMG and management point for device-centric scenarios. (A user token is still required for user-centric scenarios.)
 
 ## Features
 
@@ -72,54 +67,108 @@ The following Configuration Manager features support or require enhanced HTTP:
 
 - [Cloud management gateway](../../clients/manage/cmg/overview.md)
 - [OS deployment without a network access account](../../../osd/plan-design/planning-considerations-for-automating-tasks.md#enhanced-http)
-- [Enable co-management for new internet-based Windows 10 devices](../../../comanage/tutorial-co-manage-new-devices.md)
+- [Enable co-management for new internet-based Windows devices](../../../comanage/tutorial-co-manage-new-devices.md)
 - [App approvals via email](../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
 - [Administration service](../../../develop/adminservice/overview.md)
 - [View recently connected consoles](../../servers/manage/admin-console.md#bkmk_viewconnected)
+- [BitLocker management key recovery](../../../protect/plan-design/bitlocker-management.md#prerequisites-for-the-recovery-service) (version 2103 and later)
+- [Software Center](../../../apps/plan-design/plan-for-software-center.md#support-for-enhanced-http) user-available applications (version 2107 and later)<!-- 9199146 -->
+- [Company Portal on co-managed devices](../../../comanage/company-portal.md) (version 2107 and later)<!-- 9199146 -->
 
-> [!Note]  
+> [!NOTE]
 > The software update point and related scenarios have always supported secure HTTP traffic with clients as well as the cloud management gateway. It uses a mechanism with the management point that's different from certificate- or token-based authentication.<!-- SCCMDocs issue #1148 -->
 
+## Unsupported scenarios
+<!-- MEMDocs #1705 -->
+Enhanced HTTP doesn't currently secure all communication in Configuration Manager. The following list summarizes some key functionality that's still HTTP.
 
-## Prerequisites  
+- Client peer-to-peer communication for content
+- State migration point
+- Remote tools
+- Reporting services point
 
-- A management point configured for HTTP client connections. Set this option on the **General** tab of the management point role properties.  
+> [!NOTE]
+> This list isn't exhaustive.
 
-- A distribution point configured for HTTP client connections. Set this option on the **Communication** tab of the distribution point role properties. Don't enable the option to **Allow clients to connect anonymously**.  
+## Prerequisites
 
-- [Onboard the site](../../clients/manage/cmg/configure-azure-ad.md) to Azure AD for cloud management.  
+- A management point configured for HTTP client connections. Set this option on the **General** tab of the management point role properties.
 
-- *For [Scenario 3](#bkmk_scenario3) only*: A client running Windows 10 version 1803 or later, and joined to Azure AD. The client requires this configuration for Azure AD device authentication.<!-- SCCMDocs issue 1126 -->
+- A distribution point configured for HTTP client connections. Set this option on the **Communication** tab of the distribution point role properties. Don't enable the option to **Allow clients to connect anonymously**.
 
+- For scenarios that require Azure AD authentication, [onboard the site](../../clients/manage/cmg/configure-azure-ad.md) to Azure AD for cloud management. If you don't onboard the site to Azure AD, you can still enable enhanced HTTP.
+
+- *For [Scenario 3](#scenario-3-azure-ad-device-identity) only*: A client running a supported version of Windows 10 or later and joined to Azure AD. The client requires this configuration for Azure AD device authentication.<!-- SCCMDocs issue 1126 -->
+
+> [!NOTE]
+> There are no OS version requirements, other than what the [Configuration Manager client supports](../configs/supported-operating-systems-for-clients-and-devices.md).
 
 ## Configure the site
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the  **Sites** node. Select the site and choose **Properties** in the ribbon.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the  **Sites** node. Select the site and choose **Properties** in the ribbon.
 
-2. Switch to the **Communication Security** tab. Select the option for **HTTPS or HTTP**. Then enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
+1. Switch to the **Communication Security** tab. Select the option for **HTTPS or HTTP**. Then enable the option to **Use Configuration Manager-generated certificates for HTTP site systems**.
 
-> [!Tip]
+> [!TIP]
 > Wait up to 30 minutes for the management point to receive and configure the new certificate from the site.
 
 <!--3798957-->
-Starting in version 1902, you can also enable enhanced HTTP for the central administration site. Use this same process, and open the properties of the central administration site. This action only enables enhanced HTTP for the SMS Provider roles at the central administration site. It's not a global setting that applies to all sites in the hierarchy.
-
-You can see these certificates in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. Look for the **SMS Issuing** root certificate, as well as the site server role certificates issued by the SMS Issuing root.
+You can also enable enhanced HTTP for the central administration site (CAS). Use this same process, and open the properties of the CAS. This action only enables enhanced HTTP for the SMS Provider role at the CAS. It's not a global setting that applies to all sites in the hierarchy.
 
 For more information on how the client communicates with the management point and distribution point with this configuration, see [Communications from clients to site systems and services](communications-between-endpoints.md#Planning_Client_to_Site_System).
 
 ## Validate the certificate
 
+You can see these certificates in the Configuration Manager console. Go to the **Administration** workspace, expand **Security**, and select the **Certificates** node. Look for the **SMS Issuing** root certificate and the site server role certificates issued by the SMS Issuing root.
+
 When you enable enhanced HTTP, the site server generates a self-signed certificate named **SMS Role SSL Certificate**. This certificate is issued by the root **SMS Issuing** certificate. The management point adds this certificate to the IIS default web site bound to port 443.
 
 To see the status of the configuration, review **mpcontrol.log**.
 
-## See also
+## Conceptual diagram
 
-- [Plan for security](../security/plan-for-security.md)  
+This diagram summarizes and visualizes some of the main aspects of the enhanced HTTP functionality in Configuration Manager.<!-- 9789979 -->
 
-- [Security and privacy for Configuration Manager clients](../../clients/deploy/plan/security-and-privacy-for-clients.md)  
+:::image type="content" source="media/ehttp-diagram.svg" alt-text="Conceptual diagram of enhanced HTTP functionality.":::
 
-- [Configure security](../security/configure-security.md)  
+- The connection with Azure AD is recommended but optional. It enables scenarios that require Azure AD authentication.
 
-- [Communication between endpoints](communications-between-endpoints.md)  
+- When you enable the site option for enhanced HTTP, the site issues self-signed certificates to site systems such as the management point and distribution point roles.
+
+- With the site systems still configured for HTTP connections, clients communicate with them over HTTPS.
+
+## Frequently asked questions
+
+### What are the benefits of enhanced HTTP?
+
+The main benefit is to reduce the usage of pure HTTP, which is an insecure protocol. Configuration Manager tries to be secure by default, and Microsoft wants to make it easy for you to keep your devices secure. Enabling PKI-based HTTPS is a more secure configuration, but that can be complex for many customers. If you can't do HTTPS, then enable enhanced HTTP. Microsoft recommends this configuration, even if your environment doesn't currently use any of the features that support it.
+
+> [!IMPORTANT]
+> Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
+
+### Do I need to use Azure AD to enable enhanced HTTP?
+
+No. Many of the scenarios and features that benefit from enhanced HTTP rely on Azure AD authentication. You can enable enhanced HTTP without onboarding the site to Azure AD. It then supports features like the administration service and the reduced need for the network access account. You only need Azure AD when one of the supporting features requires it.
+
+> [!NOTE]
+> Even if you don't directly use the administration service REST API, some Configuration Manager features natively use it, including parts of the Configuration Manager console.
+
+### How do clients communicate with site systems?
+
+When you enable enhanced HTTP, the site issues certificates to site systems. For example, the management point and the distribution point. Then these site systems can support secure communication in currently supported scenarios.
+
+From a client perspective, the management point issues each client a token. The client uses this token to secure communication with the site systems. That behavior is OS version agnostic, other than what the [Configuration Manager client supports](../configs/supported-operating-systems-for-clients-and-devices.md).
+
+### If some site systems are already HTTPS, can I enable enhanced HTTP?
+
+Yes. Site systems always prefer a PKI certificate. For example, one management point already has a PKI certificate, but others don't. When you enable enhanced HTTP for the site, the HTTPS management point continues to use the PKI certificate. The other management points use the site-issued certificate for enhanced HTTP.
+
+## Next steps
+
+- [Plan for security](../security/plan-for-security.md)
+
+- [Security and privacy for Configuration Manager clients](../../clients/deploy/plan/security-and-privacy-for-clients.md)
+
+- [Configure security](../security/configure-security.md)
+
+- [Communication between endpoints](communications-between-endpoints.md)

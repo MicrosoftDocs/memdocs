@@ -1,6 +1,7 @@
 ---
 title: "StoreEvent Method"
 titleSuffix: "Configuration Manager"
+description: "The StoreEvent Windows Management Instrumentation class method generates store events."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 4c39ecd5-8b90-4034-badc-88529defb3f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the database link status between the child and parent site for each replication group with SMS_ReplicationLinkStatus.
 title: "SMS_ReplicationLinkStatus Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: eb30cf7e-c3dc-4d9f-b70b-453dbf059896
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

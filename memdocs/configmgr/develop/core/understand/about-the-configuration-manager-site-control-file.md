@@ -1,5 +1,6 @@
 ---
 title: "Configuration Manager Site Control File"
+description: "Site control in Configuration Manager defines the settings for a specific site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -8,6 +9,8 @@ ms.assetid: 1283e2a3-d4e2-4fba-a6c3-7dcd94598a0d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a collection variable that is accessible at the time of task execution using SMS_CollectionVariable.
 title: "SMS_CollectionVariable Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 8950faec-bcc1-48a5-93f0-93f7a3d363fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

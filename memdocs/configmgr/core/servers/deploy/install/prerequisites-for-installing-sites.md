@@ -2,14 +2,14 @@
 title: Prerequisites for sites
 titleSuffix: Configuration Manager
 description: Learn about prerequisites for installing the different types of Configuration Manager sites.
-ms.date: 11/30/2020
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 92b339ef-2723-4322-bec6-077b3e8846b0
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Prerequisites for installing Configuration Manager sites
@@ -30,7 +30,7 @@ If you're installing a CAS as part of a hierarchy expansion, see the section for
 
 ### <a name="bkmk_PrereqPri"></a> Prerequisites for installing a primary site or a CAS
 
-- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012sspreq)
+- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#central-administration-site-and-primary-site-servers)
 
 - The user account that installs the site must have the following permissions:
 
@@ -68,6 +68,7 @@ If you're installing a CAS as part of a hierarchy expansion, see the section for
 - The site server and site database server must meet all prerequisite configurations. Before starting Configuration Manager setup, [manually run Prerequisite Checker](prerequisite-checker.md) to identify and fix problems.
 
 ### <a name="bkmk_expand"></a> Prerequisites to expand a stand-alone primary site
+<!-- "site expansion" scenario -->
 
 A stand-alone primary site must meet the following prerequisites before you can expand it into a hierarchy with a CAS:
 
@@ -117,6 +118,8 @@ Configuration Manager only supports these roles at the top-level site of the hie
 
 All other site system roles can remain installed at the primary site.
 
+Configuration Manager setup also includes a [prerequisite check](list-of-prerequisite-checks.md#cloud-management-gateway-on-the-expanded-primary-site) that the standalone primary site doesn't include the [cloud management gateway](../../../clients/manage/cmg/overview.md) (CMG) service. Before you expand the site to a hierarchy, remove the CMG. Then redeploy it from the new CAS.<!-- memdocs#2374 -->
+
 #### Open the SQL Server Service Broker port
 
 The network port must be open for the SQL Server Service Broker (SSB) between the stand-alone primary site and the server for the CAS.
@@ -129,7 +132,6 @@ After you expand the site, you need to reconfigure the following Azure services 
 
 - [Log Analytics](/azure/azure-monitor/platform/collect-sccm?context=/mem/configmgr/core/context/core-context)
 - [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md)
-- [Cloud management gateway](../../../clients/manage/cmg/overview.md)
 - [Tenant attach](../../../../tenant-attach/device-sync-actions.md)
 
 The easiest method is to renew the Azure Active Directory tenant secret key. For more information, see [Renew secret key](../configure/azure-services-wizard.md#bkmk_renew).
@@ -140,7 +142,7 @@ Instead of renewing the secret key, remove and then recreate the connection to t
 
 The following prerequisites are for installing secondary sites:
 
-- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#bkmk_2012secpreq).
+- The necessary Windows Server roles, features, and Windows components must be installed. For more information, see [Site system prerequisites](../../../plan-design/configs/site-and-site-system-prerequisites.md#secondary-site-server).
 
 - The administrator who configures the installation of the secondary site in the Configuration Manager console needs role-based administration permissions that are equivalent to the security role of **Infrastructure Administrator** or **Full Administrator**.
 

@@ -1,4 +1,5 @@
 ---
+description: Learn how to define functions to interact with the handler in Configuration Manager using IAppManagementHandler.
 title: "IAppManagementHandler Interface"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 674e4aa0-f1bf-45f5-b369-4c0592a93b57
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

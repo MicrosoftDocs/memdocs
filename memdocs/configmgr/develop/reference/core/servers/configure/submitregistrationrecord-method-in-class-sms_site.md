@@ -1,6 +1,7 @@
 ---
 title: "SubmitRegistrationRecord Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that submits a registration record."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: ca40b886-729f-4390-aacf-64878811a96a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

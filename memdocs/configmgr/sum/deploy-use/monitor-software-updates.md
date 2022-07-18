@@ -1,17 +1,15 @@
 ---
 title: Monitor software updates
-titleSuffix: "Configuration Manager"
-description: "The Configuration Manager console provides alerts and statuses to monitor updates and compliance."
+titleSuffix: Configuration Manager
+description: The Configuration Manager console provides alerts and statuses to monitor updates and compliance.
 author: mestew
 ms.author: mstewart
 manager: dougeby
-ms.date: 04/21/2020
+ms.date: 07/12/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-ms.assetid: 9afd7b0f-5c8e-48bc-9a65-1f7d74103688
-
-
+ms.localizationpriority: medium
 ---
 # Monitor software updates in Configuration Manager
 
@@ -21,14 +19,10 @@ Configuration Manager provides many ways to help you to monitor software updates
 
 ## Software updates dashboard
 
-*(Introduced in version 1610)*
-
-Starting in Configuration Manager version 1610, you can use the Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
+You can use the Software Updates Dashboard to view the current compliance status of devices in your organization and quickly analyze the data to see which devices are at risk. To view the dashboard, navigate to **Monitoring** > **Overview** > **Security** > **Software Updates Dashboard**.
 
 ## Drill through required updates
 <!--4224414-->
-*(Introduced in version 1906)*
-
 You can drill through compliance statistics to see which devices require a specific Microsoft 365 Apps software update. To view the device list, you need permission to view updates and the collections the devices belong to. To drill down into the device list:
 
 1. Go to **Software Library** > **Software Updates** > **All Software Updates**.
@@ -65,14 +59,22 @@ After you configure the alert settings, if the specified conditions occur, Confi
 
 #### To monitor deployment status  
 
-1.  In the Configuration Manager console, navigate to **Monitoring** > **Overview** > **Deployments**.  
+1. In the Configuration Manager console, navigate to **Monitoring** > **Overview** > **Deployments**.  
 
-2.  Click the software update group or software update for which you want to monitor the deployment status.  
+1. Click the software update group or software update for which you want to monitor the deployment status.  
 
-3.  On the **Home** tab, in the **Deployment** group, click **View Status**.  
+1. On the **Home** tab, in the **Deployment** group, click **View Status**. 
+
+> [!TIP]
+> - Starting in version 2107, you can right-click the status of a deployment and select **Evaluate Software Update Deployments** to send a notification to the selected devices to run a software update deployment evaluation cycle.
+> - Starting in version 2203, you can perform client notification actions, including **Run Scripts**, from the **Deployment Status** view. Use the right-click menu on either a group of clients in a **Category** or a single client in the **Asset details** pane to display the client notification actions. <!--7079837-->
+
 
 ##  <a name="BKMK_SUReports"></a> Software updates reports  
  The state messages for software updates provide information about the compliance of software updates and about the evaluation and enforcement state of software update deployments. You can run software update reports to display these state messages. There are more than 30 predefined software update reports available. They're organized in several categories and can be used to report on specific information about software updates and deployments. In addition to using the preconfigured reports, you can also create custom software update reports according to the needs of your enterprise. For more information, see [Operations and maintenance for reporting](../../core/servers/manage/operations-and-maintenance-for-reporting.md).  
+
+> [!NOTE]
+> Devices running an unsupported operating systems will display as compliant since there aren't applicable updates to the operating system any longer. <!--13952160-->
 
 ### Recommended software updates reports
 The following are some of the reports that are useful in identifying potential issues: 

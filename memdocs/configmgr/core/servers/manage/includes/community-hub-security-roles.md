@@ -4,6 +4,7 @@ ms.author: mstewart
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 01/08/2021
+ms.localizationpriority: medium
 ---
 <!--This file is shared by the community-hub and community-hub-contribute .md files. Headings are context driven by the article-->
 

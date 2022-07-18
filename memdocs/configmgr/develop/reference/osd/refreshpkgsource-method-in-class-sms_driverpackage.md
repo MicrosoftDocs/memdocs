@@ -1,5 +1,6 @@
 ---
 title: "RefreshPkgSource Method in SMS_DriverPackage"
+description: The RefreshPkgSource Windows Management Instrumentation (WMI) class method, in Configuration Manager, refreshes the package source at all distribution points. The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: 96826b76-5ac5-45c8-9328-f04536667bb6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "UpdateConsoleUsageData Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the UpdateConsoleUsageData WMI class method updates console usage data received from console connections." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 189235fc-738b-4b3f-b81a-7d53dfb6c220
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

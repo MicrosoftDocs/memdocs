@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Using Azure Virtual Desktop with Microsoft Intune
+title: Using Azure Virtual Desktop single-session with Microsoft Endpoint Manager
 titleSuffix: 
-description: Guidelines for using Azure Virtual Desktop with Microsoft Intune
+description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Endpoint Manager. 
 keywords:
-author: ErikjeMS  
-ms.author: erikje
+author: Smritib17  
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 9/22/2020
+ms.date: 9/02/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -35,19 +35,21 @@ ms.collection: M365-identity-device-management
 
 ## Prerequisites 
 
-Currently, Intune supports Azure Virtual Desktop VMs that are: 
+Currently, for single-session, Intune supports Azure Virtual Desktop VMs that are: 
 
-- Running Windows 10 Enterprise, version 1809 or later.
-- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan).
+- Running Windows 10 Enterprise, version 1809 or later, or running Windows 11 multi-session.
 - Set up as [personal remote desktops](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure. 
-- Enrolled in Intune in one of the following methods: 
+- [Hybrid Azure AD-joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Intune in one of the following methods: 
     - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are hybrid Azure AD joined.
     - [Configuration Manager co-management](/configmgr/comanage/overview).
     - [User self-enrollment via Azure AD Join](../enrollment/windows-enrollment-methods.md#user-self-enrollment-in-intune).
+- Azure AD-joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 
 For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
 
-Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine. 
+For information about working with multi-session remote desktops, see [Windows 10 or Windows 11 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
+
+Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 or Windows 11 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and conditional access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine. 
 
 ## Limitations
 
@@ -63,6 +65,9 @@ Also, the following profiles aren't currently supported:
 
 Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](/windows/client-management/mdm/policy-csp-remotedesktopservices#remotedesktopservices-allowuserstoconnectremotely) isn't disabled.
 
+> [!NOTE]
+> Configuration and compliance policies for Secure Boot and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
+
 ### Remote actions
 
 The following Windows 10 desktop device remote actions aren't supported/recommended for Azure Virtual Desktop VMs:
@@ -77,6 +82,15 @@ The following Windows 10 desktop device remote actions aren't supported/recommen
 ### Retirement
 
 Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-delete-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
+
+### Known issues
+
+The following table provides a set of known issues along with more information about each issue.
+
+| Issue | More   information |
+|---|---|
+| Cannot auto-enroll if tenant has more than one MDM provider | This issue will be fixed in the future. |
+| Modern apps, such as Universal Windows Platform (UWP) apps, are not working correctly if [FSLogix](/fslogix/overview) is configured | Using FSLogix and Modern apps could cause compatibility issues. We recommend that you don’t configure Modern apps when FSLogix is configured.|
 
 ## Next steps
 

@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 04/25/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
 
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Add Microsoft Store apps to Microsoft Intune
@@ -40,14 +42,19 @@ You can add a Microsoft Store app to Intune by doing the following:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > **Add**.
-3. In the **Select app type** pane, under the available **Store app** types, select **Windows store app**.
+3. In the **Select app type** pane, under the available **Store app** types, select **Microsoft store app**.
 4. Click **Select**. The **Add app** steps are displayed.
-5. To configure the **App information** for Windows store apps, navigate to the [Microsoft store](https://www.microsoft.com/store/apps) and search for the app you want to deploy. Display the app page and make a note of the app details. 
+5. To configure the **App information** for Microsoft store apps, navigate to the [Microsoft store](https://www.microsoft.com/store/apps) and search for the app you want to deploy. Display the app page and make a note of the app details. 
 6. In the **App information** page, add the app details:
     - **Name**: Enter the name of the app as it is to be displayed in the company portal. Make sure that any app name that you use is unique. If an app name is duplicated, only one name is displayed to users in the company portal.
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.
-    - **Publisher**: Enter the name of the publisher of the app.
-    - **Appstore URL**: Type the App Store URL of the app that you want to create. The URL can be found by searching the [Microsoft Store](https://www.microsoft.com/store/apps) for the desired app. Use the URL from the browser address bar.
+    - **Publisher**: Enter the name of the publisher of the app. 
+    - **Appstore URL**: Type the App Store URL of the app that you want to create.<br>
+      To find the **Appstore URL**, use the following steps:
+      1. Navigate to the [Microsoft Store](https://www.microsoft.com/store/apps).
+      2. Search for and select the desired app.
+      3. Click the **Endpoint Manager** link to display the **Microsoft Endpoint Manager Details** dialog box.
+      4. Copy the **Link for Intune** and use that link as the **Appstore URL** when adding the app to Intune.
     - **Category**: Optionally, select one or more of the built-in app categories, or a category that you created. Doing so makes it easier for users to find the app when they browse the company portal.
     - **Show this as a featured app in the Company Portal**: Select this option to display the app suite prominently on the main page of the company portal when users browse for apps.
     - **Information URL**: Optionally, enter the URL of a website that contains information about this app. The URL is displayed to users in the company portal.
@@ -56,12 +63,12 @@ You can add a Microsoft Store app to Intune by doing the following:
     - **Owner**: Optionally, enter a name for the owner of this app, for example, *HR department*.
     - **Notes**: Optionally, enter any notes that you want to associate with this app.
     - **Logo**: Optionally, upload an icon that will be associated with the app. This icon is displayed with the app when users browse the company portal.
-7. Click **Next** to display the **Scope tags** page.
-8. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
-9. Click **Next** to display the **Assignments** page.
-10. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
-11. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
-12. When you are done, click **Create** to add the app to Intune.
+1. Click **Next** to display the **Scope tags** page.
+1. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+1. Click **Next** to display the **Assignments** page.
+1. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
+1. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
+1. When you are done, click **Create** to add the app to Intune.
 
 The **Overview** blade of the app you've created is displayed.
 

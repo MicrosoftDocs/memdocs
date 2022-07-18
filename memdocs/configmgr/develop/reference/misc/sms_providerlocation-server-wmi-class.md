@@ -1,6 +1,7 @@
 ---
 title: "SMS_ProviderLocation Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ProviderLocation Windows Management Instrumentation (WMI) class, in Configuration Manager, identifies the location of the SMS Provider for a site."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 18d57298-bdd6-437b-84b0-ead28c1d5d3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

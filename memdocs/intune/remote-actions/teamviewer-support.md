@@ -1,35 +1,35 @@
 ---
 # required metadata
 
-title: Remotely administer devices in Microsoft Intune - Azure | Microsoft Docs
+title: Remotely administer devices in Microsoft Intune
 description: View the required roles to use TeamViewer, how to install the TeamViewer connector, and step-by-step guidance to remotely administer devices using Microsoft Intune in the Azure portal
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
-ms.date: 12/17/2020
+ms.date: 11/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 72cdd888-efca-46e6-b2e7-fb9696bb2fba
 
 # optional metadata
 
 #ROBOTS:
 #audience:
-#ms.reviewer: coferro
+ms.reviewer: coferro
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Use TeamViewer to remotely administer Intune devices
 
-Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com). TeamViewer is a partner program that you purchase separately. This articles shows you how to configure TeamViewer within Intune, and how to remotely administer a device.
+Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com). TeamViewer is a partner program that you purchase separately. This article shows you how to configure TeamViewer within Intune, and how to remotely administer a device.
 
 This feature applies to:
 
@@ -43,10 +43,7 @@ This feature applies to:
 
 - The administrator configuring the TeamViewer connector must have an Intune license. You can give administrators access to Microsoft Endpoint Manager without them requiring an Intune license. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md). 
 
-- The Intune administrator in the Endpoint Manager admin center must have the following [Intune roles](../fundamentals/role-based-access-control.md):  
-
-  - **Update Remote Assistance**: Allows administrators to modify the TeamViewer connector settings.
-  - **Request Remote Assistance**: Allows administrators to start a new remote assistance session for any user. Users with this role are not limited by any Intune role within a scope. Also, user or device groups assigned an Intune role within a scope can also request remote assistance. 
+- Only a Global administrator or Intune administrator in the Endpoint Manager admin center can onboard TeamViewer. 
 
 - Use a supported Intune-managed device:
 
@@ -58,12 +55,16 @@ This feature applies to:
 
   > [!NOTE]
   >
-  >   - Organization-owned devices are not supported. Team viewer works with the Company portal app. It doesn't work with the Intune app.
-  >  - TeamViewer may not support Windows Holographic (HoloLens), Windows Team (Surface Hub), or Windows 10 S. For supportability, see [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) for any updates.
+  > - Android Enterprise corporate-owned devices are not supported. Team viewer works with the Company portal app. It doesn't work with the Intune app.
+  > - TeamViewer may not support Windows Holographic (HoloLens), Windows Team (Surface Hub), or Windows 10 S. For supportability, see [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) for any updates.
+
 
 - A [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) account with the sign-in credentials. Only some TeamViewer licenses may support integration with Intune. For specific TeamViewer needs, see [TeamViewer Integration Partner: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).
 
 By using TeamViewer, you're allowing the TeamViewer for Intune Connector to create TeamViewer sessions, read Active Directory data, and save the TeamViewer account access token.
+
+> [!NOTE]
+> - TeamViewer is not supported on GCC High environments.
 
 ## Configure the TeamViewer connector
 
@@ -99,6 +100,6 @@ When you start a remote session, users see a notification flag on the Company Po
 
 ## Next steps
 
-[Remotely assist mobile devices managed by Microsoft Endpoint Manager](remote-assist-mobile-devices.md)
+[Use remote help with Intune and Microsoft Endpoint Manager](remote-help.md)
 
 [See device details in Intune](device-inventory.md)

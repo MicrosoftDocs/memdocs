@@ -1,37 +1,49 @@
 ---
-title: Plan for cloud management gateway
+title: Plan for CMG
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
-ms.date: 04/19/2021
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 2dc8c9f1-4176-4e35-9794-f44b15f4e55f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.custom: contperf-fy21q1
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
-# Plan for the cloud management gateway in Configuration Manager
+# Plan for the CMG in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-This article provides information about the cloud management gateway (CMG) to design how it fits in your environment and plan your implementation.
+To simplify management of internet-based clients, first develop a plan for the cloud management gateway (CMG). Design how it fits in your environment and prepare for your implementation.
 
 For more foundational knowledge of CMG scenarios and use cases, see [Overview of CMG](overview.md).
 
 > [!NOTE]
 > Some sections that were previously in this article have moved:
 >
-> - **Scenarios**: [CMG overview](overview.md)
-> - **Specifications**: [Supported configurations for CMG](supported-configurations.md)
-> - **Cost**: [Cost of CMG](cost.md)
-> - **Ports and data flow**: [Data flow for CMG](data-flow.md)
+> - **Hierarchy design**: [CMG hierarchy design](plan-hierarchy-design.md)
+> - **Performance and scale**: [CMG performance and scale](perf-scale.md)
 
-## Topology design
+## Planning checklist
 
-### CMG components
+The overall CMG planning process is divided into the following parts:
+
+- _Components and requirements_: This article summarizes the components that make up the CMG system. It also lists the system requirements.
+
+- _Client authentication_: Determine which authentication method you'll use for clients from potentially untrusted networks.
+
+- _Hierarchy design_: Plan where to place the CMG in your environment.
+
+- _Supported configurations_: Understand which Configuration Manager features you can support on internet-based clients that connect to the CMG.
+
+- _Performance and scale_: Decide how many service components you'll need to best support your number of clients.
+
+- _Cost_: Understand the cost of the Azure-based components.
+
+## CMG components
 
 Deployment and operation of the CMG includes the following components:
 
@@ -45,170 +57,123 @@ Deployment and operation of the CMG includes the following components:
 
 - The CMG uses a **certificate-based HTTPS** web service to help secure network communication with clients.
 
-- **Internet-based clients** connect to the CMG to access on-premises Configuration Manager components. Clients have multiple options for identity and authentication:
+- **Internet-based clients** connect to the CMG to access on-premises Configuration Manager components. There are multiple options for client identity and authentication:
 
   - Azure AD
   - PKI certificates
   - Configuration Manager site-issued tokens
 
-- A content-enabled CMG or a [**cloud distribution point**](../../../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) provides content to internet-based clients, as needed. Using a content-enabled CMG reduces the required certificates and Azure costs.
+  For more information, see [Plan for CMG client authentication](plan-client-authentication.md).
 
-> [!NOTE]
-> When you deploy a CMG, it also creates an Azure storage account. The CMG uses this storage account for its standard operations, and for content distribution if you enable it. This storage account doesn't support customizations, such as virtual network restrictions.
+- The CMG creates an **Azure storage account**, which it uses for its standard operations. By default, the CMG is also content-enabled to provide deployment content to internet-based clients. This storage account doesn't support customizations, such as virtual network restrictions.
 
-### Azure Resource Manager
+  > [!NOTE]
+  > The cloud-based distribution point (CDP) is deprecated. Starting in version 2107, you can't create new CDP instances. To provide content to internet-based devices, enable the CMG to distribute content.<!-- 10247883 -->
+
+## Azure Resource Manager
 
 <!-- 1324735 -->
-You create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When you deploy CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources.
-
-> [!NOTE]
-> CMG deployments with the **cloud service (classic)** method don't support subscriptions for Azure Cloud Service Providers (CSP). The CMG deployment with Azure Resource Manager continues to use the classic cloud service, which the CSP doesn't support. For more information, see [Azure services available in the Azure CSP program](/partner-center/azure-plan-available). In version 2006 and earlier, this deployment method is the only option.
-
-### Virtual machine scale sets
-
-> [!NOTE]
-> In this version of Configuration Manager, a CMG with a virtual machine scale set is a pre-release feature. To enable it, see [Pre-release features](../../../servers/manage/pre-release-features.md).
-
-<!--3601040-->
-Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure. This support is only if they don't currently have a CMG deployed using classic cloud services to another subscription. With a few exceptions, the configuration, operation, and functionality of the CMG remains the same.
-
-- Additional [Azure resource providers](configure-azure-ad.md#configure-azure-resource-providers) in your Azure subscription.
-
-- Different deployment names, for example, **GraniteFalls.EastUS.CloudApp.Azure.Com** for a deployment in the **East US** Azure region. For more information, see [CMG server authentication certificate](server-auth-cert.md).
-
-- The CMG connection point only communicates with the virtual machine scale set in Azure over HTTPS. It doesn't require TCP-TLS ports. For more information, see [Ports and data flow](data-flow.md).
+You create the CMG using an **Azure Resource Manager deployment**. [Azure Resource Manager](/azure/azure-resource-manager/resource-group-overview) is a modern platform for managing all solution resources as a single entity, called a [resource group](/azure/azure-resource-manager/resource-group-overview#resource-groups). When you deploy a CMG with Azure Resource Manager, the site uses Azure Active Directory (Azure AD) to authenticate and create the necessary cloud resources.
 
 > [!IMPORTANT]
-> If you've already deployed a CMG, you don't need to make any change at this time.
+> Starting in version 2203, the option to deploy a CMG as a **cloud service (classic)** is removed.<!-- 13235079 --> All CMG deployments should use a [virtual machine scale set](#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
-#### Current limitations for a CMG with a virtual machine scale set
-
-- If you require more than one CMG instance, they all have to use the same deployment method.
-- The supported number of concurrent client connections is 2,000 per VM instance. For more information, see [Performance and scale](#performance-and-scale).
-- It's only supported with a standalone primary site.
-- It doesn't support Azure US Government Cloud environments.
-- Users may experience a delay of up to three seconds for actions in Software Center.
-- Configuration Manager currently creates the Azure storage container based on the name of the resource group. Azure has different naming requirements for resource groups and storage containers. Make sure the name of the resource group for this service only has lowercase letters, numbers, and hyphens. If you have an existing resource group that doesn't work, rename it in the Azure portal, or create a new resource group.<!-- 8888841 -->
-- In versions 2010 and 2103, if you have more than one HTTPS management point, then you can't install the Configuration Manager client on devices over the internet. If you need to [Install off-premises clients using a CMG](configure-clients.md#install-off-premises-clients-using-a-cmg), then you can only have one HTTPS management point. You also need to enable the CMG for content.<!-- 9760068 -->
-
-### Hierarchy design
-
-Create the CMG at the top-tier site of your hierarchy. If that's a central administration site (CAS), then create CMG connection points at child primary sites. The cloud service manager component is on the service connection point, which is also on the CAS. This design can share the service across different primary sites if needed.
-
-You can create multiple CMG services in Azure, and you can create multiple CMG connection points. Multiple CMG connection points provide load balancing of client traffic from the CMG to the on-premises roles.
-
-You can associate a CMG with a boundary group. This configuration allows clients to default or fall back to the CMG for client communication according to [boundary group relationships](../../../servers/deploy/configure/boundary-groups.md). This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster services in Microsoft Azure.<!--3640932-->
-
-Starting in version 2006, intranet clients can access a CMG-enabled software update point when it's assigned to a boundary group. For more information, see [Configure boundary groups](../../../servers/deploy/configure/boundary-groups.md#bkmk_cmg-sup). <!--7102873-->
+## Virtual machine scale sets
 
 > [!NOTE]
-> Internet-based clients don't fall into any boundary group.
+> This feature was first introduced in version 2010 as a [pre-release feature](../../../servers/manage/pre-release-features.md). Starting in version 2107, it's no longer a pre-release feature.<!-- 8959690 -->
+>
+> Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../../servers/manage/optional-features.md).
 
-Other factors, such as the number of clients to manage, also impact your CMG design. For more information, see [Performance and scale](#performance-and-scale).
+<!--3601040-->
+Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure. This support is only if they don't currently have a CMG deployed using classic cloud services to another subscription.
 
-#### Example 1: Standalone primary site
+Starting in version 2107, all customers can deploy a CMG with a virtual machine scale set. If you have an existing CMG deployed with the classic cloud service, **convert** the CMG to use a virtual machine scale set.<!-- 8959690 -->
 
-Contoso has a standalone primary site in an on-premises datacenter at their headquarters in New York City.
+With a few exceptions, the configuration, operation, and functionality of the CMG remains the same.
 
-- They create a CMG in the East US Azure region to reduce network latency.
-- They create two CMG connection points, both linked to the single CMG service.
+- Other [Azure resource providers](configure-azure-ad.md#configure-azure-resource-providers) in your Azure subscription.
 
-As clients roam onto the internet, they communicate with the CMG in the East US Azure region. The CMG forwards this communication through both of the CMG connection points.
+- Different deployment names, for example, **GraniteFalls.EastUS.CloudApp.Azure.Com** for a deployment in the **East US** Azure region. This name change can affect how you create and manage the [CMG server authentication certificate](server-auth-cert.md).
 
-#### Example 2: Hierarchy
+- The CMG connection point only communicates with the virtual machine scale set in Azure over HTTPS. It doesn't require TCP-TLS ports.
 
-Fourth Coffee has a CAS in an on-premises datacenter at their headquarters in Seattle. One primary site is in the same datacenter, and the other primary site is in their main European office in Paris.
+### Limitations for a CMG with a virtual machine scale set
 
-- On the CAS, they create a CMG service in the West US Azure region. They scale the number of VMs for the expected load of roaming clients in the entire hierarchy.
-- On the Seattle-based primary site, they create a CMG connection point linked to the single CMG.
-- On the Paris-based primary site, they create a CMG connection point linked to the single CMG.
+#### Limitations with versions 2107 and later
 
-As clients roam onto the internet, they communicate with the CMG in the West US Azure region. The CMG forwards this communication to the CMG connection point in the client's assigned primary site.
+> [!NOTE]
+> Starting in version 2111, CMG deployments with a virtual machine scale set support Azure US Government cloud environments.<!--12141235-->
 
-> [!TIP]
-> You don't need to deploy more than one CMG for the purposes of geolocation. The Configuration Manager client is mostly unaffected by the slight latency that can occur with the cloud service, even when geographically distant.
+- Users may experience a delay of up to three seconds for actions in Software Center.
+- You can't approve/deny application requests through the CMG.<!-- 10023094 -->
+- Version 2107 doesn't support Azure US Government cloud environments.
 
-### Test environments
-<!-- SCCMDocs#1225 -->
-Many organizations have separate environments for production, test, development, or quality assurance. When you plan your CMG deployment, consider the following questions:
+#### Limitations with versions 2010 and 2103
 
-- How many Azure AD tenants does your organization have?
-  - Is there a separate tenant for testing?
-  - Are user and device identities in the same tenant?
-
-- How many subscriptions are in each tenant?
-  - Are there subscriptions that are specific for testing?
-
-Configuration Manager's Azure service for **Cloud management** supports multiple tenants. Multiple Configuration Manager sites can connect to the same tenant. A single site can deploy multiple CMG services into different subscriptions. Multiple sites can deploy CMG services into the same subscription. Configuration Manager provides flexibility depending upon your environment and business requirements.
-
-For more information, see the following FAQ: [Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?](./cloud-management-gateway-faq.yml#do-the-user-accounts-have-to-be-in-the-same-azure-ad-tenant-as-the-tenant-associated-with-the-subscription-that-hosts-the-cmg-cloud-service-)
+- If you require more than one CMG instance, they all have to use the same deployment method.
+- The supported number of concurrent client connections is 2,000 per VM instance. For more information, see [CMG performance and scale](perf-scale.md).
+- It's only supported with a standalone primary site.
+- It doesn't support Azure US Government cloud environments.
+- Users may experience a delay of up to three seconds for actions in Software Center.
+- Configuration Manager currently creates the Azure storage container based on the name of the resource group. Azure has different naming requirements for resource groups and storage containers. Make sure the name of the resource group for this service only has lowercase letters, numbers, and hyphens. If you have an existing resource group that doesn't work, rename it in the Azure portal, or create a new resource group.<!-- 8888841 -->
+- If you have more than one HTTPS management point, then you can't install the Configuration Manager client on devices over the internet. If you need to [Install off-premises clients using a CMG](configure-clients.md#install-off-premises-clients-using-a-cmg), then you can only have one HTTPS management point. You also need to enable the CMG for content.<!-- 9760068 -->
+- You can't approve/deny application requests through the CMG.<!-- 10023094 -->
 
 ## Requirements
 
 > [!TIP]
 > To clarify some Azure terminology:
 >
-> - The _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
-> - A _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+> - The Azure AD _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+> - An Azure _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+>
+> For more information, see [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings).
 
-- An **Azure subscription** to host the CMG.
+- An **Azure subscription** to host the CMG. This subscription can be in one of the following environments:
 
-    > [!IMPORTANT]
-    > CMG deployments with the **cloud service (classic)** method don't support subscriptions with an Azure Cloud Service Provider (CSP).<!-- MEMDocs#320 --> In version 2006 and earlier, this deployment method is the only option.
-    >
-    > Starting in version 2010, customers with a Cloud Solution Provider (CSP) subscription can deploy the CMG with a **virtual machine scale set** in Azure.<!--3601040--> For more information, see [Topology design: Virtual machine scale sets](#virtual-machine-scale-sets).
+  - Global Azure cloud
+  - Azure US Government cloud
 
-- Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
+  Customers with a Cloud Service Provider (CSP) subscription need to use version 2010 or later with a **virtual machine scale set** deployment.<!--3601040-->
+
+- Integrate the site with **Azure AD** to deploy the service with Azure Resource Manager. For more information, see [Configure Azure AD for CMG](configure-azure-ad.md).
+
+  When you onboard the site to Azure AD, you can optionally enable **Azure AD user discovery**. It isn't required to create the CMG, but required if you plan to use Azure AD authentication with hybrid identities. For more information, see [Install clients using Azure AD](../../deploy/deploy-clients-cmg-azure.md) and see [About Azure AD user discovery](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc).
 
 - An **Azure administrator** needs to participate in the initial creation of certain components. This persona can be the same as the Configuration Manager administrator, or separate. If separate, they don't require permissions in Configuration Manager.
 
   - When you integrate the site with Azure AD for deploying the CMG using Azure Resource Manager, you need a **Global Administrator**.
 
-  - When you create the CMG, you need a **Subscription Owner**.
+  - When you create the CMG, you need an account that is an Azure **Subscription Owner** and an Azure AD **Global Administrator**.
+
+- Your user account needs to be a **Full administrator** or **Infrastructure administrator** in Configuration Manager.<!-- SCCMDocs#2146 -->
 
 - At least one on-premises Windows server to host the **CMG connection point**. You can colocate this role with other Configuration Manager site system roles.
 
 - The **service connection point** must be in [online mode](../../../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes).
 
+- Configure the **management point** to allow traffic from the CMG. It also needs to require HTTPS, or configure the site for [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
+
 - A [**server authentication certificate**](server-auth-cert.md) for the CMG.
 
-- Integrate the site with **Azure AD** to deploy the service with Azure Resource Manager. For more information, see [Configure Azure AD for CMG](configure-azure-ad.md).
+- CMG names need to be between 3-24 alphanumeric characters. The name must begin with a letter, end with a letter or digit, and not contain consecutive hyphens. <!--13222041-->
 
 - **Other certificates** may be required, depending upon your client OS version and authentication model. For more information, see [Configure client authentication](configure-authentication.md).
 
 - Clients must use **IPv4**.
 
-## Performance and scale
+- Make sure the following [client settings](../../deploy/about-client-settings.md#cloud-services) in the **Cloud services** group are enabled for devices that will use the CMG:
 
-> [!NOTE]
-> Sizing guidance for management points and software update points doesn't change whether they service on-premises or internet-based clients. For more information, see [Size and scale numbers](../../../plan-design/configs/size-and-scale-numbers.md).
+  - **Enable clients to use a cloud management gateway**
+  - **Allow access to cloud distribution point**
 
-### Size and scale for cloud management gateway
-
-[!INCLUDE [Size and scale for cloud management gateway](../../../plan-design/configs/includes/scale-cmg.md)]
-
-### Size and scale for cloud management gateway connection point
-
-[!INCLUDE [Size and scale for cloud management gateway connection point](../../../plan-design/configs/includes/scale-cmgcp.md)]
-
-### Improve CMG performance
-
-The following recommendations can help you improve CMG performance:
-
-- The connection between the Configuration Manager client and the CMG isn't region-aware. Client communication is largely unaffected by latency and geographic separation. It's not necessary to deploy multiple CMG for the purposes of geo-proximity. Deploy the CMG at the top-level site in your hierarchy. To increase scale, add VM instances.
-
-- For high availability of the service, create a CMG with at least two VM instances and two CMG connection points per site.
-
-- Scale the CMG to support more clients by adding more VM instances. The Azure load balancer controls client connections to the service.
-
-- Create more CMG connection points to distribute the load among them. The CMG distributes the traffic to its connecting CMG connection points in a round-robin fashion.
-
-> [!NOTE]
-> While Configuration Manager has no hard limit on the number of clients for a CMG connection point, Windows Server has a default maximum TCP dynamic port range of 16,384. If a Configuration Manager site manages more than 16,384 clients with a single CMG connection point, increase the Windows Server limit. All clients maintain a channel for client notifications, which holds a port open on the CMG connection point. For more information on how to increase this limit, see [Microsoft Support article 929851](https://support.microsoft.com/help/929851).
+  > [!NOTE]
+  > If you enable the client setting to [Download delta content when available](../../deploy/about-client-settings.md#allow-clients-to-download-delta-content-when-available), the content for third-party updates won't download to clients.<!--6598587-->
 
 ## Next steps
 
-Next, review the features and configurations that the CMG supports:
+Next, determine how clients will authenticate with the CMG:
   
 > [!div class="nextstepaction"]
-> [Supported configurations for CMG](supported-configurations.md)
+> [Plan for CMG client authentication](plan-client-authentication.md)

@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the excluded file list for application content used to support selective file download with IAppContentExt::GetExcludedFileList method.
 title: "IAppContentExt::GetExcludedFileList"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: cff72c0f-e94e-4047-aa6d-f92c5e9cdcac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

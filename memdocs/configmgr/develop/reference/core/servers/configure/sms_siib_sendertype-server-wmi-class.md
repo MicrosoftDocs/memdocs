@@ -1,4 +1,5 @@
 ---
+description: Article outlining the use of SMS_SIIB_SenderType in Configuration Manager to represent the sender type in Configuration Manager property pages.
 title: "SMS_SIIB_SenderType Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 1a2b53a2-4fa1-4671-baba-0e6fbfc63eb5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

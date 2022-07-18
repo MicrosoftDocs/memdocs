@@ -1,6 +1,7 @@
 ---
 title: "CCM_Scheduler_History Class"
 titleSuffix: "Configuration Manager"
+description: "A client Windows Management Instrumentation class that represents the history for a schedule."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 19fb3c27-e46c-43c3-bdce-ded0d40911f2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

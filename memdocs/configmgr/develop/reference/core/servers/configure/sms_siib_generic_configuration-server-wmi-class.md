@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the generic configuration for Configuration Manager components with SMS_SIIB_Generic_Configuration.
 title: "SMS_SIIB_Generic_Configuration Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 778a6935-63c4-4101-983a-28222492373c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

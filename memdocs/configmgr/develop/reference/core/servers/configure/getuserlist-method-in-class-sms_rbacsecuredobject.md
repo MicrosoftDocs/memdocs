@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the list of users who have been granted permission to this object with the GetUserList method.
 title: "GetUserList Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 817f73f8-0573-41a5-92a4-b2a18fdfa1b9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

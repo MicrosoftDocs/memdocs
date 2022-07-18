@@ -1,6 +1,7 @@
 ---
 title: "SetAllUpdatesUserExperience Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SetAllUpdatesUserExperience WMI class method sets the user experience mode that determines how software updates are displayed on a target computer."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: f9bddc84-7410-4c26-8448-e019ad5d4d5b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "SMS_MigrationCollectionInfo Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_MigrationCollectionInfo WMI class is an SMS Provider server class that represents the collections created on the current active 2007 hierarchy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 4e8a8dbb-bf0a-4331-846c-0f121bb396ff
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

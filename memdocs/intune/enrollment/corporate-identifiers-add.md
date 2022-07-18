@@ -5,10 +5,10 @@ title: Add corporate identifiers to Intune
 titleSuffix: 
 description: Learn how to add corporate identifiers (enrollment method, IMEI, and serial numbers) to Microsoft Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 10/23/2020
+ms.date: 05/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -20,25 +20,30 @@ ms.assetid: 566ed16d-8030-42ee-bac9-5f8252a83012
 
 #ROBOTS:
 #audience:
-ms.reviewer: spshumwa
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Identify devices as corporate-owned
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 As an Intune admin, you can identify devices as corporate-owned to refine management and identification. Intune can perform additional management tasks and collect additional information such as the full phone number and an inventory of apps from corporate-owned devices. You can also set device restrictions to block enrollment by devices that aren't corporate-owned.
 
 At the time of enrollment, Intune automatically assigns corporate-owned status to devices that are:
 
 - Enrolled with a [device enrollment manager](device-enrollment-manager-enroll.md) account (all platforms)
-- Enrolled with the Apple [Device Enrollment Program](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md), or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS only)
-- [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with an international mobile equipment identifier (IMEI) numbers (all platforms with IMEI numbers) or serial number (iOS and Android)
+- Enrolled by using [Google Zero Touch](android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch)
+- Enrolled by using [Knox Mobile Enrollment](android-samsung-knox-mobile-enroll.md)
+- Enrolled with the Apple [Device Enrollment Program](device-enrollment-program-enroll-ios.md), [Apple School Manager](apple-school-manager-set-up-ios.md), or [Apple Configurator](apple-configurator-enroll-ios.md) (iOS/iPadOS only)
+- [Identified as corporate-owned before enrollment](#identify-corporate-owned-devices-with-imei-or-serial-number) with an international mobile equipment identifier (IMEI) numbers (all platforms with IMEI numbers) or serial number (iOS/iPadOS and Android)
+- Enrolled as [Android Enterprise corporate-owned devices with work profile](./android-corporate-owned-work-profile-enroll.md)
+- Enrolled as [Android Enterprise fully managed devices](./android-fully-managed-enroll.md)
+- Enrolled as [Android Enterprise dedicated devices](./android-kiosk-enroll.md)
 - Joined to Azure Active Directory with work or school credentials. [Devices that are Azure Active Directory registered](/azure/active-directory/devices/overview) will be marked as personal.
 - Set as corporate in the [device's properties list](#change-device-ownership)
 
@@ -53,9 +58,12 @@ This feature is supported for the following platforms:
 | Platform | IMEI numbers | Serial numbers |
 |---|---|---|
 | Windows | Not supported | Not supported |
-| iOS/macOS | Not supported (see Important below)  | Supported |
-| Device admin managed Android OS v10 | Not supported | Not supported |
-| Android Enterprise personally-owned work profile | Not supported | Supported |
+| iOS/iPadOS | Supported in some cases. See Important below.  | Supported |
+| macOS | Not supported | Supported |
+| Android device administrator, before Android v10 | Supported | Supported |
+| Android device administrator, Android v10 and later | Not supported | Not supported |
+| Android Enterprise personally-owned work profile, before Android 12 | Supported | Supported |
+| Android Enterprise personally-owned work profile, Android 12 and later | Not supported | Not supported |
 | Android Enterprise corporate-owned work profile | Not supported | Not Supported |
 | Android Enterprise fully managed | Not supported | Not Supported |
 | Android Enterprise dedicated devices | Not supported | Not supported |
@@ -80,7 +88,7 @@ This .csv file when viewed in a text editor appears as:
 > [!IMPORTANT]
 > Some Android and iOS/iPadOS devices have multiple IMEI numbers. Intune only reads one IMEI number per enrolled device. If you import an IMEI number but it is not the IMEI inventoried by Intune, the device is classified as a personal device instead of a corporate-owned device. If you import multiple IMEI numbers for a device, uninventoried numbers display **Unknown** for enrollment status.<br>
 >Also note:
->Serial Numbers are the recommended form of identification for iOS/iPadOSOS devices.
+>Serial Numbers are the recommended form of identification for iOS/iPadOS devices.
 >Android Serial numbers are not guaranteed to be unique or present. Check with your device supplier to understand if serial number is a reliable device ID.
 >Serial numbers reported by the device to Intune might not match the displayed ID in the Android Settings/About menus on the device. Verify the type of serial number reported by the device manufacturer.
 >Attempting to upload a file with serial numbers containing dots (.) will cause the upload to fail. Serial numbers with dots are not supported.
@@ -122,7 +130,7 @@ For detailed specifications about International Mobile Equipment Identifiers, se
 
 ## Change device ownership
 
-Devices properties display **Ownership** for each device records in Intune. As an admin, you can specify devices as **Personal** or **Corporate**. When a device's ownership type is changed from Corporate to Personal, Intune deletes all app information previously collected from that device within 7 days. If applicable, Intune will also delete the phone number on record. 
+Devices properties display **Ownership** for each device record in Intune. As an admin, you can specify devices as **Personal** or **Corporate**.
 
 **To change device ownership:**
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **All devices** > choose the device.
@@ -131,8 +139,8 @@ Devices properties display **Ownership** for each device records in Intune. As a
 
    ![Device properties showing Device category and Device ownership options](./media/corporate-identifiers-add/device-properties.png)
 
-You can configure a push notification to send to both your Android and iOS Company Portal users when their device ownership type has been changed from **Personal** to **Corporate** as a privacy courtesy. 
+When a device's ownership type is changed from *Corporate* to *Personal*, Intune deletes all app information previously collected from that device within seven days. If applicable, Intune will also delete the phone number on record. Intune will still collect an inventory of apps installed by the IT admin on the device and will still collect a partial phone number for the device after it is marked as personal.
 
-When a device's ownership type is changed from Corporate to Personal, Intune deletes all app information previously collected from that device within 7 days. If applicable, Intune will also delete the phone number on record. Intune will still collect an inventory of apps installed by the IT admin on the device and will still collect a partial phone number for the device after it is marked as personal.
+When an iOS/iPad or Android device's ownership type is changed from *Personal* to *Corporate*, a push notification is sent through the Company Portal app to inform the devices user of this change.
 
 This setting can be found in the Microsoft Endpoint Manager by selecting **Tenant administration** > **Customization**. For more information, see [Company Portal - Configuration](../apps/company-portal-app.md#configuration).

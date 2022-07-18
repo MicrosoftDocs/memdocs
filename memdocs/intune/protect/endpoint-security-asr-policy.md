@@ -7,8 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/18/2020
-ms.topic: reference
+ms.date: 05/23/2022
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -23,29 +23,49 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ms.reviewer: mattcall
 
 ---
 
 # Attack surface reduction policy for endpoint security in Intune
 
-When Defender antivirus is in use on your Windows 10 devices, you can use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
+When Defender antivirus is in use on your Windows 10/11 devices, you can use Intune endpoint security policies for Attack surface reduction to manage those settings for your devices.
 
 Attack surface reduction policies help reduce your attack surfaces, by minimizing the places where your organization is vulnerable to cyberthreats and attacks. For more information, see [Overview of attack surface reduction]( /windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
 
-Find the endpoint security policies for attack surface reduction under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each attack surface reduction *profile* manages settings for a specific area of a Windows 10 device.
-
-View [settings for Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).
+Find the endpoint security policies for attack surface reduction under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Each attack surface reduction *profile* manages settings for a specific area of a Windows 10/11 device.
 
 ## Prerequisites for Attack surface reduction profiles
 
-- Windows 10 or later
+**General**:
+
+- Windows 10 or Windows 11
 - Defender antivirus must be the primary antivirus on the device
+
+**Support for Configuration Manager clients**:
+
+*This scenario is in preview and requires use of Configuration Manager current branch version 2006 or later*.
+
+- **Set up tenant attach for Configuration Manager devices** - To support deploying attack surface reduction policy to devices managed by Configuration Manager, configure tenant attach. Set up of tenant attach includes configuring Configuration Manager device collections to support endpoint security policies from Intune.
+
+  To set up tenant attach, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
 ## Attack surface reduction profiles
 
-**Windows 10 profiles**:
+> [!NOTE]  
+> Beginning in April 2022, new profiles for Attack surface reduction policy have begun to release. When a new profile becomes available, it uses the same name of the profile it replaces and includes the same settings as the older profile but in the newer settings format as seen in the Settings Catalog. Your previously created instances of these profiles remain available to use and edit, but all new instances you create will be in the new format. The following profiles have been updated:
+>
+> - Attack surface reduction rules (April 5, 2022)
+> - Exploit protection (April 5, 2022)
+> - Device control (May 23, 2022)
+ 
+
+### Devices managed by Intune
+
+**Windows 10/11 profiles**:
 
 - **App and browser isolation** – Manage settings for Windows Defender Application Guard (Application Guard), as part of Defender for Endpoint. Application Guard helps to prevent old and newly emerging attacks and can isolate enterprise-defined sites as untrusted while defining what sites, cloud resources, and internal networks are trusted.
 
@@ -65,7 +85,7 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
   To learn more, see [Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender for Endpoint documentation.
   
     > [!NOTE]
-    > If you use this setting, AppLocker CSP behaviour currently prompts end user to reboot their machine when a policy is deployed.
+    > If you use this setting, AppLocker CSP behavior currently prompts end user to reboot their machine when a policy is deployed.
 
 - **Attack surface reduction rules** – Configure settings for attack surface reduction rules that target behaviors that malware and malicious apps typically use to infect computers, including:
   - Executable files and scripts used in Office apps or web mail that attempt to download or run files
@@ -73,7 +93,6 @@ View [settings for Attack surface reduction profiles](../protect/endpoint-securi
   - Behaviors that apps don't usually start during normal day-to-day work
 Reducing your attack surface means offering attackers fewer ways to perform attacks.
 
-  To learn more, see [Attack surface reduction rules](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction) in the Microsoft Defender for Endpoint documentation.
 
   **Merge behavior for Attack surface reduction rules in Intune**:
 
@@ -96,7 +115,9 @@ Reducing your attack surface means offering attackers fewer ways to perform atta
 
 - **Exploit protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of a number of mitigations that can be applied to either the operating system or individual apps.
 
-  To learn more, see [Enable exploit protection](/windows/security/threat-protection/microsoft-defender-atp/enable-exploit-protection) in the Microsoft Defender for Endpoint documentation.
+### Devices managed by Configuration Manager
+
+[!INCLUDE [Attack surface reduction prerequisites](../includes/tenant-attach-asr-prerequisites.md)]
 
 ## Policy merge for settings
 
@@ -119,19 +140,21 @@ Device control profiles support policy merge for USB Device IDs. The profile set
 
 Policy merge applies to the configuration of each setting across the different profiles that apply that specific setting to a device. The result is a single list for each of the supported settings being applied to a device. For example:
 
-- Policy merge evaluates the lists of *setup classes* that were configured in each instance of *Allow hardware device installation by setup classes* that applies to a device. The into a single allow list where any duplicate setup classes are removed.
+- Policy merge evaluates the lists of *setup classes* that were configured in each instance of *Allow hardware device installation by setup classes* that applies to a device. The lists are merged into a single allowlist where any duplicate setup classes are removed.
 
-  Removal of duplicates from the list is done to remove the common source of conflicts. The combined allow list is then delivered to the device.
+  Removal of duplicates from the list is done to remove the common source of conflicts. The combined allowlist is then delivered to the device.
 
 Policy merge doesn’t compare or merge the configurations from different settings. For example:
 
-- Expanding on the first example, in which multiple lists from *Allow hardware device installation by setup classes* were merged into a single list, you have several instances of *Block hardware device installation by setup classes* that applies to the same device. All the related block lists merge into a single block list for the device that then deploys to the device.
+- Expanding on the first example, in which multiple lists from *Allow hardware device installation by setup classes* were merged into a single list, you have several instances of *Block hardware device installation by setup classes* that applies to the same device. All the related blocklists merge into a single blocklist for the device that then deploys to the device.
 
-  - The allow list for *setup classes* isn’t compared nor merged with the block list for *setup classes*.  
+  - The allowlist for *setup classes* isn’t compared nor merged with the blocklist for *setup classes*.  
   - Instead, the device receives both lists, as they are from two distinct settings. The device then enforces the most restrictive setting for *installation by setup classes*.
 
-  With this example, a setup class defined in the block list will override the same setup class if found on the allow list. The result would be that the setup class is blocked on the device.
+  With this example, a setup class defined in the blocklist will override the same setup class if found on the allowlist. The result would be that the setup class is blocked on the device.
 
 ## Next steps
 
 [Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+
+View details for the settings in profiles for [Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).

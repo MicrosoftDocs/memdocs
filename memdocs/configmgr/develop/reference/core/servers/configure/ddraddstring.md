@@ -1,6 +1,7 @@
 ---
 title: "DDRAddString"
 titleSuffix: "Configuration Manager"
+description: "The DDRAddString function, in Configuration Manager, adds a string property to the data discovery record (DDR)."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a1ea1be3-ec2e-459e-b4de-934d4631ce59
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

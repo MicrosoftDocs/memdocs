@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_SearchFolder WMI class in Configuration Manager to perform search operations. 
 title: "SMS_SearchFolder Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 8b9bfaff-c183-4453-a6a0-f1ede8e3552f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

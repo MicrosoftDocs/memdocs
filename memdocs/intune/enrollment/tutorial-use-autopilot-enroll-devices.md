@@ -5,10 +5,10 @@ title: Tutorial - Use Autopilot to enroll devices in Intune
 titleSuffix: Microsoft Intune
 description: In this tutorial, you'll set up Windows Autopilot to enroll devices in Intune.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 10/19/2018
+ms.date: 07/13/2022
 ms.topic: tutorial
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -22,12 +22,14 @@ Customer intent: As an Intune admin, I want to set up Windows Autopilot so that 
 #ROBOTS:
 #audience:
 
-ms.reviewer: spshumwa
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Tutorial: Use Autopilot to enroll Windows devices in Intune
@@ -64,7 +66,7 @@ The first step in setting up Windows Autopilot is to add the Windows devices to 
 
 2. Save the CSV file.
 
-3. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Devices** (under **Windows Autopilot Deployment Program** > **Import**.
+3. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows Enrollment** > **Devices** (under **Windows Autopilot Deployment Program**) > **Import**.
 
     ![Screenshot of Windows Autopilot devices](./media/enrollment-autopilot/autopilot-import-device.png)
 

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Troubleshoot device profiles in Microsoft Intune - Azure | Microsoft Docs
-description: Common questions and answers with device policies and profiles, including profile changes not applied to users or devices, how long it takes for new policies to be pushed to devices, which settings are applied when there are multiple policies, what happens when a profile is deleted or removed, and more with Microsoft Intune.
+title: Troubleshoot device profiles in Microsoft Intune
+description: Common questions and answers with device policies and profiles, including profile changes not applied to users or devices, how long it takes for new policies to deploy to devices, which settings apply when there are multiple policies, what happens when a profile is deleted or removed, and more with Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 06/16/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -45,8 +45,7 @@ If a device doesn't check in to get the policy or profile after the first notifi
 | iOS/iPadOS | About every 8 hours |
 | macOS | About every 8 hours |
 | Android | About every 8 hours |
-| Windows 10 PCs enrolled as devices | About every 8 hours |
-| Windows Phone | About every 8 hours |
+| Windows 10/11 PCs enrolled as devices | About every 8 hours |
 | Windows 8.1 | About every 8 hours |
 
 If devices recently enroll, then the compliance, non-compliance, and configuration check-in runs more frequently. The check-ins are **estimated** at:
@@ -56,11 +55,10 @@ If devices recently enroll, then the compliance, non-compliance, and configurati
 | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |  
 | macOS | Every 15 minutes for 1 hour, and then around every 8 hours | 
 | Android | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
-| Windows 10 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
-| Windows Phone | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
+| Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 | Windows 8.1 | Every 5 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours | 
 
-At any time, users can open the Company Portal app, **Settings** > **Sync** to immediately check for policy or profile updates.
+At any time, users can open the Company Portal app, **Settings** > **Sync** to immediately check for policy or profile updates. For related information about the Intune Management Extension agent or Win32 apps, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
 
 ## What actions cause Intune to immediately send a notification to a device?
 
@@ -82,23 +80,27 @@ When two or more policies are assigned to the same user or device, then the sett
 
 - If a configuration policy setting conflicts with a setting in another configuration policy, this conflict is shown in Intune. Manually resolve these conflicts.
 
+In the Endpoint Manager admin center, there are few places you can create configuration policies, including Group Policy analytics, Endpoint Security, Security Baselines, and more. If there's a conflict and you have multiple policies, then check all the places you've configured policies. Also, the built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
+
 ## What happens when app protection policies conflict with each other? Which one is applied to the app?
 
-Conflict values are the most restrictive settings available in an app protection policy *except* for the number entry fields, such as PIN attempts before reset. The number entry fields are set the same as the values, as if you created a MAM policy using the recommended settings option.
+Conflict values are the most restrictive settings available in an app protection policy. The exception is numeric entry fields, such as PIN attempts before reset. Numeric entry fields are set the same as the values, as if you created a MAM policy using the recommended settings option.
 
-Conflicts happen when two profile settings are the same. For example, you configured two MAM policies that are identical except for the copy/paste setting. In this scenario, the copy/paste setting is set to the most restrictive value, but the rest of the settings are applied as configured.
+Conflicts happen when two profile settings are the same. For example, you configured two MAM policies that are identical except for the copy/paste setting. In this scenario, the copy/paste setting is set to the most restrictive value. The rest of the settings apply as configured.
 
 A policy is deployed to the app and takes effect. A second policy is deployed. In this scenario, the first policy takes precedence, and stays applied. The second policy shows a conflict. If both are applied at the same time, meaning that there isn't preceding policy, then both are in conflict. Any conflicting settings are set to the most restrictive values.
 
-## What happens when iOS/iPadOS custom policies conflict?
+## What happens when iOS/iPadOS or macOS custom policies conflict?
 
 Intune doesn't evaluate the payload of Apple Configuration files or a custom Open Mobile Alliance Uniform Resource Identifier (OMA-URI) policy. It merely serves as the delivery mechanism.
 
-When you assign a custom policy, confirm that the configured settings don't conflict with compliance, configuration, or other custom policies. If a custom policy and its settings conflict, then the settings are applied randomly.
+When you assign a custom policy, confirm that the configured settings don't conflict with compliance, configuration, or other custom policies. If a custom policy and its settings conflict, then the settings are applied randomly by Apple.
+
+The built-in reporting features can help with conflicts. For more information on the available reports, go to [Intune reports](../fundamentals/reports.md).
 
 ## What happens when a profile is deleted or no longer applicable?
 
-When you delete a profile, or remove a device from a group that's assigned the profile, then the profile and settings are removed from the device as described:
+When you delete a profile, or remove a device from a group that's assigned the profile, then the profile and settings are removed from the device. Specifically, they're removed as described in the following list:
 
 - Wi-Fi, VPN, certificate, and email profiles: These profiles are removed from all supported enrolled devices.
 - All other profile types:
@@ -110,17 +112,22 @@ When you delete a profile, or remove a device from a group that's assigned the p
     - Allow data roaming
     - Allow automatic synchronization while roaming
 
-  - **Windows devices**: Intune settings are based on the Windows configuration service provider (CSPs). The behavior depends on the CSP. Some CSPs remove the setting, and some CSPs keep the setting, also called tattooing.
+  - **Windows devices**: After you remove or unassign the profile, have the Azure AD user sign in to the device, and [sync with the Intune service](../user-help/sync-your-device-manually-windows.md).
 
-- A profile applies to a user group. Later, a user is removed from the group. For the settings to be removed from that user, it can take up to 7 hours + the [platform-specific policy refresh cycle](#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) (in this article).
+    Intune settings are based on the Windows configuration service provider (CSPs). The behavior depends on the CSP. Some CSPs remove the setting, and some CSPs keep the setting, also called tattooing.
+
+- A profile applies to a user group. Later, a user is removed from the group. For the settings to be removed from that user, it can take up to 7 hours or more for:
+
+  - The profile to be removed from the policy assignment in the Endpoint Manager admin center
+  - The device to sync with the Intune object using the [platform-specific policy refresh cycle](#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned) (in this article)
 
 ## I changed a device restriction profile, but the changes haven't taken effect
 
-To apply a less restrictive profile, some devices, such as Android, iOS/iPadOS, and Windows 10, may need to be retired and re-enrolled in to Intune.
+To apply a less restrictive profile, some devices may need to be retired and re-enrolled in to Intune. For example, you may have to retire and re-enroll Android, iOS/iPadOS, and Windows client devices.
 
-## Some settings in a Windows 10 profile return "Not Applicable"
+## Some settings in a Windows 10/11 profile return "Not Applicable"
 
-Some settings on Windows 10 devices may show as "Not Applicable". When this situation happens, that specific setting isn't supported on the Windows version or edition running on the device. This message can occur for the following reasons:
+Some settings on Windows client devices may show as "Not Applicable". When this situation happens, that specific setting isn't supported on the Windows version or edition running on the device. This message can occur for the following reasons:
 
 - The setting is only available for newer versions of Windows, and not the current operating system (OS) version on the device.
 - The setting is only available for specific Windows editions or specific SKUs, such as Home, Professional, Enterprise, and Education.

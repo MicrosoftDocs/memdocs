@@ -2,14 +2,14 @@
 title: Add site system roles
 titleSuffix: Configuration Manager
 description: Understand Configuration Manager site system roles and how to add them to extend the functionality and capacity of your site.
-ms.date: 04/01/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: b90de2d9-494e-43ad-b269-c8ed589f37d3
+ms.topic: overview
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Add site system roles for Configuration Manager
@@ -27,7 +27,7 @@ The following articles detail procedures and related details for installing site
 
 - [Install site system roles](install-site-system-roles.md): Basic guidance about how to use the two in-console wizards to install new site system roles.
 
-- [Install cloud-based distribution points](install-cloud-based-distribution-points-in-microsoft-azure.md): Use Microsoft Azure to host content that you deploy to clients.
+- [Set up checklist for CMG](../../../clients/manage/cmg/set-up-checklist.md): Set up a cloud management gateway (CMG) to manage clients on the internet.
 
 - [Install site system roles for on-premises mobile device management (MDM)](../../../../mdm/get-started/install-site-system-roles-for-on-premises-mdm.md): Set up your site system roles to support managing modern devices by using Configuration Manager on-premises MDM.
 

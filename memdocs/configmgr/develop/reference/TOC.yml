@@ -2541,7 +2541,7 @@ items:
       href: core/servers/configure/stop-method-in-class-sms_azureservice.md
   - name: SMS_AzureServicesTask server WMI class
     href: core/servers/configure/sms_azureservicestask-server-wmi-class.md
-- name: Windows 10 servicing server WMI classes
+- name: Windows servicing server WMI classes
   items:
   - name: SMS_AdminUIContent server WMI class
     href: misc/sms-adminuicontent-server-wmi-class.md

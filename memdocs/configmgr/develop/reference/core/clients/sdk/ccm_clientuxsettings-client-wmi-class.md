@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a set of client UX utility methods in Configuration Manager with CCM_ClientUXSettings.
 title: "CCM_ClientUXSettings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 84cd8c38-f7d2-4c99-94d4-3d4c17ab7645
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

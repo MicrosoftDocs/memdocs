@@ -1,4 +1,5 @@
 ---
+description: Learn how to define the global logging configuration for the client with SetGlobalLoggingConfiguration method.
 title: "SetGlobalLoggingConfiguration Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: e8bd00a9-c0a6-4b3c-9906-39fb2c342af4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

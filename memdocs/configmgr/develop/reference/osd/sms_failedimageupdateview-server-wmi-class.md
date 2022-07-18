@@ -1,4 +1,5 @@
 ---
+description: Learn how the SMS_FailedImageUpdateView Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents failed software update information in offline servicing image. 
 title: "SMS_FailedImageUpdateView Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 65a68dc4-f599-4e9e-b578-3600fc24a202
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

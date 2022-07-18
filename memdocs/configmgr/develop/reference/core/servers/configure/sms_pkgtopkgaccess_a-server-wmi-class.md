@@ -1,4 +1,5 @@
 ---
+description: Learn how to relate an SMS Package Server class object with the SMS PackageAccessByUsers Server class object used to access its distribution points.
 title: "SMS_PkgToPkgAccess_a Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 17a0dc88-ede7-43f5-9d36-f2fb38db0514
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

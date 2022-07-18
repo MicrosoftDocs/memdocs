@@ -2,14 +2,14 @@
 title: Find help
 titleSuffix: Configuration Manager
 description: Find resources for additional information about Configuration Manager.
-ms.date: 11/30/2020
+ms.date: 11/10/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 86810629-cf2a-43e8-86a2-847444119fc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Find help for using Configuration Manager
@@ -34,13 +34,13 @@ To get support for co-management, tenant attach, and analytics features, see [Ho
 
 From the Configuration Manager console, you can share feedback directly to the Microsoft product group. In the upper right corner of the console, select the smiley face icon.  There are three types of feedback:
 
-![Submit feedback in Configuration Manager](media/console-share-feedback.png)
+:::image type="content" source="media/console-share-feedback.png" alt-text="Submit feedback in Configuration Manager.":::
 
 - **Send a smile**: Send feedback on what you liked.
 
 - **Send a frown**: Send feedback on what you didn't like, and how Microsoft can improve it.
 
-- **Send a suggestion**: Open the [Configuration Manager UserVoice website](https://configurationmanager.uservoice.com/) to share your idea.
+- **Send a suggestion**: Open the Configuration Manager product feedback site to share your idea.
 
 For more information, see [Product feedback](product-feedback.md).
 

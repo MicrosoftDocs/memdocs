@@ -1,6 +1,7 @@
 ---
 title: "SMS_ApplicationPublishingItem Class"
 titleSuffix: "Configuration Manager"
+description: "represents the `ConfigurationItem` object where the `PublishingItem` defined in an `Application` digest is stored in the database."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 3fee5457-dc18-4493-8cd0-3b4e82cf0381
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

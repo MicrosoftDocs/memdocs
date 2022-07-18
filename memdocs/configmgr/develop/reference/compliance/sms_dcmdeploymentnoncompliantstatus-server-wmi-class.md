@@ -1,6 +1,7 @@
 ---
 title: "SMS_DCMDeploymentNonCompliantStatus Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents non-compliant status for a deployment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 67caab62-edaf-4904-85b6-452811188c03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

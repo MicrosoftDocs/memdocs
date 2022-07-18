@@ -1,18 +1,17 @@
 ---
 # required metadata
-title: Integrate Windows Hello for Business with Microsoft Intune
+title: Configure a tenant-wide Windows Hello for Business policy with Microsoft Intune
 titleSuffix: Microsoft Intune
-description: Learn how to create a policy for controlling use of Windows Hello for Business on managed devices during device enrollment."
+description: Apply policy for Windows Hello for Business on devices at the time they enroll with Microsoft Intune
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 04/25/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -23,29 +22,43 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ms.reviewer: shpate
 ---
 
-# Integrate Windows Hello for Business with Microsoft Intune  
+# Manage Windows Hello for Business on devices at the time devices enroll with Intune 
 
+With Microsoft Intune, you can create a tenant-wide policy that configures use of Windows Hello for Business on Windows 10/11 devices at the time those devices enroll with Intune. This policy targets your entire organization and supports the Windows AutoPilot out-of-box-experience (OOBE). 
+
+For Windows 10/11 devices, use of [Windows Hello for Business](/windows/security/identity-protection/hello-for-business/hello-overview) replaces the use of passwords with strong two-factor authentication on devices. This authentication consists of a user credential that’s tied to a device and uses a biometric or PIN.
+
+If you choose not to configure a tenant-wide policy for Windows Hello for Business, you can use a device configuration [Identity protection](../protect/identity-protection-configure.md) profile to configure groups of devices for Windows Hello.
+
+In addition, Intune can manage some settings for Windows Hello through the following methods:
+
+- [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed by security baselines like the baselines for *Microsoft Defender for Endpoint security* or  *Security Baseline for Windows 10 and later*.
+- [Endpoint security Account protection policy](../protect/endpoint-security-account-protection-policy.md): Account protection policies include some of the settings used by Windows Hello.
+
+<!-- OLD>
 You can integrate Windows Hello for Business with Microsoft Intune, during device enrollment.
 
 Hello for Business is an alternative sign-in method that uses Active Directory or an Azure Active Directory account to replace a password, smart card, or a virtual smart card. It lets you use a *user gesture* to sign in, instead of a password. A user gesture might be a PIN, biometric authentication such as Windows Hello, or an external device such as a fingerprint reader.
 
 Intune integrates with Hello for Business in two ways:
 
-- **Tenant wide** (*this article)*: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows AutopPilot out-of-box-experience (OOBE) and is applied when a device enrolls.
+- **Tenant wide** (*this article)*: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows Autopilot out-of-box-experience (OOBE) and is applied when a device enrolls.
 - **Discrete groups**: For devices that have previously enrolled with Intune, use a device configuration [**Identity protection**](../protect/identity-protection-configure.md) profile to configure devices for Windows Hello for Business. Identity protection profiles can target assigned users or devices, and apply during check-in.
 
 In addition, Intune supports the following types of policy to manage some settings for Windows Hello for Business:
 
 - [**Security baselines**](../protect/security-baselines.md). The following baselines include settings for Windows Hello for Business:
   - [Microsoft Defender for Endpoint baseline settings](../protect/security-baseline-settings-defender-atp.md#windows-hello-for-business)
-  - [Windows MDM security baseline settings](../protect/security-baseline-settings-mdm-all.md#windows-hello-for-business)
 - Endpoint security [**Account protection**](../protect/endpoint-security-account-protection-policy.md) policy. View the [Account protection settings](../protect/endpoint-security-account-protection-profile-settings.md#account-protection).
 
 The remainder of this article focuses on creating a default Windows Hello for Business policy that targets your entire organization.
+END OLD -->
 
 > [!IMPORTANT]
 > Prior to the Anniversary Update, you could set two different PINS that could be used to authenticate to resources:
@@ -66,17 +79,17 @@ The remainder of this article focuses on creating a default Windows Hello for Bu
 
 3. Select from the following options for **Configure Windows Hello for Business**:
 
-   - **Enabled**. Select this setting if you want to configure Windows Hello for Business settings.  When you select *Enabled*, additional settings for Windows Hello are visible and can be configured for devices.
+   - **Enabled**. Select this setting if you want to configure Windows Hello for Business settings. When you select *Enabled*, other settings for Windows Hello are visible and can be configured for devices.
 
    - **Disabled**. If you don't want to enable Windows Hello for Business during device enrollment, select this option. When disabled, users can't provision Windows Hello for Business. When set to *Disabled*, you can still configure the subsequent settings for Windows Hello for Business even though this policy won't enable Windows Hello for Business.
 
-   - **Not configured**. Select this setting if you don't want to use Intune to control Windows Hello for Business settings. Any existing Windows Hello for Business settings on Windows 10 devices isn't changed. All other settings on the pane are unavailable.
+   - **Not configured**. Select this setting if you don't want to use Intune to control Windows Hello for Business settings. Any existing Windows Hello for Business settings on 10/11 devices isn't changed. All other settings on the pane are unavailable.
 
-4. If you selected **Enabled** in the previous step, configure the required settings that are applied to all enrolled Windows 10 devices. After you configure these settings, select **Save**.
+4. If you selected **Enabled** in the previous step, configure the required settings that are applied to all enrolled Windows 10/11 devices. After you configure these settings, select **Save**.
 
    - **Use a Trusted Platform Module (TPM)**:
 
-     A TPM chip provides an additional layer of data security. Choose one of the following values:
+     A TPM chip provides another layer of data security. Choose one of the following values:
 
      - **Required** (default). Only devices with an accessible TPM can provision Windows Hello for Business.
      - **Preferred**. Devices first attempt to use a TPM. If this option isn't available, they can use software encryption.
@@ -141,4 +154,4 @@ Windows Holographic for Business supports the following settings for Windows Hel
 
 ## Next steps
 
-For more information about Windows Hello for Business, see [the guide](/windows/security/identity-protection/hello-for-business/hello-identity-verification) in the Windows 10 documentation.
+For more information about Windows Hello for Business, see [the guide](/windows/security/identity-protection/hello-for-business/hello-identity-verification) in the Windows documentation.

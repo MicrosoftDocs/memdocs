@@ -1,4 +1,5 @@
 ---
+description: Learn how to reinitialize a specific replication group between two specified sites using InitializeData class method.
 title: "InitializeData Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: a7c12a4e-85a0-4293-9888-095cc60640f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

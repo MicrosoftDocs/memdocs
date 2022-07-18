@@ -9,7 +9,9 @@ ms.assetid: 616805c9-841d-44d4-b517-dcd4d57a13da
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
+ms.localizationpriority: null
+ms.collection: openauth
+description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_TaskSequence_RestoreUserStateAction server class.
 
 ---
 # SMS_TaskSequence_RestoreUserStateAction Server WMI Class

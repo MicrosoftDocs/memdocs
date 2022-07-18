@@ -7,7 +7,7 @@ keywords: Intune Data Warehouse
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 05/13/2021
+ms.date: 12/16/2021
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: developer
@@ -269,7 +269,7 @@ The **devices** entity lists all enrolled devices under management and their cor
 | windowsOsEdition           | Windows Operating System edition.                                                                                                                             |
 | ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
 | model                      | The device model.                                                                                                                                                                      |
-| office365Version           | The version of Microsoft 365 that is installed on the device.                                                                                                                             |
+| office365Version           | The version of Microsoft 365 that is installed on the device. `Office365Version` is only collected when the Intune management extension agent is installed on a Windows machine. The admin must also create and assign a PowerShell or Win32 App for the agent to be installed. For more information, see [Use PowerShell scripts on Windows 10 devices in Intune](../apps/intune-management-extension.md) and [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).<p>**NOTE**:<br>There is a known issue with the Intune Data Warehouse **devices** table. The `office365Version` property for the device record may be null. This property is currently under maintenance and may be subject to deprecation. Therefore, you should consider not using this property value for reporting purposes.                                                                                                                               |
 | SubnetAddressV4Wifi           | The subnet address for IPV4 Wifi connection.                                                                                                                             |
 | IpAddressV4Wifi           | The IP address for IPV4 Wifi connection.                                                                                                                             |
 
@@ -278,7 +278,7 @@ The **devices** entity lists all enrolled devices under management and their cor
 
 ## devicePropertyHistories
 
-The **devicePropertyHistory** entity has the same properties as the devices table and daily snapshots of each device record per day for the past 90 days. The DateKey column indicates the day for each row.
+The **devicePropertyHistory** entity has the same properties as the devices table and daily snapshots of each device record per day for the past 60 days. The DateKey column indicates the day for each row.
 
 |          Property          |                                                                                      Description                                                                                     |
 |----------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

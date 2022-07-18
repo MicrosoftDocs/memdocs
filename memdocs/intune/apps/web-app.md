@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 12/16/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 5f08752f-0e87-4ad9-a34c-4991b3150775
 
@@ -76,9 +76,6 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
 11. When you are done, click **Create** to add the app to Intune.
 
     The **Overview** blade of the app you've created is displayed.
-
-> [!Note]
-> Currently, deployment of Intune web apps to iOS/iPadOS devices is associated with the management profile and cannot be removed manually. You can change the deployment type to **Uninstall** in Intune, at which point the web app can be removed automatically. However, if you remove the deployment before changing the app assignment intent to **Uninstall**, the web app will be permanently in place on the device until the device is un-enrolled from Intune.
 
 End-users can launch web apps directly from the Windows Company Portal app by selecting the web app and then choosing the option **Open in browser**. The published web URL is opened directly in the web browser. 
 

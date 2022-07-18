@@ -3,16 +3,13 @@ metadata:
   title: Configuration Manager on Azure FAQ
   titleSuffix: Configuration Manager
   description: Frequently asked questions about using Configuration Manager on an Azure environment.
-  ms.date: 04/26/2021
+  ms.date: 07/23/2021
   ms.prod: configuration-manager
   ms.technology: configmgr-core
-  ms.topic: conceptual
-  ms.assetid: d24257d8-8136-47f4-8e0d-34021356dc37
+  ms.topic: faq
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
-  
-    
 title: Configuration Manager on Azure FAQ
 summary: |
   *Applies to: Configuration Manager (current branch)*
@@ -44,6 +41,12 @@ sections:
           5. User Experience
 
           For more information on these factors, see the other questions below.
+
+      - question: Can I use Configuration Manager with Azure Stack Hub?
+        answer: |
+          Yes. [Azure Stack Hub](/azure-stack/operator) supports IaaS virtual machines the same as the Azure cloud. So Configuration Manager is supported on Azure Stack Hub in the same way as with Azure IaaS.<!--10371381-->
+
+          Configuration Manager cloud-attached features that rely on specific cloud services aren't supported with Azure Stack Hub. For example, you can't create a cloud management gateway (CMG) in Azure Stack Hub.
 
   - name: Networking
     questions:
@@ -165,7 +168,7 @@ sections:
       - question: Why is user experience a main area of importance?
         answer: The decisions you make for networking, availability, performance, and site server location can directly affect your users. Moving a site to Azure should be transparent to your users so that they don't experience a change in their day-to-day interactions with Configuration Manager.
 
-      - question: To keep costs low for a single primary site, should remote site systems be in Azure on on-premises?
+      - question: To keep costs low for a single primary site, should remote site systems be in Azure or on-premises?
         answer: |
           Except for communication from the site server to a distribution point, these server-to-server communications in a site can occur at any time and don't use mechanisms to control the use of network bandwidth. Because you can't control the communication between site systems like management points and software update points, make sure to consider any costs associated with these communications.
           
@@ -189,7 +192,7 @@ sections:
 
             - Use standard or pull distribution points on-premises.
             - Enable Windows BranchCache on distribution points or other [peer caching technologies](../plan-design/hierarchy/fundamental-concepts-for-content-management.md#peer-caching-technologies).
-            - Use a [cloud-based distribution point](../plan-design/hierarchy/use-a-cloud-based-distribution-point.md) (CDP). Note that CDPs and content-enabled cloud management gateways don't support software update packages for Microsoft updates. You need to have an alternate location, or software update deployment need to allow clients to get update content from the internet.
+            - Use a content-enabled [cloud management gateway](../clients/manage/cmg/overview.md) (CMG). Note that it doesn't support software update packages for Microsoft updates. You need to have an alternate location, or configure the software update deployment need to allow clients to get update content from the internet.
           
           > [!NOTE]
           > If you require PXE or multicast support, you need an on-premises distribution point to respond to these boot requests.

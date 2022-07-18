@@ -2,14 +2,14 @@
 title: Configuration Manager console notifications
 titleSuffix: Configuration Manager
 description: Learn about notifications from the Configuration Manager console.
-ms.date: 11/30/2020
+ms.date: 12/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: a0d709fa-c4f8-46e1-b432-582cc293be35
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Configuration Manager console notifications
@@ -17,14 +17,14 @@ manager: dougeby
 *Applies to: Configuration Manager (current branch)*
 
 <!--3556016, fka 1318035-->
-Starting in Configuration Manager version 1902, the Configuration Manager console notifies you for specific events that occur. You can configure some of the event notifications for your Configuration Manager sites.
+The Configuration Manager console notifies you for specific events that occur. You can configure some of the event notifications for your Configuration Manager sites.
 
 - Non-configurable event notifications:
    - When an update is available for Configuration Manager itself
    - When lifecycle and maintenance events occur in the environment
 - Configurable event notifications:
    - [Non-critical site health changes](#bkmk_noncrit)
-   - [Messages from Microsoft](#bkmk_msft) (starting in version 2006)
+   - [Messages from Microsoft](#bkmk_msft)
 
 This notification is a bar at the top of the console window below the ribbon. It replaces the previous experience when Configuration Manager updates are available. These in-console notifications still display critical information, but don't interfere with your work in the console. You can't dismiss critical notifications. The console displays all notifications in a new notification area of the title bar.
 
@@ -80,7 +80,7 @@ Environments with the following operating systems installed on client devices re
    - Selecting **More info** takes you to the [Management insights](../../servers/manage/management-insights.md#security) **Security** group to review the **Update clients running Windows 7 and Windows Server 2008** rule.
 
 - Versions of Windows 10 Semi-Annual Channel that are past the end-of-support date for [Enterprise and Education](/lifecycle/products/windows-10-enterprise-and-education) and [Home and Pro](/lifecycle/products/windows-10-home-and-pro) editions.
-   - Selecting **More info** takes you to the [Management insights](../../servers/manage/management-insights.md#security) **Simplified Management** group to review the **Update clients to a supported Windows 10 version** rule.
+   - Selecting **More info** takes you to the [Management insights](../../servers/manage/management-insights.md#simplified-management) **Simplified Management** group to review the **Update clients to a supported Windows 10 version** rule.
 
 You can also view the [Product Lifecycle Dashboard](../../clients/manage/asset-intelligence/product-lifecycle-dashboard.md) to see information about which operating systems are out of support. This information (such as the support lifecycle for Windows 10 versions) is provided for your convenience and only for use internally within your company. You should not solely rely on this information to confirm update compliance. Be sure to verify the accuracy of the information provided to you.
 
@@ -90,6 +90,9 @@ You can also view the [Product Lifecycle Dashboard](../../clients/manage/asset-i
 - If you configure Azure services to cloud-attach your site, you'll see notifications with an action to [renew the secret key](../deploy/configure/azure-services-wizard.md#bkmk_renew).<!--6386392--> The site evaluates the state of the following alerts once per hour:
    - One or more Azure AD app secret keys will expire soon
    - One or more Azure AD app secret keys have expired
+
+> [!Important]
+> When you use an [imported Azure AD app](../deploy/configure/azure-services-wizard.md#import-apps-dialog-server), you aren't notified of an upcoming expiration date from console notifications. <!--10568158-->
 
 ## <a name="bkmk_noncrit"></a> Configure a site to show non-critical notifications
 

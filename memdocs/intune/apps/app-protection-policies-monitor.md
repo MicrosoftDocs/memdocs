@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/25/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
 
@@ -39,7 +39,7 @@ There are three different places to monitor app protection policies:
 - Detailed view
 - Reporting view
 
-The retention period for app protection data is 90 days. Any app instances that have checked in to the Intune service within the past 90 days is included in the app protection status report. An *app instance* is a unique user + app + device. 
+App protection data is retained for a minimum of 90 days. Any app instances that have checked in to the Intune service within the past 90 days is included in the app protection status report. An *app instance* is a unique user + app + device. 
 
 > [!NOTE]
 > For more information, see [How to create and assign app protection policies](app-protection-policies.md).
@@ -79,7 +79,7 @@ Users with devices that are flagged by the **Require threat scan on apps** condi
 
 ## Reporting view
 
-You can find the same reports at the top of the **App protection status** pane. To view these reports, select **Apps** > **App protection status** > **Reports**. The **Reports** pane provides several reports based on user and app, including the following:
+You can find the same reports at the top of the **App protection status** pane. To view these reports, select **Apps** > **Monitor** > **App protection status** > **Reports**. The **Reports** pane provides several reports based on user and app, including the following:
 
 ### User report
 
@@ -180,5 +180,4 @@ Follow these steps to generate App Protection .csv file or App Configuration .cs
  
 ## See also
 - [Manage data transfer between iOS/iPadOS apps](data-transfer-between-apps-manage-ios.md)
-- [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
 - [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)

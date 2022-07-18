@@ -1,18 +1,17 @@
 ---
 # required metadata
 
-title: Noncompliant message and actions with Microsoft Intune - Azure | Microsoft Docs
-description: Create a notification email to send to non-compliant devices. Add actions to apply to devices that don't meet your compliance policies. Actions can include a grace period to get compliant, block access to network resources, or retire the noncompliant device.
+title: Configure compliance policies with actions for noncompliance in Microsoft Intune
+description: Configure your compliance policies with one or more actions for noncompliance to protect devices and your organization from unprotected devices. Actions can remotely lock devices, send email or notifications to device users, and more.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/05/2021
+ms.date: 07/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: high
-ms.technology:
 
 # optional metadata
 
@@ -21,15 +20,17 @@ ms.technology:
 #ms.devlang:
 ms.suite: ems
 search.appverid: MET150
-ms.reviewer: samyada
+ms.reviewer: tycast
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Configure actions for noncompliant devices in Intune
 
-For devices that don't meet your compliance policies or rules, you can add **Actions for noncompliance**. This feature configures a time-ordered sequence of actions, such as emailing the end user, and more.
+As part of a [compliance policy](../protect/device-compliance-get-started.md) that protects your organizations resources from devices that don't meet your security requirements, compliance policies also include **Actions for noncompliance**. Actions for noncompliance are one or more time-ordered actions that are taken by a policy to help protect devices and your organization. As an example, an action for noncompliance can remotely lock a device to ensure it's protected, or send a notification to devices or users to help them understand and resolve the noncompliant status.
 
 ## Overview
 
@@ -40,6 +41,9 @@ By configuring  **Actions for noncompliance** you gain flexibility to decide wha
 For each action you set, you can configure a schedule that determines when that action takes effect. The schedule is a number of days after the device is marked as noncompliant. You can also configure multiple instances of an action. When you set multiple instances of an action in a policy, the action runs again at that later scheduled time if the device remains non-compliant.
 
 Not all actions are available for all platforms.
+
+   > [!NOTE]
+   > The Microsoft Endpoint Manager admin center displays the _schedule (days after noncompliance)_ in days. However it is possible to specify a more granular interval (hours), using decimal fractions such as 0.25 (6 hours), 0.5 (12 hours), 1.5 (36 hours), and so on. While other values are possible, they can only be configured using [Microsoft Graph](/graph/overview) and not via the admin center. Attempting to use other values in the admin center, such as 0.33 (8 hours) will result in an error when attempting to save the policy.
 
 ## Available actions for noncompliance
 
@@ -54,17 +58,25 @@ Following are the available actions for noncompliance:
 - **Send email to end user**: This action sends an email notification to the user.
 When you enable this action:
 
-  - Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the message locale, subject, message body, and can include the company logo, company name, and additional contact information.
-  - Choose to send the message to additional recipients by selecting one or more of your Azure AD Groups.
+  - Select a *Notification message template* that this action sends. You [Create a notification message template](#create-a-notification-message-template) before you can assign one to this action. When you create the custom notification, you customize the message locale, subject, message body, and can include the company logo, company name, and other contact information.
+  - Choose to send the message to more recipients by selecting one or more of your Azure AD Groups.
 
-  Intune uses the email address defined in the end user's profile and not their user principal name (UPN). If there is no defined email address defined in the user's profile, then Intune does not send a notification email. When the email is sent, Intune includes details about the noncompliant device in the email notification.
+  Intune uses the email address defined in the end user's profile and not their user principal name (UPN). If there's no defined email address defined in the user's profile, then Intune doesn't send a notification email. When the email is sent, Intune includes details about the noncompliant device in the email notification.
 
   This action is supported on all platforms supported by Intune.
+
+   > [!NOTE] 
+   > In the commercial cloud, notification emails are sent from: IntuneNotificationService@microsoft.com
+   > 
+   > In government clouds, notification emails are sent from: microsoft-noreply@microsoft.com
+   > 
+   > Ensure you do not have any mailbox policies that would prevent delivery of emails from these addresses, otherwise end users may not receive the email notification. 
 
 - **Remotely lock the noncompliant device**: Use this action to issue a remote lock of a device. The user is then prompted for a PIN or password to unlock the device. More on the [Remote Lock](../remote-actions/device-remote-lock.md) feature.
 
   The following platforms support this action:
   - Android device administrator
+  - Android (AOSP) (preview)  
   - Android Enterprise:
     - Fully Managed
     - Dedicated
@@ -78,6 +90,7 @@ When you enable this action:
 
   The following platforms support this action:
   - Android device administrator
+  - Android (AOSP) (preview)  
   - Android Enterprise:
     - Fully Managed
     - Dedicated
@@ -85,11 +98,16 @@ When you enable this action:
     - Personally-Owned Work Profile
   - iOS/iPadOS
   - macOS
-  - Windows 10
+  - Windows 10/11
 
   When this action applies to a device, that device is added to a list of devices in the admin console at **Devices** > **Compliance policies** > **Retire Noncompliant Devices**. The device isn't retired until an admin takes explicit action to retire the device.
+  
+  > [!NOTE]
+  > Only devices to which the **Retire the noncompliant device** action has been triggered appear in the **Retire Selected Devices** view. To see a list of all devices that are not compliant, see the **Noncompliant devices** report mentioned in [Monitor device compliance policy](../protect/compliance-policy-monitor.md#view-compliance-reports).
 
-  To retire one or more devices from the list, select devices from the list and then select **Retire Selected Devices**. You can also select options to *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Retire the noncompliant device* is applied to that device again.
+  To retire one or more devices from the list, select devices to retire and then select **Retire Selected Devices**. When you choose an action that retires devices, you're then presented with a dialog box to confirm the action. It's only after confirming the intent to retire the devices that they're cleared of company data and removed from Intune management. 
+
+  Other options include *Retire All Devices*, *Clear All Devices Retire State*, and *Clear Selected Devices Retire State*. Clearing the retire state for a device removes the device from the list of devices that can be retired until the action to *Retire the noncompliant device* is applied to that device again.
 
   Learn more about [retiring devices](../remote-actions/devices-wipe.md#retire).
 
@@ -111,7 +129,7 @@ When you enable this action:
   >
   > Do not rely on this notification method for urgent messages.
 
-  Each instance of the action sends a notification a single time. To send the same notification again from a policy, configure additional instances of the action in that policy, each with a different schedule.
+  Each instance of the action sends a notification a single time. To send the same notification again from a policy, configure more instances of the action in that policy, each with a different schedule.
   
   For example, you might schedule the first action for zero days and then add a second instance of the action set to three days. This delay before the second notification gives the user a few days to resolve the issue, and avoid the second notification.
 
@@ -122,15 +140,23 @@ When you enable this action:
 
   - When multiple compliance policies include the same compliance conditions, and include the push notification action with the same schedule, Intune sends multiple notifications to the same device on the same day.
 
+> [!NOTE]
+> The following actions for noncompliance are not supported for devices that are managed by a [device compliance management partner](../protect/device-compliance-partners.md):  
+> - Send push notification to end user
+> - Remotely lock the noncompliant device
+> - Retire the noncompliant device
+> - Send push notification to end user
+
 ## Before you begin
 
-You can [add actions for noncompliance](#add-actions-for-noncompliance) when you configure device compliance policy, or later by editing the policy. You can add additional actions to each policy to meet your needs. Keep in mind that each compliance policy automatically includes the default action for noncompliance that marks devices as noncompliant,  with a schedule set to zero days.
+You can [add actions for noncompliance](#add-actions-for-noncompliance) when you configure device compliance policy, or later by editing the policy. You can add extra actions to each policy to meet your needs. Keep in mind that each compliance policy automatically includes the default action for noncompliance that marks devices as noncompliant,  with a schedule set to zero days.
 
 To use device compliance policies to block devices from corporate resources, Azure AD Conditional Access must be set up. See [Conditional Access in Azure Active Directory](/azure/active-directory/active-directory-conditional-access-azure-portal) or [common ways to use Conditional Access with Intune](conditional-access-intune-common-ways-use.md) for guidance.
 
 To create a device compliance policy, see the following platform-specific guidance:
 
 - [Android](compliance-policy-create-android.md)
+- [Android (AOSP)](compliance-policy-create-android-aosp.md) (preview)  
 - [Android work profiles](compliance-policy-create-android-for-work.md)
 - [iOS](compliance-policy-create-ios.md)
 - [macOS](compliance-policy-create-mac-os.md)
@@ -142,7 +168,7 @@ To send email to your users, create a notification message template and associat
 
 A *notification message template* can include multiple messages that are each specified for a different locale. One local must be specified as the default.
 
-When you specify multiple messages and locales, non-compliant end-users receive the appropriate localized message based on their O365 preferred language. Intune sends the default message to users that haven’t set a preferred language or when the template doesn’t include a specific message for their locale.
+When you specify multiple messages and locales, non-compliant end users receive the appropriate localized message based on their O365 preferred language. Intune sends the default message to users that haven’t set a preferred language or when the template doesn’t include a specific message for their locale.
 
 ### To create the template
 
@@ -166,6 +192,9 @@ When you specify multiple messages and locales, non-compliant end-users receive 
    - **Locale**
    - **Subject**
    - **Message body text**
+
+   > [!NOTE] 
+   > The maximum number of characters for the Subject is 78, and the maximum number of characters for the message body text is 2000.
 
    Before continuing, you must select the checkbox for *Is Default* for one of the messages. Only one message can be set as default. To delete a message, select the ellipsis (...) and then **Delete**. 
 
@@ -216,7 +245,7 @@ You can add optional actions when you create a compliance policy, or update an e
 
 5. Configure a **Schedule**: Enter the number of days (0 to 365) after noncompliance to trigger the action on users' devices. After this grace period, you can enforce a [conditional access](conditional-access-intune-common-ways-use.md) policy. If you enter **0** (zero) number of days, then conditional access takes effect **immediately**. For example, if a device is noncompliant, use conditional access to block access to email, SharePoint, and other organization resources immediately.
 
-   When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks-in, the device is evaluated as non-compliant immediately. If also using conditional access, then conditional access kicks in immediately. If you want to allow a grace period, then change the **Schedule** on the **Mark device noncompliant** action.
+   When you create a compliance policy, the **Mark device noncompliant** action is automatically created, and automatically set to **0** days (immediately). With this action, when the device checks-in with Intune and evaluates the policy, if it isn't compliant to that policy Intune immediately marks that device as noncompliant. If the client checks-in at a later time after remediating the issues that lead to noncompliance, its status will update to its new compliance status. If you use Conditional Access, those policies also apply as soon as a device is marked as noncompliant. To set a grace period to allow for a condition of noncompliance to be remediated before the device is marked as noncompliant, change the **Schedule** on the **Mark device noncompliant** action.
 
    In your compliance policy, for example, you also want to notify the user. You can add the **Send email to end user** action. On this **Send email** action, you set the **Schedule** to two days. If the device or end user is still evaluated as non-compliant on day two, then your email is sent on day two. If you want to email the user again on day five of noncompliance, then add another action, and set the **Schedule** to five days.
 

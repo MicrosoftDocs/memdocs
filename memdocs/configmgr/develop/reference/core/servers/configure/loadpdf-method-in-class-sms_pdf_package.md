@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the LoadPDF method to import a specified package definition file into the package definition file store.  
 title: "LoadPDF Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 37670a60-5ee3-4fc4-b9b3-6c44e6858201
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -6,10 +6,10 @@ ms.date: 04/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: quickstart
-ms.assetid: 5cb41e2b-4c79-4da9-a432-ff869c0870f8
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Support Center quickstart guide

@@ -1,7 +1,5 @@
 ---
 title: Reseller, distributor, or partner registration of Windows Autopilot devices
-ms.reviewer: 
-manager: laurawi
 description: How partners add devices to Windows Autopilot
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -10,8 +8,10 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
 ms.date: 12/16/2020
 ms.topic: how-to
 ms.collection: 
@@ -23,10 +23,9 @@ ms.collection:
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004
-
-## Reseller, distributor, or partner registration
 
 Customers may purchase devices from resellers, distributors, or other partners. As long as these resellers, distributors, and partners are part of the [Cloud Solution Partners (CSP) program](https://partner.microsoft.com/cloud-solution-provider), they too can register devices for the customer. 
 
@@ -45,6 +44,6 @@ Windows Autopilot doesn't require delegated administrator permissions when estab
 > Partner Center does not have access to profiles created in Intune or Microsoft Store for Business. It only has access to the Autopilot profiles created through Partner Center.
 
 
-## Also see
+**Also see**
 
 [Registration overview](registration-overview.md)

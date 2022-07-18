@@ -1,5 +1,6 @@
 ---
 title: "Delete a State Migration Point Role"
+description: You delete the state migration point role, in Configuration Manager, by deleting the role's SMS_SCI_SysResUse Server WMI Class object.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: 69475541-e5e3-45c4-8989-142cf986d94c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

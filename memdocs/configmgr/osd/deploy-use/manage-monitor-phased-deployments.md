@@ -6,10 +6,10 @@ ms.date: 08/21/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: dc245916-bc11-4983-9c4d-015f655007c1
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Manage and monitor phased deployments
@@ -34,7 +34,7 @@ When you select the setting, **Manually begin the second phase of deployment**, 
         - Software Updates  
             - **All Software Updates**  
             - **Software Update Groups**
-        - Windows 10 Servicing, **All Windows 10 Updates**  
+        - Windows Servicing, **All Windows Updates**
         - Office 365 Client Management, **Office 365 Updates**  
 
     - **Task sequence**: Go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**.
@@ -45,9 +45,9 @@ When you select the setting, **Manually begin the second phase of deployment**, 
 
 4. Select the phased deployment, and click **Move to next phase** in the ribbon.  
 
-    ![Right-click menu showing actions on a phased deployment](media/Suspend-phased-deployment.PNG)
+    ![Right-click menu showing actions on a phased deployment.](media/Suspend-phased-deployment.PNG)
 
-Starting in version 2002, use the following Windows PowerShell cmdlet for this task: [Move-CMPhasedDeploymentToNext](/powershell/module/configurationmanager/move-cmphaseddeploymenttonext).
+Optionally, use the following Windows PowerShell cmdlet for this task: [Move-CMPhasedDeploymentToNext](/powershell/module/configurationmanager/move-cmphaseddeploymenttonext).
 
 ## <a name="bkmk_suspend"></a> Suspend and resume phases
 
@@ -61,7 +61,7 @@ You can manually suspend or resume a phased deployment. For example, you create 
         - Software Updates  
             - **All Software Updates**  
             - **Software Update Groups**
-        - Windows 10 Servicing, **All Windows 10 Updates**  
+        - Windows Servicing, **All Windows Updates**
         - Office 365 Client Management, **Office 365 Updates**  
 
     - **Task sequence**: Go to the **Software Library** workspace, expand **Operating Systems**, and select **Task Sequences**. Select an existing task sequence, and then click **Create Phased Deployment** in the ribbon.  
@@ -75,7 +75,7 @@ You can manually suspend or resume a phased deployment. For example, you create 
 > [!NOTE]
 > Starting on April 21, 2020, Office 365 ProPlus is being renamed to **Microsoft 365 Apps for enterprise**. For more information, see [Name change for Office 365 ProPlus](/deployoffice/name-change). You may still see the old name in the Configuration Manager product and documentation while the console is being updated.
 
-Starting in version 2002, use the following Windows PowerShell cmdlets for this task:
+Optionally, use the following Windows PowerShell cmdlets for this task:
 
 - [Suspend-CMPhasedDeployment](/powershell/module/configurationmanager/suspend-cmphaseddeployment)
 - [Resume-CMPhasedDeployment](/powershell/module/configurationmanager/resume-cmphaseddeployment)

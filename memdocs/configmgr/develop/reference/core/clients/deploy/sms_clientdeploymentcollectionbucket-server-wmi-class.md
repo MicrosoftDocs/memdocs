@@ -1,6 +1,7 @@
 ---
 title: "SMS_ClientDeploymentCollectionBucket Class"
 titleSuffix: "Configuration Manager"
+description: The SMS_ClientDeploymentCollectionBucket Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents a client deployment collection bucket.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: bf1d205a-d474-457b-b451-9c8f5afb7c23
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

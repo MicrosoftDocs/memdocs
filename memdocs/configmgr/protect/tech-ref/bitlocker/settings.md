@@ -2,14 +2,14 @@
 title: BitLocker settings reference
 titleSuffix: Configuration Manager
 description: All of the BitLocker management settings available in Configuration Manager
-ms.date: 08/21/2020
+ms.date: 04/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: reference
-ms.assetid: f7ade768-2b2b-4aab-8ee1-73624d03a9c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # BitLocker settings reference
@@ -28,9 +28,6 @@ BitLocker management policies in Configuration Manager contain the following pol
 
 The following sections describe and suggest configurations for the settings in each group.
 
-> [!NOTE]
-> These settings are based on Configuration Manager version 2002. Version 1910 doesn't include all of these settings.
-
 ## Setup
 
 The settings on this page configure global BitLocker encryption options.
@@ -44,7 +41,7 @@ The settings on this page configure global BitLocker encryption options.
 
 #### Windows 8.1 devices
 
-For Windows 8.1 devices, enable the option for **Drive encryption method and cipher strength**, and select one of the following the encryption methods:
+For Windows 8.1 devices, enable the option for **Drive encryption method and cipher strength**, and select one of the following encryption methods:
 
 - AES 128-bit with Diffuser
 - AES 256-bit with Diffuser
@@ -53,9 +50,9 @@ For Windows 8.1 devices, enable the option for **Drive encryption method and cip
 
 For more information on how to create this policy with Windows PowerShell, see [New-CMBLEncryptionMethodPolicy](/powershell/module/configurationmanager/new-cmblencryptionmethodpolicy).
 
-#### Windows 10 devices
+#### Windows 10 or later devices
 
-For Windows 10 devices, enable the option for **Drive encryption method and cipher strength (Windows 10)**. Then individually select one of the following encryption methods for OS drives, fixed data drives, and removable data drives:
+For Windows 10 or later devices, enable the option for **Drive encryption method and cipher strength (Windows 10 or later)**. Then individually select one of the following encryption methods for OS drives, fixed data drives, and removable data drives:
 
 - AES-CBC 128-bit
 - AES-CBC 256-bit
@@ -63,7 +60,7 @@ For Windows 10 devices, enable the option for **Drive encryption method and ciph
 - XTS-AES 256-bit
 
 > [!TIP]
-> BitLocker uses Advanced Encryption Standard (AES) as its encryption algorithm with configurable key lengths of 128 or 256 bits. On Windows 10 devices, the AES encryption supports cipher block chaining (CBC) or ciphertext stealing (XTS).
+> BitLocker uses Advanced Encryption Standard (AES) as its encryption algorithm with configurable key lengths of 128 or 256 bits. On Windows 10 or later devices, the AES encryption supports cipher block chaining (CBC) or ciphertext stealing (XTS).
 >
 > If you need to use a removable drive on devices that don't run Windows 10, use AES-CBC.
 
@@ -145,7 +142,7 @@ For more information on how to create this policy with Windows PowerShell, see [
 
 *Suggested configuration*: **Not configured**
 
-Configure BitLocker to use enhanced startup PINs. These PINs permit the use of additional characters such as uppercase and lowercase letters, symbols, numbers, and spaces. This setting applies when you turn on BitLocker.
+Configure BitLocker to use enhanced startup PINs. These PINs permit the use of more characters such as uppercase and lowercase letters, symbols, numbers, and spaces. This setting applies when you turn on BitLocker.
 
 > [!IMPORTANT]
 > Not all computers can support enhanced PINs in the pre-boot environment. Before you enable its use, evaluate whether your devices are compatible with this feature.
@@ -198,7 +195,7 @@ For more information on how to create this policy with Windows PowerShell, see [
 
 *Suggested configuration*: **Not configured**
 
-When BitLocker locks the OS drive, use this setting to display a custom recovery message or a URL on the pre-boot BitLocker recovery screen. This setting only applies to Windows 10 devices.
+When BitLocker locks the OS drive, use this setting to display a custom recovery message or a URL on the pre-boot BitLocker recovery screen. This setting only applies to Windows 10 or later devices.
 
 When you enable this setting, select one of the following options for the pre-boot recovery message:
 
@@ -235,7 +232,7 @@ For more information on how to create this policy with Windows PowerShell, see [
 
 ## Fixed drive
 
-The settings on this page configure encryption for additional data drives in a device.
+The settings on this page configure encryption for other data drives in a device.
 
 ### Fixed data drive encryption
 
@@ -410,7 +407,10 @@ When you enable this setting, Configuration Manager automatically and silently b
 
 - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate for SQL Server, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data in the database](../../deploy-use/bitlocker/encrypt-recovery-data.md).
 
-- **Client checking status frequency (minutes)**: At the configured frequency, the client checks the BitLocker protection policies and status on the computer and also backs up the client recovery key. By default, the Configuration Manager client updates its BitLocker recovery information every 90 minutes.
+- **Client checking status frequency (minutes)**: At the configured frequency, the client checks the BitLocker protection policies and status on the computer and also backs up the client recovery key. By default, the Configuration Manager client checks BitLocker status every 90 minutes.
+
+    > [!IMPORTANT]
+    > Don't set this value to less than 60. A smaller frequency value may cause the client to briefly report inaccurate compliance states.<!-- 13901360 -->
 
 For more information on how to create these policies with Windows PowerShell, see:
 

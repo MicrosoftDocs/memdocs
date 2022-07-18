@@ -1,6 +1,7 @@
 ---
 title: "Create a Package Using a Package Definition File Template"
 titleSuffix: "Configuration Manager"
+description: The following example shows how to create a package and program by using a package definition file template in Configuration Manager.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5dc3adf6-88e4-4fd1-bd33-ca868a586019
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

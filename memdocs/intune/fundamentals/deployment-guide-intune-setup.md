@@ -1,19 +1,17 @@
 ---
 # required metadata
 
-title: Setup guide for Microsoft Intune - Azure | Microsoft Docs
+title: Setup guide for Microsoft Intune
 description: Deployment guide to set up, onboard, or move to Intune. These steps include moving from partner MDM providers, using co-management, moving from on-premises group policy, and moving from Office 365 device management.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/8/2021
+ms.date: 01/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -25,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: get-started
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Deployment guide: Setup or move to Microsoft Intune
@@ -138,10 +138,10 @@ This scenario is rare. Most existing Configuration Manager customers want to kee
 
 These steps are an overview, and are only included for those users who want a 100% cloud solution. With this option, you:
 
-- Register existing on-premises Active Directory Windows 10 devices as devices in Azure Active Directory (AD).
+- Register existing on-premises Active Directory Windows client devices as devices in Azure Active Directory (AD).
 - Move your existing on-premises Configuration Manager workloads to Intune.
 
-This option is more work for administrators, but can create a more seamless experience for existing Windows 10 devices. For new Windows 10 devices, it's recommended to [start from scratch with Microsoft 365 and Intune](#option-4-start-from-scratch-with-microsoft-365-and-intune) (in this article).
+This option is more work for administrators, but can create a more seamless experience for existing Windows client devices. For new Windows client devices, it's recommended to [start from scratch with Microsoft 365 and Intune](#option-4-start-from-scratch-with-microsoft-365-and-intune) (in this article).
 
 1. Set up [hybrid Active Directory and Azure AD](/azure/active-directory/devices/hybrid-azuread-join-plan) for your devices. Hybrid Azure AD joined devices are joined to your on-premises Active Directory, and registered with your Azure AD. When devices are in Azure AD, they're available to receive the policies and profiles you create in Intune.
 
@@ -150,7 +150,7 @@ This option is more work for administrators, but can create a more seamless expe
 2. In Configuration Manager, set up [co-management](../../configmgr/comanage/how-to-enable.md).
 3. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
 4. In Configuration Manager, [slide all the workloads from Configuration Manager to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
-5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#BKMK_UninstalClient).
+5. On the devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
     Once Intune is set up, you can create an Intune app configuration policy that uninstalls the Configuration Manager client. For example, you could reverse the steps in [Install the Configuration Manager client by using Intune](../../configmgr/core/clients/deploy/deploy-clients-to-windows-computers.md#bkmk_mdm).
 
@@ -166,7 +166,7 @@ Next, devices are ready to be enrolled, and receive your policies.
 
 ### Option 4: Start from scratch with Microsoft 365 and Intune
 
-This option applies to Windows 10 and newer devices. If you use Windows Server OSs, such as Windows Server 2016, then don't use this option. Use Configuration Manager.
+This option applies to Windows client devices. If you use Windows Server OSs, such as Windows Server 2016, then don't use this option. Use Configuration Manager.
 
 1. [Deploy Microsoft 365](/microsoft-365/enterprise/deploy-microsoft-365-enterprise), including creating users and groups.
 
@@ -176,7 +176,7 @@ This option applies to Windows 10 and newer devices. If you use Windows Server O
     - Set up [Microsoft 365 Business](/microsoft-365/business/set-up)
 
 2. [Deploy Intune](#deploy-intune) (in this article), including setting the MDM Authority to Intune.
-3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#BKMK_UninstalClient).
+3. On existing devices, uninstall the Configuration Manager client. For more information, see [uninstall the client](../../configmgr/core/clients/manage/manage-clients.md#uninstall-the-client).
 
 Next, devices are ready to be enrolled, and receive your policies.
 
@@ -310,7 +310,7 @@ This section includes an overview of the steps. Use these steps as guidance, and
 
 6. By default, all device platforms can enroll in Intune. If you want to prevent specific platforms, then create a restriction.
 
-    For more information, see [Create a device type restriction](../enrollment/enrollment-restrictions-set.md#create-a-device-type-restriction).
+    For more information, see [Create a device platform restriction](../enrollment/enrollment-restrictions-set.md#create-a-device-platform-restriction).
 
 7. Customize the Company Portal app so it includes your organization details. Users will use this app to enroll their devices, install apps, and get IT help desk support.
 

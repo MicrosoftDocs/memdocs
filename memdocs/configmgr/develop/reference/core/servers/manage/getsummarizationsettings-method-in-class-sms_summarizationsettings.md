@@ -1,4 +1,5 @@
 ---
+description: Learn how to get the summarization schedule using the GetSummarizationSettings class method in Configuration Manager.
 title: "GetSummarizationSettings Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: de5971eb-2e4a-400e-b6f7-273015cae137
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

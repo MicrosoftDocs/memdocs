@@ -2,8 +2,6 @@
 title: Troubleshoot Autopilot device import and enrollment
 description: Troubleshoot issues that can occur during Autopilot device import and enrollment
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.reviewer: mniehaus
-manager: laurawi
 ms.technology: windows
 ms.prod: w10
 ms.mktglfcycl: deploy
@@ -11,9 +9,11 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
-ms.date: 12/17/2020
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
+ms.date: 10/19/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -21,9 +21,50 @@ ms.topic: troubleshooting
 
 # Troubleshoot Autopilot device import and enrollment
 
-**Applies to: Windows 10**
+**Applies to**
 
-See the following topics for information about issues that can occur when importing and enrolling devices into Intune.
+- Windows 11
+- Windows 10
+
+See the following sections for information about issues that can occur when importing and enrolling devices into Intune.
+
+## Error code 0x80180014 when re-enrolling using self-deployment or pre-provisioning mode
+
+After the first Autopilot deployment, devices with a targeted Autopilot self-deployment mode or pre-provisioning mode profile can't automatically re-enroll using Autopilot. If you try to redeploy the device, then the `0x80180014` error code is returned:
+
+:::image type="content" source="./images/troubleshoot-device-enrollment/0x80180014-error-code-enrollment-status-page.png" alt-text="Enrollment status page shows 0x80180014 error code on devices using self-deployment mode or pre-provisioning mode.":::
+
+:::image type="content" source="./images/troubleshoot-device-enrollment/0x80180014-error-code-pre-provisioning-page.png" alt-text="Pre-provisioning page shows 0x80180014 error code on devices using self-deployment mode or pre-provisioning mode.":::
+
+The ETW logs may show the following error:
+
+`MDM Enroll: Server Returned Fault/Code/Subcode/Value=(DeviceNotSupported) Fault/Reason/Text=(Enrollment blocked for AP device by SDM One Time Limit Check)`
+
+### Cause A
+
+Microsoft Endpoint Manager changed the Windows Autopilot self-deployment mode (Public Preview) and Pre-Provisioning mode (formerly known as white glove, in Public Preview) experience.
+To reuse a device, you must delete the device record created by Intune.
+
+This change impacts all Autopilot deployments that use the self-deployment or pre-provisioning mode. This change impacts devices when they're reused, reset, or when redeploying a profile.
+
+#### Resolution A
+
+To redeploy the device through Autopilot:
+
+1. Delete the device record in Intune. For the specific steps, see [Delete devices from the Endpoint Manager admin center](../intune/remote-actions/devices-wipe.md#delete-devices-from-the-intune-portal).
+2. Redeploy the Autopilot deployment profile.
+
+### Cause B
+
+Windows MDM enrollment is disabled in your Intune tenant.
+
+#### Resolution B
+
+To fix this issue in a stand-alone Intune environment, follow these steps:
+
+1. In the Microsoft Endpoint Manager admin center, chooses **Devices** > **Enrollment restrictions**, and then choose a device type restriction.
+1. Choose **Properties** > **Edit** next to Platform settings. Then select **Allow for Windows (MDM)**.
+1. Select **Review** and then **Save**.
 
 ## Device import issues
 
@@ -86,7 +127,7 @@ Error code 80180018 will typically be reported on an error page titled "Somethin
 
 If Autopilot Reset fails immediately with the error **Ran into trouble. Please sign in with an administrator account to see why and reset manually**, see [Troubleshoot Autopilot Reset](/education/windows/autopilot-reset#troubleshoot-autopilot-reset) for more help.
 
-## Related topics
+## Related articles
 
 [Windows Autopilot - known issues](known-issues.md)<br>
 [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10)<br>

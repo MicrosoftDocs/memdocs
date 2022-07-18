@@ -1,6 +1,7 @@
 ---
 title: "SMS_SDMPackageLocalizedData Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_SDMPackageLocalizedData Windows Management Instrumentation class is an SMS Provider server class that represents localized data for a System Definition Model package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: c62cd280-81b8-46ee-9f92-0c063b1d2870
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

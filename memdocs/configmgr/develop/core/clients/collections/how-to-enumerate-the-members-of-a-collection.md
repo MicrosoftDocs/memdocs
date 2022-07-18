@@ -1,6 +1,7 @@
 ---
 title: "Enumerate the Members of a Collection"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the preferred method to enumerate through a collection is to use SMS_FullCollectionMembership Server WMI Class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: b6405754-0475-4a07-a6ff-1adc76de3815
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

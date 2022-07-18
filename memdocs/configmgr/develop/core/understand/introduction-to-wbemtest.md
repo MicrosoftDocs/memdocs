@@ -1,4 +1,5 @@
 ---
+description: Learn how to use WBEMTEST, a useful tool for working with WMI/WBEM immediately available on most systems.
 title: "Introduction to WBEMTEST"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 1a627513-494d-4e82-92e4-b3689c9ecf50
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

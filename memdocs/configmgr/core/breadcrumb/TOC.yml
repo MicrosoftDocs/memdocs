@@ -19,5 +19,5 @@ items:
         topicHref: /mem/configmgr/index
         items:
         - name: Core infrastructure
-          tocHref: /azure/azure-monitor/platform/
+          tocHref: /azure/azure-monitor/logs/
           topicHref: /mem/configmgr/core/index

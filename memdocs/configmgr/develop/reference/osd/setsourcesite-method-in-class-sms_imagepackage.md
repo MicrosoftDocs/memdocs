@@ -1,6 +1,7 @@
 ---
 title: "SetSourceSite Method in SMS_ImagePackage"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SetSourceSite WMI class method sets the code of the source site for the image package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 2fd150ee-dbb8-43d5-98b7-11222e5e4c85
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

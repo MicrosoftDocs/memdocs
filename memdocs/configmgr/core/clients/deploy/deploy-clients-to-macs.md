@@ -2,21 +2,22 @@
 title: Deploy Mac clients
 titleSuffix: Configuration Manager
 description: Learn how to deploy clients to Mac computers in Configuration Manager.
-ms.date: 12/10/2018
+ms.date: 01/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: e46ad501-5d73-44ac-92de-0de14ef72b83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # How to deploy clients to Macs
 
 *Applies to: Configuration Manager (current branch)*
+
+> [!IMPORTANT]
+> Starting in January 2022, this feature of Configuration Manager is deprecated.<!-- 12927803 --> For more information, see [Mac computers](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
 This article describes how to deploy and maintain the Configuration Manager client on Mac computers. To learn about what you have to configure before deploying clients to Mac computers, see [Prepare to deploy client software to Macs](prepare-to-deploy-mac-clients.md).
 
@@ -65,7 +66,7 @@ Use the [default client settings](about-client-settings.md) to configure enrollm
     > [!TIP]  
     > If you want to change the client policy interval, use **Client policy polling interval** in the **Client Policy** client setting group.  
 
-The next time the devices download client policy, Configuration Manager applies these settings for all users. To initiate policy retrieval for a single client, see [Initiate policy retrieval for a Configuration Manager client](../manage/manage-clients.md#BKMK_PolicyRetrieval).  
+The next time the devices download client policy, Configuration Manager applies these settings for all users. To initiate policy retrieval for a single client, see [Initiate policy retrieval for a Configuration Manager client](../manage/manage-clients.md#start-policy-retrieval).  
 
 In addition to the enrollment client settings, make sure that you have configured the following client device settings:  
 
@@ -79,7 +80,10 @@ For more information, see [How to configure client settings](configure-client-se
 
 ## <a name="bkmk_download"></a> Download the client for macOS
 
-1. Download the macOS client file package,  [Microsoft Endpoint Configuration Manager - macOS Client (64-bit)](https://www.microsoft.com/download/details.aspx?id=100850). Save **ConfigmgrMacClient.msi** to a computer that runs Windows. This file isn't on the Configuration Manager installation media.  
+> [!NOTE]
+> The macOS client installation package isn't available for new deployments, but existing deployments are supported until December 31, 2022.<!-- 12927803 -->
+
+1. Save **ConfigmgrMacClient.msi** to a computer that runs Windows. This file isn't on the Configuration Manager installation media.  
 
 2. Run the installer on the Windows computer. Extract the Mac client package, **Macclient.dmg**, to a folder on the local disk. The default path is `C:\Program Files\Microsoft\System Center Configuration Manager for Mac client`.  
 

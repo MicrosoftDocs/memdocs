@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the application management deployment technology installer to define the properties and methods used on the client to install the application.
 title: "How to Define the Installer"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: f18ca88b-a1e2-46d0-8740-00d36dc09e0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

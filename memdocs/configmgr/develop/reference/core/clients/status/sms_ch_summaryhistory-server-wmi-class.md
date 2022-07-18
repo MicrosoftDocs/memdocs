@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_CH_SummaryHistory class to represent client summary histories.
 title: "SMS_CH_SummaryHistory Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 91fa4d66-d2cb-4fac-abeb-2b95508bbc2a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

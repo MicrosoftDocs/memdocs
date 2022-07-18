@@ -1,4 +1,5 @@
 ---
+description: Learn how to set the fallback time, in minutes, for a distribution point (DP) in Configuration Manager.
 title: "FallbackDP Method"
 titleSuffix: "Configuration Manager"
 ms.date: "03/13/2017"
@@ -9,6 +10,8 @@ ms.assetid: 8debe455-119d-4ef0-a786-f4e76bd61273
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

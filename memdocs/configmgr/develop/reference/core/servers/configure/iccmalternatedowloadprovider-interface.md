@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the ICcmAlternateDownloadProvider Interface to define the interface for an alternative download provider to be invoked by Content Transfer Manager to download packages.  
 title: "ICcmAlternateDownloadProvider Interface"
 titleSuffix: "Configuration Manager"
 ms.date: "07/25/2017"
@@ -9,6 +10,8 @@ ms.assetid: 42eb99e9-6421-415d-8e80-7e8f8b322cb3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,4 +1,5 @@
 ---
+description: Learn how to read a Configuration Manager site control embedded property list in Configuration Manager. 
 title: "Read a Site Control File Embedded Property List"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 2b9ed9ec-4f07-4d87-891c-773badf6a694
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

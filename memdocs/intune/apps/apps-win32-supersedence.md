@@ -6,11 +6,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/24/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 
 
@@ -39,6 +39,12 @@ Supersedence relationships can be created when adding or modifying a Win32 app w
 
 App supersedence can only be applied to Win32 apps. For more information, see [Add a Win32 app](apps-win32-add.md) to Intune.
 
+A Microsoft Endpoint Manager permission will be required to create and edit Win32 app supersedence and dependency relationships with other apps. The permission is available under the **Mobile apps** category by selecting **Relate**. Starting in the **2202** service release, MEM admins will need this permission to add supersedence and dependency apps when creating or editing a Win32 app in Microsoft Endpoint Manager admin center. To find this permission in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > **Create**.
+
+This Win32 app supersedence permission has been added to the following built-in roles:
+- Application Manager
+- School administrator
+
 ## Create a Supersedence relationship in Intune
 
 The following steps help you create a supersedence relationship between apps:
@@ -64,8 +70,8 @@ A *superseding app* is an app that updates or replaces other apps. A *superseded
 
 | Scenarios | Targeting for required intent | Targeting for available intent |
 |-|-|-|
-| **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app will be   uninstalled, and the superseding app will be installed on the device.<p> **NOTE:** Even if the superseded app is not targeted, it will be uninstalled. | Both   superseding and superseded apps will be shown in the company portal if they   have the applicable targeting. However, currently only the superseding apps   can be installed. |
-| **Scenario   2:**<br>The superseded app exists on the device and **Uninstall   previous version** is set to **No**. | The superseding app will be   installed on the device. Whether the superseded app will be uninstalled or   not is dependent on the superseding app’s installer. | Both superseding and superseded apps will be shown in the company portal if they have the applicable targeting. However, currently only the superseding apps can be installed. |
+| **Scenario   1:**<br> The superseded app exists on the device and **Uninstall previous version** is set to **Yes**. | The superseded app will be uninstalled, and the superseding app will be installed on the device.<p> **NOTE:** Even if the superseded app is not targeted, it will be uninstalled. | Only superseding apps will be shown in the company portal and can be installed. |
+| **Scenario   2:**<br>The superseded app exists on the device and **Uninstall previous version** is set to **No**. | The superseding app will be installed on the device. Whether the superseded app will be uninstalled or not is dependent on the superseding app’s installer. | Only superseding apps will be shown in the company portal and can be installed. |
 | **Scenario   3:**<br>The superseded app does not exist on the device. | The superseding app will be   installed. | The new app will appear in the   Company Portal. |
 
 ### Understand app update versus app replacement within supersedence

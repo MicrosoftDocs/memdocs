@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_TaskSequence_Action class which serves as the abstract base class for all task sequence actions in Configuration Manager.
 title: "SMS_TaskSequence_Action Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 12a29d69-ac46-45ea-b540-52a85c4c885f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

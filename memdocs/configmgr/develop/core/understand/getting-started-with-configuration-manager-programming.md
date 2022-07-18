@@ -10,6 +10,8 @@ ms.assetid: 7dc6cb76-469e-4e4f-b79b-bb391fd4e758
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Get started with Configuration Manager programming
@@ -33,8 +35,6 @@ To successfully automate or extend Configuration Manager, it is incredibly impor
 - [Microsoft System Center 2012 Configuration Manager: Administration Cookbook](https://www.amazon.com/Microsoft-System-Center-Configuration-Manager/dp/1849684944/ref=sr_1_1?s=books&ie=UTF8&qid=1382812164&sr=1-1&keywords=Microsoft+System+Center+2012+Configuration+Manager%3A+Administration+Cookbook)  
 
 #### Videos
-
-- [Channel 9: Microsoft System Center 2012 Configuration Manager Overview](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2012/MGT309)  
 
 - [YouTube: Technical Deep Dive: Configuration Manager 2012 Technical Overview](https://www.youtube.com/watch?v=qLACm3910_A)  
 

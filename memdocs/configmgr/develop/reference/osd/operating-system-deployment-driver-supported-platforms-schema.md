@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the OS Deployment Driver Supported Platforms Schema to check which operating systems are compatible.
 title: "OS Deployment Driver Supported Platforms Schema"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: b45c883b-d9c3-4c88-a7c9-f38b421d475a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

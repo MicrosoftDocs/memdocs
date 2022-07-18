@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the ISMSResGen Interface to enable the creation of Data Discovery Records (DDR). This interface inherits from IDispatch.  
 title: "ISMSResGen Interface"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 56a4b6d7-c9d1-4919-9954-5bc28618d862
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -9,7 +9,9 @@ ms.assetid: f421edfe-d1c6-4fec-a5d1-d1399d4a3a82
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
+ms.localizationpriority: null
+ms.collection: openauth
+description: Learn about how to create software update deployments using the Configuration Manager SDK interfaces to deliver updates to client computers.
 
 ---
 

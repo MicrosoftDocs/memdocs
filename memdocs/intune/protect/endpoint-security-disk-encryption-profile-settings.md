@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 10/28/2020
-ms.topic: reference
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -31,6 +31,11 @@ ms.reviewer: aanavath
 # Disk encryption policy settings for endpoint security in Intune
 
 View the settings you can configure in profiles for *Disk Encryption* policy in the Endpoint security node of Intune as part of an [Endpoint security policy](../protect/endpoint-security-policy.md).
+
+Applies to:
+
+- macOS
+- Windows 10/11
 
 Supported platforms and profiles:
 

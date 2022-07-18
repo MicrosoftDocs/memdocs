@@ -2,14 +2,14 @@
 title: Internet-based client management
 titleSuffix: Configuration Manager
 description: Create a plan to manage internet-based clients in Configuration Manager.
-ms.date: 04/29/2020
+ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 83a7c934-3b11-435d-ba22-cbc274951e83
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Plan for internet-based client management in Configuration Manager
@@ -34,9 +34,12 @@ The following site system roles at primary sites support connections from client
 
 - Certificate registration point for the Configuration Manager policy module (NDES)
 
+    > [!WARNING]
+    > Starting in version 2203, the certificate registration point is no longer supported.<!--13951253--> For more information, see [Frequently asked questions about resource access deprecation](../../../protect/plan-design/resource-access-deprecation-faq.yml).
+
 - Distribution point
 
-- Cloud-based distribution point
+- Content-enabled cloud management gateway (CMG)
 
 - Enrollment proxy point
 
@@ -117,7 +120,7 @@ IBCM in Configuration Manager has the following dependencies:
 
 - Register public DNS host entries for the internet fully qualified domain names (FQDN) of site systems that support IBCM.
 
-- Enable the option to **Use PKI client certificate (client authentication capability) when available** on the **Communication Security** tab of the site properties. Starting with the [update rollup for version 2006](https://support.microsoft.com/help/4578605), this option is required.<!-- MEMDocs#1010 -->
+- Enable the option to **Use PKI client certificate (client authentication capability) when available** on the **Communication Security** tab of the site properties. This option is required.<!-- MEMDocs#1010 -->
 
 ### Client communication requirements
 

@@ -1,5 +1,6 @@
 ---
 title: "Configure the Default Compliance Evaluation Schedule"
+description: In Configuration Manager, the site control file maintains configuration for the configuration of the site.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: 56d60eea-d506-4611-a489-0e719961d17a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

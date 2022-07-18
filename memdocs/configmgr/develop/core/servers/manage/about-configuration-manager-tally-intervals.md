@@ -1,6 +1,7 @@
 ---
 title: "Configuration Manager Tally Intervals"
 ms.date: "09/20/2016"
+description: "The Configuration Manager is configured with 16 default tally intervals, which are maintained in the site control file shown in the following table."
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
@@ -8,6 +9,8 @@ ms.assetid: 792581fa-e652-4009-a702-91c2aad49904
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

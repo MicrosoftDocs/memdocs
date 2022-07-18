@@ -8,13 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 
 
 # optional metadata
 
@@ -26,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Use policy sets to group collections of management objects
@@ -51,9 +51,12 @@ You can include the following management objects in a policy set:
 - App protection policies
 - Device configuration profiles
 - Device compliance policies
-- Device type restrictions
 - Windows autopilot deployment profiles
 - Enrollment status page
+- Settings catalog policies
+
+> [!IMPORTANT]
+> As of September 2021, enrollment restrictions based on device type can no longer be included in policy sets. For more information about how to create enrollment restrictions, see [Set enrollment restrictions](../enrollment/enrollment-restrictions-set.md).  
 
 When you create a policy set, you create a single unit of assignment, and manage associations between different objects. A policy set will be a reference to objects external to it. Any changes in the included objects will affect the policy set as well. After you create a policy set, you can repeatedly view and edit its objects and assignments. 
 
@@ -85,7 +88,7 @@ When you create a policy set, you create a single unit of assignment, and manage
 
 Policy sets, new to 1910, have the following known issues.
 
-- When creating a policy set, if an scoped admin tries to create a policy set without any scope tags selected, upon reaching the **Review + Create** page, validation will fail and an error will be displayed on the status bar. The admin must switch to a different page in the process, then return to the **Review + Create** page. This will enable the **Create** option.  
+- When creating a policy set, if a scoped admin tries to create a policy set without any scope tags selected, upon reaching the **Review + Create** page, validation will fail and an error will be displayed on the status bar. The admin must switch to a different page in the process, then return to the **Review + Create** page. This will enable the **Create** option.  
 
 - The following app types are currently supported by policy sets:
   - iOS/iPadOS store app
@@ -104,11 +107,11 @@ Policy sets, new to 1910, have the following known issues.
 - Policy sets have the following enrollment restrictions and Enrollment Status Page (ESP) issues:
   - Restrictions and ESP do not support virtual group assignments.
   - Restrictions and ESP do not strictly support exclusion group assignments. 
-  - Restrictions and ESP use priority-based conflict resolution. Restrictions and ESP might not be applied to the same users as the rest of a policy set's payloads if the Restrictions and ESP are also targeted by a higher priority Restrictions and ESP.
-  - The default Restrictions and ESP cannot be added to a policy set.
+  - Restrictions and ESP use priority-based conflict resolution. Restrictions and ESP might not be applied to the same users as the rest of a policy set's payloads if the restrictions and ESP are also targeted by a higher priority restriction and ESP.  
+  - The default restrictions and ESP cannot be added to a policy set.  
 
 - MAM policy types that support policy sets include the following: 
-  - MAM WIP( Windows) MDM targeted managed app protection 
+  - MAM WIP (Windows) MDM targeted managed app protection 
   - MAM iOS/iPadOS targeted managed app protection
   - MAM Android targeted managed app protection
   - MAM iOS/iPadOS targeted managed app configuration
@@ -123,7 +126,7 @@ Policy sets, new to 1910, have the following known issues.
   - MAM iOS/iPadOS targeted managed app configuration
   - MAM Android targeted managed app configuration
 
-    If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in in the workload, not "assigned via the policy set". As a result of this, MAM does not process group assignment deletions coming from policy sets.
+    If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in the workload, not "assigned via the policy set". As a result of this, MAM does not process group assignment deletions coming from policy sets.
 
 - MAM does not support deployment to **All Users** and **All Devices** virtual groups for any policy types.
 - The Device Configuration Profile of type "Administrative Templates" cannot be selected as part of a policy set.

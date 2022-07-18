@@ -1,6 +1,7 @@
 ---
 title: "QueueRequestedAppPolicy Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the QueueRequestedAppPolicy Windows Management Instrumentation class method that queues an application policy request."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 0fd7952e-eeed-4dc0-a66b-af6442156523
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

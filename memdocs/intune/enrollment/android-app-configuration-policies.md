@@ -5,8 +5,8 @@ title: Android Enterprise security configuration policies
 titleSuffix: Microsoft Intune
 description: Learn the restrictions and settings for Android Enterprise device basic and high security.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 06/24/2020
 ms.topic: how-to

@@ -6,11 +6,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/09/2020
+ms.date: 12/16/2021
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 
 ms.reviewer: dagerrit
@@ -75,7 +75,7 @@ Assigned iOS/iPadOS and Android users must enter a PIN each time they open an Of
 We'll ask you about the apps your users need, and what's needed to access them. Make sure you have the following information handy:
 
 - List of Office apps approved for corporate use.
-- Any PIN requirements for launching approved apps on nonmanaged devices.
+- Any PIN requirements for launching approved apps on non-managed devices.
 
 ## Step 2 - Basics
 
@@ -119,7 +119,7 @@ In this step, you must configure the requirements for accessing and sharing the 
 
 In this step, you can choose the user groups that you want to include to ensure that they have access to your corporate data. App protection is assigned to users, and not devices, so your corporate data will be secure regardless of the device used and its enrollment status.
 
-Users without app protection policies and conditional access settings assigned will be able to save data from their corporate profile to personal apps and nonmanged local storage on their mobile devices. They could also connect to corporate data services, such as Microsoft Exchange, with personal apps.
+Users without app protection policies and conditional access settings assigned will be able to save data from their corporate profile to personal apps and non-managed local storage on their mobile devices. They could also connect to corporate data services, such as Microsoft Exchange, with personal apps.
 
 ## Step 6 - Review + create
 

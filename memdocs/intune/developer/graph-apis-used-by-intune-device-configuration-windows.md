@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Graph APIs to configure devices in Microsoft Intune - Azure | Microsoft Docs
+title: Graph APIs to configure devices in Microsoft Intune
 titleSuffix:
 description: See a list of all the Graph API entities with the matching Windows CSP and offset URI on Windows 10 devices and newer used when configuring devices in Microsoft Intune. See the matching API and CSP for shared PCs, endpoint protection, Microsoft Defender for Endpoint, identity protection, Windows 10 Teams, kiosk, and Windows Update for Business.
 keywords:
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection:
+- M365-identity-device-management
+- Windows
 ---
 
 # Graph APIs and matching Windows 10 CSPs used in Intune

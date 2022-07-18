@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_ObjectContainerNode WMI class which contains information for a given Configuration Manager console folder.
 title: "SMS_ObjectContainerNode Class"
 titleSuffix: "Configuration Manager"
 ms.date: "02/12/2021"
@@ -9,6 +10,8 @@ ms.assetid: aae03d45-ffa1-4524-9a85-3b10000c00f6
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

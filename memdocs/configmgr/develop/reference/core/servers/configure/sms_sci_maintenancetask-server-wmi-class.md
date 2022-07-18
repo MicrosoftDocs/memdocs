@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_SCI_MaintenanceTask class to represent a site control item maintenance task.
 title: "SMS_SCI_MaintenanceTask Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: fbeffc66-0ae1-4bb8-bc44-5209d5e9287a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

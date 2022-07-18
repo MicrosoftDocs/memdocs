@@ -1,4 +1,4 @@
-﻿---
+---
 title: 'Advanced exercise 2: Create a new report for hardware inventory'
 titleSuffix: Configuration Manager
 description: Create a Configuration Manager report that displays hardware inventory information.
@@ -10,6 +10,8 @@ ms.assetid: d7e964d3-5c1a-42c5-81fd-57fc833cb55a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Advanced exercise 2: Create a new report for hardware inventory in Configuration Manager

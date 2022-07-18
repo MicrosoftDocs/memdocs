@@ -2,14 +2,14 @@
 title: Token-based authentication for CMG
 titleSuffix: Configuration Manager
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
-ms.date: 03/05/2021
+ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: f0703475-85a4-450d-a4e8-7a18a01e2c47
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Token-based authentication for cloud management gateway
@@ -20,9 +20,9 @@ manager: dougeby
 
 The cloud management gateway (CMG) supports many types of clients, but even with [Enhanced HTTP](../../plan-design/hierarchy/enhanced-http.md), these clients require a [client authentication certificate](../manage/cmg/configure-authentication.md#pki-certificate). This certificate requirement can be challenging to provision on internet-based clients that don't often connect to the internal network, aren't able to join Azure Active Directory (Azure AD), and don't have a method to install a PKI-issued certificate.
 
-To overcome these challenges, starting in version 2002, Configuration Manager extends its device support by issuing its own authentication tokens to devices. To take full advantage of this feature, after you update the site, also update clients to the latest version. The complete scenario isn't functional until the client version is also the latest. If necessary, make sure you [promote the new client version to production](../manage/upgrade/test-client-upgrades.md#to-promote-the-new-client-to-production).
+To overcome these challenges, Configuration Manager extends its device support by issuing its own authentication tokens to devices. To take full advantage of this feature, after you update the site, also update clients to the latest version. The complete scenario isn't functional until the client version is also the latest. If necessary, make sure you [promote the new client version to production](../manage/upgrade/test-client-upgrades.md#promote-a-new-client-to-production).
 
- Clients initially register for these tokens using one of the following two methods:
+Clients initially register for these tokens using one of the following two methods:
 
 - Internal network
 
@@ -63,7 +63,7 @@ To create a bulk registration token for use during client installation on intern
 
 1. Copy the token and save it in a secure location.
 
-1. Install the Configuration Manager client on an internet-based device. Include the client installation parameter: [**/regtoken**](about-client-installation-properties.md#regtoken). The following example command line includes the other required setup parameters and properties:
+1. Install the Configuration Manager client on an internet-based device. Include the client installation parameter: [`/regtoken`](about-client-installation-properties.md#regtoken). The following example command line includes the other required setup parameters and properties:
 
     `ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSiteCode=ABC /regtoken:eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsIng1dCI6Ik9Tbzh2Tmd5VldRUjlDYVh5T2lacHFlMDlXNCJ9.eyJTQ0NNVG9rZW5DYXRlZ29yeSI6IlN7Q01QcmVBdXRoVG9rZW4iLCJBdXRob3JpdHkiOiJTQ0NNIiwiTGljZW5zZSI6IlNDQ00iLCJUeXBlIjoiQnVsa1JlZ2lzdHJhdGlvbiIsIlRlbmFudElkIjoiQ0RDQzVFOTEtMEFERi00QTI0LTgyRDAtMTk2NjY3RjFDMDgxIiwiVW5pcXVlSWQiOiJkYjU5MWUzMy1wNmZkLTRjNWItODJmMy1iZjY3M2U1YmQwYTIiLCJpc3MiOiJ1cm46c2NjbTpvYXV0aDI6Y2RjYzVlOTEtMGFkZi00YTI0LTgyZDAtMTk2NjY3ZjFjMDgxIiwiYXVkIjoidXJuOnNjY206c2VydmljZSIsImV4cCI6MTU4MDQxNbUwNSwibmJmIjoxNTgwMTU2MzA1fQ.ZUJkxCX6lxHUZhMH_WhYXFm_tbXenEdpgnbIqI1h8hYIJw7xDk3wv625SCfNfsqxhAwRwJByfkXdVGgIpAcFshzArXUVPPvmiUGaxlbB83etUTQjrLIk-gvQQZiE5NSgJ63LCp5KtqFCZe8vlZxnOloErFIrebjFikxqAgwOO4i5ukJdl3KQ07YPRhwpuXmwxRf1vsiawXBvTMhy40SOeZ3mAyCRypQpQNa7NM3adCBwUtYKwHqiX3r1jQU0y57LvU_brBfLUL6JUpk3ri-LSpwPFarRXzZPJUu4-mQFIgrMmKCYbFk3AaEvvrJienfWSvFYLpIYA7lg-6EVYRcCAA`
 
@@ -86,12 +86,6 @@ On the server, review the following logs:
   - MP_RegistrationManager.log
   - ClientAuth.log
 
-### Known issues
-
-_Applies to version 2002_
-
-You can't create a bulk registration token on a site that has a site server in passive mode.<!-- 6399087 -->
-
 ### Bulk registration token tool usage
 
 The `BulkRegistrationTokenTool.exe` tool is in the `\bin\X64` folder of the Configuration Manager installation directory on the site server. Sign in to the site server, and run it as an administrator. It supports the following command-line parameters:
@@ -100,13 +94,13 @@ The `BulkRegistrationTokenTool.exe` tool is in the `\bin\X64` folder of the Conf
 - `/new`
 - `/lifetime`
 
-#### /?
+#### `/?`
 
 Display this usage information.
 
 Example: `BulkRegistrationTokenTool.exe /?`
 
-#### /new
+#### `/new`
 
 Create a new bulk registration token.
 
@@ -120,7 +114,7 @@ The tool displays the following information:
 
 The token isn't stored on the client or the site. Make sure to copy the token from the command prompt, and store in a secure location.
 
-#### /lifetime
+#### `/lifetime`
 
 Use with `/new` parameter to specify the token validity period of the token. Specify an integer value in minutes. The default value is 4,320 (three days). The maximum value is 10,080 (seven days).
 
@@ -158,4 +152,4 @@ You can't renew a bulk registration token. Once a bulk registration token expire
 
 - [Overview of cloud management gateway](../manage/cmg/overview.md)
 
-- [Install and assign Configuration Manager Windows 10 clients using Azure AD for authentication](deploy-clients-cmg-azure.md)
+- [Install and assign Configuration Manager clients using Azure AD for authentication](deploy-clients-cmg-azure.md)

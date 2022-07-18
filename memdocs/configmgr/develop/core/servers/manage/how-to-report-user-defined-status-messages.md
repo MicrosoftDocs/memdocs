@@ -1,4 +1,5 @@
 ---
+description: Learn how to report user-defined informational, warning, and error status messages, on the site server using methods defined in the SMS_StatusMessage class.
 title: "Report User-Defined Status Messages"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: c32d4de0-4d09-4c2e-ad83-d3f690a3be63
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

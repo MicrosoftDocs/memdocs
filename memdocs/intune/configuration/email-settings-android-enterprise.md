@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Android Enterprise email settings in Microsoft Intune - Azure | Microsoft Docs
+title: Android Enterprise email settings in Microsoft Intune
 description: Create device configuration email profiles that use Exchange servers, and retrieve attributes from Azure Active Directory. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android Enterprise personally owned devices with a work profile using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
-ms.topic: reference
+ms.date: 03/07/2022
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -29,7 +29,7 @@ ms.collection: M365-identity-device-management
 
 # Android Enterprise device settings to configure email, authentication, and synchronization in Intune
 
-This article describes the different email settings you can control on Android Enterprise personally owned devices with a work profile. As part of your mobile device management (MDM) solution, use these settings to configure an email server, use SSL to encrypt emails, and more.
+This article describes the different email settings you can control on Android Enterprise personally owned devices with a work profile. As part of your mobile device management (MDM) solution, use these settings to configure an Exchange email server, use SSL to encrypt emails, and more. The email profile uses the email app on the device, and allows users to connect to their organization email.
 
 This feature applies to:
 
@@ -46,9 +46,9 @@ As an Intune administrator, you can create and assign email settings to Android 
 
 ## Android Enterprise
 
-- **Email app**: Select **Gmail** or **Nine Work**.
+- **Email app**: Select **Gmail** or **Nine Work**. This app is the client app that connects to the email server you enter.
 - **Email server**: Enter the host name of your Exchange server. For example, enter `outlook.office365.com`.
-- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory (Azure AD). Intune dynamically generates the username that's used by this profile. Your options:
+- **Username attribute from AAD**: This name is the attribute Intune gets from Azure Active Directory (Azure AD). Intune dynamically generates the username that's used by this profile. Make sure your users have email addresses that match the attribute you select. Your options:
 
   - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`.
   - **User name**: Gets only the name, such as `user1`.

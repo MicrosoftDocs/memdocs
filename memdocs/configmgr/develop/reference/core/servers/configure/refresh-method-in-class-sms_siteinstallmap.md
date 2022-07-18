@@ -1,4 +1,5 @@
 ---
+description: Learn how to reload the install map from the database, which repopulates the classes using Refresh class method.
 title: Refresh method in class SMS_SiteInstallMap
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 13db1af5-84b4-4242-b1f3-98bd282766a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

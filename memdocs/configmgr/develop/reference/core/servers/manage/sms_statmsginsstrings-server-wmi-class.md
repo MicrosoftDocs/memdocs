@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent insertion strings in the status message using SMS_StatMsgInsStrings class in Configuration Manager. 
 title: "SMS_StatMsgInsStrings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 731d9874-708d-4440-b312-7093d29f1c5e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

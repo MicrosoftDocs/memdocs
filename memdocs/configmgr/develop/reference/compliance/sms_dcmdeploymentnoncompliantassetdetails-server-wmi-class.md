@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_DCMDeploymentNonCompliantAssetDetails class to represent non-compliant asset details for a deployment.  
 title: "SMS_DCMDeploymentNonCompliantAssetDetails Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: da079cfb-c148-4b38-9173-307843dc0b90
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

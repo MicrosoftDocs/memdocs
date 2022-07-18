@@ -1,6 +1,7 @@
 ---
 title: "Objects Overview"
 titleSuffix: "Configuration Manager"
+description: "The Configuration Manager objects are instances of Configuration Manager-specific WMI classes managed by the SMS Provider."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: f3ddf4dc-2acd-4d59-be88-b2296d9333cd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

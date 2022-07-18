@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the Configuration Manager to change the maintenance window properties for a collection.
 title: "Change Maintenance Window Properties for a Collection"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: c73f7ea3-5f13-4b93-897e-ef865418ccfd
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,4 +1,5 @@
 ---
+description: Learn how to add an integer property to the data discovery record (DDR) using DDRAddInteger function.
 title: "DDRAddInteger"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: cfd88c36-bb38-487b-8ed0-9bfbf470ae2b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

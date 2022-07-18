@@ -8,10 +8,10 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/12/2021
+ms.date: 12/16/2021
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.topic: conceptual
 ms.technology:
 ms.assetid: 73db3070-d033-40fb-a8f1-58b9d198021e

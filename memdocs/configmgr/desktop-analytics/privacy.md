@@ -10,6 +10,7 @@ author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
+ms.localizationpriority: medium
 ---
 
 # Desktop Analytics data privacy
@@ -32,7 +33,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
 :::image type="content" source="media/da-data-flow.png" alt-text="Diagram illustrating flow of diagnostic data from devices.":::
 
-1. You sign in to the Azure portal, and onboard to Desktop Analytics. You create the Azure AD app to connect with Configuration Manager. When you set up Desktop Analytics, you create an Azure Log Analytics workspace in the location of your choice.
+1. You sign in to the Microsoft Endpoint Manager admin center, and onboard to Desktop Analytics. You create the Azure AD app to connect with Configuration Manager. When you set up Desktop Analytics, you create an Azure Log Analytics workspace in the location of your choice.
 
 2. You connect Configuration Manager and enroll devices.
 
@@ -40,7 +41,7 @@ The following illustration shows how diagnostic data flows from individual devic
 
     2. Within 15 minutes, and every hour after, Configuration Manager synchronizes via the Intune microservice the following data with Desktop Analytics using your tenant ID. The site sends all data over an encrypted HTTPS channel to your Endpoint Manager account in the public cloud.
 
-      - Information about device collections necessary to [create deployment plans](create-deployment-plans.md). This information includes collection ID, hierarchy ID, collection name, and device count.
+      - Information about device collections necessary to [create deployment plans](create-deployment-plans.md). This information includes collection ID, support ID, collection name, and device count.
       - Information required to [enroll devices](enroll-devices.md). This information includes collection ID, SMS unique identifier, OS build version, device name, and serial number.
       - Information from the [monitor connection health](monitor-connection-health.md) dashboard. This information includes the count of devices per health state, and device properties.
       - Information about deployment plans, which includes the collection ID, deployment ID, pilot or production deployment type, and count of devices per upgrade decision.

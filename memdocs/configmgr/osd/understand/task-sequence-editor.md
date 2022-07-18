@@ -6,10 +6,10 @@ ms.date: 11/29/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: a4e8bb56-ee85-49fd-8b1c-c8f513cec671
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use the task sequence editor
@@ -42,7 +42,7 @@ Before you can edit a task sequence, you need to create it. For more information
 
 The task sequence editor includes the following components:
 
-![Annotated screenshot of sample task sequence editor window](media/task-sequence-editor.png)
+![Annotated screenshot of sample task sequence editor window.](media/task-sequence-editor.png)
 
 <!-- The following numbered steps correspond to annotations in the above screenshot. Don't change the step numbers without also revising the image! -->
 
@@ -74,7 +74,7 @@ The task sequence editor includes the following components:
 You can resize the task sequence editor using standard Windows controls. To resize the widths of the two main panes, use the mouse to select the bar between the task sequence and the step properties, and then drag it left or right.
 
 > [!NOTE]
-> Starting in version 2010, Configuration Manager restricts actions for a task sequence that's greater than 2 MB in size. For example, the task sequence editor will display an error if you try to save changes to a large task sequence.<!--6888853--> For more information, see [Reduce the size of task sequence policy](../deploy-use/manage-task-sequences-to-automate-tasks.md#reduce-the-size-of-task-sequence-policy).
+> Configuration Manager restricts actions for a task sequence that's greater than 2 MB in size. For example, the task sequence editor will display an error if you try to save changes to a large task sequence.<!--6888853--> For more information, see [Reduce the size of task sequence policy](../deploy-use/reduce-task-sequence-policy-size.md).
 
 ## <a name="bkmk_view"></a> View a task sequence
 
@@ -144,7 +144,7 @@ Use conditions to control how the task sequence behaves. Add conditions to a sin
 
 Use the **Options** tab to manage conditions:
 
-![Manage conditions on the Options tab of task sequence editor](media/4621098-copy-paste-ts-condition.png)
+![Manage conditions on the Options tab of task sequence editor.](media/4621098-copy-paste-ts-condition.png)
 
 The following types of conditions are available:
 
@@ -186,7 +186,7 @@ Manage conditions with the following PowerShell cmdlets:<!-- SCCMDocs #1118 -->
 
 <!-- 4621098 -->
 
-To reuse conditions from one step to another, starting in version 1910 you can now copy and paste conditions in the task sequence editor. Select a condition to cut or copy it. If a condition has children, it copies the entire block. If there's a condition on the clipboard, you can paste it with the following options:
+To reuse conditions from one step to another, copy and paste conditions in the task sequence editor. Select a condition to cut or copy it. If a condition has children, it copies the entire block. If there's a condition on the clipboard, you can paste it with the following options:
 
 - Paste before
 - Paste after
@@ -204,18 +204,18 @@ There are also new options to move conditions up or down the list.
 <!--3699337-->
 If the Configuration Manager console stops responding, you can be locked out of making further changes until the lock expires after 30 minutes. This lock is part of the Configuration Manager SEDO (Serialized Editing of Distributed Objects) system. For more information, see [Configuration Manager SEDO](../../develop/core/understand/sedo.md).
 
-Starting in version 1906, you can clear your lock on a task sequence. This action only applies to your user account that has the lock, and on the same device from which the site granted the lock. When you attempt to access a locked task sequence, you can now **Discard Changes**, and continue editing the object. These changes would be lost anyway when the lock expired.
+You can clear your lock on a task sequence. This action only applies to your user account that has the lock, and on the same device from which the site granted the lock. When you attempt to access a locked task sequence, you can now **Discard Changes**, and continue editing the object. These changes would be lost anyway when the lock expired.
 
 > [!TIP]
-> Starting in version 1910, you can clear your lock on any object in the Configuration Manager console. For more information, see [Using the Configuration Manager console](../../core/servers/manage/admin-console.md#bkmk_sedo).<!--4786915-->
+> You can clear your lock on any object in the Configuration Manager console. For more information, see [Using the Configuration Manager console](../../core/servers/manage/admin-console.md#bkmk_sedo).<!--4786915-->
 
 ## <a name="bkmk_search"></a> Search
 
 <!-- 4621085 -->
 
-If you have a large task sequence with many groups and steps, it can be difficult to find specific steps. Starting in version 1910, you can now search in the task sequence editor. This action lets you more quickly locate steps in the task sequence.
+If you have a large task sequence with many groups and steps, it can be difficult to find specific steps. To more quickly locate steps in the task sequence, search in the task sequence editor.
 
-![Searching in the task sequence editor](media/4621085-task-sequence-search.png)
+![Searching in the task sequence editor.](media/4621085-task-sequence-search.png)
 
 Enter a search term to start. You can scope your search using the following types:
 

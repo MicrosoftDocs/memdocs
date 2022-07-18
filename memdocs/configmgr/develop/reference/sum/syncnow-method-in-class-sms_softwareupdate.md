@@ -1,4 +1,5 @@
 ---
+description: Learn how to perform a manual synchronization of the Software Update Point using SyncNow class method.
 title: "SyncNow Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 1784de36-fad1-4f10-b280-19d828003dba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

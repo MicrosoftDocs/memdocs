@@ -1,5 +1,6 @@
 ---
 title: "Custom Actions"
+description: You can create custom actions that can be used with existing Configuration Manager actions.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: 894bd31a-0a51-403b-84e9-1cc4958dfa7c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

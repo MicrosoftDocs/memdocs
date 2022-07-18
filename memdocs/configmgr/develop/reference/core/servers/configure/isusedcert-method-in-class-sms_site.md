@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the IsUsedCert method to verify whether the specified certificate is used.  
 title: "IsUsedCert Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 8238a001-395e-4732-9042-bc9f33bcfe46
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

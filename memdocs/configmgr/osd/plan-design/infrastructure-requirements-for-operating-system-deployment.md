@@ -2,14 +2,14 @@
 title: OSD infrastructure requirements
 titleSuffix: Configuration Manager
 description: Learn the external and product dependencies and requirements for OS deployment in Configuration Manager
-ms.date: 04/19/2021
+ms.date: 09/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: conceptual
-ms.assetid: 1dc74219-7ff5-4e3b-b4f6-5aad663bb75b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Infrastructure requirements for OS deployment in Configuration Manager
@@ -22,20 +22,20 @@ OS deployment in Configuration Manager has external dependencies as well as depe
 
 This section provides information about external tools, installation kits, and OS versions that are required to deploy operating systems in Configuration Manager.
 
-### Windows ADK for Windows 10
+### Windows ADK
 
 The Windows Assessment and Deployment Kit (ADK) is a set of tools and documentation that support the configuration and deployment of Windows. Configuration Manager uses the Windows ADK to automate actions such as installing Windows, capturing images, and migrating user profiles and data.
 
 For more information, see the following articles:
 
-- [Windows ADK for Windows 10 scenarios for IT Pros](/windows/deployment/windows-adk-scenarios-for-it-pros)
+- [Support for the Windows ADK in Configuration Manager](../../core/plan-design/configs/support-for-windows-adk.md)
 
-- [Download the Windows ADK for Windows 10](/windows-hardware/get-started/adk-install)
+- [Download the Windows ADK](/windows-hardware/get-started/adk-install)
 
     > [!IMPORTANT]
-    > Make sure to download both the **Windows ADK for Windows 10** and the **Windows PE add-on for the ADK**.
+    > Make sure to download both the **Windows ADK** and the **Windows PE add-on for the ADK**.
 
-- [Support for Windows 10](../../core/plan-design/configs/support-for-windows-10.md)
+- [Windows ADK scenarios for IT Pros](/windows/deployment/windows-adk-scenarios-for-it-pros)
 
 #### Site systems
 
@@ -64,42 +64,23 @@ Install the following features of the Windows ADK:
 - Windows Preinstallation Environment (Windows PE)
 
     > [!IMPORTANT]
-    > Windows PE is a separate installer. Otherwise there's no functional difference from earlier versions of the Windows 10 ADK.<!--SCCMDocs-pr issue 2908-->
+    > Windows PE is a separate installer. Otherwise there's no functional difference from earlier versions of the Windows ADK.<!--SCCMDocs-pr issue 2908-->
 
-For a list of the versions of the Windows 10 ADK that you can use with different versions of Configuration Manager, see [Support for Windows 10](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk).
+For a list of the versions of the Windows ADK that you can use with different versions of Configuration Manager, see [Support for the Windows ADK](../../core/plan-design/configs/support-for-windows-adk.md).
 
 ### User State Migration Tool (USMT)
 
-Configuration Manager uses a USMT package that includes the USMT 10 source files to capture and restore the user state as part of your OS deployment. Configuration Manager setup at the top-level site automatically creates the USMT package. USMT 10 captures user state from Windows 7, Windows 8.1, and Windows 10.
+Configuration Manager uses a USMT package that includes the USMT source files to capture and restore the user state as part of your OS deployment. Configuration Manager setup at the top-level site automatically creates the USMT package. USMT captures user state from supported versions of Windows.
 
 For more information, see the following articles:
 
-- [Common Migration Scenarios for USMT 10](/windows/deployment/usmt/usmt-common-migration-scenarios)
+- [Manage user state with Configuration Manager](../get-started/manage-user-state.md)
 
-- [Manage user state](../get-started/manage-user-state.md)
+- [Common migration scenarios for USMT](/windows/deployment/usmt/usmt-common-migration-scenarios)
 
 ### Windows PE
 
 Windows PE is used for boot images to start a computer. It's a Windows version with limited services that's used during the pre-installation and deployment of Windows. For more information about boot images, see [Manage boot images](../get-started/manage-boot-images.md).
-
-The following list includes the supported versions of the Windows ADK for Configuration Manager, current branch:
-
-#### Windows ADK version
-
-Windows ADK for Windows 10. For more information, see [Support For Windows 10](../../core/plan-design/configs/support-for-windows-10.md#windows-10-adk).
-
-#### Windows PE versions for boot images customizable from the Configuration Manager console
-
-Windows PE 10
-
-#### Supported Windows PE versions for boot images not customizable from the Configuration Manager console
-
-Windows PE 3.1
-
-> [!NOTE]
-> You can only add a boot image to Configuration Manager when it's based on Windows PE 3.1. Install the Windows AIK Supplement for Windows 7 SP1 to upgrade Windows AIK for Windows 7 (based on Windows PE 3) with the Windows AIK Supplement for Windows 7 SP1 (based on Windows PE 3.1). Download the Windows AIK Supplement for Windows 7 SP1 from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=5188).
-
-For more information, see [Customize boot images](../get-started/customize-boot-images.md).
 
 ### Windows Server Update Services (WSUS)
 
@@ -153,7 +134,7 @@ To optimize your OS deployments by using multicast, configure a distribution poi
 
 When you capture and restore user state data for side-by-side and refresh deployments, configure a state migration point to store the user state data on another computer.
 
-For more about how to configure the state migration point, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#BKMK_StateMigrationPoints).
+For more about how to configure the state migration point, see [State migration point](../get-started/prepare-site-system-roles-for-operating-system-deployments.md#state-migration-point).
 
 For more information about how to capture and restore user state, see [Manage user state](../get-started/manage-user-state.md).
 

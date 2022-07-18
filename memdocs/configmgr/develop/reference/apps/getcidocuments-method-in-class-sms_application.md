@@ -1,6 +1,7 @@
 ---
 title: "GetCIDocuments Method"
 titleSuffix: "Configuration Manager"
+description: "Gets all of the configuration item documents for the application installation."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 72f9b56c-4556-49d2-9d18-02ba7d3c1d8e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

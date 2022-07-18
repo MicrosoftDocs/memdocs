@@ -6,11 +6,11 @@ ms.date: 07/12/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 4812324b-e6aa-4431-bf1d-9fcd763a8caa
 author: mestew
 ms.author: mstewart
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # What's new in version 1902 of Configuration Manager current branch
@@ -26,10 +26,6 @@ To take full advantage of new Configuration Manager features, after you update t
 <!-- > [!Note]  
 > This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
  -->
-
-> [!Tip]  
-> To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22what%27s+new+in+version+1902+-+Configuration+Manager%22&locale=en-us`
 
 
 ## <a name="bkmk_deprecated"></a> Deprecated features and operating systems
@@ -56,7 +52,7 @@ In the Configuration Manager console, go to the **Monitoring** workspace. Expand
 
 ![Screenshot of client health dashboard](media/3599209-client-health-dashboard.png)
 
-For more information, see [How to monitor clients](../../clients/manage/monitor-clients.md#bkmk_health).
+For more information, see [Client health dashboard](../../clients/manage/client-health-dashboard.md).
 
 ### New management insight rules
 
@@ -108,7 +104,7 @@ For more information, see [Azure Resource Manager for the cloud management gatew
 <!--3640932-->
 You can now associate a cloud management gateway (CMG) with a boundary group. This configuration allows clients to default or fallback to the CMG for client communication according to boundary group relationships. This behavior is especially useful in branch office and VPN scenarios. You can direct client traffic away from expensive and slow WAN links to instead use faster internet links to Microsoft Azure.
 
-For more information, see [CMG hierarchy design](../../clients/manage/cmg/plan-cloud-management-gateway.md#hierarchy-design) and [Set up CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#configure-boundary-groups).
+For more information, see [CMG hierarchy design](../../clients/manage/cmg/plan-hierarchy-design.md) and [Set up CMG](../../clients/manage/cmg/setup-cloud-management-gateway.md#configure-boundary-groups).
 
 
 ## <a name="bkmk_real"></a> Real-time management
@@ -247,7 +243,7 @@ When you apply software updates to an OS image, there's a new option to optimize
 
 When you create a schedule to update an OS image, select the option to **Remove superseded updates after the image is updated**.
 
-For more information, see [Apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#bkmk_resetbase).
+For more information, see [Apply software updates to an image](../../../osd/get-started/manage-operating-system-images.md#optimized-image-servicing).
 
 ### Improvements to Run PowerShell Script task sequence step
 

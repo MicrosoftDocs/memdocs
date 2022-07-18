@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_Operation class in Configuration Manager, which is embedded by SMS_RbacSecuredObject and describes the various operations.
 title: "SMS_Operation Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: ea1053c7-f7e8-4641-8328-2e4c4d6bb93c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

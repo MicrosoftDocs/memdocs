@@ -1,6 +1,7 @@
 ---
 title: "SMS_SiteControlItem Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_SiteControlItem WMI class is an SMS Provider server class that represents the abstract base class for all site control item classes."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a0d437e7-2534-431c-943c-9cec4e70cf49
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

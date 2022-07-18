@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for application management
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common application management views to other views.
@@ -12,6 +12,8 @@ ms.assetid: c0d69334-75eb-408c-8828-94898cf134f5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Sample queries for application management in Configuration Manager

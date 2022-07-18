@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Device features and settings in Microsoft Intune - Azure | Microsoft Docs
-description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
+title: Device features and settings in Microsoft Intune
+description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10/11, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Endpoint Manager admin center. Use these profiles to manage and protect data and devices in your company.
 keywords:
 author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 06/21/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; get-started
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
@@ -37,7 +39,7 @@ As part of your mobile device management (MDM) solution, use these configuration
 
 Some profile examples include:
 
-- On Windows 10 devices, use a profile template that blocks ActiveX controls in Internet Explorer.
+- On Windows 10/11 devices, use a profile template that blocks ActiveX controls in Internet Explorer.
 - On iOS/iPadOS and macOS devices, allow users to use AirPrint printers in your organization.
 - Allow or prevent access to bluetooth on the device.
 - Create a WiFi or VPN profile that gives different devices access to your corporate network.
@@ -54,7 +56,8 @@ This article gives an overview of the different types of profiles you can create
 
 This feature supports:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## Certificates
 
@@ -63,11 +66,13 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
+- Android (AOSP)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
+- Windows 11
+- Windows 10
 - Windows 8.1
-- Windows 10 and newer
 
 ## Custom profile
 
@@ -79,7 +84,8 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 10 and later
+- Windows 11
+- Windows 10
 
 ## Delivery optimization
 
@@ -89,7 +95,8 @@ Use these settings to control how software updates are downloaded to devices in 
 
 This feature supports:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## Derived credential
 
@@ -115,6 +122,7 @@ This feature supports:
 
 This feature supports:
 
+- Windows 11 on supported firmware
 - Windows 10 1809 and newer on supported firmware
 
 ## Device restrictions
@@ -124,10 +132,12 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
+- Android (AOSP)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 - Windows 10 Team
 
 ## Domain join
@@ -136,15 +146,17 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## Edition upgrade and mode switch
 
-[Windows 10 edition upgrades](edition-upgrade-configure-windows-10.md) automatically upgrades devices that run some versions of Windows 10 to a newer edition.
+[Windows 10/11 edition upgrades](edition-upgrade-configure-windows-10.md) automatically upgrades devices that run some versions of Windows client to a newer edition.
 
 This feature supports:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## Education
 
@@ -161,18 +173,20 @@ This feature supports:
 - Android device administrator
 - Android Enterprise
 - iOS/iPadOS
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## Endpoint protection
 
-[Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows 10 devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
+[Endpoint protection](../protect/endpoint-protection-configure.md) configures BitLocker and Microsoft Defender settings for Windows client devices. On macOS devices, you can also configure the firewall, gateway, and other resources.
 
 To onboard Microsoft Defender for Endpoint with Microsoft Intune, see [Configure endpoints using Mobile Device Management (MDM) tools](/windows/security/threat-protection/microsoft-defender-atp/configure-endpoints-mdm).
 
 This feature supports:
 
 - macOS
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## eSIM cellular - Public preview
 
@@ -180,6 +194,7 @@ This feature supports:
 
 This feature supports:
 
+- Windows 11
 - Windows 10 Fall Creators Update and newer
 
 ## Extensions
@@ -192,11 +207,12 @@ This feature supports:
 
 ## Identity protection
 
-[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows 10 devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
+[Identity protection](../protect/identity-protection-configure.md) controls the Windows Hello for Business experience on Windows client devices. Configure these settings to make Windows Hello for Business available to users and devices, and to specify requirements for device PINs and gestures.  
 
 This feature supports:  
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 - Windows Holographic for Business  
 
 ## Kiosk
@@ -205,7 +221,8 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 and newer
+- Windows 11 (single app kiosk only)
+- Windows 10
 
 Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
@@ -223,7 +240,8 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## Network boundary
 
@@ -231,7 +249,8 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## OEMConfig
 
@@ -247,7 +266,8 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 and later
+- Windows 11
+- Windows 10
 
 ## Preference file
 
@@ -256,6 +276,9 @@ This feature supports:
 This feature supports:
 
 - macOS
+
+> [!TIP]
+> macOS settings are continually being added to the [settings catalog](settings-catalog.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
 
 ## Settings catalog
 
@@ -267,18 +290,21 @@ On macOS, you can configure Microsoft Edge version 77 and newer using the settin
 
 This feature supports:
 
+- iOS/iPadOS
 - macOS
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## Shared multi-user device
 
-[Windows 10](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) includes settings to manage devices with multiple users. These devices are known as shared devices, or shared PCs. When a user signs in to the device, you choose if the user can change the sleep options, or save files on the device. In another example, to save space, you can create a profile that deletes inactive credentials from Windows HoloLens devices.
+[Windows 10/11](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) includes settings to manage devices with multiple users. These devices are known as shared devices, or shared PCs. When a user signs in to the device, you choose if the user can change the sleep options, or save files on the device. In another example, to save space, you can create a profile that deletes inactive credentials from Windows HoloLens devices.
 
 These shared multi-user device settings allow administrators to control some of the device features, and manage these shared devices using Intune.
 
 This feature supports:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 - Windows Holographic for Business
 
 ## Update policies
@@ -303,8 +329,9 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
+- Windows 11
+- Windows 10
 - Windows 8.1
-- Windows 10 and newer
 
 ## Wi-Fi
 
@@ -313,11 +340,13 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
+- Android (AOSP)
 - Android Enterprise
 - iOS/iPadOS
 - macOS
+- Windows 11
+- Windows 10
 - Windows 8.1 (import only)
-- Windows 10 and newer
 
 ## Windows health monitoring
 
@@ -325,17 +354,20 @@ This feature supports:
 
 This feature supports:
 
-- Windows 10 and newer
+- Windows 11
+- Windows 10
 
 ## Wired networks
 
-[Wired networks](wired-networks-configure.md) let you create and manage 802.1x wired connections for macOS desktop computers. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
+[Wired networks](wired-networks-configure.md) let you create and manage 802.1x wired connections for macOS and Windows desktop computers and devices. In your profile, you choose the network interface, select the accepted EAP types, and enter the server trust settings, including PKCS and SCEP certificates.
 
-When you assign the profile, macOS desktop users get access to your corporate wired network without having to configure it themselves.
+When you assign the profile, users get access to your corporate wired network without having to configure it themselves.
 
 This feature supports:
 
 - macOS
+- Windows 11
+- Windows 10
 
 ## Zebra Mobility Extensions (MX)
 

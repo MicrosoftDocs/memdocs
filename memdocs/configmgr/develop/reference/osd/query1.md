@@ -1,6 +1,7 @@
 ---
 title: "Query1"
 titleSuffix: "Configuration Manager"
+description: "Query1 specifies a query, in Configuration Manager, that is used to identify the platform that a client computer is running."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: b639050e-d04e-4650-8fe1-a1d39e5b759f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

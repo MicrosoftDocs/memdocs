@@ -1,25 +1,22 @@
 ---
 title: Troubleshooting application installation
 titleSuffix: Configuration Manager
-description: "Troubleshooting application installation for Configuration Manager tenant attach"
-ms.date: 12/03/2020
+description: Troubleshooting application installation for Configuration Manager tenant attach
+ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 75f47456-cd8d-4c83-8dc5-98b336a7c6c8
 manager: dougeby
 author: mestew
 ms.author: mstewart
+ms.localizationpriority: high
 ---
 
-# Troubleshoot application installation for devices uploaded to the admin center (preview)
+# Troubleshoot application installation for devices uploaded to the admin center
 <!--6374854, 6521921-->
 *Applies to: Configuration Manager (current branch)*
 
 Use the following to troubleshoot Configuration Manager applications in the Microsoft Endpoint Manager admin center:
-
-> [!Important]
-> This information relates to a preview feature which may be substantially modified before it's commercially released. Microsoft makes no warranties, express or implied, with respect to the information provided here.
 
 ## Common errors from the Microsoft Endpoint Manager admin center
 
@@ -98,17 +95,10 @@ Unexpected errors are typically caused by either [service connection point](../c
 - Use search
 - Select **Retry installation**
 
-**Possible cause:**  Ensure that [Update Rollup for Microsoft Endpoint Configuration Manager version 2002](https://support.microsoft.com/help/4560496/) and the corresponding version of the console is installed. For more information, see [prerequisites for installing an application from the admin center](applications.md#prerequisites).
+**Possible cause:**  Ensure that a supported version of Configuration Manager is installed. For more information, see [prerequisites for installing an application from the admin center](applications.md#prerequisites).
 
 ## Known issues
 
-### Application installation times out if application requires restart
-
-**Scenario:** If you're running Configuration Manager version 2002 and an application requires a restart to complete the installation process, the installation may time out.
-
-**Symptoms:** The user will see `restart pending` notifications and in Software Center. From the Microsoft Endpoint Manager admin center, the application stays in the `Installing` state.  
-
-**Workaround:** Once the user restarts the device, the correct status is displayed in the admin center.
 
 [!INCLUDE [Known issues shared across tenant attach features](includes/known-issues-shared.md)]
 

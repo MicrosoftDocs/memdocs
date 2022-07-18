@@ -2,29 +2,25 @@
 title: Features and capabilities
 titleSuffix: Configuration Manager
 description: Learn about the primary management capabilities of Configuration Manager.
-ms.date: 11/29/2019
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: 5d388399-07ca-431c-a9b2-56c69771aa87
+ms.topic: overview
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 
 # Features and capabilities of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-This article summarizes the primary management features of Configuration Manager. Each feature has its own prerequisites, and how you use each might influence the design and implementation of your Configuration Manager hierarchy. For example, if you want to deploy software updates to devices in your hierarchy, you need a software update point site system role.  
-
-For more information about how to plan and install Configuration Manager to support these management capabilities in your environment, see [Get ready for Configuration Manager](../get-ready.md).  
+This article summarizes the primary management features of Configuration Manager. Each feature has its own prerequisites, and how you use each might influence the design and implementation of your Configuration Manager hierarchy. For example, if you want to deploy software updates to devices in your hierarchy, you need a software update point site system role.
 
 ## Co-management
 
-Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. Co-management lets you cloud-attach your existing investment in Configuration Manager by adding new functionality like conditional access. For more information, see [What is co-management](../../../comanage/overview.md)?
+Co-management is one of the primary ways to attach your existing Configuration Manager deployment to the Microsoft 365 cloud. It enables you to concurrently manage Windows devices by using both Configuration Manager and Microsoft Intune. Co-management lets you cloud-attach your existing investment in Configuration Manager by adding new functionality like conditional access. For more information, see [What is co-management](../../../comanage/overview.md)?
 
 ## Desktop Analytics
 
@@ -32,11 +28,11 @@ Desktop Analytics is a cloud-based service that integrates with Configuration Ma
 
 ## Cloud-attached management
 
-Use features like the cloud management gateway, cloud-based distribution points, and Azure Active Directory to manage internet-based clients.
+Use features like the cloud management gateway and Azure Active Directory to manage internet-based clients.
 
 For more information, see the following articles:
 
-- [Manage clients on the internet](../../clients/manage/manage-clients-internet.md)
+- [Cloud management gateway overview](../../clients/manage/cmg/overview.md)
 - [Plan for Azure AD](../security/plan-for-security.md#azure-active-directory)
 - [Azure services](../../servers/deploy/configure/azure-services-wizard.md)
 
@@ -50,7 +46,7 @@ Helps you create, manage, deploy, and monitor applications to a range of differe
 
 ## OS deployment
 
-Deploy an in-place upgrade of Windows 10, or capture and deploy OS images. Image deployment can use PXE, multicast, or bootable media. It can also help redeploy existing devices using Windows AutoPilot. For more information, see [Introduction to OS deployment](../../../osd/understand/introduction-to-operating-system-deployment.md).  
+Deploy an in-place upgrade of Windows, or capture and deploy OS images. Image deployment can use PXE, multicast, or bootable media. It can also help redeploy existing devices using Windows Autopilot. For more information, see [Introduction to OS deployment](../../../osd/understand/introduction-to-operating-system-deployment.md).  
 
 ## Software updates
 
@@ -112,3 +108,7 @@ Use the advanced reporting capabilities of SQL Server Reporting Services from th
 ## Software metering
 
 Monitor and collect software usage data from Configuration Manager clients. You can use this data to determine whether software is used after it's installed. For more information, see [Monitor app usage with software metering](../../../apps/deploy-use/monitor-app-usage-with-software-metering.md).  
+
+## Next steps
+
+For more information about how to plan and install Configuration Manager to support these management capabilities in your environment, see [Get ready for Configuration Manager](../get-ready.md).

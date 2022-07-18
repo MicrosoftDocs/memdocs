@@ -1,6 +1,7 @@
 ---
 title: "VerifySignature Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the VerifySignature WMI class method verifies the data signature."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a9e9ab89-6b46-4e90-ac0f-c038bd5c9fec
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

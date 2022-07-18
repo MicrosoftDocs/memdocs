@@ -2,14 +2,14 @@
 title: Create application groups
 titleSuffix: Configuration Manager
 description: Create a group of applications that you can send to a user or device collection as a single deployment in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 03/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
-ms.assetid: e67c691e-62ef-4f43-9cfb-0e957d1e7a5f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Create application groups
@@ -20,8 +20,12 @@ manager: dougeby
 
 Create a group of applications that you can send to a user or device collection as a single deployment. The metadata you specify about the app group is seen in Software Center as a single entity. You can order the apps in the group so that the client installs them in a specific order.
 
-> [!NOTE]
-> In this version of Configuration Manager, app groups are a pre-release feature. To enable it, see [Pre-release features](../../core/servers/manage/pre-release-features.md).
+> [!TIP]
+> This feature was first introduced in version 1906 as a [pre-release feature](../../core/servers/manage/pre-release-features.md). Beginning with version 2111, it's no longer a pre-release feature.
+>
+> This feature is optional in Configuration Manager, and enabled by default. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
+
+## Process
 
 1. In the Configuration Manager console, go to the **Software Library** workspace. Expand **Application Management** and select the **Application Group** node.
 
@@ -35,7 +39,12 @@ Create a group of applications that you can send to a user or device collection 
 
 1. Complete the wizard.
 
-Deploy the app group using the same process as for an application. For more information, see [Deploy applications](deploy-applications.md). Starting in version 1910, you can deploy an app group to device or user collections.
+> [!TIP]
+> To manage app groups, you need permissions on the **Application Groups** object. The permissions for most administrative operations are the same as on applications.
+
+## Deploy
+
+Deploy the app group using the same process as for an application. For more information, see [Deploy applications](deploy-applications.md). You can deploy an app group to device or user collections. Starting in version 2111, when you deploy an app group as required to a device or user collection, you can specify that it automatically uninstalls when the resource is removed from the collection.<!--10479618--> For more information, see [Implicit uninstall](uninstall-applications.md#implicit-uninstall).
 
 After you deploy the group:
 
@@ -49,16 +58,29 @@ To troubleshoot an app group deployment, use the following log files on the clie
 - **AppEnforce.log**
 - **SettingsAgent.log**
 
-> [!IMPORTANT]
-> Don't create or deploy an app group until you update the entire hierarchy and targeted clients to at least version 1906.
+## App approval
+
+Starting in version 2111, you can use the following [app approval](app-approval.md) behaviors:<!-- 10992210 -->
+
+- Deploy an app group to a user collection and require approval.
+
+  - A user can then request the app group in Software Center.
+  - You can approve or deny the user's request for the app group.
+
+- Deploy an app group to a device collection and require approval. The deployment is suspended on the device until you trigger installation via automation. For example, use the [Approve-CMApprovalRequest](/powershell/module/configurationmanager/approve-cmapprovalrequest) PowerShell cmdlet.
+
+- From the Configuration Manager console, when you select a device, there's a new action in the **Device** group of the ribbon to **Install Application Group**. For more information, see [Install applications for a device](install-app-for-device.md).
+
+- When you enable tenant attach, you can view status and take actions on app groups from the Microsoft Endpoint Manager admin center. For more information, see [Install an application from the admin center](../../tenant-attach/applications.md).
 
 ## Known issues
 
-- The following deployment options may not work: alerts, approval, phased deployment, repair.
+- The following deployment options may not work: alerts, phased deployment, repair.
 - You can't use application groups with the **Install Application** task sequence step.
 - You can't export or import app groups.
-- Don't include in the group any apps that require restart, or the group deployment may fail.
-- If you delete an app that's a part of an app group, you'll see the following warning when you next view the properties of the app group: "Unable to load information about all applications in the group." Make a small change to the app group and save it. For example, add a space to the **Administrator comments**. When you save the change, it removes the deleted app from the group.<!-- 7099542 -->
+- In version 2103 and earlier, don't include in the group any apps that require restart, or the group deployment may fail.
+- In version 2107 and earlier, if you delete an app that's a part of an app group, you'll see the following warning when you next view the properties of the app group: "Unable to load information about all applications in the group." Make a small change to the app group and save it. For example, add a space to the **Administrator comments**. When you save the change, it removes the deleted app from the group.<!-- 7099542 --> Starting in version 2111, you can't delete an app that's part of an app group.
+- In most scenarios, user categories on the app group don't display as filters in Software Center. If the app group is deployed as available to a user collection, the categories display.<!-- 12425254 -->
 
 ## PowerShell
 

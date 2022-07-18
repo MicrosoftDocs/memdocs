@@ -6,10 +6,11 @@ ms.date: 09/09/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: dcddc250-9361-4e69-af45-472da4ef5fd5
-author: aczechowski  
-ms.author: aaroncz 
+author: aczechowski
+ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Quick Start Guide for User-Driven Installation  

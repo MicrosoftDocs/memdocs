@@ -1,6 +1,7 @@
 ---
 title: "GetClientsCountByCollections Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that retrieves the number of clients in the specified collections."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 1c44e69e-4a53-4f63-bd6a-441f15a0d97b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

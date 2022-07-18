@@ -1,5 +1,6 @@
 ---
 title: "Define the Deployment Technology Registration File "
+description: To define a deployment technology registration file, create an XML file based on the AppMgmtDigest schema.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: 928c176d-79ea-4dcc-a746-d36819c2d1a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

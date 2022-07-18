@@ -2,25 +2,25 @@
 title: Deploy and update Microsoft Edge, version 77 and later
 titleSuffix: Configuration Manager
 description: How to deploy and update Microsoft Edge, version 77 and later with Configuration Manager
-ms.date: 04/30/2021
+ms.date: 05/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-ms.assetid: 73b420be-5d6a-483a-be66-c4d274437508
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Microsoft Edge Management
 
 *Applies to: Configuration Manager (Current Branch)*
 
-The all-new Microsoft Edge is ready for business. Starting in Configuration Manager version 1910, you can now deploy [Microsoft Edge, version 77 and later](/deployedge/) to your users. A PowerShell script is used to install the Edge build selected. The script also turns off automatic updates for Edge so they can be managed with Configuration Manager.
+The all-new Microsoft Edge is ready for business. You can deploy [Microsoft Edge, version 77 and later](/deployedge/) to your users. A PowerShell script is used to install the Microsoft Edge build selected. The script also turns off automatic updates for Microsoft Edge so they can be managed with Configuration Manager.
 
 ## <a name="bkmk_Microsoft_Edge"></a> Deploy Microsoft Edge
 <!--4561024-->
-Admins can pick the Beta, Dev, or Stable channel, along with a version of the Microsoft Edge client to deploy. Each release incorporates learnings and improvements from our customers and community.
+Admins can pick the Beta, Dev, or Stable channel, along with a version of the Microsoft Edge client to deploy. Each release incorporates learnings and improvements from our customers and community. For more information, see [Microsoft Edge release schedule](/DeployEdge/microsoft-edge-release-schedule).
 
 ### Prerequisites for deploying
 
@@ -29,19 +29,13 @@ For clients targeted with a Microsoft Edge deployment:
 - PowerShell [Execution Policy](/powershell/module/microsoft.powershell.core/about/about_execution_policies) can't be set to Restricted.
   - PowerShell is executed to perform the installation.
 
-- The Microsoft Edge installer and [CMPivot](../../core/servers/manage/cmpivot.md) are currently signed with the **Microsoft Code Signing PCA 2011** certificate. If you set PowerShell execution policy to **AllSigned**, then you need to make sure that devices trust this signing certificate. You can export the certificate from a computer where you've installed the Configuration Manager console. View the certificate on `"C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\CMPivot.exe"`, and then export the code signing certificate from the certification path. Then import it to the _machine_'s **Trusted Publishers** store on managed devices. You can use the process in the following blog, but make sure to export the _code signing certificate_ from the certification path: [Adding a Certificate to Trusted Publishers using Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-a-certificate-to-trusted-publishers-using-intune/ba-p/1974488).<!--CMADO-7585106, MEMDocs#1571-->
+- The Microsoft Edge installer, Attack Surface Reduction rules engine for tenant attach, and [CMPivot](../../core/servers/manage/cmpivot.md) are currently signed with the **Microsoft Code Signing PCA 2011** certificate. If you set PowerShell execution policy to **AllSigned**, then you need to make sure that devices trust this signing certificate. You can export the certificate from a computer where you've installed the Configuration Manager console. View the certificate on `"C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\CMPivot.exe"`, and then export the code signing certificate from the certification path. Then import it to the _machine_'s **Trusted Publishers** store on managed devices. You can use the process in the following blog, but make sure to export the _code signing certificate_ from the certification path: [Adding a Certificate to Trusted Publishers using Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/adding-a-certificate-to-trusted-publishers-using-intune/ba-p/1974488).<!--CMADO-7585106, MEMDocs#1571-->
 
 [!INCLUDE [Internet endpoints for deploying Microsoft Edge](../../core/plan-design/network/includes/internet-endpoints-deploy-microsoft-edge.md)]
 
 ### <a name="bkmk_autoupdate"></a> Verify Microsoft Edge update policies
-
-#### Configuration Manager version 1910
-
-In version 1910, when Microsoft Edge is deployed, the installation script turns off automatic updates for Microsoft Edge so they can be managed with Configuration Manager. You can change this behavior using Group Policy. For more information, see [Plan your deployment of Microsoft Edge](/deployedge/deploy-edge-plan-deployment#define-and-configure-policies) and [Microsoft Edge update policies](/DeployEdge/microsoft-edge-update-policies).
-
-#### Configuration Manager version 2002 and later
 <!--4561024-->
-Starting in version 2002, you can create a Microsoft Edge application that's set up to receive automatic updates rather than having automatic updates disabled. This change allows you to choose to manage updates for Microsoft Edge with Configuration Manager or allow Microsoft Edge to automatically update. When creating the application, select **Allow Microsoft Edge to automatically update the version of the client on the end user's device** on the **Microsoft Edge Settings** page. If you previously used Group Policy to change this behavior, Group Policy will overwrite the setting made by Configuration Manager during installation of Microsoft Edge.
+Starting in version 2002, you can create a Microsoft Edge application that's set up to receive automatic updates rather than having automatic updates disabled. This change allows you to choose to manage updates for Microsoft Edge with Configuration Manager or allow Microsoft Edge to automatically update. When creating the application, select **Allow Microsoft Edge to automatically update the version of the client on the end user's device** on the **Microsoft Edge Settings** page. If you previously used Group Policy to change this behavior, Group Policy will overwrite the setting made by Configuration Manager during installation of Microsoft Edge. For more information, see [Microsoft Edge update policies](/DeployEdge/microsoft-edge-update-policies).
 
 [![Microsoft Edge automatic update setting](./media/4561024-autoupdate-edge.png)](./media/4561024-autoupdate-edge.png#lightbox)
 
@@ -75,7 +69,7 @@ Create a Microsoft Edge application using the built-in application experience, w
 ## Update Microsoft Edge
 <!--4831871-->
 
-Starting in Configuration Manager version 1910, you'll see a node called **All Microsoft Edge updates** under **Microsoft Edge Management**. This node helps you manage updates for all Microsoft Edge channels.<!--initial edge updates released Jan 15,2020-->
+The **All Microsoft Edge updates** node is under **Microsoft Edge Management**. This node helps you manage updates for all Microsoft Edge channels.<!--initial edge updates released Jan 15,2020-->
 
 1. To get updates for Microsoft Edge, ensure you have the **Updates** classification and the **Microsoft Edge** product [selected for synchronization](../../sum/get-started/configure-classifications-and-products.md).
 
@@ -95,8 +89,6 @@ Starting in Configuration Manager version 1910, you'll see a node called **All M
 
 ## <a name="bkmk_edge-dash"></a> Microsoft Edge Management dashboard
 <!--3871913-->
-*(Introduced in version 2002)*
-
 Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard provides you insights on the usage of Microsoft Edge and other browsers. In this dashboard, you can:
 
 - See how many of your devices have Microsoft Edge installed
@@ -107,6 +99,8 @@ Starting in Configuration Manager 2002, the Microsoft Edge Management dashboard 
    - Currently for the 2002 release, this chart will be empty.
 
 ### Prerequisites for the dashboard
+
+For Configuration Manager version 2203 or later, the [WebView2 console extension](../../core/servers/manage/admin-console-extensions.md#bkmk_notification) must be installed. If needed, select the notification bell in the top right corner of the console to install the extension.<!--10024154-->
 
 Enable the following properties in the below [hardware inventory](../../core/clients/manage/inventory/extend-hardware-inventory.md) classes for the Microsoft Edge Management dashboard:
 
@@ -122,11 +116,16 @@ Enable the following properties in the below [hardware inventory](../../core/cli
    - BrowserName
    - UsagePercentage
 
+
+
 ### View the dashboard
 
 From the **Software Library** workspace, click **Microsoft Edge Management** to see the dashboard. Change the collection for the graph data by clicking **Browse** and choosing another collection. By default your five largest collections are in the drop-down list. When you select a collection that isn't in the list, the newly selected collection takes the bottom spot on your drop-down list.
 
 [![Microsoft Edge Management dashboard](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
+
+> [!TIP]
+> The [Power BI sample reports](../../core/servers/manage/powerbi-sample-reports.md) for Configuration Manager includes a report called **Edge Status**. This report can also help with monitoring Edge deployment. <!--5679791, 10123832, 10131458, 10488910-->  
 
 ## Known issues
 

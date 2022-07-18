@@ -1,6 +1,7 @@
 ---
 title: "SMS_SCFToSite_a Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_SCFToSite_a WMI class is an SMS Provider server class that uses the SiteCode property to relate SMS_SiteControlFile Server WMI Class objects to SMS_Site Server WMI Class objects."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 660a8e33-5b19-4652-8a96-70b9044b8f9a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

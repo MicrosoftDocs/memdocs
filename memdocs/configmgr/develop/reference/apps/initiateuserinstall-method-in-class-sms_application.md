@@ -1,6 +1,7 @@
 ---
 title: "InitiateUserInstall Method"
 titleSuffix: "Configuration Manager"
+description: "InitiateUserInstall method is reserved for future use in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 955b71e0-6890-4cae-8ce1-9d3e3b5d78fe
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

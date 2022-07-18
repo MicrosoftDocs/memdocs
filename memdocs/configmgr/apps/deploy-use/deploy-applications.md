@@ -2,14 +2,14 @@
 title: Deploy applications
 titleSuffix: Configuration Manager
 description: Create or simulate a deployment of an application to a device or user collection
-ms.date: 04/05/2021
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
-ms.assetid: 2629c376-ec43-4f0e-a78b-4223cc9302bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Deploy applications with Configuration Manager
@@ -99,13 +99,15 @@ On the **Deployment Settings** page, specify the following information:
 
 - **Allow end users to attempt to repair this application**: If you created the application with a repair command line, enable this option. Users see an option in Software Center to **Repair** the application.<!--1357866-->
 
+- **Uninstall this application if the targeted object falls out of the collection**: Starting in version 2107, when you remove the device from the target collection, Configuration Manager runs the uninstall program on that device. For more information, see [Implicit uninstall](uninstall-applications.md#implicit-uninstall). This option is only available for device-targeted deployments and when the deployment is **Required**.<!--3607457-->
+
 - **Pre-deploy software to the user's primary device**: If the deployment is to a user, select this option to deploy the application to the user's primary device. This setting doesn't require the user to sign in before the deployment runs. If the user must interact with the installation, don't select this option. This option is only available when the deployment is **Required**.
 
 - **Send wake-up packets**: If the deployment is **Required**, Configuration Manager sends a wake-up packet to computers before the client runs the deployment. This packet wakes the computers at the installation deadline time. Before using this option, computers and networks must be configured for Wake On LAN. For more information, see [Plan how to wake up clients](../../core/clients/deploy/plan/plan-wake-up-clients.md).
 
 - **Allow clients on a metered Internet connection to download content after the installation deadline, which might incur additional costs**: This option is only available for deployments with a purpose of **Required**.
 
-- **Automatically upgrade any superseded version of this application**: The client upgrades any superseded version of the application with the superseding application.
+- **Automatically upgrade any superseded versions of this application**: The client upgrades any superseded version of the application with the superseding application.
 
     > [!NOTE]
     > This option works regardless of administrator approval. If an administrator already approved the superseded version, they don't need to also approve the superseding version. Approval is only for new requests, not superseding upgrades.<!--515824-->

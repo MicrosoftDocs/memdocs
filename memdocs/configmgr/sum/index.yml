@@ -8,12 +8,14 @@ metadata:
   title: Software update management documentation
   titleSuffix: Configuration Manager
   description: Configuration Manager helps manage the complex task of tracking and applying software updates to clients in your organization.
-  ms.product: configuration-manager
+  ms.prod: configuration-manager
   ms.technology: configmgr-sum
   ms.topic: landing-page
   author: mestew
   ms.author: mstewart
-  ms.date: 01/10/2020
+  manager: dougeby
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -64,7 +66,7 @@ landingContent:
             url: get-started/manage-settings-for-software-updates.md
       - linkListType: concept
         links:
-          - text: Optimize Windows 10 update delivery
+          - text: Optimize Windows update delivery
             url: deploy-use/optimize-windows-10-update-delivery.md
           - text: Software updates maintenance
             url: deploy-use/software-updates-maintenance.md

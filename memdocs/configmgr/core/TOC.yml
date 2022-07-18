@@ -27,10 +27,12 @@ items:
       href: servers/manage/admin-console.md
     - name: Console notifications
       href: servers/manage/admin-console-notifications.md
-    - name: Console extensions
+    - name: Manage console extensions
       href: servers/manage/admin-console-extensions.md
+    - name: Import console extensions
+      href: servers/manage/import-admin-console-extensions.md     
     - name: Console changes and tips
-      href: servers/manage/admin-console-tips.md
+      href: servers/manage/admin-console-tips.md      
   - name: Fundamentals
     items: 
     - name: Configuration Manager fundamentals
@@ -85,16 +87,16 @@ items:
       href: plan-design/changes/features-and-capabilities.md
     - name: What's new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 2203
+      href: plan-design/changes/whats-new-in-version-2203.md
+    - name: What's new in version 2111
+      href: plan-design/changes/whats-new-in-version-2111.md
+    - name: What's new in version 2107
+      href: plan-design/changes/whats-new-in-version-2107.md
     - name: What's new in version 2103
       href: plan-design/changes/whats-new-in-version-2103.md
     - name: What's new in version 2010
       href: plan-design/changes/whats-new-in-version-2010.md
-    - name: What's new in version 2006
-      href: plan-design/changes/whats-new-in-version-2006.md
-    - name: What's new in version 2002
-      href: plan-design/changes/whats-new-in-version-2002.md
-    - name: What's new in version 1910
-      href: plan-design/changes/whats-new-in-version-1910.md
     - name: What's changed from Configuration Manager 2012
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: Removed and deprecated
@@ -117,8 +119,12 @@ items:
       href: plan-design/configs/supported-operating-systems-for-site-system-servers.md
     - name: Supported operating systems for clients and devices
       href: plan-design/configs/supported-operating-systems-for-clients-and-devices.md
-    - name: Support for Windows 10 as a client
+    - name: Support for Windows 11
+      href: plan-design/configs/support-for-windows-11.md
+    - name: Support for Windows 10
       href: plan-design/configs/support-for-windows-10.md
+    - name: Support for the Windows ADK
+      href: plan-design/configs/support-for-windows-adk.md
     - name: Supported operating systems for consoles
       href: plan-design/configs/supported-operating-systems-consoles.md
     - name: Support for SQL Server versions
@@ -159,6 +165,8 @@ items:
         href: plan-design/hierarchy/use-a-pull-distribution-point.md
       - name: The content library
         href: plan-design/hierarchy/the-content-library.md
+      - name: Configure a remote content library
+        href: plan-design/hierarchy/remote-content-library.md
       - name: Flowchart - Manage content library
         href: plan-design/hierarchy/manage-content-library-flowchart.md
       - name: Content library cleanup tool
@@ -203,12 +211,6 @@ items:
       href: plan-design/network/prepare-windows-servers.md
     - name: Websites for site system servers
       href: plan-design/network/websites-for-site-system-servers.md
-    - name: CNG v3 certificates overview
-      href: plan-design/network/cng-certificates-overview.md
-    - name: PKI certificate requirements
-      href: plan-design/network/pki-certificate-requirements.md
-    - name: Example PKI certificate deployment
-      href: plan-design/network/example-deployment-of-pki-certificates.md
   - name: Diagnostics and usage data
     items:
     - name: Overview of diagnostics and usage data
@@ -223,30 +225,40 @@ items:
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 2203
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2203.md          
+        - name: Data for version 2111
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2111.md
+        - name: Data for version 2107
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2107.md
         - name: Data for version 2103
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2103.md
         - name: Data for version 2010
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2010.md
-        - name: Data for version 2006
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2006.md
-        - name: Data for version 2002
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2002.md
-        - name: Data for version 1910
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-1910.md
+    - name: Configuration Manager tools
+      href: plan-design/diagnostics/tools.md
     - name: Frequently asked questions (FAQ)
       href: plan-design/diagnostics/frequently-asked-questions.yml
   - name: Security and privacy for Configuration Manager
     items:
     - name: Plan for security
       href: plan-design/security/plan-for-security.md
-    - name: Plan for certificates
-      href: plan-design/security/plan-for-certificates.md
-    - name: Additional privacy information
-      href: plan-design/security/additional-privacy.md
     - name: Configure security
       href: plan-design/security/configure-security.md
     - name: Cryptographic controls technical reference
       href: plan-design/security/cryptographic-controls-technical-reference.md
+    - name: Certificates overview
+      href: plan-design/security/certificates-overview.md
+    - name: Plan for PKI certificates
+      href: plan-design/security/plan-for-certificates.md
+    - name: CNG v3 certificates overview
+      href: plan-design/network/cng-certificates-overview.md
+    - name: PKI certificate requirements
+      href: plan-design/network/pki-certificate-requirements.md
+    - name: Example PKI certificate deployment
+      href: plan-design/network/example-deployment-of-pki-certificates.md
+    - name: Additional privacy information
+      href: plan-design/security/additional-privacy.md
     - name: Enable TLS 1.2
       items:
       - name: About enabling TLS 1.2 
@@ -273,16 +285,16 @@ items:
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
-    - name: 2106 features
-      href: get-started/2021/technical-preview-2106.md
-    - name: 2105.2 features
-      href: get-started/2021/technical-preview-2105-2.md
-    - name: 2105 features
-      href: get-started/2021/technical-preview-2105.md
-    - name: 2104 features
-      href: get-started/2021/technical-preview-2104.md
-    - name: 2103 features
-      href: get-started/2021/technical-preview-2103.md
+    - name: 2207 features
+      href: get-started/2022/technical-preview-2207.md       
+    - name: 2206 features
+      href: get-started/2022/technical-preview-2206.md           
+    - name: 2205 features
+      href: get-started/2022/technical-preview-2205.md       
+    - name: 2204 features
+      href: get-started/2022/technical-preview-2204.md       
+    - name: 2203 features
+      href: get-started/2022/technical-preview-2203.md 
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -344,7 +356,13 @@ items:
       - name: Prerequisites for installing sites
         href: servers/deploy/install/prerequisites-for-installing-sites.md
       - name: Use the setup wizard
-        href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+        items:
+        - name: Setup wizard overview
+          href: servers/deploy/install/use-the-setup-wizard-to-install-sites.md
+        - name: Install a central administration or primary site
+          href: servers/deploy/install/setup-wizard-central-primary.md
+        - name: Install a secondary site
+          href: servers/deploy/install/setup-wizard-secondary.md
       - name: Use a command-line
         items:
         - name: Command-line overview
@@ -391,6 +409,8 @@ items:
         href: servers/deploy/configure/deploy-and-manage-content.md
       - name: Monitor content
         href: servers/deploy/configure/monitor-content-you-have-distributed.md
+      - name: Visualize content distribution status
+        href: servers/deploy/configure/visualize-content-distribution-status.md
       - name: Microsoft Connected Cache
         href: plan-design/hierarchy/microsoft-connected-cache.md
       - name: Troubleshoot Microsoft Connected Cache
@@ -405,14 +425,24 @@ items:
         href: servers/deploy/configure/select-discovery-methods-to-use.md
       - name: Configure discovery methods
         href: servers/deploy/configure/configure-discovery-methods.md
-    - name: Site boundaries and boundary groups
+    - name: Boundaries and boundary groups
       items:
-      - name: Site boundaries and boundary groups overview
+      - name: Overview
         href: servers/deploy/configure/define-site-boundaries-and-boundary-groups.md
-      - name: Boundaries
+      - name: Define boundaries
         href: servers/deploy/configure/boundaries.md
-      - name: Boundary groups
+      - name: About boundary groups
         href: servers/deploy/configure/boundary-groups.md
+      - name: Boundary group options
+        href: servers/deploy/configure/boundary-group-options.md
+      - name: Distribution points
+        href: servers/deploy/configure/boundary-groups-distribution-points.md
+      - name: Software update points
+        href: servers/deploy/configure/boundary-groups-software-update-points.md
+      - name: Management points
+        href: servers/deploy/configure/boundary-groups-management-points.md
+      - name: Boundary group example
+        href: servers/deploy/configure/boundary-groups-example.md
       - name: Procedures for boundary groups
         href: servers/deploy/configure/boundary-group-procedures.md
     - name: High availability
@@ -451,7 +481,7 @@ items:
       href: plan-design/hierarchy/accounts.md
     - name: Communications between endpoints
       href: plan-design/hierarchy/communications-between-endpoints.md
-    - name: Enhanced HTTP site systems
+    - name: Enhanced HTTP
       href: plan-design/hierarchy/enhanced-http.md
     - name: Hierarchy maintenance tool
       href: servers/manage/hierarchy-maintenance-tool-preinst.exe.md
@@ -468,7 +498,7 @@ items:
     - name: Release notes
       href: servers/deploy/install/release-notes.md
     - name: State messages
-      href: plan-design/hierarchy/state-messaging-system-center-configuration-manager.md   
+      href: plan-design/hierarchy/state-messages.md
     - name: Unicode and ASCII support
       href: plan-design/hierarchy/unicode-and-ascii-support.md
 - name: Manage infrastructure
@@ -477,10 +507,12 @@ items:
     href: servers/manage/management-insights.md
   - name: Community hub
     items:
-    - name: Use community hub
+    - name: Use Community hub
       href: servers/manage/community-hub.md
-    - name: Contribute to community hub
-      href: servers/manage/community-hub-contribute.md      
+    - name: Contribute to Community hub
+      href: servers/manage/community-hub-contribute.md
+    - name: Console extensions in Community hub
+      href: servers/manage/community-hub-extensions.md 
   - name: CMPivot
     items:
     - name: CMPivot overview
@@ -513,8 +545,16 @@ items:
       href: servers/manage/updates.md
     - name: In-console updates
       items:
+      - name: Prepare for in-console updates
+        href: servers/manage/prepare-in-console-updates.md
       - name: Install in-console updates
         href: servers/manage/install-in-console-updates.md
+      - name: After the site updates
+        href: servers/manage/post-in-console-updates.md
+      - name: Optional features
+        href: servers/manage/optional-features.md
+      - name: In-console updates FAQ
+        href: servers/manage/updates-faq.yml
       - name: Update reset tool
         href: servers/manage/update-reset-tool.md
       - name: Test database upgrade
@@ -533,16 +573,16 @@ items:
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 2203
+      href: servers/manage/checklist-for-installing-update-2203.md
+    - name: Checklist for installing update 2111
+      href: servers/manage/checklist-for-installing-update-2111.md
+    - name: Checklist for installing update 2107
+      href: servers/manage/checklist-for-installing-update-2107.md
     - name: Checklist for installing update 2103
       href: servers/manage/checklist-for-installing-update-2103.md
     - name: Checklist for installing update 2010
       href: servers/manage/checklist-for-installing-update-2010.md
-    - name: Checklist for installing update 2006
-      href: servers/manage/checklist-for-installing-update-2006.md
-    - name: Checklist for installing update 2002
-      href: servers/manage/checklist-for-installing-update-2002.md
-    - name: Checklist for installing update 1910
-      href: servers/manage/checklist-for-installing-update-1910.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery
@@ -563,6 +603,8 @@ items:
       href: servers/manage/use-status-system.md
     - name: Configure alerts
       href: servers/manage/configure-alerts.md
+    - name: External notifications
+      href: servers/manage/external-notifications.md
     - name: Monitor scenario health
       href: servers/manage/scenario-health.md
     - name: Health attestation
@@ -679,8 +721,10 @@ items:
       href: clients/deploy/plan/client-installation-methods.md
     - name: Prerequisites for deploying clients to Windows computers
       items:
-      - name: Prerequisites for deploying clients
+      - name: Windows client prerequisites
         href: clients/deploy/prerequisites-for-deploying-clients-to-windows-computers.md
+      - name: Mobile device client prerequisites
+        href: clients/deploy/prerequisites-for-deploying-clients-to-mobile-devices.md
       - name: Windows Firewall and port settings for clients
         href: clients/deploy/windows-firewall-and-port-settings-for-clients.md
     - name: Determine the site system roles for clients
@@ -741,22 +785,28 @@ items:
   items:
   - name: Manage clients overview
     href: clients/manage/monitor-and-manage-clients.md
-  - name: Monitor and manage clients
+  - name: Monitor clients
     items:
     - name: How to monitor clients
       href: clients/manage/monitor-clients.md
+    - name: Client health dashboard
+      href: clients/manage/client-health-dashboard.md
+    - name: Client health checks
+      href: clients/manage/client-health-checks.md
+    - name: Surface device dashboard
+      href: clients/manage/surface-device-dashboard.md
+    - name: Sync data to Azure Monitor
+      href: /azure/azure-monitor/logs/collect-sccm?toc=/mem/configmgr/core/toc.json&bc=/mem/configmgr/core/breadcrumb/toc.json
+  - name: Manage clients
+    items:
     - name: How to manage clients
       href: clients/manage/manage-clients.md
     - name: Configure the client cache
       href: clients/manage/configure-client-cache.md
     - name: Client notification
       href: clients/manage/client-notification.md
-    - name: Sync data to Azure Monitor
-      href: /azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context
     - name: Maintain Mac clients
       href: clients/manage/maintain-mac-clients.md
-    - name: Surface device dashboard
-      href: clients/manage/surface-device-dashboard.md
   - name: Collections
     items:
     - name: Introduction to collections
@@ -771,10 +821,12 @@ items:
       href: clients/manage/collections/create-collections.md
     - name: How to manage collections
       href: clients/manage/collections/manage-collections.md
-    - name: How to use maintenance windows
-      href: clients/manage/collections/use-maintenance-windows.md
+    - name: View collection relationships
+      href: clients/manage/collections/view-relationships.md
     - name: How to view collection evaluation
       href: clients/manage/collections/collection-evaluation-view.md
+    - name: How to use maintenance windows
+      href: clients/manage/collections/use-maintenance-windows.md
     - name: Security and privacy for collections
       href: clients/manage/collections/security-and-privacy-for-collections.md
   - name: Hardware inventory
@@ -819,6 +871,8 @@ items:
       href: clients/manage/asset-intelligence/example-asset-intelligence-general-license-import.md
     - name: Use the Product Lifecycle dashboard
       href: clients/manage/asset-intelligence/product-lifecycle-dashboard.md
+    - name: Asset intelligence deprecation
+      href: clients/manage/asset-intelligence/deprecation.md
   - name: Remote control
     items:
     - name: Introduction to remote control
@@ -875,8 +929,14 @@ items:
       items:
       - name: Plan for CMG
         href: clients/manage/cmg/plan-cloud-management-gateway.md
+      - name: CMG client authentication
+        href: clients/manage/cmg/plan-client-authentication.md
+      - name: CMG hierarchy design
+        href: clients/manage/cmg/plan-hierarchy-design.md
       - name: Supported configurations for CMG
         href: clients/manage/cmg/supported-configurations.md
+      - name: Performance and scale
+        href: clients/manage/cmg/perf-scale.md
       - name: Cost
         href: clients/manage/cmg/cost.md
     - name: Set up
@@ -889,13 +949,13 @@ items:
         href: clients/manage/cmg/configure-azure-ad.md
       - name: 3. Configure client authentication
         href: clients/manage/cmg/configure-authentication.md
-      - name: 4. Set up CMG
+      - name: 4. Set up a CMG
         href: clients/manage/cmg/setup-cloud-management-gateway.md
       - name: 5. Configure clients for CMG
         href: clients/manage/cmg/configure-clients.md
     - name: Manage
       items:
-      - name: Monitor clients on CMG
+      - name: Monitor a CMG
         href: clients/manage/cmg/monitor-clients-cloud-management-gateway.md
       - name: Modify a CMG
         href: clients/manage/cmg/modify-cloud-management-gateway.md

@@ -1,72 +1,89 @@
 ---
-title: Windows Autopilot what's new
-ms.reviewer: 
-manager: laurawi
-description: Read news and resources about the latest updates and past versions of Windows Autopilot.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune, hololens
-ms.technology: windows
+title: What's new in Autopilot
+description: News and resources about the latest updates and past versions of Windows Autopilot.
 ms.prod: w10
-ms.mktglfcycl: deploy
+ms.technology: windows
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
-author: greg-lindsay
-ms.author: greglin
-ms.date: 12/16/2020
-ms.collection: M365-modern-desktop
+author: aczechowski
+ms.author: aaroncz
+manager: dougeby
+ms.reviewer: jubaptis
+ms.date: 05/18/2022
+ms.collection:
+  - M365-modern-desktop
+  - highpri
 ms.topic: article
 ---
 
-
 # Windows Autopilot: What's new
 
-**Applies to**
+_Applies to_
 
-- Windows 10
+- Windows 11
+- Windows 10
 - Windows Holographic, version 2004
 
+## Enroll to co-management from Windows Autopilot
+<!-- 11300628 -->
+
+With the Intune 2205 release, you can configure device enrollment in Intune to enable [co-management](../configmgr/comanage/overview.md), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+
+If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../intune/enrollment/windows-enrollment-status.md), the device will wait for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
+
+For more information, see [How to enroll to co-management with Autopilot](../configmgr/comanage/autopilot-enrollment.md).
+
+## Improvements to the enrollment status page
+
+With the Intune 2202 release, the [enrollment status page](enrollment-status.md) has improved functionality. The application picker for selecting blocking apps has the following improvements:
+
+- Includes a search box for easier selection of apps.
+- Fixes an issue where it couldn't differentiate between store apps in online or offline mode.
+- Adds a new column for **Version** to see which version of the application is selected.
+
+:::image type="content" source="images/app-picker.png" alt-text="The enrollment status page application picker.":::
+
+## Autopilot agility rolling out
+
+Autopilot agility is a new feature that allows updates and bug fixes to the OOBE experience. These updates occur before device enrollment, and after the Azure Active Directory (Azure AD) sign in page. It may result in another reboot and authentication prompt to the user. This feature is rolling out to Windows 10 1909 and 2004/20H2 with August cumulative update and isn't yet available for Windows 11.
+
+## One-time self-deployment and pre-provisioning
+
+We made a change to the Windows Autopilot self-deployment mode and pre-provisioning mode experience, adding in a step to delete the device record as part of the device reuse process. This change impacts all Windows Autopilot deployments where the Autopilot profile is set to self-deployment or pre-provisioning mode. This change only affects a device when it's reused or reset, and it attempts to redeploy.
+
+For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452)
+
+## Update to the Windows Autopilot sign-in experience
+
+Users must enter their credentials at initial sign-in during enrollment. We no longer allow pre-population of the Azure Active Directory (Azure AD) user principal name (UPN).
+
+For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452)
+
+## MFA changes to Windows Autopilot enrollment flow
+
+To improve the baseline security for Azure Active Directory (Azure AD), we changed Azure AD behavior for multi-factor authentication (MFA) during device registration. Previously, if a user completed MFA as part of their device registration, the MFA claim was carried over to the user state after registration was complete.
+
+Now the MFA claim isn't preserved after registration. Users are prompted to redo MFA for any apps that require MFA by policy.
+
+For more information, see [Windows Autopilot MFA changes to enrollment flow](https://techcommunity.microsoft.com/t5/intune-customer-success/windows-autopilot-mfa-changes-to-enrollment-flow/ba-p/2774687).
+
+## Windows Autopilot diagnostics page
+
+When you deploy Windows 11 with Autopilot, you can enable users to view detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics** page is available, which provides a user-friendly view to troubleshoot Windows Autopilot failures.
+
+The following example shows details for **Deployment info**, which includes **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. You can also **Export logs** for detailed [troubleshooting](troubleshoot-oobe.md) analysis.
+
+:::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
+
+To enable the diagnostics page, go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md). Select **Yes** to **Turn on log collection and diagnostics page for end users**.
+
+The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 
 ## Windows Autopilot for HoloLens 2
 
-Windows Autopilot now enables you to configure HoloLens 2 devices! For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+Windows Autopilot now enables you to configure HoloLens 2 devices. For more information, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
-## Feature name change
+## Next steps
 
-September, 2020
+[What's new in Microsoft Intune](../intune/fundamentals/whats-new.md)
 
-The Windows Autopilot white glove feature has been renamed to **Windows Autopilot for pre-provisioned deployment**. All references in our documentation to **white glove** have been replaced with: **pre-provisioning**.  The term **white glove** might still appear in some blogs and other articles about Windows Autopilot. These references correspond to the pre-provisioning process described in [this article](pre-provision.md).
-
-## New in Windows 10, version 2004
-
-With this release, you can configure Windows Autopilot [user-driven](user-driven.md) Hybrid Azure Active Directory join with VPN support. This support is also backported to Windows 10, version 1909 and 1903.
-
-If you configure the language settings in the Autopilot profile and the device is connected to Ethernet, all scenarios will now skip the language, locale, and keyboard pages. In previous versions, this was only supported with self-deploying profiles.
-
-## New in Windows 10, version 1903
-
-[Windows Autopilot pre-provisioning](pre-provision.md) is new in Windows 10, version 1903. See the following video:
-
-<br>
-
-> [!VIDEO https://www.youtube.com/embed/nE5XSOBV0rI]
-
-Also new in this version of Windows:
-- The Intune enrollment status page (ESP) now tracks Intune Management Extensions.
-- [Cortana voiceover and speech recognition during OOBE](windows-autopilot-scenarios.md#cortana-voiceover-and-speech-recognition-during-oobe) is disabled by default for all Windows 10 Pro Education, and Enterprise SKUs.
-- [Windows Autopilot is self-updating during OOBE](windows-autopilot-scenarios.md#windows-autopilot-is-self-updating-during-oobe). Starting with the Windows 10, version 1903 Autopilot functional and critical updates will begin downloading automatically during OOBE.
-- Windows Autopilot will set the diagnostics data level to Full during OOBE on devices running Windows 10 version 1903 or later. 
-
-## New in Windows 10, version 1809
-
-Windows Autopilot [self-deploying mode](self-deploying.md) is a zero touch device provisioning process. Simply power on the device, connect to Ethernet, and Autopilot automatically configures the device. End users don't have to press the "Next” button during the deployment process. 
-
-You can use Windows Autopilot self-deploying mode to register the device to an AAD tenant, enroll in your organization’s MDM provider, and provision policies and applications. No user authentication or user interaction is required.
-
->[!NOTE]
->Window 10, version 1903 or later is required to use self-deploying mode due to issues with TPM device attestation in Windows 10, version 1809.
-
-## Related topics
-
-[What's new in Microsoft Intune](/intune/whats-new)<br>
-[What's new in Windows 10](/windows/whats-new/)
+[What's new in Windows client](/windows/whats-new/)

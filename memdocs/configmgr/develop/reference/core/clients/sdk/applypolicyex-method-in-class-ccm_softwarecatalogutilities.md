@@ -1,6 +1,7 @@
 ---
 title: "ApplyPolicyEx Method"
 titleSuffix: "Configuration Manager"
+description: "The ApplyPolicyEx WMI class method, in Configuration Manager, applies policy."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: ca1d579b-7986-41c5-9227-2430996f0ad5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

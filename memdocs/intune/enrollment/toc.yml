@@ -15,7 +15,7 @@ items:
   items:
   - name: Set up automatic enrollment
     href: quickstart-setup-auto-enrollment.md
-  - name: Enroll your Windows 10 device
+  - name: Enroll your Windows 10/11 device
     href: quickstart-enroll-windows-device.md
 - name: Tutorials
   items:
@@ -26,24 +26,17 @@ items:
     href: tutorial-use-device-enrollment-program-enroll-ios.md
 - name: Concepts
   items:
-  - name: Terms and conditions
-    href: terms-and-conditions-create.md
-  - name: Restrictions
-    href: enrollment-restrictions-set.md
-  - name: Understand Intune and Azure AD device limits
-    href: device-limit-intune-azure.md
-  - name: Apple MDM push certificate
-    href: apple-mdm-push-certificate-get.md
   - name: Corporate identifiers
     href: corporate-identifiers-add.md
-    displayName: COD
-  - name: Multi-factor authentication
-    href: multi-factor-authentication.md
-    displayName: mfa; multifactor        
-  - name: Device enrollment manager
-    href: device-enrollment-manager-enroll.md
-  - name: Map devices to groups
-    href: device-group-mapping.md    
+    displayName: COD   
+  - name: Incomplete user enrollment report
+    href: enrollment-report-company-portal-abandon.md
+  - name: Restrictions
+    href: enrollment-restrictions-set.md  
+  - name: Terms and conditions
+    href: terms-and-conditions-create.md
+  - name: Intune and Azure AD device limits  
+    href: device-limit-intune-azure.md    
 - name: How-to guides
   items:
   - name: Set up Windows enrollment
@@ -79,10 +72,14 @@ items:
       href: android-dedicated-devices-fully-managed-enroll.md
     - name: Android device administrator enrollment
       href: android-enroll-device-administrator.md
+    - name: Enroll Android (AOSP) corporate-owned userless devices
+      href: android-aosp-corporate-owned-userless-enroll.md    
+    - name: Enroll Android (AOSP) corporate-owned user-associated devices
+      href: android-aosp-corporate-owned-user-associated-enroll.md  
     - name: Manage Android Enterprise work profile devices
       href: android-enterprise-overview.md 
     - name: Enroll Android Enterprise corporate-owned work profile devices
-      href: android-corporate-owned-work-profile-enroll.md       
+      href: android-corporate-owned-work-profile-enroll.md     
     - name: Move device administrator devices to personally-owned work profile management
       href: android-move-device-admin-work-profile.md        
     - name: Samsung Knox Mobile Enrollment 
@@ -148,8 +145,15 @@ items:
       href: device-enrollment-program-enroll-macos.md
     - name: Direct Enrollment for macOS devices
       href: device-enrollment-direct-enroll-macos.md      
-  - name: Incomplete enrollment report
-    href: enrollment-report-company-portal-abandon.md
+  - name: Add device enrollment manager  
+    href: device-enrollment-manager-enroll.md  
+  - name: Configure device categories  
+    href: device-group-mapping.md   
+  - name: Get Apple MDM push certificate  
+    href: apple-mdm-push-certificate-get.md 
+  - name: Require multi-factor authentication  
+    href: multi-factor-authentication.md
+    displayName: mfa; multifactor   
   - name: Troubleshoot enrollment
     items:
     - name: Troubleshoot device enrollment

@@ -1,4 +1,5 @@
 ---
+description: The SMS_TaskSequence_Reference Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents the package ID and optional program name.
 title: "SMS_TaskSequence_Reference Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 7df3c90d-eba4-4ece-a2b8-e12e4781ed8b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

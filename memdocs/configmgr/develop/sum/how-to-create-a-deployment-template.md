@@ -1,6 +1,7 @@
 ---
 title: "Create a Deployment Template"
 titleSuffix: "Configuration Manager"
+description: "Create a software updates deployment template in Configuration Manager by creating an instance of the SMS_Template class and populating the properties."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 552c2251-8c97-4596-bcc0-71558ce8c532
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

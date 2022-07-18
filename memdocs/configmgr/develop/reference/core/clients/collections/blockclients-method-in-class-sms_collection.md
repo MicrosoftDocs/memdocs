@@ -1,4 +1,5 @@
 ---
+description: Learn how to block specified client computers from communicating with the site in Configuration Manager using BlockClients.
 title: "BlockClients Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 72debf3d-bc74-4993-95b0-31cc99843d8e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

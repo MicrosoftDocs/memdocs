@@ -4,16 +4,14 @@
 title: Sign up or sign in to Microsoft Intune
 description: How to sign up for a Microsoft Intune subscription or sign in to start with your subscription.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 02/19/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.localizationpriority: high
-ms.technology:
-ms.assetid: 0f3ce07a-b718-42a9-bace-f99a8b8abd94
 
 # optional metadata
 
@@ -25,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
 
 
@@ -56,7 +56,7 @@ After completing the sign-up process you are directed to the Microsoft 365 admin
 
 ## Sign in to Microsoft Intune
 
-Once you have signed up for Intune, you can use any device with a [supported browser](supported-devices-browsers.md#intune-supported-web-browsers) to sign in to [Intune](https://go.microsoft.com/fwlink/?linkid=2090973) to administer the service.
+Once you have signed up for Intune, you can use any device with a [supported browser](supported-devices-browsers.md#intune-supported-web-browsers) to sign in to [Intune](https://endpoint.microsoft.com) to administer the service.
 
 By default, your account must have one of the following permissions in Azure AD:
 

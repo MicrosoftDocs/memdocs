@@ -1,6 +1,7 @@
 ---
 title: "SetSourceSite Method in SMS_DriverPackage"
 titleSuffix: "Configuration Manager"
+description: "Learn how to set the source site for the driver package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: b81c2f09-9270-4387-a0f7-b3a103ad99bb
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

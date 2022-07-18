@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a computer or domain account used to access files on a Configuration Manager site system.
 title: "SMS_NetworkAccessAccountConfig Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 51f0329c-e8ed-4a24-8439-de6597d5f7da
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

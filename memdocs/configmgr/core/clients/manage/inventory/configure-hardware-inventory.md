@@ -1,17 +1,15 @@
 ---
-title: "Configure hardware inventory"
-titleSuffix: "Configuration Manager"
-description: "Set up hardware inventory for all clients or for a collection in Configuration Manager."
+title: Configure hardware inventory
+titleSuffix: Configuration Manager
+description: Set up hardware inventory for all clients or for a collection in Configuration Manager.
 ms.date: 02/22/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 0e45290e-f8f7-4335-801e-570225d12c2b
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # How to configure hardware inventory in Configuration Manager
 

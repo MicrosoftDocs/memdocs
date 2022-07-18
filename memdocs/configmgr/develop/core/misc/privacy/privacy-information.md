@@ -1,4 +1,5 @@
 ---
+description: Learn how information is handled by Configuration Manager SDK to better understand how to meet your privacy requirements as you build a program or script.
 title: "Privacy Information"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: d6ded6e9-1f9b-459a-8ef3-4b8f828e0232
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

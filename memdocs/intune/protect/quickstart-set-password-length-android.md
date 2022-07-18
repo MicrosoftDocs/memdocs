@@ -1,18 +1,18 @@
 ---
 # required metadata
 
-title: Quickstart - Password compliance policy for Android devices
+title: Quickstart - Password compliance policy for Android Enterprise devices
 titleSuffix: Microsoft Intune
-description: In this quickstart, you will use Microsoft Intune to set the length of the password required for Android devices.
+description: In this quickstart, you will use Microsoft Intune to set the length of the password required for Android Enterprise devices.
 keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/10/2020
+ms.date: 02/11/2022
 ms.topic: quickstart
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 81b4fa08-5333-4c54-9f49-8db5f6984ed2
 
@@ -25,13 +25,15 @@ ms.reviewer:
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
+ms.collection:
+- M365-identity-device-management
+- Android
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
 ---
 
-# Quickstart: Create a password compliance policy for Android devices
+# Quickstart: Create a password compliance policy for Android Enterprise devices
 
-In this quickstart, you'll use Microsoft Intune to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android devices.
+In this quickstart, you'll use Microsoft Intune to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android Enterprise devices.
 
 An Intune device compliance policy specifies the rules and settings that devices must meet to be considered compliant. You can use compliance policies with Conditional Access to allow or block access to company resources. You can also get device reports and take actions for non-compliance.
 
@@ -46,13 +48,13 @@ Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.co
 
 ## Create a device compliance policy
 
-Create a device compliance policy to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android devices.
+Create a device compliance policy to require your workforce's Android users to enter a password of a specific length before access is granted to information on their Android Enterprise devices.
 
 1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Compliance Policies** > **Create Policy**.
 
 2.  For **Platform**, select **Android Enterprise**.
 
-3. For **Policy type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
+3. For **Profile type**, select either **Fully managed, dedicated, and corporate-owned work profile** or **Personally-owned work profile**, and then click **Create**.
 
 4. On **Basics** step, enter **Android compliance** as the *Name*. Adding a *Description* is optional. Click **Next**.
 
@@ -74,7 +76,7 @@ When no longer needed, delete the policy. To do so, select the compliance policy
 
 ## Next steps
 
-In this quickstart, you used Intune to create a compliance policy for your workforce's Android devices to require a password of at least six characters in length. For more information about creating compliance policies, see [Get started with device compliance policies in Intune](device-compliance-get-started.md).
+In this quickstart, you used Intune to create a compliance policy for your workforce's Android Enterprise devices to require a password of at least six characters in length. For more information about creating compliance policies, see [Get started with device compliance policies in Intune](device-compliance-get-started.md).
 
 To follow this series of Intune quickstarts, continue to the next quickstart.
 

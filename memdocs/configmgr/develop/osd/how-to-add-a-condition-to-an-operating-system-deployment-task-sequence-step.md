@@ -1,6 +1,7 @@
 ---
 title: "Add a Condition to an OS Deployment Task Sequence Step"
 titleSuffix: "Configuration Manager"
+description: "How to Add a Condition to an Operating System Deployment Task Sequence Step"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 153b47c9-14fc-4b09-a2d7-99e0de5b6759
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

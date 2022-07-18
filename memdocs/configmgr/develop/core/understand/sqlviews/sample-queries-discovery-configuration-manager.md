@@ -1,4 +1,4 @@
-﻿---
+---
 title: Sample queries for discovery
 titleSuffix: Configuration Manager
 description: Sample queries that show how to join discovery views to each other and views from other view categories.
@@ -12,6 +12,8 @@ ms.assetid: 0a31df14-00b0-4880-b36a-3d60d3108129
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Sample queries for discovery in Configuration Manager
@@ -25,7 +27,7 @@ The following query retrieves all resources and their associated IP addresses. T
 ```sql
     SELECT DISTINCT SYS.Netbios_Name0, SYSIP.IP_Addresses0 
     FROM v_R_System SYS INNER JOIN v_RA_System_IPAddresses SYSIP 
-      ON SYS.ResourceID = SYSIP.ResourceID 
+    ��ON SYS.ResourceID = SYSIP.ResourceID 
     ORDER BY SYS.Netbios_Name0 
 ```
 
@@ -36,7 +38,7 @@ The following query retrieves all resources that have a local fixed disk listed 
 ```sql
     SELECT DISTINCT SYS.Netbios_Name0, LD.FreeSpace0 
     FROM v_R_System SYS INNER JOIN v_GS_LOGICAL_DISK LD 
-      ON SYS.ResourceID = LD.ResourceID 
+    ��ON SYS.ResourceID = LD.ResourceID 
     WHERE LD.Description0 LIKE 'Local fixed disk' 
     ORDER BY LD.FreeSpace0 
 ```
@@ -64,12 +66,12 @@ The following query retrieves all resources that have performed a scan for softw
 
 ```sql
     SELECT DISTINCT v_R_System.Netbios_Name0 AS [Computer Name], 
-      v_UpdateScanStatus.LastScanTime AS [Last Scan], 
-      v_UpdateScanStatus.LastWUAVersion AS [WUA Version], 
-      v_StateNames.StateName AS [Last Scan State] 
+    ��v_UpdateScanStatus.LastScanTime AS [Last Scan], 
+    ��v_UpdateScanStatus.LastWUAVersion AS [WUA Version], 
+    ��v_StateNames.StateName AS [Last Scan State] 
     FROM v_UpdateScanStatus INNER JOIN v_R_System ON 
-      v_UpdateScanStatus.ResourceID = v_R_System.ResourceID LEFT OUTER JOIN 
-      v_StateNames ON v_UpdateScanStatus.LastScanState = v_StateNames.StateID 
+    ��v_UpdateScanStatus.ResourceID = v_R_System.ResourceID LEFT OUTER JOIN 
+    ��v_StateNames ON v_UpdateScanStatus.LastScanState = v_StateNames.StateID 
     WHERE (v_StateNames.TopicType = 501) 
 ```
 

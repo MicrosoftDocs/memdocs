@@ -1,6 +1,7 @@
 ---
 title: "RestartComputer Method"
 titleSuffix: "Configuration Manager"
+description: "Learn about RestartComputer Windows Management Instrumentation class method in Configuration Manager."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 76b52467-5939-44be-b4d9-da88a055ad03
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # RestartComputer Method in Class CCM_ClientUtilities

@@ -1,0 +1,167 @@
+### YamlMime:Hub
+title: Windows 365 Enterprise documentation
+summary: Official product documentation for Windows 365 Enterprise
+
+metadata:
+  services: service
+  ms.service: cloudpc
+  ms.topic: hub-page
+  author: erikjeMS
+  ms.author: erikje
+  manager: dougeby
+  ms.date: 08/02/2021
+
+highlightedContent:
+  items:
+    - title: What is Windows 365 Enterprise?
+      itemType: overview
+      url: overview.md
+    - title: What's new in Windows 365 Enterprise?
+      itemType: overview
+      url: whats-new.md
+    - title: Features in development
+      itemType: overview
+      url: in-development.md
+    - title: Planning your Windows 365 deployment
+      itemType: get-started
+      url: planning-guide.md
+    - title: Requirements
+      itemType: how-to-guide
+      url: requirements.md
+    - title: What is provisioning?
+      itemType: overview
+      url: provisioning.md
+
+conceptualContent:
+  items:
+    - title: Planning
+      links:
+        - url: planning-guide.md
+          itemType: how-to-guide
+          text: Planning guide
+        - url: requirements.md
+          itemType: how-to-guide
+          text: Requirements
+        - url: role-based-access.md
+          itemType: concept
+          text: Role-based access control
+        - url: cloud-pc-size-recommendations.md
+          itemType: concept
+          text: Cloud PC size recommendations
+      footerLink:
+        url: planning-guide.md
+        text: See more
+    - title: Set up Windows 365
+      links:
+        - url: deployment-overview.md
+          itemType: how-to-guide
+          text: Deployment steps
+        - url: assign-licenses.md
+          itemType: how-to-guide
+          text: Assign licenses to users
+        - url: create-azure-network-connection.md
+          itemType: how-to-guide
+          text: Create Azure network connection
+        - url: add-device-images.md
+          itemType: how-to-guide
+          text: Add device images 
+      footerLink:
+        url: deployment-overview.md
+        text: See more
+    - title: Cloud PC provisioning
+      links:
+        - url: create-provisioning-policy.md
+          itemType: how-to-guide
+          text: Create provisioning policy
+        - url: automated-provisioning-steps.md
+          itemType: concept  
+          text: Automated provisioning steps
+      footerLink:
+        url: create-provisioning-policy.md
+        text: See more
+    - title: Windows 365 security
+      links:
+        - url: security-guidelines.md
+          itemType: concept
+          text: Security guidelines
+        - url: deploy-security-baselines.md
+          itemType: how-to-guide
+          text: Deploy security baselines
+        - url: set-conditional-access-policies.md
+          itemType: how-to-guide
+          text: Set conditional access policies
+      footerLink:
+        url: security-guidelines.md
+        text: See more
+    - title: Apps in Windows 365
+      links: 
+      - url: app-overview.md
+        itemType: overview
+        text: Apps overview
+      - url: assign-apps.md
+        itemType: how-to-guide
+        text: Assign apps to Cloud PCs
+      - url: teams-on-cloud-pc.md
+        itemType: overview
+        text: Microsoft Teams on a Cloud PC
+      footerLink:
+        url: app-overview.md
+        text: See more
+    - title: Windows 365 device management
+      links: 
+      - url: device-management-overview.md
+        itemType: overview
+        text: Device management overview
+      - url: remotely-manage-cloud-pc.md
+        itemType: concept
+        text: Remotely manage Windows 365 devices
+      - url: reprovision-cloud-pc.md
+        itemType: how-to-guide
+        text: Reprovision a Cloud PC
+      footerLink:
+        url: device-management-overview.md
+        text: See more
+additionalContent:
+  sections:
+    - title: Additional resources related to Windows 365
+      items:
+      - title: Windows client for IT Pros
+        links:
+          - text: Windows client for IT Pros documentation
+            url: /windows/resources/
+          - text: Deploy and update Windows client
+            url: /windows/deployment/
+          - text: Configure Windows client
+            url: /windows/configuration            
+          - text: Windows blogs
+            url: https://blogs.windows.com/  
+      - title: Microsoft Endpoint Manager
+        links:
+          - text: Microsoft Endpoint Manager documentation
+            url: /mem/index
+          - text: Overview of Microsoft Endpoint Manager
+            url: /mem/endpoint-manager-overview
+          - text: Getting started with Microsoft Endpoint Manager
+            url: /mem/endpoint-manager-getting-started
+          - text: Microsoft Endpoint Manager blog
+            url: https://aka.ms/memblog
+      - title: Microsoft 365
+        links: 
+        - text: Explore Microsoft 365, a complete solution that includes Intune
+          url: /microsoft-365/
+        - text: Microsoft 365 Enterprise documentation
+          url: /microsoft-365/enterprise/
+        - text: Microsoft 365 Enterprise foundation infrastructure
+          url: /microsoft-365/enterprise/deploy-foundation-infrastructure
+        - text: For MSPs, Microsoft 365 Lighthouse Cloud PC management
+          url: /microsoft-365/lighthouse/m365-lighthouse-win365-page-overview
+      - title: Azure Active Directory
+        links: 
+        - text: User management documentation
+          url: /azure/active-directory/fundamentals/active-directory-manage-groups
+        - text: Authentication documentation
+          url: /azure/active-directory/authentication/
+        - text: Device identity documentation
+          url: /azure/active-directory/devices/
+        - text: Hybrid identity documentation
+          url: /azure/active-directory/hybrid/

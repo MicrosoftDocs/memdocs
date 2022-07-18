@@ -1,6 +1,7 @@
 ---
 title: "Read Lazy Properties by Using WMI"
 titleSuffix: "Configuration Manager"
+description: "To read a lazy property from a Configuration Manager object returned in a query, you get the object instance, which in turn retrieves any lazy object properties from the SMS Provider."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 1fa2d52e-b5e6-4362-81cf-e175ff45435a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "Read an Object by Using WMI"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, you read a Configuration Manager object by using the SWbemServices object Get method to return an object instance that is identified by a key value."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 17017166-8b01-4a7d-99df-97be3bdda83f
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

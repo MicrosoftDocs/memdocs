@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create a Windows Health Monitoring profile in Microsoft Intune - Azure | Microsoft Docs
-description: Add a Windows Health Monitoring profile to collect endpoint analytics and software update events on Windows 10 devices in Microsoft Intune. Use these data to recommend software, review startup performance, and fix support issues.
+title: Create a Windows Health Monitoring profile in Microsoft Intune
+description: Add a Windows Health Monitoring profile to collect endpoint analytics and software update events on Windows 10/11 devices in Microsoft Intune. Use these data to recommend software, review startup performance, and fix support issues.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/26/2021
+ms.date: 01/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -37,6 +37,7 @@ Use this profile as part of your mobile device management (MDM) solution to opti
 
 This feature applies to:
 
+- Windows 11 devices enrolled in Intune
 - Windows 10 version 1903 and newer devices enrolled in Intune
 
 This article shows you how to create the profile, and enable the monitoring.
@@ -81,19 +82,15 @@ This article shows you how to create the profile, and enable the monitoring.
 
 8. Select **Next**.
 
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
-10. In **Assignments**, select the users or user group that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](device-profile-create.md#applicability-rules).
 
     Select **Next**.
 
-11. In **Applicability Rules**, use the **Rule**, **Property**, and **Value** options to define how this profile applies within assigned groups. Intune applies the profile to devices that meet the rules you enter. For more information about applicability rules, see [Applicability rules](device-profile-create.md#applicability-rules).
-
-    Select **Next**.
-
-12. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+11. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 The next time each device checks in, the policy is applied.
 

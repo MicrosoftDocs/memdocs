@@ -1,4 +1,5 @@
 ---
+description: The SMS_ClientAdvertisementStatus WMI class is an SMS Provider server class, in Configuration Manager, that records the last status message for every client and advertisement.
 title: "SMS_ClientAdvertisementStatus Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 7cf70230-481e-4ab5-9f5b-30975b58b761
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

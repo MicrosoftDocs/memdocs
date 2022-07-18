@@ -1,6 +1,7 @@
 ---
 title: "Create Form XML for a Dialog Box"
 titleSuffix: "Configuration Manager"
+description: "To create the form XML for a Configuration Manager dialog box, you create an XML file that describes an SmsFormData."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 811546e7-ae62-4b2a-af78-29293d81f182
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

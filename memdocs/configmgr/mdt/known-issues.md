@@ -1,19 +1,48 @@
 ---
 title: MDT known issues
 description: Current limitations with the Microsoft Deployment Toolkit (MDT).
-ms.date: 12/23/2020
+ms.date: 03/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-ms.assetid: 686f04cd-26f7-4361-a0a3-ddfd8fc4e9a3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # Microsoft Deployment Toolkit known issues
 
 This article provides details of any current known issues and limitations with the Microsoft Deployment Toolkit (MDT). It assumes familiarity with MDT version concepts, features, and capabilities.
+
+## Windows Deployment Services (WDS) multicast stops working after upgrading to ADK for Windows 11
+
+<!-- 12891430 --> 
+
+After you updated your MDT boot image to [ADK for Windows 11](/windows-hardware/get-started/adk-install) you might see popups in Windows PE (WinPE) multicast enabled environments prompting wdscommonlib.dll and imagelib.dll are missing in WinPE.
+
+The right way to add WDS multicast to WinPE is to install WinPE-WDS-Tools OC ([WinPE optional components](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference?view=windows-11#winpe-optional-components--)) into WinPE.
+
+Follow this example to install WinPE-WDS-Tools OC in WinPE (assuming the mount folder E:\mnt exists).
+
+ ```cmd
+Dism /mount-wim /WimFile:"E:\DeploymentShare\Boot\LiteTouchPE_multicast_x64.wim" /Index:1 /MountDir:E:\mnt
+Dism /Image:"E:\mnt" /Add-Package /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\WinPE-WDS-Tools.cab"
+Dism /Image:"E:\mnt" /Add-Package /PackagePath:"C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Windows Preinstallation Environment\amd64\WinPE_OCs\en-us\WinPE-WDS-Tools_en-us.cab"
+Dism /Unmount-Wim /MountDir:E:\mnt /Commit
+ ```
+
+Add or replace the multicast enabled boot image in WDS snap-in for Microsoft Management Console (MMC).
+
+
+## ZTI extensions with version 2013 or 2107
+
+<!-- 10695200 -->
+
+If you install a new Configuration Manager site with version 2103 or 2107, when you run the MDT **Configure ConfigMgr Integration Wizard**, the MDT extensions aren't added to the site.
+
+To work around this issue, disable the hierarchy setting for approved console extensions. For more information, see [Enable or disable hierarchy approved console extensions](../core/servers/manage/admin-console-extensions.md#enable-hierarchy-approved-console-extensions).
 
 ## Windows 10, version 2004
 

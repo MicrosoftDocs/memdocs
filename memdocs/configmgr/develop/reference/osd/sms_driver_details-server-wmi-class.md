@@ -1,4 +1,5 @@
 ---
+description: Learn how to describe the list of drivers that have been added to the boot image with SMS_Driver_Details embedded class.
 title: "SMS_Driver_Details Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 269d8be5-2786-43e2-9313-555dadcab576
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

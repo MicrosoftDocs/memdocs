@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_SummarizerSiteStatus class to represent summarizer for the overall health of each site.
 title: "SMS_SummarizerSiteStatus Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 7254b814-8959-4c26-96ab-05e175a534e0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

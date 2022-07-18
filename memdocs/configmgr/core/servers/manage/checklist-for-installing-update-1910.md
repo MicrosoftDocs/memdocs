@@ -6,12 +6,11 @@ ms.date: 12/20/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 9afb4452-9e58-40eb-bfd8-cbf9042a2790
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Checklist for installing update 1910 for Configuration Manager
@@ -126,7 +125,7 @@ For more information, see [Site and site system prerequisites](../../plan-desig
 
 ### Review the version of the Windows ADK for Windows 10
 
-The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 1910. For more information on supported Windows ADK versions, see [Windows 10 ADK](../../plan-design/configs/support-for-windows-10.md#windows-10-adk). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
+The version of the Windows 10 Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 1910. For more information on supported Windows ADK versions, see [Windows 10 ADK](../../plan-design/configs/support-for-windows-adk.md). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
@@ -235,14 +234,14 @@ When the console lists the update as **Available**, you can run the prerequisite
 
 To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 1910** update package, and select **Run prerequisite check** in the ribbon.
 
-For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](install-in-console-updates.md#bkmk_beforeinstall).
+For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](prepare-in-console-updates.md#before-you-install-an-in-console-update).
 
 > [!IMPORTANT]  
 > When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 ### Update sites
 
-You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](install-in-console-updates.md#bkmk_install).
+You're now ready to start the update installation for your hierarchy. For more information about installing the update, see [Install in-console updates](install-in-console-updates.md).
 
 You may plan to install the update outside of normal business hours. Determine when the process will have the least effect on your business operations. Installing the update and its actions reinstall site components and site system roles.
 

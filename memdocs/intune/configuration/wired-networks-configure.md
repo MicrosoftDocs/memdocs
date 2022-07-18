@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Configure 802.1x wired network settings for macOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Configure 802.1x wired network settings for macOS and Windows devices in Microsoft Intune
 titleSuffix:
-description: Create or add a wired network device configuration profile for macOS desktop computer devices. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
+description: Create or add a wired network device configuration profile or policy using the IEEE 802.1X standard for macOS, Windows 10, and Windows 11 devices and computers. See the different settings, add certificates, choose an EAP type, and select an authentication method in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 04/18/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -20,7 +20,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 #ms.devlang:
-ms.reviewer: tycast
+ms.reviewer: tycast, ochukwunyere
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -28,17 +28,21 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Add and use wired networks settings on your macOS devices in Microsoft Intune
+# Add and use wired networks settings on your macOS and Windows devices in Microsoft Intune
 
-Wired networks are used by many organizations to give network access to desktop computers. Microsoft Intune includes built-in settings that can be deployed to macOS users and devices in your organization. This group of settings is called a "profile". In your profile, you can include common settings, such as the network interface, accepted EAP types, and server trust settings.
+Microsoft Intune includes built-in settings to configure wired networks for your macOS and Windows devices. You can configure the network interface, accepted EAP types, server trust settings, and more.
 
-When the profile is ready, it can be assigned to different users and groups. Once assigned, your users get access your organization's wired network without configuring it themselves.
+Wired networks are used by many organizations to give network access to desktop computers and devices that must use a network cable.
 
-As part of your mobile device management (MDM) solution, use this feature to create 802.1x profiles to manage wired networks. Then, deploy these wired networks to your macOS devices.
+These built-in settings can be deployed to devices in your organization using policy. When the policy is ready, it can be assigned to different users and groups. Once assigned, your users get access to your organization's wired network without configuring it themselves.
+
+As part of your mobile device management (MDM) solution, use this feature to create 802.1x profiles to manage wired networks. Then, deploy these wired networks to your devices.
 
 This feature applies to:
 
 - macOS
+- Windows 11
+- Windows 10
 
 For example, you have a wired network named **Contoso wired network**. You want to set up all macOS desktops to connect to this network. Here's the process:
 
@@ -54,19 +58,20 @@ This article lists the steps to create a wired network profile. It also includes
 2. Select **Devices** > **Configuration profiles** > **Create profile**.
 3. Enter the following properties:
 
-    - **Platform**: Select **macOS**.
-    - **Profile**: Select **Templates** > **Wired Network**.
+    - **Platform**: Select **macOS** or **Windows 10 and later**.
+    - **Profile**: Select **Templates** > **Wired network**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **macOS: Wired network for entire company**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **macOS: wired network policy**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
-7. In **Configuration settings**, select the network interface of the network, and choose the Extensible Authentication Protocol (EAP) type. For a list of all settings, and what they do, see:
+7. In **Configuration settings**, configure the settings, including the Extensible Authentication Protocol (EAP) type. For a list of all settings, and what they do, see:
 
     - [macOS](wired-network-settings-macos.md)
+    - [Windows](wired-network-settings-windows.md)
 
 8. Select **Next**.
 9. In **Assignments**, select the user groups or device groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).

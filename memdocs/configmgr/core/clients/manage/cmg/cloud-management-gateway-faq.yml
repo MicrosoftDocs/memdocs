@@ -2,21 +2,21 @@
 metadata:
   title: CMG FAQ
   titleSuffix: Configuration Manager
-  description: Use this article to answer frequently asked questions regarding the cloud management gateway
+  description: Use this article to answer frequently asked questions about the cloud management gateway (CMG).
   author: aczechowski
   ms.author: aaroncz
   manager: dougeby
-  ms.date: 04/16/2021
-  ms.topic: reference
+  ms.date: 04/08/2022
+  ms.topic: faq
   ms.prod: configuration-manager
   ms.technology: configmgr-client
-  ms.assetid: 4c1a128d-22fb-49f1-8e0b-36513a8dc117
-    
-title: Frequently asked questions about the cloud management gateway
+  ms.collection: highpri
+
+title: Frequently asked questions about the CMG
 summary: |
   *Applies to: Configuration Manager (current branch)*
   
-  This article answers your frequently asked questions about the cloud management gateway (CMG). For more information, see [Overview of cloud management gateway](overview.md).
+  This article answers your frequently asked questions about the cloud management gateway (CMG). For more information, see [Overview of CMG](overview.md).
   
 
 sections:
@@ -29,23 +29,25 @@ sections:
           
           - **Server authentication certificate**: The CMG creates an HTTPS service to which internet-based clients connect. The service requires a server authentication certificate to build the secure channel. You can acquire a certificate for this purpose from a public provider, or issue it from your public key infrastructure (PKI). For more information, see [CMG server authentication certificate](server-auth-cert.md).
           
-          - **Client authentication certificate**: Depending upon your environment and CMG design, you can use PKI certificates for client authentication. This authentication method doesn't support user-centric scenarios, but supports devices running Windows 8.1 or Windows 10. For more information, see [Configure client authentication for CMG: PKI certificate](configure-authentication.md#pki-certificate).
+          - **Client authentication certificate**: Depending upon your environment and CMG design, you can use PKI certificates for client authentication. This authentication method doesn't support user-centric scenarios, but supports devices running any supported version of Windows. For more information, see [Configure client authentication for CMG: PKI certificate](configure-authentication.md#pki-certificate).
           
               When you use this client authentication method, you also need to export the client certificate's trusted root chain. You then use this chain of certificates when you create the CMG and on the CMG connection point.
           
-          - **HTTPS-enabled the management point**: Depending upon how you configure the site, and which client authentication method you choose, you may need to configure your internet-enabled management points to support HTTPS. For more information, see [Configure client authentication for CMG: Enable management point for HTTPS](configure-authentication.md#bkmk_mphttps).
+          - **HTTPS-enabled the management point**: Depending upon how you configure the site, and which client authentication method you choose, you may need to configure your internet-enabled management points to support HTTPS. For more information, see [Configure client authentication for CMG: Enable management point for HTTPS](configure-authentication.md#enable-management-point-for-https).
           
       - question: |
           Do I need Azure ExpressRoute?
         answer: |
-          No. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) lets you extend your on-premises network into the Microsoft cloud. ExpressRoute, or other such virtual network connections aren't required for the Configuration Manager cloud management gateway. The design of the cloud management gateway allows internet-based clients to communicate through the Azure service to on-premises site systems with no additional network configuration. For more information, see [Overview of cloud management gateway](overview.md)
+          No. [Azure ExpressRoute](/azure/expressroute/expressroute-introduction) lets you extend your on-premises network into the Microsoft cloud. ExpressRoute, or other such virtual network connections aren't required for the CMG. The design of the CMG allows internet-based clients to communicate through the Azure service to on-premises site systems with no additional network configuration. For more information, see [Overview of CMG](overview.md).
           
           <!-- SCCMDocs#1659 -->
           
       - question: |
-          Do I need to maintain the Azure virtual machines?
+          Do I need to maintain or secure the Azure virtual machines?
         answer: |
-          No maintenance is required. The design of the cloud management gateway uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure secures and updates the virtual machine. These VMs aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The cloud management gateway is a PaaS that extends your Configuration Manager environment into the cloud. For more information, see [Securing PaaS deployments](/azure/security/security-paas-deployments).
+          No. The design of the CMG uses Azure platform as a service (PaaS). Using the subscription you provide, Configuration Manager creates the necessary virtual machines (VMs), storage, and networking. Azure secures and updates the VMs. You don't need to monitor these VMs. The Azure VMs for CMG aren't a part of your on-premises environment, as is the case with infrastructure as a service (IaaS). The CMG is a PaaS that extends your Configuration Manager environment into the cloud. For more information, see [Securing PaaS deployments](/azure/security/fundamentals/paas-deployments).
+
+          Since the CMG acts as a proxy for client communication, it doesn't process, keep, or store any client data. The communication path over the internet always uses HTTPS. For greater security, configure the management point for HTTPS. Also configure the site option for clients to encrypt inventory and status messages. For more information, see [Plan for security: Signing and encryption](../../../plan-design/security/plan-for-security.md#signing-and-encryption).
           
       - question: |
           How can I ensure service continuity during service updates?
@@ -55,7 +57,7 @@ sections:
       - question: |
           I'm already using IBCM. If I add CMG, how do clients behave?
         answer: |
-          If you already deployed [internet-based client management](../plan-internet-based-client-management.md) (IBCM), you can also deploy the cloud management gateway. Clients receive policy for both services. As they roam onto the internet, they randomly select and use one of these internet-based services.
+          If you already deployed [internet-based client management](../plan-internet-based-client-management.md) (IBCM), you can also deploy the CMG. Clients receive policy for both services. As they roam onto the internet, they randomly select and use one of these internet-based services.
           
       - question: |
           Do the user accounts have to be in the same Azure AD tenant as the tenant associated with the subscription that hosts the CMG cloud service?
@@ -65,14 +67,17 @@ sections:
           
           To clarify terms:
           
-          - The _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
-          - A _subscription_ separates billing, resources, and services. It's associated with a single tenant.
+          - The Azure AD _tenant_ is the directory of user accounts and app registrations. One tenant can have multiple subscriptions.
+          - An Azure _subscription_ separates billing, resources, and services. It's associated with a single tenant.
           
+          > [!TIP]
+          > For more information, see [Subscriptions, licenses, accounts, and tenants for Microsoft's cloud offerings](/microsoft-365/enterprise/subscriptions-licenses-accounts-and-tenants-for-microsoft-cloud-offerings).
+
           This question is common in the following scenarios:  
           
           - When you have distinct test and production Active Directory and Azure AD environments, but one single, centralized Azure hosting subscription.
           
-          - Your use of Azure has grown organically across different teams
+          - Your use of Azure has grown organically across different teams.
           
           When you're using a Resource Manager deployment, onboard the Azure AD tenant associated with the subscription. This connection allows Configuration Manager to authenticate to Azure to create, deploy, and manage the CMG.  
           
@@ -94,13 +99,13 @@ sections:
           Roaming clients that connect to your environment via a VPN are commonly detected as intranet-facing. They attempt to connect to your on-premises infrastructure such as management points and distribution points. Some customers prefer to have these roaming clients managed by cloud services even when connected via VPN.
           
           You can also associate the CMG with a boundary group. This action forces these clients to not use the on-premises site systems. For more information, see [Configure boundary groups](setup-cloud-management-gateway.md#configure-boundary-groups).
-          
+
       - question: |
-          If I enable a CMG, will my clients only connect to the CMG-enabled management point when they're connected to the intranet?
+          How does the configuration of the management point affect internal clients?
         answer: |
-          In order to secure sensitive traffic sent over a CMG, either configure an HTTPS management point or use Enhanced HTTP.
+          To secure sensitive traffic sent over a CMG, you need to configure at least one management point to use HTTPS or configure the site for Enhanced HTTP.
           
-          If you choose to deploy a CMG, and use PKI certificates for HTTPS communication on the CMG-enabled management point, select the option to **Allow internet-only clients** on the management point properties. This setting makes sure that internal clients continue to use HTTP management points in your environment.
+          Then when you deploy a CMG, if you use PKI certificates for HTTPS communication on the CMG-enabled management point, select the option to **Allow internet-only clients** on the management point properties. This setting makes sure that internal clients continue to use HTTP management points in your environment.
           
           If you use Enhanced HTTP, you don't need to configure this setting. Clients continue to use HTTP when communicating directly to the CMG-enabled management point. For more information, see [Enhanced HTTP](../../../plan-design/hierarchy/enhanced-http.md).
           
@@ -108,13 +113,36 @@ sections:
           What are the differences with client authentication between Azure AD and certificates?
         answer: |
           <!-- MEMDocs#277 -->
-          You can use Azure AD or a client authentication certificate for devices to authenticate to the CMG service. Starting in version 2002, you can also use Configuration Manager site-issued tokens for authentication.
+          You can use Azure AD or a client authentication certificate for devices to authenticate to the CMG service. You can also use Configuration Manager site-issued tokens for authentication.
           
-          If you manage traditional Windows clients with Active Directory domain-joined identity, they need PKI certificates to secure the communication channel. These clients can include Windows 8.1 and Windows 10. You can use all CMG-supported features, but software distribution is limited to devices only. Install the Configuration Manager client before the device roams onto the internet, or with version 2002 or later, use token authentication.
+          If you manage traditional Windows clients with Active Directory domain-joined identity, they need PKI certificates to secure the communication channel. These clients can include any supported version of Windows. You can use all CMG-supported features, but software distribution is limited to devices only. Install the Configuration Manager client before the device roams onto the internet, or use token authentication.
           
-          You can also manage Windows 10 clients with modern identity, either hybrid or pure cloud domain-joined with Azure AD. Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. You can do all of the same management activities plus software distribution to the user. It also enables additional methods to install the client on a remote device.
+          You can also manage Windows 10 or later clients with modern identity, either hybrid or pure cloud domain-joined with Azure AD. Clients use Azure AD to authenticate rather than PKI certificates. Using Azure AD is simpler to set up, configure and maintain than more complex PKI systems. You can do all of the same management activities plus software distribution to the user. It also enables additional methods to install the client on a remote device.
           
           Microsoft recommends joining devices to Azure AD. Internet-based devices can use Azure AD to authenticate with Configuration Manager. It also enables both device and user scenarios whether the device is on the internet or connected to the internal network.
           
           For more information, see [Configure client authentication](configure-authentication.md).
-          
+
+      - question: |
+          Should I use a virtual machine scale set deployment?
+        answer: |
+          Yes, if your site is version 2107 or later. It's no longer a pre-release feature, and recommended for all customers. If you have an existing classic CMG deployment, you can [convert it to a virtual machine scale set](modify-cloud-management-gateway.md#convert).
+
+          If your site is version 2010 or 2103, the virtual machine scale set deployment method is a pre-release feature. It's only intended for customers with a Cloud Solution Provider (CSP) subscription.
+
+          > [!IMPORTANT]
+          > Starting in version 2203, the option to deploy a CMG as a **cloud service (classic)** is removed.<!-- 13235079 --> All CMG deployments should use a [virtual machine scale set](plan-cloud-management-gateway.md#virtual-machine-scale-sets).<!--10966586--> For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
+
+          For more information about deploying a CMG as a virtual machine scale set, see [Plan for CMG](plan-cloud-management-gateway.md#virtual-machine-scale-sets).
+
+      - question: |
+          Does a content-enabled CMG use Azure CDN?
+        answer: |
+          No. It doesn't currently support the Azure content delivery network (CDN). The CDN is a global solution for rapidly delivering high-bandwidth content by caching the content at strategically placed physical nodes across the world. For more information, see [What is Azure CDN?](/azure/cdn/cdn-overview).
+
+      - question: |
+          Do I need to do anything with the deprecation of the Azure AD Graph API and Azure AD Authentication Library (ADAL)?
+        answer: |
+          No. You may have seen the following blog post and are wondering how it applies to Configuration Manager: [Update your applications to use Microsoft Authentication Library and Microsoft Graph API](https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363). This post is referring to any developed code that uses these authentication libraries. Configuration Manager has been using the Microsoft Graph API and Microsoft Authentication Library (MSAL) in some places for several years. All other components are updated in Configuration Manager version 2107 with the [update rollup](../../../../hotfix/2107/11121541.md). If you stay current with Configuration Manager versions, there's nothing else you need to do.
+
+          Some people confuse the information in this blog post with the application registrations in Azure AD that Configuration Manager uses for various cloud-attached services. These app registrations are cloud-based service principals that don't directly use these authentication libraries. If an Azure global administrator manually created the Configuration Manager app registrations in Azure AD, they can double-check that those registrations have permissions for the **Microsoft Graph** API. They don't need permissions for the _Azure AD Graph_ API. For more information, see [Manually register Azure AD apps](manually-register-azure-ad-apps.md).<!--10488538-->

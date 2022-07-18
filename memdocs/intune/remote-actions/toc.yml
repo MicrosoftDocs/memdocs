@@ -30,6 +30,8 @@ items:
       href: device-lost-mode.md
     - name: Turn on iOS/iPadOS supervised mode
       href: device-supervised-mode.md
+    - name: Shutdown macOS and iOS/iPadOS devices
+      href: device-shutdown.md
     - name: Erase macOS device
       href: device-erase.md
     - name: Disable Activation Lock
@@ -52,8 +54,8 @@ items:
       href: device-rename.md
     - name: Send notifications
       href: custom-notifications.md
-    - name: Remotely assist mobile devices
-      href: remote-assist-mobile-devices.md
+    - name: Use remote help
+      href: remote-help.md
     - name: Use TeamViewer for remote administration
       href: teamviewer-support.md
     - name: Synchronize device

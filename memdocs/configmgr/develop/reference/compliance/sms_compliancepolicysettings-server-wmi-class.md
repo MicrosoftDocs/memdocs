@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent compliance policy settings using SMS_CompliancePolicySettings class in Configuration Manager.
 title: "SMS_CompliancePolicySettings Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 2ad890c4-6c22-4c65-a0fc-b4906a4e92d0
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

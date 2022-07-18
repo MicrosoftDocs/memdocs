@@ -21,7 +21,7 @@ ms.assetid: cde4d389-1770-4226-85a3-a2f3b3fb92a3
 #ROBOTS:
 #audience:
 #ms.devlang:
-#ms.reviewer: aanavath
+ms.reviewer: aanavath
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -40,9 +40,9 @@ You can configure Conditional Access policies based on Pradeo risk assessment en
 
 ## Supported platforms
 
-- **Android 4.0.3 and later**
+- **Android 5.1 and later**
 
-- **iOS 7 and later**
+- **iOS 12.1 and later**
 
 ## Prerequisites
 

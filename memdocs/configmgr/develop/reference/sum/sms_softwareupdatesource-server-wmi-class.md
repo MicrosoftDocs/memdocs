@@ -1,6 +1,7 @@
 ---
 title: "SMS_SoftwareUpdateSource Class"
 titleSuffix: "Configuration Manager"
+description: "Lists all software update sources available on the site, for use in synchronizing metadata during a deployment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 7f08b462-c04a-4fdd-bf3b-89461f7f32ac
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

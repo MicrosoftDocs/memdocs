@@ -3,12 +3,12 @@
 
 title: Enroll macOS devices - Apple Business Manager or Apple School Manager
 titleSuffix: 
-description: Learn how to enroll corporate-owned macOS devices.
+description: Learn how to enroll macOS devices purchased through Apple Business Manager and Apple School Manager.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
-ms.date: 12/06/2018
+ms.date: 07/11/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer: tisilver
+ms.reviewer: benflamm
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -72,30 +72,42 @@ You use the Apple portal to create a token. You also use the Apple portal to ass
 
    ![Screenshot of Enrollment Program Token pane in Apple Certificates workspace to download public key.](./media/device-enrollment-program-enroll-ios/add-enrollment-program-token-pane.png)
 
-3. Choose **Download your public key** to download and save the encryption key (.pem) file locally. The .pem file is used to request a trust-relationship certificate from the Apple portal.
+3. Choose **Download your public key** to download and save the encryption key (.pem) file locally. The PEM file is used to request a trust-relationship certificate from the Apple portal.
 
-### Step 2. Use your key to download a token from Apple
+### Step 2. Use your key to download a token from Apple  
 
-1. Choose **Create a token for via Apple Business Manager** or **Create a token via Apple School Manager** to open the appropriate Apple portal, and sign in with your company Apple ID. You can use this Apple ID to renew your token.
-2. For DEP, in the Apple portal, choose **Get Started** for **Device Enrollment Program** > **Manage Servers** > **Add MDM Server**.
-3. For Apple School Manage, in the Apple portal, choose **MDM Servers** > **Add MDM Server**.
-4. Enter the **MDM Server Name**, and then choose **Next**. The server name is for your reference to identify the mobile device management (MDM) server. It is not the name or URL of the Microsoft Intune server.
+1. Choose **Create a token via Apple Business Manager** or **Create a token via Apple School Manager** to open the Apple portal used by your organization. 
+2. Sign in to the portal with your company Apple ID. You can use this Apple ID to renew your token.
+3. Select your account name to open the portal menu, and then choose **Preferences**. 
+4. Go to your MDM server assignments.
+5. Select the option to add an MDM server.  
+6. Enter the **MDM Service Name**. The purpose of the server name is to help identify your mobile device management (MDM) server in the portal. It doesn't have to be the actual name or URL of the Microsoft Intune server. 
+7. Upload your public key file and then save your changes. Then you can download the server token.  
 
-5. The **Add &lt;ServerName&gt;** dialog box opens, stating **Upload Your Public Key**. Select **Choose File…** to upload the .pem file, and then choose **Next**.
+### Best practices  
 
-6. Go to  **Deployment Programs** &gt; **Device Enrollment Program** &gt; **Manage Devices**.
-7. Under **Choose Devices By**, specify how devices are identified:
-    - **Serial Number**
-    - **Order Number**
-    - **Upload CSV File**.
+While you're in the Apple portal, you can also apply device filters and assign devices to the MDM server.   
 
-   ![Screenshot of specifying choose devices by serial number, setting choose action as Assign to server and selecting the server name.](./media/device-enrollment-program-enroll-macos/enrollment-program-token-specify-serial.png)
+   * Apply filters: To filter devices before assigning them to your MDM server, go to **Devices** > **Filter**. You can filter devices by:  
 
-8. For **Choose Action**, choose **Assign to Server**, choose the &lt;ServerName&gt; specified for Microsoft Intune, and then choose **OK**. The Apple portal assigns the specified devices to the Intune server for management and then displays **Assignment Complete**.
+        * Device management    
+        * Source  
+        * Order number 
+        * Device type  
+        * Storage size  
+
+   * Bulk assign devices: You can assign all eligible devices to your new MDM servers at the same time.     
+        1. Go to **Devices** > **All Devices** or select the devices you want to assign. 
+        2. Select **Edit MDM Server**.  
+        3. Select the MDM server you want to use. 
+        4. Select **Continue**. 
+        5. When prompted to, confirm your changes. A notification appears to confirm that the devices have been assigned to the new MDM server.  
+
+The Apple portal keeps track of your activity and changes. Select **Activity** to view assignment results and download logs.   
 
 ### Step 3. Save the Apple ID used to create this token
 
-In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), provide the Apple ID for future reference.
+Return to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and enter your Apple ID so that you have record of it for future reference. 
 
 ![Screenshot of specifying the Apple ID used to create the enrollment program token and browsing to the enrollment program token.](./media/device-enrollment-program-enroll-ios/image03.png)
 
@@ -128,7 +140,7 @@ Now that you've installed your token, you can create an enrollment profile for d
 7. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method to use when authenticating users. For **Authentication method**, select one of the following options:
 
     - **Setup Assistant (legacy)**: Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This installs standard preconfigured settings when the device enrolls with Intune management. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true).
-    - **Setup Assistant with modern authentication**: This option is in [Public Preview](../fundamentals/public-preview.md). Devices running macOS 10.15 and later can use this method (older macOS devices in this profile will fall back to using the **Setup Assistant (legacy)** process).
+    - **Setup Assistant with modern authentication**: Devices running macOS 10.15 and later can use this method (older macOS devices in this profile will fall back to using the **Setup Assistant (legacy)** process).
 
         If a conditional access policy that requires [multi-factor authentication (MFA) applies](multi-factor-authentication.md) at enrollment or at enrollment and during Company Portal sign in, then MFA is required. However, MFA is optional based on the Azure AD settings in the targeted Conditional Access policy.
 
@@ -163,19 +175,20 @@ Now that you've installed your token, you can create an enrollment profile for d
     | **Restore** | Display the Apps & Data screen. This screen gives the user the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
     | **Apple ID** | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
     | **Terms and Conditions** | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-    | **Touch ID** | Give the user the option to set up fingerprint identification for the device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. |
+    | **Touch ID and Face ID** | Give the user the option to set up fingerprint identification for the device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. |
     | **Apple Pay** | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
     | **Siri** | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
-    | **Diagnostic Data** | Display the Diagnostics screen to the user. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-    | **FileVault** | Display the FileVault 2 encryption screen to the user. For macOS 10.10 and later. |
-    | **iCloud diagnostics** | Display the iCloud Analytics screen to the user. For macOS 10.12.4 and later. |
-    | **iCloud Storage** | Display the iCloud Documents and Desktop screen to the user. For macOS 10.13.4 and later. |
+    | **Diagnostics Data** | Display the Diagnostics screen to the user. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |  
     | **Display Tone** | Give the user the option to turn on Display Tone. For macOS 10.13.6 and later, and iOS/iPadOS 9.3.2 and later. |
-    | **Appearance** | Display the Appearance screen to the user. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |
-    | **Registration** | Display the registration screen to the user. For macOS 10.9 and later. |
+    | **FileVault** | Display the FileVault 2 encryption screen to the user. For macOS 10.10 and later. |
+    | **iCloud diagnostics** | Display the iCloud Analytics screen to the user. For macOS 10.12.4 and later. |  
+    | **Registration** | Display the registration screen. For macOS 10.9 and later. |  
+    | **iCloud Storage** | Display the iCloud Documents and Desktop screen to the user. For macOS 10.13.4 and later. |
+    | **Appearance** | Display the Appearance screen to the user. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |    
     | **Screen Time** | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
     | **Privacy** | Display the Privacy screen to the user. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
-    | **Accessibility** | Display the Accessibility screen to the user. If this screen is hidden, the user won't be able to automatically hear voice over. Voice over is only supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Have the serial number appear in Apple School Manager or Apple Business Manager. |
+    | **Accessibility** | Display the Accessibility screen to the user. If this screen is hidden, the user won't be able to use the Voice Over feature. Voice Over is supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Have the serial number appear in Apple School Manager or Apple Business Manager. |  
+    | **Auto unlock with Apple Watch**| Give the user an option to use their Apple Watch to unlock their Mac. For macOS 12.0 and later.  
 
 11. Select **Next** to go to the **Review + create** page.
 

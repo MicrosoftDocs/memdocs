@@ -1,6 +1,7 @@
 ---
 title: "CCM_Policy_Expression Class"
 titleSuffix: "Configuration Manager"
+description: "A client Windows Management Instruementation class that represents a policy expression, which evaluates to either true or false."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 2ad7dbc5-ee6f-40e2-a03f-413a8236153e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

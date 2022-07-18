@@ -1,4 +1,5 @@
 ---
+description: Learn how to create and define the custom deployment type property page XML file for use within Configuration Manager.
 title: "Define the Deployment Type Property Sheet XML File"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: dd5151b2-09f0-4c8d-ad5f-727b8b3d4e56
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

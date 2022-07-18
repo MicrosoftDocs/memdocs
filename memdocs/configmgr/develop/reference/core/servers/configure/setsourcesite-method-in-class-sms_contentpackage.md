@@ -1,4 +1,5 @@
 ---
+description: Learn how to change the source site code using SetSourceSite Windows Management Instrumentation (WMI) class method.
 title: SetSourceSite method in class SMS_ContentPackage
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 6057c670-f3c8-4632-9a06-777f68a41dba
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

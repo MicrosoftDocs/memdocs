@@ -1,6 +1,7 @@
 ---
 title: "Check if a User Has Permissions for a Resource"
 titleSuffix: "Configuration Manager"
+description: "Check whether a user has permission for a resource using the GetCollectionsWithResourcePermissions method in the SMS_RbacSecuredObject class."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 648585e5-c6e8-465b-aefe-d3f9cf7091a9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -2,6 +2,7 @@
 title: "AddSource Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
+description: "In Configuration Manager, the AddSource Windows Management Instrumentation class method adds a source for the relationship between the user and the device."
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
@@ -9,6 +10,8 @@ ms.assetid: ca7131e5-528e-4a93-9cb6-b02229252231
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

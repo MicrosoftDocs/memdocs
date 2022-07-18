@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequence_InstallUpdateAction Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class in configuration Manager. It represents a task sequence that installs software updates on a target computer."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: eff7df77-4356-4357-8a69-149a6d7a55a7
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

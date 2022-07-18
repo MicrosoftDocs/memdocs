@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Certificate connectors for Microsoft Intune - Azure | Microsoft Docs
+title: Certificate connectors for Microsoft Intune
 description: Learn about certificate connectors for Simple Certificate Enrollment Protocol (SCEP) or Public Key Cryptography Standards (PKCS) certificates and certificate profiles with Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/17/2021
+ms.date: 04/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -17,7 +17,9 @@ ms.assetid:
 
 # optional metadata
 
-#ROBOTS:
+ROBOTS: NOINDEX
+
+
 #audience:
 
 ms.reviewer: lacranda
@@ -30,9 +32,14 @@ ms.collection: M365-identity-device-management
 
 # Certificate connectors for Microsoft Intune
 
-To support the use of certificates for authentication and the signing and encryption of email using S/MIME, Intune requires the use of a certificate connector. A certificate connector is software you install on an on-premises server. The connector enables cloud-managed devices to provision certificates from on-premises infrastructure, like an issuing Certificate Authority.
+<!-- The details in this article are for deprecated functionality. These two connectors are no longer supported and this article will be retired at a future date. -->
 
-This article describes the available connectors, their lifecycle, prerequisites for use, and how to keep them up to date.  
+> [!IMPORTANT]
+> Beginning on July 29, 2021, the **Certificate Connector for Microsoft Intune** replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors. Support for the previous connectors that are described in this article, ended on 9/22/2021 with the release of version 6.2109.51.0 of the Certificate Connector for Microsoft.
+>
+> If you need to install a new certificate connector, or reinstall a connector, install the newer Certificate Connector for Microsoft Intune. For more information, see [Certificate Connector for Microsoft Intune](../protect/certificate-connector-overview.md).
+
+To support the use of certificates for authentication and the signing and encryption of email using S/MIME, Intune requires the use of a certificate connector. A certificate connector is software you install on an on-premises server. The connector enables cloud-managed devices to provision certificates from on-premises infrastructure, like an issuing Certificate Authority.
 
 ## Available connectors
 
@@ -40,7 +47,7 @@ There are two certificate connectors for Intune. Each has its own uses and requi
 
 ### PFX Certificate Connector for Microsoft Intune
 
-The **PFX Certificate Connector** supports certificate deployment for PCKS #12 certificate requests and handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.
+The **PFX Certificate Connector** supports certificate deployment for PKCS #12 certificate requests and handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user.
 
 > [!TIP]
 > Prior to the August update for this connector (version 6.2008.60.607), PKCS #12 certificate requests were handled by the *Intune Certificate Connector*. With the August update, the functionality for all PKCS certificate requests was consolidated in the *PFX Certificate Connector*, which supports auto-update of the connector to new versions, and requires use of .NET Framework version 4.7.2.
@@ -136,6 +143,9 @@ If  you use a [third-party Certification Authority](certificate-authority-add-sc
 For guidance on installation of this connector, see [Configure infrastructure to support SCEP with Intune](certificates-scep-configure.md).
 
 ## Connector Lifecycle
+
+> [!IMPORTANT]
+> Beginning on July 29, 2021, the [**Certificate Connector for Microsoft Intune**](../protect/certificate-connector-overview.md) replaces the use of *PFX Certificate Connector for Microsoft Intune* and *Microsoft Intune Connector*. The new connector includes the functionality of both previous connectors.
 
 Periodically, updated versions of certificate connectors are released. Announcements for new connector releases appear in the [What’s New](../fundamentals/whats-new.md) article for Intune and in the [What's new for Connectors](#whats-new-for-connectors) section near the end of this article.
 
@@ -260,6 +270,9 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
 
 Updates for the two certificate connectors are released periodically. When we update a connector, you can read about the changes here.
 
+> [!IMPORTANT]
+> Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. This status does not affect functionality. Starting June 2022, such connectors will not be able to issue certificates. See the note at the to start of this article for details on moving to the new **Certificate Connector for Microsoft**.
+
 ### PFX Certificate Connector release history
 
 The *PFX Certificate Connector for Microsoft Intune* [supports automatic updates](#automatic-update).
@@ -305,7 +318,7 @@ Version **6.2101.13.0**. This new connector version adds [improvements for loggi
 **Version 6.2008.60.607** - Changes in this release:
 
 - Requires .NET Framework version 4.7.2
-- Replaces the use of the *Microsoft Intune Connector* for use with PKCS certificate profiles. The *PFX Certificate Connector* is now the only connector required to use PCKS #12 or Imported PFX certificates.
+- Replaces the use of the *Microsoft Intune Connector* for use with PKCS certificate profiles. The *PFX Certificate Connector* is now the only connector required to use PKCS #12 or Imported PFX certificates.
 - Adds support for using PKCS certificate profiles with all supported platforms except Windows 8.1.
 - Adds support for certificate revocation for Outlook S/MIME.
 
@@ -353,3 +366,4 @@ Create SCEP, PKCS, or PKCS imported certificate profiles for each platform you w
 - [Configure infrastructure to support SCEP certificates with Intune](certificates-scep-configure.md)  
 - [Configure and manage PKCS certificates with Intune](certificates-pfx-configure.md)  
 - [Create a PKCS imported certificate profile](certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+- [Troubleshoot issues for the Microsoft Intune Connector ](/troubleshoot/mem/intune/troubleshoot-certificate-connector-events)

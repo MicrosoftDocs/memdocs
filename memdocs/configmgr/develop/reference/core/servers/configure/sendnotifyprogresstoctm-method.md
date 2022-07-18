@@ -1,6 +1,7 @@
 ---
 title: "SendNotifyProgressToCTM Method"
 titleSuffix: "Configuration Manager"
+description: "The SendNotifyProgressToCTM method notifies Content Transfer Manager of the progress of a job."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 4adf2263-faa3-444b-b331-bb5ca4acfb4d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "GetTsPoliciesSaMedia Method"
 titleSuffix: "Configuration Manager"
+description: "Get all policies associated with the specified task sequence. The user must have rights to create stand-alone media."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: dc495673-5bc2-43d8-b5fc-4dc53424d8ad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

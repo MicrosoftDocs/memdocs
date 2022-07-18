@@ -1,6 +1,7 @@
 ---
 title: "SMS_Driver Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_Driver Windows Management Instrumentation class is an SMS Provider server class that represents device drivers in the driver catalog that can be installed as part of a task sequence in an operating system deployment." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: e42884a1-a4db-432c-ad22-5c2474e8a102
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

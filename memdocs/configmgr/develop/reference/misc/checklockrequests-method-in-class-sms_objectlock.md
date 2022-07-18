@@ -1,5 +1,6 @@
 ---
 title: "CheckLockRequests Method"
+description: The CheckLockRequests Windows Management Instrumentation (WMI) class method, in Configuration Manager, checks multiple lock requests.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: b9c38991-235a-44e2-aaa1-487d9bc5f4e8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

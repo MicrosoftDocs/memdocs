@@ -1,6 +1,7 @@
 ---
 title: "Clear a PXE Advertisement For a Collection"
 titleSuffix: "Configuration Manager"
+description: "To clear a PXE advertisement for a Configuration Manager collection, you call the ClearLastNBSAdvForCollection Method in Class SMS_Collection"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: ed49e823-f076-42b8-957d-2132638aac32
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

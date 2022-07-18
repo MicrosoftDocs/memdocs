@@ -1,6 +1,7 @@
 ---
 title: "Deny Method"
 titleSuffix: "Configuration Manager"
+description: "The Deny Windows Management Instrumentation (WMI) class method, in Configuration Manager, denies user application requests."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: e1204ee0-7193-41ff-9061-4bd8ca07a76b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

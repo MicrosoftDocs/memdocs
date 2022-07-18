@@ -1,17 +1,15 @@
 ---
-title: "Certificate profile prerequisites"
-titleSuffix: "Configuration Manager"
-description: "Learn about certificate profiles in Configuration Manager and their external dependencies and dependencies in the product."
-ms.date: 04/05/2021
+title: Certificate profile prerequisites
+titleSuffix: Configuration Manager
+description: Learn about certificate profiles in Configuration Manager and their external dependencies and dependencies in the product.
+ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-ms.assetid: 0317fd02-3721-4634-b18b-7c976a4e92bf
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
-
+ms.localizationpriority: medium
 ---
 # Prerequisites for certificate profiles in Configuration Manager
 
@@ -21,7 +19,7 @@ manager: dougeby
 Certificate profiles in Configuration Manager have external dependencies and dependencies in the product.  
 
 > [!IMPORTANT]
-> Starting in Configuration Manager version 2103, this company resource access feature is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).<!-- 9315387 --> Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
+> Starting in version 2203, this company resource access feature is no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](resource-access-deprecation-faq.yml).
 
 ## Dependencies External to Configuration Manager  
 

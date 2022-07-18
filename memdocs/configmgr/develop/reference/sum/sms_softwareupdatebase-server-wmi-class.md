@@ -1,6 +1,7 @@
 ---
 title: "SMS_SoftwareUpdateBase Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_SoftwareUpdateBase WMI class exposes software update information available on a site and serves as the core class for software updates."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: f7a0910e-c452-4645-a40c-a5bf780e37f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

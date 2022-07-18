@@ -1,4 +1,5 @@
 ---
+description: Learn how to  represent a deployment of an update group in Configuration Manager using SMS_UpdateGroupAssignment.
 title: "SMS_UpdateGroupAssignment Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: e0f59acd-8dbc-42b4-aaef-8261c4860577
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

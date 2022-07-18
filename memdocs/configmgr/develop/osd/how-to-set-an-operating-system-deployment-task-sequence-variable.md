@@ -1,6 +1,7 @@
 ---
 title: "Set an OS Deployment Task Sequence Variable"
 titleSuffix: "Configuration Manager"
+description: In Configuration Manager, you create an operating system deployment task sequence variable by creating an instance of the SMS_TaskSequence_SetVariableAction class, adding to a task sequence.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 47653e95-da5f-40c8-b4a7-11a90ad71452
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

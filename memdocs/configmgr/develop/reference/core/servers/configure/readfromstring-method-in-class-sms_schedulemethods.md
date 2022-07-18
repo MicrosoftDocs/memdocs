@@ -1,4 +1,5 @@
 ---
+description: Article outlining how to read SMS Schedule Token Server Class objects with ReadFromString class method in Configuration Manager.
 title: "ReadFromString Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: b33c6ead-e705-4fe7-9f83-1b66d905f881
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

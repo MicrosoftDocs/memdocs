@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the SMS_StatInsStr Class to represent a high-performance version of SMS_StatMsgInsStrings Server WMI class.
 title: "SMS_StatInsStr Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: a18643d4-b69c-4a2b-8acf-b897968e19be
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

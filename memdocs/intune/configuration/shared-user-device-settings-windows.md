@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Windows 10 shared device settings - Microsoft Intune - Azure | Microsoft Docs
-description: Add and use Windows 10 to configure devices that are shared, or used by multiple users in Microsoft Intune. See a list of all the settings and what they do on the devices, including Microsoft Surface. Control guest accounts, manage accounts and delete inactive accounts, allow or prevent saving to local storage, set power and sleep options, choose when updates are installed, and use devices in education environments in a device configuration profile.
+title: Windows 10/11 shared device settings - Microsoft Intune
+description: Add and use Windows 10/11 to configure devices that are shared, or used by multiple users in Microsoft Intune. See a list of all the settings and what they do on the devices, including Microsoft Surface. Control guest accounts, manage accounts and delete inactive accounts, allow or prevent saving to local storage, set power and sleep options, choose when updates are installed, and use devices in education environments in a device configuration profile.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/01/2021
-ms.topic: reference
+ms.date: 01/20/2022
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -28,14 +28,14 @@ ms.custom: intune-azure; seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Windows 10 and newer settings to manage shared devices using Intune
+# Windows 10/11 and newer settings to manage shared devices using Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-Windows 10 and newer devices, such as the Microsoft Surface, can be used by many users. Devices that have multiple users are called shared devices, and are a part of mobile device management (MDM) solutions.
+Windows 10/11 client devices, such as the Microsoft Surface, can be used by many users. Devices that have multiple users are called shared devices, and are a part of mobile device management (MDM) solutions.
 
-Using Microsoft Intune, end-users can sign in to these shared devices with a guest account. As they use the device, they only get access to features you allow. As the Intune administrator, you configure access, choose when accounts are deleted, control power management settings, and more for your shared Windows 10 devices.
+Using Microsoft Intune, end-users can sign in to these shared devices with a guest account. As they use the device, they only get access to features you allow. As the Intune administrator, you configure access, choose when accounts are deleted, control power management settings, and more for your shared Windows client devices.
 
 This article describes some of the settings you can configure in a device configuration profile. When the profile is created in Intune, you deploy or assign the profile to device groups in your organization. You can also assign this profile to device groups with mixed device types and Windows OS versions.
 
@@ -43,7 +43,7 @@ For more information on this feature in Intune, see [Control access, accounts, a
 
 ## Before your begin
 
-Create a [Windows 10 shared multi-user device configuration profile](shared-user-device-settings.md).
+Create a [Windows 10/11 shared multi-user device configuration profile](shared-user-device-settings.md).
 
 ## Shared multi-user device settings
 
@@ -102,7 +102,7 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
   For more information on what the education policies do, see [Windows 10 configuration recommendations for education customers](/education/windows/configure-windows-for-education).
 
 > [!TIP]
-> [Set up a shared or guest PC](/windows/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows 10 feature, including concepts and group policies that can be set in shared mode.
+> [Set up a shared or guest PC](/windows/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows client feature, including concepts and group policies that can be set in shared mode.
 
 ## Next steps
 

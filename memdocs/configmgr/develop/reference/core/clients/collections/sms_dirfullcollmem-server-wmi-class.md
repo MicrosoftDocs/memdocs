@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the full collection membership of directly assigned collections with SMS_DirFullCollMem.
 title: "SMS_DirFullCollMem Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 1203863b-8971-4ef9-b3a6-2f394b80b839
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

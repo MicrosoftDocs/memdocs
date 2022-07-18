@@ -1,6 +1,7 @@
 ---
 title: "SMS_InstalledExecutable Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_InstalledExecutable class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that identifies executable files associated with a software installation."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 31fa9595-6ece-4fc0-a6b2-d8eb280f0cc1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create WiFi profile with pre-shared key in Microsoft Intune - Azure | Microsoft Docs
+title: Create WiFi profile with pre-shared key in Microsoft Intune
 description: Use a custom profile to create a Wi-Fi profile with a pre-shared key, and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/29/2021
+ms.date: 08/02/2021
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -42,7 +42,7 @@ This feature applies to:
 
 > [!IMPORTANT]
 >
-> - Using a pre-shared key with Windows 10 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile works as expected.
+> - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this happens, the Wi-Fi profile is properly assigned to the device, and the profile works as expected.
 > - If you export a Wi-Fi profile that includes a pre-shared key, be sure the file is protected. The key is in plain text, so it's your responsibility to protect the key.
 
 ## Before you begin
@@ -78,9 +78,11 @@ This feature applies to:
         - **For Windows**: `./Vendor/MSFT/WiFi/Profile/SSID/WlanXml`
 
         > [!NOTE]
-        > Be sure to include the dot character at the beginning.
+        > 
+        > - Be sure to include the dot character at the beginning.
+        > - If the SSID has a space, then add an escape space `%20`.
 
-        SSID is the SSID for which you're creating the policy. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`.
+        SSID is the SSID for which you're creating the policy. For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`. If the Wi-Fi is named `Contoso WiFi`, enter `./Vendor/MSFT/WiFi/Profile/Contoso%20WiFi/Settings` (with the `%20` escape space).
 
     4. **Data Type**: Select **String**.
 
@@ -112,7 +114,7 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 
 - `<protected>false</protected>` must be set to **false**. When **true**, it could cause the device to expect an encrypted password, and then try to decrypt it; which may result in a failed connection.
 
-- `<hex>53534944</hex>` should be set to the hexadecimal value of `<name><SSID of wifi profile></name>`. Windows 10 devices may return a false `x87D1FDE8 Remediation failed` error, but the device still contains the profile.
+- `<hex>53534944</hex>` should be set to the hexadecimal value of `<name><SSID of wifi profile></name>`. Windows 10/11 devices may return a false `x87D1FDE8 Remediation failed` error, but the device still contains the profile.
 
 - XML has special characters, such as the `&` (ampersand). Using special characters may prevent the XML from working as expected. 
 

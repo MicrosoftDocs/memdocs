@@ -8,11 +8,11 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 02/17/2021
+ms.date: 03/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
-ms.localizationpriority: high
+ms.localizationpriority: medium
 ms.technology:
 ms.assetid: 64e5133d-1e23-4ee6-b556-f5d32c0e95da
 
@@ -40,7 +40,7 @@ Intune provides several ways to monitor the properties of apps that you manage a
 3. In the list of apps, select an app to monitor. You'll then see the app pane, which includes an overview of the device status and the user status.
 
 > [!NOTE]
-> Android Store apps that are deployed as **Available** do not report their installation status.
+> Microsoft Store and Android Store apps that are deployed as **Available** do not report their installation status.
 >
 > For Managed Google Play apps deployed to Android Enterprise personally-owned work profile devices, you can view the status and version number of the app installed on a device using Intune. 
 > 

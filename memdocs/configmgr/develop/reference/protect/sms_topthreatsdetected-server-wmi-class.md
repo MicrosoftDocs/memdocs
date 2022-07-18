@@ -1,6 +1,7 @@
 ---
 title: "SMS_TopThreatsDetected Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_TopThreatsDetected class summarizes the top threats found in the last 24 hours per collection."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: d15d9933-913a-418e-8474-4310ddbc367b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

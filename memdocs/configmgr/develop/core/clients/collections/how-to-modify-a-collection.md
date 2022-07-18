@@ -1,6 +1,8 @@
 ---
 title: "Modify a Collection"
 titleSuffix: "Configuration Manager"
+description: "How to modify a collection by using the collection ID provided. The example property values are modified using the name and comment values."  
+
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +11,8 @@ ms.assetid: 21815cfc-bd5d-4c1e-b2e6-f6662d1cc408
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -8,12 +8,14 @@ metadata:
   title: Protect data and infrastructure documentation
   titleSuffix: Configuration Manager
   description: Protect both your infrastructure and your data from exposure or malicious attack using Configuration Manager.
-  ms.product: configuration-manager
+  ms.prod: configuration-manager
   ms.technology: configmgr-protect
   ms.topic: landing-page
   author: mestew
   ms.author: mstewart
-  ms.date: 01/10/2020
+  manager: dougeby
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -84,10 +86,6 @@ landingContent:
         links:
           - text: Endpoint Protection overview
             url: deploy-use/endpoint-protection.md
-      - linkListType: get-started
-        links:
-          - text: Plan for Endpoint Protection
-            url: plan-design/planning-for-endpoint-protection.md
       - linkListType: deploy
         links:
           - text: Create an Endpoint Protection point site system role

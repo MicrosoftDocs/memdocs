@@ -1,4 +1,5 @@
 ---
+description: Learn how to use Configuration Manager RunAuthListStatusSummarization Windows Management Instrumentation (WMI) class method to update summarized results for a particular update group.
 title: "RunAuthListStatusSummarization Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 7b74264f-bdf5-4cd0-8ebd-a60e5c25ea0e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,7 +1,5 @@
 ---
 title: Windows Autopilot motherboard replacement
-ms.reviewer: 
-manager: laurawi
 description: Windows Autopilot deployment Motherboard Replacement (MBR) scenarios
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -10,19 +8,21 @@ ms.localizationpriority: medium
 ms.sitesec: library
 ms.pagetype: deploy
 audience: itpro
-author: greg-lindsay
-ms.author: greglin
-ms.date: 12/16/2020
+author: aczechowski
+ms.author: aaroncz
+ms.reviewer: jubaptis
+manager: dougeby
+ms.date: 10/10/2021
 ms.collection: M365-modern-desktop
 ms.topic: how-to
 ---
-
 
 # Windows Autopilot motherboard replacement scenario guidance
 
 **Applies to**
 
-- Windows 10
+- Windows 11
+- Windows 10
 
 This document offers guidance for Windows Autopilot device repair scenarios that Microsoft partners can use in Motherboard Replacement (MBR) situations, and other servicing scenarios.
 
@@ -138,9 +138,14 @@ Repair technicians must sign in to the repaired device to capture the new device
 
 Those repair facilities with access to the OA3 Tool (which is part of the ADK) can use the tool to capture the 4K Hardware Hash (4K HH).
 
-Instead, the [WindowsAutoPilotInfo PowerShell script](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) can be used to capture the 4K HH by following these steps:
+Instead, the [WindowsAutopilotInfo PowerShell script](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo) can be used to capture the 4K HH.
 
-1. Install the script from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Get-WindowsAutoPilotInfo) or from the command line (command-line installation is shown below).
+> [!NOTE]
+> Other methods in addition to Windows PowerShell are also available to capture the hardware hash. For more information, see [Collect the hardware hash](add-devices.md#collect-the-hardware-hash).
+
+To use the **WindowsAutopilotInfo** PowerShell script, follow these steps:
+
+1. Install the script from the [PowerShell Gallery](https://www.powershellgallery.com/packages/Get-WindowsAutopilotInfo) or from the command line (command-line installation is shown below).
 2. Navigate to the script directory and run it on the device when the device is either in Full OS or Audit Mode. See the following example.
 
    ```powershell
@@ -159,7 +164,6 @@ The script creates a .csv file that contains the device information, including t
 
 > [!NOTE]
 > If the repair facility can't run the OA3 tool or PowerShell script to capture the new 4K HH, then the CSP (or OEM) partners must do it for them. Without some entity capturing the new 4K HH, there's no way to reregister this device as an Autopilot device.
-
 
 ## Reregister the repaired device using the new device ID
 
@@ -406,7 +410,6 @@ Assuming the used HDD was previously deregistered (before being used in this rep
 We don't recommend any of these scenarios.
 
 
-<tr><td>A device repaired more than three times<td>No<td>Autopilot isn't supported when a device is repeatedly repaired. Parts NOT replaced become associated with too many parts that have been replaced. This  makes it difficult to uniquely identify that device in the future.
 <tr><td>Memory replacement<td>Yes<td>Replacing the memory on a damaged device doesn't negatively affect the Autopilot experience on that device. No de/reregistration is needed. The repair technician simply needs to replace the memory.
 <tr><td>GPU replacement<td>Yes<td>Replacing the GPU(s) on a damaged device doesn't negatively affect the Autopilot experience on that device. No de/reregistration is needed. The repair technician simply needs to replace the GPU.
 </table>
@@ -436,6 +439,7 @@ Other repair scenarios not yet tested and verified include:
 
 | Question | Answer |
 | --- | --- |
+| What to do if you see another customer’s welcome page? | If you continue seeing another customer’s welcome page on a replacement device or refurbished motherboard, a ticket needs to be raised to Microsoft to fix the device ownership. You can open a ticket through the Microsoft Endpoint Manager portal by selecting the Help and Support option outlined [here](../get-support.md). If you do not have access to Microsoft Endpoint Manager, you can submit a ticket through Microsoft Store for Business by selecting Manage > Support and selecting Technical Support. You can also submit a ticket through your Microsoft Volume Licensing Center agreement, instructions outlined [here](https://support.microsoft.com/topic/microsoft-software-assurance-support-incident-submission-74a9a148-9a75-ecc8-4420-14191e634d65). Please title all tickets “Autopilot Deregistration Request” to streamline requests. |
 | We have a tool that programs product information into the BIOS after the MBR. Do we still need to submit a CBR report for the device to be Autopilot-capable? | No. Not if the in-house tool writes the minimum necessary information into the BIOS that the Autopilot program looks for to identify the device, as described earlier in this document. |
 | What if only some components are replaced rather than the full motherboard? | It’s true that some limited repairs don't prevent the Autopilot algorithm from successfully matching the post-repair device with the pre-repair device. Even so, it's best to ensure 100% success by going through the MBR steps above even for devices that only needed limited repairs. |
 | How does a repair technician gain access to a broken device if they don’t have the customer’s login credentials? | The technician will have to reimage the device and use their own credentials during the repair process. |

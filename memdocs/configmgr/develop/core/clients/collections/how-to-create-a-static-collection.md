@@ -1,4 +1,5 @@
 ---
+description: Learn how to create a static collection with defined attributes and members within Configuration Manager.
 title: "Create a Static Collection"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 53023832-57ca-47f9-96bb-ab8ab4827172
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

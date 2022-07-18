@@ -1,15 +1,15 @@
 ---
 title: Device restart notifications
 titleSuffix: Configuration Manager
-description: Restart notification behavior for various client settings in Configuration Manager. 
-ms.date: 11/30/2020
+description: Restart notification behavior for various client settings in Configuration Manager.
+ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-ms.assetid: 5ef1bff8-9733-4b5a-b65f-26b94accd210
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Device restart notifications in Configuration Manager
@@ -18,12 +18,17 @@ manager: dougeby
 
 The notifications a user receives for a pending device restart can vary depending on the [Computer restart client settings](#client-settings) and which version of Configuration Manager you use. This article helps you configure the user experience for pending device restart notifications.
 
+> [!NOTE]
+> By default, Windows 11 enables **focus assist** for the first hour after a user signs on for the first time. For more information, see [Reaching the Desktop and the Quiet Period](/windows-hardware/customize/desktop/customize-oobe-in-windows-11#reaching-the-desktop-and-the-quiet-period).
+>
+> Software Center notifications are currently suppressed during this time. For more information, see [Turn Focus assist on or off in Windows](https://support.microsoft.com/windows/turn-focus-assist-on-or-off-in-windows-5492a638-b5a3-1ee0-0c4f-5ae044450e09#ID0EBD=Windows_11).<!-- 11059565 -->
+
 ## Deployment types for restart notifications
 
 The [Computer restart client settings](#client-settings) change the user experience for all required deployments that require a restart of the following types:
 
 - [Application](../../../apps/deploy-use/deploy-applications.md)
-- [Task sequence](../../../osd/deploy-use/manage-task-sequences-to-automate-tasks.md#BKMK_DeployTS)
+- [Task sequence](../../../osd/deploy-use/deploy-a-task-sequence.md)
 - [Software update](../../../sum/deploy-use/deploy-software-updates.md)
 
 ## Restart notification types
@@ -44,11 +49,10 @@ Software Center shows a notification with a snooze option and the time remaining
 
 ### Software Center final countdown notification
 
-Software Center shows this final countdown notification that the user can't close or snooze.
+Software Center shows this final countdown notification that the user can't close or snooze. The user won't see a progress bar in the restart notification until the pending restart is less than 24 hours away.
+
 
 :::image type="content" source="media/3976435-final-restart-countdown.png" alt-text="Software Center final restart countdown":::
-
-Starting in version 1906, the user won't see a progress bar in the restart notification until the pending restart is less than 24 hours away.
 
 ### Software Center notification before deadline
 
@@ -66,7 +70,7 @@ When you don't use toast notifications, the dialog for software marked as **Avai
 
 <!--3601213-->
 
-Starting in version 2006, you can configure client settings to prevent devices from automatically restarting when a deployment requires it. When a required deployment needs the device to restart, but you disable the client setting **Configuration Manager can force a device to restart**, you see the following notification:
+You can configure client settings to prevent devices from automatically restarting when a deployment requires it. When a required deployment needs the device to restart, but you disable the client setting **Configuration Manager can force a device to restart**, you see the following notification:
 
 :::image type="content" source="media/3601213-restart-your-computer.png" alt-text="Software Center notification to restart your computer":::
 
@@ -79,11 +83,13 @@ If you **Snooze** this notification, it will show again based on how you configu
 
 To control the client restart behaviors, configure the following device client settings in the **Computer Restart** group. For more information, see [How to configure client settings](configure-client-settings.md).
 
+To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also updated.
+
 ### Configuration Manager can force a device to restart
 
 <!--3601213-->
 
-Starting in version 2006, you can configure client settings to prevent devices from automatically restarting when a deployment requires it. Configuration Manager enables this setting by default.
+You can configure client settings to prevent devices from automatically restarting when a deployment requires it. Configuration Manager enables this setting by default.
 
 > [!IMPORTANT]
 > This client setting applies to all application, software update, and package deployments to the device. Until a user manually restarts the device:
@@ -93,14 +99,12 @@ Starting in version 2006, you can configure client settings to prevent devices f
 
 When you disable this setting, you can't specify the amounts of time after the deadline that the device is restarted or the user is presented a final countdown notification.
 
-> [!NOTE]
-> To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
 ### Specify the amount of time after the deadline before a device gets restarted (minutes)
 
 This setting must be shorter in duration than the shortest maintenance window applied to the computer. For more information about maintenance windows, see [How to use maintenance windows](../manage/collections/use-maintenance-windows.md).
 
-The default value is 90 minutes. Starting in version 1906, the maximum value increased from 1440 minutes (24 hours) to 20160 minutes (two weeks).
+The default value is 90 minutes. The maximum value is 20160 minutes (two weeks).
 
 > [!NOTE]
 > This setting was previously titled **Display a temporary notification to the user that indicates the interval before the user is logged off or the computer restarts (minutes)**.
@@ -116,7 +120,6 @@ The default value is 15 minutes.
 
 ### Specify the frequency of reminder notifications presented to the user, after the deadline, before a device gets restarted (minutes)
 <!--3976435-->
-_Starting in version 1906_
 
 This frequency duration value should be less than the value of **Specify the amount of time after the deadline before a device gets restarted (minutes)** minus the value of **Specify the amount of time that a user is presented a final countdown notification before a device gets restarted (minutes)**. Otherwise, the reminder notifications won't work.
 
@@ -133,10 +136,11 @@ To change the user experience to be more intrusive, configure this setting to **
 
 <!--7821529-->
 
-For a low-rights user on a device that runs Windows Server, by default they aren't assigned the user rights to restart Windows. When you target a deployment to this device, this user can't manually restart. For example, they can't restart Windows to install software updates. Starting in version 2010, you can now control this behavior as needed.
+For a low-rights user on a device that runs Windows Server, by default they aren't assigned the user rights to restart Windows. When you target a deployment to this device, this user can't manually restart. For example, they can't restart Windows to install software updates.
 
 > [!IMPORTANT]
 > Allowing low-rights users to restart a server can potentially impact other users or services.
+
 
 ## Device restart notifications
 <!--3976435-->

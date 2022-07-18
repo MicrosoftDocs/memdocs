@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Upgrade to Windows Holographic for Business in Microsoft Intune - Azure | Microsoft Docs
+title: Upgrade to Windows Holographic for Business in Microsoft Intune
 description: Upgrade HoloLens (1st gen) to Windows 10 Holographic for Business using a device configuration profile in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/28/2021
-ms.topic: reference
+ms.date: 01/19/2022
+ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -40,13 +40,13 @@ As part of your mobile device management (MDM) solution, use these settings to u
 
 As an Intune administrator, you can create and assign these settings to your devices.
 
-For more information on this feature, see [Upgrade Windows 10 editions or enable S mode](edition-upgrade-configure-windows-10.md).
+For more information on this feature, see [Upgrade Windows 10/11 editions or enable S mode](edition-upgrade-configure-windows-10.md).
 
 ## Before you begin
 
-[Create a Windows 10 edition upgrade and mode switch device configuration profile](edition-upgrade-configure-windows-10.md#create-the-profile).
+[Create a Windows client edition upgrade and mode switch device configuration profile](edition-upgrade-configure-windows-10.md#create-the-profile).
 
-When you create a Windows 10 edition upgrade and mode switch device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
+When you create a Windows client edition upgrade and mode switch device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
 ## Edition upgrade
 
@@ -59,4 +59,4 @@ When you create a Windows 10 edition upgrade and mode switch device configuratio
 
 [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-You can also create edition upgrade profiles for [Windows 10 and later](edition-upgrade-windows-settings.md) devices.
+You can also create edition upgrade profiles for [Windows 10/11](edition-upgrade-windows-settings.md) devices.

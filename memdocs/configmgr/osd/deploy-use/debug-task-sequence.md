@@ -2,14 +2,14 @@
 title: Debug a task sequence
 titleSuffix: Configuration Manager
 description: Use the task sequence debugging tool to troubleshoot a task sequence.
-ms.date: 11/29/2019
+ms.date: 05/04/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 4b60b0e1-ffa4-4fd5-864e-70a0546c8b3b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Debug a task sequence
@@ -18,11 +18,12 @@ manager: dougeby
 
 <!--3612274-->
 
-Starting in version 1906, the task sequence debugger is a new troubleshooting tool. You deploy a task sequence in debug mode to a small collection. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation. The debugger currently runs on the same device as the task sequence engine, it's not a remote debugger.
+The task sequence debugger is a troubleshooting tool. You deploy a task sequence in debug mode to a small collection. It lets you step through the task sequence in a controlled manner to aid troubleshooting and investigation. The debugger currently runs on the same device as the task sequence engine, it's not a remote debugger.
 
-> [!Note]  
-> In this version of Configuration Manager, the task sequence debugger is a pre-release feature. To enable it, see [Pre-release features](../../core/servers/manage/pre-release-features.md).  
-
+> [!TIP]
+> This feature was first introduced in version 1906 as a [pre-release feature](../../core/servers/manage/pre-release-features.md). Beginning with version 2203, it's no longer a pre-release feature.
+>
+> Configuration Manager doesn't enable this optional feature by default. Before using it, you need to enable this feature. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).
 
 ## Prerequisites
 
@@ -47,13 +48,13 @@ Starting in version 1906, the task sequence debugger is a new troubleshooting to
     > [!Note]  
     > You can only select a small collection for a debug deployment. It only displays device collections with 10 or less members.
 
-Starting in version 1910, use the new task sequence variable **TSDebugOnError** to automatically start the debugger when the task sequence returns an error.<!-- 5012536 --> For more information, see [Task sequence variables - TSDebugOnError](../understand/task-sequence-variables.md#TSDebugOnError).
+Use the task sequence variable **TSDebugOnError** to automatically start the debugger when the task sequence returns an error.<!-- 5012536 --> For more information, see [Task sequence variables - TSDebugOnError](../understand/task-sequence-variables.md#TSDebugOnError).
 
 ## Use the tool
 
 When the task sequence runs on the device, the Task Sequence Debugger window opens similar to the following screenshot:
 
-![Screenshot of Task Sequence Debugger](media/3612274-tsdebug.png)
+![Screenshot of Task Sequence Debugger.](media/3612274-tsdebug.png)
 
 The debugger includes the following controls:
 
@@ -71,11 +72,9 @@ The debugger includes the following controls:
 
 - **Set Break**: Select a step in the debugger and then select **Set Break**. This action adds a *break* point in the debugger. When you **Run** the task sequence, it stops at a *break*.  
 
-    - Before you use the **Run** action, set break points.
+  - Before you use the **Run** action, set break points.
 
-    - Starting in version 1910, if you create a break point in the debugger, and then the task sequence restarts the computer, the debugger keeps your break points after restart.<!-- 5012509 -->
-
-    - In version 1906, break points aren't saved after the computer restarts, like with the [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step. For example, if you start the debugger from Software Center for an imaging task sequence, don't set breaks in the Windows PE phase. When the computer restarts into Windows PE, the debugger pauses the task sequence so that you can set breaks.
+  - If you create a break point in the debugger, and then the task sequence restarts the computer, the debugger keeps your break points after restart.<!-- 5012509 -->
 
 - **Clear All Breaks**: Remove all break points.
 
@@ -92,7 +91,7 @@ The **Task Sequence Variables** window shows the current values for all variable
 > [!Note]
 > Some task sequence variables are for internal use only, and not listed in the reference documentation.
 
-The task sequence debugger continues to run after a [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step, but you need to recreate any break points. Even though the task sequence may not require it, since the debugger requires user interaction, you need to sign in to Windows to continue. If you don't sign in after one hour to continue debugging, the task sequence fails.
+The task sequence debugger continues to run after a [Restart Computer](../understand/task-sequence-steps.md#BKMK_RestartComputer) step. The debugger keeps your break points after restart.<!-- 5012509 --> Even though the task sequence may not require it, since the debugger requires user interaction, you need to sign in to Windows to continue. If you don't sign in after one hour to continue debugging, the task sequence fails.
 
 It also steps into a child task sequence with the [Run Task Sequence](../understand/task-sequence-steps.md#child-task-sequence) step. The debugger window shows the steps of the child task sequence along with the main task sequence.
 

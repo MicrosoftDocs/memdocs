@@ -14,8 +14,8 @@ metadata:
   ms.collection: collection
   author: lenewsad
   ms.author: lanewsad
-  ms.manager: dougeby
-  ms.date: 1/04/2021  
+  manager: dougeby
+  ms.date: 9/30/2021  
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 
@@ -45,7 +45,7 @@ landingContent:
         url: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-windows.md
     - linkListType: how-to-guide
       links:
-      - text: Enroll Windows 10 device 
+      - text: Enroll Windows 10/11 device 
         url: enroll-windows-10-device.md
       - text: Install apps for work or school   
         url: install-apps-cpapp-windows.md 
@@ -55,10 +55,6 @@ landingContent:
   # Card (optional)
   - title: Set up iOS/iPadOS device 
     linkLists:
-    - linkListType: overview
-      links:
-      - text: About iOS/iPadOS device enrollment
-        url: what-happens-if-you-install-the-company-portal-app-and-enroll-your-device-in-intune-ios.md 
     - linkListType: how-to-guide
       links: 
       - text: Enroll iOS/iPadOS device 
@@ -129,7 +125,7 @@ landingContent:
         url: set-up-mobile-threat-defense.md 
       - text: Turn off USB debugging (Android)
         url: you-need-to-turn-off-usb-debugging-android.md
-      - text: Turn on Windows Defender (Windows 10)
+      - text: Turn on Windows Defender (Windows 10/11)
         url: turn-on-defender-windows.md
     - linkListType: concept
       links:

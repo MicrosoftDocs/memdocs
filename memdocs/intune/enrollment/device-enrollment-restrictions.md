@@ -5,8 +5,8 @@ title: Device enrollment restrictions for the Android Enterprise security config
 titleSuffix: Microsoft Intune
 description: Device enrollment restrictions for the Android Enterprise security configuration framework.
 keywords:
-author: ErikjeMS
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 02/03/2021
 ms.topic: how-to
@@ -29,9 +29,9 @@ ms.custom: intune-azure;seodec18
 ms.collection: M365-identity-device-management
 ---
 
-# Android Enterprise device enrollment restrictions for personally-owned work profile devices
+# Android Enterprise device enrollment restrictions for personally owned work profile devices
 
-Before enrolling Android Enterprise personally-owned work profile devices for the [Android Enterprise security configuration framework](android-configuration-framework.md), organizations must configure the appropriate restrictions. These restrictions ensure that users can only enroll
+Before enrolling Android Enterprise personally owned work profile devices for the [Android Enterprise security configuration framework](android-configuration-framework.md), organizations must configure the appropriate restrictions. These restrictions ensure that users can only enroll
 
 - approved devices.
 - a specified number of devices.
@@ -41,17 +41,17 @@ Before enrolling Android Enterprise personally-owned work profile devices for th
 
 For more information on device enrollment restrictions, see [Set enrollment restrictions](enrollment-restrictions-set.md).
 
-## Personally-owned work profile basic (level 1) security restrictions
+## Personally owned work profile basic (level 1) security restrictions
 
-For Android Enterprise personally-owned work profile basic security (Level 1), the following device restrictions must be implemented:
+For Android Enterprise personally owned work profile basic security (Level 1), the following device restrictions must be implemented:
 
 | Type | Platform | Version | Allows personal devices |
 |--------|--------|--------|--------|
-| Android Enterprise | Allow | Android 6.0 and later.<p>Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 9.0 and later for knowledge workers. For more information, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). | Yes |
+| Android Enterprise | Allow | Android 8.0 and later.<p>Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade.   Currently, Android recommends Android 9.0 and later for knowledge workers. For more information, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). | Yes |
 | Android device administrator| Block | All versions | Yes |
 
-## Personally-owned work profile high (level 3) security restrictions
-For Android Enterprise personally-owned work profile high security (Level 3), the following device restrictions should be implemented:
+## Personally owned work profile high (level 3) security restrictions
+For Android Enterprise personally owned work profile high security (Level 3), the following device restrictions should be implemented:
 
 | Type | Platform | Version | Allows personal devices |
 |--------|--------|--------|--------|

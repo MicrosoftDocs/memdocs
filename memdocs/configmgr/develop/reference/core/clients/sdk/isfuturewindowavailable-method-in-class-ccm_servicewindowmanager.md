@@ -1,6 +1,7 @@
 ---
 title: "IsFutureWindowAvailable Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that determines whether a service window of a specified type and the given duration is going to be available."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 83ae2265-47db-441d-986f-7e3869ef8d9e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

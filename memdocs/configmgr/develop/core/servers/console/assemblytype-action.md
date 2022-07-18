@@ -1,4 +1,5 @@
 ---
+description: Learn how the AssemblyType action defines the type and assembly for a method that is called by the Configuration Manager console.
 title: "AssemblyType Action"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 0a910d9f-9064-4295-b286-01a6d809702b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

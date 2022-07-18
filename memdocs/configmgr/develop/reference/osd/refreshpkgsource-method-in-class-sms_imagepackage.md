@@ -1,6 +1,7 @@
 ---
 title: "RefreshPkgSource Method in SMS_ImagePackage"
 titleSuffix: "Configuration Manager"
+description: "The RefreshPkgSource Windows Management Instrumentation (WMI) class method, in Configuration Manager, refreshes the package source at all distribution points."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: b9c93bcb-6f43-4236-9ae1-568579e9719d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

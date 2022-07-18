@@ -1,6 +1,7 @@
 ---
 title: Start method
 titleSuffix: Configuration Manager
+description: "In Configuration Manager, The Start WMI class method is invoked to start a Microsoft Azure service which represents a cloud distribution point for Configuration Manager." 
 ms.date: 09/20/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: f32f2b00-117d-498d-9d9b-5f3f47b1b865
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

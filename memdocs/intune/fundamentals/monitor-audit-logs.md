@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Audit changes and events in Microsoft Intune - Azure | Microsoft Docs
+title: Audit changes and events in Microsoft Intune
 description: Learn how to review audit logs that record Microsoft Intune activities.
 keywords: 
 ms.author: dougeby
 author: dougeby
 manager: dougeby
-ms.date: 02/04/2021
+ms.date: 01/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -20,7 +20,7 @@ ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 #ROBOTS:
 #audience:
 
-#ms.reviewer: [ALIAS]
+ms.reviewer: 
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -56,6 +56,8 @@ You can review audit logs in the monitoring group for each Intune workload:
 4. Select **Apply**.
 5. Select an item in the list to see the activity details.
 
+For related information about audit logs, see [Addition information](../fundamentals/monitor-audit-logs.md#additional-information).
+
 ## Route logs to Azure Monitor
 
 Audit logs and operational logs can also be routed to Azure Monitor. In **Tenant administration** > **Audit logs**, select **Export**:
@@ -76,6 +78,11 @@ For details on using the graph API to get up to one year of audit events, see [L
 
 ## Next steps
 
-[Send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md).
+- [Send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md)
+- [Review client app protection logs](../apps/app-protection-policy-settings-log.md)
 
-[Review client app protection logs](../apps/app-protection-policy-settings-log.md).
+## Additional information
+
+- [Data storage and processing in Intune](../protect/privacy-data-store-process.md)
+- [Use audit logs throughout Intune](../fundamentals/review-logs-using-azure-monitor.md#use-audit-logs-throughout-intune)
+- [Audit, export, or delete personal data in Intune](../protect/privacy-data-audit-export-delete.md)

@@ -2,22 +2,22 @@
 title: Monitor connection health
 titleSuffix: Configuration Manager
 description: Details on how to monitor the connection health and device states for Desktop Analytics in Configuration Manager.
-ms.date: 01/08/2021
+ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: 1f4e26f7-42f2-40c8-80cf-efd405349c6c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ms.reviewer: acabello
+ms.localizationpriority: medium
 ---
 
 # Monitor connection health
 
-Use the **Connection Health** dashboard in Configuration Manager to drill down into categories by device health. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.  
+Use the **Connection Health** dashboard in Configuration Manager to drill down into categories by device health. In the Configuration Manager console, go to the **Software Library** workspace, expand the **Desktop Analytics Servicing** node, and select the **Connection Health** dashboard.
 
-[![Screenshot of the Configuration Manager Connection Health dashboard](media/connection-health-dashboard.png)](media/connection-health-dashboard.png#lightbox)
+:::image type="content" source="media/connection-health-dashboard.png" alt-text="Screenshot of the Configuration Manager Connection Health dashboard." lightbox="media/connection-health-dashboard.png":::
 
 When you first set up Desktop Analytics, these charts may not show complete data. It can take 2-3 days for active devices to send diagnostic data to the Desktop Analytics service, the service to process the data, and then synchronize with your Configuration Manager site.<!-- 4098037 -->
 
@@ -38,9 +38,9 @@ This tile displays the following basic information about the connection from Con
   - Devices running Long Term Servicing Channel (LTSC) versions of Windows 10
   - Devices running Windows Server
 
-    For more information on these device states, see [About client status](../core/clients/manage/monitor-clients.md#bkmk_about).
+    For more information on these device states, see [About client status](../core/clients/manage/monitor-clients.md#about-client-status).
 
-    > [!Note]  
+    > [!NOTE]
     > Configuration Manager uploads to Desktop Analytics all of the devices in the target collection minus decommissioned and obsolete clients.
 
 - **Devices eligible for DA**: The number of devices targeted minus devices that are ineligible for Desktop Analytics. For example, devices in the target collection that run Windows Server or Windows 10 long-term servicing channel (LTSC).
@@ -55,7 +55,7 @@ This tile shows when Configuration Manager syncs with the Desktop Analytics clou
 
 - **Next service sync**: When you can expect the next daily snapshot in Desktop Analytics.
 
-> [!Note]  
+> [!NOTE]
 > When you first enroll devices into Desktop Analytics, it can take several days for data to upload and process. During this time, the **Last sync details** tile may appear blank.
 > Additionally, none of the values in this tile automatically update when you request an on-demand snapshot. For more information, see [Data latency](troubleshooting.md#data-latency).
 
@@ -72,13 +72,6 @@ The **Connection health** chart displays the number of devices in the following 
 - [Status pending](#status-pending): Configuration Manager is still configuring this device, or doesn't have enough data from the device to determine its state
 - [Missing data](#missing-data): Configuration Manager configured the device, but Desktop Analytics only has partial data
 
-<!-- 
-- [Configuration issues](#configuration-issues)  
-- [Client not installed](#client-not-installed)  
-- [Waiting for enrollment](#waiting-for-enrollment)  
-- [Missing prerequisites](#missing-prerequisites)  
- -->
-
 The total number of devices in this chart should be the same as the **Devices eligible for DA** value in the Connection Details tile.
 
 Select the slice in the chart to drill down to a list of devices with that state. For more information, see [Device list](#device-list).
@@ -89,21 +82,18 @@ Select the category name in the legend to remove or add it from the chart. This 
 
 The device has the following attributes:
 
-- A Configuration Manager client version 1902 or later  
-- There are no configuration errors  
-- Desktop Analytics received complete diagnostic data from this device in the past 28 days  
-- Desktop Analytics has a complete inventory of the device's configuration and installed apps  
+- A supported version of the Configuration Manager client
+- There are no configuration errors
+- Desktop Analytics received complete diagnostic data from this device in the past 28 days
+- Desktop Analytics has a complete inventory of the device's configuration and installed apps
 
 ### Unable to enroll
 
 Configuration Manager detects one or more blocking issues that prevent device enrollment. For more information, see the list of [Desktop Analytics device properties in Configuration Manager](#bkmk_config-issues).  
 
-For example, the Configuration Manager client isn't at least version 1902 (5.0.8790). Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
+For example, the Configuration Manager client isn't a supported version. Update the client to the latest version. Consider enabling automatic client upgrade for the Configuration Manager site. For more information, see [Upgrade clients](../core/clients/manage/upgrade/upgrade-clients.md#automatic-client-upgrade).  
 
-> [!TIP]
-> There's a known issue with the April 2020 extended security update (ESU) for Windows 7 that causes devices to misreport this error. For more information, see [Release notes](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
-
-Starting in version 2002, you can more easily identify client proxy configuration issues in two areas:
+You can more easily identify client proxy configuration issues in two areas:
 
 - **Endpoint connectivity checks**: If clients can't reach a required endpoint, you see a configuration alert in the dashboard. Drill down into clients that are unable to enroll to see the endpoints to which clients can't connect due to proxy configuration issues. For more information, see [Endpoint connectivity checks](#endpoint-connectivity-checks).<!-- 4963230 -->
 
@@ -140,12 +130,12 @@ To see a specific list of devices by status, start with the **Connection Health*
 - Windows diagnostic data opt-in
 - Windows commercial data opt-in
 - Windows diagnostic endpoint connectivity
-- Connectivity status (starting in version 2002)
-- Endpoint connectivity checks (starting in version 2002)
+- Connectivity status
+- Endpoint connectivity checks
 
 These columns correspond to the key [prerequisites](overview.md#prerequisites) for devices to communicate with Desktop Analytics.
 
-[![Screenshot of Unable to Enroll device list](media/device-list-unable-to-enroll.png)](media/device-list-unable-to-enroll.png#lightbox)
+:::image type="content" source="media/device-list-unable-to-enroll.png" alt-text="Screenshot of Unable to Enroll device list." lightbox="media/device-list-unable-to-enroll.png":::
 
 Select a device to see the full list of available properties in the detail pane. You can also add any of these properties as columns to the device list.
 
@@ -153,8 +143,8 @@ Select a device to see the full list of available properties in the detail pane.
 
 The following Desktop Analytics device properties are available as columns in the Configuration Manager device list:
 
-- [Endpoint connectivity checks](#endpoint-connectivity-checks) (starting in version 2002)
-- [Connectivity status](#connectivity-status) (starting in version 2002)
+- [Endpoint connectivity checks](#endpoint-connectivity-checks)
+- [Connectivity status](#connectivity-status)
 - [Appraiser configuration](#appraiser-configuration)  
 - [Minimum compatibility update](#minimum-compatibility-update)  
 - [Appraiser version](#appraiser-version)  
@@ -178,11 +168,15 @@ The **Most frequent enrollment blockers and configuration alerts** tile of the C
 
 ### Endpoint connectivity checks
 
-Starting in version 2002,<!-- 4963230 --> to detect proxy authentication issues, clients perform connectivity checks against required endpoints. If a client can't reach a required endpoint, this property shows a numbered list of endpoints to which it can't connect due to proxy configuration issues. Compare this list with the published list of [required endpoints](enable-data-sharing.md#endpoints).
+<!-- 4963230 -->
+
+To detect proxy authentication issues, clients perform connectivity checks against required endpoints. If a client can't reach a required endpoint, this property shows a numbered list of endpoints to which it can't connect due to proxy configuration issues. Compare this list with the published list of [required endpoints](enable-data-sharing.md#endpoints).
 
 ### Connectivity status
 
-Starting in version 2002,<!-- 4963383 --> if your clients use a proxy server to access Desktop Analytics, this property shows proxy authentication issues. It includes the following details related to proxy authentication:
+<!-- 4963383 -->
+
+If your clients use a proxy server to access Desktop Analytics, this property shows proxy authentication issues. It includes the following details related to proxy authentication:
 
 - Status code
 - Return code
@@ -322,6 +316,8 @@ Devices verify connectivity with a GET request to the following endpoint based o
 
 Make sure the device can communicate with the service. This check validates some but not all of the required endpoints. For more information, see [Endpoints](enable-data-sharing.md#endpoints).  
 
+Also make sure that the signed-in user of the device has a valid license. For more information on the prerequisites, see [Desktop Analytics licensing and costs](overview.md#licensing-and-costs).<!-- memdocs#1804 -->
+
 For more information, review M365AHandler.log on the client.  
 
 ### Check end-user diagnostic data
@@ -373,9 +369,9 @@ There's a different ID for the device. This registry key is used by group policy
 
 2. In the **Connected services** pane, the **Enroll devices** pane is selected by default. In the Enroll devices pane, the Information section displays your Commercial ID key.  
 
-:::image type="content" source="media/commercial-id.png" alt-text="Screenshot of commercial ID in Desktop Analytics portal" lightbox="media/commercial-id.png":::
+:::image type="content" source="media/commercial-id.png" alt-text="Screenshot of commercial ID in Desktop Analytics portal." lightbox="media/commercial-id.png":::
 
-> [!Important]  
+> [!IMPORTANT]
 > Only use the option to **Get new ID key** when you can't use the current one. You can't undo the action to regenerate your commercial ID. Until devices receive the new commercial ID, this action results in temporary functionality and data loss for all solutions and devices that have the current commercial ID. If you regenerate the commercial ID, [re-enroll your devices with the new ID](enroll-devices.md#device-enrollment). If you use [Update Compliance](/windows/deployment/update/update-compliance-get-started#add-update-compliance-to-your-azure-subscription), confirm that it has the new commercial ID in the settings page. If necessary, re-enroll devices.<!--9053615-->
 
 ### Windows commercial data opt-in
@@ -409,18 +405,9 @@ Otherwise, it might display one of the following errors:
 
 - Connected User Experience and Telemetry (diagtrack.dll) component is outdated. Check requirements  
 
-    > [!TIP]
-    > There's a known issue with the April 2020 extended security update (ESU) for Windows 7 that causes devices to misreport this error. For more information, see [Release notes](../core/servers/deploy/install/release-notes.md#dawin7-diagtrack).<!-- 7283186 -->
-
 - Can't find the Connected User Experience and telemetry (diagtrack.dll) component. Check requirements  
 
 - Enable and start the Connected User Experiences and Telemetry service to send data to Microsoft  
-
-<!--
- - An updated Connected User Experience and Telemetry (diagtrack.dll) component is available. Check requirements - this is for the newer version that improves performance
- -->
-
-<!--include something about diagtrack perf update https://go.microsoft.com/fwlink/?linkid=2011593-->
 
 Install the latest updates. For more information, see [Device updates](enroll-devices.md#update-devices).
 
@@ -468,6 +455,6 @@ For more information, review M365AHandler.log on the client.
 
 On the Desktop Analytics portal, under **Connected services** in the Global Settings group, the number of Enrolled devices sending data is the sum of [Properly enrolled](#properly-enrolled) devices and devices [Missing data](#missing-data).
 
-## See also
+## Next steps
 
 [Troubleshoot Desktop Analytics](troubleshooting.md)

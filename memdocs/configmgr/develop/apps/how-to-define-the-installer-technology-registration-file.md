@@ -1,4 +1,5 @@
 ---
+description: Learn how to register the custom installer technology with Configuration Manager using an XML file.
 title: "Define the Installer Technology Registration File"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: a86bf770-7386-4655-b264-a543fe954afa
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

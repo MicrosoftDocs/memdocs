@@ -1,6 +1,7 @@
 ---
 title: "GetFeatures Method"
 titleSuffix: "Configuration Manager"
+description: "This article describes the Get Features Method in Class SMS_WhatsNewFeature. The syntax is detailed below."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 8ad3467f-9726-4ede-ab1f-60991ea16ce2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

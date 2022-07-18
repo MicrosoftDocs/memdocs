@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Set up per-app VPN for iOS/iPadOS devices in Microsoft Intune - Azure | Microsoft Docs
+title: Set up per-app VPN for iOS/iPadOS devices in Microsoft Intune
 description: See the prerequisites, create a group for the virtual private network (VPN) users, add a SCEP certificate profile, configure a per-app VPN profile, and assign some apps to the VPN profile in Microsoft Intune on iOS/iPadOS devices. Also lists the steps to verify the VPN connection on the device.
 keywords:
 author: MandiOhlinger

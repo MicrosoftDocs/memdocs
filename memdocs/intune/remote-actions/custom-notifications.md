@@ -3,8 +3,8 @@ title: Send custom notifications to users with Microsoft Intune
 titleSuffix: Microsoft Intune
 description: Use Intune to create and send custom push notifications to users of iOS/iPadOS and Android devices
 keywords:
-author: brenduns
-ms.author: brenduns
+author: Smritib17
+ms.author: smbhardwaj
 manager: dougeby
 ms.date: 04/14/2021
 ms.topic: how-to
@@ -127,6 +127,7 @@ Intune doesn't track the custom notifications you send, and devices don't log th
 
 Intune processes the message immediately. The only confirmation that the message was sent is the Intune notification you'll receive in the console, which displays the text of the message you sent.  
 
+
 ## Receive a custom notification
 
 On a device, users see custom notification messages that are sent by Intune as a standard push notification from the Company Portal app or the Microsoft Intune app. These notifications are similar to the push notifications users receive from other apps on the device.  
@@ -134,6 +135,9 @@ On a device, users see custom notification messages that are sent by Intune as a
 On iOS/iPadOS devices, if the Company Portal app is open when the notification is received, the notification displays in the app instead of being a push notification.  
 
 The notification remains until the user dismisses it.  
+
+> [!NOTE]
+> For Android devices, users must update to recent versions of the Android Company Portal (version 5.0.5291.0, released in October 2021) or Android Intune app (version 2021.09.04, released in September 2021) to receive custom notifications. If users do not update prior to Intune's November (2111) service release and they are sent a custom notification, they will instead receive a notification telling them to update their app to view the notification. Once they update their app, they will see the message sent by your organization in the Notifications section in the app.
 
 ## Next steps
 

@@ -1,6 +1,7 @@
 ---
 title: "CreateFromINFs Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the CreateFromINFs Windows Management Instrumentation class method creates SMS_Driver Server WMI Class objects."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 5377ef9c-ab77-4ffd-bca8-d62d13d24384
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

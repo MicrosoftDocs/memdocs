@@ -1,4 +1,5 @@
 ---
+description: Learn how to associate a software title with hardware requirements using SMS_AIHardwareRequirements in Configuration Manager. 
 title: "SMS_AIHardwareRequirements Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: f158f87a-3607-4a5e-8c2a-2e8da8997c60
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

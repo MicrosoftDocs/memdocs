@@ -9,7 +9,9 @@ ms.assetid: c4cfe110-e048-4393-92e3-cedc663fab0b
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
+ms.localizationpriority: null
+ms.collection: openauth
+description: Learn how to set policy enforcement rules for software updates by editing the 'SetEnforcement' class method in the Configuration Manager.
 
 ---
 # SetEnforcement Method in Class SMS_SoftwareUpdate

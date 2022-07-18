@@ -2,15 +2,14 @@
 title: Accessibility
 titleSuffix: Configuration Manager
 description: Learn about the features that make Configuration Manager accessible for everyone.
-ms.date: 04/05/2021
+ms.date: 07/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 1cb96666-98bf-49a9-85ca-dbb53f0655e9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-ms.collection: M365-identity-device-management
+ms.localizationpriority: medium
 ---
 
 # Accessibility features in Configuration Manager
@@ -60,7 +59,7 @@ Most [web browser keyboard shortcuts](https://support.microsoft.com/topic/intern
 ### Collection relationship diagram shortcuts
 
 <!--8543508-->
-When you [view collection relationships](../clients/manage/collections/manage-collections.md#view-collection-relationships) in the Configuration Manager console, use the **TAB** key to change the focus. By default, the focus is on the page number controls. When the focus is on the graph itself (navigator), use the following keyboard shortcuts to navigate:
+When you [view collection relationships](../clients/manage/collections/view-relationships.md) in the Configuration Manager console, use the **TAB** key to change the focus. By default, the focus is on the page number controls. When the focus is on the graph itself (navigator), use the following keyboard shortcuts to navigate:
 
 |Navigator shortcut|Purpose|
 |--------|--------|

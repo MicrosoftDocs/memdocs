@@ -1,4 +1,5 @@
 ---
+description: Learn how to create data discovery records (DDRs), using the SMSRsGenCtl.dll and other functions.
 title: "About Creating a Data Discovery Record"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 21c55e40-fd35-421c-bdbe-49b673a99403
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

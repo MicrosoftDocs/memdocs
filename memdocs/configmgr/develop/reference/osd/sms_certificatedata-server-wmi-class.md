@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent certificate data managed by Configuration Manager using SMS_CertificateData class.
 title: "SMS_CertificateData Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: f562bbf6-0c47-4dba-abfa-6f684075578d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

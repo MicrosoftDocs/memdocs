@@ -1,4 +1,5 @@
 ---
+description: Learn how to map module names to the message DLL containing the status message text using SMS_StatMsgModuleNames.
 title: "SMS_StatMsgModuleNames Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: e75bcc02-6061-4461-8fd2-f28a2c661adf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

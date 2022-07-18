@@ -2,24 +2,23 @@
 title: Console support
 titleSuffix: Configuration Manager
 description: Learn about which OS versions you can install the Configuration Manager console.
-ms.date: 06/09/2021
+ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: conceptual
-ms.assetid: 21a80050-6452-4b7d-8424-99bddf9fa1f4
+ms.topic: reference
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Supported OS versions for Configuration Manager consoles
 
 *Applies to: Configuration Manager (current branch)*
 
-To support the Configuration Manager console, the following OS versions require a minimum .NET Framework version of 4.5.2. The exception is Windows 10, which requires a minimum of .NET Framework 4.6.
+Configuration Manager supports the installation of the console on the following Windows OS versions:
 
-> [!NOTE]
-> Starting in version 2103, the ConfigurationManager PowerShell module requires Microsoft .NET version 4.7.2 or later.
+- **Windows Server 2022**: Standard, Datacenter (_starting in version 2107_)<!-- 10200029 -->
 
 - **Windows Server 2019**: Standard, Datacenter
 
@@ -28,6 +27,8 @@ To support the Configuration Manager console, the following OS versions require 
 - **Windows Server 2012 R2** (x64): Standard, Datacenter
 
 - **Windows Server 2012** (x64): Standard, Datacenter
+
+- **Windows 11** (x64): Pro, Enterprise
 
 - **Windows 10** (x86, x64): Pro, Enterprise
 

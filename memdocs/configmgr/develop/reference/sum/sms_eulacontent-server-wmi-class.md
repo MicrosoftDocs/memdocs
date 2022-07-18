@@ -1,6 +1,7 @@
 ---
 title: "SMS_EULAContent Class"
 titleSuffix: "Configuration Manager"
+description: SMS_EULAContent WMI class is an SMS Provider server class, in Configuration Manager, that provides information about optional configuration item associated with Microsoft Software License Terms.
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 542246a2-55b9-464a-8d52-eff405127c14
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

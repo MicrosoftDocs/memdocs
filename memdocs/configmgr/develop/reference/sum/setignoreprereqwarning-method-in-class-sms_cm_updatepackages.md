@@ -1,4 +1,5 @@
 ---
+description: The SetIgnorePrereqWarning Windows Management Instrumentation class method, in Configuration Manager, updates the ignore pre-requisites warning flag of the update packages.
 title: "SetIgnorePrereqWarning Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 843a2227-7adb-4472-a907-e4f02fb13bf2
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: Configuration Manager lazy properties
 titleSuffix: "Configuration Manager"
+description: "If lazy properties are retrieved during query operations, they have null or zero values."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: bc8b9495-845f-4fae-b4bc-ac94e6f091e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "AddDistributionPoints Method in SMS_OperatingSystemInstallPackage"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that adds the distribution points for the operating system install package."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 8001f57e-f565-4993-a3a0-5bc816910081
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

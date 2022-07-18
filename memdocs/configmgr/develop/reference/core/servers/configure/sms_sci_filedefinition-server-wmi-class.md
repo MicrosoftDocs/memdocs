@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent the basic properties of the site control file in Configuration Manager using SMS_SCI_FileDefinition.
 title: "SMS_SCI_FileDefinition Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: d8a6be76-8006-4237-881e-547b757bce7c
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

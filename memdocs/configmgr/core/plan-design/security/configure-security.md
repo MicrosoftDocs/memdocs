@@ -2,14 +2,15 @@
 title: Configure security
 titleSuffix: Configuration Manager
 description: How to configure security-related options for Configuration Manager.
-ms.date: 05/04/2021
+ms.date: 12/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-ms.assetid: 552e7e3d-e584-4a7c-9155-0f796a14b678
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
+ms.collection: highpri
 ---
 
 # Configure security in Configuration Manager
@@ -62,7 +63,7 @@ For more information on the trusted root key, see [Plan for security](plan-for-s
 
 ### Pre-provision a client with the trusted root key by using a file
 
-1. On the site server, browse to the Configuration Manager installation directory. Open the following file in a text editor: `\bin\mobileclient.tcf`
+1. On the site server, browse to the Configuration Manager installation directory. In the `\bin\<platform>` subfolder, open the following file in a text editor: `mobileclient.tcf`
 
 1. Locate the entry, `SMSPublicRootKey`. Copy the value from that line, and close the file without saving any changes.
 
@@ -77,7 +78,7 @@ For more information on the trusted root key, see [Plan for security](plan-for-s
 
 ### Pre-provision a client with the trusted root key without using a file
 
-1. On the site server, browse to the Configuration Manager installation directory. Open the following file in a text editor: `\bin\mobileclient.tcf`
+1. On the site server, browse to the Configuration Manager installation directory. In the `\bin\<platform>` subfolder, open the following file in a text editor: `mobileclient.tcf`
 
 1. Locate the entry, `SMSPublicRootKey`. Copy the value from that line, and close the file without saving any changes.
 

@@ -9,7 +9,7 @@ ms.date: 06/10/2020
 ms.topic: end-user-help
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.assetid: 9e68de6e-2b33-442b-b674-a382728d9529
+ms.localizationpriority: medium
 ---
 
 # Software Center user guide
@@ -32,7 +32,7 @@ General notes about Software Center functionality:
 
 ## <a name="bkmk_open"></a> How to open Software Center
 
-Software Center is installed automatically on Windows devices that your IT organization manages. For the simplest method to start Software Center on a Windows 10 computer, press **Start** and type `Software Center`. You may not need to type the entire string for Windows to find the best match.
+Software Center is installed automatically on Windows devices that your IT organization manages. For the simplest method to start Software Center, go to **Start** and type `Software Center`. You may not need to type the entire string for Windows to find the best match.
 
 :::image type="content" source="media/start-menu-software-center.png" alt-text="Software Center best match in Start menu":::
 
@@ -196,6 +196,9 @@ Specify how Software Center applies changes to software before the deadline.
 - **Automatically install or uninstall required software and restart the computer only outside of the specified business hours**: This setting is disabled by default.
 
 - **Suspend Software Center activities when my computer is in presentation mode**: This setting is enabled by default.
+
+> [!NOTE]
+> These settings are designed to be managed by end users and do not impact deployment deadlines.
 
 When instructed by your IT admin, select **Sync Policy**. This computer checks with the servers for anything new, such as applications, software updates, or operating systems.
 

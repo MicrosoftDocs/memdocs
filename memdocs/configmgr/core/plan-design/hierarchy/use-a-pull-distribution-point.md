@@ -2,14 +2,14 @@
 title: Pull-distribution point
 titleSuffix: Configuration Manager
 description: Learn about configurations and limitations for using a pull-distribution point with Configuration Manager.
-ms.date: 04/24/2020
+ms.date: 07/15/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 7d8f530b-1a39-4a9d-a2f0-675b516da7e4
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use a pull-distribution point with Configuration Manager
@@ -74,9 +74,9 @@ When you use a pull-distribution point, review and configure the following site 
 
 ## Limitations
 
-- You can't configure a cloud distribution point as a pull-distribution point.  
+- You can't configure a content-enabled cloud management gateway as a pull-distribution point.
 
-- You can't configure the distribution point role on a site server as a pull-distribution point.  
+- You can't configure the distribution point role on a site server as a pull-distribution point.
 
 - The prestage content configuration overrides the pull-distribution point configuration. If you turn on the option to **Enable this distribution point for prestaged content** on a pull-distribution point, it waits for the content. It doesn't pull content from the source distribution point. Like a standard distribution point enabled for prestaged content, it doesn't receive content from the site server. For more information, see [Prestaged content](manage-network-bandwidth.md#BKMK_PrestagingContent).  
 
@@ -103,13 +103,13 @@ When you configure the pull-distribution point, specify one or more source distr
 
 - To use a source distribution point that's configured for HTTPS, install the Configuration Manager client on the pull-distribution point.  
 
-- If your remote offices have a better connection to the internet, or to reduce load on your WAN links, use a [cloud distribution point](use-a-cloud-based-distribution-point.md) in Microsoft Azure as the source. The pull-distribution point needs internet access to communicate with Microsoft Azure. The content must be distributed to the source cloud distribution point.<!--1321554-->  
+- If your remote offices have a better connection to the internet, or to reduce load on your WAN links, use a content-enabled cloud management gateway (CMG) in Microsoft Azure as the source. The pull-distribution point needs internet access to communicate with Microsoft Azure. The content must be distributed to the source CMG.<!--1321554-->  
 
-    > [!Note]  
-    > This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of using a cloud distribution point](use-a-cloud-based-distribution-point.md#bkmk_cost).  
+    > [!NOTE]
+    > This feature does incur charges to your Azure subscription for data storage and network egress. For more information, see the [Cost of CMG](../../clients/manage/cmg/cost.md).
 
-> [!Tip]  
-> When a pull-distribution point downloads content from a source distribution point, that pull-distribution point is counted as a client in the **Client Accessed (Unique)** column of the **Distribution point usage summary** report.  
+> [!TIP]
+> When a pull-distribution point downloads content from a source distribution point, that pull-distribution point is counted as a client in the **Client Accessed (Unique)** column of the **Distribution point usage summary** report.
 
 ### Source priorities
 

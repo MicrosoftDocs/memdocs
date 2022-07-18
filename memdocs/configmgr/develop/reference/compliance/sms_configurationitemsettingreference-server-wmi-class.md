@@ -1,6 +1,7 @@
 ---
 title: "SMS_ConfigurationItemSettingReference Class"
 titleSuffix: "Configuration Manager"
+description: "Provides the rule relationship to the settings that are referenced from different configuration items."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: a44098ad-7baf-4bee-ad5e-240dca2e95bf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

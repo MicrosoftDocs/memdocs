@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a high performance version of SMS StatMsgAttributes Server class with SMS_StatAttr.
 title: "SMS_StatAttr Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 954660ad-f047-4944-90a2-e50f91d1861e
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

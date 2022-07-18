@@ -1,4 +1,5 @@
 ---
+description: Learn how to specify Background Intelligent Transfer settings for client computers using SMS_BITS2Config class.
 title: "SMS_BITS2Config Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 0369ae43-38f0-4dc2-b65f-34fe0f5b93c5
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

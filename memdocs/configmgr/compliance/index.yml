@@ -8,12 +8,15 @@ metadata:
   title: Device compliance documentation
   titleSuffix: Configuration Manager
   description: Configuration Manager gives you the tools and resources you need to manage the configuration and compliance of devices in your organization. 
-  ms.product: configuration-manager
+  ms.prod: configuration-manager
   ms.technology: configmgr-compliance
   ms.topic: landing-page
   author: mestew
   ms.author: mstewart
-  ms.date: 01/25/2020
+  manager: dougeby
+  ms.date: 09/23/2021
+  ms.localizationpriority: high
+
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 
@@ -39,7 +42,7 @@ landingContent:
         links:
           - text: Common tasks for managing compliance
             url: plan-design/common-tasks-for-managing-compliance-on-devices-with-the-client.md
-          - text: Create configuration items for Windows 10 devices
+          - text: Create configuration items for Windows 10 and later devices
             url: deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md
           - text: Create configuration baselines
             url: deploy-use/create-configuration-baselines.md

@@ -1,17 +1,15 @@
 ---
-title: "Create child configuration items"
-titleSuffix: "Configuration Manager"
-description: "Create child configuration items in Configuration Manager."
+title: Create child configuration items
+titleSuffix: Configuration Manager
+description: Create child configuration items in Configuration Manager.
 ms.date: 05/07/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-ms.assetid: 113984fa-6150-41a1-89ed-d2a83b979732
 author: mestew
 manager: dougeby
 ms.author: mstewart
-
-
+ms.localizationpriority: medium
 ---
 # How to create child configuration items in Configuration Manager
 

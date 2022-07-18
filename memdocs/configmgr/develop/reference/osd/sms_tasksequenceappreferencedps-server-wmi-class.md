@@ -1,6 +1,7 @@
 ---
 title: "SMS_TaskSequenceAppReferenceDps Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class that represents a distribution point to which a Configuration Manager application in the task sequence is distributed." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 45bc90d3-77a5-4c99-bdc4-beffbd5c1929
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

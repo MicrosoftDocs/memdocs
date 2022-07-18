@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Use Intune to expedite Windows 10 quality updates - Azure | Microsoft Docs
-description: Use Microsoft Intune policy to expedite the installation of Windows 10 updates on managed devices as soon as possible.
+title: Use Intune to expedite Windows quality updates
+description: Use Microsoft Intune policy to expedite the installation of Windows updates on managed devices as soon as possible.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/19/2021
+ms.date: 06/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,13 +27,13 @@ search.appverid: MET150
 ms.collection: M365-identity-device-management
 ---
 
-# Expedite Windows 10 quality updates in Microsoft Intune
+# Expedite Windows quality updates in Microsoft Intune
 
 *This feature is in public preview.*
 
-With *Windows 10 quality updates* policy, you can expedite the install of the most recent Windows 10 security updates as quickly as possible on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly servicing policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn’t deploy the update for some time.
+With *Quality updates for Windows 10 and Later* policy, you can expedite the install of the most recent Windows 10/11 security updates as quickly as possible on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly servicing policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn’t deploy the update for some time.
 
-Not all updates can be expedited. Currently, only Windows 10 security updates that can be expedited are available to deploy with Windows 10 quality updates policy. To manage regular monthly quality updates, use [Windows 10 update rings policies](../protect/windows-10-update-rings.md).
+Not all updates can be expedited. Currently, only Windows 10/11 security updates that can be expedited are available to deploy with Quality updates policy. To manage regular monthly quality updates, use [Update rings for Windows 10 and later policies](../protect/windows-10-update-rings.md).
 
 ## How expedited updates work
 
@@ -43,7 +43,7 @@ To speed installation, expedite updates uses available services, like WNS and pu
 
 The actual time that a device starts to update depends on the device being online, its scan timing, whether communication channels to the device are functioning, and other factors like cloud-processing time.
 
-- For each expedite update policy you select a single update to deploy based on its release date. By using the release date, you don’t have to create separate policies to deploy different instances of that update to devices that have different versions of Windows 10, like 1809, 1909, and so on.
+- For each expedite update policy you select a single update to deploy based on its release date. By using the release date, you don’t have to create separate policies to deploy different instances of that update to devices that have different versions of Windows, like Windows 10 version 1809, 1909, and so on.
 
 - Windows Update evaluates the build and architecture of each device, and then delivers the version of the update that applies.
 
@@ -54,15 +54,18 @@ The actual time that a device starts to update depends on the device being onlin
   > [!IMPORTANT]
   > In some scenarios, Windows Update can install an update that is more recent than the update you specify in expedite update policy. For more information about this scenario, see [About installing the latest applicable update](#identify-the-latest-applicable-update), later in this article.
 
-- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Windows 10 update rings](../protect/windows-10-update-rings.md) and the setting for **Quality update deferral period**.
+- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Windows update rings](../protect/windows-10-update-rings.md) and the setting for **Quality update deferral period**.
 
 - When a restart is required to complete installation of the update, the policy helps to manage the restart. In the policy, you can configure a period that users have to restart a device before the policy forces an automatic restart. Users can also choose to schedule the restart or let the device try to find the best time outside of the devices *Active Hours*. Before reaching the restart deadline, the device displays notifications to alert device users about the deadline and includes options to schedule the restart.
 
   If a device doesn’t restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from a Windows 10 update rings policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
+- Expedite is not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](../protect/windows-update-settings.md#user-experience-settings).  
 
 ## Prerequisites
+
+> [!IMPORTANT]
+> This feature is not supported on GCC High/DoD cloud environments.
 
 The following are requirements to qualify for installing expedited quality updates with Intune:
 
@@ -70,16 +73,18 @@ The following are requirements to qualify for installing expedited quality updat
 
 In addition to a license for Intune, your organization must have one of the following subscriptions:
 
-- Windows 10 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows 10 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10 Virtual Desktop Access (VDA) per user
+- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows 10/11 Virtual Desktop Access (VDA) per user
 - Microsoft 365 Business Premium
 
-**Supported Windows 10 versions**:
+**Supported Windows 10/11 versions**:
 
-- Windows 10 versions that remain in support for Servicing, on x86 or x64 architecture
+- Windows 10/11 versions that remain in support for Servicing, on x86 or x64 architecture
 
-**Supported Windows 10 editions**:
+Only update builds that are generally available are supported. Preview builds, including the Beta and Dev channels, are not supported with expedited updates.
+
+**Supported Windows 10/11 editions**:
 
 - Professional
 - Enterprise
@@ -112,11 +117,11 @@ In addition to a license for Intune, your organization must have one of the foll
   - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
     - *.notify.windows.com
 
-- Have installed the update described in [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a), or a more recent quality update for a Windows 10 version of 1809 or later. Both options will install the *Update Health Tools*. To confirm the presence of the Update Health Tools on a device, look for the folder **C:\Program Files\Microsoft Update Health Tools**.
+- Be configured to get Quality Updates directly from the Windows Update service.
 
-  To confirm the presence of the Update Health tools, device administrators can use one of the following methods:  
-  - On a device, review *Add Remove Programs* for **Microsoft Update Health Tools**
-  - Run the following PowerShell script:
+- Have the *Update Health Tools* installed, which are installed with [KB 4023057 - Update for Windows 10 Update Service components](https://support.microsoft.com/topic/kb4023057-update-for-windows-10-update-service-components-fccad0ca-dc10-2e46-9ed1-7e392450fb3a). To confirm the presence of the Update Health Tools on a device:
+  - Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Add Remove Programs* for **Microsoft Update Health Tools**.
+  - As an Admin, run the following PowerShell script:
 
     `Get-WmiObject -Class Win32_Product | Where-Object {$_.Name -match "Microsoft Update Health Tools"}`
 
@@ -125,11 +130,11 @@ In addition to a license for Intune, your organization must have one of the foll
 
 **Device settings**:
 
-To help avoid conflicts or configurations that can block installation of expedited updates, configure devices as follows. You can use Intune *Windows 10 update ring* policies to manage these settings.
+To help avoid conflicts or configurations that can block installation of expedited updates, configure devices as follows. You can use Intune *Update rings for Windows 10 and later* policies to manage these settings.
 
 | Update ring setting       | Recommended value        |
 |---------------------------|-------------------------------------|
-| Servicing channel         | **Semi-Annual Channel**  <br><br> Expedite doesn't support additional channels at this time. |
+| Enable pre-release builds | This setting should be set to **Not configured**. Preview builds, including the Beta and Dev channels, are not supported with expedited updates. |
 | Automatic update behavior | **Reset to default**  <br><br> Other values might cause a poor user experience and  slow the process to expedite updates. |
 | Change notification update level | Use any value other than **Turn off all notifications, including restart warnings** |
 
@@ -150,7 +155,7 @@ Before you can monitor results and update status for expedited updates, your Int
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Windows** > **Windows 10 quality updates (preview)** > **Create profile**.
+2. Select **Devices** > **Windows** > **Quality updates for Windows 10 and later (Preview)** > **Create profile**.
 
    :::image type="content" source="./media/windows-10-expedite-updates/create-quality-update-profile.png" alt-text="Screen capture of the Create profile UI":::
 
@@ -163,7 +168,7 @@ Before you can monitor results and update status for expedited updates, your Int
 4. In **Settings**, configure **Expedite installation of quality updates if device OS version less than**. Select the update that you want to expedite from the drop-down list. The list includes only the updates you can expedite.
 
    > [!TIP]
-   > Optional Windows 10 quality updates can’t be expedited and won’t be available to select.
+   > Optional Windows quality updates can’t be expedited and won’t be available to select.
 
    :::image type="content" source="./media/windows-10-expedite-updates/select-update.png" alt-text="Screen capture of update selection UI":::
 
@@ -173,7 +178,7 @@ Before you can monitor results and update status for expedited updates, your Int
 
    - Updates that include the letter **B** in their name identify updates that released as part of a *patch Tuesday* event. The letter B identifies that the update released on the second Tuesday of the month.
 
-   - Security updates for Windows 10 that release out of band from a *patch Tuesday* can be expedited. Instead of the letter B, *out-of-band* patch releases have different identifiers.
+   - Security updates for Windows 10/11 that release out of band from a *patch Tuesday* can be expedited. Instead of the letter B, *out-of-band* patch releases have different identifiers.
 
    - When the update deploys, Windows Update ensures that each device that receives the policy installs a version of the update that applies to that devices architecture and its current Windows version, like version 1809, 2004, and so on.
 
@@ -216,7 +221,7 @@ While expedite update policies will override an update deferral for the update v
 
 ### Example of installing an expedited update
 
-The following sequence of events provides an example of how two devices, named *Test-1* and *Test-2*, install an update based on a *Windows 10 quality update policy* that's assigned to the devices.
+The following sequence of events provides an example of how two devices, named *Test-1* and *Test-2*, install an update based on a *Quality updates for Windows 10 and Later* policy that's assigned to the devices.
 
 1. Each month, Intune administrators deploy the most recent Windows 10 quality updates on the fourth Tuesday of the month. This period gives them two weeks after the patch Tuesday event to validate the updates in their environment before they force installation of the update.
 
@@ -224,7 +229,7 @@ The following sequence of events provides an example of how two devices, named *
 
 3. On the February 9, the Intune admin creates policy to expedite installation of the patch Tuesday release **02/09/2021 – 2021.02 B Security Updates for Windows 10** to help secure company devices against a critical threat that the update resolves. The expedite policy is assigned to a group of devices that includes both *Test-1* and *Test-2*. All devices in that group that are active receive and install the expedited update policy.
 
-4. On the March 9 patch Tuesday event, a new quality update releases as **03/09/2021 – 2021.03 B Security Updates for Windows 10**. There are no critical issues that require an expedited deployment of this update, but admins do find a possible conflict. To provide time to review the possible issue, admins use a Windows 10 update ring policy to create a seven-day deferral policy. All managed devices are prevented from installing this update until March 14.
+4. On the March 9 patch Tuesday event, a new quality update releases as **03/09/2021 – 2021.03 B Security Updates for Windows 10**. There are no critical issues that require an expedited deployment of this update, but admins do find a possible conflict. To provide time to review the possible issue, admins use a Windows update ring policy to create a seven-day deferral policy. All managed devices are prevented from installing this update until March 14.
 
 5. Now consider the following results for *Test-1* and *Test-2*, based on when each is turned back on:
 
@@ -244,7 +249,7 @@ The following sequence of events provides an example of how two devices, named *
 
 ## Manage policies to expedite quality updates
 
-In the admin center, go to **Devices** > **Windows** > **Windows 10 quality updates** and select the policy that you want to manage. The policy opens to its **Overview** pane.
+In the admin center, go to **Devices** > **Windows** > **Quality updates for Windows 10 and later** and select the policy that you want to manage. The policy opens to its **Overview** pane.
 
 From this pane, you can:
 
@@ -310,6 +315,7 @@ This report can help you find devices with alerts or errors and can help you tro
 
 ## Next steps
 
-- Configure [Windows 10 update rings](../protect/windows-10-update-rings.md)
-- Configure [Windows 10 feature updates](../protect/windows-10-feature-updates.md)
-- View [Windows 10 release information](/windows/release-information/)
+- Configure [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)
+- Configure [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
+- Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
+- View [Windows release information](/windows/release-information/)

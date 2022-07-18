@@ -1,6 +1,7 @@
 ---
 title: "DeleteCertificate Method"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the DeleteCertificate WMI class method that deletes the certificate from the database."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 246d0ad5-582b-4c6d-9611-0e200c47f354
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

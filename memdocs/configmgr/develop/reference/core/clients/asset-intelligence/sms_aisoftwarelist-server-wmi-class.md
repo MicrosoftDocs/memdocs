@@ -1,4 +1,5 @@
 ---
+description: Learn how to access all known software titles in the Asset Inteligence catalog using SMS_AISoftwareList.
 title: "SMS_AISoftwareList Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: d00d2f8e-5c03-4f71-8c0f-79445be73374
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

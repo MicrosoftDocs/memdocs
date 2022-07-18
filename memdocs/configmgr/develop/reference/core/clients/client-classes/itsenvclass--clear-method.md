@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the ITSEnvClass::Clear to clear an operating system deployment task sequence environment.
 title: "ITSEnvClass::Clear"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: d33d36ff-c75f-4d79-9c08-223959cc7524
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

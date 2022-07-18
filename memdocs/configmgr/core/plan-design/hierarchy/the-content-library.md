@@ -2,155 +2,84 @@
 title: The content library
 titleSuffix: Configuration Manager
 description: Learn about the content library that Configuration Manager uses to reduce the overall size of distributed content.
-ms.date: 07/31/2019
+ms.date: 08/02/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 65c88e54-3574-48b0-a127-9cc914a89dca
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # The content library in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-The content library is a single-instance store of content in Configuration Manager. The site uses it to reduce the overall size of the combined body of content that you distribute. The content library stores all content files for software deployments, for example: software updates, applications, and OS deployments.  
+The content library is a single-instance store of content in Configuration Manager. The site uses it to reduce the overall size of the combined body of content that you distribute. The content library stores all content files for software deployments, for example: software updates, applications, and OS deployments.
 
-- The site automatically creates and maintains a copy of the content library on each site server and each distribution point.  
+- The site automatically creates and maintains a copy of the content library on each site server and each distribution point.
 
-- Before Configuration Manager adds content files to the site server or copies the files to distribution points, it verifies whether each content file is already in the content library.  
+- Before Configuration Manager adds content files to the site server or copies the files to distribution points, it verifies whether each content file is already in the content library.
 
-- If the content file is available, Configuration Manager doesn't copy the file. It instead associates the existing content file with the application or package.  
+- If the content file is available, Configuration Manager doesn't copy the file. It instead associates the existing content file with the application or package.
 
 On distribution point servers, configure the following options:
 
-- One or more disk drives on which you want to create the content library.  
+- One or more disk drives on which you want to create the content library.
 
-- A priority for each drive that you use.  
+- A priority for each drive that you use.
 
-Configuration Manager copies content files to the drive with the highest priority until that drive contains less than a minimum amount of free space that you specify.  
+Configuration Manager copies content files to the drive with the highest priority until that drive contains less than a minimum amount of free space that you specify.
 
-- You configure the drive settings during the distribution point installation.  
+- You configure the drive settings during the distribution point installation.
 
-- You can't configure the drive settings in the distribution point properties after the installation has finished.  
+- You can't configure the drive settings in the distribution point properties after the installation has finished.
 
-For more information about how to configure the drive settings for the distribution point, see [Manage content and content infrastructure](../../servers/deploy/configure/manage-content-and-content-infrastructure.md).  
+For more information about how to configure the drive settings for the distribution point, see [Manage content and content infrastructure](../../servers/deploy/configure/manage-content-and-content-infrastructure.md).
 
-> [!IMPORTANT]
-> To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer** tool in the Configuration Manager tools. For more information, see the [Content Library Transfer tool](../../support/content-library-transfer.md).  
+> [!NOTE]
+> To move the content library to a different location on a distribution point after the installation, use the **Content Library Transfer** tool in the Configuration Manager tools. For more information, see the [Content Library Transfer tool](../../support/content-library-transfer.md).
 
+## About the content library on the CAS
 
-## About the content library on the central administration site
+By default, Configuration Manager creates a content library on the central administration site (CAS) when the site is installed. The content library is placed on the drive of the site server that has the most free disk space. Because you can't install a distribution point on the CAS, you can't prioritize the drives for use by the content library. Similar to the content library on other site servers and on distribution points, when the drive that contains the content library runs out of available disk space, the content library automatically spans to the next available drive.
 
-By default, Configuration Manager creates a content library on the central administration site when the site is installed. The content library is placed on the drive of the site server that has the most free disk space. Because you can't install a distribution point on the central administration site, you can't prioritize the drives for use by the content library. Similar to the content library on other site servers and on distribution points, when the drive that contains the content library runs out of available disk space, the content library automatically spans to the next available drive.  
+Configuration Manager uses the content library on the CAS in the following scenarios:
 
-Configuration Manager uses the content library on the central administration site in the following scenarios:  
+- You create content on the CAS.
 
-- You create content on the central administration site  
+- You migrate content from another Configuration Manager site, and assign the CAS as the site that manages that content.
 
-- You migrate content from another Configuration Manager site, and assign the central administration site as the site that manages that content  
+> [!NOTE]
+> When you create content at a primary site, and then distribute it to a different primary site or a secondary site below a different primary site, the CAS temporarily stores that content in its scheduler inbox. It doesn't add that content to its content library.
 
-> [!NOTE]  
-> When you create content at a primary site and then distribute it to a different primary site or a secondary site below a different primary site, the central administration site temporarily stores that content in the scheduler inbox on the central administration site but doesn't add that content to its content library.  
+Use the following options to manage the content library on the CAS:
 
-Use the following options to manage the content library on the central administration site:  
+- To prevent the content library from being installed on a specific drive, create an empty file named **NO_SMS_ON_DRIVE.SMS**. Copy it to the root of the drive before the content library is created.
 
-- To prevent the content library from being installed on a specific drive, create an empty file named **NO_SMS_ON_DRIVE.SMS**. Copy it to the root of the drive before the content library is created.  
+- After the content library has been created, use the **Content Library Transfer** tool from the Configuration Manager tools to manage the location of the content library. For more information, see the [Content Library Transfer tool](../../support/content-library-transfer.md).
 
-- After the content library has been created, use the **Content Library Transfer** tool from the Configuration Manager tools to manage the location of the content library. For more information, see the [Content Library Transfer tool](../../support/content-library-transfer.md).  
-
-> [!Note]  
-> Cloud distribution points don't use single-instance storage. The site encrypts packages before sending to Azure, and each package has a unique encrypted key. Even if two files were identical, the encrypted versions wouldn't be the same.  
-
-
-## <a name="bkmk_remote"></a> Configure a remote content library for the site server
-
-<!--1357525-->
-Starting in version 1806, to configure [site server high availability](../../servers/deploy/configure/site-server-high-availability.md) or to free up hard drive space on your central administration or primary site servers, relocate the content library to another storage location. Move the content library to another drive on the site server, a separate server, or fault-tolerant disks in a storage area network (SAN). A SAN is recommended, because it's highly available, and provides elastic storage that grows or shrinks over time to meet your changing content requirements. For more information, see [High availability options](../../servers/deploy/configure/site-server-high-availability.md).
-
-A remote content library is a prerequisite for [site server high availability](../../servers/deploy/configure/site-server-high-availability.md).
-
-> [!Note]  
-> This action only moves the content library on the site server. It doesn't impact the location of the content library on distribution points. 
-
-> [!Tip]  
-> Also plan for managing package source content, which is external to the content library. Every software object in Configuration Manager has a package source on a network share. Consider centralizing all sources to a single share, but make sure this location is redundant and highly available.
->
-> If you move the content library to the same storage volume as your package sources, you can't mark this volume for data deduplication. While the content library supports data deduplication, the package sources volume doesn't support it. For more information, see [Data deduplication](../configs/support-for-windows-features-and-networks.md#bkmmk_datadedup).<!--SCCMDOcs issue #831-->  
-
-### Prerequisites  
-
-- The site server computer account needs **Full control** permissions to the network path to which you're moving the content library. This permission applies to both the share and the file system. No components are installed on the remote system.
-
-- The site server can't have the distribution point role. The distribution point also uses the content library, and this role doesn't support a remote content library. After moving the content library, you can't add the distribution point role to the site server.  
-
-- The remote system for the content library needs to be in a trusted domain.
-
-> [!Important]  
-> Don't reuse a shared network location between multiple sites. For example, don't use the same path for both a central administration site and a child primary site. This configuration has the potential to corrupt the content library, and require you to rebuild it.<!--SCCMDocs-pr issue 2764-->  
-
-### Process to manage the content library
-
-1. Create a folder in a network share as the target for the content library. For example, `\\server\share\folder`.  
-
-    > [!Warning]  
-    > Don't reuse an existing folder with content. For example, don't use the same folder as your package sources. Before copying the content library, Configuration Manager removes any existing content from the location you specify.  
-
-2. In the Configuration Manager console, switch to the **Administration** workspace. Expand **Site Configuration**, select the **Sites** node, and select the site. On the **Summary** tab at the bottom of the details pane, notice a new column for the **Content Library**.  
-
-3. Select **Manage Content Library** on the ribbon.  
-
-4. In the Manage Content Library window, the **Current Location** field shows the local drive and path. Enter a valid network path for the **New Location**. This path is the location to which the site moves the content library. It must include a folder name that already exists on the share, for example, `\\server\share\folder`. Select **OK**.  
-
-5. Note the **Status** value in the Content Library column on the Summary tab of the details pane. It updates to show the site's progress in moving the content library.  
-
-   - While **In progress**, the **Move Progress (%)** value displays the percentage complete.  
-
-        > [!Note]  
-        > If you have a large content library, you may see `0%` progress in the console for a while. For example, with a 1 TB library, it has to copy 10 GB before it shows `1%`. Review **distmgr.log**, which shows the number of files and bytes copied. Starting in version 1810, the log file also shows an estimated time remaining.
-
-   - If there's an error state, the status displays the error. Common errors include **access denied** or **disk full**.  
-
-   - When complete it displays **Complete**.  
-
-     See the **distmgr.log** for details. For more information, see [Site server and site system server logs](log-files.md#BKMK_SiteSiteServerLog).  
-
-     > [!NOTE]  
-     > Starting in version 2010, you can enable verbose logging to troubleshoot content library move process by setting the following registry key on the site server: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP, LibraryMoveVerboseLog = 1 (REG_DWORD)`.  
-
-For more information on this process, see [Flowchart - Manage content library](manage-content-library-flowchart.md).
-
-The site actually *copies* the content library files to the remote location. This process doesn't delete the content library files at the original location on the site server. To free up space, an administrator must manually delete these original files.
-
-If the original content library spans two drives, it's merged into a single folder at the new destination.
-
-Starting in version 1810, during the copy process, the **Despooler** and **Distribution manager** components don't process new packages. This action makes sure that content isn't added to the library while it's moving. Regardless, schedule this change during a system maintenance.
-
-If you need to move the content library back to the site server, repeat this process, but enter a local drive and path for the **New Location**. It must include a folder name that already exists on the drive, for example, `D:\SCCMContentLib`. When the original content still exists, the process quickly moves the configuration to the location local to the site server.
-
-> [!Tip]  
-> To move the content to another drive on the site server, use the **Content Library Transfer** tool. For more information, see the [Content Library Transfer tool](../../support/content-library-transfer.md).  
-
+> [!NOTE]
+> Content-enabled cloud management gateways don't use single-instance storage. The site encrypts packages before sending to Azure, and each package has a unique encrypted key. Even if two files were identical, the encrypted versions wouldn't be the same.
 
 ## Inside the content library
 
-> [!Warning]  
+> [!WARNING]
 > The following section is provided for informational purposes only. Don't alter, add, or remove any files or folders in the content library. Doing so could corrupt packages, contents, or the content library as a whole. If you suspect any missing, corrupt, or otherwise invalid data, use the validation feature in the Configuration Manager console to detect such issues. Then redistribute the affected content to correct the issues.
 
-By default, the content library is stored on the root of a drive in a folder called **SCCMContentLib**. This folder is shared by default as **SCCMContentLib$**. The folder and share have restricted permissions to prevent accidental damage. All changes should be made from the Configuration Manager console. Within this folder are the following objects:  
+By default, the content library is stored on the root of a drive in a folder called **SCCMContentLib**. This folder is shared by default as **SCCMContentLib$**. The folder and share have restricted permissions to prevent accidental damage. All changes should be made from the Configuration Manager console. Within this folder are the following objects:
 
-- The package library (**PkgLib** folder): Information about what packages are present on the distribution point.  
+- The package library (**PkgLib** folder): Information about what packages are present on the distribution point.
 
-- The data library (**DataLib** folder): Information about the original structure of the packages.  
+- The data library (**DataLib** folder): Information about the original structure of the packages.
 
-- The file library (**FileLib** folder): The original files in the package. This folder is typically what uses the bulk of the storage.  
+- The file library (**FileLib** folder): The original files in the package. This folder is typically what uses the bulk of the storage.
 
-![Diagram overview of Configuration Manager content library](media/content-library-overview.png)
+:::image type="content" source="media/content-library-overview.png" alt-text="Diagram overview of Configuration Manager content library." lightbox="media/content-library-overview.png":::
 
-> [!Tip]  
-> Use the **Content Library Explorer** tool from the Configuration Manager tools to browse the contents of the content library. You can't use this tool to modify the contents. It provides insight into what's present, as well as allowing validation and redistribution. For more information, see the [Content Library Explorer](../../support/content-library-explorer.md).  
+> [!TIP]
+> Use the **Content Library Explorer** tool from the Configuration Manager tools to browse the contents of the content library. You can't use this tool to modify the contents. It provides insight into what's present, as well as allowing validation and redistribution. For more information, see the [Content Library Explorer](../../support/content-library-explorer.md).
 
 ### Package library
 
@@ -182,19 +111,26 @@ You specify a reserve space amount during configuration. Configuration Manager a
 
 You can't specify that a distribution point should use all drives except for a specific set. Prevent this behavior by creating an empty file on the root of the drive, called `NO_SMS_ON_DRIVE.SMS`. Place this file before Configuration Manager selects the drive for use. If Configuration Manager detects this file on the root of the drive, it doesn't use the drive for the content library.
 
+## Troubleshoot
 
-## Troubleshooting
+The following tips may help you troubleshoot issues with the content library:
 
-The following tips may help you troubleshoot issues with the content library:  
+- Review the logs on the site server (**distmgr.log** and **PkgXferMgr.log**) and the distribution point (**smsdpprov.log**) for any pointers to the failures.
 
-- Review the logs on the site server (**distmgr.log** and **PkgXferMgr.log**) and the distribution point (**smsdpprov.log**) for any pointers to the failures.  
+- Use the [Content Library Explorer](../../support/content-library-explorer.md) tool.
 
-- Use the [Content Library Explorer](../../support/content-library-explorer.md) tool.  
+- Check for file locks by other processes, such as antivirus software. Exclude the content library on all drives from automatic antivirus scans, as well as the temporary staging directory, **SMS_DP$**, on each drive.
 
-- Check for file locks by other processes, such as antivirus software. Exclude the content library on all drives from automatic antivirus scans, as well as the temporary staging directory, **SMS_DP$**, on each drive.  
+- To see if there are any hash mismatches, validate the package from the Configuration Manager console.
 
-- To see if there are any hash mismatches, validate the package from the Configuration Manager console.  
+- As a last option, redistribute the content. This action should resolve most issues.
 
-- As a last option, redistribute the content. This action should resolve most issues.  
+For more in-depth information, see [Understand and troubleshoot content distribution](/troubleshoot/mem/configmgr/content-distribution-introduction).
 
-For more in-depth information, see [Understanding and troubleshooting content distribution in Configuration Manager](https://support.microsoft.com/help/4482728/understand-troubleshoot-content-distribution-in-configuration-manager).
+## Next steps
+
+<a name="bkmk_remote"></a><!-- Keeping anchor to help redirect external sources that saved a link -->
+
+[Configure a remote content library for the site server](remote-content-library.md)
+
+[Flowchart - Manage content library](manage-content-library-flowchart.md)

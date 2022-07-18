@@ -1,4 +1,5 @@
 ---
+description: Learn how to use SMS_RbacSecuredObject class, in Configuration Manager, that represents the RBAC Security Object.
 title: "SMS_RbacSecuredObject Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 5e6e53ef-623c-479d-91d3-35b5710a0541
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

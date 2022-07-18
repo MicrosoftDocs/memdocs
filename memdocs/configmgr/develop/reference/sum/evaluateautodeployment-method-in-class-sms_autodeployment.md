@@ -1,6 +1,7 @@
 ---
 title: "EvaluateAutoDeployment Method"
 titleSuffix: "Configuration Manager"
+description: "The EvaluateAutoDeployment WMI class method evaluates an automatic deployment."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 32bab1a1-8484-4936-bcb1-c928bc5f2136
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

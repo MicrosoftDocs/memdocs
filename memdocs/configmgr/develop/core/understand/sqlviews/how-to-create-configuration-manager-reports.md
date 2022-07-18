@@ -1,4 +1,4 @@
-﻿---
+---
 title: How to create reports
 titleSuffix: Configuration Manager
 description: Information about how to create two types of reports directly from the Configuration Manager console.
@@ -12,15 +12,17 @@ ms.assetid: 3b07899b-2301-475b-9803-5ec5a82b5aa1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 ---
 
 # How to create Configuration Manager reports
 
 You can create two types of reports directly from the Configuration Manager console:
 
-- **Model-based report** – Allows you to create a report based on a Reporting Services model and select the attributes to be included with Report Builder.
+- **Model-based report** � Allows you to create a report based on a Reporting Services model and select the attributes to be included with Report Builder.
 
-- **SQL-based report** – Allows you to create a traditional report based directly off the database views by using SQL statements and stored procedures.
+- **SQL-based report** � Allows you to create a traditional report based directly off the database views by using SQL statements and stored procedures.
 
 ## To create a new model-based report
 

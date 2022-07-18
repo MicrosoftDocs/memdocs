@@ -9,7 +9,9 @@ ms.assetid: 85b50703-f51d-470b-9d9f-4d065c2bcb88
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
-
+ms.localizationpriority: null
+ms.collection: openauth
+description: Learn about how to remove a category from a Windows driver by modifying the CategoryInstance_UniqueIDs array property.
 
 ---
 # How to Remove a Category from a Windows Driver

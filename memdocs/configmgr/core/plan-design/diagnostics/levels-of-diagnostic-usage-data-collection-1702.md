@@ -1,16 +1,16 @@
 ---
-title: "Diagnostic data for 1702"
-titleSuffix: "Configuration Manager"
-description: "Learn about the levels of diagnostics and usage data that Configuration Manager version 1702 collects."
+title: Diagnostic data for 1702
+titleSuffix: Configuration Manager
+description: Learn about the levels of diagnostics and usage data that Configuration Manager version 1702 collects.
 ms.date: 03/27/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-ms.assetid: d43ab033-2902-4681-8716-b4b17a6df372
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
 ROBOTS: NOINDEX
+ms.localizationpriority: medium
 ---
 
 # Levels of diagnostic usage data collection for version 1702 of Configuration Manager

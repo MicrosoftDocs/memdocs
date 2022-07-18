@@ -1,5 +1,6 @@
 ---
 title: "SMS_Alert Class"
+description: The SMS_Alert class is an SMS Provider server class that represents general alerts, which exclude client status alerts and System Center Endpoint Protection alerts.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: bbf073bd-7b90-4ada-b962-e3f905a86ccf
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

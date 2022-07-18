@@ -1,4 +1,5 @@
 ---
+description: Learn how to use the Configuration Manager with the CreateIdentity method to create a PXE certificate identity that is used in the client configuration file.
 title: "IPxeAuthClass::ReadIdentity"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 35cbac5e-9acf-45fb-a4a4-392196df8776
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,23 +1,26 @@
 ---
-title: "How to Define the AppSynclet MOF File"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: How to Define the AppSynclet MOF File
+description: To define a custom synclet MOF file, create an instance of the CCM_AppHandlers class.
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: ac9193e8-f6c8-4acf-ba1f-95e95d54d4ad
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
 # How to Define the AppSynclet MOF File
-To define a custom synclet MOF file, create an instance of the CCM_AppHandlers class. The new class instance will identify the custom client-side handler.  Also, create instances of the CCM_HandlerSynclet class to store detect, install and uninstall property values.  
+To define a custom synclet MOF file, create an instance of the CCM_AppHandlers class. The new class instance will identify the custom client-side handler.  Also, create instances of the CCM_HandlerSynclet class to store, detect, install and uninstall property values.  
 
  The client extension maps closely to the Installer object, defined as part of the DeploymentType. Property values are stored in WMI and the public COM methods in the client-side handler map to detection, installation and uninstallation.  
 
- In this example, a new custom synclet MOF file is required for Remote Desktop Protocol (RDP) files.  Support for RDP files is not built-in to Configuration Manager, so a custom synclet MOF file is required.  
+ In this example, a new custom synclet MOF file is required for Remote Desktop Protocol (RDP) files.  Support for RDP files isn't built-in to Configuration Manager, so a custom synclet MOF file is required.  
 
 ### To define a custom synclet MOF file  
 

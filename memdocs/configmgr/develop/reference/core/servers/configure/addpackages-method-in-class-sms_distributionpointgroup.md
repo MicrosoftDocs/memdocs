@@ -1,6 +1,7 @@
 ---
 title: "AddPackages Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that assigns a set of packages to the distribution point group."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: d9ef0822-0931-4459-b121-49d953b0a233
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

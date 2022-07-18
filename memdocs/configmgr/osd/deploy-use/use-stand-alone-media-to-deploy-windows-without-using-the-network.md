@@ -6,10 +6,10 @@ ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
-ms.assetid: 58a0d2ae-de76-401f-b854-7a5243949033
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Use standalone media to deploy Windows without using the network
@@ -48,18 +48,27 @@ When you use standalone media, Configuration Manager doesn't support the followi
 
 - Dynamic application installs with the [Install Application](../understand/task-sequence-steps.md#BKMK_InstallApplication) step.
 
-> [!NOTE]
-> If your task sequence to deploy an OS includes the **Install Package** step, and you create the standalone media at a central administration site (CAS), an error might occur. The CAS doesn't have the necessary client configuration policies to enable the software distribution agent when the task sequence runs. The following error might appear in the **CreateTsMedia.log** file:
->
-> `"WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)"`
->
-> For standalone media that includes an **Install Package** step, create the standalone media at a primary site that has the software distribution agent enabled
->
-> Alternatively, edit the task sequence to add a [Run Command Line](../understand/task-sequence-steps.md#BKMK_RunCommandLine) step after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step. This **Run Command Line** step runs the following WMI command to enable the software distribution agent before the first **Install Package** step runs:
->
-> ```command
-> WMIC /namespace:\\root\ccm\policy\machine\requestedconfig path ccm_SoftwareDistributionClientConfig CREATE ComponentName="Enable SWDist", Enabled="true", LockSettings="TRUE", PolicySource="local", PolicyVersion="1.0", SiteSettingsKey="1" /NOINTERACTIVE
-> ```
+#### Known issue with Install Package step and media created at the central administration site
+
+An error might occur if your task sequence includes the [Install Package](../understand/task-sequence-steps.md#BKMK_InstallPackage) step and you create the stand-alone media at a central administration site (CAS). The CAS doesn't have the necessary client configuration policies. These policies are required to enable the software distribution agent when the task sequence runs. The following error might appear in the **CreateTsMedia.log** file: `WMI method SMS_TaskSequencePackage.GetClientConfigPolicies failed (0x80041001)`
+
+For stand-alone media that includes an **Install Package** step, create the stand-alone media at a primary site that has the software distribution agent enabled.
+
+Alternatively, use a custom [Run PowerShell Script](../understand/task-sequence-steps.md#BKMK_RunPowerShellScript) step. Add it after the [Setup Windows and ConfigMgr](../understand/task-sequence-steps.md#BKMK_SetupWindowsandConfigMgr) step and before the first **Install Package** step. The **Run PowerShell Script** step runs the following commands to enable the software distribution agent before the first Install Package step:
+
+```powershell
+$namespace = "root\ccm\policy\machine\requestedconfig"
+$class = "CCM_SoftwareDistributionClientConfig"
+$classArgs = @{
+    ComponentName = 'Enable SWDist'
+    Enabled = 'true'
+    LockSettings='TRUE'
+    PolicySource='local'
+    PolicyVersion='1.0'
+    SiteSettingsKey='1'
+}
+Set-WmiInstance -Namespace $namespace -Class $class -Arguments $classArgs -PutType CreateOnly
+```
 
 ## Configure deployment settings
 

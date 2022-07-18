@@ -1,6 +1,7 @@
 ---
 title: "SMS_StatMsg Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_StatMsg WMI class is a high-performance version of SMS_StatusMessage Server WMI Class."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 45d6f901-e4a9-4ae6-8715-7687c26d89b3
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

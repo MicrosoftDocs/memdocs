@@ -2,15 +2,14 @@
 title: Startup performance in Endpoint Analytics
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about device startup performance in Endpoint Analytics
-ms.date: 02/25/2021
+ms.date: 03/31/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-ms.assetid: bdf15dfd-8a09-46f4-8a09-6200a67e3fe7
 author: mestew
 ms.author: mstewart
 manager: dougeby
-
+ms.localizationpriority: high
 ---
 
 # <a name="bkmk_bp"></a> Startup performance
@@ -20,17 +19,17 @@ The startup performance score helps IT get users from power-on to productivity q
 ## <a name="bkmk_prereq"></a> Prerequisites
 
 For devices enrolled via Intune, Startup performance insights are only available for:
-- Devices running version 1903 or later of Windows 10 Enterprise, Education, or Pro editions.
+- Devices running an Enterprise, Professional, or Education edition of Windows 10 version 1903 or later.
    - Windows 10 Pro versions 1903 and 1909 require [KB4577062](https://support.microsoft.com/help/4577062/windows-10-update-kb4577062). <!--8392089, 8389021-->
    - Windows 10 Pro versions 2004 and 20H2 require [KB4577063](https://support.microsoft.com/help/4577063/windows-10-update-kb4577063). <!--8392089, 8389021-->
-   - Windows 10 long-term servicing channel (LTSC) and Home editions aren't currently supported.
+   - Long-term servicing channel (LTSC) and Home editions aren't currently supported.
 - The devices must be Azure AD joined or hybrid Azure AD joined.
    - Workplace joined machines aren't currently supported.
 
 For devices that do not meet the above criteria, you are able to [enroll via Configuration Manager](enroll-configmgr.md).
 
 > [!Important]
-> Client devices require a restart to fully enable all analytics. <!--7698085-->
+> Client devices require a restart to fully enable all analytics. <!--7698085--> The retention period for device boot and sign-in events is 29 days. If a device has not uploaded a boot or sign-in event in the past 29 days, it will not appear in the Startup performance report.
 ## <a name="bkmk_score"></a> Startup score
 
 [!INCLUDE [Endpoint analytics startup score](includes/startup-score.md)]
@@ -48,7 +47,7 @@ The **Startup performance** page also provides a prioritized list of **Insights 
 
 Startup performance provides an insight on the number of devices on which the boot drive is a hard disk. Hard disk drives typically result in boot times three to four times longer than solid-state drives. We also report the expected improvement to start up performance you would gain by moving to solid-state drives.
 
-Click though to see the list of devices that have hard disk drives. The recommended action is to upgrade these devices to solid-state drives.
+Click through to see the list of devices that have hard disk drives. The recommended action is to upgrade these devices to solid-state drives.
 
 ### <a name="bkmk_gp"></a> Group Policy
 
@@ -56,7 +55,7 @@ Startup performance provides an insight on the number of devices that have delay
 
 If you click through to a particular device, you can see its boot and sign-in history. The history helps you determine if the issue is a regression and when it might have occurred.
 
-While there are many articles on how to optimize Group Policies performance, you may choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](../intune/protect/security-baselines.md) and the soon-to-be-released Policy Analytics tool.
+While there are many articles on how to optimize Group Policies performance, you may choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](../intune/protect/security-baselines.md) and [Group Policy analytics](../intune/configuration/group-policy-analytics.md).
 
 ### <a name="bkmk_sb"></a> Slow boot and sign-in times
 
@@ -75,7 +74,11 @@ The **Startup performance** page has reporting tabs that provide support for the
    - **Median delay**: The median delay time of the process for the counted devices.
    - **Total delay**: The sum of the delays for all of the counted devices.
 
+## Known issues
+
+[!INCLUDE [Endpoint analytics export to csv value mapping known issue](includes/known-issue-csv-mapping.md)]
+
 ## Next steps
 
-- View [Recommended software](recommended-software.md).
+- Use the [Work from anywhere report](work-from-anywhere.md).
 - Use [Proactive remediations](proactive-remediations.md) to help fix common support issues before end-users notice issues.

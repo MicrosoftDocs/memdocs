@@ -2,14 +2,14 @@
 title: Supported SQL Server versions
 titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
-ms.date: 09/30/2020
+ms.date: 04/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.assetid: 35e237b6-9f7b-4189-90e7-8eca92ae7d3d
 author: mestew
 ms.author: mstewart
 manager: dougeby
+ms.localizationpriority: medium
 ---
 
 # Supported SQL Server versions for Configuration Manager
@@ -74,7 +74,7 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 ### SQL Server 2019: Standard, Enterprise
 
-Starting with Configuration Manager version 1910, you can use this version with cumulative update 5 (CU5) or later, as long as your cumulative update version is supported by the SQL Server lifecycle. CU5 is the minimum requirement for SQL Server 2019 as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
+You can use this version with cumulative update 5 (CU5) or later, as long as your cumulative update version is supported by the SQL Server lifecycle. CU5 is the minimum requirement for SQL Server 2019 as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
 
 You can use this version of SQL Server for the following sites:
 
@@ -111,9 +111,12 @@ You can use this version with the minimum service pack and cumulative update sup
 
 You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
-- A central administration site  
-- A primary site  
-- A secondary site  
+- A central administration site
+- A primary site
+- A secondary site
+
+> [!IMPORTANT]
+> Starting in version 2107, support for SQL Server 2012 is deprecated.<!--10092858--> Its support lifecycle ends in July 2022. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
 
 ### SQL Server 2017 Express
 
@@ -138,7 +141,10 @@ You can use this version with the minimum service pack and cumulative update sup
 
 You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
-- A secondary site  
+- A secondary site
+
+> [!IMPORTANT]
+> Starting in version 2107, support for SQL Server 2012 is deprecated.<!--10092858--> Its support lifecycle ends in July 2022. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
 
 ## <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server
 
@@ -175,7 +181,7 @@ To identify the SQL Server cardinality estimation compatibility level in use for
 SELECT name, compatibility_level FROM sys.databases
 ```
 
-For more information on SQL Server Compact Edition (CE) compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
+For more information on SQL Server compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 ### SQL Server features
 

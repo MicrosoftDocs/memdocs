@@ -5,8 +5,8 @@ title: Move Android devices from device administrator to personally-owned work p
 titleSuffix: Microsoft Intune
 description: Move Android devices from device administrator to personally-owned work profile management in Intune.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 03/20/2020
 ms.topic: how-to
@@ -43,7 +43,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 - Users must have [Android device administrator enrolled devices](android-enroll-device-administrator.md) with Android Company Portal version 5.0.4720.0 or later.
 - Set up Android personally-owned work profile management by [connecting your Intune tenant account to your Android Enterprise account](connect-intune-android-enterprise.md).
 - [Set Android Enterprise personally-owned work profile enrollment](android-work-profile-enroll.md) for the group of users who are moving to personally-owned work profile.
-- Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity so that the users can enroll into personally-owned work profile management.
+- Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity. This increase is so that the users can enroll into personally-owned work profile management.
   - [Configure Azure Active Directory device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for Maximum number of devices per user.
   - Adjust the [Intune device limit restrictions](enrollment-restrictions-set.md#create-a-device-limit-restriction) by setting the Device limit. 
 
@@ -62,17 +62,15 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
     ![Block devices](./media/android-move-device-admin-work-profile/block-devices.png)
 
-5. On the **Locations** page, you can add locations if you want > **Next**.
-
-6. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
+5. On the **Actions for noncompliance** tab, you can configure the [available actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) to customize the end-user experience for this flow.
 
     ![Noncompliance actions](media/android-move-device-admin-work-profile/noncompliance-actions.png)
 
     Some actions to consider include:
 
-    - **Mark device noncompliant**: By default, this action is set to zero (0) days, marking devices as noncompliant immediately. Changing this to a greater number of days provides users with a grace period in which they can see the flow to move to personally-owned work profile management without yet being marked noncompliant. For example, setting this action to 14 days would give users two weeks to move from device administrator to work profile management without the risk of losing access to resources.
+    - **Mark device noncompliant**: By default, this action is set to zero (0) days, marking devices as noncompliant immediately. You can increase the number of days to give users a grace period. During this grace period they can see the flow to move to personally-owned work profile management without yet being marked noncompliant. For example, you can set this action to 14 days to give users the time to move from device administrator to work profile management without the risk of losing access to resources.
     - **Send push notification to end user**: Configure this action to send push notifications to the device administrator devices. When a user selects the notification, it will launch the Android Company Portal to the **Update device settings** page where they can start the flow to move to personally-owned  work profile management.
-    - **Send email to end user**: Configure this action to send emails to users about the move from device administrator to personally-owned work profile management. In the email, you can include the following URL, which when selected, will launch the Android Company Portal to the Update device settings page where they can start the flow to move to work profile management.
+    - **Send email to end user**: Use this action to notify users about the move from device administrator to personally-owned work profile management. In the email, you can include the following URL. When this URL is selected, it launches the Android Company Portal to the Update device settings page. From this page, they can start the flow to move to work profile management.
       - `https://portal.manage.microsoft.com/UpdateSettings.aspx`.
       - For US government, you can use this link instead: `https://portal.manage.microsoft.us/UpdateSettings.aspx`.
   
@@ -83,17 +81,19 @@ When users see that they're out of compliance for this reason, they can tap **Re
 
     Choose **Next**.
 
-7. On the **Scope tags** page, select any scope tags you want to include.
-8. On the **Assignments** page, assign the policy to a group that has devices enrolled with device administrator management > **Next**.
-9. On the **Review + create** page, confirm all your settings and then select **Create**.
+6. On the **Scope tags** page, select any scope tags you want to include.
+7. On the **Assignments** page, assign the policy to a group that has devices enrolled with device administrator management > **Next**.
+8. On the **Review + create** page, confirm all your settings, and then select **Create**.
 
 ## Troubleshooting
 
-The [end user flow to move to new device management setup](../user-help/move-to-new-device-management-setup.md) guides users through unenrolling from device administrator management and getting set up with personally-owned work profile management. Users must have [Android device administrator enrolled devices](android-enroll-device-administrator.md) with Android Company Portal version 5.0.4720.0 or later.
+The [end user flow to move to new device management setup](../user-help/move-to-new-device-management-setup.md) guides users through unenrolling from device administrator management. It also helps users get set up with personally-owned work profile management. Users must have [Android device administrator enrolled devices](android-enroll-device-administrator.md) with Android Company Portal version 5.0.4720.0 or later.
 
 ### User sees an error after tapping Resolve
+
 If users see an error after tapping the **Resolve** button, it's likely because of one of these reasons:
-- Personally-owned work profile enrollment isn't set up correctly (either an Android Enterprise account isn't connected or enrollment restrictions are set to block personally-owned work profile enrollment).
+
+- Personally-owned work profile enrollment isn't set up correctly. Either an Android Enterprise account isn't connected or enrollment restrictions are set to block personally-owned work profile enrollment.
 - The device is running Android 4.4 or earlier, which doesn't support personally-owned work profile enrollment. 
 - The device manufacturer doesn't support personally-owned work profile enrollment on the device model.
 

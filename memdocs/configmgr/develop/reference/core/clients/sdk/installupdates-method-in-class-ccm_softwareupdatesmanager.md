@@ -1,6 +1,7 @@
 ---
 title: "InstallUpdates Method"
 titleSuffix: "Configuration Manager"
+description: "A Windows Management Instrumentation class method that installs software updates, which have been deployed to the client computer." 
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 32d00893-e70c-4dbf-b864-ed828b7d9487
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

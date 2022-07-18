@@ -1,4 +1,5 @@
 ---
+description: Learn how to delete all members, that is, resources and discovery data, for a collection using the DeleteAllMembers class method.
 title: "DeleteAllMembers Method"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: ae1b7baf-751d-49ab-9188-72d1816cd852
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

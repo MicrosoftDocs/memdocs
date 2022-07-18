@@ -1,6 +1,7 @@
 ---
 title: "SMS_MDMCorpEnrollmentProfiles Class"
 titleSuffix: "Configuration Manager"
+description: "An SMS Provider server class, in Configuration Manager, that represents On-premises Mobile Device Management (MDM) corporate enrollment profiles."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 7e56a838-3a52-45c7-9f6d-62e2a199ea94
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

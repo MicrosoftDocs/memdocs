@@ -5,8 +5,8 @@ title: iOS/iPadOS device enrollment - Apple Configurator-Setup Assistant
 titleSuffix: Microsoft Intune
 description: Learn how to use the Apple Configurator to enroll corporate-owned iOS/iPadOS devices with Setup Assistant.
 keywords:
-author: ErikjeMS 
-ms.author: erikje
+author: Lenewsad
+ms.author: lanewsad
 manager: dougeby
 ms.date: 05/04/2018
 ms.topic: how-to
@@ -26,19 +26,21 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure;seodec18
-ms.collection: M365-identity-device-management
+ms.collection:
+  - M365-identity-device-management
+  - highpri
 ---
 
 # Set up iOS/iPadOS device enrollment with Apple Configurator
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) running on a Mac computer. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment. You can enroll devices into Intune with Apple Configurator in two ways:
+Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) running on a Mac computer. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment. You can enroll devices into Intune with Apple Configurator in two ways:  
+
 - **Setup Assistant enrollment** - Wipes the device and prepares it to enroll during Setup Assistant.
 - **Direct enrollment** - Does not wipe the device and enrolls the device through iOS/iPadOS settings. This method only supports devices with **no user affinity**.
 
-Apple Configurator enrollment methods can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md).
-Note- Enrolling devices with Apple Configurator is only applicable to iOS/iPadOS Devices. This method does not work for enrolling macOS devices. 
+Apple Configurator enrollment methods can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md).  
 
 ## Prerequisites
 
@@ -55,24 +57,26 @@ A device enrollment profile defines the settings applied during enrollment. Thes
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Apple Configurator**.
 
-    ![Create a profile for Apple Configurator](./media/apple-configurator-enroll-ios/apple-configurator.png)
+    ![Create a profile for Apple Configurator.](./media/apple-configurator-enroll-ios/apple-configurator.png)
 
 2. Choose **Profiles** > **Create**.
 
-3. Under **Create Enrollment Profile**, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this Name field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about Azure Active Directory dynamic groups.
+3. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile for administrative purposes. Users do not see these details. You can use this Name field to create a dynamic group in Azure Active Directory. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. Learn more about Azure Active Directory dynamic groups.
 
-    ![Screenshot of the create profile screen with Enroll with user affinity selected](./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png)
+    :::image type="content" source="./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
 
-4. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
+4. Click **Next** to display the **Settings** page.
 
-    - **Enroll with user affinity** - Choose this option for devices that belong to users and that want to use the company portal for services like installing apps. The device must be affiliated with a user with Setup Assistant and can then access company data and email. Only supported for Setup Assistant enrollment. User affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint?view=win10-ps).
+5. For **User Affinity**, choose whether devices with this profile must enroll with or without an assigned user.
+
+    - **Enroll with user affinity** - Choose this option for devices that belong to users and that want to use the company portal for services like installing apps. The device must be affiliated with a user with Setup Assistant and can then access company data and email. Only supported for Setup Assistant enrollment. User affinity requires [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)). [Learn more](/powershell/module/adfs/get-adfsendpoint).
 
     - **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user. Use this for devices that perform tasks without accessing local user data. Apps requiring user affiliation (including the Company Portal app used for installing line-of-business apps) won't work. Required for direct enrollment.
 
      > [!NOTE]
      > When **Enroll with user affinity** is selected, make sure that the device is affiliated with a user with Setup Assistant within the first 24 hours of the device being enrolled. Otherwise enrollment might fail, and a factory reset will be needed to enroll the device.
 
-5. If you chose **Enroll with User Affinity**, you have the option to let users authenticate with Company Portal instead of the Apple Setup Assistant.
+6. If you chose **Enroll with User Affinity**, you have the option to let users authenticate with Company Portal instead of the Apple Setup Assistant.
 
     > [!NOTE]
     > If you want do any of the following, set **Authenticate with Company Portal instead of Apple Setup Assistant** to **Yes**.
@@ -83,7 +87,7 @@ A device enrollment profile defines the settings applied during enrollment. Thes
     > These are not supported when authenticating with Apple Setup Assistant.
 
 
-6. Choose **Create** to save the profile.
+7. Choose **Create** to save the profile.
 
 ## Setup Assistant enrollment
 
@@ -175,4 +179,10 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 
 6. On the iOS/iPadOS device, open **Settings** and go to **General** > **Device Management** > **Management Profile**. Confirm that the profile installation is listed, and check the iOS/iPadOS policy restrictions and installed apps. Policy restrictions and apps might take up to 10 minutes to appear on the device.
 
-7. Distribute devices. The iOS/iPadOS device is now enrolled in Intune and managed.
+7. Distribute devices. The iOS/iPadOS device is now enrolled in Intune and managed.  
+
+## Next steps  
+
+* Manage enrolled devices in Microsoft Endpoint Manager by using the actions and features available in the admin center. For more information about accessing device management actions and device details in the admin center, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)  
+
+* For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](device-enrollment-direct-enroll-macos.md).

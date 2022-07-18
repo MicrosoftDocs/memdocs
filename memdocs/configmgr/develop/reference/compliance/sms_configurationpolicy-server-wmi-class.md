@@ -1,6 +1,7 @@
 ---
 title: "SMS_ConfigurationPolicy Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_ConfigurationPolicy Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the desired values of settings declared in a subclass of SMS_SettingsDefinitionBase."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,11 +10,13 @@ ms.assetid: e962a42b-2100-4140-a53e-e290a92117a1
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
 # SMS_ConfigurationPolicy Server WMI Class
-The `SMS_ConfigurationPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the desired values of settings declared in a subclass of `SMS_SettingsDefinitionBase`. For instance, `SMS_FirewallSettings` is a subclass of `SMS_SettingsDefinitionBase` which declares possible settings for Windows Firewall. One such setting is "Block incoming connections on public networks." `SMS_ConfigurationPolicy` could be used to set a policy on that setting, such as "The setting 'Block incoming connections on public networks' should be enabled."  
+The `SMS_ConfigurationPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the desired values of settings declared in a subclass of `SMS_SettingsDefinitionBase`. For instance, `SMS_FirewallSettings` is a subclass of `SMS_SettingsDefinitionBase` which declares possible settings for Windows Firewall. One such setting is "Block incoming connections on public networks." `SMS_ConfigurationPolicy` could be used to set a policy on that setting, such as "The setting 'Block incoming connections on public networks' should be enabled". 
 
  The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
 

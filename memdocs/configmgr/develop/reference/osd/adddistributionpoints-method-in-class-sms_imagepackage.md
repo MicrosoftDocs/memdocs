@@ -1,6 +1,7 @@
 ---
 title: "AddDistributionPoints Method in SMS_ImagePackage"
 titleSuffix: "Configuration Manager"
+description: "AddDistributionPoints Windows Management Instrumentation (WMI) class method adds the list of distribution points for the image package."  
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 0beeb890-054c-488c-8fa2-e5c1302a7d72
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

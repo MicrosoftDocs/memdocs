@@ -1,6 +1,7 @@
 ---
 title: "SMS_BaselineAssignment Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_BaselineAssignment Windows Management Instrumentation class is an SMS Provider server class that contains information about how a baseline is targeted."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: cf049dab-e45a-419e-bd26-1b92bbc77094
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

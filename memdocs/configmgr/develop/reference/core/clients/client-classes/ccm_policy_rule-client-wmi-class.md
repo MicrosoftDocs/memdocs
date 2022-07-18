@@ -1,4 +1,5 @@
 ---
+description: Learn how to define a policy object rule used in the PolicyRules property with the CCM_Policy_Rule class.
 title: "CCM_Policy_Rule Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: d59fb097-6a80-418a-9779-2d6c7e547ab9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

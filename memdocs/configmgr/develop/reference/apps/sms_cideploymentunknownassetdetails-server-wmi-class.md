@@ -1,6 +1,7 @@
 ---
 title: "SMS_CIDeploymentUnknownAssetDetails Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_CIDeploymentUnknownAssetDetails WMI class represents the asset-level status of a configuration item deployment for unknown status."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: dd6a4d72-bee2-47ed-b30c-dffb0933b510
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

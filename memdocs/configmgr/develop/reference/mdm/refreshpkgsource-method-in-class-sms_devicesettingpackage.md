@@ -1,6 +1,7 @@
 ---
 title: RefreshPkgSource method in class SMS_DeviceSettingPackage
 titleSuffix: "Configuration Manager"
+description: "The RefreshPkgSource class method refreshes the package source at all distribution points."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: df79aea4-1ff7-400a-b160-f3eff63f277a
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,6 +1,7 @@
 ---
 title: "IPxeAuthClass Interface"
 titleSuffix: "Configuration Manager"
+description: "The IPxeAuthClass automation interface enables configuration of a PXE service point."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 309571d9-2689-4b49-946d-927e782e96ec
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

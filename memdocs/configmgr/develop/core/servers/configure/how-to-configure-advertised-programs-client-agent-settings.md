@@ -1,4 +1,5 @@
 ---
+description: Learn how to configure software distribution advertised programs client agent settings in the site control file.
 title: "Configure Advertised Programs Client Agent Settings"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 5a5ffe1b-6e82-480f-97e8-2840ba704170
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

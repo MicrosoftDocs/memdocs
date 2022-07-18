@@ -1,4 +1,5 @@
 ---
+description: Learn how to represent a condition expression to check for the existence of a registry key and compare it to data.
 title: "SMS_TaskSequence_RegistryConditionExpression Class"
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
@@ -9,6 +10,8 @@ ms.assetid: 3229c0e7-f7cd-4105-957a-11ba2339f25d
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

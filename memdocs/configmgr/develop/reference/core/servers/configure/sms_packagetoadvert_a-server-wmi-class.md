@@ -1,6 +1,7 @@
 ---
 title: "SMS_PackageToAdvert_a Class"
 titleSuffix: "Configuration Manager"
+description: "The SMS_PackageToAdvert_a WMI class is an SMS Provider server class that relates an SMS_Advertisement Server WMI Class object to the SMS_Package Server WMI Class object that it advertises."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 3ae13b60-46d9-44a5-90a7-cdb33f135e40
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

@@ -1,5 +1,6 @@
 ---
 title: "SMS_ImageUpdateHistory Class"
+description: The SMS_ImageUpdateHistory Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents software update installation history of offline servicing image.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
@@ -9,6 +10,8 @@ ms.assetid: ee4170d1-a439-4032-a134-a7c3b34cd9d9
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---

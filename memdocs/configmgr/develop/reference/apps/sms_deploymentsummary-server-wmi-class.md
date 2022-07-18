@@ -1,6 +1,7 @@
 ---
 title: "SMS_DeploymentSummary Class"
 titleSuffix: "Configuration Manager"
+description: "In Configuration Manager, the SMS_DeploymentSummary Windows Management Instrumentation class is an SMS Provider server class that represents an application, SUM or classic program deployment summary."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
@@ -9,6 +10,8 @@ ms.assetid: 615f6edc-392f-43d5-8078-29f8c21548f8
 author: aczechowski
 ms.author: aaroncz
 manager: dougeby
+ms.localizationpriority: null
+ms.collection: openauth
 
 
 ---
