@@ -2,12 +2,12 @@
 # required metadata
 
 title: Android Enterprise device settings in Microsoft Intune
-description: On Android Enterprise or Android for Work devices, restrict settings on the device, including copy and paste, show notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
+description: On Android Enterprise or Android for Work devices, restrict settings on the device. Restrict copy and paste, notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/12/2022
+ms.date: 07/18/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -207,7 +207,7 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 **Enrollment profile type**: Select an enrollment profile type to start configuring Microsoft Launcher or the Microsoft Managed Home Screen on your devices. Your options:
 
 - **Not configured**: Intune doesn't change or update this setting. By default, users might see the device's default home screen experience.
-- **Dedicated device**: Configure a kiosk-style experience on your dedicated devices. Before you configure these settings, be sure to [add](../apps/apps-add-android-for-work.md) and [assign](../apps/apps-deploy.md) the apps you want on the devices.
+- **Dedicated device**: Configure a kiosk-style experience on your dedicated devices. Before you configure these settings, be sure to [add](../apps/apps-add-android-for-work.md), and [assign](../apps/apps-deploy.md) the apps you want on the devices.
 
   - **Kiosk mode**: Choose if the device runs one app or runs multiple apps. Your options:
 
@@ -320,9 +320,11 @@ Use these settings to configure a kiosk-style experience on your dedicated devic
 
         - **Wi-Fi allow list**: Create a list of valid wireless network names, also known as the service set identifier (SSID). Managed Home Screen users can only connect to the SSIDs you enter.
 
+          Wi-Fi SSIDs are case sensitive. If the SSID is valid but the capitalization you enter doesn't match the network name, then the network isn't shown.
+
           When left blank, Intune doesn't change or update this setting. By default, all available Wi-Fi networks are allowed.
 
-          **Import** a .csv file that includes a list of valid SSIDs.
+          **Import** a .csv file that includes a list of valid SSIDs. 
 
           **Export** your current list to a .csv file.
 
@@ -653,7 +655,7 @@ You can configure the following settings:
 
 - **Short support message**: When users try to change a setting that's managed by the organization, a short message is shown. Use these settings to customize this message. You can enter a different message for different languages. By default, this message is in **English (United States)**.  
 
-  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and don't enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
+  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and don't enter a custom message, then this text is automatically shown. This text is also automatically translated to the device's default language.
 
     You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original short Intune default message is used and is translated:
 
