@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how to modify a configuration manager object by using managed code with the provided examples and links.
 
 
 ---
