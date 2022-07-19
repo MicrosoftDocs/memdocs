@@ -31,6 +31,9 @@ ms.collection:
 
 # macOS device settings to allow or restrict features using Intune
 
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
 This article describes the settings you can control and restrict on macOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your macOS devices.
