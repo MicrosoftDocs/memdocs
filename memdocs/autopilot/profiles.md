@@ -1,14 +1,9 @@
 ---
 title: Configure Autopilot profiles
 description: Learn how to configure device profiles for Windows Autopilot deployment.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.technology: windows
 ms.prod: w10
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
@@ -17,7 +12,7 @@ ms.date: 07/18/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Configure Autopilot profiles
@@ -30,13 +25,13 @@ ms.topic: article
 
 After you have [created a device group](enrollment-autopilot.md), you can apply a Windows Autopilot deployment profile to each device in the group.  Deployment profiles determine the deployment mode, and customize the OOBE for your end users.
 
-Autopilot profiles can be created through:
-1.	[Microsoft Admin Center](https://admin.microsoft.com/) 
-2.	[Intune console](https://go.microsoft.com/fwlink/?linkid=2109431)
-3.	[Intune graph](/graph/api/resources/intune-graph-overview)
+You can create Autopilot profiles through:
 
-For Intune managed devices, pre-provisioning, self-deploying and co-management profiles can only be created and assigned in Intune. 
+1. [Microsoft Admin Center](https://admin.microsoft.com/)
+2. [Intune console](https://endpoint.microsoft.com/)
+3. [Intune graph](/graph/api/resources/intune-graph-overview)
 
+For Intune managed devices, pre-provisioning, self-deploying, and co-management profiles can only be created and assigned in Intune.
 
 ## Create an Autopilot deployment profile
 
