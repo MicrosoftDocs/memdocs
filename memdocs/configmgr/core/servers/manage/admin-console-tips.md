@@ -26,7 +26,7 @@ Use the information below to find out about changes to the Configuration Manager
 
 The following improvements were made to the console and user experience:
 
-- When using the search bar, the **Path** criteria is added whenever subfolders are included in the search. <!--14908615-->
+- When using the search bar, the **Path** criteria is added whenever subfolders are included in the search. The **Path** criteria is informational and can't be edited.<!--14908615-->
    :::image type="content" source="./media/14908615-search-path.png" alt-text="Screenshot of search bar with the path criteria.":::
 
 ### <a name="bkmk_2203"></a> Console improvements in version 2203
