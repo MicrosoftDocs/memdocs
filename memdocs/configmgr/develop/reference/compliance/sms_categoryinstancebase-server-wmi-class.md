@@ -1,5 +1,6 @@
 ---
 title: "SMS_CategoryInstanceBase Class"
+description: Learn how to use the SMS_CategoryInstanceBase class which is an SMS Provider server class. 
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
