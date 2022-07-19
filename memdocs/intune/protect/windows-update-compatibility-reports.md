@@ -96,6 +96,9 @@ To use this report:
    - Optionally select **Ownership** and **Readiness status** to refine the report.
    - Click **Generate report**. This process can take several minutes. You'll be notified when report generation is complete.
 
+> [!IMPORTANT]
+> The data in this report is made available on-demand only. You must configure the Target OS and Scope (Tags) settings, and then click **Generate report** for data to appear in the report.
+
 [![Screen shot of the Windows feature update device readiness report.](./media/windows-update-compatibility-reports/device-readiness-report.png)](./media/windows-update-compatibility-reports/device-readiness-report.png#lightbox)
 
 >[!NOTE]  
