@@ -165,6 +165,8 @@ For more information, see [Use the status system](use-status-system.md).
 
 ### Improvements to console search
 
+**Note:** The path criteria are not editable and they just show the search criteria.
+
 <!--11702416-->
 *(Introduced in version 2203)*
 - The default search will now include all subfolders. That is when you navigate to any node in the console, by default, search results will include items from that node as well as from all subfolders.
