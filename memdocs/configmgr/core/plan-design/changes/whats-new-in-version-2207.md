@@ -64,7 +64,7 @@ You can now define a **Script Execution Timeout (seconds)** when configuring cli
 ## Collections
 
 
-
+ 
 <!-- ## Software Center -->
 
 ## Software updates
@@ -101,8 +101,11 @@ Based upon your feedback, you can now offset monthly maintenance window schedule
 
 ## Configuration Manager console
 
+### Improvements to the console
 
+- When using the search bar, the **Path** criteria is added whenever subfolders are included in the search. <!--14908615-->
 
+For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#bkmk_2207).
 
 
 
