@@ -29,7 +29,7 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--12952905-->
 When configuring Azure Services, a new option called **Administration Service Management** is now added for enhanced security. Selecting this option allows administrators to segment their admin privileges between cloud management gateway (CMG) and administration service. By enabling this option, access is restricted to only administration service endpoints. Configuration Management clients will authenticate to the site using Azure Active Directory.
  
-<!--For more information, see [xxxxxc](../../servers/blah.md). -->
+For more information, see [Configure Azure services for use with Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
 ### Improvements to cloud management gateway (CMG) workflow
 <!--13351390#-->
