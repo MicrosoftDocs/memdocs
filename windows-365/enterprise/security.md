@@ -30,15 +30,28 @@ ms.collection: M365-identity-device-management
 
 # Windows 365 security
 
-<< introduction >>
+Windows 365 provides an end-to-end connection flow for users to do their work effectively and securely. There are three different considerations when evaluating the security of your environment:
+
+- Securing the access to the Cloud PC
+- Securing the Cloud PC device itself
+- Securing the Cloud PC data and other data available while using the Cloud PC
+
+Take a look at the sections below to better understand the components and features available to you to secure your Cloud PC environment.
 
 ## Secure Cloud PC access
 
-The first security boundary to protect is access to the Cloud PC through the Windows 365 service.
+The first consideration for securing your environment is to secure access to the Cloud PC.
+
+As described in [identity and authentication](/windows-365/enterprise/identity-authentication#authentication), there are two authentication challenges to access the Cloud PC:
+
+- The Windows 365 service.
+- The Cloud PC.
+
+The primary control for securing access is by using Azure Active Directory (Azure AD) Conditional Access to conditionally grant access to the Windows 365 service. To secure access to the Cloud PC, see [set conditional access policies](/windows-365/enterprise/set-conditional-access-policies).
 
 ## Secure Cloud PC devices
 
-After securing access to Cloud PCs, the next security boundary is the Cloud PC, aka Windows device, itself.
+The second consideration for securing your environment is to secure the Cloud PC device itself.
 
 ### Security features enabled by default
 
@@ -64,3 +77,15 @@ The following security components are enabled by default on specific Cloud PC SK
     - **Required configuration**: Cloud PC must have 8 vCPU and 32 GB RAM. See [set up virtualization-based workloads support](nested-virtualization) for more information.
 
 ## Secure Cloud PC data
+
+The third consideration for securing your environment is to secure the Cloud PC data and other data that is made available by using the Cloud PC.
+
+### Security of Cloud PC data
+
+The data of the Cloud PC data itself is secured through encryption. For more details, see [data encryption in Windows 365](/windows-365/enterprise/encryption).
+
+### Security of data available on the Cloud PC
+
+Securing the data available to users on their Cloud PCs should be no different than securing the data available to users on work-assigned Windows PCs, with the caveat that the Cloud PC is being accessed through Remote Desktop Protocol (RDP).
+
+To manage RDP features available to the user during their Cloud PC connection, see [manage RDP device redirections for Cloud PCs](/windows-365/enterprise/manage-rdp-device-redirections).
