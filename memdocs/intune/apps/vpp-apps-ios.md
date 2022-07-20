@@ -57,6 +57,9 @@ Location tokens are volume purchase licenses that were commonly known as Volume 
 ## How are purchased apps licensed?
 Purchased apps can be assigned to groups using two types of licenses that Apple offers for iOS/iPadOS and macOS devices.
 
+> [!NOTE]
+> Device-licensed VPP apps must be installed and updated through the MDM channel only. Users cannot go the store directly to manually install or update a VPP app.
+
 | Action | Device Licensing | User Licensing |
 |------- | -----------------| ---------------|
 | App   Store sign-in | Not required. | Each end user must use a unique Apple ID when prompted   to sign in to App Store. |
@@ -261,6 +264,9 @@ The license should be updated within a few hours after installing or uninstallin
 ### Is it possible to oversubscribe an app and, if so, in what circumstance?
 
 Yes. The Intune admin can oversubscribe an app. For example, if the admin purchases 100 licenses for app XYZ, and then targets the app to a group with 500 members in it. The first 100 members (users or devices) will get the license assigned to them, the rest of the members will fail on license assignment.
+   
+> [!NOTE]
+> When the amount of used licenses is greater than or equal to 50% of total available licenses for a specific app, an alert will appear under the Enrollment alerts tab. The alert will disappear when the amount of used licenses is less than 50% of total available licenses for the app. 
 
 ## Next steps
 
