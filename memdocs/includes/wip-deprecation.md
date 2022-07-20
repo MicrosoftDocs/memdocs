@@ -3,7 +3,7 @@ author: aczechowski
 ms.author: aaroncz
 ms.prod: configuration-manager
 ms.topic: include
-ms.date: 07/15/2022
+ms.date: 07/21/2022
 # note this include file is in this folder because it's used in both ConfigMgr and Intune articles
 ---
 
@@ -14,4 +14,4 @@ ms.date: 07/15/2022
 >
 > Support for the Windows Information Protection without enrollment scenario in Microsoft Intune will be removed by the end of December 2022.
 >
-> For more information, see [MEM blog post]() <!-- QUESTION --> **_TBD link to blog post from Matt_**
+> For more information, see [End of support guidance for Windows Information Protection](https://aka.ms/Intune-WIP-support).
