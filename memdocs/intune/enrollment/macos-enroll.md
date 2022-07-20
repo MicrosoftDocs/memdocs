@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/27/2022
+ms.date: 07/26/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -84,6 +84,15 @@ The bootstrap token is automatically generated when:
 * A secure token-enabled user (typically an Intune administrator) signs in to the Mac with their cleartext password
 
 The token is then automatically escrowed to Microsoft Intune. You can use a command line tool to manually view, generate, and escrow a bootstrap token on supported macOS devices, if needed. For more information, see [Use secure token, bootstrap token, and volume ownership in deployments](https://support.apple.com/guide/deployment/use-secure-and-bootstrap-tokens-dep24dbdcf9e/1/web/1.0) on Apple Support.  
+
+### Monitor bootstrap escrow status  
+You can monitor the escrow status in the admin center. The **Bootstrap token escrowed** hardware property reports whether or not the bootstrap token has been escrowed in Intune. Intune reports **Yes** when the token is in escrow and **No** when the token is not.  
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+2. Select **Devices** > **macOS**. All macOS devices are shown in a table. 
+3. Select a device. 
+4. Select **Hardware**. 
+5. In your hardware details, scroll down to **Conditional access** > **Bootstrap token escrowed**.  
 
 ### Manage kernel extensions and software updates  
 A bootstrap token can be used to approve the installation of both kernel extensions and software updates on a Mac with Apple silicon. 
