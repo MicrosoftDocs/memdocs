@@ -34,9 +34,9 @@ Role-based access control (RBAC) helps you manage who has access to your organiz
 
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](/mem/intune/fundamentals/role-based-access-control).
 
-## Windows 365 Admin role
+## Windows 365 Administrator role
 
-Windows 365 supports the Windows 365 Admin role available for role assignment through the Microsoft Admin Center and Azure Active Directory (Azure AD). With this role, you can manage Windows 365 Cloud PCs for both Enterprise and Business editions. The Windows 365 Admin role can grant more scoped permissions than other Azure AD roles like Global Administrator. For more information, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
+Windows 365 supports the Windows 365 Administrator role available for role assignment through the Microsoft Admin Center and Azure Active Directory (Azure AD). With this role, you can manage Windows 365 Cloud PCs for both Enterprise and Business editions. The Windows 365 Administrator role can grant more scoped permissions than other Azure AD roles like Global Administrator. For more information, see [Azure AD built-in roles](/azure/active-directory/roles/permissions-reference).
 
 ## Cloud PC built-in roles
 
