@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 07/20/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -49,13 +49,30 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of July 18, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 11 optimized image now available for Windows 365 Cloud PCs<!--39890525 -->
+
+You can now choose the **Windows 11 Enterprise + OS Optimizations** image when creating a new provisioning policy.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Cloud PC Outlook mail sync setting<!--40423390-->
+
+For newly provisioned and reprosivioned Cloud PCs, you can now set the Outlook mail sync setting to 6 or 12 months.
+
+<!-- ########################## -->
 ## Week of July 4, 2022 (Service release 2206)
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Apps
 
-#### Support for nested virtualization now general available<!--39989666 -->
-Support for nested virtualization has moved out of preview and into general availability. For more information, see [Set up nested virtualization on your Cloud PC](nested-virtualization.md).
+#### Support for virtualization-based workloads now generally available<!--39989666 -->
+Support for virtualization-based workloads has moved out of preview and into general availability. For more information, see [Set up virtualization-based workloads on your Cloud PC](nested-virtualization.md).
 
 <!--***********************************************-->
 ### End user experience

@@ -87,7 +87,7 @@ Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there'
 
 ## Troubleshooting remote lock failures
 If the remote lock action failed, validate that the following have been correctly configured:
-- If the remote lock action failed on an Android (AOSP) device, confirm that you have a device passcode policy assigned to the device. If the device does not have a device passccode assigned, the remote lock action will not succeed.
+- If the remote lock action failed on an Android (AOSP) device, confirm that you have a device passcode policy assigned to the device. If the device does not have a device passcode assigned, the remote lock action will not succeed.
 
 ## Next steps
 

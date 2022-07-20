@@ -2,7 +2,7 @@
 title: Doc team test
 titleSuffix: Configuration Manager
 description: A test article for the doc team's use.
-ms.date: 12/20/2021
+ms.date: 07/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: reference
@@ -13,12 +13,14 @@ ms.author: aaroncz
 ms.reviewer: mstewart
 manager: dougeby
 ---
-# Doc team test - Baladell
-Date: 1/19/2022
+# Doc team test - FrankRoj
+Date: 07/06/2022
 
 # Doc team test
 
 This article is for testing purposes only. This is for the team only. Editing done by IDC Team testing only 1/12/2022
+
+Frank's testing on 07/06/2022
 
 ## Basic Markdown and GFM
 

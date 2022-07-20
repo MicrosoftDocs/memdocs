@@ -11,6 +11,24 @@ ms.custom: include file
 
 These notices provide important information that can help you prepare for future Intune changes and features.  
 
+### Update your certificate connector for Microsoft Intune
+
+As of June 1, 2022, Intune certificate connectors earlier than version 6.2101.13.0 may no longer work as expected and stop connecting to the Intune service. See [Certificate Connectors for Microsoft Intune](../protect/certificate-connector-overview.md) for additional information on the certificate connector lifecycle and support.
+
+#### How does this affect you or your users?
+
+If you're impacted by this change, see MC393815 in the Message center.
+
+#### How can you prepare?
+
+Download, install, and configure the latest certificate connector. For more information see, [Install the Certificate Connector for Microsoft Intune](../protect/certificate-connector-install.md).
+
+To check which version of the certificate connector you are using follow these steps:
+
+1. On a Windows Server running the Intune Certificate Connector, launch "Add or Remove programs".
+2. A list of installed programs and applications will be displayed.
+3. Look for an entry related to the Microsoft Intune Certificate Connector. There will be a "Version" associated with the connector. **Note:** Names for older connectors may vary.
+
 ### Plan for Change: New APP biometrics settings and authorization requirements for Android devices<!--9740832-->
 
 Currently, our biometric settings do not distinguish between [Class 2 and Class 3 Biometrics](https://source.android.com/security/biometric). Expected with Intune’s July (2207) service release, we are modifying fingerprint and biometric settings for Intune app protection policies (APP) that apply to Android devices to accommodate [Class 3 Biometrics](https://developer.android.com/reference/android/hardware/biometrics/BiometricManager.Authenticators#BIOMETRIC_STRONG).

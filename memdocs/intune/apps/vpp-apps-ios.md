@@ -209,7 +209,7 @@ You can renew an Apple Business Manager location token (Apple VPP token) by down
 To renew an Apple Business Manager location token (Apple VPP token), use the following steps:
 
 1. Navigate to [Apple Business Manager](https://business.apple.com/) or [Apple School Manager](https://school.apple.com/).
-2. Download the existing token in **Apple Business (or School) Manager**, by selecting **Settings** > **Apps and Books** > **My Server Tokens**.
+2. Download the existing token in **Apple Business (or School) Manager**, by selecting **Preferences** > **Payments and Billing** > **Apps and Books** > **Server Tokens**.
 3. Update the token in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Tenant administration** > **Connectors and tokens** > **Apple VPP tokens**.
 4. Select the VPP token you are renewing, click **Edit** on the Basics category, upload the new token on this page, and then save your changes.
 

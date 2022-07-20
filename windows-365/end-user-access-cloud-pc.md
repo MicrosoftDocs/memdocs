@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 07/07/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -93,6 +93,10 @@ While on windows365.microsoft.com, users can take actions on their Cloud PCs by 
 To transfer files from the local device to the Cloud PC, click on the upload icon to launch File Explorer. Select the files to transfer them to the Uploads folder on the Cloud PC.
 
 To transfer files from the Cloud PC to the local device, copy the files to the Downloads folder on the Cloud PC. The files will be copied to the Downloads folder of the local device.
+
+#### Restrict users from transferring files to and from Cloud PCs
+
+You can restrict users from transferring files by using RDP drive redirection. For more information, see [Manage RDP device redirections for Cloud PCs](./enterprise/manage-rdp-device-redirections.md).
 
 ### User feedback
 

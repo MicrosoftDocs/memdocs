@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how the CCM_RequestedAppPolicy Activation class represents a requested application policy activation. 
 
 
 ---

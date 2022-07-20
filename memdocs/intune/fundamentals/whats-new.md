@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 07/07/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,7 +60,26 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
+## Week of July 18, 2022
+
+### Device management
+
+#### New event viewers to assist in debugging WMI issues<!-- 14712854  -->
+Intune’s remote action to [collect diagnostics](../remote-actions/collect-diagnostics.md#collect-diagnostics) has been expanded to collect details about Windows Management Instrumentation (WMI) app issues.
+
+The new event viewers include the following:
+- Microsoft-Windows-WMI-Activity/Operational
+- Microsoft-Windows-WinRM/Operational
+
+For more information about Windows device diagnostics, see [Collect diagnostics from a Windows device](../remote-actions/collect-diagnostics.md).
+
 ## Week of July 4, 2022
+
+### Device management
+
+#### Endpoint analytics scores per device model <!-- 14439211 -->
+
+Endpoint analytics now displays [scores by device model](../../analytics/scores.md#bkmk_model). These scores help admins contextualize the user experience across device models in the environment. Scores per model and per device are available in all Endpoint analytics reports, including the [Work from anywhere](../../analytics/work-from-anywhere.md) report.
 
 ### Monitor and troubleshoot
 

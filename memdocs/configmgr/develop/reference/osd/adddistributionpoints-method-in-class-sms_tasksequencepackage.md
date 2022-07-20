@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how the AddDistributionPoints Method adds the distribution points for the task sequence package.
 
 
 ---
