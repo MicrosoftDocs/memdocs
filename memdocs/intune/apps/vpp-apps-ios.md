@@ -264,6 +264,9 @@ The license should be updated within a few hours after installing or uninstallin
 ### Is it possible to oversubscribe an app and, if so, in what circumstance?
 
 Yes. The Intune admin can oversubscribe an app. For example, if the admin purchases 100 licenses for app XYZ, and then targets the app to a group with 500 members in it. The first 100 members (users or devices) will get the license assigned to them, the rest of the members will fail on license assignment.
+   
+> [!NOTE]
+> When the amount of used licenses is greater than or equal to 50% of total available licenses for a specific app, an alert will appear under the Enrollment alerts tab. The alert will disappear when the amount of used licenses is less than 50% of total available licenses for the app. 
 
 ## Next steps
 
