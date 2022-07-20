@@ -57,6 +57,9 @@ Location tokens are volume purchase licenses that were commonly known as Volume 
 ## How are purchased apps licensed?
 Purchased apps can be assigned to groups using two types of licenses that Apple offers for iOS/iPadOS and macOS devices.
 
+> [!NOTE]
+> Device-licensed VPP apps must be installed and updated through the MDM channel only. Users cannot go the store directly to manually install or update a VPP app.
+
 | Action | Device Licensing | User Licensing |
 |------- | -----------------| ---------------|
 | App   Store sign-in | Not required. | Each end user must use a unique Apple ID when prompted   to sign in to App Store. |
