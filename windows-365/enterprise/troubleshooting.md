@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/07/2022
+ms.date: 07/20/2022
 ms.topic: troubleshooting
 ms.service: cloudpc
 ms.subservice: 
@@ -67,7 +67,10 @@ You can use the Intune Troubleshooting page to view enrollment issues, remediati
 
 ## Language pack installation failed
 
-If the language pack installation failed, try reprovisioning the Cloud PC to install the language pack again.
+You can try either of these possible solutions:
+
+- If the language pack installation failed, try reprovisioning the Cloud PC to install the language pack again.
+- Check to see if there is an Attack Surface Reduction rule set on Intune. If the **Block process creations originating from PSExec and WMI commands** is set to Block, it will block language pack installation. You can remove the rule and retry provisioning, or provisioning with default language set to en-us. Then, let the user change the language by using the Windows Settings App in the Cloud PC.
 
 ## Networking
 
@@ -105,7 +108,6 @@ For Cloud PCs, MMR is supported on the following platforms: Windows, macOS, Chro
 For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection).
 
 MMR is in [public preview](../public-preview.md) for Windows 365 Cloud PCs.
-
 
 <!-- ########################## -->
 ## Next steps
