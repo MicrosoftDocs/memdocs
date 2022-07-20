@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/02/2021
+ms.date: 07/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -682,6 +682,18 @@ You can choose to filter the `DevicesWithInventory` report's output based on the
 - `JailBroken` 
 - `EnrollmentType` 
 - `PartnerFeaturesBitmask` 
+
+The `ProcessorArchitecture` mappings for Windows 10+ are the following:
+- 9 = x64
+- 5 = ARM
+- 12 = ARM64
+- 0 = x86
+- default = Unknown
+
+The `ProcessorArchitecture` mappings for macOS are the following:
+- 9 = x64
+- 12 = ARM64
+- default = unknown
 
 ## FirewallStatus  
 
