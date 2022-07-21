@@ -207,10 +207,13 @@ items:
           displayName: fasttrack
 
 
-          - name: China endpoints
-            href: ./fundamentals/china-endpoints.md
-          - name: Intune operated by 21Vianet in China
-            href: ./fundamentals/china.md
+        - name: China endpoints
+          href: ./fundamentals/china-endpoints.md
+        - name: Intune operated by 21Vianet in China
+          href: ./fundamentals/china.md
+
+
+
         - name: Sign in to Intune
           href: ./fundamentals/account-sign-up.md
         - name: Unlicensed admins
