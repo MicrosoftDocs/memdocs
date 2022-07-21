@@ -81,7 +81,7 @@ The following device compliance settings report as **Not applicable** when being
 The following device compliance settings may report as **Not Compliant** when being evaluated for a Cloud PC:
 
 - **Require BitLocker**
-- **Require Secure Boot to be enabled on the device.** Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now rolling out in Asia Pacific (APAC) regions. This feature will roll out to all customers over the next few months.
+- **Require Secure Boot to be enabled on the device.** Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now available to all customers.
 
 **Troubleshooting steps**:
 
