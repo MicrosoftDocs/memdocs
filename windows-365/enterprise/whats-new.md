@@ -70,7 +70,7 @@ You can now choose the **Windows 11 Enterprise + OS Optimizations** image when c
 
 ### Provision Cloud PCs with Secure Boot<!--38012584-->
 
-Support for creating Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality i snow available in Europe, APAC, and North American regions.
+Support for creating Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now available in Europe, APAC, and North American regions. Existing Cloud PCs won't have secure boot automatically enabled.
 
 <!-- ########################## -->
 ## Week of July 4, 2022 (Service release 2206)
