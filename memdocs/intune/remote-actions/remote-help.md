@@ -72,6 +72,7 @@ The Remote help app supports the following capabilities:
 - Remote help add-on license for all IT support workers (helpers) and users (https://aka.ms/PremiumAddOnsDocs)
 - Windows 10/11
 - The remote help app for Windows. See [Install and update remote help](#install-and-update-remote-help)
+-  Remote help will be available for M365 A1/A3/A5 Education customers later this calendar year. Education customers with M365 A1/A3/A5 which include Intune subscription will have Remote Help with their license and they won’t require the **Remote Help Add-on**.
 
 > [!NOTE]
 > Remote help has the following limitations:  
