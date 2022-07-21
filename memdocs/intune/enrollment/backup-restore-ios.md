@@ -37,6 +37,9 @@ You might have to back up and restore an Intune Automated Device Enrollment (ADE
 
 To back up and restore an iOS/iPadOS device, you must follow the Apple instructions:
 
+> [!NOTE] 
+> If you are using Microsoft authenticator App, it is important to back up the credentials and accounts before factory reset. For more information, visit [Back up and recover account credentials in the Authenticator app](https://support.microsoft.com/account-billing/back-up-and-recover-account-credentials-in-the-authenticator-app-bb939936-7a8d-4e88-bc43-49bc1a700a40#:~:text=The%20Microsoft%20Entra%20Authenticator%20app,or%20having%20to%20recreate%20accounts.)
+
 - To back up your device, see [How to back up your iPhone, iPad, and iPod touch](https://support.apple.com/HT203977).
 - To restore your device, see [Restore your iPhone, iPad, or iPod touch from a backup](https://support.apple.com/HT204184).
 - To transfer data to a new device, see the following Apple support article:
