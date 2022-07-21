@@ -114,7 +114,7 @@ Users can now restore a Cloud PC to a state from a previous point in time. Multi
 
 #### Windows 365 link on Microsoft 365 admin center<!--37188422 -->
 
-To make it easier for admins to set up Windows 365, a link has been added to the M365 admin center home page. Admins with Windows 365 Enterprise licenses will see a link for [endpoint.microsoft.com](https://endpoint.microsoft.com) and admins with Windows 365 Business licenses will see a link for [windows365.microsoft.com](https://windows365.microsoft.com).
+To make it easier for admins to set up Windows 365, a link has been added to the Microsoft 365 admin center home page. Admins with Windows 365 Enterprise licenses will see a link for [endpoint.microsoft.com](https://endpoint.microsoft.com) and admins with Windows 365 Business licenses will see a link for [windows365.microsoft.com](https://windows365.microsoft.com).
 
 #### Higher Cloud PC screen resolution option (preview)<!--38301718 wnready-->
 
