@@ -133,6 +133,9 @@ The information in the following table can help you understand the resulting int
 > iOS Store apps (not iOS/iPadOS VPP apps) that are targeted with required intent will be enforced on the device at the time of the device check-in and will also show in the Company Portal app.<br><br>
 > When conflicts occur in **Uninstall on device removal** setting, the app is not removed from the device when the device is no longer managed.
 
+> [!NOTE]
+> Apps deployed as Required to corporate-owned work profile devices cannot be uninstalled manually by the user.
+
 ## Managed Google Play app deployment to unmanaged devices
 
 For unenrolled Android devices, you can use Managed Google Play to deploy store apps and line-of-business (LOB) apps to users. Once deployed, you can use [Mobile Application Management (MAM)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam) to manage the applications. Managed Google Play apps targeted as **Available with or without enrollment** will appear in the Play Store app on the end user's device, and not in the Company Portal app. End user will browse and install apps deployed in this manner from the Play app. Because the apps are being installed from managed Google Play, the end user will not need to alter their device settings to allow app installation from unknown sources, which means the devices will be more secure. If the app developer publishes a new version of an app to Play that was installed on a user's device, the app will be automatically updated by Play. 
