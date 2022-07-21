@@ -43,7 +43,9 @@ As an Intune administrator, you can create and assign email settings to Android 
 
 - Create an [Android Enterprise email device configuration profile](email-settings-configure.md) > **Personally-owned work profile**.
 - Or, create an [app configuration policy](../apps/app-configuration-policies-use-android.md).
-- If your profile will use Gmail and you want to use modern authentication, then you may have to deploy the Chrome app to the work profile.
+- If your profile will use Gmail and you want to use modern authentication, then you may have to deploy the Google Chrome app to the work profile.
+
+  For more specific information, go to [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md) and [Assign apps to groups with Microsoft Intune](../apps/apps-deploy.md).
 
 ## Android Enterprise
 
