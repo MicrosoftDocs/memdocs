@@ -18,9 +18,9 @@ items:
   - name: Tutorials
     items:
     - name: Protect email on managed devices
-      href: ../protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
+      href: ./protect/tutorial-protect-email-on-enrolled-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
     - name: Protect email on unmanaged devices
-      href: ../protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
+      href: ./protect/tutorial-protect-email-on-unmanaged-devices.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
     - name: Configure Slack to use Intune 
       href: ./apps/tutorial-configure-slack-enterprise-grid.md
   - name: Concepts
@@ -40,193 +40,193 @@ items:
       - name: Add apps 
         items:
         - name: Add apps overview
-          href: apps-add.md
+          href: ./apps/apps-add.md
           displayName: apk; ipa; msi; appx; appxbundle; msix; msixbundle; app
         - name: Intune protected apps
-          href: apps-supported-intune-apps.md
+          href: ./apps/apps-supported-intune-apps.md
         - name: Store apps
           items:
           - name: Android store apps
-            href: store-apps-android.md
+            href: ./apps/store-apps-android.md
           - name: iOS store apps
-            href: store-apps-ios.md
+            href: ./apps/store-apps-ios.md
           - name: Microsoft store apps
-            href: store-apps-windows.md
+            href: ./apps/store-apps-windows.md
           - name: Microsoft Store for Business apps
-            href: windows-store-for-business.md
+            href: ./apps/windows-store-for-business.md
           - name: Managed Google Play apps
-            href: apps-add-android-for-work.md
+            href: ./apps/apps-add-android-for-work.md
         - name: Microsoft 365 Suite
           items:
           - name: Microsoft 365 apps for Windows 10
-            href: apps-add-office365.md
+            href: ./apps/apps-add-office365.md
           - name: Microsoft 365 apps for macOS
-            href: apps-add-office365-macos.md
+            href: ./apps/apps-add-office365-macos.md
         - name: Android Enterprise system apps
-          href: apps-ae-system.md
+          href: ./apps/apps-ae-system.md
         - name: Web apps
-          href: web-app.md
+          href: ./apps/web-app.md
           displayName: web; web link; weblink; web-link
         - name: Built-in apps
-          href: apps-add-built-in.md
+          href: ./apps/apps-add-built-in.md
         - name: Build your app (LOB)
           items:
           - name: Android LOB apps
-            href: lob-apps-android.md
+            href: ./apps/lob-apps-android.md
           - name: iOS LOB apps
-            href: lob-apps-ios.md
+            href: ./apps/lob-apps-ios.md
           - name: Windows LOB apps
-            href: lob-apps-windows.md
+            href: ./apps/lob-apps-windows.md
           - name: Sideload Windows LOB apps
-            href: app-sideload-windows.md
+            href: ./apps/app-sideload-windows.md
           - name: macOS LOB apps
-            href: lob-apps-macos.md
+            href: ./apps/lob-apps-macos.md
           - name: macOS app management
             items:
             - name: Intune management agent for macOS
-              href: lob-apps-macos-agent.md
+              href: ./apps/lob-apps-macos-agent.md
             - name: Add a macOS DMG app
-              href: lob-apps-macos-dmg.md                    
+              href: ./apps/lob-apps-macos-dmg.md                    
           - name: Win32 app management
             items:
             - name: Win32 app management overview
-              href: apps-win32-app-management.md
+              href: ./apps/apps-win32-app-management.md
             - name: Prepare a Win32 app
-              href: apps-win32-prepare.md
+              href: ./apps/apps-win32-prepare.md
             - name: Add a Win32 app
-              href: apps-win32-add.md
+              href: ./apps/apps-win32-add.md
             - name: Win32 app supersedence
-              href: apps-win32-supersedence.md
+              href: ./apps/apps-win32-supersedence.md
             - name: Troubleshoot a Win32 app
-              href: apps-win32-troubleshoot.md
+              href: ./apps/apps-win32-troubleshoot.md
             - name: Win32 app S mode devices
-              href: apps-win32-s-mode.md
+              href: ./apps/apps-win32-s-mode.md
             - name: Deploy Windows update packages
-              href: apps-win32-deploy-update-package.md
+              href: ./apps/apps-win32-deploy-update-package.md
         - name: Add specific apps
           items:
           - name: Company Portal app - Autopilot
-            href: store-apps-company-portal-autopilot.md
+            href: ./apps/store-apps-company-portal-autopilot.md
           - name: Company Portal app - Download
-            href: store-apps-company-portal-app.md
+            href: ./apps/store-apps-company-portal-app.md
           - name: Company Portal app - macOS
-            href: apps-company-portal-macos.md          
+            href: ./apps/apps-company-portal-macos.md          
           - name: Microsoft Edge for Windows 10
-            href: apps-windows-edge.md
+            href: ./apps/apps-windows-edge.md
           - name: Microsoft Edge for macOS
-            href: apps-edge-macos.md   
+            href: ./apps/apps-edge-macos.md   
           - name: Microsoft Defender for Endpoint for macOS
-            href: apps-advanced-threat-protection-macos.md
+            href: ./apps/apps-advanced-threat-protection-macos.md
         - name: PowerShell scripts
-          href: intune-management-extension.md
+          href: ./apps/intune-management-extension.md
         - name: macOS shell scripts
-          href: macos-shell-scripts.md        
+          href: ./apps/macos-shell-scripts.md        
       - name: Assign apps
         items:
         - name: Assign apps to groups
-          href: apps-deploy.md
+          href: ./apps/apps-deploy.md
           displayName: app assignment; assignment
         - name: Include and exclude apps
-          href: apps-inc-exl-assignments.md
+          href: ./apps/apps-inc-exl-assignments.md
           displayName: app assignment
         - name: Deploy Windows 10/11 apps
-          href: apps-windows-10-app-deploy.md
+          href: ./apps/apps-windows-10-app-deploy.md
         - name: Deploy apps to Government environments
-          href: apps-deploy-gcc-dod.md
+          href: ./apps/apps-deploy-gcc-dod.md
       - name: Monitor apps
-        href: apps-monitor.md
+        href: ./apps/apps-monitor.md
       - name: Discovered apps
-        href: app-discovered-apps.md
+        href: ./apps/app-discovered-apps.md
       - name: Configure apps
         items:
         - name: App configuration policies
-          href: app-configuration-policies-overview.md
+          href: ./apps/app-configuration-policies-overview.md
           displayName: App configuration policy; configuration policy; AFW
         - name: iOS managed devices
-          href: app-configuration-policies-use-ios.md
+          href: ./apps/app-configuration-policies-use-ios.md
         - name: Android managed devices
-          href: app-configuration-policies-use-android.md
+          href: ./apps/app-configuration-policies-use-android.md
         - name: Managed apps
-          href: app-configuration-policies-managed-app.md
+          href: ./apps/app-configuration-policies-managed-app.md
         - name: Use iOS app provisioning profiles
-          href: app-provisioning-profile-ios.md
+          href: ./apps/app-provisioning-profile-ios.md
         - name: Configure specific apps
           items:
           - name: Configure the Managed Home Screen
-            href: app-configuration-managed-home-screen-app.md
+            href: ./apps/app-configuration-managed-home-screen-app.md
           - name: Configure the Company Portal
-            href: company-portal-app.md
+            href: ./apps/company-portal-app.md
           - name: Configure Microsoft Launcher
-            href: configure-microsoft-launcher.md
+            href: ./apps/configure-microsoft-launcher.md
           - name: Configure Microsoft Edge
-            href: manage-microsoft-edge.md
+            href: ./apps/manage-microsoft-edge.md
           - name: Configure Office
-            href: manage-microsoft-office.md
+            href: ./apps/manage-microsoft-office.md
           - name: Configure Outlook
-            href: app-configuration-policies-outlook.md
+            href: ./apps/app-configuration-policies-outlook.md
           - name: Configure Microsoft Teams
-            href: manage-microsoft-teams.md
+            href: ./apps/manage-microsoft-teams.md
           - name: Configure Google Chrome for Android
-            href: apps-configure-chrome-android.md
+            href: ./apps/apps-configure-chrome-android.md
           - name: VPN and per-app VPN on Android Enterprise
-            href: app-configuration-vpn-ae.md          
+            href: ./apps/app-configuration-vpn-ae.md          
         - name: Volume-purchased apps and books
           items:
           - name: Volume-purchased overview
-            href: vpp-apps.md
+            href: ./apps/vpp-apps.md
             displayName: vpp; volume purchased
           - name: Volume-purchased iOS apps
-            href: vpp-apps-ios.md
+            href: ./apps/vpp-apps-ios.md
           - name: Microsoft Store for Business apps
-            href: windows-store-for-business.md
+            href: ./apps/windows-store-for-business.md
           - name: iOS eBooks
-            href: vpp-ebooks-ios.md
+            href: ./apps/vpp-ebooks-ios.md
       - name: Protect apps
         items:
         - name: Selectively wipe apps
-          href: apps-selective-wipe.md
+          href: ./apps/apps-selective-wipe.md
         - name: Use app protection policies
           items:
           - name: App protection policies overview
-            href: app-protection-policy.md
+            href: ./apps/app-protection-policy.md
             displayName: app; protection; policy
           - name: Data protection framework using app protection policies
-            href: app-protection-framework.md
+            href: ./apps/app-protection-framework.md
           - name: Create app protection policies
             items:
             - name: General settings
-              href: app-protection-policies.md
+              href: ./apps/app-protection-policies.md
               displayName: dlp; data loss prevention
             - name: Android settings
-              href: app-protection-policy-settings-android.md
+              href: ./apps/app-protection-policy-settings-android.md
             - name: iOS settings
-              href: app-protection-policy-settings-ios.md
+              href: ./apps/app-protection-policy-settings-ios.md
             - name: Conditional launch
-              href: app-protection-policies-access-actions.md
+              href: ./apps/app-protection-policies-access-actions.md
             - name: Data transfer exceptions
-              href: app-protection-policies-exception.md
+              href: ./apps/app-protection-policies-exception.md
           - name: Validate app protection policies
-            href: app-protection-policies-validate.md
+            href: ./apps/app-protection-policies-validate.md
           - name: App protection policy delivery
-            href: app-protection-policy-delivery.md
+            href: ./apps/app-protection-policy-delivery.md
           - name: Protecting app extensions
-            href: app-protection-policy-extensions.md
+            href: ./apps/app-protection-policy-extensions.md
           - name: Monitor app protection user status
-            href: app-protection-policies-monitor.md
+            href: ./apps/app-protection-policies-monitor.md
           - name: Get ready for WIP app protection policies
-            href: app-protection-policies-configure-windows-10.md
+            href: ./apps/app-protection-policies-configure-windows-10.md
           - name: Create & assign WIP app protection policies
-            href: windows-information-protection-policy-create.md
+            href: ./apps/windows-information-protection-policy-create.md
           - name: Manage data transfer between iOS apps
-            href: data-transfer-between-apps-manage-ios.md
+            href: ./apps/data-transfer-between-apps-manage-ios.md
         - name: Review app protection logs
-          href: app-protection-policy-settings-log.md
+          href: ./apps/app-protection-policy-settings-log.md
       - name: Policies for Office apps
-        href: app-office-policies.md        
+        href: ./apps/app-office-policies.md        
       - name: Troubleshoot
         items:
         - name: Help users troubleshoot problems
-          href: ../fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
+          href: ./fundamentals/help-desk-operators.md?toc=/intune/apps/toc.json&bc=/intune/apps/breadcrumb/toc.json
         - name: Troubleshoot app installation problems
           href: /troubleshoot/mem/intune/troubleshoot-app-install
         - name: App installation error reference
@@ -240,23 +240,23 @@ items:
   - name: Reference
     items:
       - name: Protect apps with Intune App SDK
-        href: ../developer/app-sdk.md
+        href: ./developer/app-sdk.md
         items:
         - name: Get started with Intune App SDK
-          href: ../developer/app-sdk-get-started.md
+          href: ./developer/app-sdk-get-started.md
         - name: Prepare LOB apps for app protection
-          href: ../developer/apps-prepare-mobile-application-management.md
+          href: ./developer/apps-prepare-mobile-application-management.md
         - name: App Wrapping Tool for iOS
-          href: ../developer/app-wrapper-prepare-ios.md
+          href: ./developer/app-wrapper-prepare-ios.md
         - name: Intune App SDK for iOS
-          href: ../developer/app-sdk-ios.md
+          href: ./developer/app-sdk-ios.md
         - name: App Wrapping Tool for Android
-          href: ../developer/app-wrapper-prepare-android.md
+          href: ./developer/app-wrapper-prepare-android.md
           displayName: dex
         - name: Intune App SDK for Android
-          href: ../developer/app-sdk-android.md
+          href: ./developer/app-sdk-android.md
           items:
           - name: Intune App SDK for Android testing guide
-            href: ../developer/app-sdk-android-testing-guide.md
+            href: ./developer/app-sdk-android-testing-guide.md
         - name: Intune App SDK Xamarin Bindings
-          href: ../developer/app-sdk-xamarin.md
+          href: ./developer/app-sdk-xamarin.md
