@@ -68,11 +68,7 @@ Admins will be able to set a toggle that automatically enrolls new Cloud PCs in 
 The resize action will support Cloud PCs that are Azure Active Directory joined.
 
 <!-- ***********************************************-->
-## Device provisioning
-
-### Provision Cloud PCs with Secure Boot<!--38012584-->
-
-You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality. North American regions will receive this feature within the next few months.
+<!--## Device provisioning-->
 
 <!--***********************************************-->
 <!--
