@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Windows 365 approved partners
 
-Windows 365 gives opportunities to independent software vendors. When building their Windows apps, these partners can reach a broader audience by delivering their apps in the cloud.
+Windows 365 gives opportunities to independent software vendors. When partners build their Windows apps, they can reach a broader audience by delivering their apps in the cloud.
 
 Here’s the list of approved partners that build and innovate with Windows 365.
 

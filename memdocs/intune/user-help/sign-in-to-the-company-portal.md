@@ -112,6 +112,15 @@ If you normally use a smart card to access work resources, follow the steps in t
 
 5. Once the screen says that you're signed in to Company Portal, you can close the browser and switch to your work device.  
 
+The following articles describe the enrollment instructions for smart card-enabled devices, and includes the sign-in-from-another-device method. 
+
+  * [Enroll with Entrust for iOS](enroll-ios-device-entrust-datacard.md) 
+  * [Enroll with Entrust for Android](enroll-android-device-entrust-datacard.md)
+  * [Enroll with Intercede for iOS](enroll-ios-device-intercede.md)  
+  * [Enroll with Intercede for Android](enroll-android-device-intercede.md)  
+  * [Enroll with DISA Purebred for iOS](enroll-ios-device-disa-purebred.md)
+  * [Enroll with DISA Purebred for Android](enroll-android-device-disa-purebred.md)
+
 ## App permissions for Android   
 The permissions described in this section apply to the Company Portal app for Android and devices running Android, versions 8.0 and later.    
 
