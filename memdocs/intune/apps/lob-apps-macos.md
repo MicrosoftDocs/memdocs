@@ -156,6 +156,8 @@ To update a line-of-business app deployed as a *.intunemac* file, you must incre
 
 To update a line-of-business app deployed as a *.pkg* file, you must increment the `CFBundleShortVersionString` of the *.pkg* file.
 
+Intune will update the app when this schedule elapses, provided that any previous version of the app is still present on the device.
+
 ## Next steps
 
 - The app you have created is displayed in the apps list. You can now assign it to the groups you choose. For help, see [How to assign apps to groups](apps-deploy.md).
