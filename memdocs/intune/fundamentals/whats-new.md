@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/07/2022
+ms.date: 07/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -165,7 +165,7 @@ For more information about the Settings Catalog, go to:
 
 For more information about Microsoft AutoUpdate settings you can configure, go to:
 - [Use preferences to manage privacy controls for Office for Mac - Deploy Office](/deployoffice/privacy/mac-privacy-preferences#preference-setting-for-connected-experiences-that-download-online-content).
-- [Set a deadline for updates from Microsoft AutoUpdate](deployoffice/mac/mau-deadline)
+- [Set a deadline for updates from Microsoft AutoUpdate](/deployoffice/mac/mau-deadline)
 
 Applies to:
 - macOS
