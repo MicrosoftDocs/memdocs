@@ -37,7 +37,7 @@ To help improve security for your Cloud PCs, consider the following general guid
 3. Use Intune compliance policies with Conditional Access policies for Cloud PCs. These policies help identify non-compliant devices and users so they can’t access corporate resources until the device risk level is lowered. For more information, see [Windows 10/11 compliance settings in Microsoft Intune](/mem/intune/protect/compliance-policy-create-windows).
 
     >[!Note]
-    >Cloud PCs aren't created with Secure Boot enabled and Cloud PCs don't support BitLocker. We recommend excluding these two settings from compliance policies targeting Cloud PCs.
+    >Cloud PCs don't support BitLocker. We recommend excluding this setting from compliance policies targeting Cloud PCs.
 
 4. One of the most important elements of device security is OS updates. These updates make sure that devices stay up-to-date and secure while delivering new features and defenses against vulnerabilities. For Cloud PCs, Endpoint Manager can be used by IT admins to configure Intune Windows 10/11 update rings and policies for Windows Update for Business. For more information, see [Manage Windows 10/11 software updates in Intune](/mem/intune/protect/windows-update-for-business-configure).  
 5. By default Windows 365 Enterprise, end users are not administrators of their Cloud PCs. This aligns with Windows 10/11 security guidance. For more information about this guidance, see [Local Accounts](/windows/security/identity-protection/access-control/local-accounts#sec-restrict-protect-accounts) in the Windows documentation.

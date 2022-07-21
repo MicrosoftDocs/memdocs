@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/20/2022
+ms.date: 07/21/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -52,6 +52,13 @@ Learn what new features are available in Windows 365 Enterprise.
 ## Week of July 18, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Cloud PC Outlook mail sync setting<!--40423390-->
+
+For newly provisioned and reprosivioned Cloud PCs, you can now set the Outlook mail sync setting to 6 or 12 months.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
 #### Windows 11 optimized image now available for Windows 365 Cloud PCs<!--39890525 -->
@@ -59,11 +66,11 @@ Learn what new features are available in Windows 365 Enterprise.
 You can now choose the **Windows 11 Enterprise + OS Optimizations** image when creating a new provisioning policy.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Apps
+### Device provisioning
 
-#### Cloud PC Outlook mail sync setting<!--40423390-->
+### Provision Cloud PCs with Secure Boot<!--38012584-->
 
-For newly provisioned and reprosivioned Cloud PCs, you can now set the Outlook mail sync setting to 6 or 12 months.
+Support for creating Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality i snow available in Europe, APAC, and North American regions.
 
 <!-- ########################## -->
 ## Week of July 4, 2022 (Service release 2206)
