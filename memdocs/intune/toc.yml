@@ -234,7 +234,7 @@ items:
         - name: Troubleshoot mobile application management
           href: /troubleshoot/mem/intune/troubleshoot-mam
         - name: Review app protection logs
-          href: app-protection-policy-settings-log.md
+          href: ./apps/app-protection-policy-settings-log.md
         - name: Troubleshooting app protection policy deployment
           href: /troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment
   - name: Reference
