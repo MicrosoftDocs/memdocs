@@ -2,7 +2,7 @@
 title: Console changes and tips
 titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
-ms.date: 04/08/2022
+ms.date: 08/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference 
@@ -19,6 +19,15 @@ ms.localizationpriority: medium
 Use the information below to find out about changes to the Configuration Manager console and tips for using the console:
 
 ## General tips
+
+### <a name="bkmk_2207"></a> Console improvements in version 2207
+
+*(Introduced in version 2207)*
+
+The following improvements were made to the console and user experience:
+
+- When using the search bar, the **Path** criteria is added whenever subfolders are included in the search. The **Path** criteria is informational and can't be edited.<!--14908615-->
+   :::image type="content" source="./media/14908615-search-path.png" alt-text="Screenshot of search bar with the path criteria.":::
 
 ### <a name="bkmk_2203"></a> Console improvements in version 2203
 <!--12726153-->
@@ -155,6 +164,15 @@ Your user account needs at least **Read** permission to these objects.
 For more information, see [Use the status system](use-status-system.md).
 
 ### Improvements to console search
+
+**Note:** The path criteria are not editable and they just show the search criteria.
+
+<!--11702416-->
+*(Introduced in version 2203)*
+- The default search will now include all subfolders. That is when you navigate to any node in the console, by default, search results will include items from that node as well as from all subfolders.
+- If you want to search only current node, select the **Current Node** button in the ribbon. The search results will then include items from current node only.
+- If you want to search all subfolders, select the **All Subfolders** button in the ribbon. The search results will then include items from current node as well as from all subfolders.
+
 <!--4640570-->
 *(Introduced in version 1910)*
 
