@@ -57,7 +57,7 @@ You'll use the device category name when you create Azure Active Directory (Azur
 
 ### Step 2: Create Azure AD security groups 
 
-To enable automatic grouping, you must create a dynamic group using attribute-based rules in Azure AD. For instructions, see [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in the Azure AD documentation. Create an advanced rule for your group using the **deviceCategory** attribute and the category name you created in [Step 1](device-group-mapping.md#step-1-create-device category-in-Intune) of this article. 
+To enable automatic grouping, you must create a dynamic group using attribute-based rules in Azure AD. For instructions, see [Using attributes to create advanced rules](/azure/active-directory/users-groups-roles/groups-dynamic-membership#using-attributes-to-create-rules-for-device-objects) in the Azure AD documentation. Create an advanced rule for your group using the **deviceCategory** attribute and the category name you created in Step 1 of this article. 
 
 For example, to create a rule that automatically groups devices belonging in the HR category, use the following rule syntax: `device.deviceCategory -eq "HR"`    
 
