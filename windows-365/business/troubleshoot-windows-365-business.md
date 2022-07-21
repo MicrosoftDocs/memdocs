@@ -45,7 +45,7 @@ Make sure **Users may join devices to Azure AD** is set to **All**.
 4. If **Users may join devices to Azure AD** isn't set to **All**, select **All**, then select **Save**.
 5. Go to [Step 2. Verify that the Windows 365 BPRT Permanent User system account is active](#step-2-verify-that-the-windows-365-bprt-permanent-user-system-account-is-active).
 
-Make sure that **Maximum number of devices per user** is high enough so that the Cloud PCs you are trying to setup can be assigned to the designated users.
+Make sure that **Maximum number of devices per user** is high enough so that the Cloud PCs you're trying to setup can be assigned to the designated users.
 
 1. Sign in to the Microsoft Azure portal at [https://portal.azure.com/](https://portal.azure.com/).
 2. Under **Manage Azure Active Directory**, select **View**.
@@ -57,7 +57,7 @@ Make sure that **Maximum number of devices per user** is high enough so that the
 
 The first time a Windows 365 license is assigned in your organization, a system account called **Windows 365 BPRT Permanent User** is automatically created in Azure AD.
 
-Do not delete this account or make any changes to it (such as changing the name or UPN). If the system account is modified or deleted, the setup will fail. This system account ensures a smooth setup process and doesn't have any write capabilities or access to your organization beyond the scoped service capabilities of Windows 365 Business. If you delete or modify this system account you must login to windows365.microsoft.com with any account that has a Windows 365 Business license and wait 12 hours for the token to refresh.
+Don't delete this account or make any changes to it (such as changing the name or UPN). If the system account is modified or deleted, the setup will fail. This system account ensures a smooth setup process and doesn't have any write capabilities or access to your organization beyond the scoped service capabilities of Windows 365 Business. If you delete or modify this system account, you must sign in to windows365.microsoft.com with any account that has a Windows 365 Business license and wait 12 hours for the token to refresh.
 
 To make sure the Windows 365 BPRT Permanent User system account is active in Azure AD, use the following steps.
 
@@ -65,7 +65,7 @@ To make sure the Windows 365 BPRT Permanent User system account is active in Azu
 2. In the left nav, under **Manage**, select **Users**.
 3. In the search box, type **Windows 365 BPRT Permanent User**, then press **Enter**.
 4. If the Windows 365 BPRT Permanent User system account is present, go to [Step 3. Verify that device-based MFA is turned off](#step-3-verify-that-device-based-mfa-is-turned-off).
-5. If the Windows 365 BPRT Permanent User system account is missing or if any changes were made to it (for example, password reset, property change, assign or un-assign a license, and so on), please login to windows365.microsoft.com with any account that has a Windows 365 Business license assigned after 12 hours. A new Windows 365 BPRT Permanent User will be generated. After the token has regenerated, go directly to [Step 6. Reset your Cloud PCs](#step-6-reset-your-cloud-pcs).
+5. If the Windows 365 BPRT Permanent User system account is missing or if any changes were made to it (for example, password reset, property change, assign or unassign a license, and so on), sign in to windows365.microsoft.com with any account that has a Windows 365 Business license assigned after 12 hours. A new Windows 365 BPRT Permanent User will be generated. After the token has regenerated, go directly to [Step 6. Reset your Cloud PCs](#step-6-reset-your-cloud-pcs).
 
 ## Step 3. Verify that device-based MFA is turned off
 
@@ -113,7 +113,7 @@ If you already use Microsoft Intune, or plan to use it to manage your Windows 36
 3. On the **Configure** page, next to **MDM user scope**, select **Some** or **All**, then select **Save**.
 4. In the left nav, under **Manage**, select **Mobility (MDM and MAM)**, select **Microsoft Intune Enrollment**, then repeat step 3.
 
-Users who are assigned a Cloud PC must have an Intune license assigned to them. The CloudPCBPRT system account does not need to be assigned an Intune license.
+Users who are assigned a Cloud PC must have an Intune license assigned to them. The CloudPCBPRT system account doesn't need to be assigned an Intune license.
 
 > [!IMPORTANT]
 > To assign licenses, you must be a Global or Licensing admin, or have a role with licensing permissions.
@@ -136,7 +136,7 @@ If you don’t plan to use Microsoft Intune for your Cloud PC management, you mu
 
 1. In the Azure portal, go to the [Azure Active Directory Overview](https://go.microsoft.com/fwlink/p/?linkid=516942) page.
 2. In the left nav, under **Manage**, select **Mobility (MDM and MAM)**, then select **Microsoft Intune**.
-3. On the **Configure** page, you will see one of two things. If you have an Azure AD Premium subscription, select **None** next to MDM user scope, then select **Save**. If you do not have an Azure AD Premium subscription, select **Disable**.
+3. On the **Configure** page, you'll see one of two things. If you have an Azure AD Premium subscription, select **None** next to MDM user scope, then select **Save**. If you don't have an Azure AD Premium subscription, select **Disable**.
 4. In the left nav, under **Manage**, select **Mobility (MDM and MAM)**, select **Microsoft Intune Enrollment**, then repeat step 3.
 5. Go to [Step 6. Reset your Cloud PCs](#step-6-reset-your-cloud-pcs).
 
@@ -144,7 +144,7 @@ If you don’t plan to use Microsoft Intune for your Cloud PC management, you mu
 
 After you complete the troubleshooting steps in this article, your users must restart their Cloud PC setup.
 
-If you just completed [Step 3. Verify that device-based MFA is turned off](#step-3-verify-that-device-based-mfa-is-turned-off), wait at least ten minutes for the changes to take effect before you continue. Make sure that the user you excluded from MFA is the first users to sign in to the [Windows 365 home page](https://windows365.microsoft.com).
+If you just completed [Step 3. Verify that device-based MFA is turned off](#step-3-verify-that-device-based-mfa-is-turned-off), wait at least 10 minutes for the changes to take effect before you continue. Make sure that the user you excluded from MFA is the first users to sign in to the [Windows 365 home page](https://windows365.microsoft.com).
 
 Tell all Cloud PC users who saw the “Setup failed” error to use the following steps to reset their Cloud PCs.
 
