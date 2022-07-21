@@ -80,7 +80,7 @@ To get only the top N events, use the following parameters: ```Get-MgDeviceManag
 
 #### Get a single event by event ID
 
-You can use the following command to get a single audit event, where you will need to provide the {event ID}: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
+You can use the following command to get a single audit event, where you'll need to provide the {event ID}: ```Get-MgDeviceManagementVirtualEndpointAuditEvent -CloudPcAuditEventId {event ID}```
 
 <!-- ########################## -->
 ## Next steps

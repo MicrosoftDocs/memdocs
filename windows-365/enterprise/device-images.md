@@ -44,7 +44,7 @@ Both marketplace and custom images must meet the following requirements:
 - Generalized VM image.
 - Single Session VM images (multi-session isn’t supported).
 - No recovery partition. For information about how to remove a recovery partition, see the [Windows Server command: delete partition](/windows-server/administration/windows-commands/delete-partition).
-- Default 64 GB OS disk size. The OS disk size will be automatically adjusted to the size specified in SKU description of the Windows 365 license.
+- Default 64-GB OS disk size. The OS disk size will be automatically adjusted to the size specified in SKU description of the Windows 365 license.
 
 A custom image must also meet the following extra requirements:
 
@@ -55,7 +55,7 @@ Storing a managed image on Azure incurs storage costs. However, customers can de
 
 ## Gallery images
 
-Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They are replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
+Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They're replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
 
 There are two sets of images available to choose from across the different versions of Windows Enterprise:
 
@@ -64,7 +64,7 @@ There are two sets of images available to choose from across the different versi
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
   - Microsoft Teams (Teams).
-  - Edge settings like sleeping tabs, startup boost, and first time optimizations based on Azure AD and synchronization.
+  - Microsoft Edge settings like sleeping tabs, startup boost, and first time optimizations based on Azure AD and synchronization.
   - Microsoft Outlook first-time configuration settings (auto log-on based on Azure AD profile, support for other profiles).
 - **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
   - Services optimized for virtualization.
@@ -73,7 +73,7 @@ There are two sets of images available to choose from across the different versi
 
 ### Gallery image update cycle
 
-All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This happens around the middle of each month.
+All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This update happens around the middle of each month.
 
 Each updated image includes:
 
