@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Delete Azure network connection
 
-Only an unassigned Azure network connection (ANC) can be deleted. If an ANC is in use by a provisioning policy, then you must do one of the following:
+Only an unassigned Azure network connection (ANC) can be deleted. If an ANC is in use by a provisioning policy, then you must take one of the following steps:
 
 - Remove the ANC from all provisioning policies.
 - Delete the ANC.

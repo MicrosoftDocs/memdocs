@@ -30,16 +30,16 @@ ms.collection: M365-identity-device-management
 
 # Create a dynamic device group containing all Cloud PCs of a specific configuration
 
-You might want to apply the same set of policies to all your Cloud PCs with the same computing power (vCPU and RAM). You can do this by creating a dynamic device group containing all Cloud PCs with the same Cloud PC configuration.
+You might want to apply the same set of policies to all your Cloud PCs with the same computing power (vCPU and RAM). You can apply policies like this by creating a dynamic device group containing all Cloud PCs with the same Cloud PC configuration.
 
-For the example below, we use 2 vCPU and 4GB RAM as the configuration. Anywhere you see "2vCPU/4GB" replace it with the desired configuration. You can also target a specific Cloud PC size by adding the OS storage as part of the configuration.
+For the example below, we use 2 vCPU and 4-GB RAM as the configuration. Anywhere you see "2vCPU/4GB" replace it with the desired configuration. You can also target a specific Cloud PC size by adding the OS storage as part of the configuration.
 
-You can follow the below steps and create a dynamic group for any of the configurations that make up Cloud PC sizes. In these steps, you will use the Device Model device property to create the dynamic device group.
+You can follow the below steps and create a dynamic group for any of the configurations that make up Cloud PC sizes. In these steps, you'll use the Device Model device property to create the dynamic device group.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) > **Groups** > **New Group**.
 ![Screenshot of delete policy](./media/create-dynamic-device-group-all-cloudpcs/create-group.png)
 2. Select the **New Group** page, choose **Security** for **Group type**.
-3. Enter the following:
+3. Enter the following information:
     1. **Group name** = “All 2vCPU/4GB RAM Cloud PCs".
     2. **Group description** = “A dynamic device group containing all Cloud PCs with the 2vCPU/4GB RAM configuration.
 4. For **Membership type**, choose **Dynamic Device**.

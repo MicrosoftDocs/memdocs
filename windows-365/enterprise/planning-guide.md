@@ -55,15 +55,15 @@ Determine where your end users are physically located. Windows 365 can provide C
 
 ### Objective: Management of Cloud PCs
 
-You’ll manage your Cloud PC devices by using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Your Cloud PCs are automatically enrolled during provisioning. Evaluate who'll manage the Cloud PCs and what [permissions](role-based-access.md) should be given to different management groups.
+You’ll manage your Cloud PC devices by using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Your Cloud PCs are automatically enrolled during provisioning. Evaluate who will manage the Cloud PCs and what [permissions](role-based-access.md) should be given to different management groups.
 
 **Task**: Map out which management groups will perform the configuration of the Cloud PC service, management of the Cloud PC device, and software distribution to the devices. Determine which Microsoft Endpoint Manager and Windows 365 permissions will be assigned to different groups to manage the devices.
 
 ## Inventory your environment
 
-All users [connect to a Cloud PC](../end-user-access-cloud-pc.md) through a Remote Desktop Client or a supported browser. This lets users access their Cloud PC from a wide range of devices.
+All users [connect to a Cloud PC](../end-user-access-cloud-pc.md) through a Remote Desktop Client or a supported browser. This connection lets users access their Cloud PC from a wide range of devices.
 
-**Task**: For each use case determine how your end users will connect to their Cloud PC. Determine which platforms they'll use to connect. Will they use a browser or a Remote Desktop Client to connect?
+**Task**: For each use case, determine how your end users will connect to their Cloud PC. Determine which platforms they'll use to connect. Will they use a browser or a Remote Desktop Client to connect?
 
 For information on connectivity requirements and supported configurations, see [Requirements](requirements.md).
 
@@ -85,7 +85,7 @@ Review all networking policies and requirements. Many organizations will have po
 
 The next step is to determine how and when your users will receive their Cloud PCs.
 
-- **Define rollout phases**. Create multiple rollout phases based on your environment. Start with pilot and/or testing groups. Early phases should include end users who are ok with change, willing to give feedback, and know that they're the first users. Use this feedback to improve the rollout experience. Later phases should include VIPs and executives. This allows you to improve the deployment as you advance through the phases. Before ending a phase, determine if the phase is successful based on the goals. Modify the configuration, documentation, or notifications based on the feedback.
+- **Define rollout phases**. Create multiple rollout phases based on your environment. Start with pilot and/or testing groups. Early phases should include end users who are ok with change, willing to give feedback, and know that they're the first users. Use this feedback to improve the rollout experience. Later phases should include VIPs and executives. This rollout allows you to improve the deployment as you advance through the phases. Before ending a phase, determine if the phase is successful based on the goals. Modify the configuration, documentation, or notifications based on the feedback.
 - **Define your goals and success metrics**.  Make sure goals are SMART (Specific, Measurable, Attainable, Realistic, and Timely). Plan to measure against your goals at each phase so your rollout project stays on track. Possible success metrics include: end user survey results are 80%+ satisfied, usage on provisioned devices is 85% or more.
 - **Communicate goals**. Include the goals in all awareness and training activities so that end users understand why your organization chose Windows 365.
 
@@ -98,12 +98,12 @@ Change management relies on clear and helpful communication about upcoming chang
 **Task**: Your rollout communication plan should include important information, how to notify users, and when to communicate. Have a plan that includes when, what, and how to communicate.
 
 - Determine what information to communicate. Communicate multiple times to different phases of end users.
-  - **Kickoff Phase**: Broad communication that introduces Windows 365. In this communication make sure to answer these key questions.
+  - **Kickoff Phase**: Broad communication that introduces Windows 365. In this communication, make sure to answer these key questions.
     - What is Cloud PC?
     - Why is the organization using Cloud PC? Include benefits to end users and the organization.
     - Provide a high level plan of deployment.
   - **Pilot phase**: Include additional information to the pilot phase end users. Make sure they understand that they're in a pilot phase and should submit feedback.
-  - **Onboarding phase**: Communication targeting specific end users and groups that are scheduled to begin using Cloud PC. This should inform end users that their Cloud PC is ready to go. Include instructions on how to connect to Cloud PC from any platform the end user might use. In case end users have issues, you should also provide a help desk contact.
+  - **Onboarding phase**: Communication targeting specific end users and groups that are scheduled to begin using Cloud PC. This communication should inform end users that their Cloud PC is ready to go. Include instructions on how to connect to Cloud PC from any platform the end user might use. In case end users have issues, you should also provide a help desk contact.
 - Choose how to communicate Cloud PC to your targeted groups and users. Examples include:
   - Company wide meetings, Microsoft Teams, company newsletters, and email.
   - For onboarding communication, consider sending information in an email to end users.

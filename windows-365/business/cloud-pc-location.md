@@ -32,8 +32,8 @@ ms.collection: M365-identity-device-management
 
 Windows 365 Business Cloud PCs are created in a location based on the billing address country of your organization. The billing address is used to determine two things:
 
-1. Whether Windows 365 is available for purchase in that region.
-2. Where Windows 365 Cloud PCs are created.
+- Whether Windows 365 is available for purchase in that region.
+- Where Windows 365 Cloud PCs are created.
 
 ## Check if Windows 365 Business is available in your country
 
@@ -49,9 +49,9 @@ When a Cloud PC license is assigned, it’s created in a particular geographic l
 
 1. In your internet browser, go to [Where your Microsoft customer data is stored article](/microsoft-365/enterprise/o365-data-locations).
 2. Find the country that corresponds to your billing address and select **Click to expand**.
-3. The **Exchange Online** row identifies the location that your Cloud PC is created by default. If there is no capacity in the that location, your Cloud PC will be created in the nearest location with capacity.
+3. The **Exchange Online** row identifies the location that your Cloud PC is created by default. If there's no capacity in that location, your Cloud PC will be created in the nearest location with capacity.
 
-The billing address country doesn’t mean that the Cloud PC will necessarily reside in that country. Cloud PCs are created in the nearest supported location with available capacity. This may or may not be  the billing address country.
+The billing address country doesn’t mean that the Cloud PC will necessarily reside in that country. Cloud PCs are created in the nearest supported location with available capacity. This location may or may not be  the billing address country.
 
 ## Next steps
 
