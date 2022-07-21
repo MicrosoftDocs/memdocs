@@ -2,12 +2,12 @@
 # required metadata
 
 title: Assign device profiles in Microsoft Intune
-description: Use the Microsoft Endpoint Manager admin center to assign device profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
+description: Use the Microsoft Endpoint Manager admin center to assign device configuration profiles and policies to users and devices. Learn how to exclude groups from a profile assignment in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 07/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,11 +30,13 @@ ms.collection:
   - highpri
 ---
 
-# Assign user and device profiles in Microsoft Intune
+# Assign user and device configuration profiles in Microsoft Intune
 
-You create a profile, and it includes all the settings you entered. The next step is to deploy or "assign" the profile to your user or device groups. When it's assigned, the users and devices receive your profile, and the settings you entered are applied.
+You create a device configuration profile, and it includes all the settings you entered. The next step is to deploy or "assign" the profile to your user or device groups. When it's assigned, the users and devices receive your profile, and the settings you entered are applied.
 
-This article shows you how to assign a profile, and includes some information on using scope tags on your profiles.
+This article shows you how to assign a profile, and includes some information on using scope tags on your device configuration profiles. 
+
+For information on device configuration profiles, and what you can configure, go to [Apply features and settings on your devices using device profiles in Microsoft Intune](device-profiles.md).
 
 > [!NOTE]  
 > When a profile is removed or no longer assigned to a device, different things can happen, depending on the settings in the profile. The settings are based on CSPs, and each CSP can handle the profile removal differently. For example, a setting might keep the existing value, and not revert back to a default value. The behavior is controlled by each CSP in the operating system. For a list of Windows CSPs, see [configuration service provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
@@ -116,7 +118,6 @@ As a best practice:
 - Create and assign different profiles specifically for your device groups.
 
 For more information on groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
-
 
 ### Fundamentals
 
