@@ -784,6 +784,7 @@ items:
 
     - name: Protect Data and Devices with Intune
       href: ./protect/index.yml
+      items:
       - name: Overview
         items:
           - name: Device protection overview
