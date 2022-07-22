@@ -52,6 +52,7 @@ items:
   items: 
   - name: Determine the right management solution for you
   - name: Deploy Microsoft Intune
+    href: ./fundamentals/
   - name: Enable cloud attach for Configuration Manager
   - name: Enable co-management for Configuration Manager
   - name: Microsoft 365 basic management?
