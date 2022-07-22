@@ -30,11 +30,14 @@ ms.collection: M365-identity-device-management
 
 # Windows 365 security
 
-Windows 365 provides an end-to-end connection flow for users to do their work effectively and securely. There are three different considerations when evaluating the security of your environment:
+Windows 365 provides an end-to-end connection flow for users to do their work effectively and securely. Windows 365 is built with [Zero Trust](/security/zero-trust/zero-trust-overview) in mind, providing the foundation for you to implement controls to better secure your environment across the 6 pillars of Zero Trust. You can implement Zero Trust controls for the following categories:
 
 - Securing the access to the Cloud PC
+    - This aligns with securing the **Identity**, where you can place additional measures on who can access the Cloud PC and under which conditions.
 - Securing the Cloud PC device itself
+    - This aligns with securing the **Endpoint**, where you can place additional measures on the Cloud PC devices since that is the device being used to access organizational data.
 - Securing the Cloud PC data and other data available while using the Cloud PC
+    - This aligns with securing the **Data**, where you can place additional measures on the data itself or on how the Cloud PC user access the data.
 
 Take a look at the sections below to better understand the components and features available to you to secure your Cloud PC environment.
 
