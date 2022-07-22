@@ -68,7 +68,7 @@ You can now choose the **Windows 11 Enterprise + OS Optimizations** image when c
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning
 
-### Provision Cloud PCs with Secure Boot<!--38012584-->
+#### Provision Cloud PCs with Secure Boot<!--38012584-->
 
 Support for creating Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now available in Europe, APAC, and North American regions. Existing Cloud PCs won't have secure boot automatically enabled.
 
