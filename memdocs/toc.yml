@@ -9,7 +9,7 @@ items:
   - name: Getting started with Microsoft Endpoint Manager
     href: endpoint-manager-getting-started.md
   - name: Device management overview
-    href: ./fundamentals/what-is-device-management.md
+    href: ./intune/fundamentals/what-is-device-management.md
 
 - name: Learn about Microsoft Endpoint Manager technologies
   items:
@@ -52,7 +52,7 @@ items:
   items: 
   - name: Determine the right management solution for you
   - name: Deploy Microsoft Intune
-    href: ./fundamentals/ph1-overview.md
+    href: ./intune/fundamentals/ph1-overview.md
   - name: Enable cloud attach for Configuration Manager
   - name: Enable co-management for Configuration Manager
   - name: Microsoft 365 basic management?
