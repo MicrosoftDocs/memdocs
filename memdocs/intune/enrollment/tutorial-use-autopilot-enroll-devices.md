@@ -113,10 +113,12 @@ After creating a device group, you must create a deployment profile so that you 
 12. On the **Review + Create** page, choose **Create** to create the profile.
 
 ## Hardware change detection  
-Microsoft Intune notfies you when it detects a hardware change on an Autopilot-registered device. You can view and manage all affected devices in **Devices** > **Windows Autopilot devices**. When a hardware change occurs, Intune updates the device's profile status to one of the following states:
+Microsoft Intune notifies you when it detects a hardware change on an Autopilot-registered device. When a hardware change occurs, Intune updates the device's profile status to one of the following states:
 
 * **Attention required**: The device can't receive the Autopilot profile until you reset and re-register the device.  
 * **Fix pending**: Intune tries to register the new hardware. If successful, Intune updates the profile status at the next check-in.  
+
+To view all devices and their current states, go to **Devices** > **Windows Autopilot devices**.   
 
 ## Distribute devices to users
 
