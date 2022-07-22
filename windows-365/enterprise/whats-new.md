@@ -56,7 +56,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Cloud PC Outlook mail sync setting<!--40423390-->
 
-For newly provisioned and reprosivioned Cloud PCs, you can now set the Outlook mail sync setting to 6 or 12 months.
+For newly provisioned and reprovisioned Cloud PCs, you can now set the Outlook mail sync setting to 6 or 12 months.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -68,7 +68,7 @@ You can now choose the **Windows 11 Enterprise + OS Optimizations** image when c
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning
 
-### Provision Cloud PCs with Secure Boot<!--38012584-->
+#### Provision Cloud PCs with Secure Boot<!--38012584-->
 
 Support for creating Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now available in Europe, APAC, and North American regions. Existing Cloud PCs won't have secure boot automatically enabled.
 
@@ -205,7 +205,7 @@ The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has
 
 #### Upload a custom image without an Azure network connection<!--8341750 -->
 
-Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription which provides the image.
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription that provides the image.
 
 #### Cloud PC name appended to the network interface name<!--38793957-->
 
@@ -325,7 +325,7 @@ We've added information to the help documentation about the update cycle for Win
 
 #### Cloud PCs in grace period count towards active Cloud PC license usage<!-- 37017463-->
 
-Cloud PCs that are in grace period now count towards your active Cloud PC license usage. This makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
+Cloud PCs that are in grace period now count towards your active Cloud PC license usage. This policy makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
 
 For more information about grace period, see [Device management overview](device-management-overview.md) and [End grace period](end-grace-period.md).
 
@@ -395,7 +395,7 @@ Custom Windows 365 role-based access control (RBAC) roles are now available in t
 
 #### Resize support for preview and trial licenses<!--36228235-->
 
-If you have a combination of paid and free trial licenses, the Resize remote action will use your paid licenses first. When those run out, it will use your trial licenses. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
+If you have a combination of paid and free trial licenses, the Resize remote action will use your paid licenses first. When those licenses run out, it will use your trial licenses. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning
