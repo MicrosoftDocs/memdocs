@@ -8,7 +8,30 @@ items:
     href: endpoint-manager-overview.md
   - name: Getting started with Microsoft Endpoint Manager
     href: endpoint-manager-getting-started.md
-  - name: Cloud native Windows endpoints
+  - name: Device management overview
+    href: ./fundamentals/what-is-device-management.md
+
+- name: Learn about Microsoft Endpoint Manager technologies
+  items:
+  - name: Microsoft Endpoint Manager fundamentals
+    
+  - name: Microsoft Intune
+
+  - name: Configuration Manager - cloud attach
+
+  - name: Configuration Manager - co-management
+
+  - name: Endpoint Analytics
+
+  - name: Windows Autopilot
+
+- name: Learn about managing identities, devices, and apps
+  items:
+  - name: Manage identities
+  - name: Manage devices 
+  - name: Manage apps
+
+  - name: Learn about cloud native Windows endpoints
     items:
     - name: Overview and benefits
       href: cloud-native-endpoints-overview.md
@@ -24,5 +47,20 @@ items:
       href: cloud-native-endpoints-planning-guide.md
     - name: Known issues
       href: cloud-native-endpoints-known-issues.md
-  - name: Get Support
-    href: get-support.md
+
+- name: Device Management solutions
+  items: 
+  - name: Determine the right management solution for you
+  - name: Deploy Microsoft Intune
+  - name: Enable cloud attach for Configuration Manager
+  - name: Enable co-management for Configuration Manager
+  - name: Microsoft 365 basic management?
+  - name: Small business?
+  - name: EDU?
+
+- name: Endpoint Analytics
+
+- name: Windows Autopilot
+
+- name: Get Support
+  href: get-support.md

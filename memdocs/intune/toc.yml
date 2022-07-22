@@ -12,9 +12,7 @@ items:
 
 
 
-    - name: Device management overview
-      href: ./fundamentals/what-is-device-management.md
-      displayName: teamviewer 
+
 
 
 
@@ -1543,5 +1541,3 @@ items:
           items:
           - name: Reduce help desk costs
             href: ./remote-actions/password-reset.md
-
-
