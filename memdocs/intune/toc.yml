@@ -76,6 +76,7 @@ items:
         href: ph1-protect-apps.md
       - name: Step 5 - Enroll devices
         href: ph1-enroll-devices.md
+        
     - name: Enable additional security (need new name)
       items:
       - name: Defender for Endpoint
