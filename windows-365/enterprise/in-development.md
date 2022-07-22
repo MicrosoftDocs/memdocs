@@ -68,11 +68,7 @@ Admins will be able to set a toggle that automatically enrolls new Cloud PCs in 
 The resize action will support Cloud PCs that are Azure Active Directory joined.
 
 <!-- ***********************************************-->
-## Device provisioning
-
-### Provision Cloud PCs with Secure Boot<!--38012584-->
-
-You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality. North American regions will receive this feature within the next few months.
+<!--## Device provisioning-->
 
 <!--***********************************************-->
 <!--
@@ -94,8 +90,8 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 The device history report will have new information to help you evaluate Cloud PC performance:
 
-- Top 5 processes impacting CPU spike times
-- Top 5 processes impacting RAM spike times
+- Top five processes impacting CPU spike times
+- Top five processes impacting RAM spike times
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->

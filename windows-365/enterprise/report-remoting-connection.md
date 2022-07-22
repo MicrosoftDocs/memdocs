@@ -81,7 +81,7 @@ You can review the **Round trip time** and **Sign in time** for each Cloud PC de
 
 ## Device history
 
-When you click on a particular device in one of the reports, you'll see specific information for that device.  
+When you select on a particular device in one of the reports, you'll see specific information for that device.  
 
 ![Screenshot of using the device history](./media/report-remoting-connection/device-history.png)
 

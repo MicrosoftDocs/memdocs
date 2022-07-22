@@ -39,7 +39,7 @@ There are two different ways to provide a localized Windows experience when user
 
 ## URLs to allow
 
-For both the provisioning policy and custom image options to set up the display languages, make sure to add the following URLs to your firewall allow list:
+For both the provisioning policy and custom image options to set up the display languages, make sure to add the following URLs to your firewall allowlist:
 
 - Windows 11 21H2
   - LanguagePack: https://software-download.microsoft.com/download/sg/22000.1.210604-1628.co_release_amd64fre_CLIENT_LOF_PACKAGES_OEM.iso
