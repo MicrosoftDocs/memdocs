@@ -31,6 +31,7 @@ items:
   - name: Manage devices 
   - name: Manage apps
 
+
 - name: Learn about cloud native Windows endpoints
   items:
   - name: Overview and benefits
@@ -48,7 +49,9 @@ items:
   - name: Known issues
     href: cloud-native-endpoints-known-issues.md
 
+
 - name: Device Management solutions
+  expanded: true
   items: 
   - name: Determine the right management solution for you
   - name: Deploy Microsoft Intune
