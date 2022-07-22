@@ -1543,3 +1543,91 @@ items:
           items:
           - name: Reduce help desk costs
             href: ./remote-actions/password-reset.md
+
+
+  - name: Developer guidance
+    href: index.yml 
+    items:
+    - name: How-to guides
+      expanded: true
+      items:
+      - name: Protect apps with Intune App SDK
+        href: app-sdk.md
+        items:
+        - name: Get started with Intune App SDK
+          href: app-sdk-get-started.md
+        - name: Prepare LOB apps for app protection
+          href: apps-prepare-mobile-application-management.md
+        - name: LOB app versioning
+          href: apps-lob-app-versioning.md      
+        - name: App Wrapping Tool for iOS
+          href: app-wrapper-prepare-ios.md
+        - name: Intune App SDK for iOS
+          href: app-sdk-ios.md
+        - name: App Wrapping Tool for Android
+          href: app-wrapper-prepare-android.md
+          displayName: dex
+        - name: Intune App SDK for Android
+          href: app-sdk-android.md
+          items:
+          - name: Intune App SDK for Android testing guide
+            href: app-sdk-android-testing-guide.md        
+        - name: Intune App SDK Xamarin Bindings
+          href: app-sdk-xamarin.md
+      - name: Use the Intune Data Warehouse
+        href: reports-nav-create-intune-reports.md
+        items:
+        - name: Change log for the Data Warehouse
+          href: reports-changelog.md
+        - name: Connect to the Data Warehouse with Power BI
+          href: reports-proc-get-a-link-powerbi.md
+        - name: Create a report from the OData feed with Power BI
+          href: reports-proc-create-with-odata.md
+      - name: Report using Intune Data Warehouse API
+        href: reports-nav-intune-data-warehouse.md
+        items:
+        - name: Get data from the Data Warehouse API with a REST client
+          href: reports-proc-data-rest.md
+        - name: Data Warehouse API endpoint
+          href: reports-api-url.md
+        - name: Data Warehouse application-only authentication
+          href: data-warehouse-app-only-auth.md      
+        - name: Data Warehouse data model
+          href: reports-ref-data-model.md
+          items:
+          - name: Data Warehouse collections
+            href: intune-data-warehouse-collections.md 
+          - name: Data Warehouse collections (beta)
+            items:  
+            - name: User lifetime representation in the Intune Data Warehouse
+              href: reports-ref-user-timeline.md
+            - name: Reference for application entities
+              href: reports-ref-application.md
+            - name: Reference for date entity
+              href: reports-ref-date.md
+            - name: Reference for devices entities
+              href: reports-ref-devices.md
+            - name: Reference for Intune management extension entity
+              href: reports-ref-intunemanagementextension.md
+            - name: Reference for mobile app management (MAM) entities
+              href: reports-ref-mobile-app-management.md
+            - name: Reference for policy entities
+              href: reports-ref-policy.md
+            - name: Reference for user device association entity
+              href: reports-ref-user-device.md
+            - name: Reference for user entity
+              href: reports-ref-user.md
+        - name: Move your Intune Data Warehouse account data
+          href: data-warehouse-account-move.md
+      - name: Access Intune APIs in Microsoft Graph
+        items:
+        - name: Use Azure AD to access Intune APIs in Microsoft Graph
+          href: intune-graph-apis.md
+        - name: Intune API reference
+          href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
+        - name: Graph APIs used to configure devices
+          href: graph-apis-used-by-intune-device-configuration-windows.md  
+      
+  - name: Resources
+
+  - name: Reference
