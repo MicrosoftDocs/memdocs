@@ -154,7 +154,7 @@ Intune also blocks personal devices using these enrollment methods:
              > The min/max range isn't applicable to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app. Although Intune doesn't block ADE enrollments that use Company Portal to authenticate, not meeting OS requirements impacts registration because devices can't create the Azure AD device record used to evaluate Conditional Access policies. You can tell that this is the case if a device user receives an error message that says "Couldn't map device record with a user" after they sign in to Company Portal.
              
           > [!NOTE]
-          > Windows does not provide revision(.rev) number to Intune during enrollment. So, the format to use in Enrollent Restriction Policy is "major.minor.build.0". 
+          > Windows does not provide a revision (.rev) number to Intune during enrollment. Therefore, the format to use in Enrollment Restriction Policy is `major.minor.build.0`. 
        
     - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.  
     - **Device manufacturer**: Enter a comma-separated list of the manufacturers that you want to block.  
