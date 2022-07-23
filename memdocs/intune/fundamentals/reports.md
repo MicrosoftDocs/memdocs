@@ -431,7 +431,7 @@ When you click on a group, you can see the AAD pane for the group. You can ident
 To see the report for a device, you can use the following steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Monitor** > *select a device* > **Group Membership**.
+2. Select **Devices** > **All devices** > *select a device* > **Group Membership**.
 
 ## Device compliance trend report (Historical)
 
