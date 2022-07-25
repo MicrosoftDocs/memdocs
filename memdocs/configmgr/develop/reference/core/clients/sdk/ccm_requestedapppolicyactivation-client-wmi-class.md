@@ -48,7 +48,7 @@ Class CCM_RequestedAppPolicyActivation :
 
  Qualifiers: [values]  
 
- Activation action. Possible value are:  
+ Activation action. Possible values are:  
 
 |Value|Activation action|  
 |-|-|  

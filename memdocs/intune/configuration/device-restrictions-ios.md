@@ -568,7 +568,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Number of sign-in failures before wiping device**: Enter the number of failed sign-ins before the device is wiped, from 2-11. It's not recommended to set this value to `2` or `3`. It's common to enter the wrong password. Wiping the device after two or three incorrect password attempts happens often. It's recommended to set this value to at least `4`.
   
-  iOS/iPadOS has built-in security that can impact this setting. For example, iOS/iPadOS may delay triggering the policy depending on the number of sign in failures. It may also consider repeatedly entering the same passcode as one attempt. Apple's [iOS/iPadOS security guide](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (opens Apple's web site) is a good resource, and provides more specific details on passcodes. 
+  iOS/iPadOS has built-in security that can impact this setting. For example, iOS/iPadOS may delay triggering the policy depending on the number of sign-in failures. It may also consider repeatedly entering the same passcode as one attempt. Apple's [iOS/iPadOS security guide](https://www.apple.com/business/site/docs/iOS_Security_Guide.pdf) (opens Apple's web site) is a good resource, and provides more specific details on passcodes. 
   
 - **Maximum minutes after screen lock before password is required**<sup>1</sup>: Enter how long devices stay idle before users must reenter their password. If the time you enter is longer than what's currently set on the device, then the device ignores the time you enter.
 
