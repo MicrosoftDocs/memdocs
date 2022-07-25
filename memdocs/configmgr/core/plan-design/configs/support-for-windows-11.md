@@ -8,7 +8,7 @@ ms.technology: configmgr-core
 ms.topic: conceptual
 author: banreet
 ms.author: banreetkaur
-manager: dougeby
+manager: apoorvseth
 ---
 
 # Support for Windows 11 in Configuration Manager  
