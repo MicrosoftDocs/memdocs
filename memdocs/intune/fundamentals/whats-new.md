@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 07/25/2022
+ms.date: 07/27/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -97,7 +97,7 @@ Learn more about Common Criteria:
 ### Device enrollment
 
 #### Intune supports sign-in from another device during iOS/iPadOS Setup Assistant with modern authentication<!-- 12377183 -->  
-Users going through automated device enrollment (ADE) can now authenticate by signing in from another device.  This option is available for iOS/iPadOS devices enrolling via Setup Assistant with modern authentication. The screen that prompts device users to sign in from another device is embedded into Setup Assistant and shown to them during enrollment. For more information about the sign-in process for end users, see [Get the Intune Company Portal app (../user-help/sign-in-to-the-company-portal.md#sign-in-via-another-device).  
+Users going through automated device enrollment (ADE) can now authenticate by signing in from another device.  This option is available for iOS/iPadOS devices enrolling via Setup Assistant with modern authentication. The screen that prompts device users to sign in from another device is embedded into Setup Assistant and shown to them during enrollment. For more information about the sign-in process for users, see [Get the Intune Company Portal app (../user-help/sign-in-to-the-company-portal.md#sign-in-via-another-device).  
 
 #### Detect and manage hardware changes on Windows Autopilot devices<!-- 12795465 --> 
 Microsoft Intune will now alert you when it detects a hardware change on an Autopilot-registered device. You can view and manage all affected devices in the admin center. Additionally, you have the option to remove the affected device from Windows Autopilot and register it again so that the hardware change is accounted for.
@@ -368,11 +368,11 @@ Applies to:
 - macOS
 
 #### New search feature in Preview devices when creating a filter<!-- 14921046 -->
-In the Endpoint Manager admin center, you can create filters, and then use these filters when assigning apps and policies (**Devices** > **Filters** > **Create**).
+In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create filters, and then use these filters when assigning apps and policies (**Devices** > **Filters** > **Create**).
 
 When you create a filter, you can select **Preview devices** to see a list of enrolled devices that match your filter criteria. In **Preview devices**, you can also search through the list using the device name, OS version, device model, device manufacturer, user principal name of the primary user, and device ID.
 
-For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
+For more information on filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md).
 
 ## Week of July 18, 2022
 
