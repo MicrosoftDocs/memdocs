@@ -2,13 +2,13 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 04/08/2022
+ms.date: 01/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
 ---
 
