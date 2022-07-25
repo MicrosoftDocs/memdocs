@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch, technical preview branch)*
 
-<!--3556017-->
+<!--3556017
 > [!Important]
 > As of June 20, 2022, there is a known issue with the Azure templates for lab environments. We are working on resolving the issue and we will update this message when it's resolved. For more information, see [known issues](#known-issues). <!--icm 314312504-->
 
@@ -154,9 +154,9 @@ The prefix that you specified in the deployment template is the VM name prefix. 
 - Windows 10
 - Configuration Manager client
 
-
+<!--icm 314312504
 ## Known issues
-<!--icm 314312504-->
+<!--icm 314312504
 As of June 20, 2022, there is a known issue with the Azure templates for lab environments. We are working on resolving the issue and we will update this message when it's resolved. This issue occurs during deployment of the template and the following error message is displayed:
 
 ```text
@@ -169,3 +169,4 @@ As of June 20, 2022, there is a known issue with the Azure templates for lab env
 }
 
 ```
+-->
