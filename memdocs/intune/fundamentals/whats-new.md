@@ -94,6 +94,15 @@ Learn more about Common Criteria:
 - [CommonCriteriaMode](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#commoncriteriamode) in the Android Management API documentation
 - [Knox Deep Dive: Common Criteria Mode](https://www.samsungknox.com/blog/knox-deep-dive-common-criteria-mode) at samsungknox.com
 
+#### New hardware detail available for individual devices running on iOS/iPadOS and macOS<!-- 9598434 -->
+Select **Devices** > **All devices** > *select one of your listed devices* and open it's **Hardware** details. The following new detail is available in the **Hardware** pane of individual devices:
+ - **Product name**: Shows the product name of the device, such as iPad8,12. Available for iOS/iPadOS and macOS devices. 
+
+For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
+
+Applies to:
+- iOS/iPadOS, macOS
+
 ### Device enrollment
 
 #### Intune supports sign-in from another device during iOS/iPadOS Setup Assistant with modern authentication<!-- 12377183 -->  
