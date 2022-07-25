@@ -2,13 +2,13 @@
 title: Support for the Windows ADK
 titleSuffix: Configuration Manager
 description: Learn about the Windows Assessment and Deployment Kit (ADK) versions that are supported for OS deployment with Configuration Manager.
-ms.date: 04/08/2022
+ms.date: 01/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
 ---
 
