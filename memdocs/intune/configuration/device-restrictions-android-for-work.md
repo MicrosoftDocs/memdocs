@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/18/2022
+ms.date: 07/26/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -199,6 +199,22 @@ For corporate-owned devices with a work profile, some settings only apply in the
 ### System security
 
 - **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it may warn users to remove the app from the device. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
+
+- **Common Criteria mode**: **Require** enables an elevated set of security standards that are most often used in highly sensitive organizations, such as government establishments. Those settings include but are not limited to:
+
+  - AES-GCM encryption of Bluetooth Long Term Keys
+  - Wi-Fi configuration stores
+  - Blocks bootloader download mode, the manual method for software updates
+  - Mandates additional key zeroization on key deletion
+  - Prevents non-authenticated Bluetooth connections
+  - Requires that FOTA updates have 2048-bit RSA-PSS signature
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+  Learn more about Common Criteria:  
+  - [Common Criteria for Information Technology Security Evaluation](https://www.commoncriteriaportal.org) at commoncriteriaportal.org  
+  - [CommonCriteriaMode](https://developers.google.com/android/management/reference/rest/v1/enterprises.policies#commoncriteriamode) in the Android Management API documentation.  
+  - [Knox Deep Dive: Common Criteria Mode](https://www.samsungknox.com/blog/knox-deep-dive-common-criteria-mode) at samsungknox.com
 
 ### Device experience
 
@@ -693,7 +709,7 @@ You can configure the following settings:
 
 These settings apply to Android Enterprise personally owned devices with a work profile (BYOD).
 
-### Personally owned devices with a work profile settings
+### Personally owned devices with a work profile - settings
 
 - **Copy and paste between work and personal profiles**: **Block** prevents copy-and-paste between work and personal apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to share data using copy-and-paste with apps in the personal profile.
 - **Data sharing between work and personal profiles**: Choose if apps in the work profile can share with apps in the personal profile. For example, you can control sharing actions within applications, such as the **Share…** option in the Chrome browser app. This setting doesn't apply to copy/paste clipboard behavior. Your options:

@@ -21,7 +21,7 @@ ms.technology:
 
 ms.suite: ems
 search.appverid: MET150
-ms.reviewer: maholdaa
+ms.reviewer: tycast
 #ms.tgt_pltfrm:
 ms.custom: seodec18
 ms.collection: M365-identity-device-management
