@@ -2,12 +2,12 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 04/08/2022
+ms.date: 01/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
+author: banreet
+ms.author: banreetkaur
 manager: dougeby
 ---
 
