@@ -1,19 +1,18 @@
 ---
-title: Diagnostic and usage data for 2010
+title: Diagnostic and usage data for 2207
 titleSuffix: Configuration Manager
-description: Learn about the specific data that Configuration Manager collects at each level in version 2010.
-ms.date: 11/30/2020
+description: Learn about the specific data that Configuration Manager collects at each level in version 2207.
+ms.date: 08/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: paasin
+ms.author: paasin
+manager: apoorvseth
 ms.localizationpriority: medium
-ROBOTS: NOINDEX
 ---
 
-# Diagnostic and usage data for version 2010
+# Diagnostic and usage data for version 2207
 
 *Applies to: Configuration Manager (current branch)*
 
@@ -26,7 +25,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 
 ## Level 1 - Basic
 
-For Configuration Manager version 2010, this level includes the following data:
+For Configuration Manager version 2207, this level includes the following data:
 
 ### Application management (Level 1)
 
@@ -42,9 +41,9 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Count of Configuration Manager client versions, OS versions, and Office versions
 
-- Count of Windows 10 devices by branch, build, and unique Active Directory forest
+- Count of Windows 10 and later devices by branch, build, and unique Active Directory forest
 
-- Count of clients joined to Azure Active Directory
+- Count of clients joined to Azure Active Directory (Azure AD)
 
 - Count of extended interoperability clients
 
@@ -54,7 +53,13 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Use of the bulk registration token
 
-- ***[New]*** Count of clients by identity source and registration method. For example, Active Directory, Azure Active Directory, or PKI client authentication certificate.
+- Count of clients by identity source and registration method. For example, Active Directory, Azure AD, or PKI client authentication certificate.
+
+- Count of clients by OS type and version that are joined to Azure AD or hybrid-joined
+
+- Count of clients by OS and system processor type
+
+- ***[New]*** Statistics for the number of collections and machines with power configuration management settings assigned
 
 ### Cloud services (Level 1)
 
@@ -64,7 +69,9 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Aggregated usage statistics of co-management: number of clients ever enrolled, number of enrolled clients, number of clients pending enrollment, clients receiving policy, workload states, pilot/exclusion collection sizes, and enrollment errors
 
-- Count of Azure Active Directory applications and services connected to Configuration Manager
+- Count of clients piloting or using each co-management workload
+
+- Count of Azure AD applications and services connected to Configuration Manager
 
 - Cloud attach and detach actions
 
@@ -75,6 +82,8 @@ For Configuration Manager version 2010, this level includes the following data:
 - Summarized count of Endpoint Analytics event
 
 - Aggregated statistics on Desktop Analytics enrollment errors and usage
+
+- Count of clients by OS type and version that are co-managed, cloud-attached, or use a cloud management gateway (CMG)
 
 ### Configuration Manager console (Level 1)
 
@@ -94,7 +103,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Existence of Microsoft BitLocker Administration and Monitoring (MBAM) server-side extensions
 
-- ***[New]*** BitLocker management client counts summarized by state
+- BitLocker management client counts summarized by enrollment and TPM state
 
 ### Setup (Level 1)
 
@@ -110,11 +119,11 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Version of post-upgrade script
 
+- Central administration site removal status
+
 ### Site database (Level 1)
 
 - Basic database configuration: processors, memory size, memory settings, Configuration Manager database configuration, Configuration Manager database size, cluster configuration, configuration of distributed views, and change tracking version
-
-- ***[Removed]*** Configuration Manager database schema (hash of all object definitions)
 
 - Database performance metrics: replication processing information, top SQL Server stored procedures by processor, and disk usage
 
@@ -138,8 +147,6 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Diagnostics and usage data statistics: when run, runtime, errors
 
-- ***[Removed]***Whether network discovery is enabled or disabled
-
 - Hashed list of hardware inventory properties longer than 255 characters
 
 - Count and processing rates of key Configuration Manager objects: data discovery records (DDR), state messages, status messages, hardware inventory, software inventory, and overall count of files in inboxes
@@ -160,15 +167,15 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Site health check configuration and status
 
-- ***[New]*** Version of Visual Studio redistributable and .NET Framework installed on clients and site system servers
+- Version of Visual Studio redistributable and .NET Framework installed on clients and site system servers
 
-- ***[New]*** Summarized hierarchy health and activity status
+- Summarized hierarchy health and activity status
 
 ### Miscellaneous (Level 1)
 
 - Basic OS deployment counts of images
 
-- Count of Windows 10 clients that use Windows Update for Business
+- Count of Windows clients that use Windows Update for Business
 
 - Count of operating systems for managed devices and policies set by the Exchange Connector
 
@@ -176,9 +183,13 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Count of categorized and uncategorized applications for asset intelligence
 
+- Aggregated count of upgrade readiness assessments
+
+- Number of software updates referenced by task sequence
+
 ## Level 2 - Enhanced
 
-For Configuration Manager version 2010, this level includes the following data:
+For Configuration Manager version 2207, this level includes the following data:
 
 ### Application management (Level 2)
 
@@ -200,8 +211,6 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Basic usage/targeting information for deployment types: user versus device targeted, required versus available, and universal apps
 
-- ***[Removed]*** Count of App-V environments and deployment properties
-
 - Count of application applicability by OS
 
 - Count of applications referenced in a task sequence
@@ -214,7 +223,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Count of package/program deployments
 
-- Count of Windows 10 licensed application licenses
+- Count of Windows 10 and later licensed application licenses
 
 - Count of Windows Installer deployment types by uninstall content settings
 
@@ -238,7 +247,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Application global condition usage by type
 
-- Software Center customization configuration
+- Software Center customization configuration, including use of settings to configure Software Center and notification branding
 
 - Package Conversion Manager readiness and counts
 
@@ -266,19 +275,19 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Number of Office Pro Plus devices sending Office health data
 
+- Count of the type of actions used on apps over time
+
 ### Client (Level 2)
 
 - Active Management Technology (AMT) client version
 
-- BIOS age in years
+- BIOS age in years, and distribution of ages in months
 
 - Count of devices with Secure Boot enabled
 
 - Count of devices by TPM state
 
 - Client auto-upgrade: deployment configuration including client piloting and exclusion usage (extended interoperability client)
-
-- ***[Removed]*** Client cache size configuration
 
 - Client deployment download errors
 
@@ -314,15 +323,21 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Count of client health check failures by issue type
 
-- ***[New]*** Count of status (total/approved/blocked) for client certificate types
+- Count of status (total/approved/blocked) for client certificate types
 
-- ***[New]*** Client counts for different user/device relationship types
+- Client counts for different user/device relationship types
 
-- ***[New]*** Count of clients in VPN boundaries
+- Count of clients in VPN boundaries
+
+- ***[New]*** Power plans with their peak and and non-peak usage statistics
+
+- ***[New]*** Power plan peak usage statistics
+ 
+- ***[New]*** Power plan setting options usage statistics
 
 ### Cloud services (Level 2)
 
-- Azure Active Directory discovery statistics
+- Azure AD discovery statistics
 
 - Count of collections synced to Azure Log Analytics
 
@@ -333,6 +348,14 @@ For Configuration Manager version 2010, this level includes the following data:
 - Count of pull-distribution points with a cloud distribution point as a source location
 
 - Usage of the cloud services onboarding wizard
+
+- Cloud services configuration onboarding properties
+
+- Cloud services endpoint connectivity and component health
+
+- Usage of the cloud-attach wizard
+
+- ***[New]*** Cloud Distribution Point usage statistics
 
 ### CMPivot (Level 2)
 
@@ -358,11 +381,15 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Collections without a deployment
 
-- Count of collections synchronized to Azure Active Directory
+- Count of collections synchronized to Azure AD, including type and size
+ 
+- ***[New]*** Statistics for collection member counts and collection rule counts
+ 
+- ***[New]*** Statistics about the collection rule WMI class query dependencies
 
 ### Compliance settings (Level 2)
 
-- Basic configuration baseline information: count, number of deployments, and number of references
+- Basic configuration baseline information: count, number of deployments, number of references, and frequency of changes
 
 - Compliance policy error statistics
 
@@ -383,22 +410,28 @@ For Configuration Manager version 2010, this level includes the following data:
 - Count of OneDrive policies (created, deployed)
 
 - Count of compliance settings deployed by category, OS, and source (cloud vs on-premises)
+ 
+- ***[New]*** Company resource access profile settings usage
 
 ### Configuration Manager console (Level 2)
 
-- ***[Updated]*** Counts of active and viewed console notification messages by type
+- Counts of active and viewed console notification messages by type
 
-- Count of folders
+- Count of folders by object type
 
 - Console performance information
 
 - 25 most common actions, wizards, property sheets, and tree nodes accessed in the console
 
-- ***[New]*** List of installed console extensions
+- List of installed console extensions, and whether they're enabled, required, or approved
 
-- ***[New]*** Summary of size and count of admin persisted settings
+- Summary of size and count of admin persisted settings
 
-- ***[New]*** Selected console usage information
+- Selected console usage information
+
+- Unsigned extension policy
+ 
+- ***[New]*** Console dark mode usage
 
 ### Content (Level 2)
 
@@ -425,6 +458,8 @@ For Configuration Manager version 2010, this level includes the following data:
 - Count of boundary groups by configuration
 
 - Count of subnets excluded from peer cache
+
+- Count and type of operations on the `SMSDPProvider` service for distribution points
 
 ### Protection (Level 2)
 
@@ -458,17 +493,9 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Mobile device polling schedule and statistics for mobile device check-in duration
 
-### Microsoft Intune troubleshooting (Level 2)
-
-- ***[Removed]*** Count and size of device actions (wipe, retire, lock), usage data, and data messages that are replicated to Microsoft Intune
-
-- ***[Removed]*** Count and size of state, status, inventory, RDR, DDR, UDX, Tenant state, POL, LOG, Cert, CRP, Resync, CFD, RDO, BEX, ISM, and compliance messages that are downloaded from Microsoft Intune
-
-- ***[Removed]*** Full and delta user synchronization statistics for Microsoft Intune
-
 ### On-premises mobile device management (MDM) (Level 2)
 
-- Count of Windows 10 bulk enrollment packages and profiles
+- Count of Windows bulk enrollment packages and profiles
 
 - Deployment success/failure statistics for on-premises MDM application deployments
 
@@ -504,7 +531,13 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Count of packages with pre-cache content settings
 
-- ***[New]*** Grouped sizes of task sequence policies
+- Grouped sizes of task sequence policies
+
+- Count of error codes from feature upgrades for Windows clients
+
+- Count of supported and unsupported OS versions
+
+- Count of task sequences and legacy packages with custom icons
 
 ### Site updates (Level 2)
 
@@ -522,9 +555,9 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Cluster patching statistics
 
-- Configuration of Windows 10 express updates
+- Configuration of Windows express updates
 
-- Configurations that are used for active Windows 10 servicing plans
+- Configurations that are used for active Windows servicing plans
 
 - Count of deployed Microsoft 365 Apps updates
 
@@ -558,7 +591,7 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Update scan error codes and machine count
 
-- Windows 10 dashboard content versions
+- Windows servicing dashboard content versions
 
 - Count of third-party software update catalog subscriptions and usage
 
@@ -579,6 +612,10 @@ For Configuration Manager version 2010, this level includes the following data:
 - Orchestration group usage
 
 - Windows Update fallback configuration settings
+
+- Type, size, and timeout settings of orchestration group scripts
+ 
+- ***[New]*** Software Update Point setting options statistics
 
 ### SQL/performance data (Level 2)
 
@@ -628,11 +665,19 @@ For Configuration Manager version 2010, this level includes the following data:
 
 - Count of clients with browser usage
 
-- ***[New]*** Summary of how many site systems have the proxy enabled and how many are authenticated proxy
+- Summary of how many site systems have the proxy enabled and how many are authenticated proxy, including configuration, usage patterns, and traffic patterns
+
+- Usage information for the last seven days of in-console product feedback
+
+- Count of site-to-site accounts by type
+
+- Usage statistics for user and device custom properties
+
+- Count and type of edits to asset intelligence categories
 
 ## Level 3 - Full
 
-For Configuration Manager version 2010, this level includes the following data:
+For Configuration Manager version 2207, this level includes the following data:
 
 - Automatic deployment rule evaluation schedule information
 
