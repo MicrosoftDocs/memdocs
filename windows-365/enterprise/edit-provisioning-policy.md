@@ -41,7 +41,7 @@ If you change the network or image in a provisioning policy, no change will occu
 If you edit the name of the provisioning policy in the **General** information, the following will occur:
 
 - Any Cloud PC in the All Cloud PCs node will have the new policy name updated in the Provisioning policy column.
-- New Cloud PCs created from the provisioning policy will have the new name registered as the device’s enrollmentProfileName in Azure Active Directory and Microsoft Intune. The enrollmentProfileName property for existing Cloud PCs won't change. If you followed the steps to [create a dynamic device group containing all Cloud PCs](create-dynamic-device-group-all-cloudpcs.md) from a specific provisioning policy, edit the dynamic device group and add a new rule so that the group contains both the existing Cloud PCs and any new Cloud PCs from the provisioning policy:
+- New Cloud PCs created from the provisioning policy will have the new name registered as the device’s enrollmentProfileName in Azure Active Directory and Microsoft Intune. The enrollmentProfileName property for existing Cloud PCs won't change. If you followed the steps to [create a dynamic device group containing all Cloud PCs](create-dynamic-device-group-all-cloudpcs.md) from a specific provisioning policy, edit the dynamic device group, and add a new rule so that the group contains both the existing Cloud PCs and any new Cloud PCs from the provisioning policy:
 
   - **Property** = enrollmentProfileName
   - **Operator** = Equals

@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 The **User settings** page lets IT administrators manage various settings for the user. Currently, the only setting is the option of making the user a local admin in their Cloud PC.  
 
-When managing settings, keep the following in mind:
+When managing settings, keep the following points in mind:
 
 - The privileges can be applied before or after a Cloud PC is assigned.
 - Local administrator permissions apply at the user level.
@@ -72,7 +72,7 @@ When managing settings, keep the following in mind:
 
 ## Conflict Resolution for Local Admin
 
-Because user setting policies are assigned to user groups, there’s a possibility of overlap for groups/users. If a user is assigned to more than one user setting policy, user settings will honor the most-recently created policy and ignore all others. The last time a policy was updated doesn't impact this priority. To make sure user settings are consistent and clear, avoid any policy targeting overlaps.
+Because user setting policies are assigned to user groups, there’s a possibility of overlap for groups/users. If a user is assigned to more than one user setting policy, user settings will honor the most-recently created policy and ignore all others. The last time a policy was updated doesn't affect this priority. To make sure user settings are consistent and clear, avoid any policy targeting overlaps.
 
 <!-- ########################## -->
 ## Next steps

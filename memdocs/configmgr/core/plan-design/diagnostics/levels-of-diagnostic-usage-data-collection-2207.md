@@ -59,6 +59,8 @@ For Configuration Manager version 2207, this level includes the following data:
 
 - Count of clients by OS and system processor type
 
+- ***[New]*** Statistics for the number of collections and machines with power configuration management settings assigned
+
 ### Cloud services (Level 1)
 
 - Count of clients by co-management enrollment method
@@ -327,6 +329,12 @@ For Configuration Manager version 2207, this level includes the following data:
 
 - Count of clients in VPN boundaries
 
+- ***[New]*** Power plans with their peak and and non-peak usage statistics
+
+- ***[New]*** Power plan peak usage statistics
+ 
+- ***[New]*** Power plan setting options usage statistics
+
 ### Cloud services (Level 2)
 
 - Azure AD discovery statistics
@@ -346,6 +354,8 @@ For Configuration Manager version 2207, this level includes the following data:
 - Cloud services endpoint connectivity and component health
 
 - Usage of the cloud-attach wizard
+
+- ***[New]*** Cloud Distribution Point usage statistics
 
 ### CMPivot (Level 2)
 
@@ -372,6 +382,10 @@ For Configuration Manager version 2207, this level includes the following data:
 - Collections without a deployment
 
 - Count of collections synchronized to Azure AD, including type and size
+ 
+- ***[New]*** Statistics for collection member counts and collection rule counts
+ 
+- ***[New]*** Statistics about the collection rule WMI class query dependencies
 
 ### Compliance settings (Level 2)
 
@@ -396,6 +410,8 @@ For Configuration Manager version 2207, this level includes the following data:
 - Count of OneDrive policies (created, deployed)
 
 - Count of compliance settings deployed by category, OS, and source (cloud vs on-premises)
+ 
+- ***[New]*** Company resource access profile settings usage
 
 ### Configuration Manager console (Level 2)
 
@@ -414,6 +430,8 @@ For Configuration Manager version 2207, this level includes the following data:
 - Selected console usage information
 
 - Unsigned extension policy
+ 
+- ***[New]*** Console dark mode usage
 
 ### Content (Level 2)
 
@@ -596,6 +614,8 @@ For Configuration Manager version 2207, this level includes the following data:
 - Windows Update fallback configuration settings
 
 - Type, size, and timeout settings of orchestration group scripts
+ 
+- ***[New]*** Software Update Point setting options statistics
 
 ### SQL/performance data (Level 2)
 

@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 07/13/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -57,15 +57,18 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!--## App management-->
 
 <!--***********************************************-->
-<!--## Device management
--->
+## Device management
+
+### New setting to easily enroll Business Cloud PCs in Microsoft Endpoint Manager<!--40009143-->
+
+Admins will be able to set a toggle that automatically enrolls new Cloud PCs in to Microsoft Endpoint Manager.
+
+### Resize action support for more Cloud PCs<!--40263425-->
+
+The resize action will support Cloud PCs that are Azure Active Directory joined.
 
 <!-- ***********************************************-->
-## Device provisioning
-
-### Provision Cloud PCs with Secure Boot<!--38012584-->
-
-You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality. North American regions will receive this feature within the next few months.
+<!--## Device provisioning-->
 
 <!--***********************************************-->
 <!--
@@ -79,14 +82,6 @@ You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/desi
 
 You’ll be able to review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues.
 
-### End-user error log collection<!--38195529-->
-
-End users will be able to collect error logs.
-
-### End-user feedback<!--38195529-->
-
-End users will be able to provide feedback to Microsoft from within the Windows 365 web client.
-
 ### End user manual connectivity check<!--37679345 -->
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
@@ -95,8 +90,8 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 The device history report will have new information to help you evaluate Cloud PC performance:
 
-- Top 5 processes impacting CPU spike times
-- Top 5 processes impacting RAM spike times
+- Top five processes impacting CPU spike times
+- Top five processes impacting RAM spike times
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->

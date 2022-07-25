@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 07/11/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -242,7 +242,7 @@ After you've added your rules, select **Next** to display the **Dependencies** p
 
 App dependencies are applications that must be installed before your Win32 app can be installed. You can require that other apps are installed as dependencies. 
 
-Specifically, the device must install the dependent apps before it installs the Win32 app. ​There is a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. 
+Specifically, the device must install the dependent apps before it installs the Win32 app. There is a maximum of 100 dependencies, which includes the dependencies of any included dependencies, as well as the app itself. 
 
 You can add Win32 app dependencies only after your Win32 app has been added and uploaded to Intune. After your Win32 app has been added, you'll see the **Dependencies** option on the pane for your Win32 app. 
 
@@ -250,7 +250,7 @@ Any Win32 app dependency needs to also be a Win32 app. It does not support depen
 
 When you're adding an app dependency, you can search based on the app name and publisher. Additionally, you can sort your added dependencies based on app name and publisher. Previously added app dependencies can't be selected in the list of added app dependencies. 
 
-You can choose whether or not to install each dependent app automatically. By default, the **Automatically install** option is set to **Yes** for each dependency. By automatically installing a dependent app, even if the dependent app is not targeted to the user or device, Intune will install the app on the device to satisfy the dependency before installing your Win32 app.​ 
+You can choose whether or not to install each dependent app automatically. By default, the **Automatically install** option is set to **Yes** for each dependency. By automatically installing a dependent app, even if the dependent app is not targeted to the user or device, Intune will install the app on the device to satisfy the dependency before installing your Win32 app.
 
 It's important to note that a dependency can have recursive sub-dependencies, and each sub-dependency will be installed before the main dependency is installed. Additionally, installation of dependencies does not follow a specific order at a dependency level.
 
@@ -267,14 +267,25 @@ After you've selected dependencies, select **Next** to display the **Scope tags*
 
 ### Understand additional dependency details
 
-The user will see Windows notifications indicating that dependent apps are being downloaded and installed as part of the Win32 app installation process. Additionally, when a dependent app is not installed, the user will commonly see one of the following notifications:
-- One or more dependent apps failed to be install​ed.
-- One or more dependent app requirements are not met​.
+The user will see Windows notifications indicating that dependent apps are being downloaded and installed as part of the Win32 app installation process. 
+
+#### Dependency limitations
+
+The following bulleted list provides additional clarity about dependency limitations:
+-	If an app has 100 dependencies, then the app graph has a total size of 101 (100 dependency apps + 1 parent app). 
+-	If an app has 3 dependencies, and one of the dependency apps has 2 dependencies, then the app graph has a total size of 6 (1 parent app + 3 dependency app + 2 dependency app that are from another dependency app).
+-	If an app is a dependency for multiple app “graphs”, meaning that the dependency is somewhere in the dependency chain for some app graph, then all apps from all the separate graphs are summed to calculate the dependency size. For example, if graph A has 23 apps, graph B has 62 apps, and graph C has 20 apps, and app X exist as a dependency app somewhere in the dependency chain in all 3 graphs, then the total size of the graph is 103 (app X is only counted once), which surpasses the 100 limit restriction. 
+
+#### Dependency failures
+
+When a dependent app is not installed, the user will commonly see one of the following notifications:
+- One or more dependent apps failed to be installed.
+- One or more dependent app requirements are not met.
 - One or more dependent apps are pending a device reboot.
 
-If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting).​
+If you choose not to put a dependency in the **Automatically install** column, the Win32 app installation won't be attempted. Additionally, app reporting will show that the dependency was flagged as `failed` and provide a failure reason. You can view the dependency installation failure by selecting a failure (or warning) provided in the Win32 app [installation details](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting).
 
-Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global re-evaluation schedule.​ Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies are not applicable for uninstalling a Win32 app.​ To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list.​ 
+Each dependency will adhere to Intune Win32 app retry logic (try to install three times after waiting for five minutes) and the global re-evaluation schedule. Also, dependencies are applicable only at the time of installing the Win32 app on the device. Dependencies are not applicable for uninstalling a Win32 app. To delete a dependency, you must select the ellipsis (three dots) to the left of the dependent app located at the end of the row of the dependency list. 
 
 ## Step 6: Supersedence
 

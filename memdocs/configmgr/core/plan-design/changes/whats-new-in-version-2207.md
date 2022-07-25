@@ -29,7 +29,7 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--12952905-->
 When configuring Azure Services, a new option called **Administration Service Management** is now added for enhanced security. Selecting this option allows administrators to segment their admin privileges between cloud management gateway (CMG) and administration service. By enabling this option, access is restricted to only administration service endpoints. Configuration Management clients will authenticate to the site using Azure Active Directory.
  
-<!--For more information, see [xxxxxc](../../servers/blah.md). -->
+For more information, see [Configure Azure services for use with Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
 ### Improvements to cloud management gateway (CMG) workflow
 <!--13351390#-->
@@ -64,7 +64,7 @@ You can now define a **Script Execution Timeout (seconds)** when configuring cli
 ## Collections
 
 
-
+ 
 <!-- ## Software Center -->
 
 ## Software updates
@@ -101,8 +101,11 @@ Based upon your feedback, you can now offset monthly maintenance window schedule
 
 ## Configuration Manager console
 
+### Improvements to the console
 
+- When using the search bar, the **Path** criteria is added whenever subfolders are included in the search. <!--14908615-->
 
+For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#bkmk_2207).
 
 
 

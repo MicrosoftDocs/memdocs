@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 06/15/2022
+ms.date: 07/06/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -128,10 +128,11 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2206
+### Technical preview version 2207
 
-- [Default site boundary group behavior to support cloud source selection](2022/technical-preview-2206.md#bkmk_dbgmp) <!--10674394-->
-- [PowerShell release notes preview](2022/technical-preview-2206.md#bkmk_powershell) <!--14431761-->
+- [Distribution point content migration](2022/technical-preview-2207.md#bkmk_dpconmig) <!--10928371-->
+- [Improvements to Configuration Manager policies for Microsoft Defender Application Guard](2022/technical-preview-2207.md#bkmk_app-guard) <!--14059872-->
+- [PowerShell release notes preview](2022/technical-preview-2207.md#bkmk_powershell) <!--14637353-->
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -151,6 +152,11 @@ The following features were released with previous versions of the Configuration
 
 <!-- ### Technical preview version 2111 -->
 
+### Technical preview version 2206
+
+- [Default site boundary group behavior to support cloud source selection](2022/technical-preview-2206.md#bkmk_dbgmp) <!--10674394-->
+- [PowerShell release notes preview](2022/technical-preview-2206.md#bkmk_powershell) <!--14431761-->
+- 
 ### Technical preview version 2205
 
 - [Offset for reoccurring monthly maintenance window schedules](2022/technical-preview-2205.md#bkmk_offset) <!--3601127-->

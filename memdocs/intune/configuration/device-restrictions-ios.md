@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/23/2022
+ms.date: 07/18/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,6 +29,9 @@ ms.collection:
 ---
 
 # iOS and iPadOS device settings to allow or restrict features using Intune
+
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 This article describes the different settings you can control on iOS and iPadOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
 
@@ -212,7 +215,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
   - iOS 4.0 and newer
   - iPadOS 13.0 and newer
 
-- **Block Find My iPhone**: **Yes** prevents this feature in the Find My app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using this Find My app feature to get the approximate location of the device.
+- **Block Find My iPhone**: In the Find My app, **Yes** disables/hides the **Devices** tab. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using the **Devices** tab in the Find My app to get the approximate location of the device.
 
   This feature applies to:  
   - iOS 13.0 and newer

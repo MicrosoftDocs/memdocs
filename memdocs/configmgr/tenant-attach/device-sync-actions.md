@@ -2,7 +2,7 @@
 title: Enable Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
-ms.date: 07/01/2022
+ms.date: 07/11/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -30,7 +30,7 @@ When co-management is already enabled, edit the co-management properties to enab
 1. In the ribbon, select **Properties** for your co-management production policy.
 1. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Select **Apply**.
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
-   - Starting in Configuration Manager version 2010, when a single collection is selected, its child collections are also uploaded.
+   - When a single collection is selected, its child collections are also uploaded.
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights for optimizing the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
 
 > [!Important]
@@ -62,9 +62,9 @@ When co-management isn't enabled, use the instructions below to enable device up
 
    [![Co-management Configuration Wizard](./media/3555758-comanagement-wizard.png)](./media/3555758-comanagement-wizard.png#lightbox)
 1. Choose **Next** and then **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
-     - Optionally, you can import a previously created Azure AD application during tenant attach onboarding (starting in version 2006). For more information, see the [Import a previously created Azure AD application](#bkmk_aad_app) section.
+     - Optionally, you can import a previously created Azure AD application during tenant attach onboarding. For more information, see the [Import a previously created Azure AD application](#bkmk_aad_app) section.
 1. On the **Configure upload** page, select the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
-    - Starting in Configuration Manager version 2010, when a single collection is selected, its child collections are also uploaded. <!--8717629-->
+    - When a single collection is selected, its child collections are also uploaded. <!--8717629-->
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
 1. Select **Summary** to review your selection, then choose **Next**.
 1. When the wizard is complete, select **Close**.  
@@ -95,9 +95,6 @@ From the Microsoft Endpoint Manager admin center, you can review the status of y
    
 :::image type="content" source="media/7138634-connector-status.png" alt-text="Microsoft Endpoint Configuration Manager connector in the admin center" lightbox="media/7138634-connector-status.png":::
 
-> [!NOTE]
-> Some information isn't available if the hierarchy is running Configuration Manager version 2006 or earlier.
-
 ## <a name="bkmk_offboard"></a> Offboard from tenant attach
 
 While we know customers get enormous value by enabling tenant attach, there are rare cases where you might need to offboard a hierarchy. You can offboard from either the Configuration Manager console (recommend method) or from the Microsoft Endpoint Manager admin center.
@@ -119,7 +116,7 @@ If needed, you can offboard a Configuration Manager hierarchy from the Microsoft
 1. Select **Tenant administration** then **Connectors and tokens**.
 1. Select **Microsoft Endpoint Configuration Manager**.
 1. Choose the name of the site you would like to offboard, then select **Delete**.
-   - The connector may be listed as **Unknown** for version 2002 sites or if site information is lacking. <!--10569820, 10944009-->
+   - The connector may be listed as **Unknown** if the site information is lacking. <!--10569820, 10944009-->
 
 When you offboard a hierarchy from the admin center, it may take up to two hours to remove from the Microsoft Endpoint Manager admin center. If you offboard a Configuration Manager 2103 or later site that's online and healthy, the process may only take a few minutes.
 
