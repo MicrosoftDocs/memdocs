@@ -136,7 +136,7 @@ CMTrace can be found on the Configuration Manager site server, under the "\<Conf
 
 **Policy Spy:** A policy viewer that helps you review and troubleshoot the policy system on System Center 2012 Configuration Manager clients.  
 
-Client Spy and Policy Spy are both tools contained in the [System Center 2012 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012)  
+Client Spy and Policy Spy are both tools contained in the System Center 2012 Configuration Manager Toolkit  
 
 ## Basic Configuration Manager program example  
 
