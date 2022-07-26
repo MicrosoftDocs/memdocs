@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how to set operating system deployment branding information in the configuration manager by changing the property of the client agent component section.
 
 
 ---

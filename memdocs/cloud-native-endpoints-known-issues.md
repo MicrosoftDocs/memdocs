@@ -119,7 +119,7 @@ The following list includes common features and services that might use machine 
 
   For more information, go to:
 
-  - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](/mem/intune/apps/intune-management-extension)
+  - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](./intune/apps/intune-management-extension.md)
   - [Introduction to OneDrive in Microsoft 365](/learn/modules/m365-onedrive-collaboration-use/)
 
 ## Group policy objects might not apply
@@ -128,14 +128,14 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
 **Resolution**:
 
-- Using [Group Policy Analytics](/mem/intune/configuration/group-policy-analytics) in Endpoint Manager, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
+- Using [Group Policy Analytics](./intune/configuration/group-policy-analytics.md) in Endpoint Manager, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
 - In endpoint management, policies are deployed to users and groups. They aren't applied in LSDOU order. This behavior is a mind shift, so make sure your users and groups are in order.
 
-  For more specific information and guidance on policy assignment in Microsoft Intune, go to [Assign user and device profiles in Microsoft Intune](/mem/intune/configuration/device-profile-assign).
+  For more specific information and guidance on policy assignment in Microsoft Intune, go to [Assign user and device profiles in Microsoft Intune](./intune/configuration/device-profile-assign.md).
 
 - Inventory your policies, and determine what they do. You may find categories or groupings, such as policies that focus on security, policies that focus on the OS, and so on.
 
-  You can create an Intune policy that includes the settings from your categories or groupings. The [Settings Catalog](/mem/intune/configuration/settings-catalog) is a good resource.
+  You can create an Intune policy that includes the settings from your categories or groupings. The [Settings Catalog](./intune/configuration/settings-catalog.md) is a good resource.
 
 - Be prepared to create new policies. The built-in features of modern endpoint management, like Microsoft Intune, may have better options to create and deploy policies.
 

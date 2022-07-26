@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2022
+ms.date: 07/21/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,52 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of July 18, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Cloud PC Outlook mail sync setting<!--40423390-->
+
+For newly provisioned and reprovisioned Cloud PCs, you can now set the Outlook mail sync setting to 6 or 12 months.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 11 optimized image now available for Windows 365 Cloud PCs<!--39890525 -->
+
+You can now choose the **Windows 11 Enterprise + OS Optimizations** image when creating a new provisioning policy.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Provision Cloud PCs with Secure Boot<!--38012584-->
+
+Support for creating Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now available in Europe, APAC, and North American regions. Existing Cloud PCs won't have secure boot automatically enabled.
+
+<!-- ########################## -->
+## Week of July 4, 2022 (Service release 2206)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Support for virtualization-based workloads now generally available<!--39989666 -->
+Support for virtualization-based workloads has moved out of preview and into general availability. For more information, see [Set up virtualization-based workloads on your Cloud PC](nested-virtualization.md).
+
+<!--***********************************************-->
+### End user experience
+
+#### Transfer files from your Cloud PC by using windows365.microsoft.com web client<!--40096523-->
+You can use the windows365.microsoft.com web client to transfer files to and from your Cloud PC. For more information, see [Transfer files to and from a Cloud PC](../end-user-access-cloud-pc.md#transfer-files-to-and-from-a-cloud-pc).
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### New health check: verify that Intune enrollment restrictions allow Windows enrollment<!--39998861 -->
+
+The **Azure network connection** tab has a new health check: **Intune enrollment restrictions allow Windows enrollment**. This health check verifies that Intune enrollment restrictions are configured to allow Windows enrollment. Windows 365 Enterprise requires Intune enrollment during provisioning.
 
 <!-- ########################## -->
 ## Week of June 6, 2022 (Service release 2205)
@@ -97,7 +143,7 @@ Support for Azure AD joined Cloud PCs has moved out of preview and into general 
 
 #### Provision Cloud PCs with Secure Boot<!--38012584 -->
 
-Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now rolling out in Asia Pacific (APAC) regions. This feature will roll out to all customers over the next few months.
+Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now rolling out in Asia Pacific (APAC) regions and Europe. This feature will roll out to all customers over the next few months.
 
 <!-- ########################## -->
 ## Week of May 2, 2022
@@ -159,7 +205,7 @@ The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has
 
 #### Upload a custom image without an Azure network connection<!--8341750 -->
 
-Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription which provides the image.
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription that provides the image.
 
 #### Cloud PC name appended to the network interface name<!--38793957-->
 
@@ -279,7 +325,7 @@ We've added information to the help documentation about the update cycle for Win
 
 #### Cloud PCs in grace period count towards active Cloud PC license usage<!-- 37017463-->
 
-Cloud PCs that are in grace period now count towards your active Cloud PC license usage. This makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
+Cloud PCs that are in grace period now count towards your active Cloud PC license usage. This policy makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
 
 For more information about grace period, see [Device management overview](device-management-overview.md) and [End grace period](end-grace-period.md).
 
@@ -349,7 +395,7 @@ Custom Windows 365 role-based access control (RBAC) roles are now available in t
 
 #### Resize support for preview and trial licenses<!--36228235-->
 
-If you have a combination of paid and free trial licenses, the Resize remote action will use your paid licenses first. When those run out, it will use your trial licenses. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
+If you have a combination of paid and free trial licenses, the Resize remote action will use your paid licenses first. When those licenses run out, it will use your trial licenses. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning

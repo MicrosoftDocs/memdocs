@@ -94,11 +94,16 @@ If you block Android Enterprise work profile enrollment on personal devices, onl
 
 #### Blocking personal iOS/iPadOS devices
 By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
-- [Registered with a serial number](corporate-identifiers-add.md).
-- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
+- [Registered with a serial number or IMEI](corporate-identifiers-add.md).
+- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program).
 
 > [!NOTE]
 > An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).  
+
+#### Blocking personal macOS devices
+By default, Intune classifies macOS devices as personally-owned. To be classified as corporate-owned, a macOS device must fulfill one of the following conditions:
+- [Registered with a serial number](corporate-identifiers-add.md).
+- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program).
 
 #### Blocking personal Windows devices
 If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  
@@ -141,9 +146,13 @@ Intune also blocks personal devices using these enrollment methods:
     - **Platform** (Android only): Select **Allow** next to permitted platforms.    
     - **MDM** (Windows, macOS, and iOS/iPadOS): Select **Allow** next to permitted platforms.   
     - **Allow min/max range** (Android, Windows, iOS/iPadOS only): Enter the minimum and maximum OS versions allowed to enroll. Supported version formats include:  
-        - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
-        - iOS/iPadOS supports major.minor.rev. Operating system versions don't apply to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app.
-        - Windows supports major.minor.build.rev for Windows 10 and Windows 11 only.
+        - Windows supports major.minor.build.rev for Windows 10 and Windows 11 only.  
+        - Android device administrator and Android Enterprise work profile support major.minor.rev.build.  
+        - iOS/iPadOS supports major.minor.rev.  
+
+             > [!TIP]
+             > The min/max range isn't applicable to Apple devices that enroll with the Device Enrollment Program, Apple School Manager, or the Apple Configurator app. Although Intune doesn't block ADE enrollments that use Company Portal to authenticate, not meeting OS requirements impacts registration because devices can't create the Azure AD device record used to evaluate Conditional Access policies. You can tell that this is the case if a device user receives an error message that says "Couldn't map device record with a user" after they sign in to Company Portal.    
+        
     - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.  
     - **Device manufacturer**: Enter a comma-separated list of the manufacturers that you want to block.  
 
@@ -266,7 +275,9 @@ When you create a restriction, it's added to the list just above the default. Yo
 
 
 >[!NOTE]
->Enrollment restrictions are applied to users. For enrollment scenarios that are not user-driven, such as Windows Autopilot self-deploying mode, Intune only enforces the default restrictions targeted to all users.  
+>Enrollment restrictions are applied to users. For enrollment scenarios that are not user-driven such as Windows Autopilot self-deploying mode, Bulk enrollment (WCD), or Azure Virtual desktop, Intune only enforces the default restrictions targeted to all users.
+>
+>For a successful enrollment, make sure the platform is allowed in the default enrollment restriction policy.
  
 
 ## View enrollment reports

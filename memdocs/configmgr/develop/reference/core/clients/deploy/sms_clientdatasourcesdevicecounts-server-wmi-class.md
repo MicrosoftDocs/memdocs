@@ -1,5 +1,6 @@
 ---
 title: "SMS_ClientDataSourcesDeviceCounts Class"
+description: Learn how to use the SMS_ClientDataSourcesDeviceCounts class in Configuration Manager to represent device counts for client data sources.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

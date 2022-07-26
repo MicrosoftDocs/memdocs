@@ -4,7 +4,7 @@ description: include file
 author: ErikjeMS  
 ms.service: cloudpc
 ms.topic: include
-ms.date: 03/04/2022
+ms.date: 07/14/2022
 ms.author: erikje
 ms.custom: include file
 ---
@@ -26,8 +26,20 @@ For more information, see [Machine Account Password Process](https://techcommuni
 
 ## Cursor visible location offset from actual position
 
-In a remote desktop session, when you click one position in a text file, the cursor in the Cloud PC has some offset with the real position.
+In a remote desktop session, when you select one position in a text file, the cursor in the Cloud PC has some offset with the real position.
 
 **Possible cause**: In high DPI mode, both the server and Cloud PC browser scale the cursor. This conflict results in an offset between the visible cursor position and the actual cursor focus.
 
 **Troubleshooting steps**: Turn off high DPI mode.
+
+## Outlook only downloads one month of mail<!--39845820-->
+
+Outlook only downloads one month of previous mail and this can't be changed in Outlook settings.
+
+ **Troubleshooting steps**:
+
+1. Launch registry editor.
+2. Remove the **syncwindowsetting** regkey under the path \HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\office\16.0\outlook\cached mode.
+3. Add the **syncwindowsetting** regkey with the value 1 under the path HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode.
+
+After you complete these steps, the default will be one month. However, the download period can be changed in Outlook settings.

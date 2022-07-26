@@ -56,7 +56,7 @@ Requirements for the computer where you install the connector software:
 
 Requirements for PKCS certificate templates:
 
-- Certificate templates you’ll use for PKCS requests must be configured with permissions that allow the certificate connector service account to auto enroll the certificate.
+- Certificate templates you’ll use for PKCS requests must be configured with permissions that allow the certificate connector service account to enroll the certificate.
 - The certificate templates must be added to the Certification Authority (CA).
 
 > [!NOTE]

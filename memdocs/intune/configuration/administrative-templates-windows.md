@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2022
+ms.date: 07/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,7 +44,7 @@ The Intune templates are 100% cloud-based, are built in to Intune (no downloadin
 
 - The **Office and Microsoft Edge** settings are ADMX-ingested, and use the same Office administrative template files and Microsoft Edge administrative template files that you would download in on-premises environments.
 
-When managing devices in your organization, you want to create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task using **Administrative Templates** in Microsoft Intune.
+When managing devices in your organization, you want to create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task using **Administrative Templates** in Microsoft Intune. 
 
 As part of your mobile device management (MDM) solution, use these template settings as a one-stop shop to manage your Windows client devices.
 
@@ -149,6 +149,15 @@ There are thousands of settings available in these templates. To make it easier 
   For example, to see all the available Internet Explorer user settings, select  **User configuration**, and search for `Internet Explorer`. Only the IE settings that apply to users are shown:
 
   :::image type="content" source="./media/administrative-templates-windows/show-all-internet-explorer-settings-user-configuration.png" alt-text="In the ADMX template, select user configuration, and search or filter for Internet Explorer in Microsoft Intune.":::
+
+## Create a Known Issue Rollback (KIR) policy
+
+On your enrolled devices, you can use administrative templates to create a Known Issue Rollback (KIR) policy, and deploy this policy to your Windows devices. For the specific steps, go to [Deploy a KIR activation using Microsoft Intune ADMX policy ingestion to managed devices](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback#deploy-a-kir-activation-using-microsoft-intune-admx-policy-ingestion-to-the-managed-devices).
+
+For more information on KIR, and what it is, go to:
+
+- [Known Issue Rollback: Helping you keep Windows devices protected and productive](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/known-issue-rollback-helping-you-keep-windows-devices-protected/ba-p/2176831)
+- [How to use on-premises Group Policy or Intune to deploy a Known Issue Rollback](/troubleshoot/windows-client/group-policy/use-group-policy-to-deploy-known-issue-rollback)
 
 ## Next steps
 

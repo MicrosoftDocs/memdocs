@@ -2,7 +2,7 @@
 title: Troubleshoot software updates for devices uploaded to the admin center
 titleSuffix: Configuration Manager
 description: Troubleshooting software updates for Configuration Manager tenant attach
-ms.date: 06/07/2022
+ms.date: 07/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 author: banreet
@@ -82,8 +82,7 @@ Typically, this error is caused by an issue with the admin account. Below are th
 1. Verify the service connection point has connectivity to the cloud using the **CMGatewayNotificationWorker.log**.
 1. Verify the administrative service is healthy by reviewing the SMS_REST_PROVIDER component from site component monitoring on both the central site and primary site that owns the device.
 1. IIS must be installed on provider machine. For more information, see [Prerequisites for the administration service](../../configmgr/develop/adminservice/overview.md#prerequisites).
-1. For Configuration Manager version 2002, verify the clock on the service connection point is in sync. If the service connection point's clock is slightly behind, apply [KB4563473 - Update rollup for Configuration Manager version 2002 tenant attach issues](https://support.microsoft.com/help/4563473). Check **AdminService.log** on the provider machine for any errors.
-1. For Configuration Manager version 2002, verify the device is in the security scope for the administrator's security role. For more information, see [Fundamentals of role-based administration](../../configmgr/core/understand/fundamentals-of-role-based-administration.md).
+
 
 ### Configuration Manager doesn't meet the minimum version prerequisite
 
@@ -94,5 +93,4 @@ Typically, this error is caused by an issue with the admin account. Below are th
 ## Known issues
 
 1. Some of the **Classification** resources aren't translated in some of the supported languages.
-1. The "Learn more about software updates" link goes to a page which is always in English.
 1. For consoles in Japanese, the current time format is YYYY/MM/DD.

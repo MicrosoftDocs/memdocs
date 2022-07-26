@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 06/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -164,7 +164,7 @@ Microsoft Tunnel logs information to the Linux server logs in the *syslog* forma
 
 Command line examples for *journalctl*:
 
-- To view information for only the tunnel server, run `journalctl -t ocserv`. 
+- To view information for only the tunnel server, run `journalctl -t ocserv`.
 - To view information for all log options, you can run `journalctl -t ocserv -t ocserv-access -t mstunnel-agent -t mstunnel_monitor`.
 - Add `-f` to the command to display an active and continuing view of the log file. For example, to actively monitor ongoing processes for Microsoft Tunnel, run `journalctl -t mstunnel_monitor -f`.
 
@@ -173,8 +173,22 @@ More options for *journalctl*:
 - `journalctl -h` – Display command help for *journalctl*.
 - `man journalctl` – Display additional information.
 - `man journalctl.conf` Display information on configuration
-For more information about *journalctl*, see the documentation for the version of Linux that you use.  
-<!-- Pending ocserv-access -->
+For more information about *journalctl*, see the documentation for the version of Linux that you use.
+
+## Known issues
+
+The following are known issues for Microsoft Tunnel.
+
+### Devices fail to connect to the Tunnel server
+
+**Issue**: Devices fail to connect to the server, and the Tunnel server *ocserv* log file contains an entry similar to the following: `main: tun.c:655: Can't open /dev/net/tun: Operation not permitted`
+
+For guidance on viewing Tunnel logs, see [View Microsoft Tunnel logs](#view-microsoft-tunnel-logs) in this article.
+
+**Workaround**: Restart the server using `mst-cli server restart` after the Linux server reboots.
+
+If this issue persists, consider automating the restart command by using the cron scheduling utility. See [How to use cron on Linux](https://opensource.com/article/21/7/cron-linux) at *opensource.com*. 
+
 
 ## Next steps
 

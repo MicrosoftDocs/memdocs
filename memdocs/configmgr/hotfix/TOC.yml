@@ -7,8 +7,10 @@ items:
     href: 2203/13174460.md
   - name: KB 13953025 Early update ring
     href: 2203/13953025.md  
-  - name: KB 14480034 Client registration fails in Configuration Manager 2203
+  - name: KB 14480034 PKI Client registration fails in Configuration Manager 2203
     href: 2203/14480034.md
+  - name: KB 14244456 Update rollup for Microsoft Endpoint Configuration Manager version 2203
+    href: 2203/14244456.md
 - name: Version 2111
   items:
   - name: KB 10096997 Summary of changes in 2111

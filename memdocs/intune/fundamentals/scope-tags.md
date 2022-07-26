@@ -53,6 +53,10 @@ The default scope tag feature is similar to the security scopes feature in Micro
 3. On the **Assignments** page, choose the groups containing the devices that you want to assign this scope tag. Choose **Next**.
 4. On the **Review + create** page, choose **Create**.
 
+    > [!IMPORTANT]
+    > Auto scope tags assignments will overwrite mannually assigned scope tags.
+    > If a device is assigned multiple scope tags through group assignment, all scope tags will apply.
+
 ## To assign a scope tag to a role
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Roles** > **All roles** > choose a role > **Assignments** > **Assign**.

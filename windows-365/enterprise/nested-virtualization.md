@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: Set up nested virtualization on your Windows 365 Cloud PC.
+title: Set up virtualization-based workloads on your Windows 365 Cloud PC.
 titleSuffix:
 description: Learn how to set up nested virtualization on your Windows 365 Cloud PC.
 keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 07/07/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -28,9 +28,9 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# Set up nested virtualization on your Cloud PC (preview)
+# Set up virtualization-based workloads support
 
-Nested virtualization is a feature that lets customers use the following systems on their Windows 365 Enterprise Cloud PCs:
+Virtualization-based workloads let customers use the following systems on their Windows 365 Enterprise Cloud PCs:
 
 - Windows Subsystem for Linux (WSL)
 - Windows Subsystem for Android
@@ -39,7 +39,7 @@ Nested virtualization is a feature that lets customers use the following systems
 
 ## Requirements
 
-To use nested virtualization, the Cloud PC must meet these requirements:
+To use virtualization-based workloads, the Cloud PC must meet these requirements:
 
 - 8vCPU/32 (Cloud PCs resized from 1vCPU/2GB and 2vCPU/4GB to 8vCPU/32GB aren't supported)
 - Be in one of these regions (other regions aren't currently supported):
@@ -56,10 +56,10 @@ To use nested virtualization, the Cloud PC must meet these requirements:
   - Japan East
   - France Central
 
-## Set up nested virtualization
+## Set up virtualization-based workloads
 
 1. If the Cloud PC was provisioned before April 5, 2022, you must [reprovision](reprovision-cloud-pc.md) the Cloud PC.
-2. To set up a specific nested virtualization system, see the following articles:
+2. To set up a specific virtualization-based workloads system, see the following articles:
     - [Set up a WSL development environment](/windows/wsl/setup/environment).
     - [Windows Subsystem for Android™️](/windows/android/wsa/).
     - [Install Hyper-V on Windows 10](/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v).
@@ -68,4 +68,4 @@ To use nested virtualization, the Cloud PC must meet these requirements:
 <!-- ########################## -->
 ## Next steps
 
-For more information about nested virtualization, see [Run Hyper-V in a Virtual Machine with Nested Virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).
+For more information about virtualization-based workloads, see [Run Hyper-V in a Virtual Machine with Nested Virtualization](/virtualization/hyper-v-on-windows/user-guide/nested-virtualization).

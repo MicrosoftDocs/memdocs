@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/07/2022
+ms.date: 07/05/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,15 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of July 4, 2022 (Service release 2206)
+
+<!--***********************************************-->
+### End user experience
+
+#### Transfer files from your Cloud PC by using windows365.microsoft.com web client<!--40096523-->
+You can use the windows365.microsoft.com web client to transfer files to and from your Cloud PC. For more information, see [Transfer files to and from a Cloud PC](../end-user-access-cloud-pc.md#transfer-files-to-and-from-a-cloud-pc).
 
 <!-- ########################## -->
 ## Week of May 16, 2022
@@ -105,7 +114,7 @@ Users can now restore a Cloud PC to a state from a previous point in time. Multi
 
 #### Windows 365 link on Microsoft 365 admin center<!--37188422 -->
 
-To make it easier for admins to set up Windows 365, a link has been added to the M365 admin center home page. Admins with Windows 365 Enterprise licenses will see a link for [endpoint.microsoft.com](https://endpoint.microsoft.com) and admins with Windows 365 Business licenses will see a link for [windows365.microsoft.com](https://windows365.microsoft.com).
+To make it easier for admins to set up Windows 365, a link has been added to the Microsoft 365 admin center home page. Admins with Windows 365 Enterprise licenses will see a link for [endpoint.microsoft.com](https://endpoint.microsoft.com) and admins with Windows 365 Business licenses will see a link for [windows365.microsoft.com](https://windows365.microsoft.com).
 
 #### Higher Cloud PC screen resolution option (preview)<!--38301718 wnready-->
 

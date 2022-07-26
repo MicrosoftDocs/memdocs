@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 05/10/2022
+ms.date: 07/12/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -45,7 +45,7 @@ A device enrollment manager can use the following methods to enroll devices in I
 
 - [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows devices bulk enrollment](windows-bulk-enroll.md)
-- DEM-initated via Company Portal enrollment   
+- DEM-initiated via Company Portal enrollment   
 - DEM-initiated via Azure AD-join  
 
 > [!TIP]
@@ -59,7 +59,18 @@ These Azure AD roles can manage device enrollment managers:
 * Global Administrator 
 * Intune Service Administrator role in Azure AD    
 
-They can add and delete device enrollment managers, and view all DEM users in the Microsoft Endpoint Manager admin center.  
+People assigned these roles can add and delete device enrollment managers, and view all DEM users in the Microsoft Endpoint Manager admin center.  
+
+## Add a device enrollment manager
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Enroll devices**.
+3. Select **Device enrollment managers**.  
+4. Select **Add**.
+3. In the **User name** field, enter the user principal name of the user you're adding.
+6. Select **Add**. The new device enrollment manager is added to the list of DEM users. 
+
+To remove someone as a device enrollment manager, select their name in the list and then choose **Delete**.  
 
 ## Limitations 
 
@@ -97,20 +108,4 @@ Only the local device appears in the Company Portal app or Company Portal websit
 ### Number of accounts  
 There's a limit of 150 DEM accounts in Microsoft Intune.  
 
-## Add a device enrollment manager
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
-
-2. Select **Add**.
-
-3. On the **Add User** blade, enter a user principal name for the DEM user, and select **Add**. The DEM user is added to the list of DEM users.
-
-
-## Remove device enrollment manager permissions
-
-Removing a device enrollment manager doesn't affect enrolled devices.
-
-### To remove a device enrollment manager
-
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Enroll devices** > **Device enrollment managers**.
-2. On the **Device enrollment managers** blade, select the DEM user, and select **Delete**.  
