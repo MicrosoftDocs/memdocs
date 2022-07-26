@@ -351,20 +351,19 @@ If a conditional access policy is configured as described above and if the devic
 
 Updates for Remote help are released periodically. When we update Remote help, you can read about the changes here.
 
-### April 5, 2022
-
-Version 4.0.0.0 - GA release
-
-### May 11, 2022
-
-Version 4.0.1.7 - Webview 2 release 
-
 ### July 26, 2022
 
 Version: 4.1.0.12 - Changes in this release: 
 
 Various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability.
 
+### May 11, 2022
+
+Version 4.0.1.7 - Webview 2 release 
+
+### April 5, 2022
+
+Version 4.0.0.0 - GA release
 
 ## Next steps
 
