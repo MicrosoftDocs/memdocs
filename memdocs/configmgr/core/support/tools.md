@@ -23,7 +23,7 @@ These tools are included in the `CD.Latest\SMSSETUP\Tools` folder on the site se
 All Windows operating systems listed as supported clients in [Supported operating systems for clients and devices](../plan-design/configs/supported-operating-systems-for-clients-and-devices.md) are supported for use with these tools.
 
 > [!NOTE]
-> The System Center 2012 R2 Configuration Manager Toolkit is still available from the Microsoft Download Center. For supported versions of Configuration Manager current branch, use the versions of the tools in the CD.Latest folder on the site server. Some tools were formerly in the toolkit but not included current branch. These legacy tools are no longer supported.
+> For supported versions of Configuration Manager current branch, use the versions of the tools in the CD.Latest folder on the site server. Some tools were formerly in the toolkit but not included current branch. These legacy tools are no longer supported.
 
 ## Client tools
 
