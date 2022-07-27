@@ -59,12 +59,13 @@ items:
   - name: Enable cloud attach for Configuration Manager
   - name: Enable co-management for Configuration Manager
   - name: Microsoft 365 basic management?
+  - name: MDM vs MAM?
   - name: Small business?
   - name: EDU?
 
 - name: Endpoint Analytics
-
+  href: ./analytics/
 - name: Windows Autopilot
-
+  href: ./autopilot/
 - name: Get Support
   href: get-support.md
