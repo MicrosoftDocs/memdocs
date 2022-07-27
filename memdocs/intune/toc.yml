@@ -8,8 +8,6 @@ items:
     - name: Microsoft Intune overview
       href: ./fundamentals/what-is-intune.md 
       displayName: ems; emm; azure ad; active directory; ad
-
-
     - name: What's new
       items:
       - name: What's new
@@ -24,10 +22,13 @@ items:
         href: ./fundamentals/public-preview.md
   - name: Evaluate and pilot
     items:
-    - name: Try Intune for free
-      href: ./fundamentals/free-trial-sign-up.md
+
     - name: Walkthrough Intune in Microsoft Endpoint Manager
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
+
+
+    - name: Try Intune for free
+      href: ./fundamentals/free-trial-sign-up.md      
 
   - name: Planning
     items:
