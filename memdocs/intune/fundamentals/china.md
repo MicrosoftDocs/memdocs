@@ -47,6 +47,7 @@ Because the China services are operated by a partner from inside China, there ar
 - Management of Windows 10 is supported by using the modern MDM channel.
 - Intune operated by 21Vianet doesn't support on-premises Exchange Connector.
 - Windows Autopilot and Business Store features aren't currently available.
+- Microsoft Endpoint Manager Endpoint Analytics and Log Analytics features aren't currently available.
 - Because Google Mobile Services isn't available in China, customers in Intune operated by 21Vianet can't use features that require Google Mobile Services. These features include:
   - Google Play Protect capabilities such as SafetyNet device attestation.
   - Managing apps from the Google Play Store.
