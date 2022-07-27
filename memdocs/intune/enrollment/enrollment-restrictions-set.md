@@ -94,11 +94,16 @@ If you block Android Enterprise work profile enrollment on personal devices, onl
 
 #### Blocking personal iOS/iPadOS devices
 By default, Intune classifies iOS/iPadOS devices as personally-owned. To be classified as corporate-owned, an iOS/iPadOS device must fulfill one of the following conditions:
-- [Registered with a serial number](corporate-identifiers-add.md).
-- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program)
+- [Registered with a serial number or IMEI](corporate-identifiers-add.md).
+- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program).
 
 > [!NOTE]
 > An iOS User Enrollment profile overrides an enrollment restriction policy. For more information, see [Set up iOS/iPadOS and iPadOS User Enrollment (preview)](ios-user-enrollment.md).  
+
+#### Blocking personal macOS devices
+By default, Intune classifies macOS devices as personally-owned. To be classified as corporate-owned, a macOS device must fulfill one of the following conditions:
+- [Registered with a serial number](corporate-identifiers-add.md).
+- Enrolled by using Automated Device Enrollment (formerly Device Enrollment Program).
 
 #### Blocking personal Windows devices
 If you block personally owned Windows devices from enrollment, Intune checks to make sure that each new Windows enrollment request has been authorized for corporate enrollment. Unauthorized enrollments are blocked.  

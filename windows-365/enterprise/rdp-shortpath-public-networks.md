@@ -66,14 +66,14 @@ For more information about RDP Shortpath benefits, see [Key benefits](/azure/vir
 
 ## RDP Shortpath connection process
 
-When using RDP Shortpath, the connection with the Cloud PC proceeds as follows:
+When you use RDP Shortpath, the connection with the Cloud PC proceeds as follows:
 
 1. The RDP connection establishes a TCP-based connection using the reverse connect transport through the Gateway (in the same way as it does for connectivity without RDP Shortpath).
 2. If RDP Shortpath is enabled on the session host (Cloud PC), the service creates a UDP socket on all viable network interfaces.
 3. To test connectivity, the service attempts to connect to a Windows 365 STUN server on the public internet through UDP port 3478. This step also establishes the external IP address of the NAT router.
 4. The session host’s candidate table lists the public IP and listener port that it has reachable connectivity on. This information is provided to the connecting client through the established TCP session.
 5. The client sends its list of reachable public IP addresses/ports to the session host.
-6. Both parties attempt a connection at the same time. Because both are creating outbound connections, this often allows connectivity to be established through firewalls because no inbound initiated connectivity occurs.
+6. Both parties attempt a connection at the same time. Because both are creating outbound connections, it often allows connectivity to be established through firewalls because no inbound initiated connectivity occurs.
 7. If connectivity is successful, the service evaluates if the connection is the fastest path. If it is, all dynamic virtual channels (such as graphics, input, device redirection, and more) switch to the new transport flow.
 
 ## Known issues
