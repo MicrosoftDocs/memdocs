@@ -8,13 +8,12 @@ items:
     href: endpoint-manager-overview.md
   - name: Getting started with Microsoft Endpoint Manager
     href: endpoint-manager-getting-started.md
-  - name: Device management overview
-    href: ./intune/fundamentals/what-is-device-management.md
+
 
 - name: Learn about Microsoft Endpoint Manager technologies
   items:
-  - name: Microsoft Endpoint Manager fundamentals
-    
+  - name: Microsoft Endpoint Manager fundamentals (Learning path)
+    href: /learn/paths/endpoint-manager-fundamentals/  
   - name: Microsoft Intune
 
   - name: Configuration Manager - cloud attach
@@ -50,10 +49,11 @@ items:
     href: cloud-native-endpoints-known-issues.md
 
 
-- name: Device Management solutions
+- name: Plan your endpoint management options
   expanded: true
   items: 
-  - name: Determine the right management solution for you
+  - name: Choose your endpoint manager solution
+    href: ./intune/fundamentals/what-is-device-management.md
   - name: Deploy Microsoft Intune
     href: ./intune/fundamentals/ph1-overview.md
   - name: Enable cloud attach for Configuration Manager

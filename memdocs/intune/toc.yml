@@ -25,8 +25,7 @@ items:
 
     - name: Walkthrough Intune in Microsoft Endpoint Manager
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
-    - name: Microsoft Endpoint Manager fundamentals (Learning path)
-      href: /learn/paths/endpoint-manager-fundamentals/
+
 
     - name: Try Intune for free
       href: ./fundamentals/free-trial-sign-up.md      
