@@ -8,21 +8,47 @@ items:
     href: endpoint-manager-overview.md
   - name: Getting started with Microsoft Endpoint Manager
     href: endpoint-manager-getting-started.md
-  - name: Cloud native Windows endpoints
+
+
+- name: Learn about Microsoft Endpoint Manager technologies
+  items:
+  - name: Plan your endpoint management options
+    href: ./intune/fundamentals/what-is-device-management.md
+
+  - name: Microsoft Endpoint Manager fundamentals (Learning path)
+    href: /learn/paths/endpoint-manager-fundamentals/  
+  - name: Microsoft Intune
+
+  - name: Cloud attach Configuration Manager
+
+  - name: Co-management with Configuration Manager
+
+  - name: Endpoint Analytics
+    href: ./analytics/
+  - name: Windows Autopilot
+    href: ./autopilot/
+
+- name: Manage identities, devices, and apps
+  items:
+  - name: Manage identities
+    href: manage-identities.md
+  - name: Manage devices 
+  - name: Manage apps
+
+
+- name: What are cloud native endpoints
+  items:
+  - name: Overview and benefits
+    href: cloud-native-endpoints-overview.md
+  - name: Tutorial-Get started with cloud native Windows endpoints
+    href: cloud-native-windows-endpoints.md
+  - name: Azure AD concepts and on-premises resources
     items:
-    - name: Overview and benefits
-      href: cloud-native-endpoints-overview.md
-    - name: Tutorial-Get started with cloud native Windows endpoints
-      href: cloud-native-windows-endpoints.md
-    - name: Azure AD concepts and on-premises resources
-      items:
-      - name: Azure AD joined vs. Hybrid Azure AD joined
-        href: azure-ad-joined-hybrid-azure-ad-joined.md
-      - name: Access on-premises resources
-        href: cloud-native-endpoints-on-premises.md
-    - name: Planning guide
-      href: cloud-native-endpoints-planning-guide.md
-    - name: Known issues
-      href: cloud-native-endpoints-known-issues.md
-  - name: Get Support
-    href: get-support.md
+    - name: Azure AD joined vs. Hybrid Azure AD joined
+      href: azure-ad-joined-hybrid-azure-ad-joined.md
+    - name: Access on-premises resources
+      href: cloud-native-endpoints-on-premises.md
+  - name: Planning guide
+    href: cloud-native-endpoints-planning-guide.md
+  - name: Known issues
+    href: cloud-native-endpoints-known-issues.md

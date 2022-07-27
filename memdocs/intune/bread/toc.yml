@@ -20,7 +20,7 @@ items:
           topicHref: /mem/intune/user-help/use-managed-devices-to-get-work-done
         - name: Apps
           tocHref: /mem/intune/apps/
-          topicHref: /mem/intune/apps/
+          topicHref: /mem/intune/
         - name: Fundamentals
           tocHref: /mem/intune/fundamentals/
           topicHref: /mem/intune/fundamentals/
