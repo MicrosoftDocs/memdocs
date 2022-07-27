@@ -68,9 +68,10 @@ The following table lists the various options for *assigning* apps to users and 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps**.
 3. In the **Apps** pane, select the app you want to assign.
-4. In the **Manage** section of the menu, select **Assignments**.
-5. Select **Add Group** to open the **Add group** pane that is related to the app.
-6. For the specific app, select an **assignment type**:
+4. In the **Manage** section of the menu, select **Properties**.
+5. Scroll down to **Properties**, select **Assignments**.
+6. Select **Add Group** to open the **Add group** pane that is related to the app.
+7. For the specific app, select an **assignment type**:
    - **Available for enrolled devices**: Assign the app to groups of users who can install the app from the Company Portal app or website.
    - **Available with or without enrollment**: Assign this app to groups of users whose devices are not enrolled with Intune. Users must be assigned an Intune license, see [Intune Licenses](../fundamentals/licenses.md).
    - **Required**: The app is installed on devices in the selected groups. Some platforms may have additional prompts for the end user to acknowledge before app installation begins.
