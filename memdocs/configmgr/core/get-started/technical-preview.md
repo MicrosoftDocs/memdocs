@@ -97,7 +97,7 @@ Install a baseline version for up to one year after its release. When you instal
 
 - **Technical preview version 2206**
 
-Download a baseline version from the [Evaluation Center](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager-technical-preview).
+Download a baseline version from the [Evaluation Center](https://www.microsoft.com/en-in/evalcenter/evaluate-microsoft-endpoint-configuration-manager-technical-preview).
 
 <!--
 > [!NOTE]
@@ -156,7 +156,7 @@ The following features were released with previous versions of the Configuration
 
 - [Default site boundary group behavior to support cloud source selection](2022/technical-preview-2206.md#bkmk_dbgmp) <!--10674394-->
 - [PowerShell release notes preview](2022/technical-preview-2206.md#bkmk_powershell) <!--14431761-->
-- 
+
 ### Technical preview version 2205
 
 - [Offset for reoccurring monthly maintenance window schedules](2022/technical-preview-2205.md#bkmk_offset) <!--3601127-->
