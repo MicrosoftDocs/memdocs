@@ -103,8 +103,8 @@ For more information, see [View device details with Microsoft Intune](../remote-
 Applies to:
 - iOS/iPadOS, macOS
 
-#### Remote help Version: 4.1.0.12 release<!-- 14999203 -->
-With Remote help 4.1.0.12 various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
+#### Remote help Version: 4.0.1.12 release<!-- 14999203 -->
+With Remote help 4.0.1.12 various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability. 
 
 For more information, see [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
