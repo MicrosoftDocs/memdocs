@@ -12,6 +12,9 @@ items:
 
 - name: Learn about Microsoft Endpoint Manager technologies
   items:
+  - name: Plan your endpoint management options
+    href: ./intune/fundamentals/what-is-device-management.md
+
   - name: Microsoft Endpoint Manager fundamentals (Learning path)
     href: /learn/paths/endpoint-manager-fundamentals/  
   - name: Microsoft Intune
@@ -49,19 +52,7 @@ items:
     href: cloud-native-endpoints-known-issues.md
 
 
-- name: Plan your endpoint management options
-  expanded: true
-  items: 
-  - name: Choose your endpoint manager solution
-    href: ./intune/fundamentals/what-is-device-management.md
-  - name: Deploy Microsoft Intune
-    href: ./intune/fundamentals/ph1-overview.md
-  - name: Enable cloud attach for Configuration Manager
-  - name: Enable co-management for Configuration Manager
-  - name: Microsoft 365 basic management?
-  - name: MDM vs MAM?
-  - name: Small business?
-  - name: EDU?
+
 
 - name: Endpoint Analytics
   href: ./analytics/
