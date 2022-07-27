@@ -34,7 +34,7 @@ items:
   - name: Manage apps
 
 
-- name: Learn about cloud native Windows endpoints
+- name: What are cloud native Windows endpoints
   items:
   - name: Overview and benefits
     href: cloud-native-endpoints-overview.md
