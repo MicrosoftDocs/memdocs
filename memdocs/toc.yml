@@ -24,7 +24,7 @@ items:
 
   - name: Windows Autopilot
 
-- name: Learn about managing identities, devices, and apps
+- name: Manage identities, devices, and apps
   items:
   - name: Manage identities
   - name: Manage devices 
