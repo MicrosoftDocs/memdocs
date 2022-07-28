@@ -133,4 +133,3 @@ You can cancel a request before it’s approved by selecting it from the My requ
 
 ## Next steps
 
-<Pending>
