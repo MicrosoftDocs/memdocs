@@ -69,7 +69,7 @@ The following table lists the various options for *assigning* apps to users and 
 2. Select **Apps** > **All apps**.
 3. In the **Apps** pane, select the app you want to assign.
 4. In the **Manage** section of the menu, select **Properties**.
-5. Scroll down to **Properties**, select **Assignments**.
+5. Scroll down to **Properties** and select **Assignments**.
 6. Select **Add Group** to open the **Add group** pane that is related to the app.
 7. For the specific app, select an **assignment type**:
    - **Available for enrolled devices**: Assign the app to groups of users who can install the app from the Company Portal app or website.
