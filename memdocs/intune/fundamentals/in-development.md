@@ -103,11 +103,6 @@ Applies to:
 - Windows 10
 - Windows 11
 
-### Certificate profiles support for Android (AOSP) devices<!-- 8506319, 8506363 -->
-To expand our support for the Android Open Source Project (AOSP) platform, you’ll soon be able to deploy the following certificate profiles to corporate-owned and userless devices: 
-- Trusted certificate profile
-- PKCS certificate profile
-
 ### Import custom ADMX and ADML administrative templates to create a device configuration profile<!-- 4970862 -->
 You can create a device configuration policy that uses built-in ADMX templates (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Administrative templates**).
 
