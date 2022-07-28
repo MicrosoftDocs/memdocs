@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: About multiple administrative approval in Intune
+title: About multiple administrative approvals in Intune
 titleSuffix: Microsoft Intune
 description: Configure multi-admin approval to protect against compromised administrative accounts in Intune
 keywords:
@@ -27,20 +27,20 @@ ms.collection:
   - highpri
 ---
 
-# Use Access policies to require multiple administrative approval
+# Use Access policies to require multiple administrative approvals
 
 *This feature is in Public Preview*
 
-To help protect against a compromised administrative account, use Intune *access policies* to require that a second administrative account be used to approve a change before the change is applied. This capability is known as multi-admin approval (MAA).
+To help protect against a compromised administrative account, use Intune *access policies* to require that a second administrative account is used to approve a change before the change is applied. This capability is known as multi-admin approval (MAA).
 
 With MAA, you configure access policies that protect specific configurations, like Apps or Scripts for devices. Access policies specify what is protected and which group of accounts are permitted to approve changes to those resources.
 
-When any account in the Tenant makes a change to a resource that’s protected by an access policy, that change isn’t applied until a different account explicitly approves the change. Only administrators who are members of an approval group that’s assigned a protected resource in an access protection policy can approve changes. Approvers can also reject change requests.
+When any account in the Tenant is used to make a change to a resource that’s protected by an access policy, Intune won't apply the change until a different account explicitly approves it. Only administrators who are members of an approval group that’s assigned a protected resource in an access protection policy can approve changes. Approvers can also reject change requests.
 
 Access policies are supported for the following resources:
 
-- Apps – This applies to [app deployments](../apps/apps-add.md), but does not apply to app protection policies.
-- Scripts – This applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
+- Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
+- Scripts – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
 
 ## Prerequisites for access policies and approvers
 
@@ -63,15 +63,15 @@ To be an approver, an account must be in the group that’s assigned to the acce
 - The *business justification* becomes part of the approval request for the change.
 - An admin who has submitted a change can view the status of their requests in the Microsoft Endpoint Manager admin center by going to **Tenant administration** > **Multi Admin Approval** and viewing the **My request** page.
 
-**After a change is submitted**, an *approver* navigates to the **Received request** page of the **Multi Admin Approval** node. Here they’ll see a list of requests that are active, or recently managed. This view provides some details about the request including when it was submitted and by whom, the type of operation involved like *Create* or *Assign*, and its status. To manage the request:
+**After a change is submitted**, an *approver* navigates to the **Received request** page of the **Multi Admin Approval** node. Here they’ll see a list of requests that are active, or recently managed. This view provides some details about the request including when and who submitted it, the type of operation involved like *Create* or *Assign*, and its status. To manage the request:
 
 - The approver selects the *Business justification* link for the request. This action opens the Access policy request pane where you can view more information about the change, including the full details provided in the Business justification field of the request.
 - On the Access policy request pane, the approver can enter notes in the **Approver notes** field, and then select an option to **Approve request** or **Reject request**. These notes are added to the request and are visible to the individual who requested the change when they review their requests on the **My request** page. For example, if the request is rejected, the reason for the rejection can be passed back to the requestor through the Approver notes.
-- Individuals who submit a request and are also members of the approval group for that can see their own requests on the Received request page. However, they cannot approve their own requests.
+- Individuals who submit a request and are also members of the approval group for that can see their own requests on the Received request page. However, they can't approve their own requests.
 
-**If a change is approved**, Intune processes the requested change and updates the object. While processing, the requests status can display as **Approved**. After it’s successfully processed, the status updates to **Completed**.
+**If a change is approved**, Intune processes the requested change and updates the object. While Intune processes the request, its status can display as **Approved**. After it’s successfully processed, the status updates to **Completed**.
 
-**Each change of status** remains visible for up to 30 days after the last change of status. If a request isn’t processed further withing 30 days, it becomes **Expired** and must be resubmitted.
+**Each change of status** remains visible for up to 30 days after the last change of status. If a request isn’t processed further withing 30 days, it becomes **Expired**, and must be resubmitted.
 
 ## Create an access policy
 
@@ -81,9 +81,9 @@ To be an approver, an account must be in the group that’s assigned to the acce
 
    <!-- The following screen capture shows a new policy with **Apps**  selected for the profile type.  -->
 
-3. On the *Approvers page*, select **Add groups** and then select a group as the group of approvers for this policy. More complex configurations that exclude groups are not supported.
+3. On the *Approvers page*, select **Add groups** and then select a group as the group of approvers for this policy. More complex configurations that exclude groups aren't supported.
 
-4. On the *Review + Create* page, review, and then save your changes. After Intune applies this policy, configurations for the protected profile type will require multiple admin approval.
+4. On the *Review + Create* page, review, and then save your changes. After Intune applies this policy, configurations for the protected profile type will require multiple admin approvals.
 
 ## Submit a request
 
@@ -91,7 +91,7 @@ To submit a request when MAA is enabled, use your normal process to create or ed
 
 On the final page before you can save your changes, add details to the *Business justification* field and then submit the request. For urgent requests, consider reaching out to a known list of approvers to ensure your request is seen in a timely manner.
 
-When there is a request for the same object that is already pending approval, you will not be able to submit your request. In this scenario Intune displays a message to alert you to this situation.
+When there's a request for the same object that is already pending approval, you won't be able to submit your request. Intune displays a message to alert you to this situation.
 
 To monitor the status of your requests, in the Microsoft Endpoint Manager admin center go to **Tenant administration** > **Multi Admin Approval** > **My requests**.
 
@@ -101,19 +101,19 @@ You can cancel a request before it’s approved by selecting it from the My requ
 
 1. To find requests to approve, in the Microsoft Endpoint Manager admin center go to **Tenant administration** > **Multi Admin Administration** > **Received requests**.
 
-2. Click on the *Business justification* link of a request to open the review page where you can learn more about the request, and manage approval or rejection. 
+2. Select the *Business justification* link for a request to open the review page where you can learn more about the request, and manage approval or rejection. 
 
 3. After reviewing the details, enter relevant details in the Approver notes field, and then select **Approve request** or **Reject request**.
 
-4. After approving a request, Intune processes the change and updates the status to *Completed* after it’s successfully applied. The request status might change to *Approved* for a limited time if the update to the resource takes time to process.
+4. After you approve a request, Intune processes the change and updates the status to *Completed* after it’s successfully applied. The request status might change to *Approved* for a limited time if the update to the resource takes time to process.
 
-## Additional considerations
+## More considerations
 
-- With the public preview, Intune does not send notifications when new requests are created, or the status of an existing request changes. We recommend that when submitting an urgent change request, you reach out to individuals who have permission to approve those requests.
+- With the public preview, Intune doesn't send notifications when new requests are created, or the status of an existing request changes. We recommend that when submitting an urgent change request, you reach out to individuals who have permission to approve those requests.
 
 - Plan to monitor the status of your requests through the *My requests* page of the *Multi Admin Approval* node in the Microsoft Endpoint Manager admin center.
 
-- When an edit is pending for an object, a new request cannot be submitted for it.
+- When an approval is already pending for an object, a new request is can't be submitted for it.
 
 - All actions for a protected resource are protected, including but not limited to:
   - Edit
