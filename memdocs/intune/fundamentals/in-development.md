@@ -276,7 +276,7 @@ Reusable groups will be configured on a new Tab for *Reusable settings* that wil
 
 ## Device enrollment
 
-### Configure zero-touch enrollment in the admin center<-- 1872357 -->
+### Configure zero-touch enrollment in the admin center<!-- 1872357 -->
 Configure zero-touch enrollment seamlessly from the admin center. This feature will let you link your zero-touch account to Intune, add support information, configure zero-touch enabled devices with Android Device Policy, and customize provisioning extras.  
 
 <!-- ***********************************************-->
