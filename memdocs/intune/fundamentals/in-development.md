@@ -82,6 +82,17 @@ These new app types work in a similar way to the existing **web link** applicati
 
 ## Device management
 
+### Reset passcode remote action available for Android (AOSP) Corporate devices<!-- 10247332 -->
+You will be able to leverage Reset passcode remote action from the Microsoft Endpoint Manager admin center for Android Open Source Project (AOSP) Corporate devices.
+
+For information on remote actions, see:
+- [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md)
+- [Remotely restart devices with Intune](../remote-actions/device-restart.md)
+- [Remotely lock devices with Intune](../remote-actions/device-remote-lock.md)
+
+Applies to:
+- Android Open Source Project (AOSP)
+
 ### View contents of macOS shell scripts and custom attributes<!-- 14757037 -->
 You'll be able to view the contents of macOS shell scripts and custom attributes after you upload these to Intune. When this capability is available, you'll be able to view Shell scripts and custom attributes in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **macOS**. For related information, see [Use shell scripts on macOS devices in Intune](../apps/macos-shell-scripts.md).
 
