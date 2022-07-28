@@ -186,6 +186,8 @@ items:
         href: create-custom-role.md
       - name: Use scope tags
         href: scope-tags.md
+    - name: Configure multiple admin approval
+      href: multi-admin-approval
   - name: Enroll devices
     href: ../enrollment/index.yml
   - name: Remotely manage devices
