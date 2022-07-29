@@ -58,45 +58,44 @@ items:
     items:
     - name: Intune deployment framework
       href: ph1-deploymentframework.md
+    - name: Deploy Microsoft Intune fundamentals
       items:
-  - name: Deploy Microsoft Intune fundamentals
-    items:
-    - name: Deploy Intune fundamentals overview
-      href: ./fundamentals/ph1-overview.md
-    - name: Step 1 - Set up Microsoft Intune
-      href: ./fundamentals/deployment-guide-intune-setup.md
-    - name: Step 2 - Create compliance policies
-      href: ./fundamentals/ph1-compliance-policies.md
-    - name: Step 3 - Assign configuration profiles
-      href: ./fundamentals/ph1-configuration-profile.md
-    - name: Step 4 - Protect apps
-      href: ./fundamentals/ph1-protect-apps.md
-    - name: Step 5 - Enroll devices
-      href: ./fundamentals/ph1-enroll-devices.md
+      - name: Deploy Intune fundamentals overview
+        href: ./fundamentals/ph1-overview.md
+      - name: Step 1 - Set up Microsoft Intune
+        href: ./fundamentals/deployment-guide-intune-setup.md
+      - name: Step 2 - Create compliance policies
+        href: ./fundamentals/ph1-compliance-policies.md
+      - name: Step 3 - Assign configuration profiles
+        href: ./fundamentals/ph1-configuration-profile.md
+      - name: Step 4 - Protect apps
+        href: ./fundamentals/ph1-protect-apps.md
+      - name: Step 5 - Enroll devices
+        href: ./fundamentals/ph1-enroll-devices.md
 
-  - name: Additional security recommendations
-    items:
-    - name: Additional security recommendations overview
+    - name: Additional security recommendations
+      items:
+      - name: Additional security recommendations overview
 
-    - name: Defender for Endpoint
+      - name: Defender for Endpoint
 
-    - name: Conditional access (change name)
+      - name: Conditional access (change name)
 
-    - name: Tunnel?
+      - name: Tunnel?
 
-    - name: Additional baselines or policies?
+      - name: Additional baselines or policies?
 
-  - name: Add and protect apps
-    items: 
-    - name: Add LOB apps?
+    - name: Add and protect apps
+      items: 
+      - name: Add LOB apps?
 
-  - name: Create a servicing strategy (valid? name?)
-    items: 
-    - name: OS updates
-    - name: app updates
-    - name: platform updates
+    - name: Create a servicing strategy (valid? name?)
+      items: 
+      - name: OS updates
+      - name: app updates
+      - name: platform updates
       
-  - name: What else can add another layer over foundation?
+    - name: What else can add another layer over foundation?
     
   - name: Scenarios
     items: 
