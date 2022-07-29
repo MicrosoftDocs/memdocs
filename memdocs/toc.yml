@@ -9,32 +9,7 @@ items:
   - name: Getting started with Microsoft Endpoint Manager
     href: endpoint-manager-getting-started.md
 
-
-- name: Learn about Microsoft Endpoint Manager technologies
-  items:
-  - name: Plan your endpoint management options
-    href: ./intune/fundamentals/what-is-device-management.md
-
-  - name: Microsoft Endpoint Manager fundamentals (Learning path)
-    href: /learn/paths/endpoint-manager-fundamentals/  
-  - name: Microsoft Intune
-
-  - name: Configuration Manager - cloud attach
-
-  - name: Configuration Manager - co-management
-
-  - name: Endpoint Analytics
-
-  - name: Windows Autopilot
-
-- name: Manage identities, devices, and apps
-  items:
-  - name: Manage identities
-  - name: Manage devices 
-  - name: Manage apps
-
-
-- name: What are cloud native Windows endpoints
+- name: Become cloud native
   items:
   - name: Overview and benefits
     href: cloud-native-endpoints-overview.md
@@ -51,12 +26,27 @@ items:
   - name: Known issues
     href: cloud-native-endpoints-known-issues.md
 
+- name: Get to know Microsoft Endpoint Manager
+  items:
+  - name: Choose the services that are right for your organization
+    href: ./intune/fundamentals/what-is-device-management.md
 
+  - name: Step through the learning path
+    href: /learn/paths/endpoint-manager-fundamentals/  
+  - name: Microsoft Intune is the cloud solution
 
+  - name: Cloud attach your Configuration Manager
 
-- name: Endpoint Analytics
-  href: ./analytics/
-- name: Windows Autopilot
-  href: ./autopilot/
-- name: Get Support
-  href: get-support.md
+  - name: Co-manage with Intune + Configuration Manager
+
+  - name: Endpoint Analytics
+    href: ./analytics/
+  - name: Use Windows Autopilot
+    href: ./autopilot/
+
+- name: You can manage your identities, your devices, and your apps
+  items:
+  - name: Manage and secure your identities
+    href: manage-identities.md
+  - name: Manage devices and control features
+  - name: Manage apps and protect their data
