@@ -29,6 +29,9 @@ ms.topic: how-to
 - Windows 10, version 1709 and later (local reset)
 - Windows 10, version 1809 and later (remote reset)
 
+>[!NOTE] 
+>There is a known issue documented in the [Windows Autopilot known issues article](/mem/autopilot/known-issues#delete-device-record-in-intune-before-reusing-devices-in-self-deployment-mode-or-pre-provisioning-mode) where Autopilot redeployments fail with error code `0x80180014`. Your ability to successfully use Windows Autopilot Reset may be impacted until the issue is resolved.
+
 Windows Autopilot Reset takes the device back to a business-ready state, allowing the next user to sign in and get productive quickly and simply. Specifically, Windows Autopilot Reset:
 - Removes personal files, apps, and settings.
 - Reapplies a device's original settings.
