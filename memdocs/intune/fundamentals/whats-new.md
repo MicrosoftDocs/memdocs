@@ -169,7 +169,7 @@ For more information about Microsoft AutoUpdate settings you can configure, go t
 Applies to:
 - macOS
 
-#### New iOS/iPadOS settings in the Settings Catalog<!-- 14875745 -->
+#### New iOS/iPadOS settings in the Settings Catalog<!-- 14875716 -->
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type).
 
 New settings include:

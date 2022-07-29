@@ -353,7 +353,7 @@ Updates for Remote help are released periodically. When we update Remote help, y
 
 ### July 26, 2022
 
-Version: 4.1.0.12 - Changes in this release: 
+Version: 4.0.1.12 - Changes in this release: 
 
 Various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability.
 
