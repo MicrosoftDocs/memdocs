@@ -63,7 +63,7 @@ For newly provisioned and reprovisioned Cloud PCs, you can now set the Outlook m
 
 #### Windows 11 optimized image now available for Windows 365 Cloud PCs<!--39890525 -->
 
-You can now choose the **Windows 11 Enterprise + OS Optimizations** image when creating a new provisioning policy.
+You can now choose the **Windows 11 Enterprise + OS Optimizations** image when creating a new provisioning policy. This feature is rolling out to all customers over the next few weeks.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning
