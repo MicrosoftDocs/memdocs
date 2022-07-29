@@ -104,6 +104,30 @@ To manage fallback to the default site boundary group:
 
 - Open the properties of a custom boundary group. Change the values for the explicit link to a default site boundary group. When you set a new time in minutes for fallback or block fallback, that change affects only the link you're configuring. Configuration of the explicit link overrides the settings on the **Default Behavior** tab of a default site boundary group.
 
+
+
+## Site assignment
+
+You can configure each boundary group with an assigned site for clients.
+
+- A newly installed client that uses automatic site assignment joins the assigned site of a boundary group that contains the client's current network location.
+
+- After assigning to a site, a client doesn't change its site assignment when it changes its network location. For example, a client roams to a new network location. This location is a boundary in a boundary group with a different site assignment. The client's assigned site doesn't change.
+
+- When Active Directory System Discovery discovers a new resource, the site evaluates network information for the resource against the boundaries in boundary groups. This process associates the new resource with an assigned site for use by the client push installation method.
+
+- When a boundary is a member of more than one boundary groups that have different assigned sites, clients randomly select one of the sites.
+
+- Changes to a boundary groups assigned site only apply to new site assignment actions. Clients that previously assigned to a site don't reevaluate their site assignment based on changes to the configuration of a boundary group (or to their own network location).
+
+For more information about client site assignment, see [Using automatic site assignment for computers](../../../clients/deploy/assign-clients-to-a-site.md#automatic-site-assignment).
+
+For more information on how to configure site assignment, see the following procedures:
+
+- [Configure site assignment and select site system servers](boundary-group-procedures.md#configure-site-assignment-and-select-site-system-servers)
+- [Configure a fallback site for automatic site assignment](boundary-group-procedures.md#configure-a-fallback-site-for-automatic-site-assignment)
+
+
 ## Default site boundary group behavior supports cloud source selection
 <!--10674394-->
 
@@ -144,28 +168,6 @@ Set-CMDefaultBoundaryGroup -IncludeCloudBasedSources $true -PreferCloudBasedSour
 
 > [!NOTE]
 > You can only set this option to true if the parameter IncludeCloudBasedSources is set to true or was already set to true by admin. 
-
-
-## Site assignment
-
-You can configure each boundary group with an assigned site for clients.
-
-- A newly installed client that uses automatic site assignment joins the assigned site of a boundary group that contains the client's current network location.
-
-- After assigning to a site, a client doesn't change its site assignment when it changes its network location. For example, a client roams to a new network location. This location is a boundary in a boundary group with a different site assignment. The client's assigned site doesn't change.
-
-- When Active Directory System Discovery discovers a new resource, the site evaluates network information for the resource against the boundaries in boundary groups. This process associates the new resource with an assigned site for use by the client push installation method.
-
-- When a boundary is a member of more than one boundary groups that have different assigned sites, clients randomly select one of the sites.
-
-- Changes to a boundary groups assigned site only apply to new site assignment actions. Clients that previously assigned to a site don't reevaluate their site assignment based on changes to the configuration of a boundary group (or to their own network location).
-
-For more information about client site assignment, see [Using automatic site assignment for computers](../../../clients/deploy/assign-clients-to-a-site.md#automatic-site-assignment).
-
-For more information on how to configure site assignment, see the following procedures:
-
-- [Configure site assignment and select site system servers](boundary-group-procedures.md#configure-site-assignment-and-select-site-system-servers)
-- [Configure a fallback site for automatic site assignment](boundary-group-procedures.md#configure-a-fallback-site-for-automatic-site-assignment)
 
 ## Next steps
 
