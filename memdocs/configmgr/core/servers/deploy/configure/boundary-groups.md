@@ -104,8 +104,11 @@ To manage fallback to the default site boundary group:
 
 - Open the properties of a custom boundary group. Change the values for the explicit link to a default site boundary group. When you set a new time in minutes for fallback or block fallback, that change affects only the link you're configuring. Configuration of the explicit link overrides the settings on the **Default Behavior** tab of a default site boundary group.
 
-### Default site boundary group behavior supports cloud source selection
+## Default site boundary group behavior supports cloud source selection
 <!--10674394-->
+
+*(Added in version 2207)*
+
 You can add options via PowerShell to include and prefer cloud management gateway (CMG) management points for the default site boundary group. When a site is set up, there's a default site boundary group created for each site and all the clients are by default mapped to it until they're assigned to some custom boundary group. 
 
 Currently on the admin console, you can add references to default site boundary group, but the added references don't have any effect when the client requests for management point list. Starting with technical preview version 2206, you can use PowerShell cmdlets to include and prefer cloud-based sources for clients in the default site boundary group. This action is currently only for the management point role.  
