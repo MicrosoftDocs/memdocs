@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 07/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -125,6 +125,18 @@ The **Migrate** feature takes the parsed data from the imported Group Policy obj
 **Migrate** is best effort. 
 
 When you create the Settings Catalog profile, any settings that can be included in the profile will be included. There can be some differences with the imported settings and the settings in Settings Catalog.
+
+- **Some settings have a better configuration experience in Endpoint Security**
+
+  If you import AppLocker settings or Firewall rule settings, then the **Migrate** option is disabled and grayed out. Instead, configure these settings using the Endpoint Security workload in the Endpoint Manager admin center.
+
+  For more information, go to:
+  
+  - [Firewall policy in Endpoint Security](../protect/endpoint-security-firewall-policy.md)
+  - [Endpoint security firewall rule migration tool overview](../protect/endpoint-security-firewall-rule-tool.md)
+  - [Application control policy in Endpoint Security](../protect/endpoint-security-asr-policy.md).
+
+  If you have GPOs that focus on endpoint security, then you should look at the features available in [Endpoint Security](../protect/endpoint-security.md), including Security Baselines and mobile threat defense.
 
 - **Some settings don't migrate exactly, and may use a different setting**
 

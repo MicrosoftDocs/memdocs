@@ -38,21 +38,9 @@ The following items are known issues for Windows 365 Enterprise.
 
 A [resize](resize-cloud-pc.md) of a Cloud PC eliminates all existing [restore](restore-overview.md) points for that Cloud PC. New restore points will be captured at the intervals defined in the user setting.
 
-## Outlook only downloads one month of mail<!--39845820-->
-
-Outlook only downloads one month of previous mail and this can't be changed in Outlook settings.
-
- **Troubleshooting steps**:
-
-1. Launch registry editor.
-2. Remove the **syncwindowsetting** regkey under the path \HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\office\16.0\outlook\cached mode.
-3. Add the **syncwindowsetting** regkey with the value 1 under the path HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Outlook\Cached Mode.
-
-After completing these steps, the default will be one month. However, the download period can be changed in Outlook settings.
-
 ## Windows doesn’t scan for software updates until the first time a user signs in<!--38212344-->
 
-While a Windows PC (physical or Cloud PC) sits idle before the first user signs in, Windows Update doesn’t scan for or install monthly quality patches. This means that the PC might miss important security updates. Without the latest security updates, the device is exposed to security vulnerabilities.
+While a Windows PC (physical or Cloud PC) sits idle before the first user signs in, Windows Update doesn’t scan for or install monthly quality patches. Without such scans, the PC might miss important security updates. Without the latest security updates, the device is exposed to security vulnerabilities.
 
  **Troubleshooting steps**: Make sure that a user signs in to new Cloud PCs as soon as possible.
 
@@ -77,7 +65,7 @@ Windows 365 provisioning failures may occur because both:
 1. Did the Azure network connection (ANC) fail with the following error: `"An internal error occurred. The virtual machine deployment timed out."`?
 2. If yes, review the related GPO. Is PowerShell Execution set to AllSigned?
 3. If it is, either remove the GPO or reset the PowerShell Execution to Unrestricted.
-4. Retry the ANC health check. If this succeeds, retry provisioning.
+4. Retry the ANC health check. If the check succeeds, retry provisioning.
 
 ## Default and custom Enrollment Status Page profiles for Windows 365 Cloud PCs
 
@@ -93,9 +81,13 @@ The following device compliance settings report as **Not applicable** when being
 The following device compliance settings may report as **Not Compliant** when being evaluated for a Cloud PC:
 
 - **Require BitLocker**
-- **Require Secure Boot to be enabled on the device.** Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now rolling out in Asia Pacific (APAC) regions. This feature will roll out to all customers over the next few months.
+- **Require Secure Boot to be enabled on the device.** Cloud PC support for [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now available to all customers.
 
-**Troubleshooting steps**: 
+**Troubleshooting steps to enable secure boot on the Cloud PC**:
+
+1. [Reprovision](reprovision-cloud-pc.md) the specific Cloud PC.
+
+**Troubleshooting steps to remove not compliant settings**:
 
 1. [Create a filter for all Cloud PCs](create-filter.md#create-a-filter-for-all-cloud-pcs).
 2. For any existing device compliance policies that both evaluate to a Cloud PC and contain either of the **Not Compliant** settings, use this new filter to exclude Cloud PCs from the policy assignment.

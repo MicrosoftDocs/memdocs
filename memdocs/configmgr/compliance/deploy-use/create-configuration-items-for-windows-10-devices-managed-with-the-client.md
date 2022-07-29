@@ -118,6 +118,9 @@ Use the Configuration Manager **Windows 10 or later** configuration item to mana
   
 ### Windows Information Protection
 
+[!INCLUDE [wip-deprecation](../../../includes/wip-deprecation.md)]
+<!-- MAXADO-6010051 -->
+
 With the increase of employee-owned devices in the enterprise, there's also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud. These are outside of the organization's control. Examples include when an employee:
 
 - Sends the latest engineering pictures from their personal email account.

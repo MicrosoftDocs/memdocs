@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how the DDRAddStringArray function, in Configuration Manager, adds a string array property to the data discovery record.
 
 
 ---

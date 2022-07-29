@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/11/2022
+ms.date: 07/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -51,7 +51,7 @@ Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.co
 ### Step 1. Grant Microsoft permission to send user and device information to Apple
 Select **I agree.** to give Microsoft permission to send data to Apple.
 
-![The Configure MDM Push Certificate screen with MDM Push not set up.](./media/apple-mdm-push-certificate-get/create-mdm-push-certificate.png)
+:::image type="content" source="./media/apple-mdm-push-certificate-get/create-mdm-push-certificate.png" alt-text="Screenshot of the Configure MDM Push Certificate screen with MDM Push not set up.":::
 
 ### Step 2. Download the Intune certificate signing request required to create an Apple MDM push certificate
 Select **Download your CSR** to download and save the request file locally. The file is used to request a trust relationship certificate from the Apple Push Certificates Portal.

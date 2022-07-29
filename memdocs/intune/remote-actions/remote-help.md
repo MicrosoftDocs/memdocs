@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 07/26/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -138,7 +138,7 @@ For users that opted out of automatic updates, when an update to remote help is 
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **4.0.1.7**
+The most recent version of remote help is **4.0.1.12**
 
 ### Deploy remote help as a Win32 app
 
@@ -346,6 +346,24 @@ Remote help is supported in the following languages:
 
 - When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the remote help session won’t be established. 
 If a conditional access policy is configured as described above and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant will not be able to use remote help. 
+
+## What's New for Remote help 
+
+Updates for Remote help are released periodically. When we update Remote help, you can read about the changes here.
+
+### July 26, 2022
+
+Version: 4.0.1.12 - Changes in this release: 
+
+Various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability.
+
+### May 11, 2022
+
+Version 4.0.1.7 - Webview 2 release 
+
+### April 5, 2022
+
+Version 4.0.0.0 - GA release
 
 ## Next steps
 
