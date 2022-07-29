@@ -119,7 +119,7 @@ On-premises, you work with domain accounts and local accounts, and then deploy g
 
 Endpoint Manager is cloud-based. Policies created in Endpoint Manager include settings that control device features, security rules, and more. These policies are assigned to your users and groups. There isn't a traditional hierarchy like LSDOU.
 
-The settings catalog in Endpoint Manager includes thousands of settings to manage iOS/iPadOS, macOS, and Windows devices. If you're currently use on-premises Group Policy Objects (GPOs), then using the settings catalog is a natural transition to cloud-based policies.
+The settings catalog in Endpoint Manager includes thousands of settings to manage iOS/iPadOS, macOS, and Windows devices. If you currently use on-premises Group Policy Objects (GPOs), then using the settings catalog is a natural transition to cloud-based policies.
 
 For more information on policies in Endpoint Manager:
 

@@ -41,12 +41,12 @@ items:
 
   - name: Endpoint Analytics
     href: ./analytics/
-  - name: Use Windows Autopilot to deploys Windows
+  - name: Use Windows Autopilot
     href: ./autopilot/
 
-- name: Manage your identities, your devices, and your apps
+- name: You can manage your identities, your devices, and your apps
   items:
   - name: Manage and secure your identities
     href: manage-identities.md
-  - name: Manage devices and their features
+  - name: Manage devices and control features
   - name: Manage apps and protect their data
