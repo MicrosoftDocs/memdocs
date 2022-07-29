@@ -31,7 +31,7 @@ ms.collection:
 
 *This feature is in Public Preview*
 
-To help protect against a compromised administrative account, use Intune *access policies* to require that a second administrative account is used to approve a change before the change is applied. This capability is known as multi-admin approval (MAA).
+To help protect against a compromised administrative account, use Intune *access policies* to require that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA).
 
 With MAA, you configure access policies that protect specific configurations, like Apps or Scripts for devices. Access policies specify what is protected and which group of accounts are permitted to approve changes to those resources.
 
@@ -132,4 +132,5 @@ You can cancel a request before it’s approved by selecting it from the My requ
   - Cancelled – This request was cancelled by the admin who submitted it.
 
 ## Next steps
+
 
