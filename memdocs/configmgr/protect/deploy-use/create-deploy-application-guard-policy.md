@@ -6,7 +6,7 @@ ms.date: 08/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-author: baladell
+author: baladelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
