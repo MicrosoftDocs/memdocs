@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 07/27/2022
+ms.date: 07/28/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice:
@@ -32,7 +32,7 @@ ms.collection:
 # Manage identities in Endpoint Management
 
 > [!NOTE]
-> This is a draft of an idea.
+> This is a draft of an idea. It's meant to be 100-level with an introduction to some concepts that decision makers need to be aware.
 
 Identity management includes the user accounts and groups that access your organization resources. Endpoint Manager uses Azure Active Directory (AD) for identity management.
 
@@ -50,7 +50,7 @@ An important decision is to determine how to get the user accounts and groups in
 
 - If you **currently use Microsoft 365** and have your users and groups in the Microsoft 365 admin center, then these users and groups are also available in the Endpoint Manager admin center.
 
-  Azure AD and Endpoint Manager use a "tenant", which is your organization, such as Contoso or Microsoft. If you have multiple tenants, be sure to sign into the Endpoint Manager admin center in the same Microsoft 365 tenant. 
+  Azure AD and Endpoint Manager use a "tenant", which is your organization, such as Contoso or Microsoft. If you have multiple tenants, sign into the Endpoint Manager admin center in the same Microsoft 365 tenant as your existing users and groups.
 
   For more information on what a tenant is, go to [Quickstart: Set up a tenant](/azure/active-directory/develop/quickstart-create-new-tenant).
 
@@ -60,7 +60,7 @@ An important decision is to determine how to get the user accounts and groups in
 
 - You can also **import existing users and groups** from a CSV file into the Endpoint Manager admin center, or create the users and groups from scratch. When adding groups, you can add users and devices to these groups to organize them by location, department, hardware, and more.
 
-  For more information on group management in Endpoint Manager, go to [Add groups to organize users and devices](../intune/fundamentals/groups-add.md).
+  For more information on group management in Endpoint Manager, go to [Add groups to organize users and devices](./intune/fundamentals/groups-add.md).
 
 By default, Endpoint Manager automatically creates the **All users** and **All devices** groups. When your users and groups are available to Endpoint Manager, then you can assign your policies to these users and groups.
 
@@ -80,7 +80,7 @@ Since Endpoint Manager uses Azure AD, you also have access to the built-in Azure
 
 Each role has its own create, read, update or delete permissions as needed. You can also create custom roles if your admins need a specific permission. When you add or create your administrator-type of users and groups, you can assign these accounts to the different roles. The Endpoint Manager admin center has this information in a central location and can be easily updated.
 
-For more information, go to [Role-based access control (RBAC) with Microsoft Intune](../intune/fundamentals/role-based-access-control.md)
+For more information, go to [Role-based access control (RBAC) with Microsoft Intune](./intune/fundamentals/role-based-access-control.md)
 
 TO DO: End users perms on their devices?  
 TO DO: local accounts?
@@ -93,25 +93,25 @@ When you don't associate a user with a device, then the device is considered use
 
 In Endpoint Manager, you can create policies for both scenarios on Android, iOS/iPadOS, macOS, and Windows. When getting ready to manage these devices, be sure you know the intended purpose of the device. This information helps in the decision making process when devices are being enrolled.
 
-- **Android**: When these devices are enrolled to be managed by your organization, you choose the enrollment method, including enrolling as a dedicated device. Android devices enrolled as dedicated devices are designed to be a kiosk-style device. They aren't associated with a single or specific user.
+- **Android**: When these devices are ready to be managed by your organization, you choose the enrollment method, including enrolling as a dedicated device. Android devices enrolled as dedicated devices are designed to be a kiosk-style device. They aren't associated with a single or specific user.
 
-  For more specific information on the enrollment options for Android, go to [Deployment guide: Enroll Android devices in Microsoft Intune](../intune/fundamentals/deployment-guide-enrollment-android.md).
+  For more specific information on the enrollment options for Android, go to [Deployment guide: Enroll Android devices in Microsoft Intune](./intune/fundamentals/deployment-guide-enrollment-android.md).
 
-- **iOS/iPadOS**: When these devices are enrolled to be managed by your organization, you choose to enroll with user affinity (associate a user to the device), or enroll without user affinity (user-less devices or shared devices).
+- **iOS/iPadOS**: When these devices are ready to be managed by your organization, you choose to enroll with user affinity (associate a user to the device), or enroll without user affinity (user-less devices or shared devices).
 
-  For more specific information on the enrollment options for iOS/iPadOS, go to [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](../intune/fundamentals/deployment-guide-enrollment-ios-ipados.md).
+  For more specific information on the enrollment options for iOS/iPadOS, go to [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](./intune/fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
-- **macOS**: When these devices are enrolled to be managed by your organization, you choose to enroll with user affinity (associate a user to the device), or enroll without user affinity (user-less devices or shared devices).
+- **macOS**: When these devices are ready to be managed by your organization, you choose to enroll with user affinity (associate a user to the device), or enroll without user affinity (user-less devices or shared devices).
 
-  For more specific information on the enrollment options for macOS, go to [Deployment guide: Enroll macOS devices in Microsoft Intune](../intune/fundamentals/deployment-guide-enrollment-macos.md).
+  For more specific information on the enrollment options for macOS, go to [Deployment guide: Enroll macOS devices in Microsoft Intune](./intune/fundamentals/deployment-guide-enrollment-macos.md).
 
-- **Windows**: Depending on your enrollment method, you can create a policy that treats the device as a dedicated kiosk-style device or a shared device used by multiple users, which is common in education environments.
+- **Windows**: Using the **Access school or work feature** on Windows devices allows users to easily enroll in endpoint management. Depending on your enrollment method, you can create a policy that treats the device as a dedicated kiosk-style device or a shared device used by multiple users. These scenarios are common in education, retail, warehouse, and more.
 
   For more specific information, go to:
 
-  - [Deployment guide: Enroll Windows devices in Microsoft Intune](../intune/fundamentals/deployment-guide-enrollment-windows.md)
-  - [Windows device settings to run as a dedicated kiosk using Intune](../intune/configuration/kiosk-settings.md)
-  - [Control access, accounts, and power features on shared PC or multi-user devices using Intune](../intune/configuration/shared-user-device-settings.md)
+  - [Deployment guide: Enroll Windows devices in Microsoft Intune](./intune/fundamentals/deployment-guide-enrollment-windows.md)
+  - [Windows device settings to run as a dedicated kiosk using Intune](./intune/configuration/kiosk-settings.md)
+  - [Control access, accounts, and power features on shared PC or multi-user devices using Intune](./intune/configuration/shared-user-device-settings.md)
 
 ## Concept: Assign policies to users and groups
 
@@ -119,9 +119,12 @@ On-premises, you work with domain accounts and local accounts, and then deploy g
 
 Endpoint Manager is cloud-based. Policies created in Endpoint Manager include settings that control device features, security rules, and more. These policies are assigned to your users and groups. There isn't a traditional hierarchy like LSDOU.
 
-Instead, a conflict can occur if two policies update the same setting to different values. In case of conflict, there are built-in reports and features to help troubleshoot.
+The settings catalog in Endpoint Manager includes thousands of settings to manage iOS/iPadOS, macOS, and Windows devices. If you're currently use on-premises Group Policy Objects (GPOs), then using the settings catalog is a natural transition to cloud-based policies.
 
-For more information on policies in Endpoint Manager, including conflicts, go to [Common questions and answers with device policies and profiles in Microsoft Intune](../intune/configuration/device-profile-troubleshoot.md).
+For more information on policies in Endpoint Manager:
+
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](./intune/configuration/settings-catalog.md)
+- [Common questions and answers with device policies and profiles in Microsoft Intune](./intune/configuration/device-profile-troubleshoot.md)
 
 ## Concept: Secure your user identities
 
@@ -138,15 +141,19 @@ Your user and group accounts access organization resources. You need to keep the
   For more information, go to:
 
   - [Windows Hello for Business Overview](/windows/security/identity-protection/hello-for-business/hello-overview)
-  - [Manage Windows Hello for Business on devices when devices enroll with Intune](../intune/protect/windows-hello.md)
-  - [Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune](../intune/protect/identity-protection-configure.md)
+  - [Manage Windows Hello for Business on devices when devices enroll with Intune](./intune/protect/windows-hello.md)
+  - [Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune](./intune/protect/identity-protection-configure.md)
+
+- **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and can make access to these resources easier.
+
+  For more information, go to [Use certificates for authentication in Microsoft Intune](./intune/protect/certificates-configure.md).
 
 - **Multi-factor authentication (MFA)** is a feature in Azure AD. For users to successfully authenticate, at least two different verification methods are required. When MFA is deployed to your Azure AD environment, you can also require MFA when devices are enrolling into endpoint management.
 
   For more information, go to:
 
   - [Plan an Azure Active Directory Multi-Factor Authentication deployment](/azure/active-directory/authentication/howto-mfa-getstarted)
-  - [Require multi-factor authentication for Intune device enrollments](../intune/enrollment/multi-factor-authentication.md)
+  - [Require multi-factor authentication for Intune device enrollments](./intune/enrollment/multi-factor-authentication.md)
 
 - **Zero trust** verifies all endpoints, including devices and apps. The idea is to help keep organization data in the organization, and prevent data leaks from accidental or malicious intent. It includes different feature areas, including Windows Hello for Business, using MFA, and more.
 

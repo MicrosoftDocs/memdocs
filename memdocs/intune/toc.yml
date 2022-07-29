@@ -1628,7 +1628,3 @@ items:
           href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
         - name: Graph APIs used to configure devices
           href: graph-apis-used-by-intune-device-configuration-windows.md  
-      
-  - name: Resources
-
-  - name: Reference
