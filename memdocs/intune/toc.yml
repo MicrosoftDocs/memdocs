@@ -3,7 +3,7 @@ items:
   href: index.yml
   items:
   - name: Overview
-    expanded: true
+
     items:
     - name: Microsoft Intune overview
       href: ./fundamentals/what-is-intune.md 
