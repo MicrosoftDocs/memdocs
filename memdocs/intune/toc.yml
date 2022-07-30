@@ -20,7 +20,7 @@ items:
         href: ./fundamentals/whats-new.md#notices
       - name: Public preview
         href: ./fundamentals/public-preview.md
-  - name: Evaluate and pilot
+  - name: Evaluate
     items:
 
     - name: Walkthrough Intune in Microsoft Endpoint Manager
@@ -1625,6 +1625,6 @@ items:
         - name: Use Azure AD to access Intune APIs in Microsoft Graph
           href: ./developer/intune-graph-apis.md
         - name: Intune API reference
-          href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
+          href: /graph/api/resources/intune-graph-overview
         - name: Graph APIs used to configure devices
           href: ./developer/graph-apis-used-by-intune-device-configuration-windows.md  
