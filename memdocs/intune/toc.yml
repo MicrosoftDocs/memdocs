@@ -57,7 +57,7 @@ items:
   - name: Deploy
     items:
     - name: Intune deployment framework
-      href: ph1-deploymentframework.md
+      href: ./fundamentals/ph1-deploymentframework.md
       items:
       - name: Deploy Microsoft Intune fundamentals
         items:
@@ -686,7 +686,7 @@ items:
           - name: Android (AOSP) 
             items: 
             - name: Device restrictions
-              href: ./configuration/evice-restrictions-android-aosp.md  
+              href: ./configuration/device-restrictions-android-aosp.md  
             - name: Wi-Fi
               href: ./configuration/wi-fi-settings-android-aosp.md
           - name: Android Enterprise
@@ -937,7 +937,7 @@ items:
         - name: Conditional Access
           items:
           - name: Conditional Access overview
-            href: ./protect/onditional-access.md
+            href: ./protect/conditional-access.md
             displayName: ca
           - name: Common ways to use Conditional Access
             href: ./protect/conditional-access-intune-common-ways-use.md
@@ -1532,7 +1532,7 @@ items:
           - name: Collect diagnostics
             href: ./remote-actions/collect-diagnostics.md
         - name: Bulk device actions
-          href: ./remote-actions/ulk-device-actions.md
+          href: ./remote-actions/bulk-device-actions.md
         - name: Troubleshooting
           items:
           - name: Troubleshoot device actions
@@ -1553,82 +1553,78 @@ items:
       expanded: true
       items:
       - name: Protect apps with Intune App SDK
-        href: app-sdk.md
+        href: ./developer/app-sdk.md
         items:
         - name: Get started with Intune App SDK
-          href: app-sdk-get-started.md
+          href: ./developer/app-sdk-get-started.md
         - name: Prepare LOB apps for app protection
-          href: apps-prepare-mobile-application-management.md
+          href: ./developer/apps-prepare-mobile-application-management.md
         - name: LOB app versioning
-          href: apps-lob-app-versioning.md      
+          href: ./developer/apps-lob-app-versioning.md      
         - name: App Wrapping Tool for iOS
-          href: app-wrapper-prepare-ios.md
+          href: ./developer/app-wrapper-prepare-ios.md
         - name: Intune App SDK for iOS
-          href: app-sdk-ios.md
+          href: ./developer/app-sdk-ios.md
         - name: App Wrapping Tool for Android
-          href: app-wrapper-prepare-android.md
+          href: ./developer/app-wrapper-prepare-android.md
           displayName: dex
         - name: Intune App SDK for Android
-          href: app-sdk-android.md
+          href: ./developer/app-sdk-android.md
           items:
           - name: Intune App SDK for Android testing guide
-            href: app-sdk-android-testing-guide.md        
+            href: ./developer/app-sdk-android-testing-guide.md        
         - name: Intune App SDK Xamarin Bindings
-          href: app-sdk-xamarin.md
+          href: ./developer/app-sdk-xamarin.md
       - name: Use the Intune Data Warehouse
-        href: reports-nav-create-intune-reports.md
+        href: ./developer/reports-nav-create-intune-reports.md
         items:
         - name: Change log for the Data Warehouse
-          href: reports-changelog.md
+          href: ./developer/reports-changelog.md
         - name: Connect to the Data Warehouse with Power BI
-          href: reports-proc-get-a-link-powerbi.md
+          href: ./developer/reports-proc-get-a-link-powerbi.md
         - name: Create a report from the OData feed with Power BI
-          href: reports-proc-create-with-odata.md
+          href: ./developer/reports-proc-create-with-odata.md
       - name: Report using Intune Data Warehouse API
-        href: reports-nav-intune-data-warehouse.md
+        href: ./developer/reports-nav-intune-data-warehouse.md
         items:
         - name: Get data from the Data Warehouse API with a REST client
-          href: reports-proc-data-rest.md
+          href: ./developer/reports-proc-data-rest.md
         - name: Data Warehouse API endpoint
-          href: reports-api-url.md
+          href: ./developer/reports-api-url.md
         - name: Data Warehouse application-only authentication
-          href: data-warehouse-app-only-auth.md      
+          href: ./developer/data-warehouse-app-only-auth.md      
         - name: Data Warehouse data model
-          href: reports-ref-data-model.md
+          href: ./developer/reports-ref-data-model.md
           items:
           - name: Data Warehouse collections
-            href: intune-data-warehouse-collections.md 
+            href: ./developer/intune-data-warehouse-collections.md 
           - name: Data Warehouse collections (beta)
             items:  
             - name: User lifetime representation in the Intune Data Warehouse
-              href: reports-ref-user-timeline.md
+              href: ./developer/reports-ref-user-timeline.md
             - name: Reference for application entities
-              href: reports-ref-application.md
+              href: ./developer/reports-ref-application.md
             - name: Reference for date entity
-              href: reports-ref-date.md
+              href: ./developer/reports-ref-date.md
             - name: Reference for devices entities
-              href: reports-ref-devices.md
+              href: ./developer/reports-ref-devices.md
             - name: Reference for Intune management extension entity
-              href: reports-ref-intunemanagementextension.md
+              href: ./developer/reports-ref-intunemanagementextension.md
             - name: Reference for mobile app management (MAM) entities
-              href: reports-ref-mobile-app-management.md
+              href: ./developer/reports-ref-mobile-app-management.md
             - name: Reference for policy entities
-              href: reports-ref-policy.md
+              href: ./developer/reports-ref-policy.md
             - name: Reference for user device association entity
-              href: reports-ref-user-device.md
+              href: ./developer/reports-ref-user-device.md
             - name: Reference for user entity
-              href: reports-ref-user.md
+              href: ./developer/reports-ref-user.md
         - name: Move your Intune Data Warehouse account data
-          href: data-warehouse-account-move.md
+          href: ./developer/data-warehouse-account-move.md
       - name: Access Intune APIs in Microsoft Graph
         items:
         - name: Use Azure AD to access Intune APIs in Microsoft Graph
-          href: intune-graph-apis.md
+          href: ./developer/intune-graph-apis.md
         - name: Intune API reference
           href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
         - name: Graph APIs used to configure devices
-          href: graph-apis-used-by-intune-device-configuration-windows.md  
-      
-  - name: Resources
-
-  - name: Reference
+          href: ./developer/graph-apis-used-by-intune-device-configuration-windows.md  
