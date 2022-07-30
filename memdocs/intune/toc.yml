@@ -30,7 +30,7 @@ items:
     - name: Try Intune for free
       href: ./fundamentals/free-trial-sign-up.md      
 
-  - name: Planning
+  - name: Plan
     items:
     - name: Planning guide
       href: ./fundamentals/intune-planning-guide.md
@@ -54,7 +54,7 @@ items:
       - name: Intune operated by 21Vianet in China
         href: ./fundamentals/china.md
 
-  - name: Deployment plans
+  - name: Deploy
     items:
     - name: Intune deployment framework
       href: ph1-deploymentframework.md
@@ -98,7 +98,7 @@ items:
       
       - name: What else can add another layer over foundation?
     
-  - name: Scenarios
+  - name: Solutions and scenarios
     items: 
     - name: Scenarios overview
       
