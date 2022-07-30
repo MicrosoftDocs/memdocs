@@ -11,7 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
-
+description: Learn how to set the PXE service point response to all network interfaces by setting the BindPolicy embedded property.
 
 ---
 # How to Set the PXE Service Point Response to All Network Interfaces

@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Applications in Windows 365
 
-As an IT admin, one of the easiest ways to get started with Windows 365 is to create Cloud PCs with default gallery images of Windows 10/11 Enterprise. After provisioning, you can customize the user experience  by using Microsoft Endpoint Manager to push apps to your users’ Cloud PCs. These can include existing Windows client apps already in your Microsoft Endpoint Manager environment. Since these Cloud PC devices are enrolled in Endpoint Manager, you can treat these like any other Windows device in your environment.
+As an IT admin, one of the easiest ways to get started with Windows 365 is to create Cloud PCs with default gallery images of Windows 10/11 Enterprise. After provisioning, you can customize the user experience by using Microsoft Endpoint Manager to push apps to your users’ Cloud PCs. These images can include existing Windows client apps already in your Microsoft Endpoint Manager environment. Since these Cloud PC devices are enrolled in Endpoint Manager, you can treat them like any other Windows device in your environment.
 
 The following apps are available with no need to upload:
 
@@ -47,7 +47,7 @@ The IntuneWin format is a way to pre-process Windows classic (Win32) apps. The t
 
 After you use this tool on the app installer folder, you can create an app enrollment configuration for enhanced deployment capabilities. For example, OS version dependencies and uninstall methods when you need to remove applications remotely.  
 
-If you select the most common application format (Win32), you must encapsulate the .exe or .msi file into a IntuneWin file. Windows 365 needs this as part of the App configuration set.  
+If you select the most common application format (Win32), you must encapsulate the .exe or .msi file into a IntuneWin file. Windows 365 needs this encapsulation as part of the App configuration set.  
 
 ### .MSI  
 
