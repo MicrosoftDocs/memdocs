@@ -173,7 +173,7 @@ Choose **Yes** if you want to deploy [user data and profiles](../../../complianc
 
 ## Script Execution Timeout (seconds)
 
-Starting in version 2207, you can define a **Script Execution Timeout (seconds)**. The timeout value can be set from a minimum of 60 seconds to a maximum of 600 seconds. This new setting allows you more flexibility for configuration items when you need to run scripts that may exceed the default of 60 seconds.
+Starting in version 2207, you can define a **Script Execution Timeout (seconds)**. The timeout value can be set from a minimum of 60 seconds to a maximum of 600 seconds. This new setting allows you more flexibility for configuration items when you need to run scripts that may exceed the default of 60 seconds. <!--14120481-->
 ## Computer agent  
 
 ### User notifications for required deployments
