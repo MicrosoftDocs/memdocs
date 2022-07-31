@@ -2,7 +2,7 @@
 title: Updates and servicing
 titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
-ms.date: 01/08/2022
+ms.date: 08/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
