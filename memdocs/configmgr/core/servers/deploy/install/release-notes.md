@@ -183,12 +183,11 @@ For more information, see [Create custom security roles](../configure/configure-
 
 ## Configuration Manager console
 
-### Intune RBAC for Tenant Attached devices is coming soon
+### Intune RBAC for Tenant Attached devices
 <!--13058986-->
-_Applies to: version 2207_
+(*Applies to: version 2207*)
 
-You'll now see a checkbox for RBAC setting in the cloud attach configuration wizard on the console.
-By default, SCCM RBAC will be enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. Hence, the checkbox will be checked by default. If you want to enforce only Intune RBAC, you can uncheck the box. The Intune RBAC enforcement will be applicable soon. For more information, see, [Enable Microsoft Endpoint Manager tenant attach](../../../../../configmgr/tenant-attach/device-sync-actions.md)
+You'll now see a checkbox for role-based access control (RBAC) setting in the cloud attach configuration wizard in the console. By default, Configuration Manager RBAC is enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. This checkbox is checked by default. If you want to enforce only Intune RBAC, you can uncheck the box. However, the enforcement of Intune RBAC only won't apply at this time. This release note and the [What's New in Intune](../../../../../intune/fundamentals/whats-new.md) will be updated when you're able to enforce Intune RBAC only. For more information, see, [Enable Microsoft Endpoint Manager tenant attach](../../../../../configmgr/tenant-attach/device-sync-actions.md)
 
 ### Unable to open console because extension installation loops
 <!--12868458-->
