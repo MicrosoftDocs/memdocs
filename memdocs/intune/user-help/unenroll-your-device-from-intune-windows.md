@@ -78,32 +78,6 @@ After you unenroll a device running Windows 8.1 RT:
 ## Remove Windows 10/11 devices  
 This section describes how to remove a Windows 10/11 device from Intune. If one set of instructions doesn't work for you, try the next set.    
 
-### Remove in Company Portal, homepage    
-
-1. Open the Company Portal app.  
-2. On the **Home** page, scroll down to **My Devices**.  
-3. Select the device you want to remove.  
-3. In the top, right-corner of the app, select the **See more** icon.  
-4. Select **Remove**.  
-5. To confirm device removal, select **Remove**.  
-
-### Remove in Company Portal, device context menu  
-
-1. Open the Company Portal app and go to **My Devices**.  
-
-    ![Example screenshot of the Company Portal app for Windows, Home page, highlighting the My Devices section.](./media/1809_CheckAccess_Context_Select_Device.png)
-
-2. Right-click or press and hold a device to open its [context menu](/windows/uwp/design/controls-and-patterns/menus).  
-
-3. Select **Remove**.  
-
-    ![Example screenshot of the Company Portal app for Windows, Home page. Device context menu is visible in the **My Devices** section of the page and shows "Rename", "Remove", and "Check access" actions.](./media/1809_DeviceContextMenu_Windows_CP.png)  
-
-5. In the confirmation, click **Learn More** to read how your access to work and school resources might change. To confirm device removal, select **Remove**.   
-
-     ![Example screenshot of the Company Portal app for Windows, Home page. Rename field appears over device where user can type in new name and click Rename or Cancel.](./media/1808_RemoveDevice_Popup.png)  
-
-
 ### Remove in device Settings app
 1. Open the Settings app. 
 2. Go to **Accounts** > **Access work or school**.
