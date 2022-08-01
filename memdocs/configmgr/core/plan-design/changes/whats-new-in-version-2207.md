@@ -36,7 +36,7 @@ For more information, see [Configure Azure services for use with Configuration M
 
 You can now approve the application workflow through email. For the application approvals through email, manually add the CMG URL in the Azure Active Directory app as single page application redirect URI. 
 
-<!--For more information, see [xxxxxc](../../servers/blah.md). -->
+For more information, see [Approve applications in Configuration Manager](../../../apps/deploy-use/app-approval.md#to-take-action-from-internet).
 
 ## Site infrastructure
 
@@ -61,7 +61,7 @@ You can now define a **Script Execution Timeout (seconds)** when configuring cli
 
 For more information, see the [compliance settings group of client settings](../../clients/deploy/about-client-settings.md#compliance-settings).
 
-## Collections
+<!--## Collections-->
 
 
  
@@ -74,28 +74,40 @@ For more information, see the [compliance settings group of client settings](../
 
 Admins can now organize ADRs by using folders. This change allows for better categorization and management of ADRs. Folder management for ADRs is also supported with PowerShell cmdlets.
 
-<!--For more information, see [xxxxxc](../../servers/blah.md). -->
+For more information, see [Process to create a folder for automatic deployment rules](../../../sum/deploy-use/automatically-deploy-software-updates.md#process-to-add-a-new-deployment-to-an-existing-adr).
 
 ### Offset for reoccuring monthly maintenance window schedules
 <!--3601127#-->
 
 Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using an offset of two days after the second Tuesday of the month, sets the maintenance window for Thursday.
 
-<!--For more information, see [xxxxxc](../../servers/blah.md). -->
+For more information, see [How to use maintenance windows in Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md). 
 
-## OS deployment
-
-
+<!--## OS deployment-->
 
 
 
-<!--## Protection-->
-
-## Application management
 
 
+## Protection
 
-## Community hub
+### Improvements to Configuration Manager policies for Microsoft Defender Application Guard
+<!-- 14059872 -->
+
+1. Windows Defender Application Guard has been renamed to Microsoft Defender Application Guard in the Configuration Manager console.
+1. The **General** settings page allows you to enable for isolated Windows environments and enable for Microsoft Edge and isolated Windows environments.
+1. The **Application Behavior** settings page allows you to enable or disable cameras and microphones, along with certificate matching the thumbprints to the isolated container.
+1. The following items were removed:
+   - The Enterprise sites can load non-enterprise content, such as third-party plug-ins setting under the **Host interaction** page.
+   - The file trust criteria policy in the **File Management** page.
+   
+For more information, see [Create and deploy Microsoft Defender Application Guard policy](../../../protect/deploy-use/create-deploy-application-guard-policy.md#create-a-policy-and-to-browse-the-available-settings).
+
+<!--## Application management-->
+
+
+
+<!--## Community hub-->
 
 
 
