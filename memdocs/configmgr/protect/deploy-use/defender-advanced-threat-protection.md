@@ -90,7 +90,7 @@ Up-level clients require an onboarding configuration file for onboarding to Micr
 - Windows Server 2019
 - Windows Server 2022
 
-Down-level operating systems that supports MDE Client include:
+Down-level operating systems that support MDE Client include:
 - Windows Server 2012 R2
 - Windows Server 2016
 
@@ -100,7 +100,7 @@ Down-level operating systems that supports MDE Client include:
 1. Select **Settings**, then select **Onboarding** under the **Endpoint** heading.
 1. For the operating system, select **Windows 10 and 11**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
-1. Click **Download package**.
+1. Select **Download package**.
 1. Download the compressed archive (.zip) file and extract the contents.
 > [!Note]
 > The steps have you download the onboarding file for Windows 10 and 11 but this file is also used for up-level Server operating systems.
@@ -134,7 +134,7 @@ Down-level operating systems that supports MDE Client include:
 1. Select **Settings**, then select **Onboarding** under the **Endpoints** heading.
 1. For the operating system, select **Windows 10 and 11**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
-1. Click **Download package**.
+1. Select **Download package**.
    
    :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Onboarding configuration file download" lightbox="media/5229962-onboarding-configuration.png":::
 
@@ -157,7 +157,7 @@ Down-level operating systems that supports MDE Client include:
 1. Select **Create Microsoft Defender ATP Policy** to open the policy wizard.
 1. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
-1. Supply the **Workspace key** and **Workspace ID** then click **Next**.
+1. Supply the **Workspace key** and **Workspace ID** then select **Next**.
    - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender for Endpoint online service. <!--8538605-->
    :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Create Microsoft Defender for Endpoint Policy Wizard" lightbox="media/5229962-create-atp-policy-wizard.png":::
 
@@ -204,7 +204,7 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
 1. Select **Settings**, then select **Onboarding** under the **Endpoints** heading.
 1. For the operating system, select **Windows 10 and 11**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
-1. Click **Download package**.
+1. Select **Download package**.
    
    :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Onboarding configuration file download" lightbox="media/5229962-onboarding-configuration.png":::
 1. Download the compressed archive (.zip) file and extract the contents.
@@ -223,7 +223,7 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
 1. Select **Create Microsoft Defender ATP Policy** to open the policy wizard.
 1. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
-1. Supply the **Workspace key** and **Workspace ID** then click **Next**.
+1. Supply the **Workspace key** and **Workspace ID** then select **Next**.
    - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender for Endpoint online service. <!--8538605-->
    :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Create Microsoft Defender for Endpoint Policy Wizard" lightbox="media/5229962-create-atp-policy-wizard.png":::
 
@@ -254,7 +254,7 @@ If your target collection contains both up-level and down-level devices, or if y
 1. Select **Settings**, then select **Onboarding** under the **Endpoint** heading.
 1. For the operating system, select **Windows 10 and 11**.
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
-1. Click **Download package**.
+1. Select **Download package**.
 1. Download the compressed archive (.zip) file and extract the contents.
 > [!Note]
 > The steps have you download the onboarding file for Windows 10 and 11 but this file is also used for up-level Server operating systems. 
@@ -298,7 +298,7 @@ If your target collection contains both up-level and down-level devices, or if y
 1. Sign in to the [Microsoft Defender Security Center](https://securitycenter.windows.com/).
 1. Select **Settings**, then select **Offboarding** under the **Endpoint** heading.
 1. Select **Windows 10 and 11** for the operating system and **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
-   - Using the **Windows 10 and 11** option ensures that all devices in the collection are offboarded and the MMA is uninstalled when needed.
+   - Using the **Windows 10 and 11** option ensures that all devices in the collection are off boarded and the MMA is uninstalled when needed.
 1. Download the compressed archive (.zip) file and extract the contents. Offboarding files are valid for 30 days.
 
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.  
