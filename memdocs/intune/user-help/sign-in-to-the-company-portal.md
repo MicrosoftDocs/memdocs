@@ -90,7 +90,9 @@ You'll only see this sign-in option if your organization allows certificate-base
 4. Tap **Continue** to use the certificate.  
 5. Wait while the app verifies your certificate. When done, you can access the features in the app and your organization's resources.  
 
-### Sign in via another device    
+### Sign in via another device
+>[!NOTE]
+> To proceed with this option, the device you're using to authenticate (i.e., the device which you enter the one-time code into) must be workplace joined. If the authenticating device is not workplace joined, an error will be thrown.   
 
 If you normally use a smart card to access work resources, follow the steps in this section to sign in to Company Portal.  
 
