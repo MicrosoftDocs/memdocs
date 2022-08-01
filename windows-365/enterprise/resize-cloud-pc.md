@@ -48,6 +48,8 @@ To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Window
 
 The **Resize** remote action is supported for paid, preview, and trial licenses.
 
+Resizing isn’t supported for Cloud PCs provisioned through group-based licenses.
+
 ## Resize a Cloud PC
 
 1. Contact your end users and have them save their work and sign out. Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin.
