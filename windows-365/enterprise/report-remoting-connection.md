@@ -81,7 +81,10 @@ You can review the **Round trip time** and **Sign in time** for each Cloud PC de
 
 ## Device history
 
-When you select on a particular device in one of the reports, you'll see specific information for that device.  
+When you select on a particular device in one of the reports, you'll see specific information for that device. The information displayed is for the last 14 days of usage with values aggregated for each day individually. If the user has not logged in to the Cloud PC for a particular day, those days will not show in the graph.
+>[Note]
+>There might days when users login and the graph does display those days. This is due to the way the graph calculations exclude certain edge cases that can provide wrong data.
+
 
 ![Screenshot of using the device history](./media/report-remoting-connection/device-history.png)
 
