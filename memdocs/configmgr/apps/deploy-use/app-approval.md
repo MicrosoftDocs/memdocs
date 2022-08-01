@@ -2,13 +2,13 @@
 title: Approve applications
 titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
-ms.date: 12/01/2021
+ms.date: 08/01/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
 ---
 
@@ -124,9 +124,6 @@ With these additional optional prerequisites, recipients can approve or deny the
 - Install a supported version of the .NET Framework. Starting in version 2107, the SMS Provider requires .NET version 4.6.2, and version 4.8 is recommended.<!--10402814--> In version 2103 and earlier, this role requires .NET 4.5 or later. For more information, [Site and site system prerequisites](../../core/plan-design/configs/site-and-site-system-prerequisites.md#net-version-requirements).
 
 - Set up a [cloud management gateway](../../core/clients/manage/cmg/overview.md).
-
-    > [!NOTE]
-    > This scenario currently doesn't support CMG deployments with a virtual machine scale set.
 
 - Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**.
 
