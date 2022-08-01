@@ -47,7 +47,7 @@ Instructions to [Onboarding to Microsoft Defender for Endpoint with Configuratio
 
 Instructions to [Onboarding to Microsoft Defender for Endpoint with Configuration Manager 2203 and earlier versions](#bkmk_2203)
 
-## <a name="bkmk_2207"></a> About onboarding to Microsoft Defender for Endpoint with Configuration Manager (2207 and later)
+## <a name="bkmk_2207"></a> Onboarding to Microsoft Defender for Endpoint with Configuration Manager 2207 and later versions
 
 Different operating systems have different needs for onboarding to Microsoft Defender for Endpoint. Up-level devices, such as Windows Server version 1803, need the onboarding configuration file. Starting Current Branch 2207, For down-level server operating system devices, you can choose between Microsoft Defender for Endpoint (MDE) Client (recommended) or Microsoft Monitoring Agent (MMA) (legacy) in the Client Settings. For Windows 8.1 devices, you need to use Microsoft Monitoring Agent (MMA) (legacy) in the Client Settings.
 
@@ -69,7 +69,7 @@ Down-level operating systems that support MDE Client include:
 Down-level operating systems that require MMA Agent:
 - Windows 8.1
 
-> [!Note]
+> [!NOTE]
 > Currently, the [modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/bc-p/2904464) is generally available. Configuration Manager version 2107 with the update rollup supports configuration using Endpoint Protection policies, including those policies created in the Microsoft Endpoint Manager admin center using tenant attach. Configuration Manager version 2207 now supports automatic deployment of MDE Client, if you choose to use through Client Settings. For older supported versions, see [Server migration scenarios](/microsoft-365/security/defender-endpoint/server-migration).
 
 When you onboard devices to Microsoft Defender for Endpoint with Configuration Manager, you deploy the Defender policy to a target collection or multiple collections. Sometimes the target collection contains devices running any number of the supported operating systems. The instructions for onboarding these devices vary based on if you're targeting a collection containing devices with operating systems that are only up-level and devices that support MDE Client or if the collection also includes down-level clients that require MMA.
@@ -77,10 +77,9 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
 - If your collection contains only up-level devices and/or down-level server operating system devices that require MDE Client (based on the client settings), then you can use the [onboarding instructions using Microsoft Defender for Endpoint Client](#bkmk_2207_uplevel) (recommended).
 - If your target collection contains down-level server operating system devices that require MMA (based on the client settings) or Windows 8.1 devices, then use the instructions to [onboard devices using Microsoft Monitoring Agent](#bkmk_2207_any_os).
 
+> [!WARNING]
+> If your target collection contains down-level devices that require MMA, and you use the instructions for onboarding using MDE Client, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices that require MMA, but if they aren't included then the policy will fail on down-level clients that require MMA.
 
-> [!Warning]
-> - If your target collection contains down-level devices that require MMA, and you use the instructions for onboarding using MDE Client, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices that require MMA, but if they aren't included then the policy will fail on down-level clients that require MMA.
->
 
 ### <a name="bkmk_2207_uplevel"></a> Onboard devices using MDE Client to Microsoft Defender for Endpoint (recommended)
 
@@ -95,7 +94,7 @@ Down-level operating systems that support MDE Client include:
 - Windows Server 2012 R2
 - Windows Server 2016
 
-### Get an onboarding configuration file for up-level devices
+#### Get an onboarding configuration file for up-level devices
 
 1. Go to the [Microsoft Defender Security Center](https://securitycenter.windows.com/) and sign in.
 1. Select **Settings**, then select **Onboarding** under the **Endpoint** heading.
@@ -103,15 +102,15 @@ Down-level operating systems that support MDE Client include:
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
 1. Select **Download package**.
 1. Download the compressed archive (.zip) file and extract the contents.
-> [!Note]
-> The steps have you download the onboarding file for Windows 10 and 11 but this file is also used for up-level Server operating systems.
+    > [!NOTE]
+    > The steps have you download the onboarding file for Windows 10 and 11 but this file is also used for up-level Server operating systems.
 
 > [!IMPORTANT]
 > - The Microsoft Defender for Endpoint configuration file contains sensitive information which should be kept secure.
 > - If your target collection contains down-level devices that require MMA, and you use the instructions for onboarding using MDE Client, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
 
-### Onboard the up-level devices
+#### Onboard the up-level devices
 
 1. In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
 1. Create custom Client Device Settings or go to the properties of the required client setting and select **Endpoint Protection**
@@ -127,9 +126,10 @@ Down-level operating systems that support MDE Client include:
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.
 
 ### <a name="bkmk_2207_any_os"></a> Onboard devices with MDE Client and MMA to Microsoft Defender for Endpoint
+
  You can onboard devices running any of the [supported operating systems](#bkmk_os) to Microsoft Defender for Endpoint by providing the configuration file, **Workspace key**, and **Workspace ID** to Configuration Manager.
 
-### Get the configuration file, workspace ID, and workspace key
+#### Get the configuration file, workspace ID, and workspace key
 
 1. Go to the [Microsoft Defender for Endpoint online service](https://security.microsoft.com/) and sign in.
 1. Select **Settings**, then select **Onboarding** under the **Endpoints** heading.
@@ -149,7 +149,7 @@ Down-level operating systems that support MDE Client include:
    > The Microsoft Defender for Endpoint configuration file contains sensitive information which should be kept secure.
 
 
-### Onboard the devices
+#### Onboard the devices
 
 1. In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
 1. Create custom Client Device Settings or go to the properties of the required client setting and select **Endpoint Protection**
@@ -184,7 +184,7 @@ Down-level operating systems include:
 - Windows Server 2012 R2
 - Windows Server 2016
 
-> [!Note]
+> [!NOTE]
 > Currently, the [modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/bc-p/2904464) is generally available. Configuration Manager version 2107 with the update rollup supports configuration using Endpoint Protection policies, including those policies created in the Microsoft Endpoint Manager admin center using tenant attach. For more information on how to deploy the preview, see [Server migration scenarios](/microsoft-365/security/defender-endpoint/server-migration).
 
 When you onboard devices to Microsoft Defender for Endpoint with Configuration Manager, you deploy the Defender policy to a target collection or multiple collections. Sometimes the target collection contains devices running any number of the supported operating systems. The instructions for onboarding these devices vary based on if you're targeting a collection containing devices with operating systems that are only up-level or if the collection also includes down-level clients.
@@ -192,14 +192,14 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
 - If your target collection contains both up-level and down-level devices, then use the instructions to [onboard devices running any supported operating system](#bkmk_any_os) (recommended).
 - If your collection contains only up-level devices, then you can use the [up-level onboarding instructions](#bkmk_uplevel).
 
-> [!Warning]
-> - If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
->
+> [!WARNING]
+> If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
+
 
 ### <a name="bkmk_any_os"></a> Onboard devices with any supported operating system to Microsoft Defender for Endpoint (recommended)
  You can onboard devices running any of the [supported operating systems](#bkmk_os) to Microsoft Defender for Endpoint by providing the configuration file, **Workspace key**, and **Workspace ID** to Configuration Manager.
 
-### Get the configuration file, workspace ID, and workspace key
+#### Get the configuration file, workspace ID, and workspace key
 
 1. Go to the [Microsoft Defender for Endpoint online service](https://security.microsoft.com/) and sign in.
 1. Select **Settings**, then select **Onboarding** under the **Endpoints** heading.
@@ -218,7 +218,7 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
    > The Microsoft Defender for Endpoint configuration file contains sensitive information which should be kept secure.
 
 
-### Onboard the devices
+#### Onboard the devices
 
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies**.
 1. Select **Create Microsoft Defender ATP Policy** to open the policy wizard.
@@ -234,9 +234,6 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
 1. Review the summary and complete the wizard.  
 1. Right-click on the policy you created, then select **Deploy** to target the Microsoft Defender for Endpoint policy to clients.
 
-> [!IMPORTANT]
-> - In Configuration Manager 2006, or earlier: <!--8715565-->
->   - If you edit an existing policy to add or edit the **Workspace key** and **Workspace ID** fields, you must also provide the configuration file too. If all three items are not provided, the policy will fail on down-level clients. >   - If you need to edit the onboarding file, and also have the **Workspace key** and **Workspace ID** fields populated, provide them again along with the onboarding file. If all three items are not provided, the policy will fail on down-level clients. <!--8715565-->
 
 ### <a name="bkmk_uplevel"></a> Onboard devices running only up-level operating systems to Microsoft Defender for Endpoint
 
@@ -249,7 +246,7 @@ Up-level clients require an onboarding configuration file for onboarding to Micr
 
 If your target collection contains both up-level and down-level devices, or if you're not sure, then use the instructions to [onboard devices running any supported operating system (recommended)](#bkmk_any_os).
 
-### Get an onboarding configuration file for up-level devices
+#### Get an onboarding configuration file for up-level devices
 
 1. Go to the [Microsoft Defender Security Center](https://securitycenter.windows.com/) and sign in.
 1. Select **Settings**, then select **Onboarding** under the **Endpoint** heading.
@@ -257,15 +254,15 @@ If your target collection contains both up-level and down-level devices, or if y
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
 1. Select **Download package**.
 1. Download the compressed archive (.zip) file and extract the contents.
-> [!Note]
-> The steps have you download the onboarding file for Windows 10 and 11 but this file is also used for up-level Server operating systems. 
+    > [!NOTE]
+    > The steps have you download the onboarding file for Windows 10 and 11 but this file is also used for up-level Server operating systems.
 
 > [!IMPORTANT]
 > - The Microsoft Defender for Endpoint configuration file contains sensitive information which should be kept secure.
 > - If your target collection contains down-level devices, and you use the instructions for onboarding only up-level devices, then the down-level devices won't be onboarded. The optional **Workspace key** and **Workspace ID** fields are used for onboarding down-level devices, but if they aren't included then the policy will fail on down-level clients.
 
 
-### Onboard the up-level devices
+#### Onboard the up-level devices
 
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.  
 1. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Onboarding**.
