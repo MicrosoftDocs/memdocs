@@ -76,7 +76,7 @@ After you unenroll a device running Windows 8.1 RT:
 
 
 ## Remove Windows 10/11 devices  
-This section describes how to remove a Windows 10/11 device from Intune. If one set of instructions doesn't work for you, try the next set.    
+This section describes how to remove a Windows 10/11 device from Intune.   
 
 ### Remove in device Settings app
 1. Open the Settings app. 
