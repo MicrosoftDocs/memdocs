@@ -224,6 +224,10 @@ Selecting a profile from the list opens the profiles **Overview** pane where you
 - Select **Properties** to modify the deployment.  On the *Properties* pane, select **Edit** to open the *Deployment settings or Assignments*, where you can then modify the deployment.
 - Select **End user update status** to view information about the policy.
 
+
+> [!NOTE]
+> The End user update status Last Scanned Time value will return 'Not scanned yet' until an initial user logon and Update Session Orchestrator (USO) scan is initiated. For more information on the Unified Update Platform (UUP) architecture and related components, see (Get started with Windows Update)[https://docs.microsoft.com/windows/deployment/update/windows-update-overview].
+
 ## Validation and reporting
 
 There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. Windows update reports show details about your Windows 10 and Windows 11 devices side by side in the same report.
