@@ -87,7 +87,6 @@ For more information, see [How to use maintenance windows in Configuration Manag
 Configuration Manager version 2207 now supports automatic deployment of [modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/bc-p/2904464). Windows Server 2012 and 2016 devices that are targeted with Microsoft Defender for Endpoint onboarding policy will use the unified agent versus the existing Microsoft Monitoring Agent based solution, if you choose to use through Client Settings.
 
 For more information, see [Microsoft Defender for Endpoint onboarding](../../../protect/deploy-use/defender-advanced-threat-protection.md).
-<!--For more information, see [xxxxxc](../../servers/blah.md). -->
 
 ### Improvements to Configuration Manager policies for Microsoft Defender Application Guard
 <!-- 14059872 -->
