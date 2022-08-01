@@ -37,7 +37,10 @@ When co-management is already enabled, edit the co-management properties to enab
 > [!Important]
 > When you enable Endpoint analytics data upload, your default client settings will be automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more details on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](../../analytics/enroll-configmgr.md#bkmk_cm_enable).
 
-   [![Upload devices to Microsoft Endpoint Manager admin center](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
+ [![Upload devices to Microsoft Endpoint Manager admin center](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png)](../../analytics/media/13058986-configure-upload-configmgr#lightbox) 
+ 
+<!-- : : : image type="content" source="../../analytics/media/13058986-configure-upload-configmgr.png" alt-text="Upload devices to Microsoft Endpoint Manager admin center." : : : -->
+ 
 1. Sign in with your *Global Administrator* account when prompted.
 1. Select **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
 1. Choose **OK** to exit the co-management properties once you've done making changes.
