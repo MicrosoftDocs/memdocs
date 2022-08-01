@@ -29,7 +29,7 @@ ms.collection:
 
 ---
 
-# Import custom ADMX and ADML administrative templates into Endpoint Manager
+# Import custom ADMX and ADML administrative templates into Endpoint Manager (public preview)
 
 You can import custom and third party/partner ADMX and ADML templates into the Endpoint Manager admin center. Once imported, you can create a device configuration policy using these settings, and then assign the policy to your managed devices.
 
@@ -42,7 +42,7 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
 
 ## What you need to know
 
-- This feature is in [public preview](public-preview.md).
+- This feature is in [public preview](../fundamentals/public-preview.md).
 
 - There are some limits:
 
@@ -75,7 +75,7 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
 
 - New settings can be added to an existing namespace if the new settings are added as a new file with the already uploaded setting removed from the file.
 
-  **QUESTION**: This sentence is confusing. I assume the namespace is in the ADMX file. Would this namespace also exist in a different ADMX file? If yes, how is that a "different" ADMX file? I assume the ADMX would fail to import as it would already exist. What about renaming the admx file (from filename1.admx to filename2.admx)? I suggest we have a call about this bullet.
+  **QUESTION**: This sentence is confusing. I assume the namespace is in the ADMX file. Would this namespace also exist in a different ADMX file? If yes, how is that a "different" ADMX file? I assume the ADMX would fail to import as it would already exist. What about renaming the admx file (from filename1.admx to filename2.admx)? I suggest we have a call about this bullet. We can't keep in the article as-is.
 
 ## Download the ADMX templates
 
