@@ -80,6 +80,8 @@ By default, with multiple maintenance windows, the client only installs software
         - **Coordinated Universal Time (UTC)**: Enable this option for the client to interpret the start and end times in the UTC time zone. For regionally or globally distributed devices in the same collection, this option sets the maintenance window to occur simultaneously on all devices in the collection. Disable this option for the client to use the device's local time zone. This option is disabled by default.
 
     1. Configure the recurrence pattern. The default is once per week on the current day of the week.
+        > [!NOTE]
+        > Starting in version 2207, you can offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using an offset of two days after the second Tuesday of the month, sets the maintenance window for Thursday. <!--3601127-->
 
     1. **Apply this schedule to**: By default the window applies to **All deployments**. You can select either **Software updates** or **Task sequences** to further control what deployments run during this window.
 
@@ -88,7 +90,6 @@ By default, with multiple maintenance windows, the client only installs software
 
 1. Select **OK** to save and close the window.
 
-[!NOTE] You can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using an offset of two days after the second Tuesday of the month, sets the maintenance window for Thursday.
 
 The **Maintenance Windows** tab of the collection properties displays all configured windows.
 
