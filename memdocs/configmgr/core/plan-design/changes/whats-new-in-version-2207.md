@@ -38,14 +38,7 @@ You can now approve the application workflow through email. For the application 
 
 For more information, see [Approve applications in Configuration Manager](../../../apps/deploy-use/app-approval.md#to-take-action-from-internet).
 
-## Site infrastructure
-
-### Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016
-<!--9265511-->
-Configuration Manager will now utilize the Windows Server 2012 R2 and Windows Server 2016 unified solution for anti-virus and endpoint detection and response. Devices that are targeted with Microsoft Defender for Endpoint onboarding policy will use the unified agent versus the previous Microsoft Monitoring Agent based solution (where applicable).
-
-<!--For more information, see [xxxxxc](../../servers/blah.md). -->
-
+<!--## Site infrastructure-->
 
 ### Default site boundary group behavior to support cloud source selection
 <!--10674394-->
@@ -88,6 +81,13 @@ For more information, see [How to use maintenance windows in Configuration Manag
 
 
 ## Protection
+
+### Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016
+<!--9265511-->
+Configuration Manager version 2207 now supports automatic deployment of [modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/bc-p/2904464). Windows Server 2012 and 2016 devices that are targeted with Microsoft Defender for Endpoint onboarding policy will use the unified agent versus the existing Microsoft Monitoring Agent based solution, if you choose to use through Client Settings.
+
+For more information, see [Microsoft Defender for Endpoint onboarding](../../../protect/deploy-use/defender-advanced-threat-protection.md).
+<!--For more information, see [xxxxxc](../../servers/blah.md). -->
 
 ### Improvements to Configuration Manager policies for Microsoft Defender Application Guard
 <!-- 14059872 -->
