@@ -43,8 +43,9 @@ You can onboard the following operating systems using Configuration Manager:
 > [!IMPORTANT]
 > Operating systems that have reached the end of their [product lifecycle](/lifecycle/faq/general-lifecycle) aren't typically supported for onboarding unless they have been enrolled into the [Extended Security Updates (ESU program)](/lifecycle/faq/extended-security-updates). For more information about supported operating systems and capabilities with Microsoft Defender for Endpoint, see [Minimum requirements for Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/minimum-requirements#supported-windows-versions). <!-- MAX 6198973-->
 
-[Configuration Manager 2207 and later versions](#bkmk_2207)
-[Configuration Manager 2203 and earlier versions](#bkmk_2203)
+## [Configuration Manager 2207 and later versions](#bkmk_2207)
+
+## [Configuration Manager 2203 and earlier versions](#bkmk_2203)
 
 ## <a name="bkmk_2207"></a> About onboarding to Microsoft Defender for Endpoint with Configuration Manager (2207 and later)
 
