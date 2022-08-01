@@ -155,7 +155,7 @@ The app you have created appears in the apps list where you can assign it to the
 - **"Available for enrolled devices" assignment type is not available**: Only **Required** and **Uninstall** assignment types are currently supported. 
 - **"Collect logs" action is unavailable during preview**: Log collection feature on macOS apps (DMG) is unavailable during preview. 
 - **Errors might not show details during preview**: Some errors you encounter may only show "Failed" status with an error code and not provide additional details.
-- **App upgrade fails to install**: Updating an app that has the same bundle ID as an existing app in Applications folder fails to install. 
+- **App upgrade fails to install**: Updating an app that has the same bundle ID or same name as an existing app in Applications folder fails to install. 
 - **DMG apps report once after deployment**: Assigned DMG apps report back on initial deployment only. These apps will not report back again during preview.
 - **Some DMG apps may display a warning to end-users on launch**: Apps downloaded from the internet and deployed using Intune may show a warning to end-users when launched. End-users can click "Open" on the dialog to continue opening the app.
 

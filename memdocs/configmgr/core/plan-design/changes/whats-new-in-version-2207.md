@@ -59,7 +59,7 @@ You can now add options via PowerShell to include and prefer cloud management ga
 <!--14120481-->
 You can now define a **Script Execution Timeout (seconds)** when configuring client settings for compliance settings. The timeout value can be set from a minimum of 60 seconds to a maximum of 600 seconds. This new setting allows you more flexibility for configuration items when you need to run scripts that may exceed the default of 60 seconds.
 
-<!--For more information, see [xxxxxc](../../servers/blah.md). -->
+For more information, see the [compliance settings group of client settings](../../clients/deploy/about-client-settings.md#compliance-settings).
 
 ## Collections
 
