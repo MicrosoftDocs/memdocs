@@ -8,7 +8,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 manager: apoorvseth
 author: banreet
-ms.author: mstewart
+ms.author: banreetkaur
 ms.localizationpriority: high
 ms.collection: highpri
 ---
