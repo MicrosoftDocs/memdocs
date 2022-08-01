@@ -2,13 +2,13 @@
 title: Use maintenance windows
 titleSuffix: Configuration Manager
 description: Use collections and maintenance windows to effectively manage clients in Configuration Manager.
-ms.date: 04/05/2021
+ms.date: 08/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
 ---
 
@@ -87,6 +87,8 @@ By default, with multiple maintenance windows, the client only installs software
         > If you configure multiple maintenance windows of different types on the same collection, make sure you understand the client behaviors. For more information, see [Multiple maintenance windows](#multiple-maintenance-windows).
 
 1. Select **OK** to save and close the window.
+
+[!NOTE] You can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using an offset of two days after the second Tuesday of the month, sets the maintenance window for Thursday.
 
 The **Maintenance Windows** tab of the collection properties displays all configured windows.
 
