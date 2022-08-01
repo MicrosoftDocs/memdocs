@@ -278,8 +278,7 @@ Folder creations can also be added programmatically using Windows PowerShell cmd
    - [Get-CMFolder](/powershell/module/configurationmanager/get-cmfolder)
    - [Remove-CMfolder](/powershell/module/configurationmanager/remove-cmfolder)
    
-   
-:::image type="content" source="../media/13507410-sum-adrfolder.png" alt-text="Screenshot of right-click menu displaying folder options for the automatic deployment rules node." lightbox="../media/13507410-sum-adrfolder.png":::
+   ![Folder options for the automatic deployment rules node](./media/13507410-sum-adrfolder.png)
 
 ## Known issues
 
