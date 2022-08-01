@@ -51,7 +51,8 @@ Configuration Manager will now utilize the Windows Server 2012 R2 and Windows Se
 <!--10674394-->
 You can now add options via PowerShell to include and prefer cloud management gateway (CMG) management points for the default site boundary group. When a site is set up, there's a default site boundary group created for each site and all the clients are by default mapped to it until they're assigned to some custom boundary group.
 
-<!--For more information, see [xxxxxc](../../servers/blah.md). -->
+For more information, see [
+Default site boundary group behavior supports cloud source selection](../../../core/servers/deploy/configure/boundary-groups.md#default-site-boundary-group-behavior-supports-cloud-source-selection).
 
 ## Client management
 
@@ -84,9 +85,6 @@ Based upon your feedback, you can now offset monthly maintenance window schedule
 For more information, see [How to use maintenance windows in Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md). 
 
 <!--## OS deployment-->
-
-
-
 
 
 ## Protection
