@@ -2,10 +2,10 @@
 title: Automatically deploy software updates
 titleSuffix: Configuration Manager
 description: Automatically deploy software updates by using automatic deployment rules (ADR).
-author: mestew
-ms.author: mstewart
-manager: dougeby
-ms.date: 04/08/2022
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.date: 08/01/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -258,6 +258,28 @@ After you create an ADR, add additional deployments to the rule. This action hel
 Deployments can also be added programmatically using Windows PowerShell cmdlets. For a complete description of using this method, see [New-CMSoftwareUpdateDeployment](/powershell/module/configurationmanager/new-cmsoftwareupdatedeployment) .
 
 For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
+
+### Process to create a folder for automatic deployment rules  
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, and then go to **Automatic Deployment Rules**.
+
+2. From the ribbon or right-click menu, and in the Automatic Deployment Rules select from the following options:
+
+    - Create Folder
+    - Delete Folder
+    - Rename Folder
+    - Move Folders
+    - Set Security Scopes
+
+Folder creations can also be added programmatically using Windows PowerShell cmdlets. For a complete description of using this method, see
+
+   - [New-CMFolder](/powershell/module/configurationmanager/new-cmfolder)
+   - [Set-CMFolder](/powershell/module/configurationmanager/set-cmfolder)
+   - [Get-CMFolder](/powershell/module/configurationmanager/get-cmfolder)
+   - [Remove-CMfolder](/powershell/module/configurationmanager/remove-cmfolder)
+   
+   
+:::image type="content" source="../../media/13507410-sum-adrfolder.png" alt-text="Screenshot of right-click menu displaying folder options for the automatic deployment rules node." lightbox="../../media/13507410-sum-adrfolder.png":::
 
 ## Known issues
 
