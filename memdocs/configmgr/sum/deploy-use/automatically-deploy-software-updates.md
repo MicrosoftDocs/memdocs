@@ -259,7 +259,8 @@ Deployments can also be added programmatically using Windows PowerShell cmdlets.
 
 For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
-### Process to create a folder for automatic deployment rules  
+## Process to create a folder for automatic deployment rules  
+(*Starting in version 2207*) <!--13507410-->
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, and then go to **Automatic Deployment Rules**.
 
@@ -278,8 +279,6 @@ Folder creations can also be added programmatically using Windows PowerShell cmd
    - [Get-CMFolder](/powershell/module/configurationmanager/get-cmfolder)
    - [Remove-CMfolder](/powershell/module/configurationmanager/remove-cmfolder)
    
-   ![Folder options for the automatic deployment rules node](./media/13507410-sum-adrfolder.png)
-
 ## Known issues
 
 ### Error code 0x87D20417
