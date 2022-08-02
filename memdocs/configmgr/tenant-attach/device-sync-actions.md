@@ -2,13 +2,13 @@
 title: Enable Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
-ms.date: 07/11/2022
+ms.date: 08/01/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-manager: dougeby
-author: mestew
-ms.author: mstewart
+manager: apoorvseth
+author: banreet
+ms.author: banreetkaur
 ms.localizationpriority: high
 ms.collection: highpri
 ---
@@ -32,11 +32,15 @@ When co-management is already enabled, edit the co-management properties to enab
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
    - When a single collection is selected, its child collections are also uploaded.
 1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights for optimizing the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
+1. Check the option to **Enforce Role-based Access Control** for the devices uploading to cloud service. By default, SCCM RBAC will be enforced along with Intune RBAC when you are uploading your Configuration Manager devices to the cloud service. Hence, the checkbox will be checked by default. If you want to enforce only Intune RBAC, you can uncheck the box. However, the enforcement of Intune RBAC only won't apply at this time. The [Release notes](../../configmgr/core/servers/deploy/install/release-notes.md) and the [What's New in Intune](../../intune/fundamentals/whats-new.md) will be updated when you're able to enforce Intune RBAC only. 
 
 > [!Important]
 > When you enable Endpoint analytics data upload, your default client settings will be automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more details on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](../../analytics/enroll-configmgr.md#bkmk_cm_enable).
 
-   [![Upload devices to Microsoft Endpoint Manager admin center](../../analytics/media/6051638-configure-upload-configmgr.png)](../../analytics/media/6051638-configure-upload-configmgr.png#lightbox)
+ [![Screenshot that shows how to upload devices to Microsoft Endpoint Manager admin center.](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png)](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png#lightbox) 
+ 
+<!-- : : : image type="content" source="../../analytics/media/13058986-configure-upload-configmgr.png" alt-text="Upload devices to Microsoft Endpoint Manager admin center." : : : -->
+ 
 1. Sign in with your *Global Administrator* account when prompted.
 1. Select **Yes** to accept the **Create AAD Application** notification. This action provisions a service principal and creates an Azure AD application registration to facilitate the sync.
 1. Choose **OK** to exit the co-management properties once you've done making changes.
