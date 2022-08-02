@@ -37,7 +37,7 @@ To make it easier to find custom catalogs, we're providing a list of links as a 
 
 ## Open this article from the Configuration Manager console
 <!--9989251-->
-Starting in Configuration Manager 2107, you can  choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node to get to this article. Right-clicking on **Third-Party Software Update Catalogs** node displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to to this page.  
+Starting in Configuration Manager 2107, you can  choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node to get to this article. Right-clicking on **Third-Party Software Update Catalogs** node displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to this page.  
 
 :::image type="content" source="./media/9989251-more-catalogs.png" alt-text="Screenshot of the Third-Party Software Update Catalogs node with the More Catalogs icon in the ribbon":::
 
