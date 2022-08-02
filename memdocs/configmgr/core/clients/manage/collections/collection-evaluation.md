@@ -30,10 +30,6 @@ At a high level, each individual collection evaluation and update follows these 
 
 1. Execute the collection query.
 1. Add any systems that are direct members.
-1. Evaluate all *include* collections.
-
-   If the include collections also have query rules, or have include or exclude collections, evaluate them also. If the include collections themselves are limiting collections, evaluate any collections below them. After fully evaluating the tree, return the results to the calling collection.
-
 1. Perform a logical `AND` between the returned results and the limiting collection.
 1. Evaluate the *exclude* collections.
 
