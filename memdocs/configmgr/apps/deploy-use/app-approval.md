@@ -125,6 +125,9 @@ With these additional optional prerequisites, recipients can approve or deny the
 
 - Set up a [cloud management gateway](../../core/clients/manage/cmg/overview.md).
 
+  > [!NOTE]
+  > This scenario doesn't support CMG deployments with a virtual machine scale set until Configuration Manager version 2207 or later is installed.
+
 - Onboard the site to [Azure services](../../core/servers/deploy/configure/azure-services-wizard.md) for **Cloud Management**.
 
 - Enable [Azure AD User Discovery](../../core/servers/deploy/configure/configure-discovery-methods.md#azureaadisc).
