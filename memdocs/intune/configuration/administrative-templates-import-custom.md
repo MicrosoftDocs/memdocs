@@ -40,6 +40,12 @@ This feature applies to:
 
 This article shows you how to import custom ADMX and ADML files in the Endpoint Manager admin center. For more information on administrative templates in Endpoint Manager, go to [Use ADMX templates to configure policy settings in Microsoft Intune](administrative-templates-windows.md).
 
+> [!TIP]
+> The settings catalog has many settings natively built-in to Endpoint Manager, including Google Chrome. For more information, go to:
+>
+> - [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](settings-catalog.md)
+> - [Common tasks you can complete using the Settings Catalog](settings-catalog-common-features.md)
+
 ## What you need to know
 
 - This feature is in [public preview](../fundamentals/public-preview.md).
@@ -52,17 +58,7 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
 
 - Currently, only `en-us` ADML files are supported.
 
-- If you upload an ADMX file with settings that are already imported, then the upload will fail. For example, if you upload a different version of an ADMX file that has the same settings as the original ADMX file, then the upload will fail with a namespace error.
-
-  To replace an existing ADMX file with the same settings:
-
-  1. Delete any profiles using the existing ADMX settings.
-  2. Delete the original ADMX file you imported.
-  3. Import the new ADMX and ADML files.
-
-  Or, create another version of the ADMX file with the same namespace as the original ADMX file. Add the new and different settings to this ADMX file. Then, import the new ADMX and ADML files.
-
-- Some ADMX files may have dependency prerequisites. You must import any dependency ADMX files first. For example, to import Mozilla Firefox ADMX and ADML files, you:
+- Some ADMX files may have dependency prerequisites. Import any dependency ADMX files first. For example, to import Mozilla Firefox ADMX and ADML files, you:
 
   1. Import the `mozilla.admx` and `mozilla.adml` files. Make sure the status shows **Available**.
   2. Import the `firefox.admx` and `firefox.adml` files.
@@ -138,6 +134,28 @@ When the import completes, your ADMX templates are shown in the list. You can al
     Select **Next**.
 
 10. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+## Replace existing ADMX files
+
+If you upload an ADMX file with settings that are already imported, then the upload will fail.
+
+For example, if you upload a different version of an ADMX file that has the same settings as the original ADMX file, then the upload will fail with a namespace error.
+
+To update existing ADMX files that are imported, you have the following options:
+
+- **Option 1: Replace the existing ADMX file**
+
+  To replace an existing ADMX file with the same settings, you can use the following steps:
+
+  1. Delete any profiles using the existing ADMX settings.
+  2. Delete the original ADMX file you imported.
+  3. Import the new ADMX and ADML files.
+
+- **Option 2: Create a new ADMX file**
+
+  1. Create another version of the ADMX file with the same namespace as the original ADMX file.
+  2. Add the new and different settings to this ADMX file.
+  3. Import the new ADMX and ADML files.
 
 ## Next steps
 
