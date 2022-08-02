@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 08/02/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -90,11 +90,11 @@ You'll only see this sign-in option if your organization allows certificate-base
 4. Tap **Continue** to use the certificate.  
 5. Wait while the app verifies your certificate. When done, you can access the features in the app and your organization's resources.  
 
-### Sign in via another device
->[!NOTE]
-> To proceed with this option, the device you're using to authenticate (i.e., the device which you enter the one-time code into) must be workplace joined. If the authenticating device is not workplace joined, an error will be thrown.   
-
+### Sign in via another device  
 If you normally use a smart card to access work resources, follow the steps in this section to sign in to Company Portal.  
+
+>[!IMPORTANT]
+> Before you use this sign-in option, [join your work device to your work or school network](https://support.microsoft.com/account-billing/join-your-work-device-to-your-work-or-school-network-ef4d6adb-5095-4e51-829e-5457430f3973).  
 
 1. Open Company Portal on the device you'll be using to access your work resources.  
 
