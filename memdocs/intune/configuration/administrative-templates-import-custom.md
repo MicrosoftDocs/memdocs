@@ -82,7 +82,7 @@ Download the ADMX templates you want to import. Save these files to an easily ac
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Configuration profiles** > **Import ADMX** > **Import**:
 
-    :::image type="content" source="./media/administrative-templates-import-custom/import-admx.png" alt-text="To add or import custom ADMX and ADML, go to Devices > Configuration profiles > Import ADMX in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/administrative-templates-import-custom/import-admx.png" alt-text="Screenshot that shows how to add or import custom ADMX and ADML. Go to Devices > Configuration profiles > Import ADMX in Microsoft Intune and Endpoint Manager admin center.":::
 
 3. Upload your files:
 
@@ -99,7 +99,7 @@ When the import completes, your ADMX templates are shown in the list. You can al
 - See the upload **Status**.
 - **Delete** an imported template.
 
-:::image type="content" source="./media/administrative-templates-import-custom/imported-templates-refresh-delete.png" alt-text="You can refresh and delete imported custom ADMX and ADML administrative templates in Microsoft Intune and Endpoint Manager admin center.":::
+:::image type="content" source="./media/administrative-templates-import-custom/imported-templates-refresh-delete.png" alt-text="Screenshot that shows how to refresh and delete imported custom ADMX and ADML administrative templates in Microsoft Intune and Endpoint Manager admin center.":::
 
 ## Create a profile using your imported files
 
@@ -110,7 +110,7 @@ When the import completes, your ADMX templates are shown in the list. You can al
     - **Platform**: Select **Windows 10 and later**.
     - **Profile**: Select **Templates** > **Imported Administrative templates (Preview)**:
 
-      :::image type="content" source="./media/administrative-templates-import-custom/select-imported-administrative-templates.png" alt-text="Select imported administrative templates to create a device configuration profile using the imported ADMX settings in Microsoft Intune and Endpoint Manager admin center.":::
+      :::image type="content" source="./media/administrative-templates-import-custom/select-imported-administrative-templates.png" alt-text="Screenshot that shows how to select imported administrative templates to create a device configuration profile using the imported ADMX settings in Microsoft Intune and Endpoint Manager admin center.":::
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
