@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Import custom and third party ADMX templates in Microsoft Intune
-description: You can upload or import custom and third party partner ADMX and ADML files in Microsoft Intune and Endpoint Manager.
+title: Import custom and third party partner ADMX templates in Microsoft Intune
+description: You can add, upload, or import custom and third party partner ADMX and ADML files in Microsoft Intune and Endpoint Manager. When they're imported, create a device configuration profile and assign the profile to your Windows 10/11 devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -19,7 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
-ms.reviewer: mikedano
+ms.reviewer: mikedano, kabalu
 ms.suite: ems
 search.appverid: 
 #ms.tgt_pltfrm:
@@ -46,36 +46,32 @@ This article shows you how to import custom ADMX and ADML files in the Endpoint 
 
 - There are some limits:
 
-  - A maximum of 10 packages can be uploaded. Each package file must be 1 MB or smaller.
+  - A maximum of 10 ADMX files can be uploaded. Each file must be 1 MB or smaller.
   - For each ADMX file, only one ADML file can be uploaded.
-  - Each ADMX package supports one language.
+  - Each ADMX file supports one language.
 
 - Currently, only `en-us` ADML files are supported.
 
-- If you upload an ADMX that already exists in the Endpoint Manager admin center, then the upload will fail. For example, the upload will fail if you try to upload a newer version of the same ADMX file.
+- If you upload an ADMX file with settings that are already imported, then the upload will fail. For example, if you upload a different version of an ADMX file that has the same settings as the original ADMX file, then the upload will fail with a namespace error.
 
-  To replace an existing ADMX file:
+  To replace an existing ADMX file with the same settings:
 
   1. Delete any profiles using the existing ADMX settings.
   2. Delete the original ADMX file you imported.
   3. Import the new ADMX and ADML files.
 
-- Some ADMX packages may have dependency prerequisites. You must import any dependency ADMX files first. For example, to import Mozilla Firefox ADMX and ADML files:
+  Or, create another version of the ADMX file with the same namespace as the original ADMX file. Add the new and different settings to this ADMX file. Then, import the new ADMX and ADML files.
+
+- Some ADMX files may have dependency prerequisites. You must import any dependency ADMX files first. For example, to import Mozilla Firefox ADMX and ADML files, you:
 
   1. Import the `mozilla.admx` and `mozilla.adml` files. Make sure the status shows **Available**.
   2. Import the `firefox.admx` and `firefox.adml` files.
 
   If you upload `firefox.admx` before `mozilla.adml`, then the import will fail.
 
-  To remove a dependency prerequisite, delete the associated ADMX package first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
+  To remove a dependency prerequisite, delete the associated ADMX file first. Then, delete the dependency prerequisite. In our Mozilla Firefox example, delete `firefox.admx` and then delete `mozilla.admx`.
 
-- ADMX files with unsupported setting types will fail to upload. For example, combo box settings won't upload.
-
-  **QUESTION**: Do we have a list of unsupported settings types? If yes, we should include this info.
-
-- New settings can be added to an existing namespace if the new settings are added as a new file with the already uploaded setting removed from the file.
-
-  **QUESTION**: This sentence is confusing. I assume the namespace is in the ADMX file. Would this namespace also exist in a different ADMX file? If yes, how is that a "different" ADMX file? I assume the ADMX would fail to import as it would already exist. What about renaming the admx file (from filename1.admx to filename2.admx)? I suggest we have a call about this bullet. We can't keep in the article as-is.
+- Currently, the combo box setting type isn't supported. ADMX files with the combo box setting type will fail to import. All other setting types are supported.
 
 ## Download the ADMX templates
 
@@ -88,20 +84,20 @@ Download the ADMX templates you want to import. Save these files to an easily ac
 ## Add the ADMX and ADML files
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Configuration profiles** > **Custom administrative templates**:
+2. Select **Devices** > **Configuration profiles** > **Import ADMX** > **Import**:
 
-    :::image type="content" source="./media/administrative-templates-import-custom/custom-administrative-templates.png" alt-text="To add or import custom ADMX and ADML, go to Devices > Configuration profiles > Custom administrative templates in Microsoft Intune and Endpoint Manager admin center.":::
+    :::image type="content" source="./media/administrative-templates-import-custom/import-admx.png" alt-text="To add or import custom ADMX and ADML, go to Devices > Configuration profiles > Import ADMX in Microsoft Intune and Endpoint Manager admin center.":::
 
-3. Select **Import** and upload your files:
+3. Upload your files:
 
     - **ADMX file**: Select the ADMX file you want to upload.
-    - **ADML file for the default language**: Select the ADMX file you want to upload. Remember, you can add only one language file for each ADMX file you upload. For any other limitations, go to [What you need to know](#what-you-need-to-know) (in this article).
+    - **ADML file for the default language**: Select the ADML file you want to upload. Remember, you can add only one language file for each ADMX file you upload. For any other limitations, go to [What you need to know](#what-you-need-to-know) (in this article).
     - **Specify the language of the ADML file**: Shows the ADML language of the file you uploaded.
 
 4. Select **Next**.
 5. In **Review + Create**, review your changes. Select **Create** to import the files.
 
-When the import completes, the template is shown in the list. You can also:
+When the import completes, your ADMX templates are shown in the list. You can also:
 
 - Select **Refresh** to see the updated state.
 - See the upload **Status**.
