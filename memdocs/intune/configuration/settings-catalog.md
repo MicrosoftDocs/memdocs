@@ -168,7 +168,7 @@ You create the policy, and assign it to your groups. In the Endpoint Manager adm
 
 3. Select **View report**. The report shows detailed information, including the device name, the policy status, and more. You can also filter on the deployment status, and **Export** the report to a `.csv` file:
 
-    :::image type="content" source="./media/settings-catalog/settings-catalog-policy-view-report.png" alt-text="Screenshot that shows how to see detailed report information in Microsoft Intune and Endpoint Manager admin center, including device name, policy status, and more.":::
+    :::image type="content" source="./media/settings-catalog/settings-catalog-policy-view-report.png" alt-text="Screenshot that shows how to see detailed report information in Microsoft Intune and Endpoint Manager admin center, including device name, policy status, and more." lightbox="./media/settings-catalog/settings-catalog-policy-view-report.png":::
 
 4. You can also look at the states of each setting using the **per-setting status**. This status shows the total number of devices affected by each setting in the policy.
 
