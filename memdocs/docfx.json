@@ -90,17 +90,15 @@
       "feedback_product_url": {
         "configmgr/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
         "configmgr/**/*.yml": "https://feedbackportal.microsoft.com/feedback/forum/4669adfc-ee1b-ec11-b6e7-0022481f8472",
-        "intune/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472"
-      },
-      "ms.date": {
-        "autopilot/**/*.md": "12/16/2020"
+        "intune/**/*.md": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472",
+        "autopilot/**/*.*": "https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472"
       }, 
       "searchScope": {
         "configmgr/**/*.md": ["ConfigMgr"],
         "configmgr/**/*.yml": ["ConfigMgr"],
         "configmgr/core/**/*.md": ["ConfigMgr"],
         "analytics/**/*.md": ["Analytics"],
-        "autopilot/**/*.md": ["Autopilot"]
+        "autopilot/**/*.*": ["Autopilot"]
       },
       "featureFlags": {
         "*.md" : [
