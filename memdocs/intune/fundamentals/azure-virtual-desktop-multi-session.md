@@ -8,7 +8,7 @@ keywords:
 author: smbhardwaj  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 08/03/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,7 +70,7 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, whi
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
 - Azure AD-joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
-- Licensing: ??
+- Licensing: The appropriate Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a Microsoft API. For more information, see [Microsoft Intune licensing](../fundamentals/licenses#additional-information.md)
 
 > [!NOTE]
 > If you're joining session hosts to Azure Active Directory Domain Services, you can't manage them using Intune.
