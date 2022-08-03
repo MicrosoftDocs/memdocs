@@ -52,7 +52,7 @@ Install apps on your device from the Company Portal app for Windows.
     * **Search for apps**: A static search bar sits in the app's navigation pane. To find your available apps, search by app name or publisher.  
 
    >[!NOTE]
-   >The Company Portal for Windows now allows users to select multiple apps and install in bulk. From the **Apps** tab of the Company Portal for Windows, select the multi-select view button on the top right corner of the page. Then, select the checkbox next to each app that you need to install. Next, select the **Install Selected** button to start installation. All selected apps will install at the same time without requiring users to right-click each app or navigate to each app's page.
+   >You can select and install multiple apps in bulk. From the **Apps** tab of the Company Portal for Windows, select the multi-select view button on the top right corner of the page. Then, select the checkbox next to each app and select the **Install Selected** button to start installation. All selected apps will install at the same time without requiring you to right-click each app or navigate to each app's page.
 
 3. Select an app.   
 4. On the apps details page, click **Install**. After installation is done, you'll see an **Installed** status.  
