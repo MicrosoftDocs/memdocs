@@ -2,10 +2,10 @@
 title: Automatically deploy software updates
 titleSuffix: Configuration Manager
 description: Automatically deploy software updates by using automatic deployment rules (ADR).
-author: mestew
-ms.author: mstewart
-manager: dougeby
-ms.date: 04/08/2022
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
+ms.date: 08/01/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
-Use an automatic deployment rule (ADR) rather than adding new updates to an existing software update group. Typically, you use ADRs to deploy monthly software updates (also known as "Patch Tuesday" updates) and for managing Endpoint Protection definition updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
+Use an automatic deployment rule (ADR) rather than adding new updates to an existing software update group. Typically, you use ADRs to deploy monthly software updates (also known as "Patch Tuesday" updates) and for managing Endpoint Protection definition updates. If you need help determining which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
 
 
 ##  <a name="BKMK_CreateAutomaticDeploymentRule"></a> Create an automatic deployment rule (ADR)  
@@ -259,6 +259,26 @@ Deployments can also be added programmatically using Windows PowerShell cmdlets.
 
 For more information about the deployment process, see [Software update deployment process](../understand/software-updates-introduction.md#BKMK_DeploymentProcess).
 
+## Process to create a folder for automatic deployment rules  
+(*Starting in version 2207*) <!--13507410-->
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, and then go to **Automatic Deployment Rules**.
+
+2. From the ribbon or right-click menu, and in the Automatic Deployment Rules select from the following options:
+
+    - Create Folder
+    - Delete Folder
+    - Rename Folder
+    - Move Folders
+    - Set Security Scopes
+
+Folder creations can also be added programmatically using Windows PowerShell cmdlets. For a complete description of using this method, see
+
+   - [New-CMFolder](/powershell/module/configurationmanager/new-cmfolder)
+   - [Set-CMFolder](/powershell/module/configurationmanager/set-cmfolder)
+   - [Get-CMFolder](/powershell/module/configurationmanager/get-cmfolder)
+   - [Remove-CMfolder](/powershell/module/configurationmanager/remove-cmfolder)
+   
 ## Known issues
 
 ### Error code 0x87D20417
