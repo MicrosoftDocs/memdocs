@@ -6,7 +6,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/14/2021
+ms.date: 08/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -36,15 +36,10 @@ Custom notification messages include a short title and a message body of 500 cha
 
 ### What the notification looks like on an iOS/iPadOS device
 
-If you have the Company Portal app open on an iOS/iPadOS device, the notification resembles the following screenshot:
+If you have the Company Portal app open on an iOS/iPadOS device, and the device is locked, then the  notification resembles the following screenshot:
 
 > [!div class="mx-imgBorder"]
-> ![Company Portal iOS/iPadOS Test notification](./media/custom-notifications/105046-1.png)
-
-If the device is locked, the notification resembles the following screenshot:
-
-> [!div class="mx-imgBorder"]
-> ![Locked Device iOS/iPadOS Test notification](./media/custom-notifications/105046-2.png)
+> ![Locked Device iOS/iPadOS Custom notification](./media/custom-notifications/locked-device-custom-notif.png)
 
 ### What the notification looks like on an Android device
 
