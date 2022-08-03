@@ -16,7 +16,7 @@ ms.localizationpriority: medium
 
 *Applies to: Configuration Manager (current branch)*
 
-Use an automatic deployment rule (ADR) rather than adding new updates to an existing software update group. Typically, you use ADRs to deploy monthly software updates (also known as "Patch Tuesday" updates) and for managing Endpoint Protection definition updates. If you need help to determine which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
+Use an automatic deployment rule (ADR) rather than adding new updates to an existing software update group. Typically, you use ADRs to deploy monthly software updates (also known as "Patch Tuesday" updates) and for managing Endpoint Protection definition updates. If you need help determining which deployment method is right for you, see [Deploy software updates](deploy-software-updates.md).
 
 
 ##  <a name="BKMK_CreateAutomaticDeploymentRule"></a> Create an automatic deployment rule (ADR)  
