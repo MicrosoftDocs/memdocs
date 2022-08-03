@@ -55,7 +55,7 @@ Upgrading an existing Cloud PC from Windows 10 to Windows 11 using the Settings 
 
 ## In-place Windows updgrade may change computer name
 
-Upgrading an existing Cloud PC between release versions may cause the computer name to be changed to a name with a prefix of "pps" while leaving the Intune device name unchanged.
+Upgrading an existing Cloud PC between release versions of Windows 10 to Windows 11 may cause the computer name to be changed to a name with a prefix of "pps" while leaving the Intune device name unchanged.
 
 **Troubleshooting steps**: Find and manage the Cloud PC in Microsoft Endpoint Manager by using the unchanged Intune device name, either through the **Devices > All devices** list or the **Devices > Windows 365 > All Cloud PCs** list.
 
