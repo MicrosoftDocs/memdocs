@@ -51,7 +51,7 @@ Instructions to [Onboarding to Microsoft Defender for Endpoint with Configuratio
 
 Different operating systems have different needs for onboarding to Microsoft Defender for Endpoint. Up-level devices, such as Windows Server version 1803, need the onboarding configuration file. Starting Current Branch 2207, For down-level server operating system devices, you can choose between Microsoft Defender for Endpoint (MDE) Client (recommended) or Microsoft Monitoring Agent (MMA) (legacy) in the Client Settings. For Windows 8.1 devices, you need to use Microsoft Monitoring Agent (MMA) (legacy) in the Client Settings.
 
-:::image type="content" source="media/9265511-mde-downlevel-support-client-settings.png" alt-text="MDE Downlevel Support Client Settings Download" lightbox="media/9265511-mde-downlevel-support-client-settings.png":::
+:::image type="content" source="media/9265511-mde-downlevel-support-client-settings.png" alt-text="Screenshot of Client Settings for Endpoint Protection." lightbox="media/9265511-mde-downlevel-support-client-settings.png":::
 
 If you choose to use MMA, you need the **Workspace key** and **Workspace ID** to onboard. Configuration Manager also installs the Microsoft Monitoring Agent (MMA) when needed by onboarded devices but it doesn't update the agent automatically.
 
@@ -115,7 +115,7 @@ Down-level operating systems that support MDE Client include:
 1. In the Configuration Manager console, navigate to **Administration** > **Client Settings**.
 1. Create custom Client Device Settings or go to the properties of the required client setting and select **Endpoint Protection**
 1. For **Microsoft Defender for Endpoint Client on Windows Server 2012 R2 and Windows Server 2016** setting, The default value is set as **Microsoft Monitoring Agent (legacy)** which needs to be changed to **MDE Client (recommended)**.
-:::image type="content" source="media/9265511-mde-downlevel-support-client-settings.png" alt-text="MDE Downlevel Support Client Settings Download" lightbox="media/9265511-mde-downlevel-support-client-settings.png":::
+:::image type="content" source="media/9265511-mde-downlevel-support-client-settings.png" alt-text="Screenshot of Client Settings for Endpoint Protection showing different options for down-level server operating system devices." lightbox="media/9265511-mde-downlevel-support-client-settings.png":::
 1. In the Configuration Manager console, navigate to **Assets and Compliance** > **Endpoint Protection** > **Microsoft Defender ATP Policies** and select **Create Microsoft Defender ATP Policy**. The policy wizard opens.  
 1. Type the **Name** and **Description** for the Microsoft Defender for Endpoint policy and select **Onboarding**.
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
@@ -137,7 +137,7 @@ Down-level operating systems that support MDE Client include:
 1. Choose **Microsoft Endpoint Configuration Manager current branch and later** for the deployment method.
 1. Select **Download package**.
    
-   :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Onboarding configuration file download" lightbox="media/5229962-onboarding-configuration.png":::
+   :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Screenshot of onboarding configuration file download." lightbox="media/5229962-onboarding-configuration.png":::
 
 1. Download the compressed archive (.zip) file and extract the contents.
 1. Select **Settings**, then select **Onboarding** under the **Device management** heading.
@@ -160,7 +160,7 @@ Down-level operating systems that support MDE Client include:
 1. **Browse** to the configuration file you extracted from the downloaded .zip file.
 1. Supply the **Workspace key** and **Workspace ID** then select **Next**.
    - Verify that the **Workspace key** and **Workspace ID** are in the correct fields. The order in the console may vary from the order in Microsoft Defender for Endpoint online service. <!--8538605-->
-   :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Create Microsoft Defender for Endpoint Policy Wizard" lightbox="media/5229962-create-atp-policy-wizard.png":::
+   :::image type="content" source="media/5229962-create-atp-policy-wizard.png" alt-text="Screenshot of Microsoft Defender for Endpoint policy configuration wizard." lightbox="media/5229962-create-atp-policy-wizard.png":::
 
 1. Specify the file samples that are collected and shared from managed devices for analysis.  
    - **None**
