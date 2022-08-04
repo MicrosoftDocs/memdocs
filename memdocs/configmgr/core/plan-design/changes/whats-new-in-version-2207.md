@@ -2,7 +2,7 @@
 title: What's new in version 2207
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2207 of Configuration Manager current branch.
-ms.date: 08/01/2022
+ms.date: 08/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
