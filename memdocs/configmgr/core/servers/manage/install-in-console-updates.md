@@ -2,7 +2,7 @@
 title: In-console updates
 titleSuffix: Configuration Manager
 description: Install updates to Configuration Manager from the Microsoft cloud.
-ms.date: 08/01/2021
+ms.date: 08/08/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
