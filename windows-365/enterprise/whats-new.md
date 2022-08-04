@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/21/2022
+ms.date: 08/04/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,13 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of July 25, 2022
+
+### Resize action support for more Cloud PCs<!--40263425  -->
+
+The resize action now supports Cloud PCs that are Azure Active Directory joined.
 
 <!-- ########################## -->
 ## Week of July 18, 2022
