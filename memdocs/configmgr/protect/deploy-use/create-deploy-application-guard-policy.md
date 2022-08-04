@@ -2,7 +2,7 @@
 title: Manage Application Guard policies
 titleSuffix: Configuration Manager
 description: Learn how to create and deploy Microsoft Defender Application Guard policies
-ms.date: 08/01/2022
+ms.date: 08/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual

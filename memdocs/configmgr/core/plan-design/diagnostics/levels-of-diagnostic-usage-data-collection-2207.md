@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 2207
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2207.
-ms.date: 08/01/2022
+ms.date: 08/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
