@@ -187,7 +187,7 @@ To change the disk encryption type between full disk encryption and used space o
 
 #### TPM startup PIN or key
 
-A device **must not require** use of a startup PIN or startup key.
+A device **must not be set to require**  startup PIN or startup key.
 
 When a TPM startup PIN or startup key is required on a device, BitLocker can't silently enable on the device and instead requires interaction from the end user. Settings to configure the TPM startup PIN or key are available in both the endpoint protection template and the BitLocker policy. By default, these policies do not configure these settings.
 
