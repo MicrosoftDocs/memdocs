@@ -48,7 +48,7 @@ If a device isn't listed here, it's not supported.
 This feature doesn't support renaming hybrid Azure AD Windows devices.
 
 > [!NOTE]
-> Rename of Android Enterprise devices will only change the name on Intune and not on the device itself. The Device name in Intune is a friendly name that the users are free to change.
+> Renaming of Android Enterprise devices will only change the name in Intune and not on the device itself. The Device name in Intune is a friendly name that users are free to change.
 
 ## Rename a device
 
