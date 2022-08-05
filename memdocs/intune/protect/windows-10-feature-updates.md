@@ -225,7 +225,7 @@ Selecting a profile from the list opens the profiles **Overview** pane where you
 - Select **End user update status** to view information about the policy.
 
 > [!NOTE]
-> The End user update status Last Scanned Time value will return 'Not scanned yet' until an initial user logs on and Update Session Orchestrator (USO) scan is initiated. For more information on the Unified Update Platform (UUP) architecture and related components, see (Get started with Windows Update)[https://docs.microsoft.com/windows/deployment/update/windows-update-overview].
+> The End user update status Last Scanned Time value will return 'Not scanned yet' until an initial user logs on and Update Session Orchestrator (USO) scan is initiated. For more information on the Unified Update Platform (UUP) architecture and related components, see [Get started with Windows Update](/windows/deployment/update/windows-update-overview).
 
 ## Validation and reporting
 
