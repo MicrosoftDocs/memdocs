@@ -136,9 +136,6 @@ When the Configuration Manager database is reindexing, either through the [built
 
 If the state change during a reindex is problematic for your monitoring, each replication link has a set of [thresholds that can be modified](../../plan-design/hierarchy/database-replication.md#database-replication-thresholds) to adjust when the link goes into a degraded state or when it goes into a failed state. Replication links contain multiple replication groups, which are broken up into two types: global data and site data. Global data attempts to sync every one minute and site data syncs every five minutes. By default, the link changes to degraded when the threshold of 12 failures is reached then changes to the failed state at 24. To set these thresholds, select the link under the **Database Replication** node then select **Link Properties**. In the **Alerts** tab, there are thresholds for setting the link to degraded or failed. By default these values are set to 12 and 24 respectively.
 
-> [!IMPORTANT]
-> Take caution when changing these values since the higher the value the longer it will take you to be notified of a problem. When choosing to increase or decrease the value, increment or decrement by 1 and monitor the link closely before making another change to it.
-
 ## Next steps
 
 [Reference for maintenance tasks](reference-for-maintenance-tasks.md)
