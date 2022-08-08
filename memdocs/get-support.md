@@ -48,13 +48,13 @@ To access help and support in the admin center, you have some options:
 
 - Go to **Troubleshooting + support** > **Help and support**:
 
-  :::image type="content" source="./media/get-support/troubleshooting-support-help-support.png" alt-text="Screenshot that shows how to get to help and support from Troubleshooting and support in the Microsoft Endpoint Manager admin center and Microsoft Intune.":::
+  :::image type="content" source="./media/get-support/troubleshooting-support-help-support.png" alt-text="Screenshot that shows how to get to help and support from Troubleshooting and support in the Microsoft Endpoint Manager admin center and Microsoft Intune." lightbox="./media/get-support/troubleshooting-support-help-support.png":::
 
 - Select **Home**, **Dashboard**, **Devices**, or any other option in the admin center. Then, select the question mark (`?`).
 
   In the following example, select **All services** and then select the question mark (`?`). **Help and support** opens:
 
-  :::image type="content" source="./media/get-support/all-services-question-mark.png" alt-text="Screenshot that shows how to get to help and support using home, dashboard, or any other option in the Microsoft Endpoint Manager admin center and Microsoft Intune.":::
+  :::image type="content" source="./media/get-support/all-services-question-mark.png" alt-text="Screenshot that shows how to get to help and support using home, dashboard, or any other option in the Microsoft Endpoint Manager admin center and Microsoft Intune." lightbox="./media/get-support/all-services-question-mark.png":::
 
   When you open **Help and support** this way, it's pinned at the side. You can select any other option and it stays pinned.
 
@@ -136,11 +136,11 @@ For products that use traditional support, when you enter keywords, the *Search 
 
 For example, for Microsoft Intune you might enter **device enrollment failure**. With these criteria, your results include the option to run diagnostics for a user account:
 
-:::image type="content" source="./media/get-support/troubleshooting-insights.png" alt-text="Screenshot that shows the need help pane to run diagnostics, view insights, and read recommended articles in the Endpoint Manager admin center and Microsoft Intune.":::
+:::image type="content" source="./media/get-support/troubleshooting-insights.png" alt-text="Screenshot that shows the need help pane to run diagnostics, view insights, and read recommended articles in the Endpoint Manager admin center and Microsoft Intune." lightbox="./media/get-support/troubleshooting-insights.png":::
 
 Running the diagnostics can identify issues for that account in Azure AD. In this example, the user wasn’t assigned a license for Intune, preventing the device enrollment, and we see a link to relevant content:
 
-:::image type="content" source="./media/get-support/diagnostic-resuslts.png" alt-text="Screenshot that shows the diagnostic results in the Endpoint Manager admin center and Microsoft Intune.":::
+:::image type="content" source="./media/get-support/diagnostic-resuslts.png" alt-text="Screenshot that shows the diagnostic results in the Endpoint Manager admin center and Microsoft Intune." lightbox="./media/get-support/diagnostic-resuslts.png":::
 
 #### Updated support experience
 
@@ -172,8 +172,6 @@ When requesting assistance, provide a description of the problem with as much de
 After you fill in the required information, select **Contact me** to submit the request.
 
 ### Service requests
-
-:::image type="content" source="./media/get-support/service-requests.png" alt-text="Screenshot that shows how to select the service requests pane in the Endpoint Manager admin center and Microsoft Intune.":::
 
 The *Service requests* pane displays your case history. Active cases are at the top of the list, with closed issues also available for review.
 
