@@ -48,7 +48,7 @@ To manage groups of reusable settings, in the Microsoft Endpoint Manager admin c
 
 For example, the following image shows the Reusable settings tab you would use to manage reusable groups for the Microsoft Defender Firewall Rules profile:
 
-:::image type="content" source="./media/reusable-settings-groups/reusable-setting-tab.png" alt-text="Screen shot that shows the Reusable settings tab for Firewall policies in the Microsoft Endpoint Manager admin center.":::
+:::image type="content" source="./media/reusable-settings-groups/reusable-setting-tab.png" alt-text="Screenshot that shows the Reusable settings tab for Firewall policies in the Microsoft Endpoint Manager admin center.":::
 
 After creating reusable groups, use an option in profiles *Configuration settings* to add groups to that profile. Profiles that include one or more reusable groups use each setting from each included group as if they were directly configured in the profile.
 
@@ -102,11 +102,11 @@ Add reusable settings groups to profiles while editing or creating the profile. 
 
 4. For the rule you saved, select **Set reusable settings** to open the *Select reusable settings* pane.
 
-   :::image type="content" source="./media/reusable-settings-groups/add-reusable-group-to-profile.png" alt-text="Screen shot of the Configuration settings workflow for configuring a reusable group.":::
+   :::image type="content" source="./media/reusable-settings-groups/add-reusable-group-to-profile.png" alt-text="Screenshot of the Configuration settings workflow for configuring a reusable group.":::
 
 5. Select one or more of the available groups to add them to this rule, and then save your selections.
 
-   :::image type="content" source="./media/reusable-settings-groups/select-groups.png" alt-text="Screen shot that shows the Select Reusable settings pane.":::
+   :::image type="content" source="./media/reusable-settings-groups/select-groups.png" alt-text="Screenshot that shows the Select Reusable settings pane.":::
 
 6. After adding reusable groups to a profile, save your configuration. When saved, Intune includes the settings from the reusable groups and deploys the profile to devices based on the profile’s assignments.
 
