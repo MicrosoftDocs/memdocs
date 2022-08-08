@@ -60,7 +60,7 @@ To access help and support in the admin center, you have some options:
 
 ### Choose the right support scenario
 
-In **Help and support**, select the option to focus support on your scenario. You’ll only see tiles for the services that you have subscriptions to use.
+In **Help and support**, select any available option to focus support on your scenario. You’ll only see tiles for the services that you have subscriptions to use.
 
 In the following example, you see the different services available in this subscription:
 
