@@ -154,6 +154,16 @@ items:
   - name: Require multi-factor authentication  
     href: multi-factor-authentication.md
     displayName: mfa; multifactor   
+  - name: Create device enrollment restrictions  
+    items:
+    - name: Enrollment restrictions overview
+      href: enrollment-restrictions-set.md
+    - name: Create device platform restrictions 
+      href: create-device-platform-restrictions.md 
+    - name: Create device limit restrictions 
+      href: create-device-limit-restrictions.md 
+    - name: View enrollment reports 
+      href: view-enrollment-reports.md  
   - name: Troubleshoot enrollment
     items:
     - name: Troubleshoot device enrollment
