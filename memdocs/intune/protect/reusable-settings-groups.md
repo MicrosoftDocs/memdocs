@@ -50,7 +50,7 @@ For example, the following image shows the Reusable settings tab you would use t
 
 :::image type="content" source="./media/reusable-settings-groups/reusable-setting-tab.png" alt-text="Screen shot that shows the Reusable settings tab for Firewall policies in the Microsoft Endpoint Manager admin center.":::
 
-After creating reusable groups, use an option in a profiles *Configuration settings* to add groups to that profile. Profiles that include one or more reusable groups use each setting from each included group as if they were directly configured in the profile.
+After creating reusable groups, use an option in profiles *Configuration settings* to add groups to that profile. Profiles that include one or more reusable groups use each setting from each included group as if they were directly configured in the profile.
 
 ## Prerequisites
 
