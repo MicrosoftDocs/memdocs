@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/01/2022
+ms.date: 08/15/2022
 ms.topic: how-to
 ms.service: mem
 ms.subservice: fundamentals
@@ -44,21 +44,27 @@ Use one of the following links to open the Microsoft Endpoint Manager admin cent
 - **Public cloud**: Use [https://endpoint.microsoft.com](https://go.microsoft.com/fwlink/?linkid=2109431)
 - **Private cloud** for government, which is also known as a sovereign cloud like Azure Government: Use [https://endpoint.microsoft.us](https://endpoint.microsoft.us)
 
-From within the admin center, use one of the following methods to access Help and support:
+From within the admin center, use any of the following methods to access Help and support:
+
+To retain the current focus of the Microsoft Endpoint Manager admin center, open *Help and support* as a side-by-side view:
+
+- From any node in the admin center, select the **?** icon in the upper-right corner of the admin center to open the *Help and support* pane. The current focus of the admin center doesn't change.
+
+The following two option both open a dedicated Help and support page that can replace the current view you  have in the Microsoft Endpoint Manager admin center:
 
 - Go to **Troubleshooting + support** > **Help and support** to open the *Help and support* pane.
 
 - From any node in the admin center, select **Help and support** to open the *Help and support* pane.
 
-- From any node in the admin center, select the **?** icon in the upper-right corner to open the *Help* pane. Then, select **Help + support** to open the *Help and support* pane.
-
 ### Choose the right support scenario
 
-The following image is an example of accessing help and support for Microsoft Intune by navigating to the Endpoint security node for Intune, and then selecting Help and support.
+The following image is an example of accessing help and support for Microsoft Intune by using the **?** icon on the Apps Overview page.
 
 > ![Navigate to open help and support](./media/get-support/navigate-to-help-and-support.png)
 
-On the **Help and support** pane, select a tile to focus support on the scenario you are seeking assistance for. The following information can help you choose the correct focus:
+On the **Help and support** pane, select a tile to focus support on the scenario you are seeking assistance for. You’ll only see tiles for the services that you have subscriptions to use. 
+
+The following information can help you choose the correct focus:
 
 - **Intune**:
   - Managing devices with Intune
@@ -112,15 +118,15 @@ Above the *How can we help?* title are three icons that you can select to open d
 >
 > ![Premier banner](./media/get-support/premier-banner.png)
 
-### Find solutions
+### Search for solutions
 
-![Select the find solutions pane](./media/get-support/find-solutions.png)
+![Select the search solutions pane](./media/get-support/find-solutions.png)
 
-On the *Find solutions* pane, specify a few details about an issue in the provided text box. As you enter details, the console might offer suggestions based on what you've entered. Depending on the presence of specific keywords, the console offers one of two support experiences depending on what is available for the product you selected: the traditional support experience and the updated support experience.
+On the *Search for solutions* pane, specify a few details about an issue in the provided text box. As you enter details, the console might offer suggestions based on what you've entered. Depending on the presence of specific keywords, the console offers one of two support experiences depending on what is available for the product you selected: the traditional support experience and the updated support experience.
 
 #### Traditional experience
 
-For products that use traditional support, when you enter keywords, the *Find solutions* pane returns one or more of the following options based on the details you provide:
+For products that use traditional support, when you enter keywords, the *Search for solutions* pane returns one or more of the following options based on the details you provide:
 
 - **Run diagnostics** – From the console you can start automated tests and investigations of your tenant that can reveal known issues. When you run a diagnostic, you might receive mitigation steps you can take to help resolve the issue.
 - **View insights** – Find links to documentation that provide context and background specific to the product area or actions you’ve described.
@@ -150,7 +156,7 @@ When presented, you can run automated tests or diagnostics where applicable, and
 
 ### Contact support
 
-The **Contact Support** option is available after you provide some basic keywords on the *Find solutions* pane. You can use this pane to file an online support ticket for a supported service.
+The **Contact Support** option is available after you provide some basic keywords on the *Search for solutions* pane. You can use this pane to file an online support ticket for a supported service.
 
 > [!IMPORTANT]  
 > For technical support with third-party products that work with Intune (like Saaswedo, Cisco, or Lookout), contact the supplier of that product first. Before you open a request with Intune support, make sure you configured the other product correctly.
