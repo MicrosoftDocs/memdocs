@@ -94,6 +94,22 @@ Down-level operating systems that support MDE Client include:
 - Windows Server 2012 R2
 - Windows Server 2016
 
+#### Prerequisites
+
+##### Prerequisites for Windows Server 2012 R2
+
+If you have fully updated your machines with the latest [monthly rollup](https://support.microsoft.com/topic/october-12-2021-kb5006714-monthly-rollup-4dc4a2cd-677c-477b-8079-dcfef2bda09e) package, there are **no** additional prerequisites.
+
+The installer package will check if the following components have already been installed via an update:
+
+- [Update for customer experience and diagnostic telemetry](https://support.microsoft.com/help/3080149/update-for-customer-experience-and-diagnostic-telemetry)
+- [Update for Universal C Runtime in Windows](https://support.microsoft.com/topic/update-for-universal-c-runtime-in-windows-c0514201-7fe6-95a3-b0a5-287930f3560c)
+
+##### Prerequisites for Windows Server 2016
+
+- The Servicing Stack Update (SSU) from September 14, 2021 or later must be installed.
+- The Latest Cumulative Update (LCU) from September 20, 2018 or later must be installed.  It is recommended to install the latest available SSU and LCU on the server.  - The Microsoft Defender Antivirus feature must be enabled/installed and up to date. You can download and install the latest platform version using Windows Update. Alternatively, download the update package manually from the [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4052623) or from [MMPC](https://go.microsoft.com/fwlink/?linkid=870379&arch=x64).
+
 #### Get an onboarding configuration file for up-level devices
 
 1. Go to the [Microsoft Defender Security Center](https://securitycenter.windows.com/) and sign in.
