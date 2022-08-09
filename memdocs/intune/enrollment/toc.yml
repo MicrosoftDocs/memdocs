@@ -37,8 +37,6 @@ items:
     href: device-limit-intune-azure.md    
 - name: How-to guides
   items:
-  - name: Set enrollment restrictions
-    href: enrollment-restrictions-set.md  
   - name: Add device enrollment manager  
     href: device-enrollment-manager-enroll.md  
   - name: Configure device categories  
@@ -153,16 +151,7 @@ items:
     - name: Automated Device Enrollment
       href: device-enrollment-program-enroll-macos.md
     - name: Direct Enrollment for macOS devices
-      href: device-enrollment-direct-enroll-macos.md      
-  - name: Add device enrollment manager  
-    href: device-enrollment-manager-enroll.md  
-  - name: Configure device categories  
-    href: device-group-mapping.md   
-  - name: Get Apple MDM push certificate  
-    href: apple-mdm-push-certificate-get.md 
-  - name: Require multi-factor authentication  
-    href: multi-factor-authentication.md
-    displayName: mfa; multifactor   
+      href: device-enrollment-direct-enroll-macos.md       
   - name: Create device enrollment restrictions  
     items:
     - name: Enrollment restrictions overview
