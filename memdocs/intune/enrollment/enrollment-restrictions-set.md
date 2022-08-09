@@ -75,7 +75,7 @@ In groups where both Android platforms are allowed, devices that support work pr
 This configuration is in the admin center under **Enrollment device platform restrictions**.  
 
 ### OS version 
-This restriction enforces your maximum and minimum OS version requirements. Devices running earlier or later OS versions are not allowed to enroll. This type of restriction works with the following operating systems: 
+This restriction enforces your maximum and minimum OS version requirements. Devices running earlier or later OS versions aren't allowed to enroll. This type of restriction works with the following operating systems: 
 
    * Android device administrator\*
    * Android Enterprise work profile\*  
@@ -89,7 +89,7 @@ This configuration is in the admin center under **Enrollment device platform res
 ## Combining restrictions      
 Since Intune supports two Android platforms, it's important to understand how version restrictions work when used together with device platform restrictions:   
   * If you allow both platforms for the same group, and then refine it for specific and non-overlapping versions, devices are sent through the Android enrollment flow that's picked for their version.   
-  * If you allow both platforms, but block the same versions, devices running blocked versions cannot enroll. Users on these devices are sent through the Android device administrator enrollment flow before they are blocked and prompted to sign out. 
+  * If you allow both platforms, but block the same versions, devices running blocked versions can't enroll. Users on these devices are sent through the Android device administrator enrollment flow before they're blocked and prompted to sign out. 
 
 ### Device manufacturer  
 This restriction blocks devices made by specific manufacturers, and is applicable to Android devices only.  
@@ -138,7 +138,7 @@ The following enrollment methods are authorized for corporate enrollment:
 > [!NOTE]
 > Since a co-managed device enrolls in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default Intune enrollment restriction will apply to it. 
  
-Intune marks devices going through the following types of enrollments as corporate-owned. But Intune blocks devices enrolling  since they don't offer the Intune administrator per-device control, they are blocked:  
+Intune marks devices going through the following types of enrollments as corporate-owned, and blocks them from enrolling because these methods don't offer the Intune administrator per-device control:  
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join during Windows setup](/azure/active-directory/device-management-azuread-joined-devices-frx)\*.
 - [Automatic MDM enrollment](windows-enroll.md#enable-windows-automatic-enrollment) with [Azure Active Directory join from Windows Settings](/azure/active-directory/user-help/user-help-register-device-on-network)\*.
  
@@ -155,9 +155,9 @@ This configuration is in the admin center under **Enrollment device limit restri
 
 ## Limitations  
 
-* Enrollment restrictions are applied to users. For enrollment scenarios that are not user-driven, such as Windows Autopilot self-deploying mode, bulk enrollment (WCD), or Azure Virtual desktop, Intune enforces the default policy.  
+* Enrollment restrictions are applied to users. For enrollment scenarios that aren't user-driven, such as Windows Autopilot self-deploying mode, bulk enrollment (WCD), or Azure Virtual desktop, Intune enforces the default policy.  
 
-* Device limit restrictions cannot be applied to devices in the following Windows enrollment scenarios, because these scenarios utilize shared device mode:  
+* Device limit restrictions can't be applied to devices in the following Windows enrollment scenarios, because these scenarios utilize shared device mode:  
 
   * Co-managed enrollments  
   * Group Policy (GPO) enrollments  

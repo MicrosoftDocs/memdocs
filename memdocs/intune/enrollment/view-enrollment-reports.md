@@ -54,7 +54,7 @@ This section describes the purpose of each resource and where to find them in th
 Use the enrollment failures report to view enrollment failures for all users or for select users. This report shows each failed enrollment attempt along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method.  
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices** > **Monitor** > **Enrollment failures**.
-2. Select **All users** or **Select user**, depending on the scenario you are troubleshooting.
+2. Select **All users** or **Select user**, depending on the scenario you're troubleshooting.
 3. Select a row in the table for more details about the failure and recommended remediation steps.  
 
     > [!div class="mx-imgBorder"]

@@ -72,18 +72,18 @@ Microsoft Intune provides one default policy for device limit restrictions. You 
 8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 9. Select **Next** to go to the **Review + create** page.
-10. Select **Create** to create the restriction. The new restriction appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](enrollment-restrictions-set.md#change-restriction-priority)(in this article).  
+10. Select **Create** to create the restriction. The new restriction appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](create-device-limit-restrictions.md#change-restriction-priority)(in this article).  
 
 ## Edit enrollment restrictions    
 
-Edits are applied to new enrollments and do not affect devices that are already enrolled.  
+Edits are applied to new enrollments and don't affect devices that are already enrolled.  
 
 1. Go to **Enrollment device limit restrictions** to bring up the list of your policies. 
 2. Select the name of the policy you want to change.
 3. Select **Properties**.  
 4. Select **Edit**. 
 5. Make your changes and select **Review + save**. 
-6. Review your chages and select **Save**.  
+6. Review your changes and select **Save**.  
 
 ## Change restriction priority  
 
