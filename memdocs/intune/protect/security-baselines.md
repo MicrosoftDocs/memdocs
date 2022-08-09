@@ -46,7 +46,7 @@ This feature applies to:
 
 You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10/11. For example, the *MDM Security Baseline* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
 
-Separate baseline types can include the same settings but use different default values for those settings. It's important to understand the defaults in the baselines you choose to use, and to then modify each baseline to fit your organizational needs.
+Separate baseline types can include the same settings but use different default values for those settings. It's important to understand the defaults in the baselines you choose to use, and to then modify each baseline to fit your organizational needs. In almost all scenarios, the default settings in the security baselines will be the most restrictive, thus the administrator will need to validate whether those settings conflict with any other feature being used in the environment. For example, the default settings for Firewall configuration might not merge connection security rules and local policy rules with MDM rules, so if you are using Delivery optimization feature, you would need to validate these configurations before applying.
 
 > [!NOTE]
 > Microsoft doesn't recommend using preview versions of security baselines in a production environment. The settings in a preview baseline might change over the course of the preview.
