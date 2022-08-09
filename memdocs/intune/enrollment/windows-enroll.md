@@ -131,7 +131,7 @@ These articles describe how to enroll devices running Windows:
  * [Enroll Windows 10/11 device](../user-help/enroll-windows-10-device.md) 
  * [Enroll Windows 8.1 or Windows RT 8.1 device](../user-help/enroll-your-w81-or-rt81-windows.md)
 
-For information about how enrollment affects the device and the information on it, see [What information can my organization see when I enroll my device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
+For information about how enrollment affects the device and the information on it, see [What information can my organization see when I enroll my device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md)  
 
 > [!NOTE]
 > End users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
