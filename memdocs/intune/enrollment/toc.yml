@@ -154,7 +154,7 @@ items:
       href: device-enrollment-direct-enroll-macos.md       
   - name: Create device enrollment restrictions  
     items:
-    - name: Enrollment restrictions overview
+    - name: Enrollment restrictions overview  
       href: enrollment-restrictions-set.md
     - name: Create device platform restrictions 
       href: create-device-platform-restrictions.md 
