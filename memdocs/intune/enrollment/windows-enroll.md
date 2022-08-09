@@ -124,17 +124,21 @@ Using a method other than the CNAME configuration isn't supported. For example, 
 
 ## Tell users how to enroll Windows devices
 
-Tell your users how to enroll their Windows devices and what to expect after they're brought into management.
+The Microsoft Intune user-help docs provide conceptual information, tutorials, and how-to guides for employees and students setting up their devices. You can point people directly to them or use these articles as guidance when developing and updating your org's own device management docs.  
+
+These articles describe how to enroll devices running Windows: 
+
+ * [Enroll Windows 10/11 device](../user-help/enroll-windows-10-device.md) 
+ * [Enroll Windows 8.1 or Windows RT 8.1 device](../user-help/enroll-your-w81-or-rt81-windows.md)
+
+For information about how enrollment affects the device and the information on it, see [What information can my organization see when I enroll my device?](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 
 > [!NOTE]
 > End users must access the Company Portal website through Microsoft Edge to view Windows apps that you've assigned for specific versions of Windows. Other browsers, including Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
 
-For end-user enrollment instructions, see [Enroll Windows 10/11 device](../user-help/enroll-windows-10-device.md) and [Enroll Windows 8.1 or Windows RT 8.1 device](../user-help/enroll-your-w81-or-rt81-windows.md). You can also tell users to review [What can my IT admin see on my device](../user-help/what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md).  
 
 >[!IMPORTANT]
 > If you do not have Auto-MDM enrollment enabled, but you have Windows 10/11 devices that have been joined to Azure AD, two records will be visible in the Intune console after enrollment. You can stop this by making sure that users with Azure AD joined devices go to **Accounts** > **Access work or school** and **Connect** using the same account.
-
-For more information about end-user tasks, see [Resources about the end-user experience with Microsoft Intune](../fundamentals/end-user-educate.md).
 
 ## Registration and Enrollment CNAMEs
 
