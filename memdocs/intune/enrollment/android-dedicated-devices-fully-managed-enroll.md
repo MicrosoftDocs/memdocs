@@ -103,7 +103,7 @@ admin.
 5. Select **Android for Work**.  
 6. Next to **Update app sync**, select **Yes**.
 9. Select **Review + save** to review your changes.  
-9. Select **Create** to create the role. 
+9. Select **Save**.  
 
 ### Step 2 - Configure Zero Touch  
 
