@@ -91,7 +91,7 @@ Scan the QR code from the enrollment profile to enroll devices running Android 8
 
 Set up and prepare devices for Google Zero Touch enrollment in the Microsoft Endpoint Manager admin center. To use Google's Zero Touch system, the device must support it and be affiliated with a supplier that is part of the service.  For more information, see [Google's Zero Touch program website](https://www.android.com/enterprise/management/zero-touch/).
 
-### Step 1 - Enable update app sync   
+### Step 1 - Add required permission     
 The *update app sync* permission is required to enable Zero Touch configuration in the admin center. You can create a new custom role and add the permission or you can edit an existing role, as described in the following steps. 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
