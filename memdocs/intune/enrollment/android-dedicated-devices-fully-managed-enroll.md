@@ -89,7 +89,7 @@ Scan the QR code from the enrollment profile to enroll devices running Android 8
 
 ## Enroll by using Google Zero Touch 
 
-You can set up and prepare devices for Google Zero Touch enrollment in the Microsoft Endpoint Manager admin center.  To use this method, Zero Touch must be supported on devices and affiliated with a supplier that is part of the service.   For more information, see [Google's Zero Touch program website](https://www.android.com/enterprise/management/zero-touch/).  
+To use this method, Zero Touch must be supported on devices and affiliated with a supplier that is part of the service.   For more information, see [Google's Zero Touch program website](https://www.android.com/enterprise/management/zero-touch/).  
 
 ### Step 1 - Add required permission     
 The *update app sync* permission is required to enable Zero Touch configuration in the admin center. You can create a new custom role and add the permission or you can edit an existing role, as described in the following steps. 
@@ -109,9 +109,11 @@ admin.
 
 1. In the admin center, go to **Devices** > **Enroll devices**.  
 2. Select **Android enrollment** and then select **Zero-touch enrollment** to open the Zero Touch console.  
-1. Create a new Configuration in the Zero Touch console.
-2. Choose **Microsoft Intune** from the EMM DPC dropdown.
-3. In Google's Zero Touch console, copy/paste the following JSON into the DPC extras field. Replace the *YourEnrollmentToken* string with the enrollment token you created as part of your enrollment profile. Be sure to surround the enrollment token with double quotes.
+3. Select **Next** to begin setup.   
+4. Sign in with your linked Google account.  
+5. Create a new configuration in the Zero Touch console. 
+6. Choose **Microsoft Intune** from the EMM DPC dropdown.
+7. In Google's Zero Touch console, copy/paste the following JSON into the DPC extras field. Replace the *YourEnrollmentToken* string with the enrollment token you created as part of your enrollment profile. Be sure to surround the enrollment token with double quotes.
 
     ```json
     {
@@ -127,7 +129,7 @@ admin.
     }
     ```
 
-4. Choose **Apply**.  
+8. Choose **Apply**.  
 
 ## Enroll by using Knox Mobile Enrollment
 To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 8.0 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).  
