@@ -2,7 +2,7 @@
 title: Enable Microsoft Endpoint Manager tenant attach
 titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
-ms.date: 08/08/2022
+ms.date: 08/10/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core

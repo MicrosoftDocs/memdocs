@@ -2,7 +2,7 @@
 title: Create custom configuration items
 titleSuffix: Configuration Manager
 description: Manage settings for Windows computers and servers with a custom configuration item for Windows desktops and servers
-ms.date: 08/08/2022
+ms.date: 08/10/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
