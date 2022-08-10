@@ -35,7 +35,7 @@ You can create a profile with specific Wi-Fi settings, and then deploy this prof
 This feature applies to:
 
 - Android Enterprise personally owned devices with a work profile (BYOD)
-- Android Enterprise corporate-owned work profile (COPE)
+- Android Enterprise corporate owned work profile (COPE)
 - Android Enterprise corporate owned fully managed (COBO)
 - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -76,10 +76,10 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
     - **Port number**: Enter the port number of the proxy server. For example, enter `8080`.
     - **Exclusion list**:  Enter a hostname or IP address that won't use the proxy. You can use the `*` wildcard character and enter multiple host names and IP addresses. If you enter multiple host names or IP addresses, they must be on a separate line. For example, you can enter:
 
-      ```csv
-      test.contoso.com
+      ```
       *.contoso.com
-      mysite.contoso.com
+      test.contoso1.com
+      mysite.contoso2.com
       10.0.0.5
       10.0.0.6
       ```
