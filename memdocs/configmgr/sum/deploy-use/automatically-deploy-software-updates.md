@@ -5,7 +5,7 @@ description: Automatically deploy software updates by using automatic deployment
 author: baladelli
 ms.author: baladell
 manager: apoorvseth
-ms.date: 08/10/2022
+ms.date: 08/12/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum

@@ -2,7 +2,7 @@
 title: Diagnostic and usage data for 2207
 titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2207.
-ms.date: 08/10/2022
+ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
@@ -329,7 +329,7 @@ For Configuration Manager version 2207, this level includes the following data:
 
 - Count of clients in VPN boundaries
 
-- ***[New]*** Power plans with their peak and and non-peak usage statistics
+- ***[New]*** Power plans with their peak and non-peak usage statistics
 
 - ***[New]*** Power plan peak usage statistics
  
