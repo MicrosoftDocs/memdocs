@@ -66,14 +66,14 @@ Microsoft Intune provides one default policy for device limit restrictions that 
 3. On the **Basics** page, give the restriction a **Name** and optional **Description**.
 4. Choose **Next** to go to the **Device limit** page.
 5. For **Device limit**, select the maximum number of devices that a user can enroll.
-    ![Screen cap for choosing device limit](./media/enrollment-restrictions-set/choose-device-limit.png)
+    ![Screenshot that shows how to choose a device limit.](./media/enrollment-restrictions-set/choose-device-limit.png)
 6. Choose **Next** to go to the **Scope tags** page.
 7. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). 
 8. Choose **Next** to go to the **Assignments** page.
 9. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
-    ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
+    ![Screenshot that shows selecting groups.](./media/enrollment-restrictions-set/select-groups-device-limit.png)
 10. Select **Next** to go to the **Review + create** page.
-11. Select **Create** to create the restriction. The new restriction appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](create-device-limit-restrictions.md#change-restriction-priority)(in this article).  
+11. Select **Create** to create the restriction. The new restriction appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](create-device-limit-restrictions.md#change-restriction-priority) (in this article).  
 
 ## Edit enrollment restrictions    
 
