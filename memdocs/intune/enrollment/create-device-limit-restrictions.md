@@ -97,7 +97,7 @@ When a group is assigned multiple restrictions, the priority level determines wh
 
 When you create a restriction, it's added to the list just above the default. You can change the priority of non-default restrictions.  
 
-1. Go to**Enrollment device limit restrictions**.
+1. Go to **Enrollment device limit restrictions**.
 2. Select **Device limit restrictions** to bring up the list of your policies.               
 3. Hover over the policy in the **Priority** column,and then select and drag the priority to the desired position in the list.   
 
