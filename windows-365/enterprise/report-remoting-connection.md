@@ -51,13 +51,13 @@ To get to the **Remoting connection** report, sign in to [Microsoft Endpoint Man
 
 The **Remoting connection** tab lists the following information:
 
-**Round Trip Time (ms)** is the time taken for traffic from users' devices to reach Cloud PC and return. This metric is an indicator of the quality of the connection and can be used to determine the user’s experience. Values displayed are for the median time of the most recent reading of the metric’s 95th percentile value (p95 (Last)). A rating is provided for these values based on the criteria below.
+**Round Trip Time (ms)** is the time taken for traffic from users' devices to reach Cloud PC and return. This metric is an indicator of the quality of the connection and can be used to determine the user’s experience. Values displayed are the median time and 95th percentile value of the most recent reading of the metric (p95 Last). A rating is provided for these values based on the criteria below.
 
 - Good = 0-100 milliseconds
 - Average = 100-200 milliseconds
 - Poor = more than 200 milliseconds
 
-**Sign in time (sec)** is the total time taken for users to connect to the Cloud PC. Values displayed are for the median time of the most recent reading of the metric’s 95th percentile value (p95 (Last)). A rating is provided for these values based on the criteria below.
+**Sign in time (sec)** is the total time taken for users to connect to the Cloud PC. Values displayed are the median time and 95th percentile value of the most recent reading of the metric (p95 Last). A rating is provided for these values based on the criteria below.
 
 - Good = 0-30 seconds
 - Average = 30-60 seconds
