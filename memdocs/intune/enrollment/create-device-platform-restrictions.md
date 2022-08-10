@@ -148,7 +148,7 @@ Edits are applied to new enrollments and do not affect devices that are already 
 1. Go to **Enrollment device platform restrictions**.  
 2. In the **Device type restrictions** table, select the name of the policy you want to change.
 3. Select **Properties**.  
-4. Select **Edit**   
+4. Select **Edit**.   
 5. Make your changes and select **Review + save**. 
 6. Review your changes and select **Save**.  
 
