@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/23/2022
+ms.date: 08/15/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -46,7 +46,7 @@ This article describes these settings. [Use Wi-Fi on your devices](wi-fi-setting
 Create an [Android Enterprise Wi-Fi device configuration profile](wi-fi-settings-configure.md):
 
 - Fully managed, dedicated, and corporate-owned work profile
-- Personally-owned work profile
+- Personally owned work profile
 
 ## Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
@@ -67,6 +67,26 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
   - **Open (no authentication)**: Only use this option if the network is unsecured.
   - **WEP-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
   - **WPA-Pre-shared key**: Enter the password in **Pre-shared key**. When your organization's network is set up or configured, a password or network key is also configured. Enter this password or network key for the PSK value.
+
+- **Proxy settings**: Select a proxy configuration. Your options:
+
+  - **None**: No proxy settings are configured.
+  - **Manual**: Manually configure the proxy settings:
+    - **Proxy server address**: Enter the IP address of the proxy server. For example, enter `10.0.0.22`.
+    - **Port number**: Enter the port number of the proxy server. For example, enter `8080`.
+    - **Exclusion list**:  Enter a hostname or IP address that won't use the proxy. You can use the `*` wildcard character and enter multiple host names and IP addresses. If you enter multiple host names or IP addresses, they must be on a separate line. For example, you can enter:
+
+      ```csv
+      test.contoso.com
+      *.contoso.com
+      mysite.contoso.com
+      10.0.0.5
+      10.0.0.6
+      ```
+
+  - **Automatic**: Use a file to configure the proxy server. Enter the **Proxy server URL** that contains the configuration file. For example, enter `http://proxy.contoso.com`, `10.0.0.11`, or `http://proxy.contoso.com/proxy.pac`.
+
+    For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
 ### Enterprise
 
