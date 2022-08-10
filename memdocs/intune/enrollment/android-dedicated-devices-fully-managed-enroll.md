@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 04/21/2022
+ms.date: 08/08/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -87,10 +87,28 @@ Scan the QR code from the enrollment profile to enroll devices running Android 8
 2. On devices running Android 8.0, you'll be prompted to install a QR reader. Devices running Android 9 and later are pre-installed with a QR reader.
 3. Use the QR reader to scan the enrollment profile QR code and then follow the on-screen prompts to enroll.  
 
-## Enroll by using Google Zero Touch
+## Enroll by using Google Zero Touch 
 
-To use Google's Zero Touch system, the device must support it and be affiliated with a supplier that is part of the service.  For more information, see [Google's Zero Touch program website](https://www.android.com/enterprise/management/zero-touch/).
+Set up and prepare devices for Google Zero Touch enrollment in the Microsoft Endpoint Manager admin center. To use Google's Zero Touch system, the device must support it and be affiliated with a supplier that is part of the service.  For more information, see [Google's Zero Touch program website](https://www.android.com/enterprise/management/zero-touch/).
 
+### Step 1 - Enable update app sync   
+The *update app sync* permission is required to enable Zero Touch configuration in the admin center. You can create a new custom role and add the permission or you can edit an existing role, as described in the following steps. 
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+admin.
+2. Select **Tenant administration** > **Roles**. 
+3. Select your role from the list.  
+4. Select **Properties**.
+5. Go to **Permissions** and then select **Edit**.  
+5. Select **Android for Work**.  
+6. Next to **Update app sync**, select **Yes**.
+9. Select **Review + save** to review your changes.  
+9. Select **Create** to create the role. 
+
+### Step 2 - Conigure Zero Touch  
+
+1. In the admin center, go to **Devices** > **Enroll devices**.  
+2. Select **Android enrollment** and then select **Zero-touch enrollment** to open the Zero Touch console.  
 1. Create a new Configuration in the Zero Touch console.
 2. Choose **Microsoft Intune** from the EMM DPC dropdown.
 3. In Google's Zero Touch console, copy/paste the following JSON into the DPC extras field. Replace the *YourEnrollmentToken* string with the enrollment token you created as part of your enrollment profile. Be sure to surround the enrollment token with double quotes.
@@ -109,7 +127,7 @@ To use Google's Zero Touch system, the device must support it and be affiliated 
     }
     ```
 
-4. Choose **Apply**.
+4. Choose **Apply**.  
 
 ## Enroll by using Knox Mobile Enrollment
 To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 8.0 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).  
