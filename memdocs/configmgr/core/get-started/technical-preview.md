@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/10/2022
+ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
