@@ -43,12 +43,13 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
-Use the following reports to monitor and troubleshoot issues with enrollment restrictions and enrollment status page assignments:  
+Your can use the following reports in the Microsoft Endpoint Manager admin center to monitor and troubleshoot issues with enrollment restrictions and enrollment status page assignments:  
+
 - Enrollment failures report  
 - Troubleshooting + support page  
 - Device enrollment page  
 
-This section describes the purpose of each resource and where to find them in the admin center.  
+This article describes each report and how to access them in the admin center.  
 
 ## Enrollment failures report  
 Use the enrollment failures report to view enrollment failures for all users or for select users. This report shows each failed enrollment attempt along with the date it occurred, reason for failure, OS, OS version, username, and enrollment method.  

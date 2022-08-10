@@ -43,7 +43,7 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
-Use device limit enrollment restrictions to restrict the number of devices allowed to enroll in Microsoft Intune. Device limit restrictions work on devices that meet the following criteria:  
+Create a device limit enrollment restriction policy to limit the number of devices a user can enroll in Microsoft Intune. Device limit restrictions work on devices that meet the following criteria:  
 
   * Microsoft Intune-managed  
   * Established contact with Intune within last 90 days  
@@ -54,25 +54,26 @@ Use device limit enrollment restrictions to restrict the number of devices allow
 
 You can create a new device limit-enrollment restriction policy in the Microsoft Endpoint Manager admin center or use the default policy that's already available. You can have up to 25 device limit restriction policies. 
 
-This article describes how to create and configure a device limit-enrollment restriction policy in the admin center. 
+This article describes how to create and configure a device limit-enrollment restriction policy in the admin center.  
 
 ## Default policy 
-Microsoft Intune provides one default policy for device limit restrictions. You can edit and customize it as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
+Microsoft Intune provides one default policy for device limit restrictions that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
 
 ## Create a device limit restriction  
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions** > **Create restriction** > **Device limit restriction**.
-2. On the **Basics** page, give the restriction a **Name** and optional **Description**.
-3. Choose **Next** to go to the **Device limit** page.
-4. For **Device limit**, select the maximum number of devices that a user can enroll.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Devices** > **Enrollment restrictions** > **Create restriction** > **Device limit restriction**.  
+3. On the **Basics** page, give the restriction a **Name** and optional **Description**.
+4. Choose **Next** to go to the **Device limit** page.
+5. For **Device limit**, select the maximum number of devices that a user can enroll.
     ![Screen cap for choosing device limit](./media/enrollment-restrictions-set/choose-device-limit.png)
-5. Choose **Next** to go to the **Scope tags** page.
-6. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). 
-7. Choose **Next** to go to the **Assignments** page.
-8. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
+6. Choose **Next** to go to the **Scope tags** page.
+7. On the **Scope tags** page, optionally add the scope tags you want to apply to this restriction. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md). 
+8. Choose **Next** to go to the **Assignments** page.
+9. Choose **Select groups to include** and then use the search box to find groups that you want to include in this restriction. The restriction applies only to groups to which it's assigned. If you don't assign a restriction to at least one group, it won't have any effect. Then choose **Select**. 
     ![Screen cap for selecting groups](./media/enrollment-restrictions-set/select-groups-device-limit.png)
-9. Select **Next** to go to the **Review + create** page.
-10. Select **Create** to create the restriction. The new restriction appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](create-device-limit-restrictions.md#change-restriction-priority)(in this article).  
+10. Select **Next** to go to the **Review + create** page.
+11. Select **Create** to create the restriction. The new restriction appears in your list of restrictions and is given a higher priority than the default policy. For information about changing the priority level, see [Change restriction priority](create-device-limit-restrictions.md#change-restriction-priority)(in this article).  
 
 ## Edit enrollment restrictions    
 

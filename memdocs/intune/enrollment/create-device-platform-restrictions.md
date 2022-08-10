@@ -43,17 +43,24 @@ ms.collection:
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]  
 
-Use the device platform enrollment restrictions in Microsoft Intune to block personally owned devices from enrolling, and to block devices by device platform and OS version. An enrollment restriction policy is required to apply enrollment restrictions. You can create a new Intune device platform restriction policy in the Microsoft Endpoint Manager admin center or use the default policy that's already available. 
+Create a device platform enrollment restriction policy to restrict devices from enrolling in Intune. Available restrictions include:  
 
-You can have up to 25 device platform restriction policies. 
+* Device platform
+* OS version
+* Manufacturer
+* Ownership (personally-owned)
 
-This article describes the device platform restrictions supported in Microsoft Intune and how to configure them from the Microsoft Endpoint Manager admin center.  
+ You can create a new device platform restriction policy in the Microsoft Endpoint Manager admin center or use the default policy that's already available. You can have up to 25 device platform restriction policies. 
+
+This article describes the device platform restrictions supported in Microsoft Intune and how to configure them in the admin center.  
 
 ## Default policy 
-Microsoft Intune provides one default policy for device platform restrictions. You can edit and customize it as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
+Microsoft Intune provides one default policy for device platform restrictions that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.  
 
-## Available restrictions  
-This section describes the restrictions you can configure in a device platform-enrollment restriction policy. 
+## Best practice - Android platform restrictions          
+Since Intune supports two Android platforms, it's important to understand how OS version restrictions work when used together with device platform restrictions:   
+  * If you allow both platforms for the same group, and then refine it for specific and non-overlapping versions, devices are sent through the Android enrollment flow that's picked for their version.   
+  * If you allow both platforms, but block the same versions, devices running blocked versions can't enroll. Users on these devices are sent through the Android device administrator enrollment flow before they're blocked and prompted to sign out. 
 
 ## Create a device platform restriction   
 
