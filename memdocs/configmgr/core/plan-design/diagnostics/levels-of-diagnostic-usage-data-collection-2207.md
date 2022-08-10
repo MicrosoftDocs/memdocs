@@ -329,7 +329,7 @@ For Configuration Manager version 2207, this level includes the following data:
 
 - Count of clients in VPN boundaries
 
-- ***[New]*** Power plans with their peak and and non-peak usage statistics
+- ***[New]*** Power plans with their peak and non-peak usage statistics
 
 - ***[New]*** Power plan peak usage statistics
  
