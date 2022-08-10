@@ -68,7 +68,7 @@ For corporate-owned work profile (COPE) devices, the NFC enrollment method is on
 
 1. Turn on your wiped device.
 2. On the **Welcome** screen, select your language.
-3. Connect to your **Wifi**, and then choose **NEXT**.
+3. Connect to your **Wi-fi**, and then choose **NEXT**.
 4. Accept the Google Terms and conditions, and then choose **NEXT**.
 5. On the Google sign-in screen, enter **afw#setup** instead of a Gmail account, and then choose **NEXT**.
 6. Choose **INSTALL** for the **Android Device Policy** app.
@@ -89,7 +89,7 @@ Scan the QR code from the enrollment profile to enroll devices running Android 8
 
 ## Enroll by using Google Zero Touch 
 
-Set up and prepare devices for Google Zero Touch enrollment in the Microsoft Endpoint Manager admin center. To use Google's Zero Touch system, the device must support it and be affiliated with a supplier that is part of the service.  For more information, see [Google's Zero Touch program website](https://www.android.com/enterprise/management/zero-touch/).
+You can set up and prepare devices for Google Zero Touch enrollment in the Microsoft Endpoint Manager admin center.  To use this method, Zero Touch must be supported on devices and affiliated with a supplier that is part of the service.   For more information, see [Google's Zero Touch program website](https://www.android.com/enterprise/management/zero-touch/).  
 
 ### Step 1 - Add required permission     
 The *update app sync* permission is required to enable Zero Touch configuration in the admin center. You can create a new custom role and add the permission or you can edit an existing role, as described in the following steps. 
@@ -105,7 +105,7 @@ admin.
 9. Select **Review + save** to review your changes.  
 9. Select **Create** to create the role. 
 
-### Step 2 - Conigure Zero Touch  
+### Step 2 - Configure Zero Touch  
 
 1. In the admin center, go to **Devices** > **Enroll devices**.  
 2. Select **Android enrollment** and then select **Zero-touch enrollment** to open the Zero Touch console.  
