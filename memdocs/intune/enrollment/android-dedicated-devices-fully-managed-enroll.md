@@ -105,12 +105,19 @@ admin.
 9. Select **Review + save** to review your changes.  
 9. Select **Save**.  
 
-### Step 2 - Configure Zero Touch  
-
+### Step 2 - Enable enrollment for corporate-owned devices  
 1. In the admin center, go to **Devices** > **Enroll devices**.  
-2. Select **Android enrollment** and then select **Zero-touch enrollment** to open the Zero Touch console.  
-3. Select **Next** to begin setup.   
-4. Sign in with your linked Google account.  
+2. Select **Android enrollment**. 
+3. Under **Enrollment profiles**, choose **Corporate-owned, fully managed user devices**.  
+4. Verify that the setting for **Allow users to enroll corporate-owned user devices**, is set to **Yes**.  
+
+
+### Step 3 - Configure Zero Touch  
+
+1. Return to the **Android enrollment** page.  
+2. Under **Bulk enrollment methods**, choose **Zero-touch enrollment**.  
+3. The Zero Touch console opens.  Select **Next** to begin setup.   
+4. Sign in with a Managed Google account that's not linked to Microsoft Intune.  
 5. Create a new configuration in the Zero Touch console. 
 6. Choose **Microsoft Intune** from the EMM DPC dropdown.
 7. In Google's Zero Touch console, copy/paste the following JSON into the DPC extras field. Replace the *YourEnrollmentToken* string with the enrollment token you created as part of your enrollment profile. Be sure to surround the enrollment token with double quotes.
