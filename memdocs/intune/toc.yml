@@ -22,7 +22,6 @@ items:
         href: ./fundamentals/public-preview.md
   - name: Evaluate
     items:
-
     - name: Walkthrough Intune in Microsoft Endpoint Manager
       href: ./fundamentals/tutorial-walkthrough-endpoint-manager.md 
 
