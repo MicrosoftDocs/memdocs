@@ -71,7 +71,7 @@ items:
         href: ../tenant-attach/troubleshoot-applications.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Common error codes for application installation
         href: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-      - name: ../tenant-attach/Timeline
+      - name: Timeline
         href: ../tenant-attach/troubleshoot-timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Resource explorer
         href: ../tenant-attach/troubleshoot-resource-explorer.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
