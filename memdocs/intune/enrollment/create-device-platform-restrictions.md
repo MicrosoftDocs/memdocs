@@ -151,34 +151,3 @@ Edits are applied to new enrollments and do not affect devices that are already 
 4. Select **Edit**.   
 5. Make your changes and select **Review + save**. 
 6. Review your changes and select **Save**.  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
