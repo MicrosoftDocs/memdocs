@@ -123,7 +123,7 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 - **1** - Intune administrator configures *Server configurations* and *Sites*, Server configurations are associated with Sites.
 - **2** - Intune administrator installs Microsoft Tunnel Gateway and the authentication plugin authenticates Microsoft Tunnel Gateway with Azure AD. Microsoft Tunnel Gateway server is assigned to a site.
 - **3** - Management Agent communicates to Intune to retrieve your server configuration policies, and to send telemetry logs to Intune.  
-- **4** - Intune administrator creates and deploys VPN profiles and the Tunnel app to devices.  
+- **4** - Intune administrator creates and deploys VPN profiles and the Defender app to devices.  
 - **5** - Device authenticates to Azure AD. Conditional Access policies are evaluated.  
 - **6** - With split tunnel:  
   - **6.a** - Some traffic goes directly to the public internet.  

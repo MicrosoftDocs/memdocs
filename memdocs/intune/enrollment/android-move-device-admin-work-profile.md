@@ -45,7 +45,7 @@ When users see that they're out of compliance for this reason, they can tap **Re
 - [Set Android Enterprise personally-owned work profile enrollment](android-work-profile-enroll.md) for the group of users who are moving to personally-owned work profile.
 - Consider increasing your user device limits. When unenrolling devices from device administrator management, device records might not be immediately removed. To provide cushion during this period, you might need to increase device limit capacity. This increase is so that the users can enroll into personally-owned work profile management.
   - [Configure Azure Active Directory device settings](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings) for Maximum number of devices per user.
-  - Adjust the [Intune device limit restrictions](enrollment-restrictions-set.md#create-a-device-limit-restriction) by setting the Device limit. 
+  - Adjust the [Intune device limit restrictions](create-device-limit-restrictions.md) by setting the device limit. 
 
 ## Create device compliance policy
 
