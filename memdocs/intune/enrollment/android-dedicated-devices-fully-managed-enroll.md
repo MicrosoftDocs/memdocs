@@ -89,7 +89,7 @@ Scan the QR code from the enrollment profile to enroll devices running Android 8
 
 ## Enroll by using Google Zero Touch 
 
-To use this method, Zero Touch must be supported on devices and affiliated with a supplier that is part of the service. For more information, see [Android for Enterprise]](https://www.android.com/enterprise/management/zero-touch/)(opens Android website).  
+To use this method, Zero Touch must be supported on devices and affiliated with a supplier that is part of the service. For more information, see [Android for Enterprise](https://www.android.com/enterprise/management/zero-touch/)(opens Android website).  
 
 ### Step 1 - Add required permission     
 The *update app sync* permission is required to enable Zero Touch configuration in the admin center. You can create a new custom role and add the permission or you can edit an existing role, as described in the following steps. 
