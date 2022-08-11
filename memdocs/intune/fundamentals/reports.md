@@ -104,7 +104,7 @@ This report allows admins to quickly see:
 
 - The devices that are noncompliant.
 - For each device, the settings in the policies that are noncompliant.
-- For each device, any settings in an error state. The **Setting error code** column shows the error code returned to Intune for that setting.
+- For each device, any settings in an error state.
 
 The benefit is you can see this information in the same report. This information is still available separately in **Devices** > **Monitor** > **Noncompliant devices** and **Noncompliant policies**.
 
