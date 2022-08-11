@@ -82,8 +82,7 @@ The following permissions are available when creating custom roles.
 | Cloud attached devices\Run CMPivot query | Displays CMPivot for Configuration Manager cloud attached devices |
 | Cloud attached devices\View client details | Displays the client details for Configuration Manager cloud attached devices |
 | Cloud attached devices\View applications | Displays applications for Configuration Manager cloud attached devices |
-| Cloud attached devices\Take application actions
-| Displays application actions for Configuration Manager cloud attached devices |
+| Cloud attached devices\Take application actions | Displays application actions for Configuration Manager cloud attached devices |
 | Corporate device identifiers/Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. | 
 | Corporate device identifiers/Delete | Delete IMEI or serial numbers used as corporate device identifiers. | 
 | Corporate device identifiers/Read | View the IMEI or serial numbers used as corporate device identifiers. | 
