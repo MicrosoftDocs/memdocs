@@ -7,7 +7,6 @@ items:
     items:
     - name: Microsoft Intune overview
       href: ./fundamentals/what-is-intune.md 
-      displayName: ems; emm; azure ad; active directory; ad
     - name: What's new
       items:
       - name: What's new
@@ -32,7 +31,7 @@ items:
     items:
     - name: Planning guide
       href: ./fundamentals/intune-planning-guide.md
-    - name: Evaluate current GPOs with settings catalog
+    - name: Evaluate current GPOs with settings catalog (is this a sub topic?)
 
     - name: Supported configurations
       href: ./fundamentals/supported-devices-browsers.md
