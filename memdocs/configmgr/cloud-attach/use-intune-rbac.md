@@ -19,6 +19,15 @@ ms.collection: highpri
 
 Starting in Configuration Manager version 2207, you can use Intune role-based access control (RBAC) when interacting with [tenant attached devices](../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Endpoint Manager admin center. When using Intune as the RBAC authority, a user with the [Help Desk Operator role](../../../../../../intune/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager.
 
+<!--To enable Intune role-based access control as the authority, the following high-level steps -->
+
+- From the Configuration Manager console, disable enforcing Configuration Manager RBAC for cloud attached clients
+- From Intune, enable managing user permissions for cloud attached devices
+- From Intune, verify RBAC permissions for cloud attached devices
+
+
+## Configure Intune as the RBAC authority from Configuration Manager
+
 To use Intune role-based access control for tenant attach, use the instructions below:
 
 1. From the Configuration Manager console, go to, **Administration** > **Cloud Services** > **Cloud Attach**.
@@ -26,7 +35,8 @@ To use Intune role-based access control for tenant attach, use the instructions 
 1. On the **Configure upload** tab (or page in the wizard), enable the following option under the **Role-based Access Control** heading:
 
    **Use Intune role-based access control (RBAC) when you view Configuration Manager devices and take action in Microsoft Endpoint Manager admin center**
-1. Choose **OK** to save the change to the **CoMgmtSettingsProd** properties, or continue on with the wizard to finish enabling tenant attach.
+
+1. Choose **OK** to save the change to the **CoMgmtSettingsProd** properties, or continue on to complete the cloud attach wizard.
 
 Open the **Admin Center Preview** to verify the the Help Desk Operator can see **Client details**:
 
