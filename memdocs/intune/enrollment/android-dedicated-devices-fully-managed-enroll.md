@@ -91,7 +91,7 @@ Scan the QR code from the enrollment profile to enroll devices running Android 8
 
 To use this method, Zero Touch must be supported on devices and affiliated with a supplier that is part of the service. For more information, see [Android for Enterprise](https://www.android.com/enterprise/management/zero-touch/)(opens Android website). You can set up Zero Touch in the Microsoft Endpoint Manager admin center or in the Google Zero Touch console.  
 
-### Set up in admin center 
+### Option 1: Set up in admin center 
 These steps describe how to configure Zero Touch enrollment from inside the Microsoft Endpoint Manager admin center.  
 
 #### Step 1 - Add required permission     
@@ -140,7 +140,7 @@ admin.
 
 8. Choose **Apply**.  
 
-### Set up in Zero Touch console  
+### Option 2: Set up in Zero Touch console  
 
 These steps describe how to configure Zero Touch enrollment using the Zero Touch console. 
 1. Sign in to Zero Touch with a Managed Google account that's linked to Microsoft Intune. 
