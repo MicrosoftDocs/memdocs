@@ -36,7 +36,7 @@ For more information, see [Configure Azure services for use with Configuration M
 
 An administrator can now approve or deny the request for deploying an application on a device from anywhere they have internet access by selecting a link in the email notification. This feature requires admins to manually add the CMG URL in the Azure Active Directory app as single page application redirect URI. 
 
-For more information, see [Create an app registration in Azure AD for your app service app](/azure/app-service/configure-authentication-provider-aad#-create-an-app-registration-in-azure-ad-for-your-app-service-app).
+For more information, see [Create an app registration in Azure AD for your app service app](../../../apps/deploy-use/app-approval.md#to-take-action-from-internet).
 
 <!--## Site infrastructure-->
 
