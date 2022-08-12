@@ -64,7 +64,7 @@ Use the following checklist to make sure you have the necessary information and 
 
 - How many VM instances you need for scale and redundancy.
 
-- An Azure **global administrator** role to register apps in Azure AD.
+- An Azure **application developer**, **cloud application administrator**, **application administrator**, or **global administrator** role to register apps in Azure AD.
 
 - An Azure **subscription owner** role for when you create the CMG in Azure.
 
