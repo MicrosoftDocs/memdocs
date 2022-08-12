@@ -96,7 +96,7 @@ Applies to:
 ### View contents of macOS shell scripts and custom attributes<!-- 14757037 -->
 You'll be able to view the contents of macOS shell scripts and custom attributes after you upload these to Intune. When this capability is available, you'll be able to view Shell scripts and custom attributes in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **macOS**. For related information, see [Use shell scripts on macOS devices in Intune](../apps/macos-shell-scripts.md).
 
-### Intune moving to support iOS/iPadOS 16 and higher later this year<!-- 14778947 -->
+### Intune moving to support iOS/iPadOS 14 and higher later this year<!-- 14778947 -->
 Later this year, Apple is expected to release iOS/iPadOS 16. Due to this expected release, Microsoft Intune and the Intune Company Portal will require iOS/iPadOS 14 and higher shortly after the release of iOS/iPad 16. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
 
 ### Intune moving to support macOS 11.6 and higher later this year<!-- 14766663 -->
