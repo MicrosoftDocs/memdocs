@@ -52,13 +52,12 @@ ms.collection:
 
     - **Group type**: Select **Security**.
     - **Group name** and **Group description**: Enter a name and description for your group.
-    - **Azure AD roles can be assigned to the group**: **Yes** allows Azure AD roles to be assigned to the group you're creating. Once set, the group is permanently and always allowed to be assigned Azure AD roles. When set to **No**, Azure AD roles aren't assigned to this group.
+    - **Azure AD roles can be assigned to the group**: Select **No**, Azure AD roles aren't assigned to this group.
 
       For more information, see [Use cloud groups to manage role assignments in Azure AD](/azure/active-directory/roles/groups-concept).
 
-    - **Membership type**: Choose how devices become members of this group. Select **Assigned**, **Dynamic user**, or **Dynamic Device**. For more information, see [Add groups to organize users and devices](../intune/fundamentals/groups-add.md).
+    - **Membership type**: Choose how devices become members of this group. Select **Dynamic Device**. For more information, see [Add groups to organize users and devices](../intune/fundamentals/groups-add.md).
     - **Owners**: Select users that own the group. Owners can also delete this group.
-    - **Members**: Select Autopilot devices that belong to this group. Autopilot devices that aren't enrolled show the serial number for the device name.
     - **Dynamic device members**: Select **Add dynamic query** > **Add expression**.
 
       Create rules using Autopilot device attributes. Autopilot devices that meet these rules are automatically added to the group. Creating an expression using non-autopilot attributes doesn't guarantee that devices included in the group are registered to Autopilot.
