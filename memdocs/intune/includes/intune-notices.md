@@ -4,12 +4,41 @@ description: include file
 author: ErikjeMS  
 ms.service: microsoft-intune
 ms.topic: include
-ms.date: 06/16/2022
+ms.date: 08/09/2022
 ms.author: erikje
 ms.custom: include file
 ---
 
 These notices provide important information that can help you prepare for future Intune changes and features.  
+
+### Plan for Change: Ending support for Windows Information Protection
+
+Microsoft Windows [announced](https://go.microsoft.com/fwlink/?linkid=2202124) they are ending support for Windows Information Protection (WIP), Microsoft Endpoint Manager will be discontinuing future investments in managing and deploying WIP. In addition to limiting future investments, we will remove support for WIP *without enrollment* scenario by the end of calendar year 2022.
+
+### How does this affect you or your users?
+
+If you have enabled WIP policies, you should turn off or disable these policies.
+
+### How can you prepare?
+
+We recommend that you take action to disable WIP to ensure users in your organization do not lose access to documents that have been protected by WIP policy. Read the blog [Support tip: End of support guidance for Windows Information Protection](https://aka.ms/Intune-WIP-support) for more details and options for removing WIP from your devices.
+
+### Plan for Change: Ending support for Windows 8.1 <!-- 14740233 -->
+
+Microsoft Intune will be ending support for devices running Windows 8.1 on **October 21, 2022**. Additionally, the sideloading key scenario for line-of-business apps will stop being supported since it is only applicable to Windows 8.1 devices. 
+
+Microsoft strongly recommends that you move to a supported version of Windows 10 or Windows 11, to avoid a scenario where you need service or support that is no longer available.
+
+### How does this affect you or your users?
+
+If you are managing Windows 8.1 devices those devices should be upgraded to a supported version of Windows 10 or Windows 11. There is no impact to existing devices and polices, however, you will not be able to enroll new devices if they are running Windows 8.1.
+
+### How can you prepare?
+
+Upgrade your Windows 8.1 devices, if applicable. To determine which users’ devices are running Windows 8.1 navigate to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Windows** > **Windows devices**, and filter by OS.
+
+**Additional information**
+- [Manage operating system versions with Intune](../fundamentals/manage-os-versions.md)
 
 ### Update your certificate connector for Microsoft Intune
 

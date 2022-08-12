@@ -81,7 +81,7 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
 - US Central
 - US East
 - US East 2
-- US West 2
+- US West 2 (Restricted, contact support)
 - US West 3
 - US South central
 - Asia Southeast
