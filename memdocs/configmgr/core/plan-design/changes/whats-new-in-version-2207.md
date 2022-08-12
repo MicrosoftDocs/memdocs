@@ -25,31 +25,35 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Cloud-attached management
 
-### Administration Service Management option
+### Enhanced security for Configuration Manager administration service
 <!--12952905-->
-When configuring Azure Services, a new option called **Administration Service Management** is now added for enhanced security. Selecting this option allows administrators to segment their admin privileges between cloud management gateway (CMG) and administration service. By enabling this option, access is restricted to only administration service endpoints. Configuration Management clients will authenticate to the site using Azure Active Directory.
+We're introducing a new cloud application with limited access to the administration service. This feature allows cloud management gateway (CMG) to segment the admin privileges between a management point, and the administration service. This enables CMG to restrict access to the administration service. This feature gives admins granular access controls through which users can have access to the administration service and to enforce MFA if necessary.
  
 For more information, see [Configure Azure services for use with Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
-### Improvements to cloud management gateway (CMG) workflow
+### Simplified application deployment approval
 <!--13351390#-->
 
-You can now approve the application workflow through email. For the application approvals through email, manually add the CMG URL in the Azure Active Directory app as single page application redirect URI. 
+An administrator can now approve or deny the request for deploying an application on a device from anywhere they have internet access by selecting a link in the email notification. This feature requires admins to manually add the CMG URL in the Azure Active Directory app as single page application redirect URI. 
 
-For more information, see [Approve applications in Configuration Manager](../../../apps/deploy-use/app-approval.md#to-take-action-from-internet).
+For more information, see [Create an app registration in Azure AD for your app service app](../../../apps/deploy-use/app-approval.md#to-take-action-from-internet).
 
 <!--## Site infrastructure-->
 
-### Default site boundary group behavior to support cloud source selection
+### Include and prefer a cloud source for a management point in a default boundary group
 <!--10674394-->
-You can now add options via PowerShell to include and prefer cloud management gateway (CMG) management points for the default site boundary group. When a site is set up, there's a default site boundary group created for each site and all the clients are by default mapped to it until they're assigned to some custom boundary group.
+Until 2203 current branch, you didn’t have an option to prefer a CMG as a management point in a default boundary group. The clients falling back to a default boundary group could only communicate to non-cloud-based management points. 
+
+When a site is initially installed, there's a default site boundary group created for each site, and all the clients use it by default until they're assigned to a custom boundary group.
+
+Starting in Configuration Manager 2207, you can add options via PowerShell to include and prefer cloud sources. For instance, you can set the CMG as the preferred management point for the clients in the default boundary group.
 
 For more information, see [
 Default site boundary group behavior supports cloud source selection](../../../core/servers/deploy/configure/boundary-groups.md#default-site-boundary-group-behavior-supports-cloud-source-selection).
 
 ## Client management
 
-### Script execution timeout for compliance settings
+### Granular control over compliance settings evaluation
 <!--14120481-->
 You can now define a **Script Execution Timeout (seconds)** when configuring client settings for compliance settings. The timeout value can be set from a minimum of 60 seconds to a maximum of 600 seconds. This new setting allows you more flexibility for configuration items when you need to run scripts that may exceed the default of 60 seconds.
 
@@ -63,40 +67,43 @@ For more information, see the [compliance settings group of client settings](../
 
 ## Software updates
 
-### Folders for automatic deployment rules (ADRs)
+### Improved manageability of automatic deployment rules (ADRs)
 <!--13507410-->
 
-Admins can now organize ADRs by using folders. This change allows for better categorization and management of ADRs. Folder management for ADRs is also supported with PowerShell cmdlets.
+You'll now be able to organize ADRs with folders. This improvement helps you with better categorization and management of ADRs across your organizational hierarchy by having a structured view across your phased deployments. Folder can also be created with PowerShell cmdlets.
 
 For more information, see [Process to create a folder for automatic deployment rules](../../../sum/deploy-use/automatically-deploy-software-updates.md#process-to-add-a-new-deployment-to-an-existing-adr).
 
-### Offset for reoccuring monthly maintenance window schedules
+### Enhanced control over monthly maintenance windows
 <!--3601127#-->
 
-Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using an offset of two days after the second Tuesday of the month, sets the maintenance window for Thursday.
+Based upon your feedback, we have enhanced monthly maintenance windows scheduling. You can now set monthly maintenance window schedules to better align deployments with the release of monthly software updates by configuring offsets. For example, using an offset of two days after the second Tuesday of the month, sets the maintenance window for Thursday.
 
 For more information, see [How to use maintenance windows in Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md). 
 
 <!--## OS deployment-->
 
 
-## Protection
+## Endpoint Protection
 
-### Microsoft Defender for Endpoint onboarding for Windows Server 2012 R2 and Windows Server 2016
+### Improved Microsoft Defender for Endpoint (MDE) onboarding for Windows Server 2012 R2 and Windows Server 2016 
 <!--9265511-->
-Configuration Manager version 2207 now supports automatic deployment of [modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016](https://techcommunity.microsoft.com/t5/microsoft-defender-for-endpoint/defending-windows-server-2012-r2-and-2016/bc-p/2904464). Windows Server 2012 and 2016 devices that are targeted with Microsoft Defender for Endpoint onboarding policy will use the unified agent versus the existing Microsoft Monitoring Agent based solution, if you choose to use through Client Settings.
+Configuration Manager version 2207 now supports automatic deployment of modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016. Windows Server 2012 and 2016 devices that are targeted with Microsoft Defender for Endpoint onboarding policy will use the unified agent versus the existing Microsoft Monitoring Agent based solution, if configured through Client Settings.
 
 For more information, see [Microsoft Defender for Endpoint onboarding](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 
-### Improvements to Configuration Manager policies for Microsoft Defender Application Guard
+### Enhanced protection for untrusted environments
 <!-- 14059872 -->
 
-1. Windows Defender Application Guard has been renamed to Microsoft Defender Application Guard in the Configuration Manager console.
-1. The **General** settings page allows you to enable for isolated Windows environments and enable for Microsoft Edge and isolated Windows environments.
-1. The **Application Behavior** settings page allows you to enable or disable cameras and microphones, along with certificate matching the thumbprints to the isolated container.
+1. Windows Defender Application Guard is now called Microsoft Defender Application Guard in the console. 
+
+1. The **General** settings page in the Microsoft Defender Application Guard now allows you to create policies within Configuration Manager to protect your employees using Microsoft Edge and isolated Windows environments. 
+
+1. The **Application Behavior** settings page allows you to enable or disable cameras and microphones, along with certificate matching of the thumbprints to the isolated container. 
+
 1. The following items were removed:
-   - The Enterprise sites can load non-enterprise content, such as third-party plug-ins setting under the **Host interaction** page.
-   - The file trust criteria policy in the **File Management** page.
+   - The Enterprise sites can load non-enterprise content, such as third-party plug-in settings, under the **Host interaction** page.
+   - The file trust criteria policy, under the **File Management** page.
    
 For more information, see [Create and deploy Microsoft Defender Application Guard policy](../../../protect/deploy-use/create-deploy-application-guard-policy.md#create-a-policy-and-to-browse-the-available-settings).
 
@@ -112,7 +119,18 @@ For more information, see [Create and deploy Microsoft Defender Application Guar
 
 ### Improvements to the console
 
-- When using the search bar, the **Path** criteria is added whenever subfolders are included in the search. <!--14908615-->
+- When performing a search on any node in the console, the search bar will now include a **Path** criteria to show that subfolders in the node are included in the search. 
+    
+  - The path criteria is informational and can’t be edited.
+
+  - By default, all subfolders will be searched when you perform a search in any node that contains subfolders. You can narrow down the search by selecting the “Current Node” option from the search toolbar. 
+
+### Improvements to the dark theme
+
+The dark theme has been available as a pre-release feature since 2203. In this release we've extended the dark theme to additional components such as buttons, context menus, and hyperlinks. Enable this pre-release feature to experience the dark theme.
+  
+
+<!--14908615-->
 
 For more information, see [Console changes and tips](../../servers/manage/admin-console-tips.md#bkmk_2207).
 
