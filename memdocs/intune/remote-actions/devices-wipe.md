@@ -50,7 +50,7 @@ The **Retain enrollment state and user account** option is only available for Wi
 
 MDM policies will be reapplied the next time the device connects to Intune.
 
-A wipe is useful for resetting a device before you give the device to a new user, or when the device has been lost or stolen. Be careful about selecting **Wipe**. Data on the device cannot be recovered. This level of device wipe follows a standard file delete process, rather than a low-level delete.
+A wipe is useful for resetting a device before you give the device to a new user, or when the device has been lost or stolen. Be careful about selecting **Wipe**. Data on the device cannot be recovered. This level of device wipe follows a low-level delete.
 
 ### Wiping a device
 
