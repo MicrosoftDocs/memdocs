@@ -11,7 +11,7 @@ items:
     href: ../tenant-attach/prerequisites.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Enable tenant attach, versions 2103 and earlier
     href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json  
-  - name: Enable Intune RBAC for tenant attach
+  - name: Use Intune RBAC for tenant attach
     href: use-intune-rbac.md
   - name: Use tenant attach
     items:
