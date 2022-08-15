@@ -125,4 +125,4 @@ You can cancel a request before it’s approved by selecting it from the My requ
 
 ## Next steps
 
-Manage [role-based access control](../fundamentals/role-based-access-control)
+Manage [role-based access control](../fundamentals/role-based-access-control.md)
