@@ -92,15 +92,15 @@ Scan the QR code from the enrollment profile to enroll devices running Android 8
 To use this method, zero-touch enrollment must be supported on devices and affiliated with a supplier that is part of the Android zero-touch enrollment service. For more information, such as prerequisites, where to purchase devices, and how to set up your Google Account, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005)(opens Android Enterprise Help). 
 
 This section describes how to:    
-* Enable the zero-touch enrollment iframe in the admin center
-* Configure new Android zero-touch configurations in the zero-touch enrollment portal 
-* Link a zero-touch account to Microsoft Intune 
+* Configure new Android zero-touch configurations in the zero-touch enrollment portal  
+* Enable the zero-touch enrollment iframe in the admin center  
+* Link a zero-touch account to Microsoft Intune  
 
 ### Create configuration in Zero Touch    
 
-Create a Zero Touch configuration in the Zero Touch console. 
+Create a zero-touch configuration in the Zero Touch console.  
 
-1. Sign in to Zero Touch.
+1. Sign in to the zero-touch enrollment portal.
 2. Select the option to add a new configuration.
 3. Fill out the information in the configuration panel. 
 4. Select **Microsoft Intune** as the EMM DPC app.   
@@ -116,11 +116,11 @@ Create a Zero Touch configuration in the Zero Touch console.
 
         "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
             "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken"
- 6. Enter your organization's name and support information to provide onscreen assistance to people setting up their devices.  
+ 6. Enter your organization's name and support information, which is shown on screen while users set up their devices.   
  
- For information about how to assign a default configruation or apply a configuration in the zero-touch portal, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005)(opens Android Enterprise Help).  
+For information about how to assign a default configruation or apply a configuration in the zero-touch portal, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005)(opens Android Enterprise Help).  
 
-### Enable zero-touch iframe  
+### Enable zero-touch iframe    
 Complete these steps to enable the zero-touch iframe in the Microsoft Endpoint Manager admin center. The iframe lets you access the Google zero-touch enrollment portal from inside the admin center. You can still create and manage zero-touch configuration in the Google zero-touch enrollment portal.    
 
 #### Step 1: Add required permission   
