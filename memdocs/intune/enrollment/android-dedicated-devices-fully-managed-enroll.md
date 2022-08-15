@@ -96,11 +96,11 @@ This section describes how to:
 * Enable the zero-touch enrollment iframe in the admin center  
 * Link a zero-touch account to Microsoft Intune  
 
-### Create configuration in Zero Touch    
+### Create zero-touch configuration    
 
-Create a zero-touch configuration in the Zero Touch console.  
+Add a zero-touch configuration in the Google zero-touch enrollment portal.   
 
-1. Sign in to the zero-touch enrollment portal.
+1. Sign in to the zero-touch enrollment portal with your Google Account.
 2. Select the option to add a new configuration.
 3. Fill out the information in the configuration panel. 
 4. Select **Microsoft Intune** as the EMM DPC app.   
@@ -156,11 +156,11 @@ Use the zero-touch iframe in the admin center to link a zero-touch account with 
 6. A screen appears with basic information about the configuration your devices will use. The configuration will act as the default and be automatically applied to any device that doesn't have an existing configuration. Select **Next** to continue.    
 
 > [!TIP]
-> The token used for the default configuration is for a fully managed device. If you want to create a zero-touch configuration for a corporate-owned work profile device or a dedicated device, see [Create configuration in Zero Touch](android-dedicated-devices-fully-managed-enroll.md#create-a-zero-touch-configuration) (in this article). 
+> The token used for the default configuration is for a fully managed device. If you want to create a zero-touch configuration for a corporate-owned work profile device or a dedicated device, see [Create configuration in Zero Touch](android-dedicated-devices-fully-managed-enroll.md#create-zero-touch-configuration) (in this article). 
 6. Add support information to assist device users during setup. 
 7. Select **Save**.  
 
-Once your account is linked with Intune, zero-touch enabled devices are ready to receive the default configuration. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center. To change or create new configurations, use the steps in [Create a zero-touch configuration](android-dedicated-devices-fully-managed-enroll.md#create-a-zero-touch-configuration) (in this article).  
+Once your account is linked with Intune, zero-touch enabled devices are ready to receive the default configuration. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center. To change or create new configurations, use the steps in [Create a zero-touch configuration](android-dedicated-devices-fully-managed-enroll.md#create-zero-touch-configuration) (in this article).  
 
 ## Enroll by using Knox Mobile Enrollment
 To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 8.0 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).  
