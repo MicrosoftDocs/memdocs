@@ -129,7 +129,6 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Simple PIN  | Allow  | iOS/iPadOS, Android  |   |
 | Select Minimum PIN length  | 4  | iOS/iPadOS, Android  |   |
 | Touch ID instead of PIN for access (iOS 8+/iPadOS)  | Allow  | iOS/iPadOS  |   |
-| Fingerprint instead of PIN for access (Android 9.0+)  | Allow  | Android  |   |
 | Override biometrics with PIN after timeout  | Require  | iOS/iPadOS, Android  |   |
 | Timeout (minutes of activity)  | 720  | iOS/iPadOS, Android  |   |
 | Face ID instead of PIN for access (iOS 11+/iPadOS)  | Allow  | iOS/iPadOS  |   |
