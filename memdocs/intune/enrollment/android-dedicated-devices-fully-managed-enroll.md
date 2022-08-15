@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/08/2022
+ms.date: 08/16/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -89,15 +89,39 @@ Scan the QR code from the enrollment profile to enroll devices running Android 8
 
 ## Enroll by using Google Zero Touch 
 
-To use this method, Zero Touch must be supported on devices and affiliated with a supplier that is part of the service. For more information, see [Android for Enterprise](https://www.android.com/enterprise/management/zero-touch/)(opens Android website). 
+To use this method, zero-touch enrollment must be supported on devices and affiliated with a supplier that is part of the Android zero-touch enrollment service. For more information, such as prerequisites, where to purchase devices, and how to set up your Google Account, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005)(opens Android Enterprise Help). 
 
-In this section you will:   
-* Enable Zero Touch enrollment in the Microsoft Endpoint Manager admin center 
-* Configure new Zero Touch configurations in the Zero Touch console  
-* Link a Zero Touch account to Microsoft Intune 
+This section describes how to:    
+* Enable the zero-touch enrollment iframe in the admin center
+* Configure new Android zero-touch configurations in the zero-touch enrollment portal 
+* Link a zero-touch account to Microsoft Intune 
 
-### Enable Zero Touch enrollment 
-Complete these steps make the Zero Touch enrollment configurations visible in your Microsoft Intune tenant.  
+### Create configuration in Zero Touch    
+
+Create a Zero Touch configuration in the Zero Touch console. 
+
+1. Sign in to Zero Touch.
+2. Select the option to add a new configuration.
+3. Fill out the information in the configuration panel. 
+4. Select **Microsoft Intune** as the EMM DPC app.   
+5. Copy the following JSON test into the DPC extras field. Replace `YourEnrollmentToken` with the enrollment token you created as part of your enrollment profile. Be sure to surround the enrollment token with double quotes.  
+
+    ```json
+    {
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.google.android.apps.work.clouddpc/.receivers.CloudDeviceAdminReceiver",
+
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg",
+
+        "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup",
+
+        "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
+            "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken"
+ 6. Enter your organization's name and support information to provide onscreen assistance to people setting up their devices.  
+ 
+ For information about how to assign a default configruation or apply a configuration in the zero-touch portal, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005)(opens Android Enterprise Help).  
+
+### Enable zero-touch iframe  
+Complete these steps to enable the zero-touch iframe in the Microsoft Endpoint Manager admin center. The iframe lets you access the Google zero-touch enrollment portal from inside the admin center. You can still create and manage zero-touch configuration in the Google zero-touch enrollment portal.    
 
 #### Step 1: Add required permission   
 Add the *update app sync* permission.  
@@ -118,43 +142,25 @@ admin.
 1. In the admin center, go to **Devices** > **Enroll devices**.  
 2. Select **Android enrollment**. 
 3. Under **Enrollment profiles**, choose **Corporate-owned, fully managed user devices**.  
-4. Verify that the setting for **Allow users to enroll corporate-owned user devices**, is set to **Yes**.  
+4. Verify that the setting for **Allow users to enroll corporate-owned user devices**, is set to **Yes**.             
 
-### Create configuration in Zero Touch    
-
-Create a Zero Touch configuration in the Zero Touch console. 
-
-1. Sign in to Zero Touch.
-2. Select the option to create a new configuration.  
-3. For **EMM DPC**, select **Microsoft Intune**.  
-4. Copy/paste the following JSON test into the DPC extras field. Replace `YourEnrollmentToken` with the enrollment token you created as part of your enrollment profile. Be sure to surround the enrollment token with double quotes.  
-
-    ```json
-    {
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_COMPONENT_NAME": "com.google.android.apps.work.clouddpc/.receivers.CloudDeviceAdminReceiver",
-
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_SIGNATURE_CHECKSUM": "I5YvS0O5hXY46mb01BlRjq4oJJGs2kuUcHvVkAPEXlg",
-
-        "android.app.extra.PROVISIONING_DEVICE_ADMIN_PACKAGE_DOWNLOAD_LOCATION": "https://play.google.com/managed/downloadManagingApp?identifier=setup",
-
-        "android.app.extra.PROVISIONING_ADMIN_EXTRAS_BUNDLE": {
-            "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken"
-
-### Link Zero Touch account 
-Link your Zero Touch account with Microsoft Intune to view and manage Zero Touch configurations from the admin center. 
+### Link zero-touch account to Intune    
+Use the zero-touch iframe in the admin center to link a zero-touch account with Microsoft Intune.   
 
 1. In the admin center, go to **Devices** > **Enroll devices**.  
 2. Select **Android enrollment**. 
 2. Under **Bulk enrollment methods**, choose **Zero-touch enrollment**.  
-3. The Zero Touch console opens.  Select **Next** to begin setup.   
-4. Sign in to your Zero Touch account. 
-5. Select **Link** to begin linking your Zero Tocuh account with Intune. The default configuration, which is applied to devices that don't have an existing configuration, is automatically created. The details of that configuration appear onscreen. Select **Next** to continue.    
+3. The iframe opens.  Select **Next** to begin setup.   
+4. Sign in with the Google account you provided to yuor reseller. 
+5. Select the zero-touch account you want to link, and then select **Link**.  
+6. A screen appears with basic information about the configuration your devices will use. The configuration will act as the default and be automatically applied to any device that doesn't have an existing configuration. Select **Next** to continue.    
 
 > [!TIP]
-> The token used for the default configuration is for a fully managed device. If you want to create a Zero Tocuh configuration for a corporate-owned work profile device or a dedicated device, see [Create configuration in Zero Touch](android-dedicated-devices-fully-managed-enroll.md#create-configuration-in-zero-touch) (in this article). 
-6. Add support information, which is shown to employees during setup, and then select **Save** to finish.      
+> The token used for the default configuration is for a fully managed device. If you want to create a zero-touch configuration for a corporate-owned work profile device or a dedicated device, see [Create configuration in Zero Touch](android-dedicated-devices-fully-managed-enroll.md#create-a-zero-touch-configuration) (in this article). 
+6. Add support information to assist device users during setup. 
+7. Select **Save**.  
 
-Once your account is linked with Intune, you can view existing Zero Touch configurations, edit support information, unlink the account, and link other accounts in the admin center. To create new configurations, use [Create a Zero Touch configuration](android-dedicated-devices-fully-managed-enroll.md#create-a-zero-touch-configuration) (in this article).  
+Once your account is linked with Intune, zero-touch enabled devices are ready to receive the default configuration. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center. To change or create new configurations, use the steps in [Create a zero-touch configuration](android-dedicated-devices-fully-managed-enroll.md#create-a-zero-touch-configuration) (in this article).  
 
 ## Enroll by using Knox Mobile Enrollment
 To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 8.0 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).  
