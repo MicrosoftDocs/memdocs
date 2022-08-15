@@ -92,7 +92,7 @@ The **Use Intune RBAC** setting in the Microsoft Endpoint Manager admin center a
 
 If the **Use Intune RBAC** toggle in Intune is set to **Off**, then Configuration Manager role-based access will be enforced, even if the **Enforce Configuration Manager RBAC for cloud console requests that interact with Configuration Manager** checkbox is cleared.
 
-## What happens if my test hierarchy is configured to use Intune RBAC, but my production hierarchy isn't and they are in the same tenant?
+### What happens if my test hierarchy is configured to use Intune RBAC, but my production hierarchy isn't and they are in the same tenant?
 
 The **Use Intune RBAC** setting applies to all of the Configuration Manager hierarchies listed in the tenant. Cloud-only users can access tenant-attached devices that are uploaded from the test hierarchy because you've also cleared the checkbox to enforce Configuration Manager RBAC. If a cloud-only user tries to access a tenant-attached device uploaded from the production environment, they'll receive an error since production devices are enforcing Configuration Manager RBAC. The cloud-only user will receive an error similar to the following message: 
 `Unable to get device information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.`
