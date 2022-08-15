@@ -103,10 +103,10 @@ You can view the **Device compliance trends** report using the following steps:
 This report allows admins to quickly see:
 
 - The devices that are noncompliant.
-- For each device, the settings the device is noncompliant with and which compliance policies the settings appear in.
+- For each device, the settings the device is noncompliant with, and the compliance policies that include these settings.
 - For each device, any settings in an error state.
 
-The benefit is you can see the noncompliant settings and settings in error state for all targeted devices at once, rather than needing to check the **Device compliance** view for each device individually.
+The benefit is you can see the noncompliant settings and settings in error state for all targeted devices at once. You don't need to check the **Device compliance** view for each device individually.
 
 To generate the report, use the following steps:
 
@@ -127,7 +127,7 @@ In this report, you can also:
 
 - Export the report data.
 - Filter the results by compliance state, OS platform, and setting compliance state.
-- Search by each column
+- Search by each column.
 - Sort the columns in ascending and descending order.
 - Page through the results using the **Previous** and **Next** buttons.
 
