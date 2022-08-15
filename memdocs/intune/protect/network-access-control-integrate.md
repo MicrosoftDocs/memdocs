@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/25/2022
+ms.date: 08/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -86,9 +86,9 @@ The following list is an overview on how NAC integration works when integrated w
 
 ## Enable NAC
 
-To enable use of NAC and the *compliance retrieval service* that became available in July 2021, reference your NAC products most recent documentation for enabling NAC integration with Intune. This integration might require you to make changes after you upgrade to their new NAC product or version.
+To enable use of NAC and the *compliance retrieval service* that became available in July 2021, reference your NAC product's most recent documentation for enabling NAC integration with Intune. This integration might require you to make changes after you upgrade to their new NAC product or version.
 
-The compliance retrieval service requires certificate-based authentication and the use of the *Intune device ID* as the subject alternative name of the certificates. For Simple Certificate Enrollment Protocol (SCEP) and Private and public key pair (PKCS) certificates, you can add an attribute of the **URI** type with a value defined by your NAC provider. For example, for the **Subject alternative name**,specify: ` IntuneDeviceId://{{DeviceID})`
+The compliance retrieval service requires certificate-based authentication and the use of the *Intune device ID* as the subject alternative name of the certificates. For Simple Certificate Enrollment Protocol (SCEP) and Private and public key pair (PKCS) certificates, you can add an attribute of the **URI** type with a value defined by your NAC provider. For example, your NAC provider's instructions might say to include `IntuneDeviceId://{{DeviceID}}`as the **Subject alternative name**.
 
 Other NAC products might require you include a device ID when using NAC with iOS VPN profiles.
 
