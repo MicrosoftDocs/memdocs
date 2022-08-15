@@ -78,5 +78,6 @@ The following Intune permissions control access to the Configuration Manager clo
 | Cloud attached devices\View applications | Displays the **Applications** page for Configuration Manager cloud attached devices |
 | Cloud attached devices\Take application actions | Displays application actions in the **Applications** page  for Configuration Manager cloud attached devices |
 
-## Frequently asked questions
+## <a name="bkmk_faq"></a> Frequently asked questions
 
+### 
