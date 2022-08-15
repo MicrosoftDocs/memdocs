@@ -142,7 +142,7 @@ Once your account is linked with Intune, zero-touch enabled devices are ready to
 
 ### Create configuration in zero-touch enrollment portal        
 
-Add a zero-touch configuration in the Google zero-touch enrollment portal. If you haven't enabled the iframe in the Microsoft Endpoint Manager admin center, you can use the zero-touch enrollment portal to manage your configurations. You can create configurations for fully managed and dedicated devices, and corporate-owned devices with a work profile. 
+Add a zero-touch configuration in the Google zero-touch enrollment portal. You can use the zero-touch enrollment portal by itself to manage configurations, or you can use it in combination with the zero-touch iframe. The portal supports configurations for fully managed and dedicated devices, and corporate-owned devices with a work profile. 
 
 1. Sign in to the zero-touch enrollment portal with your Google account.
 2. Select the option to add a new configuration.  
