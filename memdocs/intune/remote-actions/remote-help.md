@@ -69,7 +69,7 @@ The Remote help app supports the following capabilities:
 ## Prerequisites
 
 - [Intune subscription](../fundamentals/licenses.md)
-- Remote help add-on license for all IT support workers (helpers) and users (https://aka.ms/PremiumAddOnsDocs)
+- Remote help add-on license for all IT support workers (helpers) and users (sharers) (https://aka.ms/PremiumAddOnsDocs)
 - Windows 10/11
 - The remote help app for Windows. See [Install and update remote help](#install-and-update-remote-help)
 
