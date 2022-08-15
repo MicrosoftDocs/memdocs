@@ -96,7 +96,7 @@ This section describes how to:
 * Create a zero-touch configuration in the zero-touch enrollment portal  
 
 ### Create zero-touch configuration in admin center        
-The zero-touch iframe lets you access the zero-touch enrollment portal from inside the Microsoft Endpoint Manager admin center. To enable the iframe, you must first add the *update app sync* permission and enable enrollment for corporate-owned, fully managed devices. After those steps are complete, the zero-touch enrollment option becomes visible in the admin center and you can link your account and create zero-touch configurations.  
+The zero-touch iframe lets you access the zero-touch enrollment portal in the Microsoft Endpoint Manager admin center. To enable the iframe, you must first add the *update app sync* permission and enable enrollment for corporate-owned, fully managed devices. After those steps are complete, the zero-touch enrollment option becomes visible in the admin center and you can link your account and create zero-touch configurations.  
 
 Complete the following steps to enable the iframe and create a new zero-touch configuration. To create configurations in the zero-touch enrollment portal instead, skip to [Create configuration in zero-touch enrollment portal](android-dedicated-devices-fully-managed-enroll.md#create-configuration-in-zero-touch-enrollment-portal).  
 
@@ -123,7 +123,7 @@ Verify that enrollment is enabled for corporate-owned, fully managed devices.
 4. Verify that the setting for **Allow users to enroll corporate-owned user devices**, is set to **Yes**.             
 
 #### Step 3: Link zero-touch account to Intune    
-Link a zero-touch account with your Microsot Intune account. This procedure takes place in the admin center. After you link your device, Intune creates a default configuration policy. The policy is applied to fully managed, zero-touch enabled devices that are without an existing configuration.   
+Link a zero-touch account with your Microsoft Intune account. Upon linking the account, Intune creates a default zero-touch configuration.   
 
 1. In the admin center, go to **Devices** > **Enroll devices**.  
 2. Select **Android enrollment**. 
@@ -131,16 +131,16 @@ Link a zero-touch account with your Microsot Intune account. This procedure take
 3. The iframe opens.  Select **Next** to begin setup.   
 4. Sign in with the Google account you provided to your reseller. 
 5. Select the zero-touch account you want to link, and then select **Link**.  
-6. A default configuration is created and a screen appears with basic information about the new configuration. Intune will automatically apply the default to any zero-touch enabled device that's without an existing configuration. Select **Next** to continue.    
+6. A default configuration is created. A screen appears with basic information about the new configuration. Intune will automatically apply the default to any zero-touch enabled device that's without an existing configuration. Select **Next** to continue.    
 
 > [!TIP]
 > The token used for the default configuration is for a fully managed device. If you want to create a zero-touch configuration for a corporate-owned work profile device or a dedicated device, see [Create configuration in zero-touch enrollment portal](android-dedicated-devices-fully-managed-enroll.md#create-configuration-in-zero-touch-enrollment-portal) (in this article). 
 6. Add support information to assist device users during setup. 
 7. Select **Save**.  
 
-Once your account is linked with Intune, zero-touch enabled devices are ready to receive the default configuration. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center.  
+Once your account is linked with Intune, zero-touch enabled devices are ready to receive the default configuration. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center.   
 
-### Create configuration in zero-touch enrollment portal       
+### Create configuration in zero-touch enrollment portal        
 
 Add a zero-touch configuration in the Google zero-touch enrollment portal. If you haven't enabled the iframe in the Microsoft Endpoint Manager admin center, you can use the zero-touch enrollment portal to manage your configurations. You can create configurations for fully managed and dedicated devices, and corporate-owned devices with a work profile. 
 
@@ -162,7 +162,7 @@ Add a zero-touch configuration in the Google zero-touch enrollment portal. If yo
             "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken"
  6. Enter your organization's name and support information, which is shown on screen while users set up their devices.   
  
-For more information about how to assign a default configruation or apply a configuration in the zero-touch portal, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005)(opens Android Enterprise Help).  
+For more information about how to assign a default configuration or apply a configuration in the zero-touch portal, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005)(opens Android Enterprise Help).  
 
 ## Enroll by using Knox Mobile Enrollment
 To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 8.0 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).  
