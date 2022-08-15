@@ -561,7 +561,7 @@ Following are some settings available in the settings catalog that might be rele
   - Microsoft App Store
     - Require Private Store Only - **Only Private store is enabled**
      > [!NOTE]
-     > Note: This setting is not-applicable on Windows 11 operating system.
+     > Note: This setting blocks access to the public store on Windows 11, but does not allow access to the private store which is not available on Windows 11.
 
 - **Block Gaming**  
   Organizations might prefer that corporate endpoints can't be used to play games. The Gaming page within the Settings app can be hidden entirely using the following setting.
