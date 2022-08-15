@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/16/2022
+ms.date: 08/18/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -73,16 +73,16 @@ The following permissions are available when creating custom roles.
 | Audit data/Read | View all Intune audit data for this tenant. | 
 | Certificate Connector/Modify | Add, remove, or modify certificate connectors required to support certificate issuance. | 
 | Certificate Connector/Read | View certificate connectors required to support certificate issuance. | 
-| Cloud attached devices\View collections | Displays collections for Configuration Manager cloud attached devices |
-| Cloud attached devices\View resource explorer | Displays resource explorer for Configuration Manager cloud attached devices |
-| Cloud attached devices\View timeline | Display timeline for Configuration Manager cloud attached devices |
-| Cloud attached devices\View software updates | Display software updates for Configuration Manager cloud attached devices |
-| Cloud attached devices\View scripts | Display scripts for Configuration Manager cloud attached devices |
-| Cloud attached devices\Run script | Displays the run script action for Configuration Manager cloud attached devices |
-| Cloud attached devices\Run CMPivot query | Displays CMPivot for Configuration Manager cloud attached devices |
-| Cloud attached devices\View client details | Displays the client details for Configuration Manager cloud attached devices |
-| Cloud attached devices\View applications | Displays applications for Configuration Manager cloud attached devices |
-| Cloud attached devices\Take application actions | Displays application actions for Configuration Manager cloud attached devices |
+| Cloud attached devices\View collections | Displays the *Collections* page for Configuration Manager cloud attached devices |
+| Cloud attached devices\View resource explorer | Displays the *Resource explorer* page for Configuration Manager cloud attached devices |
+| Cloud attached devices\View timeline | Displays the *Timeline* page for Configuration Manager cloud attached devices |
+| Cloud attached devices\View software updates | Displays the *Software updates* page for Configuration Manager cloud attached devices |
+| Cloud attached devices\View scripts | Displays the *Scripts* page for Configuration Manager cloud attached devices |
+| Cloud attached devices\Run script | Displays the *Run script* action for Configuration Manager cloud attached devices |
+| Cloud attached devices\Run CMPivot query | Displays the *CMPivot* page for Configuration Manager cloud attached devices |
+| Cloud attached devices\View client details | Displays the *Client details* page for Configuration Manager cloud attached devices |
+| Cloud attached devices\View applications | Displays the *Applications* page for Configuration Manager cloud attached devices |
+| Cloud attached devices\Take application actions | Displays application actions in the *Applications* page for Configuration Manager cloud attached devices |
 | Corporate device identifiers/Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. | 
 | Corporate device identifiers/Delete | Delete IMEI or serial numbers used as corporate device identifiers. | 
 | Corporate device identifiers/Read | View the IMEI or serial numbers used as corporate device identifiers. | 
@@ -224,7 +224,6 @@ The following permissions are available when creating custom roles.
 | Terms and conditions/Update | Manage existing terms and conditions but not assignments. | 
 | Windows Enterprise Certificate/Modify | Add, remove, or modify the code-signing certificate used to distribute line-of-business apps to your managed Windows devices. | 
 | Windows Enterprise Certificate/Read | View the code-signing certificate used to distribute line-of-business apps to your managed Windows devices. | 
-
 
 ## Next steps
 - [Assign a role to a user](assign-role.md)
