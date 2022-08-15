@@ -8,7 +8,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2022
+ms.date: 08/17/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -44,15 +44,7 @@ Access policies are supported for the following resources:
 
 ## Prerequisites for access policies and approvers
 
-To create an access policy, your account must have the following Intune role-based access control permissions:
-
-- Group-*PENDING*
-  - Explicit permission-*PENDING*
-
-By default, the following Azure and Intune roles include these permissions:
-
-- Azure Global Administrator
-- Intune Service Administrator
+To create an access policy, your account must be assigned the *Intune Service Administrator* or *Azure Global Administrator* role.
 
 To be an approver, an account must be in the group that’s assigned to the access policy for a specific type of resource.
 
@@ -129,8 +121,8 @@ You can cancel a request before it’s approved by selecting it from the My requ
   - Approved – This request is being processed by Intune.
   - Completed – This request has been successfully applied.
   - Rejected – This request was rejected by an approver.
-  - Cancelled – This request was cancelled by the admin who submitted it.
+  - Canceled – This request was canceled by the admin who submitted it.
 
 ## Next steps
 
-
+Manage [role-based access control](../fundamentals/role-based-access-control)
