@@ -79,7 +79,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Device enrollment
 
-#### Configure zero-touch enrollment from the admin center<-- 1872357 -->
+#### Configure zero-touch enrollment from the admin center<!-- 1872357 -->
 Now you can configure Android zero-touch enrollment from the admin center. This feature lets you link your zero-touch account to Intune, add support information, configure zero-touch enabled devices, and customize provisioning extras. For more information about how to enable zero-touch from the admin center, see [Enroll by using Google Zero Touch](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch).  
 
 ### Device management
