@@ -121,7 +121,7 @@ Add a zero-touch configuration in the Google zero-touch enrollment portal.
 For information about how to assign a default configruation or apply a configuration in the zero-touch portal, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005)(opens Android Enterprise Help).  
 
 ### Enable zero-touch iframe    
-Complete these steps to enable the zero-touch iframe in the Microsoft Endpoint Manager admin center. The iframe lets you access the Google zero-touch enrollment portal from inside the admin center. You can still create and manage zero-touch configuration in the Google zero-touch enrollment portal.    
+Complete these steps to enable the zero-touch iframe in the Microsoft Endpoint Manager admin center. The iframe lets you access the Google zero-touch enrollment portal from inside the admin center.     
 
 #### Step 1: Add required permission   
 Add the *update app sync* permission.  
