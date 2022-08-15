@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/03/2022
+ms.date: 08/15/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,219 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of August 15, 2022 (Service release 2208)
+
+### App management
+
+#### Noncompliance details available for Android (AOSP) in Microsoft Intune app<!-- 12645770 -->
+Android (AOSP) users can view noncompliance reasons in the Microsoft Intune app. These details describe why a device is marked noncompliant, and are available on the Device details page for devices enrolled as user-associated Android (AOSP) devices.  
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 14709109, 14955442, 14981985 -->
+The following protected apps are now available for Microsoft Intune:
+- Nexis Newsdesk Mobile by LexisNexis
+- My Portal by MangoApps (Android)
+- Re:Work Enterprise by 9Folders, Inc.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Device enrollment
+
+#### Configure zero-touch enrollment from the admin center<-- 1872357 -->
+Now you can configure Android zero-touch enrollment from the admin center. This feature lets you link your zero-touch account to Intune, add support information, configure zero-touch enabled devices, and customize provisioning extras. For more information about how to enable zero-touch from the admin center, see [Enroll by using Google Zero Touch](../enrollment/android-dedicated-devices-fully-managed-enroll.md#enroll-by-using-google-zero-touch).  
+
+### Device management
+
+#### Custom settings for Windows 10/11 device compliance is now generally available<!-- 12862904 -->
+Support to [create custom compliance policy settings](../protect/compliance-use-custom-settings.md) for Windows devices using PowerShell scripts, and to create custom compliance rules and remediation messages that appear in the Company Portal, is now generally available. This capability released to public preview in November 2021. 
+
+Applies to:  
+- Windows 10/11
+
+#### View contents of macOS shell scripts and custom attributes<!-- 14757037 -->
+You can view the contents of macOS shell scripts and custom attributes after you upload these to Intune. You can view Shell scripts and custom attributes in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **macOS**. For related information, see [Use shell scripts on macOS devices in Intune](../apps/macos-shell-scripts.md).
+
+#### Reset passcode remote action available for Android (AOSP) Corporate devices<!-- 10247332 -->
+You'll be able to leverage Reset passcode remote action from the Microsoft Endpoint Manager admin center for Android Open Source Project (AOSP) Corporate devices.
+
+For information on remote actions, see:
+- [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md)
+- [Remotely restart devices with Intune](../remote-actions/device-restart.md)
+- [Remotely lock devices with Intune](../remote-actions/device-remote-lock.md)
+
+Applies to:
+- Android Open Source Project (AOSP)
+
+### Device configuration
+
+#### Certificate profiles support for Android (ASOP) devices<!-- 8506336 -->
+You can now use Simple Certificate Enrollment Protocol (SCEP)[certificate profiles](../protect/certificates-configure.md) with corporate-owned and userless devices that run the Android Open Source Project (AOSP) platform.
+
+#### Import, create, and manage custom ADMX and ADML administrative templates<!-- 4970862 -->
+You can create a device configuration policy that uses built-in ADMX templates (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Administrative templates**).
+
+You can also import custom and third party/partner ADMX and ADML templates into the Endpoint Manager admin center. Once imported, you can create a device configuration policy, assign the policy to your devices, and manage the settings in the policy.
+
+For information, go to:
+- [Import custom ADMX and ADML administrative templates into Endpoint Manager](../configuration/administrative-templates-import-custom.md)
+- [Overview: Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md).
+
+Applies to:
+- Windows 11
+- Windows 10
+
+#### Add an HTTP proxy to Wi-Fi device configuration profiles on Android Enterprise<!-- 13975609 -->
+On Android Enterprise devices, you can create a Wi-Fi device configuration profile with basic and enterprise settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** for platform > **Wi-Fi**).
+
+When you create the profile, you can configure an HTTP proxy using a PAC file or configure the settings manually. You can configure an HTTP proxy for each Wi-Fi network in your organization.
+
+When the profile is ready, you can deploy this profile to your Fully Managed, Dedicated, and Corporate-Owned Work Profile devices. 
+
+For more information on the Wi-Fi settings you can configure, go to [Add Wi-Fi settings for Android Enterprise dedicated and fully managed devices in Microsoft Intune](../configuration/wi-fi-settings-android-enterprise.md).
+
+Applies to:
+- Android Enterprise Fully Managed, Dedicated, and Corporate-Owned Work Profile
+
+#### iOS/iPadOS settings catalog supports declarative device management (DDM)<!-- 15016105 -->
+On iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/ios-user-enrollment.md), the settings catalog automatically uses Apple’s declarative device management (DDM) when configuring settings.
+- No action is required to use DDM. The feature is built into the settings catalog.
+- There is no impact to existing policies in the settings catalog.
+- iOS/iPadOS devices that aren't enabled for DDM continue to use Apple’s standard MDM protocol.
+
+For more information, go to:
+- [Meet declarative device management](https://aka.ms/DDM2021) (opens Apple's web site)
+- [Microsoft simplifies Endpoint Manager enrollment for Apple updates](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/microsoft-simplifies-endpoint-manager-enrollment-for-apple/ba-p/3570319)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md)
+
+Applies to:
+-  iOS/iPadOS 15 or later devices enrolled using Apple User Enrollment
+
+#### New macOS settings available in the Settings Catalog <!-- 15020250 -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
+
+New settings include:
+
+**Microsoft Auto Update**:
+
+- Current Channel
+- Number of minutes for the final countdown timer
+
+**Restrictions**:
+
+- Allow Universal Control
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**Authentication > Extensible Single Sign On**:
+
+- Extension Data
+- Extension Identifier
+- Hosts
+- Realm
+- Screen Locked Behavior
+- Team Identifier
+- Type
+- URLs
+
+**Authentication > Extensible Single Sign On > Extensible Single Sign On Kerberos**:
+
+- Extension Data
+- Allow Automatic Login
+- Allow Password Change
+- Credential Bundle ID ACL
+- Credential Use Mode
+- Custom Username Label
+- Delay User Setup
+- Domain Realm Mapping
+- Help Text
+- Include Kerberos Apps In Bundle ID ACL
+- Include Managed Apps In Bundle ID ACL
+- Is Default Realm
+- Monitor Credentials Cache
+- Perform Kerberos Only
+- Preferred KDCs
+- Principal Name
+- Password Change URL
+- Password Notification Days
+- Password Req Complexity
+- Password Req History
+- Password Req Length
+- Password Req Min Age
+- Password Req Text
+- Require TLS For LDAP
+- Require User Presence
+- Site Code
+- Sync Local Password
+- Use Site Auto Discovery
+- Extension Identifier
+- Hosts
+- Realm
+- Team Identifier
+- Type
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+- macOS
+
+#### New iOS/iPadOS settings in the Settings Catalog<!-- 15020319 -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type). Previously, these settings were only available in Templates:
+
+**Authentication > Extensible Single Sign On**:
+
+- Extension Data
+- Extension Identifier
+- Hosts
+- Realm
+- Screen Locked Behavior
+- Team Identifier
+- Type
+- URLs
+
+**Authentication > Extensible Single Sign On > Extensible Single Sign On Kerberos**:
+
+- Extension Data
+- Allow Automatic Login
+- Credential Bundle ID ACL
+- Domain Realm Mapping
+- Help Text
+- Include Managed Apps In Bundle ID ACL
+- Is Default Realm
+- Preferred KDCs
+- Principal Name
+- Require User Presence
+- Site Code
+- Use Site Auto Discovery
+- Extension Identifier
+- Hosts
+- Realm
+- Team Identifier
+- Type
+
+**System Configuration > Lock Screen Message**:
+- Asset Tag Information
+- Lock Screen Footnote
+
+For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+Applies to:
+- iOS/iPadOS
+
+### Monitor and troubleshoot
+
+#### Open Help and Support without losing your context in the Microsoft Endpoint Manager admin center<!-- 12469338 -->
+You can now use the **?** icon in the Microsoft Endpoint Manager admin center to open a [help and support](../../get-support.md) session without losing your current node of focus in the admin center. The **?** icon is always available in the upper right of the title bar of the admin center. This change adds an additional method for accessing *Help and support*. 
+
+When you select  **?**, the admin center opens the help and support view in a new and separate side-by-side pane. By opening this separate pane, you’ll be free to navigate the support experience without affecting your original location and focus on the admin center.
+
+#### New noncompliant devices and settings report<!-- 13532817 -->
+In **Reports** > **Device Compliance** > **Reports**, there's a new **Noncompliant devices and settings** organization report. This report:
+- Lists each noncompliant device.
+- For each noncompliant device, it shows the compliance policy settings that the devices aren't compliant with.
+
+For more information on this report, go to [Noncompliant devices report (Operational)](reports.md#noncompliant-devices-and-settings-report-organizational).
 
 ## Week of August 1, 2022
 
