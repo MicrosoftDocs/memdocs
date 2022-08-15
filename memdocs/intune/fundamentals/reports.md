@@ -103,10 +103,10 @@ You can view the **Device compliance trends** report using the following steps:
 This report allows admins to quickly see:
 
 - The devices that are noncompliant.
-- For each device, the settings in the policies that are noncompliant.
+- For each device, the settings the device is noncompliant with and which compliance policies the settings appear in.
 - For each device, any settings in an error state.
 
-The benefit is you can see this information in the same report. This information is still available separately in **Devices** > **Monitor** > **Noncompliant devices** and **Noncompliant policies**.
+The benefit is you can see the noncompliant settings and settings in error state for all targeted devices at once, rather than needing to check the **Device compliance** view for each device individually.
 
 To generate the report, use the following steps:
 
@@ -116,7 +116,7 @@ To generate the report, use the following steps:
 
     - **Noncompliant setting** - Shows the name of the noncompliant policy setting.
     - **Noncompliant policy** - Shows the name of the compliance policy that includes the noncompliant setting.
-    - **Calculated policy version** - Shows the noncompliant policy version that was used the last time compliance was calculated.
+    - **Calculated policy version** - Shows the compliance policy version that was used the last time compliance was calculated.
     - **Latest policy version** - Shows the most recent version of the noncompliant compliance policy. If this version number is greater than the **Calculated policy version**, then an admin updated or changed the compliance policy since the last time compliance was calculated. The compliance state might be out-of-date.
     - **Setting compliance state** - Shows if the device is noncompliant with the setting. Or, shows if the setting reported an error to Intune instead.
     - **Setting error code** - If the setting compliance state is `Error`, then it shows the error code. Otherwise, this column is left blank.
@@ -127,7 +127,7 @@ In this report, you can also:
 
 - Export the report data.
 - Filter the results by compliance state, OS platform, and setting compliance state.
-- Search by the device name, setting name, policy name, policy version, and more.
+- Search by each column
 - Sort the columns in ascending and descending order.
 - Page through the results using the **Previous** and **Next** buttons.
 
