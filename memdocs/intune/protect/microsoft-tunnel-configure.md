@@ -367,7 +367,7 @@ For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../pr
 
 To uninstall the product, run **./mst-cli uninstall** from the Linux server as root. 
 
-Once succesfully uninstalled, delete the corresponding server record in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Microsoft Tunnel Gateway** > **Servers**.
+After the product is uninstalled, delete the corresponding server record in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Microsoft Tunnel Gateway** > **Servers**.
 
 ## Next steps
 
