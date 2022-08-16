@@ -17,6 +17,10 @@ ms.topic: article
 
 # Windows Autopilot: What's new
 
+## Updates to Autopilot device targeting infrastructure
+
+With Intune 2208 we are updating the Autopilot infrastructure to ensure that the profiles and applications assigned are ready when the devices are deployed. This change reduces the amount of data that needs to be synchronized per-Autopilot device and leverages device lifecycle change events to reduce the amount of time that it takes to recover from device resets for Azure AD and Hybrid Azure AD joined devices. No action is needed to enable this change, it will be rolling out to all clients starting August 2022.
+
 ## Update Intune Connector for Active Directory for Hybrid Azure AD joined devices
 <!-- 2209 -->
 
