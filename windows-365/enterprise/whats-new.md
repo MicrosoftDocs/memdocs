@@ -65,6 +65,9 @@ Provisioning policies configured for language now also apply to Microsoft 365 Ap
 #### Remoting connection report in Endpoint Analytics now generally available<!--38310774 -->
 The remoting connection report in Endpoint Analytics has moved out of preview and into general availability. For more information, see [Remoting connection report](report-remoting-connection.md).
 
+#### Resource performance report in Endpoint Analytics now generally available<!-- 40028465 -->
+
+The resource performance report in Endpoint Analytics has moved out of preview and into general availability. For more information, see [Resource performance report](report-resource-performance.md).
 
 <!-- ########################## -->
 ## Week of August 8, 2022
