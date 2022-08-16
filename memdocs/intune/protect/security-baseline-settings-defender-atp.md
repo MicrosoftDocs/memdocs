@@ -497,7 +497,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
   - **Outbound connections required**  
     Baseline default: *Yes*  
-    [Learn more](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+    [Learn more](https://aka.ms/intune-firewall-outboundaction)
 
   - **Inbound notifications blocked**  
     Baseline default: *Yes*  
@@ -549,7 +549,7 @@ When you use Microsoft Edge, Microsoft Defender Application Guard protects your 
 
   - **Outbound connections required**  
     Baseline default: *Yes*  
-    [Learn more](/windows/client-management/mdm/firewall-csp#defaultoutboundaction)
+    [Learn more](https://aka.ms/intune-firewall-outboundaction)
 
   - **Authorized application rules from group policy not merged**  
     Baseline default: Yes**  
