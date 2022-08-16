@@ -155,7 +155,10 @@ integration points relevant to your app.
 
 ### Gradle Build Plugin
 If your app does not build with gradle, skip to [Integrating with the
-Command Line Tool](#command-line-build-tool). 
+Command Line Tool](#command-line-build-tool).
+
+> [!NOTE]
+> Android Gradle Plugin 4.2 introduced a number of resources optimizations in order to reduce the size of the APK package. One of these optimizations is the obfuscation/shortening of filenames. For now, the workaround is to add android.enableResourceOptimizations=false in the app's gradle.properties. This will prevent the optimization from happening thus allowing the detection of the Intune SDK when uploading the app into the Portal.
 
 The App SDK plugin is distributed as part of the SDK as
 **GradlePlugin/com.microsoft.intune.mam.build.jar**. For Gradle to be
