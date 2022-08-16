@@ -22,8 +22,6 @@ items:
           tocHref: /mem/intune/protect/
           topicHref: /mem/configmgr/tenant-attach/index
 
-<<<<<<< HEAD
-=======
 - name: Docs
   tocHref: /
   topicHref: /
@@ -43,5 +41,3 @@ items:
         - name: Tenant attach
           tocHref: /mem/configmgr/cloud-attach/
           topicHref: /mem/configmgr/tenant-attach/index
-          
->>>>>>> 31d477078725a2324c5ac04cf6beabf967e78f96
