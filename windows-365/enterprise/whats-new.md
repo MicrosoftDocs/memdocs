@@ -53,6 +53,13 @@ Learn what new features are available in Windows 365 Enterprise.
 ## Week of August 15, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Language and region configuration now also applies to Microsoft 365 Apps<!--40673170-->
+
+Provisioning policies configured for language now also apply to Microsoft 365 Apps. When a user first signs in, their Microsoft 365 Apps will use the configured language. For more information, see [Provide a localized Windows experience](provide-localized-windows-experience.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
 #### Remoting connection report in Endpoint Analytics now generally available<!--38310774 -->
