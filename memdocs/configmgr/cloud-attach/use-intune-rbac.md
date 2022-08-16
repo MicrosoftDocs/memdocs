@@ -72,18 +72,19 @@ Once Intune is set to the role-based access control authority, verify the permis
 
 The following Intune permissions control access to the Configuration Manager cloud-attached devices: 
 
-| Permission | Description |
-| --- | --- |
-| Cloud attached devices\View collections | Displays the **Collections** page for Configuration Manager cloud attached devices |
-| Cloud attached devices\View resource explorer | Displays the **Resource explorer** page for Configuration Manager cloud attached devices |
-| Cloud attached devices\View timeline | Displays the **Timeline** page for Configuration Manager cloud attached devices |
-| Cloud attached devices\View software updates | Displays the **Software updates** page for Configuration Manager cloud attached devices |
-| Cloud attached devices\View scripts | Displays the **Scripts** page for Configuration Manager cloud attached devices |
-| Cloud attached devices\Run script | Displays the **Run script** action for Configuration Manager cloud attached devices |
-| Cloud attached devices\Run CMPivot query | Displays the **CMPivot** page for Configuration Manager cloud attached devices |
-| Cloud attached devices\View client details | Displays the **Client details** page for Configuration Manager cloud attached devices |
-| Cloud attached devices\View applications | Displays the **Applications** page for Configuration Manager cloud attached devices |
-| Cloud attached devices\Take application actions | Displays application actions in the **Applications** page  for Configuration Manager cloud attached devices |
+| Permission | Description | Built-in roles with the permission |
+|---|---|---|
+| Cloud attached devices\View collections | Displays the **Collections** page for Configuration Manager cloud attached devices | Application Manager, Endpoint Security Manager, Read Only Operator, School Administrator, Policy Profile Manager, Help Desk Operator |
+| Cloud attached devices\View resource explorer | Displays the **Resource explorer** page for Configuration Manager cloud attached devices |  Application Manager, Endpoint Security Manager, Read Only Operator, School Administrator, Policy Profile Manager, Help Desk Operator |
+| Cloud attached devices\View timeline | Displays the **Timeline** page for Configuration Manager cloud attached devices |  Application Manager, Endpoint Security Manager, Read Only Operator, School Administrator, Policy Profile Manager, Help Desk Operator |
+| Cloud attached devices\View software updates | Displays the **Software updates** page for Configuration Manager cloud attached devices |  Application Manager, Endpoint Security Manager, Read Only Operator, School Administrator, Help Desk Operator |
+| Cloud attached devices\View scripts | Displays the **Scripts** page for Configuration Manager cloud attached devices |  Endpoint Security Manager, Read Only Operator, School Administrator, Policy Profile Manager, Help Desk Operator |
+| Cloud attached devices\Run script | Displays the **Run script** action for Configuration Manager cloud attached devices |  School Administrator, Help Desk Operator |
+| Cloud attached devices\Run CMPivot query | Displays the **CMPivot** page for Configuration Manager cloud attached devices |  Endpoint Security Manager, School Administrator, Help Desk Operator |
+| Cloud attached devices\View client details | Displays the **Client details** page for Configuration Manager cloud attached devices |  Application Manager, Endpoint Security Manager, Read Only Operator,School Administrator, Policy Profile Manager, Help Desk Operator |
+| Cloud attached devices\View applications | Displays the **Applications** page for Configuration Manager cloud attached devices |  Application Manager, Read Only Operator, School Administrator, Policy Profile Manager, Help Desk Operator |
+| Cloud attached devices\Take application actions | Displays application actions in the **Applications** page  for Configuration Manager cloud attached devices |  Application Manager, School Administrator, Help Desk Operator |
+| Remote tasks/Rotate BitLockerKeys (preview) | Initiates a key rotation for BitLocker Recovery Passwords on the device. Displays the *Recovery keys* page for Configuration Manager cloud attached devices. |  Endpoint Security Manager, Help Desk Operator |
 
 ## <a name="bkmk_faq"></a> Frequently asked questions
 
