@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/17/2022
+ms.date: 08/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -326,7 +326,7 @@ To change the proxy server configuration that is in use by the Linux host of the
 1. On the tunnel server, edit */etc/mstunnel/env.sh* and specify the new proxy server.
 2. Run `mst-cli install`.
 
-   This command rebuilds the containers with the new proxy server details. During this process, you’re asked to verify the contents of */etc/mstunnel/env.h* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
+   This command rebuilds the containers with the new proxy server details. During this process, you’re asked to verify the contents of */etc/mstunnel/env.sh* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
 
    To confirm both and complete the configuration, enter **yes**.
 

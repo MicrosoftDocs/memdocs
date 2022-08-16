@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/04/2022
+ms.date: 08/16/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,33 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+
+<!-- ########################## -->
+## Week of August 15, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Language and region configuration now also applies to Microsoft 365 Apps<!--40673170-->
+
+Provisioning policies configured for language now also apply to Microsoft 365 Apps. When a user first signs in, their Microsoft 365 Apps will use the configured language. For more information, see [Provide a localized Windows experience](provide-localized-windows-experience.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Remoting connection report in Endpoint Analytics now generally available<!--38310774 -->
+The remoting connection report in Endpoint Analytics has moved out of preview and into general availability. For more information, see [Remoting connection report](report-remoting-connection.md).
+
+
+<!-- ########################## -->
+## Week of August 8, 2022
+
+### Documentation
+
+#### New documentation article: Windows 365 security
+
+We’ve published a new help documentation article. For more information, see [Windows 365 security](security.md).
 
 <!-- ########################## -->
 ## Week of July 25, 2022
