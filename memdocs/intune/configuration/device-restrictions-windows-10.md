@@ -445,10 +445,8 @@ This device restrictions profile is directly related to the kiosk profile you cr
 - **Clear browsing data on exit** (desktop only): **Yes** clears the history, and browsing data when users exit Microsoft Edge. **No** (default) uses the OS default, which may cache the browsing data.
 - **Sync browser settings between user's devices**: Choose how you want to sync browser settings between devices. Your options:
   - **Allow**: Allow syncing of Microsoft Edge browser settings between user's devices
-  - **Block and enable user override**: Block syncing of Microsoft Edge browser settings between user's devices. Users can override this setting.
+  - **Block and enable user override**: Block syncing of Microsoft Edge browser settings between user's devices. Users can override this setting. When this option is selected, users can override the admin designation.
   - **Block**: Block syncing of Microsoft Edge browser setting between users devices. Users can't override this setting.
-
-When "block and enable user override" is selected, user can override admin designation.
 
 - **Allow Password Manager**: **Yes** (default) allows Microsoft Edge to automatically use Password Manager, which allows users to save and manage passwords on the device. **No** prevents Microsoft Edge from using Password Manager.
 - **Cookies**: Choose how cookies are handled in the web browser. Your options:
