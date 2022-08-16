@@ -46,11 +46,11 @@ Use one of the following links to open the Microsoft Endpoint Manager admin cent
 
 To access help and support in the admin center, you have some options:
 
-- Go to **Troubleshooting + support** > **Help and support**:
+- Go to **Troubleshooting + support** or another node in the admin center and select **Help and support** to open a full screen experience of Help and support.
 
   :::image type="content" source="./media/get-support/troubleshooting-support-help-support.png" alt-text="Screenshot that shows how to get to help and support from Troubleshooting and support in the Microsoft Endpoint Manager admin center and Microsoft Intune." lightbox="./media/get-support/troubleshooting-support-help-support.png":::
 
-- Select **Home**, **Dashboard**, **Devices**, or any other option in the admin center. Then, select the question mark (`?`).
+- From any node in the admin center, or your current area of focus, select the question mark (`?`) near your profile pic to open the Help and Support pane.
 
   In the following example, select **All services** and then select the question mark (`?`). **Help and support** opens:
 

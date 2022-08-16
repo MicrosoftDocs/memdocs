@@ -172,6 +172,26 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
       - **Identity privacy (outer identity)**: Enter the text sent in the response to an EAP identity request. This text can be any value, such as `anonymous`. During authentication, this anonymous identity is initially sent, and then followed by the real identification sent in a secure tunnel.
 
+- **Proxy settings**: Select a proxy configuration. Your options:
+
+  - **None**: No proxy settings are configured.
+  - **Manual**: Manually configure the proxy settings:
+    - **Proxy server address**: Enter the IP address of the proxy server. For example, enter `10.0.0.22`.
+    - **Port number**: Enter the port number of the proxy server. For example, enter `8080`.
+    - **Exclusion list**:  Enter a hostname or IP address that won't use the proxy. You can use the `*` wildcard character and enter multiple host names and IP addresses. If you enter multiple host names or IP addresses, they must be on a separate line. For example, you can enter:
+
+      ```
+      *.contoso.com
+      test.contoso1.com
+      mysite.contoso2.com
+      10.0.0.5
+      10.0.0.6
+      ```
+
+  - **Automatic**: Use a file to configure the proxy server. Enter the **Proxy server URL** that contains the configuration file. For example, enter `http://proxy.contoso.com`, `10.0.0.11`, or `http://proxy.contoso.com/proxy.pac`.
+
+    For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
+
 ## Personally-owned work profile
 
 ### Basic
