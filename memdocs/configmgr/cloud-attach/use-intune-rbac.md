@@ -72,7 +72,7 @@ Once Intune is set to the role-based access control authority, verify the permis
 
 The following Intune permissions control access to the Configuration Manager cloud-attached devices: 
 
-| Permission | Description | Built-in roles with the permission |
+| Permission | Description | Intune built-in roles with the permission |
 |---|---|---|
 | Cloud attached devices\View collections | Displays the **Collections** page for Configuration Manager cloud attached devices | Application Manager, Endpoint Security Manager, Read Only Operator, School Administrator, Policy Profile Manager, Help Desk Operator |
 | Cloud attached devices\View resource explorer | Displays the **Resource explorer** page for Configuration Manager cloud attached devices |  Application Manager, Endpoint Security Manager, Read Only Operator, School Administrator, Policy Profile Manager, Help Desk Operator |
