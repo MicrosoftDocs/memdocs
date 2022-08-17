@@ -88,7 +88,7 @@ Now you can configure Android zero-touch enrollment from the [Microsoft Endpoint
 ### Device management
 
 #### Custom settings for Windows 10/11 device compliance is now generally available<!-- 12862904 -->
-Support to [create custom compliance policy settings](../protect/compliance-use-custom-settings.md) for Windows devices using PowerShell scripts, and to create custom compliance rules and remediation messages that appear in the Company Portal, is now generally available. This capability released to public preview in November 2021. 
+Support to [create custom compliance policy settings](../protect/compliance-use-custom-settings.md) for Windows devices using PowerShell scripts, and to create custom compliance rules and remediation messages that appear in the Company Portal, is now generally available.
 
 Applies to:  
 - Windows 10/11
