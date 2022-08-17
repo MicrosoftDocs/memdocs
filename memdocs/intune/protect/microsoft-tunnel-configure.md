@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/03/2022
+ms.date: 08/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -172,11 +172,21 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
    2. After Microsoft Tunnel Gateway registers with Intune, the script gets information about your Sites and Server configurations from Intune. The script then prompts you to enter the GUID of the tunnel Site you want this server to join. The script presents you with a list of your available sites.
 
-   3. After you select a Site, setup pulls the Server configuration for that Site from Intune and applies it to your new server to complete the Microsoft Tunnel installation.
+   3. After you select a Site, setup pulls the Server configuration for that Site from Intune, and applies it to your new server to complete the Microsoft Tunnel installation.
 
 7. After the installation script finishes, you can navigate in Microsoft Endpoint Manager admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
 
 8. If you’re using RHEL 8.4 or 8.5, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
+
+### Configure a break and inspect proxy
+
+After installing the Microsoft Tunnel server, you can then configure Microsoft Tunnel to work with a break and inspect proxy server that uses a self-signed certificate. To be successful, Microsoft Tunnel must be able to locate and access the certificate from the Proxy server.
+
+Configuration requires the following steps:
+
+1. The proxy server certificate must be in *PEM* format and saved to a file with a `.crt` extension.
+2. Copy the *.crt* file to the following location on the Linux host: `/etc/mstunnel/ca-trust`
+3. Re-run the installation script.
 
 ## Deploy the Microsoft Tunnel client app
 
