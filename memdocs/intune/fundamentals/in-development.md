@@ -68,9 +68,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 ### Noncompliance details available for Android (AOSP) in Microsoft Intune app<!-- 12645770 -->
 Android (AOSP) users will be able to view the reasons why devices are marked as noncompliant in the Microsoft Intune app. This information will be available in the Intune app for devices enrolled as user-associated Android (AOSP) devices.
 
-### Android strong biometric change detection<!-- 9740832 -->
-The Android **Fingerprint instead of PIN for access** setting in Intune, which allows the end-user to use [fingerprint authentication](https://developer.android.com/about/versions/marshmallow/android-6.0.html#fingerprint-authentication) instead of a PIN, is being modified. This change will allow you to require end-users to set strong biometrics, as well as require end-users to confirm their app protection policy (APP) PIN if a change in strong biometrics is detected. You can find Android app protection polices in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **App protection policies** > **Create policy** > **Android**.
-
 ### New app types for Microsoft Endpoint Manager<!-- 7210233 -->
 As an admin, you will be able to create and assign two new types of Intune apps:
 - **iOS/iPadOS web clip** 
