@@ -6,7 +6,7 @@ items:
   items:
   - name: Microsoft Endpoint Manager overview
     href: endpoint-manager-overview.md
-  - name: Getting started with Microsoft Endpoint Manager
+  - name: Get started with Microsoft Endpoint Manager
     href: endpoint-manager-getting-started.md
 
 - name: Become cloud native
@@ -44,9 +44,10 @@ items:
   - name: Use Windows Autopilot
     href: ./autopilot/
 
-- name: You can manage your identities, your devices, and your apps
+- name: Use Endpoint Manager to manage your identities, devices, and apps
   items:
   - name: Manage and secure your identities
     href: manage-identities.md
   - name: Manage devices and control features
-  - name: Manage apps and protect their data
+    href: manage-devices.md
+  - name: Manage apps and protect their data (not written)
