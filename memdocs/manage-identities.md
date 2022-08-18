@@ -38,11 +38,13 @@ Managing and protecting user identities is a significant part of any endpoint ma
 
 Admins have to manage account membership, authorize and authenticate access to resources, manage settings that affect user identities, and secure & protect the identities from malicious intent.
 
-Endpoint Manager can do all these tasks, and more. Endpoint Manager includes Microsoft Intune, which is a cloud-based service that can manage user identities through policy, including security and authentication policies. From a service perspective, Endpoint Manager uses Azure Active Directory (AD) for identity storage and permissions. Using the Microsoft Endpoint Manager admin center, you can manage these tasks in a central location designed for endpoint management.
+Endpoint Manager can do all these tasks, and more. Endpoint Manager includes Microsoft Intune, which is a cloud-based service that can manage user identities through policy, including security and authentication policies.
+
+From a service perspective, Endpoint Manager uses Azure Active Directory (AD) for identity storage and permissions. Using the [Microsoft Endpoint Manager admin center](./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md), you can manage these tasks in a central location designed for endpoint management.
 
 This article discusses concepts and features you should consider when managing your identities in endpoint management.
 
-## Concept: Use your existing users and groups
+## Use your existing users and groups
 
 A large part of managing endpoints is managing users and groups. If you have existing users and groups or will create new users and groups, Endpoint Manager can help.
 
@@ -78,7 +80,7 @@ These machine accounts are local to the on-premises environment and can't be use
 
 For more information and guidance, go to [Known issues and limitations with cloud-native endpoints](cloud-native-endpoints-known-issues.md).
 
-## Concept: Roles and permissions control access
+## Roles and permissions control access
 
 Endpoint Manager uses role-based access control (RBAC). The roles you assign determine who has access to your organization's resources and what they can do with those resources. The Endpoint Manager admin center includes some built-in roles focused on endpoint management, such as Application Manager, Policy and Profile Manager, and more.
 
@@ -88,7 +90,7 @@ Each role has its own create, read, update or delete permissions as needed. You 
 
 For more information, go to [Role-based access control (RBAC) with Microsoft Intune](./intune/fundamentals/role-based-access-control.md)
 
-## Concept: Create user affinity when devices enroll
+## Create user affinity when devices enroll
 
 When users sign into their devices the first time, the device becomes associated with that user. This feature is called user affinity.
 
@@ -100,7 +102,7 @@ In Endpoint Manager, you can create policies for both scenarios on Android, iOS/
 
 For more specific information, go to [Deployment guide: Enroll Windows devices in Microsoft Intune](./intune/fundamentals/deployment-guide-enrollment-windows.md).
 
-## Concept: Assign policies to users and groups
+## Assign policies to users and groups
 
 On-premises, you work with domain accounts and local accounts, and then deploy group policies and permissions to these accounts at the local, site, domain, or OU level (LSDOU). An OU policy overwrites a domain policy, a domain policy overwrites a site policy, and so on.
 
@@ -113,7 +115,7 @@ For more information on policies in Endpoint Manager:
 - [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](./intune/configuration/settings-catalog.md)
 - [Common questions and answers with device policies and profiles in Microsoft Intune](./intune/configuration/device-profile-troubleshoot.md)
 
-## Concept: Secure your user identities
+## Secure your user identities
 
 Your user and group accounts access organization resources. You need to keep these identities secure and prevent malicious access to the identities. Here are some things to consider:
 

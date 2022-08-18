@@ -40,11 +40,11 @@ Enter Endpoint Manager. Endpoint Manager includes Microsoft Intune, which is a c
 
 The goal of any organization that's managing devices is to secure devices and the data they access. This task includes organization-owned devices and personally owned devices that access your organization resources.
 
-From a service perspective, Endpoint Manager uses Azure Active Directory (AD) for device storage and permissions. Using the Microsoft Endpoint Manager admin center, you can manage device tasks and policies in a central location designed for endpoint management.
+From a service perspective, Endpoint Manager uses Azure Active Directory (AD) for device storage and permissions. Using the [Microsoft Endpoint Manager admin center](./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md), you can manage device tasks and policies in a central location designed for endpoint management.
 
 This article discusses concepts and features you should consider when managing your devices in endpoint management.
 
-## Concept: Manage organization owned and personal devices
+## Manage organization owned and personal devices
 
 Many organizations allow personally owned devices to access organization resources, including email, attend meetings, and so on. There are different options available and these options depend on how strict your organization is.
 
@@ -57,7 +57,7 @@ For more information and guidance, go to:
 - [Microsoft Intune planning guide](./intune/fundamentals/intune-planning-guide.md)
 - [Deployment guide: Setup or move to Microsoft Intune](./intune/fundamentals/deployment-guide-intune-setup.md)
 
-## Concept: Use your existing devices and use new devices
+## Use your existing devices and use new devices
 
 You can manage new devices and existing devices. Endpoint Manager supports Android, iOS/iPadOS, macOS, and Windows devices.
 
@@ -77,7 +77,7 @@ For more specific information by platform, go to:
 - [macOS platform deployment guide](./intune/fundamentals/deployment-guide-platform-macos.md)
 - [Windows enrollment deployment guide](./intune/fundamentals/deployment-guide-enrollment-windows.md)
 
-## Concept: Check the compliance health of your devices
+## Check the compliance health of your devices
 
 Device compliance is a significant part of managing devices. Your organization will want to set password/PIN rules and check for security features on these devices. You'll want to know which devices don't meet your rules. This task is where compliance comes in.
 
@@ -91,7 +91,7 @@ For more information, go to:
 - [Monitor results of your device compliance policies](./intune/protect/compliance-policy-monitor.md)
 - [Learn about Conditional Access and Intune](./intune/protect/conditional-access.md)
 
-## Concept: Control device features and assign policies to device groups
+## Control device features and assign policies to device groups
 
 All devices have features that you can control and manage using policies. For example, you can block the built-in camera, allow Bluetooth pairing, manage the power button, and more.
 
@@ -111,19 +111,19 @@ For more information, go to:
 - [Windows device settings to run as a dedicated kiosk using Intune](./intune/configuration/kiosk-settings.md)
 - [Control access, accounts, and power features on shared PC or multi-user devices using Intune](./intune/configuration/shared-user-device-settings.md)
 
-## Concept: Secure devices
+## Secure your devices
 
 To help secure your devices, you can install antivirus, scan & react to malicious activity, and enable security features.
 
 Some common security features include:
 
-- Endpoint Manager **integrates with Mobile Threat Defense** (MTD) partners to help protect organization owned devices and personally owned devices. These MTD services scan the devices and can help remediate vulnerabilities.
+- **Integrate with Mobile Threat Defense** (MTD) partners to help protect organization owned devices and personally owned devices. These MTD services scan the devices and can help remediate vulnerabilities.
 
   The MTD partners support different platforms, including Android, iOS/iPadOS, macOS, and Windows.
 
   For more specific information, go to [Mobile Threat Defense integration with Intune](./intune/protect/mobile-threat-defense.md)
 
-- If your organization uses Windows devices, you can use **Security Baselines**, which are pre-configured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
+- **Use Security Baselines** on your Windows devices. Security baselines are pre-configured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
 
   If you're not sure where to start, then look at Security Baselines and the built-in guided scenarios.
 
@@ -132,14 +132,14 @@ Some common security features include:
   - [Use security baselines to configure Windows devices in Intune](./intune/protect/security-baselines.md)
   - [Guided scenarios overview](./intune/fundamentals/guided-scenarios-overview.md)
 
-- Using policy, you can also manage software updates, encrypt hard disks, configure built-in firewalls, and more.
+- **Manage software updates, encrypt hard disks, configure built-in firewalls**, and more using built-in policy settings.
 
   For more information, go to:
 
   - [Manage endpoint security in Microsoft Intune](./intune/protect/endpoint-security.md)
   - [Manage device security with endpoint security policies in Microsoft Intune](./intune/protect/endpoint-security-policy.md).
 
-- Using the Endpoint Manager admin center, you **can remotely lock, restart, locate a lost device, restore a device to its factory settings, and more**. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
+- **Manage devices remotely** using the Endpoint Manager admin center. You can remotely lock, restart, locate a lost device, restore a device to its factory settings, and more. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
 
   For more information, go to [Remote actions in Endpoint Manager](./intune/remote-actions/device-management.md).
 
