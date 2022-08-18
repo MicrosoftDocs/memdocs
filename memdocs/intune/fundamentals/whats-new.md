@@ -274,7 +274,7 @@ In **Reports** > **Device Compliance** > **Reports**, there's a new **Noncomplia
 - Lists each noncompliant device.
 - For each noncompliant device, it shows the compliance policy settings that the devices aren't compliant with.
 
-For more information on this report, go to [Noncompliant devices report (Operational)](reports.md#noncompliant-devices-and-settings-report-organizational).
+For more information on this report, go to [Noncompliant devices and settings report (Organizational)](reports.md#noncompliant-devices-and-settings-report-organizational).
 
 ## Week of August 1, 2022
 
