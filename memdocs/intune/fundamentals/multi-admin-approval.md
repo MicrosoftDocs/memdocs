@@ -53,7 +53,7 @@ To be an approver, an account must be in the group that’s assigned to the acce
 **When an admin edits** or creates a new object for an area that’s protected by an access policy, they see an option on the *Save + Review* surface where they can enter a description of the change as a *business justification*.
 
 - The *business justification* becomes part of the approval request for the change.
-- An admin who has submitted a change can view the status of their requests in the Microsoft Endpoint Manager admin center by going to **Tenant administration** > **Multi Admin Approval** and viewing the **My request** page.
+- An admin who has submitted a change can view the status of their requests in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) by going to **Tenant administration** > **Multi Admin Approval** and viewing the **My request** page.
 
 **After a change is submitted**, an *approver* navigates to the **Received request** page of the **Multi Admin Approval** node. Here they’ll see a list of requests that are active, or recently managed. This view provides some details about the request including when and who submitted it, the type of operation involved like *Create* or *Assign*, and its status. To manage the request:
 
@@ -63,11 +63,11 @@ To be an approver, an account must be in the group that’s assigned to the acce
 
 **If a change is approved**, Intune processes the requested change and updates the object. While Intune processes the request, its status can display as **Approved**. After it’s successfully processed, the status updates to **Completed**.
 
-**Each change of status** remains visible for up to 30 days after the last change of status. If a request isn’t processed further withing 30 days, it becomes **Expired**, and must be resubmitted.
+**Each change of status** remains visible for up to 30 days after the last change of status. If a request isn’t processed further within 30 days, it becomes **Expired**, and must be resubmitted.
 
 ## Create an access policy
 
-1. To create an access policy, in the Microsoft Endpoint Manager admin center, go to **Tenant administration** > **Multi Admin Administration** > **Access policies** and select **Create**.
+1. To create an access policy, in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), go to **Tenant administration** > **Multi Admin Administration** > **Access policies** and select **Create**.
 
 2. On the *Basics* page, provide a *Name*, and optional *Description*, and for *Profile type* select from available options. Each policy supports a single profile type.
 
@@ -85,13 +85,13 @@ On the final page before you can save your changes, add details to the *Business
 
 When there's a request for the same object that is already pending approval, you won't be able to submit your request. Intune displays a message to alert you to this situation.
 
-To monitor the status of your requests, in the Microsoft Endpoint Manager admin center go to **Tenant administration** > **Multi Admin Approval** > **My requests**.
+To monitor the status of your requests, in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) go to **Tenant administration** > **Multi Admin Approval** > **My requests**.
 
 You can cancel a request before it’s approved by selecting it from the My requests page, and then selecting **Cancel request**.
 
 ## Approve requests
 
-1. To find requests to approve, in the Microsoft Endpoint Manager admin center go to **Tenant administration** > **Multi Admin Administration** > **Received requests**.
+1. To find requests to approve, in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/) go to **Tenant administration** > **Multi Admin Administration** > **Received requests**.
 
 2. Select the *Business justification* link for a request to open the review page where you can learn more about the request, and manage approval or rejection. 
 
