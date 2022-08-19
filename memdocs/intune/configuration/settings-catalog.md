@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/26/2022
+ms.date: 08/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -40,6 +40,8 @@ This feature applies to:
 - **iOS/iPadOS**
 
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
+
+  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/ios-user-enrollment.md), you're automatically using DDM. If DDM doesn't work for any reason, then these devices use Apple’s standard MDM protocol. All other iOS/iPadOS devices continue to use Apple’s standard MDM protocol.
 
 - **macOS**
 
