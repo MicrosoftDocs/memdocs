@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/18/2022
+ms.date: 08/26/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of August 22, 2022
+
+### Monitor and troubleshoot
+
+#### Open Help and Support without losing your context in the Microsoft Endpoint Manager admin center<!-- 12469338 -->
+
+You can now use the **?** icon in the Microsoft Endpoint Manager admin center to open a [help and support](../../get-support.md) session without losing your current node of focus in the admin center. The **?** icon is always available in the upper right of the title bar of the admin center. This change adds an additional method for accessing *Help and support*.
+
+When you select **?**, the admin center opens the help and support view in a new and separate side-by-side pane. By opening this separate pane, you’ll be free to navigate the support experience without affecting your original location and focus on the admin center.
 
 ## Week of August 15, 2022 (Service release 2208)
 
