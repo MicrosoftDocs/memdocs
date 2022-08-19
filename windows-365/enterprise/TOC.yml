@@ -198,7 +198,7 @@ items:
     - name: Azure network connection health checklist
       href: health-checks.md
     - name: Remote Desktop client
-      href: /azure/virtual-desktop/troubleshoot-client??toc=/windows-365/enterprise/toc.json&bc=/windows-365/breadcrumb/toc.json
+      href: /azure/virtual-desktop/troubleshoot-client?toc=/windows-365/enterprise/toc.json&bc=/windows-365/breadcrumb/toc.json
     - name: Connection errors
       href: connection-errors.md
     - name: Provisioning errors
