@@ -89,7 +89,7 @@ Scan the QR code from the enrollment profile to enroll devices running Android 8
 
 ## Enroll by using Google Zero Touch 
 
-To use this method, zero-touch enrollment must be supported on devices and affiliated with a supplier that is part of the Android zero-touch enrollment service. For more information, such as prerequisites, where to purchase devices, and how to associate a Google Account with your corporate email, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005)(opens Android Enterprise Help). 
+To use this method, zero-touch enrollment must be supported on devices and affiliated with a supplier that is part of the Android zero-touch enrollment service. For more information, such as prerequisites, where to purchase devices, and how to associate a Google Account with your corporate email, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005) (opens Android Enterprise Help docs). 
 
 This section describes how to:    
 * Create a zero-touch configuration in the admin center 
@@ -162,7 +162,7 @@ Add a zero-touch configuration in the Google zero-touch enrollment portal. You c
             "com.google.android.apps.work.clouddpc.EXTRA_ENROLLMENT_TOKEN": "YourEnrollmentToken"
  6. Enter your organization's name and support information, which is shown on screen while users set up their devices.   
  
-For more information about how to assign a default configuration or apply a configuration in the zero-touch portal, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005)(opens Android Enterprise Help).  
+For more information about how to assign a default configuration or apply a configuration in the zero-touch portal, see [Zero-touch enrollment for IT admins](https://support.google.com/work/android/answer/7514005) (opens Android Enterprise Help docs).  
 
 ## Enroll by using Knox Mobile Enrollment
 To use Samsung's Knox Mobile Enrollment, the device must be running Android OS version 8.0 or later and Samsung Knox 2.8 or higher. For more information, learn [how to automatically enroll your devices with Knox Mobile Enrollment](./android-samsung-knox-mobile-enroll.md).  
