@@ -58,6 +58,9 @@ To enable the Company Portal to update automatically and provide the Company Por
 
 For **"Device Staging"** scenario, which is used to transition a device without user affinity, to a device with user affinity. In addition to the Company portal VPP deployment, an [application configuration policy](https://docs.microsoft.com/en-us/mem/intune/apps/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment) needs to be deployed, but make sure the policy only targets those ADE devices without user affinity.
 
+> [!IMPORTANT]
+> Important: When the enrollment profile has **"Install Company Portal"** set to yes, Intune pushes the application configuration policy settings under **["Use the Company Portal on an Automated Device Enrollment (ADE) device enrolled with user affinity"]**(https://docs.microsoft.com/en-us/mem/intune/apps/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment) automatically as part of the initial enrollment. This configuration should not be deployed manually to users as this will cause a conflict with the payload already sent during enrollment, resulting on end-users being asked to download a new management profile after signing in to Company Portal (when they shouldn't, because there is a management profile already installed on these devices).
+
 ## What is supervised mode?
 
 Apple introduced supervised mode in iOS/iPadOS 5. An iOS/iPadOS device in supervised mode provides more management control, like blocking of screen captures and blocking of the installation of apps from App Store. So it's especially useful for corporate-owned devices. Intune supports configuring devices for supervised mode as part of ADE.
