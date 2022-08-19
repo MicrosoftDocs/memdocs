@@ -49,14 +49,14 @@ If you experience sync problems during the enrollment process, you can look for 
 
 ADE enrollments aren't compatible with the App Store version of the Company Portal app. You can give users access to the Company Portal app on an ADE device. You might want to provide this access for one of the following reasons:
 - To let users choose which corporate apps they want to use on their devices 
-- To use modern authentication to complete the enrollment process
 - To provide a staged enrollment in which the device is enrolled and receives device policies before users authenticate in Company Portal
 
-To enable modern authentication during enrollment, push the app to the device by using **Install Company Portal with VPP** (Volume Purchase Program) in the ADE profile. For more information, see [Automatically enroll iOS/iPadOS devices with Apple's ADE](device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile).
+To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE (this is regardless of the authentication type selected), **deploy the Company Portal app** through Intune as a required VPP app with [device licensing](https://docs.microsoft.com/en-us/mem/intune/apps/vpp-apps-ios#how-are-purchased-apps-licensed), additionally make sure the VPP token has **"Automatic App Update"** set to Yes. 
 
-To enable the Company Portal to update automatically and provide the Company Portal app on devices already enrolled with ADE, deploy the Company Portal app through Intune as a required VPP app with an [application configuration policy](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment) applied. Deploy the Company Portal app in this way to enable Device Staging for devices only without user affinity. With Device Staging, a device is fully enrolled and receives device policies before the addition of a user affinity. Device Staging can also be used to transition a device without user affinity, to a device with user affinity.
+> [!NOTE]
+> Not doing so, will cause these devices to eventually have an unsupported/outdated Company Portal app version, because the app deployment done thru the enrollment profile is a one-time push at the moment of enrollment.
 
-Specifically for the authentication method Setup Assistant with modern authentication, do not separately deploy the Company Portal app as a client app, with or without an app config targeted to it. ADE devices enrolling with Setup Assistant with modern authentication should be excluded from any separate Company Portal targeting in the tenant. The Company Portal is sent as a required app automatically when Setup Assistant with modern authentication is chosen as the authentication method in the assigned enrollment profile. 
+For **"Device Staging"** scenario, which is used to transition a device without user affinity, to a device with user affinity. In addition to the Company portal VPP deployment, an [application configuration policy](https://docs.microsoft.com/en-us/mem/intune/apps/app-configuration-policies-use-ios#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment) needs to be deployed, but make sure the policy only targets those ADE devices without user affinity.
 
 ## What is supervised mode?
 
