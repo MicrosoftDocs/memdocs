@@ -117,6 +117,8 @@ items:
         href: set-conditional-access-policies.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
+      - name: Enable screen capture protection
+        href: /azure/virtual-desktop/screen-capture-protection?context=/windows-365/context/pr-context
     - name: Apps
       items:
       - name: App overview
