@@ -225,7 +225,7 @@ Apple's Automated Device Enrollments are not compatible with the app store versi
     - **Use the Company Portal on an Automated Device Enrollment (ADE) device enrolled with user affinity**: 
     
         > [!NOTE]
-        > This process is not needed for iOS/iPadOS devices enrolling with ADE through Setup Assistant with modern authentication. Also, this is not needed for devices enrolling with ADE with user affinity if a VPP token is being used to send the Company Portal app to the device.
+        > When the enrollment profile has **"Install Company Portal"** set to yes, Intune pushes the application configuration policy below automatically as part of the initial enrollment process. This configuration should not be deployed manually to users or devices as this will cause a conflict with the payload already sent during enrollment, resulting on end-users being asked to download a new management profile after signing in to Company Portal (when they shouldn't, because there is a management profile already installed on these devices).
 
         ``` xml
         <dict>
