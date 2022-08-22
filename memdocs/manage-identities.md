@@ -151,4 +151,4 @@ Your user and group accounts access organization resources. You need to keep the
 ## Next steps
 
 - [Manage devices](manage-devices.md)
-- Manage apps
+- [Manage apps](manage-apps.md)

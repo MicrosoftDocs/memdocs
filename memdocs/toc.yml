@@ -50,4 +50,5 @@ items:
     href: manage-identities.md
   - name: Manage devices and control features
     href: manage-devices.md
-  - name: Manage apps and protect their data (not written)
+  - name: Manage apps and protect their data
+    href: manage-apps.md
