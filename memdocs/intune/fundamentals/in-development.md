@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 08/19/2022
+ms.date: 08/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -76,6 +76,14 @@ These new app types work in a similar way to the existing **web link** applicati
 
 ## Device management
 
+### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->
+We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*.
+
+With this new setting, you’ll be able to configure inbound and outbound rules for [Internet Control Message Protocol](/windows/security/threat-protection/windows-firewall/create-an-inbound-icmp-rule) (ICMP) as part of a firewall rule.
+
+Applies to:  
+- Windows 10, Windows 11, and Windows Server
+
 ### Intune moving to support iOS/iPadOS 14 and higher later this year<!-- 14778947 -->
 Later this year, Apple is expected to release iOS/iPadOS 16. Due to this expected release, Microsoft Intune and the Intune Company Portal will require iOS/iPadOS 14 and higher shortly after the release of iOS/iPad 16. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
 
@@ -85,6 +93,80 @@ With Apple's expected release of macOS 13 Ventura later this year, Microsoft Int
 <!-- ***********************************************-->
 
 ## Device configuration
+
+### Filter app and group policy assignments using Windows 11 SE operating system SKUs<!-- 10588651 -->
+When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
+
+Two new Windows 11 SE operating system SKU's will added. You'll be able to use these SKUs in your assignment filters to include or exclude Windows 11 SE devices from applying group-targeted policies and applications.
+
+For more information on filters and the device properties you can currently use, go to:
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md)
+- [Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager](filters-device-properties.md)
+
+Applies to:
+- Windows 11 SE
+
+### New lock screen message when adding custom support information to Android Enterprise devices<!-- 13158348 -->
+On Android Enterprise devices, you can create a device restrictions configuration profile that shows a custom support message on the devices. You'll be able to configure this in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type > **Custom support information**.
+
+There will be a new setting you can configure:
+- **Lock screen message**: Add a message that's shown on the device lock screen. 
+
+When you configure the **Lock screen message**, you can also use the following device tokens to show device-specific information:
+
+- `{{AADDeviceId}}`: Azure AD device ID
+- `{{AccountId}}`: Intune tenant ID or account ID
+- `{{DeviceId}}`: Intune device ID
+- `{{DeviceName}}`: Intune device name
+- `{{domain}}`: Domain name
+- `{{EASID}}`: Exchange Active Sync ID
+- `{{IMEI}}`: IMEI of the device
+- `{{mail}}`: Email address of the user
+- `{{MEID}}`: MEID of the device
+- `{{partialUPN}}`: UPN prefix before the @ symbol
+- `{{SerialNumber}}`: Device serial number
+- `{{SerialNumberLast4Digits}}`: Last 4 digits of the device serial number
+- `{{UserId}}`: Intune user ID
+- `{{UserName}}`: User name
+- `{{userPrincipalName}}`: UPN of the user
+
+> [!NOTE]
+> Variables aren't validated in the UI and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}`, instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
+
+To see a list of settings you can currently configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+- Android 7.0 and newer
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+- Android Enterprise corporate owned work profile (COPE)
+
+### New password complexity requirements for Android Enterprise 12+ personally owned devices with a work profile<!-- 12436068 -->
+On Android Enterprise 11 and older personally owned devices with a work profile, you can set the **Required password type** and a **Minimum password length** in device configuration profiles and compliance policies.
+
+Google is deprecating these features for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+
+The new **Password complexity** setting will have the following options:
+
+- **Not configured**: Intune doesn't change or update this setting. By default, the OS may not require a password.
+- **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+- **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
+- **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+
+If you currently use the **Required password type** and **Minimum password length** settings in your device configuration and compliance policies on Android 12+, then we recommend using the new **Password complexity** setting instead.
+
+If you continue to use the **Required password type** and **Minimum password length** settings, and don't configure the **Password complexity** setting, then new devices running Android 12+ will default to the **High** password complexity.
+
+There is no impact for existing devices with the **Required password type** and **Minimum password length** settings configured.
+
+For more information on the existing settings you can configure, go to:
+
+- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-for-work.md#personally-owned-devices-with-a-work-profile)
+- [Android Enterprise personally owned devices with a work profile - compliance policy settings list](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
+
+Applies to:
+- Android 12.0 and newer
+- Android Enterprise personally owned devices with a work profile
 
 ### Filter on the user scope or device scope in the Settings Catalog for Windows devices<!-- 13949975 -->
 When you create a Settings Catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings Catalog (preview)** for profile type).
@@ -101,9 +183,29 @@ Applies to:
 
 ## Device security
 
-### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009514 -->
+### Trend Micro – new Mobile Threat Defense (MTD) partner<!--11017779 -->
+You’ll soon be able to use Trend Micro as an integrated Mobile Threat Defense (MTD) partner with Intune. To connect Trend Micro, you’ll configure the Trend Micro MTD connector in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**.
+
+With Trend Micro as a MTD partner, you’ll be able to control mobile device access to your organization’s resources using conditional access that’s based on risk assessment.
+
+Applies to:  
+- Android Enterprise
+- iOS/iPadOS
+
+### Reusable groups of settings for removable storage in Device Control profiles<!-- 7351534 -->
+You’ll soon be able to add reusable groups of settings to your profiles for device control profiles in your attack surface reduction policies. To configure device control profiles, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** >**Attack surface reduction** > **Create Policy** > Platform: *Windows 10 and later* > Profile: *Device Control*.
  
-You’ll soon be able to add reusable groups of settings to your profiles for Microsoft Defender Firewall Rules. The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
+The reusable groups for device control profiles will include a collection of settings that support managing *read*, *write*, and *execute* access for removable storage. Examples of common scenarios include:
+
+- Prevent write and execute access to all but allow specific approved USBs
+- Audit write and execute access to all but block specific unapproved USBs
+- Only allow specific user groups to access specific removable storage on a shared PC
+
+Applies to:  
+- Windows 10 or later
+
+### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009541 -->
+ You’ll soon be able to add reusable groups of settings to your profiles for Microsoft Defender Firewall Rules. The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
 
 Features of the reusable settings groups will include:  
 - Add one or more remote IP addresses.  
