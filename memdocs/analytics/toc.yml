@@ -28,7 +28,7 @@ items:
   - name: Work from anywhere
     href: work-from-anywhere.md
   - name: Endpoint analytics in Microsoft Productivity Score
-    href: productivity-score.md
+    href: adoption-score.md
 - name: How-to guides
   items:
   - name: Manage settings
