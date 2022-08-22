@@ -76,16 +76,16 @@ These new app types work in a similar way to the existing **web link** applicati
 
 ## Device management
 
-###  Support for Locate device on fully-managed (COBO) and corporate-owned work profile (COPE) devices<!-- 12391424 -->
-You'll be able to use "Locate device" on fully-managed (COBO) and corporate-owned work profile (COPE) devices. Using this feature, admins will be able to locate lost or stolen corporate devices on-demand. To do this, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
+###  Support for Locate device on fully-managed and corporate-owned work profile devices<!-- 12391424 -->
+You'll be able to use "Locate device" on fully-managed and corporate-owned work profile devices. Using this feature, admins will be able to locate lost or stolen corporate devices on-demand. To do this, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
 
 For information on locating lost or stolen devices with Intune, go to [Locate lost or stolen devices with Intune](../remote-actions/device-locate.md).
 
 Applies to:
 - Android Enterprise:
-  - Corporate-owned work profile (COPE)
-  - Fully managed (COBO)
-  - Dedicated (COSU)
+  - Corporate-owned work profile
+  - Fully managed
+  - Dedicated
 
 ### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->
 We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*.
@@ -148,9 +148,9 @@ To see a list of settings you can currently configure, go to [Android Enterprise
 
 Applies to:
 - Android 7.0 and newer
-- Android Enterprise corporate owned fully managed (COBO)
-- Android Enterprise corporate owned dedicated devices (COSU)
-- Android Enterprise corporate owned work profile (COPE)
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
+- Android Enterprise corporate owned work profile
 
 ### New password complexity requirements for Android Enterprise 12+ personally owned devices with a work profile<!-- 12436068 -->
 On Android Enterprise 11 and older personally owned devices with a work profile, you can set the **Required password type** and a **Minimum password length** in device configuration profiles and compliance policies.
