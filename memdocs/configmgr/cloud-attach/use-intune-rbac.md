@@ -29,6 +29,11 @@ The three high-level steps to configure Intune as the role-based access control 
 - From Intune, [enable managing the user permissions](#bkmk_enable-intune) for cloud-attached devices
 - From Intune, [verify role-based access control permissions](#bkmk_verify-intune-rbac) for cloud-attached devices
 
+## Prerequisites
+
+- Configuration Manager version 2207 or later
+- [Tenant attached devices](../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
+
 ## Limitations
 
 - Currently [scoping](../../intune/fundamentals/scope-tags.md) isn't supported when using only Intune role-based access control for for displaying and taking actions on tenant-attached devices from the Microsoft Endpoint Manager admin center.
