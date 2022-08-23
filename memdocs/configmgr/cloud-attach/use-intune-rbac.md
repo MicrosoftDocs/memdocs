@@ -2,7 +2,7 @@
 title: Intune role-based access control for tenant-attached devices
 titleSuffix: Configuration Manager
 description: Enable Intune role-based access control for Configuration Manager tenant-attached clients
-ms.date: 08/18/2022
+ms.date: 08/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
@@ -14,7 +14,7 @@ ms.collection: highpri
 ---
 
 # Intune role-based access control for tenant-attached clients
-<!--8126836, 6415648, 8348644, IN14996522-->
+<!--8126836, 6415648, 8348644, IN14996522, 13058986-->
 *Applies to: Configuration Manager (current branch)*
 
 Starting in Configuration Manager version 2207, you can use Intune role-based access control (RBAC) when interacting with [tenant attached devices](../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Endpoint Manager admin center. For example, when using Intune as the role-based access control authority, a user with the [Help Desk Operator role](../../intune/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. [Intune role-based access control](../../intune/fundamentals/create-custom-role.md) manages the permissions to all cloud-attached device pages in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com), such as [device timeline](../tenant-attach/timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [CMPivot](../tenant-attach/cmpivot-start.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [scripts](../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json).  
@@ -31,7 +31,8 @@ The three high-level steps to configure Intune as the role-based access control 
 
 ## Limitations
 
-Currently [scoping](../../intune/fundamentals/scope-tags.md) isn't supported when using only Intune role-based access control for for displaying and taking actions on tenant-attached devices from the Microsoft Endpoint Manager admin center.
+- Currently [scoping](../../intune/fundamentals/scope-tags.md) isn't supported when using only Intune role-based access control for for displaying and taking actions on tenant-attached devices from the Microsoft Endpoint Manager admin center.
+- Currently, the [**Software updates** page](../tenant-attach/software-updates.md) isn't available for cloud-only users when using the early update ring of Configuration Manager version 2207.  <!--15287859-->
 
 ## <a name="bkmk_disable-configmgr"></a> Disable enforcement of Configuration Manager role-based access control for cloud-attached clients
 
@@ -79,11 +80,11 @@ The following Intune permissions control access to the Configuration Manager clo
 | Cloud attached devices\View timeline | Displays the **Timeline** page for Configuration Manager cloud attached devices |  Application Manager, Endpoint Security Manager, Read Only Operator, School Administrator, Policy Profile Manager, Help Desk Operator |
 | Cloud attached devices\View software updates | Displays the **Software updates** page for Configuration Manager cloud attached devices |  Application Manager, Endpoint Security Manager, Read Only Operator, School Administrator, Help Desk Operator |
 | Cloud attached devices\View scripts | Displays the **Scripts** page for Configuration Manager cloud attached devices |  Endpoint Security Manager, Read Only Operator, School Administrator, Policy Profile Manager, Help Desk Operator |
-| Cloud attached devices\Run script | Displays the **Run script** action for Configuration Manager cloud attached devices |  School Administrator, Help Desk Operator |
+| Cloud attached devices\Run script | Displays the **Run script** action and allows the user to run scripts on Configuration Manager cloud attached devices |  School Administrator, Help Desk Operator |
 | Cloud attached devices\Run CMPivot query | Displays the **CMPivot** page for Configuration Manager cloud attached devices |  Endpoint Security Manager, School Administrator, Help Desk Operator |
 | Cloud attached devices\View client details | Displays the **Client details** page for Configuration Manager cloud attached devices |  Application Manager, Endpoint Security Manager, Read Only Operator,School Administrator, Policy Profile Manager, Help Desk Operator |
 | Cloud attached devices\View applications | Displays the **Applications** page for Configuration Manager cloud attached devices |  Application Manager, Read Only Operator, School Administrator, Policy Profile Manager, Help Desk Operator |
-| Cloud attached devices\Take application actions | Displays application actions in the **Applications** page  for Configuration Manager cloud attached devices |  Application Manager, School Administrator, Help Desk Operator |
+| Cloud attached devices\Take application actions | Displays application actions in the **Applications** page and allows the user to take application actions on Configuration Manager cloud attached devices |  Application Manager, School Administrator, Help Desk Operator |
 | Remote tasks/Rotate BitLockerKeys (preview) | Initiates a key rotation for BitLocker Recovery Passwords on the device. Displays the *Recovery keys* page for Configuration Manager cloud attached devices. |  Endpoint Security Manager, Help Desk Operator |
 
 ## <a name="bkmk_faq"></a> Frequently asked questions
