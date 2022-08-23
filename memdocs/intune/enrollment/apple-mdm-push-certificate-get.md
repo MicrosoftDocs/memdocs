@@ -66,6 +66,9 @@ Select **Download your CSR** to download and save the request file locally. The 
 7. On the confirmation page, select **Download**.  The certificate file (.pem) downloads to your device. Save this file for later.   
 
 > [!NOTE]
+> The certificate may download as a .cer file. Rename this file to .pem before uploading to Microsoft Endpoint Manager.
+
+> [!NOTE]
 > The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address as your Apple ID and make sure the mailbox is monitored by more than one person, such as by a distribution list. Avoid using a personal Apple ID.  
 
 #### Managed Apple ID  
