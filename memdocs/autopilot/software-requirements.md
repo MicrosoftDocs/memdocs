@@ -56,6 +56,7 @@ The following editions are supported: Pro, Pro Education, Pro for Workstations, 
   - Windows 10 Pro Education
   - Windows 10 Pro for Workstations
   - Windows 10 Enterprise
+  - Windows 10 Enterprise LTSC
   - Windows 10 Education
 
 > [!NOTE]
