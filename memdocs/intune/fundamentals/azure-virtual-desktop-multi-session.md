@@ -72,7 +72,6 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, whi
 - Azure AD-joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 - Licensing: The appropriate Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a Microsoft API. For more information, see Microsoft Intune licensing. 
 
-
 > [!NOTE]
 > If you're joining session hosts to Azure Active Directory Domain Services, you can't manage them using Intune.
 
