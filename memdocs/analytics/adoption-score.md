@@ -13,7 +13,7 @@ ms.localizationpriority: high
 ---
 
 # Endpoint analytics in Microsoft Adoption Score
-<!--IN8529842-->
+<!--IN8529842, MAX6471785-->
 Understanding how your devices contribute to your end user's experience is critical to any digital transformation effort. Endpoint analytics information was added to the Microsoft Adoption Score to further your understanding. The **Endpoint analytics** page in [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score) shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. The visibility and insights this provides in areas like device boot times and application reliability can help your users by highlighting potential issues within your organization. For instance, Endpoint analytics can expose a long sign-in process or issues with applications unexpectedly stopping.  
 
 ## Endpoint analytics page in the Adoption Score report
