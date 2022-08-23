@@ -105,6 +105,55 @@ With Apple's expected release of macOS 13 Ventura later this year, Microsoft Int
 
 ## Device configuration
 
+### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 15349701 -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you'll be able to find these settings by selecting **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+New settings include:
+
+**Accounts > LDAP**:
+
+- LDAP Account Description
+- LDAP Account Host Name
+- LDAP Account Password
+- LDAP Account Use SSL
+- LDAP Account User Name
+- LDAP Search Settings
+
+Applies to:
+- iOS/iPadOS
+- macOS
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**Privacy > Privacy Preferences Policy Control**:
+
+- Accessibility
+- Address Book
+- Apple Events
+- Calendar
+- Camera
+- File Provider Presence
+- Listen Event
+- Media Library
+- Microphone
+- Photos
+- Post Event
+- Reminders
+- Screen Capture
+- Speech Recognition
+- System Policy All Files
+- System Policy Desktop Folder
+- System Policy Documents Folder
+- System Policy Downloads Folder
+- System Policy Network Volumes
+- System Policy Removable Volumes
+- System Policy Sys Admin Files
+
+Applies to:
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
 ### Filter app and group policy assignments using Windows 11 SE operating system SKUs<!-- 10588651 -->
 When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
 
