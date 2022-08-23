@@ -65,8 +65,8 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 
 ## Bandwidth  
 
-  > [!NOTE]
-  > DOMaxDownloadBandwidth and DOMaxUploadBandwidth is already deprecated. These settings are not available for Windows 2004 or later. Use "DO Max Foreground Download Bandwidth" & "DO Max Background Download Bandwidth" in settings catalog instead for Windows 2004 or later.
+> [!NOTE]
+> **DOMaxDownloadBandwidth** and **DOMaxUploadBandwidth** are already deprecated. These settings are not available for Windows 2004 or later. Use "DO Max Foreground Download Bandwidth" and "DO Max Background Download Bandwidth" in the settings catalog instead for Windows 2004 or later.
 
 |Setting  |Windows version  |Details  |
 |---------|---------|---------|
