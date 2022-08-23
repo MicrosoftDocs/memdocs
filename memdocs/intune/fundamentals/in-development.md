@@ -106,6 +106,13 @@ With Apple's expected release of macOS 13 Ventura later this year, Microsoft Int
 
 <!-- ***********************************************-->
 
+## Device enrollment
+
+### Windows Autopilot diagnostics will capture ESP failures<-- 1895390 -->
+Windows Autopilot diagnostics will automatically capture diagnostics about Windows Autopilot failures that occur on the Enrollment Status Page (ESP). Diagnostics will be available to download in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+
+<!-- ***********************************************-->
+
 ## Device configuration
 
 ### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 15349701 -->
