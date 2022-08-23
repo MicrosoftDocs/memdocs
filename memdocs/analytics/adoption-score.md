@@ -2,7 +2,7 @@
 title: Endpoint analytics page in Microsoft Adoption Score
 titleSuffix: Microsoft Endpoint Manager
 description: Get details about endpoint analytics in Microsoft Adoption Score
-ms.date: 11/15/2021
+ms.date: 08/25/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
@@ -14,7 +14,7 @@ ms.localizationpriority: high
 
 # Endpoint analytics in Microsoft Adoption Score
 <!--IN8529842-->
- Understanding how your devices contribute to your end user’s experience is critical to any digital transformation effort. Endpoint analytics information was added to the Microsoft Adoption Score to further your understanding. The **Endpoint analytics** page in [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score) shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. The visibility and insights this provides in areas like device boot times and application reliability can help your users by highlighting potential issues within your organization. For instance, Endpoint analytics can expose a long sign-in process or issues with applications unexpectedly stopping.  
+Understanding how your devices contribute to your end user's experience is critical to any digital transformation effort. Endpoint analytics information was added to the Microsoft Adoption Score to further your understanding. The **Endpoint analytics** page in [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score) shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. The visibility and insights this provides in areas like device boot times and application reliability can help your users by highlighting potential issues within your organization. For instance, Endpoint analytics can expose a long sign-in process or issues with applications unexpectedly stopping.  
 
 ## Endpoint analytics page in the Adoption Score report
 
