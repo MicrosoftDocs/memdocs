@@ -76,7 +76,7 @@ Once Intune is set to the role-based access control authority, verify the permis
 1. Select **Tenant administration** > **Roles**.
 1. Select a role, such as **Application Manager**, and review the permissions listed for **Cloud attached devices**. If needed, edit permissions for any [custom roles](../../intune/fundamentals/create-custom-role.md) you created in Intune.  
 
-The following Intune permissions control access to the Configuration Manager cloud-attached devices: 
+The following Intune permissions control access to the Configuration Manager cloud-attached devices:
 
 | Permission | Description | Intune built-in roles with the permission |
 |---|---|---|
