@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 08/18/2022
+ms.date: 08/24/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -78,11 +78,11 @@ The following permissions are available when creating custom roles.
 | Cloud attached devices\View timeline | Displays the *Timeline* page for Configuration Manager cloud attached devices |
 | Cloud attached devices\View software updates | Displays the *Software updates* page for Configuration Manager cloud attached devices |
 | Cloud attached devices\View scripts | Displays the *Scripts* page for Configuration Manager cloud attached devices |
-| Cloud attached devices\Run script | Displays the *Run script* action for Configuration Manager cloud attached devices |
+| Cloud attached devices\Run script | Displays the *Run script* action and allows the user to run scripts on Configuration Manager cloud attached devices |
 | Cloud attached devices\Run CMPivot query | Displays the *CMPivot* page for Configuration Manager cloud attached devices |
 | Cloud attached devices\View client details | Displays the *Client details* page for Configuration Manager cloud attached devices |
 | Cloud attached devices\View applications | Displays the *Applications* page for Configuration Manager cloud attached devices |
-| Cloud attached devices\Take application actions | Displays application actions in the *Applications* page for Configuration Manager cloud attached devices |
+| Cloud attached devices\Take application actions | Displays application actions in the *Applications* page and allows the user to take application actions on Configuration Manager cloud attached devices |
 | Corporate device identifiers/Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. | 
 | Corporate device identifiers/Delete | Delete IMEI or serial numbers used as corporate device identifiers. | 
 | Corporate device identifiers/Read | View the IMEI or serial numbers used as corporate device identifiers. | 
