@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/16/2022
+ms.date: 08/23/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -48,6 +48,15 @@ Learn what new features are available in Windows 365 Enterprise.
 ### End user experience
 -->
 
+<!-- ########################## -->
+## Week of August 22, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Restrict Office 365 services to Cloud PCs
+
+We’ve published a new help documentation article. For more information, see [Restrict Office 365 services to Cloud PCs](restrict-office-365-cloud-pcs.md).
 
 <!-- ########################## -->
 ## Week of August 15, 2022
