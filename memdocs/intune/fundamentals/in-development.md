@@ -90,14 +90,6 @@ Applies to:
   - Fully managed
   - Dedicated
 
-### Endpoint security firewall rules support for ICMP type<!-- 5653356 -->
-We’re adding a new setting named **IcmpTypesAndCodes** to the endpoint security firewall rules template for Windows 10. To configure this in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you will select **Endpoint security** > **Firewall** > **Create Policy** > Platform: *Windows 10, Windows 11, and Windows Server*  > Profile: *Microsoft Defender Firewall Rules*.
-
-With this new setting, you’ll be able to configure inbound and outbound rules for [Internet Control Message Protocol](/windows/security/threat-protection/windows-firewall/create-an-inbound-icmp-rule) (ICMP) as part of a firewall rule.
-
-Applies to:  
-- Windows 10, Windows 11, and Windows Server
-
 ### Intune moving to support iOS/iPadOS 14 and higher later this year<!-- 14778947 -->
 Later this year, Apple is expected to release iOS/iPadOS 16. Due to this expected release, Microsoft Intune and the Intune Company Portal will require iOS/iPadOS 14 and higher shortly after the release of iOS/iPad 16. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
 
@@ -261,18 +253,6 @@ With Trend Micro as a MTD partner, you’ll be able to control mobile device acc
 Applies to:  
 - Android Enterprise
 - iOS/iPadOS
-
-### Reusable groups of settings for removable storage in Device Control profiles<!-- 7351534 -->
-You’ll soon be able to add reusable groups of settings to your profiles for device control profiles in your attack surface reduction policies. To configure device control profiles, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Endpoint security** >**Attack surface reduction** > **Create Policy** > Platform: *Windows 10 and later* > Profile: *Device Control*.
- 
-The reusable groups for device control profiles will include a collection of settings that support managing *read*, *write*, and *execute* access for removable storage. Examples of common scenarios include:
-
-- Prevent write and execute access to all but allow specific approved USBs
-- Audit write and execute access to all but block specific unapproved USBs
-- Only allow specific user groups to access specific removable storage on a shared PC
-
-Applies to:  
-- Windows 10 or later
 
 ### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009541 -->
  You’ll soon be able to add reusable groups of settings to your profiles for Microsoft Defender Firewall Rules. The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
