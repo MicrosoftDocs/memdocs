@@ -17,7 +17,7 @@ ms.localizationpriority: high
 > [!NOTE]
 > Intune requires iOS 13.x or higher for device enrollment scenarios and app configuration delivered through Managed devices app configuration policies.
 > 
-> For Intune app protection policies and app configuration delivered through Managed apps App configuration policies, Intune requires iOS 14.x or higher.
+> For Intune app protection policies and app configuration delivered through Managed apps App configuration policies, Intune requires iOS 14.x or later.
 
 ### Google
 
