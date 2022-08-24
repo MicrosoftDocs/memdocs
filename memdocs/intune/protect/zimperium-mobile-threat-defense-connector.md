@@ -119,7 +119,7 @@ When the Zimperium Mobile Threat Defense solution considers a device to be infec
 
 Access is granted on remediation:
 
-:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-remediated.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
+:::image type="content" source="./media/zimperium-mobile-threat-defense-connector/zimperium-mobile-app-policy-remediated.png" alt-text="Product flow for App protection policies to grant access after malware is remediated.":::
 
 ## Next steps
 
