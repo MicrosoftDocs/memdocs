@@ -79,13 +79,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected:*
 
-> [!div class="mx-imgBorder"]
-> ![Conceptual image of Malicious apps detected](./media/blackberry-mobile-threat-defense-connector/blackberry-malicious-apps-blocked.png)
+:::image type="content" source="./media/blackberry-mobile-threat-defense-connector/blackberry-malicious-apps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation:*
 
-> [!div class="mx-imgBorder"]
-> ![Conceptual image of access granted after remediation](./media/blackberry-mobile-threat-defense-connector/blackberry-malicious-apps-unblocked.png)
+:::image type="content" source="./media/blackberry-mobile-threat-defense-connector/blackberry-malicious-apps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
@@ -93,13 +91,11 @@ Detect threats like **Man-in-the-middle** in network, and protect access to Wi-F
 
 *Block network access through Wi-Fi:*
 
-> [!div class="mx-imgBorder"]
-> ![Block network access through Wi-Fi](./media/blackberry-mobile-threat-defense-connector/blackberry-network-wifi-blocked.png)
+:::image type="content" source="./media/blackberry-mobile-threat-defense-connector/blackberry-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation:*
 
-> [!div class="mx-imgBorder"]
-> ![Access granted on remediation](./media/blackberry-mobile-threat-defense-connector/blackberry-network-wifi-unblocked.png)
+:::image type="content" source="./media/blackberry-mobile-threat-defense-connector/blackberry-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated. ":::
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -107,13 +103,11 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 *Block SharePoint Online when network threats are detected:*
 
-> [!div class="mx-imgBorder"]
-> ![Block SharePoint Online when network threats are detected](./media/blackberry-mobile-threat-defense-connector/blackberry-network-spo-blocked.png)
+:::image type="content" source="./media/blackberry-mobile-threat-defense-connector/blackberry-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation:*
 
-> [!div class="mx-imgBorder"]
-> ![Access granted on remediation for SharePoint example](./media/blackberry-mobile-threat-defense-connector/blackberry-network-spo-unblocked.png)  
+:::image type="content" source="./media/blackberry-mobile-threat-defense-connector/blackberry-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ## Next steps
 
