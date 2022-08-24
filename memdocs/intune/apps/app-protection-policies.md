@@ -76,8 +76,8 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
 
     ![Screenshot of the Basics page of the Create policy pane](./media/app-protection-policies/app-protection-add-policies-01.png)
 
-5. Click **Next** to display the **Apps** page.<br>
-    The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. You must add at least one app.<p>
+5. Click **Next** to display the **Apps** page.\
+    The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. You must add at least one app.
 
     | Value/Option | Description |
     |:-------------|:-----------------------------------------------|
@@ -92,28 +92,28 @@ When you create an app protection policy for iOS/iPadOS and Android apps, you fo
     > [!NOTE]
     > **Public apps** are supported are apps from Microsoft and partners that are commonly used with Microsoft Intune. These Intune protected apps are enabled with a rich set of support for mobile application protection policies. For more information, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md). Custom apps are LOB apps that have been integrated with the Intune SDK or wrapped by the Intune App Wrapping Tool. For more information see [Microsoft Intune App SDK Overview](../developer/app-sdk.md) and [Prepare line-of-business apps for app protection policies](../developer/apps-prepare-mobile-application-management.md).
 
-6. Click **Next** to display the **Data protection** page.<br>
+6. Click **Next** to display the **Data protection** page.
     This page provides settings for data loss prevention (DLP) controls, including cut, copy, paste, and save-as restrictions. These settings determine how users interact with data in the apps that this app protection policy applies.​
 
-    **Data protection settings**:<br>
+    **Data protection settings**:\
     - **iOS/iPadOS data protection** - For information, see [iOS/iPadOS app protection policy settings - Data protection](app-protection-policy-settings-ios.md#data-protection).
     - **Android data protection** - For information, see [Android app protection policy settings - Data protection](app-protection-policy-settings-android.md#data-protection).
 
-7. Click **Next** to display the **Access requirements** page.<br>
+7. Click **Next** to display the **Access requirements** page.\
     This page provides settings to allow you to configure the PIN and credential requirements that users must meet to access apps in a work context.
 
-    **Access requirements settings**:<br>
+    **Access requirements settings**:\
     - **iOS/iPadOS access requirements** - For information, see [iOS/iPadOS app protection policy settings - Access requirements](app-protection-policy-settings-ios.md#access-requirements).
     - **Android access requirements** - For information, see [Android app protection policy settings - Access requirements](app-protection-policy-settings-android.md#access-requirements).
 
-8. Click **Next** to display the **Conditional launch** page.<br>
+8. Click **Next** to display the **Conditional launch** page.\
     This page provides settings to set the sign-in security requirements for your app protection policy. Select a **Setting** and enter the **Value** that users must meet to sign in to your company app. Then select the **Action** you want to take if users do not meet your requirements. In some cases, multiple actions can be configured for a single setting.
 
-    **Conditional launch settings**:<br>
+    **Conditional launch settings**:\
     - **iOS/iPadOS conditional launch** - For information, see [iOS/iPadOS app protection policy settings - Conditional launch](app-protection-policy-settings-ios.md#conditional-launch).
     - **Android conditional launch** - For information, see [Android app protection policy settings - Conditional launch](app-protection-policy-settings-android.md#conditional-launch).
 
-9. Click **Next** to display the **Assignments** page.<br>
+9. Click **Next** to display the **Assignments** page.\
    The **Assignments** page allows you to assign the app protection policy to groups of users. You must apply the policy to a group of users to have the policy take effect.
 
 10. Click **Next: Review + create** to review the values and settings you entered for this app protection policy.
@@ -143,13 +143,13 @@ To see the effect of the changes immediately, the end user must sign out of the 
 
 3. Next to the section titled *Apps*, select **Edit**.
 
-4. The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. You must add at least one app.<p>
+4. The **Apps** page allows you to choose how you want to apply this policy to apps on different devices. You must add at least one app.
     
     | Value/Option | Description |
     |:-------------|:-----------------------------------------------|
     | Target to apps on all devices types | Use this option to target your policy to apps on devices of any management state. Choose **No**  to target apps on specific devices types. Additional app configuration may be required for this setting. For more information, see [Target app protection policies based on device management state](#target-app-protection-policies-based-on-device-management-state). |
     |     Device types | Use this option to specify whether this policy applies to MDM managed devices or unmanaged devices. For iOS/iPadOS APP policies, select from **Unmanaged** and **Managed** devices. For Android APP policies, select from **Unmanaged**, **Android device administrator**, and **Android Enterprise**.  |
-    | Public apps | In the **Target policy to** dropdown box, choose to target your app protection policy to **All public apps**, **Microsoft Apps**, or **Core Microsoft Apps**. Next, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy.<p>If needed, you can choose to target individual apps by clicking **Select public apps**.  |
+    | Public apps | In the **Target policy to** dropdown box, choose to target your app protection policy to **All public apps**, **Microsoft Apps**, or **Core Microsoft Apps**. Next, you can select **View a list of the apps that will be targeted** to view a list of the apps that will be affected by this policy.<p>If needed, you can choose to target individual apps by clicking **Select public apps**. </p> |
     | Custom apps | Click **Select custom apps** to select custom apps to target based on a Bundle ID. |
 
     The app(s) you have selected will appear in the public and custom apps list.
