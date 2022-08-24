@@ -69,7 +69,7 @@ The Remote help app supports the following capabilities:
 ## Prerequisites
 
 - [Intune subscription](../fundamentals/licenses.md)
-- Remote help add-on license for all IT support workers (helpers) and users (https://aka.ms/PremiumAddOnsDocs)
+- Remote help add-on license for all IT support workers (helpers) and users (sharers) (https://aka.ms/PremiumAddOnsDocs)
 - Windows 10/11
 - The remote help app for Windows. See [Install and update remote help](#install-and-update-remote-help)
 
@@ -191,10 +191,13 @@ To configure your tenant to support remote help, review and complete the followi
 
 2. On the **Settings** tab:
    1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Enabled*.
-   2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting *Disabled*.
+   2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting is *Disabled*.
 
 3. Select **Save**.
 
+> [!NOTE] 
+> When you purchase licenses or start a trial, it could take a while to become active (anywhere between 30 minutes to 8 hours). 
+> When you try to create a Remote help session you may continue to see messages indicating that Remote help isn't enabled for the tenant even if you enabled Remote help in the tenant after activation. 
 ### Task 2 – Configure permissions for remote help
 
 The following Intune RBAC permissions manage the use of the remote help app. Set each to *Yes* to grant the permission:

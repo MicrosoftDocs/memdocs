@@ -17,10 +17,14 @@ ms.topic: article
 
 # Windows Autopilot: What's new
 
+## Updates to Autopilot device targeting infrastructure
+
+With Intune 2208 we are updating the Autopilot infrastructure to ensure that the profiles and applications assigned are consistently ready when the devices are deployed. This change reduces the amount of data that needs to be synchronized per-Autopilot device and leverages device lifecycle change events to reduce the amount of time that it takes to recover from device resets for Azure AD and Hybrid Azure AD joined devices. No action is needed to enable this change, it will be rolling out to all clients starting August 2022.
+
 ## Update Intune Connector for Active Directory for Hybrid Azure AD joined devices
 <!-- 2209 -->
 
-Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) will require .NET Framework version 4.7.2 or later. If you're not already using .NET 4.7.2 or later, the Intune Connector may not work for Autopilot hybrid Azure AD deployments and will result in failures. When you install a new Intune Connector, don't use the connector installation package that was previously downloaded. Download a new version from the **Intune Connector for Active Directory** section of the Microsoft Endpoint Manager admin center. If you're not using the latest version, it may continue to work, but the auto-upgrade feature to provide updates to the Intune Connector won't work.
+Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) will require .NET Framework version 4.7.2 or later. If you're not already using .NET 4.7.2 or later, the Intune Connector may not work for Autopilot hybrid Azure AD deployments and will result in failures. When you install a new Intune Connector, don't use the connector installation package that was previously downloaded. Before you install a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the Microsoft Endpoint Manager admin center. If you're not using the latest version, it may continue to work, but the auto-upgrade feature to provide updates to the Intune Connector won't work.
 
 ## Enroll to co-management from Windows Autopilot
 <!-- 11300628 -->

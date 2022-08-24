@@ -29,8 +29,12 @@ items:
     href: customer-permissions.md  
   - name: Device configuration with MEM
     href: device-configuration.md
-  - name: Encryption
-    href: encryption.md
+  - name: Security
+    items:
+    - name: Windows 365 security
+      href: security.md
+    - name: Encryption
+      href: encryption.md
   - name: Privacy and personal data
     href: privacy-personal-data.md
 - name: How-to guides
@@ -113,6 +117,10 @@ items:
         href: set-conditional-access-policies.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
+      - name: Enable screen capture protection
+        href: /azure/virtual-desktop/screen-capture-protection?context=/windows-365/context/pr-context
+      - name: Restrict Office 365 access to Cloud PCs 
+        href: restrict-office-365-cloud-pcs.md
     - name: Apps
       items:
       - name: App overview
