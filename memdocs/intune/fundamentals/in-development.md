@@ -73,22 +73,22 @@ As an admin, you will be able to create and assign two new types of Intune apps:
 These new app types work in a similar way to the existing **web link** application type, however they apply only for their specific platform, whereas web link applications apply across all platforms. With these new app types, you can assign to groups and also use assignment filters to limit the scope of assignment. You will find this functionality in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), by selecting **Apps** > **All Apps** > **Add**.
 
 ### Ending support for Windows 8.1<!-- 14740233 -->
-Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Additionally, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune will no longer support Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". For more information, see [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new#plan-for-change-ending-support-for-windows-81-).
+Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Additionally, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune will no longer support Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". For more information, see [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-81-).
 
 <!-- ***********************************************-->
 
 ## Device management
 
-###  Support for Locate device on fully-managed and corporate-owned work profile devices<!-- 12391424 -->
-You'll be able to use "Locate device" on fully-managed and corporate-owned work profile devices. Using this feature, admins will be able to locate lost or stolen corporate devices on-demand. To do this, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
+###  Support for Locate device on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices<!-- 12391424 -->
+You'll be able to use "Locate device" on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices. Using this feature, admins will be able to locate lost or stolen corporate devices on-demand. To do this, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
 
-For information on locating lost or stolen devices with Intune, go to [Locate lost or stolen devices with Intune](../remote-actions/device-locate.md).
+For information on locating lost or stolen devices with Intune, go to:
+ - [Locate lost or stolen devices with Intune](../remote-actions/device-locate.md)
 
 Applies to:
-- Android Enterprise:
-  - Corporate-owned work profile
-  - Fully managed
-  - Dedicated
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
+- Android Enterprise corporate owned work profile
 
 ### Intune moving to support iOS/iPadOS 14 and higher later this year<!-- 14778947 -->
 Later this year, Apple is expected to release iOS/iPadOS 16. Due to this expected release, Microsoft Intune and the Intune Company Portal will require iOS/iPadOS 14 and higher shortly after the release of iOS/iPad 16. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
@@ -100,7 +100,7 @@ With Apple's expected release of macOS 13 Ventura later this year, Microsoft Int
 
 ## Device enrollment
 
-### Windows Autopilot diagnostics will capture ESP failures<-- 1895390 -->
+### Windows Autopilot diagnostics will capture ESP failures<!-- 1895390 -->
 Windows Autopilot diagnostics will automatically capture diagnostics about Windows Autopilot failures that occur on the Enrollment Status Page (ESP). Diagnostics will be available to download in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 
 <!-- ***********************************************-->
