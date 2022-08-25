@@ -97,7 +97,7 @@ The app features in the Endpoint Manager admin center make it easier to deploy t
   - Volume-licensed apps using Apple Business Manager or Apple School Manager
   - Microsoft 365 apps, which include Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive
   - Microsoft Edge version 77 and newer, which is the modern chromium version
-  - Microsoft Defender for Endpoint, which is cloud service that detects malicious intent and can help remediate security threats
+  - Microsoft Defender for Endpoint, which is a cloud service that detects malicious intent and can help remediate security threats
   - Web links to web apps
   - Custom line-of-business apps your organization creates
   - Apple disk image (DMG) apps, which is a file that includes one or more apps to deploy
@@ -170,4 +170,4 @@ For more information, go to:
 
 - [Manage identities](manage-identities.md)
 - [Manage devices](manage-devices.md)
-- [Frequently asked questions about application management and app protection](./intune/apps/mam-faq.md)
+- [Frequently asked questions about application management and app protection](./intune/apps/mam-faq.yml)
