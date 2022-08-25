@@ -146,4 +146,4 @@ Some common security features include:
 ## Next steps
 
 - [Manage identities in Endpoint Manager](manage-identities.md)
-- Manage apps
+- [Manage apps](manage-apps.md)
