@@ -59,10 +59,12 @@ To require MFA when a device is enrolled, follow these steps:
 1. Choose **New policy**.
 1. Give your policy a name. We recommend that organizations create a meaningful standard for the names of their policies.
 1. Under **Assignments**, select **Users or workload identities**.
-   1. Under **Include**, select **Select users or groups**, and check **Users and groups**. Then select the users and /or groups that will receive this policy
+   1. Under **Include**, select **Select users or groups**, and check **Users and groups**. Then select the users and/or groups that will receive this policy
    1. Choose **Select**.
 1. Under **Cloud apps or actions** > **Include**.
-   1. Choose **Select apps**, **Microsoft Intune Enrollment**, then choose **Select**. By choosing Microsoft Intune Enrollment, Conditional Access MFA is applied only to the enrollment of the device (one-time MFA prompt).
+   1. Choose **Select apps** > **Microsoft Intune Enrollment**.
+   1. Choose **Select**.
+   > By choosing Microsoft Intune Enrollment, Conditional Access MFA is applied only to the enrollment of the device (one-time MFA prompt).
 
    > For Apple Automated Device Enrollments using **Setup assistant with modern authentication**, you have two options:
    >
@@ -74,6 +76,7 @@ To require MFA when a device is enrolled, follow these steps:
 1. Under **Conditions** you don't need to configure any settings for MFA.
 1. Under **Access controls** > **Grant**
    1. Select **Require multifactor authentication** and **Require device to be marked as compliant**.
+   1. Ensure **Require all the selected controls** is selected under **For multiple controls**.
    1. Choose **Select**.
 1. Under **Session**.
    1. Select **Sign-in frequency**.
