@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 02/08/2022
+ms.date: 07/29/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Resize a Cloud PC (preview)
 
-The **Resize** remote action lets you upgrade a Cloud PC’s RAM, CPU, and storage size to meet the user’s needs. Resizing is important for users that need:
+The **Resize** remote action lets you upgrade a Windows 365 Enterprise Cloud PC’s RAM, CPU, and storage size to meet the user’s needs. Resizing is important for users that need:
 
 - More powerful Cloud PCs to run CPU intensive applications.
 - More disk space for file storing.
@@ -42,16 +42,13 @@ To resize a Cloud PC, the admin must have any of the following built in Azure Ac
 - Global Admin
 - Intune Service Admin
 
-Alternatively, you can assign a custom role that includes the permissions of the built in roles above.
+Alternatively, you can assign a custom role that includes the permissions of the built-in roles above.
 
 To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Windows 365 provisioning node
 
 The **Resize** remote action is supported for paid, preview, and trial licenses.
 
-Resizing isn’t supported for:
-
-- Cloud PCs provisioned through group-based licenses.
-- Cloud PCs that are Azure AD joined.
+Resizing isn’t supported for Cloud PCs provisioned through group-based licenses.
 
 ## Resize a Cloud PC
 
@@ -60,7 +57,7 @@ Resizing isn’t supported for:
 ![Screenshot of resize a Cloud PC](./media/resize-cloud-pc/resize.png)
 3. You’ll see a list with all the possible SKUs that you can upgrade to. You can only increase a Cloud PC’s storage and specifications. Options with lower storage or specifications are grayed out. Select one of the available options.
 4. Select **Resize**.
-    - When triggering a resize, the Cloud PC will be rebooted and the user will be immediately disconnected from their current session. Make sure the user saves all their work to avoid any potential data lost. 
+    - When triggering a resize, the Cloud PC will be rebooted and the user will be immediately disconnected from their current session. Make sure the user saves all their work to avoid any potential data loss.
     - If there are available licenses, the upgrade will take place.
     - If you have a combination of paid and trial licenses, the resize feature will use your paid licenses first. After these licenses run out, the resize operation will use your trial licenses.
     - If there are no licenses in your inventory, the resizing will fail. You can contact your procurement admin to request more licenses. After the license has been purchased and added to the inventory in the Microsoft Admin Center, you can retry the resize operation.

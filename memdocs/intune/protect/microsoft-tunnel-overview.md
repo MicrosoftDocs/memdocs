@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/29/2022
+ms.date: 07/05/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -67,7 +67,11 @@ To direct devices to use the tunnel, you create and deploy a VPN policy for Micr
   > - As of June 14 2021, both the standalone tunnel app and standalone client connection type are deprecated and drop from support after January 31, 2022.
   >
   > For iOS/iPadOS:  
-  > - As of April 29, 2022, Microsoft Defender for Endpoint is generally available as the Microsoft Tunnel client app for iOS/iPadOS, and replaces use of the standalone tunnel client app and preview versions of Defender for Endpoint. By the end of June 2022, the standalone client app and its connection type of *Microsoft Tunnel (standalone client)(preview)* are deprecated and drop from support. Soon after the June date, this connection type will stop functioning and no longer connect to Microsoft Tunnel.
+  > - On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
+  >   - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
+  >   - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
+  >
+  >   To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
 
 Features of the VPN profiles for the tunnel include:
 
@@ -119,7 +123,7 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 - **1** - Intune administrator configures *Server configurations* and *Sites*, Server configurations are associated with Sites.
 - **2** - Intune administrator installs Microsoft Tunnel Gateway and the authentication plugin authenticates Microsoft Tunnel Gateway with Azure AD. Microsoft Tunnel Gateway server is assigned to a site.
 - **3** - Management Agent communicates to Intune to retrieve your server configuration policies, and to send telemetry logs to Intune.  
-- **4** - Intune administrator creates and deploys VPN profiles and the Tunnel app to devices.  
+- **4** - Intune administrator creates and deploys VPN profiles and the Defender app to devices.  
 - **5** - Device authenticates to Azure AD. Conditional Access policies are evaluated.  
 - **6** - With split tunnel:  
   - **6.a** - Some traffic goes directly to the public internet.  

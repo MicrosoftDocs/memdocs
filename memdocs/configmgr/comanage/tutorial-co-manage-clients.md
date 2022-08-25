@@ -2,7 +2,7 @@
 title: Tutorial&#58; Enable co-management for existing clients
 titleSuffix: Configuration Manager
 description: Configure co-management with Microsoft Intune when you already manage Windows devices with Configuration Manager.
-ms.date: 10/05/2021
+ms.date: 03/21/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: tutorial
@@ -38,17 +38,17 @@ Use this tutorial when:
 
 ### Azure services and environment
 
-- Azure Subscription ([free trial](https://azure.microsoft.com/free))
+- Azure subscription ([free trial](https://azure.microsoft.com/free))
 - Azure Active Directory Premium
 - Microsoft Intune subscription
-   - An Enterprise Mobility + Security (EMS) Subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS Subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).  
 
-If not already present in your environment, during this tutorial you'll:
+  > [!TIP]
+  > An Enterprise Mobility + Security (EMS) subscription includes both Azure Active Directory Premium and Microsoft Intune. EMS subscription ([free trial](https://www.microsoft.com/cloud-platform/enterprise-mobility-security-trial)).
 
-- Configure [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (AD) tenant.
+If not already present in your environment, during this tutorial you'll configure [Azure AD Connect](/azure/active-directory/hybrid/how-to-connect-install-select-installation) between your on-premises Active Directory and your Azure Active Directory (Azure AD) tenant.
 
-> [!TIP]
-> You no longer need to purchase and assign individual Intune or EMS licenses to your users. For more information, see the [Product and licensing FAQ](../core/understand/product-and-licensing-faq.yml#what-changes-with-licensing-for-co-management-in-microsoft-endpoint-manager-).
+> [!NOTE]
+> Devices that are only registered with Azure AD aren't supported with co-management. This configuration is sometimes referred to as _workplace joined_. They need to be either joined to Azure AD or hybrid Azure AD joined. For more information, see [Handling devices with Azure AD registered state](/azure/active-directory/devices/hybrid-azuread-join-plan#handling-devices-with-azure-ad-registered-state).<!-- 9342566 -->
 
 ### On-premises infrastructure
 
@@ -149,7 +149,7 @@ Automatic enrollment also lets users enroll their Windows 10 or later devices to
     > [!NOTE]
     > Some tenants may not have these options to configure.<!-- SCCMDocs#1230 -->
     >
-    > **Microsoft Intune** is how you configure the MDM app for Azure AD. **Microsoft Intune Enrollment** is a specific Azure AD app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](/intune/enrollment/multi-factor-authentication).
+    > **Microsoft Intune** is how you configure the MDM app for Azure AD. **Microsoft Intune Enrollment** is a specific Azure AD app that's created when you apply multi-factor authentication policies for iOS and Android enrollment. For more information, see [Require multi-factor authentication for Intune device enrollments](../../intune/enrollment/multi-factor-authentication.md).
 
 5. For MDM user scope, select **All**, and then **Save**.  
 
@@ -158,6 +158,9 @@ Automatic enrollment also lets users enroll their Windows 10 or later devices to
 With hybrid Azure AD set-up and Configuration Manager client configurations in place, you're ready to flip the switch and enable co-management of your Windows 10 or later devices. The phrase **Pilot group** is used throughout the co-management feature and configuration dialogs. A *pilot group* is a collection containing a subset of your Configuration Manager devices. Use a *pilot group* for your initial testing, adding devices as needed, until you're ready to move the workloads for all Configuration Manager devices. There isn't a time limit on how long a *pilot group* can be used for workloads. A *pilot group* can be used indefinitely if you don't wish to move the workload to all Configuration Manager devices. 
 
 When you enable co-management, you'll assign a collection as a *Pilot group*. This is a group that contains a small number of clients to test your co-management configurations. We recommend you create a suitable collection before you start the procedure. Then you can select that collection without exiting the procedure to do so. You may need multiple collections since you can assign a different *Pilot group* for each workload.
+
+> [!NOTE]
+> Since devices are enrolled in the Microsoft Intune service based on its Azure AD device token, and not a user token, only the default [Intune enrollment restriction](../../intune/enrollment/enrollment-restrictions-set.md) will apply to the enrollment. 
 
 ### Enable co-management for versions 2111 and later
 

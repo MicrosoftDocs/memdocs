@@ -12,7 +12,6 @@ ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.reviewer: tycast
 ms.technology:
 
 # optional metadata
@@ -20,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -182,7 +182,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
     - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this Wi-Fi network.  
 
-    - **Root certificate for server validation**: Select the trusted root certificate profile used to authenticate the connection.  
+    - **Root certificates for server validation**: Select the trusted root certificate profile used to authenticate the connection.  
 
     - **Perform server validation**: When set to **Yes**, in PEAP negotiation phase 1, devices validate the certificate, and verify the server. Select **No** to block or prevent this validation. When set to **Not configured**, Intune doesn't change or update this setting.
 

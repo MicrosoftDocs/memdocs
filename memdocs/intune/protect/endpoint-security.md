@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 06/21/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ms.reviewer: mattcall
 ---
 
@@ -35,7 +37,7 @@ The Endpoint security node groups the tools that are available through Intune th
 
 - **Review the status of all your managed devices**. Use the [All devices](#manage-devices) view where you can view device compliance from a high level. Then, drill-in to specific devices to understand which compliance policies aren't met so you can resolve them.
 
-- **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Microsoft Defender for Endpoint and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a configuration that's recommended by the relevant security teams recommend.
+- **Deploy security baselines that establish best practice security configurations for devices**. Intune includes [security baselines](#manage-security-baselines) for Windows devices and a growing list of applications, like Microsoft Defender for Endpoint and Microsoft Edge. Security baselines are pre-configured groups of Windows settings that help you apply a configuration that's recommended by the relevant security teams.
 
 - **Manage security configurations on devices through tightly focused policies**.  Each [Endpoint security policy](#use-policies-to-manage-device-security) focuses on aspects of device security like antivirus, disk encryption, firewalls, and several areas made available through integration with Microsoft Defender for Endpoint.
 
@@ -82,7 +84,7 @@ To learn more about using Security tasks, see [Use Intune to remediate vulnerabi
 
 ## Use policies to manage device security
 
-As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies, you can configure device security without the overhead of navigating the larger body and range of settings from device configuration profiles and security baselines.
+As a security admin, use the security policies that are found under *Manage* in the Endpoint security node. With these policies, you can configure device security without having to navigate the larger body and range of settings in device configuration profiles or security baselines.
 
 ![Manage policies](./media/endpoint-security/endpoint-security-policies.png)
 
@@ -151,11 +153,17 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
 
 **Permissions:**
 
+- **Android FOTA**
+  - Read
 - **Android for work**
   - Read
 - **Audit data**
   - Read
+- **Certificate Connector**
+  - Read
 - **Corporate device identifiers**
+  - Read
+- **Derived Credentials**
   - Read
 - **Device compliance policies**
   - Assign
@@ -166,6 +174,7 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
   - View reports
 - **Device configurations**
   - Read
+  - View reports
 - **Device enrollment managers**
   - Read
 - **Endpoint protection reports**
@@ -174,6 +183,8 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
   - Read device
   - Read profile
   - Read token
+- **Filters**
+  - Read
 - **Intune data warehouse**
   - Read
 - **Managed apps**
@@ -183,23 +194,35 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
   - Read
   - Set primary user
   - Update
+  - View reports
+- **Microsoft Defender ATP**
+  - Read
+- **Microsoft Store for Business**
+  - Read
+- **Mobile Threat Defense**
+  - Modify
+  - Read
 - **Mobile apps**
   - Read
 - **Organization**
   - Read
+- **Partner Device Management**
+  - Read
 - **PolicySets**
   - Read
-- **Remote assistance**
+- **Remote assistance connectors**
   - Read
+  - View reports
 - **Remote tasks**
   - Get FileVault key
   - Initiate Configuration Manger action
-  - Microsoft Defender
   - Reboot now
   - Remote lock
   - Rotate BitLockerKeys (Preview)
   - Rotate FileVault key
+  - Shut down
   - Sync devices
+  - Windows defender
 - **Roles**
   - Read
 - **Security baselines**
@@ -214,6 +237,8 @@ You can view the following list of permissions in the Microsoft Endpoint Manager
 - **Telecom expenses**
   - Read
 - **Terms and conditions**
+  - Read
+- **Windows Enterprise Certificate**
   - Read
 
 ## Avoid policy conflicts

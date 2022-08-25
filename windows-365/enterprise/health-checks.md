@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 07/05/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -48,7 +48,7 @@ Statuses include:
 
 ## Status error details
 
-Every failed ANC or success with warning error state includes the technical details behind the failure. Select the **View details** link for each failed check to view more information on the failure. After you’ve fixed the underlying issue, **Retry** the health check to re-run the tests.
+Every failed ANC or success with warning error state includes the technical details behind the failure. Select the **View details** link for each failed check to view more information on the failure. After you’ve fixed the underlying issue, **Retry** the health check to rerun the tests.
 
 ## Supported checks
 
@@ -63,6 +63,7 @@ Every failed ANC or success with warning error state includes the technical deta
 - **First party app permissions exist on Azure resource group**: Sufficient permissions exist on the Azure resource group.
 - **First party app permissions exist on Azure virtual network**: Sufficient permissions exist on the Azure vNet.
 - **Environment and configuration is ready**: Underlying infrastructure is ready for provisioning to succeed.
+- **Intune enrollment restrictions allow Windows enrollment**: Verify that Intune enrollment restrictions are configured to allow Windows enrollment. 
 
 <!-- ########################## -->
 ## Next steps

@@ -40,9 +40,9 @@ You can configure Conditional Access policies based on Check Point Harmony Mobil
 
 ## Supported platforms
 
-- **Android 4.1 and later**
+- **Android 8 and later**
 
-- **iOS 8 and later**
+- **iOS 12 and later**
 
 ## Pre-requisites
 
@@ -73,27 +73,22 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected:*
 
-> [!div class="mx-imgBorder"]
-> ![Check Point MTD block when malicious apps are detected](./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.PNG)
+:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-2.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation:*
 
-> [!div class="mx-imgBorder"]
-> ![Check Point MTD access granted](./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.PNG)
-
+:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-3.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 ### Control access based on threat to network
 
 Detect threats like **Man-in-the-middle** in network, and protect access to Wi-Fi networks based on the device risk.
 
 *Block network access through Wi-Fi:*
 
-> [!div class="mx-imgBorder"]
-> ![Check Point MTD block network access through Wi-Fi](./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.PNG)
+:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-4.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation:*
 
-> [!div class="mx-imgBorder"]
-> ![Check Point MTD Wi-Fi access granted](./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.PNG)
+:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-5.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -101,24 +96,21 @@ Detect threats like **Man-in-the-middle** in network, and prevent synchronizatio
 
 *Block SharePoint Online when network threats are detected:*
 
-> [!div class="mx-imgBorder"]
-> ![Check Point MTD block SharePoint Online access](./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.PNG)
+:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-6.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation:*
 
-> [!div class="mx-imgBorder"]
-> ![Check Point MTD SharePoint Online access granted](./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.PNG)
+:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/checkpoint-mtd-7.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Check Point Harmony Mobile Threat Defense solution considers a device to be infected:
-> [!div class="mx-imgBorder"]
-> ![App protection policy blocks due to detected malware](./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/harmony-app-policy-block.png)
+
+:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/harmony-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
 
 Access is granted on remediation:
 
-> [!div class="mx-imgBorder"]
-> ![Access is granted on remediation for App protection policy](./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/harmony-app-policy-remediated.png)
+:::image type="content" source="./media/checkpoint-harmony-mobile-mobile-threat-defense-connector/harmony-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
 
 ## Next steps
 

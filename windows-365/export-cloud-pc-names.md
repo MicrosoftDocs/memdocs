@@ -63,9 +63,9 @@ Disconnect-MgGraph
 ```
 
 7. Save the file as “GetCloudPCNames.ps1” in a location of your choice.
-8. In the file explorer navigate to your file location.
-9. Right click on the file and select **Run with PowerShell**.
-10. A PowerShell window will pop up. In the window type “CloudPCNames.csv” and press enter.
-11. When the authentication Window pops up, log in with the same account you used to access the Cloud PC.
+8. In the file explorer, navigate to your file location.
+9. Right-click on the file and select **Run with PowerShell**.
+10. A PowerShell window will pop up. In the window, type “CloudPCNames.csv” and then press enter.
+11. When the authentication Window pops up, sign in with the same account you used to access the Cloud PC.
 
-When the PowerShell window closes the script has finished running. Go back to the location of your script and there will be a file called “CloudPCNames.csv” which includes the list of all Cloud PC names on your tenant.
+When the PowerShell window closes, the script has finished running. Go back to the location of your script and there will be a file called “CloudPCNames.csv”. This file includes the list of all Cloud PC names on your tenant.

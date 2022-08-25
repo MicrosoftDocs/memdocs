@@ -39,7 +39,7 @@ ms.collection:
 A line-of-business (LOB) app is one that you add from an app installation file. This kind of app is typically written in-house. The following steps provide guidance to help you add a Windows LOB app to Microsoft Intune.
 
 > [!IMPORTANT]
-> When deploying Win32 apps using an installation file with the .msi extension (packaged in an .intunewin file using the Content Prep Tool), consider using [Intune Management Extension](../apps/intune-management-extension.md). If you mix the installation of Win32 apps and line-of-business apps during AutoPilot enrollment, the app installation may fail.  
+> When deploying Win32 apps using an installation file with the .msi extension (packaged in an .intunewin file using the Content Prep Tool), consider using [Intune Management Extension](../apps/intune-management-extension.md). If you mix the installation of Win32 apps and line-of-business apps during Autopilot enrollment, the app installation may fail as they both use the Trusted Installer service at the same time.
 
 ## Select the app type
 
@@ -69,7 +69,7 @@ A line-of-business (LOB) app is one that you add from an app installation file. 
     - **Publisher**: Enter the name of the publisher of the app.
     - **App Install Context**: Select the install context to be associated with this app. For dual mode apps, select the desired context for this app. For all other apps, this is pre-selected based on the package and cannot be modified.
     - **Ignore app version**: Set to **Yes** if the app developer automatically updates the app. This option applies to mobile .msi apps and Windows apps with self-updating installers (such as Google Chrome).
-    - **Command-line arguments**: Optionally, enter any command-line arguments that you want to apply to the .msi file when it runs.  An example is **/q**. Do not include the msiexec command or arguments, such as **/i** or **/x**, as they are automatically used. For more information, see [Command-Line Options](/windows/desktop/Msi/command-line-options). If the .MSI file needs additional command-line options consider using [Win32 app management](app-management.md).
+    - **Command-line arguments**: Optionally, enter any command-line arguments that you want to apply to the .msi file when it runs.  An example is **/q**. Do not include the msiexec command or arguments, such as **/i** or **/x**, as they are automatically used. For more information, see [Command-Line Options](/windows/desktop/Msi/command-line-options). If the .MSI file needs additional command-line options consider using [Win32 app management](apps-win32-app-management.md).
     - **Category**: Select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the company portal.
     - **Show this as a featured app in the Company Portal**: Display the app prominently on the main page of the company portal when users browse for apps.
     - **Information URL**: Optionally, enter the URL of a website that contains information about this app. The URL appears in the company portal.

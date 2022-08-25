@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 04/15/2022
+ms.date: 06/08/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -21,7 +21,7 @@ ms.assetid: dec6f258-ee1b-4824-bf66-29053051a1ae
 #ROBOTS:
 #audience:
 
-ms.reviewer: esthermsft
+ms.reviewer: abstarr
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -137,14 +137,6 @@ The following table provides privacy-specific configuration details:
 | Privacy message about what support can see or do (iOS/iPadOS) | 520 | Keep the default message or customize the message to list the items that your organization can see on managed iOS/iPadOS devices. You can use markdown to add bullets, bolding, italics, and links.  |
 
 For related information, see [Configure feedback settings for Company Portal and Microsoft Intune apps](../apps/company-portal-app.md#configure-feedback-settings-for-company-portal-and-microsoft-intune-apps).
-
-### Device ownership notification
-
-The following table provides notification-specific configuration details:
-
-| Field name | Maximum length | More information |
-|------------------------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Send a push notification to users when their device ownership type changes from personal to corporate (Android and iOS/iPadOS only)​ | N/A | Send a push notification to both your Android and iOS Company Portal users when their device ownership type has been changed from personal to corporate. By default, this push notification is set to off. When device ownership is set to corporate ownership, Intune has greater access to the device, which includes the full app inventory, FileVault key rotation, phone number retrieval, and a select few remote actions. For more information, see [Change device ownership](../enrollment/corporate-identifiers-add.md#change-device-ownership).  |
 
 ### App sources
 
@@ -308,7 +300,7 @@ For more information about notifications, see [Receive a custom notification](..
 
 ## Configure feedback settings for Company Portal and Microsoft Intune apps
 
-There are a number of M365 enterprise policies which affect whether feedback must be enabled or disabled for currently logged users. These policies are available via the [Microsoft 365 Apps admin center](https://config.office.com/). In relation to Microsoft Intune, these policies affect feedback and surveys for the Intune Company Portal app and Microsoft Intune app.
+There are a number of M365 enterprise policies which affect whether feedback must be enabled or disabled for currently logged users. These policies are available via the [Microsoft 365 Apps admin center](https://config.office.com/). In relation to Microsoft Intune, these policies affect feedback and surveys for the Intune Company Portal app, the Web Company Portal, and Microsoft Intune app.
 
 M365 feedback policies include the following policies:
 

@@ -59,8 +59,8 @@ These categories and their associated threat levels are configurable in Wandera'
 
 The following platforms are supported for Wandera when enrolled in Intune:
 
-- Android 8.0 and later  
-- iOS 10.2 and later 
+- Android 9.0 and later  
+- iOS 13.7 and later 
 
 For more information about platform and device, see the [Wandera website](https://www.wandera.com/mobile-threat-defense/).
 
@@ -85,12 +85,11 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected*:
 
-![Conceptual image of Malicious apps detected](./media/wandera-mtd-connector/wandera-malicious-apps-blocked.png)  
+:::image type="content" source="./media/wandera-mtd-connector/wandera-malicious-apps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation*: 
 
-![Conceptual image of access granted after remediation](./media/wandera-mtd-connector/wandera-malicious-apps-unblocked.png)
-
+:::image type="content" source="./media/wandera-mtd-connector/wandera-malicious-apps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network  
 
@@ -98,11 +97,11 @@ Detect threats to your network such as man-in-the-middle attacks and protect acc
 
 *Block network access through Wi-Fi*:  
 
-![Block network access through Wi-Fi](./media/wandera-mtd-connector/wandera-network-wifi-blocked.png)
+:::image type="content" source="./media/wandera-mtd-connector/wandera-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
 
 *Access granted on remediation*:  
 
-![Access granted on remediation](./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png)  
+:::image type="content" source="./media/wandera-mtd-connector/wandera-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated.":::
 
 ## Control access to SharePoint Online based on threat to network
 
@@ -110,21 +109,22 @@ Detect threats to your network such as Man-in-the-middle attacks, and prevent sy
 
 *Block SharePoint Online when network threats are detected*:  
 
-![Block SharePoint Online when network threats are detected](./media/wandera-mtd-connector/wandera-network-spo-blocked.png)  
+:::image type="content" source="./media/wandera-mtd-connector/wandera-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation*:  
 
-![Access granted on remediation for SharePoint example](./media/wandera-mtd-connector/wandera-network-spo-unblocked.png)  
+:::image type="content" source="./media/wandera-mtd-connector/wandera-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ### Control access on unenrolled devices based on threats from malicious apps
 
 When the Wandera Mobile Threat Defense solution considers a device to be infected:
 
-![App protection policy blocks due to detected malware](./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png)
+:::image type="content" source="./media/wandera-mtd-connector/wandera-mobile-app-policy-block.png" alt-text="Product flow for App protection policies to block access due to malware.":::
+
 
 Access is granted on remediation:
 
-![Access is granted on remediation for App protection policy](./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png)
+:::image type="content" source="./media/wandera-mtd-connector/wandera-mobile-app-policy-remediated.png" alt-text=" Product flow for App protection policies to grant access after malware is remediated.":::
 
 ## Next steps
 

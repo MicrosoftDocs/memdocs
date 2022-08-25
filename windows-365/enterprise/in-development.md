@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 05/03/2022
+ms.date: 07/13/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -59,27 +59,28 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!--***********************************************-->
 ## Device management
 
-### Support for RDP Shortpath for public networks<!--39316531-->
+### New setting to easily enroll Business Cloud PCs in Microsoft Endpoint Manager<!--40009143-->
 
-In a future update, Windows 365 Enterprise Cloud PCs will support RDP Shortpath for public networks. For more information about RDP Shortpath, see [Azure Virtual Desktop RDP Shortpath for public networks](/azure/virtual-desktop/shortpath-public).
+Admins will be able to set a toggle that automatically enrolls new Cloud PCs in to Microsoft Endpoint Manager.
+
+### Resize action support for more Cloud PCs<!--40263425-->
+
+The resize action will support Cloud PCs that are Azure Active Directory joined.
 
 <!-- ***********************************************-->
-## Device provisioning
+<!--## Device provisioning-->
 
-### Provision Cloud PCs with Secure Boot<!--38012584-->
-
-You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality. Europe and North American regions will receive this feature within the next few months.
+<!--***********************************************-->
+<!--
+## End user experience
+-->
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### End-user error log collection<!--38195529-->
+### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
 
-End users will be able to collect error logs.
-
-### End-user feedback<!--38195529-->
-
-End users will be able to provide feedback to Microsoft from within the Windows 365 web client.
+You’ll be able to review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues.
 
 ### End user manual connectivity check<!--37679345 -->
 
@@ -89,12 +90,8 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 The device history report will have new information to help you evaluate Cloud PC performance:
 
-- Top 5 processes impacting CPU spike times
-- Top 5 processes impacting RAM spike times
-
-### Forensic auditing of Cloud PCs<!--38726407-->
-
-You’ll be able to place a Cloud PC under review. This action initiates a process to create a secure snapshot of a Cloud PC. You’ll be able to analyze the snapshot using electronic discovery solutions.
+- Top five processes impacting CPU spike times
+- Top five processes impacting RAM spike times
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->

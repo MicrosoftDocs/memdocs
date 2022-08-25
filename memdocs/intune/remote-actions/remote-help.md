@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 07/26/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -24,7 +24,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ---
  
 # Use remote help with Intune and Microsoft Endpoint Manager
@@ -67,7 +69,7 @@ The Remote help app supports the following capabilities:
 ## Prerequisites
 
 - [Intune subscription](../fundamentals/licenses.md)
-- Remote help add-on license for all IT support workers (helpers) and users (https://aka.ms/PremiumAddOnsDocs)
+- Remote help add-on license for all IT support workers (helpers) and users (sharers) (https://aka.ms/PremiumAddOnsDocs)
 - Windows 10/11
 - The remote help app for Windows. See [Install and update remote help](#install-and-update-remote-help)
 
@@ -127,16 +129,16 @@ For users that opted out of automatic updates, when an update to remote help is 
 - Intune admins can download and deploy the app to enrolled devices. For more information about app deployments, see [Install apps on Windows devices](../apps/apps-windows-10-app-deploy.md#install-apps-on-windows-10-devices).
 - Individual users who have permissions to install apps on their devices can also download and install remote help.
 
-[!NOTE]
-- In May 2022, existing users of remote help will see a recommended upgrade screen when they open the remote help app. Users will be able to continue using remote help without upgrading. 
-- On May 23, 2022, existing users of remote help will see a mandatory upgrade screen when they open the remote help app. They will not be able to proceed until they upgrade to the latest version of remote help.
-- Remote help will now require Microsoft Edge WebView2 Runtime. During the remote help installation process, if Microsoft Edge WebView2 Runtime is not installed on the device, then remote help installation will install it. When uninstalling remote help, Microsoft Edge WebView2 Runtime will not be uninstalled.
+> [!NOTE]
+> - In May 2022, existing users of remote help will see a recommended upgrade screen when they open the remote help app. Users will be able to continue using remote help without upgrading.
+> - On May 23, 2022, existing users of remote help will see a mandatory upgrade screen when they open the remote help app. They will not be able to proceed until they upgrade to the latest version of remote help.
+> - Remote help will now require Microsoft Edge WebView2 Runtime. During the remote help installation process, if Microsoft Edge WebView2 Runtime is not installed on the device, then remote help installation will install it. When uninstalling remote help, Microsoft Edge WebView2 Runtime will not be uninstalled.
 
 ### Download remote help
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **4.0.1.7**
+The most recent version of remote help is **4.0.1.12**
 
 ### Deploy remote help as a Win32 app
 
@@ -189,10 +191,13 @@ To configure your tenant to support remote help, review and complete the followi
 
 2. On the **Settings** tab:
    1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Enabled*.
-   2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting *Disabled*.
+   2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting is *Disabled*.
 
 3. Select **Save**.
 
+> [!NOTE] 
+> When you purchase licenses or start a trial, it could take a while to become active (anywhere between 30 minutes to 8 hours). 
+> When you try to create a Remote help session you may continue to see messages indicating that Remote help isn't enabled for the tenant even if you enabled Remote help in the tenant after activation. 
 ### Task 2 – Configure permissions for remote help
 
 The following Intune RBAC permissions manage the use of the remote help app. Set each to *Yes* to grant the permission:
@@ -344,6 +349,24 @@ Remote help is supported in the following languages:
 
 - When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the remote help session won’t be established. 
 If a conditional access policy is configured as described above and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant will not be able to use remote help. 
+
+## What's New for Remote help 
+
+Updates for Remote help are released periodically. When we update Remote help, you can read about the changes here.
+
+### July 26, 2022
+
+Version: 4.0.1.12 - Changes in this release: 
+
+Various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability.
+
+### May 11, 2022
+
+Version 4.0.1.7 - Webview 2 release 
+
+### April 5, 2022
+
+Version 4.0.0.0 - GA release
 
 ## Next steps
 

@@ -2,7 +2,7 @@
 title: Monitor orchestration groups
 titleSuffix: Configuration Manager
 description: Monitor and reset orchestration groups.
-ms.date: 12/01/2021
+ms.date: 07/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
@@ -37,6 +37,8 @@ From the **Assets and Compliance** workspace, select the **Orchestration Group**
 - **Orchestration Group Member Timeout (in minutes)**: Value of **Orchestration Group member timeout (in minutes)** set on the **General** page when creating the group, or the **General** tab when editing the group.
 - **Orchestration Group ID**: ID of the group, The ID is used in logs and the database.
 - **Orchestration Group Unique ID**: Unique ID of the group, The Unique ID is used in logs and the database.
+- **Last Modified Time**: The time the orchestration group was last modified (starting in version 2203). <!--12500680, 12976470-->
+- **Last Modified By**: The user that last modified the orchestration group (starting in version 2203). <!--12500680, 12976470-->
 
 ## Orchestration groups details tabs
 

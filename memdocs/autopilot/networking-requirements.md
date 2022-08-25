@@ -13,7 +13,7 @@ author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 08/23/2021
+ms.date: 08/23/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -130,9 +130,9 @@ Some of these services will also need to check certificate revocation lists (CRL
 
 ### Hybrid Azure AD join
 
-The device can be hybrid Azure AD joined. The computer should be on the internal network for hybrid Azure AD join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join).
+The device can be hybrid Azure AD joined. The computer should be on the internal network for hybrid Azure AD join to work. For more information, see [Windows Autopilot user-driven mode](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
 
-### <a name="tpm"></a> Autopilot self-Deploying mode and Autopilot pre-provisioning
+### <a name="tpm"></a> Autopilot self-deploying mode and Autopilot pre-provisioning
 
 The TPM attestation process requires access to a set of HTTPS URLs, which are unique for each TPM provider. Ensure access to this URL pattern: `*.microsoftaik.azure.net`.
 

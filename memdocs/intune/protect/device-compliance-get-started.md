@@ -7,11 +7,11 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 08/16/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
-ms.reviewer: samyada
+ms.reviewer: tycast
 
 # optional metadata
 
@@ -123,6 +123,7 @@ The following subjects link to dedicated articles for different aspects of devic
 
   - [Android device administrator](compliance-policy-create-android.md)
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
+  - [Android Android Open Source Project (AOSP)](compliance-policy-create-android-aosp.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)

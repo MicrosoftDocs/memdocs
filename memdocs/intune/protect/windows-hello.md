@@ -48,7 +48,7 @@ Hello for Business is an alternative sign-in method that uses Active Directory o
 
 Intune integrates with Hello for Business in two ways:
 
-- **Tenant wide** (*this article)*: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows AutoPilot out-of-box-experience (OOBE) and is applied when a device enrolls.
+- **Tenant wide** (*this article)*: An Intune policy can be created under *Device enrollment*. This policy targets the entire organization (tenant-wide). It supports the Windows Autopilot out-of-box-experience (OOBE) and is applied when a device enrolls.
 - **Discrete groups**: For devices that have previously enrolled with Intune, use a device configuration [**Identity protection**](../protect/identity-protection-configure.md) profile to configure devices for Windows Hello for Business. Identity protection profiles can target assigned users or devices, and apply during check-in.
 
 In addition, Intune supports the following types of policy to manage some settings for Windows Hello for Business:
@@ -75,7 +75,7 @@ END OLD -->
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Devices** >  **Enrollment** > **Enroll devices** > **Windows enrollment** > **Windows Hello for Business**. The Windows Hello for Business pane opens.
+2. Go to **Devices** > **Enroll devices** > **Windows enrollment** > **Windows Hello for Business**. The Windows Hello for Business pane opens.
 
 3. Select from the following options for **Configure Windows Hello for Business**:
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 04/07/2022
+ms.date: 07/20/2022
 ms.topic: troubleshooting
 ms.service: cloudpc
 ms.subservice: 
@@ -40,13 +40,13 @@ Since Cloud PCs work like most physical devices, you can use existing troublesho
 
 ## Audio and video redirection not working
 
-For connections using the Remote Desktop client for Windows to access Cloud PCs, the first time a user logs on to their Cloud PC, Microsoft Teams will be installed.
+For connections using the Remote Desktop client for Windows to access Cloud PCs, the first time a user signs in to their Cloud PC, Microsoft Teams will be installed.
 
 After the installation, the optimizations to redirect audio and video to your local Windows endpoint don’t work. The user must close Teams and sign out from or restart the Cloud PC to activate the Optimized status.
 
 ## Conditional access
 
-Make sure that you apply conditional access policies to the dedicated Windows 365 cloud app. You can apply these policies in the conditional access UI of Microsoft EndpointM Manager admin center or Azure Active Directory. The Windows 365 cloud app includes the Azure Virtual Desktop cloud app.
+Make sure that you apply conditional access policies to both the dedicated Windows 365 cloud app and the Azure Virtual Desktop cloud app. You can apply these policies in the conditional access UI of Microsoft Endpoint Manager admin center or Azure Active Directory.
 
 Any conditional access policy that you apply will affect:
 
@@ -57,7 +57,7 @@ For more information about service dependencies in Azure AD Conditional Access, 
 
 Applying a more restrictive policy to Azure Virtual Desktop than the Windows 365 cloud app will result in Azure AD honoring the more restrictive policy. This policy will affect end user connectivity to their Cloud PCs after accessing the Windows 365 end user portal.
 
-For more information on how a given policy may impact your environment, see [Troubleshoot using the What If tool in Conditional Access](/azure/active-directory/conditional-access/what-if-tool).
+For more information on how a given policy may affect your environment, see [Troubleshoot using the What If tool in Conditional Access](/azure/active-directory/conditional-access/what-if-tool).
 
 ## Help users in your organization
 
@@ -67,7 +67,10 @@ You can use the Intune Troubleshooting page to view enrollment issues, remediati
 
 ## Language pack installation failed
 
-If the language pack installation failed, try reprovisioning the Cloud PC to install the language pack again.
+You can try either of these possible solutions:
+
+- If the language pack installation failed, try reprovisioning the Cloud PC to install the language pack again.
+- Check to see if there's an Attack Surface Reduction rule set on Intune. If the **Block process creations originating from PSExec and WMI commands** is set to Block, it will block language pack installation. You can remove the rule and retry provisioning, or provisioning with default language set to en-us. Then, let the user change the language by using the Windows Settings App in the Cloud PC.
 
 ## Networking
 
@@ -94,7 +97,7 @@ For suggested remediations on, see [Troubleshoot provisioning errors](provisioni
 
 ## Troubleshooting by end users
 
-The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#end-user-actions)
+The end user can troubleshoot some issues that might be preventing them from connecting to their Cloud PC. For more information, see [End-user actions](../end-user-access-cloud-pc.md#user-actions)
 
 ## Video playback improvements
 
@@ -105,7 +108,6 @@ For Cloud PCs, MMR is supported on the following platforms: Windows, macOS, Chro
 For more information, see [Multimedia redirection for Azure Virtual Desktop](/azure/virtual-desktop/multimedia-redirection).
 
 MMR is in [public preview](../public-preview.md) for Windows 365 Cloud PCs.
-
 
 <!-- ########################## -->
 ## Next steps

@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how to create a configuration manager object by using managed code, with included examples and links.
 
 
 ---

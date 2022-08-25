@@ -2,7 +2,7 @@
 title: Add updates to an update group
 titleSuffix: Configuration Manager
 description: Manually or automatically add software updates to a software update group in your environment.
-ms.date: 04/08/2022
+ms.date: 07/12/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
@@ -19,7 +19,8 @@ ms.localizationpriority: medium
  Software update groups provide you with an effective method to organize software updates in your environment. You can manually add software updates to a software update group or automatically add software updates to a software update group by using an ADR. You can also deploy a software update group manually or deploy the group automatically by using an ADR. After you deploy a software update group, you can add new software updates to the group and Configuration Manager will automatically deploy them. Use the following procedures to add software updates to a new or existing software update group.  
 
 > [!TIP]
-> Starting in version 2203, you can organize software update groups and packages by using folders. This change allows for better categorization and management of software updates. For more information, see [Deploy software updates](deploy-software-updates.md#bkmk_folder).<!-- 3601129 -->
+> - Starting in version 2203, you can organize software update groups and packages by using folders. This change allows for better categorization and management of software updates. For more information, see [Deploy software updates](deploy-software-updates.md#bkmk_folder).<!-- 3601129 -->
+> - Devices running an unsupported operating systems will display as compliant since there aren't applicable updates to the operating system any longer. <!--13952160-->
 
 ## Add software updates to a new software update group  
 

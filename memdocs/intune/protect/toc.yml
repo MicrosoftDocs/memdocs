@@ -64,8 +64,6 @@ items:
         href: compliance-custom-json.md    
       - name: PowerShell script for custom settings
         href: compliance-custom-script.md    
-    - name: Location-based compliance
-      href: ./create-compliance-policy.md
     - name: Actions for noncompliance
       href: actions-for-noncompliance.md
     - name: Monitor device compliance
@@ -305,6 +303,8 @@ items:
         href: windows-10-expedite-updates.md
       - name: Windows rollout options
         href: windows-update-rollout-options.md
+      - name: Windows Update compatibility reports
+        href: windows-update-compatibility-reports.md
       - name: Windows Update compliance reports
         href: windows-update-compliance-reports.md         
     - name: iOS update policies

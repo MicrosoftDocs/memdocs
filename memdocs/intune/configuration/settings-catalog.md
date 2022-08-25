@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune and Endpoint Manager to configure thousands of settings for Windows 10/11 client devices, and configure Microsoft Edge on macOS devices. Add these settings in a device configuration profile to secure devices, and control different programs and features.
+description: Use settings catalog in Microsoft Intune and Endpoint Manager to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 05/05/2022
+ms.date: 08/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -27,7 +27,7 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Use the settings catalog to configure settings on Windows and macOS devices - preview
+# Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices
 
 Settings catalog lists all the settings you can configure, and all in one place. This feature simplifies how you create a policy, and how you see all the available settings. More settings are continually being added. If you prefer to configure settings at a granular level, similar to on-premises GPO, then the settings catalog is a natural transition.
 
@@ -37,20 +37,26 @@ Use the settings catalog as part of your mobile device management (MDM) solution
 
 This feature applies to:
 
+- **iOS/iPadOS**
+
+  Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
+
+  Apple's declarative device management (DDM) is built into the settings catalog. When you configure settings from the settings catalog on iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/ios-user-enrollment.md), you're automatically using DDM. If DDM doesn't work for any reason, then these devices use Apple’s standard MDM protocol. All other iOS/iPadOS devices continue to use Apple’s standard MDM protocol.
+
 - **macOS**
 
-  - **Configure device settings**. Device settings that are directly generated from Apple Profile-Specific Payload Keys are continually being added. To learn more about these keys, see, [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
-  - **Configure Microsoft Edge version 77 and newer**. Previously, you had to [use a property list (plist) file](/deployedge/configure-microsoft-edge-on-mac) (opens another Microsoft website). For a list of the settings you can configure, see [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
-  - **Configure Microsoft Defender for Endpoint**. Previously, you had to [use a property list (plist) file](/microsoft-365/security/defender-endpoint/mac-install-with-intune) (opens another Microsoft website). For a list of the settings you can configure, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences) (opens another Microsoft website). Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
+  Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, go to [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) (opens Apple's website).
 
 - **Windows 10/11**
 
-  There are thousands of settings to choose, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
+  There are thousands of settings, including settings that haven't been available before. These settings are directly generated from the Windows configuration service providers (CSPs). You can also configure Administrative Templates, and have more Administrative Template settings available. As Windows adds or exposes more settings to MDM providers, these settings are added quicker to Microsoft Intune for you to configure.
 
 > [!TIP]
 > To see the Microsoft Edge policies you have configured, open Microsoft Edge, and go to `edge://policy`.
 
 This article lists the steps to create a policy, and shows how to search and filter the settings in Intune. When you create the policy, it creates a device configuration profile. You can then assign or deploy this profile to devices in your organization.
+
+For information on some features you can configure using the settings catalog, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
 
 ## Create the policy
 
@@ -59,23 +65,23 @@ This article lists the steps to create a policy, and shows how to search and fil
 3. Enter the following properties:
 
     - **Platform**: Select **macOS**, or select **Windows 10 and later**.
-    - **Profile**: Select **Settings catalog (preview)**.
+    - **Profile**: Select **Settings catalog**.
 
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **macOS: MSFT Edge v77 settings** or **Win10: BitLocker settings for all Win10 devices**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **macOS: MSFT Edge settings** or **Win10: BitLocker settings for all Win10 devices**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
 
 7. In **Configuration settings**, select **Add settings**. In the settings picker, select a category to see all the available settings.
 
-    For example, choose **Windows 10 and later**, then select **Authentication** to see all the settings in this category:
+    For example, select **Windows 10 and later**, then select **Authentication** to see all the settings in this category:
 
     :::image type="content" source="./media/settings-catalog/settings-picker-authentication.png" alt-text="In Settings Catalog, select Windows and select Authentication in Microsoft Intune and Endpoint Manager admin center.":::
 
-    For example, choose **macOS**. The **Microsoft Edge - All** category lists all the settings you can configure, including any new settings. The other categories include settings that are obsolete, or settings that apply to older versions:
+    For example, select **macOS**. The **Microsoft Edge - All** category lists all the settings you can configure, including any new settings. The other categories include settings that are obsolete, or settings that apply to older versions:
 
     :::image type="content" source="./media/settings-catalog/macos-settings-picker-edge-all.png" alt-text="In Settings Catalog, select macOS, and select a feature or category in Microsoft Intune and Endpoint Manager admin center.":::
 
@@ -93,7 +99,7 @@ This article lists the steps to create a policy, and shows how to search and fil
 
     :::image type="content" source="./media/settings-catalog/default-setting-value-minus-not-configured.png" alt-text="In Settings Catalog, the default value in Microsoft Intune and Endpoint Manager admin center is the same as the OS default value.":::
 
-    When you select the minus:
+    When you select the minus (`-`):
 
     - Intune doesn't change or update this setting. The minus is the same as **Not configured**. When set to **Not configured**, the setting is no longer managed.
     - The setting is removed from the policy. The next time you open your policy, the setting isn't shown. You can add it again.
@@ -103,11 +109,11 @@ This article lists the steps to create a policy, and shows how to search and fil
     > In the Windows setting tooltips, **Learn more** links to the CSP.
 
 9. Select **Next**.
-10. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
+11. In **Assignments**, select the users or groups that will receive your profile. For more information on assigning profiles, see [Assign user and device profiles](device-profile-assign.md).
 
     Select **Next**.
 
@@ -132,16 +138,15 @@ There are thousands of settings available in the settings catalog. To make it ea
   > [!NOTE]
   > For the Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, then the Edge, Office, and OneDrive settings aren't shown.
 
-## Duplicate a profile  
+## Copy a profile  
 
- Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit it to adjust the settings and add assignments.      
- 
+Select **Duplicate** to create a copy of an existing profile. Duplicating is useful when you need a profile that's similar yet distinct from the original one. The copy contains the same setting configurations and scope tags as the original profile, but doesn't have assignments attached to it. After you give the new profile a name, you can edit the profile to adjust the settings and add assignments.
+
 1. Go to **Devices** > **Configuration profiles**.
-2. Locate the profile that you want to copy in the table. Right-click the profile or select the ellipses context menu (**…**) that's in the same row.    
+2. Find the profile that you want to copy. Right-click the profile or select the ellipses context menu (**…**).
 3. Select **Duplicate**.  
-4. Enter a new name for the policy, and optionally, a description. 
-5. Select **Save**.  
-
+4. Enter a new name and description for the policy.
+5. **Save** your changes.
 
 ## Reporting and conflicts
 
@@ -172,7 +177,7 @@ You create the policy, and assign it to your groups. In the Endpoint Manager adm
 6. Select the policy to see the devices. Then, select a specific device to see the setting that failed, and a possible error code.
 
 > [!TIP]
-> [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use.
+> [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use. For information on all the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
 
 ### Conflicts
 
@@ -209,16 +214,15 @@ When a device checks in to Intune, the device always presents a `deviceID`. The 
 The following list includes some possible combinations of scope, assignment, and the expected behavior:
 
 - If a device scope policy is assigned to a device, then all users on that device have that setting applied.
+- If a device scoped policy is assigned to a user, once that user signs in and an Intune sync occurs, then the device scope settings apply to all users on the device.
 - If a user scope policy is assigned to a device, then all users on that device have that setting applied. This behavior is like a [loopback set to merge](/troubleshoot/windows-server/group-policy/loopback-processing-of-group-policy).
 - If a user scoped policy is assigned to a user, then only that user has that setting applied.
-- If a device scoped policy is assigned to a user, once that user signs in and an Intune sync occurs, then the device scope settings apply to all users on the device.
+- There are some settings that are available in the user scope and the device scope. If one of these settings is assigned to both user and device scope, then user scope takes precedence over device scope.
 
 If there isn't a [user hive](/windows/win32/sysinfo/registry-hives) during initial check-ins, then you may see some user scope settings marked as not applicable. This behavior happens in the early moments of a device before a user is present.
 
 ## Next steps
 
+- [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md)
+- [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md)
 - Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
-
-- For more information on device configuration policies, see [Device configuration overview](device-profiles.md) and [Create a device profile](device-profile-create.md).
-
-- For information on all the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).

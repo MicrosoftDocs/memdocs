@@ -38,7 +38,7 @@ Apple iOS/iPadOS supervised mode gives administrators more options when managing
 
 Intune supports supervised mode as part of the Apple [Device Enrollment Program (DEP)](../enrollment/device-enrollment-program-enroll-ios.md).
 
-For a list of Apple controls that require supervision, see Apple's [Payload settings reference](http://help.apple.com/configurator/mac/2.4/#/cad5370d089).
+For a list of Apple controls that require supervision, see Apple's [Payload settings reference](https://support.apple.com/guide/deployment/depcdc2bfa19/web).
 
 ## Turn on supervised mode during enrollment
 

@@ -43,7 +43,7 @@ This article is for people who plan to buy and set up Windows 365 Business for t
 
 There are no licensing prerequisites to set up Windows 365 Business.
 
-For the best onboarding experience, refer to the [setup troubleshooting guide](troubleshoot-windows-365-business.md). This article can help make sure you optimize your environment preferences for Windows 365 Business. For example, the guide can help you if you are using multi-factor authentication, Conditional Access policies, or Intune in your environment.
+For the best onboarding experience, refer to the [setup troubleshooting guide](troubleshoot-windows-365-business.md). This article can help make sure you optimize your environment preferences for Windows 365 Business. For example, the guide can help you if you're using multi-factor authentication, Conditional Access policies, or Intune in your environment.
 
 ## Buy subscriptions
 
@@ -61,7 +61,7 @@ If you don't already have a Microsoft 365 subscription, you can buy your Windows
 1. On the [Windows 365 Business](https://www.microsoft.com/windows-365/business) page, select **See plans and pricing**.
 2. On the next page, select the subscription you want to purchase, and then select **Buy now**.
 3. On the **Thank you for choosing Windows 365 Business** page, follow the steps to set up your account.
-4. In **step 5 - Confirmation details**, if you are ready to assign licenses to users, select **Get started** to go to your [Windows 365 home page](https://windows365.microsoft.com).
+4. In **step 5 - Confirmation details**, if you're ready to assign licenses to users, select **Get started** to go to your [Windows 365 home page](https://windows365.microsoft.com).
 5. On the Windows 365 home page, in the **Quick actions** section, select **Manage your organization**. This link takes you to the Microsoft 365 admin center where you can assign licenses to users.
 
 Users without the Global or Billing admin roles can use self-service purchase to buy a subscription for Windows 365 Business directly from the [Windows 365 Business products site](https://www.microsoft.com/windows-365/business?rtc=1). A user who buys a subscription this way is granted a limited view of the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339), where they can assign licenses for that subscription to other users in their organization. Assigning a license to another user automatically creates a Windows 365 Business Cloud PC for them, which can be accessed from the [Windows 365 home page](https://windows365.microsoft.com/).
@@ -93,7 +93,7 @@ Whether you purchased your subscriptions through the Windows 365 products site, 
 - The **Billing** page in the Microsoft 365 admin center. For more information, see [assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
 - [windows365.microsoft.com](https://windows365.microsoft.com). For more information, see [Assign or unassign a license](assign-unassign-license.md).
 
-As soon as you assign a license to a user, Windows 365 will create a Cloud PC for that user. This can take up to 30 minutes.
+As soon as you assign a license to a user, Windows 365 will create a Cloud PC for that user. This process can take up to 30 minutes.
 
 You can assign different Windows 365 Business license types to a user, based on the users business need. See [Windows 365 Business sizing options](windows-365-business-sizing.md)  for guidance on which license type might be suitable for your users.
 
@@ -106,7 +106,7 @@ If you need to get help while setting up Windows 365 Business in the Microsoft 3
 
 ## Next steps
 
-[Get users started on their Cloud PCs](..\get-users-started.md)
+[Get users started on their Cloud PCs](../end-user-access-cloud-pc.md)
 
 [Manage your Cloud PCs](device-management.md)
 

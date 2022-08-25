@@ -42,7 +42,6 @@ There are two kinds of ANCs based on their join type. Both let you manage traffi
 - **Azure AD Join**: Doesn't require connectivity to a Windows Server Active Directory (AD) domain.
 - **Hybrid Azure AD Join**: Requires connectivity to a Windows Server AD domain. You must provide the AD domain details when you [create the ANC](create-azure-network-connection.md).
 
-
 ## Provisioning
 
 When a Cloud PC is provisioned, the information in the ANC is used by the provisioning policy to provision the Cloud PC in the Azure subnet. The information required in an ANC includes:
@@ -72,7 +71,12 @@ While this first ANC health check is underway, you can’t assign it to a provis
 
 ## Periodic health checks
 
-After provisioning, the information in an ANC is also used to monitor the connection health between your network-based resources and the Cloud PC hosted in the Microsoft hosted subscription. Windows 365 will report configuration issues that may cause provisioning failures or poor end-user experiences. This monitoring reduces your management overhead. For more information on these periodic checks, see [Azure network connection health checks](health-checks.md).
+After provisioning, the information in an ANC is also used to monitor:
+
+- the connection health between your network-based resources
+- the Cloud PC hosted in the Microsoft hosted subscription
+
+Windows 365 will report configuration issues that may cause provisioning failures or poor end-user experiences. This monitoring reduces your management overhead. For more information on these periodic checks, see [Azure network connection health checks](health-checks.md).
 
 ## Health check frequency
 
@@ -95,7 +99,7 @@ The ANC wizard requires access to Azure and, optionally, on-premises domain reso
 - Active directory (Hybrid Azure AD Join ANCs only)
   - An Active Directory user account with sufficient permissions to join the AD domain into this Organizational Unit.
 
-To create, edit , or delete an ANC, you'll also need to have one of the following permissions:
+To create, edit, or delete an ANC, you'll also need to have one of the following permissions:
 
 - Intune Administrator in Azure AD
 - Cloud PC administrator

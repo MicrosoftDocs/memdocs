@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 02/27/2020
+ms.date: 08/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -45,6 +45,8 @@ This document discusses both device level passcode reset and work profile passco
 | Android devices on version 7.0 or later | No |
 | macOS | No |
 | Windows | No |
+| Android Open Source Project (AOSP) Corporate-owned, user-associated devices | Yes |
+| Android Open Source Project (AOSP) Corporate-owned, userless devices | Yes |
 
 For Android devices, device level passcode reset is only supported on devices running 6.x or earlier, or on Android enterprise devices running in Kiosk mode. This restriction is because Google removed support for resetting an Android 7 device's passcode/password from within a Device Administrator granted app and applies to all MDM vendors.
 
@@ -84,6 +86,10 @@ The temporary passcode must be entered on the device. The temporary passcode for
 ## Remove iOS/iPadOS passcodes
 
 Instead of being reset, passcodes are removed from iOS/iPadOS devices. If there's a passcode compliance policy set, the device will prompt the user to set a new passcode in Settings.
+
+## Troubleshooting remote lock failures
+If the remote lock action failed, validate that the following have been correctly configured:
+- If the remote lock action failed on an Android (AOSP) device, confirm that you have a device passcode policy assigned to the device. If the device does not have a device passcode assigned, the remote lock action will not succeed.
 
 ## Next steps
 

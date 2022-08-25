@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 05/05/2022
+ms.date: 08/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,240 +65,217 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
-### Improved report data experience on the Managed Apps pane<!-- 10147133 -->
-The **Managed Apps** pane will be updated to better display app data. You will be able to switch between displaying app data for the primary user and other users on a device, or display data for the device without any user. The generated app data will be displayed using the primary user of the device when the report is initially loaded, or displayed with no primary user if none exists. This capability will be available in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Managed Apps**.
+### New app types for Microsoft Endpoint Manager<!-- 7210233 -->
+As an admin, you will be able to create and assign two new types of Intune apps:
+- **iOS/iPadOS web clip** 
+- **Windows web link**
 
-### Photo library outgoing data transfer support via app protection policies<!-- 14062176 -->
-You will be able to select to include **Photo Library** as a supported application storage service for *outgoing* data. This support is in addition to *incoming* data transfer support for **Photo Library**. By selecting **Photo Library** in the **Allow users to open data from selected services** setting within Intune, you can allow managed accounts to send *outgoing* data to their device's photo library from their managed apps on iOS and Android platforms. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **App protection policies** > **Create Policy**. Choose either **iOS/iPadOS** or **Android**. This setting will be available as part of the **Data protection** step and specifically for **Policy managed apps**. For related information, see [Data protection](../apps/app-protection-framework.md#data-protection-2).
+These new app types work in a similar way to the existing **web link** application type, however they apply only for their specific platform, whereas web link applications apply across all platforms. With these new app types, you can assign to groups and also use assignment filters to limit the scope of assignment. You will find this functionality in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), by selecting **Apps** > **All Apps** > **Add**.
 
-### Deploy macOS LOB apps by uploading PKG-type installer files<!-- 10671861 -->
-The capability to deploy macOS LOB apps by uploading PKG-type installer files to Intune will be generally available. You can upload and deploy PKG-type installer files as macOS line-of-business apps. To add a macOS LOB app from [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **macOS** > **Add** > **Line-of-business app**. Additionally, the App Wrapping Tool for macOS will no longer be required to deploy macOS LOB apps.
-
-### Use MAM policies with COSU devices<!-- 13819227 -->
-Intune-managed Android Enterprise corporate owned dedicated devices (COSU) in Azure Active Directory (AAD) shared mode will be able to receive MAM policies and be targeted separately from other Android enterprise devices. For more information about COSU, see [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices).
-
-### Push notification will always be sent when device ownership changes from Personal to Corporate<!-- 12390037 -->
-We’ll soon change push notification behavior to ensure a notification is always sent when an admin changes a device's ownership from Personal to Corporate. With this change, we’re removing the following setting from the [*Customization* node](../apps/company-portal-app.md#device-ownership-notification) of the Microsoft Endpoint Manager admin center, which currently allows admins to turn off this notification behavior:
-- Send a push notification to users when their device ownership type changes from personal to corporate (Android and iOS/iPadOS only)​
-
-These notifications are pushed through the Company Portal app on Android and iOS/iPadOS devices.
-
-### iOS Company Portal minimum required version<!-- 13016075 -->
-With an upcoming release of the MS Authenticator app, users will be required to update to v5.2205 of the iOS Company Portal. If you have enabled the **[Block installing apps using App Store](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised)** device restriction setting, you will likely need to push an update to the related devices that use this setting. Otherwise, no action is needed. If you have a helpdesk, you may want to make them aware of the prompt to update the Company Portal app. In most cases, users have app updates set to automatic, so they receive the updated Company Portal app without taking any action. Users that have an earlier app version will be prompted to update to the latest Company Portal app.
-
-### iOS/iPadOS notifications will require March Company Portal or newer<!-- 14131757 -->
-We plan to make service side updates to iOS/iPadOS notifications in Intune's May (2205) service release that will require users to have the March Company Portal (version 5.2203.1) or newer. If you are using functionality that could generate iOS/iPadOS Company Portal push notifications, you will want to ensure your users update the iOS/iPadOS Company Portal to continue receiving push notifications. There is no additional change in functionality. For related information, see [Update the Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md).
+### Ending support for Windows 8.1<!-- 14740233 -->
+Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Additionally, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune will no longer support Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". For more information, see [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-81-).
 
 <!-- ***********************************************-->
 
 ## Device management
 
-### Support for Retire on Android Enterprise corporate-owned work-profiles devices<!-- 10216870 -->
-You'll be able to use the **Retire** admin action in the **Endpoint Manager admin center**  to remove the work profile including all corporate apps, data, and policies from an Android Enterprise corporate-owned work profile device.  Go to **Endpoint Manager admin center** >**Devices** pane >**All Devices** > then select the name of the device you want to retire and select **Retire**.  
+###  Support for Locate device on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices<!-- 12391424 -->
+You'll be able to use "Locate device" on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices. Using this feature, admins will be able to locate lost or stolen corporate devices on-demand. To do this, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
 
-When you select **Retire**, the device is unenrolled from Intune management. However, all the data and apps associated with your personal profile will remain untouched on the device.
-For more information, see [Retire or wipe devices using Microsoft Intune](../remote-actions/devices-wipe.md).
+For information on locating lost or stolen devices with Intune, go to:
+ - [Locate lost or stolen devices with Intune](../remote-actions/device-locate.md)
 
-### Initiate compliance checks for your AOSP devices from the Microsoft Intune app<!-- 12645739 -->
-You'll be able to initiate a compliance check for your AOSP devices from the Microsoft Intune app. Go to **Device details**. This feature will be available on devices that are enrolled in Microsoft Intune app as user-associated (Android) AOSP devices. 
+Applies to:
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
+- Android Enterprise corporate owned work profile
 
-### View a managed device's group membership<!-- 4100067 -->
-In the monitor section of the **Devices** workload of Intune, you'll be able to view the group membership of all AAD groups for a managed device. When this is available, you will be able to select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices**.
+### Intune moving to support iOS/iPadOS 14 and higher later this year<!-- 14778947 -->
+Later this year, Apple is expected to release iOS/iPadOS 16. Due to this expected release, Microsoft Intune and the Intune Company Portal will require iOS/iPadOS 14 and higher shortly after the release of iOS/iPad 16. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+
+### Intune moving to support macOS 11.6 and higher later this year<!-- 14766663 -->
+With Apple's expected release of macOS 13 Ventura later this year, Microsoft Intune, the Company Portal app, and the Intune MDM agent will be moving to support macOS 11.6 (Big Sur) and later. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
 
 <!-- ***********************************************-->
 
 ## Device enrollment
 
-### Enroll to co-management from Windows Autopilot<!-- 11300628 -->
-You'll be able to configure device enrollment in Intune to enable co-management, which happens during the [Windows Autopilot](../../autopilot/windows-autopilot.md) process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
-
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](../enrollment/windows-enrollment-status.md), the device will wait for Configuration Manager. The Configuration Manager client installs, registers with the site, and applies the production co-management policy. Then the Autopilot ESP continues.
-
-### Improvements for enrollment profiles for Apple Automated Device Enrollment<!-- 13165752 -->
-Two Setup Assistant skip panes are becoming generally available for Apple Automated Device Enrollment (ADE). The screen configurations were previously released in Intune for public preview. The following screens will be generally available for both iOS/iPadOS and macOS under the **Setup Assistant** tab:  
-  
-- iOS/iPadOS 13 and later
-   - Pane name: **Get Started ** 
-  - Default: Show pane 
-  - You can configure a setting in Intune that hides the Get Started pane in Setup Assistant during ADE enrollment.
-  
-- macOS 12 and later 
-   - Pane name: **Auto Unlock with Apple Watch** 
-  - Default: Show pane
-  - You can configure a setting in Intune that hides the Unlock Your Mac with your Apple Watch pane in Setup Assistant during ADE enrollment.  
-
-There is no change to functionality from the previous public preview release. 
+### Windows Autopilot diagnostics will capture ESP failures<!-- 1895390 -->
+Windows Autopilot diagnostics will automatically capture diagnostics about Windows Autopilot failures that occur on the Enrollment Status Page (ESP). Diagnostics will be available to download in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 
 <!-- ***********************************************-->
 
 ## Device configuration
 
-### New macOS settings in the Settings Catalog<!-- 13923348 -->
-The Settings Catalog has new macOS settings you can configure (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform >**Settings catalog (preview)** for profile type):
+### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 15349701 -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you'll be able to find these settings by selecting **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
-**Accounts > Accounts**:
+New settings include:
 
-- Disable Guest Account
-- Enable Guest Account
+**Accounts > LDAP**:
 
-**Accounts > Caldav**:
+- LDAP Account Description
+- LDAP Account Host Name
+- LDAP Account Password
+- LDAP Account Use SSL
+- LDAP Account User Name
+- LDAP Search Settings
 
-- Cal DAV Account Description
-- Cal DAV Host Name
-- Cal DAV Password
-- Cal DAV Port
-- Cal DAV Principal URL
-- Cal DAV Use SSL
-- Cal DAV Username
+Applies to:
+- iOS/iPadOS
+- macOS
 
-**Accounts > Carddav**: 
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
 
-- Card DAV Account Description
-- Card DAV Host Name
-- Card DAV Password
-- Card DAV Port
-- Card DAV Principal URL
-- Card DAV Use SSL
-- Card DAV Username
+**Privacy > Privacy Preferences Policy Control**:
 
-**Networking > Firewall**:
-
-- Allow Signed
-- Allow Signed App
-- Enable Logging
-- Logging Option
-
-**Parental Controls > Parental Controls Time Limits**:
-
-- Family Controls Enabled
-- Time Limits
-
-**Proxies > Network Proxy Configuration**:
-
-- Proxies
-- Exceptions List
-- Fall Back Allowed
-- FTP Enable
-- FTP Passive
-- FTP Port
-- FTP Proxy
-- Gopher Enable
-- Gopher Port
-- Gopher Proxy
-- HTTP Enable
-- HTTP Port
-- HTTP Proxy
-- HTTPS Enable
-- HTTPS Port
-- HTTPS Proxy
-- Proxy Auto Config Enable
-- Proxy Auto Config URL String
-- Proxy Captive Login Allowed
-- RTSP Enable
-- RTSP Port
-- RTSP Proxy
-- SOCKS Enable
-- SOCKS Port Integer
-- SOCKS Proxy
-
-**Security > Smart Card**:
-
-- Allow Smart Card
-- Check Certificate Trust
-- Enforce Smart Card
-- One Card Per User
-- Token Removal Action
-- User Pairing
-
-**Software Update**:
-
-- Allow Pre Release Installation
-- Automatic Check Enabled
-- Automatic Download
-- Automatically Install App Updates
-- Automatically Install Mac OS Updates
-- Config Data Install
-- Critical Update Install
-- Restrict Software Update Require Admin To Install
-
-**User Experience > Screensaver User**:
-
-- Idle Time
-- Module Name
-- Module Path
-
-There isn't any conflict resolution between policies created using the Settings catalog and policies created using Templates. When creating new policies in the Settings Catalog, be sure there are no conflicting settings with your current policies.
-
-For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
+- Accessibility
+- Address Book
+- Apple Events
+- Calendar
+- Camera
+- File Provider Presence
+- Listen Event
+- Media Library
+- Microphone
+- Photos
+- Post Event
+- Reminders
+- Screen Capture
+- Speech Recognition
+- System Policy All Files
+- System Policy Desktop Folder
+- System Policy Documents Folder
+- System Policy Downloads Folder
+- System Policy Network Volumes
+- System Policy Removable Volumes
+- System Policy Sys Admin Files
 
 Applies to:
 - macOS
 
-### Create and deploy Wi-Fi profiles to Android AOSP devices<!-- 8506299 -->
-You'll be able to configure and deploy a Wi-Fi profile to your Android AOSP devices.
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Filter app and group policy assignments using Windows 11 SE operating system SKUs<!-- 10588651 -->
+When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
+
+Two new Windows 11 SE operating system SKU's will added. You'll be able to use these SKUs in your assignment filters to include or exclude Windows 11 SE devices from applying group-targeted policies and applications.
+
+For more information on filters and the device properties you can currently use, go to:
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md)
+- [Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager](filters-device-properties.md)
 
 Applies to:
-- Android (AOSP)
+- Windows 11 SE
 
-### Unlock Android Enterprise devices after a set time using password, PIN, or pattern<!-- 7913163 -->
-On Android Enterprise devices, you can create a device restrictions configuration profile that manages device settings (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type).
+### New lock screen message when adding custom support information to Android Enterprise devices<!-- 13158348 -->
+On Android Enterprise devices, you can create a device restrictions configuration profile that shows a custom support message on the devices. You'll be able to configure this in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type > **Custom support information**.
 
-There will be a new **How often pin, password, or pattern is needed to unlock** setting. Select how long users must unlock the device using a strong authentication method (password, PIN, or pattern). Your options:
-- **24 hours since last pin, password, or pattern unlock**: The screen locks 24 hours after users last used a strong authentication method to unlock the device or work profile.
-- **Device default** (default): The screen locks using the device's default time.
+There will be a new setting you can configure:
+- **Lock screen message**: Add a message that's shown on the device lock screen. 
 
-For a list of settings you can currently configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+When you configure the **Lock screen message**, you can also use the following device tokens to show device-specific information:
 
-[2.3.4. Advanced passcode management](https://developers.google.com/android/work/requirements#2.3.-advanced-passcode-management_1) (opens Android's web site)
+- `{{AADDeviceId}}`: Azure AD device ID
+- `{{AccountId}}`: Intune tenant ID or account ID
+- `{{DeviceId}}`: Intune device ID
+- `{{DeviceName}}`: Intune device name
+- `{{domain}}`: Domain name
+- `{{EASID}}`: Exchange Active Sync ID
+- `{{IMEI}}`: IMEI of the device
+- `{{mail}}`: Email address of the user
+- `{{MEID}}`: MEID of the device
+- `{{partialUPN}}`: UPN prefix before the @ symbol
+- `{{SerialNumber}}`: Device serial number
+- `{{SerialNumberLast4Digits}}`: Last 4 digits of the device serial number
+- `{{UserId}}`: Intune user ID
+- `{{UserName}}`: User name
+- `{{userPrincipalName}}`: UPN of the user
+
+> [!NOTE]
+> Variables aren't validated in the UI and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}`, instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
+
+To see a list of settings you can currently configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 Applies to:
-- Android 8.0 and newer
-- Android Enterprise corporate owned fully managed (COBO)
-- Android Enterprise corporate owned dedicated devices (COSU)
-- Android Enterprise corporate owned work profile (COPE)
+- Android 7.0 and newer
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
+- Android Enterprise corporate owned work profile
 
-### Import custom ADMX and ADML administrative templates to create a device configuration profile<!-- 4970862 -->
-You can create a device configuration policy that uses built-in ADMX templates (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Administrative templates**).
+### New password complexity requirements for Android Enterprise 12+ personally owned devices with a work profile<!-- 12436068 -->
+On Android Enterprise 11 and older personally owned devices with a work profile, you can set the **Required password type** and a **Minimum password length** in device configuration profiles and compliance policies.
 
-You'll be able to import custom and 3rd party/partner ADMX and ADML templates into the Endpoint Manager admin center. Once imported, you can create a device configuration policy, assign the policy to your devices, and manage the settings in the policy.
+Google is deprecating these features for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
 
-For information on the built-in ADMX templates, see [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md).
+The new **Password complexity** setting will have the following options:
+
+- **Not configured**: Intune doesn't change or update this setting. By default, the OS may not require a password.
+- **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+- **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
+- **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+
+If you currently use the **Required password type** and **Minimum password length** settings in your device configuration and compliance policies on Android 12+, then we recommend using the new **Password complexity** setting instead.
+
+If you continue to use the **Required password type** and **Minimum password length** settings, and don't configure the **Password complexity** setting, then new devices running Android 12+ will default to the **High** password complexity.
+
+There is no impact for existing devices with the **Required password type** and **Minimum password length** settings configured.
+
+For more information on the existing settings you can configure, go to:
+
+- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-for-work.md#personally-owned-devices-with-a-work-profile)
+- [Android Enterprise personally owned devices with a work profile - compliance policy settings list](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
 
 Applies to:
-- Windows 11
+- Android 12.0 and newer
+- Android Enterprise personally owned devices with a work profile
+
+### Filter on the user scope or device scope in the Settings Catalog for Windows devices<!-- 13949975 -->
+When you create a Settings Catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings Catalog (preview)** for profile type).
+
+When you **Add filter**, you'll be able to filter on the settings by user scope or device scope.
+
+For more information, go to [Use the settings catalog to configure settings: Device scope vs. user scope settings](../configuration/settings-catalog.md#device-scope-vs-user-scope-settings)
+
+Applies to:
 - Windows 10
-
-### Use the Settings Catalog to create a Universal Print policy on Windows 11 devices<!-- 5513123 -->
-Many organizations are moving their printer infrastructure to the cloud. [Universal Print](/universal-print/fundamentals/universal-print-whatis) is a cloud-based printing solution for Microsoft 365 customers. It uses built-in cloud printers, built-in legacy printers, and runs entirely in Microsoft Azure. When Universal Print is deployed with Universal Print-compatible printers, it doesn't require any on-premises infrastructure. 
-
-In the Endpoint Manager admin center, you'll be able to use the Settings Catalog to create a printer policy (**Device configuration** > **Create profile** > **Windows 10 and later** for platform > **Settings catalog** for profile type > **Printer provisioning**). When you deploy the policy, users select the printer from a list of registered Universal Print printers, and can also select a default printer.
-
-Currently, you must use the [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool), which requires more manual steps, and has some limitations.
-
-Applies to:
 - Windows 11
 
 <!-- ***********************************************-->
 
 ## Device security
 
-### New settings to manage removable devices for Endpoint security Device control profiles<!-- 8844611 -->
-We’re adding five new settings for Windows 10/11 to the [*device control* profile template](../protect/endpoint-security-asr-profile-settings.md#device-control) for Attack surface reduction policy in Endpoint Security. The new settings will help you manage the use of removable devices like a USB device, and to manage read and write access to removable disks like media players, cellular phones, displays, and CE devices.
- 
- The new settings include: 
-- [ADMX_DeviceInstallation/DeviceInstall_Removable_Deny](/windows/client-management/mdm/policy-csp-admx-deviceinstallation?WT.mc_id=Portal-fx#admx-deviceinstallation-deviceinstall-removable-deny)
--  [ADMX_RemovableStorage/WPDDevices_DenyRead_Access_2](/windows/client-management/mdm/policy-csp-admx-removablestorage?WT.mc_id=Portal-fx#admx-removablestorage-wpddevices-denyread-access-2)
--  [ADMX_RemovableStorage/WPDDevices_DenyRead_Access_1](/windows/client-management/mdm/policy-csp-admx-removablestorage?WT.mc_id=Portal-fx#admx-removablestorage-wpddevices-denyread-access-1)
--  [ADMX_RemovableStorage/WPDDevices_DenyWrite_Access_2](/windows/client-management/mdm/policy-csp-admx-removablestorage?WT.mc_id=Portal-fx#admx-removablestorage-wpddevices-denywrite-access-2)
--  [ADMX_RemovableStorage/WPDDevices_DenyWrite_Access_1](/windows/client-management/mdm/policy-csp-admx-removablestorage?WT.mc_id=Portal-fx#admx-removablestorage-wpddevices-denywrite-access-1)
+### Trend Micro – new Mobile Threat Defense (MTD) partner<!--11017779 -->
+You’ll soon be able to use Trend Micro as an integrated Mobile Threat Defense (MTD) partner with Intune. To connect Trend Micro, you’ll configure the Trend Micro MTD connector in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**.
 
+With Trend Micro as a MTD partner, you’ll be able to control mobile device access to your organization’s resources using conditional access that’s based on risk assessment.
 
-### Microsoft Defender for Endpoint as the Tunnel client app for iOS will soon be out of Preview<!-- 9849514 --> 
-The preview version of Microsoft Defender for Endpoint that supports [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md) on iOS/iPadOS will soon be out of preview and become generally available.
+Applies to:  
+- Android Enterprise
+- iOS/iPadOS
 
-When the Microsoft Defender for Endpoint app with support for Microsoft Tunnel becomes generally available for iOS, the standalone tunnel client app for iOS will be deprecated with support ending 60 days later.
+### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009541 -->
+ You’ll soon be able to add reusable groups of settings to your profiles for Microsoft Defender Firewall Rules. The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
 
-If you are using the standalone tunnel app for iOS, prepare for this change by planning to [migrate to the Microsoft Defender for Endpoint app](../protect/microsoft-tunnel-migrate-app.md) before support for the standalone app ends.
+Features of the reusable settings groups will include:  
+- Add one or more remote IP addresses.  
+- Add one or more FQDNs that can auto resolve to the remote IP address, or for one or more simple keywords when auto resolve for the group is off.  
+- Use each settings group with one or more firewall rule profiles and the different  profiles can support different access configurations for the group.  
+
+  For example, you can create two firewall rule profiles that reference the same reusable settings group and assign each profile to a different group of devices. The first profile can block access to all the remote IP addresses in the reusable settings group, while the second profile can be configured to allow access.  
+
+- Edits to a settings group that's in use are automatically applied to the Firewall Rules profiles that use that group.  
+  
+Reusable groups will be configured on a new Tab for *Reusable settings* that will be available when you view endpoint security Firewall policy.  In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall**.
+
+<!-- ***********************************************-->
+
+## Monitor and troubleshoot
+
+### Open Help and Support without losing your context in the Microsoft Endpoint Manager admin center<!-- 12469338 -->
+You’ll soon be able to use the **?** icon in the Microsoft Endpoint Manager admin center to  open a help and support session without losing your current node of focus in the admin center. The **?** icon is always available in the upper right of the admin center title bar. This change will add an additional method for accessing *Help and support*.
+
+When you select  **?**, the admin center will open a new and separate side-by-side pane you use to navigate the support experience. By opening this separate pane, you’ll be free to navigate the support experience without affecting your original location and focus on the admin center. You will however be free to navigate through the admin center in that original pane if you choose.
 
 <!-- ***********************************************-->
 

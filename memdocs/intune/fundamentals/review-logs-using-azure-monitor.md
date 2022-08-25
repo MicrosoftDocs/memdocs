@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/25/2022
+ms.date: 06/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -35,6 +35,7 @@ Microsoft Intune includes built-in logs that provide information about your envi
 - **Audit Logs** shows a record of activities that generate a change in Intune, including create, update (edit), delete, assign, and remote actions.
 - **Operational Logs** show details on users and devices that successfully (or failed) to enroll, and details on non-compliant devices.
 - **Device Compliance Organizational Logs** show an organizational report for device compliance in Intune, and details on non-compliant devices.
+- **IntuneDevices** show device inventory and status information for Intune enrolled and managed devices. 
 
 These logs can also be sent to Azure Monitor services, including storage accounts, event hubs, and log analytics. Specifically, you can:
 
@@ -94,19 +95,19 @@ Depending on where you want to route the audit log data, you need one of the fol
 
             [Azure log analytics workspace](/azure/azure-monitor/learn/quick-create-workspace) provides more details on these settings.
 
-    - **LOG** > **AuditLogs**: Choose this option to send the [Intune audit logs](monitor-audit-logs.md) to your storage account, event hub, or log analytics. The audit logs show the history of every task that generates a change in Intune, including who did it and when.
+    - **LOG** > **AuditLogs**: Choose this option to send the [Intune audit logs](monitor-audit-logs.md) to your storage account, event hub, or log analytics. The audit logs show the history of every task that generates a change in Intune, including who did it and when. For more reference information, go to [IntuneAuditLogs](/azure/azure-monitor/reference/tables/IntuneAuditLogs).
 
       If you choose to use a storage account, then also enter how many days you want to keep the data (retention). To keep data forever, set **Retention (days)** to `0` (zero).
 
-    - **LOG** > **OperationalLogs**: Operational logs show the success or failure of users and devices that enroll in Intune, as well as details on non-compliant devices. Choose this option to send the enrollment logs to your storage account, event hub, or log analytics.
+    - **LOG** > **OperationalLogs**: Operational logs show the success or failure of users and devices that enroll in Intune, as well as details on non-compliant devices. Choose this option to send the enrollment logs to your storage account, event hub, or log analytics. For more reference information, go to [IntuneOperationalLogs](/azure/azure-monitor/reference/tables/IntuneOperationalLogs).
 
       If you choose to use a storage account, then also enter how many days you want to keep the data (retention). To keep data forever, set **Retention (days)** to `0` (zero).
 
-    - **LOG** > **DeviceComplianceOrg**: Device compliance organizational logs show the organizational report for Device Compliance in Intune, and details of non-compliant devices. Choose this option to send the compliance logs to your storage account, event hub, or log analytics.
+    - **LOG** > **DeviceComplianceOrg**: Device compliance organizational logs show the organizational report for Device Compliance in Intune, and details of non-compliant devices. Choose this option to send the compliance logs to your storage account, event hub, or log analytics. For more reference information, go to [IntuneDeviceComplianceOrg](/azure/azure-monitor/reference/tables/IntuneDeviceComplianceOrg).
 
       If you choose to use a storage account, then also enter how many days you want to keep the data (retention). To keep data forever, set **Retention (days)** to `0` (zero).
 
-    - **LOG** > **IntuneDevices**: The Intune Device log shows device inventory and status information for Intune enrolled and managed devices. Choose this option to send the IntuneDevices logs to your storage account, event hub, or log analytics.
+    - **LOG** > **IntuneDevices**: The Intune Device log shows device inventory and status information for Intune enrolled and managed devices. Choose this option to send the IntuneDevices logs to your storage account, event hub, or log analytics. For more reference information, go to [IntuneDevices](/azure/azure-monitor/reference/tables/IntuneDevices).
 
       If you choose to use a storage account, then also enter how many days you want to keep the data (retention). To keep data forever, set **Retention (days)** to `0` (zero).
 

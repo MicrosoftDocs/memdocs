@@ -7,7 +7,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 4/16/2019
+ms.date: 8/1/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -40,7 +40,7 @@ For more information about how connectors work, see [Understand Azure AD Applica
 
 You can configure the connector to bypass your on-premises proxy to ensure it uses direct connectivity to the Azure services. We recommend this approach, as long as your network policy allows for it, because it means that you have one less configuration to maintain.
 
-To disable outbound proxy usage for the connector, edit the ``:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorUI\ODJConnectorUI.exe.config`` file and add the proxy address and proxy port in the section shown in this code sample:
+To disable outbound proxy usage for the connector, edit the ``:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorUI\ODJConnectorUI.exe.config`` file and set the default proxy to ` "False" ` as shown in the following code example:  
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

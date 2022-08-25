@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 05/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ms.reviewer: mattcall
 
 ---
@@ -54,11 +56,12 @@ Find the endpoint security policies for attack surface reduction under *Manage* 
 ## Attack surface reduction profiles
 
 > [!NOTE]  
-> Beginning on April 5, 2022, the following profiles for Attack surface reduction policy have been updated to use the settings format as found in the Settings Catalog, while the other profiles are unchanged:  
-> - Attack surface reduction rules
-> - Exploit protection  
+> Beginning in April 2022, new profiles for Attack surface reduction policy have begun to release. When a new profile becomes available, it uses the same name of the profile it replaces and includes the same settings as the older profile but in the newer settings format as seen in the Settings Catalog. Your previously created instances of these profiles remain available to use and edit, but all new instances you create will be in the new format. The following profiles have been updated:
 >
-> The new versions of these two profiles include the same settings as the older profile templates they replace. With this change, all new instances of these profiles will use the new settings format. Your previously crated instances of these profiles remain available to use and edit.
+> - Attack surface reduction rules (April 5, 2022)
+> - Exploit protection (April 5, 2022)
+> - Device control (May 23, 2022)
+ 
 
 ### Devices managed by Intune
 

@@ -3,14 +3,16 @@ items:
   href: index.yml
 - name: What is cloud attach?
   href: overview.md
-- name: Enable cloud attach
+- name: Enable cloud attach, versions 2111 and later
   href: enable.md 
 - name: Tenant attach
   items:
   - name: Tenant attach prerequisites
     href: ../tenant-attach/prerequisites.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-  - name: Enable tenant attach
+  - name: Enable tenant attach, versions 2103 and earlier
     href: ../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json  
+  - name: Use Intune RBAC for tenant attach
+    href: use-intune-rbac.md
   - name: Use tenant attach
     items:
     - name: Client details
@@ -25,6 +27,8 @@ items:
       href: ../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: BitLocker recovery keys
       href: ../tenant-attach/bitlocker-recovery-keys.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+    - name: Software updates
+      href: ../tenant-attach/software-updates.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: CMPivot for tenant attached devices
       items:
       - name: Launch CMPivot
@@ -65,11 +69,11 @@ items:
         href: ../tenant-attach/troubleshoot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Client details
         href: ../tenant-attach/troubleshoot-client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-      - name: Application installation (preview)
+      - name: Application installation 
         href: ../tenant-attach/troubleshoot-applications.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Common error codes for application installation
         href: ../tenant-attach/app-install-error-reference.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
-      - name: ../tenant-attach/Timeline
+      - name: Timeline
         href: ../tenant-attach/troubleshoot-timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: Resource explorer
         href: ../tenant-attach/troubleshoot-resource-explorer.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
@@ -77,6 +81,8 @@ items:
         href: ../tenant-attach/troubleshoot-scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
       - name: CMPivot
         href: ../tenant-attach/troubleshoot-cmpivot.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      - name: Software updates
+        href: ../tenant-attach/troubleshoot-software-updates.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
 - name: Endpoint analytics
   items:
   - name: Endpoint analytics overview
@@ -102,7 +108,7 @@ items:
     - name: Work from anywhere
       href: ../../analytics/work-from-anywhere.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Endpoint analytics in Microsoft Productivity Score
-      href: ../../analytics/productivity-score.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../analytics/adoption-score.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Endpoint analytics settings
       href: ../../analytics/settings.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Reference for Endpoint analytics
