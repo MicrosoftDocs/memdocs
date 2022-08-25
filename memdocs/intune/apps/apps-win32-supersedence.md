@@ -62,7 +62,7 @@ The following steps help you create a supersedence relationship between apps:
 6. Once this step is finalized, click **Review + save** > **Save**.
 
     > [!IMPORTANT]
-    > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that are not targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence will take place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, please refer to the matrix below. This behavior is in direct contrast to dependencies, which does not require targeting. 
+    > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that are not targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence will take place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, please refer to the matrix below. This behavior is in direct contrast to dependencies, which does not require targeting. Additionally, only apps that are targeted will show install statuses in Microsoft Endpoint Manager admin center.
 
 ## Supersedence behavior
 
