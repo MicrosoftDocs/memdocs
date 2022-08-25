@@ -68,6 +68,9 @@ Select **Download your CSR** to download and save the request file locally. The 
 > [!NOTE]
 > The certificate is associated with the Apple ID used to create it. As a best practice, use a company email address as your Apple ID and make sure the mailbox is monitored by more than one person, such as by a distribution list. Avoid using a personal Apple ID.  
 
+> [!NOTE]
+> We saw that alternate browser (e.g. brave) don't download a .pem file but a .cer. Using Microsoft Edge or Safari as a browser allow to have the proper file.
+
 #### Managed Apple ID  
 If you plan to federate your existing Azure AD accounts with Apple to use Managed Apple ID, contact Apple to have the existing APNS certificate migrated to your new Managed Apple ID. For more information, see the Apple Support [user guide for Apple School Manager](https://support.apple.com/guide/apple-school-manager/apd6603d9206/web).  
 
