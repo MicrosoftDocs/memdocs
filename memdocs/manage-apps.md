@@ -3,13 +3,13 @@
 
 title: Manage and secure apps in Endpoint Manager
 titleSuffix: Microsoft Endpoint Manager
-description: Learn more about the concepts and features you should know when managing apps that access organization resources in Microsoft Intune and Endpoint Manager. You can manage new and existing devices, including BYOD personal devices, check health compliance and view reports, configure device features, and secure devices using mobile threat solutions.
+description: Learn more about the concepts and features you should know when managing apps that access organization resources in Microsoft Intune and Endpoint Manager. You can deploy apps used by your organization, including Microsoft Edge and Microsoft 365. You can also configure apps, protect apps on organizations owned and BYOD personal devices, and update apps that you deploy.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 08/25/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice:
@@ -34,39 +34,36 @@ ms.collection:
 > [!NOTE]
 > This is a draft of an idea. It's meant to be 100-level with an introduction to some concepts that decision makers need to be aware.
 
-https://review.docs.microsoft.com/en-us/mem/manage-identities?branch=draft-intune-toc
+Managing and protecting apps and their data is a significant part of any endpoint management strategy and solution. In most environments, user can install public retail apps and possibly access organization data from these apps. Many organizations also have their own private apps and line-of-business apps that need to be deployed & managed, and make sure this app data stays within the organization.
 
-app protect policies require Azure AD
+App management can be challenge and Endpoint Manager can help. Endpoint Manager includes Microsoft Intune, which is a cloud-based service that can manage many apps types. Using Endpoint Manager, admins can deploy, configure, protect, and update apps that access your organization resources.
 
-MDM or MAM or both
+Microsoft Intune supports Android, iOS/iPadOS, macOS and Windows client devices. So, you can use Endpoint Manager's app management features across your many devices.
 
-This article applies to:
+From a service perspective, Endpoint Manager uses Azure Active Directory (AD) for identity management. To use some apps, these Azure AD user identities must have licenses assigned to them. The Microsoft Endpoint Manager admin center can also help you manage licensing.
 
-- Android
-- iOS/iPadOS
-- macOS
-- Windows
+This article discusses concepts and features you should consider when managing and securing apps in endpoint management.
 
 ## Deploy apps your organization uses
 
 Organizations use many different types of apps, including store apps, line-of-business (LOB) apps, web apps, and more. You can add apps to Endpoint Manager and then use its app policy management to deploy these apps to your devices.
 
-The app features in the Endpoint Manager admin center makes it easier to deploy these different kinds of apps. Endpoint Manager supports Android, iOS/iPadOS, macOS, and Windows client devices:
+The app features in the Endpoint Manager admin center make it easier to deploy these different kinds of apps. Endpoint Manager supports Android, iOS/iPadOS, macOS, and Windows client devices:
 
-- For **Android** devices, the admin center automatically connects to the public Play Store and gives you the ability to search for apps. You can also sync with your Managed Google Play account.
-
-  If you use [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site), you can purchase licenses to GMS, which typically happens when you purchase Android devices. GMS gives users access to the public Play Store and its public apps.
+- For **Android** devices, the Endpoint Manager admin center automatically connects to the public Play Store and gives you the ability to search for apps. You can also sync with your Managed Google Play account to access your Android Enterprise apps, including private apps.
 
   On Android devices, you can deploy:
 
-  - Public apps from the public Play Store
+  - Public and retail apps from the public Play Store
   - Managed Google Play apps to Android Enterprise devices
   - Web links to web apps
   - Built-in apps, which are apps automatically included and available in the Endpoint Manager admin center
   - Custom line-of-business apps your organization creates
-  - Android Enterprise system apps, which are apps that are typically included on Android devices
+  - Android Enterprise system apps, which are apps typically included on Android devices
 
-  If your organization doesn't use [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site), then you can also manage devices using the Android Open Source Project (AOSP) platform.
+  If you use [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site), you can purchase licenses to GMS, which typically happens when you purchase Android devices. GMS gives users access to the public Play Store and its public apps.
+
+  If your organization doesn't use [Google Mobile Services (GMS)](https://www.android.com/gms/) (opens Android's web site), then Endpoint Manager can also manage devices using the Android Open Source Project (AOSP) platform.
 
   For more specific information, go to:
 
@@ -75,12 +72,12 @@ The app features in the Endpoint Manager admin center makes it easier to deploy 
   - [Manage private Android apps in Google Play](https://support.google.com/a/answer/2494992) (opens Google's web site)
   - [Add built-in apps](./intune/apps/apps-add-built-in.md)
 
-- For **iOS/iPadOS** devices, the admin center automatically connects to the public App Store and gives you the ability to search for apps. You can also sync with your Apple Business Manager or Apple School Manager account. When you sync, the apps your purchase are automatically shown in the admin center.
+- For **iOS/iPadOS** devices, the Endpoint Manager admin center automatically connects to the public App Store and gives you the ability to search for apps. You can also sync with your Apple Business Manager or Apple School Manager account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the admin center.
 
   On iOS/iPadOS devices, you can deploy:
 
-  - Free apps from the public App Store
-  - Paid apps using Apple Business Manager or Apple School Manager
+  - Public and retail apps from the public App Store
+  - Volume-licensed apps using Apple Business Manager or Apple School Manager
   - Web clips, which are shortcuts to web site links that you can add to the home screen
   - Web links to web apps
   - Built-in apps, which are apps automatically included and available in the Endpoint Manager admin center
@@ -93,17 +90,17 @@ The app features in the Endpoint Manager admin center makes it easier to deploy 
   - [Add iOS/iPadOS LOB apps](./intune/apps/lob-apps-ios.md)
   - [Add built-in apps](./intune/apps/apps-add-built-in.md)
 
-- For **macOS** devices, the built-in features include apps commonly deployed to macOS, including Microsoft Edge and Microsoft 365 apps. You can also sync with your Apple Business Manager or Apple School Manager account. When you sync, the apps your purchase are automatically shown in the admin center.
+- For **macOS** devices, the Endpoint Manager admin center has built-in features that include apps commonly deployed to macOS, including Microsoft Edge and Microsoft 365 apps. You can also sync with your Apple Business Manager or Apple School Manager account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the admin center.
 
   On macOS devices, you can deploy:
 
-  - Paid apps using Apple Business Manager or Apple School Manager
-  - Microsoft 365 apps, which includes Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive
+  - Volume-licensed apps using Apple Business Manager or Apple School Manager
+  - Microsoft 365 apps, which include Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive
   - Microsoft Edge version 77 and newer, which is the modern chromium version
   - Microsoft Defender for Endpoint, which is cloud service that detects malicious intent and can help remediate security threats
   - Web links to web apps
   - Custom line-of-business apps your organization creates
-  - Apple disk image (DMG) apps, which is a disk image file that includes one or more apps that's deployed not using the App Store
+  - Apple disk image (DMG) apps, which is a file that includes one or more apps to deploy
 
   For more specific information, go to:
 
@@ -111,10 +108,13 @@ The app features in the Endpoint Manager admin center makes it easier to deploy 
   - [Assign Microsoft 365 to macOS devices](./intune/apps/apps-add-office365-macOS.md)
   - [Add macOS LOB apps](./intune/apps/lob-apps-macos.md)
 
-- For **Windows** devices, you can use the Endpoint Manager admin center to deploy:
+- For **Windows** devices, the Endpoint Manager admin center automatically connects to the public Microsoft Store and gives you the ability to search for apps. You can also sync with your Microsoft Store for Business account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the admin center.
 
-  - Microsoft Store apps
-  - Microsoft 365 apps, which includes Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive
+  On Windows devices, you can deploy:
+
+  - Volume-licensed apps using Microsoft Store for Business
+  - Public and retail apps from the Microsoft Store
+  - Microsoft 365 apps, which include Word, Excel, PowerPoint, Outlook, OneNote, Teams, and OneDrive
   - Microsoft Edge version 77 and newer, which is the modern chromium version
   - Web links to web apps
   - Custom line-of-business apps your organization creates
@@ -122,24 +122,28 @@ The app features in the Endpoint Manager admin center makes it easier to deploy 
 
   For more specific information, go to:
 
+  - [Manage volume purchased apps from the Microsoft Store for Business](./intune/apps/windows-store-for-business.md)
+  - [Add Microsoft 365 apps to Windows client devices](./intune/apps/apps-add-office365.md)
+  - [Win32 app management](./intune/apps/apps-win32-app-management.md)
+
+  > [!NOTE]
+  > [Microsoft Store for Business](/microsoft-store/microsoft-store-for-business-overview) is being retired. Starting with Windows 11, you have a new option for your private volume-licensed apps. For more information, go to [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11).
+
 ## Configure apps before they're installed
 
-When an app is deployed to your users and devices, your users may be prompted for configuration information. Users might not know what to enter or you may have organization settings you want.
+When an app is deployed to your users and devices, your users may be prompted for configuration information. Users might not know what to enter or you may have organization settings you want configured a certain way.
 
-App configuration policies give you these features. You can create an app configuration policy that automatically configures the app for users. Users don't need to enter any configuration information.
+App configuration policies give you these features. You can create an app configuration policy that automatically configures apps. Depending on your policy settings, users might not need to enter any configuration information.
 
-For example, in an app configuration policy, you can enter the app language, add your organization's logo, only allowed organization user accounts, and more.
-**TO DO**: Need more real-world examples
+For example, in an app configuration policy, you can enter the app language, add your organization's logo, block apps from using personal accounts, and more.
 
-Your app configuration policies can be deployed at anytime. If you want to configure apps before users open them the first time, then you can include the app configuration policy when users enroll their devices. During enrollment, your app configuration policies are automatically deployed and the apps include your configuration settings.
-
-**TO DO**: Configure apps on enrolled and not enrolled devices?
+Your app configuration policies can be deployed at any time. If you want to configure apps before users open them the first time, then you can include the app configuration policy when users enroll their devices. During enrollment, your app configuration policies are automatically deployed and the apps include your configuration settings.
 
 For more specific information, go to [App configuration policies in Endpoint Manager](./intune/apps/app-configuration-policies-overview.md).
 
 ## Protect apps on organization owned and personal devices
 
-App protection policies are a key part to protecting data in apps that access organization data. If user-owned personal devices are accessing your organization data, then you need app protect policies. You can use these policies to protect email, shared files, access to meetings, and more.
+App protection policies are a key part to protecting data in apps that access organization data. If user-owned personal devices are accessing your organization data, then you need app protection policies. You can use these policies to protect email, protect shared files, protect access to meetings, and more.
 
 You can use Endpoint Manager to create, configure, and deploy app protection policies to your users and your devices, including personally owned devices and devices managed by another MDM provider. Typically, organization owned devices are managed by your organization. If there are apps on these managed devices that require extra security, then you can also use app protection policies on these devices.
 
@@ -154,7 +158,7 @@ For more specific information, go to:
 
 Apps are often updated to include bug fixes, feature improvements, security updates, and more. When apps are deployed using Endpoint Manager, most apps are automatically updated when there's an app update available. So, it's recommended to use Endpoint Manager to deploy apps used by your organization.
 
-If users install apps themselves, including from an app store, then these apps will need updated manually. In this situation, you can use app protection policies to enforce a minimum app version, and even wipe organization data on devices that don't meet your standards.
+If users install apps themselves, including from a public app store, then these apps will need updated manually. In this situation, you can use app protection policies to enforce a minimum app version, and even wipe organization data on devices that don't meet your standards.
 
 For more information, go to:
 
@@ -166,3 +170,4 @@ For more information, go to:
 
 - [Manage identities](manage-identities.md)
 - [Manage devices](manage-devices.md)
+- [Frequently asked questions about application management and app protection](./intune/apps/mam-faq.md)
