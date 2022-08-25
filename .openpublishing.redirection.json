@@ -1,6 +1,16 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/intune/developer/app-sdk-android.md",
+            "redirect_url": "/mem/intune/developer/app-sdk-android-appendix",
+            "redirect_document_id": false
+        }, 
+        {
+            "source_path": "memdocs/intune/developer/app-sdk-android-testing-guide.md",
+            "redirect_url": "/mem/intune/developer/app-sdk-android-appendix",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/fundamentals/end-user-company-portal-messages.md",
             "redirect_url": "/mem/intune/user-help/sign-in-to-the-company-portal",
             "redirect_document_id": false
