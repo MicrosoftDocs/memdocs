@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft Intune App SDK for Android developer integration and testing guide, stage 7
-description: The Microsoft Intune App SDK for Android lets you incorporate Intune mobile app management (MAM) into your Android app.
+title: Microsoft Intune App SDK for Android developer integration and testing guide - App participation features
+description: Understand App participation features when incorporating Intune mobile app management (MAM) into your Android app.
 keywords: SDK
 author: Erikre
 ms.author: erikre
@@ -30,20 +30,20 @@ ms.collection:
 ms.custom: intune-classic
 ---
 
+# Intune App SDK for Android - App participation features
 
-# Microsoft Intune App SDK for Android developer guide
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP*- or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+
 > [!NOTE]
-> This guide is broken into several distinct stages.  Start at [Stage 1: Planning the Integration].
+> This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
-
-# Stage 7: App Participation Features 
+# Stage 7: App participation features
 
 ## Stage Goals
 
-* Learn about the various app participation features offered by the Intune App SDK.
-* Integrate app participation features relevant to your app and users.
-* Test the integration of those features.
+- Learn about the various app participation features offered by the Intune App SDK.
+- Integrate app participation features relevant to your app and users.
+- Test the integration of those features.
 
 ## What are "App Participation Features"?
 
@@ -51,24 +51,24 @@ This SDK integration process attempts to minimize the amount of app-specific cod
 By successfully completing the prior stages of the SDK integration your app can now enforce the majority of app protection policy settings, such as file encryption, copy/paste restrictions, screenshot blocking, and data transfer restrictions.
 
 However, there are some settings that require app-specific code to enforce properly; these are called app participation features.
-Typically, the SDK does not have enough context about your application's code or the end user scenario to automatically enforce these settings, and thus relies on developers to call the SDK APIs appropriately.
+Typically, the SDK doesn't have enough context about your application's code or the end user scenario to automatically enforce these settings, and thus relies on developers to call the SDK APIs appropriately.
 
-App participation features are not necessarily optional.
+App participation features aren't necessarily optional.
 Depending on your app's existing features, these features may be required.
 See [Key Decisions for SDK integration] for details.
 
 Previous stages of this guide have already described several app participation features:
-* Multi-identity as covered in [Stage 5: Multi-Identity].
-* App configuration as covered in [Stage 6: App Configuration].
+- Multi-identity as covered in [Stage 5: Multi-Identity].
+- App configuration as covered in [Stage 6: App Configuration].
 
 The rest of this guide describes the remaining set of app participation features:
-* Enforce policy restricting saving files to / opening files from local or cloud storage.
-* Enforce policy restricting content in notifications.
-* Enforce policy protecting backup data.
-* Enforce policy restricting screen capture (if your app has custom screen capture code).
-* Support App Protection CA.
-* Register for notifications from the SDK.
-* Apply custom application theming.
+- Enforce policy restricting saving files to / opening files from local or cloud storage.
+- Enforce policy restricting content in notifications.
+- Enforce policy protecting backup data.
+- Enforce policy restricting screen capture (if your app has custom screen capture code).
+- Support App Protection CA.
+- Register for notifications from the SDK.
+- Apply custom application theming.
 
 ## App Participation Feature basics
 
@@ -76,9 +76,9 @@ The [AppPolicy] interface contains many methods that inform your app whether cer
 
 Most app participation features involve:
 
-* Identifying the right place in your app's code to check if an action is allowed.
-* Calling an `AppPolicy` method to check if an action is allowed, based on currently-configured policy.
-* Depending on the result, either allowing the action to complete, or modifying the app behavior when the action is blocked.
+- Identifying the right place in your app's code to check if an action is allowed.
+- Calling an `AppPolicy` method to check if an action is allowed, based on currently configured policy.
+- Depending on the result, either allowing the action to complete, or modifying the app behavior when the action is blocked.
 
 To retrieve an `AppPolicy` instance, use one of the [MAMPolicyManager] methods, such as `getPolicy` or `getPolicyForIdentity(final String identity)`.
 
@@ -100,8 +100,8 @@ Many apps allow the end user to save data to or open data from local file storag
 The Intune App SDK allows IT administrators to protect against data ingress and data leakage by restricting where apps can save data to and open data from.
 
 > [!NOTE]
-> **If your app allows saving to personal or cloud locations directly from the app *or* allows for data to be opened directly into the app,
-> you must implement this Intune App SDK app participation feature** to enable IT administrators to block this saving / opening.
+> **If your app allows saving to personal or cloud locations directly from the app *or- allows for data to be opened directly into the app,
+> you must implement this Intune App SDK app participation feature*- to enable IT administrators to block this saving / opening.
 
 ### Saving to device or cloud storage
 
@@ -116,24 +116,24 @@ To determine whether your app should implement the `getIsSaveToLocationAllowed` 
 
 | `service` Parameter: `SaveLocation` Enum  Value | Use Case | Associated Username |
 | - | - | - |
-| `ONEDRIVE_FOR_BUSINESS` | The app is saving data to OneDrive. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username does not exist or the username is not known use `null`. |
-| `SHAREPOINT` | The app is saving data to Sharepoint. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username does not exist or the username is not known use `null`. |
-| `BOX` | This app is saving data to Box. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username does not exist or the username is not known use `null`. |
-| `LOCAL` | The app is saving data to an external storage location on the device that is **not** the app's private storage. | The external storage is not considered a cloud service and so should always be used with a `null` username parameter. |
-| `PHOTO_LIBRARY` | The app is saving data to the photo library. | The photo library is not considered a cloud service and so should always be used with a `null` username parameter. |
-| `ACCOUNT_DOCUMENT` | The app is saving data to a location that is associated with an account within the app and is not one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.* | A `username` for an account that is used for AAD authentication. If such a username does not exist or the username is not known use `null`. |
-| `OTHER` | The app is saving data to a location that is not specified above and does not satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `username` is not evaluated for this location and so should be `null`. |
+| `ONEDRIVE_FOR_BUSINESS` | The app is saving data to OneDrive. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `SHAREPOINT` | The app is saving data to Sharepoint. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `BOX` | This app is saving data to Box. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `LOCAL` | The app is saving data to an external storage location on the device that is **not*- the app's private storage. | The external storage isn't considered a cloud service and so should always be used with a `null` username parameter. |
+| `PHOTO_LIBRARY` | The app is saving data to the photo library. | The photo library isn't considered a cloud service and so should always be used with a `null` username parameter. |
+| `ACCOUNT_DOCUMENT` | The app is saving data to a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | A `username` for an account that is used for AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `OTHER` | The app is saving data to a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `username` isn't evaluated for this location and so should be `null`. |
 
 Files placed in private app storage that are either necessary for app
-operation or downloaded temporarily for display are always allowed; you do not need to check `getIsSaveToLocationAllowed`.
+operation or downloaded temporarily for display are always allowed; you don't need to check `getIsSaveToLocationAllowed`.
 Do check `SaveLocation.LOCAL` for
 1. Files saved outside of private app storage.
-2. Files downloaded to private app storage that are not necessary for
-   app operation (e.g. user deliberately choosing to download to the
+2. Files downloaded to private app storage that aren't necessary for
+   app operation (for example, user deliberately choosing to download to the
    device).
 
 > [!NOTE]
-> When checking the save policy, `username` should be the UPN/username/email associated with the cloud service being saved **to** (*not* necessarily the same as the account owning the document being saved).
+> When checking the save policy, `username` should be the UPN/username/email associated with the cloud service being saved **to*- (*not- necessarily the same as the account owning the document being saved).
 
 ### Opening data from a local or cloud storage location
 
@@ -148,16 +148,16 @@ To determine whether your app should implement the `getIsOpenFromLocationAllowed
 
 | `location` Parameter: `OpenLocation` Enum Value | Use Case | Associated Username |
 | - | - | - |
-| `ONEDRIVE_FOR_BUSINESS` | The app is opening data from OneDrive. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username does not exist or the username is not known use `null`. |
-| `SHAREPOINT` | The app is opening data from Sharepoint. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username does not exist or the username is not known use `null`. |
-| `CAMERA` | The app is opening data from the camera. | A `null` value, because the device camera is not a cloud service. |
-| `LOCAL` | The app is opening data from an external storage location on the device that is **not** the app's private storage. | Although the external storage is not a cloud service location, a `username` parameter is expected because it indicates ownership. <br>  When opening a file from local storage, the file owner must always be considered, because the file owner's save-as policy may or may not permit other identities to open the file: <br> - **For identity-tagged files,** `username` should be the file owner's identity. <br> - **For files without an identity tag,** `username` should be `null`. |
-| `PHOTO_LIBRARY` | The app is opening data from the photo library. | The photo library is not considered a cloud service and so should always be used with a `null` username parameter. |
-| `ACCOUNT_DOCUMENT` | The app is opening data from a location that is associated with an account within the app and is not one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.* | A `username` for an account that is used for AAD authentication. If such a username does not exist or the username is not known use `null`. |
-| `OTHER` | The app is opening data from a location that is not specified above and does not satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `username` is not evaluated for this location and so should be `null`. |
+| `ONEDRIVE_FOR_BUSINESS` | The app is opening data from OneDrive. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `SHAREPOINT` | The app is opening data from Sharepoint. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `CAMERA` | The app is opening data from the camera. | A `null` value, because the device camera isn't a cloud service. |
+| `LOCAL` | The app is opening data from an external storage location on the device that is **not*- the app's private storage. | Although the external storage isn't a cloud service location, a `username` parameter is expected because it indicates ownership. <br>  When opening a file from local storage, the file owner must always be considered, because the file owner's save-as policy may or may not permit other identities to open the file: <br> - **For identity-tagged files,*- `username` should be the file owner's identity. <br> - **For files without an identity tag,*- `username` should be `null`. |
+| `PHOTO_LIBRARY` | The app is opening data from the photo library. | The photo library isn't considered a cloud service and so should always be used with a `null` username parameter. |
+| `ACCOUNT_DOCUMENT` | The app is opening data from a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | A `username` for an account that is used for AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
+| `OTHER` | The app is opening data from a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `username` isn't evaluated for this location and so should be `null`. |
 
 > [!NOTE]
-> When checking the open policy, `username` should be the UPN/username/email associated with the file or cloud service being opened **from** (*not* necessarily the same as the account who is opening the document).
+> When checking the open policy, `username` should be the UPN/username/email associated with the file or cloud service being opened **from*- (*not- necessarily the same as the account who is opening the document).
 
 > [!TIP]
 > For convenience, the SDK provides the method `AppPolicy.isOpenFromLocalStorageAllowed` that takes a `File` parameter for a file in local storage.
@@ -178,15 +178,15 @@ MAMUIHelper.showSharingBlockedDialog(currentActivity)
 
 ### Allow for file sharing
 
-If saving to public storage locations is not allowed, your app should still allow for the user to view files by downloading them to [app private storage] and then opening them with the system chooser.
+If saving to public storage locations isn't allowed, your app should still allow for the user to view files by downloading them to [app private storage] and then opening them with the system chooser.
 
 ## Policy for restricting content inside notifications
 
-For single-identity apps, the Intune App SDK's default behavior will attempt to block *all* notifications when App Protection Policy restricts notifications.
+For single-identity apps, the Intune App SDK's default behavior will attempt to block *all- notifications when App Protection Policy restricts notifications.
 
 The SDK's default behavior is limited.
-The SDK cannot automatically honor the "Block org data" value, which is intended to remove only managed content from notifications.
-For multi-identity apps, the SDK cannot determine which notifications contain managed content.
+The SDK can't automatically honor the "Block org data" value, which is intended to remove only managed content from notifications.
+For multi-identity apps, the SDK can't determine which notifications contain managed content.
 
 If your app displays notifications, and it is either multi-identity and/or it wishes to honor the "Block org data" value, it must check the notification restriction policy for the account associated with the notification before showing the notification.
 
@@ -201,13 +201,13 @@ The returned `NotificationRestriction` enum has the following values:
 
 | `NotificationRestriction` Enum | Expected App Behavior  |
 | - | - |
-| `BLOCKED` | The app *must not* show any notifications for the account associated with this policy. For *single-identity* apps, the Intune App SDK will block all notifications automatically, and no additional code is required. |
-| `BLOCK_ORG_DATA` | The app must show a modified notification that does not contain organization data. |
+| `BLOCKED` | The app *must not- show any notifications for the account associated with this policy. For *single-identity- apps, the Intune App SDK will block all notifications automatically, and no additional code is required. |
+| `BLOCK_ORG_DATA` | The app must show a modified notification that doesn't contain organization data. |
 | `UNRESTRICTED` | The app should show all notifications. |
 
-If your app does not properly invoke `getNotificationRestriction`, the MAM SDK will make a best effort to restrict notifications automatically *for single-identity apps only*.
+If your app doesn't properly invoke `getNotificationRestriction`, the MAM SDK will make a best effort to restrict notifications automatically *for single-identity apps only*.
 
-In this case, `BLOCK_ORG_DATA` is treated the same as `BLOCKED` and the notification will not be shown at all.
+In this case, `BLOCK_ORG_DATA` is treated the same as `BLOCKED` and the notification won't be shown at all.
 
 For more fine-grained control, check the value of `getNotificationRestriction` and modify app notifications appropriately.
 
@@ -225,18 +225,18 @@ Intune allows you to utilize all the autobackup features available from Android,
 
 ### Configuring backup behavior in the app's manifest
 
-By default, `android:allowBackup` is set to **true** as outlined
+By default, `android:allowBackup` is set to **true*- as outlined
 in [enable and disable backup].
 
-If your app does not require full backup and restore functionality,
+If your app doesn't require full backup and restore functionality,
 set `android:allowBackup` to **false**.
 *In this case, no further action is necessary and "corporate" data will stay within the app.*
 
 If your app requires full backup and restore functionality,
-set `android:allowBackup` to **true**  and perform the following
+set `android:allowBackup` to **true*-  and perform the following
 additional steps:
 
-1. If your app does **not** use its own custom `BackupAgent`, use the default [MAMBackupAgent] to allow for automatic full backups that are Intune policy compliant.
+1. If your app does **not*- use its own custom `BackupAgent`, use the default [MAMBackupAgent] to allow for automatic full backups that are Intune policy compliant.
 Place the following in the app manifest:
 
     ```xml
@@ -248,18 +248,18 @@ Place the following in the app manifest:
       </application>
     ```
 
-2. **[Optional]** If you implemented an optional custom `BackupAgent`,
+2. **[Optional]*- If you implemented an optional custom `BackupAgent`,
 you need to make sure to use [MAMBackupAgent] or [MAMBackupAgentHelper].
 See the following sections. 
 Consider switching to using Intune's [MAMDefaultBackupAgent], described in step 1, which provides easy back-up on Android M and above.
 
 3. When you decide which type of full backup your app should receive (unfiltered, filtered, or none), you'll need to set the attribute `android:fullBackupContent` to true, false, or an XML resource in your app.
 
-4. Then, you ***must*** copy the value for `android:fullBackupContent`
+4. Then, you ***must**- copy the value for `android:fullBackupContent`
 into the `com.microsoft.intune.mam.FullBackupContent` metadata tag
 and for apps that support the new XML configuration format added in API 31, into the `com.microsoft.intune.mam.DataExtractionRules` metadata tag.
 
-    * **Example 1**: If you want your app to have full backups without exclusions, you must set the attributes and metadata tags
+    - **Example 1**: If you want your app to have full backups without exclusions, you must set the attributes and metadata tags
     to **true**:
 
       ```xml
@@ -273,7 +273,7 @@ and for apps that support the new XML configuration format added in API 31, into
       <meta-data android:name="com.microsoft.intune.mam.DataExtractionRules" android:value="true" />
       ```
 
-    * **Example 2**: If you want your app to use its custom
+    - **Example 2**: If you want your app to use its custom
     `BackupAgent` and opt out of full, Intune policy compliant,
     automatic backups, you must set the attributes and metadata tags
     to **false**:
@@ -289,7 +289,7 @@ and for apps that support the new XML configuration format added in API 31, into
       <meta-data android:name="com.microsoft.intune.mam.DataExtractionRules" android:value="false" />
       ```
 
-    * **Example 3**: If you want your app to have full backups according to your custom rules
+    - **Example 3**: If you want your app to have full backups according to your custom rules
     defined in an XML file, set the attribute and metadata tag to the same XML resource:
 
       ```xml
@@ -340,9 +340,9 @@ Since most of the work is pushed onto you, the developer, Intune integration is 
 2. Have your class extend [MAMBackupAgent].
 
 **Multi-identity Backup:**
-1. Before beginning your backup, check that the files or data buffers you plan to back up are indeed **permitted by the IT administrator to be backed up** in multi-identity scenarios.
+1. Before beginning your backup, check that the files or data buffers you plan to back up are indeed **permitted by the IT administrator to be backed up*- in multi-identity scenarios.
 Use `isBackupAllowed` in [MAMFileProtectionManager] and [MAMDataProtectionManager] to determine this.
-If the file or data buffer is not allowed to be backed up, then you should not include it in your backup.
+If the file or data buffer isn't allowed to be backed up, then you shouldn't include it in your backup.
 
 2. At some point during your backup, if you want to back up the identities for the files you checked in step 1, you must call `backupMAMFileIdentity(BackupDataOutput data, File … files)` with the files from which you plan to extract data.
 This will automatically create new backup entities and write them to the `BackupDataOutput` for you.
@@ -352,14 +352,14 @@ These entities will be automatically consumed upon restore.
 The Data Backup guide specifies a general algorithm for restoring your application’s data and provides a code sample in the [Extending BackupAgent] section.
 In order to have a successful multi-identity restore, you must follow the general structure provided in this code sample with special attention to the following:
 
-1. You must utilize a `while(data.readNextHeader())`* loop to go through the backup entities.
+1. You must utilize a `while(data.readNextHeader())`- loop to go through the backup entities.
 
-2. You must call `data.skipEntityData()` *if `data.getKey()`* does not match the key you wrote in `onBackup`.
+2. You must call `data.skipEntityData()` *if `data.getKey()`- doesn't match the key you wrote in `onBackup`.
 Without performing this step, your restores may not succeed.
 
-3. Avoid returning while consuming backup entities in the `while(data.readNextHeader())`* construct, as the entities we automatically write will be lost.
+3. Avoid returning while consuming backup entities in the `while(data.readNextHeader())`- construct, as the entities we automatically write will be lost.
 
-* Where `data` is the local variable name for the [MAMBackupDataInput] that is passed to your app upon restore.
+- Where `data` is the local variable name for the [MAMBackupDataInput] that is passed to your app upon restore.
 
 
 ## Custom Screen Capture Restrictions
@@ -374,7 +374,7 @@ For example, if your app uses a custom rendering engine to render the current vi
 > For example, if a user attempts to capture your app's screen through Android's built-in screenshot or screen recording features, the capture will be automatically restricted without participation from your app. 
 
 ## Support App Protection CA
-[App Protection CA] (Conditional Access), aka app-based CA, restricts access to resources until your application is managed by Intune App Protection Policies.
+[App Protection CA] (Conditional Access), also known as app-based CA, restricts access to resources until your application is managed by Intune App Protection Policies.
 AAD enforces this by requiring the app to be enrolled and managed by APP before granting a token to access a CA protected resource.   
 
 > [!NOTE]
@@ -383,7 +383,7 @@ AAD enforces this by requiring the app to be enrolled and managed by APP before 
 ### Handle non-compliance with MSAL
 When acquiring a token for an account, the MSAL library may return or throw an `MsalIntuneAppProtectionPolicyRequiredException` to indicate non-compliance with app protection policy management.
 Additional parameters can be extracted from the exception for use in remediating compliance (see [MAMComplianceManager]).
-Once the remediation is successful, the app can re-attempt the token acquisition through MSAL.
+Once the remediation is successful, the app can reattempt the token acquisition through MSAL.
 
 ### MAMComplianceManager
 
@@ -430,7 +430,7 @@ If you call `updateToken` later with a valid token for the requested resource, t
 > Silent token acquisition will still be possible in `acquireToken()` because the user will have already been guided to install the broker and register the device before the `MsalIntuneAppProtectionPolicyRequiredException` exception is received.
 > This results in the broker having a valid refresh token in its cache, allowing silent acquisition of the requested token to succeed.
 
-Here is a sample of receiving the policy-required error in the `AuthenticationCallback.onError()` method, and calling the [MAMComplianceManager] to handle the error.
+Here's a sample of receiving the policy-required error in the `AuthenticationCallback.onError()` method, and calling the [MAMComplianceManager] to handle the error.
 
 ```java
 public void onError(@Nullable MsalException exc) {
@@ -469,21 +469,21 @@ The `getComplianceStatus()` method returns the result of the compliance remediat
 | - | - |
 | `UNKNOWN` | Status is unknown. This could indicate an unanticipated failure reason. Additional information may be found in the Company Portal logs. |
 | `COMPLIANT` | Compliance remediation succeeded and the app is now compliant with policy. The MSAL token acquisition should be retried. |
-| `NOT_COMPLIANT` | The attempt to remediate compliance failed.  The app is not compliant and MSAL token acquisition should not be retried until the error condition is corrected.  Additional error information is sent with the MAMComplianceNotification. |
+| `NOT_COMPLIANT` | The attempt to remediate compliance failed.  The app isn't compliant and MSAL token acquisition shouldn't be retried until the error condition is corrected.  Additional error information is sent with the MAMComplianceNotification. |
 | `SERVICE_FAILURE` | There was a failure while attempting to retrieve compliance data from the Intune Service. Additional information may be found in the Company Portal logs. |
 | `NETWORK_FAILURE` | There was an error connecting to the Intune Service. The app should try its token acquisition again when the network connection is restored. |
 | `CLIENT_ERROR` | The attempt to remediate compliance failed for some reason related to the client.  For example, no token or wrong user. Additional error information is sent with the MAMComplianceNotification. |
-| `PENDING` | The attempt to remediate compliance failed because the status response had not yet been received from the service when the time limit was exceeded. The app should try its token acquisition again later. |
+| `PENDING` | The attempt to remediate compliance failed because the status response hadn't yet been received from the service when the time limit was exceeded. The app should try its token acquisition again later. |
 | `COMPANY_PORTAL_REQUIRED` | The Company Portal must be installed on the device in order for compliance remediation to succeed.  If the Company Portal is already installed on the device, the app needs to be restarted.  In this case, a dialog will be shown asking the user to restart the app. |
 
-If the compliance status is `MAMCAComplianceStatus.COMPLIANT`, the app should re-initiate its original token acquisition (for its own resource).
+If the compliance status is `MAMCAComplianceStatus.COMPLIANT`, the app should reinitiate its original token acquisition (for its own resource).
 
 If the compliance remediation attempt failed, the `getComplianceErrorTitle()` and `getComplianceErrorMessage()` methods will return localized strings that the app can display to the end user if it chooses.
-Most of the error cases are not remediable by the app, so for the general case it may be best to fail account creation or login and allow the user to try again later.
+Most of the error cases aren't remediable by the app, so for the general case it may be best to fail account creation or login and allow the user to try again later.
 
 If a failure is persistent, the Company Portal logs may help determine the cause.  The end user can submit the logs. For more information, see [Upload and email logs](../user-help/send-logs-to-your-it-admin-by-email-android.md).
 
-Here is an example of registering a receiver using an anonymous class to implement the MAMNotificationReceiver interface:
+Here's an example of registering a receiver using an anonymous class to implement the MAMNotificationReceiver interface:
 
 ```java
 final MAMNotificationReceiverRegistry notificationRegistry = MAMComponents.get(MAMNotificationReceiverRegistry.class);
@@ -531,15 +531,15 @@ To do this in your MSAL application, build your Public Client using the Client C
       ]
     }
 ```
-Once you have completed this integration, you will need to contact the Intune team at `msintuneappsdk@microsoft.com` to add your application to the list of approved apps for app-based CA.
-*Without this step, your app is not CA compliant and will not appropriately block access to resources.*
+Once you've completed this integration, you'll need to contact the Intune team at `msintuneappsdk@microsoft.com` to add your application to the list of approved apps for app-based CA.
+*Without this step, your app isn't CA compliant and won't appropriately block access to resources.*
 
 When you have received confirmation from the Intune team that your app has been added to the approved list, proceed to [Validating App Protection CA] below.
 
 ### Implementation Notes
 
 > [!NOTE]
-> The app's `MAMServiceAuthenticationCallback.acquireToken()` method should pass *false* for
+> The app's `MAMServiceAuthenticationCallback.acquireToken()` method should pass *false- for
 > `forceRefresh` flag to `acquireTokenSilentAsync()`.
 >  ```java
 >  AcquireTokenSilentParameters acquireTokenSilentParameters =
@@ -551,7 +551,7 @@ When you have received confirmation from the Intune team that your app has been 
 > ```
 
 > [!NOTE]
-> If you want to show a custom blocking UX during the remediation attempt, you should pass *false* for the showUX parameter to `remediateCompliance()`.
+> If you want to show a custom blocking UX during the remediation attempt, you should pass *false- for the showUX parameter to `remediateCompliance()`.
 > You must ensure that you show your UX and register your notification listener first before calling `remediateCompliance()`.
 > This will prevent a race condition where the notification could be missed if `remediateCompliance()` fails very quickly.
 > For example, the `onCreate()` or `onMAMCreate()` method of an Activity subclass is the ideal place to register the notification listener and then call `remediateCompliance()`.
@@ -565,10 +565,10 @@ When you have received confirmation from the Intune team that your app has been 
 
 ## Register for notifications from the SDK
 The Intune App SDK guide has already discussed several scenarios where your app may be required to register for notifications from the SDK, such as:
- * Multi-identity apps handling `WRONG_USER` (see [Managed vs Unmanaged Identities])
- * Multi-identity apps handling `MANAGEMENT_REMOVED` (see [Data Buffer Protection]).
- * Multi-identity apps handling `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA` (see [Selective Wipe]).
- * Apps that implement app configuration handling `REFRESH_APP_CONFIG` (see [Retrieving app configuration from the SDK]).
+ - Multi-identity apps handling `WRONG_USER` (see [Managed vs Unmanaged Identities])
+ - Multi-identity apps handling `MANAGEMENT_REMOVED` (see [Data Buffer Protection]).
+ - Multi-identity apps handling `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA` (see [Selective Wipe]).
+ - Apps that implement app configuration handling `REFRESH_APP_CONFIG` (see [Retrieving app configuration from the SDK]).
 
 This section describes every type of notification the SDK can send, when and why your application would want to listen for it, and how to implement a notification receiver.
 
@@ -586,14 +586,14 @@ Most notifications are [MAMUserNotification]s, which provide information specifi
 | `MANAGEMENT_REMOVED` | `MAMUserNotification` | App is about to become unmanaged. | Apps that utilize `MAMDataProtectionManager` must handle this. | See [MANAGEMENT_REMOVED] below. | Never on UI thread |
 | `REFRESH_APP_CONFIG` | `MAMUserNotification` | App config values may have changed. | Apps that implement app configuration and cache app configuration data must handle this. | Apps must invalidate and update any cached app configuration data. | Nondeterministic |
 | `REFRESH_POLICY` | `MAMUserNotification` | App protection policy may have changed. | Apps that cache app protection policy must handle this. | Apps must invalidate and update any cached app protection policy data. | Nondeterministic |
-| `WIPE_USER_DATA` | `MAMUserNotification` | Wipe is about to occur(*). | Apps that utilize `MAMDataProtectionManager` must handle this **or** `WIPE_USER_AUXILIARY_DATA`. | See [Selective Wipe]. | Never on UI thread |
-| `WIPE_USER_AUXILIARY_DATA` | `MAMUserNotification` | Wipe is about to occur(*). | Only multi-identity apps will receive this. <br> Apps that utilize `MAMDataProtectionManager` must handle this **or** `WIPE_USER_DATA`.  | See [Selective Wipe]. | Never on UI thread |
-| `WIPE_COMPLETED` | `MAMUserNotification` | Wipe has completed. | Always optional. | Delivered after `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA`. *If the app reports a failure from its handler for `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA`, this notification will not be sent.* | Never on UI thread |
+| `WIPE_USER_DATA` | `MAMUserNotification` | Wipe is about to occur(*). | Apps that utilize `MAMDataProtectionManager` must handle this **or*- `WIPE_USER_AUXILIARY_DATA`. | See [Selective Wipe]. | Never on UI thread |
+| `WIPE_USER_AUXILIARY_DATA` | `MAMUserNotification` | Wipe is about to occur(*). | Only multi-identity apps will receive this. <br> Apps that utilize `MAMDataProtectionManager` must handle this **or*- `WIPE_USER_DATA`.  | See [Selective Wipe]. | Never on UI thread |
+| `WIPE_COMPLETED` | `MAMUserNotification` | Wipe has completed. | Always optional. | Delivered after `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA`. *If the app reports a failure from its handler for `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA`, this notification won't be sent.- | Never on UI thread |
 
 (*) Wipes may occur for many reasons, for example:
- * Your app called [unregisterAccountForMAM].
- * An IT admin initiated a remote wipe.
- * Admin-required conditional access policies were not satisfied.
+ - Your app called [unregisterAccountForMAM].
+ - An IT admin initiated a remote wipe.
+ - Admin-required conditional access policies weren't satisfied.
 
 > [!WARNING]
 > An app should never register for both the `WIPE_USER_DATA` and `WIPE_USER_AUXILIARY_DATA` notifications.
@@ -602,18 +602,18 @@ Most notifications are [MAMUserNotification]s, which provide information specifi
 The `MANAGEMENT_REMOVED` notification informs that app that a previously policy-managed account is about to become unmanaged.
 Once the account is unmanaged, the app will no longer be able to read that account's encrypted files, read the account's data encrypted with `MAMDataProtectionManager`, interact with the encrypted clipboard, or otherwise participate in the managed-app ecosystem.
 
-This does not require wiping user data or signing out the user (if a wipe were required, a `WIPE_USER_DATA` notification would be sent). 
+This doesn't require wiping user data or signing out the user (if a wipe were required, a `WIPE_USER_DATA` notification would be sent). 
 Many apps may not need to handle this notification, but apps which use `MAMDataProtectionManager` must handle this.
 See [Data Buffer Protection] for details.
 
 When the SDK calls the app's `MANAGEMENT_REMOVED` receiver, the following will be true:
 
-* The SDK has already decrypted previously encrypted files (but not protected data buffers) belonging to the app. 
-Files in public locations on the sdcard that don't directly belong to the app (e.g. the Documents or Download folders) are not decrypted.
+- The SDK has already decrypted previously encrypted files (but not protected data buffers) belonging to the app. 
+Files in public locations on the sdcard that don't directly belong to the app (for example, the Documents or Download folders) aren't decrypted.
 
-* New files or protected data buffers created by the receiver method (or any other code running after the receiver starts) will not be encrypted.
+- New files or protected data buffers created by the receiver method (or any other code running after the receiver starts) won't be encrypted.
 
-* The app still has access to encryption keys, so operations such as decrypting data buffers will succeed.
+- The app still has access to encryption keys, so operations such as decrypting data buffers will succeed.
 
 Once your app's receiver returns, it will no longer have access to encryption keys.
 
@@ -640,9 +640,9 @@ Generally, this method should always return `true`, unless your application enco
 
 As with other types of Android receivers, your application has flexibility with handling notifications:
 
-* It may create distinct [MAMNotificationReceiver] implementations for distinct notification types (described below). In this case, make sure to register each implementation and each notification type separately.
-* It may use a single [MAMNotificationReceiver] implementation that contains logic for responding to multiple distinct notification types. In this case, it must be registered for each type of notification it can respond to.
-* It may create multiple [MAMNotificationReceiver] implementations that each respond to the same notification type. In this case, both must be registered to the same notification type.
+- It may create distinct [MAMNotificationReceiver] implementations for distinct notification types (described below). In this case, make sure to register each implementation and each notification type separately.
+- It may use a single [MAMNotificationReceiver] implementation that contains logic for responding to multiple distinct notification types. In this case, it must be registered for each type of notification it can respond to.
+- It may create multiple [MAMNotificationReceiver] implementations that each respond to the same notification type. In this case, both must be registered to the same notification type.
 
 > [!TIP]
 > It is safe to block in `MAMNotificationReceiver.onReceive` because its callback is not running on the UI thread.
@@ -651,7 +651,7 @@ As with other types of Android receivers, your application has flexibility with 
 ## Custom Themes
 
 A custom theme can be provided to the Intune App SDK; this custom theme will be applied to all SDK screens and dialogs.
-If a theme is not provided, the default SDK theme will be used.
+If a theme isn't provided, the default SDK theme will be used.
 
 ### Providing a Custom Theme
 
@@ -669,18 +669,18 @@ In the above example, you need to replace `R.style.AppTheme` with the style them
 Refer to [Quickly testing with changing policy] for ease of testing.
 
 ### Validating save to / open from restrictions
-Skip if you did not implement [Policy for limiting data transfer between apps and device or cloud storage locations].
+Skip if you didn't implement [Policy for limiting data transfer between apps and device or cloud storage locations].
 
-Re-familiarize yourself with every scenario where your app can save data to cloud services or local data and open data from cloud services or local data.
+Refamiliarize yourself with every scenario where your app can save data to cloud services or local data and open data from cloud services or local data.
 
 For simplicity, these tests will assume your app only includes support for saving to and opening data from OneDrive for Business from a single location within the app.
 However, you must validate every combination: every supported save location against every place your app allows saving data, and every supported open location against every place your app allows opening data. 
 
 For these tests, install your app and the Intune Company Portal; log in with a managed account before starting the test.
 Additionally:
-* Set the managed account's policy as:
-  * "Send org data to other apps" to "Policy managed apps".
-  * "Receive data from other apps" to "Policy managed apps".
+- Set the managed account's policy as:
+  - "Send org data to other apps" to "Policy managed apps".
+  - "Receive data from other apps" to "Policy managed apps".
 
 | Scenario | Preconditions | Steps | 
 | - | - | - |
@@ -692,16 +692,16 @@ Additionally:
 | Open from, blocked | "Open data into Org documents" policy set to "Block" | - Navigate to where your app can open data from OneDrive for Business. <br> - Attempt to open a document from OneDrive for Business, from the same managed account logged into your app's storage. <br> - Confirm the open is blocked. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it is blocked. |
 
 ### Validating notification restrictions
-Skip if you did not implement [Policy for restricting content inside notifications].
+Skip if you didn't implement [Policy for restricting content inside notifications].
 
-As far as App Protection Policy is concerned, your application may fire 3 different types of notifications:
+As far as App Protection Policy is concerned, your application may fire three different types of notifications:
  1. Notifications that don't contain any account data.
  2. Notifications that contain data belonging to a managed account.
  3. Notifications that contain data belonging to an unmanaged account.
 
 If your application is single-identity, only the first 2 are relevant, since no protections will be applied if the sole account is unmanaged.
 
-Notification restrictions can be validated by triggering all 3 types of notifications with different policy values configured.
+Notification restrictions can be validated by triggering all three types of notifications with different policy values configured.
 
 For these tests, install your app and the Intune Company Portal; log in with a managed account before starting the test.
 If your app is multi-identity, also log in to your app with an unmanaged account.
@@ -713,10 +713,10 @@ If your app is multi-identity, also log in to your app with an unmanaged account
 | No content blocked | "Org data notifications" policy set to "Allow" | 
 
 ### Validating data backup and restore
-Skip if you did not implement [Policy for protecting backup data].
+Skip if you didn't implement [Policy for protecting backup data].
 
 Re-familiarize yourself with the content (files and/or key-value pairs) your app has configured for backup.
-You should validate that *only* expected content is part of the restore.
+You should validate that *only- expected content is part of the restore.
 Extra content in the restore can lead to a data leak.
 
 For these tests, install your app and the Intune Company Portal; log in with a managed account before starting the test.
@@ -726,7 +726,7 @@ Follow [Android's official instructions for testing backup].
 These instructions differ for autobackup and key/value backups, so follow closely.
 
 ### Validating custom screen capture against policy
-Skip if you did not implement [Custom Screen Capture Restrictions].
+Skip if you didn't implement [Custom Screen Capture Restrictions].
 
 If your application has a feature that bypasses Android's `Window`-level `FLAG_SECURE`, validate that this feature is blocked by app protection policy screen capture restrictions.
 
@@ -738,7 +738,7 @@ For these tests, install your app and the Intune Company Portal; log in with a m
 | Screen capture allowed | "Screen capture and Google Assistant" policy set to "Allow" | - Navigate to the location in your app that leverages your custom FLAG_SECURE code. <br> - Attempt to utilize that feature. <br> - Confirm the feature is allowed. | 
 
 ### Validating App Protection CA
-Skip if you did not implement [Support App Protection CA].
+Skip if you didn't implement [Support App Protection CA].
 
 In addition to the typical validation steps of creating and assigning app protection policy to your app and test account, you must also create and assign an App Protection Conditional Access policy to your test account.
 See [Set up app-based Conditional Access policies with Intune] for details.
@@ -749,11 +749,11 @@ Test steps:
  3. Log in to your app with your test account that is targeted with both app protection policy and app-based CA policy.
  4. Confirm your app prompts you to install the Company Portal.
  5. Log in again.
- 6. Confirm your app prompts you to register your device. Follow the prompts. *If your app does not prompt for registration here, confirm that your test device had uninstalled other SDK-enabled apps, Company Portal, and Authenticator first. If this still doesn't prompt, revisit the implementation instructions above.*
- 7. Confirm you are able to access all app data after registering.
+ 6. Confirm your app prompts you to register your device. Follow the prompts. *If your app doesn't prompt for registration here, confirm that your test device had uninstalled other SDK-enabled apps, Company Portal, and Authenticator first. If this still doesn't prompt, revisit the implementation instructions above.*
+ 7. Confirm you're able to access all app data after registering.
 
 ### Validating notification receivers
-Skip if you did not implement [Register for notifications from the SDK].
+Skip if you didn't implement [Register for notifications from the SDK].
 
 Validation steps depend on the type of notifications your app has registered for. For all types of notifications, do add logging to ensure that your receiver is properly being invoked.
 
@@ -767,15 +767,15 @@ Validation steps depend on the type of notifications your app has registered for
 `MANAGEMENT_REMOVED`, `WIPE_USER_DATA`, `WIPE_USER_AUXILIARY_DATA`, `WIPE_COMPLETED` notifications can all be triggered by [issuing a selective wipe] from Microsoft Endpoint Manager.
 
 ### Validating custom themes
-Skip if you did not implement [Custom Themes].
+Skip if you didn't implement [Custom Themes].
 
 Custom theme support can be validated by inspecting the colors on the SDK's dialogs.
 The simplest dialog to check is the MAM PIN screen.
 
 Preconditions:
-* Set the managed account's policy as:
-  * "PIN for access" to "Required".
-* Install your app and the Intune Company Portal.
+- Set the managed account's policy as:
+  - "PIN for access" to "Required".
+- Install your app and the Intune Company Portal.
 
 Test Steps:
  1. Launch your application and log in with the test account.

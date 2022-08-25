@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft Intune App SDK for Android developer integration and testing guide, stage 5
-description: The Microsoft Intune App SDK for Android lets you incorporate Intune mobile app management (MAM) into your Android app.
+title: Microsoft Intune App SDK for Android developer integration and testing guide - Multi-Identity 
+description: Understand Multi-Identity when incorporating Intune mobile app management (MAM) into your Android app.
 keywords: SDK
 author: Erikre
 ms.author: erikre
@@ -30,13 +30,12 @@ ms.collection:
 ms.custom: intune-classic
 ---
 
+# Intune App SDK for Android - Multi-Identity 
 
-# Microsoft Intune App SDK for Android developer guide
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP*- or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+
 > [!NOTE]
-> This guide is broken into several distinct stages.  Start at [Stage 1: Planning the Integration].
-
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
-
+> This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
 
 # Stage 5: Multi-Identity 
 
@@ -50,7 +49,7 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 ### Identity terminology
 The terms "user", "account", and "identity" are often used interchangeably.
 This guide attempts to differentiate as follows:
- - **User**: the human being using the software product. Further differentiated as **end user**, the human using the Android app, and **admin** / **admin user** / **IT admin** / **IT Pro**, the human using the Microsoft Endpoint Manager console.
+ - **User**: the human being using the software product. Further differentiated as **end user**, the human using the Android app, and **admin*- / **admin user*- / **IT admin*- / **IT Pro**, the human using the Microsoft Endpoint Manager console.
 - **Account**: the software record belonging to an organization that uniquely identifies a user's entity. A human user can have multiple accounts. 
 - **Identity**: the set of data that the Intune App SDK uses to uniquely identify an account.
 
@@ -95,10 +94,10 @@ At the moment of login, the user's account may or may not be targeted with app p
 If the account is targeted with app protection policy, the SDK considers it managed; otherwise, it is unmanaged.
 
 The SDK will enforce policy for identities it considers managed.
-The SDK will not enforce policy for identities it considers unmanaged.
+The SDK won't enforce policy for identities it considers unmanaged.
 
 Currently, the Intune App SDK only supports a single managed identity per device.
-As soon as *any* SDK-integrated application registers a managed identity, all subsequently-registered identities, even if they are currently targeted with app protection policies, will be treated as unmanaged.
+As soon as *any- SDK-integrated application registers a managed identity, all subsequently registered identities, even if they're currently targeted with app protection policies, will be treated as unmanaged.
 
 If a managed identity has already been registered on the device and your app registers another identity that is also targeted with app protection policy, the SDK will return `MAMEnrollmentManager.Result.WRONG_USER` and prompt the end user with options to remediate.
 See [Register for notifications from the SDK] for more detail.
@@ -113,29 +112,29 @@ See [Register for notifications from the SDK] for more detail.
 ### The Active Identity
 Your application must always keep the SDK informed of the identity that is in current use, otherwise known as the active identity.
 If the active identity is managed, the SDK will apply protections.
-If the active identity is not managed, the SDK will not apply protections.
+If the active identity isn't managed, the SDK won't apply protections.
 
 Because the SDK has no application-specific knowledge, it must trust the application to share the correct active identity. 
 
-- If the application incorrectly tells the SDK that an unmanaged identity is active when the managed identity is actually in use, the SDK will not apply protections.
+- If the application incorrectly tells the SDK that an unmanaged identity is active when the managed identity is actually in use, the SDK won't apply protections.
 This could cause a data leak that places users' data at risk.
 
 - If the application incorrectly tells the SDK that the managed identity is active when an unmanaged identity is actually in use, then the SDK will inappropriately apply protections.
-This is not a data leak, but this can needlessly restrict unmanaged users and put unmanaged users' data at risk of deletion.
+This isn't a data leak, but this can needlessly restrict unmanaged users and put unmanaged users' data at risk of deletion.
 
 If your application displays any user's data, it must only display data that belongs to the active identity.
-If your application is not currently aware of who owns data that is displayed, you may need to refactor your application for greater identity awareness before starting to integrate multi-identity support.
+If your application isn't currently aware of who owns data that is displayed, you may need to refactor your application for greater identity awareness before starting to integrate multi-identity support.
 
 
 ### Organizing App Data by Identity
-Whenever your application writes a new file, the SDK associates (aka "tags") an identity with that file based on the current active thread and process identity.
+Whenever your application writes a new file, the SDK associates (also known as "tags") an identity with that file based on the current active thread and process identity.
 Alternately, your app can directly call the SDK to manually tag a file with a particular identity (see [Writing Protected Files] for details). The SDK uses this tagged file identity for both file encryption and selective wipe. 
 
 If the managed identity is targeted with encryption policy, only files tagged with the managed identity will be encrypted.
 
 If administrator action or configured policy requests that managed data is wiped, only files tagged with the managed identity will be deleted.
 
-The SDK cannot associate multiple identities with a single file.
+The SDK can't associate multiple identities with a single file.
 If your app stores data belonging to multiple users in the same file, the SDK's default behavior will result in under-protecting or over-protecting this data.
 **You are strongly encouraged to organize your app's data by identity**.
 
@@ -163,14 +162,14 @@ Your application can set the active identity on the following levels in descendi
 An identity set at the thread level supersedes an identity set at the `Context` level, which supersedes an identity set at the process level. 
 
 An identity set on a `Context` is only used in appropriate associated scenarios. 
-File IO operations, for example, do not have an associated `Context`.
+File IO operations, for example, don't have an associated `Context`.
 Most commonly, apps will set the `Context` identity on an `Activity`.
 Consider setting the `Context` identity in `Activity.onCreate`.
-An app *must not* display data for an identity unless the `Activity` identity is set to that same identity. 
+An app *must not- display data for an identity unless the `Activity` identity is set to that same identity. 
 
 In general, the process-level identity is only useful if the app works only with a single identity at a time on all threads.
-This is not typical behavior for apps that support multiple accounts.
-You are strongly encouraged to segregate account data and set the active identity on the thread or `Context` levels.
+This isn't typical behavior for apps that support multiple accounts.
+You're strongly encouraged to segregate account data and set the active identity on the thread or `Context` levels.
 
 If your app uses the `Application` context to acquire system services, ensure that the thread or process identity has been set, or that you have set the UI identity on your app's `Application` context.
 
@@ -205,14 +204,14 @@ public static MAMIdentitySwitchResult setCurrentThreadIdentity(final String iden
 public static String getCurrentThreadIdentity();
 
 /**
- * Get the current app policy. This does NOT take the UI (Context) identity into account.
- * If the current operation has any context (e.g. an Activity) associated with it, use the overload below.
+ - Get the current app policy. This does NOT take the UI (Context) identity into account.
+ - If the current operation has any context (e.g. an Activity) associated with it, use the overload below.
  */
 public static AppPolicy getCurrentThreadPolicy();
 
 /**
- * Get the current app policy. This DOES take the UI (Context) identity into account.
- * If the current operation has any context (e.g. an Activity) associated with it, use this function.
+ - Get the current app policy. This DOES take the UI (Context) identity into account.
+ - If the current operation has any context (e.g. an Activity) associated with it, use this function.
  */
 public static AppPolicy getPolicy(final Context context);
 
@@ -246,7 +245,7 @@ All the methods used to set the identity report back result values via [MAMIdent
 | Return value | Scenario |
 |--            |--        |
 | `SUCCEEDED`    | The identity change was successful. |
-| `NOT_ALLOWED`  | The identity change is not allowed. This occurs if an attempt is made to set the UI (`Context`) identity when a different identity is set on the current thread. |
+| `NOT_ALLOWED`  | The identity change isn't allowed. This occurs if an attempt is made to set the UI (`Context`) identity when a different identity is set on the current thread. |
 | `CANCELLED`    | The user canceled the identity change, generally by pressing the back button on a PIN or authentication prompt. |
 | `FAILED`       | The identity change failed for an unspecified reason.|
 
@@ -255,7 +254,7 @@ The app should verify the [MAMIdentitySwitchResult] is `SUCCEEDED` before displa
 Most methods for setting the active identity return  [MAMIdentitySwitchResult] synchronously. 
 In the case of setting a `Context` identity via [setUIPolicyIdentity], the result is reported asynchronously. 
 The app may implement a [MAMSetUIIdentityCallback] to receive this result, or may pass null for the callback object. 
-If a call is made to `setUIPolicyIdentity` while the result from a previous call to `setUIPolicyIdentity` *on the same context* has not yet been delivered, the new callback will supersede the old one and the original callback will never receive a result.
+If a call is made to `setUIPolicyIdentity` while the result from a previous call to `setUIPolicyIdentity` *on the same context- hasn't yet been delivered, the new callback will supersede the old one and the original callback will never receive a result.
 
 > [!CAUTION]
 > If the `Context` provided to [setUIPolicyIdentity] is an `Activity`, the SDK does not know if the identity change succeeded until after it performs the admin configured conditional launch checks.
@@ -273,20 +272,20 @@ To change this behavior and receive notifications on identity change attempts fo
     public void onSwitchMAMIdentityComplete(final MAMIdentitySwitchResult result);
 ```
 
-If you do override `onSwitchMAMIdentityComplete` (or call the `super` method), you *must* ensure that a managed account's data is not displayed after a failed identity switch.
+If you do override `onSwitchMAMIdentityComplete` (or call the `super` method), you *must- ensure that a managed account's data isn't displayed after a failed identity switch.
 
 > [!NOTE]
 > Switching the identity may require recreating the activity.
 > In this case, the `onSwitchMAMIdentityComplete` callback will be delivered to the new instance of the activity.
 
 #### Identity, Intents, and IdentitySwitchOptions
-In addition to automatically tagging new files with the active identity, the SDK also tags *intents* with the active identity.
+In addition to automatically tagging new files with the active identity, the SDK also tags *intents- with the active identity.
 By default, the SDK will check the identity on an incoming intent and compare it to the active identity.
-If these identities do not match, the SDK typically(*) requests an identity switch (see [Implicit Identity Changes] below for more details).
+If these identities don't match, the SDK typically(*) requests an identity switch (see [Implicit Identity Changes] below for more details).
 
 The SDK also stores this incoming intent identity for later use.
 When the app explicitly changes the UI identity, the SDK compares the identity the app is attempting to switch to against the most recent incoming intent identity.
-If these identities do not match, the SDK will typically(*) fail the identity switch.
+If these identities don't match, the SDK will typically(*) fail the identity switch.
 
 The SDK performs this check because it assumes that the app is still displaying content from the intent that belongs to the identity tagged on the intent.
 This assumption protects against the app unintentionally turning protections off when displaying managed data; however this assumption may not be correct to the app's actual behavior.
@@ -294,7 +293,7 @@ This assumption protects against the app unintentionally turning protections off
 The optional [IdentitySwitchOption] enums can be passed to the [setUIPolicyIdentity] and [switchMAMIdentity] APIs to modify the SDK's default behavior.
 
 - **`IGNORE_INTENT`**: when requesting an identity switch at the UI layer, this option informs the SDK to skip comparing the requested identity parameter against the most recently stored intent identity.
-This is useful when your app is no longer displaying content belonging to that identity, and the SDK should not block this identity switch.
+This is useful when your app is no longer displaying content belonging to that identity, and the SDK shouldn't block this identity switch.
 For example:
   1. Your app is a document viewer. It can render documents passed in from other apps. It also contains a feature where users can switch accounts. Whenever the user uses this account-switch feature, the app navigates to a account-specific landing page with that account's recent documents. 
   2. Your app receives an intent to display a document. This intent is tagged with the managed identity.
@@ -321,14 +320,14 @@ For example:
 
 #### Clearing the Active Identity
 Your application may have scenarios that are account-agnostic.
-Your application may also have scenarios for local unmanaged scenarios that do not require any log in.
+Your application may also have scenarios for local unmanaged scenarios that don't require any log in.
 In both of these cases, your app may not want the SDK to enforce the managed identity's policies, but you may not have an explicit identity to switch to.
 
 You can clear the active identity by calling any of the set identity methods with the identity parameter set to `null`.
 Clearing the identity at one level will cause the SDK to look for the active identity at other levels, based on the order of precedence.
 
 Alternately, you can pass empty string as the identity parameter, which sets the identity to a special empty value which is treated as an unmanaged identity.
-Setting the active identity to empty string tells the SDK not to enforce *any* app protection policy.
+Setting the active identity to empty string tells the SDK not to enforce *any- app protection policy.
 
 
 ### Implicit Identity Changes
@@ -344,15 +343,15 @@ The SDK will never change the active identity without providing these implicit i
 > When in doubt, use the `getCurrentThreadIdentity`, `getUIPolicyIdentity`, and `getProcessIdentity` methods to confirm the active identity.
 
 #### Sources of Implicit Identity Changes
-- Data ingress from **other Intune-managed apps** can change the active identity on the thread and context level.
+- Data ingress from **other Intune-managed apps*- can change the active identity on the thread and context level.
   - If an activity is launched from an `Intent` sent by another MAM app, the activity's identity will be set based on the active identity in the other app at the point the `Intent` was sent.
-    - For example, an activity to view a Word document is launched from an intent from Microsoft Outlook when a user clicks a document attachment. Office's document viewer activity's identity is switched to the identity from Outlook.
+    - For example, an activity to view a Word document is launched from an intent from Microsoft Outlook when a user select a document attachment. Office's document viewer activity's identity is switched to the identity from Outlook.
   
   - For services, the thread identity will be set similarly for the duration of an `onStart` or `onBind` call. Calls into the `Binder` returned from `onBind` will also temporarily set the thread identity.
 
   - Calls into a `ContentProvider` will similarly set the thread identity for their duration.
 
-- **User interaction** with an activity can change the active identity on the context level. For example:
+- **User interaction*- with an activity can change the active identity on the context level. For example:
   - A user canceling out of an authorization prompt during `Resume` will result in an implicit switch to an empty identity.
 
 #### Handling Implicit Identity Changes
@@ -382,15 +381,15 @@ The `AppIdentitySwitchReason` enum parameter describes the source of the implici
 | - | - | - |
 | `CREATE` | Allow the identity switch. | The identity switch is occurring because of an activity creation. | 
 | `NEW_INTENT` | Allow the identity switch. | The identity switch is occurring because a new intent is being assigned to an activity. | 
-| `RESUME_CANCELLED` | Block the identity switch. | The identity switch is occurring because a resume was cancelled. This is most common when the end user presses the back button on the PIN, authentication, or compliance UI. | 
+| `RESUME_CANCELLED` | Block the identity switch. | The identity switch is occurring because a resume was canceled. This is most common when the end user presses the back button on the PIN, authentication, or compliance UI. | 
 
 The [AppIdentitySwitchResultCallback] parameter allows developers to override the default beahvior for the identity switch:
 
 ```java
 public interface AppIdentitySwitchResultCallback {
   /**
-    * @param result
-    *            whether the identity switch can proceed.
+    - @param result
+    -            whether the identity switch can proceed.
     */
   void reportIdentitySwitchResult(AppIdentitySwitchResult result);
 }
@@ -400,25 +399,25 @@ public interface AppIdentitySwitchResultCallback {
 `onMAMIdentitySwitchRequired` is called for all implicit identity changes except for those made through a Binder returned from `MAMService.onMAMBind`.
 The default implementations of `onMAMIdentitySwitchRequired` immediately call:
 
-* `callback.reportIdentitySwitchResult(FAILURE)` when the reason is `RESUME_CANCELLED`.
+- `callback.reportIdentitySwitchResult(FAILURE)` when the reason is `RESUME_CANCELLED`.
 
-* `callback.reportIdentitySwitchResult(SUCCESS)` in all other cases.
+- `callback.reportIdentitySwitchResult(SUCCESS)` in all other cases.
 
-It is not expected that most apps will need to block or delay an identity switch in a different manner, but if an app needs to do so, the following points must be considered:
+It isn't expected that most apps will need to block or delay an identity switch in a different manner, but if an app needs to do so, the following points must be considered:
 
-  * If an identity switch is blocked, the end user behavior is the same as if the SDK's "receive data from other apps" app protection setting had prohibited the data ingress.
+  - If an identity switch is blocked, the end user behavior is the same as if the SDK's "receive data from other apps" app protection setting had prohibited the data ingress.
 
-  * If a Service is running on the main thread, `reportIdentitySwitchResult` **must** be called synchronously or the UI thread stops responding.
+  - If a Service is running on the main thread, `reportIdentitySwitchResult` **must*- be called synchronously, or the UI thread stops responding.
 
-  * For `Activity` creation, [onMAMIdentitySwitchRequired] will be called before `onMAMCreate`. If the app must show UI to determine whether to allow the identity switch, that UI must be shown using a *different* activity.
+  - For `Activity` creation, [onMAMIdentitySwitchRequired] will be called before `onMAMCreate`. If the app must show UI to determine whether to allow the identity switch, that UI must be shown using a *different- activity.
 
-  * In an `Activity`, when a switch to the empty identity is requested with the reason as `RESUME_CANCELLED`, the app must modify the resumed activity to display data consistent with that identity switch.  If this is not possible, the app should refuse the switch, and the user will be asked again to comply with policy for the resuming identity (for example, by being presented with the app PIN entry screen).
+  - In an `Activity`, when a switch to the empty identity is requested with the reason as `RESUME_CANCELLED`, the app must modify the resumed activity to display data consistent with that identity switch.  If this isn't possible, the app should refuse the switch, and the user will be asked again to comply with policy for the resuming identity (for example, by being presented with the app PIN entry screen).
 
 > [!CAUTION]
 > A multi-identity app can receive incoming data from both managed and unmanaged apps.
 > **It is the responsibility of the app to treat data from managed identities in a managed manner.**
 
-If a requested identity is managed (use [MAMPolicyManager.getIsIdentityManaged][getIsIdentityManaged] to check), but the app is not able to use that account (for example, because accounts, such as email accounts, must be set up in the app first) then the identity switch should be refused.
+If a requested identity is managed (use [MAMPolicyManager.getIsIdentityManaged][getIsIdentityManaged] to check), but the app isn't able to use that account (for example, because accounts, such as email accounts, must be set up in the app first) then the identity switch should be refused.
 
 The default behavior for `MAMActivity.onMAMIdentitySwitchRequired` can be accessed by calling the static method `MAMActivity.defaultOnMAMIdentitySwitchRequired(activity, identity,
 reason, callback)`.
@@ -428,10 +427,10 @@ Similarly, if you need to override `MAMActivity.onSwitchMAMIdentityComplete`, yo
 ### Identity Switches and Screenshot Restrictions
 The Intune App SDK uses the `Window` flag `FLAG_SECURE` to enforce screenshot policy. 
 Some apps may also set `FLAG_SECURE` for their own purposes. 
-When app protection policy does not restrict screenshots, the SDK will not modify `FLAG_SECURE`. 
+When app protection policy doesn't restrict screenshots, the SDK won't modify `FLAG_SECURE`. 
 
-On an identity switch from an identity whose policy requires disabling screenshots to an identity whose policy does not, the SDK will clear `FLAG_SECURE`.
-As a result, your app should not rely on `FLAG_SECURE` remaining set after an identity switch.
+On an identity switch from an identity whose policy requires disabling screenshots to an identity whose policy doesn't, the SDK will clear `FLAG_SECURE`.
+As a result, your app shouldn't rely on `FLAG_SECURE` remaining set after an identity switch.
 
 ### Preserving Identity In Async Operations
 Apps often dispatch background tasks from the UI thread to handle operations on other threads.
@@ -476,7 +475,7 @@ ExecutorService wrappedService = MAMIdentityExecutors.wrapExecutorService(origin
 ### File Protection
 
 #### Writing Protected Files
-As mentioned in [Organizing App Data by Identity] above, the Intune App SDK associates the active identity (from the thread/process level) with files as they are written.
+As mentioned in [Organizing App Data by Identity] above, the Intune App SDK associates the active identity (from the thread/process level) with files as they're written.
 It is critical to have the correct identity set at file creation time to ensure proper encryption and selective wipe functionality.
 
 Your app may query or change a file’s identity using the [MAMFileProtectionManager] class, specifically `MAMFileProtectionManager.getProtectionInfo` for querying and `MAMFileProtectionManager.protect` for changing.
@@ -489,28 +488,28 @@ For that reason, apps applying protection to a directory that contains a large n
 
 Calling `protect` with empty string for the identity parameter will tag the file/directory with the unmanaged identity.
 This operation will remove encryption from the file/directory if it was previously encrypted.
-When a selective wipe command is issued, the file/directory will not be deleted.
+When a selective wipe command is issued, the file/directory won't be deleted.
 
 #### Displaying Protected File Content
-It is equally critical to have the correct identity set when file content is being *displayed* to prevent unauthorized users from viewing managed data.
-The SDK cannot automatically infer a relationship between files being read and data being displayed in an `Activity`.
-Apps *must* set the UI identity appropriately before displaying any managed data.
+It is equally critical to have the correct identity set when file content is being *displayed- to prevent unauthorized users from viewing managed data.
+The SDK can't automatically infer a relationship between files being read and data being displayed in an `Activity`.
+Apps *must- set the UI identity appropriately before displaying any managed data.
 This includes data read from files.
 
 If a file comes from outside the app (either from a
-`ContentProvider` or read from a publicly writable location), the app *must* attempt to determine the file identity (using the correct
+`ContentProvider` or read from a publicly writable location), the app *must- attempt to determine the file identity (using the correct
 [MAMFileProtectionManager.getProtectionInfo][MAMFileProtectionManager] overload for the data source) before displaying information read from the file. 
 
-If `getProtectionInfo` reports a non-null, non-empty identity, the app *must* set the UI identity to match this identity using either [MAMActivity.switchMAMIdentity][switchMAMIdentity] or
+If `getProtectionInfo` reports a non-null, non-empty identity, the app *must- set the UI identity to match this identity using either [MAMActivity.switchMAMIdentity][switchMAMIdentity] or
 [MAMPolicyManager.setUIPolicyIdentity][setUIPolicyIdentity].
-If the identity switch fails, data from the file *must not* be displayed. 
+If the identity switch fails, data from the file *must not- be displayed. 
 
 When reading from a content URI, it may be necessary to first read the identity (via the `getProtectionInfo` overload taking a `Uri`), then set the context or thread identity appropriately.
 This must be done before opening a file descriptor or input stream on the `ContentResolver`, or else the operation may fail.
 
 An example flow might look something like the following:
-  * User selects a document to open in the app.
-  * During the open flow, prior to reading data from disk, the app confirms the identity that should be used to display the content:
+  - User selects a document to open in the app.
+  - During the open flow, prior to reading data from disk, the app confirms the identity that should be used to display the content:
 
     ```java
     MAMFileProtectionInfo info = MAMFileProtectionManager.getProtectionInfo(docPath)
@@ -518,9 +517,9 @@ An example flow might look something like the following:
         MAMPolicyManager.setUIPolicyIdentity(activity, info.getIdentity(), callback, EnumSet.noneOf<IdentitySwitchOption.class>)
     ```
 
-  * The app waits until a result is reported to callback.
-  * If the reported result is a failure, the app does not display the document.
-  * The app opens and renders the file.
+  - The app waits until a result is reported to callback.
+  - If the reported result is a failure, the app doesn't display the document.
+  - The app opens and renders the file.
   
 If an app uses the Android `DownloadManager` to download files,
 the SDK will attempt to protect these files automatically using
@@ -532,24 +531,24 @@ If the downloaded files contain corporate data, it is the app's responsibility t
 #### Single-Identity to Multi-Identity Transition
 If an app which previously released with single-identity Intune
 integration later integrates multi-identity, previously installed apps will experience a transition.
-This transition is not visible to the user. 
+This transition isn't visible to the user. 
 
-The app is *not required* to handle this transition.
-All files created before the transition will continue being regarded as managed (so they will stay encrypted if encryption policy is on). 
+The app is *not required- to handle this transition.
+All files created before the transition will continue being regarded as managed (so they'll stay encrypted if encryption policy is on). 
 
-If you do not want all previous app data to be associated with the managed identity, you can detect this transition and explicitly remove protection. 
+If you don't want all previous app data to be associated with the managed identity, you can detect this transition and explicitly remove protection. 
  - Detect the upgrade by comparing your app's version to a known version where multi-identity support was added.
- - Call `protect` with empty string for the identity parameter on files or directories that you do not want associated with the managed identity. 
+ - Call `protect` with empty string for the identity parameter on files or directories that you don't want associated with the managed identity. 
 
 #### Offline Scenarios
-The Intune App SDK runs in "offline" mode when the Company Portal app is not installed.
+The Intune App SDK runs in "offline" mode when the Company Portal app isn't installed.
 File identity tagging is sensitive to offline mode:
 
-* If the Company Portal is not installed, files cannot be identity-tagged. Calling [MAMFileProtectionManager.protect][protect] in offline mode is safe, but it will have no effect.
+- If the Company Portal isn't installed, files can't be identity-tagged. Calling [MAMFileProtectionManager.protect][protect] in offline mode is safe, but it will have no effect.
 
-* If the Company Portal is installed, but the app does not have App Protection Policy, files cannot reliably be identity-tagged.
+- If the Company Portal is installed, but the app doesn't have App Protection Policy, files can't reliably be identity-tagged.
 
-* When file identity tagging becomes available, all previously created files are treated as personal/unmanaged (belonging to the empty-string identity), except in cases where the app was previously installed as a single-identity managed app, as described in [Single-Identity to Multi-Identity Transition].
+- When file identity tagging becomes available, all previously created files are treated as personal/unmanaged (belonging to the empty-string identity), except in cases where the app was previously installed as a single-identity managed app, as described in [Single-Identity to Multi-Identity Transition].
 
 To avoid these cases, apps should avoid creating files containing account data until account registration completes successfully.
 If your app absolutely must create files while offline, it can use [MAMFileProtectionManager.protect][protect] to correct the file's associated identity once the SDK is online.
@@ -572,27 +571,27 @@ Apps that make use of `MAMDataProtectionManager` should implement a receiver for
 After this notification completes, buffers that were protected via this class will no longer be readable (if file encryption was enabled when the buffers were protected). 
 An app can prevent these buffers becoming unreadable by calling `MAMDataProtectionManager.unprotect` on all buffers when handling the `MANAGEMENT_REMOVED` notification. 
 It is also safe to call `protect` during this notification, if you wish to preserve identity information.
-Encryption is guaranteed to be disabled during the notification and calling `protect` in the handler will not encrypt data buffers.
+Encryption is guaranteed to be disabled during the notification and calling `protect` in the handler won't encrypt data buffers.
 
 
 ### Content Providers
 A multi-identity app must also protect data shared through `ContentProvider`s to prevent inappropriately sharing managed content.
 
 Your app must call the static [MAMContentProvider] method `isProvideContentAllowed(provider, contentIdentity)` before returning content.
-If this function returns false, the content *must not* be returned to the caller. 
+If this function returns false, the content *must not- be returned to the caller. 
 
-Calling `isProvideContentAllowed` is not required if your `ContentProvider` is returning a `ParcelFileDescriptor`.
+Calling `isProvideContentAllowed` isn't required if your `ContentProvider` is returning a `ParcelFileDescriptor`.
 File descriptors returned through a content provider are handled automatically based on the file identity.
 
 
 ### Selective Wipe
-By default, the Intune App SDK will automatically handle selective wipes, deleting all *files* that have been associated with the managed identity.
+By default, the Intune App SDK will automatically handle selective wipes, deleting all *files- that have been associated with the managed identity.
 Afterwards, the SDK will close the app gracefully, finishing activities and killing the app process. 
 
 The SDK provides the optional ability for your app to either supplement (recommended) or override the default wipe behavior.
 
-The SDK's default wipe handler does not handle data buffers protected by  `MAMDataProtectionManager`.
-If your app used this feature, it **must** supplement or override the default wipe handler to remove that data.
+The SDK's default wipe handler doesn't handle data buffers protected by  `MAMDataProtectionManager`.
+If your app used this feature, it **must*- supplement or override the default wipe handler to remove that data.
 
 > [!NOTE]
 > Supplementing and overriding default wipe behavior require handling specific SDK notifications.
@@ -601,7 +600,7 @@ If your app used this feature, it **must** supplement or override the default wi
 #### Supplementing Default Wipe Behavior
 To supplement the default SDK wipe behavior, your app can register for the `WIPE_USER_AUXILIARY_DATA` [MAMNotificationType].
 
-This notification will be sent by the SDK *before* it performs the default selective wipe.
+This notification will be sent by the SDK *before- it performs the default selective wipe.
 The SDK will wait for your app's notification handler to complete before deleting data and terminating the app.
 Your app should clear data synchronously and not return until all cleanup is complete.
 
@@ -615,10 +614,10 @@ To override the default SDK wipe behavior, your app can register for the `WIPE_U
 
 **Overriding the default SDK wipe behavior places considerable risk on your app.**
 Your app will be fully responsible for removing all data associated with the managed identity, including all files and data buffers that have been tagged for that identity.
- - If the managed identity was protected with encryption, and your app's custom wipe handler does not fully remove all managed data, any remaining managed files will remain encrypted. This data will become inaccessible, and your app may not handle attempting to read encrypted data gracefully.
- - Your app's wipe handler may result in data loss for unmanaged users, if it removes files that are not tagged with the managed identity.
+ - If the managed identity was protected with encryption, and your app's custom wipe handler doesn't fully remove all managed data, any remaining managed files will remain encrypted. This data will become inaccessible, and your app may not handle attempting to read encrypted data gracefully.
+ - Your app's wipe handler may result in data loss for unmanaged users, if it removes files that aren't tagged with the managed identity.
 
-If your app's custom wipe handler removes managed data from a file but wishes to leave other data in the file, it *must* change the identity of the file (via [MAMFileProtectionManager.protect][protect]) to either an unmanaged identity or empty string.
+If your app's custom wipe handler removes managed data from a file but wishes to leave other data in the file, it *must- change the identity of the file (via [MAMFileProtectionManager.protect][protect]) to either an unmanaged identity or empty string.
 
 Your overridden wipe handler should clear data synchronously and not return until all cleanup is complete.
 
@@ -628,29 +627,29 @@ Consider closing your app manually after completing your custom wipe handler ste
 ### Exit Criteria
 Plan to dedicate significant time for validating your app's integration of multi-identity. Before you start testing:
  - Create and assign app protection policy to an account. This will be your test managed account.
- - Create, but do not assign app protection policy to, another account. This will be your test unmanaged account. Alternately, if your app supports multiple account types beyond Azure Active Directory accounts, you can use an existing non-AAD account as the unmanaged test account.
- - Re-familiarize yourself with how policy is enforced inside your app. Multi-identity testing requires you to easily distinguish when your app is and is not operating with policy enforced. The app protection policy setting to block screenshots is effective at quickly testing policy enforcement.
+ - Create, but don't assign app protection policy to, another account. This will be your test unmanaged account. Alternately, if your app supports multiple account types beyond Azure Active Directory accounts, you can use an existing non-AAD account as the unmanaged test account.
+ - Refamiliarize yourself with how policy is enforced inside your app. Multi-identity testing requires you to easily distinguish when your app is and isn't operating with policy enforced. The app protection policy setting to block screenshots is effective at quickly testing policy enforcement.
  - Consider the entire set of UI your app offers. Enumerate the screens where account data is displayed. Does your app only ever present a single account's data at once, or can it present data belonging to multiple accounts at the same time?
  - Consider the entire set of files your app creates. Enumerate which of these files contain data belonging to an account, as opposed to system-level data.
-   - Determine how you will validate encryption on each of these files. 
+   - Determine how you'll validate encryption on each of these files. 
  - Consider the entire set of ways your app can interact with other apps. Enumerate all the ingress and egress points. What types of data can your app ingest? What intents does it broadcast? What content providers does it implement? 
-   - Determine how you will exercise each of these data sharing features.
+   - Determine how you'll exercise each of these data sharing features.
    - Prepare a test device that has both managed and unmanaged apps that can interact with your app.
  - Consider how your app enables the end user to interact with all logged in accounts. Does the user need to manually switch to an account before that account's data is displayed?
 
-Once you have thoroughly assessed your app's current behavior, validate the multi-identity integration by executing the following set of tests.
-Note, this is not a comprehensive list and does not guarantee that your app's multi-identity implementation is bug-free.
+Once you've thoroughly assessed your app's current behavior, validate the multi-identity integration by executing the following set of tests.
+Note, this isn't a comprehensive list and doesn't guarantee that your app's multi-identity implementation is bug-free.
 
 #### Validating login and logout scenarios
 Your multi-identity app supports up to 1 managed account and multiple unmanaged accounts.
-These tests help ensure your multi-identity integration does not improperly change protections when users login or logout.
+These tests help ensure your multi-identity integration doesn't improperly change protections when users login or logout.
 
-For these tests, install your app and the Intune Company Portal; do not log in before starting the test.
+For these tests, install your app and the Intune Company Portal; don't log in before starting the test.
 
 | Scenario | Steps | 
 | - | - | 
-| Login managed first | - Login first with a managed account and validate that account's data are managed. <br> - Login with an unmanaged account and validate that account's data are not managed. | 
-| Login unmanaged first | - Login first with an unmanaged account and validate that account's data are not managed. <br> - Login with a managed account and validate that account's data are managed. | 
+| Login managed first | - Login first with a managed account and validate that account's data are managed. <br> - Login with an unmanaged account and validate that account's data aren't managed. | 
+| Login unmanaged first | - Login first with an unmanaged account and validate that account's data aren't managed. <br> - Login with a managed account and validate that account's data are managed. | 
 | Login multiple managed | - Login first with a managed account and validate that account's data are managed. <br> - Login with a second managed account and validate that the user is blocked from logging in without first removing the original managed account. | 
 | Logout managed | - Log in to your app with both a managed an unmanaged account. <br> - Log out of the managed account. <br> - Confirm that the managed account is removed from your app and all that account's data has been removed. <br> - Confirm that the unmanaged account is still logged in, none of the unmanaged account's data has been removed, and policy is still not applied. | 
 | Logout unmanaged | - Log in to your app with both a managed an unmanaged account. <br> - Log out of the unmanaged account. <br> - Confirm that the unmanaged account is removed from your app and all that account's data has been removed. <br> - Confirm that the managed account is still logged in, none of the unmanaged account's data has been removed, and policy is still applied. | 
@@ -665,12 +664,12 @@ For these tests, install your app and the Intune Company Portal; log in with bot
 | Scenario | Steps | 
 | - | - | 
 | Single account view, managed | - Switch to the managed account. <br> - Navigate to all pages in your app that present a single account's data. <br> - Confirm that policy is applied on every page. |
-| Single account view, unmanaged | - Switch to the unmanaged account. <br> - Navigate to all pages in your app that present a single account's data. <br> - Confirm that policy is not applied on any page. |
+| Single account view, unmanaged | - Switch to the unmanaged account. <br> - Navigate to all pages in your app that present a single account's data. <br> - Confirm that policy isn't applied on any page. |
 | Multi-account view | - Navigate to all pages in your app that present multiple accounts' data simultaneously. <br> - Confirm that policy is applied on every page. |
 | Managed pause | - On a screen with managed data displayed and policy active, pause the app by navigating to the device home screen or another app. <br> - Resume the app. <br> - Confirm that policy is still applied. |
-| Unmanaged pause | - On a screen with unmanaged data displayed and no policy active, pause the app by navigating to the device home screen or another app. <br> - Resume the app. <br> - Confirm that policy is not applied. |
-| Managed kill | - On a screen with managed data displayed and policy active, force kill the app. <br> - Restart the app. <br> - Confirm that, if the app resumes on a screen with the managed account's data (expected), policy is still applied. If the app resumes on a screen with the unmanaged account's data, confirm that policy is not applied. |
-| Unmanaged kill |  - On a screen with unmanaged data displayed and policy active, force kill the app. <br> - Restart the app. <br> - Confirm that, if the app resumes on a screen with the unmanaged account's data (expected), policy is not applied. If the app resumes on a screen with the managed account's data, confirm that policy is still applied.  |
+| Unmanaged pause | - On a screen with unmanaged data displayed and no policy active, pause the app by navigating to the device home screen or another app. <br> - Resume the app. <br> - Confirm that policy isn't applied. |
+| Managed kill | - On a screen with managed data displayed and policy active, force kill the app. <br> - Restart the app. <br> - Confirm that, if the app resumes on a screen with the managed account's data (expected), policy is still applied. If the app resumes on a screen with the unmanaged account's data, confirm that policy isn't applied. |
+| Unmanaged kill |  - On a screen with unmanaged data displayed and policy active, force kill the app. <br> - Restart the app. <br> - Confirm that, if the app resumes on a screen with the unmanaged account's data (expected), policy isn't applied. If the app resumes on a screen with the managed account's data, confirm that policy is still applied.  |
 | Identity switch ad hoc | - Experiment switching between accounts and pausing / resuming / killing  / restarting the app. <br> - Confirm that the managed account's data is always protected and the unmanaged account's data is never protected. |
 
 #### Validating data sharing scenarios
@@ -679,13 +678,13 @@ Intune's app protection policies have settings that dictate this behavior.
 These tests help ensure your multi-identity integration honors these data sharing settings.
 
 For these tests, install your app and the Intune Company Portal; log in with both a managed and unmanaged account before starting the test. Additionally:
-* Set the managed account's policy as:
-  * "Send org data to other apps" to "Policy managed apps".
-  * "Receive data from other apps" to "Policy managed apps".
-* Install other apps on the test device:
-  * A managed app, targeted with the same policy as your app, that can send and receive data (like Microsoft Outlook).
-  * Any unmanaged app that can send and receive data.
-* Log into the other managed app with the managed test account. Even if the other managed app is multi-identity, only log in with the managed account.
+- Set the managed account's policy as:
+  - "Send org data to other apps" to "Policy managed apps".
+  - "Receive data from other apps" to "Policy managed apps".
+- Install other apps on the test device:
+  - A managed app, targeted with the same policy as your app, that can send and receive data (like Microsoft Outlook).
+  - Any unmanaged app that can send and receive data.
+- Log into the other managed app with the managed test account. Even if the other managed app is multi-identity, only log in with the managed account.
 
 If your app has the ability to send data to other apps, like Microsoft Outlook sending a document attachment to Microsoft Office:
 | Scenario | Steps | 
@@ -711,12 +710,12 @@ If your app has the ability to passively receive data from other apps:
 
 | Scenario | Steps | 
 | - | - | 
-| Managed identity receive from unmanaged app | - Switch to the managed account. <br> - Switch to the unmanaged app. <br> - Navigate to where it can send data. <br> - Attempt to send data from the unmanaged app to your app. <br> - Your app's managed account should not be able to receive data from the unmanaged app. | 
+| Managed identity receive from unmanaged app | - Switch to the managed account. <br> - Switch to the unmanaged app. <br> - Navigate to where it can send data. <br> - Attempt to send data from the unmanaged app to your app. <br> - Your app's managed account shouldn't be able to receive data from the unmanaged app. | 
 | Managed identity receive from managed app | - Switch to the managed account. <br> - Switch to the other managed app with the managed account signed in. <br> - Navigate to where it can send data. <br> - Attempt to send data from the managed app to your app. <br> - Your app's managed account should be allowed to receive data from the other managed app. | 
-| Unmanaged identity receive from managed app | - Switch to the unmanaged account. <br> - Switch to the other managed app with the managed account signed in. <br> - Navigate to where it can send data. <br> - Attempt to send data from the managed app to your app. <br> - Your app's unmanaged account should not be able to receive data from the managed app. | 
+| Unmanaged identity receive from managed app | - Switch to the unmanaged account. <br> - Switch to the other managed app with the managed account signed in. <br> - Navigate to where it can send data. <br> - Attempt to send data from the managed app to your app. <br> - Your app's unmanaged account shouldn't be able to receive data from the managed app. | 
 | Unmanaged identity receive from unmanaged app | - Switch to the unmanaged account. <br> - Switch to the unmanaged app. <br> - Navigate to where it can send data. <br> - Attempt to send data from the unmanaged app to your app. <br> - Your app's unmanaged account should always be allowed to receive data from the unmanaged app. | 
 
-Failures in these tests may indicate that your app does not have the right active identity set when it attempts to send or receive data.
+Failures in these tests may indicate that your app doesn't have the right active identity set when it attempts to send or receive data.
 You can investigate this by leveraging the SDK's get identity APIs at the point of sending/receiving to confirm the active identity is set properly.
 
 #### Validating selective wipe scenarios
@@ -724,7 +723,7 @@ Your multi-identity app may have supplemented or overridden the SDK's default wi
 These tests help ensure your multi-identity integration properly removes managed data when wipes are initiated, without impacting unmanaged data.
 
 > [!WARNING]
-> Reminder, if your app leveraged `MAMDataProtectionManager.protect`, it **must** implement a handler for either `WIPE_USER_AUXILIARY_DATA` or `WIPE_USER_DATA`.
+> Reminder, if your app leveraged `MAMDataProtectionManager.protect`, it **must*- implement a handler for either `WIPE_USER_AUXILIARY_DATA` or `WIPE_USER_DATA`.
 
 For these tests, install your app and the Intune Company Portal; log in with both a managed and unmanaged account before starting the test. For both accounts, exercise app scenarios that store account data. 
 
@@ -737,9 +736,9 @@ For these tests, install your app and the Intune Company Portal; log in with bot
 
 ## Next Steps
 
-After you have completed all the [Exit Criteria] above, your app is now successfully integrated as multi-identity and can enforce app protection policies on a per-identity basis.
+After you've completed all the [Exit Criteria] above, your app is now successfully integrated as multi-identity and can enforce app protection policies on a per-identity basis.
 The subsequent sections, [Stage 6: App Configuration] and [Stage 7: App Participation Features], may or may not be required, depending on your app's desired app protection policy support.
-If you are unsure if any of these sections apply to your app, revisit [Key Decisions for SDK integration].
+If you're unsure if any of these sections apply to your app, revisit [Key Decisions for SDK integration].
 
 <!-- Stage 5 links -->
 [Organizing App Data by Identity]:#organizing-app-data-by-identity

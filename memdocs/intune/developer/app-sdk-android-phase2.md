@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft Intune App SDK for Android developer integration and testing guide, stage 2
-description: The Microsoft Intune App SDK for Android lets you incorporate Intune mobile app management (MAM) into your Android app.
+title: Microsoft Intune App SDK for Android developer integration and testing guide - MSAL Prerequisite
+description: Understand the MSAL prerequisite to incorporate Intune mobile app management (MAM) into your Android app.
 keywords: SDK
 author: Erikre
 ms.author: erikre
@@ -30,33 +30,33 @@ ms.collection:
 ms.custom: intune-classic
 ---
 
+# Intune App SDK for Android - Understand the MSAL Prerequisite
 
-# Microsoft Intune App SDK for Android developer guide
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP*- or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+
 > [!NOTE]
-> This guide is broken into several distinct stages.  Start at [Stage 1: Planning the Integration].
-
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+> This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
 
 # Stage 2: The MSAL Prerequisite
 
 ## Stage Goals
 
-* Register your application with Azure Active Directory (AAD).
-* Integrate MSAL into your Android application.
-* Verify that your application can obtain a token that grants access to protected resources.
+- Register your application with Azure Active Directory (AAD).
+- Integrate MSAL into your Android application.
+- Verify that your application can obtain a token that grants access to protected resources.
 
 ## Background
 
 The [Microsoft Authentication Library (MSAL)] gives your application the ability to use the Microsoft Cloud by supporting [Microsoft Azure Active Directory (AAD)] and [Microsoft accounts].  
 
-MSAL is *not* specific to Intune.
+MSAL isn't- specific to Intune.
 Intune has a dependency on AAD; all Intune user accounts are AAD accounts.
 **As a result, the vast majority of Android applications that integrate the Intune App SDK will need to integrate MSAL as a prerequisite.**
 
 This stage of the SDK guide overviews the MSAL integration process as it relates to Intune; **follow the linked MSAL guides in their entirety**.
 
 To simplify the Intune App SDK integration process, **Android app developers are strongly encouraged to fully integrate and test MSAL before downloading the Intune App SDK.**
-The Intune App SDK integration process *does* require code changes around MSAL token acquisition.
+The Intune App SDK integration process *does- require code changes around MSAL token acquisition.
 It will be significantly easier to test the Intune-specific token acquisition changes if you've already confirmed your app's original token acquisition implementation works as expected.
 
 To learn more about AAD, see [What is Azure Active Directory?]
@@ -66,7 +66,7 @@ To learn more about MSAL, see the [MSAL Wiki] and [list of MSAL libraries].
 ## Register your Application with AAD
 
 Before integrating MSAL into your Android application, follow the instructions to [register your application with Azure Active Directory].
-This will generate a **Client ID** for your application.
+This will generate a **Client ID*- for your application.
 
 Next, follow the instructions to [give your app access to the Intune app protection service].
 
@@ -76,10 +76,10 @@ First, read the MSAL integration guidelines found in the [MSAL repository on Git
 
 This guide describes how to:
 
-* Add MSAL as a dependency to your Android application.
-* Create an MSAL configuration file.
-* Configure your application's `AndoridManifest.xml`.
-* Add code to acquire a token.
+- Add MSAL as a dependency to your Android application.
+- Create an MSAL configuration file.
+- Configure your application's `AndoridManifest.xml`.
+- Add code to acquire a token.
 
 ### Brokered Authentication
 
@@ -88,13 +88,13 @@ MSAL can enable SSO across your suite of apps; by using a broker application (ei
 Brokered authentication is also required for Conditional Access.
 See [Enable cross-app SSO on Android using MSAL] for more details on brokered authentication.
 
-This guide assumes that you are enabling brokered authentication within your application(s) following the steps at the link above, especially [Generate a redirect URI for a broker] and [Configure MSAL to use a broker] for configuration and [Verify broker integration] for testing.
+This guide assumes that you're enabling brokered authentication within your application(s) following the steps at the link above, especially [Generate a redirect URI for a broker] and [Configure MSAL to use a broker] for configuration and [Verify broker integration] for testing.
 
 **If you are not enabling brokered authentication in your application, pay extra attention to [Intune-specific MSAL configuration]**.
 
 ### Intune-specific MSAL configuration
 
-Intune has up to 4 settings you may need to add to your application's `AndroidManifest.xml`.
+Intune has up to four settings you may need to add to your application's `AndroidManifest.xml`.
 These settings help ensure that Intune's authentication policy can be properly enforced and prevent unnecessary authentication prompts for end users.
 
 These settings include:
@@ -116,13 +116,13 @@ These settings include:
 
 | Setting | Description | Required for MSAL? | Required by Intune? |
 | - | - | - | - |
-| `ClientID`             | The AAD ClientID (also known as the "Application ID") for your app. <br> There is no default `ClientID`. Use the `ClientID` from [Register your Application with AAD] for your app. |  Yes | No |
-| `Authority`            | The AAD authority to issue a token. <br> By default, this value is the AAD public environment. If overridden, the AAD authority entered will issue the token for your application, which allows authentication to non-default environments, such as Sovereign clouds. | No | If your application requires a non-default authority, yes. **Most apps should not set the Authority parameter.** |
-| `SkipBroker`           | Boolean value for altering the default MSAL SSO behavior. <br> By default, this value is "false". | No | If your app does not support brokered authentication/device-wide SSO, yes and set `SkipBroker` to "true". **Most apps should not set the SkipBroker parameter.** |
-| `NonBrokerRedirectURI` | [AAD redirect URI] to use in broker-less cases. By default, this value is not present. | No | If the `SkipBroker` setting is set to "true" and your app requires a redirect URI, yes. **Most apps should not set the NonBrokerRedirectURI parameter.** |
+| `ClientID`             | The AAD ClientID (also known as the "Application ID") for your app. <br> There's no default `ClientID`. Use the `ClientID` from [Register your Application with AAD] for your app. |  Yes | No |
+| `Authority`            | The AAD authority to issue a token. <br> By default, this value is the AAD public environment. If overridden, the AAD authority entered will issue the token for your application, which allows authentication to non-default environments, such as Sovereign clouds. | No | If your application requires a non-default authority, yes. **Most apps should not set the Authority parameter.*- |
+| `SkipBroker`           | Boolean value for altering the default MSAL SSO behavior. <br> By default, this value is "false". | No | If your app doesn't support brokered authentication/device-wide SSO, yes and set `SkipBroker` to "true". **Most apps should not set the SkipBroker parameter.*- |
+| `NonBrokerRedirectURI` | [AAD redirect URI] to use in broker-less cases. By default, this value isn't present. | No | If the `SkipBroker` setting is set to "true" and your app requires a redirect URI, yes. **Most apps should not set the NonBrokerRedirectURI parameter.*- |
 
 > [!CAUTION]
-> Applications that do not integrate MSAL **must not** include any of these 4 properties in the manifest.
+> Applications that do not integrate MSAL **must not*- include any of these 4 properties in the manifest.
 
 For more detail on non-Intune-specific MSAL configuration options, see [Android Microsoft Authentication Library configuration file].
 
@@ -131,11 +131,11 @@ For more detail on Sovereign clouds, see [Use MSAL in a national cloud environme
 
 ## Stage 2 Exit Criteria
 
-* Have you integrated MSAL into your application?
-* Have you enabled broker authentication by generating a redirect URI and setting it in the MSAL configuration file?
-* Have you configured the Intune-specific MSAL settings in the `AndroidManifest.xml`?
-* Have you tested brokered authentication, confirmed that a work account is added to Android's Account Manager, and tested SSO with other M365 apps?
-* If you implemented Conditional Access, have you tested both device-based CA and app-based CA to validate your CA implementation?
+- Have you integrated MSAL into your application?
+- Have you enabled broker authentication by generating a redirect URI and setting it in the MSAL configuration file?
+- Have you configured the Intune-specific MSAL settings in the `AndroidManifest.xml`?
+- Have you tested brokered authentication, confirmed that a work account is added to Android's Account Manager, and tested SSO with other Microsoft 365 apps?
+- If you implemented Conditional Access, have you tested both device-based CA and app-based CA to validate your CA implementation?
 
 ## FAQ
 
@@ -150,7 +150,7 @@ To migrate your app from ADAL to MSAL, see [Migrate Android ADAL to MSAL] and [D
 
 ## Next Steps
 
-After you have completed all the [Exit Criteria] above, continue to [Stage 3: Getting Started with MAM].
+After you've completed all the [Exit Criteria] above, continue to [Stage 3: Getting Started with MAM].
 
 <!-- Stage 2 links -->
 <!-- internal links -->

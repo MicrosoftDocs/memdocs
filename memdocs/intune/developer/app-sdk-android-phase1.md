@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Microsoft Intune App SDK for Android developer integration and testing guide, stage 1
-description: The Microsoft Intune App SDK for Android lets you incorporate Intune mobile app management (MAM) into your Android app.
+title: Microsoft Intune App SDK for Android developer integration and testing guide - Plan the integration
+description: Plan the integration to incorporate Intune mobile app management (MAM) into your Android app.
 keywords: SDK
 author: Erikre
 ms.author: erikre
@@ -30,34 +30,31 @@ ms.collection:
 ms.custom: intune-classic
 ---
 
+# Intune App SDK for Android - Plan the integration
 
-# Microsoft Intune App SDK for Android developer guide
-> [!NOTE]
-> This guide is broken into several distinct stages.  Start at [Stage 1: Planning the Integration].
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP*- or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
-
-# Stage 1: Planning the Integration
+# Stage 1: Plan the Integration
 
 This guide is for Android developers who are looking to add support for Microsoft Intune's App Protection Policies inside their existing Android app.
 
 ## Stage Goals
 
-* Learn what App Protection Policy settings are available for Android and how these policies will work inside your application.
-* Understand the key decision points during the SDK integration process and plan your app's integration.
-* Understand the requirements for applications integrating the SDK.
-* Create a test Intune tenant and configure an Android App Protection Policy.
+- Learn what App Protection Policy settings are available for Android and how these policies will work inside your application.
+- Understand the key decision points during the SDK integration process and plan your app's integration.
+- Understand the requirements for applications integrating the SDK.
+- Create a test Intune tenant and configure an Android App Protection Policy.
 
 ## Understanding MAM
 
 Before you start integrating the Intune App SDK into your Android application, take a moment to familiarize yourself with Microsoft Intune's Mobile Application Management solution:
 
-* [What is Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
+- [What is Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
   and where to find these features in the Microsoft Endpoint Manager console.  
-* [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
-* [Android app protection policy settings] describes each Android setting in detail.
+- [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
+- [Android app protection policy settings] describes each Android setting in detail.
   Your app will support these settings by integrating the SDK.
-  During the SDK integration process, you will also configure these settings in your own test tenant for validation.
+  During the SDK integration process, you'll also configure these settings in your own test tenant for validation.
 
 > [!NOTE]
 > Some Android App Protection Policy settings require specific code to support.
@@ -67,7 +64,7 @@ Before you start integrating the Intune App SDK into your Android application, t
 
 ### Do I have access to my application's source code?
 
-If you do not have access to your application's source code and only have access to the compiled application in either .apk or .aab format, you will not be able to integrate the SDK into your application.
+If you don't have access to your application's source code and only have access to the compiled application in either .apk or .aab format, you won't be able to integrate the SDK into your application.
 However, your application may still be compatible with Intune app protection policies.
 See [App Wrapping Tool for Android] for more details.
 
@@ -78,12 +75,12 @@ Most applications must integrate MSAL before integrating the Intune SDK.
 
 Your app can skip integrating MSAL **only if all of the following are true**:
 
-* Your application does not have or need an interactive log-in and log-out end user experience.
-* Your application does not support multiple accounts logged in simultaneously.
-* Your application does not need to support non-Intune accounts.
-* Your application does not grant access to any resources protected by Conditional Access.
+- Your application doesn't have or need an interactive log-in and log-out end user experience.
+- Your application doesn't support multiple accounts logged in simultaneously.
+- Your application doesn't need to support non-Intune accounts.
+- Your application doesn't grant access to any resources protected by Conditional Access.
 
-If your app satisfies **all of the above conditions** and does not integrate MSAL, it can still be protected by App Protection Policy, albeit with no option for unmanaged usage. See [Default Enrollment] for details.
+If your app satisfies **all of the above conditions*- and doesn't integrate MSAL, it can still be protected by App Protection Policy, albeit with no option for unmanaged usage. See [Default Enrollment] for details.
 
 See [Stage 2: The MSAL Prerequisite] for instructions on integrating MSAL and additional details on identity scenarios inside your application.
 
@@ -91,15 +88,15 @@ See [Stage 2: The MSAL Prerequisite] for instructions on integrating MSAL and ad
 
 Without Intune App Protection Policy support, how does your application handle user authentication and accounts?
 
-* Does your application currently only allow a single account to be logged in?
-Does your application explicitly force the logged-in account to log-out *and delete that previous account's data* before allowing another account to log-in?
+- Does your application currently only allow a single account to be logged in?
+Does your application explicitly force the logged-in account to log-out *and delete that previous account's data- before allowing another account to log-in?
 If so, your application is **single-identity**.
 
-* Does your application currently allow a second account to log-in, even if a different account is already logged in?
+- Does your application currently allow a second account to log-in, even if a different account is already logged in?
 Does your application display multiple accounts' data on a shared screen?
 Does your application store multiple accounts' data?
 Does your application let users switch between different logged in accounts?
-If so, your application is **multi-identity** and you will need to follow [Stage 5: Multi-Identity]. **This section is required for your app.**
+If so, your application is **multi-identity*- and you'll need to follow [Stage 5: Multi-Identity]. **This section is required for your app.**
 
 Even if your application is multi-identity, follow this integration guide in order.
 Initially integrating and testing as single-identity will help ensure proper integration and prevent bugs where corporate data ends up unprotected.
@@ -110,7 +107,7 @@ Android supports [application-specific management configurations] that apply to 
 
 Intune also supports application configurations that apply to SDK-integrated applications, regardless of device management mode. Admins can configure these [application configuration policies for managed apps] in Microsoft Endpoint Manager.
 
-The Intune App SDK supports both types of application configuration and provides a single API for accessing configurations from both channels. If you application has or will support either of these types of application configuration, you will need to follow [Stage 6: App Configuration].
+The Intune App SDK supports both types of application configuration and provides a single API for accessing configurations from both channels. If your application has or will support either of these types of application configuration, you'll need to follow [Stage 6: App Configuration].
 
 ### Does my application need to define granular protection for data ingress and egress?
 
@@ -119,13 +116,13 @@ See [Policy for limiting data transfer between apps and device or cloud storage 
 
 ### Does my application display notifications that contain user specific information?
 
-Multi-identity apps must take code changes to properly honor notification policy. Single-identity apps may want to take code changes so this notification policy does not block 100% of their app's notifications. See [Policy for restricting content inside notifications] in [Stage 7: App Participation Features].
+Multi-identity apps must take code changes to properly honor notification policy. Single-identity apps may want to take code changes so this notification policy doesn't block 100% of their app's notifications. See [Policy for restricting content inside notifications] in [Stage 7: App Participation Features].
 
 ### Does my application support Android's backup and restore functionality?
 
-Android supports [backup and restore] functionality to preserve data and personalization for users when they upgrade to a new device or re-install your app.
+Android supports [backup and restore] functionality to preserve data and personalization for users when they upgrade to a new device or reinstall your app.
 
-Intune also supports backup and restore functionality for SDK-integrated applications, to ensure corporate data cannot be leaked through a restore. 
+Intune also supports backup and restore functionality for SDK-integrated applications, to ensure corporate data can't be leaked through a restore. 
 
 If your app supports this functionality, it must take code changes to protect corporate data during restore. 
 See [Policy for protecting backup data] in [Stage 7: App Participation Features].
@@ -133,14 +130,14 @@ See [Policy for protecting backup data] in [Stage 7: App Participation Features]
 ### Does my application have resources that should be protected by Conditional Access?
 
 [Conditional Access (CA)] is an [Azure Active Directory (AAD)]
-feature which can be used to control access to AAD resources.
-Intune administrators can define CA rules which allow resource access only from devices or apps which are managed by Intune.
+feature that can be used to control access to AAD resources.
+Intune administrators can define CA rules that allow resource access only from devices or apps that are managed by Intune.
 
-Intune supports 2 types of CA: **device-based CA** and **app-based CA**, aka [App Protection CA].
+Intune supports two types of CA: **device-based CA*- and **app-based CA**, also known as [App Protection CA].
 Device-based CA blocks access to protected resources until the entire device is managed by Intune.
 App-based CA blocks access to protected resources until the specific app is managed by Intune App Protection Policies.
 
-If your app acquires any AAD access tokens and accesses resources which can be CA-protected, you will need to follow [Support App Protection CA] in [Stage 7: App Participation Features].
+If your app acquires any AAD access tokens and accesses resources that can be CA-protected, you'll need to follow [Support App Protection CA] in [Stage 7: App Participation Features].
 
 ### Does my application have a distinct theme that needs to persist across UI shown by the Intune App SDK?
 
@@ -158,7 +155,7 @@ The Intune App SDK for Android relies on the presence of the [Company Portal] ap
 > When the Company Portal app is not on the device, an SDK-integrated app behaves the same as a normal app that does not support Intune app protection policies.
 > Even if the Company Portal app is on the device, an SDK-integrated app behaves the same as a normal when the end user is not targeted with app protection policy.
 
-The user is ***not*** required to sign into or even launch the Company Portal app for App Protection Policy to function.
+The user is ***not**- required to sign into or even launch the Company Portal app for App Protection Policy to function.
 
 ### Android versions
 
@@ -166,14 +163,14 @@ The SDK fully supports Android API 28 (Android 9.0) through Android API 32 (Andr
 In order to target Android API 31-32 (Android 12-12L), you must use Intune App SDK `v8.0.0` or later.
 
 APIs 26 through 27 (Android 8.0 - 8.1) are in limited support.
-The Company Portal app is not supported below Android API 26 (Android 8.0).
-App Protection Policy is not supported below Android API 28 (Android 9.0).
+The Company Portal app isn't supported below Android API 26 (Android 8.0).
+App Protection Policy isn't supported below Android API 28 (Android 9.0).
 
-If your app declares `minSdkVersion` to an API level below API 28 (Android 9.0), the Intune App SDK will not block app usage for users who are not targeted by App Protection Policy.
+If your app declares `minSdkVersion` to an API level below API 28 (Android 9.0), the Intune App SDK won't block app usage for users who aren't targeted by App Protection Policy.
 
 ### Telemetry
 
-The Intune App SDK for Android does not control data collection from your app. The Company Portal application logs system-generated data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, Intune does not collect any personal data.
+The Intune App SDK for Android doesn't control data collection from your app. The Company Portal application logs system-generated data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, Intune doesn't collect any personal data.
 
 > [!TIP]
 > If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection].
@@ -182,7 +179,7 @@ The Intune App SDK for Android does not control data collection from your app. T
 
 ### Demo tenant setup
 
-If you do not already have a tenant with your company, you can create a demo tenant with or without pre-generated data. You must register as a [Microsoft partner] to access Microsoft CDX.
+If you don't already have a tenant with your company, you can create a demo tenant with or without pre-generated data. You must register as a [Microsoft partner] to access Microsoft CDX.
 To create a new account:
 
 1. Navigate to the [Microsoft CDX tenant creation site] and create a Microsoft 365 Enterprise tenant.
@@ -198,15 +195,15 @@ To create a new account:
 Before you test app protection policy settings within your own application, it's helpful to familiarize yourself with how these settings behave inside other SDK-integrated applications.
 
 > [!TIP]
-> If your app isn't listed in the Microsoft Endpoint Manager portal, you can target it with a policy by selecting the **more apps** option and providing the package name in the text box.  
+> If your app isn't listed in the Microsoft Endpoint Manager portal, you can target it with a policy by selecting the **more apps*- option and providing the package name in the text box.  
 > You must target your app with app protection policy and deploy the policy to a user to successfully test your integration.  
 > Even if policy is targeted and deployed, your app will not properly enforce policies until it has successfully integrated the SDK.
 
 ## Exit Criteria
 
-* Have you familiarized yourself with how different app protection policy settings will behave inside your Android application?
-* Have you reviewed your app and planned your app's integration around MSAL, Conditional Access, Multi-Identity, App Configuration, and all additional SDK features?
-* Have you created an Android app protection policy within your test tenant?
+- Have you familiarized yourself with how different app protection policy settings will behave inside your Android application?
+- Have you reviewed your app and planned your app's integration around MSAL, Conditional Access, Multi-Identity, App Configuration, and all additional SDK features?
+- Have you created an Android app protection policy within your test tenant?
 
 ## FAQ
 
@@ -226,8 +223,8 @@ The end user experience on Android devices unsupported by Intune app protection 
 
 | Android OS versions | Google Play behavior | MAM app behavior |
 | - | - | - |
-| Below Android 8.0           | The Company Portal app will be unavailable to download from Google Play.  Devices that already have the Company Portal installed will not be able to update to new versions of the Company Portal. | MAM functionality will not be universally blocked. However, as SDK-integrated apps ship with new versions of the SDK, MAM-targeted users will be blocked from entering these apps, as they cannot update the Company Portal. When a user, who has MAM policy targeted and has previously logged in to the app, launches such an app, they will be prompted to upgrade the Company Portal.  Users can mitigate this behavior by removing the MAM-targeted account from the application.  If users uninstall the Company Portal, their account will automatically be removed from the app, but they will not be able to log back in with the MAM-targeted account. |
-| Android 8.x                 |  The Company Portal app will be available to download from Google Play.  Devices that already have the Company Portal installed will still be able to update to new versions of the Company Portal. | MAM functionality is not actively blocked.  However, Android 8.x is unsupported, and MAM features may not work as expected. |
+| Below Android 8.0           | The Company Portal app will be unavailable to download from Google Play.  Devices that already have the Company Portal installed won't be able to update to new versions of the Company Portal. | MAM functionality won't be universally blocked. However, as SDK-integrated apps ship with new versions of the SDK, MAM-targeted users will be blocked from entering these apps, as they can't update the Company Portal. When a user, who has MAM policy targeted and has previously logged in to the app, launches such an app, they'll be prompted to upgrade the Company Portal.  Users can mitigate this behavior by removing the MAM-targeted account from the application.  If users uninstall the Company Portal, their account will automatically be removed from the app, but they won't be able to log back in with the MAM-targeted account. |
+| Android 8.x                 |  The Company Portal app will be available to download from Google Play.  Devices that already have the Company Portal installed will still be able to update to new versions of the Company Portal. | MAM functionality isn't actively blocked.  However, Android 8.x is unsupported, and MAM features may not work as expected. |
 
 ### What is the App Wrapping tool?
 
@@ -235,7 +232,7 @@ Android app developers have multiple ways to integrate Intune functionality into
 
 ## Next Steps
 
-After you have completed all the [Exit Criteria] above, continue to [Stage 2: The MSAL Prerequisite].
+After you've completed all the [Exit Criteria] above, continue to [Stage 2: The MSAL Prerequisite].
 
 <!-- Stage 1 links -->
 <!-- internal links -->
