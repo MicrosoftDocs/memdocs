@@ -114,11 +114,11 @@ When a setting for a compliance policy returns a value of **Error**, the complia
 
 In the **Device compliance status** chart, select a status. For example, select the **Not compliant** status:
 
-:::image type="content" source="./media/compliance-policy-monitor/select-not-compliant-status.png" alt-text="Choose the not compliant status.":::
+:::image type="content" source="./media/compliance-policy-monitor/select-not-compliant-status.png" alt-text="Screenshot that shows Choose the not compliant status.":::
 
 That action opens the **Device compliance** window and displays devices in a **Device status** chart. The chart shows you more details on the devices in that state, including operating system platform, last check-in date, and more.
 
-:::image type="content" source="./media/compliance-policy-monitor/drill-down-details.png" alt-text="Dashboard image shows more details on the device in that specific state":::
+:::image type="content" source="./media/compliance-policy-monitor/drill-down-details.png" alt-text="Dashboard image shows more details on the device in that specific state.":::
 
 If you want to see all the devices owned by a specific user, you can also filter the chart report by typing the user's e-mail.
 
@@ -170,7 +170,7 @@ When you select the tile, it shows all devices without a compliance policy. It a
 
 The **Policy compliance** chart shows you the policies, and how many devices are compliant and noncompliant.
 
-:::image type="content" source="./media/compliance-policy-monitor/idc-8.png" alt-text="See a list of the policy, and how many compliant vs noncompliant devices for that policy.":::
+:::image type="content" source="./media/compliance-policy-monitor/idc-8.png" alt-text="See a list of the policies, and how many compliant vs noncompliant devices for that policy.":::
 
 ### Setting compliance
 
