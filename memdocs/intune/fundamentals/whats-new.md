@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/18/2022
+ms.date: 08/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+## Week of August 22, 2022
+
+### Device management
+
+#### Use Intune role-based access control (RBAC) for tenant attached devices <!-- 14996522 -->
+
+You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Endpoint Manager admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../configmgr/cloud-attach/use-intune-rbac.md).
 
 ## Week of August 15, 2022 (Service release 2208)
 

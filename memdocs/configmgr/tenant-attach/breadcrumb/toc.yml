@@ -41,4 +41,3 @@ items:
         - name: Tenant attach
           tocHref: /mem/configmgr/cloud-attach/
           topicHref: /mem/configmgr/tenant-attach/index
-          

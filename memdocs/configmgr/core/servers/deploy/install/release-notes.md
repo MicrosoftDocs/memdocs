@@ -2,7 +2,7 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 08/12/2022
+ms.date: 08/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
@@ -183,11 +183,13 @@ For more information, see [Create custom security roles](../configure/configure-
 
 ## Configuration Manager console
 
-### Intune RBAC for Tenant Attached devices
+### Intune RBAC for tenant attached devices
 <!--13058986-->
 *Applies to: version 2207*
 
-You'll now see a checkbox for a role-based access control (RBAC) setting in the cloud attach configuration wizard in the console. By default, Configuration Manager RBAC is enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. This checkbox is checked by default. If you want to enforce only Intune RBAC, you can uncheck the box. However, the enforcement of Intune RBAC only won't apply at this time. This release note and the [What's New in Intune](../../../../../intune/fundamentals/whats-new.md) will be updated when you're able to enforce Intune RBAC only. For more information, see, [Enable Microsoft Endpoint Manager tenant attach](../../../../../configmgr/tenant-attach/device-sync-actions.md)
+***[Updated]***: There is a checkbox for a role-based access control (RBAC) setting in the [cloud attach configuration wizard](../../../../cloud-attach/enable.md) in the console. By default, Configuration Manager RBAC is enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. This checkbox is selected by default.
+
+You can now configure Intune role-based access control (RBAC) when interacting with [tenant attached devices](../../../../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Endpoint Manager admin center. For more information, see [Intune role-based access control for tenant-attached clients](../../../../cloud-attach/use-intune-rbac.md).
 
 ### Unable to open console because extension installation loops
 <!--12868458-->
