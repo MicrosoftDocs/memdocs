@@ -576,7 +576,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Require Managed Pasteboard
 - Safari Accept Cookies
 - Safari Allow Autofill
-- Safari Allow Java Script
+- Safari Allow JavaScript
 - Safari Allow Popups
 - Safari Force Fraud Warning
 
@@ -1036,7 +1036,7 @@ The following settings are available:
 - Prevent Visual Basic macros from using legacy MacScript
 - Prevent Visual Basic macros from using pipes to communicate
 - Show Template Gallery on app launch
-- Show Whats New dialog
+- Show What's New dialog
 - Visual Basic macro policy
 
 **Microsoft Office > Microsoft Outlook**:
@@ -2275,7 +2275,7 @@ Applies to:
 - Windows 10
 
 #### Filters are Generally Available (GA)<!-- 12466893 -->
-You can use filters to include or exclude devices in workload assignments (like policies and apps) based on different device properties. Filters is now generally available (GA).
+You can use filters to include or exclude devices in workload assignments (like policies and apps) based on different device properties. Filters are now generally available (GA).
 
 For more information on filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md).
 
@@ -2888,7 +2888,7 @@ For more information about Android Enterprise device restriction profiles, see [
 
 #### New device restrictions setting prevents sharing work profile contacts with paired Bluetooth devices<!-- 8630136 -->
 
-A new device restrictions setting for corporate-owned work profile devices prevents users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  To configure the setting, go to **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
+A new device restriction setting for corporate-owned work profile devices prevents users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  To configure the setting, go to **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
 
 - Setting name:  **Contact sharing via Bluetooth (work profile-level)**
 - Setting toggles:  
@@ -4240,7 +4240,7 @@ To improve page load performance, app icons will now load in batches. End users 
 
 #### Endpoint analytics in Microsoft Productivity Score<!-- IN8529842 -->
 
-There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/productivity-score.md).
+There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/adoption-score.md).
 
 #### Endpoint analytics Application Reliability report<!-- IN5653073 -->
 
