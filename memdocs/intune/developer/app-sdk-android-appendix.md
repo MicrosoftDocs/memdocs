@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Microsoft Intune App SDK for Android developer integration and testing guide
+title: Microsoft Intune App SDK for Android developer integration and testing guide, appendix
 description: The Microsoft Intune App SDK for Android lets you incorporate Intune mobile app management (MAM) into your Android app.
 keywords: SDK
 author: Erikre
@@ -30,12 +30,15 @@ ms.collection:
 ms.custom: intune-classic
 ---
 
+
 # Microsoft Intune App SDK for Android developer guide
+> [!NOTE]
+> This guide is broken into several distinct stages.  Start at [Stage 1: Planning the Integration].
 
 The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 ## Stage Goals
-The guide contains greater detail about the Intune App SDK's architecture, information about uncommon integration steps, and other helpful content.
+The Appendix contains greater detail about the Intune App SDK's architecture, information about uncommon integration steps, and other helpful content.
 
 ## The SDK in Greater Detail
 
@@ -44,7 +47,7 @@ Through the [build tooling], the Intune App SDK attempts to minimize the integra
 Prior to the build tooling, developers needed to perform all replacements manually.
 
 > [!NOTE] 
-> Apps *must- now integrate with the SDK [build tooling], which will perform all of these replacements automatically (except for [manifest replacements]).
+> Apps *must* now integrate with the SDK [build tooling], which will perform all of these replacements automatically (except for [manifest replacements]).
 
 Android base classes are replaced with their respective MAM equivalents in order to enable Intune management.
 The SDK classes live between the Android base class and the app's own derived version of that class.
@@ -70,7 +73,7 @@ The table below lists many of the MAM replacements.
 | android.app.ListActivity | MAMListActivity |
 | android.app.ListFragment | MAMListFragment |
 | android.app.NativeActivity | MAMNativeActivity |
-| android.app.PendingIntent | MAMPendingIntent (see [Pending Intent]:#pendingintent) |
+| android.app.PendingIntent | MAMPendingIntent |
 | android.app.Service | MAMService |
 | android.app.TabActivity | MAMTabActivity |
 | android.app.TaskStackBuilder | MAMTaskStackBuilder |
@@ -110,7 +113,7 @@ For example, when deriving from [MAMActivity], instead of overriding `onCreate()
 The Java compiler should enforce the final restrictions to prevent accidental override of the original method instead of the MAM equivalent.
 
 ### Wrapped System Services
-For some system service classes, it's necessary to call a static
+For some system service classes, it is necessary to call a static
 method on a MAM wrapper class instead of directly invoking the desired
 method on the service instance.
 For example, a call to
@@ -135,13 +138,13 @@ Again, the required build plugin automatically makes these replacements.
 | android.app.blob.BlobStoreManager | MAMBlobStoreManager |
 | android.app.blob.BlobStoreManager.Session | MAMBlobStoreManager.Session |
 
-Some classes have most of their methods wrapped, for example, `ClipboardManager`, `ContentProviderClient`, `ContentResolver`,
-and `PackageManager` while other classes have only one or two methods wrapped, for example, `DownloadManager`, `PrintManager`, `PrintHelper`,
+Some classes have most of their methods wrapped, e.g. `ClipboardManager`, `ContentProviderClient`, `ContentResolver`,
+and `PackageManager` while other classes have only one or two methods wrapped, e.g. `DownloadManager`, `PrintManager`, `PrintHelper`,
 `View`, `DragEvent`, `NotificationManager` and `NotificationManagerCompat`. 
 
 ### Manifest Replacements
-It may be necessary to perform some of the above class replacements in the manifest and in Java code. Of special note:
-- Manifest references to `android.support.v4.content.FileProvider` must be replaced with `com.microsoft.intune.mam.client.support.v4.content.MAMFileProvider`.
+It may be necessary to perform some of the above class replacements in the manifest as well as in Java code. Of special note:
+* Manifest references to `android.support.v4.content.FileProvider` must be replaced with `com.microsoft.intune.mam.client.support.v4.content.MAMFileProvider`.
 
 ### MDM and MAM Enrollment
 As discussed in [Stage 4's Registration vs Enrollment], the Intune App SDK will "enroll" accounts that your app registers so that account is protected with policy.
@@ -153,7 +156,7 @@ MDM enrollment is entirely separate from App Protection Policy enrollment.
 An SDK-integrated app can have an account enrolled for App Protection Policy without that account being enrolled for Device Management. 
 Likewise, a user can have enrolled a device for Device Management without having any SDK-integrated apps with accounts enrolled for App Protection Policy.
 
-Typically, when developers and administrators refer to enrollment, they're referring to MDM enrollment, as App Protection Policy enrollment is largely invisible to both developers and end users.
+Typically, when developers and administrators refer to enrollment, they are referring to MDM enrollment, as App Protection Policy enrollment is largely invisible to both developers and end users.
 See [Enroll Android devices] for more details on MDM enrollment.
 
 ## Integration Tips
@@ -171,36 +174,36 @@ If you don't see your app's package name here, it indicates that the account log
 For description on each MAM policy setting, refer to
 [Android app protection policy settings in Microsoft Intune]. 
 For a description of how these settings will show up in the Company Portal logs, refer to [Review client app protection logs]. 
-When MAM policy isn't being enforced as expected, we recommend that you check Company Portal logs or the diagnostic UI, verify that your app is managed by MAM policy, and confirm the policy settings have expected values.
+When MAM policy is not being enforced as expected, we recommend that you check Company Portal logs or the diagnostic UI, verify that your app is managed by MAM policy, and confirm the policy settings have expected values.
 
 You can collect Company Portal logs in one of the following ways:
 - Through the Company Portal
   - Open the Company Portal app
-  - Select on the three dots menu on the up right corner
-  - Select Settings
-  - Under Diagnostic Logs, select Save Logs
+  - Click on the three dots menu on the up right corner
+  - Click Settings
+  - Under Diagnostic Logs, click Save Logs
   - Follow the prompt to choose the output directory to save the Company Portal logs. 
   - Use `adb shell pull` command to pull the logs from your Android device to your local machine.
-- [Use Microsoft Edge for Android to access managed app logs]. This will display UI for
+- [Use Edge for Android to access managed app logs]. This will display UI for
 collecting Company Portal logs and viewing MAM diagnostics.
 - Call `MAMPolicyManager.showDiagnostics(context)` to display the same UI for collecting Company Portal logs.
 
 ### Quickly testing with changing policy
-As you're developing and testing your app's integration of the Intune App SDK, you may frequently change the App Protection Policy settings for your test user.
+As you are developing and testing your app's integration of the Intune App SDK, you may frequently change the App Protection Policy settings for your test user.
 
-By default, integrated apps will check in with the Intune service for updated policy every 30 minutes, when active. 
+By default, integrated apps will check-in with the Intune service for updated policy every 30 minutes, when active. 
 You can avoid this wait and force a check-in through the Company Portal:
 
-1. Launch the Company Portal. You don't need to sign in.
-2. Select the ... menu icon.
-3. Select Settings.
+1. Launch the Company Portal. You do not need to sign in.
+2. Click the ... menu icon.
+3. Click Settings.
 4. Scroll to the setting called "Management Policy".
 5. Press the Sync button.
 
 This will immediately schedule a check-in and will retrieve up-to-date policy targeted to your app and account.
 
 ### Troubleshooting AndroidX Migration
-If you integrated the Intune App SDK *before- leveraging AndroidX, you may encounter an error like this while migrating to AndroidX:
+If you integrated the Intune App SDK *before* leveraging AndroidX, you may encounter an error like this while migrating to AndroidX:
 
 ```log
 incompatible types: android.support.v7.app.ActionBar cannot be converted to androidx.appcompat.app.ActionBar
@@ -226,7 +229,7 @@ As discussed above, the MAM build plugin/tool will automatically rewrite classes
 
 ### Default enrollment
 Your application can alternately register for App Protection Policies through a simplified process called **default enrollment**.
-This feature is primarily to support private line-of-business apps that haven't integrated MSAL.
+This feature is primarily to support private line-of-business apps that have not integrated MSAL.
 
 > [!WARNING]
 > Default enrollment comes with significant tradeoffs and is **not recommended**.
@@ -241,8 +244,7 @@ Default enrollment will force the end user to install the Company Portal and com
 Enable default enrollment with the following steps:
 
 1. If your app integrates MSAL or you need to enable SSO,
-   [configure MSAL](#configure-microsoft-authentication-library-msal)
-   following [common MSAL configurations](#common-msal-configurations) #2. If not, you may skip this step.
+   [configure MSAL]. If not, you may skip this step.
    
 2. Enable default enrollment by adding the following value in the manifest under the `<application>` tag:
 
@@ -257,7 +259,7 @@ Enable default enrollment with the following steps:
    ```
 
 ### Isolated Processes
-The Intune App SDK can't apply protections to isolated processes.
+The Intune App SDK cannot apply protections to isolated processes.
 Support for isolated processes (`android:isolatedProcess`) requires the addition of the meta-data tag below. 
 
 > [!Warning]
@@ -272,7 +274,7 @@ Support for isolated processes (`android:isolatedProcess`) requires the addition
 If your app contains a custom screen capture feature that bypasses Android's `Window`-level `FLAG_SECURE` restriction, you must check screen capture policy before allowing full access to the feature. 
 For example, if your app uses a custom rendering engine to render the current view to a PNG file, you must first check `AppPolicy.getIsScreenCaptureAllowed()`. 
 
-If your app doesn't contain any custom or third-party screen capture features, you aren't required to take any action to restrict screen captures. 
+If your app does not contain any custom or third-party screen capture features, you are not required to take any action to restrict screen captures. 
 Screen capture policy is automatically enforced at the `Window` level for all MAM integrated apps. 
 
 Any attempts by the OS or another app to capture a `Window` in your app will be blocked as required. 
@@ -280,7 +282,7 @@ For example, if a user attempts to capture your app's screen through Android's b
 
 ### Policy enforcement limitations
 
-- **Using Content Resolvers**: The "transfer or receive" Intune policy may block or partially block the use of a content resolver to
+* **Using Content Resolvers**: The "transfer or receive" Intune policy may block or partially block the use of a content resolver to
 access the content provider in another app.
 This will cause `ContentResolver` methods to return null or throw a failure value (for example, `openOutputStream` will throw `FileNotFoundException` if blocked).
 The app can determine whether a failure to write data through a content resolver was caused by policy (or would be caused by policy) by making the call:
@@ -289,7 +291,7 @@ The app can determine whether a failure to write data through a content resolver
     MAMPolicyManager.getPolicy(currentActivity).getIsSaveToLocationAllowed(contentURI);
     ```
 
-    or if there's no associated activity:
+    or if there is no associated activity:
 
     ```java
     MAMPolicyManager.getCurrentThreadPolicy().getIsSaveToLocationAllowed(contentURI);
@@ -304,25 +306,25 @@ The service checks the caller to ensure that only the Company Portal is allowed 
 ### Reflection limitations
 Some of the MAM base classes (for example, `MAMActivity`, `MAMDocumentsProvider`) contain methods (based on the original Android base classes) which use parameter or return types only present above certain API levels. 
 For this reason, it may not always be possible to use reflection to enumerate all methods of app components.
-This restriction isn't limited to MAM, it's the same restriction that would apply if the app itself implemented these methods from the Android base classes.
+This restriction is not limited to MAM, it is the same restriction that would apply if the app itself implemented these methods from the Android base classes.
 
 ### Robolectric
-Testing Intune App SDK behavior under Robolectric isn't supported. 
-There are known issues running the SDK under Robolectric due to behaviors present under Robolectric that don't accurately mimic those on real devices or emulators.
+Testing Intune App SDK behavior under Robolectric is not supported. 
+There are known issues running the SDK under Robolectric due to behaviors present under Robolectric that do not accurately mimic those on real devices or emulators.
 
-If you need to test your application under Robolectric, the recommended workaround is to move your application class logic to a helper and produce your unit-testing apk with an application class that doesn't inherit from MAMApplication.
+If you need to test your application under Robolectric, the recommended workaround is to move your application class logic to a helper and produce your unit-testing apk with an application class that does not inherit from MAMApplication.
 
 
 <!-- Appendix links -->
 <!-- internal links -->
 [manifest replacements]:#manifest-replacements
 [some method calls must also be replaced]:#wrapped-system-services
-[Pending Intent]:#pendingintent
 [MAMApplication]:#mamapplication
 
 <!-- Other SDK Guide Markdown docs -->
 [Stage 1: Planning the Integration]:app-sdk-android-phase1.md
 [build tooling]:app-sdk-android-phase3.md#build-tooling
+[configure MSAL]:app-sdk-android-phase2.md
 [Stage 4's Registration vs Enrollment]:app-sdk-android-phase4.md#registration-vs-enrollment
 
 <!-- Other MEM docs -->
