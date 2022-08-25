@@ -171,6 +171,10 @@ The following table describes how noncompliant settings are managed when a compl
 | **Maximum OS version** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined<br><br>- **iOS 8.0 and later**: Quarantined<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 8.1 and later**: Quarantined |
 | **Windows health attestation** | - **Android 4.0 and later**: Not applicable<br>- **Samsung Knox Standard 4.0 and later**: Not applicable<br>- **Android Enterprise**: Not applicable<br><br>- **iOS 8.0 and later**: Not applicable<br>- **macOS 10.11 and later**: Not applicable<br><br>- **Windows 10/11**: Quarantined<br>- **Windows 8.1 and later**: Quarantined |
 
+
+> [!NOTE]
+> The Company Portal enters the enrollment remediation flow when the user logs into CP and the device has not successfully checked in with Intune in 30+ days (or the device is noncompliant due to a "Lost contact" compliance reason). In this flow, we attempt to initiate a checkin one more time. If that still does not succeed, then we issue a retire command to allow the user to re-enroll the device manually.
+
 ---------------------------
 
 ## Next steps
