@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/18/2022
+ms.date: 08/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+## Week of August 22, 2022
+
+### Device management
+
+#### Use Intune role-based access control (RBAC) for tenant attached devices <!-- 14996522 -->
+
+You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Endpoint Manager admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../configmgr/cloud-attach/use-intune-rbac.md).
 
 ## Week of August 15, 2022 (Service release 2208)
 
@@ -336,8 +343,8 @@ For more information, see [Use remote help with Intune and Microsoft Endpoint Ma
 
 ### Device enrollment
 
-#### Intune supports sign-in from another device during iOS/iPadOS Setup Assistant with modern authentication<!-- 12377183 -->  
-Users going through automated device enrollment (ADE) can now authenticate by signing in from another device.  This option is available for iOS/iPadOS devices enrolling via Setup Assistant with modern authentication. The screen that prompts device users to sign in from another device is embedded into Setup Assistant and shown to them during enrollment. For more information about the sign-in process for users, see [Get the Intune Company Portal app](../user-help/sign-in-to-the-company-portal.md#sign-in-via-another-device).  
+#### Intune supports sign-in from another device during iOS/iPadOS and macOS Setup Assistant with modern authentication<!-- 12377183 -->  
+Users going through automated device enrollment (ADE) can now authenticate by signing in from another device. This option is available for iOS/iPadOS and macOS devices enrolling via Setup Assistant with modern authentication. The screen that prompts device users to sign in from another device is embedded into Setup Assistant and shown to them during enrollment. For more information about the sign-in process for users, see [Get the Intune Company Portal app (../user-help/sign-in-to-the-company-portal.md#sign-in-via-another-device).  
 
 #### Detect and manage hardware changes on Windows Autopilot devices<!-- 12795465 --> 
 Microsoft Intune will now alert you when it detects a hardware change on an Autopilot-registered device. You can view and manage all affected devices in the admin center. Additionally, you have the option to remove the affected device from Windows Autopilot and register it again so that the hardware change is accounted for.
@@ -576,7 +583,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Require Managed Pasteboard
 - Safari Accept Cookies
 - Safari Allow Autofill
-- Safari Allow Java Script
+- Safari Allow JavaScript
 - Safari Allow Popups
 - Safari Force Fraud Warning
 
@@ -1036,7 +1043,7 @@ The following settings are available:
 - Prevent Visual Basic macros from using legacy MacScript
 - Prevent Visual Basic macros from using pipes to communicate
 - Show Template Gallery on app launch
-- Show Whats New dialog
+- Show What's New dialog
 - Visual Basic macro policy
 
 **Microsoft Office > Microsoft Outlook**:
@@ -2275,7 +2282,7 @@ Applies to:
 - Windows 10
 
 #### Filters are Generally Available (GA)<!-- 12466893 -->
-You can use filters to include or exclude devices in workload assignments (like policies and apps) based on different device properties. Filters is now generally available (GA).
+You can use filters to include or exclude devices in workload assignments (like policies and apps) based on different device properties. Filters are now generally available (GA).
 
 For more information on filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md).
 
@@ -2888,7 +2895,7 @@ For more information about Android Enterprise device restriction profiles, see [
 
 #### New device restrictions setting prevents sharing work profile contacts with paired Bluetooth devices<!-- 8630136 -->
 
-A new device restrictions setting for corporate-owned work profile devices prevents users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  To configure the setting, go to **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
+A new device restriction setting for corporate-owned work profile devices prevents users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  To configure the setting, go to **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
 
 - Setting name:  **Contact sharing via Bluetooth (work profile-level)**
 - Setting toggles:  
@@ -4240,7 +4247,7 @@ To improve page load performance, app icons will now load in batches. End users 
 
 #### Endpoint analytics in Microsoft Productivity Score<!-- IN8529842 -->
 
-There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/productivity-score.md).
+There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/adoption-score.md).
 
 #### Endpoint analytics Application Reliability report<!-- IN5653073 -->
 
