@@ -32,12 +32,12 @@ ms.custom: intune-classic
 
 # Intune App SDK for Android - Understand the MSAL Prerequisite
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP*- or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
 
-# Stage 2: The MSAL Prerequisite
+## Stage 2: The MSAL Prerequisite
 
 ## Stage Goals
 
@@ -66,7 +66,7 @@ To learn more about MSAL, see the [MSAL Wiki] and [list of MSAL libraries].
 ## Register your Application with AAD
 
 Before integrating MSAL into your Android application, follow the instructions to [register your application with Azure Active Directory].
-This will generate a **Client ID*- for your application.
+This will generate a **Client ID** for your application.
 
 Next, follow the instructions to [give your app access to the Intune app protection service].
 
@@ -117,12 +117,12 @@ These settings include:
 | Setting | Description | Required for MSAL? | Required by Intune? |
 | - | - | - | - |
 | `ClientID`             | The AAD ClientID (also known as the "Application ID") for your app. <br> There's no default `ClientID`. Use the `ClientID` from [Register your Application with AAD] for your app. |  Yes | No |
-| `Authority`            | The AAD authority to issue a token. <br> By default, this value is the AAD public environment. If overridden, the AAD authority entered will issue the token for your application, which allows authentication to non-default environments, such as Sovereign clouds. | No | If your application requires a non-default authority, yes. **Most apps should not set the Authority parameter.*- |
-| `SkipBroker`           | Boolean value for altering the default MSAL SSO behavior. <br> By default, this value is "false". | No | If your app doesn't support brokered authentication/device-wide SSO, yes and set `SkipBroker` to "true". **Most apps should not set the SkipBroker parameter.*- |
-| `NonBrokerRedirectURI` | [AAD redirect URI] to use in broker-less cases. By default, this value isn't present. | No | If the `SkipBroker` setting is set to "true" and your app requires a redirect URI, yes. **Most apps should not set the NonBrokerRedirectURI parameter.*- |
+| `Authority`            | The AAD authority to issue a token. <br> By default, this value is the AAD public environment. If overridden, the AAD authority entered will issue the token for your application, which allows authentication to non-default environments, such as Sovereign clouds. | No | If your application requires a non-default authority, yes. **Most apps should not set the Authority parameter.** |
+| `SkipBroker`           | Boolean value for altering the default MSAL SSO behavior. <br> By default, this value is "false". | No | If your app doesn't support brokered authentication/device-wide SSO, yes and set `SkipBroker` to "true". **Most apps should not set the SkipBroker parameter.** |
+| `NonBrokerRedirectURI` | [AAD redirect URI] to use in broker-less cases. By default, this value isn't present. | No | If the `SkipBroker` setting is set to "true" and your app requires a redirect URI, yes. **Most apps should not set the NonBrokerRedirectURI parameter.** |
 
 > [!CAUTION]
-> Applications that do not integrate MSAL **must not*- include any of these 4 properties in the manifest.
+> Applications that do not integrate MSAL **must not** include any of these 4 properties in the manifest.
 
 For more detail on non-Intune-specific MSAL configuration options, see [Android Microsoft Authentication Library configuration file].
 

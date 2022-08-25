@@ -32,12 +32,12 @@ ms.custom: intune-classic
 
 # Intune App SDK for Android - Multi-Identity 
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP*- or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
 
-# Stage 5: Multi-Identity 
+## Stage 5: Multi-Identity 
 
 ## Stage Goals
 - Determine if your application needs multi-identity support.
@@ -49,7 +49,7 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 ### Identity terminology
 The terms "user", "account", and "identity" are often used interchangeably.
 This guide attempts to differentiate as follows:
- - **User**: the human being using the software product. Further differentiated as **end user**, the human using the Android app, and **admin*- / **admin user*- / **IT admin*- / **IT Pro**, the human using the Microsoft Endpoint Manager console.
+ - **User**: the human being using the software product. Further differentiated as **end user**, the human using the Android app, and **admin** / **admin user** / **IT admin** / **IT Pro**, the human using the Microsoft Endpoint Manager console.
 - **Account**: the software record belonging to an organization that uniquely identifies a user's entity. A human user can have multiple accounts. 
 - **Identity**: the set of data that the Intune App SDK uses to uniquely identify an account.
 
@@ -343,7 +343,7 @@ The SDK will never change the active identity without providing these implicit i
 > When in doubt, use the `getCurrentThreadIdentity`, `getUIPolicyIdentity`, and `getProcessIdentity` methods to confirm the active identity.
 
 #### Sources of Implicit Identity Changes
-- Data ingress from **other Intune-managed apps*- can change the active identity on the thread and context level.
+- Data ingress from **other Intune-managed apps** can change the active identity on the thread and context level.
   - If an activity is launched from an `Intent` sent by another MAM app, the activity's identity will be set based on the active identity in the other app at the point the `Intent` was sent.
     - For example, an activity to view a Word document is launched from an intent from Microsoft Outlook when a user select a document attachment. Office's document viewer activity's identity is switched to the identity from Outlook.
   
@@ -351,7 +351,7 @@ The SDK will never change the active identity without providing these implicit i
 
   - Calls into a `ContentProvider` will similarly set the thread identity for their duration.
 
-- **User interaction*- with an activity can change the active identity on the context level. For example:
+- **User interaction** with an activity can change the active identity on the context level. For example:
   - A user canceling out of an authorization prompt during `Resume` will result in an implicit switch to an empty identity.
 
 #### Handling Implicit Identity Changes
@@ -407,7 +407,7 @@ It isn't expected that most apps will need to block or delay an identity switch 
 
   - If an identity switch is blocked, the end user behavior is the same as if the SDK's "receive data from other apps" app protection setting had prohibited the data ingress.
 
-  - If a Service is running on the main thread, `reportIdentitySwitchResult` **must*- be called synchronously, or the UI thread stops responding.
+  - If a Service is running on the main thread, `reportIdentitySwitchResult` **must** be called synchronously, or the UI thread stops responding.
 
   - For `Activity` creation, [onMAMIdentitySwitchRequired] will be called before `onMAMCreate`. If the app must show UI to determine whether to allow the identity switch, that UI must be shown using a *different- activity.
 
@@ -591,7 +591,7 @@ Afterwards, the SDK will close the app gracefully, finishing activities and kill
 The SDK provides the optional ability for your app to either supplement (recommended) or override the default wipe behavior.
 
 The SDK's default wipe handler doesn't handle data buffers protected by  `MAMDataProtectionManager`.
-If your app used this feature, it **must*- supplement or override the default wipe handler to remove that data.
+If your app used this feature, it **must** supplement or override the default wipe handler to remove that data.
 
 > [!NOTE]
 > Supplementing and overriding default wipe behavior require handling specific SDK notifications.
@@ -723,7 +723,7 @@ Your multi-identity app may have supplemented or overridden the SDK's default wi
 These tests help ensure your multi-identity integration properly removes managed data when wipes are initiated, without impacting unmanaged data.
 
 > [!WARNING]
-> Reminder, if your app leveraged `MAMDataProtectionManager.protect`, it **must*- implement a handler for either `WIPE_USER_AUXILIARY_DATA` or `WIPE_USER_DATA`.
+> Reminder, if your app leveraged `MAMDataProtectionManager.protect`, it **must** implement a handler for either `WIPE_USER_AUXILIARY_DATA` or `WIPE_USER_DATA`.
 
 For these tests, install your app and the Intune Company Portal; log in with both a managed and unmanaged account before starting the test. For both accounts, exercise app scenarios that store account data. 
 

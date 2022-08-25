@@ -32,12 +32,12 @@ ms.custom: intune-classic
 
 # Intune App SDK for Android - App participation features
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP*- or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
 
-# Stage 7: App participation features
+## Stage 7: App participation features
 
 ## Stage Goals
 
@@ -101,7 +101,7 @@ The Intune App SDK allows IT administrators to protect against data ingress and 
 
 > [!NOTE]
 > **If your app allows saving to personal or cloud locations directly from the app *or- allows for data to be opened directly into the app,
-> you must implement this Intune App SDK app participation feature*- to enable IT administrators to block this saving / opening.
+> you must implement this Intune App SDK app participation feature** to enable IT administrators to block this saving / opening.
 
 ### Saving to device or cloud storage
 
@@ -119,7 +119,7 @@ To determine whether your app should implement the `getIsSaveToLocationAllowed` 
 | `ONEDRIVE_FOR_BUSINESS` | The app is saving data to OneDrive. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
 | `SHAREPOINT` | The app is saving data to Sharepoint. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
 | `BOX` | This app is saving data to Box. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
-| `LOCAL` | The app is saving data to an external storage location on the device that is **not*- the app's private storage. | The external storage isn't considered a cloud service and so should always be used with a `null` username parameter. |
+| `LOCAL` | The app is saving data to an external storage location on the device that is **not** the app's private storage. | The external storage isn't considered a cloud service and so should always be used with a `null` username parameter. |
 | `PHOTO_LIBRARY` | The app is saving data to the photo library. | The photo library isn't considered a cloud service and so should always be used with a `null` username parameter. |
 | `ACCOUNT_DOCUMENT` | The app is saving data to a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | A `username` for an account that is used for AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
 | `OTHER` | The app is saving data to a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `username` isn't evaluated for this location and so should be `null`. |
@@ -133,7 +133,7 @@ Do check `SaveLocation.LOCAL` for
    device).
 
 > [!NOTE]
-> When checking the save policy, `username` should be the UPN/username/email associated with the cloud service being saved **to*- (*not- necessarily the same as the account owning the document being saved).
+> When checking the save policy, `username` should be the UPN/username/email associated with the cloud service being saved **to** (*not- necessarily the same as the account owning the document being saved).
 
 ### Opening data from a local or cloud storage location
 
@@ -151,13 +151,13 @@ To determine whether your app should implement the `getIsOpenFromLocationAllowed
 | `ONEDRIVE_FOR_BUSINESS` | The app is opening data from OneDrive. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
 | `SHAREPOINT` | The app is opening data from Sharepoint. | A `username` for an account that is used for both cloud service authentication and AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
 | `CAMERA` | The app is opening data from the camera. | A `null` value, because the device camera isn't a cloud service. |
-| `LOCAL` | The app is opening data from an external storage location on the device that is **not*- the app's private storage. | Although the external storage isn't a cloud service location, a `username` parameter is expected because it indicates ownership. <br>  When opening a file from local storage, the file owner must always be considered, because the file owner's save-as policy may or may not permit other identities to open the file: <br> - **For identity-tagged files,*- `username` should be the file owner's identity. <br> - **For files without an identity tag,*- `username` should be `null`. |
+| `LOCAL` | The app is opening data from an external storage location on the device that is **not** the app's private storage. | Although the external storage isn't a cloud service location, a `username` parameter is expected because it indicates ownership. <br>  When opening a file from local storage, the file owner must always be considered, because the file owner's save-as policy may or may not permit other identities to open the file: <br> - **For identity-tagged files,** `username` should be the file owner's identity. <br> - **For files without an identity tag,** `username` should be `null`. |
 | `PHOTO_LIBRARY` | The app is opening data from the photo library. | The photo library isn't considered a cloud service and so should always be used with a `null` username parameter. |
 | `ACCOUNT_DOCUMENT` | The app is opening data from a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.- | A `username` for an account that is used for AAD authentication. If such a username doesn't exist or the username isn't known use `null`. |
 | `OTHER` | The app is opening data from a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `username` isn't evaluated for this location and so should be `null`. |
 
 > [!NOTE]
-> When checking the open policy, `username` should be the UPN/username/email associated with the file or cloud service being opened **from*- (*not- necessarily the same as the account who is opening the document).
+> When checking the open policy, `username` should be the UPN/username/email associated with the file or cloud service being opened **from** (*not- necessarily the same as the account who is opening the document).
 
 > [!TIP]
 > For convenience, the SDK provides the method `AppPolicy.isOpenFromLocalStorageAllowed` that takes a `File` parameter for a file in local storage.
@@ -225,7 +225,7 @@ Intune allows you to utilize all the autobackup features available from Android,
 
 ### Configuring backup behavior in the app's manifest
 
-By default, `android:allowBackup` is set to **true*- as outlined
+By default, `android:allowBackup` is set to **true** as outlined
 in [enable and disable backup].
 
 If your app doesn't require full backup and restore functionality,
@@ -233,10 +233,10 @@ set `android:allowBackup` to **false**.
 *In this case, no further action is necessary and "corporate" data will stay within the app.*
 
 If your app requires full backup and restore functionality,
-set `android:allowBackup` to **true*-  and perform the following
+set `android:allowBackup` to **true**  and perform the following
 additional steps:
 
-1. If your app does **not*- use its own custom `BackupAgent`, use the default [MAMBackupAgent] to allow for automatic full backups that are Intune policy compliant.
+1. If your app does **not** use its own custom `BackupAgent`, use the default [MAMBackupAgent] to allow for automatic full backups that are Intune policy compliant.
 Place the following in the app manifest:
 
     ```xml
@@ -248,14 +248,14 @@ Place the following in the app manifest:
       </application>
     ```
 
-2. **[Optional]*- If you implemented an optional custom `BackupAgent`,
+2. **[Optional]** If you implemented an optional custom `BackupAgent`,
 you need to make sure to use [MAMBackupAgent] or [MAMBackupAgentHelper].
 See the following sections. 
 Consider switching to using Intune's [MAMDefaultBackupAgent], described in step 1, which provides easy back-up on Android M and above.
 
 3. When you decide which type of full backup your app should receive (unfiltered, filtered, or none), you'll need to set the attribute `android:fullBackupContent` to true, false, or an XML resource in your app.
 
-4. Then, you ***must**- copy the value for `android:fullBackupContent`
+4. Then, you ***must*** copy the value for `android:fullBackupContent`
 into the `com.microsoft.intune.mam.FullBackupContent` metadata tag
 and for apps that support the new XML configuration format added in API 31, into the `com.microsoft.intune.mam.DataExtractionRules` metadata tag.
 
@@ -340,7 +340,7 @@ Since most of the work is pushed onto you, the developer, Intune integration is 
 2. Have your class extend [MAMBackupAgent].
 
 **Multi-identity Backup:**
-1. Before beginning your backup, check that the files or data buffers you plan to back up are indeed **permitted by the IT administrator to be backed up*- in multi-identity scenarios.
+1. Before beginning your backup, check that the files or data buffers you plan to back up are indeed **permitted by the IT administrator to be backed up** in multi-identity scenarios.
 Use `isBackupAllowed` in [MAMFileProtectionManager] and [MAMDataProtectionManager] to determine this.
 If the file or data buffer isn't allowed to be backed up, then you shouldn't include it in your backup.
 
@@ -586,8 +586,8 @@ Most notifications are [MAMUserNotification]s, which provide information specifi
 | `MANAGEMENT_REMOVED` | `MAMUserNotification` | App is about to become unmanaged. | Apps that utilize `MAMDataProtectionManager` must handle this. | See [MANAGEMENT_REMOVED] below. | Never on UI thread |
 | `REFRESH_APP_CONFIG` | `MAMUserNotification` | App config values may have changed. | Apps that implement app configuration and cache app configuration data must handle this. | Apps must invalidate and update any cached app configuration data. | Nondeterministic |
 | `REFRESH_POLICY` | `MAMUserNotification` | App protection policy may have changed. | Apps that cache app protection policy must handle this. | Apps must invalidate and update any cached app protection policy data. | Nondeterministic |
-| `WIPE_USER_DATA` | `MAMUserNotification` | Wipe is about to occur(*). | Apps that utilize `MAMDataProtectionManager` must handle this **or*- `WIPE_USER_AUXILIARY_DATA`. | See [Selective Wipe]. | Never on UI thread |
-| `WIPE_USER_AUXILIARY_DATA` | `MAMUserNotification` | Wipe is about to occur(*). | Only multi-identity apps will receive this. <br> Apps that utilize `MAMDataProtectionManager` must handle this **or*- `WIPE_USER_DATA`.  | See [Selective Wipe]. | Never on UI thread |
+| `WIPE_USER_DATA` | `MAMUserNotification` | Wipe is about to occur(*). | Apps that utilize `MAMDataProtectionManager` must handle this **or** `WIPE_USER_AUXILIARY_DATA`. | See [Selective Wipe]. | Never on UI thread |
+| `WIPE_USER_AUXILIARY_DATA` | `MAMUserNotification` | Wipe is about to occur(*). | Only multi-identity apps will receive this. <br> Apps that utilize `MAMDataProtectionManager` must handle this **or** `WIPE_USER_DATA`.  | See [Selective Wipe]. | Never on UI thread |
 | `WIPE_COMPLETED` | `MAMUserNotification` | Wipe has completed. | Always optional. | Delivered after `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA`. *If the app reports a failure from its handler for `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA`, this notification won't be sent.- | Never on UI thread |
 
 (*) Wipes may occur for many reasons, for example:

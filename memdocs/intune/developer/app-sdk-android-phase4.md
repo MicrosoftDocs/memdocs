@@ -32,12 +32,12 @@ ms.custom: intune-classic
 
 # Intune App SDK for Android - MAM integration essentials
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP*- or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
 
-# Stage 4: MAM Integration Essentials 
+## Stage 4: MAM Integration Essentials 
 
 ## Stage Goals
 - Enable MAM Strict Mode.
@@ -144,10 +144,10 @@ However, currently only one account can be enrolled, or have app protection poli
 On Android, this single-managed-account limitation is device-wide.
 
 ### Registration vs Enrollment
-**Registration*- is the process where your app informs the SDK that a new account is in use.
+**Registration** is the process where your app informs the SDK that a new account is in use.
 The SDK contains functions your app must call for registering and unregistering accounts.
 
-**Enrollment*- is the process where the SDK records the registered account with the Intune service so it can apply the account's policy.
+**Enrollment** is the process where the SDK records the registered account with the Intune service so it can apply the account's policy.
 Your app doesn't need to call any functions for enrollment.
 The SDK fully handles enrollment after an account is registered.
 
@@ -182,7 +182,7 @@ MAMEnrollmentManager mgr = MAMComponents.get(MAMEnrollmentManager.class);
 ```
 
 The `MAMEnrollmentManager` instance returned is guaranteed not to be null.
-The API methods fall into two categories: **authentication*- and **account registration**.
+The API methods fall into two categories: **authentication** and **account registration**.
 
 ### MAMEnrollmentManager and Authentication
 The SDK frequently communicates with the Intune service: for enrolling registered accounts, for getting updates to App Protection Policy settings, and for getting pending admin actions, like selectively wiping protected data inside your app.
@@ -272,7 +272,7 @@ void updateToken(String upn, String aadId, String resourceId, String token);
     > However, it is strongly recommended as it can help enrollments and app protection policy check-ins complete in a timely manner.
 
 #### Authentication Implementation Notes
-- Apps are encouraged to acquire AAD tokens **prior to*- calling [registerAccountForMAM].
+- Apps are encouraged to acquire AAD tokens **prior to** calling [registerAccountForMAM].
 After registering an account, apps will receive a callback to the [MAMServiceAuthenticationCallback] interface on a different thread.
 Providing a valid token in that callback allows enrollment to proceed.
 The app will get the enrollment result via notification.
@@ -337,7 +337,7 @@ If the account is registered, this method will return the account's status as on
 
 ### Sovereign Cloud Registration
 Azure supports multiple physically isolated clouds, known as Sovereign or National Clouds.
-If your application is [sovereign cloud aware], it **must*- provide the `authority` parameter to `registerAccountForMAM()`.
+If your application is [sovereign cloud aware], it **must** provide the `authority` parameter to `registerAccountForMAM()`.
 
 #### MSAL Guidance
 For MSAL, set `multiple_clouds_supported` to `true` in the [MSAL configuration file].
@@ -490,7 +490,7 @@ For these tests:
 #### Data Transfer Tests
 
 Data transfer settings are a subset of App Protection Policy data protection features that control data entering and exiting managed apps.
-Most apps that support **sending*- data to or **receiving*- data from other apps also have the ability to **save*- data to and **open*- data from local or cloud storage.
+Most apps that support **sending** data to or **receiving** data from other apps also have the ability to **save** data to and **open** data from local or cloud storage.
 If your app has these capabilities, you'll need to implement additional support. See [Policy for limiting data transfer between apps and device or cloud storage locations] for details.
 
 Your app may actively import data from other apps, like Microsoft Outlook attaching a file from Microsoft OneDrive.

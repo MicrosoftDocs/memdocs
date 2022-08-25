@@ -32,12 +32,12 @@ ms.custom: intune-classic
 
 # Intune App SDK for Android - App configuration
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP*- or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Plan the Integration](..\developer\app-sdk-android-phase1.md).
 
-# Stage 6: App Configuration
+## Stage 6: App Configuration
 
 ## Stage Goals
 
@@ -96,26 +96,26 @@ The following questions may help guide discussions and reveal configurations you
 
 For every configuration you decide to add to your app, you'll need to define three items:
 
-- **Key*- - this string uniquely identifies this setting from other settings. It should be human-readable, as it will be configured by administrators.
-- **Type*- - what data type is this setting? Is it a string, boolean, integer, array, etc.?
-- **Conflict resolution strategy*- - how will your app respond if administrators configure multiple values for the same key? In the aforementioned browser example, a bookmark list may combine all values, while a setting to disable incognito may choose to disable if any of the conflicting values is "true".
+- **Key** - this string uniquely identifies this setting from other settings. It should be human-readable, as it will be configured by administrators.
+- **Type** - what data type is this setting? Is it a string, boolean, integer, array, etc.?
+- **Conflict resolution strategy** - how will your app respond if administrators configure multiple values for the same key? In the aforementioned browser example, a bookmark list may combine all values, while a setting to disable incognito may choose to disable if any of the conflicting values is "true".
 
 ### Should my app support configuration for Managed Devices or Managed Apps?
 
 Configurations that apply to managed devices and configurations that apply to managed apps are **not mutually exclusive**.
 You should consider your users' needs when deciding which type (or both) of configuration to support.
 
-|  | Configuration for Managed Devices | Configuration for Managed Apps |
+| Configuration area  | Configuration for Managed Devices | Configuration for Managed Apps |
 | - | - | - |
-| **Device Applicability*- | Only applies on devices under Android Enterprise device management. | Applies to all devices, as long as the app integrates the Intune App SDK and the Company Portal is installed. |
-| **Platform*- | Android only, limited to devices with Google services | iOS App SDK supports the same configurations. As a developer, you can share these keys for a consistent cross-platform experience. |
-| **Applicability*- | Any EMM | Exclusive to Microsoft Intune |
-| **Schema Discoverability*- | Schema is publicly available after app upload to Play | Schema discoverability under developer control |
+| **Device Applicability** | Only applies on devices under Android Enterprise device management. | Applies to all devices, as long as the app integrates the Intune App SDK and the Company Portal is installed. |
+| **Platform** | Android only, limited to devices with Google services | iOS App SDK supports the same configurations. As a developer, you can share these keys for a consistent cross-platform experience. |
+| **Applicability** | Any EMM | Exclusive to Microsoft Intune |
+| **Schema Discoverability** | Schema is publicly available after app upload to Play | Schema discoverability under developer control |
 
 Both types of app configuration rely on key-value pairs.
 Microsoft Intune doesn't inspect the contents of these configurations and simply passes the admin-configured values to your app.
 
-The Intune App SDK app configuration API includes admin-configured values from **both*- channels.
+The Intune App SDK app configuration API includes admin-configured values from **both** channels.
 If your app supports both types of app configuration, use the API as described below.
 
 ## Retrieving app configuration from the SDK
@@ -141,7 +141,7 @@ List<Map<String, String>> getFullData()
 ```
 
 Your app can also register for the `REFRESH_APP_CONFIG` notification that informs the app that new app configuration data is available.
-If your app caches app configuration data, it **must*- register for this notification and invalidate any cached data in the handler.
+If your app caches app configuration data, it **must** register for this notification and invalidate any cached data in the handler.
 See [Register for notifications from the SDK] for more detail.
 
 ## Resolving conflicts
