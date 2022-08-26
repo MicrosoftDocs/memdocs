@@ -89,10 +89,10 @@ See [Stage 2: The MSAL Prerequisite] for instructions on integrating MSAL and ad
 Without Intune App Protection Policy support, how does your application handle user authentication and accounts?
 
 - Does your application currently only allow a single account to be logged in?
-Does your application explicitly force the logged-in account to log-out *and delete that previous account's data- before allowing another account to log-in?
+Does your application explicitly force the logged-in account to log out—and delete that previous account's data—before allowing another account to log-in?
 If so, your application is **single-identity**.
 
-- Does your application currently allow a second account to log-in, even if a different account is already logged in?
+- Does your application currently allow a second account to log in, even if a different account is already logged in?
 Does your application display multiple accounts' data on a shared screen?
 Does your application store multiple accounts' data?
 Does your application let users switch between different logged in accounts?
