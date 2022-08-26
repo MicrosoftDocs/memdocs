@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/18/2022
+ms.date: 08/25/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -62,7 +62,7 @@ The following steps help you create a supersedence relationship between apps:
 6. Once this step is finalized, click **Review + save** > **Save**.
 
     > [!IMPORTANT]
-    > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that are not targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence will take place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, please refer to the matrix below. This behavior is in direct contrast to dependencies, which does not require targeting. 
+    > Superseding apps do not get automatic targeting. Each app must have explicit targeting to take effect. Superseding apps that are not targeted will be ignored by the agent. If the superseding app is targeted to a device with a superseded app, then the supersedence will take place regardless of whether the superseded app has targeting or not. For more information on Supersedence behavior, please refer to the matrix below. This behavior is in direct contrast to dependencies, which does not require targeting. Additionally, only apps that are targeted will show install statuses in Microsoft Endpoint Manager admin center.
 
 ## Supersedence behavior
 
@@ -153,6 +153,7 @@ In the following Supersedence diagram, there are five nodes in total. Hence, fiv
 Additional supersedence limitations:
 - Azure Virtual Desktop multi-session only supports supersedence relationships with system-context (device-based) apps.
 - The Enrollment Status Page (ESP) is not supported with the supersedence public preview. ESP displays provisioning progress after a new device is enrolled, as well as when new users sign into the device. For the supersedence public preview, if an app has a supersedence relationship, it will not be enforced during ESP even if it is included as a selected app in an ESP policy. Additionally, apps that are involved in supersedence relationships will not be sent to the client device during ESP. However, the apps will be sent to the device after ESP completes, and the supersedence relationship will be respected.
+- Only apps that are targeted will show install statuses in Microsoft Endpoint Manager admin center.
 
 ## Next steps
 
