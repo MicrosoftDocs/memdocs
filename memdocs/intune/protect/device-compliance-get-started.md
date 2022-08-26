@@ -173,7 +173,7 @@ The following table describes how noncompliant settings are managed when a compl
 
 
 > [!NOTE]
-> The Company Portal enters the enrollment remediation flow when the user logs into CP and the device has not successfully checked in with Intune in 30+ days (or the device is noncompliant due to a "Lost contact" compliance reason). In this flow, we attempt to initiate a checkin one more time. If that still does not succeed, then we issue a retire command to allow the user to re-enroll the device manually.
+> The Company Portal app enters the enrollment remediation flow when the user signs into the app and the device has not successfully checked in with Intune for 30 days or more (or the device is non-compliant due to a _Lost contact_ compliance reason). In this flow, we attempt to initiate a check-in one more time. If that still does not succeed, we issue a retire command to allow the user to re-enroll the device manually.
 
 ---------------------------
 
