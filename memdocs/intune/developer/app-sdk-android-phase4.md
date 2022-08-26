@@ -414,7 +414,7 @@ The Company Portal includes UI that:
 - Displays device and account metadata.
 - Includes per-app information about current MAM policy.
 
-![Intune Diagnostics UI](assets/IntuneDiagnostics.png) ![Intune App Info](assets/IntuneAppInfo.png)
+![Intune Diagnostics UI](media/app-sdk-android/IntuneDiagnostics.png) ![Intune App Info](media/app-sdk-android/IntuneAppInfo.png)
 
 For a detailed explanation of the data included in Company Portal logs and in the diagnostics UI, see [Understanding Company Portal logs] in the [Appendix].
 

@@ -90,6 +90,6 @@ items:
     - name: Use Azure AD to access Intune APIs in Microsoft Graph
       href: intune-graph-apis.md
     - name: Intune API reference
-      href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta
+      href: /graph/api/resources/intune-graph-overview?view=graph-rest-beta&preserve-view=true
     - name: Graph APIs used to configure devices
       href: graph-apis-used-by-intune-device-configuration-windows.md
