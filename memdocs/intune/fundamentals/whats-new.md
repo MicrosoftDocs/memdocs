@@ -73,7 +73,7 @@ The developer guide for the Intune App SDK for Android has been updated. The upd
 - App configuration
 - App participation features
 
-For more information, see [Intune App SDK for Android](../developer/app-sdk-android-appendix.md).
+For more information, see [Intune App SDK for Android](../developer/app-sdk-android-phase1.md).
 
 ### Device management
 
