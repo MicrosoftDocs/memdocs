@@ -189,11 +189,11 @@ To validate that Intune is properly delivering app configuration policy:
     - If your app supports app configuration for managed devices, see [application configuration policies for managed Android Enterprise devices].
     - If your app supports app configuration for managed apps, see [application configuration policies for managed apps].
     - If your app supports both types of app configuration, create both types of policy for testing.
-2. Log into your app with your test account.
+2. Log in to your app with your test account.
     - For managed devices, see [Android enterprise app configuration policies] and [Enroll Android devices].
     - For managed apps:
       1. Install both your app and the Intune Company Portal.
-      2. Log into your app with your test account.
+      2. Log in to your app with your test account.
 3. Navigate through your app to exercise each codepath that calls `MAMAppConfigManager`'s `getAppConfig` or `getFullData`.
     - Logging the results of calls to `getAppConfig` is a simple way to validate which settings are delivered. However, because administrators can enter any data for app configuration settings, be careful not to log any private user data.
 4. See [Validate the applied app configuration policy].

@@ -447,11 +447,11 @@ Execute the following test first to get familiar with the complete end user expe
     - > [!TIP]
       > Uninstalling other SDK-integrated apps helps ensure that you're exclusively testing your own app's integration.
 5. Install your application.
-6. Log into your application with your test account that is targeted with App Protection Policy.
+6. Log in to your application with your test account that is targeted with App Protection Policy.
 7. Confirm that you're prompted to install the Intune Company Portal from Google Play.
     - > [!NOTE]
       > If your test device does not have the Google Play Store app, confirm you are prompted to install the Intune Company Portal from either another app store or a Microsoft website.
-8. Install the Company Portal. You don't need to launch the Company Portal or log into the Company Portal.
+8. Install the Company Portal. You don't need to launch the Company Portal or log in to the Company Portal.
 9. Return to your app and log in again, if necessary.
 10. Confirm that you're prompted with a Get Access screen. This indicates that the SDK has successfully retrieved policy for this account.
 11. You should be prompted to set an app PIN. Create a PIN.
@@ -474,8 +474,8 @@ For these tests:
 2. Install the Intune Company Portal.
 3. Install another managed app, targeted with the same policy as your app, that can copy and paste data (like Microsoft Office).
 4. Install (or reuse) any unmanaged app that can copy and paste data.
-5. Log into your app with the test managed account.
-6. Log into the other managed app with the managed test account.
+5. Log in to your app with the test managed account.
+6. Log in to the other managed app with the managed test account.
 
 
 | Scenario | App Protection Policy Setting | Test Steps | 
@@ -503,8 +503,8 @@ For these tests:
 2. Install the Intune Company Portal.
 3. Install another managed app, targeted with the same policy as your app, that can send and receive data (like Microsoft Outlook).
 4. Install (or reuse) any unmanaged app that can send and receive data.
-5. Log into your app with the test managed account.
-6. Log into the other managed app with the managed test account.
+5. Log in to your app with the test managed account.
+6. Log in to the other managed app with the managed test account.
 
 | Scenario | App Protection Policy Setting | Test Steps | 
 | - | - | - |
