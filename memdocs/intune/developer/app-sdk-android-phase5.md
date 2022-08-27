@@ -345,7 +345,7 @@ The SDK will never change the active identity without providing these implicit i
 #### Sources of Implicit Identity Changes
 - Data ingress from **other Intune-managed apps** can change the active identity on the thread and context level.
   - If an activity is launched from an `Intent` sent by another MAM app, the activity's identity will be set based on the active identity in the other app at the point the `Intent` was sent.
-    - For example, an activity to view a Word document is launched from an intent from Microsoft Outlook when a user select a document attachment. Office's document viewer activity's identity is switched to the identity from Outlook.
+    - For example, an activity to view a Word document is launched from an intent from Microsoft Outlook when a user selects a document attachment. Office's document viewer activity's identity is switched to the identity from Outlook.
   
   - For services, the thread identity will be set similarly for the duration of an `onStart` or `onBind` call. Calls into the `Binder` returned from `onBind` will also temporarily set the thread identity.
 
@@ -383,7 +383,7 @@ The `AppIdentitySwitchReason` enum parameter describes the source of the implici
 | `NEW_INTENT` | Allow the identity switch. | The identity switch is occurring because a new intent is being assigned to an activity. | 
 | `RESUME_CANCELLED` | Block the identity switch. | The identity switch is occurring because a resume was canceled. This is most common when the end user presses the back button on the PIN, authentication, or compliance UI. | 
 
-The [AppIdentitySwitchResultCallback] parameter allows developers to override the default beahvior for the identity switch:
+The [AppIdentitySwitchResultCallback] parameter allows developers to override the default behavior for the identity switch:
 
 ```java
 public interface AppIdentitySwitchResultCallback {
@@ -648,11 +648,11 @@ For these tests, install your app and the Intune Company Portal; don't log in be
 
 | Scenario | Steps | 
 | - | - | 
-| Login managed first | - Login first with a managed account and validate that account's data are managed. <br> - Login with an unmanaged account and validate that account's data aren't managed. | 
-| Login unmanaged first | - Login first with an unmanaged account and validate that account's data aren't managed. <br> - Login with a managed account and validate that account's data are managed. | 
-| Login multiple managed | - Login first with a managed account and validate that account's data are managed. <br> - Login with a second managed account and validate that the user is blocked from logging in without first removing the original managed account. | 
+| Login managed first | - Log in first with a managed account and validate that account's data are managed. <br> - Login with an unmanaged account and validate that account's data aren't managed. | 
+| Log in unmanaged first | - Log in first with an unmanaged account and validate that account's data aren't managed. <br> - Login with a managed account and validate that account's data are managed. | 
+| Log in multiple managed | - Log in first with a managed account and validate that account's data are managed. <br> - Login with a second managed account and validate that the user is blocked from logging in without first removing the original managed account. | 
 | Logout managed | - Log in to your app with both a managed an unmanaged account. <br> - Log out of the managed account. <br> - Confirm that the managed account is removed from your app and all that account's data has been removed. <br> - Confirm that the unmanaged account is still logged in, none of the unmanaged account's data has been removed, and policy is still not applied. | 
-| Logout unmanaged | - Log in to your app with both a managed an unmanaged account. <br> - Log out of the unmanaged account. <br> - Confirm that the unmanaged account is removed from your app and all that account's data has been removed. <br> - Confirm that the managed account is still logged in, none of the unmanaged account's data has been removed, and policy is still applied. | 
+| Log out unmanaged | - Log in to your app with both a managed an unmanaged account. <br> - Log out of the unmanaged account. <br> - Confirm that the unmanaged account is removed from your app and all that account's data has been removed. <br> - Confirm that the managed account is still logged in, none of the unmanaged account's data has been removed, and policy is still applied. | 
 
 #### Validating active identity and app lifecycle
 Your multi-identity app may present views with a single account's data and allow the user to explicitly change the current in-use account.
@@ -684,7 +684,7 @@ For these tests, install your app and the Intune Company Portal; log in with bot
 - Install other apps on the test device:
   - A managed app, targeted with the same policy as your app, that can send and receive data (like Microsoft Outlook).
   - Any unmanaged app that can send and receive data.
-- Log into the other managed app with the managed test account. Even if the other managed app is multi-identity, only log in with the managed account.
+- Log in to the other managed app with the managed test account. Even if the other managed app is multi-identity, only log in with the managed account.
 
 If your app has the ability to send data to other apps, like Microsoft Outlook sending a document attachment to Microsoft Office:
 | Scenario | Steps | 
