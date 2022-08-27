@@ -541,7 +541,7 @@ Some conditional launch settings can be configured with multiple values and acti
 - Minimum OS version, value of "9.0", action set to "Block access"
 - Minimum OS version, value of "8.0", action set to "Wipe data".
 
-By completing the integration steps in this stage, your app now supports *all- conditional launch features.
+By completing the integration steps in this stage, your app now supports *all conditional launch features*.
 Familiarize yourself with conditional launch functionality by changing policy items such that your test device:
 - Passes all configured conditional launch settings.
 - Fails a configured conditional launch setting set to the "Warn" action.
