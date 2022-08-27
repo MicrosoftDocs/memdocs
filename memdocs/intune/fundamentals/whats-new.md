@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 08/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,6 +60,20 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 ## Week of August 22, 2022
+
+### App management
+
+#### Updated Microsoft Intune App SDK for Android<!-- 15363982 -->
+The developer guide for the Intune App SDK for Android has been updated. The updated guide provides the following stages:
+- Planning the integration
+- MSAL prerequisite
+- Getting started with MAM
+- MAM integration essentials
+- Multi-Identity
+- App configuration
+- App participation features
+
+For more information, see [Intune App SDK for Android](../developer/app-sdk-android-phase1.md).
 
 ### Device management
 
@@ -159,7 +173,7 @@ Applies to:
 -  iOS/iPadOS 15 or later devices enrolled using Apple User Enrollment
 
 #### New macOS settings available in the Settings Catalog <!-- 15020250 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -593,7 +607,7 @@ Applies to:
 - iOS/iPadOS
 
 #### New macOS settings available in the Settings Catalog<!-- 14875745 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
 
@@ -1089,7 +1103,7 @@ Applies to:
 ### Device management
 
 #### Remotely restart and shut down macOS device<!-- 12472418 -->
-You'll be able to remotely restart or shutdown a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
+You'll be able to remotely restart or shut down a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
 
 For more information, see [Restart devices with Microsoft Intune](../remote-actions/device-restart.md). 
 
@@ -2624,7 +2638,7 @@ The following details for Windows 10 and Windows 11 devices are now collected an
 - TPM Manufacturer version
 - TPM Manufacturer ID
 
-These details are also included when you *Export* the details from the *All devices* pane.  
+These details are also included when you *export* the details from the *All devices* pane.  
 
 #### Settings for Shared iPad now generally available<!-- 10975827  -->  
 Four Shared iPad settings are now out of preview and generally available to use when creating an Apple enrollment profile. These settings are applied during automated device enrollment (ADE).
