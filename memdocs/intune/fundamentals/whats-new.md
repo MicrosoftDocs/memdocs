@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/25/2022
+ms.date: 08/29/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,7 +59,8 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
-## Week of August 22, 2022
+
+## Week of August 29, 2022
 
 ### App management
 
@@ -74,6 +75,8 @@ The developer guide for the Intune App SDK for Android has been updated. The upd
 - App participation features
 
 For more information, see [Intune App SDK for Android](../developer/app-sdk-android-phase1.md).
+
+## Week of August 22, 2022
 
 ### Device management
 
