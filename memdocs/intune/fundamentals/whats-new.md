@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/18/2022
+ms.date: 08/25/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -59,6 +59,27 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+## Week of August 22, 2022
+
+### App management
+
+#### Updated Microsoft Intune App SDK for Android<!-- 15363982 -->
+The developer guide for the Intune App SDK for Android has been updated. The updated guide provides the following stages:
+- Planning the integration
+- MSAL prerequisite
+- Getting started with MAM
+- MAM integration essentials
+- Multi-Identity
+- App configuration
+- App participation features
+
+For more information, see [Intune App SDK for Android](../developer/app-sdk-android-phase1.md).
+
+### Device management
+
+#### Use Intune role-based access control (RBAC) for tenant attached devices <!-- 14996522 -->
+
+You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Endpoint Manager admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../configmgr/cloud-attach/use-intune-rbac.md).
 
 ## Week of August 15, 2022 (Service release 2208)
 
@@ -152,7 +173,7 @@ Applies to:
 -  iOS/iPadOS 15 or later devices enrolled using Apple User Enrollment
 
 #### New macOS settings available in the Settings Catalog <!-- 15020250 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -576,7 +597,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Require Managed Pasteboard
 - Safari Accept Cookies
 - Safari Allow Autofill
-- Safari Allow Java Script
+- Safari Allow JavaScript
 - Safari Allow Popups
 - Safari Force Fraud Warning
 
@@ -586,7 +607,7 @@ Applies to:
 - iOS/iPadOS
 
 #### New macOS settings available in the Settings Catalog<!-- 14875745 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
 
@@ -1036,7 +1057,7 @@ The following settings are available:
 - Prevent Visual Basic macros from using legacy MacScript
 - Prevent Visual Basic macros from using pipes to communicate
 - Show Template Gallery on app launch
-- Show Whats New dialog
+- Show What's New dialog
 - Visual Basic macro policy
 
 **Microsoft Office > Microsoft Outlook**:
@@ -1082,7 +1103,7 @@ Applies to:
 ### Device management
 
 #### Remotely restart and shut down macOS device<!-- 12472418 -->
-You'll be able to remotely restart or shutdown a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
+You'll be able to remotely restart or shut down a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
 
 For more information, see [Restart devices with Microsoft Intune](../remote-actions/device-restart.md). 
 
@@ -2275,7 +2296,7 @@ Applies to:
 - Windows 10
 
 #### Filters are Generally Available (GA)<!-- 12466893 -->
-You can use filters to include or exclude devices in workload assignments (like policies and apps) based on different device properties. Filters is now generally available (GA).
+You can use filters to include or exclude devices in workload assignments (like policies and apps) based on different device properties. Filters are now generally available (GA).
 
 For more information on filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md).
 
@@ -2617,7 +2638,7 @@ The following details for Windows 10 and Windows 11 devices are now collected an
 - TPM Manufacturer version
 - TPM Manufacturer ID
 
-These details are also included when you *Export* the details from the *All devices* pane.  
+These details are also included when you *export* the details from the *All devices* pane.  
 
 #### Settings for Shared iPad now generally available<!-- 10975827  -->  
 Four Shared iPad settings are now out of preview and generally available to use when creating an Apple enrollment profile. These settings are applied during automated device enrollment (ADE).
@@ -2888,7 +2909,7 @@ For more information about Android Enterprise device restriction profiles, see [
 
 #### New device restrictions setting prevents sharing work profile contacts with paired Bluetooth devices<!-- 8630136 -->
 
-A new device restrictions setting for corporate-owned work profile devices prevents users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  To configure the setting, go to **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
+A new device restriction setting for corporate-owned work profile devices prevents users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  To configure the setting, go to **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
 
 - Setting name:  **Contact sharing via Bluetooth (work profile-level)**
 - Setting toggles:  
@@ -4240,7 +4261,7 @@ To improve page load performance, app icons will now load in batches. End users 
 
 #### Endpoint analytics in Microsoft Productivity Score<!-- IN8529842 -->
 
-There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/productivity-score.md).
+There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/adoption-score.md).
 
 #### Endpoint analytics Application Reliability report<!-- IN5653073 -->
 
