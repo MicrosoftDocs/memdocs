@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/08/2022
+ms.date: 08/23/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,36 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of August 22, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Restrict Office 365 services to Cloud PCs
+
+We’ve published a new help documentation article. For more information, see [Restrict Office 365 services to Cloud PCs](restrict-office-365-cloud-pcs.md).
+
+<!-- ########################## -->
+## Week of August 15, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Language and region configuration now also applies to Microsoft 365 Apps<!--40673170-->
+
+Provisioning policies configured for language now also apply to Microsoft 365 Apps. When a user first signs in, their Microsoft 365 Apps will use the configured language. For more information, see [Provide a localized Windows experience](provide-localized-windows-experience.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Remoting connection report in Endpoint Analytics now generally available<!--38310774 -->
+The remoting connection report in Endpoint Analytics has moved out of preview and into general availability. For more information, see [Remoting connection report](report-remoting-connection.md).
+
+#### Resource performance report in Endpoint Analytics now generally available<!-- 40028465 -->
+
+The resource performance report in Endpoint Analytics has moved out of preview and into general availability. For more information, see [Resource performance report](report-resource-performance.md).
 
 <!-- ########################## -->
 ## Week of August 8, 2022

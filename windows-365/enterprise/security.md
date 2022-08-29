@@ -45,12 +45,12 @@ Take a look at the sections below to better understand the components and featur
 
 The first consideration for securing your environment is to secure access to the Cloud PC.
 
-As described in [identity and authentication](/windows-365/enterprise/identity-authentication#authentication), there are two authentication challenges to access the Cloud PC:
+As described in [identity and authentication](./identity-authentication.md#authentication), there are two authentication challenges to access the Cloud PC:
 
 - The Windows 365 service.
 - The Cloud PC.
 
-The primary control for securing access is by using Azure Active Directory (Azure AD) Conditional Access to conditionally grant access to the Windows 365 service. To secure access to the Cloud PC, see [set conditional access policies](/windows-365/enterprise/set-conditional-access-policies).
+The primary control for securing access is by using Azure Active Directory (Azure AD) Conditional Access to conditionally grant access to the Windows 365 service. To secure access to the Cloud PC, see [set conditional access policies](./set-conditional-access-policies.md).
 
 ## Secure Cloud PC devices
 
@@ -85,10 +85,10 @@ The third consideration for securing your environment is to secure the Cloud PC 
 
 ### Security of Cloud PC data
 
-The data of the Cloud PC data itself is secured through encryption. For more details, see [data encryption in Windows 365](/windows-365/enterprise/encryption).
+The data of the Cloud PC data itself is secured through encryption. For more details, see [data encryption in Windows 365](./encryption.md).
 
 ### Security of data available on the Cloud PC
 
 Securing the data available to users on their Cloud PCs should be no different than securing the data available to users on work-assigned Windows PCs, with the caveat that the Cloud PC is being accessed through Remote Desktop Protocol (RDP).
 
-To manage RDP features available to the user during their Cloud PC connection, see [manage RDP device redirections for Cloud PCs](/windows-365/enterprise/manage-rdp-device-redirections).
+To manage RDP features available to the user during their Cloud PC connection, see [manage RDP device redirections for Cloud PCs](./manage-rdp-device-redirections.md).

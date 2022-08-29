@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/02/2022
+ms.date: 08/24/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -57,7 +57,7 @@ When the dashboard opens, you get an overview with all the compliance reports. I
 - Threat agent status
 - Device protection status
 
-![Dashboard image shows the device compliance dashboard and the different reports](./media/compliance-policy-monitor/idc-1.png)
+:::image type="content" source="./media/compliance-policy-monitor/idc-1.png" alt-text="Screenshot of the Microsoft Endpoint Manager admin center compliance overview and the different reports.":::
 
 As you dig in to this reporting, you can also see any specific compliance policies and settings that apply to a specific device, including the compliance state for each setting.
 
@@ -114,10 +114,11 @@ When a setting for a compliance policy returns a value of **Error**, the complia
 
 In the **Device compliance status** chart, select a status. For example, select the **Not compliant** status:
 
-![Choose the not compliant status](./media/compliance-policy-monitor/select-not-compliant-status.png)
+:::image type="content" source="./media/compliance-policy-monitor/select-not-compliant-status.png" alt-text="Screenshot that shows Choose the not compliant status.":::
 
 That action opens the **Device compliance** window and displays devices in a **Device status** chart. The chart shows you more details on the devices in that state, including operating system platform, last check-in date, and more.
-![Dashboard image shows more details on the device in that specific state](./media/compliance-policy-monitor/drill-down-details.png)
+
+:::image type="content" source="./media/compliance-policy-monitor/drill-down-details.png" alt-text="Dashboard image shows more details on the device in that specific state.":::
 
 If you want to see all the devices owned by a specific user, you can also filter the chart report by typing the user's e-mail.
 
@@ -135,7 +136,7 @@ If you want to see all the devices owned by a specific user, you can also filter
 
 #### Filter and columns
 
-![Select Filter and Column to change the results in the chart](./media/compliance-policy-monitor/filter-columns.png)
+:::image type="content" source="./media/compliance-policy-monitor/filter-columns.png" alt-text="Select Filter and Column to change the results in the chart.":::
 
 When you select the **Filter** button, the filter fly-out opens with more options, including the **Compliance** state, **Jailbroken** devices, and more. **Apply** the filter to update the results.
 
@@ -145,7 +146,7 @@ Use the **Columns** property to add or remove columns from the chart output. For
 
 In the **Device details** chart, select a specific device, and then select **Device compliance**:
 
-![Choose a specific device, and then Device Compliance to see the compliance policies applied](./media/compliance-policy-monitor/see-policies-applied-specific-device.png)
+:::image type="content" source="./media/compliance-policy-monitor/see-policies-applied-specific-device.png" alt-text="Choose a specific device, and then Device Compliance to see the compliance policies applied.":::
 
 Intune displays more details on the device compliance policy settings applied on that device. When you select the specific policy, it shows all the settings in the policy.
 
@@ -153,7 +154,7 @@ Intune displays more details on the device compliance policy settings applied on
 
 On the *Compliance status* page, next to the *Policy compliance* chart, you can select the **Devices without compliance policy** tile to view information about devices that don't have any compliance policies assigned:
 
-![See devices without any compliance policies](./media/compliance-policy-monitor/devices-without-policies.png)
+:::image type="content" source="./media/compliance-policy-monitor/devices-without-policies.png" alt-text="See devices without any compliance policies.":::
 
 When you select the tile, it shows all devices without a compliance policy. It also shows the user of the device, the policy deployment status, and the device model.
 
@@ -169,13 +170,13 @@ When you select the tile, it shows all devices without a compliance policy. It a
 
 The **Policy compliance** chart shows you the policies, and how many devices are compliant and noncompliant.
 
-![See a list of the policy, and how many compliant vs noncompliant devices for that policy](./media/compliance-policy-monitor/idc-8.png)
+:::image type="content" source="./media/compliance-policy-monitor/idc-8.png" alt-text="See a list of the policies, and how many compliant vs noncompliant devices for that policy.":::
 
 ### Setting compliance
 
 The **Setting compliance** chart shows you all device compliance policy settings from all compliance policies, the platforms the policy settings are applied, and the number of noncompliant devices.
 
-![See a list of all the settings in the different policies](./media/compliance-policy-monitor/idc-10.png)
+:::image type="content" source="./media/compliance-policy-monitor/idc-10.png" alt-text="See a list of all the settings in the different policies.":::
 
 ## View compliance reports
 

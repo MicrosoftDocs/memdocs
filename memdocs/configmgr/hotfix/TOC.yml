@@ -1,6 +1,10 @@
 items:
 - name: Hotfix documentation
   href: index.yml
+- name: Version 2207
+  items:
+  - name: KB 14978429  Connected cache update for Microsoft Endpoint Configuration Manager version 2207
+    href: 2207/14978429.md
 - name: Version 2203
   items:
   - name: KB 13174460 Summary of changes in 2203

@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/17/2022
+ms.date: 08/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -231,6 +231,10 @@ When creating the Server configuration for the tunnel, you can specify a differe
 
   - Security Token Service: `*.sts.windows.net`
   - Azure storage for tunnel logs: `*.blob.core.windows.net`
+  - Additional storage endpoint urls: 
+  - `*.mwh03prdstr02a.store.core.windows.net`
+  - `*.blob.storage.azure.net`
+
 
 - The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22.
 
@@ -326,7 +330,7 @@ To change the proxy server configuration that is in use by the Linux host of the
 1. On the tunnel server, edit */etc/mstunnel/env.sh* and specify the new proxy server.
 2. Run `mst-cli install`.
 
-   This command rebuilds the containers with the new proxy server details. During this process, you’re asked to verify the contents of */etc/mstunnel/env.h* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
+   This command rebuilds the containers with the new proxy server details. During this process, you’re asked to verify the contents of */etc/mstunnel/env.sh* and to make sure that the certificate is installed. The certificate should already be present from the previous proxy server configuration.
 
    To confirm both and complete the configuration, enter **yes**.
 
