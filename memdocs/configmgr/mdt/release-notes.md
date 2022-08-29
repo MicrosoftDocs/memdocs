@@ -1,13 +1,13 @@
 ---
 title: MDT release notes
 description: Understand supported platforms, prerequisites, and limitations of the Microsoft Deployment Toolkit (MDT).
-ms.date: 12/23/2020
+ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: baladelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
 ---
@@ -66,7 +66,7 @@ The following OS versions are supported for deployment with this build of MDT:
 - Windows Server 2008 R2
 
 > [!NOTE]
-> MDT doesn't support Windows 10 ARM64 devices.
+> MDT doesn't support Windows 10 ARM64 devices, Windows 11 and Windows Server 2022 operating systems.
 
 FAQ: [Is this release only supported with Windows 10, Windows ADK, or Configuration Manager version *X*?](./faq.yml#what-s-the-mdt-support-life-cycle-)
 

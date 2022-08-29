@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/30/2021
+ms.date: 08/16/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -53,8 +53,8 @@ To get to the **Resource performance** report, sign in to [Microsoft Endpoint Ma
 
 The **Resource performance score** is an overall performance rating (from 0 to 100) for all the Cloud PCs that you manage. This score is a weighted average of **CPU spike time score** and **RAM Spike time score**.
 
-- **CPU spike time score**:
-- **RAM Spike time score**:
+- **CPU spike time %**: The daily metric trends graph plots the ratio of CPU spike times to total usage time. This CPU spike % data is averaged over a 14-day period ending on the date at the bottom of the graph. Usage over 50% is considered a spike.
+- **RAM Spike time %**: The daily metric trends graph plots the ratio of RAM spike times to total usage time. This RAM spike % data is averaged over a 14-day period ending on the date at the bottom of the graph. Usage over 50% is considered a spike.
 
 **Baseline** helps you see if you're meeting goals. You can set the baseline to the organizational median or a custom value.
 

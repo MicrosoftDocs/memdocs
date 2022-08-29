@@ -82,7 +82,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
     - **Personally-owned**: Select **Allow** to permit devices to enroll and operate as personal devices.  
     - **Device manufacturer** (Android): Enter a comma-separated list of the manufacturers that you want to block. 
     - **Allow min/max range** (Android, Windows, iOS/iPadOS): Enter the minimum and maximum OS versions allowed to enroll. Supported version formats include:  
-        - Windows supports major.minor.build.rev for Windows 10 and Windows 11 only.  
+        - Windows supports major.minor.build.rev for Windows 10 and Windows 11.    
         - Android device administrator and Android Enterprise work profile support major.minor.rev.build.  
         - iOS/iPadOS supports major.minor.rev.  
 
@@ -151,3 +151,4 @@ Edits are applied to new enrollments and do not affect devices that are already 
 4. Select **Edit**.   
 5. Make your changes and select **Review + save**. 
 6. Review your changes and select **Save**.  
+

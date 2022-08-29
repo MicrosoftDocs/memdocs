@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/04/2020
+ms.date: 08/29/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -40,6 +40,9 @@ As an Intune administrator, use these compliance settings to help protect your o
 ## Before you begin
 
 [Create a compliance policy](create-compliance-policy.md#create-the-policy). For **Platform**, select **macOS**.
+
+> [!NOTE]  
+> Device compliance evaluation is not supported for userless macOS devices.  
 
 ## Device Health
 
