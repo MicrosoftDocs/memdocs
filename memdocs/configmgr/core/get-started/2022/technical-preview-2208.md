@@ -2,7 +2,7 @@
 title: Technical preview 2208
 titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2208.
-ms.date: 08/26/2022
+ms.date: 08/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -25,13 +25,14 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2208/1234567.md)] -->
 
-[!INCLUDE [Distribution point content migration](includes/2207/10928371.md)]
-[!INCLUDE [Improvements to Configuration Manager policies for Microsoft Defender Application Guard](includes/2207/14059872.md)]
-[!INCLUDE [PowerShell release notes preview](includes/2207/14637353.md)]
+[!INCLUDE [Intune RBAC for tenant attached devices](includes/2208/8126836.md)]
+[!INCLUDE [Dark theme is now extended to additional dashboards](includes/2208/14917369.md)]
+[!INCLUDE [OSD TS might fail to resolve dependencies and reboot due to error](includes/2208/13879970.md)]
 
 <!-- ## General known issues  -->
 
 <!--  [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
+
 ## Next steps
 
 For more information about installing or updating the technical preview branch, see [Technical preview](../technical-preview.md).
