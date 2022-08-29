@@ -294,8 +294,7 @@ items:
     - name: 2205 features
       href: get-started/2022/technical-preview-2205.md       
     - name: 2204 features
-      href: get-started/2022/technical-preview-2204.md       
-    
+      href: get-started/2022/technical-preview-2204.md        
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
