@@ -64,14 +64,14 @@ To require MFA when a device is enrolled, follow these steps:
 1. Under **Cloud apps or actions** > **Include**.
    1. Choose **Select apps** > **Microsoft Intune Enrollment**.
    1. Choose **Select**.
-   > By choosing Microsoft Intune Enrollment, Conditional Access MFA is applied only to the enrollment of the device (one-time MFA prompt).
+     By choosing Microsoft Intune Enrollment, Conditional Access MFA is applied only to the enrollment of the device (one-time MFA prompt).
 
-   > For Apple Automated Device Enrollments using **Setup assistant with modern authentication**, you have two options:
-   >
-   > | Cloud app | MFA prompt location | Automated Device Enrollment notes |
-   > | --- | --- | --- |
-   > | **Microsoft Intune** | Setup Assistant,<br>Company Portal app | With this option, MFA is required during enrollment and for each login to the Company Portal app/Company Portal website. Conditional Access MFA is applied only to the login of the Company Portal on the device. |
-   > | **Microsoft Intune Enrollment** | Setup Assistant | With this option, MFA is applied only to the enrollment of the device (one-time MFA prompt). Conditional Access MFA is applied only to the login of the Company Portal on the device. |
+     For Apple Automated Device Enrollments using **Setup assistant with modern authentication**, you have two options:
+    
+     | Cloud app | MFA prompt location | Automated Device Enrollment notes |
+     | --- | --- | --- |
+     | **Microsoft Intune** | Setup Assistant,<br>Company Portal app | With this option, MFA is required during enrollment and for each login to the Company Portal app/Company Portal website. Conditional Access MFA is applied only to the login of the Company Portal on the device. |
+     | **Microsoft Intune Enrollment** | Setup Assistant | With this option, MFA is applied only to the enrollment of the device (one-time MFA prompt). Conditional Access MFA is applied only to the login of the Company Portal on the device. |
 
 1. Under **Conditions** you don't need to configure any settings for MFA.
 1. Under **Access controls** > **Grant**
