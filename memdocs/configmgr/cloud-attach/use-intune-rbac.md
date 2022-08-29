@@ -59,7 +59,7 @@ To use Intune role-based access control for tenant attach rather than Configurat
 
 To enable Intune to manage user permissions for cloud-attached devices, use the following steps:  
 
-1. Open the [Microsoft Endpoint admin center](https://endpoint.microsoft.com) and sign in.
+1. Open the [Microsoft Endpoint admin center](https://endpoint.microsoft.com) and sign in as a user with the **Global Admin** role.
 1. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**.
 1. In the banner, select **You can also manage user permissions from Intune. Click here to learn more about this option.**
 1. The **Use Intune RBAC** flyout appears.
