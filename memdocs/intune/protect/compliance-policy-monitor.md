@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Monitor device compliance policies in Microsoft Intune
-description: Use the device compliance dashboard to monitor overall device compliance, view reports, and view per-policy and per-setting device compliance.
+title: Monitor results of your device compliance policies in Microsoft Intune
+description: Use the device compliance dashboard to understand overall device compliance the per-policy and per-setting device compliance results.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 08/24/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-ms.reviewer: samyada
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -27,9 +27,9 @@ ms.collection:
   - M365-identity-device-management
   - highpri
 ---
-# Monitor Intune Device compliance policies
+# Monitor results of your Intune Device compliance policies
 
-Compliance reports help you review device compliance and troubleshoot compliance-related issues in your organization. Using these reports, you can view information on:
+Compliance reports help you understand when devices fail to meet your [compliance configurations](../protect/device-compliance-get-started.md) and can help you identify compliance-related issues in your organization. Using these reports, you can view information on:
 
 - The overall compliance states of devices
 - The compliance status for an individual setting
@@ -57,7 +57,7 @@ When the dashboard opens, you get an overview with all the compliance reports. I
 - Threat agent status
 - Device protection status
 
-![Dashboard image shows the device compliance dashboard and the different reports](./media/compliance-policy-monitor/idc-1.png)
+:::image type="content" source="./media/compliance-policy-monitor/idc-1.png" alt-text="Screenshot of the Microsoft Endpoint Manager admin center compliance overview and the different reports.":::
 
 As you dig in to this reporting, you can also see any specific compliance policies and settings that apply to a specific device, including the compliance state for each setting.
 
@@ -72,7 +72,7 @@ Descriptions of the different device compliance policy states:
 
 - **Compliant**: The device successfully applied one or more device compliance policy settings.
 
-- **In-grace period:** The device is targeted with one or more device compliance policy settings. But, the user hasn't applied the policies yet. This status means the device is not-compliant, but it's in the grace-period defined by the admin.
+- **In-grace period:** The device is targeted with one or more device compliance policy settings. But, the user hasn't applied the policies yet. This status means the device is not-compliant, but it's in the grace period defined by the admin.
 
   - Learn more about [Actions for noncompliant devices](actions-for-noncompliance.md).
 
@@ -96,30 +96,29 @@ Descriptions of the different device compliance policy states:
 > [!IMPORTANT]
 > Devices that are enrolled into Intune, but not targeted by any device compliance policies are included in this report under the **Compliant** bucket.
 
-#### Device behavior with a compliance status of Error
+#### Device behavior with a compliance setting in Error state
 
-Devices keep a compliance status of **Error** for up to seven days to allow time for the compliance calculation to complete correctly. Within those seven days, its previous compliance status applies until the device evaluates as **Compliant** or **Not compliant**. If after seven days, the device still has a status of **Error**, it becomes **Not compliant**. Note that grace periods do not apply to devices with an Error status.
+When a setting for a compliance policy returns a value of **Error**, the compliance state of the device remains unchanged for up to seven days to allow time for the compliance calculation to complete correctly for that setting. Within those seven days, the device's existing compliance status continues to apply until the compliance policy setting evaluates as **Compliant** or **Not compliant**. If a setting still has a status of **Error** after seven days, the device becomes **Not compliant** immediately. Grace periods don't apply to compliance policies with a setting in an **Error** state.
 
 ##### Examples:
-	
-- A device is initially marked **Compliant**, but then its status changes to **Error**. After three days, compliance evaluation completes successfully and the device is marked **Not compliant**. The user can continue to use the device to access Conditional Access-protected resources within the first three days after the status changes to **Error**. Once the device is marked **Not compliant**, this access is removed until the device becomes **Compliant** again.
-	
-- A device is initially marked **Compliant**, but then its status changes to **Error**. After three days, compliance evaluation completes successfully and the device is marked **Compliant**. The user is able to continue to access Conditional Access-protected resources without interruption.
-	
 
-- A device is initially marked **Compliant**, but then its status changes to **Error**. The user is able to access Conditional Access-protected resources for seven days, but after seven days, the compliance status is still **Error**. At this point, the device becomes **Not compliant** and the user loses access to the protected resources until the device becomes **Compliant** – even if there is a grace period set for the applicable compliance policy.
-	
+- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. After three days, compliance evaluation completes successfully and the setting now reports **Not compliant**. The user can continue to use the device to access Conditional Access-protected resources within the first three days after the setting states changes to **Error**, but once the setting returns **Not compliant**, the device is marked **Not compliant** and this access is removed until the device becomes **Compliant** again.
+ 
+- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. After three days, compliance evaluation completes successfully, the setting returns **Compliant**, and the device's compliance status becomes **Compliant**. The user is able to continue to access Conditional Access protected resources without interruption.
 
-- A device is initially marked **Not compliant**, but then its status changes to **Error**. After three days, compliance evaluation completes successfully and the device is marked **Compliant**. The user is prevented from accessing Conditional Access-protected resources for the first three days. Once the device is marked **Compliant**, the user can begin to access protected resources on the device.
+- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. The user is able to access Conditional Access protected resources for seven days, but after seven days, the compliance setting still returns **Error**. At this point, the device becomes Not compliant immediately and the user loses access to the protected resources until the device becomes **Compliant** – even if there's a grace period set for the applicable compliance policy.
+
+-  A device is initially marked **Not compliant**, but then a setting in one of the compliance policies targeted to the device reports Error. After three days, compliance evaluation completes successfully, the setting returns **Compliant**, and the device's compliance status becomes **Compliant**. The user is prevented from accessing Conditional Access protected resources for the first three days (while the setting returns **Error**). Once the setting returns **Compliant** and the device is marked **Compliant**, the user can begin to access protected resources on the device.
 
 #### Drill down for more details
 
 In the **Device compliance status** chart, select a status. For example, select the **Not compliant** status:
 
-![Choose the not compliant status](./media/compliance-policy-monitor/select-not-compliant-status.png)
+:::image type="content" source="./media/compliance-policy-monitor/select-not-compliant-status.png" alt-text="Screenshot that shows Choose the not compliant status.":::
 
 That action opens the **Device compliance** window and displays devices in a **Device status** chart. The chart shows you more details on the devices in that state, including operating system platform, last check-in date, and more.
-![Dashboard image shows more details on the device in that specific state](./media/compliance-policy-monitor/drill-down-details.png)
+
+:::image type="content" source="./media/compliance-policy-monitor/drill-down-details.png" alt-text="Dashboard image shows more details on the device in that specific state.":::
 
 If you want to see all the devices owned by a specific user, you can also filter the chart report by typing the user's e-mail.
 
@@ -137,7 +136,7 @@ If you want to see all the devices owned by a specific user, you can also filter
 
 #### Filter and columns
 
-![Select Filter and Column to change the results in the chart](./media/compliance-policy-monitor/filter-columns.png)
+:::image type="content" source="./media/compliance-policy-monitor/filter-columns.png" alt-text="Select Filter and Column to change the results in the chart.":::
 
 When you select the **Filter** button, the filter fly-out opens with more options, including the **Compliance** state, **Jailbroken** devices, and more. **Apply** the filter to update the results.
 
@@ -147,7 +146,7 @@ Use the **Columns** property to add or remove columns from the chart output. For
 
 In the **Device details** chart, select a specific device, and then select **Device compliance**:
 
-![Choose a specific device, and then Device Compliance to see the compliance policies applied](./media/compliance-policy-monitor/see-policies-applied-specific-device.png)
+:::image type="content" source="./media/compliance-policy-monitor/see-policies-applied-specific-device.png" alt-text="Choose a specific device, and then Device Compliance to see the compliance policies applied.":::
 
 Intune displays more details on the device compliance policy settings applied on that device. When you select the specific policy, it shows all the settings in the policy.
 
@@ -155,7 +154,7 @@ Intune displays more details on the device compliance policy settings applied on
 
 On the *Compliance status* page, next to the *Policy compliance* chart, you can select the **Devices without compliance policy** tile to view information about devices that don't have any compliance policies assigned:
 
-![See devices without any compliance policies](./media/compliance-policy-monitor/devices-without-policies.png)
+:::image type="content" source="./media/compliance-policy-monitor/devices-without-policies.png" alt-text="See devices without any compliance policies.":::
 
 When you select the tile, it shows all devices without a compliance policy. It also shows the user of the device, the policy deployment status, and the device model.
 
@@ -171,13 +170,13 @@ When you select the tile, it shows all devices without a compliance policy. It a
 
 The **Policy compliance** chart shows you the policies, and how many devices are compliant and noncompliant.
 
-![See a list of the policy, and how many compliant vs noncompliant devices for that policy](./media/compliance-policy-monitor/idc-8.png)
+:::image type="content" source="./media/compliance-policy-monitor/idc-8.png" alt-text="See a list of the policies, and how many compliant vs noncompliant devices for that policy.":::
 
 ### Setting compliance
 
 The **Setting compliance** chart shows you all device compliance policy settings from all compliance policies, the platforms the policy settings are applied, and the number of noncompliant devices.
 
-![See a list of all the settings in the different policies](./media/compliance-policy-monitor/idc-10.png)
+:::image type="content" source="./media/compliance-policy-monitor/idc-10.png" alt-text="See a list of all the settings in the different policies.":::
 
 ## View compliance reports
 
@@ -219,7 +218,7 @@ This feature is included in the device status reporting:
 
 Policy conflicts can occur when multiple Intune policies are applied to a device. If the policy settings overlap, Intune resolves any conflicts by using the following rules:
 
-- If the conflicting settings are from an Intune configuration policy and a compliance policy, the settings in the compliance policy take precedence over the settings in the configuration policy. This happens even if the settings in the configuration policy are more secure.
+- If the conflict is between settings from an Intune configuration policy and a compliance policy, the settings in the compliance policy take precedence over the settings in the configuration policy. This result happens even if the settings in the configuration policy are more secure.
 
 - If you have deployed multiple compliance policies, Intune uses the most secure of these policies.
 

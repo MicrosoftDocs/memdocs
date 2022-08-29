@@ -1,5 +1,6 @@
 ---
 title: "About Compliance Settings Extensibility"
+description: The content in this section provides information about extending the functionality of desired configuration management configuration items in Configuration Manager.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

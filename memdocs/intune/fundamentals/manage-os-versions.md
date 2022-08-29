@@ -20,7 +20,7 @@ ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
 #ROBOTS:
 #audience:
 
-#ms.reviewer: [ALIAS]
+ms.reviewer: 
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -49,7 +49,7 @@ Organizations are using device type restrictions to control access to organizati
 1. Use minimum operating system version to keep end users on current and supported platforms in your organization.
 2. Leave maximum operating system unspecified (no limit) or set it to the last validated version in your organization to allow time for internal testing of new operating system releases.
 
-For details, see [Set device type restrictions](../enrollment/enrollment-restrictions-set.md#create-a-device-type-restriction).
+For details, see [Create a device platform restriction](../enrollment/create-device-platform-restrictions.md).
 
 ## Operating system version reporting and compliance with Intune MDM device compliance policies
 
@@ -71,7 +71,7 @@ Organizations are using device compliance policies for the same scenarios as enr
 For details, see [Get started with device compliance](../protect/device-compliance-get-started.md).
  
 ## Operating system version controls using Intune app protection policies    
-Intune app protection policies and mobile application management (MAM) access settings let you to specify the minimum operating system version at the app layer. This lets you inform and encourage, or require, your end users to update their operating system to a specified minimum version.
+Intune app protection policies and mobile application management (MAM) access settings let you specify the minimum operating system version at the app layer. This lets you inform and encourage, or require, your end users to update their operating system to a specified minimum version.
  
 You have two different options: 
 - **Warn** - Warn informs the end user that they should upgrade if they open an app with an application protection policy or MAM access settings on a device with an operating system version below the specified version. Access is allowed for the app and organizational data.  
@@ -100,6 +100,6 @@ You can use the Intune capabilities described in this article to help you move y
 
 Use the following resources to manage operating system versions in your organization:
 
-- [Set device type restrictions](../enrollment/enrollment-restrictions-set.md#create-a-device-type-restriction)
+- [Set device type restrictions](../enrollment/enrollment-restrictions-set.md)
 - [Get started with device compliance](../protect/device-compliance-get-started.md)
 - [How to create and assign app protection policies](../apps/app-protection-policies.md)

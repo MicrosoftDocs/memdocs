@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 11/19/2021
+ms.date: 07/26/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -18,7 +18,7 @@ ms.localizationpriority: high
 #ROBOTS:
 #audience:
 
-#ms.reviewer: dougeby
+ms.reviewer: dougeby
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -63,7 +63,6 @@ This article shows you how to view all your devices, and their properties in the
    - **Device compliance** lists all assigned compliance policies, and if the device is compliant or not compliant.
    - **Device configuration** shows all device configuration policies assigned to the device, and if the policy succeeded or failed.
    - **App configuration**
-   - **Endpoint security configuration**
    - **Recovery keys** shows available BitLocker keys found for the device
    - **Managed apps** lists all the managed apps that Intune configured and has deployed to the device.
 
@@ -105,7 +104,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |Ethernet MAC|The primary Ethernet MAC address for the device. For macOS devices with no ethernet, the device will report the Wi-Fi MAC address.|macOS|
 |ICCID|The Integrated Circuit Card Identifier, which is a SIM card's unique identification number.|Windows, iOS/iPadOS, Android<br/><br/>ICCID isn't inventoried on Android Enterprise Dedicated, Fully Managed, or Corporate-Owned Work Profile devices.|
 |EID|The eSIM identifier, which is a unique identifier for the embedded SIM (eSIM) for cellular devices that have an eSIM.|iOS/iPadOS|
-|Wi-Fi IPv4 address|The device's IPv4 address.|Android Enterprise fully managed, dedicated and corp-owned work profiles.<br/><br/>**NOTE**: Any change to IPv4 or subnet ID may take up to 8 hours to reflect in MEM portal from the time that network changes on device.|
+|Wi-Fi IPv4 address|The device's IPv4 address.|Windows, Android Enterprise fully managed, dedicated and corp-owned work profiles.<br/><br/>**NOTE**: Any change to IPv4 or subnet ID may take up to 8 hours to reflect in MEM portal from the time that network changes on device.|
 |Wi-Fi subnet ID|The device's subnet ID.|Android Enterprise fully managed, dedicated and corp-owned work profiles.<br/><br/>**NOTE**: Any change to IPv4 or subnet ID may take up to 8 hours to reflect in MEM portal from the time that network changes on device.|
 |Enrolled date|The date and time that the device was enrolled in Intune.|Windows, iOS/iPadOS, Android|
 |Last contact|The date and time that the device last connected to Intune.|Windows, iOS/iPadOS, Android|
@@ -117,6 +116,7 @@ Depending on the carrier used by the devices, not all details might be collected
 |EAS activation ID|The device's Exchange ActiveSync identifier.|Windows, iOS/iPadOS, Android|
 |Supervised|If **Yes**, administrators have enhanced control over the device.|iOS/iPadOS|
 |Encrypted|If **Yes**, the data stored on the device is encrypted.|Windows, iOS/iPadOS, Android|
+|Product Name|The product name of the device, such as iPad8,12.|iOS/iPadOS, macOS|
 
 > [!Note]  
 > For Windows 10 devices that are registered with [Windows Autopilot service](../../autopilot/add-devices.md), Enrolled date might display the time when devices were registered with Autopilot instead of the time when they were enrolled.

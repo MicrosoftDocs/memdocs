@@ -45,7 +45,7 @@ To use your own network and provision Azure AD joined Cloud PCs, you must meet t
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
 - A subnet within the vNet and available IP address space.
 
-To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must meet the above requirements, and the following:
+To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must meet the above requirements, and the following requirements:
 
 - The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To support this resolution, define your AD DS DNS servers as the DNS servers for the virtual network.
 - The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
@@ -58,7 +58,7 @@ You must allow traffic in your Azure network configuration to the following serv
 - [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list)
 - rdweb.wvd.microsoft.com
 - rdbroker.wvd.microsoft.com
-- Provisioning and on-premises network connection endpoints:
+- Provisioning and Azure network connection endpoints:
   - cpcsaamssa1prodprap01.blob.core.windows.net
   - cpcsaamssa1prodprau01.blob.core.windows.net
   - cpcsaamssa1prodpreu01.blob.core.windows.net
@@ -108,16 +108,16 @@ All endpoints connect over port 443.
 
 ### Remote Desktop Protocol (RDP) broker service endpoints
 
-Direct connectivity to Azure Virtual Desktop RDP broker service endpoints is critical for remoting performance to a Cloud PC. These endpoints affect both connectivity and latency. To align with the [Microsoft 365 network connectivity principles](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles?view=o365-worldwide#new-office-365-endpoint-categories), you should categorize these endpoints as **Optimize** endpoints. We recommend that you use a direct path from your Azure virtual network to those endpoints.
+Direct connectivity to Azure Virtual Desktop RDP broker service endpoints is critical for remoting performance to a Cloud PC. These endpoints affect both connectivity and latency. To align with the [Microsoft 365 network connectivity principles](/microsoft-365/enterprise/microsoft-365-network-connectivity-principles#new-office-365-endpoint-categories), you should categorize these endpoints as **Optimize** endpoints. We recommend that you use a direct path from your Azure virtual network to those endpoints.
 
 To make it easier to configure network security controls, use Azure Virtual Desktop service tags to identity those endpoints for direct routing using an [Azure Networking User Defined Route (UDR)](/azure/virtual-network/virtual-networks-udr-overview). A UDR will result in direct routing between your virtual network and the RDP broker for lowest latency. For more information about Azure Service Tags, see [Azure service tags overview](/azure/virtual-desktop/network-connectivity).
 
-Changing the network routes of a Cloud PC (at the network layer or at the Cloud PC layer (e.g. VPN)), might break the connection between the Cloud PC and the Azure Virtual Desktop RDP broker. If so, the end user will be disconnected from their Cloud PC until a connection be re-established.
+Changing the network routes of a Cloud PC (at the network layer or at the Cloud PC layer like VPN) might break the connection between the Cloud PC and the Azure Virtual Desktop RDP broker. If so, the end user will be disconnected from their Cloud PC until a connection be re-established.
 
 
 ## DNS requirements
 
-As part of the Hybrid Azure AD Join requirements, your Cloud PCs must be able to join on-prem Active Directory. That requires that the Cloud PCs be able to resolve DNS records for your on-prem AD environment.
+As part of the Hybrid Azure AD Join requirements, your Cloud PCs must be able to join on-premises Active Directory. That requires that the Cloud PCs be able to resolve DNS records for your on-premises AD environment.
 
 Configure your Azure Virtual Network where the Cloud PCs are provisioned as follows:
 
@@ -163,7 +163,7 @@ Full HD (1920x1080p) isn’t a supported resolution for Microsoft Teams on Cloud
 
 ## Traffic interception technologies
 
-Some enterprise customers use traffic interception, SSL decryption, deep packet inspection, and other similar technologies for security teams to monitor network traffic. Cloud PC provisioning may need direct access to the virtual machine. These traffic interception technologies can cause issues with running on-premises network connection checks or Cloud PC provisioning. Make sure no network interception is enforced for Cloud PCs provisioned within the Windows 365 service.
+Some enterprise customers use traffic interception, SSL decryption, deep packet inspection, and other similar technologies for security teams to monitor network traffic. Cloud PC provisioning may need direct access to the virtual machine. These traffic interception technologies can cause issues with running Azure network connection checks or Cloud PC provisioning. Make sure no network interception is enforced for Cloud PCs provisioned within the Windows 365 service.
 
 ## Bandwidth
 

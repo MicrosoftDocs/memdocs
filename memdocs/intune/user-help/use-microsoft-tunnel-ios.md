@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/22/2020  
+ms.date: 04/29/2022  
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,14 +32,9 @@ ms.collection:
 
 # Using Microsoft Tunnel for iOS  
 
-The Microsoft Tunnel app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they already configured a VPN connection for your work account. To connect to the VPN, simply install the app and sign in with your work account. 
+Microsoft Tunnel uses Microsoft Defender for Endpoint as The Microsoft Tunnel client app on iOS. Microsoft Defender for Endpoint replaces Microsoft Tunnel as the client app beginning on April 29, 2022. Use of the standalone Microsoft Tunnel client app remains in support until the end of June 2022.
 
-## Install Microsoft Tunnel  
-
-Tunnel is available in the App Store. Before heading there, check your device to see if it's already installed.   
-
-If you can’t find Tunnel in the App Store, contact your IT support person for help.  
-
+The Microsoft Tunnel client app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they already configured a VPN connection for your work account. To connect to the VPN, simply install the app and sign in with your work account. 
 
 ## Connect and disconnect VPN      
 

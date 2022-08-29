@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/31/2022
+ms.date: 08/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -85,11 +85,19 @@ The Certificate Connector for Microsoft Intune supports:
 
 ## Lifecycle
 
-Periodically, updates  to the certificate connector are released. Announcements for new updates appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
+Periodically, updates  to the certificate connector are released. Announcements for new connector updates, including the version and release date for each update, appear in the [What's new for the Certificate Connector](#whats-new-for-the-certificate-connector) section in this article.
 
-Intune supports each connector release for six months after it's released. After the six months have passed, the connector is no longer supported and might not function as expected.
+**Each new connector release**:
 
-If you don’t allow the connector to automatically update, plan to manually update it to the latest version at the first opportunity.
+- Is supported for six months after its release date. During this period, automatic updates can install a newer connector version. Updated connector versions can include but aren't limited to bug fixes and performance and feature improvements.
+
+- If an out of support connector fails, you’ll need to update to the latest supported version.
+
+- If you block the automatic update of the connector, plan to manually update the connector within six months, before support for the installed version ends. After support ends, you’ll need to update the connector to a version that remains in support to receive support for problems with the connector.
+
+- Connectors that are out of support will continue to function for up to 18 months after its release date. After 18 months, a connectors functionality might fail due to service level improvements, updates, or in addressing common security vulnerabilities that might surface in the future.
+
+For example, the connector version 6.2203.12.0 that released on May 4, 2022, will drop from support on November 4, 2022.  The same connector should continue to function (though not be supported) until November 2023. After November 2023 the connector might stop communicating with Intune.
 
 ### Automatic update
 
@@ -140,7 +148,7 @@ The following logs are available and default to 50 MB, and have automatic archiv
 - **Admin Log** - This log contains one log event per request to the connector. Events include either a *success* with information about the request, or an *error* with information about the request and the error.
 - **Operational Log** - This log displays additional information to that found in the Admin log, and can be of use in debugging issues. This log also displays ongoing operations instead of single events.
 
-In addition to the default log level, you can enable debug logging for each log to obtain additional details.
+In addition to the default log level, you can enable debug logging for each log to obtain more details.
 ### Event IDs
 
 All events have one of the following IDs:
@@ -150,6 +158,7 @@ All events have one of the following IDs:
 - **2000-2999** - PKCS Import
 - **3000-3999** - Revoke
 - **4000-4999** - SCEP
+- **5000-5999** - Connector Health
 
 ### Task Categories
 
@@ -267,7 +276,7 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
     Successfully uploaded PKCS Import request results to Intune.
 
   - **Event ID: 2101** - *PkcsImportUploadFailure*  
-    Failed to upoload PKCS request results to Intune.
+    Failed to upload PKCS request results to Intune.
 
   - **Event ID: 2102** - *PkcsImportUploadedRequest*  
     Successfully uploaded a PKCS Import request to Intune.
@@ -353,6 +362,19 @@ All events are tagged with a Task Category to aid in filtering.  Task categories
   - **Event ID: 4010** - *ScepNotifySaveToDiskFailed*  
     Failed to write notification to disk and cannot notify Intune of the request status.
 
+**Connector Health**
+
+- **Operational**
+
+  - **Event ID: 5000** - *HealthMessageUploadSuccess*
+    Successfully uploaded health messages to Intune.
+
+  - **Event ID: 5001** - *HealthMessageUploadFailedAttempt*
+    Failed to upload health messages to Intune, will try again.
+
+  - **Event ID: 5002** - *HealthMessageUploadFailure*
+    Failed to upload health messages to Intune.
+
 ## What's new for the Certificate Connector
 
 Updates for the Certificate Connector for Microsoft Intune are released periodically and then [supported for six months](#lifecycle). When we update the connector, you can read about the changes here.
@@ -360,8 +382,20 @@ Updates for the Certificate Connector for Microsoft Intune are released periodic
 New updates for the connector can take a week or more to become available for each tenant.
 
 > [!IMPORTANT]  
-> On June 1, 2022, Intune certificate connectors earlier than version **6.2101.13.0** will no longer allow you to issue certificates to users and devices. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article) on July 29, 2021.
- 
+> Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. Starting August 2022, these connector versions **won't** be able to revoke certificates. Starting September 2022, these connector versions **won't** be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
+
+### June 30, 2022
+
+Version **6.2205.201.0** - Changes in this release:
+
+- Updated telemetry channel to Intune to allow Intune Administrator to collect data in the portal
+
+### May 4, 2022
+
+Version **6.2203.12.0** - Changes in this release:
+
+- Support CNG providers for client authentication certificates
+- Improved support for automatic renewal of client authentication certificates
 
 ### March 10, 2022
 

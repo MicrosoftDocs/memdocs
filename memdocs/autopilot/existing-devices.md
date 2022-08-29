@@ -1,5 +1,5 @@
 ---
-title: Windows Autopilot Deployment for existing devices
+title: Windows Autopilot for existing devices
 description: Modern desktop deployment with Windows Autopilot enables you to easily deploy the latest version of Windows to your existing devices.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.prod: w10
@@ -13,337 +13,427 @@ author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 01/05/2022
+ms.date: 03/21/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
 ms.topic: how-to
 ---
 
-# Windows Autopilot Deployment for existing devices
+# Windows Autopilot deployment for existing devices
 
 **Applies to**
 
 - Windows 11
 - Windows 10
 
-Modern desktop deployment with Windows Autopilot helps you easily deploy the latest version of Windows to your existing devices. The apps you need for work can be automatically installed. Your work profile is synchronized, so you can resume working right away.
+Modern desktop deployment with Windows Autopilot helps you easily deploy the latest version of Windows to your existing devices. The apps you need for work can be automatically installed. If you manage Windows user data with OneDrive for Business, your data is synchronized, so users can resume working right away.
 
-This topic describes how to convert Windows 7 or Windows 8.1 domain-joined computers to Windows 10 or Windows 11 devices joined to either Azure Active Directory or Active Directory (Hybrid Azure AD Join) by using Windows Autopilot.
+_Windows Autopilot for existing devices_ lets you reimage and provision a Windows 8.1 device for Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows 10 or Windows 11 device joined to either Azure Active Directory (Azure AD) or Active Directory (hybrid Azure AD join).
 
-Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD device into a Azure AD Autopilot device.
+Converting all targeted devices to Autopilot isn't supported for transforming a hybrid Azure AD device into an Azure AD Autopilot device.
 
 > [!NOTE]
-> Windows Autopilot for existing devices only supports user-driven Azure Active Directory and Hybrid Azure AD profiles. Self-deploying and pre-provisioning profiles are not supported.
+> Windows Autopilot for existing devices only supports user-driven Azure AD and hybrid Azure AD profiles. Self-deploying and pre-provisioning profiles aren't supported.
 
 ## Prerequisites
 
 - A currently supported version of Microsoft Endpoint Configuration Manager current branch.
-- The [Windows ADK](/windows-hardware/get-started/adk-install)
-    - For more information on Configuration Manager support, see [Support for the Windows ADK in Configuration Manager](../configmgr/core/plan-design/configs/support-for-windows-adk.md).
-- Assigned Microsoft Intune Licenses
-- Azure Active Directory Premium
-- A supported version of Windows 10 or Windows 11 imported into Configuration Manager as an OS image
+- Assigned Microsoft Intune licenses
+- Azure AD Premium
+- A supported version of Windows 10 or Windows 11 imported into Configuration Manager as an [OS image](../configmgr/osd/get-started/manage-operating-system-images.md)
 
-  > [!IMPORTANT]
-  > If you're using Windows 10 version 1903 with Configuration Manager's built-in **Windows Autopilot existing device** task sequence template, see the [Known issues](known-issues.md). One of the steps in this task sequence must be edited to work properly with Windows 10, version 1903.
+> [!NOTE]
+> Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if that the online profile times out.
 
-## Procedures
+## Configure the Enrollment Status Page (optional)
 
-### Configure the Enrollment Status Page (optional)
+If you want, you can set up an [enrollment status page](enrollment-status.md) (ESP) for Autopilot using Intune.
 
-If you want, you can set up an [enrollment status page](enrollment-status.md) for Autopilot using Intune.
+1. Open the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com).
 
-To enable and configure the enrollment and status page:
+1. Go to **Intune > Device enrollment > Windows enrollment** and [Set up the Enrollment Status Page](../intune/enrollment/windows-enrollment-status.md).
 
-1. Open [Intune in the Azure portal](https://aka.ms/intuneportal).
-2. Access **Intune > Device enrollment > Windows enrollment** and [Set up an enrollment status page](/intune/windows-enrollment-status). 
-3. Access **Azure Active Directory > Mobility (MDM and MAM) > Microsoft Intune** and [Configure automatic MDM enrollment](/configmgr/mdm/deploy-use/enroll-hybrid-windows#enable-windows-automatic-enrollment) and configure the MDM user scope for some or all users. 
+    :::image type="content" source="images/esp-config.png" alt-text="Enrollment status page policy page in Intune.":::
 
-See the following examples.
+1. Go to **Azure Active Directory > Mobility (MDM and MAM) > Microsoft Intune** and [enable Windows automatic enrollment](../intune/enrollment/windows-enroll.md#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
 
-![enrollment status page](images/esp-config.png)<br><br>
-![mdm](images/mdm-config.png)
+    :::image type="content" source="images/mdm-config.png" alt-text="Configure MDM enrollment in Azure.":::
 
-### Create the JSON file 
+## Install required modules
 
->[!TIP]
->To run the following commands on a computer running Windows Server 2012/2012 R2 or Windows 7/8.1, you must first download and install the [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616).
+> [!TIP]
+> To run the following commands on a computer running Windows Server 2012/2012 R2 or Windows 7/8.1, first download and install the [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616).
 
-1. On an Internet connected Windows PC or server, open an elevated Windows PowerShell command window
-2. Enter the following lines to install the necessary modules
+1. On an internet-connected Windows PC or server, open an elevated Windows PowerShell command window.
 
-    #### Install required modules
+1. Enter the following commands to install and import the necessary modules:
 
     ```powershell
     Install-PackageProvider -Name NuGet -MinimumVersion 2.8.5.201 -Force
     Install-Module AzureAD -Force
-    Install-Module WindowsAutopilotIntune -Force
     Install-Module Microsoft.Graph.Intune -Force
+    Install-Module WindowsAutopilotIntune -Force
+
+    Import-Module AzureAD
+    Import-Module Microsoft.Graph.Intune
+    Import-Module WindowsAutopilotIntune
     ```
-   
-3. Enter the following lines and provide Intune administrative credentials:
-   - Be sure that the user account you specify has sufficient administrative rights.
 
-     ```powershell
-     Connect-MSGraph
-     ```
-     The user and password for your account will be requested using a standard Azure AD form. Type your username and password and then click **Sign in**. 
-     <br>See the following example:
+1. Enter the following commands and provide Intune administrative credentials:
 
-     ![Azure AD authentication](images/pwd.png)
-
-     If this is the first time you've used the Intune Graph APIs, you'll be prompted to enable Microsoft Intune PowerShell read and write permissions. To enable these permissions:
-   - Select **Consent on behalf or your organization**
-   - Click **Accept**
-
-4. Next, retrieve and display all the Autopilot profiles available in the specified Intune tenant in JSON format:
-
-    #### Retrieve profiles in Autopilot for existing devices JSON format
+    Make sure the user account you specify has sufficient administrative rights.
 
     ```powershell
-    Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON
+    Connect-MSGraph
     ```
 
-    See the following sample output: (use the horizontal scroll bar at the bottom to view long lines)
+    Windows requests the user and password for your account with a standard Azure AD form. Type your username and password, and then select **Sign in**.
 
-    ```powershell
-    PS C:\> Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON
-    {
-        "CloudAssignedTenantId": "1537de22-988c-4e93-b8a5-83890f34a69b",
-        "CloudAssignedForcedEnrollment": 1,
-        "Version": 2049,
-        "Comment_File": "Profile Autopilot Profile",
-        "CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"ForcedEnrollment\":1,\"CloudAssignedTenantDomain\":\"M365x373186.onmicrosoft.com\"}}",
-        "CloudAssignedTenantDomain": "M365x373186.onmicrosoft.com",
-        "CloudAssignedDomainJoinMethod": 0,
-        "CloudAssignedOobeConfig": 28,
-        "ZtdCorrelationId": "7F9E6025-1E13-45F3-BF82-A3E8C5B59EAC"
-    }
-    ```
+    :::image type="content" source="images/pwd.png" alt-text="Windows form to sign in to your Azure AD account.":::
 
-    Each profile is encapsulated within braces **{ }**. In the previous example, a single profile is displayed.
+    If it's the first time you've used Intune Graph APIs, you'll be prompted to enable Microsoft Intune PowerShell read and write permissions. To enable these permissions, select **Consent on behalf or your organization** and then **Accept**.
 
-    See the following table for a description of properties used in the JSON file.
+## Get Autopilot profiles for existing devices
 
+Get all the Autopilot profiles available in your Intune tenant, and display them in JSON format:
 
-   |                          Property                          |                                                                                                                                                                        Description                                                                                                                                                                         |
-   |------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-   |                 Version (number, optional)                 | The version number that identifies the format of the JSON file. For Windows 10 1809, the version specified must be 2049.                                                                                                                  |
-   |           CloudAssignedTenantId (guid, required)           | The Azure Active Directory tenant ID that should be used. This property is the GUID for the tenant, and can be found in properties of the tenant. The value shouldn't include braces.                                                                                       |
-   |        CloudAssignedTenantDomain (string, required)        | The Azure Active Directory tenant name that should be used, for example: tenant.onmicrosoft.com.                                                                                                                                  |
-   |         CloudAssignedOobeConfig (number, required)         | This property is a bitmap that shows which Autopilot settings were configured. Values include: SkipCortanaOptIn = 1, OobeUserNotLocalAdmin = 2, SkipExpressSettings = 4, SkipOemRegistration = 8, SkipEula = 16                                                                           |
-   |      CloudAssignedDomainJoinMethod (number, required)      |                                                                                                                                    This property specifies whether the device should join Azure Active Directory or Active Directory (Hybrid Azure AD Join). Values include: Azure AD Join = 0, Hybrid Azure AD Join = 1                                                        |
-   |      CloudAssignedForcedEnrollment (number, required)      |                                                                                                                         Specifies that the device should require Azure AD Join and MDM enrollment. <br>0 = not required, 1 = required.                                                                                                                         |
-   |             ZtdCorrelationId (guid, required)              | A unique GUID (without braces) that will be provided to Intune as part of the registration process. ZtdCorrelationId will be included in enrollment message as “OfflineAutoPilotEnrollmentCorrelator”. This attribute will be present only if the enrollment is taking place on a device registered with Zero Touch Provisioning via offline registration. |
-   | CloudAssignedAadServerData (encoded JSON string, required) |                                                  An embedded JSON string used for branding. It requires Azure AD corp branding enabled. <br> Example value: "CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"CloudAssignedTenantDomain\":\"tenant.onmicrosoft.com\"}}"                                                   |
-   |         CloudAssignedDeviceName (string, optional)         | The name automatically assigned to the computer. This follows the naming pattern convention configured in Intune Autopilot profile. Or you can specify an explicit name to use. |
+```powershell
+Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON
+```
 
+See the following sample output:
 
-5. The Autopilot profile must be saved as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. So, if you redirect output of the commands to a file, also specify the file format. For example, to save the file in ASCII format using Windows PowerShell, you can create a directory (ex: c:\Autopilot) and save the profile as shown below: (use the horizontal scroll bar at the bottom if needed to view the entire command string)
+```powershell
+PS C:\> Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON
+{
+    "CloudAssignedTenantId": "1537de22-988c-4e93-b8a5-83890f34a69b",
+    "CloudAssignedForcedEnrollment": 1,
+    "Version": 2049,
+    "Comment_File": "Profile Autopilot Profile",
+    "CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"ForcedEnrollment\":1,\"CloudAssignedTenantDomain\":\"M365x373186.onmicrosoft.com\"}}",
+    "CloudAssignedTenantDomain": "M365x373186.onmicrosoft.com",
+    "CloudAssignedDomainJoinMethod": 0,
+    "CloudAssignedOobeConfig": 28,
+    "ZtdCorrelationId": "7F9E6025-1E13-45F3-BF82-A3E8C5B59EAC"
+}
+```
 
-    ```powershell
-    Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON | Out-File c:\Autopilot\AutopilotConfigurationFile.json -Encoding ASCII
-    ```
-    **IMPORTANT**: The file name must be named **AutopilotConfigurationFile.json** and be encoded as ASCII/ANSI. 
+Each profile is encapsulated within braces (`{ }`). The previous example displays a single profile.
 
-    If preferred, you can save the profile to a text file and edit in Notepad. In Notepad, when you choose **Save as** you must select Save as type: **All Files** and choose ANSI from the drop-down list next to **Encoding**. See the following example.
+### JSON file properties
 
-    ![Notepad JSON](images/notepad.png)
+#### Version
 
-    After saving the file, move the file to a location suitable as a Microsoft Endpoint Configuration Manager package source.
+_(Number, optional)_
 
-    > [!IMPORTANT]
-    > Multiple JSON profile files can be used, but each must be named **AutopilotConfigurationFile.json** in order for OOBE to follow the Autopilot experience. The file also must be encoded as ANSI.
-    >
-    > **Saving the file with Unicode or UTF-8 encoding or saving it with a different file name will cause Windows 10 OOBE to not follow the Autopilot experience**.
+The version number that identifies the format of the JSON file. <!-- For Windows 10 1809, the version specified must be 2049. -->
 
-### Create a package containing the JSON file
+#### CloudAssignedTenantId
 
-1. In Configuration Manager, navigate to **\Software Library\Overview\Application Management\Packages**
-2. On the ribbon, select **Create Package**
-3. In the **Create Package and Program Wizard** enter the following **Package** and **Program Type** details:
+_(GUID, required)_
+
+The Azure AD tenant ID that should be used. This property is the GUID for the tenant, and can be found in properties of the tenant. The value shouldn't include braces.
+
+#### CloudAssignedTenantDomain
+
+_(String, required)_
+
+The Azure AD tenant name that should be used. For example: `tenant.onmicrosoft.com`.
+
+#### CloudAssignedOobeConfig
+
+_(Number, required)_
+
+This property is a bitmap that shows which Autopilot settings were configured.
+
+- 1: SkipCortanaOptIn
+- 2: OobeUserNotLocalAdmin
+- 4: SkipExpressSettings
+- 8: SkipOemRegistration
+- 16: SkipEula
+
+#### CloudAssignedDomainJoinMethod
+
+_(Number, required)_
+
+This property specifies whether the device should join Azure AD or Active Directory (hybrid Azure AD join).
+
+- 0: Azure AD-joined
+- 1: Hybrid Azure AD-joined
+
+#### CloudAssignedForcedEnrollment
+
+_(Number, required)_
+
+Specifies that the device should require Azure AD join and MDM enrollment.
+
+- 0: Not required
+- 1: required
+
+#### ZtdCorrelationId
+
+_(GUID, required)_
+
+A unique GUID (without braces) that's provided to Intune as part of the registration process. This ID is included in the enrollment message as the `OfflineAutopilotEnrollmentCorrelator`. This attribute is present only if enrollment happens on a device registered with Zero Touch Provisioning via offline registration.
+
+#### CloudAssignedAadServerData
+
+_(Encoded JSON string, required)_
+
+An embedded JSON string used for branding. It requires that you enable Azure AD organization branding.
+
+For example:
+
+`"CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"CloudAssignedTenantDomain\":\"tenant.onmicrosoft.com\"}}`
+
+#### CloudAssignedDeviceName
+
+_(String, optional)_
+
+The name that's automatically assigned to the computer. This name follows the naming pattern convention configured in the Intune Autopilot profile. You can also specify an explicit name to use.
+
+## Create the JSON file
+
+Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. So, if you redirect output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format, and creates a directory for each profile on the current user's desktop:
+
+```powershell
+$AutopilotProfile = Get-AutopilotProfile
+$AutopilotProfile | ForEach-Object {
+  $_ | ConvertTo-AutopilotConfigurationJSON | Set-Content -Encoding Ascii "~\Desktop\$($_.displayName)\AutopilotConfigurationFile.json"
+}
+```
+
+> [!TIP]
+> If you use the PowerShell cmdlet **Out-File** to redirect the JSON output to a file, it uses Unicode encoding by default. This cmdlet may also truncate long lines. Use the **Set-Content** cmdlet with the `-Encoding ASCII` parameter to set the proper text encoding.
+
+> [!IMPORTANT]
+> The file name has to be `AutopilotConfigurationFile.json` and encoded as ASCII or ANSI.
+
+You can also save the profile to a text file and edit in Notepad. In Notepad, when you choose **Save as**, select the save as type: **All Files**, and then choose **ANSI** for the **Encoding**.
+
+:::image type="content" source="images/notepad.png" alt-text="Save as ANSI encoding in Notepad.":::
+
+After you save the file, move it to a location for a Microsoft Endpoint Configuration Manager package source.
+
+> [!IMPORTANT]
+> The configuration file can only contain one profile. You can use multiple JSON profile files, but each one must be named `AutopilotConfigurationFile.json`. This requirement is for OOBE to follow the Autopilot experience. To use more than one Autopilot profile, create separate Configuration Manager packages.
+>
+> If you save the file with Unicode or UTF-8 encoding, or save it with a different file name, the Windows OOBE won't follow the Autopilot experience.
+
+## Create a package containing the JSON file
+
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select the **Packages** node.
+
+1. On the ribbon, select **Create Package**.
+
+1. In the Create Package and Program Wizard, enter the following details for the package:
+
     - _Name_: **Autopilot for existing devices config**
-    - Select **This package contains source files**.
-    - _Source folder_: Click **Browse** and specify a UNC path containing the AutopilotConfigurationFile.json file. 
-    - Click **OK** and then click **Next**.
-    - _Program Type_: **Don't create a program**
-4. Select **Next** twice and then click **Close**.
+    - Select **This package contains source files**
+    - _Source folder_: Specify the UNC network path that contains the `AutopilotConfigurationFile.json` file
 
-**NOTE**: If you change user-driven Autopilot profile settings in Intune at a later date, you must also update the JSON file and redistribute the associated Configuration Manager package.
+    For more information, see [Packages and programs in Configuration Manager](../configmgr/apps/deploy-use/packages-and-programs.md).
 
-### Create a target collection
+1. For the program, select the _Program Type_: **Don't create a program**
+
+1. Complete the wizard.
+
+> [!NOTE]
+> If you change user-driven Autopilot profile settings in Intune at a later date, make sure to update the JSON file. Then redistribute the associated Configuration Manager package.
+
+## Create a target collection
 
 > [!NOTE]
 > You can also choose to reuse an existing collection.
 
-1. Navigate to **\Assets and Compliance\Overview\Device Collections**
-2. On the ribbon, click **Create** and then click **Create Device Collection**
-3. In the **Create Device Collection Wizard** enter the following **General** details:
-   - _Name_: **Autopilot for existing devices collection**
-   - Comment: (optional)
-   - _Limiting collection_: Click **Browse** and select **All Systems**
+1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.
 
-     >[!NOTE]
-     >You can optionally choose to use an alternative collection for the limiting collection. The device to be upgraded must be running the ConfigMgr agent in the collection that you select.
+1. On the ribbon, select **Create**, and then choose **Create Device Collection**.
 
-4. Click **Next**, then enter the following **Membership Rules** details:
-   - Click **Add Rule** and specify either a direct or query-based collection rule to add the target test Windows 7 devices to the new collection.
-   - For example, if the hostname of the computer to be wiped and reloaded is PC-01 and you want to use Name as the attribute:
-      1. Click **Add Rule > Direct Rule > (wizard opens) > Next**.
-      2. Enter **PC-01** next to **Value**.
-      3. Click **Next** > **PC-01** (under **Resources**). See the following examples.
+1. In the Create Device Collection Wizard, enter the following **General** details:
 
-         ![Locate resources dialog box](images/pc-01a.png)
-         ![Select resources dialog box](images/pc-01b.png)
+    - _Name_: **Autopilot for existing devices collection**
+    - _Comment_: Add an optional comment to further describe the collection
+    - _Limiting collection_: **All Systems**
 
-5. Continue creating the device collection with the default settings:
-    - Use incremental updates for this collection: not selected
-    - Schedule a full update on this collection: default
-    - Click **Next** twice and then click **Close**
+      > [!NOTE]
+      > You can optionally choose to use an alternative collection for the limiting collection. The device to be upgraded must be running the Configuration Manager client in the collection that you select.
 
-### Create an Autopilot for existing devices Task Sequence
+1. On the **Membership Rules** page, select **Add Rule**. Specify either a direct or query-based collection rule to add the target Windows 8.1 devices to the new collection.
 
->[!TIP]
->The next procedure requires a boot image for Windows 10 1803 or later. Review your available boot images in the Configuration Manager conole under **Software Library\Overview\Operating Systems\Boot images** and verify that the **OS Version** is 10.0.17134.1 (Windows 10 version 1803) or later.
+    For example, if the hostname of the computer to be wiped and reloaded is `PC-01` and you want to use **Name** as the attribute:
 
-1. In the Configuration Manager console, navigate to **\Software Library\Overview\Operating Systems\Task Sequences**
-2. On the Home ribbon, click **Create Task Sequence**
-3. Select **Install an existing image package** and then click **Next**
-4. In the Create Task Sequence Wizard enter the following details:
-   - _Task sequence name_: **Autopilot for existing devices**
-   - _Boot Image_: Click **Browse** and select a Windows 10 boot image (1803 or later)
-   - Click **Next** > **Browse** > select a Windows 10 **Image package** and **Image Index**, version 1803 or later.
-   - Select the **Partition and format the target computer before installing the operating system** checkbox.
-   - Select or clear **Configure task sequence for use with BitLocker** checkbox. This is optional.
-   - _Product Key_ and _Server licensing mode_: Optionally enter a product key and server licensing mode.
-   - _Randomly generate the local administrator password and disable the account on all support platforms (recommended)_: Optional.
-   - _Enable the account and specify the local administrator password_: Optional.
-   - Click **Next**, and then on the Configure Network page choose **Join a workgroup** and specify a name (ex: workgroup) next to **Workgroup**.
+    1. Select **Add Rule**, select **Direct Rule** to open the Create Direct Membership Rule Wizard, and select **Next** on the Welcome page.
+    1. On the **Search for Resources** page, enter **PC-01** as the **Value**.
 
-     > [!IMPORTANT]
-     > The Autopilot for existing devices task sequence will run the **Prepare Windows for capture** action which uses the System Preparation Tool (sysprep). This action will fail if the target machine is joined to a domain.
-     
-     >[!IMPORTANT]
-     > The System Preparation Tool (sysprep) will run with the /Generalize parameter which, on Windows 10 versions 1903 and 1909, will delete the Autopilot profile file and the machine will boot into OOBE phase instead of Autopilot phase. To fix this issue, please see [Windows Autopilot - known issues](known-issues.md).
+        :::image type="content" source="images/pc-01a.png" alt-text="Enter PC-01 as the name to locate for a collection direct membership rule.":::
 
-5. Click **Next**, and then click **Next** again to accept the default settings on the Install Configuration Manager page.
-6. On the State Migration page, enter the following details:
-   - Clear the **Capture user settings and files** checkbox.
-   - Clear the **Capture network settings** checkbox.
-   - Clear the **Capture Microsoft Windows settings** checkbox.
-   - Click **Next**.
+    1. Select **Next**, and select **PC-01** in the **Resources**.
 
-     >[!NOTE]
-     >Because the Autopilot for existing devices task sequence completes while in Windows PE, User State Migration Toolkit (USMT) data migration isn't supported as there is no way to restore the user state into the new OS. Also, the User State Migration Toolkit (USMT) does not support Azure AD-joined devices.
+        :::image type="content" source="images/pc-01b.png" alt-text="Select PC-01 as the resource to add to the collection.":::
 
-7. On the Include Updates page, choose one of the three available options. This selection is optional.
-8. On the Install applications page, you can optionally add applications.
-9. Click **Next**, confirm settings, click **Next**, and then click **Close**.
-10. Right click on the Autopilot for existing devices task sequence and click **Edit**.
-11. In the Task Sequence Editor under the **Install Operating System** group, click the **Apply Windows Settings** action.
-12. Click **Add** then click **New Group**.
-13. Change the group **Name** from **New Group** to **Autopilot for existing devices config**.
-14. Click **Add**, point to **General**, then click **Run Command-line**.
-15. Verify that the **Run Command-line** step is nested under the **Autopilot for existing devices config** group.
-16. Change the **Name** to **Apply Autopilot for existing devices config file**, paste the following into the **Command line** text box > **Apply**:
-    ```
-    cmd.exe /c xcopy AutopilotConfigurationFile.json %OSDTargetSystemDrive%\windows\provisioning\Autopilot\ /c
-    ```
-    - **AutopilotConfigurationFile.json** must be the name of the JSON file present in the Autopilot for existing devices package that was created earlier.
+1. Complete the wizard with the default settings.
 
-     > [!IMPORTANT]
-     > The AutopilotConfigurationFile.json file will persist on the device across all future device wipes and resets. The only way for the JSON file to be fully removed is to perform a clean install of the operating system.
+For more information, see [How to create collections in Configuration Manager](../configmgr/core/clients/manage/collections/create-collections.md).
 
+## Create a task sequence
 
-17. In the **Apply Autopilot for existing devices config file** step, select the **Package** > **Browse**.
-18. Select the **Autopilot for existing devices config** package created earlier and click **OK**. An example is displayed at the end of this section.
-19. Under the **Setup Operating System** group, click the **Setup Windows and Configuration Manager** task.
-20. Click **Add** and then click **New Group**.
-21. Change **Name** from **New Group** to **Prepare Device for Autopilot**
-22. Verify that the **Prepare Device for Autopilot** group is the last step in the task sequence. Use the **Move Down** button if necessary.
-23. With the **Prepare device for Autopilot** group selected, click **Add**, point to **Images** and then click **Prepare ConfigMgr Client for Capture**.
-24. Add a second step by clicking **Add**, pointing to **Images**, and clicking **Prepare Windows for Capture**. Use the following settings in this step:
-    - _Automatically build mass storage driver list_: **Not selected**
-    - _Don't reset activation flag_: **Not selected**
-    - _Shut down the computer after running this action_: **Optional**
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems** and select the **Task Sequences** node.
 
-    ![Autopilot task sequence](images/ap-ts-1.png)
+1. On the **Home** ribbon, select **Create Task Sequence**.
 
-25. Click **OK** to close the Task Sequence Editor.
+1. On the **Create new task sequence** page, select the option to **Deploy Windows Autopilot for existing devices**.
+
+1. On the **Task sequence information** page, specify the following information:
+
+    - A name for the task sequence. For example, **Autopilot for existing devices**.
+    - Optionally add a description to better describe the task sequence.
+    - Select a boot image. For more information on supported boot image versions, see [Support for the Windows ADK in Configuration Manager](../configmgr/core/plan-design/configs/support-for-windows-adk.md).
+
+1. On the **Install Windows** page, select the Windows **Image package**. Then configure the following settings:
+
+    - **Image index**: Select either Enterprise, Education, or Professional, as required by your organization.
+
+    - Enable the option to **Partition and format the target computer before installing the operating system**.
+
+    - **Configure task sequence for use with Bitlocker**: If you enable this option, the task sequence includes the steps necessary to enable BitLocker.
+
+    - **Product key**: If you need to specify a product key for Windows activation, enter it here.
+
+    - Select one of the following options to configure the local administrator account in Windows:
+        - **Randomly generate the local administrator password and disable the account on all support platforms (recommended)**
+        - **Enable the account and specify the local administrator password**
+
+1. On the **Configure Network** page, select the option to **Join a workgroup**.
+
+    > [!IMPORTANT]
+    > The Autopilot for existing devices task sequence runs the **Prepare Windows for capture** step, which uses the Windows System Preparation Tool (Sysprep). This action fails if the device is joined to a domain.
+    >
+    > Sysprep runs with the `/Generalize` parameter, which on Windows 10 version 1909 deletes the Autopilot profile file. The device then boots into the OOBE phase instead of Autopilot. To fix this issue, see [Windows Autopilot - known issues](known-issues.md).
+
+1. On the **Install Configuration manager** page, add any necessary installation properties for your environment.
+
+    > [!TIP]
+    > The task sequence only needs this information if the Configuration Manager client components are needed during the task sequence before Sysprep runs. For example, to install software updates or applications. If you're not doing these actions, the client isn't needed. It's uninstalled before the task sequence runs Sysprep.
+
+1. The **Include updates** page selects by default the option to **Do not install any software updates**.
+
+    > [!TIP]
+    > Use offline image servicing to keep the image up to date with the latest Windows cumulative updates. For more information, see [Apply software updates to an image](../configmgr/osd/get-started/manage-operating-system-images.md#apply-software-updates-to-an-image).
+
+1. On the **Install applications** page, you can select applications to install during the task sequence. However, Microsoft recommends that you mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.  
+
+1. On the **System Preparation** page, select the package that includes the Autopilot configuration file. By default, the task sequence restarts the computer after it runs Windows Sysprep. You can also select the option to **Shutdown computer after this task sequence completes**. This option lets you prepare a device and then deliver it to a user for a consistent Autopilot experience.
+
+1. Complete the wizard.
+
+The Windows Autopilot for existing devices task sequence results in a device joined to Azure AD.
+
+For more information on creating the task sequence, including information on other wizard options, see [Create a task sequence to install an OS](../configmgr/osd/deploy-use/create-a-task-sequence-to-install-an-operating-system.md).
+
+If you edit the task sequence, it's similar to the default task sequence to apply an existing OS image. This task sequence includes the following extra steps:
+
+- **Apply Windows Autopilot configuration**: This step applies the Autopilot configuration file from the specified package. It's not a new type of step, it's a **Run Command Line** step to copy the file.
+
+- **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](../configmgr/osd/understand/task-sequence-steps.md#BKMK_PrepareWindowsforCapture).
+
+For more information on editing the task sequence, see [Use the task sequence editor](../configmgr/osd/understand/task-sequence-editor.md) and [Task sequence steps](../configmgr/osd/understand/task-sequence-steps.md).
 
 > [!NOTE]
-> On Windows 10 1903 and 1909, the **AutopilotConfigurationFile.json** is deleted by the **Prepare Windows for Capture** step. For more information and a workaround, see [Windows Autopilot - known issues](known-issues.md).
+> On Windows 10 version 1909, the **Prepare Windows for Capture** step deletes the `AutopilotConfigurationFile.json` file. For more information and a workaround, see [Windows Autopilot - known issues](known-issues.md).
 
-### Deploy Content to Distribution Points
+To make sure the user's data is backed up before the Windows 10 upgrade, use OneDrive for Business [known folder move](/onedrive/redirect-known-folders).
 
-Next, ensure that all content required for the task sequence is deployed to distribution points.
+## Distribute content to distribution points
 
-1. Right click on the **Autopilot for existing devices** task sequence and click **Distribute Content**.
-2. Click **Next**, **Review the content to distribute**, and then click **Next**.
-3. On the Specify the content distribution page, click **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
-4. On the Add Distribution Points or Add Distribution Point Groups wizard, specify content destinations that let the task sequence retrieve the JSON file.
-5. When you're finished specifying content distribution, click **Next** twice then click **Close**.
+Next distribute all content required for the task sequence to distribution points.
 
-### Deploy the OS with Autopilot Task Sequence
+1. Select the **Autopilot for existing devices** task sequence, and in the ribbon select **Distribute Content**.
 
-1. Right click on the **Autopilot for existing devices** task sequence and then click **Deploy**.
-2. In the Deploy Software Wizard enter the following **General** and **Deployment Settings** details:
-    - _Task Sequence_: **Autopilot for existing devices**.
-    - _Collection_: Click **Browse** and then select **Autopilot for existing devices collection** (or another collection you prefer).
-    - Click **Next** to specify **Deployment Settings**.
-    - _Action_: **Install**.
-    - _Purpose_: **Available**. You can optionally select **Required** instead of **Available**. This setting isn't recommended during the test because inadvertent configurations may have negative impact.
-    - _Make available to the following_: **Only Configuration Manager Clients**. Note: Choose the option here that is relevant for the context of your test. If the target client doesn't have the Configuration Manager agent or Windows installed, you must select an option that includes PXE or Boot Media.
-    - Click **Next** to specify **Scheduling** details.
-    - _Schedule when this deployment will become available_: Optional
-    - _Schedule when this deployment will expire_: Optional
-    - Click **Next** to specify **User Experience** details.
-    - _Show Task Sequence progress_: Selected.
-    - _Software Installation_: Not selected.
-    - _System restart (if necessary to complete the installation)_: Not selected.
-    - _Commit changed at deadline or during a maintenance windows (requires restart)_: Optional.
-    - _Allow task sequence to be run for client on the Internet_: Optional
-    - Click **Next** to specify **Alerts** details.
-    - _Create a deployment alert when the threshold is higher than the following_: Optional.
-    - Click **Next** to specify **Distribution Points** details.
-    - _Deployment options_: **Download content locally when needed by the running task sequence**.
-    - _When no local distribution point is available, use a remote distribution point_: Optional.
-    - _Allow clients to use distribution points from the default site boundary group_: Optional.
-    - Click **Next**, confirm settings, click **Next**, and then click **Close**.
+1. On the **Specify the content distribution** page, select **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
 
-### Complete the client installation process
+1. Specify content destinations that let the devices get the content.
 
-1. On the target Windows 7 or Windows 8.1 client computer, choose Start > type **Software Center** > press Enter.
+1. When you're finished specifying content distribution, complete the wizard.
 
-2. In the software library, select **Autopilot for existing devices** and click **Install**. See the following example:
+For more information, see [Manage task sequences to automate tasks](../configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks.md).
 
-    ![Autopilot for existing devices page](images/sc.png)
-    ![Confirmation dialog box](images/sc1.png)
+## Deploy the Autopilot task sequence
 
-The Task Sequence will:
+1. Select the **Autopilot for existing devices** task sequence, and in the ribbon select **Deploy**.
+
+1. In the Deploy Software Wizard, specify the following details:
+
+    - **General**
+
+      - _Task Sequence_: **Autopilot for existing devices**
+
+      - _Collection_: **Autopilot for existing devices collection**
+
+    - **Deployment Settings**
+
+      - _Action_: **Install**.
+
+      - _Purpose_: **Available**. You can optionally select **Required** instead of **Available**. A required purpose isn't recommended during testing.
+
+      - _Make available to the following_: **Only Configuration Manager Clients**.
+
+        > [!NOTE]
+        > Choose the option here that is relevant for the context of your test. If the target client doesn't have the Configuration Manager agent or Windows installed, you must select an option that includes PXE or Boot Media.
+
+    - **Scheduling**
+
+      - Set a time for when this deployment will become available
+
+    - **User Experience**
+
+      - Select **Show Task Sequence progress**
+
+    - **Distribution Points**
+
+      - _Deployment options_: **Download content locally when needed by the running task sequence**
+
+1. Complete the wizard.
+
+## Complete the deployment process
+
+1. On the target Windows 8.1 device, go to the **Start** menu, type `Software Center`, and open it.
+
+2. In the Software Library, under **Operating Systems**, select **Autopilot for existing devices**, and then select **Install**. For example:
+
+    :::image type="content" source="images/sc.png" alt-text="Autopilot for existing devices task sequence in Software Center.":::
+
+    :::image type="content" source="images/sc1.png" alt-text="Software Center notice to confirm you want to upgrade the OS on this computer.":::
+
+The task sequence runs and does the following actions:
+
 1. Download content
-2. Reboot the device
-3. Format the drives
-4. Install Windows
-5. Prepare for Autopilot
+1. Restart the device
+1. Format the drive
+1. Install Windows from the specified OS image
 
-After the task sequence has completed, the device will boot into OOBE and provide an Autopilot experience.
+    :::image type="content" source="images/up-1.PNG" alt-text="Task sequence installation progress applying image.":::
 
-![refresh-1](images/up-1.png)
-![refresh-2](images/up-2.png)
-![refresh-3](images/up-3.png)
+1. Prepare for Autopilot
 
->[!NOTE]
->If joining devices to Active Directory (Hybrid Azure AD Join), it is necessary to create a Domain Join device configuration profile that is targeted to "All Devices" (since there is no Azure Active Directory device object for the computer to do group-based targeting). For more information, see [User-driven mode for hybrid Azure Active Directory join](user-driven.md#user-driven-mode-for-hybrid-azure-active-directory-join).
+    :::image type="content" source="images/up-2.PNG" alt-text="Task sequence installation progress running sysprep.":::
 
-### Register the device for Windows Autopilot
+1. After the task sequence completes, the device boots into OOBE for the Autopilot experience:
 
-Devices provisioned with Autopilot only receive the guided OOBE Autopilot experience on first boot. 
-After updating Windows, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
+    :::image type="content" source="images/up-3.PNG" alt-text="Autopilot experience prompting for user account.":::
+
+> [!NOTE]
+> If you need to join devices to Active Directory for hybrid Azure AD join scenario, create a **Domain Join** device configuration profile. Target the profile to **All Devices**, since there's no Azure AD device object for the computer to do group-based targeting. For more information, see [User-driven mode for hybrid Azure Active Directory join](user-driven.md#user-driven-mode-for-hybrid-azure-ad-join).
+
+## Register the device for Windows Autopilot
+
+Devices provisioned with Autopilot only receive the guided OOBE Autopilot experience on first boot.
+
+After you update Windows on an existing device, make sure to register the device so it has the Autopilot experience when the PC resets. You can enable automatic registration for an assigned group using the **Convert all targeted devices to Autopilot** setting. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
 
-## Speeding up the deployment process
+## How to speed up the deployment process
 
 To remove around 20 minutes from the deployment process, see Michael Niehaus's blog with instructions for [Speeding up Windows Autopilot for existing devices](/archive/blogs/mniehaus/speeding-up-windows-autopilot-for-existing-devices).

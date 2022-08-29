@@ -17,7 +17,7 @@ ms.subservice: fundamentals
 #ROBOTS:
 #audience:
 
-#ms.reviewer: craigma
+ms.reviewer: craigma
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -52,6 +52,10 @@ The default scope tag feature is similar to the security scopes feature in Micro
 2. On the **Basics** page, provide a **Name** and optional **Description**. Choose **Next**.
 3. On the **Assignments** page, choose the groups containing the devices that you want to assign this scope tag. Choose **Next**.
 4. On the **Review + create** page, choose **Create**.
+
+    > [!IMPORTANT]
+    > Auto scope tags assignments will overwrite mannually assigned scope tags.
+    > If a device is assigned multiple scope tags through group assignment, all scope tags will apply.
 
 ## To assign a scope tag to a role
 
@@ -88,7 +92,7 @@ When working with scope tags, remember these details:
     - Autopilot Devices
     - Device compliance locations
     - Jamf devices
-- VPP apps and ebooks associated with the VPP token inherit the scope tags assigned to the associated VPP token.
+- Volume Purchase Program (VPP) apps and ebooks associated with the VPP token inherit the scope tags assigned to the associated VPP token.
 - When an admin creates an object in Intune, all scope tags assigned to that admin will be automatically assigned to the new object.
 - Intune RBAC doesn't apply to Azure Active Directory roles. So, the Intune Service Admins and Global Admins roles have full admin access to Intune no matter what scope tags they have.
 - If a role assignment has no scope tag, that IT admin can see all objects based on the IT admins permissions. Admins that have no scope tags essentially have all scope tags.

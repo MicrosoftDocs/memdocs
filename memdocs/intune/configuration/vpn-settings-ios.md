@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/24/2022
+ms.date: 07/05/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -32,7 +33,9 @@ Microsoft Intune includes many VPN settings that can be deployed to your iOS/iPa
 
 ## Before you begin
 
-Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
+- Create an [iOS/iPadOS VPN device configuration profile](vpn-settings-configure.md).
+
+- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
 
 > [!NOTE]
 >
@@ -79,12 +82,25 @@ Select the VPN connection type from the following list of vendors:
 - **IKEv2**
 
   [IKEv2 settings](#ikev2-settings) (in this article) describes the properties.
+
 - **Microsoft Tunnel (standalone client)(preview)**
 
   Applies to the Microsoft Tunnel client app.
-- **Microsoft Tunnel (preview)**
 
-  Applies to the preview version of the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
+  > [!Important]
+  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
+  > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
+  > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
+  >
+  > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
+
+- **Microsoft Tunnel**
+
+  Applies to the Microsoft Defender for Endpoint app that includes Tunnel client functionality.
+
+  > [!Important]
+  > On April 29, 2022, this connection type became generally available and supports Microsoft Defender for Endpoint as a tunnel client app. However, the connection type continues to reflect *preview*.
+  
 - **Custom VPN**
 
 > [!NOTE]
@@ -170,7 +186,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
     - **Yes, all apps**: Allows all CN app traffic to bypass the VPN​.
     - **Yes, specific apps**: **Add** a list of CN apps whose traffic can bypass the VPN​. Enter the bundle identifiers of CN app. For example, enter `com.contoso.app.id.package`.
 
-  - **Traffic from Captive Websheet app to pass outside VPN**: Captive WebSheet is a built-in web browser that handles captive sign on. **Enable** allows the browser app traffic to bypass the VPN. **Disable** (default) forces WebSheet traffic to use the always-on VPN. The default value is the most secure option.
+  - **Traffic from Captive Websheet app to pass outside VPN**: Captive WebSheet is a built-in web browser that handles captive sign-on. **Enable** allows the browser app traffic to bypass the VPN. **Disable** (default) forces WebSheet traffic to use the always-on VPN. The default value is the most secure option.
   - **Network address translation (NAT) keepalive interval (seconds)**: To stay connected to the VPN, the device sends network packets to remain active. Enter a value in seconds on how often these packets are sent, from 20-1440. For example, enter a value of `60` to send the network packets to the VPN every 60 seconds. By default, this value is set to `110` seconds.
   - **Offload NAT keepalive to hardware when device is asleep**: When a device is asleep, **Enable** (default) has NAT continuously send keep-alive packets so the device stays connected to the VPN. **Disable** turns off this feature.
 
@@ -370,7 +386,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 These settings apply to the following VPN connection types:
 
 - **Microsoft Tunnel (standalone client) (preview)**
-- **Microsoft Tunnel (preview)**
+- **Microsoft Tunnel**
 
 **Settings**:
 

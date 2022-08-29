@@ -51,7 +51,7 @@ A Windows 365 provisioning policy is an object in the Microsoft Endpoint Manager
 
 As the admin, you provide the following required information when creating a provisioning policy:
 
-- **Network**: A Microsoft-hosted network or an on-premises network connection (OPNC) dictates how the device will join Azure AD and how its network will be managed. Depending on the join type, an OPNC may have information detailing:
+- **Network**: A Microsoft-hosted network or an Azure network connection (ANC) dictates how the device will join Azure AD and how its network will be managed. Depending on the join type, an ANC may have information detailing:
   - The Azure subscription that will be associated with the Cloud PC.
   - The domain and Organizational Unit (OU) to join.
   - The Active Directory credentials to use.
@@ -135,4 +135,4 @@ Any on-premises Azure AD computer accounts that were joined to the domain during
 <!-- ########################## -->
 ## Next steps
 
-[Learn about on-premises network connections](on-premises-network-connections.md)
+[Learn about Azure network connections](azure-network-connections.md)

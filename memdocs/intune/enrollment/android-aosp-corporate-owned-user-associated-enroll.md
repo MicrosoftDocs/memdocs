@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 02/10/2022
+ms.date: 06/27/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -31,7 +31,8 @@ ms.collection: M365-identity-device-management
 
 # Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices 
 
-*This feature is in public preview.*  
+> [!IMPORTANT]
+> This feature is in [public preview](../fundamentals/public-preview.md).  
 
 Set up enrollment in Intune for corporate-owned, user-associated devices built on the Android Open Source Project (AOSP) platform. Intune offers an *Android (AOSP)* device management solution for corporate-owned Android devices that are:  
 
@@ -39,10 +40,7 @@ Set up enrollment in Intune for corporate-owned, user-associated devices built o
 * Intended to be used by a single user. 
 * Used exclusively for work.    
 
-This article describes how to set up Android (AOSP) device management and enroll RealWear devices for use at work. 
-
-> [!IMPORTANT]
-> This feature is in [public preview](../fundamentals/public-preview.md).   
+This article describes how to set up Android (AOSP) device management and enroll RealWear devices for use at work.  
 
 ## Prerequisites
 
@@ -81,18 +79,15 @@ Create an enrollment profile to enable enrollment on devices.
 4. Select **Next**. Review the details of your profile and then select **Create** to save the profile.  
 
 ### Access enrollment token  
-After you create a profile, Intune generates a token that's needed for enrollment. To access the token:
+After you create a profile, Intune generates a token that's needed for enrollment. The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.   
+
+To view the token as a QR code:
 
 1. Go to **Corporate-owned, user-associated devices**.
 2. From the list, select your enrollment profile. 
-2. Select **Tokens**. 
+2. Select **Token**.   
 
-Another way to find the token is:
-1. Go to **Corporate-owned, user-associated devices**.
-2. Locate your profile in the list, and then select the **More** (**...**) menu that's next to it.
-3. Select **View enrollment token**. 
-
-The token appears as a QR code. During device setup, when prompted to, scan the QR code to enroll the device in Intune.   
+From the Token page, you can also export the enrollment profile JSON file.   
 
 > [!IMPORTANT]
 >- The QR code will contain any credentials provided in the profile in plain text to allow the device to successfully authenticate with the network. This is required as the user will not be able to join a network from the device.  
@@ -152,16 +147,18 @@ After you set up and assign the Android (AOSP) enrollment profiles, you can enro
 2. When the device prompts you to, scan the token's QR code. 
 
 > [!TIP]
-> To access the token in Intune, select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, user-associated devices**. Select your enrollment profile, and then select **Tokens**.  
+> To access the token in Intune, select **Devices** > **Android** > **Android enrollment** > **Corporate-owned, user-associated devices**. Select your enrollment profile, and then select **Token**.  
 
-3. Follow the on-screen prompts to finish enrolling and registering the device.  
+3. Step through the on-screen prompts to finish enrolling and registering the device. The following apps are automatically installed during this time and used for enrollment: 
 
-The Microsoft Intune app and Microsoft Authenticator app automatically install and open on the device, which allows the device to be enrolled. You'll be locked in the enrollment process until it's complete.  
+    * Microsoft Intune app  
+    * Intune Company Portal app  
+    * Microsoft Authenticator app  
 
 ## After enrollment 
 
-### Update Microsoft Intune and Microsoft Authenticator  
-The Intune app automatically installs available app updates for itself and Authenticator. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
+### Update apps    
+The Microsoft Intune app automatically updates itself. When an app update becomes available, the Intune app closes and installs the update. The app must remain closed to install the update. The app also installs updates for Microsoft Authenticator and the Company Portal app.    
 
 ### Manage devices remotely  
 
@@ -177,8 +174,8 @@ You can take action on one device at a time. For more information about where to
 
 ## Troubleshooting  
 
-### View version of Microsoft Intune and Microsoft Authenticator apps
-To find out which version of the Microsoft Intune app or Microsoft Authenticator app is installed on a device:
+### View app versions  
+Find out which version of the Intune app or Microsoft Authenticator app is installed on a device. 
 
 1. Go to **Devices** and select the device name.    
 2. Select **Discovered apps**. 
@@ -191,7 +188,7 @@ Select **Troubleshooting + Support** from the Microsoft Endpoint Manager navigat
 * Enable troubleshooting of Android (AOSP) devices the same way you can troubleshoot other user devices. 
 
 ### Share app logs with Microsoft  
-If you experience problems with enrollment or the Microsoft Intune app, you can use the Intune app to upload and send app logs to Microsoft. After you submit the logs, you'll receive an incident ID to share with your Microsoft support person.   
+If you experience problems with enrollment or access to work resources, you can share diagnostic logs with Microsoft in the Intune app or Company Portal app. After you submit the logs, you'll receive an incident ID to share with your Microsoft support person.   
 
 ## Known limitations  
 

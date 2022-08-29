@@ -121,6 +121,6 @@ Delivery Optimization was previously configured as part of Software Update Rings
 
 ## Next steps
 
-After you [assign the profile](device-profile-assign.md), [monitor its status](device-profile-monitor.md) its status.
+After you [assign the profile](device-profile-assign.md), [monitor its status](device-profile-monitor.md).
 
 View the [Delivery Optimization settings](delivery-optimization-settings.md) for Intune.

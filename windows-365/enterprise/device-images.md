@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 07/12/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -36,7 +36,7 @@ Windows 365 uses both default and custom operating system images to automaticall
 
 Both marketplace and custom images must meet the following requirements:
 
-- Windows 10 Enterprise version 1909 or later, excluding 2004.
+- Windows 10 Enterprise version 20H2 or later.
 - Windows 11 Enterprise 21H2.
 - Generation 2 images.
     > [!Note]
@@ -44,7 +44,7 @@ Both marketplace and custom images must meet the following requirements:
 - Generalized VM image.
 - Single Session VM images (multi-session isn’t supported).
 - No recovery partition. For information about how to remove a recovery partition, see the [Windows Server command: delete partition](/windows-server/administration/windows-commands/delete-partition).
-- Default 64 GB OS disk size. The OS disk size will be automatically adjusted to the size specified in SKU description of the Windows 365 license.
+- Default 64-GB OS disk size. The OS disk size will be automatically adjusted to the size specified in SKU description of the Windows 365 license.
 
 A custom image must also meet the following extra requirements:
 
@@ -55,7 +55,7 @@ Storing a managed image on Azure incurs storage costs. However, customers can de
 
 ## Gallery images
 
-Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They are replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
+Windows 365 provides a built-in gallery of Windows Enterprise images accessible through the provisioning policy creation flow. They're replicated to all Azure regions to give you a quick provisioning experience. These images are updated monthly with the latest security updates so that end users have a secure and seamless experience.
 
 There are two sets of images available to choose from across the different versions of Windows Enterprise:
 
@@ -64,27 +64,16 @@ There are two sets of images available to choose from across the different versi
   - C++ Runtime (Teams).
   - WebRTC Redirector (Teams).
   - Microsoft Teams (Teams).
-  - Edge settings like Sleeping Tabs, Startup boost, and First Time optimizations based on Azure AD and synchronization.
-  - Microsoft Outlook first-time configuration settings (auto log on based on Azure AD profile, support for other profiles).
+  - Microsoft Edge settings like sleeping tabs, startup boost, and first time optimizations based on Azure AD and synchronization.
+  - Microsoft Outlook first-time configuration settings (auto log-on based on Azure AD profile, support for other profiles).
 - **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
   - Services optimized for virtualization.
   - UWP packages removed.
   - Task scheduler actions disabled.
 
-### Recommended image by license
-
-You can choose any image for any Windows 365 license. However, for optimal performance, the following recommendations apply:
-
-| Windows 365 license | Recommended gallery image |
-| --- | --- |
-| 2vCPU/4GB/64GB and above | Windows 10/11 Enterprise + Microsoft 365 Apps |
-| 1vCPU/2GB/64GB* | Windows 10 Enterprise + OS Optimizations |
-
-\* The 1vCPU option is being retired. Instead, we recommend the 2vCPU as the minimum configuration for new purchases.
-
 ### Gallery image update cycle
 
-All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This happens around the middle of each month.
+All supported Windows 365 gallery images are updated monthly after the security patch release schedule of Windows Servicing & Delivery. This update happens around the middle of each month.
 
 Each updated image includes:
 
@@ -111,7 +100,7 @@ When you upload a custom device image, Windows 365:
 2. Runs the following validation checks on the image:
     1. Verifies all the Windows 365 image requirements are met.
     2. Deploys a virtual machine and makes sure that the images can be booted and provisioned as a Cloud PC.
-3. If you have a Hybrid Azure AD Join connection, Windows 365 replicates the image across all Azure regions where you have an on-premises network connection.
+3. If you have a Hybrid Azure AD Join connection, Windows 365 replicates the image across all Azure regions where you have an Azure network connection.
 4. If you have an Azure AD Join connection, Windows 365 replicates the image to the provisioned region during provisioning.
 
 <!-- ########################## -->

@@ -19,6 +19,7 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -38,7 +39,9 @@ As an Intune administrator, you can create and assign VPN settings to Android de
 
 ## Before you begin
 
-Create an [Android device administrator VPN device configuration profile](vpn-settings-configure.md).
+- Create an [Android device administrator VPN device configuration profile](vpn-settings-configure.md).
+
+- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
 
 ## Base VPN
 

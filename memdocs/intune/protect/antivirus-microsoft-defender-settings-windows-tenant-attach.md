@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/30/2021
+ms.date: 05/02/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,13 +49,13 @@ View the Microsoft Defender Antivirus settings you can manage with the **Microso
   Configure how aggressive Defender Antivirus is in blocking and scanning suspicious files.
   - **Not configured** (*default*) - Default Defender blocking level.
   - **High** - Aggressively block unknowns while optimizing client performance, which includes a greater chance of false positives.
-  - **High plus** - Aggressively block unknowns and apply additional protection measures that might impact client performance.
+  - **High plus** - Aggressively block unknowns and apply extra protection measures that might impact client performance.
   - **Zero tolerance** - Block all unknown executable files.
 
 - **Defender cloud extended timeout in seconds**  
   CSP: [CloudExtendedTimeout](/windows/client-management/mdm/policy-csp-defender#defender-cloudextendedtimeout)
 
-  Defender Antivirus automatically blocks suspicious files for 10 seconds so it can scan the files in the cloud to make sure they're safe. With this setting, you can add up to 50 additional seconds to this timeout.
+  Defender Antivirus automatically blocks suspicious files for 10 seconds so it can scan the files in the cloud to make sure they're safe. With this setting, you can add up to 50 more seconds to this timeout.
 
 ## Microsoft Defender Antivirus Exclusions
 
@@ -326,6 +326,9 @@ Learn more
   - **No**
 
 - **Allow users to view full History results**
+  > [!NOTE]
+  >  This is a legacy setting that only applies to versions of Windows prior to Windows 10 version 1703. User of this setting with a current operating system has no effect. This setting is scheduled for removal from this policy. For more information, see **-DisablePrivacyMode** in [Set-MpPreference](/powershell/module/defender/set-mppreference?view=windowsserver2022-ps&preserve-view=true) in the Windows PowerShell documentation.
+
   - **Not Configured** (*default*)
   - **Yes**
   - **No**

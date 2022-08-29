@@ -10,6 +10,8 @@ items:
     href: what-info-can-your-company-see-when-you-enroll-your-device-in-intune.md
   - name: Get Intune Company Portal  
     href: sign-in-to-the-company-portal.md
+  - name: Update Intune Company Portal 
+    href: install-a-new-version-of-the-company-portal-app.md
   - name: Device password requirements
     href: password-does-not-meet-it-administrator-requirements.md
   - name: Install mobile threat defense app
@@ -91,21 +93,23 @@ items:
       href: use-microsoft-tunnel-android.md
     - name: Installing Company Portal app in China 
       href: install-company-portal-android-china.md
+    - name: Set up Datalert app for Android   
+      href: enroll-your-device-with-telecom-expense-management-android.md 
   - name: Resolve a threat in MTD app
     items:
     - name: Lookout for Work
       href: you-need-to-resolve-a-threat-found-by-lookout-for-work-android.md
     - name: Symantec Endpoint Protection Mobile
       href: you-need-to-resolve-a-threat-found-by-skycure-android.md
-    - name: SandBlast Mobile Protect
+    - name: Harmony Mobile Protect
       href: you-need-to-resolve-a-threat-found-by-checkpoint-android.md
     - name: Zimperium zIPS
       href: you-need-to-resolve-a-threat-found-by-zips-android.md
   - name: Get help
     items:
-    - name: Report problem to IT support
+    - name: Report a problem 
       href: send-logs-to-your-it-admin-by-email-android.md
-    - name: Share logs with Microsoft developers
+    - name: Share diagnostic details  
       href: send-logs-to-microsoft-android.md
 - name: iOS/iPadOS device management
   items:
@@ -138,7 +142,9 @@ items:
     - name: Where to find work or school apps for iOS/iPadOS
       href: use-managed-apps-on-your-device-ios.md
     - name: Use Microsoft Tunnel for iOS
-      href: use-microsoft-tunnel-iOS.md
+      href: use-microsoft-tunnel-iOS.md 
+    - name: Set up Datalert app for iOS   
+      href: enroll-your-device-with-telecom-expense-management-ios.md
   - name: Update device settings
     items:
     - name: Set or change your passcode
@@ -163,7 +169,7 @@ items:
       href: you-need-to-resolve-a-threat-found-by-lookout-for-work-ios.md
     - name: Symantec Endpoint Protection Mobile
       href: you-need-to-resolve-a-threat-found-by-skycure-ios.md
-    - name: SandBlast Mobile Protect
+    - name: Harmony Mobile Protect
       href: you-need-to-resolve-a-threat-found-by-checkpoint-ios.md
     - name: Zimperium zIPS
       href: you-need-to-resolve-a-threat-found-by-zips-ios.md
@@ -171,9 +177,9 @@ items:
     items:
     - name: Retrieve iOS/iPadOS logs
       href: retrieve-ios-app-logs.md
-    - name: Report problem to IT support
+    - name: Report a problem 
       href: send-errors-to-your-it-admin-ios.md
-    - name: Share logs with Microsoft developers
+    - name: Share app logs 
       href: send-logs-to-microsoft-ios.md
 - name: macOS device management
   items:
@@ -185,9 +191,11 @@ items:
       href: enroll-your-device-in-intune-macos-cp.md
     - name: Enroll your organization-provided macOS device
       href: enroll-company-device-macos.md
+    - name: Unenroll Mac 
+      href: unenroll-your-device-from-intune-macos.md 
   - name: Company Portal for macOS
     items:
-    - name: Manually sync macOS device
+    - name: Sync macOS device
       href: sync-your-device-manually-macos.md
     - name: Manage Company Portal preferences
       href: intune-company-portal-preferences-macos.md
@@ -207,11 +215,9 @@ items:
       href: device-limit-wpj-macos.md
     - name: Help for JAMF-managed devices in Intune
       href: device-little-different-jamf.md
-    - name: Remove device from Intune 
-      href: unenroll-your-device-from-intune-macos.md
   - name: Get help
     items:
-    - name: Report Company Portal problems
+    - name: Report a problem  
       href: send-errors-macos.md
 - name: Windows device management
   items:

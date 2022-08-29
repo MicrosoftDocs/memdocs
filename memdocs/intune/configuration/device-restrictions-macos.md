@@ -8,7 +8,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 06/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,6 +30,9 @@ ms.collection:
 ---
 
 # macOS device settings to allow or restrict features using Intune
+
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
 This article describes the settings you can control and restrict on macOS devices. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password rules, allow or restrict specific apps, and more.
 
@@ -436,6 +439,8 @@ This feature applies to:
 
 - **Apps list**: **Add** apps to your list:
   - **App Bundle ID**: Enter the [bundle ID](bundle-ids-built-in-ios-apps.md) of the app. You can add built-in apps and line-of-business apps. Apple's web site has a list of [built-in Apple apps](https://support.apple.com/HT208094).
+
+    To find the bundle ID of a macOS app, you can open the Terminal app, and use AppleScript (`osascript -e 'id of app "AppName"'`).
 
     To find the URL of an app, open the iTunes App Store, and search for the app. For example, search for `Microsoft Remote Desktop` or `Microsoft Word`. Select the app, and copy the URL. You can also use iTunes to find the app, and then use the **Copy Link** task to get the app URL.
 

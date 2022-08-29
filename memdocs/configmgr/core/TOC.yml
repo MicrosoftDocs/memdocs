@@ -87,6 +87,8 @@ items:
       href: plan-design/changes/features-and-capabilities.md
     - name: What's new in incremental versions
       href: plan-design/changes/whats-new-incremental-versions.md
+    - name: What's new in version 2207
+      href: plan-design/changes/whats-new-in-version-2207.md
     - name: What's new in version 2203
       href: plan-design/changes/whats-new-in-version-2203.md
     - name: What's new in version 2111
@@ -95,8 +97,6 @@ items:
       href: plan-design/changes/whats-new-in-version-2107.md
     - name: What's new in version 2103
       href: plan-design/changes/whats-new-in-version-2103.md
-    - name: What's new in version 2010
-      href: plan-design/changes/whats-new-in-version-2010.md
     - name: What's changed from Configuration Manager 2012
       href: plan-design/changes/what-has-changed-from-configuration-manager-2012.md
     - name: Removed and deprecated
@@ -225,6 +225,8 @@ items:
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 2207
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2207.md
         - name: Data for version 2203
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2203.md          
         - name: Data for version 2111
@@ -233,9 +235,7 @@ items:
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2107.md
         - name: Data for version 2103
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2103.md
-        - name: Data for version 2010
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2010.md
-    - name: Configuration Manager tools
+        - name: Configuration Manager tools
       href: plan-design/diagnostics/tools.md
     - name: Frequently asked questions (FAQ)
       href: plan-design/diagnostics/frequently-asked-questions.yml
@@ -285,14 +285,16 @@ items:
     items:
     - name: Technical Preview overview
       href: get-started/technical-preview.md
+    - name: 2207 features
+      href: get-started/2022/technical-preview-2207.md       
+    - name: 2206 features
+      href: get-started/2022/technical-preview-2206.md           
+    - name: 2205 features
+      href: get-started/2022/technical-preview-2205.md       
+    - name: 2204 features
+      href: get-started/2022/technical-preview-2204.md       
     - name: 2203 features
       href: get-started/2022/technical-preview-2203.md 
-    - name: 2202 features
-      href: get-started/2022/technical-preview-2202.md 
-    - name: 2201 features
-      href: get-started/2022/technical-preview-2201.md       
-    - name: 2112 features
-      href: get-started/2021/technical-preview-2112.md      
   - name: Migrate data between hierarchies
     items:
     - name: Migration overview
@@ -571,6 +573,8 @@ items:
       href: servers/manage/use-the-update-registration-tool-to-import-hotfixes.md
     - name: Use the hotfix installer
       href: servers/manage/use-the-hotfix-installer-to-install-updates.md
+    - name: Checklist for installing update 2207
+      href: servers/manage/checklist-for-installing-update-2207.md
     - name: Checklist for installing update 2203
       href: servers/manage/checklist-for-installing-update-2203.md
     - name: Checklist for installing update 2111
@@ -579,8 +583,6 @@ items:
       href: servers/manage/checklist-for-installing-update-2107.md
     - name: Checklist for installing update 2103
       href: servers/manage/checklist-for-installing-update-2103.md
-    - name: Checklist for installing update 2010
-      href: servers/manage/checklist-for-installing-update-2010.md
     - name: Support for current branch versions
       href: servers/manage/current-branch-versions-supported.md
   - name: Backup and recovery

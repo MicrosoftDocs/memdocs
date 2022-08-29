@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 08/03/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -47,19 +47,25 @@ Use of a *Server configuration* lets you create a configuration a single time an
    - **IP address range**: IP addresses within this range are leased to devices when they connect to Tunnel Gateway. The Tunnel Client IP address range specified must not conflict with an on-premises network range.
      - Consider using the Automatic Private IP Addressing (APIPA) range of 169.254.0.0/16, as this range avoids conflicts with other corporate networks.
      - If the client IP address range conflicts with the destination, it will loopback and fail to communicate with the corporate network.
-     - You can select any client IP address range you want to use if it does not conflict with your corporate network IP address ranges.
+     - You can select any client IP address range you want to use if it doesn't conflict with your corporate network IP address ranges.
+
+   - **Server port**: Enter the port that the server listens to for connections.
 
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
 
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
 
-   - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for *255.255.0.0* or *192.168.0.0/16*.
+   - **Disable UDP Connections** *(optional)*: When selected, clients only connect to the VPN server using TCP connections. Because the standalone tunnel client requires use of UDP, only select the checkbox to disable UDP connections after you’ve configured your devices to use Microsoft Defender for Endpoint as the tunnel client app.
 
-     Split tunneling supports a total of 500 rules between both include and exclude rules. For example, if you configure 300 include rules, you can only have 200 exclude rules.
+4. Also on the **Settings** tab, configure *Split tunneling rules*, which are optional.
 
-   - **Server port**: Enter the port that the server listens to for connections.
+   You can include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for *255.255.0.0* or *192.168.0.0/16*.
 
-4. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
+   Use the following options to include or exclude addresses:
+   - **IP ranges to include**
+   - **IP ranges to exclude**
+
+5. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
 
 ## Create a Site
 
@@ -111,7 +117,7 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
      ![Screen capture for download of installation script](./media/microsoft-tunnel-configure/download-installation-script.png)
 
-   - Use a Linux command to get download the tunnel software directly. For example, on the server where you’ll install the tunnel, you can use **wget** or **curl** to open the link <https://aka.ms/microsofttunneldownload>.
+   - Use a Linux command to download the tunnel software directly. For example, on the server where you’ll install the tunnel, you can use **wget** or **curl** to open the link <https://aka.ms/microsofttunneldownload>.
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
 
@@ -184,13 +190,19 @@ To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client ap
 
 - **iOS/iPadOS**:
 
-  Use one of the following tunnel client apps:
+  - **Microsoft Defender for Endpoint** - Download Microsoft Defender for Endpoint for use as the Microsoft Tunnel client app from the Apple **App store**. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
 
-  - **Microsoft Tunnel** client app -  For iOS/iPadOS, download the **Microsoft Tunnel** client app from the Apple **App Store**. See Add iOS store apps to Microsoft Intune.
+    If you still use the standalone Microsoft Tunnel client app or a preview version of Defender for Endpoint (available prior to April 29 2022), [plan to migrate](../protect/microsoft-tunnel-migrate-app.md) devices to the latest version of Defender for Endpoint.
 
-  - A preview version of **Microsoft Defender for Endpoint** that supports Microsoft Tunnel capabilities – Available through a public preview, you can use a preview version of Microsoft Defender for Endpoint as the Tunnel client app on iOS/iPadOS devices.
-
-    For this preview, each device user must download and install the Defender for Endpoint app from the Apple app store, which requires use of their Apple ID. Eventually, Defender for Endpoint will replace the Microsoft Tunnel client app as the Tunnel client app. You can add new devices to the preview, or [migrate](../protect/microsoft-tunnel-migrate-app.md) devices from the current client app to the preview version of Defender for Endpoint.
+  - **Microsoft Tunnel** client app - For iOS/iPadOS, download the **Microsoft Tunnel** client app from the Apple **App Store**. See Add iOS store apps to Microsoft Intune.
+  
+  > [!Important]
+  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.
+  >
+  > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
+  > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
+  >
+  > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
 
 For more information on deploying apps with Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
@@ -212,9 +224,17 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 - **iOS/iPadOS**:
 
+  - **Microsoft Tunnel** – Use this connection type with Microsoft Defender for Endpoint as the tunnel client app.
+
   - **Microsoft Tunnel (standalone client) (preview)** – Use this connection type when you use the standalone Microsoft Tunnel client app. This connection type doesn’t support Microsoft Defender for Endpoint as the client Tunnel app.
-  
-  - **Microsoft Tunnel (preview)** – Use this connection type when you use the preview version of Microsoft Defender for Endpoint as part of the public preview. This connection type doesn’t support the standalone Microsoft Tunnel client app.
+
+    > [!Important]
+    > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.
+    >
+    > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.
+    > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
+    >
+    > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
 
   The iOS platform supports routing traffic by either a per-app VPN or by split tunneling rules, but not both simultaneously. If you enable a per-app VPN for iOS, your split tunneling rules are ignored.
 
@@ -238,18 +258,14 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
    - **Per-app VPN**:  
      - Apps that are assigned in the per-app VPN profile send app traffic to the tunnel.
      - On Android, launching an app won't launch the per-app VPN. However, when the VPN has *Always-on VPN* set to *Enable*, the VPN will already be connected and app traffic will use the active VPN. If the VPN isn't set to be *Always-on*, the user must manually start the VPN before it can be used.
-     - If you are using the Defender for Endpoint app to connect to Tunnel, have web protection enabled, and are using per-app VPN, web protection will only apply to the apps in the per-app VPN list. On devices with a work profile, in this scenario we recommend adding all web browsers in the work profile to the per-app VPN list to ensure all work profile web traffic is protected.
-     - To enable a per-app VPN, select **Add** and then browse to custom or public apps you’ve imported to Intune.
+     - If you're using the Defender for Endpoint app to connect to Tunnel, have web protection enabled, and are using per-app VPN, web protection will only apply to the apps in the per-app VPN list. On devices with a work profile, in this scenario we recommend adding all web browsers in the work profile to the per-app VPN list to ensure all work profile web traffic is protected.
+     - To enable a per-app VPN, select **Add** and then browse to the custom or public apps you’ve imported to Intune.
 
    - **Always-on VPN**:  
      - For *Always-on VPN*, select *Enable* to set the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. If *Per-app VPN* is set to *Enable*, only the traffic from apps you select go through the tunnel.
 
    - **Proxy**:  
      - Configure proxy server details for your environment.  
-
-   <!-- Hiding warning, but keeping here for history and in case these issues come up again >
-   > [!IMPORTANT]  
-   > You cannot use Defender web protection side-by-side with Tunnel if you use an internal proxy with Tunnel, as this can cause connectivity issues which would prevent the device from communicating with Intune. Disable web protection by adding the **antiphishing** setting to the [custom settings](#use-custom-settings-for-microsoft-defender-for-endpoint) section in the VPN profile and setting it to **0**. -->
 
    For more information about VPN settings, see [Android Enterprise device settings to configure VPN](../configuration/vpn-settings-android-enterprise.md)
 
@@ -268,9 +284,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
-4. For *Connection type*, select **Microsoft Tunnel (standalone client) (preview)** if you use the standalone client app, or select **Microsoft Tunnel (preview)** if you use a preview version of Defender for Endpoint as the tunnel client app.
-
-5. Configure the following items:
+4. For *Connection type*, select **Microsoft Tunnel(preview)** and then configure the following items:
 
    - **Base VPN**:  
      - For *Connection name*, specify a name that will display to users.
@@ -291,7 +305,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 ## Use custom settings for Microsoft Defender for Endpoint
 
-Intune supports Microsoft Defender for Endpoint as both a MTD app and as the Microsoft Tunnel client application on Android Enterprise devices. If you use Defender for Endpoint for both the Microsoft Tunnel client application and as a MTD app, you can use *custom settings* in your VPN profile for Microsoft Tunnel to simplify your configurations. Use of custom settings in the VPN profile replaces the need to use a separate app configuration profile.
+Intune supports Microsoft Defender for Endpoint as both an MTD app and as the Microsoft Tunnel client application on Android Enterprise devices. If you use Defender for Endpoint for both the Microsoft Tunnel client application and as an MTD app, you can use *custom settings* in your VPN profile for Microsoft Tunnel to simplify your configurations. Use of custom settings in the VPN profile replaces the need to use a separate app configuration profile.
 
 For devices [enrolled](../enrollment/android-enroll.md) as *Android Enterprise personally-owned work profile* that use Defender for Endpoint for both purposes, you must use custom settings instead of an app configuration profile. On these devices, the app configuration profile for Defender for Endpoint conflicts with Microsoft Tunnel and can prevent the device from connecting to Microsoft Tunnel.
 
@@ -305,9 +319,9 @@ Use the following information to configure the custom settings in a VPN profile 
 
 | Configuration key | Value type | Configuration value            | Description                |
 |-----------------------|------------------|------------|--------------|
-| vpn               | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set a to enable to allow the Microsoft Defender for Endpoint anti-phishing capability to use a local VPN.   |
-| antiphishing      | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set to enable to turn on Microsoft Defender for Endpoint anti-phishing. When disabled, the anti-phishing capability is turned off.   |
-| defendertoggle    | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set to enable to use Microsoft Defender for Endpoint. When disabled, no Microsoft Defender for Endpoint functionality is available.   |
+| vpn               | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set to *Enable* to allow the Microsoft Defender for Endpoint anti-phishing capability to use a local VPN.   |
+| antiphishing      | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set to *Enable* to turn on Microsoft Defender for Endpoint anti-phishing. When disabled, the anti-phishing capability is turned off.   |
+| defendertoggle    | Integer | Options: <br> 1 - Enable (default) <br> 0 - Disable | Set to *Enable* to use Microsoft Defender for Endpoint. When disabled, no Microsoft Defender for Endpoint functionality is available.   |
 
 :::image type="content" source="./media/microsoft-tunnel-configure/custom-settings.png" alt-text="Configure custom settings in the VPN profile for Microsoft Defender for Endpoint":::
 
@@ -315,7 +329,7 @@ Use the following information to configure the custom settings in a VPN profile 
 
 | Configuration key | Values         |    Description   |
 |-------------------|----------------|------------------|
-| TunnelOnly        | **True** – All Defender for Endpoint functionality is disabled. This setting should be used if you are using the app only for Tunnel capabilities. <br><br> **False** *(default)* - Defender for Endpoint functionality is enabled.   | Determines whether the Defender app is limited to only Microsoft Tunnel, or if the app also supports the full set of Defender for Endpoint capabilities. |
+| TunnelOnly        | **True** – All Defender for Endpoint functionality is disabled. This setting should be used if you're using the app only for Tunnel capabilities. <br><br> **False** *(default)* - Defender for Endpoint functionality is enabled.   | Determines whether the Defender app is limited to only Microsoft Tunnel, or if the app also supports the full set of Defender for Endpoint capabilities. |
 | WebProtection     | **True** *(default)* – Web Protection is enabled, and users will see the web protection tab in the Defender for Endpoint app. <br><br> **False** – Web Protection is disabled. If a Tunnel VPN profile is deployed, users will only see the Dashboard and Tunnel tabs in the Defender for Endpoint app.  |Determines whether Defender for Endpoint Web Protection (anti-phishing functionality) is enabled for the app. By default, this functionality is on. |
 | AutoOnboard       | **True** – If Web Protection is enabled, the Defender for Endpoint app is automatically granted permissions for adding VPN connections and the user isn’t prompted to allow this. <br><br> **False** *(default)* – If Web Protection is enabled, the user is prompted to allow the Defender for Endpoint app to add VPN configurations.  | Determines whether Defender for Endpoint Web Protection is enabled without prompting the user to add a VPN connection (because a local VPN is needed for Web Protection functionality). This setting only applies if *WebProtection* is set to **True**.   |
 
@@ -351,7 +365,9 @@ For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../pr
 
 ## Uninstall the Microsoft Tunnel
 
-To uninstall the product, run **./mst-cli uninstall** from the Linux server as root.
+To uninstall the product, run **./mst-cli uninstall** from the Linux server as root. 
+
+After the product is uninstalled, delete the corresponding server record in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Microsoft Tunnel Gateway** > **Servers**.
 
 ## Next steps
 

@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Automated provisioning steps
 
-As an admin, you create provisioning policies and on-premises network connections to set up Windows 365 to provision Cloud PCs. Using this information, Windows 365 provisions Cloud PCs for your licensed users. This article explains all of the steps that Windows 365 completes automatically in the provisioning process.
+As an admin, you create provisioning policies and Azure network connections to set up Windows 365 to provision Cloud PCs. Using this information, Windows 365 provisions Cloud PCs for your licensed users. This article explains all of the steps that Windows 365 completes automatically in the provisioning process.
 
 There are three stages that Windows 365 automatically completes for Cloud PC provisioning:
 
@@ -43,25 +43,25 @@ There are three stages that Windows 365 automatically completes for Cloud PC pro
 Core provisioning is optimized to only perform necessary steps to make sure a Cloud PC is provisioned successfully.
 
 1. **Allocate Azure capacity**: When provisioning first begins, Windows 365 allocates Azure capacity in the customer’s supported region of choice. Customers don’t need to manage capacity and allocation manually.
-2. **Create VM**: A virtual machine is created based on the Windows 365 license assigned to the user. Each Windows 365 license includes hardware capacity information. The VM is created with these specs.
-3. **Attach the VM to the appropriate network**: When the VM is created, a virtual NIC is also created. If the provisioning policy specifies a Microsoft hosted network, the NIC is attached to an existing or new virtual network in the selected region specifically for the customer. If the provisioning policy specifies an on-premises network connection, the NIC is injected into the customers provided vNet. This lets the Cloud PC connect to the customers on-premises network.
+2. **Create VM**: A virtual machine is created based on the Windows 365 license assigned to the user. Each Windows 365 license includes hardware capacity information. The VM is created with these specifications.
+3. **Attach the VM to the appropriate network**: When the VM is created, a virtual NIC is also created. If the provisioning policy specifies a Microsoft hosted network, the NIC is attached to an existing or new virtual network in the selected region specifically for the customer. If the provisioning policy specifies an Azure network connection, the NIC is injected into the customers provided vNet. This step lets the Cloud PC connect to the customers on-premises network.
 4. **Join to Azure AD**: After the VM is running, the device will be joined to Azure AD in one of two ways:
   
     - Through Azure AD Join: the device performs the Azure AD Join operation and has no Windows Server Active Directory dependency.
     - Through Hybrid Azure AD Join: the device performs the domain join operation on the customer’s domain and is then registered to Azure AD through synchronization or federation. In this step, we wait for the computer object to appear in Azure AD before proceeding.
 
-6. **Intune MDM enroll**: After the Azure AD object is available, the Cloud PC is enrolled in Intune. This is performed as a device enrollment and no user credentials need to be provided.
+6. **Intune MDM enroll**: After the Azure AD object is available, the Cloud PC is enrolled in Intune. This step is performed as a device enrollment and no user credentials need to be provided.
 7. **Primary user assignment**: The Cloud PC user is assigned to the Intune primary user to make sure self service and reporting scenarios work seamlessly.
 
 ## Post provisioning configuration
 
 After core provisioning is complete, Windows 365 optimizes the configuration to ensure the best end-user Cloud PC experience.
 
-1. **Hide Start Menu power icons**: Hide the shutdown button in the start menu (HKLM:\Software\Microsoft\PolicyManager\default\Start\HideShutDown\value) and Hide the shutdown button in the login screen (HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\ShutDownWithoutLogon).
+1. **Hide Start Menu power icons**: Hide the shutdown button in the start menu (HKLM:\Software\Microsoft\PolicyManager\default\Start\HideShutDown\value) and Hide the shutdown button in the sign-in screen (HKLM:\Software\Microsoft\Windows\CurrentVersion\Policies\System\ShutDownWithoutLogon).
 2. **Disable Windows reset action**: reagent: c.exe /disable
 3. **Assign user as administrator (when applicable)**:
-  $Member = 'user@contoso.com'  # use OnPremisesUserPrincipalName
-  Add-LocalGroupMember -Group "Administrators" -Member $Member
+  ```$Member = 'user@contoso.com'  # use OnPremisesUserPrincipalName```
+  ```Add-LocalGroupMember -Group "Administrators" -Member $Member```
 4. **Set Teams for VDI mode**: Hosted desktop optimization (HKLM:\SOFTWARE\Microsoft\Teams\IsWVDEnvironment).
 5. **Enable time zone Redirection**: Enable the setting (HKLM:\Softare\Policies\Microsoft\Windows NT\Terminal Services\ fEnabletimezoneRedirection).
 6. **Resize OS disk partition to match license**: Resize the OS disk to match the size of the Azure Managed Disk.

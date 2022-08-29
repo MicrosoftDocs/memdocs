@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/25/2022
+ms.date: 08/22/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -44,6 +44,9 @@ These settings apply to devices running:
 ## Before you begin
 
 - [Deploy your VPN app](../apps/apps-add.md), and create a [Windows client VPN device configuration profile](vpn-settings-configure.md). The available settings depend on the VPN client app you choose. Some settings are only available for specific VPN clients.
+
+- [!INCLUDE [partner-vpns](../includes/partner-vpns.md)]
+
 - These settings use the [VPNv2 CSP](/windows/client-management/mdm/vpnv2-csp).
 
 ## User scope or Device scope
@@ -51,12 +54,11 @@ These settings apply to devices running:
 - **Use this VPN profile with a user/device scope**: Apply the profile to the user scope or the device scope:
 
   - **User scope**: The VPN profile is installed within the user's account on the device, such as `user@contoso.com`. If another user signs in to the device, the VPN profile isn't available.
-  - **Device scope**: The VPN profile is installed in the device context, and applies to all users on the device.
+  - **Device scope**: The VPN profile is installed in the device context, and applies to all users on the device. Windows Holographic devices only support device scope.
 
 Existing VPN profiles apply to their existing scope. By default, new VPN profiles are installed in the user scope *except* for the profiles with device tunnel enabled. VPN profiles with device tunnel enabled use the device scope.
 
 ## Connection type
-
 
 - **Connection type**: Select the VPN connection type from the following list of vendors:
 
@@ -105,6 +107,9 @@ The following settings are shown depending on the connection type you select. No
   - **Username and password**: Require users to enter their domain username and password to authenticate, such as `user@contoso.com`, or `contoso\user`.
 
   - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Intune](../protect/derived-credentials.md).
+
+    > [!NOTE]
+    > Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only impacts VPN profiles on Windows devices and will be fixed in a future release (no ETA).
 
   - **EAP** (IKEv2 only): Select an existing Extensible Authentication Protocol (EAP) client certificate profile to authenticate. Enter the authentication parameters in the **EAP XML** setting.
 
@@ -216,7 +221,7 @@ Example:
 
       The type of app determines the app identifier. For a universal app, enter the package family name, such as `Microsoft.Office.OneNote_8wekyb3d8bbwe`. For a desktop app, enter the file path of the app, such as `%windir%\system32\notepad.exe`.
 
-      To get the package family name, you can use the `Get-AppxPackage` Windows PowerShell cmdlet. For example, to get the OneNote package family name, open Windows PowerShell, and enter `Get-AppxPackage *OneNote`. For more information, see [Find a PFN for an app that's installed on a Windows client computer](../../configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn.md#find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer) and [Get-AppxPackage cmdlet](/powershell/module/appx/get-appxpackage?view=windowsserver2019-ps).
+      To get the package family name, you can use the `Get-AppxPackage` Windows PowerShell cmdlet. For example, to get the OneNote package family name, open Windows PowerShell, and enter `Get-AppxPackage *OneNote`. For more information, see [Find a PFN for an app that's installed on a Windows client computer](../../configmgr/protect/deploy-use/find-a-pfn-for-per-app-vpn.md#find-a-pfn-for-an-app-thats-installed-on-a-windows-10-computer) and [Get-AppxPackage cmdlet](/powershell/module/appx/get-appxpackage).
 
   > [!IMPORTANT]
   > We recommend that you secure all app lists created for per-app VPNs. If an unauthorized user changes this list, and you import it into the per-app VPN app list, then you potentially authorize VPN access to apps that shouldn't have access. One way you can secure app lists is using an access control list (ACL).
@@ -237,7 +242,7 @@ Example:
 
 - **DNS suffix search list**: In **DNS suffixes**, enter a DNS suffix, and **Add**. You can add many suffixes.
 
-  When using DNS suffixes, you can search for a network resource using its short name, instead of the fully qualified domain name (FQDN). When searching using the short name, the suffix is automatically determined by the DNS server. For example, `utah.contoso.com` is in the DNS suffix list. You ping `DEV-comp`. In this scenario, it resolves to `DEV-comp.utah.contoso.com`.
+  When using DNS suffixes, you can search for a network resource using its short name, instead of the fully qualified domain name (FQDN). When you search using the short name, the suffix is automatically determined by the DNS server. For example, `utah.contoso.com` is in the DNS suffix list. You ping `DEV-comp`. In this scenario, it resolves to `DEV-comp.utah.contoso.com`.
 
   DNS suffixes are resolved in the order listed, and the order can be changed. For example, `colorado.contoso.com` and `utah.contoso.com` are in the DNS suffix list, and both have a resource called `DEV-comp`. Since `colorado.contoso.com` is first in the list, it resolves as `DEV-comp.colorado.contoso.com`.
   

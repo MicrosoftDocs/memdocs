@@ -91,4 +91,4 @@ You can access Windows 365 Cloud PCs from your Linux OS devices by using:
 <!-- ########################## -->
 ## Next steps
 
-For information about the different protocol network requirements per scenario, see [Network requirements](requirements-network.md).
+For information about the different protocol network requirements per scenario, see [Network requirements](./enterprise/requirements-network.md).

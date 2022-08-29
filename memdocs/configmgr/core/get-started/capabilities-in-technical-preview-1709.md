@@ -135,7 +135,7 @@ You can enable co-management for both Windows 10 devices enrolled in Microsoft I
 #### Devices enrolled in Intune  
 When Windows 10 devices are enrolled in Intune, you can install the Configuration Manager client on the devices (using a specific command-line argument) to prepare the clients for co-management. Then, you enable co-management from the Configuration Manager console to start moving specific workloads to Intune for specific Windows 10 devices.  
 
-For Windows 10 devices that are not yet enrolled in Intune, you can use automatic enrollment in Azure to enroll the devices. For new Windows 10 devices, you can use Windows AutoPilot to configure the Out of Box Experience (OOBE), which includes automatic enrollment that enrolls devices in Intune.  
+For Windows 10 devices that are not yet enrolled in Intune, you can use automatic enrollment in Azure to enroll the devices. For new Windows 10 devices, you can use Windows Autopilot to configure the Out of Box Experience (OOBE), which includes automatic enrollment that enrolls devices in Intune.  
 
 #### Configuration Manager clients
 When you have Windows 10 devices that are Configuration Manager clients, you can enroll these devices and enable co-management from the Configuration Manager console. Configuration Manager triggers automatic enrollment into Intune based on the Azure AD tenant information.  
@@ -179,7 +179,7 @@ ccmsetup.msi CCMSETUPCMD="/mp:https:/&#47;contoso.cloudapp.net/CCM_Proxy_MutualA
 
 #### New Windows 10 devices
 For new Windows 10 devices, you can use the Autopilot service to configure the out of box experience, which includes joining the device to AD and Azure AD, as well as enrolling the device in Intune. Then, create an app in Intune to deploy the Configuration Manager client.  
-1. Enable AutoPilot for the new Windows 10 devices. For details, see [Overview of Windows AutoPilot](/windows/deployment/windows-10-auto-pilot).  
+1. Enable Autopilot for the new Windows 10 devices. For details, see [Overview of Windows Autopilot](/windows/deployment/windows-10-auto-pilot).  
 2. Configure automatic enrollment in Azure AD for your devices to be automatically enrolled into Intune. For details, see [Enroll Windows devices for Microsoft Intune](/intune/windows-enroll).
 3. Create an app in Intune with the Configuration Manager client package and deploy the app to Windows 10 devices that you want to co-manage. Use the [command line to install Configuration Manager client](#command-line-to-install-configuration-manager-client) when you go through the steps to [install clients from the internet using Azure AD](/sccm/core/clients/deploy/deploy-clients-cmg-azure).   
 

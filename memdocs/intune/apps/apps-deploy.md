@@ -38,7 +38,7 @@ ms.collection:
 After you've [added an app](apps-add.md) to Microsoft Intune, you can assign the app to users and devices. It is important to note that you can deploy an app to a device whether or not the device is managed by Intune.
 
 > [!NOTE]
-> The **Available for enrolled devices** deployment intent is only supported for **device groups** when targeting Android Enterprise fully managed devices (COBO) and Android Enterprise corporate-owned personally-enabled (COPE) devices.
+> The **Available for enrolled devices** deployment intent is supported for **user groups** and **device groups** when targeting Android Enterprise fully managed devices (COBO) and Android Enterprise corporate-owned personally-enabled (COPE) devices.
 
 The following table lists the various options for *assigning* apps to users and devices:
 
@@ -60,6 +60,8 @@ The following table lists the various options for *assigning* apps to users and 
 > To receive app updates on devices that aren't enrolled with Intune, device users must go to their organization's Company Portal and manually install app updates.
 > 
 > *Available assignments* are only valid for user groups, not device groups.
+> 
+> If Managed Google Play Pre-Production track apps are assigned as required on Android Enterprise personally-owned work profile devices, they will not install on the device. To work around this, create two identical user groups and assign the pre-production track as "available" to one and "required" to the other. The result will be that the pre-production track successfully deploys to the device. 
 
 ## Assign an app
 
@@ -131,13 +133,16 @@ The information in the following table can help you understand the resulting int
 > iOS Store apps (not iOS/iPadOS VPP apps) that are targeted with required intent will be enforced on the device at the time of the device check-in and will also show in the Company Portal app.<br><br>
 > When conflicts occur in **Uninstall on device removal** setting, the app is not removed from the device when the device is no longer managed.
 
+> [!NOTE]
+> Apps deployed as Required to corporate-owned work profile devices cannot be uninstalled manually by the user.
+
 ## Managed Google Play app deployment to unmanaged devices
 
 For unenrolled Android devices, you can use Managed Google Play to deploy store apps and line-of-business (LOB) apps to users. Once deployed, you can use [Mobile Application Management (MAM)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam) to manage the applications. Managed Google Play apps targeted as **Available with or without enrollment** will appear in the Play Store app on the end user's device, and not in the Company Portal app. End user will browse and install apps deployed in this manner from the Play app. Because the apps are being installed from managed Google Play, the end user will not need to alter their device settings to allow app installation from unknown sources, which means the devices will be more secure. If the app developer publishes a new version of an app to Play that was installed on a user's device, the app will be automatically updated by Play. 
 
 Steps to assign a Managed Google Play app to unmanaged devices:
 
-1. Connect your Intune tenant to managed Google Play. If you have already done this in order to manage Android Enterprise personally-owned, dedicated, fully managed, or corporate-owned work profile devices, you do not need to do it again.
+1. Connect your Intune tenant to managed Google Play. If you have already done this in order to manage Android Enterprise personally owned, dedicated, fully managed, or corporate-owned work profile devices, you do not need to do it again.
 2. Add apps from managed Google Play to your Intune console.
 3. Target managed Google Play apps as **Available with or without enrollment** to the desired user group. **Required** and **Uninstall** app targeting are not supported for non-enrolled devices.
 4. Assign an App Protection Policy to the user group.

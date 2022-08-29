@@ -1,13 +1,13 @@
 ---
 # required metadata
-title: On-premises network connection health checks in Windows 365
+title: Azure network connection health checks in Windows 365
 titleSuffix:
-description: Learn about the health checks that are automatically run on on-premises network connections.
+description: Learn about the health checks that are automatically run on Azure network connections.
 keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/02/2021
+ms.date: 07/05/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -28,27 +28,27 @@ ms.custom: intune-azure; get-started
 ms.collection: M365-identity-device-management
 ---
 
-# On-premises network connections health checks
+# Azure network connections health checks
 
-A unique feature of Windows 365 is the on-premises network connection (OPNC) health checks. The health checks are periodically run to make sure that
+A unique feature of Windows 365 is the Azure network connection (ANC) health checks. The health checks are periodically run to make sure that
 
 - Cloud PC provisioning is successful.
 - End-user Cloud PC experiences are optimal.
 
-## On-premises network connection status
+## Azure network connection status
 
-In the **On-premises network connection** tab, every OPNC created displays a status. This status helps you determine if new Cloud PCs can be expected to provision successfully, and that existing end-users are having an optimal Cloud PC experience.
+In the **Azure network connection** tab, every ANC created displays a status. This status helps you determine if new Cloud PCs can be expected to provision successfully, and that existing end-users are having an optimal Cloud PC experience.
 
 Statuses include:
 
-- **Running checks**: The health checks are currently running. The OPNC list view automatically refreshes every five minutes. Wait for the checks to complete before attempting to assign it to a provisioning policy.
-- **Checks successful**: All health checks passed. The OPNC is ready for use.
-- **Checks successful with warnings**: All critical health checks passed. However at least one non-critical check may have issues. An example of a check that may trigger this state is the hybrid Azure AD join sync check. Hybrid Azure AD join sync can take up to 90 minutes, so we check much of the hybrid Azure AD join sync service but can’t confirm the device sync succeeded until later. OPNCs with this status can be used by provisioning policies.
-- **Checks failed**: One or more required checks failed. An OPNC can’t be used if it's in a failed state. You’ll have to resolve the underlying issue and Retry the health checks.
+- **Running checks**: The health checks are currently running. The ANC list view automatically refreshes every five minutes. Wait for the checks to complete before attempting to assign it to a provisioning policy.
+- **Checks successful**: All health checks passed. The ANC is ready for use.
+- **Checks successful with warnings**: All critical health checks passed. However at least one non-critical check may have issues. An example of a check that may trigger this state is the hybrid Azure AD join sync check. Hybrid Azure AD join sync can take up to 90 minutes, so we check much of the hybrid Azure AD join sync service but can’t confirm the device sync succeeded until later. ANCs with this status can be used by provisioning policies.
+- **Checks failed**: One or more required checks failed. An ANC can’t be used if it's in a failed state. You’ll have to resolve the underlying issue and Retry the health checks.
 
 ## Status error details
 
-Every failed OPNC or success with warning error state includes the technical details behind the failure. Select the **View details** link for each failed check to view more information on the failure. After you’ve fixed the underlying issue, **Retry** the health check to re-run the tests.
+Every failed ANC or success with warning error state includes the technical details behind the failure. Select the **View details** link for each failed check to view more information on the failure. After you’ve fixed the underlying issue, **Retry** the health check to rerun the tests.
 
 ## Supported checks
 
@@ -63,8 +63,9 @@ Every failed OPNC or success with warning error state includes the technical det
 - **First party app permissions exist on Azure resource group**: Sufficient permissions exist on the Azure resource group.
 - **First party app permissions exist on Azure virtual network**: Sufficient permissions exist on the Azure vNet.
 - **Environment and configuration is ready**: Underlying infrastructure is ready for provisioning to succeed.
+- **Intune enrollment restrictions allow Windows enrollment**: Verify that Intune enrollment restrictions are configured to allow Windows enrollment. 
 
 <!-- ########################## -->
 ## Next steps
 
-[Learn more about on-premises network connections](on-premises-network-connections.md).
+[Learn more about Azure network connections](azure-network-connections.md).

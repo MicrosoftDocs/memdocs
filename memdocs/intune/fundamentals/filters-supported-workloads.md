@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/06/2022
+ms.date: 04/27/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -117,8 +117,10 @@ You can use filters for all compliance policies on the following platforms:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Windows 10 and later
+
+[!NOTE]
+> The Custom compliance (preview) feature for Windows 10 and later devices is not currently supported. If you assign a policy with custom compliance settings, targeted users and devices will process the policy and ignore assignment filering.
 
 ## Device configuration profiles and Endpoint security
 
@@ -286,18 +288,19 @@ You can use filters for some common device configuration policies on the followi
 | Wi-Fi | ✔️ |
 | Windows health monitoring | ✔️ |
 | **Endpoint Security profile** | &nbsp; |
-| Account protection | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment. |
-| Antivirus | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
-| Attack surface reduction | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
-| Disk encryption | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
-| Endpoint detection and response | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
-| Firewall | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
-| Security Baselines | ✔️ <br/> This feature will roll out over the next several weeks and may not be immediately available in your environment.|
+| Account protection | ✔️ <br/> **Local user group membership** only |
+| Antivirus | ✔️ |
+| Attack surface reduction | ✔️ <br/> Excludes **Web protection (Microsoft Edge Legacy)** and **Application control** |
+| Disk encryption | ❌ |
+| Endpoint detection and response | ✔️ |
+| Firewall | ✔️ |
+| Security Baselines | ❌ |
 
 ## Not supported
 
 The following features don't support using filters:
 
+- Custom compliance policies for Windows 10/11 (preview)
 - App configuration policies for Android and iOS/iPadOS
 - App protection policies for Android, iOS/iPadOS, and Windows
 - End user experiences customization policies

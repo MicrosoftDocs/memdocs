@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 04/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -173,29 +173,24 @@ With the push certificate, Intune can enroll and manage iOS/iPadOS devices by pu
 Now that you've installed your token, you can create an enrollment profile for ADE devices. A device enrollment profile defines the settings applied to a group of devices during enrollment. There's a limit of 1,000 enrollment profiles per ADE token.
 
 > [!NOTE]
-> Devices will be blocked if there aren't enough Company Portal licenses for a VPP token or if the token is expired. Intune will display an alert when a token is about to expire or licenses are running low.
+> Devices will be blocked if there aren't enough Company Portal licenses for a VPP token or if the token is expired. Intune alerts you when a token is about to expire or licenses are running low.
 
-1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment Program Tokens**.
-2. Select a token, and then select **Profiles** > **Create profile** > **iOS/iPadOS**:
-
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/image04.png" alt-text="Screenshot that shows how to create an iOS and iPadOS enrollment profile in Microsoft Endpoint Manager admin center.":::
-
-3. On the **Basics** tab, enter a **Name** and **Description** for the profile for administrative purposes. Users don't see these details.
-
-    :::image type="content" source="./media/device-enrollment-program-enroll-ios/image05.png" alt-text="Screenshot that shows the Name and Description boxes in Microsoft Endpoint Manager admin center.":::
-
-4. Select **Next**.
+1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **iOS/iPadOS** > **iOS/iPadOS enrollment** > **Enrollment program tokens**.
+2. Select a token, and then select **Profiles**.
+3. Select **Create profile** > **iOS/iPadOS**.
+4. For **Basics**, give the profile a **Name** and **Description** for administrative purposes. Users don't see these details.
+5. Select **Next**.
 
 > [!IMPORTANT]
-> Any configuration changes on existing Enrollment profile settings, will not take effect on assigned devices until they are Factory Reset and activated again (this is when the Remote Management Payload is received on ADE devices) and this is by design by Apple and not Microsoft. The only configuration change that does not require a Factory Reset is "Device Name Template".
+> If you make changes to existing enrollment profile settings, the new changes will not take effect on assigned devices until devices are reset back to factory settings and reactivated. Reactivation occurs when the Remote Management Payload is received on ADE devices. Renaming the device name template is the only change you can make that doesn't require a factory reset.  
 
-5. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
+6. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
     - **Enroll with User Affinity**. Select this option for devices that belong to users who want to use Company Portal for services like installing apps.
     - **Enroll without User Affinity**. Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.
 
       In some situations, you might want to associate a primary user on devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
 
-6. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method to use when authenticating users. For **Authentication method**, select one of the following options:
+7. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method to use when authenticating users. For **Authentication method**, select one of the following options:
 
    ![Screenshot of authentication method options.](./media/device-enrollment-program-enroll-ios/authentication-method.png)
 
@@ -258,7 +253,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     - The **Settings** > **General** > **About** screen says: **This iPhone is supervised. *Company name* can monitor your Internet traffic and locate this device.**
 
      > [!NOTE]
-     > If a device is enrolled without supervision, you need to use Apple Configurator if you want to set it to supervised. To reset the device in this way, you need to connect it to a Mac with a USB cable. For more information, see [Apple Configurator Help](http://help.apple.com/configurator/mac/2.3).
+     > If a device is enrolled without supervision, you need to use Apple Configurator if you want to set it to supervised. To reset the device in this way, you need to connect it to a Mac with a USB cable. For more information, see [Apple Configurator Help](https://support.apple.com/guide/apple-configurator-mac).
 
 11. In the **Locked enrollment** list, select **Yes** or **No**. Locked enrollment disables iOS/iPadOS settings that allow the management profile to be removed from the **Settings** menu. After device enrollment, you can't change this setting without wiping the device. To use this option, the device must have the **Supervised** management option set to **Yes**.
 
@@ -316,9 +311,9 @@ Now that you've installed your token, you can create an enrollment profile for A
 
 16. You can activate a cellular data plan. This setting applies to devices running iOS/iPadOS 13.0 and later. Configuring this option will send a command to activate cellular data plans for your eSim-enabled cellular devices. Your carrier must provision activations for your devices before you can activate data plans using this command. To activate cellular data plan, click **Yes** and then enter your carrier’s activation server URL.
 
-17. Select **Next: Setup Assistant Customization**.
+17. Select **Next**.
 
-18. On the **Setup Assistant Customization** tab, configure the following profile settings:
+18. On the **Setup Assistant** tab, configure the following profile settings:
 
     | Department setting | Description |
     |---|---|
@@ -330,37 +325,34 @@ Now that you've installed your token, you can create an enrollment profile for A
     - If you select **Show**, the screen will be displayed during setup, but only if there are steps to complete after the restore or after the software update. Users can sometimes skip the screen without taking action. They can then later go to the device's **Settings** menu to set up the feature.
     - With Shared iPad, all Setup Assistant panes after activation are automatically skipped regardless of the configuration. 
 
-    | Setup Assistant Screens setting | If you select Show, during setup the device will... |
+    | Setup Assistant features | What happens when visible |
     |------------------------------------------|------------------------------------------|
     | **Passcode** | Prompt the user for a passcode. Always require a passcode for unsecured devices unless access is controlled in some other way. (For example, a kiosk mode configuration that restricts the device to one app.) For iOS/iPadOS 7.0 and later. |
     | **Location Services** | Prompt the user for their location. For macOS 10.11 and later, and iOS/iPadOS 7.0 and later. |
-    | **Restore** | Display the **Apps & Data** screen. This screen gives users the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-    | **iCloud and Apple ID** | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
+    | **Restore** | Display the Apps & Data screen. This screen gives users the option to restore or transfer data from iCloud Backup when they set up the device. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
+    | **Apple ID** | Give the user the options to sign in with their Apple ID and use iCloud. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later.   |
     | **Terms and conditions** | Require the user to accept Apple's terms and conditions. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-    | **Touch ID** | Give the user the option to set up fingerprint identification for the device. This also includes Face ID. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. On iOS/iPadOS 14.5 and later, the Passcode and Touch ID Setup Assistant screens during device setup aren’t working. If you use version 14.5+, then don't configure the Passcode or Touch ID Setup Assistant screens. If you require a passcode on devices, then use a device configuration policy or a compliance policy. After the user enrolls and they receive the policy, they're prompted for a passcode. |
+    | **Touch ID and Face ID** | Give the user the option to set up fingerprint or facial identification on their device. For macOS 10.12.4 and later, and iOS/iPadOS 8.1 and later. On iOS/iPadOS 14.5 and later, the Passcode and Touch ID Setup Assistant screens during device setup aren’t working. If you use version 14.5+, then don't configure the Passcode or Touch ID Setup Assistant screens. If you require a passcode on devices, then use a device configuration policy or a compliance policy. After the user enrolls and they receive the policy, they're prompted for a passcode. |
     | **Apple Pay** | Give the user the option to set up Apple Pay on the device. For macOS 10.12.4 and later, and iOS/iPadOS 7.0 and later. |
     | **Zoom** | Give the user to the option to zoom the display when they set up the device. For iOS/iPadOS 8.3 and later. |
     | **Siri** | Give the user the option to set up Siri. For macOS 10.12 and later, and iOS/iPadOS 7.0 and later. |
-    | **Diagnostics Data** | Display the **Diagnostics** screen. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |
-    | **Restore Completed** | Display the **Restore Completed** screen after a backup and restore is performed on the device. If this screen isn't shown, the user can't see whether a restore from backup was completed during Setup Assistant. |
-    | **Software Update Completed** | Display the **Software Update Completed** screen if a software update is performed during Setup Assistant. If this screen isn't shown, the user can’t see whether a software update is performed during Setup Assistant.|
-    | **Display Tone** | Give the user the option to turn on Display Tone. For macOS 10.13.6 and later, and iOS/iPadOS 9.3.2 and later. |
-    | **Privacy** | Display the **Privacy** screen. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |
+    | **Diagnostics Data** | Display the Diagnostics screen. This screen gives the user the option to send diagnostic data to Apple. For macOS 10.9 and later, and iOS/iPadOS 7.0 and later. |  
+    | **Display Tone** | Give the user the option to turn on Display Tone. For macOS 10.13.6 and later, and iOS/iPadOS 9.3.2 and later. |  
+    | **Privacy** | Display the Privacy screen. For macOS 10.13.4 and later, and iOS/iPadOS 11.3 and later. |  
     | **Android Migration** | Give the user the option to migrate data from an Android device. For iOS/iPadOS 9.0 and later.|
-    | **iMessage & FaceTime** | Give the user the option to set up iMessage and FaceTime. For iOS/iPadOS 9.0 and later. |
-    | **Onboarding** | Display onboarding informational screens for user education, like Cover Sheet and Multitasking and Control Center. For iOS/iPadOS 11.0 and later. |
-    | **Watch Migration** | Give the user the option to migrate data from a watch device. For iOS/iPadOS 11.0 and later.|
-    | **Screen Time** | Display the **Screen Time** screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |
-    | **Software Update** | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |
+    | **iMessage & FaceTime** | Give the user the option to set up iMessage and FaceTime. For iOS/iPadOS 9.0 and later. |  
+    | **Onboarding** | Display onboarding informational screens for user education, like Cover Sheet and Multitasking and Control Center. For iOS/iPadOS 11.0 and later. |  
+    | **Screen Time** | Display the Screen Time screen. For macOS 10.15 and later, and iOS/iPadOS 12.0 and later. |  
     | **SIM Setup** | Give the user the option to add a cellular plan. For iOS/iPadOS 12.0 and later. |
-    | **Appearance** | Display the **Appearance** screen. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |
+    | **Software Update** | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |  
+    | **Watch Migration** | Give the user the option to migrate data from a watch device. For iOS/iPadOS 11.0 and later.|
+    | **Appearance** | Display the Appearance screen. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |  
     | **Device to Device Migration** | Give the user the option to migrate data from an old device to this device. For iOS/iPadOS 13.0 and later. |
-    | **Registration** | Display the registration screen. For macOS 10.9 and later. |
-    | **FileVault** | Display the FileVault 2 encryption screen. For macOS 10.10 and later. |
-    | **iCloud diagnostics** | Display the **iCloud Analytics** screen. For macOS 10.12.4 and later. |
-    | **iCloud Storage** | Display the **iCloud Documents and Desktop** screen. For macOS 10.13.4 and later. |
+    | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
+    | **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
+    | **Get Started**| Shows users the Get Started welcome screen.  
 
-19. Select **Next** to go to the **Review + create** tab.
+19. Select **Next**.
 
 20. To save the profile, select **Create**.
 

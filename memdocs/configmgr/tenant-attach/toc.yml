@@ -4,9 +4,13 @@ items:
 - name: Deploy and use
   items:
   - name: Prerequisites for tenant attach
-    href: prerequisites.md  
-  - name: Enable tenant attach
+    href: prerequisites.md
+  - name: Enable cloud attach, versions 2111 and later
+    href: ../cloud-attach/enable.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json  
+  - name: Enable tenant attach, versions 2103 and earlier
     href: device-sync-actions.md
+  - name: Use Intune RBAC for tenant attach
+    href: ../cloud-attach/use-intune-rbac.md?toc=/mem/configmgr/tenant-attach/toc.json&bc=/mem/configmgr/tenant-attach/breadcrumb/toc.json   
   - name: Client details
     href: client-details.md
   - name: Install applications
@@ -19,6 +23,8 @@ items:
     href: scripts.md
   - name: BitLocker recovery keys
     href: bitlocker-recovery-keys.md
+  - name: Software updates
+    href: software-updates.md    
 - name: CMPivot for tenant attached devices
   items:
   - name: Launch CMPivot
@@ -71,4 +77,7 @@ items:
     href: troubleshoot-scripts.md
   - name: CMPivot
     href: troubleshoot-cmpivot.md
+  - name: Software updates
+    href: troubleshoot-software-updates.md    
+
 

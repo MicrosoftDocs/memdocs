@@ -23,7 +23,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+  - M365-identity-device-management
+  - highpri
 ms.reviewer: mattcall
 
 ---
@@ -171,7 +173,7 @@ Before you can deploy policy to devices managed by Configuration Manager, set up
 
 5. On the **Basics** page, enter a name and description for the profile, then choose **Next**.
 
-6. On the **Configuration settings** page, configure the settings you want to manage with this profile. The onboarding package is automatically included and isn’t something you can configure.
+6. On the **Configuration settings** page, Choose **Auto from Connector**  for **Microsoft Defender for Endpoint Clinet configuration package type**. Configure the **Sample Sharing** and **Telemetry Reporting Frequency** settings you want to manage with this profile. 
 
    When your done configuring settings, select **Next**.
 

@@ -30,13 +30,13 @@ ms.collection: M365-identity-device-management
 
 # Deploy security baselines
 
-Windows 365 Security Baselines are a set of policy templates built on security best practices and experience from real world implementations. You can use security baselines to get security recommendations that can help lower risks. The Windows 365 baselines enable security configurations for Windows 10, Edge, and Microsoft Defender for Endpoint. They include versioning features and help customers choose when to update user policies to the latest release.
+Windows 365 Security Baselines are a set of policy templates built on security best practices and experience from real world implementations. You can use security baselines to get security recommendations that can help lower risks. The Windows 365 baselines enable security configurations for Windows 10, Microsoft Edge, and Microsoft Defender for Endpoint. They include versioning features and help customers choose when to update user policies to the latest release.
 
 Windows 365-branded security baselines are a group of tested and validated recommended settings available in Microsoft Endpoint Manager that apply to the following areas:
 
 - Windows 10 settings: 1809
 - MDATP settings: version 4
-- Edge settings: April 2020 (Edge version 80 and later)
+- Microsoft Edge settings: April 2020 (Microsoft Edge version 80 and later)
 
 You can optionally apply Windows 365 security baselines to the Azure AD groups containing Cloud PC devices in your tenant.  
 

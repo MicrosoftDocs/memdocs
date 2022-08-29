@@ -5,7 +5,7 @@ description: Learn about the features that Configuration Manager no longer suppo
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-ms.date: 04/08/2022
+ms.date: 07/21/2022
 author: mestew
 ms.author: mstewart
 manager: dougeby
@@ -29,8 +29,10 @@ The following features are deprecated. You can still use them now, but Microsoft
 > Starting in November 2021, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md). <comment the work item ID> (refer to alternative or blog with more info)Use Microsoft Intune to [deploy resource access profiles](../../../intune/configuration/device-profiles.md).
  -->
 
-|Feature|Deprecation first announced|Support&nbsp;removed|
-|-------|---------------------------|--------------------|
+|Feature|Deprecation first announced|Planned end of support|
+|-------|---------------------------|----------------------|
+| [Windows Information Protection](../../../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md#windows-information-protection) <!-- MAXADO-6010051 --> | July 2022 | TBD |
+| Upgrade from any version of System Center 2012 Configuration Manager to current branch. For more information, see [Upgrade to Configuration Manager current branch](../../../servers/deploy/install/upgrade-to-configuration-manager.md)<!-- 13846745 --> | April 2022 | Version 2303 |
 | The Configuration Manager client for **macOS** and Mac client management. For more information, see [Supported clients: Mac computers](../../configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).<!-- 12927803 --> Migrate management of macOS devices to Microsoft Intune. For more information, see [Deployment guide: Manage macOS devices in Microsoft Intune](../../../../../intune/fundamentals/deployment-guide-platform-macos.md). | January 2022 | December 31, 2022 |
 | The site system roles for on-premises MDM and macOS clients: **enrollment proxy point and enrollment point**.<!-- 12454901,12927803 --> | January 2022 | December 31, 2022 |
 | The **Microsoft Store for Business and Education**. For more information, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).<!-- 10884039 --> | November 2021 | The first release after March 1, 2023 |
@@ -61,7 +63,7 @@ The following features are no longer supported. In some cases, they're no longer
 | Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../get-started/2021/technical-preview-2109.md#bkmk_dotnetsdk)<!--10529267-->. | September 2021 | Version 2111 |
 | [Log Analytics connector for Azure Monitor.](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context)<!-- 8269855,9649296 --> This feature is called the *OMS Connector* in the Azure Services node. | November 2020 | Version 2107 |
 | Microsoft Edge legacy [browser profiles](../../../../compliance/deploy-use/browser-profiles.md).<!-- 9388900 --> For more information, see [New Microsoft Edge to replace Microsoft Edge Legacy with April’s Windows 10 Update Tuesday release](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224) | March 2021 | April 2021 |
-| The [collection evaluation viewer](../../../support/ceviewer.md)<!-- 8509484 -->, which was integrated in version 2010. The standalone tool is still available with the [System Center 2012 R2 Configuration Manager Toolkit](https://www.microsoft.com/download/details.aspx?id=50012).| November 2020 | Version 2103 |
+| The [collection evaluation viewer](../../../support/ceviewer.md)<!-- 8509484 -->, which was integrated in version 2010. | November 2020 | Version 2103 |
 | Desktop Analytics tile and page for **Security Updates**<!-- 8099536 --> | December 2020 | March 2021 |
 | Desktop Analytics option to **View recent data** for device enrollment and security updates.<!-- 7080949 --> For more information, see [Data latency](../../../../desktop-analytics/troubleshooting.md#data-latency).|May 2020|July 2020|
 | Windows Analytics and Upgrade Readiness integration. For more information, see [KB 4521815: Windows Analytics retirement on January 31, 2020](https://support.microsoft.com/help/4521815/windows-analytics-retirement). | October 14, 2019 | January 31, 2020 |
@@ -72,7 +74,7 @@ The following features are no longer supported. In some cases, they're no longer
 |System Center Endpoint Protection for Mac and Linux<br>For more information, see [End of support blog post](https://techcommunity.microsoft.com/t5/configuration-manager-blog/end-of-support-for-scep-for-mac-and-scep-for-linux-on-december/ba-p/286257).|October 2018|December 31, 2018|
 |On-premises conditional access<br>For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).|January 30, 2019|September 1, 2019|
 |Hybrid mobile device management (MDM)<br>For more information, see [What happened to hybrid MDM](../../../../mdm/understand/what-happened-to-hybrid.md).<br><br>Starting with the 1902 Intune service release, expected at the end of February 2019, new customers can't create a new hybrid connection.<!--Intune feature 2683117-->|August 14, 2018|September 1, 2019|
-|Security Content Automation Protocol (SCAP) extensions. <!--3607889--><br>The previous certified version is still available on the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=48741).|September 2018|Version 1810|
+|Security Content Automation Protocol (SCAP) extensions. <!--3607889--><br>|September 2018|Version 1810|
 |The **Silverlight user experience** for the application catalog website point is no longer supported. Users should use the new Software Center. For more information, see [Configure Software Center](../../../../apps/plan-design/plan-for-software-center.md#configure-software-center).<!--1358309-->|August 11, 2017| Version 1806|
 |The previous version of Software Center.<br><br>For more information about the new Software Center, see [Plan for and configure application management](../../../../apps/plan-design/plan-for-software-center.md).|December 13, 2016|Version 1802|
 |Management of Virtual Hard Disks (VHDs) with Configuration Manager. <br><br>This deprecation includes removal of options to create a new VHD or manage a VHD using a task sequence, and the removal of the Virtual Hard Disks node from the Configuration Manager console. <br><br>Existing VHDs are not deleted, but are no longer accessible from within the Configuration Manager console. |January 6, 2017 |Version 1710|

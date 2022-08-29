@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/25/2022
+ms.date: 07/13/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -45,11 +45,13 @@ The Endpoint Manager admin center has per-device and per-app reporting informati
 You can use the following reports to get more information on your filters:
 
 - [Filter evaluation report for devices](#filter-evaluation-report-for-devices) (in this article)
-- [App filter evaluation report](#app-filter-evaluation-report) (in this article)
+- [Workload filter evaluation reports](#workload-filter-evaluation-reports) (in this article)
 
 ### Filter evaluation report for devices
 
 This report shows every app or policy with a filter that's been applied. For each evaluated app or policy, you can see the applied filters, and get more detailed information.
+
+To see this report, use the following steps:
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All Devices** > select a device > **Filter evaluation**. The following information is shown:
@@ -68,9 +70,11 @@ In the following example, you can see this information for the **TestDevice**:
 
 :::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="See the date, time, evaluation results, and other device filter assignment properties in Microsoft Endpoint Manager and Microsoft Intune.":::
 
-### App filter evaluation report
+### Workload filter evaluation reports
 
-This report shows filter information for each device that was evaluated in an app assignment. For each device, you can see the device's overall applicability for an app, and get more detailed information about the filter evaluation.
+These reports show filter information for each device that's evaluated in an app or policy assignment. For each device, you can see the device's overall applicability for a workload, and get more detailed information about the filter evaluation.
+
+To see these reports, use the following steps:
 
 1. Sign in to the [Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All apps** > select an app > **Device install status**.
@@ -88,7 +92,10 @@ In the following example, you can see this information for the **Microsoft Word*
 :::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="See the date, time, evaluation results, and other app filter properties in Microsoft Endpoint Manager and Microsoft Intune.":::
 
 > [!IMPORTANT]
-> In the **Device install status** report, apps deployed as "Available" aren't shown. To troubleshoot if a user/device is filtered in or out of an Available assignment, use the **Filter evaluation report for devices**. To generate filter evaluation results, the end user must go to the list of apps in the Company portal app or website.
+> 
+> - In the **Device install status** report, apps deployed as "Available" aren't shown. To troubleshoot if a user/device is filtered in or out of an Available assignment, use the **Filter evaluation report for devices**. To generate filter evaluation results, the end user must go to the list of apps in the Company portal app or website.
+> - When assigning a policy, you can add devices to the "Excluded groups". These excluded devices aren't shown in the workload device status reports.
+> - In the **Apps** and **Settings Catalog** device status reports, there's a column that shows any filter evaluation. Currently, the filter evaluation information isn't available for all Intune workloads.
 
 ## Include vs. Exclude
 

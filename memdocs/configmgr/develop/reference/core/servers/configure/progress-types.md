@@ -1,6 +1,7 @@
 ---
 title: "Progress Types"
 titleSuffix: "Configuration Manager"
+description: "Progress states for a download. For a non-status change (for example, if there was just transfer of bytes), specify NULL for progress type."
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk

@@ -19,8 +19,8 @@ items:
     href: lifecycle.md
   - name: Provisioning
     href: provisioning.md
-  - name: On-premises network connections
-    href: on-premises-network-connections.md
+  - name: Azure network connections
+    href: azure-network-connections.md
   - name: Device images
     href: device-images.md
   - name: Lifecycle and operating system end of support
@@ -29,8 +29,12 @@ items:
     href: customer-permissions.md  
   - name: Device configuration with MEM
     href: device-configuration.md
-  - name: Encryption
-    href: encryption.md
+  - name: Security
+    items:
+    - name: Windows 365 security
+      href: security.md
+    - name: Encryption
+      href: encryption.md
   - name: Privacy and personal data
     href: privacy-personal-data.md
 - name: How-to guides
@@ -57,14 +61,14 @@ items:
         href: deployment-overview.md
       - name: Assign licenses
         href: assign-licenses.md
-      - name: On-premises network connection
+      - name: Azure network connection
         items:
-        - name: Create on-premises network connection
-          href: create-on-premises-network-connection.md
-        - name: Edit on-premises network connection
-          href: edit-on-premises-network-connection.md
-        - name: Delete on-premises network connection
-          href: delete-on-premises-network-connection.md
+        - name: Create Azure network connection
+          href: create-azure-network-connection.md
+        - name: Edit Azure network connection
+          href: edit-azure-network-connection.md
+        - name: Delete Azure network connection
+          href: delete-azure-network-connection.md
       - name: Provide a localized Windows experience
         items:
         - name: Provide a localized Windows experience
@@ -89,6 +93,8 @@ items:
         href: delete-provisioning-policy.md
       - name: Automated provisioning steps
         href: automated-provisioning-steps.md
+      - name: Manage Cloud PCs using Configuration Manager
+        href: manage-cloud-pcs-using-configuration-manager.md
     - name: Profiles and policies
       items:
       - name: Create a dynamic device group
@@ -111,6 +117,10 @@ items:
         href: set-conditional-access-policies.md
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
+      - name: Enable screen capture protection
+        href: /azure/virtual-desktop/screen-capture-protection?context=/windows-365/context/pr-context
+      - name: Restrict Office 365 access to Cloud PCs 
+        href: restrict-office-365-cloud-pcs.md
     - name: Apps
       items:
       - name: App overview
@@ -137,6 +147,8 @@ items:
         href: device-management-overview.md
       - name: Remotely manage Cloud PC devices 
         href: remotely-manage-cloud-pc.md
+      - name: RDP Shortpath for public networks 
+        href: rdp-shortpath-public-networks.md
       - name: Reprovision a Cloud PC
         href: reprovision-cloud-pc.md
       - name: Resize a Cloud PC
@@ -153,6 +165,12 @@ items:
           href: restore-bulk.md
       - name: End grace period
         href: end-grace-period.md
+      - name: Digital forensics
+        items:
+        - name: Overview
+          href: digital-forensics.md
+        - name: Place a Cloud PC under review
+          href: place-cloud-pc-under-review.md
     - name: Reports
       items:
       - name: Resource performance report
@@ -177,9 +195,9 @@ items:
       href: troubleshooting.md
     - name: Known issues 
       href: known-issues-enterprise.md
-    - name: On-premises network connections
-      href: troubleshoot-on-premises-network-connection.md
-    - name: On-premises network connection health checklist
+    - name: Azure network connections
+      href: troubleshoot-azure-network-connection.md
+    - name: Azure network connection health checklist
       href: health-checks.md
     - name: Remote Desktop client
       href: /azure/virtual-desktop/troubleshoot-client?context=/windows-365/context/pr-context

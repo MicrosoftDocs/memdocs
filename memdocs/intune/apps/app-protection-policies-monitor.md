@@ -79,7 +79,7 @@ Users with devices that are flagged by the **Require threat scan on apps** condi
 
 ## Reporting view
 
-You can find the same reports at the top of the **App protection status** pane. To view these reports, select **Apps** > **App protection status** > **Reports**. The **Reports** pane provides several reports based on user and app, including the following:
+You can find the same reports at the top of the **App protection status** pane. To view these reports, select **Apps** > **Monitor** > **App protection status** > **Reports**. The **Reports** pane provides several reports based on user and app, including the following:
 
 ### User report
 
@@ -180,5 +180,4 @@ Follow these steps to generate App Protection .csv file or App Configuration .cs
  
 ## See also
 - [Manage data transfer between iOS/iPadOS apps](data-transfer-between-apps-manage-ios.md)
-- [What to expect when your Android app is managed by app protection policies](../fundamentals/end-user-mam-apps-android.md)
 - [What to expect when your iOS/iPadOS app is managed by app protection policies](../fundamentals/end-user-mam-apps-ios.md)

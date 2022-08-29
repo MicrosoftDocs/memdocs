@@ -125,8 +125,8 @@ Include the following keys in the `SABranchOptions` section to install a site:<!
 
 | Key name | Required | Values | Details |
 |----------|----------|--------|---------|
-| `SAActive` | No | - `0`: You don't have SA<br>- `1`: SA is active | Specify if you have active Software Assurance (SA). For more information, see [Product and licensing FAQ](../../../understand/product-and-licensing-faq.yml). |
-| `CurrentBranch` | No | - `0`: Install the LTSB<br>- `1`: Install current branch | Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](../../../understand/which-branch-should-i-use.md). |
+| `SAActive` | Yes | - `0`: You don't have SA<br>- `1`: SA is active | Specify if you have active Software Assurance (SA). For more information, see [Product and licensing FAQ](../../../understand/product-and-licensing-faq.yml). |
+| `CurrentBranch` | Yes | - `0`: Install the LTSB<br>- `1`: Install current branch | Specify whether to use Configuration Manager current branch or long-term servicing branch (LTSB). For more information, see [Which branch of Configuration Manager should I use?](../../../understand/which-branch-should-i-use.md) |
 | `SAExpiration` | No | Date | The date when SA expires, used as a convenient reminder of that date. For more information, see [Licensing and branches](../../../understand/learn-more-editions.md). |
 
 ### `HierarchyExpansionOption` section for site expansion
@@ -138,7 +138,7 @@ When you're installing a CAS to expand a standalone primary site into a hierarch
 | `CCARSiteServer` | No | CAS FQDN | The FQDN of the CAS that a primary site attaches to when it joins the Configuration Manager hierarchy. Specify the CAS during setup. |
 | `CASRetryInterval` | No | Minutes | If the connection to the CAS fails, the primary site waits this number of minutes, and then reattempts the connection. |
 | `WaitForCASTimeout` | No | `0` to `100` | The maximum timeout value in minutes for a primary site to connect to the CAS. |
-| `UseDistributionView` | No | - `0`: Don't enable<br>- `1`:&nbsp;Enable | Specify whether to use [distributed views](../../../plan-design/hierarchy/database-replication.md#bkmk_distviews) to optimize database replication. |
+| `UseDistributionView` | No | - `0`: Don't enable<br>- `1`:&nbsp;Enable | Specify whether to use [distributed views](../../../plan-design/hierarchy/database-replication.md#distributed-views) to optimize database replication. |
 | `JoinPrimarySiteName` | No | Site server FQDN | The FQDN of the primary site server to expand. |
 
 ## Manage languages

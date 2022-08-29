@@ -2,7 +2,7 @@
 title: Microsoft Endpoint Manager tenant attach prerequisites
 titleSuffix: Configuration Manager
 description: Prerequisites for Microsoft Endpoint Manager tenant attach.
-ms.date: 03/21/2022
+ms.date: 07/11/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
@@ -40,6 +40,8 @@ Microsoft Endpoint Manager is an integrated solution for managing all of your de
   - Tenant sync to Intune
   - Device sync to Intune
   - Device actions in the Microsoft Endpoint Manager admin center
+ 
+- The geographic location of the Azure tenant and the service connection point should be the same. 
 
 - At least one Intune license for you as the administrator to access the Microsoft Endpoint Manager admin center. <!--10254915-->
 
@@ -56,8 +58,6 @@ The user accounts performing device actions have the following prerequisites:
 - The user account needs to be a synced user object in Azure AD (hybrid identity). This means that the user is synced to Azure Active Directory from Active Directory.
   - For Configuration Manager version 2103, and later: </br>
    Has been discovered with either [Azure Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) or [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
-  - For Configuration Manager version 2010, and earlier: </br>
-   Has been discovered with both [Azure Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) and [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser).
 - The **Initiate Configuration Manager action** permission under **Remote tasks** in the Microsoft Endpoint Manager admin center.
   - For more information about adding or verifying permissions in the admin center, see [Role-based access control (RBAC) with Microsoft Intune](../../intune/fundamentals/role-based-access-control.md#roles).
 
@@ -65,7 +65,7 @@ The user accounts performing device actions have the following prerequisites:
 
 [!INCLUDE [Internet endpoints for tenant attach](../core/plan-design/network/includes/internet-endpoints-tenant-attach.md)]
 
-Starting in version 2010, the service connection point validates important internet endpoints for tenant attach. These checks help make sure that the cloud service is available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem. For more information, see [Validate internet access](../core/servers/deploy/configure/about-the-service-connection-point.md#validate-internet-access).<!--8565578-->
+The service connection point validates important internet endpoints for tenant attach. These checks help make sure that the cloud service is available. It also helps you troubleshoot issues by quickly determining if network connectivity is a problem. For more information, see [Validate internet access](../core/servers/deploy/configure/about-the-service-connection-point.md#validate-internet-access).<!--8565578-->
 
 > [!NOTE]
 > The service connection point checks the CRL. If this server doesn't have access to the URLs listed above, the CRL check fails. Consider setting a system proxy or use the following command: 'netsh winhttp set proxy'. For more information, see [How the Windows Update client determines which proxy server to use to connect to the Windows Update Web site](https://support.microsoft.com/topic/how-the-windows-update-client-determines-which-proxy-server-to-use-to-connect-to-the-windows-update-web-site-08612ae5-3722-886c-f1e1-d012516c22a1). Make sure that you include a bypass list for internal site communications. This configuration may be necessary as the proxy server settings within Configuration Manager only configure the proxy for Configuration Manager applications and not the underlying OS.

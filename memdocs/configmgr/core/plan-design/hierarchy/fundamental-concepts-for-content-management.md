@@ -323,9 +323,13 @@ For more information, see [Boundary groups](../../servers/deploy/configure/bound
 
 ## On-demand content distribution
 
-On-demand content distribution is an option for individual application and package deployments. This option enables on-demand content distribution to preferred servers.  
+On-demand content distribution is an option for individual applications and packages. This option enables on-demand content distribution to preferred servers.  
 
-- To enable this setting for a deployment, enable: **Distribute the content for this package to preferred distribution points**.  
+- To enable On-Demand content distribution for a package/application, do the following : 
+
+    - In the Distribution Point properties, inside the Boundary Groups tab, select : **Enable for on-demand distribution**.  
+
+    -  Inside the distribution settings tab for package/application properties, select : **Enable for on-demand distribution**.  
 
 - When you enable this option for a deployment, and a client requests that content but the content isn't available on any of the client's preferred distribution points, Configuration Manager automatically distributes that content to the client's preferred distribution points.  
 

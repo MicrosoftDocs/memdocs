@@ -29,6 +29,9 @@ ms.collection: M365-identity-device-management
 
 # macOS device feature settings in Intune
 
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
 Intune includes built-in settings to customize features on your macOS devices. For example, administrators can add AirPrint printers, choose how users sign in, configure the power controls, use single sign-on authentication, and more.
 
 Use these features to control macOS devices as part of your mobile device management (MDM) solution.

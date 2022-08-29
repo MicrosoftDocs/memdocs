@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/03/2022
+ms.date: 07/05/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -48,7 +48,40 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
-## Week of April 11, 2022)
+## Week of July 4, 2022 (Service release 2206)
+
+<!--***********************************************-->
+### End user experience
+
+#### Transfer files from your Cloud PC by using windows365.microsoft.com web client<!--40096523-->
+You can use the windows365.microsoft.com web client to transfer files to and from your Cloud PC. For more information, see [Transfer files to and from a Cloud PC](../end-user-access-cloud-pc.md#transfer-files-to-and-from-a-cloud-pc).
+
+<!-- ########################## -->
+## Week of May 16, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### User experience
+
+#### Windows 365 Cloud PC support for Teams background effects<!--39892746-->
+
+Windows 365 Cloud PCs now support background effects in Teams. For more information, see the blog [Microsoft Teams background effects generally available on Windows 365](https://techcommunity.microsoft.com/t5/windows-365/microsoft-teams-background-effects-generally-available-on/m-p/3403274).
+
+#### Windows 365 Cloud PC support for Teams multi-window and Call me <!--39892759-->
+
+Windows 365 Cloud PCs now support multi-window and Call Me in Teams. For more information, see the blog [Teams Multi-window support and Call Me generally available on Windows 365]( https://techcommunity.microsoft.com/t5/windows-365/teams-multi-window-support-and-call-me-generally-available-on/m-p/3403252).
+
+<!-- ########################## -->
+## Week of May 9, 2022 (Service release 2204)
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device configuration
+
+#### Set default languages/regions for Cloud PCs (preview)<!--38649676 -->
+
+You can now set the default languages for your newly created Cloud PCs. Thirty-eight languages/regions will be available. For more information, see [Change organizational default settings](change-organization-default-settings.md).
+
+<!-- ########################## -->
+## Week of April 11, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
@@ -81,7 +114,7 @@ Users can now restore a Cloud PC to a state from a previous point in time. Multi
 
 #### Windows 365 link on Microsoft 365 admin center<!--37188422 -->
 
-To make it easier for admins to set up Windows 365, a link has been added to the M365 admin center home page. Admins with Windows 365 Enterprise licenses will see a link for [endpoint.microsoft.com](https://endpoint.microsoft.com) and admins with Windows 365 Business licenses will see a link for [windows365.microsoft.com](https://windows365.microsoft.com).
+To make it easier for admins to set up Windows 365, a link has been added to the Microsoft 365 admin center home page. Admins with Windows 365 Enterprise licenses will see a link for [endpoint.microsoft.com](https://endpoint.microsoft.com) and admins with Windows 365 Business licenses will see a link for [windows365.microsoft.com](https://windows365.microsoft.com).
 
 #### Higher Cloud PC screen resolution option (preview)<!--38301718 wnready-->
 

@@ -105,7 +105,7 @@ For step-by-step guidance, see the [Samsung's Create Profile](https://docs.samsu
 To assign MDM Profiles to devices, supported Samsung Knox devices must be added to the Knox Portal using one of the following methods:
 - **Using Samsung-Approved Reseller(s):** Use this method if you're purchasing devices from one of the Samsung-approved resellers. Resellers can auto-upload devices for you when approved. [Visit the Samsung Knox Enrollment User Guide to learn how to add resellers](https://docs.samsungknox.com/KME-Getting-Started/Content/Register_resellers.htm).
 
-- **Using the Knox Deployment App (KDA):** Use this method if you have existing devices that need to be enrolled using KME. You can either use Bluetooth or NFC to add devices to the Knox Portal using this method. [Visit the Samsung Knox Enrollment User Guide to learn about using the KDA](https://docs.samsungknox.com/KME-Getting-Started/Content/add-device-info.htm).
+- **Using the Knox Deployment App (KDA):** Use this method if you have existing devices that need to be enrolled using KME. You can either use Bluetooth or NFC to add devices to the Knox Portal using this method. [Visit the Samsung Knox Enrollment User Guide to learn about using the KDA](https://docs.samsungknox.com/admin/knox-mobile-enrollment/about-kda.htm).
 
 ## Assign an MDM profile to devices
 You must assign an MDM profile to added devices in the Knox Portal before they can be enrolled. [Visit the Samsung Knox Enrollment User Guide to learn about device configuration](https://docs.samsungknox.com/KME-Getting-Started/Content/configure-devices.htm).
@@ -134,7 +134,7 @@ Still need help? Check out the complete [KME User Guide](https://docs.samsungkno
 
 - **Device Owner support:** Intune supports enrolling Dedicated and Fully Managed devices by using the KME portal. Other Android enterprise device owner modes will be supported as they become available in Intune.
 
-- **Work profile support:** KME is a corporate device enrollment method and devices enrolled in Android personally-owned work profile ensure work and personal data are separate on personal devices. Device enrollment to personally-owned work profile using KME is a supported scenario in Intune.
+- **Work profile support:** KME is a corporate device enrollment method and devices enrolled in Android personally-owned work profile ensure work and personal data are separate on personal devices. Device enrollment to personally-owned work profile using KME is not a supported scenario in Intune.
 
 - **Factory reset to enroll to Android enterprise:** If repurposing devices that have already been set up, devices need to be factory reset when enrolling to Android Enterprise.
 

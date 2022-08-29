@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Send errors from your Mac device to your company support | Microsoft Docs
-description: Company Portal provides you with an email template and helps you upload the diagnostic details to give your IT team the context to support you. 
+title: Report Company Portal app problems | Microsoft Docs
+description: Report an enrollment or app problem in Intune Company Portal app.  
 keywords:
 author: lenewsad
 
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/27/2021
+ms.date: 06/02/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,26 +32,28 @@ ms.collection:
 
 # Report Company Portal app problems  
 
-Sometimes unexplained errors occur in the Company Portal app. When it happens, you can get help by emailing your IT support person. Company Portal provides you with an email template and helps you upload the diagnostic details to give your IT team the context to support you. 
+Get help or report a problem with the Company Portal app. Company Portal provides you with an email template and helps you upload and share diagnostic details. You can share diagnostic details with both your support person and Microsoft app developers.   
 
-## Report problem to IT support person 
+## Get help from support  
+For troubleshooting and support, report the problem to your support person. Reproduce the problem, if you can, and then complete these steps.  
+1. In the Company Portal app, go to the menu bar and select the **Help** menu > **Save Diagnostic Report**. 
+2. Choose a location to save the file. 
+3. Open your email app and attach the diagnostics file to a new email.   
+6. In the body of the email, describe the steps you took right up until the error occurred. 
+7. Send the email to your support person, and follow up with them after the email if needed.      
 
-1. When you receive an error message, select **Report**.
+## Share diagnostic details 
 
-2. Select the **Help** menu > **Save Diagnostic Report**. Choose a location to save the file. 
+Microsoft uses the Company Portal-specific diagnostics to learn from and improve upon future products. 
 
-3. Email the file to your IT support person. If your email app is configured, you can send the diagnostic report by going to **Help** > **Send Diagnostic Report** > **Email details**. You will need to fill in the email address for your support person. 
+First, try to reproduce the problem so that you receive the error message again. Then select **Report** to immediately upload and share the diagnostic logs. 
 
-4. In the body of the email, describe your experience with the app. If you can remember them, include the steps you took before the error occurred. 
+If the error message can't be reproduced, you can access the diagnostics options from the Help menu.   
 
-## Share diagnostic details with Company Portal developers 
+1. Go to the Company Portal menu bar and select **Help**. 
+2. Select **Send diagnostic report**.  
 
-App developers want to hear from you when unexpected behavior, such as a crash, occurs in Company Portal. Your diagnostic details could help developers find the root cause of a problem and prevent it from happening to other users. 
+## Contact information  
+To find your organization's contact information, sign in to the Company Portal app or [website](https://go.microsoft.com/fwlink/?linkid=2010980) and select **Support**.   
 
-To share your diagnostic logs with Microsoft:
 
-1. Open the Company Portal app.
-2. Click the **Help** menu > **Send Diagnostic Report**.  After the logs are uploaded, you'll receive an incident ID. Copy and save the ID.
-3. Select **Email details**. In the body of the email, describe your experience with the app. If you can remember them, include the steps you took before the error occurred. 
-
-Still need help? Contact your company support. For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).

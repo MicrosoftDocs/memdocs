@@ -20,7 +20,7 @@ ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 #ROBOTS:
 #audience:
 
-#ms.reviewer: [ALIAS]
+ms.reviewer: 
 #ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
@@ -74,7 +74,7 @@ Audit logs and operational logs can also be routed to Azure Monitor. In **Tenant
 
 ## Use Graph API to retrieve audit events
 
-For details on using the graph API to get up to one year of audit events, see [List auditEvents](/graph/api/intune-auditing-auditevent-list?view=graph-rest-1.0).
+For details on using the graph API to get up to one year of audit events, see [List auditEvents](/graph/api/intune-auditing-auditevent-list).
 
 ## Next steps
 

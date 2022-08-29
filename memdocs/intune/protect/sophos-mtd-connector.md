@@ -39,8 +39,8 @@ You can configure Conditional Access policies based on Sophos Mobile risk assess
 
 ## Supported platforms
 
-- Android 8.0 and later
-- iOS 11.0 and later
+- Android 7.0 and later
+- iOS 14.0 and later
 
 ## Prerequisites
 
@@ -70,20 +70,26 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 *Block when malicious apps are detected*:
 
-![Conceptual image of Malicious apps detected](./media/sophos-mtd-connector/sophos-malicious-apps-blocked.png)  
+:::image type="content" source="./media/sophos-mtd-connector/sophos-malicious-apps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
 *Access granted on remediation*:  
-![Conceptual image of access granted after remediation](./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png)
+
+:::image type="content" source="./media/sophos-mtd-connector/sophos-malicious-apps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 
 ### Control access based on threat to network
 
 Detect threats to your network like Man-in-the-middle attacks, and protect access to Wi-Fi networks based on the device risk.  
 
 *Block network access through Wi-Fi*:  
-![Block network access through Wi-Fi](./media/sophos-mtd-connector/sophos-network-wifi-blocked.png)
 
-*Access granted on remediation*:   
-![Access granted on remediation](./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png)  
+:::image type="content" source="./media/sophos-mtd-connector/sophos-network-wifi-blocked.png" alt-text="Product flow for blocking access through Wi-Fi due to an alert.":::
+
+![Block network access through Wi-Fi]()
+
+*Access granted on remediation*:
+
+:::image type="content" source="./media/sophos-mtd-connector/sophos-network-wifi-unblocked.png" alt-text=" Product flow for granting access through Wi-Fi after the alert is remediated. ":::
+
 
 ### Control access to SharePoint Online based on threat to network
 
@@ -91,23 +97,11 @@ Detect threats to your network like Man-in-the-middle attacks, and prevent synch
 
 *Block SharePoint Online when network threats are detected*:
 
-![Block SharePoint Online when network threats are detected](./media/sophos-mtd-connector/sophos-network-spo-blocked.png)  
+:::image type="content" source="./media/sophos-mtd-connector/sophos-network-spo-blocked.png" alt-text="Product flow for blocking access to the organizations files due to an alert.":::
 
 *Access granted on remediation*:
 
-![Access granted on remediation for Sharepoint example](./media/sophos-mtd-connector/sophos-network-spo-unblocked.png)  
-
-<!-- 
-### Control access on unenrolled devices based on threats from malicious apps
-
-When the Sophos Mobile Threat Defense solution considers a device to be infected:
-
-![App protection policy blocks due to detected malware](./media/sophos-mtd-connector/sophos-mobile-app-policy-block.png)
-
-Access is granted on remediation:
-
-![Access is granted on remediation for App protection policy](./media/sophos-mtd-connector/sophos-mobile-app-policy-remediated.png)
--->
+:::image type="content" source="./media/sophos-mtd-connector/sophos-network-spo-unblocked.png" alt-text="Product flow for granting access to the organizations files after the alert is remediated.":::
 
 ## Next steps
 

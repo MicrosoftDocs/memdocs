@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 02/15/2022
+ms.date: 06/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -144,6 +144,60 @@ After an update releases, it rolls out to tenants over the following days. This 
 
 The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of  *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
 
+### August 22, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:186ff8d5c9a70085adc01778251f577988fef9b456801dc30e846f1a2bc3784c
+
+- **serverImageDigest**: sha256:ec5bd023b5582e58b6b9eb6aa41a9b064003f5b2b228508115bf6d42be9564a3
+
+Changes in this release:
+- Security improvements
+- Mst-readiness script enhancements
+
+
+### July 27, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:94e08d27c4f18706b2e3d92594d8a173446638a641240ae86a18a583be257cae
+
+- **serverImageDigest**: sha256:683ff13cfc16824741e961f04b94bce766777a5dcc80f019af234b4c9948fd66
+
+Changes in this release:
+- Minor bug fixes
+- Set process limit to 6000 in the server container 
+
+
+### June 30, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:b42b8e158cebb91b6a69f2bdcedffde18a5f3f12cc502509c8aa9fea80f4daaa
+
+- **serverImageDigest**: sha256:aa45b73bf143f1e440329853362cb4f300d9cc865d758534a94b983c8286ca4d
+
+Changes in this release:
+- Minor bug fixes
+- Advanced setting improvements in Microsoft Tunnel configurations 
+- Logging improvements
+
+
+### April 27, 2022
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:588c0c59fb9e0032640e78b06cfe12c7be0b28b1d8ca01ad87fb315da4088446
+
+- **serverImageDigest**: sha256:81d42ec83b5157068b81d6243d46601b8c003e99513426ffb90d9cbac31bd271
+
+Changes in this release:
+- Minor bug fixes
+- Security bug fixes
+- Agent changes for forced cert renewal 
+- ADAL depcrecation, enables MSAL authentication during Agent enrollment 
+
 ### April 4, 2022
 
 Image hash values:
@@ -178,7 +232,7 @@ Image hash values:
 Changes in this release:
 
 - Minor bug fixes
-- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5, do not.
+- A new version of the *mst-readiness* tool is available for download. We recommend using the updated script, which now checks the Linux server build for the presence of the *ip_tables* module. While most Linux distributions load this module be default, some versions, like RHEL 8.5 and RHEL 8.6, do not.
 
   For more information including where to download the tool, see [Run the readiness tool](../protect/Microsoft-tunnel-prerequisites.md#run-the-readiness-tool).  
 
