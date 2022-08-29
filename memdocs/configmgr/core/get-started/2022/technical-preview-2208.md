@@ -27,7 +27,7 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [Intune RBAC for tenant attached devices](includes/2208/8126836.md)]
 [!INCLUDE [Dark theme is now extended to additional dashboards](includes/2208/14917369.md)]
-[!INCLUDE [CSS: [OSD] OSD TS might fail to resolve dependencies and reboot due to error "Failed to load TSCore.dll Code (0x8007007E)."](includes/2208/13879970.md)]
+[!INCLUDE [OSD TS might fail to resolve dependencies and reboot due to error](includes/2208/13879970.md)]
 
 <!-- ## General known issues  -->
 
