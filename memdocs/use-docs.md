@@ -83,11 +83,11 @@ With many modern web browsers, you can create a custom search engine. Use this f
         > [!NOTE]
         > This example is specific to the `ConfigMgr` scope. You can remove the scope variable to search all `docs.microsoft.com` or use a different scope.
         >
-        > The Microsoft Docs search engine requires a locale in the address. For example, `en-us`. You can change your entry to use a different locale.
+        > The Microsoft technical documentation search engine requires a locale in the address. For example, `en-us`. You can change your entry to use a different locale.
 
-    :::image type="content" source="media/docs-search-engine.png" alt-text="Add to Microsoft Edge a custom search engine for Microsoft Docs.":::
+    :::image type="content" source="media/docs-search-engine.png" alt-text="Add to Microsoft Edge a custom search engine for Microsoft technical documentation.":::
 
-After you add this search engine, type your keyword in the browser address bar, press `Tab`, then type your search terms, and press `Enter`. It will automatically search Microsoft Docs for your specified terms using the defined scope.
+After you add this search engine, type your keyword in the browser address bar, press `Tab`, then type your search terms, and press `Enter`. It will automatically search Microsoft technical documentation for your specified terms using the defined scope.
 
 ## About feedback
 
@@ -119,7 +119,7 @@ If you create an issue for something not related to docs, Microsoft will close t
 - [Product questions](/answers/products/enterprise-mobility-security)
 - Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Endpoint Manager](get-support.md)
 
-To share feedback on the fundamental docs.microsoft.com platform, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors.
+To share feedback on the Microsoft Docs platform itself, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors.
 
 ## Notifications
 
@@ -127,10 +127,10 @@ To receive notifications when content changes in the documentation library, use 
 
 1. Use the [docs search](/search/) to find an article or set of articles.
 
-    - Search for a single article by title, for example: [What's new in Microsoft Intune](/search/?scope=Intune&terms="What%27s%20new%20in%20microsoft%20intune"%2B"learn%20what%27s%20new").
+    - Search for a single article by title, such as [What's new in Microsoft Intune](/search/?scope=Intune&terms="What%27s%20new%20in%20microsoft%20intune"%2B"learn%20what%27s%20new).
 
         > [!TIP]
-        > To refine the search to a single article, use the full title that displays in the docs.microsoft.com search results. You can also use a string from the first paragraph, as shown in this example.
+        > To refine the search to a single article, use the full title that displays in the Microsoft technical documentation search results. You can also use a string from the first paragraph, as shown in this example.
 
         This example results in the following RSS link:
 
@@ -159,7 +159,7 @@ To receive notifications when content changes in the documentation library, use 
 
 ## Contribute
 
-The Microsoft Endpoint Manager documentation library, like most content on docs.microsoft.com, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see the [Contributor Guide](/contribute/). The only prerequisite is to create a [GitHub account](https://github.com/join).
+The Microsoft Endpoint Manager documentation library, like most Microsoft technical documentation, is open-sourced on GitHub. This library accepts and encourages community contributions. For more information on how to get started, see our [contributor guide](/contribute/). The only prerequisite is to create a [GitHub account](https://github.com/join).
 
 ### Basic steps to contribute
 
