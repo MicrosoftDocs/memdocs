@@ -32,8 +32,15 @@ ms.collection: M365-identity-device-management
 
 The **Resize** remote action lets you upgrade a Windows 365 Enterprise Cloud PC’s RAM, CPU, and storage size to meet the user’s needs. Resizing is important for users that need:
 
-- More powerful Cloud PCs to run CPU intensive applications.
-- More disk space for file storing.
+- Upgrade a Windows 365 Enterprise Cloud PC’s RAM, CPU, and storage size to meet the user’s needs.
+- Downgrade the RAM and CPU of a Cloud PC.
+
+Resizing gives admins the flexibility to upgrade/downgrade without having to provision Cloud PCs from scratch. Resizing also allows admins the flexibility to:
+- Increase the RAM and vCPU cores when a user requires CPU intensive applications.
+- Increase the disk space for file storing.
+- Decrease the RAM and vCPU cores when a user does not require to run CPU intensive applications.
+- Resizing does not allow downsizing of disk space
+
 
 ## Requirements
 
@@ -55,10 +62,10 @@ Resizing isn’t supported for Cloud PCs provisioned through group-based license
 1. Contact your end users and have them save their work and sign out. Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin.
 2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a device > **Resize**.
 ![Screenshot of resize a Cloud PC](./media/resize-cloud-pc/resize.png)
-3. You’ll see a list with all the possible SKUs that you can upgrade to. You can only increase a Cloud PC’s storage and specifications. Options with lower storage or specifications are grayed out. Select one of the available options.
+3. You’ll see a list with all the possible SKUs that you can upgrade to. You increase and decrease a Cloud PC’s specs (RAM/vCPU), but you can only increase the OS disk storage. Decreasing OS disk storage is NOT possible. If you are downsizing a user’s Cloud PC, options with lower storage will be grayed out. Select one of the available options.
 4. Select **Resize**.
     - When triggering a resize, the Cloud PC will be rebooted and the user will be immediately disconnected from their current session. Make sure the user saves all their work to avoid any potential data loss.
-    - If there are available licenses, the upgrade will take place.
+    - If there are available licenses, the upgrade/downgrade will take place.
     - If you have a combination of paid and trial licenses, the resize feature will use your paid licenses first. After these licenses run out, the resize operation will use your trial licenses.
     - If there are no licenses in your inventory, the resizing will fail. You can contact your procurement admin to request more licenses. After the license has been purchased and added to the inventory in the Microsoft Admin Center, you can retry the resize operation.
 
