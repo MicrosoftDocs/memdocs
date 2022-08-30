@@ -203,7 +203,6 @@ The policy settings enforced in level 3 include all the policy settings recommen
 | Data transfer |       Approved   keyboards  |          Require  |          Android        |  |
 | Data transfer |       Select   keyboards to approve  |          *add/remove   keyboards*  |          Android        | With Android, keyboards must be selected in   order to be used based on your deployed Android devices.  |
 | Functionality |       Printing org data  |          Block  |          iOS/iPadOS, Android         |  |
-| Device conditions |       Require device lock  |          High/Block Access  |          Android        | This setting ensures that Android devices have a device password that meets the minimum password requirements.  |
 
 #### Access requirements
 
@@ -220,6 +219,7 @@ The policy settings enforced in level 3 include all the policy settings recommen
 
 | Setting | Setting description |          Value / Action  |          Platform        | Notes |
 |----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Device conditions |       Require device lock  |          High/Block Access  |          Android        | This setting ensures that Android devices have a device password that meets the minimum password requirements.  |
 |       Device   conditions  |          Jailbroken/rooted devices  |        N/A / Wipe data  |          iOS/iPadOS,   Android        |  |
 |       Device   conditions  |          Max   allowed threat level  |          Secured / Block access  |          iOS/iPadOS,   Android        | <p>Unenrolled devices can be   inspected for threats using Mobile Threat Defense. For more information,   see  [Mobile Threat Defense for   unenrolled devices](../protect/mtd-enable-unenrolled-devices.md).      </p><p>     If the device is enrolled, this setting can be skipped in favor of   deploying Mobile Threat Defense for enrolled devices. For more information,   see [Mobile Threat Defense for enrolled   devices](../protect/mtd-device-compliance-policy-create.md).</p> |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor<br>   Example: 11.0* / Block access   |          Android        | Microsoft recommends configuring   the maximum Android major version to ensure beta or unsupported versions of the operating system are not used.   See [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/) for Android's latest   recommendations |
