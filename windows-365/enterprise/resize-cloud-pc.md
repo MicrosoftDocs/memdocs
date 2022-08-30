@@ -30,17 +30,10 @@ ms.collection: M365-identity-device-management
 
 # Resize a Cloud PC (preview)
 
-The **Resize** remote action lets yo:
+The **Resize** remote action lets you upgrade a Windows 365 Enterprise Cloud PC’s RAM, CPU, and storage size to meet the user’s needs. Resizing is important for users that need:
 
-- Upgrade a Windows 365 Enterprise Cloud PC’s RAM, CPU, and storage size to meet the user’s needs.
-- Downgrade the RAM and CPU of a Cloud PC.
-
-Resizing gives admins the flexibility to upgrade/downgrade without having to provision Cloud PCs from scratch. Resizing also allows admins the flexibility to:
-
-- Increase the RAM and vCPU cores when a user requires CPU intensive applications.
-- Increase the disk space for file storing.
-- Decrease the RAM and vCPU cores when a user does not require to run CPU intensive applications.
-- Resizing does not allow downsizing of disk space
+- More powerful Cloud PCs to run CPU intensive applications.
+- More disk space for file storing.
 
 ## Requirements
 
