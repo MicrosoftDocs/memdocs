@@ -52,13 +52,17 @@ Access to the Company Portal app is neccessary if you want to:
 - Let users choose which corporate apps to use on their devices, or 
 - Provide a staged enrollment in which the device is enrolled and receives device policies before users authenticate in Company Portal   
 
-### Step 1: Purchase app license    
+This section describes how to deploy the app to new and already-enrolled devices. 
+
+### Purchase app license    
 ADE enrollment isn't compatible with the App Store version of the Company Portal app. To provide users with the app, you can purchase Company Portal app licenses through Apple Business Manager or Apple School Manager, and assign the licenses to groups in the Microsoft Endpoint Manager admin center. For more information about how to assign this type of app, see [assign a volume-purchased app](../apps/vpp-apps-ios.md#assign-a-volume-purchased-app). 
 
-### Step 2: Configure the app  
+### Configure the app  
 When assigning the app, make sure to deploy it as a [device-licensed VPP app](../apps/vpp-apps-ios.md#how-are-purchased-apps-licensed) and set the assignment type to *required*. These configurations ensure that the app is deployed to devices already enrolled.  
 
-Device-licensed apps also support automatic app updates. To enable automatic updates for the Company Portal app, see [Upload an Apple VPP or Apple Business Manager location token](../apps/vpp-apps-ios.md#upload-an-apple-vpp-or-apple-business-manager-location-token), which describes how to access your token settings in the admin center. When you get to the **Automatic app updates** setting, select **Yes**. If you don't enable automatic updates, the user must manually check for them.     
+Device-licensed apps also support automatic app updates. To enable automatic updates for the Company Portal app, see [Upload an Apple VPP or Apple Business Manager location token](../apps/vpp-apps-ios.md#upload-an-apple-vpp-or-apple-business-manager-location-token), which describes how to access your token settings in the admin center. When you get to the **Automatic app updates** setting, select **Yes**. If you don't enable automatic updates, the user must manually check for them.  
+
+### Device staging  
 
 *Device staging* is an enrollment method used to transition a device without user affinity, to a device with user affinity. To set up this type of enrollment: 
 
