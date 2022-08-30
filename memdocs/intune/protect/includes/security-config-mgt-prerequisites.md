@@ -11,9 +11,6 @@ ms.topic: include
 
 Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario.
 
-> [!IMPORTANT]
-> This feature is not supported on GCC High environments.
-
 ### Environment
 
 When a device onboards to Microsoft Defender for Endpoint:
