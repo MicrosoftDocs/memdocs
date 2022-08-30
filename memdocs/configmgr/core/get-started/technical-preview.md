@@ -2,7 +2,7 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/12/2022
+ms.date: 08/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -128,11 +128,11 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2207
+### Technical preview version 2208
 
-- [Distribution point content migration](2022/technical-preview-2207.md#bkmk_dpconmig) <!--10928371-->
-- [Improvements to Configuration Manager policies for Microsoft Defender Application Guard](2022/technical-preview-2207.md#bkmk_app-guard) <!--14059872-->
-- [PowerShell release notes preview](2022/technical-preview-2207.md#bkmk_powershell) <!--14637353-->
+- [Intune RBAC for tenant attached devices](2022/technical-preview-2208.md#bkmk_enable-intune) <!--8126836-->
+- [Dark theme is now extended to additional dashboards](2022/technical-preview-2208.md#bkmk_improvements-to-the-dark-theme) <!--14917369-->
+
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -151,6 +151,12 @@ The following features were released with previous versions of the Configuration
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
 <!-- ### Technical preview version 2111 -->
+
+### Technical preview version 2207
+
+- [Distribution point content migration](2022/technical-preview-2207.md#bkmk_dpconmig) <!--10928371-->
+- [Improvements to Configuration Manager policies for Microsoft Defender Application Guard](2022/technical-preview-2207.md#bkmk_app-guard) <!--14059872-->
+- [PowerShell release notes preview](2022/technical-preview-2207.md#bkmk_powershell) <!--14637353-->
 
 ### Technical preview version 2206
 
