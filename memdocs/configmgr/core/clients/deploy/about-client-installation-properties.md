@@ -404,6 +404,10 @@ Example: `CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US |
 
 For more information about the certificate issuers list and how clients use it during the certificate selection process, see [Planning for PKI client certificate selection](../../plan-design/security/plan-for-certificates.md#pki-client-certificate-selection).
 
+### `CCMCERTNAMECHECK`
+<!--14846212-->
+Starting in version 2207, this property can be used to skip checking the subject name for the certificate.`CCMCERTNAMECHECK=0` skips checking the subject name of the certificate.
+
 ### `CCMCERTSEL`
 
 If the client has more than one certificate for HTTPS communication, this property specifies the criteria for it to select a valid client authentication certificate.
