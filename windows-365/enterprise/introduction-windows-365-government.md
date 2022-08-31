@@ -64,9 +64,8 @@ The following features are not yet supported for Windows 365 GCC and/or GCCH.
 |Unified dashboard??|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Endpoint analytics|![Check](./media/manage-rdp-device-restrictions/checkmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |End user feedback  in the web client and windows365.microsoft.com|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
-|Fidalgo/devbox?|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
-|36609973??|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
-|39889569??|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
+|Post-provisioning Cloud PC customizations|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
+|Windows 365 app support|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 
 <!-- ########################## -->
 ## Next steps
