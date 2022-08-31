@@ -39,6 +39,8 @@ Connectivity health checks are run on individual Cloud PCs and give information 
 
 If the Cloud PC is connected, the status will show as **Available**.
 
+If there is a problem with the Cloud PC's connection, the status will show as **Unavailable**. Details appear on the right. Select **Troubleshoot this connection** to troubleshoot the issue.
+
 ## Connectivity checks
 
 | Check | Failure description | Troubleshooting |
