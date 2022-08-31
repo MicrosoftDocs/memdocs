@@ -87,15 +87,15 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
 - Asia Southeast
 - Australia East
 - Canada Central
-- East Asia Regions
-- East Korea Central
+- East Asia
+- Korea Central
 - Europe North
 - Europe West
 - France Central
 - Germany West Central
 - India Central
 - Japan East
-- Norway
+- Norway East
 - Switzerland North
 - UK South
 
