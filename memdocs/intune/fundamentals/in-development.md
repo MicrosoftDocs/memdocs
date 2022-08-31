@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 07/28/2022
+ms.date: 08/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -65,9 +65,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## App management
 
-### Noncompliance details available for Android (AOSP) in Microsoft Intune app<!-- 12645770 -->
-Android (AOSP) users will be able to view the reasons why devices are marked as noncompliant in the Microsoft Intune app. This information will be available in the Intune app for devices enrolled as user-associated Android (AOSP) devices.
-
 ### New app types for Microsoft Endpoint Manager<!-- 7210233 -->
 As an admin, you will be able to create and assign two new types of Intune apps:
 - **iOS/iPadOS web clip** 
@@ -75,23 +72,23 @@ As an admin, you will be able to create and assign two new types of Intune apps:
 
 These new app types work in a similar way to the existing **web link** application type, however they apply only for their specific platform, whereas web link applications apply across all platforms. With these new app types, you can assign to groups and also use assignment filters to limit the scope of assignment. You will find this functionality in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), by selecting **Apps** > **All Apps** > **Add**.
 
+### Ending support for Windows 8.1<!-- 14740233 -->
+Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Additionally, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune will no longer support Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". For more information, see [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-81-).
+
 <!-- ***********************************************-->
 
 ## Device management
 
-### Reset passcode remote action available for Android (AOSP) Corporate devices<!-- 10247332 -->
-You will be able to leverage Reset passcode remote action from the Microsoft Endpoint Manager admin center for Android Open Source Project (AOSP) Corporate devices.
+###  Support for Locate device on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices<!-- 12391424 -->
+You'll be able to use "Locate device" on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices. Using this feature, admins will be able to locate lost or stolen corporate devices on-demand. To do this, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
 
-For information on remote actions, see:
-- [Reset or remove a device passcode in Intune](../remote-actions/device-passcode-reset.md)
-- [Remotely restart devices with Intune](../remote-actions/device-restart.md)
-- [Remotely lock devices with Intune](../remote-actions/device-remote-lock.md)
+For information on locating lost or stolen devices with Intune, go to:
+ - [Locate lost or stolen devices with Intune](../remote-actions/device-locate.md)
 
 Applies to:
-- Android Open Source Project (AOSP)
-
-### View contents of macOS shell scripts and custom attributes<!-- 14757037 -->
-You'll be able to view the contents of macOS shell scripts and custom attributes after you upload these to Intune. When this capability is available, you'll be able to view Shell scripts and custom attributes in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **macOS**. For related information, see [Use shell scripts on macOS devices in Intune](../apps/macos-shell-scripts.md).
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
+- Android Enterprise corporate owned work profile
 
 ### Intune moving to support iOS/iPadOS 14 and higher later this year<!-- 14778947 -->
 Later this year, Apple is expected to release iOS/iPadOS 16. Due to this expected release, Microsoft Intune and the Intune Company Portal will require iOS/iPadOS 14 and higher shortly after the release of iOS/iPad 16. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
@@ -101,138 +98,137 @@ With Apple's expected release of macOS 13 Ventura later this year, Microsoft Int
 
 <!-- ***********************************************-->
 
+## Device enrollment
+
+### Windows Autopilot diagnostics will capture ESP failures<!-- 1895390 -->
+Windows Autopilot diagnostics will automatically capture diagnostics about Windows Autopilot failures that occur on the Enrollment Status Page (ESP). Diagnostics will be available to download in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+
+<!-- ***********************************************-->
+
 ## Device configuration
 
-### iOS/iPadOS settings catalog will support declarative device management<!-- 15016105 -->
-On iOS/iPadOS 15+ devices enrolled using [User Enrollment](../enrollment/ios-user-enrollment.md), the settings catalog will be able use Apple’s declarative device management (DDM) when configuring settings.
-
-- No action is required to use DDM. The feature will be built into the settings catalog.
-- There is no impact to existing policies in the settings catalog.
-- iOS/iPadOS devices that aren't enabled for DDM will continue to use Apple’s standard MDM protocol.
-
-For more information, go to:
-- [Meet declarative device management](https://aka.ms/DDM2021) (opens Apple's web site)
-- [Microsoft simplifies Endpoint Manager enrollment for Apple updates](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/microsoft-simplifies-endpoint-manager-enrollment-for-apple/ba-p/3570319)
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md)
-
-Applies to:
--  iOS/iPadOS 15 or later devices enrolled using Apple User Enrollment
-
-### New macOS settings available in the Settings Catalog <!-- 15020250 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
+### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 15349701 -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you'll be able to find these settings by selecting **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
-**Microsoft Auto Update**:
+**Accounts > LDAP**:
 
-- Current Channel
-- Number of minutes for the final countdown timer
+- LDAP Account Description
+- LDAP Account Host Name
+- LDAP Account Password
+- LDAP Account Use SSL
+- LDAP Account User Name
+- LDAP Search Settings
 
-**Restrictions**:
-
-- Allow Universal Control
+Applies to:
+- iOS/iPadOS
+- macOS
 
 The following settings are also in Settings Catalog. Previously, they were only available in Templates:
 
-**Authentication > Extensible Single Sign On**:
+**Privacy > Privacy Preferences Policy Control**:
 
-- Extension Data
-- Extension Identifier
-- Hosts
-- Realm
-- Screen Locked Behavior
-- Team Identifier
-- Type
-- URLs
-
-**Authentication > Extensible Single Sign On > Extensible Single Sign On Kerberos**:
-
-- Extension Data
-- Allow Automatic Login
-- Allow Password Change
-- Credential Bundle ID ACL
-- Credential Use Mode
-- Custom Username Label
-- Delay User Setup
-- Domain Realm Mapping
-- Help Text
-- Include Kerberos Apps In Bundle ID ACL
-- Include Managed Apps In Bundle ID ACL
-- Is Default Realm
-- Monitor Credentials Cache
-- Perform Kerberos Only
-- Preferred KDCs
-- Principal Name
-- Password Change URL
-- Password Notification Days
-- Password Req Complexity
-- Password Req History
-- Password Req Length
-- Password Req Min Age
-- Password Req Text
-- Require TLS For LDAP
-- Require User Presence
-- Site Code
-- Sync Local Password
-- Use Site Auto Discovery
-- Extension Identifier
-- Hosts
-- Realm
-- Team Identifier
-- Type
-
-For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+- Accessibility
+- Address Book
+- Apple Events
+- Calendar
+- Camera
+- File Provider Presence
+- Listen Event
+- Media Library
+- Microphone
+- Photos
+- Post Event
+- Reminders
+- Screen Capture
+- Speech Recognition
+- System Policy All Files
+- System Policy Desktop Folder
+- System Policy Documents Folder
+- System Policy Downloads Folder
+- System Policy Network Volumes
+- System Policy Removable Volumes
+- System Policy Sys Admin Files
 
 Applies to:
 - macOS
 
-### New iOS/iPadOS settings in the Settings Catalog<!-- 15020319 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new iOS/iPadOS settings available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** for platform > **Settings catalog** for profile type). Previously, these settings were only available in Templates:
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-**Authentication > Extensible Single Sign On**:
+### Filter app and group policy assignments using Windows 11 SE operating system SKUs<!-- 10588651 -->
+When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
 
-- Extension Data
-- Extension Identifier
-- Hosts
-- Realm
-- Screen Locked Behavior
-- Team Identifier
-- Type
-- URLs
+Two new Windows 11 SE operating system SKU's will added. You'll be able to use these SKUs in your assignment filters to include or exclude Windows 11 SE devices from applying group-targeted policies and applications.
 
-**Authentication > Extensible Single Sign On > Extensible Single Sign On Kerberos**:
-
-- Extension Data
-- Allow Automatic Login
-- Credential Bundle ID ACL
-- Domain Realm Mapping
-- Help Text
-- Include Managed Apps In Bundle ID ACL
-- Is Default Realm
-- Preferred KDCs
-- Principal Name
-- Require User Presence
-- Site Code
-- Use Site Auto Discovery
-- Extension Identifier
-- Hosts
-- Realm
-- Team Identifier
-- Type
-
-**System Configuration > Lock Screen Message**:
-- Asset Tag Information
-- Lock Screen Footnote
-
-For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+For more information on filters and the device properties you can currently use, go to:
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md)
+- [Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager](filters-device-properties.md)
 
 Applies to:
-- iOS/iPadOS
+- Windows 11 SE
 
-### SCEP certificate profile support for Android (ASOP) devices<!-- 8506336 -->
-To expand our support for the Android Open Source Project (AOSP) platform, you’ll soon be able to deploy Simple Certificate Enrollment Protocol (SCEP) certificate profiles to corporate-owned and userless devices. In Intune, you can find this functionality in **Devices** > **Configuration profiles** > **Create profile** > **Android (AOSP)**.
+### New lock screen message when adding custom support information to Android Enterprise devices<!-- 13158348 -->
+On Android Enterprise devices, you can create a device restrictions configuration profile that shows a custom support message on the devices. You'll be able to configure this in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type > **Custom support information**.
 
-This expands on the [certificate profile support](../fundamentals/whats-new.md#certificate-profiles-support-for-android-asop-devices) that was added in June of 2022.
+There will be a new setting you can configure:
+- **Lock screen message**: Add a message that's shown on the device lock screen. 
+
+When you configure the **Lock screen message**, you can also use the following device tokens to show device-specific information:
+
+- `{{AADDeviceId}}`: Azure AD device ID
+- `{{AccountId}}`: Intune tenant ID or account ID
+- `{{DeviceId}}`: Intune device ID
+- `{{DeviceName}}`: Intune device name
+- `{{domain}}`: Domain name
+- `{{EASID}}`: Exchange Active Sync ID
+- `{{IMEI}}`: IMEI of the device
+- `{{mail}}`: Email address of the user
+- `{{MEID}}`: MEID of the device
+- `{{partialUPN}}`: UPN prefix before the @ symbol
+- `{{SerialNumber}}`: Device serial number
+- `{{SerialNumberLast4Digits}}`: Last 4 digits of the device serial number
+- `{{UserId}}`: Intune user ID
+- `{{UserName}}`: User name
+- `{{userPrincipalName}}`: UPN of the user
+
+> [!NOTE]
+> Variables aren't validated in the UI and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}`, instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
+
+To see a list of settings you can currently configure, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
+
+Applies to:
+- Android 7.0 and newer
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
+- Android Enterprise corporate owned work profile
+
+### New password complexity requirements for Android Enterprise 12+ personally owned devices with a work profile<!-- 12436068 -->
+On Android Enterprise 11 and older personally owned devices with a work profile, you can set the **Required password type** and a **Minimum password length** in device configuration profiles and compliance policies.
+
+Google is deprecating these features for Android 12+ personally owned devices with a work profile and replacing them with new password complexity requirements. For more information about this change, go to [Day zero support for Android 13](https://aka.ms/Intune/Android13).
+
+The new **Password complexity** setting will have the following options:
+
+- **Not configured**: Intune doesn't change or update this setting. By default, the OS may not require a password.
+- **Low**: Pattern or PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked.
+- **Medium**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length, alphabetic length, or alphanumeric length must be at least 4 characters.
+- **High**: PIN with repeating (4444) or ordered (1234, 4321, 2468) sequences are blocked. The length must be at least 8 characters. The alphabetic or alphanumeric length must be at least 6 characters.
+
+If you currently use the **Required password type** and **Minimum password length** settings in your device configuration and compliance policies on Android 12+, then we recommend using the new **Password complexity** setting instead.
+
+If you continue to use the **Required password type** and **Minimum password length** settings, and don't configure the **Password complexity** setting, then new devices running Android 12+ will default to the **High** password complexity.
+
+There is no impact for existing devices with the **Required password type** and **Minimum password length** settings configured.
+
+For more information on the existing settings you can configure, go to:
+
+- [Android Enterprise personally owned devices with a work profile - configuration profile settings list](../configuration/device-restrictions-android-for-work.md#personally-owned-devices-with-a-work-profile)
+- [Android Enterprise personally owned devices with a work profile - compliance policy settings list](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
+
+Applies to:
+- Android 12.0 and newer
+- Android Enterprise personally owned devices with a work profile
 
 ### Filter on the user scope or device scope in the Settings Catalog for Windows devices<!-- 13949975 -->
 When you create a Settings Catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings Catalog (preview)** for profile type).
@@ -245,24 +241,21 @@ Applies to:
 - Windows 10
 - Windows 11
 
-### Import custom ADMX and ADML administrative templates to create a device configuration profile<!-- 4970862 -->
-You can create a device configuration policy that uses built-in ADMX templates (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Administrative templates**).
-
-You'll be able to import custom and 3rd party/partner ADMX and ADML templates into the Endpoint Manager admin center. Once imported, you can create a device configuration policy, assign the policy to your devices, and manage the settings in the policy.
-
-For information on the built-in ADMX templates, see [Use Windows 10/11 templates to configure group policy settings in Microsoft Intune](../configuration/administrative-templates-windows.md).
-
-Applies to:
-- Windows 11
-- Windows 10
-
 <!-- ***********************************************-->
 
 ## Device security
 
-### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009514 -->
- 
-You’ll soon be able to add reusable groups of settings to your profiles for Microsoft Defender Firewall Rules. The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
+### Trend Micro – new Mobile Threat Defense (MTD) partner<!--11017779 -->
+You’ll soon be able to use Trend Micro as an integrated Mobile Threat Defense (MTD) partner with Intune. To connect Trend Micro, you’ll configure the Trend Micro MTD connector in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Mobile Threat Defense**.
+
+With Trend Micro as a MTD partner, you’ll be able to control mobile device access to your organization’s resources using conditional access that’s based on risk assessment.
+
+Applies to:  
+- Android Enterprise
+- iOS/iPadOS
+
+### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009541 -->
+ You’ll soon be able to add reusable groups of settings to your profiles for Microsoft Defender Firewall Rules. The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.  
 
 Features of the reusable settings groups will include:  
 - Add one or more remote IP addresses.  
@@ -274,13 +267,6 @@ Features of the reusable settings groups will include:
 - Edits to a settings group that's in use are automatically applied to the Firewall Rules profiles that use that group.  
   
 Reusable groups will be configured on a new Tab for *Reusable settings* that will be available when you view endpoint security Firewall policy.  In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall**.
-
-<!-- ***********************************************-->
-
-## Device enrollment
-
-### Configure zero-touch enrollment in the admin center<!-- 1872357 -->
-Configure zero-touch enrollment seamlessly from the admin center. This feature will let you link your zero-touch account to Intune, add support information, configure zero-touch enabled devices with Android Device Policy, and customize provisioning extras.  
 
 <!-- ***********************************************-->
 

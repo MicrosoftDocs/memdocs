@@ -118,7 +118,9 @@ items:
       - name: Manage RDP device redirections 
         href: manage-rdp-device-redirections.md
       - name: Enable screen capture protection
-        href: /azure/virtual-desktop/screen-capture-protection?toc=/windows-365/enterprise/toc.json&bc=/windows-365/breadcrumb/toc.json
+        href: /azure/virtual-desktop/screen-capture-protection?context=/windows-365/context/pr-context
+      - name: Restrict Office 365 access to Cloud PCs 
+        href: restrict-office-365-cloud-pcs.md
     - name: Apps
       items:
       - name: App overview
@@ -178,9 +180,9 @@ items:
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
-        href: /mem/intune/protect/windows-10-update-rings?toc=/windows-365/enterprise/toc.json&bc=/windows-365/breadcrumb/toc.json
+        href: /mem/intune/protect/windows-10-update-rings?context=/windows-365/context/pr-context
       - name: Windows 10 feature updates
-        href: /mem/intune/protect/windows-10-feature-updates?toc=/windows-365/enterprise/toc.json&bc=/windows-365/breadcrumb/toc.json
+        href: /mem/intune/protect/windows-10-feature-updates?context=/windows-365/context/pr-context
     - name: End-user experience
       items:
       - name: End-user hardware requirements
@@ -198,7 +200,7 @@ items:
     - name: Azure network connection health checklist
       href: health-checks.md
     - name: Remote Desktop client
-      href: /azure/virtual-desktop/troubleshoot-client??toc=/windows-365/enterprise/toc.json&bc=/windows-365/breadcrumb/toc.json
+      href: /azure/virtual-desktop/troubleshoot-client?context=/windows-365/context/pr-context
     - name: Connection errors
       href: connection-errors.md
     - name: Provisioning errors

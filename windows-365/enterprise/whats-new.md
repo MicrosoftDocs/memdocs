@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/16/2022
+ms.date: 08/23/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -48,6 +48,38 @@ Learn what new features are available in Windows 365 Enterprise.
 ### End user experience
 -->
 
+<!-- ########################## -->
+## Week of August 29, 2022 (Service release 2208)
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### New health check: Localization language package readiness<!--41089729  -->
+
+The **Azure network connection** tab has a new health check: **Localization language package readiness**. This health check verifies that the operating system and Microsoft 365 language packages were installed. For more information, see [Azure network connection health checks](health-checks.md).
+
+#### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
+
+You can now review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues. To see the checks, select **Devices** > **Windows 365** > **Azure network connections** > select a connection in the list > **Overview**.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New supported Azure regions: East Asia Regions, East Korea Central, Norway, Switzerland North<!--37678838-->
+
+New Azure regions are now supported for Windows 365 Cloud PC provisioning: East Asia Regions, East Korea Central, Norway, and Switzerland North.
+
+For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
+## Week of August 22, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Restrict Office 365 services to Cloud PCs
+
+We’ve published a new help documentation article. For more information, see [Restrict Office 365 services to Cloud PCs](restrict-office-365-cloud-pcs.md).
 
 <!-- ########################## -->
 ## Week of August 15, 2022

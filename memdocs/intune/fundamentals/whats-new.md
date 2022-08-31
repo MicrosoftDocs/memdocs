@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/26/2022
+ms.date: 08/31/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,7 +60,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 -->
 
-## Week of August 22, 2022
+## Week of August 29, 2022
+
+### App management
+
+#### Updated Microsoft Intune App SDK for Android<!-- 15363982 -->
+The developer guide for the Intune App SDK for Android has been updated. The updated guide provides the following stages:
+- Planning the integration
+- MSAL prerequisite
+- Getting started with MAM
+- MAM integration essentials
+- Multi-Identity
+- App configuration
+- App participation features
+
+For more information, see [Intune App SDK for Android](../developer/app-sdk-android-phase1.md).
 
 ### Monitor and troubleshoot
 
@@ -69,6 +83,14 @@ You can use RSS to be notified when this page is updated. For more information, 
 You can now use the **?** icon in the Microsoft Endpoint Manager admin center to open a [help and support](../../get-support.md) session without losing your current node of focus in the admin center. The **?** icon is always available in the upper right of the title bar of the admin center. This change adds an additional method for accessing *Help and support*.
 
 When you select **?**, the admin center opens the help and support view in a new and separate side-by-side pane. By opening this separate pane, you’ll be free to navigate the support experience without affecting your original location and focus on the admin center.
+
+## Week of August 22, 2022
+
+### Device management
+
+#### Use Intune role-based access control (RBAC) for tenant attached devices <!-- 14996522 -->
+
+You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Endpoint Manager admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../configmgr/cloud-attach/use-intune-rbac.md).
 
 ## Week of August 15, 2022 (Service release 2208)
 
@@ -162,7 +184,7 @@ Applies to:
 -  iOS/iPadOS 15 or later devices enrolled using Apple User Enrollment
 
 #### New macOS settings available in the Settings Catalog <!-- 15020250 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the Settings Catalog. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -346,8 +368,8 @@ For more information, see [Use remote help with Intune and Microsoft Endpoint Ma
 
 ### Device enrollment
 
-#### Intune supports sign-in from another device during iOS/iPadOS Setup Assistant with modern authentication<!-- 12377183 -->  
-Users going through automated device enrollment (ADE) can now authenticate by signing in from another device.  This option is available for iOS/iPadOS devices enrolling via Setup Assistant with modern authentication. The screen that prompts device users to sign in from another device is embedded into Setup Assistant and shown to them during enrollment. For more information about the sign-in process for users, see [Get the Intune Company Portal app](../user-help/sign-in-to-the-company-portal.md#sign-in-via-another-device).  
+#### Intune supports sign-in from another device during iOS/iPadOS and macOS Setup Assistant with modern authentication<!-- 12377183 -->  
+Users going through automated device enrollment (ADE) can now authenticate by signing in from another device. This option is available for iOS/iPadOS and macOS devices enrolling via Setup Assistant with modern authentication. The screen that prompts device users to sign in from another device is embedded into Setup Assistant and shown to them during enrollment. For more information about the sign-in process for users, see [Get the Intune Company Portal app (../user-help/sign-in-to-the-company-portal.md#sign-in-via-another-device).  
 
 #### Detect and manage hardware changes on Windows Autopilot devices<!-- 12795465 --> 
 Microsoft Intune will now alert you when it detects a hardware change on an Autopilot-registered device. You can view and manage all affected devices in the admin center. Additionally, you have the option to remove the affected device from Windows Autopilot and register it again so that the hardware change is accounted for.
@@ -586,7 +608,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Require Managed Pasteboard
 - Safari Accept Cookies
 - Safari Allow Autofill
-- Safari Allow Java Script
+- Safari Allow JavaScript
 - Safari Allow Popups
 - Safari Force Fraud Warning
 
@@ -596,7 +618,7 @@ Applies to:
 - iOS/iPadOS
 
 #### New macOS settings available in the Settings Catalog<!-- 14875745 -->
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. There are new settings are available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. New settings are available in the Settings Catalog (**Devices** > **Configuration profiles** > **Create profile** > **macOS** for platform > **Settings catalog** for profile type).
 
 New settings include:
 
@@ -1046,7 +1068,7 @@ The following settings are available:
 - Prevent Visual Basic macros from using legacy MacScript
 - Prevent Visual Basic macros from using pipes to communicate
 - Show Template Gallery on app launch
-- Show Whats New dialog
+- Show What's New dialog
 - Visual Basic macro policy
 
 **Microsoft Office > Microsoft Outlook**:
@@ -1092,7 +1114,7 @@ Applies to:
 ### Device management
 
 #### Remotely restart and shut down macOS device<!-- 12472418 -->
-You'll be able to remotely restart or shutdown a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
+You'll be able to remotely restart or shut down a macOS device using device actions. These device actions are available for devices running macOS 10.13 and later. 
 
 For more information, see [Restart devices with Microsoft Intune](../remote-actions/device-restart.md). 
 
@@ -1123,7 +1145,7 @@ For more information, go to
 [Using Azure Virtual Desktop multi-session with Microsoft Intune](../fundamentals/azure-virtual-desktop-multi-session.md)
 
 #### View a managed device's group membership<!-- 4100067 -->
-In the monitor section of the **Devices** workload of Intune, you can view the group membership of all Azure AD groups for a managed device. You can select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **Monitor** > *select a device* > **Group Membership**. For more information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
+In **Devices** workload of Intune, you can view the group membership of all Azure AD groups for a managed device. You can select **Group Membership** by signing in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and selecting **Devices** > **All Devices** >  *select a device* > **Group Membership**. For more information, see [Device group membership report](../fundamentals/reports.md#device-group-membership-report-organizational).
 
 #### Improved certificate reporting details<!-- 13316515 -->
 We’ve changed what Intune displays when you view certificate details for devices and certificate profiles. To view the report, in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to > **Devices** > **Monitor** > **Certificates**.
@@ -2285,7 +2307,7 @@ Applies to:
 - Windows 10
 
 #### Filters are Generally Available (GA)<!-- 12466893 -->
-You can use filters to include or exclude devices in workload assignments (like policies and apps) based on different device properties. Filters is now generally available (GA).
+You can use filters to include or exclude devices in workload assignments (like policies and apps) based on different device properties. Filters are now generally available (GA).
 
 For more information on filters, see [Use filters when assigning your apps, policies, and profiles](../fundamentals/filters.md).
 
@@ -2627,7 +2649,7 @@ The following details for Windows 10 and Windows 11 devices are now collected an
 - TPM Manufacturer version
 - TPM Manufacturer ID
 
-These details are also included when you *Export* the details from the *All devices* pane.  
+These details are also included when you *export* the details from the *All devices* pane.  
 
 #### Settings for Shared iPad now generally available<!-- 10975827  -->  
 Four Shared iPad settings are now out of preview and generally available to use when creating an Apple enrollment profile. These settings are applied during automated device enrollment (ADE).
@@ -2898,7 +2920,7 @@ For more information about Android Enterprise device restriction profiles, see [
 
 #### New device restrictions setting prevents sharing work profile contacts with paired Bluetooth devices<!-- 8630136 -->
 
-A new device restrictions setting for corporate-owned work profile devices prevents users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  To configure the setting, go to **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
+A new device restriction setting for corporate-owned work profile devices prevents users from sharing their work profile contacts with paired Bluetooth devices, such as cars or mobile devices.  To configure the setting, go to **Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** for platform > **Device restrictions** for profile.  
 
 - Setting name:  **Contact sharing via Bluetooth (work profile-level)**
 - Setting toggles:  
@@ -4250,7 +4272,7 @@ To improve page load performance, app icons will now load in batches. End users 
 
 #### Endpoint analytics in Microsoft Productivity Score<!-- IN8529842 -->
 
-There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/productivity-score.md).
+There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/adoption-score.md).
 
 #### Endpoint analytics Application Reliability report<!-- IN5653073 -->
 
