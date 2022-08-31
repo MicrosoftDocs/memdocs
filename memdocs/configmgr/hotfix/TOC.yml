@@ -3,6 +3,8 @@ items:
   href: index.yml
 - name: Version 2207
   items:
+  - name: KB 14840616  Summary of changes in 2207
+    href: 2207/14840616.md
   - name: KB 14978429  Connected cache update for Microsoft Endpoint Configuration Manager version 2207
     href: 2207/14978429.md
 - name: Version 2203
