@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/14/2020
+ms.date: 08/31/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -29,11 +29,9 @@ ms.reviewer: laarrizz
 
 # Endpoint security firewall rule migration tool overview
 
-The script has a bug: It is looking if you have Endpoint Security policies that are "Target: MDM". If there is no existing policies like this, then the script will be stuck in an infinite loop. To make it work, you need to add either add a policy of that type or change line 46 to: while(($profileNameExist) -and ($profiles.Count -gt 0))
-
 Many organizations are moving their security configuration to Microsoft Endpoint Manager to make use of modern, cloud-based management. Endpoint security in Endpoint Manager offers rich management experiences of Windows Firewall configuration and granular firewall rule management.
 
-Because it can be challenging to move large numbers of existing Group Policies for Windows Firewall rules to Endpoint security policies in Endpoint Manager, we've created the **Endpoint security firewall rule migration tool**.
+Because it can be challenging to move large numbers of existing Group Policies for Windows Firewall rules to Endpoint security policies in Endpoint Manager, we've created the **Endpoint security firewall rule migration tool**, which is a PowerShell script.
 
 When you run the **Endpoint security firewall rule migration tool** on a reference Windows 10/11 client that has firewall rules based on Group Policy applied, the tool can automatically create Endpoint security firewall rule policies in Endpoint Manager. After the endpoint security rules are created, administrators can target the rules to Azure AD groups to configure MDM and co-managed clients.
 
@@ -42,6 +40,9 @@ Download the [Endpoint security firewall rule migration tool](https://aka.ms/End
 <a href="https://aka.ms/EndpointSecurityFWRuleMigrationTool"><img alt="Download the tool" src="./media/endpoint-security-firewall-rule-tool/downloadtool.png" width="170"></a>
 
 ## Tool usage
+
+> [!TIP]
+> The tool's PowerShell script looks for endpoint security policies that target **MDM**. When there are no policies that target **MDM**, the script can loop and fail to exit. To work around this condition, either add a policy that targets MDM before running the script, or edit the line 46 of the script to the following: `while(($profileNameExist) -and ($profiles.Count -gt 0))`
 
 Run the tool on a reference machine to migrate that machines current Windows Firewall rule configuration. When run, the tool exports all enabled firewall rules that are present on the device, and automatically creates new Intune policies with the collected rules.
 
