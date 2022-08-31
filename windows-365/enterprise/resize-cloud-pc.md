@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 06/01/2022
+ms.date: 08/30/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -48,10 +48,7 @@ To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Window
 
 The **Resize** remote action is supported for paid, preview, and trial licenses.
 
-Resizing isn’t supported for:
-
-- Cloud PCs provisioned through group-based licenses.
-- Cloud PCs that are Azure AD joined.
+Resizing isn’t supported for Cloud PCs provisioned through group-based licenses.
 
 ## Resize a Cloud PC
 

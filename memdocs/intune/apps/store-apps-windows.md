@@ -44,7 +44,7 @@ You can add a Microsoft Store app to Intune by doing the following:
 2. Select **Apps** > **All apps** > **Add**.
 3. In the **Select app type** pane, under the available **Store app** types, select **Microsoft store app**.
 4. Click **Select**. The **Add app** steps are displayed.
-5. To configure the **App information** for Microsoft store apps, navigate to the [Microsoft store](https://www.microsoft.com/store/apps) and search for the app you want to deploy. Display the app page and make a note of the app details. 
+5. To configure the **App information** for Microsoft store apps, navigate to the [Microsoft store](https://www.microsoft.com/store/apps), select **Open Store Apps**, and search for the app you want to deploy. Display the app page and make a note of the app details. 
 6. In the **App information** page, add the app details:
     - **Name**: Enter the name of the app as it is to be displayed in the company portal. Make sure that any app name that you use is unique. If an app name is duplicated, only one name is displayed to users in the company portal.
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.

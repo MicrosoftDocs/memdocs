@@ -274,7 +274,6 @@ Your cloud-native endpoint will need some applications. To get started, we recom
 
   - Select **configuration designer** for the settings format, as opposed to XML.
   - Select **Current Channel** for the update channel.
-  - Ensure that you de-select (uncheck) the option for **OneDrive (Groove)** as this app is the legacy OneDrive. Because OneDrive is included with Windows, it isn't mandatory to install it. Remove other applications you don't want installed by unchecking them.
 
   To deploy Microsoft 365 Apps, go to [Add Microsoft 365 apps to Windows devices using Microsoft Intune](./intune/apps/apps-add-office365.md)
 

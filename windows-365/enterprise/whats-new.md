@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/21/2022
+ms.date: 08/23/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -49,6 +49,75 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of August 29, 2022 (Service release 2208)
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### New health check: Localization language package readiness<!--41089729  -->
+
+The **Azure network connection** tab has a new health check: **Localization language package readiness**. This health check verifies that the operating system and Microsoft 365 language packages were installed. For more information, see [Azure network connection health checks](health-checks.md).
+
+#### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
+
+You can now review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues. To see the checks, select **Devices** > **Windows 365** > **Azure network connections** > select a connection in the list > **Overview**. This feature is rolling out to all customers over the next few weeks.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New supported Azure regions: East Asia Regions, East Korea Central, Norway, Switzerland North<!--37678838-->
+
+New Azure regions are now supported for Windows 365 Cloud PC provisioning: East Asia Regions, East Korea Central, Norway, and Switzerland North.
+
+For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
+## Week of August 22, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Restrict Office 365 services to Cloud PCs
+
+We’ve published a new help documentation article. For more information, see [Restrict Office 365 services to Cloud PCs](restrict-office-365-cloud-pcs.md).
+
+<!-- ########################## -->
+## Week of August 15, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Language and region configuration now also applies to Microsoft 365 Apps<!--40673170-->
+
+Provisioning policies configured for language now also apply to Microsoft 365 Apps. When a user first signs in, their Microsoft 365 Apps will use the configured language. For more information, see [Provide a localized Windows experience](provide-localized-windows-experience.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Remoting connection report in Endpoint Analytics now generally available<!--38310774 -->
+The remoting connection report in Endpoint Analytics has moved out of preview and into general availability. For more information, see [Remoting connection report](report-remoting-connection.md).
+
+#### Resource performance report in Endpoint Analytics now generally available<!-- 40028465 -->
+
+The resource performance report in Endpoint Analytics has moved out of preview and into general availability. For more information, see [Resource performance report](report-resource-performance.md).
+
+<!-- ########################## -->
+## Week of August 8, 2022
+
+### Documentation
+
+#### New documentation article: Windows 365 security
+
+We’ve published a new help documentation article. For more information, see [Windows 365 security](security.md).
+
+<!-- ########################## -->
+## Week of July 25, 2022
+
+### Resize action support for more Cloud PCs<!--40263425  -->
+
+The resize action now supports Cloud PCs that are Azure Active Directory joined.
+
+<!-- ########################## -->
 ## Week of July 18, 2022
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
@@ -63,7 +132,7 @@ For newly provisioned and reprovisioned Cloud PCs, you can now set the Outlook m
 
 #### Windows 11 optimized image now available for Windows 365 Cloud PCs<!--39890525 -->
 
-You can now choose the **Windows 11 Enterprise + OS Optimizations** image when creating a new provisioning policy.
+You can now choose the **Windows 11 Enterprise + OS Optimizations** image when creating a new provisioning policy. This feature is rolling out to all customers over the next few weeks.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning

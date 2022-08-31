@@ -8,7 +8,7 @@ keywords:
 author: smbhardwaj  
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 08/03/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -33,7 +33,7 @@ ms.collection:
 
 Azure Virtual Desktop multi-session with Microsoft Intune is now generally available.
 
-You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Endpoint Manager admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you'll be able to use both device-based and user configuration. 
+You can now use Microsoft Intune to manage Windows 10 or Windows 11 Enterprise multi-session remote desktops in the Microsoft Endpoint Manager admin center just as you can manage a shared Windows 10 or Windows 11 client device. When managing such virtual machines (VMs), you'll be able to use both device-based configuration targeted to devices or user-based configuration targeted to users. 
 
 Windows 10 or Windows 11 Enterprise multi-session is a new Remote Desktop Session Host exclusive to [Azure Virtual Desktop](/azure/virtual-desktop/) on Azure. It provides the following benefits:
 
@@ -45,7 +45,10 @@ You can manage **Windows 10** and **Windows 11 Enterprise multi-session** VMs cr
 
 ## Overview
 
-Device configuration support in Microsoft Intune for Windows 10 or Windows 11 Enterprise multi-session is Generally Available (GA). This means [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs. Additionally, multi-session configurations can be targeted to devices or device groups. 
+Device configuration support in Microsoft Intune for Windows 10 or Windows 11 Enterprise multi-session is Generally Available (GA). This means [policies defined in the OS scope](/windows/client-management/mdm/policy-configuration-service-provider) and apps configured to install in the system context can be applied to Azure Virtual Desktop multi-session VMs when assigned to device groups. 
+
+> [!NOTE]
+> Device-based configuration cannot be assigned to users and user-based configuration cannot be assigned to devices. It will be reported as **Error** or **Not applicable**.
 
 User configuration support in Microsoft Intune for Windows 11 multi-session VMs is in public preview. With this you'll be able to:
 
@@ -70,6 +73,7 @@ This feature supports Windows 10 or Windows 11 Enterprise multi-session VMs, whi
   - Configured with [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy), set to use Device credentials, and set to automatically enroll devices that are Hybrid Azure AD-joined.
   - [Configuration Manager co-management](/configmgr/comanage/overview).
 - Azure AD-joined and enrolled in Microsoft Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
+- Licensing: The appropriate Azure Virtual Desktop and Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a Microsoft API. For more information, go to [Microsoft Intune licensing](licenses.md).
 
 > [!NOTE]
 > If you're joining session hosts to Azure Active Directory Domain Services, you can't manage them using Intune.
@@ -87,9 +91,9 @@ To configure configuration policies for Windows 10 or Windows 11 Enterprise mult
 
 The existing device configuration profile templates aren't supported for Windows 10 or Windows 11 Enterprise multi-session VMs, except for the following templates:
 
-- [Trusted certificate](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) - Device (machine) only
-- [SCEP certificate](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) - Device (machine) only
-- [PKCS certificate](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile) - Device (machine) only
+- [Trusted certificate](../protect/certificates-trusted-root.md#create-trusted-certificate-profiles) - Device (machine) when targeting devices and User when targeting users
+- [SCEP certificate](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile) - Device (machine) when targeting devices and User when targeting users
+- [PKCS certificate](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile) - Device (machine) when targeting devices and User when targeting users
 - [VPN](../configuration/vpn-settings-configure.md#create-the-profile) - Device Tunnel only
 
 Microsoft Intune won't deliver unsupported templates to multi-session devices, and those policies appear as *Not applicable* in reports.
@@ -159,13 +163,16 @@ All other policies report as **Not applicable**.
 > [Conditional Access for Exchange on-premises](../protect/conditional-access-exchange-create.md) isn't supported for Windows 10 or Windows 11 Enterprise multi-session VMs.
 
 > [!NOTE]
-> Configuration and compliance policies for Secure Boot and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
+> Configuration and compliance policies for BitLocker, Secure Boot, and features leveraging vTPM (Virtual Trusted Platform Module) are not supported at this time for Azure Virtual Desktop VMs.
 
 ## Endpoint security
 
-You can configure profiles under Endpoint security for multi-session VMs by selecting Platform Windows 10, Windows 11, and Windows Server. 
+You can configure profiles under Endpoint security for multi-session VMs by selecting Platform Windows 10, Windows 11, and Windows Server. If that Platform is not available, the profile is not supported on multi-session VMs.
 
 For more information, see [Manage device security with endpoint security policies in Microsoft Intune](../protect/endpoint-security-policy.md)
+
+> [!NOTE]
+> Tamper protection is not supported on Azure Virtual Desktop VMs today. This functionality will be enabled in a future release.
 
 ## Application deployment
 

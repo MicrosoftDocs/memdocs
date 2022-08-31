@@ -54,11 +54,11 @@ There are two workarounds for this issue:
 
 Users can manually change their language/locale in the URL for most websites.
 
-For example, in the following URL, change the language/locale from "en-us" to "fr-fr" to get the French version:
+For example, in the following URL, change the language/locale from `en-us` to `fr-fr` to get the French version:
 
-docs.microsoft.com/**en-us**/microsoft-365/admin/setup/get-started-windows-365-business
+Before: `https://docs.microsoft.com/en-us/microsoft-365/admin/setup/get-started-windows-365-business`
 
-docs.microsoft.com/**fr-fr**/microsoft-365/admin/setup/get-started-windows-365-business
+After: `https://docs.microsoft.com/fr-fr/microsoft-365/admin/setup/get-started-windows-365-business`
 
 #### Set search engine location
 
@@ -72,7 +72,7 @@ When users sign into their Cloud PCs from windows365.microsoft.com, the Microsof
 
 To turn on Narrator when accessing your Cloud PC from the web interface:
 
-1. Go to [windows365.microsoft.com](https://windows365.microsoft.com/).
+1. Go to [Windows 365](https://windows365.microsoft.com/).
 
 2. Sign into your Cloud PC.
 
