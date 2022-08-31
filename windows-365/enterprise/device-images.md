@@ -92,8 +92,8 @@ For more information on creating such a custom image, see [Create a managed imag
 
 A custom image can be created using [any of the images above as a starting point](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftwindowsdesktop.windows-ent-cpc). For example, you can start with an image above and then install more applications and make more configuration changes.
 
->[Note]
->For custom images with Teams application, you can follow the instructions in [this article](create-custom-image-support-teams.md) to configure optimizations that are needed.  
+> [!NOTE]
+> For custom images with Teams application, follow the instructions detailed in [Create a Cloud PC custom image that supports Microsoft Teams](create-custom-image-support-teams.md) to configure optimizations that are needed.  
 
 For more information about adding a device image to Windows 365, see [Add and delete custom device images](add-device-images.md).
 
