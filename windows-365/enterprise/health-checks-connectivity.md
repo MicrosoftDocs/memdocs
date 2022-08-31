@@ -42,10 +42,6 @@ Connectivity errors can occur even when all connectivity health checks have succ
 
 An admin is also able to look at the connectivity history of a user to see if user might have experience failed connectivity check, or connectivity error in the last 14 days.
 
-, while connectivity errors are unexpected network failures that might cause a user to drop connection to their Cloud PC e.g. interruption in your internet service by your Internet Service Vendor (ISV). 
-
-
-
 ## Connectivity checks
 
 | Check | Failure description | Troubleshooting |
@@ -72,10 +68,6 @@ The user connectivity history report shows when a user started a connection and 
 | Connectivity check | If the connection fails because of a failed connectivity check, the failed check is listed. |
 
 Select any activity to get more information about the event.
-
-
-
-
 
 <!-- ########################## -->
 ## Next steps
