@@ -32,15 +32,10 @@ ms.collection: M365-identity-device-management
 
 Connectivity health checks are run on individual Cloud PCs and give information on the state of the Cloud PC's connection. These checks are constantly run by the Windows 365 service in the backend. When any of these checks fail, the end user won’t be able to connect to their Cloud PC.
 
-Connectivity errors can occur even when all connectivity health checks have successfully passed.
-
 ## View connectivity checks
 
-1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **Azure network connections**.
+1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **All Cloud PCs**.
 2. Select a connection in the list > **Overview** > **Connectivity and usage (preview)**.
-
-
-An admin is also able to look at the connectivity history of a user to see if user might have experience failed connectivity check, or connectivity error in the last 14 days.
 
 ## Connectivity checks
 
@@ -57,9 +52,20 @@ An admin is also able to look at the connectivity history of a user to see if us
 
 If any of these issues persist, contact Microsoft support.
 
+Connectivity errors can occur even when all connectivity health checks have successfully passed.
+
 ## User connectivity history report
 
-The user connectivity history report shows when a user started a connection and when the connection finished. There are different ways a connection can start/finish and these are logged as activities in the report. The report shows of the following activities:
+The user connectivity history report shows when a user started a connection and when the connection finished. There are different ways a connection can start/finish and these are logged as activities in the report.
+
+### View Connectivity history report
+
+1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **All Cloud PCs**.
+2. Select a connection in the list > **Overview** > **Connectivity and usage (preview)** > **View connectivity history**.
+
+### Activities
+
+The report shows of the following activities:
 
 | Activity | Description |
 | --- | --- | --- |

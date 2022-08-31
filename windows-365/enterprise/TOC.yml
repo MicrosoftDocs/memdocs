@@ -198,6 +198,8 @@ items:
     - name: Azure network connections
       href: troubleshoot-azure-network-connection.md
     - name: Azure network connection health checklist
+      href: health-checks-connectivity.md
+    - name: Connectivity health checks
       href: health-checks.md
     - name: Remote Desktop client
       href: /azure/virtual-desktop/troubleshoot-client?context=/windows-365/context/pr-context
