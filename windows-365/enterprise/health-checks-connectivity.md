@@ -32,7 +32,9 @@ ms.collection: M365-identity-device-management
 
 Connectivity health checks are run on individual Cloud PCs and give information on the state of the Cloud PC's connection. These checks are constantly run by the Windows 365 service in the backend. When any of these checks fail, the end user won’t be able to connect to their Cloud PC.
 
-## View connectivity checks
+You can review any connectivity errors and use the **Troubleshoot this connection** button to troubleshoot.
+
+## View Cloud PC connectivity status
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **All Cloud PCs**.
 2. Select a connection in the list > **Overview** > **Connectivity and usage (preview)**.
@@ -41,18 +43,18 @@ If the Cloud PC is connected, the status will show as **Available**.
 
 If there is a problem with the Cloud PC's connection, the status will show as **Unavailable**. Details appear on the right. Select **Troubleshoot this connection** to troubleshoot the issue.
 
-## Connectivity checks
+## Connectivity errors
 
-| Check | Failure description | Troubleshooting |
-| --- | --- | --- |
-| Azure Resource Availability Check | Azure resources are not up and running. | If this persists, contact Microsoft support. |
-| DomainJoin | This Cloud PC isn't joined to a domain. | Try reprovisioning the Cloud PC or join it to a domain. |
-| DomainReachable | This Cloud PC can't connect to the domain. | Check for an issue with your virtual network configuration by reviewing your [Azure network connection checks](troubleshoot-azure-network-connection.md). |
-| DomainTrust | The domain doesn't trust this Cloud PC. | Make sure that the local device password matches the device password in the domain. |
-| SxSStackListener | The side-by-side stack installed on the Cloud PC is malfunctioning or blocked. | Run the troubleshooting tool to fix this issue. |
-| Unknown | This Cloud PC might not be running or the network isn't connected to the public Internet. | Run the troubleshooting tool to get more information. |
-| UrlsAccesible | This Cloud PC is blocking traffic to [these URLs](requirements.md). | Unblock the URLs this Cloud PC uses to connect to Windows 365. |
-| VM Power Status Check | This Cloud PC is powered off and an issue is preventing it from turning back on. |  If this persists, contact Microsoft support. |
+When a connectivity checks fails, you'll see one of the following errors. Review the status pane to see more details. You can use the **Troubleshoot this connection** button to troubleshoot.
+
+- **Azure Resource Availability Check**: Azure resources are not up and running.
+- **DomainJoin**: This Cloud PC isn't joined to a domain.
+- **omainReachable**: This Cloud PC can't connect to the domain.
+- **DomainTrust**: The domain doesn't trust this Cloud PC.
+- **SxSStackListener**: The side-by-side stack installed on the Cloud PC is malfunctioning or blocked. 
+- **Unknown**: This Cloud PC might not be running or the network isn't connected to the public Internet.
+- **UrlsAccesible**: This Cloud PC is blocking traffic to [these URLs](requirements.md).
+- **VM Power Status Check**: This Cloud PC is powered off and an issue is preventing it from turning back on.
 
 If any of these issues persist, contact Microsoft support.
 
