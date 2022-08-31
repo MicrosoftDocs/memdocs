@@ -37,6 +37,8 @@ Connectivity health checks are run on individual Cloud PCs and give information 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **All Cloud PCs**.
 2. Select a connection in the list > **Overview** > **Connectivity and usage (preview)**.
 
+If the Cloud PC is connected, the status will show as **Available**.
+
 ## Connectivity checks
 
 | Check | Failure description | Troubleshooting |
