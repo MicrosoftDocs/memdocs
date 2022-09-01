@@ -19,7 +19,7 @@ This article provides details of any current known issues and limitations with t
 ## HTA applications report Script error after upgrading to ADK for Windows 11, version 22H2
 After you updated your MDT boot image to [ADK for Windows 11, version 22H2](/windows-hardware/get-started/adk-install), HTA applications stop working and a message box is displayed: Script Error - An error has occurred in the script on this page.
 
-HTA applications relies on MSHTML and starting Windows 11, version 22H2, the default legacy scripting engine was changed.
+HTA applications rely on MSHTML and starting with Windows 11, version 22H2, the default legacy scripting engine was changed.
 
 To work around this issue you need to add the following registry value in WinPE: 
  ``` 
