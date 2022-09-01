@@ -87,7 +87,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
   For information about installing and configuring Docker or Podman, see:
 
-  - [Install Docker Engine on CentOS or Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
+  - [Install Docker Engine on CentOS or Red Hat Enterprise Linux 7](https://docs.docker.com/engine/install/centos/)
     > [!NOTE]
     > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7.4. The version installed on RHEL 7.4 by default is too old to support Microsoft Tunnel Gateway.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
