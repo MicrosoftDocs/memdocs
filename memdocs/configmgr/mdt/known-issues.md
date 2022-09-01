@@ -21,7 +21,7 @@ After you updated your MDT boot image to [ADK for Windows 11, version 22H2](/win
 
 HTA applications relies on MSHTML and starting Windows 11, version 22H2, the default legacy scripting engine was changed.
 
-To workaround the issue, you need to add the following registry value in WinPE: 
+To work around this issue you need to add the following registry value in WinPE: 
  ``` 
  reg.exe add "HKLM\Software\Microsoft\Internet Explorer\Main" /t REG_DWORD /v JscriptReplacement /d 0 /f
  ```
