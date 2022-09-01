@@ -25,7 +25,7 @@ To work around this issue you need to add the following registry value in WinPE:
  ``` 
  reg.exe add "HKLM\Software\Microsoft\Internet Explorer\Main" /t REG_DWORD /v JscriptReplacement /d 0 /f
  ```
-To enable this change in MDT, we recommand you to backup the following file C:\Program Files\Microsoft Deployment Toolkit\Templates\Unattend_PE_x64.xml and to modify it like this:
+To enable this change in MDT, we recommend that you back up the following file: `C:\Program Files\Microsoft Deployment Toolkit\Templates\Unattend_PE_x64.xml` and to modify it as follows:
  ``` <?xml version="1.0" encoding="utf-8"?>
 <unattend xmlns="urn:schemas-microsoft-com:unattend">
     <settings pass="windowsPE">
