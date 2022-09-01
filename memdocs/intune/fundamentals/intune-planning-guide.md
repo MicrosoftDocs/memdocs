@@ -26,6 +26,7 @@ ms.custom: get-started
 ms.collection:
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Microsoft Intune planning guide

@@ -28,6 +28,7 @@ ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Tutorial: Set up and configure a cloud-native Windows endpoint with Microsoft Endpoint Manager
