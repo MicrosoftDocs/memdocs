@@ -37,7 +37,7 @@ ms.collection:
 As an administrator, you can join large numbers of new Windows devices to Azure Active Directory and Intune. To bulk enroll devices for your Azure AD tenant, you create a provisioning package with the Windows Configuration Designer (WCD) app. Applying the provisioning package to corporate-owned devices joins the devices to your Azure AD tenant and enrolls them for Intune management. Once the package is applied, it's ready for your Azure AD users to sign in.
 
 > [!NOTE]
-> In the past, any standard user in the tenant could retrieve a bulk enrollment token and create a provisioning package. To increase security, users must now have specific Azure AD role assignment to create a bulk enrollment token. These roles can be assigned in Intune for Education > Tenant settings. The roles are:
+> In the past, any standard user in the tenant could retrieve a bulk enrollment token and create a provisioning package. To increase security, users must now have specific Azure AD role assignment to create a bulk enrollment token. These roles can be assigned in **Intune for Education > Tenant settings** or **MEM admin center > Tenant administration**. The roles are:
 > - Global Administrator 
 > - Cloud Device Administrator 
 > - Intune Administrator 
