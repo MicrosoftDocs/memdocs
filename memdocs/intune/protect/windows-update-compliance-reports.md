@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Intune compliance reports for updates

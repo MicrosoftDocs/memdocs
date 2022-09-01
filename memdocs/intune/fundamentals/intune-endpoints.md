@@ -27,6 +27,7 @@ ms.custom: intune-classic; get-started
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Network endpoints for Microsoft Intune  

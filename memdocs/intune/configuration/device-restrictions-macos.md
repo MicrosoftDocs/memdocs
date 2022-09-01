@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # macOS device settings to allow or restrict features using Intune

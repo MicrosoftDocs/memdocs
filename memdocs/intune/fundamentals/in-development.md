@@ -25,6 +25,7 @@ ms.custom: seodec18
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # In development for Microsoft Intune
