@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
  
 # Use remote help with Intune and Microsoft Endpoint Manager

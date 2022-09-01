@@ -29,6 +29,7 @@ ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # What are enrollment restrictions?      
