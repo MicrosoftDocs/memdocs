@@ -34,6 +34,8 @@ Using Intune, you can manage telecom expenses from data usage on organization-ow
 
 The integration with Datalert can set, monitor, and enforce roaming and domestic data usage limits. When the limits exceed your thresholds, alerts are automatically triggered. You can also configure the service to apply different actions to users or groups, such as disable roaming or exceed the threshold. The Datalert management console includes reports that show data usage and monitoring information.
 
+IMPORTANT: Enabling integration with Datalert allows Intune to send the Subscriber Number (e.g. the device's phone number) and Azure AD DeviceID to an external third party.  
+
 The following image shows how Intune integrates with Datalert:
 
 > [!div class="mx-imgBorder"]
