@@ -347,7 +347,7 @@ Now that you've installed your token, you can create an enrollment profile for A
     | **Software Update** | Display the mandatory software update screen. For iOS/iPadOS 12.0 and later. |  
     | **Watch Migration** | Give the user the option to migrate data from a watch device. For iOS/iPadOS 11.0 and later.|
     | **Appearance** | Display the Appearance screen. For macOS 10.14 and later, and iOS/iPadOS 13.0 and later. |  
-    | **Device to Device Migration** | Give the user the option to migrate data from an old device to this device. For iOS/iPadOS 13.0 and later. This setting does not have an effect on devices running iOS/iPadOS 13.0 and later that are already enrolled. On such devices, the Apps & Data screen does not display the option for device-to-device transfer. The Quick Start screen may indicate that Quick Start can do a device-to-device migration; however, if run, it will finish immediately without transferring any data.
+    | **Device to Device Migration** | Give the user the option to migrate data from an old device to this device. This feature isn't available for ADE devices running iOS 13 and later, so this screen won't appear on those devices.  
     | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |  
     | **Software Update Completed** | Shows the user all software updates that happen during Setup Assistant.|  
     | **Get Started**| Shows users the Get Started welcome screen.  
