@@ -49,6 +49,7 @@ Use the information in this article to help you add macOS line-of-business apps 
 
 > [!NOTE]
 > Using the Intune App Wrapping Tool for Mac is not required when uploading *.pkg* files.
+> In August 2022, we removed the ability to upload wrapped .intunemac files in the Microsoft Endpoint Manager admin center. 
 
 You must download an external tool, mark the downloaded tool as an executable, and pre-process your *.pkg* files with the tool before you can upload your line-of-business file to Microsoft Intune. The pre-processing of your *.pkg* files must take place on a macOS device. Use the Intune App Wrapping Tool for Mac to enable Mac apps to be managed by Microsoft Intune.
 
