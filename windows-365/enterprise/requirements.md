@@ -59,6 +59,8 @@ If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following 
 - If an organizational unit is specified, ensure it exists and is valid.
 - An Active Directory user account with sufficient permissions to join the computer into the specified organizational unit within the Active Directory domain. If you don't specify an organizational unit, the user account must have sufficient permissions to join the computer to the Active Directory domain.
 - User accounts that are assigned Cloud PCs must have a synced identity available in both Active Directory and Azure Active Directory.
+>[!Note]
+>For the user account used to join the Cloud PC computers to the Active Directory Domain Services, make sure to setup appropriate delegation following the instructions in the article here https://github.com/MicrosoftDocs/memdocs/blob/main/memdocs/autopilot/windows-autopilot-hybrid.md#increase-the-computer-account-limit-in-the-organizational-unit
 
 ## Licensing requirements
 
