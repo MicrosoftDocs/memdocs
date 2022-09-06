@@ -273,6 +273,18 @@ You can disable the extension framework, like Coupons, within Edge for iOS and A
 > [!NOTE]
 > Edge for iOS does not support disabling extensions.
 
+#### Control Cookie Mode
+
+You can control whether sites can store cookies for your users within Edge for Android.  To do this, configure the following setting:
+
+|Key |Value |
+|:-----------|:-------------|
+|com.microsoft.intune.mam.managedbrowser.cookieControlsMode |**0** (default) allow cookies <br>**1** block non-Microsoft cookies <br>**2** block non-Microsoft cookies in InPrivate mode <br>**3** block all cookies |
+
+> [!NOTE]
+> Edge for iOS does not support controling cookies.
+
+
 ### Kiosk mode experiences on Android devices
 
 Edge for Android can be enabled as a kiosk app with the following settings:
