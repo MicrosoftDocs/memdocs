@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/01/2022
+ms.date: 09/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -139,7 +139,7 @@ For users that opted out of automatic updates, when an update to remote help is 
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **4.0.1.12**
+The most recent version of remote help is **4.0.1.13**
 
 ### Deploy remote help as a Win32 app
 
@@ -348,6 +348,13 @@ If a conditional access policy is configured as described above and if the devic
 ## What's New for Remote help 
 
 Updates for Remote help are released periodically. When we update Remote help, you can read about the changes here.
+### September 6, 2022
+
+Version: 4.0.1.13 - Changes in this release:
+
+With Remote help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
+
+For more information, go to [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
 ### July 26, 2022
 
