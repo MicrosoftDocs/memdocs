@@ -131,7 +131,7 @@ Both site servers must use the same site database.
 
 - Only a single site server in passive mode is supported at each site.
 
-- Passive site servers cannot be installed to nodes that are in the Always On availability group hosting the Configuration Manager database, and must be installed to standalone servers. Moving a passive site server into the Always On availability group after installation is not currently supported. 
+- Passive site servers cannot be installed to nodes in the Always On availability group hosting the Configuration Manager database and must be installed on standalone servers. Moving a passive site server into the Always On availability group after installation is not currently supported. 
 
 - A site server in passive mode isn't supported at a secondary site.<!--SCCMDocs issue 680-->
 
