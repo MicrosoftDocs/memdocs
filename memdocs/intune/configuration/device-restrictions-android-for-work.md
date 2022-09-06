@@ -706,11 +706,11 @@ You can configure the following settings:
 
   - **Message**: Enter the text you want shown, a max of 4096 characters. The text you enter isn't translated to the device's default language. So if you want to show a message in Spanish, enter the text in Spanish.
 
-- **Lock screen message**: Enter the text you want shown on the device lock screen, a max of 4096 characters.
+- **Lock screen message**: Enter the text you want shown on the device lock screen.
 
   Using the following settings, you can customize this message and enter a different message for different languages. By default, this message is in **English (United States)**.
 
-  - **All, except when specified**: The text you enter is shown for all languages. This text is automatically translated to the device's default language. If you don't enter a custom message, then Intune doesn't change or update this setting.
+  - **All, except when specified**: Enter the text you want shown for all languages, a max of 4096 characters. This text is automatically translated to the device's default language. If you don't enter a custom message, then Intune doesn't change or update this setting. By default, the OS might not show a lock screen message.
 
   - **Select Locale**: Select the locale or region to show a different custom message for that specific locale.
 
