@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 09/06/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -49,8 +49,8 @@ If you experience sync problems during the enrollment process, you can look for 
 
 Deploying the Intune Company Portal app through Intune is the best way to provide the app to users and the only way to: 
 
-* Enable automatic app updates for Company Portal on ADE devices  
-* Ensure all ADE devices, including already-enrolled ones, receive the app 
+* Ensure all ADE devices, including already-enrolled ones, receive the app. 
+* Enable automatic app updates for Company Portal on ADE devices. 
 
 Deploy the app as a required, VPP app [with device licensing](../apps/vpp-apps-ios.md#how-are-purchased-apps-licensed). For information about how to sync, assign, and manage a VPP app, see [assign a volume-purchased app](../apps/vpp-apps-ios.md#assign-a-volume-purchased-app). 
 
@@ -59,7 +59,7 @@ To enable automatic app updates for Company Portal, go to your app token setting
 *Device staging* is used to transition a device without user affinity, to a device with user affinity. To stage a device, set up VPP deployment as described earlier in this section. Then configure and deploy an [app configuration policy](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment). Make sure the policy only targets those ADE devices without user affinity.  
 
 > [!IMPORTANT]
-> During initial enrollment, Intune automatically pushes the app configuration policy settings under [Use the Company Portal on an Automated Device Enrollment (ADE) device enrolled with user affinity](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment) when the enrollment profile setting **"Install Company Portal"** is set to yes.  This configuration should not be deployed manually to users because it will cause a conflict with the configuration sent during the initial enrollment. If both are deployed, Intune will incorrectly prompt device users to sign in to Company Portal and download a management profile they've already installed. 
+> During initial enrollment, Intune automatically pushes the app configuration policy settings for devices enrolled with user affinity, configured in [Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment), when the enrollment profile setting **Install Company Portal** is set to yes. This configuration should not be deployed manually to users because it will cause a conflict with the configuration sent during the initial enrollment. If both are deployed, Intune will incorrectly prompt device users to sign in to Company Portal and download a management profile they've already installed. 
 
 ## What is supervised mode?
 
