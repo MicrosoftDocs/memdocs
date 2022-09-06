@@ -33,9 +33,6 @@ ms.collection:
 
 # Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment
 
-> [!IMPORTANT]
-> Apple recently changed from using the Apple Device Enrollment Program (DEP) to using Apple Automated Device Enrollment (ADE). The Microsoft Intune user interface doesn't currently reflect that change. Currently, you'll still see *Device Enrollment Program* in the Intune portal. Wherever you see references to DEP, Intune now uses Automated Device Enrollment.
-
 You can set up Intune to enroll iOS/iPadOS devices purchased through Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com). Automated Device Enrollment lets you enroll large numbers of devices without ever touching them. Devices like iPhones, iPads, and MacBooks can be shipped directly to users. When a user turns on the device, Setup Assistant, which includes the typical out-of-box-experience for Apple products, runs with preconfigured settings and the device enrolls into management.
 
 To enable ADE, you use the Intune portal and either the [Apple Business Manager (ABM)](https://business.apple.com/) portal or the [Apple School Manager (ASM)](https://school.apple.com/) portal. In either Apple portal, you need a list of serial numbers or a purchase order so you can assign devices to Intune for management. You create ADE enrollment profiles in Intune. These profiles contain settings that are applied to devices during enrollment. ADE can't be used with a [Device Enrollment Manager](device-enrollment-manager-enroll.md) account.
