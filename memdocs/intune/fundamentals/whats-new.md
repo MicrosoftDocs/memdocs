@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/29/2022
+ms.date: 09/02/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,6 +60,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of September 05, 2022
+
+### Device management
+
+#### Remote help version: 4.0.1.13 release<!-- 15329690 -->
+
+With Remote help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
+
+For more information, go to [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
 ## Week of August 29, 2022
 
