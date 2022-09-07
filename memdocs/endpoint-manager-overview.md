@@ -28,6 +28,7 @@ ms.custom:
 ms.collection:
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Microsoft Endpoint Manager overview
