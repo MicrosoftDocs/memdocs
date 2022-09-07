@@ -65,9 +65,9 @@ You can now review connectivity health checks and errors in the Microsoft Endpoi
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
 
-#### New supported Azure regions: East Asia Regions, East Korea Central, Norway, Switzerland North<!--37678838-->
+#### New supported Azure regions: East Asia, Korea Central, Norway East, Switzerland North<!--37678838-->
 
-New Azure regions are now supported for Windows 365 Cloud PC provisioning: East Asia Regions, East Korea Central, Norway, and Switzerland North.
+New Azure regions are now supported for Windows 365 Cloud PC provisioning: East Asia, Korea Central, Norway East, and Switzerland North.
 
 For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
 
