@@ -9,7 +9,7 @@ author: scottbreenmsft
   
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/01/2022
+ms.date: 09/07/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -560,6 +560,12 @@ Following are some settings available in the settings catalog that might be rele
   Organizations typically want to restrict the applications that can install on endpoints. Use this setting if your organization wants to control which applications can install from the Microsoft Store. This setting will prevent users from installing applications unless they're approved.
   - Microsoft App Store
     - Require Private Store Only - **Only Private store is enabled**
+
+      > [!NOTE]
+      > This setting applies to Windows 10. On Windows 11, this setting blocks access to the public Microsoft store. A private store is coming to Windows 11. For more information, go to:
+      > 
+      > - [Update to Endpoint Manager integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077)
+      > - [FAQ: Supporting Microsoft Store experiences on managed devices](https://techcommunity.microsoft.com/t5/windows-management/faq-supporting-microsoft-store-experiences-on-managed-devices/m-p/3585286)
 
 - **Block Gaming**  
   Organizations might prefer that corporate endpoints can't be used to play games. The Gaming page within the Settings app can be hidden entirely using the following setting.
