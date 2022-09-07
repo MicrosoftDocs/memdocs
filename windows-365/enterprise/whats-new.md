@@ -56,7 +56,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### New health check: Localization language package readiness<!--41089729  -->
 
-The **Azure network connection** tab has a new health check: **Localization language package readiness**. This health check verifies that the operating system and Microsoft 365 language packages were installed. For more information, see [Azure network connection health checks](health-checks.md).
+The **Azure network connection** tab has a new health check: **Localization language package readiness**. This health check verifies that the operating system and Microsoft 365 language packages were installed.  It also make sure that the localization package download link is reachable. For more information, see [Azure network connection health checks](health-checks.md).
 
 #### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
 
