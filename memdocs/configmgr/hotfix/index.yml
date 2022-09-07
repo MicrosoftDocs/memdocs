@@ -23,6 +23,9 @@ landingContent:
         links:
           - text: KB 14840616 Summary of changes in 2207
             url: 2207/14840616.md
+          - text: KB 14959905 Early update ring
+            url: 2207/14959905.md
+
   - title: Configuration Manager 2203
     linkLists:
       - linkListType: overview
