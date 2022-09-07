@@ -60,14 +60,14 @@ The **Azure network connection** tab has a new health check: **Localization lang
 
 #### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
 
-You can now review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues. To see the checks, select **Devices** > **Windows 365** > **Azure network connections** > select a connection in the list > **Overview**.
+You can now review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues. To see the checks, select **Devices** > **Windows 365** > **Azure network connections** > select a connection in the list > **Overview**. This feature is rolling out to all customers over the next few weeks.
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Provisioning
 
-#### New supported Azure regions: East Asia Regions, East Korea Central, Norway, Switzerland North<!--37678838-->
+#### New supported Azure regions: East Asia, Korea Central, Norway East, Switzerland North<!--37678838-->
 
-New Azure regions are now supported for Windows 365 Cloud PC provisioning: East Asia Regions, East Korea Central, Norway, and Switzerland North.
+New Azure regions are now supported for Windows 365 Cloud PC provisioning: East Asia, Korea Central, Norway East, and Switzerland North.
 
 For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
 

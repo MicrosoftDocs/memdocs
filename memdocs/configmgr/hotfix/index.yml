@@ -17,6 +17,12 @@ metadata:
   ms.localizationpriority: high
 
 landingContent:
+  - title: Configuration Manager 2207
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 14840616 Summary of changes in 2207
+            url: 2207/14840616.md
   - title: Configuration Manager 2203
     linkLists:
       - linkListType: overview
