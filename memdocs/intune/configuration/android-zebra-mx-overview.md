@@ -67,7 +67,7 @@ If Google Play isn't available, download the [Microsoft Intune Company Portal fo
 
 "Sideloading" is when you don't use Google Play to install an app. To sideload the Company Portal app, use StageNow.
 
-The following steps provide an overview. For specific details, see Zebra's documentation. [Enroll in an MDM using StageNow](http://techdocs.zebra.com/stagenow/3-1/Profiles/enrollmdm/) (opens Zebra's web site) may be a good resource.
+The following steps provide an overview. For specific details, see Zebra's documentation. [Enroll in an MDM using StageNow](https://techdocs.zebra.com/stagenow/5-7/Profiles/enrollmdm/) (opens Zebra's web site) may be a good resource.
 
 1. In StageNow, create a profile for **Enroll in an MDM**.
 2. In **Deployment**, choose to download the MDM agent file.
