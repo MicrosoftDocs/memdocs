@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 04/15/2021
+ms.date: 09/07/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -67,7 +67,7 @@ If Google Play isn't available, download the [Microsoft Intune Company Portal fo
 
 "Sideloading" is when you don't use Google Play to install an app. To sideload the Company Portal app, use StageNow.
 
-The following steps provide an overview. For specific details, see Zebra's documentation. [Enroll in an MDM using StageNow](http://techdocs.zebra.com/stagenow/3-1/Profiles/enrollmdm/) (opens Zebra's web site) may be a good resource.
+The following steps provide an overview. For specific details, see Zebra's documentation. [Enroll in an MDM using StageNow](https://techdocs.zebra.com/stagenow/5-7/Profiles/enrollmdm/) (opens Zebra's web site) may be a good resource.
 
 1. In StageNow, create a profile for **Enroll in an MDM**.
 2. In **Deployment**, choose to download the MDM agent file.
@@ -108,7 +108,7 @@ After completing the first two steps, the Company Portal app is installed on the
 
 ## Step 4: Create a device management profile in StageNow
 
-Use StageNow to create a profile that configures the settings you want to manage on the device. For specific details, see Zebra's documentation. [Profiles](http://techdocs.zebra.com/stagenow/3-2/stagingprofiles/) (opens Zebra's website) may be a good resource.
+Use StageNow to create a profile that configures the settings you want to manage on the device. For specific details, see Zebra's documentation. [Profiles](https://techdocs.zebra.com/stagenow/5-7/stagingprofiles/) (opens Zebra's website) may be a good resource.
 
 When you create the profile in StageNow, on the last step, select **Export to MDM**. This step generates an XML file. Save this file. You need it in a later step.
 

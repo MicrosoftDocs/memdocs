@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 07/26/2022
+ms.date: 09/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
  
 # Use remote help with Intune and Microsoft Endpoint Manager
@@ -138,7 +139,7 @@ For users that opted out of automatic updates, when an update to remote help is 
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **4.0.1.12**
+The most recent version of remote help is **4.0.1.13**
 
 ### Deploy remote help as a Win32 app
 
@@ -242,9 +243,6 @@ The use of remote help depends on whether you're requesting help or providing he
 
 To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your remote help instance to establish a connection to the helper's instance of remote help.
 
-> [!TIP]  
-> To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to **Yes** also uses *Full control*, you are signed out of your device.
-
 As a sharer, when you’ve requested help and both you and the helper are ready to start:
 
 1. Start the remote help app on the device and sign in to authenticate to your organization. The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices.
@@ -261,10 +259,7 @@ As a sharer, when you’ve requested help and both you and the helper are ready 
 
 5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
 
-### Provide help  
-
-> [!TIP]  
-> Plan to have the sharer save any active work before a remote help session ends to avoid an unexpected loss of work. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, the sharer is signed out of their device to ensure any elevated permissions are cleared from the device.
+### Provide help
 
 As a helper, after receiving a request from a user who wants assistance by using the remote help app:
 
@@ -353,6 +348,13 @@ If a conditional access policy is configured as described above and if the devic
 ## What's New for Remote help 
 
 Updates for Remote help are released periodically. When we update Remote help, you can read about the changes here.
+### September 6, 2022
+
+Version: 4.0.1.13 - Changes in this release:
+
+With Remote help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
+
+For more information, go to [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
 ### July 26, 2022
 
