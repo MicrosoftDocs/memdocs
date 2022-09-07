@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 08/31/2022
+ms.date: 09/13/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -56,9 +56,30 @@ When a connectivity checks fails, you'll see one of the following errors. Review
 - **UrlsAccesible**: This Cloud PC is blocking traffic to [these URLs](requirements.md).
 - **VM Power Status Check**: This Cloud PC is powered off and an issue is preventing it from turning back on.
 
+
+<!--
+Possible different view of this data:
+
+| Check | Failure description | Troubleshooting |
+| --- | --- | --- |
+| Azure Resource Availability Check | Azure resources are not up and running. | If this persists, contact Microsoft support. |
+| DomainJoin | This Cloud PC isn't joined to a domain. | Try reprovisioning the Cloud PC or join it to a domain. |
+| DomainReachable | This Cloud PC can't connect to the domain. | Check for an issue with your virtual network configuration by reviewing your [Azure network connection checks](troubleshoot-azure-network-connection.md). |
+| DomainTrust | The domain doesn't trust this Cloud PC. | Make sure that the local device password matches the device password in the domain. |
+| SxSStackListener | The side-by-side stack installed on the Cloud PC is malfunctioning or blocked. | Run the troubleshooting tool to fix this issue. |
+| Unknown | This Cloud PC might not be running or the network isn't connected to the public Internet. | Run the troubleshooting tool to get more information. |
+| UrlsAccesible | This Cloud PC is blocking traffic to [these URLs](requirements.md). | Unblock the URLs this Cloud PC uses to connect to Windows 365. |
+| VM Power Status Check | This Cloud PC is powered off and an issue is preventing it from turning back on. |  If this persists, contact Microsoft support. |
+
+
+
+
+-->
 If any of these issues persist, contact Microsoft support.
 
 Connectivity errors can occur even when all connectivity health checks have successfully passed.
+
+
 
 ## User connectivity history report
 
