@@ -34,7 +34,7 @@ Microsoft Intune includes many built-in settings to control different features o
 This feature applies to:
 
 - Android device administrator
-- Android Enterprise personally-owned devices with a work profile
+- Android Enterprise personally owned devices with a work profile
 - iOS/iPadOS
 - macOS
 - Windows 10/11
