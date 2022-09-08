@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2022
+ms.date: 09/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -52,7 +52,7 @@ To use device compliance policies, be sure you:
 - Use a supported platform:
 
   - Android device administrator
-  - Android AOSP (preview)
+  - Android AOSP
   - Android Enterprise
   - iOS
   - macOS
@@ -63,7 +63,7 @@ To use device compliance policies, be sure you:
 
 - Enroll devices to one user, or enroll without a primary user. Single devices cannot be enrolled to multiple users.
 
-If you plan to use custom settings for device compliance, you'll need prepare a custom JSON file and PowerShell script before you create a policy. For more information about custom compliance settings, including supported platforms, prerequisites, and how to configure the *Custom Compliance* category while creating a policy, see [Use custom compliance settings](../protect/compliance-use-custom-settings.md).
+If you plan to use custom settings for device compliance, you'll need to prepare a custom JSON file and PowerShell script before you create a policy. For more information about custom compliance settings, including supported platforms, prerequisites, and how to configure the *Custom Compliance* category while creating a policy, see [Use custom compliance settings](../protect/compliance-use-custom-settings.md).
 ## Create the policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -72,7 +72,7 @@ If you plan to use custom settings for device compliance, you'll need prepare a 
 
 3. Select a **Platform** for this policy from the following options:
    - *Android device administrator*
-   - *Android (AOSP)* (preview)  
+   - *Android (AOSP)*
    - *Android Enterprise*
    - *iOS/iPadOS*
    - *macOS*
@@ -83,7 +83,7 @@ If you plan to use custom settings for device compliance, you'll need prepare a 
      - *Fully Managed*
      - *Dedicated*
      - *Corporate-Owned Work Profile*
-     - *Personally-Owned Work Profile*
+     - *Personally Owned Work Profile*
 
     Then, select **Create** to open the **Create policy** configuration window.
 
@@ -93,7 +93,7 @@ If you plan to use custom settings for device compliance, you'll need prepare a 
   
 5. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy. The following articles describe the settings for each platform:
    - [Android device administrator](compliance-policy-create-android.md)
-   - [Android (AOSP)](compliance-policy-create-android-aosp.md) (preview)  
+   - [Android (AOSP)](compliance-policy-create-android-aosp.md)
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)

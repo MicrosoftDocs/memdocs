@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Android Enterprise device settings in Microsoft Intune
+title: Android Enterprise device restriction settings in Microsoft Intune
 description: On Android Enterprise or Android for Work devices, restrict settings on the device using Microsoft Intune. Restrict copy and paste, notifications, app permissions, data sharing, password length, sign in failures, use fingerprint to unlock, reuse passwords, and enable bluetooth sharing of work contacts. Configure devices as a dedicated device kiosk to run one app, or multiple apps.
 keywords:
 author: MandiOhlinger
@@ -42,7 +42,7 @@ This feature applies to:
 - Android Enterprise corporate owned fully managed (COBO)
 - Android Enterprise corporate owned dedicated devices (COSU)
 
-For Android device administrator, see [Android and Samsung Knox Standard device restrictions](device-restrictions-android.md).
+For AOSP, go to [Android (AOSP) device settings to allow or restrict features using Intune](device-restrictions-android-aosp.md).
 
 ## Before you begin
 
