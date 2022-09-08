@@ -2,7 +2,7 @@
 # required metadata
 
 title: Device restriction settings for Android (AOSP) in Microsoft Intune
-description: On Android Open Source Project (AOSP) devices, restrict settings on the device. You can block the camera, block screen shots, disable bluetooth, block USB file transfer, and more in Microsoft Intune.
+description: On Android Open Source Project (AOSP) devices, restrict settings on the device. You can block the camera, block screenshots, disable bluetooth, block USB file transfer, and more in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
