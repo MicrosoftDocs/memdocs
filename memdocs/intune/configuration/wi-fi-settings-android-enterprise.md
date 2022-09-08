@@ -192,7 +192,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
 
     For more information on PAC files, see [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
-## Personally-owned work profile
+## Personally owned work profile
 
 ### Basic
 
