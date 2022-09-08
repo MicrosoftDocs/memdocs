@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/06/2022
+ms.date: 09/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -76,7 +76,7 @@ When you enable this action:
 
   The following platforms support this action:
   - Android device administrator
-  - Android (AOSP) (preview)  
+  - Android (AOSP)
   - Android Enterprise:
     - Fully Managed
     - Dedicated
@@ -90,7 +90,7 @@ When you enable this action:
 
   The following platforms support this action:
   - Android device administrator
-  - Android (AOSP) (preview)  
+  - Android (AOSP)
   - Android Enterprise:
     - Fully Managed
     - Dedicated
@@ -156,7 +156,7 @@ To use device compliance policies to block devices from corporate resources, Azu
 To create a device compliance policy, see the following platform-specific guidance:
 
 - [Android](compliance-policy-create-android.md)
-- [Android (AOSP)](compliance-policy-create-android-aosp.md) (preview)  
+- [Android (AOSP)](compliance-policy-create-android-aosp.md)
 - [Android work profiles](compliance-policy-create-android-for-work.md)
 - [iOS](compliance-policy-create-ios.md)
 - [macOS](compliance-policy-create-mac-os.md)

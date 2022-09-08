@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/02/2022
+ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -2799,9 +2799,9 @@ For iPadOS 14.5 and later in Shared iPad mode:
 For iPadOS 13.0 and later in Shared iPad mode:  
     - **Maximum seconds after screen lock before password is required for Shared iPad**: If the screen lock exceeds this amount of time, a device password will be required to unlock the device.
 
-#### Introducing Android (AOSP) management for corporate devices (public preview)<!-- 8957094 -->  
+#### Introducing Android (AOSP) management for corporate devices<!-- 8957094 -->  
 
-Now in public preview, you can use Microsoft Intune to manage corporate-owned devices that run on the Android Open Source Project (AOSP) platform. Microsoft Intune currently supports the new *Android (AOSP)* management option for RealWear devices only. Management capabilities include:  
+You can use Microsoft Intune to manage corporate-owned devices that run on the Android Open Source Project (AOSP) platform. Microsoft Intune currently supports the new *Android (AOSP)* management option for RealWear devices only. Management capabilities include:  
 
 * Provision devices as user-associated devices or shared devices.  
 * Deploy device configuration and compliance profiles.  
