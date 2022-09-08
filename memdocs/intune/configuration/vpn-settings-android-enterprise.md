@@ -105,7 +105,7 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 - **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.
 - **Port number**: Enter the port number associated with the proxy server. For example, enter `8080`.
 
-## Personally-owned work profile
+## Personally owned work profile
 
 - **Connection type**: Select the VPN connection type. Your options:
 
