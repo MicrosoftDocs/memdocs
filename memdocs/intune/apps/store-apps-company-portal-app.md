@@ -78,6 +78,10 @@ To manage devices and install apps, your users can install the Company Portal ap
 For more information about how Intune handles dependencies for Universal apps, see [Deploying an appxbundle with dependencies via Microsoft Intune MDM](/archive/blogs/configmgrdogs/deploying-an-appxbundle-with-dependencies-via-microsoft-intune-mdm).  
 
 ## Frequently asked questions 
+
+ > [!NOTE]
+ > Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. Intune will no longer support Windows 8.1 sideloading.
+
 ### How do I update the Company Portal app on my users' devices if they have already installed the older apps from the store?
 If your users have already installed the Windows 8.1 Company Portal apps from the Microsoft Store, their apps should be automatically updated to the latest version with no action required from you or your users. If the update does not happen, ask your users to confirm that they have enabled auto-updates for Store apps on their devices.   
 
