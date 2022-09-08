@@ -63,7 +63,7 @@ To use device compliance policies, be sure you:
 
 - Enroll devices to one user, or enroll without a primary user. Single devices cannot be enrolled to multiple users.
 
-If you plan to use custom settings for device compliance, you'll need prepare a custom JSON file and PowerShell script before you create a policy. For more information about custom compliance settings, including supported platforms, prerequisites, and how to configure the *Custom Compliance* category while creating a policy, see [Use custom compliance settings](../protect/compliance-use-custom-settings.md).
+If you plan to use custom settings for device compliance, you'll need to prepare a custom JSON file and PowerShell script before you create a policy. For more information about custom compliance settings, including supported platforms, prerequisites, and how to configure the *Custom Compliance* category while creating a policy, see [Use custom compliance settings](../protect/compliance-use-custom-settings.md).
 ## Create the policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -83,7 +83,7 @@ If you plan to use custom settings for device compliance, you'll need prepare a 
      - *Fully Managed*
      - *Dedicated*
      - *Corporate-Owned Work Profile*
-     - *Personally-Owned Work Profile*
+     - *Personally Owned Work Profile*
 
     Then, select **Create** to open the **Create policy** configuration window.
 
