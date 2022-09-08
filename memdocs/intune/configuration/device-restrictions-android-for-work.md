@@ -201,7 +201,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 
 - **Threat scan on apps**: **Require** (default) enables Google Play Protect to scan apps before and after they're installed. If it detects a threat, it may warn users to remove the app from the device. When set to **Not configured**, Intune doesn't change or update this setting. By default, the OS might not enable or run Google Play Protect to scan apps.
 
-- **Common Criteria mode**: **Require** enables an elevated set of security standards that are most often used in highly sensitive organizations, such as government establishments. Those settings include but are not limited to:
+- **Common Criteria mode**: **Require** enables an elevated set of security standards that are most often used in highly sensitive organizations, such as government establishments. Those settings include but aren't limited to:
 
   - AES-GCM encryption of Bluetooth Long Term Keys
   - Wi-Fi configuration stores
@@ -553,7 +553,7 @@ If you want to enable side-loading, set the **Allow installation from unknown so
 
 - **Clear local data in apps not optimized for Shared device mode**: Add any app not optimized for shared device mode to the list. The app's local data will be cleared whenever a user signs out of an app that's optimized for shared device mode. Available for dedicated devices enrolled with Shared mode running Android 9 and later. 
 
-  When you use this setting, users can't initiate sign out from non-optimized apps and get single sign-out. 
+  When you use this setting, users can't initiate sign out from non-optimized apps and get single sign-out.
   - Users will need to sign out of an app that has been optimized for Shared Device mode. Microsoft apps that are optimized for Shared device mode on Android include Teams and Intune’s Managed Home Screen. 
   - For apps that haven't been optimized for Shared Device mode, deleting application data extends to local app storage only. Data may be left in other areas of the device. User identifying artifacts such as email address and username may be left behind on the app and visible by others. 
   - Non-optimized apps that provide support for multiple accounts could exhibit indeterminate behavior and are therefore not recommended. 
@@ -670,15 +670,17 @@ The Intune default message is translated for all languages in the [Endpoint Mang
 
 You can configure the following settings:
 
-- **Short support message**: When users try to change a setting that's managed by the organization, a short message is shown. Use these settings to customize this message. You can enter a different message for different languages. By default, this message is in **English (United States)**.  
+- **Short support message**: When users try to change a setting that's managed by the organization, a short message is shown.
 
-  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and don't enter a custom message, then this text is automatically shown. This text is also automatically translated to the device's default language.
+  Using the following settings, you can customize this message and enter a different message for different languages. By default, this message is in **English (United States)**.
+
+  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't enter a custom message, then this text is automatically shown. This text is also automatically translated to the device's default language.
 
     You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original short Intune default message is used and is translated:
 
     `You do not have permission for this action. For more information, contact your IT admin.`
 
-  - **Select Locale**: Select the locale or region to show the message.
+  - **Select Locale**: Select the locale or region to show a different custom message for that specific locale.
 
     For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
 
@@ -686,25 +688,58 @@ You can configure the following settings:
 
   - **Message**: Enter the text you want shown, a max of 200 characters. The text you enter isn't translated to the device's default language. So if you want to show a message in Spanish, enter the text in Spanish.
 
-- **Long support message**: On the device, in **Settings** > **Security** > **Device admin apps** > **Device Policy**, a long support message is shown. Use this setting to customize this message. You can enter a different message for different languages. By default, this message is in **English (United States)**.  
+- **Long support message**: On the device, in **Settings** > **Security** > **Device admin apps** > **Device Policy**, a long support message is shown.
 
-  In the short message, you can also select **Learn more** to see this long message.
+  Using the following settings, you can customize this message and enter a different message for different languages. By default, this message is in **English (United States)**.
 
-  Using these settings, you can customize this message and enter a different message for different languages.
-
-  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't select a locale and don't enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
+  - **All, except when specified**: This message is the Intune default message, and is shown for all languages. If you don't enter a custom message, then this text is automatically shown, and is automatically translated to the device's default language.
 
     You can change this message. Any changes aren't translated. If you delete all the text in this message and leave this setting blank, then the following original long Intune default message is used and is translated:
 
     `The organization's IT admin can monitor and manage apps and data associated with this device, including settings, permissions, corporate access, network activity and the device's location information.`
 
-  - **Select Locale**: Select the locale or region to show the message.
+  - **Select Locale**: Select the locale or region to show a different custom message for that specific locale.
 
     For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
 
     You can add multiple locales and messages.
 
   - **Message**: Enter the text you want shown, a max of 4096 characters. The text you enter isn't translated to the device's default language. So if you want to show a message in Spanish, enter the text in Spanish.
+
+- **Lock screen message**: Enter the text you want shown on the device lock screen.
+
+  Using the following settings, you can customize this message and enter a different message for different languages. By default, this message is in **English (United States)**.
+
+  - **All, except when specified**: Enter the text you want shown for all languages, a max of 4096 characters. This text is automatically translated to the device's default language. If you don't enter a custom message, then Intune doesn't change or update this setting. By default, the OS might not show a lock screen message.
+
+  - **Select Locale**: Select the locale or region to show a different custom message for that specific locale.
+
+    For example, to show a custom message on devices using **Spanish** as the default language, select **Spanish (Spain)**. Only devices using the **Spanish (Spain)** default language will see your custom message. All other languages will see the **All, except when specified** message text.
+
+    You can add multiple locales and messages.
+
+  - **Message**: Enter the text you want shown, a max of 4096 characters. The text you enter isn't translated to the device's default language. So if you want to show a message in Spanish, enter the text in Spanish.
+
+  When you configure the **Lock screen message**, you can also use the following device tokens to show device-specific information:
+
+  - `{{AADDeviceId}}`: Azure AD device ID
+  - `{{AccountId}}`: Intune tenant ID or account ID
+  - `{{DeviceId}}`: Intune device ID
+  - `{{DeviceName}}`: Intune device name
+  - `{{domain}}`: Domain name
+  - `{{EASID}}`: Exchange Active Sync ID
+  - `{{IMEI}}`: IMEI of the device
+  - `{{mail}}`: Email address of the user
+  - `{{MEID}}`: MEID of the device
+  - `{{partialUPN}}`: UPN prefix before the @ symbol
+  - `{{SerialNumber}}`: Device serial number
+  - `{{SerialNumberLast4Digits}}`: Last four digits of the device serial number
+  - `{{UserId}}`: Intune user ID
+  - `{{UserName}}`: User name
+  - `{{userPrincipalName}}`: UPN of the user
+
+  > [!NOTE]
+  > Variables aren't validated in the UI and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}`, instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
 
 ## Personally owned devices with a work profile
 
