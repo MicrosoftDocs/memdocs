@@ -571,7 +571,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Allow Radio Service
 - Allow Remote Screen Observation
 - Allow Safari
-- Allow Screen Shot
+- Allow Screenshot
 - Allow Shared Device Temporary Session
 - Allow Shared Stream
 - Allow Spell Check
