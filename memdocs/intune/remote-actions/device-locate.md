@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 4/12/2022 
+ms.date: 09/09/2022 
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -43,7 +43,11 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 **Locate device** - The following platforms support this capability:
 
-- **Android Enterprise dedicated devices** – Requires the device run *Google Play Services* version **20.06.16** or later and have Location services turned on.  
+- **Android Enterprise dedicated devices** – Requires the device run *Google Play Services* version **20.06.16** or later and have Location services turned on.
+    - Android Enterprise corporate owned fully managed
+    - Android Enterprise corporate owned dedicated devices
+    - Android Enterprise corporate owned work profile
+  
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md).
 - **Windows 10**:
   - Version 20H2 (10.0.19042.789) or later
@@ -56,8 +60,8 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 - **iOS/iPadOS 9.3 and later** - Requires the device to be in supervised mode, and be in [lost mode](device-lost-mode.md)
 - **Android Enterprise dedicated devices** - Requires the Intune app running 2202.01 or later 
-- **Android Enterprise corporate-owned work profile (COPE) devices** - Requires the Intune app running 2202.01 or later
-- **Android Enterprise corporate-owned fully managed (COBO) devices** - Requires the Intune app running 2202.01 or later
+- **Android Enterprise corporate-owned work profile devices** - Requires the Intune app running 2202.01 or later
+- **Android Enterprise corporate-owned fully managed devices** - Requires the Intune app running 2202.01 or later
 
 **Unsupported** - Device location capabilities aren't supported for the following platforms:
 
@@ -116,24 +120,30 @@ To start a lost device sound alert:
 4. On the devices *Overview* pane:
    - For **iOS/iPadOS**: select **Play Lost mode sound (supervise only)**. The sound plays on an iOS/iPadOS device until the device is removed from lost mode.
 
-   - For **Android Enterprise dedicated devices**, **Android Enterprise corporate-owned work profile (COPE) devices**, and **Android Enterprise corporate-owned fully managed (COBO) devices** : select **Play Lost device sound**. The sound plays on an Android Enterprise dedicated device for the set duration or if notifications are enabled, until a user on the device turns it off. 
+   - For **Android Enterprise dedicated devices**, **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise corporate-owned fully managed devices** : select **Play Lost device sound**. The sound plays on an Android Enterprise dedicated device for the set duration or if notifications are enabled, until a user on the device turns it off. 
    
    -  For **Android Enterprise dedicated devices**:
       - devices running on operating systems below version 10, a full screen activity with a **Stop Sound** button pops up. 
       - devices running on operating systems version 10 or higher, if notifications are enabled, a notification with a **Stop Sound** button shows up.
       - To configure system notifications for devices in kiosk mode, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
      
-   - For **Android Enterprise corporate-owned work profile (COPE) devices**, and **Android Enterprise corporate-owned fully managed (COBO) devices** :
+   - For **Android Enterprise corporate-owned work profile devices**, and **Android Enterprise corporate-owned fully managed devices** :
      - To configure system notifications for devices, see [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 ## Security and privacy information for lost mode and locate device actions
 
-- No device location information is sent to Intune until you turn on this action.
+- For **iOS and Android Enterprise corporate owned fully managed**, and **Android Enterprise corporate owned work profile**. 
+    - No device location information is sent to Intune until you turn on this action.
+  
 - When you use the locate device action, the latitude and longitude coordinates of the device can be retrieved by using the Graph API.
 - The data is stored for 24 hours, then removed. You can't manually remove the location data.
 - The data for last known locations is stored for up to seven days, and then removed.
 - Location data is encrypted, both while stored and while being transmitted.
 - For iOS/iPadOS devices, when you configure lost mode, you can customize a message that appears on the lock screen. In this message, to help the person that finds the device, be sure to include specific details to return the lost device.
+
+- For **Android Enterprise corporate owned fully managed**, **Android Enterprise corporate owned dedicated devices**, and **Android Enterprise corporate owned work profile**. 
+    - A one-time notification is received when Intune is granted location permissions. Location permissions cannot be modified in the Intune app but if desired, Google's Location Services can be turned off in the device settings.
+    - If notifications have been enabled for **Android Enterprise corporate owned fully-managed** and **Android Enterprise corporate-owned work profile** scenarios, then end-users will receive a notification, when the admin uses this feature.
 
 ## Next steps
 
