@@ -43,7 +43,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 **Locate device** - The following platforms support this capability:
 
-- **Android Enterprise dedicated devices** – Requires the device run *Google Play Services* version **20.06.16** or later and have Location services turned on.
+- **Android Enterprise** – Requires the device run *Google Play Services* version **20.06.16** or later and have Location services turned on.
     - Android Enterprise corporate owned fully managed
     - Android Enterprise corporate owned dedicated devices
     - Android Enterprise corporate owned work profile
@@ -67,9 +67,7 @@ You need to enable Windows location services in Windows Out of Box Experience (O
 
 - Android device administrator
 - Android Enterprise:
-  - Corporate-owned work profile
   - Personally-owned work profile
-  - Fully managed
 - macOS
 - Windows Holographic for Business
 - Windows Phone
@@ -132,18 +130,18 @@ To start a lost device sound alert:
 
 ## Security and privacy information for lost mode and locate device actions
 
-- For **iOS and Android Enterprise corporate owned fully managed**, and **Android Enterprise corporate owned work profile**. 
-    - No device location information is sent to Intune until you turn on this action.
-  
 - When you use the locate device action, the latitude and longitude coordinates of the device can be retrieved by using the Graph API.
 - The data is stored for 24 hours, then removed. You can't manually remove the location data.
-- The data for last known locations is stored for up to seven days, and then removed.
-- Location data is encrypted, both while stored and while being transmitted.
-- For iOS/iPadOS devices, when you configure lost mode, you can customize a message that appears on the lock screen. In this message, to help the person that finds the device, be sure to include specific details to return the lost device.
 
+- Location data is encrypted, both while stored and while being transmitted.
+- For **iOS/iPadOS** devices, when you configure lost mode, you can customize a message that appears on the lock screen. In this message, to help the person that finds the device, be sure to include specific details to return the lost device.
+- For **Android Enterprise corporate owned dedicated devices**
+    - The data for last known locations is stored for up to seven days, and then removed.
+- For **iOS and Android Enterprise corporate owned fully managed**, and **Android Enterprise corporate owned work profile**. 
+    - No device location information is sent to Intune until you turn on this action.
 - For **Android Enterprise corporate owned fully managed**, **Android Enterprise corporate owned dedicated devices**, and **Android Enterprise corporate owned work profile**. 
     - A one-time notification is received when Intune is granted location permissions. Location permissions cannot be modified in the Intune app but if desired, Google's Location Services can be turned off in the device settings.
-    - If notifications have been enabled for **Android Enterprise corporate owned fully-managed** and **Android Enterprise corporate-owned work profile** scenarios, then end-users will receive a notification, when the admin uses this feature.
+    - If notifications have been enabled for **Android Enterprise corporate owned fully-managed** and **Android Enterprise corporate-owned work profile** scenarios, then end-users will receive a notification when the admin uses this feature.
 
 ## Next steps
 
