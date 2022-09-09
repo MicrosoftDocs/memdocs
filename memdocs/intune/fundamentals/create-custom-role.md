@@ -126,10 +126,10 @@ The following permissions are available when creating custom roles.
 | Enrollment programs/Sync device | Initiate the Sync command for Windows Autopilot devices. | 
 | Enrollment programs/Update profile | Manage profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. | 
 | Enrollment programs/Update token | Upload the Apple Device Enrollment or Apple School Manager token and sync Apple Device Enrollment Program or Apple School Manager devices. | 
-| Filters/Create | Create new filter. | 
-| Filters/Delete | Delete filters. | 
+| [Filters/Create](/mem/intune/fundamentals/filters#create-a-filter) | Create new filter. | 
+| [Filters/Delete](/mem/intune/fundamentals/filters#delete-a-filter)| Delete filters. | 
 | Filters/Read | View filters.  | 
-| Filters/Update | Edit filters. | 
+| [Filters/Update](/mem/intune/fundamentals/filters#change-an-existing-filter) | Edit filters. | 
 | Intune data warehouse/Read | View all data and reports from the data warehouse. Data can be used by Power BI or other reporting services. | 
 | Managed apps/Assign | Assign application protection policies to Azure AD security groups. | 
 | Managed apps/Create | Create new application protection policies. | 
