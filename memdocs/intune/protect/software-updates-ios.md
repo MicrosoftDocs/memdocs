@@ -111,7 +111,7 @@ Consider testing to assess the impact of OS updates on the app you are running i
 7. On the **Review + create** tab, review the settings, and then select **Create** when ready to save your iOS/iPadOS update policy. Your new policy is displayed in the list of update policies for iOS/iPadOS.
 
 > [!NOTE]
-> Apple MDM doesn't allow you to force a device to install updates by a certain time or date. You can't use Intune software update policies to downgrade the OS version on a device.
+> You can't use Intune software update policies to downgrade the OS version on a device.
 
 ## Edit a policy
 
