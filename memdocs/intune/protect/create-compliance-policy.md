@@ -57,7 +57,8 @@ To use device compliance policies, be sure you:
   - iOS
   - macOS
   - Windows 10/11
-  - Windows 8.1
+  - Windows 8.1  
+    [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 - Enroll devices in Intune (required to see the compliance status)
 
