@@ -319,7 +319,7 @@ Version **6.2101.13.0**. This new connector version adds [improvements for loggi
 
 - Requires .NET Framework version 4.7.2
 - Replaces the use of the *Microsoft Intune Connector* for use with PKCS certificate profiles. The *PFX Certificate Connector* is now the only connector required to use PKCS #12 or Imported PFX certificates.
-- Adds support for using PKCS certificate profiles with all supported platforms except Windows 8.1.
+- Adds support for using PKCS certificate profiles with all supported platforms 
 - Adds support for certificate revocation for Outlook S/MIME.
 
 #### November 18, 2019
