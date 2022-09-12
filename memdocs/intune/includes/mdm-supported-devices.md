@@ -12,7 +12,7 @@ ms.localizationpriority: high
 
 - Apple iOS 14.0 and later
 - Apple iPadOS 14.0 and later
-- macOS 10.15 and later
+- macOS 11.6 and later
 
 > [!NOTE]
 > Intune requires iOS 14.x or later for device enrollment scenarios and app configuration delivered through Managed devices app configuration policies.
