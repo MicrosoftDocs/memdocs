@@ -4,18 +4,18 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 01/19/2022
+ms.date: 09/12/2022
 ms.localizationpriority: high
 ---
 
 ### Apple
 
-- Apple iOS 13.0 and later
-- Apple iPadOS 13.0 and later
-- macOS 10.15 and later
+- Apple iOS 14.0 and later
+- Apple iPadOS 14.0 and later
+- macOS 11.6 and later
 
 > [!NOTE]
-> Intune requires iOS 13.x or later for device enrollment scenarios and app configuration delivered through Managed devices app configuration policies.
+> Intune requires iOS 14.x or later for device enrollment scenarios and app configuration delivered through Managed devices app configuration policies.
 > 
 > For Intune app protection policies and app configuration delivered through Managed apps App configuration policies, Intune requires iOS 14.x or later.
 
