@@ -123,7 +123,7 @@ To support Microsoft Defender for Endpoint security configuration management thr
    > [!TIP]
    > Use pilot mode and the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, any device that falls into the scope configured will automatically be enrolled.
 
-1. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Endpoint Manager. If not already provided, request for your IT administrator to grant applicable users the Microsoft Endpoint Manager’s **Endpoint Security Manager** [built-in RBAC role](../fundamentals/role-based-access-control.md).
+1. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Endpoint Manager. If not already provided, request for your IT administrator to grant applicable users the Microsoft Endpoint Manager’s **Endpoint Security Manager** [built-in RBAC role](../fundamentals/role-based-access-control).
 
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
