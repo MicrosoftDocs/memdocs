@@ -147,6 +147,9 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 - ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 - ***Note 2*** - This profile is supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+  
+
 ## Next steps
 
 More resources

@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use custom device settings in Microsoft Intune
-description: Add or create a profile to use custom settings for Windows 8.1, Windows 10/11 client, Android device administrator, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune.
+description: Add or create a profile to use custom settings for Windows 10/11 client, Android device administrator, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 09/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -34,7 +34,7 @@ Microsoft Intune includes many built-in settings to control different features o
 This feature applies to:
 
 - Android device administrator
-- Android Enterprise personally-owned devices with a work profile
+- Android Enterprise personally owned devices with a work profile
 - iOS/iPadOS
 - macOS
 - Windows 10/11

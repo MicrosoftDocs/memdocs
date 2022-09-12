@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/02/2022
+ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -571,7 +571,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Allow Radio Service
 - Allow Remote Screen Observation
 - Allow Safari
-- Allow Screen Shot
+- Allow Screenshot
 - Allow Shared Device Temporary Session
 - Allow Shared Stream
 - Allow Spell Check
@@ -2799,9 +2799,9 @@ For iPadOS 14.5 and later in Shared iPad mode:
 For iPadOS 13.0 and later in Shared iPad mode:  
     - **Maximum seconds after screen lock before password is required for Shared iPad**: If the screen lock exceeds this amount of time, a device password will be required to unlock the device.
 
-#### Introducing Android (AOSP) management for corporate devices (public preview)<!-- 8957094 -->  
+#### Introducing Android (AOSP) management for corporate devices<!-- 8957094 -->  
 
-Now in public preview, you can use Microsoft Intune to manage corporate-owned devices that run on the Android Open Source Project (AOSP) platform. Microsoft Intune currently supports the new *Android (AOSP)* management option for RealWear devices only. Management capabilities include:  
+You can use Microsoft Intune to manage corporate-owned devices that run on the Android Open Source Project (AOSP) platform. Microsoft Intune currently supports the new *Android (AOSP)* management option for RealWear devices only. Management capabilities include:  
 
 * Provision devices as user-associated devices or shared devices.  
 * Deploy device configuration and compliance profiles.  
@@ -3346,7 +3346,7 @@ We've added the information from the Operational Event Viewer for **Windows Hell
 
 ### Windows 365 now generally available<!--10393594 -->
 
-Windows 365 is a new service from Microsoft that automatically creates Cloud PCs for your end users. Cloud PCs are a new hybrid personal computing category that use the power of the cloud and the accessing device to provide a full and personalized Windows virtual machine. Admins can use Microsoft Endpoint Manager to define the configurations and applications that are provisioned for each user’s Cloud PC. End users can access their Cloud PC from any device and any location. Windows 365 stores the end user’s Cloud PC and data in the cloud, not on the device, providing a secure experience.
+Windows 365 is a new service from Microsoft that automatically creates Cloud PCs for your end users. Cloud PCs are a new hybrid personal computing category that uses the power of the cloud and the accessing device to provide a full and personalized Windows virtual machine. Admins can use Microsoft Endpoint Manager to define the configurations and applications that are provisioned for each user’s Cloud PC. End users can access their Cloud PC from any device and any location. Windows 365 stores the end user’s Cloud PC and data in the cloud, not on the device, providing a secure experience.
 
 For more information about Windows 365, see [Windows 365](https://www.microsoft.com/windows-365?rtc=1).
 

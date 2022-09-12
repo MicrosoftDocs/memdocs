@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 11/12/2020
+ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -72,4 +72,4 @@ As an Intune administrator, you can create and assign VPN settings to Android de
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create VPN profiles for [Android Enterprise](vpn-settings-android-enterprise.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 and later](vpn-settings-windows-10.md), and [Windows 8.1](vpn-settings-windows-8-1.md) devices.
+You can also create VPN profiles for [Android Enterprise](vpn-settings-android-enterprise.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), and [Windows 10 and later](vpn-settings-windows-10.md).

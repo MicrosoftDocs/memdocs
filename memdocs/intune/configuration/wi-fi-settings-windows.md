@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/08/2022
+ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -225,7 +225,4 @@ For any settings not available in Intune, you can export Wi-Fi settings from ano
 
 The profile is created, but may not be doing anything. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-## More resources
-
-- [Windows 8.1 Wi-Fi settings](wi-fi-settings-import-windows-8-1.md)
-- [Wi-Fi settings overview](wi-fi-settings-configure.md), including other platforms
+[Wi-Fi settings overview](wi-fi-settings-configure.md), including other platforms

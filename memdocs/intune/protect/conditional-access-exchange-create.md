@@ -105,6 +105,8 @@ Before you can configure Conditional Access, verify the following configurations
 
 The native **Mail** application on Windows 8.1 and later (when enrolled into MDM with Intune)
 
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+
 ## Configure Exchange on-premises access
 
 Support for new installations of the Exchange connector was deprecated in July of 2020, and the connector installation package is no longer available for download. Instead, use Exchange [hybrid modern authentication](/office365/enterprise/hybrid-modern-auth-overview) (HMA).
