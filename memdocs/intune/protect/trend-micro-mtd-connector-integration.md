@@ -82,4 +82,4 @@ Configure additional settings to meet your organization’s requirements.
 
 ## Next steps
 
-- [Set up Trend Micro Mobile Agent app for enrolled devices]( https://docs.microsoft.com/en-us/mem/intune/protect/mtd-apps-ios-app-configuration-policy-add-assign)
+- [Set up Trend Micro Mobile Agent app for enrolled devices](https://docs.microsoft.com/en-us/mem/intune/protect/mtd-apps-ios-app-configuration-policy-add-assign)
