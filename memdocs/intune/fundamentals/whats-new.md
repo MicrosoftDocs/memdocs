@@ -65,7 +65,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device management
 
-#### Intune now supports iOS/iPadOS 14 and higher<!-- 14778947 -->
+#### Intune now requires iOS/iPadOS 14 and higher<!-- 14778947 -->
 With Apple's release of iOS/iPadOS 16, Microsoft Intune and the Intune Company Portal will now require iOS/iPadOS 14 and higher. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
   
 ## Week of September 05, 2022
