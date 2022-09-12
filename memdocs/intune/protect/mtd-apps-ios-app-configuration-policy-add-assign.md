@@ -157,6 +157,10 @@ Use the same Azure AD account previously configured in the [Symantec Endpoint Pr
 
 Create the iOS app configuration policy as described in the [using iOS app configuration policy](../apps/app-configuration-policies-use-ios.md) article. For more information, see [Sophos Intercept X for Mobile iOS - Available managed settings](https://community.sophos.com/kb/133963) in the Sophos knowledge base.
 
+### Trend Micro Mobile Security app configuration policy
+
+See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Trend Micro Mobile Security app configuration policy.
+
 ### Wandera app configuration policy
 
 > [!NOTE]
