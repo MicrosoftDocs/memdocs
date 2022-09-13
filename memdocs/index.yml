@@ -16,24 +16,48 @@ metadata:
 
 highlightedContent:
   items:
+    - title: Getting started with Microsoft Intune technologies
+      itemType: get-started
+      url: endpoint-manager-getting-started.md
     - title: Move to cloud native endpoints
       itemType: overview
       url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
-    - title: Getting started with Microsoft Endpoint Manager
-      itemType: get-started
-      url: endpoint-manager-getting-started.md
     - title: Microsoft Endpoint Manager (product page)
       itemType: get-started
       url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
-    - title: "Tutorial: Walkthrough Intune in Microsoft Endpoint Manager"
-      itemType: tutorial
-      url: ./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md
-    - title: Secure your remote workforce
-      itemType: get-started
-      url: /enterprise-mobility-security/remote-work/
-    - title: Microsoft Endpoint Manager fundamentals
-      itemType: learn
-      url: /learn/paths/endpoint-manager-fundamentals/
+
+# productDirectory section (optional)
+productDirectory:
+  title: Microsoft Intune product family
+  summary: Summary for the Intune product family of technologies. This can be up to 160 chars
+  items:
+    # Card
+    - title: Microsoft Intune
+      # imageSrc should be square in ratio with no white space
+      imageSrc: ./media/microsoft-intune.svg
+      summary: this is the description for Microsoft Intune and should tell users what this technology is...
+      url: ./intune/
+    # Card
+    - title: Microsoft Endpoint Configuration Manager
+      imageSrc: ./media/configmgr.svg
+      summary:  this is the description for Configuration Manager and should tell users what this technology is...
+      url: ./configmgr/
+    # Card
+    - title: Endpoint Analytics
+      imageSrc: ./media/microsoft-intune.svg
+      summary: cardsummary3
+      url: ./analytics
+    # Card
+    - title: Windows Autopilot
+      imageSrc: ./media/microsoft-intune.svg
+      summary: cardsummary4
+      url: ./autopilot/
+    # Card
+    - title: Endpoint Privilege Management
+      imageSrc: ./media/microsoft-intune.svg
+      summary: cardsummary4
+      url: ./autopilot/
+
 
 conceptualContent:
   items:
