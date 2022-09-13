@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 08/29/2022
+ms.date: 09/12/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -60,6 +60,26 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Role-based access control
 ### Scripts
 -->
+
+## Week of September 12, 2022
+
+### Device management
+
+#### Intune now requires iOS/iPadOS 14 and higher<!-- 14778947 -->
+With Apple's release of iOS/iPadOS 16, Microsoft Intune and the Intune Company Portal will now require iOS/iPadOS 14 and higher. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+
+#### Intune now requires macOS 11.6 and higher<!-- 14766663 -->
+With Apple's release of macOS 13 Ventura, Microsoft Intune, the Company Portal app, and the Intune MDM agent will now require macOS 11.6 (Big Sur) and later. For related information, see [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+
+## Week of September 05, 2022
+
+### Device management
+
+#### Remote help version: 4.0.1.13 release<!-- 15329690 -->
+
+With Remote help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
+
+For more information, go to [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
 
 ## Week of August 29, 2022
 
