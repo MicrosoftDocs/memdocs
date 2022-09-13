@@ -703,10 +703,10 @@ If for some reason Windows Autopilot isn’t the right option for you, there are
 
 - [Co-management for Windows devices](../../configmgr/comanage/overview.md)
 - [Windows Subscription Activation](/windows/deployment/windows-10-subscription-activation)
-- Configure an Intune [device compliance policy](./intune/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on an Azure AD [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
+- Configure an Intune [device compliance policy](../../intune/protect/compliance-policy-create-windows.md) that can allow or deny access to resources based on an Azure AD [Conditional Access policy](/azure/active-directory/conditional-access/howto-conditional-access-policy-compliant-device)
 - Add [Store Apps](../../intune/apps/windows-store-for-business.md)
 - Add [Win32 apps](../../intune/apps/apps-win32-app-management.md)
 - [Use certificates for authentication in Intune](../../intune/protect/certificates-configure.md)
-- Deploy network profiles, including [VPN](./intune/configuration/vpn-settings-windows-10.md) and [Wi-Fi](../../intune/configuration/wi-fi-settings-windows.md)
+- Deploy network profiles, including [VPN](../../intune/configuration/vpn-settings-windows-10.md) and [Wi-Fi](../../intune/configuration/wi-fi-settings-windows.md)
 - Deploy [Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
 - Security baseline for [Microsoft Edge](../../intune/protect/security-baseline-settings-edge.md)

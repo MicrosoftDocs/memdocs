@@ -54,7 +54,7 @@ If you don't currently use a mobile device management (MDM) solution, or want to
 
 With Microsoft Endpoint Manager, you get the following endpoint management options:
 
-- **[Microsoft Intune](./intune/index.yml)**: Intune is 100% cloud-based, and uses the Endpoint Manager admin center to manage devices, manage apps on devices, create & deploy policies, review reporting data, and more.
+- **[Microsoft Intune](../../intune/index.yml)**: Intune is 100% cloud-based, and uses the Endpoint Manager admin center to manage devices, manage apps on devices, create & deploy policies, review reporting data, and more.
 
   For more information on using Intune to manage your endpoints, go to:
 
@@ -62,7 +62,7 @@ With Microsoft Endpoint Manager, you get the following endpoint management optio
   - [Deployment guide: Setup or move to Microsoft Intune](../../intune/fundamentals/deployment-guide-intune-setup.md)
   - [Microsoft Intune planning guide](../../intune/fundamentals/intune-planning-guide.md)
 
-- **[Microsoft Endpoint Configuration Manager](./configmgr/index.yml)**: Configuration Manager uses an on-premises infrastructure, and can manage servers. When you use [co-management](../../configmgr/comanage/overview.md), some workloads use Configuration Manager (on-premises), and some workloads use Microsoft Intune (cloud).
+- **[Microsoft Endpoint Configuration Manager](../../configmgr/index.yml)**: Configuration Manager uses an on-premises infrastructure, and can manage servers. When you use [co-management](../../configmgr/comanage/overview.md), some workloads use Configuration Manager (on-premises), and some workloads use Microsoft Intune (cloud).
 
   For cloud-native endpoints, your Configuration Manager solutions should use a [Cloud Management Gateway (CMG)](../../configmgr/core/clients/manage/cmg/overview.md) and [co-management](../../configmgr/comanage/how-to-prepare-win10.md).
 

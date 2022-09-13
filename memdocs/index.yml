@@ -18,7 +18,7 @@ highlightedContent:
   items:
     - title: Move to cloud native endpoints
       itemType: overview
-      url: cloud-native-endpoints-overview.md
+      url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
     - title: Getting started with Microsoft Endpoint Manager
       itemType: get-started
       url: endpoint-manager-getting-started.md
