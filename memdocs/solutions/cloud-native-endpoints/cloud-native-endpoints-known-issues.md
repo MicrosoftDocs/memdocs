@@ -32,7 +32,7 @@ ms.collection:
 # Known issues and limitations with cloud-native endpoints
 
 > [!TIP]
-> [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
+> [!INCLUDE [cloud-native-endpoints-definitions](../../includes/cloud-native-endpoints-definitions.md)]
 
 When using or moving on-premises device management to cloud-native endpoints, there are some scenarios you need to know. This article lists and describes some changed behaviors, limitations, and resolutions.
 
@@ -62,7 +62,7 @@ Cloud-native endpoints are joined to Azure AD, and don't exist in on-premises AD
 
 > [!IMPORTANT]
 > The Azure AD Connect device writeback feature tracks devices that are registered in Azure AD. These devices are shown in on-premises AD as registered devices.
-> 
+>
 > Azure AD Connect device writeback doesn't create identical on-premises AD computer accounts in the on-premises AD domain. These writeback devices don't support on-premises machine authentication. 
 >  
 > For information on scenarios supported with device writeback, go to [Azure AD Connect: Enabling device writeback](/azure/active-directory/hybrid/how-to-connect-device-writeback).
@@ -94,9 +94,9 @@ The following list includes common features and services that might use machine 
 
 - **IIS web server** deployments that restrict site access using ACL permissions with only computer accounts, or groups of computer accounts, will fail. Authentication strategies that limit access to only computer accounts or groups of computer accounts will also fail.
 
-  **Recommendation**: 
+  **Recommendation**:
   - On your web sites, enable Negotiate authentication.
-  - Update your web server apps to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure AD](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory). 
+  - Update your web server apps to use Azure AD authentication. For more information, go to [Migrate application authentication to Azure AD](/azure/active-directory/manage-apps/migrate-application-authentication-to-azure-active-directory).
   
   More resources:
 
@@ -119,7 +119,7 @@ The following list includes common features and services that might use machine 
 
   For more information, go to:
 
-  - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](./intune/apps/intune-management-extension.md)
+  - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](../../intune/apps/intune-management-extension.md)
   - [Introduction to OneDrive in Microsoft 365](/learn/modules/m365-onedrive-collaboration-use/)
 
 ## Group policy objects might not apply
@@ -128,14 +128,14 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
 **Resolution**:
 
-- Using [Group Policy Analytics](./intune/configuration/group-policy-analytics.md) in Endpoint Manager, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
+- Using [Group Policy Analytics](../../intune/configuration/group-policy-analytics.md) in Endpoint Manager, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
 - In endpoint management, policies are deployed to users and groups. They aren't applied in LSDOU order. This behavior is a mind shift, so make sure your users and groups are in order.
 
-  For more specific information and guidance on policy assignment in Microsoft Intune, go to [Assign user and device profiles in Microsoft Intune](./intune/configuration/device-profile-assign.md).
+  For more specific information and guidance on policy assignment in Microsoft Intune, go to [Assign user and device profiles in Microsoft Intune](../../intune/configuration/device-profile-assign.md).
 
 - Inventory your policies, and determine what they do. You may find categories or groupings, such as policies that focus on security, policies that focus on the OS, and so on.
 
-  You can create an Intune policy that includes the settings from your categories or groupings. The [Settings Catalog](./intune/configuration/settings-catalog.md) is a good resource.
+  You can create an Intune policy that includes the settings from your categories or groupings. The [Settings Catalog](../../intune/configuration/settings-catalog.md) is a good resource.
 
 - Be prepared to create new policies. The built-in features of modern endpoint management, like Microsoft Intune, may have better options to create and deploy policies.
 
