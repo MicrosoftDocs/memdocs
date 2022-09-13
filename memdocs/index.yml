@@ -36,27 +36,27 @@ productDirectory:
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/microsoft-intune.svg
       summary: this is the description for Microsoft Intune and should tell users what this technology is...
-      url: ./intune/index.md
+      url: ./intune/index.yml
     # Card
     - title: Microsoft Endpoint Configuration Manager
       imageSrc: ./media/configmgr.svg
       summary:  this is the description for Configuration Manager and should tell users what this technology is...
-      url: ./configmgr/index.md
+      url: ./configmgr/index.yml
     # Card
     - title: Endpoint Analytics
       imageSrc: ./media/microsoft-intune.svg
       summary: cardsummary3
-      url: ./analytics/index.md
+      url: ./analytics/index.yml
     # Card
     - title: Windows Autopilot
       imageSrc: ./media/microsoft-intune.svg
       summary: cardsummary4
-      url: ./autopilot/index.md
+      url: ./autopilot/index.yml
     # Card
     - title: Endpoint Privilege Management
       imageSrc: ./media/microsoft-intune.svg
       summary: cardsummary4
-      url: ./autopilot/index.md
+      url: ./autopilot/index.yml
 
 
 conceptualContent:
