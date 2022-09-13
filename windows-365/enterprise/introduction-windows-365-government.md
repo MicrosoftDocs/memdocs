@@ -46,8 +46,8 @@ For more information about Cloud PCs and Windows 365, see [What is Windows 365?]
 
 The following features are not yet supported for Windows 365 GCC and/or GCCH.
 
-| **Feature** | **GCC**|**GCCH** |
-|:---:|:---:|:---:|
+| Feature | GCC | GCCH |
+|:----|:----|:----|
 |CloudPC resize remote action|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Managed disk encryption with customer managed keys|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Digital forensics and placing a Cloud PC under review|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
