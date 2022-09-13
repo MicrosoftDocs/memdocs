@@ -79,6 +79,7 @@ Registry Keys:
 1. HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
 1. HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall
 1. HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
+1. HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm
 
 Commands:
 
