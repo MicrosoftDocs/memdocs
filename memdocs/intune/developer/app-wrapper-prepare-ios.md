@@ -47,13 +47,13 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
 * Download the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-ios) from GitHub.
 
-* A macOS computer that has the Xcode toolset version 11 or later installed.
+* A macOS computer that has the Xcode toolset version 14.0 or later installed.
 
 * The input iOS app must be developed and signed by your company or an independent software vendor (ISV).
 
   * The input app file must have the extension **.ipa** or **.app**.
 
-  * The input app must be compiled for iOS 12.2 or later.
+  * The input app must be compiled for iOS 14.0 or later.
 
   * The input app cannot be encrypted.
 
@@ -228,7 +228,6 @@ You can use the following command line parameters with the App Wrapping Tool:
 |**-xe**| (Optional) Prints information about the iOS extensions in the app and what entitlements are required to use them. See  [Setting app entitlements](#setting-app-entitlements) for more details. |
 |**-x**| (Optional) `<An array of paths to extension provisioning profiles>`. Use this if your app needs extension provisioning profiles.|
 |**-b**|(Optional) Use -b without an argument if you want the wrapped output app to have the same bundle version as the input app (not recommended). <br/><br/> Use `-b <custom bundle version>` if you want the wrapped app to have a custom CFBundleVersion. If you choose to specify a custom CFBundleVersion, it's a good idea to increment the native app's CFBundleVersion by the least significant component, like 1.0.0 -> 1.0.1. |
-|**-citrix**|(Optional) Include the Citrix XenMobile App SDK (network-only variant). You must have the [Citrix MDX Toolkit](https://docs.citrix.com/en-us/mdx-toolkit/about-mdx-toolkit.html) installed to use this option. |
 |**-f**|(Optional) `<Path to a plist file specifying arguments.>` Use this flag in front of the [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) file if you choose to use the plist template to specify the rest of the IntuneMAMPackager properties like -i, -o, and -p. See Use a plist to input arguments. |
 |**-dt**|(Optional) Disable collection of Microsoft Intune client telemetry.
 
@@ -251,7 +250,6 @@ In the IntuneMAMPackager/Contents/MacOS folder, open `Parameters.plist` (a blank
 | Remove Missing Entitlements |Boolean|false| Same as -e|
 | Prevent Default Build Update |Boolean|false| Equivalent to using -b without arguments|
 | Build String Override |String|empty| The custom CFBundleVersion of the wrapped output app|
-| Include Citrix XenMobile App SDK (network-only variant)|Boolean|false| Same as -citrix|
 | Extension Provisioning Profile Paths |Array of Strings|empty| An array of extension provisioning profiles for the app.
 | Disable Telemetry |Boolean|false| Same as -dt
 
@@ -441,33 +439,6 @@ Use the following security and privacy best practices when you use the App Wrapp
 - iOS apps that include a file upload dialog box can allow users to circumvent, cut, copy, and paste restrictions applied to the app. For example, a user could use the file upload dialog box to upload a screenshot of the app data.
 
 - When you monitor the documents folder on your device from within a wrapped app, you might see a folder named .msftintuneapplauncher. If you change or delete this file, it might affect the correct functioning of restricted apps.
-
-## Intune App Wrapping Tool for iOS with Citrix MDX mVPN
-
-This feature is an integration with the Citrix MDX app wrapper for iOS/iPadOS. The integration is simply an additional, optional command-line flag, `-citrix` to the general Intune App Wrapping Tools.
-
-### Requirements
-
-To use the `-citrix` flag, you will also need to install the [Citrix MDX app wrapper for iOS](https://docs.citrix.com/en-us/mdx-toolkit/10/xmob-mdx-kit-app-wrap-ios.html) on the same macOS machine. The downloads are found on [Citrix XenMobile Downloads](https://www.citrix.com/downloads/xenmobile/) and are restricted to Citrix customers only after signing in. Make sure this is installed in the default location: `/Applications/Citrix/MDXToolkit`. 
-
-> [!NOTE] 
-> Support for Intune and Citrix integration is limited to iOS 10+ devices only.
-
-### Use the `-citrix` flag
-
-Simply run your general app wrapping command and with the `-citrix` flag appended. The `-citrix` flag currently does not take any arguments.
-
-**Usage format**:
-
-```bash
-./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioing profile paths>] [-citrix]
-```
-
-**Example command**:
-
-```bash
-./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c 12A3BC45D67EF8901A2B3CDEF4ABC5D6E7890FAB  -v true -citrix
-```
 
 ## See also
 
