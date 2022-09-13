@@ -58,7 +58,6 @@ The following compliance partners are supported as generally available:
 - MobileIron Device Compliance Cloud
 - MobileIron Device Compliance On-prem
 - SOTI MobiControl
-- Trend Micro Mobile Security
 - VMware Workspace ONE UEM (formerly AirWatch)
 
 ## Prerequisites
