@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/29/2022
+ms.date: 09/13/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -48,15 +48,14 @@ The following features are not yet supported for Windows 365 GCC and/or GCCH.
 
 | **Feature** | **GCC**|**GCCH** |
 |:---:|:---:|:---:|
-|CloudPC resize remote action for preview and trial licenses|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
-|Data encryption using personal keys|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
+|CloudPC resize remote action|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
+|Managed disk encryption with customer managed keys|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Digital forensics and placing a Cloud PC under review|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Virtualization-based workloads|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Windows 11 support|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Provision Cloud PCs with Secure Boot and vTPM|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Windows 365 Security baseline|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |RDP Shortpath for public networks|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
-|Uploading images without Azure Network Connections|![X](./media/manage-rdp-device-restrictions/xmark.png)|![Check](./media/manage-rdp-device-restrictions/checkmark.png)|
 |Configure installed language and region for provisioning Cloud PCs|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Windows 365 System based alerting on Microsoft Endpoint Manager for Cloud PCs|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Citrix HDX Plus for Windows 365|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
@@ -68,3 +67,5 @@ The following features are not yet supported for Windows 365 GCC and/or GCCH.
 
 <!-- ########################## -->
 ## Next steps
+
+To learn more about Windows 365, see [What is Windows 365?](..\overview.md)
