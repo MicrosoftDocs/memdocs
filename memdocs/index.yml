@@ -54,8 +54,9 @@ productDirectory:
       url: ./autopilot/index.yml
     # Card
     - title: Endpoint Privilege Management docs
-      imageSrc: ./media/defender.svg
-      summary: cardsummary4
+      imageSrc: ./media/priv.svg
+      summary: Remove barriers to end-user and IT productivity by elevating end-user permissions to perform specific admin actions only when needed on Windows devices. 
+
       url: ./autopilot/index.yml
 
 
@@ -77,7 +78,19 @@ additionalContent:
         - title: Microsoft Managed Desktop docs
           summary: Microsoft Managed Desktop is a unique ITaaS solution that combines endpoint management and security monitoring in a way that gives users a secure and productive device experience that IT pros can trust.
           url: /managed-desktop/index.yml
-  
+        - title: Microsoft 365 docs
+          summary: Find the solutions, scenarios, and resources you need to get started with Microsoft 365 for your business or organization. Microsoft 365 includes services such as Teams and SharePoint, and Microsoft 365 Apps such as Outlook, Word, Excel, and PowerPoint.
+          url: /microsoft-365/index.yml
+        - title: Office deployment docs
+          summary: Deploy and manage Microsoft 365 Apps or other versions of Office.
+          url: /deployoffice/index.yml
+        - title: Zero Trust guidance
+          summary: Learn about the Zero Trust security model, its principles, and how to implement a Zero Trust architecture using the deployment plans.
+          url: /security/zero-trust/index.yml
+        - title: Microsoft Defender for Endpoint
+          summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
+          url: /microsoft-365/security/defender-endpoint/index.yml
+
     - title: Microsoft Intune community & support
       items:
         # Card
