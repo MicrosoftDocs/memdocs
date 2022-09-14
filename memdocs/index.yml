@@ -54,12 +54,14 @@ productDirectory:
       url: ./autopilot/index.yml
     # Card
     - title: Endpoint Privilege Management docs
-      imageSrc: ./media/priv.svg
+      imageSrc: ./media/privilege.svg
       summary: Remove barriers to end-user and IT productivity by elevating end-user permissions to perform specific admin actions only when needed on Windows devices. 
-
       url: ./autopilot/index.yml
-
-
+    # Card
+    - title: Azure Active Directory
+      imageSrc: ./media/active-directory.svg
+      summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
+      url: /azure/active-directory/index.yml
 
 # additionalContent section (optional)
 # Card with summary style
