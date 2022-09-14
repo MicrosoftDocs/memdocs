@@ -35,26 +35,26 @@ productDirectory:
     - title: Microsoft Intune docs
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/microsoft-intune.svg
-      summary: this is the description for Microsoft Intune and should tell users what this technology is...
+      summary: Microsoft Intune is a cloud-based service that helps enable your workforce to be productive while keeping your corporate data protected.
       url: ./intune/index.yml
     # Card
     - title: Microsoft Endpoint Configuration Manager docs
       imageSrc: ./media/configmgr.svg
-      summary:  this is the description for Configuration Manager and should tell users what this technology is...
+      summary: Configuration Manager is an on-premises and cloud-connected device management solution to manage devices, deploy apps and software updates, etc.
       url: ./configmgr/index.yml
     # Card
     - title: Endpoint Analytics docs
-      imageSrc: ./media/analytics.svg
+      imageSrc: ./media/endpoint-analytics.svg
       summary: Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket.
       url: ./analytics/index.yml
     # Card
     - title: Windows Autopilot docs
-      imageSrc: ./media/devices.svg
+      imageSrc: ./media/autopilot.svg
       summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use, and to reset, repurpose, and recover devices. 
       url: ./autopilot/index.yml
     # Card
     - title: Endpoint Privilege Management docs
-      imageSrc: ./media/microsoft-intune.svg
+      imageSrc: ./media/defender.svg
       summary: cardsummary4
       url: ./autopilot/index.yml
 
