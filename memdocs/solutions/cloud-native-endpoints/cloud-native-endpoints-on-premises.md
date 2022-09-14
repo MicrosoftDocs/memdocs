@@ -32,7 +32,7 @@ ms.collection:
 # Cloud-native endpoints and on-premises resources
 
 > [!TIP]
-> [!INCLUDE [cloud-native-endpoints-definitions](./includes/cloud-native-endpoints-definitions.md)]
+> [!INCLUDE [cloud-native-endpoints-definitions](../../includes/cloud-native-endpoints-definitions.md)]
 
 Cloud-native endpoints can access on-premises resources. This article goes into more detail, and answers some common questions.
 
@@ -56,7 +56,7 @@ For cloud-native Windows endpoints to access on-premises resources and services 
 
 ## Similar to on-premises Windows devices
 
-For end users, a Windows cloud-native endpoint behaves like any other on-premises Windows device. 
+For end users, a Windows cloud-native endpoint behaves like any other on-premises Windows device.
 
 The following list is a common set of on-premises resources that users can access from their Azure AD joined devices:
 
@@ -104,7 +104,7 @@ The following steps are an overview. For more specific information, including de
 
     > [!NOTE]
     > PKINIT is a preauthentication mechanism for Kerberos 5 which uses X.509 certificates to authenticate the Key Distribution Center (KDC) to clients and vice versa.
-    > 
+    >
     > [MS-PKCA: Public Key Cryptography for Initial Authentication (PKINIT) in Kerberos Protocol](/openspecs/windows_protocols/ms-pkca/d0cf1763-3541-4008-a75f-a577fa5e8c5b)
 
 6. The DC authenticates the user. The DC returns a Kerberos Ticket-Granting Ticket (TGT) or an NTLM token based on the protocol that the on-premises resource or application supports. Windows caches the returned TGT or NTLM token for future use.
