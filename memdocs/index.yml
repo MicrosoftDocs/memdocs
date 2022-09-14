@@ -16,14 +16,14 @@ metadata:
 
 highlightedContent:
   items:
-    - title: Getting started with Microsoft Intune technologies
-      itemType: get-started
-      url: endpoint-manager-getting-started.md
-    - title: Move to cloud native endpoints
+    - title: Microsoft Intune technologies overview
+      itemType: overview
+      url: endpoint-manager-overview.md
+    - title: Support remote and hybrid workers with cloud native endpoints
       itemType: overview
       url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
     - title: Microsoft Intune (product page)
-      itemType: get-started
+      itemType: overview
       url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
 
 # productDirectory section (optional)
@@ -32,37 +32,52 @@ productDirectory:
   summary: This is an optional summary that we can remove if it makes sense
   items:
     # Card
-    - title: Microsoft Intune
+    - title: Microsoft Intune docs
       # imageSrc should be square in ratio with no white space
       imageSrc: ./media/microsoft-intune.svg
       summary: this is the description for Microsoft Intune and should tell users what this technology is...
       url: ./intune/index.yml
     # Card
-    - title: Microsoft Endpoint Configuration Manager
+    - title: Microsoft Endpoint Configuration Manager docs
       imageSrc: ./media/configmgr.svg
       summary:  this is the description for Configuration Manager and should tell users what this technology is...
       url: ./configmgr/index.yml
     # Card
-    - title: Endpoint Analytics
+    - title: Endpoint Analytics docs
       imageSrc: ./media/analytics.svg
       summary: Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket.
       url: ./analytics/index.yml
     # Card
-    - title: Windows Autopilot
+    - title: Windows Autopilot docs
       imageSrc: ./media/devices.svg
       summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use, and to reset, repurpose, and recover devices. 
       url: ./autopilot/index.yml
     # Card
-    - title: Endpoint Privilege Management
+    - title: Endpoint Privilege Management docs
       imageSrc: ./media/microsoft-intune.svg
       summary: cardsummary4
       url: ./autopilot/index.yml
+
+
 
 # additionalContent section (optional)
 # Card with summary style
 additionalContent:
   # Supports up to 4 subsections
   sections:
+    - title: Related technologies
+      items:
+        # Card
+        - title: Windows client docs for IT Pros
+          summary: Evaluate, plan, deploy, secure, and manage devices running Windows 10 and Windows 11.
+          url: /windows/resources/index.yml
+        - title: Windows 365 docs
+          summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. 
+          url: https://docs.microsoft.com/en-us/windows-365/index.yml
+        - title: Microsoft Managed Desktop docs
+          summary: Microsoft Managed Desktop is a unique ITaaS solution that combines endpoint management and security monitoring in a way that gives users a secure and productive device experience that IT pros can trust.
+          url: /managed-desktop/index.yml
+  
     - title: Microsoft Intune community & support
       items:
         # Card
