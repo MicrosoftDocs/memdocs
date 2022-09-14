@@ -29,7 +29,7 @@ highlightedContent:
 # productDirectory section (optional)
 productDirectory:
   title: Get started
-  summary: 
+  summary: This is an optional summary
   items:
     # Card
     - title: Microsoft Intune
