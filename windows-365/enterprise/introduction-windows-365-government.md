@@ -66,5 +66,5 @@ The following features are not yet supported for Windows 365 GCC and/or GCCH.
 |Windows 365 app support|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 
 ## Next steps
- 
+
 To learn more about Windows 365, see [What is Windows 365?](..\overview.md)
