@@ -22,14 +22,14 @@ highlightedContent:
     - title: Move to cloud native endpoints
       itemType: overview
       url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
-    - title: Microsoft Endpoint Manager (product page)
+    - title: Microsoft Intune (product page)
       itemType: get-started
       url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
 
 # productDirectory section (optional)
 productDirectory:
   title: Get started
-  summary: This is an optional summary
+  summary: This is an optional summary that we can remove if it makes sense
   items:
     # Card
     - title: Microsoft Intune
@@ -124,3 +124,30 @@ conceptualContent:
         - url: ./autopilot/existing-devices.md
           itemType: how-to-guide
           text: "Configuration Manager: Use Windows Autopilot for existing devices"
+
+# additionalContent section (optional)
+# Card with summary style
+additionalContent:
+  # Supports up to 4 subsections
+  sections:
+    - title: subsectiontitle1 # < 60 chars (optional)
+      summary: subsectionsummary1 # < 160 chars (optional)
+      items:
+        # Card
+        - title: cardtitle1
+          summary: cardsummary1
+          url: ./file1.md OR /file1
+
+        - title: Microsoft Intune product page
+          summary: Information about the Microsoft Intune family of technologies
+          url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager          
+        # Card
+        - title: Microsoft Intune Tech Community blog
+          summary: Collaborate, share and learn from experts
+          url: https://techcommunity.microsoft.com/t5/microsoft-intune/bd-p/Microsoft-Intune
+        # Card
+        - title: "Twitter: #MSIntune"
+          summary: Keep current with the active Twitter community
+          url: https://twitter.com/hashtag/msintune
+  # footer (optional)
+  footer: "Found a problem with Microsoft Intune docs? [Let us know](use-docs.md#about-feedback)!"
