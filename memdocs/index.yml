@@ -1,5 +1,5 @@
 ### YamlMime:Hub
-title: Documentation for Microsoft Intune technologies
+title: Microsoft Intune technologies documentation
 summary: Learn more about the Microsoft Intune technologies to help you secure, deploy, and manage users, apps, and endpoint devices.
 
 metadata:
@@ -9,7 +9,7 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: johmar
-  ms.date: 05/24/2022
+  ms.date: 09/13/2022
   ms.localizationpriority: high
   ms.collection: highpri
   ms.custom: intro-hub-or-landing
@@ -58,86 +58,14 @@ productDirectory:
       summary: cardsummary4
       url: ./autopilot/index.yml
 
-
-conceptualContent:
-  items:
-    - title: Microsoft Intune
-      links:
-        - url: ./intune/index.yml
-          itemType: overview
-          text: Microsoft Intune documentation 
-        - url: ./intune/fundamentals/index.yml
-          itemType: overview
-          text: Plan for and set up Intune   
-        - url: ./intune/enrollment/index.yml
-          itemType: overview
-          text: Enroll devices   
-        - url: ./intune/remote-actions/index.yml
-          itemType: overview
-          text: Remotely manage devices   
-        - url: ./intune/protect/index.yml
-          itemType: overview
-          text: Create compliance rules for users and devices 
-        - url: ./intune/configuration/index.yml
-          itemType: overview
-          text: Control device features and settings   
-        - url: ./intune/apps/index.yml
-          itemType: concept
-          text: Manage and protect apps
-    - title: Microsoft Endpoint Configuration Manager
-      links:
-        - url: ./configmgr/index.yml
-          itemType: get-started
-          text: Microsoft Endpoint Configuration Manager documentation
-        - url: ./configmgr/comanage/index.yml
-          itemType: concept
-          text: Manage device workloads in Configuration Manager and Intune
-        - url: ./configmgr/desktop-analytics/index.yml
-          itemType: overview
-          text: Use Desktop Analytics for update readiness                  
-        - url: ./configmgr/core/index.yml
-          itemType: overview
-          text: Manage your infrastructure
-        - url: ./configmgr/apps/index.yml
-          itemType: concept
-          text: Manage apps
-        - url: ./configmgr/osd/index.yml
-          itemType: concept
-          text: Operating system deployment
-        - url: ./configmgr/sum/index.yml
-          itemType: concept
-          text: Software updates
-        - url: ./configmgr/compliance/index.yml
-          itemType: concept
-          text: Manage configuration and compliance of devices
-        - url: ./configmgr/protect/index.yml
-          itemType: concept
-          text: Protect your infrastructure and data
-    - title: Windows Autopilot
-      links:
-        - url: ./autopilot/index.yml
-          itemType: concept
-          text: Windows Autopilot documentation
-        - url: ./autopilot/enrollment-autopilot.md
-          itemType: how-to-guide
-          text: "Intune: Enroll Windows devices using Windows Autopilot"
-        - url: ./autopilot/existing-devices.md
-          itemType: how-to-guide
-          text: "Configuration Manager: Use Windows Autopilot for existing devices"
-
 # additionalContent section (optional)
 # Card with summary style
 additionalContent:
   # Supports up to 4 subsections
   sections:
-    - title: subsectiontitle1 # < 60 chars (optional)
-      summary: subsectionsummary1 # < 160 chars (optional)
+    - title: Microsoft Intune community & support
       items:
         # Card
-        - title: cardtitle1
-          summary: cardsummary1
-          url: ./file1.md OR /file1
-
         - title: Microsoft Intune product page
           summary: Information about the Microsoft Intune family of technologies
           url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager          
