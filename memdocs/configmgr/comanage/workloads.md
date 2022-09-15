@@ -15,7 +15,7 @@ ms.collection: highpri
 
 # Co-management workloads
 
-You don't have to switch any of the workloads, but you can do them individually or several or all at once when you're ready. However, until you switch the workloads over to Intune, Microsoft Endpoint Configuration Manager continues to manage those workloads that you don't switch to Intune, alongside all other features of Configuration Manager that co-management doesn't support.
+You don't have to switch any of the workloads, but you can do them individually or several or all at the same time when you're ready. However, until you switch the workloads over to Intune, Microsoft Endpoint Configuration Manager continues to manage those workloads that you don't switch to Intune, along with all other features of Configuration Manager that co-management doesn't support.
 
 If you switch a workload to Intune, but later change your mind, you can switch it back to Configuration Manager, although there maye be an impact for example Windows and Office versions will remain at a later version if installed by Intune.
 
