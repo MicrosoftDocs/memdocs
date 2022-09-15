@@ -95,7 +95,7 @@ additionalContent:
           summary: Learn about the Zero Trust security model, its principles, and how to implement a Zero Trust architecture using the deployment plans.
           url: /security/zero-trust/index.yml
 
-    - title: Related technologies
+    - title: Related services
       items:
         # Card
         - title: Windows client docs for IT Pros
