@@ -5,7 +5,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 # GitHub repository for Microsoft technical documentation
 
-You've found one of the GitHub repositories that houses the source for content published to [Microsoft Docs](https://docs.microsoft.com/), home of all technical content for Microsoft's Cloud and Enterprise Division.
+You've found one of the GitHub repositories that houses the source for content published to [Microsoft Docs](https://learn.microsoft.com/), home of all technical content for Microsoft's Cloud and Enterprise Division.
 
 ## Contribute to your documentation
 
@@ -36,7 +36,7 @@ We **want and encourage contributions** from our community (users, customers, pa
   
 * **MSFT Employees**: After you create a GitHub account, link it to your Microsoft email address. When your account is linked, you don't have to sign a license agreement to make an update. Follow these steps:
 
-  1. On a device with access to corpnet, go to [GitHub account setup](https://review.docs.microsoft.com/en-us/help/contribute/contribute-get-started-setup-github?branch=master). If you're not on corpnet, this link returns a 404.
+  1. On a device with access to corpnet, go to [GitHub account setup](https://review.learn.microsoft.com/help/contribute/contribute-get-started-setup-github?branch=main). If you're not on corpnet, this link returns a 404.
   
      Creating a GitHub account, and linking to your Microsoft account is a one-time thing. When your account is linked, you don't have to sign a license agreement to make an update.
 
