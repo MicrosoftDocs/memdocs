@@ -13,7 +13,7 @@ author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 09/24/2021
+ms.date: 09/19/2022
 ms.collection: M365-modern-desktop
 ms.topic: conceptual
 ---
@@ -73,8 +73,9 @@ You can also [change existing DFCI settings](/intune/configuration/device-firmwa
 ## OEMs that support DFCI
 
 - [Microsoft Surface](/surface/surface-manage-dfci-guide)
+- Acer: To find out which devices support DFCI, contact your device vendor or device manufacturer.
 
-Additional OEMs are pending.
+Other OEMs are pending.
 
 ## See also
 
