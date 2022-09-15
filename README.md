@@ -5,7 +5,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 
 # GitHub repository for Microsoft technical documentation
 
-You've found one of the GitHub repositories that houses the source for content published to [Microsoft Docs](https://learn.microsoft.com/), home of all technical content for Microsoft's Cloud and Enterprise Division.
+You've found one of the GitHub repositories that houses the source for content published to [Microsoft Learn](https://learn.microsoft.com/), home of all technical content for Microsoft's Cloud and Enterprise Division.
 
 ## Contribute to your documentation
 
