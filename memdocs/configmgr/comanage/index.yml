@@ -28,7 +28,7 @@ landingContent:
           - text: What is co-management?
             url: overview.md
           - text: Understand co-management (step-by-step)
-            url: /learn/modules/understand-co-management/         
+            url: /training/modules/understand-co-management/         
           - text: Paths to co-management
             url: quickstart-paths.md
 
@@ -54,4 +54,3 @@ landingContent:
             url: autopilot-enrollment.md
           - text: Use the Company Portal app on co-managed devices
             url: company-portal.md
-
