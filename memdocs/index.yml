@@ -70,7 +70,7 @@ productDirectory:
       url: /azure/active-directory/index.yml
     # Card
     - title: Training on Microsoft Learn
-      imageSrc: .media/learn.svg
+      imageSrc: ./media/learn.svg
       summary: Learn more about Microsoft Intune, including setting up Intune, managing apps & devices, securing your endpoints, and more. 
       url: https://docs.microsoft.com/search/?terms=intune&category=Learn
 
