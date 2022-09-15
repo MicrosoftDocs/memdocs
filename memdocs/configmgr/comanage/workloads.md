@@ -43,7 +43,7 @@ For more information on the Intune feature, see [Use compliance policies to set 
 
 ## Windows Update policies
 
-Windows Update for Business policies let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices managed directly by Windows Update for Business. Note: This workload needs to be managed by Intune for the Autopatch feature to work for these devices.
+Windows Update for Business policies let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices managed directly by Windows Update for Business. Note that this workload needs to be managed by Intune for the Windows Autopatch feature to work on these devices.
 
 For more information on the Intune feature, see [Manage Windows software updates in Intune](../../intune/protect/windows-update-for-business-configure.md).
 
