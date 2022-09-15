@@ -28,9 +28,9 @@ highlightedContent:
     - title: How to get support in the admin center
       itemType: overview
       url: ./get-support.md
-    - title: Another highlighted doc
+    - title: Training on Microsoft Learn 
       itemType: overview
-      url: ./get-support.md
+      url: https://docs.microsoft.com/search/?terms=intune&category=Learn
     - title: Another highlighted doc
       itemType: overview
       url: ./get-support.md
@@ -68,6 +68,11 @@ productDirectory:
       imageSrc: ./media/active-directory.svg
       summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
       url: /azure/active-directory/index.yml
+    # Card
+    - title: Training on Microsoft Learn
+      imageSrc: .media/learn.svg
+      summary: Learn more about Microsoft Intune, including setting up Intune, managing apps & devices, securing your endpoints, and more. 
+      url: https://docs.microsoft.com/search/?terms=intune&category=Learn
 
 # additionalContent section (optional)
 # Card with summary style
@@ -115,9 +120,13 @@ additionalContent:
     - title: Microsoft Intune community & support
       items:
         # Card
-        - title: Microsoft Intune product page
-          summary: Information about the Microsoft Intune family of technologies
-          url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager          
+        - title: Intune Customer Success blog
+          summary: Read blog posts written by the Intune support team, including announcements, support tips, troubleshooting tips, and more.
+          url: https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess         
+        # Card
+        - title: Microsoft Intune Tech Community blog
+          summary: Collaborate, share and learn from experts
+          url: https://techcommunity.microsoft.com/t5/microsoft-intune/bd-p/Microsoft-Intune
         # Card
         - title: Microsoft Intune Tech Community blog
           summary: Collaborate, share and learn from experts
