@@ -124,7 +124,7 @@ Updates can be managed using either of the following features:
 
 - [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates](../../intune/configuration/administrative-templates-update-office.md)
 - [Manage Microsoft 365 Apps with Configuration Manager](../sum/deploy-use/manage-office-365-proplus-updates.md).
-Note: This workload needs to be managed by Intune for the Autopatch feature to work for these devices.
+Note that this workload needs to be managed by Intune for the Windows Autopatch feature to work on these devices.
 
 For more information on the Intune feature, see [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune/apps/apps-add-office365.md).
 
