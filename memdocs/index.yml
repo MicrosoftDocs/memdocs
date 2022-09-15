@@ -28,11 +28,11 @@ highlightedContent:
     - title: How to get support in the admin center
       itemType: overview
       url: ./get-support.md
-    - title: Training on Microsoft Learn 
-      itemType: overview
+    - title: A highlighted doc here...
+      itemType: get-started
       url: https://docs.microsoft.com/search/?terms=intune&category=Learn
-    - title: Another highlighted doc
-      itemType: overview
+    - title: Another highlighted doc here...
+      itemType: get-started
       url: ./get-support.md
 # productDirectory section (optional)
 productDirectory:
