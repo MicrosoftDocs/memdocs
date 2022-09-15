@@ -120,6 +120,7 @@ Office supports the following settings for configuration:
 
 - Manage the creation of Sticky Notes
 - Set add-ins preference
+- Manage Teams apps running on Office mobile on Android (in Preview)
 
 ### Manage the creation of Sticky Notes
 
@@ -144,6 +145,22 @@ If you need to enable or disable the Office Store portion of the platform for iO
 |    com.microsoft.office.OfficeWebAddinDisableOMEXCatalog    |    **true** (default) disables only the Office Store portion of the platform<br>**false** enables the Office Store portion of the platform<br>**NOTE:** Sideloaded will continue to work.    |
 
 For more information about adding configuration keys, see [Add app configuration policies for managed iOS/iPadOS devices](../apps/app-configuration-policies-use-ios.md).
+
+### Manage Teams apps running on Office mobile on Android (in Preview)
+
+Teams personal tab apps are already in Preview for Office.com and Outlook desktop in Target Release, and IT admins can manage access to Teams apps by creating [custom permission policies](https://docs.microsoft.com/en-us/MicrosoftTeams/teams-app-permission-policies#create-a-custom-app-permission-policy) and [assigning these policies to users](https://docs.microsoft.com/en-us/MicrosoftTeams/policy-assignment-overview) using Teams Admin Center. You can now also run Teams personal tab apps in Office mobile on Android, in Preview. Teams personal tab apps built using [Microsoft Teams JavaScript client SDK v2](https://docs.microsoft.com/en-us/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) (version 2.0.0) and [Teams App manifest](https://docs.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema) (version 1.13) will start showing in Office mobile Android app under the “Apps” menu.
+
+There may be additional management requirements specific to Office mobile on Android. You may want to:
+- Only allow specific users in your org to try enhanced Teams apps on Office mobile, or
+- Block all users in your org from using enhanced Teams apps on Office mobile.
+
+To manage the above, you can use the following key:
+
+|    Key    |    Value    |
+|-------------------------------------------------------------------|-------------|
+|    com.microsoft.office.officemobile.TeamsApps.IsAllowed    |    **true** (default) enables Teams apps on Office mobile<br>**false** disables Teams apps on Office mobile    |
+
+Above can also be used both by managed devices and managed apps.
 
 ## Data protection app configuration scenarios
 
