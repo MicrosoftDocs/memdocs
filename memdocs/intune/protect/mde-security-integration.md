@@ -66,7 +66,7 @@ When you select a policy, you'll see information about the device check-in statu
 
 ### Device check-in frequency
 
-Devices managed by this capability check in with Microsoft Endpoint Manager every 90 minutes to update policy.
+During the first Enrollment through MDE in Microsoft Endpoint Manager Windows Server devices will take up to 2-3 days to correctly load security policy for the first time. After the Enroll Devices managed by this capability check in with Microsoft Endpoint Manager every 90 minutes to update policy.
 
 ### Devices protected by Tamper Protection
 
@@ -97,9 +97,14 @@ The following security settings are pending deprecation. The Security Management
 - Expedite telemetry reporting frequency (under **Endpoint Detection and Response**)
 - AllowIntrusionPreventionSystem (under **Antivirus**)
 
+### Managing security configurations on Windows Server (no domain Controller)
+
+The first Enrollment with MDE can take some hours to correctly show the Devices in Microsoft Endpoint Manager. After the enrollment the system will take up to 2-3 days to load for the first time security policy.
+
 ### Managing security configurations on domain controllers
 
 Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
+
 ### Server Core installation
 
 Due to the platform limitations of Server core installations, these are not supported by Security Management for Microsoft Defender for Endpoint.
