@@ -16,24 +16,30 @@ metadata:
 
 highlightedContent:
   items:
-    - title: Microsoft Intune technologies overview
+    - title: Microsoft Intune services & products - overview
       itemType: overview
       url: endpoint-manager-overview.md
-    - title: Support remote and hybrid workers with cloud native endpoints
-      itemType: overview
-      url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
     - title: Microsoft Intune (product page)
       itemType: overview
       url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
-
+    - title: How to use the docs for Microsoft Intune technologies
+      itemType: overview
+      url: ./use-docs.md
+    - title: How to get support in the admin center
+      itemType: overview
+      url: ./get-support.md
+    - title: A highlighted doc here...
+      itemType: get-started
+      url: https://docs.microsoft.com/search/?terms=intune&category=Learn
+    - title: Another highlighted doc here...
+      itemType: get-started
+      url: ./get-support.md
 # productDirectory section (optional)
 productDirectory:
   title: Get started
-  summary: This is an optional summary that we can remove if it makes sense
   items:
     # Card
     - title: Microsoft Intune docs
-      # imageSrc should be square in ratio with no white space
       imageSrc: ./media/microsoft-intune.svg
       summary: Microsoft Intune is a cloud-based service that helps enable your workforce to be productive while keeping your corporate data protected.
       url: ./intune/index.yml
@@ -62,13 +68,34 @@ productDirectory:
       imageSrc: ./media/active-directory.svg
       summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
       url: /azure/active-directory/index.yml
+    # Card
+    - title: Training on Microsoft Learn
+      imageSrc: ./media/learn.svg
+      summary: Learn more about Microsoft Intune, including setting up Intune, managing apps & devices, securing your endpoints, and more. 
+      url: https://docs.microsoft.com/search/?terms=intune&category=Learn
 
 # additionalContent section (optional)
 # Card with summary style
 additionalContent:
   # Supports up to 4 subsections
   sections:
-    - title: Related technologies
+    - title: Solutions & scenarios
+      items:
+        # Card
+        - title: Support remote and hybrid workers with cloud native endpoints
+          summary: Cloud-native endpoints are devices that can be deployed from anywhere. They receive their applications and configurations dynamically from the cloud, and can easily be reset or restored.
+          url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
+        - title: Manage devices with Intune and Microsoft 365
+          summary: A core component of enterprise-level security includes managing and protecting devices. Whether you’re building a Zero Trust security architecture, hardening your environment against ransomware, or building in protections to support remote workers, managing devices is part of the strategy.
+          url: https://docs.microsoft.com/microsoft-365/solutions/manage-devices-with-intune-overview
+        - title: Set up your infrastructure for hybrid work
+          summary: Solution to secure and optimize your worker’s productivity and collaboration, you need to allow on-site and remote workers to access your organization's on-premises and cloud-based information, tools, and resources easily and securely.
+          url: https://docs.microsoft.com/microsoft-365/solutions/empower-people-to-work-remotely
+        - title: Zero Trust guidance
+          summary: Learn about the Zero Trust security model, its principles, and how to implement a Zero Trust architecture using the deployment plans.
+          url: /security/zero-trust/index.yml
+
+    - title: Related services
       items:
         # Card
         - title: Windows client docs for IT Pros
@@ -77,6 +104,9 @@ additionalContent:
         - title: Windows 365 docs
           summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. 
           url: https://docs.microsoft.com/en-us/windows-365/index.yml
+        - title: Microsoft Defender for Endpoint
+          summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
+          url: /microsoft-365/security/defender-endpoint/index.yml
         - title: Microsoft Managed Desktop docs
           summary: Microsoft Managed Desktop is a unique ITaaS solution that combines endpoint management and security monitoring in a way that gives users a secure and productive device experience that IT pros can trust.
           url: /managed-desktop/index.yml
@@ -86,19 +116,17 @@ additionalContent:
         - title: Office deployment docs
           summary: Deploy and manage Microsoft 365 Apps or other versions of Office.
           url: /deployoffice/index.yml
-        - title: Zero Trust guidance
-          summary: Learn about the Zero Trust security model, its principles, and how to implement a Zero Trust architecture using the deployment plans.
-          url: /security/zero-trust/index.yml
-        - title: Microsoft Defender for Endpoint
-          summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
-          url: /microsoft-365/security/defender-endpoint/index.yml
 
     - title: Microsoft Intune community & support
       items:
         # Card
-        - title: Microsoft Intune product page
-          summary: Information about the Microsoft Intune family of technologies
-          url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager          
+        - title: Intune Customer Success blog
+          summary: Read blog posts written by the Intune support team, including announcements, support tips, troubleshooting tips, and more.
+          url: https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess         
+        # Card
+        - title: Microsoft Intune Tech Community blog
+          summary: Collaborate, share and learn from experts
+          url: https://techcommunity.microsoft.com/t5/microsoft-intune/bd-p/Microsoft-Intune
         # Card
         - title: Microsoft Intune Tech Community blog
           summary: Collaborate, share and learn from experts
