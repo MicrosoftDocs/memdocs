@@ -22,10 +22,18 @@ highlightedContent:
     - title: Microsoft Intune (product page)
       itemType: overview
       url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
-    - title: Microsoft Intune (product page)
+    - title: How to use the docs for Microsoft Intune technologies
       itemType: overview
-      url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
-
+      url: ./use-docs.md
+    - title: How to get support in the admin center
+      itemType: overview
+      url: ./get-support.md
+    - title: Another highlighted doc
+      itemType: overview
+      url: ./get-support.md
+    - title: Another highlighted doc
+      itemType: overview
+      url: ./get-support.md
 # productDirectory section (optional)
 productDirectory:
   title: Get started
@@ -103,9 +111,6 @@ additionalContent:
         - title: Office deployment docs
           summary: Deploy and manage Microsoft 365 Apps or other versions of Office.
           url: /deployoffice/index.yml
-        - title: Microsoft Defender for Endpoint
-          summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
-          url: /microsoft-365/security/defender-endpoint/index.yml
 
     - title: Microsoft Intune community & support
       items:
