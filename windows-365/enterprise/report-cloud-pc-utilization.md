@@ -34,9 +34,9 @@ The Cloud PC utilization report helps you make sure that your licenses are assig
 
 ## Use the Cloud PC utilization report
 
-To get to the **Cloud PC utilization** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance** > **Cloud PCs with low utilization** > **View report**.
+To get to the **Cloud PC utilization** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance** > **View report** (under **Cloud PCs with low utilization**).
 
-![Screenshot of using the Cloud PC utilization report](./media/report-cloud-pc-utilization/cloud-pc-utilization.png)
+![Screenshot of getting to the Cloud PC utilization report](./media/report-cloud-pc-utilization/view-report.png)
 
 The report shows:
 
