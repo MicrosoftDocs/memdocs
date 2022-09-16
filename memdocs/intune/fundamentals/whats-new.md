@@ -59,7 +59,186 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Monitor and troubleshoot
 ### Role-based access control
 ### Scripts
+### Tenant administration
 -->
+
+## Week of September 19, 2022 (Service release 2209)
+
+### Device management
+
+#### Microsoft Intune will be ending support for Windows 8.1<!-- 14740233 -->
+Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Additionally, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune will no longer support Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". For more information, see [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new#plan-for-change-ending-support-for-windows-81-).
+
+#### Support for Locate device on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices<!-- 12391424 -->
+You can now use "Locate device" on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices. With this feature, admins will be able to locate lost or stolen corporate devices on-demand. To do this, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
+
+For information on locating lost or stolen devices with Intune, go to:
+ - [Locate lost or stolen devices with Intune](../remote-actions/device-locate.md)
+
+Applies to:
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
+- Android Enterprise corporate owned work profile
+
+### Device configuration
+
+#### New lock screen message when adding custom support information to Android Enterprise devices<!-- 13158348 -->
+On Android Enterprise devices, you can create a device restrictions configuration profile that shows a custom support message on the devices (**Devices** > **Configuration profiles** > **Create profile** > **Android Enterprise** > **Fully managed, dedicated, and corporate-owned work profile** for platform > **Device restrictions** for profile type > **Custom support information**).
+
+There's a new setting you can configure:
+- **Lock screen message**: Add a message that's shown on the device lock screen. 
+
+When you configure the **Lock screen message**, you can also use the following device tokens to show device-specific information:
+- `{{AADDeviceId}}`: Azure AD device ID
+- `{{AccountId}}`: Intune tenant ID or account ID
+- `{{DeviceId}}`: Intune device ID
+- `{{DeviceName}}`: Intune device name
+- `{{domain}}`: Domain name
+- `{{EASID}}`: Exchange Active Sync ID
+- `{{IMEI}}`: IMEI of the device
+- `{{mail}}`: Email address of the user
+- `{{MEID}}`: MEID of the device
+- `{{partialUPN}}`: UPN prefix before the `@` symbol
+- `{{SerialNumber}}`: Device serial number
+- `{{SerialNumberLast4Digits}}`: Last four digits of the device serial number
+- `{{UserId}}`: Intune user ID
+- `{{UserName}}`: User name
+- `{{userPrincipalName}}`: UPN of the user
+
+> [!NOTE]
+> Variables aren't validated in the UI and are case sensitive. As a result, you may see profiles saved with incorrect input. For example, if you enter `{{DeviceID}}`, instead of `{{deviceid}}` or `{{DEVICEID}}`, then the literal string is shown instead of the device's unique ID. Be sure to enter the correct information. All lowercase or all uppercase variables are supported, but not a mix.
+
+For more information on this setting, go to [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md#custom-support-information).
+
+Applies to:
+- Android 7.0 and newer
+- Android Enterprise corporate owned fully managed
+- Android Enterprise corporate owned dedicated devices
+- Android Enterprise corporate owned work profile
+
+#### Filter on the user scope or device scope in the Settings Catalog for Windows devices<!-- 13949975 -->
+When you create a Settings Catalog policy, you can use **Add settings** > **Add filter** to filter settings based on the Windows OS edition (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Settings Catalog (preview)** for profile type).
+
+When you **Add filter**, you can also filter on the settings by user scope or device scope.
+
+For more information on the settings catalog, go to [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md).
+
+Applies to:
+- Windows 10
+- Windows 11
+
+#### Android Open Source Project (AOSP) platform is generally available<!-- 15027949 -->
+Microsoft Intune management of corporate-owned devices that run on the Android Open Source Project (AOSP) platform is now generally available (GA). This includes the full suite of capabilities that have been made available as part of the public preview.
+
+Currently, Microsoft Intune only supports the new Android (AOSP) management option for RealWear devices.
+- [Deployment guide: Manage Android devices in Microsoft Intune](deployment-guide-platform-android.md)
+- [Deployment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
+
+Applies to:
+- Android Open Source Project (AOSP)
+
+#### Device Firmware Configuration Interface (DFCI) now supports Acer devices<!-- 15240661 -->
+For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
+
+New Acer devices running Windows 10/11 will be enabled for DFCI starting Fall 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Acer devices.
+
+Contact your device vendor or device manufacturer to ensure you get eligible devices.
+
+For more information about DFCI profiles in Intune, go to [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md).
+
+Applies to:
+- Windows 10
+- Windows 11
+
+#### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 15349701 -->
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
+
+There are new settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+New settings include:
+
+**Accounts > LDAP**:
+
+- LDAP Account Description
+- LDAP Account Host Name
+- LDAP Account Password
+- LDAP Account Use SSL
+- LDAP Account User Name
+- LDAP Search Settings
+
+Applies to:
+- iOS/iPadOS
+- macOS
+
+The following settings are also in Settings Catalog. Previously, they were only available in Templates:
+
+**Privacy > Privacy Preferences Policy Control**:
+
+- Accessibility
+- Address Book
+- Apple Events
+- Calendar
+- Camera
+- File Provider Presence
+- Listen Event
+- Media Library
+- Microphone
+- Photos
+- Post Event
+- Reminders
+- Screen Capture
+- Speech Recognition
+- System Policy All Files
+- System Policy Desktop Folder
+- System Policy Documents Folder
+- System Policy Downloads Folder
+- System Policy Network Volumes
+- System Policy Removable Volumes
+- System Policy Sys Admin Files
+
+Applies to:
+
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+### Device security
+
+#### Assign compliance policies to the All devices group<!-- 2213410 -->
+The **All devices** option is now available for [compliance policy](../protect/create-compliance-policy.md) assignments. With this option you can assign a compliance policy to all enrolled devices in your organization that match the policy's platform, without needing to create an Azure Active Directory group that contains all devices. 
+ 
+When you include the *All devices* group you can then exclude individual groups of devices to further refine the assignment scope.
+
+#### Trend Micro– New mobile threat defense partner<!-- 11017779 -->
+You can now use [Trend Micro Mobile Security](../protect/trend-micro-threat-defense-connector.md) as an integrated mobile threat defense (MTD) partner with Intune. By configuring the Trend MTD connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment.
+ 
+For more information, see:
+- [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
+- [Trend Micro Mobile Security documentation](https://docs.trendmicro.com/en-us/enterprise/trend-micro-vision-one/mobile-security/getting-started-with_003.aspx)
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 15007580, 15235927 -->
+The following protected apps are now available for Microsoft Intune:
+- RingCentral for Intune by RingCentral, Inc.
+- MangoApps, Work from Anywhere by MangoSpring Inc.
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Tenant administration
+
+#### Access policies for multiple administrative approvals in Preview<!-- 9348867 -->
+In public preview, you can use Intune *access policies* to require that a second administrative account be used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA).
+
+You create an access policy to protect a type of resource, like App deployments. Each access policy also includes a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
+
+Approvers can also reject requests, and both the individual requesting a change and the approver can provide notes about the change, or why it was approved or rejected.
+
+Access policies are supported for the following resources:
+- **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
+- **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
+
+For more infomration, see [Use Access policies to require multiple administrative approvals](../fundamentals/multi-admin-approval.md].
 
 ## Week of September 12, 2022
 
