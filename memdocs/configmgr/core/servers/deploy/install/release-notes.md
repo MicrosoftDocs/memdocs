@@ -2,13 +2,13 @@
 title: Release notes
 titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
-ms.date: 04/08/2022
+ms.date: 08/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
 ---
 
@@ -24,11 +24,11 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2207](../../../plan-design/changes/whats-new-in-version-2207.md)
 - [What's new in version 2203](../../../plan-design/changes/whats-new-in-version-2203.md)
 - [What's new in version 2111](../../../plan-design/changes/whats-new-in-version-2111.md)
 - [What's new in version 2107](../../../plan-design/changes/whats-new-in-version-2107.md)
 - [What's new in version 2103](../../../plan-design/changes/whats-new-in-version-2103.md)
-- [What's new in version 2010](../../../plan-design/changes/whats-new-in-version-2010.md)
 
 > [!TIP]
 > You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../../use-docs.md#notifications).
@@ -55,34 +55,6 @@ When you upgrade the client from versions 2010 or 2103 to version 2107, the foll
 When you look at the **Configurations** tab of the Configuration Manager control panel on the client, it will be blank.
 
 This issue is fixed in the build of version 2107 that's now generally available for all customers. If you previously opted in to the early update ring, install the [Update for Microsoft Endpoint Configuration Manager version 2107, early update ring](../../../../hotfix/2107/10503003.md).
-
-### Client notification actions apply to entire collection
-
-<!-- 9021554 -->
-
-_Applies to version 2010_
-
-When you use a [client notification](../../../clients/manage/client-notification.md) action on a device in a collection, the action applies to all devices in the collection.
-
-For example:
-
-1. In the Configuration Manager console, go to the **Assets and Compliance** workspace, and select the **Device Collections** node.
-
-1. Select a collection, and then choose the **Show Members** action.
-
-1. Select a device in the collection. In the ribbon on the **Home** tab, select **Client Notification**, and choose an action such as **Restart**.
-
-    Because of this issue, this action applies to all members of the collection, not just the selected client.
-
-    > [!NOTE]
-    > This issue doesn't apply to the **Start CMPivot** or **Run Script** options.
-
-To work around this issue, install the following hotfix: [Client notifications sent to all collection members in Configuration Manager current branch, version 2010](https://support.microsoft.com/help/4594177).
-
-You can also use the **Devices** node. Find the device in the list and start the action from there.
-
-> [!NOTE]
-> This issue also applies to the [Invoke-CMClientAction](/powershell/module/configurationmanager/invoke-cmclientaction) PowerShell cmdlet and other SDK methods, if you don't include a collection object or ID.
 
 ## Set up and upgrade
 
@@ -211,6 +183,14 @@ For more information, see [Create custom security roles](../configure/configure-
 
 ## Configuration Manager console
 
+### Intune RBAC for tenant attached devices
+<!--13058986-->
+*Applies to: version 2207*
+
+***[Updated]***: There is a checkbox for a role-based access control (RBAC) setting in the [cloud attach configuration wizard](../../../../cloud-attach/enable.md) in the console. By default, Configuration Manager RBAC is enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. This checkbox is selected by default.
+
+You can now configure Intune role-based access control (RBAC) when interacting with [tenant attached devices](../../../../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Endpoint Manager admin center. For more information, see [Intune role-based access control for tenant-attached clients](../../../../cloud-attach/use-intune-rbac.md).
+
 ### Unable to open console because extension installation loops
 <!--12868458-->
 _Applies to: version 2111_
@@ -219,7 +199,7 @@ In certain circumstances, you'll be unable to open the console due to an extensi
 
 When you encounter this issue, it initially appears as a normal console extension installation. After the extension finishes installing, you select **Close** to restart the Configuration Manager console. When the console restarts, you're prompted to install the console extension again. The extension installation will continue to loop and the Configuration Manager console doesn't fully open.
 
-To both prevent and workaround this issue, run the below SQL script on your CAS database and all of your primary site databases:
+To both prevent and work around this issue, run the below SQL script on your CAS database and all of your primary site databases:
 
 ```sql
 ALTER VIEW vSMS_ConsoleExtensionMetadata

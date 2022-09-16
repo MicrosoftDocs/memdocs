@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/26/2022
+ms.date: 08/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -65,6 +65,7 @@ Previously, to configure Google Chrome settings on Windows devices, you created 
 This feature applies to:
 
 - Windows 11
+- Windows 10 and later
 
 You can create a universal print policy, add printers, and then deploy this printer list to your managed users. When the policy is deployed, it automatically installs the printers you added. Users can see these printers, and select a printer from your list.
 

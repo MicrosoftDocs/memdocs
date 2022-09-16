@@ -29,56 +29,56 @@ This content can assist you in learning and supporting Configuration Manager.
 
 For more information, see the following articles:
 
-- [Configuration Manager documentation library](https://docs.microsoft.com/mem/configmgr?WT.mc_id=configmgr-console)
-- [Get started with Configuration Manager PowerShell cmdlets](https://docs.microsoft.com/powershell/sccm/overview?WT.mc_id=configmgr-console)
-- [How to use the Configuration Manager docs](https://docs.microsoft.com/mem/use-docs?WT.mc_id=configmgr-console)
+- [Configuration Manager documentation library](/mem/configmgr?WT.mc_id=configmgr-console)
+- [Get started with Configuration Manager PowerShell cmdlets](/powershell/sccm/overview?WT.mc_id=configmgr-console)
+- [How to use the Configuration Manager docs](/mem/use-docs?WT.mc_id=configmgr-console)
 
 For the latest product changes, see the following articles:<!-- 8625956 -->
 
-- [What's new in current branch](https://docs.microsoft.com/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions#whats-new-in-configuration-manager-incremental-versions?WT.mc_id=configmgr-console)
-- [Technical preview releases](https://docs.microsoft.com/mem/configmgr/core/get-started/technical-preview?WT.mc_id=configmgr-console)
+- [What's new in current branch](/mem/configmgr/core/plan-design/changes/whats-new-incremental-versions#whats-new-in-configuration-manager-incremental-versions?WT.mc_id=configmgr-console)
+- [Technical preview releases](/mem/configmgr/core/get-started/technical-preview?WT.mc_id=configmgr-console)
 
 ## Recommended
 
 A curated list of important articles.
 
-- [Microsoft Endpoint Manager tenant attach](https://docs.microsoft.com/mem/configmgr/tenant-attach/?WT.mc_id=configmgr-console)
-- [Endpoint analytics](https://docs.microsoft.com/mem/analytics/?WT.mc_id=configmgr-console)
-- [Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/?WT.mc_id=configmgr-console)
-- [Co-management for Windows devices](https://docs.microsoft.com/mem/configmgr/comanage/?WT.mc_id=configmgr-console)
-- [CMPivot](https://docs.microsoft.com/mem/configmgr/core/servers/manage/cmpivot?WT.mc_id=configmgr-console)
-- [Plan for BitLocker management](https://docs.microsoft.com/mem/configmgr/protect/plan-design/bitlocker-management?WT.mc_id=configmgr-console)
-- [Microsoft Edge management](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/deploy-edge?WT.mc_id=configmgr-console)
-- [Manage Microsoft 365 Apps updates](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates?WT.mc_id=configmgr-console)
-- [Fundamentals of Configuration Manager current branch and Windows as a service](https://docs.microsoft.com/mem/configmgr/core/understand/configuration-manager-and-windows-as-service?WT.mc_id=configmgr-console)
-- [Optimize Windows update delivery with Configuration Manager](https://docs.microsoft.com/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console)
+- [Microsoft Endpoint Manager tenant attach](/mem/configmgr/tenant-attach/?WT.mc_id=configmgr-console)
+- [Endpoint analytics](/mem/analytics/?WT.mc_id=configmgr-console)
+- [Desktop Analytics](/mem/configmgr/desktop-analytics/?WT.mc_id=configmgr-console)
+- [Co-management for Windows devices](/mem/configmgr/comanage/?WT.mc_id=configmgr-console)
+- [CMPivot](/mem/configmgr/core/servers/manage/cmpivot?WT.mc_id=configmgr-console)
+- [Plan for BitLocker management](/mem/configmgr/protect/plan-design/bitlocker-management?WT.mc_id=configmgr-console)
+- [Microsoft Edge management](/mem/configmgr/apps/deploy-use/deploy-edge?WT.mc_id=configmgr-console)
+- [Manage Microsoft 365 Apps updates](/mem/configmgr/sum/deploy-use/manage-office-365-proplus-updates?WT.mc_id=configmgr-console)
+- [Fundamentals of Configuration Manager current branch and Windows as a service](/mem/configmgr/core/understand/configuration-manager-and-windows-as-service?WT.mc_id=configmgr-console)
+- [Optimize Windows update delivery with Configuration Manager](/mem/configmgr/sum/deploy-use/optimize-windows-10-update-delivery?WT.mc_id=configmgr-console)
 
 ## Troubleshooting articles
 
 Guided walkthroughs to assist with troubleshooting Configuration Manager components and features.
 
-- [Troubleshoot application deployments](https://docs.microsoft.com/mem/configmgr/apps/understand/app-deployment-technical-reference?WT.mc_id=configmgr-console)
-- [Application installation common error codes reference](https://docs.microsoft.com/mem/configmgr/tenant-attach/app-install-error-reference?WT.mc_id=configmgr-console)
-- [Troubleshooting PXE boot issues](https://docs.microsoft.com/troubleshoot/mem/configmgr/troubleshoot-pxe-boot-issues)
-- [Understand and troubleshoot updates and servicing in Configuration Manager](https://docs.microsoft.com/troubleshoot/mem/configmgr/understand-troubleshoot-updates-servicing)
-- [Troubleshooting software update synchronization issues](https://docs.microsoft.com/troubleshoot/mem/configmgr/troubleshoot-software-update-synchronization)
-- [Understanding and troubleshooting content distribution](https://docs.microsoft.com/troubleshoot/mem/configmgr/content-distribution-introduction)
-- [Understanding and troubleshooting the Microsoft Store for Business integration](https://docs.microsoft.com/mem/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration?WT.mc_id=configmgr-console)
-- [Software update management troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/troubleshoot-software-update-management)
-- [Troubleshooting the Install Application task sequence step](https://docs.microsoft.com/troubleshoot/mem/configmgr/troubleshoot-install-application-step)
-- [Troubleshoot Desktop Analytics](https://docs.microsoft.com/mem/configmgr/desktop-analytics/troubleshooting?WT.mc_id=configmgr-console)
-- [Troubleshoot Microsoft Connected Cache](https://docs.microsoft.com/mem/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache?WT.mc_id=configmgr-console)
-- [Troubleshoot BitLocker](https://docs.microsoft.com/mem/configmgr/protect/tech-ref/bitlocker/troubleshoot?WT.mc_id=configmgr-console)
+- [Troubleshoot application deployments](/mem/configmgr/apps/understand/app-deployment-technical-reference?WT.mc_id=configmgr-console)
+- [Application installation common error codes reference](/mem/configmgr/tenant-attach/app-install-error-reference?WT.mc_id=configmgr-console)
+- [Troubleshooting PXE boot issues](/troubleshoot/mem/configmgr/troubleshoot-pxe-boot-issues)
+- [Understand and troubleshoot updates and servicing in Configuration Manager](/troubleshoot/mem/configmgr/understand-troubleshoot-updates-servicing)
+- [Troubleshooting software update synchronization issues](/troubleshoot/mem/configmgr/troubleshoot-software-update-synchronization)
+- [Understanding and troubleshooting content distribution](/troubleshoot/mem/configmgr/content-distribution-introduction)
+- [Understanding and troubleshooting the Microsoft Store for Business integration](/mem/configmgr/apps/deploy-use/troubleshoot-microsoft-store-for-business-integration?WT.mc_id=configmgr-console)
+- [Software update management troubleshooting](/troubleshoot/mem/configmgr/troubleshoot-software-update-management)
+- [Troubleshooting the Install Application task sequence step](/troubleshoot/mem/configmgr/troubleshoot-install-application-step)
+- [Troubleshoot Desktop Analytics](/mem/configmgr/desktop-analytics/troubleshooting?WT.mc_id=configmgr-console)
+- [Troubleshoot Microsoft Connected Cache](/mem/configmgr/core/servers/deploy/configure/troubleshoot-microsoft-connected-cache?WT.mc_id=configmgr-console)
+- [Troubleshoot BitLocker](/mem/configmgr/protect/tech-ref/bitlocker/troubleshoot?WT.mc_id=configmgr-console)
 
-For more information, see [Microsoft Endpoint Configuration Manager troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager).
+For more information, see [Microsoft Endpoint Configuration Manager troubleshooting](/troubleshoot/mem/configmgr/welcome-configuration-manager).
 
 ## Support articles
 
-The complete list of all hotfix and update rollup related articles, starting with Configuration Manager version 2010, is published to [Configuration Manager hotfixes and update rollups](https://docs.microsoft.com/mem/configmgr/hotfix?WT.mc_id=configmgr-console).
+The complete list of all hotfix and update rollup related articles, starting with Configuration Manager version 2010, is published to [Configuration Manager hotfixes and update rollups](/mem/configmgr/hotfix?WT.mc_id=configmgr-console).
 
 The short form URL for version 2010 and newer hotfix related articles is `https://aka.ms/KB#######`. For example, [https://aka.ms/KB9210721](https://aka.ms/KB9210721).
 Hotfix related articles for version 2006 and prior are still available on support.microsoft.com.
 
-The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Endpoint Configuration Manager Troubleshooting](https://docs.microsoft.com/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
+The Microsoft knowledge base articles previously found at support.microsoft.com are published to [Microsoft Endpoint Configuration Manager Troubleshooting](/troubleshoot/mem/configmgr/welcome-configuration-manager). Troubleshooting articles created after October 2020 don't have a KB article ID.
 
 To subscribe to Atom or RSS notification of new Configuration Manager support articles, see [Support content updates](https://support.microsoft.com/help/4089498/) and select **Microsoft Endpoint Configuration Manager (current branch)**.

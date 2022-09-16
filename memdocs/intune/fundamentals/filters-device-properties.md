@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 02/10/2022
+ms.date: 08/08/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -38,6 +38,8 @@ Advanced rule editing is also available. You can use common operators, such as `
 This article describes the different [device properties](#device-properties) and [operators](#supported-operators) you can use in your filters, and gives examples.
 
 ## Device properties
+
+You can use the following device properties in your filter rules:
 
 - **Device Name**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 

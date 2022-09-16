@@ -26,6 +26,7 @@ ms.custom:
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune

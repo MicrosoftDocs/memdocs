@@ -2,12 +2,12 @@
 # required metadata
 
 title: Use ADMX templates on Windows 10/11 devices in Microsoft Intune
-description: Use Administrative templates in Microsoft Intune and Endpoint Manager to create groups of settings for Windows 10/11 client devices. Use these settings in a device configuration profile to control Office programs, Microsoft Edge, secure Internet Explorer, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use HTTP printing, control user sign-in, and change the event log size.
+description: Use Administrative templates in Microsoft Intune and Endpoint Manager to create groups of settings for Windows 10/11 client devices. Use these settings in a device configuration profile. You can control Office programs, Microsoft Edge, secure Internet Explorer, access OneDrive, use remote desktop, enable Auto-Play, set power management settings, use HTTP printing, control user sign-in, and change the event log size.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2022
+ms.date: 08/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -43,6 +43,8 @@ The Intune templates are 100% cloud-based, are built in to Intune (no downloadin
 - The **Windows settings** are similar to group policy (GPO) settings in Active Directory (AD). These settings are built in to Windows, and are [ADMX-backed settings](/windows/client-management/mdm/understanding-admx-backed-policies) that use XML.
 
 - The **Office and Microsoft Edge** settings are ADMX-ingested, and use the same Office administrative template files and Microsoft Edge administrative template files that you would download in on-premises environments.
+
+- You can import custom and third party ADMX and ADML files. For more information, including the steps, go to [Import custom or partner ADMX files](administrative-templates-import-custom.md).
 
 When managing devices in your organization, you want to create groups of settings that apply to different device groups. You also want a simple view of the settings you can configure. You can complete this task using **Administrative Templates** in Microsoft Intune. 
 
@@ -165,5 +167,6 @@ For more information on KIR, and what it is, go to:
 
 - [Update Office using administrative templates](administrative-templates-update-office.md).
 - [Restrict USB devices using administrative templates](administrative-templates-restrict-usb.md).
-
+- [Create Microsoft Edge policy using ADMX](administrative-templates-configure-edge.md).
+- [Import custom or partner ADMX files](administrative-templates-import-custom.md).
 - [Tutorial: Use the cloud to configure group policy on Windows client devices with ADMX templates and Microsoft Intune](tutorial-walkthrough-administrative-templates.md)

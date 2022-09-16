@@ -186,4 +186,4 @@ The MDM certificate renews automatically as long as enrolled devices are communi
 
 ## Next steps  
 
-You can adjust the settings in Intune to restrict specific platforms from enrolling. For more information, see [Create a device platform restriction](enrollment-restrictions-set.md#create-a-device-platform-restriction).  
+You can adjust the settings in Intune to restrict specific platforms from enrolling. For more information, see [Create a device platform restriction](create-device-platform-restrictions.md).  

@@ -117,8 +117,10 @@ You can use filters for all compliance policies on the following platforms:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Windows 10 and later
+
+[!NOTE]
+> The Custom compliance (preview) feature for Windows 10 and later devices is not currently supported. If you assign a policy with custom compliance settings, targeted users and devices will process the policy and ignore assignment filering.
 
 ## Device configuration profiles and Endpoint security
 
@@ -298,6 +300,7 @@ You can use filters for some common device configuration policies on the followi
 
 The following features don't support using filters:
 
+- Custom compliance policies for Windows 10/11 (preview)
 - App configuration policies for Android and iOS/iPadOS
 - App protection policies for Android, iOS/iPadOS, and Windows
 - End user experiences customization policies

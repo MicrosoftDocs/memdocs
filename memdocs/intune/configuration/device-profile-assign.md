@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/21/2022
+ms.date: 07/26/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -107,6 +107,14 @@ For example:
   For example, you want to block untrusted ActiveX controls in your Office apps. You can create an [Administrative Template in Intune](administrative-templates-windows.md), configure this setting, and then assign this profile to a users group.
 
 To summarize, use user groups when you want your settings and rules to always go with the user, whatever device they use. 
+
+### Windows CSPs
+
+The policy settings for Windows devices are based on the [configuration service providers (CSPs)](/windows/client-management/mdm/configuration-service-provider-reference). These settings map to registry keys or files on the devices.
+
+Endpoint Manager exposes these CSPs so you can configure these settings and assign them to your Windows devices. These settings are configurable using the built-in templates and using the [settings catalog](settings-catalog.md). In the settings catalog, you'll see that some settings apply to the user scope and some settings apply to the device scope.
+
+For information on how user scoped and device scoped settings are applied to Windows devices, go to [Settings catalog: Device scope vs. user scope settings](settings-catalog.md#device-scope-vs-user-scope-settings).
 
 ## Exclude groups from a profile assignment
 
