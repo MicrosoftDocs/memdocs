@@ -1,6 +1,6 @@
 ### YamlMime:Hub
-title: Microsoft Intune technologies documentation
-summary: Learn more about the Microsoft Intune technologies to help you secure, deploy, and manage users, apps, and endpoint devices.
+title: Microsoft Intune product family documentation
+summary: Learn more about the products & services in the Microsoft Intune product family that can help you secure, deploy, and manage users, apps, and endpoint devices.
 
 metadata:
   services: service
@@ -31,12 +31,12 @@ highlightedContent:
     - title: A highlighted doc here...
       itemType: get-started
       url: https://docs.microsoft.com/search/?terms=intune&category=Learn
-    - title: Another highlighted doc here...
+    - title: Training on Microsoft Learn
       itemType: get-started
-      url: ./get-support.md
+      url: https://docs.microsoft.com/search/?terms=intune&category=Learn  
 # productDirectory section (optional)
 productDirectory:
-  title: Get started
+  title: Get started with the Microsoft Intune product family
   items:
     # Card
     - title: Microsoft Intune docs
@@ -49,30 +49,29 @@ productDirectory:
       summary: Configuration Manager is an on-premises and cloud-connected device management solution to manage devices, deploy apps and software updates, etc.
       url: ./configmgr/index.yml
     # Card
-    - title: Endpoint Analytics docs
-      imageSrc: ./media/endpoint-analytics.svg
-      summary: Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket.
-      url: ./analytics/index.yml
-    # Card
     - title: Windows Autopilot docs
       imageSrc: ./media/autopilot.svg
       summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use, and to reset, repurpose, and recover devices. 
       url: ./autopilot/index.yml
     # Card
-    - title: Endpoint Privilege Management docs
-      imageSrc: ./media/privilege.svg
-      summary: Remove barriers to end-user and IT productivity by elevating end-user permissions to perform specific admin actions only when needed on Windows devices. 
-      url: ./autopilot/index.yml
+    - title: Windows Autopatch docs
+      imageSrc: ./media/autopatch.png
+      summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
+      url: ./windows/deployment/windows-autopatch/index.yml
     # Card
-    - title: Azure Active Directory
-      imageSrc: ./media/active-directory.svg
-      summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
-      url: /azure/active-directory/index.yml
+    - title: Endpoint Analytics docs
+      imageSrc: ./media/endpoint-analytics.svg
+      summary: Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket.
+      url: ./analytics/index.yml    
+    
     # Card
-    - title: Training on Microsoft Learn
-      imageSrc: ./media/learn.svg
-      summary: Learn more about Microsoft Intune, including setting up Intune, managing apps & devices, securing your endpoints, and more. 
-      url: https://docs.microsoft.com/search/?terms=intune&category=Learn
+    # Card
+    #- title: Azure Active Directory
+    #  imageSrc: ./media/active-directory.svg
+    #  summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
+    #  url: /azure/active-directory/index.yml
+    # Card
+
 
 # additionalContent section (optional)
 # Card with summary style
@@ -98,39 +97,40 @@ additionalContent:
     - title: Related services
       items:
         # Card
+        - title: Azure Active Directory
+          summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
+          url: /azure/active-directory/index.yml
+        # Card
         - title: Windows client docs for IT Pros
           summary: Evaluate, plan, deploy, secure, and manage devices running Windows 10 and Windows 11.
           url: /windows/resources/index.yml
+        # Card
         - title: Windows 365 docs
           summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. 
           url: https://docs.microsoft.com/en-us/windows-365/index.yml
+        # Card
         - title: Microsoft Defender for Endpoint
           summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
           url: /microsoft-365/security/defender-endpoint/index.yml
-        - title: Microsoft Managed Desktop docs
-          summary: Microsoft Managed Desktop is a unique ITaaS solution that combines endpoint management and security monitoring in a way that gives users a secure and productive device experience that IT pros can trust.
-          url: /managed-desktop/index.yml
-        - title: Microsoft 365 docs
-          summary: Find the solutions, scenarios, and resources you need to get started with Microsoft 365 for your business or organization. Microsoft 365 includes services such as Teams and SharePoint, and Microsoft 365 Apps such as Outlook, Word, Excel, and PowerPoint.
-          url: /microsoft-365/index.yml
-        - title: Office deployment docs
-          summary: Deploy and manage Microsoft 365 Apps or other versions of Office.
-          url: /deployoffice/index.yml
 
     - title: Microsoft Intune community & support
       items:
+        # Card
+        - title: Microsoft Endpoint Manager Blog
+          summary: Read Microsoft Endpoint Manager blog posts, including announcements, support tips, troubleshooting tips, and more.
+          url: https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/bg-p/MicrosoftEndpointManagerBlog
         # Card
         - title: Intune Customer Success blog
           summary: Read blog posts written by the Intune support team, including announcements, support tips, troubleshooting tips, and more.
           url: https://techcommunity.microsoft.com/t5/intune-customer-success/bg-p/IntuneCustomerSuccess         
         # Card
-        - title: Microsoft Intune Tech Community blog
-          summary: Collaborate, share and learn from experts
-          url: https://techcommunity.microsoft.com/t5/microsoft-intune/bd-p/Microsoft-Intune
+        - title: Configuration Manager blog
+          summary: Read Configuration manager blog posts, including announcements, support tips, troubleshooting tips, and more.
+          url: https://techcommunity.microsoft.com/t5/configuration-manager-blog/bg-p/ConfigurationManagerBlog
         # Card
-        - title: Microsoft Intune Tech Community blog
+        - title: Microsoft Endpoint Manager Tech Community discussions
           summary: Collaborate, share and learn from experts
-          url: https://techcommunity.microsoft.com/t5/microsoft-intune/bd-p/Microsoft-Intune
+          url: https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager/ct-p/microsoft-endpoint-manager
         # Card
         - title: "Twitter: #MSIntune"
           summary: Keep current with the active Twitter community
