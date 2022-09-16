@@ -202,6 +202,11 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
+### Device enrollment
+
+#### Set up enrollment notifications (public preview)<-- 9283605 -->
+Enrollment notifications inform device users, via email or push notification, when a new device has been enrolled in Microsoft Intune. You can use enrollment notifications for security purposes to notify users and help them report devices enrolled in error, or for communicating to employees during the hiring or onboarding process. Enrollment notifications are available to try now in public preview for Windows, Apple, and Android devices. This feature is only supported with user-driven enrollment methods.
+
 ### Device security
 
 #### Assign compliance policies to the All devices group<!-- 2213410 -->
@@ -215,6 +220,9 @@ You can now use [Trend Micro Mobile Security](../protect/trend-micro-mobile-thre
 For more information, see:
 - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
 - [Trend Micro Mobile Security documentation](https://docs.trendmicro.com/en-us/enterprise/trend-micro-vision-one/mobile-security/getting-started-with_003.aspx)
+
+#### Grace period status visible on Intune Company Portal website<!-- 15007580 -->
+The Intune Company Portal website now shows a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If they don't update their device by the given date, their status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance). For Company Portal steps, see [Check device status on Intune Company Portal website](../user-help/check-status-company-portal-website.md).
 
 ### Intune apps
 
