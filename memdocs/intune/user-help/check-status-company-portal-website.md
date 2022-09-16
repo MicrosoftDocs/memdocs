@@ -42,7 +42,7 @@ This article describes how to check device status on the Company Portal website.
 During a status check, Company Portal confirms that the settings on your device meet your organization's policy requirements, and changes the device status to reflect whether or not you're in compliance. Statuses include:
 
 * **Compliant**: The device can access work or school resources.  
-* **In grace**:  The device can access work or school resources for now, but the device doesn't meet requirements. Make the required changes before the given date to maintain access. 
+* **Out of compliance -- can still access company resources**:  The device can access work or school resources for now, but the device doesn't meet requirements. Make the required changes before the given date to maintain access. 
 * **Not in compliance**: The device cannot access work or school resources. Make the required changes to regain access.  
 
 Check-ins are important for maintaining secure access to your organization's resources. 
@@ -56,6 +56,4 @@ If you recently made changes to your device settings, you may need to manually c
 
 3. Under **Status**, tap **Check status**. Wait while Company Portal checks your device. 
 
-4. After the check, your device status reflects the most current state of your device. If you're required to make any changes, a message will appear at the top of the screen. Select it for more details. 
-
-For contact information, check the [Company Portal website](https://go.microsoft.com/fwlink/?linkid=2010980).  
+After the check, your device status changes to show the most current state of your device. If you're required to make any changes to the settings, Company Portal will include that information on the same screen.  
