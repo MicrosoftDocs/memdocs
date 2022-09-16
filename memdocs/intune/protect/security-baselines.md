@@ -27,6 +27,8 @@ ms.custom:
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
+
 ---
 
 # Use security baselines to configure Windows devices in Intune

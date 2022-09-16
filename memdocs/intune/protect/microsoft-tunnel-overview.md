@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 09/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,6 +24,7 @@ ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Microsoft Tunnel for Microsoft Intune
@@ -33,6 +34,9 @@ Microsoft Tunnel is a VPN gateway solution for Microsoft Intune that runs in a c
 This article introduces the tunnel, how it works, and its architecture.
 
 If you're ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](microsoft-tunnel-prerequisites.md), and then [Configure the Microsoft Tunnel](microsoft-tunnel-configure.md).
+
+> [!NOTE]
+> Microsoft Tunnel does not use Federal Information Processing Standard (FIPS) compliant algorithms.
 
 > [!TIP]
 > Download the Microsoft Tunnel Deployment Guide v2 from the [*Microsoft Download Center*](https://www.microsoft.com/download/details.aspx?id=102274).

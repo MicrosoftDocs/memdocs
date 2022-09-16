@@ -25,6 +25,7 @@ ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Use compliance policies to set rules for devices you manage with Intune

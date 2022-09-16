@@ -26,6 +26,7 @@ ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Device Compliance settings for Windows 10/11 in Intune
