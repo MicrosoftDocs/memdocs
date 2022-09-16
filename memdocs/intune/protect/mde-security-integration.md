@@ -97,9 +97,9 @@ The following security settings are pending deprecation. The Security Management
 - Expedite telemetry reporting frequency (under **Endpoint Detection and Response**)
 - AllowIntrusionPreventionSystem (under **Antivirus**)
 
-### Managing security configurations on Windows Server (no domain Controller)
+### Managing security configurations on Windows Server (no domain controller)
 
-The first Enrollment with MDE can take some hours to correctly show the Devices in Microsoft Endpoint Manager. After the enrollment the system will take up to 2-3 days to load for the first time security policy.
+The first enrollment with Microsoft Defender for Endpoint might take some hours to correctly show the devices in Microsoft Endpoint Manager. After the enrollment, the system will take up to two or three days to load security policy for the first time.
 
 ### Managing security configurations on domain controllers
 
