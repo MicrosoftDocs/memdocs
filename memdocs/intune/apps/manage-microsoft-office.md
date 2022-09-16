@@ -151,10 +151,10 @@ For more information about adding configuration keys, see [Add app configuration
 Teams personal tab apps are already in preview for Office.com and Outlook desktop in Target Release, and IT admins can manage access to Teams apps by creating [custom permission policies](/MicrosoftTeams/teams-app-permission-policies#create-a-custom-app-permission-policy) and [assigning these policies to users](/MicrosoftTeams/policy-assignment-overview) using Teams admin center. You can now also run Teams personal tab apps in Office mobile on Android, in preview. Teams personal tab apps built using [Microsoft Teams JavaScript client SDK v2](/microsoftteams/platform/tabs/how-to/using-teams-client-sdk?tabs=javascript%2Cmanifest-teams-toolkit) (version 2.0.0) and [Teams App manifest](/microsoftteams/platform/resources/schema/manifest-schema) (version 1.13) appear in Office mobile Android app under the “Apps” menu.
 
 There may be additional management requirements specific to Office mobile on Android. You may want to:
-- Only allow specific users in your org to try enhanced Teams apps on Office mobile, or
-- Block all users in your org from using enhanced Teams apps on Office mobile.
+- Only allow specific users in your organization to try enhanced Teams apps on Office mobile, or
+- Block all users in your organization from using enhanced Teams apps on Office mobile.
 
-To manage the above, you can use the following key:
+To manage these,  you can use the following key:
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
