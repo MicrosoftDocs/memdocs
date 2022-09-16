@@ -62,8 +62,9 @@ Share and recommend apps to your work or school contacts. The following steps de
 
 1. In Company Portal, right-click or press and hold the app to open the [context menu](/windows/uwp/design/controls-and-patterns/menus).  
 2. Select **Share**.  
-3. Select a single contact or select another program, such as OneNote, to share the app link with a group of people. If you don't see an app you want to use, select **Get apps in Store** to see other available apps.  
-The recipient receives a link and a message to view the app's details. The link opens the Company Portal app details page. 
+3. Select a single contact or select another program, such as OneNote, to share the app link with a group of people. The recipient receives a link and a message to view the app's details. The link opens the Company Portal app details page. 
+
+If you don't see an app you want to use, select **Get apps in Store** to see other available apps.  
 
 ## Optional and required apps
 Apps are assigned to you by your organization. Your organization will require you to have some apps and will make other apps optional. To find out which apps are required versus optional, go to **Installed apps** and look under the column **Required by your organization**.  
