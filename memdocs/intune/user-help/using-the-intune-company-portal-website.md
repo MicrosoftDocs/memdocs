@@ -48,7 +48,7 @@ From the Company Portal website, you can take any of the following actions:
 
 - Find the company support's contact information, if you configured it
 
-- Check compliance status
+- [Check compliance status](check-status-company-portal-website.md)
 
 - Remotely manage a PC
 
