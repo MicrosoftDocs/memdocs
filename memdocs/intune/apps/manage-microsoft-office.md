@@ -154,13 +154,13 @@ There may be additional management requirements specific to Office mobile on And
 - Only allow specific users in your organization to try enhanced Teams apps on Office mobile, or
 - Block all users in your organization from using enhanced Teams apps on Office mobile.
 
-To manage these,  you can use the following key:
+To manage these, you can use the following key:
 
 |    Key    |    Value    |
 |-------------------------------------------------------------------|-------------|
 |    com.microsoft.office.officemobile.TeamsApps.IsAllowed    |    **true** (default) enables Teams apps on Office mobile<br>**false** disables Teams apps on Office mobile    |
 
-Above can also be used both by managed devices and managed apps.
+This key can be used both by managed devices and managed apps.
 
 ## Data protection app configuration scenarios
 
