@@ -120,7 +120,7 @@ Office supports the following settings for configuration:
 
 - Manage the creation of Sticky Notes
 - Set add-ins preference
-- Manage Teams apps running on Office app for Android (in Preview)
+- Manage Teams apps running on Office app for Android (in preview)
 
 ### Manage the creation of Sticky Notes
 
