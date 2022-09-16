@@ -66,7 +66,7 @@ When you select a policy, you'll see information about the device check-in statu
 
 ### Device check-in frequency
 
-During the first Enrollment through MDE in Microsoft Endpoint Manager Windows Server devices will take up to 2-3 days to correctly load security policy for the first time. After the Enroll Devices managed by this capability check in with Microsoft Endpoint Manager every 90 minutes to update policy.
+During the first enrollment through Microsoft Defender for Endpoint in Microsoft Endpoint Manager, Windows Server devices will take up to two or three days to correctly load security policy for the first time. Thereafter, the enrolled devices managed by this capability check in with Microsoft Endpoint Manager every 90 minutes to update policy.
 
 ### Devices protected by Tamper Protection
 
