@@ -4,12 +4,12 @@ description: include file
 author: brenduns
 ms.service: microsoft-intune
 ms.author: brenduns
-ms.date: 05/12/2022
+ms.date: 09/12/2022
 ms.topic: include
 ---
 ## Prerequisites
 
-Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario:
+Review the following sections for requirements for the Security Management for Microsoft Defender for Endpoint Scenario.
 
 ### Environment
 
@@ -63,7 +63,7 @@ To use security management for Microsoft Defender for Endpoint, you need:
 - A subscription that grants licenses for Microsoft Defender for Endpoint, like Microsoft 365, or a standalone license for only Microsoft Defender for Endpoint. A subscription that grants Microsoft Defender for Endpoint licenses also grants your tenant access to the Endpoint security node of the Microsoft Endpoint Manager admin center.
 
   > [!NOTE]  
-  > **Exception**: If you have access to Microsoft Defender for Endpoint as part of a Microsoft Defender for Cloud only license (formerly Azure Security Center), the Security Management for Microsoft Defender for Endpoint functionality isn't available.
+  > **Exception**: If you have access to Microsoft Defender for Endpoint *only* through Microsoft Defender for servers (part of Microsoft Defender for Cloud, formerly Azure Security Center), the Security Management for Microsoft Defender for Endpoint functionality is not available. You will need to have at least one Microsoft Defender for Endpoint (user) subscription license active.
 
   The Endpoint security node is where you'll configure and deploy policies to manage Microsoft Defender for Endpoint for your devices and monitor device status.
 
@@ -123,13 +123,8 @@ To support Microsoft Defender for Endpoint security configuration management thr
    > [!TIP]
    > Use pilot mode and the proper device tags to test and validate your rollout on a small number of devices. Without using pilot mode, any device that falls into the scope configured will automatically be enrolled.
 
-1. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Endpoint Manager or grant those permissions by configuring a role in the Microsoft 365 Defender portal. Go to **Settings** > **Roles** > **Add item**:
-   :::image type="content" source="../media/mde-security-integration/add-role-in-mde.png" alt-text="Create a new role in the Defender portal.":::
-   > [!TIP]
-   > You can modify existing roles and add the necessary permissions versus creating additional roles in Microsoft Defender for Endpoint
-1. When configuring the role, add users and be sure to select **Manage endpoint security settings in Microsoft Endpoint Manager**:
+1. Make sure the relevant users have permissions to manage endpoint security settings in Microsoft Endpoint Manager. If not already provided, request for your IT administrator to grant applicable users the Microsoft Endpoint Manager’s **Endpoint Security Manager** [built-in RBAC role](/mem/intune/fundamentals/role-based-access-control).
 
-      :::image type="content" source="../media/mde-security-integration/add-role.png" alt-text="Grant users permissions to manage settings.":::
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Endpoint security** > **Microsoft Defender for Endpoint**, and set **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations** to **On**.
 

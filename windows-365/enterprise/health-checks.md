@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 09/07/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -63,7 +63,8 @@ Every failed ANC or success with warning error state includes the technical deta
 - **First party app permissions exist on Azure resource group**: Sufficient permissions exist on the Azure resource group.
 - **First party app permissions exist on Azure virtual network**: Sufficient permissions exist on the Azure vNet.
 - **Environment and configuration is ready**: Underlying infrastructure is ready for provisioning to succeed.
-- **Intune enrollment restrictions allow Windows enrollment**: Verify that Intune enrollment restrictions are configured to allow Windows enrollment. 
+- **Intune enrollment restrictions allow Windows enrollment**: Verify that Intune enrollment restrictions are configured to allow Windows enrollment.
+- **Localization language package readiness**: Verify that the operating system and Microsoft 365 language packages are reachable. Also verify that the localization package download link is reachable.
 
 <!-- ########################## -->
 ## Next steps

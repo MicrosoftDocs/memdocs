@@ -2,7 +2,7 @@
 title: What's new in version 2207
 titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2207 of Configuration Manager current branch.
-ms.date: 08/12/2022
+ms.date: 08/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
@@ -24,6 +24,11 @@ Always review the latest checklist for installing this update. For more informat
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
 ## Cloud-attached management
+
+### Use Intune role-based access control (RBAC) for tenant attached devices 
+<!--8126836, 6415648, 8348644, IN14996522, 13058986-->
+
+You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Endpoint Manager admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](../../../../intune/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../../cloud-attach/use-intune-rbac.md).
 
 ### Enhanced security for Configuration Manager administration service
 <!--12952905-->

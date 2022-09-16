@@ -2,7 +2,7 @@
 title: Enable cloud attach
 titleSuffix: Configuration Manager
 description: Enable cloud attach for Configuration Manager
-ms.date: 12/01/2021
+ms.date: 08/15/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
@@ -75,10 +75,15 @@ Use the following steps to cloud attach your environment with custom settings:
    **Select which devices to upload to Microsoft Endpoint Manager** has the following two options:
    - **All devices managed my Microsoft Endpoint Configuration Manager (recommended)**: Upload all devices
    - **Specific Collection**: Upload a specific collection, including any subcollections.
-
-1. The **Endpoint Analytics** section of the **Configure Upload** page, enables Enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) for devices uploaded to Microsoft Endpoint Manager. Endpoint analytics reports focus on the quality of the experience you're delivering to your users and helps you identify issues to proactively make improvements.
+1. The **Endpoint Analytics** section of the **Configure Upload** page, enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) for devices uploaded to Microsoft Endpoint Manager. Endpoint analytics reports focus on the quality of the experience you're delivering to your users and helps you identify issues to proactively make improvements.
 
    Ensure the **Enable Endpoint Analytics for devices uploaded to Microsoft Endpoint Manager** option is selected to enable Endpoint Analytics.
+
+1. In the **Role-based access control** section of the **Configure Upload** page, determine if you need to clear the checkbox for the **Enforce Configuration Manager RBAC for cloud console requests that interact with Configuration Manager** option. (*Introduced in version 2207*)
+   - This option is used for setting Intune as the role-based access control authority for tenant-attached clients. For more information about configuring this option, see [Intune role-based access control for tenant-attached clients](use-intune-rbac.md).
+
+     > [!IMPORTANT]
+     > When this checkbox is cleared, [settings in Intune need to be configured](use-intune-rbac.md) too.
 
 1. Select **Next** to get to the **Enablement** page for [co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json). Co-management simplifies management by enrolling devices into Intune and allowing you to lift selected [workloads](../comanage/workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) to the cloud. For instance, you can choose to enable workloads for [Conditional Access](../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) so only trusted users can access organizational resources on trusted devices using trusted apps.
 

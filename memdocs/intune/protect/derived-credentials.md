@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/03/2021
+ms.date: 08/22/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,6 +59,9 @@ Derived credentials are an implementation of the National Institute of Standards
   **For Windows**:
   - Common profile types like Wi-Fi, and VPN
   
+  > [!NOTE]
+  > Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only impacts VPN profiles on Windows devices and will be fixed in a future release (no ETA).
+
 - For Android and iOS/iPadOS, users obtain a derived credential by using their smart card on a computer to authenticate to the derived credential issuer. The issuer then issues to the mobile device a certificate that's derived from their smart card. For Windows, users install the app from the derived credential provider, which installs the certificate to the device for later use.
 - After the device receives the derived credential, it's used for authentication and for S/MIME signing and encryption when apps or resource access profiles require the derived credential.
 
@@ -331,6 +334,9 @@ You can use derived certificates as an authentication method for Wi-Fi and VPN p
 - **DISA Purebred**
 - **Entrust**
 - **Intercede**
+
+> [!NOTE]
+> Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only impacts VPN profiles on Windows devices and will be fixed in a future release (no ETA).
 
 For Windows, users don't work through a smartcard registration process to obtain a certificate for use as a derived credential. Instead, the user needs to install the app for Windows, which is obtained from the derived credential provider. To use derived credentials with Windows, complete the following configurations:
 

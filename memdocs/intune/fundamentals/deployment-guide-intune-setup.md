@@ -26,6 +26,7 @@ ms.custom: get-started
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Deployment guide: Setup or move to Microsoft Intune

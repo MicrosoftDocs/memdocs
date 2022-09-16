@@ -87,7 +87,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
   For information about installing and configuring Docker or Podman, see:
 
-  - [Install Docker Engine on CentOS or Red Hat Enterprise Linux 7]( https://docs.docker.com/engine/install/centos/)
+  - [Install Docker Engine on CentOS or Red Hat Enterprise Linux 7](https://docs.docker.com/engine/install/centos/)
     > [!NOTE]
     > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7.4. The version installed on RHEL 7.4 by default is too old to support Microsoft Tunnel Gateway.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
@@ -231,6 +231,10 @@ When creating the Server configuration for the tunnel, you can specify a differe
 
   - Security Token Service: `*.sts.windows.net`
   - Azure storage for tunnel logs: `*.blob.core.windows.net`
+  - Additional storage endpoint urls: 
+  - `*.mwh03prdstr02a.store.core.windows.net`
+  - `*.blob.storage.azure.net`
+
 
 - The Tunnel shares the same requirements as [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md), with the addition of port TCP 22.
 

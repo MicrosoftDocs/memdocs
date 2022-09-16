@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 08/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -56,7 +56,8 @@ Because the China services are operated by a partner from inside China, there ar
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
 - Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
-- Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices.  
+- Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices. 
+- Intune operated by 21Vianet doesn't support Mobile Threat Defense (MTD) connector for Android and iOS devices with MTD vendors.
 
 ## You control customer data
 

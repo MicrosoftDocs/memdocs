@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 07/29/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -71,7 +71,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 
 7. In **Review + add**, a summary is shown of the settings you configured. Select **Add** to save the script. When you select **Add**, the script policy is deployed to the groups you chose.
 
-The script you created now appears in the list of scripts.
+The script you created now appears in the list of scripts. If needed, you can view the contents of macOS shell scripts after you upload them to Intune.
 
 ## Monitor a shell script policy
 You can monitor the run status of all assigned scripts for users and devices by choosing one of the following reports:
@@ -168,7 +168,7 @@ You can create custom attribute profiles which enable you to collect custom prop
    > - Scripts assigned to user groups applies to any user logging in to the Mac.  
 6. In **Review + add**, a summary is shown of the settings you configured. Select **Add** to save the script. When you select **Add**, the script policy is deployed to the groups you chose.
 
-The script you created now appears in the list of custom attributes. 
+The script you created now appears in the list of custom attributes. If needed, you can view the contents of custom attributes after you upload them to Intune.
 
 ## Monitor a custom attribute policy
 
