@@ -69,17 +69,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 #### Microsoft Intune will be ending support for Windows 8.1<!-- 14740233 -->
 Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Additionally, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune will no longer support Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". For more information, see [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-81-).
 
-#### Support for Locate device on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices<!-- 12391424 -->
-You can now use "Locate device" on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices. With this feature, admins will be able to locate lost or stolen corporate devices on-demand. To do this, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
-
-For information on locating lost or stolen devices with Intune, go to:
- - [Locate lost or stolen devices with Intune](../remote-actions/device-locate.md)
-
-Applies to:
-- Android Enterprise corporate owned fully managed
-- Android Enterprise corporate owned dedicated devices
-- Android Enterprise corporate owned work profile
-
 ### Device configuration
 
 #### New lock screen message when adding custom support information to Android Enterprise devices<!-- 13158348 -->
