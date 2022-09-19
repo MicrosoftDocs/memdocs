@@ -57,7 +57,7 @@ productDirectory:
     - title: Windows Autopatch docs
       imageSrc: ./media/autopatch.png
       summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
-      url: ./windows/deployment/windows-autopatch/index.yml
+      url: /windows/deployment/windows-autopatch/index.yml
     # Card
     - title: Endpoint Analytics docs
       imageSrc: ./media/endpoint-analytics.svg
