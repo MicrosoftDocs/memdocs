@@ -21,7 +21,7 @@ ms.assetid: 127dafcb-3f30-4745-a561-f62c9f095907
 #ROBOTS:
 #audience:
 
-ms.reviewer: samyada, demerson
+ms.reviewer: tycast
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:

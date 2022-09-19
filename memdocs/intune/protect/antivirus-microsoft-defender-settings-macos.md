@@ -22,7 +22,7 @@ search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
 ms.collection: M365-identity-device-management
-ms.reviewer: samyada
+ms.reviewer: laarrizz
 
 ---
 
