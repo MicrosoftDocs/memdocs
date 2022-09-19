@@ -28,9 +28,9 @@ highlightedContent:
     - title: How to get support in the admin center
       itemType: overview
       url: ./get-support.md
-    - title: A highlighted doc here...
+    - title: Secure your remote workforce
       itemType: get-started
-      url: https://docs.microsoft.com/search/?terms=intune&category=Learn
+      url: /enterprise-mobility-security/remote-work/
     - title: Training on Microsoft Learn
       itemType: get-started
       url: https://docs.microsoft.com/search/?terms=intune&category=Learn  
