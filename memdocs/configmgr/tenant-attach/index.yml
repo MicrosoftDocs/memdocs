@@ -28,7 +28,7 @@ landingContent:
           - text: Enable tenant attach
             url: device-sync-actions.md
           - text: Set up tenant attach (step-by-step)
-            url: /learn/modules/setup-tenant-attach-using-configuration-manager/
+            url: /training/modules/setup-tenant-attach-using-configuration-manager/
       - linkListType: reference
         links:
           - text: Troubleshoot tenant attach and device actions
