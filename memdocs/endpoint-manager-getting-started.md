@@ -79,7 +79,7 @@ The following resources will help plan and deploy Intune:
 - [Set up Microsoft Intune](./intune/fundamentals/setup-steps.md)
 
 > [!TIP]
-> Get started quickly with [Microsoft Endpoint Manager fundamentals](/learn/paths/endpoint-manager-fundamentals/), [Plan your migration to Microsoft Endpoint Manager](/learn/modules/paths-to-modern-endpoint-management/), and [Determine your endpoint management implementation](/learn/modules/determine-endpoint-implementation/).
+> Get started quickly with [Microsoft Endpoint Manager fundamentals](/training/paths/endpoint-manager-fundamentals/), [Plan your migration to Microsoft Endpoint Manager](/training/modules/paths-to-modern-endpoint-management/), and [Determine your endpoint management implementation](/training/modules/determine-endpoint-implementation/).
 
 ## Device enrollment
 

@@ -38,9 +38,9 @@ Use the following search tips to help you find the information that you need:
 
 - When using your preferred search engine to locate content, include a keyword along with your search keywords. For example, `ConfigMgr` for Configuration Manager and `Intune` for Intune.
 
-  - Look for results from `docs.microsoft.com/mem`. Results from `docs.microsoft.com/previous-versions`, `technet.microsoft.com`, or `msdn.microsoft.com` are for older product versions.
+  - Look for results from `learn.microsoft.com/mem`. Results from `learn.microsoft.com/previous-versions`, `technet.microsoft.com`, or `msdn.microsoft.com` are for older product versions.
 
-  - To further focus the search results to the current content library, include `site:docs.microsoft.com` in your query to scope the search engine.
+  - To further focus the search results to the current content library, include `site:learn.microsoft.com` in your query to scope the search engine.
 
 - Use search terms that match terminology in the user interface and online documentation. Avoid unofficial terms or abbreviations that you might see in community content. For example, search for:
 
@@ -50,13 +50,13 @@ Use the following search tips to help you find the information that you need:
 
 - To search within the current article, use your browser's **Find** feature. With most modern web browsers, press **Ctrl**+**F** and then enter your search terms.
 
-- Each article on `docs.microsoft.com` includes the following fields to assist with searching the content:
+- Each article on `learn.microsoft.com` includes the following fields to assist with searching the content:
 
   - **Search** in the upper right corner. To search all articles, enter terms in this field. Articles in this content library automatically include one of the following search scopes: `ConfigMgr`, `Intune`, or `Autopilot`.
 
     :::image type="content" source="media/docs-search-field.png" alt-text="Docs search field in header.":::
 
-  - **Filter by title** above the left table of contents. To search the current table of contents, enter terms in this field. This field only matches terms that appear in the article titles for the current node. For example, **Configuration Manager Core Infrastructure** (`docs.microsoft.com/mem/configmgr/core`) or **Intune Apps** (`https://docs.microsoft.com/mem/intune/apps/`). The last item in the search results gives you the option to search for the terms in the entire content library.
+  - **Filter by title** above the left table of contents. To search the current table of contents, enter terms in this field. This field only matches terms that appear in the article titles for the current node. For example, **Configuration Manager Core Infrastructure** (`learn.microsoft.com/mem/configmgr/core`) or **Intune Apps** (`https://learn.microsoft.com/mem/intune/apps/`). The last item in the search results gives you the option to search for the terms in the entire content library.
 
     :::image type="content" source="media/docs-filter-toc.gif" alt-text="Animation of using the table of contents filter.":::
 
@@ -64,7 +64,7 @@ Having problems finding something? [File feedback!](#about-feedback) When you fi
 
 ### Add a custom search engine
 
-With many modern web browsers, you can create a custom search engine. Use this feature to quickly and easily search `docs.microsoft.com`. For example, with Microsoft Edge, version 77 and later, use the following process:
+With many modern web browsers, you can create a custom search engine. Use this feature to quickly and easily search `learn.microsoft.com`. For example, with Microsoft Edge, version 77 and later, use the following process:
 
 1. In Microsoft Edge, version 77 and later, open **Settings**.
 1. In the left menu, select **Privacy, search, and services**.
@@ -77,11 +77,11 @@ With many modern web browsers, you can create a custom search engine. Use this f
     - **URL with `%s` in place of query**: For example,
 
         ```url
-        https://docs.microsoft.com/en-us/search/index?search=%s&scope=ConfigMgr
+        https://learn.microsoft.com/search/index?search=%s&scope=ConfigMgr
         ```
 
         > [!NOTE]
-        > This example is specific to the `ConfigMgr` scope. You can remove the scope variable to search all `docs.microsoft.com` or use a different scope.
+        > This example is specific to the `ConfigMgr` scope. You can remove the scope variable to search all `learn.microsoft.com` or use a different scope.
         >
         > The Microsoft technical documentation search engine requires a locale in the address. For example, `en-us`. You can change your entry to use a different locale.
 
@@ -135,7 +135,7 @@ To receive notifications when content changes in the documentation library, use 
         This example results in the following RSS link:
 
         ```url
-        https://docs.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%22%2B%22learn+what%27s+new%22&locale=en-us&facet=&%24filter=scopes%2Fany%28t%3A+t+eq+%27Intune%27%29
+        https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%22%2B%22learn+what%27s+new%22&locale=en-us&facet=&%24filter=scopes%2Fany%28t%3A+t+eq+%27Intune%27%29
         ```
 
         > [!NOTE]
