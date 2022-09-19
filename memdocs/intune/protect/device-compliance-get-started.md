@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/16/2022
+ms.date: 10/17/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -124,12 +124,19 @@ The following subjects link to dedicated articles for different aspects of devic
 
   - [Android device administrator](compliance-policy-create-android.md)
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
-  - [Android Android Open Source Project (AOSP)](compliance-policy-create-android-aosp.md)
+  - [Android Open Source Project (AOSP)](compliance-policy-create-android-aosp.md)
   - [iOS](compliance-policy-create-ios.md)
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
-  - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
   - [Windows 10/11](compliance-policy-create-windows.md)
+
+  Intune also supports compliance policy for Linux (Ubuntu Desktop, version 20.04 LTS), which uses the Settings catalog format instead of templates. Dedicated content for the settings in the settings catalog is not available, but information is available from within the Settings catalog.
+
+- [**Custom compliance settings**](compliance-use-custom-settings.md) – With custom compliance settings you can expand on Intune’s built-in device compliance options.  Custom settings provide flexibility to base compliance on the settings that are available on a device without having to wait for Intune to add those settings.
+
+  You can use custom compliance settings with the following platforms:
+  - Linux – Ubuntu Desktop, version 20.04 LTS
+  - Windows 10/11
 
 ## Monitor compliance status
 
@@ -164,13 +171,13 @@ The following table describes how noncompliant settings are managed when a compl
 
 |**Policy setting**| **Platform** |
 | --- | ----|
-| **PIN or password configuration** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined  <br>  <br>- **iOS 8.0 and later**: Remediated<br>- **macOS 10.11 and later**: Remediated  <br>  <br>- **Windows 8.1 and later**: Remediated|
-| **Device encryption** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined<br><br>- **iOS 8.0 and later**: Remediated (by setting PIN)<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 8.1 and later**: Quarantined|
-| **Jailbroken or rooted device** | - **Android 4.0 and later**: Quarantined (not a setting)<br>- **Samsung Knox Standard 4.0 and later**: Quarantined (not a setting)<br>- **Android Enterprise**: Quarantined (not a setting)<br><br>- **iOS 8.0 and later**: Quarantined (not a setting)<br>- **macOS 10.11 and later**: Not applicable<br><br>- **Windows 8.1 and later**: Not applicable |
-| **Email profile** | - **Android 4.0 and later**: Not applicable<br>- **Samsung Knox Standard 4.0 and later**: Not applicable<br>- **Android Enterprise**: Not applicable<br><br>- **iOS 8.0 and later**: Quarantined<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 8.1 and later**: Not applicable |
-| **Minimum OS version** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined<br><br>- **iOS 8.0 and later**: Quarantined<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 8.1 and later**: Quarantined|
-| **Maximum OS version** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined<br><br>- **iOS 8.0 and later**: Quarantined<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 8.1 and later**: Quarantined |
-| **Windows health attestation** | - **Android 4.0 and later**: Not applicable<br>- **Samsung Knox Standard 4.0 and later**: Not applicable<br>- **Android Enterprise**: Not applicable<br><br>- **iOS 8.0 and later**: Not applicable<br>- **macOS 10.11 and later**: Not applicable<br><br>- **Windows 10/11**: Quarantined<br>- **Windows 8.1 and later**: Quarantined |
+| **PIN or password configuration** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined  <br>  <br>- **iOS 8.0 and later**: Remediated<br>- **macOS 10.11 and later**: Remediated  <br>  <br>- **Windows 10/11**: Remediated|
+| **Device encryption** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined<br><br>- **iOS 8.0 and later**: Remediated (by setting PIN)<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 10/11**: Quarantined|
+| **Jailbroken or rooted device** | - **Android 4.0 and later**: Quarantined (not a setting)<br>- **Samsung Knox Standard 4.0 and later**: Quarantined (not a setting)<br>- **Android Enterprise**: Quarantined (not a setting)<br><br>- **iOS 8.0 and later**: Quarantined (not a setting)<br>- **macOS 10.11 and later**: Not applicable<br><br>- **Windows 10/11**: Not applicable |
+| **Email profile** | - **Android 4.0 and later**: Not applicable<br>- **Samsung Knox Standard 4.0 and later**: Not applicable<br>- **Android Enterprise**: Not applicable<br><br>- **iOS 8.0 and later**: Quarantined<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 10/11**: Not applicable |
+| **Minimum OS version** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined<br><br>- **iOS 8.0 and later**: Quarantined<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 10/11**: Quarantined|
+| **Maximum OS version** | - **Android 4.0 and later**: Quarantined<br>- **Samsung Knox Standard 4.0 and later**: Quarantined<br>- **Android Enterprise**: Quarantined<br><br>- **iOS 8.0 and later**: Quarantined<br>- **macOS 10.11 and later**: Quarantined<br><br>- **Windows 10/11**: Quarantined |
+| **Windows health attestation** | - **Android 4.0 and later**: Not applicable<br>- **Samsung Knox Standard 4.0 and later**: Not applicable<br>- **Android Enterprise**: Not applicable<br><br>- **iOS 8.0 and later**: Not applicable<br>- **macOS 10.11 and later**: Not applicable<br><br>- **Windows 10/11**: Quarantined<br>- **Windows 10/11**: Quarantined |
 
 
 > [!NOTE]

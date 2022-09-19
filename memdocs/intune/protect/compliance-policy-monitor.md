@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/24/2022
+ms.date: 10/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -35,6 +35,16 @@ Compliance reports help you understand when devices fail to meet your [complianc
 - The compliance status for an individual setting
 - The compliance status for an individual policy
 - Drill down into individual devices to view specific settings and policies that affect the device
+
+This article applies to:
+
+- Android device administrator
+- Android (AOSP) (preview)
+- Android Enterprise
+- iOS/iPadOS
+- Linux (Ubuntu Desktop, version 20.04 LTS)
+- macOS
+- Windows 10 and later
 
 ## Open the compliance dashboard
 
@@ -72,11 +82,11 @@ Descriptions of the different device compliance policy states:
 
 - **Compliant**: The device successfully applied one or more device compliance policy settings.
 
-- **In-grace period:** The device is targeted with one or more device compliance policy settings. But, the user hasn't applied the policies yet. This status means the device is not-compliant, but it's in the grace period defined by the admin.
+- **In-grace period:** *(This status isn’t supported by Linux)* The device is targeted with one or more device compliance policy settings. But, the user hasn't applied the policies yet. This status means the device is not-compliant, but it's in the grace period defined by the admin.
 
   - Learn more about [Actions for noncompliant devices](actions-for-noncompliance.md).
 
-- **Not evaluated**: An initial state for newly enrolled devices. Other possible reasons for this state include:
+- **Not evaluated**: *(This status isn’t supported by Linux)* An initial state for newly enrolled devices. Other possible reasons for this state include:
 
   - Devices that aren't assigned a compliance policy and don't have a trigger to check for compliance
   - Devices that haven't checked in since the compliance policy was last updated
@@ -87,11 +97,12 @@ Descriptions of the different device compliance policy states:
 
 - **Not-compliant:** The device failed to apply one or more device compliance policy settings. Or, the user hasn't complied with the policies.
 
-- **Device not synced:** The device failed to report its device compliance policy status because one of the following reasons:
+- **Device not synced:** *(This status isn’t supported by Linux)* The device failed to report its device compliance policy status because one of the following reasons:
 
   - **Unknown**: The device is offline or failed to communicate with Intune or Azure AD for other reasons.
-
   - **Error**: The device failed to communicate with Intune and Azure AD, and received an error message with the reason.
+
+- **Checking status**: *(Applies only to Linux)* Intune is currently evaluating the devices compliance your organization’s policies.
 
 > [!IMPORTANT]
 > Devices that are enrolled into Intune, but not targeted by any device compliance policies are included in this report under the **Compliant** bucket.
@@ -103,12 +114,12 @@ When a setting for a compliance policy returns a value of **Error**, the complia
 ##### Examples:
 
 - A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. After three days, compliance evaluation completes successfully and the setting now reports **Not compliant**. The user can continue to use the device to access Conditional Access-protected resources within the first three days after the setting states changes to **Error**, but once the setting returns **Not compliant**, the device is marked **Not compliant** and this access is removed until the device becomes **Compliant** again.
- 
+
 - A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. After three days, compliance evaluation completes successfully, the setting returns **Compliant**, and the device's compliance status becomes **Compliant**. The user is able to continue to access Conditional Access protected resources without interruption.
 
-- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. The user is able to access Conditional Access protected resources for seven days, but after seven days, the compliance setting still returns **Error**. At this point, the device becomes Not compliant immediately and the user loses access to the protected resources until the device becomes **Compliant** – even if there's a grace period set for the applicable compliance policy.
+- A device is initially marked **Compliant**, but then a setting in one of the compliance policies targeted to the device reports **Error**. The user is able to access Conditional Access protected resources for seven days, but after seven days, the compliance setting still returns **Error**. At this point, the device becomes Not compliant immediately and the user loses access to the protected resources until the device becomes **Compliant**, even if there's a grace period set for the applicable compliance policy.
 
--  A device is initially marked **Not compliant**, but then a setting in one of the compliance policies targeted to the device reports Error. After three days, compliance evaluation completes successfully, the setting returns **Compliant**, and the device's compliance status becomes **Compliant**. The user is prevented from accessing Conditional Access protected resources for the first three days (while the setting returns **Error**). Once the setting returns **Compliant** and the device is marked **Compliant**, the user can begin to access protected resources on the device.
+- A device is initially marked **Not compliant**, but then a setting in one of the compliance policies targeted to the device reports Error. After three days, compliance evaluation completes successfully, the setting returns **Compliant**, and the device's compliance status becomes **Compliant**. The user is prevented from accessing Conditional Access protected resources for the first three days (while the setting returns **Error**). Once the setting returns **Compliant** and the device is marked **Compliant**, the user can begin to access protected resources on the device.
 
 #### Drill down for more details
 
@@ -225,6 +236,3 @@ Policy conflicts can occur when multiple Intune policies are applied to a device
 ## Next steps
 
 [Compliance policies overview](device-compliance-get-started.md)
-
-
-
