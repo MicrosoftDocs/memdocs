@@ -131,7 +131,7 @@ To manage the supported OS version in your organization, you can use Microsoft E
 ### Plan for Change: Deploy macOS LOB apps by uploading PKG-type installer files<!-- 14190746 --> 
 We recently announced the general availability to deploy macOS line-of-business (LOB) apps by uploading PKG-type installer files directly in the Microsoft Endpoint Manager admin center. This process no longer requires the use of the Intune App Wrapping Tool for macOS to convert *.pkg* files to *.intunemac* format. 
   
-In July 2022, we will be removing the [Intune App Wrapping Tool for macOS](https://github.com/msintuneappsdk/intune-app-wrapping-tool-mac) from the Microsoft Intune App SDK GitHub repository. Soon after, we will be removing the ability to upload wrapped *.intunemac* files in the Microsoft Endpoint Manager admin center. 
+In August 2022, we removed the ability to upload wrapped *.intunemac* files in the Microsoft Endpoint Manager admin center. 
 
 #### How does this affect you or your users?
 There is no impact to apps previously uploaded with *.intunemac* files. You can upgrade previously uploaded apps by uploading the *.pkg* file type.

@@ -28,6 +28,7 @@ ms.custom: intune-azure; get-started
 ms.collection:
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # What is Microsoft Intune app management?

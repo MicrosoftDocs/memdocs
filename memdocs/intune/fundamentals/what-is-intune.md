@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Microsoft Intune is an MDM and MAM provider for your devices
