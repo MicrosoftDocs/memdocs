@@ -55,7 +55,7 @@ For the step-by-step procedure, see [Send logs to your company support from the 
 Use your organization's helpdesk details, such as phone number, emails, and website to quickly troubleshoot work or school access.  
 
 ## Find answers to frequently asked questions  
-The **Frequently asked questions** section lists some of the most common questions people ask when enrolling their devices. Select a question to go to the most relevant help article on Docs.microsoft.com. Select **See all help topics** to browse through all Windows enrollment articles.   
+The **Frequently asked questions** section lists some of the most common questions people ask when enrolling their devices. Select a question to go to the most relevant help article on Microsoft Learn. Select **See all help topics** to browse through all Windows enrollment articles.
 
 ## Report app problems to Microsoft  
 Select **Report problem to Microsoft** to open the **Send feedback** page. From there, you can:  
