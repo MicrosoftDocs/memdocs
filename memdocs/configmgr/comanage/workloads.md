@@ -15,9 +15,9 @@ ms.collection: highpri
 
 # Co-management workloads
 
-You don't have to switch the workloads, or you can do them individually when you're ready. Configuration Manager continues to manage all other workloads, including those workloads that you don't switch to Intune, and all other features of Configuration Manager that co-management doesn't support.
+You don't have to switch any of the workloads. When you're ready, you can switch them individually, several at once, or all at the same time. However, until you switch the workloads over to Intune, Configuration Manager continues to manage the workloads that you don't switch to Intune, along with all other features of Configuration Manager that co-management doesn't support.
 
-If you switch a workload to Intune, but later change your mind, you can switch it back to Configuration Manager.
+If you switch a workload to Intune, but later change your mind, you can switch it back to Configuration Manager, although there might be an impact. For example, Windows and Office versions will remain at a later version if installed by Intune.
 
 Co-management supports the following workloads:
 
@@ -44,6 +44,9 @@ For more information on the Intune feature, see [Use compliance policies to set 
 ## Windows Update policies
 
 Windows Update for Business policies let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices managed directly by Windows Update for Business.
+
+> [!NOTE]
+> To use Windows Autopatch with these devices, this workload needs to be managed by Intune. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
 
 For more information on the Intune feature, see [Manage Windows software updates in Intune](../../intune/protect/windows-update-for-business-configure.md).
 
@@ -96,6 +99,8 @@ The device configuration workload includes settings that you manage for devices 
 
 You can still deploy settings from Configuration Manager to co-managed devices even though Intune is the device configuration authority. This exception might be used to configure settings that your organization requires but aren't yet available in Intune. Specify this exception on a [Configuration Manager configuration baseline](../compliance/deploy-use/create-configuration-baselines.md). Enable the option to **Always apply this baseline even for co-managed clients** when creating the baseline. You can change it later on the **General** tab of the properties of an existing baseline.
 
+To use Windows Autopatch with these devices, this workload needs to be managed by Intune. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
+
 For more information on the Intune feature, see [Create a device profile in Microsoft Intune](../../intune/configuration/device-profile-create.md).
 
 > [!NOTE]
@@ -124,6 +129,9 @@ Updates can be managed using either of the following features:
 
 - [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates](../../intune/configuration/administrative-templates-update-office.md)
 - [Manage Microsoft 365 Apps with Configuration Manager](../sum/deploy-use/manage-office-365-proplus-updates.md).
+
+> [!NOTE]
+> To use Windows Autopatch with these devices, this workload needs to be managed by Intune. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
 
 For more information on the Intune feature, see [Add Microsoft 365 apps to Windows devices with Microsoft Intune](../../intune/apps/apps-add-office365.md).
 
