@@ -59,11 +59,12 @@ The following example image shows what the enrollment notification looks like to
 To create an enrollment notification, you must: 
 
 * Be a Global Administrator or Intune Administrator. 
-* [Configure branding and customization settings](../apps/company-portal-app.md) in **Tenant administration** > **Customization**. 
+* [Configure branding and customization settings](../apps/company-portal-app.md) in **Tenant administration** > **Customization**.  
+
+## You should know  
+Enrollment push notifications aren't supported in the Company Portal for Windows, so they do not appear there. They do, however, appear in the Company Portal apps for iOS, macOS, and Android.  
 
 ## Create an enrollment notification  
-
-Enrollment push notifications are not supported in the Company Portal for Windows so they do not appear there. They do, however, appear in the Company Portal apps for iOS, macOS, and Android.  
 
 > [!TIP]
 > Use the built-in HTML editor to format and style email notifications. Intune supports the following HTML tags: `<a>`, `<strong>`, `<b>`, `<u>`, `<ol>`, `<ul>`, `<li>`, `<p>`, `<br>`, `<code>`, `<table>`, `<tbody>`, `<tr>`, `<td>`, `<thead>`, and`<th>`. It also supports the `href` attribute for hyperlinks.  
@@ -95,7 +96,7 @@ Enrollment push notifications are not supported in the Company Portal for Window
     * **Message**: Enter your message, explaining the purpose of the notification. The character limit is 2000.  
 
     The options for email notifications are:  
-      * **Send Email Notification**: Flip the switch **On** to to enable and create an email notification.   
+      * **Send Email Notification**: Flip the switch **On** to enable and create an email notification.   
       * **Subject**: Enter the subject of the enrollment notification.  
       * **Message**: Enter your message. The character limit is 2000.  
       * **Raw HTML editor**: Flip the switch **On** to enable HTML formatting.  
