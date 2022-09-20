@@ -16,7 +16,7 @@ metadata:
 
 highlightedContent:
   items:
-    - title: Microsoft Intune services & products - overview
+    - title: Microsoft Intune product family overview
       itemType: overview
       url: endpoint-manager-overview.md
     - title: Microsoft Intune (product page)
@@ -137,4 +137,3 @@ additionalContent:
           url: https://twitter.com/hashtag/msintune
   # footer (optional)
   footer: "Found a problem with Microsoft Intune docs? [Let us know](use-docs.md#about-feedback)!"
-  
