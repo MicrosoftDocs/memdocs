@@ -7,7 +7,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 09/21/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -68,6 +68,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 #### Microsoft Intune will be ending support for Windows 8.1<!-- 14740233 -->
 Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Additionally, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune will no longer support Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". For more information, see [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-81-).
+
+#### Group member count visible in assignments<!-- 13434676 -->
+When assigning policies in the admin center, you can now see the number of users and devices in a group. Having both counts will help you pinpoint the right group and understand the impact the assignment has before you apply it.   
 
 ### Device configuration
 
@@ -193,7 +196,7 @@ For more information about configuring Settings Catalog profiles in Intune, see 
 
 ### Device enrollment
 
-#### Set up enrollment notifications (public preview)<-- 9283605 -->
+#### Set up enrollment notifications (public preview)<!-- 9283605 -->
 Enrollment notifications inform device users, via email or push notification, when a new device has been enrolled in Microsoft Intune. You can use enrollment notifications for security purposes to notify users and help them report devices enrolled in error, or for communicating to employees during the hiring or onboarding process. Enrollment notifications are available to try now in public preview for Windows, Apple, and Android devices. This feature is only supported with user-driven enrollment methods.
 
 ### Device security
