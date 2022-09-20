@@ -64,9 +64,8 @@ To create an enrollment notification, you must:
 Enrollment notifications only work with user-driven enrollment methods.   
 
 ## You should know  
-Email notifications appear in the user's inbox. Push notifications appear in the Intune Company Portal apps for iOS/iPadOS, macOS, and Android.  
+Email notifications appear in the user's inbox. Push notifications appear in the Intune Company Portal apps for iOS/iPadOS, macOS, and Android.  Enrollment push notifications aren't supported in the Company Portal for Windows, so they'll never appear there.  
 
-Enrollment push notifications aren't supported in the Company Portal for Windows, so they'll never appear there. They do, however, appear in the Company Portal apps for iOS, macOS, and Android.  
 ## Create an enrollment notification  
 
 > [!TIP]
