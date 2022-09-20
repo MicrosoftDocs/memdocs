@@ -31,8 +31,8 @@ ms.collection: M365-identity-device-management
 
 # Set up enrollment notifications   
 
-> [!NOTE]
-> This feature is in public preview. For more information, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).  
+> [!IMPORTANT]
+> This feature is in public preview. For more information, see [Public preview in Microsoft Intune](public-preview.md).  
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -105,11 +105,11 @@ Enrollment push notifications aren't supported in the Company Portal for Windows
 
     * **Show company logo**: Flip the switch **On** to make your organization's logo visible in the email header. This option becomes available after you've configured Company Portal branding in your tenant.   
     * **Show device details**: Flip the switch **On** to make the following device details visible in the footer of the email:  
-        * Device name  
-        * Model  
-        * OS  
-        * OS version  
-        * Serial number  
+         * Device name  
+         * Model  
+         * OS  
+         * OS version  
+         * Serial number  
     * **Show company name**: Flip the switch **On** to make your organization's name visible in the footer of the email. The tenant value is automatically populated.  
     * **Show contact information**: Flip the switch **On** to show your organization's contact information. The tenant value is automatically populated.  
     * **Show Company portal website link**: Flip the switch **On** to show a link to the Company Portal website. The tenant value is automatically populated. 
