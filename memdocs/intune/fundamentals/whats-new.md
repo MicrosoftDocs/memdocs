@@ -248,7 +248,7 @@ Access policies are supported for the following resources:
 - **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
 - **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
 
-For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md].
+For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
 
 ## Week of September 12, 2022
 
