@@ -64,13 +64,22 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of September 19, 2022 (Service release 2209)
 
+### App management
+
+#### New app types for Microsoft Endpoint Manager<!-- 7210233 -->
+As an admin, you will be able to create and assign two new types of Intune apps:
+- **iOS/iPadOS web clip** 
+- **Windows web link**
+
+These new app types work in a similar way to the existing **web link** application type, however they apply only for their specific platform, whereas web link applications apply across all platforms. With these new app types, you can assign to groups and also use assignment filters to limit the scope of assignment. You will find this functionality in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), by selecting **Apps** > **All Apps** > **Add**. These new app types will initially be in private preview.
+
 ### Device management
 
 #### Microsoft Intune will be ending support for Windows 8.1<!-- 14740233 -->
 Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. After that date, technical assistance and automatic updates that help protect your devices running Windows 8.1 will no longer be available. Additionally, because the sideloading scenario for line-of-business apps is only applicable to Windows 8.1 devices, Intune will no longer support Windows 8.1 sideloading. Sideloading is installing, and then running or testing an app that isn't certified by the Microsoft Store. In Windows 10/11, "sideloading" is simply setting a device config policy to include "Trusted app installation". For more information, see [Plan for Change: Ending support for Windows 8.1](../fundamentals/whats-new.md#plan-for-change-ending-support-for-windows-81-).
 
 #### Group member count visible in assignments<!-- 13434676 -->
-When assigning policies in the admin center, you can now see the number of users and devices in a group. Having both counts will help you pinpoint the right group and understand the impact the assignment has before you apply it.   
+When assigning policies in the admin center, you can now see the number of users and devices in a group. Having both counts will help you pinpoint the right group and understand the impact the assignment has before you apply it.
 
 ### Device configuration
 
@@ -221,7 +230,7 @@ The Intune Company Portal website now shows a grace period status to account for
 #### Newly available protected apps for Intune<!-- 15007580, 15235927 -->
 The following protected apps are now available for Microsoft Intune:
 - RingCentral for Intune by RingCentral, Inc.
-- MangoApps, Work from Anywhere by MangoSpring Inc.
+- MangoApps, Work from Anywhere by MangoSpring, Inc.
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
@@ -238,7 +247,7 @@ Access policies are supported for the following resources:
 - **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
 - **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
 
-For more infomration, see [Use Access policies to require multiple administrative approvals](../fundamentals/multi-admin-approval.md].
+For more information, see [Use Access policies to require multiple administrative approvals](../fundamentals/multi-admin-approval.md).
 
 ## Week of September 12, 2022
 
