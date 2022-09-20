@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2022
+ms.date: 09/20/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,9 +32,7 @@ ms.collection:
 
 # Sync AOSP device with Intune  
 
- A manual sync forces your device to connect with Intune to get the latest updates, requirements, and communications from your organization. The Microsoft Intune app regularly syncs devices as long as you're connected to Wi-Fi. If you've been disconnected from Wi-Fi for an extended period of time, you can use the manual sync feature to get any policies and updates you missed.    
- 
-Syncing can also help resolve work-related downloads or other processes that are in progress or stalled. If you're experiencing slow or unusual behavior while installing or using a work app, or if you're missing a work app that you know you're supposed to have, try syncing your device.   
+ A manual sync forces your device to connect with Intune to get the latest updates, requirements, and communications from your organization. The Microsoft Intune app regularly syncs devices as long as you're connected to Wi-Fi. If you've been disconnected from Wi-Fi for an extended period of time, you can use the manual sync feature to get any policies and updates you missed.  
 
 ## Sync device  
 To force a sync:    
