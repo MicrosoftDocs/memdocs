@@ -33,3 +33,5 @@ Manage [Endpoint detection and response policy settings for Configuration Manage
 - Windows 11 and later (x86, x64, ARM64)
 - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010
 - Windows Server 2016 and later(x64)
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
