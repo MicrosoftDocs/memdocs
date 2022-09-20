@@ -9,31 +9,31 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: johmar
-  ms.date: 09/13/2022
+  ms.date: 09/19/2022
   ms.localizationpriority: high
   ms.collection: highpri
   ms.custom: intro-hub-or-landing
 
 highlightedContent:
   items:
-    - title: Microsoft Intune services & products - overview
+    - title: Microsoft Intune product family overview
       itemType: overview
       url: endpoint-manager-overview.md
     - title: Microsoft Intune (product page)
       itemType: overview
       url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
-    - title: How to use the docs for Microsoft Intune technologies
+    - title: Cloud attach your Configuration Manager environment
       itemType: overview
-      url: ./use-docs.md
-    - title: How to get support in the admin center
-      itemType: overview
-      url: ./get-support.md
+      url: https://learn.microsoft.com/mem/configmgr/cloud-attach/overview
     - title: Secure your remote workforce
       itemType: get-started
       url: /enterprise-mobility-security/remote-work/
     - title: Training on Microsoft Learn
       itemType: get-started
-      url: https://docs.microsoft.com/search/?terms=intune&category=Learn  
+      url: https://docs.microsoft.com/search/?terms=intune&category=Learn
+    - title: How to use the docs for Microsoft Intune technologies
+      itemType: overview
+      url: ./use-docs.md      
 # productDirectory section (optional)
 productDirectory:
   title: Get started with the Microsoft Intune product family
