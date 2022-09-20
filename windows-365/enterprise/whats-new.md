@@ -54,7 +54,7 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- ***********************************************-->
 ### Device provisioning
 
-### Windows 365 Cloud PC support for Windows 11 Enterprise version 22H2<!--41359336-->
+#### Windows 365 Cloud PC support for Windows 11 Enterprise version 22H2<!--41359336-->
 
 New gallery images are now available that include support for Windows 11 version 22H2. The following gallery images can be used for newly provisioned Cloud PCs:
 
