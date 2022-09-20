@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/25/2021
+ms.date: 09/20/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -105,7 +105,7 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 - **Address**: Enter the IP address or fully qualified host name of the proxy server. For example, enter `10.0.0.3` or `vpn.contoso.com`.
 - **Port number**: Enter the port number associated with the proxy server. For example, enter `8080`.
 
-## Personally-owned work profile
+## Personally owned work profile
 
 - **Connection type**: Select the VPN connection type. Your options:
 
@@ -166,4 +166,4 @@ For more information, see [Use a VPN and per-app VPN policy on Android Enterpris
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create VPN profiles for [Android device administrator](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), [Windows 10 and later](vpn-settings-windows-10.md), and [Windows 8.1](vpn-settings-windows-8-1.md).
+You can also create VPN profiles for [Android device administrator](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), [macOS](vpn-settings-macos.md), and [Windows 10 and later](vpn-settings-windows-10.md).
