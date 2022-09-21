@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 09/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Set up enrollment notifications in Microsoft Intune to notify employees of newly-enrolled devices. You can create a custom message for employees and include information in the notification about how to report an unrecognized device. 
+Set up enrollment notifications in Microsoft Intune to notify employees of newly enrolled devices. You can create a custom message for employees and include information in the notification about how to report an unrecognized device. 
 
 Intune delivers enrollment notifications via email or push notification. You can apply your tenant's branding and customization settings to email notifications. 
 
@@ -50,7 +50,7 @@ Enrollment notifications work on devices running:
 This article describes how to create enrollment notifications in the Microsoft Endpoint Manager admin center.  
 
 ## Example  
-The following example image shows what the enrollment notification looks like to the device user.  
+The following example image shows what an enrollment notification looks like to a device user.  
 
 > [!div class="mx-imgBorder"] 
 > ![Example image of an enrollment notification configured in Intune, notifying the recipient that a device named *Nia's iPhone" was enrolled, and includes HTML elements such as bolded font and a hyperlink, device details, contact information, and privacy statement.](./media/enrollment-notifications/enrollment-notification-message.png)  
@@ -117,7 +117,9 @@ Email notifications appear in the user's inbox. Push notifications appear in the
     * **Show Company portal website link**: Flip the switch **On** to show a link to the Company Portal website. The tenant value is automatically populated. 
 8. Select **Next**. 
 9. Optionally, assign a scope tag, like `US-NC IT Team` or `JohnGlenn_ITDepartment`, to limit management of the notification to specific IT groups. Then select **Next**.  
-10. In **Assignments**, select the users or groups that will receive your profile. You can also apply assignment filters, which are available for Windows and Apple devices.   
+10. In **Assignments**, select the users or groups receiving the notification. 
+
+    Optionally, you can apply assignment filters. For more information about using filters on enrollment policies like this one, see [Supported filter properties](../enrollment/create-device-platform-restrictions.md#supported-filter-properties). Assignment filters are available for Windows and Apple enrollments.     
 11. Select **Next**. 
 12. In **Review + create**, review the notification details, and then select **Create**.  
 
