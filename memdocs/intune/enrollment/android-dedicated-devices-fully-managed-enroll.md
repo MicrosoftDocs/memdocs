@@ -147,7 +147,10 @@ Link a zero-touch account with your Microsoft Intune account. Upon linking the a
 8. Add support information to assist device users during setup.  
 9. Select **Save**.  
 
-Once your account is linked with Intune, the default configuration is applied to zero-touch enabled devices that do not already have a configuration. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center.   
+Once your account is linked with Intune, the default configuration is applied to zero-touch enabled devices that do not already have a configuration. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center. 
+
+> [!CAUTION]
+> Linking a zero-touch account to Intune will apply the enrollment token for fully managed devices to zero-touch devices without a configuration but also all future devices added by a reseller. This will also **overrule the default configuration profile** set in the  **zero-touch portal**. So, for having corporate-owned work profile or dedicated devices as standard enrollment profile please do not link a zero-touch account to Intune.
 
 ### Create configuration in zero-touch enrollment portal        
 
