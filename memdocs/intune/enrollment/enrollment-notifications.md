@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 09/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -50,7 +50,7 @@ Enrollment notifications work on devices running:
 This article describes how to create enrollment notifications in the Microsoft Endpoint Manager admin center.  
 
 ## Example  
-The following example image shows what the enrollment notification looks like to the device user.  
+The following example image shows what an enrollment notification looks like to a device user.  
 
 > [!div class="mx-imgBorder"] 
 > ![Example image of an enrollment notification configured in Intune, notifying the recipient that a device named *Nia's iPhone" was enrolled, and includes HTML elements such as bolded font and a hyperlink, device details, contact information, and privacy statement.](./media/enrollment-notifications/enrollment-notification-message.png)  
