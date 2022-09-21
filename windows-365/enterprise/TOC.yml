@@ -173,8 +173,6 @@ items:
           href: place-cloud-pc-under-review.md
     - name: Reports
       items:
-      - name: Cloud PC utilization report
-        href: report-cloud-pc-utilization.md
       - name: Resource performance report
         href: report-resource-performance.md
       - name: Remoting connection report
