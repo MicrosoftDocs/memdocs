@@ -26,8 +26,10 @@ items:
       href: enroll-device-android-company-portal.md
     - name: Enroll with Android work profile
       href: enroll-device-android-work-profile.md
-    - name: Enroll with Microsoft Intune app
-      href: enroll-device-android-microsoft-intune-app.md
+    - name: Enroll Android with Microsoft Intune app 
+      href: enroll-device-android-microsoft-intune-app.md 
+    - name: Enroll AOSP with Microsoft Intune app 
+      href: enroll-device-aosp.md
     - name: Enroll with derived credentials
       items:
       - name: Enroll with Entrust
@@ -50,7 +52,16 @@ items:
       href: use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md
     - name: Turn off Microsoft data collection
       href: turn-off-microsoft-usage-data-collection-android.md
-
+  - name: Microsoft Intune app for AOSP 
+    items:
+    - name: Check device compliance 
+      href: check-compliance-aosp.md 
+    - name: Sync device 
+      href: sync-device-aosp.md 
+    - name: Configure logging settings 
+      href: intune-app-logs-aosp.md 
+    - name: Turn off Microsoft data collection 
+      href: turn-off-microsoft-usage-data-collection-aosp.md 
   - name: Update device settings
     items:
     - name: Move to new device management setup
