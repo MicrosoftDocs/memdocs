@@ -44,6 +44,11 @@ Registration can also be performed within your organization by collecting the ha
 - [Automatic registration](automatic-registration.md)
 - [Manual registration](manual-registration.md)
 
+When an Autopilot device is registered, it automatically creates an Azure AD object. This object is needed by the Autopilot deployment process to identify the device before the user logs in. Deleting this record may result in the device failing to enroll through Autopilot. If the device is registered and not enrolled after 180 days, the device will need to be re-registered to complete a successful deployment.
+
+> [!NOTE]
+> If you are using Workplace join or MDM-only enrolling devices, we recommend that the devices not be registered to Autopilot. These options are intended for joining personally owned devices to a corporate network and it does not register the device with Azure Active Directory
+
 Once a device is registered in Autopilot if a profile is not assigned, it will receive the default Autopilot profile. If you do not want a device to go through Autopilot, you must remove the Autopilot registration. 
 
 ## Terms
