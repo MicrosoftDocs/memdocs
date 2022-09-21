@@ -36,7 +36,7 @@ ms.collection: M365-identity-device-management
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Set up enrollment notifications in Microsoft Intune to notify employees of newly-enrolled devices. You can create a custom message for employees and include information in the notification about how to report an unrecognized device. 
+Set up enrollment notifications in Microsoft Intune to notify employees of newly enrolled devices. You can create a custom message for employees and include information in the notification about how to report an unrecognized device. 
 
 Intune delivers enrollment notifications via email or push notification. You can apply your tenant's branding and customization settings to email notifications. 
 
