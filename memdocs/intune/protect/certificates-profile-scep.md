@@ -57,30 +57,26 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
      SCEP certificate profiles for the *Fully Managed, Dedicated, and Corporate-Owned Work Profile* profile have the following limitations:
 
-      a. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
+     1. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
+     1. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owner**. You can manage revocation through an external process or directly with the certification authority.
+     1. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration, VPN, and authentication. SCEP certificate profiles on Android Enterprise dedicated devices aren't supported for app authentication.
 
-      b. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owner**. You can manage revocation through an external process or directly with the certification authority.
+     For **Android (AOSP)**, the following limitations apply:
 
-      c. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration, VPN, and authentication. SCEP certificate profiles on Android Enterprise dedicated devices aren't supported for app authentication.
+     1. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
+     1. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owners**. You can manage revocation through an external process or directly with the certification authority.
+     1. SCEP certificate profiles are supported for Wi-Fi network configuration.  VPN configuration profile support is not available. A future update may include support for VPN configuration profiles.  
+     1. The following 3 variables are not available for use on Android (AOSP) SCEP certificate profiles.  Support for these variables will come in a future update.
+        - onPremisesSamAccountName
+        - OnPrem_Distinguished_Name
+        - Department
 
-    For **Android (AOSP)**, the following limitations apply:
-      a. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
-      b. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owners**. You can manage revocation through an
-         external process or directly with the certification authority.
-      c. SCEP certificate profiles are supported for Wi-Fi network configuration.  VPN configuration profile support is not available. A future update may include
-         support for VPN configuration profiles.  
-      d. The following 3 variables are not available for use on Android (AOSP) SCEP certificate profiles.  Support for these variables will come in a future update. 
-         · onPremisesSamAccountName
-         · OnPrem_Distinguished_Name
-         · Department
-        
-     NOTE: **Device Owner** is equivalent to Corporate Owned devices. The following are considered as Device Owner:
-      •	Android Enterprise - Fully Managed, Dedicated, and Corporate-Owned Work Profile 
-      •	Android AOSP 
-        o	User-affinity
-        o	User-less
-        
-![image](https://user-images.githubusercontent.com/49950578/191582773-3066ebcd-374c-4353-bdfe-6013122c5369.png)
+     > [!NOTE]
+     > **Device Owner** is equivalent to Corporate Owned devices. The following are considered as Device Owner:
+     > - Android Enterprise - Fully Managed, Dedicated, and Corporate-Owned Work Profile
+     > - Android AOSP
+     >   - User-affinity
+     >   - User-less
 
 4. Select **Create**.
 
