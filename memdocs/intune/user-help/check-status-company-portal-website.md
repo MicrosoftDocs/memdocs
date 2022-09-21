@@ -29,7 +29,7 @@ ms.collection:
 ---
 
 # Check status on Intune Company Portal website 
-View and check device status on the Intune Company Portal website. Th device status reveals whether or not your device is compliant with your organization's requirements.  Device check-ins are performed automatically but you can manually initiate one to: 
+View and check device status on the Intune Company Portal website. The device status reveals whether or not your device is compliant with your organization's requirements.  Device check-ins are performed automatically but you can manually initiate one to: 
 
 * Register changes you just made to your device
 * Refresh your device status 
