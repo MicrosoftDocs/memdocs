@@ -154,7 +154,7 @@ Applies to:
 #### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 15349701 -->
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
 
-There are new settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+There are new settings available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
 
 New settings include:
 
@@ -236,7 +236,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Tenant administration
 
-#### Access policies for multiple Administrator Approval in public preview<!--9348867 -->
+#### Access policies for Multiple Administrator Approval in public preview<!--9348867 -->
 In public preview, you can use Intune *access policies* to require that a second Administrator Approval account be used to approve a change before the change is applied.  This capability is known as multiple Administrator Approval (MAA).
 
 You create an access policy to protect a type of resource, like App deployments. Each access policy also includes a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
