@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2022
+ms.date: 09/23/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -59,8 +59,8 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   | CentOS 7.4+           | Docker CE                | CentOS 8+ isn’t supported |
   | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
   | Red Hat (RHEL) 8.4    | Podman 3.0               |                    |
-  | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
-  | Red Hat (RHEL) 8.6    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
+  | Red Hat (RHEL) 8.5    | Podman 4.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
+  | Red Hat (RHEL) 8.6    | Podman 4.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
   | Ubuntu 18.04           | Docker CE               |                    |
   | Ubuntu 20.04           | Docker CE               |                    |
 
@@ -81,7 +81,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 - **Install Docker CE or Podman**: Depending on the version of Linux you use for your Tunnel server, you'll need to install one of the following on the Linux server:
   - Docker version 19.03 CE or later
-  - Podman version 3.0
+  - Podman version 3.0 or 4.0 depending on the version of RHEL
 
   Microsoft Tunnel requires Docker or Podman on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
 
