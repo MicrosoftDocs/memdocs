@@ -119,7 +119,7 @@ Email notifications appear in the user's inbox. Push notifications appear in the
 9. Optionally, assign a scope tag, like `US-NC IT Team` or `JohnGlenn_ITDepartment`, to limit management of the notification to specific IT groups. Then select **Next**.  
 10. In **Assignments**, select the users or groups receiving the notification. 
 
-    Optionally, you can apply assignment filters. For more information about using filters on enrollment policies like this one, see [Supported filter properties](../enrollment/create-device-platform-restrictions#supported-filter-properties.md). Assignment filters are available for Windows and Apple enrollments.     
+    Optionally, you can apply assignment filters. For more information about using filters on enrollment policies like this one, see [Supported filter properties](../enrollment/create-device-platform-restrictions.md#supported-filter-properties). Assignment filters are available for Windows and Apple enrollments.     
 11. Select **Next**. 
 12. In **Review + create**, review the notification details, and then select **Create**.  
 
