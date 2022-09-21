@@ -28,6 +28,14 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### Autopilot deployment report shows “failure” status on a successful deployment
+
+The Autopilot deployment report (preview) will show a failed status for any device that experiences an initial deployment failure. Subsequent attempts of deploying using the try again or continue to desktop option, it will not update the deployment state in the report. If the user resets the device, it will show as a new deployment row in the report with the previous attempt remaining as failed.
+
+### Autopilot deployment report not showing deployed device
+
+Autopilot deployments that take longer than one hour may display an incomplete deployment status in the deployment report. If the device successfully enrolls but does not complete provisioning after more than one hour, the device status may not be updated in the report.
+
 ### Autopilot profile not being applied when assigned 
 
 In Windows 10 April and some May update releases, there is an issue where the Autopilot profile may fail to apply to the device and the hardware hash may not be harvested. As a result, any settings made in the profile may not be configured for the user such as device renaming. To resolve this issue, the May (KB5015020) cumulative update needs to be applied to the device.
@@ -64,7 +72,7 @@ When a device is registered in Autopilot and no profile is assigned, it will tak
 
 ### White screen during HAADJ deployment
 
-There's a UI bug on Autopilot HAADJ deployments where the Enrollment Status page is displayed as a white screen. This issue is limited to the UI and shouldn't affect the deployment process.
+There's a UI bug on Autopilot HAADJ deployments where the Enrollment Status page is displayed as a white screen. This issue is limited to the UI and shouldn't affect the deployment process. [Resolved]
 
 ### Virtual machine failing at "Preparing your device for mobile management"
 
