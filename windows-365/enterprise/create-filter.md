@@ -75,9 +75,9 @@ In these steps, you’ll use the Enrollment Profile Name and Device Model device
 
 ## Create a filter for all Cloud PCs with a specific configuration
 
-For the example below, we use 2 vCPU and 4GB RAM as the configuration. Anywhere you see "2vCPU/4GB" replace it with the desired configuration. You can also target a specific Cloud PC size by adding the OS storage as part of the configuration. You can follow the below steps and create a filter for any of the configurations that make up Cloud PC sizes.
+For the example below, we use 2 vCPU and 4 GB RAM as the configuration. Anywhere you see "2vCPU/4GB" replace it with the desired configuration. You can also target a specific Cloud PC size by adding the OS storage as part of the configuration. You can follow the below steps and create a filter for any of the configurations that make up Cloud PC sizes.
 
-In these steps, you will use the Model device property to create the filter.
+In these steps, you'll use the Model device property to create the filter.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant Administration** > **Filters**.
 2. Select **Create**, then enter the following:
@@ -93,9 +93,9 @@ In these steps, you will use the Model device property to create the filter.
 6. On the **Scope tags** page, select any desired scope tags to apply, then select **Next**.
 7. On the **Review + create** page, select **Create**.
 
-Once you have created the filter, you can use the filter in the assignment page in [supported policies](/mem/intune/fundamentals/filters-supported-workloads).
+Once you've created the filter, you can use the filter in the assignment page in [supported policies](/mem/intune/fundamentals/filters-supported-workloads).
 
-For additional information on using filters in Intune, see the following how-to guides:
+For more information on using filters in Intune, see the following how-to guides:
 
 - [Create a filter (Intune how-to guide)](/mem/intune/fundamentals/filters)
 - [Supported filter properties](/mem/intune/fundamentals/filters-device-properties)

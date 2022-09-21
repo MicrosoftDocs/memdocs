@@ -107,7 +107,7 @@ Connection problems may be caused by settings delivered by group policies. To te
 
 ### On-premises Group Policy Objects (GPO) may affect a Cloud PC's provisioning or behavior
 
-Settings delivered by group policies may cause connection problems. To test this, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
+Settings delivered by group policies may cause connection problems. To test this problem, you can move the Cloud PC to a separate OU that's blocked from receiving group policies.
 
 ## Next steps
 

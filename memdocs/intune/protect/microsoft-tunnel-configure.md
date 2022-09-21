@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 08/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -49,17 +49,23 @@ Use of a *Server configuration* lets you create a configuration a single time an
      - If the client IP address range conflicts with the destination, it will loopback and fail to communicate with the corporate network.
      - You can select any client IP address range you want to use if it doesn't conflict with your corporate network IP address ranges.
 
+   - **Server port**: Enter the port that the server listens to for connections.
+
    - **DNS servers**: These servers are used when a DNS request comes from a device that's connected to Tunnel Gateway.
 
    - **DNS suffix search** *(optional)*: This domain is provided to clients as the default domain when they connect to Tunnel Gateway.
 
-   - **Split tunneling** *(optional)*: Include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for *255.255.0.0* or *192.168.0.0/16*.
+   - **Disable UDP Connections** *(optional)*: When selected, clients only connect to the VPN server using TCP connections. Because the standalone tunnel client requires use of UDP, only select the checkbox to disable UDP connections after you’ve configured your devices to use Microsoft Defender for Endpoint as the tunnel client app.
 
-     Split tunneling supports a total of 500 rules between both include and exclude rules. For example, if you configure 300 include rules, you can only have 200 exclude rules.
+4. Also on the **Settings** tab, configure *Split tunneling rules*, which are optional.
 
-   - **Server port**: Enter the port that the server listens to for connections.
+   You can include or exclude addresses. Included addresses are routed to Tunnel Gateway. Excluded addresses aren’t routed to Tunnel Gateway. For example, you might configure an include rule for *255.255.0.0* or *192.168.0.0/16*.
 
-4. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
+   Use the following options to include or exclude addresses:
+   - **IP ranges to include**
+   - **IP ranges to exclude**
+
+5. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
 
 ## Create a Site
 
@@ -166,11 +172,21 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 
    2. After Microsoft Tunnel Gateway registers with Intune, the script gets information about your Sites and Server configurations from Intune. The script then prompts you to enter the GUID of the tunnel Site you want this server to join. The script presents you with a list of your available sites.
 
-   3. After you select a Site, setup pulls the Server configuration for that Site from Intune and applies it to your new server to complete the Microsoft Tunnel installation.
+   3. After you select a Site, setup pulls the Server configuration for that Site from Intune, and applies it to your new server to complete the Microsoft Tunnel installation.
 
 7. After the installation script finishes, you can navigate in Microsoft Endpoint Manager admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
 
 8. If you’re using RHEL 8.4 or 8.5, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
+
+### Configure a break and inspect proxy
+
+After installing the Microsoft Tunnel server, you can then configure Microsoft Tunnel to work with a break and inspect proxy server that uses a self-signed certificate. To be successful, Microsoft Tunnel must be able to locate and access the certificate from the Proxy server.
+
+Configuration requires the following steps:
+
+1. The proxy server certificate must be in *PEM* format and saved to a file with a `.crt` extension.
+2. Copy the *.crt* file to the following location on the Linux host: `/etc/mstunnel/ca-trust`
+3. Re-run the installation script.
 
 ## Deploy the Microsoft Tunnel client app
 
@@ -191,12 +207,12 @@ To use the Microsoft Tunnel, devices need access to a Microsoft Tunnel client ap
   - **Microsoft Tunnel** client app - For iOS/iPadOS, download the **Microsoft Tunnel** client app from the Apple **App Store**. See Add iOS store apps to Microsoft Intune.
   
   > [!Important]
-  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
+  > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.
+  >
   > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
   > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
   >
   > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
-
 
 For more information on deploying apps with Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
@@ -218,14 +234,14 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
 
 - **iOS/iPadOS**:
 
-
-  - **Microsoft Tunnel ** – Use this connection type with Microsoft Defender for Endpoint as the tunnel client app.
+  - **Microsoft Tunnel** – Use this connection type with Microsoft Defender for Endpoint as the tunnel client app.
 
   - **Microsoft Tunnel (standalone client) (preview)** – Use this connection type when you use the standalone Microsoft Tunnel client app. This connection type doesn’t support Microsoft Defender for Endpoint as the client Tunnel app.
 
     > [!Important]
-    > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.  
-    > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.  
+    > **Plan for change**. On April 29, 2022 both the *Microsoft Tunnel* connection type and *Microsoft Defender for Endpoint* as the tunnel client app became generally available. With this general availability, the use of the *Microsoft Tunnel (standalone client)(preview)* connection type and the standalone tunnel client app are deprecated and soon will drop from support.
+    >
+    > - On July 29, 2022, the  standalone tunnel client app will no longer be available for download. Only the generally available version of *Microsoft Defender for Endpoint* will be available as the tunnel client app.
     > - On August 1, 2022, the *Microsoft Tunnel (standalone client) (preview)* connection type will cease to connect to Microsoft Tunnel.  
     >
     > To avoid a disruption in service for Microsoft Tunnel, plan to migrate your use of the deprecated tunnel client app and connection type to those that are now generally available.
@@ -253,7 +269,7 @@ After the Microsoft Tunnel installs and devices install the Microsoft Tunnel cli
      - Apps that are assigned in the per-app VPN profile send app traffic to the tunnel.
      - On Android, launching an app won't launch the per-app VPN. However, when the VPN has *Always-on VPN* set to *Enable*, the VPN will already be connected and app traffic will use the active VPN. If the VPN isn't set to be *Always-on*, the user must manually start the VPN before it can be used.
      - If you're using the Defender for Endpoint app to connect to Tunnel, have web protection enabled, and are using per-app VPN, web protection will only apply to the apps in the per-app VPN list. On devices with a work profile, in this scenario we recommend adding all web browsers in the work profile to the per-app VPN list to ensure all work profile web traffic is protected.
-     - To enable a per-app VPN, select **Add** and then browse to custom or public apps you’ve imported to Intune.
+     - To enable a per-app VPN, select **Add** and then browse to the custom or public apps you’ve imported to Intune.
 
    - **Always-on VPN**:  
      - For *Always-on VPN*, select *Enable* to set the VPN client to automatically connect and reconnect to the VPN. Always-on VPN connections stay connected. If *Per-app VPN* is set to *Enable*, only the traffic from apps you select go through the tunnel.
@@ -359,7 +375,9 @@ For more information about *mst-cli*, see [Reference for Microsoft Tunnel](../pr
 
 ## Uninstall the Microsoft Tunnel
 
-To uninstall the product, run **./mst-cli uninstall** from the Linux server as root.
+To uninstall the product, run **./mst-cli uninstall** from the Linux server as root. 
+
+After the product is uninstalled, delete the corresponding server record in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Microsoft Tunnel Gateway** > **Servers**.
 
 ## Next steps
 

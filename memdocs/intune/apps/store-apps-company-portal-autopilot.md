@@ -1,9 +1,9 @@
 ---
 # required metadata
 
-title: Add and assign the Windows 10 Company Portal app for Autopilot provisioned devices
+title: Add and assign the Windows 10 Company Portal app for Intune managed devices
 titleSuffix: Microsoft Intune
-description: Add and assign the Windows 10 Company Portal app to Intune for Autopilot provisioned devices.
+description: Add and assign the Windows 10 Company Portal app to Intune managed devices.
 keywords:
 author: Erikre
 ms.author: erikre
@@ -32,15 +32,15 @@ ms.collection:
 - highpri
 ---
 
-# Add and assign the Windows 10 Company Portal app for Autopilot provisioned devices
+# Add and assign the Windows 10 Company Portal app for Intune managed devices
 
-To manage devices and install apps, your users can use the Company Portal app. You can assign the Windows 10 Company Portal app directly from Intune. 
+To manage devices and install apps, your users can optionally use the Company Portal app. You can assign the Windows 10 Company Portal app directly from Intune. 
 
 ## Prerequisites
 
-For Windows 10 Autopilot provisioned devices, it is recommended that you associate your Microsoft Store for Business account with Intune. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](windows-store-for-business.md).
+You can choose to install the **Company Portal (Offline)** app using the steps below. The Company Portal app will be installed in device context when assigned to the Autopilot group and will be installed on the device before the user logs in. Offline apps are updated using Intune, whereas online apps are updated by the store. Use offline apps when you need to install and maintain a specific app version.
 
-You can choose to install the **Company Portal (Offline)** app using the steps below. The Company Portal app will be installed in device context when assigned to the Autopilot group and will be installed on the device before the user logs in. Offline apps are updated using Intune, whereas online apps are updated by the store. When synced from the Microsoft Store for Business and deployed as a Microsoft Store app, the Company Portal (Offline) updates will occur automatically to any required assignments. If you need to maintain a specific version of the Company Portal app, refer to [Manually add the Windows 10 company portal app](./store-apps-company-portal-app.md) for details.
+For Windows 10 Autopilot provisioned devices, it is recommended that you associate your Microsoft Store for Business account with Intune. For more information, see [How to manage volume purchased apps from the Microsoft Store for Business with Microsoft Intune](windows-store-for-business.md).
 
 ## Configure the store settings to show the offline app
 
@@ -71,7 +71,7 @@ You can choose to install the **Company Portal (Offline)** app using the steps b
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with your admin account.
 2. Select **Apps** > **Windows**.
 3. From the list of Windows apps, select **Company Portal (Offline)**.
-4. To [Assign](apps-deploy.md) the Company Portal app as a required app to your selected autopilot device groups, select **Properties** > **Edit** (next to **Assignments**) > **Add Group** (below **Required**) and then select a device group to assign the app. 
+4. To [Assign](apps-deploy.md) the Company Portal app as a required app to your selected device groups, select **Properties** > **Edit** (next to **Assignments**) > **Add Group** (below **Required**) and then select a device group to assign the app. 
 5. As this is an *Offline* app, be sure to change the **License type** to **Device licensing** before selecting **Review + save**. To set the **License type**, click **User** on the row of the group you added (under the **License type** column). 
 6. Select **Device licensing** > **OK** > **Review + save**.
 

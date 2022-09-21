@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 08/02/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -90,9 +90,11 @@ You'll only see this sign-in option if your organization allows certificate-base
 4. Tap **Continue** to use the certificate.  
 5. Wait while the app verifies your certificate. When done, you can access the features in the app and your organization's resources.  
 
-### Sign in via another device    
-
+### Sign in via another device  
 If you normally use a smart card to access work resources, follow the steps in this section to sign in to Company Portal.  
+
+>[!IMPORTANT]
+> Before you use this sign-in option, [join your work device to your work or school network](https://support.microsoft.com/account-billing/join-your-work-device-to-your-work-or-school-network-ef4d6adb-5095-4e51-829e-5457430f3973).  
 
 1. Open Company Portal on the device you'll be using to access your work resources.  
 
@@ -111,6 +113,15 @@ If you normally use a smart card to access work resources, follow the steps in t
 4. Select  __Continue__ to allow the Company Portal to sign in on your work device.   
 
 5. Once the screen says that you're signed in to Company Portal, you can close the browser and switch to your work device.  
+
+The following articles describe the enrollment instructions for smart card-enabled devices, and includes the sign-in-from-another-device method. 
+
+  * [Enroll with Entrust for iOS](enroll-ios-device-entrust-datacard.md) 
+  * [Enroll with Entrust for Android](enroll-android-device-entrust-datacard.md)
+  * [Enroll with Intercede for iOS](enroll-ios-device-intercede.md)  
+  * [Enroll with Intercede for Android](enroll-android-device-intercede.md)  
+  * [Enroll with DISA Purebred for iOS](enroll-ios-device-disa-purebred.md)
+  * [Enroll with DISA Purebred for Android](enroll-android-device-disa-purebred.md)
 
 ## App permissions for Android   
 The permissions described in this section apply to the Company Portal app for Android and devices running Android, versions 8.0 and later.    

@@ -34,9 +34,6 @@ ms.collection:
 
 By using the **Retire** or **Wipe** actions, you can remove devices from Intune that are no longer needed, being repurposed, or missing. Users can also issue a remote command from the Intune Company Portal to devices that are enrolled in Intune.
 
-> [!NOTE]
-> Before you remove a user from Azure Active Directory (Azure AD), use the **Wipe** or **Retire** actions for all devices that are associated with that user. If you remove users that have managed devices from Azure AD, Intune can no longer wipe or retire those devices.
-
 ## Wipe
 
 The **Wipe** action restores a device to its factory default settings. The user data is kept if you choose the **Retain enrollment state and user account** checkbox. Otherwise, all data, apps, and settings will be removed.
@@ -53,7 +50,7 @@ The **Retain enrollment state and user account** option is only available for Wi
 
 MDM policies will be reapplied the next time the device connects to Intune.
 
-A wipe is useful for resetting a device before you give the device to a new user, or when the device has been lost or stolen. Be careful about selecting **Wipe**. Data on the device cannot be recovered. This level of device wipe follows a standard file delete process, rather than a low-level delete.
+A wipe is useful for resetting a device before you give the device to a new user, or when the device has been lost or stolen. Be careful about selecting **Wipe**. Data on the device cannot be recovered. The method that "Wipe" uses to remove data is simple file deletion, and the drive is BitLocker decrypted as part of this process. 
 
 ### Wiping a device
 
@@ -173,7 +170,7 @@ Device owners can manually un-enroll their devices as explained in the following
 
 ## Delete devices from the Intune portal
 
-If you want to remove devices from the Intune portal, you can delete them from the specific device pane. In order to remove company data, the recommended steps are to first issue a wipe or retire action and then delete the device.
+If you want to remove devices from the Intune portal, you can delete them from the specific device pane. The next time the device checks in, any company data on it will be removed as Intune also retires a device when deleting it from the console.
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose the devices you want to delete > **Delete**.

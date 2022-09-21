@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/05/2022
+ms.date: 09/02/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -27,6 +27,7 @@ ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
  
 # Use remote help with Intune and Microsoft Endpoint Manager
@@ -69,7 +70,7 @@ The Remote help app supports the following capabilities:
 ## Prerequisites
 
 - [Intune subscription](../fundamentals/licenses.md)
-- Remote help add-on license for all IT support workers (helpers) and users (https://aka.ms/PremiumAddOnsDocs)
+- Remote help add-on license for all IT support workers (helpers) and users (sharers) (https://aka.ms/PremiumAddOnsDocs)
 - Windows 10/11
 - The remote help app for Windows. See [Install and update remote help](#install-and-update-remote-help)
 
@@ -138,7 +139,7 @@ For users that opted out of automatic updates, when an update to remote help is 
 
 Download the latest version of remote help direct from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).
 
-The most recent version of remote help is **4.0.1.7**
+The most recent version of remote help is **4.0.1.13**
 
 ### Deploy remote help as a Win32 app
 
@@ -191,10 +192,13 @@ To configure your tenant to support remote help, review and complete the followi
 
 2. On the **Settings** tab:
    1. Set **Enable remote help** to **Enabled** to allow the use of remote help. By default, this setting is *Enabled*.
-   2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting *Disabled*.
+   2. Set **Allow remote help to unenrolled devices** to **Enabled** if you want to allow this option. By default, this setting is *Disabled*.
 
 3. Select **Save**.
 
+> [!NOTE] 
+> When you purchase licenses or start a trial, it could take a while to become active (anywhere between 30 minutes to 8 hours). 
+> When you try to create a Remote help session you may continue to see messages indicating that Remote help isn't enabled for the tenant even if you enabled Remote help in the tenant after activation. 
 ### Task 2 – Configure permissions for remote help
 
 The following Intune RBAC permissions manage the use of the remote help app. Set each to *Yes* to grant the permission:
@@ -239,9 +243,6 @@ The use of remote help depends on whether you're requesting help or providing he
 
 To request help, you must reach out to your support staff to request assistance. You can reach out through a call, chat, email, and so on, and you'll be the sharer during the session. Be prepared to enter a security code that you'll get from the individual who is assisting you. You'll enter the code in your remote help instance to establish a connection to the helper's instance of remote help.
 
-> [!TIP]  
-> To avoid an unexpected loss of work, plan to save your active work before a remote help session ends. This is because when a remote help session ends where a helper that has the *Elevation* permission set to **Yes** also uses *Full control*, you are signed out of your device.
-
 As a sharer, when you’ve requested help and both you and the helper are ready to start:
 
 1. Start the remote help app on the device and sign in to authenticate to your organization. The device might not need to be enrolled to Intune if your administrator allows you to get help on unenrolled devices.
@@ -258,10 +259,7 @@ As a sharer, when you’ve requested help and both you and the helper are ready 
 
 5. After the issues are resolved, or at any time during the session, both the sharer and helper can end the session. To end the session, select **Leave** in the upper right corner of the remote help app. Upon the end of a session, the sharer is automatically signed out of their device as a security precaution to ensure all connections between the devices close.
 
-### Provide help  
-
-> [!TIP]  
-> Plan to have the sharer save any active work before a remote help session ends to avoid an unexpected loss of work. This is because when a remote help session ends where a helper that has the *Elevation* permission set to Yes also uses *Full control*, the sharer is signed out of their device to ensure any elevated permissions are cleared from the device.
+### Provide help
 
 As a helper, after receiving a request from a user who wants assistance by using the remote help app:
 
@@ -313,10 +311,13 @@ Remote help logs data during installation and during remote help sessions, which
 
 ## Installation details
 
-Remote help will create the following firewall inbound rules:
-- Quick Assist Firewall Exception
-- Quick Assist RDP Firewall Exception
-- Remote help Firewall Exception
+Automatic firewall rule creation from the Remote help installer has been removed. However, if needed, System administrators can create firewall rules.
+
+Depending on the environment that Remote help is utilized in, it may be necessary to create firewall rules to allow Remote help through the Windows Defender Firewall. In situations where this is necessary, these are the Remote help executables that should be allowed through the firewall:
+
+ - C:\Program Files\Remote help\RemoteHelp.exe
+ - C:\Program Files\Remote help\RHService.exe
+ - C:\Program Files\Remote help\RemoteHelpRDP.exe
 
 ## Languages Supported
 
@@ -347,6 +348,32 @@ Remote help is supported in the following languages:
 - When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the remote help session won’t be established. 
 If a conditional access policy is configured as described above and if the devices participating in the remote assistance session are unenrolled or non-compliant, the tenant will not be able to use remote help. 
 
+## What's New for Remote help 
+
+Updates for Remote help are released periodically. When we update Remote help, you can read about the changes here.
+### September 6, 2022
+
+Version: 4.0.1.13 - Changes in this release:
+
+With Remote help 4.0.1.13 fixes were introduced to address an issue that prevented people from having multiple sessions open at the same time. The fixes also addressed an issue where the app was launching without focus, and prevented keyboard navigation and screen readers from working on launch.
+
+For more information, go to [Use remote help with Intune and Microsoft Endpoint Manager](../remote-actions/remote-help.md)
+
+### July 26, 2022
+
+Version: 4.0.1.12 - Changes in this release: 
+
+Various fixes were introduced to address the 'Try again later' message that appears when not authenticated. The fixes also include an improved auto-update capability.
+
+### May 11, 2022
+
+Version 4.0.1.7 - Webview 2 release 
+
+### April 5, 2022
+
+Version 4.0.0.0 - GA release
+
 ## Next steps
 
 [Get support in Microsoft Endpoint Manager admin center](../../get-support.md)
+  

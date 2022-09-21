@@ -64,7 +64,7 @@ Windows 365 failed to join the Cloud PC to your on-premises Active Directory (AD
 - Make sure that the domain join user has sufficient permissions to perform the domain join.
 - Make sure that the vNet and subnet can reach a domain controller correctly.
 
-JsonADDomainExtension is the Azure function used to perform this domain join. Make sure that everything required for this to be successful is in place.
+JsonADDomainExtension is the Azure function used to perform this domain join. Make sure that everything required for this domain join to be successful is in place.
 
 **Suggested test**: Attach an Azure VM to the configured vNet and perform a domain join using the credentials provided.
 
@@ -120,7 +120,7 @@ When providing a subnet to the ANC, make sure that there are more than sufficien
 
 Every Cloud PC provisioning process uses one of the IP addresses provided in the range.
 
-If a provisioning fails, it will be retried a total of three times. Each time, a new vNic and IP address will be allocated. These IP addresses will be released in a matter of hours, but this can cause issues if the address space is too narrow.
+If a provisioning fails, it will be retried a total of three times. Each time, a new vNic and IP address will be allocated. These IP addresses will be released in a matter of hours, but this allocation can cause issues if the address space is too narrow.
 
 **Suggested test**: Check the vNet for available IP addresses, and make sure that there are more than enough IPs available for the retry process to succeed.
 

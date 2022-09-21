@@ -39,18 +39,19 @@ To help you protect your organization's data, Windows 365 Enterprise and Busines
 This storage layer encryption provides the following benefits:
 
 - When persisting data to the cloud, data at rest on your Microsoft-hosted Cloud PC's disk is automatically encrypted.
-- Windows 365 Cloud PC disks are encrypted transparently using 256-bit Advanced Encryption Standard (AES) encryption, a modern block cipher, and is FIPS 140-2 compliant. The encryption at this layer doesn't impact Cloud PC performance.
+- Windows 365 Cloud PC disks are encrypted transparently using 256-bit Advanced Encryption Standard (AES) encryption, a modern block cipher, and is FIPS 140-2 compliant. The encryption at this layer doesn't affect Cloud PC performance.
 - The encryption is applied to every Cloud PC in every region at no extra cost.
 
 The following Windows 365 Enterprise and Business objects are automatically encrypted-at-rest with platform-managed keys:
-  - Disks
-  - Snapshots
-  - Images
+
+- Disks
+- Snapshots
+- Images
 
 Windows 365 as a service treats all data stored on Windows 365 disks as customer content. For more information, see [Privacy and personal data in Windows 365](./privacy-personal-data.md).
 
 >[!NOTE]
->BitLocker is not supported as an encryption option for Windows 365 Cloud PCs. For additional information, see [using Windows 10 virtual machines in Intune](https://go.microsoft.com/fwlink/?linkid=2188944).
+>BitLocker is not supported as an encryption option for Windows 365 Cloud PCs. For more information, see [using Windows 10 virtual machines in Intune](https://go.microsoft.com/fwlink/?linkid=2188944).
 
 ## Encryption of data in transit
 

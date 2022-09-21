@@ -33,6 +33,9 @@ ms.collection:
 
 # Create and deploy Windows Information Protection (WIP) policy with Intune
 
+[!INCLUDE [wip-deprecation](../../includes/wip-deprecation.md)]
+<!-- MAXADO-6010051 -->
+
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 You can use Windows Information Protection (WIP) policies with Windows 10 apps to protect apps without device enrollment.

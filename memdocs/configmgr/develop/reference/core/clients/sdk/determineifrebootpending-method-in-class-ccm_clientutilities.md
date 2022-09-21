@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how DetermineIfRebootPending is simplified from Managed Object Format code and defines the method.
 ---
 
 # DetermineIfRebootPending Method in Class CCM_ClientUtilities

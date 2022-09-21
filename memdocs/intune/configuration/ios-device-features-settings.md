@@ -29,6 +29,9 @@ ms.collection: M365-identity-device-management
 
 # iOS and iPadOS device settings to use common iOS/iPadOS features in Intune
 
+> [!NOTE]
+> [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+
 Intune includes some built-in settings to allow iOS/iPadOS users to use different Apple features on their devices. For example, you can control AirPrint printers, add apps and folders to the dock and home screen pages, show app notifications, show asset tag details on the lock screen, use single sign-on authentication, and use certificate authentication.
 
 Use these features to control iOS/iPadOS devices as part of your mobile device management (MDM) solution.

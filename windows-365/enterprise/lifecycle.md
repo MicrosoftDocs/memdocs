@@ -78,7 +78,7 @@ You can also use [Proactive Remediation](/mem/analytics/proactive-remediations) 
 
 ## Deprovision
 
-There are a couple ways to securely remove a user’s access to their Cloud PC. If you remove the user’s license or targeted provisioning policy, their Cloud PC is moved into a seven-day grace period. This grace period allows for errors and reinstatement without impact to the user. To block access immediately, disable the user account in on-premises Active Directory and revoke the user’s refresh tokens in Microsoft Azure Active Directory.
+There are a couple ways to securely remove a user’s access to their Cloud PC. If you remove the user’s license or targeted provisioning policy, their Cloud PC is moved into a seven-day grace period. This grace period allows for errors and reinstatement without affecting the user. To block access immediately, disable the user account in on-premises Active Directory and revoke the user’s refresh tokens in Microsoft Azure Active Directory.
 
 After the grace period expires, Windows 365 deprovisions the Cloud PC and its storage completely. The Cloud PCs are encrypted using [server-side encryption in Azure Disk Storage](/azure/virtual-machines/disk-encryption) (platform-managed keys) so that devices are deprovisioned securely.
 

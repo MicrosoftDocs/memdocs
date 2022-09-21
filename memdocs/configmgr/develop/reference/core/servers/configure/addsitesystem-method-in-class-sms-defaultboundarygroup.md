@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how the AddSiteSystem class method adds one or more site system servers to a default boundary group.
 
 
 ---

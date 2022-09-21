@@ -10,6 +10,7 @@ author: mestew
 ms.author: mstewart
 manager: dougeby
 ms.localizationpriority: medium
+ROBOTS: NOINDEX
 ---
 
 # What's new in version 2010 of Configuration Manager current branch
@@ -367,7 +368,7 @@ For more information, see the [Content library cleanup tool](../hierarchy/conten
 
 <!--7774961-->
 
-You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet to get the latest information for the Configuration Manager PowerShell module. This content is the same as what's published on docs.microsoft.com for the [ConfigurationManager module](/powershell/module/configurationmanager/).
+You can now use the [Update-Help](/powershell/module/microsoft.powershell.core/update-help) cmdlet to get the latest information for the Configuration Manager PowerShell module. This content is the same as what's published for the [ConfigurationManager module](/powershell/module/configurationmanager/).
 
 For more information, see [Configuration Manager PowerShell cmdlets: Update help](/powershell/sccm/overview#update-help).
 

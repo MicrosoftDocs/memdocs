@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 06/10/2022
+ms.date: 08/15/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -129,9 +129,7 @@ The policies in level 1 enforce a reasonable data access level while minimizing 
 | Simple PIN  | Allow  | iOS/iPadOS, Android  |   |
 | Select Minimum PIN length  | 4  | iOS/iPadOS, Android  |   |
 | Touch ID instead of PIN for access (iOS 8+/iPadOS)  | Allow  | iOS/iPadOS  |   |
-| Fingerprint instead of PIN for access (Android 9.0+)  | Allow  | Android  |   |
-| Override biometrics with PIN after timeout  | Require  | iOS/iPadOS  |   |
-| Override fingerprint with PIN after timeout  | Require  | Android  |   |
+| Override biometrics with PIN after timeout  | Require  | iOS/iPadOS, Android  |   |
 | Timeout (minutes of activity)  | 720  | iOS/iPadOS, Android  |   |
 | Face ID instead of PIN for access (iOS 11+/iPadOS)  | Allow  | iOS/iPadOS  |   |
 | Biometric instead of PIN for access  | Allow  | iOS/iPadOS, Android  |   |
@@ -215,6 +213,8 @@ The policy settings enforced in level 3 include all the policy settings recommen
 |       Select   Minimum PIN length  |          6  |          iOS/iPadOS,   Android  |
 |       PIN reset   after number of days  |          Yes  |          iOS/iPadOS,   Android  |
 |       Number of   days  |          365  |          iOS/iPadOS,   Android  |
+|       Class 3 Biometrics (Android 9.0+)​   |          Require  |          Android  |
+|       Override Biometrics with PIN after biometric updates   |          Require  |          Android  |
 
 #### Conditional launch
 

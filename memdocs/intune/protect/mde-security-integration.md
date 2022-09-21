@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/12/2022
+ms.date: 07/28/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -64,6 +64,14 @@ When you select a policy, you'll see information about the device check-in statu
 
 ## Frequently asked questions and considerations
 
+### Device check-in frequency
+
+Devices managed by this capability check in with Microsoft Endpoint Manager every 90 minutes to update policy.
+
+### Devices protected by Tamper Protection
+
+If a device has Tamper Protection turned on, it will not be possible to edit its settings without turning Tamper Protection off. When editing settings for a device with Tamper Protection turned on, Microsoft Endpoint Manager presents a *Failed* setting status with an error code of `-2147024891`.
+
 ### Assignment Filters and Security Management for Microsoft Defender for Endpoint
 
 Assignment filters aren't supported for devices communicating through the Microsoft Defender for Endpoint channel. While assignment filters can be added to a policy that could be targeted at these devices, the device will ignore assignment filters. For assignment filter support, the device must be enrolled in to Microsoft Endpoint Manager.
@@ -92,13 +100,6 @@ The following security settings are pending deprecation. The Security Management
 ### Managing security configurations on domain controllers
 
 Currently, devices are not supported to complete a Hybrid Join to Azure Active Directory. Since an Azure Active Directory trust is required, domain controllers aren't currently supported. We're looking at ways to add this support.
-
-<!-- Removing until GA behavior is known>
-### Non-persistent VDI environments
-
-Due to the potential effect on Azure Active Directory environments with respect to device lifecycle and service quota, we advise against testing the current installation files and builds shared in this public preview in a non-persistent VDI environment.
--->
-
 ### Server Core installation
 
 Due to the platform limitations of Server core installations, these are not supported by Security Management for Microsoft Defender for Endpoint.

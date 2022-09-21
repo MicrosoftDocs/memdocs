@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 07/13/2022
+ms.date: 09/14/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -59,6 +59,9 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!--***********************************************-->
 ## Device management
 
+### Admins can restore a Cloud PC to a previous state for a user<!--40784300-->
+Windows 365 Business admins will be able to restore a Cloud PC to a previous state on behalf of the user. [For more information about restoring Cloud PCs, see](/restore-overview).
+
 ### New setting to easily enroll Business Cloud PCs in Microsoft Endpoint Manager<!--40009143-->
 
 Admins will be able to set a toggle that automatically enrolls new Cloud PCs in to Microsoft Endpoint Manager.
@@ -68,11 +71,7 @@ Admins will be able to set a toggle that automatically enrolls new Cloud PCs in 
 The resize action will support Cloud PCs that are Azure Active Directory joined.
 
 <!-- ***********************************************-->
-## Device provisioning
-
-### Provision Cloud PCs with Secure Boot<!--38012584-->
-
-You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality. North American regions will receive this feature within the next few months.
+<!--## Device provisioning-->
 
 <!--***********************************************-->
 <!--
@@ -81,6 +80,15 @@ You'll be able to create Cloud PCs that use [Secure boot](/windows-hardware/desi
 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
+
+### System alerts and email notifications (preview)<!--40932899-->
+You'll be able to set up system alerts and automated emails to be notified when certain events, warnings, or errors occur in the Windows 365 service. A subset of critical Cloud PC issues will be sent automatically to admins. In addition, you’ll be able to define alert rules, such as target audience (devices, user groups, tenants), thresholds, frequency, and notification channels.
+
+### Cloud PC utilization report<!--40636545-->
+A new report will be available for Cloud PCs. The **Cloud PC utilization** report will show how many hours users have been connected to their Cloud PCs. Information for individual Cloud PCs and aggregated data will be shown.
+
+### Cloud PC wit connection quality issues report<!--40636545-->
+A new report will be available for Cloud PCs. The **Cloud PCs with connection quality issues** report will show information for round-trip time, available bandwidth, and remoting sign-in time. Information for individual Cloud PCs and aggregated data will be shown.
 
 ### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
 
@@ -94,8 +102,8 @@ End users will be able to manually run connectivity checks on their Cloud PCs fr
 
 The device history report will have new information to help you evaluate Cloud PC performance:
 
-- Top 5 processes impacting CPU spike times
-- Top 5 processes impacting RAM spike times
+- Top five processes impacting CPU spike times
+- Top five processes impacting RAM spike times
 
 <!-- ***********************************************-->
 <!-- ## Provisioning -->

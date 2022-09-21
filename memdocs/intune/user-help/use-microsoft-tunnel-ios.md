@@ -36,13 +36,6 @@ Microsoft Tunnel uses Microsoft Defender for Endpoint as The Microsoft Tunnel cl
 
 The Microsoft Tunnel client app helps you securely and privately connect to your corporate network over a VPN. If your organization requires you to use the app, they already configured a VPN connection for your work account. To connect to the VPN, simply install the app and sign in with your work account. 
 
-## Install Microsoft Tunnel  
-
-Tunnel is available in the App Store. Before heading there, check your device to see if it's already installed.   
-
-If you can’t find Tunnel in the App Store, contact your IT support person for help.  
-
-
 ## Connect and disconnect VPN      
 
 1. Open Microsoft Tunnel. 

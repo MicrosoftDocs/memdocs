@@ -104,6 +104,8 @@ To manage fallback to the default site boundary group:
 
 - Open the properties of a custom boundary group. Change the values for the explicit link to a default site boundary group. When you set a new time in minutes for fallback or block fallback, that change affects only the link you're configuring. Configuration of the explicit link overrides the settings on the **Default Behavior** tab of a default site boundary group.
 
+
+
 ## Site assignment
 
 You can configure each boundary group with an assigned site for clients.
@@ -124,6 +126,48 @@ For more information on how to configure site assignment, see the following proc
 
 - [Configure site assignment and select site system servers](boundary-group-procedures.md#configure-site-assignment-and-select-site-system-servers)
 - [Configure a fallback site for automatic site assignment](boundary-group-procedures.md#configure-a-fallback-site-for-automatic-site-assignment)
+
+
+## Default site boundary group behavior supports cloud source selection
+<!--10674394-->
+
+*(Added in version 2207)*
+
+You can add options via PowerShell to include and prefer cloud management gateway (CMG) management points for the default site boundary group. When a site is set up, there's a default site boundary group created for each site and all the clients are by default mapped to it until they're assigned to some custom boundary group. 
+
+Currently on the admin console, you can add references to default site boundary group, but the added references don't have any effect when the client requests for management point list. Starting with technical preview version 2206, you can use PowerShell cmdlets to include and prefer cloud-based sources for clients in the default site boundary group. This action is currently only for the management point role.  
+
+> [!NOTE]
+> You can't currently configure this behavior from the Configuration Manager console. For more information on configuring this behavior with PowerShell, see the cmdlet details in the following section. 
+
+### Set-CMDefaultBoundaryGroup 
+
+Use this cmdlet to modify the properties of a default site boundary group. You can set the options to include and prefer the cloud-based sources for the clients in default site boundary group. 
+
+#### Syntax
+
+```powershell
+Set-CMDefaultBoundaryGroup [-IncludeCloudBasedSources <Boolean>] [-PreferCloudBasedSources <Boolean>] 
+```
+
+#### Examples
+
+```powershell
+Set-CMDefaultBoundaryGroup -IncludeCloudBasedSources $true -PreferCloudBasedSources $true 
+
+Set-CMDefaultBoundaryGroup -IncludeCloudBasedSources $true 
+
+Set-CMDefaultBoundaryGroup -IncludeCloudBasedSources $true -PreferCloudBasedSources $false 
+```
+
+#### Parameters
+
+- **IncludeCloudBasedSources**: Used to specify whether admin wants to include the cloud-based sources in the management point list for the clients in default site boundary group. 
+
+- **PreferCloudBasedSources**: Used to specify whether admin wants to prefer the cloud-based sources in the management point list for the clients in default site boundary group. On selecting this option, cloud-based servers will be given preference by the clients. 
+
+> [!NOTE]
+> You can only set this option to true if the parameter IncludeCloudBasedSources is set to true or was already set to true by admin. 
 
 ## Next steps
 

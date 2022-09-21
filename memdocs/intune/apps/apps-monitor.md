@@ -89,7 +89,7 @@ A device status list is shown when you select **Device install status** in the *
 | **Last check-in**    | The date of the device's last sync with Intune.                                                                                                                                                                                                                  |
 
 > [!NOTE]
-> Even if the App is targetted to device context and into a device group, the user name will always be reported. You may refer to the corresponded [API Call](/graph/api/intune-apps-mobileappinstallstatus-get?view=graph-rest-beta). Additionally, the system context may appear as "No user".
+> Even if the App is targetted to device context and into a device group, the user name will always be reported. You may refer to the corresponded [API Call](/graph/api/intune-apps-mobileappinstallstatus-get). Additionally, the system context may appear as "No user".
 
 ### User install status
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 09/20/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,114 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of September 19, 2022
+
+<!-- ***********************************************-->
+### Device provisioning
+
+#### Windows 365 Cloud PC support for Windows 11 Enterprise version 22H2<!--41359336-->
+
+New gallery images are now available that include support for Windows 11 version 22H2. The following gallery images can be used for newly provisioned Cloud PCs:
+
+- Win11 22H2 + M365 Apps
+- Win11 22H2 + Optimizations
+- Win10 22H2 + M365 Apps
+- Win10 22H2 + Optimizations
+
+<!-- ########################## -->
+## Week of August 29, 2022 (Service release 2208)
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### New health check: Localization language package readiness<!--41089729  -->
+
+The **Azure network connection** tab has a new health check: **Localization language package readiness**. This health check verifies that the operating system and Microsoft 365 language packages can install.  It also makes sure that the localization package download link is reachable. For more information, see [Azure network connection health checks](health-checks.md).
+
+#### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
+
+You can now review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues. To see the checks, select **Devices** > **Windows 365** > **Azure network connections** > select a connection in the list > **Overview**. This feature is rolling out to all customers over the next few weeks.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Provisioning
+
+#### New supported Azure regions: East Asia, Korea Central, Norway East, Switzerland North<!--37678838-->
+
+New Azure regions are now supported for Windows 365 Cloud PC provisioning: East Asia, Korea Central, Norway East, and Switzerland North.
+
+For more information about supported Azure regions, see [Supported Azure regions for Cloud PC provisioning](requirements.md#supported-azure-regions-for-cloud-pc-provisioning).
+
+<!-- ########################## -->
+## Week of August 22, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Documentation
+
+#### New documentation article: Restrict Office 365 services to Cloud PCs
+
+We’ve published a new help documentation article. For more information, see [Restrict Office 365 services to Cloud PCs](restrict-office-365-cloud-pcs.md).
+
+<!-- ########################## -->
+## Week of August 15, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### App management
+
+#### Language and region configuration now also applies to Microsoft 365 Apps<!--40673170-->
+
+Provisioning policies configured for language now also apply to Microsoft 365 Apps. When a user first signs in, their Microsoft 365 Apps will use the configured language. For more information, see [Provide a localized Windows experience](provide-localized-windows-experience.md).
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Monitor and troubleshoot
+
+#### Remoting connection report in Endpoint Analytics now generally available<!--38310774 -->
+The remoting connection report in Endpoint Analytics has moved out of preview and into general availability. For more information, see [Remoting connection report](report-remoting-connection.md).
+
+#### Resource performance report in Endpoint Analytics now generally available<!-- 40028465 -->
+
+The resource performance report in Endpoint Analytics has moved out of preview and into general availability. For more information, see [Resource performance report](report-resource-performance.md).
+
+<!-- ########################## -->
+## Week of August 8, 2022
+
+### Documentation
+
+#### New documentation article: Windows 365 security
+
+We’ve published a new help documentation article. For more information, see [Windows 365 security](security.md).
+
+<!-- ########################## -->
+## Week of July 25, 2022
+
+### Resize action support for more Cloud PCs<!--40263425  -->
+
+The resize action now supports Cloud PCs that are Azure Active Directory joined.
+
+<!-- ########################## -->
+## Week of July 18, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Apps
+
+#### Cloud PC Outlook mail sync setting<!--40423390-->
+
+For newly provisioned and reprovisioned Cloud PCs, you can now set the Outlook mail sync setting to 6 or 12 months.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Windows 11 optimized image now available for Windows 365 Cloud PCs<!--39890525 -->
+
+You can now choose the **Windows 11 Enterprise + OS Optimizations** image when creating a new provisioning policy. This feature is rolling out to all customers over the next few weeks.
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device provisioning
+
+#### Provision Cloud PCs with Secure Boot<!--38012584-->
+
+Support for creating Cloud PCs that use [Secure boot](/windows-hardware/design/device-experiences/oem-secure-boot) functionality is now available in Europe, APAC, and North American regions. Existing Cloud PCs won't have secure boot automatically enabled.
 
 <!-- ########################## -->
 ## Week of July 4, 2022 (Service release 2206)
@@ -181,7 +289,7 @@ The [windows365.microsoft.com](https://windows365.microsoft.com/) web client has
 
 #### Upload a custom image without an Azure network connection<!--8341750 -->
 
-Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription which provides the image.
+Customers using Azure Active Directory (Azure AD) Join without bringing an Azure virtual network can now upload custom images directly on the image tab in Microsoft Endpoint Manager. Previously, to upload an image, customers needed to create an ANC for the destination Azure subscription that provides the image.
 
 #### Cloud PC name appended to the network interface name<!--38793957-->
 
@@ -301,7 +409,7 @@ We've added information to the help documentation about the update cycle for Win
 
 #### Cloud PCs in grace period count towards active Cloud PC license usage<!-- 37017463-->
 
-Cloud PCs that are in grace period now count towards your active Cloud PC license usage. This makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
+Cloud PCs that are in grace period now count towards your active Cloud PC license usage. This policy makes sure that your organization’s active Cloud PC allocation matches the total available licenses in your tenant.
 
 For more information about grace period, see [Device management overview](device-management-overview.md) and [End grace period](end-grace-period.md).
 
@@ -371,7 +479,7 @@ Custom Windows 365 role-based access control (RBAC) roles are now available in t
 
 #### Resize support for preview and trial licenses<!--36228235-->
 
-If you have a combination of paid and free trial licenses, the Resize remote action will use your paid licenses first. When those run out, it will use your trial licenses. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
+If you have a combination of paid and free trial licenses, the Resize remote action will use your paid licenses first. When those licenses run out, it will use your trial licenses. For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device provisioning

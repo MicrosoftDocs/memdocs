@@ -1,23 +1,18 @@
 ---
 title: Configure Autopilot profiles
 description: Learn how to configure device profiles for Windows Autopilot deployment.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
 ms.technology: windows
 ms.prod: w10
-ms.mktglfcycl: deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 11/05/2021
+ms.date: 07/18/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
-ms.topic: article
+ms.topic: how-to
 ---
 
 # Configure Autopilot profiles
@@ -29,6 +24,14 @@ ms.topic: article
 - Windows Holographic, version 2004 or later
 
 After you have [created a device group](enrollment-autopilot.md), you can apply a Windows Autopilot deployment profile to each device in the group.  Deployment profiles determine the deployment mode, and customize the OOBE for your end users.
+
+You can create Autopilot profiles through:
+
+1. [Microsoft Admin Center](https://admin.microsoft.com/)
+2. [Intune console](https://endpoint.microsoft.com/)
+3. [Intune graph](/graph/api/resources/intune-graph-overview)
+
+For Intune managed devices, pre-provisioning, self-deploying, and co-management profiles can only be created and assigned in Intune.
 
 ## Create an Autopilot deployment profile
 
@@ -47,7 +50,7 @@ Autopilot deployment profiles are used to configure the Autopilot devices. You c
 4. Select **Next**.
 5. On the **Out-of-box experience (OOBE)** page, for **Deployment mode**, choose one of these two options:
     - **User-driven**: Devices with this profile are associated with the user enrolling the device. User credentials are required to enroll the device.
-    - **Self-deploying (preview)**: (requires Windows 10, version 1809 or later) Devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to enroll the device. When a device has no user associated with it, user-based compliance policies don't apply to it. When using self-deploying mode, only compliance policies targeting the device will be applied.
+    - **Self-deploying (preview)**: (requires Windows 10, version 1903 or later) Devices with this profile aren't associated with the user enrolling the device. User credentials aren't required to enroll the device. When a device has no user associated with it, user-based compliance policies don't apply to it. When using self-deploying mode, only compliance policies targeting the device will be applied.
 
     ![Screenshot of OOBE page.](images/create-profile-out-of-box.png)
 

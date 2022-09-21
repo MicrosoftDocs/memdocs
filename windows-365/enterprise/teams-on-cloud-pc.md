@@ -42,7 +42,7 @@ Using Microsoft Teams on a Cloud PC is different from using it on a physical PC.
 
 ## Teams optimizations
 
-The [Windows 10/11 images](device-images.md#gallery-images) in the gallery are pre-configured with required optimization components. When you install and use Microsoft Teams in your cloud PC, you get an optimized experience. These optimization components enable peer-to-peer audio and video calls from your physical endpoint to the other person's endpoint. This creates the same experience as you would have on a physical endpoint running Microsoft Teams.
+The [Windows 10/11 images](device-images.md#gallery-images) in the gallery are pre-configured with required optimization components. When you install and use Microsoft Teams in your cloud PC, you get an optimized experience. These optimization components enable peer-to-peer audio and video calls from your physical endpoint to the other person's endpoint. This situation creates the same experience as you would have on a physical endpoint running Microsoft Teams.
 
 Some of the key benefits of the optimizations are:
 
@@ -55,7 +55,7 @@ Some of the key benefits of the optimizations are:
 Media optimization for Microsoft Teams is only available for the Windows and macOS endpoints. Media optimizations require:
 
 - Remote Desktop client for Windows version 1.2.1026.0 or later (ideally the latest version).
-- Remote Desktop client for macOS version 10.7.7 or later ([preview](..\public-preview.md)). If you upgrade from versions earlier than 10.7.7, you'll also need to go to Microsoft **Remote Desktop Preferences** > **General** and turn on Teams optimizations. If you're using the client for the first time and already have version 10.7.7 or later installed, you won't need to do this. In that case, Teams optimizations are turned on by default.
+- Remote Desktop client for macOS version 10.7.7 or later ([preview](..\public-preview.md)). If you upgrade from versions earlier than 10.7.7, you'll also need to go to Microsoft **Remote Desktop Preferences** > **General** and turn on Teams optimizations. If you're using the client for the first time and already have version 10.7.7 or later installed, you won't need to turn that on. In that case, Teams optimizations are turned on by default.
 
 > [!NOTE]
 > Microsoft Teams installs during the first sign in to the Cloud PC. Installation can take a couple of minutes. Make sure to restart Teams to activate the AV optimizations that redirect audio and video. You can also sign out and in again to your Cloud PC to gain the same result.

@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Create a dynamic device group containing all Cloud PCs from a specific provisioning policy
 
-You can also apply the same set of policies to all Cloud PCs based on the same image and located in the same region. You can do this by creating a dynamic device group that contains all Cloud PCs provisioned from a specific provisioning policy.
+You can also apply the same set of policies to all Cloud PCs based on the same image and located in the same region. You can apply policies like this by creating a dynamic device group that contains all Cloud PCs provisioned from a specific provisioning policy.
 
 For the example below, we use "UX Engineering" as the name of the provisioning policy. Anywhere you see "UX Engineering" replace it with the name of your provisioning policy.
 
@@ -39,7 +39,7 @@ In these steps, you’ll use the Enrollment Profile Name and Device Model device
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Groups** > **New Group**.
 ![Screenshot of delete policy](./media/create-dynamic-device-group-all-cloudpcs/create-group.png)
 2. Select the **New Group** page, choose **Security** for **Group type**.
-3. Enter the following:
+3. Enter the following information:
     1. **Group name** = "All UX Engineering Cloud PC devices"
     2. **Group description** = "A dynamic device group containing all UX Engineering Cloud PC devices."
 4. For **Membership type**, choose **Dynamic Device**.
@@ -48,7 +48,7 @@ In these steps, you’ll use the Enrollment Profile Name and Device Model device
     1. **Property** = "enrollmentProfileName"
     2. **Operator** = "Equals"
     3. **Value** = "UX Engineering"
-7. If you used the same enrollment profile name for Windows Autopilot, Apple Device Enrollment, or Android Enterprise enrollment, then you may want to filter on Cloud PCs as well. To do so, select **+ Add expression** to create a second query. Enter the following:
+7. If you used the same enrollment profile name for Windows Autopilot, Apple Device Enrollment, or Android Enterprise enrollment, then you may want to filter on Cloud PCs as well. To do so, select **+ Add expression** to create a second query. Enter the following information:
     - **And/Or** = "And"
     - **Property** = "deviceModel"
     - **Operator** = "Contains"

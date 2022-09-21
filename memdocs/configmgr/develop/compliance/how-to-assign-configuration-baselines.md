@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how to assign a configuration baseline to a collection by creating an assignment instance, populated with a minimum set of required values, and saving.
 
 
 ---

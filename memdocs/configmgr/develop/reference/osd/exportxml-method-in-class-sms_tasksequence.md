@@ -11,6 +11,7 @@ ms.author: aaroncz
 manager: dougeby
 ms.localizationpriority: null
 ms.collection: openauth
+description: Learn how the ExportXml Method exports task sequence XML in a format that is suitable to use on another site.
 
 
 ---

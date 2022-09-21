@@ -30,7 +30,9 @@ ms.collection: M365-identity-device-management
 # macOS device settings to configure and use kernel and system extensions in Intune
 
 > [!NOTE]
-> macOS kernel extensions are being replaced with system extensions. For more information, see [Support Tip: Using system extensions instead of kernel extensions for macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
+> 
+> - [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
+> - macOS kernel extensions are being replaced with system extensions. For more information, see [Support Tip: Using system extensions instead of kernel extensions for macOS Catalina 10.15 in Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-using-system-extensions-instead-of-kernel-extensions/ba-p/1191413).
 
 This article describes the different kernel and system extension settings you can control on macOS devices. As part of your mobile device management (MDM) solution, use these settings to add and manage extensions on your devices.
 

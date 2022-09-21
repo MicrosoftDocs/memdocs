@@ -32,10 +32,10 @@ ms.collection: M365-identity-device-management
 
 A Cloud PC user's identity defines which access management services manage that user and Cloud PC. This identity defines:
 
-- What types of Cloud PCs the user has access to.
-- What types of non-Cloud PC resources the user has access to.
+- The types of Cloud PCs the user has access to.
+- The types of non-Cloud PC resources the user has access to.
 
-A device can also have an identity which is determined by its join type to Azure Active Directory (Azure AD). For a device, the join type defines:
+A device can also have an identity that is determined by its join type to Azure Active Directory (Azure AD). For a device, the join type defines:
 
 - If the device requires line of sight to a domain controller.
 - How the device is managed.
@@ -68,7 +68,7 @@ Below is a table showing key capabilities or requirements based on the selected 
 |Azure virtual network with line of sight to the domain controller|Required|Optional|
 |User identity type supported for login|Hybrid users only|Hybrid users or cloud-only users|
 |Policy management|Group Policy Objects (GPO) or Intune MDM|Intune MDM only|
-|Windows Hello for Business login supported|Yes, and the connecting device must have line of sight to the domain controller through the direct network or a VPN|Yes|
+|Windows Hello for Business sign-in supported|Yes, and the connecting device must have line of sight to the domain controller through the direct network or a VPN|Yes|
 
 ## Authentication
 

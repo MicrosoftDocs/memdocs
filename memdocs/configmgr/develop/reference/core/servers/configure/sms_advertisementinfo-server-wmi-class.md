@@ -1,5 +1,6 @@
 ---
 title: "SMS_AdvertisementInfo Class"
+description: Learn how to use the SMS_AdvertisementInfo class in Configuration Manager to provide information about a specific advertisement.
 titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.prod: "configuration-manager"

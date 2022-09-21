@@ -28,6 +28,7 @@ ms.custom:
 ms.collection:
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Microsoft Endpoint Manager overview
@@ -117,4 +118,4 @@ In most scenarios, Microsoft 365 may be the best option, as it gives you Endpoin
 
 [Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](/intune/fundamentals/tutorial-walkthrough-endpoint-manager)
 
-[What is Microsoft 365? learn module](/learn/modules/what-is-m365/index)
+[What is Microsoft 365?](/training/modules/what-is-m365/index)

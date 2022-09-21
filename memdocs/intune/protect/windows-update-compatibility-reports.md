@@ -26,6 +26,7 @@ search.appverid: MET150
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # App and driver compatibility reports for Windows updates
@@ -95,6 +96,9 @@ To use this report:
    - Click on **Select Scope (Tags)** and choose which devices should be in scope for this report.
    - Optionally select **Ownership** and **Readiness status** to refine the report.
    - Click **Generate report**. This process can take several minutes. You'll be notified when report generation is complete.
+
+> [!IMPORTANT]
+> The data in this report is made available on-demand only. You must configure the Target OS and Scope (Tags) settings, and then click **Generate report** for data to appear in the report.
 
 [![Screen shot of the Windows feature update device readiness report.](./media/windows-update-compatibility-reports/device-readiness-report.png)](./media/windows-update-compatibility-reports/device-readiness-report.png#lightbox)
 

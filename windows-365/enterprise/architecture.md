@@ -88,7 +88,7 @@ When configuring Cloud PCs to use Azure AD Join, Azure AD provides:
 - The domain join mechanism for the Cloud PCs.
 - User authentication for RDP connections.
 
-For more information on how the identity services impact the deployment, management, and usage of Cloud PCs, see [identity and authentication](identity-authentication.md).
+For more information on how the identity services affect the deployment, management, and usage of Cloud PCs, see [identity and authentication](identity-authentication.md).
 
 ### Azure AD
 
@@ -137,9 +137,9 @@ The following diagrams show the logical architecture for an Azure AD Join config
 
 All Cloud PC connectivity is provided by the virtual network interface card. The "hosted on behalf of" architecture means that the Cloud PCs exist in the subscription owned by Microsoft. Therefore, Microsoft incurs the costs for running and managing this infrastructure.
 
-Windows 365 manages the capacity and in-region availability in the Windows 365 subscriptions. Windows 365 determines the size and type of VM based on the [license](cloud-pc-size-recommendations.md) you [assign to the user](assign-licenses.md). Windows 365 determines the Azure region to host your Cloud PCs in based on the virtual network you select when [creating an on-prem network connection](create-azure-network-connection.md).
+Windows 365 manages the capacity and in-region availability in the Windows 365 subscriptions. Windows 365 determines the size and type of VM based on the [license](cloud-pc-size-recommendations.md) you [assign to the user](assign-licenses.md). Windows 365 determines the Azure region to host your Cloud PCs in based on the virtual network you select when [creating an on-premises network connection](create-azure-network-connection.md).
 
-Windows 365 aligns with Microsoft 365 data protection policies and provisions. Customer data within Microsoft's enterprise cloud services is protected by various technologies and processes:
+Windows 365 aligns with Microsoft 365 data protection policies. Customer data within Microsoft's enterprise cloud services is protected by various technologies and processes:
 
 - Various forms of encryption.
 - Isolated logically from other tenants.

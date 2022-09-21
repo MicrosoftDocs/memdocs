@@ -45,7 +45,7 @@ A device enrollment manager can use the following methods to enroll devices in I
 
 - [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows devices bulk enrollment](windows-bulk-enroll.md)
-- DEM-initated via Company Portal enrollment   
+- DEM-initiated via Company Portal enrollment   
 - DEM-initiated via Azure AD-join  
 
 > [!TIP]

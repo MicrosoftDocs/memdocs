@@ -18,6 +18,9 @@ ms.localizationpriority: medium
 
 Your organization may have a number of standalone clients that you cannot manage or protect with Microsoft Endpoint Configuration Manager. Without any endpoint protection in place, these standalone clients are vulnerable to potential malware attacks. To protect such standalone clients, you can manually configure them with Endpoint Protection, as described in this topic.
 
+> [!NOTE]
+> If you install the endpoint protection client on a device that's not managed by Configuration Manager, a [Management License (ML)](https://www.microsoft.com/licensing/product-licensing/client-access-license) may be required for the device.
+
 To configure Endpoint Protection on a standalone client manually:
 
 - [Create an antimalware policy for the standalone client](#create-an-antimalware-policy-for-the-standalone-client)

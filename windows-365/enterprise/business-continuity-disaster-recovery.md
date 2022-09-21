@@ -37,7 +37,7 @@ Windows 365 provides highly resilient user cloud pcs, including:
 - Automated in-zone disaster recovery for compute.
 - Recovery Point Objective (RPO) of ~0.
 
-Windows 365 is part of Microsoft 365 and seamlessly uses Windows and Microsoft 365 solutions, features, and tools. This helps to make sure that user data and user context are portable and resilient. Important optional Windows and Microsoft 365 solutions include:
+Windows 365 is part of Microsoft 365 and seamlessly uses Windows and Microsoft 365 solutions, features, and tools. This integration helps to make sure that user data and user context are portable and resilient. Important optional Windows and Microsoft 365 solutions include:
 
 - OneDrive
 - OneDrive for Business
@@ -64,7 +64,7 @@ Azure automatically identifies compute failures and automatically moves the user
 
 If a user is actively using a session, there may be a slight disruption to the user while the service is restored. After restoration, the user must restore the connection by signing into their Cloud PC session again. If an in-zone failure occurs while the user is signed in and actively using their Cloud PC session, the user will lose access until the system is restored.
 
-Storage systems are separate from compute functions, and use storage redundancy to help deliver Windows 365 disaster recovery with an RPO of ~0. Automated Windows 365 disaster recovery is based on an up-to-date copy of the OS disk, with an RPO of ~0. Therefore, the process of recovery starts automatically because there is no need to accept the data loss associated with a past point-in-time recovery.
+Storage systems are separate from compute functions, and use storage redundancy to help deliver Windows 365 disaster recovery with an RPO of ~0. Automated Windows 365 disaster recovery is based on an up-to-date copy of the OS disk, with an RPO of ~0. Therefore, the process of recovery starts automatically because there's no need to accept the data loss associated with a past point-in-time recovery.
 
 ## OneDrive, OneDrive for Business and OneDrive with Known Folder Move
 
