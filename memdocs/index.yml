@@ -28,12 +28,16 @@ highlightedContent:
     - title: Secure your remote workforce
       itemType: get-started
       url: /enterprise-mobility-security/remote-work/
+    - title: The latest in tech skilling for Microsoft Endpoint Manager
+      itemType: overview
+      url: https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/the-latest-in-tech-skilling-for-microsoft-endpoint-manager/ba-p/3291643
     - title: Training on Microsoft Learn
       itemType: get-started
       url: https://docs.microsoft.com/search/?terms=intune&category=Learn
     - title: How to use the docs for Microsoft Intune technologies
       itemType: overview
-      url: ./use-docs.md      
+      url: ./use-docs.md
+
 # productDirectory section (optional)
 productDirectory:
   title: Get started with the Microsoft Intune product family
@@ -55,7 +59,7 @@ productDirectory:
       url: ./autopilot/index.yml
     # Card
     - title: Windows Autopatch docs
-      imageSrc: ./media/autopatch.png
+      imageSrc: ./media/autopatch.svg
       summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
       url: /windows/deployment/windows-autopatch/index.yml
     # Card
