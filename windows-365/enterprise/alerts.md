@@ -56,8 +56,7 @@ You can customize and create alert rules to suit your needs:
 
 ???
 
-
 <!-- ########################## -->
 ## Next steps
 
-For more information on grace periods, see [Device management overview for Cloud PCs](device-management-overview.md).
+For more troubleshooting information, see [Troubleshooting](troubleshooting.md).
