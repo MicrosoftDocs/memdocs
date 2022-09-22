@@ -45,7 +45,7 @@ If there is a problem with the Cloud PC's connection, the status will show as **
 
 ## Connectivity errors
 
-When a connectivity checks fails, you'll see one of the following errors. Review the status pane to see more details. You can use the **Troubleshoot this connection** button to troubleshoot.
+When a connectivity check fails, you'll see one of the following errors. Review the status pane to see more details. You can use the **Troubleshoot this connection** button to troubleshoot.
 
 - **Azure Resource Availability Check**: Azure resources are not up and running.
 - **DomainJoin**: This Cloud PC isn't joined to a domain.
@@ -72,14 +72,10 @@ Possible different view of this data:
 | VM Power Status Check | This Cloud PC is powered off and an issue is preventing it from turning back on. |  If this persists, contact Microsoft support. |
 
 
-
-
 -->
 If any of these issues persist, contact Microsoft support.
 
 Connectivity errors can occur even when all connectivity health checks have successfully passed.
-
-
 
 ## User connectivity history report
 
