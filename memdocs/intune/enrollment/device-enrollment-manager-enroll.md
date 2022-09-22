@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 07/12/2022
+ms.date: 09/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -43,10 +43,10 @@ This article describes the limits and specifications of enrollment manager and h
 
 A device enrollment manager can use the following methods to enroll devices in Intune:    
 
-- [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
-- [Windows devices bulk enrollment](windows-bulk-enroll.md)
-- DEM-initiated via Company Portal enrollment   
-- DEM-initiated via Azure AD-join  
+- [Enrollment with Windows Autopilot](tutorial-use-autopilot-enroll-devices.md) 
+- [Bulk enrollment using a provisioning package](windows-bulk-enroll.md)
+- DEM-initiated enrollment via Company Portal enrollment   
+- DEM-initiated enrollment via Azure AD-join  
 
 > [!TIP]
 > To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](./enrollment-method-capab.md).  
@@ -81,8 +81,11 @@ You can enroll up to 10 personally owned devices with work profiles.
 
 The following types of Android Enterprise devices can't be set up via DEM:    
 
-  * Corporate-owned with a work profile
-  * Fully managed  
+  * Corporate-owned devices with a work profile
+  * Fully managed devices  
+
+### App assignments  
+There are no users associated with a DEM-enrolled device, so apps can't be deployed as **Available**. 
 
 ### Apple Automated Device Enrollment  
 DEM isn't compatible with Apple Automated Device Enrollment (ADE).   
@@ -92,6 +95,9 @@ DEM-enrolled devices can install VPP apps if they have Apple VPP device licenses
 
 ### Azure AD  
 Applying an Azure AD device restriction to a DEM account will prevent you from reaching the 1,000 device limit that the DEM account can enroll.  
+
+### Certificates  
+You must use device-level certificates to manage Wi-Fi and email connections.  
 
 ### Conditional access  
 Conditional access is only supported with DEM on devices running:  
@@ -108,4 +114,5 @@ Only the local device appears in the Company Portal app or Company Portal websit
 ### Number of accounts  
 There's a limit of 150 DEM accounts in Microsoft Intune.  
 
-
+### VPN profiles  
+User-based VPN profiles do not work with DEM-enrolled devices.  
