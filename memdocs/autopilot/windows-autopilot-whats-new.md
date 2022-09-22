@@ -17,6 +17,14 @@ ms.topic: article
 
 # Windows Autopilot: What's new
 
+## Autopilot automatic Device Diagnostics collection
+
+With Intune 2209 we will automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name.
+
+NOTE: Logs will automatically be captured on a failed machine and uploaded to the Intune service when they become available. If they are not available, please check if the machine is powered-on and has access to Internet. Diagnostics are available for 28 days and then removed. They are not available when diagnostics are disabled.
+
+For more information about the data collected, please see this article: https://docs.microsoft.com/en-us/mem/intune/remote-actions/collect-diagnostics
+
 ## Updates to Autopilot device targeting infrastructure
 
 With Intune 2208 we are updating the Autopilot infrastructure to ensure that the profiles and applications assigned are consistently ready when the devices are deployed. This change reduces the amount of data that needs to be synchronized per-Autopilot device and leverages device lifecycle change events to reduce the amount of time that it takes to recover from device resets for Azure AD and Hybrid Azure AD joined devices. No action is needed to enable this change, it will be rolling out to all clients starting August 2022.
