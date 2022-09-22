@@ -23,7 +23,7 @@ With Intune 2209 we will automatically capture diagnostics when devices experien
 
 NOTE: Logs will automatically be captured on a failed machine and uploaded to the Intune service when they become available. If they are not available, please check if the machine is powered-on and has access to Internet. Diagnostics are available for 28 days and then removed. They are not available when diagnostics are disabled.
 
-For more information about the data collected, please see this article: https://docs.microsoft.com/en-us/mem/intune/remote-actions/collect-diagnostics
+For more information about the data collected, please see this article: https://docs.microsoft.com/mem/intune/remote-actions/collect-diagnostics
 
 ## Updates to Autopilot device targeting infrastructure
 
