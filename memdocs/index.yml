@@ -42,7 +42,6 @@ highlightedContent:
 productDirectory:
   title: Get started with the Microsoft Intune product family
   items:
-<<<<<<< HEAD
     # Card
     - title: Microsoft Intune docs
       imageSrc: ./media/microsoft-intune.svg
