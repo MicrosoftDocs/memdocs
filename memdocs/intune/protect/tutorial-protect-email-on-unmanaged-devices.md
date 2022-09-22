@@ -21,7 +21,7 @@ ms.assetid:
 #ROBOTS:
 #audience:
 
-ms.reviewer:
+ms.reviewer: demerson
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
