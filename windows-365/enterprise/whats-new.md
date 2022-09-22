@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/23/2022
+ms.date: 09/22/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,28 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of September 19, 2022
+
+<!-- ***********************************************-->
+### Device management
+
+#### Downsize Cloud PCs (Preview)<!--41076858 -->
+
+You can now downsize a Cloud PC's RAM and specifications (except disk size). For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
+
+<!-- ***********************************************-->
+### Device provisioning
+
+#### Windows 365 Cloud PC support for Windows 11 Enterprise version 22H2<!--41359336-->
+
+New gallery images are now available that include support for Windows 11 version 22H2. The following gallery images can be used for newly provisioned Cloud PCs:
+
+- Win11 22H2 + M365 Apps
+- Win11 22H2 + Optimizations
+- Win10 22H2 + M365 Apps
+- Win10 22H2 + Optimizations
 
 <!-- ########################## -->
 ## Week of August 29, 2022 (Service release 2208)

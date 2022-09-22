@@ -120,7 +120,7 @@ The following list includes common features and services that might use machine 
   For more information, go to:
 
   - [Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune](../../intune/apps/intune-management-extension.md)
-  - [Introduction to OneDrive in Microsoft 365](/learn/modules/m365-onedrive-collaboration-use/)
+  - [Introduction to OneDrive in Microsoft 365](/training/modules/m365-onedrive-collaboration-use/)
 
 ## Group policy objects might not apply
 

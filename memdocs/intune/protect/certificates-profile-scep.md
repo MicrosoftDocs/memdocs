@@ -39,6 +39,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 >
 > For more information about this limitation, see [Trusted certificate profiles for Android device administrator](../protect/certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 
+ [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)] 
 > [!TIP]
 > *SCEP certificate* profiles are supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).
 
@@ -56,11 +57,26 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
      SCEP certificate profiles for the *Fully Managed, Dedicated, and Corporate-Owned Work Profile* profile have the following limitations:
 
-      1. Under Monitoring, certificate reporting isn't available for Device Owner SCEP certificate profiles.
+     1. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
+     1. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owner**. You can manage revocation through an external process or directly with the certification authority.
+     1. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration, VPN, and authentication. SCEP certificate profiles on Android Enterprise dedicated devices aren't supported for app authentication.
 
-      2. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for Device Owners. You can manage revocation through an external process or directly with the certification authority.
+     For **Android (AOSP)**, the following limitations apply:
 
-      3. For Android Enterprise dedicated devices, SCEP certificate profiles are supported for Wi-Fi network configuration, VPN, and authentication. SCEP certificate profiles on Android Enterprise dedicated devices aren't supported for app authentication.
+     1. Under Monitoring, certificate reporting isn't available for **Device Owner** SCEP certificate profiles.
+     1. You can't use Intune to revoke certificates that were provisioned by SCEP certificate profiles for **Device Owners**. You can manage revocation through an external process or directly with the certification authority.
+     1. SCEP certificate profiles are supported for Wi-Fi network configuration.  VPN configuration profile support is not available. A future update may include support for VPN configuration profiles.  
+     1. The following 3 variables are not available for use on Android (AOSP) SCEP certificate profiles.  Support for these variables will come in a future update.
+        - onPremisesSamAccountName
+        - OnPrem_Distinguished_Name
+        - Department
+
+     > [!NOTE]
+     > **Device Owner** is equivalent to Corporate Owned devices. The following are considered as Device Owner:
+     > - Android Enterprise - Fully Managed, Dedicated, and Corporate-Owned Work Profile
+     > - Android AOSP
+     >   - User-affinity
+     >   - User-less
 
 4. Select **Create**.
 
@@ -74,7 +90,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Certificate type**:
 
-     *(Applies to:  Android, Android Enterprise, iOS/iPadOS, macOS, Windows 8.1, and Windows 10/11)*
+     *(Applies to:  Android, Android Enterprise, Android (AOSP), iOS/iPadOS, macOS, Windows 8.1, and Windows 10/11)*
 
      Select a type depending on how you'll use the certificate profile:
 
@@ -258,9 +274,12 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
    - **Hash algorithm**:
 
-     *(Applies to Android, Android enterprise, Windows 8.1, and Windows 10/11)*
+     *(Applies to Android, Android (AOSP), Android enterprise, Windows 8.1, and Windows 10/11)*
 
      Select one of the available hash algorithm types to use with this certificate. Select the strongest level of security that the connecting devices support.
+     
+     NOTE: Android AOSP and Android Enterprise devices will select the strongest algorithm supported - SHA-1 will be ignored, and SHA-2 will be used instead. 
+
 
    - **Root Certificate**:
 

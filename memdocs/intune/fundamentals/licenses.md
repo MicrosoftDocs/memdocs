@@ -121,7 +121,7 @@ To confirm your Microsoft Intune license or trial, use the following steps:
 4. Confirm you are an **administrator** with **full** permissions to **all** Intune resources.
 
 > [!NOTE]
-> For more in-depth information about Microsoft Intune, see the learning module: [Set up Microsoft Intune](/learn/modules/set-up-microsoft-intune?azure-portal=true).
+> For more in-depth information about Microsoft Intune, see the learning module: [Set up Microsoft Intune](/training/modules/set-up-microsoft-intune?azure-portal=true).
 
 To check on your Azure AD Premium license, use the following steps:
 
