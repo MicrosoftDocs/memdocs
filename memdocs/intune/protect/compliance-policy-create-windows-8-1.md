@@ -29,6 +29,7 @@ ms.collection: M365-identity-device-management
 # Device Compliance settings for Windows 8.1 in Intune
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
+
 This article lists and describes the different compliance settings you can configure on Windows 8.1 devices in Intune. As part of your mobile device management (MDM) solution, use these settings to block simple passwords, set a minimum and maximum OS version, and more.
 
 This feature applies to:

@@ -46,6 +46,8 @@ items:
   - name: Require multi-factor authentication  
     href: multi-factor-authentication.md
     displayName: mfa; multifactor   
+  - name: Set up enrollment notifications 
+    href: enrollment-notifications.md 
   - name: Set up Windows enrollment
     items:
     - name: Windows enrollment methods

@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/14/2022
+ms.date: 09/19/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,7 +30,11 @@ ms.collection:
 ---
 
 
-# Managed work and school apps for Android 
+# Managed work and school apps for Android  
+
+> [!NOTE]
+> Managed apps are not currently supported on AOSP devices.  
+
 Intune-managed apps (*managed* apps for short) are work-approved apps managed by your organization, and configured to prevent intentional or unintentional data loss. When signed into a managed app with your work or school account, you may encounter your organization's requirements and restrictions for access. This article provides an overview of Intune-managed apps, how to get the ones you need for work or school, and their restrictions and requirements.   
 
 ## How do I know I'm using a managed app?

@@ -35,6 +35,8 @@ ms.collection:
 As an Intune administrator, you can deploy line-of-business (LOB) Universal apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices, including the Company Portal app. To deploy *.appx* apps to Windows 8.1 Desktop or Windows 10/11 Desktop & Mobile devices you can use code-signing certificate from a public certification authority already trusted by your Windows devices, or you can use your own certificate authority.
 
  > [!NOTE]
+ > Microsoft Intune will be ending support on October 21, 2022 for devices running Windows 8.1. Intune will no longer support Windows 8.1 sideloading.
+ > 
  > Windows 8.1 Desktop requires either an enterprise policy to enable sideloading or the use of Sideloading Keys (automatically enabled for domain-joined devices). For more information, see [Windows 8 sideloading](/archive/blogs/scd-odtsp/windows-8-sideloading-requirements-from-technet).
 
 ## Windows 10/11 sideloading
@@ -43,7 +45,7 @@ In Windows 10/11, sideloading is different than in earlier versions of Windows:
 
 - You can unlock a device for sideloading using an enterprise policy. Intune provides a device config policy called "Trusted app installation". Setting this to **allow** is all that is needed for devices that already trust the certificate used to sign the appx app.
 
-- Symantec Phone certificates and Sideloading License keys are not required. However if an on-premise certificate authority is not available then you may need to obtain a code signing certificate from a public certification authority. For more information, see [Introduction to Code Signing](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
+- Symantec Phone certificates and Sideloading License keys are not required. However if an on-premises certificate authority is not available then you may need to obtain a code signing certificate from a public certification authority. For more information, see [Introduction to Code Signing](/windows/desktop/SecCrypto/cryptography-tools#introduction-to-code-signing).
 
 ### Code sign your app
 
