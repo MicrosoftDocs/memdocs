@@ -4,8 +4,8 @@
 title: What is Microsoft Intune
 description: Microsoft Intune manages users and devices, has simplified app management and automated policy deployment, and integrates with mobile threat defense. It connects to Managed Google Play, Apple tokens and certificates, and Teamviewer for remote assistance. Can use MDM or MAM to protect data, configure devices, and simplify access to company resources.
 keywords: what is Intune, mobile endpoint managment, mobile application management
-author: dougeby
-ms.author: dougeby
+author: MandiOhlinger
+ms.author: mandia
 manager: dougeby
 ms.date: 09/22/2022
 ms.topic: overview
@@ -39,6 +39,9 @@ To help with these challenges and tasks, Microsoft Intune can help. Microsoft In
 Microsoft Intune is also a family of products and services that focus on endpoint management. This family includes Microsoft Intune, Configuration Manager, Windows Autopilot, and Endpoint Analytics. With these services, you get OS deployment, app and device policy management, and reporting & analytics.
 
 This article lists some features and benefits of Microsoft Intune.
+
+> [!TIP]
+> To get Intune, go to [Licenses available for Microsoft Intune](licenses.md) and [Intune 30-day trial](free-trial-sign-up.md).
 
 ## Key features and benefits
 
@@ -282,4 +285,3 @@ Specifically:
 - [Manage identities using Microsoft Intune](manage-identities.md)
 - [Manage devices using Microsoft Intune](manage-devices.md)
 - [Manage apps using Microsoft Intune](manage-apps.md)
-- [30-day trial of Intune](free-trial-sign-up.md).
