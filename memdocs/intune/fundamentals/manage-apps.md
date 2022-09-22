@@ -65,10 +65,10 @@ The app features in the Endpoint Manager admin center make it easier to deploy t
 
   For more specific information, go to:
 
-  - [How to use Intune in environments without Google Mobile Services](./apps/manage-without-gms.md)
-  - [Add Managed Google Play apps to Android Enterprise devices](./apps/apps-add-android-for-work.md)
+  - [How to use Intune in environments without Google Mobile Services](../apps/manage-without-gms.md)
+  - [Add Managed Google Play apps to Android Enterprise devices](../apps/apps-add-android-for-work.md)
   - [Manage private Android apps in Google Play](https://support.google.com/a/answer/2494992) (opens Google's web site)
-  - [Add built-in apps](./apps/apps-add-built-in.md)
+  - [Add built-in apps](../apps/apps-add-built-in.md)
 
 - For **iOS/iPadOS** devices, the Endpoint Manager admin center automatically connects to the public App Store and gives you the ability to search for apps. You can also sync with your Apple Business Manager or Apple School Manager account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the admin center.
 
@@ -83,10 +83,10 @@ The app features in the Endpoint Manager admin center make it easier to deploy t
 
   For more specific information, go to:
 
-  - [Add iOS store apps](./apps/store-apps-ios.md)
-  - [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](./apps/vpp-apps-ios.md)
-  - [Add iOS/iPadOS LOB apps](./apps/lob-apps-ios.md)
-  - [Add built-in apps](./apps/apps-add-built-in.md)
+  - [Add iOS store apps](../apps/store-apps-ios.md)
+  - [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)
+  - [Add iOS/iPadOS LOB apps](../apps/lob-apps-ios.md)
+  - [Add built-in apps](../apps/apps-add-built-in.md)
 
 - For **macOS** devices, the Endpoint Manager admin center has built-in features that include apps commonly deployed to macOS, including Microsoft Edge and Microsoft 365 apps. You can also sync with your Apple Business Manager or Apple School Manager account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the admin center.
 
@@ -102,9 +102,9 @@ The app features in the Endpoint Manager admin center make it easier to deploy t
 
   For more specific information, go to:
 
-  - [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](./apps/vpp-apps-ios.md)
-  - [Assign Microsoft 365 to macOS devices](./apps/apps-add-office365-macOS.md)
-  - [Add macOS LOB apps](./apps/lob-apps-macos.md)
+  - [Manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)
+  - [Assign Microsoft 365 to macOS devices](../apps/apps-add-office365-macOS.md)
+  - [Add macOS LOB apps](../apps/lob-apps-macos.md)
 
 - For **Windows** devices, the Endpoint Manager admin center automatically connects to the public Microsoft Store and gives you the ability to search for apps. You can also sync with your Microsoft Store for Business account to access your volume-licensed apps. When you sync, the apps you purchase (your licensed apps) are automatically shown in the admin center.
 
@@ -120,9 +120,9 @@ The app features in the Endpoint Manager admin center make it easier to deploy t
 
   For more specific information, go to:
 
-  - [Manage volume purchased apps from the Microsoft Store for Business](./apps/windows-store-for-business.md)
-  - [Add Microsoft 365 apps to Windows client devices](./apps/apps-add-office365.md)
-  - [Win32 app management](./apps/apps-win32-app-management.md)
+  - [Manage volume purchased apps from the Microsoft Store for Business](../apps/windows-store-for-business.md)
+  - [Add Microsoft 365 apps to Windows client devices](../apps/apps-add-office365.md)
+  - [Win32 app management](../apps/apps-win32-app-management.md)
 
   > [!NOTE]
   > [Microsoft Store for Business](/microsoft-store/microsoft-store-for-business-overview) is being retired. Starting with Windows 11, you have a new option for your private volume-licensed apps. For more information, go to [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11) and [Update to Microsoft Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077).
@@ -137,7 +137,7 @@ For example, in an app configuration policy, you can enter the app language, add
 
 Your app configuration policies can be deployed at any time. If you want to configure apps before users open them the first time, then you can include the app configuration policy when users enroll their devices. During enrollment, your app configuration policies are automatically deployed and the apps include your configuration settings.
 
-For more specific information, go to [App configuration policies in Intune](./apps/app-configuration-policies-overview.md).
+For more specific information, go to [App configuration policies in Intune](../apps/app-configuration-policies-overview.md).
 
 ## Protect apps on organization owned and personal devices
 
@@ -149,8 +149,8 @@ App protection policies also help separate personal data from organization data.
 
 For more specific information, go to:
 
-- [App protection policies overview and benefits](./apps/app-protection-policy.md)
-- [How to create and assign app protection policies](./apps/app-protection-policies.md)
+- [App protection policies overview and benefits](../apps/app-protection-policy.md)
+- [How to create and assign app protection policies](../apps/app-protection-policies.md)
 
 ## Update apps to the latest version
 
@@ -162,13 +162,13 @@ If users install apps themselves, including from a public app store, then these 
 
 For more information, go to:
 
-- [Add and update apps](./apps/apps-add.md)
+- [Add and update apps](../apps/apps-add.md)
 - [Windows Autopatch overview](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
-- [Wipe corporate data from Intune-managed apps](./apps/apps-selective-wipe.md)
-- [Selectively wipe data using app protection policy conditional launch actions](./apps/app-protection-policies-access-actions.md)
+- [Wipe corporate data from Intune-managed apps](../apps/apps-selective-wipe.md)
+- [Selectively wipe data using app protection policy conditional launch actions](../apps/app-protection-policies-access-actions.md)
 
 ## Next steps
 
 - [Manage identities](manage-identities.md)
 - [Manage devices](manage-devices.md)
-- [Frequently asked questions about application management and app protection](./apps/mam-faq.yml)
+- [Frequently asked questions about application management and app protection](../apps/mam-faq.yml)

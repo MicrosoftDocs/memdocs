@@ -3,7 +3,7 @@
 
 title: What is Microsoft Intune
 description: Microsoft Intune manages users and devices, has simplified app management and automated policy deployment, and integrates with mobile threat defense. It connects to Managed Google Play, Apple tokens and certificates, and Teamviewer for remote assistance. Can use MDM or MAM to protect data, configure devices, and simplify access to company resources.
-keywords: what is Intune, mobile endpoint managment, mobile application management
+keywords: what is Intune, mobile endpoint management, mobile application management
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
@@ -65,11 +65,11 @@ Some key features and benefits of Intune include:
 
 - End users can **use the self-service features** in the Company Portal app to reset a PIN/password, install apps, join groups, and more. You can customize the Company Portal app to help reduce support calls.
 
-  For more information, go to [Configure the Intune Company Portal apps, Company Portal website, and Intune app](./apps/company-portal-app.md).
+  For more information, go to [Configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
 - Intune **integrates with mobile threat defense** services, including Microsoft Defender for Endpoint and third party partner services. With these services, you can create policies that respond to threats, do real-time risk analysis, and automate remediation.
 
-  For more information, go to [Mobile Threat Defense integration with Intune](./protect/mobile-threat-defense.md).
+  For more information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
 - You **use a web-based admin center** that focuses on endpoint management. Admins can sign into the admin center from any device that has internet access.
 
@@ -79,33 +79,33 @@ Some key features and benefits of Intune include:
 
 Microsoft Intune integrates with other Microsoft products and services that focus on endpoint management, including:
 
-- **[Configuration Manager](../configmgr/core/understand/introduction.md)** for on-premises endpoint management and Windows Server, including deploying software updates and managing data centers
+- **[Configuration Manager](../../configmgr/core/understand/introduction.md)** for on-premises endpoint management and Windows Server, including deploying software updates and managing data centers
 
   You can use Intune and Configuration Manager together in a co-management scenario, use tenant attach, or use both. With these options, you get the benefits of the web-based admin center and can use other cloud-based features available in Intune.
 
   For more specific information, go to:
 
-  - [What is co-management](../configmgr/comanage/overview.md)
-  - [Frequently asked questions about co-management](../configmgr/comanage/faq.md)
-  - [How to enable Microsoft Endpoint Manager tenant attach](../configmgr/tenant-attach/device-sync-actions.md)
+  - [What is co-management](../../configmgr/comanage/overview.md)
+  - [Frequently asked questions about co-management](../../configmgr/comanage/faq.md)
+  - [How to enable Microsoft Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
 
-- **[Windows Autopilot](./autopilot/windows-autopilot.md)** for modern OS deployment and provisioning
+- **[Windows Autopilot](../../autopilot/windows-autopilot.md)** for modern OS deployment and provisioning
 
   With Windows Autopilot, you can provision new devices and send these devices directly to users from the OEM or device provider. For existing devices, you can reimage these devices to use Windows Autopilot and deploy the latest Windows version.
 
   For more specific information, go to:
 
-  - [Windows Autopilot overview](./autopilot/windows-autopilot.md)
-  - [Windows Autopilot deployment for existing devices](./autopilot/existing-devices.md)
+  - [Windows Autopilot overview](../../autopilot/windows-autopilot.md)
+  - [Windows Autopilot deployment for existing devices](../../autopilot/existing-devices.md)
 
-- **[Endpoint Analytics](./analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability
+- **[Endpoint Analytics](../../analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability
 
   You can use Endpoint Analytics to help identify policies or hardware issues that slow down devices. It also provides guidance that can help you proactively make improvements and help reduce help desk tickets.
 
   For more specific information, go to:
 
-  - [What is Endpoint analytics](./analytics/overview.md)
-  - [Enroll Intune devices into Endpoint analytics](./analytics/enroll-intune.md)
+  - [What is Endpoint analytics](../../analytics/overview.md)
+  - [Enroll Intune devices into Endpoint analytics](../../analytics/enroll-intune.md)
 
 - **[Microsoft 365](/deployoffice/about-microsoft-365-apps)** for end user productivity Office apps, including Outlook, Teams, Sharepoint, OneDrive, and more
 
@@ -113,7 +113,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
   For more specific information, go to:
 
-  - [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](./apps/apps-add-office365.md)
+  - [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](../apps/apps-add-office365.md)
   - [Microsoft 365 docs: Manage devices with Intune](/microsoft-365/solutions/manage-devices-with-intune-overview)
 
 - **[Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint)** to help enterprises prevent, detect, investigate, and respond to threats
@@ -122,8 +122,8 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
   For more specific information, go to:
 
-  - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](./protect/advanced-threat-protection.md)
-  - [Configure Microsoft Defender for Endpoint in Intune](./protect/advanced-threat-protection-configure.md)
+  - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md)
+  - [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md)
 
 - **[Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)** for automatic patching of Windows, Microsoft 365 apps for enterprise, Microsoft Edge, and Microsoft Teams
 
@@ -140,18 +140,18 @@ The Endpoint Manager admin center makes it easy to connect to different partner 
 
 - **Managed Google Play**: When you connect to your Managed Google Play account, admins can access your organization's private store for Android apps, and deploy these apps to your devices.
 
-  For more information, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](./apps/apps-add-android-for-work.md).
+  For more information, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
 - **Apple tokens and certificates**: When they're added, your iOS/iPadOS and macOS devices can enroll in Intune and receive policies from Intune. Admins can access your volume purchased iOS/iPad and macOS app licenses, and deploy these apps to your devices.
   For more information, go to:
 
-  - [Get an Apple MDM push certificate](./enrollment/apple-mdm-push-certificate-get.md)
-  - [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](./enrollment/device-enrollment-program-enroll-ios.md)
-  - [Manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](./apps/vpp-apps-ios.md)
+  - [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md)
+  - [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md)
+  - [Manage iOS and macOS apps purchased through Apple Business Manager with Microsoft Intune](../apps/vpp-apps-ios.md)
 
 - **TeamViewer**: When you connect to your TeamViewer account, you can use TeamViewer to remotely assist devices.
 
-  For more information, go to [Use TeamViewer to remotely administer Intune devices](./remote-actions/teamviewer-support.md).
+  For more information, go to [Use TeamViewer to remotely administer Intune devices](../remote-actions/teamviewer-support.md).
 
 With these services, Intune:
 
@@ -185,7 +185,7 @@ You can also use MDM and MAM together. If your devices are enrolled and there ar
 
 For more information, go to:
 
-- [What is device enrollment in Intune?](./enrollment/device-enrollment.md)
+- [What is device enrollment in Intune?](../enrollment/device-enrollment.md)
 - [App protection policies overview](../apps/app-protection-policy.md)
 - [Create and assign app protection policies](../apps/app-protection-policies.md)
 
@@ -215,8 +215,8 @@ On devices using application management, you can:
 
 For more information, go to:
 
-- [Protect data and devices with Microsoft Intune](./protect/device-protect.md)
-- [Mobile Threat Defense integration with Intune](./protect/mobile-threat-defense.md)
+- [Protect data and devices with Microsoft Intune](../protect/device-protect.md)
+- [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)
 
 ## Simplify access
 
@@ -246,9 +246,9 @@ In the VPN policy, you can use certificates to authenticate the VPN connection. 
 
 For more information, go to:
 
-- [Create VPN profiles to connect to VPN servers in Intune](./configuration/vpn-settings-configure.md)
-- [Use certificates for authentication in Microsoft Intune](./protect/certificates-configure.md)
-- [Microsoft Tunnel for Microsoft Intune](./protect/microsoft-tunnel-overview.md)
+- [Create VPN profiles to connect to VPN servers in Intune](../configuration/vpn-settings-configure.md)
+- [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md)
+- [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md)
 
 ### Create a Wi-Fi connection for on-premises users
 
@@ -260,8 +260,8 @@ When the policy is ready, you deploy this policy to your on-premises users and d
 
 For more information, go to:
 
-- [Create Wi-Fi policy to connect to Wi-Fi networks in Intune](./configuration/wifi-settings-configure.md)
-- [Use certificates for authentication in Microsoft Intune](./protect/certificates-configure.md)
+- [Create Wi-Fi policy to connect to Wi-Fi networks in Intune](../configuration/wifi-settings-configure.md)
+- [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md)
 
 ### Enable single sign-on (SSO) to your apps and services
 
@@ -277,7 +277,7 @@ Specifically:
 
   For more information, go to:
 
-  - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](./configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
+  - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
   - [Enable cross-app SSO on Android using MSAL](/azure/active-directory/develop/msal-android-single-sign-on)
 
 ## Next steps

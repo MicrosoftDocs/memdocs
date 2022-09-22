@@ -115,8 +115,8 @@ The settings catalog in Intune includes thousands of settings to manage iOS/iPad
 
 For more information on policies in Intune, go to:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](./configuration/settings-catalog.md)
-- [Common questions and answers with device policies and profiles in Microsoft Intune](./configuration/device-profile-troubleshoot.md)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../configuration/settings-catalog.md)
+- [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
 
 ## Secure your user identities
 
@@ -133,19 +133,19 @@ Your user and group accounts access organization resources. You need to keep the
   For more information, go to:
 
   - [Windows Hello for Business Overview](/windows/security/identity-protection/hello-for-business/hello-overview)
-  - [Manage Windows Hello for Business on devices when devices enroll with Intune](./protect/windows-hello.md)
-  - [Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune](./protect/identity-protection-configure.md)
+  - [Manage Windows Hello for Business on devices when devices enroll with Intune](../protect/windows-hello.md)
+  - [Use identity protection profiles to manage Windows Hello for Business in Microsoft Intune](../protect/identity-protection-configure.md)
 
 - **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and can make access to these resources easier.
 
-  For more information, go to [Use certificates for authentication in Microsoft Intune](./protect/certificates-configure.md).
+  For more information, go to [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
 
 - **Multi-factor authentication (MFA)** is a feature available with Azure AD. For users to successfully authenticate, at least two different verification methods are required. When MFA is deployed to your environment, you can also require MFA when devices are enrolling into Intune.
 
   For more information, go to:
 
   - [Plan an Azure Active Directory Multi-Factor Authentication deployment](/azure/active-directory/authentication/howto-mfa-getstarted)
-  - [Require multi-factor authentication for Intune device enrollments](./enrollment/multi-factor-authentication.md)
+  - [Require multi-factor authentication for Intune device enrollments](../enrollment/multi-factor-authentication.md)
 
 - **Zero trust** verifies all endpoints, including devices and apps. The idea is to help keep organization data in the organization, and prevent data leaks from accidental or malicious intent. It includes different feature areas, including Windows Hello for Business, using MFA, and more.
 

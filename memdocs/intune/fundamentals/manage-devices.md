@@ -85,9 +85,9 @@ Conditional access is a feature of Azure AD. With conditional access, you can en
 
 For more information, go to:
 
-- [Use compliance policies to set rules for devices you manage](./protect/device-compliance-get-started.md)
-- [Monitor results of your device compliance policies](./protect/compliance-policy-monitor.md)
-- [Learn about Conditional Access and Intune](./protect/conditional-access.md)
+- [Use compliance policies to set rules for devices you manage](../protect/device-compliance-get-started.md)
+- [Monitor results of your device compliance policies](../protect/compliance-policy-monitor.md)
+- [Learn about Conditional Access and Intune](../protect/conditional-access.md)
 
 ## Control device features and assign policies to device groups
 
@@ -106,8 +106,8 @@ When the groups are ready, you can assign your policies to these device groups.
 For more information, go to:
 
 - [Get started with Microsoft 365 for frontline workers](/microsoft-365/frontline/flw-overview)
-- [Windows device settings to run as a dedicated kiosk using Intune](./configuration/kiosk-settings.md)
-- [Control access, accounts, and power features on shared PC or multi-user devices using Intune](./configuration/shared-user-device-settings.md)
+- [Windows device settings to run as a dedicated kiosk using Intune](../configuration/kiosk-settings.md)
+- [Control access, accounts, and power features on shared PC or multi-user devices using Intune](../configuration/shared-user-device-settings.md)
 
 ## Secure your devices
 
@@ -119,7 +119,7 @@ In Intune, some common security tasks include:
 
   The MTD partners support different platforms, including Android, iOS/iPadOS, macOS, and Windows.
 
-  For more specific information, go to [Mobile Threat Defense integration with Intune](./protect/mobile-threat-defense.md)
+  For more specific information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md)
 
 - **Use Security Baselines** on your Windows devices. Security baselines are pre-configured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
 
@@ -127,15 +127,15 @@ In Intune, some common security tasks include:
 
   For more specific information, go to:
 
-  - [Use security baselines to configure Windows devices in Intune](./protect/security-baselines.md)
+  - [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md)
   - [Guided scenarios overview](guided-scenarios-overview.md)
 
 - **Manage software updates, encrypt hard disks, configure built-in firewalls**, and more using built-in policy settings. You can also use Windows Autopatch for automatic patching of Windows, including Windows quality updates and Windows feature updates.
 
   For more information, go to:
 
-  - [Manage endpoint security in Microsoft Intune](./protect/endpoint-security.md)
-  - [Manage device security with endpoint security policies in Microsoft Intune](./protect/endpoint-security-policy.md)
+  - [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md)
+  - [Manage device security with endpoint security policies in Microsoft Intune](../protect/endpoint-security-policy.md)
   - [Windows Autopatch overview](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
 - **Manage devices remotely** using the Endpoint Manager admin center. You can remotely lock, restart, locate a lost device, restore a device to its factory settings, and more. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
