@@ -30,16 +30,17 @@ ms.collection: M365-identity-device-management
 
 # Resize a Cloud PC (preview)
 
-The **Resize** remote action lets you upgrade a Windows 365 Enterprise Cloud PC’s RAM, CPU, and storage size to meet the user’s needs. Resizing is important for users that need:
+The **Resize** remote action lets you upgrade a Windows 365 Enterprise Cloud PC’s RAM, CPU, and storage size to meet the user’s needs. Resizing is important for users that need to:
 
 - Upgrade a Windows 365 Enterprise Cloud PC’s RAM, CPU, and storage size to meet the user’s needs.
 - Downgrade the RAM and CPU of a Cloud PC.
 
-Resizing gives admins the flexibility to upgrade/downgrade without having to provision Cloud PCs from scratch. Resizing also allows admins the flexibility to:
+Resizing gives admins the flexibility to upgrade/downgrade the following specifications without having to provision Cloud PCs from scratch:
 - Increase the RAM and vCPU cores when a user requires CPU intensive applications.
 - Increase the disk space for file storing.
-- Decrease the RAM and vCPU cores when a user does not require to run CPU intensive applications.
-- Resizing does not allow downsizing of disk space
+- Decrease the RAM and vCPU cores when a user doesn't need to run CPU intensive applications.
+
+Resizing doesn't you let downsize disk space.
 
 
 ## Requirements
@@ -62,7 +63,7 @@ Resizing isn’t supported for Cloud PCs provisioned through group-based license
 1. Contact your end users and have them save their work and sign out. Resizing automatically disconnects the user from their session and any unsaved work might be lost. Therefore, it's best to coordinate any resizing with the user before you begin.
 2. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > choose a device > **Resize**.
 ![Screenshot of resize a Cloud PC](./media/resize-cloud-pc/resize.png)
-3. You’ll see a list with all the possible SKUs that you can upgrade to. You increase and decrease a Cloud PC’s specs (RAM/vCPU), but you can only increase the OS disk storage. Decreasing OS disk storage is NOT possible. If you are downsizing a user’s Cloud PC, options with lower storage will be grayed out. Select one of the available options.
+3. You’ll see a list with all the possible SKUs that you can upgrade to. You increase and decrease a Cloud PC’s specs (RAM/vCPU). You can only increase the OS disk storage. You can't decrease the OS disk storage. If you are downsizing a user’s Cloud PC, options with lower storage will be grayed out. Select one of the available options.
 4. Select **Resize**.
     - When triggering a resize, the Cloud PC will be rebooted and the user will be immediately disconnected from their current session. Make sure the user saves all their work to avoid any potential data loss.
     - If there are available licenses, the upgrade/downgrade will take place.
