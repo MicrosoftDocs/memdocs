@@ -72,6 +72,10 @@ The global quiet time settings will allow you to create policies to schedule qui
 ### Select default work apps in Intune Company Portal<!-- 14531482 -->
 Android device users will be able to select and save their preferred work apps in Intune Company Portal. They'll be able to select the default apps they want to use for a specific intent or file type, and change or remove their preferences. Company Portal will securely store the device user's preferred defaults. This feature is an enhancement to the Android MAM custom app picker, which is a part of the Android MAM SDK. 
 
+### Use filters with app configuration profiles for managed devices<!-- 7423842 -->
+You will be able to use filters to refine the assignment scope when deploying app configuration profiles for managed devices.
+You can first create a filter using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration profile by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md).
+
 ## Device management
 
 ### Linux Ubuntu LTS desktops support<!-- 14616038 -->
