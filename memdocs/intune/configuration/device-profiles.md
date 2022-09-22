@@ -8,7 +8,7 @@ author: MandiOhlinger
 
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 09/20/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -33,6 +33,8 @@ ms.collection:
 ---
 
 # Apply features and settings on your devices using device profiles in Microsoft Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Microsoft Intune includes settings and features you can enable or disable on different devices within your organization. These settings and features are added to "configuration profiles". You can create profiles for different devices and different platforms, including iOS/iPadOS, Android device administrator, Android Enterprise, and Windows. Then, use Intune to apply or "assign" the profile to the devices.
 
