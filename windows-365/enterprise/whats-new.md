@@ -54,7 +54,7 @@ Learn what new features are available in Windows 365 Enterprise.
 <!-- ***********************************************-->
 ### Device management
 
-### Downsize Cloud PCs (Preview)<!--41076858 -->
+#### Downsize Cloud PCs (Preview)<!--41076858 -->
 
 You can now downsize a Cloud PC's RAM and specifications (except disk size). For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
 
