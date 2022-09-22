@@ -25,9 +25,9 @@ The following sections describe the new features to try out in this version:
 
 <!-- [!INCLUDE [Example feature name](includes/2208/1234567.md)] -->
 
-[!INCLUDE [Improvements to the console](../includes/2209/14908615.md)]
-[!INCLUDE [Improvements to the dark theme](../includes/2209/15346075.md)]
-[!INCLUDE [Other Updates](../includes/2209/14975011.md)]
+[!INCLUDE [Improvements to the console](includes/2209/14908615.md)]
+[!INCLUDE [Improvements to the dark theme](includes/2209/15346075.md)]
+[!INCLUDE [Other Updates](includes/2209/14975011.md)]
 
 <!-- ## General known issues  -->
 
