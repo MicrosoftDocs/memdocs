@@ -87,7 +87,7 @@ You'll be able to set up system alerts and automated emails to be notified when 
 ### Cloud PC utilization report<!--40636545-->
 A new report will be available for Cloud PCs. The **Cloud PC utilization** report will show how many hours users have been connected to their Cloud PCs. Information for individual Cloud PCs and aggregated data will be shown.
 
-### Cloud PC wit connection quality issues report<!--40636545-->
+### Cloud PC with connection quality issues report<!--40636545-->
 A new report will be available for Cloud PCs. The **Cloud PCs with connection quality issues** report will show information for round-trip time, available bandwidth, and remoting sign-in time. Information for individual Cloud PCs and aggregated data will be shown.
 
 ### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->

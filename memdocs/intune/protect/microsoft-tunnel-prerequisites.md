@@ -405,15 +405,15 @@ To use the readiness tool:
 
    You can run the script from any Linux server that is on the same network as the server you plan to install, allowing network admins to run it and troubleshoot network issues independently.
 
-2. To validate your network configuration, run the script with the following commands to first set the execute permissions on the script and then to validate the Tunnel can connect to the correct endpoints:
+2. To validate your network and Linux configuration, run the script with the following commands to set the execute permissions on the script, to validate the Tunnel can connect to the correct endpoints, and then to check for the presence of utilities that Tunnel uses:
 
    - `sudo chmod +x ./mst-readiness`
-   - `sudo ./mst-readiness network`
 
-   The second command runs the following actions and reports on success or error for both:
+   - `sudo ./mst-readiness network` - This command runs the following actions and reports on success or error for both:
+     - Tries to connect to each Microsoft endpoint the tunnel will use.
+     - Checks that the required ports are open in your firewall.
 
-   - Tries to connect to each Microsoft endpoint the tunnel will use.
-   - Checks that the required ports are open in your firewall.
+   - `sudo ./mst-readiness utils` - This command validates that utilities that are used by Tunnel like Docker or Podman and ip_tables are available.
 
 3. To validate that the account you’ll use to install Microsoft Tunnel has the required roles and permissions to complete enrollment, run the script with the following command line: `./mst-readiness account`
 
