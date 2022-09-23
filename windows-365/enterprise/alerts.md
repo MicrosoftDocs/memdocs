@@ -41,11 +41,16 @@ The Windows 365 Alerts system notifies you when specific events occur in your Cl
 
 To view the list of recent alerts, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)**.
 
+![Screenshot of view alerts](./media/alerts/view-alerts.png)
+
 ## Customize alert rule
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)** > **Alert rules**.
+    ![Screenshot of view alerts](./media/alerts/view-alerts.png)
+
 2. Select a rule in the list.
 3. On the **System rule** page, make any changes that you want in the **Conditions**, **Settings**, and **Notifications** sections.
+    ![Screenshot of view alerts](./media/alerts/view-alerts.png)
 4. Select **Apply** to save the changes to the rule.
 
 <!-- ########################## -->
