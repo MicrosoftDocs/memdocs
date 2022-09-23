@@ -30,31 +30,23 @@ ms.collection: M365-identity-device-management
 
 # Alerts in Windows 365
 
-The Windows 365 Alerts system notifies you when specific events occur in your Cloud PC environment, like connection, provisioning, or upload failures. By default, these alerts appear in the Microsoft Endpoint manager admin center as pop-up notifications.
+The Windows 365 Alerts system notifies you when specific events occur in your Cloud PC environment, like connection, provisioning, or image upload failures. By default, these alerts appear in the Microsoft Endpoint manager admin center as pop-up notifications (you can also turn on email notifications). You can customize the built-in alert rules:
+
+- Set conditions and thresholds for triggering alerts.
+- Define the severity of alerts.
+- Turn each alert rule on or off.
+- Configure each alert to notify you in the console and/or by email.
 
 ## View alerts
 
 To view the list of recent alerts, sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)**.
 
-## Customize alert rules
-
-You can customize and create alert rules to suit your needs:
-
-- Configure each alert to notify you in the console and/or by email.
-- Set conditions and thresholds for triggering alerts.
-- Define the severity of alerts.
-- Turn each alert rule on or off.
-
-### Change an existing alert rule
+## Customize alert rule
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Alerts (preview)** > **Alert rules**.
-2. Select an item in the list.
+2. Select a rule in the list.
 3. On the **System rule** page, make any changes that you want in the **Conditions**, **Settings**, and **Notifications** sections.
 4. Select **Apply** to save the changes to the rule.
-
-### Create a new alert rule
-
-???
 
 <!-- ########################## -->
 ## Next steps
