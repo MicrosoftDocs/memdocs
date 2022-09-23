@@ -33,7 +33,7 @@ For information about the new features introduced with different versions, see t
 > [!TIP]
 > You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../../../use-docs.md#notifications).
 <!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us` -->
+> `https://learn.microsoft.com/api/search/rss?search=%22release+notes+-+Configuration+Manager%22&locale=en-us` -->
 
 ## Client management
 

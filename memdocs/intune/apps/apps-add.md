@@ -6,7 +6,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 09/20/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -63,6 +63,9 @@ The following table lists the specific app types and how you can add them in the
 | Windows LOB apps | LOB app | Select **Line-of-business** app as the app type, select the **App package file**, and then enter a Windows installation file with the extension **.msi**, **.appx**, **.appxbundle**, **.msix**, and **.msixbundle**. |
 | Built-in iOS/iPadOS app  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
 | Built-in Android app  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
+| Web apps  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
+| iOS/iPadOS web clip  | Web app  | Select **iOS/iPadOS web clip** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the iOS/iPadOS platform.  |
+| Windows web link | Web app  | Select **Windows web link** as the **app type**, and then enter a valid URL pointing to the web app. Note that this app type applies only for the Windows platform.  |
 | Cross platform web apps  | Web app  | Select **Web link** as the **app type**, and then enter a valid URL pointing to the web app.  |
 | Android Enterprise system apps  | Store app  | Select **Android Enterprise system app** as the **app type**, and then enter the app name, publisher, and package file.  |
 | Windows app (Win32)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |

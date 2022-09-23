@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2022
+ms.date: 09/20/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -37,7 +37,7 @@ Personal and organization-owned devices can be enrolled in Intune. Once enrolled
 - [Android Enterprise corporate owned dedicated devices](#android-enterprise-dedicated-devices) (COSU)
 - [Android Enterprise corporate owned fully managed](#android-enterprise-fully-managed) (COBO)
 - [Android Enterprise corporate owned work profile](#android-enterprise-corporate-owned-work-profile) (COPE)
-- [Android Open Source Project (preview)](#android-open-source-project) (AOSP)
+- [Android Open Source Project (AOSP)](#android-open-source-project)
 - [Android device administrator](#android-device-administrator) (DA)
 
 This article provides recommendations on the Android enrollment methods. It also includes an overview of the administrator and user tasks for each enrollment type.
@@ -227,7 +227,7 @@ The specific steps depend on how you configured the enrollment profile. For the 
 > [!NOTE]
 > Currently, there's limited OEM support for this enrollment method.
 
-Also referred to as AOSP. Currently in [public preview](public-preview.md). These devices are organization-owned, and don't use Google Mobile Services (GMS). They can be kiosk-style devices that aren't associated with a single or specific user, or can have one user. They're used exclusively for organization work; not personal use.
+Also referred to as AOSP. These devices are organization-owned, and don't use Google Mobile Services (GMS). They can be kiosk-style devices that aren't associated with a single or specific user, or can have one user. They're used exclusively for organization work; not personal use.
 
 When you create the Intune enrollment profile, you decide if the devices are userless, or are associated with a single user. For more information on these options, including supported OEMs, see:
 
@@ -294,7 +294,7 @@ There are some situations when you must use Device Administrator enrollment:
 - Android Enterprise requires access to Google services. Google services may not be available because of geography, or because of the device manufacturer. For example:
 
   - There are places where Google services aren’t available, like China. In this situation, use Android device administrator enrollment.  
-  - Some devices are based on Android, but don't have access to Google Services, such as Amazon Fire tablets. In this situation, use Android device administrator enrollment.
+  - Some devices are based on Android, but don't have access to Google Services, such as Microsoft Teams Android devices and Amazon Fire tablets. In this situation, use Android device administrator enrollment.
 
 - Android OS versions older than 5.0 must use Android device administrator enrollment. Android Enterprise enrollment isn't an option.
 

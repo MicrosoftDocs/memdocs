@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/16/2022
+ms.date: 09/20/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,6 +29,8 @@ ms.collection: M365-identity-device-management
 ---
 
 # Common questions and answers with device policies and profiles in Microsoft Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Get answers to common questions when working with device profiles and policies in Intune. This article also lists the check-in time intervals, provides more detains on conflicts, and more.
 

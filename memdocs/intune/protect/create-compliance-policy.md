@@ -52,7 +52,7 @@ To use device compliance policies, be sure you:
 - Use a supported platform:
 
   - Android device administrator
-  - Android AOSP (preview)
+  - Android AOSP
   - Android Enterprise
   - iOS
   - Linux - Ubuntu Desktop, version 20.04 LTS  
@@ -80,7 +80,7 @@ For more information about using custom compliance settings, including supported
 
 3. Select a **Platform** for this policy from the following options:
    - *Android device administrator*
-   - *Android (AOSP)* (preview)  
+   - *Android (AOSP)*
    - *Android Enterprise*
    - *iOS/iPadOS*
    - Linux (Ubuntu Desktop, version 20.04 LTS)
@@ -92,7 +92,7 @@ For more information about using custom compliance settings, including supported
      - *Fully Managed*
      - *Dedicated*
      - *Corporate-Owned Work Profile*
-     - *Personally-Owned Work Profile*
+     - *Personally Owned Work Profile*
 
     Then, select **Create** to open the **Create policy** configuration window.
 
@@ -102,7 +102,7 @@ For more information about using custom compliance settings, including supported
   
 5. On the **Compliance settings** tab, expand the available categories, and configure settings for your policy. The following articles describe the available compliance settings for each platform:
    - [Android device administrator](compliance-policy-create-android.md)
-   - [Android (AOSP)](compliance-policy-create-android-aosp.md) (preview)  
+   - [Android (AOSP)](compliance-policy-create-android-aosp.md)
    - [Android Enterprise](compliance-policy-create-android-for-work.md)
    - [iOS/iPadOS](compliance-policy-create-ios.md)
    - [macOS](compliance-policy-create-mac-os.md)
