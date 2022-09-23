@@ -33,6 +33,8 @@ ms.collection: M365-identity-device-management
 
 The **Collect diagnostics** remote action lets you collect and download Windows device logs without interrupting the user. Only non-user locations and file types can be accessed, so no personal information is collected.
 
+Autopilot diagnostics can also be captured automatically when devices experience a failure during the Autopilot process. When logs are finished processing on a failed device, they will be automatically captured and uploaded to Intune. Autopilot diagnostics and logs may include user identifiable information such as user name or device name.
+
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
 
 *Collect diagnostics* is also available as a [Bulk device action](../remote-actions/bulk-device-actions.md) that collects diagnostic logs from up to 25 Windows devices at a time.
@@ -58,6 +60,9 @@ To use the *Collect diagnostics* action:
 3. To see the status of the action, select **Device diagnostics monitor**.
 4. After the  action completes, select **Download** in the row for the action > **Yes**.
 5. The data zip file is added to your download tray and you can save it to your computer.
+
+> [!NOTE]
+> For Autopilot diagnostics collection, no additional action is required. Autopilot diagnostics will be automatically captured when devices experience a failure as long as the Autopilot automatic capture diagnostic feature is enabled.
 
 ## Data collected
 
@@ -142,9 +147,18 @@ Files:
 You can disable the **Collect diagnostics** remote action for all devices by following these steps:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
-2. Change the control to **Disabled**.
+2. Change the control under **Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11.** to **Disabled**.
 
      :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control set to Disabled.":::
+
+## Disable Autopilot diagnostics
+
+You can disable Autopilot automatic diagnostic capture by following these steps:
+
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
+2. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
+
+     :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control set to Disabled.":::
 
 ## Known issues with device diagnostics
 
