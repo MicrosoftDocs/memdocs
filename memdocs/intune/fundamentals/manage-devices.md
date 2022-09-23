@@ -9,7 +9,7 @@ author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 09/21/2022
+ms.date: 09/22/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice:
@@ -140,7 +140,7 @@ In Intune, some common security tasks include:
 
 - **Manage devices remotely** using the Endpoint Manager admin center. You can remotely lock, restart, locate a lost device, restore a device to its factory settings, and more. These tasks are helpful if a device is lost or stolen, or if you're remotely troubleshooting a device.
 
-  For more information, go to [Remote actions in Intune](remote-actions/device-management.md).
+  For more information, go to [Remote actions in Intune](../remote-actions/device-management.md).
 
 ## Next steps
 
