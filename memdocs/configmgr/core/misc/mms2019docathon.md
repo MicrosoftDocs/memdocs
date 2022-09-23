@@ -14,9 +14,9 @@ ms.localizationpriority: null
 
 # MMS 2019 Docathon
 
-During the Midwest Management Summit (MMS) 2019, the Microsoft content team for Configuration Manager and Microsoft Intune are running a docathon. If you're attending the [Microsoft Docs hands-on lab](https://sched.co/N6fd) session on Monday, 6 May, that time is to work on contributions with support from the Microsoft writers. The docathon runs the entirety of the conference, and any registered MMS 2019 attendee can participate.
+During the Midwest Management Summit (MMS) 2019, the Microsoft content team for Configuration Manager and Microsoft Intune are running a docathon. If you're attending the [Microsoft Learn hands-on lab](https://sched.co/N6fd) session on Monday, 6 May, that time is to work on contributions with support from the Microsoft writers. The docathon runs the entirety of the conference, and any registered MMS 2019 attendee can participate.
 
-Why should you participate? Microsoft Docs is an open-source platform for Microsoft product documentation powered by GitHub. Microsoft encourages everyone to contribute to the docs! When you contribute, the platform recognizes you in the list of contributors on every article. The following contributions are some of the types that the community can provide:
+Why should you participate? Microsoft Learn is an open-source platform for Microsoft product documentation powered by GitHub. Microsoft encourages everyone to contribute to the documentation! When you contribute, the platform recognizes you in the list of contributors on every article. The following contributions are some of the types that the community can provide:
 
 - Typos
 - Clarifications
@@ -43,7 +43,7 @@ Create a [GitHub account](https://github.com/join)
     > [!NOTE]
     > Larger contributions will require that you accept the Microsoft open source [Contributor License Agreement (CLA)](https://cla.opensource.microsoft.com/). Review this agreement in advance.  
 
-- Contributions to Microsoft Docs count toward MVP award consideration.
+- Contributions to Microsoft Learn count toward MVP award consideration.
 
 - Microsoft employees have a few more required one-time steps, and a slightly different contribution process.
 
@@ -131,13 +131,13 @@ The following awards are calculated by the number of legitimate contributions to
 
 - [Microsoft Style](/style-guide/welcome/)
 
-    - [Quick start](/contribute/style-quick-start)
+  - [Quickstart](/contribute/style-quick-start)
 
-    - [Top 10 tips for Microsoft style and voice](/style-guide/top-10-tips-style-voice)
+  - [Top 10 tips for Microsoft style and voice](/style-guide/top-10-tips-style-voice)
 
 - [Contributor Guide](/contribute)
 
-- [How to use Markdown for writing Docs](/contribute/markdown-reference)
+- [How to use Markdown in Microsoft Learn articles](/contribute/markdown-reference)
 
 ## Official rules
 
