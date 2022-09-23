@@ -48,7 +48,7 @@ When you register an Autopilot device, it automatically creates an Azure AD obje
 > - [Azure AD registered](/azure/active-directory/devices/concept-azure-ad-register), also known as "workplace joined"
 > - [Intune MDM-only enrollment](/mem/intune/enrollment/windows-enrollment-methods#user-self-enrollment-in-intune)
 >
-> These options are intended for users to join personally-owned devices to their organization's network. They doesn't register devices with Azure AD.
+> These options are intended for users to join personally-owned devices to their organization's network.
 
 Once a device is registered in Autopilot if a profile is not assigned, it will receive the default Autopilot profile. If you do not want a device to go through Autopilot, you must remove the Autopilot registration. 
 
