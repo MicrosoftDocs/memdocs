@@ -76,7 +76,7 @@ When a Windows endpoint, like a Windows 10/11 device, joins an on-premises Activ
 
 These machine accounts are local to the on-premises environment and can't be used on devices that are joined to Azure AD. In this situation, you need to switch to user-based authentication to authenticate to on-premises programs, services, and apps.
 
-For more information and guidance, go to [Known issues and limitations with cloud-native endpoints](../../cloud-native-endpoints-known-issues.md).
+For more information and guidance, go to [Known issues and limitations with cloud-native endpoints](/mem/cloud-native-endpoints-known-issues).
 
 ## Roles and permissions control access
 
