@@ -30,11 +30,16 @@ Repairing Autopilot enrolled devices is complex, as it tries to balance OEM requ
 
 **Motherboard Replacement (MBR)**
 
+Starting in the 2209 release of Intune, if a motherboard is replaced on an Autopilot registered device and goes back to the same tenant without an OS reset, Autopilot will attempt to register the new hardware components. In Intune, a new status will be displayed as “fix pending” 
+If the OEM resets the OS, the device will need to be re-registered Reregister the device
+If the new hardware components are registered, the device status will go back to the assigned profile, if it is not, the admin will see the status as Action required.
+
+
 If a motherboard replacement is needed on a Windows Autopilot device, the following process is recommended:
 
-1. [Deregister the device](#deregister-the-autopilot-device-from-the-autopilot-program) from Windows Autopilot
+1. [Deregister the device](#deregister-the-autopilot-device-from-the-autopilot-program) from Windows Autopilot if it is not going back to the original tenant. If it is, no deregistration is needed
 2. [Replace the motherboard](#replace-the-motherboard)
-3. [Capture a new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device)
+3. [Capture a new device ID (4K HH)](#capture-a-new-autopilot-device-id-4k-hh-from-the-device) if the device needs to be re-registered because of a re-image or will be used by a new tenant. 
 4. [Reregister the device](#reregister-the-repaired-device-using-the-new-device-id) with Windows Autopilot
 5. [Reset the device](#reset-the-device)
 6. [Return the device](#return-the-repaired-device-to-the-customer)
