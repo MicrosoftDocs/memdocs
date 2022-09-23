@@ -208,6 +208,16 @@ Applies to:
 
 ## Device security
 
+### Grant apps permission on Android Enterprise devices<!-- 12441244 -->
+For Android Enterprise devices, you’ll soon be able to configure certificate profiles to silently grant specific apps access to use the certificate. This expands on the current behavior where a device user must approve the use of a certificate by an application.
+
+You’ll be able to choose to grant certificate access silently to specific apps or to require user approval. When configured for specific apps, you’ll then select which apps have this access as part of the profile, while all other apps will continue to require user approval before being able to use the certificate.
+
+This support will be added to profiles for SCEP, PKCS, PKCS imported, and Derived Credential certificate profiles.
+
+Applies to:  
+- Android Enterprise devices that enroll as Fully Managed, Dedicated, and Corporate-Owned work Profile.
+
 ### Attack surface reduction rule exclusions on a per-rule basis<!-- 13385644 -->
 Attack surface reduction rules provide valuable controls for protecting your devices. Currently, exclusions are only supported for all of the rules that are enabled on the device.
 
