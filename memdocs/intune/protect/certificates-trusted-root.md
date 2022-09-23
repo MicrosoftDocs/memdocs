@@ -127,6 +127,8 @@ After naming the certificate, it can be saved.
    - **User certificate store - Intermediate**
 
    ![Create a profile and upload a trusted certificate](./media/certificates-trusted-root/certificates-configure-profile-fill.png)
+   
+   [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)] 
 
 8. Select **Next**.
 

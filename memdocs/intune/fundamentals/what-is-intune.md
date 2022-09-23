@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Microsoft Intune is an MDM and MAM provider for your devices
@@ -70,7 +71,7 @@ When devices are enrolled and managed in Intune, administrators can:
 ### Try the interactive guide
 The [Manage devices with Microsoft Endpoint Manager](https://mslearn.cloudguides.com/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager) interactive guide steps you through the Microsoft Endpoint Manager admin center to show you how to manage and protect mobile and desktop applications.</br></br>
 
-<div align=”center”>
+<div>
 <iframe allowfullscreen width="95%" height="450" src="https://mslearn.cloudguides.com/guides/Manage%20devices%20with%20Microsoft%20Endpoint%20Manager" frameborder="0" scrolling="no" loading="lazy"/></iframe>
 </div>
 

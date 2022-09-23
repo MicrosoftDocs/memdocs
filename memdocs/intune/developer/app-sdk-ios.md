@@ -43,9 +43,9 @@ The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection 
 
 ## Prerequisites
 
-- You will need a macOS computer which has Xcode 11 or later installed.
+- You will need a macOS computer which has Xcode 14.0 or later installed.
 
-- Your app must be targeted for iOS 12.2 or above.
+- Your app must be targeted for iOS 14.0 or above.
 
 - Review the [Intune App SDK for iOS License Terms](https://github.com/msintuneappsdk/ms-intune-app-sdk-ios/blob/master/Microsoft%20License%20Terms%20Intune%20App%20SDK%20for%20iOS.pdf). Print and retain a copy of the license terms for your records. By downloading and using the Intune App SDK for iOS, you agree to such license terms.  If you do not accept them, do not use the software.
 
@@ -79,6 +79,9 @@ To enable the Intune App SDK, follow these steps:
 1. **Option 1 - Framework (recommended)**: Link `IntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to your target: Drag `IntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.
 
     :::image type="content" source="media/app-sdk-ios/intune-app-sdk-ios-linked-framework.png" alt-text="Intune App SDK iOS Framework: Xcode Frameworks, Libraries, and Embedded Content sample":::
+
+   > [!NOTE]
+   > If you use Framework, you must manually strip out the simulator architectures from the universal framework before you submit your app to the App Store. For more information, see [Submit your app to the App Store](#submit-your-app-to-the-app-store).
 
    **Option 2 - Static Library**:  Link `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the target: Drag `libIntuneMAMSwift.xcframework` and `IntuneMAMSwiftStub.xcframework` to the **Frameworks, Libraries, and Embedded Content** list of the project target.  
 
@@ -1058,6 +1061,23 @@ Yes! Please see the [Chatr sample app](https://github.com/msintuneappsdk/Chatr-S
 
 ### How can I troubleshoot my app?
 
-The Intune SDK for iOS 9.0.3+ supports the ability to add a diagnostics console within the mobile app for testing policies and logging errors. `IntuneMAMDiagnosticConsole.h` defines the `IntuneMAMDiagnosticConsole` class interface, which developers can use to display the Intune diagnostic console. This allows end users or developers during test to collect and share Intune logs to help diagnose any issue they may have. This API is optional for integrators. 
+The Intune SDK for iOS 9.0.3+ supports the ability to add a diagnostics console within the mobile app for testing policies and logging errors. `IntuneMAMDiagnosticConsole.h` defines the `IntuneMAMDiagnosticConsole` class interface, which developers can use to display the Intune diagnostic console. This allows end users or developers during test to collect and share Intune logs to help diagnose any issue they may have. This API is optional for integrators.
 
-If troubleshooting MSAL-specific errors, consider enabling the ADALLogOverrideDisabled flag in your info.plist file and configuring logging according to [MSAL documentation](/azure/active-directory/develop/msal-logging-ios?tabs=objc).
+## Submit your app to the App Store
+
+Both the static library and Framework builds of the Intune App SDK are universal binaries. This means they have code for all device and simulator architectures. Apple will reject apps submitted to the App Store if they have simulator code. When compiling against the static library for device-only builds, the linker will automatically strip out the simulator code. Follow these steps to ensure all simulator code is removed before you upload your app to the App Store:
+
+1. Make sure `IntuneMAM.framework` is on your desktop.
+
+2. Run these commands:
+
+    ```bash
+    lipo ~/Desktop/IntuneMAM.framework/IntuneMAM -remove i386 -remove x86_64 -output ~/Desktop/IntuneMAM.device_only
+    ```
+
+    ```bash
+    cp ~/Desktop/IntuneMAM.device_only ~/Desktop/IntuneMAM.framework/IntuneMAM
+    ```
+
+    The first command strips the simulator architectures from the framework's DYLIB file. The second command copies the device-only DYLIB file back into the framework directory.
+
