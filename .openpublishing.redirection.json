@@ -1228,8 +1228,8 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/cloud-native-endpoints-overview.md",
-            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
+            "source_path": "memdocs/cloud-native-endpoints-planning-guide.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
             "redirect_document_id": false
         },
         {
