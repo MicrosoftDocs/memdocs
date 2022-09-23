@@ -72,7 +72,7 @@ Before you can add custom settings, you must prepare a custom JSON file that def
 
 For more information about using custom compliance settings, including supported platforms, prerequisites, and how to configure the *Custom Compliance* category while creating a policy, see [Use custom compliance settings](../protect/compliance-use-custom-settings.md).
 
-## Create the compliance policy
+## Create the policy
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
