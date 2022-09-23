@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Add Microsoft 365 apps to Windows 10/11 devices using Microsoft Intune
+title: Add Microsoft 365 Apps to Windows 10/11 devices using Microsoft Intune
 titleSuffix: 
 description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on Windows 10/11 devices.
 keywords:
@@ -32,7 +32,7 @@ ms.collection:
 - highpri
 ---
 
-# Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune
+# Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune
 
 Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
 

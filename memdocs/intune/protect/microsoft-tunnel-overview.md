@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 07/05/2022
+ms.date: 09/15/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -24,6 +24,7 @@ ms.custom: intune-azure
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Microsoft Tunnel for Microsoft Intune
@@ -33,6 +34,9 @@ Microsoft Tunnel is a VPN gateway solution for Microsoft Intune that runs in a c
 This article introduces the tunnel, how it works, and its architecture.
 
 If you're ready to deploy the Microsoft Tunnel, see [Prerequisites for the Microsoft Tunnel](microsoft-tunnel-prerequisites.md), and then [Configure the Microsoft Tunnel](microsoft-tunnel-configure.md).
+
+> [!NOTE]
+> Microsoft Tunnel does not use Federal Information Processing Standard (FIPS) compliant algorithms.
 
 > [!TIP]
 > Download the Microsoft Tunnel Deployment Guide v2 from the [*Microsoft Download Center*](https://www.microsoft.com/download/details.aspx?id=102274).
@@ -140,17 +144,19 @@ The Microsoft Tunnel Gateway runs in containers that run on Linux servers.
 
 Many enterprise networks enforce network security for internet traffic using technologies like proxy servers, firewalls, SSL break and inspect, deep packet inspection, and data loss prevention systems. These technologies provide important risk mitigation for generic internet requests but can dramatically reduce performance, scalability, and the quality of end user experience when applied to Microsoft Tunnel Gateway and Intune service endpoints.
 
-The following outlines where break and inspect is not supported and where it is supported with Microsoft Tunnel Gateway. References are to the architecture diagram from the preceding section.
+The following outlines where break and inspect isn't supported and where it's supported with Microsoft Tunnel Gateway. References are to the architecture diagram from the preceding section.
 
 - **Break and inspect is not supported in the following areas**:
 
-  - Tunnel Gateway does not support SSL break and inspect, TLS break and inspect, or deep packet inspection for client connections.
-  - The Use of firewalls, proxies, load balancers, or any technology that terminates and inspects the client sessions that go into the Tunnel Gateway is not supported and will cause clients connections to fail. (Refer to **F**, **D**, and **C** in the Architecture diagram).
-  - If Tunnel Gateway uses an outbound proxy for internet access, the proxy server cannot perform break and inspect. This is because Tunnel Gateway Management Agent uses TLS mutual authentication when connecting to Intune (Refer to **3** in the Architecture diagram above). If break and inspect is enabled on the proxy server, network admins that manage the proxy server must add the Tunnel Gateway server IP address and Fully Qualified Domain Name (FQDN) to an approve-list to these [Intune endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+  - Tunnel Gateway doesn't support SSL break and inspect, TLS break and inspect, or deep packet inspection for client connections.
+  - The Use of firewalls, proxies, load balancers, or any technology that terminates and inspects the client sessions that go into the Tunnel Gateway isn't supported and will cause clients connections to fail. (Refer to **F**, **D**, and **C** in the Architecture diagram).
+  - If Tunnel Gateway uses an outbound proxy for internet access, the proxy server can't perform break and inspect. This is because Tunnel Gateway Management Agent uses TLS mutual authentication when connecting to Intune (Refer to **3** in the Architecture diagram above). If break and inspect is enabled on the proxy server, network admins that manage the proxy server must add the Tunnel Gateway server IP address and Fully Qualified Domain Name (FQDN) to an approve-list to these [Intune endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
 
 - **Break and inspect is supported in the following area**:
 
   The Microsoft Tunnel [client VPN profile](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) that gets delivered to mobile clients supports a proxy configuration. If using this setting, the proxy (Refer to **G** in the Architecture diagram) specified can use “Break and Inspect” on the client traffic routed out (refer to **7** in the Architecture diagram) of the Tunnel Gateway server to the corporate network.
+
+Configuration of a break and inspect proxy can be completed after the initial Microsoft Tunnel installation. See [Configure a break and inspect proxy](microsoft-tunnel-configure.md#configure-a-break-and-inspect-proxy). 
 
 **Additional details**:
 

@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 12/16/2021
+ms.date: 09/16/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -33,6 +33,9 @@ ms.collection: M365-identity-device-management
 
 Microsoft Intune uses Google Mobile Services (GMS) to communicate with the Microsoft Intune company portal when managing Android devices. In some cases, devices may temporarily or permanently not have access to GMS. For example, a device might ship without GMS, or the device may be connecting to a closed network where GMS is not available. This document summarizes the differences and limitations you may observe when installing and using Intune to manage Android devices without GMS.
 
+> [!NOTE]
+> These GMS related limitations also apply to Device Administrator management and Android (AOSP) Management.
+
 ## Install the Intune Company Portal app without access to the Google Play Store 
 
 ### For users outside of People's Republic of China
@@ -43,7 +46,7 @@ If Google Play isn't available, Android devices can download the [Microsoft In
 
 Because the Google Play Store is currently not available in People's Republic of China, Android devices must obtain apps from Chinese app marketplaces. For more information, see [Install the Company Portal app in People's Republic of China](../user-help/install-company-portal-android-china.md).
 
-## Limitations of Intune device administrator management when GMS is unavailable 
+## Limitations of Intune management when GMS is unavailable 
 
 ### Unavailable Intune features
 
@@ -75,6 +78,10 @@ The following tasks can require up to 8 hours to finish:
 - Remote device removal
 - Device reset
 - Installation of available line-of-business apps
+
+**Intune app for Android (AOSP)**:
+- Remote device removal
+- Device reset
 
 **Intune Company Portal website**:
 - Device removal (local and remote)
