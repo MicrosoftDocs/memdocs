@@ -216,7 +216,7 @@ The **All devices** option is now available for [compliance policy](../protect/c
 When you include the *All devices* group you can then exclude individual groups of devices to further refine the assignment scope.
 
 #### Trend Micro – New mobile threat defense partner<!-- 11017779 -->
-You can now use [Trend Micro Mobile Security](../protect/trend-micro-mobile-threat-defense-connector.md) as an integrated mobile threat defense (MTD) partner with Intune. By configuring the Trend MTD connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment.
+You can now use [Trend Micro Mobile Security as a Service](../protect/trend-micro-mobile-threat-defense-connector.md) as an integrated mobile threat defense (MTD) partner with Intune. By configuring the Trend MTD connector in Intune, you can control mobile device access to corporate resources using conditional access that's based on risk assessment.
  
 For more information, see:
 - [Mobile threat defense integration with Intune](../protect/mobile-threat-defense.md)
