@@ -78,20 +78,6 @@ You can first create a filter using any of the available properties for iOS and 
 
 ## Device management
 
-### Linux Ubuntu LTS desktops support<!-- 14616038 -->
-Intune will support Linux Ubuntu LTS desktops. The following initial functionality is planned for this first release for Linux desktop management:
-- Enroll Linux Ubuntu LTS (22.04 and 20.04) desktops into Microsoft Endpoint Manager
-- Enable access to corporate resources via Microsoft Edge 
-- Conditional Access enforcement in Microsoft Edge 
-- Standard Compliance policies
-    - Linux distribution
-    - Device encryption
-    - Password complexity
-- Bash script support for custom compliance policies
-
-### Connect Chrome OS devices in Intune (public preview)<!-- 14273312 --> 
-We're introducing the ability to view devices that run on Chrome OS in the Microsoft Endpoint Manager admin center.  With the public preview, you will be able connect your Google Workspace Admin console with Microsoft Intune. Device information about your Chrome OS endpoints will be synced into Intune and viewable in your device inventory list. Basic remote actions, such as restart, wipe, and lost mode will also be available in the admin center.
-
 ### New hardware details available for individual devices running on iOS/iPadOS<!-- 15038076 -->
 Select **Devices** > **All devices** > *select one of your listed devices* and open it's **Hardware** details. The following new details are available in the **Hardware** pane of individual devices:
 
