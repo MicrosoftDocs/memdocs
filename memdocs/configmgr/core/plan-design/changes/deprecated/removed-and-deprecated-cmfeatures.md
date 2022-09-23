@@ -84,6 +84,7 @@ The following features are no longer supported. In some cases, they're no longer
 |Task sequences: <br /> - OSDPreserveDriveLetter <br /><br /> During an operating system deployment, by default, Windows Setup now determines the best drive letter to use (typically C:). If you want to specify a different drive to use, you can change the location in the Apply Operating System task sequence step. Go to the **Select the location where you want to apply this operating system** setting. Select **Specific logical drive letter** and choose the drive that you want to use. |June 20, 2016 |Version 1606 |
 |[Network Access Protection](#network-access-protection) (NAP) - as found in System Center 2012 Configuration Manager|July 10, 2015|Version 1511|
 |[Out of Band Management](#out-of-band-management) - as found in System Center 2012 Configuration Manager|October 16, 2015|Version 1511|
+|[System Center Configuration Manager Management Pack  - for System Center Operations Manager is not available for download |October 16, 2015|Version 1511|
 
 ### WINS
 
