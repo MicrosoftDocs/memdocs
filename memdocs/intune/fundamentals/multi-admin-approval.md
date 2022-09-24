@@ -67,7 +67,7 @@ To be an approver, an account must be in the group that’s assigned to the acce
 
 ## Create an access policy
 
-1. To create an access policy, in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), go to **Tenant administration** > **Multi Admin Administration** > **Access policies** and select **Create**.
+1. To create an access policy, in the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/), go to **Tenant administration** > **Privileged access management** > **Access policies** and select **Create**.
 
 2. On the *Basics* page, provide a *Name*, and optional *Description*, and for *Profile type* select from available options. Each policy supports a single profile type.
 
