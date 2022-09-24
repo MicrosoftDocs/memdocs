@@ -46,8 +46,6 @@ items:
   - name: Require multi-factor authentication  
     href: multi-factor-authentication.md
     displayName: mfa; multifactor   
-  - name: Set up enrollment notifications 
-    href: enrollment-notifications.md 
   - name: Set up Windows enrollment
     items:
     - name: Windows enrollment methods
@@ -69,7 +67,7 @@ items:
       displayName: wpj
     - name: Connect Intune to Android Enterprise
       href: connect-intune-android-enterprise.md
-    - name: Android personally-owned work profile enrollment
+    - name: Android personally owned work profile enrollment
       href: android-work-profile-enroll.md
     - name: Android Enterprise dedicated device enrollment
       href: android-kiosk-enroll.md
@@ -89,7 +87,7 @@ items:
       href: android-enterprise-overview.md 
     - name: Enroll Android Enterprise corporate-owned work profile devices
       href: android-corporate-owned-work-profile-enroll.md     
-    - name: Move device administrator devices to personally-owned work profile management
+    - name: Move device administrator devices to personally owned work profile management
       href: android-move-device-admin-work-profile.md        
     - name: Samsung Knox Mobile Enrollment 
       href: android-samsung-knox-mobile-enroll.md
@@ -104,7 +102,7 @@ items:
           href: device-enrollment-restrictions.md
         - name: Set app configuration policies
           href: android-app-configuration-policies.md
-        - name: Android personally-owned work profile security settings
+        - name: Android personally owned work profile security settings
           href: android-work-profile-security-settings.md
         - name: Android fully managed-security settings
           href: android-fully-managed-security-settings.md         
