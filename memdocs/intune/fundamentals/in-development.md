@@ -78,7 +78,7 @@ You can first create a filter using any of the available properties for iOS and 
 
 ## Device management
 
-### Linux Ubuntu LTS desktops support<!-- 14616038 -->
+### Intune support for Linux Ubuntu LTS desktops will be generally available<!-- 14616038 -->
 Intune will support Linux Ubuntu LTS desktops. The following initial functionality is planned for this first release for Linux desktop management:
 - Enroll Linux Ubuntu LTS (22.04 and 20.04) desktops into Microsoft Endpoint Manager
 - Enable access to corporate resources via Microsoft Edge 
