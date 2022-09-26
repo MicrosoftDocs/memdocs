@@ -236,7 +236,10 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Tenant administration
 
-#### Access policies for Multiple Administrator Approval in public preview<!--9348867 -->
+#### Access policies for Multiple Administrator Approval in public preview<!--9348867 -->  
+> [!NOTE]  
+> This feature is delayed and is not yet available. We'll remove this note when this feature beings to roll out to tenants.
+
 In public preview, you can use Intune *access policies* to require that a second Administrator Approval account be used to approve a change before the change is applied.  This capability is known as multiple Administrator Approval (MAA).
 
 You create an access policy to protect a type of resource, like App deployments. Each access policy also includes a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
