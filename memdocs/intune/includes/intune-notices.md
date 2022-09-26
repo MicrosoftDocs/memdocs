@@ -25,7 +25,7 @@ New iOS/iPadOS enrollment profiles will not have the option to select Company Po
 
 If you have not already, you will need to move to use Setup Assistant with modern authentication. Within the Microsoft Endpoint Manager admin center, you will want to either create a new ADE enrollment profile, or edit your existing enrollment profile to use the “Setup assistant with modern authentication.”
 
-**User experience:** The Setup Assistant with modern authentication enrollment flow does change the enrollment screen order where authentication will occur prior to accessing the home screen. If you have user guides that share screen shots, you will want to update those so the guides match the experience of Setup Assistant with modern authentication.
+**User experience:** The Setup Assistant with modern authentication enrollment flow does change the enrollment screen order where authentication will occur prior to accessing the home screen. If you have user guides that share screenshots, you will want to update those so the guides match the experience of Setup Assistant with modern authentication.
 
 ### How can you prepare?
 
