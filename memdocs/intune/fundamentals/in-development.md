@@ -122,6 +122,29 @@ Windows Autopilot diagnostics will automatically capture diagnostics about Windo
 
 ## Device configuration
 
+### New settings for Device Firmware Configuration Interface (DFCI) profiles on Windows devices<!-- 15511597 -->
+You can create a DFCI profile that enables the Windows OS to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface) (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates > Device Firmware Configuration Interface**). 
+
+You can use this feature to control BIOS settings. There will be new settings you can configure in the DFCI policy:
+
+- Cameras:
+  - Front camera
+  - Infrared camera
+  - Rear camera
+
+- Radios:
+  - WWAN
+  - NFC
+
+- Ports
+  - SD Card
+
+For more information on DFCI profiles, go to [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md) and [DFCI profile settings list](../configuration/device-firmware-configuration-interface-windows-settings.md).
+
+Applies to:
+- Windows 11 on supported UEFI
+- Windows 10 RS5 (1809) and later on supported UEFI
+
 ### New settings available in the iOS/iPadOS and macOS Settings Catalog<!-- 15514929 -->
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. 
 
