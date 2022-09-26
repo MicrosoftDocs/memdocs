@@ -238,7 +238,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Access policies for Multiple Administrator Approval in public preview<!--9348867 -->  
 > [!NOTE]  
-> This feature is delayed and is not yet available. We'll remove this note when this feature beings to roll out to tenants.
+> This feature is delayed and is not yet available. We'll remove this note when this feature begins to roll out to tenants.
 
 In public preview, you can use Intune *access policies* to require that a second Administrator Approval account be used to approve a change before the change is applied.  This capability is known as multiple Administrator Approval (MAA).
 

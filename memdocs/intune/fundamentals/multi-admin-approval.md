@@ -30,7 +30,7 @@ ms.collection:
 # Use Access policies to require multiple administrative approvals
 
 > [!NOTE]  
-> This feature is delayed and is not yet available. We'll remove this note when this feature beings to roll out to tenants.
+> This feature is delayed and is not yet available. We'll remove this note when this feature begins to roll out to tenants.
 
 *This feature is in Public Preview*
 
