@@ -141,7 +141,7 @@ Applies to:
 #### Device Firmware Configuration Interface (DFCI) now supports Acer devices<!-- 15240661 -->
 For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
 
-New Acer devices running Windows 10/11 will be enabled for DFCI starting Fall 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Acer devices.
+New Acer devices running Windows 10/11 will be enabled for DFCI in later 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Acer devices.
 
 Contact your device vendor or device manufacturer to ensure you get eligible devices.
 
