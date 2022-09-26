@@ -55,7 +55,7 @@ To use device compliance policies, be sure you:
   - Android AOSP
   - Android Enterprise
   - iOS
-  - Linux - Ubuntu Desktop, version 20.04 LTS  
+  - Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
   - macOS
   - Windows 10/11
 
@@ -63,9 +63,9 @@ To use device compliance policies, be sure you:
 
 - Enroll devices to one user, or enroll without a primary user. Single devices cannot be enrolled to multiple users.
 
-In addition to compliance settings that are built-in to Intune, the following platforms support adding custom compliance settings to compliance policies:
+In addition to compliance settings that are built in to Intune, the following platforms support adding custom compliance settings to compliance policies:
 
-- Ubuntu Desktop, version 20.04 LTS  
+- Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
 - Windows 10/11
 
 Before you can add custom settings, you must prepare a custom JSON file that defines the settings you want to base your custom compliance on, and a script that runs on devices to detect the settings defined in the JSON.
@@ -83,7 +83,7 @@ For more information about using custom compliance settings, including supported
    - *Android (AOSP)*
    - *Android Enterprise*
    - *iOS/iPadOS*
-   - Linux (Ubuntu Desktop, version 20.04 LTS)
+   - Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS)
    - *macOS*
    - *Windows 8.1 and later*
    - *Windows 10 and later*
@@ -116,14 +116,14 @@ For more information about using custom compliance settings, including supported
    - Device Encryption
    - Password Policy
 
-   Dedicated content for the settings in the settings catalog is not available.
+   Dedicated content for the settings in the settings catalog isn't available.
 
 6. Add custom settings to policies for supported platforms.
 
    > [!TIP]  
    > This is an optional step that’s supported only for the following platforms:  
    >
-   > - Linux - Ubuntu Desktop, version 20.04 LTS
+   > - Linux - Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
    > - Windows 10/11
    > Before you can add custom settings to a policy, you must have uploaded a detection script to Intune, and have ready a JSON file that defines the settings you want to use for compliance. See [Custom compliance settings](../protect/compliance-use-custom-settings.md) for more information.
 
@@ -159,7 +159,7 @@ For more information about using custom compliance settings, including supported
 
    Select **+ Select groups to include** and then assign the policy to one or more groups. The policy will apply to these groups when you save the policy after the next step.
 
-   Policies for Linux do not support user-based assignments and can only be assigned to device groups.
+   Policies for Linux don't support user-based assignments and can only be assigned to device groups.
 
 10. On the **Review + create** tab, review the settings and select **Create** when ready to save the compliance policy.  
 

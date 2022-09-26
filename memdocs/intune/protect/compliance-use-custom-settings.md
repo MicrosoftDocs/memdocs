@@ -33,14 +33,14 @@ To expand on Intune’s built-in device compliance options, you can add custom c
 
 This feature applies to:
 
-- Linux – Ubuntu Desktop, version 20.04 LTS
+- Linux – Ubuntu Desktop, version 20.04 LTS and 22.04 LTS
 - Windows 10/11
 
-Before you can add custom settings to a policy, you’ll need to prepare a JSON file and a detection script for use with each supported platform. Both the script and JSON become part of the compliance policy. Each compliance policy supports a single script, and each script can detect multiple settings:
+Before you can add custom settings to a policy, you’ll need to prepare a JSON file, and a detection script for use with each supported platform. Both the script and JSON become part of the compliance policy. Each compliance policy supports a single script, and each script can detect multiple settings:
 
 - The JSON file defines the custom settings and the values that are considered as compliant. You can also configure messages for users to tell them how to restore compliance for each setting. You add your JSON file while creating a compliance policy, just after you select a discovery script for that policy. 
 
-- Scripts are specific to different platforms and delivered to devices through the compliance policy. When policy is evaluated, the script detects the settings from the JSON file and then reports the results to Intune. Windows uses a PowerShell script and Linux uses a Bash script. 
+- Scripts are specific to different platforms and delivered to devices through the compliance policy. When policy is evaluated, the script detects the settings from the JSON file, and then reports the results to Intune. Windows uses a PowerShell script and Linux uses a Bash script. 
 
   The scripts must be uploaded to the Microsoft Endpoint Manager admin center before you create a compliance policy. You select the script when you’re configuring a policy to support custom settings.  
 
@@ -140,9 +140,9 @@ Policies support the use of a single script. However, each script supports check
 
 ## Additional troubleshooting for Linux devices
 
-To identify settings that are not compliant for a device:
+To identify settings that aren't compliant for a device:
 
-- [In the Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can identify devices that are not compliant with policy. **Navigate** to **Reports** > **Device compliance**, select the *Reports* tab, and then select the tile for **Noncompliant devices and settings**. Use the drop-downs to configure the report you want, and then select **Generate** report.
+- [In the Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can identify devices that aren't compliant with policy. **Navigate** to **Reports** > **Device compliance**, select the *Reports* tab, and then select the tile for **Noncompliant devices and settings**. Use the drop-downs to configure the report you want, and then select **Generate** report.
 
 The admin center displays a separate line for each setting that isn’t compliant on a device.  
 
@@ -165,15 +165,6 @@ To be compliant with *Password Policy* settings, configure the Linux system to u
 - Passwords that include a minimum number of letters, digits, or special characters
 - Passwords of a minimum length
 
-Intune uses the **pam_pwquality** module to ensure password rules meet your organization’s standards. For more information on how to configure the parameters in **pam_pwquality**, refer to the Ubuntu documentation. As an example, following is a sample configuration line from the */etc/pam.d/common-password* file that enforces passwords that have at least one digit, one uppercase letter, and are at least twelve characters long: `password required pam_pwquality.so dcredit=-1 ucredit=-1 ocredit=-1 minlen=12`
-
-We recommend you update the pwquality file before you run the pam-auth-update tool:
-
-1. First *edit /usr/share/pam-configs/pwquality* to have the right password policy settings.
-2. Save the file.
-3. Run `sudo pam-auth-update --enable pwquality`
-4. Verify that the common password file at /etc/pam.d/common-password has updated to match the update made in the pwquality file.
-
 #### Device encryption
 
 Users of devices that don’t meet compliance settings for disk and partition encryption might receive a message that they must encrypt the device drives.
@@ -185,7 +176,7 @@ There are several options for disk and partition encryption on Linux operating s
 The following is general guidance when encrypting disk and partitions:
 
 - Encrypting Linux system volumes after installation is possible, but potentially time consuming. We recommend setting up disk encryption while installing the operating system.
-- Not all filesystem partitions need to be encrypted for a device to meet organizational standards. The following are not evaluated by the built-in device encryption settings:
+- Not all filesystem partitions need to be encrypted for a device to meet organizational standards. The following aren't evaluated by the built-in device encryption settings:
   - Read-only partitions
   - Pseudo-filesystems, like `/proc` or `tmpfs`
   - The `/boot` or `/boot/efi` partitions
@@ -194,8 +185,8 @@ The following is general guidance when encrypting disk and partitions:
 
 After making changes to a device to bring it into compliance, refresh the device status with Intune:  
 
-- If the Microsoft Intune app is still running, select **Refresh** on either the device details page or the compliance issues page to start a new check-in with Intune.
-- If the Microsoft Intune app is not running, sign into the app, which will start a new check-in.
+- If the Microsoft Intune app is still running, select **Refresh** on the device details page, or on the compliance issues page to start a new check-in with Intune.
+- If the Microsoft Intune app isn't running, sign into the app, which will start a new check-in.
 - After installation, the Microsoft Intune app periodically checks-in with Intune on its own, so long as the device is on, and a user is signed in to it.
 
 ## Next steps
