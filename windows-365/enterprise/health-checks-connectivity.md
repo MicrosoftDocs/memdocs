@@ -37,7 +37,7 @@ You can review any connectivity errors and use the **Troubleshoot this connectio
 ## View Cloud PC connectivity status
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **All Cloud PCs**.
-2. Select a connection in the list > **Overview** > **Connectivity and usage (preview)**.
+2. Select a connection in the list > **Overview** > **Cloud PC Performance (preview)**.
 
 If the Cloud PC is connected, the status will show as **Available**.
 
@@ -84,7 +84,7 @@ The user connectivity history report shows when a user started a connection and 
 ### View Connectivity history report
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **All Cloud PCs**.
-2. Select a connection in the list > **Overview** > **Connectivity and usage (preview)** > **View connectivity history**.
+2. Select a connection in the list > **Overview** > **Cloud PC Performance (preview)** > **View connectivity history**.
 
 ### Activities
 
