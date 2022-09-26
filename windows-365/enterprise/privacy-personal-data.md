@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2022
+ms.date: 08/03/2022
 ms.topic: conceptual
 ms.service: cloudpc
 ms.subservice:
@@ -45,11 +45,9 @@ To protect and maintain enrolled devices, Windows 365 processes and copies data 
 
 ## Windows 365 data storage
 
-Depending on a tenant's region and preference, Windows 365 stores its customer content in Azure regions in North America, Europe, or Asia Pacific. Cloud PC virtual disk, customer content, data and storage associated with the Cloud PC lives in the Azure region that the Cloud PC is [provisioned](provisioning.md) in. For Windows 365 Enterprise, the region is defined in the [Azure network connection's](azure-network-connections.md) (ANC) **Virtual network** setting. Windows 365 Business stores customer data in the Azure region of the Cloud PC itself.
+Depending on a tenant's region and preference, Windows 365 stores its customer content in Azure regions in North America, Europe, or Asia Pacific. Customer content, data and storage associated with the Cloud PC lives in the Azure region that the Cloud PC is provisioned in. For Windows 365 Enterprise, the region is defined in the [Azure network connection's (ANC)](azure-network-connections.md) **Virtual network** setting.  Windows 365 Business stores customer data in the Azure region of the Cloud PC itself.
 
-In order to manage the Cloud PC, certain data relating to the Cloud PC (like the machine’s name, diagnostic data, and service-generated data) is stored in Azure data centers in North America, Europe, or Asia Pacific, as defined by the tenant's country. This storage is mapped based on Microsoft Online tenant's country to the nearest region.
-
-Other customer data, diagnostic data, or service-generated data may be collected by [Azure Virtual Desktop](/azure/virtual-desktop/data-locations) or [Intune](/mem/intune/protect/privacy-personal-data) because Windows 365 depends on these services.
+Windows 365 stores service-generated metadata in Azure data centers in North America, Europe, or Asia Pacific, as defined by the tenant's country. This storage is mapped based on Microsoft Online tenant's country to the nearest region.
 
 For more information on where your data is located, see:
 
