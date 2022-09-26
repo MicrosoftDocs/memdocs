@@ -80,7 +80,7 @@ If you're impacted by this change, see MC393815 in the Message center.
 
 Download, install, and configure the latest certificate connector. For more information see, [Install the Certificate Connector for Microsoft Intune](../protect/certificate-connector-install.md).
 
-To check which version of the certificate connector you are using follow these steps:
+To check which version of the certificate connector you are using, follow these steps:
 
 1. On a Windows Server running the Intune Certificate Connector, launch "Add or Remove programs".
 2. A list of installed programs and applications will be displayed.
