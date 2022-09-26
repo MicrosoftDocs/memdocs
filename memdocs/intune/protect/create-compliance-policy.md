@@ -139,7 +139,7 @@ For more information about using custom compliance settings, including supported
    2. Select **Custom Compliance**, and then select 8.
    3. Back on the *Compliance settings* page, select the toggle for *Require Custom Compliance* to change it to be **True**.
    4. For *Select your discovery script*, select **Set reusable settings**, and then specify a script that’s been previously added to the Microsoft Endpoint Manager admin center. This script must have been uploaded before you begin to create the policy.
-   5. For *Select your rules file*, select the folder icon and then locate and add the JSON file for Linux that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](comliance-custom-json.md).
+   5. For *Select your rules file*, select the folder icon and then locate and add the JSON file for Linux that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](compliance-custom-json.md).
 
    The JSON you enter is validated and any problems are displayed. After validation of the JSON contents, the rules from the JSON are displayed in table format.
 
