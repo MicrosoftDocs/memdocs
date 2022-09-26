@@ -4,11 +4,10 @@ items:
 - name: Overview
   expanded: true
   items:
-  - name: Microsoft Intune overview
-    items:
-    - name: What is Intune
-      href: what-is-intune.md 
-      displayName: mem; ems; emm; azure ad; active directory
+  - name: What is Intune
+    href: what-is-intune.md
+    displayName: mem; ems; emm; azure ad; active directory
+    items:      
     - name: Manage and secure your identities
       href: manage-identities.md
     - name: Manage devices and control features
