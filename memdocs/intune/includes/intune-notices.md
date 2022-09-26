@@ -59,7 +59,7 @@ Microsoft strongly recommends that you move to a supported version of Windows 10
 
 ### How does this affect you or your users?
 
-If you are managing Windows 8.1 devices those devices should be upgraded to a supported version of Windows 10 or Windows 11. There is no impact to existing devices and polices, however, you will not be able to enroll new devices if they are running Windows 8.1.
+If you are managing Windows 8.1 devices those devices should be upgraded to a supported version of Windows 10 or Windows 11. There is no impact to existing devices and policies, however, you will not be able to enroll new devices if they are running Windows 8.1.
 
 ### How can you prepare?
 
