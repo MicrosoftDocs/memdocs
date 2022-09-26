@@ -29,6 +29,9 @@ ms.collection:
 
 # Use Access policies to require multiple administrative approvals
 
+> [!NOTE]  
+> This feature is delayed and is not yet available. We'll remove this note when this feature beings to roll out to tenants.
+
 *This feature is in Public Preview*
 
 To help protect against a compromised administrative account, use Intune *access policies* to require that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approval (MAA).
