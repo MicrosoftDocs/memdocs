@@ -141,7 +141,7 @@ Applies to:
 #### Device Firmware Configuration Interface (DFCI) now supports Acer devices<!-- 15240661 -->
 For Windows 10/11 devices, you can create a DFCI profile to manage UEFI (BIOS) settings (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type).
 
-New Acer devices running Windows 10/11 will be enabled for DFCI starting Fall 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Acer devices.
+New Acer devices running Windows 10/11 will be enabled for DFCI in later 2022. So, admins can create DFCI profiles to manage the BIOS and then deploy the profiles to these Acer devices.
 
 Contact your device vendor or device manufacturer to ensure you get eligible devices.
 
@@ -236,7 +236,10 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Tenant administration
 
-#### Access policies for Multiple Administrator Approval in public preview<!--9348867 -->
+#### Access policies for Multiple Administrator Approval in public preview<!--9348867 -->  
+> [!NOTE]  
+> This feature is delayed and is not yet available. We'll remove this note when this feature begins to roll out to tenants.
+
 In public preview, you can use Intune *access policies* to require that a second Administrator Approval account be used to approve a change before the change is applied.  This capability is known as multiple Administrator Approval (MAA).
 
 You create an access policy to protect a type of resource, like App deployments. Each access policy also includes a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
