@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/22/2022
+ms.date: 09/27/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,27 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of September 26, 2022 (Service release 2209)
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### System alerts and email notifications (preview)<!--40932899 -->
+
+You can now set up system alerts and automated emails to be notified when certain events, warnings, or errors occur in the Windows 365 service. A subset of critical Cloud PC issues will be sent automatically to admins. In addition, you can define alert rules, such as target audience (devices, user groups, tenants), thresholds, frequency, and notification channels. For more information, see [Alerts](alerts.md).
+
+<!-- ***********************************************-->
+### Miscellaneous
+
+#### Allow list URL change for Windows 365<!--41400001 -->
+
+We've added a new endpoint which the Windows 365 service requires to be accessible: *.infra.windows365.microsoft.com". This is part of ongoing endpoint consolidation work to reduce the number of FQDNs required to be accessible for the service.
+
+#### Windows 365 Business admins can provide feedback<!--41418099-->
+
+By using windows365.microsoft.com, Windows 365 Business admins can now provide feedback just like users provide feedback. For more information, see [User feedback](end-user-access-cloud-pc.md#feedback).
 
 <!-- ########################## -->
 ## Week of September 19, 2022
