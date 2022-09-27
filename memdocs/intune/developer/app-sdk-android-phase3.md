@@ -394,7 +394,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 4: MAM 
 [Reporting]:#reporting
 [Verification]:#verification
 
-<!-- Other SDK Guide Markdown docs -->
+<!-- Other SDK Guide Markdown documentation -->
 [Stage 1: Planning the Integration]:app-sdk-android-phase1.md
 [MSAL configuration]:app-sdk-android-phase2.md
 [Registering for App Protection Policy]:app-sdk-android-phase4.md#registering-for-app-protection-policy
@@ -404,7 +404,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 4: MAM 
 [appendix]:app-sdk-android-appendix.md
 [class and method replacements]:app-sdk-android-appendix.md#class-and-method-replacements
 
-<!-- Microsoft docs -->
+<!-- Microsoft Learn documentation -->
 [Download the SDK files]:/mem/intune/developer/app-sdk-get-started#download-the-sdk-files
 [Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview#languages-and-frameworks
 [MSAL documentation]:https://github.com/AzureAD/microsoft-authentication-library-for-android
