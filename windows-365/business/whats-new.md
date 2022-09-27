@@ -48,6 +48,16 @@ Learn what new features are available in Windows 365 Business.
 -->
 
 <!-- ########################## -->
+## Week of September 26, 2022 (Service release 2209)
+
+<!--***********************************************-->
+### Miscellaneous
+
+#### Windows 365 Business admins can provide feedback<!--41418099-->
+
+By using windows365.microsoft.com, Windows 365 Business admins can now provide feedback just like users provide feedback. For more information, see [User feedback](end-user-access-cloud-pc.md#feedback).
+
+<!-- ########################## -->
 ## Week of July 4, 2022 (Service release 2206)
 
 <!--***********************************************-->
