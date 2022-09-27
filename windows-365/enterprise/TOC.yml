@@ -147,6 +147,8 @@ items:
       items:
       - name: Overview
         href: device-management-overview.md
+      - name: Alerts
+        href: alerts.md
       - name: Remotely manage Cloud PC devices 
         href: remotely-manage-cloud-pc.md
       - name: RDP Shortpath for public networks 
