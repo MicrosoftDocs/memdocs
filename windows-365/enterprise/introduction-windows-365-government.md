@@ -49,7 +49,6 @@ The following features are not yet supported for Windows 365 GCC and/or GCCH.
 | Feature | GCC | GCCH |
 |:----|:----|:----|
 |Windows 11 support|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
-|CloudPC resize remote action|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Provision Cloud PCs with Secure Boot and vTPM|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Configure installed language and region for provisioning Cloud PCs|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Digital forensics and placing a Cloud PC under review|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
@@ -60,7 +59,6 @@ The following features are not yet supported for Windows 365 GCC and/or GCCH.
 |RDP Shortpath for public networks|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |Windows 365 System based alerting on Microsoft Endpoint Manager for Cloud PCs|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 |User initiated feedback in End User Portal and Windows 365 Web Client|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
-|End user feedback in the web client and windows365.microsoft.com|![X](./media/manage-rdp-device-restrictions/xmark.png)|![X](./media/manage-rdp-device-restrictions/xmark.png)|
 
 ## Next steps
 
