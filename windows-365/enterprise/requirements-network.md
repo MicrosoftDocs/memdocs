@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 03/10/2022 
+ms.date: 09/27/2022 
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -59,6 +59,7 @@ You must allow traffic in your Azure network configuration to the following serv
 - rdweb.wvd.microsoft.com
 - rdbroker.wvd.microsoft.com
 - Provisioning and Azure network connection endpoints:
+  - \*.infra.windows365.microsoft.com
   - cpcsaamssa1prodprap01.blob.core.windows.net
   - cpcsaamssa1prodprau01.blob.core.windows.net
   - cpcsaamssa1prodpreu01.blob.core.windows.net
