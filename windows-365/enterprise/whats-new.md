@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 09/22/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -50,6 +50,13 @@ Learn what new features are available in Windows 365 Enterprise.
 
 <!-- ########################## -->
 ## Week of September 19, 2022
+
+<!-- ***********************************************-->
+### Device management
+
+#### Downsize Cloud PCs (Preview)<!--41076858 -->
+
+You can now downsize a Cloud PC's RAM and specifications (except disk size). For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
 
 <!-- ***********************************************-->
 ### Device provisioning
