@@ -66,10 +66,6 @@ Windows 365 Business admins will be able to restore a Cloud PC to a previous sta
 
 Admins will be able to set a toggle that automatically enrolls new Cloud PCs in to Microsoft Endpoint Manager.
 
-### Resize action support for more Cloud PCs<!--40263425-->
-
-The resize action will support Cloud PCs that are Azure Active Directory joined.
-
 <!-- ***********************************************-->
 <!--## Device provisioning-->
 
@@ -90,11 +86,7 @@ A new report will be available for Cloud PCs. The **Cloud PC utilization** repor
 ### Cloud PC with connection quality issues report<!--40636545-->
 A new report will be available for Cloud PCs. The **Cloud PCs with connection quality issues** report will show information for round-trip time, available bandwidth, and remoting sign-in time. Information for individual Cloud PCs and aggregated data will be shown.
 
-### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
-
-You’ll be able to review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues.
-
-### End user manual connectivity check<!--37679345 -->
+### End user manual connectivity check<!--37679345 --> 
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 
