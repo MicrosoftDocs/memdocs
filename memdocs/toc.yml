@@ -1,12 +1,12 @@
 items:
-- name: Microsoft Endpoint Manager
+- name: Microsoft Intune family
   href: index.yml
 - name: Overview
   expanded: true
   items:
-  - name: Microsoft Endpoint Manager overview
+  - name: Microsoft Intune products and services overview
     href: endpoint-manager-overview.md
-  - name: Getting started with Microsoft Endpoint Manager
+  - name: DEL-Getting started with Microsoft Endpoint Manager
     href: endpoint-manager-getting-started.md
   - name: Cloud native Windows endpoints
     items:

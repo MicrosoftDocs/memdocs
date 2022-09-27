@@ -32,27 +32,30 @@ ms.collection:
   - highseo
 ---
 
-# Getting started with Microsoft Intune
+# Get started with Microsoft Intune
 
-As part of your Microsoft 365 license, your company is likely to adopt Microsoft Endpoint Manager, which brings together Microsoft Intune, Configuration Manager, Desktop Analytics, co-management, and Windows Autopilot into a unified platform to help protect and manage your organization's devices and apps. 
+As part of your Microsoft 365 license, you also get Microsoft Intune for cloud-based app management, device management, and security. 
+
+This articles provides an overview of the Microsoft Intune architecture, deployment, enrollment, configuration, policies, service updates, and more.
+
+
+For more information about what Microsoft Intune can do for your organization, go to [What is Microsoft Intune](what-is-intune.md).
+
+
 
 ## A global cloud service architecture
-
-Microsoft Intune was architected from the cloud and for the cloud and is closely tied with [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis) (Azure AD). Intune integrates with Azure AD and Conditional Access (CA) policies to help you manage access to your organization’s apps and devices and protect and isolate corporate data. Intune enhances CA with device-based compliance and can also take risk signals from [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint), as well as [mobile threat defense](./intune/protect/mobile-threat-defense.md) (MTD) apps. Intune also integrates with [network access control](./intune/protect/network-access-control-integrate.md) (NAC) solutions to ensure only compliant devices can connect to your corporate network.
-
-App stores are key parts of an Intune deployment. For iOS devices, you can use either the Apple Volume Purchase Program (VPP), which is part of Apple Business Manager, or the App Store. In the case of Android, you can use either the Google Play app store for device administrator devices, or managed Google Play for Android Enterprise devices. For Windows, the Microsoft Store for Business provides a great experience for app deployment.
 
 Your administrative management experience is centralized from the Microsoft Endpoint Manager admin center, which uses [Microsoft Graph](/graph/overview) calls to the Intune service. Every action from app configuration to mobile device management settings to security in the admin center is a Microsoft Graph call. If you’re not familiar with Graph, take some time to understand it, specifically how [Graph integrates with Microsoft Intune](/graph/intune-concept-overview).
 
 ### Intune service architecture
 
-[ ![Intune Service Architecture](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-01.png) ](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-01.png#lightbox)
+[ ![Intune Service Architecture](./media/get-started-with-intune/endpoint-manager-getting-started-01.png) ](./media/get-started-with-intune/endpoint-manager-getting-started-01.png#lightbox)
 
 Initially, Intune began as a combination of a set of services running on physical machines in a private datacenter, and a set of distributed services running on Azure. By 2018, all Intune services were re-architected to run on Microsoft Azure. Today, Intune’s cloud services are built on Azure Service Fabric. All services are deployed to a Service Fabric cluster consisting of a group of front-end and middle-tier nodes. We refer to these clusters as an Azure scale unit, or ASU.
 
 ### Azure scale unit architecture: Global view
 
-[ ![Azure scale unit architecture: Global view](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-02.png) ](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-02.png#lightbox)
+[ ![Azure scale unit architecture: Global view](./media/get-started-with-intune/endpoint-manager-getting-started-02.png) ](./media/get-started-with-intune/endpoint-manager-getting-started-02.png#lightbox)
 
 Azure scale unit details:
 
@@ -170,56 +173,5 @@ Check out these resources to find out how to add and manage apps with Intune:
 - [How to protect your company app data with Microsoft Intune](/graph/api/resources/intune-app-conceptual?view=graph-rest-beta&preserve-view=true)
 - [Manage Android Enterprise system apps in Microsoft Intune](./intune/apps/apps-ae-system.md)
 
-## Privacy and personal data in Intune
+## Next steps
 
-You should understand how Intune collects, stores, retains, processes, secures, shares, audits, and exports personal data. Microsoft Intune does not use any personal data collected as part of providing the service for profiling, advertising, or marketing purposes.
-
-The following resources will help you understand privacy and personal data in Intune:
-
-- [Privacy and personal data in Intune](./intune/protect/privacy-personal-data.md)
-- [Optional diagnostic data from Intune Client apps](./intune/protect/client-apps-optional-data.md)
-- [Data collection in Intune](./intune/protect/privacy-data-collect.md)
-- [Data storage and processing in Intune](./intune/protect/privacy-data-store-process.md)
-- [Audit, export, or delete personal data in Intune](./intune/protect/privacy-data-audit-export-delete.md)
-
-## Intune service updates
-
-New feature releases for Intune typically have a six to eight-week cadence, from planning to release, called a sprint. Intune releases use a **YYMM** naming convention. For example, 2207 would be a July 2022 release.
-
-### How updates are released
-
-Our monthly release process is a methodical update of many different environments, first across multiple Azure services and then in the admin center which makes it available for use. An internal environment called Self Host is the first environment to receive the release. This is used only by the Intune engineering teams. We then roll out to the Microsoft tenant, which manages over 650,000 devices. Once we’ve validated there are no key issues with the services, we then begin rolling out to customer environments in a phased approach. Once all tenants have been successfully updated, we update the Microsoft Endpoint Manager admin center. This phased approach lets us identify issues before they impact the service or our customers.
-
-Updating the Company Portal app is a different process. Microsoft is subject to the release requirements and processes of the Apple App Store and Google Play, and sometimes mobile carriers. It isn’t always possible to align Intune release updates with updates to the Company Portal. For more information, see [UI updates for Intune end-user apps](/intune/whats-new-app-ui) for information on Company Portal updates.
-
-### How can I tell if a service update is complete for my tenant?
-
-1. Sign in to the Microsoft Endpoint Manager admin center.
-2. Select Tenant administration > Tenant status to see your tenant’s name and location, MDM authority, account status, and service release number. In the example below, the tenant has the 2104 (April 2021) service release.
-
-[ ![Example screenshot of the Tenant admin > Tenant status blade](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-03.png) ](./media/endpoint-manager-getting-started/endpoint-manager-getting-started-03.png#lightbox)
-
-## Keeping up to date about releases
-
-Keeping up to date about releases and changes is an important part of your Intune deployment. Intune provides several ways to stay current about latest updates to the service:
-
-- [What's new in Intune](./intune/fundamentals/whats-new.md)  – Learn what’s new each week in in Microsoft Intune, including an overview of the current release, notices, information about earlier releases, and other information. Content is published at the end of the current sprint once the UI updates start rolling out in the Microsoft Endpoint Manager admin center.
-- [Message Center](/microsoft-365/admin/manage/message-center) – When the service update is completely rolled out, you’ll see a message posted in the Tenant status – Service health and message center, or you can view the same messages in the Message Center at portal.office.com. We use service APIs to pull just the Microsoft Endpoint Manager messages from Office into the Microsoft Endpoint Manager admin center UI.
-- [Microsoft Intune Tenant Status page](/intune/tenant-status)  - A centralized hub where you can view current information and communications about the Intune service and your tenant status.
-    1. Navigate to the [Microsoft Endpoint Manager admin center](https://endpoint.microsoft.com/).
-    2. Select  **Tenant administration** > **Tenant status** > **Service Health** > **Message center**.
-    3.Select a message under **INTUNE MESSAGE CENTER** to read it.
-- Get the latest announcements from Twitter see **@IntuneSuppTeam**.
- 
-Intune also shares information about updates in development, posts service incidents in Microsoft Endpoint Manager admin center, and can send email notifications. To learn how to stay current with this information, see [Staying up to date on Intune new features, service changes, and service health](https://aka.ms/MEMServiceChangeBlog).
-
-We hope you found this overview of Intune helpful. Check out [Tips and tricks for managing Intune](https://aka.ms/mem-tipsandtricks-blog) to continue learning how to get the best out of your Intune deployment.
-
-## Resources and feedback 
-
-For additional information about Microsoft Endpoint Manager, see the following documentation: 
-
-- [Microsoft Intune overview](./intune/fundamentals/what-is-intune.md)
-- [Device management overview](./intune/fundamentals/what-is-device-management.md)
-- [Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md)
-- [High-level architecture for Microsoft Intune](./intune/fundamentals/high-level-architecture.md)
