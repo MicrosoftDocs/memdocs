@@ -52,32 +52,32 @@ Application configurations, also referred to as managed configurations or applic
 For example, if your app is a browser, you may choose to add configurations that let administrators pre-set bookmarks, block certain web pages, or disable incognito modes.
 Application configuration is an entirely optional, but powerful, tool to enhance your app's management experience.
 
-See [App configuration policies for Microsoft Intune] for more detail.
+See [App configuration policies for Microsoft Intune][] for more detail.
 
 ### Android's Built-In App Configurations
 
 Android has app configuration built into the platform, called [managed configurations].
 These configurations have no dependency on the Intune App SDK and can be enabled on apps that don't integrate the Intune App SDK.
 These configurations only apply when your application is used on a device that is managed with one of Google's Android Enterprise modes.
-See [Enroll Android devices] for details on how to set up these Android Enterprise modes in Microsoft Endpoint Manager.
-Admins can configure these [application configuration policies for managed Android Enterprise devices] in Microsoft Endpoint Manager.
+See [Enroll Android devices][] for details on how to set up these Android Enterprise modes in Microsoft Endpoint Manager.
+Admins can configure these [application configuration policies for managed Android Enterprise devices][] in Microsoft Endpoint Manager.
 
-Your app can retrieve these admin-configured values either through [Android's `RestrictionsManager`] or through the Intune App SDK.
-See [retrieving app configuration from the SDK] for more information.
+Your app can retrieve these admin-configured values either through [Android's `RestrictionsManager`][] or through the Intune App SDK.
+See [retrieving app configuration from the SDK][] for more information.
 
 ### Intune App SDK App Configurations
 
 The Intune App SDK supports another mechanism for delivering app configurations, separate from Android Enterprise managed configurations.
 These configurations are exclusive to Microsoft Intune and only apply to apps that have integrated the Intune App SDK.
 However, these configurations aren't limited to devices with Android Enterprise management.
-Admins can configure these [application configuration policies for managed apps] in Microsoft Endpoint Manager.
+Admins can configure these [application configuration policies for managed apps][] in Microsoft Endpoint Manager.
 
 > [!NOTE]
 > App config can also be configured using the Graph API.
-> For information, see the [Graph API docs for MAM Targeted Config].
+> For information, see the [Graph API documentation for MAM Targeted Config][].
 
 Your app must retrieve these admin-configured values through the Intune App SDK.
-See [retrieving app configuration from the SDK] for more information.
+See [retrieving app configuration from the SDK][] for more information.
 
 ## What configurations should I add to my app?
 
@@ -120,7 +120,7 @@ If your app supports both types of app configuration, use the API as described b
 
 ## Retrieving app configuration from the SDK
 
-Applications can receive configurations from both channels using the [MAMAppConfigManager] and [MAMAppConfig] classes.
+Applications can receive configurations from both channels using the [MAMAppConfigManager][] and [MAMAppConfig][] classes.
 
 ```java
 MAMAppConfigManager configManager = MAMComponents.get(MAMAppConfigManager.class);
@@ -142,7 +142,7 @@ List<Map<String, String>> getFullData()
 
 Your app can also register for the `REFRESH_APP_CONFIG` notification that informs the app that new app configuration data is available.
 If your app caches app configuration data, it **must** register for this notification and invalidate any cached data in the handler.
-See [Register for notifications from the SDK] for more detail.
+See [Register for notifications from the SDK][] for more detail.
 
 ## Resolving conflicts
 
@@ -154,7 +154,7 @@ See [Register for notifications from the SDK] for more detail.
 If an admin configures conflicting values for the same key, Intune doesn't have any way of resolving this conflict automatically and will make all values available to your app.
 This type of conflict could happen if the admin targets different app config sets with the same key to multiple groups containing the same account.
 
-Your app can request all values for a given key from a [MAMAppConfig] object, so you can resolve conflicts with your own business logic:
+Your app can request all values for a given key from a [MAMAppConfig][] object, so you can resolve conflicts with your own business logic:
 
 ```java
 List<Boolean> getAllBooleansForKey(String key)
@@ -190,7 +190,7 @@ To validate that Intune is properly delivering app configuration policy:
     - If your app supports app configuration for managed apps, see [application configuration policies for managed apps].
     - If your app supports both types of app configuration, create both types of policy for testing.
 2. Log in to your app with your test account.
-    - For managed devices, see [Android enterprise app configuration policies] and [Enroll Android devices].
+    - For managed devices, see [Android enterprise app configuration policies][] and [Enroll Android devices][].
     - For managed apps:
       1. Install both your app and the Intune Company Portal.
       2. Log in to your app with your test account.
@@ -210,7 +210,7 @@ When testing, consider the following:
 
 ## Next Steps
 
-After you've completed all the [Exit Criteria] above, your app is now successfully integrated as with app configuration policy.
+After you've completed all the [Exit Criteria][] above, your app is now successfully integrated as with app configuration policy.
 
 The subsequent section, [Stage 7: App Participation Features], may or may not be required, depending on your app's desired app protection policy support.
 If you're unsure if any of these features apply to your app, revisit [Key Decisions for SDK integration].
@@ -220,18 +220,18 @@ If you're unsure if any of these features apply to your app, revisit [Key Decisi
 [retrieving app configuration from the SDK]:#retrieving-app-configuration-from-the-sdk
 [Exit Criteria]:#exit-criteria
 
-<!-- Other SDK Guide Markdown docs -->
+<!-- Other SDK Guide Markdown documentation -->
 [Stage 1: Planning the Integration]:app-sdk-android-phase1.md
 [Key Decisions for SDK integration]:app-sdk-android-phase1.md#key-decisions-for-sdk-integration
 [Register for notifications from the SDK]:app-sdk-android-phase7.md#register-for-notifications-from-the-sdk
 [Stage 7: App Participation Features]:app-sdk-android-phase7.md
 
-<!-- Microsoft docs -->
+<!-- Microsoft Learn documentation -->
 [App configuration policies for Microsoft Intune]:/mem/intune/apps/app-configuration-policies-overview
 [Enroll Android devices]:/mem/intune/enrollment/android-enroll 
 [application configuration policies for managed Android Enterprise devices]:/mem/intune/apps/app-configuration-policies-use-android
 [application configuration policies for managed apps]:/mem/intune/apps/app-configuration-policies-managed-app
-[Graph API docs for MAM Targeted Config]:/graph/api/resources/intune-mam-targetedmanagedappconfiguration
+[Graph API documentation for MAM Targeted Config]:/graph/api/resources/intune-mam-targetedmanagedappconfiguration
 [Validate the applied app configuration policy]:/mem/intune/apps/app-configuration-policies-overview#validate-the-applied-app-configuration-policy
 [Android enterprise app configuration policies]:/mem/intune/apps/app-configuration-policies-overview#android-enterprise-app-configuration-policies
 
