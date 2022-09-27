@@ -52,8 +52,6 @@ To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must
 - The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To support this resolution, define your AD DS DNS servers as the DNS servers for the virtual network.
 - The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
 
----
-
 ### [Windows 365 Government](#tab/government)
 
 All of the Windows 365 Enterprise requirements apply with the following additions:
