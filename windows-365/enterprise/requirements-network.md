@@ -54,16 +54,18 @@ To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must
 
 ### [Windows 365 Government](#tab/government)
 
-All of the Windows 365 Enterprise requirements apply with the following additions:
+All of the Windows 365 Enterprise requirements apply to [Windows 365 Government](introduction-windows-365-government.md) with the following additions:
 
-To use your own network and provision both Azure AD joined and Hybrid Azure AD joined Cloud PCs, you must meet the following requirements:
+To use your own network and provision either Azure AD joined or Hybrid Azure AD joined Cloud PCs, you must meet the following requirements:
 
 - The customer must have a subscription in the Azure Government environment.
-- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud - High (GCCH), this will be a US Gov region.
+- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created. For Government Community Cloud (GCC) and Government Community Cloud - High (GCCH), this will be a US Gov region.
 
 ---
 
 ## Allow network connectivity
+
+### [Windows 365 Enterprise](#tab/ent)
 
 You must allow traffic in your Azure network configuration to the following service URLs and ports:
 
@@ -114,11 +116,36 @@ You must allow traffic in your Azure network configuration to the following serv
   - enterpriseregistration.windows.net
   - global.azure-devices-provisioning.net (443 & 5671 outbound)
   - hm-iot-in-prod-preu01.azure-devices.net (443 & 5671 outbound)
-  -	hm-iot-in-prod-prap01.azure-devices.net (443 & 5671 outbound)
-  -	hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-prap01.azure-devices.net (443 & 5671 outbound)
+  - hm-iot-in-prod-prna01.azure-devices.net (443 & 5671 outbound)
   - hm-iot-in-prod-prau01.azure-devices.net (443 & 5671 outbound)
 
 All endpoints connect over port 443.
+
+### [Windows 365 Government](#tab/gov)
+
+You must allow traffic in your Azure network configuration to the service URLs and ports listed in this section. All endpoints connect over port 443 unless specified otherwise.
+
+- GCC: [Network endpoints for Microsoft Intune](/mem/intune/fundamentals/intune-endpoints).
+- GCC: [Azure Virtual Desktop required URL list](/azure/virtual-desktop/safe-url-list).
+- GCCH: [Microsoft Intune network endpoints for US government deployments](/mem/intune/fundamentals/intune-us-government-endpoints).
+- GCCH: [Required URLs for Azure Virtual Desktop for US government deployments](/azure/virtual-desktop/safe-url-list?tabs=azure-for-us-government).
+
+#### Cloud PC required URLs
+
+| Address : Port | Required for |
+| --- | --- | --- |
+| 168.63.129.16:80 | GCC, GCCH |
+| 168.63.129.16:32526 | GCC, GCCH |
+| 168.63.129.16:53 | GCC, GCCH |
+| https://ghp01.ghp.cpcgateway.usgovtrafficmanager.net | GCCH |
+| https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net | GCC |
+| TBD cmd agents / hermes related endpoint | |
+| 168.63.129.16:80 | GCC, GCCH |
+| cpcstprovghpghp01.blob.core.usgovcloudapi.net:443[br]cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443[br]cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443[br]cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443[br] | GCCH |
+| cpcstprovgcpgcp01.blob.core.usgovcloudapi.net:443[br]cpcsaamssa1gcpgcp01.blob.core.usgovcloudapi.net:443[br]cpcstcnrygcpgcp01.blob.core.usgovcloudapi.net:443[br]cpcsacnrysa1gcpgcp01.blob.core.usgovcloudapi.net:443 | GCC |
+
+---
 
 ### Remote Desktop Protocol (RDP) broker service endpoints
 
