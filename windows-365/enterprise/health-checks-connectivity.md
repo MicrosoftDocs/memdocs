@@ -32,45 +32,39 @@ ms.collection: M365-identity-device-management
 
 Connectivity health checks are run on individual Cloud PCs and give information on the state of the Cloud PC's connection. These checks are constantly run by the Windows 365 service in the backend. When any of these checks fail, the end user won’t be able to connect to their Cloud PC.
 
-You can review any connectivity errors and use the **Troubleshoot this connection** button to troubleshoot.
+You can review any failed connectivity checks and use the **Troubleshoot this connection** button to troubleshoot.
 
 ## View Cloud PC connectivity status
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **All Cloud PCs**.
-2. Select a connection in the list > **Overview** > **Connectivity and usage (preview)**.
+2. Select a connection in the list > **Overview** > **Performance (preview)**.
 
 If the Cloud PC is connected, the status will show as **Available**.
 
-If there is a problem with the Cloud PC's connection, the status will show as **Unavailable**. Details appear on the right. Select **Troubleshoot this connection** to troubleshoot the issue.
+If there is a problem with the Cloud PC's connection due to malfunctioning components, the status will show as **Unavailable**. Details appear on the right. Select **Troubleshoot this connection** to troubleshoot the issue.
 
 ## Connectivity errors
 
-When a connectivity check fails, you'll see one of the following errors. Review the status pane to see more details. You can use the **Troubleshoot this connection** button to troubleshoot.
+When a connectivity check fails, you'll see one of the following messages. Review the status pane to see more details. You can use the **Troubleshoot this connection** button to troubleshoot.
 
-- **Azure Resource Availability Check**: Azure resources are not up and running.
 - **DomainJoin**: This Cloud PC isn't joined to a domain.
-- **omainReachable**: This Cloud PC can't connect to the domain.
-- **DomainTrust**: The domain doesn't trust this Cloud PC.
+- **DomainReachable**: This Cloud PC can't connect to the domain. Review your Azure Virtual Network checks. 
+- **DomainTrust**: The domain doesn't trust this Cloud PC. Make sure the local device password matches the device password in the domain. 
 - **SxSStackListener**: The side-by-side stack installed on the Cloud PC is malfunctioning or blocked. 
 - **Unknown**: This Cloud PC might not be running or the network isn't connected to the public Internet.
-- **UrlsAccesible**: This Cloud PC is blocking traffic to [these URLs](requirements.md).
-- **VM Power Status Check**: This Cloud PC is powered off and an issue is preventing it from turning back on.
-
+- **UrlsAccesibleCheck**: This Cloud PC is blocking traffic to [these URLs](requirements.md).
 
 <!--
 Possible different view of this data:
 
 | Check | Failure description | Troubleshooting |
 | --- | --- | --- |
-| Azure Resource Availability Check | Azure resources are not up and running. | If this persists, contact Microsoft support. |
 | DomainJoin | This Cloud PC isn't joined to a domain. | Try reprovisioning the Cloud PC or join it to a domain. |
 | DomainReachable | This Cloud PC can't connect to the domain. | Check for an issue with your virtual network configuration by reviewing your [Azure network connection checks](troubleshoot-azure-network-connection.md). |
 | DomainTrust | The domain doesn't trust this Cloud PC. | Make sure that the local device password matches the device password in the domain. |
 | SxSStackListener | The side-by-side stack installed on the Cloud PC is malfunctioning or blocked. | Run the troubleshooting tool to fix this issue. |
 | Unknown | This Cloud PC might not be running or the network isn't connected to the public Internet. | Run the troubleshooting tool to get more information. |
 | UrlsAccesible | This Cloud PC is blocking traffic to [these URLs](requirements.md). | Unblock the URLs this Cloud PC uses to connect to Windows 365. |
-| VM Power Status Check | This Cloud PC is powered off and an issue is preventing it from turning back on. |  If this persists, contact Microsoft support. |
-
 
 -->
 If any of these issues persist, contact Microsoft support.
@@ -84,7 +78,7 @@ The user connectivity history report shows when a user started a connection and 
 ### View Connectivity history report
 
 1. Sign in to [windows365.microsoft.com](https://windows365.microsoft.com) > **Devices** > **Windows 365** > **All Cloud PCs**.
-2. Select a connection in the list > **Overview** > **Connectivity and usage (preview)** > **View connectivity history**.
+2. Select a connection in the list > **Overview** > **Performance (preview)** > **View connectivity history**.
 
 ### Activities
 
@@ -97,6 +91,8 @@ The report shows of the following activities:
 | Connectivity check | If the connection fails because of a failed connectivity check, the failed check is listed. |
 
 Select any activity to get more information about the event.
+
+The connectivity history report will provide visibility to other activities within a 1-hour period of a connectivity error or failed check.  As an example, if a user attempts to connect to their Cloud PC, and is not able to, the health checks and successful sign-in activity within 1 hour prior/after of the error will show as well.  This allows an admin to evaluate an error, possible cause, and if/when the system became healthy again.
 
 <!-- ########################## -->
 ## Next steps
