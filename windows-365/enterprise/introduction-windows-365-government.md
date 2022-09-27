@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/13/2022
+ms.date: 10/3/2022
 ms.topic: overview
 ms.service: cloudpc
 ms.subservice:
@@ -40,7 +40,7 @@ Windows 365 Government supports this scenario in a secure, scalable, and transpa
 
 Windows 365 Government is available GCC and GCC High customers in the US, as well as contractors (in US entities) holding or processing data on behalf of US government agencies.
 
-For more information about Cloud PCs and Windows 365, see [What is Windows 365?](..\overview.md) For more information about purchasing, see [How to buy Winodws 365 Government]().
+For more information about Cloud PCs and Windows 365, see [What is Windows 365?](..\overview.md) For more information about purchasing, see [How to buy Winodws 365 Government](aka.ms/win365).
 
 ## Features not yet supported Windows 365 Government
 
