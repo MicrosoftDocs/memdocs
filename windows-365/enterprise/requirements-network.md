@@ -142,8 +142,8 @@ You must allow traffic in your Azure network configuration to the service URLs a
 | https://gcp01.gcp.cpcgateway.usgovtrafficmanager.net | GCC |
 | TBD cmd agents / hermes related endpoint | |
 | 168.63.129.16:80 | GCC, GCCH |
-| cpcstprovghpghp01.blob.core.usgovcloudapi.net:443[br]cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443[br]cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443[br]cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443[br] | GCCH |
-| cpcstprovgcpgcp01.blob.core.usgovcloudapi.net:443[br]cpcsaamssa1gcpgcp01.blob.core.usgovcloudapi.net:443[br]cpcstcnrygcpgcp01.blob.core.usgovcloudapi.net:443[br]cpcsacnrysa1gcpgcp01.blob.core.usgovcloudapi.net:443 | GCC |
+| cpcstprovghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443<br>cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443<br> | GCCH |
+| cpcstprovgcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1gcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcstcnrygcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1gcpgcp01.blob.core.usgovcloudapi.net:443 | GCC |
 
 ---
 
