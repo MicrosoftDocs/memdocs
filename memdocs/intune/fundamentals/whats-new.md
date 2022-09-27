@@ -61,7 +61,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
-## Week of September 19, 2022
+## Week of September 26, 2022
 
 ### Monitor and troubleshoot
 
