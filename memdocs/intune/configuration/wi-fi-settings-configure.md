@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 09/20/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -30,6 +30,8 @@ ms.collection:
 ---
 
 # Add and use Wi-Fi settings on your devices in Microsoft Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 Wi-Fi is a wireless network that's used by many mobile devices to get network access. Microsoft Intune includes built-in Wi-Fi settings that can be deployed to users and devices in your organization. This group of settings is called a "profile", and can be assigned to different users and groups. Once assigned, your users get access your organization's Wi-Fi network without configuring it themselves.
 
@@ -54,9 +56,6 @@ Wi-Fi profiles support the following device platforms:
 - Windows 11
 - Windows 10
 - Windows Holographic for Business
-
-> [!NOTE]
-> For devices running Windows 8.1, you can import a Wi-Fi configuration that was previously exported from another device. For more information, see [Import Wi-Fi settings for Windows devices](wi-fi-settings-import-windows-8-1.md).
 
 ## Create the profile
 

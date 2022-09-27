@@ -2,12 +2,12 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 08/29/2022
+ms.date: 09/23/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: paasin
-ms.author: paasin
+author: banreet
+ms.author: banreetkaur
 manager: apoorvseth
 ms.reviewer: mstewart,aczechowski 
 ms.localizationpriority: medium
@@ -29,7 +29,7 @@ For information about what's new in the *current branch* of Configuration Manage
 > [!TIP]
 > You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../use-docs.md#notifications).
 <!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us` -->
+> `https://learn.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us` -->
 
 ## <a name="bkmk_reqs"></a> Requirements and limitations
 
@@ -127,6 +127,12 @@ bullet format:
 <!-- - [title](2021/technical-preview-2101.md) <!-- ID -->
 
 The following features are available with the most recent Configuration Manager technical preview version:
+
+### Technical preview version 2209
+
+- [Improvements to the console](2022/technical-preview-2209.md#bkmk_improvements-to-the-console) <!--14908615-->
+- [Improvements to the dark theme](2022/technical-preview-2209.md#bkmk_improvements-to-the-dark-theme) <!--15346075-->
+- [Other Updates](2022/technical-preview-2209.md#bkmk_other-updates) <!--14975011-->
 
 ### Technical preview version 2208
 
