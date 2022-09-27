@@ -26,6 +26,7 @@ ms.custom: intune-classic; get-started
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - EngageScoreSep2022
 ---
 
 # Assign licenses to users so they can enroll devices in Intune
