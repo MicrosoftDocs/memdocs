@@ -41,7 +41,7 @@ Each customer has its specific requirements based on the workload they use to pr
 
 ### [Windows 365 Enterprise](#tab/enterprise)
 
-To use your own network and provision Azure AD joined Cloud PCs, you must meet the following requirements:
+To use your own network and provision Azure Active Directory (Azure AD) joined Cloud PCs, you must meet the following requirements:
 
 - Azure virtual network: You must have a virtual network (vNET) in your Azure subscription in the same region as where the Windows 365 desktops are created.
 - Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
@@ -56,10 +56,22 @@ To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must
 
 All of the Windows 365 Enterprise requirements apply to [Windows 365 Government](introduction-windows-365-government.md) with the following additions:
 
-To use your own network and provision either Azure AD joined or Hybrid Azure AD joined Cloud PCs, you must meet the following requirements:
+#### Azure Active Directory joined Cloud PCs
+
+To use your own network and provision Azure AD joined Cloud PCs, you must meet the following requirements:
 
 - The customer must have a subscription in the Azure Government environment.
-- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created. For Government Community Cloud (GCC) and Government Community Cloud - High (GCCH), this will be a US Gov region.
+- Azure virtual network: You must have a virtual network (vNET) in your Azure Government subscription in the same region as where the Windows 365 Cloud PCs are created.  For Government Community Cloud (GCC) and Government Community Cloud High (GCCH), this will be a US Gov region.
+- Network bandwidth: See [Azure’s Network guidelines](/windows-server/remote/remote-desktop-services/network-guidance).
+- A subnet within the vNet and available IP address space.
+
+#### Hybrid Azure AD joined Cloud PCs
+
+To use your own network and provision Hybrid Azure AD joined Cloud PCs, you must meet the above requirements, and the following requirements:
+
+- The customer must have a subscription in the Azure Government environment.
+- The Azure virtual network must be able to resolve DNS entries for your Active Directory Domain Services (AD DS) environment. To support this resolution, define your AD DS DNS servers as the DNS servers for the virtual network.
+- The Azure vNet must have network access to an enterprise domain controller, either in Azure or on-premises.
 
 ---
 
@@ -195,7 +207,6 @@ Direct connectivity to Azure Virtual Desktop RDP broker service endpoints is cri
 To make it easier to configure network security controls, use Azure Virtual Desktop service tags to identity those endpoints for direct routing using an [Azure Networking User Defined Route (UDR)](/azure/virtual-network/virtual-networks-udr-overview). A UDR will result in direct routing between your virtual network and the RDP broker for lowest latency. For more information about Azure Service Tags, see [Azure service tags overview](/azure/virtual-desktop/network-connectivity).
 
 Changing the network routes of a Cloud PC (at the network layer or at the Cloud PC layer like VPN) might break the connection between the Cloud PC and the Azure Virtual Desktop RDP broker. If so, the end user will be disconnected from their Cloud PC until a connection be re-established.
-
 
 ## DNS requirements
 
