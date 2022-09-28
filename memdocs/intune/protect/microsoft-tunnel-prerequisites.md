@@ -232,7 +232,6 @@ When creating the Server configuration for the tunnel, you can specify a differe
   - Security Token Service: `*.sts.windows.net`
   - Azure storage for tunnel logs: `*.blob.core.windows.net`
   - Additional storage endpoint urls: 
-  - `*.mwh03prdstr02a.store.core.windows.net`
   - `*.blob.storage.azure.net`
 
 
