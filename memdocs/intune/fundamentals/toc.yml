@@ -80,6 +80,8 @@ items:
     href: surface-management-portal.md  
 - name: How-to guides
   items:
+  - name: Get started
+    href: get-started-with-intune.md
   - name: Plan and Deploy
     items:
     - name: Overview

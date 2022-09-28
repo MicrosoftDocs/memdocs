@@ -7,7 +7,7 @@ keywords: what is Intune, mobile endpoint management, mobile application managem
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/22/2022
+ms.date: 09/27/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -71,9 +71,11 @@ Some key features and benefits of Intune include:
 
   For more information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
-- You **use a web-based admin center** that focuses on endpoint management. Admins can sign into the admin center from any device that has internet access.
+- You **use a web-based admin center** that focuses on endpoint management. Admins can sign into the Endpoint Manager admin center from any device that has internet access.
 
-  For more information, go to [Walkthrough the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md).
+  For more information, go to [Walkthrough the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md). To sign in to the admin center, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+  This admin center uses [Microsoft Graph](/graph/overview) REST APIs to programmatically access the Intune service. Every action in the admin center is a Microsoft Graph call. If you’re not familiar with Graph, and want to learn more, go to [Graph integrates with Microsoft Intune](/graph/intune-concept-overview).
 
 ## Integrates with other Microsoft services and apps
 
