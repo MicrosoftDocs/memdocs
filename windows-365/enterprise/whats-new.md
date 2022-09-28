@@ -65,10 +65,6 @@ You can now set up system alerts and automated emails to be notified when certai
 
 We've added a new endpoint which the Windows 365 service requires to be accessible: *.infra.windows365.microsoft.com". This is part of ongoing endpoint consolidation work to reduce the number of FQDNs required to be accessible for the service.
 
-#### Windows 365 Business admins can provide feedback<!--41418099-->
-
-By using windows365.microsoft.com, Windows 365 Business admins can now provide feedback just like users provide feedback. For more information, see [User feedback](end-user-access-cloud-pc.md#feedback).
-
 <!-- ########################## -->
 ## Week of September 19, 2022
 
