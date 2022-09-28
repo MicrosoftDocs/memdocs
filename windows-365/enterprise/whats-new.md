@@ -84,8 +84,6 @@ New gallery images are now available that include support for Windows 11 version
 
 - Win11 22H2 + M365 Apps
 - Win11 22H2 + Optimizations
-- Win10 22H2 + M365 Apps
-- Win10 22H2 + Optimizations
 
 <!-- ########################## -->
 ## Week of August 29, 2022 (Service release 2208)
