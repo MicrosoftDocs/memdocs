@@ -6,8 +6,8 @@ ms.date: 09/20/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-author: baladelli
-ms.author: baladell
+ms.author: sheetg
+author: sheetg09 
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

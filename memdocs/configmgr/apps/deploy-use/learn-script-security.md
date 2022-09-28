@@ -6,8 +6,8 @@ ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: conceptual
-author: baladelli
-ms.author: baladell
+ms.author: gokarthi
+author: gowdhamankarthikeyan
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
