@@ -145,6 +145,47 @@ You must allow traffic in your Azure network configuration to the service URLs a
 | cpcstprovghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1ghpghp01.blob.core.usgovcloudapi.net:443<br>cpcstcnryghpghp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1ghpghp01.blob.core.usgovcloudapi.net:443<br> | GCCH |
 | cpcstprovgcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsaamssa1gcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcstcnrygcpgcp01.blob.core.usgovcloudapi.net:443<br>cpcsacnrysa1gcpgcp01.blob.core.usgovcloudapi.net:443 | GCC |
 
+#### Intune-dependent URLs
+
+| Address : Port | Required for |
+| --- | --- | --- |
+| portal.manage.microsoft.us:443 | GCCH |
+|m.manage.microsoft.us:443 | GCCH |
+| mam.manage.microsoft.us:443 | GCCH |
+| wip.mam.manage.microsoft.us:443 | GCCH |
+| Fef.FXPASU01.manage.microsoft.us:443 | GCCH |
+| portal.manage.microsoft.com:443 | GCC |
+| m.manage.microsoft.com:443 | GCC |
+| fef.msuc03.manage.microsoft.com:443 | GCC |
+| mam.manage.microsoft.com:443 | GCC |
+| wip.mam.manage.microsoft.com:443 | GCC |
+
+#### Azure Active Directory-dependent URLs
+
+| Address : Port | Required for |
+| --- | --- | --- |
+| login.microsoftonline.us | GCCH |
+| enterpriseregistration.microsoftonline.us:443 | GCCH |
+| login.live.com:443 | GCCH, GCC |
+| login.microsoftonline.com:443 | GCC |
+| enterpriseregistration.windows.net:443 | GCC |
+
+#### Azure Virtual Device-dependent URLs
+
+| Address : Port | Required for |
+| --- | --- | --- |
+| rdweb.wvd.azure.us:443 | GCCH |
+| rdbroker.wvd.azure.us:443 | GCCH |
+| rdweb.wvd.microsoft.com:443 | GCC |
+| rdbroker.wvd.microsoft.com:443 | GCC |
+
+#### Localization package
+
+| Address : Port | Required for |
+| --- | --- | --- |
+|  download.microsoft.com:443 | GCCH, GCC |
+| software-download.microsoft.com:443 | GCCH, GCC |
+
 ---
 
 ### Remote Desktop Protocol (RDP) broker service endpoints
