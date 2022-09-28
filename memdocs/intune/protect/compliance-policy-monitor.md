@@ -222,9 +222,8 @@ Policy conflicts can occur when multiple Intune policies are applied to a device
 
 - If you have deployed multiple compliance policies, Intune uses the most secure of these policies.
 
+To learn more about conflict resolution for policies, see [If multiple policies are assigned to the same user or device, how do I know which settings gets applied?](../configuration/device-profile-troubleshoot.md#if-multiple-policies-are-assigned-to-the-same-user-or-device-how-do-i-know-which-settings-gets-applied).
+
 ## Next steps
 
 [Compliance policies overview](device-compliance-get-started.md)
-
-
-
