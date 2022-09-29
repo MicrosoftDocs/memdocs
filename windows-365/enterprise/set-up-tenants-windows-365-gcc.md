@@ -62,10 +62,10 @@ If you want to use Azure AD join or hybrid Azure AD join, consider these prepara
 ## Mapping the commercial and government tenants
 For the two tenants to be connected and have the ability for a user with an identity in the Azure Commercial cloud to access their Windows 365 Cloud PCs provisioned in the Azure Government,  the Tenant Mapping PowerShell script will need to be run.  The mapping also enables administrators using their Azure Commercial identity to provision and manage the Windows 365 Cloud PCs in the Azure Government cloud.
 
-1. Gather the following information. It will be used later in these steps.
-  - Commercial Azure tenant ID.
+1. Find the following information. It will be used later in these steps.
+  - [Commercial Azure tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
   - Commercial Azure Global administrator user name and password.
-  - Azure Government tenant ID.
+  - [Azure Government tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
   - Azure Government Global administrator credentials user name and password.
 2. Make sure you have Windows PowerShell version 5.1. Other versions may result in errors when running the script.
 3. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
