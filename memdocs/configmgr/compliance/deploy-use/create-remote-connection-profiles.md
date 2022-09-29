@@ -8,7 +8,6 @@ ms.technology: configmgr-compliance
 ms.topic: conceptual
 ms.author: banreetkaur
 author: banreet
-ms.author: sheetg
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart,aczechowski
