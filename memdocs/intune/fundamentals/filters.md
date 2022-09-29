@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/26/2022
+ms.date: 09/29/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -69,6 +69,16 @@ Before a policy is applied to a device, filters dynamically evaluate applicabili
 3. The filter is evaluated when the device enrolls, checks in with the Intune service, or at any other time a policy evaluates.
 
 4. You see the filter results based on the evaluation. For example, the app or policy applies, or they don't apply.
+
+### Restrictions
+
+There are some restrictions when creating filters:
+
+- For each tenant, there can be up to 200 filters.
+- Each filter is limited to 3072 characters.
+- Devices must be enrolled in Intune. Filters can't be evaluated on devices that aren't enrolled. This behavior includes:
+  - A restriction on the **Available with or without enrollment** app assignment intent
+  - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endoint integration, such as servers.
 
 ## Prerequisites
 
