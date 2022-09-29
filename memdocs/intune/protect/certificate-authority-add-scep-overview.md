@@ -146,6 +146,7 @@ The following third-party certification authorities support Intune:
 - [Sectigo](https://sectigo.com/products)
 - [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)
 - [Venafi](https://www.venafi.com/platform/enterprise-mobility)
+- [PacketFence](https://www.packetfence.org/doc/PacketFence_Installation_Guide.html#_intune_integration)
 
 If you're a third-party CA interested in integrating your product with Intune, review the API guidance:
 
