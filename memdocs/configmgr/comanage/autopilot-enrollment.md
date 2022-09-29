@@ -7,10 +7,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: how-to
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
-ms.reviewer: dannygu
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+ms.reviewer: mstewart,aczechowski
+manager: apoorvseth
+ms.collection: tier3
 ---
 
 # How to enroll with Autopilot
