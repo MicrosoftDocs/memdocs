@@ -302,6 +302,7 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
 
      Enter one or more URLs for the NDES Servers that issue certificates via SCEP. For example, enter something like `https://ndes.contoso.com/certsrv/mscep/mscep.dll`.
 
+     To allow devices on the internet to get certificates, you must specify the NDES URL external to your corporate network.
      The URL can be HTTP or HTTPS. However, to support the following devices, the SCEP Server URL must use HTTPS:
      - Android device administrator
      - Android Enterprise device owner
