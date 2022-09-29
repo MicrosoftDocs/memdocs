@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 09/12/2022
+ms.date: 09/28/2022
 ms.localizationpriority: high
 ---
 
@@ -19,10 +19,12 @@ ms.localizationpriority: high
 > 
 > For Intune app protection policies and app configuration delivered through Managed apps App configuration policies, Intune requires iOS 14.x or later.
 
-### Google
+### Android
 
 - Android 8.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
-- Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)  
+- Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
+-   Android open source project devices (AOSP) supported devices
+    - RealWear devices (Firmware 11.2 or later)
 
 [!INCLUDE [android-supported-os](android-supported-os.md)]
 
