@@ -31,7 +31,7 @@ If you want to evaluate a cloud-managed modern desktop in your own organization,
 ## Prerequisites
 
 - [Set the MDM authority to Intune](../fundamentals/mdm-authority-set.md#set-mdm-authority-to-intune) - The mobile device management (MDM) authority setting determines how you manage your devices. As an IT admin, you must set an MDM authority before users can enroll devices for management.
-- M365 E3 minimum (or M365 E5 for best security)
+- M365 Business premiuum or M365 E3  or M365 E5 for best security.
 - Windows 10 1903 device (registered with Windows Autopilot for best end-user experience)
 - Intune administrator permissions required to complete this guided scenario:
   - Device configuration Read, Create, Delete, Assign and Update
