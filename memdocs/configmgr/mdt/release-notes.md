@@ -5,11 +5,12 @@ ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-author: baladelli
+author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Microsoft Deployment Toolkit release notes  
