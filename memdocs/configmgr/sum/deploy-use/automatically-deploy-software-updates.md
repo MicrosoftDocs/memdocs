@@ -10,6 +10,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 #  Automatically deploy software updates  

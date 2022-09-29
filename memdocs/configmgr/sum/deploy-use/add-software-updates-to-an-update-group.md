@@ -6,10 +6,12 @@ ms.date: 07/12/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-manager: dougeby
-author: mestew
-ms.author: mstewart
+manager: apoorvseth
+author: baladell
+ms.author: baladell
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Add software updates to an update group  

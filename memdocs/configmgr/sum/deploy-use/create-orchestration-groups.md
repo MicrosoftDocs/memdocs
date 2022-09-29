@@ -6,10 +6,12 @@ ms.date: 12/28/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: baladell
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Create and use orchestration groups in Configuration Manager

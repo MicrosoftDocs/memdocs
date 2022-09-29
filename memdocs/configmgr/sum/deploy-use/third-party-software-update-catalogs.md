@@ -10,6 +10,8 @@ author: baladelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Available third-party software update catalogs
