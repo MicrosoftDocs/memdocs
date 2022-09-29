@@ -6,6 +6,7 @@ ms.technology: configmgr-core
 ms.topic: include
 ms.localizationpriority: high
 ms.date: 09/29/2021
+ms.collection: tier3
 ---
 <!--This file is currently used by deploy-firewall-policy.md, deploy-asr-policy.md, deploy-antivirus-policy.md, and atp-onboard.md-->
 
