@@ -4,7 +4,7 @@ ms.technology: configmgr-core
 ms.topic: include
 ms.localizationpriority: high
 ms.date: 09/29/2021
-ms.author:  banreetkaur
+ms.author: banreetkaur
 author: Banreet
 ms.collection: tier3
 manager: apoorvseth

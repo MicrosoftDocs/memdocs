@@ -6,10 +6,12 @@ ms.date: 03/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: high
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Tenant attach data collection
