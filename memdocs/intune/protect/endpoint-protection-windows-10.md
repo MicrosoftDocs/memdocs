@@ -21,7 +21,7 @@ search.appverid: MET150
 ms.custom: intune-azure; seodec18
 ms.collection: 
   - M365-identity-device-management
-  - highpri
+  - tier3
 ---
 
 # Windows settings you can manage through an Intune Endpoint Protection profile

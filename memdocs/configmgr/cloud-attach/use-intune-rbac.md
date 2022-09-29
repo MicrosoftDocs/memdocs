@@ -6,11 +6,12 @@ ms.date: 08/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: high
-ms.collection: highpri
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Intune role-based access control for tenant-attached clients
