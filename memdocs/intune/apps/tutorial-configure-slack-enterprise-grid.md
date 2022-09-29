@@ -26,7 +26,9 @@ ms.reviewer: manchen
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Tutorial: Configure Slack to use Intune for EMM and app configuration
