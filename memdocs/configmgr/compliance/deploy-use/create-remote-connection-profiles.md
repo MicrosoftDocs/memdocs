@@ -6,8 +6,8 @@ ms.date: 01/06/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-author: sheetg09
-manager: apoorvseth
+ms.author: banreetkaur
+author: banreet
 ms.author: sheetg
 ms.localizationpriority: medium
 ms.collection: tier3
