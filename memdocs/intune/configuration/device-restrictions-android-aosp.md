@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 09/20/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Android (AOSP) device settings to allow or restrict features using Intune
@@ -72,7 +74,7 @@ Create an [AOSP device restrictions profile](device-restrictions-configure.md). 
 
 - **Block screen capture**: Prevents screenshots or screen captures on the device. It also prevents the content from being shown on display devices that don't have a secure video output. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users capture the screen contents as an image.  
 
-- **Disable factory reset**: Prevents users from using the factory reset option in the device's settings.  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device. 
+- **Disable factory reset**: Prevents users from using the factory reset option in the device's settings.  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
 
 - **Block mounting of external media**: Prevents users from using or connecting any external media on the device.  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to connect external media.  
 
