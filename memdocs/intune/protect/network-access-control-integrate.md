@@ -25,16 +25,18 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Network access control (NAC) integration with Intune
- 
+
 Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources.
 
 >[!NOTE]
 > A new NAC service was released in July 2021 and many of our NAC partners are transitioning to this new service. Currently, the following NAC partner product supports the new NAC service:
-> 
+>
 > - Cisco ISE 3.1 and later
 > - Citrix Gateway 13.0-84.11 and later
 > - Citrix Gateway 13.1-12.50 and later

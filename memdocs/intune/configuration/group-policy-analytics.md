@@ -71,7 +71,7 @@ This article shows you how export your GPOs, import the GPOs into Endpoint Manag
 
     :::image type="content" source="./media/group-policy-analytics/sample-group-policy-object-save-report.png" alt-text="Open Group Policy management and save a GPO as an XML file report.":::
 
-4. Select an easily accessible folder for your export. In **Save as type**, select **XML File**. You'll add this file in Endpoint Manager group policy analytics.
+5. Select an easily accessible folder for your export. In **Save as type**, select **XML File**. You'll add this file in Endpoint Manager group policy analytics.
 
 Make sure that the file is less than 4 MB and has a proper Unicode encoding. If the exported file is greater than 4 MB, then reduce the number of settings in the group policy object.
 
@@ -103,7 +103,7 @@ Make sure that the file is less than 4 MB and has a proper Unicode encoding. If 
 
     - **Setting Name**: The name is automatically generated using information in the GPO setting.
     - **Group Policy Setting Category**: Shows the setting category for ADMX settings, such as Internet Explorer and Microsoft Edge. Not all settings have a setting category.
-    - **MDM Support**: 
+    - **MDM Support**:
 
       - **Yes** means there's a matching setting available in Endpoint Manager. You can configure this setting in the Settings Catalog.
       - **No** means there isn't a matching setting available to MDM providers, including Intune.
@@ -157,7 +157,7 @@ If your imported GPO has settings that aren't in the supported CSPs and Group Po
     - Select **Generate report** or **Generate again** to get current data.
     - See the list of settings in your GPO.
     - Use the search bar to find specific settings.
-    - Get a time stamp of when the report was last generated. 
+    - Get a time stamp of when the report was last generated.
 
     > [!NOTE]
     > After you add or remove your imported GPOs, it can take about 20 minutes to update the Migration Readiness reporting data.
