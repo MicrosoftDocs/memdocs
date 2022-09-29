@@ -6,11 +6,12 @@ ms.date: 09/09/2016
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-author: aczechowski
+author: BalaDelli
 ms.author: aaroncz
-manager: dougeby
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # User Driven Installation - Developers Guide

@@ -5,11 +5,12 @@ ms.date: 03/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-author: aczechowski
+author: BalaDelli
 ms.author: aaroncz
-manager: dougeby
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Microsoft Deployment Toolkit known issues
