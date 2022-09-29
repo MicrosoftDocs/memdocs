@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 09/20/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -28,6 +28,8 @@ ms.collection: M365-identity-device-management
 ---
 
 # Add VPN settings on Windows 8.1 devices in Microsoft Intune
+
+[!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]
 
 This article shows you the Intune settings you can use to configure VPN connections on devices running Windows 8.1.
 

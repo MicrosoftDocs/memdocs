@@ -90,7 +90,7 @@ For more help using the settings catalog to create a device configuration policy
 
 ## Use a GPO to manage RDP device redirections
 
-To manage any of the redirections by using GPO, create and assign a GPO in your Windows Server Active Directory domain. Make sure to use the corresponding policies as shown in the (RDP device redirection settings table)(#rdp-device-redirection-settings). To learn more about the policies, download the [Group Policy Settings Reference Spreadsheet](https://www.microsoft.com/download/101451).
+To manage any of the redirections by using GPO, create and assign a GPO in your Windows Server Active Directory domain. Make sure to use the corresponding policies as shown in the [RDP device redirection settings table](#rdp-device-redirection-settings). To learn more about the policies, download the [Group Policy Settings Reference Spreadsheet](https://www.microsoft.com/download/101451).
 
 <!-- ########################## -->
 ## Next steps

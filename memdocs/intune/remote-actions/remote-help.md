@@ -77,7 +77,7 @@ The Remote help app supports the following capabilities:
 > [!NOTE]
 > Remote help has the following limitations:  
 >
-> - Remote help is not supported on GCC, GCC High or DoD Tenants.
+> - Remote help is not supported on GCC High or DoD Tenants.
 > - You cannot establish a remote help session from one tenant to a different tenant.
 > - May not be available in all markets or localizations.
 
@@ -311,10 +311,13 @@ Remote help logs data during installation and during remote help sessions, which
 
 ## Installation details
 
-Remote help will create the following firewall inbound rules:
-- Quick Assist Firewall Exception
-- Quick Assist RDP Firewall Exception
-- Remote help Firewall Exception
+Automatic firewall rule creation from the Remote help installer has been removed. However, if needed, System administrators can create firewall rules.
+
+Depending on the environment that Remote help is utilized in, it may be necessary to create firewall rules to allow Remote help through the Windows Defender Firewall. In situations where this is necessary, these are the Remote help executables that should be allowed through the firewall:
+
+ - C:\Program Files\Remote help\RemoteHelp.exe
+ - C:\Program Files\Remote help\RHService.exe
+ - C:\Program Files\Remote help\RemoteHelpRDP.exe
 
 ## Languages Supported
 

@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/23/2022
+ms.date: 09/27/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,43 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of September 26, 2022 (Service release 2209)
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### System alerts and email notifications (preview)<!--40932899 -->
+
+You can now set up system alerts and automated emails to be notified when certain events, warnings, or errors occur in the Windows 365 service. A subset of critical Cloud PC issues will be sent automatically to admins. In addition, you can define alert rules, such as target audience (devices, user groups, tenants), thresholds, frequency, and notification channels. For more information, see [Alerts](alerts.md).
+
+<!-- ***********************************************-->
+### Miscellaneous
+
+#### Allow list URL change for Windows 365<!--41400001 -->
+
+We've added a new endpoint which the Windows 365 service requires to be accessible: *.infra.windows365.microsoft.com". This is part of ongoing endpoint consolidation work to reduce the number of FQDNs required to be accessible for the service.
+
+<!-- ########################## -->
+## Week of September 19, 2022
+
+<!-- ***********************************************-->
+### Device management
+
+#### Downsize Cloud PCs (Preview)<!--41076858 -->
+
+You can now downsize a Cloud PC's RAM and specifications (except disk size). For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
+
+<!-- ***********************************************-->
+### Device provisioning
+
+#### Windows 365 Cloud PC support for Windows 11 Enterprise version 22H2<!--41359336-->
+
+New gallery images are now available that include support for Windows 11 version 22H2. The following gallery images can be used for newly provisioned Cloud PCs:
+
+- Win11 22H2 + M365 Apps
+- Win11 22H2 + Optimizations
 
 <!-- ########################## -->
 ## Week of August 29, 2022 (Service release 2208)
