@@ -7,10 +7,10 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 manager: apoorvseth
-author: banreet
+author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.collection: highpri
+ms.collection: tier3
 ---
 
 # <a name="bkmk_attach"></a> Enable Microsoft Endpoint Manager tenant attach: Device sync and device actions
