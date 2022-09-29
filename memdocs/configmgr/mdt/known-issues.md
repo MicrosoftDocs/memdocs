@@ -6,7 +6,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
 author: BalaDelli
-ms.author: aaroncz
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
