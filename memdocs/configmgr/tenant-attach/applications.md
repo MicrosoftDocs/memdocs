@@ -10,7 +10,6 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-manager: apoorvseth
 ms.reviewer: mstewart,aczechowski
 ms.collection: tier3
 ---
