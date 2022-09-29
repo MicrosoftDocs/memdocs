@@ -25,7 +25,9 @@ ms.reviewer: demerson
 ms.suite: ems
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Tutorial: Protect Exchange Online email on unmanaged devices
