@@ -1,6 +1,6 @@
 ---
-author: mestew
-ms.author: mstewart
+ms.author: gokarthi
+author: gowdhamankarthikeyan
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.topic: include
