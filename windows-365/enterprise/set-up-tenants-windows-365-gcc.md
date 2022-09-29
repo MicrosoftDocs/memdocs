@@ -66,7 +66,7 @@ For the two tenants to be connected and have the ability for a user with an iden
     - [Commercial Azure tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
     - Commercial Azure Global administrator user name and password.
     - [Azure Government tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
-  - Azure Government Global administrator credentials user name and password.
+    - Azure Government Global administrator credentials user name and password.
 2. Make sure you have Windows PowerShell version 5.1. Other versions may result in errors when running the script.
 3. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
 4. Navigate to the **Windows 365 GCC** folder > right-click **TenantMapping.ps1** > **Save link as** > save the file to a location on your computer.
