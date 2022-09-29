@@ -6,7 +6,7 @@ ms.date: 12/28/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-author: baladell
+author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium

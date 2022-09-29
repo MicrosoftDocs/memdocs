@@ -7,7 +7,7 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 manager: apoorvseth
-author: baladell
+author: BalaDelli
 ms.author: baladell
 ms.localizationpriority: medium
 ms.reviewer: mstewart,aczechowski
