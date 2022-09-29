@@ -7,9 +7,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-osd
 ms.topic: how-to
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # High-impact task sequence settings
