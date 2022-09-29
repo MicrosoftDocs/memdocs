@@ -126,7 +126,7 @@ To confirm your Microsoft Intune license or trial, use the following steps:
 To check on your Azure AD Premium license, use the following steps:
 
 1. Sign in to the [Azure portal](https://portal.azure.com).
-2. Select **Azure Active Directory**. Under **Basic information**, view your license.
+2. Select **Azure Active Directory**. Under **Manage** > **Select Licenses** > **All products** > **Select the License** and choose **Service Plan details** to view your license.
 
 If you don't have a license for Azure AD Premium, see [Sign up for Azure Active Directory Premium editions](/azure/active-directory/fundamentals/active-directory-get-started-premium).
 
