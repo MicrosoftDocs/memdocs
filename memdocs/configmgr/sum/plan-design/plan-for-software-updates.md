@@ -2,14 +2,16 @@
 title: Plan for software updates
 titleSuffix: Configuration Manager
 description: A plan for the software update point infrastructure is essential before you use software updates in a Configuration Manager production environment.
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Plan for software updates in Configuration Manager
