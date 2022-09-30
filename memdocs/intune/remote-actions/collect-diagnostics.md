@@ -33,6 +33,7 @@ ms.collection: M365-identity-device-management
 
 The **Collect diagnostics** remote action lets you collect and download Windows device logs without interrupting the user. Only non-user locations and file types are accessed.
 
+<!--1895390-->
 The **Collect diagnostics** remote action can also be configured to automatically collect and upload Windows devices logs upon an Autopilot failure on a device. When an Autopilot failure occurs, logs will be processed on the failed device and then automatically captured and uploaded to Intune.
 
 The diagnostic collection is stored for 28 days and then deleted. Each device can have up to 10 collections stored at one time.
@@ -63,6 +64,7 @@ To use the *Collect diagnostics* action:
 6. The data zip file is added to your download tray and you can save it to your computer.
 
 ## Diagnostics collection on Autopilot failure
+<!--1895390-->
 
  For Autopilot diagnostics collection, no additional action is required. Autopilot diagnostics will be automatically captured when devices experience a failure as long as the Autopilot automatic capture diagnostic feature is enabled.
 
@@ -76,6 +78,7 @@ To view the diagnostics collected after an Autopilot failure:
 
 ## Data collected
 
+<!--1895390-->
 While there's no intent to collect personal data, diagnostics may include user identifiable information such as user or device name.
 
 If you've installed [KB5011543](https://support.microsoft.com/topic/march-22-2022-kb5011543-os-builds-19042-1620-19043-1620-and-19044-1620-preview-4fe2d1c0-720f-47fe-9523-75339bc107a1) on Windows 10 or [KB5011563](https://support.microsoft.com/topic/march-28-2022-kb5011563-os-build-22000-593-preview-40df54c9-b5a9-42e5-ae1c-9a33ff91ca91) on Windows 11, the format of the zip file will be simpler including:
@@ -168,6 +171,7 @@ The **Collect diagnostics** remote action is enabled by default. You can disable
      :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled.":::
 
 ## Disable Autopilot automatic collection of diagnostics
+<!--1895390-->
 
 Autopilot automatic diagnostic capture is enabled by default. You can disable Autopilot automatic diagnostic capture by following these steps:
 
