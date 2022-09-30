@@ -98,7 +98,7 @@ You'll need Commercial and Gov credentials and line of sight to both tenants to 
 
 ## Set permissions for networking and custom image management
 
-When provisioning Windows 365 Cloud PCs without the Microsoft Hosted Network (MHN), you must define an Azure Network Connection (ANC) resource that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure.  This will allow GCC customers to use their own network.  There's also an option to enable customers to use custom images when the Windows 365 Cloud PCs are provisioned.
+When provisioning Windows 365 Cloud PCs without the Microsoft Hosted Network (MHN), you must define an Azure Network Connection (ANC) resource that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure. This ANC allows GCC customers to use their own network. There's also an option to enable customers to use custom images when the Windows 365 Cloud PCs are provisioned.
 
 1. Gather the following information. It will be used later in these steps.
     - Commercial Azure tenant ID.
