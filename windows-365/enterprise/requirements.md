@@ -68,7 +68,7 @@ If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following 
 ## Management requirements
 
 - You must use [Microsoft Endpoint Manager admin center](https://admin.microsoft.com/) to manage your Cloud PCs.
-- You mus have a Windows 365 Enterprise license to manage Cloud PC configurations.
+- You must have a Windows 365 Enterprise license to manage Cloud PC configurations.
 
 ## Role and identity requirements
 
