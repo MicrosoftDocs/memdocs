@@ -12,7 +12,7 @@ ms.date: 09/22/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
-ms.topic: article
+ms.topic: article 
 ---
 
 # Windows Autopilot: What's new

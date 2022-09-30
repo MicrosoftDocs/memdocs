@@ -6,10 +6,12 @@ ms.date: 09/26/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+author: Banreet
+manager: apoorvseth
+ms.author: banreetkaur
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Set up a Configuration Manager lab
