@@ -1,19 +1,18 @@
 ---
-title: "GetRemCtrlSettings Method"
+title: GetRemCtrlSettings Method
 description: The GetRemCtrlSettings Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the remote control settings on a client computer.
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b090c545-39e8-4e74-8b5b-d95a9a12ef29
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 # GetRemCtrlSettings Method in Class CCM_RemoteControlManager
 The `GetRemCtrlSettings` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the remote control settings on a client computer.    
