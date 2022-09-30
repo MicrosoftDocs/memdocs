@@ -6,11 +6,12 @@ ms.date: 10/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
-author: aczechowski
+author: Banreet
 ms.author: aaroncz
-manager: dougeby
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # About Configuration Manager custom action client applications

@@ -1,19 +1,18 @@
 ---
-title: "Verifying the Application Management Extension"
-titleSuffix: "Configuration Manager"
-description: "Verifying the Application Management Extension. Verify the new Deployment Type is available in the console."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Verifying the Application Management Extension
+titleSuffix: Configuration Manager
+description: Verifying the Application Management Extension. Verify the new Deployment Type is available in the console.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: a93ed163-3b08-4d56-991f-630586f835a7
-author: aczechowski
+author: Banreet
 ms.author: aaroncz
-manager: dougeby
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 # Verifying the Application Management Extension
 ## Server  

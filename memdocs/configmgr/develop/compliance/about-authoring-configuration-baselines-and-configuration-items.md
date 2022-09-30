@@ -6,13 +6,13 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 39e47528-ea59-4d32-8baf-d017d3a44426
-author: aczechowski
+author: Banreet
 ms.author: aaroncz
-manager: dougeby
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 description: Learn about how to configure data through the Configuration Manager console or directly editing the DCM Digest XML file.
-
+ms.reviewer: mstewart,aczechowski
 ---
 
 # About authoring configuration baselines and configuration items

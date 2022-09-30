@@ -1,19 +1,18 @@
 ---
-title: "Application Configuration Item Example 1"
-titleSuffix: "Configuration Manager"
-description: "The Application Configuration Item Instance example determines whether the Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Application Configuration Item Example 1
+titleSuffix: Configuration Manager
+description: The Application Configuration Item Instance example determines whether the Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: adc63f00-8fcf-4212-910a-26ae9154d574
-author: aczechowski
+author: Banreet
 ms.author: aaroncz
-manager: dougeby
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 # Application Configuration Item Example 1
 The following Application Configuration Item Instance example determines whether the Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection.  

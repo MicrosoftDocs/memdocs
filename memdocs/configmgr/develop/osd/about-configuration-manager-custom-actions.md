@@ -1,19 +1,18 @@
 ---
-title: "Custom Actions"
+title: Custom Actions
 description: You can create custom actions that can be used with existing Configuration Manager actions.
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 894bd31a-0a51-403b-84e9-1cc4958dfa7c
-author: aczechowski
+author: Banreet
 ms.author: aaroncz
-manager: dougeby
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 # About Configuration Manager Custom Actions
 You can create custom actions that can be used with existing Configuration Manager actions.  
