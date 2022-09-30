@@ -6,11 +6,13 @@ ms.date: 03/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
 ROBOTS: NOINDEX
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # What's new in version 2010 of Configuration Manager current branch
