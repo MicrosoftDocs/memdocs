@@ -7,9 +7,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Asset intelligence deprecation
