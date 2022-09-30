@@ -7,13 +7,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 6dbd4a5d-a1aa-403e-9431-b97276d2b200
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Stop method in class SMS_AzureService
