@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 07/18/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -121,7 +121,6 @@ When you're ready to proceed, create an [iOS/iPadOS device restrictions configur
   This feature applies to:  
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer  
-
 
 ## Autonomous single app mode (ASAM)
 

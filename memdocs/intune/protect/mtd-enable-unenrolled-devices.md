@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: 
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Enable the Mobile Threat Defense connector in Intune for unenrolled devices

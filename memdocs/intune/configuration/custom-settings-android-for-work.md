@@ -8,12 +8,10 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 11/13/2020
-ms.topic: conceptual
+ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
-ms.assetid: 4724d6e5-05e5-496c-9af3-b74f083141f8
 
 # optional metadata
 

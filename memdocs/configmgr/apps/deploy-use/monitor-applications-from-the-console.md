@@ -6,10 +6,12 @@ ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-app
 ms.topic: how-to
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+author: baladelli
+manager: apoorvseth
+ms.author: baladell
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Monitor applications from the Configuration Manager console

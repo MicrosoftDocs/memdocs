@@ -10,6 +10,8 @@ author: baladelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Approve applications in Configuration Manager

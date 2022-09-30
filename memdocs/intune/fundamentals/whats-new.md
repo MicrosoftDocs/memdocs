@@ -61,6 +61,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of September 26, 2022
+
+### Monitor and troubleshoot
+
+#### Open Help and Support without losing your context in the Microsoft Endpoint Manager admin center<!-- 12469338 -->
+
+You can now use the **?** icon in the Microsoft Endpoint Manager admin center to open a [help and support](../../get-support.md) session without losing your current node of focus in the admin center. The **?** icon is always available in the upper right of the title bar of the admin center. This change adds an additional method for accessing *Help and support*.
+
+When you select **?**, the admin center opens the help and support view in a new and separate side-by-side pane. By opening this separate pane, you’ll be free to navigate the support experience without affecting your original location and focus on the admin center.
 
 ## Week of September 19, 2022 (Service release 2209)
 
@@ -233,25 +242,6 @@ The following protected apps are now available for Microsoft Intune:
 - MangoApps, Work from Anywhere by MangoSpring, Inc.
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
-### Tenant administration
-
-#### Access policies for Multiple Administrator Approval in public preview<!--9348867 -->  
-> [!NOTE]  
-> This feature is delayed and is not yet available. We'll remove this note when this feature begins to roll out to tenants.
-
-In public preview, you can use Intune *access policies* to require that a second Administrator Approval account be used to approve a change before the change is applied.  This capability is known as multiple Administrator Approval (MAA).
-
-You create an access policy to protect a type of resource, like App deployments. Each access policy also includes a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
-
-Approvers can also reject requests, and both the individual requesting a change and the approver can provide notes about the change, or why it was approved or rejected.
-
-Access policies are supported for the following resources:
-
-- **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
-- **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
-
-For more information, see [Use Access policies to require multiple administrative approval](../fundamentals/multi-admin-approval.md).
 
 ## Week of September 12, 2022
 

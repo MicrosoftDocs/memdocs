@@ -26,7 +26,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt-pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Use MVISION Mobile with Intune
