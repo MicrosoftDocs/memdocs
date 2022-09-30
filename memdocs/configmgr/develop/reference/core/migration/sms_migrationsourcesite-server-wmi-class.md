@@ -1,19 +1,18 @@
 ---
-title: "SMS_MigrationSourceSite Class"
+title: SMS_MigrationSourceSite Class
 description: Learn how the SMS_MigrationSourceSite class is an SMS Provider server class, in Configuration Manager, that represents a site in the source hierarchy.
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ff844187-e53f-4325-a3ed-7e906baa32cf
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 # SMS_MigrationSourceSite Server WMI Class
 The `SMS_MigrationSourceSite` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a site in the source hierarchy.  
