@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Getting started with Microsoft Intune
-description: Learn about the Microsoft Intune deployment, enrollment, configuration, policies, service updates, and more.
+title: Get started with Microsoft Intune
+description: See an overview of the steps to start using Intune. Plan your move and deployment of Intune, determine your licensing needs and any platform requirements, use compliance and conditional access, deploy apps, create device configuration profiles, and enroll your devices to be managed. Get more information on mobile application management for BYOD or personal devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/29/2022
+ms.date: 09/30/2022
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -34,12 +34,20 @@ ms.collection:
 
 # Get started with Microsoft Intune
 
-As part of your Microsoft 365 license, you also get Microsoft Intune for cloud-based app management, device management, and security. 
+Microsoft Intune is a cloud-based service that helps you manage your devices and apps. For more information about what Microsoft Intune can do for your organization, go to [What is Microsoft Intune](what-is-intune.md).
 
-This article provides an overview of the Microsoft Intune architecture, deployment, enrollment, configuration, policies, service updates, and more.
+This article provides an overview of the steps so you can start using Intune, including:
 
+- Step 1: Plan your move and deployment of Intune
+- Step 2: Determine your licensing needs and any platform requirements
+- Step 3: Set up Intune
+- Step 4: Use compliance and conditional access
+- Step 5: Deploy apps
+- Step 6: Create device configuration profiles
+- Step 7: Enroll your devices to be managed
+- Protect organization app data on personal devices
 
-For more information about what Microsoft Intune can do for your organization, go to [What is Microsoft Intune](what-is-intune.md).
+It's also a good practice to review the [Planning guide to move to Microsoft Intune](intune-planning-guide.md) before you get started.
 
 ## Cloud attach with Configuration Manager
 
@@ -50,15 +58,15 @@ There are two steps to cloud attach your on-premises devices:
 1. [Tenant attach](../../configmgr/tenant-attach): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the admin center.
 2. [Co-management](../../configmgr/comanage): Manage Windows client devices with Configuration Manager and Microsoft Intune. Some workloads are managed by Configuration Manager, and some workloads are managed by Intune. For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage conditional access policies.
 
-If you currently use Configuration Manager, you get immediate value through tenant attach and you get more value through co-management.
+If you currently use Configuration Manager, you get immediate value through tenant attach, and you get more value through co-management.
 
 ## Step 1 - Plan your Intune deployment
 
 A successful adoption or migration to Microsoft Intune starts with a plan. Your plan depends on your organization's current device management solution, business goals, and technical requirements.
 
-Intune gives you options to manage access to your organization using Mobile Device Management (MDM) or Mobile Application Management (MAM). MDM is when users "enroll" their devices in Intune. Once enrolled, they are managed devices, and can receive any policies, rules, and settings used by your organization. For example, you can install specifics apps, create a password policy, install a VPN connection, and more.
+Intune gives you options to manage access to your organization using Mobile Device Management (MDM) or Mobile Application Management (MAM). MDM is when users "enroll" their devices in Intune. Once enrolled, they're managed devices, and can receive any policies, rules, and settings used by your organization. For example, you can install specifics apps, create a password policy, install a VPN connection, and more.
 
-If users with their own personal devices will access organization resources, then you need to protect any apps that access your organization data using MAM, at the very least. You can create MAM policies for Outlook, Teams, SharePoint, and other apps.
+If users with their own personal devices will access organization resources, then you need to protect any apps that access your organization data using MAM, at a minimum. You can create MAM policies for Outlook, Teams, SharePoint, and other apps.
 
 To help you plan your Intune deployment, use the [Planning guide to move to Microsoft Intune](intune-planning-guide.md). It covers personal devices, licensing considerations, creating a rollout plan, communicating changes to your users, and more.
 
@@ -81,7 +89,7 @@ The next step is to determine your license needs and any other prerequisites for
 
 - **Intune subscription**: Included with some Microsoft 365 subscriptions. It also gives you access to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), which is a web-based console for managing your devices, apps, and users.
 - **Microsoft 365 apps**: Included with Microsoft 365 and is used for productivity apps, including Outlook and Teams.
-- **Azure Active Directory (Azure AD) premium**: Included with some Microsoft 365 subscriptions. Azure AD is used for the identity management for users, groups, and devices, which comes with your Intune and Microsoft 365 subscription. Azure AD Premium gives you additional features commonly used by organizations, including conditional access, multi factor authentication (MFA), and dynamic groups.
+- **Azure Active Directory (Azure AD) premium**: Included with some Microsoft 365 subscriptions. Azure AD is used for the identity management for users, groups, and devices, which comes with your Intune and Microsoft 365 subscription. Azure AD Premium gives you more features commonly used by organizations, including conditional access, multi factor authentication (MFA), and dynamic groups.
 - **Windows Autopilot**: Included with some Microsoft 365 subscriptions. Windows Autopilot gives you modern OS deployment for Windows 10/11 client devices.
 - **Platform specific prerequisites**: Depending on the platforms of your devices, there will probably be other requirements. For example, if you manage iOS/iPadOS and macOS devices, you need an Apple MDM push certificate and possibly an Apple token. If you're managing Android devices, you may need a managed Google Play account. If you're using certificate authentication, you may need a SCEP or PKCS certificate.
 
@@ -109,7 +117,7 @@ This step focuses on setting up Intune and getting it ready for you to manage yo
 
 3. **[Sign in to Intune](account-sign-up.md)**. When you sign in, you may be prompted to enter information about your organization. Intune can be opened directly from the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339).
 
-4. **[Choose your mobile device management configuration](mdm-authority-set.md)**. The first time you use Intune, you must enable device management. Intune can be used as a cloud-only service, a hybrid with Intune and Microsoft Endpoint Configuration Manager, or Basic Mobility and Security for Microsoft 365. You can choose the setup that works best for your organization.
+4. **[Choose your mobile device management configuration](mdm-authority-set.md)**. The first time you use Intune, you must enable device management. Intune can be used as a cloud-only service, hybrid with Intune and Configuration Manager, or Basic Mobility and Security for Microsoft 365. You can choose the setup that works best for your organization.
 
 5. **[Add users](users-add.md)** and **[add groups](groups-add.md)**.
 
@@ -135,7 +143,7 @@ If you prefer, you can enroll your devices before checking compliance. It's up t
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you create your policies and assign them to your groups. As a best practice, start small, and use a staged approach. For example, create an iOS/iPadOS policy that blocks jailbroken devices. Apply the policy to a pilot or test group. After initial testing, add more users to the pilot group. For more guidance, go to the [Microsoft Intune planning guide](intune-planning-guide.md).
 
-The following articles can help you understand how to create & monitor compliance policies in Intune, how to integrate with mobile threat defense (MTD) services & network access control (NAC) solutions, and use conditional access:
+The following articles can help:
 
 - [Get started with device compliance policies in Microsoft Intune](../protect/device-compliance-get-started.md)
 - [Create a compliance policy in Microsoft Intune](../protect/create-compliance-policy.md)
@@ -169,9 +177,9 @@ The following articles can help:
 
 ## Step 6 - Configure device features
 
-Your organization may have a base set of device features that should be configured or should be blocked. These are called device configuration policies or profiles. You can create device configuration policies that add a VPN connection, block access to personal cloud storage, turn off bluetooth discovery, and more. You can also configure device features that help protect your organization's devices, including requiring device encryption and requiring strong passcodes.
+Your organization may have a base set of device features that should be configured or should be blocked. These settings are added to device configuration policies. You can create device configuration policies that add a VPN connection, block access to personal cloud storage, turn off bluetooth discovery, and more. You can also configure device features that help protect your organization's devices, including requiring device encryption and requiring strong passcodes.
 
-You can use Intune to configure these device features before users enroll their devices. When users enroll their devices, these device features can be automatically configured and ready to use.
+You can use Intune to configure these device features before users enroll their devices. When users enroll their devices, these device features can be automatically configured, and ready to use.
 
 If you prefer, you can enroll your devices before creating device configuration policies. It's up to you. When users enroll their devices in Intune, the enrollment process can install your device configuration policies, like a VPN connection. When enrollment completes, the feature is ready to use. For key device configuration features, such as VPN or Wi-Fi, Microsoft recommends creating the policies and then deploying these policies during enrollment.
 
@@ -196,9 +204,9 @@ The following articles can help:
 
 ## Step 7 - Enroll your devices
 
-To manage devices, the devices must be enrolled in Intune to receive the compliance & conditional access policies, app policies, device configuration policies, and security policies you create. As an admin, you create enrollment policies for your users and devices. Each device platform (Android, iOS/iPadOS, macOS, and Windows) has a variety of enrollment options. You choose what's best for your environment, your scenarios, and your devices.
+To manage devices, the devices must be enrolled in Intune to receive the compliance & conditional access policies, app policies, device configuration policies, and security policies you create. As an admin, you create enrollment policies for your users and devices. Each device platform (Android, iOS/iPadOS, macOS, and Windows) has various enrollment options. You choose what's best for your environment, your scenarios, and how your devices are used.
 
-Depending on the enrollment option you choose, it's possible users can enroll themselves. Or, you can automate enrollment so users simply sign in to the device with their organization account.
+Depending on the enrollment option you choose, users can enroll themselves. Or, you can automate enrollment so users only need to sign in to the device with their organization account.
 
 When a device enrolls, it's issued a secure MDM certificate. This certificate communicates with the Intune service.
 
@@ -214,29 +222,39 @@ Different platforms have different enrollment requirements. The following articl
 
 ## Protect organization app data on personal devices
 
-It's common for users to access their organization email & calendar, attend work meetings, and use other organization apps on their personal devices. To help keep organization data secure on these devices, you can use app protection policies and multifactor authentication (MFA). App protection policies help protect organization data on personal devices. MFA helps protect your organization's data from unauthorized access.
+It's common for users to access their organization email & calendar, attend work meetings, and use other organization apps on their personal devices. To help keep organization data secure on these devices, you can use app protection policies and multi-factor authentication (MFA). App protection policies help protect organization data on personal devices. MFA helps protect your organization's data from unauthorized access.
 
-Intune's app protection policies are part of a mobile application management (MAM) approach designed to protect organization app data on personal devices. These app protection policies can also be used on devices that are enrolled and managed by Intune, or enrolled and managed by a third party partner MDM solution. This scenario is more common for apps that need an extra layer of security, including apps that have sensitive data.
+Intune's app protection policies are part of a mobile application management (MAM) approach designed to protect organization app data on personal devices. These app protection policies can also be used on devices enrolled Intune, or enrolled and managed by a third party partner MDM solution. This scenario is more common for apps that need an extra layer of security, including apps that have sensitive data.
 
+The [Microsoft Intune planning guide](intune-planning-guide.md) has some guidance on managing access on BYOD or personal devices.
 
-You can use mobile application management (MAM) in Intune to help protect sensitive data that's accessed from managed applications. See the official list of [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) available for public use.
+There's an official list of Microsoft apps and supported third party partner apps that support app protection policies. See the official list at [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
-Intune can manage apps, including add apps, assign them to different users or groups, and review other key details. For example, you can see which apps fail to install, check the version of an app, and more.
+MFA is a feature of Azure AD that must be enabled in your Azure AD tenant. Then, you can configure MFA for your apps. For more information, go to:
 
-To get an overview of app protection policies and how they work, go to the following articles:
+- [How it works: Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
+- [Tutorial: Secure user sign-in events with Azure AD multi-factor authentication](/azure/active-directory/authentication/tutorial-enable-azure-mfa)
 
+To get an overview of app protection policies and how they work, go to:
+
+- [Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](deployment-guide-enrollment-mamwe.md)
+- [Microsoft Intune planning guide](intune-planning-guide.md)
 - [App protection policies overview](../apps/app-protection-policy.md)
+- [Tutorial: Enable Azure AD multi-factor authentication on apps](/azure/active-directory/authentication/tutorial-enable-azure-mfa)
 - [Data protection framework using app protection policies](../apps/app-protection-framework.md)
 - [Understand app protection policy delivery timing](../apps/app-protection-policy-delivery.md)
 - [How to create and assign app protection policies](../apps/app-protection-policies.md)
-- [How to manage data transfer between iOS apps in Microsoft Intune](../apps/data-transfer-between-apps-manage-ios.md)
 - [How to monitor app protection policies](../apps/app-protection-policies-monitor.md)
 - [Review client app protection logs](../apps/app-protection-policy-settings-log.md)
 - [Frequently asked questions about MAM and app protection](../apps/mam-faq.yml)
 
-
-[Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](deployment-guide-enrollment-mamwe.md)
-[Microsoft Intune planning guide](intune-planning-guide.md).
-
 ## Next steps
 
+- [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
+- [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md)
+- [Microsoft Intune licensing](licenses.md)
+- [Get started with device compliance policies](../protect/device-compliance-get-started.md)
+- [What is app management in Microsoft Intune](../apps/app-management.md)
+- [Apply features and settings on your devices using device profiles](../configuration/device-profiles.md)
+- [Deployment guidance: Enroll devices in Microsoft Intune](deployment-guide-enrollment.md)
+- [Deployment guide: Mobile Application Management (MAM) for unenrolled devices in Microsoft Intune](deployment-guide-enrollment-mamwe.md)
