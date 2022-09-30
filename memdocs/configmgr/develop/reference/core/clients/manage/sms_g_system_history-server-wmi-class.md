@@ -1,19 +1,18 @@
 ---
-title: "SMS_G_System_History Class"
+title: SMS_G_System_History Class
 description: The SMS_G_System_History class is an SMS Provider server class that serves as an abstract base class representing hardware component state history for a client computer.
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: a1681a18-9456-4d91-b0d0-26831d469868
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 # SMS_G_System_History Server WMI Class
 The `SMS_G_System_History` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as an abstract base class representing hardware component state history for a client computer.  
