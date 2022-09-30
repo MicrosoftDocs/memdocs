@@ -76,9 +76,12 @@ To view the diagnostics collected after an Autopilot failure:
 
 ## Data collected
 
-While there is no intent to collect personal data, some identifiable information such as user names or device name might be collected when they are contained in collected logs or data from other locations.
+While there's no intent to collect personal data, some identifiable information such as user names or device name might be collected when they're contained in collected logs or data from other locations.
 
-If you've installed [KB5011543](https://support.microsoft.com/topic/march-22-2022-kb5011543-os-builds-19042-1620-19043-1620-and-19044-1620-preview-4fe2d1c0-720f-47fe-9523-75339bc107a1) on Windows 10 or [KB5011563](https://support.microsoft.com/topic/march-28-2022-kb5011563-os-build-22000-593-preview-40df54c9-b5a9-42e5-ae1c-9a33ff91ca91) on Windows 11, the format of the zip file will be simpler, including a flattened structure where the logs collected are named to match the data collected, and when multiple files are collected a folder is created.  
+If you've installed [KB5011543](https://support.microsoft.com/topic/march-22-2022-kb5011543-os-builds-19042-1620-19043-1620-and-19044-1620-preview-4fe2d1c0-720f-47fe-9523-75339bc107a1) on Windows 10 or [KB5011563](https://support.microsoft.com/topic/march-28-2022-kb5011563-os-build-22000-593-preview-40df54c9-b5a9-42e5-ae1c-9a33ff91ca91) on Windows 11, the format of the zip file will be simpler including:
+
+- A flattened structure where the logs collected are named to match the data collected
+- When multiple files are collected a folder is created.  
 
 This list below is the same order as the diagnostic zip.  Each collection contains the following data:
 
@@ -156,10 +159,11 @@ Files:
 
 ## Disable device diagnostics
 
-The the **Collect diagnostics** remote action is enabled by default. You can disable the **Collect diagnostics** remote action for all devices by following these steps:
+The **Collect diagnostics** remote action is enabled by default. You can disable the **Collect diagnostics** remote action for all devices by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
-2. Change the control under **Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11.** to **Disabled**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+2. Navigate to **Tenant administration** > **Device diagnostics**.
+3. Change the control under **Device diagnostics are available for corporate-managed devices running Windows 10, version 1909 and later, or Windows 11.** to **Disabled**.
 
      :::image type="content" source="./media/collect-diagnostics/disable-device-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for device diagnostics set to Disabled.":::
 
@@ -167,8 +171,9 @@ The the **Collect diagnostics** remote action is enabled by default. You can dis
 
 Autopilot automatic diagnostic capture is enabled by default. You can disable Autopilot automatic diagnostic capture by following these steps:
 
-1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Device diagnostics**.
-2. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
+2. Navigate to **Tenant administration** > **Device diagnostics**.
+3. Change the control under **Automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and Windows 11. Diagnostics may include user identifiable information such as user or device name (preview).** to **Disabled**.
 
      :::image type="content" source="./media/collect-diagnostics/disable-autopilot-diagnostics.png" alt-text="Screenshot that shows the Device diagnostics pane with the highlighted control for Autopilot automatic diagnostics collection set to Disabled.":::
 
@@ -177,4 +182,4 @@ Autopilot automatic diagnostic capture is enabled by default. You can disable Au
 Currently there are the two main issues that may cause device diagnostics to fail:
 
 1. A timeout may occur on devices without patches [KB4601315](https://support.microsoft.com/topic/february-9-2021-kb4601315-os-build-18363-1377-bdd71d2f-6729-e22a-3150-64324e4ab954) or [KB4601319](https://support.microsoft.com/topic/february-9-2021-kb4601319-os-builds-19041-804-and-19042-804-87fc8417-4a81-0ebb-5baa-40cfab2fbfde).  These patches contain a fix to the DiagnosticLog CSP that prevents timeout during upload.  After the update installs, make sure to reboot your device.
-2. The device wasn't able to receive the device action within a 24-hour window. If the device is offline or turned off this may cause a failure.
+2. The device wasn't able to receive the device action within a 24-hour window. If the device is offline or turned off, it may cause a failure.
