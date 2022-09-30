@@ -40,7 +40,7 @@ The commercial Azure tenant includes:
 - Enterprise Mobility + Security (EMS)/Microsoft Endpoint Manager subscription.
 - Azure Active Directory (Azure AD) information such as Users and Groups.
 
-## Azure goverment tenant (.us)
+## Azure government tenant (.us)
 
 The Azure Government tenant includes Microsoft Azure subscription and associated services, such as:
 
@@ -55,12 +55,12 @@ The Azure Government tenant includes Microsoft Azure subscription and associated
 
 If you want to use Azure AD join or hybrid Azure AD join, consider these preparations:
 
-**Azure AD joined Cloud PCs**: If the you want to use an Azure AD join infrastructure and your own network, you'll need a tenant and Azure subscription in the Azure Government cloud. The tenant in the Azure commercial .com domain must be mapped to the tenant in the Azure Government .us domain.
+**Azure AD joined Cloud PCs**: If you want to use an Azure AD join infrastructure and your own network, you'll need a tenant and Azure subscription in the Azure Government cloud. The tenant in the Azure commercial .com domain must be mapped to the tenant in the Azure Government .us domain.
 
 **Hybrid Azure AD joined Cloud PCs**: If you want to use a hybrid Azure AD join infrastructure, you'll need to configure your commercial (.com) tenant and your government (.us) tenants before creating your Azure Virtual Networks.
 
 ## Map the commercial and government tenants
-For the two tenants to be connected and have the ability for a user with an identity in the Azure Commercial cloud to access their Windows 365 Cloud PCs provisioned in the Azure Government,  the Tenant Mapping PowerShell script will need to be run.  The mapping also enables administrators using their Azure Commercial identity to provision and manage the Windows 365 Cloud PCs in the Azure Government cloud.
+To connect the two tenants, the Tenant Mapping PowerShell script must be run. This mapping will give Azure Commercial cloud users the ability to access their Windows 365 Cloud PCs provisioned in the Azure Government. The mapping also enables administrators using their Azure Commercial identity to provision and manage the Windows 365 Cloud PCs in the Azure Government cloud.
 
 1. Find the following information. It will be used later in these steps.
     - [Commercial Azure tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).
@@ -78,7 +78,7 @@ For the two tenants to be connected and have the ability for a user with an iden
     - Your Commercial tenant ID, which can be found here: https://portal.azure.com/.
     - Your Azure Government tenant ID, which can be found here: https://portal.azure.us/.
 8. When prompted, press Enter to open a web browser and enter your user name and password for your commercial tenant (GlobalAdmin@xxxxx.onmicrosoft.com).
-9.	When prompted, press Enter to open a web browser and enter your credentials for your Azure government tenant (GlobalAdmin@yyyyy.onmicrosoft.us).
+9.	When prompted, press Enter to open a web browser and enter your credentials for your Azure Government tenant (GlobalAdmin@yyyyy.onmicrosoft.us).
 10. After the mapping completes, you'll see **Added tenant mapping successfully!**
 
 ## Azure AD join custom image management
@@ -87,7 +87,7 @@ If you're going to use Gallery images to provision Cloud PCs using the Microsoft
 
 However, extra steps are needed to upload custom images on the Microsoft Hosted Network for Azure AD join-only Cloud PC. In this case, follow these steps before uploading your Custom Image.
 
-You will need Commercial and Gov credentials and line of sight to both tenants to execute the script.
+You'll need Commercial and Gov credentials and line of sight to both tenants to execute the script.
 
 1. Make sure you have both commercial and government credentials.
 2. Make sure you have line of sight to both tenants.
@@ -98,7 +98,7 @@ You will need Commercial and Gov credentials and line of sight to both tenants t
 
 ## Set permissions for networking and custom image management
 
-When provisioning Windows 365 Cloud PCs without the Microsoft Hosted Network (MHN), you must define an Azure Network Connection (ANC) resource that the Cloud PCs will use to connect with other resources, including your on-prem infrastructure.  This will allow GCC customers to use their own network.  There is also an option to enable customers to use custom images when the Windows 365 Cloud PCs are provisioned.
+When provisioning Windows 365 Cloud PCs without the Microsoft Hosted Network (MHN), you must define an Azure Network Connection (ANC) resource that the Cloud PCs will use to connect with other resources, including your on-premises infrastructure.  This will allow GCC customers to use their own network.  There's also an option to enable customers to use custom images when the Windows 365 Cloud PCs are provisioned.
 
 1. Gather the following information. It will be used later in these steps.
     - Commercial Azure tenant ID.
@@ -111,7 +111,7 @@ When provisioning Windows 365 Cloud PCs without the Microsoft Hosted Network (MH
 2. Make sure you have Windows PowerShell version 5.1. Other versions may result in errors when running the script.
 3. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
 4. Navigate to the **Windows 365 GCC** folder > right-click **GrantSPRolesInTenant.ps1** > **Save link as** > save the file to a location on your computer.
-5. Open Windows PowerShell 5.1 and run the PowerShell script. First step is to login to your Azure Government cloud tenant.
+5. Open Windows PowerShell 5.1 and run the PowerShell script. First step is to sign in to your Azure Government cloud tenant.
 6. At the prompt, type one of the following options:
     - **2** to grant permissions to create Azure Network Connections (ANC).
     - **3** to grant permissions to create ANCs and upload custom images.
