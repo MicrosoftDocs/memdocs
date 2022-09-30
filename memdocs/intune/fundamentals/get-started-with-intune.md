@@ -214,9 +214,9 @@ Different platforms have different enrollment requirements. The following articl
 
 ## Protect organization app data on personal devices
 
-It's common for users to access their organization email & calendar, attend work meetings, and use other organization apps on their personal devices. To help keep organization data secure on these devices, you can use app protection policies.
+It's common for users to access their organization email & calendar, attend work meetings, and use other organization apps on their personal devices. To help keep organization data secure on these devices, you can use app protection policies and multifactor authentication (MFA). App protection policies help protect organization data on personal devices. MFA helps protect your organization's data from unauthorized access.
 
-Intune's app protection policies are part of a mobile application management (MAM) approach designed to protect organization app data on personal devices. These app protection policies can also be used on devices that are enrolled and managed by Intune, or enrolled and managed by a third party partner MDM solution. This scenario is more common for apps that need an extra layer of security, including apps that have sensitive data, like Human Resources apps, apps with financial data, password management apps, and more.
+Intune's app protection policies are part of a mobile application management (MAM) approach designed to protect organization app data on personal devices. These app protection policies can also be used on devices that are enrolled and managed by Intune, or enrolled and managed by a third party partner MDM solution. This scenario is more common for apps that need an extra layer of security, including apps that have sensitive data.
 
 
 You can use mobile application management (MAM) in Intune to help protect sensitive data that's accessed from managed applications. See the official list of [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md) available for public use.
