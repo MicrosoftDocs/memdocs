@@ -6,10 +6,12 @@ ms.date: 01/25/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: sample
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: high
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Tenant attach: CMPivot sample scripts

@@ -6,10 +6,12 @@ ms.date: 07/11/2022
 ms.topic: troubleshooting
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-manager: dougeby
-author: mestew
-ms.author: mstewart
+manager: apoorvseth
+author: Banreet
+ms.author: banreetkaur
 ms.localizationpriority: high
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Troubleshoot Scripts for devices uploaded to the admin center
