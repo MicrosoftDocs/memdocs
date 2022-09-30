@@ -6,10 +6,12 @@ ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Manage Windows as a service using Configuration Manager

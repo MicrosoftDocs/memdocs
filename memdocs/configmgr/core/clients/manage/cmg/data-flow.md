@@ -6,10 +6,12 @@ ms.date: 04/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Data flow for CMG

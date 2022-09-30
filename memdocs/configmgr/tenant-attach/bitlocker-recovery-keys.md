@@ -6,9 +6,11 @@ ms.date: 01/25/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-manager: dougeby
-author: aczechowski
-ms.author: aaroncz
+manager: apoorvseth
+author: Banreet
+ms.author: banreetkaur
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Tenant attach: BitLocker recovery keys

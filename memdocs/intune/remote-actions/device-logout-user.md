@@ -3,7 +3,7 @@
 
 title: Log out the user of an iOS/iPadOS device 
 titleSuffix: Microsoft Intune
-description: Learn how to log out the current user of an iOS/iPadOS device with Intune."
+description: Learn how to log out the current user of an iOS/iPadOS device with Intune.
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
@@ -21,16 +21,17 @@ ms.assetid: 702bc46c-1a6f-4689-bd53-3b778a447baa
 #ROBOTS:
 #audience:
 
-ms.reviewer: coferro
+ms.reviewer: 
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Logout the current user on Intune-managed iOS/iPadOS devices
-
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

@@ -2,14 +2,16 @@
 title: Monitor software updates
 titleSuffix: Configuration Manager
 description: The Configuration Manager console provides alerts and statuses to monitor updates and compliance.
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.date: 07/12/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 # Monitor software updates in Configuration Manager
 

@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection:
 - M365-identity-device-management
 - Android
+- tier3
 ms.custom: intune-classic
 ---
 
@@ -158,17 +159,17 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 [Intune-specific MSAL configuration]:#intune-specific-msal-configuration
 [Exit Criteria]:#exit-criteria
 
-<!-- Other SDK Guide Markdown docs -->
+<!-- Other SDK Guide Markdown documentation -->
 [Stage 1: Planning the Integration]:app-sdk-android-phase1.md
 [Stage 3: Getting Started with MAM]:app-sdk-android-phase3.md
 
-<!-- Microsoft docs: AAD -->
+<!-- Microsoft Learn documentation: AAD -->
 [Microsoft Azure Active Directory (AAD)]:https://azure.microsoft.com/services/active-directory/
 [Microsoft accounts]:https://account.microsoft.com/
 [What is Azure Active Directory?]:/azure/active-directory/fundamentals/active-directory-whatis
 [register your application with Azure Active Directory]:/azure/active-directory/active-directory-app-registration
 
-<!-- Microsoft docs: MSAL-->
+<!-- Microsoft Learn documentation: MSAL-->
 [Microsoft Authentication Library (MSAL)]:/azure/active-directory/develop/msal-overview
 [list of MSAL libraries]:/azure/active-directory/develop/reference-v2-libraries
 [MSAL Wiki]:https://github.com/AzureAD/
@@ -182,22 +183,21 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 3: Gett
 [Android Microsoft Authentication Library configuration file]:/azure/active-directory/develop/msal-configuration
 [MSAL repository on GitHub]: https://github.com/AzureAD/microsoft-authentication-library-for-android
 
-<!-- Microsoft docs: ADAL -->
+<!-- Microsoft Learn documentation: ADAL -->
 [Azure Active Directory Authentication Library (ADAL)]:/azure/active-directory/azuread-dev/active-directory-authentication-libraries
 
-<!-- Microsoft docs: ADAL to MSAL -->
+<!-- Microsoft Learn documentation: ADAL to MSAL -->
 [Update your applications to use Microsoft Authentication Library (MSAL)]:https://techcommunity.microsoft.com/t5/azure-active-directory-identity/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363
 [Migrate Android ADAL to MSAL]:/azure/active-directory/develop/migrate-android-adal-msal
 [Differences between ADAL and MSAL]:/azure/active-directory/develop/msal-overview#differences-between-adal-and-msal
 
-<!-- Microsoft docs: CA -->
+<!-- Microsoft Learn documentation: CA -->
 [Conditional Access (CA)]:/azure/active-directory/develop/active-directory-conditional-access-developer
 [device-based CA]:/mem/intune/protect/conditional-access-intune-common-ways-use#device-based-conditional-access
 [app-based CA]:/mem/intune/conditional-access-intune-common-ways-use#app-based-conditional-access
 [configuring app-based CA]:/mem/intune/protect/app-based-conditional-access-intune-create
 
-
-<!-- Microsoft docs -->
+<!-- Microsoft Learn documentation -->
 [give your app access to the Intune app protection service]:/mem/intune/developer/app-sdk-get-started#give-your-app-access-to-the-intune-app-protection-service-optional
 
 <!-- Other Microsoft links -->

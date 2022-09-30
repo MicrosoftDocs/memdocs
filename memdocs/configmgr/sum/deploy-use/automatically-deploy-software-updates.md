@@ -2,7 +2,7 @@
 title: Automatically deploy software updates
 titleSuffix: Configuration Manager
 description: Automatically deploy software updates by using automatic deployment rules (ADR).
-author: baladelli
+author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.date: 08/12/2022
@@ -10,6 +10,8 @@ ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 #  Automatically deploy software updates  
