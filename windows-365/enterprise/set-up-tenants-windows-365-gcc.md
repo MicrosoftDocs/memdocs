@@ -81,8 +81,8 @@ To connect the two tenants, the TenantMapping.ps1 PowerShell script must be run.
 7. After the Initialization completes, type **A** at the prompt. When prompted, type the following information:
     - Your Commercial tenant ID, which can be found here: https://portal.azure.com/.
     - Your Azure Government tenant ID, which can be found here: https://portal.azure.us/.
-8. When prompted, press Enter to open a web browser and enter your user name and password for your commercial tenant (GlobalAdmin@xxxxx.onmicrosoft.com).
-9. When prompted, press Enter to open a web browser and enter your credentials for your Azure Government tenant (GlobalAdmin@yyyyy.onmicrosoft.us).
+8. When prompted, press Enter to open a web browser and enter your user name and password for your commercial tenant (GlobalAdmin@contoso.onmicrosoft.com).
+9. When prompted, press Enter to open a web browser and enter your credentials for your Azure Government tenant (GlobalAdmin@fabrikam.onmicrosoft.us).
 10. After the mapping completes, you'll see **Added tenant mapping successfully!**
 
 ## Set permissions to upload custom images
