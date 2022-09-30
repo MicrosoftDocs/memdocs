@@ -76,7 +76,7 @@ To view the diagnostics collected after an Autopilot failure:
 
 ## Data collected
 
-While there's no intent to collect personal data, some identifiable information such as user names or device name might be collected when they're contained in collected logs or data from other locations.
+While there's no intent to collect personal data, diagnostics may include user identifiable information such as user or device name.
 
 If you've installed [KB5011543](https://support.microsoft.com/topic/march-22-2022-kb5011543-os-builds-19042-1620-19043-1620-and-19044-1620-preview-4fe2d1c0-720f-47fe-9523-75339bc107a1) on Windows 10 or [KB5011563](https://support.microsoft.com/topic/march-28-2022-kb5011563-os-build-22000-593-preview-40df54c9-b5a9-42e5-ae1c-9a33ff91ca91) on Windows 11, the format of the zip file will be simpler including:
 
