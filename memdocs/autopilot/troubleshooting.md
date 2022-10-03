@@ -54,10 +54,10 @@ When an Internet-connected Windows device boots up, it will attempt to connect t
 > At this stage, it's important that an Autopilot profile exists in the tenant so that a blank profile isn't cached locally on the device. If necessary, you can retrieve a new Autopilot profile by rebooting the device.
 >
 > If you need to reboot a computer during OOBE to retrieve a new Autopilot profile:
-> 1. Press Shift-F10 to open a command prompt window.
+> 1. Press Shift-F10 on the keyboard to open a command prompt window.
 > 2. In the command prompt window, enter one of the following two options:
->    1. Enter **shutdown.exe /r /t 0** to restart immediately.
->    2. Enter **shutdown.exe /s /t 0** to shut down immediately.
+>    1. Enter `shutdown.exe /r /t 0` to **restart** immediately.
+>    2. Enter `shutdown.exe /s /t 0` to **shut down** immediately.
 >
 > For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
