@@ -5,11 +5,13 @@ description: Learn about changes to the Configuration Manager console and tips f
 ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-ms.topic: reference 
-author: mestew
-ms.author: mstewart
-manager: dougeby
+ms.topic: reference
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Configuration Manager console changes and tips
