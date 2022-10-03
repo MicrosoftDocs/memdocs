@@ -43,7 +43,7 @@ Use the information in this article to help you add macOS line-of-business apps 
 > 
 > macOS LOB apps have a maximum size limit of 2 GB per app.
 >
-> macos LOB apps need to have a logo, else it will be not displayed in the Apps section.
+> macOS LOB apps need to have a logo. If they don't have a logo, they will not be displayed in the apps section.
 > 
 > While users of macOS devices can remove some of the built-in macOS apps like Stocks, and Maps, you cannot use Intune to redeploy those apps. If end users delete these apps, they must go to the app store, and manually re install them.
 
