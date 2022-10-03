@@ -2,16 +2,17 @@
 title: Co-management for Windows devices
 titleSuffix: Configuration Manager
 description: Learn how to concurrently manage Windows 10 or later devices by using both Configuration Manager and Microsoft Intune.
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.date: 03/21/2022
 ms.topic: overview
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 #Customer intent: As an IT Pro, I want to enable co-management so that Configuration Manager is cloud-attached to Microsoft Intune.
 ms.localizationpriority: medium
-ms.collection: highpri
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # What is co-management?

@@ -11,12 +11,13 @@ metadata:
   ms.prod: configuration-manager
   ms.technology: configmgr-core
   ms.topic: landing-page
-  author: mestew
-  ms.author: mstewart
-  manager: dougeby
+  author: Banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
   ms.date: 02/08/2022
   ms.localizationpriority: high
-  ms.collection: highpri
+  ms.reviewer: mstewart,aczechowski
+  ms.collection: tier3
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

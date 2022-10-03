@@ -29,6 +29,8 @@ items:
     href: customer-permissions.md  
   - name: Device configuration with MEM
     href: device-configuration.md
+  - name: What is Windows 365 Government
+    href: introduction-windows-365-government.md
   - name: Security
     items:
     - name: Windows 365 security
@@ -83,6 +85,10 @@ items:
           href: add-device-images.md
         - name: Convert image to Gen 2
           href: device-images-convert-generation-2.md
+      - name: Prepare for Windows 365 Government
+        items:
+        - name: Set up tenants for Windows 365 Government
+          href: set-up-tenants-windows-365-gcc.md
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
@@ -145,6 +151,8 @@ items:
       items:
       - name: Overview
         href: device-management-overview.md
+      - name: Alerts
+        href: alerts.md
       - name: Remotely manage Cloud PC devices 
         href: remotely-manage-cloud-pc.md
       - name: RDP Shortpath for public networks 
@@ -199,6 +207,8 @@ items:
       href: troubleshoot-azure-network-connection.md
     - name: Azure network connection health checklist
       href: health-checks.md
+    - name: Connectivity health checks
+      href: health-checks-connectivity.md
     - name: Remote Desktop client
       href: /azure/virtual-desktop/troubleshoot-client?context=/windows-365/context/pr-context
     - name: Connection errors

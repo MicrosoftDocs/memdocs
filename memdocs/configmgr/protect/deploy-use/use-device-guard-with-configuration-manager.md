@@ -6,10 +6,12 @@ ms.date: 04/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Windows Defender Application Control management with Configuration Manager

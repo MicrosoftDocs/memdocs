@@ -2,14 +2,16 @@
 title: Manage Microsoft 365 Apps updates
 titleSuffix: Configuration Manager
 description: Configuration Manager synchronizes Microsoft 365 Apps client updates from the WSUS catalog to the site server to make updates available to deploy to clients.
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.date: 05/09/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Manage Microsoft 365 Apps with Configuration Manager

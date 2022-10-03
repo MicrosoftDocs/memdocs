@@ -28,6 +28,7 @@ search.appverid: MET150
 ms.collection:
 - M365-identity-device-management
 - macOS
+- tier3
 ---
 
 # Add Microsoft Edge to macOS devices using Microsoft Intune

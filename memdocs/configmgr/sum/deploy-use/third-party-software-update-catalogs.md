@@ -6,10 +6,12 @@ ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.topic: reference
-author: baladelli
+author: BalaDelli
 ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # Available third-party software update catalogs

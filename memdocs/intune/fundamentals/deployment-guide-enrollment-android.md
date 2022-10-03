@@ -294,7 +294,7 @@ There are some situations when you must use Device Administrator enrollment:
 - Android Enterprise requires access to Google services. Google services may not be available because of geography, or because of the device manufacturer. For example:
 
   - There are places where Google services aren’t available, like China. In this situation, use Android device administrator enrollment.  
-  - Some devices are based on Android, but don't have access to Google Services, such as Amazon Fire tablets. In this situation, use Android device administrator enrollment.
+  - Some devices are based on Android, but don't have access to Google Services, such as Microsoft Teams Android devices and Amazon Fire tablets. In this situation, use Android device administrator enrollment.
 
 - Android OS versions older than 5.0 must use Android device administrator enrollment. Android Enterprise enrollment isn't an option.
 

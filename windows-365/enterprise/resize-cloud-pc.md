@@ -49,6 +49,7 @@ To resize a Cloud PC, the admin must have any of the following built in Azure Ac
 
 - Global Admin
 - Intune Service Admin
+- Intune Reader + Cloud PC Admin roles
 
 Alternatively, you can assign a custom role that includes the permissions of the built-in roles above.
 
@@ -57,6 +58,8 @@ To **Resize** a Cloud PC, it must have a status of **Provisioned** in the Window
 The **Resize** remote action is supported for paid, preview, and trial licenses.
 
 Resizing isn’t supported for Cloud PCs provisioned through group-based licenses.
+
+Resizing is only supported for Gen 2 Cloud PCs. If you try resizing a Gen 1 Cloud PC, the resize will no start and you will be notified that this happened due to the user having a Gen 1 Cloud PC. Reprovision the Gen 1 Cloud PC to convert it to a Gen 2 Cloud PC
 
 ## Resize a Cloud PC
 

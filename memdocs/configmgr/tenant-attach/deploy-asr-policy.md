@@ -1,15 +1,17 @@
 ---
 title: Tenant attach - Create and deploy Attack surface reduction policies from the admin center (preview)
 titleSuffix: Configuration Manager
-description: "Create and deploy Attack surface reduction policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
+description: Create and deploy Attack surface reduction policies from the Microsoft Endpoint Manager console and for Configuration Manager collections.
 ms.date: 05/31/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.assetid: 07379821-02b3-4c61-af03-329c782e10d6
-manager: dougeby
-author: mestew 
-ms.author: brenduns
+manager: apoorvseth
+author: Banreet
+ms.author: banreetkaur
+ms.reviewer: mstewart,aczechowski
+ms.collection: tier3
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Create and deploy Attack surface reduction policies from the admin center (preview)
