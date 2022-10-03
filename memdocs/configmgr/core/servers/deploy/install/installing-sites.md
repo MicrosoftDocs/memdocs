@@ -6,10 +6,12 @@ ms.date: 04/30/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: overview
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collectiontier3: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Resources for installing Configuration Manager sites

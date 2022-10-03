@@ -6,11 +6,13 @@ ms.date: 12/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: highpri
+ms.collectiontier3: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Configure role-based administration for Configuration Manager

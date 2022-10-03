@@ -6,10 +6,12 @@ ms.date: 10/08/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collectiontier3: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Custom locations for Configuration Manager site database files

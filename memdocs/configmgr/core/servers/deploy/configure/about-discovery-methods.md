@@ -6,10 +6,12 @@ ms.date: 03/23/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collectiontier3: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # About discovery methods for Configuration Manager

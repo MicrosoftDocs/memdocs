@@ -6,10 +6,12 @@ ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collectiontier3: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Configuration options for site system roles in Configuration Manager

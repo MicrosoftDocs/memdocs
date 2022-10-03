@@ -7,9 +7,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.author: baladell 
+author:BalaDelli
+manager: apoorvseth
+ms.collectiontier3: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Visualize content distribution status

@@ -6,10 +6,12 @@ ms.date: 02/8/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collectiontier3: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 # Run discovery for Configuration Manager
 

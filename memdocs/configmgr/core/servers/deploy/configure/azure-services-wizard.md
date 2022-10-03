@@ -6,10 +6,12 @@ ms.date: 08/24/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collectiontier3: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Configure Azure services for use with Configuration Manager

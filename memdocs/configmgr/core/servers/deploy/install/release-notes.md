@@ -6,10 +6,12 @@ ms.date: 08/24/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: troubleshooting
-author: banreet
-ms.author: banreetkaur
+author: sheetg09
+ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
+ms.collectiontier3: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Release notes for Configuration Manager

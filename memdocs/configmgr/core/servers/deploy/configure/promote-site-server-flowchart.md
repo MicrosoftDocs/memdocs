@@ -6,10 +6,12 @@ ms.date: 07/30/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collectiontier3: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Flowchart - Promote site server (planned)
