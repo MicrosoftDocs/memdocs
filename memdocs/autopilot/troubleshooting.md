@@ -51,7 +51,7 @@ Whether you're performing user-driven or self-deploying device deployments, the 
 When an Internet-connected Windows device boots up, it will attempt to connect to the Autopilot service and download an Autopilot profile. The Autopilot profile is downloaded as soon as possible, and again after each reboot.
 
 > [!NOTE]
-At this stage, it's important that an Autopilot profile exists in the tenant so that a blank profile isn't cached locally on the device. If necessary, you can retrieve a new Autopilot profile by rebooting the device.
+> At this stage, it's important that an Autopilot profile exists in the tenant so that a blank profile isn't cached locally on the device. If necessary, you can retrieve a new Autopilot profile by rebooting the device.
 
 If you need to reboot a computer during OOBE:
 - Press Shift-F10 to open a command prompt.
@@ -59,9 +59,9 @@ If you need to reboot a computer during OOBE:
  
 For more information, see [Windows Setup Command-Line Options](/windows-hardware/manufacture/desktop/windows-setup-command-line-options).
 
- <!-- To remove the currently cached local profile in Windows 10 version 1803 and earlier, it's necessary to re-generalize the OS using **sysprep /generalize /oobe**, reinstall the OS, or re-image the PC. -->
+<!-- To remove the currently cached local profile in Windows 10 version 1803 and earlier, it's necessary to re-generalize the OS using **sysprep /generalize /oobe**, reinstall the OS, or re-image the PC. -->
  
- <!-- In Windows 10 version 1809 and later, -->
+<!-- In Windows 10 version 1809 and later, -->
 
 <!-- When a profile is downloaded depends upon the version of Windows client that is running on the PC. See the following table.
 
