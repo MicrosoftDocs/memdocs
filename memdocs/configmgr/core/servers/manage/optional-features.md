@@ -6,10 +6,12 @@ ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: paasin
-ms.author: paasin
+author: banreet
+ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Optional features in Configuration Manager
