@@ -8,9 +8,9 @@ ms.technology: configmgr-core
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: baladell 
-author:BalaDelli
+author: BalaDelli
 manager: apoorvseth
-ms.collectiontier3: tier3
+ms.collection: tier3
 ms.reviewer: mstewart,aczechowski
 ---
 

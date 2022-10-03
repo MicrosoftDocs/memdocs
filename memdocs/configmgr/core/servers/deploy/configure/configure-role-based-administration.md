@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: highpri
-ms.collectiontier3: tier3
+ms.collection: tier3
 ms.reviewer: mstewart,aczechowski
 ---
 

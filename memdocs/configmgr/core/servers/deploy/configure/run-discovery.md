@@ -10,7 +10,7 @@ author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collectiontier3: tier3
+ms.collection: tier3
 ms.reviewer: mstewart,aczechowski
 ---
 # Run discovery for Configuration Manager
