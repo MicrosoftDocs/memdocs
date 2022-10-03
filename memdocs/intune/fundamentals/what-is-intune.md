@@ -32,7 +32,7 @@ ms.collection:
 
 # Microsoft Intune securely manages identities, manages apps, and manages devices
 
-As organizations move to support hybrid and remote workforces, they're challenged with managing the different devices that access organization resources. Users need to collaborate, work from anywhere, and securely access and connect to these resources. Admins need to protect organization data, manage end user access, and support users from wherever they work.
+As organizations move to support hybrid and remote workforces, they're challenged with managing the different devices that access organization resources. Employees and students need to collaborate, work from anywhere, and securely access and connect to these resources. Admins need to protect organization data, manage end user access, and support users from wherever they work.
 
 To help with these challenges and tasks, use Microsoft Intune. Microsoft Intune is a mobile device management (MDM) and mobile application management (MAM) provider for your organization or enterprise. Intune is cloud-based and can manage your Android, iOS/iPadOS, macOS, and Windows client devices and apps using policies. It allows users to be productive from anywhere and on any device, and works well with on-premises Configuration Manager environments.
 
@@ -63,7 +63,7 @@ Some key features and benefits of Intune include:
 
 - Intune **automates policy deployment** for apps, security, device configuration, compliance, conditional access, and more. When the policies are ready, you can deploy these policies to your user groups and device groups. To receive these policies, the devices only need internet access.
 
-- End users can **use the self-service features** in the Company Portal app to reset a PIN/password, install apps, join groups, and more. You can customize the Company Portal app to help reduce support calls.
+- Employees and students can **use the self-service features** in the Company Portal app to reset a PIN/password, install apps, join groups, and more. You can customize the Company Portal app to help reduce support calls.
 
   For more information, go to [Configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
@@ -174,7 +174,7 @@ In Intune, you create policies that configure features & settings and provide se
 
 When devices enroll, you can deploy your policies during the enrollment process. When enrollment completes, the device is ready to use.
 
-On bring-your-own-devices (BYOD) and personal devices, you can use Intune for **mobile application management (MAM)**. MAM is user centric, so the app data is protected regardless of the device used to access this data. There's a focus on apps, including securely accessing apps and protecting data within the apps.
+For personal devices in bring-your-own-device (BYOD) scenarios, you can use Intune for **mobile application management (MAM)**. MAM is user centric, so the app data is protected regardless of the device used to access this data. There's a focus on apps, including securely accessing apps and protecting data within the apps.
 
 With MAM, you can:
 
