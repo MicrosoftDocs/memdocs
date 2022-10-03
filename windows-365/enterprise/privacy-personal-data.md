@@ -95,8 +95,4 @@ Audit reports for Windows 365 will be available for download at the [Microsoft S
 
 [Plan your Windows 365 deployment](planning-guide.md)
 
-<<<<<<< HEAD
 [Learn about data encryption in Windows 365](encryption.md)
-=======
-[Learn about data encryption in Windows 365](encryption.md)
->>>>>>> 3ffc1afd200fb6d2421282772b4a714e486a9f3c
