@@ -368,7 +368,7 @@ To configure the NDES service, use an account that is an *Enterprise Administrat
 
 3. Restart the server that hosts the NDES service. Don't use **iisreset**; iireset doesn't complete the required changes.
 
-4. Browse to *http://*Server_FQDN*/certsrv/mscep/mscep.dll*. The result should be: HTTP Error 403.0 – Forbidden. This result indicates the URL is functioning correctly.
+4. Browse to  `http://*Server_FQDN*/certsrv/mscep/mscep.dll`. The result should be **HTTP Error 403.0 – Forbidden**. This result indicates the URL is functioning correctly.
 
    If the web address returns a **503 Service unavailable**, check the computer's event viewer. This error commonly occurs when the application pool is stopped due to a missing [permission for the NDES service account](#accounts).
   
