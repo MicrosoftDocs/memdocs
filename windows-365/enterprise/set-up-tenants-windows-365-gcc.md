@@ -61,7 +61,7 @@ If you want to use Azure AD join or hybrid Azure AD join, consider these prepara
 
 ## Map the commercial and government tenants
 
-To connect the two tenants, the TenantMapping.ps1 PowerShell script must be run. This script will give admins either or both of the following abilities:
+To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script must be run. This script will give admins either or both of the following abilities:
 
 - Upload custom images for use with Windows 365 Government Cloud PCs.
 - Define Azure Network Connections so that the Windows 365 Government Cloud PCs can access on-premises or Microsoft-hosted resources.
@@ -73,7 +73,7 @@ To connect the two tenants, the TenantMapping.ps1 PowerShell script must be run.
     - Azure Government Global administrator credentials user name and password.
 2. Make sure you have Windows PowerShell version 5.1. Other versions may result in errors when running the script.
 3. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
-4. Navigate to the **Windows 365 GCC** folder > right-click **TenantMapping.ps1** > **Save link as** > save the file to a location on your computer.
+4. Navigate to the **Windows 365 GCC/AAD Tenant Mapping** folder > right-click **AAD Tenant Mapping.ps1** > **Save link as** > save the file to a location on your computer.
 5. Open Windows PowerShell 5.1 and run the PowerShell script.
     >[!NOTE]
     >If the script was previously run successfully, you'll see the error **HttpStatusCode Conflict**. This warning can be ignored to execute the script functions Add and Get.
@@ -94,7 +94,7 @@ Extra steps are needed to upload custom images on the Microsoft-hosted network. 
 1. Make sure you've already run the TenantMapping.ps script above to connect the Government cloud and Commercial cloud.
 2. Make sure you have both commercial and government credentials.
 3. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
-4. Navigate to the **Windows 365 GCC** folder > right click **GrantSPRolesInTenant.ps1** > **Save link as** > save the file to a location on your computer.
+4. Navigate to the **Windows 365 GCC/Grant Service Principal Roles in Tenant** folder > right click **Grant W365 SP Roles in Tenant.ps1** > **Save link as** > save the file to a location on your computer.
 5. Run the PowerShell script.
 6. For Azure AD join infrastructures, you don't need to enable permissions for creating ANC just to upload custom images. Therefore, at the prompt, type **1** to enable custom image uploads.
 7. For hybrid Azure AD join infrastructures, creating ANCs is a requirement for uploading custom images. Therefore, at the prompt, type **3**.
@@ -113,7 +113,7 @@ When provisioning Windows 365 Cloud PCs without the Microsoft-hosted network, yo
     - Virtual Network in the Azure Government tenant.
 2. Make sure you have Windows PowerShell version 5.1. Other versions may result in errors when running the script.
 3. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
-4. Navigate to the **Windows 365 GCC** folder > right-click **GrantSPRolesInTenant.ps1** > **Save link as** > save the file to a location on your computer.
+4. Navigate to the **Windows 365 GCC/Grant Service Principal Roles in Tenant** folder > right click **Grant W365 SP Roles in Tenant.ps1** > **Save link as** > save the file to a location on your computer.
 5. Open Windows PowerShell 5.1 and run the PowerShell script. First step is to sign in to your Azure Government cloud tenant.
 6. At the prompt, type one of the following options:
     - **2** to grant permissions to create ANCs.
