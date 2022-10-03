@@ -83,6 +83,10 @@ items:
           href: add-device-images.md
         - name: Convert image to Gen 2
           href: device-images-convert-generation-2.md
+      - name: Prepare for Windows 365 Government
+        items:
+        - name: Set up tenants for Windows 365 Government
+          href: set-up-tenants-windows-365-gcc.md
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
