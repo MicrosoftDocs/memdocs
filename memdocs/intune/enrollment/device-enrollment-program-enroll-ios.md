@@ -442,6 +442,7 @@ You'll sometimes need to renew your tokens:
 - Renew your ADE token yearly. The Endpoint Manager admin center shows the expiration date.
 - If the Apple ID password changes for the user who set up the token in Apple Business Manager, renew your enrollment program token in Intune and Apple Business Manager.
 - If the user who set up the token in Apple Business Manager leaves the organization, renew your enrollment program token in Intune and Apple Business Manager.
+- If you want to change the Apple ID used to create the ADE token. This change will not affect currently enrolled devices.
 
 ### Renew your tokens
 
