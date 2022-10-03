@@ -42,6 +42,8 @@ Use the information in this article to help you add macOS line-of-business apps 
 > Starting with the release of macOS Catalina 10.15, prior to adding your apps to Intune, check to make sure your macOS LOB apps are notarized. If the developers of your LOB apps did not notarize their apps, the apps will fail to run on your users' macOS devices. For more information about how to check if an app is notarized, visit [Notarize your macOS apps to prepare for macOS Catalina](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Support-Tip-Notarizing-your-macOS-apps-to-prepare-for-macOS/ba-p/808579).
 > 
 > macOS LOB apps have a maximum size limit of 2 GB per app.
+>
+> macos LOB apps need to have a logo, else it will be not displayed in the Apps section.
 > 
 > While users of macOS devices can remove some of the built-in macOS apps like Stocks, and Maps, you cannot use Intune to redeploy those apps. If end users delete these apps, they must go to the app store, and manually re install them.
 
