@@ -8,11 +8,7 @@ ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 0f9532cc-058c-46cf-8181-469cd6e1734b
 author: Banreet
-<<<<<<< HEAD
-ms.author: aaroncz
-=======
 ms.author: banreetkaur
->>>>>>> 82de8759a8986955d2c715d9123b1cafbe6e6137
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
