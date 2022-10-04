@@ -3,7 +3,7 @@
 
 title: Managing Specialty devices with Microsoft Intune
 titleSuffix: 
-description: Lists supported device platforms and browsers for Intune device management
+description: What are specialty devices and how can you manage them with Microsoft Intune?
 keywords:
 author: Smritib17
 ms.author: smbhardwaj
