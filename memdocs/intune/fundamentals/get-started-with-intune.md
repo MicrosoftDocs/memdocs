@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/03/2022
+ms.date: 10/04/2022
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -46,21 +46,9 @@ This article provides an overview of the steps to start using Intune, including:
 - Step 6: Create device configuration profiles
 - Step 7: Enroll your devices to be managed
 - Protect organization app data on personal devices
+- Cloud-attach with Configuration Manager
 
 It's also a good practice to review the [Planning guide to move to Microsoft Intune](intune-planning-guide.md) before you get started.
-
-## Cloud attach with Configuration Manager
-
-Microsoft Endpoint Configuration Manager helps protect on-premises Windows Server, devices, apps, and data. If you need to manage a combination of cloud and on-premises endpoints, you can cloud attach your Configuration Manager environment to Intune.
-
-There are two steps to cloud attach your on-premises devices:
-
-1. [Tenant attach](../../configmgr/tenant-attach.md): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based admin center.
-2. [Co-management](../../configmgr/comanage.md): Manage Windows client devices with Configuration Manager and Microsoft Intune. Some workloads are managed by Configuration Manager, and some workloads are managed by Intune. For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage conditional access policies.
-
-If you currently use Configuration Manager, you get immediate value through tenant attach, and you get more value through co-management.
-
-For guidance on the Microsoft Intune setup that's right for your organization, go to [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md).
 
 ## Step 1 - Plan your Intune deployment
 
@@ -98,7 +86,6 @@ The next step is to determine your license needs and any other prerequisites for
 The following articles are good resources:
 
 - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
-- [Tutorial: Walkthrough the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md)
 - [Microsoft Intune licensing](licenses.md)
 - [Azure AD plans and pricing](https://www.microsoft.com/security/business/identity-access/azure-active-directory-pricing)
 - [Windows Autopilot licensing](/mem/autopilot/licensing-requirements)
@@ -148,15 +135,9 @@ In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink
 The following articles are good resources:
 
 - [Get started with device compliance policies in Microsoft Intune](../protect/device-compliance-get-started.md)
-- [Create a compliance policy in Microsoft Intune](../protect/create-compliance-policy.md)
-- [Intune reports for compliance, assignment failures, check-in status, and more](reports.md)
 - [Learn about conditional access and Intune](../protect/conditional-access.md)
-- [Enable Mobile Threat Defense connector in Microsoft Intune](../protect/mtd-connector-enable.md)
-- [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md)
-- [Network access control integration with Microsoft Intune](../protect/network-access-control-integrate.md)
 - [App-based conditional access with Intune](../protect/app-based-conditional-access-intune.md)
 - [Conditional access scenarios](../protect/conditional-access-intune-common-ways-use.md)
-- [Monitor device compliance policies in Microsoft Intune](../protect/compliance-policy-monitor.md)
 
 ## Step 5 - Add and deploy apps
 
@@ -169,11 +150,6 @@ Intune supports a wide range of apps, including store apps, line-of-business (LO
 The following articles are good resources:
 
 - [What is app management in Microsoft Intune](../apps/app-management.md)
-- [Add apps to Microsoft Intune](../apps/apps-add.md)
-- [Add and assign managed Google Play apps to Android Enterprise devices](../apps/apps-add-android-for-work.md)
-- [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md)
-- [Add iOS/iPadOS store apps to Microsoft Intune](../apps/store-apps-ios.md)
-- [How to manage iOS/iPadOS and macOS apps purchased through Apple Business Manager](../apps/vpp-apps-ios.md)
 - [Windows 10/11 app deployment using Microsoft Intune](../apps/apps-windows-10-app-deploy.md)
 - [Protect your company app data with Microsoft Intune and Microsoft Graph](/graph/api/resources/intune-app-conceptual)
 
@@ -198,8 +174,6 @@ The following articles are good resources:
 
 - [Apply features and settings on your devices using device profiles](../configuration/device-profiles.md)
 - [Use the settings catalog to configure settings](../configuration/settings-catalog.md)
-- [Assign device profiles in Microsoft Intune](../configuration/device-profile-assign.md)
-- [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md)
 - [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md)
 - Security configuration framework with recommendations for [Android Enterprise](../enrollment/android-configuration-framework.md) and [iOS/iPadOS](../enrollment/ios-ipados-configuration-framework.md)
 - [Windows security baselines](/windows/security/threat-protection/windows-security-baselines)
@@ -246,17 +220,24 @@ To get an overview of app protection policies and how they work, go to:
 - [App protection policies overview](../apps/app-protection-policy.md)
 - [Tutorial: Enable Azure AD multi-factor authentication on apps](/azure/active-directory/authentication/tutorial-enable-azure-mfa)
 - [Data protection framework using app protection policies](../apps/app-protection-framework.md)
-- [Understand app protection policy delivery timing](../apps/app-protection-policy-delivery.md)
-- [How to create and assign app protection policies](../apps/app-protection-policies.md)
-- [How to monitor app protection policies](../apps/app-protection-policies-monitor.md)
-- [Review client app protection logs](../apps/app-protection-policy-settings-log.md)
-- [Frequently asked questions about MAM and app protection](../apps/mam-faq.yml)
+
+## Cloud attach with Configuration Manager
+
+Microsoft Endpoint Configuration Manager helps protect on-premises Windows Server, devices, apps, and data. If you need to manage a combination of cloud and on-premises endpoints, you can cloud attach your Configuration Manager environment to Intune.
+
+There are two steps to cloud attach your on-premises devices:
+
+1. [Tenant attach](/mem/configmgr/tenant-attach/prerequisites): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based admin center.
+2. [Co-management](/mem/configmgr/comanage/overview): Manage Windows client devices with Configuration Manager and Microsoft Intune. Some workloads are managed by Configuration Manager, and some workloads are managed by Intune. For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage conditional access policies.
+
+If you currently use Configuration Manager, you get immediate value through tenant attach, and you get more value through co-management.
+
+For guidance on the Microsoft Intune setup that's right for your organization, go to [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md).
 
 ## Next steps
 
 - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
 - [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md)
-- [Microsoft Intune licensing](licenses.md)
 - [Get started with device compliance policies](../protect/device-compliance-get-started.md)
 - [What is app management in Microsoft Intune](../apps/app-management.md)
 - [Apply features and settings on your devices using device profiles](../configuration/device-profiles.md)

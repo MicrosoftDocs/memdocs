@@ -124,12 +124,8 @@ The admin center also plugs-in other key device management services, including:
 - [**Microsoft Tunnel** VPN gateway solution that runs on Linux](./intune/protect/microsoft-tunnel-overview.md)
 - [**Mobile threat defense** partners](./intune/protect/mobile-threat-defense.md)
 - [**TeamViewer** for remote administration](./intune/remote-actions/teamviewer-support.md)
-- [**Windows 365** for your Windows virtual machines needs](/windows-365/overview)
+- [**Windows 365** for your Windows virtual machines](/windows-365/overview)
 - [**Windows Autopatch** to automate updates](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
-
-For more information, go to:
-
-- [Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md)
 
 ## Next steps
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/03/2022
+ms.date: 10/04/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -32,13 +32,15 @@ ms.collection:
 
 # Service information for Microsoft Intune service updates
 
-New feature releases for Intune typically have a six to eight-week cadence, from planning to release. This cadence is called a sprint. Intune releases use a `YYMM` naming convention. For example, 2301 is the January 2023 release.
+New feature releases for Intune typically have a six to eight week cadence, from planning to release. This cadence is called a sprint. Intune releases use a `YYMM` naming convention. For example, 2301 is the January 2023 release.
+
+This article provides information about the frequency of the Microsoft Intune service updates, the release cadence, and how to check your tenant release version.
 
 ## How updates are released
 
-The monthly release process is a methodical update that involves many different environments. The release is deployed to multiple Azure services. Then, the release updates are deployed to the Endpoint Manager admin center, which makes the release features available for you to use.
+The monthly release process involves many different environments and is deployed to multiple Azure services. After it's deployed to Azure, the release updates are deployed to the Endpoint Manager admin center, which makes the release features available for you to use.
 
-An internal environment called Self Host is the first environment to receive the release. Self Host is used only by the Intune engineering teams. After Self Host, the service release is deployed to the Microsoft tenant that manages over 650,000 devices. Once it's validated that there are no key issues with the service release, the release begins deploying to customer environments in a phased approach. Once all tenants are successfully updated, the Microsoft Endpoint Manager admin center is updated. This phased approach helps identify issues before they affect the service or our customers.
+An internal environment called Self Host is the first environment to receive the release. Self Host is used only by the Intune engineering teams. After Self Host, the service release is deployed to the Microsoft tenant that manages many devices. Once it's validated that there are no key issues with the service release, the release begins deploying to customer environments in a phased approach. Once all tenants are successfully updated, the Microsoft Endpoint Manager admin center is updated. This phased approach helps identify issues before they affect the service or our customers.
 
 Updating the Company Portal app is a different process. Microsoft is subject to the release requirements and processes of the Apple App Store, Google Play, and sometimes mobile carriers. It isn’t always possible to align the Intune release updates with updates to the Company Portal app. For more information on the Company Portal app updates, go to [UI updates for Intune end-user apps](whats-new-app-ui.md).
 
@@ -61,9 +63,9 @@ Keeping up to date about releases and changes is an important part of your Intun
 
   Content is published at the end of the current sprint, which is when the UI updates start deploying to the Microsoft Endpoint Manager admin center.
 
-- **[In development for Microsoft Intune](in-development.md)**: Learn more about what features are in development for Microsoft Intune. This article is updated regularly with new features and changes.
+- **[In development for Microsoft Intune](in-development.md)**: Learn more about what features are in development for Microsoft Intune. This article is updated regularly with upcoming features and changes.
 - **[Microsoft 365 message center](/microsoft-365/admin/manage/message-center)**: When the service update finishes deploying, you’ll see a message posted in the **Message center**. Or, you can view the same messages in the Message Center at `portal.office.com`. Service APIs pull only the Microsoft Intune messages from Microsoft 365 into the Microsoft Endpoint Manager admin center.
-- **[Microsoft Intune tenant status](tenant-status.md)**: A centralized hub where you can view current information and communications about the Intune service and your tenant status.
+- **[Microsoft Intune tenant status](tenant-status.md)**: This message center is a centralized hub where you can view current information and communications about the Intune service and your tenant status.
 
   Use the following steps to see the hub:
 
