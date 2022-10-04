@@ -36,11 +36,11 @@ The Cloud PC utilization report helps you make sure that your licenses are assig
 
 To get to the **Cloud PC utilization** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance** > **View report** (under **Cloud PCs with low utilization**).
 
-:::image type="content" source="(./media/report-cloud-pc-utilization/view-report.png" alt-text="Screenshot of getting to the Cloud PC utilization report" lightbox="./media/report-cloud-pc-utilization/view-report.png":::
+:::image type="content" source="(media/report-cloud-pc-utilization/view-report.png" alt-text="Screenshot of getting to the Cloud PC utilization report" lightbox="./media/report-cloud-pc-utilization/view-report.png":::
 
-The report shows:
+The report shows the following data aggregated for the last 28 days:
 
-- Aggregated data over the last 28 days: This histogram shows user connection time in three sections:
+- This histogram shows user connection time in three sections:
     - **High time connected**: More than 80 hours.
     - **Average time connected**: 40-80 hours.
     - **Low time connected**: Less than 40 hours.
