@@ -55,8 +55,8 @@ Microsoft Endpoint Configuration Manager helps protect on-premises Windows Serve
 
 There are two steps to cloud attach your on-premises devices:
 
-1. [Tenant attach](../../configmgr/tenant-attach): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based admin center.
-2. [Co-management](../../configmgr/comanage): Manage Windows client devices with Configuration Manager and Microsoft Intune. Some workloads are managed by Configuration Manager, and some workloads are managed by Intune. For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage conditional access policies.
+1. [Tenant attach](../../configmgr/tenant-attach.md): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based admin center.
+2. [Co-management](../../configmgr/comanage.md): Manage Windows client devices with Configuration Manager and Microsoft Intune. Some workloads are managed by Configuration Manager, and some workloads are managed by Intune. For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage conditional access policies.
 
 If you currently use Configuration Manager, you get immediate value through tenant attach, and you get more value through co-management.
 
@@ -141,7 +141,7 @@ MDM solutions like Intune can set rules that devices should meet, and can report
 
 For example, you can choose an acceptable (or unacceptable) threat level, block jailbroken or rooted devices, require a password length, and more. If these devices don't meet your rules, meaning they aren't compliant, then you can use conditional access to block access to your resources.
 
-If you prefer, you can enroll your devices before checking compliance. It's up to you. When users enroll their devices in Intune, then enrollment process can automatically deploy your compliance policies. When enrollment completes, admins can check the compliance status and get a list of devices that don't meet your rules. Microsoft recommends creating compliance and conditional access policies, and then deploying these policies during enrollment.
+If you prefer, you can enroll your devices before checking compliance. It's up to you. When users enroll their devices in Intune, then enrollment process can automatically deploy your compliance policies. When enrollment completes, admins can check the compliance status and get a list of devices that don't meet your rules. Microsoft recommends creating compliance and conditional access policies baseline, and then deploying these policies during enrollment.
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you create your policies and assign them to your groups. As a best practice, start small, and use a staged approach. For example, create an iOS/iPadOS policy that blocks jailbroken devices. Apply the policy to a pilot or test group. After initial testing, add more users to the pilot group. For more guidance, go to the [Microsoft Intune planning guide](intune-planning-guide.md).
 
@@ -162,7 +162,7 @@ The following articles are good resources:
 
 Every organization has a base set of apps that should be installed on devices. Your organization may require a specific email app, web browser, or VPN app. You can use Intune to deploy these apps to your users before they enroll their devices. When users enroll their devices, these apps can be automatically installed during the enrollment process.
 
-If you prefer, you can enroll your devices before installing apps. It's up to you. When users enroll their devices in Intune, the enrollment process can automatically deploy your app policies. When enrollment completes, the apps are ready to use. For key productivity apps, Microsoft recommends creating app policies and then deploying these policies during enrollment.
+If you prefer, you can enroll your devices before installing apps. It's up to you. When users enroll their devices in Intune, the enrollment process can automatically deploy your app policies. When enrollment completes, the apps are ready to use. For key productivity apps, Microsoft recommends creating a baseline of app policies and then deploying these policies during enrollment.
 
 Intune supports a wide range of apps, including store apps, line-of-business (LOB) apps, Win32 apps, and more. You can manage app deployment using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Also, you can connect to your managed Google Play, the Apple App Store, and the Microsoft Store to deploy apps from these locations.
 
@@ -226,15 +226,17 @@ Different platforms have different enrollment requirements. The following articl
 
 It's common for users to access their organization email & calendar, attend work meetings, and use other organization apps on their personal devices. To help keep organization data secure on these devices, you can use app protection policies and multi-factor authentication (MFA). App protection policies help protect organization data on personal devices. MFA helps protect your organization's data from unauthorized access.
 
-Intune's app protection policies are part of a mobile application management (MAM) approach designed to protect organization app data on personal devices. These app protection policies can also be used on devices enrolled Intune, or enrolled and managed by a third party partner MDM solution. This scenario is more common for apps that need an extra layer of security, including apps that have sensitive data.
+Intune's app protection policies are part of a mobile application management (MAM) approach designed to protect organization app data on personal devices. 
 
-The [Microsoft Intune planning guide](intune-planning-guide.md) has some guidance on managing access on BYOD or personal devices.
+These app protection policies can also be used on devices enrolled Intune, or enrolled and managed by a third party partner MDM solution. This scenario is more common for apps that need an extra layer of security, including apps that have sensitive data.
 
-There's an official list of Microsoft apps and supported third party partner apps that support app protection policies. See the official list at [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+The [Microsoft Intune planning guide](intune-planning-guide.md) has some guidance on managing access on personal devices.
+
+There's an official list of Microsoft apps and supported third party partner apps that support app protection policies. See the official list at [Microsoft Intune protected apps list](../apps/apps-supported-intune-apps.md).
 
 MFA is a feature of Azure AD that must be enabled in your Azure AD tenant. Then, you can configure MFA for your apps. For more information, go to:
 
-- [How it works: Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
+- [How it works: Azure AD multi-factor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
 - [Tutorial: Secure user sign-in events with Azure AD multi-factor authentication](/azure/active-directory/authentication/tutorial-enable-azure-mfa)
 
 To get an overview of app protection policies and how they work, go to:
