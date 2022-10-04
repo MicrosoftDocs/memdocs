@@ -6,7 +6,7 @@ items:
   items:
   - name: Microsoft Intune products and services overview
     href: endpoint-manager-overview.md
-  - name: Cloud native Windows endpoints
+  - name: Move to cloud native endpoints
     items:
     - name: Overview and benefits
       href: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
