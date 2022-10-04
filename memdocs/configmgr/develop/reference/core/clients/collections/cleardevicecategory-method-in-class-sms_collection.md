@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ClearDeviceCategory Method in Class SMS_Collection
 The `ClearDeviceCatetory` Windows Management Instrumentation (WMI) class method, in Configuration Manager, clears a category from a set of devices.  

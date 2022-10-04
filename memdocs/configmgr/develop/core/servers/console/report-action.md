@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Report Action
 The report action displays a Configuration Manager report in the Configuration Manager console.  

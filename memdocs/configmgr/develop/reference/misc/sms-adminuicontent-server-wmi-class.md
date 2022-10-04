@@ -13,7 +13,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 descriptions: Learn about the simplified syntax, methods, properties, and requirements of the SMS_AdminUIContent server class.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AdminUIContent Server WMI Class
 For internal use only.  

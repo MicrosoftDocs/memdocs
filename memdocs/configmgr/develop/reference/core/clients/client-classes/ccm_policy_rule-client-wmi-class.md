@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Policy_Rule Client WMI Class
 In Configuration Manager, the `CCM_Policy_Rule` class is a client Windows Management Instrumentation (WMI) class that defines a policy object rule. Objects of this class are only used in the `PolicyRules` property in [CCM_Policy_Policy Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policy_policy-client-wmi-class.md).  

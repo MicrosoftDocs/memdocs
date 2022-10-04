@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Actions
 Configuration Manager console actions are tasks or commands that are performed by making context menu or action panel selections. There are a number of standard action types such as cut, paste, and properties. You can also add your own custom actions to perform tasks such as running programs and displaying dialog boxes. You can restrict the availability of actions to such criteria as regular expressions, security permissions, and method call results.  

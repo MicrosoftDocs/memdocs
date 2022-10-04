@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a MOF File for a Configuration Manager Custom Action
 You define a custom task sequence action, its properties and its user interface controls by creating a managed object format (MOF) file to describe the class. The MOF file is then compiled by using Mofcomp.exe.  

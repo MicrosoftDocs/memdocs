@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Import Configuration Baselines and Configuration Items
 In Configuration Manager, importing a configuration baseline or configuration item by using the Configuration Manager SDK requires a properly formatted XML file. Unlike the Configuration Manager console, the Configuration Manager SDK does not support directly importing a CAB file.  

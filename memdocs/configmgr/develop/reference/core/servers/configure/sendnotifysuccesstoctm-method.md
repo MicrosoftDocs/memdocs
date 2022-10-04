@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SendNotifySuccessToCTM Method
 The **SendNotifySuccessToCTM** method notifies Content Transfer Manager of the success of a job.  

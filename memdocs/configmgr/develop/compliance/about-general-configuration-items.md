@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About General Configuration Items
 In Configuration Manager, general configuration items are models of settings and objects, which together represent a meaningful unit of configuration management whose identity is defined by enumeration of its settings and objects.  

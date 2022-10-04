@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Deploy a Site System Role (Example:  Fallback Status Point)
 The features and capabilities of a site are determined by the site roles applied to it. A site can contain one or more site roles. Some roles depend on other roles. For more information about specific site roles see [Configure sites and hierarchies for Configuration Manager](../../../core/servers/deploy/configure/configure-sites-and-hierarchies.md).  

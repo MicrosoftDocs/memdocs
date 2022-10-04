@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetAssignedSite Method in Class SMS_Client
 The `SetAssignedSite` method, in Configuration Manager, sets the client's assigned site.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Policy_Expression Client WMI Class
 In Configuration Manager, the `CCM_Policy_Expression` class is a client Windows Management Instruementation (WMI) class that represents a policy expression that evaluates to either `true` or `false`.  

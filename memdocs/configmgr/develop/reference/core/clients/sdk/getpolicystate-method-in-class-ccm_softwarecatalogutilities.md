@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetPolicyState Method in Class CCM_SoftwareCatalogUtilities
 The `GetPolicyState` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that returns the state of a policy object.   

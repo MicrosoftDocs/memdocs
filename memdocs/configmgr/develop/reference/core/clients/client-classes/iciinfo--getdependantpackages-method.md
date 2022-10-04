@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICIINFO::GetDependantPackages Method
 The `ICIINFO::GetDependantPackages` method, in Configuration Manager, gets the dependent package information for the configuration item.  

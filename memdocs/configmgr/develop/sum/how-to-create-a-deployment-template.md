@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Deployment Template
 You create a software updates deployment template, in Configuration Manager, by creating an instance of the `SMS_Template` class and populating the properties.  

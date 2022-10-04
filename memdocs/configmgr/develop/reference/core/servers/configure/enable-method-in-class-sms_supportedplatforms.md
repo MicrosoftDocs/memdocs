@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Enable Method in Class SMS_SupportedPlatforms
 The `Enable` Windows Management Instrumentation (WMI) class method, in Configuration Manager, enables or disables the platforms.  

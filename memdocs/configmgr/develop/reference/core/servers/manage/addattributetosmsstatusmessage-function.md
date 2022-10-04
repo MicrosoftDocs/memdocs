@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddAttributeToSMSStatusMessage Function
 In Configuration Manager, the `AddAttributeToSMSStatusMessage` function adds a single optional status message attribute ID/value pair to a status message object.  

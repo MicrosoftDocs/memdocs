@@ -11,7 +11,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Surface device dashboard in Configuration Manager

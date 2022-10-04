@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Import a New Computer into Configuration Manager
 You add a new computer directly to the Configuration Manager database by calling the [ImportMachineEntry Method in Class SMS_Site](../../develop/reference/core/servers/configure/importmachineentry-method-in-class-sms_site.md). This can be used to deploy operating systems to computers that have not yet been discovered automatically by Configuration Manager.  

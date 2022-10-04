@@ -9,7 +9,7 @@ ms.topic: conceptual
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3

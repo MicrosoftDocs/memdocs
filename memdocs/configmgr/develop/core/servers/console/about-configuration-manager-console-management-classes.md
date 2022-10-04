@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager Console Management Classes
 Configuration Manager uses XML to define management classes whose instances contain data that can be viewed from within the Configuration Manager console. Custom management classes can be created and added within the console architecture.  

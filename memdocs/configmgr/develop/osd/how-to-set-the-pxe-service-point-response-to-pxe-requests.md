@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Set the PXE Service Point Response to PXE Requests
 In Configuration Manager, you set the distribution point response to incoming PXE requests by setting the **IsActive** embedded property.  

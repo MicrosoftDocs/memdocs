@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Windows Firewall and port settings for clients in Configuration Manager
 

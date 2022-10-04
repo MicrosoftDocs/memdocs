@@ -9,7 +9,7 @@ ms.topic: how-to
 ms.localizationpriority: medium
 author: gowdhamankarthikeyan
 ms.author: gokarthi
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 manager: apoorvseth
 ms.collection: tier3
 ---

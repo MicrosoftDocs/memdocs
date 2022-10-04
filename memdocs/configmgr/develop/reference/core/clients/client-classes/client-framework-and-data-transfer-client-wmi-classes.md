@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Client Framework and Data Transfer Client WMI Classes
 This section describes the Client Configuration Manager (CCM) framework and data transfer classes in Configuration Manager for the client.  

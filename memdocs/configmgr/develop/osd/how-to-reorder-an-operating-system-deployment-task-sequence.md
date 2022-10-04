@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Reorder an Operating System Deployment Task Sequence
 In Configuration Manager, you can reorder the steps (an action or a group) in a task sequence or group by rearranging the step sequence in the [Steps](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) property [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md) array.  

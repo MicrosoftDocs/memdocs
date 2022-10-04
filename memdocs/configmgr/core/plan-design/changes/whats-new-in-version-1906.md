@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 1906 of Configuration Manager current branch

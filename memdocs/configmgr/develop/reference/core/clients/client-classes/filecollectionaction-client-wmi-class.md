@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # FileCollectionAction Client WMI Class
 In Configuration Manager, the **FileCollectionAction** class is a client Windows Management Instrumentation (WMI) class that associates a set of file collection rules with reporting details, tying together files to collect with the destination of the report.  

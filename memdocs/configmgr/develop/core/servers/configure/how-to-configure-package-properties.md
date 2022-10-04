@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure Package Properties
 The following example shows how to configure the properties of an existing package, in Configuration Manager, by using the `SMS_Package` class.  

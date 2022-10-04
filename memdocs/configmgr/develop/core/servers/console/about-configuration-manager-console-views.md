@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager Console Views
 Configuration Manager console views are displayed in the results pane of the Configuration Manager console. You can create your own views and make them available anywhere in the tree view hierarchy.  

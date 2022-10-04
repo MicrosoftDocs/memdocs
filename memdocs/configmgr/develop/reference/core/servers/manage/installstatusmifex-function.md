@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # InstallStatusMIFEx Function
 The `InstallStatusMIFEx` function, in Configuration Manager, enhances the functionality of [InstallStatusMIF](../../../../../develop/reference/core/servers/manage/installstatusmif-function.md).  

@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Checklist for installing update 1906 for Configuration Manager

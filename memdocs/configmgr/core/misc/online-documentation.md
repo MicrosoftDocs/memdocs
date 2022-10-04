@@ -11,7 +11,7 @@ manager: apoorvseth
 description: Additional links for Configuration Manager help documentation
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Online documentation for Configuration Manager

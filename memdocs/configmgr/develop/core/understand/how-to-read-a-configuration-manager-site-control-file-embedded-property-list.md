@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Read a Configuration Manager Site Control File Embedded Property List
 In Configuration Manager, you read an embedded property list from a site control file resource by getting the [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) object for the embedded object from the resources *PropLists* property array.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ResourceMap Server WMI Class
 The `SMS_ResourceMap` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps a resource type to its resource class name and display name.  

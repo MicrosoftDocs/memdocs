@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Enable or Disable the Compliance Settings (DCM) Agent
 In Configuration Manager, you enable or disable the Desired Configuration Management Client Agent by modifying the site control file settings.  

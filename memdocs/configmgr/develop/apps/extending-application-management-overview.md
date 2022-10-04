@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Extending Application Management Overview
 By default, Application Management supports creating numerous deployment types such as Windows Installer, Script Installer, Microsoft Application Virtualization, Nokia SIS files and Windows Mobile Cabinet file deployment technologies. Partners that must continue to use a specific deployment technology not natively supported by Configuration Manager, can extend the Application Management model to support a custom deployment type.  

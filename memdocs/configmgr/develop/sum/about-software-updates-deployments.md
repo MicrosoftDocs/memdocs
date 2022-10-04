@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: Learn about how to create software update deployments using the Configuration Manager SDK interfaces to deliver updates to client computers.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # About Software Updates Deployments

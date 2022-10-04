@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # DeleteMembershipRules Method in Class SMS_Collection
 The `DeleteMembershipRules` Windows Management Instrumentation (WMI) class method, in Configuration Manager, is used to delete multiple membership rules from the collection.  

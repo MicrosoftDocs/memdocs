@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: Learn about the different operating system deployment site roles and how to configure these roles by using the SMS_SiteControlFile class.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Operating System Deployment Site Role Configuration
 The following two site roles are of particular importance to Operating System Deployment in Configuration Manager.  

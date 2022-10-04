@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Use Objects Passed to a Configuration Manager Form
 In Configuration Manager, you use the [SmsPageControl.PropertyManager](/previous-versions/system-center/developer/cc146982(v=msdn.10)) object to access objects that are selected in the Configuration Manager console.  

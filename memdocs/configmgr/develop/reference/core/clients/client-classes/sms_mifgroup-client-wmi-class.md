@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_MIFGroup Client WMI Class
 The `SMS_MifGroup` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that serves as a dynamic instance provider class allowing WMI reporting of Management Information Format (MIF) files that extend the client inventory.  

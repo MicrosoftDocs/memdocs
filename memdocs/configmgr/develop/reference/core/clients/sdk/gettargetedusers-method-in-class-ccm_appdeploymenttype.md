@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetTargetedUsers Method in Class CCM_AppDeploymentType
 The `GetTargetedUsers` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that retrieves the targeted users of an application deployment type.   

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure and Deploy Updates
 You create a software updates deployment, in Configuration Manager, by creating an instance of the [SMS_UpdatesAssignment Server WMI Class](../../develop/reference/sum/sms_updatesassignment-server-wmi-class.md) and populating the properties.  

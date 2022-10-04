@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_InstalledSoftware Client WMI Class
 The `SMS_InstalledSoftware` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that merges installed software information from multiple sources to provide categorization and Microsoft Licensing information.  

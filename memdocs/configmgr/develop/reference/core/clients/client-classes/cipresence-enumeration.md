@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CIPresence Enumeration
 In Configuration Manager, the `CIPresence` enumeration defines configuration item presence types used in the discovery process.  

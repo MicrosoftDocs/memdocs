@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # RequestLocksAsync Method in Class SMS_ObjectLock
 The `RequestLocksAsync` Windows Management Instrumentation (WMI) class method, in Configuration Manager, asynchronously acquires locks to edit multiple global objects.  

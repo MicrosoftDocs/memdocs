@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # DeleteAllMembers Method in Class SMS_Collection
 The `DeleteAllMembers` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes all members, that is, resources and discovery data, for the collection.  

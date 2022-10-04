@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # IsFutureWindowAvailable Method in Class CCM_ServiceWindowManager
 The `IsFutureWindowAvailable` WMI class method, in Configuration Manager, determines whether a service window of a specified type and the given duration is going to be available.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Connect to an SMS Provider in Configuration Manager by Using Managed Code
 To connect to an SMS Provider, use **WqlConnectionManager.Connect**. After it is connected, **WqlConnectionManager.Connect** has methods to query, create, delete, and otherwise use Configuration Manager Windows Management Instrumentation (WMI) objects.  

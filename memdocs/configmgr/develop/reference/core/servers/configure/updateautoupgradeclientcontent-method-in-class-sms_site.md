@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # UpdateAutoUpgradeClientContent Method in Class SMS_Site
 The `UpdateAutoUpgradeClientContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates auto-upgrade client content to all distribution points.  

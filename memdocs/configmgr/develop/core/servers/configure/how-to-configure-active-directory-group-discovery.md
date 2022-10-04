@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure Active Directory Group Discovery
 You configure the Active Directory Group Discovery settings, in Configuration Manager, by modifying the necessary site control file settings.  

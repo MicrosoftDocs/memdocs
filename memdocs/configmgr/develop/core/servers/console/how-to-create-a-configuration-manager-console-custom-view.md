@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Configuration Manager Console Custom View
 In Configuration Manager, to create a custom console view, you must create two .NET Framework classes. If you do not wish to create your own custom view control, see [How to Create Node XML for a Configuration Manager Console View](../../../../develop/core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md) for more information.  

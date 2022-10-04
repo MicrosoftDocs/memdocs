@@ -10,7 +10,7 @@ ms.technology: configmgr-sum
 author: BalaDelli
 ms.author: baladell
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---
 # Icons used for software updates in Configuration Manager

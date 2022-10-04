@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Operating System Deployment Task Sequence Object Model
 In Configuration Manager, operating system deployment task sequences are created and edited by using a Windows Management Instrumentation (WMI) class-based object model.  

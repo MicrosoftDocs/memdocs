@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # RequestRefresh Method in Class SMS_Collection
 The `RequestRefresh` Windows Management Instrumentation (WMI) class method, in Configuration Manager, triggers a re-evaluation of collection membership by the Configuration Manager collection evaluator component.  

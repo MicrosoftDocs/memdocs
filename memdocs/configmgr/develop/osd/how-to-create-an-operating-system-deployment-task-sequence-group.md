@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create an Operating System Deployment Task Sequence Group
 An operating system deployment task sequence group, in Configuration Manager, can be added to a task sequence by creating an instance of the [SMS_TaskSequence_Group](../../develop/reference/osd/sms_tasksequence_group-server-wmi-class.md) class. The group is then added to the list of steps of the task sequence. The list of steps is an array of the [SMS_TaskSequence_Step](../../develop/reference/osd/sms_tasksequence_step-server-wmi-class.md) derived classes. The array is stored in the task sequence, [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md), `Steps` property.  

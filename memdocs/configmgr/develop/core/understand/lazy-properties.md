@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Lazy Properties
 A small number of SMS object properties are described as lazy. This means that the property exists and contains data, but the data is not available through the SMS Administrator console. In practical terms, the property is not visible in Query Builder.  

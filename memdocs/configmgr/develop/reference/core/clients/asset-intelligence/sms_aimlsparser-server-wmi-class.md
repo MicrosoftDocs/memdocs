@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AIMLSParser Server WMI Class
 The `SMS_AIMLSParser` Windows Management Instrumentation (WMI) class in Configuration Manager imports license data.  

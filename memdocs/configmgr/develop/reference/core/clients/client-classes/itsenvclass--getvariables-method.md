@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ITSEnvClass::GetVariables Method
 In Configuration Manager, the `GetVariables` method gets the variables for the operating system deployment task sequence environment.  

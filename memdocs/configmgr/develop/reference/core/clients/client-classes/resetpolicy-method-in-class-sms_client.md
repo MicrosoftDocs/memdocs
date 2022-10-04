@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ResetPolicy Method in Class SMS_Client
 In Configuration Manager, the `ResetPolicy` method, resets the policy on a client. As a result, the next policy request will receive a full policy instead of merely the change in policy since the last policy request.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICIINFO::GetCategory Method
 The `ICIINFO::GetCategory` method, in Configuration Manager, gets a localized category name by index and the group name of the category.  

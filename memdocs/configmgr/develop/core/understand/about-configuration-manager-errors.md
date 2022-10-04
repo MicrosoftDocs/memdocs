@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager Errors
 In Configuration Manager, when a Configuration Manager error occurs it is either a Windows Management Instrumentation (WMI) or a SMS Provider error.  

@@ -11,7 +11,7 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configure clients for cloud management gateway

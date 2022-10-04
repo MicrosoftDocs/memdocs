@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Modify Advertisement Properties
 The following example shows how to modify an existing advertisement, in Configuration Manager, by using the `SMS_Advertisement` class and class properties.  

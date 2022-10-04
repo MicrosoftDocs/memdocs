@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to See a Configuration Manager View by Using SQL Server
 The following examples demonstrate various Microsoft Configuration Manager SQL view queries.  

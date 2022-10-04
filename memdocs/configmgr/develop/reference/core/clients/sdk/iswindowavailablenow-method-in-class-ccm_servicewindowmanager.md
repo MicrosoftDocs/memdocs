@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # IsWindowAvailableNow Method in Class CCM_ServiceWindowManager
 The `IsWindowAvailableNow` WMI class method, in Configuration Manager, determines whether a service window of a specified type and the given duration is available to run at the point of time when the call is made.  

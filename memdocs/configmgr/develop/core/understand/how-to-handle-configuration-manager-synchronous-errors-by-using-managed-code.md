@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Handle Configuration Manager Synchronous Errors by Using Managed Code
 To handle a Configuration Manager error that is raised in a synchronous query, you catch the [SmsQueryException](/previous-versions/system-center/developer/cc147436(v=msdn.10)) exception. Because this exception is also caught by SMS_Exception], you can catch it and the [SmsConnectionException](/previous-versions/system-center/developer/cc147431(v=msdn.10)) exception in the same catch block.  

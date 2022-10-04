@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetSiteADInfo Method in Class SMS_Site
 The `GetSiteADInfo` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets Active Directory information of site server.  

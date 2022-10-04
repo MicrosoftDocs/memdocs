@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Asset Intelligence Client WMI Classes
 In Configuration Manager, the Asset Intelligence client Windows Management Instrumentation (WMI) classes query client computers for usage, software, and licensing data. These classes are in the root/cimv2/sms namespace.  

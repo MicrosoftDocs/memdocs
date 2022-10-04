@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICCMEvent::SetProperty Method
 In Configuration Manager, the `ICcmEvent::SetProperty` method sets an event property.  

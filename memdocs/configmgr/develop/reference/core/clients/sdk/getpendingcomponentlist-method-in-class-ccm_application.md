@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetPendingComponentList Method in Class CCM_Application
 The `GetPendingComponentList` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the pending component list for an application.   

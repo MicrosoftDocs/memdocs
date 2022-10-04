@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CollectionDependencies Server WMI Class
 The `SMS_CollectionDependencies` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, is used to query dependency relationships between collections, specifically the composable collection rules (inclusion, exclusion) and the limiting collection.  

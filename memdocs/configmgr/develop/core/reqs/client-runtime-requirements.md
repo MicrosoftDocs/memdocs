@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Client Runtime Requirements
 Applications that run on Microsoft Configuration Manager clients have the following runtime requirements.  

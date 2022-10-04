@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: medium
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Diagnostic and usage data for version 2010

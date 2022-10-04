@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AppDeploymentTypeData Structure
 In Configuration Manager, the `AppDeploymentTypeData` structure contains detection results for a set of deployment types.  

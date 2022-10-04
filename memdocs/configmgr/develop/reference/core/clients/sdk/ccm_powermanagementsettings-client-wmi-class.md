@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_PowerManagementSettings Client WMI Class
 The `CCM_PowerManagementSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains methods to help manage client power management settings.   

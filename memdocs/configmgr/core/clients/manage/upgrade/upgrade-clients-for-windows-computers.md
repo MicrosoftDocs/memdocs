@@ -11,7 +11,7 @@ ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to upgrade clients for Windows computers in Configuration Manager

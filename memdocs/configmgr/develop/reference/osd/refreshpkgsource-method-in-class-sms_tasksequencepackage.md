@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # RefreshPkgSource Method in Class SMS_TaskSequencePackage
 The `RefreshPkgSource` class method, in Configuration Manager, refreshes the package source at all distribution points when the package properties have not changed.  

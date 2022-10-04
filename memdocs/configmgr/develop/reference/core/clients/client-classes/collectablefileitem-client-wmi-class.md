@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CollectableFileItem Client WMI Class
 In Configuration Manager, the **CollectableFileItem** class is a client Windows Management Instrumentation (WMI) class that defines attributes of a file collection rule. The rule attributes define criteria, such as file name, directory paths, and file size limits. An example is `collect *.mif in %windir% up to 10 KB`.  

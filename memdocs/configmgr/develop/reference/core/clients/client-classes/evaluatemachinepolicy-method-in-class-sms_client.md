@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # EvaluateMachinePolicy Method in Class SMS_Client
 In Configuration Manager, the `EvaluateMachinePolicy` method initiates the evaluation of the policy assigned to a specified computer or device.  

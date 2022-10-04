@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # LoadFromXml Method in Class SMS_TaskSequence
 The `LoadFromXml` Windows Management Instrumentation (WMI) class method, in Configuration Manager, loads a task sequence into WMI objects from task sequence XML.  

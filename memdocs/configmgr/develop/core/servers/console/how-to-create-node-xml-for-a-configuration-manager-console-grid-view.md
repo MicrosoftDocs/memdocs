@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create Node XML for a Configuration Manager Console Grid View
 To create the node XML for the Configuration Manager console default grid view you create an XML file describing a [RootNodeDescription](/previous-versions/system-center/developer/cc147277(v=msdn.10)) element.  

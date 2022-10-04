@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_PkgToPkgAccess_a Server WMI Class
 The `SMS_PkgToPkgAccess_a` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that uses the `PackageID` property to relate an [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) object with the [SMS_PackageAccessByUsers Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_packageaccessbyusers-server-wmi-class.md) object used to access the package on its distribution points.  

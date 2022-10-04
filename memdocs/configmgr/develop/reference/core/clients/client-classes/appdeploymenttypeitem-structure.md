@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AppDeploymentTypeItem Structure
 In Configuration Manager, the `AppDeploymentTypeItem` structure contains detection results for an individual deployment type.  

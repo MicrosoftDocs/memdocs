@@ -11,7 +11,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to prepare internet-based devices for co-management

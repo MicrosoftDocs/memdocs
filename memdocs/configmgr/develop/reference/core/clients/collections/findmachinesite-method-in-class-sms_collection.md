@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # FindMachineSite Method in Class SMS_Collection
 The `FindMachineSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets site code information for a specific resource.  

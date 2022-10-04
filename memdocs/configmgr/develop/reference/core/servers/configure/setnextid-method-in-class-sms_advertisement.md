@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetNextID Method in Class SMS_Advertisement
 The `SetNextID` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the ID number that will be used for the next advertisement created.  

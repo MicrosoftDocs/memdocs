@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_MeteredFiles Server WMI Class
 The `SMS_MeteredFiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents metered files and implements the matching between the meter rule and the file information.  

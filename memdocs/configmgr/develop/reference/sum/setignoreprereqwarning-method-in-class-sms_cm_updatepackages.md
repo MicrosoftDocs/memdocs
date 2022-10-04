@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetIgnorePrereqWarning Method in Class SMS_CM_UpdatePackages
 The `SetIgnorePrereqWarning` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the ignore pre-requisites  warning flag of the update packages.  

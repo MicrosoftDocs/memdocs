@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_StateInformation Server WMI Class
 The `SMS_StateInformation` WMI class is an SMS Provider server class, in Configuration Manager, that provides information about a state message.  

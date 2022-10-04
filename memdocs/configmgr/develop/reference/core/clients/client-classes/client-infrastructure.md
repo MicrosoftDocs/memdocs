@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Client Infrastructure
 This section provides reference information for the Configuration Manager client infrastructure, including Control Panel, client framework and data transfer, and policy functionality.  

@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: Learn how to set policy enforcement rules for software updates by editing the 'SetEnforcement' class method in the Configuration Manager.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetEnforcement Method in Class SMS_SoftwareUpdate
 The `SetEnforcement` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets policy enforcement for the software update.  

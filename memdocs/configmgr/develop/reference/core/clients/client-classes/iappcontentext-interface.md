@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # IAppContentExt Interface
 The `IAppContentExt` interface, in Configuration Manager, defines functions to retrieve the application content information.  

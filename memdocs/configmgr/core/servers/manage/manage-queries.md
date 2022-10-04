@@ -11,7 +11,7 @@ author: gowdhamankarthikeyan
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to manage queries in Configuration Manager
 

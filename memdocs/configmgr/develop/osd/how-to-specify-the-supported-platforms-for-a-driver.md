@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Specify the Supported Platforms for a Driver
 In Configuration Manager, you specify the supported platforms of a driver in the `SDMPackageXML` property XML of the driver's [SMS_Driver Server WMI Class](../../develop/reference/osd/sms_driver-server-wmi-class.md) object. The XML contains a node `PlatformApplicabilityConditions` to which you add `PlatformApplicabilityCondition` elements for each platform the driver supports.  
