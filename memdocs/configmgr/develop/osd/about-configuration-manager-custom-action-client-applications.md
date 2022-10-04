@@ -7,7 +7,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 author: Banreet
+<<<<<<< HEAD
 ms.author: aaroncz
+=======
+ms.author: banreetkaur
+>>>>>>> 82de8759a8986955d2c715d9123b1cafbe6e6137
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3

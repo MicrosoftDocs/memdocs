@@ -8,7 +8,7 @@ ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 6c9c4ddf-0c0a-48ca-b9ef-099d2043fe27
 author: Banreet
-ms.author: aaroncz
+ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3

@@ -11,6 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.reviewer: mstewart,aczechowski
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Features in Configuration Manager technical preview version 2209

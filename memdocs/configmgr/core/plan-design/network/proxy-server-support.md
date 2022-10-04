@@ -6,10 +6,12 @@ ms.date: 04/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: how-to
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Proxy server support in Configuration Manager

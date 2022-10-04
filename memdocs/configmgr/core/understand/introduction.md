@@ -7,11 +7,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.custom: intro-overview
 ms.topic: overview
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: highpri
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # What is Configuration Manager?

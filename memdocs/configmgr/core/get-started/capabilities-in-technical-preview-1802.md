@@ -6,11 +6,13 @@ ms.date: 02/09/2018
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 # Capabilities in Technical Preview 1802 for Configuration Manager
 

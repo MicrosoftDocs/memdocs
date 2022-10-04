@@ -2,14 +2,16 @@
 title: Software Center user guide
 titleSuffix: Configuration Manager
 description: Learn about the features and functionality of Software Center
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.author: baladell 
+author: BalaDelli
+manager: apoorvseth
 ms.date: 06/10/2020
 ms.topic: end-user-help
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aczechowski
 ---
 
 # Software Center user guide
