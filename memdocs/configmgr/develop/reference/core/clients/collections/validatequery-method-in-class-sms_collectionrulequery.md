@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ValidateQuery Method in Class SMS_CollectionRuleQuery
 The `ValidateQuery` Windows Management Instrumentation (WMI) class method, in Configuration Manager, verifies that the query collection rule is a valid WQL or Extended WQL statement.  

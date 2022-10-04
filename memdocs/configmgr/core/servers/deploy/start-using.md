@@ -11,7 +11,7 @@ manager: apoorvseth
 description: Links to articles to install Configuration Manager site servers and roles.
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Deploy servers and roles

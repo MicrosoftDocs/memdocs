@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Context Qualifiers
 Context objects are used, in Configuration Manager, to provide additional information to the SMS Provider. Typically, you use context qualifiers to give the SMS Provider contextual information, such as your application's name. You can use context qualifiers when you connect to the SMS Provider and with individual SMS Provider objects.  

@@ -9,9 +9,9 @@ ms.topic: how-to
 
 
 ms.assetid: 2ca0c0b4-2fd1-4373-9f8d-3db7dbc92045
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
 ---

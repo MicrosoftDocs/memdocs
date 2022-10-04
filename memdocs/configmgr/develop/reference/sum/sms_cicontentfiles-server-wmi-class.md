@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CIContentFiles Server WMI Class
 The `SMS_CIContentFiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists all files associated with the content of a specific [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md) object.  

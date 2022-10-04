@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # FormatSystemMessage Method
 The `FormatSystemMessage` method, in Configuration Manager, formats a system error message by using the error code and optional insertion strings.  

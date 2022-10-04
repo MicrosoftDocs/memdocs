@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICcmContentTransferManager4 Interface
 The **ICcmContentTransferManager4** interface is used by clients to invoke the Content Transfer Manager.  

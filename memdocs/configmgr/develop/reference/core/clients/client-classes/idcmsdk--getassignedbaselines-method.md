@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # IDCMSDK::GetAssignedBaselines Method
 The `IDCMSDK::GetAssignedBaselines` method, in Configuration Manager, enumerates assigned baseline configuration items.  

@@ -11,7 +11,7 @@ ROBOTS: NOINDEX
 description: Placeholder file for Configuration Manager documentation
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager
 

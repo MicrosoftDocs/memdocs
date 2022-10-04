@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_PDFPkgToPDFProgram_a Server WMI Class
 The `SMS_PDFPkgToPDFProgram_a` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that uses the `PDFID` property to relate a [SMS_PDF_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_pdf_package-server-wmi-class.md) object to an [SMS_PDF_Program Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_pdf_program-server-wmi-class.md) object that is part of the package.  

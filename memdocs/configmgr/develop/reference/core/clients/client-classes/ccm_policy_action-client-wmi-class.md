@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Policy_Action Client WMI Class
 In Configuration Manager, the `CCM_Policy_Action` class is a client Windows Management Instrumentation (WMI) class that represents settings for a policy action.  

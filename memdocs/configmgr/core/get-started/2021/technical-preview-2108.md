@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: medium
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Features in Configuration Manager technical preview version 2108

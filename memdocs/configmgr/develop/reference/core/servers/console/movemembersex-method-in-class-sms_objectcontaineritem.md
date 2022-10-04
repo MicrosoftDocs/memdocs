@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # MoveMembersEx Method in Class SMS_ObjectContainerItem
 The `MoveMembersEx` Windows Management Instrumentation (WMI) class method, in Configuration Manager, moves folder items to another folder.  

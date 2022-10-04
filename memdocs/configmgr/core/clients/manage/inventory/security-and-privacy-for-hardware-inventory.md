@@ -11,7 +11,7 @@ ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Security and privacy for hardware inventory in Configuration Manager
 

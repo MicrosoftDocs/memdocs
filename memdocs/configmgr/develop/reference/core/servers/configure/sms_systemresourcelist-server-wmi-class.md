@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SystemResourceList Server WMI Class
 The `SMS_SystemResourceList` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps network abstraction layer (NAL) paths, resource types, site codes, and role names for system resources located on site servers.  

@@ -11,7 +11,7 @@ author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Install and configure the Exchange connector

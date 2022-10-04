@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Client-side Handler
 The custom client-side handler needs to implement a public COM interface and methods. The below methods will be called by the Configuration Manager client framework.  

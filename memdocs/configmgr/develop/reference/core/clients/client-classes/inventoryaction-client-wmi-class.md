@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # InventoryAction Client WMI Class
 In Configuration Manager, the `InventoryAction` class is a client Windows Management Instrumentation (WMI) class that associates a set of queries with reporting details, tying together the item to report and the destination of the report.  

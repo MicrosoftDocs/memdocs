@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS Provider Fundamentals in Configuration Manager
 You use the SMS Provider to access and modify Configuration Manager data. The SMS Provider is a Windows Management Instrumentation (WMI) provider that can be accessed through either WMI or managed classes.  

@@ -11,7 +11,7 @@ manager: apoorvseth
 ms.author: sheetg
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Introduction to power management in Configuration Manager
 

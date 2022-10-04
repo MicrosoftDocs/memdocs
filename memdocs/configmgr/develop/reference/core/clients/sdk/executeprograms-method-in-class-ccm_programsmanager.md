@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ExecutePrograms Method in Class CCM_ProgramsManager
 The `ExecutePrograms` WMI class method, in Configuration Manager, manages downloads of legacy software distribution programs.  

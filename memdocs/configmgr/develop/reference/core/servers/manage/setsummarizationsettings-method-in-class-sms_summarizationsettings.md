@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetSummarizationSettings Method in Class SMS_SummarizationSettings
 In Configuration Manager, the `SetSummarizationSettings` Windows Management Instrumentation (WMI) class method sets the summarization schedule.  

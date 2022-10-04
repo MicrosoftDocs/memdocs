@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICcmAlternateDownloadProvider : CancelJob Method
 The **ICcmAlternateDownloadProvider::CancelJob** method, in Configuration Manager, cancels a job.  

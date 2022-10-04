@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CreateFromINF Method in Class SMS_Driver
 The `CreateFromINF` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates an [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) object based on information from the specified Microsoft Windows .inf file.  

@@ -11,7 +11,7 @@ author: gowdhamankarthikeyan
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Create and run PowerShell scripts from the Configuration Manager console

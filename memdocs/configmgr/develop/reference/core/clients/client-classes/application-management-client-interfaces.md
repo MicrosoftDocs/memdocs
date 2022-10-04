@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Application Management Client Interfaces
 In Configuration Manager, the application management interfaces are used by client applications to manage application management functionality on the client.  

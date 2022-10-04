@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CollectionRuleQuery Server WMI Class
 The `SMS_CollectionRuleQuery` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a member of a collection based on the results of a query.  

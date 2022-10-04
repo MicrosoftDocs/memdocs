@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICcmAlternateDownloadProvider : DownloadContent Method
 The **ICcmAlternateDownloadProvider::DownloadContent** method, in Configuration Manager, instructs the provider to download content.  

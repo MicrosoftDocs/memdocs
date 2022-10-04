@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SCI_Address Server WMI Class
 The `SMS_SCI_Address` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a sender address, which is a link between the site for which the site control file exists and another site.  

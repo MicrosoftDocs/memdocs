@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: An overview of SMS_AdvancedThreatProtectionSettings Server WMI Class
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AdvancedThreatProtectionSettings Server WMI Class
 The  `SMS_AdvancedThreatProtectionSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents policy settings for Microsoft Defender for Endpoint. 

@@ -7,9 +7,9 @@ ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 542246a2-55b9-464a-8d52-eff405127c14
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
 

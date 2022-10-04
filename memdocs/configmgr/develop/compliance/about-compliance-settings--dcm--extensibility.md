@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Compliance Settings (DCM) Extensibility
 The content in this section provides information about extending the functionality of desired configuration management configuration items in Configuration Manager.  

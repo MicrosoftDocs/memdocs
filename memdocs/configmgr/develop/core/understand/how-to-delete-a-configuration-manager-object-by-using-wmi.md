@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Delete a Configuration Manager Object by Using WMI
 To delete a Configuration Manager object, in Configuration Manager, call the [SWbemObject](/windows/win32/wmisdk/swbemobject) object [Delete_](/windows/win32/wmisdk/swbemobject-delete-) method.  

@@ -11,7 +11,7 @@ author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # View collection relationships

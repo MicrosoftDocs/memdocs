@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Operating System Configuration Item Example 1
 In Configuration Manager, the following Operating System Configuration Item Schema example checks for Windows XP SP2.  

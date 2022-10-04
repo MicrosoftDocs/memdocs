@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ResIDValueLookup Server WMI Class
 The `SMS_ResIDValueLookup` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that maps integers to localized text strings found in a resource DLL.  

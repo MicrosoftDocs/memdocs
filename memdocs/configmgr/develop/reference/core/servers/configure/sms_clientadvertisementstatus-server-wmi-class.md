@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ClientAdvertisementStatus Server WMI Class
 The `SMS_ClientAdvertisementStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that records the last status message for every client and advertisement.  

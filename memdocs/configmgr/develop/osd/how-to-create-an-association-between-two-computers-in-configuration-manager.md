@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create an Association Between Two Computers in Configuration Manager
 You create an association between a reference and destination computer, in Configuration Manager, by calling the [AddAssociation Method in Class SMS_StateMigration](../../develop/reference/osd/addassociation-method-in-class-sms_statemigration.md).  

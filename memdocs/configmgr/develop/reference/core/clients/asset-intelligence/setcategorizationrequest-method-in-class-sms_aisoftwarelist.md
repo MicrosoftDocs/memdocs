@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetCategorizationRequest Method in Class SMS_AISoftwareList
 The `SetCategorizationRequest` Windows Management Instrumentation (WMI) class method, in Configuration Manager, initiates a System Center Online software categorization request.  

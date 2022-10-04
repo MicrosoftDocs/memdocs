@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # EncryptDataEx Method in Class SMS_Site
 The `EncryptDataEx` Windows Management Instrumentation (WMI) class method, in Configuration Manager, encrypts data using the specified site server's public key and returns the encrypted data.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager Custom Action MOF Files
 In Configuration Manager, operating system deployment actions are defined in the Managed Object Format (MOF) file, %*ProgramFiles*%\Microsoft Configuration Manager\bin\i386\\_tasksequenceprovider.mof.  

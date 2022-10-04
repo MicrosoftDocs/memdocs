@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CancelDownload Method in Class CCM_SoftwareUpdatesManager
 The `CancelDownload` WMI class method, in Configuration Manager, cancels an in-progress download of software updates during a deployment.  

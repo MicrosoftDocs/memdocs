@@ -10,7 +10,7 @@ author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Support for Windows 11 in Configuration Manager  

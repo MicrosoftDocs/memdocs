@@ -9,7 +9,7 @@ ms.topic: tutorial
 author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 #Customer intent: As an IT Pro, I want to use Desktop Analytics to intelligently pilot Windows 10 so that I can understand the best devices to start with getting current with Windows.
 ms.localizationpriority: medium
 ms.collection: tier3

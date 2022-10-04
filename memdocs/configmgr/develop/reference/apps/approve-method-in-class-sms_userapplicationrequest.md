@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Approve Method in Class SMS_UserApplicationRequest
 The `Approve` Windows Management Instrumentation (WMI) class method, in Configuration Manager, approves user application requests.  

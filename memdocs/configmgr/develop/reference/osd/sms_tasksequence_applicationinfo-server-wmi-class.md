@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TaskSequence_ApplicationInfo Server WMI Class
 The `SMS_TaskSequence_ApplicationInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application information for the application that is installed by using a task sequence.  

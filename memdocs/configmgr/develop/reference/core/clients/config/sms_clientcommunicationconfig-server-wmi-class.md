@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ClientCommunicationConfig Server WMI Class
 The `SMS_ClientCommunicationConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that controls how Windows 8 client computers communicate with Configuration Manager sites when they use metered Internet connections.  

@@ -10,7 +10,7 @@ ms.author: baladell
 description: Learn how to configure Windows Server Updates Services to auto-approve definition updates.
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---
 

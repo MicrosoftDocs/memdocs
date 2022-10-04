@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create an Operating System Deployment Task Sequence Package
 You create an operating system deployment task sequence, in Configuration Manager, by creating an instance of the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class. This class derives from the [SMS_Package](../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) class and holds the task sequence. It is advertised to clients who can then run the task sequence. The task sequence is associated with the task sequence package by using the `SMS_TaskSequencePackage` class [SetSequence](../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) method.  

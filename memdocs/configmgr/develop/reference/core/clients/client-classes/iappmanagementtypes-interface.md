@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # IAppManagementTypes Interface
 The `IAppManagementTypes` interface, in Configuration Manager, is a container for Application Management related type definitions.  

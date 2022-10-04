@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SubmitRegistrationRecord Method in Class SMS_Site
 The `SubmitRegistrationRecord` Windows Management Instrumentation (WMI) class method, in Configuration Manager, submits a registration record.  

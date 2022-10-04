@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Configuration Manager Object by Using WMI
 You create a Configuration Manager object, in Configuration Manager, by calling the [SWbemObject](/windows/win32/wmisdk/swbemobject) object [SpawnInstance_](/windows/win32/wmisdk/swbemobject-spawninstance-) method.  

@@ -11,7 +11,7 @@ author: gowdhamankarthikeyan
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Creating custom report models for Configuration Manager in SQL Server Reporting Services
 

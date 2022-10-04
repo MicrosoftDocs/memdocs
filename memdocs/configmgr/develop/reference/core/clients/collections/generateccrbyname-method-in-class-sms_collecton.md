@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # GenerateCCRByName Method in Class SMS_Collecton
 The `GenerateCCRByName` Windows Management Instrumentation (WMI) class method generates a client configuration request by computer name.  

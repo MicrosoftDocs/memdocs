@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SoftDistProgramCompletedSuccessfullyEvent
 The `SoftDistProgramCompletedSuccessfullyEvent` message, in Configuration Manager,  is sent when a program is completed successfully with an exit code (not MIFsuccess). It appears in the **Advertisement Status** in the Configuration Manager console.  

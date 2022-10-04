@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_DeploymentTypeLicenseAssociation server class.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_DeploymentTypeLicenseAssociation Server WMI Class
 The `SMS_DeploymentTypeLicenseAssociation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a license association for a deployment type.  

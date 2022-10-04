@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetCurrentUser Method in Class SMS_Identification
 The `GetCurrentUser` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the domain\user name that is used by the SMS Provider for authentication.  

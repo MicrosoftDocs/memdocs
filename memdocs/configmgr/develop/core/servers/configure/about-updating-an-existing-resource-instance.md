@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Updating an Existing Resource Instance
 When the Data Discovery Manager (DDM), in Configuration Manager, finds an existing resource that matches the data discovery record (DDR), the resource instance is updated; otherwise, a new instance is created. The DDM uses the following approach to find a resource match.  

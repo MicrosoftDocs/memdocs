@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddDriverContent Method in Class SMS_DriverPackage
 The `AddDriverContent` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a driver to the driver package and replicates the driver content to distribution points.  

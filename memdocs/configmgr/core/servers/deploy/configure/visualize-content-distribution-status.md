@@ -11,7 +11,7 @@ ms.author: baladell
 author: BalaDelli
 manager: apoorvseth
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Visualize content distribution status

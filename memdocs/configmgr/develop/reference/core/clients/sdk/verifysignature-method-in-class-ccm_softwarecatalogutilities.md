@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # VerifySignature Method in Class CCM_SoftwareCatalogUtilities
 The `VerifySignature` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that verifies the data signature.   

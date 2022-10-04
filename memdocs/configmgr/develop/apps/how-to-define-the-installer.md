@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Installer
 To define the application management deployment technology installer, use an instance of the `Microsoft.ConfigurationManagement.ApplicationManagement.Installer` class. The new class instance will define the properties and methods used on the client to actually install the application.  

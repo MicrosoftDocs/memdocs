@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SiteSystemSummarizer Server WMI Class
 The `SMS_SiteSystemSummarizer` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a site system summarizer. The site system summarizer reports physical system health data for each system and each system role in the Configuration Manager site.  

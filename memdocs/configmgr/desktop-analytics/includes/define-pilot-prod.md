@@ -1,6 +1,6 @@
 ---
-author: aczechowski
-ms.author: aaroncz
+author: banreet
+ms.author: banreetkaur
 ms.reviewer: acabello
 ms.prod: configuration-manager
 ms.topic: include

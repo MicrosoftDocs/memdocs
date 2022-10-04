@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Restore Method in Class SMS_Application
 The `Restore` Windows Management Instrumentation (WMI) class method, in Configuration Manager, restores this application and related deployment type as a current active application.  

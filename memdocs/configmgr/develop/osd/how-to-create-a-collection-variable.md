@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Collection Variable in Configuration Manager
 You create a collection variable for a Configuration Manager collection by adding instances of [SMS_CollectionVariable Server WMI Class](../../develop/reference/osd/sms_collectionvariable-server-wmi-class.md) to the `CollectionVariables` property of [SMS_CollectionSettings Server WMI Class](../../develop/reference/core/clients/collections/sms_collectionsettings-server-wmi-class.md).  

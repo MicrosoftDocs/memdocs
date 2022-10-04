@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetSDMDefinition Method in Class SMS_ConfigurationItem
 The `GetSDMDefinition` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the System Definition Model (SDM) definition of the configuration item in XML format.  

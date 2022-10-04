@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Read a Configuration Manager Object by Using WMI
 In Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](/windows/win32/wmisdk/swbemservices) object [Get](/windows/win32/wmisdk/swbemservices-get) method to return an object instance that is identified by a key value.  

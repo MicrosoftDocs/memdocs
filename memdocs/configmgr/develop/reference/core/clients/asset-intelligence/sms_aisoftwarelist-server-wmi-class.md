@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AISoftwareList Server WMI Class
 The `SMS_AISoftwareList` Windows Management Instrumentation (WMI) class, in Configuration Manager, contains all the known software titles in the Asset Intelligence catalog.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Configuration Manager Property Sheet
 To create a Configuration Manager console property sheet, in Configuration Manager, you create a .NET Framework assembly that inherits from the following class:  

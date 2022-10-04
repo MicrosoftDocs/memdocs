@@ -1,6 +1,6 @@
 ---
 author: Banreet
-ms.author: mstewart
+ms.author: banreetkaur
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
@@ -8,7 +8,7 @@ ms.date: 07/17/2022
 ms.localizationpriority: high
 ms.author:  banreetkaur
 manager: apoorvseth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---
 

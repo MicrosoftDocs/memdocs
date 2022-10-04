@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ITSEnvClass::Value Property
 In Configuration Manager, the `Value` property contains the value of an operating system deployment task sequence environment variable.  

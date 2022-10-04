@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Action XML
 Every Configuration Manager action is defined by an `ActionDescription` XML element that defines the action type and other information that is used by the Configuration Manager console to display the action. An `ActionDescription` element has a variety of child elements that provide information specific to the action type and also conditional tests made before the action is displayed.  

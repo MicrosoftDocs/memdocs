@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_DeviceSettingPackage Server WMI Class
 The `SMS_DeviceSettingPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class that represents a device setting package in the database.  

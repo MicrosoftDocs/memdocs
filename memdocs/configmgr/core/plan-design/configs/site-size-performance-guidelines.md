@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.date: 04/13/2021
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configuration Manager site size and performance guidelines
