@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/30/2022
+ms.date: 10/03/2022
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -36,7 +36,7 @@ ms.collection:
 
 Microsoft Intune is a cloud-based service that helps you manage your devices and apps. For more information about what Microsoft Intune can do for your organization, go to [What is Microsoft Intune](what-is-intune.md).
 
-This article provides an overview of the steps so you can start using Intune, including:
+This article provides an overview of the steps to start using Intune, including:
 
 - Step 1: Plan your move and deployment of Intune
 - Step 2: Determine your licensing needs and any platform requirements
@@ -51,14 +51,16 @@ It's also a good practice to review the [Planning guide to move to Microsoft Int
 
 ## Cloud attach with Configuration Manager
 
-Microsoft Endpoint Configuration Manager helps protect on-premises Windows Server, devices, apps, and data. If you need to manage only cloud native endpoints, then use Microsoft Intune. If you need to manage on-premises endpoints, such as Windows Servers attached to your internal network, then you can use Configuration Manager. If you need to manage a combination of cloud and on-premises endpoints, you can use cloud attach to use both Intune and Configuration Manager.
+Microsoft Endpoint Configuration Manager helps protect on-premises Windows Server, devices, apps, and data. If you need to manage a combination of cloud and on-premises endpoints, you can cloud attach your Configuration Manager environment to Intune.
 
 There are two steps to cloud attach your on-premises devices:
 
-1. [Tenant attach](../../configmgr/tenant-attach): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the admin center.
+1. [Tenant attach](../../configmgr/tenant-attach): Register your Intune tenant with your Configuration Manager deployment. Your Configuration Manager devices are shown in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). On these devices, you can run different actions, including installing apps and run Windows PowerShell scripts using the web-based admin center.
 2. [Co-management](../../configmgr/comanage): Manage Windows client devices with Configuration Manager and Microsoft Intune. Some workloads are managed by Configuration Manager, and some workloads are managed by Intune. For example, you can use Configuration Manager to manage Windows updates, and use Intune to manage conditional access policies.
 
 If you currently use Configuration Manager, you get immediate value through tenant attach, and you get more value through co-management.
+
+For guidance on the Microsoft Intune setup that's right for your organization, go to [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md).
 
 ## Step 1 - Plan your Intune deployment
 
@@ -70,7 +72,7 @@ If users with their own personal devices will access organization resources, the
 
 To help you plan your Intune deployment, use the [Planning guide to move to Microsoft Intune](intune-planning-guide.md). It covers personal devices, licensing considerations, creating a rollout plan, communicating changes to your users, and more.
 
-The following articles can also help:
+The following articles are good resources:
 
 - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
 - [Move to cloud-native endpoints](/mem/cloud-native-endpoints-overview)
@@ -87,13 +89,13 @@ The following articles can also help:
 
 The next step is to determine your license needs and any other prerequisites for your Intune deployment. The following list provides some of the most common prerequisites:
 
-- **Intune subscription**: Included with some Microsoft 365 subscriptions. It also gives you access to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), which is a web-based console for managing your devices, apps, and users.
+- **Intune subscription**: Included with some Microsoft 365 subscriptions. You also get access to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), which is a web-based console for managing your devices, apps, and users.
 - **Microsoft 365 apps**: Included with Microsoft 365 and is used for productivity apps, including Outlook and Teams.
 - **Azure Active Directory (Azure AD) premium**: Included with some Microsoft 365 subscriptions. Azure AD is used for the identity management for users, groups, and devices, which comes with your Intune and Microsoft 365 subscription. Azure AD Premium gives you more features commonly used by organizations, including conditional access, multi factor authentication (MFA), and dynamic groups.
 - **Windows Autopilot**: Included with some Microsoft 365 subscriptions. Windows Autopilot gives you modern OS deployment for Windows 10/11 client devices.
 - **Platform specific prerequisites**: Depending on the platforms of your devices, there will probably be other requirements. For example, if you manage iOS/iPadOS and macOS devices, you need an Apple MDM push certificate and possibly an Apple token. If you're managing Android devices, you may need a managed Google Play account. If you're using certificate authentication, you may need a SCEP or PKCS certificate.
 
-The following articles can help:
+The following articles are good resources:
 
 - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
 - [Tutorial: Walkthrough the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md)
@@ -107,9 +109,9 @@ The following articles can help:
 
 ## Step 3 - Set up Intune
 
-Intune uses many features in Azure AD, including your domain, your users, and your groups. You can also create new users and new groups to fit your company needs. For example, you can create a group called **iOS devices** or **All HR users**. If you have Azure AD Premium, you can use [dynamic groups](groups-add.md) to automatically add users and devices to groups based on rules you create.
+Intune uses many features in Azure AD, including your domain, your users, and your groups. You can also create new users and new groups to fit your organization needs. For example, you can create a group called **iOS devices** or **All HR users**. If you have Azure AD Premium, you can use [dynamic groups](groups-add.md) to automatically add users and devices to groups based on rules you create.
 
-This step focuses on setting up Intune and getting it ready for you to manage your devices.
+This step focuses on setting up Intune and getting it ready for you to manage your devices. Here's an overview:
 
 1. **[Confirm your devices are supported](supported-devices-browsers.md)**. Confirm your Android, iOS/iPadOS, macOS, and Windows devices are supported. If your organization includes devices that aren't supported, then the policies aren't applied to those devices.
 
@@ -121,13 +123,13 @@ This step focuses on setting up Intune and getting it ready for you to manage yo
 
 5. **[Add users](users-add.md)** and **[add groups](groups-add.md)**.
 
-   You can manually add users or use hybrid identity and Azure AD Connect to sync your on-premises user accounts with Intune. You can also give admin roles to specific users. Users are required unless your devices are "userless" devices, such as kiosk or dedicated devices.
+   You can manually add users or use hybrid identity and Azure AD Connect to sync your on-premises user accounts with Intune. You can also give admin roles to specific users. Users are required unless your devices are "userless" devices, such as kiosk or dedicated devices commonly used by frontline workers.
 
-   Azure AD groups are used to simplify how you manage devices and users in Intune. Using groups, you can do many different tasks. For example, your organization wants to require a specific app on Android devices. You can create an Android devices group and deploy a policy with this app to the group.
+   Azure AD groups can simplify how you manage devices and users in Intune. For example, your organization wants to require a specific app on Android devices. You can create an Android devices group and deploy a policy with this app to your group.
 
 6. **[Assign licenses](licenses-assign.md)**. For users or devices to enroll in Intune, they require an Intune license.
 
-The following articles can help:
+The following articles are good resources:
 
 - [Deployment guide: Setup or move to Microsoft Intune](deployment-guide-intune-setup.md)
 - [Set up Microsoft Intune](setup-steps.md)
@@ -137,34 +139,34 @@ The following articles can help:
 
 MDM solutions like Intune can set rules that devices should meet, and can report the compliance states of these rules. These rules are called compliance policies. They establish a baseline of what every device must have to be considered compliant. When you combine compliance policies with conditional access, you can require devices meet certain security requirements before they can access your organization's data.
 
-For example, you can choose an acceptable (or unacceptable) threat level, block jailbroken or rooted devices, require a password length, and more. If these devices don't meet your rules, meaning they aren't compliant, then you can block access to your resources.
+For example, you can choose an acceptable (or unacceptable) threat level, block jailbroken or rooted devices, require a password length, and more. If these devices don't meet your rules, meaning they aren't compliant, then you can use conditional access to block access to your resources.
 
 If you prefer, you can enroll your devices before checking compliance. It's up to you. When users enroll their devices in Intune, then enrollment process can automatically deploy your compliance policies. When enrollment completes, admins can check the compliance status and get a list of devices that don't meet your rules. Microsoft recommends creating compliance and conditional access policies, and then deploying these policies during enrollment.
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you create your policies and assign them to your groups. As a best practice, start small, and use a staged approach. For example, create an iOS/iPadOS policy that blocks jailbroken devices. Apply the policy to a pilot or test group. After initial testing, add more users to the pilot group. For more guidance, go to the [Microsoft Intune planning guide](intune-planning-guide.md).
 
-The following articles can help:
+The following articles are good resources:
 
 - [Get started with device compliance policies in Microsoft Intune](../protect/device-compliance-get-started.md)
 - [Create a compliance policy in Microsoft Intune](../protect/create-compliance-policy.md)
 - [Intune reports for compliance, assignment failures, check-in status, and more](reports.md)
-- [Learn about Conditional Access and Intune](../protect/conditional-access.md)
+- [Learn about conditional access and Intune](../protect/conditional-access.md)
 - [Enable Mobile Threat Defense connector in Microsoft Intune](../protect/mtd-connector-enable.md)
 - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md)
 - [Network access control integration with Microsoft Intune](../protect/network-access-control-integrate.md)
-- [App-based Conditional Access with Intune](../protect/app-based-conditional-access-intune.md)
-- [Conditional Access scenarios](../protect/conditional-access-intune-common-ways-use.md)
+- [App-based conditional access with Intune](../protect/app-based-conditional-access-intune.md)
+- [Conditional access scenarios](../protect/conditional-access-intune-common-ways-use.md)
 - [Monitor device compliance policies in Microsoft Intune](../protect/compliance-policy-monitor.md)
 
 ## Step 5 - Add and deploy apps
 
-Every organization has a base set of apps that should be installed on devices. For example, your organization may require a specific email app, web browser, or VPN app. You can use Intune to deploy these apps to your users before they enroll their devices. When users enroll their devices, these apps can be automatically installed.
+Every organization has a base set of apps that should be installed on devices. Your organization may require a specific email app, web browser, or VPN app. You can use Intune to deploy these apps to your users before they enroll their devices. When users enroll their devices, these apps can be automatically installed during the enrollment process.
 
 If you prefer, you can enroll your devices before installing apps. It's up to you. When users enroll their devices in Intune, the enrollment process can automatically deploy your app policies. When enrollment completes, the apps are ready to use. For key productivity apps, Microsoft recommends creating app policies and then deploying these policies during enrollment.
 
 Intune supports a wide range of apps, including store apps, line-of-business (LOB) apps, Win32 apps, and more. You can manage app deployment using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Also, you can connect to your managed Google Play, the Apple App Store, and the Microsoft Store to deploy apps from these locations.
 
-The following articles can help:
+The following articles are good resources:
 
 - [What is app management in Microsoft Intune](../apps/app-management.md)
 - [Add apps to Microsoft Intune](../apps/apps-add.md)
@@ -185,14 +187,14 @@ If you prefer, you can enroll your devices before creating device configuration 
 
 In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can create different policies based on your device platform - Android, iOS/iPadOS, macOS, and Windows. For example, you can:
 
-- Use endpoint protection on Windows 10 devices to enable different BitLocker options, including encryption.
+- Use endpoint protection on Windows 10/11 devices to enable different BitLocker options, including encryption.
 - Use the restricted apps feature on iOS/iPadOS devices to create a list of approved apps that can be installed. Or, create a list of prohibited apps.
 - Use the kiosk settings to choose which apps can be used on Android devices running in kiosk mode.
-- Apply a Wi-Fi connection and its settings, including the security type, on devices running macOS.
+- Apply a Wi-Fi connection and its settings, including the security type, on macOS devices.
 
 Remember, start small, and use a staged approach. Assign the profile to a pilot or test group. Then, assign the profile to more pilot groups. For more guidance, go to the [Microsoft Intune planning guide](intune-planning-guide.md).
 
-The following articles can help:
+The following articles are good resources:
 
 - [Apply features and settings on your devices using device profiles](../configuration/device-profiles.md)
 - [Use the settings catalog to configure settings](../configuration/settings-catalog.md)

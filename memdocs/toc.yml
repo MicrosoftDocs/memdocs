@@ -6,8 +6,6 @@ items:
   items:
   - name: Microsoft Intune products and services overview
     href: endpoint-manager-overview.md
-  - name: DEL-Getting started with Microsoft Endpoint Manager
-    href: endpoint-manager-getting-started.md
   - name: Cloud native Windows endpoints
     items:
     - name: Overview and benefits
