@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # What is Windows 365 Government?
 
-Windows 365 Government is cloud-based service that automatically creates virtual machines (Cloud PCs) for US government users. This service spans across a regulated US Government Community Cloud (GCC) and a public facing cloud. It meets federal, state, and local US government needs to securely stream Windows apps, data, content, and settings on Cloud PCs from regulated clouds to any device at any time.
+Windows 365 Government is a cloud-based service that automatically creates virtual machines (Cloud PCs) for US government users. This service spans across a regulated US Government Community Cloud (GCC) and a public facing cloud. It meets federal, state, and local US government needs to securely stream Windows apps, data, content, and settings on Cloud PCs from regulated clouds to any device at any time.
 
 Windows 365 Government customers are government agencies or public entities that qualify to use services hosted in GCC and GCC High. The services in the GCC and GCC High clouds must meet specific requirements and pass rigorous audit reviews before customers are allowed to use them.
 
