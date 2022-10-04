@@ -47,9 +47,10 @@ This article describes how to send app logs from the Company Portal and Microsof
 
 ## Send logs from Company Portal  
 
-1. In the Company Portal app, there are two ways to initiate email support.
-    * From the home screen: Tap **Menu** > **Help** > **Email Support**.  
-    * From an error message: Tap **HELP** or **SEND INFO**, if available.  
+1. There are two ways to initiate email support in the app:
+   
+    * From the home screen, tap **Menu** > **Help** > **Send logs**. Then tap **SEND LOGS, THEN EMAIL**.   
+    * From an error message:, tap **HELP** or **SEND INFO**, if available.  
 
     > [!NOTE]
     > **Menu** could be a software button or a hardware button, depending on which Android device you have.  
