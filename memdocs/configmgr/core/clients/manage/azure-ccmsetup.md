@@ -9,7 +9,7 @@ ms.topic: reference
 author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
 ms.collection: tier3
 ---

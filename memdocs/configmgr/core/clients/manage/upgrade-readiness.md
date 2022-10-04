@@ -11,7 +11,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Integrate Upgrade Readiness with Configuration Manager

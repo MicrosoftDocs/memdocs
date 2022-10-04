@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: Learn about the simplified syntax, methods, properties, and requirements of the MDM_GenericAppConfiguration Server class.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # MDM_GenericAppConfiguration Server WMI Class
 The  `MDM_GenericAppConfiguration` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application configuration.  

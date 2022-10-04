@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Modify a Configuration Manager Object by Using WMI
 You modify a Configuration Manager object, in Configuration Manager, by using the object's [SWbemObject](/windows/win32/wmisdk/swbemobject) object to change its properties.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ProcessInBox Method in Class SMS_PDF_Package
 The `ProcessInBox` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports package definition files from the package definition file inbox.  

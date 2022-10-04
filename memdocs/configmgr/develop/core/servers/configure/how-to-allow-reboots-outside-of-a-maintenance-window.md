@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure a Advertisement to Allow Reboots Outside of a Maintenance Window
 The following example shows how to configure an advertisement to allow reboots outside of a maintenance window by using the `SMS_Advertisement` class and the `AdvertFlags` class property in Configuration Manager.  

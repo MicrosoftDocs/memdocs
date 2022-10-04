@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetTestSmtpConnectionResult Method in Class SMS_Subscription
 The `GetTestSmtpConnectionResult` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the test SMTP connection result.  

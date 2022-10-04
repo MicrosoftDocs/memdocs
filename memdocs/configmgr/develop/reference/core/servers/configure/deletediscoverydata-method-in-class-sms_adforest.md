@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # DeleteDiscoveryData Method in Class SMS_ADForest
 The `DeleteDiscoveryData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes information gathered by the forest discovery process.  

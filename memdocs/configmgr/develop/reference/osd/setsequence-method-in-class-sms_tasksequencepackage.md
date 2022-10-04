@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SetSequence Method in Class SMS_TaskSequencePackage
 The `SetSequence` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the task sequence package with the specified task sequence.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Baselines
 In Configuration Manager, baselines are used to define the configuration of a product or a system that is established at a specific point in time, capturing both structure and details. Configuration baselines in Configuration Manager contain a defined set of desired configurations that are evaluated for compliance as a group.  

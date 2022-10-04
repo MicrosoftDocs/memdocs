@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICCMEvent::RawEvent Property
 `ICcmEvent::RawEvent` is a read-only property, in Configuration Manager, that indicates information to add to a raw event.  

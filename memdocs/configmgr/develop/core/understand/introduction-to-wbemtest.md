@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Introduction to WBEMTEST
 If you spend much time around Configuration Manager you become aware that much of it runs through WMI.  WMI is "Windows Management Instrumentation" and is Microsoft's implementation of an Internet standard called Web Based Enterprise Management (WBEM).  

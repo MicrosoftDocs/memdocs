@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SCI_SiteDefinition Server WMI Class
 The `SMS_SCI_SiteDefinition` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains general definitions for the site (for example, name) and for accounts (for example, SQL) used by Configuration Manager server components.  

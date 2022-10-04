@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
 description: Learn about how to release a locked SEDO-enabled object using its object path by creating a ReleaseLock method.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Release a Lock on a SEDO-Enabled Object
 ### To Release an Explicit Lock on a SEDO-enabled Object  

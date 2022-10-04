@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: medium
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Checklist for installing update 2006 for Configuration Manager

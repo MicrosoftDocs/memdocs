@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_G_System_SoftwareUsageData Server WMI Class
 The `SMS_G_System_SoftwareUsageData` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides a view of raw metering data that combines file and user information with the raw data.  

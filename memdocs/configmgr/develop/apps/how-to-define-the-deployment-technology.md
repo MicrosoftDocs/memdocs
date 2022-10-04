@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Deployment Technology
 To define a custom application management deployment technology, implement the `Microsoft.ConfigurationManagement.ApplicationManagement.DeploymentTechnology` class. The new class instance will define the deployment technology used to deploy a specific application to devices.  

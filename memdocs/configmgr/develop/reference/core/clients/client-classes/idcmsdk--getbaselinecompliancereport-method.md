@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # IDCMSDK::GetBaselineComplianceReport Method
 The `IDCMSDK::GetBaselineComplianceReport` method, in Configuration Manager, retrieves the cached discovery report for the specified configuration item baseline.  

@@ -12,7 +12,7 @@ ms.technology: configmgr-comanage
 ms.localizationpriority: medium
 #Customer intent: As a Configuration Manager admin, I want enable co-management so I can manage some client workloads from Intune and others from Configuration Manager.
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Tutorial: Enable co-management for new internet-based devices

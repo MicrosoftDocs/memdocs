@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AICategory Server WMI Class
 The `SMS_AICategory` Windows Management Instrumentation (WMI) class, in Configuration Manager, categorizes the software entries in the `SMS_AISoftwareList` Server WMI class.  

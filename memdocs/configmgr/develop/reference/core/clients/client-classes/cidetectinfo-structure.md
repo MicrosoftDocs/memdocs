@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CIDetectInfo Structure
 In Configuration Manager, the `CIDetectInfo` structure contains identity information for baseline configuration item detection.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # RaiseErrorStatusMsg Method in Class SMS_StatusMessage
 The `RaiseErrorStatusMsg` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates an error status message.  

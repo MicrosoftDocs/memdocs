@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ImportSequence Method in Class SMS_TaskSequencePackage
 The `ImportSequence` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a task sequence package file based on the provided XML data of a previously exported task sequence package.  

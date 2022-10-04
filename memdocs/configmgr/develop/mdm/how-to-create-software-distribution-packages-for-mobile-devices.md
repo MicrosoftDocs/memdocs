@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create Software Distribution Packages, Programs, and Advertisements for Mobile Devices
 Configuration Manager device management enables mobile device software distribution to mobile devices. Packages, programs, and advertisements for mobile devices are much the same as those for computer clients. For detailed information about creating packages, programs and advertisements, see the following topics:  

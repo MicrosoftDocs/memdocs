@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddChangeNotification Method in Class SMS_BootImagePackage
 The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a boot image package change notification.  

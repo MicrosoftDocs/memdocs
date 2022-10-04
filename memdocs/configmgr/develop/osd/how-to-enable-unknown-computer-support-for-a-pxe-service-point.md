@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: Learn about how to set an operating system deployment response to PXE service requests from unknown computers.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Enable Unknown Computer Support for a PXE Service Point
 In Configuration Manager, you set the operating system deployment PXE service point response to incoming PXE requests from unknown computers by setting the **SupportUnknownMachines** embedded property.  

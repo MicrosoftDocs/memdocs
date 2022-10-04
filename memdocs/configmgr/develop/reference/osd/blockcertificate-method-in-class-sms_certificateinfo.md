@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # BlockCertificate Method in Class SMS_CertificateInfo
 The `BlockCertificate` Windows Management Instrumentation (WMI) class method, in Configuration Manager, blocks or unblocks the specified certificate.  

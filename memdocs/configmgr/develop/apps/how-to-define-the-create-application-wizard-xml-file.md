@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: How to create a custom deployment technology XML File for the Create Application Wizard/.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Create Application Wizard XML File
 To define the custom deployment technology XML file, create an XML file based on the `http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework` schema. The XML file for the Create Application Wizard should be named, CreateApp_\<*TechnologyID*>.xml.  

@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: medium
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # What's new in version 2010 of Configuration Manager current branch

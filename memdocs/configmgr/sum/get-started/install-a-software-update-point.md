@@ -10,7 +10,7 @@ ms.topic: how-to
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---
 

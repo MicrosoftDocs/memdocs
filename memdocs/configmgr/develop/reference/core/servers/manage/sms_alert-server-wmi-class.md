@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_Alert Server WMI Class
 The `SMS_Alert` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents general alerts, which exclude client status alerts and System Center Endpoint Protection alerts.  

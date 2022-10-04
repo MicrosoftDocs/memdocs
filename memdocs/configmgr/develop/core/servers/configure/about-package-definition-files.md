@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Package Definition Files
 Package definition files are predefined scripts that you can use to help automate package creation with Configuration Manager. These are files that contain the package and program information that is needed to distribute a package to clients, with the exception of the source file location.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # WMI Configuration Manager Provider Fundamentals
 Windows Script Host-based applications and scripts work in Windows Management Instrumentation (WMI) through the WMI Object Model, which defines the programming interface to WMI. A number of WMI object types are used when manipulating Configuration Manager objects. For more information about the WMI Object Model, see [Windows Management Instrumentation](/windows/win32/wmisdk/wmi-start-page).  

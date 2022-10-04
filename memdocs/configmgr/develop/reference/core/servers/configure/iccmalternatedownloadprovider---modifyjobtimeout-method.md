@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICcmAlternateDownloadProvider : ModifyJobTimeout Method
 The **ICcmAlternateDownloadProvider::ModifyJobTimeout** method, in Configuration Manager, instructs the provider to modify the timeout for a given job.  

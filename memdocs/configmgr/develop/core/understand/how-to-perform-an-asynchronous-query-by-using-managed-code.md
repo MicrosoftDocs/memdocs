@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using Managed Code
 In Configuration Manager, to perform an asynchronous query by using the managed SMS Provider, you use the [ProcessQuery](/previous-versions/system-center/developer/cc146295(v=msdn.10)) method.  

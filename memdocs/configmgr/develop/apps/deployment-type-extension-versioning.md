@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Deployment Type Extension Versioning
 Configuration Manager supports in-place versioning for minor upgrades and out-of-place versioning for major upgrades.  

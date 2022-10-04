@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CreateSMSStatusMessage Function
 In Configuration Manager, the `CreateSMSStatusMessage` function allocates a status message object, initializes it, and retrieves a handle to it.  

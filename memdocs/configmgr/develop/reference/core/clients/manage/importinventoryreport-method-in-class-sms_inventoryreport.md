@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ImportInventoryReport Method in Class SMS_InventoryReport
 The `ImportInventoryReport` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports an inventory class from the MOF file content.  

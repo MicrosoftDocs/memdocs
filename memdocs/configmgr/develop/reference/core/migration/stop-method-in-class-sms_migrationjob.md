@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Stop Method in Class SMS_MigrationJob
 The `Stop` Windows Management Instrumentation (WMI) class method, in Configuration Manager, stops the migration job.  

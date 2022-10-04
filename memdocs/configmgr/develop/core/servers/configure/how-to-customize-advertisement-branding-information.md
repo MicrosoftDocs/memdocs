@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Customize Advertisement Branding Information in Configuration Manager
 You set the software distribution branding information for the Configuration Manager client by changing the `SWDBrandingSubTitle` property of the client agent component section in the site control file.  

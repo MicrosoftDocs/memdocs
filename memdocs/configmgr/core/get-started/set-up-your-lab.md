@@ -11,7 +11,7 @@ manager: apoorvseth
 ms.author: banreetkaur
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Set up a Configuration Manager lab

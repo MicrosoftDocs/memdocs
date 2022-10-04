@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Configuration Manager SDK Requirements
 Developing applications and scripts for Microsoft Configuration Manager can be done using a number of development languages and tools. Which one you use depends on the type of application you are writing. Large applications will likely be written in C# using the managed Configuration Manager SDK libraries. VBScript is a good choice for scripting Configuration Manager.  

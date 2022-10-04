@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Schedule Token
 You create a schedule token, in Configuration Manager, by creating and populating an instance of the appropriate `SMS_ST_` schedule token class. `SMS_ST` schedule classes are child classes of the `SMS_ScheduleToken` class and handle the scheduling of events with differing frequencies such as daily, weekly and monthly.  

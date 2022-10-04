@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: Learn how DetermineIfRebootPending is simplified from Managed Object Format code and defines the method.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # DetermineIfRebootPending Method in Class CCM_ClientUtilities

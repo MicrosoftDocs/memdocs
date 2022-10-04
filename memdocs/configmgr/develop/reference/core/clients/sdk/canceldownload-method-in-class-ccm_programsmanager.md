@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CancelDownload Method in Class CCM_ProgramsManager
 The `CancelDownload` WMI class method, in Configuration Manager, cancels jobs that are downloading content that is required for legacy software distribution programs.  

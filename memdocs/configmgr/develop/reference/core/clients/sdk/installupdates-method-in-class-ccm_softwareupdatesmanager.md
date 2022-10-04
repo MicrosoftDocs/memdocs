@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # InstallUpdates Method in Class CCM_SoftwareUpdatesManager
 The `InstallUpdates` WMI class method, in Configuration Manager, installs software updates that have been deployed to the client computer.  

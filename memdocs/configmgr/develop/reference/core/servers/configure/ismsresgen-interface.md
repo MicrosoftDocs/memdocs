@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ISMSResGen Interface
 The `ISMSResGen` automation interface, in Configuration Manager, enables the creation of Data Discovery Records (DDR). This interface inherits from `IDispatch`.  

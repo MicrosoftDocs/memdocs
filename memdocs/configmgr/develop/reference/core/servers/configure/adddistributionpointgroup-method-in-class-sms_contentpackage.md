@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddDistributionPointGroup Method in Class SMS_ContentPackage
 The `AddDistributionPointGroup` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the content package to a set of distribution point groups.  

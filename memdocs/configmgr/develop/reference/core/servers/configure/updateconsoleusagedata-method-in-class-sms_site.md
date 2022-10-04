@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # UpdateConsoleUsageData Method in Class SMS_Site
 The `UpdateConsoleUsageData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates console usage data received from console connections.  

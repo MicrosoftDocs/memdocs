@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Scheduling Client WMI Classes
 The scheduling client Windows Management Instrumentation (WMI) classes, in Microsoft Configuration Manager, are used by client applications to manage scheduling on the client computer. They concern client-side behavior only.  

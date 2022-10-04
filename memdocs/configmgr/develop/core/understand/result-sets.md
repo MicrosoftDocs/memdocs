@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Result Sets
 In Configuration Manager, the result set of a query contains one or more instances that match the specified criteria of the`SELECT` statement. The result instances are either `Generic` class instances or instances of the class that is specified in the FROM clause.  

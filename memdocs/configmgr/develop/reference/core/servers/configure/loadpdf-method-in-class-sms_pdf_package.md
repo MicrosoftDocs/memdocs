@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # LoadPDF Method in Class SMS_PDF_Package
 The `LoadPDF` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a specified package definition file into the package definition file store.  

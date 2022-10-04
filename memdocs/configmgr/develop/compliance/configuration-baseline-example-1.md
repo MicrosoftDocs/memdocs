@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: This Baseline Configuration Item Instance example references an application configuration item that checks whether the Configuration Manager client and Notepad are installed on systems that are running Windows XP SP2.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Baseline Example 1
 The following Baseline Configuration Item Instance example references an application configuration item that checks whether the Configuration Manager client and Notepad.exe are installed on systems that are running Windows XP SP2.  

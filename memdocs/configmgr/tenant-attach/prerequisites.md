@@ -11,7 +11,7 @@ author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Microsoft Endpoint Manager tenant attach: Prerequisites

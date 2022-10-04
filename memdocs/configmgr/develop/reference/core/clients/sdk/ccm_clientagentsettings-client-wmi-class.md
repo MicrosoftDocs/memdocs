@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_ClientAgentSettings Client WMI Class
 The `CCM_ClientAgentSettings` WMI class is a client class, in Configuration Manager, that contains common client agent settings.  

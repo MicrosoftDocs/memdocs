@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to List Distribution Points for a Site
 The following example shows how to assign a distribution point to a package by using the [SMS_DistributionPoint Server WMI Class](../../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md) class and class properties in Configuration Manager.  

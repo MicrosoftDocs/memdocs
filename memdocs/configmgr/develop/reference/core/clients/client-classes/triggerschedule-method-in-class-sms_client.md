@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # TriggerSchedule Method in Class SMS_Client
 The `TriggerSchedule` method, in Configuration Manager, triggers the client to run the specified schedule.  

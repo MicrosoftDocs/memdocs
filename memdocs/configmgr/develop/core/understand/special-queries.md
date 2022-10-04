@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Special Queries
 Extended WMI Query Language (WQL) supports queries that are specific to Configuration Manager needs. The following table describes the additional queries that are supported.  

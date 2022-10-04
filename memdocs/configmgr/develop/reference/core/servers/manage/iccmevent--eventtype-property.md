@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICCMEvent::EventType Property
 `ICcmEvent::EventType` is a read/write property, in Configuration Manager, that indicates the type of Windows Management Instrumentation (WMI) event that is being raised.  

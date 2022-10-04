@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ReportSMSStatusMessage Function
 The `ReportSMSStatusMessage` function, in Configuration Manager, submits a status message object to the Configuration Manager status system and then deallocates the object.  

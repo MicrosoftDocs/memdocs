@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # RequestMachinePolicy Method in Class SMS_Client
 The `RequestMachinePolicy` method, in Configuration Manager, initiates a request for machine policy.  

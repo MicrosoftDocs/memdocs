@@ -11,7 +11,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Software Center user guide

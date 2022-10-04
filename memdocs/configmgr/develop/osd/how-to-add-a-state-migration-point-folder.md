@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Add a State Migration Point Folder
 In Configuration Manager, you add an operating system deployment state migration point folder by adding the folder description to the `Directories` embedded property list.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to List Configuration Assignments
 The following code examples show how to list the current configuration baseline assignments and a specific set of properties for each assignment in Configuration Manager.  

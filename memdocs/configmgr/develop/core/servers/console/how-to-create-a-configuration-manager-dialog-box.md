@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Configuration Manager Dialog Box
 These procedures show you how to create a modeless dialog box assembly, in Configuration Manager, by using Visual Studio.  

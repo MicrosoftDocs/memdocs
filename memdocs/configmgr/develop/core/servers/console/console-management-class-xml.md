@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Console Management Class XML
 The management classes XML for the Configuration Manager console are located %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\ConsoleRoot\ManagementClassDescriptions.xml file. Your extension management class XML files, however, must be placed in the AdminConsole\XmlStorage\Extensions\ManagementClasses\ folder.  

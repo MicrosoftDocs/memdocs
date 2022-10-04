@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create an Update List
 You create an update list that contains a set of software updates, in Configuration Manager, by creating an instance of the [SMS_AuthorizationList](../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md) class and populating the properties.  

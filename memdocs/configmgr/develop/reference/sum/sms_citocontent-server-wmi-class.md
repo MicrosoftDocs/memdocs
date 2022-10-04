@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CIToContent Server WMI Class
 The `SMS_CIToContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that exposes the configuration item to content relationship for a software update. It lists all the contents in the configuration item.  

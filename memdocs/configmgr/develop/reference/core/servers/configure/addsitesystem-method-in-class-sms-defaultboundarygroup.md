@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: Learn how the AddSiteSystem class method adds one or more site system servers to a default boundary group.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddSiteSystem Method in Class SMS_DefaultBoundaryGroup
  The `AddSiteSystem` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds one or more site system servers to a default boundary group.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_FullCollectionMembership Server WMI Class
 The `SMS_FullCollectionMembership` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that lists all member resources of a specific collection.  

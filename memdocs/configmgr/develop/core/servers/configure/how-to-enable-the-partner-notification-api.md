@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Enable the Partner Notification API
 The Partner Notification API allows third-party partners to use the Wake on LAN feature of Configuration Manager to receive a list of computers that need to be woken up based on advertisements for software distribution.  

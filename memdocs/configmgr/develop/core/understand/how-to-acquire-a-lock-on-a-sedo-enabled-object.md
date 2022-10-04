@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Acquire a Lock on a SEDO-Enabled Object
 ### To Acquire an Explicit Lock on a SEDO-enabled Object  

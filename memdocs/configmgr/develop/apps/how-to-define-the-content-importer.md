@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the Content Importer
 To define the application management deployment technology content importer, use an instance of the `Microsoft.ConfigurationManagement.ApplicationManagement.ContentImporter` class. The new class instance will define the content importer used by the installer.  

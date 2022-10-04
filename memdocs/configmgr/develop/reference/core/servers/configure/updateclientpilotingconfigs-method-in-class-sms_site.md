@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # UpdateClientPilotingConfigs Method in Class SMS_Site
 The `UpdateClientPilotingConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates the  configurations for client piloting settings.  

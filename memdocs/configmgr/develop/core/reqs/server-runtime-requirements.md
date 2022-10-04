@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Server Runtime Requirements
 Microsoft Configuration Manager server applications that are developed by using the Configuration Manager SDK, have the following runtime requirements.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICIINFO::GetContextInfo Method
 The `ICIINFO::GetContextInfo` method, in Configuration Manager, gets the context information by name from the configuration item.  

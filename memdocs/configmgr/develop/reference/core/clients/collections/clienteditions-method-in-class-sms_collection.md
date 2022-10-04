@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ClientEditions Method in Class SMS_Collection
 The `ClientEditions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves a list of client editions and whether the `DeviceOwner` property may be edited.  

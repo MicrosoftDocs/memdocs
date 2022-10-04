@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Synchronize with the Software Update Point
 You synchronize the software update point, in Configuration Manager SP1, by calling the `SyncNow` method.  

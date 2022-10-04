@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Application Configuration Item Example 1
 The following Application Configuration Item Instance example determines whether the Configuration Manager client is installed on the system by using Microsoft Windows Installer-based detection.  

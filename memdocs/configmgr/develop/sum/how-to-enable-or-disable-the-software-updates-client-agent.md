@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Enable or Disable the Software Updates Client Agent
 You enable or disable the Software Updates Client Agent, in Configuration Manager, by modifying the site control file settings.  

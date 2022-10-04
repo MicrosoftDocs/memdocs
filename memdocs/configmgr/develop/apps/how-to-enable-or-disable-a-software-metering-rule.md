@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Enable or Disable a Software Metering Rule
 You enable or disable a software metering rule, in Configuration Manager, by loading the instance of the software metering rule that is identified by the software metering rule ID and then setting the Enabled value.  

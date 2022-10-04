@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CIAssignmentToCI Server WMI Class
 The `SMS_CIAssignmentToCI` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a relationship between a configuration baseline and its assignments.  

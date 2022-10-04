@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Add a Configuration Manager Context Qualifier by Using WMI
 In Configuration Manager, you add context qualifiers to a connection ([SWbemServices](/windows/win32/wmisdk/swbemservices)) or object ([SWbemObject](/windows/win32/wmisdk/swbemobject)) by creating a [SWbemNamedValueSet](/windows/win32/wmisdk/swbemnamedvalueset) value set to hold the context qualifiers. You then provide the [SWbemNamedValueSet](/windows/win32/wmisdk/swbemnamedvalueset) value set as a parameter to connection and object methods.  

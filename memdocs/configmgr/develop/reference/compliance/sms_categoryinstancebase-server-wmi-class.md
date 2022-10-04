@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CategoryInstanceBase Server WMI Class
 The `SMS_CategoryInstanceBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as an abstract base class for the [SMS_CategoryInstance Server WMI Class](../../../develop/reference/compliance/sms_categoryinstance-server-wmi-class.md) and [SMS_UpdateCategoryInstance Server WMI Class](../../../develop/reference/sum/sms_updatecategoryinstance-server-wmi-class.md) classes.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # QueryOSDBinaryInjectionStatus Method in Class SMS_BootImagePackage
 The `QueryOSDBinaryInjectionStatus` Windows Management Instrumentation (WMI) class method, in Configuration Manager, queries the current status of the injection of operating system deployment binaries into a boot image.  
