@@ -6,9 +6,9 @@ ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: cba720a8-679c-4b19-9c3b-431680994626
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
 
