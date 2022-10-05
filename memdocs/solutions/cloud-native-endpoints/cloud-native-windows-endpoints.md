@@ -43,7 +43,7 @@ This feature applies to:
 - Windows cloud-native endpoints
 
 > [!TIP]
-> If you’re looking for a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). In Intune, you can configure Windows in cloud configuration using a [Guided Scenario](../../intune/fundamentals/guided-scenarios-overview.md). 
+> If you want a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). In Intune, you can configure Windows in cloud configuration using a [Guided Scenario](../../intune/fundamentals/guided-scenarios-overview.md). 
 >
 > The follow table describes the key difference between this guide and *Windows in cloud configuration*:
 > 
@@ -87,7 +87,7 @@ If your wireless network requires certificates, you can start with an Ethernet c
 
 ### Step 2 - Enrollment and Licensing
 
-Before you can join Azure AD and enroll in Intune, there are a few things you need to check. You could create a new Azure AD group, such as the name **Intune MDM Users**). Then, add specific test user accounts and target each of the following configurations at that group to limit who can enroll devices while you set up your configuration. To create an Azure AD group, go to [Create a basic group and add members](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
+Before you can join Azure AD and enroll in Intune, there are a few things you need to check. You could create a new Azure AD group, such as the name **Intune MDM Users**. Then, add specific test user accounts and target each of the following configurations at that group to limit who can enroll devices while you set up your configuration. To create an Azure AD group, go to [Create a basic group and add members](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal).
 
 - **Enrollment restrictions**  
 Enrollment restrictions allow you to control what types of devices can enroll into management with Intune. For this guide to be successful, make sure *Windows (MDM)* enrollment is allowed, which is the default configuration.
@@ -265,8 +265,8 @@ Before you enable synchronization in the Intune console, you must configure your
     - If you don't specifically have **Microsoft Intune** available as a mobile device management tool, choose **Add management tool** to add **Microsoft Intune**.
     - If you don't have **Microsoft Intune** activated as your mobile device management tool, select **Activate** next to **Microsoft Intune**.
 
-        > **[!NOTE]**
-        > Pay careful attention to the exact names used - you should activate **Microsoft Intune** rather than **Microsoft Intune Enrollment**.
+      > [!NOTE]
+      > Pay careful attention to the exact names used - you should activate **Microsoft Intune** rather than **Microsoft Intune Enrollment**.
 
 ### Step 10 - Create and assign some applications
 

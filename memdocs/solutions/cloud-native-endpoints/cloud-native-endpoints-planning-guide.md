@@ -50,7 +50,10 @@ To be successful, consider the key areas described in this article for your plan
 
 Managing your endpoints, including cloud-native endpoints, is an important task for all organizations. With cloud-native endpoints, the management tools you use must manage the endpoints wherever they go.
 
-If you don't currently use a mobile device management (MDM) solution, or want to move to a Microsoft solution, then look at [What is Microsoft Intune?](../../intune/fundamentals/what-is-intune.md) and [Get started with Microsoft Intune](../../intune/fundamentals/get-started-with-intune.md).
+If you don't currently use a mobile device management (MDM) solution, or want to move to a Microsoft solution, then the following articles are good resources:
+
+- [What is Microsoft Intune?](../../intune/fundamentals/what-is-intune.md)
+- [Get started with Microsoft Intune](../../intune/fundamentals/get-started-with-intune.md)
 
 With the Microsoft Intune family of products and services, you have the following endpoint management options:
 
@@ -302,7 +305,7 @@ The following phases are a high-level approach for organizations to move their e
 
 ### ✅ Phase 1: Define endpoints, dependencies, and milestones
 
-This phase is the first step for your organization migration to be fully cloud-native. Look at what you currently have, define success criteria, and start planning how your devices will be added to Azure AD.
+This phase is the first step for your organization migration to be fully cloud-native. Review what you currently have, define success criteria, and start planning how your devices will be added to Azure AD.
 
 1. **Define the endpoints that require a cloud identity**
 
