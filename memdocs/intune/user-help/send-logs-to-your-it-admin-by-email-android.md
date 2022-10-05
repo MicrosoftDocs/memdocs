@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 10/07/2021
+ms.date: 10/05/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -32,18 +32,17 @@ ms.collection:
 
 # Upload and email logs  
 
-If you experience a problem in the Company Portal or Microsoft Intune app, you can email the details of the problem to your company support person. These details will give them more context about the problem.  
+There are different ways to report a problem or error that occurs in the Microsoft Intune and Intune Company Portal apps for Android. When an error occurs:
 
-The actual error details are kept on your device in a special document called a _diagnostic log_. When you upload the logs to the Company Portal or Microsoft Intune app, they're first sent to the Microsoft developers that work on the app. They use the logs to improve the app's functionality and prevent future errors. An incident ID for your specific error is then provided to you to share with your company support person, for use in Microsoft Support cases. 
+* You can share diagnostic logs with Microsoft. You won't get a personal response but you do receive an incident ID.  
+* You can loop-in your support person via email and share your incident ID with them for follow-up.  
 
-This article describes how to send app logs from the Company Portal and Microsoft Intune apps, and how to access the logs in your work profile.  
+This article describes how to send app logs from the Company Portal and Microsoft Intune apps, and how to access logs in the work profile. 
 
+## What you need to know  
+Turn on _verbose logging_ in Company Portal to make it easier for your support person to investigate errors. Verbose logging records all details about an error and includes these details in the report.  If you're using the Microsoft Intune app, set the **Log detail level** to **Verbose**.  For more information, see [turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).    
 
-> [!Note]
-> To make it easier for your company support to find the cause of the problem, turn on _verbose logging_ in Company Portal. If you're using the Microsoft Intune app, set the **Log detail level** to **Verbose**. Verbose logging records all details about an error and includes these details in the report. Find out how to [turn on verbose logging here](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
->
-> If you are using a Sovereign cloud environment, the send logs functionality in the Company Portal will not be available to you. You must send logs via email. 
-
+The send logs option in the Company Portal is unavailable for sovereign cloud environments. To report a problem, send your logs over email.    
 
 ## Send logs from Company Portal  
 
@@ -53,11 +52,11 @@ This article describes how to send app logs from the Company Portal and Microsof
     * From an error message:, tap **HELP** or **SEND INFO**, if available.  
 
     > [!NOTE]
-    > **Menu** could be a software button or a hardware button, depending on which Android device you have.  
+    > **Menu** appears as a software button or a hardware button, depending on the Android device you have.  
 
-3. Tap **SEND LOGS, THEN EMAIL**.  
-4. The app sends your logs. Open your email app when prompted.   
-5. An email message opens with the incident ID pre-populated in the subject field. 
+2. Tap **SEND LOGS, THEN EMAIL**.  
+3. The app sends your logs. Open your email app when prompted.   
+4. An email message opens with the incident ID pre-populated in the subject field. 
     1. Enter your support person's email address. 
     2. Describe the problem that you came across. 
     3. Send the email and follow-up with your organization if needed. 
