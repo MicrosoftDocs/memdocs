@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/04/2022
+ms.date: 10/05/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -30,7 +30,7 @@ ms.collection:
   - M365-identity-device-management
 ---
 
-# Service information for Microsoft Intune service updates
+# Service information for Microsoft Intune release updates
 
 New feature releases for Intune typically have a six to eight week cadence, from planning to release. This cadence is called a sprint. Intune releases use a `YYMM` naming convention. For example, 2301 is the January 2023 release.
 
