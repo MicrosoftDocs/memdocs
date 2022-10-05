@@ -1,13 +1,13 @@
 ---
 # required metadata
 
-title: Create a PowerShell script to use for discover of custom compliance settings in Microsoft Intune
-description: Create the PowerShell script that runs discovery on devices that receive device compliance policies for custom settings in Intune.
+title: Create a discovery scripts for custom compliance policy in Microsoft Intune
+description: Create scripts for Linux or Windows devices to discover the settings you define as custom compliance settings for Microsoft Intune.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 11/16/2021
+ms.date: 10/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -27,16 +27,24 @@ ms.custom: intune-azure
 ms.collection: M365-identity-device-management
 ---
 
-# Custom PowerShell scripts for discovery
+# Custom compliance discovery scripts for Microsoft Intune
 
-Before you can use [custom settings for compliance](../protect/compliance-use-custom-settings.md) with Intune, you must define a PowerShell script for discovery of custom compliance settings on devices.
+Before you can use [custom settings for compliance](../protect/compliance-use-custom-settings.md) with Microsoft Intune, you must define a script for discovery of custom compliance settings on devices. The script you use depends on the platform:
 
-The discovery script:
+- Linux devices, use a POSIX-compliant shell script
+- Windows devices use a PowerShell script
 
-- Is added to Intune before you create a compliance policy. After it's added, it will be available to select when you create a compliance policy with custom settings.
-- Runs on a device that receives the compliance policy. The script evaluates the conditions of the JSON file you upload to the same policy.
-- Identifies one or more settings, as defined in the JSON, and returns a list of discovered values for those settings. A single script can be assigned to each policy, and supports discovery of multiple settings.
-- Must be compressed to output results in one line. For example: `$hash = @{ ModelName = "Dell"; BiosVersion = "1.24"; TPMChipPresent = $true}`
+The script deploys to devices as part of your custom compliance policies and runs to discover the settings that are defined by the JSON file that you also provide through custom compliance policy.
+
+All discovery scripts:
+
+- Are added to Intune before you create a compliance policy. After being added, scripts are available to select when you create a compliance policy with custom settings.
+- Run on a device that receives the compliance policy. The script evaluates the conditions of the JSON file you upload when creating a custom compliance policy.
+- Identify one or more settings, as defined in the JSON, and return a list of discovered values for those settings. A single script can be assigned to each policy, and supports discovery of multiple settings.
+
+In addition, the PowerShell script for Windows:
+
+- Must be compressed to output results in a single line. For example: `$hash = @{ ModelName = "Dell"; BiosVersion = "1.24"; TPMChipPresent = $true}`
 - Must include the following line at the end of the script: `return $hash | ConvertTo-Json -Compress`
 
 ## Sample discovery script

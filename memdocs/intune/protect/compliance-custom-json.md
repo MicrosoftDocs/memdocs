@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 12/08/2021
+ms.date: 10/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
