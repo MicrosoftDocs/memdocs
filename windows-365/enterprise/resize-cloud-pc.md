@@ -41,6 +41,7 @@ Resizing gives admins the flexibility to upgrade/downgrade the following specifi
 - Decrease the RAM and vCPU cores when a user doesn't need to run CPU intensive applications.
 
 Resizing doesn't you let downsize disk space.
+Resizing preserves user data. Users will be able to access all of their data after the resizing is finished. 
 
 
 ## Requirements
