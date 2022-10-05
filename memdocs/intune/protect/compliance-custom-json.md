@@ -86,7 +86,7 @@ You may include as many settings as you'd like in the JSON file, but the file mu
 
 For more information, see [Available languages for Windows](/windows-hardware/manufacture/desktop/available-language-packs-for-windows).
 
-## Example JSON file for Windows devices
+## Example JSON file
 
 ```json
 {

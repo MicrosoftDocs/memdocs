@@ -7,13 +7,8 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-<<<<<<< HEAD
 ms.date: 10/19/2022
 ms.topic: conceptual
-=======
-ms.date: 08/15/2022
-ms.topic: how-to
->>>>>>> 94fa0b7f15a3a95565bfbcee045ae8f0b521149e
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -43,32 +38,27 @@ This feature applies to:
 
 Before you can add custom settings to a policy, you’ll need to prepare a JSON file, and a detection script for use with each supported platform. Both the script and JSON become part of the compliance policy. Each compliance policy supports a single script, and each script can detect multiple settings:
 
-- The JSON file defines the custom settings and the values that are considered as compliant. You can also configure messages for users to tell them how to restore compliance for each setting. You add your JSON file while creating a compliance policy, just after you select a discovery script for that policy. 
+- The JSON file defines the custom settings and the values that are considered as compliant. You can also configure messages for users to tell them how to restore compliance for each setting. You add your JSON file while creating a compliance policy, just after you select a discovery script for that policy.
 
-- Scripts are specific to different platforms and delivered to devices through the compliance policy. When policy is evaluated, the script detects the settings from the JSON file, and then reports the results to Intune. Windows uses a PowerShell script and Linux uses a Bash script. 
+- Scripts are specific to different platforms and delivered to devices through the compliance policy. When policy is evaluated, the script detects the settings from the JSON file, and then reports the results to Intune. Windows uses a PowerShell script and Linux uses a POSIX-compliant shell script.
 
-  The scripts must be uploaded to the Microsoft Endpoint Manager admin center before you create a compliance policy. You select the script when you’re configuring a policy to support custom settings.  
+  The scripts must be uploaded to the Microsoft Endpoint Manager admin center before you create a compliance policy. You select the script when you’re configuring a policy to support custom settings.
 
 After you’ve deployed custom compliance settings and devices have reported back, you'll be able to view the results alongside the built-in compliance setting details in the Microsoft Endpoint Manager admin center.  Custom compliance settings can be used for conditional access decisions, the same way built-in compliance settings are.  Together they form a compound rule set, equally affecting the device compliance state.
 
 ## Prerequisites
+
 - **Azure Active Directory (Azure AD) joined** devices, *including* hybrid Azure AD-joined devices. 
 
   Hybrid Azure AD-joined devices are devices that are joined to Azure AD and also joined to on-premises Active Directory. For more information, see [Plan your hybrid Azure AD join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan).
   
   Devices that aren't Azure AD joined or aren't hybrid Azure AD-joined are evaluated as not applicable.
 
-- **Discovery script** - A PowerShell or Bash script that you create that runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Endpoint Manager admin center before you create a compliance policy and then select the script you want to use when creating a policy.
+- **Discovery script** - A PowerShell for Windows or a POSIX-compliant shell script for Linux that you create. The script runs on a device to discover the custom settings defined in your JSON file. The script returns the configuration value of those settings to Intune. You need to upload your script to the Microsoft Endpoint Manager admin center before you create a compliance policy and then select the script you want to use when creating a policy.
 
-  To create a custom compliance script, see:
+  To create a custom compliance script, see [Custom compliance discovery scripts for Microsoft Intune](../protect/compliance-custom-script.md).
 
-  - [Custom Bash scripts for discovery on Linux](../protect/compliance-custom-bash-script.md)
-  - [Custom PowerShell scripts for discovery on Windows](../protect/compliance-custom-script.md)
-
-- **JSON file** - The  JSON file defines the custom settings and the value that is to be considered as compliant and can contain messages for users on how to restore the device to compliance for the setting. For guidance on creating a JSON for custom compliance, see the following platforms specific guidance:
-
-  - [Linux](compliance-custom-json.md)
-  - [Windows](compliance-custom-json.md)
+- **JSON file** - The  JSON file defines the custom settings and the value that is to be considered as compliant and can contain messages for users on how to restore the device to compliance for the setting. For guidance on creating a JSON for custom compliance, see [Custom compliance JSON files](compliance-custom-json.md).
 
 ## Create a policy with custom compliance settings
 
@@ -121,7 +111,7 @@ Check the device compliance reports for the following error codes and insight in
 
 On Windows you can add the following line at the end of the PowerShell script to return errors related to the PowerShell script, ensure the following line is at the end of the PowerShell script file: `return $hash | ConvertTo-Json -Compress`
 
-### PowerShell or Bash scripts aren’t visible to select, or remain visible after being deleted
+### PowerShell or POSIX-compliant shell scripts aren’t visible to select, or remain visible after being deleted
 
 Refresh the current view. If the issue persists, cancel the policy creation flow, and start again.
 

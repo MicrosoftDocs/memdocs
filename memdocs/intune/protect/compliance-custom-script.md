@@ -79,7 +79,7 @@ PS C:\Users\apervaiz\Documents> .\sample.ps1
 
 ## Sample discovery script for Linux
 
-Discovery scripts for Linux must be POSIX-compliant shell scripts, such as Bash and shell. However, the scripts can call more complex interpreters from inside the script, like Python. To successfully use other interpreters, they must be correctly installed and configured on the devices in advance of receiving the discovery script.  
+Discovery scripts for Linux must be POSIX-compliant shell scripts, such as Bash. However, the scripts can call more complex interpreters from inside the script, like Python. To successfully use other interpreters, they must be correctly installed and configured on the devices in advance of receiving the discovery script.  
 
 **About POSIX-compliant syntax**: Because the custom compliance script interpreter for Linux supports only a POSIX-compliant shell, it’s important to use POSIX-syntax.
 
