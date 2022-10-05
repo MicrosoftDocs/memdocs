@@ -1077,7 +1077,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Allow Password Proximity Requests
 - Allow Password Sharing
 - Allow Remote Screen Observation
-- Allow Screen Shot
+- Allow Screenshot
 - Allow Spotlight Internet Results
 - Allow Wallpaper Modification
 - Enforced Software Update Delay
@@ -1934,9 +1934,9 @@ The Settings Catalog has new macOS settings you can configure (**Devices** > **C
 
 **User Experience > Time Machine**:
 - Auto Backup
-- Backup All Volumes
-- Backup Size MB
-- Backup Skip System
+- Back up All Volumes
+- Back up Size MB
+- Back up Skip System
 - Base Paths
 - Mobile Backups
 - Skip Paths
@@ -2011,7 +2011,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Allow Password Proximity Requests
 - Allow Password Sharing
 - Allow Remote Screen Observation
-- Allow Screen Shot
+- Allow Screenshot
 - Allow Spotlight Internet Results
 - Allow Wallpaper Modification
 - Enforced Fingerprint Timeout
