@@ -43,13 +43,11 @@ A device managed by Microsoft Intune will be classified as a specialized device 
 - Conference room meeting devices, a software-based room system that provides an integrated experience for audio conferencing, wireless screen sharing, or video conferencing
 - Excludes
     - Laptops and tablet devices
-    - Clamshell messaging devices
+    - Foldable messaging devices
     - Mobile devices extension such as wearables/watches where the data is managed through mobile apps on iOS and Android mobile phones
-    - FLW defined devices
+    - Devices that are included in the plans for frontline workers (see License Eligibility for Frontline Worker Licenses)
     - IoT devices
 
-> [!NOTE]
-> To learn more about Frontline Worker (FLW) Devices, see **link to be added**
 
 
 ## Next Steps
