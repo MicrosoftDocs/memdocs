@@ -36,9 +36,9 @@ The **Cloud PC connection quality** report helps you evaluate your users' connec
 
 To get to the **Cloud PC connection quality** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance** > **View report** (under **Cloud PCs with connection quality issues**).
 
-![Screenshot of getting to the Cloud PC connection quality report](./media/report-cloud-pc-utilization/view-report-connection-quality.png)
+![Screenshot of getting to the Cloud PC connection quality report](./media/report-cloud-connection-quality/view-report-connection-quality.png)
 
-This histogram shows aggregated round-trip times of all the Cloud PCs in your tenant. The round-trip time is how many milliseconds it took to connect tto the Cloud PC.
+This histogram shows aggregated round-trip times of all the Cloud PCs in your tenant. The round-trip time is how many milliseconds it took to connect to the Cloud PC.
   
 - **Good**: Less than 100 milliseconds.
 - **Average**: 100-200 milliseconds.
@@ -50,7 +50,7 @@ Below that is a list of individual Cloud PCs with the following columns:
     - **Available bandwidth (P50)**: Internet bandwidth during the user's attempt to connect to their Cloud PC.
     - **Remoting sign-in time (P50)**: The number of seconds it took the user to complete the sign-in process.
 
-Each metric is aggregated to a P50 median level over the last 24 hours.This is to ensure spikes and troughs are smoothed in order to provide a good understanding of the overall end-user connectivity experience.
+Each metric is aggregated to a P50 median level over the last 24 hours. This is to ensure spikes and troughs are smoothed in order to provide a good understanding of the overall end-user connectivity experience.
 
 You can use **Add filter** to limit the histogram and table data to specific time spans and round-trip time ranges.
 
