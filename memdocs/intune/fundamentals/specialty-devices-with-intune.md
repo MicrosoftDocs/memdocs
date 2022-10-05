@@ -31,10 +31,7 @@ ms.collection:
 
 # Managing Specialty devices with Microsoft Intune
 
-Managing specialty devices will be covered by Microsoft Intune’s advanced endpoint management solution. Under this solution, additional licenses will be required to manage and protect devices that meet the definition of the specialty device. 
-
-> [!NOTE]
-> This advanced endpoint management license will be made available in the near future. Until this license is made available, you will only require a subsciption to Microsoft Intune for managing and protecting these devices.
+The ability to managing specialty devices in Intune will require additional licensing when Microsoft launches the Intune premium suite and it’s related add-ons. To learn more, see [Premium add-ons for Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/fundamentals/premium-add-ons)
 
 ## What are specialized devices in Intune  
 
