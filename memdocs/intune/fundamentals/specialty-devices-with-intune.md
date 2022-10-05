@@ -31,7 +31,7 @@ ms.collection:
 
 # Managing Specialty devices with Microsoft Intune
 
-The ability to manage specialty devices in Intune will require additional licensing when Microsoft launches the Intune premium suite and it’s related add-ons. To learn more, see [Premium add-ons for Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/fundamentals/premium-add-ons)
+The ability to manage specialty devices in Intune will require additional licensing when Microsoft launches the Intune premium suite and it’s related add-ons. To learn more, see [Premium add-ons for Microsoft Intune](premium-add-ons.md)
 
 ## What are specialized devices in Intune  
 
