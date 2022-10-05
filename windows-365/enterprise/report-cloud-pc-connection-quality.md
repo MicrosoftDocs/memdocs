@@ -49,10 +49,11 @@ The histogram shows aggregated round-trip times of all the Cloud PCs in your ten
 - **High**: More than 200 milliseconds.
 
 The device list shows the individual Cloud PCs with the following columns:
-    - **Device name**
-    - **Round-trip time (P50)** (RTT): The number of milliseconds it took to establish the user connection to the Cloud PC. Lower values indicate better round-trip connectivity.
-    - **Available bandwidth (P50)**: Internet bandwidth during the user's attempt to connect to their Cloud PC.
-    - **Remoting sign-in time (P50)**: The number of seconds it took the user to complete the sign-in process.
+    
+- **Device name**
+- **Round-trip time (P50)** (RTT): The number of milliseconds it took to establish the user connection to the Cloud PC. Lower values indicate better round-trip connectivity.
+- **Available bandwidth (P50)**: Internet bandwidth during the user's attempt to connect to their Cloud PC.
+- **Remoting sign-in time (P50)**: The number of seconds it took the user to complete the sign-in process.
 
 Each metric is aggregated to a P50 median level over the last 24 hours. This is to ensure spikes and troughs are smoothed in order to provide a good understanding of the overall end-user connectivity experience.
 
