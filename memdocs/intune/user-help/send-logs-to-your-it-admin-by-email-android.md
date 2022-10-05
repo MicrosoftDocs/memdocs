@@ -35,7 +35,7 @@ ms.collection:
 There are different ways to report a problem or error that occurs in the Microsoft Intune and Intune Company Portal apps for Android. When an error occurs:
 
 * You can share diagnostic logs with Microsoft. You won't get a personal response but you do receive an incident ID.  
-* You can loop-in your support person via email and share your incident ID with them for follow-up.  
+* You can loop in your support person via email and share your incident ID with them for follow-up.  
 
 This article describes how to send app logs from the Company Portal and Microsoft Intune apps, and how to access logs in the work profile. 
 
@@ -49,9 +49,9 @@ The send logs option in the Company Portal is unavailable for sovereign cloud en
 1. There are two ways to initiate email support in the app:
    
     * From the home screen, tap **Menu** > **Help** > **Send logs**.    
-    * From an error message:, tap **HELP** or **SEND INFO**, if available.  
+    * From an error message, tap **HELP** or **SEND INFO**, if available.  
 
-    > [!NOTE]
+    > [!TIP]
     > **Menu** appears as a software button or a hardware button, depending on the Android device you have.  
 
 2. Tap **SEND LOGS, THEN EMAIL**.  
@@ -75,12 +75,12 @@ The send logs option in the Company Portal is unavailable for sovereign cloud en
 5. An email message will open with the incident ID pre-populated in the subject field. In the body of the email, describe the problem that you came across.  
 
 ## Save logs to share with your support person
-To save the Company Portal logs so you can share them with your support person, you must have a file viewing app. If you are on a device with a work profile, you will need a file viewing app in the work profile.
+You must have a file viewing app to save and share Company Portal logs. If you're on a device with a work profile, the file viewing app needs to be in the work profile.  
 
-1. Go to your work profile and open Company Portal.
-2. Tap **Settings**.
-3. Tap **SAVE LOGS**. When prompted to, choose where you want to save the logs.
-4. Share the logs from your chosen location with your support person as needed.
+1. Go to your work profile and open Company Portal.  
+2. Tap **Settings**.  
+3. Tap **SAVE LOGS**. When prompted to, choose where you want to save the logs.  
+4. Share the logs with your support person as needed.  
 
 ## Next steps  
 
