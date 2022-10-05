@@ -39,9 +39,10 @@ To get to the **Cloud PC connection quality** report, sign in to [Microsoft Endp
 ![Screenshot of getting to the Cloud PC connection quality report](./media/report-cloud-pc-utilization/view-report-connection-quality.png)
 
 This histogram shows aggregated round-trip times of all the Cloud PCs in your tenant. The round-trip time is how many milliseconds it took to connect tto the Cloud PC.
-  - **Good**: Less than 100 milliseconds.
-  - **Average**: 100-200 milliseconds.
-  - **High**: More than 200 milliseconds.
+  
+- **Good**: Less than 100 milliseconds.
+- **Average**: 100-200 milliseconds.
+- **High**: More than 200 milliseconds.
 
 Below that is a list of individual Cloud PCs with the following columns:
     - **Device name**
