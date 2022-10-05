@@ -113,7 +113,7 @@ Applies to:
 
 #### Personally owned work profile terminology<!--8361769   -->
 
-To avoid confusion, the term for the *work profile* Android Enterprise management scenario will be changed to "personally owned devices with a work profile" or *personally owned work profile* throughout the Intune documentation and user interface. This is to differentiate it from the "corporate owned work profile" (COPE) management scenario.
+To avoid confusion, the term for the *work profile* Android Enterprise management scenario will be changed to "personally owned devices with a work profile" or *personally owned work profile* throughout the Intune documentation and user interface. This is to differentiate it from the "corporate-owned work profile" (COPE) management scenario.
 
 #### Windows Autopilot for HoloLens 2 (preview)<!--6305220   -->
 
@@ -1087,7 +1087,7 @@ The iOS Company Portal is now supported on devices enrolled using Apple's Automa
 
 #### Corporate-owned, personally enabled devices (preview)<!--4442275  -->
 
-Intune now supports Android Enterprise corporate-owned devices with a work profile for OS versions Android 8 and above. Corporate owned devices with a work profile is one of the corporate management scenarios in the Android Enterprise solution set. This scenario is for single user devices intended for corporate and personal use. This corporate-owned, personally enabled (COPE) scenario offers:
+Intune now supports Android Enterprise corporate-owned devices with a work profile for OS versions Android 8 and above. Corporate-owned devices with a work profile is one of the corporate management scenarios in the Android Enterprise solution set. This scenario is for single user devices intended for corporate and personal use. This corporate-owned, personally enabled (COPE) scenario offers:
 
 - work and personal profile containerization
 - device-level control for admins
@@ -6400,7 +6400,7 @@ In this release, we've made the following improvements to the inventory informat
 - For Android devices, you can now add a column to device inventory that shows the latest patch level for each device. Add the **Security patch level** column to your device list to see this.
 - When you filter the device view, you can now filter devices by their enrollment date. For example, you could display only devices that were enrolled after a date you specify.
 - We've made improvements to the filter used by the **Last Check-in Date** item.
-- In the device list, you can now display the phone number of corporate owned devices.
+- In the device list, you can now display the phone number of corporate-owned devices.
 Additionally, you can use the filter pane to search for devices by phone number.
 
 For more details about device inventory, see [How to view Intune device inventory](../remote-actions/device-inventory.md).
@@ -6858,7 +6858,7 @@ Intune is adding new enrollment restrictions that control which mobile device pl
 - Restricting mobile device enrollment does not restrict PC client enrollment.  
 - For iOS and Android only, there is one additional option to block the enrollment of personally owned devices.
 
-Intune marks all new devices as personal unless the IT admin takes action to mark them as corporate owned, as explained in [this article](../enrollment/device-enrollment.md).
+Intune marks all new devices as personal unless the IT admin takes action to mark them as corporate-owned, as explained in [this article](../enrollment/device-enrollment.md).
 
 #### View all actions on managed devices<!--677150-->
 A new __Device Actions__ report shows who has performed remote actions like factory reset on devices, and additionally shows the status of that action. See [What is device management?](../remote-actions/device-management.md).
