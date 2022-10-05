@@ -49,7 +49,7 @@ Below that is a list of individual Cloud PCs with the following columns:
     - **Available bandwidth (P50)**: Internet bandwidth during the user's attempt to connect to their Cloud PC.
     - **Remoting sign-in time (P50)**: The number of seconds it took the user to complete the sign-in process.
 
-Each metric is aggretated to a P50 median level over the last 24 hours.This is to ensure spikes and troughs are smoothed in order to provide a good understanding of the overall end-user connectivity experience.
+Each metric is aggregated to a P50 median level over the last 24 hours.This is to ensure spikes and troughs are smoothed in order to provide a good understanding of the overall end-user connectivity experience.
 
 You can use **Add filter** to limit the histogram and table data to specific time spans and round-trip time ranges.
 
