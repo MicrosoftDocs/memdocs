@@ -185,8 +185,10 @@ items:
         href: report-resource-performance.md
       - name: Remoting connection report
         href: report-remoting-connection.md
-      - name: Cloud utilization report 
+      - name: Cloud utilization report
         href: report-cloud-pc-utilization.md
+      - name: Cloud PC connection quality report
+        href: report-cloud-pc-connection-quality.md
     - name: Windows updates
       items:
       - name: Windows 10 quality updates
