@@ -45,7 +45,7 @@ A device managed by Microsoft Intune will be classified as a specialized device 
     - Laptops and tablet devices
     - Foldable messaging devices
     - Mobile devices extension such as wearables/watches where the data is managed through mobile apps on iOS and Android mobile phones
-    - Devices that are included in the plans for frontline workers (see License Eligibility for Frontline Worker Licenses)
+    - Devices that are included in the plans for frontline workers. See [License Eligibility for Frontline Worker Licenses](https://www.microsoft.com/licensing/terms/en-US/productoffering/Microsoft365/EAEAS)
     - IoT devices
 
 
