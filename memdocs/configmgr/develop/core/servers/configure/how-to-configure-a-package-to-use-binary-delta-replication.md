@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure a Package to Use Binary Delta Replication
 The following example shows how to configure an existing package to use binary delta replication, in Configuration Manager, by using the `SMS_Package` class and the `PkgFlags` class property.  

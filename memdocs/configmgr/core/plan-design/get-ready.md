@@ -10,7 +10,7 @@ author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Get ready for Configuration Manager
 

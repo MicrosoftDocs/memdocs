@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Download_Provider WMI Class
 The **CCM_Download_Provider** class, in Configuration Manager, defines and registers a non-Microsoft download plug-in provider.  

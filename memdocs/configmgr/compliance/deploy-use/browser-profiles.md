@@ -11,7 +11,7 @@ ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configure Microsoft Edge Legacy settings in Configuration Manager

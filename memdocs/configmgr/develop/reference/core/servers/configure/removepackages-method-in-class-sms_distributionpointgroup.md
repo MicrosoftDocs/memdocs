@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # RemovePackages Method in Class SMS_DistributionPointGroup
 The `RemovePackages` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes a set of packages from this distribution point group.  

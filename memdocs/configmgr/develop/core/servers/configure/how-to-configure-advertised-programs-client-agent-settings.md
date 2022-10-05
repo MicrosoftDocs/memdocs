@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure Software Distribution Advertised Programs Client Agent Settings
 In Configuration Manager, the site control file maintains configuration for the configuration of the site. This topic shows how to configure software distribution advertised programs client agent settings in the site control file. For more information about reading from and writing to the site control file, see [About the site control file](../../understand/about-the-configuration-manager-site-control-file.md).  

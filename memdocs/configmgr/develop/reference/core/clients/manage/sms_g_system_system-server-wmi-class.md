@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_G_System_SYSTEM Server WMI Class
 The `SMS_G_System_SYSTEM` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about hardware inventory related to a client computer operating system.  

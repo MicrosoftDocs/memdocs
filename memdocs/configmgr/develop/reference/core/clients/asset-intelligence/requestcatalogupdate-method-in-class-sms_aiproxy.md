@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # RequestCatalogUpdate Method in Class SMS_AIProxy
 The `RequestCatalogUpdate` Windows Management Instrumentation (WMI) class method, in Configuration Manager, synchronizes the Asset Intelligence catalog with the System Center Online service.  

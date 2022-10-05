@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About Reporting Configuration Manager Custom Action Progress
 While a custom action is running on a Configuration Manager client, it can report progress information that is used to display a progress indicator.  

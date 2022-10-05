@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN
 You can configure an existing mandatory advertisement for Wake On LAN by using the `SMS_Advertisement` class and properties.  

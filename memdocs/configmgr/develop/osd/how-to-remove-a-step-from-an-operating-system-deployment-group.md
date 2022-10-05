@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Remove a Step from an Operating System Deployment Group
 In Configuration Manager, you delete a step (an action or a group) from an operating system deployment task sequence group by deleting the step from the group's list of task sequence steps.  

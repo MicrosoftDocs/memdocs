@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SoftDistDownloadFailedEvent
 In Configuration Manager, the `SoftDistDownloadFailedEvent` message is raised when a download for a package fails. It appears in **Package Status** in the Configuration Manager console.  

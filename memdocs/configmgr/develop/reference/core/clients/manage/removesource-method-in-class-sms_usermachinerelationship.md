@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # RemoveSource Method in Class SMS_UserMachineRelationship
 The `RemoveSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, removes a source for the relationship between a user and a device.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # DDRAddInteger
 The `DDRAddInteger` function, in Configuration Manager, adds an integer property to the data discovery record (DDR).  

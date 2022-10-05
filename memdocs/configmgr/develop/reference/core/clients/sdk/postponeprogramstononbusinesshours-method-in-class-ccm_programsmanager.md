@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # PostponeProgramsToNonBusinessHours Method in Class CCM_ProgramsManager
 The `PostponeProgramsToNonBusinessHours` WMI class method, in Configuration Manager, schedules legacy software distribution programs to run in the next available user defined service window.  

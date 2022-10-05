@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Set Software Updates Branding Information
 You set the Software Updates client branding information, in Configuration Manager, by modifying the necessary site control file settings.  

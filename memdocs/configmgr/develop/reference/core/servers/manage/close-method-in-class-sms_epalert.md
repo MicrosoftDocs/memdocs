@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Close Method in Class SMS_EPAlert
 The `Close` Windows Management Instrumentation (WMI) class method, in Configuration Manager, postpones the alert.  

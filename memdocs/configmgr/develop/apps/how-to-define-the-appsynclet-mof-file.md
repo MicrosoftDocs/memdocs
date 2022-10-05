@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Define the AppSynclet MOF File
 To define a custom synclet MOF file, create an instance of the CCM_AppHandlers class. The new class instance will identify the custom client-side handler.  Also, create instances of the CCM_HandlerSynclet class to store, detect, install and uninstall property values.  

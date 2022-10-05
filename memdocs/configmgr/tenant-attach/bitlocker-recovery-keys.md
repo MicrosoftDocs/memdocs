@@ -9,7 +9,7 @@ ms.technology: configmgr-core
 manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---
 

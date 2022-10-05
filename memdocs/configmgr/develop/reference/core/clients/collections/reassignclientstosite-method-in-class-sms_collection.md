@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ReassignClientsToSite Method in Class SMS_Collection
 The `ReassignClientsToSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reassigns the Configuration Manager site for clients in the list.  

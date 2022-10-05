@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CheckDuplicateShareName Method in Class SMS_Package
 The `CheckDuplicateShareName` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines if the specified share name has been used by another package.  

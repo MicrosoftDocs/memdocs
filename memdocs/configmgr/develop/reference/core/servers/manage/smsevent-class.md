@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMSEvent Class
 The `SmsEvent` class represents a Configuration Manager event on the client. The class implements the `ICcmEvent` interface.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_CombinedUserResources Server WMI Class
 The `SMS_ CombinedUserResources` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, represents all the user resources in the system.  

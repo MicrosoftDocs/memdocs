@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # DistributeDeploymentTypeExtension Method in Class SMS_DeploymentType
 The `DistributeDeploymentTypeExtension` Windows Management Instrumentation (WMI) class method, in Configuration Manager, schedules a Deployment Type Extension to be distributed throughout the hierarchy.  

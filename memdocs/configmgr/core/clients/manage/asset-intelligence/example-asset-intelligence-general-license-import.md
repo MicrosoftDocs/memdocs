@@ -10,7 +10,7 @@ author: sheetg09
 ms.author: sheetg
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ms.collection: tier3
 ---
 # Example Asset Intelligence general license import file in Configuration Manager

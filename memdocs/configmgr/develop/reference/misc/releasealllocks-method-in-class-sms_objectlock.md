@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ReleaseAllLocks Method in Class SMS_ObjectLock
 The `ReleaseAllLocks` Windows Management Instrumentation (WMI) class method, in Configuration Manager, releases all locks for a session.  

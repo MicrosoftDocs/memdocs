@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # RunAuthListStatusSummarization Method in Class SMS_AuthorizationList
 The `RunAuthListStatusSummarization` Windows Management Instrumentation (WMI) class method, in Configuration Manager, updates summarized results for a particular update group.  

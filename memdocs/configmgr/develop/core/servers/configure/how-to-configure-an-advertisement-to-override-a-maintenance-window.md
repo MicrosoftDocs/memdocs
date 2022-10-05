@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure an Advertisement to Override a Maintenance Window
 The following example shows how to configure an advertisement to override service windows using the `SMS_Advertisement` class and the `AdvertFlags` class property in Configuration Manager.  

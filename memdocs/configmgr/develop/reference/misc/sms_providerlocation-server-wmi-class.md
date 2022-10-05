@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ProviderLocation Server WMI Class
 The `SMS_ProviderLocation` Windows Management Instrumentation (WMI) class, in Configuration Manager, identifies the location of the SMS Provider for a site.  

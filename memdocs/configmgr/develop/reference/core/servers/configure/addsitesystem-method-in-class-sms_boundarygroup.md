@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddSiteSystem Method in Class SMS_BoundaryGroup
 The `AddSiteSystem` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds a site system to this boundary group.  

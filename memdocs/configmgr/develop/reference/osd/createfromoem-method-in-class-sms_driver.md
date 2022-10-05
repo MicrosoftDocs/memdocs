@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CreateFromOEM Method in Class SMS_Driver
 The `CreateFromOEM` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a set of mass-storage [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md) objects referenced by the specified Txtsetup.oem file.  

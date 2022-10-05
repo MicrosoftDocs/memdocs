@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # ICIINFO::GetEvalState Method
 The `ICIINFO::GetEvalState` method, in Configuration Manager, gets the current evaluation state of the configuration item.  

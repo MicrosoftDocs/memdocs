@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # RaiseWarningStatusMsg Method in Class SMS_StatusMessage
 The `RaiseWarningStatusMsg` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates a warning status message.  

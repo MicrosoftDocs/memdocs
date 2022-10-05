@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetSummary Method in Class SMS_AICategory
 The `GetSummary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, provides a summary count of all the categories, families, and tags used by Asset Intelligence.  

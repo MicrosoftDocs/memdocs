@@ -11,7 +11,7 @@ manager: apoorvseth
 ms.author: baladell
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Create Windows Embedded applications with Configuration Manager
 

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ApplicationPublishingItem Server WMI Class
 The `SMS_ApplicationPublishingItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the `ConfigurationItem` object where the `PublishingItem` defined in an `Application` digest is stored in the database.  

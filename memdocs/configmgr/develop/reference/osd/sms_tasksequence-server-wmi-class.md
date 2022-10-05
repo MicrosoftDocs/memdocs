@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TaskSequence Server WMI Class
 The `SMS_TaskSequence` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an operating system deployment task sequence.  

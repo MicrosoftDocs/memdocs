@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Application Configuration Item Example 2
 In Configuration Manager, the following Application Configuration Item Instance example determines whether Notepad.exe is installed.  

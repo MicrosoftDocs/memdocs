@@ -10,7 +10,7 @@ ms.author: banreetkaur
 author: banreet
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Remote connection profiles in Configuration Manager

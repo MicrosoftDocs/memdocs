@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # UnPackNALPath Method in Class SMS_NAL_Methods
 The `UnPackNALPath` method, in Configuration Manager, decodes a network abstraction layer (NAL) path into its components.  

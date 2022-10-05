@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # UserHasPermissions Method in Class SMS_RbacSecuredObject
 The `UserHasPermissions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines whether the current user has the requested permissions for the specified object.  

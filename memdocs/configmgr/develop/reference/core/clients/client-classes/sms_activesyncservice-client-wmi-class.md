@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ActiveSyncService Client WMI Class
 The `SMS_ActiveSyncService` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the ActiveSync service on the client.  

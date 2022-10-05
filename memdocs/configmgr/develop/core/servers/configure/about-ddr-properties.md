@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # About DDR Properties
 In Configuration Manager, the architecture for a resource is defined in both the database and the data discovery record (DDR). If the architecture is not defined in the database, the definition is created from the setting in the DDR.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AcceptEULA Method in Class SMS_ConfigurationItem
 In Configuration Manager, the `AcceptEULA` Windows Management Instrumentation (WMI) class method accepts or declines the Microsoft Software License Terms of a configuration item.  

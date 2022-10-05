@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Delete a Security Scope
 The following example shows how to delete a security scope in Configuration Manager by using the `SMS_SecuredCategory` class.  

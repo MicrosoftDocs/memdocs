@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Determine Package Status
 In Configuration Manager, the software distribution process can take from several minutes to several hours, depending on the site settings, network topography, whether the package includes source files, and the number of distribution points that have been specified for the package. Creating the package, distribution points, programs, and advertisement instances initiates the software distribution process that is managed by the Configuration Manager Distribution Manager.  

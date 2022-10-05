@@ -11,7 +11,7 @@ ms.date: 10/05/2021
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to switch Configuration Manager workloads to Intune

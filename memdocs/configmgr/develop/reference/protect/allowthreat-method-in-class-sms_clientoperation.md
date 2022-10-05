@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AllowThreat Method in Class SMS_ClientOperation
 The `AllowThreat` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that allows the specified threat (identified by `ThreatID`) to all members in a specific collection.  

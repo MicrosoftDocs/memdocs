@@ -11,7 +11,7 @@ manager: apoorvseth
 ms.author: baladell
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Revise and supersede applications in Configuration Manager

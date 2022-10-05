@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: Learn how to view an image file's properties in XML format using a Microsoft operating system's image package.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to View the Properties for an Operating System Image
 In Configuration Manager, you view the image properties for the Windows Image (WIM) file that is contained in an operating system package by calling the [SMS_ImagePackage](../../develop/reference/osd/sms_imagepackage-server-wmi-class.md) class instance [GetImageProperties](../../develop/reference/osd/getimageproperties-method-in-class-sms_imagepackage.md) method.  

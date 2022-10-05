@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to View Monthly Usage Summary Information
 You view monthly usage summary information, in Configuration Manager, by using the [SMS_MeteredFiles](../../develop/reference/apps/sms_meteredfiles-server-wmi-class.md), [SMS_MonthlyUsageSummary](../../develop/reference/apps/sms_monthlyusagesummary-server-wmi-class.md), [SMS_MeteredUser](../../develop/reference/apps/sms_metereduser-server-wmi-class.md) and [SMS_R_System](../../develop/reference/core/clients/manage/sms_r_system-server-wmi-class.md) classes.  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # DDRAddIntegerArray
 The `DDRAddIntegerArray` function, in Configuration Manager, adds an integer array property to the data discovery record (DDR).  

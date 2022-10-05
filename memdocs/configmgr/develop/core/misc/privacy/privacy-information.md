@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Privacy Information
 The Configuration Manager SDK provides documentation and code samples demonstrating how to programmatically access Configuration Manager features. When you build a program or script by using the Configuration Manager SDK, Configuration Manager does not limit the types of information it transmits. For example, a program that identifies each computer and logon account could be used to transmit information between clients and servers.  

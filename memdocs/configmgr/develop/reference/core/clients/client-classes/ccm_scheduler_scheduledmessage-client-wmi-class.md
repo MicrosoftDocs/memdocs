@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Scheduler_ScheduledMessage Client WMI Class
 In Configuration Manager, the `CCM_Scheduler_ScheduledMessage` class is a client Windows Management Instrumentation (WMI) class that represents the configuration for a scheduled message. There is an instance of this class for each scheduled message.  

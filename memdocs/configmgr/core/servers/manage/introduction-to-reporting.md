@@ -11,7 +11,7 @@ ms.author: gokarthi
 author: gowdhamankarthikeyan
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Introduction to reporting in Configuration Manager

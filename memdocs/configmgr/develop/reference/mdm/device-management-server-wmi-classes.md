@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Device Management Server WMI Classes
 Device management server Windows Management Instrumentation (WMI) classes in Configuration Manager assist in assessment of computer compliance considering a number of mobile device configurations.  

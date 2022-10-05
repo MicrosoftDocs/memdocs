@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddDistributionPoints Method in Class SMS_SoftwareUpdatesPackage
 In Configuration Manager, the `AddDistributionPoints` Windows Management Instrumentation (WMI) class method adds the distribution points for the software updates package.  

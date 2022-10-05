@@ -9,9 +9,9 @@ ms.topic: conceptual
 
 
 ms.assetid: 40851148-f8ff-4959-b884-164fec0563e7
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
 ---

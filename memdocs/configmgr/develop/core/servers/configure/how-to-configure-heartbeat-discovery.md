@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Configure Heartbeat Discovery
 In Configuration Manager, you configure the Heartbeat Discovery settings by modifying the necessary site control file settings.  

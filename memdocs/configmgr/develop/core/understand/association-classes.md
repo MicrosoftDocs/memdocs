@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # Configuration Manager Association Classes
 In Configuration Manager, an association allows you to logically relate the instances of two classes. Typically, an association consists of two key properties (which are paths, or pointers, that uniquely identify the location of the other class instances), but an association can also contain additional properties. The provider uses the key properties to retrieve the requested data.  

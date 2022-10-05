@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
 description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_ImageServicingSchedule server class.
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_ImageServicingSchedule Server WMI Class
 The `SMS_ImageServicingSchedule` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents schedule details for offline servicing image.  

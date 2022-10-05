@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: openauth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Read a Configuration Manager Object by Using Managed Code
 To read a Configuration Manager object instance by using the managed SMS Provider, use *WqlConnectionManager.GetInstance*. The [GetInstance](/previous-versions/system-center/developer/cc146190(v=msdn.10)) method takes a string that identifies a specific object instance and returns an [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object that is used to access the object.  

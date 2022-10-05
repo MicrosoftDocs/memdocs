@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # General Configuration Item Example 1
 The following example is a general configuration item schema example that checks the registry to see whether, in this case, remote control is enabled in Configuration Manager.  

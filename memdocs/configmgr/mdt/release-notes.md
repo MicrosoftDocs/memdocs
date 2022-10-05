@@ -10,7 +10,7 @@ ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Microsoft Deployment Toolkit release notes  

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # PlatformApplicabilityConditions
 `PlatformApplicabilityConditions` contains a list of supported platforms for an operating system deployment driver in Configuration Manager.  

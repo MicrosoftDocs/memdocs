@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Messaging_Configuration Client WMI Class
 In Configuration Manager, the `CCM_Messaging_Configuration` class is a client Windows Management Instrumentation (WMI) class that supports messaging-related settings that are exposed to administrators.  

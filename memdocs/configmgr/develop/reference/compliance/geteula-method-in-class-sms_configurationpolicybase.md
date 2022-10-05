@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
 ms.collection: tier3
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetEULA Method in Class SMS_ConfigurationPolicyBase
 In Configuration Manager, the `GetEULA` Windows Management Instrumentation (WMI) class method gets the localized Microsoft Software License Terms text of the configuration item.  
