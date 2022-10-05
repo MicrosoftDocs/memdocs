@@ -94,7 +94,7 @@ Compliance policy settings include the following settings:
 
   By default, the period is set to 30 days. You can configure a period from 1 to 120 days.
 
-  You can view details about device compliance to the validity period setting. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column.  For more information about this and related compliance status views, see [Monitor device compliance](compliance-policy-monitor.md).
+  You can view details about a devices compliance to the validity period setting. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **Monitor** > **Setting compliance**. This setting has a name of **Is active** in the *Setting* column.  For more information about this and related compliance status views, see [Monitor device compliance](compliance-policy-monitor.md).
 
 ## Device compliance policies
 
@@ -128,6 +128,7 @@ The following subjects link to dedicated articles for different aspects of devic
   - [Android Enterprise](compliance-policy-create-android-for-work.md)
   - [Android Open Source Project (AOSP)](compliance-policy-create-android-aosp.md)
   - [iOS](compliance-policy-create-ios.md)
+  - Linux - Support includes [Custom Compliance](../protect/compliance-use-custom-settings.md) and limited settings from the settings catalog for *Allowed Distributions*, *Device Encryptions*, and *Password Policy*.
   - [macOS](compliance-policy-create-mac-os.md)
   - [Windows Holographic for Business](compliance-policy-create-windows.md#windows-holographic-for-business)
   - [Windows 8.1 and later](compliance-policy-create-windows-8-1.md)
