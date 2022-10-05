@@ -40,9 +40,9 @@ There are different ways to report a problem or error that occurs in the Microso
 This article describes how to send app logs from the Company Portal and Microsoft Intune apps, and how to access logs in the work profile. 
 
 ## What you need to know  
-Turn on _verbose logging_ in Company Portal to make it easier for your support person to investigate errors. Verbose logging records all details about an error and includes these details in the report.  If you're using the Microsoft Intune app, set the **Log detail level** to **Verbose**.  For more information, see [turn on verbose logging](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).    
+Turn on _verbose logging_ in Company Portal to make it easier for your support person to investigate errors. For more information, see [Configure logging settings](use-verbose-logging-to-help-your-it-administrator-fix-device-issues-android.md).  
 
-The send logs option in the Company Portal is unavailable for sovereign cloud environments. To report a problem, send your logs over email.    
+The send logs option in the Company Portal is unavailable for sovereign cloud environments.  
 
 ## Send logs from Company Portal  
 
