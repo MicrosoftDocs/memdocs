@@ -7,7 +7,7 @@ keywords: what is Intune, mobile endpoint management, mobile application managem
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/27/2022
+ms.date: 10/05/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -34,11 +34,13 @@ ms.collection:
 
 As organizations move to support hybrid and remote workforces, they're challenged with managing the different devices that access organization resources. Employees and students need to collaborate, work from anywhere, and securely access and connect to these resources. Admins need to protect organization data, manage end user access, and support users from wherever they work.
 
-To help with these challenges and tasks, use Microsoft Intune. Microsoft Intune is a mobile device management (MDM) and mobile application management (MAM) provider for your organization or enterprise. Intune is cloud-based and can manage your Android, iOS/iPadOS, macOS, and Windows client devices and apps using policies. It allows users to be productive from anywhere and on any device, and works well with on-premises Configuration Manager environments.
+To help with these challenges and tasks, use Microsoft Intune. Microsoft Intune is a mobile device management (MDM) and mobile application management (MAM) provider for your organization or enterprise. Intune is cloud-native and can manage your Android, iOS/iPadOS, macOS, and Windows client devices and apps using policies. It allows users to be productive from anywhere and on any device, and works well with on-premises Configuration Manager environments.
 
 Microsoft Intune is also a family of products and services that focus on endpoint management. This family includes Microsoft Intune, Configuration Manager, Windows Autopilot, and Endpoint Analytics. With these services, you get OS deployment, app and device policy management, and reporting & analytics.
 
 This article lists some features and benefits of Microsoft Intune.
+
+For more information on what it means to be cloud-native, go to [Learn more about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md).
 
 > [!TIP]
 > To get Intune, go to [Licenses available for Microsoft Intune](licenses.md) and [Intune 30-day trial](free-trial-sign-up.md).
@@ -272,14 +274,15 @@ When you enable SSO, users can automatically sign in to apps and services using 
 
 Specifically:
 
-- On iOS/iPadOS and macOS devices, you can use the Microsoft Enterprise SSO plug-in to automatically sign in to apps and websites that use Azure Active Directory (AD) for authentication, including Microsoft 365 apps.
-
 - On Windows devices, SSO is automatically built in and used to sign in to apps and websites that use Azure AD for authentication, including Microsoft 365 apps. You can also enable SSO on VPN and Wi-Fi policies.
+
+- On iOS/iPadOS and macOS devices, you can use the Microsoft Enterprise SSO plug-in to automatically sign in to apps and websites that use Azure Active Directory (AD) for authentication, including Microsoft 365 apps.
 
 - On Android devices, you can use the Microsoft Authentication Library (MSAL) to enable SSO to Android apps.
 
   For more information, go to:
 
+  - [How SSO to on-premises resources works on Azure AD joined devices](/azure/active-directory/devices/azuread-join-sso)
   - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS and macOS devices in Microsoft Intune](../configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
   - [Enable cross-app SSO on Android using MSAL](/azure/active-directory/develop/msal-android-single-sign-on)
 

@@ -2,14 +2,14 @@
 # required metadata
 
 title: Join your cloud-native endpoints to Azure AD
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: When moving to or using cloud-native endpoints, use Azure AD joined endpoints. When your endpoints are joined to Azure AD, you can use Windows Autopilot to provision or get devices ready for organization use. Learn more about the benefits to IT admins and end-users.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2022
+ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -71,7 +71,7 @@ To join Windows endpoints to Azure AD, you have some options:
 - **Use a Window Provisioning Package**. For more information, go to:
 
   - [Provisioning packages for Windows](/windows/configuration/provisioning-packages/provisioning-packages)
-  - [Bulk join a Windows device to Azure AD and Microsoft Endpoint Manager using a provisioning package - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/bulk-join-a-windows-device-to-azure-ad-and-microsoft-endpoint/ba-p/2381400) blog post
+  - [Bulk join a Windows device to Azure AD and Microsoft Intune using a provisioning package - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/intune-customer-success/bulk-join-a-windows-device-to-azure-ad-and-microsoft-endpoint/ba-p/2381400) blog post
 
 ### Organization IT benefits
 
