@@ -6,10 +6,12 @@ ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: BalaDelli
+ms.author: baladell
 manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # Microsoft Defender for Endpoint
 

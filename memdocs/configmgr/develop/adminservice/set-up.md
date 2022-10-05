@@ -6,11 +6,12 @@ ms.date: 12/07/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to set up the administration service in Configuration Manager

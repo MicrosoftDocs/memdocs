@@ -6,10 +6,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
 ms.date: 07/21/2022
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Removed and deprecated features for Configuration Manager

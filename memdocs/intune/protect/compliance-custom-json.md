@@ -42,6 +42,8 @@ A correctly formatted JSON file must include the following information:
 - **MoreInfoURL** - A URL that’s shown to device users so they can learn more about the compliance requirement when their device is noncompliant for a setting. You can also use this to link to instructions to help users bring their device into compliance for this setting.
 - **RemediationStrings** - Information that gets displayed in the Company Portal when a device is noncompliant to a setting. This information is intended to help users understand the remediation options to bring a device to a compliant state.
 
+You may include as many settings as you'd like in the JSON file, but the file must be no larger than 1 megabyte (MB).
+
 **Supported operators**:  
 - IsEquals
 - NotEquals

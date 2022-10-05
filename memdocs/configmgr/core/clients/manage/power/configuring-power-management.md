@@ -6,10 +6,12 @@ ms.date: 09/10/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Configure power management in Configuration Manager

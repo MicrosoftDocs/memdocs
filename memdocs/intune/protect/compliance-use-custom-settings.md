@@ -7,8 +7,13 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
+<<<<<<< HEAD
 ms.date: 10/19/2022
 ms.topic: conceptual
+=======
+ms.date: 08/15/2022
+ms.topic: how-to
+>>>>>>> 94fa0b7f15a3a95565bfbcee045ae8f0b521149e
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium

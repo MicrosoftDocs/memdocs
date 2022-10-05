@@ -1,19 +1,18 @@
 ---
 description: Learn how to postpone a set of software updates to automatically install in specified non-business hours.
-title: "PostponeUpdatesToNonBusinessHours Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: PostponeUpdatesToNonBusinessHours Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 466bbee1-f688-40f1-bfd2-ec819cfafa75
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # PostponeUpdatesToNonBusinessHours Method in Class CCM_SoftwareUpdatesManager
 The `PostoneUpdatesToNonBusinessHours` WMI class method, in Configuration Manager, postpones a set of software updates to automatically install in non-business hours, which are specified by the user.  

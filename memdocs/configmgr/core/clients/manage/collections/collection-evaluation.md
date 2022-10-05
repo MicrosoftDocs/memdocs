@@ -10,6 +10,8 @@ author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Collection evaluation in Configuration Manager

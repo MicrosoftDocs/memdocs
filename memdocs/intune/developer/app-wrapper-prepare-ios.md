@@ -28,6 +28,7 @@ ms.custom: intune-classic
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
+- tier3
 ---
 
 # Prepare iOS apps for app protection policies with the Intune App Wrapping Tool

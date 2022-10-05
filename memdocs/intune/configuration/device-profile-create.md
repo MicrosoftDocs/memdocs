@@ -44,7 +44,7 @@ Device profiles allow you to add and configure settings, and then push these set
 
   For more information, see [Security baselines](../protect/security-baselines.md).
 
-- **Settings catalog**: On Windows 10/11 devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings. 
+- **Settings catalog**: On Windows 10/11 devices, use the settings catalog to see all the available settings, and in one location. For example, you can see all the settings that apply to BitLocker, and create a policy that just focuses on BitLocker. On macOS devices, use the settings catalog to configure Microsoft Edge version 77 and settings.
 
   For more information, see [Settings catalog](settings-catalog.md).
 

@@ -6,10 +6,12 @@ ms.date: 08/01/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-author: baladelli
-ms.author: baladell
+author: gowdhamankarthikeyan
+ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to use maintenance windows in Configuration Manager

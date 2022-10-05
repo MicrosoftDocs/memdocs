@@ -6,10 +6,12 @@ ms.date: 04/01/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to use Resource Explorer to view software inventory in Configuration Manager
 
