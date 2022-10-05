@@ -77,7 +77,7 @@ Before you can use the feature updates policy reports, you must configure prereq
   - Service-based data is collected for all feature update versions and doesn't require you to configure data collection. 
   - Client-based data is collected from devices only after data collection is configured.
   
-  Service and client-based data is described in [Use the Windows 10 feature updates (Organizational) report](#use-the-windows-10-and-later-feature-updates-organizational-report) later in this article.
+  Service and client-based data is described in [Use the Windows 10 feature updates (Organizational) report](#use-the-windows-10-feature-updates-organizational-report) later in this article.
 
 - **Devices**: Devices must:
 

@@ -4,8 +4,8 @@ title: What's new in Microsoft Intune
 titleSuffix:
 description: Find out what's new in Microsoft Intune
 keywords:
-author: Erikre
-ms.author: erikre
+author: brenduns
+ms.author: brenduns
 manager: dougeby
 ms.date: 09/21/2022
 ms.topic: conceptual
