@@ -217,7 +217,7 @@ To remove integration of Jamf Pro with Intune, use the following steps to remove
 
 2. Select the option **Terminate connection**. Review the message and when ready, select **OK**.
 
-After you terminate the integration, your organization's Mac devices are removed from Azure AD and Intune in 90 days.
+After you terminate the integration, your organization's Mac devices are removed from Intune in 90 days.
 
 ### Deprovision Jamf Pro from within the Jamf Pro console
 
