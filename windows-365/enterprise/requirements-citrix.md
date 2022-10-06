@@ -64,7 +64,7 @@ Citrix HDX Plus for Windows 365 supports integrating with Windows 365 deployment
 
 ### Supported infrastructures
 
-| Identity | Citrix Cloud | CVAD (on-prem) | Citrix Workspace | Citrix Storefont | Citrix Gateway Service | Citrix Gateway |
+| Identity | Citrix Cloud | CVAD (on-prem) | Citrix Workspace | Citrix Storefront | Citrix Gateway Service | Citrix Gateway |
 | --- | --- | --- | --- | --- | --- | --- |
 | Azure AD joined | Yes | No | Yes | No | Yes | No |
 | Hybrid Azure AD joined | Yes | No | Yes | No | Yes | No |
