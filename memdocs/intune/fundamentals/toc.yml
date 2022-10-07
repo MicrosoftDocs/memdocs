@@ -16,7 +16,7 @@ items:
       href: manage-apps.md
     - name: Intune service release information
       href: intune-service-servicing-information.md
-  - name: Device management overview
+  - name: What is device management?
     href: what-is-device-management.md
     displayName: teamviewer 
   - name: What's new
