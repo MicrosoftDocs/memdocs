@@ -40,7 +40,7 @@ While troubleshooting errors, make sure that the following steps have all been s
   - The prerequisites have been met.
   - The Citrix connector is enabled and healthy in Microsoft Endpoint Manager.
   - The correct permissions have been set for the Citrix third-party apps in Azure AD. For more information on required permissions, see [Requirements for using Citrix HDX Plus for Windows 365 Enterprise](requirements-citrix.md).
-  - The Azure AD user is added and discoverable  in the Citrix console  
+  - The Azure AD user is added and discoverable  in the Citrix console.
 - The Citrix agent is downloaded on the Cloud PC.
   - The Cloud PC can access Citrix download URL.
   - No security policy is blocking PowerShell or any app/agent installation as System.
