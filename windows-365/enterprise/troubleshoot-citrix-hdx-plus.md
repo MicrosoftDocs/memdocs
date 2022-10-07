@@ -67,7 +67,7 @@ When the Citrix HDX Plus protocol is turned on, the Windows 365 remoting protoco
 You can turn on the RDP protocol so users can sign in with RDP to test the Cloud PC connectivity. You can do either of the following to turn on the RDP protocol:
 
 - [Make a user a local admin](assign-users-as-local-admin.md) on the Cloud PC.
-- [Add the user to the Direct Access Users group on the Cloud PC]().
+- [Add the user to the Direct Access Users group on the Cloud PC](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx).
 
 After doing either of these,  you might have to reboot the Cloud PC for the group membership updates to take effect. Afterwards, the user will be able to connect by using either RDP or Citrix HDX.
 
