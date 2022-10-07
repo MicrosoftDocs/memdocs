@@ -221,6 +221,8 @@ items:
       href: connection-errors.md
     - name: Provisioning errors
       href: provisioning-errors.md
+    - name: Citrix HDX Plus
+      href: troubleshoot-citrix-hdx-plus.md
 - name: Reference
   items:
     - name: Get audit logs by using PowerShell
