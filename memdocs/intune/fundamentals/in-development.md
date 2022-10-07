@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 09/26/2022
+ms.date: 10/07/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -74,7 +74,7 @@ Android device users will be able to select and save their preferred work apps i
 
 ### Use filters with app configuration profiles for managed devices<!-- 7423842 -->
 You will be able to use filters to refine the assignment scope when deploying app configuration profiles for managed devices.
-You can first create a filter using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration profile by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md).
+You can first create a filter using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration profile by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
 
 ## Device management
 
@@ -107,17 +107,6 @@ With this new setting you’ll be able to configure inbound and outbound rules f
 
 Applies to:  
 - Windows 10, Windows 11, and Windows Server
-
-###  Support for Locate device on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices<!-- 12391424 -->
-You'll be able to use "Locate device" on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices. Using this feature, admins will be able to locate lost or stolen corporate devices on-demand. To do this, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
-
-For information on locating lost or stolen devices with Intune, go to:
- - [Locate lost or stolen devices with Intune](../remote-actions/device-locate.md)
-
-Applies to:
-- Android Enterprise corporate owned fully managed
-- Android Enterprise corporate owned dedicated devices
-- Android Enterprise corporate owned work profile
 
 <!-- ***********************************************-->
 
