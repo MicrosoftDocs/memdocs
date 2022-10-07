@@ -184,9 +184,9 @@ Should you need to remove integration of Jamf Pro with Intune, use one of the fo
 
 1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Partner device management**.
 
-2. Select the option **Terminate connection**. Review the message and when ready, select **OK**.
+2. Select the option **Terminate**. Intune displays a message about the action. Review the message and when ready, select **OK**. The option to *Terminate* the integration only appears when the Jamf connection exists.
 
-After you terminate the integration, your organization's Mac devices are removed from Intune in 90 days.
+After you terminate the integration, refresh the view of the admin center to update the view. Your organization's Mac devices are removed from Intune in 90 days.
 
 ### Deprovision Jamf Pro from within the Jamf Pro console
 
