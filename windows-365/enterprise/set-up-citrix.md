@@ -59,4 +59,4 @@ To turn on the Citrix connector, follow these steps:
 <!-- ########################## -->
 ## Next steps
 
-For more information about Citrix HDX Plus, see [need link]().
+For information about Citrix HDX Plus requirements, see [Requirements](requirements-citrix.md).
