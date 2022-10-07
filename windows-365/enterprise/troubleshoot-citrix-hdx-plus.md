@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Troubleshoot Citrix HDX Plus for Windows 365
 
-When you turn on Citrix HDX Plus for a user, the Citrix Virtual Delivery Agent is automatically installed on that user's Cloud PCs. The agent enables the HDX protocol. If this installation runs into a problem, you'll receive an error messages in the All Cloud PC list. The description of the error includes advice on how to troubleshoot the error.
+When you turn on Citrix HDX Plus for a user, the Citrix Virtual Delivery Agent is automatically installed on that user's Cloud PCs. The agent enables the HDX protocol. If this installation runs into a problem, you'll receive an error message in the All Cloud PC list. The description of the error includes advice on how to troubleshoot the error.
 
 If the Citrix HDX Plus agent installation fails, the user can still connect to their Cloud PC by using Remote Desktop.
 
@@ -50,7 +50,7 @@ While troubleshooting errors, make sure that the following steps have all been s
   - Check Citrix installation logs for any failures:  %TEMPsystemdrive%\Windows\Temp\Citrix\XenDesktop Installer.
 - The Cloud PC is registered into the Citrix cloud tenant.
   - Check the Cloud PC registration status in the Citrix configuration console.
-  - If the Cloud PC is unregistered, check the Application log in Windows event viewer (eventvwr.msc) for Citrix Desktop Service errors and warnings.
+  - If the Cloud PC is unregistered, check the Application sign-in Windows event viewer (eventvwr.msc) for Citrix Desktop Service errors and warnings.
 
 After you find the root cause, remove the assigned license from the Citrix console and re-add the license. This should trigger a reinstallation of the Citrix Virtual Delivery Agent.
 
