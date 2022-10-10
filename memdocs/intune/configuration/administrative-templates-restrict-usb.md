@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 03/30/2022
+ms.date: 10/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -60,19 +60,19 @@ Applies to:
 
     - **Prevent installation of devices not described by other policy settings**: Select **Enabled** > **OK**:
 
-      :::image type="content" source="media/administrative-templates-restrict-usb/prevent-installation-of-devices-not-described-setting.png" alt-text="In Intune and Endpoint Manager, set the Prevent installation of devices not described by other policy settings setting to Enabled.":::
+      :::image type="content" source="media/administrative-templates-restrict-usb/prevent-installation-of-devices-not-described-setting.png" alt-text="In Intune, set the Prevent installation of devices not described by other policy settings setting to Enabled.":::
 
     - **Allow installation of devices using drivers that match these device setup classes**: Select **Enabled**. Then, add the [class GUID of the device classes](/windows-hardware/drivers/install/system-defined-device-setup-classes-available-to-vendors) you want to allow.
 
       In the following example, the **Keyboard**, **Mouse**, and **Multimedia** classes are allowed:
 
-      :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-using-drivers-setting.png" alt-text="In Intune and Endpoint Manager, set the Allow installation of devices using drivers that match these device setup classes setting, and add your class GUIDs.":::
+      :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-using-drivers-setting.png" alt-text="In Intune, set the Allow installation of devices using drivers that match these device setup classes setting, and add your class GUIDs.":::
 
       Select **OK**.
 
     - **Allow installation of devices that match any of these Device IDs**: Select **Enabled**. Then, add the device/hardware IDs for devices you want to allow:
 
-       :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-that-match-setting.png" alt-text="In Intune and Endpoint Manager, set the Allow installation of devices that match any of these Device IDs setting, and add your hardware IDs.":::
+       :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-that-match-setting.png" alt-text="In Intune, set the Allow installation of devices that match any of these Device IDs setting, and add your hardware IDs.":::
 
       To get the device/hardware ID, you can use Device Manager, find the device, and look at the properties. For the specific steps, see [find the hardware ID on a Windows device](/windows-hardware/drivers/install/hardware-ids).
 
