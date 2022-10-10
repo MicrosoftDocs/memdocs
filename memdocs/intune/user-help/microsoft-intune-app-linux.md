@@ -34,7 +34,7 @@ ms.collection:
 The Microsoft Intune app package is available at [https://packages.microsoft.com/](https://packages.microsoft.com/). Run the following commands in a command line to manually install the Intune app and its dependencies on your device.  
 
 > [!Tip]
-> For more information about how to how to use, install, and configure Linux software packages for Microsoft products, see [Linux Software Repository for Microsoft Products](https://learn.microsoft.com/windows-server/administration/linux-package-repository-for-microsoft-software).   
+> For more information about how to how to use, install, and configure Linux software packages for Microsoft products, see [Linux Software Repository for Microsoft Products](/windows-server/administration/linux-package-repository-for-microsoft-software).  
 
 1. Install Curl.  
     `$ sudo apt install curl gpg` 

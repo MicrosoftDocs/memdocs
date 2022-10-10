@@ -43,7 +43,7 @@ Enrollment is supported on devices with:
 
 We recommend enabling encryption when you first install Ubuntu Desktop on your device. Your organization may require your device to be encrypted, and it's easiest to encrypt the device during OS installation. 
 
-For additional help setting up Ubuntu Desktop, see the following resources on the Ubuntu website:  
+For help setting up Ubuntu Desktop, see the following resources on the Ubuntu website:   
 
    * [Ubuntu desktop downloads](https://ubuntu.com/download/desktop) 
    * [How to install Ubuntu desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)  
@@ -67,4 +67,4 @@ Follow these steps to register your personal Linux device on your organization's
    2.  An on-screen confirmation appears when your device is enrolled and ready-to-use for work. You can begin using your device for work right away. Sign in to Microsoft Edge with your work or school account to access your org's internal websites.   
 
 ## Next steps
-As long as your device meets your organization's requirements, it'll continue to have work access. Your organization may limit access if the Intune app flags your device as noncompliant. You can view and resolve all compliance issues in the Microsoft Intune app. For more information, see [Check status for Linux](check-status-linux.md).  
+As long as your device meets your organization's requirements, it will continue to have work access. Your organization may limit access if the Intune app flags your device as noncompliant. You can view and resolve all compliance issues in the Microsoft Intune app. For more information, see [Check status for Linux](check-status-linux.md).  

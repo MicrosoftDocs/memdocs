@@ -69,7 +69,7 @@ Contact your support person for more information about your organization’s OS 
 
 ### Password complexity 
 
-When passsword complexity requirements are enforced, devices with weak passwords are marked as noncompliant. To resolve this issue, update your device password so that it meets your organization’s requirements for length and quality.  
+When password complexity requirements are enforced, devices with weak passwords are marked as noncompliant. To resolve this issue, update your device password so that it meets your organization’s requirements for length and quality.  
 
 ### Device encryption  
 When encryption requirements are enforced, devices that aren’t encrypted are marked as noncompliant. To resolve this issue, encrypt the local data on your device in accordance with your organization’s encryption policies. 
@@ -83,5 +83,3 @@ Not all filesystem partitions need to be encrypted:
   * The */boot* or */boot/efi* partitions are ignored.  
 
 Intune supports all encryption systems that use the [*dm-crypt* subsystem](https://gitlab.com/cryptsetup/cryptsetup/-/wikis/DMCrypt), the standard underlying infrastructure for Linux systems. We recommend setting up dm-crypt by using the *LUKS format* with the *cryptsetup tool*.  
-
-
