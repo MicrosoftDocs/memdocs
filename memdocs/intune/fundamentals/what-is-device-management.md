@@ -6,7 +6,7 @@ description: Microsoft 365 Enterprise includes Microsoft Intune. See how Intune 
 author: MandiOhlinger
 ms.author: mandia 
 manager: dougeby 
-ms.date: 10/06/2022
+ms.date: 10/10/2022
 ms.topic: overview 
 audience: microsoft-business
 ms.service: microsoft-intune
@@ -28,17 +28,17 @@ ms.collection:
   - highseo
 ---
 
-# Device management for a modern workplace
-
-As organizations support remote and hybrid workforces, it's more important than ever to have a solid device management strategy. Organizations must protect and secure their resources and data on any device.
+# What does device management mean?
 
 **Device management** enables organizations to administer and maintain devices, including virtual machines, physical computers, mobile devices, and IoT devices. Device management is a critical component of any organization's security strategy. It helps ensure that devices are secure, up-to-date, and compliant with organizational policies, with the goal of protecting the corporate network and data from unauthorized access.
+
+As organizations support remote and hybrid workforces, it's more important than ever to have a solid device management strategy. Organizations must protect and secure their resources and data on any device.
 
 ## Features and benefits
 
 Device management solutions have the following features and benefits:
 
-- The toolset to manage devices, including the ability to deploy and update software, configure settings, and enforce policies
+- The toolset to manage devices, including the ability to deploy and update software, configure settings, enforce policies, and monitor with data and reports
 - The ability to administer virtual and physical devices, including remote administration
 - Maintain a network of devices running common operating systems, including Windows, macOS, iOS/iPadOS, and Android
 - Automate policy management and deployment for apps, device features, security, and compliance
