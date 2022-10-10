@@ -61,7 +61,7 @@ productDirectory:
     - title: Windows Autopatch docs
       imageSrc: ./media/autopatch.svg
       summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
-      url: /windows/deployment/windows-autopatch/index.yml
+      url: /windows/deployment/windows-autopatch/
     # Card
     - title: Endpoint Analytics docs
       imageSrc: ./media/endpoint-analytics.svg
@@ -90,32 +90,32 @@ additionalContent:
           url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
         - title: Manage devices with Intune and Microsoft 365
           summary: A core component of enterprise-level security includes managing and protecting devices. Whether you’re building a Zero Trust security architecture, hardening your environment against ransomware, or building in protections to support remote workers, managing devices is part of the strategy.
-          url: https://docs.microsoft.com/microsoft-365/solutions/manage-devices-with-intune-overview
+          url: /microsoft-365/solutions/manage-devices-with-intune-overview
         - title: Set up your infrastructure for hybrid work
           summary: Solution to secure and optimize your worker’s productivity and collaboration, you need to allow on-site and remote workers to access your organization's on-premises and cloud-based information, tools, and resources easily and securely.
-          url: https://docs.microsoft.com/microsoft-365/solutions/empower-people-to-work-remotely
+          url: /microsoft-365/solutions/empower-people-to-work-remotely
         - title: Zero Trust guidance
           summary: Learn about the Zero Trust security model, its principles, and how to implement a Zero Trust architecture using the deployment plans.
-          url: /security/zero-trust/index.yml
+          url: /security/zero-trust/
 
     - title: Related services
       items:
         # Card
         - title: Azure Active Directory
           summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
-          url: /azure/active-directory/index.yml
+          url: /azure/active-directory/
         # Card
         - title: Windows client docs for IT Pros
           summary: Evaluate, plan, deploy, secure, and manage devices running Windows 10 and Windows 11.
-          url: /windows/resources/index.yml
+          url: /windows/resources/
         # Card
         - title: Windows 365 docs
           summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. 
-          url: https://docs.microsoft.com/en-us/windows-365/index.yml
+          url: /windows-365/
         # Card
         - title: Microsoft Defender for Endpoint
           summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
-          url: /microsoft-365/security/defender-endpoint/index.yml
+          url: /microsoft-365/security/defender-endpoint/
 
     - title: Microsoft Intune community & support
       items:
