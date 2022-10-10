@@ -71,6 +71,7 @@ The following table lists the specific app types and how you can add them in the
 | Windows app (Win32)  | LOB app  | Select **Windows app (Win32)** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunewin**.  |
 | macOS LOB apps | LOB app  | Select **Line-of-business** as the **app type**, select the **App package file**, and then select an installation file with the extension **.intunemac**.  |
 | macOS apps (DMG) | LOB app (non-store app)  | Select **macOS app (DMG)** as the app type, select the **App package** file, and then select an installation file with the extension *.dmg*.  |
+| Microsoft Defender for Endpoint (macOS) | Store app (Microsoft Defender ATP | Select **macOS** under **Microsoft Defender for Endpoint** as the app type and then continue by setting up the app in Intune.  |
 
 <sup>1</sup> For more information about Android Enterprise and Android work profiles, see [Understanding licensed apps](apps-add.md#understanding-licensed-apps) below.
 
