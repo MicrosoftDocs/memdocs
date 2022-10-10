@@ -2,7 +2,7 @@
 # required metadata
 
 title: Filter reports and troubleshooting in Microsoft Intune
-description: Use the device and app filter reports to get more information on successfully applied filters. Learn the impact of include and exclude filters in Microsoft Intune and Endpoint Manager.
+description: Use the device and app filter reports to get more information on successfully applied filters. Learn the impact of include and exclude filters in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -27,7 +27,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Filter reports and troubleshooting in Microsoft Endpoint Manager
+# Filter reports and troubleshooting in Microsoft Intune
 
 When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10/11 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
@@ -68,7 +68,7 @@ To see this report, use the following steps:
 
 In the following example, you can see this information for the **TestDevice**:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="See the date, time, evaluation results, and other device filter assignment properties in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other device filter assignment properties in Microsoft Microsoft Intune.":::
 
 > [!IMPORTANT]
 > 
@@ -93,7 +93,7 @@ To see these reports, use the following steps:
 
 In the following example, you can see this information for the **Microsoft Word** store app:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="See the date, time, evaluation results, and other app filter properties in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other app filter properties in Microsoft Intune.":::
 
 > [!IMPORTANT]
 > 
@@ -133,7 +133,7 @@ Intune helps avoid conflicts. It prevents you from creating multiple assignments
 
 An overlap can occur when a user or device is in multiple targeted groups. Conflicting assignments aren't recommended. For more information, see [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved).
 
-:::image type="content" source="./media/filters-reports-troubleshoot/device-multiple-groups.png" alt-text="Conflicts can occur when a device is in multiple groups in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/device-multiple-groups.png" alt-text="Screenshot that shows how conflicts can occur when a device is in multiple groups in Microsoft Intune.":::
 
 When you use filters, conflict resolution is handled using the following methods:
 
@@ -151,7 +151,7 @@ When there's a device with conflicting assignments for the same policy, the foll
 
 When you assign the app or policy, you choose to apply a filter:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Filter precedence is exclude, no filter, and then include when assigning policies in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is exclude, no filter, and then include when assigning policies in Microsoft Intune.":::
 
 For example:
 
@@ -195,11 +195,11 @@ Apps use special behavior when resolving conflicts between **Required** and **Av
 
 In the following example, there's a conflict between assignments because the same user/device is in both assignments:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/example-conflict-same-group-user-policy-assignment.png" alt-text="Example assignment conflict when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/example-conflict-same-group-user-policy-assignment.png" alt-text="Screenshot that shows an example assignment conflict when using filters in Microsoft Intune.":::
 
 The following matrix explains the impact, depending on the conflict scenario:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/conflict-matrix.png" alt-text="Conflict impact depend on the setting configured when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/conflict-matrix.png" alt-text="Screenshot that shows that the conflict impact depends on the setting configured when using filters in Microsoft Intune.":::
 
 ## Next steps
 
