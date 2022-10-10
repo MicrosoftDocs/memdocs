@@ -192,6 +192,14 @@ items:
       href: send-errors-to-your-it-admin-ios.md
     - name: Share app logs 
       href: send-logs-to-microsoft-ios.md
+- name: Linux device management
+  items: 
+  - name: Enroll your Linux device 
+    href: enroll-device-linux.md
+  - name: Get Microsoft Intune app for Linux 
+    href: microsoft-intune-app-linux.md
+  - name: Check device status  
+    href: check-status-linux.md   
 - name: macOS device management
   items:
   - name: Enrollment
