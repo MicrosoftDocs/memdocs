@@ -11,7 +11,7 @@ author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # How to Add a Configuration Manager Context Qualifier by Using Managed Code

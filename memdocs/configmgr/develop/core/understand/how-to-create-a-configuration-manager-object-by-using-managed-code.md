@@ -10,7 +10,7 @@ author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 description: Learn how to create a configuration manager object by using managed code, with included examples and links.
 ms.reviewer: mstewart,aaroncz 
 ---
