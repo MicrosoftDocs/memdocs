@@ -78,7 +78,7 @@ There are some restrictions when creating filters:
 - Each filter is limited to 3072 characters.
 - Devices must be enrolled in Intune. Filters can't be evaluated on devices that aren't enrolled. This behavior includes:
   - A restriction on the **Available with or without enrollment** app assignment intent
-  - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endoint integration, such as servers.
+  - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endpoint integration, such as servers.
 
 ## Prerequisites
 
