@@ -196,10 +196,10 @@ items:
   items: 
   - name: Enroll your Linux device 
     href: enroll-device-linux.md
-  - name: Check device status  
-    href: check-status-linux.md 
-  - name: Install Microsoft Intune app for Linux 
+  - name: Get Microsoft Intune app for Linux 
     href: microsoft-intune-app-linux.md
+  - name: Check device status  
+    href: check-status-linux.md   
 - name: macOS device management
   items:
   - name: Enrollment

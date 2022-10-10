@@ -71,10 +71,10 @@ Run these commands to update the Microsoft Intune app manually:
 
 ## Uninstall Intune app 
 
-1. Remove the Intune app from your system. 
+1. Remove the Intune app from your system.   
     `$ sudo apt remove intune-portal` 
 
-2. Remove the local registration data. This command removes the local configuration data that contains your device registration.    
+2. Remove the local registration data. This command removes the local configuration data that contains your device registration.     
     `$ sudo apt purge intune-portal` 
 
  
