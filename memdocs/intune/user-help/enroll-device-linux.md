@@ -43,7 +43,7 @@ Enrollment is supported on devices with:
 
 We recommend enabling encryption when you first install Ubuntu Desktop on your device. Your organization may require your device to be encrypted, and it's easiest to encrypt the device during OS installation. 
 
-For help setting up Ubuntu Desktop, see the following resources on the Ubuntu website:   
+For help with setting up Ubuntu Desktop, see the following resources on the Ubuntu website:   
 
    * [Ubuntu desktop downloads](https://ubuntu.com/download/desktop) 
    * [How to install Ubuntu desktop](https://ubuntu.com/tutorials/install-ubuntu-desktop#1-overview)  
