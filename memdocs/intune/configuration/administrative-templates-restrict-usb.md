@@ -66,13 +66,13 @@ Applies to:
 
       In the following example, the **Keyboard**, **Mouse**, and **Multimedia** classes are allowed:
 
-      :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-using-drivers-setting.png" alt-text="In Intune, set the Allow installation of devices using drivers that match these device setup classes setting, and add your class GUIDs.":::
+      :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-using-drivers-setting.png" alt-text="Screenshot that shows how to set the Allow installation of devices using drivers that match these device setup classes setting in Intune and how to add your class GUIDs.":::
 
       Select **OK**.
 
     - **Allow installation of devices that match any of these Device IDs**: Select **Enabled**. Then, add the device/hardware IDs for devices you want to allow:
 
-       :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-that-match-setting.png" alt-text="In Intune, set the Allow installation of devices that match any of these Device IDs setting, and add your hardware IDs.":::
+       :::image type="content" source="media/administrative-templates-restrict-usb/allow-installation-of-devices-that-match-setting.png" alt-text="Screenshot that shows how to set the Allow installation of devices that match any of these Device IDs setting in Intune and how to add your hardware IDs.":::
 
       To get the device/hardware ID, you can use Device Manager, find the device, and look at the properties. For the specific steps, see [find the hardware ID on a Windows device](/windows-hardware/drivers/install/hardware-ids).
 

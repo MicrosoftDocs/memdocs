@@ -154,7 +154,7 @@ Use the following matrix to understand support for excluding groups:
 - ❌: Not supported
 - ❕ : Partially supported
 
-:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups-matrix.png" alt-text="Image that shows the supported options to include or exclude groups from a profile assignment.":::
+:::image type="content" source="./media/device-profile-assign/include-exclude-user-device-groups-matrix.png" alt-text="Screenshot that shows the supported options to include or exclude groups from a profile assignment.":::
 
 | Scenario | Support|
 | --- | --- |
