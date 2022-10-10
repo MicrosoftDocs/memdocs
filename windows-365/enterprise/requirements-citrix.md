@@ -31,7 +31,7 @@ ms.collection: M365-identity-device-management
 # Requirements for using Citrix HDX Plus for Windows 365 Enterprise
 
 > [!IMPORTANT]
-> Citrix HDX Plus is currently in tech preview and isn't officially supported by Citrix. To participate in this tech preview, fill out [this form](https://podio.com/webforms/27930591/2190031).
+> Citrix HDX Plus is currently in tech preview and isn't officially supported by Citrix.
 
 To use Citrix HDX Plus for Windows 365, you must meet the following requirements:
 
@@ -55,8 +55,9 @@ To use Citrix HDX Plus for Windows 365, you must meet the following requirements
 - Azure AD domain in the same tenant as Microsoft Endpoint Manager
 - Windows 365 Enterprise licenses in the same tenant as Microsoft Endpoint Manager
 - Azure admin account:
-  - Azure AD Global Admin
-  - Intune Global Admin
+  - Azure AD Global Admin for required authorizations in Citrix Cloud.
+  - Intune Admin for enabling Citrix connector in Microsoft Endpoint Manager.
+  - For more information about the Windows 365 requirements, see [Windows 365 requirements](requirements.md).
 
 ## Supported configurations
 
@@ -64,7 +65,7 @@ Citrix HDX Plus for Windows 365 supports integrating with Windows 365 deployment
 
 ### Supported infrastructures
 
-| Identity | Citrix Cloud | CVAD (on-prem) | Citrix Workspace | Citrix Storefront | Citrix Gateway Service | Citrix Gateway |
+| Identity | Citrix Cloud | CVAD (on-premises) | Citrix Workspace | Citrix Storefront | Citrix Gateway Service | Citrix Gateway |
 | --- | --- | --- | --- | --- | --- | --- |
 | Azure AD joined | Yes | No | Yes | No | Yes | No |
 | Hybrid Azure AD joined | Yes | No | Yes | No | Yes | No |
