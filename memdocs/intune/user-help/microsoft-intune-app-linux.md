@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Install Microsoft Intune app for Linux | Microsoft Docs
+title: Get the Microsoft Intune app for Linux | Microsoft Docs
 description: Describes how to install, update, and remove the Microsoft Intune app for Linux. 
 keywords:
 author: lenewsad
@@ -29,12 +29,14 @@ ms.custom: intune-enduser
 ms.collection: 
 ---  
 
-# Install Microsoft Intune app 
+# Get the Microsoft Intune app for Linux   
 
-The Microsoft Intune app package is available at [https://packages.microsoft.com/](https://packages.microsoft.com/). Run the following commands in a command line to manually install the Intune app and its dependencies on your device.  
+This article describes how to install, update, and remove the Microsoft Intune app for Linux on a  personal device.  
 
-> [!Tip]
-> For more information about how to how to use, install, and configure Linux software packages for Microsoft products, see [Linux Software Repository for Microsoft Products](/windows-server/administration/linux-package-repository-for-microsoft-software).  
+The Microsoft Intune app package is available at [https://packages.microsoft.com/](https://packages.microsoft.com/). For more information about how to how to use, install, and configure Linux software packages for Microsoft products, see [Linux Software Repository for Microsoft Products](/windows-server/administration/linux-package-repository-for-microsoft-software).  
+
+## Intall Intune app  
+Run the following commands in a command line to manually install the Intune app and its dependencies on your device.  
 
 1. Install Curl.  
     `$ sudo apt install curl gpg` 
