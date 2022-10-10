@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -72,7 +72,7 @@ In the following example, you can see this information for the **TestDevice**:
 
 > [!IMPORTANT]
 > 
-> Filter evaluation reports for devices do not show the results of Azure AD Conditional Access evaluation. Use Azure AD sign-in logs for troubleshooting conditional access issues.
+> Filter evaluation reports for devices don't show the results of any Azure AD conditional access evaluations. To troubleshoot conditional access issues, use the  Azure AD sign-in logs. For more information, go to [Sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
 
 ### Workload filter evaluation reports
 
