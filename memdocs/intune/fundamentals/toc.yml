@@ -4,10 +4,19 @@ items:
 - name: Overview
   expanded: true
   items:
-  - name: Microsoft Intune overview
-    href: what-is-intune.md 
-    displayName: ems; emm; azure ad; active directory; ad
-  - name: Device management overview
+  - name: What is Intune?
+    href: what-is-intune.md
+    displayName: mem; ems; emm; azure ad; active directory
+    items:      
+    - name: Manage and secure your identities
+      href: manage-identities.md
+    - name: Manage devices and control features
+      href: manage-devices.md
+    - name: Manage apps and protect their data
+      href: manage-apps.md
+    - name: Intune service release information
+      href: intune-service-servicing-information.md
+  - name: What is device management?
     href: what-is-device-management.md
     displayName: teamviewer 
   - name: What's new
@@ -73,6 +82,8 @@ items:
     href: surface-management-portal.md  
 - name: How-to guides
   items:
+  - name: Get started
+    href: get-started-with-intune.md
   - name: Plan and Deploy
     items:
     - name: Overview

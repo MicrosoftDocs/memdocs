@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/endpoint-manager-getting-started.md",
+            "redirect_url": "/mem/intune/fundamentals/get-started-with-intune",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/developer/app-sdk-android.md",
             "redirect_url": "/mem/intune/developer/app-sdk-android-phase1",
             "redirect_document_id": false
