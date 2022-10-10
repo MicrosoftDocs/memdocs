@@ -215,6 +215,8 @@ items:
       href: connection-errors.md
     - name: Provisioning errors
       href: provisioning-errors.md
+    - name: Windows 365 app
+      href: troubleshoot-windows-365-app.md
 - name: Reference
   items:
     - name: Get audit logs by using PowerShell
