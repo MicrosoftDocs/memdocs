@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2022
+ms.date: 10/10/2022
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -100,7 +100,7 @@ This step focuses on setting up Intune and getting it ready for you to manage yo
 
 1. **[Confirm your devices are supported](supported-devices-browsers.md)**. Confirm your Android, iOS/iPadOS, macOS, and Windows devices are supported. If your organization includes devices that aren't supported, then the policies aren't applied to those devices.
 
-2. **[Customize your domain name](custom-domain-name-configure.md)**. By default, a domain named something like `your-domain.onmicrosoft.com` is automatically created in Azure AD. `onmicrosoft.com` can be customized for your organization. When you customize, it also gives users a familiar domain when connecting to Intune and using organization resources.
+2. **[Customize your domain name](custom-domain-name-configure.md)**. By default, a domain named something like `your-domain.onmicrosoft.com` is automatically created in Azure AD. The `onmicrosoft.com` part of the domain can be customized for your organization. When you customize, it also gives users a familiar domain when connecting to Intune and using organization resources.
 
 3. **[Sign in to Intune](account-sign-up.md)**. When you sign in, you may be prompted to enter information about your organization. Intune can be opened directly from the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) or the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?linkid=2024339).
 
