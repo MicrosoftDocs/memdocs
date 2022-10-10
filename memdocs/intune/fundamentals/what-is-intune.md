@@ -7,7 +7,7 @@ keywords: what is Intune, mobile endpoint management, mobile application managem
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/05/2022
+ms.date: 10/10/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -91,7 +91,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
   - [What is co-management](../../configmgr/comanage/overview.md)
   - [Frequently asked questions about co-management](../../configmgr/comanage/faq.yml)
-  - [How to enable Microsoft Endpoint Manager tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
+  - [How to enable tenant attach](../../configmgr/tenant-attach/device-sync-actions.md)
 
 - **[Windows Autopilot](../../autopilot/windows-autopilot.md)** for modern OS deployment and provisioning
 
