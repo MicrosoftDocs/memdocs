@@ -11,7 +11,7 @@ author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ms.reviewer: mstewart,aaroncz 
 ---
 # How to Modify a Configuration Manager Object by Using WMI
