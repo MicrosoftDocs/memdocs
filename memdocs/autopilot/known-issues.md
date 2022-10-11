@@ -24,6 +24,10 @@ This article describes known issues that can often be resolved by configuration 
 
 ## Known issues
 
+### TPM attestation failure with error code 0x81039001
+
+Some devices may intermittently fail TPM attestation during Windows Autopilot pre-provisioning technician flow or self-deployment mode with the error code 0x81039001 E_AUTOPILOT_CLIENT_TPM_MAX_ATTESTATION_RETRY_EXCEEDED. This failure occurs during the 'Securing your hardware' step for Windows Autopilot devices deployed using self-deploying mode or pre-provisioning mode. Subsequent attempts to provision may resolve the issue. A fix is expected by the end of October 2022.
+
 ### Autopilot deployment report shows "failure" status on a successful deployment
 
 The Autopilot deployment report (preview) will show a failed status for any device that experiences an initial deployment failure. For subsequent deployment attempts, using the **Try again** or **Continue to desktop** options, it won't update the deployment state in the report. If the user resets the device, it will show as a new deployment row in the report with the previous attempt remaining as failed.
