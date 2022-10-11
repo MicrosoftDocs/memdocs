@@ -65,7 +65,7 @@ All new Cloud PCs have the following security components enabled by default:
 
 With both security components enabled, Windows 365 supports enabling the following Windows security features:
 
-- Hypervisor Code Integrity (HVCI)
+- [Hypervisor Code Integrity (HVCI)](/windows-hardware/design/device-experiences/oem-hvci-enablement)
 - [Microsoft Defender Credential Guard](/windows/security/identity-protection/credential-guard/credential-guard-manage)
 
 ### Security features requiring specific Cloud PC SKUs or configuration
