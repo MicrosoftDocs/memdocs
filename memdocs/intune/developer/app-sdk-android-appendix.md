@@ -201,7 +201,7 @@ You can avoid this wait and force a check-in through the Company Portal:
 This will immediately schedule a check-in and will retrieve up-to-date policy targeted to your app and account.
 
 ### Troubleshooting AndroidX Migration
-If you integrated the Intune App SDK *before- leveraging AndroidX, you may encounter an error like this while migrating to AndroidX:
+If you integrated the Intune App SDK *before* leveraging AndroidX, you may encounter an error like this while migrating to AndroidX:
 
 ```log
 incompatible types: android.support.v7.app.ActionBar cannot be converted to androidx.appcompat.app.ActionBar
