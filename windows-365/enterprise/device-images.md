@@ -66,6 +66,7 @@ There are two sets of images available to choose from across the different versi
   - Microsoft Teams (Teams).
   - Microsoft Edge settings like sleeping tabs, startup boost, and first time optimizations based on Azure AD and synchronization.
   - Microsoft Outlook first-time configuration settings (auto log-on based on Azure AD profile, support for other profiles).
+  - Settings listed under **Images with OS optimizations**
 - **Images with OS optimizations**: These are Windows Enterprise images optimized for improved performance on virtualized environments and on lower end hardware configurations. The following settings are pre-applied:
   - Services optimized for virtualization.
   - UWP packages removed.
@@ -103,8 +104,9 @@ When you upload a custom device image, Windows 365:
 2. Runs the following validation checks on the image:
     1. Verifies all the Windows 365 image requirements are met.
     2. Deploys a virtual machine and makes sure that the images can be booted and provisioned as a Cloud PC.
-3. If you have a Hybrid Azure AD Join connection, Windows 365 replicates the image across all Azure regions where you have an Azure network connection.
-4. If you have an Azure AD Join connection, Windows 365 replicates the image to the provisioned region during provisioning.
+3. If you have
+    - a Hybrid Azure AD Join connection, Windows 365 replicates the image across all Azure regions where you have an Azure network connection.
+    - an Azure AD Join connection, Windows 365 replicates the image to the provisioned region during provisioning.
 
 <!-- ########################## -->
 ## Next steps
