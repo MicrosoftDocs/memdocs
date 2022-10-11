@@ -89,6 +89,12 @@ items:
         items:
         - name: Set up tenants for Windows 365 Government
           href: set-up-tenants-windows-365-gcc.md
+      - name: Citrix HDX Plus for Windows 365
+        items:
+        - name: Requirements
+          href: requirements-citrix.md
+        - name: Set up Citrix HDX Plus for Windows 365
+          href: set-up-citrix.md
     - name: Provisioning
       items:
       - name: Create and assign provisioning policy
@@ -215,6 +221,8 @@ items:
       href: connection-errors.md
     - name: Provisioning errors
       href: provisioning-errors.md
+    - name: Citrix HDX Plus
+      href: troubleshoot-citrix-hdx-plus.md
     - name: Windows 365 app
       href: troubleshoot-windows-365-app.md
 - name: Reference
