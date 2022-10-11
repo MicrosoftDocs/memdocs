@@ -41,8 +41,10 @@ To optimize Cisco Webex, you’ll need to:
 > If you run into issues with Cisco Webex for VDI on your Cloud PC, contact [Cisco support](https://help.webex.com/contact).
 
 ## Requirements
+These instructions don't support connections through a web browser.
 
-- **Windows Remote Desktop Client**: These instructions don't support connections through a web browser.
+- **Windows 365 app for Windows**
+- **Windows Remote Desktop Client**
 - **Operating system**: Windows
 
 ## Install the Cisco Webex HVD client on the Cloud PC
