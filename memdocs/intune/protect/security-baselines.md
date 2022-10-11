@@ -92,7 +92,7 @@ The following security baseline instances are available for use with Intune. Use
   - [Preview: October 2019 (Edge version 77 and later)](security-baseline-settings-edge.md?pivots=edge-october-2019)
 
 - **Windows 365 Security Baseline**
-  - [Oct 2021](security-baseline-settings-windows-365.md)
+  - [October 2021](security-baseline-settings-windows-365.md)
 
 After a new version for a profile releases, settings in profiles based on the older versions become read-only. You can continue using those older profiles, including editing their name, description, and assignments, but you won't be able to edit settings for them or create new profiles based on the older versions.
 
