@@ -9,7 +9,7 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: johmar
-  ms.date: 09/19/2022
+  ms.date: 10/12/2022
   ms.localizationpriority: high
   ms.collection: highpri
   ms.custom: intro-hub-or-landing
@@ -19,9 +19,9 @@ highlightedContent:
     - title: Microsoft Intune product family overview
       itemType: overview
       url: endpoint-manager-overview.md
-    - title: Microsoft Intune (product page)
+    - title: Microsoft Intune product family
       itemType: overview
-      url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
+      url: https://www.microsoft.com/security/business/endpoint-management/microsoft-intune
     - title: Cloud attach your Configuration Manager environment
       itemType: overview
       url: https://learn.microsoft.com/mem/configmgr/cloud-attach/overview
@@ -53,29 +53,10 @@ productDirectory:
       summary: Configuration Manager is an on-premises and cloud-connected device management solution to manage devices, deploy apps and software updates, etc.
       url: ./configmgr/index.yml
     # Card
-    - title: Windows Autopilot docs
-      imageSrc: ./media/autopilot.svg
-      summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use, and to reset, repurpose, and recover devices. 
-      url: ./autopilot/index.yml
-    # Card
-    - title: Windows Autopatch docs
-      imageSrc: ./media/autopatch.svg
-      summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
-      url: /windows/deployment/windows-autopatch/
-    # Card
     - title: Endpoint Analytics docs
       imageSrc: ./media/endpoint-analytics.svg
       summary: Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket.
       url: ./analytics/index.yml    
-    
-    # Card
-    # Card
-    #- title: Azure Active Directory
-    #  imageSrc: ./media/active-directory.svg
-    #  summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
-    #  url: /azure/active-directory/index.yml
-    # Card
-
 
 # additionalContent section (optional)
 # Card with summary style
@@ -100,6 +81,14 @@ additionalContent:
 
     - title: Related services
       items:
+        # Card
+        - title: Windows Autopilot docs
+          summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use, and to reset, repurpose, and recover devices. 
+          url: ./autopilot/index.yml
+        # Card
+        - title: Windows Autopatch docs
+          summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
+          url: /windows/deployment/windows-autopatch/
         # Card
         - title: Azure Active Directory
           summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
