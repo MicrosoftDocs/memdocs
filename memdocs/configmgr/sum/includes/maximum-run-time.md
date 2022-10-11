@@ -1,10 +1,12 @@
 ---
-author: mestew
-ms.author: mstewart
+author: BalaDelli
+ms.author: baladell
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 04/08/2022
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 <!--This file is shared by /sum/get-started/install-a-software-update-point.md and /sum/plan-design/plan-for-software-updates.md. The headers are context driven by the article and both have"bkmk_maxruntime" as an anchor. -->

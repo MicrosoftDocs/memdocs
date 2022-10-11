@@ -1,18 +1,14 @@
 ---
 title: Windows Autopilot known issues
 description: Inform yourself about known issues that may occur during Windows Autopilot deployment.
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
-ms.mktglfcycl: deploy
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
 manager: dougeby
-ms.date: 05/18/2022
+ms.date: 09/21/2022
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
 ---
@@ -27,6 +23,18 @@ _Applies to_
 This article describes known issues that can often be resolved by configuration changes, or might be resolved automatically in a future release. For information about issues that can be resolved by applying a cumulative update, see [Windows Autopilot - resolved issues](resolved-issues.md).
 
 ## Known issues
+
+### TPM attestation failure with error code 0x81039001
+
+Some devices may intermittently fail TPM attestation during Windows Autopilot pre-provisioning technician flow or self-deployment mode with the error code 0x81039001 E_AUTOPILOT_CLIENT_TPM_MAX_ATTESTATION_RETRY_EXCEEDED. This failure occurs during the 'Securing your hardware' step for Windows Autopilot devices deployed using self-deploying mode or pre-provisioning mode. Subsequent attempts to provision may resolve the issue. A fix is expected by the end of October 2022.
+
+### Autopilot deployment report shows "failure" status on a successful deployment
+
+The Autopilot deployment report (preview) will show a failed status for any device that experiences an initial deployment failure. For subsequent deployment attempts, using the **Try again** or **Continue to desktop** options, it won't update the deployment state in the report. If the user resets the device, it will show as a new deployment row in the report with the previous attempt remaining as failed.
+
+### Autopilot deployment report doesn't show deployed device
+
+Autopilot deployments that take longer than one hour may display an incomplete deployment status in the deployment report. If the device successfully enrolls but doesn't complete provisioning after more than one hour, the device status may not be updated in the report.
 
 ### Autopilot profile not being applied when assigned 
 
@@ -62,9 +70,11 @@ When you attempt an Autopilot reset, you see the following message: _Autopilot r
 
 When a device is registered in Autopilot and no profile is assigned, it will take the default Autopilot profile. This behavior is by design. It makes sure that all devices that you register with Autopilot go through the Autopilot experience. If you don't want the device to go through an Autopilot deployment, remove the Autopilot registration.
 
-### White screen during HAADJ deployment
+### White screen during hybrid Azure AD joined deployment
 
-There's a UI bug on Autopilot HAADJ deployments where the Enrollment Status page is displayed as a white screen. This issue is limited to the UI and shouldn't affect the deployment process.
+There's a UI bug on Autopilot hybrid Azure AD joined deployments where the Enrollment Status page is displayed as a white screen. This issue is limited to the UI and shouldn't affect the deployment process.
+
+This issue was resolved in September 2022.
 
 ### Virtual machine failing at "Preparing your device for mobile management"
 

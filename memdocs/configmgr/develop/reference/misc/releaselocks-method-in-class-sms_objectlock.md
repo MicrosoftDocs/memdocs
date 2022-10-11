@@ -1,19 +1,18 @@
 ---
-title: "ReleaseLocks Method"
-titleSuffix: "Configuration Manager"
-description: "A class method that releases locks to multiple global objects."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: ReleaseLocks Method
+titleSuffix: Configuration Manager
+description: A class method that releases locks to multiple global objects.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: ce7d1920-8fd3-45c3-93a3-38bc79662791
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ReleaseLocks Method in Class SMS_ObjectLock
 The `ReleaseLocks` Windows Management Instrumentation (WMI) class method, in Configuration Manager, releases locks to multiple global objects.  

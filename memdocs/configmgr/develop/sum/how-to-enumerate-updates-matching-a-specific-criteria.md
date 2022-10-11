@@ -1,19 +1,18 @@
 ---
-title: "Enumerate Updates Matching a Specific Criteria"
-titleSuffix: "Configuration Manager"
-description: "Enumerate software updates that match specific criteria in Configuration Manager by building a query and then using the ExecuteQuery method of the QueryProcessor class to run the query."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Enumerate Updates Matching a Specific Criteria
+titleSuffix: Configuration Manager
+description: Enumerate software updates that match specific criteria in Configuration Manager by building a query and then using the ExecuteQuery method of the QueryProcessor class to run the query.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 5a37eb14-bc75-4ecd-a48f-9dde3b901a02
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Enumerate Updates Matching a Specific Criteria
 This topic explains how to enumerate software updates that match specific criteria in Configuration Manager by building a query and then using the `ExecuteQuery` method of the `QueryProcessor` class to run the query.  

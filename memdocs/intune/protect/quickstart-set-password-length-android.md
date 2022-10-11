@@ -28,6 +28,7 @@ search.appverid: MET150
 ms.collection:
 - M365-identity-device-management
 - Android
+- tier3
 ms.custom: intune-azure
 ---
 

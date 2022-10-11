@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 > [!IMPORTANT]
 > Custom configuration profiles shouldn't be used for sensitive information, such as WiFi connections or authenticating apps, sites, and more. Instead, use the built-in profiles for sensitive information, as they're designed and configured to handle sensitive information.
-> 
+>
 > For example, use the built-in [Wi-Fi profile](wi-fi-settings-configure.md) to deploy a Wi-Fi connection. Use the built-in [certificates profile](../protect/certificates-configure.md) for authentication.
 
 Using Microsoft Intune, you can add or create custom settings for your iOS/iPadOS devices using "custom profiles". Custom profiles are a feature in Intune. They're designed to add device settings and features that aren't built in to Intune.

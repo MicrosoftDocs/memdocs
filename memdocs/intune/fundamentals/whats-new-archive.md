@@ -111,9 +111,9 @@ Applies to:
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Device management
 
-#### Personally-owned work profile terminology<!--8361769   -->
+#### Personally owned work profile terminology<!--8361769   -->
 
-To avoid confusion, the term for the *work profile* Android Enterprise management scenario will be changed to "personally-owned devices with a work profile" or *personally-owned work profile* throughout the Intune documentation and user interface. This is to differentiate it from the "corporate-owned work profile" (COPE) management scenario.
+To avoid confusion, the term for the *work profile* Android Enterprise management scenario will be changed to "personally owned devices with a work profile" or *personally owned work profile* throughout the Intune documentation and user interface. This is to differentiate it from the "corporate-owned work profile" (COPE) management scenario.
 
 #### Windows Autopilot for HoloLens 2 (preview)<!--6305220   -->
 
@@ -712,7 +712,7 @@ New Android devices are making use of a more diverse set of biometrics beyond fi
 
 #### New details in the Endpoint security configuration for a device<!-- 7745029     -->
 
-You can now view additional details for devices as part of a devices *Endpoint security configuration*. When you drill-in to view status details about policies you've deployed to devices, you’ll now find the following setting:
+You can now view additional details for devices as part of a devices *Endpoint security configuration*. When you drill in to view status details about policies you've deployed to devices, you’ll now find the following setting:
 
 - **UPN** (User Principal Name): The UPN identifies which endpoint security profile is assigned to a given user on the device. This information is useful to help differentiate between multiple users on a device and multiple entries of a profile or baseline that’s assigned to the device.
 
@@ -748,7 +748,7 @@ To understand what's changed between versions, see [Compare baseline versions](.
 
 #### Use Endpoint security configuration details to identify the source of policy conflicts for devices<!-- 7567503    -->
 
-To aid in conflict resolution, now you can drill-in through a security baseline profile to view the *Endpoint security configuration* for a selected device. From there, you can select settings that show a *Conflict* or *Error* and continue to drill-in further to view a list of details that includes the profiles and policies that are part of the conflict.
+To aid in conflict resolution, now you can drill in through a security baseline profile to view the *Endpoint security configuration* for a selected device. From there, you can select settings that show a *Conflict* or *Error* and continue to drill in further to view a list of details that includes the profiles and policies that are part of the conflict.
 
 If you then select a policy that is a source of a conflict, Intune opens that policies Overview pane where you can review or modify the policies configuration.
 
@@ -861,7 +861,7 @@ We're adding four new reports for Microsoft Defender Antivirus on Windows 10 in 
 For more information, see [Intune reports](../fundamentals/reports.md) and [Manage endpoint security in Microsoft Intune](../protect/endpoint-security.md).
 
 #### New Windows 10 feature update report<!-- 6473128  -->
-The **Windows 10 feature update** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Windows updates** to view the summary for this report. To see reports for specific policies, from the **Windows updates** workload, select the **Reports** tab and open the **Windows Feature Update Report**. For more information, see [Windows 10 feature updates](../fundamentals/reports.md#windows-10-and-later-feature-updates-organizational).
+The **Windows 10 feature update** report provides an overall view of compliance for devices that are targeted with a **Windows 10 feature updates** policy. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Reports** > **Windows updates** to view the summary for this report. To see reports for specific policies, from the **Windows updates** workload, select the **Reports** tab and open the **Windows Feature Update Report**. For more information, see [Windows 10 feature updates](../fundamentals/reports.md#windows-10-feature-updates-organizational).
 
 
 <!-- ########################## -->
@@ -1153,7 +1153,7 @@ With the new settings, you can add UNC file shares as download source locations 
 
 We've made some changes to improve the usability of the [security baseline node](../protect/security-baselines.md) in the Microsoft Endpoint Manager admin center. Now when you drill in to **Endpoint security** > **Security baselines** and then select a security baseline type like the MDM Security Baseline, you're presented with the **Profiles** pane. On the Profiles pane, you view the profiles you've created for that Baseline type.  Previously the console presented an Overview pane which included an aggregate data roll up that didn't always match the details found in the reports for individual profiles.
 
-Unchanged, from the Profiles pane you can select a profile to drill-in to view that profiles properties as well as various reports that are available under *Monitor*.  Similarly, at the same level as Profiles you can still select **Versions** to view the various versions of that profile type that you've deployed. When you drill-in to a version, you also gain access to reports, similar to the profile reports.
+Unchanged, from the Profiles pane you can select a profile to drill in to view that profiles properties as well as various reports that are available under *Monitor*.  Similarly, at the same level as Profiles you can still select **Versions** to view the various versions of that profile type that you've deployed. When you drill in to a version, you also gain access to reports, similar to the profile reports.
 
 #### Derived credentials support for Windows<!-- 4886090   -->
 
@@ -1184,7 +1184,7 @@ Later, if recovery is needed, a user can always use any device to view their per
 
 #### Improved view of security baseline details for devices<!-- 5536846  -->
 
-Now you can drill-in to the details for a device to view the settings details for security baselines that apply to the device. The settings appear in a simple, flat list, which includes the setting category, setting name, and status. For more information, see [View Endpoint security configurations per device](../protect/security-baselines-monitor.md).
+Now you can drill in to the details for a device to view the settings details for security baselines that apply to the device. The settings appear in a simple, flat list, which includes the setting category, setting name, and status. For more information, see [View Endpoint security configurations per device](../protect/security-baselines-monitor.md).
 
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
@@ -1411,7 +1411,7 @@ You can change a device's primary user for co-managed Windows devices. For more 
 
 #### Setting the Intune primary user also sets the Azure AD owner property<!--7319227 -->
 
-This new feature automatically sets the owner property on newly-enrolled Hybrid Azure AD joined devices at the same time that the Intune primary user is set. For more information on the primary user, see [Find the primary user of an Intune device](../remote-actions/find-primary-user.md).
+This new feature automatically sets the owner property on newly enrolled Hybrid Azure AD joined devices at the same time that the Intune primary user is set. For more information on the primary user, see [Find the primary user of an Intune device](../remote-actions/find-primary-user.md).
 
 This is a change to the enrollment process and only applies to newly enrolled devices. For existing Hybrid Azure AD Joined devices, you must manually update the Azure AD Owner property. To do this, you can use the [Change primary user feature](../remote-actions/find-primary-user.md#change-a-devices-primary-user) or [a script](https://github.com/microsoftgraph/powershell-intune-samples/tree/master/ManagedDevices).
 
@@ -2946,7 +2946,7 @@ For more information about Android device administrator in Intune, see [Android 
 You can now see a paged list of Apple Automated Device Enrollment Program (DEP) devices that are associated with a profile. You can search the list from any page in the list. To see the list, go to **Intune** > **Device enrollment** > **Apple enrollment** > **Enrollment program tokens** > choose a token > **Profiles** > choose a profile > **Assigned devices** (under **Monitor**).
 
 #### iOS User Enrollment in Preview<!-- 4817900 -->
-Apple's iOS 13.1 release includes User Enrollment, a new form of lightweight management for iOS devices. It can be used in place of Device Enrollment or Automated Device Enrollment (formerly Device Enrollment Program) for personally-owned devices. Intune's Preview is supporting this feature set by letting you:
+Apple's iOS 13.1 release includes User Enrollment, a new form of lightweight management for iOS devices. It can be used in place of Device Enrollment or Automated Device Enrollment (formerly Device Enrollment Program) for personally owned devices. Intune's Preview is supporting this feature set by letting you:
 
 - Target User Enrollment to user groups.
 - Give end users the ability to select between lighter User Enrollment or stronger Device Enrollment when they enroll their devices.
@@ -3136,7 +3136,7 @@ These settings include:
   - Safari
     - Autofill
 - Cloud and Storage
-  - Backup to iCloud
+  - Back up to iCloud
   - Block iCloud Document sync
   - Block iCloud Keychain sync
 
@@ -3621,7 +3621,7 @@ The [report for BitLocker and device encryption](../protect/encryption-monitor.m
 The home page of the Company Portal app for iOS devices has been redesigned. With this change, the home page will better follow iOS UI patterns, and also provide improved discoverability for apps and ebooks.
 
 #### Changes to Company Portal enrollment for iOS 12 device users<!--3448635 -->
-The Company Portal for iOS enrollment screens and steps have been updated to align with the MDM enrollment changes released in Apple iOS 12.2. The updated workflow prompts users to:  
+The Company Portal for iOS enrollment screens and steps has been updated to align with the MDM enrollment changes released in Apple iOS 12.2. The updated workflow prompts users to:  
 
 * Allow Safari to open the Company Portal website and download the management profile before returning to the Company Portal app.  
 * Open the Settings app to install the management profile on their device.
@@ -5000,7 +5000,7 @@ New rules are available that let you automatically remove devices that haven't c
 
 #### Corporate-owned, single use support for Android devices<!-- 1630973 -->
 
-Intune now supports highly-managed, locked-down, kiosk-style Android devices. This allows admins to further lock down the usage of a device to a single app or small set of apps, and prevents users from enabling other apps or performing other actions on the device. To set up Android kiosk, go to Intune > **Device enrollment** > **Android enrollment** > **Kiosk and task device enrollments**. For more information, see [Set up enrollment of Android enterprise kiosk devices](../enrollment/android-kiosk-enroll.md).
+Intune now supports highly managed, locked-down, kiosk-style Android devices. This allows admins to further lock down the usage of a device to a single app or small set of apps, and prevents users from enabling other apps or performing other actions on the device. To set up Android kiosk, go to Intune > **Device enrollment** > **Android enrollment** > **Kiosk and task device enrollments**. For more information, see [Set up enrollment of Android enterprise kiosk devices](../enrollment/android-kiosk-enroll.md).
 
 #### Per-row review of duplicate corporate device identifiers uploaded<!-- 2203794-->
 When uploading corporate IDs, Intune now provides a list of any duplicates and gives you the option to replace or keep the existing information. The report will appear if there are duplicates after you choose **Device enrollment** > **Corporate Device Identifiers** > **Add Identifiers**. 
@@ -6400,7 +6400,7 @@ In this release, we've made the following improvements to the inventory informat
 - For Android devices, you can now add a column to device inventory that shows the latest patch level for each device. Add the **Security patch level** column to your device list to see this.
 - When you filter the device view, you can now filter devices by their enrollment date. For example, you could display only devices that were enrolled after a date you specify.
 - We've made improvements to the filter used by the **Last Check-in Date** item.
-- In the device list, you can now display the phone number of corporate owned devices.
+- In the device list, you can now display the phone number of corporate-owned devices.
 Additionally, you can use the filter pane to search for devices by phone number.
 
 For more details about device inventory, see [How to view Intune device inventory](../remote-actions/device-inventory.md).
@@ -6738,7 +6738,7 @@ You can now assign line of business (LOB) apps for [iOS](../apps/lob-apps-ios.md
 
 - **Connections to AirPlay devices** - Controls which [AirPlay devices](../configuration/ios-device-features-settings.md) (like Apple TV) that end users of iOS device can connect to.
 
-- **Custom lock screen message** - Configures a custom message that users will see on the lock screen of their iOS device, that replaces the default lock screen message. For more information, see [Activate lost mode on iOS devices](../remote-actions/device-lost-mode.md)
+- **Custom lock screen message** - Configures a custom message that users will see on the lock screen of their iOS device that replaces the default lock screen message. For more information, see [Activate lost mode on iOS devices](../remote-actions/device-lost-mode.md)
 
 #### Restrict push notifications for iOS apps<!-- 723767 -->
 In an Intune device restriction profile, you can now configure the following [notification settings](../configuration/ios-device-features-settings.md#app-notifications) for iOS devices:
@@ -6775,7 +6775,7 @@ Devices that run Samsung Knox Standard are now supported for [multi-user managem
 We've added support for additional [Windows device restriction settings](../configuration/device-restrictions-windows-10.md) like additional Microsoft Edge browser support, device lock screen customization, start menu customizations, Windows Spotlight search set wallpaper, and proxy setting.
 
 #### Multi-user support for Windows 10 Creators Update<!-- 822547 -->
-We've added support for [multi-user management](../enrollment/windows-enroll.md) for devices that run the Windows 10 Creators Update and are Azure Active Directory domain-joined. This means that when different standard users log into the device with their Azure AD credentials, they will receive any apps and policies that were assigned to their user name. Users cannot currently use the Company Portal for self-service scenarios like installing apps.
+We've added support for [multi-user management](../enrollment/windows-enroll.md) for devices that run the Windows 10 Creators Update and are Azure Active Directory domain-joined. This means that when different standard users log in to the device with their Azure AD credentials, they will receive any apps and policies that were assigned to their user name. Users cannot currently use the Company Portal for self-service scenarios like installing apps.
 
 #### Fresh Start for Windows 10 PCs<!-- 1004830 -->
 A new [Fresh Start device action](../remote-actions/device-fresh-start.md) for Windows 10 PCs is now available.  When you issue this action, any apps that were installed on the PC are removed, and the PC is automatically updated to the latest version of Windows. This can be used to help remove pre-installed OEM apps that are often delivered with a new PC. You can configure if user data is retained when this device action is issued.
@@ -6858,7 +6858,7 @@ Intune is adding new enrollment restrictions that control which mobile device pl
 - Restricting mobile device enrollment does not restrict PC client enrollment.  
 - For iOS and Android only, there is one additional option to block the enrollment of personally owned devices.
 
-Intune marks all new devices as personal unless the IT admin takes action to mark them as corporate owned, as explained in [this article](../enrollment/device-enrollment.md).
+Intune marks all new devices as personal unless the IT admin takes action to mark them as corporate-owned, as explained in [this article](../enrollment/device-enrollment.md).
 
 #### View all actions on managed devices<!--677150-->
 A new __Device Actions__ report shows who has performed remote actions like factory reset on devices, and additionally shows the status of that action. See [What is device management?](../remote-actions/device-management.md).

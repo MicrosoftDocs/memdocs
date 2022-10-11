@@ -28,6 +28,7 @@ ms.custom: has-adal-ref
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
+- tier3
 ---
 
 # Microsoft Intune App SDK for iOS developer guide
