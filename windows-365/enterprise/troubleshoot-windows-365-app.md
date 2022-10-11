@@ -57,4 +57,4 @@ You might be signed in as the wrong user. You must be signed in with an account 
 <!-- ########################## -->
 ## Next steps
 
-[Learn more about Windows 365 App](/windows/windows-365-b8881f54-366d-4867-85c2-e19afce31193.md).
+[Learn more about Windows 365 App](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
