@@ -164,7 +164,7 @@ The app registration process in Azure AD is complete.
    *Exclude* overrides *Include*, which means any device that is in both groups is excluded from Jamf and directed to enroll with Intune.
 
    >[!NOTE]
-   > This method of including and excluding user groups affects the enrollment experience of the user. Any user with a Mac thats already enrolled in either Jamf or Intune who is then targeted to enroll with the other MDM must unenroll their device and then re-enroll it with the new MDM before management of the device works properly.
+   > This method of including and excluding user groups affects the enrollment experience of the user. Any user with a macOS device thats already enrolled in either Jamf or Intune who is then targeted to enroll with the other MDM must unenroll their device and then re-enroll it with the new MDM before management of the device works properly.
 
 3. Select **Evaluate** to determine how many devices will be enrolled with Jamf, based on your group configurations.
 
@@ -186,7 +186,7 @@ Should you need to remove integration of Jamf Pro with Intune, use one of the fo
 
 2. Select the option **Terminate**. Intune displays a message about the action. Review the message and when ready, select **OK**. The option to *Terminate* the integration only appears when the Jamf connection exists.
 
-After you terminate the integration, refresh the view of the admin center to update the view. Your organization's Mac devices are removed from Intune in 90 days.
+After you terminate the integration, refresh the view of the admin center to update the view. Your organization's macOS devices are removed from Intune in 90 days.
 
 ### Deprovision Jamf Pro from within the Jamf Pro console
 
@@ -202,7 +202,7 @@ Use the following steps to remove the connection from within the Jamf Pro consol
 
 5. Select **Tenant administration** > **Connectors and tokens** > **Partner device management** to verify that the status is now **Terminated**.
 
-After you terminate the integration, your organization's Mac devices will be removed at the date shown in your console, which is after three months.
+After you terminate the integration, your organization's macOS devices will be removed at the date shown in your console, which is after three months.
 
 ## Next steps
 
