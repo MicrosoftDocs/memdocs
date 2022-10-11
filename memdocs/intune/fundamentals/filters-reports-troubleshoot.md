@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 07/13/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -70,6 +70,10 @@ In the following example, you can see this information for the **TestDevice**:
 
 :::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="See the date, time, evaluation results, and other device filter assignment properties in Microsoft Endpoint Manager and Microsoft Intune.":::
 
+> [!IMPORTANT]
+> 
+> Filter evaluation reports for devices don't show the results of any Azure AD conditional access evaluations. To troubleshoot conditional access issues, use the  Azure AD sign-in logs. For more information, go to [Sign-in logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-sign-ins).
+
 ### Workload filter evaluation reports
 
 These reports show filter information for each device that's evaluated in an app or policy assignment. For each device, you can see the device's overall applicability for a workload, and get more detailed information about the filter evaluation.
@@ -97,6 +101,7 @@ In the following example, you can see this information for the **Microsoft Word*
 > - When assigning a policy, you can add devices to the "Excluded groups". These excluded devices aren't shown in the workload device status reports.
 > - In the **Apps** and **Settings Catalog** device status reports, there's a column that shows any filter evaluation. Currently, the filter evaluation information isn't available for all Intune workloads.
 
+
 ## Include vs. Exclude
 
 When you create a filter, you choose to include or exclude devices based on some properties, such as `device.model -equals “Surface pro”`, or `device.model -notEquals “Surface pro”`. It can be difficult to understand the evaluation results, especially when including or excluding devices.
@@ -113,7 +118,11 @@ Use the following table to help understand when you include or exclude devices:
 ### What you need to know
 
 - A **Not evaluated** filter result may show when a policy has a conflicting assignment on the device. For more information, see [Filters and assignment conflict resolution](#filters-and-assignment-conflict-resolution) (in this article).
-- Filters are evaluated at enrollment and device check-in. The evaluation can also run at other times, such as a compliance check.
+- Filters are evaluated at enrollment and device check-in. The evaluation can also run at other times, such as a compliance check. You may experience race conditions in some scenarios, for example consider this sequence of events (with T representing different points in time):
+    - T1 - You assign an App to a group of users using a filter based on the "Category" property.
+    - T2 - A targeted user enrolls a new device. The device enrolls and checks-in, evaluating the associated category filter. Since there was no category set on the device,  filter evaluation is based on a null category string. In the case where a filter was working in "Exclude" mode, the app could be installed having not matched the criteria for exclusion.
+    - T3 - The user is then prompted to choose a device category in the Company Portal app but enrollment and check-in has already completed. 
+    - T4 - On the next device check-in, the category property has been updated in the system and now returns a different filter evaluation result, however the app was already installed and will not be automatically removed.
 - The latest filter evaluation results are stored for 30 days. If the logs are expired, you may see a **We were not able to retrieve any filter evaluation results** message.
 
 ## Filters and assignment conflict resolution

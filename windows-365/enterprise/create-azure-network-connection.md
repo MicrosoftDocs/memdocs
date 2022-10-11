@@ -54,14 +54,19 @@ To create an ANC, you must:
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Windows 365** (under **Provisioning**) > **Azure network connection** > **Create**.
 2. Depending on the type of ANC you want to create, choose **Azure AD Join** or **Hybrid Azure AD Join**.
-![Screenshot of create connection dropdown](./media/create-azure-network-connection/create-connection-dropdown.png)
+    ![Screenshot of create connection dropdown](./media/create-azure-network-connection/create-connection-dropdown.png)
 3. On the **Network details** page, enter a **Name** for the new connection. The connection name must be unique within the customer tenant.
-![Screenshot of Name field](./media/create-azure-network-connection/connection-name.png)
+    ![Screenshot of Name field](./media/create-azure-network-connection/connection-name.png)
 4. Select a **Subscription** and **Resource group** for the new connection. Create a new resource group to contain your Cloud PC resources. Optionally, you can instead select an existing resource group in the list (which grant Windows 365 permissions to the existing resource group). If you don’t have a [healthy ANC](health-checks.md), you won't be able to proceed.
 5. Select a **Virtual network** and **Subnet**.
 6. Select **Next**.
 7. For hybrid Azure AD join ANCs, on the **AD domain** page, provide the following information:
+
     - **AD domain name**: The DNS name of the Active Directory domain that you want to use for connecting and provisioning Cloud PCs. For example, corp.contoso.com.
+
+      > [!NOTE]
+      > If your on-premises Active Directory environment has more than one domain or parent-child domains, be sure to enter the specific domain in which the Cloud PCs need to be domain joined.
+ 
     - **Organizational unit**: (Optional.) An organizational unit (OU) is a container within an Active Directory domain, which can hold users, groups, and computers. Make sure that this OU is enabled to sync with Azure AD Connect. Provisioning will fail if this OU isn't syncing.
     - **AD domain username**: The username, in user principal name (UPN) format, that you want to use for connecting the Cloud PCs to your Active Directory domain. For example, svcDomainJoin@corp.contoso.com. This service account must have permission to join computers to the domain and, if set, the target OU.
     - **AD domain password**: The password for the user specified above.
