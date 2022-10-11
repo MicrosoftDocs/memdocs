@@ -32,6 +32,7 @@ ms.collection: M365-identity-device-management
 
 Users can access their Cloud PCs in two different ways:
 
+- [Windows 365 app](https://support.microsoft.com/windows/windows-365-b8881f54-366d-4867-85c2-e19afce31193)
 - [windows365.microsoft.com](https://Windows365.microsoft.com)
 - Microsoft Remote Desktop
 
