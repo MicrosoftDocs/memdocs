@@ -42,7 +42,9 @@ The Windows 365 app doesn't currently support:
 
 ## The Windows 365 app doesn’t start the Cloud PC session
 
-When the Remote Desktop Client is installed, you'll see a file type association message after trying to connect to your Cloud PC. Make sure to select Azure Virtual Desktop Host App to launch the Cloud PC session.
+When the Remote Desktop Client is installed, you'll see a file type association message after trying to connect to your Cloud PC. Make sure to select **Azure Virtual Desktop (HostApp)** to launch the Cloud PC session.
+
+![Screencap of opening .avd files](./media/troubleshoot-windows-365-app/azure-virtual-desktop.png)
 
 ## Change Cloud PC session from full screen to window mode  
 
@@ -55,4 +57,4 @@ You might be signed in as the wrong user. You must be signed in with an account 
 <!-- ########################## -->
 ## Next steps
 
-[Learn more about Windows 365 App](/windows/windows-365-b8881f54-366d-4867-85c2-e19afce31193.md).
+[Learn more about Windows 365 App](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
