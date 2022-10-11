@@ -28,13 +28,13 @@ ms.custom: intune-azure;
 ms.collection: M365-identity-device-management
 ---
 
-# Cloud PC connection quality report
+# Cloud PC connection quality report (preview)
 
 The **Cloud PC connection quality** report helps you evaluate your users' connection experiences on their Cloud PCs.
 
 ## Use the Cloud PC connection quality report
 
-To get to the **Cloud PC connection quality** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance** > **View report** (under **Cloud PCs with connection quality issues**).
+To get to the **Cloud PC connection quality** report, sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Cloud PC performance (preview)** > **View report** (under **Cloud PCs with connection quality issues**).
 
 ![Screenshot of getting to the Cloud PC connection quality report](./media/report-cloud-pc-connection-quality/view-report-connection-quality.png)
 
@@ -49,7 +49,7 @@ The histogram shows aggregated round-trip times of all the Cloud PCs in your ten
 - **High**: More than 200 milliseconds.
 
 The device list shows the individual Cloud PCs with the following columns:
-    
+
 - **Device name**
 - **Round-trip time (P50)** (RTT): The number of milliseconds it took to establish the user connection to the Cloud PC. Lower values indicate better round-trip connectivity.
 - **Available bandwidth (P50)**: Internet bandwidth during the user's attempt to connect to their Cloud PC.
@@ -58,6 +58,14 @@ The device list shows the individual Cloud PCs with the following columns:
 Each metric is aggregated to a P50 median level over the last 24 hours. This is to ensure spikes and troughs are smoothed in order to provide a good understanding of the overall end-user connectivity experience.
 
 You can use **Add filter** to limit the histogram and table data to specific time spans and round-trip time ranges.
+
+## Other reports
+
+You can see similar quality data on a per-Cloud PC basis:
+
+1. Sign in to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **All Devices**.
+2. Select a device and then select **Performance (preview)**.
+3. You'll see **Connection quality (preview)**. Under this chart, select **View report** to see more connection data specific to this Cloud PC.
 
 <!-- ########################## -->
 ## Next steps
