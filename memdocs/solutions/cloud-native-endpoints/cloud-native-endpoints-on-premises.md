@@ -2,14 +2,14 @@
 # required metadata
 
 title: Use on-premises services with cloud-native endpoints
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: For cloud-native endpoints to access on-premises resources, such as file servers, printers, and web servers, use Windows integrated authentication (WIA) and Azure AD Connect.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2022
+ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals

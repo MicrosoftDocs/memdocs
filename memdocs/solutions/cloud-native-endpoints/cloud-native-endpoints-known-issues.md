@@ -2,14 +2,14 @@
 # required metadata
 
 title: Common issues and resolutions with cloud-native endpoints
-titleSuffix: Microsoft Endpoint Manager
+titleSuffix: Microsoft Intune
 description: Learn more about the known and resolutions when using cloud-native endpoints. Use user-based authentication; don't use machine authentication. Existing group policy objects might not apply. Local Administrator Password Solution (LAPS) isn't supported.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2022
+ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -128,7 +128,7 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
 **Resolution**:
 
-- Using [Group Policy Analytics](../../intune/configuration/group-policy-analytics.md) in Endpoint Manager, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
+- Using [Group Policy Analytics](../../intune/configuration/group-policy-analytics.md) in Intune, you can evaluate your existing group policy objects (GPO). The analysis shows the policies that are available, and policies that aren't available.
 - In endpoint management, policies are deployed to users and groups. They aren't applied in LSDOU order. This behavior is a mind shift, so make sure your users and groups are in order.
 
   For more specific information and guidance on policy assignment in Microsoft Intune, go to [Assign user and device profiles in Microsoft Intune](../../intune/configuration/device-profile-assign.md).
