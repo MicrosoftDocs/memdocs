@@ -53,7 +53,7 @@ Upgrading an existing Cloud PC from Windows 10 to Windows 11 using the Settings 
 1. Edit the related provisioning policy to change the gallery image to Windows 11.
 2. Reprovision the Cloud PC.
 
-## In-place Windows updgrade may change computer name
+## In-place Windows upgrade may change computer name
 
 Upgrading an existing Cloud PC between release versions of Windows 10 to Windows 11 may cause the computer name to be changed to a name with a prefix of "pps" while leaving the Intune device name unchanged.
 

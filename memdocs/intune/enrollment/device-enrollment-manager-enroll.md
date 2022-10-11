@@ -43,7 +43,6 @@ This article describes the limits and specifications of enrollment manager and h
 
 A device enrollment manager can use the following methods to enroll devices in Intune:    
 
-- [Windows Autopilot](../../autopilot/enrollment-autopilot.md)
 - [Windows devices bulk enrollment](windows-bulk-enroll.md)
 - DEM-initiated via Company Portal enrollment   
 - DEM-initiated via Azure AD-join  
