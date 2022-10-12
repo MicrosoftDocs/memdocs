@@ -48,7 +48,7 @@ productDirectory:
       summary: Microsoft Intune is a cloud-based service that helps enable your workforce to be productive while keeping your corporate data protected.
       url: ./intune/index.yml
     # Card
-    - title: Microsoft Endpoint Configuration Manager docs
+    - title: Microsoft Configuration Manager docs
       imageSrc: ./media/configmgr.svg
       summary: Configuration Manager is an on-premises and cloud-connected device management solution to manage devices, deploy apps and software updates, etc.
       url: ./configmgr/index.yml
