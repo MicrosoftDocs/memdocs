@@ -4,7 +4,7 @@ items:
   topicHref: /
 
   items:
-  - name: Microsoft Intune product family
+  - name: Endpoint management
     tocHref: /mem/
     topicHref: /mem/
     items:
