@@ -34,7 +34,7 @@ highlightedContent:
     - title: Training on Microsoft Learn
       itemType: get-started
       url: https://docs.microsoft.com/search/?terms=intune&category=Learn
-    - title: How to use the docs for Microsoft Intune technologies
+    - title: How to use the endpoint management docs
       itemType: overview
       url: ./use-docs.md
 
