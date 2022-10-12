@@ -76,9 +76,11 @@ You can now use Citrix HDX Plus with Windows 365 Enterprise Cloud PCs. For more 
 ### Monitor and troubleshoot
 
 #### Cloud PC utilization report<!--40636545 -->
+
 A new report is now available for Cloud PCs. The **Cloud PC utilization** report shows how many hours users have been connected to their Cloud PCs. Information for individual Cloud PCs and aggregated data is also shown. For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
 
-#### Cloud PC wit connection quality issues report<!--40636545 -->
+#### Cloud PC with connection quality issues report<!--40636545 -->
+
 A new report is now available for Cloud PCs. The **Cloud PCs with connection quality issues** report shows information for round-trip time, available bandwidth, and remoting sign-in time. Information for individual Cloud PCs and aggregated data is also shown. For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
 
 <!-- ########################## -->
