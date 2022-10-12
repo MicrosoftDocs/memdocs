@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 09/21/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -66,17 +66,29 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device management
 
+#### Microsoft Endpoint Manager branding change<!-- 15812021 -->
+
+As of October 12, 2022, the name Microsoft Endpoint Manager will no longer be used. Going forward, we’ll refer to cloud-based unified endpoint management as Microsoft Intune and on-premises management as Microsoft Configuration Manager. With the launch of advanced management, Microsoft Intune will also become the name of our growing product family for endpoint management solutions at Microsoft.  For details, see [the official announcement](https://aka.ms/itsintune) on the endpoint management Tech Community blog. Documentation changes are ongoing to remove Microsoft Endpoint Manager.
+
+For related information, see [Endpoint management documentation]( ../../index.yml).
+
+#### Grace period status visible in Windows Company Portal<!-- 14746606 -->
+
+Windows Company Portal now displays a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If users don't update their device by the given date, their device status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) and [Check access from Device details page](../user-help/check-device-access-windows-cpapp.md#check-access-from-device-details-page).
+
 #### Linux device management available in Microsoft Intune<!-- 14616038 -->
+
 Microsoft Intune now supports Linux device management for devices running Ubuntu Desktop 22.04 or 20.04 LTS. Intune admins don't need to do anything to enable Linux enrollment in the Microsoft Endpoint Manager admin center.  Linux users can [enroll supported Linux devices](../user-help/enroll-device-linux.md) on their own and use the Microsoft Edge browser to access corporate resources online.
 
 In the admin center, you can:
-* Enforce Conditional Access policies in Microsoft Edge.  
-* [Create a Linux device compliance policy](../protect/device-compliance-get-started.md#device-compliance-policies) with rules about:  
-    * Allowed distributions
-    * Custom compliance
-    * Device encryption
-    * Password policy
-*  [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-complaint shell scripts for discovery, and JSON files to define the custom settings you want to use.
+
+- Enforce Conditional Access policies in Microsoft Edge.  
+- [Create a Linux device compliance policy](../protect/device-compliance-get-started.md#device-compliance-policies) with rules about:  
+  - Allowed distributions
+  - Custom compliance
+  - Device encryption
+  - Password policy
+- [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-complaint shell scripts for discovery, and JSON files to define the custom settings you want to use.
 
 ## Week of October 03, 2022
 
@@ -86,14 +98,13 @@ In the admin center, you can:
 
 A link has been added to the notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
 
-If the device that the helper is connecting to is is not compliant with your organization's assigned security policies, then the non-compliance warning about that device is displayed along with a link. 
+If the device that the helper is connecting to is not compliant with your organization's assigned security policies, then the non-compliance warning about that device is displayed along with a link.
 
 For more information, go to:
 [Monitor Device compliance](../protect/compliance-policy-monitor.md)
 
 Applies to:
 **Windows 10/11**
-
 
 ## Week of September 26, 2022
 
