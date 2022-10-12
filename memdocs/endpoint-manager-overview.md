@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Microsoft Intune family of products and services
+title: Endpoint Management at Microsoft
 description: Microsoft Intune is a family of on-premises products and cloud services. This family includes Intune, Configuration Manager, co-management, Endpoint Analytics, Windows Autopilot, and the admin center to manage all devices, including on-premises.
 keywords:
 author: MandiOhlinger
@@ -31,19 +31,13 @@ ms.collection:
   - highseo
 ---
 
-# Microsoft Intune is a family of products and services
+# Endpoint Management at Microsoft
 
-Microsoft Intune is a family of products and services. It combines services you may know and may already be using, including Microsoft Intune, Configuration Manager, co-management, Endpoint Analytics, and Windows Autopilot. These services are part of the Microsoft 365 stack to help secure access, protect data, and respond to & manage risk.
-
-Previously, this family of products and services was known as Microsoft Endpoint Manager.
-
-The Microsoft Intune family helps deliver the modern workplace and modern management to keep your data secure, in the cloud and on-premises. Intune includes the services and tools you use to manage and monitor mobile devices, desktop computers, virtual machines, embedded devices, and servers.
-
-This article provides an overview of the Microsoft Intune family of products and services.
+This article provides an overview of endpoint management solutions at Microsoft.
 
 ## Microsoft Intune
 
-Intune is a cloud-native mobile device management (MDM) and mobile application management (MAM) service provider for your devices, apps, and data. It lets you control features and settings on Android, AOSP, iOS/iPadOS, macOS, and Windows client devices. With Intune, users can be productive from anywhere and on any device. It also gives admins the tools to manage users, manage devices, and manage apps securely.
+Microsoft Intune is a cloud-based unified endpoint management solution that simplifies management across multiple operating systems, cloud, on-premises, mobile, desktop, and virtualized endpoints. The tool also supports data protection on company-owned and bring your own devices through non-intrusive mobile application management. It empowers organizations to provide data protection and endpoint compliance that supports a Zero Trust security model. Intune brings together device visibility, endpoint security, and data-driven insights to increase IT efficiency and improve user experiences in hybrid work environments.
 
 It integrates with other services, including Azure Active Directory (AD), on-premises Configuration Manager, mobile threat defense (MTD) apps & services, Win32 & custom LOB apps, and more.
 
@@ -58,7 +52,7 @@ For more information, go to:
 
 Configuration Manager is an on-premises management solution that can manage desktops, Windows servers, and laptops that are on your network or are internet-based. You can use Configuration Manager to manage data centers, apps, software updates, and operating systems.
 
-If you're ready to move some tasks to the cloud, then consider co-management. Co-management combines your existing on-premises Configuration Manager investment with some of the cloud-based features in Intune, including using the web-based Endpoint Manager admin center.
+To benefit from all that's happening in Microsoft Intune, connect to the cloud with co-management. Co-management combines your existing on-premises Configuration Manager investment with some of the cloud-based features in Intune, including using the web-based Endpoint Manager admin center.
 
 Co-management is a great way to get started with Intune and to start moving some workloads to the cloud.
 
@@ -68,9 +62,9 @@ For more information, go to:
 - [What is co-management?](./configmgr/comanage/overview.md)
 - [Tenant attach: Prerequisites](./configmgr/tenant-attach/prerequisites.md)
 
-## Endpoint Analytics
+## Endpoint analytics
 
-Endpoint Analytics is a cloud-native service that provides metrics and recommendations on the health and performance of your Windows client devices.
+Endpoint analytics is a cloud-native service that provides metrics and recommendations on the health and performance of your Windows client devices. If you use Configuration Manager, you can benefit from Endpoint Analytics insights by connecting to the cloud.
 
 You can get data on:
 
@@ -81,13 +75,14 @@ You can get data on:
 
 This information and more is shown in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-You can use Endpoint Analytics on devices that are managed by Intune or Configuration Manager.
+You can use Endpoint Analytics on devices that are managed by Intune or Configuration Manager connected to the cloud.
 
 For more information, go to:
 
 - [What is Endpoint analytics?](./analytics/overview.md)
 - [Endpoint analytics scores, baselines, and insights](./analytics/scores.md)
 - [Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [Quickstart - Enroll Configuration Manager devices - Microsoft Endpoint Manager](./analytics/enroll-configmgr.md)
 
 ## Windows Autopilot
 
@@ -104,7 +99,7 @@ For more information, go to:
 
 ## Azure Active Directory (AD)
 
-Azure AD is a cloud-native service that's used by Intune to manage the identities of users, devices, and groups. The Intune policies you create are assigned to these users, devices, and groups. When devices are enrolled in Intune, your users sign in to their devices with their Azure AD accounts (`user@contoso.com`).
+Azure Active Directory (Azure AD) is a cloud-native service that's used by Intune to manage the identities of users, devices, and groups. The Intune policies you create are assigned to these users, devices, and groups. When devices are enrolled in Intune, your users sign in to their devices with their Azure AD accounts (`user@contoso.com`).
 
 **Azure AD Premium**, which may be an extra cost, has [more features](https://azure.microsoft.com/pricing/details/active-directory/) to help protect devices, apps, and data, including dynamic groups, automatic enrollment in Intune, and conditional access.
 
