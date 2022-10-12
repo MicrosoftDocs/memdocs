@@ -62,6 +62,22 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of October 10, 2022
+
+### Device management
+
+#### Linux device management available in Microsoft Intune<!-- 14616038 -->
+Microsoft Intune now supports Linux device management for devices running Ubuntu Desktop 22.04 or 20.04 LTS. Intune admins don't need to do anything to enable Linux enrollment in the Microsoft Endpoint Manager admin center.  Linux users can [enroll supported Linux devices](../user-help/enroll-device-linux.md) on their own and use the Microsoft Edge browser to access corporate resources online.
+
+In the admin center, you can:
+* Enforce Conditional Access policies in Microsoft Edge.  
+* [Create a Linux device compliance policy](../protect/device-compliance-get-started.md#device-compliance-policies) with rules about:  
+    * Allowed distributions
+    * Custom compliance
+    * Device encryption
+    * Password policy
+*  [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-complaint shell scripts for discovery, and JSON files to define the custom settings you want to use.
+
 ## Week of October 03, 2022
 
 ### Device Security
