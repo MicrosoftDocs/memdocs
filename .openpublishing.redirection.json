@@ -1234,22 +1234,22 @@
         },
         {
             "source_path": "memdocs/cloud-native-endpoints-on-premises.md",
-            "redirect_url": "/mem/solutions/cloud-native-endpoints-on-premises",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises",
             "redirect_document_id": false
         },
         {
             "source_path": "memdocs/cloud-native-endpoints-overview.md",
-            "redirect_url": "/mem/solutions/cloud-native-endpoints-overview",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
             "redirect_document_id": false
         },
         {
             "source_path": "memdocs/cloud-native-endpoints-planning-guide.md",
-            "redirect_url": "/mem/solutions/cloud-native-endpoints-planning-guide",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
             "redirect_document_id": false
         },
         {
             "source_path": "memdocs/cloud-native-windows-endpoints.md",
-            "redirect_url": "/mem/solutions/cloud-native-windows-endpoints",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
             "redirect_document_id": false
         },  
         {
