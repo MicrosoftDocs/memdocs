@@ -22,6 +22,9 @@ highlightedContent:
     - title: Cloud attach your Configuration Manager environment
       itemType: overview
       url: https://learn.microsoft.com/mem/configmgr/cloud-attach/overview
+    - title: Move to cloud native endpoints
+      itemType: overview
+      url: cloud-native-endpoints-overview.md
     - title: Secure your remote workforce
       itemType: get-started
       url: /enterprise-mobility-security/remote-work/
