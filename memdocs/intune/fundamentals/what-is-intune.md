@@ -7,7 +7,7 @@ keywords: what is Intune, mobile endpoint management, mobile application managem
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 10/12/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -34,13 +34,11 @@ ms.collection:
 
 As organizations move to support hybrid and remote workforces, they're challenged with managing the different devices that access organization resources. Employees and students need to collaborate, work from anywhere, and securely access and connect to these resources. Admins need to protect organization data, manage end user access, and support users from wherever they work.
 
-To help with these challenges and tasks, use Microsoft Intune. Microsoft Intune is a mobile device management (MDM) and mobile application management (MAM) provider for your organization or enterprise. Intune is cloud-native and can manage your Android, iOS/iPadOS, macOS, and Windows client devices and apps using policies. It allows users to be productive from anywhere and on any device, and works well with on-premises Configuration Manager environments.
-
-Microsoft Intune is also a family of products and services that focus on endpoint management. This family includes Microsoft Intune, Configuration Manager, Windows Autopilot, and Endpoint Analytics. With these services, you get OS deployment, app and device policy management, and reporting & analytics.
-
-This article lists some features and benefits of Microsoft Intune.
+To help with these challenges and tasks, use Microsoft Intune. Microsoft Intune is a cloud-based unified endpoint management solution that simplifies management across multiple operating systems, cloud, on-premises, mobile, desktop, and virtualized endpoints. The tool also supports data protection on company-owned and bring your own devices through non-intrusive mobile application management. It empowers organizations to provide data protection and endpoint compliance that supports a Zero Trust security model. Intune brings together device visibility, endpoint security, and data-driven insights to increase IT efficiency and improve user experiences in hybrid work environments.
 
 For more information on what it means to be cloud-native, go to [Learn more about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md).
+
+This article lists some features and benefits of Microsoft Intune.
 
 > [!TIP]
 > To get Intune, go to [Licenses available for Microsoft Intune](licenses.md) and [Intune 30-day trial](free-trial-sign-up.md).
