@@ -100,9 +100,9 @@ Microsoft Intune integrates with other Microsoft products and services that focu
   - [Windows Autopilot overview](../../autopilot/windows-autopilot.md)
   - [Windows Autopilot deployment for existing devices](../../autopilot/existing-devices.md)
 
-- **[Endpoint Analytics](../../analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability
+- **[Endpoint analytics](../../analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability
 
-  You can use Endpoint Analytics to help identify policies or hardware issues that slow down devices. It also provides guidance that can help you proactively make improvements and reduce help desk tickets.
+  You can use Endpoint analytics to help identify policies or hardware issues that slow down devices. It also provides guidance that can help you proactively make improvements and reduce help desk tickets.
 
   For more specific information, go to:
 
