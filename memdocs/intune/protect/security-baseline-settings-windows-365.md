@@ -48,7 +48,6 @@ To learn more about using security baselines, see [Use security baselines](secur
 - [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) to discover what's changed from version to version.
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to update a profile to use the latest version of that baseline.
 
-
 ::: zone pivot="win365-2110"
 **Windows 365 Cloud PC security baseline version 2110**
 ::: zone-end
