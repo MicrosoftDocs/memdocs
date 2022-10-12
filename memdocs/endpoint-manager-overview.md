@@ -82,7 +82,7 @@ For more information, go to:
 - [What is Endpoint analytics?](./analytics/overview.md)
 - [Endpoint analytics scores, baselines, and insights](./analytics/scores.md)
 - [Tutorial: Walkthrough Intune in Microsoft Endpoint Manager](./intune/fundamentals/tutorial-walkthrough-endpoint-manager.md)
-- [Quickstart - Enroll Configuration Manager devices - Microsoft Endpoint Manager](./analytics/enroll-configmgr)
+- [Quickstart - Enroll Configuration Manager devices - Microsoft Endpoint Manager](./analytics/enroll-configmgr.md)
 
 ## Windows Autopilot
 
