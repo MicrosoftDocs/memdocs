@@ -34,14 +34,18 @@ ms.collection:
 
 As organizations move to support hybrid and remote workforces, they're challenged with managing the different devices that access organization resources. Employees and students need to collaborate, work from anywhere, and securely access and connect to these resources. Admins need to protect organization data, manage end user access, and support users from wherever they work.
 
-To help with these challenges and tasks, use Microsoft Intune. Microsoft Intune is a cloud-based unified endpoint management solution that simplifies management across multiple operating systems, cloud, on-premises, mobile, desktop, and virtualized endpoints. The tool also supports data protection on company-owned and bring your own devices through non-intrusive mobile application management. It empowers organizations to provide data protection and endpoint compliance that supports a Zero Trust security model. Intune brings together device visibility, endpoint security, and data-driven insights to increase IT efficiency and improve user experiences in hybrid work environments.
+To help with these challenges and tasks, use Microsoft Intune.
 
-For more information on what it means to be cloud-native, go to [Learn more about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md).
+Microsoft Intune is a cloud-based endpoint management solution. It manages user access and simplifies app & device management across your many devices, including mobile devices, desktop computers, and virtual endpoints. 
+
+You can protect access and data on organization-owned and users personal devices. And, Intune has compliance and reporting features that support a [Zero Trust security model](/security/zero-trust/zero-trust-overview).
 
 This article lists some features and benefits of Microsoft Intune.
 
 > [!TIP]
-> To get Intune, go to [Licenses available for Microsoft Intune](licenses.md) and [Intune 30-day trial](free-trial-sign-up.md).
+> 
+> - To get Intune, go to [Licenses available for Microsoft Intune](licenses.md) and [Intune 30-day trial](free-trial-sign-up.md).
+> - For more information on what it means to be cloud-native, go to [Learn more about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md).
 
 ## Key features and benefits
 
@@ -67,11 +71,11 @@ Some key features and benefits of Intune include:
 
   For more information, go to [Configure the Intune Company Portal apps, Company Portal website, and Intune app](../apps/company-portal-app.md).
 
-- Intune **integrates with mobile threat defense** services, including Microsoft Defender for Endpoint and third party partner services. With these services, you can create policies that respond to threats, do real-time risk analysis, and automate remediation.
+- Intune **integrates with mobile threat defense** services, including Microsoft Defender for Endpoint and third party partner services. With these services, the focus is on endpoint security and you can create policies that respond to threats, do real-time risk analysis, and automate remediation.  
 
   For more information, go to [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 
-- You **use a web-based admin center** that focuses on endpoint management. Admins can sign into the Endpoint Manager admin center from any device that has internet access.
+- You **use a web-based admin center** that focuses on endpoint management, including data-driven reporting. Admins can sign into the Endpoint Manager admin center from any device that has internet access.
 
   For more information, go to [Walkthrough the Endpoint Manager admin center](tutorial-walkthrough-endpoint-manager.md). To sign in to the admin center, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -102,7 +106,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
 - **[Endpoint analytics](../../analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability
 
-  You can use Endpoint analytics to help identify policies or hardware issues that slow down devices. It also provides guidance that can help you proactively make improvements and reduce help desk tickets.
+  You can use Endpoint analytics to help identify policies or hardware issues that slow down devices. It also provides guidance that can help you proactively improve end user experiences and reduce help desk tickets.
 
   For more specific information, go to:
 
@@ -194,7 +198,7 @@ For more information, go to:
 
 ## Protect data on any device
 
-With Intune, you can **protect data on managed devices** (enrolled in Intune) and **protect data unmanaged devices** (not enrolled in Intune). Intune can isolate organization data from personal data. The idea is to protect your company information by controlling the way users access and share information.
+With Intune, you can **protect data on managed devices** (enrolled in Intune) and **protect data on unmanaged devices** (not enrolled in Intune). Intune can isolate organization data from personal data. The idea is to protect your company information by controlling the way users access and share information.
 
 For organization-owned devices, you want full control over the devices, especially security. When devices enroll, they receive your security rules and settings.
 
@@ -206,7 +210,7 @@ On devices enrolled in Intune, you can:
 - Use conditional access to only allow managed and compliant devices access to organization resources, apps, and data.
 - Remove organization data if a device is lost or stolen.
 
-For personal devices, users might not want their IT admins to have full control. So, give users options. For example, users enroll their devices if they want full access to your organization's resources. Or, if these users only want access to Outlook or Microsoft Teams, then use app protection policies that require multi-factor authentication (MFA).
+For personal devices, users might not want their IT admins to have full control. To support a hybrid work environment, give users options. For example, users enroll their devices if they want full access to your organization's resources. Or, if these users only want access to Outlook or Microsoft Teams, then use app protection policies that require multi-factor authentication (MFA).
 
 On devices using application management, you can:
 
