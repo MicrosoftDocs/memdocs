@@ -76,6 +76,20 @@ For related information, see [Endpoint management documentation]( ../../index.ym
 
 Windows Company Portal now displays a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If users don't update their device by the given date, their device status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) and [Check access from Device details page](../user-help/check-device-access-windows-cpapp.md#check-access-from-device-details-page).
 
+#### Linux device management available in Microsoft Intune<!-- 14616038 -->
+
+Microsoft Intune now supports Linux device management for devices running Ubuntu Desktop 22.04 or 20.04 LTS. Intune admins don't need to do anything to enable Linux enrollment in the Microsoft Endpoint Manager admin center.  Linux users can [enroll supported Linux devices](../user-help/enroll-device-linux.md) on their own and use the Microsoft Edge browser to access corporate resources online.
+
+In the admin center, you can:
+
+- Enforce Conditional Access policies in Microsoft Edge.  
+- [Create a Linux device compliance policy](../protect/device-compliance-get-started.md#device-compliance-policies) with rules about:  
+  - Allowed distributions
+  - Custom compliance
+  - Device encryption
+  - Password policy
+- [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-complaint shell scripts for discovery, and JSON files to define the custom settings you want to use.
+
 ## Week of October 03, 2022
 
 ### Device Security
