@@ -2,7 +2,7 @@
 # required metadata
 
 title: Filter reports and troubleshooting in Microsoft Intune
-description: Use the device and app filter reports to get more information on successfully applied filters. Learn the impact of include and exclude filters in Microsoft Intune and Endpoint Manager.
+description: Use the device and app filter reports to get more information on successfully applied filters. Learn the effect of include and exclude filters in Microsoft Intune.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
@@ -27,7 +27,7 @@ ms.custom:
 ms.collection: M365-identity-device-management
 ---
 
-# Filter reports and troubleshooting in Microsoft Endpoint Manager
+# Filter reports and troubleshooting in Microsoft Intune
 
 When you create an app, compliance policy, or configuration profile, you assign the policy to groups (users or devices). When you assign the app or policy, you can also use filters. For example, you can assign policies to Windows 10/11 devices running a specific OS version. For more information, see [Use filters when assigning your apps, policies, and profiles](filters.md).
 
@@ -68,7 +68,7 @@ To see this report, use the following steps:
 
 In the following example, you can see this information for the **TestDevice**:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="See the date, time, evaluation results, and other device filter assignment properties in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-device.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other device filter assignment properties in Microsoft Intune.":::
 
 > [!IMPORTANT]
 > 
@@ -93,7 +93,7 @@ To see these reports, use the following steps:
 
 In the following example, you can see this information for the **Microsoft Word** store app:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="See the date, time, evaluation results, and other app filter properties in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/filter-properties-single-app.png" alt-text="Screenshot that shows how to see the date, time, evaluation results, and other app filter properties in Microsoft Intune.":::
 
 > [!IMPORTANT]
 > 
@@ -118,11 +118,20 @@ Use the following table to help understand when you include or exclude devices:
 ### What you need to know
 
 - A **Not evaluated** filter result may show when a policy has a conflicting assignment on the device. For more information, see [Filters and assignment conflict resolution](#filters-and-assignment-conflict-resolution) (in this article).
-- Filters are evaluated at enrollment and device check-in. The evaluation can also run at other times, such as a compliance check. You may experience race conditions in some scenarios, for example consider this sequence of events (with T representing different points in time):
-    - T1 - You assign an App to a group of users using a filter based on the "Category" property.
-    - T2 - A targeted user enrolls a new device. The device enrolls and checks-in, evaluating the associated category filter. Since there was no category set on the device,  filter evaluation is based on a null category string. In the case where a filter was working in "Exclude" mode, the app could be installed having not matched the criteria for exclusion.
-    - T3 - The user is then prompted to choose a device category in the Company Portal app but enrollment and check-in has already completed. 
-    - T4 - On the next device check-in, the category property has been updated in the system and now returns a different filter evaluation result, however the app was already installed and will not be automatically removed.
+- Filters are evaluated at enrollment and when the device checks in with the Intune service. The evaluation can also run at other times, such as a compliance check. In some scenarios, you can experience race conditions.
+
+  For example, consider the following sequence of events, where each time is a different point in time:
+
+  - Time1: You assign an app to a users group. This group uses a filter based on the "Category" property.
+  - Time2: A targeted user enrolls a new device and checks in with the Intune service. During the check-in, the category filter evaluates. Since a category isn't set on the device yet, the filter evaluates as a null category, and the app installs.
+
+    If a filter was working in "Exclude" mode, then the app could be installed since it might not match the exclusion criteria.
+
+  - Time3: In the Company Portal app, the user is prompted to choose a device category. Remember, enrollment and check-in is already completed.
+  - Time4: On the next device check-in, the category property updates and now returns a different filter evaluation result. Remember, the app was already installed. And, it won't be automatically removed.
+
+  For approximate check-in times, go to [How long does it take for devices to get a policy, profile, or app after they're assigned?](../configuration/device-profile-troubleshoot.md#how-long-does-it-take-for-devices-to-get-a-policy-profile-or-app-after-they-are-assigned)
+
 - The latest filter evaluation results are stored for 30 days. If the logs are expired, you may see a **We were not able to retrieve any filter evaluation results** message.
 
 ## Filters and assignment conflict resolution
@@ -133,7 +142,7 @@ Intune helps avoid conflicts. It prevents you from creating multiple assignments
 
 An overlap can occur when a user or device is in multiple targeted groups. Conflicting assignments aren't recommended. For more information, see [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved).
 
-:::image type="content" source="./media/filters-reports-troubleshoot/device-multiple-groups.png" alt-text="Conflicts can occur when a device is in multiple groups in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/device-multiple-groups.png" alt-text="Screenshot that shows how conflicts can occur when a device is in multiple groups in Microsoft Intune.":::
 
 When you use filters, conflict resolution is handled using the following methods:
 
@@ -151,7 +160,7 @@ When there's a device with conflicting assignments for the same policy, the foll
 
 When you assign the app or policy, you choose to apply a filter:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Filter precedence is exclude, no filter, and then include when assigning policies in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/assignment-filter-precedence.png" alt-text="Screenshot that shows filter precedence is exclude, no filter, and then include when assigning policies in Microsoft Intune.":::
 
 For example:
 
@@ -189,17 +198,17 @@ For example:
 
 In this scenario, the winning app intent is **Required**. For more information, see [conflicts between app intents](../apps/apps-deploy.md#how-conflicts-between-app-intents-are-resolved). So, DeviceA must only evaluate FilterA. If DeviceA matches the rules in FilterA, DeviceA receives AppA as a required app.
 
-Apps use special behavior when resolving conflicts between **Required** and **Available** assignments. If a user or device is targeted with both **Available** and **Required** assignments, then it receives a merged intent called **Required and Available**. The device must evaluate filters used in both assignments. When evaluating both filters, the device implements the same conflict resolution: [Filter mode](#filter-mode) and ["OR" logic when filter modes are the same](#use-or-logic-when-filter-modes-are-the-same).
+Apps use special behavior when resolving conflicts between **Required** and **Available** assignments. If a user or device is targeted with both **Available** and **Required** assignments, then it receives a merged intent called **Required and Available**. The device must evaluate filters used in both assignments. When it evaluates both filters, the device implements the same conflict resolution: [Filter mode](#filter-mode) and ["OR" logic when filter modes are the same](#use-or-logic-when-filter-modes-are-the-same).
 
 ## Conflict resolution matrix
 
 In the following example, there's a conflict between assignments because the same user/device is in both assignments:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/example-conflict-same-group-user-policy-assignment.png" alt-text="Example assignment conflict when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/example-conflict-same-group-user-policy-assignment.png" alt-text="Screenshot that shows an example assignment conflict when using filters in Microsoft Intune.":::
 
-The following matrix explains the impact, depending on the conflict scenario:
+The following matrix explains the effect, depending on the conflict scenario:
 
-:::image type="content" source="./media/filters-reports-troubleshoot/conflict-matrix.png" alt-text="Conflict impact depend on the setting configured when using filters in Microsoft Endpoint Manager and Microsoft Intune.":::
+:::image type="content" source="./media/filters-reports-troubleshoot/conflict-matrix.png" alt-text="Screenshot that shows that the conflict effect depends on the setting configured when using filters in Microsoft Intune.":::
 
 ## Next steps
 

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 01/18/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -87,7 +87,7 @@ Additionally, Intune doesn't support all the settings listed in [Configuration s
 > [!NOTE]
 > For settings that were created by using a string, base64, or XML data type, the stored value is obscured. If the user who is accessing the value has any of the following permissions or roles, they can see the value:
 >
-> - Create, Read, and Update permissions in a Microsoft Endpoint Manager role-based access control (RBAC) role.
+> - Create, Read, and Update permissions in a Microsoft Intune role-based access control (RBAC) role.
 > - Intune Service Administrator.
 > - Global Administrator Azure Active Directory role.
 >
