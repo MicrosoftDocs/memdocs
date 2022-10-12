@@ -19,9 +19,6 @@ highlightedContent:
     - title: Endpoint management overview
       itemType: overview
       url: endpoint-manager-overview.md
-    - title: Microsoft Intune product family
-      itemType: overview
-      url: https://www.microsoft.com/security/business/endpoint-management/microsoft-intune
     - title: Cloud attach your Configuration Manager environment
       itemType: overview
       url: https://learn.microsoft.com/mem/configmgr/cloud-attach/overview

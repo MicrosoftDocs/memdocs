@@ -34,9 +34,9 @@ ms.collection:
 
 As organizations move to support hybrid and remote workforces, they're challenged with managing the different devices that access organization resources. Employees and students need to collaborate, work from anywhere, and securely access and connect to these resources. Admins need to protect organization data, manage end user access, and support users from wherever they work.
 
-To help with these challenges and tasks, use Microsoft Intune.
+To help with these challenges and tasks, use [Microsoft Intune](https://www.microsoft.com/security/business/endpoint-management/microsoft-intune).
 
-Microsoft Intune is a cloud-based endpoint management solution. It manages user access and simplifies app & device management across your many devices, including mobile devices, desktop computers, and virtual endpoints. 
+Microsoft Intune is a cloud-based endpoint management solution. It manages user access and simplifies app & device management across your many devices, including mobile devices, desktop computers, and virtual endpoints.
 
 You can protect access and data on organization-owned and users personal devices. And, Intune has compliance and reporting features that support a [Zero Trust security model](/security/zero-trust/zero-trust-overview).
 
