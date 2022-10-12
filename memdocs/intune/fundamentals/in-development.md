@@ -78,17 +78,6 @@ You can first create a filter using any of the available properties for iOS and 
 
 ## Device management
 
-### Intune support for Linux Ubuntu LTS desktops will be generally available<!-- 14616038 -->
-Intune will support Linux Ubuntu LTS desktops. The following initial functionality is planned for this first release for Linux desktop management:
-- Enroll Linux Ubuntu LTS (22.04 and 20.04) desktops into Microsoft Endpoint Manager
-- Enable access to corporate resources via Microsoft Edge 
-- Conditional Access enforcement in Microsoft Edge 
-- Standard Compliance policies
-    - Linux distribution
-    - Device encryption
-    - Password complexity
-- Bash script support for custom compliance policies
-
 ### New hardware details available for individual devices running on iOS/iPadOS<!-- 15038076 -->
 Select **Devices** > **All devices** > *select one of your listed devices* and open it's **Hardware** details. The following new details are available in the **Hardware** pane of individual devices:
 
