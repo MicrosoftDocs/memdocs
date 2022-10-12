@@ -1,5 +1,5 @@
 items:
-- name: Microsoft Intune family
+- name: Endpoint management
   href: index.yml
 - name: Overview
   expanded: true
