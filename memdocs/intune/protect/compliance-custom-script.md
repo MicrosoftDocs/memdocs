@@ -122,6 +122,8 @@ Before deploying your script in production, test it in an isolated environment t
 
 5. Complete the script creation process. The script is now visible in the *Scripts* pane of the Microsoft Endpoint Manager admin center and is available to select when configuring compliance policies.
 
+Also, note that the workflow for uploading these scripts to the Microsoft Endpoint Manager admin center does not support scope tags at this time. You must be targeted with the default scope tag to create, edit, or see custom compliance discovery scripts.
+
 ## Next steps
 
 - [Use custom compliance settings](../protect/compliance-use-custom-settings.md)  
