@@ -138,7 +138,7 @@ In the Jamf Pro portal, you create a Computer or Device configuration profile.
     <plist version="1.0">
     <dict>
         <key>AppPrefixAllowList</key>
-        <string>com.microsoft.,com.apple.</string>
+        <string>com.microsoft.,com.apple.,com.jamf.,com.jamfsoftware.</string>
         <key>browser_sso_interaction_enabled</key>
         <integer>1</integer>
         <key>disable_explicit_app_prompt</key>
