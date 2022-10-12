@@ -45,7 +45,7 @@ As part of the connection process, the Windows 365 service is granted the follow
 To create an ANC, you must:
 
 - Be an [Intune Administrator in Azure AD](/azure/active-directory/roles/permissions-reference).
-- Have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) that contains the virtual network with connectivity to your on-premises domain controller and network.
+- Have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) containing the virtual network that you manage for Azure AD Join. For [Hybrid Azure AD Join](/azure/active-directory/devices/concept-azure-ad-join-hybrid) you must have [Owner permissions on the Azure subscription](/azure/cost-management-billing/manage/add-change-subscription-administrator) connectivity to your domain controllers and network.
 - Make sure that your PowerShell execution policy is configured to allow Unrestricted scripts. If you use Group Policy to set execution policy, make sure that the Group Policy Object (GPO) targeted at the Organizational Unit (OU) defined in the ANC is configured to allow Unrestricted scripts. For more information, see [Set-ExecutionPolicy](/powershell/module/microsoft.powershell.security/set-executionpolicy).
 - For Disaster Recovery (DR) purposes, make sure that there are at least 50% of the IP addresses available in your subnet. If reprovisioning for DR is required, sufficient new IP addresses are required for each Cloud PC provisioned on the subnet.
 - For Windows 365 Governement, make sure to complete the script options listed in [Set up tenants for Windows 365 Government](set-up-tenants-windows-365-gcc.md).
