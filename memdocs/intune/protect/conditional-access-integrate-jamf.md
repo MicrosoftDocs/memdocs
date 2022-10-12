@@ -1,14 +1,14 @@
 ---
 # required metadata
 
-title: Manually configure Jamf Pro Integration with Microsoft Intune  
+title: Manually configure Jamf Pro integration with Microsoft Intune  
 titleSuffix: Microsoft Intune
-description: When you can't use the Jamf Pro Cloud Connector, manually configure integration to support using Intune compliance and Azure AD Conditional Access policies with Jamf-managed devices.
+description: Manually configure Jamf Pro integration with Intune when you can't use the Jamf Cloud Connector.
 keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 04/19/2022
+ms.date: 10/17/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -33,11 +33,11 @@ ms.collection:
 
 # Manually Integrate Jamf Pro with Intune for compliance
 
-Intune supports integrating your Jamf Pro deployment to bring device compliance and Conditional Access policies to your macOS devices. Through integration, you can require that your macOS devices that are managed by Jamf Pro meet your Intune device compliance requirements before those devices are allowed to access your organization's resources. Resource access is controlled by your Azure Active Directory (Azure AD) Conditional Access policies in the same way as for devices managed through Intune.
+Microsoft Intune supports integrating your Jamf Pro deployment to bring device compliance and Conditional Access policies to your macOS devices. Through integration, you can require that your macOS devices that are managed by Jamf Pro meet your Intune device compliance requirements before those devices are allowed to access your organization's resources. Resource access is controlled by your Azure Active Directory (Azure AD) Conditional Access policies in the same way as for devices managed through Intune.
 
 When Jamf Pro integrates with Intune, you can sync the inventory data from macOS devices with Intune, through Azure AD. Intune's compliance engine then analyzes the inventory data to generate a report. Intune's analysis is combined with intelligence about the device user's Azure AD identity to drive enforcement through Conditional Access. Devices that are compliant with the Conditional Access policies can gain access to protected company resources.
 
-This article can help you manually integrate Jamf Pro with Intune. 
+This article can help you manually integrate Jamf Pro with Intune.
 
 > [!TIP]
 > Instead of manually configuring Jamf Pro integration with Intune, we recommend configuring and using the [Jamf Cloud Connector with Microsoft Intune](../protect/conditional-access-jamf-cloud-connector.md). The Cloud Connector automates many of the steps that are required when you manually configure integration.
@@ -51,8 +51,8 @@ After you configure integration, you'll then [configure Jamf and Intune to enfor
 You need the following to configure Conditional Access with Jamf Pro:
 
 - Jamf Pro 10.1.0 or later
-- Microsoft Intune and Microsoft AAD Premium P1 licenses (recommended Microsoft Enterprise Mobility + Security license bundle)
-- Global admin role in Azure Active Directory.
+- Microsoft Intune and Microsoft Azure AD Premium P1 licenses (recommended Microsoft Enterprise Mobility + Security license bundle)
+- Global admin role in Azure AD.
 - A user with Microsoft Intune Integration privileges in Jamf Pro
 - [Company Portal app for macOS](https://aka.ms/macoscompanyportal)
 - macOS devices with OS X 10.12 Yosemite or later
@@ -120,9 +120,9 @@ To connect Intune with Jamf Pro:
 
 14. Next, grant admin consent for this app by selecting **Grant admin consent for _\<your tenant>_** in the top left of the **API permissions** page. You may need to reauthenticate your account in the new window and grant the application access by following the prompts.  
 
-15. Refresh the page by selecting **Refresh** at the top of the page. Confirm that admin consent has been granted for the **update_device_attributes** permission. 
+15. Refresh the page by selecting **Refresh** at the top of the page. Confirm that admin consent has been granted for the **update_device_attributes** permission.
 
-16. After the app is registered successfully, the API permissions should only contain one permission called **update_device_attributes** and should appear as follows:
+16. After the app is registered successfully, the API permissions should only contain one permission called **update_device_attributes**, and should appear as follows:
 
    ![Successful permissions](./media/conditional-access-integrate-jamf/sucessfull-app-registration.png)
 
@@ -164,7 +164,7 @@ The app registration process in Azure AD is complete.
    *Exclude* overrides *Include*, which means any device that is in both groups is excluded from Jamf and directed to enroll with Intune.
 
    >[!NOTE]
-   > This method of including and excluding user groups affects the enrollment experience of the user. Any user with a Mac thats already enrolled in either Jamf or Intune who is then targeted to enroll with the other MDM must unenroll their device and then re-enroll it with the new MDM before management of the device works properly.
+   > This method of including and excluding user groups affects the enrollment experience of the user. Any user with a macOS device thats already enrolled in either Jamf or Intune who is then targeted to enroll with the other MDM must unenroll their device and then re-enroll it with the new MDM before management of the device works properly.
 
 3. Select **Evaluate** to determine how many devices will be enrolled with Jamf, based on your group configurations.
 
@@ -178,9 +178,21 @@ After you configure integration between Intune and Jamf, you need to [apply comp
 
 ## Disconnect Jamf Pro and Intune
 
-Should you need to remove integration of Jamf Pro with Intune, use the following steps to remove the connection from within the Jamf Pro console. This information applies to both the manually configured integration, and integration by using the Cloud Connector.
+Should you need to remove integration of Jamf Pro with Intune, use one of the following methods. Both methods apply to integration that is configured manually or by using the Cloud Connector.
 
-1. In Jamf Pro, go to **Global Management** > **Conditional Access**. On the **macOS Intune Integration** tab, select **Edit**.
+### Deprovision Jamf Pro from within the Microsoft Endpoint Manager admin center
+
+1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Tenant administration** > **Connectors and tokens** > **Partner device management**.
+
+2. Select the option **Terminate**. Intune displays a message about the action. Review the message and when ready, select **OK**. The option to *Terminate* the integration only appears when the Jamf connection exists.
+
+After you terminate the integration, refresh the view of the admin center to update the view. Your organization's macOS devices are removed from Intune in 90 days.
+
+### Deprovision Jamf Pro from within the Jamf Pro console
+
+Use the following steps to remove the connection from within the Jamf Pro console.
+
+1. In the Jamf Pro console, go to **Global Management** > **Conditional Access**. On the **macOS Intune Integration** tab, select **Edit**.
 
 2. Clear the **Enable Intune Integration for macOS** check box.
 
@@ -190,8 +202,7 @@ Should you need to remove integration of Jamf Pro with Intune, use the following
 
 5. Select **Tenant administration** > **Connectors and tokens** > **Partner device management** to verify that the status is now **Terminated**.
 
-   > [!NOTE]
-   > Your organization's Mac devices will be removed at the date (3 months) shown in your console.
+After you terminate the integration, your organization's macOS devices will be removed at the date shown in your console, which is after three months.
 
 ## Next steps
 
