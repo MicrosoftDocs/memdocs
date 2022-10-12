@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 10/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -92,8 +92,7 @@ This article shows you how to create a custom profile for Android device adminis
 
 In the following example, the **Connectivity/AllowVPNOverCellular** setting is enabled. This setting allows a Windows client device to open a VPN connection when on a cellular network.
 
-> [!div class="mx-imgBorder"]
-> ![Example of a custom policy containing VPN settings in Intune and Endpoint Manager](./media/custom-settings-configure/custom-policy-example.png)
+:::image type="content" source="./media/custom-settings-configure/custom-policy-example.png" alt-text="Screenshot that shows an example of a custom policy containing VPN settings in Intune.":::
 
 ## Next steps
 
