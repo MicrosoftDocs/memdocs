@@ -106,7 +106,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
 - **[Endpoint analytics](../../analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability
 
-  You can use Endpoint analytics to help identify policies or hardware issues that slow down devices. It also provides guidance that can help you proactively make improvements and reduce help desk tickets. It can help improve user experiences, including hybrid work environments.
+  You can use Endpoint analytics to help identify policies or hardware issues that slow down devices. It also provides guidance that can help you proactively improve end user experiences and reduce help desk tickets.
 
   For more specific information, go to:
 
@@ -198,7 +198,7 @@ For more information, go to:
 
 ## Protect data on any device
 
-With Intune, you can **protect data on managed devices** (enrolled in Intune) and **protect data unmanaged devices** (not enrolled in Intune). Intune can isolate organization data from personal data. The idea is to protect your company information by controlling the way users access and share information.
+With Intune, you can **protect data on managed devices** (enrolled in Intune) and **protect data on unmanaged devices** (not enrolled in Intune). Intune can isolate organization data from personal data. The idea is to protect your company information by controlling the way users access and share information.
 
 For organization-owned devices, you want full control over the devices, especially security. When devices enroll, they receive your security rules and settings.
 
@@ -210,7 +210,7 @@ On devices enrolled in Intune, you can:
 - Use conditional access to only allow managed and compliant devices access to organization resources, apps, and data.
 - Remove organization data if a device is lost or stolen.
 
-For personal devices, users might not want their IT admins to have full control. So, give users options. For example, users enroll their devices if they want full access to your organization's resources. Or, if these users only want access to Outlook or Microsoft Teams, then use app protection policies that require multi-factor authentication (MFA).
+For personal devices, users might not want their IT admins to have full control. To support a hybrid work environment, give users options. For example, users enroll their devices if they want full access to your organization's resources. Or, if these users only want access to Outlook or Microsoft Teams, then use app protection policies that require multi-factor authentication (MFA).
 
 On devices using application management, you can:
 
