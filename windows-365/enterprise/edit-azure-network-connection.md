@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Edit Azure network connection
 
-All [Azure network connections](azure-network-connections.md) (ANC) get periodically checked to make sure that the environment is ready for provisioning Cloud PCs. If these [checks](health-checks.md) fail, you may need to fix your networking setup on Azure or edit one of the properties provided.
+All [Azure network connections](azure-network-connections.md) (ANC) are [periodically checked](/windows-365/enterprise/azure-network-connections#periodic-health-checks) to make sure that the environment is ready for provisioning Cloud PCs. If these [checks](health-checks.md) fail, you may need to fix your networking setup on Azure or edit one of the properties provided.
 
 To edit an Azure network connection:
 
@@ -39,7 +39,7 @@ To edit an Azure network connection:
 
 After the edits have been saved, the ANC checks are run to verify the configuration.
 
-You can't edit an ANC if it's running checks. You must wait for the checks to pass/fail before edit functionality becomes available.
+You can't edit an ANC if it's running checks. You must wait up to 30 minutes for the checks to pass/fail before edit functionality becomes available.
 
 <!-- ########################## -->
 ## Next steps
