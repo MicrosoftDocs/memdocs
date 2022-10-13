@@ -45,8 +45,6 @@ You create ANCs to define the connection between your network and the Windows 36
 - **Network contributor on the specified resource group**: This permission is used to create network interface cards in the selected resource group.
 - **Network contributor on the virtual network**: This permission is used to attach the created network interface cards to the selected virtual network. 
 
-
-
 > [!TIP]
 > When you use [Microsoft hosted network option](architecture.md#virtual-network-connectivity) with a gallery image, the Windows 365 service principal does not require these permissions.
 
