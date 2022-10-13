@@ -135,7 +135,7 @@ Add reusable settings groups to profiles while editing or creating the profile. 
    - **Sid**:  Local user Sid or user Sid group or the Sid of the AD object, defines whether to apply this policy over a specific user or user group; one entry can have a maximum of one Sid and an entry without any Sid means it applies the policy over the machine.
    - **Computer Sid**: Local computer Sid or computer Sid group or the Sid of the AD object, defines whether to apply this policy over a specific machine or machine group; one entry can have a maximum of one ComputerSid and an entry without any ComputerSid means it applies the policy over the machine. If you want to apply an Entry to a specific user and specific machine, add both Sid and ComputerSid into the same Entry.
 
-   For more about these options, see [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/device-control-removable-storage-access-control?WT.mc_id=Portal-fx) in the Microsoft Defender for Endpoint documentation.
+   For more about these options, see [Microsoft Defender for Endpoint Device Control Removable Storage Access Control](/microsoft-365/security/defender-endpoint/device-control-removable-storage-access-control) in the Microsoft Defender for Endpoint documentation.
 
 4. For the rule you saved, select **Set reusable settings** for *Included ID* and *Excluded ID* to meet your needs. Both selections open a *Select reusable settings* pane.
 
@@ -148,8 +148,7 @@ The following shows a configuration with only one group selected for Excluded ID
 
 6. After adding reusable groups to a profile, complete the policy configuration. When saved, Intune includes the settings from the reusable groups and deploys the profile to devices based on the profile’s assignments.
 
-If you have an E5 license, you can use Microsoft Defender for Endpoint to view device control events under the *Device Control report* and *Advanced hunting*. See [Protect your organization's data with device control | Microsoft Docs](https://docs.microsoft.com/microsoft-365/security/defender-endpoint/device-control-report?view=o365-worldwide) in the Defender for Endpoint documentation.
-
+If you have an E5 license, you can use Microsoft Defender for Endpoint to view device control events under the *Device Control report* and *Advanced hunting*. See [Protect your organization's data with device control | Microsoft Docs](/microsoft-365/security/defender-endpoint/device-control-report) in the Defender for Endpoint documentation.
 
 ## About policy conflicts
 
