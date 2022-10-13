@@ -147,6 +147,8 @@ Devices that run Android Enterprise might require a PIN before SCEP can provisio
        - **CN={{UserPrincipalName}}**: The user principal name of the user, such as janedoe@contoso.com.
        - **CN={{AAD_Device_ID}}**: An ID assigned when you register a device in Azure Active Directory (AD). This ID is typically used to authenticate with Azure AD.
        - **CN={{DeviceId}}**: An ID assigned when you enroll a device in Intune.
+        > [!NOTE]
+         > Avoid using {{DeviceId}} for subject name on Windows devices. In certain instances, certificate generated with this subject name causes sync with Intune to fail.
        - **CN={{SERIALNUMBER}}**: The unique serial number (SN) typically used by the manufacturer to identify a device.
        - **CN={{IMEINumber}}**: The International Mobile Equipment Identity (IMEI) unique number used to identify a mobile phone.
        - **CN={{OnPrem_Distinguished_Name}}**: A sequence of relative distinguished names separated by comma, such as *CN=Jane Doe,OU=UserAccounts,DC=corp,DC=contoso,DC=com*.
