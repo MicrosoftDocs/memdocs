@@ -70,7 +70,7 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 #### Add reusable settings groups to profiles for Firewall rules
 
-Microsoft Defender Firewall rule profiles support use of [reusable settings groups](link to article) for the following platforms:
+Microsoft Defender Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
 
 - *Windows 10, Windows 11, and Windows Server platform*
 
