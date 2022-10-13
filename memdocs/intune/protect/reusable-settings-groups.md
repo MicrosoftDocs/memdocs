@@ -70,6 +70,7 @@ The following are prerequisites to use reusable settings groups:
 
 Each reusable settings group includes a subset of settings from the full profile you’re creating the group for. Use the following links to view the settings you can configure in a settings group for each profile:
 
+- [Device Control](../protect/endpoint-security-asr-policy.md#add-reusable-settings-groups-to-profiles-for-device-control)
 - [Microsoft Defender Firewall rules](../protect/endpoint-security-firewall-policy.md#add-reusable-settings-groups-to-profiles-for-firewall-rules)
 
 **To create a reusable settings group**:
