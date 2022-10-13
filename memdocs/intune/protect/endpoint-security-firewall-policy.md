@@ -34,7 +34,7 @@ ms.reviewer: mattcall
 
 Use the endpoint security Firewall policy in Intune to configure a devices built-in firewall for devices that run macOS and Windows devices.
 
-While you can configure the same firewall settings by using Endpoint Protection profiles for device configuration, the device configuration profiles include additional categories of settings. These additional settings are unrelated to firewalls and can complicate the task of configuring only firewall settings for your environment.
+While you can configure the same firewall settings by using Endpoint Protection profiles for device configuration, the device configuration profiles include  categories of settings. These additional settings are unrelated to firewalls and can complicate the task of configuring only firewall settings for your environment.
 
 Find the endpoint security policies for firewalls under *Manage* in the **Endpoint security** node of the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
