@@ -115,7 +115,7 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
 
       > [!NOTE]
-      > Depending on your Android OS version and your Wi-Fi authentication infrastructure, the certificate requirements can vary. You may need to add your secure hash algorithm (SHA) from the certificate used by your NPS. Or, if your Radius or network policy server (NPS) server has a publicly signed certificate, then a root certificate may not be needed for validation.
+      > Depending on your Android OS version and your Wi-Fi authentication infrastructure, the certificate requirements can vary. You may need to add your secure hash algorithm(s) (SHA) from the certificate used by your network policy server (NPS). Or, if your Radius or NPS server has a publicly signed certificate, then a root certificate may not be needed for validation.
       > 
       > A good practice is to enter the **Radius server name** and add a **Root certificate for server validation**.
 
