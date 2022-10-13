@@ -100,7 +100,7 @@ In Remote help, a link has been added to the non-compliance warning notification
 
 For more information, go to:
 
- - [Microsoft Intune Remote Help](../remote-actions/remote-help.md#whats-new-for-remote-help)
+ - [Microsoft Intune Remote Help](../remote-actions/remote-help.md)
 
  - [Monitor Device compliance](../protect/compliance-policy-monitor.md)
 
