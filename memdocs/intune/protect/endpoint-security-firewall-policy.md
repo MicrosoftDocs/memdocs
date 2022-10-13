@@ -68,7 +68,7 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 >
 > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
-#### Add reusable settings groups to profiles for Firewall rules (preview)
+#### Add reusable settings groups to profiles for Firewall rules
 
 In public preview, Microsoft Defender Firewall rule profiles support use of [reusable settings groups](../protect/reusable-settings-groups.md) for the following platforms:
 
