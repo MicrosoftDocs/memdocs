@@ -34,8 +34,8 @@ Before a user can use a Cloud PC, you must assign a [Windows 365 license](https:
 
 - Microsoft 365 admin center. For steps on how to use admin center to assign licenses, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
 - [Azure AD admin center](https://aad.portal.azure.com/) for group license assignments. For more information about group license assignments, see [Assign licenses to users by group membership in Azure Active Directory](/azure/active-directory/enterprise-users/licensing-groups-assign).
-- PowerShell. See [Assign licenses for Windows 365](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell)
-- Graph REST API. See [Assign license](/graph/api/user-assignlicense)
+- PowerShell. See [Assign licenses for Windows 365](/microsoft-365/enterprise/assign-licenses-to-user-accounts-with-microsoft-365-powershell).
+- Graph REST API. See [Assign license](/graph/api/user-assignlicense).
 
 <!-- ########################## -->
 Next, check out the following article: 
