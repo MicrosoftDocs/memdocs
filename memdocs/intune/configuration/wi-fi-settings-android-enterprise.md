@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 10/13/2022
 ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -113,6 +113,11 @@ Select this option if you're deploying to an Android Enterprise dedicated, corpo
       On Android 11 and newer, new Wi-Fi profiles may require this setting be configured. Otherwise, the devices may not connect to your Wi-Fi network.
 
     - **Root certificate for server validation**: Select an existing trusted root certificate profile. When the client connects to the network, this certificate is presented to the server, and authenticates the connection.
+
+      > [!NOTE]
+      > Depending on your Android OS version and your Wi-Fi authentication infrastructure, the certificate requirements can vary. You may need to add your secure hash algorithm (SHA) from the certificate used by your NPS. Or, if your Radius or network policy server (NPS) server has a publicly signed certificate, then a root certificate may not be needed for validation.
+      > 
+      > A good practice is to enter the **Radius server name** and add a **Root certificate for server validation**.
 
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
       - **Derived credential**: Use a certificate that's derived from a user's smart card. If no derived credential issuer is configured, Intune prompts you to add one. For more information, see [Use derived credentials in Microsoft Intune](../protect/derived-credentials.md).
