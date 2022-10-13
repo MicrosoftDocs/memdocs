@@ -34,7 +34,7 @@ Windows 365 Government is a cloud-based service that automatically creates virtu
 
 Windows 365 Government customers are government agencies or public entities that qualify to use services hosted in GCC and GCC High. The services in the GCC and GCC High clouds must meet specific requirements and pass rigorous audit reviews before customers are allowed to use them.
 
-For GCC, users that access Windows 365 Government Cloud PCs have an identity in the Azure AD public tenant.  For GCC High, users that access Windows 365 Government Cloud PCs have an identity in the Azure AD Government tenant.  The underlying resources are isolated from the general public through a series of physical and logical controls.  For more information see [Azure Government](https://learn.microsoft.com/en-us/azure/azure-government/documentation-government-plan-identity)
+For GCC, users who access Windows 365 Government Cloud PCs have an identity in the Azure AD public tenant.  For GCC High, users who access Windows 365 Government Cloud PCs have an identity in the Azure AD Government tenant.  The underlying resources are isolated from the general public through a series of physical and logical controls. For more information, see [Azure Government](https://learn.microsoft.com/azure/azure-government/documentation-government-plan-identity).
 
 Windows 365 Government supports this scenario in a secure, scalable, and transparent manner. It provides flexibility to administrators to manage users in the public cloud, resources in the government cloud, and the dynamic relationship between the two.
 
