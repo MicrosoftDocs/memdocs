@@ -91,16 +91,16 @@ Both the helper and sharer must be able to reach these endpoints over port 443:
 
 | Domain/Name                       | Description                                           |
 |-----------------------------------|-------------------------------------------------------|
-| \*.aria.microsoft.com             | Used for accessibility features within the app    |
-| \*.events.data.microsoft.com      | Microsoft Telemetry Service |
-| \*.monitor.azure.com              | Required for telemetry and remote service initialization |
-| \*.support.services.microsoft.com | Primary endpoint used for the remote help application    |
-| \*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
-| \*.aadcdn.msauth.net              | Required for logging in to the application (AAD)        |
-| \*.aadcdn.msftauth.net            | Required for logging in to the application(AAD)|
-| \*.edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
-| \*.graph.microsoft.com            | Used for connecting to the Microsoft Graph service        |
-| \*.login.microsoftonline.com      | Required for Microsoft login service. Might not be available in preview in all markets or for all localizations.|
+|\*.aria.microsoft.com             | Used for accessibility features within the app|
+|\*.events.data.microsoft.com      | Microsoft Telemetry Service |
+|\*.monitor.azure.com              | Required for telemetry and remote service initialization|
+|\*.support.services.microsoft.com | Primary endpoint used for the remote help application|
+|\*.trouter.skype.com              | Used for Azure Communication Service for chat and connection between parties|
+|\*.aadcdn.msauth.net              | Required for logging in to the application (AAD)|
+|\*.aadcdn.msftauth.net            | Required for logging in to the application(AAD)|
+|\*.edge.skype.com                 | Used for Azure Communication Service for chat and connection between parties|
+|\*.graph.microsoft.com            | Used for connecting to the Microsoft Graph service|
+|\*.login.microsoftonline.com      | Required for Microsoft login service. Might not be available in preview in all markets or for all localizations.|
 |\*.remoteassistanceprodacs.communication.azure.com|Used for Azure Communication Service for chat and connection between parties|
 
 ### Data and privacy
