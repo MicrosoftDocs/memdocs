@@ -51,7 +51,7 @@ With few exceptions, Cloud PCs can be managed in the same way as physical PCs.  
 
 Administrators can control which service will manage which areas of Windows by toggling workloads. For more information, see [Co-management workloads](/mem/configmgr/comanage/workloads).
 
-If you have a large number of applications to migrate to Microsoft Intune, consider directing end-users to the Company Portal. In the Company Portal, users can see applications assigned from both Configuration Manager and Microsoft Intune.
+If you have a large number of applications to migrate to Microsoft Intune, consider directing end-users to the [Company Portal](/mem/configmgr/comanage/company-portal). In the Company Portal, users can see applications assigned from both Configuration Manager and Microsoft Intune.
 
 <!-- ########################## -->
 ## Next steps
