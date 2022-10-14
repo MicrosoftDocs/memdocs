@@ -46,15 +46,15 @@ This article clarifies when these limits are applied based on your configuration
 
 ## Intune device limit restrictions
 
-Intune device limit restrictions set the maximum number of devices that a user can control (maximum setting is 15). To set this **Device limit**, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md). 
+Intune device limit restrictions set the maximum number of devices that a user can enroll (maximum setting is 15). To set this **Device limit**, go to [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Enrollment restrictions**. For more information, see [Create a device limit restriction](create-device-limit-restrictions.md). 
 
 ## Azure device limit restriction
 
 Azure device limit restrictions set the maximum number of devices that either Azure AD joins or Azure AD registers. To set the **Maximum number of devices per user**, go to the Azure portal > **Azure Active Directory** > **Devices**. For more information, see [Configure device settings](/azure/active-directory/devices/device-management-azure-portal)
 
-## Settings applied based on user affinity
+## Settings applied based on the action triggered by the user
 
-If you have both Intune and Azure device limit restrictions set, the following table shows you what is applied based on your user affinity setting.
+If you have both Intune and Azure device limit restrictions set, the following table shows you what is applied based on the action triggered by user or not (Referred as user affinity which is different from other documents).
 
 | Device platform | User affinity | Azure applies | Intune applies |  
 | ----- | ----- | ----- | ----- |
@@ -88,8 +88,7 @@ If you have both Intune and Azure device limit restrictions set, the following t
 ### iOS or Android devices example 2
 
 - The Azure **Maximum number of devices per user** setting is set to 20.
-- The Intune **Device limit** setting is set to 2.
-
+- The Intune **Device limit** setting is set to 2
 **Outcome:** You can successfully register and enroll two devices. Intune enrollment will be blocked for any additional devices. ADE without user affinity is restricted by Azure device registration limits although it's not associated with a user.
 
 ## Windows devices  
@@ -102,7 +101,7 @@ Intune device limit restrictions don't apply for the following Windows enrollmen
 - Autopilot enrollments
 - Device enrollment manager enrollments
 
-You can't enforce device limit restrictions for these enrollment types because they're considered shared device scenarios. You can set hard limits for these enrollment types in Azure Active Directory.
+You can't enforce device limit restrictions for these enrollment types because the intune enrollment is triggered either automatically or by the administrator. You can set hard limits for these enrollment types in Azure Active Directory.
 
 For the device limit restriction in Azure, the **Maximum number of devices per user** setting applies to devices that are either Azure AD joined or Azure AD registered. This setting doesn't apply to hybrid Azure AD joined devices.  
 
