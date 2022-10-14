@@ -39,6 +39,8 @@ The script deploys to devices as part of your custom compliance policies. When c
 All discovery scripts:
 
 - Are added to Intune before you create a compliance policy. After being added, scripts are available to select when you create a compliance policy with custom settings.
+  -   Each discovery script can only be used with one compliance policy, and each compliance policy can only include one discovery script.
+  -   Discovery scripts that have been assigned to a compliance policy can't be deleted until the script has been unassigned from the policy.
 - Run on a device that receives the compliance policy. The script evaluates the conditions of the JSON file you upload when creating a custom compliance policy.
 - Identify one or more settings, as defined in the JSON, and return a list of discovered values for those settings. A single script can be assigned to each policy, and supports discovery of multiple settings.
 
