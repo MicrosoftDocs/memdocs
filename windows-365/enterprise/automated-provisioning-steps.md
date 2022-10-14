@@ -62,8 +62,8 @@ After core provisioning is complete, Windows 365 optimizes the configuration to 
 3. **Assign user as administrator (when applicable)**:
   ```$Member = 'user@contoso.com'  # use OnPremisesUserPrincipalName```
   ```Add-LocalGroupMember -Group "Administrators" -Member $Member```
-4. **Set Teams for VDI mode**: Hosted desktop optimization (HKLM:\SOFTWARE\Microsoft\Teams\IsWVDEnvironment).
-5. **Enable time zone Redirection**: Enable the setting (HKLM:\Softare\Policies\Microsoft\Windows NT\Terminal Services\ fEnabletimezoneRedirection).
+4. **Set Teams for VDI mode**: Hosted desktop optimization (HKLM:\Software\Microsoft\Teams\IsWVDEnvironment).
+5. **Enable time zone Redirection**: Enable the setting (HKLM:\Software\Policies\Microsoft\Windows NT\Terminal Services\ fEnabletimezoneRedirection).
 6. **Resize OS disk partition to match license**: Resize the OS disk to match the size of the Azure Managed Disk.
 
     ```$DriveLetter = "C"
