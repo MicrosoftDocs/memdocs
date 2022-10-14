@@ -30,7 +30,7 @@ ms.collection: M365-identity-device-management
 
 # Make a user a local admin
 
-The **User settings** page lets IT administrators manage various settings for the user. Currently, the only setting is the option of making the user a local admin in their Cloud PC.  
+The **User settings** page lets IT administrators manage various settings for the user. 
 
 When managing settings, keep the following points in mind:
 
