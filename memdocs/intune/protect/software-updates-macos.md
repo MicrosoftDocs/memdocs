@@ -206,4 +206,4 @@ For each device on the list, the Installation Status displays the error that
 
 ## Next steps
 
-[Monitor device profiles](/intune/configuration/device-profile-monitor.md)
+[Monitor device profiles](../intune/configuration/device-profile-monitor.md)
