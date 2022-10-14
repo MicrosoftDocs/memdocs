@@ -66,6 +66,195 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
+## Week of October 17, 2022 (Service release 2210)
+
+### App management
+
+### Device configuration
+
+#### Filter app and group policy assignments using Windows 11 SE operating system SKUs<!-- 10588651  -->
+
+When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
+
+Two new Windows 11 SE operating system SKU's are available. You can use these SKUs in your assignment filters to include or exclude Windows 11 SE devices from applying group-targeted policies and applications. 
+
+For more information on filters and the device properties you can use, go to:
+
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md)
+- [Device properties, operators, and rule editing when creating filters in Microsoft Endpoint Manager](filters-device-properties.md)
+
+Applies to:
+
+- Windows 11 SE
+
+#### New settings available in the iOS/iPadOS and macOS Settings Catalog <!-- 15514929  -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
+
+New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+New settings include:
+
+**Networking > Cellular**:
+
+- Enable XLAT464
+
+Applies to:
+
+- iOS/iPadOS
+
+**Privacy > Privacy Preferences Policy Control**:
+
+- System Policy App Bundles
+
+Applies to:
+
+- macOS
+
+**Restrictions**:
+
+- Allow Rapid Security Response Installation
+- Allow Rapid Security Response Removal
+
+Applies to:
+
+- iOS/iPadOS
+- macOS
+
+For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+#### New settings for Device Firmware Configuration Interface (DFCI) profiles on Windows devices<!-- 15511597  -->
+
+You can create a DFCI profile that enables the Windows OS to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface) (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates > Device Firmware Configuration Interface**)
+
+You can use this feature to control BIOS settings. There are new settings you can configure in the DFCI policy:
+
+- Cameras:
+  - Front camera
+  - Infrared camera
+  - Rear camera
+
+- Radios:
+  - WWAN
+  - NFC
+
+- Ports
+  - SD Card
+
+For more information on DFCI profiles, go to:
+
+- [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
+- [DFCI profile settings list](../configuration/device-firmware-configuration-interface-windows-settings.md)
+
+Applies to:
+
+- Windows 11 on supported UEFI
+- Windows 10 RS5 (1809) and later on supported UEFI
+
+### Device enrollment
+
+#### iOS/iPadOS Setup Assistant with modern authentication supports Just in Time Registration (public preview)<-- 15515188 -->
+
+Intune supports Just in Time (JIT) Registration for iOS/iPadOS enrollment scenarios that use Setup Assistant with modern authentication. JIT Registration reduces the number of authentication prompts shown to users throughout the provisioning experience, giving them a more seamless onboarding experience. It eliminates the need to have the Company Portal app for Azure AD registration and compliance checks, and establishes single sign-on across the device. JIT Registration is available in public preview for devices enrolling through Apple automated device enrollment and running iOS/iPadOS 13.0 or later. For more information, see [Authentication methods for automated device enrollment](../enrollment/automated-device-enrollment-authentication.md). 
+
+### Device management
+
+#### Manage macOS software updates with Intune<!-- 9801186 -->
+
+You can now use Intune policies to manage macOS software updates for devices that enrolled using Automated Device Enrollment (ADE).  See [Manage macOS software update policies in Intune](../protect/software-updates-macos.md).
+
+Intune supports the following macOS update types:
+
+- Critical updates
+- Firmware updates
+- Configuration file updates
+- All other updates (OS, built-in apps)
+
+In addition to scheduling when a device updates, you’ll can manage behaviors like the following:
+
+- Download and install: Download or install the update, depending on the current state.
+- Download only: Download the software update without installing it.
+- Install immediately: Download the software update and trigger the restart countdown notification.
+- Notify only:  Download the software update and notify the user through the App Store.
+- Install later: Download the software update and install it at a later time.
+- Not configured: No action taken on the software update.
+
+For information from Apple about managing macOS software updates, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web) in the Apple's Platform Deployment documentation.
+Apple maintains a list of security updates at [Apple security updates - Apple Support](https://support.apple.com/en-us/HT201222).
+
+#### Deprovision Jamf Pro from within the Microsoft Endpoint Manager admin center<!-- 3485465  -->
+
+You can now [deprovision your Jamf Pro to Intune integration](../protect/conditional-access-jamf-cloud-connector.md#deprovision-jamf-pro-from-within-the-microsoft-endpoint-manager-admin-center) from within the Microsoft Endpoint Manager admin center. This can be useful should you no longer have access to the Jamf Pro console, through which you can also deprovision integration.
+
+This capability functions similarly to disconnecting Jamf Pro from within the Jamf Pro console, in that after you remove the integration, your organization's Mac devices are removed from Intune after 90 days.
+
+#### New hardware details available for individual devices running on iOS/iPadOS<!-- 15038076  -->
+
+Select **Devices** > **All devices** > *select one of your listed devices* and open it's **Hardware** details. The following new details are available in the **Hardware** pane of individual devices:
+
+- **Battery level**: Shows the battery level of the device anywhere between 0 and 100, or defaults to null if the battery level cannot be determined. This is available for devices running iOS/iPadOS 5.0 and later.
+- **Resident users**: Shows the number of users currently on the shared iPad device, or defaults to null if the number of users cannot be determined. This is available for devices running iOS/iPadOS 13.4 and later.
+
+For more information, go to [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
+
+Applies to
+
+- iOS/iPadOS
+
+### Device security
+
+#### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009541   -->
+
+We've added [reusable groups of settings](../protect/reusable-settings-groups.md) that you can use with [profiles for Microsoft Defender Firewall Rules](../protect/endpoint-security-firewall-policy.md#add-reusable-settings-groups-to-profiles-for-firewall-rules). The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.
+
+Features of the reusable settings groups include:
+
+- Add one or more remote IP addresses.
+
+- Add one or more FQDNs that can auto resolve to the remote IP address, or for one or more simple keywords when auto resolve for the group is off.
+
+- Use each settings group with one or more firewall rule profiles and the different  profiles can support different access configurations for the group.
+
+  For example, you can create two firewall rule profiles that reference the same reusable settings group and assign each profile to a different group of devices. The first profile can block access to all the remote IP addresses in the reusable settings group, while the second profile can be configured to allow access.
+
+- Edits to a settings group that's in use are automatically applied to all Firewall Rules profiles that use that group.  
+
+#### Attack surface reduction rule exclusions on a per-rule basis<!-- 13385644   -->
+
+You can now [configure per-rule exclusions for Attack surface reduction rules policies](../protect/endpoint-security-asr-policy.md#exclusions-for-attack-surface-reduction-rules). Per-rule exclusions are enabled through a new per-rule setting **ASR Only Per Rule Exclusions**.
+
+When you create or edit attack surface reduction rule policies and change a setting that supports exclusions from the default of *Not configured* to any of the other available options, the new per-setting exclusion option becomes available. Any configurations for that settings instance of *ASR Only Per Rule Exclusions* will apply to only that setting.
+
+You can continue to configure global exclusions that apply to all attack surface reduction rules on the device
+by using the setting **Attack Surface Reduction Only Exclusions**.
+
+Applies to:
+
+- Windows 10/11
+
+#### Grant apps permission to silently use certificates on Android Enterprise devices<!-- 12441244    -->
+
+You can now configure silent use of certificates by apps on Android Enterprise devices that enrolled as **Fully Managed, Dedicated, and Corporate-Owned work Profile**.
+
+This capability is available on a new **Apps** page in the certificate profile configuration workflow by setting **Certificate access** to  **Grant silently for specific apps (require user approval for other apps)**.  With this configuration, the apps you then select will silently use the certificate. All other apps continue to use the default behavior which is to require user approval.
+
+This capability is supported for the following certificate profiles for only Android Enterprise Fully Managed, Dedicated, and Corporate-Owned work Profiles:
+
+- [Derived credentials](../protect/derived-credentials.md#use-derived-credentials-for-app-authentication)
+- [Imported PKCS](../protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
+- [PKCS](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile)
+- [SCEP](../protect/certificates-profile-scep#create-a-scep-certificate-profile)
+
+### Intune apps
+
+#### Newly available protected apps for Intune<!-- 15287512, 15448552   -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- MyITOps for Intune by MyITOps, Ltd
+- MURAL - Visual Collaboration by Tactivos, Inc
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ## Week of October 10, 2022
 
