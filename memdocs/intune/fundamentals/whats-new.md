@@ -96,12 +96,13 @@ In the admin center, you can:
 
 #### Non-compliance warning message includes a link<!--13694184  -->
 
-A link has been added to the notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
-
-If the device that the helper is connecting to is not compliant with your organization's assigned security policies, then the non-compliance warning about that device is displayed along with a link.
+In Remote help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
 
 For more information, go to:
-[Monitor Device compliance](../protect/compliance-policy-monitor.md)
+
+ - [Microsoft Intune Remote Help](../remote-actions/remote-help.md)
+
+ - [Monitor Device compliance](../protect/compliance-policy-monitor.md)
 
 Applies to:
 **Windows 10/11**
