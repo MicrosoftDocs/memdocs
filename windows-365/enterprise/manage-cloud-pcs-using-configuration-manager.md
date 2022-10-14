@@ -38,7 +38,7 @@ For more information about co-management and how to set it up, see [What is co-m
 
 To manage Cloud PCs by using Configuration Manager co-management, you must meet the following requirements:
 
-- In Configuration Manager, disable  Enable automatic site-wide client push installation. For more information, see [How to deploy clients to Windows computers in Configuration Manager](/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers).
+- In Configuration Manager, disable **Enable automatic site-wide client push installation**. For more information, see [How to deploy clients to Windows computers in Configuration Manager](/mem/configmgr/core/clients/deploy/deploy-clients-to-windows-computers).
 - Make sure that each Cloud PC user has been assigned both a Cloud PC license and an Intune license. Cloud PC provisioning will fail if the user doesn’t have both licenses. The Enrollment Status Page (ESP) will also fail.
 - [Enable co-management in Configuration Manager](/mem/configmgr/comanage/how-to-enable).
 - Distribute the ccmsetup.msi installer as a Line-of-Business (LOB) client app from Microsoft Intune. For more information, see How to [Install the Configuration Manager client](/mem/configmgr/comanage/how-to-prepare-win10#install-the-configuration-manager-client).
