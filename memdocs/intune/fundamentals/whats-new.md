@@ -243,7 +243,7 @@ This capability is supported for the following certificate profiles for only And
 - [Derived credentials](../protect/derived-credentials.md#use-derived-credentials-for-app-authentication)
 - [Imported PKCS](../protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)
 - [PKCS](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile)
-- [SCEP](../protect/certificates-profile-scep#create-a-scep-certificate-profile)
+- [SCEP](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile)
 
 ### Intune apps
 
