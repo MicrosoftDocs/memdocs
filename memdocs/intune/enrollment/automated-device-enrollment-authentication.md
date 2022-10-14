@@ -108,7 +108,7 @@ Complete these steps to configure Just in Time (JIT) Registration for Setup Assi
 1. Sign in to the Microsoft Endpoint Manager admin center. 
 2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
 3. For **SSO app extension type**, select **Microsoft Azure AD**.
-4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps) for the apps using single sign-on (SSO). For best practices and important considerations, see [Best practices for SSO configuration](automated-device-enrollment-authentication.md#best-practices-for-sso-configuration) in this article.  
+4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps.md) for the apps using single sign-on (SSO). For best practices and important considerations, see [Best practices for SSO configuration](automated-device-enrollment-authentication.md#best-practices-for-sso-configuration) in this article.  
 5. Under **Additional configuration**, add the required key value pair:  
     * **Key**: device_registration
     * **Type**: String
