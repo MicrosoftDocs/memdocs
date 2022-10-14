@@ -8,7 +8,7 @@ keywords:
 author: Erikre
 ms.author: erikre
 manager: dougeby
-ms.date: 03/29/2022
+ms.date: 10/14/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: apps
@@ -81,7 +81,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     > Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
 13. Click **Next** to display the **Assignments** page.
-14. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to.<p>
+14. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to. You can also use [filters](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.<p>
 
     <img alt="Screenshot of policy assignments - Assignments" src="./media/app-configuration-policies-use-ios/app-config-policy01.png" width="700">
 
