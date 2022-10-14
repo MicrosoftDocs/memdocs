@@ -54,7 +54,7 @@ Azure device limit restrictions set the maximum number of devices that either Az
 
 ## Settings applied based on the action triggered by the user
 
-If you have both Intune and Azure device limit restrictions set, the following table shows you what is applied based on the action triggered by user or not (Referred as user affinity which is different from other documents).
+If you have both Intune and Azure device limit restrictions set, the following table shows you what is applied based on the action triggered or not triggered by the user (referred to as user affinity, which is different from other documents).
 
 | Device platform | User affinity | Azure applies | Intune applies |  
 | ----- | ----- | ----- | ----- |
