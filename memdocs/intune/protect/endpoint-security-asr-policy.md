@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 05/23/2022
+ms.date: 10/17/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -114,6 +114,35 @@ Reducing your attack surface means offering attackers fewer ways to perform atta
   To learn more, see [How to control USB devices and other removable media using Microsoft Defender for Endpoint](/windows/security/threat-protection/device-control/control-usb-devices-using-intune) in the Microsoft Defender for Endpoint documentation.
 
 - **Exploit protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of a number of mitigations that can be applied to either the operating system or individual apps.
+
+#### Exclusions for Attack Surface Reduction Rules
+
+Intune supports the following two settings to exclude specific file and folder paths from evaluation by Attack Surface Reduction rules:
+
+- **Global**: Use **Attack Surface Reduction Only Exclusions**.
+
+  :::image type="content" source="./media/endpoint-security-asr-policy/global-asr-rule-exclusion.png" alt-text="Screen capture of the Attack Surface Reduction Only Exclusions setting.":::
+
+  When a device is assigned at least one policy that configures **Attack Surface Reduction Only Exclusions**, the configured exclusions apply to all attack surface reduction rules that target that device. This occurs because devices receive a superset of attack surface reduction rule settings from all applicable policies, and the settings exclusions cannot be managed for individual settings.  To avoid having exclusions applied to all settings on a device, do not use this setting and instead configure **ASR Only Per Rule Exclusions** for individual settings.
+
+  For more information, see the documentation for the Defender CSP: [Defender/AttackSurfaceReductionOnlyExclusions](/windows/client-management/mdm/policy-csp-Defender#defender-attacksurfacereductiononlyexclusions).
+
+- **Individual settings**: Use **ASR Only Per Rule Exclusions**
+
+  :::image type="content" source="./media/endpoint-security-asr-policy/individual-rule-exclusion.png" alt-text="Screen capture of the ASR Only \Per Rule Exclusions setting.":::
+
+  When you set an applicable setting in an attack surface reduction rule profile to anything other than *Not configured*, Intune presents the option to use **ASR Only Per Rule Exclusions** for that individual setting. With this option, you can configure a file and folder exclusion that are isolated to individual settings, which is in contrast to use of the global setting **Attack Surface Reduction Only Exclusions** which applies its exclusions to all settings on the device.
+
+  By default, **ASR Only Per Rule Exclusions** is set to **Not configured**.
+  
+  <!-- 
+  For more information, see the documentation for the Defender CSP  [Defender/ASROnlyPerRuleExclusions](/windows/client-management/mdm/policy-csp-Defender#defender-asronlyperruleexclusions). 
+  -->
+
+<!--
+**When both settings are configured and apply to a device**:
+Behavior details pending. 
+-->
 
 ### Devices managed by Configuration Manager
 
