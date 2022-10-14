@@ -102,7 +102,7 @@ Intune device limit restrictions don't apply for the following Windows enrollmen
 - Autopilot enrollments
 - Device enrollment manager enrollments
 
-You can't enforce device limit restrictions for these enrollment types because the intune enrollment is triggered either automatically or by the administrator. You can set hard limits for these enrollment types in Azure Active Directory.
+You can't enforce device limit restrictions for these enrollment types because Intune enrollment is triggered either automatically or by the administrator. You can set hard limits for these enrollment types in Azure Active Directory.
 
 For the device limit restriction in Azure, the **Maximum number of devices per user** setting applies to devices that are either Azure AD joined or Azure AD registered. This setting doesn't apply to hybrid Azure AD joined devices.  
 
