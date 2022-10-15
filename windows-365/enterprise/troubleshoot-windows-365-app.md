@@ -32,6 +32,9 @@ ms.collection: M365-identity-device-management
 
 This article describes issues with the Windows 365 app ([preview](../public-preview.md)) for Windows client and how to fix them.
 
+> [!Note]
+> We do see issues occuring when users have the Remote Desktop Client and the Windows 365 app installed. We are working on fixing this, you can find the solution here. 
+
 ## Limitations
 
 The Windows 365 app doesn't currently support:
@@ -40,7 +43,12 @@ The Windows 365 app doesn't currently support:
 - Windows 11 IoT
 - Configuring Remote Desktop Protocol properties.
 
-## The Windows 365 app doesn’t start the Cloud PC session
+## Connect button gives error "Can't connect to Cloud PC error"
+To fix this issue, go to Windows Settings -> Apps -> Default apps and update the default app for .avd file for AVD host app. Also, make sure to run this command to remove old Remote Desktop Client cache that could cause this issue.
+
+reg delete "HKEY_CLASSES_ROOT\progF3672D4C2FFE4422A53C78C345774E2D" /f
+
+## The Windows 365 app asks to select a new default app 
 
 When the Remote Desktop Client is installed, you'll see a file type association message after trying to connect to your Cloud PC. Make sure to select **Azure Virtual Desktop (HostApp)** to launch the Cloud PC session.
 
