@@ -228,7 +228,7 @@ When you onboard devices to Microsoft Defender for Endpoint with Configuration M
    :::image type="content" source="media/5229962-onboarding-configuration.png" alt-text="Onboarding configuration file download" lightbox="media/5229962-onboarding-configuration.png":::
 1. Download the compressed archive (.zip) file and extract the contents.
 1. Select **Settings**, then select **Onboarding** under the **Device management** heading.
-1. For the operating system, select either **Windows 7 SP1 and 8.1** or **Windows Server 2008 R2 SP1** or **Windows Server 2012 R2 and 2016** from the list.
+1. For the operating system, select either **Windows 7 SP1 and 8.1**, **Windows Server 2008 R2 SP1**, or **Windows Server 2012 R2 and 2016** from the list.
    - The **Workspace key** and **Workspace ID** will be the same regardless of which of these options you choose.
 1. Copy the values for the **Workspace key** and **Workspace ID** from the **Configure connection** section.
 
