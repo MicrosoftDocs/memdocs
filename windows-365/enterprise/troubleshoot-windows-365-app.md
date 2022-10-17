@@ -45,7 +45,7 @@ The Windows 365 app doesn't currently support:
 
 ## Can't connect to Cloud PC error
 
-You may get a **Can't connect to Cloud PC" error when you select the **Connect** button.
+You may get a **Can't connect to Cloud PC** error when you select the **Connect** button.
 
 To fix this issue:
 
