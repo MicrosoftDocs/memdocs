@@ -93,11 +93,11 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 
 18. [Optional] Click **Edit filter** to add a [filter](../fundamentals/filters.md) and refine the assignment scope.
 
-    <img alt="Screenshot of policy assignments - Select groups to exclude pane" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-04.png" width="400">
+    <img alt="Screenshot of policy assignments - Edit filter" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-04.png" width="400">
 
 16. Click **Select groups to exclude** to display the related pane.<p>
 
-    <img alt="Screenshot of policy assignments - Select groups to exclude pane" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-05.png" width="400">
+    <img alt="Screenshot of policy assignments - Select groups to exclude page" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-05.png" width="400">
 
 17. Choose the groups you want to exclude and then click **Select**.
 

@@ -76,19 +76,19 @@ Once you have selected the included groups for your application configuration po
 10. Click **Next** to display the **Assignments** page.
 11. On the **Assignments** page, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you've selected an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
-    ![Screenshot of configuration policy assignments page](./media/app-configuration-policies-use-ios/app-config-policy01.png)
+    <img alt="Screenshot of configuration policy assignments page" src="./media/app-configuration-policies-use-ios/app-config-policy01.png" width="800">
 
 12. Select **All users** in the dropdown box.
 
-    ![Screenshot of Policy assignments - All Users dropdown option](./media/app-configuration-policies-use-ios/app-config-policy02.png)
+    <img alt="Screenshot of Policy assignments - All Users dropdown option" src="./media/app-configuration-policies-use-ios/app-config-policy02.png" width="800">
 
 13. [Optional] Click **Edit filter** to add a [filter](../fundamentals/filters.md) and refine the assignment scope.
 
-    ![Screenshot of Policy assignments - Edit filter](./media/app-configuration-policies-use-ios/app-config-policy02a.png)
+    <img alt="Screenshot of Policy assignments - Edit filter" src="./media/app-configuration-policies-use-ios/app-config-policy02a.png" width="400">
 
 14. Click **Select groups to exclude** to display the related pane.
 
-    ![Screenshot of Policy assignments - Select groups to exclude pane](./media/app-configuration-policies-use-ios/app-config-policy03.png)
+    <img alt="Screenshot of Policy assignments - Select groups to exclude pane" src="./media/app-configuration-policies-use-ios/app-config-policy03.png" width="400">
 
 15. Choose the groups you want to exclude and then click **Select**.
 
