@@ -130,7 +130,7 @@ Verify that enrollment is enabled for corporate-owned, fully managed devices.
 4. Verify that the setting for **Allow users to enroll corporate-owned user devices**, is set to **Yes**.             
 
 #### Step 3: Link zero-touch account to Intune    
-Link a zero-touch account with your Microsoft Intune account. Upon linking the account, Intune creates a default zero-touch configuration.   
+Link a zero-touch account with your Microsoft Intune account.   
 
 1. In the admin center, go to **Devices** > **Enroll devices**.  
 2. Select **Android enrollment**. 
@@ -140,14 +140,14 @@ Link a zero-touch account with your Microsoft Intune account. Upon linking the a
 5. Select the zero-touch account you want to link, and then select **Link**.  
 6. A default configuration is created. A screen appears with basic information about the configuration. Intune will automatically apply the default configuration to any zero-touch enabled device that's without an existing configuration.  
 
-> [!TIP]
-> The token used for the default configuration is meant for a fully managed device. If you want to create a zero-touch configuration for a corporate-owned work profile device or a dedicated device, select **View devices in the zero-touch portal**. For next steps, see [Create configuration in zero-touch enrollment portal](android-dedicated-devices-fully-managed-enroll.md#create-configuration-in-zero-touch-enrollment-portal) in this article.  
+   > [!CAUTION]
+   > The token used for the default configuration is meant for a fully managed device. Once your link your account, the default zero-touch configuration created in Intune overrules the default configuration profile set in the zero-touch enrollment portal. If you want to create a zero-touch configuration for a corporate-owned work profile device or a dedicated device, don't link your account to Intune. Instead, select **View devices in the zero-touch portal**. Then continue to [Create configuration in zero-touch enrollment portal](android-dedicated-devices-fully-managed-enroll.md#create-configuration-in-zero-touch-enrollment-portal) in this article for next steps.  
 
 7. Select **Next** to continue.  
 8. Add support information to assist device users during setup.  
 9. Select **Save**.  
 
-Once your account is linked with Intune, the default configuration is applied to zero-touch enabled devices that do not already have a configuration. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center.   
+Once your account is linked with Intune, the default configuration is applied to zero-touch enabled devices that do not already have a configuration, and to future devices added by a reseller. You can view existing zero-touch configurations, edit support information, unlink the account, and link other accounts in the admin center. 
 
 ### Create configuration in zero-touch enrollment portal        
 
