@@ -66,13 +66,12 @@ Android (AOSP) device users can receive compliance notifications in the Microsof
 >
 > Notifications are not support for userless devices.
 
-In app notifications fall into 2 categories:
+In app notifications fall into two categories:
 - Device compliance
 - Organization notification
 
 ### Device compliance
-You can receive device compliance notifications to your AOSP device. For instance, you can receive events when your device is out of compliance or when workplace-join is needed.
-events like Device out of compliance, Workplace join needed
+You can receive device compliance notifications to your AOSP device. For example, you can receive events when your device is out of compliance or when your device needs to be workplace-joined.
 
 ### Organization notification
 You can receive organization notifications to your AOSP device. Organization notifications can be dismissed and deleted.
