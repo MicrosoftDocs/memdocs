@@ -84,7 +84,7 @@ In both scenarios, the Company Portal installation option is hidden from the dev
 
 ### Multi-factor authentication  
 
-Multi-factor authentication (MFA) will required if a [conditional access policy that requires it](multi-factor-authentication.md) is applied at enrollment or during Company Portal sign-in. However, MFA is optional based on the Azure AD settings in the targeted conditional access policy.  
+Multi-factor authentication (MFA) will be required if a [conditional access policy that requires it](multi-factor-authentication.md) is applied at enrollment or during Company Portal sign-in. However, MFA is optional based on the Azure AD settings in the targeted conditional access policy.  
 
 MFA won't work for Setup Assistant with modern authentication if you're using a 3rd party MFA provider to present the MFA screen during enrollment. Only the Azure AD MFA screen works during enrollment.  
 
