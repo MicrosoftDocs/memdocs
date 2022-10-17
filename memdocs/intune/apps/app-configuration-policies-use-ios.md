@@ -71,26 +71,32 @@ Once you have selected the included groups for your application configuration po
     - **Use configuration designer**
     - **Enter XML data**<br><br>
     For details about using the configuration designer, see [Use configuration designer](#use-configuration-designer). For details about entering XML data, see [Enter XML data](#enter-xml-data). 
-9. Click **Next** to display the **Assignments** page.
-10. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to. You can also use [filters](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
+9. Click **Next** to display the **Scope tags** page.
+9. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+10. Click **Next** to display the **Assignments** page.
+11. On the **Assignments** page, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you've selected an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
-    ![Screenshot of Policy assignments Include tab](./media/app-configuration-policies-use-ios/app-config-policy01.png)
+    ![Screenshot of configuration policy assignments page](./media/app-configuration-policies-use-ios/app-config-policy01.png)
 
-11. Select **All users** in the dropdown box.
+12. Select **All users** in the dropdown box.
 
     ![Screenshot of Policy assignments - All Users dropdown option](./media/app-configuration-policies-use-ios/app-config-policy02.png)
 
-12. Click **Select groups to exclude** to display the related pane.
+13. [Optional] Click **Edit filter** to add a [filter](../fundamentals/filters.md) and refine the assignment scope.
+
+    ![Screenshot of Policy assignments - Edit filter](./media/app-configuration-policies-use-ios/app-config-policy02a.png)
+
+14. Click **Select groups to exclude** to display the related pane.
 
     ![Screenshot of Policy assignments - Select groups to exclude pane](./media/app-configuration-policies-use-ios/app-config-policy03.png)
 
-13. Choose the groups you want to exclude and then click **Select**.
+15. Choose the groups you want to exclude and then click **Select**.
 
     >[!NOTE]
     >When adding a group, if any other group has already been included for a given assignment type, it is pre-selected and unchangeable for other include assignment types. Therefore, that group that has been used, cannot be used as an excluded group.
 
-14. Click **Next** to display the **Review + create** page.
-15. Click **Create** to add the app configuration policy to Intune.
+16. Click **Next** to display the **Review + create** page.
+17. Click **Create** to add the app configuration policy to Intune.
 
 ## Use configuration designer
 

@@ -73,25 +73,31 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 
 12. If you need to enable users to connect the targeted app across both the work and personal profiles, select **Enabled** next to **Connected apps**.<p>
 
-    <img alt="Screenshot of configuration policy - Settings" src="./media/app-configuration-policies-use-ios/app-config-policy01a.png" width="700">
+    <img alt="Screenshot of configuration policy - Settings" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-01.png" width="700">
 
     > [!NOTE]
     > This setting only works for personally-owned work profile and corporate-owned work profile devices.
     > 
     > Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
-13. Click **Next** to display the **Assignments** page.
-14. In the dropdown box next to **Assign to**, select either **Selected groups**, **All users**, **All devices**, or **All users and all devies** to assign the app configuration policy to. You can also use [filters](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.<p>
+13. Click **Next** to display the **Scope tags** page.
+14. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+15. Click **Next** to display the **Assignments** page. 
+16. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you've selected an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.<p>
 
-    <img alt="Screenshot of policy assignments - Assignments" src="./media/app-configuration-policies-use-ios/app-config-policy01.png" width="700">
+    <img alt="Screenshot of policy assignments - Assignments" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-02.png" width="700">
 
-15. Select **All users** in the dropdown box.<p>
+17. Select **All users** in the dropdown box.<p>
 
-    <img alt="Screenshot of policy assignments - All Users dropdown option" src="./media/app-configuration-policies-use-ios/app-config-policy02.png" width="700">
+    <img alt="Screenshot of policy assignments - All Users dropdown option" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-03.png" width="700">
+
+18. [Optional] Click **Edit filter** to add a [filter](../fundamentals/filters.md) and refine the assignment scope.
+
+    <img alt="Screenshot of policy assignments - Select groups to exclude pane" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-04.png" width="400">
 
 16. Click **Select groups to exclude** to display the related pane.<p>
 
-    <img alt="Screenshot of policy assignments - Select groups to exclude pane" src="./media/app-configuration-policies-use-ios/app-config-policy03.png" width="400">
+    <img alt="Screenshot of policy assignments - Select groups to exclude pane" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-05.png" width="400">
 
 17. Choose the groups you want to exclude and then click **Select**.
 
