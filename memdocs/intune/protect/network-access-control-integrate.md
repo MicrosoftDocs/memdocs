@@ -98,6 +98,32 @@ Other NAC products might require you include a device ID when using NAC with iOS
 
 To learn more about certificate profiles, see: [Use SCEP certificate profiles with Microsoft Intune](../protect/certificates-profile-scep.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../protect/certificates-pfx-configure.md)
 
+## Data shared with NAC partners
+
+The specific device properties that are shared with NAC partners depend on the version of the NAC API the NAC product uses. Contact your NAC partner for more information on which version of the NAC or Compliance Retrieval API your NAC product uses.
+
+Also, the data returned will be limited if:
+- The device isn't enrolled in Intune. In this case, no information other than that the device isn't managed by Intune will be shared with the NAC product.
+- The OS prevents the specific device property from being shared with Microsoft. Intune will share empty values back to the NAC product for data properties not shared with Intune by the OS.
+
+| Device property | Available in NAC 1.0 | Available in NAC 1.1 | Available in NAC 1.3 | Available in Compliance Retrieval/NAC 2.0 |
+|--|--|--|--|--|
+| Compliance state | Yes | Yes | Yes | Yes |
+| Managed by Intune | Yes | Yes | Yes | Yes |
+| Personal or corporate ownership | No | Yes | Yes | No |
+| MAC address | Yes | Yes | Yes | No |
+| Serial number | Yes | Yes | Yes | No |
+| IMEI | Yes | Yes | Yes | No |
+| UDID | Yes | Yes | Yes | No |
+| MEID | Yes | Yes | Yes | No |
+| OS version | Yes | Yes | Yes | No |
+| Device model | Yes | Yes | Yes | No |
+| Manufacturer | Yes | Yes | Yes | No |
+| Azure Active Directory device ID | Yes | Yes | Yes | No |
+| Last contact time with Intune | Yes | Yes | Yes | No |
+| Intune device ID | No | No | No | Yes |
+
+
 ## Next steps
 
 - [Integrate Cisco ISE with Intune](https://www.cisco.com/c/en/us/td/docs/security/ise/UEM-MDM-Server-Integration/b_MDM_UEM_Servers_CiscoISE/chapter.html#task_og1_5zx_cqb)
