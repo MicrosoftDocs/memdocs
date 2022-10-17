@@ -89,7 +89,7 @@ After they go through the Setup Assistant screens, the device user lands on the 
 - Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.  
 
 ## Option 4: Just in Time (JIT) Registration for Setup Assistant with modern authentication
-This option is the same as Setup Assistant with modern authentication, except that Company Portal isn't required. Instead, Azure AD registration and compliance checks are fully integrated in a designated app that's configured with the Apple single-sign on (SSO) extension. Intune uses the Apple single sign-on (SSO) extension to reduce authentication prompts and establish SSO across the whole device:  
+This option is the same as Setup Assistant with modern authentication, except that Company Portal isn't required. Instead, Azure AD registration and compliance checks are fully integrated in a designated app that's configured with the Apple single sign-on (SSO) app extension. The extension reduces authentication prompts and establishes SSO across the whole device.    
 
 * The first authentication handles enrollment and user-device affinity, and happens when the device user turns on their device and signs into Setup Assistant.  
 * The second authentication handles Azure AD registration and happens when the user signs into the designated app. Compliance checks are also done in this app. 

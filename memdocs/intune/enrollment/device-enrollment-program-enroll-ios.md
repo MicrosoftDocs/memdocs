@@ -63,21 +63,21 @@ Before you create the enrollment profile, you must have:
 * Access to [Apple Business Manager portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/). 
 * An active Apple token (.p7m file). 
     * For steps, see [Get an Apple Automated Device Enrollment token](device-enrollment-program-enroll-ios.md#get-an-apple-automated-device-enrollment-token) (in this article).  
-* New or wiped devices purchased from Apple Business Manager or Apple School Manager.  
 * An [Apple MDM push certificate in Intune](../enrollment/apple-mdm-push-certificate-get.md).  
+* New or wiped devices purchased from Apple Business Manager or Apple School Manager.  
+     >[!Tip]
+     >Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
+
 
 ## Before you begin      
-Read through the enrollment requirements and best practices to prepare for a successful setup and deployment.   
+Read through these enrollment requirements and best practices to prepare for a successful setup and deployment.    
 
-### Wipe used devices  
-Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state. For more information, see [Deployment guide: Enroll iOS and iPadOS devices](../fundamentals/deployment-guide-enrollment-ios-ipados.md). 
-
-### Select an authentication method  
-Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication. For more information about authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
+### Choose an authentication method  
+Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication. For more details, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
 
 Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app. You'll need to create the device configuration policy for JIT Registration before you create the enrollment profile. For more information, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration).  
 
-Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use **Setup Assistant (legacy)** authentication.  
+Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use Setup Assistant (legacy) for authentication.  
 
 ### What is supervised mode?   
 Supervised mode provides more management control over corporate-owned devices, so you can do things like block screen captures and restrict AirDrop. 
@@ -115,14 +115,14 @@ To enable automatic app updates for Company Portal, go to your app token setting
 If you experience sync problems during the enrollment process, you can look for solutions at [Troubleshoot iOS/iPadOS device enrollment problems](/troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors#error-messages). 
 
 
-## Get an Apple Automated Device Enrollment token
+## Get an Apple automated device enrollment token
 
-Before you can enroll iOS/iPadOS devices with ADE, you need an ADE token (.p7m) file from Apple. This token lets Intune sync information about ADE devices that your corporation owns. It also allows Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
+Before you can enroll iOS/iPadOS devices with ADE, you need an automated device enrollment token (.p7m file) from Apple. This token lets Intune sync information about ADE devices that your organization owns. It also allows Intune to upload enrollment profiles to Apple and to assign devices to those profiles.
 
-You use the [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School Manager (ASM)](https://school.apple.com/) portal to create a token. You also use the ABM or ASM portal to assign devices to Intune for management.
+Use [Apple Business Manager (ABM)](https://business.apple.com/) or [Apple School Manager (ASM)](https://school.apple.com/) to create a token and assign devices to Intune for management.
 
 > [!NOTE]
-> You can use either the ABM portal or the ASM portal to enable ADE. The rest of this article refers to the ABM portal, but the steps are the same for both portals.
+> You can use either the ABM portal or the ASM portal to enable ADE. The rest of this article refers to the ABM portal, but the steps are the same for both portals. 
 
 ### Step 1: Download the Intune public key certificate
 
