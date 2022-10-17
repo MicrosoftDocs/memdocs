@@ -54,7 +54,7 @@ No matter which method you use, the policies will be enforced on the Cloud PC En
 4. Under **Cloud apps or actions**, select **No cloud apps, action, or authentication contexts selected**.
 5. Select **Cloud apps** > **Include** > **Select apps**.
 6. In the **Select** pane, search for and select both the following apps:
-    - **Windows 365** (you can also search for "cloud" to find this app).
+    - **Windows 365**
     - **Windows Virtual Desktop** (this may also appear as **Azure Virtual Desktop**)
 
     By choosing both of these apps, you make sure that the policy applies to the Cloud PC End-user portal and the connection to the Cloud PC. If you want to exclude apps, you must also choose both these apps.
