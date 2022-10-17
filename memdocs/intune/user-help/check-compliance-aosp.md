@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/19/2022
+ms.date: 10/17/2022
 ms.topic: end-user-help
 ms.service: microsoft-intune
 ms.subservice: end-user
@@ -56,3 +56,23 @@ Complete these steps to check device settings or refresh your compliance status.
 4. After the check, your device settings status will either read, **In Compliance** or **Not in Compliance**. 
 
     If you're required to make any changes, a message will appear at the top of the screen. Tap it for more details. 
+
+## Compliance notifications
+
+Android (AOSP) device users can receive compliance notifications in the Microsoft Intune app. Device notifications are persistent until the issue has been addressed.
+
+> [!NOTE]
+> Compliance notifications are only available on Android Open Source Project (AOSP) user-based devices.
+>
+> Notifications are not support for userless devices.
+
+In app notifications fall into 2 categories:
+- Device compliance
+- Organization notification
+
+### Device compliance
+You can receive device compliance notifications to your AOSP device. For instance, you can receive events when your device is out of compliance or when workplace-join is needed.
+events like Device out of compliance, Workplace join needed
+
+### Organization notification
+You can receive organization notifications to your AOSP device. Organization notifications can be dismissed and deleted.
