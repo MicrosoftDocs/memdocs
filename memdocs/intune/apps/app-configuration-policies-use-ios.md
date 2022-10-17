@@ -100,7 +100,7 @@ Once you have selected the included groups for your application configuration po
 
 ## Use configuration designer
 
-Microsoft Intune provides configuration settings that are unique to an app. You can use the configuration designer for apps on devices that are enrolled or not enrolled in Microsoft Intune. The designer lets you configure specific configuration keys and values that helps you create the underlying XML. You must also specify the data type for each value. These settings are supplied to apps automatically when the apps are installed.
+Microsoft Intune provides configuration settings that are unique to an app. You can use the configuration designer for apps on devices that are enrolled or not enrolled in Microsoft Intune. The designer lets you configure specific configuration keys and values that help you create the underlying XML. You must also specify the data type for each value. These settings are supplied to apps automatically when the apps are installed.
 
 ### Add a setting
 
