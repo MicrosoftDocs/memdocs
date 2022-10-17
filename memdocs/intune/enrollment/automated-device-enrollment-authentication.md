@@ -35,16 +35,14 @@ ms.collection:
 
 *Applies to iOS/iPadOS*  
 
-This article describes the authentication methods available for iOS/iPadOS devices enrolled in Intune via automated device enrollment. During authentication, users sign in and devices go through Azure AD registration, Intune enrollment, and compliance checks. 
-
-Available authentication methods include: 
+This article describes the authentication methods available for iOS/iPadOS devices enrolled in Intune via automated device enrollment. Available authentication methods include: 
 
 * Intune Company Portal app 
 * Setup Assistant with modern authentication
 * Just in Time (JIT) Registration for Setup Assistant with modern authentication 
 * Setup Assistant (legacy)
 
-All methods are for corporate-owned devices with user affinity and purchased through Apple Business Manager or Apple School Manager.   
+All methods are available for corporate-owned devices with user affinity and purchased through Apple Business Manager or Apple School Manager.   
 
 ## Option 1: Intune Company Portal app  
 
@@ -98,7 +96,7 @@ After they go through the Setup Assistant screens, the device user lands on the 
 - Won’t be evaluated for device compliance.  
 - Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.  
 
-## Option 3: Just in Time (JIT) Registration for Setup Assistant with modern authentication
+## Option 3: Just in Time Registration for Setup Assistant with modern authentication
 This option is the same as Setup Assistant with modern authentication, except that Company Portal isn't required. Instead, Azure AD registration and compliance checks are fully integrated in a designated app that's configured with the Apple single sign-on (SSO) app extension. The extension reduces authentication prompts and establishes SSO across the whole device.    
 
 * The first authentication handles enrollment and user-device affinity, and happens when the device user turns on their device and signs into Setup Assistant.  

@@ -70,7 +70,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 A link has been added to the notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
 
-If the device that the helper is connecting to is is not compliant with your organization's assigned security policies, then the non-compliance warning about that device is displayed along with a link. 
+If the device that the helper is connecting to is not compliant with your organization's assigned security policies, then the non-compliance warning about that device is displayed along with a link. 
 
 For more information, go to:
 [Monitor Device compliance](../protect/compliance-policy-monitor.md)
