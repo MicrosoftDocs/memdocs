@@ -191,7 +191,7 @@ items:
         href: report-resource-performance.md
       - name: Remoting connection report
         href: report-remoting-connection.md
-      - name: Cloud utilization report
+      - name: Cloud PC utilization report
         href: report-cloud-pc-utilization.md
       - name: Cloud PC connection quality report
         href: report-cloud-pc-connection-quality.md
