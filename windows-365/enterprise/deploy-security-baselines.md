@@ -36,7 +36,7 @@ Windows 365-branded security baselines are a group of tested and validated recom
 
 - Microsoft Defender for Endpoint settings: version 6
 - Microsoft Edge settings: September 2020 (Microsoft Edge version 85 and later)
-- Windows 365 Security Baseline: November 2021 (Windows 10 or later)
+- Windows 365 Security Baseline: November 2021 (Windows 10 and later)
 
 You can optionally apply Windows 365 security baselines to the Azure AD groups containing Cloud PC devices in your tenant.  
 
