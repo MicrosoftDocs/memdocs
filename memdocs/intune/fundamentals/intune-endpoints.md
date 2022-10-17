@@ -57,6 +57,73 @@ You can modify proxy server settings on individual client computers. You can als
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
+To make it easier to configure services through firewalls, we have onboarded with the Office 365 Endpoint service. At this time, the Intune services are accessed through a PowerShell script. There are other dependent services for Intune which are already covered as part of the M365 Service and are marked as 'required'. Services already covered by M365 are not included in the script to avoid duplication.
+By using the following PowerShell script, you can retrieve the list of IP addresses for the Intune service. This provides the same list as the subnets indicated in the IP address table below.
+
+```PowerShell
+(invoke-restmethod -Uri (“https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM&clientrequestid=” + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.ips} | select -unique -ExpandProperty ips
+```
+
+By using the following PowerShell script, you can retrieve the list of FQDNs used by Intune and Autopilot.
+
+```PowerShell
+(invoke-restmethod -Uri (“https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM&clientrequestid=” + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
+```
+
+This provides a convenient method to list and review all services required by Intune and autopilot in one location. You will also need FQDN's that are covered as part of M365 Requirements. For reference this is the list of URL's returned, and the service they are tied to.
+
+|FQDN    |Associated Service      |
+|-----------|----------------|
+|*.manage.microsoft.com| Intune Service |
+|manage.microsoft.com| Intune Service |
+|*.delivery.mp.microsoft.com| Delivery Optimization |
+|*.prod.do.dsp.mp.microsoft.com| Delivery Optimization |
+|*.update.microsoft.com| Delivery Optimization |
+|*.windowsupdate.com| Delivery Optimization |
+|emdl.ws.microsoft.com| Delivery Optimization |
+|tsfe.trafficshaping.dsp.mp.microsoft.com| Delivery Optimization |
+|time.windows.com| NTP Sync |
+|www.msftconnecttest.com| NTP Sync |
+|www.msftncsi.com| NTP Sync |
+|*.s-microsoft.com| Windows Notifications & Store |
+|clientconfig.passport.net| Windows Notifications & Store |
+|windowsphone.com| Windows Notifications & Store |
+|approdimedatahotfix.azureedge.net| Scripts & Win32 Apps |
+|approdimedatapri.azureedge.net| Scripts & Win32 Apps |
+|approdimedatasec.azureedge.net| Scripts & Win32 Apps |
+|euprodimedatahotfix.azureedge.net| Scripts & Win32 Apps |
+|euprodimedatapri.azureedge.net| Scripts & Win32 Apps |
+|euprodimedatasec.azureedge.net| Scripts & Win32 Apps |
+|naprodimedatahotfix.azureedge.net| Scripts & Win32 Apps |
+|naprodimedatapri.azureedge.net| Scripts & Win32 Apps |
+|naprodimedatasec.azureedge.net| Scripts & Win32 Apps |
+|*.notify.windows.com| Push Notifications |
+|*.wns.windows.com| Push Notifications |
+|*.dl.delivery.mp.microsoft.com| Delivery Optimization |
+|*.do.dsp.mp.microsoft.com| Delivery Optimization |
+|*.emdl.ws.microsoft.com| Delivery Optimization |
+|ekcert.spserv.microsoft.com| Autopilot Self-deploy |
+|ekop.intel.com| Autopilot Self-deploy |
+|ftpm.amd.com| Autopilot Self-deploy |
+|*.itunes.apple.com| Apple Device Management |
+|*.mzstatic.com| Apple Device Management |
+|*.phobos.apple.com| Apple Device Management |
+|5-courier.push.apple.com| Apple Device Management |
+|ax.itunes.apple.com.edgesuite.net| Apple Device Management |
+|itunes.apple.com| Apple Device Management |
+|ocsp.apple.com| Apple Device Management |
+|phobos.apple.com| Apple Device Management |
+|phobos.itunes-apple.com.akadns.net| Apple Device Management |
+|intunecdnpeasd.azureedge.net|  |
+|*.channelservices.microsoft.com| Remote Help |
+|*.go-mpulse.net| Remote Help |
+|*.infra.lync.com| Remote Help |
+|*.resources.lync.com| Remote Help |
+|*.support.services.microsoft.com| Remote Help |
+|*.trouter.skype.com| Remote Help |
+|*.vortex.data.microsoft.com| Remote Help |
+|edge.skype.com| Remote Help |
+|remoteassistanceprodacs.communication.azure.com| Remote Help |
 
 The following tables list the ports and services that the Intune client accesses:
 
