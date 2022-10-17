@@ -91,14 +91,14 @@ After they go through the Setup Assistant screens, the device user lands on the 
 - Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.  
 
 ## Just in Time (JIT) Registration for Setup Assistant with modern authentication
-This option is the same as Setup Assistant with modern authentication, except that Company Portal isn't required. Instead, enrollment, Azure AD registration, and compliance checks are fully integrated in a designated Microsoft Office app.  
-
-Intune uses the Apple single sign-on (SSO) extension to reduce authentication prompts and establish SSO across the whole device:  
+This option is the same as Setup Assistant with modern authentication, except that Company Portal isn't required. Instead, Azure AD registration and compliance checks are fully integrated in a designated app that's configured with the Apple single-sign on (SSO) extension. Intune uses the Apple single sign-on (SSO) extension to reduce authentication prompts and establish SSO across the whole device:  
 
 * The first authentication handles enrollment and user-device affinity, and happens when the device user turns on their device and signs into Setup Assistant.  
-* The second authentication handles Azure AD registration and happens when the user signs into the designated Office app. Compliance checks are also done right in the Office app.   
+* The second authentication handles Azure AD registration and happens when the user signs into the designated app. Compliance checks are also done in this app. 
 
-To set up JIT Registration, create a device configuration policy and configure single sign on. Complete these steps before you create an enrollment profile. For more information, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration) in the next section.  
+The first sign-in must go through an app that's configured with the SSO extension so that Azure AD registration and compliance can be completed. After that, SSO signs the user into any app that’s part of the SSO extension policy, and the user can manually sign into any app that isn’t configured to use the extension.  
+
+To set up JIT Registration, create a device configuration policy and configure the settings under the **Single sign-on app extension** category. Complete these steps before you create an enrollment profile. For more information, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration) in the next section.  
 
 ## Set up Just in Time Registration 
 Complete these steps to configure Just in Time (JIT) Registration for Setup Assistant with modern authentication. 
@@ -109,7 +109,9 @@ Complete these steps to configure Just in Time (JIT) Registration for Setup Assi
 1. Sign in to the Microsoft Endpoint Manager admin center. 
 2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
 3. For **SSO app extension type**, select **Microsoft Azure AD**.
-4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps.md) for the apps using single sign-on (SSO). For best practices and important considerations, see [Best practices for SSO configuration](automated-device-enrollment-authentication.md#best-practices-for-sso-configuration) (in this article).  
+4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps.md) for the apps using single sign-on (SSO). Add all Office apps you want the extension to apply to, because they are not automatically added. 
+
+    For best practices and important considerations, see [Best practices for SSO configuration](automated-device-enrollment-authentication.md#best-practices-for-sso-configuration) (in this article).  
 5. Under **Additional configuration**, add the required key value pair:  
     * **Key**: device_registration
     * **Type**: String
@@ -141,7 +143,10 @@ The following sequence of events describe what a successful authentication looks
 2. Setup Assistant begins. The device user authenticates with their Azure AD credentials in Setup Assistant.
 3. The device user completes multi-factor authentication if that's required in the Conditional Access policy. 
 4. The device finishes enrolling in Intune and user-device affinity is established. 
-5. The device user lands on the home screen and opens Microsoft Outlook or another SSO-configured Office app and signs in with their work account. If the device meets all compliance requirements, the device user will have access to their email right away. 
+5. The device user lands on the home screen and opens Microsoft Outlook or another SSO-configured Office app and signs in with their work account. If the device meets all compliance requirements, the device user will have access to their email right away.  
+
+    >[!NOTE]
+    >During Azure AD registration, the device user may see a short spinner while Intune finishes the compliance checks. This is expected behavior.  
 6. The SSO extension establishes single sign-on in all other targeted apps.  
 7. The device is registered with Azure AD and compliant. You can view the status of the device in the admin center and Azure AD.   
 8. The device user opens Teams and is automatically signed in. The end user opens Word, PowerPoint, and Excel, and is automatically signed in.  
