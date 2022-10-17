@@ -46,7 +46,7 @@ Available authentication methods include:
 
 All methods are for corporate-owned devices with user affinity and purchased through Apple Business Manager or Apple School Manager.   
 
-## Intune Company Portal app  
+## Option 1: Intune Company Portal app  
 
 Use the Intune Company Portal app as the authentication method if you want to:  
  - Use multifactor authentication.
@@ -55,12 +55,12 @@ Use the Intune Company Portal app as the authentication method if you want to:
 
 These features aren't supported in Apple Setup Assistant authentication methods. 
 
-## Setup Assistant (legacy)  
+## Option 2: Setup Assistant (legacy)  
  Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This option installs standard preconfigured settings when the device enrolls in Intune. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. For more information, see [Get-AdfsEndpoint](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true) in our Windows PowerShell Reference guide. 
 
 
-## Setup Assistant with modern authentication  
-This method provides the same security as Intune Company Portal authentication but is different because it lets the device user access parts of the device even if the Company Portal hasn't been installed. Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices that are assigned this type of profile will fall back on **Setup Assistant (legacy)** authentication. 
+## Option 3: Setup Assistant with modern authentication  
+This option provides the same security as Intune Company Portal authentication but is different because it lets the device user access parts of the device even if the Company Portal hasn't been installed. Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices that are assigned this type of profile will fall back on **Setup Assistant (legacy)** authentication. 
 
 ### Install Company Portal with VPP (recommended)  
 
@@ -69,12 +69,10 @@ The Company Portal is installed without user interaction (the Install Company Po
  - You select **Install Company Portal with VPP** in the same enrollment profile. We recommend selecting this option. 
  - An employee or student sets up their Apple ID account during Setup Assistant.
 
-In both of these situations, the Company Portal becomes a required app on the device. When the device user reaches the home screen, Intune automatically applies the correct app configuration policy to the device. 
+In both of these situations, the Company Portal becomes a required app on the device. When the device user reaches the home screen, Intune automatically applies the correct app configuration policy to the device. If you don't use the VPP option, the device user must enter an Apple ID to install Company Portal. They can enter it during Setup Assistant or when Intune tries to install Company Portal. 
 
 >[!CAUTION]
 >Don't send a separate app configuration policy to the Company Portal for iOS/iPadOS devices after enrolling with Setup Assistant with modern authentication. Doing so will result in an error.  
-
-If you don't use the VPP option, the device user must enter an Apple ID to install Company Portal. They can enter it during Setup Assistant or when Intune tries to install Company Portal. 
 
 ### Multi-factor authentication  
 
@@ -90,7 +88,7 @@ After they go through the Setup Assistant screens, the device user lands on the 
 - Won’t be evaluated for device compliance.  
 - Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.  
 
-## Just in Time (JIT) Registration for Setup Assistant with modern authentication
+## Option 4: Just in Time (JIT) Registration for Setup Assistant with modern authentication
 This option is the same as Setup Assistant with modern authentication, except that Company Portal isn't required. Instead, Azure AD registration and compliance checks are fully integrated in a designated app that's configured with the Apple single-sign on (SSO) extension. Intune uses the Apple single sign-on (SSO) extension to reduce authentication prompts and establish SSO across the whole device:  
 
 * The first authentication handles enrollment and user-device affinity, and happens when the device user turns on their device and signs into Setup Assistant.  
@@ -98,10 +96,10 @@ This option is the same as Setup Assistant with modern authentication, except th
 
 The first sign-in must go through an app that's configured with the SSO extension so that Azure AD registration and compliance can be completed. After that, SSO signs the user into any app that’s part of the SSO extension policy, and the user can manually sign into any app that isn’t configured to use the extension.  
 
-To set up JIT Registration, create a device configuration policy and configure the settings under the **Single sign-on app extension** category. Complete these steps before you create an enrollment profile. For more information, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration) in the next section.  
+To set up JIT Registration, create a device configuration policy and configure the settings under the **Single sign-on app extension** category. Complete these steps before you create an enrollment profile. For steps, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration) (in next section).  
 
 ## Set up Just in Time Registration 
-Complete these steps to configure Just in Time (JIT) Registration for Setup Assistant with modern authentication. 
+Complete these steps to configure Just in Time (JIT) Registration in Intune for Setup Assistant with modern authentication. 
 
 >[!Important]
 >Before you begin, revisit all Conditional Access policies targeted at devices enrolling with JIT Registration, and exclude Microsoft Intune from each policy. 
@@ -109,7 +107,7 @@ Complete these steps to configure Just in Time (JIT) Registration for Setup Assi
 1. Sign in to the Microsoft Endpoint Manager admin center. 
 2. [Create an iOS/iPadOS device configuration policy](../configuration/device-features-configure.md) under **Device features** > **Category** > [**Single sign-on app extension**](../configuration/device-features-configure.md#single-sign-on-app-extension).  
 3. For **SSO app extension type**, select **Microsoft Azure AD**.
-4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps.md) for the apps using single sign-on (SSO). Add all Office apps you want the extension to apply to, because they are not automatically added. 
+4. Add the [app bundle IDs](../configuration/bundle-ids-built-in-ios-apps.md) for the apps using single sign-on (SSO). Add all Office apps you want the extension to apply to, because they aren't automatically added. 
 
     For best practices and important considerations, see [Best practices for SSO configuration](automated-device-enrollment-authentication.md#best-practices-for-sso-configuration) (in this article).  
 5. Under **Additional configuration**, add the required key value pair:  
@@ -124,8 +122,8 @@ Complete these steps to configure Just in Time (JIT) Registration for Setup Assi
 6. [Create an enrollment profile](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile) and select **Setup Assistant with modern authentication** as the authentication method. An active automated device enrollment token from Apple Business Manager or Apple School Manager must be present in Intune to complete this step.  
 7. When you get to the **Assignments** page, assign the profile to the devices synced from Apple Business Manager and Apple School Manager. Once the profile has been assigned, employees and students can complete setup and authentication on their devices.    
 
->[!TIP]  
->The Company Portal is still sent to devices as a required app, even though it isn't required for Azure AD registration or compliance. Device users can use the Company Portal app to [gather and upload logs](../user-help/send-logs-to-microsoft-ios.md) if they experience issues in the app.   
+     >[!NOTE]  
+     >The Company Portal is still sent to devices as a required app, even though it isn't required for Azure AD registration or compliance. Device users can use the Company Portal app to [gather and upload logs](../user-help/send-logs-to-microsoft-ios.md) if they experience issues in the app.   
 
 ### Best practices for SSO configuration   
 * You don't need to manually add apps that use the Microsoft Authentication Library (MSAL) to the device configuration policy. Apps that only use Azure Active Directory Authentication Library (ADAL) must be manually added. As more apps migrate over to MSAL, there will be less of a need to manually add apps to the policy.  
@@ -134,10 +132,10 @@ Complete these steps to configure Just in Time (JIT) Registration for Setup Assi
     1. The device user tries to sign into a different app first, such as Microsoft Outlook.
     2. Conditional Access blocks the user from signing in.  
 
-After the user signs in to the appropriate app, SSO signs the user into all apps that are a part of the SSO extension policy. At this point, the device user can manually sign into apps that that don't use the SSO extension.  
+ After the user signs in to the appropriate app, SSO signs the user into all apps that are a part of the SSO extension policy. At this point, the device user can manually sign into apps that that don't use the SSO extension.  
 
 ### Example of successful authentication  
-The following sequence of events describe what a successful authentication looks like with JIT Registration for Setup Assistant with modern authentication.  
+The following sequence of events describes what a successful authentication looks like with JIT Registration for Setup Assistant with modern authentication.  
 
 1. The device user turns on the device.
 2. Setup Assistant begins. The device user authenticates with their Azure AD credentials in Setup Assistant.

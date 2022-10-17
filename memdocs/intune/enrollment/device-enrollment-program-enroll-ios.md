@@ -35,11 +35,13 @@ ms.collection:
 
 *Applies to iOS/iPadOS*  
 
-Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment. This options applies your organization's settings from Apple Business Manager and Apple School Manager and enrolls devices without you needing to touch them. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Setup Assistant, an app used in the out-of-box-experience for Apple products, guides them through setup and enrollment. 
+Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment. This enrollment option applies your organization's settings from Apple Business Manager and Apple School Manager and enrolls devices without you needing to touch them. 
+
+iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Setup Assistant, an app used in the out-of-box-experience for Apple products, guides them through setup and enrollment. 
 
 This article describes how to prepare and set up automated device enrollment in Microsoft Intune.    
 
-## Overview        
+## Overview of features    
 The following table shows the features and scenarios supported with automated device enrollment.  
 
 | Feature | Use this enrollment option when |
@@ -60,7 +62,7 @@ Before you create the enrollment profile, you must have:
 
 * Access to [Apple Business Manager portal](https://business.apple.com/) or [Apple School Manager portal](https://school.apple.com/). 
 * An active Apple token (.p7m file). 
-    * For steps, see [Get an Apple Automated Device Enrollment token](device-enrollment-program-enroll-ios.md#get-an-apple-automated-device-enrollment-token) in this article.  
+    * For steps, see [Get an Apple Automated Device Enrollment token](device-enrollment-program-enroll-ios.md#get-an-apple-automated-device-enrollment-token) (in this article).  
 * New or wiped devices purchased from Apple Business Manager or Apple School Manager.  
 * An [Apple MDM push certificate in Intune](../enrollment/apple-mdm-push-certificate-get.md).  
 
@@ -73,7 +75,7 @@ Automated device enrollment applies device configurations that a device user may
 ### Select an authentication method  
 Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication. For more information about authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
 
-Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app. You'll need to create the device configuration policy for JIT Registration before you create the enrollment profile. For setup steps, see [Set up Just in Time Registration in Intune](automated-device-enrollment-authentication.md#set-up-just in-time-registration).    
+Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app. You'll need to create the device configuration policy for JIT Registration before you create the enrollment profile. For more information, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration).  
 
 Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use **Setup Assistant (legacy)** authentication.  
 
@@ -216,7 +218,7 @@ Now that you've installed your token, you can create an enrollment profile for A
 
       In some situations, you might want to associate a primary user on devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
 
-7. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method to use when authenticating users. For more information about each type of authentication method, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).   
+7. If you selected **Enroll with User Affinity** for the **User Affinity** field, you now have the option to choose the authentication method employees must use. For more information about each authentication method, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).   
 
    ![Screenshot of authentication method options.](./media/device-enrollment-program-enroll-ios/authentication-method.png)
 
