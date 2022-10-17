@@ -17,7 +17,7 @@ As we continue to invest in Setup Assistant with modern authentication, which is
 
 ### How does this affect you or your users?
 
-In November, new enrollments (new devices that are targeted with an existing enrollment profile or devices re-enrolling) that are targeted with an existing enrollment profile with the Company Portal authentication method, will not be able to enroll.
+In Q1 2023, new enrollments (new devices that are targeted with an existing enrollment profile or devices re-enrolling) that are targeted with an existing enrollment profile with the Company Portal authentication method, will not be able to enroll.
 
 This will not impact existing enrolled devices unless the device is re-enrolled after this change. The device will not be able to re-enroll until the authentication method is switched in the enrollment profile to Setup Assistant with modern authentication.
 
