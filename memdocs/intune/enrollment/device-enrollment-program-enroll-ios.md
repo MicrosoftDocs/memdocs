@@ -67,17 +67,17 @@ Before you create the enrollment profile, you must have:
 * New or wiped devices purchased from Apple Business Manager or Apple School Manager.  
      >[!Tip]
      >Automated device enrollment applies device configurations that a device user may not be able to remove. Wipe all devices prior to enrollment to return them to an out-of-box state.  
-
-
 ## Before you begin      
 Read through these enrollment requirements and best practices to prepare for a successful setup and deployment.    
 
 ### Choose an authentication method  
-Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication. For more details, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
+Before you create the enrollment profile, decide how you want users to authenticate on their devices: via the Intune Company Portal app, Setup Assistant (legacy), or Setup Assistant with modern authentication. Using the Company Portal app or Setup Assistant with modern authentication is considered modern authentication, and has features like multi-factor authentication. 
 
-Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app. You'll need to create the device configuration policy for JIT Registration before you create the enrollment profile. For more information, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration).  
+Intune also supports Just in Time Registration for Setup Assistant with modern authentication, which eliminates the need for the Company Portal app during authentication. To use JIT Registration, you'll need to create a device configuration policy before you create the enrollment profile. For how-to steps, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration).  
 
 Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices given this profile will instead use Setup Assistant (legacy) for authentication.  
+
+For more information about your authentication options, see [Authentication methods for automated device enrollment](automated-device-enrollment-authentication.md).  
 
 ### What is supervised mode?   
 Supervised mode provides more management control over corporate-owned devices, so you can do things like block screen captures and restrict AirDrop. 
@@ -103,7 +103,7 @@ To enable automatic app updates for Company Portal, go to your app token setting
 > [!IMPORTANT]
 > During initial enrollment, Intune automatically pushes the app configuration policy settings for devices enrolled with Setup Assistant with modern authentication, configured in [Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment), when the enrollment profile setting **Install Company Portal** is set to yes. This configuration should not be deployed manually to users because it will cause a conflict with the configuration sent during the initial enrollment. If both are deployed, Intune will incorrectly prompt device users to sign in to Company Portal and download a management profile they've already installed. 
 
-### Supported volume  
+### Limits     
 - Maximum enrollment profiles per token: 1,000   
 - Maximum Automated Device Enrollment devices per profile: 200,000 (same as the maximum number of devices per token).
 - Maximum Automated Device Enrollment tokens per Intune account: 2,000  

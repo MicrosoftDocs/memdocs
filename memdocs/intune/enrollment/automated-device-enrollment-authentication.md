@@ -44,7 +44,7 @@ Available authentication methods include:
 * Just in Time (JIT) Registration for Setup Assistant with modern authentication 
 * Setup Assistant (legacy)
 
-All methods are for corporate-owned devices with user affinity and purchased through Apple Business Manager or Apple School Manager. We    
+All methods are for corporate-owned devices with user affinity and purchased through Apple Business Manager or Apple School Manager.   
 
 ## Option 1: Intune Company Portal app  
 
@@ -62,7 +62,7 @@ These features aren't supported in Apple Setup Assistant authentication methods.
 This option provides the same security as Intune Company Portal authentication but is different because it lets the device user access parts of the device even if the Company Portal hasn't been installed.  Use this option for authentication when you want to:
 
 * Wipe the device. 
-* Use multi-factor authentication (MFA)
+* Use multi-factor authentication (MFA).  
 * Prompt users to change their passwords when they first sign in.
 * Prompt users to reset their expired passwords during enrollment.  
 * Register devices in Azure AD and use features available with Azure AD, such as conditional access. 
@@ -71,23 +71,24 @@ This option provides the same security as Intune Company Portal authentication b
 
 Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices that are assigned this type of profile will fall back on **Setup Assistant (legacy)** authentication. 
 
-### Install Company Portal with VPP (recommended)  
+### Automatically install Company Portal app  
 
-The Company Portal is installed without user interaction (the Install Company Portal option is hidden from the user) in the following situations when Setup Assistant with modern authentication is used: 
+If your company uses the Volume Purchase Program (VPP), you can automatically install the Company Portal app during enrollment without user Apple IDs. To enable automatic installation in your enrollment profile, select **Yes** for **Install Company Portal with VPP**. We recommend using this option. 
 
- - You select **Install Company Portal with VPP** in the same enrollment profile. We recommend selecting this option. 
- - An employee or student sets up their Apple ID account during Setup Assistant.
+If you don't use the VPP option, the device user must enter their Apple ID during Setup Assistant or when Intune tries to install Company Portal.  
 
-In both of these situations, the Company Portal becomes a required app on the device. When the device user reaches the home screen, Intune automatically applies the correct app configuration policy to the device. If you don't use the VPP option, the device user must enter an Apple ID to install Company Portal. They can enter it during Setup Assistant or when Intune tries to install Company Portal. 
+In both scenarios, the Company Portal installation option is hidden from the device user, and the Company Portal becomes a required app on their device. When the user reaches the home screen, Intune automatically applies the correct app configuration policy to the device.  
 
 >[!CAUTION]
 >Don't send a separate app configuration policy to the Company Portal for iOS/iPadOS devices after enrolling with Setup Assistant with modern authentication. Doing so will result in an error.  
 
 ### Multi-factor authentication  
 
-Multi-factor authentication is required if a Conditional Access policy that requires [multi-factor authentication (MFA)](multi-factor-authentication.md) is applied at enrollment or during Company Portal sign-in. However, MFA is optional based on the Azure AD settings in the targeted Conditional Access policy.  
+Multi-factor authentication (MFA) will required if a [conditional access policy that requires it](multi-factor-authentication.md) is applied at enrollment or during Company Portal sign-in. However, MFA is optional based on the Azure AD settings in the targeted conditional access policy.  
 
-### Company Portal sign-in required    
+MFA won't work for Setup Assistant with modern authentication if you're using a 3rd party MFA provider to present the MFA screen during enrollment. Only the Azure AD MFA screen works during enrollment.  
+
+### Company Portal action required  
 
 After they go through the Setup Assistant screens, the device user lands on the home page. At this point, their user affinity is established. However, until the user signs in to the Company Portal using their Azure AD credentials and selects **Begin**, the device:
 
