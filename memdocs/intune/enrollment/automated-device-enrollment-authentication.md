@@ -44,23 +44,32 @@ Available authentication methods include:
 * Just in Time (JIT) Registration for Setup Assistant with modern authentication 
 * Setup Assistant (legacy)
 
-All methods are for corporate-owned devices with user affinity and purchased through Apple Business Manager or Apple School Manager.   
+All methods are for corporate-owned devices with user affinity and purchased through Apple Business Manager or Apple School Manager. We    
 
 ## Option 1: Intune Company Portal app  
 
 Use the Intune Company Portal app as the authentication method if you want to:  
- - Use multifactor authentication.
+ - Use multi-factor authentication (MFA).
  - Prompt users to change their passwords when they first sign in.
  - Prompt users to reset their expired passwords during enrollment.  
+ - Register devices in Azure AD and use features available with Azure AD, such as conditional access.
+ - Automatically install the Company Portal app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install Company Portal app during enrollment without user Apple IDs. 
+ - You want to lock the device until the Company Portal app installs.
 
 These features aren't supported in Apple Setup Assistant authentication methods. 
 
-## Option 2: Setup Assistant (legacy)  
- Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This option installs standard preconfigured settings when the device enrolls in Intune. If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. For more information, see [Get-AdfsEndpoint](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true) in our Windows PowerShell Reference guide. 
+## Option 2: Setup Assistant with modern authentication  
+This option provides the same security as Intune Company Portal authentication but is different because it lets the device user access parts of the device even if the Company Portal hasn't been installed.  Use this option for authentication when you want to:
 
+* Wipe the device. 
+* Use multi-factor authentication (MFA)
+* Prompt users to change their passwords when they first sign in.
+* Prompt users to reset their expired passwords during enrollment.  
+* Register devices in Azure AD and use features available with Azure AD, such as conditional access. 
+* Automatically install the Company Portal app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install Company Portal app during enrollment without user Apple IDs. 
+* Allow users to use the device even when the Company Portal app isn't installed.  
 
-## Option 3: Setup Assistant with modern authentication  
-This option provides the same security as Intune Company Portal authentication but is different because it lets the device user access parts of the device even if the Company Portal hasn't been installed. Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices that are assigned this type of profile will fall back on **Setup Assistant (legacy)** authentication. 
+Setup Assistant with modern authentication is supported on devices running iOS/iPadOS 13.0 and later. Older iOS/iPadOS devices that are assigned this type of profile will fall back on **Setup Assistant (legacy)** authentication. 
 
 ### Install Company Portal with VPP (recommended)  
 
@@ -78,17 +87,17 @@ In both of these situations, the Company Portal becomes a required app on the de
 
 Multi-factor authentication is required if a Conditional Access policy that requires [multi-factor authentication (MFA)](multi-factor-authentication.md) is applied at enrollment or during Company Portal sign-in. However, MFA is optional based on the Azure AD settings in the targeted Conditional Access policy.  
 
-### Authentication in Company Portal  
+### Company Portal sign-in required    
 
 After they go through the Setup Assistant screens, the device user lands on the home page. At this point, their user affinity is established. However, until the user signs in to the Company Portal using their Azure AD credentials and selects **Begin**, the device:
 
 - Won’t be fully registered with Azure AD.  
-- Won’t show up in the user’s device list in the Azure AD portal.  
+- Won’t show up in the user’s device list in Azure AD.   
 - Won’t have access to resources protected by conditional access.  
 - Won’t be evaluated for device compliance.  
 - Will be redirected to the Company Portal from other apps if the user tries to open any managed applications that are protected by conditional access.  
 
-## Option 4: Just in Time (JIT) Registration for Setup Assistant with modern authentication
+## Option 3: Just in Time (JIT) Registration for Setup Assistant with modern authentication
 This option is the same as Setup Assistant with modern authentication, except that Company Portal isn't required. Instead, Azure AD registration and compliance checks are fully integrated in a designated app that's configured with the Apple single sign-on (SSO) app extension. The extension reduces authentication prompts and establishes SSO across the whole device.    
 
 * The first authentication handles enrollment and user-device affinity, and happens when the device user turns on their device and signs into Setup Assistant.  
@@ -96,7 +105,16 @@ This option is the same as Setup Assistant with modern authentication, except th
 
 The first sign-in must go through an app that's configured with the SSO extension so that Azure AD registration and compliance can be completed. After that, SSO signs the user into any app that’s part of the SSO extension policy, and the user can manually sign into any app that isn’t configured to use the extension.  
 
-To set up JIT Registration, create a device configuration policy and configure the settings under the **Single sign-on app extension** category. Complete these steps before you create an enrollment profile. For steps, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration) (in next section).  
+To set up JIT Registration, create a device configuration policy and configure the settings under the **Single sign-on app extension** category. Do this before you create an enrollment profile. For steps, see [Set up Just in Time Registration](automated-device-enrollment-authentication.md#set-up-just-in-time-registration) (in this article).
+
+## Option 4: Setup Assistant (legacy)  
+ Use the legacy Setup Assistant if you want users to experience the typical, out-of-box-experience for Apple products. This option installs standard preconfigured settings when the device enrolls in Intune. Use this option for authentication when: 
+
+ * You want to wipe a device. 
+ * You don't want modern authentication features such as multi-factor authentication.
+ * You don't want to register devices in Azure AD. Setup Assistant (legacy) authenticates the user with the Apple .p7m token. 
+
+ If you're using Active Directory Federation Services and you're using Setup Assistant to authenticate, a [WS-Trust 1.3 Username/Mixed endpoint](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/ff608241(v=ws.10)) is required. For more information, see [Get-AdfsEndpoint](/powershell/module/adfs/get-adfsendpoint?view=win10-ps&preserve-view=true) in our Windows PowerShell Reference guide. 
 
 ## Set up Just in Time Registration 
 Complete these steps to configure Just in Time (JIT) Registration in Intune for Setup Assistant with modern authentication. 

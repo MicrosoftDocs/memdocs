@@ -113,11 +113,11 @@ items:
     items:
     - name: Apple automated device enrollment  
       items: 
-      - name: Choose authentication method     
-        href: automated-device-enrollment-authentication.md 
       - name: Set up automated device enrollment 
         href: device-enrollment-program-enroll-ios.md
         displayName: dep; ade; bulk enroll; ABM
+      - name: Choose authentication method     
+        href: automated-device-enrollment-authentication.md   
     - name: Shared iOS/iPadOS devices
       items:      
       - name: Shared device overview
