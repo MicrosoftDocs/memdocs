@@ -67,6 +67,11 @@ The following permissions are available when creating custom roles.
 
 | Permission | Description |
 | --- | --- |
+| Android FOTA/Assign | Assign Android firmware over-the-air (FOTA) deployments to Azure AD security groups. |
+| Android FOTA/Delete | Delete and cancel pending Android firmware over-the-air (FOTA) deployments and delete deployment history. |
+| Android FOTA/Create | Create and manage all aspects of Android firmware over-the-air (FOTA) deployments. |
+| Android FOTA/Read | View Android firmware over-the-air (FOTA) deployments, including history and reporting. |
+| Android FOTA/Update | Change existing Android firmware over-the-air (FOTA) deployments and cancel firmware deployments. |
 | Android for work/Read | View the Android for Work configuration used to sync applications with the Play for Work store or view the Android for Work enrollment prerequisites and enrollment profiles. | 
 | Android for work/Update app sync | Manage or change the Android for Work configuration used to sync applications with the Play for Work store, or sync the apps you've approved from the store with Intune. | 
 | Android for work/Update onboarding | Manage or change the Android for work configuration used to enroll Android for Work devices or manage the Android for Work enrollment profiles. | 
