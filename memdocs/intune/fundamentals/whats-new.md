@@ -203,7 +203,20 @@ Applies to
 
 ### Device security
 
-#### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009541   -->
+### Reusable groups of settings for removable storage in Device Control profiles (preview) <!-- 7351534 -->
+
+In public preview, you can now use [reusable groups of settings](../protect/reusable-settings-groups.md) with [device control profiles](../protect/endpoint-security-asr-policy.md#add-reusable-settings-groups-to-profiles-for-device-control) in your attack surface reduction policies.
+
+The reusable groups for device control profiles include a collection of settings that support managing *read*, *write*, and *execute* access for removable storage. Examples of common scenarios include:
+
+- Prevent write and execute access to all but allow specific approved USBs
+- Audit write and execute access to all but block specific unapproved USBs
+- Only allow specific user groups to access specific removable storage on a shared PC
+
+Applies to:  
+- Windows 10 or later
+
+#### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009541 -->
 
 We've added [reusable groups of settings](../protect/reusable-settings-groups.md) that you can use with [profiles for Microsoft Defender Firewall Rules](../protect/endpoint-security-firewall-policy.md#add-reusable-settings-groups-to-profiles-for-firewall-rules). The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.
 
