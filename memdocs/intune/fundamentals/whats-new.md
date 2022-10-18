@@ -73,6 +73,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Use filters with app configuration policies for managed devices<!-- 7423842  -->  
 You can use filters to refine the assignment scope when deploying app configuration policies for managed devices. You must first [create a filter](../fundamentals/filters.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md).
 
+#### Select default work apps in Intune Company Portal<!-- 14531483 -->  
+Android device users can select and save their preferred work apps in Intune Company Portal. They can select the default apps they want to use for a specific intent or file type, and remove their preferences. Company Portal securely stores the device user's preferred defaults. This feature is an enhancement to the Android MAM custom app picker, which is a part of the Android MAM SDK.
+ 
 ### Device configuration
 
 #### Filter app and group policy assignments using Windows 11 SE operating system SKUs<!-- 10588651  -->  
