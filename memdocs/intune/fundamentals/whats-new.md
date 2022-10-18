@@ -66,14 +66,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Scripts
 ### Tenant administration
 -->
-## Week of October 17, 2022 (Service release 2210)
+## Week of October 24, 2022 (Service release 2210)
 
 ### App management
 
+### Use filters with app configuration policies for managed devices<!-- 7423842  -->  
+You can use filters to refine the assignment scope when deploying app configuration policies for managed devices. You must first [create a filter](../fundamentals/filters.md#create-a-filter) using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration policy by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md).
+
 ### Device configuration
 
-#### Filter app and group policy assignments using Windows 11 SE operating system SKUs<!-- 10588651  -->
-
+#### Filter app and group policy assignments using Windows 11 SE operating system SKUs<!-- 10588651  -->  
 When you assign an app or policy, you can filter the assignment using different device properties, such as device manufacturer, operating system SKU, and more.
 
 Two new Windows 11 SE operating system SKU's are available. You can use these SKUs in your assignment filters to include or exclude Windows 11 SE devices from applying group-targeted policies and applications. 
@@ -87,8 +89,7 @@ Applies to:
 
 - Windows 11 SE
 
-#### New settings available in the iOS/iPadOS and macOS Settings Catalog <!-- 15514929  -->
-
+#### New settings available in the iOS/iPadOS and macOS Settings Catalog <!-- 15514929  -->  
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place.
 
 New settings are available in the Settings Catalog. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can see these settings at **Devices** > **Configuration profiles** > **Create profile** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
@@ -123,8 +124,7 @@ Applies to:
 
 For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
-#### New settings for Device Firmware Configuration Interface (DFCI) profiles on Windows devices<!-- 15511597  -->
-
+#### New settings for Device Firmware Configuration Interface (DFCI) profiles on Windows devices<!-- 15511597  -->  
 You can create a DFCI profile that enables the Windows OS to pass management commands from Intune to UEFI (Unified Extensible Firmware Interface) (**Devices** > **Configuration profiles** > **Create profile** > **Windows 10 and later** for platform > **Templates > Device Firmware Configuration Interface**)
 
 You can use this feature to control BIOS settings. There are new settings you can configure in the DFCI policy:
@@ -153,14 +153,12 @@ Applies to:
 
 ### Device enrollment
 
-#### iOS/iPadOS Setup Assistant with modern authentication supports Just in Time Registration (public preview)<-- 15515188 -->
-
+#### iOS/iPadOS Setup Assistant with modern authentication supports Just in Time Registration (public preview)<-- 15515188 -->  
 Intune supports Just in Time (JIT) Registration for iOS/iPadOS enrollment scenarios that use Setup Assistant with modern authentication. JIT Registration reduces the number of authentication prompts shown to users throughout the provisioning experience, giving them a more seamless onboarding experience. It eliminates the need to have the Company Portal app for Azure AD registration and compliance checks, and establishes single sign-on across the device. JIT Registration is available in public preview for devices enrolling through Apple automated device enrollment and running iOS/iPadOS 13.0 or later. For more information, see [Authentication methods for automated device enrollment](../enrollment/automated-device-enrollment-authentication.md). 
 
 ### Device management
 
-#### Manage macOS software updates with Intune<!-- 9801186 -->
-
+#### Manage macOS software updates with Intune<!-- 9801186 -->  
 You can now use Intune policies to manage macOS software updates for devices that enrolled using Automated Device Enrollment (ADE).  See [Manage macOS software update policies in Intune](../protect/software-updates-macos.md).
 
 Intune supports the following macOS update types:
@@ -182,14 +180,12 @@ In addition to scheduling when a device updates, you’ll can manage behaviors l
 For information from Apple about managing macOS software updates, see [Manage software updates for Apple devices - Apple Support](https://support.apple.com/guide/deployment/manage-software-updates-depc4c80847a/web) in the Apple's Platform Deployment documentation.
 Apple maintains a list of security updates at [Apple security updates - Apple Support](https://support.apple.com/en-us/HT201222).
 
-#### Deprovision Jamf Pro from within the Microsoft Endpoint Manager admin center<!-- 3485465  -->
-
+#### Deprovision Jamf Pro from within the Microsoft Endpoint Manager admin center<!-- 3485465  -->  
 You can now [deprovision your Jamf Pro to Intune integration](../protect/conditional-access-jamf-cloud-connector.md#deprovision-jamf-pro-from-within-the-microsoft-endpoint-manager-admin-center) from within the Microsoft Endpoint Manager admin center. This can be useful should you no longer have access to the Jamf Pro console, through which you can also deprovision integration.
 
 This capability functions similarly to disconnecting Jamf Pro from within the Jamf Pro console, in that after you remove the integration, your organization's Mac devices are removed from Intune after 90 days.
 
-#### New hardware details available for individual devices running on iOS/iPadOS<!-- 15038076  -->
-
+#### New hardware details available for individual devices running on iOS/iPadOS<!-- 15038076  -->  
 Select **Devices** > **All devices** > *select one of your listed devices* and open it's **Hardware** details. The following new details are available in the **Hardware** pane of individual devices:
 
 - **Battery level**: Shows the battery level of the device anywhere between 0 and 100, or defaults to null if the battery level cannot be determined. This is available for devices running iOS/iPadOS 5.0 and later.
@@ -203,8 +199,7 @@ Applies to
 
 ### Device security
 
-#### Reusable groups of settings for removable storage in Device Control profiles (preview) <!-- 7351534 -->
-
+#### Reusable groups of settings for removable storage in Device Control profiles (preview) <!-- 7351534 -->  
 In public preview, you can now use [reusable groups of settings](../protect/reusable-settings-groups.md) with [device control profiles](../protect/endpoint-security-asr-policy.md#add-reusable-settings-groups-to-profiles-for-device-control) in your attack surface reduction policies.
 
 The reusable groups for device control profiles include a collection of settings that support managing *read*, *write*, and *execute* access for removable storage. Examples of common scenarios include:
@@ -216,8 +211,7 @@ The reusable groups for device control profiles include a collection of settings
 Applies to:  
 - Windows 10 or later
 
-#### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009541 -->
-
+#### Reusable groups of settings for Microsoft Defender Firewall Rules<!-- 5653346, 6009541 -->  
 We've added [reusable groups of settings](../protect/reusable-settings-groups.md) that you can use with [profiles for Microsoft Defender Firewall Rules](../protect/endpoint-security-firewall-policy.md#add-reusable-settings-groups-to-profiles-for-firewall-rules). The reusable groups are collections of remote IP addresses and FQDNs that you define one time and can then use with one or more firewall rule profiles. You’ll no longer need to reconfigure the same group of IP addresses in each individual profile that might require them.
 
 Features of the reusable settings groups include:
@@ -232,8 +226,7 @@ Features of the reusable settings groups include:
 
 - Edits to a settings group that's in use are automatically applied to all Firewall Rules profiles that use that group.  
 
-#### Attack surface reduction rule exclusions on a per-rule basis<!-- 13385644   -->
-
+#### Attack surface reduction rule exclusions on a per-rule basis<!-- 13385644   -->  
 You can now [configure per-rule exclusions for Attack surface reduction rules policies](../protect/endpoint-security-asr-policy.md#exclusions-for-attack-surface-reduction-rules). Per-rule exclusions are enabled through a new per-rule setting **ASR Only Per Rule Exclusions**.
 
 When you create or edit attack surface reduction rule policies and change a setting that supports exclusions from the default of *Not configured* to any of the other available options, the new per-setting exclusion option becomes available. Any configurations for that settings instance of *ASR Only Per Rule Exclusions* will apply to only that setting.
@@ -245,8 +238,7 @@ Applies to:
 
 - Windows 10/11
 
-#### Grant apps permission to silently use certificates on Android Enterprise devices<!-- 12441244    -->
-
+#### Grant apps permission to silently use certificates on Android Enterprise devices<!-- 12441244    -->  
 You can now configure silent use of certificates by apps on Android Enterprise devices that enrolled as **Fully Managed, Dedicated, and Corporate-Owned work Profile**.
 
 This capability is available on a new **Apps** page in the certificate profile configuration workflow by setting **Certificate access** to  **Grant silently for specific apps (require user approval for other apps)**.  With this configuration, the apps you then select will silently use the certificate. All other apps continue to use the default behavior which is to require user approval.
@@ -260,8 +252,7 @@ This capability is supported for the following certificate profiles for only And
 
 ### Intune apps
 
-#### Newly available protected apps for Intune<!-- 15287512, 15448552   -->
-
+#### Newly available protected apps for Intune<!-- 15287512, 15448552   -->  
 The following protected apps are now available for Microsoft Intune:
 
 - MyITOps for Intune by MyITOps, Ltd
@@ -273,18 +264,15 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 ### Device management
 
-#### Microsoft Endpoint Manager branding change<!-- 15812021 -->
-
+#### Microsoft Endpoint Manager branding change<!-- 15812021 -->  
 As of October 12, 2022, the name Microsoft Endpoint Manager will no longer be used. Going forward, we’ll refer to cloud-based unified endpoint management as Microsoft Intune and on-premises management as Microsoft Configuration Manager. With the launch of advanced management, Microsoft Intune will also become the name of our growing product family for endpoint management solutions at Microsoft.  For details, see [the official announcement](https://aka.ms/itsintune) on the endpoint management Tech Community blog. Documentation changes are ongoing to remove Microsoft Endpoint Manager.
 
 For related information, see [Endpoint management documentation]( ../../index.yml).
 
-#### Grace period status visible in Windows Company Portal<!-- 14746606 -->
-
+#### Grace period status visible in Windows Company Portal<!-- 14746606 -->  
 Windows Company Portal now displays a grace period status to account for devices that don't meet compliance requirements but are still within their given grace period. Users are shown the date by which they need to become compliant and the instructions for how to become compliant. If users don't update their device by the given date, their device status changes to noncompliant. For more information about setting grace periods, see [Configure compliance policies with actions for noncompliance](../protect/actions-for-noncompliance.md#available-actions-for-noncompliance) and [Check access from Device details page](../user-help/check-device-access-windows-cpapp.md#check-access-from-device-details-page).
 
-#### Linux device management available in Microsoft Intune<!-- 14616038 -->
-
+#### Linux device management available in Microsoft Intune<!-- 14616038 -->  
 Microsoft Intune now supports Linux device management for devices running Ubuntu Desktop 22.04 or 20.04 LTS. Intune admins don't need to do anything to enable Linux enrollment in the Microsoft Endpoint Manager admin center.  Linux users can [enroll supported Linux devices](../user-help/enroll-device-linux.md) on their own and use the Microsoft Edge browser to access corporate resources online.
 
 In the admin center, you can:
@@ -301,8 +289,7 @@ In the admin center, you can:
 
 ### Device Security
 
-#### Non-compliance warning message includes a link<!--13694184  -->
-
+#### Non-compliance warning message includes a link<!--13694184  -->  
 In Remote help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
 
 For more information, go to:
@@ -318,8 +305,7 @@ Applies to:
 
 ### Monitor and troubleshoot
 
-#### Open Help and Support without losing your context in the Microsoft Endpoint Manager admin center<!-- 12469338 -->
-
+#### Open Help and Support without losing your context in the Microsoft Endpoint Manager admin center<!-- 12469338 -->  
 You can now use the **?** icon in the Microsoft Endpoint Manager admin center to open a [help and support](../../get-support.md) session without losing your current node of focus in the admin center. The **?** icon is always available in the upper right of the title bar of the admin center. This change adds an additional method for accessing *Help and support*.
 
 When you select **?**, the admin center opens the help and support view in a new and separate side-by-side pane. By opening this separate pane, you’ll be free to navigate the support experience without affecting your original location and focus on the admin center.
