@@ -106,4 +106,4 @@ Company Portal securely saves and stores your default app selections for managed
 
 1. Open Company Portal.  
 2. Tap the main menu > **Settings** .  
-3. Scroll down to **Default Apps** and tap **See Defaults** to view and change your current defaults.    
+3. Scroll down to **Default Apps** and tap **See Defaults** to view and remove your current defaults.    
