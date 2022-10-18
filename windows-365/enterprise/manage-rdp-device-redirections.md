@@ -66,9 +66,9 @@ To manage any of the redirections by using the Settings Catalog, create and assi
 
 1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Configuration profiles** > **Create profile**.
 
-2. Select 
-   - **Platform** = **Windows 10 and later**
-   - **Profile type** = **Settings catalog** profile type, then **Create**.
+2. Select:
+   - **Platform** = **Windows 10 and later**.
+   - **Profile type** = **Settings catalog**, then **Create**.
 
 3. On the **Basics** page, enter a **Name** and **Description** (optional) for the new policy.
 
