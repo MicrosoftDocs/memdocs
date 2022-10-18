@@ -8,11 +8,10 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 03/07/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
-ms.technology:
 
 # optional metadata
 
@@ -23,7 +22,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Email profile settings for devices running Windows 10/11 in Microsoft Intune

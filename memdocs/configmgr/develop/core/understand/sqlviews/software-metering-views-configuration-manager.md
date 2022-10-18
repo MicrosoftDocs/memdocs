@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: e88c5f27-7ce1-48b3-bf3d-e4e6f5100b19
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Software metering views in Configuration Manager

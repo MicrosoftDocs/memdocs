@@ -7,7 +7,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 09/02/2022
+ms.date: 10/13/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: remote-actions
@@ -53,9 +53,11 @@ The Remote help app supports the following capabilities:
 
 - **Requires Organization login** - To use remote help, both the helper and the sharer must sign in with an Azure Active Directory (Azure AD) account from your organization. You can’t use remote help to assist users who aren’t members of your organization.
 
-- **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session.
-
-  Unenrolled devices are always reported as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and as such is unable to establish its compliance status.
+- **Compliance Warnings** - Before connecting to a user's device, a helper will see a non-compliance warning about that device if it’s not compliant with its assigned policies. This warning doesn’t block access but provides transparency about the risk of using sensitive data like administrative credentials during the session. 
+    
+    - Helpers who have access to device views in Intune will see a link in the warning to the device properties page in Microsoft Endpoint Manager. This allows a helper to learn more about why the device is not compliant.
+ 
+    - Unenrolled devices are always reported as non-compliant. This is because until a device enrolls with Intune it can’t receive policies from Intune and as such is unable to establish its compliance status.
 
 - **Role-based access control** – Admins can set RBAC rules that determine the scope of a helper’s access, like:
   - The users who can help others and the range of actions they can do while providing help, like who can run elevated privileges while helping.
@@ -77,7 +79,7 @@ The Remote help app supports the following capabilities:
 > [!NOTE]
 > Remote help has the following limitations:  
 >
-> - Remote help is not supported on GCC, GCC High or DoD Tenants.
+> - Remote help is not supported on GCC High or DoD Tenants.
 > - You cannot establish a remote help session from one tenant to a different tenant.
 > - May not be available in all markets or localizations.
 

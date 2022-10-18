@@ -1,19 +1,18 @@
 ---
 description: Learn how to represent general configuration information that can be used by more than one client component using SMS_SCI_ClientConfig class.
-title: "SMS_SCI_ClientConfig Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_SCI_ClientConfig Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: cad6e82b-ba60-4252-8336-f83d595b69bc
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SCI_ClientConfig Server WMI Class
 The `SMS_SCI_ClientConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents general configuration information that can be used by more than one client component.  

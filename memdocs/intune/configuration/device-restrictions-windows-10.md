@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 01/18/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -44,7 +44,7 @@ These settings apply to:
 
 These settings are added to a device configuration profile in Intune, and then assigned or deployed to your Windows client devices.
 
-> [!Note]
+> [!NOTE]
 > Some settings are only available on specific Windows editions, such as Enterprise. To see the supported editions, refer to the [policy CSPs](/windows/client-management/mdm/policy-configuration-service-provider) (opens another Microsoft web site).
 >  
 > In a Windows 10/11 device restrictions profile, most configurable settings are deployed at the device level using device groups. Policies deployed to user groups apply to targeted users. The policies also apply to users who have an Intune license, and users that sign in to that device.

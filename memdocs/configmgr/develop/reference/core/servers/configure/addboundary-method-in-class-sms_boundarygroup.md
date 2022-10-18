@@ -1,19 +1,18 @@
 ---
 description: Learn how to add boundaries to a boundary group in Configuration Manager using AddBoundary class method.
 title: AddBoundary method in class SMS_BoundaryGroup
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 8bb764e3-c2c4-4b06-b9ec-4bc060b1fbeb
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # AddBoundary Method in Class SMS_BoundaryGroup
 The `AddBoundary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds boundaries to this boundary group.  

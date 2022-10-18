@@ -11,11 +11,13 @@ metadata:
   ms.prod: configuration-manager
   ms.technology: configmgr-sum
   ms.topic: landing-page
-  author: mestew
-  ms.author: mstewart
-  manager: dougeby
+  author: baladelli
+  ms.author: baladell
+  manager: apoorvseth
   ms.date: 09/23/2021
   ms.localizationpriority: high
+  ms.reviewer: mstewart,aaroncz 
+  ms.collection: tier3
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
 

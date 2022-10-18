@@ -1,19 +1,18 @@
 ---
 title: ReloadImageProperties method in class SMS_BootImagePackage
-titleSuffix: "Configuration Manager"
-description: "Reloads image metadata from a boot image source .wim file and synchronizes the metadata with the database."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+titleSuffix: Configuration Manager
+description: Reloads image metadata from a boot image source .wim file and synchronizes the metadata with the database.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 91abc6f0-6ed7-485e-af9c-e4e8f2832f16
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # ReloadImageProperties Method in Class SMS_BootImagePackage
 The `ReloadImageProperties` Windows Management Instrumentation WMI class method, in Configuration Manager, reloads image metadata from a boot image source .wim file and synchronizes the metadata with the database.  

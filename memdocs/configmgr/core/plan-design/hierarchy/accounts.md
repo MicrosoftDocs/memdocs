@@ -6,10 +6,12 @@ ms.date: 03/29/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Accounts used in Configuration Manager

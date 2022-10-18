@@ -9,7 +9,35 @@ ms.author: erikje
 ms.custom: include file
 ---
 
-These notices provide important information that can help you prepare for future Intune changes and features.  
+These notices provide important information that can help you prepare for future Intune changes and features.
+
+### Plan for Change: Ending support for Company Portal authentication method for iOS/iPadOS ADE enrollment
+
+As we continue to invest in Setup Assistant with modern authentication, which is the Apple supported path to require enrollment during Setup Assistant with optional multi-factor authentication, we plan to remove the Company Portal authentication method from new and existing iOS/iPadOS ADE enrollment profiles in Q1 2023. This will include removing the Run Company Portal in Single App Mode until authentication setting.
+
+### How does this affect you or your users?
+
+In November, new enrollments (new devices that are targeted with an existing enrollment profile or devices re-enrolling) that are targeted with an existing enrollment profile with the Company Portal authentication method, will not be able to enroll.
+
+This will not impact existing enrolled devices unless the device is re-enrolled after this change. The device will not be able to re-enroll until the authentication method is switched in the enrollment profile to Setup Assistant with modern authentication.
+
+New iOS/iPadOS enrollment profiles will not have the option to select Company Portal as the authentication method.
+
+If you have not already, you will need to move to use Setup Assistant with modern authentication. Within the Microsoft Endpoint Manager admin center, you will want to either create a new ADE enrollment profile, or edit your existing enrollment profile to use the “Setup assistant with modern authentication.”
+
+**User experience:** The Setup Assistant with modern authentication enrollment flow does change the enrollment screen order where authentication will occur prior to accessing the home screen. If you have user guides that share screenshots, you will want to update those so the guides match the experience of Setup Assistant with modern authentication.
+
+### How can you prepare?
+
+To enroll new devices (or re-enroll) after this change, you will either need to update existing profiles to move to Setup Assistant with modern authentication or create a new enrollment profile with this method.
+
+For related information, see:
+
+- [Move to Setup Assistant with Modern Authentication for Automated Device Enrollment](https://techcommunity.microsoft.com/t5/intune-customer-success/move-to-setup-assistant-with-modern-authentication-for-automated/ba-p/2556536)
+- [Setup Assistant with Modern Auth for ADE (iOS/iPadOS 13+ and macOS 10.15+)](https://aka.ms/MEM-ADEModernAuth-Blog)
+- [Using filters with Setup Assistant with modern auth for ADE for corporate iOS/iPadOS/macOS devices](https://techcommunity.microsoft.com/t5/intune-customer-success/using-filters-with-setup-assistant-with-modern-auth-for-ade-for/ba-p/2670379)
+- [Enroll iOS/iPadOS devices by using ADE](../enrollment/device-enrollment-program-enroll-ios.md#create-an-apple-enrollment-profile)
+- [Upcoming changes to iOS/iPadOS Company Portal app deployment for Setup Assistant with modern auth](https://aka.ms/ADE-CP-auto-deploy)
 
 ### Plan for Change: Ending support for Windows Information Protection
 
@@ -31,7 +59,7 @@ Microsoft strongly recommends that you move to a supported version of Windows 10
 
 ### How does this affect you or your users?
 
-If you are managing Windows 8.1 devices those devices should be upgraded to a supported version of Windows 10 or Windows 11. There is no impact to existing devices and polices, however, you will not be able to enroll new devices if they are running Windows 8.1.
+If you are managing Windows 8.1 devices those devices should be upgraded to a supported version of Windows 10 or Windows 11. There is no impact to existing devices and policies, however, you will not be able to enroll new devices if they are running Windows 8.1.
 
 ### How can you prepare?
 
@@ -52,7 +80,7 @@ If you're impacted by this change, see MC393815 in the Message center.
 
 Download, install, and configure the latest certificate connector. For more information see, [Install the Certificate Connector for Microsoft Intune](../protect/certificate-connector-install.md).
 
-To check which version of the certificate connector you are using follow these steps:
+To check which version of the certificate connector you are using, follow these steps:
 
 1. On a Windows Server running the Intune Certificate Connector, launch "Add or Remove programs".
 2. A list of installed programs and applications will be displayed.

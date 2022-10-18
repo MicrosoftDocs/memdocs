@@ -6,10 +6,12 @@ ms.date: 09/21/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: how-to
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # BitLocker administration and monitoring website

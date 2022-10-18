@@ -65,6 +65,10 @@ Use of a *Server configuration* lets you create a configuration a single time an
    - **IP ranges to include**
    - **IP ranges to exclude**
 
+  > [!NOTE]
+  > Do not use an IP range that specifies 0.0.0.0 in any of the include or exclude addresses, Tunnel Gateway cannot route traffic when this range is used.
+  > 
+
 5. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
 
 ## Create a Site

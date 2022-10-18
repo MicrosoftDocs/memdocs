@@ -6,11 +6,12 @@ ms.date: 11/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # What's new in Desktop Analytics

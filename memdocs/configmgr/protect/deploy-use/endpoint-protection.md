@@ -6,10 +6,12 @@ ms.date: 09/09/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: overview
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Endpoint Protection

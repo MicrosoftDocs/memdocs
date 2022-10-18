@@ -5,16 +5,55 @@ ms.date: 03/08/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-mdt
 ms.topic: article
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Microsoft Deployment Toolkit known issues
 
 This article provides details of any current known issues and limitations with the Microsoft Deployment Toolkit (MDT). It assumes familiarity with MDT version concepts, features, and capabilities.
+
+## HTA applications report Script error after upgrading to ADK for Windows 11, version 22H2
+After you updated your MDT boot image to [ADK for Windows 11, version 22H2](/windows-hardware/get-started/adk-install), HTA applications stop working and a message box is displayed: Script Error - An error has occurred in the script on this page.
+
+HTA applications rely on MSHTML and starting with Windows 11, version 22H2, the default legacy scripting engine was changed.
+
+To work around this issue you need to add the following registry value in WinPE: 
+ ``` 
+ reg.exe add "HKLM\Software\Microsoft\Internet Explorer\Main" /t REG_DWORD /v JscriptReplacement /d 0 /f
+ ```
+To enable this change in MDT, we recommend that you back up the following file: `C:\Program Files\Microsoft Deployment Toolkit\Templates\Unattend_PE_x64.xml` and to modify it as follows:
+ ``` <?xml version="1.0" encoding="utf-8"?>
+<unattend xmlns="urn:schemas-microsoft-com:unattend">
+    <settings pass="windowsPE">
+        <component name="Microsoft-Windows-Setup" processorArchitecture="amd64" publicKeyToken="31bf3856ad364e35" language="neutral" versionScope="nonSxS" xmlns:wcm="http://schemas.microsoft.com/WMIConfig/2002/State">
+            <Display>
+                <ColorDepth>32</ColorDepth>
+                <HorizontalResolution>1024</HorizontalResolution>
+                <RefreshRate>60</RefreshRate>
+                <VerticalResolution>768</VerticalResolution>
+            </Display>
+            <RunSynchronous>
+                <RunSynchronousCommand wcm:action="add">
+                    <Description>Lite Touch PE</Description>
+                    <Order>1</Order>
+                    <Path>reg.exe add "HKLM\Software\Microsoft\Internet Explorer\Main" /t REG_DWORD /v JscriptReplacement /d 0 /f</Path>
+                </RunSynchronousCommand>
+                <RunSynchronousCommand wcm:action="add">
+                    <Description>Lite Touch PE</Description>
+                    <Order>2</Order>
+                    <Path>wscript.exe X:\Deploy\Scripts\LiteTouch.wsf</Path>
+                </RunSynchronousCommand>
+            </RunSynchronous>
+        </component>
+    </settings>
+</unattend>
+  ```
+After saving the changes, you will need to completely regenerate the boot images.
 
 ## Windows Deployment Services (WDS) multicast stops working after upgrading to ADK for Windows 11
 

@@ -6,10 +6,12 @@ ms.date: 11/30/2020
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-sum
-manager: dougeby
-author: mestew
-ms.author: mstewart
+manager: apoorvseth
+author: BalaDelli
+ms.author: baladell
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 #  <a name="BKMK_ManageSUSettings"></a> Manage settings for software updates  

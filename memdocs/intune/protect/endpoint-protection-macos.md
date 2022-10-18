@@ -19,11 +19,14 @@ ms.technology:
 #ROBOTS:
 #audience:
 
+ms.reviewer: mattcall
 ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # macOS endpoint protection settings in Intune
@@ -88,6 +91,7 @@ For more information about Apple FileVault settings, see [FDEFileVault](https://
     - **0** - Require devices to encrypt the next time a user signs in to the device.
     - **1** to **10** - Allow a user to ignore the prompt from 1 to 10 times before requiring encryption on the device.
     - **No limit, always prompt** - The user is prompted to enable FileVault but encryption is never required.
+    - **Disable** - Disables the feature.
 
     The default for this setting depends on the configuration of *Disable prompt at sign out*. When *Disable prompt at sign out* is set to **Not configured**, this setting defaults to **Not configured**. When *Disable prompt at sign out* is set to **Yes**, this setting defaults to **1** and a value of **Not configured** isn't an option.
 

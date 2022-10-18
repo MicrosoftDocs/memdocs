@@ -6,11 +6,12 @@ ms.date: 05/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
-ms.reviewer: acabello
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
+ms.collection: tier3
 ---
 
 # Compatibility assessment in Desktop Analytics

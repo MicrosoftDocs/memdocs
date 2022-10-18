@@ -12,7 +12,7 @@ metadata:
   ms.topic: landing-page
   author: bhuney
   ms.author: brianhun
-  manager: dougeby
+  manager: apoorvseth
   ms.date: 12/09/2021
   ms.localizationpriority: high
 
@@ -25,8 +25,8 @@ landingContent:
             url: 2207/14840616.md
           - text: KB 14959905 Early update ring
             url: 2207/14959905.md
-          - text: KB 15498768 NTLM connection fallback update
-            url: 2207/15498768.md
+          - text: KB 15599094 NTLM client installation update
+            url: 2207/15599094.md
 
   - title: Configuration Manager 2203
     linkLists:

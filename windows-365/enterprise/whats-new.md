@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 10/12/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -49,7 +49,66 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of October 10, 2022
+
+<!-- ***********************************************-->
+### Apps
+
+#### Windows 365 app in public preview<!--41161804-->
+
+A new app to sign in to and manage your Windows 365 Cloud PCs is now in public preview. The app provides functionality similar to the windows365.microsoft.com web site for accessing and managing your Cloud PCs. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+
+<!-- ***********************************************-->
+### Device provisioning
+
+#### Support for US Government environments<!--35234096 -->
+
+Government organizations can now use Windows 365 services first in US Government Community Cloud (GCC) High environments and later in GCC environments. All Windows 365 dependency services must also be used by the organization within the associated Government environment. For more information, see [What is Windows 365 Government?](introduction-windows-365-government.md)
+
+<!-- ***********************************************-->
+### Partners
+
+#### Use Citrix HDX Plus with Windows 365 Enterprise<!--41294492-->
+
+You can now use Citrix HDX Plus with Windows 365 Enterprise Cloud PCs. For more information, see [Set up Citrix HDX Plus for Windows 365 Enterprise](set-up-citrix.md).
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### Cloud PC utilization report<!--40636545 -->
+
+A new report is now available for Cloud PCs. The **Cloud PC utilization** report shows how many hours users have been connected to their Cloud PCs. Information for individual Cloud PCs and aggregated data is also shown. For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Cloud PC with connection quality issues report<!--40636545 -->
+
+A new report is now available for Cloud PCs. The **Cloud PCs with connection quality issues** report shows information for round-trip time, available bandwidth, and remoting sign-in time. Information for individual Cloud PCs and aggregated data is also shown. For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
+
+<!-- ########################## -->
+## Week of September 26, 2022 (Service release 2209)
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### System alerts and email notifications (preview)<!--40932899 -->
+
+You can now set up system alerts and automated emails to be notified when certain events, warnings, or errors occur in the Windows 365 service. A subset of critical Cloud PC issues will be sent automatically to admins. In addition, you can define alert rules, such as target audience (devices, user groups, tenants), thresholds, frequency, and notification channels. For more information, see [Alerts](alerts.md).
+
+<!-- ***********************************************-->
+### Miscellaneous
+
+#### Allow list URL change for Windows 365<!--41400001 -->
+
+We've added a new endpoint which the Windows 365 service requires to be accessible: *.infra.windows365.microsoft.com". This is part of ongoing endpoint consolidation work to reduce the number of FQDNs required to be accessible for the service.
+
+<!-- ########################## -->
 ## Week of September 19, 2022
+
+<!-- ***********************************************-->
+### Device management
+
+#### Downsize Cloud PCs (Preview)<!--41076858 -->
+
+You can now downsize a Cloud PC's RAM and specifications (except disk size). For more information, see [Resize a Cloud PC](resize-cloud-pc.md).
 
 <!-- ***********************************************-->
 ### Device provisioning
@@ -60,8 +119,6 @@ New gallery images are now available that include support for Windows 11 version
 
 - Win11 22H2 + M365 Apps
 - Win11 22H2 + Optimizations
-- Win10 22H2 + M365 Apps
-- Win10 22H2 + Optimizations
 
 <!-- ########################## -->
 ## Week of August 29, 2022 (Service release 2208)

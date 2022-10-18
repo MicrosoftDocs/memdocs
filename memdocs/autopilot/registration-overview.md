@@ -1,13 +1,9 @@
 ---
 title: Windows Autopilot registration overview
 description: Overview of Windows Autopilot device registration
-keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
-ms.mktglfcycl: deploy
+ms.prod: windows-client
+ms.technology: itpro-deploy
 ms.localizationpriority: medium
-ms.sitesec: library
-ms.pagetype: deploy
-audience: itpro
 author: aczechowski
 ms.author: aaroncz
 ms.reviewer: jubaptis
@@ -43,6 +39,16 @@ Registration can also be performed within your organization by collecting the ha
 - [Reseller, distributor, or partner registration](partner-registration.md)
 - [Automatic registration](automatic-registration.md)
 - [Manual registration](manual-registration.md)
+
+When you register an Autopilot device, it automatically creates an Azure AD object. The Autopilot deployment process needs this object to identify the device before the user signs in. If you delete this object, the device can fail to enroll through Autopilot. If the device is registered and not enrolled after 180 days, you'll need to re-register the device to complete a successful deployment.
+
+> [!NOTE]
+> Don't register to Autopilot the following types of devices:
+>
+> - [Azure AD registered](/azure/active-directory/devices/concept-azure-ad-register), also known as "workplace joined"
+> - [Intune MDM-only enrollment](/mem/intune/enrollment/windows-enrollment-methods#user-self-enrollment-in-intune)
+>
+> These options are intended for users to join personally-owned devices to their organization's network.
 
 Once a device is registered in Autopilot if a profile is not assigned, it will receive the default Autopilot profile. If you do not want a device to go through Autopilot, you must remove the Autopilot registration. 
 

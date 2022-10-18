@@ -5,11 +5,13 @@ ms.date: 02/17/2021
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-other
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 description: Additional links for Configuration Manager help documentation
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Online documentation for Configuration Manager

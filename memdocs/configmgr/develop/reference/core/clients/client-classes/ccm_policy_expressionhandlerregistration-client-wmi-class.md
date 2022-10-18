@@ -1,19 +1,18 @@
 ---
 description: Learn how to describe a registered expression handler for a policy with CCM_Policy_ExpressionHandlerRegistration.
-title: "CCM_Policy_ExpressionHandlerRegistration Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CCM_Policy_ExpressionHandlerRegistration Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 41fc3f3c-7f32-471e-9005-d697eed4983f
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_Policy_ExpressionHandlerRegistration Client WMI Class
 > [!IMPORTANT]

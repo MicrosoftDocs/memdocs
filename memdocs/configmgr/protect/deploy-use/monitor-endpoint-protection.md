@@ -6,10 +6,12 @@ ms.date: 03/13/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-protect
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: BalaDelli
+ms.author: baladell
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 # How to monitor Endpoint Protection status
 

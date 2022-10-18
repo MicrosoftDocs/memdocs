@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 24bde9a6-d05d-428d-b26e-cd8dc1ffe9ba
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Exercise 2: Modify an existing report in Configuration Manager

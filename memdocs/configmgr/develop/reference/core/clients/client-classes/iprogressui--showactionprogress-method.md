@@ -1,5 +1,5 @@
 ---
-title: IProgressUI::ShowActionProgress
+title: "IProgressUI::ShowActionProgress"
 titleSuffix: Configuration Manager
 description: In Configuration Manager, the ShowActionProgress method displays custom action progress information in a dialog box while the custom action is running.
 ms.date: 04/01/2019
@@ -7,13 +7,12 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 4f08f27a-bb32-4a86-b7ca-ef745c311323
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # IProgressUI::ShowActionProgress method

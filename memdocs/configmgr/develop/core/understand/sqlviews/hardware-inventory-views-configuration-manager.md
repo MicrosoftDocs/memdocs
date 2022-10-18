@@ -7,11 +7,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: conceptual
 ms.assetid: 8726c91b-de9d-4df0-9eb8-f9f62e109152
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Hardware inventory views in Configuration Manager

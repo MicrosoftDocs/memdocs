@@ -1,19 +1,18 @@
 ---
-title: "Add an OS Image Package"
-titleSuffix: "Configuration Manager"
-description: "Add an operating system image package by creating an instance of the SMS_ImagePackage class."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Add an OS Image Package
+titleSuffix: Configuration Manager
+description: Add an operating system image package by creating an instance of the SMS_ImagePackage class.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: faa80d51-ac31-4802-b778-c26bc003ddb3
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Add an Operating System Image Package in Configuration Manager
 In Configuration Manager, you add an operating system image package by creating an instance of [SMS_ImagePackage](../../develop/reference/osd/sms_imagepackage-server-wmi-class.md) class. The path to the Windows Image (WIM) file is specified in the **PkgSourcePath** property as a Universal Naming Convention (UNC) path.  
