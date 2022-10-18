@@ -344,7 +344,7 @@ Remote help is supported in the following languages:
 - Turkish
 
 > [!NOTE] 
-> The message function of remote help only supports single-byte characters as the current limit.
+> The Message function in Remote help only supports single byte characters.
 
 ## Known Issues
 
