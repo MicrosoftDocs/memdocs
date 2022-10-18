@@ -102,7 +102,7 @@ The Azure Information Protection (AIP) mobile apps enable you to view protected 
 
 For more information about AIP, see [Mobile viewer apps for Azure Information Protection on iOS and Android](/azure/information-protection/rms-client/mobile-app-faq).  
 ## View and edit default apps    
-Company Portal securely saves and stores your default app selections. You can view and remove your selections from the app. 
+Company Portal securely saves and stores your default app selections for managed apps. You can view and remove your selections from the app. 
 
 1. Open Company Portal.  
 2. Tap the main menu > **Settings** .  
