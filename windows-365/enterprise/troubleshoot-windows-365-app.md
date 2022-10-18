@@ -32,9 +32,6 @@ ms.collection: M365-identity-device-management
 
 This article describes issues with the Windows 365 app ([preview](../public-preview.md)) for Windows client and how to fix them.
 
-> [!Note]
-> Issues can occur when users have the Remote Desktop Client and the Windows 365 app installed. We are working on fixing this, you can find the solution here. 
-
 ## Limitations
 
 The Windows 365 app doesn't currently support:
@@ -45,7 +42,7 @@ The Windows 365 app doesn't currently support:
 
 ## Can't connect to Cloud PC error
 
-You may get a **Can't connect to Cloud PC** error when you select the **Connect** button.
+You may get a **Can't connect to Cloud PC** error when you click on the **Connect** button.
 
 To fix this issue:
 
