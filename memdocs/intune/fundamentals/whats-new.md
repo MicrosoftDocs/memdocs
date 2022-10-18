@@ -62,6 +62,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 -->
 
+## Week of October 17, 2022 
+
+### App management  
+
+#### Select default work apps in Intune Company Portal<!-- 14531483 -->
+ Android device users can view and remove their default app selections in the Intune Company Portal app. Company Portal securely stores the device user's default preferences for managed apps. Users can view and remove their selections by going to **Settings** > **Default Apps** > **See defaults**. This feature is an enhancement to the Android MAM custom app picker, which is a part of the Android MAM SDK. For more information about how to view default apps, see [../user-help/use-managed-apps-on-your-device-android.md#view-and-edit-default-apps].  
+
 ## Week of October 10, 2022
 
 ### Device management
