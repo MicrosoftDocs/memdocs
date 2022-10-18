@@ -96,6 +96,9 @@ After you create your device profile, Intune provides graphical charts. These ch
 > [!TIP]
 > [Intune reports](../fundamentals/reports.md) is a great resource, and describes all the reporting features you can use.
 
+> [!NOTE]
+> The "Device and user check-in status" report shows the report for all users that sign-in to the device and checked-in with Intune. If one device has multiple users, this report would give a status for each of the users. Whereas "Device assignment status" report provides information for the user that last checked-in. So, the numbers between the two reports may not match. 
+
 ## View conflicts
 
 In **Devices** > **All devices**, you can see any settings that are causing a conflict. When there's a conflict, you also see all the configuration profiles that contain this setting. Administrators can use this feature to help troubleshoot, and fix any discrepancies with the profiles.
