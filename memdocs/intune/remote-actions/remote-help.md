@@ -346,6 +346,9 @@ Remote help is supported in the following languages:
 - Swedish
 - Turkish
 
+> [!NOTE] 
+> The Message function in Remote help only supports single byte characters.
+
 ## Known Issues
 
 - When setting a conditional access policy for apps **Office 365** and **Office 365 SharePoint Online** with the grant set to **Require device to be marked as compliant**, if a user's device is either unenrolled or non-compliant, then the remote help session won’t be established. 
