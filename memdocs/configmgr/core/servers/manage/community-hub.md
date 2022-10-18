@@ -18,6 +18,9 @@ ms.reviewer: mstewart,aaroncz
 <!--3555935, 3555936-->
 *Applies to: Configuration Manager (current branch)*
 
+> [!IMPORTANT]
+> Starting in March 2023, this feature of Configuration Manager is [deprecated](../../core/plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md). <!-- 15799335 --> 
+
 The IT Admin community has developed a wealth of knowledge over the years. Rather than reinventing items like Scripts and Reports from scratch, we've built a **Community hub** in Configuration Manager where IT Admins can share with each other. By leveraging the work of others, you can save hours of work. The Community hub fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community.
 
 ## About Community hub
