@@ -52,7 +52,10 @@ The *Collect diagnostics* remote action is supported for:
 - Microsoft HoloLens 2 2004 and later.
 - Global Admins, Intune Admins, or a role with **Collect diagnostics** (under **Remote tasks**) and **Read** (under **Device compliance policies**) permissions.
 - Corporate-owned devices.
-- Devices that are online and able to communicate with the service during diagnostics.
+- Devices that are online and able to communicate with the service during diagnostics. 
+
+> [!NOTE]
+ Ensure access to this URL: lgmsapeweu.blob.core.windows.net for uploading the diagnostics
 
 ## Collect diagnostics
 
