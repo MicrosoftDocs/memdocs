@@ -203,7 +203,7 @@ Applies to
 
 ### Device security
 
-### Reusable groups of settings for removable storage in Device Control profiles (preview) <!-- 7351534 -->
+#### Reusable groups of settings for removable storage in Device Control profiles (preview) <!-- 7351534 -->
 
 In public preview, you can now use [reusable groups of settings](../protect/reusable-settings-groups.md) with [device control profiles](../protect/endpoint-security-asr-policy.md#add-reusable-settings-groups-to-profiles-for-device-control) in your attack surface reduction policies.
 
