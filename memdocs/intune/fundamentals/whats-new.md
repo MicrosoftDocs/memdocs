@@ -7,7 +7,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 10/19/2022
+ms.date: 10/24/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -156,12 +156,12 @@ Applies to:
 
 ### Device enrollment
 
-#### iOS/iPadOS Setup Assistant with modern authentication supports Just in Time Registration (public preview)<-- 15515188 -->  
+#### iOS/iPadOS Setup Assistant with modern authentication supports Just in Time Registration (public preview)<!-- 15515188 -->  
 Intune supports Just in Time (JIT) Registration for iOS/iPadOS enrollment scenarios that use Setup Assistant with modern authentication. JIT Registration reduces the number of authentication prompts shown to users throughout the provisioning experience, giving them a more seamless onboarding experience. It eliminates the need to have the Company Portal app for Azure AD registration and compliance checks, and establishes single sign-on across the device. JIT Registration is available in public preview for devices enrolling through Apple automated device enrollment and running iOS/iPadOS 13.0 or later. For more information, see [Authentication methods for automated device enrollment](../enrollment/automated-device-enrollment-authentication.md). 
 
 ### Device management
 
-#### Connect Chrome OS devices in Intune (public preview)<-- 14273312 -->  
+#### Connect Chrome OS devices in Intune (public preview)<!-- 14273312 -->  
 View company or school-owned devices that run on Chrome OS in the Microsoft Endpoint Manager admin center.  Now in public preview, you can establish a connection between the Google Admin Console and Microsoft Intune.  Device information about your Chrome OS endpoints is synced into Intune and viewable in your device inventory list. Basic remote actions, such as restart, wipe, and lost mode are also available in the admin center.
 
 #### Manage macOS software updates with Intune<!-- 9801186 -->  
