@@ -134,6 +134,12 @@ Some settings on Windows client devices may show as "Not Applicable". When this 
 
 To learn more about the version and SKU requirements for the different settings, see the [Configuration Service Provider (CSP) reference](/windows/client-management/mdm/configuration-service-provider-reference).
 
+## I targeted my app or policy to a dynamic device group but when devices enroll there is a delay in applying those apps and policies
+
+It is common practice to use AAD dynamic device groups which are populated dynamically during enrollment. For example, you create a dynamic device group based on a device's name or Enrollment Profile, which gets applied to the device record during initial setup. Azure AD dynamic grouping is not instant, so the device may not appear in the desired group for minutes to hours depending on other changes in progress for your tennant. Because the device is not added to the group, the desired policies and applications are not targeted to it during the initial, agressive check-in window and the device may not apply configuration until the next scheduled check-in.
+
+If fast delivery of policy and apps is important to your setup/enrollment scenario consider targeting user groups, instead of device groups with apps and policy. User groups are pre-populated with members prior to device setup time and don't have this issue.
+
 ## Next steps
 
 Need extra help? See [How to get support in Microsoft Intune](../../get-support.md).
