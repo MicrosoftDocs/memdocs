@@ -70,7 +70,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 A link has been added to the notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
 
-If the device that the helper is connecting to is is not compliant with your organization's assigned security policies, then the non-compliance warning about that device is displayed along with a link. 
+If the device that the helper is connecting to is not compliant with your organization's assigned security policies, then the non-compliance warning about that device is displayed along with a link. 
 
 For more information, go to:
 [Monitor Device compliance](../protect/compliance-policy-monitor.md)
@@ -4264,7 +4264,7 @@ Applies to:
 
 #### Increasing recommended maximum number of iOS/iPadOS and macOS devices per enrollment token<!--8568668  -->
 
-Previously, we recommended that you don't exceed 60,000 iOS/iPadOS or macOS devices per Automated Device Enrollment (ADE) token. This recommended limit is now increased to 200,000 devices per token. For more information about ADE tokens, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#supported-volume).
+Previously, we recommended that you don't exceed 60,000 iOS/iPadOS or macOS devices per Automated Device Enrollment (ADE) token. This recommended limit is now increased to 200,000 devices per token. For more information about ADE tokens, see [Automatically enroll iOS/iPadOS devices by using Apple's Automated Device Enrollment](../enrollment/device-enrollment-program-enroll-ios.md#limits).
 
 #### Update of column names in All devices view and Export report<!-- 8854380  -->
 

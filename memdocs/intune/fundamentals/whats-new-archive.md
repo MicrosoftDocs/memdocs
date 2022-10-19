@@ -1754,7 +1754,7 @@ To help distributed IT departments and organizations, Intune now supports up to 
 
 Intune now supports up to 1000 Apple Configurator 2 profiles.
 
-For more information, see [Supported volume](../enrollment/device-enrollment-program-enroll-ios.md#supported-volume).
+For more information, see [Limits](../enrollment/device-enrollment-program-enroll-ios.md#limits).
 
 #### All devices page column entry changes<!--6967616 -->
 On the **All devices** page, the entries for the **Managed by** column have changed:
