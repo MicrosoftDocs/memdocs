@@ -71,9 +71,9 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 
     For details about using the configuration designer, see [Use configuration designer](#use-the-configuration-designer). For details about entering XML data, see [Enter JSON data](#enter-json-data).
 
-12. If you need to enable users to connect the targeted app across both the work and personal profiles, select **Enabled** next to **Connected apps**.<p>
+12. If you need to enable users to connect the targeted app across both the work and personal profiles, select **Enabled** next to **Connected apps**.
 
-    <img alt="Screenshot of configuration policy - Settings" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-01.png" width="700">
+    :::image type="content" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-01.png" alt-text="Screenshot of configuration policy - Settings":::
 
     > [!NOTE]
     > This setting only works for personally-owned work profile and corporate-owned work profile devices.
@@ -83,21 +83,21 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 13. Click **Next** to display the **Scope tags** page.
 14. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 15. Click **Next** to display the **Assignments** page. 
-16. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you've selected an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.<p>
+16. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you've selected an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
-    <img alt="Screenshot of policy assignments - Assignments" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-02.png" width="700">
+    :::image type="content" alt-text="Screenshot of policy assignments - Assignments" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-02.png" :::
 
-17. Select **All users** in the dropdown box.<p>
+17. Select **All users** in the dropdown box.
 
-    <img alt="Screenshot of policy assignments - All Users dropdown option" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-03.png" width="700">
+    :::image type="content" alt-text="Screenshot of policy assignments - All Users dropdown option" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-03.png" :::
 
 18. [Optional] Click **Edit filter** to add a [filter](../fundamentals/filters.md) and refine the assignment scope.
 
-    <img alt="Screenshot of policy assignments - Edit filter" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-04.png" width="400">
+    :::image type="content" alt-text="Screenshot of policy assignments - Edit filter" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-04.png" :::
 
-16. Click **Select groups to exclude** to display the related pane.<p>
+16. Click **Select groups to exclude** to display the related pane.
 
-    <img alt="Screenshot of policy assignments - Select groups to exclude page" src="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-05.png" width="400">
+    :::image type="content" alt-text="Screenshot of policy assignments - Select groups to exclude page" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-05.png" :::
 
 17. Choose the groups you want to exclude and then click **Select**.
 
@@ -140,7 +140,7 @@ You can choose the following options if you choose variable as the value type:
 
 As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For Android devices, use the following key/value pairs in a Managed Devices app configuration policy:
 
-| **Key** | com.microsoft.intune.mam.AllowedAccountUPNs |
+| Key | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
 | **Values** | <ul><li>One or more <code>;</code> delimited UPNs.</li><li>Only account(s) allowed are the managed user account(s) defined by this key.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul> |
 

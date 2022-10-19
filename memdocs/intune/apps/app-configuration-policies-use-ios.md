@@ -76,19 +76,19 @@ Once you have selected the included groups for your application configuration po
 10. Click **Next** to display the **Assignments** page.
 11. On the **Assignments** page, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you've selected an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
-    <img alt="Screenshot of configuration policy assignments page" src="./media/app-configuration-policies-use-ios/app-config-policy01.png" width="800">
+    :::image type="content" alt-text="Screenshot of configuration policy assignments page" source="./media/app-configuration-policies-use-ios/app-config-policy01.png" :::
 
 12. Select **All users** in the dropdown box.
 
-    <img alt="Screenshot of Policy assignments - All Users dropdown option" src="./media/app-configuration-policies-use-ios/app-config-policy02.png" width="800">
+    :::image type="content" alt-text="Screenshot of Policy assignments - All Users dropdown option" source="./media/app-configuration-policies-use-ios/app-config-policy02.png" :::
 
 13. [Optional] Click **Edit filter** to add a [filter](../fundamentals/filters.md) and refine the assignment scope.
 
-    <img alt="Screenshot of Policy assignments - Edit filter" src="./media/app-configuration-policies-use-ios/app-config-policy02a.png" width="400">
+    :::image type="content" alt-text="Screenshot of Policy assignments - Edit filter" source="./media/app-configuration-policies-use-ios/app-config-policy02a.png" :::
 
 14. Click **Select groups to exclude** to display the related pane.
 
-    <img alt="Screenshot of Policy assignments - Select groups to exclude pane" src="./media/app-configuration-policies-use-ios/app-config-policy03.png" width="400">
+    :::image type="content" alt-text="Screenshot of Policy assignments - Select groups to exclude pane" source="./media/app-configuration-policies-use-ios/app-config-policy03.png" :::
 
 15. Choose the groups you want to exclude and then click **Select**.
 
@@ -121,7 +121,7 @@ The \{\{ and \}\} characters are used by token types only and must not be used f
 
 As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts within the apps (if supported) on enrolled devices. For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy:
 
-| **Key** | **Values** |
+| Key | Values |
 |----|----|
 | IntuneMAMAllowedAccountsOnly | <ul><li>**Enabled**: The only account allowed is the managed user account defined by the [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) key.</li><li>**Disabled** (or any value that is not a case insensitive match to **Enabled**): Any account is allowed.</li></ul> |
 | IntuneMAMUPN | <ul><li>UPN of the account allowed to sign into the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
@@ -141,7 +141,7 @@ On enrolled devices, organizations can require that the work or school account i
 
 For iOS/iPadOS devices, use the following key/value pairs in a Managed Devices app configuration policy for each Microsoft app:
 
-| **Key** | **Values** |
+| Key | Values |
 |----|----|
 | IntuneMAMRequireAccounts | <ul><li>Enabled: The app requires the user to sign-in to the managed user account defined by the [IntuneMAMUPN](data-transfer-between-apps-manage-ios.md#configure-user-upn-setting-for-microsoft-intune-or-third-party-emm) key to receive Org data.</li><li>Disabled (or any value that is not a case insensitive match to Enabled): No account sign-in is required</li></ul>  |
 | IntuneMAMUPN | <ul><li>UPN of the account allowed to sign into the app.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul>  |
