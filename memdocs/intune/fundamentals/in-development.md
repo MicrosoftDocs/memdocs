@@ -117,9 +117,6 @@ Applies to:
 - Android 12.0 and newer
 - Android Enterprise personally owned devices with a work profile
 
-<!-- ***********************************************-->
-
-## Device security
 
 <!-- ***********************************************-->
 
