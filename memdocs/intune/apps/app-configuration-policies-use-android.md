@@ -85,7 +85,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 15. Click **Next** to display the **Assignments** page. 
 16. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you've selected an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
-    :::image type="content" alt-text="Screenshot of policy assignments - Assignments" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-02.png" :::
+    :::image type="content" alt-text="Screenshot of policy assignments - Assignments" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-02.png" ::: 
 
 17. Select **All users** in the dropdown box.
 

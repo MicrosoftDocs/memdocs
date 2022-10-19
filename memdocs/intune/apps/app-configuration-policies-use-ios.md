@@ -80,7 +80,7 @@ Once you have selected the included groups for your application configuration po
 
 12. Select **All users** in the dropdown box.
 
-    :::image type="content" alt-text="Screenshot of Policy assignments - All Users dropdown option" source="./media/app-configuration-policies-use-ios/app-config-policy02.png" :::
+    :::image type="content" alt-text="Screenshot of Policy assignments - All Users dropdown option" source="./media/app-configuration-policies-use-ios/app-config-policy02.png" ::: 
 
 13. [Optional] Click **Edit filter** to add a [filter](../fundamentals/filters.md) and refine the assignment scope.
 
