@@ -60,7 +60,7 @@ Proactive remediations requires the [licensing for Endpoint analytics](enroll-in
 ### <a name="bkmk_requirements"></a> Script requirements
 
 - You can have up to 200 script packages.
-- A script package can contain a detection script only or both a detection script and a remediation script. A Remediation script will only run if the detection script detects the issue.
+   - A script package can contain a detection script only or both a detection script and a remediation script. A remediation script only runs if the detection script uses exit code `exit 1`, meaning the issue was detected.
 - Ensure the scripts are encoded in UTF-8.
   - If the option **Enforce script signature check** is enabled in the [Settings](#bkmk_prs_deploy) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
 - The maximum allowed output size limit is 2048 characters.
