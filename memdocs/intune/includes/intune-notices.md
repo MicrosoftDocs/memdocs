@@ -13,11 +13,11 @@ These notices provide important information that can help you prepare for future
 
 ### Plan for Change: Ending support for Company Portal authentication method for iOS/iPadOS ADE enrollment
 
-As we continue to invest in Setup Assistant with modern authentication, which is the Apple supported path to require enrollment during Setup Assistant with optional multi-factor authentication, we plan to remove the Company Portal authentication method from new and existing iOS/iPadOS ADE enrollment profiles in Q1 2023. This will include removing the Run Company Portal in Single App Mode until authentication setting.
+As we continue to invest in Setup Assistant with modern authentication, which is the Apple supported path to require enrollment during Setup Assistant with optional multi-factor authentication, we plan to remove the Company Portal authentication method from new and existing iOS/iPadOS ADE enrollment profiles in Q1 of CY2023. This will include removing the Run Company Portal in Single App Mode until authentication setting.
 
 ### How does this affect you or your users?
 
-In November, new enrollments (new devices that are targeted with an existing enrollment profile or devices re-enrolling) that are targeted with an existing enrollment profile with the Company Portal authentication method, will not be able to enroll.
+In Q1 of CY2023, new enrollments (new devices that are targeted with an existing enrollment profile or devices re-enrolling) that are targeted with an existing enrollment profile with the Company Portal authentication method, will not be able to enroll.
 
 This will not impact existing enrolled devices unless the device is re-enrolled after this change. The device will not be able to re-enroll until the authentication method is switched in the enrollment profile to Setup Assistant with modern authentication.
 
