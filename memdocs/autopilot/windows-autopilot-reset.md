@@ -42,6 +42,7 @@ The Windows Autopilot Reset process automatically keeps information from the exi
 - Provisioning packages previously applied to the device.
 - A provisioning package present on a USB drive when the reset process is started. 
 - Azure Active Directory device membership and MDM enrollment information.
+- SCEP certificates.
 
 Windows Autopilot Reset will block the user from accessing the desktop until this information is restored, including reapplying any provisioning packages. For devices enrolled in an MDM service, Windows Autopilot Reset will also block until an MDM sync is completed. 
 When Autopilot reset is used on a device, the device's primary user will be removed. The next user who signs in after the reset will be set as the primary user.
