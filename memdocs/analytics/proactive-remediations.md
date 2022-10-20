@@ -112,7 +112,7 @@ Proactive remediation scripts need to be encoded in UTF-8. Uploading these scrip
    1. Browse to the `.ps1` file.
    1. Choose the file and select **Open** to upload it.
 
-    The Detection script must use exit code `exit 1` if the target issue is detected. The Remediation script will not run when there's any other exit code including an empty output and it results in *the issue is not found* state. For example, see the [Sample detection script](powershell-scripts.md#bkmk_ps_scripts).
+    The detection script must use exit code `exit 1` if the target issue is detected. The remediation script won't run when there's any other exit code, including an empty output, since it results in an *issue is not found* state. Review the [Sample detection script](powershell-scripts.md#bkmk_ps_scripts) for an example of exit code usage.
 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
        [![Endpoint analytics Proactive remediations script settings page.](media/proactive-remediations-script-settings.png)](media/proactive-remediations-script-settings.png#lightbox)
