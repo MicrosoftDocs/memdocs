@@ -253,6 +253,9 @@ This capability is supported for the following certificate profiles for only And
 - [PKCS](../protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile)
 - [SCEP](../protect/certificates-profile-scep.md#create-a-scep-certificate-profile)
 
+#### In-app notifications for Microsoft Intune app<!-- 13110609  -->  
+Android (AOSP) device users can now receive compliance notifications in the Microsoft Intune app. This capability is only available on Android Open Source Project (AOSP) user-based devices. For more information, see [AOSP compliance notifications](../user-help/check-compliance-aosp.md#compliance-notifications).
+
 ### Intune apps
 
 #### Newly available protected apps for Intune<!-- 15287512, 15448552   -->  
