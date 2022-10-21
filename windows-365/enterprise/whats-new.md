@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 10/21/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -49,6 +49,16 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of October 17, 2022
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### New Azure Network Connection health check<!--41752775-->
+
+A new check has been added the Azure Network Connectin health checks: **UDP connection server reachable**. For more information, see [Azure network connections health checks](health-checks.md).
+
+<!-- ########################## -->
 ## Week of October 10, 2022
 
 <!-- ***********************************************-->
@@ -56,7 +66,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 #### Windows 365 app in public preview<!--41161804-->
 
-A new app to sign in to and manage your Windows 365 Cloud PCs is now in public preview. The app provides functionality similar to the windows365.microsoft.com web site for accessing and managing your Cloud PCs. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0).
+A new app to sign in to and manage your Windows 365 Cloud PCs is now in public preview. The app provides functionality similar to the windows365.microsoft.com web site for accessing and managing your Cloud PCs. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0). 
 
 <!-- ***********************************************-->
 ### Device provisioning
