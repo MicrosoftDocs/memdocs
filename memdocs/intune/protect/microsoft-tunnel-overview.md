@@ -156,8 +156,6 @@ The following outlines where break and inspect isn't supported and where it's su
 
   The Microsoft Tunnel [client VPN profile](../protect/microsoft-tunnel-configure.md#create-a-vpn-profile) that gets delivered to mobile clients supports a proxy configuration. If using this setting, the proxy (Refer to **G** in the Architecture diagram) specified can use “Break and Inspect” on the client traffic routed out (refer to **7** in the Architecture diagram) of the Tunnel Gateway server to the corporate network.
 
-Configuration of a break and inspect proxy can be completed after the initial Microsoft Tunnel installation. See [Configure a break and inspect proxy](microsoft-tunnel-configure.md#configure-a-break-and-inspect-proxy). 
-
 **Additional details**:
 
 - Conditional Access is done in the VPN client and based on the cloud app *Microsoft Tunnel Gateway*. Non-compliant devices won’t receive an access token from Azure AD and can't access the VPN server. For more information about using Conditional Access with Microsoft Tunnel, see [Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md).
