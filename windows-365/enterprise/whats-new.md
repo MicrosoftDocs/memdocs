@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/20/2022
+ms.date: 10/12/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,16 +47,6 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
-
-<!-- ########################## -->
-## Week of October 17, 2022
-
-<!-- vvvvvvvvvvvvvvvvvvvvvv -->
-### Monitor and troubleshoot
-
-#### Forensic auditing of Cloud PCs is now generally available<!--41237533-->
-
-Forensic auditing of Cloud PCs has moved out of preview and into general availability. For more information, see [Digital forensics and Windows 365 Enterprise Cloud PCs](digital-forensics.md) and [Place a Cloud PC under review](place-cloud-pc-under-review.md).
 
 <!-- ########################## -->
 ## Week of October 10, 2022
