@@ -12,14 +12,14 @@ ms.date: 09/22/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
-ms.topic: article
+ms.topic: article 
 ---
 
 # Windows Autopilot: What's new
 
 ## Autopilot automatic device diagnostics collection
 <!--1895390-->
-Starting with Intune 2209, Intune will automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and with Windows 11. When logs are finished processing on a failed device, they will be automatically captured and uploaded to Intune. Diagnostics and logs may include user identifiable information such as user name or device name. If the logs are not available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they are removed.
+Starting with Intune 2209, Intune will automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and with Windows 11. When logs are finished processing on a failed device, they will be automatically captured and uploaded to Intune. Diagnostics may include user identifiable information such as user or device name. If the logs are not available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they are removed.
 
 For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md).
 

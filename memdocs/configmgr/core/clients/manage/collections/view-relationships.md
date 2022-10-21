@@ -7,9 +7,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: conceptual
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # View collection relationships

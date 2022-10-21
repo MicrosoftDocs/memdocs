@@ -1,19 +1,18 @@
 ---
 description: The InstallStatusMIF function creates a status Management Information Format (MIF) file that Configuration Manager uses to correlate the install status for an advertisement.
-title: "InstallStatusMIF Function"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: InstallStatusMIF Function
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 5ad7cfc6-4112-41ab-94fe-c0a125564e28
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # InstallStatusMIF Function
 The `InstallStatusMIF` function creates a status Management Information Format (MIF) file that Configuration Manager uses to correlate the install status for an advertisement.  

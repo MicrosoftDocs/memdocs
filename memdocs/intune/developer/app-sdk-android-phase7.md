@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection:
 - M365-identity-device-management
 - Android
+- tier3
 ms.custom: intune-classic
 ---
 
@@ -531,10 +532,7 @@ To do this in your MSAL application, build your Public Client using the Client C
       ]
     }
 ```
-Once you've completed this integration, you'll need to contact the Intune team at `msintuneappsdk@microsoft.com` to add your application to the list of approved apps for app-based CA.
-*Without this step, your app isn't CA compliant and won't appropriately block access to resources.*
-
-When you have received confirmation from the Intune team that your app has been added to the approved list, proceed to [Validating App Protection CA] below.
+Once you've completed the above, proceed to [Validating App Protection CA] below.
 
 ### Implementation Notes
 

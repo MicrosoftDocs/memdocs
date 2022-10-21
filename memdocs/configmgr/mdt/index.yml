@@ -9,9 +9,9 @@ metadata:
   ms.prod: configuration-manager
   ms.technology: configmgr-mdt
   ms.topic: landing-page
-  author: aczechowski
-  ms.author: aaroncz
-  manager: dougeby
+  author: BalaDelli
+  ms.author: baladell
+  manager: apoorvseth
   ms.date: 09/23/2021
   ms.localizationpriority: null
   ms.collection: openauth

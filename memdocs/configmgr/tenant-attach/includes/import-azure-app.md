@@ -1,11 +1,14 @@
 ---
-author: mestew
-ms.author: mstewart
+author: Banreet
+ms.author: banreetkaur
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: include
 ms.localizationpriority: high
 ms.date: 07/11/2022
+manager: apoorvseth
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 <!-- This include file is currently used by device-sync-actions.md and cloud-attach/enable.md. Note H2/H3s for this include file may be context driven by article. -->
 

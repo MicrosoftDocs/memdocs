@@ -41,6 +41,7 @@ Resizing gives admins the flexibility to upgrade/downgrade the following specifi
 - Decrease the RAM and vCPU cores when a user doesn't need to run CPU intensive applications.
 
 Resizing doesn't you let downsize disk space.
+Resizing preserves user data. Users will be able to access all of their data after the resizing is finished. 
 
 
 ## Requirements
@@ -60,6 +61,8 @@ The **Resize** remote action is supported for paid, preview, and trial licenses.
 Resizing isn’t supported for Cloud PCs provisioned through group-based licenses.
 
 Resizing is only supported for Gen 2 Cloud PCs. If you try resizing a Gen 1 Cloud PC, the resize will no start and you will be notified that this happened due to the user having a Gen 1 Cloud PC. Reprovision the Gen 1 Cloud PC to convert it to a Gen 2 Cloud PC
+
+Downsizing from a 8vCPU core Cloud PC that supports nested virtualization will disable nested virtualization support. Nested virtualization is only supported on 8vCPU core Cloud PCs. 
 
 ## Resize a Cloud PC
 

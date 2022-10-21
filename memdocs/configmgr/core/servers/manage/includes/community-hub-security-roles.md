@@ -1,6 +1,6 @@
 ---
-author: mestew
-ms.author: mstewart
+author: banreet
+ms.author: banreetkaur
 ms.prod: configuration-manager
 ms.topic: include
 ms.date: 01/08/2021

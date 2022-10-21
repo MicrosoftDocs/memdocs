@@ -1,19 +1,18 @@
 ---
 description: Learn how to represent System Center Endpoint Protection alerts using SMS_EPAlert in Configuration Manager.
-title: "SMS_EPAlert Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_EPAlert Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 00fc69cf-c419-4b68-bfe3-737fd5c957f6
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_EPAlert Server WMI Class
 The `SMS_EPAlert` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents System Center Endpoint Protection alerts.  

@@ -2,15 +2,17 @@
 title: Tutorial - Enable co-management for internet devices
 titleSuffix: Configuration Manager
 description: Learn how to configure co-management for new internet-based Windows 10 or later devices by using Configuration Manager and Microsoft Intune.
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.date: 08/24/2021
 ms.topic: tutorial
 ms.prod: configuration-manager
 ms.technology: configmgr-comanage
 ms.localizationpriority: medium
 #Customer intent: As a Configuration Manager admin, I want enable co-management so I can manage some client workloads from Intune and others from Configuration Manager.
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Tutorial: Enable co-management for new internet-based devices

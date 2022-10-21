@@ -8,7 +8,7 @@ keywords:
 author: dougeby 
 ms.author: dougeby
 manager: dougeby
-ms.date: 09/26/2022
+ms.date: 10/18/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -67,27 +67,13 @@ You can use RSS to be notified when this article is updated. For more informatio
 ## App management
 
 ### Global quiet time app policy settings<!-- 15424417 -->
-The global quiet time settings will allow you to create policies to schedule quiet time for your end users which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.
-
-### Select default work apps in Intune Company Portal<!-- 14531482 -->
-Android device users will be able to select and save their preferred work apps in Intune Company Portal. They'll be able to select the default apps they want to use for a specific intent or file type, and change or remove their preferences. Company Portal will securely store the device user's preferred defaults. This feature is an enhancement to the Android MAM custom app picker, which is a part of the Android MAM SDK. 
+The global quiet time settings will allow you to create policies to schedule quiet time for your end users which will automatically mute Microsoft Outlook email and Teams notifications on iOS/iPadOS and Android platforms. These policies can be used to limit end user notifications received after work hours. When this feature is available, you will be able to find it in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Apps** > **Quiet Time** > **Policies**.  
 
 ### Use filters with app configuration profiles for managed devices<!-- 7423842 -->
 You will be able to use filters to refine the assignment scope when deploying app configuration profiles for managed devices.
-You can first create a filter using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration profile by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](../fundamentals/filters.md).
+You can first create a filter using any of the available properties for iOS and Android. Then, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) you can assign your managed app configuration profile by selecting **Apps** > **App configuration policies** > **Add** > **Managed devices** and go to the assignment page. After selecting a group, you can refine the applicability of the policy by choosing a filter and deciding to use it in **Include** or **Exclude** mode. For related information about filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Endpoint Manager](filters.md).
 
 ## Device management
-
-### Intune support for Linux Ubuntu LTS desktops will be generally available<!-- 14616038 -->
-Intune will support Linux Ubuntu LTS desktops. The following initial functionality is planned for this first release for Linux desktop management:
-- Enroll Linux Ubuntu LTS (22.04 and 20.04) desktops into Microsoft Endpoint Manager
-- Enable access to corporate resources via Microsoft Edge 
-- Conditional Access enforcement in Microsoft Edge 
-- Standard Compliance policies
-    - Linux distribution
-    - Device encryption
-    - Password complexity
-- Bash script support for custom compliance policies
 
 ### New hardware details available for individual devices running on iOS/iPadOS<!-- 15038076 -->
 Select **Devices** > **All devices** > *select one of your listed devices* and open it's **Hardware** details. The following new details are available in the **Hardware** pane of individual devices:
@@ -107,17 +93,6 @@ With this new setting you’ll be able to configure inbound and outbound rules f
 
 Applies to:  
 - Windows 10, Windows 11, and Windows Server
-
-###  Support for Locate device on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices<!-- 12391424 -->
-You'll be able to use "Locate device" on Android Enterprise corporate owned fully managed and Android Enterprise corporate owned work profile devices. Using this feature, admins will be able to locate lost or stolen corporate devices on-demand. To do this, in [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices**, and then select **All devices**. From the list of devices you manage, select a supported device, and choose the **Locate device** remote action.
-
-For information on locating lost or stolen devices with Intune, go to:
- - [Locate lost or stolen devices with Intune](../remote-actions/device-locate.md)
-
-Applies to:
-- Android Enterprise corporate owned fully managed
-- Android Enterprise corporate owned dedicated devices
-- Android Enterprise corporate owned work profile
 
 <!-- ***********************************************-->
 
@@ -291,14 +266,6 @@ Features of the reusable settings groups will include:
   
 Reusable groups will be configured on a new Tab for *Reusable settings* that will be available when you view endpoint security Firewall policy.  In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Endpoint security** > **Firewall**.
 
-<!-- ***********************************************-->
-
-## Monitor and troubleshoot
-
-### Open Help and Support without losing your context in the Microsoft Endpoint Manager admin center<!-- 12469338 -->
-You’ll soon be able to use the **?** icon in the Microsoft Endpoint Manager admin center to  open a help and support session without losing your current node of focus in the admin center. The **?** icon is always available in the upper right of the admin center title bar. This change will add an additional method for accessing *Help and support*.
-
-When you select  **?**, the admin center will open a new and separate side-by-side pane you use to navigate the support experience. By opening this separate pane, you’ll be free to navigate the support experience without affecting your original location and focus on the admin center. You will however be free to navigate through the admin center in that original pane if you choose.
 
 <!-- ***********************************************-->
 

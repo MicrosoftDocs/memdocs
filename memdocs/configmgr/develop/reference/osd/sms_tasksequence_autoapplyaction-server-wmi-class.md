@@ -1,19 +1,18 @@
 ---
-title: "SMS_TaskSequence_AutoApplyAction Class"
-titleSuffix: "Configuration Manager"
-description: "The SMS_TaskSequence_AutoApplyAction WMI class represents a task sequence action that matches and installs device drivers as part of an operating system deployment."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_TaskSequence_AutoApplyAction Class
+titleSuffix: Configuration Manager
+description: The SMS_TaskSequence_AutoApplyAction WMI class represents a task sequence action that matches and installs device drivers as part of an operating system deployment.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: f330dd6f-9453-4fe2-b285-a7287c0853d0
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_TaskSequence_AutoApplyAction Server WMI Class
 The `SMS_TaskSequence_AutoApplyAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that matches and installs device drivers as part of an operating system deployment.  

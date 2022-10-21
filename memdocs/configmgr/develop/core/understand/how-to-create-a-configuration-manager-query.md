@@ -1,19 +1,18 @@
 ---
-title: "Create a Query"
-titleSuffix: "Configuration Manager"
-description: "Create an SMS_Query-based query by creating an instance of SMS_Query. The SMS_Query class Expression object defines a WQL query."
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Create a Query
+titleSuffix: Configuration Manager
+description: Create an SMS_Query-based query by creating an instance of SMS_Query. The SMS_Query class Expression object defines a WQL query.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 08642b5a-210f-4d60-8544-b9519cbff053
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Create a Configuration Manager Query
 In Configuration Manager, you create an `SMS_Query`-based query by creating an instance of `SMS_Query`. The `SMS_Query` class `Expression` object defines a WQL query. If you want to limit the query results to a specific collection, specify the collection identifier in the `LimitToCollectionID` property.  

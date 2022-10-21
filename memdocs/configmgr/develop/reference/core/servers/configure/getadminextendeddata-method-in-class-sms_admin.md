@@ -1,19 +1,18 @@
 ---
-description: Learn how to get the extended data that the current user and its groups have using GetAdminExtendedData. 
-title: "GetAdminExtendedData Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to get the extended data that the current user and its groups have using GetAdminExtendedData.
+title: GetAdminExtendedData Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 25bb4ce9-df34-436b-a74a-6768963b0bd1
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # GetAdminExtendedData Method in Class SMS_Admin
 The `GetAdminExtendedData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the extended data that the current user and its groups have for a given type.  

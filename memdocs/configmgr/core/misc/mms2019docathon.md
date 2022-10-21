@@ -5,11 +5,13 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other
 ms.topic: conceptual
 description: Info and rules for MMS 2019 docathon
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: null
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # MMS 2019 Docathon

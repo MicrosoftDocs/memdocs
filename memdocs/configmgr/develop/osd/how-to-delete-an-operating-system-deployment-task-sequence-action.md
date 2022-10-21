@@ -1,18 +1,18 @@
 ---
-title: "Delete an OS Deployment Task Sequence Action"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Delete an OS Deployment Task Sequence Action
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 32db0107-f390-4324-9c36-e60976edf9eb
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 description: Learn about how to remove an action from an operating system deployment task sequence to delete the action from the sequence.
-
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Delete an Operating System Deployment Task Sequence Action
 You delete an operating system deployment task sequence action, in Configuration Manager, by removing the action from the task sequence steps.  
