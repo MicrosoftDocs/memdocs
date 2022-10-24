@@ -6,10 +6,12 @@ ms.date: 05/08/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+ms.author: gokarthi
+author: gowdhamankarthikeyan
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Security and privacy for queries in Configuration Manager
 

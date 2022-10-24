@@ -28,6 +28,7 @@ ms.custom: intune-classic
 ms.collection:
 - M365-identity-device-management
 - iOS/iPadOS
+- tier3
 ---
 
 # Prepare iOS apps for app protection policies with the Intune App Wrapping Tool
@@ -439,6 +440,8 @@ Use the following security and privacy best practices when you use the App Wrapp
 - iOS apps that include a file upload dialog box can allow users to circumvent, cut, copy, and paste restrictions applied to the app. For example, a user could use the file upload dialog box to upload a screenshot of the app data.
 
 - When you monitor the documents folder on your device from within a wrapped app, you might see a folder named .msftintuneapplauncher. If you change or delete this file, it might affect the correct functioning of restricted apps.
+
+- Registering custom URL schemes allows specific URLs to redirect into your app. iOS and iPadOS allow multiple apps to register the same custom URL scheme and the OS determines which application is invoked. Please refer to the Apple documentation [Defining a custom URL scheme for your app](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app) for recommendations to help avoid custom URL scheme collisions and security guidelines for handling malformed URLs.
 
 ## See also
 

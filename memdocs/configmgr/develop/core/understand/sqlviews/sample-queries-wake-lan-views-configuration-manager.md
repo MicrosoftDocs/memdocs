@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 8a1dcdff-9578-447c-b3cf-3c72166bf7cc
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Sample queries for Wake On LAN in Configuration Manager

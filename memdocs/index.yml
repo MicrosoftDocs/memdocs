@@ -1,6 +1,6 @@
 ### YamlMime:Hub
-title: Microsoft Intune product family documentation
-summary: Learn more about the products & services in the Microsoft Intune product family that can help you secure, deploy, and manage users, apps, and endpoint devices.
+title: Endpoint management documentation
+summary: Learn more about how Microsoft Intune and Microsoft Configuration Manager can help you secure, deploy, and manage users, apps, and endpoint devices.
 
 metadata:
   services: service
@@ -9,19 +9,16 @@ metadata:
   author: dougeby
   ms.author: dougeby
   manager: johmar
-  ms.date: 09/19/2022
+  ms.date: 10/12/2022
   ms.localizationpriority: high
   ms.collection: highpri
   ms.custom: intro-hub-or-landing
 
 highlightedContent:
   items:
-    - title: Microsoft Intune product family overview
+    - title: Endpoint management overview
       itemType: overview
       url: endpoint-manager-overview.md
-    - title: Microsoft Intune (product page)
-      itemType: overview
-      url: https://www.microsoft.com/microsoft-365/microsoft-endpoint-manager
     - title: Cloud attach your Configuration Manager environment
       itemType: overview
       url: https://learn.microsoft.com/mem/configmgr/cloud-attach/overview
@@ -34,13 +31,13 @@ highlightedContent:
     - title: Training on Microsoft Learn
       itemType: get-started
       url: https://docs.microsoft.com/search/?terms=intune&category=Learn
-    - title: How to use the docs for Microsoft Intune technologies
+    - title: How to use the endpoint management docs
       itemType: overview
       url: ./use-docs.md
 
 # productDirectory section (optional)
 productDirectory:
-  title: Get started with the Microsoft Intune product family
+  title: Get started with Microsoft Intune
   items:
     # Card
     - title: Microsoft Intune docs
@@ -48,7 +45,7 @@ productDirectory:
       summary: Microsoft Intune is a cloud-based service that helps enable your workforce to be productive while keeping your corporate data protected.
       url: ./intune/index.yml
     # Card
-    - title: Microsoft Endpoint Configuration Manager docs
+    - title: Microsoft Configuration Manager docs
       imageSrc: ./media/configmgr.svg
       summary: Configuration Manager is an on-premises and cloud-connected device management solution to manage devices, deploy apps and software updates, etc.
       url: ./configmgr/index.yml
@@ -56,26 +53,12 @@ productDirectory:
     - title: Windows Autopilot docs
       imageSrc: ./media/autopilot.svg
       summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use, and to reset, repurpose, and recover devices. 
-      url: ./autopilot/index.yml
+      url: ./autopilot/index.yml      
     # Card
-    - title: Windows Autopatch docs
-      imageSrc: ./media/autopatch.svg
-      summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
-      url: /windows/deployment/windows-autopatch/index.yml
-    # Card
-    - title: Endpoint Analytics docs
+    - title: Endpoint analytics docs
       imageSrc: ./media/endpoint-analytics.svg
       summary: Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket.
       url: ./analytics/index.yml    
-    
-    # Card
-    # Card
-    #- title: Azure Active Directory
-    #  imageSrc: ./media/active-directory.svg
-    #  summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
-    #  url: /azure/active-directory/index.yml
-    # Card
-
 
 # additionalContent section (optional)
 # Card with summary style
@@ -90,32 +73,36 @@ additionalContent:
           url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
         - title: Manage devices with Intune and Microsoft 365
           summary: A core component of enterprise-level security includes managing and protecting devices. Whether you’re building a Zero Trust security architecture, hardening your environment against ransomware, or building in protections to support remote workers, managing devices is part of the strategy.
-          url: https://docs.microsoft.com/microsoft-365/solutions/manage-devices-with-intune-overview
+          url: /microsoft-365/solutions/manage-devices-with-intune-overview
         - title: Set up your infrastructure for hybrid work
           summary: Solution to secure and optimize your worker’s productivity and collaboration, you need to allow on-site and remote workers to access your organization's on-premises and cloud-based information, tools, and resources easily and securely.
-          url: https://docs.microsoft.com/microsoft-365/solutions/empower-people-to-work-remotely
+          url: /microsoft-365/solutions/empower-people-to-work-remotely
         - title: Zero Trust guidance
           summary: Learn about the Zero Trust security model, its principles, and how to implement a Zero Trust architecture using the deployment plans.
-          url: /security/zero-trust/index.yml
+          url: /security/zero-trust/
 
     - title: Related services
       items:
         # Card
+        - title: Windows Autopatch docs
+          summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
+          url: /windows/deployment/windows-autopatch/
+        # Card
         - title: Azure Active Directory
           summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
-          url: /azure/active-directory/index.yml
+          url: /azure/active-directory/
         # Card
         - title: Windows client docs for IT Pros
           summary: Evaluate, plan, deploy, secure, and manage devices running Windows 10 and Windows 11.
-          url: /windows/resources/index.yml
+          url: /windows/resources/
         # Card
         - title: Windows 365 docs
           summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users. 
-          url: https://docs.microsoft.com/en-us/windows-365/index.yml
+          url: /windows-365/
         # Card
         - title: Microsoft Defender for Endpoint
           summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
-          url: /microsoft-365/security/defender-endpoint/index.yml
+          url: /microsoft-365/security/defender-endpoint/
 
     - title: Microsoft Intune community & support
       items:

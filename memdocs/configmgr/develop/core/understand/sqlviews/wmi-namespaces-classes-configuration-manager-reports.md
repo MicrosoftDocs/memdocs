@@ -7,11 +7,11 @@ ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: b687399a-b750-42f7-949a-4c757d269d58
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Configuration Manager WMI namespaces and classes for Configuration Manager reports
@@ -70,7 +70,7 @@ An easy way to list the Configuration Manager�related classes that have been c
         ' 
         ' NAME: WMIScan.vbs 
         ' 
-        ' AUTHOR: Dougeby , Microsoft Corporation 
+        ' AUTHOR:  Microsoft Corporation 
         ' DATE  : 10/24/2013 (Revised for System Center 2012 Configuration Manager by Rob Stack) 
         ' 
         ' COMMENT: Script to scan Configuration Manager WMI classes. 

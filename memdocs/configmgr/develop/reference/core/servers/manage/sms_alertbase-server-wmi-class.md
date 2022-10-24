@@ -1,19 +1,18 @@
 ---
 description: Learn how to represent the base class for SMS_Alert, SMS_EPAlert, and SMS_SCHALert using SMS_AlertBase class.
-title: "SMS_AlertBase Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: SMS_AlertBase Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 7de42b2c-4e70-4354-9bf0-ed9b829ff525
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_AlertBase Server WMI Class
 The `SMS_AlertBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the base class for `SMS_Alert`, `SMS_EPAlert`, and `SMS_SCHAlert` classes.  

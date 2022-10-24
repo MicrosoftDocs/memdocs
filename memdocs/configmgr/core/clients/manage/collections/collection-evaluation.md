@@ -10,6 +10,8 @@ author: gowdhamankarthikeyan
 ms.author: gokarthi
 manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Collection evaluation in Configuration Manager
@@ -33,9 +35,6 @@ At a high level, each individual collection evaluation and update follows these 
 1. Add members specified in the *Include* collections.
 1. Perform a logical `AND` between the returned results and the limiting collection.
 1. Remove members specified in the *exclude* collections.
-
-   If the exclude collections also have query rules, or have include or exclude collections, evaluate them also. If these collections themselves are limiting collections, evaluate any collections below them. After fully evaluating the tree, return the results to the calling collection.
-
 1. Compare the result set from evaluating the direct members and include collections with the results of the exclude collections.
 1. Write the changes to the database and perform updates.
 1. Trigger any dependent collections to update as well. Dependent collections are collections that the current collection limits, or that refer to the current collection using include or exclude rules.

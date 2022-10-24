@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection:
 - M365-identity-device-management
 - Android
+- tier3
 ms.custom: intune-classic
 ---
 
@@ -648,7 +649,6 @@ After you've completed all the [Exit Criteria] above, your app is now successful
 The subsequent sections, [Stage 5: Multi-Identity], [Stage 6: App Configuration], and [Stage 7: App Participation Features] may or may not be required, depending on your app's desired app protection policy support.
 If you're unsure if any of these sections apply to your app, revisit [Key Decisions for SDK integration].
 
-
 <!-- Stage 4 links -->
 <!-- internal links -->
 [Troubleshooting]:#troubleshooting
@@ -658,8 +658,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [Diagnostics Information]:#recommended-diagnostics-information
 [My app is not receiving or enforcing any policies]:#my-app-is-not-receiving-or-enforcing-any-policies
 
-
-<!-- Other SDK Guide Markdown docs -->
+<!-- Other SDK Guide Markdown documentation -->
 [Stage 1: Planning the Integration]:app-sdk-android-phase1.md
 [Creating a test Android app protection policy]:app-sdk-android-phase1.md#creating-a-test-android-app-protection-policy
 [Key Decisions for SDK integration]:app-sdk-android-phase1.md#key-decisions-for-sdk-integration
@@ -674,7 +673,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [MDM and MAM enrollment]:app-sdk-android-appendix.md#mdm-and-mam-enrollment
 [Quickly testing with changing policy]:app-sdk-android-appendix.md#quickly-testing-with-changing-policy
 
-<!-- Microsoft docs -->
+<!-- Microsoft Learn documentation -->
 [Microsoft Privacy Policy]:https://go.microsoft.com/fwlink/?Linkid=857875
 [Taskr sample application]:https://github.com/msintuneappsdk/Taskr-Sample-Intune-Android-App/blob/ca9fa2f9b350ee0c3a8566cc4ac5dad4ad9fbbfc/ReactMAM/android/app/src/main/java/com/microsoft/intune/samples/taskr/MainApplication.java
 [How to validate your app protection policy setup in Microsoft Intune]:/mem/intune/apps/app-protection-policies-validate

@@ -1,18 +1,18 @@
 ---
-title: "Release a Lock on a SEDO-Enabled Object"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Release a Lock on a SEDO-Enabled Object
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 064a7248-6a42-4dbc-b937-9be7e3454cd4
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 description: Learn about how to release a locked SEDO-enabled object using its object path by creating a ReleaseLock method.
-
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Release a Lock on a SEDO-Enabled Object
 ### To Release an Explicit Lock on a SEDO-enabled Object  

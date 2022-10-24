@@ -216,7 +216,7 @@ Additionally, Intune supports the following token types in the property list:
 
 ## Configure the Company Portal app to support iOS and iPadOS devices enrolled with Automated Device Enrollment
 
-Apple's Automated Device Enrollments are not compatible with the app store version of the Company Portal app by default. However, you can configure the Company Portal app to support iOS/iPadOS DEP devices even when users have downloaded the Company Portal from the App Store by using the following steps.
+Apple's Automated Device Enrollments are not compatible with the app store version of the Company Portal app by default. However, you can configure the Company Portal app to support iOS/iPadOS ADE devices even when users have downloaded the Company Portal from the App Store by using the following steps.
 
 1. In [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), add the Intune Company Portal app if it has not been added yet, by going to **Apps** > **All apps** > **Add**.
 2. Go to **Apps** > **App configuration policies**, to create an app configuration policy for the Company Portal app.
@@ -238,7 +238,7 @@ Apple's Automated Device Enrollments are not compatible with the app store versi
             </dict>
         </dict>
         ```
-    - **Use the Company Portal on a DEP device enrolled without user affinity (also known as Device Staging)**:
+    - **Use the Company Portal on a ADE device enrolled without user affinity (also known as Device Staging)**:
 
         > [!NOTE]
         > The user signing in to Company Portal is set as the primary user of the device.
@@ -250,11 +250,11 @@ Apple's Automated Device Enrollments are not compatible with the app store versi
         </dict>
         ```    
 
-4. Deploy the Company Portal to devices with the app configuration policy targeted to desired groups. Be sure to only deploy the policy to groups of devices that are already DEP enrolled.
+4. Deploy the Company Portal to devices with the app configuration policy targeted to desired groups. Be sure to only deploy the policy to groups of devices that are already ADE enrolled.
 5. Tell end users to sign into the Company Portal app when it is automatically installed.
 
 > [!NOTE]
-> When you add an app configuration to allow the Company Portal app on DEP devices without user affinity, you may experience a `STATE Policy Error`. Unlike other app configurations, this situation does not apply every time the device checks in. Instead, this app configuration is meant to be a one-time operation to enable existing devices enrolled without user affinity to attain user affinity when a user signs into the Company Portal. This app configuration is removed from the policy in the background once it has been successfully applied. The policy assignment will exist, but it will not report "success" once the app configuration is removed in the background. Once the app configuration policy has applied to the device, you can unassign the policy.
+> When you add an app configuration to allow the Company Portal app on ADE devices without user affinity, you may experience a `STATE Policy Error`. Unlike other app configurations, this situation does not apply every time the device checks in. Instead, this app configuration is meant to be a one-time operation to enable existing devices enrolled without user affinity to attain user affinity when a user signs into the Company Portal. This app configuration is removed from the policy in the background once it has been successfully applied. The policy assignment will exist, but it will not report "success" once the app configuration is removed in the background. Once the app configuration policy has applied to the device, you can unassign the policy.
 
 ## Monitor iOS/iPadOS  app configuration status per device 
 Once a configuration policy has been assigned, you can monitor iOS/iPadOS app configuration status for each managed device. From **Microsoft Intune** in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices**. From the list of managed devices, select a specific device to display a pane for the device. On the device pane, select **App configuration**.  

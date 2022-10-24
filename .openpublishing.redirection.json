@@ -1,6 +1,11 @@
 {
     "redirections": [
         {
+            "source_path": "memdocs/endpoint-manager-getting-started.md",
+            "redirect_url": "/mem/intune/fundamentals/get-started-with-intune",
+            "redirect_document_id": false
+        }, 
+        {
             "source_path": "memdocs/intune/developer/app-sdk-android.md",
             "redirect_url": "/mem/intune/developer/app-sdk-android-phase1",
             "redirect_document_id": false
@@ -1228,11 +1233,6 @@
             "redirect_document_id": false
         },
         {
-            "source_path": "memdocs/cloud-native-endpoints-planning-guide.md",
-            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
-            "redirect_document_id": false
-        },
-        {
             "source_path": "memdocs/cloud-native-endpoints-overview.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
             "redirect_document_id": false
@@ -1243,9 +1243,19 @@
             "redirect_document_id": false
         },
         {
+            "source_path": "memdocs/cloud-native-endpoints-planning-guide.md",
+            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/cloud-native-windows-endpoints.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
             "redirect_document_id": false
-        }                
+        },            
+        {
+            "source_path": "memdocs/intune/fundamentals/multi-admin-approval.md",
+            "redirect_url": "/mem/intune/fundamentals/whats-new",
+            "redirect_document_id": false
+        }       
     ]
 }

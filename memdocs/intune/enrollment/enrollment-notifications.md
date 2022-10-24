@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/21/2022
+ms.date: 10/01/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment

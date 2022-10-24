@@ -25,21 +25,24 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Network access control (NAC) integration with Intune
- 
+
 Intune integrates with network access control (NAC) partners to help organizations secure corporate data when devices try to access on-premises resources.
 
 >[!NOTE]
 > A new NAC service was released in July 2021 and many of our NAC partners are transitioning to this new service. Currently, the following NAC partner product supports the new NAC service:
-> 
+>
 > - Cisco ISE 3.1 and later
 > - Citrix Gateway 13.0-84.11 and later
 > - Citrix Gateway 13.1-12.50 and later
 > - F5 BIG-IP Access Policy Manager 16.1.3.1
 > - F5 BIG-IP Access Policy Manager 17.0 and later
+> - Ivanti Connect Secure 9.1R16 and later
 >
 > Contact your NAC partner if you have questions on the impact of this transition. For more information, see our [blog post on the new compliance retrieval service](https://aka.ms/new-compliance-retrieval-api/).
 
@@ -94,6 +97,32 @@ The compliance retrieval service requires certificate-based authentication and t
 Other NAC products might require you include a device ID when using NAC with iOS VPN profiles.
 
 To learn more about certificate profiles, see: [Use SCEP certificate profiles with Microsoft Intune](../protect/certificates-profile-scep.md) and [Use a PKCS certificate profile to provision devices with certificates in Microsoft Intune](../protect/certificates-pfx-configure.md)
+
+## Data shared with NAC partners
+
+The specific device properties that are shared with NAC partners depend on the version of the NAC API the NAC product uses. Contact your NAC partner for more information on which version of the NAC or Compliance Retrieval API your NAC product uses.
+
+Also, the data returned will be limited if:
+- The device isn't enrolled in Intune. In this case, no information other than that the device isn't managed by Intune will be shared with the NAC product.
+- The OS prevents the specific device property from being shared with Microsoft. Intune will share empty values back to the NAC product for data properties not shared with Intune by the OS.
+
+| Device property | Available in NAC 1.0 | Available in NAC 1.1 | Available in NAC 1.3 | Available in Compliance Retrieval/NAC 2.0 |
+|--|--|--|--|--|
+| Compliance state | Yes | Yes | Yes | Yes |
+| Managed by Intune | Yes | Yes | Yes | Yes |
+| Personal or corporate ownership | No | Yes | Yes | No |
+| MAC address | Yes | Yes | Yes | No |
+| Serial number | Yes | Yes | Yes | No |
+| IMEI | Yes | Yes | Yes | No |
+| UDID | Yes | Yes | Yes | No |
+| MEID | Yes | Yes | Yes | No |
+| OS version | Yes | Yes | Yes | No |
+| Device model | Yes | Yes | Yes | No |
+| Manufacturer | Yes | Yes | Yes | No |
+| Azure Active Directory device ID | Yes | Yes | Yes | No |
+| Last contact time with Intune | Yes | Yes | Yes | No |
+| Intune device ID | No | No | No | Yes |
+
 
 ## Next steps
 

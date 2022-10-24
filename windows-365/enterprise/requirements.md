@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 08/30/2022
+ms.date: 10/03/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -34,6 +34,8 @@ To use Cloud PCs, you must meet the following requirements:
 
 ## Azure requirements
 
+### [Windows 365 Enterprise](#tab/enterprise)
+
 None, if you plan on provisioning Azure AD joined Cloud PCs on a Microsoft hosted network.
 
 If you choose to provision Cloud PCs on your own network, an active Azure subscription with the following configurations is required:
@@ -42,6 +44,18 @@ If you choose to provision Cloud PCs on your own network, an active Azure subscr
   - A reader role on the subscription.
   - Network contributor permissions on the resource group.
   - A network contributor role on the vNet.
+
+### [Windows 365 Government](#tab/government)
+
+All of the Windows 365 Enterprise requirements apply with the following additions.
+
+A subscription in Azure Government is required for Windows 365 Government customers who would like to use any of the following capabilities:
+
+- Hybrid AADJ 
+- AADJ and with the customer providing their own network
+- Custom Images
+
+---
 
 ## Azure Active Directory and Intune requirements
 
@@ -60,6 +74,10 @@ If you choose to provision Hybrid Azure AD joined Cloud PCs, then the following 
 - An Active Directory user account with sufficient permissions to join the computer into the specified organizational unit within the Active Directory domain. If you don't specify an organizational unit, the user account must have sufficient permissions to join the computer to the Active Directory domain.
 - User accounts that are assigned Cloud PCs must have a synced identity available in both Active Directory and Azure Active Directory.
 
+> [!NOTE]
+> For the user account used to join the Cloud PCs to the Active Directory domain services, make sure to set up appropriate delegation following the instructions in [Increase the computer account limit in the Organizational Unit](/mem/autopilot/windows-autopilot-hybrid#increase-the-computer-account-limit-in-the-organizational-unit).
+
+
 ## Licensing requirements
 
 - You must have an Intune license so that you can use Intune to manage the devices.
@@ -75,6 +93,8 @@ You must use [Microsoft Endpoint Manager admin center](https://admin.microsoft.c
 - User identity: Cloud PC users must be configured with [hybrid identities](/azure/active-directory/hybrid/whatis-hybrid-identity) so that they can authenticate with resources both on-premises and in the cloud.
 
 ## Supported Azure regions for Cloud PC provisioning
+
+### [Windows 365 Enterprise](#tab/ent)
 
 Windows 365 manages the capacity and availability of underlying Azure resources as part of the service. Windows 365 partners closely with Azure to select regions that meet our Windows 365 service requirements for availability and capacity. On availability, we use features like availability zones in Azure to provide in-region resiliency as built-in value to the service. You can create a virtual network or use the Microsoft hosted network for provisioning Cloud PCs in the following Azure regions:
 
@@ -98,6 +118,13 @@ Windows 365 manages the capacity and availability of underlying Azure resources 
 - Norway East
 - Switzerland North
 - UK South
+
+### [Windows 365 Government](#tab/gov)
+
+- US Gov Virginia
+- US Gov Arizona
+
+---
 
 <!-- ########################## -->
 ## Next steps

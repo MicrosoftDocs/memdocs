@@ -6,10 +6,12 @@ ms.date: 05/05/2021
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-author: mestew
-manager: dougeby
-ms.author: mstewart
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Security and privacy for compliance settings in Configuration Manager

@@ -262,16 +262,6 @@ Edge for iOS and Android allows organizations to disable certain features that a
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.disabledFeatures|**password** disables prompts that offer to save passwords for the end user <br>**inprivate** disables InPrivate browsing <br>**autofill** disables "Save and Fill Addresses" and "Save and Fill Payment info". Autofill will be disabled even for previously saved information. <br><br>To disable multiple features, separate values with `|`. For example, `inprivate|password` disables both InPrivate and password storage. |
 
-#### Disable extensions
-
-You can disable the extension framework, like Coupons, within Edge for iOS and Android to prevent users from installing or using any pre-configured app extensions. To do this, configure the following setting:
-
-|Key |Value |
-|:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.disableExtensionFramework |**true** disables the extension framework <br>**false** (default) enables the extension framework |
-
-> [!NOTE]
-> Edge for iOS does not support disabling extensions.
 
 #### Control Cookie Mode
 

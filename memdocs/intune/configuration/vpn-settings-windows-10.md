@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 08/22/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -24,7 +24,9 @@ search.appverid: MET150
 ms.reviewer: tycast
 #ms.tgt_pltfrm:
 ms.custom: intune-azure; seodec18
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune

@@ -180,6 +180,9 @@ The end-user will receive prompts for VPP app installation in a number of scenar
 > [!Note]  
 > It is not recommended to assign VPP apps to Kiosk-mode devices using user licensing.
 
+> [!Note]  
+> You cannot update any app while the device is locked in Single App Mode. You need to exit Single App Mode long enough to update apps as needed. During that time, you should restrict the visible apps as much as possible, except for Settings and other apps that cannot be blocked. 
+   
 ## Revoking app licenses
 
 You can revoke all associated iOS/iPadOS or macOS volume-purchase program (VPP) app licenses based on a given device, user, or app.  But there are some differences between iOS/iPadOS and macOS platforms. 

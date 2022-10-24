@@ -1,19 +1,18 @@
 ---
-description: Learn how to represent the sender address type used by the Configuration Manager console with the SMS_SIIB_AddressType class. 
-title: "SMS_SIIB_AddressType Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+description: Learn how to represent the sender address type used by the Configuration Manager console with the SMS_SIIB_AddressType class.
+title: SMS_SIIB_AddressType Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 28c99fd5-9d17-4887-be4d-e9ab230d2728
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # SMS_SIIB_AddressType Server WMI Class
 The `SMS_SIIB_AddressType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the Configuration Manager sender address type used by the Configuration Manager console.  
