@@ -228,7 +228,7 @@ When you create a filter, you can manually create simple or complex rules in the
 
 - The properties, operations, and values are case insensitive.
 - Parentheses and nested parentheses are supported.
-- You can use the `Null` or `$Null` as a value with the `-Equals` and `-NotEquals` operators.
+- You can use `Null` or `$Null` as a value with the `-Equals` and `-NotEquals` operators.
 - Some advanced syntax options, such as nested parentheses, are only available in the rule syntax editor. If you use advanced expressions in the rule syntax editor, then the rule builder is disabled.
 
   For more information on the rule syntax editor and the rule builder, see [Use filters when assigning your apps, policies, and profiles](filters.md)
