@@ -140,7 +140,6 @@ items:
         href: ./fundamentals/ems-intune-govt-service-description.md
       - name: Intune US government endpoints
         href: ./fundamentals/intune-us-government-endpoints.md
-
   - name: Platform guides
     items:
     - name: Android, Android Enterprise 
