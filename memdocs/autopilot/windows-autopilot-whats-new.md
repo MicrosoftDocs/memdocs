@@ -88,7 +88,7 @@ The following example shows details for **Deployment info**, which includes **Ne
 
 :::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
 
-To enable the diagnostics page, go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md). Make sure **Show app and profile configuration progress** i selected to **Yess**, and then select **Yes** to **Turn on log collection and diagnostics page for end users**.
+To enable the diagnostics page, go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md). Make sure **Show app and profile configuration progress** i selected to **Yes**, and then select **Yes** to **Turn on log collection and diagnostics page for end users**.
 
 The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 
