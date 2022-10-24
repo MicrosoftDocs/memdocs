@@ -59,13 +59,14 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 ## Create new profile 
 
-1. Select **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
-2. Select **Create**.
-3. In **Basics**, enter the following properties:  
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
+2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+3. Select **Create**.
+4. In **Basics**, enter the following properties:  
      - **Name**: Name your profile so you can easily identify it later. 
      - **Description**: Enter a description for the profile. This setting is optional, but recommended.  
-4. Select **Next**. 
-5. In **Settings**, configure the following settings:  
+5. Select **Next**. 
+6. In **Settings**, configure the following settings:  
  
     - **Show app and profile configuration progress**: Your options:
       - **No**: The enrollment status page doesn't appear during device setup. Select this option if you don't want to show the ESP to users.  
