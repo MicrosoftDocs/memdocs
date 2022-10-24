@@ -21,7 +21,7 @@ ms.suite: ems
 
 The Intune US Government Service Description is designed to serve as an overview of the service offering in the GCC High and DoD environments and will cover feature variations from the commercial offering.
 
-To learn more about Intune for GCC customers, see [EMS offers for US Government and Microsoft 365 interoperability](ems-govt-service-description.md#ems-offers-for-us-government-and-microsoft-365-interoperability).
+To learn more about Intune for GCC customers, see [EMS offers for US Government and Microsoft 365 interoperability](/enterprise-mobility-security/solutions/ems-govt-service-description#ems-offers-for-us-government-and-microsoft-365-interoperability).
 
 ## Get started with Intune for US Government GCC High and DoD
 
@@ -38,9 +38,8 @@ The Intune GCC High and DoD offering is built on the Microsoft Azure Government 
 - Diagnostics settings and Workbooks are not available to US Government cloud customers at this time.
 - Intune for GCC High does not support the [TeamViewer connector](/mem/intune/remote-actions/teamviewer-support) or TeamViewer feature.
 - Intune for GCC High and DoD does not support Android (AOSP) management for corporate devices.
-- Intune for GCC High and DoD does not support [Feature updates](/mem/intune/protect/windows-10-feature-updates). 
+- Intune for GCC High and DoD does not support [Feature updates](/mem/intune/protect/windows-10-feature-updates).
 - Intune for GCC High and DoD does not support [Expedited updates](/mem/intune/protect/windows-10-expedite-updates).
-
 
 ## Next steps
 
