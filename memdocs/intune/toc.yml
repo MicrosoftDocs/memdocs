@@ -132,11 +132,11 @@ items:
       items:
       - name: What is Intune for Education?
         href: ./fundamentals/introduction-intune-education.md     
-    - name: Government (does this include China topics?)
+    - name: Government
       items:
       - name: What is Intune for US Government?
         href: ./fundamentals/introduction-intune-government.md
-      - name: Intune US government endpoints
+      - name: Microsoft Intune US Government service description
         href: ./fundamentals/ems-intune-govt-service-description.md
       - name: Intune US government endpoints
         href: ./fundamentals/intune-us-government-endpoints.md
