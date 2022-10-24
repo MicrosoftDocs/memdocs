@@ -1223,14 +1223,6 @@
             "redirect_document_id": false
         },
         {
-<<<<<<< HEAD
-=======
-            "source_path": "memdocs/azure-ad-joined-hybrid-azure-ad-joined.md",
-            "redirect_url": "/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
-            "redirect_document_id": false
-        },
-        {
->>>>>>> 161939b7694ee4d5f233d0236e6c0fabd2c3fd3f
             "source_path": "memdocs/cloud-native-endpoints-known-issues.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues",
             "redirect_document_id": false
@@ -1241,41 +1233,29 @@
             "redirect_document_id": false
         },
         {
-<<<<<<< HEAD
-            "source_path": "memdocs/cloud-native-endpoints-planning-guide.md",
-            "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
-            "redirect_document_id": false
-        },
-        {
-=======
->>>>>>> 161939b7694ee4d5f233d0236e6c0fabd2c3fd3f
             "source_path": "memdocs/cloud-native-endpoints-overview.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-overview",
             "redirect_document_id": false
         },
         {
-<<<<<<< HEAD
             "source_path": "memdocs/azure-ad-joined-hybrid-azure-ad-joined.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined",
-=======
+            "redirect_document_id": false
+        },
+        {
             "source_path": "memdocs/cloud-native-endpoints-planning-guide.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide",
->>>>>>> 161939b7694ee4d5f233d0236e6c0fabd2c3fd3f
             "redirect_document_id": false
         },
         {
             "source_path": "memdocs/cloud-native-windows-endpoints.md",
             "redirect_url": "/mem/solutions/cloud-native-endpoints/cloud-native-windows-endpoints",
             "redirect_document_id": false
-<<<<<<< HEAD
-        }                
-=======
-        },  
+        },            
         {
             "source_path": "memdocs/intune/fundamentals/multi-admin-approval.md",
             "redirect_url": "/mem/intune/fundamentals/whats-new",
             "redirect_document_id": false
         }       
->>>>>>> 161939b7694ee4d5f233d0236e6c0fabd2c3fd3f
     ]
 }
