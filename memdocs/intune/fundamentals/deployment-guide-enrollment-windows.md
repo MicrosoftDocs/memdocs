@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/08/2022
+ms.date: 10/10/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -358,7 +358,7 @@ For more specific information on this enrollment method, see [Enroll a Windows c
 
 ## Co-management enrollment
 
-If you use Configuration Manager, and want to continue to use Configuration Manager, then co-management enrollment is for you. Co-management manages Windows 10/11 devices using Configuration Manager and Microsoft Intune together. You cloud-attach your existing Configuration Manager environment to Endpoint Manager. This enrollment option runs some workloads in Configuration Manager, and other workloads in Endpoint Manager.
+If you use Configuration Manager, and want to continue to use Configuration Manager, then co-management enrollment is for you. Co-management manages Windows 10/11 devices using Configuration Manager and Microsoft Intune together. You cloud-attach your existing Configuration Manager environment to Intune. This enrollment option runs some workloads in Configuration Manager, and other workloads in Intune.
 
 For more specific information on co-management, see [What is co-management?](../../configmgr/comanage/overview.md).
 

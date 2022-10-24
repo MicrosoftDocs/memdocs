@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 09/27/2022
+ms.date: 10/21/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -47,6 +47,51 @@ Learn what new features are available in Windows 365 Enterprise.
 ### Scripts
 ### End user experience
 -->
+
+<!-- ########################## -->
+## Week of October 17, 2022
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### New Azure Network Connection health check<!--41752775-->
+
+A new check has been added the Azure Network Connectin health checks: **UDP connection server reachable**. For more information, see [Azure network connections health checks](health-checks.md).
+
+<!-- ########################## -->
+## Week of October 10, 2022
+
+<!-- ***********************************************-->
+### Apps
+
+#### Windows 365 app in public preview<!--41161804-->
+
+A new app to sign in to and manage your Windows 365 Cloud PCs is now in public preview. The app provides functionality similar to the windows365.microsoft.com web site for accessing and managing your Cloud PCs. For more information, see [Installing the Windows 365 app](https://support.microsoft.com/topic/cbb0d4d5-69d4-4f00-b050-6dc7a02d02d0). 
+
+<!-- ***********************************************-->
+### Device provisioning
+
+#### Support for US Government environments<!--35234096 -->
+
+Government organizations can now use Windows 365 services first in US Government Community Cloud (GCC) High environments and later in GCC environments. All Windows 365 dependency services must also be used by the organization within the associated Government environment. For more information, see [What is Windows 365 Government?](introduction-windows-365-government.md)
+
+<!-- ***********************************************-->
+### Partners
+
+#### Use Citrix HDX Plus with Windows 365 Enterprise<!--41294492-->
+
+You can now use Citrix HDX Plus with Windows 365 Enterprise Cloud PCs. For more information, see [Set up Citrix HDX Plus for Windows 365 Enterprise](set-up-citrix.md).
+
+<!-- ***********************************************-->
+### Monitor and troubleshoot
+
+#### Cloud PC utilization report<!--40636545 -->
+
+A new report is now available for Cloud PCs. The **Cloud PC utilization** report shows how many hours users have been connected to their Cloud PCs. Information for individual Cloud PCs and aggregated data is also shown. For more information, see [Cloud PC utilization report](report-cloud-pc-utilization.md).
+
+#### Cloud PC with connection quality issues report<!--40636545 -->
+
+A new report is now available for Cloud PCs. The **Cloud PCs with connection quality issues** report shows information for round-trip time, available bandwidth, and remoting sign-in time. Information for individual Cloud PCs and aggregated data is also shown. For more information, see [Cloud PC connection quality report](report-cloud-pc-connection-quality.md).
 
 <!-- ########################## -->
 ## Week of September 26, 2022 (Service release 2209)

@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 10/10/2022
 ms.topic: troubleshooting
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -136,4 +136,4 @@ To learn more about the version and SKU requirements for the different settings,
 
 ## Next steps
 
-Need extra help? See [How to get support in Microsoft Endpoint Manager](../../get-support.md).
+Need extra help? See [How to get support in Microsoft Intune](../../get-support.md).
