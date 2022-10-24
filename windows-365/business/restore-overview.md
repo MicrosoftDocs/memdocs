@@ -32,7 +32,7 @@ ms.collection: M365-identity-device-management
 
 Point-in-time restore lets end users restore a Cloud PC to the exact state it was at an earlier point in time.
 
-Windows 365 Business admins can also restore Cloud PCs to an earlier state on behalf of their users. 
+Windows 365 Business admins can also restore Cloud PCs to an earlier state on behalf of their users.
 
 ## Restore point intervals
 

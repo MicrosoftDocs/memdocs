@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 05/09/2022
+ms.date: 10/25/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice: 
@@ -47,7 +47,7 @@ You can change these defaults by following these steps:
     - **Enroll new Cloud PCs in Microsoft Endpoint Manager**: Select this option to automatically enroll new Cloud PCs in Intune. To see this option, you must have an admin account with an Intune license subscription. For more information, see [Microsoft Intune licensing]( /mem/intune/fundamentals/licenses).
 4. Select **Save**.
 
-All new Cloud PCs will be created with the chosen settings. When these settings are changed, they won’t change the operating system, account type, language/region, or Intune enrollment of  of existing Cloud PCs.
+All new Cloud PCs will be created with the chosen settings. When these settings are changed, they won’t change the operating system, account type, language/region, or Intune enrollment of existing Cloud PCs.
 
 You can also change your organization's default settings in the Microsoft 365 admin center. For more information, see [Change your organization's address, technical contact, and more](/microsoft-365/admin/manage/change-address-contact-and-more).
 
@@ -55,7 +55,7 @@ You can also change your organization's default settings in the Microsoft 365 ad
 
 ### Operating system
 
-The 1 vCPU/2 GB RAM/64 GB storage license doesn’t support the Windows 11 minimum hardware requirements. When this license is assigned to a user, they will always receive a Windows 10 Cloud PC.
+The 1 vCPU/2 GB RAM/64 GB storage license doesn’t support the Windows 11 minimum hardware requirements. When this license is assigned to a user, they'll always receive a Windows 10 Cloud PC.
 
 ### Language and region
 
