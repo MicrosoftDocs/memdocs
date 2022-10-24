@@ -24,9 +24,9 @@ This document offers guidance for Windows Autopilot device repair scenarios that
 
 Repairing Autopilot enrolled devices is complex, as it tries to balance OEM requirements with Windows Autopilot requirements. Specifically, OEM requirements include strict uniqueness across motherboards, MAC addresses, and so on. Windows Autopilot requires strict uniqueness at the hardware hash level for each device to enable successful registration. The hardware hash doesn't always accommodate all the OEM hardware component requirements. So these requirements are sometimes at odds, causing issues with some repair scenarios. The hardware hash is also known as the hardware ID.
 
-Starting in the September 2022 release of Intune (2209), if a motherboard is replaced on an Autopilot registered device, and it goes back to the same tenant without an OS reset, Autopilot will attempt to register the new hardware components. In Intune, you'll see the profile status **Fix pending**. If the OEM resets the OS, you need to re-register the device. If the new hardware components are registered, the device status goes back to the assigned profile. If it's not, you'll see the profile status **Attention required**.
+Starting in the September 2022 release of Intune (2209) with OS releases 19042.2075 or higher, if a motherboard is replaced on an Autopilot registered device, and it goes back to the same tenant without an OS reset, Autopilot will attempt to register the new hardware components. In Intune, you'll see the profile status **Fix pending**. If the OEM resets the OS, you need to re-register the device. If the new hardware components are registered, the device status goes back to the assigned profile. If it's not, you'll see the profile status **Attention required**.
 
-If a motherboard replacement is needed on a Windows Autopilot device, the following process is recommended:
+If a motherboard replacement is needed on a Windows Autopilot device, the following process is recommended if the OS version is below 19042.2075:
 
 1. If the device isn't going back to the original tenant, [deregister it from Windows Autopilot](#deregister-the-autopilot-device-from-the-autopilot-program). If it's going back to the same tenant, you don't need to deregister it.
 2. [Replace the motherboard](#replace-the-motherboard)

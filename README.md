@@ -17,7 +17,7 @@ We **want and encourage contributions** from our community (users, customers, pa
 
     **Option 1: Edit directly from Microsoft Learn**
 
-    1. Browse to the [InTune](/mem/intune) article you want to edit.
+    1. Browse to the [Intune](/mem/intune) article you want to edit.
     2. Select **Edit** (top right). This shows the markdown file in the GitHub repository.
     3. Select the pencil icon. When you hover over the pencil icon, you'll see the **Edit this file** tooltip.
     4. Make your changes, and then **commit** your changes.

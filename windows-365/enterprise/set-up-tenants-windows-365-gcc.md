@@ -74,7 +74,7 @@ To connect the two tenants, the **AAD Tenant Mapping.ps1** PowerShell script mus
 2. Make sure you have Windows PowerShell version 5.1. Other versions may result in errors when running the script.
 3. Go to the [Windows 365 PowerShell GitHub repository](https://github.com/microsoft/Windows365-PSScripts).
 4. Navigate to the **Windows 365 GCC/AAD Tenant Mapping** folder > select **AAD Tenant Mapping.ps1** > **Raw** > save the raw file to a location on your computer as a .ps1 file.
-5. Open Windows PowerShell 5.1 and run the PowerShell script.
+5. Open Windows PowerShell (not Windows PowerShell ISE) and run the PowerShell script.
     >[!NOTE]
     >If the script was previously run successfully, you'll see the error **HttpStatusCode Conflict**. This warning can be ignored to execute the script functions Add and Get.
 6. In PowerShell 5.1, type **I** to initiate tenant mapping.

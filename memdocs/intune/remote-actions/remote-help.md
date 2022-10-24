@@ -112,7 +112,7 @@ Microsoft logs a small amount of session data to monitor the health of the remot
 - Errors arising from remote help itself, such as unexpected disconnections. This information is stored on the sharer's device in the event viewer.
 - Features used inside the app such as view only and elevation. This information is stored on Microsoft servers for 30 days.
 
-Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session. Microsoft can't access a session or view any actions or keystrokes that occur in the session.
+Remote help logs session details to the Windows Event Logs on the device of both the helper and sharer. Microsoft can't access a session or view any actions or keystrokes that occur in the session.
 
 The helper and sharer both see the following information about the other individual, taken from their organizational profiles:
 
