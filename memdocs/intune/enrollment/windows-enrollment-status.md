@@ -160,12 +160,13 @@ To prioritize your profiles:
 
 Specify the apps that must be installed before the user can exit the ESP. You can choose up to 100 apps.   
 
-1. In the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
-2. Choose a profile > **Settings**.
-3. Choose **Yes** for **Show app and profile installation progress**.
-4. Choose **Yes** for **Block device use until all apps and profiles are installed**.
-5. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
-6. Choose **Select apps** > choose the apps > **Select** > **Save**.
+1. Sign in to the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Devices**.
+2. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+3. Choose a profile > **Settings**.
+4. Choose **Yes** for **Show app and profile installation progress**.
+5. Choose **Yes** for **Block device use until all apps and profiles are installed**.
+6. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
+7. Choose **Select apps** > choose the apps > **Select** > **Save**.
 
 The apps that are included in this list are used by Intune to filter the list that should be considered blocking.  It doesn't specify what apps should be installed.  For example, if you configure this list to include "App 1," "App 2," and "App 3" and "App 3" and "App 4" are targeted to the device or user, the ESP will track only "App 3."  "App 4" will still be installed, but the ESP will not wait for it to complete.
 
