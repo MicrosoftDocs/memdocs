@@ -124,6 +124,7 @@ This provides a convenient method to list and review all services required by In
 |*.vortex.data.microsoft.com| Remote Help |
 |edge.skype.com| Remote Help |
 |remoteassistanceprodacs.communication.azure.com| Remote Help |
+|lgmsapeweu.blob.core.windows.net | Collect Diagnostics |
 
 The following tables list the ports and services that the Intune client accesses:
 

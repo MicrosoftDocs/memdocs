@@ -2187,8 +2187,8 @@ To improve page load performance, app icons will now load in batches. End users 
 
 ### Monitor and troubleshoot
 
-#### Endpoint analytics in Microsoft Productivity Score<!-- IN8529842 -->  
-There's a new Endpoint Analytics page in [Microsoft Productivity Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Productivity Score](../../analytics/adoption-score.md).
+#### Endpoint analytics in Microsoft Adoption Score<!-- IN8529842 -->  
+There's a new Endpoint Analytics page in [Microsoft Adoption Score](/microsoft-365/admin/productivity/productivity-score) that shares organizational level insights with the other roles outside of Microsoft Endpoint Manager. Understanding how your devices contribute to your end-users' experience is critical to enabling users to reach their goals. For more information, see [Endpoint analytics in Microsoft Adoption Score](../../analytics/adoption-score.md).
 
 #### Endpoint analytics Application Reliability report<!-- IN5653073 -->  
 A new **Application Reliability** report will be available in Endpoint analytics. This report provides insight into potential issues for desktop applications on managed PCs. You can quickly identify the top applications that are impacting end user productivity, as well as see aggregate app usage and app failure metrics for these applications. You'll be able to troubleshoot by drilling into a specific device and viewing a timeline of app reliability events. This report is expected to be available in public preview during March 2021. For more information, see [Endpoint analytics application reliability](../../analytics/app-reliability.md).
