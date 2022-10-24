@@ -138,7 +138,7 @@ To learn more about the version and SKU requirements for the different settings,
 
 During enrollment, you can use Azure AD dynamic device groups. For example, you can create a dynamic device group based on a device's name or enrollment profile.
 
-The enrollment profile is applied to the device record during initial device setup. Azure AD dynamic grouping isn't instant. The device may not be in the dynamic group for some time, possibly minutes to hours depending on other changes being made in your tennant.
+The enrollment profile is applied to the device record during initial device setup. Azure AD dynamic grouping isn't instant. The device may not be in the dynamic group for some time, possibly minutes to hours depending on other changes being made in your tenant.
 
 If the device isn't added to the group, then your apps and policies aren't assigned to the device during the initial Intune check-in. The policies may not apply until the next scheduled check-in.
 
