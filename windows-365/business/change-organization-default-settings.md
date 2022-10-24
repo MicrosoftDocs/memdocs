@@ -34,6 +34,7 @@ By default, new Cloud PCs are created with the following settings:
 
 - **Account type**: Standard User
 - **Operating system**: Windows 11
+- **Language and region**: English (United States)
 - **Enroll new Cloud PCs in Microsoft Endpoint Manager**: Off
 
 You can change these defaults by following these steps:
@@ -66,3 +67,7 @@ To change the language settings on an already-created Cloud PC, see [Language pa
 To enroll devices that have already been created, ask your users to follow this [guide for enrollment in Intune](/mem/intune/enrollment/quickstart-enroll-windows-device).
 
 Windows 365 Enterprise-specific features, like custom images and provisioning policies, aren’t available to Windows 365 Business customers, even if Cloud PCs are enrolled in Intune.  
+
+## Next steps
+
+[Manage your Cloud PCs](device-management.md)
