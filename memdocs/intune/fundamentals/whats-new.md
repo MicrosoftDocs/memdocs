@@ -200,6 +200,29 @@ Applies to
 
 - iOS/iPadOS
 
+#### Use the `$null` value in filters<!-- 11030128  -->  
+When you assign apps and policies to groups, you can use filters to assign a policy based on rules you create (**Tenant administration** > **Filters** > **Create**). These rules use different device properties, such as category or the enrollment profile.
+
+Now, you can use the `$null` value with the `-Equals` and `-NotEquals` operators.
+
+For example, use the `$null` value in the following scenarios:
+
+- You want to target all devices that don't have a category assigned to the device.
+- You want to target devices that don't have an enrollment profile property assigned to the device.
+
+For more information on filters and the rules you can create, go to:
+
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
+- [Device properties, operators, and rule editing when creating filters in Microsoft Intune](filters-device-properties.md)
+
+Applies to:
+
+- Android device administrator
+- Android Enterprise
+- iOS/iPadOS
+- macOS
+- Windows 10/11
+
 ### Device security
 
 #### Reusable groups of settings for removable storage in Device Control profiles (preview) <!-- 7351534 -->  
