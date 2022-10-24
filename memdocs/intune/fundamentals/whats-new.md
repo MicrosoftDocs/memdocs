@@ -26,7 +26,6 @@ search.appverid: MET150
 ms.custom: intune-azure; get-started
 ms.collection: 
   - M365-identity-device-management
-  - highpri
   - highseo
 ---
 
@@ -1506,7 +1505,7 @@ Intune will no longer remove users from all Intune reports when they are unlicen
 
 #### New Device Control profile for Intune’s endpoint security Attack Surface Reduction policy<!-- 8844611 -->
 
-As part of the continuing [rollout of new profiles for endpoint security policies](/whats-new-archive.#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022, we’ve released a new Device Control profile template for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy for endpoint security in Intune. This profile replaces the previous profile of the same name for the *Windows 10 and later* platform.
+As part of the continuing [rollout of new profiles for endpoint security policies](whats-new-archive.md#new-profile-templates-and-settings-structure-for-endpoint-security-policies), which began in April 2022, we’ve released a new Device Control profile template for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy for endpoint security in Intune. This profile replaces the previous profile of the same name for the *Windows 10 and later* platform.
 
 With this replacement, only instances of the new profile can be created. However, any profiles you’ve previously created that use the old profile structure remain available to use, edit, and deploy.
 
@@ -1780,7 +1779,7 @@ There are some new features when using filters:
 
 - Endpoint Security policies support filters. So, when you assign an endpoint security policy, you can use filters to assign the policy based on rules you create.
 
-- When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting](/whats-new-archive#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
+- When you create a new endpoint security policy, it automatically uses the [new device configuration profile reporting](whats-new-archive.md#new-reporting-experience-for-device-configuration-profiles). When you look at the per-policy report, it also has an **Assignment Filter** column (**Devices** > **Configuration profiles** > Select an existing endpoint security policy > **View report**). Use this column to determine if a filter successfully applied to your policy.
 
 For more information on filters, see:
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
