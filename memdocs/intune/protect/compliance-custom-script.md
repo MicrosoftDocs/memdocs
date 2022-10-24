@@ -39,6 +39,8 @@ The script deploys to devices as part of your custom compliance policies. When c
 All discovery scripts:
 
 - Are added to Intune before you create a compliance policy. After being added, scripts are available to select when you create a compliance policy with custom settings.
+  -   Each discovery script can only be used with one compliance policy, and each compliance policy can only include one discovery script.
+  -   Discovery scripts that have been assigned to a compliance policy can't be deleted until the script has been unassigned from the policy.
 - Run on a device that receives the compliance policy. The script evaluates the conditions of the JSON file you upload when creating a custom compliance policy.
 - Identify one or more settings, as defined in the JSON, and return a list of discovered values for those settings. A single script can be assigned to each policy, and supports discovery of multiple settings.
 
@@ -121,6 +123,8 @@ Before deploying your script in production, test it in an isolated environment t
    - **Run script in 64 bit PowerShell Host** – By default, the script runs using the 32-bit PowerShell host. Set this value to *Yes* to force the script to run using the 64-bit host instead.
 
 5. Complete the script creation process. The script is now visible in the *Scripts* pane of the Microsoft Endpoint Manager admin center and is available to select when configuring compliance policies.
+
+Also, note that the workflow for uploading these scripts to the Microsoft Endpoint Manager admin center does not support scope tags at this time. You must be targeted with the default scope tag to create, edit, or see custom compliance discovery scripts.
 
 ## Next steps
 

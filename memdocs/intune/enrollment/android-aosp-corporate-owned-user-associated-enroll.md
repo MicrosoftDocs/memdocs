@@ -8,7 +8,7 @@ keywords:
 author: Lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 10/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -198,9 +198,7 @@ The following are known limitations when working with AOSP devices in Intune:
     * Alphanumeric with symbols    
     * Weak biometric   
 * Device compliance reporting is not available for Android (AOSP).  
-* Android (AOSP) management is not supported in these environments:  
-    * Intune for Government Community Cloud (GCC) High and Department of Defense (DoD)  
-    * Intune operated by 21Vianet  
+* Android (AOSP) management is not supported with Intune operated by 21Vianet.  
 
 ## Next steps  
 

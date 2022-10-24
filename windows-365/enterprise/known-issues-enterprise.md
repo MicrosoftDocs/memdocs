@@ -74,10 +74,6 @@ Windows 365 provisioning failures may occur because both:
 3. If it is, either remove the GPO or reset the PowerShell Execution to Unrestricted.
 4. Retry the ANC health check. If the check succeeds, retry provisioning.
 
-## Default and custom Enrollment Status Page profiles for Windows 365 Cloud PCs
-
-Only the default Enrollment Status Page (ESP) profile is supported for Windows 365 Cloud PCs. Custom ESP profiles aren’t supported for Cloud PCs.
-
 ## Cloud PC reports as not compliant for compliance policy
 
 The following device compliance settings report as **Not applicable** when being evaluated for a Cloud PC:
