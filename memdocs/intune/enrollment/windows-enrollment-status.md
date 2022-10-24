@@ -59,7 +59,7 @@ ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/wi
 
 ## Create new profile 
 
-1. Select **Windows** > **Windows enrollment** > **Enrollment Status Page**.
+1. Select **Devices** > **Windows** > **Windows enrollment** > **Enrollment Status Page**.
 2. Select **Create**.
 3. In **Basics**, enter the following properties:  
      - **Name**: Name your profile so you can easily identify it later. 
