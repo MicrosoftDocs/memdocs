@@ -33,12 +33,19 @@ Windows Autopilot is designed to simplify all parts of the Windows device lifecy
 - [Key activities](#key-troubleshooting-activities) to perform during troubleshooting
 
 ## Windows Autopilot diagnostics page
-On Windows 11, you can open the Autopilot diagnostic page to view additional detailed troubleshooting information about the Autopilot provisioning process. To enable the diagnostics page, go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** to **Turn on log collection and diagnostics page for end users**. Once the Autopilot diagnostic page is enabled, you can select the **View Diagnostics button**, or the keyboard shortcut **Ctrl**+**Shift**+**D** to access any diagnostic information. The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
+On Windows 11, you can open the Autopilot diagnostic page to view additional detailed troubleshooting information about the Autopilot provisioning process. To enable the Autopilot diagnostics page:
 
-If enabled, diagnostics will be automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md)
+1. Go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md).
+2. Make sure that **Show app and profile configuration progress** is selected to **Yes**
+3. Select **Yes** to **Turn on log collection and diagnostics page for end users**.
+
+Once the Autopilot diagnostic page is enabled, you can select the **View Diagnostics button**, or the keyboard shortcut **Ctrl**+**Shift**+**D** to access any diagnostic information. The Autopilot diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
 
 > [!NOTE]
-> To make sure diagnostics can upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
+> Autopilot dagnostics will normally be automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md)
+
+> [!NOTE]
+> For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
 
 ## Windows Autopilot flow
 
