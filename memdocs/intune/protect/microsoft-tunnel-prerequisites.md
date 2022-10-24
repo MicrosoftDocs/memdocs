@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 08/15/2022
+ms.date: 10/21/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -60,7 +60,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
   | Red Hat (RHEL) 7.4+   | Docker CE                |                    |
   | Red Hat (RHEL) 8.4    | Podman 3.0               |                    |
   | Red Hat (RHEL) 8.5    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
-  | Red Hat (RHEL) 8.6    | Podman 3.0               | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed.|
+  | Red Hat (RHEL) 8.6    | Podman 4.0 *(default)* <br> Podman 3.0  | This version of RHEL doesn't automatically load the *ip_tables* module into the Linux kernel. When you use this version, plan to [manually load the ip_tables](#manually-load-ip_tables) before Tunnel is installed. <br><br> [Containers created by Podman v3 and earlier](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html-single/8.6_release_notes/index#enhancement_containers) are not usable with Podman v4.0. If upgrading and changing containers from v3 to v4.0, plan to create new containers and to uninstall and then reinstall Microsoft Tunnel.|
   | Ubuntu 18.04           | Docker CE               |                    |
   | Ubuntu 20.04           | Docker CE               |                    |
 
@@ -81,7 +81,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
 
 - **Install Docker CE or Podman**: Depending on the version of Linux you use for your Tunnel server, you'll need to install one of the following on the Linux server:
   - Docker version 19.03 CE or later
-  - Podman version 3.0
+  - Podman version 3.0 or 4.0 depending on the version of RHEL
 
   Microsoft Tunnel requires Docker or Podman on the Linux server to provide support for containers. Containers provide a consistent execution environment, health monitoring and proactive remediation, and a clean upgrade experience.
 
@@ -92,8 +92,7 @@ Set up a Linux based virtual machine or a physical server on which Microsoft Tun
     > The preceding link directs you to the CentOS download and installation instructions. Use those same instructions for RHEL 7.4. The version installed on RHEL 7.4 by default is too old to support Microsoft Tunnel Gateway.
   - [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
   - [Install Podman on Red Hat Enterprise Linux 8.4, 8.5, or 8.6 (scroll down to RHEL8)](https://podman.io/getting-started/installation)  
-    These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and that usually install together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages
-with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
+    These versions of RHEL don't support Docker. Instead, these versions use Podman, and *podman* is part of a module called "container-tools". In this context, a module is a set of RPM packages that represent a component and that usually install together. A typical module contains packages with an application, packages with the application-specific dependency libraries, packages with documentation for the application, and packages with helper utilities. For more information, see [Introduction to modules](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/installing_managing_and_removing_user-space_components/introduction-to-modules_using-appstream) in the Red Hat documentation.
 
 - **Transport Layer Security (TLS) certificate**: The Linux server requires a trusted TLS certificate to secure the connection between devices and the Tunnel Gateway server. You’ll add the TLS certificate, including the full trusted certificate chain, to the server during installation of the Tunnel Gateway.
 

@@ -68,15 +68,6 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### System alerts and email notifications (preview)<!--40932899-->
-You'll be able to set up system alerts and automated emails to be notified when certain events, warnings, or errors occur in the Windows 365 service. A subset of critical Cloud PC issues will be sent automatically to admins. In addition, you’ll be able to define alert rules, such as target audience (devices, user groups, tenants), thresholds, frequency, and notification channels.
-
-### Cloud PC utilization report<!--40636545-->
-A new report will be available for Cloud PCs. The **Cloud PC utilization** report will show how many hours users have been connected to their Cloud PCs. Information for individual Cloud PCs and aggregated data will be shown.
-
-### Cloud PC with connection quality issues report<!--40636545-->
-A new report will be available for Cloud PCs. The **Cloud PCs with connection quality issues** report will show information for round-trip time, available bandwidth, and remoting sign-in time. Information for individual Cloud PCs and aggregated data will be shown.
-
 ### End user manual connectivity check<!--37679345 --> 
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).

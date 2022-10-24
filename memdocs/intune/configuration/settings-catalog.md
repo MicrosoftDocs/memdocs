@@ -2,12 +2,12 @@
 # required metadata
 
 title: Create a policy using settings catalog in Microsoft Intune
-description: Use settings catalog in Microsoft Intune and Endpoint Manager to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features.
+description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, and macOS client devices, including Microsoft Office apps, Microsoft Edge, and more. Add these settings in a device configuration profile to secure devices, and control different programs and features.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 09/20/2022
+ms.date: 10/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
