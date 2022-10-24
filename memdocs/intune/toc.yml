@@ -136,13 +136,9 @@ items:
       items:
       - name: What is Intune for US Government?
         href: ./fundamentals/introduction-intune-government.md
+
       - name: Intune US government endpoints
         href: ./fundamentals/intune-us-government-endpoints.md
-
-      - name: China endpoints (do these articles go here?)
-        href: ./fundamentals/china-endpoints.md
-      - name: Intune operated by 21Vianet in China
-        href: ./fundamentals/china.md
 
   - name: Platform guides
     items:
