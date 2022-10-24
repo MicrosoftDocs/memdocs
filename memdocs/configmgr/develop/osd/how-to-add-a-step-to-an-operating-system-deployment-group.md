@@ -1,19 +1,18 @@
 ---
-title: "Add a Step to an OS Deployment Group"
-titleSuffix: "Configuration Manager"
-description: "Add the step to the SMS_TaskSequenceGroup.Steps array property in Configuration Manager." 
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: Add a Step to an OS Deployment Group
+titleSuffix: Configuration Manager
+description: Add the step to the SMS_TaskSequenceGroup.Steps array property in Configuration Manager.
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 71c37f65-c745-4f17-88f0-5bed1ba14d82
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # How to Add a Step to an Operating System Deployment Group
 You add a step (an action or a group) to an operating system deployment task sequence group, in Configuration Manager, by adding the step to the `SMS_TaskSequenceGroup.Steps` array property.  

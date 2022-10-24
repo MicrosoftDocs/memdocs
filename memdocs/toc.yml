@@ -1,55 +1,28 @@
 items:
-- name: Microsoft Endpoint Manager
+- name: Endpoint management
   href: index.yml
 - name: Overview
   expanded: true
   items:
-  - name: Microsoft Endpoint Manager overview
+  - name: Endpoint management overview
     href: endpoint-manager-overview.md
-  - name: Get started with Microsoft Endpoint Manager
-    href: endpoint-manager-getting-started.md
-
-- name: Become cloud native
-  items:
-  - name: Overview and benefits
-    href: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
-  - name: Tutorial-Get started with cloud native Windows endpoints
-    href: ./solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md
-  - name: Azure AD concepts and on-premises resources
+  - name: Solutions
     items:
-    - name: Azure AD joined vs. Hybrid Azure AD joined
-      href: ./solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md
-    - name: Access on-premises resources
-      href: ./solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises.md
-  - name: Planning guide
-    href: ./solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md
-  - name: Known issues
-    href: ./solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
-- name: Get to know Microsoft Endpoint Manager
-  items:
-  - name: Choose the services that are right for your organization
-    href: ./intune/fundamentals/what-is-device-management.md
-
-  - name: Step through the learning path
-    href: /learn/paths/endpoint-manager-fundamentals/  
-  - name: Microsoft Intune is the cloud solution
-
-  - name: Cloud attach your Configuration Manager
-
-  - name: Co-manage with Intune + Configuration Manager
-
-  - name: Endpoint Analytics
-    href: ./analytics/
-  - name: Use Windows Autopilot
-    href: ./autopilot/
-- name: Use Endpoint Manager to manage your identities, devices, and apps
-  items:
-  - name: Manage and secure your identities
-    href: manage-identities.md
-  - name: Manage devices and control features
-    href: manage-devices.md
-  - name: Manage apps and protect their data
-    href: manage-apps.md
-- name: Get Support
-  href: get-support.md
-
+    - name: Move to cloud native endpoints
+      items:
+      - name: Overview and benefits
+        href: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
+      - name: Tutorial-Get started with cloud native Windows endpoints
+        href: ./solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md
+      - name: Azure AD concepts and on-premises resources
+        items:
+        - name: Azure AD joined vs. Hybrid Azure AD joined
+          href: ./solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined.md
+        - name: Access on-premises resources
+          href: ./solutions/cloud-native-endpoints/cloud-native-endpoints-on-premises.md
+      - name: Planning guide
+        href: ./solutions/cloud-native-endpoints/cloud-native-endpoints-planning-guide.md
+      - name: Known issues
+        href: ./solutions/cloud-native-endpoints/cloud-native-endpoints-known-issues.md
+  - name: Get Support
+    href: get-support.md

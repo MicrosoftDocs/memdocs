@@ -65,6 +65,10 @@ Use of a *Server configuration* lets you create a configuration a single time an
    - **IP ranges to include**
    - **IP ranges to exclude**
 
+  > [!NOTE]
+  > Do not use an IP range that specifies 0.0.0.0 in any of the include or exclude addresses, Tunnel Gateway cannot route traffic when this range is used.
+  > 
+
 5. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
 
 ## Create a Site
@@ -177,16 +181,6 @@ Before installing Microsoft Tunnel Gateway on a Linux server, configure your ten
 7. After the installation script finishes, you can navigate in Microsoft Endpoint Manager admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
 
 8. If you’re using RHEL 8.4 or 8.5, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
-
-### Configure a break and inspect proxy
-
-After installing the Microsoft Tunnel server, you can then configure Microsoft Tunnel to work with a break and inspect proxy server that uses a self-signed certificate. To be successful, Microsoft Tunnel must be able to locate and access the certificate from the Proxy server.
-
-Configuration requires the following steps:
-
-1. The proxy server certificate must be in *PEM* format and saved to a file with a `.crt` extension.
-2. Copy the *.crt* file to the following location on the Linux host: `/etc/mstunnel/ca-trust`
-3. Re-run the installation script.
 
 ## Deploy the Microsoft Tunnel client app
 

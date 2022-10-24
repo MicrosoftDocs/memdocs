@@ -6,10 +6,12 @@ ms.date: 01/09/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-mdm
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # Set up device enrollment for on-premises MDM in Configuration Manager

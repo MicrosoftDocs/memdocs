@@ -25,7 +25,7 @@ search.appverid: MET150
 #ms.custom:
 ms.collection: 
   - M365-identity-device-management
-  - highpri
+  - tier3
 ---
 
 

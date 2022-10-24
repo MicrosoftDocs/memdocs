@@ -6,10 +6,12 @@ ms.date: 07/11/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: high
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # <a name="bkmk_cmpivot"></a> Tenant attach: Launch CMPivot from the admin center

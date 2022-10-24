@@ -1,15 +1,17 @@
 ---
 title: Tenant attach - Create and deploy Antivirus policies from the admin center
 titleSuffix: Configuration Manager
-description: "Create and deploy Antivirus policies from the Microsoft Endpoint Manager console and for Configuration Manager collections."
+description: Create and deploy Antivirus policies from the Microsoft Endpoint Manager console and for Configuration Manager collections.
 ms.date: 04/08/2022
 ms.topic: conceptual
 ms.prod: configuration-manager
 ms.technology: configmgr-core
-manager: dougeby
-author: mestew
-ms.author: mstewart
+manager: apoorvseth
+author: Banreet
+ms.author: banreetkaur
 ms.localizationpriority: high
+ms.reviewer: mstewart,aaroncz 
+ms.collection: tier3
 ---
 
 # <a name="bkmk_atp"></a> Tenant attach: Create and deploy Antivirus policies from the admin center

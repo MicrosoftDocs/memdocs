@@ -2,14 +2,14 @@
 # required metadata
 
 title: What are cloud-native Windows endpoints 
-titleSuffix: Microsoft Endpoint Manager
-description: Learn more about cloud-native endpoints and what they are. See a list of benefits, and the impact on end users and IT administrators. Cloud-native endpoints help with remote workers and hybrid workers, and use Microsoft Endpoint Manager to manage devices.
+titleSuffix: Microsoft Intune
+description: Learn more about cloud-native endpoints and what they are. See a list of benefits, and the effect on end users and IT administrators. Cloud-native endpoints help with remote workers and hybrid workers, and use Microsoft Intune to manage devices.
 keywords:
 author: MandiOhlinger
   
 ms.author: mandia
 manager: dougeby
-ms.date: 06/01/2022
+ms.date: 10/05/2022
 ms.topic: conceptual
 ms.service: mem
 ms.subservice: fundamentals
@@ -44,13 +44,14 @@ Organizations are focusing on supporting remote and hybrid workers. With cloud-n
 In this set of articles, you will:
 
 - ✅ **Learn about cloud-native endpoints** and the benefits to organizations and end users (this article).
-- ✅ **Step through a tutorial** that creates a Windows device that's cloud-native: 
 
-  - [Tutorial: Get started with cloud-native Windows endpoints with Microsoft Endpoint Manager](cloud-native-windows-endpoints.md)
+- ✅ **Step through a tutorial** that creates a Windows device that's cloud-native:
+
+  - [Tutorial: Get started with cloud-native Windows endpoints with Microsoft Intune](cloud-native-windows-endpoints.md)
 
 - ✅ **Learn more about the Azure AD concepts** that are part of cloud-native endpoints, including accessing on-premises resources:
 
-  - [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md) 
+  - [Azure AD joined vs. Hybrid Azure AD joined](azure-ad-joined-hybrid-azure-ad-joined.md)
   - [Cloud-native endpoints and on-premises resources](cloud-native-endpoints-on-premises.md)
 
 - ✅ **Get guidance and advice** on moving your workloads and your organization to become cloud-native:
@@ -69,7 +70,7 @@ A cloud-native endpoint doesn't necessarily live exclusively in the cloud. Inste
 
 These endpoints can be located anywhere that has internet access. They can also be physical devices or virtual machines.
 
-From a technical perspective, cloud-native endpoints are Windows devices that are deployed using [Windows Autopilot](../../autopilot/windows-autopilot.md), joined to Azure Active Directory ([Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join)), and are automatically enrolled in a Mobile Device Management (MDM) solution, like [Microsoft Endpoint Manager](../../endpoint-manager-overview.md).
+From a technical perspective, cloud-native endpoints are Windows devices that are deployed using [Windows Autopilot](../../autopilot/windows-autopilot.md), joined to Azure Active Directory ([Azure AD joined](/azure/active-directory/devices/concept-azure-ad-join)), and are automatically enrolled in a Mobile Device Management (MDM) solution, like [Microsoft Intune](../../intune/fundamentals/what-is-intune.md).
 
 A cloud-native endpoint has the following characteristics:
 
@@ -81,7 +82,7 @@ A cloud-native endpoint has the following characteristics:
 
 For end users, they only need an internet connection. Their data and critical settings can be automatically preserved and restored using [Enterprise State Roaming](/azure/active-directory/devices/enterprise-state-roaming-faqs), or similar solutions. If end users experience issues during deployment or at any time, then they can reset and reprovision the device without contacting support.
 
-Microsoft recommends customers focus on adopting cloud-native endpoints.
+Microsoft recommends that organizations focus on adopting cloud-native endpoints.
 
 ## Benefits for users and IT
 
@@ -91,17 +92,17 @@ Cloud-native endpoints provide many benefits to end users and IT:
 
   End users don't worry about connecting to the VPN or other networks. They sign in to devices from anywhere, and run actions, like password reset, without connecting to on-premises AD.
 
-  Azure AD joined (also known as AADJ) endpoints do the initial sign-in using an internet connection. The Azure AD joined sign-in process doesn't use on-premises domain controller connectivity, and is faster than a traditional domain-based sign-in.
+  Azure AD joined (also known as AADJ) endpoints do the initial sign-in using an internet connection. The Azure AD joined sign-in process doesn't use an on-premises domain controller for connectivity, and is faster than a traditional domain-based sign-in.
 
   Traditional domain joined PCs require connectivity to domain controllers for initial sign-in.
 
 - **Deploy from anywhere**
 
-  To deploy new devices, administrators can be anywhere with an internet connection. You can provision or reset devices, and have the devices ready much quicker than traditional provisioning, possibly in minutes. The reliance on on-premises resources is reduced, which simplifies the endpoint requirements and endpoint management.
+  To deploy new devices, administrators can be anywhere with an internet connection. You can provision or reset devices, and have the devices ready quicker than traditional provisioning, possibly in minutes. The reliance on on-premises resources is reduced, which simplifies the endpoint requirements and endpoint management.
 
 - **Simplified management for all platforms**
 
-  Users and administrators get a unified management experience for all platforms, including Android, iOS/iPadOS, macOS, and Windows. With Endpoint Manager, you can manage mobile and non-mobile devices and operating systems. You don't need to rely on complex group policy management.
+  Users and administrators get a unified management experience for all platforms, including Android, iOS/iPadOS, macOS, and Windows. With Intune, you can manage mobile and non-mobile devices and operating systems. You don't need to rely on complex group policy management.
 
 - **Provide a secure Single-Sign-On (SSO) experience to cloud and on-premises apps**
 
@@ -131,7 +132,7 @@ Cloud-native endpoints provide many benefits to end users and IT:
 
 The [High level planning guide to move to cloud-native endpoints](cloud-native-endpoints-planning-guide.md) is a good resource. It covers the following areas:
 
-- **Plan**: In adopting cloud-native endpoints, organizations focus on several key areas:
+- **Plan**: When ready to move to cloud-native endpoints, organizations focus on several key areas:
 
   - Review your existing workloads for modernization, and determine the next steps to support cloud-native.
   - Be prepared to change operational processes and procedures.

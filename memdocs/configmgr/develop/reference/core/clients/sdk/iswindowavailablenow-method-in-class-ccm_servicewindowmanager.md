@@ -1,19 +1,18 @@
 ---
 description: Learn how to determine if a service window of a specified type and duration is available to run using IsWindowAvailableNow.
-title: "IsWindowAvailableNow Method"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: IsWindowAvailableNow Method
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 37702798-5d54-4ea0-90c8-df8fc66a248d
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # IsWindowAvailableNow Method in Class CCM_ServiceWindowManager
 The `IsWindowAvailableNow` WMI class method, in Configuration Manager, determines whether a service window of a specified type and the given duration is available to run at the point of time when the call is made.  

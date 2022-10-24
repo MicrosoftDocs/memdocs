@@ -6,10 +6,12 @@ ms.date: 10/12/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: how-to
-author: aczechowski
-manager: dougeby
-ms.author: aaroncz
+author: sheetg09
+manager: apoorvseth
+ms.author: sheetg
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # How to create and apply power plans in Configuration Manager

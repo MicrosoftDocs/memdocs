@@ -6,11 +6,12 @@ ms.date: 12/31/2019
 ms.prod: configuration-manager
 ms.technology: configmgr-mdm
 ms.topic: conceptual
-ms.collection: M365-identity-device-management
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.collection: tier3
+author: gowdhamankarthikeyan
+ms.author: gokarthi
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Install and configure the Exchange connector

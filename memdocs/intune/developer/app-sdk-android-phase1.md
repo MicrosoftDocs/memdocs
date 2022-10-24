@@ -27,6 +27,7 @@ search.appverid: MET150
 ms.collection:
 - M365-identity-device-management
 - Android
+- tier3
 ms.custom: intune-classic
 ---
 
@@ -240,7 +241,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Telemetry]:#telemetry
 [Exit Criteria]:#exit-criteria
 
-<!-- Other SDK Guide Markdown docs -->
+<!-- Other SDK Guide Markdown documentation -->
 [Stage 2: The MSAL Prerequisite]:app-sdk-android-phase2.md
 [Default Enrollment]:app-sdk-android-appendix.md#default-enrollment
 [Stage 5: Multi-Identity]:app-sdk-android-phase5.md
@@ -252,7 +253,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Support App Protection CA]:app-sdk-android-phase7.md#support-app-protection-ca
 [Providing a Custom Theme]:app-sdk-android-phase7.md#providing-a-custom-theme
 
-<!-- Microsoft docs: Intune overview -->
+<!-- Microsoft Learn documentation: Intune overview -->
 [Intune App SDK overview]:/mem/intune/developer/app-sdk
 [What is Microsoft Intune app management]:/mem/intune/apps/app-management
 [Android app protection policy settings]:/mem/intune/apps/app-protection-policy-settings-android
@@ -266,7 +267,7 @@ After you've completed all the [Exit Criteria] above, continue to [Stage 2: The 
 [Prepare line-of-business apps for app protection policies]:/mem/intune/developer/apps-prepare-mobile-application-management
 [Turn off Microsoft usage data collection]:/mem/intune/user-help/turn-off-microsoft-usage-data-collection-android
 
-<!-- Microsoft docs: Intune testing -->
+<!-- Microsoft Learn documentation: Intune testing -->
 [Microsoft partner]:https://partner.microsoft.com/business-opportunities/why-microsoft
 [Microsoft CDX tenant creation site]:https://cdx.transform.microsoft.com/my-tenants/create-tenant
 [Set up Intune]:/mem/intune/fundamentals/setup-steps

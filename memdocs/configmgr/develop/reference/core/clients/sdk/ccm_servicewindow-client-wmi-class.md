@@ -1,19 +1,18 @@
 ---
 description: Learn how to list instances of service windows in Configuration Manager using CCM_ServiceWindow class.
-title: "CCM_ServiceWindow Class"
-titleSuffix: "Configuration Manager"
-ms.date: "09/20/2016"
-ms.prod: "configuration-manager"
+title: CCM_ServiceWindow Class
+titleSuffix: Configuration Manager
+ms.date: 09/20/2016
+ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 6827bb41-2697-432a-bf41-0d5fd61f8565
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
-
-
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # CCM_ServiceWindow Client WMI Class
 The `CCM_ServiceWindow` Client WMI class is a client class, in Configuration Manager, that lists instances of service windows.  

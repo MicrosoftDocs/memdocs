@@ -2,12 +2,12 @@
 # required metadata
 
 title: Import custom and third party partner ADMX templates in Microsoft Intune
-description: You can add, upload, or import custom and third party partner ADMX and ADML files in Microsoft Intune and Endpoint Manager. When they're imported, create a device configuration profile and assign the profile to your Windows 10/11 devices.
+description: You can add, upload, or import custom and third party partner ADMX and ADML files in Microsoft Intune. When they're imported, create a device configuration profile and assign the profile to your Windows 10/11 devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 08/15/2022
+ms.date: 10/10/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -29,7 +29,7 @@ ms.collection:
 
 ---
 
-# Import custom ADMX and ADML administrative templates into Endpoint Manager (public preview)
+# Import custom ADMX and ADML administrative templates into Microsoft Intune (public preview)
 
 You can import custom and third party/partner ADMX and ADML templates into the Endpoint Manager admin center. Once imported, you can create a device configuration policy using these settings, and then assign the policy to your managed devices.
 
@@ -38,10 +38,10 @@ This feature applies to:
 - Windows 11
 - Windows 10
 
-This article shows you how to import custom ADMX and ADML files in the Endpoint Manager admin center. For more information on administrative templates in Endpoint Manager, go to [Use ADMX templates to configure policy settings in Microsoft Intune](administrative-templates-windows.md).
+This article shows you how to import custom ADMX and ADML files in the Endpoint Manager admin center. For more information on administrative templates in Intune, go to [Use ADMX templates to configure policy settings in Microsoft Intune](administrative-templates-windows.md).
 
 > [!TIP]
-> The settings catalog has many settings natively built-in to Endpoint Manager, including Google Chrome. For more information, go to:
+> The settings catalog has many settings natively built-in to Intune, including Google Chrome. For more information, go to:
 >
 > - [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](settings-catalog.md)
 > - [Common tasks you can complete using the Settings Catalog](settings-catalog-common-features.md)
