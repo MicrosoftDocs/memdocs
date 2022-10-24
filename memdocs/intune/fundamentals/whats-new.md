@@ -34,7 +34,7 @@ ms.collection:
 
 Learn what's new each week in Microsoft Intune. You can also find [important notices](#notices), [past releases](whats-new-archive.md), and information about [how Intune service updates are released](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728).
 
-> [!Note]
+> [!NOTE]
 > Each [monthly update](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Microsoft-Intune-Service-Updates/ba-p/358728) may take up to three days to rollout and will be in the following order:
 >
 > - Day 1: Asia Pacific (APAC)
@@ -67,6 +67,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### App management  
 
 #### Enhanced app picker for managed apps on Android devices<!-- 14531483 -->
+
 Android device users can select, view, and remove their default app selections in the Intune Company Portal app. Company Portal securely stores the device user's default choices for managed apps. Users can view and remove their selections in the Company Portal app by going to **Settings** > **Default Apps** > **See defaults**. This feature is an enhancement to the Android custom app picker for managed apps, which is a part of the Android MAM SDK. For more information about how to view default apps, see [View and edit default apps](../user-help/use-managed-apps-on-your-device-android.md#view-and-edit-default-apps). 
 
 ## Week of October 10, 2022
@@ -103,7 +104,13 @@ In the admin center, you can:
 
 #### Non-compliance warning message includes a link<!--13694184  -->
 
+<<<<<<< HEAD
 In Remote help, a link has been added to the non-compliance warning notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
+=======
+A link has been added to the notification **View device compliance information** and it allows a helper to learn more about why the device is not compliant in Microsoft Endpoint Manager.
+
+If the device that the helper is connecting to is not compliant with your organization's assigned security policies, then the non-compliance warning about that device is displayed along with a link. 
+>>>>>>> 8f77736c6dc66f7554e3c7b92c0c38f6b4c4c021
 
 For more information, go to:
 
@@ -2007,9 +2014,11 @@ The Settings Catalog has new macOS settings you can configure (**Devices** > **C
 The following settings are also in Settings Catalog. Previously, they were only available in Templates:
 
 **App Management > Associated Domains**:
+
 - Enable Direct Downloads
 
 **Networking > Content Caching**:
+
 - Allow Cache Delete
 - Allow Personal Caching
 - Allow Shared Caching
@@ -2034,6 +2043,7 @@ The following settings are also in Settings Catalog. Previously, they were only 
 - Public Range
 
 **Restrictions**:
+
 - Allow Activity Continuation
 - Allow Adding Game Center Friends
 - Allow Air Drop
@@ -2085,8 +2095,8 @@ There isn't any conflict resolution between policies created using the Settings 
 For more information about configuring Settings catalog profiles in Intune, see [Create a policy using settings catalog in Microsoft Intune](../configuration/settings-catalog.md).
 
 Applies to:
-- macOS
 
+- macOS
 
 ## What's New archive
 

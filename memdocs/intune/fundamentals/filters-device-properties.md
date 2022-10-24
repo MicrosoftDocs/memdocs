@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 10/19/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -180,33 +180,35 @@ You can use the following device properties in your filter rules:
 
   | Supported value | OS SKU definition |
   | ---- | --- |
+  | **BusinessN** | Windows 10/11 Professional N (49) |
+  | **CloudEdition** | CloudEdition (Windows 11 SE (203) |
+  | **CloudEditionN** | CloudEditionN (Windows 11 SE N (202) |
+  | **Core** | Windows 10/11 Home (10/111) |
+  | **CoreCountrySpecific** | Windows 10/11 Home China (99) |
+  | **CoreN** | Windows 10/11 Home N (98) |
+  | **CoreSingleLanguage** | Windows 10/11 Home single language (100) |  
   | **Education** | Windows 10/11 Education (121) |
   | **EducationN**  | Windows 10/11 Education (122) |
   | **Enterprise** | Windows 10/11 Enterprise (4) |
   | **EnterpriseEval** | Windows 10/11 Enterprise Evaluation (72) |
   | **EnterpriseG** | Windows 10/11 Enterprise G (171) |
   | **EnterpriseGN** | Windows 10/11 Enterprise G N (172) |
+  | **EnterpriseN** | Windows 10/11 Enterprise N (27) |
+  | **EnterpriseNEval** | Windows 10/11 Enterprise N Evaluation (84) |
   | **EnterpriseS** | Windows 10 Enterprise LTSC (125) |
   | **EnterpriseSEval** | Windows 10 Enterprise LTSC Evaluation (129) |
   | **EnterpriseSN** | Windows 10 Enterprise LTSC N (162) |
-  | **EnterpriseN** | Windows 10/11 Enterprise N (27) |
-  | **EnterpriseNEval** | Windows 10/11 Enterprise N Evaluation (84) |
   | **Holographic** | Windows 10 Holographic (136) |
-  | **Core** | Windows 10/11 Home (10/111) |
-  | **CoreCountrySpecific** | Windows 10/11 Home China (99) |
-  | **CoreN** | Windows 10/11 Home N (98) |
-  | **CoreSingleLanguage** | Windows 10/11 Home single language (100) |
   | **IoTUAP** | Windows 10 IoT Core (123) |
   | **IoTUAPCommercial** | Windows 10 IoT Core Commercial (131) |
   | **IoTEnterprise** | Windows 10/11 IoT Enterprise (188) |
+  | **PPIPro** | Windows 10 TeamOS (119) |
   | **Professional** | Windows 10/11 Professional (48) |
   | **ProfessionalEducation** | Windows 10/11 Professional Education (164) |
   | **ProfessionalEducationN** | Windows 10/11 Professional Education N (165) |
   | **ProfessionalWorkstation** | Windows 10/11 Professional for workstation (161) |
   | **ProfessionalN** | Windows 10/11 Professional for workstation N (162) |
-  | **BusinessN** | Windows 10/11 Professional N (49) |
   | **ProfessionalSingleLanguage** | Windows 10/11 Professional Single Language (138) |
-  | **PPIPro** | Windows 10 TeamOS (119) |
   | **ServerRdsh** | Windows 10/11 Enterprise multi-session (175) |
 
   This property applies to:
