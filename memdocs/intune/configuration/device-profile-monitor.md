@@ -79,7 +79,7 @@ After you create your device profile, Intune provides graphical charts. These ch
       - **Assignments**: See the users and groups that receive policy, and see any existing [filters](../fundamentals/filters.md) in the policy. Select **Edit** to update the policy assignment, and add or remove a filter.
       - **Applicability Rules**: On your Windows devices, see the [applicability rules](device-profile-create.md#applicability-rules) used in the policy. Select **Edit** to add or remove an applicability rule.
 
-    - **Device and user check-in status**: Shows the number of **all** users or devices that checked-in with the profile. If one device has multiple users, this report shows the status for each user. When the user or devices checks-in, they receive the settings in your profile.
+    - **Device and user check-in status**: Shows the number of **all** users or devices that checked-in with the profile. If one device has multiple users, this report shows the status for each user. When the user or devices check-in, they receive the settings in your profile.
 
       Select **View report** to see the following information:
       
