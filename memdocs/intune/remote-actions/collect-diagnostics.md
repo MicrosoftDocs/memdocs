@@ -55,7 +55,7 @@ The *Collect diagnostics* remote action is supported for:
 - Devices that are online and able to communicate with the service during diagnostics. 
 
 > [!NOTE]
->  Ensure access to this URL: lgmsapeweu.blob.core.windows.net for uploading the diagnostics
+> For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
 
 ## Collect diagnostics
 

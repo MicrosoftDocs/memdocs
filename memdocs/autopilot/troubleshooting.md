@@ -33,7 +33,19 @@ Windows Autopilot is designed to simplify all parts of the Windows device lifecy
 - [Key activities](#key-troubleshooting-activities) to perform during troubleshooting
 
 ## Windows Autopilot diagnostics page
-On Windows 11, you can open the Autopilot diagnostic page to view additional detailed troubleshooting information about the Autopilot provisioning process. The diagnostics page can be enabled by going to the ESP profile and selecting **Yes** to **Turn on log collection and diagnostics page for end users**. Once it is enabled, you can select the **View Diagnostics button**, or the keyboard shortcut Ctrl+Shift+D to access any diagnostic information. The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
+On Windows 11, you can open the Autopilot diagnostic page to view additional detailed troubleshooting information about the Autopilot provisioning process. To enable the Autopilot diagnostics page:
+
+1. Go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md) where the Autopilot diagnostics page needs to be enabled.
+2. Make sure that **Show app and profile configuration progress** is selected to **Yes**.
+3. Make sure that **Turn on log collection and diagnostics page for end users** is selected to **Yes**.
+
+Once the diagnostic page is enabled, you can select the **View Diagnostics button** or use the keyboard shortcut **Ctrl**+**Shift**+**D** to access any diagnostic information. The Autopilot diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode.
+
+> [!NOTE]
+> By default diagnostics will be automatically collected upon an Autopilot failure. For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md)
+
+> [!NOTE]
+> For diagnostics to be able to upload successfully from the client, make sure that the URL `lgmsapeweu.blob.core.windows.net` is not blocked on the network.
 
 ## Windows Autopilot flow
 
