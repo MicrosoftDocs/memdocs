@@ -62,7 +62,7 @@ The 1 vCPU/2 GB RAM/64 GB storage license doesn’t support the Windows 11 minim
 
 To change the language settings on an already-created Cloud PC, see [Language packs for Windows 10](https://support.microsoft.com/windows/language-packs-for-windows-a5094319-a92d-18de-5b53-1cfc697cfca8#WindowsVersion=Windows_10) and [Language packs for Windows 11](https://support.microsoft.com/windows/language-packs-for-windows-a5094319-a92d-18de-5b53-1cfc697cfca8#WindowsVersion=Windows_11).
 
-### Automatically enroll in Intune
+### Enrolling Cloud PCs in Intune
 
 To enroll devices that have already been created, ask your users to follow this [guide for enrollment in Intune](/mem/intune/enrollment/quickstart-enroll-windows-device).
 
@@ -70,4 +70,4 @@ Windows 365 Enterprise-specific features, like custom images and provisioning po
 
 ## Next steps
 
-[Manage your Cloud PCs](device-management.md)
+[Troubleshoot Intune enrollment issues](troubleshoot-windows-365-business.md)
