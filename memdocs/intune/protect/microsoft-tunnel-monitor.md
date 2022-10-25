@@ -171,10 +171,6 @@ Microsoft Tunnel logs information to the Linux server logs in the *syslog* forma
 
   - *Oct 20 19:32:15 mstunnel ocserv[4806]: OCSERV_TELEMETRY,connect,31258,73.20.85.75,172.17.0.3,169.254.0.1,169.254.107.209,3780e1fc-3ac2-4268-a1fd-dd910ca8c13c,5A683ECC-D909-4E5F-9C67-C0F595A4A70E,MobileAccess iOS 1.1.34040102*
 
-  
-
-
-
 Command line examples for *journalctl*:
 
 - To view information for only the tunnel server, run `journalctl -t ocserv`.
@@ -201,7 +197,7 @@ For guidance on viewing Tunnel logs, see [View Microsoft Tunnel logs](#view-micr
 
 **Workaround**: Restart the server using `mst-cli server restart` after the Linux server reboots.
 
-If this issue persists, consider automating the restart command by using the cron scheduling utility. See [How to use cron on Linux](https://opensource.com/article/21/7/cron-linux) at *opensource.com*. 
+If this issue persists, consider automating the restart command by using the cron scheduling utility. See [How to use cron on Linux](https://opensource.com/article/21/7/cron-linux) at *opensource.com*.
 
 ## Next steps
 
