@@ -96,6 +96,13 @@ In the admin center, you can:
   - Password policy
 - [Apply custom compliance settings](../protect/compliance-use-custom-settings.md) using POSIX-complaint shell scripts for discovery, and JSON files to define the custom settings you want to use.
 
+## Week of October 24, 2022
+### Device configuration
+#### New network endpoints for Microsoft Intune<!--15847055 -->
+
+New network endpoints have been added to our documentation to accommodate new Azure Scale Units (ASU) that have been added to the Intune service. We recommend updating your firewall rules with the latest list of IP addresses to ensure that all network endpoints for Microsoft Intune are up-to-date.
+
+For the full list go to  [Network endpoints for Microsoft Intune](intune-endpoints.md).
 ## Week of October 03, 2022
 
 ### Device Security
