@@ -319,7 +319,7 @@ items:
           displayName: OOBE
         - name: Use the ADE to enroll iOS/iPadOS devices 
           href: ./enrollment/tutorial-use-device-enrollment-program-enroll-ios.md
-      - name: Concepts
+      - name: Concepts (These seem like they can be part of How to)
         items:
         - name: Corporate identifiers
           href: ./enrollment/corporate-identifiers-add.md
@@ -332,7 +332,7 @@ items:
           href: ./enrollment/terms-and-conditions-create.md
         - name: Intune and Azure AD device limits  
           href: ./enrollment/device-limit-intune-azure.md    
-      - name: How-to guides
+      - name: How-to guides (likely remove section and bring section up one)
         items:
         - name: Enroll devices (deployment guides - need to integrate)
           items:
@@ -1418,76 +1418,73 @@ items:
     - name: Remote actions
       href: ./remote-actions/index.yml
       items:
-      - name: Overview
-        items:
-        - name: Device management overview
-          href: ./remote-actions/device-management.md
-      - name: How-to guides
-        items:
-        - name: Locks and passwords
-          items:
-          - name: Lock device
-            href: ./remote-actions/device-remote-lock.md
-          - name: Reset passcode
-            href: ./remote-actions/device-passcode-reset.md
-          - name: Windows 10 PIN reset
-            href: ./remote-actions/device-windows-pin-reset.md
-        - name: Remove and restart
-          items:
-          - name: Remove devices
-            href: ./remote-actions/devices-wipe.md
-          - name: Manage Windows Fresh Start
-            href: ./remote-actions/device-fresh-start.md
-          - name: Restart device
-            href: ./remote-actions/device-restart.md
-        - name: Apple device actions
-          items:
-          - name: Enable iOS/iPadOS lost mode
-            href: ./remote-actions/device-lost-mode.md
-          - name: Turn on iOS/iPadOS supervised mode
-            href: ./remote-actions/device-supervised-mode.md
-          - name: Shutdown macOS and iOS/iPadOS devices
-            href: ./remote-actions/device-shutdown.md
-          - name: Erase macOS device
-            href: ./remote-actions/device-erase.md
-          - name: Disable Activation Lock
-            href: ./remote-actions/device-activation-lock-disable.md
-          - name: Update cellular data plan
-            href: ./remote-actions/update-cellular-data-plan.md
-        - name: User actions
-          items:
-          - name: Sign out current user
-            href: ./remote-actions/device-logout-user.md
-          - name: Remove user
-            href: ./remote-actions/device-remove-user.md
-          - name: Find primary user
-            href: ./remote-actions/find-primary-user.md
-        - name: Other actions
-          items:
-          - name: Locate device
-            href: ./remote-actions/device-locate.md
-          - name: Rename device
-            href: ./remote-actions/device-rename.md
-          - name: Send notifications
-            href: ./remote-actions/custom-notifications.md
-          - name: Use remote help
-            href: ./remote-actions/remote-help.md
-          - name: Use TeamViewer for remote administration
-            href: ./remote-actions/teamviewer-support.md
-          - name: Synchronize device
-            href: ./remote-actions/device-sync.md
-          - name: Examine device inventory
-            href: ./remote-actions/device-inventory.md
-          - name: Collect diagnostics
-            href: ./remote-actions/collect-diagnostics.md
-        - name: Bulk device actions
-          href: ./remote-actions/bulk-device-actions.md
-        - name: Troubleshooting
-          items:
-          - name: Troubleshoot device actions
-            href: /troubleshoot/mem/intune/troubleshoot-device-actions
+      - name: Device management overview
+        href: ./remote-actions/device-management.md
 
-      - name: Resources
+      - name: Locks and passwords
+        items:
+        - name: Lock device
+          href: ./remote-actions/device-remote-lock.md
+        - name: Reset passcode
+          href: ./remote-actions/device-passcode-reset.md
+        - name: Windows 10 PIN reset
+          href: ./remote-actions/device-windows-pin-reset.md
+      - name: Remove and restart
+        items:
+        - name: Remove devices
+          href: ./remote-actions/devices-wipe.md
+        - name: Manage Windows Fresh Start
+          href: ./remote-actions/device-fresh-start.md
+        - name: Restart device
+          href: ./remote-actions/device-restart.md
+      - name: Apple device actions
+        items:
+        - name: Enable iOS/iPadOS lost mode
+          href: ./remote-actions/device-lost-mode.md
+        - name: Turn on iOS/iPadOS supervised mode
+          href: ./remote-actions/device-supervised-mode.md
+        - name: Shutdown macOS and iOS/iPadOS devices
+          href: ./remote-actions/device-shutdown.md
+        - name: Erase macOS device
+          href: ./remote-actions/device-erase.md
+        - name: Disable Activation Lock
+          href: ./remote-actions/device-activation-lock-disable.md
+        - name: Update cellular data plan
+          href: ./remote-actions/update-cellular-data-plan.md
+      - name: User actions
+        items:
+        - name: Sign out current user
+          href: ./remote-actions/device-logout-user.md
+        - name: Remove user
+          href: ./remote-actions/device-remove-user.md
+        - name: Find primary user
+          href: ./remote-actions/find-primary-user.md
+      - name: Other actions
+        items:
+        - name: Locate device
+          href: ./remote-actions/device-locate.md
+        - name: Rename device
+          href: ./remote-actions/device-rename.md
+        - name: Send notifications
+          href: ./remote-actions/custom-notifications.md
+        - name: Use remote help
+          href: ./remote-actions/remote-help.md
+        - name: Use TeamViewer for remote administration
+          href: ./remote-actions/teamviewer-support.md
+        - name: Synchronize device
+          href: ./remote-actions/device-sync.md
+        - name: Examine device inventory
+          href: ./remote-actions/device-inventory.md
+        - name: Collect diagnostics
+          href: ./remote-actions/collect-diagnostics.md
+      - name: Bulk device actions
+        href: ./remote-actions/bulk-device-actions.md
+      - name: Troubleshooting
+        items:
+        - name: Troubleshoot device actions
+          href: /troubleshoot/mem/intune/troubleshoot-device-actions
+
+      - name: Resources (is this content valid?)
         items:
         - name: Scenario implementation guides 
           items:
