@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/21/2022
+ms.date: 10/25/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -57,6 +57,10 @@ Learn what new features are available in Windows 365 Enterprise.
 #### New Azure Network Connection health check<!--41752775-->
 
 A new check has been added the Azure Network Connectin health checks: **UDP connection server reachable**. For more information, see [Azure network connections health checks](health-checks.md).
+
+#### Forensic auditing of Cloud PCs now generally available<!--41237533-->
+
+Forensic auditing has moved out of preview and into general availability. For more information, see [Digital forensics and Windows 365 Enterprise Cloud PCs](digital-forensics.md) and [Place a Cloud PC under review](place-cloud-pc-under-review.md).
 
 <!-- ########################## -->
 ## Week of October 10, 2022
@@ -251,7 +255,7 @@ The **Azure network connection** tab has a new health check: **Intune enrollment
 <!-- vvvvvvvvvvvvvvvvvvvvvv -->
 ### Monitor and troubleshoot
 
-### Forensic auditing of Cloud PCs<!--38726407-->
+#### Forensic auditing of Cloud PCs<!--38726407-->
 
 You can now place a Cloud PC under review. This action starts a process to create a secure snapshot of a Cloud PC. You can then analyze the snapshot using electronic discovery solutions. For more information, see [Digital forensics and Windows 365 Enterprise Cloud PCs](digital-forensics.md) and [Place a Cloud PC under review](place-cloud-pc-under-review.md).
 
