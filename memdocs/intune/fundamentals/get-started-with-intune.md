@@ -145,7 +145,7 @@ The following articles are good resources:
 
 Every organization has a base set of apps that should be installed on devices. Your organization may require a specific email app, web browser, or VPN app. You can use Intune to assign these apps to your users before they enroll their devices. When users enroll their devices, the app policies are automatically deployed. When enrollment completes, the apps install and are ready to use.
 
-If you prefer, you can enroll your devices, and then assign apps. It's up to you. For example, your oganization may have a new app that it wants installed on devices. Admins add the user or device to the group that'll use that app. The next time users check for new apps, they'll see the new app available.
+If you prefer, you can enroll your devices, and then assign apps. It's up to you. For example, your organization may have a new app that it wants installed on devices. Admins add the user or device to the group that'll use that app. The next time users check for new apps, they'll see the new app available.
 
 For key productivity apps, Microsoft recommends creating a baseline of app policies and then assigning these policies during enrollment.
 
