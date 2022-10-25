@@ -5,7 +5,7 @@ keywords:
 author: brenduns
 ms.author: brenduns
 manager: dougeby
-ms.date: 06/23/2022
+ms.date: 10/25/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: protect
@@ -154,6 +154,9 @@ Microsoft Tunnel logs information to the Linux server logs in the *syslog* forma
 
   - *Feb 25 16:37:56 MSTunnelTest-VM ocserv-access[9528]: ACCESS_LOG,41150dc4-238x-4dwv-9q89-55e987f30c32,f5132455-ef2dd-225a-a693-afbbqed482dce,tcp,169.254.54.149:49462,10.88.0.5:80,112,60,10*
 
+  > [!IMPORTANT]
+  > In Tunnel access logs, the *<deviceId>* value identifies the unique installation instance of Microsoft Defender that runs on a device, and does not identify either the Intune device ID or Azure AD device ID. If Defender is uninstalled and then reinstalled on a device, a new instance for the *DeviceId** is generated.
+
   To enable access logging:
 
   1. set TRACE_SESSIONS=1 in /etc/mstunnel/env.sh
@@ -162,9 +165,20 @@ Microsoft Tunnel logs information to the Linux server logs in the *syslog* forma
 
   If access logs are too noisy, you can turn off DNS connection logging by setting TRACE_SESSIONS=1 and restarting the server.
 
+- **OCSERV_TELEMETRY** - Display telemetry details for connections to Tunnel.
+
+  Telemetry logs have the following format, with the values for *bytes_in*, *bytes_out*, and *duration* being used only for disconnect operations: `<operation><client_ip><server_ip><gateway_ip><assigned_ip><user_id><device_id><user_agent><bytes_in><bytes_out><duration>` For example:  
+
+  - *Oct 20 19:32:15 mstunnel ocserv[4806]: OCSERV_TELEMETRY,connect,31258,73.20.85.75,172.17.0.3,169.254.0.1,169.254.107.209,3780e1fc-3ac2-4268-a1fd-dd910ca8c13c,5A683ECC-D909-4E5F-9C67-C0F595A4A70E,MobileAccess iOS 1.1.34040102*
+
+  
+
+
+
 Command line examples for *journalctl*:
 
 - To view information for only the tunnel server, run `journalctl -t ocserv`.
+- To view the telemetry log, run `journalctl -t ocserv | grep TELEMETRY`
 - To view information for all log options, you can run `journalctl -t ocserv -t ocserv-access -t mstunnel-agent -t mstunnel_monitor`.
 - Add `-f` to the command to display an active and continuing view of the log file. For example, to actively monitor ongoing processes for Microsoft Tunnel, run `journalctl -t mstunnel_monitor -f`.
 
@@ -188,7 +202,6 @@ For guidance on viewing Tunnel logs, see [View Microsoft Tunnel logs](#view-micr
 **Workaround**: Restart the server using `mst-cli server restart` after the Linux server reboots.
 
 If this issue persists, consider automating the restart command by using the cron scheduling utility. See [How to use cron on Linux](https://opensource.com/article/21/7/cron-linux) at *opensource.com*. 
-
 
 ## Next steps
 
