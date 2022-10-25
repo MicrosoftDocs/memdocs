@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 10/21/2022
+ms.date: 10/25/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice:
@@ -46,6 +46,16 @@ Learn what new features are available in Windows 365 Business.
 ### Role-based access control
 ### Scripts
 -->
+
+<!-- ########################## -->
+## Week of October 25, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### New setting to easily enroll Business Cloud PCs in Microsoft Endpoint Manager<!--40009143 wnready-->
+
+Windows 365 Business admins can now set a toggle that automatically enrolls new Cloud PCs in to Microsoft Endpoint Manager. For more information, see [Update organization settings](change-organization-default-settings).
 
 <!-- ########################## -->
 ## Week of October 17, 2022
