@@ -49,6 +49,16 @@ Learn what new features are available in Windows 365 Enterprise.
 -->
 
 <!-- ########################## -->
+## Week of October 25, 2022
+
+<!-- vvvvvvvvvvvvvvvvvvvvvv -->
+### Device management
+
+#### Point-in-time restore now generally available<!--37063579-->
+
+Point-in-time restore has moved out of preview and into general availability. For more information, see [Point-in-time restore for Windows 365 Enterprise](restore-overview.md).
+
+<!-- ########################## -->
 ## Week of October 17, 2022
 
 <!-- ***********************************************-->
