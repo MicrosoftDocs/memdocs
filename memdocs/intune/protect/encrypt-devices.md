@@ -137,7 +137,8 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 **Endpoint security disk encryption policy** - Configure the following settings in the BitLocker profile:
 
 - **Hide prompt about third-party encryption** = *Yes*
-- **Alow standard users to enable encryption during Autopilot** = *Yes*
+- **Allow standard users to enable encryption during Autopilot** = *Yes*
+- **Require Key File Creation** = *Blocked or Allowed*
 
 **Device configuration policy** - Configure the following settings in the *Endpoint protection* template or a *custom settings* profile:
 
