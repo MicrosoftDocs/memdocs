@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 10/25/2022
 ms.topic: overview
 ms.service: mem
 ms.subservice: fundamentals
@@ -42,7 +42,7 @@ This article provides an overview of the steps to start using Intune, including:
 - Step 2: Determine your licensing needs and any platform requirements
 - Step 3: Set up Intune
 - Step 4: Use compliance and conditional access
-- Step 5: Deploy apps
+- Step 5: Target apps for enrollment
 - Step 6: Create device configuration profiles
 - Step 7: Enroll your devices to be managed
 - Protect organization app data on personal devices
@@ -141,13 +141,13 @@ The following articles are good resources:
 - [App-based conditional access with Intune](../protect/app-based-conditional-access-intune.md)
 - [Conditional access scenarios](../protect/conditional-access-intune-common-ways-use.md)
 
-## Step 5 - Add and deploy apps
+## Step 5 - Add and target apps for enrollment
 
-Every organization has a base set of apps that should be installed on devices. Your organization may require a specific email app, web browser, or VPN app. You can use Intune to deploy these apps to your users before they enroll their devices. When users enroll their devices, these apps can be automatically installed during the enrollment process.
+Every organization has a base set of apps that should be installed on devices. Your organization may require a specific email app, web browser, or VPN app. You can use Intune to assign these apps to your users before they enroll their devices. When users enroll their devices, the app policies are automatically deployed. When enrollment completes, the apps install and are ready to use.
 
-If you prefer, you can enroll your devices before installing apps. It's up to you. When users enroll their devices in Intune, the enrollment process can automatically deploy your app policies. When enrollment completes, the apps are ready to use.
+If you prefer, you can enroll your devices, and then assign apps. It's up to you. For example, your oganization may have a new app that it wants installed on devices. Admins add the user or device to the group that'll use that app. The next time users check for new apps, they'll see the new app available.
 
-For key productivity apps, Microsoft recommends creating a baseline of app policies and then deploying these policies during enrollment.
+For key productivity apps, Microsoft recommends creating a baseline of app policies and then assigning these policies during enrollment.
 
 Intune supports a wide range of apps, including store apps, line-of-business (LOB) apps, Win32 apps, and more. You can manage app deployment using the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Also, you can connect to your managed Google Play, the Apple App Store, and the Microsoft Store to deploy apps from these locations.
 
