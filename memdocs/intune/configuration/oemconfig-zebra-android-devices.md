@@ -56,6 +56,8 @@ For example, you create a Zebra OEMConfig profile that applies some settings to 
 
 In another example, you assigned an OEMConfig profile that configured some Zebra device settings. Recently, users are reporting issues with a specific application, and you want to clear the app's cache. Create a new OEMConfig profile that includes only the “clear cache” action. Assign the profile to the devices that need it.
 
+Multiple profiles will take longer to deploy than a single profile. If the speed of delivery of policy to the device is important, you should group settings into the smallest number of profiles possible. 
+
 ## Ordering
 
 With multiple profiles on each device, the order that profiles are deployed isn’t guaranteed. This behavior is a Google Play limitation. To run operations in sequence, you can use [Zebra's Transaction Step feature](https://techdocs.zebra.com/oemconfig/mc/#Transaction-Steps) (opens Zebra's web site). 
