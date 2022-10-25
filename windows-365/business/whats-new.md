@@ -55,7 +55,7 @@ Learn what new features are available in Windows 365 Business.
 
 #### New setting to easily enroll Business Cloud PCs in Microsoft Endpoint Manager<!--40009143 wnready-->
 
-Windows 365 Business admins can now set a toggle that automatically enrolls new Cloud PCs in to Microsoft Endpoint Manager. For more information, see [Update organization settings](change-organization-default-settings).
+Windows 365 Business admins can now set a toggle that automatically enrolls new Cloud PCs in to Microsoft Endpoint Manager. For more information, see [Update organization settings](change-organization-default-settings.md).
 
 <!-- ########################## -->
 ## Week of October 17, 2022
