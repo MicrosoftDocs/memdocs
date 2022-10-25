@@ -58,7 +58,7 @@ Learn what new features are available in Windows 365 Enterprise.
 
 A new check has been added the Azure Network Connectin health checks: **UDP connection server reachable**. For more information, see [Azure network connections health checks](health-checks.md).
 
-### Forensic auditing of Cloud PCs now generally available<!--41237533-->
+#### Forensic auditing of Cloud PCs now generally available<!--41237533-->
 
 Forensic auditing has moved out of preview and into general availability. For more information, see [Digital forensics and Windows 365 Enterprise Cloud PCs](digital-forensics.md) and [Place a Cloud PC under review](place-cloud-pc-under-review.md).
 
