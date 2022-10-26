@@ -329,6 +329,17 @@ Reusable groups will be configured on a new Tab for *Reusable settings* that wil
 
 Deliver branded personalized messages to employees just above their taskbar, in their Notifications, or when they run the Get Started app on Windows 11 devices. Organizational messages are intended to improve employee communication in remote and hybrid-work scenarios, and to help employees adapt to their new roles more quicky, learn more about their organization, and stay informed of new updates and trainings.  
 
+### Access policies for multiple administrative approvals (public preview)<!--9348867   -->
+As a public preview, you’ll soon be able to use Intune *access policies* to require that a second administrative account be used to approve a change before the change is applied.  This capability is known as multiple administrative approval (MAA). Access policies will be available in the [Microsoft Endpoint Manager admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Multi Admin Administration** > **Access policies**.
+
+Access policies can protect a type of resource, like App deployments. Each access policy will include a group of users who are *approvers* for the changes protected by the policy. When a resource like an app deployment configuration is protected by an access policy, any changes that are made to the deployment, including creating, deleting, or modifying an existing deployment won't apply until a member of the approvers group for that access policy reviews and approves that change.
+
+Approvers will also be able to reject requests, and both the individual requesting a change and the approver can provide notes about the change, or why it was approved or rejected.
+
+Access policies will be supported for the following resources:
+
+- **Apps** – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
+- **Scripts** – Applies to deploying scripts to devices that run [macOS](../apps/macos-shell-scripts.md) or [Windows](../apps/intune-management-extension.md).
 <!-- ***********************************************-->
 
 ## Notices
