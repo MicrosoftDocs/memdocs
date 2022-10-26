@@ -2,7 +2,7 @@
 title: Windows Autopilot resolved issues
 description: Inform yourself about issues with Windows Autopilot deployment that can be resolved by applying the latest cumulative update.
 keywords: mdm, setup, windows, windows 10, oobe, manage, deploy, autopilot, ztd, zero-touch, partner, msfb, intune
-ms.prod: w10
+ms.prod: windows-client
 ms.mktglfcycl: deploy
 ms.localizationpriority: medium
 ms.sitesec: library
@@ -15,6 +15,7 @@ manager: dougeby
 ms.date: 04/28/2021
 ms.collection: M365-modern-desktop
 ms.topic: troubleshooting
+ms.technology: itpro-deploy
 ---
 
 # Windows Autopilot - resolved issues
