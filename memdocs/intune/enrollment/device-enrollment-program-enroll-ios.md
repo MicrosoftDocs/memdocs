@@ -3,7 +3,7 @@
 
 title: Enroll iOS/iPadOS devices with Apple ADE
 titleSuffix: Microsoft Intune
-description: Learn how to enroll corporate-owned iOS/iPadOS devices by using Automated Device Enrollment (ADE), previously known as Device Enrollment Program (DEP).
+description: Learn how to enroll corporate-owned iOS/iPadOS devices by using Automated Device Enrollment (ADE).  
 keywords:
 author: Lenewsad
 ms.author: lanewsad
@@ -35,9 +35,7 @@ ms.collection:
 
 *Applies to iOS/iPadOS*  
 
-Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment. This enrollment option applies your organization's settings from Apple Business Manager and Apple School Manager and enrolls devices without you needing to touch them. 
-
-iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Setup Assistant, an app used in the out-of-box-experience for Apple products, guides them through setup and enrollment. 
+Corporate-owned devices purchased through Apple Business Manager or Apple School Manager can be enrolled in Intune via automated device enrollment. This enrollment option applies your organization's settings from Apple Business Manager and Apple School Manager and enrolls devices without you needing to touch them. iPhones and iPads can be shipped directly to employees and students. When they turn on their devices, Apple Setup Assistant guides them through setup and enrollment. 
 
 This article describes how to prepare and set up automated device enrollment in Microsoft Intune.    
 
@@ -53,7 +51,6 @@ The following table shows the features and scenarios supported with automated de
 | Devices are associated with a single user. | ✔️ |
 | Devices are user-less, such as kiosk or dedicated device. | ✔️ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. Applications on BYOD or personal devices can be managed using [MAM](../fundamentals/deployment-guide-enrollment-mamwe.md), or [User and Device enrollment](../enrollment/ios-user-enrollment.md). |
-| You have existing devices. | ❌ <br/><br/>Existing devices should be enrolled using [Apple Configurator](../fundamentals/deployment-guide-enrollment-ios-ipados.md#apple-configurator-enrollment). | 
 | Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use MAM to manage specifics apps on the device. Since these devices are owned by the organization, we recommend enrolling them in Intune. |  
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |  
 
