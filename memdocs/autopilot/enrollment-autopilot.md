@@ -9,12 +9,10 @@ ms.reviewer: jubaptis
 manager: dougeby
 ms.date: 02/09/2022
 ms.topic: how-to
-ms.service: microsoft-intune
 ms.subservice: enrollment
 ms.localizationpriority: high
 ms.prod: windows-client
-ms.technology: 
-  - itpro-deploy
+ms.technology: itpro-deploy
 ms.assetid: a2dc5594-a373-48dc-ba3d-27aff0c3f944
 #ROBOTS: 
 #audience: 
