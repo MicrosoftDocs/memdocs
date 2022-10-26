@@ -8,7 +8,7 @@ keywords:
 author: ErikjeMS 
 ms.author: erikje
 manager: dougeby
-ms.date: 07/13/2022
+ms.date: 09/14/2022
 ms.topic: reference
 ms.service: cloudpc
 ms.subservice: 
@@ -56,16 +56,6 @@ To help in your readiness and planning, this page lists Windows 365 updates and 
 <!-- ***********************************************-->
 <!--## App management-->
 
-<!--***********************************************-->
-## Device management
-
-### New setting to easily enroll Business Cloud PCs in Microsoft Endpoint Manager<!--40009143-->
-
-Admins will be able to set a toggle that automatically enrolls new Cloud PCs in to Microsoft Endpoint Manager.
-
-### Resize action support for more Cloud PCs<!--40263425-->
-
-The resize action will support Cloud PCs that are Azure Active Directory joined.
 
 <!-- ***********************************************-->
 <!--## Device provisioning-->
@@ -78,11 +68,7 @@ The resize action will support Cloud PCs that are Azure Active Directory joined.
 <!-- ***********************************************-->
 ## Monitor and troubleshoot
 
-### Review Cloud PC connectivity health checks and errors in Microsoft Endpoint Manager admin center<!--38469622 -->
-
-You’ll be able to review connectivity health checks and errors in the Microsoft Endpoint Manager admin center to help you understand if your users are experiencing connectivity issues. You’ll also get a troubleshooting tool to help resolve connectivity issues.
-
-### End user manual connectivity check<!--37679345 -->
+### End user manual connectivity check<!--37679345 --> 
 
 End users will be able to manually run connectivity checks on their Cloud PCs from [windows365.microsoft.com](https://windows365.microsoft.com).
 

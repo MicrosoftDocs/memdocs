@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune, has-adal-ref
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Get started with the Microsoft Intune App SDK
@@ -183,9 +185,6 @@ Once you have registered your app within an Azure tenant, and it is showing up u
 5. In the search box, enter **Microsoft Mobile Application Management**.
 6. Under **Delegated Permissions**, select the **DeviceManagementManagedApps.ReadWrite: Read and Write the User's App Management Data*** checkbox.
 7. Click **Add permissions**.
-
-> [!NOTE]
-> If your app restricts you from signing in due to an error accessing this resource: https\://intunemam.microsoftonline.com, you must send a note to msintuneappsdk@microsoft.com with your app's Client ID. This is a manual approval process today.
 
 ### Badge your app (optional)
 

@@ -9,11 +9,11 @@ ms.topic: conceptual
 
 
 ms.assetid: 7c8ca172-c5de-4f13-90e4-039eb3913577
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 ---
 
 # Site administration views in Configuration Manager

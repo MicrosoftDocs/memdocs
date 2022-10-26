@@ -6,10 +6,12 @@ ms.date: 04/05/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # About client installation parameters and properties in Configuration Manager
@@ -403,6 +405,10 @@ Example: `CCMCERTISSUERS="CN=Contoso Root CA; OU=Servers; O=Contoso, Ltd; C=US |
 > Use the value of the **CertificateIssuers** attribute in the **mobileclient.tcf** file for the site. This file is in the `\bin\<platform>` subfolder of the Configuration Manager installation directory on the site server.
 
 For more information about the certificate issuers list and how clients use it during the certificate selection process, see [Planning for PKI client certificate selection](../../plan-design/security/plan-for-certificates.md#pki-client-certificate-selection).
+
+### `CCMCERTNAMECHECK`
+<!--14846212-->
+Starting in version 2207, this property can be used to skip checking the subject name for the certificate.`CCMCERTNAMECHECK=0` skips checking the subject name of the certificate.
 
 ### `CCMCERTSEL`
 

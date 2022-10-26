@@ -7,7 +7,7 @@ keywords:
 author: ErikjeMS  
 ms.author: erikje
 manager: dougeby
-ms.date: 01/20/2022
+ms.date: 10/12/2022
 ms.topic: how-to
 ms.service: cloudpc
 ms.subservice:
@@ -42,7 +42,10 @@ To optimize Cisco Webex, you’ll need to:
 
 ## Requirements
 
-- **Windows Remote Desktop Client**: These instructions don't support connections through a web browser.
+These instructions don't support connections through a web browser.
+
+- **Windows 365 app for Windows**
+- **Windows Remote Desktop Client**
 - **Operating system**: Windows
 
 ## Install the Cisco Webex HVD client on the Cloud PC

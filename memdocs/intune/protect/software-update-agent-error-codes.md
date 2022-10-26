@@ -8,7 +8,7 @@ author: Brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/29/2019
-ms.topic: troubleshooting
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -25,7 +25,9 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-classic
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # Software update agent error codes and descriptions in Microsoft Intune

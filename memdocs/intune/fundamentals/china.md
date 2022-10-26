@@ -8,7 +8,7 @@ keywords:
 author: Smritib17
 ms.author: smbhardwaj
 manager: dougeby
-ms.date: 04/16/2021
+ms.date: 08/23/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -52,11 +52,12 @@ Because the China services are operated by a partner from inside China, there ar
   - Google Play Protect capabilities such as SafetyNet device attestation.
   - Managing apps from the Google Play Store.
   - Android Enterprise capabilities. For more information, see this [Google documentation](https://support.google.com/work/android/answer/6270910?hl=en).
-- The Intune Company Portal app for Android uses Google Mobile Services  to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-device-administrator-management-when-gms-is-unavailable). 
+- The Intune Company Portal app for Android uses Google Mobile Services  to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see this [article](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable). 
 - To follow local regulations and provide improved functionality, the Intune client experience (Company Portal app) may differ in China.
 - Fencing isn't available.
 - Mobile Application Management (MAM) availability is conditional on those apps being available in People's Republic of China.
-- Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices.  
+- Intune operated by 21Vianet doesn't support Android (AOSP) management for corporate devices. 
+- Intune operated by 21Vianet doesn't support Mobile Threat Defense (MTD) connector for Android and iOS devices with MTD vendors.
 
 ## You control customer data
 

@@ -7,7 +7,7 @@ keywords:
 author: lenewsad
 ms.author: lanewsad
 manager: dougeby
-ms.date: 06/14/2022
+ms.date: 09/19/2022
 ms.topic: end-user-help
 ms.prod:
 ms.service: microsoft-intune
@@ -30,7 +30,11 @@ ms.collection:
 ---
 
 
-# Managed work and school apps for Android 
+# Managed work and school apps for Android  
+
+> [!NOTE]
+> Managed apps are not currently supported on AOSP devices.  
+
 Intune-managed apps (*managed* apps for short) are work-approved apps managed by your organization, and configured to prevent intentional or unintentional data loss. When signed into a managed app with your work or school account, you may encounter your organization's requirements and restrictions for access. This article provides an overview of Intune-managed apps, how to get the ones you need for work or school, and their restrictions and requirements.   
 
 ## How do I know I'm using a managed app?
@@ -97,4 +101,9 @@ Only one work or school account can be associated with the managed apps on your 
 The Azure Information Protection (AIP) mobile apps enable you to view protected emails, PDFs, images, and text files that cannot be opened with your regular apps for these file types. The mobile viewer app is available for Android devices on [Google Play](https://play.google.com/store/apps/details?id=com.microsoft.ipviewer).  
 
 For more information about AIP, see [Mobile viewer apps for Azure Information Protection on iOS and Android](/azure/information-protection/rms-client/mobile-app-faq).  
+## View and edit default apps    
+Company Portal securely saves and stores your default app selections for managed apps. To view and remove your default selections:   
 
+1. Open Company Portal.  
+2. Tap the main menu > **Settings** .  
+3. Scroll down to **Default Apps** and tap **See Defaults** to view and remove your current defaults.    

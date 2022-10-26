@@ -4,23 +4,33 @@ description: News and resources about the latest updates and past versions of Wi
 ms.prod: w10
 ms.technology: windows
 ms.localizationpriority: medium
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: frankroj
+ms.author: frankroj
+manager: aczechowski
 ms.reviewer: jubaptis
-ms.date: 08/02/2022
+ms.date: 09/22/2022
 ms.collection:
   - M365-modern-desktop
   - highpri
-ms.topic: article
+ms.topic: article 
 ---
 
 # Windows Autopilot: What's new
 
+## Autopilot automatic device diagnostics collection
+<!--1895390-->
+Starting with Intune 2209, Intune will automatically capture diagnostics when devices experience a failure during the Autopilot process on Windows 10 version 1909 or later and with Windows 11. When logs are finished processing on a failed device, they will be automatically captured and uploaded to Intune. Diagnostics may include user identifiable information such as user or device name. If the logs are not available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they are removed.
+
+For more information, see [Collect diagnostics from a Windows device](../intune/remote-actions/collect-diagnostics.md).
+
+## Updates to Autopilot device targeting infrastructure
+
+With Intune 2208 we are updating the Autopilot infrastructure to ensure that the profiles and applications assigned are consistently ready when the devices are deployed. This change reduces the amount of data that needs to be synchronized per-Autopilot device and leverages device lifecycle change events to reduce the amount of time that it takes to recover from device resets for Azure AD and Hybrid Azure AD joined devices. No action is needed to enable this change, it will be rolling out to all clients starting August 2022.
+
 ## Update Intune Connector for Active Directory for Hybrid Azure AD joined devices
 <!-- 2209 -->
 
-Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) will require .NET Framework version 4.7.2 or later. If you're not already using .NET 4.7.2 or later, the Intune Connector may not work for Autopilot hybrid Azure AD deployments and will result in failures. When you install a new Intune Connector, don't use the connector installation package that was previously downloaded. Download a new version from the **Intune Connector for Active Directory** section of the Microsoft Endpoint Manager admin center. If you're not using the latest version, it may continue to work, but the auto-upgrade feature to provide updates to the Intune Connector won't work.
+Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) will require .NET Framework version 4.7.2 or later. If you're not already using .NET 4.7.2 or later, the Intune Connector may not work for Autopilot hybrid Azure AD deployments and will result in failures. When you install a new Intune Connector, don't use the connector installation package that was previously downloaded. Before you install a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the Microsoft Endpoint Manager admin center. If you're not using the latest version, it may continue to work, but the auto-upgrade feature to provide updates to the Intune Connector won't work.
 
 ## Enroll to co-management from Windows Autopilot
 <!-- 11300628 -->
@@ -78,7 +88,7 @@ The following example shows details for **Deployment info**, which includes **Ne
 
 :::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
 
-To enable the diagnostics page, go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md). Select **Yes** to **Turn on log collection and diagnostics page for end users**.
+To enable the diagnostics page, go to the [ESP profile](../intune/enrollment/windows-enrollment-status.md). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
 
 The diagnostics page is currently supported for commercial OOBE, and Autopilot user-driven mode. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 

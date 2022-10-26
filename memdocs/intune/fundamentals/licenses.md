@@ -25,6 +25,7 @@ ms.custom: seodec18
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # Microsoft Intune licensing
@@ -44,6 +45,9 @@ Intune is included in the following licenses:
 - Microsoft 365 Government G5
 - Microsoft 365 Government G3
 - Intune for Education
+
+> [!NOTE]
+> For additonal licensing information about Intune for Education, see [Microsoft 365 Education](/office365/servicedescriptions/office-365-platform-service-description/microsoft-365-education).
 
 ## Microsoft Intune for Education
 
@@ -117,7 +121,7 @@ To confirm your Microsoft Intune license or trial, use the following steps:
 4. Confirm you are an **administrator** with **full** permissions to **all** Intune resources.
 
 > [!NOTE]
-> For more in-depth information about Microsoft Intune, see the learning module: [Set up Microsoft Intune](/learn/modules/set-up-microsoft-intune?azure-portal=true).
+> For more in-depth information about Microsoft Intune, see the learning module: [Set up Microsoft Intune](/training/modules/set-up-microsoft-intune?azure-portal=true).
 
 To check on your Azure AD Premium license, use the following steps:
 

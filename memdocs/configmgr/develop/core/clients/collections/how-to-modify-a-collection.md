@@ -8,11 +8,11 @@ ms.prod: "configuration-manager"
 ms.technology: configmgr-sdk
 ms.topic: how-to
 ms.assetid: 21815cfc-bd5d-4c1e-b2e6-f6662d1cc408
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
 
 
 ---

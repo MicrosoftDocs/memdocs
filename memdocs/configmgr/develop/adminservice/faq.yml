@@ -8,9 +8,9 @@ metadata:
   ms.technology: configmgr-sdk
   ms.topic: faq
   ms.assetid: 4902b9ea-eaff-4f59-a9cf-c600d008eade
-  author: aczechowski
-  ms.author: aaroncz
-  manager: dougeby
+  author: banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
 title: Administration service frequently asked questions (FAQ)
 summary: |
   *Applies to: Configuration Manager (current branch, technical preview branch, long-term servicing branch)*

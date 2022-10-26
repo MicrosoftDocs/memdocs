@@ -8,7 +8,7 @@ author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
 ms.date: 07/18/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: configuration
 ms.localizationpriority: medium
@@ -26,6 +26,7 @@ ms.custom: intune-azure; seodec18
 ms.collection:
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # iOS and iPadOS device settings to allow or restrict features using Intune
@@ -120,7 +121,6 @@ When you're ready to proceed, create an [iOS/iPadOS device restrictions configur
   This feature applies to:  
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer  
-
 
 ## Autonomous single app mode (ASAM)
 

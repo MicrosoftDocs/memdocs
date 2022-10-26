@@ -1,6 +1,6 @@
 ---
-author: mestew
-ms.author: mstewart
+author: banreet
+ms.author: banreetkaur
 ms.prod: configuration-manager
 ms.technology: configmgr-analytics
 ms.topic: include
@@ -30,4 +30,4 @@ If your environment has proxy rules to allow only specific certificate revocatio
 - `http://ocsp.msocsp.com`
 - `http://www.microsoft.com/pkiops`
 
-<!-- list from https://docs.microsoft.com/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me -->
+<!-- list from https://learn.microsoft.com/azure/security/fundamentals/tls-certificate-changes#will-this-change-affect-me -->

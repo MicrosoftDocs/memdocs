@@ -6,10 +6,12 @@ ms.date: 02/7/2017
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+ms.author: baladell 
+author: BalaDelli
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Manage content and content infrastructure for Configuration Manager
 

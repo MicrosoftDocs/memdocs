@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Add Microsoft 365 apps to Windows 10/11 devices using Microsoft Intune
+title: Add Microsoft 365 Apps to Windows 10/11 devices using Microsoft Intune
 titleSuffix: 
 description: Learn how you can use Microsoft Intune to install Microsoft 365 apps on Windows 10/11 devices.
 keywords:
@@ -32,7 +32,7 @@ ms.collection:
 - highpri
 ---
 
-# Add Microsoft 365 apps to Windows 10/11 devices with Microsoft Intune
+# Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune
 
 Before you can assign, monitor, configure, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
 
@@ -102,6 +102,7 @@ When you choose **Configuration designer** the **Add app** pane will change to o
    - **Select Office apps**: Select the standard Office apps that you want to assign to devices by choosing the apps in the dropdown list.
    - **Select other Office apps (license required)**: Select additional Office apps that you want to assign to devices and that you have licenses for by choosing the apps in the dropdown list. These apps include licensed apps, such as Microsoft Project Online desktop client and Microsoft Visio Online Plan 2.
    - **Architecture**: Choose whether you want to assign the **32-bit** or **64-bit** version of Microsoft 365 Apps. You can install the 32-bit version on both 32-bit and 64-bit devices, but you can install the 64-bit version on 64-bit devices only.
+   - **Default file format**: Choose whether you want to use **Office Open Document Format** or **Office Open XML Format**.
     - **Update Channel**: Choose how Office is updated on devices. For information about the various update channels, see [Overview of update channels for Microsoft 365 Apps for enterprise](/DeployOffice/overview-of-update-channels-for-office-365-proplus). Choose from:
         - **Monthly**
         - **Monthly (Targeted)**

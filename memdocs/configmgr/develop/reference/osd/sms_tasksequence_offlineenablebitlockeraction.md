@@ -1,17 +1,18 @@
 ---
 title: SMS_TaskSequence_OfflineEnableBitLockerAction class
 titleSuffix: Configuration Manager
-description: "The SMS_TaskSequence_OfflineEnableBitLockerAction WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that pre-provisions BitLocker for the OS drive."
+description: The SMS_TaskSequence_OfflineEnableBitLockerAction WMI class is an SMS Provider server class in Configuration Manager. It represents a task sequence action that pre-provisions BitLocker for the OS drive.
 ms.date: 08/11/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-sdk
 ms.topic: reference
 ms.assetid: 596e92ca-fc30-47b2-b249-cf61d5c76121
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: Banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: null
-ms.collection: openauth
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # SMS_TaskSequence_OfflineEnableBitLockerAction server WMI class

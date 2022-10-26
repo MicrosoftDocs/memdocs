@@ -26,6 +26,7 @@ search.appverid: MET150
 ms.collection: 
   - M365-identity-device-management
   - highpri
+  - highseo
 ---
 
 # App and driver compatibility reports for Windows updates

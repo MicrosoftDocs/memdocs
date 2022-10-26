@@ -66,8 +66,10 @@ items:
       href: group-policy-analytics-migrate.md
     - name: Create administrative templates
       href: administrative-templates-windows.md
-    - name: Tutorial
+    - name: Tutorial - Comparing administrative templates with on-premises GPOs
       href: tutorial-walkthrough-administrative-templates.md
+    - name: Add custom and partner ADMX
+      href: administrative-templates-import-custom.md
     - name: Update Office using ADMX
       href: administrative-templates-update-office.md
     - name: Create Microsoft Edge policy using ADMX
@@ -128,7 +130,7 @@ items:
     displayName: trusted sites
   - name: Windows health monitoring
     href: windows-health-monitoring.md
-    displayName: endpoint analytics, microsoft productivity score 
+    displayName: endpoint analytics, microsoft Adoption Score 
   - name: Education Take a Test app
     href: education-settings-configure.md
   - name: eSIM cellular on Windows

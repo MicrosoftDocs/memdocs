@@ -8,7 +8,7 @@ author: brenduns
 ms.author: brenduns
 manager: dougeby
 ms.date: 05/13/2022
-ms.topic: conceptual
+ms.topic: reference
 ms.service: microsoft-intune
 ms.subservice: protect
 ms.localizationpriority: medium
@@ -25,12 +25,14 @@ ms.suite: ems
 search.appverid: MET150
 #ms.tgt_pltfrm:
 ms.custom: intune-azure
-ms.collection: M365-identity-device-management
+ms.collection: 
+- M365-identity-device-management
+- tier3
 ---
 
 # List of the settings in the Windows 365 Cloud PC security baseline in Intune
 
-This article is a reference for the settings that are available in the different versions of the Windows 365 Cloud PC security baseline that you can deploy with Microsoft Intune. You can use the tabs below to select and view the settings in the current baseline version and a few older versions that might still be in use.
+This article is a reference for the settings that are available in the Windows 365 Cloud PC security baseline that you can deploy with Microsoft Intune. 
 
 For each setting you’ll find the baselines default configuration, which is also the recommended configuration for that setting provided by the relevant security team. Because products and the security landscape evolve, the recommended defaults in one baseline version might not match the defaults you find in later versions of the same baseline. Different baseline types, like the *MDM security* and the *Defender for Endpoint* baselines, could also set different defaults.
 
@@ -46,18 +48,9 @@ To learn more about using security baselines, see [Use security baselines](secur
 - [Compare baselines](../protect/security-baselines.md#compare-baseline-versions) to discover what's changed from version to version.
 - [Change the baseline version for a profile](../protect/security-baselines-configure.md#change-the-baseline-version-for-a-profile) to update a profile to use the latest version of that baseline.
 
-
-::: zone pivot="win365-november-2101"
-**Windows 365 Cloud PC security baseline version 2101**
-::: zone-end
-
-::: zone pivot="win365-2110"
 **Windows 365 Cloud PC security baseline version 2110**
-::: zone-end
 
 ## Above Lock
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Voice activate apps from locked screen**:  
   Baseline default: *Disabled*  
@@ -67,21 +60,14 @@ To learn more about using security baselines, see [Use security baselines](secur
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067101)  
 
-::: zone-end
 
 ## App Runtime
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Microsoft accounts optional for Microsoft store apps**:  
   Baseline default: *Enabled*  
  [Learn more](https://go.microsoft.com/fwlink/?linkid=2067104)
 
-::: zone-end
-
 ## Application management
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Block app installations with elevated privileges**:  
   Baseline default: *Yes*  
@@ -95,11 +81,7 @@ To learn more about using security baselines, see [Use security baselines](secur
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067056)
 
-::: zone-end
-
 ## Attack Surface Reduction Rules
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 For general information, see [Learn about attack surface reduction rules](/microsoft-365/security/defender-endpoint/attack-surface-reduction?view=o365-worldwide&preserve-view=true).
 
@@ -151,11 +133,7 @@ For general information, see [Learn about attack surface reduction rules](/micro
   Baseline default: *Block*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=872980)
 
-::: zone-end
-
 ## Audit
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 Audit settings configure the events that are generated for the conditions of the setting.
 
@@ -231,11 +209,7 @@ Audit settings configure the events that are generated for the conditions of the
 - **System Audit System Integrity (Device)**:  
   Baseline default: *Success and Failure*  
 
-::: zone-end
-
 ## Auto Play
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Auto play default auto run behavior**:  
   Baseline default: *Do not execute*  
@@ -249,11 +223,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067106)
 
-::: zone-end
-
 ## Browser
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Block Password Manager**:  
   Baseline default: *Yes*  
@@ -275,11 +245,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067126)
 
-::: zone-end
-
 ## Connectivity
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Configure secure access to UNC paths**:  
   Baseline default: *Configure Windows to only allow access to the specified UNC paths after fulfilling additional security requirements*  
@@ -296,31 +262,19 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067136)
 
-::: zone-end
-
 ## Credentials Delegation
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Remote host delegation of non-exportable credentials**:  
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067103)
 
-::: zone-end
-
 ## Credentials UI
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Enumerate administrators**:  
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067021)
 
-::: zone-end
-
 ## Device Guard
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Virtualization based security**:  
   Baseline default: *Enable VBS with secure boot*  
@@ -336,11 +290,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Enable with UEFI lock*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=872424)
 
-::: zone-end
-
 ## Device Installation
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Block hardware device installation by setup classes**  
   Baseline default: *Yes*  
@@ -352,20 +302,12 @@ Audit settings configure the events that are generated for the conditions of the
   - **Block list**  
     *Not configured by default. Manually add one or more Identifiers.*
 
-::: zone-end
-
 ## DMA Guard
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Enumeration of external devices incompatible with Kernel DMA Protection**  
   Baseline default: *Block all*
 
-::: zone-end
-
 ## Event Log Service
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Application log maximum file size in KB**  
   Baseline default: *32768*  
@@ -379,21 +321,14 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *196608*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067042)
 
-::: zone-end
-
 ## Experience
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Block Windows Spotlight**  
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067037)
 
-::: zone-end
 
 ## File Explorer
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Block data execution prevention**  
   Baseline default: *Disabled*  
@@ -403,11 +338,7 @@ Audit settings configure the events that are generated for the conditions of the
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067107)
 
-::: zone-end
-
 ## Firewall
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlink/?linkid=2066796) in the Windows Protocols documentation.
 
@@ -479,13 +410,9 @@ For more information, see [2.2.2 FW_PROFILE_TYPE](https://go.microsoft.com/fwlin
     Baseline default: *Yes*  
     [Learn more](https://go.microsoft.com/fwlink/?linkid=872567)
 
-::: zone-end
-
 ## Internet Explorer
 
 View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/policy-csp-internetexplorer).
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Internet Explorer encryption support**  
   Baseline defaults: Two items: *TLS v1.1* and *TLS v1.2*
@@ -959,11 +886,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067122)
 
-::: zone-end
-
 ## Local Policies Security Options
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Block remote logon with blank password**  
   Baseline default: *Yes*  
@@ -1049,11 +972,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067321)
 
-::: zone-end
-
 ## Microsoft Defender
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Turn on real-time protection**  
   Baseline default: *Yes*  
@@ -1101,11 +1020,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2113937)
 
-::: zone-end
-
 ## Microsoft Defender Antivirus Exclusions
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Defender Processes to exclude**  
   Baseline defaults:  *Not configured by default. Manually add one or more entries.*
@@ -1116,11 +1031,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
 - **Defender Files And Folders To Exclude**  
   Baseline default:  *Not configured by default. Manually add one or more entries.*
 
-::: zone-end
-
 ## Microsoft Edge
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Control which extensions cannot be installed**  
   Baseline default: *Enabled*  
@@ -1170,11 +1081,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   - **Supported authentication schemes**  
     Baseline defaults: Two items: *NTLM* and *Negotiate*
 
-::: zone-end
-
 ## MS Security Guide
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **SMB v1 client driver start configuration**  
   Baseline default: *Disable driver*  
@@ -1196,11 +1103,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067193)
 
-::: zone-end
-
 ## MSS Legacy
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Network IPv6 source routing protection level**  
   Baseline default: *Highest protection*  
@@ -1218,21 +1121,13 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067326)
 
-::: zone-end
-
 ## Remote Assistance
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Remote Assistance solicited**
    Baseline default: *Disable Remote Assistance*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067198)
 
-::: zone-end
-
 ## Remote Desktop Services
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Remote desktop services client connection encryption level**  
   Baseline default: *High*  
@@ -1253,11 +1148,7 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067248)
 
-::: zone-end
-
 ## Remote Management
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Block client digest authentication**  
   Baseline default: *Enabled*  
@@ -1283,31 +1174,19 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   Baseline default: *Disabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067226)
 
-::: zone-end
-
 ## Remote Procedure Call
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **RPC unauthenticated client options**  
   Baseline default: *Authenticated*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067225)
 
-::: zone-end
-
 ## Search
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Disable indexing encrypted items**  
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067303)
 
-::: zone-end
-
 ## Smart Screen
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Turn on Windows SmartScreen**  
   Baseline default: *Yes*  
@@ -1317,54 +1196,31 @@ View the full list of [Internet Explorer CSPs](/windows/client-management/mdm/po
   Baseline default: *Yes*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=872783)
 
-::: zone-end
-
 ## System
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **System boot start driver initialization**  
   Baseline default: *Good unknown and bad critical*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067307)
-
-::: zone-end
-
 ## Windows Connection Manager
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Block connection to non-domain networks**  
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067323)
 
-::: zone-end
-
 ## Windows Ink Workspace
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Ink Workspace**  
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067241)
 
-::: zone-end
-
 ## Windows PowerShell
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **PowerShell script block logging**  
   Baseline default: *Enabled*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2067330)
 
-::: zone-end
-
 ## Windows Security
-
-::: zone pivot="win365-2110,win365-november-2101"
 
 - **Enable tamper protection to prevent Microsoft Defender being disabled**  
   Baseline default: *Enable*  
   [Learn more](https://go.microsoft.com/fwlink/?linkid=2066083)
-
-::: zone-end

@@ -76,7 +76,7 @@ Return to the admin center and enter your Apple ID as a reminder for when you ne
 
 ### Step 5. Browse to your Apple MDM push certificate to upload
 1. Select the **Folder** icon. 
-2. Select the certificate file you downloaded in the Apple portal. 
+2. Select the certificate file (.pem) you downloaded in the Apple portal. 
 3. Select **Upload** to finish configuring the MDM push certificate. 
 
 ## Renew Apple MDM push certificate

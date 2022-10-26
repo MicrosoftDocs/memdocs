@@ -2,14 +2,16 @@
 title: Create custom configuration items
 titleSuffix: Configuration Manager
 description: Manage settings for Windows computers and servers with a custom configuration item for Windows desktops and servers
-ms.date: 03/10/2022
+ms.date: 08/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-compliance
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # Create custom configuration items for Windows desktop and server computers managed with the Configuration Manager client
@@ -227,8 +229,8 @@ The value returned by the script is used to assess the compliance of the global 
 - **Run scripts by using the logged on user credentials**: If you enable this option, the script runs on client computers that use the credentials of the signed-in user.  
 
 > [!IMPORTANT]
-> When using a signed PowerShell script, ensure you select **Open**.  You can't use copy and paste for a signed script. <!--8538617-->
-
+> - When using a signed PowerShell script, ensure you select **Open**.  You can't use copy and paste for a signed script. <!--8538617-->
+> - Starting in 2207, you can define a **Script Execution Timeout (seconds)** when configuring [client settings](../../core/clients/deploy/about-client-settings.md#compliance-settings) for compliance settings. <!--14120481-->
 
 ### <a name="bkmk_sql"></a> SQL query
 

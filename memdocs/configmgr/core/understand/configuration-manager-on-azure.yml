@@ -7,9 +7,9 @@ metadata:
   ms.prod: configuration-manager
   ms.technology: configmgr-core
   ms.topic: faq
-  author: aczechowski
-  ms.author: aaroncz
-  manager: dougeby
+  author: banreet
+  ms.author: banreetkaur
+  manager: apoorvseth
 title: Configuration Manager on Azure FAQ
 summary: |
   *Applies to: Configuration Manager (current branch)*

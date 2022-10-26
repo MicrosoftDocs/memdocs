@@ -6,10 +6,12 @@ ms.date: 02/16/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-client
 ms.topic: reference
-author: aczechowski
-ms.author: aaroncz
-manager: dougeby
+author: sheetg09
+ms.author: sheetg
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 
 # About client settings in Configuration Manager
@@ -171,8 +173,9 @@ Select **Schedule** to create the default schedule for configuration baseline de
 
 Choose **Yes** if you want to deploy [user data and profiles](../../../compliance/deploy-use/create-user-data-and-profiles-configuration-items.md) configuration items.
 
+## Script Execution Timeout (seconds)
 
-
+Starting in version 2207, you can define a **Script Execution Timeout (seconds)**. The timeout value can be set from a minimum of 60 seconds to a maximum of 600 seconds. This new setting allows you more flexibility for configuration items when you need to run scripts that may exceed the default of 60 seconds. <!--14120481-->
 ## Computer agent  
 
 ### User notifications for required deployments

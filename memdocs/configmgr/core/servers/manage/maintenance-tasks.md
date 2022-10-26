@@ -6,10 +6,12 @@ ms.date: 08/02/2020
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: mestew
-ms.author: mstewart
-manager: dougeby
+author: banreet
+ms.author: banreetkaur
+manager: apoorvseth
 ms.localizationpriority: medium
+ms.collection: tier3
+ms.reviewer: mstewart,aaroncz 
 ---
 # Maintenance tasks for Configuration Manager
 
@@ -135,9 +137,6 @@ The **Maintenance Tasks** tab gives you information such as:
 When the Configuration Manager database is reindexing, either through the [built in maintenance task](reference-for-maintenance-tasks.md#rebuild-indexes) or SQL Server Management Studio, you may notice that [replication links](monitor-replication.md) will temporarily go into a degraded or failed state during this process. The state degradation occurs because when a reindex is run on the database tables they're blocked and can't be written to. It's an offline operation and is fundamental to [how DBCC REINDEX functions](/sql/t-sql/database-console-commands/dbcc-dbreindex-transact-sql). In order for a sync on a replication group to be considered successful, the site actually has to be able to process the data that it received. This means that during this reindexing process, the link status can bounce between degraded, failed, active, and back again. Depending on how much data is being replicated between the sites, the amount of time to go from a failed state to an active state will vary from environment to environment.
 
 If the state change during a reindex is problematic for your monitoring, each replication link has a set of [thresholds that can be modified](../../plan-design/hierarchy/database-replication.md#database-replication-thresholds) to adjust when the link goes into a degraded state or when it goes into a failed state. Replication links contain multiple replication groups, which are broken up into two types: global data and site data. Global data attempts to sync every one minute and site data syncs every five minutes. By default, the link changes to degraded when the threshold of 12 failures is reached then changes to the failed state at 24. To set these thresholds, select the link under the **Database Replication** node then select **Link Properties**. In the **Alerts** tab, there are thresholds for setting the link to degraded or failed. By default these values are set to 12 and 24 respectively.
-
-> [!IMPORTANT]
-> Take caution when changing these values since the higher the value the longer it will take you to be notified of a problem. When choosing to increase or decrease the value, increment or decrement by 1 and monitor the link closely before making another change to it.
 
 ## Next steps
 

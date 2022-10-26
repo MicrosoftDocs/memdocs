@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 06/21/2022
+ms.date: 09/19/2022
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -70,13 +70,13 @@ For more information on creating groups in Intune, see [Add groups to organize u
 
 To use DFCI, create the following profiles, and assign them to your group.
 
-### Create an Autopilot deployment profile
+### Step 1: Create an Autopilot deployment profile
 
 This profile sets up and pre-configures new devices. The following article lists the steps to create the profile:
 
 - [Autopilot deployment profile](../../autopilot/profiles.md)
 
-### Create an Enrollment State Page profile
+### Step 2: Create an Enrollment State Page profile
 
 This profile makes sure that devices are verified and enabled for DFCI during the Windows setup. It's highly recommended to use this profile to block device use until all apps and profiles are installed.
 
@@ -84,7 +84,7 @@ The following article lists the steps to create the profile:
 
 - [Enrollment State Page profile](../enrollment/windows-enrollment-status.md) 
 
-### Create the DFCI profile in Intune
+### Step 3: Create the DFCI profile in Intune
 
 This profile includes the DFCI settings you configure.
 

@@ -2,16 +2,16 @@
 title: Technical preview releases
 titleSuffix: Configuration Manager
 description: Learn about the technical preview branch to test-drive new functionality and capabilities in Configuration Manager.
-ms.date: 07/06/2022
+ms.date: 10/12/2022
 ms.prod: configuration-manager
 ms.technology: configmgr-core
 ms.topic: conceptual
-author: paasin
-ms.author: paasin
+author: Banreet
+ms.author: banreetkaur
 manager: apoorvseth
-ms.reviewer: mstewart,aczechowski 
+ms.reviewer: mstewart,aaroncz 
 ms.localizationpriority: medium
-ms.collection: highpri
+ms.collection: tier3
 ---
 
 # Technical preview for Configuration Manager
@@ -29,7 +29,7 @@ For information about what's new in the *current branch* of Configuration Manage
 > [!TIP]
 > You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../../use-docs.md#notifications).
 <!-- > To get notified when this page is updated, copy and paste the following URL into your RSS feed reader:
-> `https://docs.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us` -->
+> `https://learn.microsoft.com/api/search/rss?search=%22technical+preview+releases+-+Configuration+Manager%22&locale=en-us` -->
 
 ## <a name="bkmk_reqs"></a> Requirements and limitations
 
@@ -95,7 +95,7 @@ Microsoft supports each technical preview version up until three successive vers
 
 Install a baseline version for up to one year after its release. When you install a new technical preview site, use the latest baseline version:
 
-- **Technical preview version 2206**
+- **Technical preview version 2210**
 
 Download a baseline version from the [Evaluation Center](https://www.microsoft.com/en-in/evalcenter/evaluate-microsoft-endpoint-configuration-manager-technical-preview).
 
@@ -128,11 +128,10 @@ bullet format:
 
 The following features are available with the most recent Configuration Manager technical preview version:
 
-### Technical preview version 2207
+### Technical preview version 2210
 
-- [Distribution point content migration](2022/technical-preview-2207.md#bkmk_dpconmig) <!--10928371-->
-- [Improvements to Configuration Manager policies for Microsoft Defender Application Guard](2022/technical-preview-2207.md#bkmk_app-guard) <!--14059872-->
-- [PowerShell release notes preview](2022/technical-preview-2207.md#bkmk_powershell) <!--14637353-->
+- [Featured Apps in Software Center](2022/technical-preview-2210.md#bkmk_featured-apps-software-center) <!--3601183-->
+
 
 > [!NOTE]
 > Features that were available in a previous version of the technical preview remain available in later versions. Similarly, features that are added to the Configuration Manager current branch remain available in the technical preview branch.
@@ -150,7 +149,22 @@ The following features were released with previous versions of the Configuration
 > [!TIP]
 > When a new current branch version is available, features that are available in that version are listed in the latest *What's new* article. For more information, see [What's new in incremental versions](../plan-design/changes/whats-new-incremental-versions.md#supported-versions).
 
-<!-- ### Technical preview version 2111 -->
+### Technical preview version 2209
+
+- [Improvements to the console](2022/technical-preview-2209.md#bkmk_improvements-to-the-console) <!--14908615-->
+- [Improvements to the dark theme](2022/technical-preview-2209.md#bkmk_improvements-to-the-dark-theme) <!--15346075-->
+- [Other Updates](2022/technical-preview-2209.md#bkmk_other-updates) <!--14975011-->
+
+### Technical preview version 2208
+
+- [Intune RBAC for tenant attached devices](2022/technical-preview-2208.md#bkmk_enable-intune) <!--8126836-->
+- [Dark theme is now extended to additional dashboards](2022/technical-preview-2208.md#bkmk_improvements-to-the-dark-theme) <!--14917369-->
+
+### Technical preview version 2207
+
+- [Distribution point content migration](2022/technical-preview-2207.md#bkmk_dpconmig) <!--10928371-->
+- [Improvements to Configuration Manager policies for Microsoft Defender Application Guard](2022/technical-preview-2207.md#bkmk_app-guard) <!--14059872-->
+- [PowerShell release notes preview](2022/technical-preview-2207.md#bkmk_powershell) <!--14637353-->
 
 ### Technical preview version 2206
 
@@ -189,27 +203,6 @@ The following features were released with previous versions of the Configuration
 - [ADR scheduling improvements for deployments](2022/technical-preview-2202.md#bkmk_adr) <!--12707738-->
 - [Console improvements](2022/technical-preview-2202.md#bkmk_console) <!--9575773-->
 - [PowerShell release notes preview](2022/technical-preview-2202.md#bkmk_powershell) <!--13040432-->
-
-### Technical preview version 2201
-
-- [Visualize content distribution status](2022/technical-preview-2201.md#bkmk_contentviz) <!--9495651-->
-- [Custom icon support for task sequences and packages](2022/technical-preview-2201.md#bkmk_tsico) <!--12486335-->
-- [Prefer cloud-based software update points on switching](2022/technical-preview-2201.md#bkmk_cmgsup) <!--7759984-->
-- [LEDBAT support for software update points](2022/technical-preview-2201.md#bkmk_ledbat) <!--4639895-->
-- [Improvements to Power BI Report Server Integration](2022/technical-preview-2201.md#bkmk_reports) <!--12487076-->
-- [Tenant attach features are generally available](2022/technical-preview-2201.md#bkmk_ta) <!--6374854-->
-- [Deployment Status client notification actions](2022/technical-preview-2201.md#bkmk_notify) <!--7079837-->
-- [Sort by icon in the console](2022/technical-preview-2201.md#bkmk_sortico) <!--3877839-->
-- [PowerShell release notes preview](2022/technical-preview-2201.md#bkmk_powershell) <!--12654996-->
-- [Improved notice for content on task sequence media](2022/technical-preview-2201.md#bkmk_tsmedia) <!--12895956-->
-
-### Technical preview version 2112
-<!-- all items are in 2111 CB -->
-
-- [Customize maximum run time for other software update types](2021/technical-preview-2112.md#bkmk_maxruntime) <!--12770887-->
-- [Console and user experience improvements](2021/technical-preview-2112.md#bkmk_ux) <!--12726153-->
-- [Exclude data warehouse reporting tables from synchronization](2021/technical-preview-2112.md#bkmk_warehouse) <!--12441118-->
-- [A new remote assistance tool](2021/technical-preview-2112.md#bkmk_cmgrc) <!--4575930-->
 
 ## Next steps
 
