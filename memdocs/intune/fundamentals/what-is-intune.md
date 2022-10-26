@@ -7,7 +7,7 @@ keywords: what is Intune, mobile endpoint management, mobile application managem
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 10/26/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -39,6 +39,8 @@ To help with these challenges and tasks, use [Microsoft Intune](https://www.micr
 Microsoft Intune is a cloud-based endpoint management solution. It manages user access and simplifies app & device management across your many devices, including mobile devices, desktop computers, and virtual endpoints.
 
 You can protect access and data on organization-owned and users personal devices. And, Intune has compliance and reporting features that support a [Zero Trust security model](/security/zero-trust/zero-trust-overview).
+
+:::image type="content" source="./media/what-is-intune/what-is-intune.png" alt-text="Image that shows features and benefits of Microsoft Intune.":::
 
 This article lists some features and benefits of Microsoft Intune.
 
