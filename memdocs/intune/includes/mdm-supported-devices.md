@@ -4,7 +4,7 @@ ms.author: erikje
 ms.service: microsoft-intune
 ms.subservice: fundamentals
 ms.topic: include
-ms.date: 09/28/2022
+ms.date: 10/26/2022
 ms.localizationpriority: high
 ---
 
@@ -23,19 +23,25 @@ ms.localizationpriority: high
 
 - Android 8.0 and later (including Samsung KNOX Standard 2.4 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+))
 - Android enterprise: [requirements](https://support.google.com/work/android/topic/9428066)
--   Android open source project devices (AOSP) supported devices
-    - RealWear devices (Firmware 11.2 or later)
+- Android open source project devices (AOSP) supported devices
+  - RealWear devices (Firmware 11.2 or later)
 
 [!INCLUDE [android-supported-os](android-supported-os.md)]
+
+### Linux
+
+- Ubuntu Desktop 22.04 and later
+- Ubuntu Desktop 20.04 LTS and later
+- A GNOME graphical desktop environment, which is automatically included with Ubuntu Desktop 22.04 and 20.04 LTS
 
 ### Microsoft
 
 - Windows 11 (Home, S, Pro, Education, and Enterprise editions)
 
-    > [!NOTE]
-    > You can continue to use Microsoft Endpoint Manager to manage devices running Windows 11 the same as with Windows 10. If another article doesn't explicitly reference Windows 11, assume that feature support for Windows 10 also includes Windows 11.
-    >
-    > Some features may not be available on Windows 11. This article lists some [known issues](#windows-11-known-issues). As always, test your policies before broadly deploying them across your devices.
+  > [!NOTE]
+  > You can continue to use Microsoft Endpoint Manager to manage devices running Windows 11 the same as with Windows 10. If another article doesn't explicitly reference Windows 11, assume that feature support for Windows 10 also includes Windows 11.
+  >
+  > Some features may not be available on Windows 11. This article lists some [known issues](#windows-11-known-issues). As always, test your policies before broadly deploying them across your devices.
 
 - Surface Hub
 - Windows 10 (Home, S, Pro, Education, and Enterprise versions)

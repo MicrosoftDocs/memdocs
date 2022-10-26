@@ -2,12 +2,12 @@
 # required metadata
 
 title: Device enrollment guide for Microsoft Intune
-description: Enroll Android, Android Enterprise, iOS, iPadOS, macOS, and Windows devices In Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
+description: Enroll Android, Android Enterprise, iOS, iPadOS, Linux, macOS, and Windows devices in Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
 keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/10/2022
+ms.date: 10/26/2022
 ms.topic: conceptual
 ms.service: microsoft-intune
 ms.subservice: enrollment
@@ -46,6 +46,7 @@ You can enroll devices on the following platforms. For the specific versions, se
 
 - Android
 - iOS/iPadOS
+- Linux
 - macOS
 - Windows
 
@@ -74,6 +75,7 @@ This article lists the enrollment prerequisites, has information on using other 
   | Android | none |
   | Android Enterprise | none |
   | iOS/iPadOS | [MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md)<br/>Apple ID |
+  | Linux | none |
   | macOS | [MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) |
   | Windows | none |
 
@@ -98,6 +100,7 @@ Depending on the platform, a factory reset may be required before enrolling in I
 | Android Enterprise dedicated devices (COSU) | Yes |
 | Android device administrator (DA) | No |
 | iOS/iPadOS | Yes |
+| Linux | No ?? |
 | macOS | Yes |
 | Windows | No |
 
@@ -112,6 +115,7 @@ There's an enrollment guide for every platform. Choose your scenario, and get st
 - [Application management without enrollment (MAM-WE)](deployment-guide-enrollment-mamwe.md)
 - [Android](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS](deployment-guide-enrollment-ios-ipados.md)
+- [Linux](deployment-guide-enrollment-linux.md)
 - [macOS](deployment-guide-enrollment-macos.md)
 - [Windows](deployment-guide-enrollment-windows.md)
 
@@ -139,5 +143,6 @@ Choose your platform, and get started:
 - [Application Management without enrollment](deployment-guide-enrollment-mamwe.md)
 - [Android enrollment guide](deployment-guide-enrollment-android.md)
 - [iOS/iPadOS enrollment guide](deployment-guide-enrollment-ios-ipados.md)
+- [Linux enrollment guide](deployment-guide-enrollment-linux.md)
 - [macOS enrollment guide](deployment-guide-enrollment-macos.md)
 - [Windows enrollment guide](deployment-guide-enrollment-windows.md)

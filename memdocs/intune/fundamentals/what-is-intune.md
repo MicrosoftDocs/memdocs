@@ -7,7 +7,7 @@ keywords: what is Intune, mobile endpoint management, mobile application managem
 author: MandiOhlinger
 ms.author: mandia
 manager: dougeby
-ms.date: 10/12/2022
+ms.date: 10/26/2022
 ms.topic: overview
 ms.service: microsoft-intune
 ms.subservice: fundamentals
@@ -170,6 +170,7 @@ For more platform-specific requirements to enroll third party partner devices in
 
 - [Deployment guide: Enroll Android devices in Microsoft Intune](deployment-guide-enrollment-android.md)
 - [Deployment guide: Enroll iOS and iPadOS devices in Microsoft Intune](deployment-guide-enrollment-ios-ipados.md)
+- [Deployment guide: Enroll Linux devices in Microsoft Intune](deployment-guide-enrollment-linux.md)
 - [Deployment guide: Enroll macOS devices in Microsoft Intune](deployment-guide-enrollment-macos.md)
 
 ## Enroll in device management, application management, or both
